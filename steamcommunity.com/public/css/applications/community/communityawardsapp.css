@@ -81,7 +81,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: 0.7s;
+  animation-duration: .7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -212,7 +212,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: 0.5px;
+  stroke-width: .5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -342,7 +342,7 @@
 }
 ._2ilpH-HpvuSm6s5MWX5bA- ._2_vbZB-J_M1GH9js-PXnEj ._2yJ4jvaS0kUJdPVIPR_gld {
   font-size: 30px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   text-transform: uppercase;
 }
 .BasicUI
@@ -387,9 +387,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  transition:
-    background-color 0.2s ease,
-    border-radius 0.2s ease;
+  transition: background-color .2s ease, border-radius .2s ease;
 }
 @media screen and (max-width: 910px) {
   ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu {
@@ -528,7 +526,7 @@
   ._3M92hj6aELzceURcKR7WFu
   ._2iEkqauHWZiCAOo0cWqnPP {
   color: #66c0f4;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 .BasicUI
   ._2ilpH-HpvuSm6s5MWX5bA-
@@ -543,7 +541,7 @@
   ._3k_jxlKBddOAxgSknpHNTq {
   font-weight: 500;
   font-size: 12px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
 }
 .BasicUI
   ._2ilpH-HpvuSm6s5MWX5bA-
@@ -635,7 +633,7 @@
   color: #66c0f4;
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 ._2ilpH-HpvuSm6s5MWX5bA-
   ._164mmLkSJ91cXzABhIrlZq
@@ -643,7 +641,7 @@
   ._209Gyxysjz0vcGVVWuh_Xc
   ._1O3FSoJxkQYLv1MB6H7QNy {
   font-size: 16px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 ._2ilpH-HpvuSm6s5MWX5bA- ._164mmLkSJ91cXzABhIrlZq ._1hgRCff96-fQY4zKEKUkac {
   display: flex;
@@ -743,7 +741,7 @@
   column-gap: 24px;
   padding: 10px;
   position: relative;
-  transition: opacity 0.2s ease-out;
+  transition: opacity .2s ease-out;
   opacity: 0;
 }
 @media screen and (max-width: 910px) {
@@ -795,7 +793,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s ease-in;
+  transition: opacity .3s ease-in;
   opacity: 0;
   pointer-events: none;
 }
@@ -828,7 +826,7 @@
 ._1WCEAVbVX-TuOWAkFll4DS {
   font-weight: 500;
   font-size: 12px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
 }
 ._1WCEAVbVX-TuOWAkFll4DS ._3-jpV0SaW4qH2i8S7BXeAB {
   width: 16px;

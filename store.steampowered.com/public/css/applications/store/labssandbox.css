@@ -117,7 +117,7 @@
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   color: #40aee5;
   margin-bottom: 20px;
 }
@@ -502,7 +502,7 @@
   text-decoration: underline;
   text-decoration-color: #4b4b4b;
   transition-property: color, text-decoration-color;
-  transition-duration: 0.21s;
+  transition-duration: .21s;
   transition-timing-function: ease-in-out;
 }
 ._1Mi1lBerTs-M-thiecGA1l._2RCec4CXzaWlw2Uf_YFDfE {

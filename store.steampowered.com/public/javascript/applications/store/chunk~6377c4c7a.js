@@ -40,7 +40,7 @@
       }
       function s(e) {
         return e == r.LNY2020
-          ? `hue-rotate(${360 + (0, n.Tg)(-30, 10)}deg)`
+          ? `hue-rotate(${360 + ((0, n.Tg))(-30, 10)}deg)`
           : "";
       }
       !(function (e) {

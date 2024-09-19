@@ -191,8 +191,7 @@
           const t = e;
           return (
             !(!t || "object" != typeof t) &&
-            void 0 !== t.bPreLoaded &&
-            "boolean" == typeof t.bPreLoaded &&
+            void 0 !== t.bPreLoaded && "boolean" == typeof t.bPreLoaded &&
             Array.isArray(t.announcementGIDList)
           );
         }

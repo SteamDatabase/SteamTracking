@@ -6925,8 +6925,8 @@
               "object" == typeof t[0]
             ) &&
             "number" == typeof t[0].clan_account_id &&
-            t[0].clan_account_id > 0 &&
-            "number" == typeof t[0].appid &&
+              t[0].clan_account_id > 0 &&
+              "number" == typeof t[0].appid &&
             t[0].appid > 0
           );
         }
@@ -7220,8 +7220,7 @@
         BIsAnyLanguageEnabled(e) {
           return (
             null == this.m_primaryLanguage ||
-            this.m_primaryLanguage <= -1 ||
-            31 <= this.m_primaryLanguage ||
+            this.m_primaryLanguage <= -1 || 31 <= this.m_primaryLanguage ||
             e.some(
               (e) =>
                 this.m_primaryLanguage === e ||
@@ -8184,7 +8183,7 @@
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
-            !this.m_mapHiddenClans.has(e.clanid) &&
+              !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & i.bK.k_eRequired || t & i.bK.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed(n.k_ERecent) && a) ||
@@ -8966,7 +8965,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].announcementGID &&
-            Array.isArray(t[0].adjacents) &&
+              Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
           );
         }

@@ -148,7 +148,7 @@
 ._3Cd9cpywFS-01PilCrgOQo {
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-out;
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 25%;
@@ -441,7 +441,7 @@ input.Y12tprgNrNvnZ-eZvch6X {
   height: auto;
   position: relative;
   left: 0px;
-  transition: transform 0.4s ease-out;
+  transition: transform .4s ease-out;
   top: 0px;
   display: block;
 }
@@ -523,7 +523,7 @@ input.Y12tprgNrNvnZ-eZvch6X {
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: background-color 0.24s ease-in-out;
+  transition: background-color .24s ease-in-out;
 }
 .ENbI1gFgvIca6HSKAbfiJ {
   margin: 10px 20px;
@@ -539,10 +539,8 @@ input.Y12tprgNrNvnZ-eZvch6X {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition:
-    filter 0.24s ease-in-out,
-    transform 0.24s ease-in-out,
-    color 0.24s ease-in-out;
+  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
+    ease-in-out;
 }
 .items_in_row_4 .ENbI1gFgvIca6HSKAbfiJ {
   line-height: 16px;
@@ -561,10 +559,8 @@ input.Y12tprgNrNvnZ-eZvch6X {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition:
-    filter 0.24s ease-in-out,
-    transform 0.24s ease-in-out,
-    color 0.24s ease-in-out;
+  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
+    ease-in-out;
 }
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK {
   display: flex;
@@ -1212,9 +1208,7 @@ p a:hover {
   margin-left: auto;
   margin-right: auto;
   filter: saturate(0.9);
-  transition:
-    transform 0.21s ease-in-out,
-    filter 0.21s ease-in-out;
+  transition: transform .21s ease-in-out, filter .21s ease-in-out;
 }
 .dVJB2r43CGIAgr-Xtt4P3:hover ._25fL1JQcG1kh_9L5danMxc {
   transform: scale(1.02);
@@ -1475,7 +1469,7 @@ select option {
   text-align: center;
   padding-top: 8px;
   opacity: 0.8;
-  transition: opacity 0.2s ease-out;
+  transition: opacity .2s ease-out;
 }
 .youtube_play:hover {
   cursor: pointer;

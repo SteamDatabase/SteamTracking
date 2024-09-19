@@ -1978,7 +1978,7 @@
                         {
                           key: t.key,
                           className: (0, i.A)(
-                            `${c().GraphicalAssetsTab} ${t.key === e.key ? (0, i.A)(c().Active, "ActiveTab") : ""}`,
+                            `${c().GraphicalAssetsTab} ${t.key === e.key ? ((0, i.A))(c().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),

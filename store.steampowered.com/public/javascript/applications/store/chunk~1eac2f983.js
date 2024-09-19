@@ -456,7 +456,6 @@
               }
             });
             o.length > 0;
-
           ) {
             const e = o.pop();
             c(e, e.node);

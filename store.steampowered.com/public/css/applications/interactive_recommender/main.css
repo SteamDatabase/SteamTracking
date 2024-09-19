@@ -105,7 +105,7 @@
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  opacity: 0;
+  opacity: 0.0;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -134,7 +134,7 @@
 
 @keyframes throbber_ThrobberRoundLoop_1O-cW {
   to {
-    stroke-dashoffset: -232;
+    stroke-dashoffset: -232.0;
   }
 }
 
@@ -289,7 +289,7 @@
 .throbber_LoadingWrapper_2wAKy
   .SVGIcon_Throbber
   .throbber_roundThrobber01_2tXge {
-  animation-delay: -0s;
+  animation-delay: -0.0s;
   opacity: 0.06;
   stroke-width: 0.5px;
 }
@@ -299,7 +299,7 @@
   .throbber_roundThrobber02_1-oUJ {
   animation-delay: -0.1s;
   opacity: 0.13;
-  stroke-width: 1px;
+  stroke-width: 1.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -315,7 +315,7 @@
   .throbber_roundThrobber04_1xNIK {
   animation-delay: -0.3s;
   opacity: 0.26;
-  stroke-width: 2px;
+  stroke-width: 2.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -331,7 +331,7 @@
   .throbber_roundThrobber06_2cl-m {
   animation-delay: -0.5s;
   opacity: 0.4;
-  stroke-width: 3px;
+  stroke-width: 3.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -347,7 +347,7 @@
   .throbber_roundThrobber08_3s_7m {
   animation-delay: -0.7s;
   opacity: 0.53;
-  stroke-width: 4px;
+  stroke-width: 4.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -363,13 +363,13 @@
   .throbber_roundThrobber10_3MGYo {
   animation-delay: -0.9s;
   opacity: 0.66;
-  stroke-width: 5px;
+  stroke-width: 5.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
   .SVGIcon_Throbber
   .throbber_roundThrobber11_xFmZa {
-  animation-delay: -1s;
+  animation-delay: -1.0s;
   opacity: 0.73;
   stroke-width: 5.5px;
 }
@@ -379,7 +379,7 @@
   .throbber_roundThrobber12_1pj1Q {
   animation-delay: -1.1s;
   opacity: 0.8;
-  stroke-width: 6px;
+  stroke-width: 6.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -395,7 +395,7 @@
   .throbber_roundThrobber14_2FGCn {
   animation-delay: -1.3s;
   opacity: 0.93;
-  stroke-width: 7px;
+  stroke-width: 7.0px;
 }
 
 .throbber_LoadingWrapper_2wAKy
@@ -447,7 +447,7 @@
 		stroke-width: 9px;
 	}*/
   100% {
-    stroke-dashoffset: -1100;
+    stroke-dashoffset: -1100.0;
   }
 }
 
@@ -1072,9 +1072,7 @@ a:link {
   padding-bottom: 0px;
   margin-bottom: 4px;
   position: absolute;
-  transition:
-    all 0.1s ease-in-out,
-    top 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out, top 0.3s ease-in-out;
 }
 .app_RecommendationEntry_2B7qq .app_BottomEntrySection_E5OsK {
   display: flex;
@@ -1124,10 +1122,8 @@ a:link {
   height: 100px;
   position: absolute;
   background: black;
-  transition:
-    opacity 0.2s ease-in-out,
-    width 0.1s ease-in-out,
-    height 0.1s ease-in-out;
+  transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out, height 0.1s
+    ease-in-out;
   opacity: 0;
 }
 @media screen and (max-width: 777px) {
@@ -1466,18 +1462,14 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  box-shadow:
-    0px 0px 0px #000000,
-    0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   background: #67c1f5;
   border-radius: 1.5px;
   border: 0px solid #67c1f5;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  box-shadow:
-    0px 0px 8px #000000,
-    0px 0px 3px #0d0d0d;
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
   border: 0px solid #ffffff;
   height: 12px;
   width: 12px;
@@ -1504,18 +1496,14 @@ input[type="range"]::-moz-range-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  box-shadow:
-    0px 0px 0px #000000,
-    0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   background: #67c1f5;
   border-radius: 1.5px;
   border: 0px solid #67c1f5;
 }
 
 input[type="range"]::-moz-range-thumb {
-  box-shadow:
-    0px 0px 8px #000000,
-    0px 0px 3px #0d0d0d;
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
   border: 0px solid #ffffff;
   height: 12px;
   width: 12px;
@@ -1537,24 +1525,18 @@ input[type="range"]::-ms-fill-lower {
   background: #4fb7f3;
   border: 0px solid #67c1f5;
   border-radius: 3px;
-  box-shadow:
-    0px 0px 0px #000000,
-    0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
 }
 
 input[type="range"]::-ms-fill-upper {
   background: #67c1f5;
   border: 0px solid #67c1f5;
   border-radius: 3px;
-  box-shadow:
-    0px 0px 0px #000000,
-    0px 0px 0px #0d0d0d;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
 }
 
 input[type="range"]::-ms-thumb {
-  box-shadow:
-    0px 0px 8px #000000,
-    0px 0px 3px #0d0d0d;
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
   border: 0px solid #ffffff;
   height: 12px;
   width: 12px;

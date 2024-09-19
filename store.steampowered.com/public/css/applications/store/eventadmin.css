@@ -491,8 +491,7 @@ h4 {
 }
 /*!
  * https://github.com/arqex/react-datetime
- */
-.rdt {
+ */ .rdt {
   position: relative;
 }
 .rdtPicker {

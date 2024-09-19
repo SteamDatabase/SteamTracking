@@ -197,9 +197,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 }
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenExitActive_2vwQM {
-  transition:
-    opacity 800ms ease,
-    transform 800ms ease;
+  transition: opacity 800ms ease, transform 800ms ease;
 }
 .sharedappdetailsheader_ImgContainer_1j1_D {
   width: 100%;
@@ -347,7 +345,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   right: 32px;
   bottom: 32px;
   -webkit-app-region: no-drag;
-  transition: all 0.16s ease-in-out;
+  transition: all .16s ease-in-out;
   z-index: 50;
 }
 .sharedappdetailsheader_BoxSizerDragBox_rt-WC.sharedappdetailsheader_EdgeDown_3OUCB {
@@ -431,7 +429,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .sharedappdetailsheader_BoxSizerEdge_1vXVD.sharedappdetailsheader_Middle_2TzhC
   .sharedappdetailsheader_BoxSizerSettings_1ZHgI {
@@ -445,7 +443,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .sharedappdetailsheader_BoxSizerEdge_1vXVD.sharedappdetailsheader_Middle_2TzhC
   .sharedappdetailsheader_BoxSizerDelete_1fEe9
@@ -455,7 +453,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   line {
   stroke-width: 26px;
   stroke: #008ada;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .sharedappdetailsheader_BoxSizerEdge_1vXVD.sharedappdetailsheader_Middle_2TzhC:hover
   .sharedappdetailsheader_BoxSizerDelete_1fEe9:hover
@@ -632,15 +630,13 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 }
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenEnterActive_AGgaM {
-  transition:
-    opacity 266.6666666667ms ease-out,
-    transform 266.6666666667ms cubic-bezier(0.6, 0, 1, 1);
+  transition: opacity 266.6666666667ms ease-out, transform 266.6666666667ms
+    cubic-bezier(0.6, 0, 1, 1);
 }
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenExitActive_2vwQM {
-  transition:
-    opacity 800ms cubic-bezier(0, 0, 0.1, 1),
-    transform 800ms cubic-bezier(0, 0, 0.1, 1);
+  transition: opacity 800ms cubic-bezier(0, 0, 0.1, 1), transform 800ms
+    cubic-bezier(0, 0, 0.1, 1);
 }
 .sharedappdetailsheader_SVGTitle_gqzkc {
   align-self: flex-end;
@@ -648,9 +644,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   overflow: visible;
 }
 .sharedappdetailsheader_SVGTitle_gqzkc text {
-  text-shadow:
-    1px 1px 10px #000,
-    0px 0px 22px #0008;
+  text-shadow: 1px 1px 10px #000, 0px 0px 22px #0008;
   letter-spacing: 1px;
 }
 .BasicUI .sharedappdetailsheader_SVGTitle_gqzkc text {
@@ -775,7 +769,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: throbber_ThrobberRoundLoop_2KsRJ;
-  animation-duration: 0.7s;
+  animation-duration: .7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -951,7 +945,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   .throbber_roundThrobber01_6Xq-0 {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: 0.5px;
+  stroke-width: .5px;
 }
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
@@ -1127,7 +1121,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   height: 16px;
   position: relative;
   cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 .toggle_Toggle_10LNB.toggle_Disabled_dVUuX {
   cursor: default;
@@ -1145,7 +1139,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 }
 .toggle_Toggle_10LNB .toggle_ToggleRail_3gngp.toggle_Highlight_1X2-V {
   background-color: #2d5a81;
-  transition: width 0.2s ease-in-out;
+  transition: width .2s ease-in-out;
 }
 .toggle_Toggle_10LNB
   .toggle_ToggleRail_3gngp.toggle_Highlight_1X2-V.toggle_On_2ma00 {
@@ -1162,9 +1156,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   box-shadow: 0px 0px 3px #000a;
   position: absolute;
   left: 0;
-  transition:
-    transform 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
 }
 .toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S.toggle_On_2ma00 {
   background-color: #16a1e1;
@@ -1213,7 +1205,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   text-align: center;
   padding: 6px;
   margin-right: 6px;
-  transition: background-color 0.18s ease-in-out;
+  transition: background-color .18s ease-in-out;
   background-color: #202226;
   border-radius: 2px;
   cursor: pointer;
@@ -1243,7 +1235,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   position: fixed;
   z-index: 100;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity .25s;
   pointer-events: none;
 }
 .hoverposition_HoverPosition_1tQrX.hoverposition_Ready_12dDx {
@@ -1265,9 +1257,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow:
-    1px 1px 8px #0005,
-    2px 2px 16px 1px #0005;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -1278,9 +1268,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow:
-    1px 1px 8px #0005,
-    2px 2px 16px 1px #0005;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -1627,7 +1615,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   line-height: 22px;
 }
 .BasicUI .gamepaddialog_GamepadDialogContent_Gn6rC .DialogSubHeader {
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: #8b929a;
   text-transform: uppercase;
   font-size: 16px;
@@ -1672,7 +1660,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 .BasicUI
   .gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader {
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: #8b929a;
   text-transform: uppercase;
   font-size: 16px;
@@ -1854,17 +1842,19 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   background: none;
   border-radius: 0;
   padding-left: calc(
-    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
+    var(--field-negative-horizontal-margin) +
+    var(--indent-level) *
+    20px
   );
   padding-right: var(--field-negative-horizontal-margin);
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
   transition-property: transform, background-color;
-  transition-duration: 0.32s, 0s;
+  transition-duration: .32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   transform-origin: 12% 50%;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
@@ -2096,7 +2086,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   width: 660px;
   box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_3qcui;
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
   animation-fill-mode: both;
 }
@@ -2202,7 +2192,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   bottom: 0;
   background: #1a9fff;
   transform: translateX(-27px);
-  transition: transform 0.2s ease-out;
+  transition: transform .2s ease-out;
 }
 .gamepaddialog_Toggle_3JiNt.gamepaddialog_Disabled_kT2gh
   .gamepaddialog_ToggleRail_2QwKd::before {
@@ -2220,7 +2210,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   width: 22px;
   background: #fff;
   border-radius: 9001px;
-  transition: transform 0.2s cubic-bezier(0.1, 0.12, 0.53, 1.72);
+  transition: transform .2s cubic-bezier(0.1, 0.12, 0.53, 1.72);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
 }
 .gamepaddialog_Toggle_3JiNt.gamepaddialog_Disabled_kT2gh
@@ -2333,7 +2323,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   }
 }
 .gamepadui_svg_library_Spinner_qznu9 > path {
-  animation: gamepadui_svg_library_SpinnerSpokeFade_OIpeq 0.6s;
+  animation: gamepadui_svg_library_SpinnerSpokeFade_OIpeq .6s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -2482,7 +2472,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadslider_SliderControl_3RYrN {
   --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
   --inverse-normalized-default-value: calc(
-    1 - var(--normalized-slider-default-value)
+    1 -
+    var(--normalized-slider-default-value)
   );
   position: relative;
   display: flex;
@@ -2529,7 +2520,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-value) + 24px * var(--inverse-normalized-value)
+      -100% *
+      var(--inverse-normalized-value) +
+      24px *
+      var(--inverse-normalized-value)
     )
   );
 }
@@ -2646,7 +2640,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   font-weight: bold;
   font-size: 10px;
   line-height: 10px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   text-transform: uppercase;
   padding-top: 5px;
   width: fit-content;
@@ -2676,7 +2670,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 .gamepadslider_DescriptionValue_1Z1gH {
   text-align: center;
-  margin-left: 0.7ch;
+  margin-left: .7ch;
   font-variant-numeric: tabular-nums;
   display: flex;
   flex-direction: row;
@@ -2839,7 +2833,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
   padding-left: calc(
-    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
+    var(--field-negative-horizontal-margin) +
+    var(--indent-level) *
+    20px
   );
   padding-right: var(--field-negative-horizontal-margin);
 }
@@ -2875,7 +2871,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-default-value) + 24px * var(--inverse-normalized-default-value)
+      -100% *
+      var(--inverse-normalized-default-value) +
+      24px *
+      var(--inverse-normalized-default-value)
     )
   );
 }
@@ -2907,10 +2906,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   outline-offset: 2px;
   outline: 2px solid rgba(255, 255, 255, 0.6);
   animation:
-    focusring_flash_3YJwx 0.5s ease,
-    focusring_growOutline_3xRIc 0.4s ease,
-    focusring_fadeOutline_2CNye 0.4s ease,
-    focusring_blinker_y4OFc 1.2s ease-in-out 0.4s 20;
+    focusring_flash_3YJwx .5s ease, focusring_growOutline_3xRIc .4s ease, focusring_fadeOutline_2CNye .4s ease, focusring_blinker_y4OFc 1.2s ease-in-out .4s 20;
 }
 .focusring_FocusRing_3ARGF.focusring_DebugFocusRing_1HN59 {
   outline-color: #ff0;
@@ -3151,7 +3147,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   padding-left: calc(12px + 1.4vw);
   padding-right: calc(12px + 1.4vw);
   font-weight: 500;
-  letter-spacing: 0.2px;
+  letter-spacing: .2px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -3191,11 +3187,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   line-height: 22px;
   scroll-margin: 2.5em 0;
   transition-property: transform, background-color;
-  transition-duration: 0.32s, 0s;
+  transition-duration: .32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   transform-origin: 12% 50%;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
 }
@@ -3386,8 +3382,8 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   padding: 4px 6px;
   line-height: 17px;
   color: #9ca4a7;
-  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  border-top: .5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: .5px solid rgba(80, 87, 94, 0);
   cursor: default;
   position: relative;
   min-width: 120px;
@@ -3396,7 +3392,7 @@ html.contextmenu_ContextMenuPopup_152-v .contextmenu_contextMenuItem_3hJA5 {
   flex-direction: row;
 }
 .contextmenu_contextMenuItem_3hJA5:first-child {
-  border-top: 0.5px solid rgba(80, 87, 94, 0);
+  border-top: .5px solid rgba(80, 87, 94, 0);
 }
 .contextmenu_contextMenuItem_3hJA5:hover,
 .contextmenu_contextMenuItem_3hJA5.contextmenu_active_1NWFM {
@@ -3608,7 +3604,7 @@ html {
   pointer-events: none;
   align-items: center;
   justify-content: space-around;
-  transition: background-color 0.5s;
+  transition: background-color .5s;
 }
 .logoeditor_LogoEditorPopup_3h6ed
   .logoeditor_SavingThrobberContainer_8igOr
@@ -3634,7 +3630,7 @@ html {
 .logoeditor_LogoEditorPopup_3h6ed .logoeditor_LogoEditorContainer_3G8aW {
   flex: 1;
   min-height: 0;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
 .logoeditor_LogoEditorPopup_3h6ed .logoeditor_LogoEditorSaveActions_tWdDs {
   background: #333;
@@ -3650,7 +3646,7 @@ html {
   font-size: 14px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 .logoeditor_LogoEditorPopup_3h6ed
   .logoeditor_LogoEditorSaveActions_tWdDs
@@ -3715,7 +3711,7 @@ html {
   box-sizing: border-box;
   background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%),
     rgba(29, 34, 39, 0.75);
-  transition: all 0.3s;
+  transition: all .3s;
   border-bottom: 0px solid #6a6a6a00;
   position: relative;
   top: 0;
@@ -3747,7 +3743,7 @@ html {
   flex-direction: row;
 }
 .fakeappdetailsrow_StatusAndStats_2dtS1 > :last-child {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
   opacity: 0;
 }
 .fakeappdetailsrow_StatusAndStats_2dtS1.fakeappdetailsrow_PermanentlyUnavailable_dy473
@@ -3755,7 +3751,7 @@ html {
   opacity: 1;
 }
 .fakeappdetailsrow_StatusAndStats_2dtS1 > :first-child {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
   opacity: 1;
 }
 .fakeappdetailsrow_StatusAndStats_2dtS1
@@ -4064,9 +4060,7 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  box-shadow:
-    0 0px 0px 0px #000,
-    0 0px 0px 0px #000;
+  box-shadow: 0 0px 0px 0px #000, 0 0px 0px 0px #000;
   padding: 2px 5px 2px 23px;
   color: #fff;
   user-select: none;
@@ -4081,9 +4075,7 @@ html {
     rgba(53, 55, 63, 0) 110%
   );
   border-right: 0px solid #202127;
-  box-shadow:
-    0 0px 2px 0px #0005,
-    0 0px 16px 0px #0004;
+  box-shadow: 0 0px 2px 0px #0005, 0 0px 16px 0px #0004;
 }
 .fakegamelist_GameListEntry_14lr0.fakegamelist_Selected_3QI8h.fakegamelist_Updating_yTNHk {
   color: #74d1ff;
@@ -4097,7 +4089,7 @@ html {
 .fakegamelist_GameListEntry_14lr0:hover {
   color: #fff;
   background-color: #2e3036;
-  transition: background-color 0.25s;
+  transition: background-color .25s;
 }
 .fakegamelist_GameListEntry_14lr0.fakegamelist_Uninstalled_2hOgD {
   color: rgba(255, 255, 255, 0.5);
@@ -4132,11 +4124,7 @@ html {
   font-weight: 300;
 }
 .partnereventshared_BetaContainer_V9W-c {
-  background-image: radial-gradient(
-    circle at top left,
-    #056890 0%,
-    #143d4d 60%
-  );
+  background-image: radial-gradient(circle at top left, #056890 0%, #143d4d 60%);
   border-bottom: 1px solid #09b8fe;
   padding: 40px;
   color: #e5e5e5;
@@ -4453,7 +4441,7 @@ b {
 }
 .partnereventshared_Button_5getH {
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
   border-radius: 2px;
@@ -4472,7 +4460,7 @@ b {
   flex-direction: row;
   align-items: center;
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
   border-radius: 2px;
@@ -4688,7 +4676,7 @@ span.partnereventshared_tooltip_Ctn_RQL5G {
 }
 .partnereventshared_SaleSectionHeader_3QqpI {
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-size: 18px;
   color: #fff;
   margin-bottom: 10px;
@@ -4833,7 +4821,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .suggestdialog_suggestOption_1QvuK {
   color: #adaeaf;
   transition-property: padding-left, color;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
   transition-timing-function: ease-out;
   line-height: 26px;
   cursor: pointer;
@@ -5081,7 +5069,7 @@ img.emoticon_emoticon_qjpFK {
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  transition: all 0.1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   width: 32px;
@@ -5142,11 +5130,11 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 }
 .emoticon_hover_arrow.left {
   background-position: left top;
-  left: 0.5px;
+  left: .5px;
 }
 .emoticon_hover_arrow.right {
   background-position: right top;
-  right: 0.5px;
+  right: .5px;
 }
 .hover_arrow {
   position: absolute;
@@ -5298,7 +5286,7 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   padding: 4px 4px 4px 8px;
   flex-shrink: 1;
   width: 100%;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .chatentry_chatTextarea_p_BR4.GamepadMode,
 .GamepadMode .chatentry_chatTextarea_p_BR4 {
@@ -5627,7 +5615,7 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   box-shadow: #000 0px 0px 4px inset;
   transition-property: width, max-width, min-width, border-radius,
     background-position;
-  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
+  transition-duration: .3s, .3s, .3s, .6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
     #1da834 0%,
@@ -5644,7 +5632,7 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   margin-top: 12px;
   margin-bottom: -18px;
   opacity: 1;
-  transition: opacity 0.3s ease-out;
+  transition: opacity .3s ease-out;
   white-space: nowrap;
   user-select: none;
 }
@@ -5707,16 +5695,14 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
   transform: translateX(-64px) scale(0.7);
   transition-property: transform, opacity;
-  transition-duration: 0.16s;
+  transition-duration: .16s;
   transition-timing-function: ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition:
-    transform 0.1s ease-in-out,
-    opacity 0.3s ease-in-out;
+  transition: transform .1s ease-in-out, opacity .3s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
@@ -5724,10 +5710,8 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition:
-    transform 0.3s ease-in-out,
-    opacity 0.3s ease-in-out,
-    background-color 0.1s ease-in-out;
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out,
+    background-color .1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
   display: none;
@@ -6379,7 +6363,7 @@ a.eventreminder_ReminderOption_2RU5s
 html:not(.touch)
   .eventreminder_ReminderCheckBox_1CkWt.eventreminder_IconMode_28RJz
   .eventreminder_ReminderDefault_2V4hj {
-  transition: padding-right 0.2s ease-out;
+  transition: padding-right .2s ease-out;
 }
 .eventreminder_ReminderCheckBox_1CkWt.eventreminder_IconMode_28RJz:hover
   .eventreminder_ReminderOptions_2yPmn,
@@ -6694,7 +6678,7 @@ html:not(.touch)
   font-size: 12px;
   text-decoration: underline;
   text-decoration-color: #4b4b4b;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .login_NeedHelpLink_3aEuj.login_NeedHelpHighlight_7tANN {
   color: #ff7300;
@@ -7111,7 +7095,7 @@ html:not(.touch)
   height: 12px;
   fill: #aebac2;
   transition: transform;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 .bbcodes_ExpandSectionBlock_1KRtd .bbcodes_ExpandSectionHeader_PlB0t:hover {
   color: #fff;
@@ -7514,7 +7498,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J
   .linkregionbox_LinkRegionSettings_3ueMF {
@@ -7528,7 +7512,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J
   .linkregionbox_LinkRegionDelete_3K61p
@@ -7538,7 +7522,7 @@ a.bbcodes_LinkButton_14_Fn:hover {
   line {
   stroke-width: 26px;
   stroke: #008ada;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
 }
 .linkregionbox_LinkRegionEdge_15F07.linkregionbox_Middle_wV64J:hover
   .linkregionbox_LinkRegionDelete_3K61p:hover
@@ -7731,7 +7715,7 @@ html:not(.client)
   margin-top: 60px;
 }
 .apppartnereventspage_AppPartnerEventsPage_2eY85 {
-  transition: all 0.32s ease-in-out;
+  transition: all .32s ease-in-out;
   position: absolute;
   top: 0;
   right: 0;
@@ -7774,7 +7758,7 @@ html:not(.client)
   height: 100%;
   filter: blur(60px) brightness(40%);
   opacity: 0.6;
-  background: center/cover no-repeat;
+  background: center / cover no-repeat;
   z-index: 1;
 }
 .apppartnereventspage_AppBannerGroup_262ls {
@@ -8080,7 +8064,7 @@ div.apppartnereventspage_EventDetailsBody_1Rakv {
   border-radius: 3px;
   padding: 8px;
   box-sizing: border-box;
-  transition: filter 0.1s ease-in-out;
+  transition: filter .1s ease-in-out;
 }
 .apppartnereventspage_ControlSection_2KJrY > *:not(:first-child) {
   margin-left: 8px;
@@ -8147,13 +8131,13 @@ div.apppartnereventspage_EventDetailsBody_1Rakv {
 }
 .apppartnereventspage_AnimIn_2bE9v {
   animation-name: apppartnereventspage_transitionIn_1UFVD;
-  animation-duration: 0.32s;
+  animation-duration: .32s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
-  transition: all 0.21s ease-out;
+  transition: all .21s ease-out;
 }
 .apppartnereventspage_AnimIn_2bE9v svg {
-  transition: all 0.21s ease-out;
+  transition: all .21s ease-out;
 }
 .apppartnereventspage_AnimIn_2bE9v:active {
   background-color: #000;
@@ -8473,7 +8457,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   justify-content: space-between;
   background-color: #3b5a7280;
   align-items: center;
-  transition: background-color 0.2s ease;
+  transition: background-color .2s ease;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -8529,7 +8513,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   background-color: #1a9fff;
   border-radius: 2px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
-  transition: all 0.1s ease;
+  transition: all .1s ease;
   display: flex;
 }
 .deckverified_LearnMorePC_83ZIV:hover,
@@ -8935,7 +8919,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   font-size: 11px;
   line-height: 19px;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: .07em;
 }
 .salepreviewwidgets_StoreSaleWidgetContents_3rjbq
   .salepreviewwidgets_StoreMetaDataCtn_17gSb
@@ -9275,7 +9259,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   text-transform: uppercase;
   margin-right: 12px;
   font-size: 11px;
-  letter-spacing: 0.07em;
+  letter-spacing: .07em;
   white-space: nowrap;
 }
 .BasicUI
@@ -9720,7 +9704,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow .2s ease-out;
 }
 .salepreviewwidgets_CapsuleContainer_1uut8:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -9936,7 +9920,7 @@ div.creatorhomeembed_SocialContainer_25404 {
   width: auto;
   min-width: unset;
   padding: 9px 20px;
-  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow .2s ease-out;
   height: 38px;
   box-sizing: border-box;
   color: #dfe3e6;
@@ -10018,12 +10002,12 @@ div.creatorhomeembed_SocialContainer_25404 {
   height: auto;
 }
 .salepreviewwidgets_BundleContentsCtnTransition_2a96P.salepreviewwidgets_Expanding_viiqL {
-  transition: padding-top 0.2s ease-out;
+  transition: padding-top .2s ease-out;
 }
 .salepreviewwidgets_BundleContentsCtnTransition_2a96P.salepreviewwidgets_Collapsing_3_tE7 {
   padding-top: 0px;
   height: 0;
-  transition: padding-top 0.2s ease-in-out;
+  transition: padding-top .2s ease-in-out;
 }
 .salepreviewwidgets_BundleContentsCtn_BcD0k {
   padding: 0px 20px 16px;
@@ -10294,11 +10278,7 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO {
   grid-template-areas: "left right right right";
   border-radius: 3px;
-  background: -webkit-radial-gradient(
-    ellipse at top left,
-    #42454c99,
-    #25282e66
-  );
+  background: -webkit-radial-gradient(ellipse at top left, #42454c99, #25282e66);
   background: radial-gradient(ellipse at top left, #42454c99, #25282e66);
   backdrop-filter: blur(15px);
   height: 110px;
@@ -10308,7 +10288,7 @@ html.touch
   right: 0;
   bottom: 0;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 .BasicUI
   .salepreviewwidgets_SaleItemBrowserRow_11Ka5
@@ -10325,11 +10305,7 @@ html.touch
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
   .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:hover {
-  background: -webkit-radial-gradient(
-    ellipse at top left,
-    #42454cff,
-    #25282eff
-  );
+  background: -webkit-radial-gradient(ellipse at top left, #42454cff, #25282eff);
   background: radial-gradient(ellipse at top left, #42454cff, #25282eff);
 }
 .BasicUI
@@ -10360,7 +10336,7 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetHalfLeft_1A66D
   .salepreviewwidgets_CapsuleMicroTrailer_hTVgJ {
   height: 110px;
-  transition: height 0.23s ease-in-out;
+  transition: height .23s ease-in-out;
 }
 .BasicUI
   .salepreviewwidgets_SaleItemBrowserRow_11Ka5
@@ -10550,7 +10526,7 @@ html.touch
   .salepreviewwidgets_ContentsCount_1rG6L {
   font-size: 11px;
   font-weight: 300;
-  letter-spacing: 0.1ch;
+  letter-spacing: .1ch;
   text-transform: uppercase;
   padding-bottom: 4px;
   display: none;
@@ -10731,7 +10707,7 @@ html.touch
   order: -1;
   margin-left: 4px;
   display: none;
-  transition: all 0.23s ease-in-out;
+  transition: all .23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_11Ka5
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_15xV_
@@ -11564,7 +11540,7 @@ html.touch
 }
 .gamehover_HoverContentTransition_28V2p {
   height: 100%;
-  transition: transform 0.15s ease-out;
+  transition: transform .15s ease-out;
   transform: scale(0.95);
   outline: none;
 }
@@ -11611,7 +11587,7 @@ html.touch
   pointer-events: none;
   background: #000;
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
 .gamehover_GameHoverCapsuleCtn_1xj08
   .gamehover_TrailerCtn_1HPr0
@@ -11683,7 +11659,7 @@ html.touch
     rgba(0, 0, 0, 0.7) 20%,
     transparent 33%
   );
-  transition: transform 0.35s ease-out;
+  transition: transform .35s ease-out;
   transform: translateX(-30px);
 }
 .gamehover_Opening_1l-0j
@@ -11721,7 +11697,7 @@ html.touch
   width: 0;
   height: 0;
   padding: 7px 0;
-  transition: padding-right 0.2s ease-out;
+  transition: padding-right .2s ease-out;
   font-size: 13px;
 }
 .gamehover_WishlistButton_1lp6v
@@ -11750,7 +11726,7 @@ html.touch .gamehover_WishlistButton_1lp6v .gamehover_WishlistButtonText_3SsXJ,
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
-  transition: transform 0.25s ease-in-out;
+  transition: transform .25s ease-in-out;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
   color: #fff;
   display: flex;
@@ -12328,7 +12304,7 @@ html.responsive.touch
   border-radius: var(--gpCorner-Medium);
   padding: 12px 16px;
   scroll-snap-align: start;
-  transition: filter 0.2s ease;
+  transition: filter .2s ease;
 }
 .BasicUI
   .partnersaledisplay_SaleSectionTabs_QhcTn
@@ -12366,7 +12342,7 @@ html.responsive.touch
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
-  transition: opacity 0.3s linear;
+  transition: opacity .3s linear;
 }
 .partnersaledisplay_MobileTabSelector_2LM5J.partnersaledisplay_Visible_2y0Cn {
   opacity: 1;
@@ -12492,7 +12468,7 @@ html.responsive.touch
 }
 .deckcompaticons_CompatIcon_3cV4w {
   opacity: 1;
-  transition: opacity 0.2s ease 0.1s;
+  transition: opacity .2s ease .1s;
   display: block;
   top: 4px;
   right: 4px;
@@ -12671,16 +12647,14 @@ html.responsive.touch
       #000000 52.6%,
       rgba(0, 0, 0, 0.18) 83.33%,
       rgba(0, 0, 0, 0) 95.31%
-    ),
-    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+    ), linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
   mask: radial-gradient(
       51.31% 143.89% at 49.99% 24.75%,
       #000000 0%,
       #000000 52.6%,
       rgba(0, 0, 0, 0.18) 83.33%,
       rgba(0, 0, 0, 0) 95.31%
-    ),
-    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+    ), linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-composite: source-in;
   mask-composite: source-in;
 }
@@ -12816,7 +12790,7 @@ html.responsive.touch
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Info_1cMHE {
   animation-name: animated_featured_capsule_InfoSlideRight_1eQ4o;
-  animation-duration: 0.1s;
+  animation-duration: .1s;
   animation-timing-function: cubic-bezier(0, 0.6, 0.2, 1);
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -12826,7 +12800,7 @@ html.responsive.touch
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Artwork_1FF93 {
   animation-name: animated_featured_capsule_ArtworkSlideRight_3J6vd;
-  animation-duration: 0.1s;
+  animation-duration: .1s;
   animation-timing-function: cubic-bezier(0, 0.6, 0.2, 1);
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -12836,7 +12810,7 @@ html.responsive.touch
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Info_1cMHE {
   animation-name: animated_featured_capsule_InfoSlideLeft_8uobO;
-  animation-duration: 0.1s;
+  animation-duration: .1s;
   animation-timing-function: cubic-bezier(0, 0.6, 0.2, 1);
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -12846,7 +12820,7 @@ html.responsive.touch
   .carousel__slide.carousel__slide--visible
   .animated_featured_capsule_Artwork_1FF93 {
   animation-name: animated_featured_capsule_ArtworkSlideLeft_2lJ-z;
-  animation-duration: 0.1s;
+  animation-duration: .1s;
   animation-timing-function: cubic-bezier(0, 0.6, 0.2, 1);
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -13023,7 +12997,7 @@ html.responsive.touch
   height: auto;
   position: relative;
   cursor: pointer;
-  transition: all 0.21s ease-in-out;
+  transition: all .21s ease-in-out;
   margin-bottom: 0;
 }
 .salehilightplayerembed_VideoThumbnail_3hh2s.salehilightplayerembed_videoPlaying_3xTX5 {
@@ -13040,7 +13014,7 @@ html.responsive.touch
   background-color: #0006;
   border: 1px solid #aaa3;
   opacity: 0.75;
-  transition: all 0.16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 .salehilightplayerembed_VideoThumbnail_3hh2s:hover
   .salehilightplayerembed_VideoPlayButton_D6YWF {
@@ -13057,7 +13031,7 @@ html.responsive.touch
   height: 50%;
   margin-left: 18px;
   margin-top: 15px;
-  transition: all 0.16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 .salehilightplayerembed_VideoLargeContainer_236Ae {
   position: absolute;
@@ -13073,7 +13047,7 @@ html.responsive.touch
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.26s ease-in-out;
+  transition: all .26s ease-in-out;
 }
 .salehilightplayerembed_VideoLargeContainer_236Ae.salehilightplayerembed_videoPlaying_3xTX5 {
   opacity: 1;
@@ -13103,7 +13077,7 @@ html.responsive.touch
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.26s ease-in-out;
+  transition: all .26s ease-in-out;
 }
 .PopupFullWindow .salehilightplayerembed_VideoPopupContainers_2Ogcp {
   width: calc(100vw - 48px);
@@ -13546,7 +13520,7 @@ html.responsive.touch
   font-size: 17px;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-weight: 300;
   margin-top: 12px;
 }
@@ -13661,7 +13635,7 @@ img {
   z-index: 12;
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  transition: background-color 0.32s ease-in-out;
+  transition: background-color .32s ease-in-out;
   margin: 4px;
   min-height: 32px;
   min-width: 32px;
@@ -13774,7 +13748,7 @@ img {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .shared_common_SummaryTextArea_1k45S:focus {
   background: rgba(67, 73, 83, 0.6);
@@ -13849,7 +13823,7 @@ img {
   border-radius: 2px;
   margin-right: 12px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   font-size: 11px;
   line-height: 16px;
@@ -13864,7 +13838,7 @@ img {
 .eventcalendartile_TileContainer_c-I2o .eventcalendartile_PastDateText_3DcMd {
   color: #909da7;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-size: 11px;
 }
 .eventcalendartile_TileContainer_c-I2o .eventcalendartile_GameSource_3oKC- {
@@ -13910,7 +13884,7 @@ img {
   font-weight: 500;
   padding-top: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: .07em;
 }
 .eventcalendartile_TileContainer_c-I2o
   .eventcalendartile_DateAndSourceLine_31CQ3 {
@@ -13966,7 +13940,7 @@ img {
 .eventcalendartile_TileContainer_c-I2o
   .eventcalendartile_TileTextCategoryType_1B5hb {
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   font-size: 11px;
   line-height: 16px;
@@ -14014,11 +13988,7 @@ img {
   .eventcalendartile_TileContainer_c-I2o.eventcalendartile_EventType14_3_CKO
     .eventcalendartile_Tile_P0VEt {
     height: unset;
-    background: linear-gradient(
-      to bottom,
-      #5e594a 50%,
-      rgba(62, 57, 50, 0) 90%
-    );
+    background: linear-gradient(to bottom, #5e594a 50%, rgba(62, 57, 50, 0) 90%);
   }
   .eventcalendartile_TileContainer_c-I2o.eventcalendartile_EventType14_3_CKO
     .eventcalendartile_Tile_P0VEt
@@ -14096,7 +14066,7 @@ img {
   width: auto;
   height: 0;
   padding-top: 46.75%;
-  background: #2d3138 center/cover no-repeat;
+  background: #2d3138 center / cover no-repeat;
   overflow: hidden;
 }
 .eventcalendartile_TileContainer_c-I2o.eventcalendartile_EventType12_DoPDC
@@ -14191,7 +14161,7 @@ img {
   background: radial-gradient(circle at top left, #3a404a 10%, #32353e 90%);
   overflow: hidden;
   box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0);
-  transition: box-shadow 0.24s ease-in-out;
+  transition: box-shadow .24s ease-in-out;
 }
 .eventcalendartile_TileContainer_c-I2o .eventcalendartile_Tile_P0VEt:hover {
   cursor: pointer;
@@ -14232,7 +14202,7 @@ img {
   .eventcalendartile_MainContentContainer_1dLpx
   .eventcalendartile_CoverImageCtn_2xbT4
   .eventcalendartile_YoutubePreviewImage_2z1EG {
-  transition: height 0.24s ease-in-out;
+  transition: height .24s ease-in-out;
   height: 100%;
   width: 30vw;
   min-width: 250px;
@@ -14286,12 +14256,10 @@ img {
   .eventcalendartile_TileImage_1t9YU {
   filter: blur(0px);
   opacity: 1;
-  transition:
-    filter 0.24s ease-in-out,
-    opacity 0.24s ease-in-out;
+  transition: filter .24s ease-in-out, opacity .24s ease-in-out;
   height: 0;
   padding-top: 56.25%;
-  background: #2d3138 center/cover no-repeat;
+  background: #2d3138 center / cover no-repeat;
   overflow: hidden;
 }
 .eventcalendartile_TileContainer_c-I2o
@@ -14314,9 +14282,7 @@ img {
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition:
-    opacity 0.24s ease-in-out,
-    transform 0.24s ease-in-out;
+  transition: opacity .24s ease-in-out, transform .24s ease-in-out;
 }
 .eventcalendartile_TileContainer_c-I2o
   .eventcalendartile_Tile_P0VEt
@@ -14346,7 +14312,7 @@ img {
   height: 100%;
   filter: blur(60px) brightness(40%);
   opacity: 0.6;
-  background: center/cover no-repeat;
+  background: center / cover no-repeat;
   -webkit-mask-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0) 100%);
 }
@@ -15060,7 +15026,7 @@ img {
     .eventcalendartile_EventName_1rKKK {
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: 0.4px;
+    letter-spacing: .4px;
     line-height: 24px;
     margin-bottom: 4px;
   }
@@ -15249,7 +15215,7 @@ img {
   height: 250px;
 }
 .youtubepreviewimage_YoutubePreviewImage_1hcla img {
-  transition: opacity 0.24s ease-in-out;
+  transition: opacity .24s ease-in-out;
   opacity: 0.6;
   display: block;
 }
@@ -15279,9 +15245,7 @@ img {
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition:
-    opacity 0.24s ease-in-out,
-    transform 0.24s ease-in-out;
+  transition: opacity .24s ease-in-out, transform .24s ease-in-out;
 }
 .youtubepreviewimage_YoutubePreviewImage_1hcla:hover img {
   opacity: 1;
@@ -15412,7 +15376,7 @@ img {
     rgba(255, 255, 255, 0.1) 10%,
     rgba(255, 255, 255, 0) 80%
   );
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   will-change: transform;
 }
 @media screen and (max-height: 360px) {
@@ -15439,7 +15403,7 @@ img {
 }
 .eventcalendar_FiltersTitle_1sQcX {
   font-size: 18px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: #fff;
 }
@@ -15526,7 +15490,7 @@ img {
   align-items: center;
   justify-content: space-between;
   background-color: #9d4848;
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   will-change: transform;
 }
 html.responsive.touch .eventcalendar_SteamLabsBanner_1OMtW {
@@ -15617,7 +15581,7 @@ html.responsive.touch .eventcalendar_SteamLabsBanner_1OMtW {
   background-color: #30343b;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow: auto;
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   will-change: transform;
 }
 .eventcalendar_SidebarContainer_2wR83.eventcalendar_SidebarCollapsed_3OgeR {
@@ -15734,7 +15698,7 @@ html.responsive.touch
   line-height: 30px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   word-wrap: break-word;
   word-break: break-word;
 }
@@ -15764,7 +15728,7 @@ html.responsive.touch
   background-color: #575e69;
   padding: 1px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   color: #fff;
   line-height: 16px;
 }
@@ -15791,7 +15755,7 @@ html.responsive.touch
   border-radius: 3px;
   background-color: #575e69;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   padding: 8px;
   margin-top: 4px;
 }
@@ -15922,7 +15886,7 @@ html.responsive.touch
   padding-bottom: 8px;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   color: #a7aeb4;
 }
 .eventcalendar_SidebarContainer_2wR83
@@ -16062,7 +16026,7 @@ html.force_desktop
   width: 48px;
   height: 62px;
   padding: 10px 8px 20px;
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   will-change: transform;
 }
 .eventcalendar_MobileButton_MpvMf path {
@@ -16175,7 +16139,7 @@ html.responsive.touch
   }
 }
 .eventcalendar_EventCalendarContainer_1-onb .eventcalendar_RowContainer_wiiK1 {
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   min-height: 100vh;
   width: 100%;
 }
@@ -16659,7 +16623,7 @@ html.responsive.touch
 .eventcalendar_NewsChannelGroup_3YVuO {
   margin-top: 3vh;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
 }
 .eventcalendar_NewsChannelGroup_3YVuO
   .eventcalendar_NewsChannelListTitle_34vNb {
@@ -16758,7 +16722,7 @@ html.responsive.touch
 }
 .eventcalendar_SidePanelGameSearch_1ToxH .DialogLabel {
   color: #a7aeb4;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   margin-bottom: 7px;
   margin-top: 2vh;
 }
@@ -16768,7 +16732,7 @@ html.responsive.touch
   height: 52px;
   width: 100%;
   background-color: #33373f;
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   will-change: transform;
   display: flex;
   align-items: center;
@@ -16792,7 +16756,7 @@ html.responsive.touch
   top: 52px;
   background-color: #33373f;
   opacity: 0;
-  transition: opacity 0.15s ease-in-out;
+  transition: opacity .15s ease-in-out;
   will-change: transform;
   z-index: 51;
   width: 100%;
@@ -16923,7 +16887,7 @@ html:not(.touch)
   padding: 60px 0px;
   background: linear-gradient(90deg, #10a2d7, #2b74fe);
   color: #fff;
-  transition: transform 0.15s ease-in-out;
+  transition: transform .15s ease-in-out;
   will-change: transform;
 }
 .eventcalendar_LogInFeedRow_FjUD7.eventcalendar_LogInSmallMode_3Ia-8 {
@@ -17176,9 +17140,7 @@ html:not(.touch)
 }
 .carousel_carouselNavButton_2aDk- svg {
   opacity: 0.7;
-  transition:
-    opacity 0.2s ease-in-out,
-    filter 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out, filter .2s ease-in-out;
   fill: #fff;
 }
 .carousel_carouselBtnCtn_2pHZR {
@@ -17304,7 +17266,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   bottom: 16px;
   background-color: rgba(255, 255, 255, 0.35);
   transition: left right;
-  transition-duration: 0.4s;
+  transition-duration: .4s;
 }
 .carousel_pipContainer_2-04r {
   padding-top: 10px;
@@ -17331,7 +17293,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   opacity: 0.3;
   padding: 1px 2px;
   margin: 0px;
-  transition: opacity 0.2s;
+  transition: opacity .2s;
 }
 .carousel_pip_Y10KP img {
   width: 100%;
@@ -17583,7 +17545,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .facetedbrowse_FacetMenuTitle_2wY0i {
   text-transform: uppercase;
   font-size: 16px;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   padding-bottom: 4px;
 }
 .facetedbrowse_FacetedBrowseMatchCount_2Ru8O {
@@ -17594,7 +17556,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .facetedbrowse_FacetedBrowseReset_2C5jA {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-size: 13px;
   margin: 4px 0;
   padding-bottom: 4px;
@@ -17613,7 +17575,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   padding: 4px 0;
   width: fit-content;
   opacity: 70%;
@@ -17729,7 +17691,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .facetedbrowse_SelectedFacetValuesTitle_Mv8-a {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-size: 13px;
   margin: 4px 0;
   opacity: 85%;
@@ -17790,7 +17752,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .packagepricewidget_StoreSaleReservationPriceBox_35nMS {
   background: none;
   color: #fff;
-  font-size: 0.7em;
+  font-size: .7em;
   font-weight: 600;
   padding: 0px;
 }
@@ -17824,7 +17786,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .packagepricewidget_StoreSaleReservationPriceBox_35nMS {
   background: none;
   color: #fff;
-  font-size: 0.7em;
+  font-size: .7em;
   font-weight: 600;
   padding: 0px;
 }
@@ -17923,7 +17885,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   height: auto;
   position: relative;
   left: 0px;
-  transition: transform 0.4s ease-out;
+  transition: transform .4s ease-out;
   top: 0px;
   display: block;
 }
@@ -18005,7 +17967,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: background-color 0.24s ease-in-out;
+  transition: background-color .24s ease-in-out;
 }
 .eventrow_EventSummaryText_1759z {
   margin: 10px 20px;
@@ -18021,10 +17983,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition:
-    filter 0.24s ease-in-out,
-    transform 0.24s ease-in-out,
-    color 0.24s ease-in-out;
+  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
+    ease-in-out;
 }
 .items_in_row_4 .eventrow_EventSummaryText_1759z {
   line-height: 16px;
@@ -18043,10 +18003,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition:
-    filter 0.24s ease-in-out,
-    transform 0.24s ease-in-out,
-    color 0.24s ease-in-out;
+  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
+    ease-in-out;
 }
 .eventrow_OtherEvents_EventCtn_plQje.eventrow_HorizontalEvent_2p0Kk {
   display: flex;
@@ -18175,11 +18133,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("Jolly Lodger"),
-    local("JollyLodger"),
+  src: local("Jolly Lodger"), local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
-      format("woff2");
+    format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
     U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
@@ -18188,25 +18144,20 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("Jolly Lodger"),
-    local("JollyLodger"),
+  src: local("Jolly Lodger"), local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+    format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "New Rocker";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("New Rocker"),
-    local("NewRocker-Regular"),
+  src: local("New Rocker"), local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
-      format("woff2");
+    format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
     U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
@@ -18215,25 +18166,20 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("New Rocker"),
-    local("NewRocker-Regular"),
+  src: local("New Rocker"), local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+    format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Chonburi";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("Chonburi"),
-    local("Chonburi-Regular"),
+  src: local("Chonburi"), local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
-      format("woff2");
+    format("woff2");
   unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 @font-face {
@@ -18241,33 +18187,27 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    local("Chonburi"),
-    local("Chonburi-Regular"),
+  src: local("Chonburi"), local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
-      format("woff2");
+    format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 @font-face {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src:
-    local("Sigmar One Regular"),
-    local("SigmarOne-Regular"),
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
-      format("woff2");
+    format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 @font-face {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src:
-    local("Sigmar One Regular"),
-    local("SigmarOne-Regular"),
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
-      format("woff2");
+    format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
     U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
@@ -18275,14 +18215,11 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src:
-    local("Sigmar One Regular"),
-    local("SigmarOne-Regular"),
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+    format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .salelabels_SectionLabelCtn_3pfor {
   display: flex;
@@ -18895,7 +18832,7 @@ html.tablet
   color: #fff;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1ch;
+  letter-spacing: .1ch;
   padding: 8px 16px 0px;
 }
 .contenthubshared_SpotlightCtn_3oEys
@@ -18920,7 +18857,7 @@ html.tablet
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1ch;
+  letter-spacing: .1ch;
   padding: 8px 16px 2px;
 }
 .contenthubshared_SpotlightCtn_3oEys
@@ -19252,12 +19189,12 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow3_2Ogvi
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow3_2Ogvi
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: .4s;
 }
 .saleghostsections_GhostCtn_30BKz .saleghostsections_CapsuleRow4_Ls7fy {
   display: flex;
@@ -19274,17 +19211,17 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow4_Ls7fy
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.15s;
+  animation-delay: .15s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow4_Ls7fy
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: .3s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow4_Ls7fy
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(4) {
-  animation-delay: 0.45s;
+  animation-delay: .45s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRowSuperCapsule_2RwR4
@@ -19324,7 +19261,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_CapsuleRow23_VzyzM
   .saleghostsections_Caps2_1j5Nm
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow23_VzyzM
@@ -19342,19 +19279,19 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_CapsuleRow23_VzyzM
   .saleghostsections_Caps3_3MZB6
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: .1s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow23_VzyzM
   .saleghostsections_Caps3_3MZB6
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow23_VzyzM
   .saleghostsections_Caps3_3MZB6
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: .3s;
 }
 .saleghostsections_GhostCtn_30BKz .saleghostsections_CapsuleRow234_1C9D9 {
   display: flex;
@@ -19381,7 +19318,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps2_1j5Nm
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
@@ -19399,19 +19336,19 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps3_3MZB6
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: .1s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps3_3MZB6
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps3_3MZB6
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: .3s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
@@ -19429,25 +19366,25 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps4_32IY_
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps4_32IY_
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.26s;
+  animation-delay: .26s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps4_32IY_
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(3) {
-  animation-delay: 0.32s;
+  animation-delay: .32s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_CapsuleRow234_1C9D9
   .saleghostsections_Caps4_32IY_
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: .4s;
 }
 .saleghostsections_GhostCtn_30BKz .saleghostsections_SpotlightsRow_3-gUr {
   display: flex;
@@ -19464,12 +19401,12 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_SpotlightsRow_3-gUr
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_SpotlightsRow_3-gUr
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: .4s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_SpotlightsRow_3-gUr
@@ -19486,13 +19423,13 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_PlaceholderCap_2bCKN {
   width: 100%;
   height: 193px;
-  animation-delay: 0.4s;
+  animation-delay: .4s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_SpotlightsRow_3-gUr
   .saleghostsections_DailyDealsColumn_1aMpA
   .saleghostsections_PlaceholderCap_2bCKN:nth-child(2) {
-  animation-delay: 0.5s;
+  animation-delay: .5s;
 }
 .saleghostsections_GhostCtn_30BKz .saleghostsections_MainCapRow_mJInE {
   display: flex;
@@ -19526,7 +19463,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   height: 36px;
   width: 50%;
   margin-bottom: 8px;
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_MainCapRow_mJInE
@@ -19534,7 +19471,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_PlaceholderSubtitle_2r9BU {
   height: 26px;
   width: 80%;
-  animation-delay: 0.21s;
+  animation-delay: .21s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_MainCapRow_mJInE
@@ -19544,7 +19481,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   width: 20%;
   margin-top: 20px;
   margin-bottom: 8px;
-  animation-delay: 0.22s;
+  animation-delay: .22s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_MainCapRow_mJInE
@@ -19553,7 +19490,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   height: 24px;
   width: 25%;
   margin-bottom: 8px;
-  animation-delay: 0.22s;
+  animation-delay: .22s;
 }
 .saleghostsections_GhostCtn_30BKz
   .saleghostsections_MainCapRow_mJInE
@@ -19561,7 +19498,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   .saleghostsections_PlaceholderTags_2orL1 {
   height: 40px;
   width: 90%;
-  animation-delay: 0.23s;
+  animation-delay: .23s;
 }
 .saleghostsections_GhostCtn_30BKz .saleghostsections_MainCapRowExpanded_3MnuD {
   padding-top: 205px;
@@ -20612,7 +20549,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   max-width: 1300px;
   display: flex;
   padding: 10px 0px;
-  transition-duration: 0.23s;
+  transition-duration: .23s;
   transition-timing-function: ease-in-out;
   background-color: none;
 }
@@ -20670,7 +20607,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   height: 400px;
   left: 8%;
   right: 8%;
-  transition: transform 0.15s;
+  transition: transform .15s;
   background-image: url(https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2);
   background-size: 100%;
   background-position-y: 0px;
@@ -21387,14 +21324,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
 .salequiz_CorrectCtn_3fjkP {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: .5em;
   align-items: center;
   padding-top: 1.5em;
 }
 .salequiz_WrongCtn_3bmDv {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: .5em;
   align-items: center;
   padding-top: 1.5em;
 }
@@ -21434,7 +21371,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
 .salesectioneventschedule_SaleSchedCtn_1muE5
   .salesectioneventschedule_ScheduleSectionHeader_1jK2H {
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-size: 18px;
   color: #fff;
   text-transform: uppercase;
@@ -21495,14 +21432,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   min-width: 0;
   display: grid;
   grid-auto-flow: row;
-  grid-template: 1fr 1fr/48% 48%;
+  grid-template: 1fr 1fr / 48% 48%;
   grid-gap: 10px 4%;
 }
 @media screen and (max-width: 800px) {
   .salesectioneventschedule_SaleSchedGridCtn_14_pr {
     max-width: 300px;
     grid-auto-flow: column;
-    grid-template: 1fr 1fr/1fr 0px;
+    grid-template: 1fr 1fr / 1fr 0px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -22050,28 +21987,22 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   cursor: pointer;
   box-shadow: 3px -6px 5px -6px #23232366;
   transform: rotate(0deg) scale(1);
-  -webkit-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter .2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkCtn_3fvV2:hover {
   box-shadow: 3px -6px 10px -6px #23232366;
   transform: rotate(3deg) scale(1.07);
-  -webkit-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter .2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkTriangle_2ABiV {
   width: 18px;
@@ -22161,7 +22092,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   text-indent: 20px;
   border: 0px solid #fff;
   border-radius: 2px;
-  transition: filter 0.3s ease-out;
+  transition: filter .3s ease-out;
   filter: blur(5px) opacity(0.2);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -22186,18 +22117,18 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
 }
 .storywidget_StoryPage_1-7YE.storywidget_Opening_21i2V,
 .storywidget_StoryPage_1-7YE.storywidget_Open_Dgz7i {
-  -webkit-animation: storywidget_flip-in-ver-left_20UoB 0.4s
+  -webkit-animation: storywidget_flip-in-ver-left_20UoB .4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: storywidget_flip-in-ver-left_20UoB 0.4s
+  animation: storywidget_flip-in-ver-left_20UoB .4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .storywidget_PageOne_jm0Eu {
   z-index: 2;
 }
 .storywidget_PageOne_jm0Eu.storywidget_OnPageTwo_PITj6 {
-  -webkit-animation: storywidget_flip-vertical-left-one_uCHwe 0.4s
+  -webkit-animation: storywidget_flip-vertical-left-one_uCHwe .4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: storywidget_flip-vertical-left-one_uCHwe 0.4s
+  animation: storywidget_flip-vertical-left-one_uCHwe .4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .storywidget_PageTwo_2eleb {
@@ -22205,9 +22136,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   z-index: 1;
 }
 .storywidget_PageTwo_2eleb.storywidget_OnPageTwo_PITj6 {
-  -webkit-animation: storywidget_flip-vertical-left-two_20f_q 0.4s
+  -webkit-animation: storywidget_flip-vertical-left-two_20f_q .4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: storywidget_flip-vertical-left-two_20f_q 0.4s
+  animation: storywidget_flip-vertical-left-two_20f_q .4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .storywidget_StoryHeader_1ay-_ {
@@ -22227,7 +22158,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   padding-right: 20px;
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 17px;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   color: #3d3e38;
 }
 .storywidget_PageText_1Ccei {
@@ -22270,10 +22201,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   margin: 4px;
   margin-top: 0px;
   margin-bottom: 18px;
-  box-shadow:
-    0 0 0 2px #23232366,
-    0 0 0 4px #f7f0e4,
-    0 0 0 6px #23232366;
+  box-shadow: 0 0 0 2px #23232366, 0 0 0 4px #f7f0e4, 0 0 0 6px #23232366;
 }
 .storywidget_OptionTextNotice_1Unhw {
   text-align: left;
@@ -22317,15 +22245,12 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   border-radius: 5px;
   box-shadow: 2px 4px 16px #3d3e3899;
   transform: rotateZ(3deg) scale(1);
-  -webkit-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter .2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_ResultBadge_QnhwA.storywidget_Opening_21i2V,
 .storywidget_ResultBadge_QnhwA.storywidget_Open_Dgz7i {
@@ -22334,15 +22259,12 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
 .storywidget_ResultBadge_QnhwA.storywidget_Opening_21i2V:hover,
 .storywidget_ResultBadge_QnhwA.storywidget_Open_Dgz7i:hover {
   transform: rotateZ(1.5deg) scale(1.03);
-  -webkit-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition:
-    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter
+    .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter .2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BadgeImage_1PVrh {
   width: 100%;
@@ -22377,7 +22299,7 @@ a.storywidget_BadgeFooter_24Cq8 {
   text-overflow: ellipsis;
   border-top: 2px dashed #23232366;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: .04em;
   font-size: 11px;
   line-height: 15px;
   width: 150px;
@@ -22574,7 +22496,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .discoveryqueuewizard_TextLink_14AFZ {
   color: #1a9fff;
   cursor: pointer;
-  transition: color 0.1s ease;
+  transition: color .1s ease;
 }
 .discoveryqueuewizard_DiscoveryQueueCarouselCtn_17QGf
   .discoveryqueuewizard_TextLink_14AFZ:hover {
@@ -22597,7 +22519,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   overflow: hidden;
   margin: 0 auto;
   transition: transform ease;
-  transition-duration: 0.5s;
+  transition-duration: .5s;
 }
 @media screen and (min-width: 960px) {
   .discoveryqueuewizard_DiscoveryQueueApp_2TzUy {
@@ -22605,14 +22527,14 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   }
 }
 .discoveryqueuewizard_DiscoveryQueueApp_2TzUy.discoveryqueuewizard_Focused_3n5Zi {
-  transition-duration: 0.6s;
+  transition-duration: .6s;
   transform: scale(1);
 }
 .discoveryqueuewizard_DiscoveryQueueWrapper_3j0ID {
   position: relative;
   margin: auto 0px;
   animation-name: discoveryqueuewizard_revealDiscoveryQueueWrapper_39qqA;
-  animation-duration: 0.4s;
+  animation-duration: .4s;
   animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
   animation-delay: 0s;
 }
@@ -22651,17 +22573,14 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   padding: 2px 6px;
   opacity: 0;
   transform: translateX(calc(-100% - 8px));
-  transition:
-    opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
-    transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
+  transition: opacity .2s cubic-bezier(0.32, 0, 0.67, 0), transform .2s
+    cubic-bezier(0.32, 0, 0.67, 0);
 }
 .discoveryqueuewizard_AppVideoCtn_benca
   .discoveryqueuewizard_WishlistBadge_7q6iu.discoveryqueuewizard_Active_m1UQj {
   opacity: 1;
   transform: translateX(0px);
-  transition:
-    opacity 0.1s ease,
-    transform 0.2s ease;
+  transition: opacity .1s ease, transform .2s ease;
 }
 .discoveryqueuewizard_AppVideoCtn_benca .discoveryqueuewizard_AppVideo_1H-LQ {
   object-fit: fill;
@@ -22671,7 +22590,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .discoveryqueuewizard_AppVideoCtn_benca .discoveryqueuewizard_AppMainCap_3Zxg1 {
   height: 100%;
   width: 100%;
-  transition: opacity 0.6s ease 1s;
+  transition: opacity .6s ease 1s;
   opacity: 1;
 }
 .discoveryqueuewizard_AppDetailsCtn_1PpPM {
@@ -22687,7 +22606,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_AppDetailsCtn_1PpPM
   .discoveryqueuewizard_AppDetailsCtnTop_2Av8o {
-  padding: calc(8px + 0.6vw);
+  padding: calc(8px + .6vw);
   padding-bottom: 8px;
   display: flex;
   flex-direction: column;
@@ -22819,7 +22738,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
-  padding: calc(8px + 0.6vw);
+  padding: calc(8px + .6vw);
   padding-top: 0px;
 }
 .discoveryqueuewizard_AppActionButtonsCtn_3EeQV
@@ -22870,12 +22789,12 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   background-color: rgba(33, 52, 71, 0.6);
   opacity: 0;
   backdrop-filter: blur(0px);
-  transition: opacity 0.2s ease 0.1s;
+  transition: opacity .2s ease .1s;
 }
 .discoveryqueuewizard_IgnoredCtn_EfzwZ.discoveryqueuewizard_Active_m1UQj {
   opacity: 1;
   backdrop-filter: blur(40px);
-  transition: opacity 0.2s ease;
+  transition: opacity .2s ease;
   z-index: 100;
 }
 .discoveryqueuewizard_IgnoredCtn_EfzwZ .discoveryqueuewizard_IgnoredInfo_322X- {
@@ -22890,9 +22809,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #fff;
   opacity: 0;
   transform: translateY(32px);
-  transition:
-    opacity 0.1s ease-in,
-    transform 0.15s ease-in;
+  transition: opacity .1s ease-in, transform .15s ease-in;
 }
 .discoveryqueuewizard_IgnoredCtn_EfzwZ
   .discoveryqueuewizard_IgnoredInfo_322X-
@@ -22918,7 +22835,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -22928,9 +22845,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .discoveryqueuewizard_IgnoredInfo_322X-.discoveryqueuewizard_Active_m1UQj {
   opacity: 1;
   transform: translateY(0px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.4s ease;
+  transition: opacity .3s ease, transform .4s ease;
 }
 .discoveryqueuewizard_AppDesc_1CFjV {
   font-size: 12px;
@@ -22953,7 +22868,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryTitle_3ie5C {
-  font-size: calc(12px + 0.8vw);
+  font-size: calc(12px + .8vw);
   text-align: center;
   color: #fff;
   font-weight: 700;
@@ -22998,7 +22913,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .discoveryqueuewizard_SummaryGrid_2AtLb
   .discoveryqueuewizard_GridItem_B3aMR
   .discoveryqueuewizard_GridNumber_2wKLJ {
-  font-size: calc(22px + 0.4vw);
+  font-size: calc(22px + .4vw);
   color: #fff;
   font-weight: 800;
 }
@@ -23022,7 +22937,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   align-items: center;
   align-self: normal;
   animation-name: discoveryqueuewizard_revealTopBarCtn_2fo0w;
-  animation-duration: 0.3s;
+  animation-duration: .3s;
   animation-timing-function: ease-in-out;
 }
 .BasicUI .discoveryqueuewizard_TopBarCtn_3nALZ {
@@ -23043,9 +22958,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #1a9fff;
   cursor: pointer;
   padding: 2px 4px;
-  transition:
-    color 0.1s ease,
-    background-color 0.1s ease;
+  transition: color .1s ease, background-color .1s ease;
 }
 .discoveryqueuewizard_LearnMoreLink_3TrpB:hover {
   color: #fff;
@@ -23078,9 +22991,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   user-select: none;
   -webkit-user-select: none;
   padding: 8px 16px;
-  transition:
-    background-color 0.1s ease,
-    border-radius 0.1s ease;
+  transition: background-color .1s ease, border-radius .1s ease;
 }
 .discoveryqueuewizard_QueueButton_2tLc9.discoveryqueuewizard_Disabled_2r82X {
   opacity: 0.4;
@@ -23101,7 +23012,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_QueueButton_2tLc9 svg {
   width: 16px;
-  transition: fill 0.1s ease;
+  transition: fill .1s ease;
 }
 .discoveryqueuewizard_QueueButton_2tLc9:hover:not(
     .discoveryqueuewizard_Disabled_2r82X
@@ -23131,33 +23042,28 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   display: none;
   background-color: rgba(103, 112, 123, 0.6);
   backdrop-filter: blur(24px);
-  box-shadow:
-    0px 12px 16px rgba(0, 0, 0, 0.3),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transition:
-    background-color ease,
-    box-shadow ease,
-    transform ease,
-    opacity ease;
-  transition-duration: 0.3s;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3), inset 0 0 0 1px
+    rgba(255, 255, 255, 0.1);
+  transition: background-color ease, box-shadow ease, transform ease, opacity
+    ease;
+  transition-duration: .3s;
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd svg {
   width: 32px;
   height: 32px;
   color: #fff;
   transition: color ease;
-  transition-duration: 0.3s;
+  transition-duration: .3s;
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd:hover {
   background-color: #fff;
-  box-shadow:
-    0px 16px 18px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4), inset 0 0 0 1px
+    rgba(255, 255, 255, 0.1);
   transform: translateY(-50%) scale(1);
-  transition-duration: 0.06s;
+  transition-duration: .06s;
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd:hover svg {
-  transition-duration: 0.06s;
+  transition-duration: .06s;
   color: #0e141b;
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd.discoveryqueuewizard_Enable_2h8mD {
@@ -23284,7 +23190,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
   transition-property: transform;
-  transition-duration: 0.34s;
+  transition-duration: .34s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0;
@@ -23414,7 +23320,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   height: calc(100% - 2px);
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter 0.24s ease-in-out;
+  transition: filter .24s ease-in-out;
 }
 .steamavatar_avatar_2dopb.GamepadMode,
 .GamepadMode .steamavatar_avatar_2dopb {
@@ -23461,11 +23367,8 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .friendsnooze_SnoozeZ_3hM97 {
   font-size: 14px;
   font-weight: 500;
-  text-shadow:
-    -1px -1px 4px #000,
-    1px -1px 4px #000,
-    -1px 1px 2px #000,
-    1px 1px 2px #000;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px
+    2px #000;
 }
 .friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Dim_2IdZn
   .friendsnooze_SnoozeZ_3hM97 {
@@ -23477,12 +23380,12 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   z-index: 1;
 }
 .friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z2_2vxUQ {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
   margin-top: 2px;
   z-index: 2;
 }
 .friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z3_DwdaT {
-  animation-delay: 0.4s;
+  animation-delay: .4s;
   margin-top: 4px;
   z-index: 3;
 }
@@ -24283,7 +24186,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   font-size: 15px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
-  transition: color 0.94s ease-in-out;
+  transition: color .94s ease-in-out;
   text-shadow: 1px 1px 4px #000;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -24373,7 +24276,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   margin-bottom: 1px;
   font-size: 12px;
   display: inline-block;
-  transition: color 0.94s ease-in-out;
+  transition: color .94s ease-in-out;
   text-shadow: 1px 1px 3px #000;
 }
 .titleBarContainer
@@ -24428,11 +24331,11 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .friendRequests .bright .moMutualFriends .personanameandstatus_playerName_26Ivx,
 .friendRequests .personanameandstatus_playerName_26Ivx {
   color: #fff;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .friendRequests .noMutualFriends .personanameandstatus_playerName_26Ivx {
   color: #aaa;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .MemberListColumn
   .personanameandstatus_statusAndName_tU62t
@@ -24444,7 +24347,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .personanameandstatus_statusAndName_tU62t
   .personanameandstatus_playerName_26Ivx {
   text-overflow: clip;
-  transition-delay: 0.4s;
+  transition-delay: .4s;
 }
 .MemberListColumn.MemberListViewCompact
   .personanameandstatus_statusAndName_tU62t
@@ -24624,7 +24527,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   margin: 0 -16px 6px;
   padding: 0 0 6px;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: .07em;
   -webkit-mask-image: linear-gradient(
       to left,
       transparent 2px,
@@ -24767,7 +24670,7 @@ html.responsive.touch
   border-radius: var(--gpCorner-Medium);
   margin: unset;
   height: fit-content;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 .BasicUI
   .saleitembrowser_SaleItemBrowserContainer_3KuFX
@@ -24857,7 +24760,7 @@ html.responsive.touch
   background-color: rgba(255, 255, 255, 0.12);
   box-shadow: unset;
   border-radius: var(--gpCorner-Medium);
-  transition: background-color 0.2s ease;
+  transition: background-color .2s ease;
   font: var(--gpText-BodyLarge);
   padding: 10px 20px;
   min-width: 32%;
@@ -24913,13 +24816,13 @@ html.responsive.touch
 .saleminigames_RewardText_1FpR6 {
   font-size: 18px;
   font-weight: 300;
-  padding-bottom: 0.8em;
+  padding-bottom: .8em;
   color: #e6c32c;
 }
 .saleminigames_PostText_3ex1_ {
   font-size: 18px;
   font-weight: 300;
-  padding-top: 0.8em;
+  padding-top: .8em;
   color: #e6c32c;
 }
 .saleminigames_ImgFullBagde_1cZOq {
@@ -24986,7 +24889,7 @@ html.responsive.touch
   background: unset;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.12);
-  transition: background-color 0.2s ease;
+  transition: background-color .2s ease;
   font: var(--gpText-BodyLarge);
   padding: 10px 20px;
   min-width: 32%;
@@ -25167,7 +25070,7 @@ html.responsive.touch
   .nominationandvote_SteamAwardVotePrompt_ljjOj {
   text-transform: uppercase;
   margin-bottom: 4px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   margin-left: 15px;
 }
 .nominationandvote_SteamAwardContainer_1URX_
@@ -25421,8 +25324,7 @@ html.responsive.touch
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%
-    ),
-    #25282e;
+    ), #25282e;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25627,7 +25529,7 @@ html.responsive.touch
   font-size: 12px;
   color: #afafaf;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   user-select: none;
 }
 .newlogindialog_Login_1sORI
@@ -25693,7 +25595,7 @@ html.responsive.touch
   font-weight: 500;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   cursor: pointer;
   width: 270px;
 }
@@ -25904,7 +25806,7 @@ html.responsive.touch
   color: #fff;
   font-size: 32px;
   text-transform: uppercase;
-  letter-spacing: 0.055em;
+  letter-spacing: .055em;
   font-weight: 200;
 }
 .newlogindialog_Login_1sORI
@@ -25972,7 +25874,7 @@ html.responsive.touch
   color: #fff;
   font-size: 32px;
   text-transform: uppercase;
-  letter-spacing: 0.055em;
+  letter-spacing: .055em;
   font-weight: 200;
   text-align: center;
 }
@@ -26041,20 +25943,20 @@ html.responsive.touch
   height: 3em;
   min-width: 3em;
   min-height: 3em;
-  border-top-width: 0.3em;
-  border-right-width: 0.3em;
-  border-bottom-width: 0.3em;
-  border-left-width: 0.3em;
+  border-top-width: .3em;
+  border-right-width: .3em;
+  border-bottom-width: .3em;
+  border-left-width: .3em;
 }
 .qrlogin_Loading_3tuBr.qrlogin_Medium_2X0CE {
   width: 6em;
   height: 6em;
   min-width: 6em;
   min-height: 6em;
-  border-top-width: 0.4em;
-  border-right-width: 0.4em;
-  border-bottom-width: 0.4em;
-  border-left-width: 0.4em;
+  border-top-width: .4em;
+  border-right-width: .4em;
+  border-bottom-width: .4em;
+  border-left-width: .4em;
 }
 .qrlogin_Loading_3tuBr.qrlogin_Large_2HI3C {
   width: 10em;
@@ -26238,7 +26140,7 @@ hr.VO {
   padding: 4px 12px;
   cursor: pointer;
   border-bottom: 4px solid transparent;
-  transition: all 0.25s;
+  transition: all .25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
@@ -26508,7 +26410,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   line-height: 18px;
   font-weight: normal;
   color: #8f98a0;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   max-width: 620px;
 }
 .BasicUI .managefriends_Body_38FZa {
@@ -26522,7 +26424,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   text-transform: uppercase;
   color: #fff;
   background-color: #015e80;
@@ -26577,7 +26479,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   line-height: 30px;
   font-weight: normal;
   color: #f5f5f5;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   padding: 14px;
 }
 .BasicUI .managefriends_CopyContainer_133bn .managefriends_Text_3r5lq {
@@ -26588,7 +26490,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   line-height: 18px;
   font-weight: normal;
   color: #f5f5f5;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   padding: 14px;
   overflow-wrap: break-word;
   overflow: hidden;
@@ -26602,7 +26504,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   font-size: 14px;
   font-weight: normal;
   color: #f5f5f5;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   padding-left: 40px;
   padding-right: 40px;
   margin: 7px 7px 7px auto;
@@ -26679,7 +26581,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   color: #fff;
 }
 .managefriends_ProfileLink_3TFMe a {
@@ -27679,9 +27581,7 @@ div.pricinggrid_HoverToolTip_1OS2v {
   );
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow:
-    1px 1px 8px #0005,
-    2px 2px 16px 1px #0005;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   user-select: none;
 }
 .pricinggridcell_DetailRow_3P_fJ {
@@ -28061,7 +27961,7 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   padding: 16px;
   background-color: #9297a5;
   transform: translateY(94px);
-  transition: transform 0.3s ease-in;
+  transition: transform .3s ease-in;
 }
 .saveprices_ToolbarCtn_3lAEz.saveprices_Visible_CLKT9 {
   transform: translateY(0);
@@ -28924,7 +28824,7 @@ div.saveprices_HoverToolTip_1yXHp {
   padding: 16px;
   background-color: #9297a5;
   transform: translateY(94px);
-  transition: transform 0.3s ease-in;
+  transition: transform .3s ease-in;
 }
 .savetoolbar_ToolbarCtn_Kfoep.savetoolbar_Visible_3O9re {
   transform: translateY(0);
@@ -30286,7 +30186,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   text-decoration: none;
   font-size: 17px;
   line-height: 19px;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
   position: relative;
 }
@@ -30875,7 +30775,7 @@ button.DialogButton {
   border-radius: 2px;
   cursor: pointer;
   width: 100%;
-  transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
   background: #3d4450;
   background-position: 99% 1%;
   background-size: 300% 300%;
@@ -31067,8 +30967,7 @@ button.DialogButton::-moz-focus-inner {
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%
-    ),
-    #25282e;
+    ), #25282e;
   user-select: none;
 }
 .DialogContentTransition {
@@ -31325,7 +31224,7 @@ button.DialogButton::-moz-focus-inner {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
@@ -31365,7 +31264,7 @@ button.DialogButton::-moz-focus-inner {
   margin-right: 4px;
   flex-grow: 4;
   box-shadow: inset 0px 0px 4px #0006;
-  border: 0.5px solid rgba(139, 153, 170, 0.4);
+  border: .5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
 .DialogTextInputBase:disabled,
@@ -31479,7 +31378,7 @@ button.DialogButton.GreenPlay:active:hover,
 button.DialogButton.GreenPlay:active.gpfocus {
   background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 40%;
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003;
@@ -31489,7 +31388,7 @@ button.DialogButton:enabled:active:hover,
 button.DialogButton:enabled:active.gpfocus {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus {
@@ -31503,7 +31402,7 @@ button.DialogButton.Primary:enabled:hover:active,
 button.DialogButton.Primary:enabled:active.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 button.DialogButton:hover,
 button.DialogButton.gpfocus {
@@ -31534,7 +31433,7 @@ button.TextButton {
   border-bottom: 1px dotted #0000;
 }
 button.TextButton .SVGIcon_Button {
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
   margin-right: 2px;
 }
 button.TextButton:hover,
@@ -31756,7 +31655,7 @@ button.TextButton.gpfocus {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 0px;
-  transition: all 0.2s linear;
+  transition: all .2s linear;
 }
 .DialogListBuilderInput_List {
   display: flex;
@@ -31845,13 +31744,13 @@ button.TextButton.gpfocus {
   height: 22px;
   background-color: #0004;
   padding: 0;
-  box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: inset 1px .5px 3px rgba(1, 1, 1, 0.4);
   cursor: pointer;
   border-radius: 2px;
 }
 .DialogCheckbox .SVGIcon_DialogCheck {
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  transition: all .1s ease-in-out;
   width: 18px;
   height: 18px;
   margin-top: 9%;
@@ -31860,9 +31759,9 @@ button.TextButton.gpfocus {
 .DialogCheckbox .SVGIcon_DialogCheck path {
   stroke-width: 40px;
   stroke-dashoffset: -270;
-  transition: all 0.18s ease-out;
+  transition: all .18s ease-out;
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
-  transition-delay: 0.3s;
+  transition-delay: .3s;
 }
 .DialogCheckbox.Active .SVGIcon_DialogCheck path {
   stroke-dashoffset: 90;
@@ -31916,10 +31815,10 @@ button.TextButton.gpfocus {
   border-radius: 50%;
   margin: 0;
   padding: 0;
-  box-shadow: inset 0.5px 1px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: inset .5px 1px 3px rgba(1, 1, 1, 0.4);
   display: flex;
   justify-content: center;
-  transition: background-color 0.08s ease-in-out;
+  transition: background-color .08s ease-in-out;
 }
 .DialogRoundCheckboxField_Container {
   cursor: pointer;
@@ -31947,7 +31846,7 @@ button.TextButton.gpfocus {
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
   transform: scale(0);
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 .DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -31972,12 +31871,12 @@ button.TextButton.gpfocus {
 .copiedAnimation.animationComplete {
   opacity: 0;
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: .5s;
 }
 .copiedAnimation.animationPlaying {
   opacity: 1;
   transition-property: transform, opacity;
-  transition-duration: 0s, 0.6s;
+  transition-duration: 0s, .6s;
 }
 ._FixedHeight {
   flex-shrink: 0;
@@ -32045,7 +31944,7 @@ body.in_global_drag .title-area {
   position: absolute;
   top: 0;
   opacity: 0;
-  transition: opacity 0.18s ease-in-out;
+  transition: opacity .18s ease-in-out;
   pointer-events: none;
   user-select: none;
 }
@@ -32073,7 +31972,7 @@ body.in_global_drag .title-area {
     rgba(0, 0, 0, 0) 100%
   );
   opacity: 0;
-  transition: opacity 0.18s ease-in-out;
+  transition: opacity .18s ease-in-out;
   pointer-events: none;
   user-select: none;
 }
@@ -32249,12 +32148,12 @@ body.in_global_drag .title-area {
 .throbber > div:nth-child(2) {
   margin-left: 12%;
   transform: scaleX(1) scaleY(0.6);
-  animation-delay: 0.16s;
+  animation-delay: .16s;
 }
 .throbber > div:nth-child(3) {
   margin-left: 12%;
   transform: scaleX(1) scaleY(0.6);
-  animation-delay: 0.32s;
+  animation-delay: .32s;
 }
 .WaitingForInterFaceReadyContainer {
   width: 100%;

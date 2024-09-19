@@ -15349,7 +15349,6 @@ var CLSTAMP = "9187007";
             for (
               ;
               e.nConnectFailures > 0 && t < this.m_CMList.rgCMList.length;
-
             ) {
               let r = this.m_CMList.rgCMList[t++];
               (!r.nConnectFailures ||
@@ -18609,9 +18608,7 @@ var CLSTAMP = "9187007";
             let n = this.GetClientRect();
             return (
               !!n &&
-              e >= n.left &&
-              e <= n.right &&
-              t >= n.top - 20 &&
+              e >= n.left && e <= n.right && t >= n.top - 20 &&
               t <= n.bottom + 20
             );
           }
@@ -19387,8 +19384,7 @@ var CLSTAMP = "9187007";
             ? e == t
             : e.label === t.label &&
                 e.tooltip === t.tooltip &&
-                D(e) == D(t) &&
-                !(D(e) && D(t) && !Z(e.options, t.options)) &&
+                  D(e) == D(t) && !(D(e) && D(t) && !Z(e.options, t.options)) &&
                 (!B(e) || !B(t) || e.data === t.data);
         }
         function A(e) {

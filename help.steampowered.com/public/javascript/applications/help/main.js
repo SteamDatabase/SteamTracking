@@ -1581,7 +1581,6 @@
             for (
               e[(r = t + this.m.t)] += this.m.am(0, i, e, t, 0, this.m.t);
               e[r] >= e.DV;
-
             )
               (e[r] -= e.DV), e[++r]++;
           }
@@ -1753,7 +1752,6 @@
                   n.ONE.dlShiftTo(u, B),
                   B.subTo(o, o);
                 o.t < u;
-
               )
                 o[o.t++] = 0;
               for (; --y >= 0; ) {
@@ -1828,7 +1826,6 @@
             for (
               o < this.DB && (r = this[s] >> o) > 0 && ((n = !0), (a = m(r)));
               s >= 0;
-
             )
               o < t
                 ? ((r = (this[s] & ((1 << o) - 1)) << (t - o)),
@@ -1899,7 +1896,6 @@
               this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
               this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
             e.compareTo(this.r2) < 0;
-
           )
             e.dAddOffset(1, this.m.t + 1);
           for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
@@ -1970,7 +1966,6 @@
                     this.bitwiseTo(n.ONE.shiftLeft(e - 1), f, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(t);
-
               )
                 this.dAddOffset(2, 0),
                   this.bitLength() > e &&
@@ -2117,7 +2112,6 @@
               (r = this[e] >> i) != (this.s & this.DM) >> i &&
               (t[n++] = r | (this.s << (this.DB - i)));
               e >= 0;
-
             )
               i < 8
                 ? ((r = (this[e] & ((1 << i) - 1)) << (8 - i)),
@@ -2180,7 +2174,7 @@
           var t = Math.floor(e / this.DB);
           return t >= this.t
             ? 0 != this.s
-            : 0 != (this[t] & (1 << e % this.DB));
+            : 0 != (this[t] & (1 << (e % this.DB)));
         }),
         (n.prototype.setBit = function (e) {
           return this.changeBit(e, f);
@@ -2246,7 +2240,6 @@
                   b > 0 && (g |= e[b - 1] >> (this.DB + n - c))),
                 l = r;
               0 == (1 & g);
-
             )
               (g >>= 1), --l;
             if (((n -= l) < 0 && ((n += this.DB), --b), y))
@@ -2276,7 +2269,6 @@
               o = d(0),
               l = d(1);
             0 != r.signum();
-
           ) {
             for (; r.isEven(); )
               r.rShiftTo(1, r),
@@ -2322,7 +2314,6 @@
           for (
             n < a && (a = n), a > 0 && (t.rShiftTo(a, t), r.rShiftTo(a, r));
             t.signum() > 0;
-
           )
             (n = t.getLowestSetBit()) > 0 && t.rShiftTo(n, t),
               (n = r.getLowestSetBit()) > 0 && r.rShiftTo(n, r),
@@ -2435,7 +2426,7 @@
           return (
             !!t &&
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
-            !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
+              !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
             T.encode(z.decode(e)))
           );
@@ -5900,7 +5891,6 @@
               }
             });
             i.length > 0;
-
           ) {
             const e = i.pop();
             c(e, e.node);
@@ -9697,7 +9687,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].announcementGID &&
-            Array.isArray(t[0].adjacents) &&
+              Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
           );
         }
@@ -10866,7 +10856,7 @@
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
-            !this.m_mapHiddenClans.has(e.clanid) &&
+              !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & dr.k_eRequired || t & dr.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed($r.k_ERecent) && r) ||
@@ -22624,7 +22614,7 @@
                   1 != i.data?.success ||
                   !i.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, S.H)(i).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, S.H))(i).strErrorMsg}`;
                 return [i.data.userinfo];
               }
               {
@@ -22638,7 +22628,7 @@
                   1 != i.data?.success ||
                   !i.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, S.H)(i).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, S.H))(i).strErrorMsg}`;
                 const n = new Map();
                 return (
                   i.data.userinfos.forEach((e) =>
@@ -45479,8 +45469,8 @@
               "object" == typeof t[0]
             ) &&
             "number" == typeof t[0].clan_account_id &&
-            t[0].clan_account_id > 0 &&
-            "number" == typeof t[0].appid &&
+              t[0].clan_account_id > 0 &&
+              "number" == typeof t[0].appid &&
             t[0].appid > 0
           );
         }
@@ -57817,8 +57807,8 @@
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              ne(e) == ne(t) &&
-              !(ne(e) && ne(t) && !ae(e.options, t.options)) &&
+                ne(e) == ne(t) &&
+                  !(ne(e) && ne(t) && !ae(e.options, t.options)) &&
               (!ie(e) || !ie(t) || e.data === t.data);
       }
       function oe(e, t) {
@@ -58832,9 +58822,7 @@
           let i = this.GetClientRect();
           return (
             !!i &&
-            e >= i.left &&
-            e <= i.right &&
-            t >= i.top - 20 &&
+            e >= i.left && e <= i.right && t >= i.top - 20 &&
             t <= i.bottom + 20
           );
         }

@@ -2848,7 +2848,7 @@
           return this.GetTemplateVars().use_custom_legal_text
             ? this.GetTemplateVars().custom_legal_text
             : ((e = this.GetTemplateVars().partner),
-              `© ${new Date().getFullYear()} Valve Corporation${e ? " and " + e : ""}. <br/>All trademarks are property of their respective owners in the US and other countries.`);
+              `© ${(new Date()).getFullYear()} Valve Corporation${e ? " and " + e : ""}. <br/>All trademarks are property of their respective owners in the US and other countries.`);
           var e;
         }
         get associated_item() {
@@ -3072,7 +3072,7 @@
     },
     65495: (e, t, r) => {
       "use strict";
-      r.d(t, { Q: () => pe, J: () => Be });
+      r.d(t, { Q: () => ye, J: () => pe });
       var s = r(90626),
         a = r(22837),
         i = r(51433),
@@ -3162,7 +3162,7 @@
         C = r(61336),
         O = r(31343);
       function j(e) {
-        const t = Be(),
+        const t = pe(),
           [r, a] = (0, s.useState)(!1);
         return s.createElement(
           v.Z,
@@ -3241,7 +3241,7 @@
         N = r.n(q);
       function A(e) {
         const { bLowBandwidthMode: t } = e,
-          r = Be(),
+          r = pe(),
           a = !t && "featured_video" === r.GetTemplateVars().custom_display;
         return s.createElement(
           f.A,
@@ -3280,7 +3280,7 @@
       }
       function x(e) {
         const { isBackgroundBlur: t, bOverrideUseBackgroundImage: r } = e,
-          a = Be(),
+          a = pe(),
           i = (0, c.WN)(a.GetTemplateVars().linkurl, "image"),
           [n, l] = r ? a.GetTemplateBackgroundImage() : a.GetTemplateImage();
         return s.createElement(
@@ -3295,7 +3295,7 @@
         );
       }
       function L(e) {
-        const t = Be(),
+        const t = pe(),
           r = (0, c.WN)(t.GetTemplateVars().linkurl, "image"),
           i = (0, a.sf)(l.TS.LANGUAGE),
           n = t.GetTemplateMP4(i),
@@ -3321,7 +3321,7 @@
         );
       }
       function D(e) {
-        const t = Be(),
+        const t = pe(),
           r = (0, c.WN)(t.GetTemplateVars().linkurl, "button");
         return s.createElement(V, {
           bHidePrice: e.bHidePrice,
@@ -3330,7 +3330,7 @@
       }
       function V(e) {
         const { bHidePrice: t, fnOnClickButton: r } = e,
-          a = Be(),
+          a = pe(),
           [i, n] = (0, z.q3)(() => [
             a.GetTemplateVars().button_text_custom ||
               a.GetTemplateVars().button_text,
@@ -3360,7 +3360,7 @@
         );
       }
       function H() {
-        const e = Be().associated_item;
+        const e = pe().associated_item;
         return e &&
           e.GetBestPurchaseOption() &&
           e.GetBestPurchaseOption().formatted_final_price
@@ -3372,7 +3372,7 @@
           : s.createElement("div", { className: q.NoPrice });
       }
       function $(e) {
-        const t = Be();
+        const t = pe();
         return (0, n.ho)()
           ? null
           : s.createElement("div", {
@@ -3502,7 +3502,7 @@
       const ee = { include_assets: !0 };
       function te(e) {
         const { bPreview: t } = e,
-          r = Be(),
+          r = pe(),
           [a, i] = (0, s.useMemo)(
             () => [
               r.GetDLCAppIDs(),
@@ -3677,10 +3677,11 @@
         ce = r(38390),
         oe = r(56011),
         ue = r(720),
-        ge = r.n(ue);
-      function de(e) {
+        ge = r.n(ue),
+        de = r(79613);
+      function Me(e) {
         const { bPreview: t } = e,
-          r = Be(),
+          r = pe(),
           {
             eventModel: a,
             bLoading: i,
@@ -3693,12 +3694,14 @@
           l = (function (e, t, r) {
             const a = (0, X.Lg)(e?.appid);
             let i = (0, me.aL)((0, c.NI)(t), r);
-            e?.BIsVisibleEvent() && a && e.BIsValidForRealm(M.TS.EREALM)
-              ? (t = M.TS.IN_CLIENT
-                  ? `steam://open/library/event/${e.appid}|${e.GID}`
-                  : `${M.TS.STORE_BASE_URL}news/app/${e.appid}?emclan=${e.clanSteamID}&emgid=${e.GID}}`)
-              : (i.startsWith("steam://") || (i = `steam://openurl/${i}`),
-                (t = i));
+            if (e?.BIsVisibleEvent() && a && e.BIsValidForRealm(M.TS.EREALM)) {
+              const r = (0, de.MP)();
+              M.TS.IN_CLIENT && (r > 1726604483 || 0 == r)
+                ? (t = `steam://open/library/event/${e.appid}|${e.GID}`)
+                : ((t = `${M.TS.STORE_BASE_URL}news/app/${e.appid}?emclan=${e.clanSteamID.ConvertTo64BitString()}&emgid=${e.GID}`),
+                  M.TS.IN_CLIENT && (t = `steam://openurl/${t}`));
+            } else
+              i.startsWith("steam://") || (i = `steam://openurl/${i}`), (t = i);
             return (0, s.useCallback)(
               (e) => {
                 (0, oe.uX)(e).location.href = t;
@@ -3719,7 +3722,7 @@
               s.createElement(Q, { storeItem: r.associated_item }),
             ),
             s.createElement(J, { storeItem: r.associated_item, bPreview: t }),
-            s.createElement(Me, {
+            s.createElement(_e, {
               message: r,
               eventModel: a,
               fnOnClickButton: l,
@@ -3729,7 +3732,7 @@
           ),
         );
       }
-      function Me(e) {
+      function _e(e) {
         const { message: t, fnOnClickButton: r, eventModel: a } = e,
           [i, n] = t.GetTemplateImage();
         return s.createElement(
@@ -3757,11 +3760,11 @@
           ),
         );
       }
-      const _e = s.createContext(null);
-      function Be() {
-        return s.useContext(_e);
+      const Be = s.createContext(null);
+      function pe() {
+        return s.useContext(Be);
       }
-      function pe(e) {
+      function ye(e) {
         const { message: t, preview: r } = e,
           a = !1 !== e.active,
           i = (0, n.NZ)();
@@ -3770,18 +3773,18 @@
             a && i(t.GetLegalHTML());
           }, [a, t, i]),
           s.createElement(
-            _e.Provider,
+            Be.Provider,
             { value: t },
             s.createElement(
               s.Suspense,
               { fallback: null },
-              s.createElement(be, { message: t, active: a, preview: r }),
+              s.createElement(fe, { message: t, active: a, preview: r }),
             ),
           )
         );
       }
-      const ye = s.lazy(() => r.e(8287).then(r.bind(r, 79194)));
-      function be(e) {
+      const be = s.lazy(() => r.e(8287).then(r.bind(r, 79194)));
+      function fe(e) {
         const { message: t, active: r, preview: n } = e,
           c = (0, a.sf)(l.TS.LANGUAGE),
           { bLowBandwidthMode: o } = (0, m.ri)();
@@ -3790,13 +3793,13 @@
           l.iA.logged_in
         ) {
           const e = Number((0, i.fL)(t.GetTemplateVars().custom_display || ""));
-          return isNaN(e) ? null : s.createElement(ye, { active: r, year: e });
+          return isNaN(e) ? null : s.createElement(be, { active: r, year: e });
         }
         switch (t.GetTemplateVars().custom_display) {
           case "dlc_override":
             return s.createElement(te, { bPreview: n });
           case "partner_event":
-            return s.createElement(de, { bPreview: n });
+            return s.createElement(Me, { bPreview: n });
         }
         return "image" === t.GetTemplateType()
           ? (0, m.vn)(t, c, o)

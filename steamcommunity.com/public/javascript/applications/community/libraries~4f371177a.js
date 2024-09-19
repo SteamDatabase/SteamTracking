@@ -1104,7 +1104,6 @@
                 ;
                 e < t &&
                 l.text[l.text.length - e - 1] == a.text[a.text.length - e - 1];
-
               )
                 e++, n--, r--;
               return { a: n, b: r };
@@ -6325,7 +6324,6 @@
               ),
               o = i;
             ;
-
           ) {
             let n = e.childNodes[o];
             if (1 == n.nodeType) {
@@ -7764,7 +7762,6 @@
               e[r],
             ) &&
             !1 !== e[r].type.spec.spanning;
-
           )
             r++;
           for (; r < i; )
@@ -8473,7 +8470,6 @@
         for (
           ;
           o > 1 && s > 1 && 1 == r.childCount && 1 == r.firstChild.childCount;
-
         ) {
           o--, s--;
           let e = r.firstChild;
@@ -9150,7 +9146,6 @@
             return e.initEvent("event", !0, !0), e.timeStamp;
           })()));
           e.input.compositionNodes.length > 0;
-
         )
           e.input.compositionNodes.pop().markParentsDirty();
       }
@@ -9237,7 +9232,6 @@
               for (
                 let n = t.focusNode, r = t.focusOffset;
                 n && 1 == n.nodeType && 0 != r;
-
               ) {
                 let t = r < 0 ? n.lastChild : n.childNodes[r - 1];
                 if (!t) break;

@@ -406,9 +406,7 @@ div._1OS2vdfTf7vsWj8VhNKlXu {
   );
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow:
-    1px 1px 8px #0005,
-    2px 2px 16px 1px #0005;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   user-select: none;
 }
 ._3P_fJH02fBcdGM2etenWu7 {
@@ -832,7 +830,7 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   font-size: 14px;
   font-weight: 500;
   transform: translate(-50%, 120px);
-  transition: transform 0.3s ease-in;
+  transition: transform .3s ease-in;
 }
 ._1bPMNcsgqa-akKYfelwilP.CLKT9CFoyEByzdSrgSzE2 {
   transform: translate(-50%, 0);
@@ -1025,7 +1023,7 @@ img {
   z-index: 12;
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  transition: background-color 0.32s ease-in-out;
+  transition: background-color .32s ease-in-out;
   margin: 4px;
   min-height: 32px;
   min-width: 32px;
@@ -1138,7 +1136,7 @@ img {
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
   transition-property: background, box-shadow, padding-left;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 .cNMZ-dcMVhaQJFes_Ivwo:focus {

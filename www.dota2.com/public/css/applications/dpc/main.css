@@ -339,7 +339,7 @@
   margin-top: 8px;
   margin-left: 4px;
   margin-right: 4px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 .helpoverlay_HelpOverlay_1XKH7
   .helpoverlay_HelpContainer_2Aw2E
@@ -922,7 +922,7 @@
 }
 .global_FadeIn_3dNq3 {
   animation-name: global_fadein_3571p;
-  animation-duration: 0.5s;
+  animation-duration: .5s;
 }
 @keyframes global_fadein_3571p {
   0% {
@@ -949,11 +949,7 @@
 }
 .global_VerticalCollapseable_23_Go {
   transition:
-    opacity 0.4s ease-in-out,
-    height 0.4s ease-in-out,
-    padding 0.4s ease-in-out,
-    margin 0.4s ease-in-out,
-    min-height 0.4s ease-in-out;
+    opacity .4s ease-in-out, height .4s ease-in-out, padding .4s ease-in-out, margin .4s ease-in-out, min-height .4s ease-in-out;
 }
 .global_VerticalCollapse_tJoWs {
   pointer-events: none;
@@ -1273,7 +1269,7 @@
   font-size: 8px;
   line-height: 8px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 .card_tournament_2Y2d2 .card_title_3eOSG {
@@ -1291,7 +1287,7 @@
   font-family: "Open Sans", Verdana, sans-serif;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   font-weight: bold;
   text-transform: uppercase;
   color: #507082;
@@ -1301,7 +1297,7 @@
   font-family: "Open Sans", Verdana, sans-serif;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   font-weight: bold;
   text-transform: uppercase;
   font-weight: bold;
@@ -1784,7 +1780,7 @@
 .throbber_LoadingWrapper_chtlD .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: throbber_ThrobberRoundLoop_2KsRJ;
-  animation-duration: 0.7s;
+  animation-duration: .7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -1960,7 +1956,7 @@
   .throbber_roundThrobber01_6Xq-0 {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: 0.5px;
+  stroke-width: .5px;
 }
 .throbber_LoadingWrapper_chtlD
   .SVGIcon_Throbber
@@ -2320,7 +2316,7 @@
   margin-right: 8px;
   padding-bottom: 4px;
   transition-property: width, margin;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 .titleheader_TitleHeader_sX4gR
@@ -2335,7 +2331,7 @@
   flex-grow: 1;
   color: #fff;
   font-size: 28px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
 .titleheader_TitleHeader_sX4gR
   .titleheader_TitleElements_3Dg8L
@@ -3093,7 +3089,7 @@
   font-size: 8px;
   line-height: 8px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 .predictioncard_tournament_fyq6Z .predictioncard_title_39z0I {
@@ -3113,7 +3109,7 @@
   font-family: "Open Sans", Verdana, sans-serif;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   font-weight: bold;
   text-transform: uppercase;
   color: #507082;
@@ -3125,7 +3121,7 @@
   font-family: "Open Sans", Verdana, sans-serif;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   font-weight: bold;
   text-transform: uppercase;
   font-weight: bold;
@@ -4218,7 +4214,7 @@
   color: #4661ec;
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-weight: bold;
   text-align: left;
 }
@@ -4355,9 +4351,7 @@
   border-radius: 6px;
   margin-right: 6px;
   background-color: #000;
-  transition:
-    width 0.4s ease-in-out,
-    height 0.4s ease-in-out;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
 }
 .fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
@@ -4380,9 +4374,7 @@
   background-color: #000;
   padding: 4px;
   border-radius: 6px;
-  transition:
-    width 0.4s ease-in-out,
-    height 0.4s ease-in-out;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
 }
 .fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
@@ -4489,7 +4481,7 @@
   margin-right: 12px;
   width: 16px;
   height: 16px;
-  transition: width 0.4s ease-in-out;
+  transition: width .4s ease-in-out;
 }
 .fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
@@ -4509,7 +4501,7 @@
   margin-right: 14px;
   width: 24px;
   height: 24px;
-  transition: width 0.4s ease-in-out;
+  transition: width .4s ease-in-out;
 }
 .fantasypage_FantasyHelp_39-fj .fantasypage_Player_3J7qq,
 .fantasypage_FantasyPage_3zKgk
@@ -4604,7 +4596,7 @@
   color: #507082;
   font-weight: bold;
   font-size: 14px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   height: 20px;
   padding-top: 16px;
   padding-left: 20px;
@@ -4663,7 +4655,7 @@
   width: 33%;
   height: 2px;
   background-color: #4661ec;
-  transition: margin-left 0.2s ease-in-out;
+  transition: margin-left .2s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -4692,7 +4684,7 @@
   color: #507082;
   font-weight: bold;
   font-size: 14px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   height: 70px;
   padding-top: 16px;
   padding-left: 20px;
@@ -4796,7 +4788,7 @@
   .fantasypage_Roster_2YPlj
   .fantasypage_SubmitButton_2gOug {
   transition-property: height, min-height, margin-top, padding-top;
-  transition-duration: 0.4s;
+  transition-duration: .4s;
   transition-timing-function: ease-in-out;
   margin-left: 12px;
   margin-right: 12px;
@@ -4824,7 +4816,7 @@
   .fantasypage_Contents_QRAGK
   .fantasypage_Roster_2YPlj
   .fantasypage_CancelButton_1NklA {
-  transition: height 0.2s ease-in-out;
+  transition: height .2s ease-in-out;
   margin-left: 12px;
   margin-right: 12px;
   border-radius: 4px;
@@ -4896,7 +4888,7 @@
   margin-right: 10px;
   width: 1px;
   background-color: #507082;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity .4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -4925,7 +4917,7 @@
   background-color: #b9babb;
   width: 300px;
   margin: auto;
-  transition: width 0.4s ease-in-out;
+  transition: width .4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -4949,10 +4941,8 @@
   width: 200px;
   text-align: center;
   cursor: pointer;
-  transition:
-    height 0.4s ease-in-out,
-    padding 0.4s ease-in-out,
-    opacity 0.4s ease-in-out;
+  transition: height .4s ease-in-out, padding .4s ease-in-out, opacity .4s
+    ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -4984,9 +4974,7 @@
   margin-top: 6px;
   text-align: right;
   text-align: center;
-  transition:
-    height 0.4s ease-in-out,
-    opacity 0.4s ease-in-out;
+  transition: height .4s ease-in-out, opacity .4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5021,9 +5009,7 @@
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   background-color: #000;
-  transition:
-    width 0.4s ease-in-out,
-    height 0.4s ease-in-out;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5039,9 +5025,7 @@
   padding: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  transition:
-    width 0.4s ease-in-out,
-    height 0.4s ease-in-out;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5159,7 +5143,7 @@
   width: 44px;
   height: 16px;
   border-radius: 8px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5175,9 +5159,7 @@
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  transition:
-    margin-left 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
+  transition: margin-left .2s ease-in-out, background-color .2s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -6172,7 +6154,7 @@
   width: 40px;
   height: 12px;
   border-radius: 6px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 .profilepage_ProfilePage_2o17X
   .profilepage_Scrollable_JOOou
@@ -6188,9 +6170,7 @@
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  transition:
-    margin-left 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
+  transition: margin-left .2s ease-in-out, background-color .2s ease-in-out;
 }
 .profilepage_LogoutText_2o_BU {
   font-size: 12px;
@@ -7097,7 +7077,7 @@
   color: #507082;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
 .matchpage_colorBlack_uYr54 {
   color: #0f1417;
@@ -7347,9 +7327,7 @@
   height: 20px;
   z-index: 5;
   position: absolute;
-  transition:
-    left 1s ease-in-out,
-    bottom 1s ease-in-out;
+  transition: left 1s ease-in-out, bottom 1s ease-in-out;
 }
 .matchpage_MatchPage_1LIfg
   .matchpage_Body_68kN3
@@ -7528,7 +7506,7 @@
   .matchpage_HeroStatsSection_3ElBk
   .matchpage_HeroStats_3ZNG7
   .matchpage_TeamHeroStats_oG3Rm.matchpage_Radiant_3yWEc
-  .matchpage_SingleHeroStats_dCRzn:nth-child(2n-1) {
+  .matchpage_SingleHeroStats_dCRzn:nth-child(2n - 1) {
   border-top: 2px solid #26353e;
   background-color: #161d22;
 }
@@ -7701,7 +7679,7 @@
   color: #507082;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   max-height: 14px;
 }
 .matchpage_MatchPage_1LIfg
@@ -7888,7 +7866,7 @@
   color: #507082;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
 .matchpage_MatchPage_1LIfg
   .matchpage_Body_68kN3
@@ -8273,9 +8251,7 @@
   background-color: #0f1417;
   z-index: 5;
   position: absolute;
-  transition:
-    left 1s ease-in-out,
-    bottom 1s ease-in-out;
+  transition: left 1s ease-in-out, bottom 1s ease-in-out;
 }
 .livematchpage_Map_1YqX1 .livematchpage_Hero_FoeqX.livematchpage_Radiant_37ORm {
   border-color: #3ae67c;
@@ -8344,7 +8320,7 @@
   font-size: 10px;
   color: #507082;
   text-transform: uppercase;
-  letter-spacing: 0.5s;
+  letter-spacing: .5s;
 }
 .livematchpage_SingleHeroStats_NReYI .livematchpage_Stats_jG-rO {
   display: flex;
@@ -8410,7 +8386,7 @@
   font-size: 10px;
   color: #507082;
   text-transform: uppercase;
-  letter-spacing: 0.5s;
+  letter-spacing: .5s;
   margin-bottom: 12px;
 }
 .livematchpage_GraphSection_AsG7c .livematchpage_Bottom_1TTQz {
@@ -8882,7 +8858,7 @@
   color: #507082;
   text-align: center;
   padding-top: 10px;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .tournamentpage_TournamentPage_1tKYp
   .tournamentpage_HeaderAndBody_1fDl1
@@ -8902,7 +8878,7 @@
   width: 33%;
   height: 2px;
   background-color: #ee481a;
-  transition: margin-left 0.2s ease-in-out;
+  transition: margin-left .2s ease-in-out;
 }
 .tournamentpage_TournamentPage_1tKYp
   .tournamentpage_HeaderAndBody_1fDl1

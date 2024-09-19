@@ -81,7 +81,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: 0.7s;
+  animation-duration: .7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -212,7 +212,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: 0.5px;
+  stroke-width: .5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -694,11 +694,11 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 ._1Ve4VFO2EEkeNZdel_Asky h3,
 ._1Ve4VFO2EEkeNZdel_Asky h4,
 ._1Ve4VFO2EEkeNZdel_Asky h5 {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
 ._1Ve4VFO2EEkeNZdel_Asky ul,
 ._1Ve4VFO2EEkeNZdel_Asky ol {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
 ._1Ve4VFO2EEkeNZdel_Asky li > p:first-of-type {
   margin: 0;
@@ -712,7 +712,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   font-style: italic;
 }
 p._3lnqGBzYap-Z2T81XBiBUU {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
 ._2LYsFAwy8wdRJQTNJOUcsT {
   display: block;
@@ -919,7 +919,7 @@ p._3lnqGBzYap-Z2T81XBiBUU {
   height: 12px;
   fill: #aebac2;
   transition: transform;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 ._2cmZMzZlRrszDBF97Di0cD .uAvfe31kBh5TZrse069d1:hover {
   color: #fff;

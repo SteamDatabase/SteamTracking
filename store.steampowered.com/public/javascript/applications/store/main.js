@@ -1982,7 +1982,6 @@
             for (
               e[(r = t + this.m.t)] += this.m.am(0, i, e, t, 0, this.m.t);
               e[r] >= e.DV;
-
             )
               (e[r] -= e.DV), e[++r]++;
           }
@@ -2154,7 +2153,6 @@
                   n.ONE.dlShiftTo(u, B),
                   B.subTo(o, o);
                 o.t < u;
-
               )
                 o[o.t++] = 0;
               for (; --y >= 0; ) {
@@ -2229,7 +2227,6 @@
             for (
               o < this.DB && (r = this[s] >> o) > 0 && ((n = !0), (a = m(r)));
               s >= 0;
-
             )
               o < t
                 ? ((r = (this[s] & ((1 << o) - 1)) << (t - o)),
@@ -2300,7 +2297,6 @@
               this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
               this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
             e.compareTo(this.r2) < 0;
-
           )
             e.dAddOffset(1, this.m.t + 1);
           for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
@@ -2371,7 +2367,6 @@
                     this.bitwiseTo(n.ONE.shiftLeft(e - 1), f, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(t);
-
               )
                 this.dAddOffset(2, 0),
                   this.bitLength() > e &&
@@ -2518,7 +2513,6 @@
               (r = this[e] >> i) != (this.s & this.DM) >> i &&
               (t[n++] = r | (this.s << (this.DB - i)));
               e >= 0;
-
             )
               i < 8
                 ? ((r = (this[e] & ((1 << i) - 1)) << (8 - i)),
@@ -2581,7 +2575,7 @@
           var t = Math.floor(e / this.DB);
           return t >= this.t
             ? 0 != this.s
-            : 0 != (this[t] & (1 << e % this.DB));
+            : 0 != (this[t] & (1 << (e % this.DB)));
         }),
         (n.prototype.setBit = function (e) {
           return this.changeBit(e, f);
@@ -2647,7 +2641,6 @@
                   b > 0 && (h |= e[b - 1] >> (this.DB + n - c))),
                 l = r;
               0 == (1 & h);
-
             )
               (h >>= 1), --l;
             if (((n -= l) < 0 && ((n += this.DB), --b), y))
@@ -2677,7 +2670,6 @@
               o = d(0),
               l = d(1);
             0 != r.signum();
-
           ) {
             for (; r.isEven(); )
               r.rShiftTo(1, r),
@@ -2723,7 +2715,6 @@
           for (
             n < a && (a = n), a > 0 && (t.rShiftTo(a, t), r.rShiftTo(a, r));
             t.signum() > 0;
-
           )
             (n = t.getLowestSetBit()) > 0 && t.rShiftTo(n, t),
               (n = r.getLowestSetBit()) > 0 && r.rShiftTo(n, r),
@@ -2836,7 +2827,7 @@
           return (
             !!t &&
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
-            !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
+              !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
             E.encode(z.decode(e)))
           );
@@ -65164,8 +65155,8 @@
               "object" == typeof t[0]
             ) &&
             "number" == typeof t[0].clan_account_id &&
-            t[0].clan_account_id > 0 &&
-            "number" == typeof t[0].appid &&
+              t[0].clan_account_id > 0 &&
+              "number" == typeof t[0].appid &&
             t[0].appid > 0
           );
         }
@@ -65921,7 +65912,7 @@
           return this.m_setOwnedApps.has(Number(e));
         }
         BOwnsApp(e) {
-          return this.m_setOwnedApps.has(Number(e));
+          return Boolean(e) && this.m_setOwnedApps.has(Number(e));
         }
         BFollowsApp(e) {
           return this.m_setFollowedApps.has(Number(e));
@@ -65947,8 +65938,7 @@
         BIsAnyLanguageEnabled(e) {
           return (
             null == this.m_primaryLanguage ||
-            this.m_primaryLanguage <= -1 ||
-            31 <= this.m_primaryLanguage ||
+            this.m_primaryLanguage <= -1 || 31 <= this.m_primaryLanguage ||
             e.some(
               (e) =>
                 this.m_primaryLanguage === e ||
@@ -70251,7 +70241,7 @@
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
-            !this.m_mapHiddenClans.has(e.clanid) &&
+              !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & s.bK.k_eRequired || t & s.bK.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed(i.k_ERecent) && r) ||
@@ -71335,7 +71325,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].announcementGID &&
-            Array.isArray(t[0].adjacents) &&
+              Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
           );
         }
@@ -81374,8 +81364,8 @@
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              he(e) == he(t) &&
-              !(he(e) && he(t) && !fe(e.options, t.options)) &&
+                he(e) == he(t) &&
+                  !(he(e) && he(t) && !fe(e.options, t.options)) &&
               (!ge(e) || !ge(t) || e.data === t.data);
       }
       function ye(e, t) {
@@ -82295,9 +82285,7 @@
           let i = this.GetClientRect();
           return (
             !!i &&
-            e >= i.left &&
-            e <= i.right &&
-            t >= i.top - 20 &&
+            e >= i.left && e <= i.right && t >= i.top - 20 &&
             t <= i.bottom + 20
           );
         }
@@ -100367,7 +100355,7 @@
     },
     79613: (e, t, r) => {
       "use strict";
-      r.d(t, { Ae: () => m, OO: () => u, ho: () => c });
+      r.d(t, { Ae: () => m, MP: () => u, OO: () => d, ho: () => c });
       let i = !1,
         n = !1,
         a = !1,
@@ -100375,17 +100363,27 @@
         o = !1,
         l = !1;
       function c() {
-        return i || p(), n || a;
+        return i || _(), n || a;
       }
       function m() {
-        return i || p(), l;
+        return i || _(), l;
       }
       function u() {
+        if (!c()) return 0;
+        if ("undefined" != typeof navigator && navigator.userAgent) {
+          let e = navigator.userAgent.match(
+            /Valve Steam [^\/]*\/(?:[^/]*\/)?([0-9]+)/,
+          );
+          if (e && 2 == e.length) return Number.parseInt(e[1]);
+        }
+        return 0;
+      }
+      function d() {
         if (!navigator?.userAgent) return;
         const e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
         return e && 2 == e.length ? e[1] : void 0;
       }
-      function d(e, t) {
+      function p(e, t) {
         return (
           !!window.location.href.match("[?&]" + t + "=") ||
           !(
@@ -100395,17 +100393,17 @@
           )
         );
       }
-      function p() {
-        (s = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-          (a = d("Valve Steam GameOverlay", "force_overlay_view")),
-          (n = s || d("Valve Steam Client", "force_client_view")),
+      function _() {
+        (s = p("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+          (a = p("Valve Steam GameOverlay", "force_overlay_view")),
+          (n = s || p("Valve Steam Client", "force_client_view")),
           (l =
-            d("iphone", "force_ios_view") ||
-            d("ipad", "force_ios_view") ||
-            d("ipod", "force_ios_view") ||
-            (d("macintosh", "force_ios_view") &&
-              d("safari", "force_ios_view"))),
-          (o = d("android", "force_android_view")),
+            p("iphone", "force_ios_view") ||
+            p("ipad", "force_ios_view") ||
+            p("ipod", "force_ios_view") ||
+            (p("macintosh", "force_ios_view") &&
+              p("safari", "force_ios_view"))),
+          (o = p("android", "force_android_view")),
           (i = !0);
       }
     },

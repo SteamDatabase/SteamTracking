@@ -558,7 +558,7 @@ body._2aYDMWWN9bAVaHmPfFHXWA .responsive_page_frame {
   position: relative;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   min-height: 80vh;
-  transition: padding-left 0.2s;
+  transition: padding-left .2s;
   padding-left: 200px;
   z-index: 0;
 }
@@ -648,15 +648,13 @@ body._2aYDMWWN9bAVaHmPfFHXWA .responsive_page_frame {
 }
 .page_content_ctn#page_root {
   position: relative;
-  transition:
-    padding-left 0.2s,
-    padding-right 0.2s;
+  transition: padding-left .2s, padding-right .2s;
   overflow: hidden;
 }
 div#global_header .content {
   position: relative;
   left: 0;
-  transition: left 0.2s;
+  transition: left .2s;
 }
 @media all and (min-width: 1190px) {
   .page_content_ctn#page_root {
@@ -701,7 +699,7 @@ div#global_header .content {
   overflow: hidden;
   background: #0e1014;
   background: linear-gradient(180deg, #0e1014 50%, #0e101400 100%);
-  transition: padding-top 0.2s;
+  transition: padding-top .2s;
 }
 .KSZ9hmL_XbHI_tlSUQylO svg._3qWYYrOe1bQhTJwm0zc4E3 {
   position: absolute;
@@ -1062,7 +1060,7 @@ div#global_header .content {
   transform: scale(0.55) rotate(337deg) translateX(-44%) translateY(1%);
   transform-origin: top left;
   transition-property: transform, filter;
-  transition-duration: 0.3s;
+  transition-duration: .3s;
   transition-timing-function: ease-in;
   filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
     hue-rotate(0deg) saturate(1) blur(4px);

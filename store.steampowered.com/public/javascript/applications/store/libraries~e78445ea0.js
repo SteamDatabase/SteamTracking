@@ -338,7 +338,6 @@
                     var o = 1;
                     e < this._cellCount &&
                     this.getSizeAndPositionOfCell(e).offset < t;
-
                   )
                     (e += o), (o *= 2);
                   return this._binarySearch(
@@ -3657,7 +3656,6 @@
                           var h = l[0];
                           h.stopIndex - h.startIndex + 1 < o &&
                           h.startIndex > 0;
-
                         ) {
                           var f = h.startIndex - 1;
                           if (t({ index: f })) break;

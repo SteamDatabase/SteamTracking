@@ -4242,9 +4242,9 @@
                   return (
                     !(t.valveOnly && !i) &&
                     !(a?.length > 0 && !a.includes(t.id)) &&
-                    !n.has(t.id) &&
-                    !(t.dimmed && e >= t.startDate) &&
-                    (3 == s) == r.has(Ut(t)) &&
+                      !n.has(t.id) &&
+                        !(t.dimmed && e >= t.startDate) &&
+                          (3 == s) == r.has(Ut(t)) &&
                     !(
                       new Date(t.startDate.getTime() + 21 * F.Kp.PerDay * 1e3) <
                       e

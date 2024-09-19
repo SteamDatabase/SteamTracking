@@ -11249,7 +11249,6 @@
           for (
             -1 == e.m_iEntries && e.m_iEntries++;
             e.m_iEntries < e.m_data.m_rgEntries.length;
-
           ) {
             let t = e.m_data.m_rgEntries[e.m_iEntries];
             if (parseInt(t.time) >= e.m_nTimelineOffsetMS) break;

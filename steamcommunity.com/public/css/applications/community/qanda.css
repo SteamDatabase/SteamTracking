@@ -112,7 +112,7 @@ body.qanda {
   button._1z1rtA-m0g-2LV2Vt1oofr._3LIo4Gupf-bEyoN38m0xLy._1hooLg2kfnpqXDhLgPG6gH {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 .hHqRc8tmJX5DmOC_J9OSu
   button._1z1rtA-m0g-2LV2Vt1oofr._3LIo4Gupf-bEyoN38m0xLy._1hooLg2kfnpqXDhLgPG6gH
@@ -121,7 +121,7 @@ body.qanda {
   button._1z1rtA-m0g-2LV2Vt1oofr._3LIo4Gupf-bEyoN38m0xLy._1hooLg2kfnpqXDhLgPG6gH
   svg {
   transform: rotate(360deg);
-  transition: transform 0.2s linear;
+  transition: transform .2s linear;
 }
 .hHqRc8tmJX5DmOC_J9OSu button._1z1rtA-m0g-2LV2Vt1oofr.GRHnXc4HVJuz6yC7Gkr5k,
 .nfftCsjuFUxqo7oht5ZvS button._1z1rtA-m0g-2LV2Vt1oofr.GRHnXc4HVJuz6yC7Gkr5k {
@@ -149,7 +149,7 @@ body.qanda {
   padding: 3px 26px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
   box-shadow: 2px 2px 10px #000;
 }
 ._16zhk22TxzqPMUoz7I3WEB._2jHMeCl9ijq2--JlPwQ6Fz {

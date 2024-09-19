@@ -263,7 +263,6 @@
           --t &&
           z() &&
           !(F < 48 || F > 102 || (F > 57 && F < 65) || (F > 70 && F < 97));
-
         );
         return j(e, $() + (t < 6 && 32 == B() && 32 == z()));
       }
@@ -343,7 +342,6 @@
             x = o,
             E = y;
           m;
-
         )
           switch (((h = b), (b = z()))) {
             case 40:
@@ -481,7 +479,6 @@
           for (
             var o = 0, r = 0;
             (o = r), (r = B()), 38 === o && 12 === r && (t[n] = 1), !_(r);
-
           )
             z();
           return j(e, L);
@@ -521,7 +518,6 @@
                 n = e.parent,
                 o = e.column === n.column && e.line === n.line;
               "rule" !== n.type;
-
             )
               if (!(n = n.parent)) return;
             if (

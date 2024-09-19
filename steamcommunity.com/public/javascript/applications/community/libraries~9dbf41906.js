@@ -884,7 +884,6 @@
                   for (
                     0 < M && ((T = !0), (P = I + "_" + M)), R[I] = M + 1;
                     E.includes(P);
-
                   )
                     P = P + "_" + M;
                   E.push(P);
@@ -914,7 +913,6 @@
                   B = new RegExp(p(u) + p(t), "g"),
                   N = i.indexOf(t, c);
                 ;
-
               )
                 if (i[c] !== t)
                   if (a && 0 === w.length && i.substring(c, c + v) === a) {

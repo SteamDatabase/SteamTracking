@@ -30,7 +30,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
+  gap: .25rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -128,15 +128,14 @@
   width: 100%;
   height: 100%;
   position: relative;
-  transition: transform 0.1s ease-in-out;
+  transition: transform .1s ease-in-out;
   vertical-align: top;
   box-shadow: 0 0 3px #0005;
   cursor: pointer;
 }
 ._2V2sHETNfa62yMoDwSF3_t._3s4Rq3jnntBVP7HbJj1RMQ {
-  box-shadow:
-    0px 0px 2px 1px rgba(255, 184, 78, 0.6),
-    0px 0px 16px 1px rgba(255, 184, 78, 0.4);
+  box-shadow: 0px 0px 2px 1px rgba(255, 184, 78, 0.6), 0px 0px 16px 1px
+    rgba(255, 184, 78, 0.4);
 }
 ._2V2sHETNfa62yMoDwSF3_t:after {
   background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
@@ -379,7 +378,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  padding-bottom: 0.14em;
+  padding-bottom: .14em;
 }
 ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh {
   grid-area: playtime;
@@ -405,7 +404,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
 }
 ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._2L1rk5AZ6FW8trFciJnHSs {
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   color: var(--typography-color-neutral);
 }
 ._2-pQFn1G7dZ7667rrakcU3 ._38RhR5f2dCM0suwMTTCyMk {
@@ -614,7 +613,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   ._2EeyhCvW_KhEdtuarguZYh
   ._2L1rk5AZ6FW8trFciJnHSs {
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   opacity: 70%;
   font-size: var(--typography-font-size-medium);
 }
@@ -627,7 +626,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
 ._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b ._38RhR5f2dCM0suwMTTCyMk {
   margin-top: 16px;
   display: flex;
-  grid-column: 1/3;
+  grid-column: 1 / 3;
 }
 ._2ywCPkpOvBVojX4Mnn7zuJ
   ._36tJrb1jp0FbroHbjR6K2b
@@ -688,7 +687,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   font-size: var(--typography-font-size-body);
   color: var(--typography-color-primary);
   display: inline-flex;
-  gap: 0.25rem;
+  gap: .25rem;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -749,7 +748,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   background: rgba(58, 64, 74, 0.5);
   border-radius: 2px;
   font-size: 13px;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   font-weight: 400;
   color: var(--typography-color-primary);
   border: none;
@@ -933,7 +932,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   font-size: var(--typography-font-size-medium);
   margin-right: 8px;
   color: inherit;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
 }
 ._3L-qRrHSjklL-XerpCawLU ._1YRRMk6X7vrOL-02K-q1pf {
   grid-area: fraction;
@@ -1037,7 +1036,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   align-items: center;
   justify-content: center;
   display: inline-flex;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 .hQ4Q9MOyzOvVrZauH-tj5 ._1pQIr9TvX9JCZcMmMETHx1 {
   font-size: var(--typography-font-size-body);
@@ -1054,7 +1053,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
 .hQ4Q9MOyzOvVrZauH-tj5 ._3XDsbImB-54v0oQIFtqdJj {
   font-weight: 400;
   display: inline-flex;
-  gap: 0.25rem;
+  gap: .25rem;
   align-items: center;
   color: #fff;
 }
@@ -1080,7 +1079,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
     gap: unset;
   }
   .hQ4Q9MOyzOvVrZauH-tj5 ._14QBdf-5S88wYLJbazoFrh ._1A0dfMNzS5OX5an6RIFIK- {
-    margin-left: 0.5rem;
+    margin-left: .5rem;
   }
   .hQ4Q9MOyzOvVrZauH-tj5.E0OMiLaKR_MRnFXmJAZmf .UVZ1rP5saSNYWAWH3yMTl {
     display: flex;
@@ -1103,7 +1102,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
   color: var(--color-info);
   font-size: var(--typography-font-size-medium);
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
 }
 ._14YOdPTduI4LctS9AB_CjI ._2b6Qyvo_fVAbVShbS2jmJQ {
   grid-area: progress;
@@ -1135,7 +1134,7 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
 ._1FputvTUMDlSdMWR6dzBHN ._217EiSw2ETc8OiRB6_XCAN {
   font-weight: 500;
   font-size: var(--typography-font-size-medium);
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: var(--typography-color-neutral);
   height: 30px;
   display: inline-flex;

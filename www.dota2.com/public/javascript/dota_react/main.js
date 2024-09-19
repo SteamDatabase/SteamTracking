@@ -5035,7 +5035,6 @@
             for (
               e[(a = t + this.m.t)] += this.m.am(0, r, e, t, 0, this.m.t);
               e[a] >= e.DV;
-
             )
               (e[a] -= e.DV), e[++a]++;
           }
@@ -5207,7 +5206,6 @@
                   n.ONE.dlShiftTo(d, f),
                   f.subTo(o, o);
                 o.t < d;
-
               )
                 o[o.t++] = 0;
               for (; --b >= 0; ) {
@@ -5282,7 +5280,6 @@
             for (
               o < this.DB && (a = this[s] >> o) > 0 && ((n = !0), (i = m(a)));
               s >= 0;
-
             )
               o < t
                 ? ((a = (this[s] & ((1 << o) - 1)) << (t - o)),
@@ -5353,7 +5350,6 @@
               this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
               this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
             e.compareTo(this.r2) < 0;
-
           )
             e.dAddOffset(1, this.m.t + 1);
           for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
@@ -5424,7 +5420,6 @@
                     this.bitwiseTo(n.ONE.shiftLeft(e - 1), E, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(t);
-
               )
                 this.dAddOffset(2, 0),
                   this.bitLength() > e &&
@@ -5571,7 +5566,6 @@
               (a = this[e] >> r) != (this.s & this.DM) >> r &&
               (t[n++] = a | (this.s << (this.DB - r)));
               e >= 0;
-
             )
               r < 8
                 ? ((a = (this[e] & ((1 << r) - 1)) << (8 - r)),
@@ -5634,7 +5628,7 @@
           var t = Math.floor(e / this.DB);
           return t >= this.t
             ? 0 != this.s
-            : 0 != (this[t] & (1 << e % this.DB));
+            : 0 != (this[t] & (1 << (e % this.DB)));
         }),
         (n.prototype.setBit = function (e) {
           return this.changeBit(e, E);
@@ -5700,7 +5694,6 @@
                   v > 0 && (h |= e[v - 1] >> (this.DB + n - c))),
                 l = a;
               0 == (1 & h);
-
             )
               (h >>= 1), --l;
             if (((n -= l) < 0 && ((n += this.DB), --v), b))
@@ -5730,7 +5723,6 @@
               o = u(0),
               l = u(1);
             0 != a.signum();
-
           ) {
             for (; a.isEven(); )
               a.rShiftTo(1, a),
@@ -5776,7 +5768,6 @@
           for (
             n < i && (i = n), i > 0 && (t.rShiftTo(i, t), a.rShiftTo(i, a));
             t.signum() > 0;
-
           )
             (n = t.getLowestSetBit()) > 0 && t.rShiftTo(n, t),
               (n = a.getLowestSetBit()) > 0 && a.rShiftTo(n, a),
@@ -5889,7 +5880,7 @@
           return (
             !!t &&
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
-            !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
+              !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
             R.encode(D.decode(e)))
           );
@@ -6148,7 +6139,6 @@
                   n().node.tag !== e.text &&
                   i?.get(n().node.tag) &&
                   i?.get(n().node.tag)?.autocloses;
-
                 ) {
                   const e = r.pop();
                   l(e, e.node);
@@ -6160,7 +6150,6 @@
               }
             });
             r.length > 0;
-
           ) {
             const e = r.pop(),
               t = e.accumulator;
@@ -38680,10 +38669,9 @@
               return (
                 (!a || n?.team_id_1 == a || n?.team_id_2 == a) &&
                 0 != n?.team_id_1 &&
-                0 != n?.team_id_2 &&
-                !n?.has_started &&
-                !n?.is_completed &&
-                0 != n?.scheduled_time &&
+                  0 != n?.team_id_2 &&
+                  !n?.has_started &&
+                    !n?.is_completed && 0 != n?.scheduled_time &&
                 !(n?.scheduled_time < Date.now() / 1e3 - 7200)
               );
             })
@@ -39028,12 +39016,12 @@
         ability: (e) => `/ability_react/${e || ""}`,
         item: (e) => `/item_react/${e || ""}`,
         dpc_root: () => "/esports",
-        dpc_event_root: (e) => s.dpc_root() + `/${e || (0, n.Pq)()}`,
+        dpc_event_root: (e) => s.dpc_root() + `/${e || ((0, n.Pq))()}`,
         dpc_watch_root: (e) => s.dpc_event_root(e) + "/watch",
         dpc_schedule_root: (e) => s.dpc_event_root(e) + "/schedule",
         dpc_standings_root: (e) => s.dpc_event_root(e) + "/standings",
         dpc_watch: (e, t, a, r) =>
-          s.dpc_watch_root(e) + `/${t || 0}/${a || 0}/${r || (0, n.y5)()}`,
+          s.dpc_watch_root(e) + `/${t || 0}/${a || 0}/${r || ((0, n.y5))()}`,
         dpc_schedule: (e, t, a) =>
           s.dpc_schedule_root(e) + (t ? "/" + t : "") + (a ? "/" + a : ""),
         dpc_standings: (e, t, a) =>
@@ -46447,7 +46435,7 @@
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
-            !this.m_mapHiddenClans.has(e.clanid) &&
+              !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & x.k_eRequired || t & x.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed(q.k_ERecent) && a) ||
@@ -67220,8 +67208,8 @@
               "object" == typeof t[0]
             ) &&
             "number" == typeof t[0].clan_account_id &&
-            t[0].clan_account_id > 0 &&
-            "number" == typeof t[0].appid &&
+              t[0].clan_account_id > 0 &&
+              "number" == typeof t[0].appid &&
             t[0].appid > 0
           );
         }
@@ -68739,7 +68727,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].announcementGID &&
-            Array.isArray(t[0].adjacents) &&
+              Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
           );
         }
@@ -79291,8 +79279,8 @@
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              re(e) == re(t) &&
-              !(re(e) && re(t) && !ne(e.options, t.options)) &&
+                re(e) == re(t) &&
+                  !(re(e) && re(t) && !ne(e.options, t.options)) &&
               (!ae(e) || !ae(t) || e.data === t.data);
       }
       function se(e, t) {
@@ -80297,9 +80285,7 @@
           let r = this.GetClientRect();
           return (
             !!r &&
-            e >= r.left &&
-            e <= r.right &&
-            t >= r.top - 20 &&
+            e >= r.left && e <= r.right && t >= r.top - 20 &&
             t <= r.bottom + 20
           );
         }

@@ -738,8 +738,8 @@
               "object" == typeof a[0]
             ) &&
             "number" == typeof a[0].clan_account_id &&
-            a[0].clan_account_id > 0 &&
-            "number" == typeof a[0].appid &&
+              a[0].clan_account_id > 0 &&
+              "number" == typeof a[0].appid &&
             a[0].appid > 0
           );
         }

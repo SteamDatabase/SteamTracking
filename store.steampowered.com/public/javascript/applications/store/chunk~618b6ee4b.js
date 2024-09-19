@@ -1248,8 +1248,7 @@
               t.length > 0 &&
               "object" == typeof t[0]
             ) &&
-            "string" == typeof t[0].title &&
-            "string" == typeof t[0].id &&
+            "string" == typeof t[0].title && "string" == typeof t[0].id &&
             "string" == typeof t[0].type
           );
         }
@@ -2333,7 +2332,7 @@
           return (
             !!(t && Array.isArray(t) && t.length > 0) &&
             "number" == typeof t[0].nAppID &&
-            "number" == typeof t[0].nItemDefID &&
+              "number" == typeof t[0].nItemDefID &&
             "string" == typeof t[0].strName
           );
         }
@@ -10459,7 +10458,6 @@
                   ;
                   (n.length > 0 && c < n.length) ||
                   (r.length > 0 && m < r.length);
-
                 ) {
                   for (let e = 0; e < 2; e++)
                     n.length > 0 && c < n.length && (l.push(n[c]), c++);
@@ -11545,8 +11543,7 @@
           const t = e;
           return (
             !(!t || "object" != typeof t) &&
-            "number" == typeof t.points &&
-            "number" == typeof t.points_earned &&
+            "number" == typeof t.points && "number" == typeof t.points_earned &&
             "number" == typeof t.points_spent
           );
         }
@@ -13575,7 +13572,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].clan_steamid &&
-            "string" == typeof t[0].gid &&
+              "string" == typeof t[0].gid &&
             "number" == typeof t[0].appid
           );
         }
@@ -20592,8 +20589,7 @@
         ShouldShowSection(e) {
           return (
             !this.m_activeTab ||
-            !e.show_on_tabs ||
-            0 === e.show_on_tabs.length ||
+            !e.show_on_tabs || 0 === e.show_on_tabs.length ||
             e.show_on_tabs.some((e) => e === this.GetActiveTabUniqueID())
           );
         }

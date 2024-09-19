@@ -198,7 +198,6 @@
           --t &&
           x() &&
           !(y < 48 || y > 102 || (y > 57 && y < 65) || (y > 70 && y < 97));
-
         );
         return E(e, S() + (t < 6 && 32 == I() && 32 == x()));
       }
@@ -278,7 +277,6 @@
             H = r,
             Y = V;
           w;
-
         )
           switch (((A = M), (M = x()))) {
             case 40:
@@ -416,7 +414,6 @@
           for (
             var r = 0, o = 0;
             (r = o), (o = I()), 38 === r && 12 === o && (t[n] = 1), !M(o);
-
           )
             x();
           return E(e, b);
@@ -456,7 +453,6 @@
                 n = e.parent,
                 r = e.column === n.column && e.line === n.line;
               "rule" !== n.type;
-
             )
               if (!(n = n.parent)) return;
             if (

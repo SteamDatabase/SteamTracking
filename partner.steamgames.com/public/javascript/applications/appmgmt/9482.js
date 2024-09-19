@@ -110,7 +110,6 @@
         for (
           ;
           s.length && ((0, a.w)(c.length, "no marks left to close"), c.length);
-
         ) {
           const t = c.pop(),
             r = e.mapMarks.get(t.type),
@@ -1518,7 +1517,6 @@
               }
             });
             n.length > 0;
-
           ) {
             const e = n.pop();
             i(e, e.node);

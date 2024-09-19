@@ -311,7 +311,6 @@
               c = c.concat(l),
               i = Promise.resolve(t);
             c.length;
-
           )
             i = i.then(c.shift(), c.shift());
           return i;
@@ -1500,7 +1499,6 @@
               var r = e;
               (r = r.substring(0, r.lastIndexOf("."))) &&
               !goog.getObjectByName(r);
-
             )
               goog.implicitNamespaces_[r] = !0;
           }
@@ -2318,7 +2316,6 @@
             for (
               var e = this, t = this.paused_;
               this.depsToLoad_.length && !t;
-
             )
               !(function () {
                 var r = !1,
@@ -3071,7 +3068,6 @@
             e &&
             (e !== Object.prototype || t) &&
             (e !== Function.prototype || r);
-
           ) {
             for (
               var o = Object.getOwnPropertyNames(e), i = 0;
@@ -5870,7 +5866,6 @@
           for (
             var t, r = /(\w[\w ]+)\/([^\s]+)\s*(?:\((.*?)\))?/g, n = [];
             (t = r.exec(e));
-
           )
             n.push([t[1], t[2], t[3] || void 0]);
           return n;
@@ -6843,7 +6838,6 @@
               n = "",
               o = Array.prototype.slice.call(arguments, 1);
             o.length && 1 < r.length;
-
           )
             n += r.shift() + o.shift();
           return n + r.join("%s");
@@ -8139,7 +8133,6 @@
             for (
               var a = 0, s = 1;
               (a += (127 & (i = e[t++])) * s), (s *= 128), 0 != (128 & i);
-
             );
             t += a;
           }
@@ -8452,7 +8445,6 @@
           for (
             var t = this.bytes_, r = this.cursor_, n = r + e, o = [], i = "";
             r < n;
-
           ) {
             var a = t[r++];
             if (a < 128) o.push(a);
@@ -8636,7 +8628,6 @@
           for (
             this.unskipHeader();
             this.nextField() && this.getFieldNumber() == e;
-
           )
             this.skipField();
           this.decoder_.atEnd() || this.unskipHeader();
@@ -9307,7 +9298,6 @@
               jspb.asserts.assert(0 <= e && e < jspb.BinaryConstants.TWO_TO_32),
               jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_32);
             0 < t || 127 < e;
-
           )
             this.buffer_.push((127 & e) | 128),
               (e = ((e >>> 7) | (t << 25)) >>> 0),
@@ -9327,7 +9317,6 @@
             jspb.asserts.assert(e == Math.floor(e)),
               jspb.asserts.assert(0 <= e && e < jspb.BinaryConstants.TWO_TO_32);
             127 < e;
-
           )
             this.buffer_.push((127 & e) | 128), (e >>>= 7);
           this.buffer_.push(e);
@@ -9611,7 +9600,6 @@
               65536 * (((e >>>= 16) * n) & 65535),
               r = e * o + ((r * o) >>> 16) + ((e * n) >>> 16);
             4294967296 <= t;
-
           )
             (t -= 4294967296), (r += 1);
           return new jspb.arith.UInt64(t >>> 0, r >>> 0);
@@ -9729,7 +9717,6 @@
             t = this.totalLength_ + this.encoder_.length() - t,
               jspb.asserts.assert(0 <= t);
             127 < t;
-
           )
             e.push((127 & t) | 128), (t >>>= 7), this.totalLength_++;
           e.push(t), this.totalLength_++;
@@ -12776,7 +12763,6 @@
                 a = o.length - 1,
                 s = i.length - 1;
               1 <= a && 0 <= s && o[a] !== i[s];
-
             )
               s--;
             for (; 1 <= a && 0 <= s; a--, s--)
@@ -13166,7 +13152,6 @@
                   "<svg>" + t.valueOf().toString() + "</svg>",
                   t = ue.firstChild;
                 e.firstChild;
-
               )
                 e.removeChild(e.firstChild);
               for (; t.firstChild; ) e.appendChild(t.firstChild);
@@ -15459,7 +15444,6 @@
         for (
           e = e.return;
           null !== e && 5 !== e.tag && 3 !== e.tag && 13 !== e.tag;
-
         )
           e = e.return;
         ni = e;
@@ -17592,7 +17576,6 @@
           for (
             r = Mu((e = t.child), e.pendingProps), t.child = r, r.return = t;
             null !== e.sibling;
-
           )
             (e = e.sibling),
               ((r = r.sibling = Mu(e, e.pendingProps)).return = t);
@@ -17980,7 +17963,6 @@
                           n = r,
                           r = t.child;
                         null !== r;
-
                       )
                         (e = n),
                           ((a = r).flags &= 14680066),
@@ -18302,7 +18284,6 @@
           for (
             e.sibling.return = e.return, e = e.sibling;
             5 !== e.tag && 6 !== e.tag && 18 !== e.tag;
-
           ) {
             if (2 & e.flags) continue e;
             if (null === e.child || 4 === e.tag) continue e;
@@ -19008,7 +18989,6 @@
               o = e.expirationTimes,
               i = e.pendingLanes;
             0 < i;
-
           ) {
             var a = 31 - at(i),
               s = 1 << a,
@@ -19071,7 +19051,6 @@
             (Cl === e && Pl === t) ||
             ((zl = null), (Hl = Ze() + 500), du(e, t));
             ;
-
           )
             try {
               _u();
@@ -19207,7 +19186,6 @@
             e.pingedLanes &= ~t,
             e = e.expirationTimes;
           0 < t;
-
         ) {
           var r = 31 - at(t),
             n = 1 << r;
@@ -19579,7 +19557,6 @@
                                     (u = s + n),
                                   3 === p.nodeType && (s += p.nodeValue.length),
                                   null !== (f = p.firstChild);
-
                               )
                                 (d = p), (p = f);
                               for (;;) {
@@ -19607,7 +19584,6 @@
                         zt = !1,
                         Js = t;
                       null !== Js;
-
                     )
                       if (
                         ((e = (t = Js).child),
@@ -20332,7 +20308,6 @@
                     r = Qi(t, null, n, r),
                     t.child = r;
                   r;
-
                 )
                   (r.flags = (-3 & r.flags) | 4096), (r = r.sibling);
               } else {
@@ -21938,7 +21913,6 @@
           for (
             v(r), p = n(u);
             null !== p && (!(p.expirationTime > r) || (e && !N()));
-
           ) {
             var a = p.callback;
             if ("function" == typeof a) {
@@ -22232,9 +22206,9 @@
         throw new Error(
           "number" == typeof e
             ? "[MobX] minified error nr: " +
-              e +
-              (r.length ? " " + r.map(String).join(",") : "") +
-              ". Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/errors.ts"
+                e +
+                (r.length ? " " + r.map(String).join(",") : "") +
+                ". Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/errors.ts"
             : "[MobX] " + e,
         );
       }
@@ -24590,7 +24564,6 @@
                       a = !1,
                       s = k(t.data_.keys());
                     !(r = s()).done;
-
                   ) {
                     var l = r.value;
                     if (!o.has(l))
@@ -24619,7 +24592,6 @@
                           _ = b.next(),
                           S = m.next();
                         !_.done;
-
                       ) {
                         if (_.value !== S.value) {
                           t.keysAtom_.reportChanged();
@@ -25597,7 +25569,7 @@
           if (e <= -f) return T;
           if (e + 1 >= f) return S;
         }
-        return e < 0 ? s(-e, t).neg() : l(e % p | 0, (e / p) | 0, t);
+        return e < 0 ? s(-e, t).neg() : l((e % p) | 0, (e / p) | 0, t);
       }
       function l(e, r, n) {
         return new t(e, r, n);
@@ -25908,7 +25880,6 @@
                 p = s(n),
                 d = p.mul(t);
               d.isNegative() || d.gt(o);
-
             )
               d = (p = s((n -= g), this.unsigned)).mul(t);
             p.isZero() && (p = m), (i = i.add(p)), (o = o.sub(d));

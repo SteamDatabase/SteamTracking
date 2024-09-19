@@ -101,7 +101,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length;
           ++r < n && !1 !== t(e[r], r, e);
-
         );
         return e;
       };
@@ -1305,7 +1304,6 @@
                 ((a = o < 3 ? void 0 : a), (o = 1)),
               t = Object(t);
             ++n < o;
-
           ) {
             var s = r[n];
             s && e(t, s, n, a);
@@ -1582,7 +1580,6 @@
                 for (
                   var e = this.container, t = window;
                   !t.document.contains(e) && t.parent !== t;
-
                 )
                   t = t.parent;
                 return t;
@@ -2022,7 +2019,6 @@
         for (
           var r = ge(e).toHsv(), n = r.h, o = r.s, a = r.v, i = [], s = 1 / t;
           t--;
-
         )
           i.push(ge({ h: n, s: o, v: a })), (a = (a + s) % 1);
         return i;
@@ -9329,7 +9325,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length;
           ++r < n && !1 !== t(e[r], r, e);
-
         );
         return e;
       };
@@ -9439,7 +9434,6 @@
           for (
             var a = r.length, i = t ? a : -1, s = Object(r);
             (t ? i-- : ++i < a) && !1 !== n(s[i], i, s);
-
           );
           return r;
         };
@@ -10091,7 +10085,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length, o = 0, a = [];
           ++r < n;
-
         ) {
           var i = e[r];
           t(i, r, e) && (a[o++] = i);
@@ -10223,8 +10216,7 @@
             null != e &&
             !(0, o.A)(e)
           ) ||
-          i.test(e) ||
-          !a.test(e) ||
+          i.test(e) || !a.test(e) ||
           (null != t && e in Object(t))
         );
       };
@@ -10291,7 +10283,6 @@
             for (
               var a = arguments, i = -1, s = o(a.length - t, 0), l = Array(s);
               ++i < s;
-
             )
               l[i] = a[t + i];
             i = -1;

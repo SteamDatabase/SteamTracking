@@ -1325,7 +1325,6 @@
                   for (
                     0 < z && ((T = !0), (_ = S + "_" + z)), L[S] = z + 1;
                     D.includes(_);
-
                   )
                     _ = _ + "_" + z;
                   D.push(_);
@@ -1355,7 +1354,6 @@
                   N = new RegExp(m(u) + m(t), "g"),
                   I = s.indexOf(t, c);
                 ;
-
               )
                 if (s[c] !== t)
                   if (n && 0 === x.length && s.substring(c, c + v) === n) {
@@ -7309,7 +7307,6 @@
               this.table.options.placeholder,
             );
             e.firstChild;
-
           )
             e.removeChild(e.firstChild);
           (e.style.paddingTop = ""),
@@ -7364,7 +7361,6 @@
               (a <= i.height + i.vDomWindowBuffer ||
                 u < i.vDomWindowMinTotalRows) &&
               i.vDomBottom < i.displayRowsCount - 1;
-
             ) {
               var p,
                 m = i.vDomBottom + 1,
@@ -9552,7 +9548,6 @@
               t.classList.add("tabulator"),
               t.setAttribute("role", "grid");
             t.firstChild;
-
           )
             t.removeChild(t.firstChild);
           for (var n in (i.height &&
@@ -9729,7 +9724,6 @@
               this.modExists("keybindings") &&
                 this.modules.keybindings.clearBindings();
             e.firstChild;
-
           )
             e.removeChild(e.firstChild);
           e.classList.remove("tabulator");
@@ -11588,7 +11582,6 @@
                   t = this.generateRow("top", this.rowsToData(e)),
                   this.topRow = t;
                 this.topElement.firstChild;
-
               )
                 this.topElement.removeChild(this.topElement.firstChild);
               this.topElement.appendChild(t.getElement()), t.initialize(!0);
@@ -11599,7 +11592,6 @@
                   t = this.generateRow("bottom", this.rowsToData(e)),
                   this.botRow = t;
                 this.botElement.firstChild;
-
               )
                 this.botElement.removeChild(this.botElement.firstChild);
               this.botElement.appendChild(t.getElement()), t.initialize(!0);
@@ -12861,7 +12853,6 @@
                   : t.classList.remove("tabulator-validation-fail"),
                 t.classList.remove("tabulator-editing");
               t.firstChild;
-
             )
               t.removeChild(t.firstChild);
             o.row.getElement().classList.remove("tabulator-row-editing");
@@ -13052,7 +13043,6 @@
                 c.classList.add("tabulator-editing"),
                   e.row.getElement().classList.add("tabulator-row-editing");
                 c.firstChild;
-
               )
                 c.removeChild(c.firstChild);
               c.appendChild(i), u();
@@ -15626,7 +15616,6 @@
                 r = i.length > 1 ? l + i[1] : "",
                 s = /(\d+)(\d{3})/;
               s.test(n);
-
             )
               n = n.replace(s, "$1" + u + "$2");
             return d ? n + r + c : c + n + r;
@@ -16767,7 +16756,6 @@
                 this.getComponent(),
               );
             this.element.firstChild;
-
           )
             this.element.removeChild(this.element.firstChild);
           "string" == typeof this.elementContents
@@ -19014,7 +19002,6 @@
                   ? Math.min(this.count, this.max)
                   : Math.min(this.page + o, this.max);
             e.pagesElement.firstChild;
-
           )
             e.pagesElement.removeChild(e.pagesElement.firstChild);
           1 == e.page
@@ -21043,7 +21030,6 @@
                     l = l.match(p),
                     d = a.length > l.length ? l.length : a.length;
                   h < d;
-
                 )
                   if ((u = a[h]) !== (c = l[h++]))
                     return isFinite(u) && isFinite(c)

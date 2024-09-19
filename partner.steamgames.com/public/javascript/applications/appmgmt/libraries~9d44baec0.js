@@ -57,7 +57,6 @@
                   ((i = u), (r.length = 1)),
                 r.reverse();
               i--;
-
             )
               r.push(0);
             r.reverse();
@@ -67,7 +66,6 @@
               ((i = u), (r = s), (s = l), (l = r)),
               n = 0;
             i;
-
           )
             (n = ((l[--i] = l[i] + s[i] + n) / y) | 0), (l[i] %= y);
           for (n && (l.unshift(n), ++o), u = l.length; 0 == l[--u]; ) l.pop();
@@ -275,7 +273,6 @@
                     : (r = new s(o.toString())),
                   o = a = (n = s.precision) + 3;
                 ;
-
               )
                 if (
                   ((r = (i = r).plus(S(u, i, a + 2)).times(0.5)),
@@ -315,15 +312,14 @@
                   i = [],
                   r = a = l + s;
                 r--;
-
               )
                 i.push(0);
               for (r = s; --r >= 0; ) {
                 for (e = 0, o = l + r; o > r; )
                   (u = i[o] + d[r] * h[o - r - 1] + e),
-                    (i[o--] = u % y | 0),
+                    (i[o--] = (u % y) | 0),
                     (e = (u / y) | 0);
-                i[o] = (i[o] + e) % y | 0;
+                i[o] = ((i[o] + e) % y) | 0;
               }
               for (; !i[--a]; ) i.pop();
               return (
@@ -407,7 +403,6 @@
                   for (
                     o = new f(i), e = Math.ceil(r / v + 4), c = !1;
                     n % 2 && D((o = o.times(s)).d, e), 0 !== (n = p(n / 2));
-
                   )
                     D((s = s.times(s)).d, e);
                   return (c = !0), t.s < 0 ? new f(i).div(o) : _(o, r);
@@ -467,7 +462,7 @@
               r = 0,
               o = t.length;
             for (t = t.slice(); o--; )
-              (n = t[o] * e + r), (t[o] = n % y | 0), (r = (n / y) | 0);
+              (n = t[o] * e + r), (t[o] = (n % y) | 0), (r = (n / y) | 0);
             return r && t.unshift(r), t;
           }
           function e(t, e, n, r) {
@@ -520,7 +515,6 @@
                 m = (d = new M(T)).d = [],
                 s = 0;
               D[s] == (C[s] || 0);
-
             )
               ++s;
             if (
@@ -534,7 +528,7 @@
               for (f = 0, D = D[0], w++; (s < j || f) && w--; s++)
                 (O = f * y + (C[s] || 0)),
                   (m[s] = (O / D) | 0),
-                  (f = O % D | 0);
+                  (f = (O % D) | 0);
             else {
               for (
                 (f = (y / (D[0] + 1)) | 0) > 1 &&
@@ -545,7 +539,6 @@
                   S = P,
                   b = (g = C.slice(0, P)).length;
                 b < P;
-
               )
                 g[b++] = 0;
               (k = D.slice()).unshift(0), (E = D[0]), D[1] >= y / 2 && ++E;
@@ -593,7 +586,6 @@
           for (
             null == e ? ((c = !1), (u = d)) : (u = e), a = new p(0.03125);
             t.abs().gte(0.1);
-
           )
             (t = t.times(a)), (s += 5);
           for (
@@ -601,7 +593,6 @@
               n = r = o = new p(i),
               p.precision = u;
             ;
-
           ) {
             if (
               ((r = _(r.times(t), u)),
@@ -674,7 +665,6 @@
               h = _(y.times(y), p),
               o = 3;
             ;
-
           ) {
             if (
               ((u = _(u.times(h), p)),
@@ -702,7 +692,6 @@
                 : n < 0 && (n = e.length),
               r = 0;
             48 === e.charCodeAt(r);
-
           )
             ++r;
           for (o = e.length; 48 === e.charCodeAt(o - 1); ) --o;
@@ -744,7 +733,7 @@
           }
           if (
             (void 0 !== n &&
-              ((u = (s / (i = h(10, a - o - 1))) % 10 | 0),
+              ((u = ((s / (i = h(10, a - o - 1))) % 10) | 0),
               (l = e < 0 || void 0 !== m[d + 1] || s % i),
               (l =
                 n < 4
@@ -754,8 +743,8 @@
                       (4 == n ||
                         l ||
                         (6 == n &&
-                          (r > 0 ? (o > 0 ? s / h(10, a - o) : 0) : m[d - 1]) %
-                            10 &
+                          ((r > 0 ? (o > 0 ? s / h(10, a - o) : 0) : m[d - 1]) %
+                            10) &
                             1) ||
                         n == (t.s < 0 ? 8 : 7))))),
             e < 1 || !m[0])
@@ -775,7 +764,7 @@
               ? ((m.length = d), (i = 1), d--)
               : ((m.length = d + 1),
                 (i = h(10, v - r)),
-                (m[d] = o > 0 ? ((s / h(10, a - o)) % h(10, o) | 0) * i : 0)),
+                (m[d] = o > 0 ? (((s / h(10, a - o)) % h(10, o)) | 0) * i : 0)),
             l)
           )
             for (;;) {
@@ -822,7 +811,6 @@
                 n.reverse(),
                 o = a;
               o--;
-
             )
               n.push(0);
             n.reverse();
@@ -965,7 +953,6 @@
               o = ["precision", "rounding", "toExpNeg", "toExpPos", "LN10"],
                 n = 0;
               n < o.length;
-
             )
               e.hasOwnProperty((r = o[n++])) || (e[r] = this[r]);
           return i.config(e), i;
@@ -1278,7 +1265,6 @@
         for (
           var n = -1, r = null == t ? 0 : t.length, o = 0, i = [];
           ++n < r;
-
         ) {
           var a = t[n];
           e(a, n, t) && (i[o++] = a);
@@ -1963,7 +1949,6 @@
             u = i.length,
             c = n.length;
           ++o < u;
-
         ) {
           var l = r(i[o], a[o]);
           if (l) return o >= c ? l : l * ("desc" == n[o] ? -1 : 1);
@@ -1984,7 +1969,6 @@
           for (
             var i = n.length, a = e ? i : -1, u = Object(n);
             (e ? a-- : ++a < i) && !1 !== o(u[a], a, u);
-
           );
           return n;
         };
@@ -2450,8 +2434,7 @@
             null != t &&
             !o(t)
           ) ||
-          a.test(t) ||
-          !i.test(t) ||
+          a.test(t) || !i.test(t) ||
           (null != e && t in Object(e))
         );
       };
@@ -2640,7 +2623,6 @@
             for (
               var i = arguments, a = -1, u = o(i.length - e, 0), c = Array(u);
               ++a < u;
-
             )
               c[a] = i[e + a];
             a = -1;
@@ -3452,12 +3434,10 @@
         for (
           var r, o, i = {}, a = t.entries(), u = 0;
           (r = a.next()) && !r.done;
-
         ) {
           for (
             var c = e.entries(), l = !1, s = 0;
             (o = c.next()) && !o.done;
-
           ) {
             var f = r.value,
               p = f[0],
@@ -8418,7 +8398,6 @@
                       d && ((f = h + t * (p() / 2 + o)), (l += s));
                   };
                 s <= a.length;
-
               )
                 if ((i = p())) return i.v;
               return [];
@@ -15179,7 +15158,6 @@
                       m = f.length - 1,
                       g = 0;
                     v <= m && g <= f.length - 1;
-
                   ) {
                     var b = Math.floor((v + m) / 2),
                       x = T(y(b - 1), 2),
@@ -19646,7 +19624,6 @@
         for (
           t[r] < t[0] && ((t = t.slice().reverse()), (e = e.slice().reverse()));
           ++a < r;
-
         )
           (o[a] = N(t[a], t[a + 1])), (i[a] = n(e[a], e[a + 1]));
         return function (e) {
@@ -19877,7 +19854,6 @@
                     (c + u + 1 > r && (u = Math.max(1, r - c)),
                     i.push(t.substring((o -= u), o + u)),
                     !((c += u + 1) > r));
-
                   )
                     u = e[(a = (a + 1) % e.length)];
                   return i.reverse().join(n);
@@ -20088,7 +20064,6 @@
             for (
               l < c && ((o = c), (c = l), (l = o), (o = a), (a = u), (u = o));
               f-- > 0;
-
             ) {
               if ((o = s(c, l, n)) === r) return (i[a] = c), (i[u] = l), e(i);
               if (o > 0)
@@ -21512,7 +21487,6 @@
                       o = e[0],
                       i = new Array(r < 0 ? 0 : r);
                     n < r;
-
                   )
                     i[n] = t(o, (o = e[++n]));
                   return function (t) {
@@ -25513,7 +25487,6 @@
                 o = 0 | Math.max(0, Math.ceil((e - t) / n)),
                 i = new Array(o);
               ++r < o;
-
             )
               i[r] = t + r * n;
             return i;

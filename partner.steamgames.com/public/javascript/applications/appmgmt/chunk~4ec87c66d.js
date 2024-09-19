@@ -2890,7 +2890,7 @@
             e &&
               !this.m_oTemplateVars.custom_legal_text &&
               (this.m_oTemplateVars.custom_legal_text =
-                `&copy; ${new Date().getFullYear()} Valve Corporation and ` +
+                `&copy; ${(new Date()).getFullYear()} Valve Corporation and ` +
                 (this.m_oTemplateVars.partner
                   ? this.m_oTemplateVars.partner
                   : "_______") +
@@ -11785,8 +11785,7 @@
               t.length > 0 &&
               "object" == typeof t[0]
             ) &&
-            "string" == typeof t[0].inviteid &&
-            "number" == typeof t[0].appid &&
+            "string" == typeof t[0].inviteid && "number" == typeof t[0].appid &&
             "number" == typeof t[0].rtinvitetime
           );
         }
@@ -14000,8 +13999,7 @@
               t.length > 0 &&
               "object" == typeof t[0]
             ) &&
-            "string" == typeof t[0].name &&
-            "object" == typeof t[0].location &&
+            "string" == typeof t[0].name && "object" == typeof t[0].location &&
             "object" == typeof t[0].visibility
           );
         }
@@ -23185,7 +23183,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].opt_in_name &&
-            Array.isArray(t[0].partner_ids) &&
+              Array.isArray(t[0].partner_ids) &&
             "number" == typeof t[0].partner_ids[0]
           );
         }
@@ -44762,7 +44760,7 @@
       }
       function w(e, t, a, r) {
         const i = new Date(1e3 * t);
-        return `${n.W7.get(e)} - ${String(i.getUTCMonth() + 1).padStart(2, "0")}/${String(i.getUTCDate()).padStart(2, "0")}/${String(i.getUTCFullYear()).padStart(2, "0")} - ${a?.GetName() ?? (0, c.wD)(r)}`;
+        return `${n.W7.get(e)} - ${String(i.getUTCMonth() + 1).padStart(2, "0")}/${String(i.getUTCDate()).padStart(2, "0")}/${String(i.getUTCFullYear()).padStart(2, "0")} - ${a?.GetName() ?? ((0, c.wD))(r)}`;
       }
       function D(e) {
         const { oEditablePlan: t, closeModal: a, oStoreItem: i } = e,
@@ -46113,9 +46111,7 @@
               async (t) => {
                 const a = {
                     date4: { date: A(t.rtDueDate), time: k(t.rtDueDate) },
-                    priority: {
-                      label: t.bHighPriority ? "ASAP ⚠️️" : "Medium",
-                    },
+                    priority: { label: t.bHighPriority ? "ASAP ⚠️️" : "Medium" },
                     link: { url: t.strFilesURL, text: t.strFilesURL },
                     link8: {
                       url: `${C.TS.PARTNER_BASE_URL}promotion/assetportal/localization/${t.planid}`,
@@ -66193,7 +66189,7 @@
                     a = { rgAppIDs: e.join(",") },
                     n = await o().get(t, { params: a });
                   if (!n || 200 != n?.status || 1 != n?.data?.success)
-                    throw `Failed to load app to paid partners: ${(0, O.H)(n).strErrorMsg}`;
+                    throw `Failed to load app to paid partners: ${((0, O.H))(n).strErrorMsg}`;
                   const r = new Map();
                   return (
                     n.data.publishers_for_app.forEach((e) => {
@@ -67206,7 +67202,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].gid &&
-            "number" == typeof t[0].clanAccountID &&
+              "number" == typeof t[0].clanAccountID &&
             "object" == typeof t[0].data
           );
         }
@@ -73728,7 +73724,6 @@
               }
             });
             n.length > 0;
-
           ) {
             const e = n.pop();
             c(e, e.node);
@@ -88069,7 +88064,7 @@
         return null;
       }
       function _(e) {
-        return `© ${new Date().getFullYear()} Valve Corporation${e ? " and " + e : ""}. <br/>All trademarks are property of their respective owners in the US and other countries.`;
+        return `© ${(new Date()).getFullYear()} Valve Corporation${e ? " and " + e : ""}. <br/>All trademarks are property of their respective owners in the US and other countries.`;
       }
       class g {
         m_message;
@@ -90510,7 +90505,7 @@
                 1 != a.data?.success ||
                 !a.data?.partners
               )
-                throw `Load single user partner info failed ${(0, s.H)(a).strErrorMsg}`;
+                throw `Load single user partner info failed ${((0, s.H))(a).strErrorMsg}`;
               return a.data.partners;
             })(e),
         });
@@ -99118,7 +99113,6 @@
               ;
               !this.props.fnDoesItemTakeFocus(e) &&
               e > this.props.nIndexLeftmost;
-
             )
               e--;
           return N("LastFocusableColumn: ", e), e;
@@ -99269,7 +99263,6 @@
             t != this.props.nIndexLeftmost - 1 &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(t);
-
           )
             t--;
           return t == this.props.nIndexLeftmost - 1
@@ -99290,7 +99283,6 @@
             t != this.props.nNumItems &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(t);
-
           )
             t++;
           return t == this.props.nNumItems

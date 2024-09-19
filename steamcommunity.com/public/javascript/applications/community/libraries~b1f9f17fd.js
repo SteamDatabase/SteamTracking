@@ -222,7 +222,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length;
           ++r < n && !1 !== t(e[r], r, e);
-
         );
         return e;
       };
@@ -232,7 +231,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length, o = 0, i = [];
           ++r < n;
-
         ) {
           var a = e[r];
           t(a, r, e) && (i[o++] = a);
@@ -905,7 +903,6 @@
           for (
             var i = r.length, a = t ? i : -1, l = Object(r);
             (t ? a-- : ++a < i) && !1 !== o(l[a], a, l);
-
           );
           return r;
         };
@@ -1359,8 +1356,7 @@
             null != e &&
             !o(e)
           ) ||
-          a.test(e) ||
-          !i.test(e) ||
+          a.test(e) || !i.test(e) ||
           (null != t && e in Object(t))
         );
       };
@@ -3212,7 +3208,6 @@
             for (
               var n = arguments, o = -1, i = Kt(n.length - t, 0), a = Array(i);
               ++o < i;
-
             )
               a[o] = n[t + o];
             o = -1;
@@ -3272,7 +3267,6 @@
               a && nr(r[0], r[1], a) && ((i = o < 3 ? void 0 : i), (o = 1)),
               t = Object(t);
             ++n < o;
-
           ) {
             var l = r[n];
             l && e(t, l, n, i);
@@ -3579,7 +3573,6 @@
                 for (
                   var e = this.container, t = window;
                   !t.document.contains(e) && t.parent !== t;
-
                 )
                   t = t.parent;
                 return t;
@@ -3689,7 +3682,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length;
           ++r < n && !1 !== t(e[r], r, e);
-
         );
         return e;
       };
@@ -3712,7 +3704,6 @@
           for (
             var o = r.length, i = t ? o : -1, a = Object(r);
             (t ? i-- : ++i < o) && !1 !== n(a[i], i, a);
-
           );
           return r;
         };
@@ -4050,7 +4041,6 @@
         for (
           var r = Dr(e).toHsv(), n = r.h, o = r.s, i = r.v, a = [], l = 1 / t;
           t--;
-
         )
           a.push(Dr({ h: n, s: o, v: i })), (i = (i + l) % 1);
         return a;
@@ -5184,7 +5174,6 @@
         for (
           var r = -1, n = null == e ? 0 : e.length, o = 0, i = [];
           ++r < n;
-
         ) {
           var a = e[r];
           t(a, r, e) && (i[o++] = a);
@@ -5388,8 +5377,7 @@
             null != e &&
             !hr(e)
           ) ||
-          To.test(e) ||
-          !ko.test(e) ||
+          To.test(e) || !ko.test(e) ||
           (null != t && e in Object(t))
         );
       };
@@ -9635,7 +9623,6 @@
                       var r = this.props.viewDate.clone().set({ month: e }),
                         n = r.endOf("month").date() + 1;
                       n-- > 1;
-
                     )
                       if (t(r.date(n))) return !1;
                     return !0;
@@ -9904,7 +9891,6 @@
                       var n = this.props.viewDate.clone().set({ year: e }),
                         o = n.endOf("year").dayOfYear() + 1;
                       o-- > 1;
-
                     )
                       if (r(n.dayOfYear(o))) return (t[e] = !1), !1;
                     return (t[e] = !0), !0;
@@ -10339,7 +10325,6 @@
               var r = { hours: 1, minutes: 2, seconds: 2, milliseconds: 3 },
                 n = t + "";
               n.length < r[e];
-
             )
               n = "0" + n;
             return n;
@@ -11881,7 +11866,6 @@
                     var r = 1;
                     e < this._cellCount &&
                     this.getSizeAndPositionOfCell(e).offset < t;
-
                   )
                     (e += r), (r *= 2);
                   return this._binarySearch(
@@ -15200,7 +15184,6 @@
                           var h = a[0];
                           h.stopIndex - h.startIndex + 1 < r &&
                           h.startIndex > 0;
-
                         ) {
                           var p = h.startIndex - 1;
                           if (t({ index: p })) break;

@@ -284,7 +284,6 @@
         for (
           ;
           a.length && ((0, j.w)(o.length, "no marks left to close"), o.length);
-
         ) {
           const t = o.pop(),
             r = e.mapMarks.get(t.type),

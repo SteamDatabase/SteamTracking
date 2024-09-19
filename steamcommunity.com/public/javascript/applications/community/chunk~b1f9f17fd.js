@@ -3444,7 +3444,6 @@
                   : a.groups) || void 0 === n
               ? void 0
               : n.length) <= e;
-
           )
             this.m_curModel.jsondata.sale_background_img_groups.groups.push({});
           (this.m_curModel.jsondata.sale_background_img_groups.groups[e] = t),
@@ -3573,7 +3572,6 @@
                     : n.groups) || void 0 === i
                 ? void 0
                 : i.length) <= t;
-
             )
               o.tab_background_img_groups.groups.push({});
             (o.tab_background_img_groups.groups[t] = a),
@@ -6197,8 +6195,7 @@
                     !s.vr_support.vrhmd_only
                   ) &&
                   (2 != e.flag || 1 != s.steam_deck_compat_category) &&
-                  !(3 == e.flag && o && o > e.release_date_max) &&
-                  o &&
+                    !(3 == e.flag && o && o > e.release_date_max) && o &&
                   o > e.release_date_min
                 );
               })
@@ -19194,7 +19191,6 @@
               r.quiz.questions.some((t) =>
                 t.answers.find((t) => t.unique_id == e),
               );
-
             )
               e = ba + Math.floor(1e6 * Math.random());
             a.answers.push({ unique_id: e, localized_answer: [] }), n();
@@ -20664,7 +20660,6 @@
             for (
               ;
               a.social_share.content_options.find((t) => t.unique_id == e);
-
             )
               e = on + Math.floor(1e6 * Math.random());
             a.social_share.content_options.push({
@@ -21651,7 +21646,6 @@
               a.internal_section_data.reservation_options.find(
                 (t) => t.unique_id == e,
               );
-
             )
               e = "reservation_" + Math.floor(1e6 * Math.random());
             a.internal_section_data.reservation_options.push({
@@ -21802,7 +21796,6 @@
               a.internal_section_data.while_supplies_last_option.find(
                 (t) => t.unique_id == e,
               );
-
             )
               e = "last_" + Math.floor(1e6 * Math.random());
             a.internal_section_data.while_supplies_last_option.push({
@@ -28612,8 +28605,7 @@
               t.length > 0 &&
               "object" == typeof t[0]
             ) &&
-            "string" == typeof t[0].title &&
-            "string" == typeof t[0].id &&
+            "string" == typeof t[0].title && "string" == typeof t[0].id &&
             "string" == typeof t[0].type
           );
         }
@@ -29962,7 +29954,7 @@
           return (
             !!(t && Array.isArray(t) && t.length > 0) &&
             "number" == typeof t[0].nAppID &&
-            "number" == typeof t[0].nItemDefID &&
+              "number" == typeof t[0].nItemDefID &&
             "string" == typeof t[0].strName
           );
         }
@@ -30317,7 +30309,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].gid &&
-            "number" == typeof t[0].clanAccountID &&
+              "number" == typeof t[0].clanAccountID &&
             "object" == typeof t[0].data
           );
         }
@@ -31161,8 +31153,7 @@
               t.length > 0 &&
               "object" == typeof t[0]
             ) &&
-            "number" == typeof t[0].type &&
-            "string" == typeof t[0].tag &&
+            "number" == typeof t[0].type && "string" == typeof t[0].tag &&
             "string" == typeof t[0].optInName
           );
         }
@@ -42124,7 +42115,6 @@
                     ? void 0
                     : u.length) > 0 &&
                   !t[_].show_on_tabs.includes(a);
-
                 )
                   _ += 1;
                 i.set(n.background_id, {
@@ -42150,7 +42140,6 @@
                 ? void 0
                 : n.length) > 0 &&
               !t[e].show_on_tabs.includes(a);
-
             )
               e++;
             e < t.length && (l = t[e].unique_id);
@@ -50077,7 +50066,6 @@
                   ;
                   (n.length > 0 && c < n.length) ||
                   (i.length > 0 && d < i.length);
-
                 ) {
                   for (let e = 0; e < 2; e++)
                     n.length > 0 && c < n.length && (l.push(n[c]), c++);
@@ -51226,8 +51214,7 @@
           const t = e;
           return (
             !(!t || "object" != typeof t) &&
-            "number" == typeof t.points &&
-            "number" == typeof t.points_earned &&
+            "number" == typeof t.points && "number" == typeof t.points_earned &&
             "number" == typeof t.points_spent
           );
         }
@@ -53456,7 +53443,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].clan_steamid &&
-            "string" == typeof t[0].gid &&
+              "string" == typeof t[0].gid &&
             "number" == typeof t[0].appid
           );
         }
@@ -61105,8 +61092,7 @@
         ShouldShowSection(e) {
           return (
             !this.m_activeTab ||
-            !e.show_on_tabs ||
-            0 === e.show_on_tabs.length ||
+            !e.show_on_tabs || 0 === e.show_on_tabs.length ||
             e.show_on_tabs.some((e) => e === this.GetActiveTabUniqueID())
           );
         }
@@ -63139,7 +63125,6 @@
               ;
               !this.props.fnDoesItemTakeFocus(e) &&
               e > this.props.nIndexLeftmost;
-
             )
               e--;
           return N("LastFocusableColumn: ", e), e;
@@ -63308,7 +63293,6 @@
             t != this.props.nIndexLeftmost - 1 &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(t);
-
           )
             t--;
           return t == this.props.nIndexLeftmost - 1
@@ -63329,7 +63313,6 @@
             t != this.props.nNumItems &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(t);
-
           )
             t++;
           return t == this.props.nNumItems

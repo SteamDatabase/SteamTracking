@@ -974,7 +974,7 @@
                   1 != r.data?.success ||
                   !r.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, u.H)(r).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, u.H))(r).strErrorMsg}`;
                 return [r.data.userinfo];
               }
               {
@@ -988,7 +988,7 @@
                   1 != r.data?.success ||
                   !r.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, u.H)(r).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, u.H))(r).strErrorMsg}`;
                 const i = new Map();
                 return (
                   r.data.userinfos.forEach((e) =>
@@ -1192,7 +1192,7 @@
                         {
                           key: t.key,
                           className: (0, i.A)(
-                            `${o().GraphicalAssetsTab} ${t.key === e.key ? (0, i.A)(o().Active, "ActiveTab") : ""}`,
+                            `${o().GraphicalAssetsTab} ${t.key === e.key ? ((0, i.A))(o().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),
@@ -6816,7 +6816,6 @@
           for (
             i = i.sort((e, t) => e.decimal - t.decimal);
             n > 0 && i.length > 0;
-
           ) {
             (r[i.pop().index] += 1), (n -= 1);
           }

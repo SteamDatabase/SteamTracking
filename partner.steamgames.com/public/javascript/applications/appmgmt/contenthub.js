@@ -1041,7 +1041,6 @@ License: MIT
                   for (
                     0 < I && ((x = !0), (O = D + "_" + I)), b[D] = I + 1;
                     R.includes(O);
-
                   )
                     O = O + "_" + I;
                   R.push(O);
@@ -1071,7 +1070,6 @@ License: MIT
                   U = new RegExp(p(u) + p(t), "g"),
                   J = a.indexOf(t, h);
                 ;
-
               )
                 if (a[h] !== t)
                   if (r && 0 === C.length && a.substring(h, h + v) === r) {

@@ -123,7 +123,7 @@ body.v6.rewards .ModalPosition_Content {
   stroke: currentColor;
   fill: currentColor;
   transition-property: color;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
   transition-timing-function: ease-in;
   position: relative;
 }
@@ -162,7 +162,7 @@ body.v6.rewards .ModalPosition_Content {
   stroke: currentColor;
   fill: currentColor;
   transition-property: color;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
   transition-timing-function: ease-in;
   position: relative;
 }
@@ -174,7 +174,7 @@ body.v6.rewards .ModalPosition_Content {
   stroke: currentColor;
   fill: currentColor;
   transition-property: color;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
   transition-timing-function: ease-in;
   position: relative;
 }
@@ -208,18 +208,18 @@ body.v6.rewards .ModalPosition_Content {
 .kOC36pdxn9Y3RbFW9Pe4k ._3LsyiFl4MYAHc9pM67d-d6 {
   white-space: nowrap;
   color: #78a9e2;
-  font-size: 0.8em;
+  font-size: .8em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
 }
 .kOC36pdxn9Y3RbFW9Pe4k ._1XPtbpsI-RZd1JlAozJWI0 {
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
 }
 ._2fDrebx2asA6sXZwEpyywx {
   font-weight: 900;
   font-size: 18px;
   line-height: 26px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   text-transform: uppercase;
   color: #d9d9d9;
   padding-left: 20px;
@@ -248,13 +248,13 @@ body.v6.rewards .ModalPosition_Content {
   border-radius: 3px;
   background-color: #474e58;
   color: #c5cbd8;
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-weight: 100;
-  letter-spacing: 0.0625rem;
+  letter-spacing: .0625rem;
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 ._1YLE2s8b1gx2r4hkbxPUis:hover {
   color: #fff;
@@ -285,6 +285,6 @@ body.v6.rewards .ModalPosition_Content {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   margin-left: 8px;
 }

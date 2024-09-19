@@ -494,7 +494,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, _.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, _.H))(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -508,7 +508,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, _.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, _.H))(n).strErrorMsg}`;
                 const o = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>

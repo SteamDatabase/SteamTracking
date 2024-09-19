@@ -51,7 +51,7 @@
         putBit: function (t) {
           var e = Math.floor(this.length / 8);
           this.buffer.length <= e && this.buffer.push(0),
-            t && (this.buffer[e] |= 128 >>> this.length % 8),
+            t && (this.buffer[e] |= 128 >>> (this.length % 8)),
             this.length++;
         },
       }),
@@ -332,7 +332,6 @@
           for (
             a.getLengthInBits() + 4 <= 8 * g && a.put(0, 4);
             a.getLengthInBits() % 8 != 0;
-
           )
             a.putBit(!1);
           for (
@@ -341,7 +340,6 @@
               a.getLengthInBits() >= 8 * g ||
               (a.put(u.PAD0, 8), a.getLengthInBits() >= 8 * g)
             );
-
           )
             a.put(u.PAD1, 8);
           return u.createBytes(a, o);
@@ -682,7 +680,6 @@
             for (
               var e = t << 10;
               c.getBCHDigit(e) - c.getBCHDigit(c.G15) >= 0;
-
             )
               e ^= c.G15 << (c.getBCHDigit(e) - c.getBCHDigit(c.G15));
             return ((t << 10) | e) ^ c.G15_MASK;
@@ -691,7 +688,6 @@
             for (
               var e = t << 12;
               c.getBCHDigit(e) - c.getBCHDigit(c.G18) >= 0;
-
             )
               e ^= c.G18 << (c.getBCHDigit(e) - c.getBCHDigit(c.G18));
             return (t << 12) | e;

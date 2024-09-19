@@ -1890,7 +1890,6 @@
             for (
               e[(r = t + this.m.t)] += this.m.am(0, n, e, t, 0, this.m.t);
               e[r] >= e.DV;
-
             )
               (e[r] -= e.DV), e[++r]++;
           }
@@ -2062,7 +2061,6 @@
                   i.ONE.dlShiftTo(d, y),
                   y.subTo(o, o);
                 o.t < d;
-
               )
                 o[o.t++] = 0;
               for (; --v >= 0; ) {
@@ -2137,7 +2135,6 @@
             for (
               o < this.DB && (r = this[s] >> o) > 0 && ((i = !0), (a = u(r)));
               s >= 0;
-
             )
               o < t
                 ? ((r = (this[s] & ((1 << o) - 1)) << (t - o)),
@@ -2208,7 +2205,6 @@
               this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
               this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
             e.compareTo(this.r2) < 0;
-
           )
             e.dAddOffset(1, this.m.t + 1);
           for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
@@ -2279,7 +2275,6 @@
                     this.bitwiseTo(i.ONE.shiftLeft(e - 1), b, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(t);
-
               )
                 this.dAddOffset(2, 0),
                   this.bitLength() > e &&
@@ -2426,7 +2421,6 @@
               (r = this[e] >> n) != (this.s & this.DM) >> n &&
               (t[i++] = r | (this.s << (this.DB - n)));
               e >= 0;
-
             )
               n < 8
                 ? ((r = (this[e] & ((1 << n) - 1)) << (8 - n)),
@@ -2489,7 +2483,7 @@
           var t = Math.floor(e / this.DB);
           return t >= this.t
             ? 0 != this.s
-            : 0 != (this[t] & (1 << e % this.DB));
+            : 0 != (this[t] & (1 << (e % this.DB)));
         }),
         (i.prototype.setBit = function (e) {
           return this.changeBit(e, b);
@@ -2555,7 +2549,6 @@
                   f > 0 && (g |= e[f - 1] >> (this.DB + i - c))),
                 l = r;
               0 == (1 & g);
-
             )
               (g >>= 1), --l;
             if (((i -= l) < 0 && ((i += this.DB), --f), v))
@@ -2585,7 +2578,6 @@
               o = m(0),
               l = m(1);
             0 != r.signum();
-
           ) {
             for (; r.isEven(); )
               r.rShiftTo(1, r),
@@ -2631,7 +2623,6 @@
           for (
             i < a && (a = i), a > 0 && (t.rShiftTo(a, t), r.rShiftTo(a, r));
             t.signum() > 0;
-
           )
             (i = t.getLowestSetBit()) > 0 && t.rShiftTo(i, t),
               (i = r.getLowestSetBit()) > 0 && r.rShiftTo(i, r),
@@ -2744,7 +2735,7 @@
           return (
             !!t &&
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
-            !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
+              !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
             M.encode(D.decode(e)))
           );
@@ -6337,7 +6328,6 @@
                   i().node.tag !== e.text &&
                   a.get(i().node.tag) &&
                   a.get(i().node.tag).autocloses;
-
                 ) {
                   const e = n.pop();
                   l(e, e.node);
@@ -6352,7 +6342,6 @@
               }
             });
             n.length > 0;
-
           ) {
             let e = n.pop(),
               t = e.accumulator;
@@ -7677,8 +7666,8 @@
               "object" == typeof t[0]
             ) &&
             "number" == typeof t[0].clan_account_id &&
-            t[0].clan_account_id > 0 &&
-            "number" == typeof t[0].appid &&
+              t[0].clan_account_id > 0 &&
+              "number" == typeof t[0].appid &&
             t[0].appid > 0
           );
         }
@@ -15581,7 +15570,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].announcementGID &&
-            Array.isArray(t[0].adjacents) &&
+              Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
           );
         }
@@ -16496,7 +16485,6 @@
               ;
               (null == s ? void 0 : s.length) > 0 ||
               (null == o ? void 0 : o.length) > 0;
-
             ) {
               let e = {
                 event_gids:
@@ -20504,7 +20492,9 @@
         get NavKey() {
           var e, t;
           return (
-            null === (e = this.m_Properties) || void 0 === e ? void 0 : e.navKey
+            null === (e = this.m_Properties) || void 0 === e
+              ? void 0
+              : e.navKey
           )
             ? this.m_Properties.navKey
             : (null === (t = this.m_element) || void 0 === t ? void 0 : t.id)
@@ -27530,8 +27520,8 @@
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              au(e) == au(t) &&
-              !(au(e) && au(t) && !su(e.options, t.options)) &&
+                au(e) == au(t) &&
+                  !(au(e) && au(t) && !su(e.options, t.options)) &&
               (!iu(e) || !iu(t) || e.data === t.data);
       }
       function lu(e, t) {
@@ -28571,9 +28561,7 @@
           let n = this.GetClientRect();
           return (
             !!n &&
-            e >= n.left &&
-            e <= n.right &&
-            t >= n.top - 20 &&
+            e >= n.left && e <= n.right && t >= n.top - 20 &&
             t <= n.bottom + 20
           );
         }
@@ -34676,7 +34664,7 @@
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
-            !this.m_mapHiddenClans.has(e.clanid) &&
+              !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & g_.k_eRequired || t & g_.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed(f_.k_ERecent) && r) ||

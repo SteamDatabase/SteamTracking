@@ -15,9 +15,7 @@
   margin-bottom: 0px;
   transform: scale(1);
   filter: saturate(0.85);
-  transition:
-    transform 0.21s ease-in-out,
-    filter 0.21s ease-in-out;
+  transition: transform .21s ease-in-out, filter .21s ease-in-out;
 }
 ._2bT8irkKNnA5sxFG3MUXzH:hover {
   filter: saturate(1);
@@ -117,7 +115,7 @@
   opacity: 0;
   -webkit-app-region: no-drag;
   transition-property: opacity;
-  transition-duration: 0.21s;
+  transition-duration: .21s;
   transition-timing-function: ease-in-out;
 }
 ._2stP4WlwIxd0-9GjYyI7vF._1HecozzoSZfUZSci9dLkxN .VazMl4niFnodlVJhHIGlL {
@@ -132,7 +130,7 @@
   opacity: 0;
   -webkit-app-region: no-drag;
   transition-property: opacity;
-  transition-duration: 0.21s;
+  transition-duration: .21s;
   transition-timing-function: ease-in-out;
 }
 ._2stP4WlwIxd0-9GjYyI7vF._1HecozzoSZfUZSci9dLkxN ._3Hb3w5_ECwPKcEr5QSAsNk line,
@@ -140,7 +138,7 @@
   stroke-width: 26px;
   stroke: #008ada;
   transition-property: stroke, stroke-width;
-  transition-duration: 0.21s;
+  transition-duration: .21s;
   transition-timing-function: ease-in-out;
 }
 ._2stP4WlwIxd0-9GjYyI7vF._1HecozzoSZfUZSci9dLkxN:hover

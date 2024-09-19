@@ -1468,7 +1468,7 @@ ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/?appids=${appid}
-${STORE_BASE_URL}news/app/${appid}?emclan=${clanSteamID}&emgid=${GID}}
+${STORE_BASE_URL}news/app/${appid}?emclan=${}&emgid=${GID}
 ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/collection/sales/
@@ -3228,6 +3228,7 @@ steam://gamewebcallback/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/
+steam://nav/games/details/${appid}
 steam://nav/games/details/${}
 steam://open/about
 steam://open/addnonsteamgame

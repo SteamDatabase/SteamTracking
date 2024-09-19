@@ -222,7 +222,6 @@
           --t &&
           T() &&
           !(P < 48 || P > 102 || (P > 57 && P < 65) || (P > 70 && P < 97));
-
         );
         return U(e, N() + (t < 6 && 32 == H() && 32 == T()));
       }
@@ -302,7 +301,6 @@
             M = r,
             V = C;
           m;
-
         )
           switch (((h = y), (y = T()))) {
             case 40:
@@ -440,7 +438,6 @@
           for (
             var r = 0, o = 0;
             (r = o), (o = H()), 38 === r && 12 === o && (t[n] = 1), !j(o);
-
           )
             T();
           return U(e, k);
@@ -480,7 +477,6 @@
                 n = e.parent,
                 r = e.column === n.column && e.line === n.line;
               "rule" !== n.type;
-
             )
               if (!(n = n.parent)) return;
             if (

@@ -30,13 +30,13 @@ body {
   font-family: "Helvetica";
 }
 .PopupGenericBodyText {
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-size: 14px;
   font-weight: normal;
   font-family: "Helvetica";
 }
 .HelpText {
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-size: 12px;
   font-weight: normal;
   font-family: "Helvetica";
@@ -154,7 +154,7 @@ body {
   bottom: 0;
   background-color: #0e0f11;
   font-size: 12px;
-  letter-spacing: 0.25px;
+  letter-spacing: .25px;
   font-family: "Helvetica";
   color: #91a4b4;
 }
@@ -196,7 +196,7 @@ body {
   margin-top: 0px;
   -webkit-app-region: no-drag;
   transition-property: background-image;
-  transition-duration: 0.24s;
+  transition-duration: .24s;
   transition-timing-function: ease-in-out;
 }
 .TitleBarTitle {
@@ -210,7 +210,7 @@ body {
   color: #91a4b4;
   font-size: 18px;
   font-weight: medium;
-  letter-spacing: 0.25px;
+  letter-spacing: .25px;
   line-height: 27px;
   margin-top: 1px;
   font-family: "Helvetica";
@@ -222,7 +222,7 @@ body {
   color: #91a4b4;
   font-size: 12px;
   font-weight: medium;
-  letter-spacing: 0.25px;
+  letter-spacing: .25px;
   line-height: 27px;
   margin-top: 1px;
   font-family: "Helvetica";
@@ -230,7 +230,7 @@ body {
   height: 27px;
   position: relative;
   transition-property: color;
-  transition-duration: 0.24s;
+  transition-duration: .24s;
 }
 .MainWindowTitleBarButton:hover {
   color: #eee;
@@ -257,7 +257,7 @@ body {
   border-radius: 0px;
   transition-property: background-color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   background-size: 12px;
   background-repeat: no-repeat;
   background-position: center;
@@ -275,7 +275,7 @@ body {
   background-position: center;
   transition-property: filter;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 .closeButtonContainer:hover {
   filter: brightness(2);
@@ -289,7 +289,7 @@ body {
   background-position: center;
   transition-property: filter;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 .maximizeRestoreButtonContainer:hover {
   filter: brightness(2);
@@ -303,7 +303,7 @@ body {
   background-position: center;
   transition-property: filter;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 .minimizeButtonContainer:hover {
   filter: brightness(2);
@@ -425,7 +425,7 @@ body {
   padding-left: 8px;
   padding-right: 16px;
   transition-property: background-color;
-  transition-duration: 0.18s;
+  transition-duration: .18s;
   transition-timing-function: ease-in-out;
 }
 .SteamFeatureNavItem:hover {
@@ -461,7 +461,7 @@ body {
   margin-left: 12px;
   margin-right: 12px;
   text-transform: none;
-  letter-spacing: 0.1px;
+  letter-spacing: .1px;
 }
 .SteamFeatureNavItem:hover .SteamFeatureNavItem_label {
   color: #c9c9c9;
@@ -681,7 +681,7 @@ body {
 }
 .MainLoginFormGroup .PopupGenericBodyText {
   display: inline-block;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-size: 14px;
   font-weight: 700;
   max-width: 100%;
@@ -704,7 +704,7 @@ body {
 .MainLoginFormRemember .PopupGenericBodyText {
   display: inline-block;
   padding-top: 3px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-size: 14px;
   font-weight: 700;
   max-width: 100%;
@@ -723,7 +723,7 @@ body {
 .LoginStatusMessage .PopupGenericBodyText {
   display: flex;
   padding-top: 3px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-size: 14px;
   font-weight: 500;
   max-width: 100%;
@@ -800,7 +800,7 @@ body {
 }
 .ClientStatusTable {
   font-size: 12px;
-  letter-spacing: 0.25px;
+  letter-spacing: .25px;
   font-family: "Helvetica";
 }
 .ClientStatusTable .col0 {
@@ -821,7 +821,7 @@ body {
 }
 .CafeFundingTable {
   font-size: 12px;
-  letter-spacing: 0.25px;
+  letter-spacing: .25px;
   font-family: "Helvetica";
 }
 .CafeFundingTable .col0 {
@@ -854,7 +854,7 @@ body {
   margin-top: 15px;
   font-size: 12px;
   font-weight: medium;
-  letter-spacing: 0.25px;
+  letter-spacing: .25px;
   font-family: "Helvetica";
   -webkit-app-region: no-drag;
 }
@@ -949,7 +949,7 @@ body {
 .slidedown {
   max-height: 0;
   overflow-y: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height .5s ease-in-out;
 }
 .slideup {
   max-height: 200px;
@@ -1013,7 +1013,7 @@ body {
   -webkit-app-region: no-drag;
   transition-property: background-color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
+  transition-duration: .5s;
   background-color: #777879;
   border-radius: 4px;
 }
@@ -1103,10 +1103,7 @@ button {
   top: 96px;
   bottom: 0;
   background-color: #212121;
-  transition:
-    right 350ms,
-    opacity 350ms,
-    box-shadow 350ms;
+  transition: right 350ms, opacity 350ms, box-shadow 350ms;
   transition-delay: 1s;
   display: flex;
   color: #fff;
@@ -1165,7 +1162,7 @@ button {
   top: 0px;
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease-out;
+  transition: transform .3s ease-out;
   background-color: #26282b;
   background: linear-gradient(to bottom, #272a2e 0%, #0e0f11 100%);
 }
@@ -1179,7 +1176,7 @@ button {
   z-index: 10;
   position: relative;
   transition-property: background-color, transform, width;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 .MainWindow.sidebar_collapsed .MainNav {
   transform: translateX(-43px);
@@ -1199,7 +1196,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   transition-property: opacity;
-  transition-duration: 0.24s;
+  transition-duration: .24s;
 }
 .MainNavToggleButton:hover {
   opacity: 1;
@@ -1287,7 +1284,7 @@ button {
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: 0.7s;
+  animation-duration: .7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -1418,7 +1415,7 @@ button {
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: 0.5px;
+  stroke-width: .5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;

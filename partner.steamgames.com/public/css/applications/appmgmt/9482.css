@@ -7,7 +7,7 @@
   font-style: italic;
 }
 p._3lnqGBzYap-Z2T81XBiBUU {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
 ._2LYsFAwy8wdRJQTNJOUcsT {
   display: block;
@@ -214,7 +214,7 @@ p._3lnqGBzYap-Z2T81XBiBUU {
   height: 12px;
   fill: #aebac2;
   transition: transform;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 ._2cmZMzZlRrszDBF97Di0cD .uAvfe31kBh5TZrse069d1:hover {
   color: #fff;
@@ -293,7 +293,7 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
   z-index: 0;
 }
 ._2SgPxDudv7oRkzlHsNm4_O .ProseMirror p.pm_paragraph {
-  min-height: 0.15em;
+  min-height: .15em;
 }
 ._2SgPxDudv7oRkzlHsNm4_O ul {
   color: #acb2b8;
@@ -341,7 +341,7 @@ h2._1aQY7Yz23XDN0N4IVctriG {
   text-transform: uppercase;
   color: #fff;
   margin: 2px 12px 0 12px;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   font-weight: normal;
   line-height: 26px;
   position: relative;

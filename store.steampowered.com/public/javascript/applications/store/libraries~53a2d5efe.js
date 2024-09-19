@@ -130,7 +130,6 @@
         for (
           var e = -1, n = null == t ? 0 : t.length, o = 0, a = [];
           ++e < n;
-
         ) {
           var u = t[e];
           r(u, e, t) && (a[o++] = u);
@@ -551,7 +550,6 @@
           for (
             var a = e.length, u = r ? a : -1, i = Object(e);
             (r ? u-- : ++u < a) && !1 !== o(i[u], u, i);
-
           );
           return e;
         };
@@ -923,8 +921,7 @@
             null != t &&
             !o(t)
           ) ||
-          u.test(t) ||
-          !a.test(t) ||
+          u.test(t) || !a.test(t) ||
           (null != r && t in Object(r))
         );
       };

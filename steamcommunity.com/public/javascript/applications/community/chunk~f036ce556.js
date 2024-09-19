@@ -321,7 +321,6 @@
             for (
               e[(r = t + this.m.t)] += this.m.am(0, i, e, t, 0, this.m.t);
               e[r] >= e.DV;
-
             )
               (e[r] -= e.DV), e[++r]++;
           }
@@ -493,7 +492,6 @@
                   n.ONE.dlShiftTo(m, y),
                   y.subTo(o, o);
                 o.t < m;
-
               )
                 o[o.t++] = 0;
               for (; --b >= 0; ) {
@@ -568,7 +566,6 @@
             for (
               o < this.DB && (r = this[s] >> o) > 0 && ((n = !0), (a = u(r)));
               s >= 0;
-
             )
               o < t
                 ? ((r = (this[s] & ((1 << o) - 1)) << (t - o)),
@@ -639,7 +636,6 @@
               this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
               this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
             e.compareTo(this.r2) < 0;
-
           )
             e.dAddOffset(1, this.m.t + 1);
           for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
@@ -710,7 +706,6 @@
                     this.bitwiseTo(n.ONE.shiftLeft(e - 1), B, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(t);
-
               )
                 this.dAddOffset(2, 0),
                   this.bitLength() > e &&
@@ -857,7 +852,6 @@
               (r = this[e] >> i) != (this.s & this.DM) >> i &&
               (t[n++] = r | (this.s << (this.DB - i)));
               e >= 0;
-
             )
               i < 8
                 ? ((r = (this[e] & ((1 << i) - 1)) << (8 - i)),
@@ -920,7 +914,7 @@
           var t = Math.floor(e / this.DB);
           return t >= this.t
             ? 0 != this.s
-            : 0 != (this[t] & (1 << e % this.DB));
+            : 0 != (this[t] & (1 << (e % this.DB)));
         }),
         (n.prototype.setBit = function (e) {
           return this.changeBit(e, B);
@@ -986,7 +980,6 @@
                   _ > 0 && (f |= e[_ - 1] >> (this.DB + n - c))),
                 l = r;
               0 == (1 & f);
-
             )
               (f >>= 1), --l;
             if (((n -= l) < 0 && ((n += this.DB), --_), b))
@@ -1016,7 +1009,6 @@
               o = d(0),
               l = d(1);
             0 != r.signum();
-
           ) {
             for (; r.isEven(); )
               r.rShiftTo(1, r),
@@ -1062,7 +1054,6 @@
           for (
             n < a && (a = n), a > 0 && (t.rShiftTo(a, t), r.rShiftTo(a, r));
             t.signum() > 0;
-
           )
             (n = t.getLowestSetBit()) > 0 && t.rShiftTo(n, t),
               (n = r.getLowestSetBit()) > 0 && r.rShiftTo(n, r),
@@ -1175,7 +1166,7 @@
           return (
             !!t &&
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
-            !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
+              !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
             E.encode(F.decode(e)))
           );

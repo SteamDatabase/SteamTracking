@@ -10464,8 +10464,7 @@
         BIsAnyLanguageEnabled(e) {
           return (
             null == this.m_primaryLanguage ||
-            this.m_primaryLanguage <= -1 ||
-            31 <= this.m_primaryLanguage ||
+            this.m_primaryLanguage <= -1 || 31 <= this.m_primaryLanguage ||
             e.some(
               (e) =>
                 this.m_primaryLanguage === e ||
@@ -12250,7 +12249,7 @@
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
-            !this.m_mapHiddenClans.has(e.clanid) &&
+              !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & s.bK.k_eRequired || t & s.bK.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed(a.k_ERecent) && r) ||
@@ -13130,7 +13129,7 @@
               "object" == typeof t[0]
             ) &&
             "string" == typeof t[0].announcementGID &&
-            Array.isArray(t[0].adjacents) &&
+              Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
           );
         }
@@ -14020,7 +14019,6 @@
             ;
             (null == c ? void 0 : c.length) > 0 ||
             (null == m ? void 0 : m.length) > 0;
-
           ) {
             let e = {
               event_gids:
@@ -15419,7 +15417,9 @@
             ? void 0
             : t.findIndex((e) => 1 == e.display_type));
         return (
-          null === (r = i.resolved_items) || void 0 === r ? void 0 : r.length
+          null === (r = i.resolved_items) || void 0 === r
+            ? void 0
+            : r.length
         )
           ? a.createElement(
               n.Z,

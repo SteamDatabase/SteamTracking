@@ -2837,16 +2837,16 @@
                 (e) =>
                   !(!Se && e.lobbytype == I.AP.CASUAL_MATCH) &&
                   !(!he && e.lobbytype == I.AP.COMPETITIVE_MATCH) &&
-                  !(
-                    !Ie &&
-                    ![
-                      I.AP.CASUAL_MATCH,
-                      I.AP.COMPETITIVE_MATCH,
-                      I.AP.WEEKEND_TOURNEY,
-                      I.AP.FEATURED_GAMEMODE,
-                    ].includes(e.lobbytype)
-                  ) &&
-                  !(!Re && e.rankwassolo) &&
+                    !(
+                      !Ie &&
+                      ![
+                        I.AP.CASUAL_MATCH,
+                        I.AP.COMPETITIVE_MATCH,
+                        I.AP.WEEKEND_TOURNEY,
+                        I.AP.FEATURED_GAMEMODE,
+                      ].includes(e.lobbytype)
+                    ) &&
+                      !(!Re && e.rankwassolo) &&
                   !(!De && !e.rankwassolo),
               )),
                 B(e);

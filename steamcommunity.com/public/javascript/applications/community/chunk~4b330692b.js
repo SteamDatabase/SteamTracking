@@ -194,7 +194,7 @@
       }
       function b(e) {
         return e == M.LNY2020
-          ? `hue-rotate(${360 + (0, S.Tg)(-30, 10)}deg)`
+          ? `hue-rotate(${360 + ((0, S.Tg))(-30, 10)}deg)`
           : "";
       }
       !(function (e) {

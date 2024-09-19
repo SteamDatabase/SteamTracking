@@ -24,11 +24,8 @@
 ._1DsumfIa3MlkzUV9EXY5W9._3BESV4eFnr4EnaSaJSdk6T ._2n0EiKMGRP-r_BI5tDtttu {
   font-size: 14px;
   font-weight: 500;
-  text-shadow:
-    -1px -1px 4px #000,
-    1px -1px 4px #000,
-    -1px 1px 2px #000,
-    1px 1px 2px #000;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px
+    2px #000;
 }
 ._1DsumfIa3MlkzUV9EXY5W9.rpZ9bKyFXYvNQvgtKn5GV ._2n0EiKMGRP-r_BI5tDtttu {
   filter: brightness(0.75);
@@ -39,12 +36,12 @@
   z-index: 1;
 }
 ._1DsumfIa3MlkzUV9EXY5W9 .VmQTOrz5MPOWte5C9K7YS {
-  animation-delay: 0.2s;
+  animation-delay: .2s;
   margin-top: 2px;
   z-index: 2;
 }
 ._1DsumfIa3MlkzUV9EXY5W9 ._29mtadjX8N6pRn5TX1nA0o {
-  animation-delay: 0.4s;
+  animation-delay: .4s;
   margin-top: 4px;
   z-index: 3;
 }
@@ -688,7 +685,7 @@
   font-size: 16px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  transition: color 0.94s ease-in-out;
+  transition: color .94s ease-in-out;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -752,7 +749,7 @@
   margin-bottom: 1px;
   font-size: 12px;
   display: inline-block;
-  transition: color 0.94s ease-in-out;
+  transition: color .94s ease-in-out;
 }
 .titleBarContainer
   .currentUserContainer
@@ -804,17 +801,17 @@
 .friendRequests .bright .moMutualFriends .nOdcT-MoOaXGePXLyPe0H,
 .friendRequests .nOdcT-MoOaXGePXLyPe0H {
   color: #fff;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .friendRequests .noMutualFriends .nOdcT-MoOaXGePXLyPe0H {
   color: #aaa;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 .MemberListColumn ._4ZTzGZ5TTgFyfw1DcXLXS ._2Ri005Wg_uXDTa71kdRbcN,
 .MemberListColumn ._4ZTzGZ5TTgFyfw1DcXLXS ._2saJTAocZ9TnYXTGvnqUMC,
 .MemberListColumn ._4ZTzGZ5TTgFyfw1DcXLXS .nOdcT-MoOaXGePXLyPe0H {
   text-overflow: clip;
-  transition-delay: 0.4s;
+  transition-delay: .4s;
 }
 .MemberListColumn.MemberListViewCompact
   ._4ZTzGZ5TTgFyfw1DcXLXS

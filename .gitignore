@@ -1,7 +1,6 @@
 /.support/
 /node_modules/
 /npm-debug.log*
-/package-lock.json
 /vendor/
 /composer.lock
 

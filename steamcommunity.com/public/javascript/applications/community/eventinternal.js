@@ -664,7 +664,6 @@
             this.m_nHighestAppOffsetRequested = e + o,
               await this.m_mostRecentRequest;
             o > 0;
-
           ) {
             const t = Math.min(o, 100),
               l = { offset: e, nBatchSize: t, start_appid: a },

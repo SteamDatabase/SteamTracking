@@ -31,7 +31,7 @@
 ._1Ssh6bcQcBm8T6zVNU48G2 ._1rZeqdwHzajXNoY-uxRgfW ._2FkWFO_BAQnsWrQr-nHvEz {
   color: rgba(255, 255, 255, 0.7);
   transition-property: color, transform, opacity;
-  transition-duration: 0.08s;
+  transition-duration: .08s;
   transition-timing-function: ease-out;
 }
 ._1Ssh6bcQcBm8T6zVNU48G2
@@ -110,7 +110,7 @@
   object-position: top;
   -webkit-app-region: no-drag;
   background-color: #0e141b;
-  animation-duration: 0.15s;
+  animation-duration: .15s;
   animation-name: _3oLlzv-aDkyT4cHgaeENJI;
   animation-iteration-count: 1;
 }
@@ -190,9 +190,7 @@
 }
 ._3ixlq8K1YVBNIk7rw190aK ._2eqwm-fL9OYKl0X03c1q_a ._2Jhopz5mqnwHwBUX9sMIGY {
   background-color: #3d4450bb;
-  box-shadow:
-    0px 4px 24px #00000088,
-    inset 0px 0px 32px #00000088;
+  box-shadow: 0px 4px 24px #00000088, inset 0px 0px 32px #00000088;
   display: flex;
   justify-content: center;
   align-self: flex-end;
@@ -200,13 +198,13 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);
   font-size: 13px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-weight: 600;
   cursor: pointer;
   padding: 4px 24px 4px 24px;
   border-radius: 3px;
   transition-property: background-color, color;
-  transition-duration: 0.08s;
+  transition-duration: .08s;
   transition-timing-function: ease-out;
 }
 ._3ixlq8K1YVBNIk7rw190aK
@@ -923,7 +921,7 @@
 ._2CNnKSqRD_9z5U0Knq2yjM svg:hover {
   transform: scale(1.2);
   transform-origin: center;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   transition-timing-function: ease-in-out;
 }
 ._1Dg_c4LTkbyiG_03VDAsQE:hover + ._3Kw_btjCsTccf081ReOvQp {
@@ -1174,7 +1172,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: 0.7s;
+  animation-duration: .7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -1305,7 +1303,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: 0.5px;
+  stroke-width: .5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -2725,7 +2723,7 @@
   width: 22px;
   filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
   transition-property: color, transform, opacity;
-  transition-duration: 0.08s;
+  transition-duration: .08s;
   transition-timing-function: ease-out;
   color: rgba(255, 255, 255, 0.2);
   align-items: center;
@@ -3176,7 +3174,7 @@
   padding: 0px 2px 4px 0px;
   margin-left: 0px;
   margin-top: 0px;
-  letter-spacing: 0.7px;
+  letter-spacing: .7px;
   position: absolute;
   bottom: calc(27% + 12px);
 }
@@ -3658,7 +3656,7 @@
   width: 28px;
   -webkit-mask-image: linear-gradient(to left, transparent 8px, black 20px);
   mask-image: linear-gradient(to left, transparent 8px, black 20px);
-  transition: width ease 0.3s;
+  transition: width ease .3s;
 }
 .rWNgVMPb6DEglMsLileNg ._2M09urev2z_0keBeRWlFsa._28_y-RUEZhJpt4in4Wyry9 {
   width: 0px;
@@ -3670,7 +3668,7 @@
   width: 28px;
   -webkit-mask-image: linear-gradient(to right, transparent 8px, black 20px);
   mask-image: linear-gradient(to right, transparent 8px, black 20px);
-  transition: width ease 0.3s;
+  transition: width ease .3s;
 }
 .rWNgVMPb6DEglMsLileNg .YzFF90kSvFzYRc4OndPpi._28_y-RUEZhJpt4in4Wyry9 {
   width: 0px;
@@ -3733,7 +3731,7 @@
   cursor: pointer;
   z-index: 9;
   transition-property: background-color;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
 }
 ._34dlBrUZP054ElsvOp5hQm
   ._1-ooPvEW2c6SHuhnz6SK3t
@@ -3752,7 +3750,7 @@
   border-radius: 6px;
   cursor: grab;
   z-index: 11;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
   transition-timing-function: ease-in-out;
   transition-property: filter;
   box-shadow: 0 0 8px #06080b44;

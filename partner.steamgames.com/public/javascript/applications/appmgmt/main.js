@@ -23180,8 +23180,8 @@
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              he(e) == he(t) &&
-              !(he(e) && he(t) && !_e(e.options, t.options)) &&
+                he(e) == he(t) &&
+                  !(he(e) && he(t) && !_e(e.options, t.options)) &&
               (!pe(e) || !pe(t) || e.data === t.data);
       }
       function fe(e, t) {
@@ -24101,9 +24101,7 @@
           let n = this.GetClientRect();
           return (
             !!n &&
-            e >= n.left &&
-            e <= n.right &&
-            t >= n.top - 20 &&
+            e >= n.left && e <= n.right && t >= n.top - 20 &&
             t <= n.bottom + 20
           );
         }

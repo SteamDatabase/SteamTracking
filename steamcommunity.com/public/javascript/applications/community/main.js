@@ -28700,7 +28700,9 @@
         get NavKey() {
           var e, t;
           return (
-            null === (e = this.m_Properties) || void 0 === e ? void 0 : e.navKey
+            null === (e = this.m_Properties) || void 0 === e
+              ? void 0
+              : e.navKey
           )
             ? this.m_Properties.navKey
             : (null === (t = this.m_element) || void 0 === t ? void 0 : t.id)
@@ -37581,8 +37583,8 @@
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              _e(e) == _e(t) &&
-              !(_e(e) && _e(t) && !ge(e.options, t.options)) &&
+                _e(e) == _e(t) &&
+                  !(_e(e) && _e(t) && !ge(e.options, t.options)) &&
               (!he(e) || !he(t) || e.data === t.data);
       }
       function be(e, t) {
@@ -38565,9 +38567,7 @@
           let i = this.GetClientRect();
           return (
             !!i &&
-            e >= i.left &&
-            e <= i.right &&
-            t >= i.top - 20 &&
+            e >= i.left && e <= i.right && t >= i.top - 20 &&
             t <= i.bottom + 20
           );
         }

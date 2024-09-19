@@ -198,7 +198,6 @@
               }
             });
             l.length > 0;
-
           ) {
             const e = l.pop();
             n(e, e.node);

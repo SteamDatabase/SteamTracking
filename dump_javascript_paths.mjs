@@ -1,5 +1,5 @@
-import { join as pathJoin, resolve as pathResolve } from "path";
-import { readdir as readDir } from "fs/promises";
+import { join as pathJoin, resolve as pathResolve } from "node:path";
+import { readdir as readDir } from "node:fs/promises";
 
 const pathsToRecurse = [
 	"./Scripts/",
@@ -40,7 +40,7 @@ async function GetJavascriptFiles(dirName) {
 
 	return files
 		.filter((fileName) => {
-			if (fileName == "licenses.js") {
+			if (fileName === "licenses.js") {
 				return false;
 			}
 

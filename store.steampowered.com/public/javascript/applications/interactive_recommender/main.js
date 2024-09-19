@@ -1926,7 +1926,6 @@
                           for (
                             var r, o = [], i = /(.*?)%(\d+)\$s/g, s = 0;
                             (r = i.exec(n));
-
                           ) {
                             (s += r[0].length), o.push(r[1]);
                             var c = parseInt(r[2]);

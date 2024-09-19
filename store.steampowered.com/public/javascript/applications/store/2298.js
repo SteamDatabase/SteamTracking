@@ -688,7 +688,6 @@
                       var n = this.props.viewDate.clone().set({ month: e }),
                         r = n.endOf("month").date() + 1;
                       r-- > 1;
-
                     )
                       if (t(n.date(r))) return !1;
                     return !0;
@@ -957,7 +956,6 @@
                       var r = this.props.viewDate.clone().set({ year: e }),
                         o = r.endOf("year").dayOfYear() + 1;
                       o-- > 1;
-
                     )
                       if (n(r.dayOfYear(o))) return (t[e] = !1), !1;
                     return (t[e] = !0), !0;
@@ -1392,7 +1390,6 @@
               var n = { hours: 1, minutes: 2, seconds: 2, milliseconds: 3 },
                 r = t + "";
               r.length < n[e];
-
             )
               r = "0" + r;
             return r;

@@ -12,7 +12,7 @@
   cursor: pointer;
   border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
-  transition-duration: 0.25s;
+  transition-duration: .25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
@@ -226,7 +226,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 12px;
-  transition: height 0.5s;
+  transition: height .5s;
 }
 ._2LyGIHuQ8SFKb5T262YUvg .mz0H0iSlLfX7SQ7hv3kVY,
 ._2LyGIHuQ8SFKb5T262YUvg .mz0H0iSlLfX7SQ7hv3kVY ._3wWOEuQJ9QVG2xqb3s4xTw {
@@ -277,13 +277,13 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   background-color: #1a9fff;
 }
 ._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi svg {
-  transition: transform 0.2s ease-in-out;
+  transition: transform .2s ease-in-out;
   height: 18px;
   margin-top: 4px;
 }
 ._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi.r0ToHd0tmv46GM00Lr0a_ svg {
   transform: rotateZ(180deg);
-  transition: transform 0.2s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
 .O_QQdR2Hi2oq9k3mKRAQl {
   display: flex;
@@ -1856,8 +1856,7 @@ a:hover {
 }
 /*!
  * https://github.com/arqex/react-datetime
- */
-.rdt {
+ */ .rdt {
   position: relative;
 }
 .rdtPicker {

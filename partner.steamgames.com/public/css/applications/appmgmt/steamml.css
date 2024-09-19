@@ -109,7 +109,7 @@
   background-color: #0e2130;
   text-decoration: none;
   color: #999;
-  transition: 0.2s;
+  transition: .2s;
   cursor: pointer;
 }
 ._1xjli_L5ZMmh-nvw9GnUWQ ._3uE4kPiSHlhS4R4wHqX-fN {
@@ -282,7 +282,7 @@
   ._1vRxM4k_iJiVi6F1fzS1e3 {
   padding: 0px 4px;
   margin-left: -22px;
-  transition: 0.2s;
+  transition: .2s;
 }
 ._1gFQfWKXhOQbkaNjbGVU16
   ._3DsdfooA5ZsBVzHlo0spou
@@ -345,7 +345,7 @@
   position: relative;
   transition-property: filter, transform;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   text-decoration: none;
   cursor: pointer;
 }
@@ -409,7 +409,7 @@
   flex-direction: column;
   transition-property: width, transform, filter, height;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   position: relative;
 }
 ._1IaIKe5N5mtG4ReCT5Nfnk._1F_iVaudtZtIBggLz8TgsQ {
@@ -452,7 +452,7 @@
   justify-content: center;
   transition-property: justify-content;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 ._1IaIKe5N5mtG4ReCT5Nfnk ._2Uxe1WauLy_WSI8HBMDmpb ._2zfyC9pxT6ynYwfsxjjIcc {
   width: 16px;
@@ -460,7 +460,7 @@
   margin-right: 10px;
   transition-property: width;
   transition-timing-function: ease-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 ._1IaIKe5N5mtG4ReCT5Nfnk ._2Uxe1WauLy_WSI8HBMDmpb ._3dXukBGeFSKrjNRapz-vdw {
   font-size: 18px;
@@ -545,7 +545,7 @@
   position: relative;
   transition-property: height;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 ._3spVxRuLYDKpX2IsKvxhXN._1VPtlX8LmlSvqpBchxC_7s {
   height: 0px;
@@ -561,7 +561,7 @@
   cursor: pointer;
   transition-property: filter, transform, background-color, border;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.05s;
+  transition-duration: .05s;
   position: relative;
 }
 ._3spVxRuLYDKpX2IsKvxhXN ._2eV2TTGJXmq22-NxPpT3eI:hover {
@@ -682,7 +682,7 @@
   color: #888;
   transition-property: color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
@@ -708,7 +708,7 @@
   cursor: pointer;
   transition-property: color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
 }
 .UGqiqHtL23JkoCU_MSnsq ._2lI41nfrJhWqIcuoYAfdcC:hover {
   color: #d67754;

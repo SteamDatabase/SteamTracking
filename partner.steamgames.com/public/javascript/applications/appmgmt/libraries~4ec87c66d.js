@@ -766,7 +766,6 @@
                 Oe(n) &&
                 "HTML" !== n.nodeName &&
                 "static" === Ae(n, "position");
-
               )
                 n = n.offsetParent;
               return n || t.documentElement;
@@ -1009,7 +1008,6 @@
         for (
           var t = lt(e), n = At(e);
           n && St(n) && "static" === wt(n).position;
-
         )
           n = At(n);
         return n &&
@@ -1029,7 +1027,6 @@
                 for (
                   ct(n) && (n = n.host);
                   at(n) && ["html", "body"].indexOf(yt(n)) < 0;
-
                 ) {
                   var r = wt(n);
                   if (
@@ -2820,7 +2817,6 @@
             l = o.length,
             s = n.length;
           ++r < l;
-
         ) {
           var a = dr(o[r], i[r]);
           if (a) return r >= s ? a : a * ("desc" == n[r] ? -1 : 1);
@@ -3110,7 +3106,6 @@
           for (
             var i = t[n], l = (0, Er.A)(i), s = -1, a = l.length;
             ++s < a;
-
           ) {
             var c = l[s],
               u = e[c];
@@ -3219,7 +3214,6 @@
             r = e,
             o = [];
           Y(r, t, n);
-
         )
           o.push(r), (r = G(r, 1, n));
         return o;
@@ -4638,7 +4632,6 @@
                       i = 1,
                       l = [];
                     o <= n;
-
                   ) {
                     var s = "_lvl_" + o,
                       a =
@@ -4761,7 +4754,6 @@
               p = f.extra,
               v = p.length > 0 ? i - 1 : i;
             h.length < v;
-
           )
             h.push([]);
           return {
@@ -5634,7 +5626,6 @@
                   ]),
                   n = [];
                 t.length > 0;
-
               ) {
                 var r = t.shift();
                 n.push(r);
@@ -6123,7 +6114,6 @@
                     s = n,
                     a = [];
                   e.props.localizer.lte(s, r);
-
                 )
                   a.push(s), (s = new Date(+s + 60 * e.props.step * 1e3));
                 $o(e.props.onSelectSlot, {
@@ -8379,7 +8369,6 @@
                 o = e(t).toDate(),
                 s = [];
               i(o, n);
-
             )
               s.push(o), (o = l(o, 1, r));
             return s;
@@ -8705,7 +8694,6 @@
                     var n = 1;
                     e < this._cellCount &&
                     this.getSizeAndPositionOfCell(e).offset < t;
-
                   )
                     (e += n), (n *= 2);
                   return this._binarySearch(
@@ -12009,7 +11997,6 @@
                           var f = l[0];
                           f.stopIndex - f.startIndex + 1 < n &&
                           f.startIndex > 0;
-
                         ) {
                           var h = f.startIndex - 1;
                           if (t({ index: h })) break;

@@ -73,7 +73,7 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
   height: 100%;
   filter: blur(60px) brightness(40%);
   opacity: 0.6;
-  background: center/cover no-repeat;
+  background: center / cover no-repeat;
   z-index: 1;
 }
 .qexk-JocS7jjDM31IcGZn {
@@ -271,7 +271,7 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
   font-size: 12px;
   line-height: 18px;
   transition-property: opacity, background, color, box-shadow;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -402,7 +402,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   border-radius: 3px;
   padding: 8px;
   box-sizing: border-box;
-  transition: filter 0.1s ease-in-out;
+  transition: filter .1s ease-in-out;
 }
 ._2pA5CW91XQQDfo6yZEdPd- > *:not(:first-child) {
   margin-left: 8px;
@@ -468,16 +468,16 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 }
 ._240i58XQ0w78YFrd_p-9UY {
   animation-name: _2jG5NuuER4JaHKuO9nA4KF;
-  animation-duration: 0.32s;
+  animation-duration: .32s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
   transition-property: transform, background-color, box-shadow;
-  transition-duration: 0.21s;
+  transition-duration: .21s;
   transition-timing-function: ease-out;
 }
 ._240i58XQ0w78YFrd_p-9UY svg {
   transition-property: transform;
-  transition-duration: 0.21s;
+  transition-duration: .21s;
   transition-timing-function: ease-out;
 }
 ._240i58XQ0w78YFrd_p-9UY:active {
@@ -933,7 +933,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .vquL9mspYzz2tBtxrzqw9 {
   color: #adaeaf;
   transition-property: padding-left, color;
-  transition-duration: 0.15s;
+  transition-duration: .15s;
   transition-timing-function: ease-out;
   line-height: 26px;
   cursor: pointer;
@@ -1798,7 +1798,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
 ._3n6v2rFCMX3yWMfZrlCn6g .khWz0kU5EooSG60KYdU1K .H5jrPn7OY-0ToSesPTrI6 {
   text-transform: uppercase;
   margin-bottom: 4px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   margin-left: 15px;
 }
 ._3n6v2rFCMX3yWMfZrlCn6g .khWz0kU5EooSG60KYdU1K .JVE9ORqYtUCERl3y2i7_X {
@@ -2771,7 +2771,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   max-width: 1300px;
   display: flex;
   padding: 10px 0px;
-  transition-duration: 0.23s;
+  transition-duration: .23s;
   transition-timing-function: ease-in-out;
   background-color: none;
 }
@@ -2825,7 +2825,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   height: 400px;
   left: 8%;
   right: 8%;
-  transition: transform 0.15s;
+  transition: transform .15s;
   background-image: url("https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2");
   background-size: 100%;
   background-position-y: 0px;
@@ -3124,9 +3124,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   margin-bottom: 0px;
   transform: scale(1);
   filter: saturate(0.85);
-  transition:
-    transform 0.21s ease-in-out,
-    filter 0.21s ease-in-out;
+  transition: transform .21s ease-in-out, filter .21s ease-in-out;
 }
 ._2bT8irkKNnA5sxFG3MUXzH:hover {
   filter: saturate(1);

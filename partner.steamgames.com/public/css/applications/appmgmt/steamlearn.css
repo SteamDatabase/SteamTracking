@@ -68,7 +68,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,7 +181,7 @@ button.DialogButton {
   transition-property: filter, max-height, min-height, padding-top,
     padding-bottom, margin-bottom;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   margin-bottom: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -377,7 +377,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -538,7 +538,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -963,7 +963,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1155,7 +1155,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1208,8 +1208,7 @@ button.DialogButton {
       circle at top left,
       rgba(98, 106, 118, 0.4) 0%,
       rgba(117, 139, 177, 0) 60%
-    ),
-    #2c2f34;
+    ), #2c2f34;
   display: flex;
   flex-direction: column;
   min-width: 200px;
@@ -1267,8 +1266,7 @@ button.DialogButton {
       circle at top left,
       rgba(40, 122, 245, 0.4) 0%,
       #0e2247 60%
-    ),
-    #2c2f34;
+    ), #2c2f34;
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc._8VekS4xaLWJVFcgGdyfiV .meAbe3Sy_IJ4PngdGme2- {
   background: radial-gradient(circle at top left, #736548 0%, #574b32 60%),
@@ -1704,7 +1702,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2033,7 +2031,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2306,7 +2304,7 @@ button.DialogButton {
   border-top: 1px solid;
 }
 .json-diff-viewer tr.expand-line button {
-  margin: 0 0.5em;
+  margin: 0 .5em;
   padding: 0;
   color: #2196f3;
   font-family: sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -2427,7 +2425,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2551,7 +2549,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2672,7 +2670,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2846,7 +2844,7 @@ button.DialogButton {
   height: 100%;
   background-color: #686868;
   transition-property: width;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 ._1_188Z8mN56wt5ykoDyWA5
@@ -2866,7 +2864,7 @@ button.DialogButton {
   flex-direction: column;
   overflow: hidden;
   transition-property: height;
-  transition-duration: 0.3s;
+  transition-duration: .3s;
   transition-timing-function: ease-in-out;
   padding-left: 30px;
 }
@@ -2906,7 +2904,7 @@ button.DialogButton {
   height: 100%;
   background-color: #535353;
   transition-property: width;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 ._1_188Z8mN56wt5ykoDyWA5 ._3yfLac5uYSfmnvttqIy033 ._3cmDGnLwTwr4eTkH72PKfI {
@@ -3200,7 +3198,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3290,7 +3288,7 @@ button.DialogButton {
   text-transform: uppercase;
   transition-property: color, background-color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
 }
 ._1NMSBccwO5Cu5ny71e3aeE
   .-ib5B3TS_O8YpuRfQ3_iP
@@ -3422,7 +3420,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3557,7 +3555,7 @@ button.DialogButton {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -6,7 +6,7 @@
   margin: 0 2px;
   background-color: rgba(0, 0, 0, 0.2);
   transition: background-color;
-  transition-duration: 0.13s;
+  transition-duration: .13s;
 }
 ._1ShXayKQrFaUxECMORaNmM {
   cursor: pointer;

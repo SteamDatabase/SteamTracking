@@ -38,9 +38,8 @@
 }
 ._3TjWhPYAqbU3Hrzm6Iq6il .lf5WnbH_ohSVbUnvd3Nf2 {
   background-color: #1a9fff;
-  box-shadow:
-    1px 0px 2px 0px rgba(0, 0, 0, 0.2),
-    0px 5px 5px 0px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.2), 0px 5px 5px 0px
+    rgba(0, 0, 0, 0.2) inset;
 }
 ._1r6njhPeny9XyTQKt2-__7 {
   color: #ffcc6a;
@@ -349,7 +348,7 @@ html.tablet
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   width: 100%;
-  transition: filter 0.3s ease-in-out;
+  transition: filter .3s ease-in-out;
 }
 ._10ZMM-6TwuIxLIDYNo11cI:hover {
   filter: brightness(1.2);
@@ -393,7 +392,7 @@ html.tablet
   color: #fff;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   padding: 10px 16px 10px;
 }
 ._10ZMM-6TwuIxLIDYNo11cI ._1clRj5v7vU3Cuj7x9c3ZNZ ._1ls2pcPp4wzuE2mXhMudcd {
@@ -413,7 +412,7 @@ html.tablet
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1ch;
+  letter-spacing: .1ch;
   padding: 8px 16px 2px;
 }
 ._10ZMM-6TwuIxLIDYNo11cI ._3oM7Hgank9qu0ZtiIqT4Ti ._1ls2pcPp4wzuE2mXhMudcd {
@@ -925,7 +924,7 @@ body.ShoppingCart {
 ._2M2uuGKI-mqASr4K5BRefp ._2KER4-iUzYJ7IYSjvQaG8T {
   background: none;
   color: #fff;
-  font-size: 0.7em;
+  font-size: .7em;
   font-weight: 600;
   padding: 0px;
 }
@@ -963,7 +962,7 @@ body.ShoppingCart {
 ._2KER4-iUzYJ7IYSjvQaG8T {
   background: none;
   color: #fff;
-  font-size: 0.7em;
+  font-size: .7em;
   font-weight: 600;
   padding: 0px;
 }
@@ -1060,8 +1059,7 @@ body.ShoppingCart {
 }
 /*!
  * https://github.com/arqex/react-datetime
- */
-.rdt {
+ */ .rdt {
   position: relative;
 }
 .rdtPicker {
@@ -1290,7 +1288,7 @@ td.rdtYear:hover {
   line-height: 20px;
   width: calc(100% - 16px - 2px);
   transition-property: background, box-shadow;
-  transition-duration: 0.18s;
+  transition-duration: .18s;
   transition-timing-function: ease-in-out;
 }
 ._3wPcWGmcqJzbUXHRTPYsXa::placeholder {
@@ -1473,7 +1471,7 @@ td.rdtYear:hover {
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
   transition-property: transform;
-  transition-duration: 0.34s;
+  transition-duration: .34s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0;
@@ -1603,7 +1601,7 @@ td.rdtYear:hover {
   height: calc(100% - 2px);
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter 0.24s ease-in-out;
+  transition: filter .24s ease-in-out;
 }
 ._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {

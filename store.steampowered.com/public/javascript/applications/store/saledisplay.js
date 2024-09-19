@@ -553,7 +553,6 @@
                   m < t.length &&
                   t[m].show_on_tabs?.length > 0 &&
                   !t[m].show_on_tabs.includes(a);
-
                 )
                   m += 1;
                 n.set(i.background_id, {
@@ -573,7 +572,6 @@
               e < t.length &&
               t[e].show_on_tabs?.length > 0 &&
               !t[e].show_on_tabs.includes(a);
-
             )
               e++;
             e < t.length && (i = t[e].unique_id);

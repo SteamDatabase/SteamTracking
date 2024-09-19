@@ -1197,7 +1197,6 @@
                   for (
                     0 < k && ((G = !0), (M = N + "_" + k)), I[N] = k + 1;
                     D.includes(M);
-
                   )
                     M = M + "_" + k;
                   D.push(M);
@@ -1227,7 +1226,6 @@
                   x = new RegExp(_(c) + _(t), "g"),
                   F = o.indexOf(t, d);
                 ;
-
               )
                 if (o[d] !== t)
                   if (l && 0 === f.length && o.substring(d, d + v) === l) {
@@ -6909,7 +6907,7 @@
                     : t.success) ||
                 !(null === (a = l.data) || void 0 === a ? void 0 : a.partners)
               )
-                throw `Load single user partner info failed ${(0, I.H)(l).strErrorMsg}`;
+                throw `Load single user partner info failed ${((0, I.H))(l).strErrorMsg}`;
               return l.data.partners;
             })(e),
         });
@@ -18690,7 +18688,7 @@
                         {
                           key: t.key,
                           className: (0, i.A)(
-                            `${c().GraphicalAssetsTab} ${t.key === e.key ? (0, i.A)(c().Active, "ActiveTab") : ""}`,
+                            `${c().GraphicalAssetsTab} ${t.key === e.key ? ((0, i.A))(c().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),

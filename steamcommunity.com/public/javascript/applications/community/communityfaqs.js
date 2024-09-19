@@ -9492,7 +9492,7 @@
                       : t.success) ||
                   !(null === (a = i.data) || void 0 === a ? void 0 : a.userinfo)
                 )
-                  throw `Load single avatar/persona failed ${(0, g.H)(i).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, g.H))(i).strErrorMsg}`;
                 return [i.data.userinfo];
               }
               {
@@ -9511,7 +9511,7 @@
                     ? void 0
                     : i.userinfos)
                 )
-                  throw `Load single avatar/persona failed ${(0, g.H)(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, g.H))(a).strErrorMsg}`;
                 const n = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>

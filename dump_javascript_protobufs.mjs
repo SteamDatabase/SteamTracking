@@ -1,6 +1,6 @@
-import { join as pathJoin } from "path";
-import { readFile, writeFile } from "fs/promises";
-import { createWriteStream } from "fs";
+import { join as pathJoin } from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
+import { createWriteStream } from "node:fs";
 import { createHash } from "node:crypto";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
@@ -151,7 +151,6 @@ for (const file of files) {
 		allEnums.push(...enums);
 	} catch (e) {
 		console.error(`Unable to parse "${file}":`, e);
-		continue;
 	}
 }
 
@@ -389,12 +388,12 @@ function OutputEnums(enums, stream = process.stdout) {
 			stream.write(`\t${key} = ${value};\n`);
 		}
 
-		stream.write(`}\n\n`);
+		stream.write("}\n\n");
 	}
 }
 
 function SplitRpcString(rpc) {
-	if (rpc == "Test_TransportError.InvalidService") {
+	if (rpc === "Test_TransportError.InvalidService") {
 		rpc += "#1";
 	}
 
@@ -1207,7 +1206,7 @@ function TraverseReactNativeModule(ast, requireVar, exportVar, dependencyMapVar,
 				node.init.callee?.type === Syntax.FunctionExpression &&
 				node.init.callee?.body.type === Syntax.BlockStatement
 			) {
-				var message = ParseReactNativeMessage(node.init.callee.body, importedIds);
+				const message = ParseReactNativeMessage(node.init.callee.body, importedIds);
 
 				if (message !== null) {
 					message.id = node.id.name;
@@ -1420,7 +1419,7 @@ function GetClassNameLiteral(ast) {
 	let value = null;
 
 	traverse(ast, {
-		enter: function (node, parent) {
+		enter: (node, parent) => {
 			if (node.type === Syntax.Literal && parent.type === Syntax.ReturnStatement) {
 				value = node.value;
 			}
@@ -1562,7 +1561,7 @@ function ParseEnum(node) {
 		enumValues.set(name, value);
 	}
 
-	let allEnumKeys = [...enumValues.keys()];
+	const allEnumKeys = [...enumValues.keys()];
 	const commonName = allEnumKeys.reduce((str1, str2) => {
 		let i = 0;
 		while (i < str1.length && str1.charAt(i) === str2.charAt(i)) {
@@ -1607,7 +1606,7 @@ function ParseEnum(node) {
 
 function EvaluateConstant(node) {
 	if (node.value.type === Syntax.UnaryExpression && node.value.operator === "!") {
-		return node.value.argument.value === 0 ? true : false;
+		return node.value.argument.value === 0;
 	} else if (node.value.type === Syntax.UnaryExpression && node.value.operator === "-") {
 		return -node.value.argument.value;
 	} else if (node.value.type === Syntax.Literal) {

@@ -1006,7 +1006,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, u.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, u.H))(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -1020,7 +1020,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, u.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, u.H))(n).strErrorMsg}`;
                 const r = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
@@ -1224,7 +1224,7 @@
                         {
                           key: t.key,
                           className: (0, r.A)(
-                            `${c().GraphicalAssetsTab} ${t.key === e.key ? (0, r.A)(c().Active, "ActiveTab") : ""}`,
+                            `${c().GraphicalAssetsTab} ${t.key === e.key ? ((0, r.A))(c().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),

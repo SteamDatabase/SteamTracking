@@ -248,7 +248,6 @@
           I(n), P = k(T);
           null !== P &&
           (!(P.expirationTime > n) || (e && !t.unstable_shouldYield()));
-
         ) {
           var i = P.callback;
           if ("function" == typeof i) {
@@ -552,7 +551,7 @@
         if (e <= -h) return k;
         if (e + 1 >= h) return E;
       }
-      return e < 0 ? l(-e, t).neg() : u(e % p | 0, (e / p) | 0, t);
+      return e < 0 ? l(-e, t).neg() : u((e % p) | 0, (e / p) | 0, t);
     }
     function u(e, t, n) {
       return new r(e, t, n);
@@ -866,7 +865,6 @@
               d = l(t),
               p = d.mul(e);
             p.isNegative() || p.gt(r);
-
           )
             p = (d = l((t -= s), this.unsigned)).mul(e);
           d.isZero() && (d = b), (o = o.add(d)), (r = r.sub(p));
@@ -3889,7 +3887,6 @@ and limitations under the License.
                           s = o.next(),
                           l = i.next();
                         !s.done;
-
                       ) {
                         if (s.value !== l.value) {
                           t._keysAtom.reportChanged();
@@ -4543,7 +4540,6 @@ and limitations under the License.
                   r = t,
                   o = null;
                 n.length;
-
               )
                 if ((o = n.shift()).length)
                   if (o.match(a.TOKEN_RE)) {
@@ -5872,7 +5868,6 @@ and limitations under the License.
             for (
               var t = 0, n = 0;
               e && !isNaN(e.offsetLeft) && !isNaN(e.offsetTop);
-
             )
               (t += e.offsetLeft - ("BODY" != e.tagName ? e.scrollLeft : 0)),
                 (n += e.offsetTop - ("BODY" != e.tagName ? e.scrollTop : 0)),
@@ -6114,7 +6109,6 @@ and limitations under the License.
             c = c.concat(o),
             a = Promise.resolve(e);
           c.length;
-
         )
           a = a.then(c.shift(), c.shift());
         return a;
@@ -19728,7 +19722,6 @@ PERFORMANCE OF THIS SOFTWARE.
                 for (
                   a = this.renderer.strip(a);
                   a.slice(0, s.LINE_BREAK.length) === s.LINE_BREAK;
-
                 )
                   a = a.slice(s.LINE_BREAK.length);
                 for (; a.slice(-s.LINE_BREAK.length) === s.LINE_BREAK; )
@@ -20876,7 +20869,6 @@ PERFORMANCE OF THIS SOFTWARE.
       for (
         var n, r = [], o = 0, i = 0, s = "", c = (t && t.delimiter) || "/";
         null != (n = a.exec(e));
-
       ) {
         var d = n[0],
           f = n[1],
@@ -22093,7 +22085,6 @@ PERFORMANCE OF THIS SOFTWARE.
           r = e.infinite ? -1 * e.slidesToShow : 0,
           a = [];
         n < t;
-
       )
         a.push(n),
           (n = r + e.slidesToScroll),
@@ -22709,8 +22700,7 @@ PERFORMANCE OF THIS SOFTWARE.
       (null !== a
         ? 0 === a.type
         : !r &&
-          2 < t.length &&
-          ("o" === t[0] || "O" === t[0]) &&
+          2 < t.length && ("o" === t[0] || "O" === t[0]) &&
           ("n" === t[1] || "N" === t[1])) ||
         ((function (e, t, n, r) {
           if (
@@ -22913,7 +22903,6 @@ PERFORMANCE OF THIS SOFTWARE.
               i = a.length - 1,
               s = o.length - 1;
             1 <= i && 0 <= s && a[i] !== o[s];
-
           )
             s--;
           for (; 1 <= i && 0 <= s; i--, s--)
@@ -23255,7 +23244,6 @@ PERFORMANCE OF THIS SOFTWARE.
               "<svg>" + t.valueOf().toString() + "</svg>",
               t = he.firstChild;
             e.firstChild;
-
           )
             e.removeChild(e.firstChild);
           for (; t.firstChild; ) e.appendChild(t.firstChild);
@@ -26148,7 +26136,6 @@ PERFORMANCE OF THIS SOFTWARE.
       for (
         e = e.return;
         null !== e && 5 !== e.tag && 3 !== e.tag && 13 !== e.tag;
-
       )
         e = e.return;
       Io = e;
@@ -27236,7 +27223,6 @@ PERFORMANCE OF THIS SOFTWARE.
           for (
             n = Bl((e = t.child), e.pendingProps), t.child = n, n.return = t;
             null !== e.sibling;
-
           )
             (e = e.sibling),
               ((n = n.sibling = Bl(e, e.pendingProps)).return = t);
@@ -27546,7 +27532,6 @@ PERFORMANCE OF THIS SOFTWARE.
                         r = n,
                         n = t.child;
                       null !== n;
-
                     )
                       (e = r),
                         ((s = n).flags &= 2),
@@ -28084,7 +28069,6 @@ PERFORMANCE OF THIS SOFTWARE.
         for (
           n.sibling.return = n.return, n = n.sibling;
           5 !== n.tag && 6 !== n.tag && 18 !== n.tag;
-
         ) {
           if (2 & n.flags) continue t;
           if (null === n.child || 4 === n.tag) continue t;
@@ -28405,7 +28389,6 @@ PERFORMANCE OF THIS SOFTWARE.
           o = e.expirationTimes,
           s = e.pendingLanes;
         0 < s;
-
       ) {
         var l = 31 - Gt(s),
           u = 1 << l,
@@ -28572,7 +28555,6 @@ PERFORMANCE OF THIS SOFTWARE.
           e.pingedLanes &= ~t,
           e = e.expirationTimes;
         0 < t;
-
       ) {
         var n = 31 - Gt(t),
           r = 1 << n;
@@ -28947,7 +28929,6 @@ PERFORMANCE OF THIS SOFTWARE.
                     v !== u || (0 !== c && 3 !== v.nodeType) || (p = d + c),
                     3 === v.nodeType && (d += v.nodeValue.length),
                     null !== (y = v.firstChild);
-
                 )
                   (g = v), (v = y);
                 for (;;) {

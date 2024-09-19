@@ -534,7 +534,6 @@
           for (
             var n = (t.detail && t.detail.target) || t.target;
             null !== n && n !== document;
-
           ) {
             if (null !== n.getAttribute("data-suggestion-index")) return;
             if (n === e.suggestionsContainer)
@@ -1822,7 +1821,6 @@
                     for (
                       null === e ? (e = n.length - 1) : e--;
                       e >= 0 && 0 === n[e];
-
                     )
                       e--;
                     return -1 === e ? null : e;

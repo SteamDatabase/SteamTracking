@@ -228,7 +228,7 @@
           return (
             !(!t || "object" != typeof t) &&
             "string" == typeof t.event_group_steamid &&
-            "number" == typeof t.start_rtime &&
+              "number" == typeof t.start_rtime &&
             "number" == typeof t.end_rtime
           );
         }
@@ -2159,7 +2159,7 @@
                         {
                           key: t.key,
                           className: (0, l.A)(
-                            `${s().GraphicalAssetsTab} ${t.key === e.key ? (0, l.A)(s().Active, "ActiveTab") : ""}`,
+                            `${s().GraphicalAssetsTab} ${t.key === e.key ? ((0, l.A))(s().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),

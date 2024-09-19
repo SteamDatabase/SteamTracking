@@ -9858,7 +9858,6 @@
             for (
               ;
               this.m_mapRoomEffectQueue[t].length > 0 && !this.BIsQueueFull(t);
-
             )
               this.ActivateRoomEffect(this.m_mapRoomEffectQueue[t].shift());
           }

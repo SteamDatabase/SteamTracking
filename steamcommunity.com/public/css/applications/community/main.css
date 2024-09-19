@@ -31,9 +31,8 @@
   overflow-x: hidden;
 }
 .GreenEnvelopeMenu {
-  box-shadow:
-    inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
-    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px, inset
+    rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
   border: 1px solid #000;
   padding: 1px;
 }
@@ -178,7 +177,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 .IjIBR_wDDi2N77Oz4KAT4 {
   box-sizing: border-box;
   width: 100%;
-  border-bottom: 0.2px solid #67707b;
+  border-bottom: .2px solid #67707b;
   margin: 0px;
   padding: 0px;
 }
@@ -309,7 +308,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   height: 16px;
   position: relative;
   cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 ._3Sl0QHQ69uK7ZMQo5vBfrA.M8qsAk8m30GwcGz7HCVnv {
   cursor: default;
@@ -327,7 +326,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 }
 ._3Sl0QHQ69uK7ZMQo5vBfrA ._2Fw7gGOSCr7y9elv8iszxw._2OUxguuTe-NeOXZXxSNQsw {
   background-color: #2d5a81;
-  transition: width 0.2s ease-in-out;
+  transition: width .2s ease-in-out;
 }
 ._3Sl0QHQ69uK7ZMQo5vBfrA
   ._2Fw7gGOSCr7y9elv8iszxw._2OUxguuTe-NeOXZXxSNQsw._317lekDG36odwSaDLtFQgd {
@@ -344,9 +343,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   box-shadow: 0px 0px 3px #000a;
   position: absolute;
   left: 0;
-  transition:
-    transform 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
 }
 ._3Sl0QHQ69uK7ZMQo5vBfrA ._3IWp5BnnsY_aMKCxhCjShP._317lekDG36odwSaDLtFQgd {
   background-color: #16a1e1;
@@ -377,7 +374,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   position: absolute;
   z-index: 100;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity .25s;
   pointer-events: none;
 }
 ._3vg1vYU7iTWqONciv9cuJN._1Ye_0niF2UqB8uQTbm8B6B {
@@ -411,9 +408,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow:
-    1px 1px 8px #0005,
-    2px 2px 16px 1px #0005;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
   overflow: hidden;
@@ -426,9 +421,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow:
-    1px 1px 8px #0005,
-    2px 2px 16px 1px #0005;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -581,7 +574,7 @@ b {
   padding-left: 0px;
   text-transform: uppercase;
   font-size: 14px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-weight: 400;
   display: flex;
   justify-content: start;
@@ -803,7 +796,7 @@ b {
 ._1ABCOz8DSrl-YJdh1xD-m0 {
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
@@ -824,7 +817,7 @@ b {
   align-items: center;
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
@@ -1054,7 +1047,7 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
 }
 ._2WMiQ5MbP_ReyaX5DOpoUD {
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
   font-size: 18px;
   color: #fff;
   text-transform: uppercase;
@@ -1170,7 +1163,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   text-align: center;
   padding: 6px;
   margin-right: 6px;
-  transition: background-color 0.18s ease-in-out;
+  transition: background-color .18s ease-in-out;
   background-color: #2a2e36;
   border-radius: 2px;
   color: #b8bcbf;
@@ -1495,7 +1488,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   background-color: #3d4450;
   border-radius: 2px;
   transition-property: background-color, color;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-out;
   -webkit-app-region: no-drag;
   font-weight: bold;
@@ -1521,7 +1514,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   }
 }
 ._3m_2lh1eA4HcHpt48En7kr > path {
-  animation: _2Wg5df41BfHnoLgawx_2pb 0.6s;
+  animation: _2Wg5df41BfHnoLgawx_2pb .6s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -1879,7 +1872,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   font-weight: 600;
@@ -1919,7 +1912,7 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   line-height: 22px;
 }
 .BasicUI ._16sYNwqxz6giarbVaRUl7R .DialogControlsSectionHeader {
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-size: 16px;
@@ -2139,17 +2132,19 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   background: none;
   border-radius: 0;
   padding-left: calc(
-    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
+    var(--field-negative-horizontal-margin) +
+    var(--indent-level) *
+    20px
   );
   padding-right: var(--field-negative-horizontal-margin);
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
   transition-property: transform, background-color;
-  transition-duration: 0.32s, 0s;
+  transition-duration: .32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   transform-origin: 12% 50%;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
@@ -2488,7 +2483,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   width: 660px;
   box-sizing: border-box;
   animation-name: _2JseUqLU57eK7UqCBneiZN;
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
   animation-fill-mode: both;
 }
@@ -2619,7 +2614,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   bottom: 0;
   background: #1a9fff;
   transform: translateX(-27px);
-  transition: transform 0.2s ease-out;
+  transition: transform .2s ease-out;
 }
 ._9Ql-oVe_j8E-vsDdyVdWo.aIeh3X5T2M074RLW1qn6_ ._2bl0iQ9xigbq4Zd1NI6NZl::before {
   opacity: 0;
@@ -2635,7 +2630,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   width: 22px;
   background: #fff;
   border-radius: 9001px;
-  transition: transform 0.2s cubic-bezier(0.1, 0.12, 0.53, 1.72);
+  transition: transform .2s cubic-bezier(0.1, 0.12, 0.53, 1.72);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
 }
 ._9Ql-oVe_j8E-vsDdyVdWo.aIeh3X5T2M074RLW1qn6_ ._1PQppcgkuXQAiFPar9AGi- {
@@ -2874,7 +2869,8 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
 ._1udlGGE4F5pggcpxovorUd {
   --inverse-normalized-value: calc(1 - var(--normalized-slider-value));
   --inverse-normalized-default-value: calc(
-    1 - var(--normalized-slider-default-value)
+    1 -
+    var(--normalized-slider-default-value)
   );
   --slider-handle-width: 24px;
   position: relative;
@@ -2911,14 +2907,15 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   position: absolute;
   --normalized-fill-start: calc(
     (100%) *
-      min(var(--normalized-slider-value), var(--normalized-slider-origin))
+    min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
     (100%) *
-      max(var(--normalized-slider-value), var(--normalized-slider-origin))
+    max(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-width-handle: calc(
-    var(--normalized-fill-end) - var(--normalized-fill-start)
+    var(--normalized-fill-end) -
+    var(--normalized-fill-start)
   );
   left: var(--normalized-fill-start);
   right: 0;
@@ -2930,15 +2927,19 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
 }
 .BKyENCj-EIOyULNJlDOtz ._2_vG6TwMW2XtyLlTEaODH9::before {
   --signed-normalized-slider-default-value: calc(
-    2 * var(--normalized-slider-default-value) - 1
+    2.0 *
+    var(--normalized-slider-default-value) -
+    1.0
   );
   --gradient-split-pct: calc(
-    100% * var(--normalized-slider-default-value) /
-      var(--normalized-slider-value) -
-      (
-        var(--slider-handle-width) * 0.5 *
-          var(--signed-normalized-slider-default-value)
-      )
+    100% *
+    var(--normalized-slider-default-value) /
+    var(--normalized-slider-value) -
+    (
+      var(--slider-handle-width) *
+      0.5 *
+      var(--signed-normalized-slider-default-value)
+    )
   );
 }
 ._3mRyvMGiDLM0201gdyBNxA ._2_vG6TwMW2XtyLlTEaODH9::before {
@@ -2971,7 +2972,10 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-value) + var(--slider-handle-width) * var(--inverse-normalized-value)
+      -100% *
+      var(--inverse-normalized-value) +
+      var(--slider-handle-width) *
+      var(--inverse-normalized-value)
     )
   );
 }
@@ -3075,7 +3079,7 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   font-weight: bold;
   font-size: 10px;
   line-height: 10px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   text-transform: uppercase;
   padding-top: 5px;
   width: fit-content;
@@ -3105,7 +3109,7 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
 }
 ._11I0_AlsB40ak50752rsuy {
   text-align: center;
-  margin-left: 0.7ch;
+  margin-left: .7ch;
   font-variant-numeric: tabular-nums;
   display: flex;
   flex-direction: row;
@@ -3256,7 +3260,9 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
   padding-left: calc(
-    var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
+    var(--field-negative-horizontal-margin) +
+    var(--indent-level) *
+    20px
   );
   padding-right: var(--field-negative-horizontal-margin);
 }
@@ -3292,9 +3298,10 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-default-value) + var(
-          --slider-handle-width
-        ) * var(--inverse-normalized-default-value)
+      -100% *
+      var(--inverse-normalized-default-value) +
+      var(--slider-handle-width) *
+      var(--inverse-normalized-default-value)
     )
   );
 }
@@ -3326,10 +3333,7 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   outline-offset: 2px;
   outline: 2px solid rgba(255, 255, 255, 0.6);
   animation:
-    _15zi-K8KeANNjTmN-l_gGO 0.5s ease,
-    _3vSPb8XtrL-SLJHu3FMU0_ 0.4s ease,
-    xL-jG-fV4Nsl-PqweE0Ry 0.4s ease,
-    _3mURostQ1qQKI2o_ZECEzW 1.2s ease-in-out 0.4s 20;
+    _15zi-K8KeANNjTmN-l_gGO .5s ease, _3vSPb8XtrL-SLJHu3FMU0_ .4s ease, xL-jG-fV4Nsl-PqweE0Ry .4s ease, _3mURostQ1qQKI2o_ZECEzW 1.2s ease-in-out .4s 20;
 }
 ._1sTuvqUAeproqHEae5sn9z._1cTVWBIq0CnY7CPKQt4cN2 {
   outline-color: #ff0;
@@ -3701,11 +3705,11 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   line-height: 22px;
   scroll-margin: 2.5em 0;
   transition-property: transform, background-color;
-  transition-duration: 0.32s, 0s;
+  transition-duration: .32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   transform-origin: 12% 50%;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  animation-duration: 0.5s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
 }
@@ -4676,7 +4680,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   max-width: 1300px;
   display: flex;
   padding: 10px 0px;
-  transition-duration: 0.23s;
+  transition-duration: .23s;
   transition-timing-function: ease-in-out;
   background-color: none;
 }
@@ -4730,7 +4734,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   height: 400px;
   left: 8%;
   right: 8%;
-  transition: transform 0.15s;
+  transition: transform .15s;
   background-image: url("https://cdn.akamai.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2");
   background-size: 100%;
   background-position-y: 0px;
@@ -5051,7 +5055,7 @@ img {
   z-index: 12;
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  transition: background-color 0.32s ease-in-out;
+  transition: background-color .32s ease-in-out;
   margin: 4px;
   min-height: 32px;
   min-width: 32px;
@@ -5164,7 +5168,7 @@ img {
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
   transition-property: background, box-shadow, padding-left;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 .cNMZ-dcMVhaQJFes_Ivwo:focus {
@@ -5243,7 +5247,7 @@ button.DialogButton {
   cursor: pointer;
   width: 100%;
   transition-property: opacity, background, color, box-shadow;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease-out;
   background: #3d4450;
   background-position: 99% 1%;
@@ -5455,8 +5459,7 @@ div.ModalPosition_TopBar {
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%
-    ),
-    #25282e;
+    ), #25282e;
   user-select: none;
 }
 .DialogContent .DialogControlsSection:not(:first-child),
@@ -5577,7 +5580,7 @@ div.ModalPosition_TopBar {
   color: #8b929a;
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   line-height: 36px;
   text-transform: uppercase;
   user-select: none;
@@ -5793,7 +5796,7 @@ div.ModalPosition_TopBar {
   margin-right: 4px;
   flex-grow: 4;
   box-shadow: inset 0px 0px 4px #0006;
-  border: 0.5px solid rgba(139, 153, 170, 0.4);
+  border: .5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
 .DialogTextInputBase:disabled,
@@ -5907,7 +5910,7 @@ button.DialogButton.GreenPlay:active:hover,
 button.DialogButton.GreenPlay:active.gpfocus {
   background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 40%;
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003;
@@ -5917,7 +5920,7 @@ button.DialogButton:enabled:active:hover,
 button.DialogButton:enabled:active.gpfocus {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus {
@@ -5931,7 +5934,7 @@ button.DialogButton.Primary:enabled:hover:active,
 button.DialogButton.Primary:enabled:active.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
-  transition-duration: 0.04s;
+  transition-duration: .04s;
 }
 button.DialogButton:hover,
 button.DialogButton.gpfocus {
@@ -5962,7 +5965,7 @@ button.TextButton {
   border-bottom: 1px dotted #0000;
 }
 button.TextButton .SVGIcon_Button {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
   margin-right: 2px;
 }
 button.TextButton:hover,
@@ -6202,7 +6205,7 @@ button.TextButton.gpfocus {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 0px;
-  transition: width 0.2s linear;
+  transition: width .2s linear;
 }
 .DialogListBuilderInput_List {
   display: flex;
@@ -6291,13 +6294,13 @@ button.TextButton.gpfocus {
   height: 22px;
   background-color: #0004;
   padding: 0;
-  box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: inset 1px .5px 3px rgba(1, 1, 1, 0.4);
   cursor: pointer;
   border-radius: 2px;
 }
 .DialogCheckbox .SVGIcon_DialogCheck {
   opacity: 0;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity .1s ease-in-out;
   width: 18px;
   height: 18px;
   margin-top: 9%;
@@ -6307,9 +6310,9 @@ button.TextButton.gpfocus {
   stroke-width: 40px;
   stroke-dashoffset: -270;
   transition-property: stroke-dashoffset;
-  transition-duration: 0.18s;
+  transition-duration: .18s;
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
-  transition-delay: 0.3s;
+  transition-delay: .3s;
 }
 .DialogCheckbox.Active .SVGIcon_DialogCheck path {
   stroke-dashoffset: 90;
@@ -6363,10 +6366,10 @@ button.TextButton.gpfocus {
   border-radius: 50%;
   margin: 0;
   padding: 0;
-  box-shadow: inset 0.5px 1px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: inset .5px 1px 3px rgba(1, 1, 1, 0.4);
   display: flex;
   justify-content: center;
-  transition: background-color 0.08s ease-in-out;
+  transition: background-color .08s ease-in-out;
 }
 .DialogRoundCheckboxField_Container {
   cursor: pointer;
@@ -6400,7 +6403,7 @@ button.TextButton.gpfocus {
   transform: scale(0);
   opacity: 0;
   transition-property: opacity, scale, box-shadow;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   transition-timing-function: ease-in-out;
 }
 .DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
@@ -6428,12 +6431,12 @@ button.TextButton.gpfocus {
 .copiedAnimation.animationComplete {
   opacity: 0;
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: .5s;
 }
 .copiedAnimation.animationPlaying {
   opacity: 1;
   transition-property: transform, opacity;
-  transition-duration: 0s, 0.6s;
+  transition-duration: 0s, .6s;
 }
 ._FixedHeight {
   flex-shrink: 0;
@@ -6502,7 +6505,7 @@ body.in_global_drag .title-area {
   position: absolute;
   top: 0;
   opacity: 0;
-  transition: opacity 0.18s ease-in-out;
+  transition: opacity .18s ease-in-out;
   pointer-events: none;
   user-select: none;
 }
@@ -6534,7 +6537,7 @@ body.in_global_drag .title-area {
     rgba(0, 0, 0, 0) 100%
   );
   opacity: 0;
-  transition: opacity 0.18s ease-in-out;
+  transition: opacity .18s ease-in-out;
   pointer-events: none;
   user-select: none;
 }
@@ -6583,7 +6586,7 @@ body.in_global_drag .title-area {
 .title-area-icon:hover .SVGIcon_Button line,
 .title-area-icon:hover .SVGIcon_Button polyline {
   stroke: #fff;
-  transition: stroke 0.15s ease-out;
+  transition: stroke .15s ease-out;
 }
 .ModalDialogPopup .maximizeRestoreButton {
   display: none;
@@ -6709,12 +6712,12 @@ body.in_global_drag .title-area {
 .throbber > div:nth-child(2) {
   margin-left: 12%;
   transform: scaleX(1) scaleY(0.6);
-  animation-delay: 0.16s;
+  animation-delay: .16s;
 }
 .throbber > div:nth-child(3) {
   margin-left: 12%;
   transform: scaleX(1) scaleY(0.6);
-  animation-delay: 0.32s;
+  animation-delay: .32s;
 }
 .WaitingForInterFaceReadyContainer {
   width: 100%;
@@ -6827,7 +6830,7 @@ body.in_global_drag .title-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: stroke 0.15s ease-out;
+  transition: stroke .15s ease-out;
 }
 .DesktopUI .title-bar-actions,
 .friendsui-container .title-bar-actions {
@@ -6850,12 +6853,12 @@ body.in_global_drag .title-area {
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
-  transition: background 0.15s ease-out;
+  transition: background .15s ease-out;
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
-  transition: background 0.15s ease-out;
+  transition: background .15s ease-out;
 }
 .DesktopUI .title-area-icon.minimizeButton svg,
 .friendsui-container .title-area-icon.minimizeButton svg {
@@ -6968,7 +6971,7 @@ body.in_global_drag .title-area {
   backdrop-filter: blur(16px);
   box-shadow: 0px 0px 0px #00000000;
   transition-property: background-color, box-shadow, transform;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease;
 }
 #dota_react_root .ModalPosition_Dismiss .closeButton:hover {
@@ -6984,7 +6987,7 @@ body.in_global_drag .title-area {
   stroke: #a9b2b6;
   stroke-width: 32px;
   transition-property: stroke;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
   transition-timing-function: ease;
 }
 #dota_react_root

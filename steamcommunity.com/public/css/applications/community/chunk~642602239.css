@@ -7,7 +7,7 @@
   font-style: italic;
 }
 p._3lnqGBzYap-Z2T81XBiBUU {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
 ._2LYsFAwy8wdRJQTNJOUcsT {
   display: block;
@@ -214,7 +214,7 @@ p._3lnqGBzYap-Z2T81XBiBUU {
   height: 12px;
   fill: #aebac2;
   transition: transform;
-  transition-duration: 0.2s;
+  transition-duration: .2s;
 }
 ._2cmZMzZlRrszDBF97Di0cD .uAvfe31kBh5TZrse069d1:hover {
   color: #fff;
@@ -591,7 +591,7 @@ iframe._1j2vixiqbbe8GqxA-cmlhA {
 ._3uA0hv9La9Do6XtRycM0RX button.CarouselBtnLeft {
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0.1;
-  transition: opacity 0.2s ease-in;
+  transition: opacity .2s ease-in;
   height: 50%;
   top: 25%;
 }
@@ -740,7 +740,7 @@ a._26nnhy-kEQVG1EJvwt-YOG
 html:not(.touch)
   .vPo2jxLA9iAVrt49Ic3c1._1YjsRp8XbwoXVWYYvWD7iv
   ._19p2Qdr48bduJICtjBoXVv {
-  transition: padding-right 0.2s ease-out;
+  transition: padding-right .2s ease-out;
 }
 .vPo2jxLA9iAVrt49Ic3c1._1YjsRp8XbwoXVWYYvWD7iv:hover ._1Tp8K4gynWBOBpC9tS_xXV,
 ._3YUEYUcuh0PTxYsV6Fecqq
@@ -1096,7 +1096,7 @@ img.AB86vEzEKPL0y5fK_m4pT {
   width: 20px;
   height: 20px;
   transition-property: width, height, margin-top, margin-bottom;
-  transition-duration: 0.1s;
+  transition-duration: .1s;
   transition-timing-function: ease-in-out;
 }
 img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
@@ -1158,11 +1158,11 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
 }
 .emoticon_hover_arrow.left {
   background-position: left top;
-  left: 0.5px;
+  left: .5px;
 }
 .emoticon_hover_arrow.right {
   background-position: right top;
-  right: 0.5px;
+  right: .5px;
 }
 .hover_arrow {
   position: absolute;
@@ -1466,9 +1466,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   right: 0;
   opacity: 0;
   cursor: zoom-in;
-  transition:
-    opacity 0.3s,
-    transform 0.3s;
+  transition: opacity .3s, transform .3s;
 }
 .hover___MYy31,
 .loading___1pvNI,
@@ -1558,7 +1556,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   margin: 0;
 }
 .sliderAnimation___300FY {
-  transition: transform 0.5s;
+  transition: transform .5s;
   transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   will-change: transform;
 }
@@ -1590,9 +1588,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
 }
 ._13rGo4vexAbY9-CP7FsLOg svg {
   opacity: 0.7;
-  transition:
-    opacity 0.2s ease-in-out,
-    filter 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out, filter .2s ease-in-out;
   fill: #fff;
 }
 ._3zfZ9tkIrSDZdSTv8mvZ3- {
@@ -1711,7 +1707,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   bottom: 16px;
   background-color: rgba(255, 255, 255, 0.35);
   transition: left right;
-  transition-duration: 0.4s;
+  transition-duration: .4s;
 }
 ._3TKX37FakYHikXh3Wtg2BU {
   padding-top: 10px;
@@ -1738,7 +1734,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   opacity: 0.3;
   padding: 1px 2px;
   margin: 0px;
-  transition: opacity 0.2s;
+  transition: opacity .2s;
 }
 ._3Byg6Wc4TX36gkUptUIk72 img {
   width: 100%;
@@ -2291,7 +2287,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   min-height: 46px;
   margin-bottom: 2px;
   background: #24272b;
-  transition: background 0.3s ease;
+  transition: background .3s ease;
 }
 ._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy) {
   background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
@@ -2351,7 +2347,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   box-shadow: #000 0px 0px 4px inset;
   transition-property: width, max-width, min-width, border-radius,
     background-position;
-  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
+  transition-duration: .3s, .3s, .3s, .6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
     #1da834 0%,
@@ -2369,7 +2365,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin-top: 12px;
   margin-bottom: -18px;
   opacity: 1;
-  transition: opacity 0.3s ease-out;
+  transition: opacity .3s ease-out;
   white-space: nowrap;
   user-select: none;
 }

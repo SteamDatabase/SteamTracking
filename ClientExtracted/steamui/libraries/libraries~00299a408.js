@@ -313,7 +313,6 @@ var CLSTAMP = "9187007";
               g = g.concat(l),
               i = Promise.resolve(t);
             g.length;
-
           )
             i = i.then(g.shift(), g.shift());
           return i;
@@ -1536,7 +1535,6 @@ var CLSTAMP = "9187007";
               var r = e;
               (r = r.substring(0, r.lastIndexOf("."))) &&
               !goog.getObjectByName(r);
-
             )
               goog.implicitNamespaces_[r] = !0;
           }
@@ -2354,7 +2352,6 @@ var CLSTAMP = "9187007";
             for (
               var e = this, t = this.paused_;
               this.depsToLoad_.length && !t;
-
             )
               !(function () {
                 var r = !1,
@@ -3107,7 +3104,6 @@ var CLSTAMP = "9187007";
             e &&
             (e !== Object.prototype || t) &&
             (e !== Function.prototype || r);
-
           ) {
             for (
               var o = Object.getOwnPropertyNames(e), i = 0;
@@ -5906,7 +5902,6 @@ var CLSTAMP = "9187007";
           for (
             var t, r = /(\w[\w ]+)\/([^\s]+)\s*(?:\((.*?)\))?/g, n = [];
             (t = r.exec(e));
-
           )
             n.push([t[1], t[2], t[3] || void 0]);
           return n;
@@ -6879,7 +6874,6 @@ var CLSTAMP = "9187007";
               n = "",
               o = Array.prototype.slice.call(arguments, 1);
             o.length && 1 < r.length;
-
           )
             n += r.shift() + o.shift();
           return n + r.join("%s");
@@ -8175,7 +8169,6 @@ var CLSTAMP = "9187007";
             for (
               var a = 0, s = 1;
               (a += (127 & (i = e[t++])) * s), (s *= 128), 0 != (128 & i);
-
             );
             t += a;
           }
@@ -8488,7 +8481,6 @@ var CLSTAMP = "9187007";
           for (
             var t = this.bytes_, r = this.cursor_, n = r + e, o = [], i = "";
             r < n;
-
           ) {
             var a = t[r++];
             if (a < 128) o.push(a);
@@ -8672,7 +8664,6 @@ var CLSTAMP = "9187007";
           for (
             this.unskipHeader();
             this.nextField() && this.getFieldNumber() == e;
-
           )
             this.skipField();
           this.decoder_.atEnd() || this.unskipHeader();
@@ -9343,7 +9334,6 @@ var CLSTAMP = "9187007";
               jspb.asserts.assert(0 <= e && e < jspb.BinaryConstants.TWO_TO_32),
               jspb.asserts.assert(0 <= t && t < jspb.BinaryConstants.TWO_TO_32);
             0 < t || 127 < e;
-
           )
             this.buffer_.push((127 & e) | 128),
               (e = ((e >>> 7) | (t << 25)) >>> 0),
@@ -9363,7 +9353,6 @@ var CLSTAMP = "9187007";
             jspb.asserts.assert(e == Math.floor(e)),
               jspb.asserts.assert(0 <= e && e < jspb.BinaryConstants.TWO_TO_32);
             127 < e;
-
           )
             this.buffer_.push((127 & e) | 128), (e >>>= 7);
           this.buffer_.push(e);
@@ -9647,7 +9636,6 @@ var CLSTAMP = "9187007";
               65536 * (((e >>>= 16) * n) & 65535),
               r = e * o + ((r * o) >>> 16) + ((e * n) >>> 16);
             4294967296 <= t;
-
           )
             (t -= 4294967296), (r += 1);
           return new jspb.arith.UInt64(t >>> 0, r >>> 0);
@@ -9765,7 +9753,6 @@ var CLSTAMP = "9187007";
             t = this.totalLength_ + this.encoder_.length() - t,
               jspb.asserts.assert(0 <= t);
             127 < t;
-
           )
             e.push((127 & t) | 128), (t >>>= 7), this.totalLength_++;
           e.push(t), this.totalLength_++;
@@ -14292,9 +14279,9 @@ var CLSTAMP = "9187007";
         throw new Error(
           "number" == typeof e
             ? "[MobX] minified error nr: " +
-              e +
-              (r.length ? " " + r.map(String).join(",") : "") +
-              ". Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/errors.ts"
+                e +
+                (r.length ? " " + r.map(String).join(",") : "") +
+                ". Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/errors.ts"
             : "[MobX] " + e,
         );
       }
@@ -17080,7 +17067,6 @@ var CLSTAMP = "9187007";
                       a = !1,
                       s = M(t.data_.keys());
                     !(r = s()).done;
-
                   ) {
                     var l = r.value;
                     if (!o.has(l))
@@ -17109,7 +17095,6 @@ var CLSTAMP = "9187007";
                           _ = b.next(),
                           S = m.next();
                         !_.done;
-
                       ) {
                         if (_.value !== S.value) {
                           t.keysAtom_.reportChanged();
@@ -18400,7 +18385,6 @@ var CLSTAMP = "9187007";
           for (
             (t = t || e.length) > e.length && (t = e.length), r = t - 1;
             r >= 0 && 128 == (192 & e[r]);
-
           )
             r--;
           return r < 0 || 0 === r ? t : r + a[e[r]] > t ? r : t;
@@ -18412,7 +18396,6 @@ var CLSTAMP = "9187007";
         for (
           var o = (65535 & e) | 0, i = ((e >>> 16) & 65535) | 0, a = 0;
           0 !== r;
-
         ) {
           r -= a = r > 2e3 ? 2e3 : r;
           do {
@@ -18656,7 +18639,6 @@ var CLSTAMP = "9187007";
               l++,
               e.insert--,
               !(e.lookahead + e.insert < w));
-
             );
         } while (e.lookahead < A && 0 !== e.strm.avail_in);
       }
@@ -19096,7 +19078,6 @@ var CLSTAMP = "9187007";
                   L(e),
                   (a = o.pending),
                   o.pending !== o.pending_buf_size));
-
               )
                 B(o, 255 & o.gzhead.extra[o.gzindex]), o.gzindex++;
               o.gzhead.hcrc &&
@@ -19347,7 +19328,6 @@ var CLSTAMP = "9187007";
               e.input = t,
               H(r);
             r.lookahead >= w;
-
           ) {
             (n = r.strstart), (i = r.lookahead - (w - 1));
             do {
@@ -20077,7 +20057,6 @@ var CLSTAMP = "9187007";
                       255),
                       (I = 65535 & W),
                       !((N = W >>> 24) <= w);
-
                   ) {
                     if (0 === v) break e;
                     v--, (E += h[m++] << w), (w += 8);
@@ -20181,7 +20160,6 @@ var CLSTAMP = "9187007";
                     ((W = r.lencode[E & ((1 << r.lenbits) - 1)]) >>> 16) & 255),
                     (I = 65535 & W),
                     !((N = W >>> 24) <= w);
-
                 ) {
                   if (0 === v) break e;
                   v--, (E += h[m++] << w), (w += 8);
@@ -20196,7 +20174,6 @@ var CLSTAMP = "9187007";
                       255),
                       (I = 65535 & W),
                       !(k + (N = W >>> 24) <= w);
-
                   ) {
                     if (0 === v) break e;
                     v--, (E += h[m++] << w), (w += 8);
@@ -20238,7 +20215,6 @@ var CLSTAMP = "9187007";
                     255),
                     (I = 65535 & W),
                     !((N = W >>> 24) <= w);
-
                 ) {
                   if (0 === v) break e;
                   v--, (E += h[m++] << w), (w += 8);
@@ -20253,7 +20229,6 @@ var CLSTAMP = "9187007";
                       255),
                       (I = 65535 & W),
                       !(k + (N = W >>> 24) <= w);
-
                   ) {
                     if (0 === v) break e;
                     v--, (E += h[m++] << w), (w += 8);
@@ -20510,7 +20485,6 @@ var CLSTAMP = "9187007";
             for (
               0 === x && (x = R), m += j, N = 1 << (C = T - x);
               C + x < O && !((N -= U[C + x]) <= 0);
-
             )
               C++, (N <<= 1);
             if (((P += 1 << C), (1 === e && P > 852) || (2 === e && P > 592)))
@@ -20659,7 +20633,6 @@ var CLSTAMP = "9187007";
           o <= e.heap_len &&
           (o < e.heap_len && z(t, e.heap[o + 1], e.heap[o], e.depth) && o++,
           !z(t, n, e.heap[o], e.depth));
-
         )
           (e.heap[r] = e.heap[o]), (r = o), (o <<= 1);
         e.heap[r] = n;
@@ -21002,7 +20975,6 @@ var CLSTAMP = "9187007";
         for (
           var r, n = [], i = 0, a = 0, s = "", c = (t && t.delimiter) || "/";
           null != (r = o.exec(e));
-
         ) {
           var g = r[0],
             p = r[1],
@@ -21613,7 +21585,6 @@ var CLSTAMP = "9187007";
                 a = o.length - 1,
                 s = i.length - 1;
               1 <= a && 0 <= s && o[a] !== i[s];
-
             )
               s--;
             for (; 1 <= a && 0 <= s; a--, s--)
@@ -22003,7 +21974,6 @@ var CLSTAMP = "9187007";
                   "<svg>" + t.valueOf().toString() + "</svg>",
                   t = ue.firstChild;
                 e.firstChild;
-
               )
                 e.removeChild(e.firstChild);
               for (; t.firstChild; ) e.appendChild(t.firstChild);
@@ -24296,7 +24266,6 @@ var CLSTAMP = "9187007";
         for (
           e = e.return;
           null !== e && 5 !== e.tag && 3 !== e.tag && 13 !== e.tag;
-
         )
           e = e.return;
         ni = e;
@@ -26429,7 +26398,6 @@ var CLSTAMP = "9187007";
           for (
             r = ku((e = t.child), e.pendingProps), t.child = r, r.return = t;
             null !== e.sibling;
-
           )
             (e = e.sibling),
               ((r = r.sibling = ku(e, e.pendingProps)).return = t);
@@ -26817,7 +26785,6 @@ var CLSTAMP = "9187007";
                           n = r,
                           r = t.child;
                         null !== r;
-
                       )
                         (e = n),
                           ((a = r).flags &= 14680066),
@@ -27139,7 +27106,6 @@ var CLSTAMP = "9187007";
           for (
             e.sibling.return = e.return, e = e.sibling;
             5 !== e.tag && 6 !== e.tag && 18 !== e.tag;
-
           ) {
             if (2 & e.flags) continue e;
             if (null === e.child || 4 === e.tag) continue e;
@@ -27845,7 +27811,6 @@ var CLSTAMP = "9187007";
               o = e.expirationTimes,
               i = e.pendingLanes;
             0 < i;
-
           ) {
             var a = 31 - at(i),
               s = 1 << a,
@@ -27908,7 +27873,6 @@ var CLSTAMP = "9187007";
             (xl === e && Pl === t) ||
             ((zl = null), (Vl = Qe() + 500), fu(e, t));
             ;
-
           )
             try {
               _u();
@@ -28044,7 +28008,6 @@ var CLSTAMP = "9187007";
             e.pingedLanes &= ~t,
             e = e.expirationTimes;
           0 < t;
-
         ) {
           var r = 31 - at(t),
             n = 1 << r;
@@ -28416,7 +28379,6 @@ var CLSTAMP = "9187007";
                                     (u = s + n),
                                   3 === p.nodeType && (s += p.nodeValue.length),
                                   null !== (d = p.firstChild);
-
                               )
                                 (f = p), (p = d);
                               for (;;) {
@@ -28444,7 +28406,6 @@ var CLSTAMP = "9187007";
                         zt = !1,
                         Js = t;
                       null !== Js;
-
                     )
                       if (
                         ((e = (t = Js).child),
@@ -29169,7 +29130,6 @@ var CLSTAMP = "9187007";
                     r = Xi(t, null, n, r),
                     t.child = r;
                   r;
-
                 )
                   (r.flags = (-3 & r.flags) | 4096), (r = r.sibling);
               } else {
@@ -31363,7 +31323,6 @@ var CLSTAMP = "9187007";
           for (
             v(r), p = n(u);
             null !== p && (!(p.expirationTime > r) || (e && !C()));
-
           ) {
             var a = p.callback;
             if ("function" == typeof a) {
@@ -33291,7 +33250,7 @@ var CLSTAMP = "9187007";
           if (e <= -b) return j;
           if (e + 1 >= b) return T;
         }
-        return e < 0 ? c(-e, t).neg() : g(e % h | 0, (e / h) | 0, t);
+        return e < 0 ? c(-e, t).neg() : g((e % h) | 0, (e / h) | 0, t);
       }
       function g(e, t, r) {
         return new o(e, t, r);
@@ -33602,7 +33561,6 @@ var CLSTAMP = "9187007";
                 l = c(t),
                 u = l.mul(e);
               u.isNegative() || u.gt(r);
-
             )
               u = (l = c((t -= s), this.unsigned)).mul(e);
             l.isZero() && (l = S), (o = o.add(l)), (r = r.sub(u));

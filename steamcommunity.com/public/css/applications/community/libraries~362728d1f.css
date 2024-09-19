@@ -18,7 +18,7 @@
     format("truetype");
 }
 .codicon[class*="codicon-"] {
-  font: normal normal normal 16px/1 codicon;
+  font: normal normal normal 16px / 1 codicon;
   display: inline-block;
   text-decoration: none;
   text-rendering: auto;
@@ -638,8 +638,8 @@
   display: block;
   border-bottom: 1px solid #bbb;
   padding-top: 1px;
-  margin-left: 0.8em;
-  margin-right: 0.8em;
+  margin-left: .8em;
+  margin-right: .8em;
 }
 .monaco-action-bar .action-item .action-label.separator {
   width: 1px;
@@ -882,7 +882,7 @@
   }
 }
 .monaco-editor .codelens-decoration.fadein {
-  animation: fadein 0.1s linear;
+  animation: fadein .1s linear;
 }
 .colorpicker-widget {
   height: 190px;
@@ -891,18 +891,18 @@
 }
 .colorpicker-color-decoration,
 .hc-light .colorpicker-color-decoration {
-  border: solid 0.1em #000;
+  border: solid .1em #000;
   box-sizing: border-box;
-  margin: 0.1em 0.2em 0 0.2em;
-  width: 0.8em;
-  height: 0.8em;
-  line-height: 0.8em;
+  margin: .1em .2em 0 .2em;
+  width: .8em;
+  height: .8em;
+  line-height: .8em;
   display: inline-block;
   cursor: pointer;
 }
 .hc-black .colorpicker-color-decoration,
 .vs-dark .colorpicker-color-decoration {
-  border: solid 0.1em #eee;
+  border: solid .1em #eee;
 }
 .colorpicker-header {
   display: flex;
@@ -1088,8 +1088,8 @@
   cursor: pointer;
 }
 .monaco-editor .peekview-widget .head .peekview-title .dirname:not(:empty) {
-  font-size: 0.9em;
-  margin-left: 0.5em;
+  font-size: .9em;
+  margin-left: .5em;
 }
 .monaco-editor .peekview-widget .head .peekview-title .meta {
   white-space: nowrap;
@@ -1112,7 +1112,7 @@
   .peekview-title
   .meta:not(:empty)::before {
   content: "-";
-  padding: 0 0.3em;
+  padding: 0 .3em;
 }
 .monaco-editor .peekview-widget .head .peekview-actions {
   flex: 1;
@@ -1419,7 +1419,7 @@
 }
 .minimap.autohide {
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
 .minimap.autohide:hover {
   opacity: 1;
@@ -1547,13 +1547,13 @@
   }
 }
 .cursor-smooth {
-  animation: monaco-cursor-smooth 0.5s ease-in-out 0s 20 alternate;
+  animation: monaco-cursor-smooth .5s ease-in-out 0s 20 alternate;
 }
 .cursor-phase {
-  animation: monaco-cursor-phase 0.5s ease-in-out 0s 20 alternate;
+  animation: monaco-cursor-phase .5s ease-in-out 0s 20 alternate;
 }
 .cursor-expand > .cursor {
-  animation: monaco-cursor-expand 0.5s ease-in-out 0s 20 alternate;
+  animation: monaco-cursor-expand .5s ease-in-out 0s 20 alternate;
 }
 .monaco-editor .blockDecorations-container {
   position: absolute;
@@ -1660,7 +1660,7 @@
   background: transparent;
 }
 .monaco-workbench:not(.reduce-motion) .monaco-sash:before {
-  transition: background-color 0.1s ease-out;
+  transition: background-color .1s ease-out;
 }
 .monaco-sash.hover:before,
 .monaco-sash.active:before {
@@ -1906,7 +1906,7 @@
   .monaco-table
   > .monaco-split-view2
   .monaco-sash.vertical::before {
-  transition: border-color 0.2s ease-out;
+  transition: border-color .2s ease-out;
 }
 .monaco-custom-toggle {
   margin-left: 2px;
@@ -2014,7 +2014,7 @@
   text-align: left;
   width: 100%;
   box-sizing: border-box;
-  padding: 0.4em;
+  padding: .4em;
   font-size: 12px;
   line-height: 17px;
   margin-top: -1px;
@@ -2125,7 +2125,7 @@
   border-left: 1px solid transparent;
 }
 .monaco-workbench:not(.reduce-motion) .monaco-tl-indent > .indent-guide {
-  transition: border-color 0.1s linear;
+  transition: border-color .1s linear;
 }
 .monaco-tl-twistie,
 .monaco-tl-contents {
@@ -2168,7 +2168,7 @@
   border-bottom-right-radius: 4px;
 }
 .monaco-workbench:not(.reduce-motion) .monaco-tree-type-filter {
-  transition: top 0.3s;
+  transition: top .3s;
 }
 .monaco-tree-type-filter.disabled {
   top: -40px !important;
@@ -2358,8 +2358,8 @@
   > .monaco-icon-description-container
   > .label-description {
   opacity: 0.7;
-  margin-left: 0.5em;
-  font-size: 0.9em;
+  margin-left: .5em;
+  font-size: .9em;
   white-space: pre;
 }
 .monaco-icon-label.nowrap
@@ -2500,7 +2500,7 @@
 }
 .monaco-hover code {
   border-radius: 3px;
-  padding: 0 0.4em;
+  padding: 0 .4em;
 }
 .monaco-hover .monaco-tokenized-source {
   white-space: var(--vscode-hover-sourceWhiteSpace, pre-wrap);
@@ -2736,7 +2736,7 @@
 }
 .monaco-editor .diff-hidden-lines .top,
 .monaco-editor .diff-hidden-lines .bottom {
-  transition: background-color 0.1s ease-out;
+  transition: background-color .1s ease-out;
   height: 4px;
   background-color: transparent;
   background-clip: padding-box;
@@ -3117,7 +3117,7 @@
   cursor: default;
 }
 .monaco-text-button .codicon {
-  margin: 0 0.2em;
+  margin: 0 .2em;
   color: inherit !important;
 }
 .monaco-text-button.monaco-text-button-with-short-label {
@@ -3199,7 +3199,7 @@
 }
 .monaco-description-button .monaco-button-label > .codicon,
 .monaco-description-button .monaco-button-description > .codicon {
-  margin: 0 0.2em;
+  margin: 0 .2em;
   color: inherit !important;
 }
 .monaco-button.default-colors,
@@ -3477,7 +3477,7 @@
 .monaco-editor .margin-view-overlays .codicon-folding-collapsed {
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3510,7 +3510,7 @@
 }
 .monaco-editor .inline-folded:after {
   color: gray;
-  margin: 0.1em 0.2em 0 0.2em;
+  margin: .1em .2em 0 .2em;
   content: "⋯";
   display: inline;
   line-height: 1em;
@@ -3588,10 +3588,7 @@
     --vscode-editor-snippetTabstopHighlightBackground,
     transparent
   );
-  outline-color: var(
-    --vscode-editor-snippetTabstopHighlightBorder,
-    transparent
-  );
+  outline-color: var(--vscode-editor-snippetTabstopHighlightBorder, transparent);
 }
 .monaco-editor .finish-snippet-placeholder {
   outline-style: solid;
@@ -3667,7 +3664,7 @@
   .action-item:not(:last-of-type)
   .action-label::after {
   content: ", ";
-  margin-right: 0.3em;
+  margin-right: .3em;
 }
 .monaco-editor
   .suggest-widget.with-status-bar
@@ -4112,10 +4109,10 @@
   .monaco-list-row
   .icon.customcolor
   .colorspan {
-  margin: 0 0 0 0.3em;
-  border: 0.1em solid #000;
-  width: 0.7em;
-  height: 0.7em;
+  margin: 0 0 0 .3em;
+  border: .1em solid #000;
+  width: .7em;
+  height: .7em;
   display: inline-block;
 }
 .monaco-editor .suggest-details-container {
@@ -4257,7 +4254,7 @@
 }
 .monaco-editor .suggest-details code {
   border-radius: 3px;
-  padding: 0 0.4em;
+  padding: 0 .4em;
 }
 .monaco-editor .suggest-details ul {
   padding-left: 20px;
@@ -4429,7 +4426,7 @@
 .monaco-editor .parameter-hints-widget .docs code {
   font-family: var(--monaco-monospace-font);
   border-radius: 3px;
-  padding: 0 0.4em;
+  padding: 0 .4em;
   background-color: var(--vscode-textCodeBlock-background);
 }
 .monaco-editor .parameter-hints-widget .docs .monaco-tokenized-source,
@@ -4468,7 +4465,7 @@
 }
 .monaco-editor .parameter-hints-widget .documentation-parameter > .parameter {
   font-weight: bold;
-  margin-right: 0.5em;
+  margin-right: .5em;
 }
 .monaco-editor .rename-box {
   z-index: 100;
@@ -4888,7 +4885,7 @@
   overflow-wrap: break-word;
 }
 .quick-input-message > .codicon {
-  margin: 0 0.2em;
+  margin: 0 .2em;
   vertical-align: text-bottom;
 }
 .quick-input-message a {

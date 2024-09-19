@@ -2363,7 +2363,6 @@
               ;
               !this.props.fnDoesItemTakeFocus(e) &&
               e > this.props.nIndexLeftmost;
-
             )
               e--;
           return T("LastFocusableColumn: ", e), e;
@@ -2514,7 +2513,6 @@
             t != this.props.nIndexLeftmost - 1 &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(t);
-
           )
             t--;
           return t == this.props.nIndexLeftmost - 1
@@ -2535,7 +2533,6 @@
             t != this.props.nNumItems &&
             this.props.fnDoesItemTakeFocus &&
             !this.props.fnDoesItemTakeFocus(t);
-
           )
             t++;
           return t == this.props.nNumItems

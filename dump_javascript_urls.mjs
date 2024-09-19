@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 import { GetRecursiveFilesToParse } from "./dump_javascript_paths.mjs";
@@ -31,7 +31,6 @@ for await (const file of GetRecursiveFilesToParse()) {
 		});
 	} catch (e) {
 		console.error(`Unable to parse "${file}": ${e}`);
-		continue;
 	}
 }
 

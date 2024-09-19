@@ -2291,7 +2291,6 @@
           for (
             var n = -1, r = null == e ? 0 : e.length, o = 0, i = [];
             ++n < r;
-
           ) {
             var a = e[n];
             t(a, n, e) && (i[o++] = a);
@@ -3167,7 +3166,6 @@
                 r = Ar({}, e.shift()),
                 o = Ar({}, t.shift());
               ;
-
             ) {
               if (r.start === o.start) {
                 const e = Math.min(r.end, o.end);
@@ -3874,7 +3872,6 @@
                 ;
                 (null == l ? void 0 : l.offsetParent) &&
                 (null == l ? void 0 : l.offsetParent) !== v;
-
               )
                 (l = l.offsetParent), (u += l.offsetTop);
               if (u > a || u + _.current < i)
@@ -3912,7 +3909,6 @@
                       c = 0,
                       f = e.length - 1;
                     ;
-
                   ) {
                     let e = Math.floor((c + f + 1) / 2);
                     if ((t[e] >= r ? (f = e - 1) : (c = e), c === f)) {
@@ -7802,15 +7798,16 @@
                     return (
                       !!(E || t || h || b || f) &&
                       !w &&
-                      !(!b && "dblclick" === e.type) &&
-                      (!ot(e, L) || "wheel" !== e.type) &&
-                      (!ot(e, T) || "wheel" === e.type) &&
-                      !(!f && e.ctrlKey && "wheel" === e.type) &&
-                      !!(t || h || n || "wheel" !== e.type) &&
-                      !!(
-                        E ||
-                        ("mousedown" !== e.type && "touchstart" !== e.type)
-                      ) &&
+                        !(!b && "dblclick" === e.type) &&
+                          (!ot(e, L) || "wheel" !== e.type) &&
+                            (!ot(e, T) || "wheel" === e.type) &&
+                              !(!f && e.ctrlKey && "wheel" === e.type) &&
+                                !!(t || h || n || "wheel" !== e.type) &&
+                                  !!(
+                                    E ||
+                                    ("mousedown" !== e.type &&
+                                      "touchstart" !== e.type)
+                                  ) &&
                       !((e.ctrlKey && "wheel" !== e.type) || e.button)
                     );
                   });
@@ -11590,7 +11587,6 @@
                 i = -1,
                 a = r.length;
               ++i < a;
-
             )
               r[i].call(e, o);
             n.state === z &&
