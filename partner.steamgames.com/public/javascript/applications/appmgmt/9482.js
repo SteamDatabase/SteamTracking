@@ -61,7 +61,7 @@
     },
     9482: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => ue });
+      r.r(t), r.d(t, { default: () => pe });
       var n = r(90626),
         o = r(49693),
         a = r(81393);
@@ -1061,11 +1061,17 @@
           list_item: ne,
           image: oe,
         } = J.nodes,
-        { strong: ae, italic: se, underline: ce, link: le } = J.marks;
-      var ie = r(30600),
-        de = r(30470),
-        me = r(80968);
-      function ue(e) {
+        {
+          strong: ae,
+          italic: se,
+          underline: ce,
+          link: le,
+          strike: ie,
+        } = J.marks;
+      var de = r(30600),
+        me = r(30470),
+        ue = r(80968);
+      function pe(e) {
         const {
             language: t,
             rctToolbarControls: r,
@@ -1138,6 +1144,7 @@
                     strong: ae,
                     italic: se,
                     underline: ce,
+                    strike: ie,
                     link: {
                       ...le,
                       toDOM: (e, t) => [
@@ -1202,10 +1209,10 @@
               (m.current = o);
           }, [c, o]),
           n.createElement(
-            pe,
+            ge,
             { imageNodeType: u.pm_schema.nodes.image },
             n.createElement(
-              ge,
+              he,
               {
                 editorType: a,
                 view: c,
@@ -1217,20 +1224,20 @@
                 S,
                 {
                   panelProps: { lang: (0, D.d$)(t), onBlur: h },
-                  className: me.EditorPanel,
+                  className: ue.EditorPanel,
                   schemaConfig: u,
                   bbcode: d.current,
                   onUpdate: g,
                   refView: l,
                   dataKey: t,
                 },
-                n.createElement(be, { schema: u }),
+                n.createElement(_e, { schema: u }),
               ),
             ),
           )
         );
       }
-      function pe(e) {
+      function ge(e) {
         const { imageNodeType: t, children: r } = e,
           o = (0, _.cz)(),
           a = n.useCallback(
@@ -1251,7 +1258,7 @@
             [t, o],
           ),
           s = n.useCallback(async (e) => {
-            const t = new URL(`${de.TS.PARTNER_BASE_URL}gfxproxy/externalgfx/`);
+            const t = new URL(`${me.TS.PARTNER_BASE_URL}gfxproxy/externalgfx/`);
             t.searchParams.append("url", e);
             const r = await fetch(t, { method: "GET" });
             return await r.blob();
@@ -1262,7 +1269,7 @@
           r,
         );
       }
-      function ge(e) {
+      function he(e) {
         const {
             editorType: t,
             view: r,
@@ -1278,11 +1285,11 @@
               i(e.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          m = (0, ie.wY)(d);
+          m = (0, de.wY)(d);
         return n.createElement(
           "div",
           null,
-          n.createElement(fe, {
+          n.createElement(be, {
             view: r,
             refUpdateToolbar: o,
             sticky: l,
@@ -1293,14 +1300,14 @@
             "div",
             {
               className: (0, O.A)(
-                me.AboutTheGameArea,
-                "awards" == t && me.Awards,
+                ue.AboutTheGameArea,
+                "awards" == t && ue.Awards,
               ),
               ref: m,
             },
             "aboutthegame" == t &&
               n.createElement(
-                he,
+                fe,
                 null,
                 (0, D.we)("#StoreAdmin_GameDescription_AboutThisGame"),
               ),
@@ -1308,15 +1315,15 @@
           ),
         );
       }
-      function he(e) {
+      function fe(e) {
         return n.createElement(
           "h2",
-          { className: me.StoreAppPageHeader },
+          { className: ue.StoreAppPageHeader },
           e.children,
-          n.createElement("div", { className: me.GradientRule }),
+          n.createElement("div", { className: ue.GradientRule }),
         );
       }
-      function fe(e) {
+      function be(e) {
         const {
           view: t,
           refUpdateToolbar: r,
@@ -1331,8 +1338,8 @@
             I.Ez,
             {
               className: (0, O.A)(
-                me.GameDescriptionEditorToolbar,
-                s && me.Sticky,
+                ue.GameDescriptionEditorToolbar,
+                s && ue.Sticky,
               ),
             },
             n.createElement($, null),
@@ -1355,7 +1362,7 @@
           ),
         );
       }
-      function be(e) {
+      function _e(e) {
         const { schema: t } = e,
           r = n.useMemo(
             () => [
