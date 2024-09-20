@@ -17,7 +17,7 @@ HelpWizard = {
 
 				if ( wizard_url.toLowerCase().startsWith('login') )
 		{
-			window.location = "https://help.steampowered.com/" + wizard_url;
+			window.location = "https://help.steampowered.com/login" + wizard_url.slice( 5 );
 			return;
 		}
 
