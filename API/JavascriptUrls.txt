@@ -2432,7 +2432,6 @@ https://help.steampowered.com/#HelpWithEconTrading
 https://help.steampowered.com/#HelpWithLimitedAccount
 https://help.steampowered.com/#HelpWithLogin
 https://help.steampowered.com/${hash}
-https://help.steampowered.com/${wizard_url}
 https://help.steampowered.com//wizard/HelpWithPurchase
 https://help.steampowered.com/agents/assignhelprequest/
 https://help.steampowered.com/agents/claimtickets/
@@ -2454,6 +2453,7 @@ https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/en/wizard/HelpWithPurchase
 https://help.steampowered.com/en/wizard/HelpWithUnknownCharges
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
+https://help.steampowered.com/login${}
 https://help.steampowered.com/login/getmenuactions/
 https://help.steampowered.com/login/getrsakey/
 https://help.steampowered.com/login/logout/

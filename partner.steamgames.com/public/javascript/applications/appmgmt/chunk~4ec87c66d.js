@@ -4029,7 +4029,9 @@
       f.set("none", ""),
         f.set("takeover", "Takeover"),
         f.set("takeunder", "Takeunder"),
-        f.set("hub_takeover", "Hub takeover"),
+        f.set("hub_takeover", "Hub"),
+        f.set("f2p", "F2P"),
+        f.set("ea", "EA"),
         f.set("steamchina_takeover", "SC Takeover"),
         f.set("steamchina_only", "SC");
       const v = [
@@ -52419,7 +52421,7 @@
               let t,
                 a = e.name;
               if (
-                (e.intention && "none" != e.intention
+                (e.intention && "none" != e.intention && r.qt.has(e.intention)
                   ? (t = [r.qt.get(e.intention)])
                   : e.type && r.Yh.has(e.type) && (t = r.Yh.get(e.type)),
                 t?.length)
@@ -61072,7 +61074,18 @@
               e.push({
                 label: r.qt.get("hub_takeover"),
                 data: "hub_takeover",
-                tooltip: "Takeover on a particular content hub",
+                tooltip:
+                  "Takeover on a particular content hub (except F2P or EA)",
+              }),
+              e.push({
+                label: r.qt.get("f2p"),
+                data: "f2p",
+                tooltip: "Takeover on the F2P content hub",
+              }),
+              e.push({
+                label: r.qt.get("ea"),
+                data: "ea",
+                tooltip: "Takeover on the EA content hub",
               }),
               e.push({
                 label: r.qt.get("steamchina_takeover"),
