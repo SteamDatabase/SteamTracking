@@ -1261,7 +1261,8 @@
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
               C(t);
-              I.Schedule(1e3, () => P(t, k.current?.checked));
+              const a = k.current?.checked;
+              I.Schedule(1e3, () => P(t, a));
             },
             [P, I, k],
           );
