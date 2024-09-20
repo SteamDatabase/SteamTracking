@@ -791,10 +791,10 @@ img._1W2-3_i4cuGzBmocT-ZAk5 {
 }
 ._3-tWPanUj6QJND7dPTlrgc ._2oUv4hHSs2-8LXtBPcyRRy {
   position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border: 1px solid #e77d1b;
   z-index: 1;
   pointer-events: none;
