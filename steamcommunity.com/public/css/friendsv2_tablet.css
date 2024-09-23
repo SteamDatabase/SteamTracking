@@ -106,7 +106,7 @@ html.tablet #search_text_box_sent {
 
 html.tablet #search_text_box,
 html.tablet #search_text_box_sent {
-	background-image: url('https://community.akamai.steamstatic.com/public/shared/images/ico_gamepad/search.svg');
+	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico_gamepad/search.svg');
 	background-size: 24px 24px;
 	background-repeat: no-repeat;
 	background-position: 8px;

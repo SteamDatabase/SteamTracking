@@ -742,7 +742,7 @@ function CheckAccountNameAvailability()
 
 	      	if ( result && result.bAvailable )
 	      	{
-				elAvailibility.html('<img class="green_check" src="https://community.akamai.steamstatic.com/public/shared/images/joinsteam/icon_check.png?v=1" > Available');
+				elAvailibility.html('<img class="green_check" src="https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/icon_check.png?v=1" > Available');
 				elAvailibility.css( 'background', '#5c7e10' );
 				$('form_row_choose_suggested_name').style.display = 'none';
 				g_bAccountNameAvailable = true;

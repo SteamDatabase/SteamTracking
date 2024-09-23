@@ -208,7 +208,7 @@ var CForum = Class.create( {
 				strMessage = '<b>Your inventory privacy is <u>not</u> Public</b>.  This means community members will not be able to send you trade offers from this topic.  If your inventory privacy was Public, community members would be able to send you trade offers from this topic.';
 
 			strMessage += '<div class="forum_newtopic_info_rule"></div>';
-			strMessage += '<img class="forum_newtopic_info_trade_closebuttondemo" src="https://community.akamai.steamstatic.com/public/images/skin_1/forum_img_closetopic.png">';
+			strMessage += '<img class="forum_newtopic_info_trade_closebuttondemo" src="https://community.cloudflare.steamstatic.com/public/images/skin_1/forum_img_closetopic.png">';
 			strMessage += 'When you are done receiving trade offers or have completed the trade, you can close this topic and disallow trade offers from here.';
 			strMessage += '<div style="clear: both;"></div>';
 
@@ -834,7 +834,7 @@ function Forum_OnCommunityAwardGranted( containerNamePrefix, id, award )
 		if ( !bFoundExisting )
 		{
 			var reward = $J( "<span>", { class: "community_award" } );
-			var img = $J( "<img>", { class: "community_award_icon tooltip", src: "https://store.akamai.steamstatic.com/public/images/loyalty/reactions/still/" + award + ".png" } );
+			var img = $J( "<img>", { class: "community_award_icon tooltip", src: "https://store.cloudflare.steamstatic.com/public/images/loyalty/reactions/still/" + award + ".png" } );
 			reward.append( img );
 
 			var countElem = $J( "<span>", { class: "community_award_count hidden", text: "1" } );
@@ -2167,7 +2167,7 @@ function Forum_InitBanLengthOptions( $Select )
 
 function Forum_BanOrWarnUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget, bWarning )
 {
-	var $WaitElem = $J('<div/>', {'class': 'forum_banuser_modal_wait'}).append( '<img src="https://community.akamai.steamstatic.com/public/images/login/throbber.gif">' );
+	var $WaitElem = $J('<div/>', {'class': 'forum_banuser_modal_wait'}).append( '<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">' );
 
 	if ( bWarning ) {
 		var Modal = ShowConfirmDialog( 'Warn User', $WaitElem, 'Warn User' );
