@@ -761,6 +761,7 @@
     "Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status": "Linked event:",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusNotLive": "Event not live",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusPublic": "Public",
+    "Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusVisibleOn": "Visible on %1$s",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton": "Edit...",
     "Dashboard_UpcomingEvents_DailyDeal_Dates": "Daily Deal:",
     "Dashboard_UpcomingEvents_DailyDeal_Discounted": "Discounted:",
