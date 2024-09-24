@@ -95,7 +95,7 @@
             {
               className: (0, o.A)(
                 "center" == n && s().throbber_center_wrapper,
-                m && s().ThrobberDelayAppear,
+                !!m && s().ThrobberDelayAppear,
                 u && s().Visible,
               ),
             },
@@ -140,7 +140,7 @@
             {
               className: (0, o.A)(
                 "center" == i && s().throbber_center_wrapper,
-                n && s().ThrobberDelayAppear,
+                !!n && s().ThrobberDelayAppear,
                 h && s().Visible,
               ),
             },

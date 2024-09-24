@@ -565,7 +565,7 @@
       var r = a(90626),
         n = a(94607),
         s = a(55963),
-        l = a(5970),
+        l = a(62093),
         o = a(60014),
         i = a(3578);
       function c(e) {
@@ -588,7 +588,7 @@
             () => i.A.AddNavParamToURL(t.GetStorePageURL(), S),
             [t, S],
           ),
-          E = (0, l.bi)(),
+          E = (0, l.b)(),
           y = r.useCallback(() => {
             _ && p.current != _ && (E.AddImpression(_, S), (p.current = _));
           }, [E, _, S, p]),
@@ -3523,7 +3523,6 @@
         Ht = a.n(Ut);
       const qt = g.lazy(() =>
         Promise.all([
-          a.e(7817),
           a.e(7937),
           a.e(927),
           a.e(7276),

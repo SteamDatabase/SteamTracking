@@ -9,8 +9,8 @@
       i.r(t),
         i.d(t, {
           CGameRecordingStore: () => u,
-          default: () => C,
-          k_strGRFAQ: () => _,
+          default: () => y,
+          k_strGRFAQ: () => h,
         });
       var r = i(34629),
         s = i(14947),
@@ -23,8 +23,8 @@
         m = i(29210),
         c = i(44332),
         g = i(30470),
-        h = i(61859);
-      const _ = "23B7-49AD-4A28-9590";
+        _ = i(61859);
+      const h = "23B7-49AD-4A28-9590";
       class u {
         constructor() {
           (0, s.Gn)(this);
@@ -57,6 +57,9 @@
               ),
               a.xM.RegisterForNotifyTimelineEntryChanged(
                 this.OnTimelineEntryChanged,
+              ),
+              a.xM.RegisterForNotifyTimelineEntryRemoved(
+                this.OnTimelineEntryRemoved,
               ),
               a.xM.RegisterForNotifyClipCreated(this.OnClipCreated),
               a.xM.RegisterForNotifyExportProgress(this.OnExportProgress),
@@ -221,6 +224,20 @@
           }
           return 1;
         }
+        OnTimelineEntryRemoved(e) {
+          const {
+            entry_id: t,
+            timeline_id: i,
+            game_id: r,
+          } = e.Body().toObject();
+          if (r) {
+            const e = this.m_mapTimelineLoaders.get(r);
+            if (e) {
+              e.loader.RemoveTimelineEvent(i, t);
+            }
+          }
+          return 1;
+        }
         OnClipCreated(e) {
           const t = e.Body().summary().toObject();
           return (
@@ -330,7 +347,7 @@
           } else (0, d.tH)("Failed to delete clip", e);
           return t.GetEResult();
         }
-        async ExportClip(e, t, i) {
+        async ExportClip(e, t, i, r) {
           if (this.m_currentlyExportingClip)
             return (
               (0, d.tH)("Export in progress, cannot start another one", e), 10
@@ -341,13 +358,14 @@
             resultStatus: 22,
           }),
             (this.m_currentlyExportingClip = e);
-          const r = await a.xM.ExportClip({
+          const s = await a.xM.ExportClip({
             clip_id: e,
             export_mp4_path: t,
             settings: i,
+            use_unique_filename: r,
           });
           return (
-            1 === r.GetEResult()
+            1 === s.GetEResult()
               ? ((0, d.tG)(`Exporting clip ${e} to ${t}`),
                 (this.m_currentlyExportingClip = null),
                 this.m_clipExportProgress.set(e, {
@@ -358,11 +376,11 @@
               : (this.m_clipExportProgress.set(e, {
                   exportPath: t,
                   progress: 0,
-                  resultStatus: r.GetEResult(),
+                  resultStatus: s.GetEResult(),
                 }),
                 (this.m_currentlyExportingClip = null),
                 (0, d.tH)("Failed to export clip", e)),
-            r.GetEResult()
+            s.GetEResult()
           );
         }
         UpdateClipExportPath(e, t) {
@@ -574,7 +592,7 @@
         }
         GetBestClipTitle(e) {
           const t = this.GetClipSummary(e);
-          return t ? t.name || (0, h.$z)(t.date_recorded) : "";
+          return t ? t.name || (0, _.$z)(t.date_recorded) : "";
         }
         ManuallyDeleteRecordingForApps(e) {
           a.xM.ManuallyDeleteRecordingsForApps({ game_ids: e });
@@ -633,6 +651,18 @@
                 `Failed to get recording drive free space ${e.GetEResult()}`,
               );
         }
+        async GetRecordingHighlights(e, t) {
+          return (
+            (
+              await a.xM.GetAndTrimPostGameHighlights({
+                game_id: e,
+                created_after: t,
+              })
+            )
+              .Body()
+              .events() || []
+          ).map((e) => e.toObject());
+        }
       }
       (0, r.Cg)([s.sH.shallow], u.prototype, "m_rgAppsWithTimelines", void 0),
         (0, r.Cg)([s.sH], u.prototype, "m_bLoadingClips", void 0),
@@ -649,6 +679,7 @@
         (0, r.Cg)([o.oI], u.prototype, "OnTimelineChanged", null),
         (0, r.Cg)([o.oI], u.prototype, "OnRecordingSessionChanged", null),
         (0, r.Cg)([o.oI], u.prototype, "OnTimelineEntryChanged", null),
+        (0, r.Cg)([o.oI], u.prototype, "OnTimelineEntryRemoved", null),
         (0, r.Cg)([o.oI], u.prototype, "OnClipCreated", null),
         (0, r.Cg)([o.oI], u.prototype, "UploadClip", null),
         (0, r.Cg)([o.oI], u.prototype, "SaveClip", null),
@@ -667,7 +698,7 @@
         (0, r.Cg)([o.oI], u.prototype, "LoadThumbnails", null),
         (0, r.Cg)([o.oI], u.prototype, "GetAchievementInfo", null),
         (0, r.Cg)([o.oI], u.prototype, "OnLowDiskSpace", null);
-      const C = u;
+      const y = u;
     },
   },
 ]);

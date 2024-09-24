@@ -3407,6 +3407,11 @@ textarea._3793xvP87t1rZYbAQDC1pG {
 ._2snMdlpkl3kCJJy5O3IOKo {
   color: #bbb;
 }
+._2snMdlpkl3kCJJy5O3IOKo .DiscountRange {
+  color: #beee11;
+  background: #4c6b22;
+  width: fit-content;
+}
 ._2T8DyF_QPmBfwHdjQByUkw {
   position: relative;
   min-height: 520px;
@@ -6593,9 +6598,10 @@ div.gba9ORrJbj5gmNm9W6UUS {
 }
 ._5T6C7ESpj4ynwbH8LS101 {
   position: relative;
-  width: 70%;
-  min-width: 70%;
-  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  background: #000;
 }
 ._5T6C7ESpj4ynwbH8LS101 ._1H947zVMI4eix33y6Vyrm0 {
   text-transform: uppercase;
@@ -6627,30 +6633,106 @@ div.gba9ORrJbj5gmNm9W6UUS {
   z-index: 1;
 }
 ._2DzJ9TSrYmyo1tY_R-1jym {
+  grid-area: video;
+  padding: 56.25% 0 0 0;
   position: relative;
+  z-index: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 ._2DzJ9TSrYmyo1tY_R-1jym:hover .ZZgGaqlJvV83f4CYl3O3N {
   display: block;
+}
+@keyframes _3D_pgT8sxFP3ieDxVt_1zp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+}
+@keyframes HMoi7fPFNjxiHeyrfkgmO {
+  0% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes _3kp7PkbzSVQPFoobA3Xx7N {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 ._3sG-J5T8SrzM0Hjkda7sgL {
   object-fit: fill;
   height: 100%;
   width: 100%;
-  transition: opacity .6s ease 1s;
-  opacity: 0;
+  z-index: 5;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer {
+  opacity: 1;
+  transform: scale(0.8);
+  animation: _3D_pgT8sxFP3ieDxVt_1zp .6s ease-in-out;
+}
+._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer._133cw4R3W7BUEiogJVas9e {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: HMoi7fPFNjxiHeyrfkgmO .6s ease-in-out;
+  pointer-events: none;
+}
+._3sG-J5T8SrzM0Hjkda7sgL.Trailer {
+  opacity: 0;
+  pointer-events: none;
+}
+._3sG-J5T8SrzM0Hjkda7sgL.Trailer._26iLRdY_qVM_-n8K_6Q2RR {
+  opacity: 1;
+  animation: _3kp7PkbzSVQPFoobA3Xx7N .6s ease-in-out;
+  pointer-events: unset;
+}
+@keyframes hckHU2LXCJNx0X37OqCsx {
+  0% {
+    opacity: 1;
+    transform: blur(0);
+  }
+  100% {
+    opacity: 0.5;
+    filter: blur(30px);
+  }
 }
 ._3cc6kgsSpd-DeLRDHEM_lD {
   height: 100%;
   width: 100%;
+  z-index: 3;
   transition: opacity .6s ease 1s;
-  opacity: 1;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+._3cc6kgsSpd-DeLRDHEM_lD._133cw4R3W7BUEiogJVas9e {
+  opacity: 0.5;
+  filter: blur(30px);
+  animation: hckHU2LXCJNx0X37OqCsx .6s ease-in-out;
+  pointer-events: none;
 }
 ._1y11BvPq_nL5EZFF8GLuD9 {
   position: absolute;
@@ -6660,6 +6742,9 @@ div.gba9ORrJbj5gmNm9W6UUS {
 ._1y11BvPq_nL5EZFF8GLuD9 svg {
   width: 130px;
   height: auto;
+}
+._2HvO_RKtxiyyhZsELjYyq5 {
+  z-index: 6;
 }
 .ZZgGaqlJvV83f4CYl3O3N {
   position: absolute;
@@ -9060,7 +9145,7 @@ textarea.VaLwylBilZSHWeTdxBQQC {
   padding-left: 450px;
 }
 .I1TnLYJOHefid6PAZREDa {
-  background-image: url("https://cdn.akamai.steamstatic.com/store/email/general/bg_blue.png");
+  background-image: url("https://cdn.cloudflare.steamstatic.com/store/email/general/bg_blue.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: 180px;
@@ -9650,9 +9735,15 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 }
 ._2jPjOfmBcD9ynwSP3mn457 {
   width: 25%;
+  margin-right: 10px;
 }
 ._2jPjOfmBcD9ynwSP3mn457 i {
   color: #52f376;
+}
+._3pJgJImcPeTCcR87F8YTsm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .S7-lNYeMUcaLTvOgTqZ5u {
   border: 1px solid #434551;
@@ -9672,6 +9763,7 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 ._6TrpentH84qKXfi8P2JPL {
   width: 22%;
   margin-left: 16px;
+  margin-right: 10px;
 }
 ._6TrpentH84qKXfi8P2JPL i {
   color: #a667f5;
@@ -10719,6 +10811,26 @@ textarea.VaLwylBilZSHWeTdxBQQC {
   position: relative;
   z-index: 2;
 }
+._1GNn5Ekyu5iiizG3V_xRal {
+  position: relative;
+}
+._1GNn5Ekyu5iiizG3V_xRal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://partner.steamgames.com/public/images//promotools/seasons.webp");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  filter: contrast(0.4) brightness(0.5);
+}
+._1GNn5Ekyu5iiizG3V_xRal .DialogContent_InnerWidth {
+  position: relative;
+  z-index: 2;
+}
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -11684,25 +11796,45 @@ button.rbc-input::-moz-focus-inner {
   height: 14px;
   width: 14px;
 }
-._1Wtq4XAKx0_iV8E-jmIMfF {
-  width: 45%;
+._3fKCbgfnhUnHqZuYR_DA8h {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+._3fKCbgfnhUnHqZuYR_DA8h .qbvhk46RDj72WOCxtxodV {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+._3fKCbgfnhUnHqZuYR_DA8h .qbvhk46RDj72WOCxtxodV._3dy4kCvjtTg95Dn5dNzey_ {
+  flex-direction: column;
+}
+._3fKCbgfnhUnHqZuYR_DA8h .qbvhk46RDj72WOCxtxodV ._3LlHNgNijnyDOhyZaZP3CV {
+  color: #a7a9af;
+}
+._3fKCbgfnhUnHqZuYR_DA8h .qbvhk46RDj72WOCxtxodV ._3LlHNgNijnyDOhyZaZP3CV span {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+._3fKCbgfnhUnHqZuYR_DA8h .qbvhk46RDj72WOCxtxodV .pdvDRuNQsG-Y7JfY5d7dF {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-right: 16px;
-  box-sizing: border-box;
-  font-size: 14px;
-  color: #84d0fb;
 }
-._1Wtq4XAKx0_iV8E-jmIMfF .qbvhk46RDj72WOCxtxodV {
-  width: 175px;
+._3fKCbgfnhUnHqZuYR_DA8h
+  .qbvhk46RDj72WOCxtxodV
+  .pdvDRuNQsG-Y7JfY5d7dF
+  .k5NJyCaP6acX5utnOweN {
+  flex-grow: 1;
+}
+._3fKCbgfnhUnHqZuYR_DA8h .qbvhk46RDj72WOCxtxodV ._2pxDGL76WfgYWVxPoX2aiG {
+  width: 165px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-._1Wtq4XAKx0_iV8E-jmIMfF span {
-  margin-left: 8px;
-  color: #a7a9af;
+  margin-right: 4px;
 }
 ._26S-q1rh4KBSENR6EI-bTQ {
   background-color: #fce6a0;
@@ -11809,6 +11941,24 @@ button.rbc-input::-moz-focus-inner {
 ._1mrqJ1WLmobh_wzIY3EVZl {
   min-height: 200px;
 }
+._2XT3auesRGpSKWjno9Xcvm {
+  position: relative;
+  width: 780px;
+  height: 400px;
+  margin: 2px;
+}
+._2XT3auesRGpSKWjno9Xcvm::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://partner.steamgames.com/public/images//promotools/preload_library_feature.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+}
 .j_bDCIOMLFNOKaIFJzk2_ {
   position: absolute;
   left: 83px;
@@ -11817,7 +11967,7 @@ button.rbc-input::-moz-focus-inner {
   margin-top: -25px;
   width: 50px;
   height: 50px;
-  background-image: url("https://store.akamai.steamstatic.com//public/shared/images/sharedfiles/sketchfab_play.png");
+  background-image: url("https://store.cloudflare.steamstatic.com//public/shared/images/sharedfiles/sketchfab_play.png");
   background-size: 100%;
   background-position-y: 0px;
   background-repeat: no-repeat;

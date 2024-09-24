@@ -15181,7 +15181,7 @@
           za,
           { trigger: "repeated", onVisibilityChange: o },
           a.createElement(
-            "div",
+            "button",
             {
               onClick: () => {
                 if (!r.current?.visible) {

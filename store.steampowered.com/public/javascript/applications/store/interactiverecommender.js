@@ -98,7 +98,7 @@
         n = a(75844),
         l = a(14947),
         r = a(90626),
-        d = a(5970),
+        d = a(84518),
         c = a(12155),
         m = a(52038),
         p = a(61859),
@@ -107,7 +107,7 @@
         h = a(26649),
         _ = a.n(h),
         E = a(41735),
-        y = a.n(E);
+        T = a.n(E);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
@@ -115,7 +115,7 @@
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
       })(s || (s = {}));
-      class T {
+      class y {
         constructor() {
           (0, l.Gn)(this);
         }
@@ -178,8 +178,8 @@
         eState = s.Unrequested;
         nExpirationTime = 0;
       }
-      (0, i.Cg)([l.sH], T.prototype, "data", void 0),
-        (0, i.Cg)([l.sH], T.prototype, "nExpirationTime", void 0);
+      (0, i.Cg)([l.sH], y.prototype, "data", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "nExpirationTime", void 0);
       (0, i.Cg)(
         [l.sH],
         class {
@@ -191,7 +191,7 @@
             return (
               this.m_mapKeyToDataWrapper.has(e)
                 ? (t = this.m_mapKeyToDataWrapper.get(e))
-                : ((t = new T()), this.m_mapKeyToDataWrapper.set(e, t)),
+                : ((t = new y()), this.m_mapKeyToDataWrapper.set(e, t)),
               t
             );
           }
@@ -268,9 +268,9 @@
         m_bUseMicrotrailers = void 0;
         m_bIgnoredEdited = void 0;
         m_mapAppDetailsCache = new Map();
-        m_ResultDataCache = new T();
-        m_InputAppsCache = new T();
-        m_TagsCache = new T();
+        m_ResultDataCache = new y();
+        m_InputAppsCache = new y();
+        m_TagsCache = new y();
         m_TagNameMap = new Map();
         m_bStateUpdated;
         constructor() {
@@ -346,11 +346,11 @@
         getDetails(e) {
           return (
             this.m_mapAppDetailsCache.has(e) ||
-              this.m_mapAppDetailsCache.set(e, new T()),
+              this.m_mapAppDetailsCache.set(e, new y()),
             this.m_mapAppDetailsCache.get(e).getData(
               60,
               async () =>
-                await y().get(
+                await T().get(
                   `${v.BASE_URL}recommender/${v.STEAM_ID}/details?appid=${e}&sessionid=${v.SESSION_ID}`,
                 ),
               (e) => e.data,
@@ -374,7 +374,7 @@
             this.m_ResultDataCache.getData(
               9999999,
               async () =>
-                await y().get(
+                await T().get(
                   `${v.BASE_URL}recommender/${v.STEAM_ID}/results?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}&include_played=${i}&algorithm=${o}&reinference=${n}&model_version=${l}${r}`,
                 ),
               (e) => (
@@ -409,7 +409,7 @@
           return this.m_InputAppsCache.getData(
             9999999,
             async () =>
-              await y().get(
+              await T().get(
                 `${v.BASE_URL}recommender/${v.STEAM_ID}/inputs?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}`,
               ),
             (e) => e.data,
@@ -428,7 +428,7 @@
           return this.m_TagsCache.getData(
             9999999,
             async () =>
-              await y().get(
+              await T().get(
                 `${v.BASE_URL}recommender/${v.STEAM_ID}/tags?sessionid=${v.SESSION_ID}`,
               ),
             (e) => {
@@ -517,7 +517,7 @@
         async onAddToWishlist(e, t) {
           R.getAppInfo()[e].w = !0;
           let a = { sessionid: v.SESSION_ID, appid: e };
-          const s = await y().post(
+          const s = await T().post(
             `${v.BASE_URL}recommender/${v.STEAM_ID}/wishlist?snr=${v.LINK_PARAM}`,
             a,
           );
@@ -532,7 +532,7 @@
             setting_2: 100 * this.m_fRecencyValue,
           };
           return (
-            await y().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, i), s
+            await T().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, i), s
           );
         }
         onGoToWishlist() {
@@ -550,7 +550,7 @@
             setting_1: 100 * this.m_fPopularityValue,
             setting_2: 100 * this.m_fRecencyValue,
           };
-          return y().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, s);
+          return T().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, s);
         }
         onMuteClicked() {
           this.m_bShouldMute = !0;
@@ -1066,9 +1066,9 @@
           const h = parseInt(g.smallentrywidth),
             _ = parseInt(g.optionswrapwidth);
           let E = 112,
-            y = !0;
-          s < h ? ((E = 66), (y = !1)) : s < _ && ((E = 87), (y = !1));
-          const T = y && this.state.hovered,
+            T = !0;
+          s < h ? ((E = 66), (T = !1)) : s < _ && ((E = 87), (T = !1));
+          const y = T && this.state.hovered,
             I = Math.min(Number(t) / 100, 1e3);
           let S = !1,
             C = !1,
@@ -1081,7 +1081,7 @@
             L = "",
             x = !1,
             M = !0;
-          if (T) {
+          if (y) {
             const e = R.getDetails(this.props.appID);
             e &&
               ((S = !0),
@@ -1105,7 +1105,7 @@
           }
           const b = L && L.length > 0;
           return r.createElement(
-            d.Ay,
+            d.A,
             { appID: e },
             r.createElement(
               U,
@@ -1116,7 +1116,7 @@
                   "ds_flagged",
                   "ds_wishlist",
                   a > 32 && g.Hidden,
-                  T && g.Hovered,
+                  y && g.Hovered,
                 ),
                 style: { top: Math.min(33, a) * E },
                 onMouseEnter: this.OnHover,
@@ -1129,7 +1129,7 @@
                   "div",
                   { className: g.LeftSection },
                   r.createElement("img", {
-                    className: (0, m.A)(g.Logo, (!b || !T) && g.Revealed),
+                    className: (0, m.A)(g.Logo, (!b || !y) && g.Revealed),
                     src: i,
                   }),
                   r.createElement("video", {
@@ -1138,7 +1138,7 @@
                       "highlight_player_item",
                       "highlight_movie",
                       g.Video,
-                      b && T && g.Revealed,
+                      b && y && g.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
@@ -1181,7 +1181,7 @@
                         className: (0, m.A)(
                           g.CenterOption,
                           g.CenterDefault,
-                          T && g.Hidden,
+                          y && g.Hidden,
                         ),
                       },
                       r.createElement("div", { className: g.Released }, l),
@@ -1201,7 +1201,7 @@
                         className: (0, m.A)(
                           g.CenterOption,
                           g.CenterHovered,
-                          !T && g.Hidden,
+                          !y && g.Hidden,
                         ),
                       },
                       P,

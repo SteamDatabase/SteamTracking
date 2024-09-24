@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_summer2024 {
-	background: url('https://cdn.akamai.steamstatic.com/store/promo/spring2024/sale_spring2024_tiled_bg.png') repeat center top, #202531;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/spring2024/sale_spring2024_tiled_bg.png') repeat center top, #202531;
     font-family: "Motiva Sans", Sans-serif;
 }
 
@@ -272,7 +272,7 @@ body.v6.sale_summer2024 .home_sticker_ctn.mobile {
 		font-weight: bold; /* bold */
 
 		    font-style: italic;
-    background: url('https://cdn.akamai.steamstatic.com/store/promo/summer2020/encore_bg.png?v=1') no-repeat center;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/encore_bg.png?v=1') no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -307,7 +307,7 @@ body.v6.sale_summer2024 .home_sticker_ctn.mobile {
 }
 
 .home_giftcard_ctn {
-    background: url('https://cdn.akamai.steamstatic.com/store/promo/winter2020/coupon_bg_games.jpg?v=2') no-repeat center top;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/coupon_bg_games.jpg?v=2') no-repeat center top;
     overflow: hidden;
     min-height: 200px;
     position: relative;
@@ -324,7 +324,7 @@ body.v6.sale_summer2024 .home_sticker_ctn.mobile {
 }
 
 .summer_banner_ctn.home_topgames_ctn {
-    background: url('https://cdn.akamai.steamstatic.com/store/promo/winter2021/best.jpg?v=3') no-repeat center top;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/best.jpg?v=3') no-repeat center top;
     background-size: cover;
     height: 200px;
     box-shadow: 2.86px 6.67px 14.29px rgba( 0, 0, 0, 0.67 );
@@ -347,7 +347,7 @@ body.v6.sale_summer2024 .home_sticker_ctn.mobile {
 /* STEAM AWARDS homepage section */
 .home_steamawards_ctn.home_pagecontent_ctn {
     position: relative;
-    background: url('https://cdn.akamai.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg'), #3A1434;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg'), #3A1434;
     background-blend-mode: color-dodge;
     box-sizing: border-box;
     display: flex;
@@ -958,7 +958,7 @@ body.v6 .discount_block {}
 
 /* Top Games of 2020 Banner */
 .bestof_banner {
-    background: url('https://cdn.akamai.steamstatic.com/store/promo/winter2020/bestof_banner_background.jpg?v=2') no-repeat top center #1f2126;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/bestof_banner_background.jpg?v=2') no-repeat top center #1f2126;
     padding-top: 72px;
     margin-top: 20px;
     border-top: 1px solid #353841;
@@ -1612,7 +1612,7 @@ p.home_subtitle_ctn a {
 @media screen and (max-width: 800px )
 {
     html.responsive body.v6.sale_summer2024 .bookmark_stickers {
-        background-image: url('https://cdn.akamai.steamstatic.com/store/promo/summer2021/dog_sticker.png?v=1');
+        background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/dog_sticker.png?v=1');
         max-width: 160px;
         max-height: 160px;
         top: -110px;
@@ -3226,7 +3226,7 @@ img.franchise_placeholder {
 /* Infinite Scroll */
 
 .home_ctn {
-	/* background: url('https://cdn.akamai.steamstatic.com/store/promo/winter2022/wintersale_bottomtile_bottom.webp?v=2') repeat-y center;  */
+	/* background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale_bottomtile_bottom.webp?v=2') repeat-y center;  */
 }
 
 /* Tablet/SteamDeck Overrides */

@@ -203,7 +203,7 @@ function fnRenderHeroCapsule( oItem )
 
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url, 'aria-label': rgItemData.name } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.akamai.steamstatic.com/public/images/v6/home/hero_placeholder_374x448.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.cloudflare.steamstatic.com/public/images/v6/home/hero_placeholder_374x448.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
 
 	if ( rgItemData.has_live_broadcast )
 	{
@@ -359,7 +359,7 @@ function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDe
 		let purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', rgItemData.pricing_subid );
 		let $Cap = $J( '<div/>', {'class': 'winner_ctn', 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': params['href'], 'aria-label': rgItemData.name } ) );
-		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.akamai.steamstatic.com/store/promo/steamawards2023/backgrounds/awardbg_' + def.voteid +'.jpg\');' } ) );
+		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/backgrounds/awardbg_' + def.voteid +'.jpg\');' } ) );
 
 		let $Content = $J('<div/>', {'class': 'category_content' } );
 		$Content.append( $J('<div/>', {'class': 'category_title' } ).append( def.localization.title_linebreak.replace( '<1></1>', '<br/>' ).replace( '<2></2>', '<br/>' ) ) );
@@ -658,14 +658,14 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPref
 			{
 				$Img = $J('<img/>', {
 					'class': 'sale_capsule_image autosize',
-					'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif'
+					'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif'
 				});
 				$Img.data('src-header', rgItemData['header']);
 			} else
 			{
 				$Img = $J('<img/>', {
 					'class': 'sale_capsule_image autosize',
-					'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif'
+					'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif'
 				});
 				$Img.data('src-maincap', rgItemData['main_capsule']);
 			}
@@ -1097,7 +1097,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
 		$Cap.append( $J('<img/>', {'class': 'franchise_background', 'src': FranchiseData.strBackgroundImageURL } ) );
-        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://cdn.akamai.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif' } ) );
+        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif' } ) );
 		$Cap.append( $J( '<div/>', {'class': 'franchise_logo_ctn'} ).append( $J('<img/>', {'class': 'franchise_logo', 'src': FranchiseData.strLogoImageURL } ) ) );
 
 		$Cap.append( $J('<div/>', {'class': 'franchise_discount_tag' } ).text( 'Up to {PCT}% Off'.replace( /\{PCT\}/, FranchiseData.nDiscountMax ) ) );

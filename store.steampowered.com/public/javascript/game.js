@@ -380,7 +380,7 @@ function OnRecommendationAward( recommendationid, award )
 			if ( !bFoundExisting )
 			{
 				var reward = $J( "<div>", { class: "review_award" } );
-				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://store.akamai.steamstatic.com/public/images/loyalty/reactions/still/" + award + ".png" } );
+				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://store.cloudflare.steamstatic.com/public/images/loyalty/reactions/still/" + award + ".png" } );
 				reward.append( img );
 
 				var countElem = $J( "<span>", { class: "review_award_count", text: "1" } );
@@ -522,7 +522,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 
 	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
 				'use_review_quality': $J('input[name="use_review_quality"]').is( ":checked" ) ? 1 : 0,
-				'cursor' : cursor,
+						'cursor' : cursor,
 		'day_range' : dayRange,
 		'start_date' : startDate,
 		'end_date' : endDate,
@@ -709,6 +709,7 @@ function ClearReviewLanguageFilter()
 	$J('#review_language_all').attr( 'checked', true );
 	ShowFilteredReviews();
 }
+
 
 function ClearReviewDateRangeFilter()
 {
@@ -1390,6 +1391,8 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_language" ).hide();
 	}
 
+	// region
+	
 	// graph
 	if ( $J( "#review_date_range_histogram" ).attr( "checked" ) )
 	{
@@ -1691,7 +1694,7 @@ function ShowReportDialog( nAppId )
 
 function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
 {
-		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"https:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"https:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/store.akamai.steamstatic.com\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"https:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
+		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"https:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"https:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"https:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
 	$ModalContent.find('.gotSteam_AppName').text( strAppName );
 	$ModalContent.find('.gotsteam_action').text( strPlayLaunchVerb );
 	$ModalContent.find( '.gotSteam_SteamURL').attr( 'href', strSteamURL );
@@ -1873,7 +1876,7 @@ function ReparentAppLandingPageForSmallScreens()
 	// on iOS use the iOS share icon.  the default is Android.
 	if ( navigator.userAgent.toLowerCase().indexOf( 'iphone' ) != -1 )
 	{
-		$J('#shareImg').attr('src', 'https://store.akamai.steamstatic.com/public/shared/images/icon_share_ios.svg' );
+		$J('#shareImg').attr('src', 'https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg' );
 	}
 
 	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();

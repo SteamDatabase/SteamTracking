@@ -29,15 +29,14 @@
       }
     },
     75279: (e, t, s) => {
-      s.d(t, { A: () => _ });
-      var r = s(14947),
-        a = s(62792),
-        i = s(44332),
-        n = s(61859),
-        u = s(91675),
-        l = s(78327),
-        o = s(63369);
-      class _ {
+      s.d(t, { A: () => o });
+      var r = s(62792),
+        a = s(44332),
+        i = s(61859),
+        n = s(91675),
+        u = s(78327),
+        l = s(63369);
+      class o {
         m_eItemType;
         m_unID;
         m_bVisible = !1;
@@ -101,11 +100,11 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new m(e.assets(), e.id())),
+            ((this.m_Assets = new c(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_assets_without_overrides &&
               !this.m_AssetsWithoutOverrides &&
-              ((this.m_AssetsWithoutOverrides = new m(
+              ((this.m_AssetsWithoutOverrides = new c(
                 e.assets_without_overrides(),
                 e.id(),
               )),
@@ -126,11 +125,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new p(e.screenshots())),
+              ((this.m_Screenshots = new d(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new h(e.trailers())),
+              ((this.m_Trailers = new m(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -182,18 +181,18 @@
           );
         }
         BContainDataRequest(e) {
-          return _.BDataRequestContainsOtherDataRequest(
+          return o.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e,
           );
         }
         BCheckDataRequestIncluded(e) {
-          ("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
-            (0, i.w)(
+          ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
+            (0, a.w)(
               this.BContainDataRequest(e),
-              `Requested data without for ${(0, a.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
-              (0, r.HO)(e),
-              (0, r.HO)(this.m_DataRequested),
+              `Requested data without for ${(0, r.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
+              e,
+              this.m_DataRequested,
             );
         }
         GetStoreItemType() {
@@ -213,10 +212,10 @@
         }
         GetStorePageURL(e = !1) {
           return e && this.HasDemoStandaloneStorePage()
-            ? l.TS.STORE_BASE_URL +
+            ? u.TS.STORE_BASE_URL +
                 "app/" +
                 this.GetDemoStandaloneStorePageAppIDs()[0]
-            : l.TS.STORE_BASE_URL + this.m_strStoreURLPath;
+            : u.TS.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
           return this.m_strStoreURLPathOverride &&
@@ -229,12 +228,12 @@
         }
         GetCommunityPageURL() {
           return this.GetAppID()
-            ? l.TS.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
+            ? u.TS.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
             : null;
         }
         GetCommunityDiscussionForumsURL() {
           return this.GetAppID()
-            ? l.TS.COMMUNITY_BASE_URL +
+            ? u.TS.COMMUNITY_BASE_URL +
                 "app/" +
                 this.GetAppID() +
                 "/discussions/"
@@ -391,7 +390,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? c([
+              ? _([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -402,19 +401,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? c(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? _(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? c(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? _(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? c(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? _(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -475,18 +474,18 @@
             this.m_ReleaseInfo?.is_coming_soon)
           ) {
             if (this.m_ReleaseInfo?.coming_soon_display)
-              return (0, o.d)(this.m_ReleaseInfo);
+              return (0, l.d)(this.m_ReleaseInfo);
             if (this.m_ReleaseInfo?.custom_release_date_message)
               return this.m_ReleaseInfo.custom_release_date_message;
             const e = this.m_ReleaseInfo?.steam_release_date;
             return e
               ? this.m_ReleaseInfo?.is_abridged_release_date
-                ? (0, u.sq)(new Date(1e3 * e))
-                : (0, n.$z)(e)
+                ? (0, n.sq)(new Date(1e3 * e))
+                : (0, i.$z)(e)
               : "";
           }
           const e = this.GetReleaseDateRTime();
-          return e ? (0, n.$z)(e) : "";
+          return e ? (0, i.$z)(e) : "";
         }
         BIsComingSoon() {
           return (
@@ -635,12 +634,12 @@
           return this.m_strInternalName;
         }
       }
-      function c(e) {
+      function _(e) {
         if (!e?.length) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class m {
+      class c {
         m_strMainCapsuleURL;
         m_strSmallCapsuleURL;
         m_strHeaderURL;
@@ -709,7 +708,7 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              (this.m_strCommunityIcon = `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
+              (this.m_strCommunityIcon = `${u.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -746,7 +745,7 @@
         }
         ConstructAssetURL(e, t) {
           return (
-            l.TS.BASE_URL_SHARED_CDN +
+            u.TS.BASE_URL_SHARED_CDN +
             "/store_item_assets/" +
             e.replace("${FILENAME}", t)
           );
@@ -755,20 +754,20 @@
           return this.m_strCommunityIcon;
         }
       }
-      class h {
+      class m {
         m_mapTrailer = new Map();
         m_higherTrailers = new Array();
         m_otherTrailers = new Array();
         constructor(e) {
           e.highlights() &&
             e.highlights().forEach((e) => {
-              let t = new d(e);
+              let t = new h(e);
               this.m_mapTrailer.set(t.GetTrailerID(), t),
                 this.m_higherTrailers.push(t);
             }),
             e.other_trailers() &&
               e.other_trailers().forEach((e) => {
-                let t = new d(e);
+                let t = new h(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_otherTrailers.push(t);
               });
@@ -788,7 +787,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class d {
+      class h {
         m_strTrailerName;
         m_nBaseID;
         m_Trailer480p;
@@ -861,13 +860,13 @@
         }
         ConstructAssetURL(e, t) {
           return (
-            l.TS.VIDEO_CDN_URL +
+            u.TS.VIDEO_CDN_URL +
             "/store_trailers/" +
             e.replace("${FILENAME}", t)
           );
         }
       }
-      class p {
+      class d {
         m_rgAllScreenshots = new Array();
         m_rgOnlyAllAgesScreenshots = new Array();
         constructor(e) {
@@ -882,7 +881,7 @@
             }
             if (e) {
               const e =
-                l.TS.BASE_URL_SHARED_CDN +
+                u.TS.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
                 r[t].filename();
               this.m_rgAllScreenshots.push(e),
@@ -890,7 +889,7 @@
                 (t += 1);
             } else {
               const e =
-                l.TS.BASE_URL_SHARED_CDN +
+                u.TS.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
                 a[s].filename();
               this.m_rgAllScreenshots.push(e), (s += 1);
@@ -906,18 +905,20 @@
       }
     },
     16021: (e, t, s) => {
-      s.d(t, { A: () => p });
-      var r = s(14947),
-        a = s(56545),
-        i = s(96059),
-        n = s(59411),
-        u = s(15161),
-        l = s(44332),
-        o = s(68797),
-        _ = s(78327),
-        c = s(72839),
-        m = s(75279);
-      function h(e, t) {
+      s.d(t, { A: () => I });
+      var r = s(34629),
+        a = s(14947),
+        i = s(56545),
+        n = s(96059),
+        u = s(59411),
+        l = s(15161),
+        o = s(44332),
+        _ = s(68797),
+        c = s(78327),
+        m = s(72839),
+        h = s(75279),
+        d = s(10333);
+      function p(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -947,12 +948,12 @@
           include_links: e.include_links || t.include_links,
         };
       }
-      async function d(e, t) {
+      async function g(e, t) {
         const s = await e,
           r = await t;
         return 1 != s ? s : r;
       }
-      class p {
+      class I {
         k_QueueWaitUntilRequestMS = 5;
         k_nMaxBatchSize = 250;
         m_bReturnUnavailableItems = !1;
@@ -997,20 +998,20 @@
         static sm_instance;
         static Get() {
           return (
-            p.sm_instance ||
-              ((p.sm_instance = new p()),
-              (window.StoreItemCache = p.sm_instance)),
-            p.sm_instance
+            I.sm_instance ||
+              ((I.sm_instance = new I()),
+              (window.StoreItemCache = I.sm_instance)),
+            I.sm_instance
           );
         }
         static async Initialize(e, t) {
-          (0, l.w)(
-            !p.Get().m_bInitialized,
+          (0, o.w)(
+            !I.Get().m_bInitialized,
             "CStoreItemCache was already initialized; initialize it only once.",
           ),
-            (p.Get().m_SteamInterface = e),
-            (p.Get().m_bUsePartnerAPI = !!t),
-            (p.Get().m_bInitialized = !0);
+            (I.Get().m_SteamInterface = e),
+            (I.Get().m_bUsePartnerAPI = !!t),
+            (I.Get().m_bInitialized = !0);
         }
         GetSteamInterface() {
           return this.m_SteamInterface;
@@ -1055,7 +1056,7 @@
             (this.m_bActivelyResettingCache = !1);
         }
         static BIsInitialized() {
-          return p.Get().m_bInitialized;
+          return I.Get().m_bInitialized;
         }
         static k_DataRequest_CommonOnly = {};
         static k_DataRequest_BasicInfo = { include_basic_info: !0 };
@@ -1162,8 +1163,8 @@
         }
         async QueueStoreItemRequest(e, t, s) {
           if (
-            ((0, l.w)(
-              p.ValidateDataRequest(s),
+            ((0, o.w)(
+              I.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
             "string" == typeof e && (e = parseInt(e)),
@@ -1177,7 +1178,7 @@
             );
           if (!e)
             return (
-              (0, l.w)(
+              (0, o.w)(
                 !e,
                 `unexpected id ${e} of zero or undefined for type ${t}`,
               ),
@@ -1194,7 +1195,7 @@
                 () => this.FlushPendingInfo(),
                 this.k_QueueWaitUntilRequestMS,
               ))),
-            (this.m_setPendingDataRequest = h(this.m_setPendingDataRequest, s)),
+            (this.m_setPendingDataRequest = p(this.m_setPendingDataRequest, s)),
             t)
           ) {
             case 0:
@@ -1216,7 +1217,7 @@
               this.m_setPendingHubCategoryInfo.add(e);
               break;
             default:
-              (0, l.w)(!1, `Unexpected Type ${t}`);
+              (0, o.w)(!1, `Unexpected Type ${t}`);
           }
           const a = this.m_PendingInfoPromise;
           return (
@@ -1312,114 +1313,114 @@
             case 6:
               r = this.m_mapHubCategoriesInFlight.get(e);
           }
-          return r && m.A.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
+          return r && h.A.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
             ? r.promise
             : null;
         }
-        async HintLoadStoreItems(e, t, s, r, a, i, n, l) {
+        async HintLoadStoreItems(e, t, s, r, a, i, n, u) {
           let o = null;
           const _ = new Promise((e) => (o = e));
           let c = [],
             m = [];
           (t || []).forEach((e) => {
-            const t = this.GetPreviousSupersetLoadPromise(e, 0, l);
+            const t = this.GetPreviousSupersetLoadPromise(e, 0, u);
             if (t) m.push(t);
             else {
-              c.push(u.O4.fromObject({ appid: e }));
-              let t = h(this.GetStoreItemDataRequest(e, 0), l);
+              c.push(l.O4.fromObject({ appid: e }));
+              let t = p(this.GetStoreItemDataRequest(e, 0), u);
               const s = this.m_mapAppsInFlight.get(e);
-              (t = h(s?.dataRequest, t)),
+              (t = p(s?.dataRequest, t)),
                 s && m.push(s.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: s ? d(s.promise, _) : _,
+                  promise: s ? g(s.promise, _) : _,
                   dataRequest: t,
                 });
             }
           }),
             (s || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 1, l);
+              const t = this.GetPreviousSupersetLoadPromise(e, 1, u);
               if (t) m.push(t);
               else {
-                c.push(u.O4.fromObject({ packageid: e }));
-                let t = h(this.GetStoreItemDataRequest(e, 1), l);
+                c.push(l.O4.fromObject({ packageid: e }));
+                let t = p(this.GetStoreItemDataRequest(e, 1), u);
                 const s = this.m_mapPackageInFlight.get(e);
-                (t = h(s?.dataRequest, t)),
+                (t = p(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: s ? d(s.promise, _) : _,
+                    promise: s ? g(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
             }),
             (r || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 2, l);
+              const t = this.GetPreviousSupersetLoadPromise(e, 2, u);
               if (t) m.push(t);
               else {
-                c.push(u.O4.fromObject({ bundleid: e }));
-                let t = h(this.GetStoreItemDataRequest(e, 2), l);
+                c.push(l.O4.fromObject({ bundleid: e }));
+                let t = p(this.GetStoreItemDataRequest(e, 2), u);
                 const s = this.m_mapBundleInFlight.get(e);
-                (t = h(s?.dataRequest, t)),
+                (t = p(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapBundleInFlight.set(e, {
-                    promise: s ? d(s.promise, _) : _,
+                    promise: s ? g(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
             }),
             (a || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 4, l);
+              const t = this.GetPreviousSupersetLoadPromise(e, 4, u);
               if (t) m.push(t);
               else {
-                c.push(u.O4.fromObject({ tagid: e }));
-                let t = h(this.GetStoreItemDataRequest(e, 4), l);
+                c.push(l.O4.fromObject({ tagid: e }));
+                let t = p(this.GetStoreItemDataRequest(e, 4), u);
                 const s = this.m_mapTagsInFlight.get(e);
-                (t = h(s?.dataRequest, t)),
+                (t = p(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapTagsInFlight.set(e, {
-                    promise: s ? d(s.promise, _) : _,
+                    promise: s ? g(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
             }),
             (i || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 5, l);
+              const t = this.GetPreviousSupersetLoadPromise(e, 5, u);
               if (t) m.push(t);
               else {
-                c.push(u.O4.fromObject({ creatorid: e }));
-                let t = h(this.GetStoreItemDataRequest(e, 5), l);
+                c.push(l.O4.fromObject({ creatorid: e }));
+                let t = p(this.GetStoreItemDataRequest(e, 5), u);
                 const s = this.m_mapCreatorsInFlight.get(e);
-                (t = h(s?.dataRequest, t)),
+                (t = p(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? d(s.promise, _) : _,
+                    promise: s ? g(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
             }),
             (n || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 6, l);
+              const t = this.GetPreviousSupersetLoadPromise(e, 6, u);
               if (t) m.push(t);
               else {
-                c.push(u.O4.fromObject({ hubcategoryid: e }));
-                let t = h(this.GetStoreItemDataRequest(e, 6), l);
+                c.push(l.O4.fromObject({ hubcategoryid: e }));
+                let t = p(this.GetStoreItemDataRequest(e, 6), u);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
-                (t = h(s?.dataRequest, t)),
+                (t = p(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? d(s.promise, _) : _,
+                    promise: s ? g(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
             });
-          let p = 1;
+          let h = 1;
           if (
             (c.length > 0 &&
-              (p = await this.InternalHandleLoadStoreItems(e, c, l)),
-            o(p),
+              (h = await this.InternalHandleLoadStoreItems(e, c, u)),
+            o(h),
             m.length > 0)
           ) {
             const e = await Promise.all(m);
-            for (const t of e) 1 != t && 1 == p && (p = t);
+            for (const t of e) 1 != t && 1 == h && (h = t);
           }
           return (
             (t || []).forEach((e) => this.m_mapAppsInFlight.delete(e)),
@@ -1428,7 +1429,7 @@
             (a || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
             (i || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
             (n || []).forEach((e) => this.m_mapHubCategoriesInFlight.delete(e)),
-            p
+            h
           );
         }
         MarkStoreItemIDUnavailable(e) {
@@ -1482,10 +1483,10 @@
           );
         }
         async InternalHandleLoadStoreItems(e, t, s) {
-          let l = 1;
+          let r = 1;
           e ||
             (this.GetSteamInterface() ||
-              this.SetSteamInterface(new i.D(_.TS.WEBAPI_BASE_URL)),
+              this.SetSteamInterface(new n.D(c.TS.WEBAPI_BASE_URL)),
             (e = this.GetSteamInterface())),
             (t = this.SortStoreItems(t)),
             s.include_included_items &&
@@ -1496,45 +1497,45 @@
                   include_included_items: !1,
                 },
               });
-          const m = new Array();
+          const o = new Array();
           try {
-            const i = [];
+            const n = [];
             for (; t.length > 0; ) {
               const r = t.splice(0, this.k_nMaxBatchSize);
-              if ((m.push(r), this.m_bUsePartnerAPI)) {
-                const t = a.w.Init(n.St);
+              if ((o.push(r), this.m_bUsePartnerAPI)) {
+                const t = i.w.Init(u.St);
                 t.Body().set_include_unpublished(!1);
-                const l = t.Body().request(!0);
-                l.set_context((0, c.hS)(this.m_bUsePartnerAPI)),
-                  l.set_data_request(u.gn.fromObject(s)),
-                  l.set_ids(r),
-                  i.push(n.BT.GetItems(e.GetServiceTransport(), t));
+                const a = t.Body().request(!0);
+                a.set_context((0, m.hS)(this.m_bUsePartnerAPI)),
+                  a.set_data_request(l.gn.fromObject(s)),
+                  a.set_ids(r),
+                  n.push(u.BT.GetItems(e.GetServiceTransport(), t));
               } else {
-                const t = a.w.Init(u.eE);
-                (0, c.rV)(t, this.m_bUsePartnerAPI),
-                  (0, c.Bn)(t, s),
+                const t = i.w.Init(l.eE);
+                (0, m.rV)(t, this.m_bUsePartnerAPI),
+                  (0, m.Bn)(t, s),
                   t.Body().set_ids(r),
-                  i.push(u.$4.GetItems(e.GetAnonymousServiceTransport(), t));
+                  n.push(l.$4.GetItems(e.GetAnonymousServiceTransport(), t));
               }
             }
-            (await Promise.all(i)).forEach((e, a) => {
+            (await Promise.all(n)).forEach((e, i) => {
               1 == e.GetEResult()
                 ? e
                     .Body()
                     .store_items()
-                    .forEach((a) => {
-                      const i = a.id(),
-                        n = a.item_type();
+                    .forEach((r) => {
+                      const i = r.id(),
+                        n = r.item_type();
                       let u =
-                          this.m_bReturnUnavailableItems && 15 == a.success(),
-                        l = 1 == a.success() && !this.BIsStoreItemMissing(i, n);
-                      if (u || l) this.ReadItem(a, s);
+                          this.m_bReturnUnavailableItems && 15 == r.success(),
+                        l = 1 == r.success() && !this.BIsStoreItemMissing(i, n);
+                      if (u || l) this.ReadItem(r, s);
                       else {
                         switch (
-                          ("dev" == _.TS.WEB_UNIVERSE &&
+                          ("dev" == c.TS.WEB_UNIVERSE &&
                             console.warn(
-                              `Failed to load ${i} type ${n} with error ${a.success()}`,
-                              a,
+                              `Failed to load ${i} type ${n} with error ${r.success()}`,
+                              r,
                             ),
                           n)
                         ) {
@@ -1570,7 +1571,7 @@
                                 i,
                             );
                         }
-                        if (a.unvailable_for_country_restriction())
+                        if (r.unvailable_for_country_restriction())
                           switch (n) {
                             case 0:
                               this.m_setUnavailableDueToCountryRestrictionApps.add(
@@ -1595,7 +1596,7 @@
                                   e.GetEResult() +
                                   " message: " +
                                   e.Hdr().error_message(),
-                                (0, r.HO)(t),
+                                (0, a.HO)(t),
                               );
                           }
                       }
@@ -1605,25 +1606,25 @@
                       e.GetEResult() +
                       " message: " +
                       e.Hdr().error_message(),
-                    (0, r.HO)(t),
+                    (0, a.HO)(t),
                   ),
-                  (1 == e.Hdr().transport_error() || _.TS.FROM_WEB) &&
-                    this.MarkStoreItemIDUnavailable(m[a]),
-                  1 == l && (l = e.GetEResult()));
+                  (1 == e.Hdr().transport_error() || c.TS.FROM_WEB) &&
+                    this.MarkStoreItemIDUnavailable(o[i]),
+                  1 == r && (r = e.GetEResult()));
             });
           } catch (e) {
-            const t = (0, o.H)(e);
+            const t = (0, _.H)(e);
             return (
               console.error(
                 "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
                   t.strErrorMsg,
                 t,
               ),
-              m.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
+              o.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
               79
             );
           }
-          return l;
+          return r;
         }
         GetMapForType(e) {
           let t;
@@ -1806,7 +1807,7 @@
           }
           let a = r.get(e.id());
           if (
-            (a ? a.MergeData(e, t) : ((a = new m.A(e, t)), r.set(e.id(), a)),
+            (a ? a.MergeData(e, t) : ((a = new h.A(e, t)), r.set(e.id(), a)),
             t.include_included_items && e.included_items(!1))
           ) {
             for (const s of e.included_items().included_apps())
@@ -1817,6 +1818,7 @@
           return a;
         }
       }
+      (0, r.Cg)([d.o], I.prototype, "ReadItem", null);
     },
     62792: (e, t, s) => {
       var r;

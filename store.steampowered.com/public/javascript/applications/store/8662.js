@@ -281,8 +281,8 @@
             bHideStatus: D,
             renderStatus: v,
             renderRichPresence: P,
-            bHidePersona: f,
-            bDNDSet: C,
+            bHidePersona: C,
+            bDNDSet: f,
             bHasPartyBeacon: b,
             bHasGamePrivacy: I,
             bNoMask: k,
@@ -307,7 +307,7 @@
                     !a.is_in_nonsteam_game || r || (0, s.S$)(n)
                       ? a.GetCurrentGameName()
                       : (0, o.we)("#PersonaStateInNonSteamGame")),
-                  r || f
+                  r || C
                     ? r &&
                       a.is_awayOrSnooze &&
                       (w = (0, o.we)("#PersonaStateAway"))
@@ -316,7 +316,7 @@
                   (y = (0, o.we)("#PersonaStateWatchingBroadcast")),
             y || (y = a.GetLocalizedOnlineStatus()),
             v && (y = v());
-          let H = !f && !E;
+          let H = !C && !E;
           !1 === E && (H = !0),
             a.is_awayOrSnooze && H && (T = i.createElement(d, { persona: a }));
           let R = null;
@@ -327,7 +327,7 @@
                 i.createElement(p.GB9, null),
               ))
             : M.push(B().noContextMenu),
-            f && M.push(B().hidePersona),
+            C && M.push(B().hidePersona),
             P && (w = P()),
             (!_ && w) || M.push(B().twoLine);
           const x = !a.is_ingame && !D,
@@ -336,7 +336,7 @@
             U = (0, s.ID)(h.TS.LAUNCHER_TYPE);
           let G = u && !m,
             L = G ? u : a.m_strPlayerName,
-            W = !f && (F || x) && K;
+            W = !C && (F || x) && K;
           return i.createElement(
             "div",
             { ...Q, className: (0, c.A)(...M), onContextMenu: t },
@@ -357,7 +357,7 @@
                     ")",
                   ),
               ),
-              C &&
+              f &&
                 i.createElement(
                   "div",
                   {
@@ -389,7 +389,7 @@
                 ),
               R,
             ),
-            !f &&
+            !C &&
               i.createElement(
                 "div",
                 { className: B().richPresenceContainer },
@@ -696,7 +696,7 @@
       var l = a(18654),
         c = a.n(l),
         m = a(94011),
-        u = a(5970),
+        u = a(84518),
         d = a(12155),
         p = a(60014),
         A = a(51272),
@@ -707,7 +707,7 @@
         const { spotlight: t } = e,
           a = (0, p.aL)(t.url, "spotlight");
         return n.createElement(
-          u.Ay,
+          u.A,
           {
             appID: "app" == t.item?.type ? t.item.id : null,
             feature: "spotlight",
@@ -794,7 +794,7 @@
         const { dailyDeal: t } = e,
           a = (0, p.aL)(t.target, "daily-deal");
         return n.createElement(
-          u.Ay,
+          u.A,
           {
             appID: "app" == t.item?.type ? t.item.id : null,
             feature: "daily-deal",
@@ -994,124 +994,118 @@
     },
     10962: (e, t, a) => {
       "use strict";
-      a.d(t, { fs: () => N, kb: () => _, y7: () => B, zD: () => S });
+      a.d(t, { kb: () => c, y7: () => p, zD: () => u });
       var n,
-        i = a(75844),
-        r = a(90626),
-        o = a(55963),
-        s = a(55263),
-        l = a(83284),
-        c = a.n(l),
-        m = a(12155),
-        u = a(52038),
-        d = a(26101),
-        p = a(30261),
-        A = a(60014);
+        i = a(90626),
+        r = a(55263),
+        o = a(12155),
+        s = a(52038),
+        l = a(30261);
       !(function (e) {
         (e.k_eBlock = "block"),
           (e.k_eFinal = "final"),
           (e.k_eOriginal = "original"),
           (e.k_eReservation = "reservation");
       })(n || (n = {}));
-      const _ = (e) => {
+      const c = (e) => {
         switch (e.display_style) {
           case n.k_eFinal:
             return (
               Boolean(e.formatted_final_price) &&
-              r.createElement("span", null, e.formatted_final_price)
+              i.createElement("span", null, e.formatted_final_price)
             );
           case n.k_eOriginal:
             const t = e.formatted_orig_price || e.formatted_final_price;
-            return Boolean(t) && r.createElement("span", null, t);
+            return Boolean(t) && i.createElement("span", null, t);
         }
         const t = "reservation" == e.display_style,
           a = e.bHideDiscountPercentForCompliance && !0,
-          i = "bbcode_price" == e.className;
-        return r.createElement(
+          r = "bbcode_price" == e.className;
+        return i.createElement(
           "span",
           {
-            className: (0, u.A)({
-              [p.StoreSalePriceWidget]: !0,
+            className: (0, s.A)({
+              [l.StoreSalePriceWidget]: !0,
               [e.className]: Boolean(e.className),
-              [p.StoreSaleReservationPrice]: t,
+              [l.StoreSaleReservationPrice]: t,
             }),
           },
           Boolean(e.discount_percent && !a) &&
-            r.createElement(
+            i.createElement(
               "span",
               {
-                className: (0, u.A)(
-                  p.StoreSaleDiscountBox,
+                className: (0, s.A)(
+                  l.StoreSaleDiscountBox,
                   "StoreSaleDiscountBox",
-                  e.bDiscountFromCoupon && p.FromCoupon,
+                  e.bDiscountFromCoupon && l.FromCoupon,
                 ),
               },
               `-${e.discount_percent}%`,
             ),
           Boolean(e.discount_percent && a) &&
-            r.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, u.A)({
-                  [p.DiscountIconCtn]: !0,
-                  bbcode_price_discount: i,
+                className: (0, s.A)({
+                  [l.DiscountIconCtn]: !0,
+                  bbcode_price_discount: r,
                 }),
               },
-              r.createElement(m.XH_, null),
+              i.createElement(o.XH_, null),
             ),
           Boolean(e.formatted_final_price) &&
             (Boolean(e.discount_percent && e.formatted_orig_price)
-              ? r.createElement(
+              ? i.createElement(
                   "div",
                   {
-                    className: (0, u.A)({
-                      [p.StoreSaleDiscountedPriceCtn]: !0,
-                      bbcode_price_ctn: i,
+                    className: (0, s.A)({
+                      [l.StoreSaleDiscountedPriceCtn]: !0,
+                      bbcode_price_ctn: r,
                     }),
                   },
-                  r.createElement(
+                  i.createElement(
                     "div",
                     {
-                      className: (0, u.A)({
-                        [p.StoreOriginalPrice]: !0,
+                      className: (0, s.A)({
+                        [l.StoreOriginalPrice]: !0,
                         StoreOriginalPrice: !0,
-                        bbcode_price_orig: i,
+                        bbcode_price_orig: r,
                       }),
                     },
                     e.formatted_orig_price,
                   ),
-                  r.createElement(
+                  i.createElement(
                     "div",
                     {
-                      className: (0, u.A)({
-                        [p.StoreSalePriceBox]: !0,
-                        bbcode_price_box: i,
-                        [p.StoreSaleReservationPriceBox]: t,
-                        bbcode_price_final: i,
+                      className: (0, s.A)({
+                        [l.StoreSalePriceBox]: !0,
+                        bbcode_price_box: r,
+                        [l.StoreSaleReservationPriceBox]: t,
+                        bbcode_price_final: r,
                       }),
                     },
                     e.formatted_final_price,
                   ),
                 )
-              : r.createElement(
+              : i.createElement(
                   "div",
                   {
-                    className: (0, u.A)({
-                      [p.StoreSalePriceBox]: !0,
-                      bbcode_price_box: i,
-                      [p.StoreSaleReservationPriceBox]: t,
-                      bbcode_price_final: i,
+                    className: (0, s.A)({
+                      [l.StoreSalePriceBox]: !0,
+                      bbcode_price_box: r,
+                      [l.StoreSaleReservationPriceBox]: t,
+                      bbcode_price_final: r,
                     }),
                   },
                   e.formatted_final_price,
                 )),
         );
       };
-      function g(e) {
-        const [t] = (0, s.Gg)(e.packageID, {});
+      function m(e) {
+        const [t] = (0, r.Gg)(e.packageID, {});
         if (t) {
           const a = t.GetBestPurchaseOption();
-          return r.createElement(_, {
+          return i.createElement(c, {
             formatted_final_price: a.formatted_final_price,
             formatted_orig_price: a.formatted_original_price,
             discount_percent: a.discount_pct,
@@ -1123,15 +1117,15 @@
         }
         return null;
       }
-      function S(e) {
+      function u(e) {
         const t = Number(e.args.packageid);
         if (!t) return null;
         const a = e.args.display;
-        return r.createElement(g, { packageID: t, display_style: a });
+        return i.createElement(m, { packageID: t, display_style: a });
       }
-      const E = (0, i.PA)((e) => {
-        const [t] = (0, s.Gg)(e.packageID, {}),
-          [a] = (0, s.Gg)(e.compareID, {});
+      function d(e) {
+        const [t] = (0, r.Gg)(e.packageID, {}),
+          [a] = (0, r.Gg)(e.compareID, {});
         if (!t || !a) return null;
         const n = (function (e, t) {
           if (
@@ -1154,27 +1148,14 @@
         })(t, a);
         return void 0 === n
           ? null
-          : r.createElement("span", { className: p.StorePriceSavings }, n);
-      });
-      function B(e) {
+          : i.createElement("span", { className: l.StorePriceSavings }, n);
+      }
+      function p(e) {
         const t = Number(e.args.packageid),
           a = Number(e.args.compareid);
         return t && a
-          ? r.createElement(E, { packageID: t, compareID: a })
+          ? i.createElement(d, { packageID: t, compareID: a })
           : null;
-      }
-      const h = (e) => {
-        const t = (0, A.n9)(),
-          a = (0, o.L3)(t);
-        return r.createElement(d.EP, {
-          snr: a,
-          appID: e.appid,
-          classOverride: (0, u.A)(c().WishlistButtonNotTop, "WishlistButton"),
-        });
-      };
-      function N(e) {
-        const t = Number(e.args.appid);
-        return t ? r.createElement(h, { appid: t }) : null;
       }
     },
     70809: (e, t, a) => {

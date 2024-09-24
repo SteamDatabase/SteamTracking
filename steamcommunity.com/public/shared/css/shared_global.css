@@ -1459,6 +1459,10 @@ div#global_header .activebg {
 	display: inline-block;
 	padding-left: 4px;
 	line-height: 25px;
+	border: none;
+	background-color: transparent;
+	color: inherit;
+	font-size: inherit;
 }
 
 #account_language_pulldown {

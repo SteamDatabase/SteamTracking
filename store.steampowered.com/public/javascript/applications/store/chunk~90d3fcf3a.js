@@ -5673,8 +5673,8 @@
               e?.BHasSaleEnabled() &&
                 (e.GetSaleSectionCount() > 0 &&
                   e.GetSaleSections().forEach((e) => {
-                    "items" != e.section_type ||
-                      e.smart_section ||
+                    (0, o.ye)(e.section_type) &&
+                      !e.smart_section &&
                       e.capsules.forEach((e) => {
                         void 0 !== e.visibility_index &&
                           (void 0 === t || t < e.visibility_index) &&

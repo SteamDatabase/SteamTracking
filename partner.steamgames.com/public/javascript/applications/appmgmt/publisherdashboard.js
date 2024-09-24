@@ -2418,12 +2418,15 @@
           g = (0, ze.o9)(a),
           E = d > 0,
           D = u >= ze.of.DealReady,
-          h = (0, Ge.ls)(t?.toString(), a.discount_event_id?.toString()),
-          f = new Intl.DateTimeFormat(navigator.language, {
+          h = D
+            ? (0, i.we)("#Dashboard_UpcomingEvents_DailyDeal_ReadyToGo")
+            : "",
+          f = (0, Ge.ls)(t?.toString(), a.discount_event_id?.toString()),
+          T = new Intl.DateTimeFormat(navigator.language, {
             month: "long",
             day: "numeric",
           }).format(new Date(1e3 * a.rtime32_start_time)),
-          T = (0, ze.UJ)(a);
+          b = (0, ze.UJ)(a);
         return n.createElement(
           y.b1,
           { hasImage: !!o },
@@ -2464,7 +2467,7 @@
           n.createElement(
             y.FV,
             null,
-            n.createElement(y.hq, { complete: D, urgent: !0 }),
+            n.createElement(y.hq, { complete: D, urgent: !0, overrideText: h }),
             E &&
               n.createElement(y.Pj, {
                 complete: E,
@@ -2476,7 +2479,7 @@
                 actionStatus: (0, i.we)(
                   "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
                 ),
-                actionUrl: h,
+                actionUrl: f,
               }),
             !E &&
               n.createElement(y.Pj, {
@@ -2487,12 +2490,12 @@
                 ),
                 status: (0, i.we)(
                   "#Dashboard_UpcomingEvents_DailyDeal_DueBy",
-                  f,
+                  T,
                 ),
                 actionStatus: (0, i.we)(
                   "#Dashboard_UpcomingEvents_DailyDeal_EnterDiscount",
                 ),
-                actionUrl: h,
+                actionUrl: f,
               }),
             g == ze.Sq.SetUp &&
               n.createElement(y.Pj, {
@@ -2504,7 +2507,7 @@
                 actionStatus: (0, i.we)(
                   "#Dashboard_UpcomingEvents_DailyDeal_StatusSalePageView",
                 ),
-                actionUrl: T,
+                actionUrl: b,
               }),
             g == ze.Sq.NotSetUp &&
               n.createElement(y.Pj, {

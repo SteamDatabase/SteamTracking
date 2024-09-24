@@ -611,6 +611,62 @@ function SignOEMProductPurchaseAgreement()
 	);
 }
 
+function SignSteamClientDistributionAgreement()
+{
+	if ( !ValidateProjectInfo( false ) )
+	{
+		GoToSection( 'ProjectInfo' );
+		return;
+	}
+
+	if ( !ValidateCompanyInfo( false ) )
+	{
+		GoToSection( 'CompanyInfo' );
+		return;
+	}
+
+	if ( !ValidateSigneeInfoOnAgreementPage() )
+	{
+		return;
+	}
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsave',
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					top.location.href = response.redirect_url;
+				}
+				else
+				{
+					if ( typeof response.captchagid !== 'undefined' )
+					{
+						ShowAlertDialog( 'Error', 'Error verifying humanity' );
+						UpdateCaptcha( response.captchagid );
+						$J( "#input_captcha" ).val('');
+					}
+					else if ( typeof response.errormsg !== 'undefined' )
+					{
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.errormsg );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+					}
+				}
+			},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
 function SignProductBetaParticipationAgreement()
 {
 	if ( !ValidateSigneeInfoOnAgreementPage() )

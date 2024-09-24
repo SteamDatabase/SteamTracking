@@ -2761,6 +2761,7 @@ button.DialogButton {
   ._2jqJcaTXqamPqN0cZxwcL7 {
   font-size: 16px;
   margin-bottom: 10px;
+  margin-top: 6px;
 }
 ._1_188Z8mN56wt5ykoDyWA5
   ._2bD-7QwwjnOaBcg8cnI3FZ
@@ -2826,26 +2827,6 @@ button.DialogButton {
   font-size: 14px;
   color: #d3d3d3;
   margin-right: 10px;
-}
-._1_188Z8mN56wt5ykoDyWA5
-  ._330b20HufVN1e340Rx78GJ
-  ._1ZH7SW9N4xlVqcQNZvvY8Z
-  ._3t51fohJAZ-d_i6mP-BZfc {
-  border: 1px solid #9b9b9b;
-  width: 300px;
-  height: 10px;
-  margin-right: 5px;
-}
-._1_188Z8mN56wt5ykoDyWA5
-  ._330b20HufVN1e340Rx78GJ
-  ._1ZH7SW9N4xlVqcQNZvvY8Z
-  ._3t51fohJAZ-d_i6mP-BZfc
-  ._3ASjUyTbSWymX_U9o6jmn- {
-  height: 100%;
-  background-color: #686868;
-  transition-property: width;
-  transition-duration: .2s;
-  transition-timing-function: ease-in-out;
 }
 ._1_188Z8mN56wt5ykoDyWA5
   ._330b20HufVN1e340Rx78GJ
@@ -2917,6 +2898,54 @@ button.DialogButton {
   ._3yfLac5uYSfmnvttqIy033
   ._3cmDGnLwTwr4eTkH72PKfI:hover {
   color: #999;
+}
+._3t51fohJAZ-d_i6mP-BZfc {
+  border: 1px solid #9b9b9b;
+  width: 300px;
+  height: 10px;
+  margin-right: 5px;
+}
+._3t51fohJAZ-d_i6mP-BZfc._2zXp7_alo9FnScuyuw8Dw2 {
+  border: 1px solid #849483;
+}
+._3t51fohJAZ-d_i6mP-BZfc._2zXp7_alo9FnScuyuw8Dw2 ._3ASjUyTbSWymX_U9o6jmn- {
+  background-color: #586658;
+}
+._3t51fohJAZ-d_i6mP-BZfc ._3ASjUyTbSWymX_U9o6jmn- {
+  height: 100%;
+  background-color: #686868;
+  transition-property: width;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+.EXtlCRbfkdi5Km4xSLu7a {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.EXtlCRbfkdi5Km4xSLu7a ._3YZkK5RlwPdFTbuMnCzhl {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.EXtlCRbfkdi5Km4xSLu7a ._3YZkK5RlwPdFTbuMnCzhl ._3Huz7jgzTK86UGh8toMwOQ {
+  min-width: 230px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #7aa383;
+}
+.EXtlCRbfkdi5Km4xSLu7a ._3YZkK5RlwPdFTbuMnCzhl ._1TLC_vifQFStAMdQJXDfpz {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #a8d1b1;
 }
 .BbjEtMeSHXYvu-aBMMbwg {
   display: flex;

@@ -2264,7 +2264,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	z-index: 400;
 	position: sticky;
 	top: 0;
-	background-image: url('https://cdn.akamai.steamstatic.com/store/promo/summer2020/tiling_orange.png?v=2');
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/tiling_orange.png?v=2');
 	background-repeat: repeat;
 
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

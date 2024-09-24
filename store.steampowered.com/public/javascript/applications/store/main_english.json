@@ -485,7 +485,7 @@
     "FamilyManagement_InviteMethodFriendCode": "Enter Friend Code",
     "FamilyManagement_InviteMethodDeviceSharing": "Invite a user sharing this computer",
     "FamilyManagement_InviteMethodFormerMembers": "Invite a former member",
-    "FamilyManagement_CooldownAndReinvite": "Your family cannot invite new members until %1$s. Until then you can reinvite former members:",
+    "FamilyManagement_CooldownAndReinvite": "Your family cannot invite new members until %1$s. Until then you can reinvite the following former members:",
     "FamilyManagement_PreviousUsers": "Suggested users:",
     "FamilyManagement_SelectFriend": "Search for a Steam user to invite from the list below.",
     "FamilyManagement_InviteFriendNamePlaceholder": "Search for a Steam user to invite",

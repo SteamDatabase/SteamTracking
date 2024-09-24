@@ -171,7 +171,7 @@
     },
     43186: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Pa });
+      r.r(t), r.d(t, { default: () => Ga });
       var i = r(56545),
         n = r(37735),
         a = r(80613),
@@ -10373,7 +10373,7 @@
           u = r
             ? (0, Ut.we)("#GamesList_Button_Pause")
             : (0, Ut.we)("#GamesList_Button_Resume"),
-          d = (0, Je.useContext)(za);
+          d = (0, Je.useContext)(Sa);
         return (
           (0, Je.useEffect)(
             () => (
@@ -10435,7 +10435,7 @@
               {
                 disabled: s.isPending,
                 onClick: () => {
-                  s.mutateAsync(), wa(e.appid);
+                  s.mutateAsync(), ya(e.appid);
                 },
                 className: Si.DownloadIconButton,
               },
@@ -10506,7 +10506,7 @@
             {
               disabled: r.isPending,
               onClick: () => {
-                r.mutateAsync(), wa(e.appid);
+                r.mutateAsync(), ya(e.appid);
               },
               className: Si.DownloadIconButton,
             },
@@ -10593,14 +10593,14 @@
                   Je.createElement(Ei, {
                     app: e,
                     onOK: () => {
-                      n.mutateAsync(), wa(e.appid);
+                      n.mutateAsync(), ya(e.appid);
                     },
                   }),
                   window,
                 );
               }
             : () => {
-                r.mutateAsync(), wa(e.appid);
+                r.mutateAsync(), ya(e.appid);
               },
           l = e.installed
             ? "#GamesList_Button_Uninstall"
@@ -11113,7 +11113,7 @@
                           );
                       }
                     })(e.item_type(), e.id()),
-                    e.toObject(),
+                    e,
                   );
                 }),
               n &&
@@ -11137,7 +11137,7 @@
               r.map((e) => {
                 const [t] = ln(e, "|"),
                   r = d.get(t);
-                return r || { ...sn(t), success: 2 };
+                return r ? r.toObject() : { ...sn(t), success: 2 };
               })
             );
           },
@@ -11150,85 +11150,24 @@
             context: t,
             msDelayBatch: r,
             serviceTransportOverride: i,
-            children: n,
+            legacyCacheStoreItemData: n,
+            children: a,
           } = e,
-          a = (0, it.KV)(),
-          s = (0, rt.jE)(),
-          l = Je.useCallback(
-            (e, t) =>
-              (function (e, t, r) {
-                const i = (function (e) {
-                  var t;
-                  const r = null !== (t = e.item_type) && void 0 !== t ? t : -1,
-                    i = e.id || 0;
-                  switch (r) {
-                    case 0:
-                      return { appid: i };
-                    case 1:
-                      return { packageid: i };
-                    case 2:
-                      return { bundleid: i };
-                    case 4:
-                      return { tagid: i };
-                    case 5:
-                      return { creatorid: i };
-                    case 6:
-                      return { hubcategoryid: i };
-                    case 3:
-                    case -1:
-                      return;
-                    default:
-                      return void (0, rn.z)(
-                        r,
-                        `Unknown EStoreItemType ${r} ${(0, tn.md)(r)} `,
-                      );
-                  }
-                })(t);
-                if (!i) return;
-                (function (e, t, r) {
-                  e.setQueryData(_n(t, "default_info"), Mn(r));
-                })(e, i, t),
-                  r.include_assets &&
-                    (function (e, t, r) {
-                      yn(e, t, r, "include_assets", "assets");
-                    })(e, i, t);
-                r.include_screenshots &&
-                  (function (e, t, r) {
-                    yn(e, t, r, "include_screenshots", "screenshots");
-                  })(e, i, t);
-                r.include_assets_without_overrides &&
-                  (function (e, t, r) {
-                    yn(
-                      e,
-                      t,
-                      r,
-                      "include_assets_without_overrides",
-                      "assets_without_overrides",
-                    );
-                  })(e, i, t);
-                r.include_reviews &&
-                  (function (e, t, r) {
-                    yn(e, t, r, "include_reviews", "reviews");
-                  })(e, i, t);
-                r.include_release &&
-                  (function (e, t, r) {
-                    yn(e, t, r, "include_release", "release");
-                  })(e, i, t);
-                r.include_tag_count &&
-                  r.include_tag_count > 0 &&
-                  (function (e, t, r) {
-                    yn(e, t, r, "top_tags", "tags");
-                  })(e, i, t);
-              })(s, e, t),
-            [s],
+          s = (0, it.KV)(),
+          l = (0, rt.jE)(),
+          o = Je.useCallback(
+            (e, t) => {
+              fn(l, e.toObject(), t), n && n(e, t);
+            },
+            [l, n],
           ),
-          o = i || a,
-          { country: c, language: u, realm: d, bUsePartnerAPI: m } = t,
-          p = Je.useMemo(
-            () => ({ country: c, language: u, realm: d, bUsePartnerAPI: m }),
-            [c, u, d, m],
+          c = i || s,
+          { country: u, language: d, realm: m, bUsePartnerAPI: p } = t,
+          b = Je.useMemo(
+            () => ({ country: u, language: d, realm: m, bUsePartnerAPI: p }),
+            [u, d, m, p],
           ),
-          b = Je.useMemo(() => {
+          B = Je.useMemo(() => {
             const e = r
               ? (function (e) {
                   let t = 0;
@@ -11242,17 +11181,17 @@
                   };
                 })(r)
               : void 0;
-            return mn(o, p, { cache: !1, batchScheduleFn: e }, l);
-          }, [o, l, p, r]),
-          B = Je.useMemo(
+            return mn(c, b, { cache: !1, batchScheduleFn: e }, o);
+          }, [c, o, b, r]),
+          g = Je.useMemo(
             () => ({
-              dataLoader: b,
-              storeBrowseContext: p,
-              cacheStoreItemData: l,
+              dataLoader: B,
+              storeBrowseContext: b,
+              cacheStoreItemData: o,
             }),
-            [b, p, l],
+            [B, b, o],
           );
-        return Je.createElement(pn.Provider, { value: B }, n);
+        return Je.createElement(pn.Provider, { value: g }, a);
       }
       function Bn(e, t = {}) {
         const r = Je.useContext(pn).dataLoader;
@@ -11269,7 +11208,7 @@
       function wn(e, t, r, i) {
         return {
           queryKey: _n(t, r),
-          queryFn: async () => (await hn(e, t, r))[i] || null,
+          queryFn: async () => (await zn(e, t, r))[i] || null,
           staleTime: 216e5,
         };
       }
@@ -11277,9 +11216,94 @@
         e.setQueryData(_n(t, i), r[n]);
       }
       function _n(e, t) {
-        return ["StoreItem", nn(e), t];
+        return ["StoreItem", e && nn(e), t];
       }
-      const fn = [
+      function fn(e, t, r) {
+        var i, n, a, s;
+        const l = (function (e) {
+          var t;
+          const r = null !== (t = e.item_type) && void 0 !== t ? t : -1,
+            i = e.id || 0;
+          switch (r) {
+            case 0:
+              return { appid: i };
+            case 1:
+              return { packageid: i };
+            case 2:
+              return { bundleid: i };
+            case 4:
+              return { tagid: i };
+            case 5:
+              return { creatorid: i };
+            case 6:
+              return { hubcategoryid: i };
+            case 3:
+            case -1:
+              return;
+            default:
+              return void (0, rn.z)(
+                r,
+                `Unknown EStoreItemType ${r} ${(0, tn.md)(r)} `,
+              );
+          }
+        })(t);
+        l &&
+          (!(function (e, t, r) {
+            e.setQueryData(_n(t, "default_info"), hn(r));
+          })(e, l, t),
+          r.include_assets &&
+            (function (e, t, r) {
+              yn(e, t, r, "include_assets", "assets");
+            })(e, l, t),
+          r.include_screenshots &&
+            (function (e, t, r) {
+              yn(e, t, r, "include_screenshots", "screenshots");
+            })(e, l, t),
+          r.include_assets_without_overrides &&
+            (function (e, t, r) {
+              yn(
+                e,
+                t,
+                r,
+                "include_assets_without_overrides",
+                "assets_without_overrides",
+              );
+            })(e, l, t),
+          r.include_reviews &&
+            (function (e, t, r) {
+              yn(e, t, r, "include_reviews", "reviews");
+            })(e, l, t),
+          r.include_release &&
+            (function (e, t, r) {
+              yn(e, t, r, "include_release", "release");
+            })(e, l, t),
+          r.include_tag_count &&
+            r.include_tag_count > 0 &&
+            (function (e, t, r) {
+              yn(e, t, r, "top_tags", "tags");
+            })(e, l, t),
+          r.include_platforms &&
+            (function (e, t, r) {
+              yn(e, t, r, "include_platforms", "platforms");
+            })(e, l, t),
+          r.include_included_items &&
+            r.included_item_data_request &&
+            (null ===
+              (n =
+                null === (i = t.included_items) || void 0 === i
+                  ? void 0
+                  : i.included_apps) ||
+              void 0 === n ||
+              n.forEach((t) => fn(e, t, r.included_item_data_request)),
+            null ===
+              (s =
+                null === (a = t.included_items) || void 0 === a
+                  ? void 0
+                  : a.included_packages) ||
+              void 0 === s ||
+              s.forEach((t) => fn(e, t, r.included_item_data_request))));
+      }
+      const Mn = [
         "assets",
         "tagids",
         "tags",
@@ -11295,20 +11319,21 @@
         "assets_without_overrides",
         "user_filter_failure",
         "links",
+        "platforms",
       ];
-      function Mn(e) {
+      function hn(e) {
         const t = { ...e };
-        for (const e of fn) delete t[e];
+        for (const e of Mn) delete t[e];
         return t;
       }
-      async function hn(e, t, r) {
+      async function zn(e, t, r) {
         return await e.load(`${nn(t)}|${r}`);
       }
-      const zn = parseInt(yi.GameHeight),
-        Sn = parseInt(yi.GamePadding),
-        Rn = parseInt(yi.RemoteControlsHeight),
-        vn = zn + Sn;
-      function Fn() {
+      const Sn = parseInt(yi.GameHeight),
+        Rn = parseInt(yi.GamePadding),
+        vn = parseInt(yi.RemoteControlsHeight),
+        Fn = Sn + Rn;
+      function qn() {
         return (function (e) {
           const t = (0, Je.useMemo)(() => matchMedia(e), [e]),
             [r, i] = (0, Je.useState)(t.matches);
@@ -11326,7 +11351,7 @@
           );
         })(`(max-width: ${yi.MobileBreakpoint})`);
       }
-      function qn(e) {
+      function Cn(e) {
         const t = ht(e.appid),
           r = (function (e) {
             const t = (0, it.KV)(),
@@ -11391,7 +11416,7 @@
           );
         }, [e, t.data, t.isLoading, r.data, r.isLoading, i.data, i.isLoading]);
       }
-      function Cn(e) {
+      function Wn(e) {
         const t = Bt(),
           r = ht(e.appid),
           i = (function (e) {
@@ -11432,10 +11457,10 @@
           );
         }, [e, t, r.data, r.isLoading, i.data]);
       }
-      function Wn(e) {
-        return wt() ? qn(e) : Cn(e);
-      }
       function jn(e) {
+        return wt() ? Cn(e) : Wn(e);
+      }
+      function Tn(e) {
         const t = Bt(),
           r = (function (e) {
             return pt.Get().GetGCPDGames().includes(e.appid);
@@ -11481,7 +11506,7 @@
           );
         }, [t, e, r, i]);
       }
-      function Tn(e) {
+      function Un(e) {
         const t = wt(),
           r = ar(e.appid),
           i = t,
@@ -11534,7 +11559,7 @@
           );
         }, [e, i, r, n]);
       }
-      const Un = Je.forwardRef(
+      const In = Je.forwardRef(
         ({ achievement: e, appid: t, className: r }, i) => {
           const n = parseFloat(e.player_percent_unlocked) < 10,
             a = `${ct.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.icon}`;
@@ -11550,7 +11575,7 @@
           });
         },
       );
-      function In({ appid: e, achievement: t }) {
+      function On({ appid: e, achievement: t }) {
         const r = `${ct.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${e}/${t.icon}`,
           i = parseFloat(t.player_percent_unlocked) < 10;
         return Je.createElement(
@@ -11564,7 +11589,7 @@
           Je.createElement(
             "div",
             { className: _i.TopSection },
-            Je.createElement(Un, { appid: e, achievement: t }),
+            Je.createElement(In, { appid: e, achievement: t }),
             Je.createElement(
               "div",
               { className: _i.TextSection },
@@ -11587,22 +11612,22 @@
             ),
         );
       }
-      const On = {
+      const En = {
           direction: "top",
           bEnablePointerEvents: !1,
           style: { width: void 0, height: void 0, minHeight: void 0 },
         },
-        En = Je.forwardRef(({ appid: e, achievement: t }, r) =>
+        Pn = Je.forwardRef(({ appid: e, achievement: t }, r) =>
           Je.createElement(
             bi.JU,
             {
-              hoverContent: Je.createElement(In, { appid: e, achievement: t }),
-              hoverProps: On,
+              hoverContent: Je.createElement(On, { appid: e, achievement: t }),
+              hoverProps: En,
             },
-            Je.createElement(Un, { ref: r, achievement: t, appid: e }),
+            Je.createElement(In, { ref: r, achievement: t, appid: e }),
           ),
         );
-      function Pn({
+      function Gn({
         children: e,
         remainderRenderer: t,
         totalItemOverride: r,
@@ -11634,7 +11659,7 @@
           b < p && t(p - b),
         );
       }
-      function Gn({ game: e, visible: t, totalUnlocked: r }) {
+      function Nn({ game: e, visible: t, totalUnlocked: r }) {
         var i, n;
         const a = (function (e, t) {
             const r = (0, it.KV)(),
@@ -11658,7 +11683,7 @@
           ? void 0
           : n.length) > 0
           ? Je.createElement(
-              Pn,
+              Gn,
               {
                 className: _i.AchievementIcons,
                 totalItemOverride: r,
@@ -11672,7 +11697,7 @@
                   ),
               },
               a.data.achievements.map((t) =>
-                Je.createElement(En, {
+                Je.createElement(Pn, {
                   appid: e.appid,
                   achievement: t,
                   key: `${t.statid}${t.bit}`,
@@ -11681,7 +11706,7 @@
             )
           : null;
       }
-      function Nn({ game: e, visible: t, showTop: r }) {
+      function An({ game: e, visible: t, showTop: r }) {
         const i = Mt(e, t).data;
         if (!i) return null;
         if (0 === i.total) return null;
@@ -11712,14 +11737,14 @@
             }),
           ),
           r &&
-            Je.createElement(Gn, {
+            Je.createElement(Nn, {
               game: e,
               visible: t,
               totalUnlocked: i.unlocked,
             }),
         );
       }
-      function An({ game: e, visible: t }) {
+      function Ln({ game: e, visible: t }) {
         const r = Mt(e, t).data;
         return r && t && r.total && r.unlocked === r.total
           ? Je.createElement(
@@ -11732,40 +11757,40 @@
             )
           : null;
       }
-      const Ln = () => {};
-      function xn({ links: e }) {
+      const xn = () => {};
+      function kn({ links: e }) {
         return Je.createElement(
           mi.tz,
           { className: _i.NavDropdownMenu },
           e.map((e) =>
             Je.createElement(
               mi.kt,
-              { onSelected: "action" in e ? () => e.action() : Ln, key: e.key },
-              Je.createElement(ia, { link: e }),
+              { onSelected: "action" in e ? () => e.action() : xn, key: e.key },
+              Je.createElement(na, { link: e }),
             ),
           ),
         );
       }
-      function kn({ game: e }) {
-        const t = Wn(e);
+      function Dn({ game: e }) {
+        const t = jn(e);
         return t.bIsLoading
           ? Je.createElement(
               mi.tz,
               { className: _i.NavDropdownMenu },
               Je.createElement(Wt.t, { size: "small", position: "center" }),
             )
-          : Je.createElement(xn, { links: t.rgLinks });
+          : Je.createElement(kn, { links: t.rgLinks });
       }
-      const Dn = {
+      const $n = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
       };
-      function $n({ links: e, children: t, className: r }) {
+      function Hn({ links: e, children: t, className: r }) {
         const i = (0, Je.useRef)(null),
           n = (0, Je.useCallback)(() => {
-            (0, Ht.lX)(Je.createElement(xn, { links: e }), i.current, Dn);
+            (0, Ht.lX)(Je.createElement(kn, { links: e }), i.current, $n);
           }, [i, e]);
         return Je.createElement(
           vt.Z,
@@ -11778,7 +11803,7 @@
           t,
         );
       }
-      function Hn({ links: e, label: t, className: r, onClick: i }) {
+      function Kn({ links: e, label: t, className: r, onClick: i }) {
         return Je.createElement(qt.Vb, {
           rgOptions: e.map((e) => ({ label: e.label, data: e })),
           onMenuOpened: i,
@@ -11791,8 +11816,8 @@
           highlightOnFocus: !0,
         });
       }
-      function Kn({ game: e, setLinkData: t }) {
-        const r = Wn(e);
+      function Vn({ game: e, setLinkData: t }) {
+        const r = jn(e);
         return (
           (0, Je.useEffect)(() => {
             t(r.rgLinks);
@@ -11800,7 +11825,7 @@
           null
         );
       }
-      function Vn({ game: e }) {
+      function Qn({ game: e }) {
         const t = wt(),
           r = (0, Ut.we)(
             t ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
@@ -11810,21 +11835,21 @@
         return Je.createElement(
           Je.Fragment,
           null,
-          Je.createElement(Hn, { links: i, label: r, onClick: () => s(!0) }),
-          a && Je.createElement(Kn, { game: e, setLinkData: n }),
+          Je.createElement(Kn, { links: i, label: r, onClick: () => s(!0) }),
+          a && Je.createElement(Vn, { game: e, setLinkData: n }),
         );
       }
-      function Qn(e) {
+      function Zn(e) {
         const { game: t, children: r } = e,
           i = wt();
         return Je.createElement(
           "div",
           { className: _i.GameLinks },
-          i && Je.createElement(Zn, { game: t }),
+          i && Je.createElement(Yn, { game: t }),
           r,
         );
       }
-      function Zn(e) {
+      function Yn(e) {
         const { game: t } = e,
           r = ar(t.appid),
           i = lr(t.appid);
@@ -11843,21 +11868,21 @@
               Je.createElement(Ot.ZyV, null),
             );
       }
-      function Yn({ game: e }) {
-        const t = Tn(e);
+      function Xn({ game: e }) {
+        const t = Un(e);
         return (0, ct.Qn)()
-          ? Je.createElement(Hn, {
+          ? Je.createElement(Kn, {
               links: t,
               label: (0, Ut.we)("#Community_GameLinks"),
             })
           : Je.createElement(
-              $n,
+              Hn,
               { links: t, className: _i.GameLinksButton },
               Je.createElement(Ot.nvX, null),
             );
       }
-      function Xn({ game: e }) {
-        const t = jn(e),
+      function Jn({ game: e }) {
+        const t = Tn(e),
           r = wt(),
           i = (0, ct.Qn)();
         if (0 === t.length) return null;
@@ -11865,15 +11890,15 @@
           r ? "#Community_GameStatsFirstPerson" : "#Community_GameStats",
         );
         return i
-          ? Je.createElement(Hn, { links: t, label: n })
+          ? Je.createElement(Kn, { links: t, label: n })
           : Je.createElement(
-              $n,
+              Hn,
               { links: t, className: _i.StatLinks },
               Je.createElement("span", null, " ", n, " "),
               Je.createElement(kt, null),
             );
       }
-      function Jn({ game: e }) {
+      function ea({ game: e }) {
         const t = (0, Je.useRef)(null),
           r = (0, it.tc)(),
           i = (0, Je.useCallback)(() => {
@@ -11884,10 +11909,10 @@
                   useActiveSteamInterface: r.useActiveSteamInterface,
                   useStorage: r.useStorage,
                 },
-                Je.createElement(kn, { game: e }),
+                Je.createElement(Dn, { game: e }),
               ),
               t.current,
-              Dn,
+              $n,
             );
           }, [t, e, r]),
           n = wt(),
@@ -11896,7 +11921,7 @@
             n ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
           );
         return a
-          ? Je.createElement(Vn, { game: e })
+          ? Je.createElement(Qn, { game: e })
           : Je.createElement(
               vt.Z,
               {
@@ -11908,7 +11933,7 @@
               Je.createElement(kt, null),
             );
       }
-      function ea({ label: e, children: t }) {
+      function ta({ label: e, children: t }) {
         return Je.createElement(
           "details",
           { className: _i.BottomSheetSection },
@@ -11916,15 +11941,15 @@
           Je.createElement("div", { className: _i.SectionContent }, t),
         );
       }
-      function ta({ game: e }) {
-        const t = jn(e);
+      function ra({ game: e }) {
+        const t = Tn(e);
         return 0 === t.length
           ? null
           : Je.createElement(
-              ea,
+              ta,
               { label: (0, Ut.we)("#Community_GameStats") },
               t.map((e) =>
-                Je.createElement(ia, {
+                Je.createElement(na, {
                   key: e.key,
                   link: e,
                   className: _i.BottomSheetLink,
@@ -11932,15 +11957,15 @@
               ),
             );
       }
-      function ra({ game: e }) {
-        const t = Wn(e);
+      function ia({ game: e }) {
+        const t = jn(e);
         return 0 === t.rgLinks.length
           ? null
           : Je.createElement(
-              ea,
+              ta,
               { label: (0, Ut.we)("#Community_GameContent") },
               t.rgLinks.map((e) =>
-                Je.createElement(ia, {
+                Je.createElement(na, {
                   key: e.key,
                   link: e,
                   className: _i.BottomSheetLink,
@@ -11948,7 +11973,7 @@
               ),
             );
       }
-      function ia(e) {
+      function na(e) {
         const { link: t, className: r } = e;
         let i;
         return (
@@ -11965,15 +11990,15 @@
           i
         );
       }
-      function na({ game: e }) {
-        const t = Tn(e);
+      function aa({ game: e }) {
+        const t = Un(e);
         return 0 === t.length
           ? null
           : Je.createElement(
-              ea,
+              ta,
               { label: (0, Ut.we)("#GamesList_MenuLabel_GameInfo") },
               t.map((e) =>
-                Je.createElement(ia, {
+                Je.createElement(na, {
                   key: e.key,
                   link: e,
                   className: _i.BottomSheetLink,
@@ -11981,7 +12006,7 @@
               ),
             );
       }
-      function aa({ game: e }) {
+      function sa({ game: e }) {
         const t = wt(),
           r = (function () {
             const e = Fi();
@@ -11995,7 +12020,7 @@
           })();
         return t && r
           ? Je.createElement(
-              ea,
+              ta,
               { label: (0, Ut.we)("#GamesList_MenuLabel_RemoteDownload") },
               Je.createElement("span", { className: _i.ClientName }, r),
               Je.createElement(xi, {
@@ -12007,9 +12032,9 @@
             )
           : null;
       }
-      function sa({ tab: e }) {
-        const t = pa().openGame,
-          r = ma(),
+      function la({ tab: e }) {
+        const t = ba().openGame,
+          r = pa(),
           i = (0, Je.useRef)(null);
         (0, Je.useEffect)(() => {
           var e;
@@ -12062,20 +12087,20 @@
                 "div",
                 { className: _i.Facts },
                 Je.createElement("span", { className: _i.GameTitle }, t.name),
-                Je.createElement(la, { game: t, visible: !0, tab: e }),
+                Je.createElement(oa, { game: t, visible: !0, tab: e }),
               ),
             ),
+            Je.createElement(ia, { game: t }),
             Je.createElement(ra, { game: t }),
-            Je.createElement(ta, { game: t }),
-            Je.createElement(na, { game: t }),
             Je.createElement(aa, { game: t }),
+            Je.createElement(sa, { game: t }),
           ),
         );
       }
-      function la({ game: e, visible: t, tab: r }) {
+      function oa({ game: e, visible: t, tab: r }) {
         const i = wt(),
           n = _t(e),
-          a = Fn(),
+          a = qn(),
           s = r !== Qi.All && !(a && r === Qi.RecentlyPlayed);
         return Je.createElement(
           "div",
@@ -12123,18 +12148,18 @@
             Je.createElement(
               "div",
               { className: _i.AchievementContainer },
-              Je.createElement(Nn, { game: e, visible: t, showTop: s }),
+              Je.createElement(An, { game: e, visible: t, showTop: s }),
             ),
         );
       }
-      function oa(e, t) {
+      function ca(e, t) {
         return `${ct.TS.BASE_URL_SHARED_CDN}store_item_assets/${e.asset_url_format}`.replace(
           "${FILENAME}",
           e[t],
         );
       }
-      function ca({ game: e, visible: t }) {
-        const r = Fn(),
+      function ua({ game: e, visible: t }) {
+        const r = qn(),
           [i, n] = (0, Je.useState)(0),
           { data: a, isLoading: s } = Bn({ appid: e.appid }, { enabled: t });
         (0, Je.useEffect)(() => {
@@ -12143,16 +12168,16 @@
         let l = [en],
           o = [en];
         (null == a ? void 0 : a.library_capsule)
-          ? l.unshift(oa(a, "library_capsule"))
+          ? l.unshift(ca(a, "library_capsule"))
           : l.unshift(
-              oa(
+              ca(
                 { ...a, library_capsule: "library_600x900.jpg" },
                 "library_capsule",
               ),
             ),
           (null == a ? void 0 : a.header)
-            ? o.unshift(oa(a, "header"))
-            : o.unshift(oa({ ...a, header: "header.jpg" }, "header"));
+            ? o.unshift(ca(a, "header"))
+            : o.unshift(ca({ ...a, header: "header.jpg" }, "header"));
         const c = r ? l[i] === en : o[i] === en;
         return Je.createElement(
           Je.Fragment,
@@ -12174,20 +12199,20 @@
             Je.createElement("span", { className: _i.FallbackTitle }, e.name),
         );
       }
-      function ua({ game: e, hasEverBeenVisible: t }) {
-        const r = Fn();
+      function da({ game: e, hasEverBeenVisible: t }) {
+        const r = qn();
         return Je.createElement(
           "div",
           { className: _i.PortraitContainer },
-          Je.createElement(ca, { game: e, visible: t }),
-          !r && Je.createElement(An, { game: e, visible: t }),
+          Je.createElement(ua, { game: e, visible: t }),
+          !r && Je.createElement(Ln, { game: e, visible: t }),
         );
       }
-      const da = Je.memo(function ({ game: e, top: t, tab: r }) {
+      const ma = Je.memo(function ({ game: e, top: t, tab: r }) {
         const i = `${ct.TS.STORE_BASE_URL}app/${e.appid}`,
           n = wt(),
-          a = Fn(),
-          s = ma(),
+          a = qn(),
+          s = pa(),
           l = a ? "button" : dr.YZ,
           o = a ? () => s(e) : void 0,
           [c, u] = (0, Je.useState)(!1),
@@ -12220,14 +12245,14 @@
             Je.createElement(
               b,
               { href: i, className: _i.GameItemPortrait },
-              Je.createElement(ua, { game: e, hasEverBeenVisible: c }),
+              Je.createElement(da, { game: e, hasEverBeenVisible: c }),
             ),
             Je.createElement(
               "span",
               { className: _i.GameNameContainer },
               Je.createElement(B, { href: i, className: _i.GameName }, e.name),
             ),
-            Je.createElement(la, { game: e, visible: c, tab: r }),
+            Je.createElement(oa, { game: e, visible: c, tab: r }),
             !a &&
               Je.createElement(
                 Je.Fragment,
@@ -12235,15 +12260,15 @@
                 Je.createElement(
                   "div",
                   { className: _i.Buttons },
-                  Je.createElement(Xn, { game: e }),
                   Je.createElement(Jn, { game: e }),
-                  p && Je.createElement(Yn, { game: e }),
+                  Je.createElement(ea, { game: e }),
+                  p && Je.createElement(Xn, { game: e }),
                 ),
                 !p &&
                   Je.createElement(
-                    Qn,
+                    Zn,
                     { game: e },
-                    Je.createElement(Yn, { game: e }),
+                    Je.createElement(Xn, { game: e }),
                   ),
               ),
             n &&
@@ -12253,37 +12278,37 @@
                 game: e,
                 visible: c,
               }),
-            a && Je.createElement(An, { game: e, visible: c }),
+            a && Je.createElement(Ln, { game: e, visible: c }),
           ),
           n && Je.createElement(Li, { game: e, visible: c }),
         );
       });
-      function ma() {
-        return pa().fnSetOpenGame;
-      }
       function pa() {
-        const e = (0, Je.useContext)(ba);
+        return ba().fnSetOpenGame;
+      }
+      function ba() {
+        const e = (0, Je.useContext)(Ba);
         if (!e)
           throw new Error(
             "attempted to use BottomSheetContext outside of provider",
           );
         return e;
       }
-      const ba = Je.createContext(void 0);
-      function Ba({ children: e }) {
+      const Ba = Je.createContext(void 0);
+      function ga({ children: e }) {
         const [t, r] = (0, Je.useState)(void 0);
         return Je.createElement(
-          ba.Provider,
+          Ba.Provider,
           { value: { openGame: t, fnSetOpenGame: r } },
           e,
         );
       }
-      const ga = new Set();
-      function wa(e) {
-        ga.add(e);
+      const wa = new Set();
+      function ya(e) {
+        wa.add(e);
       }
-      const ya = new Set();
-      function _a({ games: e, tab: t, fnCalculateGameSize: r }) {
+      const _a = new Set();
+      function fa({ games: e, tab: t, fnCalculateGameSize: r }) {
         const [i, n] = (0, Je.useMemo)(() => {
           let t = 0;
           const i = e.map((e) => {
@@ -12332,7 +12357,7 @@
           vt.Z,
           { ref: a, className: _i.List, style: { height: i }, autoFocus: !0 },
           Je.createElement(
-            Ma,
+            ha,
             {
               disableContinuousRender: e.length > 1024,
               batchSize: 16,
@@ -12343,18 +12368,18 @@
               const i = s;
               return (
                 (s += n[r]),
-                Je.createElement(da, { game: e, key: e.appid, top: i, tab: t })
+                Je.createElement(ma, { game: e, key: e.appid, top: i, tab: t })
               );
             }),
           ),
         );
       }
-      async function fa() {
+      async function Ma() {
         return new Promise((e) => {
           setTimeout(e, 0);
         });
       }
-      function Ma({
+      function ha({
         children: e,
         batchSize: t,
         containerRef: r,
@@ -12374,7 +12399,7 @@
                     if (e) return;
                     null === (r = a[n]) || void 0 === r || r.call(a, !0);
                   }
-                  await fa();
+                  await Ma();
                 }
               })(),
               () => {
@@ -12414,17 +12439,17 @@
             Je.Fragment,
             null,
             e.map((e, t) =>
-              Je.createElement(ha, { key: e.key, index: t, renderers: a }, e),
+              Je.createElement(za, { key: e.key, index: t, renderers: a }, e),
             ),
           )
         );
       }
-      function ha({ renderers: e, index: t, children: r }) {
+      function za({ renderers: e, index: t, children: r }) {
         const [i, n] = (0, Je.useState)(!1);
         return (e[t] = n), i ? Je.createElement(Je.Fragment, null, r) : null;
       }
-      const za = Je.createContext(void 0);
-      function Sa({ query: e, isLoading: t, tab: r }) {
+      const Sa = Je.createContext(void 0);
+      function Ra({ query: e, isLoading: t, tab: r }) {
         var i;
         const n = ti(),
           a = (function (e) {
@@ -12443,8 +12468,8 @@
               const i = new Set();
               if (null == r ? void 0 : r.data)
                 for (const e of r.data.mapApps.values())
-                  (ya.has(e.appid) || (!ga.has(e.appid) && Gi(e))) &&
-                    (i.add(e.appid), ya.add(e.appid));
+                  (_a.has(e.appid) || (!wa.has(e.appid) && Gi(e))) &&
+                    (i.add(e.appid), _a.add(e.appid));
               const n = [],
                 a = [];
               return (
@@ -12461,7 +12486,7 @@
           o = (0, Je.useCallback)((e, t) => {
             l((r) => ({ ...r, [e]: t }));
           }, []),
-          c = (0, Je.useCallback)((e) => (s[e.appid] ? vn + Rn : vn), [s]);
+          c = (0, Je.useCallback)((e) => (s[e.appid] ? Fn + vn : Fn), [s]);
         return a.isLoading || n.isLoading || t
           ? Je.createElement(Wt.t, {
               string: (0, Ut.we)("#Loading"),
@@ -12475,45 +12500,45 @@
                 (0, Ut.we)("#GamesList_PerfectGames_Description"),
               )
             : Je.createElement(
-                za.Provider,
+                Sa.Provider,
                 { value: o },
                 !ct.TS.IN_CLIENT && Je.createElement(Ti, null),
-                Je.createElement(_a, {
+                Je.createElement(fa, {
                   games: a.data,
                   tab: r,
                   fnCalculateGameSize: c,
                 }),
               );
       }
-      function Ra(e) {
-        return vn;
+      function va(e) {
+        return Fn;
       }
-      function va({ query: e, isLoading: t, tab: r }) {
+      function Fa({ query: e, isLoading: t, tab: r }) {
         return void 0 === e.data || t
           ? null
-          : Je.createElement(_a, {
+          : Je.createElement(fa, {
               games: e.data,
               tab: r,
-              fnCalculateGameSize: Ra,
+              fnCalculateGameSize: va,
             });
       }
-      const Fa = (0, pi.Nr)(
+      const qa = (0, pi.Nr)(
           ({ owned: e, filter: t, dependencyLoading: r, sort: i, tab: n }) => {
             const a = Vi(Gt(e, t), i),
               s = wt(),
               l = a.isLoading || r;
             if (a.error && !l) throw a.error;
             return Je.createElement(
-              Ba,
+              ga,
               null,
-              Je.createElement(sa, { tab: n }),
+              Je.createElement(la, { tab: n }),
               s
-                ? Je.createElement(Sa, { query: a, isLoading: l, tab: n })
-                : Je.createElement(va, { query: a, isLoading: l, tab: n }),
+                ? Je.createElement(Ra, { query: a, isLoading: l, tab: n })
+                : Je.createElement(Fa, { query: a, isLoading: l, tab: n }),
             );
           },
         ),
-        qa = [
+        Ca = [
           {
             label: (0, Ut.we)("#GamesList_Sort_HoursPlayed"),
             sortOption: ki.HoursPlayed,
@@ -12524,11 +12549,11 @@
             sortOption: ki.AchievementCompletion,
           },
         ];
-      function Ca({ strSort: e, setStrSort: t }) {
+      function Wa({ strSort: e, setStrSort: t }) {
         return Je.createElement(
           "ul",
           { className: It.SortOptions },
-          qa.map((r) =>
+          Ca.map((r) =>
             Je.createElement(
               "li",
               { key: r.sortOption },
@@ -12547,7 +12572,7 @@
           ),
         );
       }
-      function Wa() {
+      function ja() {
         const [e, t] = (0, Ct.QD)("games_in_common", !1);
         return Je.createElement(
           "label",
@@ -12560,7 +12585,7 @@
           }),
         );
       }
-      function ja() {
+      function Ta() {
         return Je.createElement(
           jt.he,
           {
@@ -12575,22 +12600,22 @@
           ),
         );
       }
-      function Ta(e) {
+      function Ua(e) {
         const t = new Set();
         return null == e || e.forEach((e) => t.add(e.appid)), t;
       }
-      function Ua(e, t, r) {
+      function Ia(e, t, r) {
         const [i, n] = (0, Ct.QD)(e, r);
         let a = i;
         return Object.values(t).includes(i) || (a = r), [a, n];
       }
-      function Ia({ children: e }) {
+      function Oa({ children: e }) {
         return (0, ct.Qn)() ? Je.createElement(qt.J1, null, e) : e;
       }
-      function Oa(e) {
+      function Ea(e) {
         const t = gt(),
-          [r, i] = Ua("sort", ki, ki.HoursPlayed),
-          [n, a] = Ua("tab", Qi),
+          [r, i] = Ia("sort", ki, ki.HoursPlayed),
+          [n, a] = Ia("tab", Qi),
           s = null != n ? n : Qi.RecentlyPlayed,
           [l, o, c] = (function (e, t) {
             const [r, i] = (0, Je.useState)(e),
@@ -12634,7 +12659,7 @@
           g = (function (e) {
             const t = bt(ct.iA.steamid, { enabled: e });
             return (0, Je.useMemo)(
-              () => ({ data: Ta(t.data), isLoading: t.isLoading }),
+              () => ({ data: Ua(t.data), isLoading: t.isLoading }),
               [t.data, t.isLoading],
             );
           })(B),
@@ -12680,7 +12705,7 @@
         let F = y;
         s === Qi.RecentlyPlayed ? (F = f) : s === Qi.Perfect && (F = h),
           (0, Je.useEffect)(() => {
-            ga.clear();
+            wa.clear();
           }, [s]);
         const q = Xi(s, y, f, h),
           C = (function (...e) {
@@ -12693,7 +12718,7 @@
           j = r === ki.AchievementCompletion && m.isLoading,
           T = F.isLoading || j;
         return Je.createElement(
-          Ea,
+          Pa,
           null,
           Je.createElement(
             vt.Z,
@@ -12717,12 +12742,12 @@
                       setStrNameFilter: c,
                       className: It.FilterInput,
                     }),
-                    R && Je.createElement(ja, null),
-                    !R && s === Qi.All && Je.createElement(Wa, null),
-                    Je.createElement(Ca, { strSort: r, setStrSort: i }),
+                    R && Je.createElement(Ta, null),
+                    !R && s === Qi.All && Je.createElement(ja, null),
+                    Je.createElement(Wa, { strSort: r, setStrSort: i }),
                   ),
               ),
-            Je.createElement(Fa, {
+            Je.createElement(qa, {
               owned: F,
               filter: C,
               sort: s === Qi.RecentlyPlayed ? ki.RecentlyPlayed : r,
@@ -12732,7 +12757,7 @@
           ),
         );
       }
-      function Ea(e) {
+      function Pa(e) {
         const { children: t } = e,
           r = (0, Ft.A)(),
           i = Je.useMemo(
@@ -12750,19 +12775,19 @@
             qi,
             null,
             Je.createElement(
-              Ia,
+              Oa,
               null,
               Je.createElement(bn, { context: i, msDelayBatch: 500 }, t),
             ),
           ),
         );
       }
-      function Pa(e) {
+      function Ga(e) {
         const t = (0, St.bs)(Je.useCallback(() => new zt.A(), []));
         return Je.createElement(
           it.VQ,
           { useActiveSteamInterface: yt, useStorage: t },
-          Je.createElement(Oa, { ...e }),
+          Je.createElement(Ea, { ...e }),
         );
       }
     },

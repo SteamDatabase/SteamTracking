@@ -364,9 +364,15 @@
                       strCapsuleUrl: t.GetAssets().GetHeaderURL(),
                       strGroupTitle: t.GetName(),
                       id: e,
-                      strStoreURL: t.GetStorePageURL(),
-                      strCommunityURL: t.GetCommunityPageURL(),
-                      strForumURL: t.GetCommunityDiscussionForumsURL(),
+                      strStoreURL:
+                        (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                        t.GetStorePageURL(),
+                      strCommunityURL:
+                        (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                        t.GetCommunityPageURL(),
+                      strForumURL:
+                        (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                        t.GetCommunityDiscussionForumsURL(),
                     });
                 });
             else if (t) {
@@ -377,8 +383,14 @@
                     strCapsuleUrl: n.avatar_full_url,
                     strGroupTitle: n.group_name,
                     id: t,
-                    strStoreURL: S.TS.STORE_BASE_URL + "curator/" + t + "/",
+                    strStoreURL:
+                      (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                      S.TS.STORE_BASE_URL +
+                      "curator/" +
+                      t +
+                      "/",
                     strCommunityURL:
+                      (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
                       S.TS.COMMUNITY_BASE_URL +
                       "gid/" +
                       e.ConvertTo64BitString(),
@@ -418,19 +430,19 @@
                 }),
               e.push({
                 label: (0, b.we)("#EventDisplay_ViewStorePage_ExtraShort"),
-                data: o,
+                data: (0, G.k2)(o),
               }),
               l ||
                 (e.push({
                   label: (0, b.we)(
                     "#EventDisplay_ViewCommunityPage_ExtraShort",
                   ),
-                  data: s,
+                  data: (0, G.k2)(s),
                 }),
                 i &&
                   e.push({
                     label: (0, b.we)("#EventDisplay_ViewForum_ExtraShort"),
-                    data: i,
+                    data: (0, G.k2)(i),
                   }),
                 a &&
                   e.push({
@@ -458,7 +470,7 @@
           contextMenuPositionOptions: { bMatchWidth: !1 },
           arrowClassName: x().DDButtonArrow,
           rgOptions: g,
-          onChange: (e, t, n) => (0, O.EP)(n, (0, G.k2)(e.data)),
+          onChange: (e, t, n) => (0, O.EP)(n, e.data),
         });
       }
       const W = (0, g.PA)((e) => {
@@ -2334,6 +2346,7 @@
           case 5:
             return r.createElement(f.Bki, { ...n });
           case 6:
+          case 18:
             return r.createElement(f.$vK, { ...n });
           case 7:
             return r.createElement(f.OSJ, { ...n });
@@ -2357,7 +2370,7 @@
             return r.createElement(f.BQz, { ...n });
           case 17:
             return r.createElement(f.jdP, { ...n });
-          case 18:
+          case 19:
           case 0:
             return "invalid social media type";
         }
@@ -2452,7 +2465,7 @@
               className: (0, k.A)(x().ScrollButton, x().GameArt, x().AnimIn),
               onClick: e.onAppIconClick,
             },
-            s && r.createElement("img", { src: s }),
+            Boolean(s) && r.createElement("img", { src: s }),
           )
         );
       }

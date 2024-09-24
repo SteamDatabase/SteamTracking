@@ -2224,6 +2224,7 @@
           case 5:
             return o.createElement(S.Bki, { ...n });
           case 6:
+          case 18:
             return o.createElement(S.$vK, { ...n });
           case 7:
             return o.createElement(S.OSJ, { ...n });
@@ -2247,7 +2248,7 @@
             return o.createElement(S.BQz, { ...n });
           case 17:
             return o.createElement(S.jdP, { ...n });
-          case 18:
+          case 19:
           case 0:
             return "invalid social media type";
         }

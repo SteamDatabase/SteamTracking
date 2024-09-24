@@ -11,6 +11,21 @@ function InitSupportMessages( cMessages )
 
 	if ( BAreAllMessagesAcked() )
 		$('supportmessages_closebtn').removeClassName('btn_disabled');
+
+	UpdateCloseWindowButtonText();
+}
+
+function UpdateCloseWindowButtonText()
+{
+	var elMessage = $('message_' + g_iActiveMessage );
+	if ( elMessage.hasClassName( 'Support_SSAUpdated' ) )
+	{
+		$('supportmessages_closebtn_text').innerHTML = 'I accept the updated Steam Subscriber Agreement';
+	}
+	else
+	{
+		$('supportmessages_closebtn_text').innerHTML = 'Close Window';
+	}
 }
 
 function ShowSupportMessage( iMessage )
@@ -40,6 +55,8 @@ function ShowSupportMessage( iMessage )
 			$('supportmessage_pagebtn_next').addClassName('disabled');
 	}
 	g_iActiveMessage = iMessage;
+
+	UpdateCloseWindowButtonText();
 }
 
 function BIsMessageAcked( iMessage )

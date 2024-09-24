@@ -30,7 +30,7 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          GreenEnvelope: () => b,
+          GreenEnvelope: () => y,
           default: () => O,
           useSteamNotifications: () => T,
         });
@@ -52,15 +52,15 @@
         N = i.n(h),
         E = i(16264),
         g = i(60383);
-      const y = new m.cE(),
-        b = (0, v.Nr)(function (e) {
+      const b = new m.cE(),
+        y = (0, v.Nr)(function (e) {
           const { bResponsiveHeader: t, notifications: i } = e;
           r.useEffect(() => {
-            i && !y.m_bLoaded && y.ProcessNewNotificationPayload(i);
+            i && !b.m_bLoaded && b.ProcessNewNotificationPayload(i);
           }, [i]);
           const o = (0, c.KV)();
           (0, r.useEffect)(() => {
-            y.setTransport(o),
+            b.setTransport(o),
               (window.RefreshSteamNotifications = () =>
                 (async function (e) {
                   let t = null;
@@ -74,7 +74,7 @@
                       !1,
                     );
                   } catch (e) {}
-                  t && y.ProcessNewNotificationPayload(t);
+                  t && b.ProcessNewNotificationPayload(t);
                 })(o));
           }, [o]);
           const s = T();
@@ -89,10 +89,10 @@
         });
       function T() {
         return (0, o.q3)(() => ({
-          notifications: y.m_rgNotificationRollups,
-          summary: y.m_summary,
-          loaded: y.m_bLoaded,
-          nUnviewed: y.m_nUnviewed,
+          notifications: b.m_rgNotificationRollups,
+          summary: b.m_summary,
+          loaded: b.m_bLoaded,
+          nUnviewed: b.m_nUnviewed,
         }));
       }
       function U() {
@@ -139,7 +139,7 @@
           g.J,
           { trigger: "repeated", onVisibilityChange: l },
           r.createElement(
-            "div",
+            "button",
             {
               onClick: () => {
                 var e, t;
@@ -150,7 +150,7 @@
                 ) {
                   null === (t = i.current) || void 0 === t || t.Show();
                   -1 != n.findIndex((e) => !e.item.viewed) &&
-                    y.MarkAllItemsViewed();
+                    b.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
@@ -256,7 +256,7 @@
         t.read ||
           (i && 0 != i.button && 1 != i.button) ||
           !t.notification_id ||
-          y.MarkItemRead(t.notification_id),
+          b.MarkItemRead(t.notification_id),
           e();
       }
       function I() {
@@ -379,7 +379,7 @@
           ),
         );
       }
-      const O = b;
+      const O = y;
     },
     60383: (e, t, i) => {
       "use strict";

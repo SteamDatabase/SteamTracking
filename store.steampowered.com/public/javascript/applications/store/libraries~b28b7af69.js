@@ -1339,6 +1339,247 @@
       }
       (n["-".charCodeAt(0)] = 62), (n["_".charCodeAt(0)] = 63);
     },
+    58632: (e) => {
+      "use strict";
+      var t,
+        r = (function () {
+          function e(e, t) {
+            if ("function" != typeof e)
+              throw new TypeError(
+                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but got: " +
+                  e +
+                  ".",
+              );
+            (this._batchLoadFn = e),
+              (this._maxBatchSize = (function (e) {
+                var t = !e || !1 !== e.batch;
+                if (!t) return 1;
+                var r = e && e.maxBatchSize;
+                if (void 0 === r) return 1 / 0;
+                if ("number" != typeof r || r < 1)
+                  throw new TypeError(
+                    "maxBatchSize must be a positive number: " + r,
+                  );
+                return r;
+              })(t)),
+              (this._batchScheduleFn = (function (e) {
+                var t = e && e.batchScheduleFn;
+                if (void 0 === t) return n;
+                if ("function" != typeof t)
+                  throw new TypeError(
+                    "batchScheduleFn must be a function: " + t,
+                  );
+                return t;
+              })(t)),
+              (this._cacheKeyFn = (function (e) {
+                var t = e && e.cacheKeyFn;
+                if (void 0 === t)
+                  return function (e) {
+                    return e;
+                  };
+                if ("function" != typeof t)
+                  throw new TypeError("cacheKeyFn must be a function: " + t);
+                return t;
+              })(t)),
+              (this._cacheMap = (function (e) {
+                var t = !e || !1 !== e.cache;
+                if (!t) return null;
+                var r = e && e.cacheMap;
+                if (void 0 === r) return new Map();
+                if (null !== r) {
+                  var n = ["get", "set", "delete", "clear"].filter(
+                    function (e) {
+                      return r && "function" != typeof r[e];
+                    },
+                  );
+                  if (0 !== n.length)
+                    throw new TypeError(
+                      "Custom cacheMap missing methods: " + n.join(", "),
+                    );
+                }
+                return r;
+              })(t)),
+              (this._batch = null),
+              (this.name = (function (e) {
+                if (e && e.name) return e.name;
+                return null;
+              })(t));
+          }
+          var t = e.prototype;
+          return (
+            (t.load = function (e) {
+              if (null == e)
+                throw new TypeError(
+                  "The loader.load() function must be called with a value, but got: " +
+                    String(e) +
+                    ".",
+                );
+              var t = (function (e) {
+                  var t = e._batch;
+                  if (
+                    null !== t &&
+                    !t.hasDispatched &&
+                    t.keys.length < e._maxBatchSize
+                  )
+                    return t;
+                  var r = { hasDispatched: !1, keys: [], callbacks: [] };
+                  return (
+                    (e._batch = r),
+                    e._batchScheduleFn(function () {
+                      !(function (e, t) {
+                        if (((t.hasDispatched = !0), 0 === t.keys.length))
+                          return void i(t);
+                        var r;
+                        try {
+                          r = e._batchLoadFn(t.keys);
+                        } catch (r) {
+                          return o(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function errored synchronously: " +
+                                String(r) +
+                                ".",
+                            ),
+                          );
+                        }
+                        if (!r || "function" != typeof r.then)
+                          return o(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise: " +
+                                String(r) +
+                                ".",
+                            ),
+                          );
+                        r.then(function (e) {
+                          if (!a(e))
+                            throw new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array: " +
+                                String(e) +
+                                ".",
+                            );
+                          if (e.length !== t.keys.length)
+                            throw new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array of the same length as the Array of keys.\n\nKeys:\n" +
+                                String(t.keys) +
+                                "\n\nValues:\n" +
+                                String(e),
+                            );
+                          i(t);
+                          for (var r = 0; r < t.callbacks.length; r++) {
+                            var n = e[r];
+                            n instanceof Error
+                              ? t.callbacks[r].reject(n)
+                              : t.callbacks[r].resolve(n);
+                          }
+                        }).catch(function (r) {
+                          o(e, t, r);
+                        });
+                      })(e, r);
+                    }),
+                    r
+                  );
+                })(this),
+                r = this._cacheMap,
+                n = this._cacheKeyFn(e);
+              if (r) {
+                var s = r.get(n);
+                if (s) {
+                  var l = t.cacheHits || (t.cacheHits = []);
+                  return new Promise(function (e) {
+                    l.push(function () {
+                      e(s);
+                    });
+                  });
+                }
+              }
+              t.keys.push(e);
+              var u = new Promise(function (e, r) {
+                t.callbacks.push({ resolve: e, reject: r });
+              });
+              return r && r.set(n, u), u;
+            }),
+            (t.loadMany = function (e) {
+              if (!a(e))
+                throw new TypeError(
+                  "The loader.loadMany() function must be called with Array<key> but got: " +
+                    e +
+                    ".",
+                );
+              for (var t = [], r = 0; r < e.length; r++)
+                t.push(
+                  this.load(e[r]).catch(function (e) {
+                    return e;
+                  }),
+                );
+              return Promise.all(t);
+            }),
+            (t.clear = function (e) {
+              var t = this._cacheMap;
+              if (t) {
+                var r = this._cacheKeyFn(e);
+                t.delete(r);
+              }
+              return this;
+            }),
+            (t.clearAll = function () {
+              var e = this._cacheMap;
+              return e && e.clear(), this;
+            }),
+            (t.prime = function (e, t) {
+              var r = this._cacheMap;
+              if (r) {
+                var n,
+                  o = this._cacheKeyFn(e);
+                if (void 0 === r.get(o))
+                  t instanceof Error
+                    ? (n = Promise.reject(t)).catch(function () {})
+                    : (n = Promise.resolve(t)),
+                    r.set(o, n);
+              }
+              return this;
+            }),
+            e
+          );
+        })(),
+        n =
+          "object" == typeof process && "function" == typeof process.nextTick
+            ? function (e) {
+                t || (t = Promise.resolve()),
+                  t.then(function () {
+                    process.nextTick(e);
+                  });
+              }
+            : "function" == typeof setImmediate
+              ? function (e) {
+                  setImmediate(e);
+                }
+              : function (e) {
+                  setTimeout(e);
+                };
+      function o(e, t, r) {
+        i(t);
+        for (var n = 0; n < t.keys.length; n++)
+          e.clear(t.keys[n]), t.callbacks[n].reject(r);
+      }
+      function i(e) {
+        if (e.cacheHits)
+          for (var t = 0; t < e.cacheHits.length; t++) e.cacheHits[t]();
+      }
+      function a(e) {
+        return (
+          "object" == typeof e &&
+          null !== e &&
+          "number" == typeof e.length &&
+          (0 === e.length ||
+            (e.length > 0 &&
+              Object.prototype.hasOwnProperty.call(e, e.length - 1)))
+        );
+      }
+      e.exports = r;
+    },
     52244: (e) => {
       var t = -1,
         r = 1,

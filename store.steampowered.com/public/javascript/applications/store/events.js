@@ -660,7 +660,7 @@
     69099: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { DemoAndQuickPitch: () => K, Events: () => q });
-      var a = n(95455),
+      var a = n(81881),
         r = n(90626),
         l = n(55263),
         s = n(41735),
@@ -6984,7 +6984,7 @@
               ),
             ),
           );
-      var da = n(95455),
+      var da = n(81881),
         ua = n(80782);
       function pa(e) {
         if ("steam" === e) {

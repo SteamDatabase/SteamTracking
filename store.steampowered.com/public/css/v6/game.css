@@ -1068,8 +1068,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 
 .game_area_purchase_game .game_purchase_action,
 .game_area_comingsoon .game_purchase_action,
-.game_area_offsite_purchase .game_purchase_action,
-.game_area_purchase_game #dlc_purchase_action {
+.game_area_offsite_purchase .game_purchase_action {
 	position: absolute;
 
 	right: 16px;
@@ -1078,6 +1077,10 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 /*	overflow-x: auto; */
 	white-space: nowrap;
 	text-align: right;
+}
+
+.gameDlcBlocks #dlc_purchase_action {
+	float: right;
 }
 
 .game_purchase_action_bg {
