@@ -40,6 +40,26 @@
             ]
         },
         {
+            "name": "GetAuthSessionRiskInfo",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "get risk metadata for a specific auth session that has been deemed risky",
+            "parameters": [
+                {
+                    "name": "client_id",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "client ID from scanned QR Code, used for routing"
+                },
+                {
+                    "name": "language",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "language for optimistic localization of geoloc data"
+                }
+            ]
+        },
+        {
             "name": "GetPasswordRSAPublicKey",
             "version": 1,
             "httpmethod": "GET",
