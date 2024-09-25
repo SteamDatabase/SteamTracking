@@ -6546,7 +6546,7 @@
     },
     8107: (e, t, r) => {
       "use strict";
-      r.d(t, { N: () => w });
+      r.d(t, { N: () => y });
       var n = r(34629),
         a = r(41735),
         i = r.n(a),
@@ -6564,13 +6564,18 @@
         _ = r(78327),
         v = r(66418),
         E = r(30894),
-        B = r(51272);
-      const w = (e) => {
+        B = r(51272),
+        w = r(82715);
+      const y = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
         const r = (0, _.Qn)();
-        return o.createElement(y, { ...e, bShowOnlyInitialEvent: t || r });
+        return o.createElement(
+          w.tH,
+          null,
+          o.createElement(C, { ...e, bShowOnlyInitialEvent: t || r }),
+        );
       };
-      let y = class extends o.Component {
+      let C = class extends o.Component {
         constructor() {
           super(...arguments),
             (this.state = { bLoading: !1, eventModel: this.props.eventModel }),
@@ -6644,8 +6649,7 @@
         }
         render() {
           const { bShowOnlyInitialEvent: e } = this.props,
-            { bLoading: t, eventModel: r } = this.state,
-            n = E.Fm.Get().BOwnsApp(Boolean(r.appid) ? r.appid : void 0);
+            { bLoading: t, eventModel: r } = this.state;
           if (t)
             return o.createElement(
               d.of,
@@ -6657,51 +6661,54 @@
               ),
             );
           const {
-              closeModal: a,
-              appid: i,
-              clanSteamID: s,
-              className: l,
-              partnerEventStore: u,
-              showAppHeader: p,
-              bPrimaryPageFeature: S,
-              additionalParams: _,
-              eventClassName: w,
-            } = this.props,
-            y = o.createElement(
-              "div",
-              null,
-              o.createElement(m.AD, {
-                initialEvent: r,
-                appid: i,
-                clanSteamID: s,
-                partnerEventStore: u,
-                emoticonStore: c.A,
-                closeModal: !S && a,
-                showAppHeader: p,
-                bShowOnlyInitialEvent: e,
-                additionalParams: _,
-                eventClassName: w,
-                onAppIconClick:
-                  v.T.IN_CLIENT && n
-                    ? (e) =>
-                        (0, B.EP)(e, "steam://nav/games/details/" + r.appid)
-                    : void 0,
-              }),
-            );
-          return S
+            closeModal: n,
+            appid: a,
+            clanSteamID: i,
+            className: s,
+            partnerEventStore: l,
+            showAppHeader: u,
+            bPrimaryPageFeature: p,
+            additionalParams: S,
+            eventClassName: _,
+          } = this.props;
+          let w;
+          v.T.IN_CLIENT &&
+            (null == r ? void 0 : r.appid) &&
+            (E.Fm.Get().HintLoad(),
+            E.Fm.Get().BOwnsApp(r.appid) &&
+              (w = (e) =>
+                (0, B.EP)(e, "steam://nav/games/details/" + r.appid)));
+          const y = o.createElement(
+            "div",
+            null,
+            o.createElement(m.AD, {
+              initialEvent: r,
+              appid: a,
+              clanSteamID: i,
+              partnerEventStore: l,
+              emoticonStore: c.A,
+              closeModal: !p && n,
+              showAppHeader: u,
+              bShowOnlyInitialEvent: e,
+              additionalParams: S,
+              eventClassName: _,
+              onAppIconClick: w,
+            }),
+          );
+          return p
             ? y
             : o.createElement(
                 d.of,
-                { className: l },
+                { className: s },
                 o.createElement(
                   d.Qs,
-                  { navID: "WebRowEventInfiniteScroll", closeModal: a },
+                  { navID: "WebRowEventInfiniteScroll", closeModal: n },
                   y,
                 ),
               );
         }
       };
-      y = (0, n.Cg)([s.PA], y);
+      C = (0, n.Cg)([s.PA], C);
     },
     1909: (e, t, r) => {
       "use strict";
