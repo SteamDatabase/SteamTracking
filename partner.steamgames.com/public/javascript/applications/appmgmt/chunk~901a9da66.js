@@ -459,14 +459,14 @@
           let e = this.m_ReleaseInfo?.original_steam_release_date;
           return e || (e = this.GetReleaseDateRTime()), e;
         }
-        GetReleaseDateRTime() {
+        GetReleaseDateRTime(e = !1) {
           if (
             (this.BCheckDataRequestIncluded({ include_release: !0 }),
-            this.m_ReleaseInfo?.is_coming_soon)
+            this.m_ReleaseInfo?.is_coming_soon && !e)
           )
             return 0;
-          let e = this.m_ReleaseInfo?.steam_release_date;
-          return e || (e = this.m_ReleaseInfo?.original_release_date), e;
+          let t = this.m_ReleaseInfo?.steam_release_date;
+          return t || (t = this.m_ReleaseInfo?.original_release_date), t;
         }
         GetFormattedSteamReleaseDate() {
           if (
