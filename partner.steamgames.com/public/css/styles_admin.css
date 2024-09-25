@@ -2821,8 +2821,8 @@ div.image_all_ages_appropriate
 .movie_screenshot
 {
 	margin-top: 5px;
-	width: 184px;
-	height: 103px;
+	width: 232px;
+	height: 130px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -2839,7 +2839,13 @@ div.image_all_ages_appropriate
 .movie_screenshot .drag_and_drop
 {
 	cursor: default;
-	background: rgba( 25, 25, 25, 0.4 );
+	height: 100%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	background: rgba(25, 25, 25, 0.4);
+	box-shadow: none;
 }
 
 .movie_screenshot .drag_and_drop.drag_over

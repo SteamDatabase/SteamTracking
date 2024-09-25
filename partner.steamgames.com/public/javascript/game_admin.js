@@ -1262,7 +1262,7 @@ function OnMovieScreenshotDrop( evt )
 
 	var files = evt.originalEvent.dataTransfer.files; // FileList object.
 
-	$J( evt.target ).removeClass( 'drag_over' );
+	$J( evt.currentTarget ).removeClass( 'drag_over' );
 
 	if ( files.length != 1 )
 	{
@@ -1270,7 +1270,7 @@ function OnMovieScreenshotDrop( evt )
 		return;
 	}
 
-	UploadMovieScreenshot( evt.target, files[0] );
+	LoadImageFilesForUpload( files, UploadMovieScreenshot.bind( undefined, evt.target ) );
 }
 
 function SetMovieProcessing( group, enabled )
@@ -1322,20 +1322,30 @@ function ClearMovieErrorTryAgain( target )
 	return false;
 }
 
-function UploadMovieScreenshot( target, file )
+function UploadMovieScreenshot( target, rgFiles )
 {
+	var file = rgFiles[0].image;
+	var filename = rgFiles[0].filename;
+
+	if ( file.width !== 1920 || file.height !== 1080 )
+	{
+		ShowAlertDialog( 'Error: Incorrect Dimensions', 'The dimensions of the image provided are incorrect. Please upload a 1920px wide and 1080px tall image.' );
+		return;
+	}
+
 	var group = $J( target ).closest( '.movie_group' );
 	var itemid = group.attr( 'itemid' );
+	var baseitemid = group.attr( 'baseitemid' );
 	var screenshot = group.find( '.movie_screenshot' )[0];
 	$J( screenshot ).css( { 'background-image': '' } );
 	SetMovieProcessing( group, true );
 
 	var fd = new FormData();
-	fd.append( 'movie_thumb|assets|movie_screenshot|legacy', file, file.name );
+	AppendImageToFormData( fd, 'movie_thumb|assets|movie_screenshot|legacy', filename, file );
 	fd.append( 'movieItemID', itemid );
 	fd.append( 'sessionid', g_sessionID );
 
-	jQuery.ajax( { url: 'https://partner.steamgames.com/admin/game/moviesetdata/' + itemid, type: 'POST', data: fd, processData: false, contentType: false } )
+	jQuery.ajax( { url: 'https://partner.steamgames.com/admin/game/moviesetdata/' + baseitemid, type: 'POST', data: fd, processData: false, contentType: false } )
 	.done( function( data )
 	{
 		$J( screenshot ).css( { 'background-image': 'url(' + data.screenshot + ')' } );
