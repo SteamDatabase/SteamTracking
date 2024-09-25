@@ -5439,7 +5439,7 @@
               "div",
               { className: T.Numerals },
               Number.parseInt(
-                t.summary_sales.total_units_activated || "0",
+                t.summary_sales.steam_gross_units_sold || "0",
               ).toLocaleString(),
             ),
           ),
