@@ -5421,10 +5421,7 @@
                   }),
                   B.format(t)
                 );
-              })(
-                t.summary_sales.total_gross_sales_usdx100,
-                t.summary_sales.in_game_gross_sales_usdx100,
-              ),
+              })(t.summary_sales.total_gross_sales_usdx100),
             ),
           ),
           l.createElement(
