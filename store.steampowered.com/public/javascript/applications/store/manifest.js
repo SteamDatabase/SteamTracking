@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9207404";
+var CLSTAMP = "9208720";
 (() => {
   "use strict";
   var e,
@@ -299,6 +299,7 @@ var CLSTAMP = "9207404";
         9391: "marketing_turkish-json",
         9431: "main_danish-json",
         9566: "main_indonesian-json",
+        9569: "libraries~549106c78",
         9650: "marketing_bulgarian-json",
         9672: "discoveryqueue",
         9712: "shared_greek-json",
@@ -329,7 +330,7 @@ var CLSTAMP = "9207404";
         716: "04f2883666a7bed4bc8a",
         774: "1c944dfbad981d0fb123",
         809: "5b755a59eda635da3ac6",
-        927: "1103b32bc89ebf93f41b",
+        927: "3306e20a85bd6a312c50",
         934: "b26fbbd6398e7c021aa5",
         970: "3445db3ed6a51c075078",
         976: "7e1927eb2452e5c3e0cb",
@@ -362,7 +363,7 @@ var CLSTAMP = "9207404";
         2256: "666862f1125fef276486",
         2298: "12088e93f39c4869b5a3",
         2320: "3603b1697d55a5646d2a",
-        2414: "b0f1e444f379ded56703",
+        2414: "3c5443ea60392221a7bc",
         2435: "14173291a6ab1cc8cde3",
         2484: "faa6cb9dba12baf4007f",
         2500: "c47881ede2d21d9dabc8",
@@ -387,7 +388,7 @@ var CLSTAMP = "9207404";
         2964: "a0486615b0b3058cfb9e",
         2965: "6ff44b2049d9a873cfe6",
         2992: "075f8687f6cb365785ee",
-        3027: "cbce3e082c7ce320acbf",
+        3027: "64aa2b5668212abd551e",
         3164: "c0581fa1900ac7af8d0d",
         3167: "15c86a49a553a69c8491",
         3216: "4e6337d051f11b51e8b3",
@@ -433,7 +434,7 @@ var CLSTAMP = "9207404";
         5068: "008c74e5f9dfe79bb537",
         5110: "af13333d5ea50e01c9cb",
         5134: "9596c47c17800a45cc56",
-        5139: "4da9924f7c414c7640da",
+        5139: "daf1e3704988b8e3a9c6",
         5183: "b2064bc9920af333cf72",
         5189: "219ceca289df2109ab34",
         5231: "2724d0de18cba8996ab6",
@@ -515,7 +516,7 @@ var CLSTAMP = "9207404";
         7926: "9d724e69039458b8eb3a",
         7929: "086d775c77953660b7dc",
         7937: "40c860313d8d0ac716db",
-        8019: "ce4061a9382623275e7d",
+        8019: "2bdaa9362e8914d1b52b",
         8025: "27784d068f080832dec9",
         8163: "45254e710b8084b083c8",
         8199: "5f211fe0a44ded513717",
@@ -549,8 +550,9 @@ var CLSTAMP = "9207404";
         9391: "ece8f9eea70235a3a2df",
         9431: "dcf55cc0265408da30c7",
         9566: "72daf6050ede92a6a8fe",
+        9569: "a86ceb79daa9643d2bcd",
         9650: "1b0e39eea2f429cb3beb",
-        9672: "16e77ad110aa7455afa8",
+        9672: "aa89bfd7c0172bc6af8a",
         9712: "de42360a99688299dbc7",
         9730: "323cb03db84d9019eb50",
         9790: "79acde9db0ae9e19b87a",

@@ -233,8 +233,8 @@
         g = n(95695),
         I = n.n(g),
         T = n(3088),
-        C = n(12155),
-        L = n(22797),
+        L = n(12155),
+        C = n(22797),
         y = n(51272),
         A = n(69381),
         w = n(44332),
@@ -560,7 +560,7 @@
                                   ),
                                   onClick: this.Close,
                                 },
-                                s.createElement(C.sED, null),
+                                s.createElement(L.sED, null),
                               ),
                             !t &&
                               s.createElement(
@@ -573,7 +573,7 @@
                                   ),
                                   onClick: this.ScrollToPrevEvent,
                                 },
-                                s.createElement(C.V5W, { angle: 0 }),
+                                s.createElement(L.V5W, { angle: 0 }),
                               ),
                             !t &&
                               s.createElement(
@@ -586,7 +586,7 @@
                                   ),
                                   onClick: this.ScrollToNextEvent,
                                 },
-                                s.createElement(C.V5W, { angle: 180 }),
+                                s.createElement(L.V5W, { angle: 180 }),
                               ),
                             this.props.onAppIconClick &&
                               s.createElement(Z, {
@@ -650,7 +650,7 @@
               ? s.createElement(
                   "div",
                   { className: R().DirectionState },
-                  s.createElement(L.t, {
+                  s.createElement(C.t, {
                     position: "center",
                     string: (0, b.we)("#Loading"),
                   }),
@@ -698,18 +698,18 @@
               isPreview: v,
               storeItem: g,
             } = this.props,
-            C = t || (0, i.sf)(j.TS.LANGUAGE),
-            L = e.GetDescriptionWithFallback(C) || "",
+            L = t || (0, i.sf)(j.TS.LANGUAGE),
+            C = e.GetDescriptionWithFallback(L) || "",
             A = h;
           let w = e.GetImageForSizeAsArrayWithFallback(
             "background",
-            C,
+            L,
             m.wI.background_main,
           );
           c && (w = c(w));
           const f = e.GetCategoryAsString(),
             k = e.type,
-            G = e.BImageNeedScreenshotFallback("background", C);
+            G = e.BImageNeedScreenshotFallback("background", L);
           let x = "";
           if (e.appid) x = g?.GetName() || "";
           else if (e.clanSteamID) {
@@ -783,7 +783,7 @@
                         { className: R().ReminderContainer },
                         s.createElement(P.j, {
                           eventModel: e,
-                          lang: C,
+                          lang: L,
                           bExpandLeft: !0,
                         }),
                       ),
@@ -800,7 +800,7 @@
                     ? s.createElement(
                         "div",
                         { className: N().EventDetailTitle },
-                        e.GetNameWithFallback(C),
+                        e.GetNameWithFallback(L),
                       )
                     : s.createElement(
                         z.tj,
@@ -809,9 +809,9 @@
                           route: z.PH.k_eView,
                           className: N().EventDetailTitle,
                         },
-                        e.GetNameWithFallback(C),
+                        e.GetNameWithFallback(L),
                       ),
-                  e.BHasSubTitle(C) &&
+                  e.BHasSubTitle(L) &&
                     s.createElement(
                       "div",
                       {
@@ -820,7 +820,7 @@
                           R().LibraryViewSubtitle,
                         ),
                       },
-                      e.GetSubTitle(C),
+                      e.GetSubTitle(L),
                     ),
                   s.createElement("div", {
                     className: N().EventDetailUserType,
@@ -843,7 +843,7 @@
               e.BHasTag("steam_award_nomination_request") &&
                 s.createElement(D.EventDisplaySteamAwardNomination, {
                   event: e,
-                  lang: C,
+                  lang: L,
                 }),
               e.BHasTag("steam_award_vote_request") &&
                 s.createElement(D.WinterSaleSteamAwardVoteWrapper, {
@@ -864,7 +864,7 @@
                     onContextMenu: j.TS.IN_CLIENT ? E.aE : void 0,
                   },
                   s.createElement(S.f, {
-                    text: L,
+                    text: C,
                     partnerEventStore: n,
                     event: e,
                   }),
@@ -1072,8 +1072,8 @@
         g = n(75113),
         I = n(48838),
         T = n(26101),
-        C = n(14326),
-        L = n(37076);
+        L = n(14326),
+        C = n(37076);
       function y(e, t) {
         const [n, a] = (0, o.useState)({}),
           r = (0, E.m)("useEventHeaderData");
@@ -1242,7 +1242,7 @@
                     E,
                   )
                 : o.createElement(
-                    L.u,
+                    C.u,
                     {
                       type: e.appId ? "app" : "clan",
                       id: l,
@@ -1274,7 +1274,7 @@
                   o.createElement(
                     "div",
                     { className: M().HeaderWishlistButton },
-                    o.createElement(C._, {
+                    o.createElement(L._, {
                       appid: t,
                       bIsFree: m?.BIsFree(),
                       bIsComingSoon: m?.BIsComingSoon(),
@@ -1328,8 +1328,8 @@
         g = n(12155),
         I = n(82477),
         T = n(86090),
-        C = n(4796),
-        L = n(61336),
+        L = n(4796),
+        C = n(61336),
         y = n(14947);
       class A {
         constructor() {
@@ -1486,7 +1486,7 @@
                   .GetRepostClanAccountID()
                   .forEach((e) => {
                     const t = w.b.InitFromClanID(e);
-                    o.push(C.ac.LoadClanInfoForClanSteamID(t));
+                    o.push(L.ac.LoadClanInfoForClanSteamID(t));
                   }),
                 await Promise.all(o),
                 a(!1);
@@ -1499,7 +1499,7 @@
           A.Get()
             .GetRepostClanAccountID()
             .forEach((e) => {
-              const n = C.ac.GetClanInfoByClanAccountID(e);
+              const n = L.ac.GetClanInfoByClanAccountID(e);
               if (n && e != t.clanSteamID.GetAccountID()) {
                 const t = r.has(e),
                   a = i.has(e) || (t && !m.has(e));
@@ -1693,7 +1693,7 @@
                 let t = (0, N.H)(e);
                 console.error("EventDiscussionWidget = " + t.strErrorMsg);
               }),
-            C.ac.LoadClanInfoForClanSteamID(e.clanSteamID).catch((e) => {
+            L.ac.LoadClanInfoForClanSteamID(e.clanSteamID).catch((e) => {
               let t = (0, N.H)(e);
               console.error("EventDiscussionWidget = " + t.strErrorMsg);
             }));
@@ -1777,7 +1777,7 @@
               Number.MAX_SAFE_INTEGER,
             ),
             n = e.GetForumTopicURL(),
-            a = (0, L.NT)(n),
+            a = (0, C.NT)(n),
             r = (0, s.Y2)(),
             i = s.iA.logged_in && A.Get().BCanRepostPartnerEvent();
           return o.createElement(
@@ -1907,7 +1907,7 @@
           n &&
             o.createElement(
               O.Ii,
-              { href: (0, L.k2)(n) },
+              { href: (0, C.k2)(n) },
               o.createElement(
                 "div",
                 {
@@ -1951,7 +1951,7 @@
     },
     8107: (e, t, n) => {
       "use strict";
-      n.d(t, { N: () => M });
+      n.d(t, { N: () => g });
       var a = n(34629),
         o = n(41735),
         r = n.n(o),
@@ -1969,13 +1969,18 @@
         S = n(78327),
         D = n(66418),
         v = n(30894),
-        N = n(51272);
-      const M = (e) => {
+        N = n(51272),
+        M = n(82715);
+      const g = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
         const n = (0, S.Qn)();
-        return l.createElement(g, { ...e, bShowOnlyInitialEvent: t || n });
+        return l.createElement(
+          M.tH,
+          null,
+          l.createElement(I, { ...e, bShowOnlyInitialEvent: t || n }),
+        );
       };
-      let g = class extends l.Component {
+      let I = class extends l.Component {
         state = { bLoading: !1, eventModel: this.props.eventModel };
         m_refParent = l.createRef();
         m_cancelSignal = r().CancelToken.source();
@@ -2046,8 +2051,7 @@
         }
         render() {
           const { bShowOnlyInitialEvent: e } = this.props,
-            { bLoading: t, eventModel: n } = this.state,
-            a = v.Fm.Get().BOwnsApp(Boolean(n.appid) ? n.appid : void 0);
+            { bLoading: t, eventModel: n } = this.state;
           if (t)
             return l.createElement(
               d.of,
@@ -2059,55 +2063,58 @@
               ),
             );
           const {
-              closeModal: o,
-              appid: r,
-              clanSteamID: s,
-              className: i,
-              partnerEventStore: p,
-              showAppHeader: u,
-              bPrimaryPageFeature: _,
-              additionalParams: S,
-              eventClassName: M,
-            } = this.props,
-            g = l.createElement(
-              "div",
-              null,
-              l.createElement(m.AD, {
-                initialEvent: n,
-                appid: r,
-                clanSteamID: s,
-                partnerEventStore: p,
-                emoticonStore: c.A,
-                closeModal: !_ && o,
-                showAppHeader: u,
-                bShowOnlyInitialEvent: e,
-                additionalParams: S,
-                eventClassName: M,
-                onAppIconClick:
-                  D.T.IN_CLIENT && a
-                    ? (e) =>
-                        (0, N.EP)(e, "steam://nav/games/details/" + n.appid)
-                    : void 0,
-              }),
-            );
-          return _
+            closeModal: a,
+            appid: o,
+            clanSteamID: r,
+            className: s,
+            partnerEventStore: i,
+            showAppHeader: p,
+            bPrimaryPageFeature: u,
+            additionalParams: _,
+            eventClassName: S,
+          } = this.props;
+          let M;
+          D.T.IN_CLIENT &&
+            n?.appid &&
+            (v.Fm.Get().HintLoad(),
+            v.Fm.Get().BOwnsApp(n.appid) &&
+              (M = (e) =>
+                (0, N.EP)(e, "steam://nav/games/details/" + n.appid)));
+          const g = l.createElement(
+            "div",
+            null,
+            l.createElement(m.AD, {
+              initialEvent: n,
+              appid: o,
+              clanSteamID: r,
+              partnerEventStore: i,
+              emoticonStore: c.A,
+              closeModal: !u && a,
+              showAppHeader: p,
+              bShowOnlyInitialEvent: e,
+              additionalParams: _,
+              eventClassName: S,
+              onAppIconClick: M,
+            }),
+          );
+          return u
             ? g
             : l.createElement(
                 d.of,
-                { className: i },
+                { className: s },
                 l.createElement(
                   d.Qs,
-                  { navID: "WebRowEventInfiniteScroll", closeModal: o },
+                  { navID: "WebRowEventInfiniteScroll", closeModal: a },
                   g,
                 ),
               );
         }
       };
-      g = (0, a.Cg)([s.PA], g);
+      I = (0, a.Cg)([s.PA], I);
     },
     67417: (e, t, n) => {
       "use strict";
-      n.d(t, { OT: () => C, j6: () => T, lS: () => D });
+      n.d(t, { OT: () => L, j6: () => T, lS: () => D });
       var a = n(65946),
         o = n(90626),
         r = n(52038),
@@ -2276,7 +2283,7 @@
           }),
         );
       }
-      function C(e) {
+      function L(e) {
         const { event: t, dateRangeLayout: n = "horizontal" } = e,
           [r, s, l] = (0, a.q3)(() => [
             t.GetStartTimeAndDateUnixSeconds(),
@@ -2389,7 +2396,7 @@
     },
     99066: (e, t, n) => {
       "use strict";
-      n.d(t, { Wt: () => L });
+      n.d(t, { Wt: () => C });
       var a = n(34629),
         o = n(90626),
         r = n(22837),
@@ -2412,8 +2419,8 @@
         g = n.n(M),
         I = n(1909),
         T = n(73067),
-        C = n(7068);
-      class L extends o.Component {
+        L = n(7068);
+      class C extends o.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
           u.iA.logged_in
@@ -2469,7 +2476,7 @@
                 );
         }
       }
-      (0, a.Cg)([p.oI], L.prototype, "ShareOnSteamActivityFeed", null);
+      (0, a.Cg)([p.oI], C.prototype, "ShareOnSteamActivityFeed", null);
       const y = (e) => {
           const {
               eventLink: t,
@@ -2498,7 +2505,7 @@
                   "div",
                   { className: g().ShareLanguagePicker },
                   o.createElement(
-                    C.JU,
+                    L.JU,
                     { className: g().LanguageLabel },
                     (0, d.we)("#EventDisplay_Share_LanguageLabel"),
                   ),

@@ -20,7 +20,7 @@ function UpdateCloseWindowButtonText()
 	var elMessage = $('message_' + g_iActiveMessage );
 	if ( elMessage.hasClassName( 'Support_SSAUpdated' ) )
 	{
-		$('supportmessages_closebtn_text').innerHTML = 'I accept the updated Steam Subscriber Agreement';
+		$('supportmessages_closebtn_text').innerHTML = 'Accept SSA';
 	}
 	else
 	{

@@ -2552,7 +2552,7 @@ https://partner.steamgames.com/admin/game/converttrailer/${itemid}
 https://partner.steamgames.com/admin/game/edit/${itemID}?activetab=tab_graphicalassets
 https://partner.steamgames.com/admin/game/edit/${nItemID}?activetab=tab_graphicalassets
 https://partner.steamgames.com/admin/game/gettrailerstate/${itemid}
-https://partner.steamgames.com/admin/game/moviesetdata/${itemid}
+https://partner.steamgames.com/admin/game/moviesetdata/${baseitemid}
 https://partner.steamgames.com/admin/game/movieuploadbegincloud/${itemid}
 https://partner.steamgames.com/admin/game/movieuploadcompletecloud/${itemid}
 https://partner.steamgames.com/admin/game/quickupdateajax/${itemID}
