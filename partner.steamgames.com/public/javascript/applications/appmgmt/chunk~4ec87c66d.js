@@ -3573,6 +3573,14 @@
           );
           this.m_sections.push(n), s.Mt.Get().SetDirty(!0);
         }
+        RemoveSectionByIndex(e) {
+          !this.m_bReadOnly &&
+            this.m_email.sections &&
+            (e < this.m_email.sections.length &&
+              (this.m_email.sections.splice(e, 1),
+              this.m_sections.splice(e, 1)),
+            s.Mt.Get().SetDirty(!0));
+        }
         SetEmailImage(e, t) {
           this.m_email.localized_email_image ||
             (this.m_email.localized_email_image = {});
@@ -3757,6 +3765,7 @@
         (0, n.Cg)([m.oI], f.prototype, "BHasLanguageData", null),
         (0, n.Cg)([m.oI], f.prototype, "GetSubject", null),
         (0, n.Cg)([l.XI.bound], f.prototype, "AddSection", null),
+        (0, n.Cg)([l.XI.bound], f.prototype, "RemoveSectionByIndex", null),
         (0, n.Cg)([l.XI.bound], f.prototype, "SetEmailImage", null),
         (0, n.Cg)([l.XI.bound], f.prototype, "SetAllEmailImages", null),
         (0, n.Cg)([l.XI.bound], f.prototype, "SetServerEmailDefID", null),
@@ -27774,12 +27783,18 @@
         vn = a.n(fn),
         bn = a(35458);
       const wn = (0, Ge.PA)((e) => {
-          const { section: t, sectionIndex: a, emailDef: n, storeItem: r } = e;
-          let i = null;
+          const {
+            section: t,
+            sectionIndex: a,
+            emailDef: n,
+            storeItem: r,
+            fnOnRemoveSection: i,
+          } = e;
+          let s = null;
           if (t.GetType() === F.Dj.k_Custom)
-            i = l.createElement(Dn, { section: t, emailDef: n });
+            s = l.createElement(Dn, { section: t, emailDef: n });
           else
-            i = l.createElement(Bn, { section: t, emailDef: n, storeItem: r });
+            s = l.createElement(Bn, { section: t, emailDef: n, storeItem: r });
           return l.createElement(
             "div",
             null,
@@ -27797,6 +27812,7 @@
                           emailDef: n,
                           sectionIndex: a,
                           storeItem: r,
+                          fnOnRemoveSection: i,
                         }),
                         (0, f.uX)(e),
                       ),
@@ -27804,7 +27820,7 @@
                   "Change Section Type",
                 ),
               ),
-            i,
+            s,
           );
         }),
         Dn = (0, Ge.PA)((e) => {
@@ -27867,18 +27883,19 @@
               sectionIndex: a,
               emailDef: n,
               storeItem: r,
+              fnOnRemoveSection: i,
             } = e,
-            i = "number" != typeof a,
-            s = i ? F.Dj.k_Custom : n.GetSection(a).GetType(),
-            o = s == F.Dj.k_Custom,
-            [c, d] = l.useState(s);
+            s = "number" != typeof a,
+            o = s ? F.Dj.k_Custom : n.GetSection(a).GetType(),
+            c = o == F.Dj.k_Custom,
+            [d, u] = l.useState(o);
           return l.createElement(
             T.eV,
             { bAllowFullSize: !0, onCancel: t, closeModal: t },
             l.createElement(
               m.Y9,
               null,
-              i ? "Add New Email Section" : "Change Section Type",
+              s ? "Add New Email Section" : "Change Section Type",
             ),
             l.createElement(
               m.nB,
@@ -27892,7 +27909,7 @@
                   "An email can have any number of custom sections. Other section types can only appear once on the email. Sections are pruned from the drop down if they already are using else where in the email body.",
                 ),
               ),
-              o &&
+              c &&
                 l.createElement(
                   "div",
                   null,
@@ -27901,16 +27918,34 @@
               l.createElement(In, {
                 emailDef: n,
                 sectionIndex: a,
-                curValue: c,
-                fnOnChange: d,
+                curValue: d,
+                fnOnChange: u,
               }),
+              Boolean(i) &&
+                l.createElement(
+                  m.$n,
+                  {
+                    onClick: (e) =>
+                      (0, h.pg)(
+                        l.createElement(T.o0, {
+                          strTitle: "Are you sure?",
+                          strDescription: "This is not reversible",
+                          onOK: () => {
+                            i(), t();
+                          },
+                        }),
+                        (0, f.uX)(e),
+                      ),
+                  },
+                  "Remove This Section?",
+                ),
               l.createElement(
                 "div",
                 { className: bn.Preview },
                 l.createElement("h2", null, "Section Preview"),
                 l.createElement(Bn, {
                   emailDef: n,
-                  section: new F.cg({ type: c, unique_id: "dummy" }),
+                  section: new F.cg({ type: d, unique_id: "dummy" }),
                   storeItem: r,
                 }),
               ),
@@ -27921,11 +27956,11 @@
               l.createElement(m.CB, {
                 onCancel: t,
                 onOK: () => {
-                  if (i) {
-                    n.AddSection(c);
+                  if (s) {
+                    n.AddSection(d);
                     const e = document.getElementById("end_of_email_sections");
                     e && e.scrollIntoView();
-                  } else n.GetSection(a).SetType(c);
+                  } else n.GetSection(a).SetType(d);
                   t();
                 },
               }),
@@ -29396,6 +29431,7 @@
                   section: e,
                   sectionIndex: a,
                   storeItem: n,
+                  fnOnRemoveSection: () => t.RemoveSectionByIndex(a),
                 }),
               );
           return l.createElement(

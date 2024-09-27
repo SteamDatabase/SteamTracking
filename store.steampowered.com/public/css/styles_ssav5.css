@@ -28,6 +28,14 @@
 	padding:3px;
 }
 
+#ssa_notice {
+	max-width: 860px;
+	font-size: 18px;
+	border: 2px solid red;
+	padding: 15px;
+	margin-top: 10px;
+}
+
 #ssa_box {
 	max-width:860px;
 	background: rgba(0, 0, 0, 0.3);

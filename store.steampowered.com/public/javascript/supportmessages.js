@@ -20,10 +20,18 @@ function UpdateCloseWindowButtonText()
 	var elMessage = $('message_' + g_iActiveMessage );
 	if ( elMessage.hasClassName( 'Support_SSAUpdated' ) )
 	{
-		$('supportmessages_closebtn_text').innerHTML = 'Accept SSA';
+		$('supportmessages_closebtn').removeClassName( 'btn_grey_white_innerfade' );
+		$('supportmessages_closebtn').removeClassName( 'btn_small_thin' );
+		$('supportmessages_closebtn').addClassName( 'btn_green_white_innerfade' );
+		$('supportmessages_closebtn').addClassName( 'btn_medium' );
+		$('supportmessages_closebtn_text').innerHTML = 'Accept Updated SSA';
 	}
 	else
 	{
+		$('supportmessages_closebtn').addClassName( 'btn_grey_white_innerfade' );
+		$('supportmessages_closebtn').addClassName( 'btn_small_thin' );
+		$('supportmessages_closebtn').removeClassName( 'btn_green_white_innerfade' );
+		$('supportmessages_closebtn').removeClassName( 'btn_medium' );
 		$('supportmessages_closebtn_text').innerHTML = 'Close Window';
 	}
 }
