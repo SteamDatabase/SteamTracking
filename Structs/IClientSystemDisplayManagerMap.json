@@ -20,6 +20,10 @@
         {
             "name": "SetCompatibilityMode",
             "argc": "2"
+        },
+        {
+            "name": "SetGameResolutionGlobal",
+            "argc": "2"
         }
     ]
 }

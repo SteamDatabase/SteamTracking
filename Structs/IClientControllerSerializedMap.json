@@ -34,26 +34,6 @@
             "argc": "3"
         },
         {
-            "name": "ActivateActionSet",
-            "argc": "6"
-        },
-        {
-            "name": "ActivateActionSetLayer",
-            "argc": "6"
-        },
-        {
-            "name": "DeactivateActionSetLayer",
-            "argc": "6"
-        },
-        {
-            "name": "DeactivateAllActionSetLayers",
-            "argc": "4"
-        },
-        {
-            "name": "GetActiveActionSetLayers",
-            "argc": "5"
-        },
-        {
             "name": "GetDigitalActionHandle",
             "argc": "4"
         },
@@ -146,24 +126,12 @@
             "argc": "3"
         },
         {
-            "name": "ResetStickExtents",
-            "argc": "2"
-        },
-        {
             "name": "BIsStreamingController",
             "argc": "2"
         },
         {
             "name": "SetUserLedColor",
-            "argc": "5"
-        },
-        {
-            "name": "SetRumble",
             "argc": "6"
-        },
-        {
-            "name": "SetRumbleExtended",
-            "argc": "8"
         },
         {
             "name": "IdentifyControllerRumbleEffect",
@@ -195,10 +163,6 @@
         },
         {
             "name": "WarmOptInStatus",
-            "argc": "3"
-        },
-        {
-            "name": "GetCurrentActionSetHandleForRunningApp",
             "argc": "3"
         },
         {
@@ -354,10 +318,6 @@
             "argc": "3"
         },
         {
-            "name": "BIsXInputActiveForController",
-            "argc": "2"
-        },
-        {
             "name": "PS4SettingsChanged",
             "argc": "2"
         },
@@ -463,14 +423,6 @@
         },
         {
             "name": "GetControllerReverseDiamondLayout",
-            "argc": "2"
-        },
-        {
-            "name": "BRumbleEnabledByUser",
-            "argc": "2"
-        },
-        {
-            "name": "BHapticsEnabledByUser",
             "argc": "2"
         },
         {
@@ -598,10 +550,6 @@
             "argc": "2"
         },
         {
-            "name": "BInputGenerated",
-            "argc": "1"
-        },
-        {
             "name": "GetControllerActivityByType",
             "argc": "2"
         },
@@ -668,10 +616,6 @@
         {
             "name": "SetGyroOn",
             "argc": "4"
-        },
-        {
-            "name": "CursorVisibilityChanged",
-            "argc": "2"
         },
         {
             "name": "ForceSimpleHapticEvent",
