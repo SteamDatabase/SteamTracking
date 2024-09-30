@@ -21426,10 +21426,10 @@
             n.tabs || [],
           ]),
           c = d.useCallback(() => {
-            n ||
+            t.item_browse_section_data ||
               ((t.item_browse_section_data = {}),
               a.SetDirty(r.IQ.jsondata_sales));
-          }, [t, a, n]),
+          }, [t, a]),
           m = V.go
             .filter((e) => void 0 === l.find((t) => t === e))
             .map((e) =>
