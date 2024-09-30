@@ -17323,7 +17323,7 @@
         zo = a(99487),
         qo = a(7193),
         Vo = a(39199),
-        Wo = a(29995),
+        Wo = a(29792),
         Qo = a(40353);
       function Jo(e) {
         const { eventModel: t, nEventBadgeID: a } = e,
