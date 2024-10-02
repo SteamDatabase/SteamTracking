@@ -3311,7 +3311,12 @@
         return i.useContext(s);
       }
       function l() {
-        return (0, n.gc)(o().GetShowDebugFocusRing());
+        var e;
+        return (0, n.gc)(
+          null === (e = o()) || void 0 === e
+            ? void 0
+            : e.GetShowDebugFocusRing(),
+        );
       }
     },
     85585: (e, t, r) => {
