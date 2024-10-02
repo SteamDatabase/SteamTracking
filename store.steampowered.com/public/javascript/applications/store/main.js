@@ -4360,7 +4360,7 @@
         return i.useContext(a);
       }
       function l() {
-        return (0, n.gc)(o().GetShowDebugFocusRing());
+        return (0, n.gc)(o()?.GetShowDebugFocusRing());
       }
     },
     85585: (e, t, r) => {
