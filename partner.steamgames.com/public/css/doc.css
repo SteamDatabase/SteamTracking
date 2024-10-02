@@ -394,7 +394,7 @@ td {
 	background: #94b7ca;
 	border-left: #486B7E 5px solid;
 	padding: 16px;
-	color: #222222;
+	color: #000000;
 	margin: 8px 16px;
 	display: flex;
 }
@@ -449,7 +449,8 @@ td {
 }
 
 .documentation_bbcode .bb_callout a {
-	color: #eeeeee;
+	color: #060606;
+	font-weight: 500;
 }
 
 .documentation_bbcode .bb_callout.bb_lightblue a,

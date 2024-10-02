@@ -354,6 +354,12 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_HapticSupport = 7;
 }
 
+enum ECountryTarget
+{
+	k_ECountryTarget_AllowList = 1;
+	k_ECountryTarget_DenyList = 2;
+}
+
 enum ECurrencyCode
 {
 	k_ECurrencyCodeInvalid = 0;

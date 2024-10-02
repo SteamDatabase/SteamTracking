@@ -50,8 +50,6 @@ GHomepage = {
 	bLoadedActiveData: false,
 	bInitialRenderComplete: false,
 
-	bUseNewMainCapZip: false,
-
 	bShowAllRecentlyUpdated: false,
 	unBackgroundAppID: 0,
 
@@ -152,7 +150,6 @@ GHomepage = {
 			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
 			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
 			GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
-			GHomepage.bUseNewMainCapZip = rgParams.bUseNewMainCapZip || false;
 
 			if (g_AccountID == 0) {
 				$J('#home_recommended_spotlight_notloggedin').show();
@@ -518,16 +515,15 @@ GHomepage = {
 			return GHomepage.FilterItemsForDisplay( list, 'home', 0, 12, oMainCapFilterOpts );
 		};
 
-
-		if ( GHomepage.bUseNewMainCapZip )
+		var itemPrimary = [];
+		var rgFeatured = fnPreFilterList( GHomepage.oDisplayLists.main_cluster, true );
+		if ( rgFeatured.length >= 4 )
 		{
-			var itemPrimary = [];
-			var rgFeatured = fnPreFilterList( GHomepage.oDisplayLists.main_cluster, true );
-			if ( rgFeatured.length >= 4 )
-			{
-								itemPrimary.push( rgFeatured.shift() );
-			}
+						itemPrimary.push( rgFeatured.shift() );
+		}
 
+		if ( g_AccountID != 0 )
+		{
 			var rgOtherRecs = fnPreFilterList( GHomepage.ZipLists(
 				GHomepage.rgRecentAppsByCreator, true,
 				GHomepage.rgCuratedAppsData.apps, true,
@@ -535,37 +531,27 @@ GHomepage = {
 			) );
 
 						rgDisplayListCombined = GHomepage.ZipLists(
-				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
-				itemPrimary, false,
 				rgFeatured, false,
 				fnPreFilterList( GHomepage.oDisplayLists.top_sellers ), true,
 				GHomepage.rgRecommendedGames, true,
 				rgOtherRecs, false
 			);
 		}
-		else if ( g_AccountID == 0 )
+		else
 		{
 			rgDisplayListCombined = GHomepage.ZipLists(
-				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
+				rgFeatured, false,
 				GHomepage.oDisplayLists.top_sellers, true,
 				GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true, // Top new releases
 				GHomepage.oDisplayLists.main_cluster, true // Legacy
 
 			);
 		}
-		else
-		{
-			var rgFeatured = GHomepage.MergeLists( GHomepage.oDisplayLists.main_cluster, false, GHomepage.oDisplayLists.top_sellers, true );
 
-			rgDisplayListCombined = GHomepage.ZipLists(
-				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
-				rgFeatured, false,
-				GHomepage.rgRecentAppsByCreator, true,
-				GHomepage.rgRecommendedGames, true,
-				GHomepage.rgCuratedAppsData.apps, true,
-				GHomepage.rgFriendRecommendations, true
-			);
-		}
+				rgDisplayListCombined = GHomepage.MergeLists(
+			GHomepage.oDisplayLists.main_cluster_legacy, GHomepage.bShuffleInMainLegacy,
+			itemPrimary, false,				rgDisplayListCombined, false
+		);
 
 		rgDisplayListCombined = GHomepage.FilterItemsForDisplay(
 			rgDisplayListCombined, 'home', 6, 15, oMainCapFilterOpts
@@ -574,9 +560,6 @@ GHomepage = {
 		var rgMainCaps = rgDisplayListCombined.slice( 0, 12 );
 
 		GDynamicStore.MarkAppDisplayed( rgMainCaps, 3 );	
-		if ( GHomepage.bShuffleInMainLegacy )
-			rgMainCaps = v_shuffle( rgMainCaps );
-
 		var $CapTarget = $J('#home_maincap_v7 .carousel_items');
 		var $CapThumbs = $J('#home_maincap_v7 .carousel_thumbs');
 

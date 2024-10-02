@@ -177,11 +177,11 @@
                   strict: I,
                 })
               : null,
-            R = !!(v ? v(D, a) : D),
-            A = "function" == typeof _ ? _(R) : _,
-            N = "function" == typeof b ? b(R) : b;
-          R &&
-            ((A = (function () {
+            A = !!(v ? v(D, a) : D),
+            R = "function" == typeof _ ? _(A) : _,
+            N = "function" == typeof b ? b(A) : b;
+          A &&
+            ((R = (function () {
               for (
                 var e = arguments.length, t = new Array(e), a = 0;
                 a < e;
@@ -193,10 +193,10 @@
                   return e;
                 })
                 .join(" ");
-            })(A, d)),
+            })(R, d)),
             (N = (0, s.A)({}, N, p)));
           var T = (0, s.A)(
-            { "aria-current": (R && r) || null, className: A, style: N, to: i },
+            { "aria-current": (A && r) || null, className: R, style: N, to: i },
             L,
           );
           return (
@@ -204,36 +204,6 @@
           );
         });
       });
-    },
-    55909: (e, t, a) => {
-      "use strict";
-      a.d(t, { u: () => c });
-      var n = a(90626),
-        r = a(71513),
-        o = a(93007),
-        i = a(56093),
-        s = a(78327),
-        l = a(61712);
-      function c(e) {
-        const { children: t, navTreeRef: a, ...c } = e,
-          u = n.useRef(),
-          m = (0, i.Ue)(u, a),
-          d = (0, s.Qn)(),
-          p = window.__virtual_keyboard_client;
-        if (d) {
-          const e = window.__nav_tree_root;
-          return n.createElement(
-            r.B2,
-            { ...c, navTreeRef: m, secondary: !0, parentEmbeddedNavTree: e },
-            n.createElement(
-              l.F6,
-              { factory: p },
-              n.createElement(o.q, null, t),
-            ),
-          );
-        }
-        return n.createElement(n.Fragment, null, t);
-      }
     },
     70995: (e, t, a) => {
       "use strict";
@@ -382,7 +352,7 @@
         p = a(62490),
         _ = a(44332),
         h = a(68797),
-        f = a(56093),
+        f = a(73745),
         y = a(78327);
       function g(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
@@ -653,8 +623,8 @@
         r = a(66272),
         o = a(52038),
         i = a(17083),
-        s = a(71513),
-        l = a(32381);
+        s = a(45699),
+        l = a(76217);
       function c(e) {
         const { crumbs: t, className: a } = e;
         return t && 0 != t.length
@@ -702,7 +672,7 @@
         o = a(90626),
         i = a(62490),
         s = a(94607),
-        l = a(56093),
+        l = a(73745),
         c = a(52038),
         u = a(22797);
       !(function (e) {
@@ -980,14 +950,14 @@
     },
     49271: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { CuratorReviewListContainer: () => K, default: () => q });
+      a.r(t), a.d(t, { CuratorReviewListContainer: () => q, default: () => K });
       var n = a(75844),
         r = a(90626),
         o = a(15759),
         i = a(22837),
-        s = a(71513),
-        l = a(55909),
-        c = a(32381),
+        s = a(45699),
+        l = a(12447),
+        c = a(76217),
         u = a(70995),
         m = a(38390),
         d = a(17720),
@@ -1045,7 +1015,7 @@
         );
       }
       var E = a(6626),
-        C = a(25855),
+        C = a(46115),
         I = a(30894),
         b = a(16021),
         w = a(62792),
@@ -1053,8 +1023,8 @@
         L = a(80782),
         P = a(33380),
         D = a.n(P),
-        R = a(12155),
-        A = a(52038),
+        A = a(12155),
+        R = a(52038),
         N = a(70758);
       const T = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
@@ -1080,7 +1050,7 @@
           return r.createElement(
             "div",
             {
-              className: (0, A.A)(
+              className: (0, R.A)(
                 "YoutubePreviewContainer",
                 N.YoutubePreviewImage,
                 e.imageClassnames,
@@ -1088,7 +1058,7 @@
               onClick: () => m(!1),
             },
             r.createElement("img", {
-              className: (0, A.A)("YoutubePreviewImage", N.YoutubePreviewImage),
+              className: (0, R.A)("YoutubePreviewImage", N.YoutubePreviewImage),
               src:
                 t ||
                 y.TS.COMMUNITY_CDN_URL +
@@ -1097,7 +1067,7 @@
             r.createElement(
               "div",
               { className: "YoutubePreviewPlay" },
-              r.createElement(R.IOc, null),
+              r.createElement(A.IOc, null),
             ),
           );
         let p = (0, y.xv)().replace("https://", "");
@@ -1117,9 +1087,9 @@
             })(s)}`),
           r.createElement(
             "div",
-            { className: (0, A.A)("YoutubePlayer", D().TwitchPlayer) },
+            { className: (0, R.A)("YoutubePlayer", D().TwitchPlayer) },
             r.createElement("img", {
-              className: (0, A.A)(
+              className: (0, R.A)(
                 "YoutubePreviewContainer",
                 N.YoutubePreviewImage,
                 e.imageClassnames,
@@ -1199,15 +1169,15 @@
           ),
         );
       }
-      const q = function (e) {
+      const K = function (e) {
         const t = (0, C.A)();
         return r.createElement(
           l.u,
           { navID: "StoreCuratorPageRoot", NavigationManager: t },
-          r.createElement(K, { listid: e.listid }),
+          r.createElement(q, { listid: e.listid }),
         );
       };
-      function K(e) {
+      function q(e) {
         const t = parseInt(
             (0, y.Tc)("curator_account_id", "application_config"),
           ),
@@ -1328,7 +1298,7 @@
           r.createElement(
             c.Z,
             {
-              className: (0, A.A)(H().CuratorList, m && H().CuratorListGrid),
+              className: (0, R.A)(H().CuratorList, m && H().CuratorListGrid),
               "flow-children": "grid",
             },
             i.map((e, a) =>

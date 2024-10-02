@@ -442,6 +442,7 @@
         MetadataEntryType: "_3Huz7jgzTK86UGh8toMwOQ",
         ProgressValue: "_1TLC_vifQFStAMdQJXDfpz",
         TrainStatusPanel: "BbjEtMeSHXYvu-aBMMbwg",
+        Timinginfo: "_3fzSZPx6adm80v3kPoQQA",
         TrainLive: "_12eJCG3fnm3-QZ5cc0gjr-",
         EpochSelectorSection: "duyKvKPx7vLS9jFpVma7O",
         EpochOption: "_2FOChIR-OAmiuI8KrxegoR",
@@ -11290,7 +11291,7 @@
             : n.createElement(sr, { steamLearnContext: {} }, e.children);
         };
       var lr = a(14610),
-        mr = a(84933);
+        mr = a(73745);
       const dr = (e) => {
           const t = Math.max(
             0,
@@ -11719,7 +11720,7 @@
             ),
           );
       var br = a(90627),
-        Nr = a(39879),
+        Nr = a(8395),
         wr = a(738),
         vr = a(10411);
       const Br = () => {
@@ -11826,7 +11827,7 @@
           );
         };
       var yr = a(87495),
-        hr = a(30708);
+        hr = a(9154);
       const Mr = () => {
           const {
               msgWorkingProject: e,
@@ -25390,13 +25391,13 @@
                     { className: yi.MetadataProcessingStatus },
                     d
                       ?.metadata()
-                      .map((e) =>
+                      .map((e, t) =>
                         0 == e.metadata_phase_value()
                           ? null
                           : n.createElement(
                               "div",
                               {
-                                key: `MetadataStatus_${e.metadata_phase()}_${e.metadata_phase_name()}`,
+                                key: `MetadataStatus_${t}`,
                                 className: yi.MetadataEntry,
                               },
                               1 == e.metadata_phase() &&
@@ -25998,6 +25999,28 @@
                 label: (0, c.we)("#SteamLearn_Status_Train_EpochOption", e + 1),
                 value: e + 1,
               });
+          const F = (0, c.we)(
+              "#SteamLearn_Status_Train_Duration",
+              hi(p?.end_time() - p?.start_time()),
+            ),
+            R = new Date(1e3 * p?.end_time()),
+            W = (0, c.we)(
+              "#SteamLearn_Status_Train_Completed",
+              R.getHours() +
+                ":" +
+                R.getMinutes().toString().padStart(2, "0") +
+                ":" +
+                R.getSeconds().toString().padStart(2, "0") +
+                ", " +
+                R.toDateString(),
+            );
+          let k,
+            x = 1 / 0;
+          if (p)
+            for (const e of p.epochs())
+              e.epoch_validate_loss() < x &&
+                ((x = e.epoch_validate_loss()),
+                (k = Li(e.epoch_validate_accuracy())));
           return n.createElement(
             "div",
             { className: yi.TrainStatusPanel },
@@ -26020,6 +26043,13 @@
                     { className: (0, o.A)(yi.StatusString, E) },
                     B,
                   ),
+                  L &&
+                    n.createElement(
+                      "div",
+                      { className: yi.Timinginfo },
+                      n.createElement("div", { className: yi.Timing }, F),
+                      n.createElement("div", { className: yi.Timing }, W),
+                    ),
                   !O &&
                     (L || z) &&
                     !j &&
@@ -26111,11 +26141,11 @@
                 ),
               ),
             p &&
-              0 != l &&
               n.createElement(
                 "div",
                 { className: yi.BatchStatus },
                 y > 0 &&
+                  0 != l &&
                   n.createElement(
                     "div",
                     { className: yi.BatchStatusRow },
@@ -26150,6 +26180,7 @@
                       ),
                   ),
                 M > 0 &&
+                  0 != l &&
                   n.createElement(
                     "div",
                     { className: yi.BatchStatusRow },
@@ -26185,7 +26216,48 @@
                         ),
                       ),
                   ),
-                n.createElement("div", { className: yi.BatchStatusRow }, d),
+                0 != l &&
+                  n.createElement("div", { className: yi.BatchStatusRow }, d),
+                x != 1 / 0 &&
+                  0 == l &&
+                  n.createElement(
+                    "div",
+                    { className: yi.BatchStatusRow },
+                    n.createElement(
+                      "div",
+                      { className: yi.PhaseLabel },
+                      (0, c.we)("#SteamLearn_Status_Train_Epoch_BestLoss"),
+                    ),
+                    n.createElement(
+                      "div",
+                      { className: yi.PhaseValues },
+                      n.createElement(
+                        "span",
+                        { className: yi.Total },
+                        x.toFixed(4),
+                      ),
+                    ),
+                  ),
+                x != 1 / 0 &&
+                  0 == l &&
+                  n.createElement(
+                    "div",
+                    { className: yi.BatchStatusRow },
+                    n.createElement(
+                      "div",
+                      { className: yi.PhaseLabel },
+                      (0, c.we)("#SteamLearn_Status_Train_Epoch_BestAccuracy"),
+                    ),
+                    n.createElement(
+                      "div",
+                      { className: yi.PhaseValues },
+                      n.createElement(
+                        "span",
+                        { className: yi.Total },
+                        k.toFixed(4),
+                      ),
+                    ),
+                  ),
               ),
             p &&
               w &&
@@ -26372,55 +26444,61 @@
                 );
         },
         Ri = () => {
-          const { nProjectID: e, nPublishedVersion: t } = ir(),
-            [a, r] = n.useState(0),
-            [i, s] = n.useState(0),
-            o = La(e, t),
-            c = za(e, t),
-            l = o.data,
-            m = c.data;
+          const {
+              nProjectID: e,
+              nPublishedVersion: t,
+              msgWorkingProjectConfig: a,
+            } = ir(),
+            [r, i] = n.useState(0),
+            [s, o] = n.useState(0),
+            c = La(e, t),
+            l = za(e, t),
+            m = c.data,
+            d = l.data;
           return (
             n.useEffect(() => {
-              r(0), s(0);
+              i(0), o(0);
             }, [e, t]),
             n.useEffect(() => {
-              0 == a &&
-                l &&
-                l.versions().length > 0 &&
-                r(Math.max(...l.versions()));
-            }, [l, a]),
-            n.useEffect(() => {
-              0 == i &&
+              0 == r &&
                 m &&
                 m.versions().length > 0 &&
-                s(Math.max(...m.versions()));
-            }, [m, i]),
-            o.isLoading || c.isLoading
+                i(Math.max(...m.versions()));
+            }, [m, r]),
+            n.useEffect(() => {
+              0 == s &&
+                d &&
+                d.versions().length > 0 &&
+                o(Math.max(...d.versions()));
+            }, [d, s]),
+            c.isLoading || l.isLoading
               ? n.createElement("div", null, "LOADING")
-              : o.isSuccess && c.isSuccess
+              : c.isSuccess && l.isSuccess
                 ? n.createElement(
                     "div",
                     { className: yi.ProjectTrain },
-                    a > 0 &&
+                    r > 0 &&
                       n.createElement(Ci, {
                         nProjectID: e,
-                        nFetchID: a,
-                        arrAllFetchIDs: l.versions(),
+                        nFetchID: r,
+                        arrAllFetchIDs: m.versions(),
                         fnSetFetchID: (e) => {
-                          r(e);
+                          i(e);
                         },
                       }),
                     n.createElement("div", { className: yi.Separator }),
                     n.createElement(zi, {
                       nProjectID: e,
-                      nTrainID: i,
-                      arrAllTrainIDs: m.versions(),
+                      nTrainID: s,
+                      arrAllTrainIDs: d.versions(),
                       fnSetTrainID: (e) => {
-                        s(e);
+                        o(e);
+                        for (const t of a.train_infos())
+                          t.train_id() == e && i(t.fetch_id());
                       },
                     }),
                     n.createElement("div", { className: yi.Separator }),
-                    n.createElement(Ii, { nFetchID: a, nTrainID: i }),
+                    n.createElement(Ii, { nFetchID: r, nTrainID: s }),
                   )
                 : null
           );

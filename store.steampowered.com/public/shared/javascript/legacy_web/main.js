@@ -1,27 +1,18 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9220519";
+var CLSTAMP = "9224593";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      479: (e, t, n) => {
-        function a(e, t) {
-          return (function (e, t) {
-            const n = e.findIndex(t);
-            return n >= 0 && (e.splice(n, 1), !0);
-          })(e, (e) => t == e);
-        }
-        n.d(t, { x9: () => a });
-      },
-      552: (e, t, n) => {
-        n.d(t, { pR: () => i, Vz: () => r, nh: () => l });
+      416: (e, t, n) => {
+        n.d(t, { pR: () => r, Vz: () => i, nh: () => l });
         var a,
-          i,
           r,
-          s = n(216);
-        class o {
+          i,
+          o = n(350);
+        class s {
           m_ActiveInputId;
           m_ActiveInputTimeout;
           m_config;
@@ -61,22 +52,22 @@ var CLSTAMP = "9220519";
           m_config;
           m_inputRepeatGenerator;
           m_repeatOnAxis = a.None;
-          m_bRepeatEnabled = !0;
+          m_fnRepeatAllowed = () => !0;
           constructor(e) {
-            (this.m_config = e), (this.m_inputRepeatGenerator = new o(e));
+            (this.m_config = e), (this.m_inputRepeatGenerator = new s(e));
           }
           Reset() {
             this.m_inputRepeatGenerator.Reset();
           }
-          SetEnabled(e) {
-            (this.m_bRepeatEnabled = e), this.m_bRepeatEnabled || this.Reset();
+          SetRepeatAllowed(e) {
+            e || (e = () => !0), (this.m_fnRepeatAllowed = e);
           }
           HandleInputButtonDown(e, t, n) {
-            this.m_bRepeatEnabled && this.m_config.inputsThatRepeat.has(e)
+            this.m_fnRepeatAllowed() && this.m_config.inputsThatRepeat.has(e)
               ? this.m_repeatOnAxis == a.None &&
-                ((e != i.DIR_UP && e != i.DIR_DOWN) ||
+                ((e != r.DIR_UP && e != r.DIR_DOWN) ||
                   (this.m_repeatOnAxis = a.Vertical),
-                (e != i.DIR_LEFT && e != i.DIR_RIGHT) ||
+                (e != r.DIR_LEFT && e != r.DIR_RIGHT) ||
                   (this.m_repeatOnAxis = a.Horizontal),
                 t(),
                 this.m_inputRepeatGenerator.HandleInputButtonDown(e, n))
@@ -87,8 +78,8 @@ var CLSTAMP = "9220519";
               this.m_config.inputsThatRepeat.has(e) &&
               this.m_repeatOnAxis != a.None
             ) {
-              const t = e == i.DIR_UP || e == i.DIR_DOWN,
-                n = e == i.DIR_LEFT || e == i.DIR_RIGHT;
+              const t = e == r.DIR_UP || e == r.DIR_DOWN,
+                n = e == r.DIR_LEFT || e == r.DIR_RIGHT;
               ((this.m_repeatOnAxis == a.Vertical && t) ||
                 (this.m_repeatOnAxis == a.Horizontal && n)) &&
                 ((this.m_repeatOnAxis = a.None),
@@ -126,7 +117,7 @@ var CLSTAMP = "9220519";
             (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (e[(e.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
             (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
-        })(i || (i = {})),
+        })(r || (r = {})),
           (function (e) {
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
               (e[(e.GAMEPAD = 1)] = "GAMEPAD"),
@@ -135,22 +126,22 @@ var CLSTAMP = "9220519";
               (e[(e.TOUCH = 4)] = "TOUCH"),
               (e[(e.LPAD = 5)] = "LPAD"),
               (e[(e.RPAD = 6)] = "RPAD");
-          })(r || (r = {}));
+          })(i || (i = {}));
         class l {
-          m_OnGamepadDetectedCallbacks = new s.lu();
-          m_ButtonDownCallbacks = new s.lu();
-          m_ButtonUpCallbacks = new s.lu();
-          m_AnalogCallbacks = new s.lu();
-          m_NavigationTypeChangeCallbacks = new s.lu();
+          m_OnGamepadDetectedCallbacks = new o.l();
+          m_ButtonDownCallbacks = new o.l();
+          m_ButtonUpCallbacks = new o.l();
+          m_AnalogCallbacks = new o.l();
+          m_NavigationTypeChangeCallbacks = new o.l();
           m_eNavigationSourceType;
           m_fLastActiveTime;
           m_nLastActiveControllerIndex = -1;
           m_ButtonRepeatHandler = new c({
             inputsThatRepeat: new Set([
-              i.DIR_UP,
-              i.DIR_DOWN,
-              i.DIR_LEFT,
-              i.DIR_RIGHT,
+              r.DIR_UP,
+              r.DIR_DOWN,
+              r.DIR_LEFT,
+              r.DIR_RIGHT,
             ]),
             firstRepeatInterval_ms: 400,
             repeatInterval_ms: 50,
@@ -188,7 +179,7 @@ var CLSTAMP = "9220519";
             return this.m_fLastActiveTime;
           }
           SetRepeatAllowed(e) {
-            this.m_ButtonRepeatHandler.SetEnabled(e);
+            this.m_ButtonRepeatHandler.SetRepeatAllowed(e);
           }
           OnGamepadDetected() {
             console.log("Gamepad detected"),
@@ -237,26 +228,22 @@ var CLSTAMP = "9220519";
           }
         }
       },
-      40: (e, t, n) => {
+      814: (e, t, n) => {
         function a(e, t) {
-          return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
-        }
-        function i(e) {
           return (function (e, t) {
-            if (!e) return !1;
-            const [n, i] = t.split(".", 2);
-            return n && i && a(e, n) && i in e.SteamClient[n];
-          })(window, e);
+            const n = e.findIndex(t);
+            return n >= 0 && (e.splice(n, 1), !0);
+          })(e, (e) => t == e);
         }
-        n.d(t, { Dp: () => i });
+        n.d(t, { x9: () => a });
       },
-      914: (e, t, n) => {
+      311: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
               let e = n.value.bind(this);
               return (
-                this.hasOwnProperty(t) ||
+                Object.prototype.hasOwnProperty.call(this, t) ||
                   Object.defineProperty(this, t, { value: e }),
                 e
               );
@@ -265,24 +252,16 @@ var CLSTAMP = "9220519";
         }
         n.d(t, { o: () => a });
       },
-      216: (e, t, n) => {
-        n.d(t, {
-          lu: () => s,
-          LU: () => p,
-          e0: () => m,
-          Jc: () => c,
-          YX: () => u,
-        });
-        var a = n(629),
-          i = n(479),
-          r = n(914);
-        class s {
+      350: (e, t, n) => {
+        n.d(t, { l: () => r });
+        var a = n(814);
+        class r {
           m_vecCallbacks = [];
           Register(e) {
             this.m_vecCallbacks.push(e);
             return {
               Unregister: () => {
-                i.x9(this.m_vecCallbacks, e);
+                a.x9(this.m_vecCallbacks, e);
               },
             };
           }
@@ -296,106 +275,21 @@ var CLSTAMP = "9220519";
             return this.m_vecCallbacks.length;
           }
         }
-        class o {
-          m_callbacks;
-          m_currentValue;
-          m_fnEquals;
-          constructor(e, t) {
-            (this.m_callbacks = new s()),
-              (this.m_currentValue = e),
-              (this.m_fnEquals = t);
-          }
-          Set(e) {
-            if (this.m_fnEquals) {
-              if (this.m_fnEquals(this.m_currentValue, e)) return;
-            } else if (this.m_currentValue === e) return;
-            (this.m_currentValue = e), this.m_callbacks.Dispatch(e);
-          }
-          get Value() {
-            return this.m_currentValue;
-          }
-          Subscribe(e) {
-            return { Unsubscribe: this.m_callbacks.Register(e).Unregister };
-          }
-        }
-        function c(e, t) {
-          return new o(e, t);
-        }
-        class l {
-          m_fnMap;
-          m_originalSubscribableValue;
-          m_mappedSubscribableValue;
-          m_mappedUnsubscribe;
-          m_subscriptionRefCount = 0;
-          constructor(e, t, n) {
-            (this.m_originalSubscribableValue = e),
-              (this.m_mappedSubscribableValue = new o(t(e.Value), n)),
-              (this.m_fnMap = t);
-          }
-          get Value() {
-            return this.m_mappedSubscribableValue?.Value;
-          }
-          Subscribe(e) {
-            0 == this.m_subscriptionRefCount++ &&
-              (this.m_mappedUnsubscribe =
-                this.m_originalSubscribableValue.Subscribe((e) =>
-                  this.m_mappedSubscribableValue.Set(this.m_fnMap(e)),
-                ));
-            const t = this.m_mappedSubscribableValue?.Subscribe(e);
-            return {
-              Unsubscribe: () => {
-                t.Unsubscribe(),
-                  0 == --this.m_subscriptionRefCount &&
-                    (this.m_mappedUnsubscribe?.Unsubscribe(),
-                    (this.m_mappedUnsubscribe = void 0));
-              },
-            };
-          }
-        }
-        function u(e, t, n) {
-          return new l(e, t, n);
-        }
-        class p {
-          m_schTimer;
-          m_fnCallback;
-          Schedule(e, t) {
-            this.IsScheduled() && this.Cancel(),
-              (this.m_fnCallback = t),
-              (this.m_schTimer = window.setTimeout(this.ScheduledInternal, e));
-          }
-          IsScheduled() {
-            return void 0 !== this.m_schTimer;
-          }
-          Cancel() {
-            this.m_schTimer &&
-              (clearTimeout(this.m_schTimer), (this.m_schTimer = void 0));
-          }
-          ScheduledInternal() {
-            this.m_schTimer = void 0;
-            const e = this.m_fnCallback;
-            (this.m_fnCallback = void 0), e?.();
-          }
-        }
-        (0, a.Cg)([r.o], p.prototype, "ScheduledInternal", null);
-        class m {
-          m_vecCallbacks = [];
-          Push(e) {
-            this.m_vecCallbacks.push(e);
-          }
-          PushArrayRemove(e, t) {
-            this.m_vecCallbacks.push(() => i.x9(e, t));
-          }
-          Unregister() {
-            for (const e of this.m_vecCallbacks) e();
-            this.m_vecCallbacks = [];
-          }
-          GetUnregisterFunc() {
-            return this.Unregister;
-          }
-        }
-        (0, a.Cg)([r.o], m.prototype, "Unregister", null);
       },
-      337: (e, t, n) => {
+      767: (e, t, n) => {
+        function a(e, t) {
+          return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
+        }
+        function r(e) {
+          return (function (e, t) {
+            if (!e) return !1;
+            const [n, r] = t.split(".", 2);
+            return n && r && a(e, n) && r in e.SteamClient[n];
+          })(window, e);
+        }
+        n.d(t, { Dp: () => r });
+      },
+      184: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -410,10 +304,10 @@ var CLSTAMP = "9220519";
       629: (e, t, n) => {
         n.d(t, { Cg: () => a });
         function a(e, t, n, a) {
-          var i,
-            r = arguments.length,
-            s =
-              r < 3
+          var r,
+            i = arguments.length,
+            o =
+              i < 3
                 ? t
                 : null === a
                   ? (a = Object.getOwnPropertyDescriptor(t, n))
@@ -422,12 +316,12 @@ var CLSTAMP = "9220519";
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
           )
-            s = Reflect.decorate(e, t, n, a);
+            o = Reflect.decorate(e, t, n, a);
           else
-            for (var o = e.length - 1; o >= 0; o--)
-              (i = e[o]) &&
-                (s = (r < 3 ? i(s) : r > 3 ? i(t, n, s) : i(t, n)) || s);
-          return r > 3 && s && Object.defineProperty(t, n, s), s;
+            for (var s = e.length - 1; s >= 0; s--)
+              (r = e[s]) &&
+                (o = (i < 3 ? r(o) : i > 3 ? r(t, n, o) : r(t, n)) || o);
+          return i > 3 && o && Object.defineProperty(t, n, o), o;
         }
         Object.create;
         Object.create;
@@ -435,34 +329,38 @@ var CLSTAMP = "9220519";
       },
     },
     a = {};
-  function i(e) {
+  function r(e) {
     var t = a[e];
     if (void 0 !== t) return t.exports;
-    var r = (a[e] = { exports: {} });
-    return n[e](r, r.exports, i), r.exports;
+    var i = (a[e] = { exports: {} });
+    return n[e](i, i.exports, r), i.exports;
   }
-  (i.m = n),
-    (i.n = (e) => {
+  (r.m = n),
+    (r.n = (e) => {
       var t = e && e.__esModule ? () => e.default : () => e;
-      return i.d(t, { a: t }), t;
+      return r.d(t, { a: t }), t;
     }),
-    (i.d = (e, t) => {
+    (r.d = (e, t) => {
       for (var n in t)
-        i.o(t, n) &&
-          !i.o(e, n) &&
+        r.o(t, n) &&
+          !r.o(e, n) &&
           Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
     }),
-    (i.f = {}),
-    (i.e = (e) =>
-      Promise.all(Object.keys(i.f).reduce((t, n) => (i.f[n](e, t), t), []))),
-    (i.u = (e) =>
+    (r.f = {}),
+    (r.e = (e) =>
+      Promise.all(Object.keys(r.f).reduce((t, n) => (r.f[n](e, t), t), []))),
+    (r.u = (e) =>
       "javascript/legacy_web/" +
-      { 97: "desktop", 616: "gamepad" }[e] +
+      ({ 97: "desktop", 616: "gamepad" }[e] || e) +
       ".js?contenthash=" +
-      { 97: "cb9ab9b9af8f74608757", 616: "1abb6a962ae1212e2ddd" }[e]),
-    (i.miniCssF = (e) =>
-      "css/legacy_web/gamepad.css?contenthash=6e6111865655343f0b1a"),
-    (i.g = (function () {
+      {
+        97: "cfa002853b6801f8bd31",
+        616: "c9ccc327ed6158de25ef",
+        766: "61ed50334efc616a73e8",
+      }[e]),
+    (r.miniCssF = (e) =>
+      "css/legacy_web/gamepad.css?contenthash=8f8038e8f8c48763e2ca"),
+    (r.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || new Function("return this")();
@@ -470,60 +368,60 @@ var CLSTAMP = "9220519";
         if ("object" == typeof window) return window;
       }
     })()),
-    (i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
+    (r.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
     (e = {}),
     (t = "legacy_web:"),
-    (i.l = (n, a, r, s) => {
+    (r.l = (n, a, i, o) => {
       if (e[n]) e[n].push(a);
       else {
-        var o, c;
-        if (void 0 !== r)
+        var s, c;
+        if (void 0 !== i)
           for (
-            var l = document.getElementsByTagName("script"), u = 0;
-            u < l.length;
-            u++
+            var l = document.getElementsByTagName("script"), p = 0;
+            p < l.length;
+            p++
           ) {
-            var p = l[u];
+            var u = l[p];
             if (
-              p.getAttribute("src") == n ||
-              p.getAttribute("data-webpack") == t + r
+              u.getAttribute("src") == n ||
+              u.getAttribute("data-webpack") == t + i
             ) {
-              o = p;
+              s = u;
               break;
             }
           }
-        o ||
+        s ||
           ((c = !0),
-          ((o = document.createElement("script")).charset = "utf-8"),
-          (o.timeout = 120),
-          i.nc && o.setAttribute("nonce", i.nc),
-          o.setAttribute("data-webpack", t + r),
-          (o.src = n)),
+          ((s = document.createElement("script")).charset = "utf-8"),
+          (s.timeout = 120),
+          r.nc && s.setAttribute("nonce", r.nc),
+          s.setAttribute("data-webpack", t + i),
+          (s.src = n)),
           (e[n] = [a]);
-        var m = (t, a) => {
-            (o.onerror = o.onload = null), clearTimeout(_);
-            var i = e[n];
+        var d = (t, a) => {
+            (s.onerror = s.onload = null), clearTimeout(_);
+            var r = e[n];
             if (
               (delete e[n],
-              o.parentNode && o.parentNode.removeChild(o),
-              i && i.forEach((e) => e(a)),
+              s.parentNode && s.parentNode.removeChild(s),
+              r && r.forEach((e) => e(a)),
               t)
             )
               return t(a);
           },
           _ = setTimeout(
-            m.bind(null, void 0, { type: "timeout", target: o }),
+            d.bind(null, void 0, { type: "timeout", target: s }),
             12e4,
           );
-        (o.onerror = m.bind(null, o.onerror)),
-          (o.onload = m.bind(null, o.onload)),
-          c && document.head.appendChild(o);
+        (s.onerror = d.bind(null, s.onerror)),
+          (s.onload = d.bind(null, s.onload)),
+          c && document.head.appendChild(s);
       }
     }),
     (() => {
       var e;
-      i.g.importScripts && (e = i.g.location + "");
-      var t = i.g.document;
+      r.g.importScripts && (e = r.g.location + "");
+      var t = r.g.document;
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
         var n = t.getElementsByTagName("script");
         if (n.length)
@@ -538,14 +436,14 @@ var CLSTAMP = "9220519";
         .replace(/#.*$/, "")
         .replace(/\?.*$/, "")
         .replace(/\/[^\/]+$/, "/")),
-        (i.p = e + "../../");
+        (r.p = e + "../../");
     })(),
     (() => {
       if ("undefined" != typeof document) {
         var e = (e) =>
             new Promise((t, n) => {
-              var a = i.miniCssF(e),
-                r = i.p + a;
+              var a = r.miniCssF(e),
+                i = r.p + a;
               if (
                 ((e, t) => {
                   for (
@@ -553,60 +451,60 @@ var CLSTAMP = "9220519";
                     a < n.length;
                     a++
                   ) {
-                    var i =
-                      (s = n[a]).getAttribute("data-href") ||
-                      s.getAttribute("href");
-                    if ("stylesheet" === s.rel && (i === e || i === t))
-                      return s;
+                    var r =
+                      (o = n[a]).getAttribute("data-href") ||
+                      o.getAttribute("href");
+                    if ("stylesheet" === o.rel && (r === e || r === t))
+                      return o;
                   }
-                  var r = document.getElementsByTagName("style");
-                  for (a = 0; a < r.length; a++) {
-                    var s;
+                  var i = document.getElementsByTagName("style");
+                  for (a = 0; a < i.length; a++) {
+                    var o;
                     if (
-                      (i = (s = r[a]).getAttribute("data-href")) === e ||
-                      i === t
+                      (r = (o = i[a]).getAttribute("data-href")) === e ||
+                      r === t
                     )
-                      return s;
+                      return o;
                   }
-                })(a, r)
+                })(a, i)
               )
                 return t();
-              ((e, t, n, a, i) => {
-                var r = document.createElement("link");
-                (r.rel = "stylesheet"),
-                  (r.type = "text/css"),
-                  (r.onerror = r.onload =
+              ((e, t, n, a, r) => {
+                var i = document.createElement("link");
+                (i.rel = "stylesheet"),
+                  (i.type = "text/css"),
+                  (i.onerror = i.onload =
                     (n) => {
-                      if (((r.onerror = r.onload = null), "load" === n.type))
+                      if (((i.onerror = i.onload = null), "load" === n.type))
                         a();
                       else {
-                        var s = n && n.type,
-                          o = (n && n.target && n.target.href) || t,
+                        var o = n && n.type,
+                          s = (n && n.target && n.target.href) || t,
                           c = new Error(
                             "Loading CSS chunk " +
                               e +
                               " failed.\n(" +
-                              s +
-                              ": " +
                               o +
+                              ": " +
+                              s +
                               ")",
                           );
                         (c.name = "ChunkLoadError"),
                           (c.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (c.type = s),
-                          (c.request = o),
-                          r.parentNode && r.parentNode.removeChild(r),
-                          i(c);
+                          (c.type = o),
+                          (c.request = s),
+                          i.parentNode && i.parentNode.removeChild(i),
+                          r(c);
                       }
                     }),
-                  (r.href = t),
+                  (i.href = t),
                   n
-                    ? n.parentNode.insertBefore(r, n.nextSibling)
-                    : document.head.appendChild(r);
-              })(e, r, null, t, n);
+                    ? n.parentNode.insertBefore(i, n.nextSibling)
+                    : document.head.appendChild(i);
+              })(e, i, null, t, n);
             }),
           t = { 792: 0 };
-        i.f.miniCss = (n, a) => {
+        r.f.miniCss = (n, a) => {
           t[n]
             ? a.push(t[n])
             : 0 !== t[n] &&
@@ -626,27 +524,27 @@ var CLSTAMP = "9220519";
     })(),
     (() => {
       var e = { 792: 0 };
-      i.f.j = (t, n) => {
-        var a = i.o(e, t) ? e[t] : void 0;
+      r.f.j = (t, n) => {
+        var a = r.o(e, t) ? e[t] : void 0;
         if (0 !== a)
           if (a) n.push(a[2]);
           else {
-            var r = new Promise((n, i) => (a = e[t] = [n, i]));
-            n.push((a[2] = r));
-            var s = i.p + i.u(t),
-              o = new Error();
-            i.l(
-              s,
+            var i = new Promise((n, r) => (a = e[t] = [n, r]));
+            n.push((a[2] = i));
+            var o = r.p + r.u(t),
+              s = new Error();
+            r.l(
+              o,
               (n) => {
-                if (i.o(e, t) && (0 !== (a = e[t]) && (e[t] = void 0), a)) {
-                  var r = n && ("load" === n.type ? "missing" : n.type),
-                    s = n && n.target && n.target.src;
-                  (o.message =
-                    "Loading chunk " + t + " failed.\n(" + r + ": " + s + ")"),
-                    (o.name = "ChunkLoadError"),
-                    (o.type = r),
-                    (o.request = s),
-                    a[1](o);
+                if (r.o(e, t) && (0 !== (a = e[t]) && (e[t] = void 0), a)) {
+                  var i = n && ("load" === n.type ? "missing" : n.type),
+                    o = n && n.target && n.target.src;
+                  (s.message =
+                    "Loading chunk " + t + " failed.\n(" + i + ": " + o + ")"),
+                    (s.name = "ChunkLoadError"),
+                    (s.type = i),
+                    (s.request = o),
+                    a[1](s);
                 }
               },
               "chunk-" + t,
@@ -656,26 +554,26 @@ var CLSTAMP = "9220519";
       };
       var t = (t, n) => {
           var a,
-            r,
-            [s, o, c] = n,
+            i,
+            [o, s, c] = n,
             l = 0;
-          if (s.some((t) => 0 !== e[t])) {
-            for (a in o) i.o(o, a) && (i.m[a] = o[a]);
-            if (c) c(i);
+          if (o.some((t) => 0 !== e[t])) {
+            for (a in s) r.o(s, a) && (r.m[a] = s[a]);
+            if (c) c(r);
           }
-          for (t && t(n); l < s.length; l++)
-            (r = s[l]), i.o(e, r) && e[r] && e[r][0](), (e[r] = 0);
+          for (t && t(n); l < o.length; l++)
+            (i = o[l]), r.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
         },
         n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  i(337);
-  var r = i(669),
-    s = i.n(r),
-    o = i(629),
-    c = i(552),
-    l = i(914);
-  let u = [
+  r(184);
+  var i = r(669),
+    o = r.n(i),
+    s = r(629),
+    c = r(416),
+    l = r(311);
+  let p = [
     { index: 0, type: c.pR.OK, category: "action" },
     { index: 1, type: c.pR.CANCEL, category: "action" },
     { index: 2, type: c.pR.SECONDARY, category: "action" },
@@ -695,7 +593,7 @@ var CLSTAMP = "9220519";
     { index: 16, type: c.pR.STEAM_GUIDE, category: "action" },
     { index: 17, type: c.pR.SELECT, category: "action" },
   ];
-  class p extends c.nh {
+  class u extends c.nh {
     m_rgGamepadStatus = [];
     constructor() {
       super(),
@@ -713,41 +611,42 @@ var CLSTAMP = "9220519";
         if (!a) continue;
         this.m_rgGamepadStatus[n] ||
           (this.m_rgGamepadStatus[n] = { buttons: [] });
-        let i = this.m_rgGamepadStatus[n];
-        for (let e = 0; e < u.length; e++) {
-          let n = u[e],
-            r = n.index;
-          a.buttons[r] &&
-            (a.buttons[r].pressed
+        let r = this.m_rgGamepadStatus[n];
+        for (let e = 0; e < p.length; e++) {
+          let n = p[e],
+            i = n.index;
+          a.buttons[i] &&
+            (a.buttons[i].pressed
               ? ((t = !0),
-                i.buttons[r] ||
-                  ((i.buttons[r] = !0), this.OnButtonDown(n.type)))
-              : i.buttons[r] && (this.OnButtonUp(n.type), (i.buttons[r] = !1)));
+                r.buttons[i] ||
+                  ((r.buttons[i] = !0), this.OnButtonDown(n.type)))
+              : r.buttons[i] && (this.OnButtonUp(n.type), (r.buttons[i] = !1)));
         }
       }
       requestAnimationFrame(this.PollGamepads);
     }
   }
-  (0, o.Cg)([l.o], p.prototype, "PollGamepads", null);
-  var m = i(40);
+  (0, s.Cg)([l.o], u.prototype, "PollGamepads", null);
+  var d = r(767);
   async function _(e) {
-    const { InitializeGamepadNavigation: t } = await i
-      .e(616)
-      .then(i.bind(i, 874));
+    const { InitializeGamepadNavigation: t } = await Promise.all([
+      r.e(766),
+      r.e(616),
+    ]).then(r.bind(r, 695));
     t(e);
   }
-  i.p.endsWith("shared/") || (i.p = i.p + "shared/"),
-    s()(function () {
+  r.p.endsWith("shared/") || (r.p = r.p + "shared/"),
+    o()(function () {
       !(function () {
-        const e = new p();
+        const e = new u();
         navigator.userAgent.includes("Valve Steam Gamepad")
           ? _(e)
-          : (0, m.Dp)("BrowserView.RegisterForMessageFromParent") &&
-              (0, m.Dp)("BrowserView.PostMessageToParent")
+          : (0, d.Dp)("BrowserView.RegisterForMessageFromParent") &&
+              (0, d.Dp)("BrowserView.PostMessageToParent")
             ? (async function () {
-                const { InitializeForDesktop: e } = await i
+                const { InitializeForDesktop: e } = await r
                   .e(97)
-                  .then(i.bind(i, 268));
+                  .then(r.bind(r, 265));
                 e();
               })()
             : e.RegisterForGamepadDetected(() => _(e));

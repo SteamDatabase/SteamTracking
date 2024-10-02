@@ -8,12 +8,14 @@
         AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
         AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
         AppVideo: "_3sG-J5T8SrzM0Hjkda7sgL",
-        "microtrailer-trans-in": "_3D_pgT8sxFP3ieDxVt_1zp",
-        Hidden: "_133cw4R3W7BUEiogJVas9e",
+        PlayFullTrailer: "_115ZF6m0XsEieocbL7zjo-",
         "microtrailer-trans-out": "HMoi7fPFNjxiHeyrfkgmO",
-        ShowTrailer: "_26iLRdY_qVM_-n8K_6Q2RR",
+        PlayMicrotrailer: "_2edFDJ0B9YjtlfqugPTxw0",
+        "microtrailer-trans-in": "_3D_pgT8sxFP3ieDxVt_1zp",
+        NoTrailer: "WtSN6aaEz7vEnRjVrq2hS",
         "trailer-trans-in": "_3kp7PkbzSVQPFoobA3Xx7N",
         AppMainCap: "_3cc6kgsSpd-DeLRDHEM_lD",
+        Hidden: "_133cw4R3W7BUEiogJVas9e",
         "capsule-trans-out": "hckHU2LXCJNx0X37OqCsx",
         PlayButton: "_1y11BvPq_nL5EZFF8GLuD9",
         AutoplayCheckboxCtn: "_2HvO_RKtxiyyhZsELjYyq5",
@@ -140,8 +142,8 @@
       "use strict";
       r.d(t, { M: () => o });
       var n = r(90626),
-        i = r(51240),
-        s = r(56093);
+        i = r(6144),
+        s = r(73745);
       const a = (e) => null != e;
       function o(e, t) {
         const [r, i] = n.useState(window.localStorage.getItem(e)),
@@ -203,8 +205,8 @@
         a = r(56545),
         o = r(8114),
         l = r(75487),
-        c = r(51240),
-        u = r(56093),
+        c = r(6144),
+        u = r(73745),
         m = r(41338),
         d = r(78327);
       function p(e, t) {
@@ -631,7 +633,7 @@
       "use strict";
       r.d(t, { X: () => f });
       var n = r(90626),
-        i = r(32381),
+        i = r(76217),
         s = r(61088),
         a = r.n(s),
         o = r(12155),
@@ -658,8 +660,8 @@
           v = n.useRef(),
           C = n.useRef(),
           [I, B] = n.useState(!0),
-          [E, R] = n.useState(!1),
-          [T, A] = n.useState(!0),
+          [E, T] = n.useState(!1),
+          [R, A] = n.useState(!0),
           [M, D] = (0, d.M)(g),
           [G, F] = n.useState(0),
           [N, k] = n.useState(!1);
@@ -667,9 +669,9 @@
           if (r) {
             const e = (0, l.VY)(_),
               t = !(!e || "true" !== e.toLowerCase());
-            B(t), A(!t), R(!0);
+            B(t), A(!t), T(!0);
           }
-          return () => R(!1);
+          return () => T(!1);
         }, [r]),
           n.useEffect(() => {
             if (v.current) {
@@ -733,7 +735,7 @@
         let x = null;
         t?.GetAllTrailers().BHasTrailers() &&
           (x = t.GetAllTrailers().GetHighlightTrailers()[0]);
-        const Q = (0, n.useCallback)(
+        const P = (0, n.useCallback)(
             (e) => {
               if (w && w < 1) return;
               if (N) return;
@@ -744,14 +746,21 @@
             },
             [N, M, w, D],
           ),
-          P = (0, n.useCallback)(
+          z = (0, n.useCallback)(
             (e) => (e.current?.paused ? e.current?.play() : e.current?.pause()),
             [],
           );
         if (!t.BIsVisible()) return null;
-        const z = { [e.autoplayCheckboxPosition || "top"]: 0 },
-          H = !b,
-          j =
+        const Q = { [e.autoplayCheckboxPosition || "top"]: 0 };
+        let j = null;
+        j =
+          2 == G
+            ? a().PlayFullTrailer
+            : 1 == G
+              ? a().PlayMicrotrailer
+              : a().NoTrailer;
+        const H = !b,
+          Z =
             y && t.BHasAgeSafeScreenshots()
               ? t.GetOnlyAllAgesSafeScreenshots()[0]
               : t.GetAssets().GetMainCapsuleURL();
@@ -761,7 +770,7 @@
           n.createElement("img", {
             ref: C,
             className: (0, m.A)(a().AppMainCap, 0 != G && a().Hidden),
-            src: j,
+            src: Z,
           }),
           !s &&
             t.GetAllTrailers().BHasTrailers() &&
@@ -781,13 +790,13 @@
                   checked: !I,
                   key: t.GetAppID(),
                   className: a().AutoplayCheckbox,
-                  style: z,
+                  style: Q,
                   label: (0, c.we)("#StoreTrailer_AutoPlayVideos"),
                   onChange: q,
                 }),
               ),
               I &&
-                !T &&
+                !R &&
                 n.createElement(
                   i.Z,
                   { focusable: !0, onClick: U, className: a().PlayButton },
@@ -797,16 +806,12 @@
                 n.createElement(
                   "video",
                   {
-                    className: (0, m.A)(
-                      a().AppVideo,
-                      1 != G && a().Hidden,
-                      "Microtrailer",
-                    ),
+                    className: (0, m.A)(a().AppVideo, j, "Microtrailer"),
                     ref: S,
                     preload: "auto",
                     playsInline: !0,
                     muted: !0,
-                    onClick: () => P(S),
+                    onClick: () => z(S),
                   },
                   n.createElement("source", {
                     src: W.strWebMURL,
@@ -822,13 +827,9 @@
                 n.createElement(
                   "video",
                   {
-                    className: (0, m.A)(
-                      a().AppVideo,
-                      2 == G && a().ShowTrailer,
-                      "Trailer",
-                    ),
+                    className: (0, m.A)(a().AppVideo, j, "Trailer"),
                     ref: v,
-                    onVolumeChange: Q,
+                    onVolumeChange: P,
                     muted: !(M > 0),
                     preload: "auto",
                     playsInline: !0,
@@ -851,11 +852,11 @@
     },
     32885: (e, t, r) => {
       "use strict";
-      r.d(t, { v: () => H });
+      r.d(t, { v: () => j });
       var n = r(90626),
         i = r(20194),
-        s = r(71513),
-        a = r(32381),
+        s = r(45699),
+        a = r(76217),
         o = r(1035),
         l = r(34181),
         c = r(17720),
@@ -1327,68 +1328,12 @@
           return "RecommendationDetails";
         }
       }
-      class R extends v {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            R.prototype.appid || S.Sg(R.M()),
-            v.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
-                fields: {
-                  appid: { n: 1, br: S.qM.readUint32, bw: S.gp.writeUint32 },
-                },
-              }),
-            R.sm_m
-          );
-        }
-        static MBF() {
-          return R.sm_mbf || (R.sm_mbf = S.w0(R.M())), R.sm_mbf;
-        }
-        toObject(e = !1) {
-          return R.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return S.BT(R.M(), e, t);
-        }
-        static fromObject(e) {
-          return S.Uq(R.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new b.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return S.zj(R.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new b.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          S.i0(R.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new b.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserReviews_GetFriendsRecommendedApp_Request";
-        }
-      }
       class T extends v {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            T.prototype.accountids_recommended || S.Sg(T.M()),
-            v.initialize(this, e, 0, -1, [1, 3], null);
+            T.prototype.appid || S.Sg(T.M()),
+            v.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1398,22 +1343,7 @@
               (T.sm_m = {
                 proto: T,
                 fields: {
-                  accountids_recommended: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: S.qM.readUint32,
-                    pbr: S.qM.readPackedUint32,
-                    bw: S.gp.writeRepeatedUint32,
-                  },
-                  accountids_not_recommended: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: S.qM.readUint32,
-                    pbr: S.qM.readPackedUint32,
-                    bw: S.gp.writeRepeatedUint32,
-                  },
+                  appid: { n: 1, br: S.qM.readUint32, bw: S.gp.writeUint32 },
                 },
               }),
             T.sm_m
@@ -1449,6 +1379,77 @@
         serializeBase64String() {
           var e = new b.BinaryWriter();
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetFriendsRecommendedApp_Request";
+        }
+      }
+      class R extends v {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            R.prototype.accountids_recommended || S.Sg(R.M()),
+            v.initialize(this, e, 0, -1, [1, 3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
+                fields: {
+                  accountids_recommended: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: S.qM.readUint32,
+                    pbr: S.qM.readPackedUint32,
+                    bw: S.gp.writeRepeatedUint32,
+                  },
+                  accountids_not_recommended: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: S.qM.readUint32,
+                    pbr: S.qM.readPackedUint32,
+                    bw: S.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            R.sm_m
+          );
+        }
+        static MBF() {
+          return R.sm_mbf || (R.sm_mbf = S.w0(R.M())), R.sm_mbf;
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return S.BT(R.M(), e, t);
+        }
+        static fromObject(e) {
+          return S.Uq(R.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new b.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return S.zj(R.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new b.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          S.i0(R.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new b.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserReviews_GetFriendsRecommendedApp_Response";
@@ -1633,8 +1634,8 @@
           (e.GetFriendsRecommendedApp = function (e, t) {
             return e.SendMsg(
               "UserReviews.GetFriendsRecommendedApp#1",
-              (0, w.I8)(R, t),
-              T,
+              (0, w.I8)(T, t),
+              R,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -1654,7 +1655,7 @@
         O = r(78327);
       class U {
         static async LoadFriendsRecommendedApp(e, t) {
-          const r = w.w.Init(R);
+          const r = w.w.Init(T);
           r.Body().set_appid(t);
           const n = await G.GetFriendsRecommendedApp(e, r),
             i = n.GetEResult();
@@ -1688,10 +1689,10 @@
       var q = r(22797),
         W = r(57834),
         x = r.n(W),
-        Q = r(14336),
-        P = r(26505);
-      const z = new y.wd("AppRelevance").Debug;
-      function H(e) {
+        P = r(14336),
+        z = r(26505);
+      const Q = new y.wd("AppRelevance").Debug;
+      function j(e) {
         const {
             appID: t,
             bShowAvatars: r,
@@ -1700,7 +1701,7 @@
             bShowCuratorInfo: o,
             bShowCreatorInfo: l,
           } = e,
-          m = (0, P.Nd)(t),
+          m = (0, z.Nd)(t),
           h = (function (e) {
             const t = (0, k.KV)();
             return (0, i.I)({
@@ -1841,13 +1842,13 @@
           });
         const B = y.GetItemIDs().findIndex((e) => e.appid === t),
           E = _.data?.bRecommendedByIR,
-          R = I.length > 0,
-          T = m.data?.owns?.length,
+          T = I.length > 0,
+          R = m.data?.owns?.length,
           A = m.data?.in_wishlist?.length,
           M = h.data?.accountids_recommended?.length;
         let D = 0;
         return (
-          T > 0 && D++,
+          R > 0 && D++,
           A > 0 && D++,
           M > 0 && D++,
           E && D++,
@@ -1855,9 +1856,9 @@
           I.length > 0 && D++,
           o && b?.data?.length > 0 && D++,
           l && Boolean(v.data) && D++,
-          z(
+          Q(
             "FriendsOwned: ",
-            T,
+            R,
             " FriendsWishlisted: ",
             A,
             "cRecommended: ",
@@ -1878,7 +1879,7 @@
                 n.createElement(
                   "div",
                   { className: x().RelevantCtn },
-                  R &&
+                  T &&
                     n.createElement(
                       $,
                       { header: (0, f.we)("#DiscoveryQueue_SimilarGames") },
@@ -1917,7 +1918,7 @@
                     ),
                   l &&
                     Boolean(v.data) &&
-                    n.createElement(j, { creatorInfo: v.data }),
+                    n.createElement(H, { creatorInfo: v.data }),
                   B >= 0 &&
                     n.createElement($, {
                       header: (0, f.um)(
@@ -1929,7 +1930,7 @@
                       ),
                     }),
                   E &&
-                    !R &&
+                    !T &&
                     n.createElement($, {
                       header: (0, f.we)("#DiscoveryQueue_RecommendedByIR"),
                     }),
@@ -1962,7 +1963,7 @@
           )
         );
       }
-      function j(e) {
+      function H(e) {
         const { creatorInfo: t } = e;
         if (!t) return null;
         let r;
@@ -2058,7 +2059,7 @@
       }
       function K(e) {
         const { steamid: t } = e,
-          { data: r } = (0, Q.js)(t);
+          { data: r } = (0, P.js)(t);
         return r && r.m_bInitialized
           ? n.createElement(
               "span",
@@ -2072,7 +2073,7 @@
       }
       function X(e) {
         const { arrSteamIDs: t } = e,
-          r = (0, Q.DW)(t);
+          r = (0, P.DW)(t);
         return n.createElement(
           n.Fragment,
           null,
@@ -2091,7 +2092,7 @@
       }
       function J(e) {
         const { steamid: t } = e,
-          { data: r } = (0, Q.js)(t);
+          { data: r } = (0, P.js)(t);
         return r
           ? n.createElement(
               a.Z,
@@ -2148,11 +2149,11 @@
       r.d(t, { jM: () => he, LB: () => me, lS: () => ue });
       var n = r(90626),
         i = r(73860),
-        s = r(71513),
-        a = r(93007),
-        o = r(32381),
-        l = r(62630),
-        c = r(40094),
+        s = r(45699),
+        a = r(7445),
+        o = r(76217),
+        l = r(37788),
+        c = r(1977),
         u = r(30894),
         m = r(56545),
         d = r(72034),
@@ -2215,18 +2216,18 @@
         f = r(62093),
         y = r(34629),
         w = r(72739),
-        b = r(56093),
+        b = r(73745),
         S = r(19719),
         v = r(79516),
         C = r(48399),
-        I = r(16628),
+        I = r(53534),
         B = r(69381),
         E = r(60778),
-        R = r(76011);
-      const T = new E.wd("VirtualizedBoxCarousel").Debug,
+        T = r(76011);
+      const R = new E.wd("VirtualizedBoxCarousel").Debug,
         A = n.forwardRef(function (e, t) {
           const { name: r, initialColumn: i } = e,
-            [s, a] = (0, R.SP)("VBC_" + r, i || 0),
+            [s, a] = (0, T.SP)("VBC_" + r, i || 0),
             o = (0, h.Qn)();
           return n.createElement(M, {
             ...e,
@@ -2260,7 +2261,7 @@
           if (s)
             if (i) {
               const s = this.m_refGridElement;
-              T("StartScrollAnimation", r, n, i);
+              R("StartScrollAnimation", r, n, i);
               let a = {
                 msDuration: i,
                 timing: this.props.scrollTiming,
@@ -2292,12 +2293,12 @@
         }
         OnAnimationScrollComplete(e, t, r, n) {
           w.unstable_batchedUpdates(() => {
-            T("OnAnimationScrollComplete", r, n),
+            R("OnAnimationScrollComplete", r, n),
               this.SendScrollNotification(n);
             const i = this.m_mapRefs.get(r);
             i &&
               i.current &&
-              (T("Sending focus to", r), i.current.TakeFocus(e)),
+              (R("Sending focus to", r), i.current.TakeFocus(e)),
               this.props.setFocusedColumn(t),
               (this.m_scrollAnimation = null),
               (this.m_activeScrollTo = null);
@@ -2402,7 +2403,7 @@
         OnSectionRendered(e) {
           (this.m_iStart = e.columnStartIndex),
             (this.m_iEnd = e.columnStopIndex),
-            T("Section rendered", this.m_iStart, this.m_iEnd),
+            R("Section rendered", this.m_iStart, this.m_iEnd),
             this.UpdateScrollArrows();
         }
         get alignment() {
@@ -2417,7 +2418,7 @@
               e > this.props.nIndexLeftmost;
             )
               e--;
-          return T("LastFocusableColumn: ", e), e;
+          return R("LastFocusableColumn: ", e), e;
         }
         UpdateScrollArrows() {
           if (this.props.fnUpdateArrows) {
@@ -2436,7 +2437,7 @@
               i =
                 r != Math.floor(t?.scrollLeft) &&
                 r != Math.round(t?.scrollLeft);
-            T(
+            R(
               "ShowLeftArrow: ",
               n,
               e,
@@ -2490,7 +2491,7 @@
               n = parseInt(t.getPropertyValue("scroll-padding-right")) || 0,
               i = Math.max(r, n);
             i != this.state.nRightPadding &&
-              (T("Computed", i, "additional right padding"),
+              (R("Computed", i, "additional right padding"),
               this.setState({ nRightPadding: i }, () => {
                 this.m_refGrid.recomputeGridSize({
                   columnIndex: this.props.nNumItems - 1,
@@ -2504,7 +2505,7 @@
               this.m_refContainer.current,
               this.OnResize,
             )),
-            T(
+            R(
               "componentDidMount Setting width to",
               this.m_refContainer.current.clientWidth,
             ),
@@ -2514,7 +2515,7 @@
         }
         componentDidUpdate(e) {
           this.props.fnGetColumnWidth != e.fnGetColumnWidth &&
-            (T("Column width function changes, recalculating sizes"),
+            (R("Column width function changes, recalculating sizes"),
             this.m_refGrid?.recomputeGridSize());
         }
         componentWillUnmount() {
@@ -2523,7 +2524,7 @@
         OnResize() {
           const e = this.m_refContainer.current.clientWidth;
           e != this.state.nContainerWidth &&
-            (T(
+            (R(
               "OnResize Setting width to",
               this.m_refContainer.current.clientWidth,
             ),
@@ -2558,7 +2559,7 @@
           );
         }
         MoveLeft(e) {
-          T("MoveLeft from", this.props.focusedColumn);
+          R("MoveLeft from", this.props.focusedColumn);
           let t = this.props.focusedColumn - 1;
           for (
             ;
@@ -2568,8 +2569,8 @@
           )
             t--;
           return t == this.props.nIndexLeftmost - 1
-            ? (T("At left edge, not handling left gamepad"), !1)
-            : (T("MoveLeft to", t),
+            ? (R("At left edge, not handling left gamepad"), !1)
+            : (R("MoveLeft to", t),
               this.ScrollToItem(
                 e ? e.detail.button : I.pR.INVALID,
                 t,
@@ -2578,7 +2579,7 @@
               ));
         }
         MoveRight(e) {
-          T("MoveRight from", this.props.focusedColumn);
+          R("MoveRight from", this.props.focusedColumn);
           let t = this.props.focusedColumn + 1;
           for (
             ;
@@ -2588,8 +2589,8 @@
           )
             t++;
           return t == this.props.nNumItems
-            ? (T("At right edge, not handling right gamepad"), !1)
-            : (T("MoveRight to", t),
+            ? (R("At right edge, not handling right gamepad"), !1)
+            : (R("MoveRight to", t),
               this.ScrollToItem(
                 e ? e.detail.button : I.pR.INVALID,
                 t,
@@ -2605,7 +2606,7 @@
           )
             return !0;
           if (
-            (T("ScrollToItem", t, r, n, i),
+            (R("ScrollToItem", t, r, n, i),
             t != this.props.focusedColumn &&
               this.m_refGrid &&
               (!this.props.fnDoesItemTakeFocus ||
@@ -2618,7 +2619,7 @@
               }),
               a = this.props.fnGetId(t);
             return (
-              T("Scrolling to item", t, a, r, s.scrollLeft, i),
+              R("Scrolling to item", t, a, r, s.scrollLeft, i),
               (this.m_activeScrollTo = { iNewFocus: t, alignment: r }),
               this.props.fnOnFocusedColumnChange &&
                 this.props.fnOnFocusedColumnChange(this.props.focusedColumn, t),
@@ -2637,7 +2638,7 @@
           return !1;
         }
         OnGamepadButtonDown(e) {
-          switch ((T("OnGamepadButtonDown", e.detail), e.detail.button)) {
+          switch ((R("OnGamepadButtonDown", e.detail), e.detail.button)) {
             case I.pR.BUMPER_LEFT:
               return !!this.props.enableBumperPaging && this.ScrollLeft(e);
             case I.pR.BUMPER_RIGHT:
@@ -2646,7 +2647,7 @@
           return !1;
         }
         OnGamepadDirection(e) {
-          switch ((T("OnGamepadDirection", e.detail), e.detail.button)) {
+          switch ((R("OnGamepadDirection", e.detail), e.detail.button)) {
             case I.pR.DIR_LEFT:
               return this.MoveLeft(e);
             case I.pR.DIR_RIGHT:
@@ -2668,7 +2669,7 @@
             } = this.props,
             m = this.state.nContainerWidth;
           return (
-            T("Inner render", this.props.name, this.props.nNumItems, m, r, c),
+            R("Inner render", this.props.name, this.props.nNumItems, m, r, c),
             n.createElement(
               o.Z,
               {
@@ -2754,11 +2755,11 @@
         q = r(39199),
         W = r(57834),
         x = r.n(W),
-        Q = r(20019),
-        P = r(62792),
-        z = r(55263),
-        H = r(80782),
-        j = r(26101),
+        P = r(20019),
+        z = r(62792),
+        Q = r(55263),
+        j = r(80782),
+        H = r(26101),
         Z = r(94095),
         V = r(44986),
         Y = r(60014),
@@ -2782,7 +2783,7 @@
             elVideo: p,
             elDetails: _,
           } = e,
-          [g] = (0, z.t7)(t, ee.Gy),
+          [g] = (0, Q.t7)(t, ee.Gy),
           f = (0, h.Qn)(),
           y = (0, i.R7)(),
           w = y?.ownerWindow || window,
@@ -2870,13 +2871,13 @@
             storePageFilter: s,
             bPreferDemoStorePage: a,
           } = e,
-          [l] = (0, z.t7)(t, ee.Gy),
+          [l] = (0, Q.t7)(t, ee.Gy),
           { fnUpdateIgnored: c } = (0, ee.TK)(t),
           { bIsWishlisted: u, fnUpdateWishlist: m } = (0, ee.u4)(t, ue),
           d = ne(l, i, s, a),
           p = (0, h.Qn)(),
           _ = p,
-          g = (0, H.LG)(l?.GetTagIDs());
+          g = (0, j.LG)(l?.GetTagIDs());
         if (!l) return;
         const f = l.GetAssets().GetLibraryCapsuleURL();
         return n.createElement(
@@ -2899,7 +2900,7 @@
                 n.createElement("div", { className: x().AppName }, l.GetName()),
                 n.createElement(Z.wc, {
                   bSingleLineMode: !0,
-                  info: { id: t, type: (0, Q.U)(l.GetAppType()) },
+                  info: { id: t, type: (0, P.U)(l.GetAppType()) },
                 }),
               ),
             ),
@@ -2907,10 +2908,10 @@
             n.createElement(
               "div",
               { className: x().AppReviews },
-              n.createElement(j.Jz, {
+              n.createElement(H.Jz, {
                 bShowTooltip: !0,
                 bTruncateTotalReviews: r,
-                appInfo: { id: t, type: (0, Q.U)(l.GetAppType()) },
+                appInfo: { id: t, type: (0, P.U)(l.GetAppType()) },
               }),
             ),
             n.createElement(
@@ -2934,7 +2935,7 @@
                   n.createElement(X.j, {
                     info: {
                       id: l.GetAppID(),
-                      type: (0, P._4)(l.GetStoreItemType(), l.GetAppType()),
+                      type: (0, z._4)(l.GetStoreItemType(), l.GetAppType()),
                     },
                     className: (0, k.A)(
                       x().QueueButton,
@@ -3051,33 +3052,33 @@
           [w, S] = n.useState(800),
           [v, C] = n.useState(24),
           [I, B] = n.useState("DiscoveryQueue"),
-          [E, R] = n.useState(!0),
-          [T, M] = n.useState(!1),
-          [W, Q] = n.useState(!1),
-          P = n.useRef(),
-          z = (0, h.Qn)(),
-          H = (0, i.R7)(),
-          j = H?.ownerWindow || window,
+          [E, T] = n.useState(!0),
+          [R, M] = n.useState(!1),
+          [W, P] = n.useState(!1),
+          z = n.useRef(),
+          Q = (0, h.Qn)(),
+          j = (0, i.R7)(),
+          H = j?.ownerWindow || window,
           Z = (0, N.m)("DiscoveryQueueWizard"),
           V = (0, f.b)();
-        (0, O.E)("ArrowLeft", (e) => P.current.MoveLeft(e)),
-          (0, O.E)("Left", (e) => P.current.MoveLeft(e)),
-          (0, O.E)("ArrowRight", (e) => P.current.MoveRight(e)),
-          (0, O.E)("Right", (e) => P.current.MoveRight(e)),
+        (0, O.E)("ArrowLeft", (e) => z.current.MoveLeft(e)),
+          (0, O.E)("Left", (e) => z.current.MoveLeft(e)),
+          (0, O.E)("ArrowRight", (e) => z.current.MoveRight(e)),
+          (0, O.E)("Right", (e) => z.current.MoveRight(e)),
           (0, O.E)("Escape", () => a && a()),
           (0, O.E)("Esc", () => a && a());
         const Y = n.useCallback(
             (e) => {
-              const t = Math.max((j.innerWidth / 100) * 2.8 + 40, 24),
-                r = Math.min(1400, j.innerWidth / 1.3 - 2 * t - 48 + 220),
-                n = (j.innerWidth - w - 2 * t) / 2;
+              const t = Math.max((H.innerWidth / 100) * 2.8 + 40, 24),
+                r = Math.min(1400, H.innerWidth / 1.3 - 2 * t - 48 + 220),
+                n = (H.innerWidth - w - 2 * t) / 2;
               S(r), C(n);
             },
-            [j.innerWidth, w],
+            [H.innerWidth, w],
           ),
           K = (0, b.wY)(Y),
           X = n.useMemo(() => (9 / 16) * (w - 0.3 * w), [w]),
-          J = n.useMemo(() => Boolean(j.innerWidth < ce), [j]),
+          J = n.useMemo(() => Boolean(H.innerWidth < ce), [H]),
           te = n.useCallback(
             async (e) => {
               let { appids: r } = await de(t, !e, e && l, m);
@@ -3095,14 +3096,14 @@
                 r.push(le),
                 (n = n.concat(r)),
                 Z?.token?.reason || _(n),
-                e || P?.current?.MoveRight(),
+                e || z?.current?.MoveRight(),
                 ae("Loaded new discovery queue apps: ", r);
             },
             [t, l, m, p, Z?.token?.reason],
           );
         n.useEffect(() => {
           W ||
-            (te(!0).then(() => Q(!0)),
+            (te(!0).then(() => P(!0)),
             u.Fm.Get().HintLoad(),
             B(
               (() => {
@@ -3191,9 +3192,9 @@
           ),
           fe = n.useCallback(
             (e, t) => {
-              z || (M(e), R(t));
+              Q || (M(e), T(t));
             },
-            [z],
+            [Q],
           ),
           ye = n.useCallback((e) => p[e] !== le, [p]),
           we = n.useCallback(
@@ -3262,7 +3263,7 @@
                       o.Z,
                       {
                         "flow-children": "row",
-                        className: (0, k.A)(x().TopBarCtn, z && x().TopMargin),
+                        className: (0, k.A)(x().TopBarCtn, Q && x().TopMargin),
                       },
                       n.createElement(
                         o.Z,
@@ -3306,11 +3307,11 @@
                       n.createElement(
                         o.Z,
                         {
-                          onClick: (e) => P.current.MoveLeft(e),
+                          onClick: (e) => z.current.MoveLeft(e),
                           className: (0, k.A)(
                             x().QueueNavArrow,
                             x().LeftArrow,
-                            T && x().Enable,
+                            R && x().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 180 }),
@@ -3318,7 +3319,7 @@
                       n.createElement(A, {
                         name: I,
                         className: x().DiscoveryQueueCarousel,
-                        ref: P,
+                        ref: z,
                         fnDoesItemTakeFocus: ye,
                         fnOnFocusedColumnChange: we,
                         fnUpdateArrows: fe,
@@ -3340,7 +3341,7 @@
                       n.createElement(
                         o.Z,
                         {
-                          onClick: (e) => P.current.MoveRight(e),
+                          onClick: (e) => z.current.MoveRight(e),
                           className: (0, k.A)(
                             x().QueueNavArrow,
                             x().RightArrow,
@@ -3349,7 +3350,7 @@
                         },
                         n.createElement(G.l8x, { angle: 0 }),
                       ),
-                      !z &&
+                      !Q &&
                         n.createElement(
                           o.Z,
                           { "flow-children": "row" },
@@ -3427,14 +3428,14 @@
           ),
           [I, B] = n.useState(!1),
           E = (0, Y.n9)(),
-          R = (0, q.IH)(i, d),
-          T = (0, N.m)("DiscoveryQueueSummary"),
+          T = (0, q.IH)(i, d),
+          R = (0, N.m)("DiscoveryQueueSummary"),
           A = n.useCallback(() => {
             B(!0),
               m(!1).then(() => {
-                T?.token?.reason || B(!0);
+                R?.token?.reason || B(!0);
               });
-          }, [T?.token?.reason, m]);
+          }, [R?.token?.reason, m]);
         return n.createElement(
           l.YZ,
           {
@@ -3553,7 +3554,7 @@
                   },
                   (0, L.we)("#ActionButtonLabelDone"),
                 ),
-                !R &&
+                !T &&
                   n.createElement(
                     o.Z,
                     {
@@ -3569,7 +3570,7 @@
                   ),
               ),
           ),
-          Boolean(!R) &&
+          Boolean(!T) &&
             n.createElement(
               n.Fragment,
               null,
@@ -3657,7 +3658,7 @@
         s = r.n(i),
         a = r(52038),
         o = r(61859),
-        l = r(32381),
+        l = r(76217),
         c = r(65946),
         u = r(91822),
         m = r(60801),

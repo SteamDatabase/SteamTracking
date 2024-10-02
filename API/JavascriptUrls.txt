@@ -137,6 +137,7 @@ ${COMMUNITY_BASE_URL}/app/${m_unGamePlayedAppID}
 ${COMMUNITY_BASE_URL}/gid/${}
 ${COMMUNITY_BASE_URL}/gid/${}${}
 ${COMMUNITY_BASE_URL}/gid/${}/ajaxcreateupdatedeletepartnerevents/
+${COMMUNITY_BASE_URL}/gid/${}/ajaxgetcrowdinprojectandfilename?projectId=${}&fileId=${}
 ${COMMUNITY_BASE_URL}/gid/${}/ajaxlisteventsfordashboard/
 ${COMMUNITY_BASE_URL}/gid/${}/announcements/ajaxdeleteannouncement/${}
 ${COMMUNITY_BASE_URL}/gid/${}/deleteimage/
@@ -1023,6 +1024,7 @@ ${PARTNER_BASE_URL}doc/${}
 ${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/features/seasonpass
 ${PARTNER_BASE_URL}doc/features/timeline
+${PARTNER_BASE_URL}doc/gettingstarted/contentsurvey/germany
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
@@ -1205,6 +1207,7 @@ ${PARTNER_BASE_URL}pub/publisher/${}
 ${PARTNER_BASE_URL}public/downloadics.php?${}
 ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
 ${PARTNER_BASE_URL}recap/nextfest/${}/${m_partnerId}
+${PARTNER_BASE_URL}recommended_actions/missingratingforgermany/?partnerid=${}
 ${PARTNER_BASE_URL}recommended_actions/storedescriptionlinks/?partnerid=${}
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent

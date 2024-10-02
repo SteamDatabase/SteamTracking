@@ -3011,12 +3011,19 @@ button.DialogButton {
 .BbjEtMeSHXYvu-aBMMbwg
   ._2bD-7QwwjnOaBcg8cnI3FZ
   ._2_wooob9jI5Q_yEGNi4gU6
+  ._3fzSZPx6adm80v3kPoQQA {
+  margin-bottom: 10px;
+}
+.BbjEtMeSHXYvu-aBMMbwg
+  ._2bD-7QwwjnOaBcg8cnI3FZ
+  ._2_wooob9jI5Q_yEGNi4gU6
   ._12eJCG3fnm3-QZ5cc0gjr- {
   font-size: 16px;
   margin-bottom: 6px;
   border: 1px solid #333;
   color: #fff;
   padding: 6px 10px;
+  width: fit-content;
 }
 .BbjEtMeSHXYvu-aBMMbwg .duyKvKPx7vLS9jFpVma7O {
   display: flex;

@@ -41,9 +41,9 @@
         r = a(61859),
         o = a(84202),
         i = a.n(o),
-        c = a(71513),
-        l = a(78327),
-        s = a(12155),
+        c = a(45699),
+        s = a(78327),
+        l = a(12155),
         m = a(7068),
         u = a(41735),
         d = a.n(u),
@@ -52,9 +52,9 @@
         h = a(13952),
         S = a(95034),
         H = a(92757),
-        f = a(32381),
-        C = a(55909),
-        b = a(25855);
+        f = a(76217),
+        C = a(12447),
+        b = a(46115);
       function v() {
         const e = (0, b.A)(),
           t = (0, n.useRef)();
@@ -89,28 +89,28 @@
                   c.Ii,
                   {
                     className: i().AddFriendBtn,
-                    href: `${l.TS.COMMUNITY_BASE_URL}search/users/`,
+                    href: `${s.TS.COMMUNITY_BASE_URL}search/users/`,
                   },
                   (0, r.we)("#Community_Home_Header_AddFriend_Button"),
                 ),
               ),
-              n.createElement(E, null),
-              n.createElement(g, null),
+              n.createElement(y, null),
+              n.createElement(T, null),
             ),
           )
         );
       }
-      function E() {
+      function y() {
         const [e, t] = (0, n.useState)(""),
           [a, o] = (0, n.useState)([]),
           [u, _] = (0, n.useState)(!1),
           h = (function () {
             const e = (0, n.useMemo)(
-                () => (0, l.Fd)("personalapps", "application_config") || [],
+                () => (0, s.Fd)("personalapps", "application_config") || [],
                 [],
               ),
               t = (0, n.useMemo)(
-                () => (0, l.Fd)("popularapps", "application_config") || [],
+                () => (0, s.Fd)("popularapps", "application_config") || [],
                 [],
               ),
               a = [...e, ...t];
@@ -131,12 +131,12 @@
           n.createElement(
             f.Z,
             { className: i().AppHubsCtn },
-            n.createElement(y, {
+            n.createElement(E, {
               appShortcuts: h.data.personalAppIds,
               sectionTitle: (0, r.we)("#Community_Home_Header_GameHubs_ForYou"),
               withDivider: h.data.popularAppIds.length > 0,
             }),
-            n.createElement(y, {
+            n.createElement(E, {
               appShortcuts: h.data.popularAppIds,
               sectionTitle: (0, r.we)(
                 "#Community_Home_Header_GameHubs_Popular",
@@ -162,7 +162,7 @@
                   onChange: async (e) => {
                     t(e.target.value);
                     const a = await (async function (e) {
-                      const t = `${l.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+                      const t = `${s.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
                       return (await d().get(t)).data;
                     })(e.target.value);
                     o(a);
@@ -177,7 +177,7 @@
               n.createElement(
                 "div",
                 { className: i().SearchIcon },
-                n.createElement(s.eSy, null),
+                n.createElement(l.eSy, null),
               ),
             ),
             u &&
@@ -188,7 +188,7 @@
                   n.createElement(
                     c.Ii,
                     {
-                      href: `${l.TS.COMMUNITY_BASE_URL}app/${e.appid}`,
+                      href: `${s.TS.COMMUNITY_BASE_URL}app/${e.appid}`,
                       key: e.appid,
                       className: i().SearchResult,
                     },
@@ -199,7 +199,7 @@
           ),
         );
       }
-      function y(e) {
+      function E(e) {
         const { appShortcuts: t, sectionTitle: a, withDivider: r } = e;
         return t && t.length
           ? n.createElement(
@@ -215,19 +215,19 @@
                     r ? i().Divider : null,
                   ),
                 },
-                t.map((e, t) => n.createElement(w, { key: t, appId: e })),
+                t.map((e, t) => n.createElement(A, { key: t, appId: e })),
               ),
             )
           : null;
       }
-      function w(e) {
+      function A(e) {
         const t = h.A.Get().GetApp(e.appId);
         return t
           ? n.createElement(
               c.Ii,
               {
                 className: i().ShortcutLink,
-                href: `${l.TS.COMMUNITY_BASE_URL}app/${e.appId}`,
+                href: `${s.TS.COMMUNITY_BASE_URL}app/${e.appId}`,
               },
               n.createElement("img", {
                 className: i().ShortcutImage,
@@ -236,12 +236,12 @@
             )
           : null;
       }
-      const T = "subsection",
-        A = "browsefilter";
-      function g() {
+      const w = "subsection",
+        g = "browsefilter";
+      function T() {
         const e = (0, H.W6)(),
-          t = (0, S.f3)(e, T),
-          a = (0, S.f3)(e, A);
+          t = (0, S.f3)(e, w),
+          a = (0, S.f3)(e, g);
         return n.createElement(
           "div",
           null,
@@ -280,17 +280,17 @@
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
           ].map((e, o) => {
-            const s = t ? t === e.id : 0 === o,
-              m = e.id ? `${T}=${e.id}` : "",
-              u = a ? `${A}=${a}` : "",
-              d = `${l.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
+            const l = t ? t === e.id : 0 === o,
+              m = e.id ? `${w}=${e.id}` : "",
+              u = a ? `${g}=${a}` : "",
+              d = `${s.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
             return n.createElement(
               c.Ii,
               {
                 id: e.id,
                 href: d,
                 key: e.id,
-                className: (0, _.A)(i().Tab, s ? i().ActiveTab : null),
+                className: (0, _.A)(i().Tab, l ? i().ActiveTab : null),
               },
               (0, r.we)(e.label),
             );
@@ -305,7 +305,7 @@
           n.createElement(
             "div",
             { className: i().SortIcon },
-            n.createElement(s.LPs, null),
+            n.createElement(l.LPs, null),
           ),
           [
             { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -314,16 +314,16 @@
               id: "mostrecent",
             },
           ].map((e, o) => {
-            const s = a ? a === e.id : 0 === o,
-              m = t ? `${T}=${t}` : "",
-              u = e.id ? `${A}=${e.id}` : "",
-              d = `${l.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
+            const l = a ? a === e.id : 0 === o,
+              m = t ? `${w}=${t}` : "",
+              u = e.id ? `${g}=${e.id}` : "",
+              d = `${s.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
             return n.createElement(
               c.Ii,
               {
                 href: d,
                 key: e.id,
-                className: (0, _.A)(i().Sort, s ? i().ActiveSort : null),
+                className: (0, _.A)(i().Sort, l ? i().ActiveSort : null),
               },
               (0, r.we)(e.label),
             );
@@ -331,39 +331,9 @@
         );
       }
     },
-    55909: (e, t, a) => {
-      "use strict";
-      a.d(t, { u: () => s });
-      var n = a(90626),
-        r = a(71513),
-        o = a(93007),
-        i = a(56093),
-        c = a(78327),
-        l = a(61712);
-      function s(e) {
-        const { children: t, navTreeRef: a, ...s } = e,
-          m = n.useRef(),
-          u = (0, i.Ue)(m, a),
-          d = (0, c.Qn)(),
-          p = window.__virtual_keyboard_client;
-        if (d) {
-          const e = window.__nav_tree_root;
-          return n.createElement(
-            r.B2,
-            { ...s, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
-            n.createElement(
-              l.F6,
-              { factory: p },
-              n.createElement(o.q, null, t),
-            ),
-          );
-        }
-        return n.createElement(n.Fragment, null, t);
-      }
-    },
     95034: (e, t, a) => {
       "use strict";
-      a.d(t, { Bm: () => c, QD: () => l, f3: () => o, ip: () => s });
+      a.d(t, { Bm: () => c, QD: () => s, f3: () => o, ip: () => l });
       var n = a(90626),
         r = a(92757);
       function o(e, t) {
@@ -393,11 +363,11 @@
           ? e.replace(`?${r.toString()}`, { ...e.location.state })
           : e.push(`?${r.toString()}`);
       }
-      function l(e, t) {
+      function s(e, t) {
         const a = (0, r.W6)(),
-          l = (0, r.zy)(),
-          s = (0, n.useMemo)(() => {
-            const a = o(l.search, e);
+          s = (0, r.zy)(),
+          l = (0, n.useMemo)(() => {
+            const a = o(s.search, e);
             return i(a)
               ? i(t)
                 ? "boolean" == typeof t
@@ -405,16 +375,16 @@
                   : t.constructor(a)
                 : a
               : t;
-          }, [l.search, e, t]),
+          }, [s.search, e, t]),
           m = (0, n.useCallback)(
             (t, n = !1) => {
               c(a, e, i(t) ? String(t) : null, n);
             },
             [a, e],
           );
-        return [s, m];
+        return [l, m];
       }
-      function s(e, t, a = !1) {
+      function l(e, t, a = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {

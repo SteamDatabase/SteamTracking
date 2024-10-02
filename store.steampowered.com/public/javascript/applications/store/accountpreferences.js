@@ -87,36 +87,6 @@
         Description: "_2fAxlp5l2ZkuTUe5oYvdRB",
       };
     },
-    55909: (e, t, a) => {
-      "use strict";
-      a.d(t, { u: () => l });
-      var n = a(90626),
-        r = a(71513),
-        i = a(93007),
-        s = a(56093),
-        c = a(78327),
-        o = a(61712);
-      function l(e) {
-        const { children: t, navTreeRef: a, ...l } = e,
-          m = n.useRef(),
-          _ = (0, s.Ue)(m, a),
-          p = (0, c.Qn)(),
-          u = window.__virtual_keyboard_client;
-        if (p) {
-          const e = window.__nav_tree_root;
-          return n.createElement(
-            r.B2,
-            { ...l, navTreeRef: _, secondary: !0, parentEmbeddedNavTree: e },
-            n.createElement(
-              o.F6,
-              { factory: u },
-              n.createElement(i.q, null, t),
-            ),
-          );
-        }
-        return n.createElement(n.Fragment, null, t);
-      }
-    },
     1035: (e, t, a) => {
       "use strict";
       a.d(t, { Ul: () => f, xz: () => v, $Y: () => h, i8: () => A });
@@ -335,7 +305,7 @@
       a.d(t, { c: () => s });
       var n = a(34629),
         r = a(90626),
-        i = a(56093);
+        i = a(73745);
       class s extends r.Component {
         m_refImage = r.createRef();
         constructor(e) {
@@ -398,7 +368,7 @@
     },
     95306: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { AccountPreferencesRoutes: () => we, default: () => Ce });
+      a.r(t), a.d(t, { AccountPreferencesRoutes: () => Ce, default: () => we });
       var n = a(90626),
         r = a(92757),
         i = a(34629),
@@ -557,10 +527,10 @@
         u = a(7068),
         d = a(72518),
         f = a(52038),
-        A = a(32381),
-        h = a(25855),
-        v = a(55909),
-        g = a(71513);
+        A = a(76217),
+        h = a(46115),
+        v = a(12447),
+        g = a(45699);
       let E;
       const P = (0, p.PA)(() => {
           let e = (function () {
@@ -950,7 +920,7 @@
             ),
           );
         });
-      class T {
+      class D {
         m_Preferences = void 0;
         m_bUpdating = !1;
         constructor(e) {
@@ -999,17 +969,17 @@
           }
         }
       }
-      (0, i.Cg)([s.sH], T.prototype, "m_Preferences", void 0),
-        (0, i.Cg)([s.sH], T.prototype, "m_bUpdating", void 0);
-      var D = a(6695),
-        w = a(4869);
-      let C;
+      (0, i.Cg)([s.sH], D.prototype, "m_Preferences", void 0),
+        (0, i.Cg)([s.sH], D.prototype, "m_bUpdating", void 0);
+      var T = a(6695),
+        C = a(4869);
+      let w;
       function I() {
-        if (!C) {
+        if (!w) {
           let e = (0, c.Tc)("notificationpreferences", "application_config");
-          C = new T(e);
+          w = new D(e);
         }
-        return C;
+        return w;
       }
       const B = (0, p.PA)(() => {
           let e = I();
@@ -1024,7 +994,7 @@
               "div",
               {
                 className: (0, f.A)(
-                  D.NotificationSettingsHeader,
+                  T.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
@@ -1039,12 +1009,12 @@
               { className: "account_settings_container" },
               n.createElement(
                 "p",
-                { className: D.SectionDescription },
+                { className: T.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc1"),
               ),
               n.createElement(
                 "p",
-                { className: D.SectionDescription },
+                { className: T.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc2"),
               ),
               n.createElement(
@@ -1052,7 +1022,7 @@
                 { className: "notification_settings_container" },
                 n.createElement(
                   "div",
-                  { className: D.NotificationSendWhen },
+                  { className: T.NotificationSendWhen },
                   (0, m.we)("#NotificationSettings_SendMeWhen"),
                 ),
                 a,
@@ -1086,12 +1056,12 @@
           return A
             ? n.createElement(
                 "div",
-                { className: D.NotificationGroup },
+                { className: T.NotificationGroup },
                 n.createElement(
                   "div",
-                  { className: D.NotificationSection },
+                  { className: T.NotificationSection },
                   n.createElement(u.y4, {
-                    className: D.NotificationFeedToggle,
+                    className: T.NotificationFeedToggle,
                     padding: "compact",
                     onChange: r,
                     disabled: l,
@@ -1100,25 +1070,25 @@
                   }),
                   n.createElement(
                     "p",
-                    { className: D.NotificationDescription },
+                    { className: T.NotificationDescription },
                     A,
                   ),
                   n.createElement(
                     u.wl,
                     {
                       className: (0, f.A)({
-                        [D.PrefDetailsToggle]: !0,
-                        [D.Selected]: c,
+                        [T.PrefDetailsToggle]: !0,
+                        [T.Selected]: c,
                       }),
                       onClick: () => o(!c),
                     },
-                    n.createElement(w.b8_, { direction: "down" }),
+                    n.createElement(C.b8_, { direction: "down" }),
                   ),
                 ),
                 c &&
                   n.createElement(
                     "div",
-                    { className: D.NotificationPrefDetails },
+                    { className: T.NotificationPrefDetails },
                     n.createElement(u.Yh, {
                       label: (0, m.we)("#NotificationSettings_SendToast"),
                       disabled: l || !_,
@@ -1392,7 +1362,7 @@
                     "div",
                     { className: G.LocationSuspicious },
                     l.location,
-                    n.createElement(w.$$j, null),
+                    n.createElement(C.$$j, null),
                   ),
                 )
               : n.createElement(
@@ -1447,7 +1417,7 @@
                           [G.Selected]: s,
                         }),
                       },
-                      n.createElement(w.b8_, { direction: "down" }),
+                      n.createElement(C.b8_, { direction: "down" }),
                     ),
                   ),
                 ),
@@ -1516,16 +1486,16 @@
       function Y(e) {
         const { device: t } = e;
         if (2 == t.platform_type)
-          return n.createElement(w.FH7, { className: G.DeviceLogo });
+          return n.createElement(C.FH7, { className: G.DeviceLogo });
         if (
           1 == t.platform_type &&
           t.gaming_device_type === F.zm.k_EGamingDeviceType_SteamDeck
         )
-          return n.createElement(w.oEi, { className: G.DeviceLogo });
+          return n.createElement(C.oEi, { className: G.DeviceLogo });
         switch (t.os_platform) {
           case U.k_EPlatformTypeWin32:
           case U.k_EPlatformTypeWin64:
-            return n.createElement(w.TV, { className: G.DeviceLogo });
+            return n.createElement(C.TV, { className: G.DeviceLogo });
           case U.k_EPlatformTypeAndroid32:
           case U.k_EPlatformTypeAndroid64:
           case U.k_EPlatformTypeLinux32:
@@ -1645,7 +1615,7 @@
         ue = a(51272),
         de = a(84811),
         fe = a(22797),
-        Ae = a(40094),
+        Ae = a(1977),
         he = a(61855);
       const ve = 1422450;
       function ge(e) {
@@ -1715,7 +1685,7 @@
       function Ee(e) {
         const { invite: t } = e,
           a = t.appid,
-          r = Te(t.appid);
+          r = De(t.appid);
         let i = r?.GetName() ?? t.app_name;
         const s = n.useCallback(
           (e) => {
@@ -1754,7 +1724,7 @@
       function Pe(e) {
         const { invite: t } = e,
           a = (0, pe.f1)(),
-          r = Te(t.appid);
+          r = De(t.appid);
         let i = r?.GetName() ?? t.app_name;
         const s = (function (e) {
             const t = (0, se.KV)(),
@@ -1917,14 +1887,14 @@
           (0, m.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
-      function Te(e) {
+      function De(e) {
         const [t, a] = (0, _e.t7)(e, {
           include_basic_info: !0,
           include_assets: !0,
         });
         return t && 3 == a ? t : null;
       }
-      const De = n.lazy(() =>
+      const Te = n.lazy(() =>
           Promise.all([
             a.e(2298),
             a.e(576),
@@ -1934,16 +1904,16 @@
             a.e(7072),
           ]).then(a.bind(a, 42048)),
         ),
-        we = {
+        Ce = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
           FamilyManagement: () => "/familymanagement",
           AuthorizedDevices: () => "/authorizeddevices",
           PlaytestInvites: () => "/playtestinvites",
         },
-        Ce = (e) => {
+        we = (e) => {
           const t = e.match.url,
-            a = we;
+            a = Ce;
           return n.createElement(
             r.dO,
             null,
@@ -1970,7 +1940,7 @@
               render: () =>
                 n.createElement(R.X, {
                   config: {
-                    "family-management": () => n.createElement(De, null),
+                    "family-management": () => n.createElement(Te, null),
                   },
                 }),
             }),

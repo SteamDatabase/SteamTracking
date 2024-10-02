@@ -572,11 +572,11 @@ A:active {
 .ddVk7jceHdJGG_smPqze_ .StoreSalePriceWidgetContainer {
   height: 46px;
   margin-top: 0px;
-  background: rgba(0, 0, 0, 0.3);
 }
 .ddVk7jceHdJGG_smPqze_ .StoreSalePriceWidgetContainer:not(.Discounted) {
   padding: 4px 8px;
   box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
 }
 .KtsI7seCQPeIUBDBVaaSl {
   height: 59px;

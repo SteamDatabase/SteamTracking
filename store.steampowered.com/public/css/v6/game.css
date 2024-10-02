@@ -6099,32 +6099,28 @@ body.v6 .page_content.notes {
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 4px;
+	align-items: center;
 }
-.game_area_dlc_row.dlc_highlight {
+
+.game_area_dlc_capsule_and_name_ctn {
+	display: flex;
+	flex-direction: row;
 	justify-content: left;
-	padding-top: 6px;
-	padding-left: 12px;
-	padding-bottom: 4px;
+	align-items: center;
 }
+
 .game_area_dlc_name {
 	padding-right: 5px;
 	padding-left: 8px;
 }
-.dlc_highlight .game_area_dlc_name {
-	font-size: 14px;
-	align-self: center;
-}
+
 .game_area_dlc_price {
 	text-align: right;
 	padding-right: 5px;
 	position: unset;
 	flex-shrink: 0;
 }
-.dlc_highlight .game_area_dlc_price {
-	font-size: 14px;
-	align-self: center;
-	flex: auto;
-}
+
 .dlc_highlight_reason_container {
 	display: flex;
 }

@@ -6690,19 +6690,26 @@ div.gba9ORrJbj5gmNm9W6UUS {
 ._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer {
   opacity: 1;
   transform: scale(0.8);
-  animation: _3D_pgT8sxFP3ieDxVt_1zp .6s ease-in-out;
 }
-._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer._133cw4R3W7BUEiogJVas9e {
+._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer._115ZF6m0XsEieocbL7zjo- {
   opacity: 0;
   transform: scale(0.8);
   animation: HMoi7fPFNjxiHeyrfkgmO .6s ease-in-out;
   pointer-events: none;
 }
+._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer._2edFDJ0B9YjtlfqugPTxw0 {
+  opacity: 1;
+  transform: scale(0.8);
+  animation: _3D_pgT8sxFP3ieDxVt_1zp .6s ease-in-out;
+}
+._3sG-J5T8SrzM0Hjkda7sgL.Microtrailer.WtSN6aaEz7vEnRjVrq2hS {
+  opacity: 0;
+}
 ._3sG-J5T8SrzM0Hjkda7sgL.Trailer {
   opacity: 0;
   pointer-events: none;
 }
-._3sG-J5T8SrzM0Hjkda7sgL.Trailer._26iLRdY_qVM_-n8K_6Q2RR {
+._3sG-J5T8SrzM0Hjkda7sgL.Trailer._115ZF6m0XsEieocbL7zjo- {
   opacity: 1;
   animation: _3kp7PkbzSVQPFoobA3Xx7N .6s ease-in-out;
   pointer-events: unset;
@@ -6720,15 +6727,19 @@ div.gba9ORrJbj5gmNm9W6UUS {
 ._3cc6kgsSpd-DeLRDHEM_lD {
   height: 100%;
   width: 100%;
-  z-index: 3;
-  transition: opacity .6s ease 1s;
+  z-index: 7;
+  transition: opacity .6s ease 1s, blur .6s ease 1s;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0) 100%);
+  filter: saturate(0.3);
 }
 ._3cc6kgsSpd-DeLRDHEM_lD._133cw4R3W7BUEiogJVas9e {
+  z-index: 3;
   opacity: 0.5;
   filter: blur(30px);
   animation: hckHU2LXCJNx0X37OqCsx .6s ease-in-out;
@@ -6736,23 +6747,28 @@ div.gba9ORrJbj5gmNm9W6UUS {
 }
 ._1y11BvPq_nL5EZFF8GLuD9 {
   position: absolute;
-  z-index: 5;
+  z-index: 8;
   cursor: pointer;
+  top: calc(50% - 35px);
 }
 ._1y11BvPq_nL5EZFF8GLuD9 svg {
-  width: 130px;
+  width: 110px;
   height: auto;
+  fill: #fff;
+  filter: drop-shadow(1px 1px 6px black);
 }
 ._2HvO_RKtxiyyhZsELjYyq5 {
-  z-index: 6;
+  z-index: 12;
 }
 .ZZgGaqlJvV83f4CYl3O3N {
   position: absolute;
   z-index: 5;
-  right: 0;
+  right: 5px;
+  top: 5px;
   font-size: 13px;
   color: #fff;
   display: none;
+  text-shadow: 1px 1px 1px #000;
 }
 ._3Y72HgnTA3W9eV4Z5OBvWt {
   height: 200px;

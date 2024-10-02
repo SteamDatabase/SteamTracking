@@ -1520,8 +1520,8 @@
         i = n.n(r),
         a = n(22837),
         o = n(90626),
-        s = n(71513),
-        l = n(32381),
+        s = n(45699),
+        l = n(76217),
         c = n(15759),
         m = n(55963),
         d = n(27666),
@@ -2580,8 +2580,8 @@
         o = n(83935),
         s = n(44332),
         l = n(68797),
-        c = n(51240),
-        m = n(56093),
+        c = n(6144),
+        m = n(73745),
         d = n(78327);
       class u {
         GetItem(e) {
@@ -2782,8 +2782,8 @@
         a = n.n(i),
         o = n(90626),
         s = n(68797),
-        l = n(51240),
-        c = n(56093),
+        l = n(6144),
+        c = n(73745),
         m = n(78327);
       class d {
         GetRegistration(e) {
@@ -2956,8 +2956,8 @@
         s = n(58222),
         l = n(44332),
         c = n(68797),
-        m = n(51240),
-        d = n(56093),
+        m = n(6144),
+        d = n(73745),
         u = n(78327);
       class p {
         GetInventoryForApp(e) {
@@ -3089,8 +3089,8 @@
         l = n(78327),
         c = n(90626),
         m = n(68797),
-        d = n(51240),
-        u = n(56093),
+        d = n(6144),
+        u = n(73745),
         p = n(14947),
         h = n(58222);
       class _ {
@@ -3378,8 +3378,8 @@
         i = n.n(r),
         a = n(90626),
         o = n(68797),
-        s = n(51240),
-        l = n(56093),
+        s = n(6144),
+        l = n(73745),
         c = n(78327);
       class m {
         GetItemDefForAppID(e) {
@@ -3778,7 +3778,7 @@
       n.d(t, { F: () => E });
       var r = n(65731),
         i = n(90626),
-        a = n(32381),
+        a = n(76217),
         o = n(12155),
         s = n(52038),
         l = n(30143),
@@ -3804,18 +3804,18 @@
           r,
         );
       }
-      var _ = n(93007);
+      var _ = n(7445);
       class g extends i.Component {
         render() {
-          const { showArrows: e } = this.props,
-            t = this.props.visibleSlides,
-            n = this.props.totalSlides,
-            a = this.props.currentSlide;
-          if (t >= n) return null;
-          const l = (100 * a) / n,
-            m = 100 * (1 - Math.min(a + t, n) / n),
-            d = l + (50 * t) / n,
-            u = 100 - d;
+          const { showArrows: e, arrowFill: t } = this.props,
+            n = this.props.visibleSlides,
+            a = this.props.totalSlides,
+            l = this.props.currentSlide;
+          if (n >= a) return null;
+          const m = (100 * l) / a,
+            d = 100 * (1 - Math.min(l + n, a) / a),
+            u = m + (50 * n) / a,
+            p = 100 - u;
           return i.createElement(
             "div",
             { className: c.pipScrollerContainer },
@@ -3829,7 +3829,7 @@
                     c.carouselNavButton,
                   ),
                 },
-                i.createElement(o.uMb, null),
+                i.createElement(o.uMb, { fill: t || "white" }),
               ),
             i.createElement(
               "div",
@@ -3837,18 +3837,19 @@
               i.createElement("div", { className: c.scrollBackground }),
               i.createElement("div", {
                 className: c.scrollForeground,
-                style: { left: l + "%", right: m + "%" },
+                style: { left: m + "%", right: d + "%" },
               }),
               i.createElement(
                 "div",
                 {
                   className: c.scrollNavDiv,
-                  style: { left: "0%", width: d + "%" },
+                  style: { left: "0%", width: u + "%" },
                 },
                 i.createElement(
                   r._X,
                   {
                     className: (0, s.A)(c.carouselNavButton, c.scrollNavButton),
+                    style: { color: "red" },
                   },
                   i.createElement("div", null),
                 ),
@@ -3857,7 +3858,7 @@
                 "div",
                 {
                   className: c.scrollNavDiv,
-                  style: { right: "0%", width: u + "%" },
+                  style: { right: "0%", width: p + "%" },
                 },
                 i.createElement(
                   r.CC,
@@ -3878,7 +3879,7 @@
                     c.carouselNavButton,
                   ),
                 },
-                i.createElement(o.uMb, null),
+                i.createElement(o.uMb, { fill: t || "white" }),
               ),
           );
         }
@@ -3936,13 +3937,14 @@
                 bHideArrows: h,
                 bAutoAdvance: e.bAutoAdvance && !t,
                 onSlide: e.onSlide,
+                arrowFill: e.arrowFill,
               },
               i.Children.map(e.children, (t, n) => {
                 const a = e.bLazyRenderChildren
                   ? i.createElement(
                       m.K,
                       {
-                        rootMargin: "0px 100% 0px 100%",
+                        rootMargin: "0px -5px 0px 100%",
                         bHorizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
@@ -3981,51 +3983,57 @@
         e && (window.clearTimeout(e.current), (e.current = null));
       }
       function y(e) {
-        const { bHideArrows: t, bAutoAdvance: n, children: a, onSlide: l } = e,
-          m = i.useContext(r.Yc),
-          u = i.useRef(m.state.currentSlide),
-          [p, h] = i.useState(null),
-          [g, f] = i.useState(!!n),
-          E = i.useRef(null),
-          S = i.useRef(null);
+        const {
+            bHideArrows: t,
+            bAutoAdvance: n,
+            children: a,
+            onSlide: l,
+            arrowFill: m,
+          } = e,
+          u = i.useContext(r.Yc),
+          p = i.useRef(u.state.currentSlide),
+          [h, g] = i.useState(null),
+          [f, E] = i.useState(!!n),
+          S = i.useRef(null),
+          y = i.useRef(null);
         i.useEffect(() => {
           const e = () => {
-            E.current = window.setTimeout(() => {
-              if (E.current) {
-                v(E);
+            S.current = window.setTimeout(() => {
+              if (S.current) {
+                v(S);
                 let e = 0;
-                m.state.currentSlide + m.state.visibleSlides <
-                  m.state.totalSlides &&
+                u.state.currentSlide + u.state.visibleSlides <
+                  u.state.totalSlides &&
                   (e = Math.min(
-                    m.state.currentSlide + m.state.visibleSlides,
-                    m.state.totalSlides - m.state.visibleSlides,
+                    u.state.currentSlide + u.state.visibleSlides,
+                    u.state.totalSlides - u.state.visibleSlides,
                   )),
-                  m.setStoreState({ currentSlide: e });
+                  u.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
-          g && e();
+          f && e();
           const t = () => {
-            const t = u.current,
-              n = m.state.currentSlide;
-            l && l(n), h(n > t ? "Right" : n < t ? "Left" : null), v(S);
-            (S.current = window.setTimeout(() => {
-              S.current && (h(null), v(S));
+            const t = p.current,
+              n = u.state.currentSlide;
+            l && l(n), g(n > t ? "Right" : n < t ? "Left" : null), v(y);
+            (y.current = window.setTimeout(() => {
+              y.current && (g(null), v(y));
             }, 1e3)),
-              (u.current = n),
-              E.current ? (v(E), f(!1)) : g && e();
+              (p.current = n),
+              S.current ? (v(S), E(!1)) : f && e();
           };
           return (
-            m.subscribe(t),
+            u.subscribe(t),
             () => {
-              m.unsubscribe(t), v(E), v(S);
+              u.unsubscribe(t), v(S), v(y);
             }
           );
-        }, [m, g]);
-        const y = !!p && "CarouselSliding" + p;
+        }, [u, f]);
+        const C = !!h && "CarouselSliding" + h;
         return i.createElement(
           "div",
-          { className: (0, s.A)(c.sliderBody, "SliderBody", y) },
+          { className: (0, s.A)(c.sliderBody, "SliderBody", C) },
           !t &&
             i.createElement(
               r._X,
@@ -4037,7 +4045,7 @@
                   "CarouselBtnLeft",
                 ),
               },
-              i.createElement(o.uMb, null),
+              i.createElement(o.uMb, { fill: m || "white" }),
             ),
           i.createElement(
             r.Ap,
@@ -4059,7 +4067,7 @@
                   "CarouselBtnRight",
                 ),
               },
-              i.createElement(o.uMb, null),
+              i.createElement(o.uMb, { fill: m || "white" }),
             ),
         );
       }
@@ -4214,17 +4222,17 @@
         }
       }
       d.defaultProps = { text: "" };
-      var u = n(87129),
+      var u = n(68451),
         p = n(52038),
         h = n(61859),
-        _ = n(56093);
+        _ = n(73745);
       function g(e, t) {
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var f = n(78327),
         E = n(7068),
-        S = n(32381),
-        v = n(16628),
+        S = n(76217),
+        v = n(53534),
         y = n(19418);
       class C extends o.Component {
         constructor(e) {
@@ -5376,9 +5384,9 @@
       var r = n(34629),
         i = n(90626),
         a = n(75844),
-        o = n(56093),
-        s = n(71513),
-        l = n(32381),
+        o = n(73745),
+        s = n(45699),
+        l = n(76217),
         c = n(88997),
         m = n(31698),
         d = n(61859),
@@ -5523,7 +5531,7 @@
         o = n(42780),
         s = n(59952),
         l = n(87540),
-        c = n(56093),
+        c = n(73745),
         m = n(70995),
         d = n(17720),
         u = n(88527),
@@ -6303,7 +6311,7 @@
           e.children,
         );
       }
-      var je = n(71513),
+      var je = n(45699),
         qe = n(39362);
       function Ye(e) {
         const { fileUploadManager: t } = e,
@@ -7030,7 +7038,7 @@
         b = n(68797),
         I = n(52038),
         B = n(61859),
-        N = n(56093),
+        N = n(73745),
         R = n(14771),
         A = n(61336),
         k = n(78327),
@@ -7535,7 +7543,7 @@
         s = n(22837),
         l = n(49771),
         c = n(6336),
-        m = (n(32754), n(56093)),
+        m = (n(32754), n(73745)),
         d = n(78327),
         u = n(23649),
         p = n(3246),
@@ -7701,7 +7709,7 @@
       n.d(t, { m: () => S });
       var r = n(14947),
         i = n(90626),
-        a = n(71513),
+        a = n(45699),
         o = n(36735),
         s = n(93973),
         l = n(7068),
@@ -8020,7 +8028,7 @@
         s = n(61859),
         l = n(61336),
         c = n(78327),
-        m = n(56093);
+        m = n(73745);
       class d {
         constructor() {
           (this.m_bUserHasVolumePreference = !1),
@@ -8177,7 +8185,7 @@
       n.d(t, { K: () => s });
       var r = n(34629),
         i = n(90626),
-        a = n(56093),
+        a = n(73745),
         o = n(60383);
       class s extends i.Component {
         constructor() {
@@ -8247,7 +8255,7 @@
       n.d(t, { c: () => o });
       var r = n(34629),
         i = n(90626),
-        a = n(56093);
+        a = n(73745);
       class o extends i.Component {
         constructor(e) {
           super(e),
@@ -8315,7 +8323,7 @@
       var r = n(34629),
         i = n(90626),
         a = n(56011),
-        o = n(56093);
+        o = n(73745);
       class s extends i.Component {
         constructor() {
           super(...arguments),
@@ -8424,7 +8432,7 @@
         a = n(90626),
         o = n(62490),
         s = n(94607),
-        l = n(56093),
+        l = n(73745),
         c = n(52038),
         m = n(22797);
       !(function (e) {

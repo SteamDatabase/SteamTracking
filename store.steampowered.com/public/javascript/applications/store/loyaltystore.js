@@ -1542,43 +1542,13 @@
         });
       });
     },
-    55909: (e, t, r) => {
-      "use strict";
-      r.d(t, { u: () => c });
-      var i = r(90626),
-        n = r(71513),
-        a = r(93007),
-        s = r(56093),
-        o = r(78327),
-        l = r(61712);
-      function c(e) {
-        const { children: t, navTreeRef: r, ...c } = e,
-          m = i.useRef(),
-          d = (0, s.Ue)(m, r),
-          u = (0, o.Qn)(),
-          p = window.__virtual_keyboard_client;
-        if (u) {
-          const e = window.__nav_tree_root;
-          return i.createElement(
-            n.B2,
-            { ...c, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
-            i.createElement(
-              l.F6,
-              { factory: p },
-              i.createElement(a.q, null, t),
-            ),
-          );
-        }
-        return i.createElement(i.Fragment, null, t);
-      }
-    },
     84746: (e, t, r) => {
       "use strict";
       r.d(t, { N: () => c });
       var i = r(90626),
         n = r(92757),
-        a = (r(56093), r(98301)),
-        s = r(32381),
+        a = (r(73745), r(39575)),
+        s = r(76217),
         o = r(79613);
       const l = "FocusNavHistoryID";
       function c(e) {
@@ -2358,7 +2328,7 @@
       r.d(t, { c: () => s });
       var i = r(34629),
         n = r(90626),
-        a = r(56093);
+        a = r(73745);
       class s extends n.Component {
         m_refImage = n.createRef();
         constructor(e) {
@@ -2516,7 +2486,7 @@
         l = r.n(o),
         c = r(78327),
         m = r(68797),
-        d = r(56093),
+        d = r(73745),
         u = r(56545),
         p = r(83935),
         _ = r(58222),
@@ -7018,7 +6988,7 @@
       var i = r(90626),
         n = r(89955),
         a = r(52038),
-        s = r(32381);
+        s = r(76217);
       const o = (e) => {
           const { className: t, children: r, onClick: o, ...l } = e;
           return i.createElement(
@@ -7068,7 +7038,7 @@
       var i = r(90626),
         n = r(4399),
         a = r(52038),
-        s = r(32381),
+        s = r(76217),
         o = r(30470),
         l = r(39739);
       const c = (0, i.forwardRef)(function (e, t) {
@@ -7391,7 +7361,7 @@
         M = r(78327),
         S = r(2160),
         E = r(5164),
-        v = r(32381);
+        v = r(76217);
       const A = i.createContext(() => {}),
         N = ({ children: e, className: t, ...r }) => {
           const [n, a] = i.useState(null),
@@ -7477,7 +7447,7 @@
             )
           );
         };
-      var b = r(71513),
+      var b = r(45699),
         D = r(4869);
       const R = "#CommunityAwards",
         T = (e) => (t, r) => {
@@ -9009,11 +8979,11 @@
         n,
         a = r(34629),
         s = r(90626),
-        o = r(32381),
+        o = r(76217),
         l = r(14947),
         c = r(65946),
         m = r(75844),
-        d = r(56093),
+        d = r(73745),
         u = r(17083),
         p = r(51819),
         _ = r(44325),
@@ -9909,7 +9879,7 @@
         ve = Me(Ce.GreenButton);
       var Ae = r(20312),
         Ne = r(99428),
-        Be = r(92022),
+        Be = r(75204),
         be = r(82227);
       function De(e, t) {
         (0, f.mK)(
@@ -13299,7 +13269,7 @@
         return i.createElement(w.k, { size: t });
       }
       var I = r(60383),
-        C = r(32381),
+        C = r(76217),
         M = r(30470);
       const S = "none";
       function E(e, t, r = {}) {
@@ -13958,14 +13928,14 @@
       }
       var ae = r(51006),
         se = r(12906),
-        oe = r(55909),
+        oe = r(12447),
         le = r(84746),
-        ce = r(25855),
+        ce = r(46115),
         me = r(12155),
         de = r(82227),
         ue = r(6708),
-        pe = r(56093),
-        _e = (r(87129), r(88997), r(64740)),
+        pe = r(73745),
+        _e = (r(68451), r(88997), r(64740)),
         ge = r(6519);
       const he = (e) => {
           const { appid: t } = e,
@@ -14146,7 +14116,7 @@
         (we = (0, o.Cg)([l.PA], we));
       var ye = r(43860),
         Ie = r(32630),
-        Ce = r(71513);
+        Ce = r(45699);
       function Me(e) {
         const { children: t } = e,
           r = (0, ce.A)(),
@@ -17708,7 +17678,7 @@
       r.d(t, { A: () => o, X: () => l });
       var i = r(90626),
         n = r(17083),
-        a = r(71513);
+        a = r(45699);
       function s(e) {
         const { navigate: t, onClick: r, ...n } = e,
           { target: s } = n;

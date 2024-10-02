@@ -114,6 +114,7 @@
         DateDecorator: "_2w-ta9UJW1Y73wRilaD9l-",
         BackgroundTicks: "xD30aylfCATSjNrytpUAm",
         Highlights: "_56YDWYPBkNJazWmgg83Sk",
+        RangeHighlights: "s20SLnZnerU68G2dHOWRW",
         Timestamps: "xLUyqvUeXIgxuJpmmte1i",
         RangeSelector: "_2vqUVszLX8jrl8soNo84qt",
         SeekScrubber: "_3MV0K4aiJwcuWauL5dt6gY",
@@ -160,6 +161,7 @@
         DateDecorator: "kakzXn3creKWdal1etpku",
         BackgroundTicks: "_3bRgOtndRhCrJpwTzd0Oim",
         Highlights: "LzHSWmJHomqtU-jTSLDEG",
+        RangeHighlights: "_1NdyCSdtiQFvoBznqvarvN",
         Timestamps: "_36FQk5T4kMLr1axT-z3jAq",
         RangeSelector: "_3jnVEdXp155d_RQr3eZuyK",
         SeekScrubber: "_3x48wiJyAtvabHFlW4HWuo",
@@ -188,6 +190,7 @@
         DateDecorator: "EiFtpT2NTMMovW9unJLGu",
         BackgroundTicks: "_2abPmFPmW_oPE349VO2TpA",
         Highlights: "_2_8rC82wthkPbfuHxBkHYk",
+        RangeHighlights: "_2Lj8ZYpDL8HxfPJRXg0kgm",
         Timestamps: "_1e7MByQ-W7P_ftMx-4WcMV",
         RangeSelector: "_4kLbmnRkHeqUQus1ItdUY",
         SeekScrubber: "_23WuCkYUy41WcwdxqycJXb",
@@ -221,6 +224,7 @@
         DateDecorator: "_1KAHyZKmBLACfUu9XXht0l",
         BackgroundTicks: "_1sDp4tXvu6KF6yaTe5Y65b",
         Highlights: "_3vFdT_Qdu7unGt0x2UBIOz",
+        RangeHighlights: "P3bkvf7j3c-xSz6s7HtHY",
         Timestamps: "_3esOhQ7c-vdhQ6yUCny4aA",
         RangeSelector: "NMfai6QhLJB5lfGE-3T3o",
         SeekScrubber: "_3n81RbB8WDAKT_q_iUYF6P",
@@ -251,6 +255,7 @@
         DateDecorator: "_3I1C0omMrwDJGYMspB33xc",
         BackgroundTicks: "-YJsXiYQ82zAY6sIPD-Z3",
         Highlights: "_1YMPrXbYXRhzivMd0RAOk-",
+        RangeHighlights: "MxB0pCFqE_x6FHJiO8vGU",
         Timestamps: "_2GK8qqQxwH2_oWzF5rDbv6",
         RangeSelector: "pUP4yzI_BrVbBm7Bv9_ta",
         SeekScrubber: "_4LzfJqGOGDmemv2y4TUvS",
@@ -281,6 +286,7 @@
         DateDecorator: "_2_LxF0wGALV2Jtr6yimHGW",
         BackgroundTicks: "_1wC4nFbVKj98NDRuVnW2DK",
         Highlights: "_3Mwk0XzURhRyn-iKASG7Yj",
+        RangeHighlights: "AwYHl8RlppVEH0g3dKMjP",
         Timestamps: "_2_I_TyIeQdR-V7l562aVwJ",
         RangeSelector: "_2509eCzShezVSGfZFWi9BW",
         SeekScrubber: "_3Re46KW-L5PLoUYxCq_k6W",
@@ -327,6 +333,7 @@
         DateDecorator: "_2ad7ZMfcbWLopAqjoc1dQy",
         BackgroundTicks: "_2rdq8jGEzjIT8wAFNFhiYQ",
         Highlights: "_2MKxDzVJV5-FqyH991s2MT",
+        RangeHighlights: "_2pwNSvaiG6OMTbuF-NyeqL",
         Timestamps: "_1BmX-E7ljnjRC-DwV0vehq",
         RangeSelector: "_3Kw_btjCsTccf081ReOvQp",
         SeekScrubber: "lP4qnNu-VBcvUzlXNQtyt",
@@ -373,6 +380,7 @@
         DateDecorator: "_2XW6UMjMH0uXl0q6gIOKs7",
         BackgroundTicks: "_3Tt6WBdl000PCM7C2kwD2c",
         Highlights: "_1epMF6kwn7KeUBakQKPhCm",
+        RangeHighlights: "aRAHUpKDR27OMcL2xHCSC",
         Timestamps: "_2of-NiJ1-JIp_fPSufxZJ3",
         RangeSelector: "bBVOLxbX1EUhwt_Oez4GK",
         SeekScrubber: "_1c_f2oDp_5tIKiGQcvboIB",
@@ -390,6 +398,9 @@
         PlayHeadCurrentTimeContainer: "_38jg4bQlW8Tyygoswt3epd",
         NoPointer: "_2qwplD-OoJ3_iLfl14eORi",
       };
+    },
+    14296: (e) => {
+      e.exports = { RangeHighlight: "_2a4wDhcnXixHXxFFvpLGbe" };
     },
     2508: (e) => {
       e.exports = {
@@ -410,6 +421,7 @@
         DateDecorator: "_2BqCIYg1x7daCu3oF0vicq",
         BackgroundTicks: "_2YoyAw0aHd57nTMyCX8Ek8",
         Highlights: "_2hsueyKwIwA6dgxRFhAuEw",
+        RangeHighlights: "_3eoxS78PdZxxZaBBmdJDZB",
         Timestamps: "_3O3iRzw4rwhbFvTKLV7s2J",
         RangeSelector: "_2gSg55gNLQhpokogPcJ-As",
         SeekScrubber: "sTaCR323nQeC8QrAQW3Cr",
@@ -449,6 +461,7 @@
         DateDecorator: "_2bCxb7i3bzq1DCZWl04h-n",
         BackgroundTicks: "_2UfqYYX9g4-SFlozy19diE",
         Highlights: "_2iZX0eAmOssSWzNwVW2Sk2",
+        RangeHighlights: "_1aNkPwMsxHkCpTJ3zueNmV",
         Timestamps: "_2TfF2B8IJjQO4cxcYnzNv-",
         RangeSelector: "wMeTvFQex5TV0NsHdu1En",
         SeekScrubber: "_1x23j31qyK2ov8527ywrtY",
@@ -485,6 +498,7 @@
         DateDecorator: "_2BEmrgSvLIuVLtOq4uyk-b",
         BackgroundTicks: "WbVOga7uck_kj9-xd1ZBj",
         Highlights: "_2nvnMUT2DtnJcH1Rlz3i04",
+        RangeHighlights: "_2PKtguqz5iQChuLNLyEq-9",
         Timestamps: "R3B96ZoLAEXfwE5F5VAlS",
         RangeSelector: "_3DWyeaU2HR8tgw6IYQIrF2",
         SeekScrubber: "_2wVY5UH9H5eVSyRfPhgV10",
@@ -536,6 +550,7 @@
         DateDecorator: "_1H35HfLIngfg1Spx8-se-m",
         BackgroundTicks: "_2Qp-oYu2NVGRgnr-MnIi2c",
         Highlights: "_1pFb1qr2LgVW_Epi61zjiM",
+        RangeHighlights: "F3-cbznHCNkLM3OoAmQEK",
         Timestamps: "_3fHbNOeEXYFGE31WD5XnOr",
         RangeSelector: "_3ovQqX7ALXvRC1ekegy7Lf",
         SeekScrubber: "_3YSduxpL8KnXHYHJkjuwvv",
@@ -586,6 +601,8 @@
         TooltipContainer: "_1sw-kUqdIDK2G5BlOu_Dm9",
         ImageHighlightPosition: "_2ywONE_xgamAkfBmUE67IL",
         ImageHighlightBlock: "_1BeXpXQyetKgeO2_6NuHiJ",
+        TooltipRangeContainer: "Ytt19E3fOLhHsFDpTCviL",
+        Duration: "_1kvsGVxJZ9tkKXwysVa5PP",
       };
     },
     54637: (e) => {
@@ -596,6 +613,7 @@
         TakeScreenshot: "_13th0aVaGQhNp6eltjFYyh",
         StartEndClip: "_1eb1crSvl4J1Ie12OvhHUz",
         ViewClip: "_3YpMycJiNuGZOe9A5ddrxL",
+        ClipPhase: "_3BLSZg3UyXhaQ4rkXaTvhs",
         active: "_1D7oiWH7xjJ2nI27nnFzwI",
       };
     },
@@ -683,14 +701,14 @@
         "ItemFocusAnim-green": "_3ZDnxVKI3Xfr_a6bvaivKR",
       };
     },
-    88858: (e, t, r) => {
+    99704: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => ua });
+      r.r(t), r.d(t, { default: () => ba });
       var i = r(90626),
         n = r(86679),
         a = r(45737),
         s = r.n(a),
-        l = r(39879),
+        l = r(8395),
         o = r(95695),
         m = r.n(o),
         c = r(738),
@@ -1719,9 +1737,9 @@
       })(A || (A = {}));
       var L = r(44332),
         W = r(68797),
-        F = r(10333),
+        F = r(6419),
         q = r(6144),
-        x = r(84933),
+        x = r(73745),
         N = r(78327);
       const U = "default",
         j = "steam_default_assetset",
@@ -2548,7 +2566,7 @@
         );
       var pe = r(71298),
         fe = r(56330),
-        _e = r(30708),
+        _e = r(9154),
         he = r(12155),
         Se = r(52038),
         be = r(43456),
@@ -2644,7 +2662,7 @@
                 className: Me.EditButton,
                 onClick: (e) =>
                   (0, c.pg)(
-                    i.createElement(Fn, {
+                    i.createElement(Vn, {
                       appid: t,
                       bDisallowMarkerIDEdit: h,
                       oTimelineMarkerDef: f,
@@ -3242,7 +3260,7 @@
       var it,
         nt = r(35009),
         at = r(52694),
-        st = r(32381);
+        st = r(85889);
       function lt() {
         const e = mt(yt().GetGameID());
         return e === it.NotRecording || e === it.NotRunning
@@ -4434,6 +4452,9 @@
         MakeRelativeToTimelineEndIfActive(e, t) {
           return this.m_loader.MakeRelativeToTimelineEndIfActive(e, t);
         }
+        FindRangeEventsAtGlobalMS(e) {
+          return this.m_loader.FindRangeEventsAtGlobalMS(e);
+        }
         Close() {
           this.m_fnUnregisterFromLoader &&
             (this.m_fnUnregisterFromLoader(),
@@ -4749,6 +4770,9 @@
         }
         GetStateDescriptionAtGlobalMS(e) {
           return this.m_timelineMask.GetStateDescriptionAtGlobalMS(e);
+        }
+        FindRangeEventsAtGlobalMS(e) {
+          return this.m_timelineMask.FindRangeEventsAtGlobalMS(e);
         }
         GetTimelineOffsetMS(e) {
           return this.m_timelineMask.GetTimelineStartBeforeGlobalZeroMS(e);
@@ -5394,7 +5418,7 @@
           return this.m_reservations.splice(r, 0, t), !0;
         }
       }
-      var sr = r(87129),
+      var sr = r(68451),
         lr = r(88997);
       const or = (0, i.createContext)({});
       function mr() {
@@ -5830,26 +5854,6 @@
                 ),
               ),
             ),
-            c.length > 0 &&
-              i.createElement(
-                sr.kt,
-                {
-                  onSelected: () => {
-                    c.length > 0 &&
-                      (Le.ReportTrackedAction(
-                        "/GameRecording/Tooltip/ViewClip/TimelineCtxMenu",
-                      ),
-                      o && o(c[0].strClipID));
-                  },
-                  className: gr.TimelineContextMenuItem,
-                },
-                i.createElement(
-                  "div",
-                  { className: (0, Se.A)(gr.MenuItem, gr.ViewClip) },
-                  i.createElement(at.ai, null),
-                  (0, u.we)("#TimelineDialog_ViewClip"),
-                ),
-              ),
             !!g &&
               i.createElement(
                 sr.kt,
@@ -5894,9 +5898,29 @@
                 },
                 i.createElement(
                   "div",
-                  { className: gr.MenuItem },
+                  { className: (0, Se.A)(gr.MenuItem, gr.ClipPhase) },
                   i.createElement(at.O5, null),
                   (0, u.we)("#TimelineDialog_ClipPhase"),
+                ),
+              ),
+            c.length > 0 &&
+              i.createElement(
+                sr.kt,
+                {
+                  onSelected: () => {
+                    c.length > 0 &&
+                      (Le.ReportTrackedAction(
+                        "/GameRecording/Tooltip/ViewClip/TimelineCtxMenu",
+                      ),
+                      o && o(c[0].strClipID));
+                  },
+                  className: gr.TimelineContextMenuItem,
+                },
+                i.createElement(
+                  "div",
+                  { className: (0, Se.A)(gr.MenuItem, gr.ViewClip) },
+                  i.createElement(dr.CeX, null),
+                  (0, u.we)("#TimelineDialog_ViewClip"),
                 ),
               ),
           )
@@ -6282,75 +6306,76 @@
         const { timeline: t } = e,
           r = qt(),
           n = yt(),
-          a = (0, We.q3)(() =>
-            [...(r.GetVisibleTimelineHighlights(t.timelineID) || [])].sort(Lr),
+          a = (0, We.q3)(
+            () => r.GetVisibleTimelineHighlights(t.timelineID) || [],
           ),
-          s = (0, We.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
-          l = t.globalOffsetMS - s,
-          o = n.GetGameID(),
-          m = n.GetClipID(),
-          c = 16 * r.GetCurrentZoomScale();
-        let d = new ar(c),
-          u = [];
-        return (
-          a.forEach((e, a) => {
-            if (
-              "event" !== e.type &&
-              "usermarker" !== e.type &&
-              "achievement" !== e.type &&
-              "screenshot" !== e.type &&
-              "error" !== e.type
-            )
-              return;
-            const s = `${e.type}_${e.id}_${t.timelineID}_${a}`,
-              c = (function (e, t, r) {
-                if (
-                  ![
-                    "event",
-                    "usermarker",
-                    "screenshot",
-                    "achievement",
-                    "error",
-                  ].includes(r.type)
-                )
-                  return (
-                    (0, Ie.q_)(
-                      `Unexpected timeline entry type ${r.type}, returning empty highlight marker`,
-                    ),
-                    null
-                  );
-                let i = r;
-                const n = (0, Xt.xz)(i),
-                  a = {
-                    entry: i,
-                    strMarkerIcon: n ? "steam_achievement" : i.icon,
-                    nMarkerPriority: Or(i),
-                    strTimelineID: e,
-                    strTitle: (!n && i.title) || "",
-                    strDescription: (!n && i.description) || "",
-                    nGlobalMS: (0, Qe.Sb)(parseInt(i.time) + t),
-                  };
-                return a;
-              })(t.timelineID, l, e),
-              g = d.BAllowIcon(c.nGlobalMS.valMS);
-            u.push(
-              i.createElement(zr, {
-                gameID: o,
-                clipID: m,
-                key: s,
-                view: r,
-                coordinator: n,
-                faded: !g,
-                timelineID: t.timelineID,
-                markerInfo: c,
-              }),
-            );
-          }),
-          i.createElement(i.Fragment, null, u.reverse())
-        );
+          s = (0, i.useMemo)(() => a.slice().sort(Lr), [a]),
+          l = (0, We.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
+          o = t.globalOffsetMS - l,
+          m = n.GetGameID(),
+          c = n.GetClipID(),
+          d = 16 * r.GetCurrentZoomScale();
+        let u = new ar(d);
+        return s.map((e, a) => {
+          if ("highlight" !== Fr(e)) return null;
+          const s = `${e.type}_${e.id}_${t.timelineID}_${a}`,
+            l = (function (e, t, r) {
+              if (
+                ![
+                  "event",
+                  "usermarker",
+                  "screenshot",
+                  "achievement",
+                  "error",
+                ].includes(r.type)
+              )
+                return (
+                  (0, Ie.q_)(
+                    `Unexpected timeline entry type ${r.type}, returning empty highlight marker`,
+                  ),
+                  null
+                );
+              let i = r;
+              const n = (0, Xt.xz)(i),
+                a = {
+                  entry: i,
+                  strMarkerIcon: n ? "steam_achievement" : i.icon,
+                  nMarkerPriority: Or(i),
+                  strTimelineID: e,
+                  strTitle: (!n && i.title) || "",
+                  strDescription: (!n && i.description) || "",
+                  nGlobalMS: (0, Qe.Sb)(parseInt(i.time) + t),
+                };
+              return a;
+            })(t.timelineID, o, e),
+            d = u.BAllowIcon(l.nGlobalMS.valMS);
+          return i.createElement(zr, {
+            gameID: m,
+            clipID: c,
+            key: s,
+            view: r,
+            coordinator: n,
+            faded: !d,
+            timelineID: t.timelineID,
+            markerInfo: l,
+          });
+        });
       });
-      var Fr = r(53298);
-      function qr(e) {
+      function Fr(e) {
+        switch (e.type) {
+          case "usermarker":
+          case "achievement":
+          case "screenshot":
+          case "error":
+            return "highlight";
+          case "event":
+            return parseInt(e.duration) > 0 ? "range_highlight" : "highlight";
+          default:
+            return "none";
+        }
+      }
+      var qr = r(53298);
+      function xr(e) {
         const {
             view: t,
             entry: r,
@@ -6372,33 +6397,33 @@
           c = !!s.GetClipID(),
           d = { transform: `translateX( ${o}px )`, width: m - o },
           u = (0, Se.A)({
-            [Fr.Unspecified]: r.mode === Xt.il.Invalid,
-            [Fr.Staging]: r.mode === Xt.il.Staging,
-            [Fr.Menus]: r.mode === Xt.il.Menus,
-            [Fr.Playing]: r.mode === Xt.il.Playing,
+            [qr.Unspecified]: r.mode === Xt.il.Invalid,
+            [qr.Staging]: r.mode === Xt.il.Staging,
+            [qr.Menus]: r.mode === Xt.il.Menus,
+            [qr.Playing]: r.mode === Xt.il.Playing,
           });
         return i.createElement("div", {
           key: r.id,
           className: (0, Se.A)(
-            Fr.GameModeMarker,
+            qr.GameModeMarker,
             u,
-            c && Fr.GameModeMarkerClip,
+            c && qr.GameModeMarkerClip,
           ),
           style: d,
         });
       }
-      const xr = i.memo(function (e) {
+      const Nr = i.memo(function (e) {
           const t = qt(),
             r = (0, We.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(Nr, { key: e.timelineID, timeline: e }),
+              i.createElement(Ur, { key: e.timelineID, timeline: e }),
             ),
           );
         }),
-        Nr = i.memo(function (e) {
+        Ur = i.memo(function (e) {
           const {
               timelineID: t,
               globalOffsetMS: r,
@@ -6426,7 +6451,7 @@
               e < s.length - 1 ? parseInt(s[e + 1].time) + o : l.valMS - 1,
             );
             m.push(
-              i.createElement(qr, {
+              i.createElement(xr, {
                 key: `gameMode_${t}_${e}`,
                 view: a,
                 entry: s[e],
@@ -6437,9 +6462,9 @@
           }
           return i.createElement(i.Fragment, null, m);
         });
-      var Ur = r(36616),
-        jr = r(5540);
-      const Hr = (0, i.memo)(function (e) {
+      var jr = r(36616),
+        Hr = r(5540);
+      const Vr = (0, i.memo)(function (e) {
         const t = yt(),
           r = (0, We.q3)(() => t.GetHidePlayer()),
           [n, a] = (0, i.useState)({ bDragActive: !1, bPausedOnDragStart: !1 }),
@@ -6459,23 +6484,23 @@
             );
           });
         return r
-          ? i.createElement(Xr, { setDragActive: a })
+          ? i.createElement(Zr, { setDragActive: a })
           : l
-            ? i.createElement(Vr, { view: s, setDragActive: a })
-            : i.createElement(Zr, { dragState: n, setDragActive: a });
+            ? i.createElement(Xr, { view: s, setDragActive: a })
+            : i.createElement(Qr, { dragState: n, setDragActive: a });
       });
-      function Vr(e) {
+      function Xr(e) {
         const { view: t, setDragActive: r } = e,
           n = (0, We.q3)(
             () => t.GetVisualWindowStartPX() + t.GetScrollWindowWidth() / 2,
           );
         return i.createElement(
-          Yr,
+          $r,
           { playheadPosition: n },
-          i.createElement(Qr, { setDragActive: r, bDragActive: !1 }),
+          i.createElement(Jr, { setDragActive: r, bDragActive: !1 }),
         );
       }
-      const Xr = (0, i.memo)(function (e) {
+      const Zr = (0, i.memo)(function (e) {
           const { setDragActive: t } = e,
             r = qt(),
             n = (0, We.q3)(() => r.GetScrollableWidthPX()),
@@ -6490,13 +6515,13 @@
             (0, i.useEffect)(() => r.ScrollToEnd(), [r]),
             (0, i.useEffect)(() => s(n), [n, s]),
             i.createElement(
-              Yr,
+              $r,
               { playheadPosition: n },
-              i.createElement(Qr, { setDragActive: t, bDragActive: !1 }),
+              i.createElement(Jr, { setDragActive: t, bDragActive: !1 }),
             )
           );
         }),
-        Zr = (0, i.memo)(function (e) {
+        Qr = (0, i.memo)(function (e) {
           const { dragState: t, setDragActive: r } = e,
             { bDragActive: n, bPausedOnDragStart: a } = t,
             s = yt(),
@@ -6617,8 +6642,8 @@
               );
               return (
                 (0, i.useEffect)(() => {
-                  const i = o * (1 - Tn),
-                    a = o * Tn;
+                  const i = o * (1 - En),
+                    a = o * En;
                   if (
                     (d.current &&
                       (cancelAnimationFrame(d.current),
@@ -6668,19 +6693,19 @@
               "div",
               {
                 className: (0, Se.A)(
-                  jr.PlayheadInteractionCtn,
-                  n && jr.ActiveCtn,
+                  Hr.PlayheadInteractionCtn,
+                  n && Hr.ActiveCtn,
                 ),
               },
               i.createElement(
-                Yr,
-                { className: n ? jr.Active : void 0, playheadPosition: m },
-                i.createElement(Qr, { setDragActive: r, bDragActive: n }),
+                $r,
+                { className: n ? Hr.Active : void 0, playheadPosition: m },
+                i.createElement(Jr, { setDragActive: r, bDragActive: n }),
               ),
             )
           );
         }),
-        Qr = (0, i.memo)(function (e) {
+        Jr = (0, i.memo)(function (e) {
           const { setDragActive: t, bDragActive: r } = e,
             n = qt(),
             a = (e) => {
@@ -6692,16 +6717,16 @@
           return i.createElement(
             "div",
             {
-              className: jr.PlayHeadContent,
+              className: Hr.PlayHeadContent,
               onMouseOver: a,
               onMouseOut: s,
               onFocus: a,
               onBlur: s,
             },
-            i.createElement(Jr, { setDragActive: t }),
+            i.createElement(Kr, { setDragActive: t }),
           );
         }),
-        Jr = i.memo(function (e) {
+        Kr = i.memo(function (e) {
           const { setDragActive: t } = e,
             r = yt(),
             n = wr(),
@@ -6750,14 +6775,14 @@
           return i.createElement(
             "div",
             {
-              className: (0, Se.A)(jr.PlayHead, s && jr.NoPointer),
+              className: (0, Se.A)(Hr.PlayHead, s && Hr.NoPointer),
               onMouseDown: l,
               onContextMenu: o,
             },
-            i.createElement(Kr, null),
+            i.createElement(Yr, null),
           );
         });
-      function Kr(e) {
+      function Yr(e) {
         return i.createElement(
           "svg",
           {
@@ -6781,21 +6806,21 @@
           }),
         );
       }
-      function Yr(e) {
+      function $r(e) {
         const { className: t, playheadPosition: r, children: n } = e;
         return i.createElement(
           "div",
           {
-            className: (0, Se.A)(jr.PlayHeadContainer, t),
+            className: (0, Se.A)(Hr.PlayHeadContainer, t),
             style: { transform: `translateX( calc(${r}px - 50% ))` },
           },
           n,
         );
       }
-      var $r = r(48419),
-        ei = r(4434),
-        ti = r(30470);
-      class ri {
+      var ei = r(48419),
+        ti = r(4434),
+        ri = r(30470);
+      class ii {
         k_QueueWaitUntilRequestMS = 10;
         k_nMaxBatchSize = 50;
         m_nMaxCacheSize = 18e5 / Xe.kh;
@@ -6876,7 +6901,7 @@
               this.QueueThumbnailRequest(e, t, r, i, n, a, s).then(() => {
                 try {
                   const e = performance.measure(`measure_${m}`, m);
-                  e && ri.Get().AddPerfMeasure(e.duration);
+                  e && ii.Get().AddPerfMeasure(e.duration);
                 } catch (e) {
                   (0, Ie.q_)(
                     `CThumbnailCache:: cant measure ${m}, error: ${e}`,
@@ -7026,22 +7051,22 @@
         static s_Singleton;
         static Get() {
           return (
-            ri.s_Singleton ||
-              ((ri.s_Singleton = new ri()),
-              "dev" == ti.TS.WEB_UNIVERSE &&
-                (window.g_ThumbnailCache = ri.s_Singleton)),
-            ri.s_Singleton
+            ii.s_Singleton ||
+              ((ii.s_Singleton = new ii()),
+              "dev" == ri.TS.WEB_UNIVERSE &&
+                (window.g_ThumbnailCache = ii.s_Singleton)),
+            ii.s_Singleton
           );
         }
       }
-      function ii(e, t, r, n, a, s, l) {
+      function ni(e, t, r, n, a, s, l) {
         const o = (0, We.q3)(() =>
-          ri.Get().GetOrQueueThumbnail(e, r, t, n, a, s, l),
+          ii.Get().GetOrQueueThumbnail(e, r, t, n, a, s, l),
         );
         return (function (e) {
           const t = (0, i.useRef)(null),
             r = (0, x.CH)(),
-            n = (0, ei.m)("useThumbnailAsURL");
+            n = (0, ti.m)("useThumbnailAsURL");
           return (
             (0, i.useEffect)(() => {
               if (e && !n?.token?.reason) {
@@ -7058,10 +7083,10 @@
           );
         })(o?.data);
       }
-      (0, g.Cg)([Ee.sH], ri.prototype, "m_mapThumbnailImages", void 0);
-      var ni = r(91675);
-      const ai = parseInt($r.thumbnailWidth),
-        si = i.forwardRef(function (e, t) {
+      (0, g.Cg)([Ee.sH], ii.prototype, "m_mapThumbnailImages", void 0);
+      var ai = r(91675);
+      const si = parseInt(ei.thumbnailWidth),
+        li = i.forwardRef(function (e, t) {
           const {
               globalMS: r,
               children: n,
@@ -7077,7 +7102,7 @@
               o.ConvertGlobaOffsetToRecordingAndRelativeOffset(r),
             ),
             p = (zt(), g?.nRecordingOffsetMS),
-            f = ii(m, c, g?.strRecordingID, p, g?.nStartOffsetMS, ai, false),
+            f = ni(m, c, g?.strRecordingID, p, g?.nStartOffsetMS, si, false),
             [_, h] = (0, i.useState)();
           return (
             (0, i.useEffect)(() => {
@@ -7087,57 +7112,57 @@
               "div",
               {
                 ref: t,
-                className: (0, Se.A)($r.ThumbnailContainerOffset, $r[d], s),
+                className: (0, Se.A)(ei.ThumbnailContainerOffset, ei[d], s),
                 ...l,
               },
               i.createElement(
                 "div",
                 {
                   className: (0, Se.A)(
-                    $r.ThumbnailContents,
-                    g?.strRecordingID && !_ && $r.Hide,
-                    $r[d],
+                    ei.ThumbnailContents,
+                    g?.strRecordingID && !_ && ei.Hide,
+                    ei[d],
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: $r.ImageAndInfoBoxContainer },
+                  { className: ei.ImageAndInfoBoxContainer },
                   i.createElement(
                     "div",
-                    { className: $r.ImageContainer },
+                    { className: ei.ImageContainer },
                     g?.strRecordingID
                       ? i.createElement("img", {
-                          className: $r.ThumbnailImage,
+                          className: ei.ThumbnailImage,
                           src: _,
                         })
                       : i.createElement(
                           "div",
-                          { className: $r.NoRecordedContent },
+                          { className: ei.NoRecordedContent },
                           (0, u.we)("#GameRecording_PlayerNoContent"),
                         ),
-                    i.createElement(li, null),
+                    i.createElement(oi, null),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: (0, Se.A)($r.TooltipChildren) },
+                  { className: (0, Se.A)(ei.TooltipChildren) },
                   n,
                 ),
               ),
               i.createElement("div", {
-                className: (0, Se.A)($r.ThumbnailHitBoxPadding),
+                className: (0, Se.A)(ei.ThumbnailHitBoxPadding),
               }),
             )
           );
         });
-      function li() {
+      function oi() {
         const e = qt(),
           t = (0, We.q3)(() => e.GetGameID()),
           r = (0, We.q3)(() => e.GetThumbnailComponent()),
           n = (0, We.q3)(() => e.GetThumbnailEntry());
         if (!n || r !== Dt.Highlight) return null;
         if ((0, Xt.xz)(n.entry))
-          return i.createElement(oi, {
+          return i.createElement(mi, {
             thumbnailEntry: n,
             achievementEntry: n.entry,
             strGameID: t,
@@ -7156,7 +7181,7 @@
               : (0, Xt.eJ)(n.entry) &&
                 ((a = n.entry.title || ""), (s = n.entry.description || "")),
           a || s
-            ? i.createElement(mi, {
+            ? i.createElement(ci, {
                 title: a,
                 description: s,
                 thumbnailEntry: n,
@@ -7164,43 +7189,43 @@
             : null
         );
       }
-      function oi(e) {
+      function mi(e) {
         const { strGameID: t, thumbnailEntry: r, achievementEntry: n } = e,
           a = je(new Qt.VS(t).GetAppID(), n.achievement_name);
         return a
-          ? i.createElement(mi, {
+          ? i.createElement(ci, {
               title: a.name ?? "",
               description: a.description ?? "",
               thumbnailEntry: r,
             })
           : null;
       }
-      function mi(e) {
+      function ci(e) {
         const { title: t, description: r, thumbnailEntry: n } = e;
         return i.createElement(
           "div",
-          { className: $r.InfoBoxContainer },
+          { className: ei.InfoBoxContainer },
           i.createElement(
             "div",
-            { className: $r.Header },
+            { className: ei.Header },
             i.createElement(
               "div",
-              { className: $r.Icon },
+              { className: ei.Icon },
               i.createElement(Yt, {
                 entry: n.entry,
                 strMarkerIcon: n.strMarkerIcon,
               }),
             ),
-            t && i.createElement("div", { className: $r.Title }, t),
+            t && i.createElement("div", { className: ei.Title }, t),
           ),
           i.createElement(
             "div",
-            { className: $r.DescriptionBlock },
-            r && i.createElement("div", { className: $r.Description }, r),
+            { className: ei.DescriptionBlock },
+            r && i.createElement("div", { className: ei.Description }, r),
           ),
         );
       }
-      const ci = i.forwardRef(function (e, t) {
+      const di = i.forwardRef(function (e, t) {
         const { globalPX: r, onMouseEnter: n, onMouseLeave: a } = e,
           s = qt(),
           l = (0, We.q3)(() => s.ConvertPXOffsetToGlobalMS(r, !1)),
@@ -7208,34 +7233,83 @@
           m = yt(),
           c = (0, We.q3)(() => m.GetRecordingMode());
         return i.createElement(
-          si,
+          li,
           {
-            className: (0, Se.A)($r.ThumbnailTooltip, $r[c], $r[o]),
+            className: (0, Se.A)(ei.ThumbnailTooltip, ei[c], ei[o]),
             globalMS: l,
             ref: t,
             onMouseEnter: n,
             onMouseLeave: a,
           },
-          i.createElement(di, { globalMS: l }),
+          i.createElement(pi, { globalMS: l }),
+          i.createElement(ui, { globalMS: l }),
           i.createElement(
             "div",
-            { className: $r.TooltipInteractionRegion },
+            { className: ei.TooltipInteractionRegion },
             o === Dt.Highlight
-              ? i.createElement(ui, null)
-              : i.createElement(gi, { globalPX: r }),
-            i.createElement(pi, { globalMS: l }),
+              ? i.createElement(fi, null)
+              : i.createElement(_i, { globalPX: r }),
+            i.createElement(hi, { globalMS: l }),
           ),
         );
       });
-      function di(e) {
+      function ui(e) {
         const { globalMS: t } = e,
           r = qt(),
           n = (0, We.q3)(() => r.GetStateDescriptionAtGlobalMS(t));
         return n?.title
-          ? i.createElement("div", { className: $r.StateDescription }, n.title)
+          ? i.createElement("div", { className: ei.StateDescription }, n.title)
           : null;
       }
-      function ui() {
+      function gi(e, t) {
+        return e.priority - t.priority;
+      }
+      function pi(e) {
+        const { globalMS: t } = e,
+          { setSelectedMarker: r } = Pt(),
+          n = qt(),
+          a = yt(),
+          s = (0, We.q3)(() => n.FindRangeEventsAtGlobalMS(t)),
+          l = s.length > 3 ? s.sort(gi).slice(0, 3) : s;
+        return i.createElement(
+          i.Fragment,
+          null,
+          l.map((e, n) =>
+            i.createElement(
+              "div",
+              {
+                key: `${e.time}_${n}`,
+                className: ei.TooltipRangeContainer,
+                onClick: (i) =>
+                  ((e, i) => {
+                    const n = parseInt(i.duration),
+                      { nTimelineOffsetMS: s, strTimelineID: l } =
+                        a.ConvertGlobalOffsetToTimelineRelativeOffset(t),
+                      o = t - s.valMS + parseInt(i.time),
+                      [m, c] = a
+                        .GetLoader()
+                        .CreateGlobalRangeForTimeline(l, o, 0, n);
+                    a.SetPlaytimeFromGlobalMS((0, Qe.Sb)(m)),
+                      r?.(i.id, l, m, c),
+                      Le.ReportTrackedAction(
+                        "/GameRecording/Tooltip/ClipFromRangeEvent",
+                      ),
+                      e.stopPropagation();
+                  })(i, e),
+              },
+              e.icon &&
+                i.createElement(Yt, { entry: e, strMarkerIcon: e.icon }),
+              i.createElement("div", { className: ei.Title }, e.title),
+              i.createElement(
+                "div",
+                { className: ei.Duration },
+                (0, ai.qZ)(parseInt(e.duration) / 1e3, !1),
+              ),
+            ),
+          ),
+        );
+      }
+      function fi() {
         const e = yt(),
           t = (0, We.q3)(() => e.GetRecordingMode()),
           r = qt(),
@@ -7249,23 +7323,23 @@
         if ((0, Xt.zG)(n.entry)) {
           const e = o + parseInt(n.entry.duration);
           if (o < 0) {
-            const t = (0, ni.qZ)(Math.abs(o / 1e3), !1, !1),
-              r = (0, ni.qZ)(Math.abs(e / 1e3), !1, !1);
+            const t = (0, ai.qZ)(Math.abs(o / 1e3), !1, !1),
+              r = (0, ai.qZ)(Math.abs(e / 1e3), !1, !1);
             m = (0, u.we)("#Duration_WrittenNegation", t + " - " + r);
           } else {
             m =
-              (0, ni.qZ)(o / 1e3, !1, !1) + " - " + (0, ni.qZ)(e / 1e3, !1, !1);
+              (0, ai.qZ)(o / 1e3, !1, !1) + " - " + (0, ai.qZ)(e / 1e3, !1, !1);
           }
-        } else m = (0, ni.qZ)(o / 1e3, !1, !0);
+        } else m = (0, ai.qZ)(o / 1e3, !1, !0);
         return i.createElement(
           "div",
           {
-            className: (0, Se.A)($r.TimeDisplayContainer, $r.Highlight, $r[t]),
+            className: (0, Se.A)(ei.TimeDisplayContainer, ei.Highlight, ei[t]),
           },
           m,
         );
       }
-      function gi(e) {
+      function _i(e) {
         const { globalPX: t } = e,
           r = qt(),
           n = (0, We.q3)(() =>
@@ -7274,59 +7348,59 @@
         return Boolean(n)
           ? i.createElement(
               "div",
-              { className: $r.TimeDisplayContainer },
-              (0, ni.qZ)(n / 1e3, !1, !0),
+              { className: ei.TimeDisplayContainer },
+              (0, ai.qZ)(n / 1e3, !1, !0),
             )
           : null;
       }
-      function pi(e) {
+      function hi(e) {
         const { globalMS: t } = e,
           r = qt(),
           n = (0, We.q3)(() => r.GetGameID()),
           a = (0, We.q3)(() => r.GetThumbnailComponent()),
           s = (0, We.q3)(() => r.GetThumbnailEntry());
         let l = [
-          i.createElement(Mi, { key: "add_marker", globalMS: t }),
-          i.createElement(yi, { key: "view_clip", globalMS: t }),
+          i.createElement(Ci, { key: "add_marker", globalMS: t }),
+          i.createElement(Bi, { key: "view_clip", globalMS: t }),
         ];
         return (
           a == Dt.Highlight &&
             s &&
             ((0, Xt.In)(s.entry) || (0, Xt.xz)(s.entry) || (0, Xt.eJ)(s.entry)
               ? (l = [
-                  i.createElement(fi, {
+                  i.createElement(Si, {
                     key: "create_marker_clip",
                     markerInfo: s,
                   }),
-                  i.createElement(_i, { key: "view_clip", markerInfo: s }),
+                  i.createElement(bi, { key: "view_clip", markerInfo: s }),
                 ])
               : (0, Xt.sX)(s.entry)
                 ? (l = [
-                    i.createElement(fi, {
+                    i.createElement(Si, {
                       key: "create_marker_clip",
                       markerInfo: s,
                     }),
-                    i.createElement(bi, {
+                    i.createElement(Ti, {
                       key: "view_screen",
                       entry: s.entry,
                       gameID: n,
                     }),
-                    i.createElement(_i, { key: "view_clip", markerInfo: s }),
+                    i.createElement(bi, { key: "view_clip", markerInfo: s }),
                   ])
                 : (0, Xt.N$)(s.entry) &&
                   (l = [
-                    i.createElement(Si, { key: "edit_user", markerInfo: s }),
-                    i.createElement(fi, {
+                    i.createElement(yi, { key: "edit_user", markerInfo: s }),
+                    i.createElement(Si, {
                       key: "create_marker_clip",
                       markerInfo: s,
                     }),
-                    i.createElement(hi, { key: "delete_user", markerInfo: s }),
-                    i.createElement(_i, { key: "view_clip", markerInfo: s }),
+                    i.createElement(Mi, { key: "delete_user", markerInfo: s }),
+                    i.createElement(bi, { key: "view_clip", markerInfo: s }),
                   ])),
-          i.createElement("div", { className: $r.TooltipButtons }, l)
+          i.createElement("div", { className: ei.TooltipButtons }, l)
         );
       }
-      function fi(e) {
+      function Si(e) {
         const { setSelectedMarker: t } = Pt(),
           { markerInfo: r } = e,
           n = yt(),
@@ -7350,7 +7424,7 @@
               i.createElement(
                 "div",
                 {
-                  className: (0, Se.A)($r.Button, $r.CreateClipButton),
+                  className: (0, Se.A)(ei.Button, ei.CreateClipButton),
                   onClick: (e) => {
                     let i = Ir,
                       a = Pr;
@@ -7377,7 +7451,7 @@
             )
           : null;
       }
-      function _i(e) {
+      function bi(e) {
         const { markerInfo: t } = e,
           r = qt(),
           n = (0, We.q3)(() =>
@@ -7395,7 +7469,7 @@
               i.createElement(
                 "div",
                 {
-                  className: (0, Se.A)($r.Button, $r.GoToClipFromMarker),
+                  className: (0, Se.A)(ei.Button, ei.GoToClipFromMarker),
                   onClick: () => {
                     n &&
                       (Le.ReportTrackedAction(
@@ -7409,7 +7483,7 @@
             )
           : null;
       }
-      function hi(e) {
+      function Mi(e) {
         const { markerInfo: t } = e,
           r = yt(),
           n = qt();
@@ -7423,7 +7497,7 @@
           i.createElement(
             "div",
             {
-              className: (0, Se.A)($r.Button, $r.DeleteMarker),
+              className: (0, Se.A)(ei.Button, ei.DeleteMarker),
               onClick: (e) => {
                 (0, Xt.N$)(t.entry) &&
                   (Le.ReportTrackedAction(
@@ -7437,7 +7511,7 @@
           ),
         );
       }
-      function Si(e) {
+      function yi(e) {
         const { markerInfo: t } = e,
           r = yt(),
           n = kt();
@@ -7451,7 +7525,7 @@
           i.createElement(
             "div",
             {
-              className: (0, Se.A)($r.Button, $r.EditMarker),
+              className: (0, Se.A)(ei.Button, ei.EditMarker),
               onClick: (e) => {
                 if (!(0, Xt.N$)(t.entry)) return;
                 Le.ReportTrackedAction(
@@ -7472,7 +7546,7 @@
           ),
         );
       }
-      function bi(e) {
+      function Ti(e) {
         const { entry: t, gameID: r } = e,
           n = t.handle,
           { onNavigateToScreenshot: a } = mr();
@@ -7486,7 +7560,7 @@
           i.createElement(
             "div",
             {
-              className: (0, Se.A)($r.Button, $r.ViewScreenshot),
+              className: (0, Se.A)(ei.Button, ei.ViewScreenshot),
               onClick: () => {
                 n &&
                   (Le.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
@@ -7497,9 +7571,13 @@
           ),
         );
       }
-      function Mi(e) {
+      function Ci(e) {
         const { globalMS: t } = e,
-          r = yt();
+          r = yt(),
+          n = (0, We.q3)(() =>
+            r.ConvertGlobaOffsetToRecordingAndRelativeOffset(t),
+          );
+        if (!n?.strRecordingID) return null;
         return i.createElement(
           ee.he,
           {
@@ -7509,7 +7587,7 @@
           i.createElement(
             "div",
             {
-              className: (0, Se.A)($r.Button, $r.AddMarker),
+              className: (0, Se.A)(ei.Button, ei.AddMarker),
               onClick: () => {
                 r.AddUserMarkerAtGlobalMS(
                   (0, Qe.Sb)(t),
@@ -7523,7 +7601,7 @@
           ),
         );
       }
-      function yi(e) {
+      function Bi(e) {
         const { globalMS: t } = e,
           r = qt(),
           n = (0, We.q3)(() => r.ConvertGlobalMSToClipOrNone(t)),
@@ -7538,7 +7616,7 @@
               i.createElement(
                 "div",
                 {
-                  className: (0, Se.A)($r.Button, $r.GoToClip),
+                  className: (0, Se.A)(ei.Button, ei.GoToClip),
                   onClick: () => {
                     n &&
                       (Le.ReportTrackedAction(
@@ -7552,7 +7630,7 @@
             )
           : null;
       }
-      const Ti = i.memo(function (e) {
+      const vi = i.memo(function (e) {
           const t = br(),
             r = Cr(),
             n = qt(),
@@ -7589,10 +7667,10 @@
           return (
             vr("click", l),
             vr("contextmenu", o),
-            i.createElement(Ci, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
+            i.createElement(wi, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
           );
         }),
-        Ci = i.memo(function (e) {
+        wi = i.memo(function (e) {
           const { globalMouseXPX: t } = e,
             r = Tr(),
             n = qt(),
@@ -7610,10 +7688,10 @@
             i.createElement(
               "div",
               {
-                className: Ur.GhostPlayheadCtn,
+                className: jr.GhostPlayheadCtn,
                 style: { transform: `translateX( calc(${l}px - 50%))` },
               },
-              i.createElement(Bi, {
+              i.createElement(Ri, {
                 globalPX: l,
                 setInteractingWithThumbnail: c,
                 bInteractingWithThumbnail: m,
@@ -7621,7 +7699,7 @@
             )
           );
         });
-      function Bi(e) {
+      function Ri(e) {
         const {
             globalPX: t,
             setInteractingWithThumbnail: r,
@@ -7638,7 +7716,7 @@
           p = (0, We.q3)(() => a.GetThumbnailComponent()),
           f = Cr(),
           _ = (0, ee.fS)({
-            toolTipContent: i.createElement(ci, {
+            toolTipContent: i.createElement(di, {
               globalPX: t,
               ref: c,
               onMouseEnter: () => r(!0),
@@ -7719,16 +7797,16 @@
         const C = (f || n) && o && !p;
         return i.createElement(
           "div",
-          { ref: u, className: Ur.TooltipHoverSource },
-          i.createElement(Kr, {
-            className: (0, Se.A)(Ur.GhostPlayhead, C && Ur.Show),
+          { ref: u, className: jr.TooltipHoverSource },
+          i.createElement(Yr, {
+            className: (0, Se.A)(jr.GhostPlayhead, C && jr.Show),
           }),
           !!o && _.tooltip,
         );
       }
-      var vi = r(2508);
-      const wi = 500,
-        Ri = (0, i.memo)(function () {
+      var Gi = r(2508);
+      const Ei = 500,
+        Ii = (0, i.memo)(function () {
           const [e, t] = (0, i.useState)("none"),
             r = Gt(),
             n = wt(),
@@ -7736,15 +7814,15 @@
           return r && n && a
             ? i.createElement(
                 "div",
-                { className: vi.RangeControls },
-                i.createElement(Gi, {
+                { className: Gi.RangeControls },
+                i.createElement(Pi, {
                   activeControlState: e,
                   setActiveControlState: t,
                 }),
               )
             : null;
         }),
-        Gi = (0, i.memo)(function (e) {
+        Pi = (0, i.memo)(function (e) {
           const { activeControlState: t, setActiveControlState: r } = e,
             [n, a] = (0, i.useState)(),
             [s, l] = (0, i.useState)(),
@@ -7781,8 +7859,8 @@
             "div",
             {
               className: (0, Se.A)(
-                vi.RangeSelectorCtn,
-                "none" !== t && vi.Active,
+                Gi.RangeSelectorCtn,
+                "none" !== t && Gi.Active,
               ),
               onMouseOver: f,
               onMouseOut: _,
@@ -7791,19 +7869,19 @@
             },
             i.createElement(
               "div",
-              { className: vi.TrackRangeControls },
-              i.createElement(Ii, {
+              { className: Gi.TrackRangeControls },
+              i.createElement(ki, {
                 isActive: "left" === t,
                 setControlState: r,
                 setRangeControlPX: g,
                 pxOffset: n,
               }),
-              i.createElement(Di, {
+              i.createElement(Wi, {
                 startOffsetPX: ("left" === t && n) || d,
                 endOffsetPX: ("right" === t && s) || u,
-                className: vi.SelectedRangeMask,
+                className: Gi.SelectedRangeMask,
               }),
-              i.createElement(zi, {
+              i.createElement(Di, {
                 isActive: "right" === t,
                 setControlState: r,
                 setRangeControlPX: p,
@@ -7812,14 +7890,14 @@
             ),
           );
         });
-      function Ei(e, t, r) {
+      function zi(e, t, r) {
         const i = t.GetVisualWindowStartPX() - t.GetTimelineMarginWidth(),
           n = i + t.GetVisualWidth(),
           a = Math.max(0, i + 3),
           s = Math.min(t.GetScrollableWidthPX(), n - 3);
         r(Ze.OQ(e, a, s));
       }
-      const Ii = (0, i.memo)(function (e) {
+      const ki = (0, i.memo)(function (e) {
         const {
             isActive: t,
             setControlState: r,
@@ -7828,19 +7906,19 @@
           } = e,
           s = wt();
         return t
-          ? i.createElement(Pi, {
+          ? i.createElement(Oi, {
               setControlState: r,
               setRangeControlPX: n,
               pxOffset: a,
             })
-          : i.createElement(Oi, {
+          : i.createElement(Li, {
               offsetMS: s.valMS,
               direction: "left",
               setControlState: r,
               setRangeControlPX: n,
             });
       });
-      function Pi(e) {
+      function Oi(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: n } = e,
           a = Et(),
           s = Rt(),
@@ -7884,7 +7962,7 @@
                       )),
                     c.current)
                   ) {
-                    const r = ((e - c.current) / wi) * i;
+                    const r = ((e - c.current) / Ei) * i;
                     t.ScrollBy(r),
                       s((e) => Ze.OQ(e + r, 0, t.GetScrollableWidthPX()));
                   }
@@ -7898,8 +7976,8 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = u * (1 - Tn),
-                p = u * Tn,
+              const i = u * (1 - En),
+                p = u * En,
                 f = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 _ = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX > f)
@@ -7917,7 +7995,7 @@
                   )),
                     (o.current = !1);
                 }
-                Ei(n.valPX, t, s);
+                zi(n.valPX, t, s);
               } else if (e.valPX > i && _ > i && !t.BReachedMaxScroll()) {
                 if (e.valPX < l.current) o.current = !0;
                 else if (e.valPX > l.current || !o.current) {
@@ -7934,7 +8012,7 @@
                   )),
                     (o.current = !1);
                 }
-                Ei(n.valPX, t, s);
+                zi(n.valPX, t, s);
               } else s(Ze.OQ(n.valPX, 0, d));
               l.current = e.valPX;
             }, [n.valPX, r.valMS, e.valPX, a, t, s, d, g, u]);
@@ -7944,10 +8022,10 @@
               (l.SetThumbnailPosition(n),
               a(5, (0, Qe.Sb)(l.ConvertPXOffsetToGlobalMS(n))));
           }, [n, a, l]),
-          i.createElement(Ai, { offsetPX: n, direction: "left" })
+          i.createElement(Fi, { offsetPX: n, direction: "left" })
         );
       }
-      const zi = (0, i.memo)(function (e) {
+      const Di = (0, i.memo)(function (e) {
         const {
             isActive: t,
             setControlState: r,
@@ -7956,19 +8034,19 @@
           } = e,
           s = Rt();
         return t
-          ? i.createElement(ki, {
+          ? i.createElement(Ai, {
               setControlState: r,
               setRangeControlPX: n,
               pxOffset: a,
             })
-          : i.createElement(Oi, {
+          : i.createElement(Li, {
               offsetMS: s.valMS,
               direction: "right",
               setControlState: r,
               setRangeControlPX: n,
             });
       });
-      function ki(e) {
+      function Ai(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: n } = e,
           a = It(),
           s = wt(),
@@ -8012,7 +8090,7 @@
                       )),
                     c.current)
                   ) {
-                    const r = ((e - c.current) / wi) * i;
+                    const r = ((e - c.current) / Ei) * i;
                     t.ScrollBy(r),
                       s((e) => Ze.OQ(e + r, 0, t.GetScrollableWidthPX()));
                   }
@@ -8026,8 +8104,8 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = u * (1 - Tn),
-                p = u * Tn,
+              const i = u * (1 - En),
+                p = u * En,
                 f = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 _ = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX < f)
@@ -8045,7 +8123,7 @@
                   )),
                     (o.current = !1);
                 }
-                Ei(n.valPX, t, s);
+                zi(n.valPX, t, s);
               } else if (
                 e.valPX < p &&
                 _ < p &&
@@ -8064,7 +8142,7 @@
                   )),
                     (o.current = !1);
                 }
-                Ei(n.valPX, t, s);
+                zi(n.valPX, t, s);
               } else s(Ze.OQ(n.valPX, 0, d));
               l.current = e.valPX;
             }, [r.valMS, e.valPX, a, t, s, d, u, n.valPX, g]);
@@ -8074,10 +8152,10 @@
               (l.SetThumbnailPosition(n),
               a(5, (0, Qe.Sb)(l.ConvertPXOffsetToGlobalMS(n))));
           }, [n, a, l]),
-          i.createElement(Ai, { offsetPX: n, direction: "right" })
+          i.createElement(Fi, { offsetPX: n, direction: "right" })
         );
       }
-      function Oi(e) {
+      function Li(e) {
         const {
             offsetMS: t,
             direction: r,
@@ -8127,47 +8205,47 @@
         return i.createElement(
           "div",
           {
-            className: vi.InactiveSelectedRangeControl,
+            className: Gi.InactiveSelectedRangeControl,
             onMouseDown: o,
             onMouseOver: m,
             onFocus: m,
             onMouseOut: c,
             onBlur: c,
           },
-          i.createElement(Ai, { offsetPX: l, direction: r }),
+          i.createElement(Fi, { offsetPX: l, direction: r }),
         );
       }
-      const Di = (0, i.memo)(function (e) {
+      const Wi = (0, i.memo)(function (e) {
           const { startOffsetPX: t, endOffsetPX: r, className: n } = e;
           if (isNaN(t) || isNaN(r)) return null;
           const a = { width: r - t || 0, transform: `translateX(${t}px)` };
           return i.createElement("div", {
-            className: (0, Se.A)(vi.RangeMask, n),
+            className: (0, Se.A)(Gi.RangeMask, n),
             style: a,
           });
         }),
-        Ai = (0, i.memo)(function (e) {
+        Fi = (0, i.memo)(function (e) {
           const { direction: t, offsetPX: r } = e,
             n = { transform: `translateX( calc( ${r}px - 50%) )` },
             a = qt(),
             s = (0, We.q3)(() => a.GetThumbnailComponent() === Dt.Playhead);
           return i.createElement(
             "div",
-            { style: n, className: (0, Se.A)(vi.RangeControl) },
+            { style: n, className: (0, Se.A)(Gi.RangeControl) },
             i.createElement(
               "div",
               {
                 className: (0, Se.A)(
-                  vi.RangeIcon,
-                  "left" === t && vi.Left,
-                  s && vi.Hide,
+                  Gi.RangeIcon,
+                  "left" === t && Gi.Left,
+                  s && Gi.Hide,
                 ),
               },
-              i.createElement(Li, { innerFill: "#171d25", direction: t }),
+              i.createElement(qi, { innerFill: "#171d25", direction: t }),
             ),
           );
         });
-      function Li(e) {
+      function qi(e) {
         return i.createElement(
           "svg",
           {
@@ -8204,8 +8282,8 @@
           }),
         );
       }
-      var Wi = r(28361);
-      const Fi = i.memo(function (e) {
+      var xi = r(28361);
+      const Ni = i.memo(function (e) {
         const t = qt(),
           r = (0, We.q3)(() => t.GetVisibleWindowRelativeTimelines()),
           n = yt().GetRecordingMode();
@@ -8225,7 +8303,7 @@
           i.Fragment,
           null,
           a.map((e) =>
-            i.createElement(qi, {
+            i.createElement(Ui, {
               key: e.timeline.timelineID,
               startPX: e.timeline.nVisibleStartPX,
               label: e.strLabel,
@@ -8234,27 +8312,27 @@
           ),
         );
       });
-      function qi(e) {
+      function Ui(e) {
         const { label: t, startPX: r, recordingMode: n } = e;
         let a = n == ct.Overlay;
         return i.createElement(
           "div",
           {
-            className: (0, Se.A)(Wi.TimelineRelativeDate, a && Wi.Overlay),
+            className: (0, Se.A)(xi.TimelineRelativeDate, a && xi.Overlay),
             style: { transform: `translateX(${r}px)` },
           },
           t,
         );
       }
-      var xi = r(78760);
-      const Ni = (0, i.memo)(function (e) {
+      var ji = r(78760);
+      const Hi = (0, i.memo)(function (e) {
         const t = qt(),
           r = (0, We.q3)(() => t.GetVisibleRecordings());
         return i.createElement(
           i.Fragment,
           null,
           r.map((e) =>
-            i.createElement(Ui, {
+            i.createElement(Vi, {
               key: e.recordingID,
               startPX: e.nStartPX,
               endPX: e.nEndPX,
@@ -8264,7 +8342,7 @@
           ),
         );
       });
-      function Ui(e) {
+      function Vi(e) {
         const { isActive: t, endPX: r, startPX: n, recordingType: a } = e,
           s = { width: r - n || 0, transform: `translateX(${n}px)` },
           l = zt(),
@@ -8275,17 +8353,17 @@
           null,
           i.createElement("div", {
             className: (0, Se.A)(
-              xi.RecordingDecorator,
-              o && xi.Clip,
-              m && xi.Manual,
-              l && xi.ClipMode,
+              ji.RecordingDecorator,
+              o && ji.Clip,
+              m && ji.Manual,
+              l && ji.ClipMode,
             ),
             style: s,
           }),
-          t && i.createElement(ji, { endPX: r }),
+          t && i.createElement(Xi, { endPX: r }),
         );
       }
-      function ji(e) {
+      function Xi(e) {
         const { endPX: t } = e,
           r = yt(),
           n = qt(),
@@ -8299,19 +8377,19 @@
         if (!a || s !== it.BackgroundRecording) return null;
         const m = { width: t - o || 0, transform: `translateX(${o}px)` };
         return i.createElement("div", {
-          className: (0, Se.A)(xi.LiveRecordingBuffer, l && xi.IsLive),
+          className: (0, Se.A)(ji.LiveRecordingBuffer, l && ji.IsLive),
           style: m,
         });
       }
-      var Hi = r(10564);
-      const Vi = (0, i.memo)(function (e) {
+      var Zi = r(10564);
+      const Qi = (0, i.memo)(function (e) {
           const t = qt(),
             r = (0, We.q3)(() => t.GetVisibleClips());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(Xi, {
+              i.createElement(Ji, {
                 key: e.clipID,
                 startPX: e.pxClipStart,
                 endPX: e.pxClipEnd,
@@ -8319,28 +8397,28 @@
             ),
           );
         }),
-        Xi = (0, i.memo)(function (e) {
+        Ji = (0, i.memo)(function (e) {
           const { endPX: t, startPX: r } = e,
             n = { width: t - r || 0, transform: `translateX(${r}px)` };
           return i.createElement("div", {
-            className: Hi.ClipDecorator,
+            className: Zi.ClipDecorator,
             style: n,
           });
         });
-      var Zi = r(99550);
-      const Qi = (0, i.forwardRef)(function (e, t) {
+      var Ki = r(99550);
+      const Yi = (0, i.forwardRef)(function (e, t) {
           const r = qt();
           return (0, We.q3)(() => !r.BEmpty())
-            ? i.createElement(Ki, { ...e, timelineView: r, ref: t })
-            : i.createElement(Ji, { ref: t });
+            ? i.createElement(en, { ...e, timelineView: r, ref: t })
+            : i.createElement($i, { ref: t });
         }),
-        Ji = (0, i.forwardRef)(function (e, t) {
+        $i = (0, i.forwardRef)(function (e, t) {
           return i.createElement("div", {
             ref: t,
-            className: (0, Se.A)(Zi.ScrollbarPlaceholder, e.className),
+            className: (0, Se.A)(Ki.ScrollbarPlaceholder, e.className),
           });
         }),
-        Ki = (0, i.forwardRef)(function (e, t) {
+        en = (0, i.forwardRef)(function (e, t) {
           const r = yt(),
             { children: n, className: a, timelineView: s, disableZoom: l } = e,
             [o, m] = (0, i.useState)(),
@@ -8399,40 +8477,40 @@
               },
               i.createElement(
                 "div",
-                { className: Zi.LeftControlsAndContent },
+                { className: Ki.LeftControlsAndContent },
                 i.createElement(
                   "div",
-                  { ref: d, className: (0, Se.A)(Zi.ContentAndGradient, a) },
+                  { ref: d, className: (0, Se.A)(Ki.ContentAndGradient, a) },
                   n,
-                  i.createElement(Yi, { timelineView: s }),
+                  i.createElement(tn, { timelineView: s }),
                 ),
                 r.GetRecordingMode() === ct.Overlay &&
                   i.createElement(lt, null),
               ),
               i.createElement(
                 "div",
-                { className: Zi.ScrollbarAndSiblings },
-                !r.GetGamepadMode() && i.createElement($i, null),
+                { className: Ki.ScrollbarAndSiblings },
+                !r.GetGamepadMode() && i.createElement(rn, null),
               ),
             )
           );
         });
-      function Yi(e) {
+      function tn(e) {
         const { timelineView: t } = e,
           r = (0, We.q3)(() => t.GetVisualWindowStartPX()),
           n = (0, We.q3)(() => t.BReachedMaxScroll());
         return i.createElement(
           "div",
-          { className: Zi.ScrollGradientCtn },
+          { className: Ki.ScrollGradientCtn },
           i.createElement("div", {
-            className: (0, Se.A)(Zi.FrontGradient, 0 === r && Zi.HideGradient),
+            className: (0, Se.A)(Ki.FrontGradient, 0 === r && Ki.HideGradient),
           }),
           i.createElement("div", {
-            className: (0, Se.A)(Zi.EndGradient, n && Zi.HideGradient),
+            className: (0, Se.A)(Ki.EndGradient, n && Ki.HideGradient),
           }),
         );
       }
-      function $i() {
+      function rn() {
         const [e, t] = (0, i.useState)({
             scrollBarWidth: 0,
             scrollBarXOffset: 0,
@@ -8455,14 +8533,14 @@
           "div",
           {
             className: (0, Se.A)(
-              Zi.ScrollBarCtn,
+              Ki.ScrollBarCtn,
               Math.round(l) === Math.round(e.scrollBarWidth) &&
-                Zi.HideScrollBar,
+                Ki.HideScrollBar,
             ),
             ref: o,
           },
-          i.createElement(en, { timelineView: n, scrollSize: e }),
-          i.createElement(an, {
+          i.createElement(nn, { timelineView: n, scrollSize: e }),
+          i.createElement(on, {
             scrollSize: e,
             timelineView: n,
             timelineWidth: a,
@@ -8470,7 +8548,7 @@
           }),
         );
       }
-      function en(e) {
+      function nn(e) {
         const { timelineView: t, scrollSize: r } = e,
           n = yt(),
           a = (function (e, t) {
@@ -8535,20 +8613,20 @@
           );
         return i.createElement(
           "div",
-          { className: Zi.ScrollTrack, ...a },
-          i.createElement(tn, {
+          { className: Ki.ScrollTrack, ...a },
+          i.createElement(an, {
             timelineView: t,
             playbackCoordinator: n,
             fnConvertGlobalPXToTrackPX: o,
             scrollBarWidth: r.scrollBarWidth,
           }),
-          i.createElement(nn, {
+          i.createElement(ln, {
             timelineView: t,
             fnConvertGlobalPXToTrackPX: o,
           }),
         );
       }
-      function tn(e) {
+      function an(e) {
         const {
             timelineView: t,
             playbackCoordinator: r,
@@ -8568,17 +8646,17 @@
         return i.createElement(
           "div",
           {
-            className: Zi.PlayHeadAnnotation,
+            className: Ki.PlayHeadAnnotation,
             onClick: () => {
               let e = r.GetGlobalMSPlaytime();
               s && (e = r.GetLiveEdgeMS()), t.ScrollToCenteredGlobalMS(e.valMS);
             },
             style: { transform: `translateX(${s ? a : l}px)` },
           },
-          i.createElement(rn, null),
+          i.createElement(sn, null),
         );
       }
-      function rn() {
+      function sn() {
         return i.createElement(
           "svg",
           {
@@ -8594,7 +8672,7 @@
           }),
         );
       }
-      function nn(e) {
+      function ln(e) {
         const { timelineView: t, fnConvertGlobalPXToTrackPX: r } = e,
           n = zt(),
           a = vt(),
@@ -8614,7 +8692,7 @@
           });
         if (!s) return null;
         return i.createElement("div", {
-          className: Zi.RangeAnnotation,
+          className: Ki.RangeAnnotation,
           onClick: () => {
             t.ScrollToCenteredGlobalMS(a.nGlobalStartMS.valMS);
           },
@@ -8624,7 +8702,7 @@
           },
         });
       }
-      function an(e) {
+      function on(e) {
         const {
             scrollSize: t,
             timelineWidth: r,
@@ -8693,14 +8771,14 @@
             );
           })(t, r, n, a);
         return i.createElement("div", {
-          className: (0, Se.A)(Zi.ScrollThumb, o && Zi.Highlight),
+          className: (0, Se.A)(Ki.ScrollThumb, o && Ki.Highlight),
           style: { width: n, transform: `translateX(${s}px)` },
           onMouseDown: l,
         });
       }
-      var sn = r(16628),
-        ln = (r(2596), r(73860), r(72739), r(23809));
-      class on {
+      var mn = r(88006),
+        cn = (r(2596), r(13871), r(72739), r(23809));
+      class dn {
         m_tours = {};
         m_strActiveTour = "";
         m_storage;
@@ -8711,7 +8789,7 @@
         async Init(e) {
           if (this.m_storage) return;
           this.m_storage = e;
-          const t = await cn(e);
+          const t = await gn(e);
           Object.keys(t || {}).forEach((e) => {
             const r = !!t[e];
             this.m_tours[e] = {
@@ -8744,39 +8822,39 @@
             this.m_strActiveTour === e && (this.m_strActiveTour = ""));
         }
         MarkTourSeen(e) {
-          return dn(this.m_storage, e, Date.now());
+          return pn(this.m_storage, e, Date.now());
         }
         MarkTourUnseen(e) {
-          return dn(this.m_storage, e, void 0);
+          return pn(this.m_storage, e, void 0);
         }
       }
-      (0, g.Cg)([Ee.sH], on.prototype, "m_tours", void 0),
-        (0, g.Cg)([Ee.sH], on.prototype, "m_strActiveTour", void 0),
-        (0, g.Cg)([Ee.sH], on.prototype, "m_bReady", void 0),
-        (0, g.Cg)([Ee.XI.bound], on.prototype, "UpdateStop", null),
-        (0, g.Cg)([Ee.XI], on.prototype, "ActivateTour", null),
-        (0, g.Cg)([Ee.XI], on.prototype, "DismissTour", null);
-      const mn = "tour_history";
-      async function cn(e) {
-        const t = await e.GetObject(mn);
+      (0, g.Cg)([Ee.sH], dn.prototype, "m_tours", void 0),
+        (0, g.Cg)([Ee.sH], dn.prototype, "m_strActiveTour", void 0),
+        (0, g.Cg)([Ee.sH], dn.prototype, "m_bReady", void 0),
+        (0, g.Cg)([Ee.XI.bound], dn.prototype, "UpdateStop", null),
+        (0, g.Cg)([Ee.XI], dn.prototype, "ActivateTour", null),
+        (0, g.Cg)([Ee.XI], dn.prototype, "DismissTour", null);
+      const un = "tour_history";
+      async function gn(e) {
+        const t = await e.GetObject(un);
         return t && "object" == typeof t ? t : {};
       }
-      async function dn(e, t, r) {
-        const i = await cn(e);
-        return e.StoreObject(mn, { ...i, [t]: r });
+      async function pn(e, t, r) {
+        const i = await gn(e);
+        return e.StoreObject(un, { ...i, [t]: r });
       }
-      const un = new on();
-      function gn() {
-        const e = (0, ln.rX)();
+      const fn = new dn();
+      function _n() {
+        const e = (0, cn.rX)();
         return (
           (0, i.useEffect)(() => {
-            un.Init(e);
+            fn.Init(e);
           }, [e]),
-          un
+          fn
         );
       }
-      function pn(e) {
-        const t = gn(),
+      function hn(e) {
+        const t = _n(),
           { bShowTour: r, stopElems: n } = (0, We.q3)(() => ({
             bShowTour: !t.BHasSeenTour(e),
             stopElems: t.GetTrackedStops(e),
@@ -8790,14 +8868,14 @@
           updateStop: t.UpdateStop,
         };
       }
-      function fn(e) {
+      function Sn(e) {
         const { name: t, tour: r, options: n, children: a } = e,
-          { updateStop: s } = pn(r),
+          { updateStop: s } = hn(r),
           l = (0, i.useCallback)((e) => s(r, t, n, e), [s, r, t]);
         return (0, i.cloneElement)(i.Children.only(a), { ref: l });
       }
-      var _n = r(62745);
-      function hn(e) {
+      var bn = r(62745);
+      function Mn(e) {
         const t = qt(),
           r = (0, We.q3)(() => t.GetVisibleTimelines());
         return i.createElement(
@@ -8805,7 +8883,7 @@
           null,
           r.flatMap((e) =>
             e.phaseOffsets.map((t, r) =>
-              i.createElement(Sn, {
+              i.createElement(yn, {
                 ...t,
                 timeline: e,
                 key: `${e.timelineID}_${r}`,
@@ -8814,7 +8892,7 @@
           ),
         );
       }
-      function Sn(e) {
+      function yn(e) {
         const {
           timelineOffsetMS: t,
           nDurationMS: r,
@@ -8822,14 +8900,14 @@
           timeline: a,
         } = e;
         return i.createElement(
-          bn,
+          Tn,
           { ...e },
-          i.createElement(yn, null),
-          i.createElement(Mn, null),
-          i.createElement(yn, null),
+          i.createElement(Bn, null),
+          i.createElement(Cn, null),
+          i.createElement(Bn, null),
         );
       }
-      function bn(e) {
+      function Tn(e) {
         const {
             children: t,
             timeline: r,
@@ -8877,9 +8955,9 @@
           "div",
           {
             className: (0, Se.A)(
-              _n.Positioner,
-              f && _n.MouseWithin,
-              p && _n.Highlight,
+              bn.Positioner,
+              f && bn.MouseWithin,
+              p && bn.Highlight,
             ),
             style: { transform: `translateX( ${u}px )`, width: `${g}px` },
             onMouseOver: S,
@@ -8890,14 +8968,61 @@
           t,
         );
       }
-      function Mn(e) {
-        return i.createElement("div", { className: _n.Body });
-      }
-      function yn(e) {
-        return i.createElement("div", { className: _n.Edge });
-      }
-      const Tn = 0.08;
       function Cn(e) {
+        return i.createElement("div", { className: bn.Body });
+      }
+      function Bn(e) {
+        return i.createElement("div", { className: bn.Edge });
+      }
+      var vn = r(14296);
+      function wn(e) {
+        const t = qt(),
+          r = (0, We.q3)(() => t.GetVisibleTimelines());
+        return i.createElement(
+          i.Fragment,
+          null,
+          r.map((e) => i.createElement(Rn, { timeline: e, key: e.timelineID })),
+        );
+      }
+      function Rn(e) {
+        const { timeline: t } = e,
+          r = qt(),
+          n = (0, We.q3)(
+            () => r.GetVisibleTimelineHighlights(t.timelineID) || [],
+          ),
+          a = (0, We.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
+          s = t.globalOffsetMS - a;
+        return i.createElement(
+          i.Fragment,
+          null,
+          n
+            .filter((e) => "range_highlight" === Fr(e))
+            .map((e) =>
+              i.createElement(Gn, {
+                entry: e,
+                timeline: t,
+                timelineView: r,
+                key: e.id,
+                timelineOffset: s,
+              }),
+            ),
+        );
+      }
+      function Gn(e) {
+        const { timeline: t, timelineView: r, entry: n, timelineOffset: a } = e,
+          s = a + parseInt(n.time),
+          { pxStart: l, pxWidth: o } = (0, We.q3)(() => ({
+            pxStart: r.ConvertGlobalMSToGlobalPXOffset(s),
+            pxWidth: r.ConvertDurationMSToDeltaPX(parseInt(n.duration)),
+          })),
+          m = { width: `${o}px`, transform: `translateX( ${l}px )` };
+        return i.createElement("div", {
+          className: vn.RangeHighlight,
+          style: m,
+        });
+      }
+      const En = 0.08;
+      function In(e) {
         const {
             loader: t,
             className: r,
@@ -8924,31 +9049,31 @@
           i.createElement(
             "div",
             { className: m },
-            i.createElement(Rn, null),
-            i.createElement(Gn, null),
+            i.createElement(On, null),
+            i.createElement(Dn, null),
             i.createElement(
-              fn,
+              Sn,
               {
                 tour: "recording_timeline",
                 name: "timeline",
                 options: { position: "left", offset: 30 },
               },
               i.createElement(
-                Qi,
+                Yi,
                 { className: Tt.TimelineScrollContainer, disableZoom: s },
-                i.createElement(Bn, null),
+                i.createElement(Pn, null),
               ),
             ),
           ),
         );
       }
-      const Bn = (0, i.memo)(function (e) {
+      const Pn = (0, i.memo)(function (e) {
         const t = qt();
         return (0, We.q3)(() => t.BInitialized())
-          ? i.createElement(vn, null)
+          ? i.createElement(zn, null)
           : null;
       });
-      function vn() {
+      function zn() {
         const e = qt(),
           t = (0, We.q3)(() => e.GetScrollableWidthPX()),
           r = (0, We.q3)(() => e.GetVisualWindowStartPX()),
@@ -8965,27 +9090,27 @@
             },
           },
           i.createElement(
-            wn,
+            kn,
             { id: "recordings", className: Tt.RecordingDecorators },
+            i.createElement(Hi, null),
+          ),
+          i.createElement(
+            kn,
+            { id: "clips", className: Tt.ClipDecorators },
+            i.createElement(Qi, null),
+          ),
+          i.createElement(
+            kn,
+            { id: "game_modes", className: Tt.GameModes },
+            i.createElement(Nr, null),
+          ),
+          i.createElement(
+            kn,
+            { id: "date_decorators", className: Tt.DateDecorator },
             i.createElement(Ni, null),
           ),
           i.createElement(
-            wn,
-            { id: "clips", className: Tt.ClipDecorators },
-            i.createElement(Vi, null),
-          ),
-          i.createElement(
-            wn,
-            { id: "game_modes", className: Tt.GameModes },
-            i.createElement(xr, null),
-          ),
-          i.createElement(
-            wn,
-            { id: "date_decorators", className: Tt.DateDecorator },
-            i.createElement(Fi, null),
-          ),
-          i.createElement(
-            wn,
+            kn,
             { id: "ticks", className: Tt.BackgroundTicks },
             i.createElement(Ut, null),
           ),
@@ -8993,34 +9118,39 @@
             Sr,
             null,
             i.createElement(
-              wn,
+              kn,
               { id: "highlights", className: Tt.Highlights },
               i.createElement(Dr, null),
             ),
             i.createElement(
-              wn,
+              kn,
               { id: "range_selection", className: Tt.RangeSelector },
-              i.createElement(Ri, null),
+              i.createElement(Ii, null),
             ),
             i.createElement(
-              wn,
+              kn,
               { id: "seek_scrub", className: Tt.SeekScrubber },
-              i.createElement(Ti, null),
+              i.createElement(vi, null),
             ),
             i.createElement(
-              wn,
+              kn,
               { id: "play_head", className: Tt.PlayHead },
-              i.createElement(Hr, null),
+              i.createElement(Vr, null),
             ),
             i.createElement(
-              wn,
+              kn,
               { id: "phases", className: Tt.Phases },
-              i.createElement(hn, null),
+              i.createElement(Mn, null),
+            ),
+            i.createElement(
+              kn,
+              { id: "range_highlights", className: Tt.RangeHighlights },
+              i.createElement(wn, null),
             ),
           ),
         );
       }
-      function wn(e) {
+      function kn(e) {
         const { children: t, id: r, className: n } = e;
         return i.createElement(
           "div",
@@ -9028,18 +9158,18 @@
           i.createElement("div", { className: Tt.RelativeLayer }, t),
         );
       }
-      function Rn(e) {
+      function On(e) {
         const t = yt().GetRenderGlyph();
-        return t ? t(sn.pR.TRIGGER_LEFT, !1, !1, Tt.PositionLeft) : null;
+        return t ? t(mn.pR.TRIGGER_LEFT, !1, !1, Tt.PositionLeft) : null;
       }
-      function Gn(e) {
+      function Dn(e) {
         const t = yt().GetRenderGlyph();
-        return t ? t(sn.pR.TRIGGER_RIGHT, !1, !1, Tt.PositionRight) : null;
+        return t ? t(mn.pR.TRIGGER_RIGHT, !1, !1, Tt.PositionRight) : null;
       }
-      const En = JSON.parse(
+      const An = JSON.parse(
         '{"daterecorded":1713552945,"starttime":0,"entries":[{"id":"1","time":"1000","type":"gamemode","mode":3},{"id":"2","time":"7000","type":"event","title":"bolt","description":"steam_bolt","icon":"steam_bolt","priority":2,"duration":"0","possible_clip":2},{"id":"3","time":"8500","type":"event","title":"gem","description":"steam_gem","icon":"steam_gem","priority":1,"duration":"0","possible_clip":2},{"id":"4","time":"11000","type":"event","title":"star","description":"steam_star","icon":"steam_star","priority":4,"duration":"0","possible_clip":2},{"id":"6","time":"13000","type":"event","title":"heart","description":"steam_heart","icon":"steam_heart","priority":2,"duration":"0","possible_clip":2},{"id":"7","time":"15500","type":"event","title":"checkmark","description":"steam_checkmark","icon":"steam_checkmark","priority":3,"duration":"0","possible_clip":2},{"id":"8","time":"18000","type":"gamemode","mode":1},{"id":"9","time":"25000","type":"event","title":"crown","description":"steam_crown","icon":"steam_crown","priority":10,"duration":"0","possible_clip":2},{"id":"10","time":"27000","type":"event","title":"ribbon","description":"steam_ribbon","icon":"steam_ribbon","priority":9,"duration":"0","possible_clip":2},{"id":"11","time":"32000","type":"event","title":"chest","description":"steam_chest","icon":"steam_chest","priority":8,"duration":"0","possible_clip":2},{"id":"13","time":"34500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":8,"duration":"0","possible_clip":2},{"id":"14","time":"36000","type":"event","title":"timer","description":"steam_timer","icon":"steam_timer","priority":10,"duration":"0","possible_clip":2},{"id":"15","time":"46000","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"17","time":"50000","type":"usermarker","icon":"steam_marker","priority":0},{"id":"18","time":"51500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"19","time":"52500","type":"event","title":"explosion","description":"steam_explosion","icon":"steam_explosion","priority":10,"duration":"0","possible_clip":2}],"endtime":60000}',
       );
-      function In(e) {
+      function Ln(e) {
         const { appid: t, markerID: r } = e,
           n = (function (e) {
             const [t] = (0, i.useState)(() => new Xe.SX());
@@ -9070,7 +9200,7 @@
                       ],
                     },
                   ],
-                  i = { ...En, entries: En.entries.map((e) => e) };
+                  i = { ...An, entries: An.entries.map((e) => e) };
                 t.LoadTimelinesForTestClip(0, void 0, `${e}`, r),
                   t.SetTimelineData(r[0].timeline_id, i);
               }, [e, t]),
@@ -9095,16 +9225,16 @@
               mode: ct.Partner,
               markerStoreOverrides: se.Get(),
             },
-            i.createElement(Cn, { loader: n, disableZoom: !0 }),
+            i.createElement(In, { loader: n, disableZoom: !0 }),
           )
         );
       }
-      const Pn = 31;
-      function zn(e) {
+      const Wn = 31;
+      function Fn(e) {
         return /^[a-z0-9_-]{1,31}$/.test(e);
       }
-      var kn;
-      async function On(e) {
+      var qn;
+      async function xn(e) {
         return new Promise((t, r) => {
           if (!e) return t((0, u.we)("#TimelineMarkers_Error_NotFound"));
           {
@@ -9149,16 +9279,16 @@
                             t({
                               image: e,
                               image_type: 2,
-                              strFilenameWithoutExtension: Dn(n).substring(
+                              strFilenameWithoutExtension: Nn(n).substring(
                                 0,
-                                Pn,
+                                Wn,
                               ),
                             });
                           })
                         : t({
                             image: r.result,
                             image_type: 2,
-                            strFilenameWithoutExtension: Dn(n).substring(0, Pn),
+                            strFilenameWithoutExtension: Nn(n).substring(0, Wn),
                           });
                 }),
                   (i.src = r.result);
@@ -9167,7 +9297,7 @@
                   ? t({
                       image: r.result,
                       image_type: 1,
-                      strFilenameWithoutExtension: Dn(n).substring(0, Pn),
+                      strFilenameWithoutExtension: Nn(n).substring(0, Wn),
                     })
                   : (console.error("unknown content types: " + i),
                     t((0, u.we)("#TimelineMarkers_Error_UnknownFileType", i)));
@@ -9178,11 +9308,11 @@
           }
         });
       }
-      function Dn(e) {
+      function Nn(e) {
         const t = e.lastIndexOf(".");
         return -1 !== t && t > e.lastIndexOf("/") ? e.slice(0, t) : e;
       }
-      function An(e) {
+      function Un(e) {
         const { appid: t, closeModal: r } = e,
           [n, a] = (0, i.useState)(() => [
             {
@@ -9192,7 +9322,7 @@
               timeline_marker_id: null,
             },
           ]),
-          [s, o] = (0, i.useState)(kn.k_IconEditorHidden),
+          [s, o] = (0, i.useState)(qn.k_IconEditorHidden),
           { publicAssetSetID: m, hiddenAssetSetID: c } = Q(t),
           { fnCreateTimelineMarkerDefinition: d } = le(),
           g = (0, i.useRef)(),
@@ -9204,7 +9334,7 @@
                 r = e.length;
               for (let i = 0; i < e.length; ++i) {
                 const a = e[i],
-                  s = await On(a);
+                  s = await xn(a);
                 if ("string" == typeof s) {
                   f(s);
                   break;
@@ -9215,12 +9345,12 @@
                     (t[0].image_type = s.image_type),
                     r > 1 || 0 == n[0].markerid.length)
                   ) {
-                    const e = s.strFilenameWithoutExtension.substring(0, Pn);
+                    const e = s.strFilenameWithoutExtension.substring(0, Wn);
                     (t[0].markerid = e),
                       (t[0].timeline_marker_id = `temp_${i}_${e}`);
                   }
                 } else {
-                  const e = s.strFilenameWithoutExtension.substring(0, Pn);
+                  const e = s.strFilenameWithoutExtension.substring(0, Wn);
                   t.push({
                     image: s.image,
                     image_type: s.image_type,
@@ -9256,17 +9386,17 @@
               {
                 strTitle: (0, u.we)("#TimelineMarkers_Dialog_Create"),
                 bOKDisabled: n.some(
-                  (e) => !zn(e.markerid) || !e.image || e.image?.length < 10,
+                  (e) => !Fn(e.markerid) || !e.image || e.image?.length < 10,
                 ),
                 bDisableBackgroundDismiss: !0,
                 onCancel: r,
                 strOKButtonText: (0, u.we)("#Button_Create"),
                 onOK: async () => {
                   _.fnSetLoading(!0);
-                  let e = s == kn.k_IconEditorPublic ? m : c;
+                  let e = s == qn.k_IconEditorPublic ? m : c;
                   if (
-                    (s != kn.k_IconEditorPublic || m
-                      ? s != kn.k_IconEditorHidden ||
+                    (s != qn.k_IconEditorPublic || m
+                      ? s != qn.k_IconEditorHidden ||
                         c ||
                         (e = (await K(t, !1)).assetSetID)
                       : (e = (await K(t, !0)).assetSetID),
@@ -9373,7 +9503,7 @@
                 i.createElement(
                   "div",
                   { className: be.DragTargetCtn },
-                  i.createElement(Ln, { fnHandleFiles: h }),
+                  i.createElement(jn, { fnHandleFiles: h }),
                 ),
                 Boolean(n?.length > 0 && n[0].image?.length > 0) &&
                   i.createElement(
@@ -9382,7 +9512,7 @@
                     (0, u.we)("#TimelineMarkers_Dialog_IconCreateTitle"),
                   ),
                 n.map((e, r) =>
-                  i.createElement(Wn, {
+                  i.createElement(Hn, {
                     marker: e,
                     key: "" + r,
                     appid: t,
@@ -9394,14 +9524,14 @@
                 ),
                 i.createElement("br", null),
                 i.createElement("br", null),
-                i.createElement(xn, {
+                i.createElement(Zn, {
                   createVisibilityState: s,
                   setCreateVisibilityState: o,
                 }),
               ),
             );
       }
-      function Ln(e) {
+      function jn(e) {
         const { fnHandleFiles: t } = e,
           [r, n] = (0, i.useState)(!1);
         return i.createElement(
@@ -9434,7 +9564,7 @@
           ),
         );
       }
-      function Wn(e) {
+      function Hn(e) {
         const { marker: t, appid: r, setMarkerID: n } = e;
         return (
           (0, i.useEffect)(
@@ -9450,7 +9580,7 @@
             ? i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(qn, {
+                i.createElement(Xn, {
                   markerID: t.markerid,
                   strErrorMessage: null,
                   imageContent: t.image,
@@ -9488,7 +9618,7 @@
                   null,
                   (0, u.we)("#TimelineMarkers_Dialog_Icon_TimelinePreview"),
                 ),
-                i.createElement(In, {
+                i.createElement(Ln, {
                   appid: r,
                   markerID: t.timeline_marker_id,
                 }),
@@ -9496,7 +9626,7 @@
             : null
         );
       }
-      function Fn(e) {
+      function Vn(e) {
         const {
             appid: t,
             closeModal: r,
@@ -9533,7 +9663,7 @@
         const C = (0, i.useCallback)(async (e) => {
             y(null);
             const t = e.currentTarget?.files?.[0],
-              r = await On(t);
+              r = await xn(t);
             "string" == typeof r
               ? y(r)
               : (p(r.image), _(r.image_type), S((e) => e + 1));
@@ -9579,7 +9709,7 @@
           _e.o0,
           {
             strTitle: T,
-            bOKDisabled: !zn(s) || g?.length < 10,
+            bOKDisabled: !Fn(s) || g?.length < 10,
             bDisableBackgroundDismiss: !0,
             onCancel: r,
             onMiddleButton: w,
@@ -9599,7 +9729,7 @@
           i.createElement(
             "div",
             { className: be.DialogBody },
-            i.createElement(qn, {
+            i.createElement(Xn, {
               markerID: s,
               strErrorMessage: M,
               imageContent: g,
@@ -9669,7 +9799,7 @@
                 (0, u.we)("#TimelineMarkers_Dialog_SVG_button"),
               ),
             ),
-            i.createElement(In, {
+            i.createElement(Ln, {
               appid: t,
               markerID: h
                 ? `temp_${h}_${a.timeline_marker_id}`
@@ -9678,14 +9808,14 @@
           ),
         );
       }
-      function qn(e) {
+      function Xn(e) {
         const {
             markerID: t,
             strErrorMessage: r,
             imageContent: n,
             imageType: a,
           } = e,
-          s = zn(t),
+          s = Fn(t),
           l = t?.trimStart().startsWith("steam_");
         let o;
         if (1 == a) {
@@ -9737,7 +9867,7 @@
             ),
         );
       }
-      function xn(e) {
+      function Zn(e) {
         const { createVisibilityState: t, setCreateVisibilityState: r } = e;
         return i.createElement(
           i.Fragment,
@@ -9760,7 +9890,7 @@
               { className: be.RadioColumn },
               i.createElement(
                 l.a,
-                { value: kn.k_IconEditorPublic },
+                { value: qn.k_IconEditorPublic },
                 (0, u.oW)(
                   "#TimelineMarkers_Dialog_Public",
                   i.createElement("b", null),
@@ -9768,7 +9898,7 @@
               ),
               i.createElement(
                 l.a,
-                { value: kn.k_IconEditorHidden },
+                { value: qn.k_IconEditorHidden },
                 (0, u.oW)(
                   "#TimelineMarkers_Dialog_Hidden",
                   i.createElement("b", null),
@@ -9780,10 +9910,10 @@
       }
       !(function (e) {
         (e.k_IconEditorPublic = "public"), (e.k_IconEditorHidden = "hidden");
-      })(kn || (kn = {}));
-      var Nn = r(87275);
-      const Un = "publicmissing";
-      function jn(e) {
+      })(qn || (qn = {}));
+      var Qn = r(87275);
+      const Jn = "publicmissing";
+      function Kn(e) {
         const { appid: t } = e,
           { publicAssetSetID: r } = Q(t),
           n = ue(t);
@@ -9792,10 +9922,10 @@
           null,
           i.createElement(
             "div",
-            { className: Nn.Columns },
+            { className: Qn.Columns },
             i.createElement(
               "div",
-              { className: Nn.LeftCol },
+              { className: Qn.LeftCol },
               i.createElement(
                 "div",
                 { className: (0, Se.A)(m().SectionTitle) },
@@ -9815,10 +9945,10 @@
             ),
             i.createElement(
               "div",
-              { className: Nn.Ctn },
+              { className: Qn.Ctn },
               i.createElement(
                 "div",
-                { className: Nn.GridCtn },
+                { className: Qn.GridCtn },
                 Boolean(r)
                   ? i.createElement(ve, {
                       assetSetID: r,
@@ -9835,7 +9965,7 @@
                     ),
                 n?.length > 0 &&
                   i.createElement(Ge, {
-                    assetSetID: r || Un,
+                    assetSetID: r || Jn,
                     appid: t,
                     strMessage: (0, u.we)(
                       "#TimelineMarkers_drag_target_public",
@@ -9846,37 +9976,37 @@
           ),
         );
       }
-      const Hn = /^assetsetid_(.+)_markerid_(.+)$/,
-        Vn = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
-      async function Xn(e, t) {
+      const Yn = /^assetsetid_(.+)_markerid_(.+)$/,
+        $n = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
+      async function ea(e, t) {
         if (!e.destination)
           return void (
-            "dev" == ti.TS.WEB_UNIVERSE &&
+            "dev" == ri.TS.WEB_UNIVERSE &&
             console.log("TimelineMarkerDrop: Dev Only: Destination missing?")
           );
-        const r = e.draggableId.match(Hn),
-          i = e.destination.droppableId.match(Vn);
+        const r = e.draggableId.match(Yn),
+          i = e.destination.droppableId.match($n);
         if (!(r?.length > 2 && i?.length > 2))
           return void (
-            "dev" == ti.TS.WEB_UNIVERSE &&
+            "dev" == ri.TS.WEB_UNIVERSE &&
             console.log(
               "TimelineMarkerDrop: Dev Only: failed to parse",
               e.draggableId,
               e.destination.droppableId,
             )
           );
-        Zn(r[1], r[2], i[1], Number.parseInt(i[2]));
+        ta(r[1], r[2], i[1], Number.parseInt(i[2]));
       }
-      async function Zn(e, t, r, i) {
+      async function ta(e, t, r, i) {
         if (e == r)
           return (
-            "dev" == ti.TS.WEB_UNIVERSE &&
+            "dev" == ri.TS.WEB_UNIVERSE &&
               console.log(
                 "TimelineMarkerDrop: Dev Only: No-op, source and target are the same asset set id.",
               ),
             r
           );
-        if (r == Un) {
+        if (r == Jn) {
           const e = await K(i, !0);
           if (1 != e.eResult) {
             const t = (0, W.H)({ success: e.eResult });
@@ -9916,12 +10046,12 @@
           !l?.unpublished_changes &&
           ((o = await a(i, e, l.timeline_marker_id)), 1 != o)
           ? (console.error("TimelineMarkerDrop failed on step 3: " + o), r)
-          : ("dev" == ti.TS.WEB_UNIVERSE &&
+          : ("dev" == ri.TS.WEB_UNIVERSE &&
               console.log("drag&drop complete successfully"),
             r);
       }
-      var Qn = r(36952);
-      function Jn(e) {
+      var ra = r(36952);
+      function ia(e) {
         const { appid: t } = e,
           r = ue(t),
           { hiddenAssetSetID: n } = Q(t),
@@ -9935,10 +10065,10 @@
           ? null
           : i.createElement(
               "div",
-              { className: Qn.PublishNoteCtn },
+              { className: ra.PublishNoteCtn },
               i.createElement(
                 "div",
-                { className: Qn.CalloutTitle },
+                { className: ra.CalloutTitle },
                 (0, u.Yp)("#TimelineMarkers_Publishing_title", a),
               ),
               i.createElement(
@@ -9950,14 +10080,14 @@
                 l.jn,
                 {
                   onClick: (e) => {
-                    window.location.href = `${ti.TS.PARTNER_BASE_URL}apps/publishing/${t}`;
+                    window.location.href = `${ri.TS.PARTNER_BASE_URL}apps/publishing/${t}`;
                   },
                 },
                 (0, u.we)("#TimelineMarkers_Publishing_action"),
               ),
             );
       }
-      function Kn(e) {
+      function na(e) {
         const { appid: t, assetSetID: r, closeModal: n } = e,
           a = J(t, r),
           { fnCreateAssetSet: s, fnUpdateAssetSet: o } = X(),
@@ -10037,24 +10167,24 @@
               }),
             );
       }
-      function Yn(e) {
+      function aa(e) {
         const { appid: t } = e,
           { hiddenAssetSetID: r } = Q(t);
         return i.createElement(
           "div",
-          { className: (0, Se.A)(ye.Unassigned, Nn.Ctn) },
+          { className: (0, Se.A)(ye.Unassigned, Qn.Ctn) },
           i.createElement(
             "div",
-            { className: Nn.Title },
+            { className: Qn.Title },
             i.createElement(
               "div",
-              { className: Nn.TopRow },
+              { className: Qn.TopRow },
               i.createElement(
                 "div",
-                { className: Nn.TitleText },
+                { className: Qn.TitleText },
                 (0, u.we)("#TimelineMarkers_Hidden_section_info"),
               ),
-              i.createElement($n, { appid: t }),
+              i.createElement(sa, { appid: t }),
               i.createElement(te, { appid: t, assetSetID: r }),
             ),
           ),
@@ -10087,7 +10217,7 @@
           ),
         );
       }
-      function $n(e) {
+      function sa(e) {
         const { appid: t } = e,
           { hiddenAssetSetID: r } = Q(t),
           n = ge(t, r);
@@ -10096,14 +10226,14 @@
           {
             disabled: !r || !n || 0 == n.size,
             onClick: (e) =>
-              (0, c.pg)(i.createElement(ea, { appid: t }), (0, d.uX)(e)),
+              (0, c.pg)(i.createElement(la, { appid: t }), (0, d.uX)(e)),
           },
           "↑",
           " ",
           (0, u.we)("#TimelineMarkers_MoveAllHiddenToPublic"),
         );
       }
-      function ea(e) {
+      function la(e) {
         const { appid: t, closeModal: r } = e,
           { hiddenAssetSetID: n, publicAssetSetID: a } = Q(t),
           s = ge(t, n),
@@ -10127,13 +10257,13 @@
                 let r = a;
                 for (let i = 0; i < e.length; ++i) {
                   const a = e[i];
-                  r = await Zn(n, a, r, t);
+                  r = await ta(n, a, r, t);
                 }
                 l.fnSetSuccess(!0);
               },
             });
       }
-      function ta(e) {
+      function oa(e) {
         const { appid: t } = e;
         return i.createElement(
           "div",
@@ -10147,13 +10277,13 @@
             l.$n,
             {
               onClick: (e) =>
-                (0, c.pg)(i.createElement(Kn, { appid: t }), (0, d.uX)(e)),
+                (0, c.pg)(i.createElement(na, { appid: t }), (0, d.uX)(e)),
             },
             (0, u.we)("#TimelineMarkers_Hidden_new_asset_set"),
           ),
         );
       }
-      function ra(e) {
+      function ma(e) {
         const { oAssetSet: t } = e;
         return t.name == j
           ? i.createElement(
@@ -10169,7 +10299,7 @@
               )
             : i.createElement("span", null, t.name);
       }
-      class ia {
+      class ca {
         m_vecBranches = new Array();
         m_mapBranchNameToDetails = new Map();
         GetBranchDetails() {
@@ -10181,12 +10311,12 @@
         static s_Singleton;
         static Get() {
           return (
-            ia.s_Singleton ||
-              ((ia.s_Singleton = new ia()),
-              ia.s_Singleton.Init(),
+            ca.s_Singleton ||
+              ((ca.s_Singleton = new ca()),
+              ca.s_Singleton.Init(),
               "dev" == N.TS.WEB_UNIVERSE &&
-                (window.g_BranchNameStore = ia.s_Singleton)),
-            ia.s_Singleton
+                (window.g_BranchNameStore = ca.s_Singleton)),
+            ca.s_Singleton
           );
         }
         Init() {
@@ -10207,15 +10337,15 @@
           );
         }
       }
-      var na = r(82237);
-      function aa(e) {
+      var da = r(82237);
+      function ua(e) {
         const { oAssetSet: t } = e;
         return i.createElement(
           "div",
-          { className: na.BranchDefCtn },
+          { className: da.BranchDefCtn },
           i.createElement(
             "div",
-            { className: na.BranchDesc },
+            { className: da.BranchDesc },
             (0, u.we)("#TimelineMarkers_Hidden_controls"),
           ),
           t.branches?.length > 0
@@ -10225,8 +10355,8 @@
                 t.branches.map((e) =>
                   i.createElement(
                     "span",
-                    { key: e, className: na.BranchName },
-                    i.createElement(la, { branchName: e }),
+                    { key: e, className: da.BranchName },
+                    i.createElement(pa, { branchName: e }),
                   ),
                 ),
               )
@@ -10240,7 +10370,7 @@
             l.$n,
             {
               onClick: (e) => {
-                (0, c.pg)(i.createElement(sa, { oAssetSet: t }), (0, d.uX)(e));
+                (0, c.pg)(i.createElement(ga, { oAssetSet: t }), (0, d.uX)(e));
               },
             },
             (0, u.we)("#TimelineMarkers_Hidden_updatebranches"),
@@ -10252,9 +10382,9 @@
           ),
         );
       }
-      function sa(e) {
+      function ga(e) {
         const { oAssetSet: t, closeModal: r } = e,
-          n = ia.Get().GetBranchDetails(),
+          n = ca.Get().GetBranchDetails(),
           [a, s] = (0, i.useState)(new Set(t.branches || [])),
           { fnAddBranchToAssetSet: o, fnRemoveBranchFromAssetSet: m } = X(),
           c = (0, pe.vs)();
@@ -10308,7 +10438,7 @@
               n.map((e) =>
                 i.createElement(l.Yh, {
                   key: e.name,
-                  label: i.createElement(la, { branchName: e.name }),
+                  label: i.createElement(pa, { branchName: e.name }),
                   tooltip: e.description,
                   checked: a.has(e.name),
                   onChange: (t) => {
@@ -10319,13 +10449,13 @@
               ),
             );
       }
-      function la(e) {
+      function pa(e) {
         const { branchName: t } = e,
-          r = ((n = t), ia.Get().GetBranchDetailsByName(n));
+          r = ((n = t), ca.Get().GetBranchDetailsByName(n));
         var n;
         return i.createElement(
           "span",
-          { className: na.Lock },
+          { className: da.Lock },
           r?.password?.length > 0 &&
             i.createElement(
               ee.he,
@@ -10338,7 +10468,7 @@
           t,
         );
       }
-      function oa(e) {
+      function fa(e) {
         const { appid: t, assetSetID: r, closeModal: n } = e,
           a = J(t, r),
           s = (function (e) {
@@ -10372,7 +10502,7 @@
                   e.markerid,
                   " ",
                   "(",
-                  i.createElement(ra, { oAssetSet: t.get(e.asset_set_id) }),
+                  i.createElement(ma, { oAssetSet: t.get(e.asset_set_id) }),
                   ")",
                 ),
                 data: e,
@@ -10411,8 +10541,8 @@
               }),
             );
       }
-      var ma = r(95034);
-      function ca(e) {
+      var _a = r(95034);
+      function ha(e) {
         const { appid: t } = e,
           r = (function (e) {
             const [t, r] = (0, i.useState)(() =>
@@ -10425,16 +10555,16 @@
               t
             );
           })(t),
-          [n] = (0, ma.QD)("branchset", !1);
+          [n] = (0, _a.QD)("branchset", !1);
         return i.createElement(
           "div",
-          { className: Nn.RestrictedIconsSection },
+          { className: Qn.RestrictedIconsSection },
           i.createElement(
             "div",
-            { className: Nn.Columns },
+            { className: Qn.Columns },
             i.createElement(
               "div",
-              { className: Nn.LeftCol },
+              { className: Qn.LeftCol },
               i.createElement(
                 "div",
                 { className: m().SectionTitle },
@@ -10446,27 +10576,27 @@
                 (0, u.we)("#TimelineMarkers_Hidden_desc2"),
               ),
             ),
-            i.createElement(Yn, { appid: t }),
+            i.createElement(aa, { appid: t }),
           ),
           n &&
             i.createElement(
               "div",
-              { className: Nn.Columns },
+              { className: Qn.Columns },
               i.createElement(
                 "div",
-                { className: Nn.LeftCol },
+                { className: Qn.LeftCol },
                 i.createElement(
                   "div",
                   { className: m().SectionTitle },
                   (0, u.we)("#TimelineMarkers_Hidden_branchsets_title"),
                 ),
-                i.createElement(ta, { appid: t }),
+                i.createElement(oa, { appid: t }),
               ),
               i.createElement(
                 "div",
-                { className: Nn.RightCol },
+                { className: Qn.RightCol },
                 r?.map((e) =>
-                  i.createElement(da, {
+                  i.createElement(Sa, {
                     key: e.assetset_id,
                     appid: t,
                     assetSetID: e.assetset_id,
@@ -10476,36 +10606,36 @@
             ),
         );
       }
-      function da(e) {
+      function Sa(e) {
         const { appid: t, assetSetID: r } = e,
           n = J(t, r);
         return i.createElement(
           "div",
-          { className: Nn.Ctn },
+          { className: Qn.Ctn },
           i.createElement(
             "div",
-            { className: Nn.Title },
+            { className: Qn.Title },
             i.createElement(
               "div",
-              { className: Nn.TopRow },
+              { className: Qn.TopRow },
               i.createElement(
                 ee.he,
                 { toolTipContent: n.desc },
-                i.createElement("div", { className: Nn.TitleText }, n.name),
+                i.createElement("div", { className: Qn.TitleText }, n.name),
               ),
               i.createElement(te, {
                 appid: n.appid,
                 assetSetID: n.assetset_id,
               }),
             ),
-            i.createElement(aa, { oAssetSet: n }),
+            i.createElement(ua, { oAssetSet: n }),
           ),
           i.createElement(
             "div",
-            { className: Nn.CtnGridAndBranchSelection },
+            { className: Qn.CtnGridAndBranchSelection },
             i.createElement(
               "div",
-              { className: Nn.GridCtn },
+              { className: Qn.GridCtn },
               i.createElement(ve, {
                 assetSetID: n.assetset_id,
                 appid: n.appid,
@@ -10526,7 +10656,7 @@
                 {
                   onClick: (e) =>
                     (0, c.pg)(
-                      i.createElement(oa, { appid: t, assetSetID: r }),
+                      i.createElement(fa, { appid: t, assetSetID: r }),
                       (0, d.uX)(e),
                     ),
                 },
@@ -10536,27 +10666,27 @@
           ),
         );
       }
-      function ua(e) {
+      function ba(e) {
         const { appId: t } = e,
           r = Number.parseInt(t);
         return i.createElement(
           "div",
-          { className: Qn.EditorCtn },
+          { className: ra.EditorCtn },
           i.createElement(
             n.JY,
-            { onDragEnd: Xn },
-            i.createElement(ga, { appid: r }),
-            i.createElement(Jn, { appid: r }),
-            i.createElement(jn, { appid: r }),
-            i.createElement(ca, { appid: r }),
+            { onDragEnd: ea },
+            i.createElement(Ma, { appid: r }),
+            i.createElement(ia, { appid: r }),
+            i.createElement(Kn, { appid: r }),
+            i.createElement(ha, { appid: r }),
           ),
         );
       }
-      function ga(e) {
+      function Ma(e) {
         const { appid: t } = e;
         return i.createElement(
           "div",
-          { className: Qn.HeaderCtn },
+          { className: ra.HeaderCtn },
           i.createElement(
             "div",
             { className: s().ColumnCtn },
@@ -10583,7 +10713,7 @@
                 i.createElement(
                   "a",
                   {
-                    href: `${ti.TS.PARTNER_BASE_URL}doc/features/timeline`,
+                    href: `${ri.TS.PARTNER_BASE_URL}doc/features/timeline`,
                     className: (0, Se.A)(s().Button, m().Button),
                     target: "_blank",
                   },
@@ -10598,7 +10728,7 @@
                   {
                     onClick: (e) =>
                       (0, c.pg)(
-                        i.createElement(An, { appid: t }),
+                        i.createElement(Un, { appid: t }),
                         (0, d.uX)(e),
                       ),
                   },
@@ -10783,7 +10913,7 @@
         m = r(70692),
         c = r(14771),
         d = r(6144),
-        u = r(10333),
+        u = r(6419),
         g = r(4926),
         p = (r(90626), r(14947)),
         f = r(29210),
@@ -11442,6 +11572,22 @@
             entry: null,
             globalMS: null,
           };
+        }
+        FindRangeEventsAtGlobalMS(e) {
+          const t = this.GetTimelineOffsetFromGlobal(e, 0),
+            r = this.GetTimelineDataOrStartLoad(t.strTimelineID);
+          if (!r || "loaded" !== r.m_strState) return [];
+          const i = [];
+          for (const e of r.m_rgEntries) {
+            if (parseInt(e.time) > t.nTimelineOffsetMS.valMS) break;
+            if ("event" !== e.type || 0 == parseInt(e.duration)) continue;
+            const r = parseInt(e.time),
+              n = r + parseInt(e.duration);
+            r <= t.nTimelineOffsetMS.valMS &&
+              n >= t.nTimelineOffsetMS.valMS &&
+              i.push(e);
+          }
+          return i;
         }
         GetStateDescriptionAtGlobalMS(e) {
           const t = this.GetTimelineOffsetFromGlobal(e.valMS, 0),
