@@ -58201,12 +58201,13 @@
           [v, w] = (0, st.QD)("vr_required", m),
           [D, I] = (0, st.QD)("unfeatured", !1),
           [B, A] = (0, st.QD)("unassigned", !1),
-          [k, M] = (0, st.QD)("software", !0),
-          [R, P] = (0, st.QD)("excludetags", ""),
-          [N, G] = (0, st.QD)("requiretags", ""),
-          [O, L] = (0, st.QD)("rt_feature_start", 0),
-          [F, U] = (0, st.QD)("rt_feature_end", 0),
-          z = (e, t, a, n) => {
+          [k, M] = (0, st.QD)("noactivecooldown", !1),
+          [R, P] = (0, st.QD)("software", !0),
+          [N, G] = (0, st.QD)("excludetags", ""),
+          [O, L] = (0, st.QD)("requiretags", ""),
+          [F, U] = (0, st.QD)("rt_feature_start", 0),
+          [z, x] = (0, st.QD)("rt_feature_end", 0),
+          q = (e, t, a, n) => {
             const r = a.split(","),
               i = r.findIndex((t) => t == e.toString());
             if (t && -1 == i) {
@@ -58214,13 +58215,13 @@
               t.length > 0 && (t += ","), n(t + e);
             } else t || -1 == i || (r.splice(i, 1), n(r.toString()));
           },
-          [x, q] = (0, c.useMemo)(() => {
-            if (p && d && g && E && y && v && !D && k && !R)
+          [W, j] = (0, c.useMemo)(() => {
+            if (p && d && g && E && y && v && !D && R && !N)
               return [[...a], a.map((e) => e.appid)];
             const e = Math.floor(Date.now() / 1e3) - rr,
               t = Math.floor(Date.now() / 1e3) - nr,
-              r = new Set(R.split(",")),
-              i = new Set(N.split(",")),
+              r = new Set(N.split(",")),
+              i = new Set(O.split(",")),
               s = a.filter((a) => {
                 if (!p && a.content_descriptors?.includes(3)) return !1;
                 if (!d && a.freetoplay) return !1;
@@ -58251,22 +58252,22 @@
                   if (D && 0 != e) return !1;
                 }
                 if (!v && a.vr_required) return !1;
-                if (!k && "software" == a.type) return !1;
-                if (R) {
+                if (!R && "software" == a.type) return !1;
+                if (N) {
                   if (a.tagids.split(",").filter((e) => r.has(e)).length > 0)
                     return !1;
                 }
-                if (N) {
+                if (O) {
                   let e = a.tagids.split(",");
                   if (i.size != e.filter((e) => i.has(e)).length) return !1;
                 }
                 return !0;
               });
             return [s, s.map((e) => e.appid)];
-          }, [a, d, p, g, D, y, v, E, n, k, R, N]);
+          }, [a, d, p, g, D, y, v, E, n, R, N, O]);
         "dev" == We.TS.WEB_UNIVERSE &&
-          console.log("DEV_DEBUG: candidates apps", a, x);
-        const W =
+          console.log("DEV_DEBUG: candidates apps", a, W);
+        const H =
           (d ? "&freetoplay=true" : "") +
           (p ? "&adultonly=true" : "") +
           (g ? "" : "&earlyaccess=false") +
@@ -58277,12 +58278,13 @@
           (s ? "&saleclaneventgid=" + s : "") +
           (l ? "&saleclanaccountid=" + l : "") +
           (i ? "&partneridlist=" + i : "") +
-          (k ? "" : "&software=false") +
+          (R ? "" : "&software=false") +
           (B ? "&unassigned=true" : "") +
-          (R ? "&excludetags=" + R : "") +
-          (N ? "&requiretags=" + N : "") +
+          (k ? "&noactivecooldown=true" : "") +
+          (N ? "&excludetags=" + N : "") +
+          (O ? "&requiretags=" + O : "") +
           (o ? "&bundleid=" + o : "") +
-          (F && O ? "&rt_feature_start=" + O + "&rt_feature_end=" + F : "");
+          (z && F ? "&rt_feature_start=" + F + "&rt_feature_end=" + z : "");
         return c.createElement(
           T.tH,
           null,
@@ -58338,8 +58340,8 @@
               c.createElement(C.Yh, {
                 label: "Software",
                 className: Ln().Filter,
-                checked: k,
-                onChange: M,
+                checked: R,
+                onChange: P,
                 tooltip: "Include apps that are the software type.",
               }),
               c.createElement(C.Yh, {
@@ -58359,6 +58361,16 @@
                 },
                 tooltip: "Only shows games that do not have a Valve contact.",
               }),
+              c.createElement(C.Yh, {
+                label: "No Active Coolodwn Only",
+                className: Ln().Filter,
+                checked: k,
+                onChange: (e) => {
+                  M(e), window.location.reload();
+                },
+                tooltip:
+                  "Only shows games that do not have an active discount cooldown.",
+              }),
             ),
             c.createElement(
               "div",
@@ -58369,9 +58381,9 @@
                 c.createElement(Ir, {
                   strLabel: "Exclude Tag",
                   fnOnTagSelected: (e, t) => {
-                    z(e, t, R, P);
+                    q(e, t, N, G);
                   },
-                  strSelectedTagIDs: R,
+                  strSelectedTagIDs: N,
                 }),
               ),
               c.createElement(
@@ -58380,28 +58392,28 @@
                 c.createElement(Ir, {
                   strLabel: "Require Tag",
                   fnOnTagSelected: (e, t) => {
-                    z(e, t, N, G);
+                    q(e, t, O, L);
                   },
-                  strSelectedTagIDs: N,
+                  strSelectedTagIDs: O,
                 }),
               ),
               c.createElement(sr, null),
             ),
             c.createElement(Cr, {
-              rtUpcomingFeatureStart: O,
-              rtUpcomingFeatureEnd: F,
-              setUpcomingFeatureStart: L,
-              setUpcomingFeatureEnd: U,
-              strQueryPlan: W,
+              rtUpcomingFeatureStart: F,
+              rtUpcomingFeatureEnd: z,
+              setUpcomingFeatureStart: U,
+              setUpcomingFeatureEnd: x,
+              strQueryPlan: H,
             }),
           ),
-          c.createElement(or, { nDisplayedApps: q.length, strQueryParams: W }),
+          c.createElement(or, { nDisplayedApps: j.length, strQueryParams: H }),
           c.createElement(cr, {
-            rgCandidateApps: x,
-            rgAppIDs: q,
+            rgCandidateApps: W,
+            rgAppIDs: j,
             oFeaturingMaps: n,
           }),
-          c.createElement(or, { nDisplayedApps: q.length, strQueryParams: W }),
+          c.createElement(or, { nDisplayedApps: j.length, strQueryParams: H }),
         );
       }
       function sr(e) {
