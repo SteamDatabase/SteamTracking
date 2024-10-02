@@ -59469,9 +59469,11 @@
       function ee(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
-          : e.cap_section_content
-            ? 4
-            : 0;
+          : "trailertv" == e.section_type
+            ? 1
+            : e.cap_section_content
+              ? 4
+              : 0;
       }
       function te(e) {
         return Boolean(e?.store_filter)
@@ -72032,6 +72034,7 @@
               r.jsondata.sale_sections.forEach((e, t) => {
                 e.localized_label &&
                   (e.localized_label = (0, d.$Y)(e.localized_label, 31, null)),
+                  "trailertv" === e.section_type && (e.show_as_carousel = !1),
                   (r.jsondata.sale_sections[t] = { ...c.G6, ...e });
               }),
             r.jsondata.email_setting &&

@@ -2461,6 +2461,7 @@
     "SaleTrailerTV_Undo": "Undo",
     "SaleTrailerTV_NextGameInSeconds": "Next Game in %1$s second...",
     "SaleTrailerTV_NextGameInSeconds_Plural": "Next Game in %1$s seconds...",
+    "SaleTrailerTV_AutoAdvanceVideoPaused": "Video Paused",
     "SaleTrailerTV_AutoAdvanceEnabled": "Auto Advance",
     "StoreTrailer_AutoPlayVideos": "Autoplay Videos",
     "ManageFriends_AddAFriend": "Add a friend",
