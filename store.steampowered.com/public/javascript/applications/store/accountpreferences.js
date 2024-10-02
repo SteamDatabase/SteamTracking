@@ -87,6 +87,29 @@
         Description: "_2fAxlp5l2ZkuTUe5oYvdRB",
       };
     },
+    12447: (e, t, a) => {
+      "use strict";
+      a.d(t, { u: () => o });
+      var n = a(8871),
+        r = a(90626),
+        i = a(78327),
+        s = a(85585),
+        c = a(7445);
+      function o(e) {
+        const { children: t, navTreeRef: a, NavigationManager: o, ...l } = e,
+          m = r.useRef(),
+          _ = (0, n.Ue)(m, a);
+        if ((0, i.Qn)()) {
+          const e = window.__nav_tree_root;
+          return r.createElement(
+            s.B,
+            { ...l, navTreeRef: _, secondary: !0, parentEmbeddedNavTree: e },
+            r.createElement(c.q, null, t),
+          );
+        }
+        return r.createElement(r.Fragment, null, t);
+      }
+    },
     1035: (e, t, a) => {
       "use strict";
       a.d(t, { Ul: () => f, xz: () => v, $Y: () => h, i8: () => A });
@@ -920,7 +943,7 @@
             ),
           );
         });
-      class D {
+      class T {
         m_Preferences = void 0;
         m_bUpdating = !1;
         constructor(e) {
@@ -969,15 +992,15 @@
           }
         }
       }
-      (0, i.Cg)([s.sH], D.prototype, "m_Preferences", void 0),
-        (0, i.Cg)([s.sH], D.prototype, "m_bUpdating", void 0);
-      var T = a(6695),
+      (0, i.Cg)([s.sH], T.prototype, "m_Preferences", void 0),
+        (0, i.Cg)([s.sH], T.prototype, "m_bUpdating", void 0);
+      var D = a(6695),
         C = a(4869);
       let w;
       function I() {
         if (!w) {
           let e = (0, c.Tc)("notificationpreferences", "application_config");
-          w = new D(e);
+          w = new T(e);
         }
         return w;
       }
@@ -994,7 +1017,7 @@
               "div",
               {
                 className: (0, f.A)(
-                  T.NotificationSettingsHeader,
+                  D.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
@@ -1009,12 +1032,12 @@
               { className: "account_settings_container" },
               n.createElement(
                 "p",
-                { className: T.SectionDescription },
+                { className: D.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc1"),
               ),
               n.createElement(
                 "p",
-                { className: T.SectionDescription },
+                { className: D.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc2"),
               ),
               n.createElement(
@@ -1022,7 +1045,7 @@
                 { className: "notification_settings_container" },
                 n.createElement(
                   "div",
-                  { className: T.NotificationSendWhen },
+                  { className: D.NotificationSendWhen },
                   (0, m.we)("#NotificationSettings_SendMeWhen"),
                 ),
                 a,
@@ -1056,12 +1079,12 @@
           return A
             ? n.createElement(
                 "div",
-                { className: T.NotificationGroup },
+                { className: D.NotificationGroup },
                 n.createElement(
                   "div",
-                  { className: T.NotificationSection },
+                  { className: D.NotificationSection },
                   n.createElement(u.y4, {
-                    className: T.NotificationFeedToggle,
+                    className: D.NotificationFeedToggle,
                     padding: "compact",
                     onChange: r,
                     disabled: l,
@@ -1070,15 +1093,15 @@
                   }),
                   n.createElement(
                     "p",
-                    { className: T.NotificationDescription },
+                    { className: D.NotificationDescription },
                     A,
                   ),
                   n.createElement(
                     u.wl,
                     {
                       className: (0, f.A)({
-                        [T.PrefDetailsToggle]: !0,
-                        [T.Selected]: c,
+                        [D.PrefDetailsToggle]: !0,
+                        [D.Selected]: c,
                       }),
                       onClick: () => o(!c),
                     },
@@ -1088,7 +1111,7 @@
                 c &&
                   n.createElement(
                     "div",
-                    { className: T.NotificationPrefDetails },
+                    { className: D.NotificationPrefDetails },
                     n.createElement(u.Yh, {
                       label: (0, m.we)("#NotificationSettings_SendToast"),
                       disabled: l || !_,
@@ -1685,7 +1708,7 @@
       function Ee(e) {
         const { invite: t } = e,
           a = t.appid,
-          r = De(t.appid);
+          r = Te(t.appid);
         let i = r?.GetName() ?? t.app_name;
         const s = n.useCallback(
           (e) => {
@@ -1724,7 +1747,7 @@
       function Pe(e) {
         const { invite: t } = e,
           a = (0, pe.f1)(),
-          r = De(t.appid);
+          r = Te(t.appid);
         let i = r?.GetName() ?? t.app_name;
         const s = (function (e) {
             const t = (0, se.KV)(),
@@ -1887,14 +1910,14 @@
           (0, m.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
-      function De(e) {
+      function Te(e) {
         const [t, a] = (0, _e.t7)(e, {
           include_basic_info: !0,
           include_assets: !0,
         });
         return t && 3 == a ? t : null;
       }
-      const Te = n.lazy(() =>
+      const De = n.lazy(() =>
           Promise.all([
             a.e(2298),
             a.e(576),
@@ -1940,7 +1963,7 @@
               render: () =>
                 n.createElement(R.X, {
                   config: {
-                    "family-management": () => n.createElement(Te, null),
+                    "family-management": () => n.createElement(De, null),
                   },
                 }),
             }),

@@ -1542,6 +1542,29 @@
         });
       });
     },
+    12447: (e, t, r) => {
+      "use strict";
+      r.d(t, { u: () => l });
+      var i = r(8871),
+        n = r(90626),
+        a = r(78327),
+        s = r(85585),
+        o = r(7445);
+      function l(e) {
+        const { children: t, navTreeRef: r, NavigationManager: l, ...c } = e,
+          m = n.useRef(),
+          d = (0, i.Ue)(m, r);
+        if ((0, a.Qn)()) {
+          const e = window.__nav_tree_root;
+          return n.createElement(
+            s.B,
+            { ...c, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
+            n.createElement(o.q, null, t),
+          );
+        }
+        return n.createElement(n.Fragment, null, t);
+      }
+    },
     84746: (e, t, r) => {
       "use strict";
       r.d(t, { N: () => c });

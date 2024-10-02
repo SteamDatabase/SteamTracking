@@ -341,6 +341,29 @@
         return Math.min(99, Math.floor(((t - n) / t) * 100 + 0.5));
       }
     },
+    12447: (e, t, n) => {
+      "use strict";
+      n.d(t, { u: () => l });
+      var r = n(8871),
+        a = n(90626),
+        i = n(78327),
+        s = n(85585),
+        o = n(7445);
+      function l(e) {
+        const { children: t, navTreeRef: n, NavigationManager: l, ...c } = e,
+          m = a.useRef(),
+          u = (0, r.Ue)(m, n);
+        if ((0, i.Qn)()) {
+          const e = window.__nav_tree_root;
+          return a.createElement(
+            s.B,
+            { ...c, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
+            a.createElement(o.q, null, t),
+          );
+        }
+        return a.createElement(a.Fragment, null, t);
+      }
+    },
     84746: (e, t, n) => {
       "use strict";
       n.d(t, { N: () => c });

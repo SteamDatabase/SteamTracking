@@ -177,11 +177,11 @@
                   strict: I,
                 })
               : null,
-            A = !!(v ? v(D, a) : D),
-            R = "function" == typeof _ ? _(A) : _,
-            N = "function" == typeof b ? b(A) : b;
-          A &&
-            ((R = (function () {
+            R = !!(v ? v(D, a) : D),
+            A = "function" == typeof _ ? _(R) : _,
+            N = "function" == typeof b ? b(R) : b;
+          R &&
+            ((A = (function () {
               for (
                 var e = arguments.length, t = new Array(e), a = 0;
                 a < e;
@@ -193,10 +193,10 @@
                   return e;
                 })
                 .join(" ");
-            })(R, d)),
+            })(A, d)),
             (N = (0, s.A)({}, N, p)));
           var T = (0, s.A)(
-            { "aria-current": (A && r) || null, className: R, style: N, to: i },
+            { "aria-current": (R && r) || null, className: A, style: N, to: i },
             L,
           );
           return (
@@ -204,6 +204,29 @@
           );
         });
       });
+    },
+    12447: (e, t, a) => {
+      "use strict";
+      a.d(t, { u: () => l });
+      var n = a(8871),
+        r = a(90626),
+        o = a(78327),
+        i = a(85585),
+        s = a(7445);
+      function l(e) {
+        const { children: t, navTreeRef: a, NavigationManager: l, ...c } = e,
+          u = r.useRef(),
+          m = (0, n.Ue)(u, a);
+        if ((0, o.Qn)()) {
+          const e = window.__nav_tree_root;
+          return r.createElement(
+            i.B,
+            { ...c, navTreeRef: m, secondary: !0, parentEmbeddedNavTree: e },
+            r.createElement(s.q, null, t),
+          );
+        }
+        return r.createElement(r.Fragment, null, t);
+      }
     },
     70995: (e, t, a) => {
       "use strict";
@@ -950,7 +973,7 @@
     },
     49271: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { CuratorReviewListContainer: () => q, default: () => K });
+      a.r(t), a.d(t, { CuratorReviewListContainer: () => K, default: () => q });
       var n = a(75844),
         r = a(90626),
         o = a(15759),
@@ -1023,8 +1046,8 @@
         L = a(80782),
         P = a(33380),
         D = a.n(P),
-        A = a(12155),
-        R = a(52038),
+        R = a(12155),
+        A = a(52038),
         N = a(70758);
       const T = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
@@ -1050,7 +1073,7 @@
           return r.createElement(
             "div",
             {
-              className: (0, R.A)(
+              className: (0, A.A)(
                 "YoutubePreviewContainer",
                 N.YoutubePreviewImage,
                 e.imageClassnames,
@@ -1058,7 +1081,7 @@
               onClick: () => m(!1),
             },
             r.createElement("img", {
-              className: (0, R.A)("YoutubePreviewImage", N.YoutubePreviewImage),
+              className: (0, A.A)("YoutubePreviewImage", N.YoutubePreviewImage),
               src:
                 t ||
                 y.TS.COMMUNITY_CDN_URL +
@@ -1067,7 +1090,7 @@
             r.createElement(
               "div",
               { className: "YoutubePreviewPlay" },
-              r.createElement(A.IOc, null),
+              r.createElement(R.IOc, null),
             ),
           );
         let p = (0, y.xv)().replace("https://", "");
@@ -1087,9 +1110,9 @@
             })(s)}`),
           r.createElement(
             "div",
-            { className: (0, R.A)("YoutubePlayer", D().TwitchPlayer) },
+            { className: (0, A.A)("YoutubePlayer", D().TwitchPlayer) },
             r.createElement("img", {
-              className: (0, R.A)(
+              className: (0, A.A)(
                 "YoutubePreviewContainer",
                 N.YoutubePreviewImage,
                 e.imageClassnames,
@@ -1169,15 +1192,15 @@
           ),
         );
       }
-      const K = function (e) {
+      const q = function (e) {
         const t = (0, C.A)();
         return r.createElement(
           l.u,
           { navID: "StoreCuratorPageRoot", NavigationManager: t },
-          r.createElement(q, { listid: e.listid }),
+          r.createElement(K, { listid: e.listid }),
         );
       };
-      function q(e) {
+      function K(e) {
         const t = parseInt(
             (0, y.Tc)("curator_account_id", "application_config"),
           ),
@@ -1298,7 +1321,7 @@
           r.createElement(
             c.Z,
             {
-              className: (0, R.A)(H().CuratorList, m && H().CuratorListGrid),
+              className: (0, A.A)(H().CuratorList, m && H().CuratorListGrid),
               "flow-children": "grid",
             },
             i.map((e, a) =>
