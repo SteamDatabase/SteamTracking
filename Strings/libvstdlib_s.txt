@@ -366,6 +366,7 @@ CanBreakRepeated
 CanEndLine
 Command line options:\n
 CommandLine
+Coroutine '%s' stack save size is %d bytes
 Coroutine_Cancel
 Coroutine_Continue
 Coroutine_Create
@@ -1487,7 +1488,6 @@ m_VecCoroutineStack
 m_VecCoroutineStack.Count() > 1
 m_bInitialized
 m_bitsMigratedBuckets
-m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_listCommandLineOption
 m_mapConditionalSymbolTable
 m_memNodes

@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"Το %appname% απαιτεί %nMegaBytes%MB ελεύθερου χώρου στο δίσκο για να ενημερωθεί."
 "SteamBootstrapper_FailedManifestLoad"		"Αποτυχία φόρτωσης δηλωτικού πακέτου."
 "SteamBootstrapper_FailedManifestVerify"		"Αποτυχία επικύρωσης δηλωτικού πακέτου."
+"SteamBootstrapper_FailedManifestOSType"		"Η έκδοση του λειτουργικού συστήματος δεν είναι συμβατή με τον τύπο λειτουργικού συστήματος του δηλωτικού πακέτου."
 "SteamBootstrapper_FailedManifestSave"		"Αποτυχία αποθήκευσης δηλωτικού πακέτου."
 "SteamBootstrapper_FailedPackageRead"			"Αποτυχία ανάγνωσης πακέτου (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Κατεστραμμένο αρχείο πακέτου (%pkgName%)."
@@ -19,7 +20,7 @@
 "SteamBootstrapper_UpdateCleanup"				"Καθαρισμός..."
 "SteamBootstrapper_UpdateCleanupFail"			"Αποτυχία καθαρισμού μετά την ενημέρωση, συνέχεια..."
 "SteamBootstrapper_UpdateFinalizeFail"		"Αποτυχία εγγραφής δηλωτικού πακέτου εγκατάστασης."
-"SteamBootstrapper_UpdateComplete"			"Ενημέρωση ολοκληρώθηκε, εκκίνηση %appname%..."
+"SteamBootstrapper_UpdateComplete"			"Η ενημέρωση ολοκληρώθηκε. Γίνεται εκκίνηση του %appname%…"
 "SteamBootstrapper_UpdateChecking"			"Έλεγχος για διαθέσιμες ενημερώσεις..."
 "SteamBootstrapper_UpdatePrepare"				"Προετοιμασία για ενημέρωση..."
 "SteamBootstrapper_UpdateDownload"			"Λήψη ενημέρωσης..."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Aνεπανόρθωτο σφάλμα"
 "SteamBootstrapper_Warning_Title"			"%appname% - Προειδοποίηση"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "Το %appname% δεν υποστηρίζεται πλέον στην έκδοση του λειτουργικού σας συστήματος."
+"SteamBootstrapper_Starting"                  "Εκκίνηση…"
 }

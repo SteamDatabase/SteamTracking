@@ -163,6 +163,19 @@ message CAuthentication_GetAuthSessionInfo_Response {
 	optional bool requestor_location_mismatch = 10;
 	optional bool high_usage_login = 11;
 	optional .ESessionPersistence requested_persistence = 12 [default = k_ESessionPersistence_Invalid];
+	optional int32 device_trust = 13;
+}
+
+message CAuthentication_GetAuthSessionRiskInfo_Request {
+	optional uint64 client_id = 1;
+	optional uint32 language = 2;
+}
+
+message CAuthentication_GetAuthSessionRiskInfo_Response {
+	optional string location_confirmer = 1;
+	optional string location_requestor = 2;
+	optional string location_other = 3;
+	optional .EAuthTokenPlatformType platform_type = 4 [default = k_EAuthTokenPlatformType_Unknown];
 }
 
 message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
@@ -331,6 +344,14 @@ message CAuthenticationSupport_GetTokenHistory_Response {
 	repeated .CSupportRefreshTokenAudit history = 1;
 }
 
+message CAuthenticationSupport_MarkTokenCompromised_Request {
+	optional fixed64 steamid = 1;
+	optional fixed64 token_id = 2;
+}
+
+message CAuthenticationSupport_MarkTokenCompromised_Response {
+}
+
 message CCloudGaming_CreateNonce_Request {
 	optional string platform = 1;
 	optional uint32 appid = 2;
@@ -361,6 +382,7 @@ service Authentication {
 	rpc BeginAuthSessionViaCredentials (.CAuthentication_BeginAuthSessionViaCredentials_Request) returns (.CAuthentication_BeginAuthSessionViaCredentials_Response);
 	rpc PollAuthSessionStatus (.CAuthentication_PollAuthSessionStatus_Request) returns (.CAuthentication_PollAuthSessionStatus_Response);
 	rpc GetAuthSessionInfo (.CAuthentication_GetAuthSessionInfo_Request) returns (.CAuthentication_GetAuthSessionInfo_Response);
+	rpc GetAuthSessionRiskInfo (.CAuthentication_GetAuthSessionRiskInfo_Request) returns (.CAuthentication_GetAuthSessionRiskInfo_Response);
 	rpc UpdateAuthSessionWithMobileConfirmation (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request) returns (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response);
 	rpc UpdateAuthSessionWithSteamGuardCode (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request) returns (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response);
 	rpc GenerateAccessTokenForApp (.CAuthentication_AccessToken_GenerateForApp_Request) returns (.CAuthentication_AccessToken_GenerateForApp_Response);
@@ -376,6 +398,7 @@ service AuthenticationSupport {
 	rpc QueryRefreshTokenByID (.CAuthenticationSupport_QueryRefreshTokenByID_Request) returns (.CAuthenticationSupport_QueryRefreshTokenByID_Response);
 	rpc RevokeToken (.CAuthenticationSupport_RevokeToken_Request) returns (.CAuthenticationSupport_RevokeToken_Response);
 	rpc GetTokenHistory (.CAuthenticationSupport_GetTokenHistory_Request) returns (.CAuthenticationSupport_GetTokenHistory_Response);
+	rpc MarkTokenCompromised (.CAuthenticationSupport_MarkTokenCompromised_Request) returns (.CAuthenticationSupport_MarkTokenCompromised_Response);
 }
 
 service CloudGaming {

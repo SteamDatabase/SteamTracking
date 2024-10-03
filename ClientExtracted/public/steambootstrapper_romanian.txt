@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% are nevoie %nMegaBytes% MB de spațiu liber pe disc pentru actualizare."
 "SteamBootstrapper_FailedManifestLoad"		"Încărcarea manifestului pachetului a eșuat."
 "SteamBootstrapper_FailedManifestVerify"		"Verificarea manifestului pachetului a eșuat."
+"SteamBootstrapper_FailedManifestOSType"		"Versiunea sistemului de operare nu este compatibilă cu tipul de sistem de operare specificat în manifestul pachetului."
 "SteamBootstrapper_FailedManifestSave"		"Salvarea manifestului pachetului a eșuat."
 "SteamBootstrapper_FailedPackageRead"			"Citirea pachetului (%pkgName%) a eșuat."
 "SteamBootstrapper_CorruptPackageFile"		"Fișier corupt al pachetului (%pkgName%)"
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Eroare fatală"
 "SteamBootstrapper_Warning_Title"			"%appname% - Atenție"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% nu mai este compatibil cu versiunea sistemului tău de operare."
+"SteamBootstrapper_Starting"                  "Începe..."
 }

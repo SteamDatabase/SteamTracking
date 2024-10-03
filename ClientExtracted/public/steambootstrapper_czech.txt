@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"Klient služby %appname% potřebuje k aktualizaci %nMegaBytes% MB volného místa na disku."
 "SteamBootstrapper_FailedManifestLoad"		"Načtení záznamu balíčku se nezdařilo."
 "SteamBootstrapper_FailedManifestVerify"		"Ověření záznamu balíčku se nezdařilo."
+"SteamBootstrapper_FailedManifestOSType"		"Verze operačního systému není kompatibilní s typem záznamového souboru balíku"
 "SteamBootstrapper_FailedManifestSave"		"Uložení záznamu balíčku se nezdařilo."
 "SteamBootstrapper_FailedPackageRead"			"Přečtení balíčku se nezdařilo (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Poškozený soubor v balíčku (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% – fatální chyba"
 "SteamBootstrapper_Warning_Title"			"%appname% – varování"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "Klient služby %appname% není podporován Vaším operačním systémem."
+"SteamBootstrapper_Starting"                  "Spouštění..."
 }

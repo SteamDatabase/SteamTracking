@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"Для обновления %appname% необходимо %nMegaBytes%МБ свободного места на диске."
 "SteamBootstrapper_FailedManifestLoad"		"Сбой при загрузке файла-manifest пакета."
 "SteamBootstrapper_FailedManifestVerify"		"Сбой при проверке файла-manifest пакета."
+"SteamBootstrapper_FailedManifestOSType"		"Версия ОС несовместима с типом ОС манифеста пакета."
 "SteamBootstrapper_FailedManifestSave"		"Не удалось сохранить файл-manifest пакета."
 "SteamBootstrapper_FailedPackageRead"			"Не удалось прочитать пакет (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Поврежден файл пакета (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% — критическая ошибка"
 "SteamBootstrapper_Warning_Title"			"%appname% — предупреждение"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% больше не поддерживается в вашей версии операционной системы."
+"SteamBootstrapper_Starting"                  "Запуск..."
 }

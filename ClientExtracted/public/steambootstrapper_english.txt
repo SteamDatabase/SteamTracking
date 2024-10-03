@@ -43,5 +43,7 @@ SteamBootstrapper_WindowTitle			"%appname%"
 SteamBootstrapper_Error_Title			"%appname% - Fatal Error"
 SteamBootstrapper_Warning_Title			"%appname% - Warning"
 SteamBootstrapper_OperatingSystemNoLongerSupported "%appname% is no longer supported on your operating system version."
+SteamCmd_OperatingSystemNoLongerSupported "%appname% is no longer supported on your operating system version.\nYou may override this check by passing -overrideminos.\n%appname% may not run properly and support for this override may be removed in the future.\nPlease update to a supported OS version for continued usage."
+SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta "%appname% is no longer supported on your operating system version.\n\nClick OK to exit the selected %appname% beta."
 SteamBootstrapper_Starting                  "Starting..."
 }

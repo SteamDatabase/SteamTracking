@@ -466,7 +466,7 @@
 "Friends_AchievementUnlocked_Headline"		"Prestasjon låst opp!"
 "Friends_AchievementUnlocked_Body"			"%achievement%"
 
-"Friends_AchievementProgress_Headline"		"Prestasjonsfremgang"
+"Friends_AchievementProgress_Headline"		"Prestasjoner"
 "Friends_AchievementProgress_Body"			"%achievement% (%cur%/%max%)"
 
 "Friends_ChatURLWarning_Title"		"Advarsel: ikke et Steam-nettsted"

@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% 업데이트는 디스크 여유 공간 %nMegaBytes%MB가 있어야 가능합니다."
 "SteamBootstrapper_FailedManifestLoad"		"패키지 manifest를 불러오지 못했습니다."
 "SteamBootstrapper_FailedManifestVerify"		"패키지 manifest를 확인하지 못했습니다."
+"SteamBootstrapper_FailedManifestOSType"		"시스템 OS 버전이 패키지 매니페스트의 운영 체제 유형과 호환되지 않습니다."
 "SteamBootstrapper_FailedManifestSave"		"패키지 manifest를 저장하지 못했습니다."
 "SteamBootstrapper_FailedPackageRead"			"패키지(%pkgName%)를 읽지 못했습니다.."
 "SteamBootstrapper_CorruptPackageFile"		"손상된 패키지 파일(%pkgName%)입니다."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - 치명적인 오류"
 "SteamBootstrapper_Warning_Title"			"%appname% - 경고"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% 앱은 현재 사용 중인 운영 체제 버전에서 더 이상 지원되지 않습니다."
+"SteamBootstrapper_Starting"                  "시작 중..."
 }

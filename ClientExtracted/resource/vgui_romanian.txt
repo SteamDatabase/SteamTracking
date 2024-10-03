@@ -103,7 +103,7 @@
 "SMPEvent_Repeat"		"Repetă"
 "SMPEvent_Maximize"		"Maximizează"
 "SMPEvent_Minimize"		"Ascunde"
-"SMPEvent_Restore"		"Restaurează"
+"SMPEvent_Restore"		"Restabilește"
 
 "SMPStats_UserId"		"ID utilizator:"
 "SMPStats_Filename"		"Nume fișier:"

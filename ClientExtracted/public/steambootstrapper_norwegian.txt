@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% trenger %nMegaBytes% MB med ledig diskplass for å oppdatere."
 "SteamBootstrapper_FailedManifestLoad"		"Kunne ikke laste pakkemanifest."
 "SteamBootstrapper_FailedManifestVerify"		"Kunne ikke bekrefte pakkemanifest."
+"SteamBootstrapper_FailedManifestOSType"		"Operativsystemversjonen er ikke kompatibel med operativsystemtypen i pakkemanifestet."
 "SteamBootstrapper_FailedManifestSave"		"Kunne ikke lagre pakkemanifest."
 "SteamBootstrapper_FailedPackageRead"			"Kunne ikke lese pakke (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Skadet pakkefil (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Fatal feil"
 "SteamBootstrapper_Warning_Title"			"%appname% - Advarsel"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% støttes ikke lenger på gjeldende versjon av operativsystemet."
+"SteamBootstrapper_Starting"                  "Starter …"
 }

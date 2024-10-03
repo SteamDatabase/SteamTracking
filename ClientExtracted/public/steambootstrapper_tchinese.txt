@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% 需要 %nMegaBytes% MB 的可用磁碟空間才能更新。"
 "SteamBootstrapper_FailedManifestLoad"		"無法載入套件資訊清單。"
 "SteamBootstrapper_FailedManifestVerify"		"無法驗證套件資訊清單。"
+"SteamBootstrapper_FailedManifestOSType"		"作業系統版本與套件資訊清單的作業系統類型不相容"
 "SteamBootstrapper_FailedManifestSave"		"無法儲存套件資訊清單。"
 "SteamBootstrapper_FailedPackageRead"			"無法讀取套件 (%pkgName%)。"
 "SteamBootstrapper_CorruptPackageFile"		"套件檔案損毀 (%pkgName%)。"
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - 重大錯誤"
 "SteamBootstrapper_Warning_Title"			"%appname% - 警告"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "您目前的作業系統版本已無法支援 %appname%。"
+"SteamBootstrapper_Starting"                  "開始進行…"
 }

@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% の更新には、ディスク領域に%nMegaBytes%MB の空き容量が必要です。"
 "SteamBootstrapper_FailedManifestLoad"		"パッケージ リストを読み込めませんでした。"
 "SteamBootstrapper_FailedManifestVerify"		"パッケージ リストを検証できませんでした。"
+"SteamBootstrapper_FailedManifestOSType"		"お使いのシステムOSバージョンはパッケージマニフェストOSタイプと互換性がありません"
 "SteamBootstrapper_FailedManifestSave"		"パッケージ リストを保存できませんでした。"
 "SteamBootstrapper_FailedPackageRead"			"パッケージ（%pkgName%）を読み込めませんでした。"
 "SteamBootstrapper_CorruptPackageFile"		"パッケージ（%pkgName%）が破損しています。"
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - 致命的なエラー"
 "SteamBootstrapper_Warning_Title"			"%appname% - 警告"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% はお使いのオペレーティングシステムのバージョンではもうサポートされていません。"
+"SteamBootstrapper_Starting"                  "起動中..."
 }

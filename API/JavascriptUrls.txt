@@ -1566,6 +1566,7 @@ ${STORE_BASE_URL}sub/${id}
 ${STORE_BASE_URL}sub/${}
 ${STORE_BASE_URL}subs/${packageid}
 ${STORE_BASE_URL}subscriber_agreement
+${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
 ${STORE_BASE_URL}tags/${}/${name}
@@ -1717,7 +1718,6 @@ ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webAp
 ${WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}ISteamDirectory/GetCMList/v1/?cellid=0
-${WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets
 ${WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${origin}
 ${WEBAPI_BASE_URL}ISteamUserOAuth/GetUserSummaries/v2/
 ${_url}${}${}

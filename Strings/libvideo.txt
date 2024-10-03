@@ -434,6 +434,7 @@ $tIContent-Length
 %s %s%lu (%s0x%lx)\n
 %s %s(%llu) / %s
 %s (%1.2fms)
+%s HTTP Client
 %s PARAMETERS
 %s PRIVATE KEY
 %s Salt Length: 0x
@@ -824,10 +825,6 @@ $tIContent-Length
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
-*Z19EGetFramesFromVideoEUlyE0_
-*Z19EGetFramesFromVideoEUlyE1_
-*Z19EGetFramesFromVideoEUlyE2_
-*Z19EGetFramesFromVideoEUlyE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 *\n%k_EClientPersonaStateFlagRichPresence
 *\n%k_EClientPersonaStateFlagUserClanRank
@@ -1150,10 +1147,14 @@ $tIContent-Length
 /data/src/common/video/audiodecoder.cpp
 /data/src/common/video/audioencode.cpp
 /data/src/common/video/avframeyuvwrapper.h
+/data/src/common/video/ffmpeg/../avframeyuvwrapper.h
+/data/src/common/video/ffmpeg/customavioreadcontext.cpp
+/data/src/common/video/ffmpeg/ffmpegwrappers.cpp
 /data/src/common/video/videoalignedbuffer.h
 /data/src/common/video/videodecode.cpp
 /data/src/common/video/videodecoderlibav.cpp
-/data/src/common/video/videoencode.cpp
+/data/src/common/video/videoencodex264.cpp
+/data/src/common/video/videoexport.cpp
 /data/src/common/video/videofilestream.cpp
 /data/src/common/video/videomanifest.cpp
 /data/src/common/video/videompdparser.cpp
@@ -1336,13 +1337,13 @@ $tIContent-Length
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CScheduledItemiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI19NetPacketToDelete_tiE10ListElem_tEE
-10CUtlMemoryIN14CUtlLinkedListI8AVPacketiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CNetPacketiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP18CHTTPRequestHandleiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP19VideoEncodedFrame_tiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIP8AVPacketiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIPN12CVideoPlayer15QueuedSegment_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIPN18COpenSSLConnection15COutgoingBufferEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIPN19CVideoDecoderFFmpeg8CAVFrameEiE10ListElem_tEE
@@ -1468,7 +1469,6 @@ $tIContent-Length
 13IVideoEncoder
 13MetricValue_t
 14 (default)
-14CAVExportFrame
 14CClanEventData
 14CFrameFunctionI11CHTTPClientE
 14CFrameFunctionI19CQueuedLambdaRunnerE
@@ -1485,7 +1485,6 @@ $tIContent-Length
 14CUtlLinkedListI10CCoroutineiE
 14CUtlLinkedListI14CScheduledItemiE
 14CUtlLinkedListI19NetPacketToDelete_tiE
-14CUtlLinkedListI8AVPacketiE
 14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE
 14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE
 14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE
@@ -1495,6 +1494,7 @@ $tIContent-Length
 14CUtlLinkedListIP19VideoEncodedFrame_tiE
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
 14CUtlLinkedListIP25CWorkItemNetFilterEncryptiE
+14CUtlLinkedListIP8AVPacketiE
 14CUtlLinkedListIPN12CVideoPlayer15QueuedSegment_tEiE
 14CUtlLinkedListIPN18COpenSSLConnection15COutgoingBufferEiE
 14CUtlLinkedListIPN19CVideoDecoderFFmpeg8CAVFrameEiE
@@ -1526,8 +1526,6 @@ $tIContent-Length
 16CStructNetPacket
 16CVideoFileStream
 16IKeyValuesSystem
-17:12:47
-17CAVExportFrameYUV
 17CAudioFileDecoder
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -1627,6 +1625,7 @@ $tIContent-Length
 21COpenSSLCachedSession
 21CUtlCStringConversion
 21VideoRepresentation_t
+22:50:51
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -1638,6 +1637,7 @@ $tIContent-Length
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CRefCountedProtobufArena
+24CWrapAVFrameToInterfaces
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 25CFastTimerCumulativeTimer
 25CHTTPClientNetworkRequest
@@ -1646,8 +1646,6 @@ $tIContent-Length
 25CWorkItemNetFilterEncrypt
 25CWorkItemRunSSLConnection
 25INetSSLConnectionCallback
-26/M
-26CAVScaledFrameForExportYUV
 26CHTTPCacheInitializeThread
 26CWorkItemHTTPClientRequest
 26CWorkItemZeroAndFreeBuffer
@@ -1690,7 +1688,6 @@ $tIContent-Length
 37CNetConnectionAsyncDisconnectWorkItem
 384:C\n
 38CWorkItemNetEncryptionHandshakeEncrypt
-3B/M
 3DES(168)
 3Wk1^
 3\n.k_EMsgAMGetClanDetailsForForumCreationResponse
@@ -1708,7 +1705,6 @@ $tIContent-Length
 456789:;<=
 474E4U4W4c4i4m4
 4@AA
-4Q/M
 4T9\n
 4\fZQ
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
@@ -1735,7 +1731,6 @@ $tIContent-Length
 5\n0k_EMsgTestWorkerProcessServiceModuleCallResponse
 5\n\vnested_type
 5\tuy
-5m/M
 5mF\tfE
 5mmQ
 5q\teH
@@ -1826,6 +1821,7 @@ $tIContent-Length
 :LBN
 :authorit
 :authority
+:colorspace=%d:range=%d
 :crypto/bio/bf_buff.c
 :eaI
 :metho
@@ -1833,11 +1829,13 @@ $tIContent-Length
 :oc\ve
 :pat
 :path
+:pixel_aspect=%d/%d
 :protoco
 :schem
 :scheme
 :statu
 :status
+:time_base=%d/%d
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
 ;22dV::tN\n\n
@@ -1882,10 +1880,10 @@ $tIContent-Length
 >\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
 >\n9k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
 >\v?\r?7?;?=?A?Y?_?e?g?y?}?
-?/data/src/common/video/videoexport.cpp
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
 ?HAI\t81\t9dcG'
+?[export] Failed to add video packet to muxer
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?accept error
 ?jOb
@@ -2633,7 +2631,6 @@ CAST5-CFB
 CAST5-ECB
 CAST5-OFB
 CAudioEncoder::BGetNextPacket
-CAudioEncoder::BGetNextPacket - encode
 CBIGNUM
 CBaseScheduledFunction
 CBilling_Address
@@ -3554,6 +3551,7 @@ CopyPlane_16
 CopyRow_16_C
 CopyRow_C
 Copyright Violation
+Coroutine '%s' stack save size is %d bytes
 Coroutine_IsActive()
 Corrupt depot cache
 Corrupt disk
@@ -3566,10 +3564,6 @@ Corrupted or unrecoverable data error
 Coudln't find queued segment
 Could not create an instance of 
 Could not find type "
-Could not get segment duration
-Could not init segmented reader for track %d
-Could not load init segment for track %d
-Could not open track %d
 Couldn't parse default value "
 Couldn't queue video segment
 Coupon has expired
@@ -3583,7 +3577,7 @@ CreateBoundSocket: asked to bind to local v6 address (%s), but k_uNetFlagAllowIP
 CreateBoundSocket: failed to create socket, error %s (%d)\n
 CreateInterface
 CreateRTMPStream
-CreateVideoEncoderX264
+CreateVideoEncoder
 CreateVideoPlayer
 CreateVideoRecordingSegmentWriter
 CreatedByFollowedUsersRankedByPublicationDate
@@ -3809,6 +3803,16 @@ Diner's Card (BoaCompra)
 Diners Club
 DirName
 DirName:
+Disabled/Blocklist
+Disabled/ChildCommandLine
+Disabled/CommandLine
+Disabled/CrashCount
+Disabled/DebugRequest
+Disabled/Off
+Disabled/OffOk
+Disabled/RuntimeDetect
+Disabled/Software
+Disabled/Unknown
 DisconnectPlatformSocket
 Disconnected By Remote Host
 Disconnecting #%d due to HandleSSLFailure() - eReason=%d\n
@@ -4003,6 +4007,7 @@ ENCRYPTED PRIVATE KEY
 ENGINE lib
 ENHANCE_YOUR_CALM
 ENOPROTOOPT
+EPreviewMPDToMP4
 EProtoClanEventType
 ERROR: selector [%d] invalid\n
 EResult
@@ -4103,9 +4108,12 @@ Email address mismatch
 Email not validated
 EmptyFragments
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
+Enabled/Force
+Enabled/ForceOn
+Enabled/On
+Enabled/Readback
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
 Encipher Only
-Encoder reinit: %llu us\n
 Encoding error
 EncodingDecl
 EncryptThenMac
@@ -4202,7 +4210,6 @@ FORM
 FORMAT
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
-FSegment load: %llu us for %s\n
 FV|FgUV
 F\nAk_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 F\n\foptimize_for
@@ -4214,10 +4221,8 @@ Failed to create first worker thread in AddWorkItem()
 Failed to create thread (error 0x%x)
 Failed to encrypt outgoing data
 Failed to find time in logfile name
+Failed to get HW surface format\n
 Failed to get public key for universe %s, encrypted connection setup failed\n
-Failed to init audio stream
-Failed to init encoder for first segment transcode
-Failed to init video stream\n
 Failed to initialize manifest
 Failed to load optional module %s\n
 Failed to parse input
@@ -4225,7 +4230,6 @@ Failed to parse provided range request header
 Failed to remove log event from threadsafe queue!
 Failed to rename (error=%d): %s
 Failed to rename manifest file: error %d
-Failed to scale frame
 Failed to set thread local value
 Failed to write manifest file
 Failed updating streams
@@ -4296,6 +4300,7 @@ FixedDiv1_C
 FixedDiv_C
 Flooding was detected in this HTTP/2 session, and it must be closed
 Flow control error
+Fm_pAVFrame->format == AV_PIX_FMT_YUV420P || m_pAVFrame->format == AV_PIX_FMT_YUVJ420P
 FoCLcx
 Forbidden
 Force Bounce
@@ -4317,7 +4322,6 @@ Found unexpected period element
 Found unexpected representation close element
 Found unexpected segment template close element
 Frame Failed
-Frame grab: %llu us\n
 Fraud Check Failed
 Free
 Free Weekend
@@ -4551,7 +4555,13 @@ Handheld
 Handshake Failed
 Happymoney Voucher
 Harassment
+Hardware CUDA
+Hardware D3D11VA
+Hardware D3D12VA
+Hardware DXVA2
 Hardware Promo
+Hardware Unknown
+Hardware VAAPI
 Hardware not capable of IPT
 Has not logged in on PS3 with required app
 HasField
@@ -4957,11 +4967,12 @@ LANCache
 LANPeer
 LBN6
 LEGACY_GOST_PKCS12
-LIBAVCODEC_58
-LIBAVFORMAT_58
-LIBAVRESAMPLE_4
-LIBAVUTIL_56
-LIBSWSCALE_5
+LIBAVCODEC_61
+LIBAVFILTER_10
+LIBAVFORMAT_61
+LIBAVUTIL_59
+LIBSWRESAMPLE_5
+LIBSWSCALE_8
 LOCK_EX
 LOCK_SH
 LV=%zu n=%zu\n
@@ -5441,7 +5452,9 @@ News
 Next packet in multi-packet UDP message is too large and would exceed initially allocated buffer
 No Connection
 No Content
+No Decoder
 No Detail
+No Encoder
 No Error
 No PSS parameter restrictions\n
 No Result
@@ -5630,6 +5643,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
+Oct  2 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -6694,7 +6708,6 @@ Send Router
 Sending first queued request for %s\n
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep 18 2024
 September
 Server Busy
 Server Shutdown
@@ -6761,7 +6774,6 @@ SobelYRow_C
 SocketAlreadyClosed
 SocketFail
 Sofort
-Software
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -7364,6 +7376,9 @@ Unable to increment IOCP eventfd, error %d
 Unable to send encrypted SSL data over connection\n
 Unable to set default socket options, error %d
 Unauthorized
+Unavailable/Off
+Unavailable/OffOk
+Unavailable/Software
 Unbannable
 Unbound socket cannot be used with IOCP
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
@@ -7501,7 +7516,6 @@ Video player: Couldn't copy audio codec parameters\n
 Video player: Couldn't copy video codec parameters\n
 Video player: audio codec not supported\n
 Video player: video codec not supported\n
-Video reader init failed
 VideoPauseForValidation
 VideoPlaybackInitialize
 VideoPlaybackRunFrame
@@ -7803,10 +7817,56 @@ Zong
 [error=%d] Failed to open file %s:
 [error=%d] Failed to open file: %s
 [error=%d] Failed to write %s packet
+[export] - Decoder: %s
+[export] - Encoder: %s
+[export] - Mux only
+[export] An error occurred while reading audio packets
+[export] An error occurred while reading video packets
+[export] Audio demuxer can't find the audio track: %s
+[export] Chosen resolution is larger than what is supported by the h264 codec
+[export] Completed for file (%ums): %s
+[export] Could not init segmented reader for track %d
+[export] Could not load init segment for track %d
+[export] Encoder not initialized
+[export] Failed add output audio stream
+[export] Failed add output video stream
+[export] Failed to add audio packet to muxer
+[export] Failed to add frame to filter graph
+[export] Failed to build convert plan
+[export] Failed to get initial encoder codec params
+[export] Failed to init audio demuxer: %s
+[export] Failed to init audio segment reader: %s
+[export] Failed to init muxer
+[export] Failed to init video decoder
+[export] Failed to init video demuxer: %s
+[export] Failed to init video segment reader: %s
+[export] Failed to initialize encoder
+[export] Failed to initialize filter graph
+[export] Failed to make initial encoder
+[export] Failed to open muxer
+[export] Failed to parse recording manifest: %s
+[export] Failed to process recording: %s
+[export] Failed to read frame from encoder
+[export] Failed to read frame from filter graph
+[export] Failed to read packet from decoder
+[export] Failed to send flushing packet
+[export] Failed to send frame to encoder
+[export] Failed to send packet to decoder
+[export] Manifest is missing an audio or video track: %s
+[export] No video codec selected
+[export] No video width and height selected
+[export] Processing file: %s
+[export] Starting for file: %s
+[export] Unknown video codec: %d
+[export] Video demuxer can't find the video track: %s
+[export] [try_hardware=%s][codec=%d][bitrate=%u][framerate=%u][width=%u][height=%u][encoder_hardware=%d]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [no name available]
 [packed = true] can only be specified for repeated primitive fields.
+[preview] Completed for file (%ums)
+[preview] Failed to build convert plan
+[preview] Starting for export
 \%02X
 \%03o
 \(a8Bk
@@ -8024,7 +8084,7 @@ Zong
 \t\tCJAAQ
 \t\t\t</Representation>\n
 \t\t\t<Representation id="%d" mimeType="audio/mp4" codecs="%s" bandwidth="%lld" audioSamplingRate="%d">\n
-\t\t\t<Representation id="%d" mimeType="video/mp4" codecs="%s" bandwidth="30000" width="%d" height="%d">\n
+\t\t\t<Representation id="%d" mimeType="video/mp4" codecs="%s" bandwidth="%lld" width="%d" height="%d">\n
 \t\t\t\t<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="%d" />\n
 \t\t\t\t<SegmentTemplate timescale="%d" duration="%lld" initialization="%s" media="%s" startNumber="%d" />\n
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t00000000000000007777777777777777crypto/asn1/asn_moid.c
@@ -8546,7 +8606,6 @@ attempt to reuse session in different context
 attribute error
 au PAY
 audio
-audio reader init failed
 audio/webm
 audioSamplingRate
 auth-any
@@ -8569,152 +8628,199 @@ authorization
 auto
 auto:
 aux error
-avPacket.duration == m_pAVCodecContext->frame_size
-avPacket.pts != AV_NOPTS_VALUE
+av_buffer_create
+av_buffer_create@LIBAVUTIL_59
+av_buffer_ref
+av_buffer_ref@LIBAVUTIL_59
+av_buffer_unref
+av_buffer_unref@LIBAVUTIL_59
+av_buffersink_get_frame
+av_buffersink_get_frame@LIBAVFILTER_10
+av_buffersrc_add_frame
+av_buffersrc_add_frame@LIBAVFILTER_10
+av_buffersrc_parameters_alloc
+av_buffersrc_parameters_alloc@LIBAVFILTER_10
+av_buffersrc_parameters_set
+av_buffersrc_parameters_set@LIBAVFILTER_10
+av_channel_layout_compare
+av_channel_layout_compare@LIBAVUTIL_59
+av_channel_layout_copy
+av_channel_layout_copy@LIBAVUTIL_59
+av_channel_layout_from_mask
+av_channel_layout_from_mask@LIBAVUTIL_59
+av_channel_layout_uninit
+av_channel_layout_uninit@LIBAVUTIL_59
 av_dict_free
-av_dict_free@LIBAVUTIL_56
+av_dict_free@LIBAVUTIL_59
 av_dict_set
-av_dict_set@LIBAVUTIL_56
+av_dict_set@LIBAVUTIL_59
+av_dict_set_int
+av_dict_set_int@LIBAVUTIL_59
 av_find_best_stream
-av_find_best_stream@LIBAVFORMAT_58
+av_find_best_stream@LIBAVFORMAT_61
 av_frame_alloc
-av_frame_alloc@LIBAVUTIL_56
+av_frame_alloc@LIBAVUTIL_59
+av_frame_clone
+av_frame_clone@LIBAVUTIL_59
 av_frame_free
-av_frame_free@LIBAVUTIL_56
+av_frame_free@LIBAVUTIL_59
 av_frame_get_buffer
-av_frame_get_buffer@LIBAVUTIL_56
+av_frame_get_buffer@LIBAVUTIL_59
 av_frame_move_ref
-av_frame_move_ref@LIBAVUTIL_56
+av_frame_move_ref@LIBAVUTIL_59
 av_frame_unref
-av_frame_unref@LIBAVUTIL_56
+av_frame_unref@LIBAVUTIL_59
 av_free
-av_free@LIBAVUTIL_56
-av_free_packet
-av_free_packet@LIBAVCODEC_58
+av_free@LIBAVUTIL_59
+av_freep
+av_freep@LIBAVUTIL_59
 av_get_bytes_per_sample
-av_get_bytes_per_sample@LIBAVUTIL_56
-av_get_channel_layout_nb_channels
-av_get_channel_layout_nb_channels@LIBAVUTIL_56
-av_get_default_channel_layout
-av_get_default_channel_layout@LIBAVUTIL_56
+av_get_bytes_per_sample@LIBAVUTIL_59
 av_get_packed_sample_fmt
-av_get_packed_sample_fmt@LIBAVUTIL_56
+av_get_packed_sample_fmt@LIBAVUTIL_59
 av_gettime
-av_gettime@LIBAVUTIL_56
-av_init_packet
-av_init_packet@LIBAVCODEC_58
+av_gettime@LIBAVUTIL_59
+av_hwdevice_ctx_create
+av_hwdevice_ctx_create@LIBAVUTIL_59
+av_hwframe_ctx_alloc
+av_hwframe_ctx_alloc@LIBAVUTIL_59
+av_hwframe_ctx_init
+av_hwframe_ctx_init@LIBAVUTIL_59
+av_hwframe_get_buffer
+av_hwframe_get_buffer@LIBAVUTIL_59
+av_hwframe_transfer_data
+av_hwframe_transfer_data@LIBAVUTIL_59
+av_hwframe_transfer_get_formats
+av_hwframe_transfer_get_formats@LIBAVUTIL_59
 av_interleaved_write_frame
-av_interleaved_write_frame@LIBAVFORMAT_58
+av_interleaved_write_frame@LIBAVFORMAT_61
 av_log_set_callback
-av_log_set_callback@LIBAVUTIL_56
+av_log_set_callback@LIBAVUTIL_59
 av_malloc_tracked
-av_malloc_tracked@LIBAVUTIL_56
+av_malloc_tracked@LIBAVUTIL_59
 av_mallocz_tracked
-av_mallocz_tracked@LIBAVUTIL_56
+av_mallocz_tracked@LIBAVUTIL_59
 av_new_packet
-av_new_packet@LIBAVCODEC_58
+av_new_packet@LIBAVCODEC_61
+av_opt_set_bin
+av_opt_set_bin@LIBAVUTIL_59
+av_opt_set_chlayout
+av_opt_set_chlayout@LIBAVUTIL_59
 av_opt_set_int
-av_opt_set_int@LIBAVUTIL_56
+av_opt_set_int@LIBAVUTIL_59
+av_opt_set_sample_fmt
+av_opt_set_sample_fmt@LIBAVUTIL_59
+av_packet_alloc
+av_packet_alloc@LIBAVCODEC_61
+av_packet_free
+av_packet_free@LIBAVCODEC_61
+av_packet_move_ref
+av_packet_move_ref@LIBAVCODEC_61
+av_packet_rescale_ts
+av_packet_rescale_ts@LIBAVCODEC_61
 av_packet_unref
-av_packet_unref@LIBAVCODEC_58
+av_packet_unref@LIBAVCODEC_61
 av_read_frame
-av_read_frame@LIBAVFORMAT_58
-av_register_all
-av_register_all@LIBAVFORMAT_58
+av_read_frame@LIBAVFORMAT_61
 av_register_malloc
-av_register_malloc@LIBAVUTIL_56
+av_register_malloc@LIBAVUTIL_59
 av_rescale
-av_rescale@LIBAVUTIL_56
+av_rescale@LIBAVUTIL_59
 av_rescale_q
-av_rescale_q@LIBAVUTIL_56
+av_rescale_q@LIBAVUTIL_59
 av_sample_fmt_is_planar
-av_sample_fmt_is_planar@LIBAVUTIL_56
+av_sample_fmt_is_planar@LIBAVUTIL_59
 av_samples_get_buffer_size
-av_samples_get_buffer_size@LIBAVUTIL_56
+av_samples_get_buffer_size@LIBAVUTIL_59
 av_seek_frame
-av_seek_frame@LIBAVFORMAT_58
+av_seek_frame@LIBAVFORMAT_61
 av_write_frame
-av_write_frame@LIBAVFORMAT_58
+av_write_frame@LIBAVFORMAT_61
 av_write_trailer
-av_write_trailer@LIBAVFORMAT_58
+av_write_trailer@LIBAVFORMAT_61
 availabilityStartTime
 avc1
 avc1.%02x%02x%02x
 avcodec_alloc_context3
-avcodec_alloc_context3@LIBAVCODEC_58
-avcodec_close
-avcodec_close@LIBAVCODEC_58
-avcodec_copy_context
-avcodec_copy_context@LIBAVCODEC_58
-avcodec_decode_audio4
-avcodec_decode_audio4@LIBAVCODEC_58
-avcodec_decode_video2
-avcodec_decode_video2@LIBAVCODEC_58
-avcodec_encode_audio2
-avcodec_encode_audio2@LIBAVCODEC_58
+avcodec_alloc_context3@LIBAVCODEC_61
 avcodec_fill_audio_frame
-avcodec_fill_audio_frame@LIBAVCODEC_58
+avcodec_fill_audio_frame@LIBAVCODEC_61
 avcodec_find_decoder
-avcodec_find_decoder@LIBAVCODEC_58
+avcodec_find_decoder@LIBAVCODEC_61
 avcodec_find_encoder
-avcodec_find_encoder@LIBAVCODEC_58
+avcodec_find_encoder@LIBAVCODEC_61
+avcodec_find_encoder_by_name
+avcodec_find_encoder_by_name@LIBAVCODEC_61
 avcodec_flush_buffers
-avcodec_flush_buffers@LIBAVCODEC_58
+avcodec_flush_buffers@LIBAVCODEC_61
 avcodec_free_context
-avcodec_free_context@LIBAVCODEC_58
+avcodec_free_context@LIBAVCODEC_61
+avcodec_get_hw_config
+avcodec_get_hw_config@LIBAVCODEC_61
 avcodec_open2
-avcodec_open2@LIBAVCODEC_58
+avcodec_open2@LIBAVCODEC_61
+avcodec_parameters_alloc
+avcodec_parameters_alloc@LIBAVCODEC_61
+avcodec_parameters_copy
+avcodec_parameters_copy@LIBAVCODEC_61
+avcodec_parameters_free
+avcodec_parameters_free@LIBAVCODEC_61
 avcodec_parameters_from_context
-avcodec_parameters_from_context@LIBAVCODEC_58
+avcodec_parameters_from_context@LIBAVCODEC_61
 avcodec_parameters_to_context
-avcodec_parameters_to_context@LIBAVCODEC_58
+avcodec_parameters_to_context@LIBAVCODEC_61
 avcodec_receive_frame
-avcodec_receive_frame@LIBAVCODEC_58
+avcodec_receive_frame@LIBAVCODEC_61
+avcodec_receive_packet
+avcodec_receive_packet@LIBAVCODEC_61
+avcodec_send_frame
+avcodec_send_frame@LIBAVCODEC_61
 avcodec_send_packet
-avcodec_send_packet@LIBAVCODEC_58
+avcodec_send_packet@LIBAVCODEC_61
+avcodec_string
+avcodec_string@LIBAVCODEC_61
+avfilter_get_by_name
+avfilter_get_by_name@LIBAVFILTER_10
+avfilter_graph_alloc
+avfilter_graph_alloc@LIBAVFILTER_10
+avfilter_graph_config
+avfilter_graph_config@LIBAVFILTER_10
+avfilter_graph_create_filter
+avfilter_graph_create_filter@LIBAVFILTER_10
+avfilter_graph_free
+avfilter_graph_free@LIBAVFILTER_10
+avfilter_link
+avfilter_link@LIBAVFILTER_10
 avformat_alloc_context
-avformat_alloc_context@LIBAVFORMAT_58
+avformat_alloc_context@LIBAVFORMAT_61
 avformat_alloc_output_context2
-avformat_alloc_output_context2@LIBAVFORMAT_58
+avformat_alloc_output_context2@LIBAVFORMAT_61
 avformat_close_input
-avformat_close_input@LIBAVFORMAT_58
+avformat_close_input@LIBAVFORMAT_61
 avformat_find_stream_info
-avformat_find_stream_info failed for track %d
-avformat_find_stream_info@LIBAVFORMAT_58
+avformat_find_stream_info@LIBAVFORMAT_61
 avformat_free_context
-avformat_free_context@LIBAVFORMAT_58
+avformat_free_context@LIBAVFORMAT_61
 avformat_network_init
-avformat_network_init@LIBAVFORMAT_58
+avformat_network_init@LIBAVFORMAT_61
 avformat_new_stream
-avformat_new_stream@LIBAVFORMAT_58
+avformat_new_stream@LIBAVFORMAT_61
 avformat_open_input
-avformat_open_input@LIBAVFORMAT_58
+avformat_open_input@LIBAVFORMAT_61
 avformat_write_header
-avformat_write_header@LIBAVFORMAT_58
+avformat_write_header@LIBAVFORMAT_61
 avio_alloc_context
-avio_alloc_context@LIBAVFORMAT_58
+avio_alloc_context@LIBAVFORMAT_61
 avio_close
-avio_close@LIBAVFORMAT_58
+avio_close@LIBAVFORMAT_61
 avio_closep
-avio_closep@LIBAVFORMAT_58
+avio_closep@LIBAVFORMAT_61
 avio_flush
-avio_flush@LIBAVFORMAT_58
+avio_flush@LIBAVFORMAT_61
 avio_open
 avio_open2
-avio_open2@LIBAVFORMAT_58
-avio_open@LIBAVFORMAT_58
-avresample_alloc_context
-avresample_alloc_context@LIBAVRESAMPLE_4
-avresample_close
-avresample_close@LIBAVRESAMPLE_4
-avresample_convert
-avresample_convert@LIBAVRESAMPLE_4
-avresample_free
-avresample_free@LIBAVRESAMPLE_4
-avresample_get_out_samples
-avresample_get_out_samples@LIBAVRESAMPLE_4
-avresample_open
-avresample_open@LIBAVRESAMPLE_4
+avio_open2@LIBAVFORMAT_61
+avio_open@LIBAVFORMAT_61
 aybSr
 azure
 b->namelen == 0
@@ -8735,6 +8841,7 @@ b\fLM%
 b\fzUkm
 b\nS)7
 b]jY
+b_ref_mode
 backtrace
 backtrace@GLIBC_2.1
 backtrace_symbols
@@ -8796,11 +8903,13 @@ bad write retry
 bad x509 filetype
 bad_function_call
 baishancloud
+balanced
 ban_check_result
 bandwidth
 banned
 base64 decode error
 base64 encoding
+baseline
 basicConstraints
 basicOCSPResponse
 basic_ios::clear
@@ -8924,6 +9033,7 @@ buffer too small
 buffer. Use the 'bytes' type if you intend to send raw 
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
+buffersink
 bufs->head == bufs->cur
 bugs
 build_chain
@@ -10289,6 +10399,7 @@ encryptedContentInfo
 encryptedKey
 encryption ctrl failure
 encryption not supported for this key type
+enforce_hrd
 engine routines
 enhancedSearchGuide
 enterprises
@@ -10798,6 +10909,8 @@ guestpass
 guide
 gzip, deflate
 gzip,identity,*;q=0
+h264_nvenc
+h264_vaapi
 h2Wl
 h8,4$
 hConnection == m_hConnection
@@ -10822,6 +10935,8 @@ headline
 heartbeat request already pending
 height
 height > 0
+hevc_nvenc
+hevc_vaapi
 hex:
 hexinfo
 hexkey
@@ -10831,6 +10946,9 @@ hexsecret
 hexseed
 hidden
 hidden alias for 
+high10
+high422
+high444
 highwinds
 hkdf
 hl\tJ3o
@@ -11286,7 +11404,7 @@ import weak "$0";\n
 in == last
 in error state
 in use
-in_channel_layout
+in_chlayout
 in_sample_fmt
 in_sample_rate
 inappropriate fallback
@@ -11310,6 +11428,7 @@ info.m_pTreeWaitingConnections->Element(iIndexConnection) == pConnection
 inhibitAnyPolicy
 inhibitPolicyMapping
 init fail
+init failed
 init-stream$RepresentationID$.m4s
 init-stream%d.m4s%s
 initial wait
@@ -12009,7 +12128,6 @@ k_EMsgClientBroadcastDisconnect
 k_EMsgClientBroadcastFrames
 k_EMsgClientBroadcastInit
 k_EMsgClientBroadcastUploadConfig
-k_EMsgClientCMList
 k_EMsgClientChallengeRequest
 k_EMsgClientChallengeResponse
 k_EMsgClientChangeStatus
@@ -12829,17 +12947,19 @@ level3
 level_add_node
 lib(%lu)
 libSDL3.so.0
-libavcodec.so.58
-libavformat.so.58
-libavresample.so.4
-libavutil.so.56
+libav: %s
+libavcodec.so.61
+libavfilter.so.10
+libavformat.so.61
+libavutil.so.59
 libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
 library bug
 librt.so.1
-libswscale.so.5
+libswresample.so.5
+libswscale.so.8
 libx264.so.142
 like
 line 
@@ -12953,7 +13073,7 @@ m_VecCoroutineStack.Count() > 1
 m_WorkThreads
 m_WorkThreads.Count() == 0 && m_cThreadsRunning == (uint32) 0
 m_WorkThreads[ iWorkThread ]
-m_bEndOfInput || ( m_Packet.data && m_Packet.size )
+m_bEndOfInput || ( m_pPacket->data && m_pPacket->size )
 m_bHTTPSTunnelCompleted == false
 m_bHavePartialMsg is true, but no receive buffer is allocated!
 m_bPauseForValidation
@@ -12988,7 +13108,6 @@ m_cachedResponse.GetPtr()
 m_configOverride
 m_cubAlreadySentFromHeadBuffer < head.len
 m_cubMsgIncomingRecv <= m_cubMsgIncomingAlloc
-m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_decoratedFactory
 m_eConnectionState == k_EHTTPClientConnectionState_CONNECTING
 m_eConnectionState == k_EHTTPClientConnectionState_HANDSHAKING
@@ -13033,7 +13152,6 @@ m_mapRequestsAwaitingCompletion.Count() == 1
 m_mapRequestsAwaitingCompletion.Count() == 1 && !m_pHTTP2Session
 m_memNodes
 m_memPSK
-m_mpd.BHasAudioTrack() && m_mpd.BHasVideoTrack()
 m_nAllocationCount >= 0
 m_nInputBitsPerChannel <= 32 && m_nInputBitsPerChannel % 8 == 0
 m_nPollFd >= 0
@@ -13042,7 +13160,6 @@ m_nRecursions > 0
 m_nTheirSeqNacked < m_nTheirSeqReceived
 m_nWritesPendingInEncryptedBuffer == 0 && m_bufEncryptedSendBuffer.TellPut() == 0
 m_pAVFormatContext->pb
-m_pAVFrame->format == AV_PIX_FMT_YUV420P || m_pAVFrame->format == AV_PIX_FMT_YUVJ420P
 m_pAudioDecoder
 m_pBudgetGroups
 m_pBudgetGroups == NULL
@@ -13051,7 +13168,9 @@ m_pCachedResponseData
 m_pClientRequest->m_pWebSocketConnectionCallback
 m_pClientRequest.Get()
 m_pClientSession
+m_pCodecContext != nullptr
 m_pCodecContext == nullptr
+m_pCodecContext->hw_frames_ctx
 m_pConnection
 m_pConnectionCallback
 m_pConnectionCallback == NULL
@@ -13286,6 +13405,7 @@ max-forwards
 max-stale
 maxLen == 0 || pDest != NULL
 maxLenInBytes >= 0
+max_au_size
 max_early_data
 max_protocol
 maximum
@@ -13331,6 +13451,7 @@ mg\f5NJ
 mgf1 digest not allowed
 mgf1 with sha1 (default)
 mgmt
+middle
 mileweb
 mime no content type
 mime parse error
@@ -13443,8 +13564,6 @@ nContentLength != 0
 nContentLength == 0 || CHTTPUtil::BMethodAllowsRequestBody( m_eRequestMethod )
 nDataLen not supported in %s
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-nDestImageHeight <= nDestBufferHeight
-nDestImageWidth <= nDestBufferWidth
 nGrowSize >= 0
 nHTTPConnectionFindCount <= 1
 nHeight % 2 == 0
@@ -13992,7 +14111,7 @@ othername error
 othername:<unsupported>
 othervr
 out of memory
-out_channel_layout
+out_chlayout
 out_sample_fmt
 out_sample_rate
 outgoing
@@ -14015,8 +14134,8 @@ pAVFrame->format == AV_PIX_FMT_NV12
 pAVFrame->format == AV_PIX_FMT_YUV420P || pAVFrame->format == AV_PIX_FMT_YUVJ420P
 pAdaptation->m_pSegmentTemplate
 pAllocTracker->m_uSentinel == 0xaa110ced
+pAudioPacket->flags & AV_PKT_FLAG_KEY
 pAudioResampler
-pAudioStream
 pBarrier->m_ulCurrentSequenceNum == pItem->GetPipelineSequenceNumber()
 pBaseScheduledFunction->GetDeadlineTime().LTime() >= m_lTimeNextDeadline
 pBaseScheduledFunction->Run()
@@ -14025,6 +14144,7 @@ pBodyBuffer->TellPut() == (int)pRequest->GetReqBodyBytesTotal()
 pBuf->BIsUnbufferedSend()
 pCallback == m_pConnectionCallback || m_pConnectionCallback == NULL
 pClientRequest->GetRefCount() > 0 && pClientRequest->GetRefCount() < 10000
+pCodecParameters->codec_type == AVMEDIA_TYPE_UNKNOWN
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->pubBuffer == pBuffer
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion->SocketAcceptEx.hNewSocket != INVALID_SOCKET
 pCompletion->type == IOTYPE_CONNECT
@@ -14070,6 +14190,8 @@ pOutputDigest
 pOwner->m_unThreadBytesToRead == 0
 pOwner->m_unThreadBytesToRead > (uint)pBIOData->m_Num
 pOwner->m_unThreadBytesToRead >= pPacket->CubData()
+pPacket->duration == m_pAVCodecContext->frame_size
+pPacket->pts != AV_NOPTS_VALUE
 pPeeked == &m_chData[ m_nWrite ] && nBytesToCommit >= 0 && m_nWrite + nBytesToCommit <= m_nSize
 pPeeked >= &m_chData[0] && pPeeked < &m_chData[m_nSize]
 pPendingMsg == m_pPendingMsgFirst
@@ -14104,7 +14226,6 @@ pThread
 pTrack->m_pContext->oformat->flags & AVFMT_ALLOW_FLUSH
 pTrack->m_vecSegmentMaxPTS.Count() == ( pTrack->m_nCurrentSegment - iSegment )
 pU>\AL
-pVideoStream
 pWebSocketConnection->m_pHTTPRequest
 pWorkItem
 pWorkThread != NULL
@@ -14200,6 +14321,7 @@ pilotOrganization
 pilotPerson
 pipeline failure
 pitem_new
+pix_fmts
 pkInitClientAuth
 pkInitKDC
 pkcs
@@ -14371,6 +14493,7 @@ producedAt
 professionInfos
 professionItems
 professionOIDs
+profile_tier
 promoted to moderator
 promoted to officer
 promoted to owner
@@ -14392,6 +14515,7 @@ proxyCertInfo
 proxyPolicy
 ps3os
 psC3
+psettings->m_eHardware == k_EVideoEncoderHardware_Unknown
 pseudonym
 psk identity not found
 psk no client cb
@@ -14513,6 +14637,7 @@ qcStatements
 qsort
 qsort@GLIBC_2.0
 qualifiers
+quality
 qualityLabelledData
 quantil
 queue_position
@@ -14772,6 +14897,7 @@ sbgp-ipAddrBlock
 sbgp-routerIdentifier
 scale <= 32768
 scale >= 256
+scale_cuda
 scandir64@GLIBC_2.2
 scandir@GLIBC_2.0
 sched_get_priority_max
@@ -15044,6 +15170,8 @@ setpriority
 setpriority@GLIBC_2.0
 setsockopt
 setsockopt@GLIBC_2.0
+settings.m_eHardware != k_EVideoEncoderHardware_Unknown
+settings.m_timeBase.num == 1
 setup_tbuf
 sfixed32
 sfixed64
@@ -15170,6 +15298,7 @@ solrconfig
 sourceURL
 source_code_info
 span
+spatial-aq
 spkac
 src != NULL
 src_height != 0
@@ -15482,12 +15611,24 @@ supportedApplicationContext
 supported_languages
 surname
 svcm
+swr_alloc
+swr_alloc@LIBSWRESAMPLE_5
+swr_close
+swr_close@LIBSWRESAMPLE_5
+swr_convert
+swr_convert@LIBSWRESAMPLE_5
+swr_free
+swr_free@LIBSWRESAMPLE_5
+swr_get_out_samples
+swr_get_out_samples@LIBSWRESAMPLE_5
+swr_init
+swr_init@LIBSWRESAMPLE_5
 sws_freeContext
-sws_freeContext@LIBSWSCALE_5
+sws_freeContext@LIBSWSCALE_8
 sws_getCachedContext
-sws_getCachedContext@LIBSWSCALE_5
+sws_getCachedContext@LIBSWSCALE_8
 sws_scale
-sws_scale@LIBSWSCALE_5
+sws_scale@LIBSWSCALE_8
 symlink@GLIBC_2.0
 syntax
 syntax = "$0";\n\n
@@ -16296,6 +16437,7 @@ uint32_t libyuv::SumPixels_16(int, const uint32_t*)
 uint64_c2i
 uint64_new
 ulResult != 0
+ultralowlatency
 un-banned from chat
 unBufferEndThisRecv > unOffset
 unBytes == 0
@@ -16563,10 +16705,12 @@ var bad value
 variable expansion too long
 variable has no value
 vary
+vbr_peak
 vector::_M_default_append
 vector::_M_range_insert
 vector::_M_realloc_insert
 vector::reserve
+vendor_id
 verification failure
 verify error:num=%d:%s:depth=%d:%s\n
 verifyCAfile
@@ -16575,8 +16719,8 @@ verify_result
 version too high
 version too low
 veryfast
-video libav error: %s
 video/webm
+video_size=%dx%d:pix_fmt=%d
 videomanager
 view_error_data
 view_financials
@@ -16808,6 +16952,7 @@ x != __null
 x((Pz
 x-gzip
 x121Address
+x264 software encoder (width=%d)(height=%d)(timebase=1/%d)
 x264_encoder_close
 x264_encoder_delayed_frames
 x264_encoder_encode

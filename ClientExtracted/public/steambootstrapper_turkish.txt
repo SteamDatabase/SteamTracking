@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname%, güncelleştirme için %nMegaBytes%MB boş alana ihtiyaç duyuyor."
 "SteamBootstrapper_FailedManifestLoad"		"Paket açıklaması yüklenemedi."
 "SteamBootstrapper_FailedManifestVerify"		"Paket açıklaması doğrulanamadı."
+"SteamBootstrapper_FailedManifestOSType"		"İşletim sisteminin sürümü paket açıklaması işletim sistemi türüyle uyumlu değil."
 "SteamBootstrapper_FailedManifestSave"		"Paket açıklaması kaydedilemedi."
 "SteamBootstrapper_FailedPackageRead"			"Paket açıklaması okunamadı (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Bozuk paket dosyası (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Kritik Hata"
 "SteamBootstrapper_Warning_Title"			"%appname% - Uyarı"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname%, artık mevcut işletim sistemi sürümünüzde desteklenmiyor."
+"SteamBootstrapper_Starting"                  "Başlatılıyor..."
 }

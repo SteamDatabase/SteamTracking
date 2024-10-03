@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% tarvitsee %nMegaBytes%Mt levytilaa päivitystä varten."
 "SteamBootstrapper_FailedManifestLoad"		"Pakettiluettelon lataaminen epäonnistui."
 "SteamBootstrapper_FailedManifestVerify"		"Pakettiluettelon varmentaminen epäonnistui."
+"SteamBootstrapper_FailedManifestOSType"		"Käyttöjärjestelmän versio ei ole yhteensopiva paketin luettelotiedoston käyttöjärjestelmätyypin kanssa."
 "SteamBootstrapper_FailedManifestSave"		"Pakettiluettelon tallentaminen epäonnistui."
 "SteamBootstrapper_FailedPackageRead"			"Paketin (%pkgName%) lukeminen epäonnistui."
 "SteamBootstrapper_CorruptPackageFile"		"Paketin tiedosto (%pkgName%) on vahingoittunut."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% – Vakava virhe"
 "SteamBootstrapper_Warning_Title"			"%appname% - Varoitus"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% ei ole enää tuettu käyttöjärjestelmäversiossasi."
+"SteamBootstrapper_Starting"                  "Aloitetaan"
 }

@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% necesita %nMegaBytes% MB de espacio libre en disco para actualizarse."
 "SteamBootstrapper_FailedManifestLoad"		"No se ha podido cargar el archivo declarativo del paquete."
 "SteamBootstrapper_FailedManifestVerify"		"No se ha podido comprobar el archivo declarativo del paquete."
+"SteamBootstrapper_FailedManifestOSType"		"La versión del sistema operativo no es compatible con el tipo de sistema operativo del manifiesto del paquete."
 "SteamBootstrapper_FailedManifestSave"		"No se ha podido guardar el archivo declarativo del paquete."
 "SteamBootstrapper_FailedPackageRead"			"No se ha podido leer el paquete (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Archivo de paquete dañado (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Error fatal"
 "SteamBootstrapper_Warning_Title"			"%appname% - Advertencia"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% ya no es compatible con la versión de tu sistema operativo."
+"SteamBootstrapper_Starting"                  "Iniciando..."
 }

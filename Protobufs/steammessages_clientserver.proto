@@ -21,13 +21,6 @@ message CMsgClientTicketAuthComplete {
 	optional fixed64 owner_steam_id = 8;
 }
 
-message CMsgClientCMList {
-	repeated uint32 cm_addresses = 1;
-	repeated uint32 cm_ports = 2;
-	repeated string cm_websocket_addresses = 3;
-	optional uint32 percent_default_to_websocket = 4;
-}
-
 message CMsgClientP2PConnectionInfo {
 	optional fixed64 steam_id_dest = 1;
 	optional fixed64 steam_id_src = 2;

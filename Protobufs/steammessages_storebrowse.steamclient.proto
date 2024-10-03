@@ -64,7 +64,20 @@ enum EStoreLinkType {
 	k_EStoreLinkType_Twitter = 3;
 	k_EStoreLinkType_Twitch = 4;
 	k_EStoreLinkType_Discord = 5;
-	k_EStoreLinkType_MAX = 6;
+	k_EStoreLinkType_QQ = 6;
+	k_EStoreLinkType_VK = 7;
+	k_EStoreLinkType_Bilibili = 8;
+	k_EStoreLinkType_Weibo = 9;
+	k_EStoreLinkType_Reddit = 10;
+	k_EStoreLinkType_Instagram = 11;
+	k_EStoreLinkType_Tumblr = 12;
+	k_EStoreLinkType_Tieba = 13;
+	k_EStoreLinkType_Tiktok = 14;
+	k_EStoreLinkType_Telegram = 15;
+	k_EStoreLinkType_LinkedIn = 16;
+	k_EStoreLinkType_WeChat = 17;
+	k_EStoreLinkType_QQLink = 18;
+	k_EStoreLinkType_MAX = 19;
 }
 
 enum EStoreCategoryType {
@@ -121,6 +134,8 @@ message CStoreBrowse_GetItems_Request {
 message StoreItem {
 	message RelatedItems {
 		optional uint32 parent_appid = 1;
+		repeated uint32 demo_appid = 2;
+		repeated uint32 standalone_demo_appid = 3;
 	}
 
 	message IncludedItems {
@@ -247,7 +262,7 @@ message StoreItem {
 		optional bool is_commercial_license = 40;
 		optional bool should_suppress_discount_pct = 41;
 		optional bool hide_discount_pct_for_compliance = 42 [default = false];
-		optional int32 included_game_count = 43;
+		optional int32 included_game_count = 43 [default = 1];
 		optional int64 lowest_recent_price_in_cents = 44;
 		optional bool requires_shipping = 45;
 		optional .StoreItem.PurchaseOption.RecurrenceInfo recurrence_info = 46;
@@ -301,6 +316,7 @@ message StoreItem {
 	message Link {
 		optional .EStoreLinkType link_type = 1 [default = k_EStoreLinkType_None];
 		optional string url = 2;
+		optional string text = 3;
 	}
 
 	optional .EStoreItemType item_type = 1 [default = k_EStoreItemType_Invalid];
@@ -395,6 +411,21 @@ message CStoreBrowse_GetStoreCategories_Response {
 	repeated .CStoreBrowse_GetStoreCategories_Response.Category categories = 1;
 }
 
+message CStoreBrowse_GetPriceStops_Request {
+	optional string country_code = 1;
+	optional string currency_code = 2;
+}
+
+message CStoreBrowse_GetPriceStops_Response {
+	message PriceStop {
+		optional string formatted_amount = 1;
+		optional int64 amount_in_cents = 2;
+	}
+
+	repeated .CStoreBrowse_GetPriceStops_Response.PriceStop price_stops = 1;
+	optional string currency_code = 2;
+}
+
 message CStoreBrowse_GetDLCForApps_Request {
 	optional .StoreBrowseContext context = 1;
 	optional .CStorePageFilter store_page_filter = 2;
@@ -471,6 +502,7 @@ message CStoreBrowse_GetHardwareItems_Response {
 service StoreBrowse {
 	rpc GetItems (.CStoreBrowse_GetItems_Request) returns (.CStoreBrowse_GetItems_Response);
 	rpc GetStoreCategories (.CStoreBrowse_GetStoreCategories_Request) returns (.CStoreBrowse_GetStoreCategories_Response);
+	rpc GetPriceStops (.CStoreBrowse_GetPriceStops_Request) returns (.CStoreBrowse_GetPriceStops_Response);
 	rpc GetDLCForApps (.CStoreBrowse_GetDLCForApps_Request) returns (.CStoreBrowse_GetDLCForApps_Response);
 	rpc GetDLCForAppsSolr (.CStoreBrowse_GetDLCForAppsSolr_Request) returns (.CStoreBrowse_GetDLCForAppsSolr_Response);
 	rpc GetHardwareItems (.CStoreBrowse_GetHardwareItems_Request) returns (.CStoreBrowse_GetHardwareItems_Response);

@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% heeft %nMegaBytes% MB vrije schijfruimte nodig om te kunnen updaten."
 "SteamBootstrapper_FailedManifestLoad"		"Laden van manifestbestand mislukt."
 "SteamBootstrapper_FailedManifestVerify"		"Verifiëren van manifestbestand mislukt."
+"SteamBootstrapper_FailedManifestOSType"		"Deze versie van het besturingssysteem is niet compatibel met het type besturingssysteem van het manifestpakket."
 "SteamBootstrapper_FailedManifestSave"		"Opslaan van manifestbestand mislukt."
 "SteamBootstrapper_FailedPackageRead"			"Lezen van pakket (%pkgName%) mislukt."
 "SteamBootstrapper_CorruptPackageFile"		"Corrupt pakketbestand (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Fatale fout"
 "SteamBootstrapper_Warning_Title"			"%appname% - Waarschuwing"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% wordt niet meer door de versie van je besturingssysteem ondersteund."
+"SteamBootstrapper_Starting"                  "Starten ..."
 }

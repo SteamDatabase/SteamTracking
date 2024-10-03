@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"Per l'aggiornamento di %appname% sono necessari %nMegaBytes% MB di spazio libero su disco."
 "SteamBootstrapper_FailedManifestLoad"		"Caricamento del manifesto del pacchetto non riuscito."
 "SteamBootstrapper_FailedManifestVerify"		"Verifica del manifesto del pacchetto non riuscita."
+"SteamBootstrapper_FailedManifestOSType"		"La versione del sistema operativo non è compatibile con il sistema operativo del manifesto del pacchetto"
 "SteamBootstrapper_FailedManifestSave"		"Salvataggio del manifesto del pacchetto non riuscito."
 "SteamBootstrapper_FailedPackageRead"			"Lettura del pacchetto (%pkgName%) non riuscita."
 "SteamBootstrapper_CorruptPackageFile"		"File del pacchetto (%pkgName%) danneggiato."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Errore fatale"
 "SteamBootstrapper_Warning_Title"			"%appname% - Attenzione"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% non è più compatibile con la versione del tuo sistema operativo."
+"SteamBootstrapper_Starting"                  "Avvio..."
 }

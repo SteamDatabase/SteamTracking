@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% се нуждае от %nMegaBytes% MB свободно дисково пространство, за да бъде обновено."
 "SteamBootstrapper_FailedManifestLoad"		"Неуспешно зареждане на манифеста за пакета."
 "SteamBootstrapper_FailedManifestVerify"		"Неуспешно потвърждаване на манифеста за пакета."
+"SteamBootstrapper_FailedManifestOSType"		"Версията на системната ОС не е съвместима с типа ОС на манифеста за пакета."
 "SteamBootstrapper_FailedManifestSave"		"Неуспешно запазване на манифеста за пакета."
 "SteamBootstrapper_FailedPackageRead"			"Неуспешно прочитане на пакета (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Повреден файл на пакета (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% — Фатална грешка"
 "SteamBootstrapper_Warning_Title"			"%appname% — Предупреждение"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% вече не се поддържа за версията на операционната Ви система."
+"SteamBootstrapper_Starting"                  "Стартиране…"
 }

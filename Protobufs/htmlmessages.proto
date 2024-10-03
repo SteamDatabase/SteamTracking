@@ -1,3 +1,5 @@
+import "enums.proto";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
@@ -455,6 +457,31 @@ message CMsgFileLoadDialogResponse {
 	optional uint32 owning_browser_handle = 2;
 	optional bool bsuccess = 3;
 	repeated string files = 4;
+}
+
+message CMsgRequestProcessInfo {
+	optional uint64 requestid = 1;
+}
+
+message CMsgProcessInfoNotification {
+	optional uint64 requestid = 1;
+	optional .EBrowserGPUStatus gpu_status = 2 [default = k_EBrowserGPUStatus_Invalid];
+	optional .EBrowserFeatureStatus canvas_2d = 3 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus canvas_oop_rasterization = 4 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus direct_rendering_display_compositor = 5 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus gpu_compositing = 6 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus multiple_raster_threads = 7 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus opengl = 8 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus rasterization = 9 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus raw_draw = 10 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus skia_graphite = 11 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus video_decode = 13 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus video_encode = 14 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus vulkan = 15 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus webgl = 16 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus webgl2 = 17 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus webgpu = 18 [default = k_EBrowserFeatureStatus_Invalid];
+	optional .EBrowserFeatureStatus webnn = 19 [default = k_EBrowserFeatureStatus_Invalid];
 }
 
 message CMsgShowToolTip {

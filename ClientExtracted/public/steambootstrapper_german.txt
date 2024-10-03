@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% benötigt für Updates %nMegaBytes% MB freien Speicherplatz."
 "SteamBootstrapper_FailedManifestLoad"		"Das Paketmanifest konnte nicht geladen werden."
 "SteamBootstrapper_FailedManifestVerify"		"Das Paketmanifest konnte nicht überprüft werden."
+"SteamBootstrapper_FailedManifestOSType"		"Die Version des Betriebssystems ist inkompatibel mit dem vom Paketmanifest verwendeten Betriebssystem."
 "SteamBootstrapper_FailedManifestSave"		"Das Paketmanifest konnte nicht gespeichert werden."
 "SteamBootstrapper_FailedPackageRead"			"Das Paket (%pkgName%) konnte nicht gelesen werden."
 "SteamBootstrapper_CorruptPackageFile"		"Paketdatei (%pkgName%) ist beschädigt."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% – Kritischer Fehler"
 "SteamBootstrapper_Warning_Title"			"%appname% – Warnung"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% wird von Ihrem Betriebssystem nicht mehr unterstützt."
+"SteamBootstrapper_Starting"                  "Wird gestartet …"
 }

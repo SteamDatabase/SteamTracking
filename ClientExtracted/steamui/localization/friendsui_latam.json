@@ -200,7 +200,7 @@
     "PersonaStateOnlineIngame": "En línea/Jugando",
     "PersonaStatePartyBeacon": "Quiere jugar",
     "PersonaStateInvisible": "Invisible",
-    "PersonaStateInvisibleDescriptor": "Aparecer como desconectado, pero poder usar el chat",
+    "PersonaStateInvisibleDescriptor": "Apareces como \"Sin conexión\", pero todavía puedes usar el chat",
     "PersonaStateOfflineDescriptor": "Salir de Amigos y chat",
     "PersonaStateDoNotDisturbDescriptor": "Desactiva todas las notificaciones del chat",
     "PersonaStateWatchingBroadcast_Player": "Retransmisión de %1$s",

@@ -55,6 +55,12 @@ enum EGRAudio {
 	k_EGRAudio_Select = 2;
 }
 
+enum EGRExportLimitType {
+	k_EGRExportLimitType_Native = 0;
+	k_EGRExportLimitType_FileSize = 1;
+	k_EGRExportLimitType_Advanced = 2;
+}
+
 message CMsgHotkey {
 	optional uint32 key_code = 1;
 	optional bool alt_key = 2;
@@ -175,6 +181,7 @@ message CMsgClientSettings {
 	optional bool broadcast_show_live_reminder = 12009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowReminder", (setting_default_bool) = true];
 	optional int32 broadcast_chat_corner = 12010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowChat", (setting_default_int) = 1];
 	optional bool gamestream_hardware_video_encode = 13000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameStream\\HardwareVideoEncode", (setting_default_bool) = true];
+	optional bool gamestream_enable_video_h265 = 13001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameStream\\EnableVideoH265", (setting_default_bool) = true];
 	optional bool steam_input_configurator_error_msg_enable = 14001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamInput/Configurator/ErrorMsgEnabled"];
 	optional bool controller_guide_button_focus_steam = 14002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Controller_CheckGuideButton", (setting_default_bool) = true];
 	optional int32 controller_ps_support = 14003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_PSSupport", (setting_default_int) = 1];
@@ -185,6 +192,8 @@ message CMsgClientSettings {
 	optional int32 controller_power_off_timeout = 14008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "CSettingsPanelGameController.Timeout", (setting_default_int) = 15];
 	optional bool turn_off_controller_on_exit = 14009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "CSettingsPanelGameController.TurnOff"];
 	optional bool controller_combine_nintendo_joycons = 14010 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool controller_enable_chord = 140011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_Enable_Chord", (setting_default_bool) = true];
+	optional bool controller_poll_rate = 140012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_Poll_Rate", (setting_default_int) = 2];
 	optional uint64 startup_movie_id = 16000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/MovieID", (setting_pre_login) = true];
 	optional string startup_movie_local_path = 16001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/LocalPath", (setting_pre_login) = true];
 	optional bool startup_movie_shuffle = 16002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/Shuffle", (setting_pre_login) = true];
@@ -197,13 +206,22 @@ message CMsgClientSettings {
 	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional int32 g_background_br = 18210 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_default_int) = 12000];
+	optional string gamerecording_video_bitrate = 18210 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\VideoBitRate", (setting_default_string) = "preset_default"];
 	optional bool g_background_a_s = 18211 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .EGRMode g_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .EGRAudio g_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_max_fps = 18214 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\MaxFPS", (setting_default_int) = 60, (setting_clamp_min) = 24, (setting_clamp_max) = 120];
 	optional .CMsgHotkey gamerecording_hotkey_ic = 18215 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipKey", (setting_default_string) = "None"];
 	optional float gamerecording_ic_seconds = 18216 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipDuration", (setting_default_float) = 10];
+	optional .EGRExportLimitType gamerecording_export_limit_type = 18217 [default = k_EGRExportLimitType_Native, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitType"];
+	optional int32 gamerecording_export_limit_size_mb = 18218 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitSize", (setting_default_int) = 100];
+	optional int32 gamerecording_export_limit_bitrate = 18219 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitBitrate", (setting_default_int) = 1];
+	optional int32 gamerecording_export_limit_width = 18220 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitWidth", (setting_default_int) = 3840];
+	optional int32 gamerecording_export_limit_height = 18221 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitHeight", (setting_default_int) = 2160];
+	optional int32 gamerecording_export_limit_frame_rate = 18222 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitFrameRate", (setting_default_int) = 60];
+	optional string gamerecording_export_directory = 18223 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_name) = "GameRecording\\ExportDirectory"];
+	optional .EExportCodec gamerecording_export_codec = 18224 [default = k_EExportCodec_Default, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportCodec"];
+	optional int32 gamerecording_video_maxheight = 18225 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\VideoMaxHeight", (setting_default_int) = 0, (setting_clamp_min) = 0, (setting_clamp_max) = 2160];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];

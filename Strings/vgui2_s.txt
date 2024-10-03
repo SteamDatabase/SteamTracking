@@ -223,6 +223,7 @@ $HOME/
 /data/src/common/timeutils.cpp
 /data/src/public/tier1/bitstring.h
 /data/src/public/tier1/interface.h
+/data/src/public/tier1/linuxhelpers_nodeps.h
 /data/src/public/tier1/utlbuffer.h
 /data/src/public/tier1/utldict.h
 /data/src/public/tier1/utlhashmap.h
@@ -262,7 +263,6 @@ $HOME/
 /data/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
 /data/src/vgui2/vgui_surfacelib/FontManager.cpp
 /data/src/vgui2/vgui_surfacelib/linuxfont.cpp
-/tmp
 /tmp/steam_chrome_overlay_uid%d_spid%s
 /usr/bin/xdg-open
 /yQA
@@ -394,13 +394,13 @@ $HOME/
 12CBaseSurface
 12CDynamicFuncIPFP9_XDisplayPKcEE
 12CDynamicFuncIPFPKcjEE
+12CDynamicFuncIPFbjEE
 12CDynamicFuncIPFiP9_XDisplayEE
 12CDynamicFuncIPFiP9_XDisplayPmPiEE
 12CDynamicFuncIPFiP9_XDisplaymPmS2_PS2_PjEE
 12CDynamicFuncIPFiP9_XDisplaymilP7_XEventEE
 12CDynamicFuncIPFiP9_XDisplaymmllimPmPiS2_S2_PPhEE
 12CDynamicFuncIPFiPvEE
-12CDynamicFuncIPFijEE
 12CDynamicFuncIPFjvEE
 12CDynamicFuncIPFmP9_XDisplayPKciEE
 12CDynamicFuncIPFvjEE
@@ -2323,6 +2323,7 @@ lowercase
 lseek64
 lseek64@GLIBC_2.2
 luxembourgish
+m&Os
 mMKEY_M
 m_Colors
 m_Contexts
@@ -2771,6 +2772,8 @@ steam/games/PlatformMenu.vdf
 steamclient.so
 steamconsole.so
 steamui.so
+stpcpy
+stpcpy@GLIBC_2.0
 strcasecmp
 strcasecmp@GLIBC_2.0
 strcasestr

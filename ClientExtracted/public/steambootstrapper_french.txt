@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"La mise à jour de %appname% nécessite %nMegaBytes% Mo d'espace libre sur le disque."
 "SteamBootstrapper_FailedManifestLoad"		"Impossible de charger le manifeste de package."
 "SteamBootstrapper_FailedManifestVerify"		"Impossible de vérifier le manifeste de package."
+"SteamBootstrapper_FailedManifestOSType"		"La version du système d'exploitation n'est pas compatible avec le type de système d'exploitation indiqué dans le manifeste du package."
 "SteamBootstrapper_FailedManifestSave"		"Impossible d'enregistrer le manifeste de package."
 "SteamBootstrapper_FailedPackageRead"			"Impossible de lire le package (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Fichier de package corrompu (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Erreur fatale"
 "SteamBootstrapper_Warning_Title"			"%appname% - Avertissement"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% n'est plus pris en charge par la version de votre système d'exploitation."
+"SteamBootstrapper_Starting"                  "Démarrage…"
 }

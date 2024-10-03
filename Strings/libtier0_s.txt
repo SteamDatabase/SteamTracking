@@ -92,7 +92,7 @@
 /sys/kernel/tracing/trace_marker
 12CStdMemAlloc
 16CAdHocValidation
-17:12:56
+22:51:01
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 >NULL == pValObjectPrev->m_pValObjectNext
@@ -117,6 +117,7 @@ BBlockingGetMiniDumpLock
 BGetLocalFQDN
 BGetMiniDumpLock
 BHOME
+BThreadFileIOAllowed
 BWritingFatalMiniDump
 BWritingMiniDump
 BWritingNonFatalMiniDump
@@ -312,6 +313,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
+Oct  2 2024
 Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
@@ -388,7 +390,6 @@ SDL_GetError
 SDL_SetThreadPriority
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 18 2024
 ServerMain
 SetAssertDumpStack
 SetAssertFailedNotifyFunc
@@ -624,6 +625,7 @@ ThreadResumeProcess
 ThreadSetAffinity
 ThreadSetBackgroundPriority
 ThreadSetDebugName
+ThreadSetFileIOAllowed
 ThreadSetPriority
 ThreadShellExecute
 ThreadShellExecuteNoWindow

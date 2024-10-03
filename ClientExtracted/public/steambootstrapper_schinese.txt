@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% 需要 %nMegaBytes%MB 可用磁盘空间用于更新。"
 "SteamBootstrapper_FailedManifestLoad"		"无法载入安装包清单。"
 "SteamBootstrapper_FailedManifestVerify"		"无法验证安装包清单。"
+"SteamBootstrapper_FailedManifestOSType"		"操作系统版本与安装包清单操作系统类型不兼容"
 "SteamBootstrapper_FailedManifestSave"		"无法保存安装包清单。"
 "SteamBootstrapper_FailedPackageRead"			"无法读取安装包（%pkgName%）。"
 "SteamBootstrapper_CorruptPackageFile"		"安装包文件（%pkgName%）已损坏。"
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - 致命错误"
 "SteamBootstrapper_Warning_Title"			"%appname% - 警告"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "您当前的操作系统版本不再支持 %appname%。"
+"SteamBootstrapper_Starting"                  "正在开始…"
 }

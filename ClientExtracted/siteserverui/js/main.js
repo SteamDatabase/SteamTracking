@@ -139,16 +139,16 @@
         return !!window.document;
       }
       let g;
-      function h() {
-        if (!_()) return g || (g = p()), g;
+      function p() {
+        if (!_()) return g || (g = h()), g;
         let e = (function (e) {
           if (!_() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
-        return e || (e = p()), e;
+        return e || (e = h()), e;
       }
-      function p() {
+      function h() {
         const e = (function () {
           let e = "";
           for (let a = 0; a < 24; a++)
@@ -230,7 +230,7 @@
         FROM_WEB: !1,
         WEBSITE_ID: "Unknown",
         get SESSIONID() {
-          return h();
+          return p();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
@@ -475,6 +475,8 @@
             (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
             (e[(e.k_EGamingDeviceType_Steambox = 288)] =
               "k_EGamingDeviceType_Steambox"),
+            (e[(e.k_EGamingDeviceType_Tesla = 320)] =
+              "k_EGamingDeviceType_Tesla"),
             (e[(e.k_EGamingDeviceType_Handheld = 512)] =
               "k_EGamingDeviceType_Handheld"),
             (e[(e.k_EGamingDeviceType_Phone = 528)] =
@@ -629,7 +631,7 @@
             {
               className: l(
                 "center" == s && m().throbber_center_wrapper,
-                o && m().ThrobberDelayAppear,
+                !!o && m().ThrobberDelayAppear,
                 u && m().Visible,
               ),
             },
@@ -674,7 +676,7 @@
             {
               className: l(
                 "center" == s && m().throbber_center_wrapper,
-                o && m().ThrobberDelayAppear,
+                !!o && m().ThrobberDelayAppear,
                 u && m().Visible,
               ),
             },
@@ -1130,6 +1132,7 @@
           return void 0 !== t ? t : void 0;
         }
         static GetTokenWithFallback(e) {
+          if (!e) return "";
           const t = E(b.LANGUAGE),
             r = e.find((e) => e.language == t);
           if (r) return r.localized_string;
@@ -1840,21 +1843,21 @@
           0;
         }
       }
-      class he extends ge {
+      class pe extends ge {
         constructor(e, t = 0, r, a, n) {
           super(t, r, e, a, void 0, n);
         }
         static InitFromPacket(e, t) {
-          return new he(e, 0, t);
+          return new pe(e, 0, t);
         }
         static InitFromMsg(e, t) {
-          return new he(e, void 0, void 0, t);
+          return new pe(e, void 0, void 0, t);
         }
         static Init(e, t) {
-          return new he(e, t);
+          return new pe(e, t);
         }
         static InitFromObject(e, t) {
-          return new he(e, void 0, void 0, void 0, t);
+          return new pe(e, void 0, void 0, void 0, t);
         }
         Body() {
           return super.Body();
@@ -1869,13 +1872,13 @@
               : this.Body()[`set_${t}`] && this.Body()[`set_${t}`](e[t]);
         }
       }
-      const pe = X.Message;
-      class be extends pe {
+      const he = X.Message;
+      class be extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             be.prototype.username || ne(be.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1929,12 +1932,12 @@
           return "SiteServerUI_Login_Request";
         }
       }
-      class Se extends pe {
+      class Se extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Se.prototype.logon_state || ne(Se.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1986,10 +1989,10 @@
           return "SiteServerUI_Login_Response";
         }
       }
-      class Ee extends pe {
+      class Ee extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ee.toObject(e, this);
@@ -2021,12 +2024,12 @@
           return "SiteServerUI_LoginStatus_Request";
         }
       }
-      class ye extends pe {
+      class ye extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ye.prototype.username || ne(ye.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2080,10 +2083,10 @@
           return "SiteServerUI_LoginStatus_Response";
         }
       }
-      class Ce extends pe {
+      class Ce extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ce.toObject(e, this);
@@ -2115,12 +2118,12 @@
           return "SiteServerUI_CancelLogin_Request";
         }
       }
-      class fe extends pe {
+      class fe extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             fe.prototype.logon_state || ne(fe.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2172,10 +2175,10 @@
           return "SiteServerUI_CancelLogin_Response";
         }
       }
-      class Be extends pe {
+      class Be extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Be.toObject(e, this);
@@ -2207,12 +2210,12 @@
           return "SiteServerUI_Logout_Request";
         }
       }
-      class we extends pe {
+      class we extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             we.prototype.logon_state || ne(we.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2264,12 +2267,12 @@
           return "SiteServerUI_Logout_Response";
         }
       }
-      class ke extends pe {
+      class ke extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ke.prototype.restart || ne(ke.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2318,10 +2321,10 @@
           return "SiteServerUI_Quit_Request";
         }
       }
-      class ve extends pe {
+      class ve extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return ve.toObject(e, this);
@@ -2353,10 +2356,10 @@
           return "SiteServerUI_Quit_Response";
         }
       }
-      class Te extends pe {
+      class Te extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Te.toObject(e, this);
@@ -2388,12 +2391,12 @@
           return "SiteServerUI_Status_Request";
         }
       }
-      class Me extends pe {
+      class Me extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Me.prototype.logon_state || ne(Me.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2448,10 +2451,10 @@
           return "SiteServerUI_Status_Response";
         }
       }
-      class Ne extends pe {
+      class Ne extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ne.toObject(e, this);
@@ -2483,12 +2486,12 @@
           return "SiteServerUI_GetLanguage_Request";
         }
       }
-      class Pe extends pe {
+      class Pe extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Pe.prototype.language || ne(Pe.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2539,12 +2542,12 @@
           return "SiteServerUI_GetLanguage_Response";
         }
       }
-      class Ie extends pe {
+      class Ie extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Ie.prototype.language || ne(Ie.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2595,10 +2598,10 @@
           return "SiteServerUI_SetLanguage_Request";
         }
       }
-      class Re extends pe {
+      class Re extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Re.toObject(e, this);
@@ -2630,10 +2633,10 @@
           return "SiteServerUI_SetLanguage_Response";
         }
       }
-      class Le extends pe {
+      class Le extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Le.toObject(e, this);
@@ -2665,12 +2668,12 @@
           return "SiteServerUI_ClientStatus_Request";
         }
       }
-      class Fe extends pe {
+      class Fe extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Fe.prototype.clients || ne(Fe.M()),
-            pe.initialize(this, e, 0, -1, [4, 5], null);
+            he.initialize(this, e, 0, -1, [4, 5], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2722,12 +2725,12 @@
           return "SiteServerUI_ClientStatus_Response";
         }
       }
-      class Ae extends pe {
+      class Ae extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Ae.prototype.ip || ne(Ae.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2785,12 +2788,12 @@
           return "SiteServerUI_ClientStatus_Response_ClientInfo";
         }
       }
-      class ze extends pe {
+      class ze extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ze.prototype.transid || ne(ze.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2857,10 +2860,10 @@
           return "SiteServerUI_ClientStatus_Response_Payment";
         }
       }
-      class xe extends pe {
+      class xe extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return xe.toObject(e, this);
@@ -2892,12 +2895,12 @@
           return "SiteServerUI_ContentCacheStatus_Request";
         }
       }
-      class Oe extends pe {
+      class Oe extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Oe.prototype.enabled || ne(Oe.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2973,12 +2976,12 @@
           return "SiteServerUI_ContentCacheStatus_Response";
         }
       }
-      class We extends pe {
+      class We extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             We.prototype.enabled || ne(We.M()),
-            pe.initialize(this, e, 0, -1, void 0, null);
+            he.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3039,10 +3042,10 @@
           return "SiteServerUI_ContentCacheConfig_Request";
         }
       }
-      class Ge extends pe {
+      class Ge extends he {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), pe.initialize(this, e, 0, -1, void 0, null);
+          super(), he.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ge.toObject(e, this);
@@ -3230,7 +3233,7 @@
             let s = await this.Send(e, r, a);
             if (200 != s.status || !s.data) throw new Error("Request Error");
             let i = new de(s.data);
-            (n = he.Init(t)),
+            (n = pe.Init(t)),
               n.Hdr().set_eresult(2),
               s.headers &&
                 (s.headers["x-eresult"] &&
@@ -3267,7 +3270,7 @@
           return this.m_strBaseURL + e;
         }
         CreateFailedMsgProtobuf(e, t, r) {
-          let a = he.Init(e);
+          let a = pe.Init(e);
           return (
             a.Hdr().set_eresult(2),
             a.Hdr().set_transport_error(t),
@@ -3338,7 +3341,7 @@
           this.OnLoginStateChange(Qe.accountName, 6, 2);
         }
         async StartLogin() {
-          const e = he.Init(be);
+          const e = pe.Init(be);
           e.Body().set_username(this.m_strAccountName),
             e.Body().set_password(this.m_strPassword),
             e.Body().set_steamguardcode(this.m_strSteamGuardCode),
@@ -3351,7 +3354,7 @@
           );
         }
         async UpdateLoginStatus() {
-          const e = he.Init(Ee),
+          const e = pe.Init(Ee),
             t = await $e.GetLoginStatus(e);
           1 == t.Hdr().eresult()
             ? ((this.m_bUserHasCachedCredentials = t
@@ -3365,7 +3368,7 @@
             : this.OnLoginStateChange(this.m_strAccountName, 6, 2);
         }
         async CancelLogin() {
-          const e = he.Init(Ce),
+          const e = pe.Init(Ce),
             t = await $e.CancelLogin(e);
           this.OnLoginStateChange(
             this.m_strAccountName,
@@ -3377,7 +3380,7 @@
           this.SetAccountAndPassword("", "", !1),
             (this.m_bUserHasCachedCredentials = !1),
             (this.m_bRememberPassword = !1);
-          const e = he.Init(Be),
+          const e = pe.Init(Be),
             t = await $e.Logout(e);
           this.OnLoginStateChange(
             "",
@@ -3583,7 +3586,7 @@
       function rt(e = !1) {
         ({ NODE_ENV: "production", STEAM_BUILD: "buildbot" }).ELECTRON_BUILD &&
           Ve.SetShutdown();
-        const t = he.Init(ke);
+        const t = pe.Init(ke);
         return t.Body().set_restart(e), $e.Quit(t);
       }
       function at(e = null) {
@@ -4146,7 +4149,7 @@
       }
       (0, i.Cg)([j], gt.prototype, "OnAuthCodeChange", null),
         (0, i.Cg)([j], gt.prototype, "LoginWithSteamGuard", null);
-      let ht = class extends a.Component {
+      let pt = class extends a.Component {
         m_TimerID;
         m_bRequestInFlight;
         constructor(e) {
@@ -4230,9 +4233,9 @@
           );
         }
       };
-      (0, i.Cg)([j], ht.prototype, "CancelLogin", null),
-        (ht = (0, i.Cg)([o.PA], ht));
-      let pt = class extends a.Component {
+      (0, i.Cg)([j], pt.prototype, "CancelLogin", null),
+        (pt = (0, i.Cg)([o.PA], pt));
+      let ht = class extends a.Component {
         constructor(e) {
           super(e);
         }
@@ -4258,15 +4261,15 @@
                 onCancel: this.CancelLogin,
               });
             default:
-              return a.createElement(ht, {
+              return a.createElement(pt, {
                 loginState: e,
                 onCancel: this.CancelLogin,
               });
           }
         }
       };
-      (0, i.Cg)([j], pt.prototype, "CancelLogin", null),
-        (pt = (0, i.Cg)([o.PA], pt));
+      (0, i.Cg)([j], ht.prototype, "CancelLogin", null),
+        (ht = (0, i.Cg)([o.PA], ht));
       let bt = class extends a.Component {
         constructor(e) {
           super(e);
@@ -4305,7 +4308,7 @@
         async Save() {
           let e = this.state.strLanguage;
           "None" === e && (e = "english");
-          const t = he.Init(Ie);
+          const t = pe.Init(Ie);
           t.Body().set_language(e),
             await $e.SetLanguage(t),
             await tt(e),
@@ -4383,6 +4386,7 @@
         (0, i.Cg)([j], St.prototype, "onSelect", null);
       class Et extends a.Component {
         state = {};
+        reactErrorHandler = void 0;
         constructor(e) {
           super(e), (this.state.lastErrorKey = e.errorKey);
         }
@@ -4541,7 +4545,7 @@
         }
         async refreshStatus() {
           this.m_bRequestInFlight = !0;
-          const e = he.Init(Le),
+          const e = pe.Init(Le),
             t = await $e.GetClientStatus(e);
           if (1 != t.Hdr().eresult()) return;
           const { clients: r = [], payments: a = [] } = t.Body().toObject(),
@@ -4917,7 +4921,7 @@
           this.m_bEditDialogVisible = !1;
         }
         async OnUpdate(e, t, r, a, n, s, i) {
-          const o = he.Init(We);
+          const o = pe.Init(We);
           o.Body().set_enabled(e),
             o.Body().set_port(t),
             o.Body().set_cache_location(r),
@@ -4930,7 +4934,7 @@
             : (rt(!0), Ve.SetView(3));
         }
         async componentWillMount() {
-          const e = he.Init(xe),
+          const e = pe.Init(xe),
             t = await $e.GetContentCacheStatus(e);
           this.setState({
             bEnabled: t.Body().enabled(),
@@ -4955,7 +4959,7 @@
         async tick() {
           if (this.m_bRequestInFlight || Ve.shutdown) return;
           this.m_bRequestInFlight = !0;
-          const e = he.Init(xe),
+          const e = pe.Init(xe),
             t = await $e.GetContentCacheStatus(e);
           t.Body().enabled() &&
             this.setState({
@@ -5376,9 +5380,9 @@
           super(e), (this.state = { bLocalizationComplete: !1 });
         }
         async componentDidMount() {
-          const e = he.Init(Ne);
+          const e = pe.Init(Ne);
           let t;
-          const r = he.Init(xe);
+          const r = pe.Init(xe);
           await Promise.all([
             $e.GetLanguage(e),
             $e.GetContentCacheStatus(r),
@@ -5401,7 +5405,7 @@
         async tick() {
           if (this.m_bRequestInFlight || Ve.shutdown) return;
           this.m_bRequestInFlight = !0;
-          const e = he.Init(Te),
+          const e = pe.Init(Te),
             t = await $e.GetStatus(e);
           1 != t.Hdr().eresult()
             ? (Qe.SetSteamCmdNotConnected(), Ve.SetView(1))
@@ -5427,7 +5431,7 @@
               a.createElement(
                 Et,
                 null,
-                1 == e && a.createElement(pt, null),
+                1 == e && a.createElement(ht, null),
                 2 == e && a.createElement(bt, null),
                 3 == e && a.createElement(Lt, null),
                 4 == e && a.createElement(Mt, null),

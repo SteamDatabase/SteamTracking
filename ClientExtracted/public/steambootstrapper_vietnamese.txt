@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% cần %nMegaBytes%MB dung lượng trống để cập nhật."
 "SteamBootstrapper_FailedManifestLoad"		"Không thể nạp gói biểu hiện."
 "SteamBootstrapper_FailedManifestVerify"		"Không thể xác thực gói biểu hiện."
+"SteamBootstrapper_FailedManifestOSType"		"Phiên bản hệ điều hành hệ thống không tương thích với loại hệ điều hành trong file manifest của gói"
 "SteamBootstrapper_FailedManifestSave"		"Không thể lưu gói biểu hiện."
 "SteamBootstrapper_FailedPackageRead"			"Không thể đọc gói dữ liệu (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"File gói dữ liệu hư (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Lỗi nghiêm trọng"
 "SteamBootstrapper_Warning_Title"			"%appname% - Cảnh báo"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% không còn được hỗ trợ trên phiên bản hệ điều hành của bạn."
+"SteamBootstrapper_Starting"                  "Đang bắt đầu..."
 }

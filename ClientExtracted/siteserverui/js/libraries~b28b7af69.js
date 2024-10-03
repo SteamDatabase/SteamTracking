@@ -12468,15 +12468,7 @@
     },
     5589: (e, t, r) => {
       "use strict";
-      /**
-       * @license React
-       * react-dom.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var n = r(626),
+      var n = r(626),
         o = r(1016);
       function i(e) {
         for (
@@ -21410,15 +21402,7 @@
     },
     9069: (e, t) => {
       "use strict";
-      /**
-       * @license React
-       * react.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var r = Symbol.for("react.element"),
+      var r = Symbol.for("react.element"),
         n = Symbol.for("react.portal"),
         o = Symbol.for("react.fragment"),
         i = Symbol.for("react.strict_mode"),
@@ -21814,15 +21798,7 @@
     },
     2621: (e, t) => {
       "use strict";
-      /**
-       * @license React
-       * scheduler.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ function r(e, t) {
+      function r(e, t) {
         var r = e.length;
         e.push(t);
         e: for (; 0 < r; ) {
@@ -22108,15 +22084,7 @@
     },
     2109: (e, t, r) => {
       "use strict";
-      /**
-       * @license React
-       * use-sync-external-store-shim.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var n = r(626);
+      var n = r(626);
       var o =
           "function" == typeof Object.is
             ? Object.is
@@ -25445,11 +25413,11 @@
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
                   for (var n in r)
-                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
+                    ({}).hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          n.apply(this, arguments)
+          n.apply(null, arguments)
         );
       }
       r.d(t, { A: () => n });
@@ -25477,37 +25445,19 @@
       "use strict";
       function n(e, t) {
         if (null == e) return {};
-        var r,
-          n,
-          o = {},
-          i = Object.keys(e);
-        for (n = 0; n < i.length; n++)
-          (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-        return o;
+        var r = {};
+        for (var n in e)
+          if ({}.hasOwnProperty.call(e, n)) {
+            if (t.includes(n)) continue;
+            r[n] = e[n];
+          }
+        return r;
       }
       r.d(t, { A: () => n });
     },
     8506: () => {
       "use strict";
-      /**
-       * @license
-       * Copyright 2009 The Closure Library Authors
-       * Copyright 2020 Daniel Wirtz / The long.js Authors.
-       *
-       * Licensed under the Apache License, Version 2.0 (the "License");
-       * you may not use this file except in compliance with the License.
-       * You may obtain a copy of the License at
-       *
-       *     http://www.apache.org/licenses/LICENSE-2.0
-       *
-       * Unless required by applicable law or agreed to in writing, software
-       * distributed under the License is distributed on an "AS IS" BASIS,
-       * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-       * See the License for the specific language governing permissions and
-       * limitations under the License.
-       *
-       * SPDX-License-Identifier: Apache-2.0
-       */ var e = null;
+      var e = null;
       try {
         e = new WebAssembly.Instance(
           new WebAssembly.Module(

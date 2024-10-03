@@ -127,7 +127,9 @@ Fossilize WARN: Failed to record render pass, usually caused by unsupported pNex
 Fossilize WARN: Failed to record sampler, usually caused by unsupported pNext.\n
 Fossilize WARN: Failed to record shader module, usually caused by unsupported pNext.\n
 Fossilize WARN: Failed to touch last access in %s.\n
+Fossilize WARN: Recording compute pipeline failed, usually caused by unsupported pNext.\n
 Fossilize WARN: Recording graphics pipeline failed, usually caused by unsupported pNext.\n
+Fossilize WARN: Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
 FossilizeApplicationInfoFilter
 Friday
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
@@ -480,6 +482,8 @@ depthAttachmentFormat
 depthBiasClamp
 depthBiasConstantFactor
 depthBiasEnable
+depthBiasExact
+depthBiasRepresentation
 depthBiasSlopeFactor
 depthBoundsTestEnable
 depthClampEnable
@@ -500,6 +504,7 @@ descriptorCount
 descriptorType
 dgettext
 dgettext@GLIBC_2.0
+disallowMerging
 discardRectangleCount
 discardRectangleMode
 discardRectangles
@@ -542,6 +547,7 @@ fputc
 fputc@GLIBC_2.0
 fputs
 fputs@GLIBC_2.0
+fragmentDensityMapAttachment
 fragmentShadingRateAttachment
 fragmentShadingRateEnums
 fragmentSize
@@ -581,6 +587,7 @@ iconv_close
 iconv_close@GLIBC_2.1
 iconv_open
 iconv_open@GLIBC_2.1
+images
 imaginary 
 immutableSamplers
 initialLayout
@@ -648,6 +655,7 @@ mkdir
 mkdir@GLIBC_2.0
 mr"iR
 multisampleState
+multisampledRenderToSingleSampledEnable
 multiviewMeshShader
 munmap
 munmap@GLIBC_2.0
@@ -760,6 +768,7 @@ srcColorBlendFactor
 srcPremultiplied
 srcStageMask
 srcSubpass
+srgb
 stage
 stageFlags
 stages
@@ -790,6 +799,7 @@ stencilResolveMode
 stencilStoreOp
 stencilTestEnable
 stippledLineEnable
+storageBuffers
 storeOp
 strcmp
 strcmp@GLIBC_2.0
@@ -851,6 +861,7 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+uniformBuffers
 unnormalizedCoordinates
 unsigned
 unsigned __int128
@@ -871,6 +882,7 @@ version
 vertexBindingDivisorCount
 vertexBindingDivisors
 vertexInputState
+vertexInputs
 viewMask
 viewMasks
 viewOffset
@@ -883,6 +895,7 @@ vkCreateDescriptorSetLayout
 vkCreateDevice
 vkCreateGraphicsPipelines
 vkCreateInstance
+vkCreatePipelineBinariesKHR
 vkCreatePipelineLayout
 vkCreateRayTracingPipelinesKHR
 vkCreateRenderPass

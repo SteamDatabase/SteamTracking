@@ -388,7 +388,7 @@
 "Friends_NameTooShort_Title"			"친구 - 별명이 너무 짧음"
 "Friends_NameTooShort_Info"			"별명은 최소한 두 글자 이상이어야 합니다."
 "Friends_NameChangeFailed_Title"		"친구 - 프로필 이름을 변경하지 못했습니다"
-"Friends_NameChangeFailed_Info"		"프로필 이름을 변경하는데 실패했습니다. 몇 분 후 다시 시도해 주세요."
+"Friends_NameChangeFailed_Info"		"프로필 이름을 변경하지 못했습니다. 몇 분 후 다시 시도해 주세요."
 "Friends_NameChangeThrottled_Info"		"프로필 이름을 너무 자주 변경할 수 없습니다. 몇 분 후에 다시 시도하세요."
 
 "Friends_OnlineNotification_Info"			"현재 온라인 상태"

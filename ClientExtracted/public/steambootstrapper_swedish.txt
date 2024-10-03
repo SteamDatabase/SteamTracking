@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"Det behövs %nMegaBytes% MB ledigt diskutrymme för uppdateringen i %appname%."
 "SteamBootstrapper_FailedManifestLoad"		"Det gick inte att läsa in paketmanifest."
 "SteamBootstrapper_FailedManifestVerify"		"Det gick inte att verifiera paketmanifest."
+"SteamBootstrapper_FailedManifestOSType"		"Operativsystemsversionen är inte kompatibel med operativsystemstypen i paketmanifestet."
 "SteamBootstrapper_FailedManifestSave"		"Det gick inte att spara paketmanifest."
 "SteamBootstrapper_FailedPackageRead"			"Det gick inte att läsa paketet (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Korrupt paketfil (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Allvarligt fel"
 "SteamBootstrapper_Warning_Title"			"%appname% - Varning"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "Versionen av ditt operativsystem stöder inte längre %appname%."
+"SteamBootstrapper_Starting"                  "Startar ..."
 }

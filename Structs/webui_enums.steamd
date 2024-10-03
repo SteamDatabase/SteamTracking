@@ -494,6 +494,7 @@ enum EGamingDeviceType
 	k_EGamingDeviceType_Console = 256;
 	k_EGamingDeviceType_PS3 = 272;
 	k_EGamingDeviceType_Steambox = 288;
+	k_EGamingDeviceType_Tesla = 320;
 	k_EGamingDeviceType_Handheld = 512;
 	k_EGamingDeviceType_Phone = 528;
 	k_EGamingDeviceType_SteamDeck = 544;
@@ -980,10 +981,11 @@ enum EVoiceCallState
 	k_EVoiceCallState_LocalMicOnly = 3;
 	k_EVoiceCallState_CreatePeerConnection = 4;
 	k_EVoiceCallState_InitatedWebRTCSession = 5;
-	k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected = 6;
-	k_EVoiceCallState_RequestedPermission = 7;
-	k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession = 8;
-	k_EVoiceCallState_Connected = 9;
+	k_EVoiceCallState_UpdatingWebRTCSession = 6;
+	k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected = 7;
+	k_EVoiceCallState_RequestedPermission = 8;
+	k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession = 9;
+	k_EVoiceCallState_Connected = 10;
 }
 
 enum EVRError
@@ -1874,16 +1876,6 @@ enum UnnamedEnum33f2d3829fe2a16e
 	Blur = 1;
 	Gesture = 2;
 	Other = 3;
-}
-
-enum UnnamedEnum3461d68cd53273a9
-{
-	Init = 0;
-	UserChooser = 1;
-	LoginWithBack = 2;
-	Login = 3;
-	RemoveConfirmation = 4;
-	WaitingForLibrary = 5;
 }
 
 enum UnnamedEnum354c1e07cb8c12de
@@ -3653,16 +3645,6 @@ enum UnnamedEnuma80ee23554b6c9ac
 	Full = 4;
 }
 
-enum UnnamedEnuma8315b6bfb6b5edb
-{
-	LanguageScreen = 0;
-	TimezoneScreen = 1;
-	NetworkSetupScreen = 2;
-	UpdateScreen = 3;
-	CachedUsersPanel = 4;
-	SignInPanel = 5;
-}
-
 enum UnnamedEnuma8a8b1f6cea505e4
 {
 	AppDetails = 1;
@@ -3701,6 +3683,17 @@ enum UnnamedEnumad989ac806e57514
 	ClosedByPeer = 4;
 	ProblemDetectedLocally = 5;
 	Linger = undefined;
+}
+
+enum UnnamedEnumb00802ca68381832
+{
+	Init = 0;
+	UserChooser = 1;
+	LoginWithBack = 2;
+	Login = 3;
+	RemoveConfirmation = 4;
+	WaitingForLibrary = 5;
+	EnterPin = 6;
 }
 
 enum UnnamedEnumb0a2812931bd301b
@@ -4125,6 +4118,17 @@ enum UnnamedEnumcf102e4532afeb1d
 	CountDown = 0;
 	Calibrating = 1;
 	Complete_Success = 2;
+}
+
+enum UnnamedEnumd1e37656646622cd
+{
+	LanguageScreen = 0;
+	TimezoneScreen = 1;
+	NetworkSetupScreen = 2;
+	UpdateScreen = 3;
+	CachedUsersPanel = 4;
+	SignInPanel = 5;
+	PromptForPinPanel = 6;
 }
 
 enum UnnamedEnumd2a1463c68084b87

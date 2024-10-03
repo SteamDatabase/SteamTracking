@@ -1,4 +1,4 @@
-var CLSTAMP = "9187007";
+var CLSTAMP = "9227586";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [41],
@@ -31603,11 +31603,11 @@ var CLSTAMP = "9187007";
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
                   for (var n in r)
-                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
+                    ({}).hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          n.apply(this, arguments)
+          n.apply(null, arguments)
         );
       }
       r.d(t, { A: () => n });
@@ -31626,13 +31626,13 @@ var CLSTAMP = "9187007";
       "use strict";
       function n(e, t) {
         if (null == e) return {};
-        var r,
-          n,
-          o = {},
-          i = Object.keys(e);
-        for (n = 0; n < i.length; n++)
-          (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-        return o;
+        var r = {};
+        for (var n in e)
+          if ({}.hasOwnProperty.call(e, n)) {
+            if (t.includes(n)) continue;
+            r[n] = e[n];
+          }
+        return r;
       }
       r.d(t, { A: () => n });
     },

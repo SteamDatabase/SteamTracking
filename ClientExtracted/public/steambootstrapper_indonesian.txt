@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% membutuhkan %nMegaBytes%MB ruang disk untuk diperbarui."
 "SteamBootstrapper_FailedManifestLoad"		"Gagal memuat manifes paket."
 "SteamBootstrapper_FailedManifestVerify"		"Gagal memverifikasi manifes paket."
+"SteamBootstrapper_FailedManifestOSType"		"Versi sistem OS tidak kompatibel dengan jenis OS manifes paket"
 "SteamBootstrapper_FailedManifestSave"		"Gagal menyimpan manifes paket."
 "SteamBootstrapper_FailedPackageRead"			"Gagal membaca paket (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"File paket (%pkgName%) rusak."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% — Eror Fatal"
 "SteamBootstrapper_Warning_Title"			"%appname% — Peringatan"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% tidak lagi didukung oleh versi sistem operasimu."
+"SteamBootstrapper_Starting"                  "Dimulai..."
 }

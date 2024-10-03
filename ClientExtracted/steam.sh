@@ -22,7 +22,6 @@ fi
 export TEXTDOMAIN=steam
 export TEXTDOMAINDIR=/usr/share/locale
 
-ARCHIVE_EXT=tar.xz
 log_opened=
 
 # figure out the absolute path to the script being run a bit
@@ -66,7 +65,7 @@ fi
 
 function show_message()
 {
-	style=$1
+	local style="$1"
 	shift
 
 	case "$style" in
@@ -133,20 +132,30 @@ function maybe_open_log()
 	fi
 
 	if [ "${STEAM_RUNTIME_LOGGER-}" = "0" ]; then
-		# Interferres with vscode's gdb wrapping for instance
+		# Interferes with vscode's gdb wrapping for instance
 		log "Logging to console-linux.txt disabled via STEAM_RUNTIME_LOGGER"
 		return 0
 	fi
 
 	if [ "x${DEBUGGER-}" != "x" ]; then
-		# Interferres with ncurses (cgdb etc.)
+		# Interferes with ncurses (cgdb etc.)
 		log "Setting up for debugging, not logging to console-linux.txt"
 		return 0
 	fi
 
-	mkdir -p "$data/${STEAM_CLIENT_LOG_FOLDER:-logs}"
+	local log_folder="${STEAM_CLIENT_LOG_FOLDER:-logs}"
+
+	# Avoid using mkdir -p here: if ~/.steam/steam is somehow missing,
+	# we don't want to create it as a real directory
+	if [ -d "$data/$log_folder" ] || mkdir "$data/$log_folder"; then
+		log_dir="$data/$log_folder"
+	else
+		log "Couldn't create $data/$log_folder, not logging to console-linux.txt"
+		return 0
+	fi
 
 	if source "${srt}/usr/libexec/steam-runtime-tools-0/logger-0.bash" \
+		--log-directory="$log_dir" \
 		--filename=console-linux.txt \
 		--parse-level-prefix \
 		-t steam \
@@ -202,20 +211,6 @@ function detect_arch()
 	esac
 }
 
-function detect_platform()
-{
-	# Default to unknown/unsupported distribution, pick something and hope for the best
-	platform=ubuntu12_32
-
-	# Check for specific supported distribution releases
-	case "$(detect_distro)-$(detect_release)" in
-	ubuntu-12.*)
-		platform=ubuntu12_32
-		;;
-	esac
-	echo $platform
-}
-
 function detect_universe()
 {
 	if test -f "$STEAMROOT/Steam.cfg" && \
@@ -262,12 +257,14 @@ function detect_bootstrap()
 	else
 		# This is the default bootstrap install location for the Ubuntu package.
 		# We use this as a fallback for people who have an existing installation and have never run the new install_bootstrap code in bin_steam.sh
-		echo "/usr/lib/`detect_package`/bootstraplinux_`detect_platform`.tar.xz"
+		echo "/usr/lib/`detect_package`/bootstraplinux_ubuntu12_32.tar.xz"
 	fi
 }
 
 function install_bootstrap()
 {
+	local omask
+
 	# Don't install bootstrap in development
 	if [ -f "$STEAMROOT/steam_dev.cfg" ]; then
 		return 1
@@ -297,6 +294,8 @@ function install_bootstrap()
 
 function pin_newer_runtime_libs ()
 {
+	local steam_runtime_path
+
 	# First argument is the runtime path
 	steam_runtime_path=$(realpath "$1")
 
@@ -315,6 +314,8 @@ function pin_newer_runtime_libs ()
 
 function check_pins ()
 {
+	local steam_runtime_path
+
 	# First argument is the runtime path
 	steam_runtime_path=$(realpath "$1")
 
@@ -331,34 +332,10 @@ function check_pins ()
 	return $?
 }
 
-function runtime_supported()
-{
-	case "$(detect_distro)-$(detect_release)" in
-	# Add additional supported distributions here
-	ubuntu-*)
-		return 0
-		;;
-	*)	# Let's try this out for now and see if it works...
-		return 0
-		;;
-	esac
-
-	# This distro doesn't support the Steam Linux Runtime (yet!)
-	return 1
-}
-
-function download_archive()
-{
-	if [ -n "${STEAM_ZENITY}" ]; then
-		curl -#Of "$2" 2>&1 | tr '\r' '\n' | sed 's,[^0-9]*\([0-9]*\).*,\1,' | "${STEAM_ZENITY}" --progress --auto-close --no-cancel --width 400 --text="$1\n$2"
-	else
-		curl -#Of "$2" 2>&1 | tr '\r' '\n' | sed 's,[^0-9]*\([0-9]*\).*,\1,'
-	fi
-	return ${PIPESTATUS[0]}
-}
-
 function extract_archive()
 {
+	local BF
+
 	case "$2" in
 	*.gz)
 		BF=$(($(gzip --list "$2" | sed -n -e "s/.*[[:space:]]\+[0-9]\+[[:space:]]\+\([0-9]\+\)[[:space:]].*$/\1/p") / $((512 * 100)) + 1))
@@ -386,12 +363,15 @@ function extract_archive()
 
 function has_runtime_archive()
 {
+	local srt="$1"
+	local ARCHIVE_EXT="$2"
+
 	# Make sure we have files to unpack
-	if [ ! -f "$STEAM_RUNTIME.$ARCHIVE_EXT" ]; then
+	if [ ! -f "$srt.$ARCHIVE_EXT" ]; then
 		return 1
 	fi
 
-	if [ ! -f "$STEAM_RUNTIME.$ARCHIVE_EXT.checksum" ]; then
+	if [ ! -f "$srt.$ARCHIVE_EXT.checksum" ]; then
 		return 1
 	fi
 
@@ -400,39 +380,45 @@ function has_runtime_archive()
 
 function unpack_runtime()
 {
-	if ! has_runtime_archive; then
-		if [ -d "$STEAM_RUNTIME" ]; then
+	local srt="$1"
+	local ARCHIVE_EXT="tar.xz"
+	local EXTRACT_TMP
+	local EXISTING_CHECKSUM
+	local EXPECTED_CHECKSUM
+
+	if ! has_runtime_archive "$srt" "$ARCHIVE_EXT"; then
+		if [ -d "$srt" ]; then
 			# The runtime is unpacked, let's use it!
-			check_pins "$STEAM_RUNTIME"
+			check_pins "$srt"
 			return 0
 		fi
 		return 1
 	fi
 
 	# Make sure we haven't already unpacked them
-	if [ -f "$STEAM_RUNTIME/checksum" ] && [[ $(< "$STEAM_RUNTIME.$ARCHIVE_EXT.checksum" ) = $(< "$STEAM_RUNTIME/checksum" ) ]] ; then
-		check_pins "$STEAM_RUNTIME"
+	if [ -f "$srt/checksum" ] && [[ $(< "$srt.$ARCHIVE_EXT.checksum" ) = $(< "$srt/checksum" ) ]] ; then
+		check_pins "$srt"
 		return 0
 	fi
 
 	# Unpack the runtime
-	EXTRACT_TMP="$STEAM_RUNTIME.tmp"
+	EXTRACT_TMP="$srt.tmp"
 	rm -rf "$EXTRACT_TMP"
 	mkdir "$EXTRACT_TMP"
-	EXISTING_CHECKSUM="$(cd "$(dirname "$STEAM_RUNTIME")"; md5sum "$(basename "$STEAM_RUNTIME.$ARCHIVE_EXT")")"
-	EXPECTED_CHECKSUM="$(cat "$STEAM_RUNTIME.$ARCHIVE_EXT.checksum")"
+	EXISTING_CHECKSUM="$(cd "$(dirname "$srt")"; md5sum "$(basename "$srt.$ARCHIVE_EXT")")"
+	EXPECTED_CHECKSUM="$(cat "$srt.$ARCHIVE_EXT.checksum")"
 	if [ "$EXISTING_CHECKSUM" != "$EXPECTED_CHECKSUM" ]; then
 		log $"Runtime checksum: $EXISTING_CHECKSUM, expected $EXPECTED_CHECKSUM"
 		return 2
 	fi
-	if ! extract_archive $"Unpacking Steam Runtime" "$STEAM_RUNTIME.$ARCHIVE_EXT" "$EXTRACT_TMP"; then
+	if ! extract_archive $"Unpacking Steam Runtime" "$srt.$ARCHIVE_EXT" "$EXTRACT_TMP"; then
 		return 3
 	fi
 
 	# Move it into place!
-	if [ -d "$STEAM_RUNTIME" ]; then
-		rm -rf "$STEAM_RUNTIME.old"
-		if ! mv "$STEAM_RUNTIME" "$STEAM_RUNTIME.old"; then
+	if [ -d "$srt" ]; then
+		rm -rf "$srt.old"
+		if ! mv "$srt" "$srt.old"; then
 			return 4
 		fi
 	fi
@@ -440,11 +426,11 @@ function unpack_runtime()
 		return 5
 	fi
 	rm -rf "$EXTRACT_TMP"
-	if ! cp "$STEAM_RUNTIME.$ARCHIVE_EXT.checksum" "$STEAM_RUNTIME/checksum"; then
+	if ! cp "$srt.$ARCHIVE_EXT.checksum" "$srt/checksum"; then
 		return 6
 	fi
 	# Unpacked a new runtime, pin any newer system libs with symlinks in a special dir
-	pin_newer_runtime_libs "$STEAM_RUNTIME"
+	pin_newer_runtime_libs "$srt"
 	return 0
 }
 
@@ -461,6 +447,8 @@ function get_missing_libraries()
 
 function check_shared_libraries()
 {
+	local MISSING_LIBRARIES
+
 	if [ -f "$STEAMROOT/$PLATFORM/steamui.so" ]; then
 		MISSING_LIBRARIES=$(get_missing_libraries "$STEAMROOT/$PLATFORM/steamui.so")
 	else
@@ -473,9 +461,14 @@ function check_shared_libraries()
 
 function check_requirements()
 {
-	check_requirements_bin="$(command -v steam-runtime-check-requirements)"
-	if [ -z "$check_requirements_bin" ]; then
-		log "Can't find 'steam-runtime-check-requirements', continuing anyway"
+	local srt="$1"
+	local check_requirements_bin
+	local message
+	local status
+
+	check_requirements_bin="$srt/amd64/usr/bin/steam-runtime-check-requirements"
+	if ! [ -x "$check_requirements_bin" ]; then
+		log "Can't find $check_requirements_bin, continuing anyway"
 	else
 		message="$("$check_requirements_bin")"
 		status=$?
@@ -503,6 +496,8 @@ function ignore_signal()
 
 function reset_steam()
 {
+	local STEAM_SAVE
+
 	# Ensure STEAMROOT is defined to something reasonable so we don't wipe the wrong thing
 	if [ -z "${STEAMROOT}" ]; then
 		show_message --error $"Couldn't find Steam directory, it's not safe to reset Steam. Please contact technical support."
@@ -536,7 +531,7 @@ function reset_steam()
 	trap ignore_signal INT
 
 	# /usr/bin/steam uses the existence of the data link to know whether to bootstrap. Remove it before
-	# continuing, so that if the machine is turned off while this is occuring, a new bootstrap will be
+	# continuing, so that if the machine is turned off while this is occurring, a new bootstrap will be
 	# put in place next time steam is run.
 	rm -f "$STEAMDATALINK"
 
@@ -624,6 +619,8 @@ function needs_symlink_repair()
 
 function steamos_arg()
 {
+	local option
+
 	for option in "$@"
 	do
 		if [ "$option" = "-steamos" ]; then
@@ -644,16 +641,11 @@ if [ "$UNAME" != "Linux" ]; then
    exit 1
 fi
 
-# identify Linux distribution and pick an optimal bin dir
-PLATFORM=`detect_platform`
-PLATFORM32=`echo $PLATFORM | grep 32 || true`
-PLATFORM64=`echo $PLATFORM | grep 64 || true`
-if [ -z "$PLATFORM32" ]; then
-	PLATFORM32=`echo $PLATFORM | sed 's/64/32/'`
-fi
-if [ -z "$PLATFORM64" ]; then
-	PLATFORM64=`echo $PLATFORM | sed 's/32/64/'`
-fi
+# We use the Ubuntu-12.04-based Steam Runtime 1 'scout' on all
+# distributions, so Steam executables match that ABI
+PLATFORM=ubuntu12_32
+PLATFORM32=ubuntu12_32
+PLATFORM64=ubuntu12_64
 STEAMEXEPATH=$PLATFORM/$STEAMEXE
 
 # common variables for later
@@ -741,90 +733,86 @@ log "Running Steam on $(distro_description)"
 # We would like this runtime to work on as many Linux distributions
 # as possible, so feel free to tinker with it and submit patches and
 # bug reports.
-#
+
+# The only runtime that is supported is the default one, which is part
+# of the Steam distribution. We don't need to export this variable if
+# it has its default value, because anything else that needs to locate
+# the scout runtime should have the same default.
+: "${STEAM_RUNTIME_SCOUT:="$STEAMROOT/$PLATFORM/steam-runtime"}"
+
+# Historically this was both an input to this script and an output from it
+# (now using it as an input is deprecated). For now, ensure that it's set
+# to something, possibly empty.
 : "${STEAM_RUNTIME:=}"
+
 if [ "$STEAM_RUNTIME" = "debug" ]; then
-	# Use the debug runtime if it's available, and the default if not.
-	export STEAM_RUNTIME="$STEAMROOT/$PLATFORM/steam-runtime"
-
-	if unpack_runtime; then
-		if [ -z "${STEAM_RUNTIME_DEBUG-}" ]; then
-			STEAM_RUNTIME_DEBUG="$(cat "$STEAM_RUNTIME/version.txt" | sed 's,-release,-debug,')"
-		fi
-		if [ -z "${STEAM_RUNTIME_DEBUG_DIR-}" ]; then
-			STEAM_RUNTIME_DEBUG_DIR="$STEAMROOT/$PLATFORM"
-		fi
-		if [ ! -d "$STEAM_RUNTIME_DEBUG_DIR/$STEAM_RUNTIME_DEBUG" ]; then
-			# Try to download the debug runtime
-			STEAM_RUNTIME_DEBUG_URL=$(grep "$STEAM_RUNTIME_DEBUG" "$STEAM_RUNTIME/README.txt")
-			mkdir -p "$STEAM_RUNTIME_DEBUG_DIR"
-
-			STEAM_RUNTIME_DEBUG_ARCHIVE="$STEAM_RUNTIME_DEBUG_DIR/$(basename "$STEAM_RUNTIME_DEBUG_URL")"
-			if [ ! -f "$STEAM_RUNTIME_DEBUG_ARCHIVE" ]; then
-				log $"Downloading debug runtime: $STEAM_RUNTIME_DEBUG_URL"
-				(cd "$STEAM_RUNTIME_DEBUG_DIR" && \
-					download_archive $"Downloading debug runtime..." "$STEAM_RUNTIME_DEBUG_URL")
-			fi
-			if ! extract_archive $"Unpacking debug runtime..." "$STEAM_RUNTIME_DEBUG_ARCHIVE" "$STEAM_RUNTIME_DEBUG_DIR"; then
-				rm -rf "$STEAM_RUNTIME_DEBUG" "$STEAM_RUNTIME_DEBUG_ARCHIVE"
-			fi
-		fi
-		if [ -d "$STEAM_RUNTIME_DEBUG_DIR/$STEAM_RUNTIME_DEBUG" ]; then
-			log "STEAM_RUNTIME debug enabled, using $STEAM_RUNTIME_DEBUG"
-			export STEAM_RUNTIME="$STEAM_RUNTIME_DEBUG_DIR/$STEAM_RUNTIME_DEBUG"
-
-			# Set up the link to the source code
-			ln -sf "$STEAM_RUNTIME/source" /tmp/source
-		else
-			log $"STEAM_RUNTIME couldn't download and unpack $STEAM_RUNTIME_DEBUG_URL, falling back to $STEAM_RUNTIME"
-		fi
-	fi
+	log "STEAM_RUNTIME=debug is deprecated, set \$STEAM_RUNTIME_SCOUT to the absolute path to an unpacked runtime instead"
 elif [ "$STEAM_RUNTIME" = "1" ]; then
 	log "STEAM_RUNTIME is enabled by the user"
-	export STEAM_RUNTIME="$STEAMROOT/$PLATFORM/steam-runtime"
 elif [ "$STEAM_RUNTIME" = "0" ]; then
-	log "STEAM_RUNTIME is disabled by the user"
+	log "STEAM_RUNTIME is disabled by the user (this is unsupported)"
 elif [ -z "$STEAM_RUNTIME" ]; then
-	if runtime_supported; then
-		log "STEAM_RUNTIME is enabled automatically"
-		export STEAM_RUNTIME="$STEAMROOT/$PLATFORM/steam-runtime"
-	else
-		log "STEAM_RUNTIME is disabled automatically"
-	fi
-else
-	log "STEAM_RUNTIME has been set by the user to: $STEAM_RUNTIME"
+	log "STEAM_RUNTIME is enabled automatically"
+# Don't warn if STEAM_RUNTIME and STEAM_RUNTIME_SCOUT are set to the
+# same thing: that's the backwards-compatible way to force use of a
+# locally-built runtime for testing.
+elif [ "$STEAM_RUNTIME_SCOUT" != "$STEAM_RUNTIME" ]; then
+	log "Setting STEAM_RUNTIME to a path is deprecated, set STEAM_RUNTIME_SCOUT=\"$STEAM_RUNTIME\" instead"
+	export STEAM_RUNTIME_SCOUT="$STEAM_RUNTIME"
 fi
-if [ "$STEAM_RUNTIME" -a "$STEAM_RUNTIME" != "0" ]; then
-	# Unpack the runtime if necessary
-	if unpack_runtime; then
-		if [ ! -x "$STEAM_RUNTIME/setup.sh" ]; then
-			log "internal error: $STEAM_RUNTIME/setup.sh is missing, this runtime is invalid or corrupted"
-			exit 1
-		fi
-		export PATH="$("$STEAM_RUNTIME/setup.sh" --print-bin-path):$PATH"
 
-		if [ ! -x "$STEAM_RUNTIME/run.sh" ]; then
-			log "internal error: $STEAM_RUNTIME/run.sh is missing, this runtime is invalid or corrupted"
-			exit 1
+case "$STEAM_RUNTIME_SCOUT" in
+	(/*)
+		;;
+	(*)
+		log "STEAM_RUNTIME_SCOUT should be set to an absolute path, not \"$STEAM_RUNTIME_SCOUT\""
+		STEAM_RUNTIME_SCOUT="$(realpath "$STEAM_RUNTIME_SCOUT")"
+		if ! [ -d "$STEAM_RUNTIME_SCOUT" ]; then
+			export STEAM_RUNTIME_SCOUT="$STEAMROOT/$PLATFORM/steam-runtime"
+			log "Path does not exist, defaulting to \"$STEAM_RUNTIME_SCOUT\""
 		fi
-		export STEAM_RUNTIME_LIBRARY_PATH="$("$STEAM_RUNTIME/run.sh" --print-steam-runtime-library-paths)"
+		;;
+esac
 
-		export LD_LIBRARY_PATH="$STEAM_RUNTIME_LIBRARY_PATH"
-	else
-		log "Unpack runtime failed, error code $?"
-		show_message --error $"Couldn't set up the Steam Runtime. Are you running low on disk space?\nContinuing..."
+# Unpack the runtime if necessary.
+# We do this even in the unsupported STEAM_RUNTIME=0 code path where we
+# are not going to use it for shared libraries: it also contains some
+# necessary tools like srt-logger.
+if unpack_runtime "$STEAM_RUNTIME_SCOUT"; then
+	: # OK
+else
+	log "Unpack runtime failed, error code $?"
+	show_message --error $"Couldn't set up the Steam Runtime. Are you running low on disk space?"
+	exit 1
+fi
+
+if [ "$STEAM_RUNTIME" != "0" ]; then
+	export STEAM_RUNTIME="$STEAM_RUNTIME_SCOUT"
+
+	if [ ! -x "$STEAM_RUNTIME/setup.sh" ]; then
+		log "internal error: $STEAM_RUNTIME/setup.sh is missing, this runtime is invalid or corrupted"
+		exit 1
 	fi
+	export PATH="$("$STEAM_RUNTIME/setup.sh" --print-bin-path):$PATH"
+
+	if [ ! -x "$STEAM_RUNTIME/run.sh" ]; then
+		log "internal error: $STEAM_RUNTIME/run.sh is missing, this runtime is invalid or corrupted"
+		exit 1
+	fi
+	export STEAM_RUNTIME_LIBRARY_PATH="$("$STEAM_RUNTIME/run.sh" --print-steam-runtime-library-paths)"
+
+	export LD_LIBRARY_PATH="$STEAM_RUNTIME_LIBRARY_PATH"
 fi
 
 if [ "${1-}" = "--run" ]; then
-	STEAM_RUNTIME_RUN_SCRIPT="$STEAM_RUNTIME/run.sh"
+	STEAM_RUNTIME_RUN_SCRIPT="$STEAM_RUNTIME_SCOUT/run.sh"
 	shift
-	exec "$STEAM_RUNTIME/run.sh" "$@"
+	exec "$STEAM_RUNTIME_SCOUT/run.sh" "$@"
 	log "Couldn't find run.sh"
 	exit 255
 fi
 
-maybe_open_log "$STEAM_RUNTIME" "${STEAMDATALINK:-"$STEAMCONFIG/steam"}" "$*"
+maybe_open_log "$STEAM_RUNTIME_SCOUT" "${STEAMDATALINK:-"$STEAMCONFIG/steam"}" "$*"
 if [ -n "$log_opened" ]; then
 	set -- -srt-logger-opened "$@"
 fi
@@ -838,7 +826,7 @@ if [ -z "$STEAMOS" ]; then
 fi
 
 # Check that the current system meets the requirements
-check_requirements
+check_requirements "$STEAM_RUNTIME_SCOUT"
 
 # disable SDL1.2 DGA mouse because we can't easily support it in the overlay
 export SDL_VIDEO_X11_DGAMOUSE=0

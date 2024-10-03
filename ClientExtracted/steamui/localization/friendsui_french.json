@@ -1145,7 +1145,7 @@
     "NotificationBrowserWarning": "Bienvenue dans le chat Steam. Veuillez activer les notifications pour une expérience de chat optimale.",
     "InviteLanding_ExpiredOrInvalid": "Le lien d'invitation que vous avez suivi n'est plus valide.",
     "InviteLanding_SentToSteam": "Nous avons envoyé les informations de l'invitation à votre client Steam.",
-    "InviteLanding_SentToSteam_Desc": "Vous pouvez poursuivre le processus d'invitation là. Si vous préférez ouvrir cette invitation dans le chat web, %1$s.",
+    "InviteLanding_SentToSteam_Desc": "Vous pouvez poursuivre le processus d'invitation depuis le client. Si vous préférez ouvrir cette invitation dans le chat Web, %1$s.",
     "InviteLanding_SentToSteam_Desc_LaunchWebChat": "cliquez ici",
     "InviteLanding_OpenInSteam": "Ouvrir dans Steam",
     "InviteLanding_OpenInWebChat": "Ouvrir dans le chat web",

@@ -716,7 +716,7 @@
     "Friend_InviteError_AccessDenied": "Se ha producido un error al añadir a %1$s a tu lista de amigos. Su lista de amigos está llena.",
     "Friend_InviteError_Blocked": "Se ha producido un error al añadir a %1$s a tu lista de amigos. Se ha bloqueado la comunicación entre este usuario y tú.",
     "Friend_InviteError_InvalidState": "Estás bloqueando toda comunicación con %1$s. Antes de comunicarte con este usuario tienes que desbloquearlo visitando su perfil en la comunidad de Steam.",
-    "Friend_InviteError_RateLimitExceeded": "Parece que has enviado demasiadas invitaciones de amigos recientemente. Para evitar el spam, tendrás que esperar antes de poder invitar a más amigos. Ten en cuenta que otros jugadores aún pueden agregarte durante este tiempo.",
+    "Friend_InviteError_RateLimitExceeded": "Parece que has enviado demasiadas solicitudes de amistad recientemente. Para evitar el spam, no podrás invitar a más amigos durante algún tiempo, pero otros jugadores sí pueden añadirte a ti mientras tanto.",
     "Friend_InviteError_LimitedUser": "Tu cuenta no cumple los requisitos necesarios para utilizar esta característica.",
     "Friend_InviteError_LimitedUserLink": "Tu cuenta no cumple los requisitos necesarios para utilizar esta característica. %1$s para obtener más información.",
     "Friend_InviteError_VisitSteamSupport": "Visita el Soporte de Steam",

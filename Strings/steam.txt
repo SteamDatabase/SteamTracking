@@ -495,6 +495,7 @@ $d`D-laM
 %s %s%lu (%s0x%lx)\n
 %s %s(%llu) / %s
 %s (%1.2fms)
+%s HTTP Client
 %s PARAMETERS
 %s PRIVATE KEY
 %s Salt Length: 0x
@@ -905,6 +906,7 @@ $d`D-laM
 *%*/*O*U*_*e*k*m*s*
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
 *0fT
+*23CInternalLambdaWorkItemIZ15BYieldingFileIoPFb10StringViewEPKcS0_EUlvE_bE
 *5KS
 *:JZjz
 *N12_GLOBAL__N_121system_error_categoryE
@@ -1160,6 +1162,7 @@ $d`D-laM
 -norepairfiles
 -noverifyfiles
 -oldlib
+-overrideminos
 -overridepackageurl
 -set_locale_disable
 -silent
@@ -1342,6 +1345,7 @@ $d`D-laM
 /data/src/common/websocket.cpp
 /data/src/common/websocket.h
 /data/src/common/workthreadpool.cpp
+/data/src/common/workthreadpool.h
 /data/src/common/zip_helpers.cpp
 /data/src/external/picojson/picojson.h
 /data/src/filesystem/BaseFileSystem.cpp
@@ -1680,8 +1684,6 @@ $d`D-laM
 172.16
 172.16.3.31
 172.16.3.39
-17:12:47
-17:13:07
 17CBootstrapLogFile
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -1774,6 +1776,7 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
+22:50:51
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -1796,6 +1799,7 @@ $d`D-laM
 27;C
 27CFileSystemStdIODLLValidate
 27CMsgGCRoutingProtoBufHeader
+27CWorkItemLoadFileIntoBuffer
 28IStreamParserMessageCallback
 29CNetConnectionDestroyWorkItem
 29CSteamUpdaterPreprocessThread
@@ -1927,7 +1931,7 @@ $d`D-laM
 64CK\vH
 65536
 666666666666666666666666666666666666666666666666ssl/record/ssl3_record_tls13.c
-6666666666666666\\\\\\\\\\\\\\\\Unknown
+6666666666666666\\\\\\\\\\\\\\\\EResult
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6ConVar
 6\n1k_EMsgClientRequestForgottenPasswordEmailResponse
@@ -2602,7 +2606,7 @@ B-233
 B-283
 B-409
 B-571
-B17:13:06
+B22:51:14
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -2625,6 +2629,7 @@ BF_cbc_encrypt
 BF_decrypt
 BF_encrypt
 BF_options
+BFileExists Yielding IO Job
 BFileExists( m_FontFileLight )
 BFileExists( m_FontFileRegular )
 BFileExists( str )
@@ -2833,6 +2838,7 @@ BVerifyInstalledFiles: bad symlink %s
 BVerifyInstalledFiles: bad symlink ( %s -> %s, expected non-symlink )
 BVerifyInstalledFiles: bad symlink ( %s -> %s, should link to %s )
 BVerifyInstalledFiles: can't read %s\n
+BYieldingLoadFileIntoBuffer
 BYieldingWaitTime
 BackUp() can only be called after a successful Next().
 Background update loop checking for update. . .
@@ -2899,6 +2905,7 @@ BootStrapperInhibitBootstrapperChecksum
 BootStrapperInhibitClientChecksum
 BootStrapperInhibitUpdateOnLaunch
 BootStrapperVersion
+Bootstrapper
 Borrowed
 Bradesco Online
 Breaking '%s' in '%s'\n
@@ -3470,6 +3477,7 @@ CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
 CFmtStrN<1024, true, true>::Format(char const*, ...)
 CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
 CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
+CFmtStrN<64, true, true>::CFmtStrN(char const*, ...)
 CFmtStrN<8192, true, false>::CFmtStrN(char const*, ...)
 CFmtStrN<8192, true, false>::Format(char const*, ...)
 CFrameFunction<CHTTPClient>::BAllocedSeparately()
@@ -3906,6 +3914,7 @@ CJob::BookkeepRuntime()
 CJob::DescribeWork(CUtlStringBuilder&)
 CJob::Heartbeat
 CJob::MsgTraceReportJobBlocking(char const*)
+CJob::SetYieldInfo(char const*, char const*)
 CJobMgr::BResumeSleepingJobs
 CJobMgr::EnsureJobIsInTimeoutQueue(CJob&, EJobPauseReason)
 CJobMgr::GetPJob(unsigned long long, EJobPauseReason, bool)
@@ -5703,6 +5712,13 @@ CWorkItemHTTPClientRequest::GetWorkItemName() const
 CWorkItemHTTPClientRequest::ThreadProcess
 CWorkItemHTTPClientRequest::ThreadProcess(CWorkThread*)
 CWorkItemHTTPClientRequest::~CWorkItemHTTPClientRequest()
+CWorkItemLoadFileIntoBuffer
+CWorkItemLoadFileIntoBuffer::GetThreadProcessName() const
+CWorkItemLoadFileIntoBuffer::GetWorkItemName() const
+CWorkItemLoadFileIntoBuffer::ThreadProcess
+CWorkItemLoadFileIntoBuffer::ThreadProcess(CWorkThread*)
+CWorkItemLoadFileIntoBuffer::Validate(CValidator&, char const*)
+CWorkItemLoadFileIntoBuffer::~CWorkItemLoadFileIntoBuffer()
 CWorkItemNetEncryptionHandshakeEncrypt
 CWorkItemNetEncryptionHandshakeEncrypt::CWorkItemNetEncryptionHandshakeEncrypt(CNetFilterEncryption*, unsigned int, CRSAPublicKey const*)
 CWorkItemNetEncryptionHandshakeEncrypt::DispatchCompletedWorkItem(CJobMgr*)
@@ -5985,7 +6001,6 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command line options:\n
-CommandLine
 Comments by user
 Committing
 Community
@@ -6089,6 +6104,7 @@ ControllerBindings
 Convenient Store Voucher
 Copyright (C) 2010, Thomas G. Lane, Guido Vollbeding
 Copyright Violation
+Coroutine '%s' stack save size is %d bytes
 Coroutine_Finish()
 Coroutine_IsActive()
 Coroutine_Launch(CCoroutine&)
@@ -6432,6 +6448,16 @@ DirName
 DirName:
 Directory %s not writable.
 DisableDownloads
+Disabled/Blocklist
+Disabled/ChildCommandLine
+Disabled/CommandLine
+Disabled/CrashCount
+Disabled/DebugRequest
+Disabled/Off
+Disabled/OffOk
+Disabled/RuntimeDetect
+Disabled/Software
+Disabled/Unknown
 DisconnectPlatformSocket
 Disconnected By Remote Host
 Disconnecting #%d due to HandleSSLFailure() - eReason=%d\n
@@ -6707,7 +6733,6 @@ ERR_remove_state
 ERR_remove_thread_state
 ERR_set_error_data
 ERR_unload_strings
-EResult
 ESessionDisposition
 ESteamRealm
 ESteamReviewScore
@@ -6947,6 +6972,10 @@ Empty JPEG image (DNL not supported)
 Empty input file
 EmptyFragments
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
+Enabled/Force
+Enabled/ForceOn
+Enabled/On
+Enabled/Readback
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
 Encipher Only
 EncryptThenMac
@@ -8771,6 +8800,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  2 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -10319,7 +10349,6 @@ Send Router
 Sending first queued request for %s\n
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep 18 2024
 September
 SerializeVaArgs(char const*, char*, CUtlBuffer&)
 Server Busy
@@ -10384,7 +10413,6 @@ Snooze
 SocketAlreadyClosed
 SocketFail
 Sofort
-Software
 Software\Valve\Steam
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
@@ -10483,7 +10511,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Sep 18 2024 17:13:06
+Startup - updater built Oct  2 2024 22:51:14
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -10577,6 +10605,7 @@ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamThreadTools::g_SuspendResumeLock
 SteamThreadTools::g_nCurThreadSuspendCount
 SteamThreadTools::g_pCurThread
+SteamThreadTools::g_tlsThreadFileIOBlocked
 SteamUniverse
 SteamUpdater
 SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
@@ -11132,6 +11161,9 @@ Unable to rename %s to %s!\n
 Unable to send encrypted SSL data over connection\n
 Unable to set default socket options, error %d
 Unauthorized
+Unavailable/Off
+Unavailable/OffOk
+Unavailable/Software
 Unbannable
 Unbound socket cannot be used with IOCP
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
@@ -12911,7 +12943,6 @@ bJ*h
 bKGD
 bKGD must be after
 bN.l
-bO|V\fI}
 bS11*?
 bV}TS
 b\fLM%
@@ -18499,6 +18530,7 @@ java_multiple_files
 java_outer_classname
 java_string_check_utf8
 jjjjjjjjjjjjjjjjaes key setup failed
+jobID != k_GIDNil
 job_metrics
 joined the group
 joint-iso-itu-t
@@ -19039,7 +19071,6 @@ k_EMsgClientBroadcastDisconnect
 k_EMsgClientBroadcastFrames
 k_EMsgClientBroadcastInit
 k_EMsgClientBroadcastUploadConfig
-k_EMsgClientCMList
 k_EMsgClientChallengeRequest
 k_EMsgClientChallengeResponse
 k_EMsgClientChangeStatus
@@ -20030,6 +20061,7 @@ m_bQueueProxyDiscoveryCheckOnDispatch is expected to be windows only!
 m_bitsMigratedBuckets
 m_bufBody
 m_bufBody.TellPut() == 0
+m_bufData
 m_bufDecryptedRecvBuffer
 m_bufEncryptedSendBuffer
 m_bufLeftOverHTTP2BodyDataChunk
@@ -20049,7 +20081,6 @@ m_cachedResponse.GetPtr()
 m_configOverride
 m_cubAlreadySentFromHeadBuffer < head.len
 m_cubMsgIncomingRecv <= m_cubMsgIncomingAlloc
-m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_eConnectionState == k_EHTTPClientConnectionState_CONNECTING
 m_eConnectionState == k_EHTTPClientConnectionState_HANDSHAKING
 m_eConnectionState == k_EHTTPClientConnectionState_KEEPALIVE || m_eConnectionState == k_EHTTPClientConnectionState_HTTP2SESSIONACTIVE
@@ -20138,6 +20169,7 @@ m_pValObjects != NULL
 m_pVecStringValue
 m_pVecUlValue
 m_pWaitingOnLock == NULL
+m_pWaitingOnWorkItem == NULL
 m_pWebSocketConnectionCallback
 m_pkvRequestHeaders
 m_pkvResponseHeaders
@@ -21191,6 +21223,7 @@ pHdr->m_nMsgStartSeq == pHdr->m_nSeqThis
 pHdr->m_nPktsInMsg <= k_nMaxPktsPerMsg
 pHdr->m_nSeqThis <= pHdr->m_nMsgStartSeq + pHdr->m_nPktsInMsg - 1
 pHost && *pHost
+pItem->GetJobID() == GetJobID()
 pKeyValuesTextParser
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 pLogInstance == sm_pLogInstance
@@ -23506,6 +23539,7 @@ typeinfo for CWebSocketConnection
 typeinfo for CWebSocketConnectionDelayedCloseConnectionWorkItem
 typeinfo for CWorkItem
 typeinfo for CWorkItemHTTPClientRequest
+typeinfo for CWorkItemLoadFileIntoBuffer
 typeinfo for CWorkItemNetEncryptionHandshakeEncrypt
 typeinfo for CWorkItemNetFilterDecrypt
 typeinfo for CWorkItemNetFilterEncrypt
@@ -23933,6 +23967,7 @@ typeinfo name for CWebSocketConnection
 typeinfo name for CWebSocketConnectionDelayedCloseConnectionWorkItem
 typeinfo name for CWorkItem
 typeinfo name for CWorkItemHTTPClientRequest
+typeinfo name for CWorkItemLoadFileIntoBuffer
 typeinfo name for CWorkItemNetEncryptionHandshakeEncrypt
 typeinfo name for CWorkItemNetFilterDecrypt
 typeinfo name for CWorkItemNetFilterEncrypt
@@ -24737,6 +24772,7 @@ vtable for CWebSocketConnection
 vtable for CWebSocketConnectionDelayedCloseConnectionWorkItem
 vtable for CWorkItem
 vtable for CWorkItemHTTPClientRequest
+vtable for CWorkItemLoadFileIntoBuffer
 vtable for CWorkItemNetEncryptionHandshakeEncrypt
 vtable for CWorkItemNetFilterDecrypt
 vtable for CWorkItemNetFilterEncrypt

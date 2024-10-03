@@ -265,7 +265,6 @@ enum EMsg {
 	k_EMsgClientGameConnectTokens = 779;
 	k_EMsgClientLicenseList = 780;
 	k_EMsgClientVACBanStatus = 782;
-	k_EMsgClientCMList = 783;
 	k_EMsgClientEncryptPct = 784;
 	k_EMsgClientGetLegacyGameKeyResponse = 785;
 	k_EMsgClientAddFriend = 791;

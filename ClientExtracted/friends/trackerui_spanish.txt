@@ -581,7 +581,7 @@
 
 "friends_ingametooltip"	"Jugando a %game%"
 "friends_pendinginvites" "%invites% PENDIENTES"
-"Friends_ViewInvitesOnCommunityPage" "Ver invitaciones o solicitudes de amistad en la Comunidad"
+"Friends_ViewInvitesOnCommunityPage" "Ver invitaciones o solicitudes de amistad en la comunidad"
 "friends_ignoreallinvites"	"Ignorar todas las invitaciones o solicitudes de amistad"
 "friends_acceptallinvites"	"Aceptar todas las invitaciones o solicitudes de amistad"
 "friends_ignoreallsuggestedfriends"	"Ignorar todos los amigos sugeridos"

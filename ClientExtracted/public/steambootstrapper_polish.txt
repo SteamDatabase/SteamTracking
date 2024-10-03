@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% potrzebuje %nMegaBytes% MB wolnego miejsca na dysku do celów aktualizacji."
 "SteamBootstrapper_FailedManifestLoad"		"Błąd wczytywania wykazu pakietu."
 "SteamBootstrapper_FailedManifestVerify"		"Błąd weryfikacji wykazu pakietu."
+"SteamBootstrapper_FailedManifestOSType"		"Wersja systemu operacyjnego jest niezgodna z rodzajem SO w manifeście pakietu."
 "SteamBootstrapper_FailedManifestSave"		"Błąd zapisu wykazu pakietu."
 "SteamBootstrapper_FailedPackageRead"			"Błąd odczytu pakietu (%pkgName%)."
 "SteamBootstrapper_CorruptPackageFile"		"Uszkodzony plik pakietu (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - błąd krytyczny"
 "SteamBootstrapper_Warning_Title"			"%appname% - ostrzeżenie"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "Aplikacja %appname% nie jest już wspierana na twojej wersji systemu operacyjnego."
+"SteamBootstrapper_Starting"                  "Rozpoczynanie..."
 }

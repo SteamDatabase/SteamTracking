@@ -15,6 +15,7 @@ enum EPartnerEventDisplayLocation {
 	k_EPartnerEventDisplayLocation_StoreFrontPage = 7;
 	k_EPartnerEventDisplayLocation_NewsHub = 8;
 	k_EPartnerEventDisplayLocation_GamepadHome = 9;
+	k_EPartnerEventDisplayLocation_StoreHub = 10;
 }
 
 message CCommunity_GetApps_Request {

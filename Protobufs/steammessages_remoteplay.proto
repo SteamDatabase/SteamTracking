@@ -139,6 +139,7 @@ enum EStreamVideoCodec {
 	k_EStreamVideoCodecHEVC = 5;
 	k_EStreamVideoCodecORBX1 = 6;
 	k_EStreamVideoCodecORBX2 = 7;
+	k_EStreamVideoCodecAV1 = 8;
 }
 
 enum EStreamQualityPreference {
@@ -384,7 +385,7 @@ message CStreamingClientCaps {
 	optional bool system_can_suspend = 2;
 	optional int32 maximum_decode_bitrate_kbps = 3;
 	optional int32 maximum_burst_bitrate_kbps = 4;
-	optional bool supports_video_hevc = 5;
+	optional bool supports_video_hevc_OBSOLETE = 5;
 	optional bool disable_steam_store = 6;
 	optional bool disable_client_cursor = 7;
 	optional bool disable_intel_hardware_encoding = 8;
@@ -393,6 +394,8 @@ message CStreamingClientCaps {
 	optional int32 form_factor = 11;
 	optional bool has_on_screen_keyboard = 12;
 	repeated .EStreamColorspace supported_colorspaces = 13;
+	repeated .EStreamAudioCodec supported_audio_codecs = 14;
+	repeated .EStreamVideoCodec supported_video_codecs = 15;
 }
 
 message CStreamingClientConfig {
@@ -420,6 +423,7 @@ message CStreamingClientConfig {
 	optional .CStreamVideoLimit runtime_limit = 23;
 	repeated .CStreamVideoLimit decoder_limit = 24;
 	optional bool enable_unreliable_fec = 25 [default = false];
+	optional bool enable_video_av1 = 26 [default = false];
 }
 
 message CStreamingServerConfig {

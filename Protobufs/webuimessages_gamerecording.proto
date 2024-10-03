@@ -198,6 +198,12 @@ message CGameRecording_TimelineEntryChanged_Notification {
 	optional fixed64 game_id = 2;
 }
 
+message CGameRecording_TimelineEntryRemoved_Notification {
+	optional uint64 game_id = 1;
+	optional string timeline_id = 2;
+	optional uint64 entry_id = 3;
+}
+
 message CGameRecording_LowDiskSpace_Notification {
 }
 
@@ -250,6 +256,7 @@ message CGameRecording_SaveClip_Request {
 	optional string name = 4;
 	optional string src_clip_id = 5;
 	optional bool temporary = 6;
+	optional bool force_thumbnail = 7;
 }
 
 message CGameRecording_SaveClip_Response {
@@ -268,15 +275,27 @@ message CGameRecording_ExportClip_Settings {
 	optional int32 width = 2;
 	optional int32 height = 3;
 	optional int32 frames_per_second = 4;
+	optional .EExportCodec codec = 5 [default = k_EExportCodec_Default];
 }
 
 message CGameRecording_ExportClip_Request {
 	optional string clip_id = 1;
 	optional string export_mp4_path = 2;
 	optional .CGameRecording_ExportClip_Settings settings = 3;
+	optional bool use_unique_filename = 4;
 }
 
 message CGameRecording_ExportClip_Response {
+}
+
+message CGameRecording_ExportClipPreview_Request {
+	optional string clip_id = 1;
+	optional .CGameRecording_ExportClip_Settings settings = 2;
+}
+
+message CGameRecording_ExportClipPreview_Response {
+	optional uint64 estimated_size = 1;
+	optional .CGameRecording_ExportClip_Settings settings = 2;
 }
 
 message CGameRecording_TakeScreenshot_Request {
@@ -446,8 +465,9 @@ message CGameRecording_ExportProgress_Notification {
 message CGameRecording_PerGameSettings {
 	optional fixed64 gameid = 1;
 	optional bool enabled = 2;
-	optional int32 minutes = 3;
-	optional int32 bitrate = 4;
+	optional uint32 minutes = 3;
+	optional string bitrate = 4;
+	optional bool infinite = 5;
 }
 
 message CGameRecording_GetPerGameSettings_Request {
@@ -542,6 +562,7 @@ service GameRecording {
 	rpc GetClips (.CGameRecording_GetClips_Request) returns (.CGameRecording_GetClips_Response);
 	rpc UploadClipToSteam (.CGameRecording_UploadClipToSteam_Request) returns (.CGameRecording_UploadClipToSteam_Response);
 	rpc ExportClip (.CGameRecording_ExportClip_Request) returns (.CGameRecording_ExportClip_Response);
+	rpc ExportClipPreview (.CGameRecording_ExportClipPreview_Request) returns (.CGameRecording_ExportClipPreview_Response);
 	rpc TakeScreenshot (.CGameRecording_TakeScreenshot_Request) returns (.CGameRecording_TakeScreenshot_Response);
 	rpc ZipClip (.CGameRecording_ZipClip_Request) returns (.CGameRecording_ZipClip_Response);
 	rpc StartRecording (.CGameRecording_StartRecording_Request) returns (.CGameRecording_StartRecording_Response);
@@ -554,6 +575,7 @@ service GameRecording {
 	rpc NotifyTimelineChanged (.CGameRecording_TimelineChanged_Notification) returns (.WebUINoResponse);
 	rpc NotifyRecordingSessionChanged (.CGameRecording_RecordingSessionChanged_Notification) returns (.WebUINoResponse);
 	rpc NotifyTimelineEntryChanged (.CGameRecording_TimelineEntryChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyTimelineEntryRemoved (.CGameRecording_TimelineEntryRemoved_Notification) returns (.WebUINoResponse);
 	rpc NotifyClipCreated (.CGameRecording_ClipCreated_Notification) returns (.WebUINoResponse);
 	rpc NotifyClipDeleted (.CGameRecording_ClipDeleted_Notification) returns (.WebUINoResponse);
 	rpc NotifyExportProgress (.CGameRecording_ExportProgress_Notification) returns (.WebUINoResponse);

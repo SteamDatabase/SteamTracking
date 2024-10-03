@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"A %appname%nek %nMegaBytes% MB szabad lemezterületre van szüksége a frissítéshez."
 "SteamBootstrapper_FailedManifestLoad"		"A csomag-tanúsítvány betöltése sikertelen."
 "SteamBootstrapper_FailedManifestVerify"		"A csomag-tanúsítvány hitelesítése sikertelen."
+"SteamBootstrapper_FailedManifestOSType"		"Az operációs rendszer verziója nem kompatibilis a csomagtanúsítvány op. rendszer típusával."
 "SteamBootstrapper_FailedManifestSave"		"A csomag-tanúsítvány mentése sikertelen."
 "SteamBootstrapper_FailedPackageRead"			"A csomag (%pkgName%) olvasása sikertelen."
 "SteamBootstrapper_CorruptPackageFile"		"Sérült csomagfájl (%pkgName%)."
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Végzetes hiba"
 "SteamBootstrapper_Warning_Title"			"%appname% - Figyelmeztetés"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "A(z) %appname% már nem támogatott operációs rendszered verzióján."
+"SteamBootstrapper_Starting"                  "Indítás..."
 }

@@ -11,6 +11,7 @@
 "SteamBootstrapper_InsufficientDiskSpace"		"%appname% จำเป็นต้องใช้พื้นที่ว่างบนดิสก์ %nMegaBytes%MB เพื่ออัปเดต"
 "SteamBootstrapper_FailedManifestLoad"		"ล้มเหลวในการโหลดมานิเฟสต์ของแพ็กเกจ"
 "SteamBootstrapper_FailedManifestVerify"		"ล้มเหลวในการตรวจสอบมานิเฟสต์ของแพ็กเกจ"
+"SteamBootstrapper_FailedManifestOSType"		"เวอร์ชันของระบบปฏิบัติการไม่สามารถเข้ากันได้กับประเภทระบบปฏิบัติการมานิเฟสต์ของแพ็กเกจ"
 "SteamBootstrapper_FailedManifestSave"		"ล้มเหลวในการบันทึกมานิเฟสต์ของแพ็กเกจ"
 "SteamBootstrapper_FailedPackageRead"			"ล้มเหลวในการอ่านแพ็กเกจ (%pkgName%)"
 "SteamBootstrapper_CorruptPackageFile"		"ไฟล์แพ็กเกจเสียหาย (%pkgName%)"
@@ -42,4 +43,5 @@
 "SteamBootstrapper_Error_Title"			"%appname% - ข้อผิดพลาดร้ายแรง"
 "SteamBootstrapper_Warning_Title"			"%appname% - คำเตือน"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "เวอร์ชันระบบปฏิบัติการของคุณไม่รองรับ %appname% อีกต่อไป"
+"SteamBootstrapper_Starting"                  "กำลังเริ่ม..."
 }
