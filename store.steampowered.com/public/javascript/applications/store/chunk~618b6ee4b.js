@@ -425,6 +425,7 @@
         TrailerTVCtn: "ogTnaCu9kzADXyOJVAXnU",
         TrailerTVApp: "_3YXVTuwL05ypZj8kTh4egz",
         VideoRow: "_1wuedPrAEovdKCMKWtT89N",
+        VideoArea: "_1KtF5ace_DUQS1HBc07_1O",
         AppContent: "_2CP5BE345KrRoey26k0lZD",
         Fade: "_2djTcou1f6qVJa80hGny1F",
         FadeOut: "_3PySzO9wUPfazVg51G9t2_",
@@ -449,6 +450,7 @@
         IgnoredTitle: "_2l_BIy1gecfZNAF3V9YFJW",
         IgnoredDescription: "Fout2lEcl8cCdOJ3wJn0x",
         UndoIgnoreButton: "_38_D8VPCeXpqQC4vS0_epB",
+        UndoButton: "p2WBkw6MOSvd7thyqWXlg",
         AppTagsCtn: "_22_mLvZWH3uOjtvbsWTPk3",
         TagEntry: "sezH81XG123Jx4Frpk6gL",
         NavButton: "_2DFqrg_P_qHMAH6UXEI_tk",
@@ -6952,7 +6954,7 @@
     },
     7979: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => ii });
+      a.d(t, { H: () => li });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -20028,7 +20030,7 @@
           C =
             ((w = b),
             n.useMemo(() => {
-              const e = (0, Ko.VY)(oi(w));
+              const e = (0, Ko.VY)(ii(w));
               return !(!e || "true" !== e?.toLowerCase());
             }, [w]));
         var w;
@@ -20093,13 +20095,13 @@
           T = b && D === b,
           k = n.useCallback(
             (e) => {
-              T && (0, Ko.lc)(oi(D), "true", 3650);
+              T && (0, Ko.lc)(ii(D), "true", 3650);
               const t = (((I + (e ? 1 : -1)) % G.length) + G.length) % G.length;
               A(t);
             },
             [T, D, I, G.length],
           );
-        if (!r.enable_faceted_browsing && D)
+        if (!r.enable_faceted_browsing)
           return n.createElement(
             h.A,
             { feature: "trailertv" },
@@ -20141,117 +20143,74 @@
           [m, u] = n.useState(!1),
           [d, _] = n.useState(!1),
           [p, h] = n.useState(!1),
-          [S, y] = n.useState(!1),
-          [b, E] = n.useState(!1),
-          [C] = (0, o.t7)(t, Zo),
-          w = (0, v.Qn)(),
-          I = (0, qo.R7)(),
-          A = I?.ownerWindow || window,
-          G = ri(C, r),
-          { bIsIgnored: T, fnUpdateIgnored: k } = (0, Wo.TK)(t),
-          { bIsWishlisted: B, fnUpdateWishlist: L } = (0, Wo.u4)(t, Jo),
-          [P, N] = n.useState(0),
-          [F, R] = n.useState(),
-          M = n.useRef();
+          [S, v] = n.useState(!1),
+          [y, b] = n.useState(!1),
+          [E] = (0, o.t7)(t, Zo),
+          C = (0, qo.R7)(),
+          w = C?.ownerWindow || window,
+          I = ri(E, r),
+          { bIsIgnored: A, fnUpdateIgnored: G } = (0, Wo.TK)(t),
+          { bIsWishlisted: T, fnUpdateWishlist: k } = (0, Wo.u4)(t, Jo),
+          [B, L] = n.useState(0),
+          [P, N] = n.useState(),
+          F = n.useRef();
         n.useEffect(() => {
-          void 0 !== M.current &&
-            M.current !== t &&
-            ((M.current = void 0), N(0));
+          void 0 !== F.current &&
+            F.current !== t &&
+            ((F.current = void 0), L(0));
         }, [t]);
-        const O = n.useCallback(async () => {
-          if (p) return void E(!0);
-          (M.current = t), N(1);
+        const R = n.useCallback(async () => {
+          if (p) return void b(!0);
+          (F.current = t), L(1);
           const e = new Date().getTime(),
             a = window.setInterval(() => {
               const t = 1 - (new Date().getTime() - e) / 500;
-              R(Math.max(t, 0));
+              N(Math.max(t, 0));
             }, 30);
           await new Promise((e) => setTimeout(e, 500)),
             window.clearTimeout(a),
-            R(void 0),
-            M.current == t &&
-              ((M.current = void 0),
+            N(void 0),
+            F.current == t &&
+              ((F.current = void 0),
               s(!0),
-              N(2),
+              L(2),
               await new Promise((e) => setTimeout(e, 500))),
-            N(0);
+            L(0);
         }, [t, p, s]);
-        if (
-          (n.useEffect(() => {
-            !p && b && (E(!1), O());
-          }, [b, p, O]),
+        n.useEffect(() => {
+          !p && y && (b(!1), R());
+        }, [y, p, R]),
           n.useEffect(() => {
             const e = () => h(document.hidden);
             return (
               document.addEventListener("visibilitychange", e),
               () => document.removeEventListener("visibilitychange", e)
             );
-          }, []),
-          !C)
-        )
-          return (
-            console.warn("Error: Trailer TV missing store item for appid ", t),
-            null
-          );
-        const x = !i;
-        let H;
+          }, []);
+        const M = !i;
+        let O;
         return (
-          S ? (H = 3) : m ? (H = 2) : 0 != P ? (H = 0) : p && (H = 1),
+          S ? (O = 3) : m ? (O = 2) : 0 != B ? (O = 0) : p && (O = 1),
           n.createElement(
             Z.Z,
             {
               focusable: !0,
               className: (0, f.A)(Oo().TrailerTVApp),
-              onOptionsActionDescription: B
+              onOptionsActionDescription: T
                 ? (0, D.we)("#SaleTrailerTV_RemoveFromWishlist")
                 : (0, D.we)("#SaleTrailerTV_AddToWishlist"),
-              onOptionsButton: L,
+              onOptionsButton: k,
               onOKActionDescription: (0, D.we)("#SaleTrailerTV_ViewStorePage"),
               onOKButton: () => {
-                A.location.href = G;
+                w.location.href = I;
               },
-              onSecondaryActionDescription: T
+              onSecondaryActionDescription: A
                 ? (0, D.we)("#SaleTrailerTV_Undo")
                 : (0, D.we)("#SaleTrailerTV_IgnoreLink"),
-              onSecondaryButton: k,
+              onSecondaryButton: G,
               onMouseEnter: () => _(!0),
               onMouseLeave: () => _(!1),
             },
-            n.createElement(
-              "div",
-              { className: (0, f.A)(Oo().IgnoredCtn, T && Oo().Active) },
-              n.createElement(
-                "div",
-                { className: (0, f.A)(Oo().IgnoredInfo, T && Oo().Active) },
-                n.createElement(
-                  "div",
-                  { className: Oo().IgnoredTitle },
-                  (0, D.we)("#SaleTrailerTV_Ignored"),
-                ),
-                n.createElement(
-                  "div",
-                  { className: Oo().IgnoredDescription },
-                  (0, D.we)("#SaleTrailerTV_IgnoredConfirmation"),
-                ),
-                n.createElement(
-                  Z.Z,
-                  {
-                    className: (0, f.A)(
-                      Oo().QueueButton,
-                      Oo().UndoIgnoreButton,
-                    ),
-                    onClick: k,
-                  },
-                  w &&
-                    n.createElement(Uo.$m, {
-                      button: Ho.g4.X,
-                      type: Uo.wt.Light,
-                      size: Uo.xY.Medium,
-                    }),
-                  (0, D.we)("#SaleTrailerTV_Undo"),
-                ),
-              ),
-            ),
             n.createElement(
               "div",
               {
@@ -20274,26 +20233,31 @@
                 n.createElement("div", {
                   className: (0, f.A)(
                     Oo().Fade,
-                    1 === P && Oo().FadeOut,
-                    2 === P && Oo().FadeIn,
+                    1 === B && Oo().FadeOut,
+                    2 === B && Oo().FadeIn,
                   ),
                   style: {
                     "--fade-out-time": "0.5s",
                     "--fade-in-time": "0.5s",
                   },
                 }),
-                n.createElement(Wo.y3, {
-                  appID: t,
-                  focused: !0,
-                  snrCode: Jo,
-                  skipMicroTrailer: i,
-                  autoPlayCookieName: "bTrailerTVAutoplayDisabled",
-                  showScreenshotInsteadOfMainCap: !i,
-                  fadeRatio: F,
-                  fnPlayPause: y,
-                  fnComplete: O,
-                  loopVideo: !1,
-                }),
+                n.createElement(
+                  "div",
+                  { className: Oo().VideoArea },
+                  n.createElement(oi, { appID: t }),
+                  n.createElement(Wo.y3, {
+                    appID: t,
+                    focused: !0,
+                    snrCode: Jo,
+                    skipMicroTrailer: i,
+                    autoPlayCookieName: "bTrailerTVAutoplayDisabled",
+                    showScreenshotInsteadOfMainCap: !i,
+                    fadeRatio: P,
+                    fnPlayPause: v,
+                    fnComplete: R,
+                    loopVideo: !1,
+                  }),
+                ),
                 n.createElement(ni, {
                   appID: t,
                   preferDemoStorePage: e.bPreferDemoStorePage,
@@ -20311,12 +20275,12 @@
                 ),
             ),
             n.createElement($o, {
-              className: (0, f.A)(Oo().AutoAdvanceRow, x && Oo().Enabled),
-              enabled: x,
+              className: (0, f.A)(Oo().AutoAdvanceRow, M && Oo().Enabled),
+              enabled: M,
               currentItemKey: t,
               autoAdvanceMsec: a,
-              fnAdvance: O,
-              pauseReason: H,
+              fnAdvance: R,
+              pauseReason: O,
               checkboxVisible: d,
             }),
           )
@@ -20325,22 +20289,22 @@
       function ni(e) {
         const { appID: t, preferDemoStorePage: a, introVideo: r } = e,
           [s] = (0, o.t7)(t, Zo),
-          { fnUpdateIgnored: i } = (0, Wo.TK)(t),
-          { bIsWishlisted: l, fnUpdateWishlist: c } = (0, Wo.u4)(t, Jo),
-          m = ri(s, a),
-          u = (0, v.Qn)(),
-          d = u,
-          _ = (0, Se.LG)(s?.GetTagIDs());
+          { bIsIgnored: i, fnUpdateIgnored: l } = (0, Wo.TK)(t),
+          { bIsWishlisted: c, fnUpdateWishlist: m } = (0, Wo.u4)(t, Jo),
+          u = ri(s, a),
+          d = (0, v.Qn)(),
+          _ = d,
+          p = (0, Se.LG)(s?.GetTagIDs());
         if (!s) return;
-        const p = s.GetAssets().GetMainCapsuleURL();
+        const g = s.GetAssets().GetMainCapsuleURL();
         return n.createElement(
           Z.Z,
           { className: Oo().AppDetailsCtn },
-          p &&
+          g &&
             n.createElement(
               X.Ii,
-              { href: m, className: Oo().AppLink },
-              n.createElement("img", { className: Oo().AppCapsule, src: p }),
+              { href: u, className: Oo().AppLink },
+              n.createElement("img", { className: Oo().AppCapsule, src: g }),
             ),
           n.createElement(
             "div",
@@ -20358,7 +20322,7 @@
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(si, { rgTagNames: _ }),
+                n.createElement(si, { rgTagNames: p }),
               ),
             n.createElement(
               "div",
@@ -20366,7 +20330,7 @@
               s.GetShortDescription(),
             ),
           ),
-          !u &&
+          !d &&
             !r &&
             n.createElement(
               "div",
@@ -20387,22 +20351,24 @@
                     }),
                   n.createElement(
                     Z.Z,
-                    { focusable: !0, className: Oo().QueueButton, onClick: c },
-                    d &&
+                    { focusable: !0, className: Oo().QueueButton, onClick: m },
+                    _ &&
                       n.createElement(Uo.$m, {
                         button: Ho.g4.Y,
                         type: Uo.wt.Light,
                         size: Uo.xY.Medium,
                         additionalClassName: Oo().YGlyph,
                       }),
-                    l
+                    c
                       ? (0, D.we)("#SaleTrailerTV_RemoveFromWishlist")
                       : (0, D.we)("#SaleTrailerTV_AddToWishlist"),
                   ),
                   n.createElement(
                     Z.Z,
-                    { focusable: !0, className: Oo().QueueButton, onClick: i },
-                    (0, D.we)("#SaleTrailerTV_IgnoreLink"),
+                    { focusable: !0, className: Oo().QueueButton, onClick: l },
+                    i
+                      ? (0, D.we)("#SaleTrailerTV_IgnoreLink_Ignored")
+                      : (0, D.we)("#SaleTrailerTV_IgnoreLink"),
                   ),
                 ),
               ),
@@ -20429,9 +20395,46 @@
         );
       }
       function oi(e) {
-        return `${ei}-${e}`;
+        const { appID: t } = e,
+          a = (0, v.Qn)(),
+          { bIsIgnored: r, fnUpdateIgnored: s } = (0, Wo.TK)(t);
+        return n.createElement(
+          "div",
+          { className: (0, f.A)(Oo().IgnoredCtn, r && Oo().Active) },
+          n.createElement(
+            "div",
+            { className: (0, f.A)(Oo().IgnoredInfo, r && Oo().Active) },
+            n.createElement(
+              "div",
+              { className: Oo().IgnoredTitle },
+              (0, D.we)("#SaleTrailerTV_Ignored"),
+            ),
+            n.createElement(
+              "div",
+              { className: Oo().IgnoredDescription },
+              (0, D.we)("#SaleTrailerTV_IgnoredConfirmation"),
+            ),
+            n.createElement(
+              Z.Z,
+              {
+                className: (0, f.A)(Oo().UndoButton, Oo().UndoIgnoreButton),
+                onClick: s,
+              },
+              a &&
+                n.createElement(Uo.$m, {
+                  button: Ho.g4.X,
+                  type: Uo.wt.Light,
+                  size: Uo.xY.Medium,
+                }),
+              (0, D.we)("#SaleTrailerTV_Undo"),
+            ),
+          ),
+        );
       }
       function ii(e) {
+        return `${ei}-${e}`;
+      }
+      function li(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           o = (0, v.Qn)();
         switch (a.section_type) {
