@@ -6202,7 +6202,10 @@
           k = () => G(!D),
           B = (0, T.n9)(),
           L = n.useMemo(() => s?.GetIncludedAppIDsOrSelf(), [s]);
-        if (!s) return null;
+        if (!s)
+          return n.createElement("div", {
+            className: f().LibraryAssetExpandedDisplayGhost,
+          });
         const P = (0, i.L3)(B),
           x =
             w && s.HasDemoStandaloneStorePage()
