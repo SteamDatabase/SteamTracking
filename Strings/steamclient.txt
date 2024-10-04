@@ -96,7 +96,6 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123 
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -106,7 +105,7 @@
  %4[^ =\t] =%d
  %d %d %d %d %d %d
  %lld
- %s SteamLaunch AppId=%u Install=1 -- %s -- %s
+ %s -- %s SteamLaunch AppId=%u Install=1 -- %s
  %s/../bin/d3ddriverquery%s.exe
  %s: Duration control call for app id %d lt %d enable %d override desired %d
  %u target: 
@@ -2163,6 +2162,7 @@ $tICAPIJobListHashLoadSave
 %s - skipping large file: %s
 %s - system log collector has no logs
 %s - system log collector is not available
+%s -- %s SteamLaunch AppId=%u -- %s
 %s --slot %d
 %s --supports-duplicate-detection
 %s -P -F upnR -i TCP@%s
@@ -2179,7 +2179,6 @@ $tICAPIJobListHashLoadSave
 %s PRIVATE KEY
 %s Salt Length: 0x
 %s Setting up FakeIP ref twice?
-%s SteamLaunch AppId=%u -- %s -- %s
 %s [%s]%-*s
 %s [AppID %u] Init cache request complete
 %s algorithm "%s" unsupported\n
@@ -2358,7 +2357,6 @@ $tICAPIJobListHashLoadSave
 %s/power1_cap
 %s/power2_cap
 %s/reaper
-%s/reaper SteamLaunch AppId=%u -- %s/steam-launch-wrapper -- %s
 %s/replay_cache
 %s/shader_cache_temp_dir_%s_%s
 %s/shaderhitcache
@@ -23057,6 +23055,7 @@ FreeAudioDevice
 FreeBindingInstance
 FreeDeletedPackets
 FreeHD
+FreeToDownload
 FreeWeekend
 Freed EMS handle %u
 Freed XMS handle %u
@@ -37929,7 +37928,6 @@ apiwarning_log
 apos
 app %u "%s"\n
 app %u (unknown!)\n
-app config %d UI callbacks are queued, but will not get processed (we already logged on).
 app data in handshake
 appID != k_uAppIdInvalid
 appID %u is marked "NoUpdatesAfterInstall" - skipping validation
@@ -46580,7 +46578,7 @@ lost/gained channels
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1574
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1724
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1929
-low-pri yield - /data/src/clientdll/appdatacache.cpp:774
+low-pri yield - /data/src/clientdll/appdatacache.cpp:809
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:637
 low-pri yield - /data/src/clientdll/autocloud.cpp:812
@@ -46590,8 +46588,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6811
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2329
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3667
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2330
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3665
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:105
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3057
@@ -53387,7 +53385,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct  2 2024 22:51:47
+steam Oct  4 2024 02:17:33
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
