@@ -5489,8 +5489,9 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
     min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
-    (100%) *
-    max(var(--normalized-slider-value), var(--normalized-slider-origin))
+    (100% - var(--slider-extra-notch-padding) * 2) *
+    max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
+    var(--slider-extra-notch-padding)
   );
   --normalized-width-handle: calc(
     var(--normalized-fill-end) -
@@ -5551,10 +5552,11 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% *
+      (-100% + var(--slider-extra-notch-padding) * 2) *
       var(--inverse-normalized-value) +
       var(--slider-handle-width) *
-      var(--inverse-normalized-value)
+      var(--inverse-normalized-value) -
+      var(--slider-extra-notch-padding)
     )
   );
 }
@@ -5641,6 +5643,7 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 var(--slider-extra-notch-padding);
 }
 .LYPXtQ-MbXCeitc8-tCDO {
   width: 24px;

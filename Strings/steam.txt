@@ -1461,7 +1461,7 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:16:42
+01:49:22
 08bX
 0A/8
 0Z@q
@@ -2606,7 +2606,7 @@ B-233
 B-283
 B-409
 B-571
-B02:17:07
+B01:49:45
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8800,7 +8800,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  4 2024
+Oct  5 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -10511,7 +10511,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct  4 2024 02:17:07
+Startup - updater built Oct  5 2024 01:49:44
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

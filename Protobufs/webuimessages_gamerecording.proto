@@ -291,6 +291,7 @@ message CGameRecording_ExportClip_Response {
 message CGameRecording_ExportClipPreview_Request {
 	optional string clip_id = 1;
 	optional .CGameRecording_ExportClip_Settings settings = 2;
+	optional bool run_policy_checks = 3;
 }
 
 message CGameRecording_ExportClipPreview_Response {

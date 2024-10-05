@@ -463,7 +463,7 @@
 "$0" does not declare $1 as an extension number.
 "$\n"CChatRoom_ReorderChatRoom_Response"t\n!CChatRoom_SendChatMessage_Request
 "$\n"CChatRoom_SetUserBanState_Response"H\n
-"$\n"CGameRecording_ExportClip_Response"r\n(CGameRecording_ExportClipPreview_Request
+"$\n"CGameRecording_ExportClip_Response"
 "$\n"CParental_ApprovePlaytime_Response"[\n
 "$\n"CPlayer_SetAnimatedAvatar_Response"M\n(CPlayer_GetSteamDeckKeyboardSkin_Request
 "$\n"CSteamTV_AddChatModerator_Response"B\n"CSteamTV_GetChatModerators_Request
@@ -887,6 +887,7 @@
 "y\n\vPlayerFound
 "z\n CPlayer_GetPostedStatus_Response
 "z\n%CSiteLicense_LCSAuthenticate_Response
+"z\n)CGameRecording_ExportClipPreview_Response
 "z\n,CFamilyGroups_GetInviteCheckResults_Response
 "{\n2CContentServerDirectory_GetDepotPatchInfo_Response
 "|\n)CFamilyGroups_GetPurchaseRequests_Request
@@ -3180,7 +3181,6 @@ ${LANGUAGE}
 (\v2#.CContentServerDirectory_ServerInfo
 (\v2#.CGameRecording_ExportClip_Settings
 (\v2#.CGameRecording_ExportClip_Settings"i\n%CGameRecording_TakeScreenshot_Request
-(\v2#.CGameRecording_ExportClip_Settings"z\n)CGameRecording_ExportClipPreview_Response
 (\v2#.CMsgBluetoothManagerAdapterDetails"8\n*CBluetoothManager_GetDeviceDetails_Request
 (\v2#.CMsgStorageDevicesData.BlockDevice
 (\v2#.CMsgSystemAudioVolume.ChannelEntry
@@ -3997,7 +3997,7 @@ ${LANGUAGE}
 *ZN23CSystemReportController20JSSubmitSystemReportEPKc9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN23CSystemReportController21YldSubmitSystemReportERK10CUtlString9CSmartPtrI18CJSCallbackPromiseEEUlP29UploadLocalClientLogsResult_tbS5_E_
 *ZN23CSystemReportController22JSGenerateSystemReportE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
-*ZN24CChildEnvironmentBuilder16BuildEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
+*ZN24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZN24CFamilySharingController18SetPreferredLenderEjj9CSmartPtrI18CJSCallbackPromiseEEUlP26SetPreferredLenderResult_tbS2_E_
 *ZN24CFamilySharingController20AuthorizeLocalDeviceE9CSmartPtrI18CJSCallbackPromiseEEUlP23AuthorizeDeviceResult_tbS2_E_
 *ZN24CFamilySharingController22DeauthorizeLocalDeviceE9CSmartPtrI18CJSCallbackPromiseEEUlP25DeauthorizeDeviceResult_tbS2_E_
@@ -6068,9 +6068,9 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp:4902
-/data/src/steamUI/gamerecordingcontroller.cpp:5000
-/data/src/steamUI/gamerecordingcontroller.cpp:6312
-/data/src/steamUI/gamerecordingcontroller.cpp:6385
+/data/src/steamUI/gamerecordingcontroller.cpp:5001
+/data/src/steamUI/gamerecordingcontroller.cpp:6313
+/data/src/steamUI/gamerecordingcontroller.cpp:6386
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -12950,6 +12950,7 @@ Bugs
 Buhid
 BuildCompleteAppOverviewChange: %d apps\n
 BuildGroup::ValidateGlobals
+Building new pipeline
 Builtin
 BusRate
 BusType
@@ -16098,6 +16099,7 @@ CreateShareClip
 CreateVideoRecordingSegmentWriter
 CreateWebRTCICESession
 CreateWebRTCSession
+Created encoder %s for codec %d
 CreatedByFollowedUsersRankedByPublicationDate
 CreatedByFriendsRankedByPublicationDate
 Creating broadcast WebRTC session
@@ -17095,6 +17097,8 @@ Encipher Only
 Encoded frame DTS [key=%s][dts=%lld][pts=%lld][delta = %lldms]%s\n
 Encoder init failed; no audio will be recorded
 Encoder init succeeded, now have %d encoder(s)
+Encoder stage failed [type=%d]
+Encoding complete
 Encountered non UTF-8 code points.
 EncryptThenMac
 Encryption Failure
@@ -17415,6 +17419,7 @@ Failed creating offscreen shared JS context
 Failed creating read event %s\n
 Failed creating view of file for %s\n
 Failed creating write event %s\n
+Failed encoders: %s
 Failed loading registry KV.
 Failed loading trust store: %s\n
 Failed mounting that path!\n
@@ -17445,6 +17450,7 @@ Failed to create '%s' request
 Failed to create IFileChooserDialog
 Failed to create Service pipe
 Failed to create UGC item for clip %s upload: %d
+Failed to create an encoder
 Failed to create epoll set - errno=%d\n
 Failed to create first worker thread in AddWorkItem()
 Failed to create graphic texture\n
@@ -17496,6 +17502,7 @@ Failed to open target file.
 Failed to parse %s\n
 Failed to parse input
 Failed to parse provided range request header
+Failed to pre-process frame
 Failed to provide options
 Failed to read share thumbnail for clip %s: %d
 Failed to read value for setting: no value: %s
@@ -18638,7 +18645,9 @@ Happymoney Voucher
 Harassment
 Hard link failed. Falling back to copying segment %s
 Hardware Promo
+Hardware encoding should be suppressed.. rebuilding
 Hardware not capable of IPT
+Hardware suppression complete.. rebuilding
 HardwareCurrentlySupported
 HardwareModel
 Has not logged in on PS3 with required app
@@ -21273,6 +21282,8 @@ NVENC - couldn't create context: %d
 NVENC - couldn't get device %d: %d
 NVENC - couldn't get device count
 NVENC - couldn't pop context: %d
+NVENC - failed to allocate buffers on bitrate/resolution change
+NVENC - failed to allocate buffers on format change [type=%d]
 NVENC - nvenc not supported
 NVENC - recreating due to quality or resolution change
 N\n\fachievements
@@ -21698,7 +21709,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  4 2024 02:17:46
+Oct  5 2024 01:50:25
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -24322,6 +24333,7 @@ SortCombo
 SortKey
 Sotho
 Sounds_EventsAndAnnouncements
+Source stopped sending encoded bitstream
 SourceCodeInfo
 SourceContextProtoP
 Spamming
@@ -25599,6 +25611,7 @@ TryIngestBlockDeviceObject
 TryIngestDriveObject
 TryUpdateBlockDeviceObject
 TryUpdateDriveObject
+Trying to create an encoder for %s: [hardware_enabled=%s][hardware_suppressed=%s]
 Tswana
 Tuesday
 Turkmen
@@ -27274,6 +27287,7 @@ Zulu
 \n(CFileVerification_SignatureCheck_Request
 \n(CGameNotifications_CreateSession_Request
 \n(CGameNotifications_UpdateSession_Request
+\n(CGameRecording_ExportClipPreview_Request
 \n(CParental_EnableParentalSettings_Request
 \n(CPlayer_GetAchievementsProgress_Response
 \n(CPlayer_GetCommunityPreferences_Response
@@ -41813,6 +41827,7 @@ rumble_enabled
 run-game
 run/
 run_at_startup
+run_policy_checks
 runevent
 rungame
 rungame/

@@ -99,6 +99,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123`
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -740,7 +741,7 @@
 "$0" does not declare $1 as an extension number.
 "$\n"CChatRoom_ReorderChatRoom_Response"t\n!CChatRoom_SendChatMessage_Request
 "$\n"CChatRoom_SetUserBanState_Response"H\n
-"$\n"CGameRecording_ExportClip_Response"r\n(CGameRecording_ExportClipPreview_Request
+"$\n"CGameRecording_ExportClip_Response"
 "$\n"CParental_ApprovePlaytime_Response"[\n
 "$\n"CPlayer_SetAnimatedAvatar_Response"M\n(CPlayer_GetSteamDeckKeyboardSkin_Request
 "$\n"CSteamTV_AddChatModerator_Response"B\n"CSteamTV_GetChatModerators_Request
@@ -1153,6 +1154,7 @@
 "y\n\vPlayerFound
 "z\n CPlayer_GetPostedStatus_Response
 "z\n%CSiteLicense_LCSAuthenticate_Response
+"z\n)CGameRecording_ExportClipPreview_Response
 "z\n,CFamilyGroups_GetInviteCheckResults_Response
 "{\n2CContentServerDirectory_GetDepotPatchInfo_Response
 "|\n)CFamilyGroups_GetPurchaseRequests_Request
@@ -3716,7 +3718,6 @@ $tICAPIJobListHashLoadSave
 (\v2#.CContentServerDirectory_ServerInfo
 (\v2#.CGameRecording_ExportClip_Settings
 (\v2#.CGameRecording_ExportClip_Settings"i\n%CGameRecording_TakeScreenshot_Request
-(\v2#.CGameRecording_ExportClip_Settings"z\n)CGameRecording_ExportClipPreview_Response
 (\v2#.CMsgBluetoothManagerAdapterDetails"8\n*CBluetoothManager_GetDeviceDetails_Request
 (\v2#.CMsgClientGetClientDetailsResponse
 (\v2#.CMsgSteamDatagramCertificateSigned
@@ -4588,7 +4589,7 @@ $tICAPIJobListHashLoadSave
 *ZN18CSiteLicenseClient36YldStartConnectToSiteLicenseProviderERK10CIPAndPortRK8CSteamIDyE17RawSocketCallback
 *ZN18CSystemPerfManager27OnSystemDisplayStateChangedEP34SystemDisplayManagerStateUpdated_tEUlvE_
 *ZN23CSystemPerfManagerLinux31SetRefreshRateExternallyManagedEbEUlvE_
-*ZN24CChildEnvironmentBuilder16BuildEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
+*ZN24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZN24CSystemDisplayManagerX114InitEvEUlPN12LinuxHelpers22ScreenChangedDetails_tEE_
 *ZN25SteamNetworkingSocketsLib24CSteamNetworkingUtilsSDR23BeginFetchNetworkConfigEbbEUlPNS_14HTTPResponse_tEE_
 *ZN25SteamNetworkingSocketsLib27CSteamNetworkConnectionPipe27_APISendMessageToConnectionEPNS_23CSteamNetworkingMessageExPbE23DeliverMsgToPipePartner
@@ -23794,7 +23795,6 @@ GetGameIDForPID
 GetGameOverlayUIInstanceFocusGameID
 GetGameResolutionOverride: override: '%s'
 GetGameSystemVolume
-GetGameWindowPos
 GetGameWithLocalScreenshots
 GetGamepadIndexChangeCounter
 GetGamepadIndexForControllerIndex
@@ -35444,6 +35444,7 @@ Zulu
 \n(CFileVerification_SignatureCheck_Request
 \n(CGameNotifications_CreateSession_Request
 \n(CGameNotifications_UpdateSession_Request
+\n(CGameRecording_ExportClipPreview_Request
 \n(CMsgClientStartPeerContentServerResponse
 \n(CMsgSteamDatagramGameserverPingReplyData
 \n(CParental_EnableParentalSettings_Request
@@ -52211,6 +52212,7 @@ rules
 rumble_enabled
 rumble_intensity
 rumble_type
+run_policy_checks
 running
 runs CEF GPU processing as thread of browser process
 runs CEF processes in single process
@@ -53385,7 +53387,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct  4 2024 02:17:33
+steam Oct  5 2024 01:50:15
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
