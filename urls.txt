@@ -387,6 +387,7 @@ https://steamcommunity.com/public/javascript/workshop_previewplayer.js?__TIME__&
 https://steamcommunity.com/public/javascript/workshop_suggest_serviceproviders.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/account_linking.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/apphub.js?__TIME__&l=english&_cdn=cloudflare
+https://steamcommunity.com/public/shared/javascript/auth_refresh.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/billingaddress.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/dash_player.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/joinsteam.js?__TIME__&l=english&_cdn=cloudflare
