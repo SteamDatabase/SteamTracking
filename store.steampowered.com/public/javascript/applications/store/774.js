@@ -2379,8 +2379,7 @@
                 ie,
                 { className: (0, N.A)(X.Specials) },
                 t
-                  ?.filter(({ item: e }) => !!e.assets?.header)
-                  .slice(0, 3)
+                  ?.slice(0, 3)
                   .map(({ item_id: e, item: t }) =>
                     i.createElement(ne, {
                       key: (0, M.wD)(e),

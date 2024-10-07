@@ -86494,45 +86494,46 @@
         ee = (0, n.PA)((e) => {
           const {
               info: t,
-              name: r,
-              strStoreUrl: i,
-              elElementToAppend: n,
-              bShowDemoButton: s,
-              bHideBottomHalf: o,
-              bHidePrice: l,
-              bShowDeckCompatibilityDialog: c,
-              bUseSubscriptionLayout: m,
-              nCreatorAccountID: u,
-              bPreventNavigation: d,
+              displayInfo: r,
+              name: i,
+              strStoreUrl: n,
+              elElementToAppend: s,
+              bShowDemoButton: o,
+              bHideBottomHalf: l,
+              bHidePrice: c,
+              bShowDeckCompatibilityDialog: m,
+              bUseSubscriptionLayout: u,
+              nCreatorAccountID: d,
+              bPreventNavigation: p,
             } = e,
-            [p, _] = (0, a.useState)(!1),
-            [g, y] = (0, a.useState)(""),
-            [B] = (0, f.G6)(t.id, (0, h.SW)(t.type), {
-              include_assets: !0,
+            [_, g] = (0, a.useState)(!1),
+            [y, B] = (0, a.useState)(""),
+            [w] = (0, f.G6)(t.id, (0, h.SW)(t.type), {
               include_release: !0,
               include_platforms: !0,
               include_tag_count: 20,
             }),
-            w = !m && !s && !n,
-            M = 0 == B?.GetStoreItemType();
+            [M] = (0, f.G6)(r.id, (0, h.SW)(r.type), { include_assets: !0 }),
+            v = !u && !o && !s,
+            I = 0 == w?.GetStoreItemType();
           return a.createElement(
             "div",
             {
               className: W().BottomShelf,
-              style: { transform: o && p ? g : "" },
-              onMouseEnter: () => _(!0),
-              onFocus: () => _(!0),
-              onMouseLeave: () => _(!1),
-              onBlur: () => _(!1),
+              style: { transform: l && _ ? y : "" },
+              onMouseEnter: () => g(!0),
+              onFocus: () => g(!0),
+              onMouseLeave: () => g(!1),
+              onBlur: () => g(!1),
             },
             a.createElement(
               "a",
               {
-                href: d ? null : i,
+                href: p ? null : n,
                 target: O.TS.IN_CLIENT ? void 0 : "_blank",
                 className: W().Midline,
               },
-              Boolean(B) &&
+              Boolean(M) &&
                 a.createElement(
                   "div",
                   { className: W().CapsuleImageAnchorPoint },
@@ -86546,12 +86547,12 @@
                     },
                     a.createElement("img", {
                       loading: "lazy",
-                      src: B?.GetAssets().GetHeaderURL(),
-                      alt: B?.GetName(),
+                      src: M?.GetAssets().GetHeaderURL(),
+                      alt: w?.GetName(),
                     }),
                   ),
                 ),
-              Boolean(!l && !m) &&
+              Boolean(!c && !u) &&
                 a.createElement(
                   "div",
                   { className: W().Price },
@@ -86562,7 +86563,7 @@
               "div",
               {
                 className: W().BottomShelfOffScreen,
-                ref: (e) => y(`translateY( -${e?.clientHeight || 0}px )`),
+                ref: (e) => B(`translateY( -${e?.clientHeight || 0}px )`),
               },
               a.createElement(
                 "div",
@@ -86570,18 +86571,18 @@
                 a.createElement(
                   "a",
                   {
-                    href: d ? null : i,
+                    href: p ? null : n,
                     target: O.TS.IN_CLIENT ? void 0 : "_blank",
                   },
                   a.createElement(
                     "div",
                     { className: W().GameTitle },
-                    B?.GetName() || r,
+                    w?.GetName() || i,
                   ),
                 ),
-                Boolean(B) && a.createElement($, { rgTagIDs: B.GetTagIDs() }),
-                Boolean(!c && B) && a.createElement(Y, { appInfo: t }),
-                Boolean(!c && w) &&
+                Boolean(w) && a.createElement($, { rgTagIDs: w.GetTagIDs() }),
+                Boolean(!m && w) && a.createElement(Y, { appInfo: t }),
+                Boolean(!m && v) &&
                   a.createElement(
                     "div",
                     { className: W().ReviewsAndRelease },
@@ -86589,20 +86590,20 @@
                       item: t,
                       strClassName: W().PlatformDisplay,
                     }),
-                    Boolean(B?.GetFormattedSteamReleaseDate()) &&
+                    Boolean(w?.GetFormattedSteamReleaseDate()) &&
                       a.createElement(
                         "div",
                         { className: W().ReleaseDate },
-                        B?.GetFormattedSteamReleaseDate(),
+                        w?.GetFormattedSteamReleaseDate(),
                       ),
                   ),
-                s &&
+                o &&
                   a.createElement(k.j, { info: t, className: W().DemoButton }),
-                Boolean(c && M) && a.createElement(b.Q8, { storeItem: B }),
-                Boolean(n) && n,
-                Boolean(m && M) &&
+                Boolean(m && I) && a.createElement(b.Q8, { storeItem: w }),
+                Boolean(s) && s,
+                Boolean(u && I) &&
                   a.createElement(R.E, { appid: t.id, bIsMuted: !1 }),
-                u && a.createElement(J, { nCreatorAccountID: u }),
+                d && a.createElement(J, { nCreatorAccountID: d }),
               ),
             ),
           );
@@ -86613,51 +86614,42 @@
           }, []);
           const {
             info: t,
-            strStoreUrl: r,
-            bHideBottomHalf: i,
-            bShowDeckCompatibilityDialog: n,
-            bShowWishlistButton: s = !0,
+            displayInfo: r,
+            strStoreUrl: i,
+            bHideBottomHalf: n,
+            bShowDeckCompatibilityDialog: s,
+            bShowWishlistButton: o = !0,
           } = e;
-          let o;
+          let l;
           return (
-            t.overrideNavigation && (o = (e) => t.overrideNavigation()),
+            t.overrideNavigation && (l = (e) => t.overrideNavigation()),
             a.createElement(
               "div",
               {
                 className: (0, F.A)(
                   W().GameHoverCapsuleCtn,
                   N().InGameHover,
-                  i && W().UseHidingBottomHalf,
+                  n && W().UseHidingBottomHalf,
                 ),
-                onClick: o,
+                onClick: l,
               },
               a.createElement(
                 "a",
                 {
-                  href: o ? null : r,
+                  href: l ? null : i,
                   target: O.TS.IN_CLIENT ? void 0 : "_blank",
                   className: W().TrailerAnchorStoreLink,
                 },
-                Boolean(s && !n && !o) &&
-                  a.createElement(X, { appID: t.id, snr: e.strSNR }),
-                a.createElement(Q, { info: t }),
+                Boolean(o && !s && !l) &&
+                  a.createElement(X, { appID: r.id, snr: e.strSNR }),
+                a.createElement(Q, { info: r }),
               ),
-              a.createElement(ee, { ...e, bPreventNavigation: Boolean(o) }),
+              a.createElement(ee, { ...e, bPreventNavigation: Boolean(l) }),
             )
           );
         }),
         re = 150;
       function ie(e) {
-        const { item: t, name: r } = e,
-          [i] = (0, f.G6)(t.id, (0, h.SW)(t.type), {});
-        if (!i && !r) return null;
-        if (1 == i?.GetStoreItemType() && 1 == i?.GetIncludedAppIDs().length) {
-          const t = { id: i.GetIncludedAppIDs()[0], type: "game" };
-          return a.createElement(ne, { ...e, item: t });
-        }
-        return a.createElement(ne, { ...e });
-      }
-      function ne(e) {
         const {
             item: t,
             name: r,
@@ -86679,21 +86671,26 @@
           w = (0, O.Qn)();
         if (!b && !r) return null;
         if (w) return a.createElement(a.Fragment, null, e.children);
-        const S = "hiding" == q(),
-          C =
+        let S = { id: t.id, type: t.type };
+        1 == b?.GetStoreItemType() &&
+          1 == b?.GetIncludedAppIDs().length &&
+          (S = { id: b.GetIncludedAppIDs()[0], type: "game" });
+        const C = "hiding" == q(),
+          M =
             i || !b
               ? null
               : (0, u.wJ)(`${b?.GetStorePageURL(o)}${m ? `?${m}` : ""}`, y),
-          M = a.createElement(te, {
+          v = a.createElement(te, {
             info: t,
+            displayInfo: S,
             name: r,
             bPreventNavigation: i,
-            strStoreUrl: C,
+            strStoreUrl: M,
             elElementToAppend: n,
             bShowDemoButton: s,
             bPreferDemoStorePage: o,
             bShowDeckCompatibilityDialog: p,
-            bHideBottomHalf: S,
+            bHideBottomHalf: C,
             bHidePrice: l,
             bUseSubscriptionLayout: c,
             strSNR: B,
@@ -86701,12 +86698,12 @@
             bShowWishlistButton: _,
           });
         return a.createElement(
-          se,
-          { hoverContent: M, strClickUrl: C, ...g },
+          ae,
+          { hoverContent: v, strClickUrl: M, ...g },
           e.children,
         );
       }
-      function ae(e) {
+      function ne(e) {
         const { hoverProps: t, children: r } = e,
           i = a.useCallback((e) => e?.focus(), []);
         return a.createElement(
@@ -86728,7 +86725,7 @@
           ),
         );
       }
-      function se(e) {
+      function ae(e) {
         const {
             hoverContent: t,
             hoverProps: r,
@@ -86774,14 +86771,14 @@
           },
           m &&
             a.createElement(
-              oe,
+              se,
               { visible: d, target: _, nDelayShowMs: i, hoverProps: r },
               t,
             ),
           a.createElement(y.tH, null, s),
         );
       }
-      function oe(e) {
+      function se(e) {
         const {
             hoverProps: t,
             nDelayShowMs: r = re,
@@ -86833,7 +86830,7 @@
           };
         return s.createPortal(
           a.createElement(
-            ae,
+            ne,
             { hoverProps: u },
             a.createElement(y.tH, null, o),
           ),
@@ -87127,7 +87124,7 @@
     },
     45359: (e, t, r) => {
       "use strict";
-      r.d(t, { _Q: () => Y, aU: () => $, pb: () => q, qn: () => K });
+      r.d(t, { _Q: () => X, aU: () => Y, pb: () => V, qn: () => Q });
       var i = r(75844),
         n = r(90626),
         a = r(6866),
@@ -87168,8 +87165,9 @@
         N = r(41951),
         j = r(60014),
         G = r(65937),
-        x = r(14326);
-      const q = (0, i.PA)((e) => {
+        x = r(14326),
+        q = r(81393);
+      const V = (0, i.PA)((e) => {
           const {
               bIsHovered: t,
               setIsHovered: r,
@@ -87195,13 +87193,13 @@
             } = e,
             q = (0, j.n9)(),
             V = n.useMemo(() => i?.GetIncludedAppIDsOrSelf(), [i]),
-            Z = (0, n.useRef)(null),
+            H = (0, n.useRef)(null),
             [K, Q] = (0, n.useState)(!1),
-            Y = (0, O.Qn)();
+            $ = (0, O.Qn)();
           if (
             ((0, n.useEffect)(() => {
-              Z.current && Q(Z.current.offsetWidth < 370);
-            }, [Z]),
+              H.current && Q(H.current.offsetWidth < 370);
+            }, [H]),
             !i)
           )
             return null;
@@ -87222,7 +87220,7 @@
                 : [],
             ae = 0 == i.GetStoreItemType(),
             se = (0, u.wJ)(re, q),
-            oe = Y || i.BIsReleased() || i.BIsPrePurchase();
+            oe = $ || i.BIsReleased() || i.BIsPrePurchase();
           return n.createElement(
             R.oj,
             { appid: ae ? i.GetAppID() : void 0 },
@@ -87249,7 +87247,7 @@
                     U().SaleItemDefaultCapsuleDisplay,
                     x ? U().MarketingMessage : "",
                   ),
-                  ...(0, M.S)(i, q, Y, h, void 0, G),
+                  ...(0, M.S)(i, q, $, h, void 0, G),
                   preferredFocus: ie,
                 },
                 n.createElement(
@@ -87266,7 +87264,7 @@
                       "div",
                       { className: U().StoreSaleWidgetImage },
                       n.createElement(w.V, { appids: V }),
-                      n.createElement($, { info: _, imageType: "header" }),
+                      n.createElement(Y, { info: _, imageType: "header" }),
                       n.createElement(z.S, {
                         eDeckCompatibilityCategory:
                           i.GetPlatforms()?.steam_deck_compat_category,
@@ -87333,7 +87331,7 @@
                       "div",
                       {
                         className: U().WidgetReleaseDateAndPlatformCtn,
-                        ref: Z,
+                        ref: H,
                       },
                       ae &&
                         n.createElement(
@@ -87361,7 +87359,7 @@
                     ),
                     W && n.createElement(L.Jz, { appInfo: d }),
                   ),
-                  ie && n.createElement(H, { info: p }),
+                  ie && n.createElement(Z, { info: p }),
                   Boolean(ae && ee) &&
                     n.createElement(
                       "div",
@@ -87413,7 +87411,7 @@
                   n.createElement(
                     "div",
                     { className: U().StoreSaleWidgetBgTint },
-                    n.createElement($, { info: d, imageType: "header" }),
+                    n.createElement(Y, { info: d, imageType: "header" }),
                   ),
                 ),
               ),
@@ -87427,8 +87425,8 @@
               ),
           );
         }),
-        V = 6;
-      function H(e) {
+        H = 6;
+      function Z(e) {
         const { info: t } = e,
           [r] = (0, h.G6)(t.id, (0, g.SW)(t.type), {}),
           [i, a] = n.useState(null);
@@ -87455,9 +87453,9 @@
                   "div",
                   { className: U().PreviewCtn },
                   i
-                    .slice(0, V)
+                    .slice(0, H)
                     .map((e) =>
-                      n.createElement(Z, {
+                      n.createElement(K, {
                         key: `preview${e.id}_${e.type}`,
                         info: e,
                       }),
@@ -87467,7 +87465,7 @@
             : null
         );
       }
-      function Z(e) {
+      function K(e) {
         const { info: t } = e,
           [r] = (0, h.mZ)(t.id, (0, g.SW)(t.type), { include_assets: !0 }),
           i = r?.GetAssets().GetSmallCapsuleURL();
@@ -87486,7 +87484,7 @@
           }),
         );
       }
-      const K = (e) => {
+      const Q = (e) => {
           const {
               info: t,
               bShowAsMuted: r,
@@ -87524,7 +87522,7 @@
                     o,
                   ),
                 },
-                l && n.createElement(Q, { creatorAccountID: l, ...e }),
+                l && n.createElement($, { creatorAccountID: l, ...e }),
                 u &&
                   n.createElement(G.h, {
                     info: t,
@@ -87557,7 +87555,7 @@
             )
           );
         },
-        Q = (e) => {
+        $ = (e) => {
           const { creatorAccountID: t, bShowAsMuted: r, strClassName: i } = e,
             [a, s] = (0, p.TB)(t),
             o = a || !s ? (0, c.t)(null, "medium") : s.avatar_medium_url;
@@ -87575,42 +87573,63 @@
             ),
           );
         };
-      function $(e) {
+      function Y(e) {
         const { info: t, imageType: r } = e,
           [i] = (0, h.G6)(t.id, (0, g.SW)(t.type), { include_assets: !0 });
-        if (!i)
+        let a;
+        i &&
+          1 == i.GetIncludedAppIDs().length &&
+          !(function (e, t) {
+            const r = e?.GetAssets();
+            if (!r) return !1;
+            switch (t) {
+              case "header":
+                return !!r.GetHeaderURL();
+              case "main":
+                return !!r.GetMainCapsuleURL();
+              case "library":
+                return !!r.GetHeroCapsuleURL() || !!r.GetLibraryCapsuleURL();
+              default:
+                return (0, q.z)(t, `Unhandled imageType: ${t}`), !1;
+            }
+          })(i, r) &&
+          [1, 2].includes(i.GetStoreItemType()) &&
+          (a = i.GetIncludedAppIDs()[0]);
+        const [s] = (0, h.t7)(a, { include_assets: !0 }),
+          o = s?.BIsVisible() ? s : i;
+        if (!o)
           return n.createElement(k.t, {
             size: "small",
             position: "center",
             string: (0, D.we)("#Loading"),
           });
         if ("library" === r) return n.createElement(E.G, { info: t });
-        let a,
-          s,
-          o = (0, E.N)(i, "header" === r),
-          l = "";
+        let l,
+          c,
+          m = (0, E.N)(o, "header" === r),
+          u = "";
         if ("main" === r)
-          (a = U().mainCapsuleImgWidth),
-            (s = U().mainCapsuleImgHeight),
-            (l = U().MainCapsuleImageContainer);
+          (l = U().mainCapsuleImgWidth),
+            (c = U().mainCapsuleImgHeight),
+            (u = U().MainCapsuleImageContainer);
         else
-          (a = U().headerCapsuleImgWidth),
-            (s = U().headerCapsuleImgHeight),
-            (l = U().HeaderCapsuleImageContainer);
+          (l = U().headerCapsuleImgWidth),
+            (c = U().headerCapsuleImgHeight),
+            (u = U().HeaderCapsuleImageContainer);
         return n.createElement(
           "div",
-          { className: (0, A.A)(l, "CapsuleImageCtn") },
+          { className: (0, A.A)(u, "CapsuleImageCtn") },
           n.createElement(F.o, {
             lazyLoad: !0,
-            srcs: o,
+            srcs: m,
             className: (0, A.A)(U().CapsuleImage),
-            width: a,
-            height: s,
-            alt: i.GetName(),
+            width: l,
+            height: c,
+            alt: o.GetName(),
           }),
         );
       }
-      const Y = (0, i.PA)((e) => {
+      const X = (0, i.PA)((e) => {
         const t = D.NT.GetWithFallback(
           e.link.localized_link_capsule,
           e.language,
@@ -88820,28 +88839,27 @@
     },
     98556: (e, t, r) => {
       "use strict";
-      r.d(t, { G: () => d, N: () => p });
+      r.d(t, { G: () => u, N: () => d });
       var i = r(90626),
-        n = r(78327),
-        a = r(16021),
-        s = r(62792),
-        o = r(55263),
-        l = r(26296),
-        c = r(18654),
-        m = r.n(c),
-        u = r(52038);
-      function d(e) {
+        n = r(16021),
+        a = r(62792),
+        s = r(55263),
+        o = r(26296),
+        l = r(18654),
+        c = r.n(l),
+        m = r(52038);
+      function u(e) {
         const { info: t, bPreferLibrary: r } = e,
-          [n] = (0, o.G6)(t.id, (0, s.SW)(t.type), { include_assets: !0 }),
-          [c, d] = i.useState(0);
-        if (!n)
+          [l] = (0, s.G6)(t.id, (0, a.SW)(t.type), { include_assets: !0 }),
+          [u, p] = i.useState(0);
+        if (!l)
           return i.createElement("div", {
-            className: m().HeroCapsuleImageContainer,
+            className: c().HeroCapsuleImageContainer,
           });
-        let _ = n.GetAssets().GetHeroCapsuleURL(),
-          g = n.GetAssets().GetLibraryCapsuleURL();
-        if (n.GetIncludedAppIDs()?.length > 0 && !_) {
-          const e = a.A.Get().GetApp(n.GetIncludedAppIDs()[0]);
+        let _ = l.GetAssets().GetHeroCapsuleURL(),
+          g = l.GetAssets().GetLibraryCapsuleURL();
+        if (l.GetIncludedAppIDs()?.length > 0 && !_) {
+          const e = n.A.Get().GetApp(l.GetIncludedAppIDs()[0]);
           e &&
             (_ || (_ = e.GetAssets().GetHeroCapsuleURL()),
             g || (g = e.GetAssets().GetLibraryCapsuleURL()));
@@ -88850,69 +88868,69 @@
           return i.createElement(
             "div",
             {
-              className: (0, u.A)(
-                m().HeroCapsuleImageContainer,
+              className: (0, m.A)(
+                c().HeroCapsuleImageContainer,
                 "HeroCapsuleImageContainer",
               ),
             },
             i.createElement("img", {
               src: _,
-              className: m().CapsuleImage,
-              alt: n.GetName(),
+              className: c().CapsuleImage,
+              alt: l.GetName(),
             }),
           );
         if (g)
           return i.createElement(
             "div",
             {
-              className: (0, u.A)(
-                m().LibraryFallbackAssetImageContainer,
-                m().VerticalCapsule,
-                r ? m().ForceLibrarySizing : "",
+              className: (0, m.A)(
+                c().LibraryFallbackAssetImageContainer,
+                c().VerticalCapsule,
+                r ? c().ForceLibrarySizing : "",
               ),
             },
             i.createElement("div", {
-              className: m().FallbackBackground,
+              className: c().FallbackBackground,
               style: { backgroundImage: `url(${g})` },
             }),
             i.createElement("img", {
               src: g,
-              className: m().CapsuleImage,
-              alt: n.GetName(),
+              className: c().CapsuleImage,
+              alt: l.GetName(),
             }),
           );
-        const h = p(n, !0),
+        const h = d(l, !0),
           f = h.length - 1,
           b = (e) => {
             const t = h.indexOf(e);
-            t >= f && t < h.length - 1 && d(t + 1);
+            t >= f && t < h.length - 1 && p(t + 1);
           };
-        if (c < h.length) {
-          const e = h[c];
+        if (u < h.length) {
+          const e = h[u];
           return i.createElement(
             "div",
-            { className: m().LibraryFallbackAssetImageContainer },
+            { className: c().LibraryFallbackAssetImageContainer },
             i.createElement("div", {
-              className: m().FallbackBackground,
+              className: c().FallbackBackground,
               style: { backgroundImage: `url(${e})` },
             }),
-            i.createElement(l.o, {
+            i.createElement(o.o, {
               lazyLoad: !0,
               srcs: h,
-              className: m().CapsuleImage,
-              alt: n.GetName(),
+              className: c().CapsuleImage,
+              alt: l.GetName(),
               onImageError: b,
             }),
           );
         }
         return i.createElement("div", {
-          className: m().HeroCapsuleImageContainer,
+          className: c().HeroCapsuleImageContainer,
         });
       }
-      function p(e, t) {
+      function d(e, t) {
         let r = [];
-        if (
-          (e.GetAssets() &&
+        return (
+          e.GetAssets() &&
             (t
               ? r.push(
                   e.GetAssets().GetHeaderURL(),
@@ -88922,26 +88940,8 @@
                   e.GetAssets().GetMainCapsuleURL(),
                   e.GetAssets().GetHeaderURL(),
                 )),
-          1 == e.GetIncludedAppIDs()?.length)
-        ) {
-          const i = a.A.Get().GetApp(e.GetIncludedAppIDs()[0]);
-          i && i.GetAssets()
-            ? t
-              ? r.push(
-                  i.GetAssets().GetHeaderURL(),
-                  i.GetAssets().GetMainCapsuleURL(),
-                )
-              : r.push(
-                  i.GetAssets().GetMainCapsuleURL(),
-                  i.GetAssets().GetHeaderURL(),
-                )
-            : ("dev" != n.TS.WEB_UNIVERSE && "beta" != n.TS.WEB_UNIVERSE) ||
-              console.log(
-                "PushDefaultCapsuleImages single app in package/bundle missing:",
-                e.GetIncludedAppIDs()[0],
-              );
-        }
-        return r.filter((e) => !!e);
+          r.filter((e) => !!e)
+        );
       }
     },
     1078: (e, t, r) => {
@@ -91711,16 +91711,18 @@
           e.onImageError && e.onImageError(e.srcs[u]),
             u + 1 < e.srcs.length && d(u + 1);
         }, [u, e]);
-        return i.createElement("img", {
-          className: t,
-          src: r[u],
-          crossOrigin: l,
-          onError: p,
-          loading: n ? "lazy" : void 0,
-          width: a,
-          height: s,
-          alt: o,
-        });
+        return 0 == r.length
+          ? null
+          : i.createElement("img", {
+              className: t,
+              src: r[u],
+              crossOrigin: l,
+              onError: p,
+              loading: n ? "lazy" : void 0,
+              width: a,
+              height: s,
+              alt: o,
+            });
       }
       function l(e) {
         const [t, r] = i.useState(!1),
