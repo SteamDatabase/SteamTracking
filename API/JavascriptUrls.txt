@@ -2539,6 +2539,7 @@ https://img.youtube.com/vi/${}/0.jpg
 https://imgur.com
 https://instagram.com/dota2
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
+https://login.steampowered.com/jwt/ajaxrefresh
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
 https://partner.steamgames.com
 https://partner.steamgames.com//apps/landing/${appid}
