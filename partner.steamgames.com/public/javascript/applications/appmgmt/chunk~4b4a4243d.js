@@ -1056,7 +1056,7 @@
       var E = a(44165),
         v = a(62792),
         M = a(55263),
-        T = a(8395),
+        T = a(71541),
         L = a(56330),
         I = a(22797),
         N = a(61859),
@@ -1227,7 +1227,7 @@
         n = a.n(r),
         s = a(90626),
         i = a(55263),
-        o = a(8395),
+        o = a(71541),
         l = a(6144),
         c = a(52038),
         u = a(61859),
@@ -1677,7 +1677,13 @@
     },
     4544: (e, t, a) => {
       "use strict";
-      a.d(t, { Uh: () => i, VX: () => n, mn: () => o, pV: () => s });
+      a.d(t, {
+        Uh: () => o,
+        VX: () => n,
+        mn: () => l,
+        nU: () => i,
+        pV: () => s,
+      });
       var r = a(22837);
       function n(e, t) {
         const a = (0, r.Lg)(t);
@@ -1687,7 +1693,11 @@
         const n = (0, r.Lg)(t);
         return e[n] != a && ((e[n] = a), !0);
       }
-      function i(e) {
+      function i(e, t) {
+        const a = (0, r.Lg)(t);
+        return Boolean(e?.[a]);
+      }
+      function o(e) {
         if (!e) return 0;
         let t = 0;
         for (let a = 0; a < 31; ++a) {
@@ -1695,7 +1705,7 @@
         }
         return t;
       }
-      function o(e) {
+      function l(e) {
         const t = new Array();
         for (let a = 0; a < 31; ++a) {
           const n = (0, r.Lg)(a);
@@ -1706,23 +1716,31 @@
     },
     63556: (e, t, a) => {
       "use strict";
-      a.d(t, { E: () => d, O: () => u });
+      a.d(t, { E: () => m, O: () => d });
       var r = a(34629),
         n = a(14947),
         s = a(65946),
         i = a(22837),
         o = a(62490),
         l = a(6419),
-        c = a(78327);
-      class u {
+        c = a(78327),
+        u = a(91986);
+      class d {
         m_eCurLang = (0, i.sf)(c.TS.LANGUAGE);
         m_rgHasData = (0, o.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
+        m_callback = new u.l();
+        GetCallback() {
+          return this.m_callback;
+        }
         GetCurEditLanguage() {
           return this.m_eCurLang;
         }
         SetCurEditLanguage(e) {
-          return this.m_eCurLang != e && ((this.m_eCurLang = e), !0);
+          return (
+            this.m_eCurLang != e &&
+            ((this.m_eCurLang = e), this.GetCallback().Dispatch(e), !0)
+          );
         }
         SetHasLanguage(e) {
           e.forEach((e, t) => {
@@ -1742,27 +1760,27 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            u.s_globalSingletonStore ||
-              ((u.s_globalSingletonStore = new u()),
+            d.s_globalSingletonStore ||
+              ((d.s_globalSingletonStore = new d()),
               "dev" == c.TS.WEB_UNIVERSE &&
-                (window.DUS = u.s_globalSingletonStore)),
-            u.s_globalSingletonStore
+                (window.DUS = d.s_globalSingletonStore)),
+            d.s_globalSingletonStore
           );
         }
         constructor() {
           (0, n.Gn)(this);
         }
       }
-      function d() {
-        return (0, s.q3)(() => u.Get().GetCurEditLanguage());
+      function m() {
+        return (0, s.q3)(() => d.Get().GetCurEditLanguage());
       }
-      (0, r.Cg)([n.sH], u.prototype, "m_eCurLang", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_rgHasData", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_bHasLocalizationContext", void 0),
-        (0, r.Cg)([l.o], u.prototype, "GetCurEditLanguage", null),
-        (0, r.Cg)([l.o], u.prototype, "SetCurEditLanguage", null),
-        (0, r.Cg)([n.XI.bound], u.prototype, "SetHasLanguage", null),
-        (0, r.Cg)([l.o], u.prototype, "BHasLanguageData", null);
+      (0, r.Cg)([n.sH], d.prototype, "m_eCurLang", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_rgHasData", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_bHasLocalizationContext", void 0),
+        (0, r.Cg)([l.o], d.prototype, "GetCurEditLanguage", null),
+        (0, r.Cg)([l.o], d.prototype, "SetCurEditLanguage", null),
+        (0, r.Cg)([n.XI.bound], d.prototype, "SetHasLanguage", null),
+        (0, r.Cg)([l.o], d.prototype, "BHasLanguageData", null);
     },
     96001: (e, t, a) => {
       "use strict";
@@ -1825,7 +1843,7 @@
       "use strict";
       a.d(t, { hA: () => S });
       var r = a(90626),
-        n = a(85889),
+        n = a(76217),
         s = a(67165),
         i = a(30894),
         o = (a(55263), a(45699)),
@@ -2196,7 +2214,7 @@
         c = a.n(l),
         u = a(32754),
         d = a(51272),
-        m = a(85889);
+        m = a(76217);
       class p extends r.Component {
         state = { activeTab: "" };
         componentDidMount() {

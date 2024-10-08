@@ -1059,7 +1059,7 @@
         c = n(60746),
         m = n(16021),
         d = n(55263),
-        u = n(7068),
+        u = n(33737),
         p = n(12155),
         E = n(4434),
         h = n(52038),
@@ -1454,7 +1454,7 @@
       }
       (0, a.Cg)([y.sH], A.prototype, "m_mapClanReposted", void 0);
       var w = n(17720),
-        f = n(7068),
+        f = n(33737),
         B = n(84811),
         k = n(22797);
       const b = (0, r.PA)((e) => {
@@ -2427,7 +2427,7 @@
         g = n.n(M),
         I = n(1909),
         T = n(73067),
-        L = n(7068);
+        L = n(33737);
       class C extends o.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {

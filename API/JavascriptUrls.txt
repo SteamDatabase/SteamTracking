@@ -433,6 +433,7 @@ ${IMG_URL}${}/icons/scroll_arrow.png
 ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
 ${IMG_URL}/${}
+${IMG_URL}/checkout/computer.png
 ${IMG_URL}/cs2/audio.png
 ${IMG_URL}/cs2/header_ctt.png
 ${IMG_URL}/cs2/logo_cs2_header.svg
@@ -1295,6 +1296,7 @@ ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxgetcontrollersused
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
+${STORE_BASE_URL}account/emailoptout
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
@@ -1474,6 +1476,7 @@ ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/?appids=${appid}
 ${STORE_BASE_URL}news/app/${appid}?emclan=${}&emgid=${GID}
 ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
+${STORE_BASE_URL}news/app/${}/view/${event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
@@ -1567,6 +1570,7 @@ ${STORE_BASE_URL}sub/${id}
 ${STORE_BASE_URL}sub/${}
 ${STORE_BASE_URL}subs/${packageid}
 ${STORE_BASE_URL}subscriber_agreement
+${STORE_BASE_URL}subscriber_agreement/
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
@@ -2451,6 +2455,7 @@ https://help.steampowered.com/en/ticketmaster/ticket/
 https://help.steampowered.com/en/wizard/HelpValveMerch
 https://help.steampowered.com/en/wizard/HelpWithEconMarket
 https://help.steampowered.com/en/wizard/HelpWithLogin
+https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=927
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938

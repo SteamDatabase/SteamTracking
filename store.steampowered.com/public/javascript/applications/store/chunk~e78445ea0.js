@@ -639,7 +639,7 @@
         o = r(12155),
         l = r(2627),
         c = r(61859),
-        u = r(7068),
+        u = r(33737),
         m = r(52038),
         d = r(79359),
         p = r(78327);
@@ -3089,15 +3089,16 @@
           Q = (0, h.Qn)(),
           j = (0, i.R7)(),
           H = j?.ownerWindow || window,
-          Z = (0, N.m)("DiscoveryQueueWizard"),
-          V = (0, f.b)();
+          Z = (0, Y.ru)(ue),
+          V = (0, N.m)("DiscoveryQueueWizard"),
+          K = (0, f.b)();
         (0, O.E)("ArrowLeft", (e) => z.current.MoveLeft(e)),
           (0, O.E)("Left", (e) => z.current.MoveLeft(e)),
           (0, O.E)("ArrowRight", (e) => z.current.MoveRight(e)),
           (0, O.E)("Right", (e) => z.current.MoveRight(e)),
           (0, O.E)("Escape", () => a && a()),
           (0, O.E)("Esc", () => a && a());
-        const Y = n.useCallback(
+        const X = n.useCallback(
             (e) => {
               const t = Math.max((H.innerWidth / 100) * 2.8 + 40, 24),
                 r = Math.min(1400, H.innerWidth / 1.3 - 2 * t - 48 + 220),
@@ -3106,10 +3107,10 @@
             },
             [H.innerWidth, w],
           ),
-          K = (0, b.wY)(Y),
-          X = n.useMemo(() => (9 / 16) * (w - 0.3 * w), [w]),
-          J = n.useMemo(() => Boolean(H.innerWidth < ce), [H]),
-          te = n.useCallback(
+          J = (0, b.wY)(X),
+          te = n.useMemo(() => (9 / 16) * (w - 0.3 * w), [w]),
+          ne = n.useMemo(() => Boolean(H.innerWidth < ce), [H]),
+          se = n.useCallback(
             async (e) => {
               let { appids: r } = await de(t, !e, e && l, m);
               if (e && !r.length) {
@@ -3125,15 +3126,15 @@
               r.push(oe),
                 r.push(le),
                 (n = n.concat(r)),
-                Z?.token?.reason || _(n),
+                V?.token?.reason || _(n),
                 e || z?.current?.MoveRight(),
                 ae("Loaded new discovery queue apps: ", r);
             },
-            [t, l, m, p, Z?.token?.reason],
+            [t, l, m, p, V?.token?.reason],
           );
         n.useEffect(() => {
           q ||
-            (te(!0).then(() => x(!0)),
+            (se(!0).then(() => x(!0)),
             u.Fm.Get().HintLoad(),
             B(
               (() => {
@@ -3141,9 +3142,9 @@
                 return `DiscoveryQueue_${h.iA.accountid}_${e}`;
               })(),
             ),
-            Y());
-        }, [t, te, Y, q]);
-        const ne = n.useCallback(
+            X());
+        }, [t, se, X, q]);
+        const me = n.useCallback(
             (e) =>
               p[e] == oe
                 ? "Summary" + e
@@ -3152,15 +3153,15 @@
                   : p[e].toString(),
             [p],
           ),
-          se = n.useCallback((e) => w, [w]),
-          me = n.useCallback(
-            (e) => {
-              ae("Currently focused index: ", e), V.AddImpression(p[e], ue);
-            },
-            [V, p],
-          ),
-          [he] = n.useState(new Map()),
+          he = n.useCallback((e) => w, [w]),
           ge = n.useCallback(
+            (e) => {
+              ae("Currently focused index: ", e), K.AddImpression(p[e], Z);
+            },
+            [K, Z, p],
+          ),
+          [fe] = n.useState(new Map()),
+          ye = n.useCallback(
             (r, i, s, l) => {
               if (p[r] == oe) {
                 let o = 0;
@@ -3169,29 +3170,29 @@
                 for (let e = r - 1; e >= 0 && p[e] !== oe && p[e] !== le; e--)
                   l++;
                 return (
-                  he.has(o) ||
-                    he.set(
+                  fe.has(o) ||
+                    fe.set(
                       o,
                       P.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, m),
                     ),
                   n.createElement(_e, {
                     ...e,
-                    key: ne(r),
+                    key: me(r),
                     focused: g === r,
-                    fnLoadNextQueue: te,
+                    fnLoadNextQueue: se,
                     fnCloseModal: a,
                     summaryCardIndex: o,
                     eStoreDiscoveryQueueType: t,
                     nItemHeight: s,
                     nItemWidth: i,
-                    viewedAppCount: (he.get(o) || 0) + l,
+                    viewedAppCount: (fe.get(o) || 0) + l,
                   })
                 );
               }
               return p[r] == le
                 ? n.createElement(o.Z, {
                     focusable: !1,
-                    style: { width: i, height: X },
+                    style: { width: i, height: te },
                     className: (0, L.A)(W().DiscoveryQueuePlaceholder),
                   })
                 : n.createElement(re, {
@@ -3199,8 +3200,8 @@
                     storePageFilter: m,
                     focused: g === r,
                     index: r,
-                    fnOnAppFocus: me,
-                    nItemHeight: X,
+                    fnOnAppFocus: ge,
+                    nItemHeight: te,
                     nItemWidth: i,
                     appID: p[r],
                     bPreferDemoStorePage: d,
@@ -3211,23 +3212,23 @@
                     }),
                     elDetails: n.createElement(ie, {
                       appID: p[r],
-                      bShowMinimizedDisplay: J,
+                      bShowMinimizedDisplay: ne,
                       eStoreDiscoveryQueueType: t,
                       storePageFilter: m,
                       bPreferDemoStorePage: d,
                     }),
                   });
             },
-            [p, X, J, t, m, g, me, d, he, e, ne, te, a],
+            [p, te, ne, t, m, g, ge, d, fe, e, me, se, a],
           ),
-          fe = n.useCallback(
+          we = n.useCallback(
             (e, t) => {
               Q || (M(e), T(t));
             },
             [Q],
           ),
-          ye = n.useCallback((e) => p[e] !== le, [p]),
-          we = n.useCallback(
+          be = n.useCallback((e) => p[e] !== le, [p]),
+          Se = n.useCallback(
             (e, r) => {
               ae("New Focused Column: ", r, " Prev Focused Column: ", e),
                 p[e] !== le &&
@@ -3237,7 +3238,7 @@
             },
             [t, p, m],
           ),
-          be = n.useCallback(
+          ve = n.useCallback(
             (e, t) => {
               const r = [];
               for (let i = 0; i < t; ++i)
@@ -3256,7 +3257,7 @@
             },
             [g, p],
           ),
-          Se = n.useMemo(() => {
+          Ce = n.useMemo(() => {
             let e = 0;
             for (let t = g; t >= 0; --t)
               if (p[t] === le || p[t] === oe) {
@@ -3268,7 +3269,7 @@
               t++;
             return [g - e - 1, t];
           }, [g, p]),
-          ve = (0, P.WX)(t, m);
+          Ie = (0, P.WX)(t, m);
         return q
           ? n.createElement(
               D.EN,
@@ -3324,14 +3325,14 @@
                     ),
                     n.createElement(
                       "div",
-                      { ref: K, className: W().DiscoveryQueueWrapper },
+                      { ref: J, className: W().DiscoveryQueueWrapper },
                       n.createElement(
                         o.Z,
                         { "flow-children": "row" },
                         n.createElement(
                           "div",
                           { className: W().DiscoveryQueueName },
-                          ve,
+                          Ie,
                         ),
                       ),
                       n.createElement(
@@ -3350,17 +3351,17 @@
                         name: I,
                         className: W().DiscoveryQueueCarousel,
                         ref: z,
-                        fnDoesItemTakeFocus: ye,
-                        fnOnFocusedColumnChange: we,
-                        fnUpdateArrows: fe,
+                        fnDoesItemTakeFocus: be,
+                        fnOnFocusedColumnChange: Se,
+                        fnUpdateArrows: we,
                         nNumItems: p.length,
-                        nHeight: X,
+                        nHeight: te,
                         scrollDuration: 400,
-                        nItemHeight: X,
+                        nItemHeight: te,
                         nItemMarginX: v,
-                        fnGetColumnWidth: se,
-                        fnGetId: ne,
-                        fnItemRenderer: ge,
+                        fnGetColumnWidth: he,
+                        fnGetId: me,
+                        fnItemRenderer: ye,
                         scrollToAlignment: "center",
                         nIndexLeftmost: 1,
                         initialColumn: 1,
@@ -3384,7 +3385,7 @@
                         n.createElement(
                           o.Z,
                           { "flow-children": "row" },
-                          be(Se[0], Se[1]),
+                          ve(Ce[0], Ce[1]),
                         ),
                     ),
                     n.createElement(

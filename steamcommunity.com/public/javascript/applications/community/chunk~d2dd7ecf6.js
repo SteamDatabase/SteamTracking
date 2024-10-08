@@ -235,7 +235,7 @@
         k = a(61859),
         f = a(73745),
         L = a(17720),
-        b = a(7068),
+        b = a(33737),
         y = a(9709),
         N = a(9449),
         R = a(2472),
@@ -843,7 +843,7 @@
     },
     35685: (e, t, a) => {
       "use strict";
-      a.d(t, { kH: () => z, rN: () => M, uY: () => H, zA: () => P });
+      a.d(t, { kH: () => j, rN: () => F, uY: () => P, zA: () => z });
       var n = a(22837),
         l = a(41735),
         r = a.n(l),
@@ -878,8 +878,9 @@
         T = a.n(G),
         O = a(29863),
         x = a(18654),
-        B = a.n(x);
-      const M = (0, o.PA)((e) => {
+        B = a.n(x),
+        M = a(84518);
+      const F = (0, o.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -1013,7 +1014,7 @@
                   navEntryPreferPosition: g.iU.PREFERRED_CHILD,
                 },
                 p.map((e) =>
-                  s.createElement(H, { key: e.AnnouncementGID, event: e }),
+                  s.createElement(P, { key: e.AnnouncementGID, event: e }),
                 ),
               ),
               Boolean(w) &&
@@ -1027,8 +1028,8 @@
             ),
           );
         }),
-        F = 30;
-      function H(e) {
+        H = 30;
+      function P(e) {
         const {
             event: t,
             imageURLOverride: a,
@@ -1086,7 +1087,7 @@
           G = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
         let O = S;
         return (
-          S && (S.length > F || E.length > F) && (O = void 0),
+          S && (S.length > H || E.length > H) && (O = void 0),
           s.createElement(
             s.Fragment,
             null,
@@ -1159,11 +1160,11 @@
               ),
             ),
             Boolean(l && t.appid) &&
-              s.createElement(P, { appid: t.appid, bHidePrice: m }),
+              s.createElement(z, { appid: t.appid, bHidePrice: m }),
           )
         );
       }
-      function P(e) {
+      function z(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, _.t7)(t, c.Xh),
           l = (0, f.n9)(),
@@ -1172,58 +1173,62 @@
         const o = n.GetBestPurchaseOption(),
           i = (null == o ? void 0 : o.hide_discount_pct_for_compliance) && !0;
         return s.createElement(
-          m.Z,
-          {
-            className: (0, b.A)(T().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, S.S)(n, l, r, !1),
-          },
+          M.A,
+          { appID: t },
           s.createElement(
-            O.Qf,
+            m.Z,
             {
-              item: { type: "game", id: t },
-              hoverProps: {
-                direction: "overlay",
-                style: { minWidth: "320px" },
-              },
+              className: (0, b.A)(T().AppCapsuleCtn, "AppCapsuleCtn"),
+              ...(0, S.S)(n, l, r, !1),
             },
-            s.createElement("img", {
-              className: T().AppCapsuleImage,
-              src: n.GetAssets().GetSmallCapsuleURL(),
-            }),
-          ),
-          Boolean(!a && !n.BIsFree()) &&
             s.createElement(
-              "span",
+              O.Qf,
               {
-                className: (0, b.A)(
-                  T().AppCapsulePrice,
-                  Boolean(null == o ? void 0 : o.discount_pct)
-                    ? B().Discounted
-                    : "",
-                ),
+                item: { type: "game", id: t },
+                hoverProps: {
+                  direction: "overlay",
+                  style: { minWidth: "320px" },
+                },
               },
-              Boolean((null == o ? void 0 : o.discount_pct) && i) &&
-                s.createElement(
-                  "div",
-                  { className: B().DiscountIconCtn },
-                  s.createElement(k.XH_, null),
-                ),
-              Boolean((null == o ? void 0 : o.discount_pct) && !i) &&
-                s.createElement(
-                  "span",
-                  { className: B().StoreSaleDiscountBox },
-                  `-${null == o ? void 0 : o.discount_pct}%`,
-                ),
-              Boolean(o.final_price_in_cents) &&
-                s.createElement(
-                  "span",
-                  { className: B().StoreSalePriceBox },
-                  o.formatted_final_price,
-                ),
+              s.createElement("img", {
+                className: T().AppCapsuleImage,
+                src: n.GetAssets().GetSmallCapsuleURL(),
+              }),
             ),
+            Boolean(!a && !n.BIsFree()) &&
+              s.createElement(
+                "span",
+                {
+                  className: (0, b.A)(
+                    T().AppCapsulePrice,
+                    Boolean(null == o ? void 0 : o.discount_pct)
+                      ? B().Discounted
+                      : "",
+                  ),
+                },
+                Boolean((null == o ? void 0 : o.discount_pct) && i) &&
+                  s.createElement(
+                    "div",
+                    { className: B().DiscountIconCtn },
+                    s.createElement(k.XH_, null),
+                  ),
+                Boolean((null == o ? void 0 : o.discount_pct) && !i) &&
+                  s.createElement(
+                    "span",
+                    { className: B().StoreSaleDiscountBox },
+                    `-${null == o ? void 0 : o.discount_pct}%`,
+                  ),
+                Boolean(o.final_price_in_cents) &&
+                  s.createElement(
+                    "span",
+                    { className: B().StoreSalePriceBox },
+                    o.formatted_final_price,
+                  ),
+              ),
+          ),
         );
       }
-      function z(e) {
+      function j(e) {
         const { event: t, imageURLOverride: a, onClick: l } = e,
           r = (0, n.sf)(N.TS.LANGUAGE),
           [o, c, m] = (0, i.q3)(() =>
@@ -1296,7 +1301,7 @@
         c = a(64953),
         m = a(69343),
         g = a(63556),
-        p = a(7068),
+        p = a(33737),
         d = a(46518),
         u = a(95695),
         E = a.n(u),
@@ -2286,7 +2291,7 @@
         g = a(63556),
         p = a(68033),
         d = a(55263),
-        u = a(7068),
+        u = a(33737),
         E = a(27658),
         I = a(53418),
         h = a(35685),

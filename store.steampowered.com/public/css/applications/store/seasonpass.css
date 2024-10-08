@@ -1,31 +1,85 @@
 ._2Bwk-8eR05R2CUhVO2vLSO {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #1b2838;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #dcdcdc;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+  background: radial-gradient(
+    156.1% 79.95% at 10.31% 0%,
+    #1f2f4191 0%,
+    #303e4f91 100%
+  );
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
 }
-._2Bwk-8eR05R2CUhVO2vLSO th,
-._2Bwk-8eR05R2CUhVO2vLSO td {
-  border: 1px solid #000;
-  padding: 8px;
-  text-align: left;
+._2Bwk-8eR05R2CUhVO2vLSO ._23Gpk3EX3VPMV0ISPZP7Ne {
+  color: #bbbfc1;
+  padding: 12px 12px 20px 12px;
 }
-._2Bwk-8eR05R2CUhVO2vLSO th {
-  background-color: #444;
+._2Bwk-8eR05R2CUhVO2vLSO ._23Gpk3EX3VPMV0ISPZP7Ne a {
+  text-decoration: underline;
+  font-size: 13px;
+}
+._3fPxFqoMwus-E-uUeyqE07 {
+  font-size: 16px;
+  font-weight: 300;
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 2px;
+  background: radial-gradient(
+    156.1% 79.95% at 10.31% 0%,
+    #1f2f41 0%,
+    #303e4f 100%
+  );
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  transition: text-shadow .3s ease-in-out;
 }
-._2Bwk-8eR05R2CUhVO2vLSO td {
-  background-color: #1b2838;
-}
-._1zVTTPQ0jiUiJrDrM5WDJs {
-  padding: 4px 8px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+._3fPxFqoMwus-E-uUeyqE07:hover {
   cursor: pointer;
+  text-shadow: 0 0 10px #fff;
+}
+._3fPxFqoMwus-E-uUeyqE07:hover ._1KM0040wsc_C2KCgj2t9Ev {
+  opacity: 1;
+}
+._3aIQuGztbn-NrA-SWYiEUV {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 300;
+  color: #bbbfc1;
+}
+._3aIQuGztbn-NrA-SWYiEUV ._2P7zxKWCoHKOfqDB310z0V {
+  line-height: 16px;
+}
+._3aIQuGztbn-NrA-SWYiEUV ._3CU0KkcloclUaXflEXQu_p {
+  color: #fff;
+}
+.hsVfYc1PxvDcBuC6uvKVs {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #191f27;
+  font-size: 13px;
+}
+._2xEP9Nk68W8GGzPlKeD2Pm {
+  background-color: #33363a;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #1e2124;
+  margin-top: 10px;
+}
+._1s9wb2xTKTarIgMnEy3ggl {
+  font-style: italic;
+  margin-top: 10px;
 }
 .beE-h2-Nw_6g1LqM9LyaK {
   text-decoration: line-through;
+}
+._1KM0040wsc_C2KCgj2t9Ev {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  margin-left: 4px;
+  transition: opacity .3s ease-in-out;
 }

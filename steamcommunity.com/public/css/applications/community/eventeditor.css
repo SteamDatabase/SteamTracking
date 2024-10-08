@@ -624,6 +624,10 @@ button.DialogButton._3uDH_JfFghCIXoQ9CnlYt8:disabled {
   background-color: rgba(80, 84, 90, 0.35);
   color: #9f9396;
 }
+._26iJ3c5EI_arYCNqRvcLNX {
+  overflow: scroll;
+  max-height: 300px;
+}
 ._2VyHwZNHF7G8GTghQBppJM {
   position: absolute;
   top: 0;
@@ -700,9 +704,17 @@ button.DialogButton._3uDH_JfFghCIXoQ9CnlYt8:disabled {
   background: #30343b;
   padding: 16px;
 }
-._26iJ3c5EI_arYCNqRvcLNX {
-  overflow: scroll;
-  max-height: 300px;
+.BTMmbSI5WdBvCQVAgf3-i {
+  display: flex;
+  flex-direction: row;
+}
+._21IZDNymOVDf4u4Ont7WVA {
+  width: 14px;
+  height: 14px;
+  padding: 3px;
+  border-radius: 50%;
+  margin: 0px 8px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 ._3kTQIYYiQiVR_DeJepkOwJ {
   font-size: 17px;

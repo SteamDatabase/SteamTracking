@@ -3788,21 +3788,41 @@
         u = n(78327),
         p = n(11279);
       function h(e) {
-        const { padded: t, gap: n, children: r } = e;
-        return i.createElement(
-          "div",
-          {
-            style: { gap: n ? n + "px" : "unset" },
-            className: (0, s.A)({
-              [p.ScrollSnapCarousel]: !0,
-              ScrollSnapCarousel: !0,
-              SaleSectionCarousel: !0,
-              SaleSectionCarouselPadding: t,
-              [e.className]: !0,
-            }),
-          },
-          r,
-        );
+        const { padded: t, gap: n, children: r, bLazyRenderChildren: a } = e,
+          o = i.Children.map(r, (e, t) =>
+            a
+              ? i.createElement(
+                  m.K,
+                  {
+                    bHorizontal: !0,
+                    placeholderWidth: "100%",
+                    placeholderHeight: 1,
+                  },
+                  e,
+                )
+              : e,
+          ),
+          l = i.createElement(
+            "div",
+            {
+              style: { gap: n ? n + "px" : "unset" },
+              className: (0, s.A)({
+                [p.ScrollSnapCarousel]: !0,
+                ScrollSnapCarousel: !0,
+                SaleSectionCarousel: !0,
+                SaleSectionCarouselPadding: t,
+                [e.className]: !0,
+              }),
+            },
+            o,
+          );
+        return a
+          ? i.createElement(
+              m.K,
+              { bHorizontal: !1, placeholderWidth: 1, placeholderHeight: 1 },
+              l,
+            )
+          : l;
       }
       var _ = n(7445);
       class g extends i.Component {
@@ -4230,7 +4250,7 @@
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var f = n(78327),
-        E = n(7068),
+        E = n(33737),
         S = n(76217),
         v = n(53534),
         y = n(19418);
@@ -6141,7 +6161,7 @@
         Ie = n(67660),
         Be = n(73022),
         Ne = n(55263),
-        Re = n(7068),
+        Re = n(33737),
         Ae = n(48079),
         ke = n(93267),
         Te = n(67523),
@@ -7028,7 +7048,7 @@
         h = n(60746),
         _ = n(1088),
         g = n(40650),
-        f = n(7068),
+        f = n(33737),
         E = n(76684),
         S = n(21273),
         v = n(738),
@@ -7712,7 +7732,7 @@
         a = n(45699),
         o = n(36735),
         s = n(93973),
-        l = n(7068),
+        l = n(33737),
         c = n(71298),
         m = n(738),
         d = n(12155),

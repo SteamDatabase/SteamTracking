@@ -1389,7 +1389,7 @@
       var K = o(61859),
         q = o(78327),
         Q = o(22797),
-        $ = o(8395);
+        $ = o(71541);
       function ee(e, t) {
         const o = (0, q.Tc)("editorconfig", t);
         let s = new M(o);

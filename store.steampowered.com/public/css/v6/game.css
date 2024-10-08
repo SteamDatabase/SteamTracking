@@ -1062,6 +1062,35 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	color: #b0aeac;
 }
 
+a.package_contents_show_more_link, a.package_contents_show_less {
+	cursor: pointer;
+}
+
+.package_contents.package_contents_collapsed .package_contents_overflow {
+	display: none;
+}
+
+.package_contents.package_contents_collapsed .package_contents_show_more {
+	display: inline;
+}
+
+.package_contents:not(.package_contents_collapsed) .package_contents_overflow {
+	display: inline;
+}
+
+.game_area_purchase_game p.package_contents a.package_contents_show_less {
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.game_area_purchase_game p.package_contents .package_contents_show_more a {
+	color: #ffffff;
+}
+
+.package_contents:not(.package_contents_collapsed) .package_contents_show_more {
+	display: none;
+}
+
 .game_purchase_action {
 	/* height: 40px; */
 }
@@ -1588,6 +1617,10 @@ body.v6 .game_description_column h2.gradientbg {
 		font-weight: normal; /* normal */
 
 		}
+
+.game_area_description.overflow_allowed {
+	overflow: visible;
+}
 
 .game_area_description p {
 	margin-bottom: 8px;

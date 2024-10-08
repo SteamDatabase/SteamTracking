@@ -3,7 +3,7 @@ body {
 	color:#acacac;
 	margin:0;
 	padding:0;
-	font-size: 0.7em; 
+	font-size: 0.7em;
 	line-height:1.5;
 	 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -73,7 +73,11 @@ h3, .title3 {
 	background-color: #351e18;
 	border: 1px solid #542f26;
 }
-.valveArea.padded {
+.valveOutline {
+	border: 1px solid #ca5029;
+}
+.valveArea.padded,
+.valveOutline.padded {
 	padding: 8px;
 }
 
@@ -90,9 +94,9 @@ h4 {
 }
 
 p {
-	margin: 10px 20px 10px 0px; 
-	color: #acacac; 
-	line-height: 1.4em; 
+	margin: 10px 20px 10px 0px;
+	color: #acacac;
+	line-height: 1.4em;
 	font-size: 13px;
 }
 
@@ -110,7 +114,7 @@ a {
 a:hover {
 	color: #cdd7db
 }
-a.tooltip { 
+a.tooltip {
 	text-decoration:none;
 	background:#2c2c2c;
 	padding:0px 1px 2px 1px;
@@ -156,7 +160,7 @@ td {
 }
 
 td.dim {
-	padding: 2px 12px 2px 0px; 
+	padding: 2px 12px 2px 0px;
 	color:#828282;
 }
 
@@ -188,10 +192,10 @@ tr.warning2 {
 }
 
 select {
-	font-size: 1.1em; 
-	width: 200px; 
-	color: #000000; 
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 1.1em;
+	width: 200px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 	background-color: #e6e6e6;
 }
 
@@ -281,7 +285,7 @@ div.hr-grey hr {
 	margin-right:46px;
 }
 
-#storeadmin_subnav 
+#storeadmin_subnav
 {
 	padding-left: 46px;
 	background-color: #333333;
@@ -601,7 +605,7 @@ input.radio {
 #signInBlock {
 	padding-left:10px;
 	padding-right:16px;
-	background-color:#3a3a3a;	
+	background-color:#3a3a3a;
 }
 
 #signInName {

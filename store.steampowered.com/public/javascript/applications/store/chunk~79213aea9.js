@@ -49,12 +49,12 @@
         i = n(41550),
         m = n(738),
         u = n(73745),
-        v = n(19332),
-        E = n(44325);
+        E = n(19332),
+        v = n(44325);
       function d(e) {
         const { event: t, closeModal: n } = e;
         return c.createElement(
-          E.Qs,
+          v.Qs,
           { navID: "SinglePartnerEventRoot", closeModal: n },
           c.createElement(i.AD, {
             initialEvent: t,
@@ -93,7 +93,7 @@
             "div",
             {
               ref: this.m_refFocus,
-              className: v.Main,
+              className: E.Main,
               onClick: this.OnBackgroundClick,
             },
             c.createElement(i.He, {
@@ -114,7 +114,7 @@
     },
     35685: (e, t, n) => {
       "use strict";
-      n.d(t, { kH: () => W, rN: () => H, uY: () => U, zA: () => x });
+      n.d(t, { kH: () => z, rN: () => R, uY: () => x, zA: () => W });
       var a = n(22837),
         r = n(41735),
         c = n.n(r),
@@ -124,22 +124,22 @@
         i = n(57876),
         m = n(76217),
         u = n(1977),
-        v = n(77516),
-        E = n(17720),
+        E = n(77516),
+        v = n(17720),
         d = n(71138),
         p = n(4796),
         C = n(95886),
         S = n(60746),
-        h = n(55263),
-        I = n(8107),
+        I = n(55263),
+        h = n(8107),
         g = n(75113),
         f = n(95695),
         _ = n.n(f),
         A = n(72860),
         N = n(76684),
         G = n(12155),
-        k = n(60014),
-        D = n(62490),
+        D = n(60014),
+        k = n(62490),
         w = n(52038),
         B = n(61859),
         O = n(78327),
@@ -149,8 +149,9 @@
         y = n.n(P),
         F = n(26101),
         M = n(18654),
-        L = n.n(M);
-      const H = (0, s.PA)((e) => {
+        L = n.n(M),
+        H = n(84518);
+      const R = (0, s.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: n,
@@ -158,10 +159,10 @@
               trackingLocation: r,
               bViewAllShowInfiniteScroll: s,
             } = e,
-            l = E.b.InitFromClanID(t),
+            l = v.b.InitFromClanID(t),
             i = (0, o.useRef)(null),
-            [v, d] = (0, o.useState)(null),
-            [C, h] = (0, o.useState)(!0),
+            [E, d] = (0, o.useState)(null),
+            [C, I] = (0, o.useState)(!0),
             [f, A] = (0, o.useState)(!1);
           if (
             ((0, o.useEffect)(
@@ -171,7 +172,7 @@
                     i.current("PartnerEventRow Initializng new mount");
                   const e = c().CancelToken.source();
                   i.current = e.cancel;
-                  const s = E.b.InitFromClanID(t);
+                  const s = v.b.InitFromClanID(t);
                   await p.ac.LoadClanInfoForClanSteamID(s);
                   let l = await a.LoadAdjacentPartnerEventsByAnnouncement(
                     n,
@@ -187,11 +188,11 @@
                     let e = l
                       .filter((e) => e.GetAnnouncementGID() != n)
                       .map((e) => e.AnnouncementGID);
-                    D.fW(e);
+                    k.fW(e);
                     const t = e
                       .slice(0, 3)
                       .map((e) => a.GetClanEventFromAnnouncementGID(e));
-                    if ((d(t), h(!1), r)) {
+                    if ((d(t), I(!1), r)) {
                       let e = S.KN.Get().GetTracker(),
                         c = !1;
                       if (a.BHasClanAnnouncementGID(n)) {
@@ -230,7 +231,7 @@
             C)
           )
             return o.createElement(T.t, { position: "center", size: "medium" });
-          if (0 == v.length) return o.createElement("div", null);
+          if (0 == E.length) return o.createElement("div", null);
           const N = p.ac.GetClanInfoByClanAccountID(t);
           return o.createElement(
             b.tH,
@@ -269,7 +270,7 @@
                   : o.createElement(
                       g.tj,
                       {
-                        eventModel: v[0],
+                        eventModel: E[0],
                         route: g.PH.k_eViewWebSiteHub,
                         className: _().EventSectionMoreBtn,
                       },
@@ -283,23 +284,23 @@
                   "flow-children": "column",
                   navEntryPreferPosition: u.iU.PREFERRED_CHILD,
                 },
-                v.map((e) =>
-                  o.createElement(U, { key: e.AnnouncementGID, event: e }),
+                E.map((e) =>
+                  o.createElement(x, { key: e.AnnouncementGID, event: e }),
                 ),
               ),
               Boolean(f) &&
-                o.createElement(I.N, {
-                  appid: v[0].appid,
+                o.createElement(h.N, {
+                  appid: E[0].appid,
                   clanSteamID: l,
-                  announcementGID: v[0].AnnouncementGID,
+                  announcementGID: E[0].AnnouncementGID,
                   closeModal: () => A(!1),
                   partnerEventStore: a,
                 }),
             ),
           );
         }),
-        R = 30;
-      function U(e) {
+        U = 30;
+      function x(e) {
         const {
             event: t,
             imageURLOverride: n,
@@ -309,7 +310,7 @@
             eEventRount: i,
             bHidePrices: m,
           } = e,
-          [u, E, p, S, I, f, _, A] = (0, l.q3)(() => {
+          [u, v, p, S, h, f, _, A] = (0, l.q3)(() => {
             const e = c || (0, a.sf)(O.TS.LANGUAGE),
               r = Boolean(void 0 !== n)
                 ? n
@@ -323,24 +324,24 @@
               t.GetNameWithFallback(e) || "",
               t.GetCategoryAsString(),
               t.GetSummaryWithFallback(e),
-              (0, v.j3)(r),
-              (0, v.j3)(s),
+              (0, E.j3)(r),
+              (0, E.j3)(s),
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [G] = (0, h.t7)(u, { include_assets: !0, include_screenshots: !0 }),
-          [k, D] = (0, o.useState)(void 0);
+          [G] = (0, I.t7)(u, { include_assets: !0, include_screenshots: !0 }),
+          [D, k] = (0, o.useState)(void 0);
         if (
           ((0, o.useEffect)(() => {
             const e = new Image();
-            (e.src = E),
+            (e.src = v),
               (e.onload = () => {
-                D(f);
+                k(f);
               }),
               (e.onerror = () => {
-                D(_);
+                k(_);
               });
-          }, [f, E, _]),
+          }, [f, v, _]),
           !t)
         )
           return o.createElement("div", {
@@ -357,7 +358,7 @@
           P = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
         let F = A;
         return (
-          A && (A.length > R || p.length > R) && (F = void 0),
+          A && (A.length > U || p.length > U) && (F = void 0),
           o.createElement(
             o.Fragment,
             null,
@@ -378,13 +379,13 @@
                 "div",
                 { className: y().EventSummaryContainer },
                 o.createElement("div", { className: y().EventSummaryType }, S),
-                o.createElement("div", { className: y().EventSummaryText }, I),
+                o.createElement("div", { className: y().EventSummaryText }, h),
               ),
               o.createElement("div", {
                 className: y().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
-                  backgroundImage: k ? `url(${k})` : "none",
+                  backgroundImage: D ? `url(${D})` : "none",
                 },
               }),
               o.createElement(
@@ -394,7 +395,7 @@
                   "div",
                   { className: y().OtherEvents_MainImageCtn },
                   o.createElement("img", {
-                    src: k || E,
+                    src: D || v,
                     className: y().OtherEvents_MainImage,
                   }),
                 ),
@@ -430,69 +431,73 @@
               ),
             ),
             Boolean(r && t.appid) &&
-              o.createElement(x, { appid: t.appid, bHidePrice: m }),
+              o.createElement(W, { appid: t.appid, bHidePrice: m }),
           )
         );
       }
-      function x(e) {
+      function W(e) {
         const { appid: t, bHidePrice: n } = e,
-          [a] = (0, h.t7)(t, i.Xh),
-          r = (0, k.n9)(),
+          [a] = (0, I.t7)(t, i.Xh),
+          r = (0, D.n9)(),
           c = (0, O.Qn)();
         if (!a) return null;
         const s = a.GetBestPurchaseOption(),
           l = s?.hide_discount_pct_for_compliance && !0;
         return o.createElement(
-          m.Z,
-          {
-            className: (0, w.A)(y().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, A.S)(a, r, c, !1),
-          },
+          H.A,
+          { appID: t },
           o.createElement(
-            F.Qf,
+            m.Z,
             {
-              item: { type: "game", id: t },
-              hoverProps: {
-                direction: "overlay",
-                style: { minWidth: "320px" },
-              },
+              className: (0, w.A)(y().AppCapsuleCtn, "AppCapsuleCtn"),
+              ...(0, A.S)(a, r, c, !1),
             },
-            o.createElement("img", {
-              className: y().AppCapsuleImage,
-              src: a.GetAssets().GetSmallCapsuleURL(),
-            }),
-          ),
-          Boolean(!n && !a.BIsFree()) &&
             o.createElement(
-              "span",
+              F.Qf,
               {
-                className: (0, w.A)(
-                  y().AppCapsulePrice,
-                  Boolean(s?.discount_pct) ? L().Discounted : "",
-                ),
+                item: { type: "game", id: t },
+                hoverProps: {
+                  direction: "overlay",
+                  style: { minWidth: "320px" },
+                },
               },
-              Boolean(s?.discount_pct && l) &&
-                o.createElement(
-                  "div",
-                  { className: L().DiscountIconCtn },
-                  o.createElement(G.XH_, null),
-                ),
-              Boolean(s?.discount_pct && !l) &&
-                o.createElement(
-                  "span",
-                  { className: L().StoreSaleDiscountBox },
-                  `-${s?.discount_pct}%`,
-                ),
-              Boolean(s.final_price_in_cents) &&
-                o.createElement(
-                  "span",
-                  { className: L().StoreSalePriceBox },
-                  s.formatted_final_price,
-                ),
+              o.createElement("img", {
+                className: y().AppCapsuleImage,
+                src: a.GetAssets().GetSmallCapsuleURL(),
+              }),
             ),
+            Boolean(!n && !a.BIsFree()) &&
+              o.createElement(
+                "span",
+                {
+                  className: (0, w.A)(
+                    y().AppCapsulePrice,
+                    Boolean(s?.discount_pct) ? L().Discounted : "",
+                  ),
+                },
+                Boolean(s?.discount_pct && l) &&
+                  o.createElement(
+                    "div",
+                    { className: L().DiscountIconCtn },
+                    o.createElement(G.XH_, null),
+                  ),
+                Boolean(s?.discount_pct && !l) &&
+                  o.createElement(
+                    "span",
+                    { className: L().StoreSaleDiscountBox },
+                    `-${s?.discount_pct}%`,
+                  ),
+                Boolean(s.final_price_in_cents) &&
+                  o.createElement(
+                    "span",
+                    { className: L().StoreSalePriceBox },
+                    s.formatted_final_price,
+                  ),
+              ),
+          ),
         );
       }
-      function W(e) {
+      function z(e) {
         const { event: t, imageURLOverride: n, onClick: r } = e,
           c = (0, a.sf)(O.TS.LANGUAGE),
           [s, i, m] = (0, l.q3)(() =>

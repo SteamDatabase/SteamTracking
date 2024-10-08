@@ -4701,8 +4701,8 @@
           r = t - a,
           s =
             r % 2 != 0
-              ? `minmax(0, 0.5fr) repeat(${t - 1}, minmax(0, 1fr)) minmax(0, 0.5fr)`
-              : `repeat(${t}, minmax(0, 1fr))`;
+              ? `0.5fr repeat(${t - 1}, 1fr) 0.5fr`
+              : `repeat(${t}, 1fr)`;
         let o = null,
           i = null;
         if (r > 0) {
@@ -4739,7 +4739,7 @@
         i = a(30894),
         l = a(19267),
         c = a(44165),
-        m = a(7068),
+        m = a(33737),
         u = a(56330),
         d = a(76684),
         _ = a(70809),
@@ -5150,65 +5150,66 @@
     24307: (e, t, a) => {
       "use strict";
       a.d(t, { Y: () => S });
-      var n = a(78327),
+      var n = a(90626),
         r = a(62792),
         s = a(55263),
-        o = a(90626),
+        o = a(1078),
         i = a(12155),
         l = a(10224),
         c = a(52038),
         m = a(56011),
-        u = a(44325),
-        d = a(738),
-        _ = a(22797),
-        p = a(91970),
-        g = a.n(p),
-        h = a(1078);
+        u = a(78327),
+        d = a(44325),
+        _ = a(738),
+        p = a(22797),
+        g = a(91970),
+        h = a.n(g);
       function S(e) {
         const { info: t, bPopOutTrailerPlayback: a } = e,
-          [p] = (0, s.G6)(t.id, (0, r.SW)(t.type), {
+          [g] = (0, s.G6)(t.id, (0, r.SW)(t.type), {
             include_trailers: !0,
             include_screenshots: !0,
           }),
-          [S, f] = o.useState(!1),
-          [v, y] = o.useState(void 0),
-          E = p?.GetAllTrailers().GetHighlightTrailers(),
-          b = E?.length > 0 && E[0],
-          C = o.useCallback(
+          [S, f] = n.useState(!1),
+          [v, y] = n.useState(void 0),
+          [E, b] = (0, o.XC)(),
+          C = g?.GetAllTrailers().GetHighlightTrailers(),
+          w = C?.length > 0 && C[0],
+          I = n.useCallback(
             (e) => {
-              if (b)
+              if (w)
                 if (a) {
                   const t = (
                       (0, l.c)()
-                        ? b.GetTrailer480p().strWebMURL
-                        : b.GetTrailerMax().strWebMURL
+                        ? w.GetTrailer480p().strWebMURL
+                        : w.GetTrailerMax().strWebMURL
                     ).replace("http://", "https://"),
                     a = (
                       (0, l.c)()
-                        ? b.GetTrailer480p().strMP4URL
-                        : b.GetTrailerMax().strMP4URL
+                        ? w.GetTrailer480p().strMP4URL
+                        : w.GetTrailerMax().strMP4URL
                     ).replace("http://", "https://");
-                  (0, d.mK)(
-                    o.createElement(
-                      u.eV,
+                  (0, _.mK)(
+                    n.createElement(
+                      d.eV,
                       { bAllowFullSize: !0, bOKDisabled: !0 },
-                      o.createElement(
+                      n.createElement(
                         "div",
-                        { className: g().VideoPopupContainers },
-                        o.createElement(
+                        { className: h().VideoPopupContainers },
+                        n.createElement(
                           "video",
                           {
-                            className: g().VideoLarge,
+                            className: h().VideoLarge,
                             controls: !0,
                             autoPlay: !0,
-                            poster: b.GetScreenshot(),
+                            poster: w.GetScreenshot(),
                           },
-                          o.createElement("source", {
+                          n.createElement("source", {
                             src: t,
                             type: "video/webm",
                           }),
-                          Boolean(!n.TS.IN_CLIENT) &&
-                            o.createElement("source", {
+                          Boolean(!u.TS.IN_CLIENT) &&
+                            n.createElement("source", {
                               src: a,
                               type: "video/mp4",
                             }),
@@ -5219,121 +5220,122 @@
                   );
                 } else f((e) => !e);
             },
-            [b, a],
+            [w, a],
           );
-        if (!p)
-          return o.createElement(
+        if (!g)
+          return n.createElement(
             "div",
-            { className: g().MediaContainer },
-            o.createElement(_.t, { size: "medium" }),
+            { className: h().MediaContainer },
+            n.createElement(p.t, { size: "medium" }),
           );
-        if (!b && 0 === p.GetOnlyAllAgesSafeScreenshots()?.length)
+        if (!w && 0 === g.GetOnlyAllAgesSafeScreenshots()?.length)
           return (
-            ("dev" != n.TS.WEB_UNIVERSE && "beta" != n.TS.WEB_UNIVERSE) ||
+            ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
               console.log(
-                "appCapsule for appid: " + p?.GetAppID(),
-                p.GetOnlyAllAgesSafeScreenshots(),
+                "appCapsule for appid: " + g?.GetAppID(),
+                g.GetOnlyAllAgesSafeScreenshots(),
               ),
             null
           );
-        const w = b || (void 0 !== v && -1 !== v) ? v : 0,
-          I = new Array(),
-          A = p.GetOnlyAllAgesSafeScreenshots();
+        const A = w || (void 0 !== v && -1 !== v) ? v : 0,
+          D = new Array(),
+          G = g.GetOnlyAllAgesSafeScreenshots();
         return (
-          A.forEach((e, t) => {
-            if ((b || t > 0) && I.length < 3) {
+          G.forEach((e, t) => {
+            if ((w || t > 0) && D.length < 3) {
               const a = (function (e, t) {
                 const a = e.replace(/\.[^\.]+$/g, "");
                 return a + t + e.slice(a.length);
               })(e, ".116x65").replace("http://", "https://");
-              I.push(
-                o.createElement("img", {
+              D.push(
+                n.createElement("img", {
                   key: t + "_" + a,
-                  className: g().ScreenshotThumbnail,
+                  className: h().ScreenshotThumbnail,
                   src: a,
                   onClick: () => {
-                    const e = [...A];
+                    const e = [...G];
                     for (let a = 0; a < t; ++a) e.push(e.shift());
-                    (0, h.K3)(e);
+                    E(e);
                   },
                   onMouseEnter: () => y(t),
                 }),
               );
             }
           }),
-          o.createElement(
+          n.createElement(
             "div",
-            { className: g().MediaContainer },
-            o.createElement(
+            { className: h().MediaContainer },
+            b,
+            n.createElement(
               "div",
-              { className: g().MainMediaCtn },
-              Boolean(b) &&
-                o.createElement(
+              { className: h().MainMediaCtn },
+              Boolean(w) &&
+                n.createElement(
                   "div",
                   {
                     className: (0, c.A)(
-                      g().VideoThumbnail,
-                      S ? g().videoPlaying : null,
+                      h().VideoThumbnail,
+                      S ? h().videoPlaying : null,
                     ),
-                    onClick: C,
+                    onClick: I,
                   },
-                  Boolean(-1 === w || void 0 === w)
-                    ? o.createElement(
-                        o.Fragment,
+                  Boolean(-1 === A || void 0 === A)
+                    ? n.createElement(
+                        n.Fragment,
                         null,
-                        o.createElement("img", { src: b.GetScreenshot() }),
-                        o.createElement(
+                        n.createElement("img", { src: w.GetScreenshot() }),
+                        n.createElement(
                           "div",
-                          { className: g().VideoPlayButton },
-                          o.createElement(i.jGG, null),
+                          { className: h().VideoPlayButton },
+                          n.createElement(i.jGG, null),
                         ),
                       )
-                    : o.createElement("img", { src: A[w] }),
+                    : n.createElement("img", { src: G[A] }),
                 ),
-              Boolean(!b) && o.createElement("img", { src: A[w] }),
+              Boolean(!w) && n.createElement("img", { src: G[A] }),
             ),
-            Boolean(I.length > 0) &&
-              o.createElement(
+            Boolean(D.length > 0) &&
+              n.createElement(
                 "div",
-                { className: g().Screenshot, onMouseLeave: () => y(-1) },
-                I,
+                { className: h().Screenshot, onMouseLeave: () => y(-1) },
+                D,
               ),
-            o.createElement(
+            n.createElement(
               "div",
               {
                 className: (0, c.A)(
-                  g().VideoLargeContainer,
-                  S ? g().videoPlaying : null,
+                  h().VideoLargeContainer,
+                  S ? h().videoPlaying : null,
                 ),
-                onClick: C,
+                onClick: I,
               },
               Boolean(S) &&
-                o.createElement(
+                n.createElement(
                   "video",
                   {
-                    className: g().VideoLarge,
+                    className: h().VideoLarge,
                     controls: !0,
                     autoPlay: !0,
-                    poster: b.GetScreenshot(),
+                    poster: w.GetScreenshot(),
                   },
-                  o.createElement("source", {
+                  n.createElement("source", {
                     src: (0, l.c)()
-                      ? b.GetTrailer480p().strWebMURL
-                      : b.GetTrailerMax().strWebMURL,
+                      ? w.GetTrailer480p().strWebMURL
+                      : w.GetTrailerMax().strWebMURL,
                     type: "video/webm",
                   }),
-                  Boolean(!n.TS.IN_CLIENT) &&
-                    o.createElement("source", {
+                  Boolean(!u.TS.IN_CLIENT) &&
+                    n.createElement("source", {
                       src: (0, l.c)()
-                        ? b.GetTrailer480p().strMP4URL
-                        : b.GetTrailerMax().strMP4URL,
+                        ? w.GetTrailer480p().strMP4URL
+                        : w.GetTrailerMax().strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
-              o.createElement(
+              n.createElement(
                 "div",
-                { onClick: C },
-                o.createElement(i.sED, null),
+                { onClick: I },
+                n.createElement(i.sED, null),
               ),
             ),
           )
@@ -5348,7 +5350,7 @@
         s = a(55963),
         o = a(27666),
         i = a(56631),
-        l = a(7068),
+        l = a(33737),
         c = a(6878),
         m = a.n(c),
         u = a(10962),
@@ -5696,7 +5698,7 @@
         r = a(76217),
         s = a(77516),
         o = a(36141),
-        i = a(7068),
+        i = a(33737),
         l = a(52393),
         c = a.n(l),
         m = a(30294),
@@ -5842,10 +5844,14 @@
           )
         ) {
           if (
-            e.country_allow_list?.length > 0 &&
-            e.country_allow_list
-              .toLowerCase()
-              .indexOf(m.iA.country_code.toLowerCase()) < 0
+            (e.country_allow_list?.length > 0 &&
+              e.country_allow_list
+                .toLowerCase()
+                .indexOf(m.iA.country_code.toLowerCase()) < 0) ||
+            (e.country_deny_list?.length > 0 &&
+              e.country_deny_list
+                .toLowerCase()
+                .indexOf(m.iA.country_code.toLowerCase()) >= 0)
           )
             return t == n.EPreviewMode_EditBackground
               ? r.createElement(i.E, {
@@ -8405,7 +8411,11 @@
             background:
               Boolean(h) &&
               Boolean(S) &&
-              "linear-gradient(to right, rgb(" + h + "), rgb(" + S + "))",
+              "linear-gradient(to right, rgb(" +
+                h +
+                ") 49%, rgb(" +
+                S +
+                ") 51%)",
           };
         return n.createElement(
           Z.oj,
@@ -8571,7 +8581,7 @@
       (0, re.Cg)([oe.sH], _e.prototype, "m_priceStopInfo", void 0),
         (0, re.Cg)([oe.XI], _e.prototype, "LoadPriceStops", null);
       var ge = a(80782),
-        he = a(7068),
+        he = a(33737),
         Se = a(88336);
       class fe {
         m_facets = [];
@@ -14474,55 +14484,66 @@
                 capsules_per_row: e.section?.capsules_per_row_array,
               });
         const { feature: K, depth: $ } = (function (e, t, a, n) {
+          const r = a.GetActiveTabSNRPostFix();
           if (e.enable_faceted_browsing) {
             const e = n?.GetSelectedOptionsCount();
-            if (e) return { feature: "salefacetbrowse", depth: e };
+            if (e) return { feature: "salefacetbrowse" + r, depth: e };
           }
           if (e.smart_section && e.smart_section_type)
             switch (e.smart_section_type) {
               case "wishlist":
+                return { feature: "salesmartwishlist" + r };
               case "wishlist_onsale":
-                return { feature: "salesmartwishlist" };
+                return { feature: "salesmartwishlist_allsale" + r };
               case "interactive_recommender":
+                return { feature: "salesmartir" + r };
               case "interactive_recommender_onsale":
-                return { feature: "salesmartir" };
+                return { feature: "salesmartir_allsale" + r };
               case "wishlist_recommender":
-                return { feature: "salesmartwr" };
+                return { feature: "salesmartwr" + r };
               case "dlc":
               case "dlc_onsale":
               case "dlc_music_onsale":
-                return { feature: "salesmartdlc" };
+                return { feature: "salesmartdlc" + r };
               case "tag_recommender":
-                return { feature: "salesmarttagrec" };
+                return { feature: "salesmarttagrec" + r };
               case "personalized_carousel":
                 return {
-                  feature: "salesmartpersonalizedcarousel",
+                  feature: "salesmartpersonalizedcarousel" + r,
                   depth: (0, q.E)(e, t).nSectionIndex,
                 };
+              case "tag":
+                return { feature: "autopopulatetag" + r };
+              case "category":
+                return { feature: "autopopulatecategory" + r };
               default:
-                return { feature: "salesmart" + e.smart_section_type };
+                return { feature: "salesmart" + e.smart_section_type + r };
             }
           switch (e.section_type) {
             case "sale_events":
             case "events":
-              return { feature: "saleeventsection" };
+              return { feature: "saleeventsection" + r };
             case "links":
-              return { feature: "salesectionlinks" };
+              return { feature: "salesectionlinks" + r };
             case "discoveryqueue":
-              return { feature: "discoveryqueue2022" };
+              return { feature: "discoveryqueue2022" + r };
             case "trailertv":
-              return { feature: "trailertv" };
+              return { feature: "trailertv" + r };
             case "rewards":
-              return { feature: "salesectionrewards" };
+              return { feature: "salesectionrewards" + r };
             case "event_description":
             case "text_section":
-              return { feature: "salesectiontext" };
+              return { feature: "salesectiontext" + r };
             case "event_schedule":
-              return { feature: "salesectioneventschedule" };
+              return { feature: "salesectioneventschedule" + r };
+            case "broadcast":
+              return { feature: "salesectionbroadcast" + r };
+            case "dlc_for_you":
+              return { feature: "saledlcforyou" + r };
+            case "itemdef":
+              return { feature: "saleitemdef" + r };
           }
-          return {
-            feature: !a || a.BIsDefaultTab() ? "salesection" : "saletabsection",
-          };
+          return { feature: "salesection" + r };
         })(j, t, s, M.facetFilterState);
         return n.createElement(
           h.A,
@@ -15710,10 +15731,14 @@
       }
       function cr(e, t, a) {
         if (
-          e.country_allow_list &&
-          e.country_allow_list
-            .toLowerCase()
-            .indexOf(v.iA.country_code.toLowerCase()) >= 0
+          (e.country_allow_list &&
+            e.country_allow_list
+              .toLowerCase()
+              .indexOf(v.iA.country_code.toLowerCase()) < 0) ||
+          (e.country_deny_list &&
+            e.country_deny_list
+              .toLowerCase()
+              .indexOf(v.iA.country_code.toLowerCase()) >= 0)
         )
           return !1;
         if (e.package_allow_list?.length > 0) {
@@ -21033,6 +21058,11 @@
             ? JSON.stringify((0, n.B)(this.GetTab()?.store_filter))
             : "";
         }
+        GetActiveTabSNRPostFix() {
+          return this.m_activeTab && !this.BIsDefaultTab()
+            ? `tabid${this.GetActiveTabUniqueID}`
+            : "";
+        }
       }
     },
     71922: (e, t, a) => {
@@ -21472,7 +21502,7 @@
       }
       var A = a(10962),
         D = a(39733),
-        G = a(7068),
+        G = a(33737),
         T = a(12155),
         k = a(82477),
         L = a(92757),

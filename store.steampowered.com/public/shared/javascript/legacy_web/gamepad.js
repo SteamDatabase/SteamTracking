@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    747: (e, t, n) => {
+    912: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => G });
       var o = n(669),
         a = n.n(o),
-        s = n(934),
-        i = n(398),
-        r = n(877),
-        c = n(132),
-        l = n(882),
-        u = n(793),
-        d = n(688),
-        g = n(69),
-        m = n(899),
-        h = n(580);
+        s = n(922),
+        i = n(618),
+        r = n(537),
+        c = n(80),
+        l = n(71),
+        u = n(829),
+        d = n(315),
+        g = n(665),
+        m = n(847),
+        h = n(328);
       function _(e, t, ...n) {
         try {
           console.assert
@@ -95,9 +95,9 @@
           OnForceMeasureFocusRing: () => m(s),
         };
       }
-      var S = n(694),
-        w = n(683),
-        E = n(656);
+      var S = n(479),
+        w = n(807),
+        E = n(252);
       function I(e) {
         return e ? Function("event", e) : null;
       }
@@ -145,7 +145,7 @@
         }
         return !1;
       }
-      var R = n(491);
+      var R = n(855);
       const D = !1;
       function y(e) {
         const { name: t, root: n, navState: o } = e;
@@ -177,6 +177,7 @@
           ((U = new l.t()),
           (window.legacyWebFocusNavController = U),
           (M = new i.T(U)),
+          O.Init(window),
           M.BIsGamepadInputExternallyControlled() || U.RegisterInputSource(e),
           (M.BIsGamepadInputExternallyControlled() ||
             navigator.userAgent.includes("Valve Steam Gamepad")) &&
@@ -555,11 +556,11 @@
         },
       };
     },
-    526: (e, t, n) => {
+    250: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(279),
-        s = n(88);
+        a = n(779),
+        s = n(860);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -626,13 +627,13 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    1: (e, t, n) => {
+    213: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    405: (e, t, n) => {
+    321: (e, t, n) => {
       n.d(t, { JV: () => i, Q8: () => s });
-      var o = n(683);
+      var o = n(807);
       class a {
         m_options;
         m_msStart;
@@ -738,7 +739,7 @@
         }
       }
     },
-    336: (e, t, n) => {
+    12: (e, t, n) => {
       n.d(t, {
         Jc: () => c,
         LU: () => d,
@@ -747,9 +748,9 @@
         lu: () => i.l,
       });
       var o = n(629),
-        a = n(862),
-        s = n(279),
-        i = n(326);
+        a = n(90),
+        s = n(779),
+        i = n(66);
       class r {
         m_callbacks;
         m_currentValue;
@@ -849,7 +850,7 @@
       }
       (0, o.Cg)([s.o], g.prototype, "Unregister", null);
     },
-    683: (e, t, n) => {
+    807: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -959,10 +960,10 @@
         }
       }
     },
-    855: (e, t, n) => {
+    159: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(279);
+        a = n(779);
       class s {
         async GetObject(e, t) {
           try {
@@ -988,7 +989,7 @@
         }
       }
       var r,
-        c = n(336);
+        c = n(12);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1221,7 +1222,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    695: (e, t, n) => {
+    475: (e, t, n) => {
       function o(e, t) {
         return (
           (e = Math.ceil(e)),
@@ -1234,7 +1235,7 @@
       }
       n.d(t, { OQ: () => a, Tg: () => o });
     },
-    252: (e, t, n) => {
+    16: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1245,9 +1246,9 @@
       }
       n.d(t, { e: () => o });
     },
-    838: (e, t, n) => {
+    812: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(695);
+      var o = n(475);
       function a() {
         return !!window.document;
       }

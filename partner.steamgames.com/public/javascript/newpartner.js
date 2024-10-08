@@ -122,6 +122,9 @@ function IsValidOptionalField( fieldName, regex )
 {
 	var field = $J( fieldName );
 	var value = field.val();
+	if ( value === undefined )
+		return true;
+
 	value = v_trim( value );
 	if ( value.length == 0 )
 	{

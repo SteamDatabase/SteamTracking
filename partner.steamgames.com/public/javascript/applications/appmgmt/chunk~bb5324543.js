@@ -1419,7 +1419,7 @@
               r.map((e) => i.get(e) ?? null)
             );
           },
-          { maxBatchSize: 100, ...t },
+          { maxBatchSize: 100, cache: !1, ...t },
         );
       }
       function P(e) {

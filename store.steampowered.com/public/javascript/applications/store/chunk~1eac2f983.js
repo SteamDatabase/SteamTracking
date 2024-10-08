@@ -1816,7 +1816,7 @@
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var _ = n(78327),
-        f = n(7068),
+        f = n(33737),
         S = n(76217),
         v = n(53534),
         C = n(19418);
@@ -3170,7 +3170,7 @@
         (0, o.Cg)([E.sH], S.prototype, "m_nMobileDeviceCount", void 0);
       let v = new S();
       var C = n(40650),
-        y = n(7068),
+        y = n(33737),
         A = n(76684),
         P = n(44325),
         k = n(738),
@@ -3995,7 +3995,7 @@
         a = n(75844),
         l = n(6144),
         c = n(61859),
-        m = n(7068),
+        m = n(33737),
         d = n(12155),
         u = n(81315),
         p = n.n(u),

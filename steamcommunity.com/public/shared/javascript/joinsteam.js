@@ -7,7 +7,16 @@ var g_recaptchaInstance = null;
 
 function CaptchaText()
 {
-	return $J('#captcha_text').val() || grecaptcha.enterprise.getResponse(g_recaptchaInstance);
+	var legacy = $J('#captcha_text').val();
+	if( legacy ) 
+		return legacy;
+	
+	if ( typeof hcaptcha !== 'undefined' )
+		return hcaptcha.getResponse() 
+	else if ( typeof grecaptcha !== 'undefined' )
+		return grecaptcha.enterprise.getResponse(g_recaptchaInstance);
+
+	return null;
 }
 
 function StartCreationSession()
@@ -955,6 +964,20 @@ function RenderRecaptcha( parent_sel, gid, sitekey, s )
 	});
 }
 
+function RenderHCaptcha( parent_sel, gid, sitekey, s )
+{
+	var render_div_id = 'recaptcha_render_' + gid;
+	$J( parent_sel ).empty();
+	$J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
+	g_hcaptchaInstance = hcaptcha.render( render_div_id, {
+		'sitekey': sitekey,
+		'theme': 'dark',
+		'callback': function(n){},
+		's': s
+	});
+}
+
+
 function UpdateCaptcha(data)
 {
 	$J( '#captcha_text' ).val('');
@@ -969,6 +992,10 @@ function UpdateCaptcha(data)
 			$J( '#captcha_entry_recaptcha' ).show();
 			$J( '#captcha_entry_text' ).hide();
 			RenderRecaptcha( "#captcha_entry_recaptcha", data.gid, data.sitekey, data.s );
+		} else if ( data.type == 3 ) {
+			$J( '#captcha_entry_recaptcha' ).show();
+			$J( '#captcha_entry_text' ).hide();
+			RenderHCaptcha( "#captcha_entry_recaptcha", data.gid, data.sitekey, data.s );
 		}
 	} else {
 		$J( '#captcha_entry' ).hide();
@@ -981,10 +1008,14 @@ function RefreshCaptcha()
 {
 	++iAjaxCalls;
 
+	var hCaptcha = 0;
+	if ( typeof hcaptcha !== 'undefined' )
+		hCaptcha = 1;
+
 	new Ajax.Request( g_sBaseURL + 'join/refreshcaptcha/',
 	  {
 	  	type: 'POST',
-	    parameters: { count : iAjaxCalls },
+	    parameters: { count : iAjaxCalls, hcaptcha: hCaptcha },
 	    onSuccess: function(transport){
 	      if ( transport.responseText ){
 

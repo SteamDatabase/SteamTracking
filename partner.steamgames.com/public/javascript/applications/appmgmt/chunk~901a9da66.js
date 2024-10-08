@@ -816,12 +816,12 @@
                 e.microtrailer(),
               )),
             e.screenshot_medium() &&
-              (this.m_strScreenshotMedium = this.ConstructAssetURL(
+              (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
                 t,
                 e.screenshot_medium(),
               )),
             e.screenshot_full() &&
-              (this.m_strScreenshotFull = this.ConstructAssetURL(
+              (this.m_strScreenshotFull = this.ConstructScreenshotURL(
                 t,
                 e.screenshot_full(),
               )));
@@ -856,6 +856,13 @@
                   (s.strWebMURL = this.ConstructAssetURL(e, t.filename()));
             }),
             s
+          );
+        }
+        ConstructScreenshotURL(e, t) {
+          return (
+            u.TS.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            e.replace("${FILENAME}", t)
           );
         }
         ConstructAssetURL(e, t) {
@@ -2002,7 +2009,7 @@
             return { bundleid: t };
         }
       }
-      function b(e) {
+      function S(e) {
         return "application" == e
           ? 0
           : "bundle" == e
@@ -2011,7 +2018,7 @@
               ? 1
               : -1;
       }
-      function S(e) {
+      function b(e) {
         return 0 == e
           ? "application"
           : 1 == e
@@ -2036,12 +2043,12 @@
         SW: () => u,
         Si: () => C,
         TM: () => l,
-        TV: () => b,
+        TV: () => S,
         _P: () => I,
         cW: () => f,
         gy: () => R,
         hh: () => c,
-        lY: () => S,
+        lY: () => b,
         pk: () => i,
         s9: () => y,
         vo: () => m,

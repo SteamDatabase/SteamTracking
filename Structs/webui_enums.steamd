@@ -2547,46 +2547,6 @@ enum UnnamedEnum55a9e12958fe69d4
 	Days = 86400000;
 }
 
-enum UnnamedEnum55b5a43be6fe22b0
-{
-	k_Custom = 0;
-	k_AssetKit = 1;
-	k_DemoPressPreview = 2;
-	k_ScheduleLiveStream = 3;
-	k_CancelSection = 4;
-	k_DemoNotReady = 5;
-	k_ReviewCategorization = 6;
-	k_DemoReview = 7;
-	k_PressPreviewDetails = 8;
-	k_StatsSummary = 9;
-	k_SurveyButton = 10;
-	k_DemoLaunch = 11;
-	k_CallForRegistration = 12;
-	k_EnterDiscount = 13;
-	k_EnterDiscountReminder = 14;
-	k_LearnMore = 15;
-	k_MediaUsePermission = 16;
-	k_MeasureResults = 17;
-	k_TrailerOrDemoPermissions = 18;
-	k_NextFestQASession = 19;
-	k_NextFestReturns = 20;
-	k_NextFestWhatNext = 21;
-	k_NextFestTips = 22;
-	k_NextFestStartsNow = 23;
-	k_MeasureResultsFree = 24;
-	k_NextFestThankYou = 25;
-	k_MediaPermissionReminder = 26;
-	k_SaleThankYou = 27;
-	k_NextFestMediaUsageIntended = 28;
-	k_GenericActionLink = 29;
-	k_SteamAwardsCategories = 30;
-	k_NextFestMediaUsageIntendedTrailer = 31;
-	k_NextFestMediaUsageIntendedLivestream = 32;
-	k_NextFestTopGameWrapUp = 33;
-	k_ImageBoxSection = 34;
-	k_MeasureResultsNextFest = 35;
-}
-
 enum UnnamedEnum56fdca98a5fc5dc5
 {
 	NOT_TRACKING_ = undefined;
@@ -3052,6 +3012,49 @@ enum UnnamedEnum6dc1117c55eed9d3
 	k_ECurator = 2;
 	k_ETags = 3;
 	k_EDisplayList = 4;
+}
+
+enum UnnamedEnum6ddd0e7940359a04
+{
+	k_Custom = 0;
+	k_AssetKit = 1;
+	k_DemoPressPreview = 2;
+	k_ScheduleLiveStream = 3;
+	k_CancelSection = 4;
+	k_DemoNotReady = 5;
+	k_ReviewCategorization = 6;
+	k_DemoReview = 7;
+	k_PressPreviewDetails = 8;
+	k_StatsSummary = 9;
+	k_SurveyButton = 10;
+	k_DemoLaunch = 11;
+	k_CallForRegistration = 12;
+	k_EnterDiscount = 13;
+	k_EnterDiscountReminder = 14;
+	k_LearnMore = 15;
+	k_MediaUsePermission = 16;
+	k_MeasureResults = 17;
+	k_TrailerOrDemoPermissions = 18;
+	k_NextFestQASession = 19;
+	k_NextFestReturns = 20;
+	k_NextFestWhatNext = 21;
+	k_NextFestTips = 22;
+	k_NextFestStartsNow = 23;
+	k_MeasureResultsFree = 24;
+	k_NextFestThankYou = 25;
+	k_MediaPermissionReminder = 26;
+	k_SaleThankYou = 27;
+	k_NextFestMediaUsageIntended = 28;
+	k_GenericActionLink = 29;
+	k_SteamAwardsCategories = 30;
+	k_NextFestMediaUsageIntendedTrailer = 31;
+	k_NextFestMediaUsageIntendedLivestream = 32;
+	k_NextFestTopGameWrapUp = 33;
+	k_ImageBoxSection = 34;
+	k_MeasureResultsNextFest = 35;
+	k_SeasonalFeatureRequest = 36;
+	k_SeasonalFeatureDiscount = 37;
+	k_GenericActionButton = 38;
 }
 
 enum UnnamedEnum6ffd890a446c4435
@@ -3643,6 +3646,14 @@ enum UnnamedEnuma80ee23554b6c9ac
 	None = 2;
 	Basic = 3;
 	Full = 4;
+}
+
+enum UnnamedEnuma8a47dd262be1f3b
+{
+	None = 0;
+	DownloadFailed = 1;
+	PlaybackError = 2;
+	MediaTypeError = 3;
 }
 
 enum UnnamedEnuma8a8b1f6cea505e4
@@ -4447,6 +4458,17 @@ enum UnnamedEnumf148f58a11f3d661
 	k_MediaUsageNotification = 8;
 	k_GeneralCommunication = 9;
 	k_SteamAwardFinalists = 10;
+}
+
+enum UnnamedEnumf26944e1770e4a69
+{
+	UNKNOWN = 0;
+	GAMEPAD = 1;
+	KEYBOARD_SIMULATOR = 2;
+	MOUSE = 3;
+	TOUCH = 4;
+	LPAD = 5;
+	RPAD = 6;
 }
 
 enum UnnamedEnumf4a43fa80efa8957

@@ -321,7 +321,7 @@
               a.map((e) => s.get(e) ?? null)
             );
           },
-          { maxBatchSize: 100, ...t },
+          { maxBatchSize: 100, cache: !1, ...t },
         );
       }
       function p(e) {

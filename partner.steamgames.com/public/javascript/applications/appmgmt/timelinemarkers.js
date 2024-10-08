@@ -708,7 +708,7 @@
         n = r(86679),
         a = r(45737),
         s = r.n(a),
-        l = r(8395),
+        l = r(71541),
         o = r(95695),
         m = r.n(o),
         c = r(738),
@@ -2897,7 +2897,8 @@
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.DownloadFailed = 1)] = "DownloadFailed"),
-          (e[(e.PlaybackError = 2)] = "PlaybackError");
+          (e[(e.PlaybackError = 2)] = "PlaybackError"),
+          (e[(e.MediaTypeError = 3)] = "MediaTypeError");
       })(Ve || (Ve = {}));
       class Ye {
         m_elVideo = null;
@@ -2907,6 +2908,7 @@
         m_bInitailized = !1;
         m_bPaused = !1;
         m_bAtEnd = !1;
+        m_strMediaTypeError = null;
         m_ePlayerError = Ve.None;
         m_bUserInputNeeded = !1;
         m_bMuted = !1;
@@ -2932,6 +2934,9 @@
         }
         BSeekReadyToPlay() {
           return this.m_bSeekReadyToPlay;
+        }
+        GetMediaTypeError() {
+          return this.m_strMediaTypeError;
         }
         GetPlaybackError() {
           return this.m_ePlayerError;
@@ -3014,6 +3019,11 @@
               this.m_elVideo,
               "valve-downloadfailed",
               this.OnDownloadFailed,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-typeerror",
+              this.OnMediaTypeError,
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
@@ -3135,6 +3145,11 @@
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = Ve.DownloadFailed);
         }
+        OnMediaTypeError(e) {
+          "string" == typeof e.detail && (this.m_strMediaTypeError = e.detail),
+            (0, Ie.ZI)("media type error", e.detail),
+            (this.m_ePlayerError = Ve.MediaTypeError);
+        }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
             (0, Ie.ZI)("video playback error"),
@@ -3228,6 +3243,7 @@
       (0, g.Cg)([Ee.sH], Ye.prototype, "m_bInitailized", void 0),
         (0, g.Cg)([Ee.sH], Ye.prototype, "m_bPaused", void 0),
         (0, g.Cg)([Ee.sH], Ye.prototype, "m_bAtEnd", void 0),
+        (0, g.Cg)([Ee.sH], Ye.prototype, "m_strMediaTypeError", void 0),
         (0, g.Cg)([Ee.sH], Ye.prototype, "m_ePlayerError", void 0),
         (0, g.Cg)([Ee.sH], Ye.prototype, "m_bUserInputNeeded", void 0),
         (0, g.Cg)([Ee.sH], Ye.prototype, "m_bMuted", void 0),
@@ -3252,6 +3268,7 @@
         (0, g.Cg)([x.oI], Ye.prototype, "OnSeeking", null),
         (0, g.Cg)([x.oI], Ye.prototype, "OnLoadedMetadata", null),
         (0, g.Cg)([x.oI], Ye.prototype, "OnDownloadFailed", null),
+        (0, g.Cg)([x.oI], Ye.prototype, "OnMediaTypeError", null),
         (0, g.Cg)([x.oI], Ye.prototype, "OnPlaybackError", null),
         (0, g.Cg)([x.oI], Ye.prototype, "OnUserInputNeeded", null),
         (0, g.Cg)([x.oI], Ye.prototype, "OnVolumeChange", null),
@@ -3260,7 +3277,7 @@
       var it,
         nt = r(35009),
         at = r(52694),
-        st = r(85889);
+        st = r(76217);
       function lt() {
         const e = mt(yt().GetGameID());
         return e === it.NotRecording || e === it.NotRunning
@@ -6308,18 +6325,19 @@
           n = yt(),
           a = (0, We.q3)(
             () => r.GetVisibleTimelineHighlights(t.timelineID) || [],
-          ),
-          s = (0, i.useMemo)(() => a.slice().sort(Lr), [a]),
-          l = (0, We.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
-          o = t.globalOffsetMS - l,
-          m = n.GetGameID(),
-          c = n.GetClipID(),
-          d = 16 * r.GetCurrentZoomScale();
-        let u = new ar(d);
-        return s.map((e, a) => {
+          )
+            .slice()
+            .sort(Lr),
+          s = (0, We.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
+          l = t.globalOffsetMS - s,
+          o = n.GetGameID(),
+          m = n.GetClipID(),
+          c = 16 * r.GetCurrentZoomScale();
+        let d = new ar(c);
+        return a.map((e, a) => {
           if ("highlight" !== Fr(e)) return null;
           const s = `${e.type}_${e.id}_${t.timelineID}_${a}`,
-            l = (function (e, t, r) {
+            c = (function (e, t, r) {
               if (
                 ![
                   "event",
@@ -6347,17 +6365,17 @@
                   nGlobalMS: (0, Qe.Sb)(parseInt(i.time) + t),
                 };
               return a;
-            })(t.timelineID, o, e),
-            d = u.BAllowIcon(l.nGlobalMS.valMS);
+            })(t.timelineID, l, e),
+            u = d.BAllowIcon(c.nGlobalMS.valMS);
           return i.createElement(zr, {
-            gameID: m,
-            clipID: c,
+            gameID: o,
+            clipID: m,
             key: s,
             view: r,
             coordinator: n,
-            faded: !d,
+            faded: !u,
             timelineID: t.timelineID,
-            markerInfo: l,
+            markerInfo: c,
           });
         });
       });
@@ -14992,6 +15010,11 @@
                 fields: {
                   clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
                   settings: { n: 2, c: J },
+                  run_policy_checks: {
+                    n: 3,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
                 },
               }),
             $.sm_m
@@ -17113,8 +17136,9 @@
                     bw: n.gp.writeFixed64String,
                   },
                   enabled: { n: 2, br: n.qM.readBool, bw: n.gp.writeBool },
-                  minutes: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  minutes: { n: 3, br: n.qM.readUint32, bw: n.gp.writeUint32 },
                   bitrate: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                  infinite: { n: 5, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             Le.sm_m

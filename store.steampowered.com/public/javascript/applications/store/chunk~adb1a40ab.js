@@ -209,23 +209,31 @@
     },
     63556: (e, t, a) => {
       "use strict";
-      a.d(t, { E: () => p, O: () => c });
+      a.d(t, { E: () => d, O: () => p });
       var n = a(34629),
         r = a(14947),
         o = a(65946),
         i = a(22837),
         s = a(62490),
         l = a(6419),
-        m = a(78327);
-      class c {
+        m = a(78327),
+        c = a(91986);
+      class p {
         m_eCurLang = (0, i.sf)(m.TS.LANGUAGE);
         m_rgHasData = (0, s.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
+        m_callback = new c.l();
+        GetCallback() {
+          return this.m_callback;
+        }
         GetCurEditLanguage() {
           return this.m_eCurLang;
         }
         SetCurEditLanguage(e) {
-          return this.m_eCurLang != e && ((this.m_eCurLang = e), !0);
+          return (
+            this.m_eCurLang != e &&
+            ((this.m_eCurLang = e), this.GetCallback().Dispatch(e), !0)
+          );
         }
         SetHasLanguage(e) {
           e.forEach((e, t) => {
@@ -245,27 +253,27 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            c.s_globalSingletonStore ||
-              ((c.s_globalSingletonStore = new c()),
+            p.s_globalSingletonStore ||
+              ((p.s_globalSingletonStore = new p()),
               "dev" == m.TS.WEB_UNIVERSE &&
-                (window.DUS = c.s_globalSingletonStore)),
-            c.s_globalSingletonStore
+                (window.DUS = p.s_globalSingletonStore)),
+            p.s_globalSingletonStore
           );
         }
         constructor() {
           (0, r.Gn)(this);
         }
       }
-      function p() {
-        return (0, o.q3)(() => c.Get().GetCurEditLanguage());
+      function d() {
+        return (0, o.q3)(() => p.Get().GetCurEditLanguage());
       }
-      (0, n.Cg)([r.sH], c.prototype, "m_eCurLang", void 0),
-        (0, n.Cg)([r.sH], c.prototype, "m_rgHasData", void 0),
-        (0, n.Cg)([r.sH], c.prototype, "m_bHasLocalizationContext", void 0),
-        (0, n.Cg)([l.o], c.prototype, "GetCurEditLanguage", null),
-        (0, n.Cg)([l.o], c.prototype, "SetCurEditLanguage", null),
-        (0, n.Cg)([r.XI.bound], c.prototype, "SetHasLanguage", null),
-        (0, n.Cg)([l.o], c.prototype, "BHasLanguageData", null);
+      (0, n.Cg)([r.sH], p.prototype, "m_eCurLang", void 0),
+        (0, n.Cg)([r.sH], p.prototype, "m_rgHasData", void 0),
+        (0, n.Cg)([r.sH], p.prototype, "m_bHasLocalizationContext", void 0),
+        (0, n.Cg)([l.o], p.prototype, "GetCurEditLanguage", null),
+        (0, n.Cg)([l.o], p.prototype, "SetCurEditLanguage", null),
+        (0, n.Cg)([r.XI.bound], p.prototype, "SetHasLanguage", null),
+        (0, n.Cg)([l.o], p.prototype, "BHasLanguageData", null);
     },
     83059: (e, t, a) => {
       "use strict";
@@ -972,7 +980,7 @@
       a.d(t, { r: () => u, z: () => p });
       var n = a(90626),
         r = a(71138),
-        o = a(7068),
+        o = a(33737),
         i = a(84811),
         s = a(44325),
         l = a(61859),
@@ -2264,7 +2272,7 @@
         (0, n.Cg)([$.XI], xe.prototype, "Reset", null);
       var Me = a(73022),
         Ne = a(55263),
-        Re = a(7068),
+        Re = a(33737),
         Fe = a(48079),
         Oe = a(93267),
         Pe = a(67523),
@@ -3246,7 +3254,7 @@
         o = a(45699),
         i = a(36735),
         s = a(93973),
-        l = a(7068),
+        l = a(33737),
         m = a(71298),
         c = a(738),
         p = a(12155),
@@ -4185,7 +4193,7 @@
         (0, d.Cg)([S.oI], N.prototype, "FocusTextInput", null),
         (0, d.Cg)([S.oI], N.prototype, "GetTextAreaRef", null),
         (0, d.Cg)([S.oI], N.prototype, "GetTextAreaCurrent", null);
-      var R = a(7068),
+      var R = a(33737),
         F = a(283),
         O = a(95695),
         P = a.n(O),
@@ -5991,7 +5999,7 @@
       var n = a(34629),
         r = a(90626),
         o = a(73744),
-        i = a(7068),
+        i = a(33737),
         s = a(81416),
         l = a(44325),
         m = a(52038),

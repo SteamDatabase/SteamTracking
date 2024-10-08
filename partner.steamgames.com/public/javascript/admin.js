@@ -1074,6 +1074,15 @@ function OnLocLanguageSelect( id )
 // changes the localization language
 function LocChangeLanguage( strLanguage )
 {
+	// update all PHP controls to the new language
+	LocChangeControlsToLanguage( strLanguage );
+
+	// tell react that the language changed
+	window.dispatchEvent( new CustomEvent( "v_StoreAdminLanguageChange", { detail: { strLanguage: strLanguage } } ) );
+}
+
+function LocChangeControlsToLanguage( strLanguage )
+{
 	for ( var i = 0; i < g_LocSectionIDs.length; i++ )
 		LocLanguageSelect( g_LocSectionIDs[i], strLanguage );
 }

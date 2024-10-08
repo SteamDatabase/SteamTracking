@@ -3623,6 +3623,11 @@
                     br: S.qM.readString,
                     bw: S.gp.writeString,
                   },
+                  fest_name: {
+                    n: 13,
+                    br: S.qM.readString,
+                    bw: S.gp.writeString,
+                  },
                 },
               }),
             de.sm_m
@@ -11720,7 +11725,7 @@
             ),
           );
       var br = a(90627),
-        Nr = a(8395),
+        Nr = a(71541),
         wr = a(738),
         vr = a(10411);
       const Br = () => {
@@ -19992,19 +19997,20 @@
             [b, N] = n.useState(
               e.msgNode.extract().recency_months().toFixed(0),
             ),
-            [w, v] = n.useState(e.msgNode.extract().bias_start().toFixed(2)),
-            [B, E] = n.useState(e.msgNode.extract().bias_end().toFixed(2)),
-            [y, h] = n.useState(
+            [w, v] = n.useState(e.msgNode.extract().fest_name() || ""),
+            [B, E] = n.useState(e.msgNode.extract().bias_start().toFixed(2)),
+            [y, h] = n.useState(e.msgNode.extract().bias_end().toFixed(2)),
+            [M, C] = n.useState(
               e.msgNode.extract().input_bias_input_number().toFixed(0),
             ),
-            [M, C] = n.useState(
+            [T, L] = n.useState(
               e.msgNode.extract().input_bias_strength().toFixed(2),
             ),
-            [T, L] = n.useState(
+            [z, j] = n.useState(
               e.msgNode.extract().positive_sample_percent().toFixed(0),
             ),
-            [z, j] = n.useState(e.msgNode.extract().compact_table()),
-            [D, I] = n.useState(e.msgNode.extract().extracted_compact_table());
+            [D, I] = n.useState(e.msgNode.extract().compact_table()),
+            [O, P] = n.useState(e.msgNode.extract().extracted_compact_table());
           n.useEffect(() => {
             s(e.msgNode.comment()),
               l(r.toString()),
@@ -20013,15 +20019,16 @@
               g(e.msgNode.extract().exclusion()),
               S(e.msgNode.extract().selection()),
               N(e.msgNode.extract().recency_months().toFixed(0)),
-              v(e.msgNode.extract().bias_start().toFixed(2)),
-              E(e.msgNode.extract().bias_end().toFixed(2)),
-              h(e.msgNode.extract().input_bias_input_number().toFixed(0)),
-              C(e.msgNode.extract().input_bias_strength().toFixed(2)),
-              L(e.msgNode.extract().positive_sample_percent().toFixed(0)),
-              j(e.msgNode.extract().compact_table()),
-              I(e.msgNode.extract().extracted_compact_table());
+              v(e.msgNode.extract().fest_name() || ""),
+              E(e.msgNode.extract().bias_start().toFixed(2)),
+              h(e.msgNode.extract().bias_end().toFixed(2)),
+              C(e.msgNode.extract().input_bias_input_number().toFixed(0)),
+              L(e.msgNode.extract().input_bias_strength().toFixed(2)),
+              j(e.msgNode.extract().positive_sample_percent().toFixed(0)),
+              I(e.msgNode.extract().compact_table()),
+              P(e.msgNode.extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, r]);
-          let O = [
+          let F = [
               {
                 label: (0, c.we)(
                   "#SteamLearn_Config_Node_Extract_InputType_Misc",
@@ -20035,7 +20042,7 @@
                 value: 1,
               },
             ],
-            P = [
+            R = [
               {
                 label: (0, c.we)(
                   "#SteamLearn_Config_Node_Extract_Mode_Extract",
@@ -20047,7 +20054,7 @@
                 value: 1,
               },
             ],
-            F = [
+            W = [
               {
                 label: (0, c.we)(
                   "#SteamLearn_Config_Node_Extract_Exclusion_None",
@@ -20060,8 +20067,14 @@
                 ),
                 value: 1,
               },
+              {
+                label: (0, c.we)(
+                  "#SteamLearn_Config_Node_Extract_Exclusion_Fest",
+                ),
+                value: 2,
+              },
             ],
-            R = [
+            k = [
               {
                 label: (0, c.we)(
                   "#SteamLearn_Config_Node_Extract_Selection_Random",
@@ -20094,16 +20107,16 @@
               },
             ];
           1 == p &&
-            R.push({
+            k.push({
               label: (0, c.we)(
                 "#SteamLearn_Config_Node_Extract_Selection_Recency",
               ),
               value: 5,
             });
-          const W = 1 == m,
-            k = 1 == _,
-            x = 3 == f,
-            V = 4 == f;
+          const x = 1 == m,
+            V = 1 == _,
+            U = 3 == f,
+            A = 4 == f;
           return n.createElement(
             hr.mt,
             {
@@ -20185,7 +20198,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => m,
                   fnSetValue: (e) => d(parseInt(e)),
-                  options: O,
+                  options: F,
                 }),
               ),
               n.createElement("div", { className: kr.Separator }),
@@ -20206,7 +20219,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => _,
                   fnSetValue: (e) => u(parseInt(e)),
-                  options: P,
+                  options: R,
                 }),
                 n.createElement(Vr, {
                   label: (0, c.we)(
@@ -20216,15 +20229,15 @@
                     "#SteamLearn_Config_Node_Extract_PosSamplePctDesc",
                   ),
                   smallLabel: !0,
-                  hidden: !k,
+                  hidden: !V,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => T,
+                  fnGetInitialValue: () => z,
                   fnValidateValue: (e) => er(e, 0, 100),
-                  fnSetValue: (e) => L(e),
+                  fnSetValue: (e) => j(e),
                 }),
               ),
               n.createElement("div", { className: kr.Separator }),
-              W &&
+              x &&
                 n.createElement(
                   "div",
                   { className: kr.NodeOptionBlock },
@@ -20242,7 +20255,7 @@
                     dontUpdateProject: !0,
                     fnGetValue: () => p,
                     fnSetValue: (e) => g(parseInt(e)),
-                    options: F,
+                    options: W,
                   }),
                   n.createElement(Vr, {
                     label: (0, c.we)(
@@ -20257,6 +20270,19 @@
                     fnGetInitialValue: () => b,
                     fnValidateValue: (e) => er(e, 0, 600),
                     fnSetValue: (e) => N(e),
+                  }),
+                  n.createElement(Vr, {
+                    label: (0, c.we)(
+                      "#SteamLearn_Config_Node_Extract_Selection_Fest",
+                    ),
+                    labelTooltip: (0, c.we)(
+                      "#SteamLearn_Config_Node_Extract_Selection_FestDesc",
+                    ),
+                    smallLabel: !0,
+                    hidden: 2 != p,
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => w,
+                    fnSetValue: (e) => v(e),
                   }),
                   n.createElement("div", { className: kr.Separator }),
                 ),
@@ -20277,7 +20303,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => f,
                   fnSetValue: (e) => S(parseInt(e)),
-                  options: R,
+                  options: k,
                 }),
                 n.createElement(Vr, {
                   label: (0, c.we)("#SteamLearn_Config_Node_Extract_BiasStart"),
@@ -20285,12 +20311,12 @@
                     "#SteamLearn_Config_Node_Extract_BiasStartDesc",
                   ),
                   smallLabel: !0,
-                  hidden: !x && 5 != f,
+                  hidden: !U && 5 != f,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => w,
+                  fnGetInitialValue: () => B,
                   digitCount: 2,
                   fnValidateValue: (e) => tr(e, 0, 1),
-                  fnSetValue: (e) => v(e),
+                  fnSetValue: (e) => E(e),
                 }),
                 n.createElement(Vr, {
                   label: (0, c.we)("#SteamLearn_Config_Node_Extract_BiasEnd"),
@@ -20298,12 +20324,12 @@
                     "#SteamLearn_Config_Node_Extract_BiasEndDesc",
                   ),
                   smallLabel: !0,
-                  hidden: !x && 5 != f,
+                  hidden: !U && 5 != f,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => B,
+                  fnGetInitialValue: () => y,
                   digitCount: 2,
                   fnValidateValue: (e) => tr(e, 0, 1),
-                  fnSetValue: (e) => E(e),
+                  fnSetValue: (e) => h(e),
                 }),
                 n.createElement("div", { className: kr.Separator }),
                 n.createElement(Vr, {
@@ -20314,9 +20340,9 @@
                     "#SteamLearn_Config_Node_Extract_BiasInputNumberDesc",
                   ),
                   smallLabel: !0,
-                  hidden: !V,
+                  hidden: !A,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => y,
+                  fnGetInitialValue: () => M,
                   fnValidateValue: (t) =>
                     er(
                       t,
@@ -20325,7 +20351,7 @@
                         .connectors()
                         .filter((e) => e.is_input_connector()).length,
                     ),
-                  fnSetValue: (e) => h(e),
+                  fnSetValue: (e) => C(e),
                 }),
                 n.createElement(Vr, {
                   label: (0, c.we)(
@@ -20335,11 +20361,11 @@
                     "#SteamLearn_Config_Node_Extract_BiasStrengthDesc",
                   ),
                   smallLabel: !0,
-                  hidden: !V,
+                  hidden: !A,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => M,
-                  fnValidateValue: (e) => tr(e, 0, 1),
-                  fnSetValue: (e) => C(e),
+                  fnGetInitialValue: () => T,
+                  fnValidateValue: (e) => tr(e, 0, 4),
+                  fnSetValue: (e) => L(e),
                 }),
               ),
               n.createElement("div", { className: kr.Separator }),
@@ -20365,9 +20391,9 @@
                     ),
                     smallLabel: !0,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => z,
+                    fnGetInitialValue: () => D,
                     fnValidateValue: (e) => ar(a, e),
-                    fnSetValue: (e) => j(e),
+                    fnSetValue: (e) => I(e),
                   }),
                   n.createElement(Vr, {
                     label: (0, c.we)(
@@ -20379,9 +20405,9 @@
                     smallLabel: !0,
                     hidden: 1 != p || 1 != m,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => D,
+                    fnGetInitialValue: () => O,
                     fnValidateValue: (t) => !ar(a, t, e.msgNode),
-                    fnSetValue: (e) => I(e),
+                    fnSetValue: (e) => P(e),
                   }),
                   n.createElement("div", { className: kr.Separator }),
                 ),
@@ -20437,19 +20463,20 @@
                       e.msgNode.extract().set_exclusion(p),
                       e.msgNode.extract().set_selection(f),
                       e.msgNode.extract().set_recency_months(parseInt(b)),
-                      e.msgNode.extract().set_bias_start(parseFloat(w)),
-                      e.msgNode.extract().set_bias_end(parseFloat(B)),
+                      e.msgNode.extract().set_bias_start(parseFloat(B)),
+                      e.msgNode.extract().set_bias_end(parseFloat(y)),
                       e.msgNode
                         .extract()
-                        .set_input_bias_input_number(parseInt(y)),
+                        .set_input_bias_input_number(parseInt(M)),
                       e.msgNode
                         .extract()
-                        .set_input_bias_strength(parseFloat(M)),
+                        .set_input_bias_strength(parseFloat(T)),
                       e.msgNode
                         .extract()
-                        .set_positive_sample_percent(parseInt(T)),
-                      e.msgNode.extract().set_compact_table(z),
-                      e.msgNode.extract().set_extracted_compact_table(D),
+                        .set_positive_sample_percent(parseInt(z)),
+                      e.msgNode.extract().set_compact_table(D),
+                      e.msgNode.extract().set_extracted_compact_table(O),
+                      e.msgNode.extract().set_fest_name(w),
                       Za(t),
                       e.fnSetPopupVisible(!1);
                   },

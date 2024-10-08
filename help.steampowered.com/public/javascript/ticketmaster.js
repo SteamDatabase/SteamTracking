@@ -2227,78 +2227,55 @@ function InitPreapprovalQueue( txnID, steamID, strTicketRef, strAccountName )
 }
 
 var PreapprovalQueue = {
-	strSessionKey: 'preapproval_cache2',
-	mapApprovals: new Map(),  // map of arrays txn => [steamid, ticketref, accountname]
-	mapDenials: new Map(),
-	mapHijacks: new Map(),
+	strSessionKey: 'preapproval_cache3',
+	mapPreapprovals: new Map(), // map of map of arrays txn => [steamid, ticketref, accountname]
 	rgCurrentTicket: [], // [txnid, steamid, ticketref, accountname]
+	rgApprovalTypes: [ 'approvals', 'denials', 'hijacks', 'sold' ],
 
 	bEnableKeyNav: false,
 
 	InitFromCachedApprovals: function()
 	{
-		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_approvals' ) )
-			PreapprovalQueue.mapApprovals = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_approvals' ) ) );
-
-		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_denials' ) )
-			PreapprovalQueue.mapDenials = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_denials' ) ) );
-
-		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_hijacks' ) )
-			PreapprovalQueue.mapHijacks = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_hijacks' ) ) );
+		PreapprovalQueue.rgApprovalTypes.forEach( function( strType ) {
+			var strKey = PreapprovalQueue.strSessionKey + '_' + strType;
+			if ( sessionStorage.getItem( strKey ) )
+			{
+				PreapprovalQueue.mapPreapprovals.set( strType, new Map( JSON.parse( sessionStorage.getItem( strKey ) ) ) );
+			}
+			else if ( !PreapprovalQueue.mapPreapprovals.has( strType ) )
+			{
+				PreapprovalQueue.mapPreapprovals.set( strType, new Map() );
+			}
+		} );
 
 		PreapprovalQueue.RenderQueue();
 	},
 
 	CacheApprovals: function()
 	{
-		sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_approvals', JSON.stringify( Array.from( PreapprovalQueue.mapApprovals.entries() ) ) );
-		sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_denials', JSON.stringify( Array.from( PreapprovalQueue.mapDenials.entries() ) ) );
-		sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_hijacks', JSON.stringify( Array.from( PreapprovalQueue.mapHijacks.entries() ) ) );
+		PreapprovalQueue.mapPreapprovals.forEach(
+			function( internalMap, key ) {
+				sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_' + key, JSON.stringify( Array.from( internalMap.entries() ) ) );
+			} );
 	},
 
 	ClearCachedApprovals: function()
 	{
-		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_approvals' );
-		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_denials' );
-		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_hijacks' );
+		sessionStorage.removeItem( PreapprovalQueue.strSessionKey );
 	},
 
-	HandleTxn: function( bApprove, txnID, steamID, strTicketRef, strAccountName, bHijacked = false )
+	HandleTxn: function( strApprovalType, txnID, steamID, strTicketRef, strAccountName )
 	{
 		PreapprovalQueue.RemoveTxn( txnID );
-		if ( bApprove )
-		{
-			PreapprovalQueue.mapApprovals.set( txnID, [ steamID, strTicketRef, strAccountName ] );
-		}
-		else
-		{
-			if ( bHijacked )
-			{
-				PreapprovalQueue.mapHijacks.set( txnID, [ steamID, strTicketRef, strAccountName ] );
-			}
-			else
-			{
-				PreapprovalQueue.mapDenials.set( txnID, [ steamID, strTicketRef, strAccountName ] );
-			}
-		}
+		PreapprovalQueue.mapPreapprovals.get( strApprovalType ).set( txnID, [ steamID, strTicketRef, strAccountName ] );
 
 		PreapprovalQueue.RenderQueue();
 		LoadNextPreloadedTicket( PreapprovalQueue.rgCurrentTicket[2] )
 	},
 
-	CopyApprovals: function()
+	CopyMap: function( strApprovalType )
 	{
-		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapApprovals );
-	},
-
-	CopyDenials: function()
-	{
-		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapDenials );
-	},
-
-	CopyHijacks: function()
-	{
-		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapHijacks );
+		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapPreapprovals.get( strApprovalType ) );
 	},
 
 	CopyMapInternal: function( map )
@@ -2318,14 +2295,10 @@ var PreapprovalQueue = {
 
 	RemoveTxn: function( txnID )
 	{
-		PreapprovalQueue.mapApprovals.delete( txnID );
-		PreapprovalQueue.mapDenials.delete( txnID );
-		PreapprovalQueue.mapHijacks.delete( txnID );
-
-
-		var elTicketQueueEntry = $J("#ticket_queue").find(".ticket_queue_link");
-		elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
-		elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
+		PreapprovalQueue.mapPreapprovals.forEach(
+			function( internalMap, key ) {
+				internalMap.delete( txnID );
+			} );
 
 		PreapprovalQueue.RenderQueue();
 	},
@@ -2351,15 +2324,19 @@ var PreapprovalQueue = {
 		var key = event.key;
 		if ( key == 'a' )
 		{
-			PreapprovalQueue.HandleTxn( true, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
+			PreapprovalQueue.HandleTxn( 'approvals', PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
 		}
 		else if ( key == 'f' )
 		{
-			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
+			PreapprovalQueue.HandleTxn( 'denials', PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
 		}
 		else if ( key == 'h' )
 		{
-			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3], true );
+			PreapprovalQueue.HandleTxn( 'hijacks', PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
+		}
+		else if ( key == 's' )
+		{
+			PreapprovalQueue.HandleTxn( 'sold', PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
 		}
 		else if ( key == 'u' )
 		{
@@ -2369,9 +2346,13 @@ var PreapprovalQueue = {
 
 	ResolveApprovals: function()
 	{
-		var approvals = Object.fromEntries(PreapprovalQueue.mapApprovals);
-		var denials = Object.fromEntries(PreapprovalQueue.mapDenials);
-		var hijacks = Object.fromEntries(PreapprovalQueue.mapHijacks);
+		const preapprovals = {};
+		for (const [key, innerMap] of PreapprovalQueue.mapPreapprovals) {
+			preapprovals[key] = Object.fromEntries(innerMap);
+		}
+
+		// Stringify the object
+		const strPreapprovals = JSON.stringify(preapprovals);
 
 		var $WaitDialog = ShowBlockingWaitDialog( 'Pre-approval', 'Submitting pre-approvals' );
 
@@ -2379,9 +2360,7 @@ var PreapprovalQueue = {
 			type: "POST",
 			url: "https://help.steampowered.com/ticketmaster/AjaxPreapproveTxns/",
 			data: {
-				approveTxns: JSON.stringify( approvals ),
-				denyTxns: JSON.stringify( denials ),
-				hijackTxns: JSON.stringify( hijacks )
+				preapprovalTxns: strPreapprovals,
 			}
 		})
 			.fail( function( xhr )
@@ -2400,37 +2379,31 @@ var PreapprovalQueue = {
 
 	RenderQueue: function()
 	{
-		var elApprovalQueue = $J( '.approved_queue' );
-		elApprovalQueue.empty();
-		var elDenialQueue = $J( '.denied_queue' );
-		elDenialQueue.empty();
-		var elHijackQueue = $J( '.hijacked_queue' );
-		elHijackQueue.empty();
+		var elTicketQueueEntry = $J("#ticket_queue").find(".ticket_queue_link");
+		elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
+		elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
 
-		//'<a class="' + strStyleDisabled + ' ticket_queue_link" data-ticket="' + vecRequests[i] + '" href="javascript:LoadPreloadedTicket( \'' + vecRequests[i] + '\')">' + strText + '</a>'
+		PreapprovalQueue.mapPreapprovals.forEach(
+			function( internalMap, strKeyType ) {
+				var elQueue = $J( '.' + strKeyType + '_queue' );
+				elQueue.empty();
 
-		PreapprovalQueue.mapApprovals.forEach(
-			function( value, key ) {
-				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
-				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
-				elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
-				elTicketQueueEntry.addClass( 'ticket_queue_approve' );
-			} );
-
-		PreapprovalQueue.mapDenials.forEach(
-			function( value, key ) {
-				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
-				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
-				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
-				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
-			} );
-
-		PreapprovalQueue.mapHijacks.forEach(
-			function( value, key ) {
-				elHijackQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
-				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
-				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
-				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
+				internalMap.forEach(
+					function( value, key ) {
+						elQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
+						var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
+						if ( strKeyType == 'approvals' )
+						{
+							elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
+							elTicketQueueEntry.addClass( 'ticket_queue_approve' );
+						}
+						else
+						{
+							elTicketQueueEntry.addClass( 'ticket_queue_deny' );
+							elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
+						}
+					}
+				);
 			} );
 
 		PreapprovalQueue.CacheApprovals();

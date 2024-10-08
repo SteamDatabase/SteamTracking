@@ -694,24 +694,32 @@
           )
             return e;
           if (!this.m_sourceBuffer) {
-            let t = e.strMimeType + ";codecs=" + e.strCodecs;
-            (this.m_sourceBuffer = this.m_mediaSource.addSourceBuffer(t)),
-              (0, g.q_)(t),
-              this.m_listeners.AddEventListener(
-                this.m_sourceBuffer,
-                "updateend",
-                this.OnSourceBufferUpdateEnd,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_sourceBuffer,
-                "error",
-                this.OnSourceBufferError,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_sourceBuffer,
-                "abort",
-                this.OnSourceBufferAbort,
-              );
+            const t = e.strMimeType + ";codecs=" + e.strCodecs;
+            try {
+              (this.m_sourceBuffer = this.m_mediaSource.addSourceBuffer(t)),
+                (0, g.q_)(t),
+                this.m_listeners.AddEventListener(
+                  this.m_sourceBuffer,
+                  "updateend",
+                  this.OnSourceBufferUpdateEnd,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_sourceBuffer,
+                  "error",
+                  this.OnSourceBufferError,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_sourceBuffer,
+                  "abort",
+                  this.OnSourceBufferAbort,
+                );
+            } catch (e) {
+              if (
+                !(e instanceof DOMException && "NotSupportedError" === e.name)
+              )
+                throw e;
+              this.OnMediaUnsupportedError(t);
+            }
           }
           return e;
         }
@@ -757,6 +765,11 @@
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
+        }
+        OnMediaUnsupportedError(e) {
+          console.log("OnMediaUnsupportedError", this.GetDebugName(), e),
+            this.m_callbacks &&
+              this.m_callbacks.OnMediaUnsupportedError(this, e);
         }
         OnSourceBufferError(e) {
           console.log("OnSourceBufferError", this.GetDebugName(), e),
@@ -1105,6 +1118,7 @@
         }
       }
       (0, n.Cg)([u.o], F.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, n.Cg)([u.o], F.prototype, "OnMediaUnsupportedError", null),
         (0, n.Cg)([u.o], F.prototype, "OnSourceBufferError", null),
         (0, n.Cg)([u.o], F.prototype, "OnSourceBufferAbort", null),
         (0, n.Cg)([u.o], F.prototype, "ScheduleNextDownload", null),
@@ -1112,15 +1126,15 @@
         (0, n.Cg)([u.o], F.prototype, "DownloadFailed", null),
         (0, n.Cg)([u.o], F.prototype, "DownloadGone", null);
       const I = 5,
-        x = "auto";
-      var E, U, N;
+        E = "auto";
+      var x, U, N;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
           (e[(e.HAVE_METADATA = 1)] = "HAVE_METADATA"),
           (e[(e.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
           (e[(e.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
           (e[(e.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
-      })(E || (E = {})),
+      })(x || (x = {})),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.StreamGone = 1)] = "StreamGone");
@@ -1812,6 +1826,9 @@
               ),
               this.OnSegmentDownloadFailed(e, U.StreamGone));
         }
+        OnMediaUnsupportedError(e, t) {
+          this.DispatchEvent("valve-typeerror", t);
+        }
         OnMediaSourceError(e) {
           this.DispatchEvent("valve-playbackerror");
         }
@@ -2130,7 +2147,7 @@
           let e = [];
           if (
             (e.push({
-              id: x,
+              id: E,
               displayName: "Auto",
               selected: null === this.m_videoRepSelected,
             }),
@@ -2166,7 +2183,7 @@
         SetVideoRepresentation(e) {
           let t = !0,
             i = this.GetVideoLoader();
-          if (e && e.id != x) {
+          if (e && e.id != E) {
             let n = i.GetRepresentationByID(e.id);
             n &&
               ((t = !1),
@@ -2222,6 +2239,7 @@
         (0, n.Cg)([u.o], O.prototype, "PlayOnElement", null),
         (0, n.Cg)([u.o], O.prototype, "OnSegmentDownloadFailed", null),
         (0, n.Cg)([u.o], O.prototype, "OnSegmentDownloadGone", null),
+        (0, n.Cg)([u.o], O.prototype, "OnMediaUnsupportedError", null),
         (0, n.Cg)([u.o], O.prototype, "OnMediaSourceError", null),
         (0, n.Cg)(
           [u.o],

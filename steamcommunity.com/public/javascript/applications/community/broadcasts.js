@@ -294,7 +294,7 @@
         B = a(34010),
         g = a(4796),
         C = a(91254),
-        f = a(7068),
+        f = a(33737),
         I = a(84811),
         b = a(35685),
         D = a(95034),
@@ -1827,7 +1827,7 @@
     },
     35685: (e, t, a) => {
       "use strict";
-      a.d(t, { kH: () => W, rN: () => H, uY: () => F, zA: () => L });
+      a.d(t, { kH: () => x, rN: () => Q, uY: () => L, zA: () => W });
       var n = a(22837),
         r = a(41735),
         o = a.n(r),
@@ -1862,8 +1862,9 @@
         P = a.n(R),
         U = a(29863),
         M = a(18654),
-        O = a.n(M);
-      const H = (0, s.PA)((e) => {
+        O = a.n(M),
+        H = a(84518);
+      const Q = (0, s.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -1997,7 +1998,7 @@
                   navEntryPreferPosition: d.iU.PREFERRED_CHILD,
                 },
                 u.map((e) =>
-                  i.createElement(F, { key: e.AnnouncementGID, event: e }),
+                  i.createElement(L, { key: e.AnnouncementGID, event: e }),
                 ),
               ),
               Boolean(g) &&
@@ -2011,8 +2012,8 @@
             ),
           );
         }),
-        Q = 30;
-      function F(e) {
+        F = 30;
+      function L(e) {
         const {
             event: t,
             imageURLOverride: a,
@@ -2070,7 +2071,7 @@
           R = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
         let U = f;
         return (
-          f && (f.length > Q || v.length > Q) && (U = void 0),
+          f && (f.length > F || v.length > F) && (U = void 0),
           i.createElement(
             i.Fragment,
             null,
@@ -2143,11 +2144,11 @@
               ),
             ),
             Boolean(r && t.appid) &&
-              i.createElement(L, { appid: t.appid, bHidePrice: m }),
+              i.createElement(W, { appid: t.appid, bHidePrice: m }),
           )
         );
       }
-      function L(e) {
+      function W(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, S.t7)(t, c.Xh),
           r = (0, D.n9)(),
@@ -2156,58 +2157,62 @@
         const s = n.GetBestPurchaseOption(),
           l = (null == s ? void 0 : s.hide_discount_pct_for_compliance) && !0;
         return i.createElement(
-          m.Z,
-          {
-            className: (0, T.A)(P().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, f.S)(n, r, o, !1),
-          },
+          H.A,
+          { appID: t },
           i.createElement(
-            U.Qf,
+            m.Z,
             {
-              item: { type: "game", id: t },
-              hoverProps: {
-                direction: "overlay",
-                style: { minWidth: "320px" },
-              },
+              className: (0, T.A)(P().AppCapsuleCtn, "AppCapsuleCtn"),
+              ...(0, f.S)(n, r, o, !1),
             },
-            i.createElement("img", {
-              className: P().AppCapsuleImage,
-              src: n.GetAssets().GetSmallCapsuleURL(),
-            }),
-          ),
-          Boolean(!a && !n.BIsFree()) &&
             i.createElement(
-              "span",
+              U.Qf,
               {
-                className: (0, T.A)(
-                  P().AppCapsulePrice,
-                  Boolean(null == s ? void 0 : s.discount_pct)
-                    ? O().Discounted
-                    : "",
-                ),
+                item: { type: "game", id: t },
+                hoverProps: {
+                  direction: "overlay",
+                  style: { minWidth: "320px" },
+                },
               },
-              Boolean((null == s ? void 0 : s.discount_pct) && l) &&
-                i.createElement(
-                  "div",
-                  { className: O().DiscountIconCtn },
-                  i.createElement(b.XH_, null),
-                ),
-              Boolean((null == s ? void 0 : s.discount_pct) && !l) &&
-                i.createElement(
-                  "span",
-                  { className: O().StoreSaleDiscountBox },
-                  `-${null == s ? void 0 : s.discount_pct}%`,
-                ),
-              Boolean(s.final_price_in_cents) &&
-                i.createElement(
-                  "span",
-                  { className: O().StoreSalePriceBox },
-                  s.formatted_final_price,
-                ),
+              i.createElement("img", {
+                className: P().AppCapsuleImage,
+                src: n.GetAssets().GetSmallCapsuleURL(),
+              }),
             ),
+            Boolean(!a && !n.BIsFree()) &&
+              i.createElement(
+                "span",
+                {
+                  className: (0, T.A)(
+                    P().AppCapsulePrice,
+                    Boolean(null == s ? void 0 : s.discount_pct)
+                      ? O().Discounted
+                      : "",
+                  ),
+                },
+                Boolean((null == s ? void 0 : s.discount_pct) && l) &&
+                  i.createElement(
+                    "div",
+                    { className: O().DiscountIconCtn },
+                    i.createElement(b.XH_, null),
+                  ),
+                Boolean((null == s ? void 0 : s.discount_pct) && !l) &&
+                  i.createElement(
+                    "span",
+                    { className: O().StoreSaleDiscountBox },
+                    `-${null == s ? void 0 : s.discount_pct}%`,
+                  ),
+                Boolean(s.final_price_in_cents) &&
+                  i.createElement(
+                    "span",
+                    { className: O().StoreSalePriceBox },
+                    s.formatted_final_price,
+                  ),
+              ),
+          ),
         );
       }
-      function W(e) {
+      function x(e) {
         const { event: t, imageURLOverride: a, onClick: r } = e,
           o = (0, n.sf)(G.TS.LANGUAGE),
           [s, c, m] = (0, l.q3)(() =>

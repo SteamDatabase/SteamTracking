@@ -5847,7 +5847,7 @@
       }
       var et = a(1035),
         tt = a(27144),
-        at = a(7068),
+        at = a(33737),
         rt = a(12155),
         nt = a(84811),
         it = a(95034),
@@ -9946,13 +9946,15 @@
       var _n = a(64514);
       function pn(e) {
         const { appid: t, bBlurContent: a, nYear: n } = e,
-          i = Ve(t);
+          i = Ve(t),
+          [s, l] = (0, $r.XC)();
         return i && 0 != i.length
           ? r.createElement(
               "div",
               {
                 className: (0, mt.A)(Le.YearInReviewContent, _n.ScreenshotsCtn),
               },
+              l,
               r.createElement(
                 "div",
                 { className: _n.ScreenshotHeader },
@@ -9970,7 +9972,7 @@
                     fnSetExpandScreenShot: () => {
                       const e = [...i.map((e) => e.image_url)];
                       for (let a = 0; a < t; ++a) e.push(e.shift());
-                      (0, $r.K3)(e);
+                      s(e);
                     },
                   }),
                 ),

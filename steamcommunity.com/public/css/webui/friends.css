@@ -2340,7 +2340,7 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   text-shadow: unset;
 }
 .partnereventshared_SaleSectionContainer_3gb3J {
-  grid-template-columns: repeat(1, minmax(0px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
 }
 button.Primary.partnereventshared_AddSectionButton_2_djj {
   margin-top: 12px;
@@ -4603,8 +4603,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     min(var(--normalized-slider-value), var(--normalized-slider-origin))
   );
   --normalized-fill-end: calc(
-    (100%) *
-    max(var(--normalized-slider-value), var(--normalized-slider-origin))
+    (100% - var(--slider-extra-notch-padding) * 2) *
+    max(var(--normalized-slider-value), var(--normalized-slider-origin)) +
+    var(--slider-extra-notch-padding)
   );
   --normalized-width-handle: calc(
     var(--normalized-fill-end) -
@@ -4668,10 +4669,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% *
+      (-100% + var(--slider-extra-notch-padding) * 2) *
       var(--inverse-normalized-value) +
       var(--slider-handle-width) *
-      var(--inverse-normalized-value)
+      var(--inverse-normalized-value) -
+      var(--slider-extra-notch-padding)
     )
   );
 }
@@ -4761,6 +4763,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 var(--slider-extra-notch-padding);
 }
 .gamepadslider_SliderNotch_LYPXt {
   width: 24px;
@@ -37994,7 +37997,7 @@ div.ModalPosition_TopBar {
   width: max-content;
 }
 .DialogContentFullSize .DialogContent_InnerWidth {
-  max-width: none;
+  max-width: calc(88vw - 48px);
 }
 .ModalDialogPopup .DialogContent {
   overflow: visible;

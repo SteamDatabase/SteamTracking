@@ -2248,3 +2248,9 @@ function AddRightNavStickyPaddingOnTablet()
 	observer.observe( elSticky )
 }
 
+function ToggleShowAllPackageContentsText( event )
+{
+	const elContainer = event.target.parentNode.parentNode;
+	elContainer.classList.toggle( 'package_contents_collapsed');
+}
+
