@@ -7787,17 +7787,39 @@
             });
         }
         RemoveCapsule(e) {
-          const { capsuleContainer: t, editModel: a } = this.props;
+          var t, a, n, r, o, s;
+          const { capsuleContainer: l, editModel: c } = this.props;
           (0, A.w)(
-            e >= 0 && e < t.capsules.length,
+            e >= 0 &&
+              e <
+                (null !==
+                  (a =
+                    null === (t = l.capsules) || void 0 === t
+                      ? void 0
+                      : t.length) && void 0 !== a
+                  ? a
+                  : 0),
             "Remove capsule called outside of range: " +
               e +
               " len: " +
-              t.capsules.length,
+              (null !==
+                (r =
+                  null === (n = l.capsules) || void 0 === n
+                    ? void 0
+                    : n.length) && void 0 !== r
+                ? r
+                : 0),
           ),
             e >= 0 &&
-              e < t.capsules.length &&
-              (t.capsules.splice(e, 1), a.SetDirty(i.IQ.jsondata_sales));
+              e <
+                (null !==
+                  (s =
+                    null === (o = l.capsules) || void 0 === o
+                      ? void 0
+                      : o.length) && void 0 !== s
+                  ? s
+                  : 0) &&
+              (l.capsules.splice(e, 1), c.SetDirty(i.IQ.jsondata_sales));
         }
         AddCapsule(e, t) {
           const a = {
@@ -7884,11 +7906,11 @@
           o.SetDirty(i.IQ.jsondata_sales);
         }
         OnUseTagFilterChange(e) {
-          var t;
-          const { capsuleContainer: a, editModel: n } = this.props;
+          var t, a;
+          const { capsuleContainer: n, editModel: i } = this.props;
           if (e) {
-            if (a.sale_tag_filter) return;
-            a.capsules.length
+            if (n.sale_tag_filter) return;
+            (null === (t = n.capsules) || void 0 === t ? void 0 : t.length)
               ? (0, w.pg)(
                   m.createElement(f.o0, {
                     strTitle: (0, k.we)("#Sale_TaggedItemFilter_EnableTitle"),
@@ -7901,11 +7923,11 @@
                 )
               : this.OnUseTagFilterChangeConfirmed(!0);
           } else {
-            if (!a.sale_tag_filter) return;
+            if (!n.sale_tag_filter) return;
             (
-              null === (t = a.sale_tag_filter.clauses) || void 0 === t
+              null === (a = n.sale_tag_filter.clauses) || void 0 === a
                 ? void 0
-                : t.length
+                : a.length
             )
               ? (0, w.pg)(
                   m.createElement(f.o0, {
@@ -7921,20 +7943,27 @@
           }
         }
         renderFilterView() {
-          const { editModel: e, capsuleContainer: t } = this.props,
-            a =
+          var e, t;
+          const { editModel: a, capsuleContainer: n } = this.props,
+            r =
               (0, k.we)(
                 this.props.titleLocToken ||
                   "#Sale_Section_FilteredProducts_Title",
               ) +
               " - " +
-              t.capsules.length,
-            n = (0, k.we)(
+              (null !==
+                (t =
+                  null === (e = n.capsules) || void 0 === e
+                    ? void 0
+                    : e.length) && void 0 !== t
+                ? t
+                : 0),
+            s = (0, k.we)(
               this.props.ttipLocToken ||
                 "#Sale_Section_FilteredProducts_Tooltip",
             ),
-            r = "ShowFilterItems_" + this.props.uniqueKey,
-            s = (0, o.Nx)(r, !0);
+            c = "ShowFilterItems_" + this.props.uniqueKey,
+            u = (0, o.Nx)(c, !0);
           return m.createElement(
             v.tH,
             null,
@@ -7946,22 +7975,22 @@
                   E.EventDefaultRowContainer,
                 ),
               },
-              m.createElement(d.WR, { editModel: e, capsuleContainer: t }),
+              m.createElement(d.WR, { editModel: a, capsuleContainer: n }),
               m.createElement(
                 "div",
                 { className: P.SaleSectionTitleHeader },
                 m.createElement(
                   "div",
                   { className: E.EventEditorTextTitle },
-                  a,
-                  m.createElement(F.o, { tooltip: n }),
+                  r,
+                  m.createElement(F.o, { tooltip: s }),
                 ),
                 m.createElement(D.pn, {
-                  bIsMinimized: s,
-                  fnToggleMinimize: () => (0, o.mi)(r, !0),
+                  bIsMinimized: u,
+                  fnToggleMinimize: () => (0, o.mi)(c, !0),
                 }),
               ),
-              !s &&
+              !u &&
                 m.createElement(
                   "div",
                   {
@@ -7971,10 +8000,10 @@
                     ),
                   },
                   m.createElement(C.A, {
-                    items: t.capsules,
-                    onReorder: () => e.SetDirty(i.IQ.jsondata_sales),
+                    items: n.capsules,
+                    onReorder: () => a.SetDirty(i.IQ.jsondata_sales),
                     render: (e) =>
-                      m.createElement(l.Y, { capsule: e, capsuleContainer: t }),
+                      m.createElement(l.Y, { capsule: e, capsuleContainer: n }),
                   }),
                 ),
             ),
@@ -9716,21 +9745,18 @@
                                     const t =
                                       await p.y.AutoGenerateFacetsAsync();
                                     (function (e) {
-                                      const t = p.y.GetAtomicTagIDsForTagID(),
-                                        a = p.y.GetTagNameForTagID();
-                                      for (const n of e)
-                                        for (const e of n.facetValues) {
-                                          const n = e.nAtomicStoreTagID;
-                                          let i = t.has(n)
-                                            ? t.get(n).map((e) => a.get(e))
-                                            : [a.get(n)];
-                                          (i = i.map((e) => x(e))),
+                                      const t = p.y.GetTagNameForTagID();
+                                      for (const a of e)
+                                        for (const e of a.facetValues) {
+                                          const a = e.nAtomicStoreTagID;
+                                          let n = [t.get(a)];
+                                          (n = n.map((e) => x(e))),
                                             (e.type = u.GE.k_ESaleTagFilter),
                                             (e.filter = {
                                               clauses: [
                                                 {
                                                   type: "Must have",
-                                                  or_tags: i,
+                                                  or_tags: n,
                                                 },
                                               ],
                                             });
@@ -10452,8 +10478,7 @@
                 );
                 continue;
               }
-              const a = t.get(n);
-              if (p.y.BIsTagAtomic(a)) return a;
+              return t.get(n);
             }
           }
         return 0;
@@ -32246,7 +32271,6 @@
         constructor(e = null) {
           (this.m_rgCategoriesForTagID = null),
             (this.m_rgTagNameForTagID = null),
-            (this.m_rgAtomicTagIDsForTagID = null),
             (this.m_rgLocalizedCategoryNames = null),
             (this.m_rgLocalizedTagNames = null),
             (this.m_rgLanguages = null),
@@ -32257,9 +32281,6 @@
         }
         GetTagNameForTagID() {
           return this.m_rgTagNameForTagID;
-        }
-        GetAtomicTagIDsForTagID() {
-          return this.m_rgAtomicTagIDsForTagID;
         }
         GetLocalizedCategoryNames() {
           return this.m_rgLocalizedCategoryNames;
@@ -32274,24 +32295,15 @@
           const e = this.ComputeLocalizedCategoryNames(),
             t = this.ComputeLocalizedTagNames(),
             a = this.ComputeCategoryToTagMap(),
-            n = this.FindNonAtomicTags(),
-            i = this.ComputeFacetCategoryToTagMap(a, n),
-            r = this.ComputeAtomicTagToTagsMap();
-          return this.ComputeFacets(i, r, e, t);
+            n = this.ComputeFacetCategoryToTagMap(a);
+          return this.ComputeFacets(n, e, t);
         }
         async AutoGenerateFacetsAsync() {
           return await this.EnsureLoaded(), this.AutoGenerateFacets();
         }
-        BIsTagAtomic(e) {
-          return (
-            this.m_rgAtomicTagIDsForTagID.has(e) &&
-            this.m_rgAtomicTagIDsForTagID.get(e).includes(e)
-          );
-        }
         ParseResponse(e) {
           (this.m_rgCategoriesForTagID = new Map()),
             (this.m_rgTagNameForTagID = new Map()),
-            (this.m_rgAtomicTagIDsForTagID = new Map()),
             (this.m_rgLocalizedCategoryNames = new Map()),
             (this.m_rgLocalizedTagNames = new Map()),
             (this.m_rgLanguages = new Array());
@@ -32302,11 +32314,6 @@
             );
           for (const t of Object.keys(e.rgTagNames))
             this.m_rgTagNameForTagID.set(Number(t), e.rgTagNames[t]);
-          for (const t of Object.keys(e.rgTagBreakdown))
-            this.m_rgAtomicTagIDsForTagID.set(
-              Number(t),
-              Array.from(e.rgTagBreakdown[t]).map((e) => Number(e)),
-            );
           for (const t of Object.keys(e.rgLocalizedCategoryNames))
             this.m_rgLocalizedCategoryNames.set(
               t,
@@ -32352,26 +32359,6 @@
           }
           return e;
         }
-        Verify(e) {
-          const t = new Set(),
-            a = new Set(),
-            n = Object.keys(e.rgTagBreakdown),
-            i = Object.keys(e.rgTagNames),
-            r = Object.keys(e.rgCategoriesByTag);
-          for (const o of n) {
-            const n = e.rgTagBreakdown[o].flat();
-            for (const o of n)
-              i.includes(o.toString()) || t.add(o),
-                (r.includes(o.toString()) &&
-                  e.rgCategoriesByTag[o] &&
-                  0 !== e.rgCategoriesByTag[o].length) ||
-                  a.add(o);
-          }
-          console.log(t.size + " un-named tags."),
-            t.size > 0 && console.log(t),
-            console.log(a.size + " un-categorized tags."),
-            a.size > 0 && console.log(a);
-        }
         ComputeCategoryToTagMap() {
           const e = new Map();
           return (
@@ -32383,17 +32370,8 @@
             e
           );
         }
-        FindNonAtomicTags() {
-          const e = new Set();
-          return (
-            this.m_rgAtomicTagIDsForTagID.forEach((t, a) => {
-              1 !== t.length && e.add(a);
-            }),
-            e
-          );
-        }
-        ComputeFacetCategoryToTagMap(e, t) {
-          const a = [
+        ComputeFacetCategoryToTagMap(e) {
+          const t = [
               "supergenre",
               "genre",
               "subgenre",
@@ -32402,17 +32380,16 @@
               "feature",
               "players",
             ],
-            n = new Set(),
-            i = new Map(),
-            r = (a, r) => {
-              const o = e.get(r);
-              for (const e of o)
-                n.has(e) || t.has(e) || (n.add(e), i.get(a).push(e));
+            a = new Set(),
+            n = new Map(),
+            i = (t, i) => {
+              const r = e.get(i);
+              for (const e of r) a.has(e) || (a.add(e), n.get(t).push(e));
             };
-          for (const e of a)
-            i.set(e, new Array()),
-              "theme_mood" === e ? (r(e, "theme"), r(e, "mood")) : r(e, e);
-          return i;
+          for (const e of t)
+            n.set(e, new Array()),
+              "theme_mood" === e ? (i(e, "theme"), i(e, "mood")) : i(e, e);
+          return n;
         }
         ComputeLocalizedCategoryNames() {
           const e = new Map();
@@ -32450,72 +32427,53 @@
             e
           );
         }
-        ComputeAtomicTagToTagsMap() {
-          const e = new Map();
+        ComputeFacets(e, t, a) {
+          const n = new Array();
           return (
-            this.m_rgAtomicTagIDsForTagID.forEach((t, a) => {
-              for (const n of t) {
-                const t = Number(n);
-                e.has(t) || e.set(t, new Array()), e.get(t).push(a);
-              }
-            }),
-            e
-          );
-        }
-        ComputeFacets(e, t, a, n) {
-          const i = new Array();
-          return (
-            e.forEach((e, r) => {
-              const s = {
-                  name: a.get(r),
+            e.forEach((e, i) => {
+              const r = {
+                  name: t.get(i),
                   facetValues: new Array(),
                   logical_and: !0,
                 },
-                l = Array();
-              for (const a of e) {
-                if (!n.get(a)) {
-                  l.push(a);
+                s = Array();
+              for (const t of e) {
+                if (!a.get(t)) {
+                  s.push(t);
                   continue;
                 }
                 const e = {
-                  name: n.get(a),
+                  name: a.get(t),
                   subtitle: new Array(),
                   rgStoreTagFilter: {
                     type: o.EE.k_EStoreFilterClauseTypeAnd,
                     rgSubexpressions: [
                       {
                         type: o.EE.k_EStoreFilterClauseTypeOr,
-                        rgSubexpressions: t.has(a)
-                          ? t
-                              .get(a)
-                              .map((e) => ({
-                                type: o.EE.k_EStoreFilterClauseTypeStoreTag,
-                                value: e,
-                              }))
-                          : [
-                              {
-                                type: o.EE.k_EStoreFilterClauseTypeStoreTag,
-                                value: a,
-                              },
-                            ],
+                        rgSubexpressions: [
+                          {
+                            type: o.EE.k_EStoreFilterClauseTypeStoreTag,
+                            value: t,
+                          },
+                        ],
                       },
                     ],
                   },
-                  nAtomicStoreTagID: a,
+                  nAtomicStoreTagID: t,
                   filter: null,
                 };
-                s.facetValues.push(e);
+                r.facetValues.push(e);
               }
-              l.length > 0 &&
+              s.length > 0 &&
                 console.warn(
                   "No name information found for tag count " +
-                    l.length +
+                    s.length +
                     ", skipping.",
-                  l,
+                  s,
                 ),
-                i.push(s);
+                n.push(r);
             }),
-            i
+            n
           );
         }
       })();
