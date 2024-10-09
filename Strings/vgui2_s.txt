@@ -2323,7 +2323,6 @@ lowercase
 lseek64
 lseek64@GLIBC_2.2
 luxembourgish
-m&Os
 mMKEY_M
 m_Colors
 m_Contexts

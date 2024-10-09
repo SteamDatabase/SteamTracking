@@ -3945,13 +3945,6 @@ enum UnnamedEnumc118f0b997e61c94
 	InvalidCode = 1;
 }
 
-enum UnnamedEnumc1b25a47910a078f
-{
-	None = 0;
-	DownloadFailed = 1;
-	PlaybackError = 2;
-}
-
 enum UnnamedEnumc2b67199254beacd
 {
 	UNKNOWN = 0;
