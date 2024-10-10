@@ -10943,7 +10943,7 @@
           c = (0, r.useCallback)(
             (e) =>
               Boolean(
-                o.commitments.some(
+                o.commitments?.some(
                   (t) =>
                     (0, Da.nU)(t.localized_title, e) ||
                     (0, Da.nU)(t.milestone_desc, e),
