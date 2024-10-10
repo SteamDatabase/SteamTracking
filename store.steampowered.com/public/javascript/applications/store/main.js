@@ -3051,7 +3051,7 @@
         o = r(71430),
         l = r(79443),
         c = r(93676),
-        m = r(42701),
+        m = r(30709),
         u = r(20194),
         d = r(72839),
         p = r(30470);
@@ -3260,25 +3260,17 @@
         );
       }
     },
-    42701: (e, t, r) => {
+    30709: (e, t, r) => {
       "use strict";
-      function i(e) {
-        if (!document.cookie) return;
-        const t = document.cookie.match("(^|; )" + e.name + "=([^;]*)");
-        return t && t[2] ? decodeURIComponent(t[2]) : void 0;
-      }
       r.d(t, { VF: () => o, h3: () => m, j4: () => c });
-      const n = {
-        name: "shoppingCartGID",
-        options: { path: "/", secure: !0, maxAge: 604800 },
-        preferenceControls: { isTechnicallyNecessary: !0 },
-      };
-      var a = r(90626),
+      var i = r(91933),
+        n = r(38861),
+        a = r(90626),
         s = r(66418);
       function o() {
         return s.i.logged_in
           ? { type: "account" }
-          : { type: "anonymous", gid: i(n) };
+          : { type: "anonymous", gid: (0, i.j_)(n.TP) };
       }
       const l = a.createContext({ cartID: void 0 });
       function c() {
@@ -3926,6 +3918,29 @@
         );
       }
       r.d(t, { f: () => i });
+    },
+    38861: (e, t, r) => {
+      "use strict";
+      r.d(t, { TP: () => i, st: () => n });
+      const i = {
+          name: "shoppingCartGID",
+          options: { path: "/", secure: !0, maxAge: 604800 },
+          preferenceControls: { isTechnicallyNecessary: !0 },
+        },
+        n = {
+          name: "steamLoginSpoofSteamID",
+          options: { path: "/", secure: !0 },
+          preferenceControls: { isTechnicallyNecessary: !0 },
+        };
+    },
+    91933: (e, t, r) => {
+      "use strict";
+      function i(e) {
+        if (!document.cookie) return;
+        const t = document.cookie.match("(^|; )" + e.name + "=([^;]*)");
+        return t && t[2] ? decodeURIComponent(t[2]) : void 0;
+      }
+      r.d(t, { j_: () => i });
     },
     45699: (e, t, r) => {
       "use strict";
@@ -39420,7 +39435,7 @@
     },
     41872: (e, t, r) => {
       "use strict";
-      r.d(t, { P: () => d });
+      r.d(t, { P: () => _ });
       var i = r(71944),
         n = r(56545),
         a = r(44654),
@@ -39447,7 +39462,9 @@
       function c(e) {
         return atob(e.replace(/-/g, "+").replace(/_/g, "/"));
       }
-      class m {
+      var m = r(91933),
+        u = r(38861);
+      class d {
         m_ServiceTransport;
         m_AnonymousServiceTransport;
         m_strWebAPIBaseURL;
@@ -39457,6 +39474,7 @@
         m_fnRequestNewAccessToken;
         m_refreshAccessTokenPromise;
         m_dtLastExpireCheck = 0;
+        m_strSpoofedSteamID = "";
         constructor(e, t = "", r = !1, i) {
           (this.m_strWebAPIBaseURL = e),
             (this.m_webApiAccessToken = t),
@@ -39481,6 +39499,8 @@
               }),
               MakeReady: this.MakeReady.bind(this),
             });
+          const n = (0, m.j_)(u.st);
+          n && /[0-9]+/g.test(n) && (this.m_strSpoofedSteamID = n);
         }
         WaitUntilLoggedOn() {
           return Promise.resolve();
@@ -39587,7 +39607,9 @@
             this.m_webApiAccessToken &&
               e.bSendAuth &&
               !c &&
-              u.append("access_token", this.m_webApiAccessToken);
+              (u.append("access_token", this.m_webApiAccessToken),
+              this.m_strSpoofedSteamID &&
+                u.append("spoof_steamid", this.m_strSpoofedSteamID));
           if (n.bConstMethod)
             return (
               u.append("origin", self.origin),
@@ -39621,14 +39643,14 @@
           );
         }
       }
-      var u = r(66418);
-      function d() {
+      var p = r(66418);
+      function _() {
         const e = window;
         e.g_wapitRefreshEnabled = !1;
         const t = "function" == typeof e.g_wapitRefresh;
         let r;
         return (
-          !u.T.IN_CLIENT &&
+          !p.T.IN_CLIENT &&
             t &&
             (r = () =>
               new Promise((t, r) => {
@@ -39637,7 +39659,7 @@
                 }),
                   window.setTimeout(() => r("Refresh Timeout"), 1e4);
               })),
-          new m(u.T.WEBAPI_BASE_URL, e.g_wapit, !1, r)
+          new d(p.T.WEBAPI_BASE_URL, e.g_wapit, !1, r)
         );
       }
     },
@@ -101840,7 +101862,7 @@
       var pt = r(72963),
         _t = r(79443),
         gt = r(12229),
-        ht = r(42701),
+        ht = r(30709),
         ft = r(93676),
         bt = r(75233),
         yt = r(82227),
