@@ -21060,7 +21060,7 @@
         }
         GetActiveTabSNRPostFix() {
           return this.m_activeTab && !this.BIsDefaultTab()
-            ? `tabid${this.GetActiveTabUniqueID}`
+            ? `tabid${this.GetActiveTabUniqueID()}`
             : "";
         }
       }

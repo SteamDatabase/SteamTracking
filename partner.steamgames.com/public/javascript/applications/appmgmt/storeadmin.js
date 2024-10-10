@@ -1827,12 +1827,14 @@
             strActiveLanguage: p,
             setActiveLanguage: E,
           }),
-          h = r.createElement(g, {
-            rgLanguages: l,
-            mapValues: s,
-            namePrefix: n,
-            rgPath: a,
-          });
+          h =
+            Boolean(n && a) &&
+            r.createElement(g, {
+              rgLanguages: l,
+              mapValues: s,
+              namePrefix: n,
+              rgPath: a,
+            });
         return {
           strActiveLanguage: p,
           mapValues: s,
@@ -10226,44 +10228,50 @@
       var Ga = n(26408),
         Ha = n(9482);
       function Ka(e) {
-        const { mileStone: t, index: n, bCreate: a } = e,
-          [o, l, c] = (0, W.uD)(),
-          i = r.useMemo(() => {
+        const {
+            mileStone: t,
+            index: n,
+            bCreate: a,
+            bAppHasSteamChinaToolsEnabled: o,
+          } = e,
+          [l, c, i] = (0, W.uD)(),
+          d = r.useMemo(() => {
             const e = new Map();
-            for (let t = 0; t < 31; ++t)
-              if (25 != t) {
-                const n = (0, Ra.Lg)(t);
-                e.set(n, (0, s.we)("#Language_" + n));
-              }
+            for (let t = 0; t < 31; ++t) {
+              if (25 == t) continue;
+              if (29 == t && !o) continue;
+              const n = (0, Ra.Lg)(t);
+              e.set(n, (0, s.we)("#Language_" + n));
+            }
             return e;
-          }, []),
-          d = r.useMemo(
+          }, [o]),
+          m = r.useMemo(
             () => (0, Da.mn)(t?.milestone_desc || { english: "" }),
             [t?.milestone_desc],
           ),
-          m = r.useMemo(
+          p = r.useMemo(
             () => ["seasonpass", "commitments", "" + n, "milestone_desc"],
             [n],
           ),
-          p = (0, H.K)(i, d, "app", m);
+          _ = (0, H.K)(d, m, "app", p);
         return (
           (0, r.useEffect)(() => {
-            if (o) {
-              const e = (0, Ra.sf)(p.strActiveLanguage, 0);
+            if (l) {
+              const e = (0, Ra.sf)(_.strActiveLanguage, 0);
               Ba.O.Get().SetCurEditLanguage(e);
             }
-          }, [p.strActiveLanguage, o]),
+          }, [_.strActiveLanguage, l]),
           (0, W.hL)(Ba.O.Get().GetCallback(), (e) => {
-            p.setActiveLanguage((0, Ra.Lg)(e));
+            _.setActiveLanguage((0, Ra.Lg)(e));
           }),
           r.createElement(
             "div",
             { className: (0, u.A)(xa().EditBtn, Fa().CreateNew) },
-            o && r.createElement(Wa, { hideModal: c, ...e, ...p }),
-            !a && p.rctHiddenInputs,
+            l && r.createElement(Wa, { hideModal: i, bCreate: a, ...e, ..._ }),
+            !a && _.rctHiddenInputs,
             r.createElement(
               P.$n,
-              { onClick: l },
+              { onClick: c },
               (0, s.we)(a ? "#SeasonPass_ItemNew" : "#Button_Edit"),
               a &&
                 r.createElement(Ga.o, {
@@ -10283,48 +10291,61 @@
             rctLanguageSelect: c,
             mapValues: i,
             bAppHasSteamChinaToolsEnabled: d,
+            bCreate: u,
           } = e,
-          u = (0, wa.f1)(),
-          [m, p] = (0, r.useState)(n?.internal_desc || ""),
-          [_, E] = (0, r.useState)(n?.expected_delivery || u + 86400),
-          [g, C] = (0, r.useState)(n?.display_format || "date_quarter"),
-          [h, S] = (0, r.useState)(n?.localized_title || { english: "" }),
-          [f] = (0, r.useState)(n?.milestone_desc || {}),
-          k = (0, r.useMemo)(
+          m = (0, wa.f1)(),
+          [p, _] = (0, r.useState)(n?.internal_desc || ""),
+          [E, g] = (0, r.useState)(n?.expected_delivery || m + 86400),
+          [C, h] = (0, r.useState)(n?.display_format || "date_quarter"),
+          [S, f] = (0, r.useState)(n?.localized_title || { english: "" }),
+          [k] = (0, r.useState)(n?.milestone_desc || {}),
+          b = (0, r.useMemo)(
             () =>
               d
                 ? [Ia.TU.k_ESteamRealmGlobal, Ia.TU.k_ESteamRealmChina]
                 : [Ia.TU.k_ESteamRealmGlobal],
             [d],
           ),
-          b = (0, s.we)(n ? "#SeasonPass_Update" : "#SeasonPass_Create");
+          y = (0, s.we)(n ? "#SeasonPass_Update" : "#SeasonPass_Create");
         return r.createElement(
           Oa.E,
           { active: !0 },
           r.createElement(
             Na.o0,
             {
-              strTitle: b,
+              strTitle: y,
               strDescription: (0, s.we)("#SeasonPass_Create_desc"),
               bAllowFullSize: !0,
               bDisableBackgroundDismiss: !0,
               strOKButtonText: (0, s.we)(
                 n ? "#Button_Update" : "#Button_Append",
               ),
-              onOK: () =>
-                o({
-                  milestone_id: a,
-                  internal_desc: m,
-                  expected_delivery: _,
-                  submit_time: u,
-                  submit_accountid: et.i.accountid,
-                  display_format: g,
-                  localized_title: h,
-                  milestone_desc: f,
-                  milestone_image: void 0,
+              onOK: () => {
+                const e = {};
+                i.forEach((t, n) => {
+                  e[n] = t.Value;
                 }),
-              bOKDisabled: m.length < 3 || _ < u || h.english.length < 3,
-              closeModal: t,
+                  o({
+                    milestone_id: a,
+                    internal_desc: p,
+                    expected_delivery: E,
+                    submit_time: m,
+                    submit_accountid: et.i.accountid,
+                    display_format: C,
+                    localized_title: S,
+                    milestone_desc: e,
+                    milestone_image: void 0,
+                  }),
+                  u && i.forEach((e, t) => i.get(t).Set("")),
+                  t();
+              },
+              onCancel: () => {
+                i.forEach((e, t) => {
+                  k?.[t] ? i.get(t).Set(k[t]) : i.get(t).Set("");
+                }),
+                  t();
+              },
+              bOKDisabled: p.length < 3 || E < m || S.english.length < 3,
             },
             r.createElement(
               "div",
@@ -10335,13 +10356,13 @@
                 (0, s.we)("#SeasonPass_CustomerTitle"),
               ),
               r.createElement(Ua, {
-                text: h,
+                text: S,
                 className: xa().MilestoneTitleField,
                 onChangeText: (e, t) => {
-                  (0, Da.pV)(h, t, e), S({ ...h });
+                  (0, Da.pV)(S, t, e), f({ ...S });
                 },
                 kvName: void 0,
-                rgRealms: k,
+                rgRealms: b,
               }),
               r.createElement(
                 P.JU,
@@ -10370,10 +10391,10 @@
                       }),
                     ),
                     r.createElement(de.K, {
-                      nEarliestTime: u,
-                      fnGetTimeToUpdate: () => _,
-                      fnSetTimeToUpdate: E,
-                      fnIsValidDateTime: () => u < _,
+                      nEarliestTime: m,
+                      fnGetTimeToUpdate: () => E,
+                      fnSetTimeToUpdate: g,
+                      fnIsValidDateTime: () => m < E,
                     }),
                   ),
                   r.createElement(
@@ -10388,10 +10409,10 @@
                       }),
                     ),
                     r.createElement(ge, {
-                      value: g,
-                      onChange: C,
+                      value: C,
+                      onChange: h,
                       rgComingSoonOptionOverride: Ee,
-                      rtSteamReleaseDate: _,
+                      rtSteamReleaseDate: E,
                     }),
                   ),
                 ),
@@ -10404,8 +10425,8 @@
               r.createElement("textarea", {
                 cols: 50,
                 rows: 10,
-                onChange: (e) => p(e.currentTarget.value),
-                value: m,
+                onChange: (e) => _(e.currentTarget.value),
+                value: p,
                 autoFocus: !0,
               }),
             ),
