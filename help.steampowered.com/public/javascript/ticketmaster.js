@@ -2261,7 +2261,10 @@ var PreapprovalQueue = {
 
 	ClearCachedApprovals: function()
 	{
-		sessionStorage.removeItem( PreapprovalQueue.strSessionKey );
+		PreapprovalQueue.rgApprovalTypes.forEach( function( strType ) {
+			var strKey = PreapprovalQueue.strSessionKey + '_' + strType;
+			sessionStorage.removeItem( strKey );
+		} );
 	},
 
 	HandleTxn: function( strApprovalType, txnID, steamID, strTicketRef, strAccountName )
