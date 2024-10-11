@@ -4506,7 +4506,7 @@
             if (t && t.length > 0) {
               let e = (0, g.mJ)();
               if (t.startsWith(e)) {
-                let a = "[img]" + ue.l + "/" + t.substr(e.length) + "[/img]";
+                let a = "[img]" + ue.lw + "/" + t.substr(e.length) + "[/img]";
                 Ce.replaceSelection(this.GetTextAreaRef().current, a);
               }
             }
@@ -5367,7 +5367,7 @@
                 o.trim().length > 0 && (a += ` company="${o}"`),
                 p)
               ) {
-                a += ` photo="${ue.l + "/" + p.clanAccountID + "/" + _.i6.GetHashAndExt(p)}"`;
+                a += ` photo="${ue.lw + "/" + p.clanAccountID + "/" + _.i6.GetHashAndExt(p)}"`;
               }
               h && (a += ` steamid="${h.ConvertTo64BitString()}"`),
                 (a += `]${l}[/speaker]`),

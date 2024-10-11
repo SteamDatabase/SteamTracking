@@ -1050,11 +1050,11 @@
         ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
       ]);
       function k(e, t, n = 0) {
-        if (e?.startsWith(A.l)) return (0, d.v6)(e);
-        if (e?.startsWith(A.e)) {
+        if (e?.startsWith(A.lw)) return (0, d.v6)(e);
+        if (e?.startsWith(A.eg)) {
           const o = new Array(),
             r = (0, d.mJ)(),
-            s = e.substring(A.e.length + 1),
+            s = e.substring(A.eg.length + 1),
             a = u.i6.GetHashFromHashAndExt(s),
             l = u.i6.GetExtensionStringFromHashAndExt(s);
           if (null != t) {

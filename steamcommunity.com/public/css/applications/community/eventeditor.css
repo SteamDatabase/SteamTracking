@@ -716,6 +716,11 @@ button.DialogButton._3uDH_JfFghCIXoQ9CnlYt8:disabled {
   margin: 0px 8px;
   background-color: rgba(255, 255, 255, 0.4);
 }
+._3THFLqYdRhiNEAaHihD49g {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
 ._3kTQIYYiQiVR_DeJepkOwJ {
   font-size: 17px;
   font-weight: normal;

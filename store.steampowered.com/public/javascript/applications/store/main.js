@@ -40464,9 +40464,10 @@
     },
     12611: (e, t, r) => {
       "use strict";
-      r.d(t, { e: () => n, l: () => i });
+      r.d(t, { eg: () => n, lw: () => i, qR: () => a });
       const i = "{STEAM_CLAN_IMAGE}",
-        n = "{STEAM_CLAN_LOC_IMAGE}";
+        n = "{STEAM_CLAN_LOC_IMAGE}",
+        a = "{STEAM_APP_IMAGE}";
     },
     6866: (e, t, r) => {
       "use strict";
@@ -63260,7 +63261,7 @@
         return `${n.TS.CLAN_CDN_ASSET_URL}images/`;
       }
       function s(e) {
-        return (e = e.replace(i.l, a())).replace("http://", "https://");
+        return (e = e.replace(i.lw, a())).replace("http://", "https://");
       }
       function o(e) {
         return e.replace(/{STEAM_CLAN_IMAGE}/g, a());
@@ -87492,7 +87493,11 @@
                   _().StoreSalePrepurchaseLabel,
                 ),
               },
-              (0, f.we)("#EventDisplay_CallToAction_Prepurchase_Short"),
+              i.createElement(
+                "span",
+                null,
+                (0, f.we)("#EventDisplay_CallToAction_Prepurchase_Short"),
+              ),
             ),
           Boolean(!n && c) &&
             i.createElement(
@@ -102398,7 +102403,7 @@
             r.e(7382),
             r.e(8019),
             r.e(5139),
-          ]).then(r.bind(r, 85227)),
+          ]).then(r.bind(r, 50295)),
         );
       const mr = function (e) {
         return n.createElement(F.tH, null, n.createElement(w.qh, { ...e }));

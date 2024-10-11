@@ -1600,6 +1600,7 @@ ${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}
+${STORE_ICON_BASE_URL}${}/
 ${STORE_ICON_BASE_URL}${}/${}
 ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ICON_BASE_URL}/${appid}/${}

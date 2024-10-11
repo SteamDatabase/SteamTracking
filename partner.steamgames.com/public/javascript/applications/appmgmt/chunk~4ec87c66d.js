@@ -86739,11 +86739,11 @@
         ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
       ]);
       function I(e, t, a = 0) {
-        if (e?.startsWith(w.l)) return (0, d.v6)(e);
-        if (e?.startsWith(w.e)) {
+        if (e?.startsWith(w.lw)) return (0, d.v6)(e);
+        if (e?.startsWith(w.eg)) {
           const n = new Array(),
             r = (0, d.mJ)(),
-            s = e.substring(w.e.length + 1),
+            s = e.substring(w.eg.length + 1),
             l = u.i6.GetHashFromHashAndExt(s),
             o = u.i6.GetExtensionStringFromHashAndExt(s);
           if (null != t) {
@@ -91548,7 +91548,7 @@
             if (t && t.length > 0) {
               let e = (0, u.mJ)();
               if (t.startsWith(e)) {
-                let a = "[img]" + pe.l + "/" + t.substr(e.length) + "[/img]";
+                let a = "[img]" + pe.lw + "/" + t.substr(e.length) + "[/img]";
                 Ee.replaceSelection(this.GetTextAreaRef().current, a);
               }
             }
@@ -92409,7 +92409,7 @@
                 i.trim().length > 0 && (a += ` company="${i}"`),
                 u)
               ) {
-                a += ` photo="${pe.l + "/" + u.clanAccountID + "/" + p.i6.GetHashAndExt(u)}"`;
+                a += ` photo="${pe.lw + "/" + u.clanAccountID + "/" + p.i6.GetHashAndExt(u)}"`;
               }
               g && (a += ` steamid="${g.ConvertTo64BitString()}"`),
                 (a += `]${o}[/speaker]`),

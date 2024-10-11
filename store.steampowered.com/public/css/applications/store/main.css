@@ -8175,7 +8175,18 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   padding: unset;
 }
 ._1Fru-E7WQMr8G_aR2sMg5F {
-  color: #a3cf06;
+  color: #b5df20;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+}
+._1Fru-E7WQMr8G_aR2sMg5F span {
+  margin: 0 auto;
+  background: #344654;
+  padding: 0px 6px;
+  text-shadow: 1px 1px 2px #000;
 }
 .BasicUI ._1Fru-E7WQMr8G_aR2sMg5F {
   color: var(--gpColor-GreenHi);
@@ -8337,6 +8348,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   align-items: center;
 }
 ._3lmdEmwrmqe-kicNCZ9v-I {
+  position: relative;
   background-color: #000;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;

@@ -15363,7 +15363,7 @@
     },
     12611: (e, t, r) => {
       "use strict";
-      r.d(t, { e: () => i, l: () => n });
+      r.d(t, { eg: () => i, lw: () => n });
       const n = "{STEAM_CLAN_IMAGE}",
         i = "{STEAM_CLAN_LOC_IMAGE}";
     },
@@ -18462,7 +18462,7 @@
         return `${i.TS.CLAN_CDN_ASSET_URL}images/`;
       }
       function a(e) {
-        return (e = e.replace(n.l, s())).replace("http://", "https://");
+        return (e = e.replace(n.lw, s())).replace("http://", "https://");
       }
       function o(e) {
         return e.replace(/{STEAM_CLAN_IMAGE}/g, s());

@@ -77,9 +77,15 @@
         DeleteInfo: "_3EhGHfB3z9uPkO3ZTnwUVm",
       };
     },
+    64734: (e) => {
+      e.exports = {
+        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
+      };
+    },
     28579: (e, t, n) => {
       "use strict";
-      n.d(t, { xh: () => y, AC: () => J, u6: () => Z });
+      n.d(t, { xh: () => P, AC: () => J, u6: () => Z });
       var s = n(90626),
         o = n(17720),
         a = n(44165),
@@ -399,7 +405,7 @@
                 : "/ajaxgetqandasession/",
             _ = u.TS.COMMUNITY_BASE_URL + "questions/" + u.UF.VANITY_ID + v + e,
             S = {};
-          let C = null;
+          let g = null;
           try {
             const t = await Q().get(_, {
               params: S,
@@ -457,18 +463,18 @@
                 1
               );
             }
-            C = { response: t };
+            g = { response: t };
           } catch (e) {
-            C = e;
+            g = e;
           }
-          const g = (0, p.H)(C);
+          const C = (0, p.H)(g);
           return (
-            console.error("Could not load Q&A", e, g.strErrorMsg, g),
+            console.error("Could not load Q&A", e, C.strErrorMsg, C),
             null !==
               (A =
                 null ===
                   (m =
-                    null === (c = null == C ? void 0 : C.response) ||
+                    null === (c = null == g ? void 0 : g.response) ||
                     void 0 === c
                       ? void 0
                       : c.data) || void 0 === m
@@ -732,7 +738,7 @@
           );
         }
       }
-      function C(e) {
+      function g(e) {
         const t = (0, _.m)("useQAndASession"),
           n = s.useCallback(
             async (n) => {
@@ -835,7 +841,7 @@
           i
         );
       }
-      let g = null;
+      let C = null;
       function h(e) {
         const t = (0, _.m)("useReloadFunction"),
           [n, o] = s.useState(!1),
@@ -866,9 +872,9 @@
           })(a);
         return (
           s.useEffect(() => {
-            if (g) return () => {};
+            if (C) return () => {};
             return (
-              (g = window.setInterval(i, 1e4)), () => window.clearInterval(g)
+              (C = window.setInterval(i, 1e4)), () => window.clearInterval(C)
             );
           }, [i]),
           s.useMemo(() => ({ fnReload: a, bIsReloading: n }), [a, n])
@@ -907,19 +913,19 @@
         N = n(82477),
         b = n(76684),
         I = n(21273),
-        f = n(738),
-        T = n(12155),
+        T = n(738),
+        f = n(12155),
         D = n(22797),
         k = n(32754),
         G = n(48479),
-        U = n(52038),
-        M = n(61859),
+        M = n(52038),
+        U = n(61859),
         L = n(41338),
-        B = n(14771),
-        q = n(76048),
-        V = n.n(q),
-        P = n(14336);
-      function y(e) {
+        q = n(14771),
+        B = n(76048),
+        V = n.n(B),
+        H = n(14336);
+      function P(e) {
         const t = (function () {
           const [e, t] = s.useState(S.Get().GetAllSessions());
           return (
@@ -933,41 +939,41 @@
         return s.createElement(
           "div",
           { className: V().QADashboardCtn },
-          s.createElement(H, null),
+          s.createElement(y, null),
           s.createElement(
             "div",
             {
-              className: (0, U.A)(V().DashboardRow, V().DashboardColumnHeaders),
+              className: (0, M.A)(V().DashboardRow, V().DashboardColumnHeaders),
             },
             s.createElement(
               "div",
               { className: V().QAndAName },
-              (0, M.we)("#QAndA_Column_Name"),
+              (0, U.we)("#QAndA_Column_Name"),
             ),
             s.createElement(
               "div",
               { className: V().GIDSession },
-              (0, M.we)("#QAndA_Column_GID"),
+              (0, U.we)("#QAndA_Column_GID"),
             ),
             s.createElement(
               "div",
               { className: V().QuestionCount },
-              (0, M.we)("#QAndA_Column_QuestionCount"),
+              (0, U.we)("#QAndA_Column_QuestionCount"),
             ),
             s.createElement(
               "div",
               { className: V().QAndADeleteColumn },
-              (0, M.we)("#QAndA_Column_DeleteButtons"),
+              (0, U.we)("#QAndA_Column_DeleteButtons"),
             ),
           ),
-          t.map((e) => s.createElement(O, { key: e.gidSession, qanda: e })),
+          t.map((e) => s.createElement(x, { key: e.gidSession, qanda: e })),
         );
       }
-      function H(e) {
+      function y(e) {
         const t = s.useCallback(
           () =>
-            (0, f.mK)(s.createElement(F, null), window, {
-              strTitle: (0, M.we)("#QAndA_CreateQAndA_Title"),
+            (0, T.mK)(s.createElement(F, null), window, {
+              strTitle: (0, U.we)("#QAndA_CreateQAndA_Title"),
             }),
           [],
         );
@@ -977,7 +983,7 @@
           s.createElement(
             "div",
             { className: V().DashboardHeaderTitle },
-            (0, M.we)("#QAndA_Dashboard"),
+            (0, U.we)("#QAndA_Dashboard"),
           ),
           s.createElement(
             "div",
@@ -985,7 +991,7 @@
             s.createElement(
               E.$n,
               { onClick: t },
-              (0, M.we)("#QAndA_CreateQAndA_Button"),
+              (0, U.we)("#QAndA_CreateQAndA_Button"),
             ),
           ),
         );
@@ -1000,9 +1006,9 @@
         return s.createElement(
           I.o0,
           {
-            strTitle: (0, M.we)("#QAndA_CreateQAndA_Title"),
-            strDescription: (0, M.we)("#QAndA_CreateQAndA_Instructions"),
-            strOKButtonText: (0, M.we)("#Button_Create"),
+            strTitle: (0, U.we)("#QAndA_CreateQAndA_Title"),
+            strDescription: (0, U.we)("#QAndA_CreateQAndA_Instructions"),
+            strOKButtonText: (0, U.we)("#Button_Create"),
             onOK: () => t(n),
             bOKDisabled: 0 == n.length,
             closeModal: e.closeModal,
@@ -1012,14 +1018,14 @@
             type: "text",
             className: V().NameInput,
             value: n,
-            placeholder: (0, M.we)("#QAndA_EnterNamePrompt"),
+            placeholder: (0, U.we)("#QAndA_EnterNamePrompt"),
             onFocus: (e) => e.target.select(),
             onChange: (e) => o(e.currentTarget.value),
             maxLength: R,
           }),
         );
       }
-      function O(e) {
+      function x(e) {
         const { qanda: t } = e,
           n =
             u.TS.COMMUNITY_BASE_URL +
@@ -1031,8 +1037,8 @@
             (e) => {
               e.stopPropagation(),
                 e.preventDefault(),
-                (0, f.mK)(s.createElement(Y, { qanda: t }), window, {
-                  strTitle: (0, M.we)("#QAndA_CreateQAndA_Title"),
+                (0, T.mK)(s.createElement(z, { qanda: t }), window, {
+                  strTitle: (0, U.we)("#QAndA_CreateQAndA_Title"),
                 });
             },
             [t],
@@ -1040,7 +1046,7 @@
         return s.createElement(
           "a",
           { className: V().DashboardRow, href: n },
-          s.createElement(x, { qanda: t }),
+          s.createElement(O, { qanda: t }),
           s.createElement("div", { className: V().GIDSession }, t.gidSession),
           s.createElement(
             "div",
@@ -1053,12 +1059,12 @@
             s.createElement(
               "div",
               { className: V().DeleteButton, onClick: o },
-              s.createElement(T.lMJ, null),
+              s.createElement(f.lMJ, null),
             ),
           ),
         );
       }
-      function x(e) {
+      function O(e) {
         const { qanda: t } = e,
           [n, o] = s.useState(!1),
           [a, i] = s.useState(t.strName),
@@ -1072,7 +1078,7 @@
               : s.createElement(
                   "span",
                   { className: V().Prompt },
-                  (0, M.we)("#QAndA_EnterNamePrompt"),
+                  (0, U.we)("#QAndA_EnterNamePrompt"),
                 ),
           d = s.createElement(
             "div",
@@ -1081,7 +1087,7 @@
               type: "text",
               className: V().NameInput,
               value: a,
-              placeholder: (0, M.we)("#QAndA_EnterNamePrompt"),
+              placeholder: (0, U.we)("#QAndA_EnterNamePrompt"),
               onFocus: (e) => e.target.select(),
               onChange: (e) => i(e.currentTarget.value),
               maxLength: R,
@@ -1098,13 +1104,13 @@
                 },
                 className: V().InputButton,
               },
-              (0, M.we)("#Button_Save"),
+              (0, U.we)("#Button_Save"),
             ),
           );
         return s.createElement(
           "div",
           {
-            className: (0, U.A)(V().QAndAName, n && V().Editing),
+            className: (0, M.A)(V().QAndAName, n && V().Editing),
             onClick: (e) => {
               e.stopPropagation(), e.preventDefault(), n || o(!0);
             },
@@ -1112,7 +1118,7 @@
           n ? d : l,
         );
       }
-      function Y(e) {
+      function z(e) {
         const { qanda: t } = e,
           n = (function () {
             const e = (0, _.m)("useDeleteQAndAFn");
@@ -1121,8 +1127,8 @@
         return s.createElement(
           I.o0,
           {
-            strTitle: (0, M.we)("#QAndA_Column_DeleteButtons"),
-            strDescription: (0, M.we)("#QAndA_DeleteQAndA_Instructions"),
+            strTitle: (0, U.we)("#QAndA_Column_DeleteButtons"),
+            strDescription: (0, U.we)("#QAndA_DeleteQAndA_Instructions"),
             onOK: () => n(t.gidSession),
             closeModal: e.closeModal,
             className: V().DeleteQAndADialog,
@@ -1130,18 +1136,18 @@
           s.createElement(
             "div",
             { className: V().DeleteInfo },
-            (0, M.we)("#QAndA_Column_Name") + ": " + t.strName,
+            (0, U.we)("#QAndA_Column_Name") + ": " + t.strName,
           ),
           s.createElement(
             "div",
             { className: V().DeleteInfo },
-            (0, M.we)("#QAndA_Column_QuestionCount") +
+            (0, U.we)("#QAndA_Column_QuestionCount") +
               ": " +
               t.rgQuestionGIDs.length,
           ),
         );
       }
-      function j(e) {
+      function Y(e) {
         const {
             gidSession: t,
             gidQuestion: n,
@@ -1158,14 +1164,14 @@
           })(n);
         if (!l) return null;
         const c = r - l.rtPostTime,
-          m = c < B.Kp.PerDay ? (0, M.Hq)(c) : (0, M._l)(l.rtPostTime),
+          m = c < q.Kp.PerDay ? (0, U.Hq)(c) : (0, U._l)(l.rtPostTime),
           A = a ? () => i(n, !l.bUserUpVoted) : null,
           v = a
             ? l.bUserUpVoted
               ? V().Vote_Positive
               : V().Vote_Ready
             : V().Vote_CannotVote,
-          Q = (0, U.A)(
+          Q = (0, M.A)(
             V().Question,
             3 == l.eState && V().Hidden,
             1 == l.eState && V().Moderated,
@@ -1177,7 +1183,7 @@
           { className: Q },
           s.createElement(
             "div",
-            { className: (0, U.A)(V().QuestionCtn, "questionCtn") },
+            { className: (0, M.A)(V().QuestionCtn, "questionCtn") },
             s.createElement(K, { accountID: l.posterAccountID }),
             s.createElement(
               "div",
@@ -1196,13 +1202,13 @@
                     toolTipContent:
                       a &&
                       (l.bUserUpVoted
-                        ? (0, M.we)("#QAndA_VoteRemoveTooltip")
-                        : (0, M.we)("#QAndA_VoteTooltip")),
+                        ? (0, U.we)("#QAndA_VoteRemoveTooltip")
+                        : (0, U.we)("#QAndA_VoteTooltip")),
                   },
                   s.createElement(
                     "div",
-                    { className: (0, U.A)(v, V().Votes), onClick: A },
-                    s.createElement(T.bfp, { className: V().RateIcon }),
+                    { className: (0, M.A)(v, V().Votes), onClick: A },
+                    s.createElement(f.bfp, { className: V().RateIcon }),
                     s.createElement(
                       "div",
                       { className: V().VoteCount },
@@ -1230,7 +1236,7 @@
               ),
             ),
           ),
-          l.rtAnswerTime && s.createElement(z, { question: l, rtNow: r }),
+          l.rtAnswerTime && s.createElement(j, { question: l, rtNow: r }),
           o &&
             s.createElement(X, {
               gidSession: t,
@@ -1239,12 +1245,12 @@
             }),
         );
       }
-      function z(e) {
+      function j(e) {
         const { question: t, rtNow: n } = e,
           o = t.rtAnswerTime && n - t.rtAnswerTime,
           a =
             t.rtAnswerTime &&
-            (o < B.Kp.PerDay ? (0, M.Hq)(o) : (0, M._l)(t.rtAnswerTime));
+            (o < q.Kp.PerDay ? (0, U.Hq)(o) : (0, U._l)(t.rtAnswerTime));
         return t.strAnswerText
           ? s.createElement(
               "div",
@@ -1255,9 +1261,9 @@
                 s.createElement(
                   "div",
                   { className: V().AnswerCheck },
-                  s.createElement(T.X4B, { color: "#67c1f5" }),
+                  s.createElement(f.X4B, { color: "#67c1f5" }),
                 ),
-                (0, M.we)("#QAndA_ModeratorAnswerTitle"),
+                (0, U.we)("#QAndA_ModeratorAnswerTitle"),
               ),
               s.createElement(
                 "div",
@@ -1286,15 +1292,15 @@
               s.createElement(
                 "div",
                 { className: V().AnswerCheck },
-                s.createElement(T.X4B, { color: "#67c1f5" }),
+                s.createElement(f.X4B, { color: "#67c1f5" }),
               ),
-              (0, M.we)("#QAndA_AlreadyAnsweredTitle"),
+              (0, U.we)("#QAndA_AlreadyAnsweredTitle"),
             );
       }
       function K(e) {
         var t;
         const n = o.b.InitFromAccountID(e.accountID).ConvertTo64BitString(),
-          { isLoading: a, data: i } = (0, P.js)(e.accountID);
+          { isLoading: a, data: i } = (0, H.js)(e.accountID);
         return a
           ? null
           : s.createElement(
@@ -1319,23 +1325,23 @@
         return s.createElement(
           "div",
           { className: V().ModeratorSection },
-          (0, M.we)("#QAndA_ModeratorLabel"),
+          (0, U.we)("#QAndA_ModeratorLabel"),
           s.createElement(
             "div",
             { className: V().ToolRow },
             s.createElement(ee, {
-              strPrompt: (0, M.we)("#QAndA_AnswerPrompt"),
+              strPrompt: (0, U.we)("#QAndA_AnswerPrompt"),
               fnSubmit: (e) => a(n, e),
             }),
           ),
           s.createElement(
             "div",
             { className: V().ToolRow },
-            (0, M.we)("#QAndA_ModeratorOtherOptionsLabel"),
+            (0, U.we)("#QAndA_ModeratorOtherOptionsLabel"),
             s.createElement(
               k.he,
               {
-                toolTipContent: (0, M.we)("#QAndA_ModerateApproveButton_ttip"),
+                toolTipContent: (0, U.we)("#QAndA_ModerateApproveButton_ttip"),
               },
               s.createElement(
                 E.$n,
@@ -1344,12 +1350,12 @@
                   className: V().InputButton,
                   disabled: !r,
                 },
-                (0, M.we)("#QAndA_ModerateApproveButton"),
+                (0, U.we)("#QAndA_ModerateApproveButton"),
               ),
             ),
             s.createElement(
               k.he,
-              { toolTipContent: (0, M.we)("#QAndA_ModerateHideButton_ttip") },
+              { toolTipContent: (0, U.we)("#QAndA_ModerateHideButton_ttip") },
               s.createElement(
                 E.$n,
                 {
@@ -1357,12 +1363,12 @@
                   className: V().InputButton,
                   disabled: !l,
                 },
-                (0, M.we)("#QAndA_ModerateHideButton"),
+                (0, U.we)("#QAndA_ModerateHideButton"),
               ),
             ),
             s.createElement(
               k.he,
-              { toolTipContent: (0, M.we)("#QAndA_QuickAnswerButton_ttip") },
+              { toolTipContent: (0, U.we)("#QAndA_QuickAnswerButton_ttip") },
               s.createElement(
                 E.$n,
                 {
@@ -1370,7 +1376,7 @@
                   className: V().InputButton,
                   disabled: !d,
                 },
-                (0, M.we)("#QAndA_QuickAnswerButton"),
+                (0, U.we)("#QAndA_QuickAnswerButton"),
               ),
             ),
           ),
@@ -1379,14 +1385,14 @@
       function J(e) {
         const { gidSession: t } = e;
         A();
-        const { strName: n, bUserCanModerate: o } = C(t);
+        const { strName: n, bUserCanModerate: o } = g(t);
         return s.createElement(
           "div",
           { className: V().QAFullPageView },
           s.createElement(
             "div",
             { className: V().QAName },
-            (0, M.we)("#QAndA_Header") +
+            (0, U.we)("#QAndA_Header") +
               ((null == n ? void 0 : n.length) > 0 ? ": " + n : ""),
           ),
           s.createElement(
@@ -1403,25 +1409,25 @@
             bUserCanModerate: n,
             rgNewQuestionGIDs: o,
             rgHiddenQuestionGIDs: i,
-          } = C(t),
+          } = g(t),
           r = (0, a.P_)(10);
         return n
           ? s.createElement(
               "div",
               {
-                className: (0, U.A)(V().QAModeratorColumn, V().QASplitColumns),
+                className: (0, M.A)(V().QAModeratorColumn, V().QASplitColumns),
               },
               s.createElement(
                 G.qx,
                 {
-                  title: (0, M.we)("#QAndA_ModeratorViewHeader"),
+                  title: (0, U.we)("#QAndA_ModeratorViewHeader"),
                   className: V().ModeratorInstructions,
                 },
                 s.createElement(
                   "div",
                   { className: V().QuestionList },
                   o.map((e) =>
-                    s.createElement(j, {
+                    s.createElement(Y, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
@@ -1435,7 +1441,7 @@
               s.createElement(
                 G.qx,
                 {
-                  title: (0, M.we)("#QAndA_HiddenQuestionsHeader"),
+                  title: (0, U.we)("#QAndA_HiddenQuestionsHeader"),
                   className: V().AnsweredSectionHeader,
                   bStartMinimized: !0,
                 },
@@ -1443,7 +1449,7 @@
                   "div",
                   { className: V().QuestionList },
                   i.map((e) =>
-                    s.createElement(j, {
+                    s.createElement(Y, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
@@ -1469,23 +1475,23 @@
             rgModeratedQuestionGIDs: u,
             rgAnsweredQuestionGIDs: c,
             rgNewQuestionGIDs: m,
-          } = C(t),
+          } = g(t),
           { fnReload: v, bIsReloading: Q } = h(t),
           _ = (0, a.P_)(10),
           p = r && n,
           { fnModerateQuestion: S } = w(t);
         return s.createElement(
           "div",
-          { className: (0, U.A)(V().QAMainCtn, n && V().QASplitColumns) },
+          { className: (0, M.A)(V().QAMainCtn, n && V().QASplitColumns) },
           s.createElement(
             "div",
-            { className: (0, U.A)(V().QAHeader, p && V().ModerationHeader) },
+            { className: (0, M.A)(V().QAHeader, p && V().ModerationHeader) },
             s.createElement(
               E.$n,
               {
                 onClick: v,
                 disabled: !o,
-                className: (0, U.A)(
+                className: (0, M.A)(
                   V().InputButton,
                   V().Reload,
                   Q && V().Reloading,
@@ -1494,18 +1500,18 @@
               s.createElement(
                 "div",
                 { className: V().ReloadIcon },
-                s.createElement(T.MvQ, null),
+                s.createElement(f.MvQ, null),
               ),
             ),
             p
               ? s.createElement(
                   s.Fragment,
                   null,
-                  (0, M.we)("#QAndA_ModeratorLabelHeader"),
+                  (0, U.we)("#QAndA_ModeratorLabelHeader"),
                   s.createElement(
                     k.he,
                     {
-                      toolTipContent: (0, M.we)(
+                      toolTipContent: (0, U.we)(
                         "#QAndA_ModerateHideAllButton_ttip",
                       ),
                     },
@@ -1518,7 +1524,7 @@
                         },
                         className: V().InputButton,
                       },
-                      (0, M.we)("#QAndA_ModerateHideAllButton"),
+                      (0, U.we)("#QAndA_ModerateHideAllButton"),
                     ),
                   ),
                 )
@@ -1530,7 +1536,7 @@
             ? s.createElement(
                 "div",
                 { className: V().NoQuestions },
-                (0, M.we)("#QAndA_NoQuestionsYet"),
+                (0, U.we)("#QAndA_NoQuestionsYet"),
               )
             : s.createElement(
                 "div",
@@ -1545,7 +1551,7 @@
                   { className: V().QuestionList },
                   o
                     ? u.map((e) =>
-                        s.createElement(j, {
+                        s.createElement(Y, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
@@ -1564,13 +1570,13 @@
                     s.createElement(
                       "div",
                       { className: V().AnsweredSectionHeader },
-                      (0, M.we)("#QAndA_AnsweredQuestionsHeader"),
+                      (0, U.we)("#QAndA_AnsweredQuestionsHeader"),
                     ),
                     s.createElement(
                       "div",
                       { className: V().QuestionList },
                       c.map((e) =>
-                        s.createElement(j, {
+                        s.createElement(Y, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
@@ -1594,10 +1600,10 @@
           s.createElement(
             "div",
             { className: V().Description },
-            (0, M.we)("#QAndA_HeaderDescription"),
+            (0, U.we)("#QAndA_HeaderDescription"),
           ),
           s.createElement(ee, {
-            strPrompt: (0, M.we)("#QAndA_QuestionPrompt"),
+            strPrompt: (0, U.we)("#QAndA_QuestionPrompt"),
             fnSubmit: async (t) => {
               const s = await e.fnAskQuestion(t);
               return (
@@ -1613,8 +1619,8 @@
           }),
           s.createElement(
             "div",
-            { className: (0, U.A)(V().QuestionACK, t && V().Visible) },
-            (0, M.we)("#QAndA_QuestionWasPosted"),
+            { className: (0, M.A)(V().QuestionACK, t && V().Visible) },
+            (0, U.we)("#QAndA_QuestionWasPosted"),
           ),
         );
       }
@@ -1654,7 +1660,7 @@
                   disabled: i || !o,
                   className: V().InputButton,
                 },
-                (0, M.we)("#QAndA_SubmitCommentButton"),
+                (0, U.we)("#QAndA_SubmitCommentButton"),
               ),
             ),
           ),
@@ -1667,17 +1673,89 @@
           s.createElement(
             "div",
             { className: V().LogInPrompt },
-            (0, M.we)("#QAndA_LogInPrompt"),
+            (0, U.we)("#QAndA_LogInPrompt"),
           ),
           !u.iA.logged_in &&
             s.createElement(
               E.$n,
               {
                 onClick: N.vg,
-                className: (0, U.A)(V().SignInButton, V().InputButton),
+                className: (0, M.A)(V().SignInButton, V().InputButton),
               },
-              (0, M.we)("#Login_SignIn"),
+              (0, U.we)("#Login_SignIn"),
             ),
+        );
+      }
+    },
+    48479: (e, t, n) => {
+      "use strict";
+      n.d(t, { AQ: () => A, pn: () => Q, qx: () => v });
+      var s = n(33737),
+        o = n(61859),
+        a = n(12155),
+        i = n(90626),
+        r = n(52038),
+        l = n(95695),
+        d = n(84811),
+        u = n(64734),
+        c = n(65946),
+        m = n(26408);
+      function A(e) {
+        const {
+            title: t,
+            tooltip: n,
+            getMinimized: s,
+            toggleMinimized: o,
+            className: a,
+            children: A,
+          } = e,
+          v = (0, c.q3)(() => s());
+        return i.createElement(
+          i.Fragment,
+          null,
+          i.createElement(
+            "div",
+            {
+              className: (0, r.A)(
+                a,
+                u.SectionTitleHeader,
+                u.required_title,
+                "SectionTitleHeader",
+              ),
+            },
+            i.createElement(
+              "div",
+              {
+                className: (0, r.A)(
+                  l.CollapsableSectionTitle,
+                  "EventEditorTextTitle",
+                ),
+              },
+              t,
+              Boolean(n) && i.createElement(m.o, { tooltip: n }),
+            ),
+            i.createElement(Q, { bIsMinimized: v, fnToggleMinimize: o }),
+          ),
+          !v && i.createElement(d.tH, null, A),
+        );
+      }
+      function v(e) {
+        const [t, n] = i.useState(Boolean(e.bStartMinimized));
+        return i.createElement(
+          A,
+          { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
+          e.children,
+        );
+      }
+      function Q(e) {
+        const { bIsMinimized: t, fnToggleMinimize: n } = e,
+          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return i.createElement(
+          s.$n,
+          { "data-tooltip-text": (0, o.we)(r), onClick: n },
+          e.bIsMinimized
+            ? i.createElement(a.hz4, null)
+            : i.createElement(a.Xjb, null),
         );
       }
     },

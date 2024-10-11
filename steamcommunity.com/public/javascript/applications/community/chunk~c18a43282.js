@@ -5365,7 +5365,7 @@
       function re(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
-          : "trailertv" == e.section_type
+          : "trailercarousel" == e.section_type
             ? 1
             : e.cap_section_content
               ? 4
@@ -5377,7 +5377,7 @@
           : void 0;
       }
       function ie(e) {
-        return "items" === e || "trailertv" === e;
+        return "items" === e || "trailercarousel" === e;
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -7809,27 +7809,24 @@
         IsPaused() {
           return this.m_elVideo.paused;
         }
-        Play() {
-          let e = this.m_bFirstPlay;
+        async Play() {
+          const e = this.m_bFirstPlay;
           this.m_bFirstPlay = !1;
-          let t = this.m_elVideo.play();
-          t
-            ? t
-                .then(() => {
-                  this.m_stats
-                    .GetFPSMonitor()
-                    .StartTracking(() =>
-                      this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                    );
-                })
-                .catch((t) => {
-                  e && this.DispatchEvent("valve-userinputneeded");
-                })
-            : this.m_stats
+          let t = !1;
+          const r = () => {
+            (t = !0),
+              this.m_stats
                 .GetFPSMonitor()
                 .StartTracking(() =>
                   this.m_stats.ExtractFrameInfo(this.m_elVideo),
                 );
+          };
+          try {
+            await this.m_elVideo.play(), r();
+          } catch (e) {
+            e.name;
+          }
+          !t && e && this.DispatchEvent("valve-userinputneeded");
         }
         Pause() {
           this.m_elVideo.pause();
@@ -8723,6 +8720,11 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
+              "volumechange",
+              this.OnVolumeUpdated,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
               "valve-bufferupdate",
               this.OnVideoTimeUpdate,
             ),
@@ -8858,7 +8860,8 @@
           this.m_player.JumpTime(e);
         }
         Seek(e) {
-          this.m_player.Seek(e);
+          var t;
+          null === (t = this.m_player) || void 0 === t || t.Seek(e);
         }
         SeekAndPlay(e) {
           this.m_player.SeekAndPlay(e);
@@ -8930,6 +8933,10 @@
                 this.m_nVideoEndPos - this.m_nPlaybackTime < p.Br),
               this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
           }
+        }
+        OnVolumeUpdated() {
+          (this.m_nVolume = this.m_player.GetVolume()),
+            (this.m_bMuted = this.m_player.IsMuted());
         }
         OnGameDataUpdate(e) {
           let t = e.detail;
@@ -9037,6 +9044,7 @@
         (0, a.Cg)([g.o], U.prototype, "OnVideoPlaying", null),
         (0, a.Cg)([g.o], U.prototype, "OnVideoPause", null),
         (0, a.Cg)([s.XI.bound], U.prototype, "OnVideoTimeUpdate", null),
+        (0, a.Cg)([g.o], U.prototype, "OnVolumeUpdated", null),
         (0, a.Cg)([s.XI.bound], U.prototype, "OnGameDataUpdate", null),
         (0, a.Cg)([g.o], U.prototype, "OnDownloadFailed", null),
         (0, a.Cg)([g.o], U.prototype, "OnWebRTCRetry", null),
@@ -13412,7 +13420,8 @@
               r.jsondata.sale_sections.forEach((e, t) => {
                 e.localized_label &&
                   (e.localized_label = (0, u.$Y)(e.localized_label, 31, null)),
-                  "trailertv" === e.section_type && (e.show_as_carousel = !1),
+                  "trailercarousel" === e.section_type &&
+                    (e.show_as_carousel = !1),
                   (r.jsondata.sale_sections[t] = { ...c.G6, ...e });
               }),
             r.jsondata.email_setting &&

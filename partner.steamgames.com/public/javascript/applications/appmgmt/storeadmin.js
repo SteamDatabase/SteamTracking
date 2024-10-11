@@ -1496,12 +1496,7 @@
             { onEscKeypress: r },
             l.createElement(
               s.U9,
-              {
-                classNameContent: k.ExtraAssetDialogContent,
-                onSubmit: (e) => {
-                  e.preventDefault(), h(i);
-                },
-              },
+              { classNameContent: k.ExtraAssetDialogContent },
               l.createElement(
                 s.Y9,
                 null,
@@ -1556,6 +1551,9 @@
                 null,
                 l.createElement(s.CB, {
                   onCancel: r,
+                  onOK: (e) => {
+                    e.preventDefault(), h(i);
+                  },
                   bOKDisabled: !i,
                   strOKText: (0, C.we)(
                     "#StoreAdmin_GameDescription_UseThisImage",
@@ -10253,7 +10251,7 @@
             () => ["seasonpass", "commitments", "" + n, "milestone_desc"],
             [n],
           ),
-          _ = (0, H.K)(d, m, "app", p);
+          _ = (0, H.K)(d, m, "app", a ? p : void 0);
         return (
           (0, r.useEffect)(() => {
             if (l) {
