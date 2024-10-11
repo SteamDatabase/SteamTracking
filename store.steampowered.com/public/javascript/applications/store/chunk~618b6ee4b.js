@@ -6746,10 +6746,10 @@
             : (0, S.we)(e.default_label))
         );
       }
-      function b(e, t, a, n, m, u) {
+      function b(e, t, a, n, s, m) {
         if (!e) return "";
-        const d = (function (e, t, a) {
-          if ((0, s.ye)(e.section_type))
+        const u = (function (e, t, a) {
+          if ("items" === e.section_type)
             switch (e.smart_section_type) {
               case "wishlist":
                 return "#Sale_default_label_OnYourWishlist";
@@ -6800,21 +6800,21 @@
                 : "sale_events" === e.section_type
                   ? "#Sale_SaleEvent_Section"
                   : null;
-        })(e, t, m);
-        if (null !== d) return d && d.startsWith("#") ? (0, S.we)(d) : d;
-        if (3 == m && Boolean(e.internal_section_title))
+        })(e, t, s);
+        if (null !== u) return u && u.startsWith("#") ? (0, S.we)(u) : u;
+        if (3 == s && Boolean(e.internal_section_title))
           return e.internal_section_title;
-        const _ =
+        const d =
             S.NT.GetWithFallback(e.localized_label, a) ||
             ("#Sale_default_label" === e.default_label
               ? ""
               : (0, S.we)(e.default_label)),
-          p = S.NT.GetWithFallback(e.localized_label_image, a);
-        if (!u && p) {
-          const e = `${(0, i.mJ)()}${n}/${p}`;
-          return r.createElement("img", { loading: "lazy", src: e, alt: _ });
+          _ = S.NT.GetWithFallback(e.localized_label_image, a);
+        if (!m && _) {
+          const e = `${(0, i.mJ)()}${n}/${_}`;
+          return r.createElement("img", { loading: "lazy", src: e, alt: d });
         }
-        return _;
+        return d;
       }
       function E(e, t, a) {
         const n = (function (e, t) {

@@ -44786,7 +44786,7 @@
         E = a(46745),
         y = a(65946);
       function b(e, t, a) {
-        if ((0, r.ye)(e.section_type))
+        if ("items" === e.section_type)
           switch (e.smart_section_type) {
             case "wishlist":
               return "#Sale_default_label_OnYourWishlist";
