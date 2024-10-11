@@ -927,6 +927,16 @@
             height: 600,
             rgAcceptableTypes: [4],
           },
+          localized_partnerevent_webm: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [5],
+          },
+          localized_partnerevent_mp4: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [4],
+          },
           localized_subtitles: {
             width: 0,
             height: 0,

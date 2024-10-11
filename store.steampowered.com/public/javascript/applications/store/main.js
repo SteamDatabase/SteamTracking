@@ -4408,20 +4408,21 @@
     },
     7445: (e, t, r) => {
       "use strict";
-      r.d(t, { q: () => g });
+      r.d(t, { g: () => y, q: () => h });
       var i = r(90626),
         n = r(64238),
         a = r.n(n),
         s = r(60778),
         o = r(78327),
-        l = r(21109),
-        c = r(65233),
-        m = r(90665),
-        u = r(10196),
-        d = r.n(u),
-        p = r(8871);
-      const _ = new s.wd("FocusNavigation").Debug;
-      function g(e) {
+        l = r(87133),
+        c = r(21109),
+        m = r(65233),
+        u = r(90665),
+        d = r(10196),
+        p = r.n(d),
+        _ = r(8871);
+      const g = new s.wd("FocusNavigation").Debug;
+      function h(e) {
         const { children: t, ...r } = e,
           [n, a] = i.useState({
             bFocusWithin: !1,
@@ -4449,40 +4450,40 @@
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(h, { ...r, ...n, refMeasure: s }),
-          i.createElement(m.sQ.Provider, { value: o }, t),
+          i.createElement(f, { ...r, ...n, refMeasure: s }),
+          i.createElement(u.sQ.Provider, { value: o }, t),
         );
       }
-      function h(e) {
+      function f(e) {
         const {
             rootClassName: t,
             className: r,
             render: n,
             bFocusWithin: s,
-            navTarget: m,
+            navTarget: l,
             refMeasure: u,
           } = e,
-          p = i.useRef(null),
-          _ = (0, c.QI)(),
+          d = i.useRef(null),
+          _ = (0, m.QI)(),
           g = (0, o.Qn)(),
-          h = (0, l.bJ)(!1);
+          h = (0, c.bJ)(!1);
         return g || h
           ? i.createElement(
               "div",
-              { className: a()(d().FocusRingRoot, t), ref: p },
-              i.createElement(f, {
+              { className: a()(p().FocusRingRoot, t), ref: d },
+              i.createElement(b, {
                 refMeasure: u,
-                className: a()(r, _ && d().DebugFocusRing),
+                className: a()(r, _ && p().DebugFocusRing),
                 render: n,
                 bFocusWithin: s && (h || _),
-                navTarget: m,
-                refContainer: p,
+                navTarget: l,
+                refContainer: d,
                 bDebug: _,
               }),
             )
           : null;
       }
-      function f(e) {
+      function b(e) {
         const {
             className: t,
             render: r,
@@ -4493,12 +4494,12 @@
             refMeasure: c,
           } = e,
           [m, u] = i.useState(s),
-          [g, h] = i.useState(null),
-          [f, y] = i.useState(!1),
-          [B, w] = i.useState(!1),
+          [d, h] = i.useState(null),
+          [f, b] = i.useState(!1),
+          [y, w] = i.useState(!1),
           S = i.useRef(performance.now()),
           C = (0, i.useCallback)(() => {
-            if (!s || !s.BWantsFocusRing()) return null != g && (h(null), !0);
+            if (!s || !s.BWantsFocusRing()) return null != d && (h(null), !0);
             let e = s.GetBoundingRect();
             const t = o.current.getBoundingClientRect();
             if (l) {
@@ -4510,10 +4511,10 @@
               for (; i(t) && t?.parentElement; )
                 (t = t.parentElement), (e = t.getBoundingClientRect());
               let n = s.Element != t;
-              n != B &&
+              n != y &&
                 (w(n),
                 n &&
-                  _(
+                  g(
                     "Focused on hidden item: ",
                     s.Element,
                     ". Closest visible ancestor: ",
@@ -4527,43 +4528,49 @@
               width: e.width,
             };
             return (
-              (!g ||
-                r.left != g.left ||
-                r.top != g.top ||
-                r.height != g.height ||
-                r.width != g.width) &&
+              (!d ||
+                r.left != d.left ||
+                r.top != d.top ||
+                r.height != d.height ||
+                r.width != d.width) &&
               (h(r), !0)
             );
-          }, [s, o, h, g, B, w, l]);
-        (0, p.D5)(
+          }, [s, o, h, d, y, w, l]);
+        (0, _.D5)(
           c,
           i.useMemo(() => ({ MeasureElementAndUpdate: C }), [C]),
         );
         let M = n,
-          v = g || {};
+          v = d || {};
         s && o.current && (s.BWantsFocusRing() || (M = !1)),
-          s != m && (u(s), (S.current = performance.now()), C(), f && y(!1)),
+          s != m && (u(s), (S.current = performance.now()), C(), f && b(!1)),
           i.useEffect(() => {
             if (!M || performance.now() - S.current > 500) return;
             let e;
             const t = () => {
               e = requestAnimationFrame(() => {
-                C() ? y(!0) : performance.now() - S.current <= 500 && t();
+                C() ? b(!0) : performance.now() - S.current <= 500 && t();
               });
             };
             return t(), () => cancelAnimationFrame(e);
           });
-        const R = r || b;
+        const R = r || B;
         return i.createElement(R, {
           ...v,
-          visible: M && null !== g,
+          visible: M && null !== d,
           key: S.current,
-          className: a()(t, B && d().FocusRingOnHiddenItem),
+          className: a()(t, y && p().FocusRingOnHiddenItem),
           animationEnabled: !f,
           target: s,
         });
       }
-      function b(e) {
+      function y(e) {
+        const { children: t } = e;
+        return (0, m.QI)()
+          ? i.createElement(h, null, t)
+          : i.createElement(u.sQ.Provider, { value: l.CZ }, t);
+      }
+      function B(e) {
         const {
           className: t,
           visible: r,
@@ -4582,7 +4589,7 @@
           width: l + "px",
         };
         return i.createElement("div", {
-          className: a()(d().FocusRing, m && d().Animated, t),
+          className: a()(p().FocusRing, m && p().Animated, t),
           style: u,
         });
       }
@@ -41013,12 +41020,15 @@
                   i.strClosedCaptionFile.startsWith("http") ||
                     (i.strClosedCaptionFile =
                       this.m_strBaseURL + i.strClosedCaptionFile);
-                ("store" != (0, _.yK)() && "dev" != _.TS.WEB_UNIVERSE) ||
-                  (i.strClosedCaptionFile =
-                    _.TS.STORE_BASE_URL +
-                    "vtt/video/" +
-                    i.strClosedCaptionFile.substring(40)),
-                  n.rgRepresentations.push(i);
+                if ("store" == (0, _.yK)() || "dev" == _.TS.WEB_UNIVERSE) {
+                  const e = new URL(i.strClosedCaptionFile).pathname.split(
+                    "/video/",
+                  )[1];
+                  i.strClosedCaptionFile = e
+                    ? _.TS.STORE_BASE_URL + "vtt/video/" + e
+                    : null;
+                }
+                i.strClosedCaptionFile && n.rgRepresentations.push(i);
               }
               continue;
             }
@@ -41831,36 +41841,27 @@
               );
         }
         InitTimedText() {
-          let e = !0;
           (this.m_nTimedText = 0),
-            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((t) => {
-              let r = (0, o.sf)(_.TS.LANGUAGE);
+            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((e) => {
+              let t = (0, o.sf)(_.TS.LANGUAGE);
               if (
-                t.rgRepresentations.length > 0 &&
-                t.rgRepresentations[0].strClosedCaptionFile &&
-                m.bi[t.strLanguage]
+                e.rgRepresentations.length > 0 &&
+                e.rgRepresentations[0].strClosedCaptionFile &&
+                e.strLanguage in m.bi
               ) {
-                const i = document.createElement("track");
-                (i.kind = "subtitles"),
-                  (i.label = (0, m.we)(
-                    "#Language_" + (0, o.Lg)(m.bi[t.strLanguage]),
+                const r = document.createElement("track");
+                (r.kind = "subtitles"),
+                  (r.label = (0, m.we)(
+                    "#Language_" + (0, o.Lg)(m.bi[e.strLanguage]),
                   )),
-                  (i.srclang = t.strLanguage),
-                  (i.src = t.rgRepresentations[0].strClosedCaptionFile),
+                  (r.srclang = e.strLanguage),
+                  (r.src = e.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
-                  0 != r &&
-                    m.bi[t.strLanguage] == r &&
-                    ((i.default = !0),
-                    (this.m_timedTextRepSelected = t.rgRepresentations[0]),
-                    (e = !1)),
-                  this.m_elVideo.appendChild(i),
-                  e &&
-                    (i.addEventListener("load", () => {
-                      this.m_elVideo.textTracks &&
-                        this.m_elVideo.textTracks.length > 0 &&
-                        (this.m_elVideo.textTracks[0].mode = "disabled");
-                    }),
-                    (e = !1));
+                  0 != t &&
+                    m.bi[e.strLanguage] == t &&
+                    ((r.default = !0),
+                    (this.m_timedTextRepSelected = e.rgRepresentations[0])),
+                  this.m_elVideo.appendChild(r);
               }
             });
         }
@@ -42362,27 +42363,31 @@
             e == this.GetVideoLoader() &&
               this.m_stats.SetCurrentVideoBandwidth(e.GetAvgDownloadRate());
         }
-        PlayOnElement() {
-          let e = this.m_bFirstPlay;
+        async PlayOnElement() {
+          const e = this.m_bFirstPlay;
           this.m_bFirstPlay = !1;
-          let t = this.m_elVideo.play();
-          t
-            ? t
-                .then(() => {
-                  this.m_stats
-                    .GetFPSMonitor()
-                    .StartTracking(() =>
-                      this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                    );
-                })
-                .catch((t) => {
-                  e && this.DispatchEvent("valve-userinputneeded");
-                })
-            : this.m_stats
+          let t = !1;
+          const r = () => {
+            (t = !0),
+              this.m_stats
                 .GetFPSMonitor()
                 .StartTracking(() =>
                   this.m_stats.ExtractFrameInfo(this.m_elVideo),
                 );
+          };
+          try {
+            await this.m_elVideo.play(), r();
+          } catch (e) {
+            if ("NotAllowedError" === e.name && this.BHasTimedText()) {
+              this.m_elVideo.muted = !0;
+              let e = (0, o.sf)(_.TS.LANGUAGE);
+              this.SetSubtitles(e);
+              try {
+                await this.m_elVideo.play(), r();
+              } catch (e) {}
+            }
+          }
+          !t && e && this.DispatchEvent("valve-userinputneeded");
         }
         OnVideoBufferProgress() {
           if (!this.IsBuffering()) return;
@@ -57912,6 +57917,16 @@
             height: 600,
             rgAcceptableTypes: [4],
           },
+          localized_partnerevent_webm: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [5],
+          },
+          localized_partnerevent_mp4: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [4],
+          },
           localized_subtitles: {
             width: 0,
             height: 0,
@@ -58369,7 +58384,7 @@
       function ee(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
-          : "trailertv" == e.section_type
+          : "trailercarousel" == e.section_type
             ? 1
             : e.cap_section_content
               ? 4
@@ -58381,7 +58396,7 @@
           : void 0;
       }
       function re(e) {
-        return "items" === e || "trailertv" === e;
+        return "items" === e || "trailercarousel" === e;
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -61737,27 +61752,24 @@
         IsPaused() {
           return this.m_elVideo.paused;
         }
-        Play() {
-          let e = this.m_bFirstPlay;
+        async Play() {
+          const e = this.m_bFirstPlay;
           this.m_bFirstPlay = !1;
-          let t = this.m_elVideo.play();
-          t
-            ? t
-                .then(() => {
-                  this.m_stats
-                    .GetFPSMonitor()
-                    .StartTracking(() =>
-                      this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                    );
-                })
-                .catch((t) => {
-                  e && this.DispatchEvent("valve-userinputneeded");
-                })
-            : this.m_stats
+          let t = !1;
+          const r = () => {
+            (t = !0),
+              this.m_stats
                 .GetFPSMonitor()
                 .StartTracking(() =>
                   this.m_stats.ExtractFrameInfo(this.m_elVideo),
                 );
+          };
+          try {
+            await this.m_elVideo.play(), r();
+          } catch (e) {
+            e.name;
+          }
+          !t && e && this.DispatchEvent("valve-userinputneeded");
         }
         Pause() {
           this.m_elVideo.pause();
@@ -62652,6 +62664,11 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
+              "volumechange",
+              this.OnVolumeUpdated,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
               "valve-bufferupdate",
               this.OnVideoTimeUpdate,
             ),
@@ -62787,7 +62804,7 @@
           this.m_player.JumpTime(e);
         }
         Seek(e) {
-          this.m_player.Seek(e);
+          this.m_player?.Seek(e);
         }
         SeekAndPlay(e) {
           this.m_player.SeekAndPlay(e);
@@ -62859,6 +62876,10 @@
                 this.m_nVideoEndPos - this.m_nPlaybackTime < p.Br),
               this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
           }
+        }
+        OnVolumeUpdated() {
+          (this.m_nVolume = this.m_player.GetVolume()),
+            (this.m_bMuted = this.m_player.IsMuted());
         }
         OnGameDataUpdate(e) {
           let t = e.detail;
@@ -62966,6 +62987,7 @@
         (0, i.Cg)([h.o], W.prototype, "OnVideoPlaying", null),
         (0, i.Cg)([h.o], W.prototype, "OnVideoPause", null),
         (0, i.Cg)([s.XI.bound], W.prototype, "OnVideoTimeUpdate", null),
+        (0, i.Cg)([h.o], W.prototype, "OnVolumeUpdated", null),
         (0, i.Cg)([s.XI.bound], W.prototype, "OnGameDataUpdate", null),
         (0, i.Cg)([h.o], W.prototype, "OnDownloadFailed", null),
         (0, i.Cg)([h.o], W.prototype, "OnWebRTCRetry", null),
@@ -72272,7 +72294,8 @@
               r.jsondata.sale_sections.forEach((e, t) => {
                 e.localized_label &&
                   (e.localized_label = (0, d.$Y)(e.localized_label, 31, null)),
-                  "trailertv" === e.section_type && (e.show_as_carousel = !1),
+                  "trailercarousel" === e.section_type &&
+                    (e.show_as_carousel = !1),
                   (r.jsondata.sale_sections[t] = { ...c.G6, ...e });
               }),
             r.jsondata.email_setting &&
@@ -102071,7 +102094,9 @@
         Ot = n.lazy(() =>
           Promise.all([
             r.e(7937),
+            r.e(915),
             r.e(7328),
+            r.e(6341),
             r.e(2828),
             r.e(6649),
             r.e(8396),
@@ -102102,12 +102127,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102129,12 +102156,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102155,12 +102184,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102181,12 +102212,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102208,12 +102241,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102231,7 +102266,9 @@
             r.e(4336),
             r.e(7576),
             r.e(195),
+            r.e(915),
             r.e(7368),
+            r.e(6341),
             r.e(4657),
             r.e(9672),
           ]).then(r.bind(r, 47554)),
@@ -102243,7 +102280,9 @@
             r.e(4336),
             r.e(7576),
             r.e(195),
+            r.e(915),
             r.e(7368),
+            r.e(6341),
             r.e(4657),
             r.e(9672),
           ]).then(r.bind(r, 25054)),
@@ -102260,6 +102299,7 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7328),
             r.e(2608),
             r.e(9297),
@@ -102326,6 +102366,7 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7328),
             r.e(2608),
             r.e(7382),
@@ -102344,12 +102385,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102371,12 +102414,14 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7368),
             r.e(7328),
             r.e(2608),
             r.e(7382),
             r.e(8662),
             r.e(8019),
+            r.e(6341),
             r.e(4657),
             r.e(8294),
             r.e(2828),
@@ -102398,6 +102443,7 @@
             r.e(7576),
             r.e(195),
             r.e(7252),
+            r.e(915),
             r.e(7328),
             r.e(2608),
             r.e(7382),

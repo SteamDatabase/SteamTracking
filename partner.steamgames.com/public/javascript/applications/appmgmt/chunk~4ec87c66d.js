@@ -49922,15 +49922,15 @@
         y = a(91693),
         f = a(9154),
         v = a(738),
-        b = a(44332),
-        w = a(52038),
-        D = a(56011),
-        I = a(30470),
-        C = a(627),
-        B = a(7706),
-        T = a(98076),
-        A = a(22797),
-        k = a(61859);
+        b = a(22797),
+        w = a(44332),
+        D = a(52038),
+        I = a(56011),
+        C = a(61859),
+        B = a(30470),
+        T = a(627),
+        A = a(7706),
+        k = a(98076);
       function M(e) {
         const { bAssetUploadOnly: t, promotionPlanID: a, id: n } = e,
           r = (0, i.zw)(n);
@@ -49940,7 +49940,7 @@
               null,
               l.createElement(
                 "div",
-                { className: T.EditCtn },
+                { className: k.EditCtn },
                 l.createElement(
                   "div",
                   { className: d().PageTitle },
@@ -49956,7 +49956,7 @@
                     Boolean(!t) && l.createElement(R, { oEditableMessage: r }),
                     l.createElement(F, { oEditableMessage: r }),
                   ),
-                  l.createElement(C.O, {
+                  l.createElement(T.O, {
                     oEditableMessage: r,
                     bAssetUploadOnly: t,
                     promotionPlanID: a,
@@ -49965,10 +49965,10 @@
                 l.createElement("br", null),
               ),
             )
-          : l.createElement(A.t, {
+          : l.createElement(b.t, {
               size: "medium",
               position: "center",
-              string: (0, k.we)("#Loading"),
+              string: (0, C.we)("#Loading"),
             });
       }
       function R(e) {
@@ -49992,10 +49992,10 @@
               l.createElement(N, { oEditableMessage: t }),
               l.createElement(G, { oEditableMessage: t }),
             )
-          : l.createElement(A.t, {
+          : l.createElement(b.t, {
               size: "medium",
               position: "center",
-              string: (0, k.we)("#Loading"),
+              string: (0, C.we)("#Loading"),
             });
       }
       function P(e, t) {
@@ -50011,6 +50011,10 @@
             break;
           case "mm_partner_event":
             e.SetCustomTemplate("partner_event");
+            break;
+          case "mm_partner_event_animated":
+            e.SetCustomTemplate("partner_event"),
+              e.SetAnimatedAssetsEnabled(!0);
         }
       }
       function N(e) {
@@ -50021,7 +50025,9 @@
               if ("featured_video" === e.GetCustomTemplate())
                 return "mm_featured_video";
               if ("partner_event" === e.GetCustomTemplate())
-                return "mm_partner_event";
+                return e.BHasAnimatedAssets()
+                  ? "mm_partner_event_animated"
+                  : "mm_partner_event";
               return "mm_image";
             })(t),
           ),
@@ -50048,14 +50054,20 @@
                 label: "Partner Event",
                 data: "mm_partner_event",
                 tooltip:
-                  "We use an event capsule wide display and surface the game stats for owners above.",
+                  "We use an event capsule wide display and surface the game for owners.",
+              },
+              {
+                label: "Partner Event Animated (webm + mp4)",
+                data: "mm_partner_event_animated",
+                tooltip:
+                  "We use an event capsule wide display and surface the game for owners. We will show animated assets unless customer is in low bandwidth mode",
               },
             ],
             [],
           );
         return l.createElement(_.m, {
           label: "Marketing Message Display",
-          strClassName: (0, w.A)(S().DropDownScroll),
+          strClassName: (0, D.A)(S().DropDownScroll),
           rgOptions: r,
           selectedOption: a,
           onChange: (e) => {
@@ -50151,7 +50163,7 @@
                           l.createElement("source", { src: t, type: n }),
                         ),
                       ),
-                      (0, D.uX)(e),
+                      (0, I.uX)(e),
                     ),
                 },
                 "Preview",
@@ -50173,9 +50185,12 @@
             const e = [_ ? "capsule" : "localized_marketing_message"];
             return (
               i
-                ? (e.push("localized_marketingmessage_mp4"),
-                  e.push("localized_marketingmessage_webm"),
-                  (0, b.w)(
+                ? (_
+                    ? (e.push("localized_partnerevent_mp4"),
+                      e.push("localized_partnerevent_webm"))
+                    : (e.push("localized_marketingmessage_mp4"),
+                      e.push("localized_marketingmessage_webm")),
+                  (0, w.w)(
                     !m,
                     "Animated Image and Featured video are mutually exclusive.",
                   ))
@@ -50192,7 +50207,7 @@
           ),
           f = (0, l.useCallback)(
             (e, a, n, r, i, s, l) => {
-              (0, b.w)(
+              (0, w.w)(
                 null != n && n >= 0 && n < 31,
                 "Unexpected value for elang: " + n + " " + p,
               );
@@ -50260,7 +50275,7 @@
                         "If we mention Steam, in Steam China has a specific name: ",
                         l.createElement("img", {
                           src:
-                            I.TS.STORE_CDN_URL +
+                            B.TS.STORE_CDN_URL +
                             "public/shared/images/header/logo_steamchina.svg?t=962016",
                           height: "40",
                         }),
@@ -50272,7 +50287,7 @@
                       ),
                     ),
                   ),
-                Boolean("dev" == I.TS.WEB_UNIVERSE) &&
+                Boolean("dev" == B.TS.WEB_UNIVERSE) &&
                   l.createElement(
                     "div",
                     { className: h.WarningStylesWithIcon },
@@ -50283,7 +50298,7 @@
                   rgRealmList: y,
                   strOverrideDragAndDropText:
                     "Drag any asset here to upload (max 5MB)",
-                  strUploadAjaxURL: `${I.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
+                  strUploadAjaxURL: `${B.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
                   fnOnUploadSuccess: f,
                 }),
                 l.createElement(
@@ -50309,42 +50324,43 @@
                   l.createElement(U, { oEditableMessage: t }),
                 ),
               ),
-              l.createElement(B.u, { oEditableMessage: t }),
+              l.createElement(A.u, { oEditableMessage: t }),
             )
           : null;
       }
       function L(e) {
         const { oEditableMessage: t } = e,
-          [a] = (0, s.q3)(() => [t.BHasAnimatedAssets()]);
-        return a
-          ? l.createElement(
-              "div",
-              null,
-              l.createElement("br", null),
-              l.createElement("h3", null, "Animated Assets"),
-              l.createElement(
-                "div",
-                null,
-                "Animated Assets require both matching .webm/.mp4 files. Will fallback to static assets if animated asset is missing or client is setup for low-bandwidth mode.",
-              ),
-              l.createElement("br", null),
-              l.createElement(_.JU, null, "WebM"),
-              l.createElement(
-                "div",
-                null,
-                ".Webm 570px by 600px (required for Steam Client)",
-              ),
-              l.createElement(z, { oEditableMessage: t, assetType: "webm" }),
-              l.createElement("br", null),
-              l.createElement(_.JU, null, "MP4"),
-              l.createElement(
-                "div",
-                null,
-                ".Mp4 570px by 600px (required for iOS)",
-              ),
-              l.createElement(z, { oEditableMessage: t, assetType: "mp4" }),
-            )
-          : null;
+          [a, n] = (0, s.q3)(() => [
+            t.BHasAnimatedAssets(),
+            t.GetCustomTemplate(),
+          ]);
+        if (!a) return null;
+        const r = "partner_event" == n ? "800px by 450px" : "570px by 600px";
+        return l.createElement(
+          "div",
+          null,
+          l.createElement("br", null),
+          l.createElement("h3", null, "Animated Assets"),
+          l.createElement(
+            "div",
+            null,
+            "Animated Assets require both matching .webm/.mp4 files. Will fallback to static assets if animated asset is missing or client is setup for low-bandwidth mode.",
+          ),
+          l.createElement("br", null),
+          l.createElement(_.JU, null, "WebM"),
+          l.createElement(
+            "div",
+            null,
+            ".Webm ",
+            r,
+            " (required for Steam Client)",
+          ),
+          l.createElement(z, { oEditableMessage: t, assetType: "webm" }),
+          l.createElement("br", null),
+          l.createElement(_.JU, null, "MP4"),
+          l.createElement("div", null, ".Mp4 ", r, " (required for iOS)"),
+          l.createElement(z, { oEditableMessage: t, assetType: "mp4" }),
+        );
       }
       function U(e) {
         const { oEditableMessage: t } = e,

@@ -1426,6 +1426,8 @@
     "EventEditor_ArtworkType_localized_marketing_message": "Marketing Message Image",
     "EventEditor_ArtworkType_localized_marketingmessage_webm": "Marketing Message WebM",
     "EventEditor_ArtworkType_localized_marketingmessage_mp4": "Marketing Message MP4",
+    "EventEditor_ArtworkType_localized_partnerevent_webm": "Marketing Message WebM",
+    "EventEditor_ArtworkType_localized_partnerevent_mp4": "Marketing Message MP4",
     "EventEditor_ArtworkType_localized_subtitles": "Video Subtitles",
     "EventEditor_ArtworkType_localized_marketingmessage_poster": "Poster Image for Featured Video",
     "EventEditor_ArtworkType_localized_marketingmessage_background": "Background Image for Featured Video",

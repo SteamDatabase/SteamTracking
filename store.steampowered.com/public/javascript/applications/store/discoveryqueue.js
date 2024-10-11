@@ -61,6 +61,14 @@
         avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
       };
     },
+    15392: (e) => {
+      e.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
     71109: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -96,7 +104,7 @@
     },
     34181: (e, t, a) => {
       "use strict";
-      a.d(t, { A: () => b, D: () => f });
+      a.d(t, { A: () => Q, D: () => f });
       var r = a(34629),
         s = a(90626),
         n = a(75844),
@@ -234,8 +242,8 @@
       });
       var B = a(18828),
         S = a.n(B),
-        v = a(78327);
-      function Q(e) {
+        b = a(78327);
+      function v(e) {
         return s.createElement(
           s.Fragment,
           null,
@@ -263,46 +271,46 @@
             bHideEnhancedRichPresenceLabel: d,
             bHideSnooze: B,
             bHideStatus: f,
-            renderStatus: b,
+            renderStatus: Q,
             renderRichPresence: C,
             bHidePersona: N,
-            bDNDSet: D,
-            bHasPartyBeacon: P,
-            bHasGamePrivacy: y,
-            bNoMask: _,
-            ...I
+            bDNDSet: _,
+            bHasPartyBeacon: D,
+            bHasGamePrivacy: P,
+            bNoMask: y,
+            ...R
           } = this.props;
-          let R = null,
-            w = null,
+          let I = null,
             T = null,
+            w = null,
             M = [
               e,
               S().personaNameAndStatusLabel,
               (0, l.rO)(a),
               h && S().compactView,
-              _ && S().NoMask,
+              y && S().NoMask,
             ];
-          P || a.has_public_party_beacon
-            ? (w = s.createElement(Q, { persona: a }))
+          D || a.has_public_party_beacon
+            ? (T = s.createElement(v, { persona: a }))
             : (0, o.aP)(r)
-              ? ((w = (0, i.we)("#PersonaStateBlocked")), M.push(S().blocked))
+              ? ((T = (0, i.we)("#PersonaStateBlocked")), M.push(S().blocked))
               : a.is_ingame
-                ? ((w =
+                ? ((T =
                     !a.is_in_nonsteam_game || n || (0, o.S$)(r)
                       ? a.GetCurrentGameName()
                       : (0, i.we)("#PersonaStateInNonSteamGame")),
                   n || N
                     ? n &&
                       a.is_awayOrSnooze &&
-                      (T = (0, i.we)("#PersonaStateAway"))
-                    : (T = a.GetCurrentGameRichPresence()))
+                      (w = (0, i.we)("#PersonaStateAway"))
+                    : (w = a.GetCurrentGameRichPresence()))
                 : a.m_broadcastAccountId &&
-                  (w = (0, i.we)("#PersonaStateWatchingBroadcast")),
-            w || (w = a.GetLocalizedOnlineStatus()),
-            b && (w = b());
+                  (T = (0, i.we)("#PersonaStateWatchingBroadcast")),
+            T || (T = a.GetLocalizedOnlineStatus()),
+            Q && (T = Q());
           let k = !N && !B;
           !1 === B && (k = !0),
-            a.is_awayOrSnooze && k && (R = s.createElement(A, { persona: a }));
+            a.is_awayOrSnooze && k && (I = s.createElement(A, { persona: a }));
           let U = null;
           t
             ? (U = s.createElement(
@@ -312,21 +320,21 @@
               ))
             : M.push(S().noContextMenu),
             N && M.push(S().hidePersona),
-            C && (T = C()),
-            (!g && T) || M.push(S().twoLine);
+            C && (w = C()),
+            (!g && w) || M.push(S().twoLine);
           const H = !a.is_ingame && !f,
-            L = !d && T,
-            O = w && (!g || !L),
-            F = (0, o.ID)(v.TS.LAUNCHER_TYPE);
+            L = !d && w,
+            O = T && (!g || !L),
+            F = (0, o.ID)(b.TS.LAUNCHER_TYPE);
           let K = u && !m,
             W = K ? u : a.m_strPlayerName,
-            Z = !N && (O || H) && L;
+            G = !N && (O || H) && L;
           return s.createElement(
             "div",
-            { ...I, className: (0, c.A)(...M), onContextMenu: t },
+            { ...R, className: (0, c.A)(...M), onContextMenu: t },
             s.createElement(
               "div",
-              { className: (0, c.A)(S().statusAndName, Z && S().threeLines) },
+              { className: (0, c.A)(S().statusAndName, G && S().threeLines) },
               s.createElement(
                 "div",
                 { className: S().playerName },
@@ -341,7 +349,7 @@
                     ")",
                   ),
               ),
-              D &&
+              _ &&
                 s.createElement(
                   "div",
                   {
@@ -360,7 +368,7 @@
                   " *",
                 ),
               s.createElement(E, { persona: a }),
-              R,
+              I,
               (a.m_bPlayerNamePending || a.m_bAvatarPending) &&
                 F &&
                 s.createElement(
@@ -383,12 +391,12 @@
                     {
                       className: (0, c.A)(
                         S().gameName,
-                        Z && S().threeLines,
+                        G && S().threeLines,
                         S().richPresenceLabel,
                         "no-drag",
                       ),
                     },
-                    y &&
+                    P &&
                       s.createElement(
                         "div",
                         {
@@ -397,13 +405,13 @@
                         },
                         s.createElement(p.jZl, null),
                       ),
-                    w,
+                    T,
                   ),
                 L &&
                   s.createElement(
                     "div",
                     { className: (0, c.A)(S().richPresenceLabel, "no-drag") },
-                    T,
+                    w,
                     " ",
                   ),
               ),
@@ -411,7 +419,7 @@
         }
       };
       f = (0, r.Cg)([n.PA], f);
-      const b = (0, n.PA)((e) => {
+      const Q = (0, n.PA)((e) => {
         const {
           persona: t,
           bParenthesizeNicknames: a,
@@ -662,6 +670,58 @@
       };
       B = (0, r.Cg)([n.PA], B);
     },
+    69409: (e, t, a) => {
+      "use strict";
+      a.d(t, { m: () => A });
+      var r = a(90626),
+        s = a(22837),
+        n = a(38390),
+        i = a(27666),
+        o = a(52038),
+        l = a(61859),
+        c = a(61336),
+        m = a(78327),
+        u = a(15392);
+      function A(e) {
+        const { gidEvent: t } = e,
+          a = (0, n.RR)(t),
+          [A, p] = (0, r.useMemo)(() => {
+            if (
+              a?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              a?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const e = (0, s.sf)(m.TS.LANGUAGE),
+                t = l.NT.GetWithFallback(
+                  a.jsondata.localized_sale_product_banner,
+                  e,
+                ),
+                r = l.NT.GetWithFallback(
+                  a.jsondata.localized_sale_product_mobile_banner,
+                  e,
+                );
+              if (t?.length > 0 && r?.length > 0) {
+                const e = a.clanSteamID.GetAccountID();
+                return [`${(0, i.mJ)()}${e}/${t}`, `${(0, i.mJ)()}${e}/${r}`];
+              }
+            }
+            return [null, null];
+          }, [a]);
+        return A?.length > 0 && p?.length > 0
+          ? r.createElement(
+              "a",
+              { href: (0, c.k2)(a.GetSaleURL()), className: u.Link },
+              r.createElement("img", {
+                src: A,
+                className: (0, o.A)(u.Banner, u.Big),
+              }),
+              r.createElement("img", {
+                src: p,
+                className: (0, o.A)(u.Banner, u.Mobile),
+              }),
+            )
+          : null;
+      }
+    },
     3088: (e, t, a) => {
       "use strict";
       a.d(t, { c: () => i });
@@ -750,13 +810,13 @@
           a = (0, A.G)(),
           [h] = (0, c.QD)("inqueue", "0"),
           [E, B] = (0, r.useState)(!1),
-          [S, v] = (0, r.useState)(!1),
-          [Q] = (0, l.t7)(t, { include_assets: !0 }),
+          [S, b] = (0, r.useState)(!1),
+          [v] = (0, l.t7)(t, { include_assets: !0 }),
           f = (0, i.A)(),
-          b = r.useRef();
-        r.useEffect(() => b.current?.Activate(!0), []);
+          Q = r.useRef();
+        r.useEffect(() => Q.current?.Activate(!0), []);
         const C = (0, d.Qn)(),
-          { eStoreDiscoveryQueueType: N, storePageFilter: D } =
+          { eStoreDiscoveryQueueType: N, storePageFilter: _ } =
             r.useMemo(() => {
               if (h?.length > 0) {
                 const e = h.split("_"),
@@ -769,21 +829,21 @@
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
             }, [h]),
-          P = r.useCallback(() => {
-            v(!0);
+          D = r.useCallback(() => {
+            b(!0);
           }, []),
-          y = r.useCallback(() => {
+          P = r.useCallback(() => {
             B(!0);
           }, []),
-          _ = (0, o.WX)(N, D);
-        return a && Q
+          y = (0, o.WX)(N, _);
+        return a && v
           ? S
             ? null
             : r.createElement(
                 s.u,
                 {
                   NavigationManager: f,
-                  navTreeRef: b,
+                  navTreeRef: Q,
                   navID: "DiscoveryQueueAppWidget",
                 },
                 r.createElement(
@@ -791,8 +851,8 @@
                   {
                     focusable: !0,
                     className: g().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: P,
-                    onOKButton: y,
+                    onSecondaryButton: D,
+                    onOKButton: P,
                     onOKActionDescription: (0, p.we)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
@@ -800,18 +860,18 @@
                   },
                   r.createElement("img", {
                     className: g().WidgetCapsule,
-                    src: Q?.GetAssets().GetSmallCapsuleURL(),
+                    src: v?.GetAssets().GetSmallCapsuleURL(),
                   }),
                   r.createElement(
                     "div",
-                    { onClick: y, className: g().WidgetText },
+                    { onClick: P, className: g().WidgetText },
                     (0, p.we)("#DiscoveryQueue_ResumeWizard"),
-                    _?.length > 0 && ": " + _,
+                    y?.length > 0 && ": " + y,
                   ),
                   !C &&
                     r.createElement(
                       "div",
-                      { className: g().CloseButton, onClick: P },
+                      { className: g().CloseButton, onClick: D },
                       r.createElement(m.X, null),
                     ),
                   E &&
@@ -820,7 +880,7 @@
                       bWizardVisible: E,
                       fnCloseModal: () => B(!1),
                       eStoreDiscoveryQueueType: N,
-                      storePageFilter: D,
+                      storePageFilter: _,
                     }),
                 ),
               )
@@ -1071,7 +1131,7 @@
           r.useEffect(() => {
             d.setQueries(g, t, { listeners: !1 });
           }, [g, t, d]);
-        const v = E.some((e, t) => (0, h.EU)(g[t], e))
+        const b = E.some((e, t) => (0, h.EU)(g[t], e))
           ? E.flatMap((e, t) => {
               const a = g[t];
               if (a) {
@@ -1082,8 +1142,8 @@
               return [];
             })
           : [];
-        if (v.length > 0) throw Promise.all(v);
-        const Q = E.find((e, t) => {
+        if (b.length > 0) throw Promise.all(b);
+        const v = E.find((e, t) => {
           const a = g[t];
           return (
             a &&
@@ -1095,7 +1155,7 @@
             })
           );
         });
-        if (Q?.error) throw Q.error;
+        if (v?.error) throw v.error;
         return B(S());
       }
     },
