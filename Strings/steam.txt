@@ -35,6 +35,7 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123~8
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -1776,11 +1777,12 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
-22:54:36
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
 22ISSLConnectionCallback
+23:52:13
+23:52:39
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
@@ -2606,7 +2608,7 @@ B-233
 B-283
 B-409
 B-571
-B22:55:03
+B23:52:37
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8173,7 +8175,6 @@ Must pass a INetSSLConnectionCallback if using SSL
 MutableMessage
 MutableRawRepeatedField
 MutableRepeatedMessage
-N Km
 N.lb
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -8801,7 +8802,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  8 2024
+Oct 10 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -10512,7 +10513,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct  8 2024 22:55:02
+Startup - updater built Oct 10 2024 23:52:37
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

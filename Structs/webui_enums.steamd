@@ -3246,6 +3246,14 @@ enum UnnamedEnum869d78ff95ee9ad9
 	Soundtrack = 7;
 }
 
+enum UnnamedEnum890f06fb15476426
+{
+	k_eStraight = 0;
+	k_eFlattened = 1;
+	k_eBezier = 2;
+	k_eCount = 3;
+}
+
 enum UnnamedEnum899cc823eee04c7f
 {
 	SERIES = 1;
@@ -4065,6 +4073,12 @@ enum UnnamedEnumcd45c706ae6f84ed
 	Minimized = 2;
 }
 
+enum UnnamedEnumcdccc5792cfed4be
+{
+	k_eDeleted = 0;
+	k_eBisected = 1;
+}
+
 enum UnnamedEnumce80111fb803b9a5
 {
 	DIM = 0;
@@ -4293,6 +4307,12 @@ enum UnnamedEnume1202fbe60302220
 	Cosmic = 4;
 }
 
+enum UnnamedEnume268f1411d53d8e9
+{
+	k_eKeyToEdge = 0;
+	k_eEdgeToKey = 1;
+}
+
 enum UnnamedEnume36c5cd7cd6e71c1
 {
 	k_eLibrary = 1;
@@ -4304,6 +4324,12 @@ enum UnnamedEnume36c5cd7cd6e71c1
 	k_eFeatured = 64;
 	k_eCurator = 128;
 	k_eReposted = 256;
+}
+
+enum UnnamedEnume4352d833f0eaae1
+{
+	k_eZero = 0;
+	k_eConstant = 1;
 }
 
 enum UnnamedEnume6093c05096df8e2

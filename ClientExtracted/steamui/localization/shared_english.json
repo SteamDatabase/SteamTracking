@@ -2443,7 +2443,6 @@
     "DiscoveryQueue_OpenWizard": "Open The New Discovery Queue",
     "DiscoveryQueue_Error_Login": "You must be signed into Steam in order to open the new Discovery Queue.",
     "DiscoveryQueue_Error_Login_Title": "Sign In",
-    "DiscoveryQueue_LabsHeader": "<1>STEAM LABS</1> <2>Leave Feedback</2>",
     "DiscoveryQueue_WidgetHeader": "Explore your queue of top-selling, new, and similar products to what you play and use on Steam.",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "Sign in to discover top-selling, new and similar products to what you play and use on Steam.",
     "DiscoveryQueue_LaunchAction": "Launch Discovery Queue",
