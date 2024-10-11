@@ -4654,19 +4654,25 @@ div.negative_ratings_bar > span {
 	display: inline;
 }
 
-div.green_ratings_bar {
-	margin-top: 3px;
-	height: 15px;
+div.admin_ratings_bar {
+	height: 9px;
+	display: flex;
+	width: 100%;
 }
 
-div.green_ratings_bar > div {
-
+div.admin_ratings_bar > div {
 	background: #689631;
 	height: 8px;
-	max-width: 614px;
+	max-width: 100%;
 	display: inline-block;
 }
-div.green_ratings_bar > span {
+div.admin_ratings_bar.green > div {
+	background: #689631;
+}
+div.admin_ratings_bar.grey > div {
+	background: #777777;
+}
+div.admin_ratings_bar > span {
 	display: inline;
 }
 
