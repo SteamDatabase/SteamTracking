@@ -1620,6 +1620,7 @@ $tIContent-Length
 20IHTTPRedirectHandler
 20IUniformRandomStream
 20VideoAdaptationSet_t
+21:16:57
 21CHTTPClientConnection
 21CHTTPClientWorkThread
 21COpenSSLCachedSession
@@ -1632,7 +1633,6 @@ $tIContent-Length
 22CCustomAVIOReadContext
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:52:13
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -1883,7 +1883,7 @@ $tIContent-Length
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
 ?HAI\t81\t9dcG'
-?[export] Failed to add video packet to muxer
+?[export] Failed to add video packet to muxer: %s
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?accept error
 ?jOb
@@ -5643,7 +5643,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 10 2024
+Oct 11 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -7830,7 +7830,7 @@ Zong
 [export] Encoder not initialized
 [export] Failed add output audio stream
 [export] Failed add output video stream
-[export] Failed to add audio packet to muxer
+[export] Failed to add audio packet to muxer: %s
 [export] Failed to add frame to filter graph
 [export] Failed to build convert plan
 [export] Failed to get initial encoder codec params
@@ -7843,15 +7843,15 @@ Zong
 [export] Failed to initialize encoder
 [export] Failed to initialize filter graph
 [export] Failed to make initial encoder
-[export] Failed to open muxer
+[export] Failed to open muxer: %s
 [export] Failed to parse recording manifest: %s
-[export] Failed to process recording: %s
+[export] Failed to process recording: %s %s
 [export] Failed to read frame from encoder
 [export] Failed to read frame from filter graph
 [export] Failed to read packet from decoder
 [export] Failed to send flushing packet
 [export] Failed to send frame to encoder
-[export] Failed to send packet to decoder
+[export] Failed to send packet to decoder: %s
 [export] Manifest is missing an audio or video track: %s
 [export] No video codec selected
 [export] No video width and height selected

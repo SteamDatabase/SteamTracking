@@ -99,6 +99,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123`
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -2420,6 +2421,7 @@ $tICAPIJobListHashLoadSave
 %s: display was not open yet, good\n
 %s: display:%d -> nModeId: %d
 %s: dock firmware update result: %d
+%s: enable connect workaround: %d
 %s: failed to create a NetworkManager client
 %s: failed to create a glib context
 %s: failed to create connection
@@ -4587,6 +4589,7 @@ $tICAPIJobListHashLoadSave
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE9_
 *ZN18CSiteLicenseClient36YldStartConnectToSiteLicenseProviderERK10CIPAndPortRK8CSteamIDyE17RawSocketCallback
 *ZN18CSystemPerfManager27OnSystemDisplayStateChangedEP34SystemDisplayManagerStateUpdated_tEUlvE_
+*ZN21CNetworkManagerClient28TriggerGalileoWifiWorkaroundEvEUlvE_
 *ZN23CSystemPerfManagerLinux31SetRefreshRateExternallyManagedEbEUlvE_
 *ZN24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZN24CSystemDisplayManagerX114InitEvEUlPN12LinuxHelpers22ScreenChangedDetails_tEE_
@@ -6589,7 +6592,7 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/music/playbackcontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2251
+/data/src/clientdll/networkdevicemanager_linux.cpp:2269
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -9783,6 +9786,7 @@ $tICAPIJobListHashLoadSave
 17CInternalCallbackI20CSiteServerLoginCtrl16PostLogonState_tE
 17CInternalCallbackI20CSiteServerLoginCtrl26SteamServersDisconnected_tE
 17CInternalCallbackI20CSiteServerLoginCtrl27SteamServerConnectFailure_tE
+17CInternalCallbackI21CNetworkManagerClient26NetworkDeviceStateChange_tE
 17CInternalCallbackI23CSystemPerfManagerLinux27SystemResumingFromSuspend_tE
 17CInternalCallbackI24CClientTimedTrialManager19AppLifetimeNotice_tE
 17CInternalCallbackI24CClientTimedTrialManager23SteamServersConnected_tE
@@ -15909,6 +15913,7 @@ ApplyCompatibilityMode
 ApplyCompatibilityModesIfNecessary
 ApplyMandatoryUpdate
 ApplyUpdate
+Applying SteamDeck wifi resume workaround
 ApproveFeatureAccess
 ApprovePlaytime
 Apps
@@ -23002,8 +23007,9 @@ ForceUpdateNextRestart
 Forced Off
 Forced create but already created for SharedObjectEvent\n
 Forces overlay testmode mode for debugging
-Forcing Polling Rate: %u \n
+Forcing Polling Rate= from %u to %u \n
 Forcing content server %s for download!
+Forcing full wifi scan: pre-wait: %d
 Forget
 ForgetWirelessEndpoint
 Forgetting cache type '%s' on host '%s' due to %s.
@@ -31716,6 +31722,7 @@ SteamController_SwitchSupport
 SteamController_XBoxSupport
 SteamDatagramClientThinker::Think
 SteamDeck
+SteamDeckWifiResumeWorkaround
 SteamDisableOverlayDPIScaling
 SteamEngine.GetGameIDForPID#1
 SteamEngine.GetTextFilterDictionary#1
@@ -34682,6 +34689,7 @@ Zulu
 [%s] Using loopback for P2P connection to local identity %s on %s.  Partner is [%s]\n
 [%s] We are in state %d and have been waiting %.1fs to be cleaned up.  Did you forget to call CloseConnection()?
 [%s] We have sessions and just received valid end-to-end packet, but we cannot select a session as active?\n
+[%s] [%6.2f msec] avgsample %6.2f | max %7.3f | high samples %4d\n
 [%s] cleaned up\n
 [%s] closed by app (%d) %s\n
 [%s] closed by app before we got connected (%d) %s\n
@@ -53386,7 +53394,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct 10 2024 23:54:17
+steam Oct 11 2024 21:17:51
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -55580,6 +55588,7 @@ voice_quality
 voice_resample_quality
 voice_settings
 voice_silk_bitrate
+voice_spew_activity_check
 voice_use_auto_gain_control
 voice_use_echo_cancellation
 voice_use_noise_cancellation

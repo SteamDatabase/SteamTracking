@@ -55,7 +55,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123X 7
+ !"#$%&'()*+,-./0123x 7
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -6068,10 +6068,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:4902
-/data/src/steamUI/gamerecordingcontroller.cpp:5001
-/data/src/steamUI/gamerecordingcontroller.cpp:6313
-/data/src/steamUI/gamerecordingcontroller.cpp:6386
+/data/src/steamUI/gamerecordingcontroller.cpp:4930
+/data/src/steamUI/gamerecordingcontroller.cpp:5030
+/data/src/steamUI/gamerecordingcontroller.cpp:6342
+/data/src/steamUI/gamerecordingcontroller.cpp:6415
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -11617,6 +11617,7 @@ ${LANGUAGE}
 @nSpewThrottleUnconditionalTriggerCount
 @nStatsMonitorScale
 @nStatsMonitorSecs
+@nVoicePostActivityXmitMS
 @nWatchdogSteamUIPercentReport
 @net_backlog_bytes_allowed
 @net_backlog_time_allowed_sec
@@ -21423,10 +21424,11 @@ Not editing a controller configuration for idx %u, so can't save.
 Not editing a controller configuration, so can't save.
 Not enough disk quota
 Not enough disk space
-Not enough disk space to export clip
+Not enough disk space to instant clip: %s %s
 Not enough disk space to save clip
-Not enough disk space to start recording
-Not enough disk space, stopping recording
+Not enough disk space to save manual clip: %s %s
+Not enough disk space to start recording: %s %s
+Not enough disk space, stopping recording: %s %s
 Not enough free disk space
 Not enough image data
 Not enough time to send '%s' and get reply
@@ -21696,7 +21698,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 10 2024 23:53:09
+Oct 11 2024 21:17:59
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -25788,6 +25790,7 @@ Unable to apply SDR network config!  %s\n
 Unable to create clip directory
 Unable to create directories for downloaded clip: %s
 Unable to decrement IOCP eventfd, error %d
+Unable to export clip: %s %s
 Unable to find boundary string in multipart/form-data: %s\n
 Unable to find new name when downloading clip %s
 Unable to find new name when saving clip
@@ -29412,6 +29415,7 @@ aesni_xts_init_key
 affiliationChanged
 afrikaans
 after
+after voice activity, continue recording for this many ms even if there is silence
 age_verification_pending
 agent-manager1
 agent1
@@ -45061,6 +45065,7 @@ voice_push_to_talk_key
 voice_push_to_talk_setting
 voice_settings
 voice_speaker_output_gain
+voice_spew_activity_check
 voice_use_auto_gain_control
 voice_use_echo_cancellation
 voice_use_noise_cancellation

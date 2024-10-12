@@ -1771,6 +1771,8 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:16:57
+21:17:23
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -1781,8 +1783,6 @@ $d`D-laM
 22CClanMatchEventByRange
 22CClientStructNetPacket
 22ISSLConnectionCallback
-23:52:13
-23:52:39
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
@@ -2608,7 +2608,7 @@ B-233
 B-283
 B-409
 B-571
-B23:52:37
+B21:17:22
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8802,7 +8802,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 10 2024
+Oct 11 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -10513,7 +10513,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct 10 2024 23:52:37
+Startup - updater built Oct 11 2024 21:17:22
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
