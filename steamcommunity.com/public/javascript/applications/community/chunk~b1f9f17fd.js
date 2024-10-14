@@ -60549,25 +60549,24 @@
           [u, m] = n.useState(!1),
           [_, p] = n.useState(!1),
           [h, v] = n.useState(!1),
-          [E, y] = n.useState(!1),
-          [b] = (0, o.t7)(t, ys),
-          f = (0, us.R7)(),
-          w = (null == f ? void 0 : f.ownerWindow) || window,
-          C = Is(b, i),
-          { bIsIgnored: T, fnUpdateIgnored: I } = (0, ds.TK)(t),
-          { bIsWishlisted: B, fnUpdateWishlist: A } = (0, ds.u4)(t, bs),
-          [G, M] = n.useState(0),
-          [k, N] = n.useState(),
-          P = n.useRef();
+          [E] = (0, o.t7)(t, ys),
+          y = (0, us.R7)(),
+          b = (null == y ? void 0 : y.ownerWindow) || window,
+          f = Is(E, i),
+          { bIsIgnored: w, fnUpdateIgnored: C } = (0, ds.TK)(t),
+          { bIsWishlisted: T, fnUpdateWishlist: I } = (0, ds.u4)(t, bs),
+          [B, A] = n.useState(0),
+          [G, M] = n.useState(),
+          k = n.useRef();
         n.useEffect(() => {
-          void 0 !== P.current &&
-            P.current !== t &&
-            ((P.current = void 0), M(0));
+          void 0 !== k.current &&
+            k.current !== t &&
+            ((k.current = void 0), A(0));
         }, [t]);
         const {
-            bTabHidden: R,
-            bOffscreen: F,
-            refIntersection: L,
+            bTabHidden: N,
+            bOffscreen: P,
+            refIntersection: R,
           } = (function () {
             const [e, t] = n.useState(!1),
               [a, i] = n.useState(!1);
@@ -60583,40 +60582,40 @@
               s = (0, Ss.BL)(r, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: s };
           })(),
-          O = n.useCallback(async () => {
-            if (R || F) return void y(!0);
-            (P.current = t), M(1);
+          F = n.useCallback(async () => {
+            if (N || P) return void v(!0);
+            (k.current = t), A(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
                 const t = 1 - (new Date().getTime() - e) / 500;
-                N(Math.max(t, 0));
+                M(Math.max(t, 0));
               }, 30);
             await new Promise((e) => setTimeout(e, 500)),
               window.clearTimeout(a),
-              N(void 0),
-              P.current == t &&
-                ((P.current = void 0),
+              M(void 0),
+              k.current == t &&
+                ((k.current = void 0),
                 r(!0),
-                M(2),
+                A(2),
                 await new Promise((e) => setTimeout(e, 500))),
-              M(0);
-          }, [t, R, F, r]);
+              A(0);
+          }, [t, N, P, r]);
         n.useEffect(() => {
-          R || F || !E || (y(!1), O());
-        }, [E, R, F, O]);
-        const x = !s;
-        let z;
+          N || P || !h || (v(!1), F());
+        }, [h, N, P, F]);
+        const L = !s;
+        let O;
         if (
-          (h
-            ? (z = 4)
+          (_
+            ? (O = 4)
             : u
-              ? (z = 3)
-              : 0 != G
-                ? (z = 0)
-                : R
-                  ? (z = 1)
-                  : F && (z = 2),
-          !b)
+              ? (O = 3)
+              : 0 != B
+                ? (O = 0)
+                : N
+                  ? (O = 1)
+                  : P && (O = 2),
+          !E)
         )
           return n.createElement(
             "div",
@@ -60626,37 +60625,33 @@
               is_trailercarousel: !0,
             }),
           );
-        const U = d || (1 != z && 2 != z);
+        const x = d || (1 != O && 2 != O);
         return n.createElement(
           ge.Z,
           {
             focusable: !0,
             className: (0, S.A)(rs().TrailerCarouselApp),
-            ref: L,
-            onOptionsActionDescription: B
+            ref: R,
+            onOptionsActionDescription: T
               ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
               : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
-            onOptionsButton: A,
+            onOptionsButton: I,
             onOKActionDescription: (0, D.we)(
               "#SaleTrailerCarousel_ViewStorePage",
             ),
             onOKButton: () => {
-              w.location.href = C;
+              b.location.href = f;
             },
-            onSecondaryActionDescription: T
+            onSecondaryActionDescription: w
               ? (0, D.we)("#SaleTrailerCarousel_Undo")
               : (0, D.we)("#SaleTrailerCarousel_IgnoreLink"),
-            onSecondaryButton: I,
-            onMouseEnter: () => p(!0),
-            onMouseLeave: () => p(!1),
+            onSecondaryButton: C,
+            onMouseEnter: () => m(!0),
+            onMouseLeave: () => m(!1),
           },
           n.createElement(
             "div",
-            {
-              className: rs().VideoRow,
-              onMouseEnter: () => m(!0),
-              onMouseLeave: () => m(!1),
-            },
+            { className: rs().VideoRow },
             c &&
               n.createElement(
                 "button",
@@ -60672,8 +60667,8 @@
               n.createElement("div", {
                 className: (0, S.A)(
                   rs().Fade,
-                  1 === G && rs().FadeOut,
-                  2 === G && rs().FadeIn,
+                  1 === B && rs().FadeOut,
+                  2 === B && rs().FadeIn,
                 ),
                 style: { "--fade-out-time": "0.5s", "--fade-in-time": "0.5s" },
               }),
@@ -60683,15 +60678,15 @@
                 n.createElement(Bs, { appID: t }),
                 n.createElement(ds.y3, {
                   appID: t,
-                  focused: U,
+                  focused: x,
                   snrCode: bs,
                   skipMicroTrailer: s,
                   playWithBroadcastPlayer: s,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                   showScreenshotInsteadOfMainCap: !s,
-                  fadeRatio: k,
-                  fnPlayPause: v,
-                  fnComplete: O,
+                  fadeRatio: G,
+                  fnPlayPause: p,
+                  fnComplete: F,
                   loopVideo: !1,
                 }),
               ),
@@ -60712,13 +60707,13 @@
               ),
           ),
           n.createElement(vs, {
-            className: (0, S.A)(rs().AutoAdvanceRow, x && rs().Enabled),
-            enabled: x,
+            className: (0, S.A)(rs().AutoAdvanceRow, L && rs().Enabled),
+            enabled: L,
             currentItemKey: t,
             autoAdvanceMsec: a,
-            fnAdvance: O,
-            pauseReason: z,
-            checkboxVisible: _,
+            fnAdvance: F,
+            pauseReason: O,
+            checkboxVisible: u,
           }),
         );
       }
@@ -62293,44 +62288,51 @@
           }, [F, B]),
           n.useEffect(() => {
             B.current && (B.current.onended = T);
-          }, [T, B]),
-          n.useEffect(() => {
-            if (P && a && 0 === V)
-              if ((j(!0), F))
-                if (B.current) {
-                  v.Debug("Starting microtrailer"), Q(1);
-                  const e = () => {
+          }, [T, B]);
+        let ee = n.useRef(!1);
+        n.useEffect(() => {
+          if (P && a && 0 === V)
+            if ((j(!0), F))
+              if (B.current) {
+                v.Debug("Starting microtrailer"), Q(1);
+                const e = () => {
+                  ee.current ||
+                    ((ee.current = !0),
                     v.Debug("Starting main trailer"),
-                      Q(2),
-                      K(!1),
-                      B.current.play().catch((e) => {
-                        "NotAllowedError" === e.name
-                          ? (K(!0),
-                            v.Debug(
-                              "Failed to play trailer, trying again muted",
-                            ),
-                            (B.current.muted = !0),
-                            B.current.play().catch((e) => {
-                              v.Warning("Failed to play main trailer: ", e);
-                            }))
-                          : v.Warning("Failed to play main trailer: ", e);
-                      });
-                  };
-                  p || !D.current
-                    ? e()
-                    : (Z(!0),
-                      D.current.play().catch((e) => {
-                        Z(!1), v.Warning("Failed to play microtrailer: ", e);
-                      }),
-                      (D.current.onended = e));
-                } else
-                  A &&
-                    (v.Debug("Starting broadcast player"),
                     Q(2),
                     K(!1),
-                    A.Play());
-              else v.Debug("Showing image");
-          }, [a, P, V, p, F, T, A]),
+                    B.current.play().catch((e) => {
+                      "NotAllowedError" === e.name
+                        ? (K(!0),
+                          v.Debug("Failed to play trailer, trying again muted"),
+                          (B.current.muted = !0),
+                          B.current.play().catch((e) => {
+                            v.Warning("Failed to play main trailer: ", e);
+                          }))
+                        : v.Warning("Failed to play main trailer: ", e);
+                    }));
+                };
+                p || !D.current
+                  ? e()
+                  : (Z(!0),
+                    D.current.play().catch((e) => {
+                      Z(!1), v.Warning("Failed to play microtrailer: ", e);
+                    }),
+                    (D.current.onended = e));
+              } else
+                A &&
+                  (v.Debug("Starting broadcast player"), Q(2), K(!1), A.Play());
+            else v.Debug("Showing image");
+        }, [a, P, V, p, F, T, A]),
+          n.useEffect(() => {
+            if (!D.current || !D.current.onended) return;
+            if (!X) return;
+            let e = D.current.onended,
+              t = setTimeout(() => {
+                e();
+              }, 6e3);
+            return () => clearTimeout(t);
+          }, [X, D, B]),
           n.useEffect(() => {
             a || L(!1);
           }, [a]),
@@ -62341,11 +62343,11 @@
             });
             return () => e();
           }, [A]);
-        const ee = null == t ? void 0 : t.GetMicroTrailer(),
-          te = (null == t ? void 0 : t.GetAllTrailers().BHasTrailers())
+        const te = null == t ? void 0 : t.GetMicroTrailer(),
+          ae = (null == t ? void 0 : t.GetAllTrailers().BHasTrailers())
             ? t.GetAllTrailers().GetHighlightTrailers()[0]
             : null,
-          ae = () => {
+          ne = () => {
             0 == V
               ? L(!0)
               : 1 == V && D.current
@@ -62358,17 +62360,17 @@
                     : B.current.pause()
                   : 2 == V && A && A.TogglePlayPause();
           };
-        if (!t.BIsVisible()) return null;
-        const ne = { [e.autoplayCheckboxPosition || "top"]: 0 };
-        let ie = null;
-        ie =
+        if (!t || !t.BIsVisible()) return null;
+        const ie = { [e.autoplayCheckboxPosition || "top"]: 0 };
+        let re = null;
+        re =
           2 == V
             ? o().PlayFullTrailer
             : 1 == V
               ? o().PlayMicrotrailer
               : o().NoTrailer;
-        const re = (null == I || I) && !T,
-          oe =
+        const oe = (null == I || I) && !T,
+          se =
             f && t.BHasAgeSafeScreenshots()
               ? t.GetOnlyAllAgesSafeScreenshots()[0]
               : t.GetAssets().GetMainCapsuleURL();
@@ -62378,8 +62380,8 @@
           n.createElement("img", {
             ref: M,
             className: (0, u.A)(o().AppMainCap, 0 != V && o().Hidden),
-            src: oe,
-            onClick: ae,
+            src: se,
+            onClick: ne,
           }),
           (t.GetAllTrailers().BHasTrailers() || r) &&
             n.createElement(
@@ -62399,7 +62401,7 @@
                     checked: k,
                     key: t.GetAppID(),
                     className: o().AutoplayCheckbox,
-                    style: ne,
+                    style: ie,
                     label: (0, c.we)("#StoreTrailer_AutoPlayVideos"),
                     onChange: (e) => {
                       (0, l.lc)(null != y ? y : S, String(!e), 3650),
@@ -62412,36 +62414,36 @@
                 !z &&
                 n.createElement(
                   i.Z,
-                  { focusable: !0, onClick: ae, className: o().PlayButton },
+                  { focusable: !0, onClick: ne, className: o().PlayButton },
                   n.createElement(s.IOc, null),
                 ),
-              ee &&
+              te &&
                 n.createElement(
                   "video",
                   {
-                    className: (0, u.A)(o().AppVideo, ie, o().Microtrailer),
+                    className: (0, u.A)(o().AppVideo, re, o().Microtrailer),
                     ref: D,
                     preload: "auto",
                     playsInline: !0,
                     muted: !0,
-                    onClick: ae,
+                    onClick: ne,
                   },
                   n.createElement("source", {
-                    src: ee.strWebMURL,
+                    src: te.strWebMURL,
                     type: "video/webm",
                   }),
                   Boolean(!_.TS.IN_CLIENT) &&
                     n.createElement("source", {
-                      src: ee.strMP4URL,
+                      src: te.strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
-              te &&
+              ae &&
                 !r &&
                 n.createElement(
                   "video",
                   {
-                    className: (0, u.A)(o().AppVideo, ie, o().Trailer),
+                    className: (0, u.A)(o().AppVideo, re, o().Trailer),
                     ref: B,
                     onVolumeChange: (e) => {
                       if (w && w < 1) return;
@@ -62454,26 +62456,26 @@
                     muted: !(W > 0),
                     preload: "auto",
                     playsInline: !0,
-                    loop: re,
+                    loop: oe,
                     controls: !0,
                   },
                   n.createElement("source", {
-                    src: te.GetTrailer480p().strWebMURL,
+                    src: ae.GetTrailer480p().strWebMURL,
                     type: "video/webm",
                   }),
                   Boolean(!_.TS.IN_CLIENT) &&
                     n.createElement("source", {
-                      src: te.GetTrailer480p().strMP4URL,
+                      src: ae.GetTrailer480p().strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
               r &&
                 n.createElement(g.default, {
-                  classes: (0, u.A)(o().AppVideo, ie, o().Trailer),
+                  classes: (0, u.A)(o().AppVideo, re, o().Trailer),
                   nAppIDVOD: t.GetAppID(),
                   watchLocation: 15,
                   fnOnVideoEnd: T,
-                  fnVideoClick: ae,
+                  fnVideoClick: ne,
                   fnSetBroadcastVideo: G,
                 }),
             ),
