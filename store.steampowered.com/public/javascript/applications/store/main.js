@@ -41856,7 +41856,8 @@
                   (i.srclang = t.strLanguage),
                   (i.src = t.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
-                  (e || (0 != r && m.bi[t.strLanguage] == r)) &&
+                  (!e && 0 == r) ||
+                    m.bi[t.strLanguage] != r ||
                     ((i.default = !0),
                     (this.m_timedTextRepSelected = t.rgRepresentations[0])),
                   this.m_elVideo.appendChild(i);
