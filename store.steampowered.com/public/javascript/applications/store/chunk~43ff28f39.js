@@ -1008,6 +1008,7 @@
                     t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
             t &&
               (this.props.bStartMuted && t.SetMute(!0),
+              this.props.bStartWithSubtitles && t.SetStartWithSubtitles(!0),
               this.props.bStartPaused
                 ? t.StopPlaybackTillUserInput()
                 : t.Play()),

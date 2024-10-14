@@ -669,7 +669,7 @@
           [N, k] = n.useState(!1),
           [L, O] = n.useState(!1),
           [P, U] = n.useState(!1),
-          [q, W] = n.useState(!1),
+          [W, q] = n.useState(!1),
           [x, z] = n.useState(!1),
           [Q, j] = (0, d.M)(w),
           [H, V] = n.useState(0),
@@ -762,7 +762,7 @@
           }, [r]),
           n.useEffect(() => {
             const e = (0, g.fm)(() => {
-              W(R?.GetUserInputNeeded()), $(!R?.IsPaused());
+              q(R?.GetUserInputNeeded()), $(!R?.IsPaused());
             });
             return () => e();
           }, [R]);
@@ -832,7 +832,7 @@
                   }),
                 ),
               P &&
-                !q &&
+                !W &&
                 n.createElement(
                   i.Z,
                   { focusable: !0, onClick: ne, className: a().PlayButton },
@@ -898,6 +898,7 @@
                   fnOnVideoEnd: B,
                   fnVideoClick: ne,
                   fnSetBroadcastVideo: D,
+                  bStartWithSubtitles: !0,
                 }),
             ),
         );
@@ -1756,8 +1757,8 @@
         }
       }
       var U = r(22797),
-        q = r(57834),
-        W = r.n(q),
+        W = r(57834),
+        q = r.n(W),
         x = r(14336),
         z = r(26505);
       const Q = new y.wd("AppRelevance").Debug;
@@ -1942,19 +1943,19 @@
                 null,
                 n.createElement(
                   "div",
-                  { className: W().WhyRelevant },
+                  { className: q().WhyRelevant },
                   (0, f.we)("#DiscoveryQueue_WhyRelevant"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().RelevantCtn },
+                  { className: q().RelevantCtn },
                   T &&
                     n.createElement(
                       $,
                       { header: (0, f.we)("#DiscoveryQueue_SimilarGames") },
                       n.createElement(
                         "div",
-                        { className: W().ReleventSimilarAppsCtn },
+                        { className: q().ReleventSimilarAppsCtn },
                         I,
                       ),
                     ),
@@ -1971,8 +1972,8 @@
                         "div",
                         {
                           className: (0, g.A)(
-                            W().ReleventSimilarAppsCtn,
-                            W().RecommendingCuratorsCtn,
+                            q().ReleventSimilarAppsCtn,
+                            q().RecommendingCuratorsCtn,
                           ),
                         },
                         b.data
@@ -1994,7 +1995,7 @@
                         "#DiscoveryQueue_TopSellers",
                         (B + 1).toLocaleString(),
                         n.createElement("span", {
-                          className: W().RelevantTextBold,
+                          className: q().RelevantTextBold,
                         }),
                       ),
                     }),
@@ -2026,7 +2027,7 @@
             (!a || 0 == M) &&
               n.createElement(
                 "div",
-                { className: (0, g.A)(W().AppDescription, M && W().Divider) },
+                { className: (0, g.A)(q().AppDescription, M && q().Divider) },
                 s.GetShortDescription(),
               ),
           )
@@ -2052,7 +2053,7 @@
                 r,
                 n.createElement(
                   "span",
-                  { className: W().RelevantTextBold },
+                  { className: q().RelevantTextBold },
                   t.clanInfo?.group_name,
                 ),
               ),
@@ -2074,7 +2075,7 @@
         const { lifetimePlaytime: t, storeItem: r } = e;
         return n.createElement(
           "div",
-          { className: W().SimilarAppCtn },
+          { className: q().SimilarAppCtn },
           n.createElement(
             h.Qf,
             {
@@ -2087,7 +2088,7 @@
               },
             },
             n.createElement("img", {
-              className: W().SimilarAppImg,
+              className: q().SimilarAppImg,
               src: r.GetAssets().GetSmallCapsuleURL(),
             }),
           ),
@@ -2104,7 +2105,7 @@
                     i,
                     r,
                     n.createElement("span", {
-                      className: W().RelevantTextBold,
+                      className: q().RelevantTextBold,
                     }),
                   ),
                 },
@@ -2112,7 +2113,7 @@
                   t.length > 0 &&
                   n.createElement(
                     "div",
-                    { className: W().FriendAvatarsCtn },
+                    { className: q().FriendAvatarsCtn },
                     1 == r
                       ? n.createElement(J, { steamid: t[0] })
                       : n.createElement(X, { arrSteamIDs: t }),
@@ -2134,7 +2135,7 @@
               "span",
               {
                 "data-miniprofile": "s" + r.m_steamid.ConvertTo64BitString(),
-                className: W().RelevantTextBold,
+                className: q().RelevantTextBold,
               },
               r.m_strPlayerName,
             )
@@ -2165,14 +2166,14 @@
         return r
           ? n.createElement(
               a.Z,
-              { className: W().FriendBlockCtn, "data-miniprofile": "s" + t },
+              { className: q().FriendBlockCtn, "data-miniprofile": "s" + t },
               n.createElement(o.i8, {
                 persona: r,
                 size: "Small",
                 statusPosition: "right",
               }),
               n.createElement(l.D, {
-                className: W().PersonaStatus,
+                className: q().PersonaStatus,
                 persona: r,
                 eFriendRelationship: 3,
                 bIsSelf: !1,
@@ -2188,16 +2189,16 @@
         const { children: t, header: r } = e;
         return n.createElement(
           "div",
-          { className: W().RelevantItem },
+          { className: q().RelevantItem },
           n.createElement(
             "div",
-            { className: W().RelevantCheck },
+            { className: q().RelevantCheck },
             n.createElement(_.Jlk, null),
           ),
           n.createElement(
             "div",
-            { className: W().RelevantColumn },
-            n.createElement("div", { className: W().ReleventText }, r),
+            { className: q().RelevantColumn },
+            n.createElement("div", { className: q().ReleventText }, r),
             t,
           ),
         );
@@ -2822,8 +2823,8 @@
         O = r(44691),
         P = r(30143),
         U = r(39199),
-        q = r(57834),
-        W = r.n(q),
+        W = r(57834),
+        q = r.n(W),
         x = r(20019),
         z = r(62792),
         Q = r(55263),
@@ -2873,7 +2874,7 @@
             focusable: !0,
             style: B,
             onFocus: () => a?.(l),
-            className: (0, k.A)(W().DiscoveryQueueApp, c && W().Focused),
+            className: (0, k.A)(q().DiscoveryQueueApp, c && q().Focused),
             onOptionsActionDescription: C
               ? (0, L.we)("#DiscoveryQueue_RemoveFromWishlist")
               : (0, L.we)("#DiscoveryQueue_AddToWishlist"),
@@ -2889,24 +2890,24 @@
           },
           n.createElement(
             "div",
-            { className: (0, k.A)(W().IgnoredCtn, S && W().Active) },
+            { className: (0, k.A)(q().IgnoredCtn, S && q().Active) },
             n.createElement(
               "div",
-              { className: (0, k.A)(W().IgnoredInfo, S && W().Active) },
+              { className: (0, k.A)(q().IgnoredInfo, S && q().Active) },
               n.createElement(
                 "div",
-                { className: W().IgnoredTitle },
+                { className: q().IgnoredTitle },
                 (0, L.we)("#DiscoveryQueue_Ignored"),
               ),
               n.createElement(
                 "div",
-                { className: W().IgnoredDescription },
+                { className: q().IgnoredDescription },
                 (0, L.we)("#DiscoveryQueue_IgnoredConfirmation"),
               ),
               n.createElement(
                 o.Z,
                 {
-                  className: (0, k.A)(W().QueueButton, W().UndoIgnoreButton),
+                  className: (0, k.A)(q().QueueButton, q().UndoIgnoreButton),
                   onClick: v,
                 },
                 f &&
@@ -2951,22 +2952,22 @@
         const f = l.GetAssets().GetLibraryCapsuleURL();
         return n.createElement(
           o.Z,
-          { className: W().AppDetailsCtn },
+          { className: q().AppDetailsCtn },
           n.createElement(
             "div",
-            { className: W().AppDetailsCtnTop },
+            { className: q().AppDetailsCtnTop },
             n.createElement(
               "div",
-              { className: W().AppDetailsHeader },
+              { className: q().AppDetailsHeader },
               f &&
                 n.createElement("img", {
-                  className: W().AppLibraryHero,
+                  className: q().AppLibraryHero,
                   src: f,
                 }),
               n.createElement(
                 "div",
-                { className: W().RightColumn },
-                n.createElement("div", { className: W().AppName }, l.GetName()),
+                { className: q().RightColumn },
+                n.createElement("div", { className: q().AppName }, l.GetName()),
                 n.createElement(V.wc, {
                   bSingleLineMode: !0,
                   info: { id: t, type: (0, x.U)(l.GetAppType()) },
@@ -2976,7 +2977,7 @@
             n.createElement(se, { rgTagNames: g }),
             n.createElement(
               "div",
-              { className: W().AppReviews },
+              { className: q().AppReviews },
               n.createElement(H.Jz, {
                 bShowTooltip: !0,
                 bTruncateTotalReviews: r,
@@ -2985,7 +2986,7 @@
             ),
             n.createElement(
               "div",
-              { className: W().AppRelevanceCtn },
+              { className: q().AppRelevanceCtn },
               n.createElement(J.v, {
                 bShowAvatars: !r,
                 storeItem: l,
@@ -2996,10 +2997,10 @@
           !p &&
             n.createElement(
               "div",
-              { className: W().AppActionButtonsCtn },
+              { className: q().AppActionButtonsCtn },
               n.createElement(
                 "div",
-                { className: W().AppActionJustButtonsCtn },
+                { className: q().AppActionJustButtonsCtn },
                 l.BHasDemo() &&
                   n.createElement(X.j, {
                     info: {
@@ -3007,15 +3008,15 @@
                       type: (0, z._4)(l.GetStoreItemType(), l.GetAppType()),
                     },
                     className: (0, k.A)(
-                      W().QueueButton,
-                      W().Primary,
-                      W().Launch,
+                      q().QueueButton,
+                      q().Primary,
+                      q().Launch,
                     ),
                   }),
                 n.createElement(
                   "a",
                   {
-                    className: (0, k.A)(W().QueueButton, W().Primary),
+                    className: (0, k.A)(q().QueueButton, q().Primary),
                     href: d,
                   },
                   _ &&
@@ -3023,23 +3024,23 @@
                       button: K.g4.Y,
                       type: Z.wt.Light,
                       size: Z.xY.Medium,
-                      additionalClassName: W().YGlyph,
+                      additionalClassName: q().YGlyph,
                     }),
                   " ",
                   (0, L.we)("#DiscoveryQueue_ViewStorePage"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().ButtonsRowWrap },
+                  { className: q().ButtonsRowWrap },
                   n.createElement(
                     o.Z,
-                    { focusable: !0, className: W().QueueButton, onClick: m },
+                    { focusable: !0, className: q().QueueButton, onClick: m },
                     _ &&
                       n.createElement(Z.$m, {
                         button: K.g4.Y,
                         type: Z.wt.Light,
                         size: Z.xY.Medium,
-                        additionalClassName: W().YGlyph,
+                        additionalClassName: q().YGlyph,
                       }),
                     u
                       ? (0, L.we)("#DiscoveryQueue_RemoveFromWishlist")
@@ -3047,7 +3048,7 @@
                   ),
                   n.createElement(
                     o.Z,
-                    { focusable: !0, className: W().QueueButton, onClick: c },
+                    { focusable: !0, className: q().QueueButton, onClick: c },
                     (0, L.we)("#DiscoveryQueue_IgnoreLink"),
                   ),
                 ),
@@ -3060,11 +3061,11 @@
           r = (0, ee.W3)(t);
         return n.createElement(
           "div",
-          { className: W().AppTagsCtn },
+          { className: q().AppTagsCtn },
           r.map((e) =>
             n.createElement(
               "div",
-              { key: e.name, className: W().TagEntry },
+              { key: e.name, className: q().TagEntry },
               e.name,
             ),
           ),
@@ -3122,7 +3123,7 @@
           [C, I] = n.useState(24),
           [B, E] = n.useState("DiscoveryQueue"),
           [T, A] = n.useState(!0),
-          [D, q] = n.useState(!1),
+          [D, W] = n.useState(!1),
           [x, z] = n.useState(!1),
           Q = n.useRef(),
           j = (0, h.Qn)(),
@@ -3232,7 +3233,7 @@
                 ? n.createElement(o.Z, {
                     focusable: !1,
                     style: { width: i, height: ne },
-                    className: (0, k.A)(W().DiscoveryQueuePlaceholder),
+                    className: (0, k.A)(q().DiscoveryQueuePlaceholder),
                   })
                 : n.createElement(re, {
                     eStoreDiscoveryQueueType: t,
@@ -3262,7 +3263,7 @@
           ),
           be = n.useCallback(
             (e, t) => {
-              j || (q(e), A(t));
+              j || (W(e), A(t));
             },
             [j],
           ),
@@ -3285,14 +3286,14 @@
                   n.createElement("img", {
                     key: "dot_" + i,
                     className: (0, k.A)({
-                      [W().ProgressDot]: !0,
-                      [W().ProgressDotActive]: i <= e,
-                      [W().ProgressDotHidden]: _[y] === le || _[y] === oe,
+                      [q().ProgressDot]: !0,
+                      [q().ProgressDotActive]: i <= e,
+                      [q().ProgressDotHidden]: _[y] === le || _[y] === oe,
                     }),
                     src: P.A,
                   }),
                 );
-              return n.createElement("div", { className: W().ProgressCtn }, r);
+              return n.createElement("div", { className: q().ProgressCtn }, r);
             },
             [y, _],
           ),
@@ -3324,40 +3325,40 @@
                     {
                       autoFocus: !0,
                       focusable: !0,
-                      className: W().DiscoveryQueueCarouselCtn,
+                      className: q().DiscoveryQueueCarouselCtn,
                       navEntryPreferPosition: c.iU.LAST,
                       onCancelButton: () => l && l(),
                       onCancelActionDescription: (0, L.we)("#Button_Close"),
                     },
                     n.createElement(
                       "div",
-                      { ref: te, className: W().DiscoveryQueueWrapper },
+                      { ref: te, className: q().DiscoveryQueueWrapper },
                       n.createElement(
                         o.Z,
                         {
                           "flow-children": "row",
-                          className: W().TopBarCtn,
+                          className: q().TopBarCtn,
                           style: { width: `${S}px` },
                         },
                         n.createElement(
                           o.Z,
-                          { className: W().LearnMore },
+                          { className: q().LearnMore },
                           (0, L.oW)(
                             "#DiscoveryQueue_LearnMore_Default",
                             n.createElement(s.Ii, {
-                              className: W().LearnMoreLink,
+                              className: q().LearnMoreLink,
                               href: (0, $._)(h.TS.STORE_BASE_URL + "explore"),
                             }),
                           ),
                         ),
                         n.createElement(
                           o.Z,
-                          { className: W().ControlsCtn },
+                          { className: q().ControlsCtn },
                           n.createElement(
                             o.Z,
                             {
                               focusable: !0,
-                              className: W().QueueButton,
+                              className: q().QueueButton,
                               onClick: l,
                               onActivate: () => l && l(),
                             },
@@ -3370,7 +3371,7 @@
                         { "flow-children": "row" },
                         n.createElement(
                           "div",
-                          { className: W().DiscoveryQueueName },
+                          { className: q().DiscoveryQueueName },
                           Be,
                         ),
                       ),
@@ -3379,9 +3380,9 @@
                         {
                           onClick: (e) => Q.current.MoveLeft(e),
                           className: (0, k.A)(
-                            W().QueueNavArrow,
-                            W().LeftArrow,
-                            D && W().Enable,
+                            q().QueueNavArrow,
+                            q().LeftArrow,
+                            D && q().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 180 }),
@@ -3391,7 +3392,7 @@
                         null,
                         n.createElement(R, {
                           name: B,
-                          className: W().DiscoveryQueueCarousel,
+                          className: q().DiscoveryQueueCarousel,
                           ref: Q,
                           fnDoesItemTakeFocus: Se,
                           fnOnFocusedColumnChange: ve,
@@ -3417,9 +3418,9 @@
                         {
                           onClick: (e) => Q.current.MoveRight(e),
                           className: (0, k.A)(
-                            W().QueueNavArrow,
-                            W().RightArrow,
-                            T && W().Enable,
+                            q().QueueNavArrow,
+                            q().RightArrow,
+                            T && q().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 0 }),
@@ -3493,9 +3494,9 @@
           {
             style: f,
             className: (0, k.A)(
-              W().SummaryCtn,
-              W().DiscoveryQueueApp,
-              c && W().Focused,
+              q().SummaryCtn,
+              q().DiscoveryQueueApp,
+              c && q().Focused,
             ),
             onOptionsActionDescription: (0, L.we)(
               "#DiscoveryQueue_ViewWishlist",
@@ -3513,56 +3514,56 @@
           },
           n.createElement(
             "div",
-            { className: W().SummaryContentCtn },
+            { className: q().SummaryContentCtn },
             n.createElement(
               "div",
-              { className: W().SummaryTitle },
+              { className: q().SummaryTitle },
               (0, L.we)("#DiscoveryQueue_SummaryTitle"),
             ),
             n.createElement(
               "div",
-              { className: W().YourStats },
+              { className: q().YourStats },
               (0, L.we)("#DiscoveryQueue_YourStats"),
             ),
             n.createElement(
               o.Z,
-              { "flow-children": "row", className: W().SummaryGrid },
+              { "flow-children": "row", className: q().SummaryGrid },
               n.createElement(
                 "div",
-                { className: W().GridItem },
+                { className: q().GridItem },
                 n.createElement(
                   "div",
-                  { className: W().GridTitle },
+                  { className: q().GridTitle },
                   (0, L.we)("#DiscoveryQueue_ViewedCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridNumber },
+                  { className: q().GridNumber },
                   g.toLocaleString(),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridSubTitle },
+                  { className: q().GridSubTitle },
                   (0, L.we)("#DiscoveryQueue_Titles"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: W().GridItem },
+                { className: q().GridItem },
                 n.createElement(
                   "div",
-                  { className: W().GridTitle },
+                  { className: q().GridTitle },
                   (0, L.we)("#DiscoveryQueue_WishlistedCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridNumber },
+                  { className: q().GridNumber },
                   v.toLocaleString(),
                 ),
                 n.createElement(
                   "a",
                   {
-                    className: (0, k.A)(W().GridSubTitle, W().TextLink),
+                    className: (0, k.A)(q().GridSubTitle, q().TextLink),
                     href: (0, $._)(h.TS.STORE_BASE_URL + "wishlist", E),
                   },
                   (0, L.we)("#DiscoveryQueue_ViewWishlist"),
@@ -3570,21 +3571,21 @@
               ),
               n.createElement(
                 "div",
-                { className: W().GridItem },
+                { className: q().GridItem },
                 n.createElement(
                   "div",
-                  { className: W().GridTitle },
+                  { className: q().GridTitle },
                   (0, L.we)("#DiscoveryQueue_IgnoredCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridNumber },
+                  { className: q().GridNumber },
                   C.toLocaleString(),
                 ),
                 n.createElement(
                   "a",
                   {
-                    className: (0, k.A)(W().GridSubTitle, W().TextLink),
+                    className: (0, k.A)(q().GridSubTitle, q().TextLink),
                     href: (0, $._)(
                       h.TS.STORE_BASE_URL + "account/notinterested",
                       E,
@@ -3597,11 +3598,11 @@
             !b &&
               n.createElement(
                 o.Z,
-                { className: W().SummaryActionButtonsCtn },
+                { className: q().SummaryActionButtonsCtn },
                 n.createElement(
                   o.Z,
                   {
-                    className: (0, k.A)(W().QueueButton, W().Wide),
+                    className: (0, k.A)(q().QueueButton, q().Wide),
                     onClick: s,
                   },
                   (0, L.we)("#ActionButtonLabelDone"),
@@ -3611,10 +3612,10 @@
                     o.Z,
                     {
                       className: (0, k.A)(
-                        I && W().Disabled,
-                        W().QueueButton,
-                        W().Primary,
-                        W().Wide,
+                        I && q().Disabled,
+                        q().QueueButton,
+                        q().Primary,
+                        q().Wide,
                       ),
                       onClick: R,
                     },
@@ -3651,24 +3652,24 @@
         return s
           ? n.createElement(
               o.Z,
-              { className: W().TradingCardCtn },
+              { className: q().TradingCardCtn },
               n.createElement("img", {
-                className: W().TradingCardImage,
+                className: q().TradingCardImage,
                 src:
                   h.TS.MEDIA_CDN_URL +
                   "store/promo/summer2022/card_stack.png?v-1",
               }),
               n.createElement(
                 o.Z,
-                { className: W().TradingCardColumn },
+                { className: q().TradingCardColumn },
                 n.createElement(
                   "div",
-                  { className: W().TradingCardText },
+                  { className: q().TradingCardText },
                   (0, L.oW)(
                     r?.earned_today > 0
                       ? "#DiscoveryQueue_TradingCardsEarned_Today"
                       : "#DiscoveryQueue_TradingCards_Desc",
-                    n.createElement("a", { className: W().TextLink, href: l }),
+                    n.createElement("a", { className: q().TextLink, href: l }),
                   ),
                 ),
               ),
