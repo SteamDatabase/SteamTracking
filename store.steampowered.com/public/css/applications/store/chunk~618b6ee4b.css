@@ -6324,6 +6324,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 ._3bosSfx_R7a3a8ZJTdKrum ._8JfsVa2qql_sG4yZvL31M {
   width: 100%;
+  height: 220px;
   transform: translateX(-20px);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.6);
   filter: brightness(1);
@@ -6336,6 +6337,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   }
   ._3bosSfx_R7a3a8ZJTdKrum ._8JfsVa2qql_sG4yZvL31M {
     transform: translateX(0px);
+    height: unset;
   }
 }
 .lMrsI5xmwppD0FDpEvhae {

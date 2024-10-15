@@ -20520,6 +20520,7 @@
                 }),
               ),
               n.createElement(ri, {
+                key: t,
                 appID: t,
                 preferDemoStorePage: e.bPreferDemoStorePage,
                 introVideo: i,
