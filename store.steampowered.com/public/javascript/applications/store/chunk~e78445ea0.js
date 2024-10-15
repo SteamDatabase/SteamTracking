@@ -693,13 +693,24 @@
               (A.current.volume = (Q ?? e) * (C ?? 1)),
                 (A.current.muted = null == Q || Q <= 0 || Z);
             }
-          }, [Q, C, Z]),
-          n.useEffect(() => {
-            let e = !1;
-            N && r && x && (e = 0 === H || (1 === H && !K) || (2 === H && !J)),
-              U(e),
-              I?.(G && e);
-          }, [I, H, J, K, r, N, G, x]),
+          }, [Q, C, Z]);
+        const ee = t?.GetMicroTrailer();
+        let te = null;
+        t?.GetAllTrailers().GetHighlightTrailers().length > 0
+          ? (te = t.GetAllTrailers().GetHighlightTrailers()[0])
+          : t?.GetAllTrailers().GetOtherTrailers().length > 0 &&
+            (te = t.GetAllTrailers().GetOtherTrailers()[0]);
+        const re = !!ee || !!te;
+        n.useEffect(() => {
+          let e = !1;
+          N &&
+            r &&
+            x &&
+            re &&
+            (e = 0 === H || (1 === H && !K) || (2 === H && !J)),
+            U(e),
+            I?.(G && e);
+        }, [I, H, J, K, r, N, G, x, re]),
           S(T, X),
           S(A, $),
           n.useEffect(() => {
@@ -713,15 +724,15 @@
           n.useEffect(() => {
             A.current && (A.current.onended = B);
           }, [B, A]);
-        let ee = n.useRef(!1);
+        let ne = n.useRef(!1);
         n.useEffect(() => {
           if (N && r && 0 === H)
             if ((z(!0), L))
               if (A.current) {
                 f.Debug("Starting microtrailer"), V(1);
                 const e = () => {
-                  ee.current ||
-                    ((ee.current = !0),
+                  ne.current ||
+                    ((ne.current = !0),
                     f.Debug("Starting main trailer"),
                     V(2),
                     Y(!1),
@@ -766,34 +777,30 @@
             });
             return () => e();
           }, [R]);
-        const te = t?.GetMicroTrailer(),
-          re = t?.GetAllTrailers().BHasTrailers()
-            ? t.GetAllTrailers().GetHighlightTrailers()[0]
-            : null,
-          ne = () => {
-            0 == H
-              ? O(!0)
-              : 1 == H && T.current
-                ? T.current.paused
-                  ? T.current.play()
-                  : T.current.pause()
-                : 2 == H && A.current
-                  ? A.current.paused
-                    ? A.current.play()
-                    : A.current.pause()
-                  : 2 == H && R && R.TogglePlayPause();
-          };
+        const ie = () => {
+          0 == H
+            ? O(!0)
+            : 1 == H && T.current
+              ? T.current.paused
+                ? T.current.play()
+                : T.current.pause()
+              : 2 == H && A.current
+                ? A.current.paused
+                  ? A.current.play()
+                  : A.current.pause()
+                : 2 == H && R && R.TogglePlayPause();
+        };
         if (!t || !t.BIsVisible()) return null;
-        const ie = { [e.autoplayCheckboxPosition || "top"]: 0 };
-        let se = null;
-        se =
+        const se = { [e.autoplayCheckboxPosition || "top"]: 0 };
+        let ae = null;
+        ae =
           2 == H
             ? a().PlayFullTrailer
             : 1 == H
               ? a().PlayMicrotrailer
               : a().NoTrailer;
-        const ae = (E ?? !0) && !B,
-          oe =
+        const oe = (E ?? !0) && !B,
+          le =
             v && t.BHasAgeSafeScreenshots()
               ? t.GetOnlyAllAgesSafeScreenshots()[0]
               : t.GetAssets().GetMainCapsuleURL();
@@ -803,10 +810,10 @@
           n.createElement("img", {
             ref: M,
             className: (0, m.A)(a().AppMainCap, 0 != H && a().Hidden),
-            src: oe,
-            onClick: ne,
+            src: le,
+            onClick: ie,
           }),
-          (t.GetAllTrailers().BHasTrailers() || s) &&
+          (te || s) &&
             n.createElement(
               n.Fragment,
               null,
@@ -824,7 +831,7 @@
                     checked: G,
                     key: t.GetAppID(),
                     className: a().AutoplayCheckbox,
-                    style: ie,
+                    style: se,
                     label: (0, c.we)("#StoreTrailer_AutoPlayVideos"),
                     onChange: (e) => {
                       (0, l.lc)(b ?? y, String(!e), 3650), F(e), O(e);
@@ -835,36 +842,36 @@
                 !W &&
                 n.createElement(
                   i.Z,
-                  { focusable: !0, onClick: ne, className: a().PlayButton },
+                  { focusable: !0, onClick: ie, className: a().PlayButton },
                   n.createElement(o.IOc, null),
                 ),
-              te &&
+              ee &&
                 n.createElement(
                   "video",
                   {
-                    className: (0, m.A)(a().AppVideo, se, a().Microtrailer),
+                    className: (0, m.A)(a().AppVideo, ae, a().Microtrailer),
                     ref: T,
                     preload: "auto",
                     playsInline: !0,
                     muted: !0,
-                    onClick: ne,
+                    onClick: ie,
                   },
                   n.createElement("source", {
-                    src: te.strWebMURL,
+                    src: ee.strWebMURL,
                     type: "video/webm",
                   }),
                   Boolean(!p.TS.IN_CLIENT) &&
                     n.createElement("source", {
-                      src: te.strMP4URL,
+                      src: ee.strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
-              re &&
+              te &&
                 !s &&
                 n.createElement(
                   "video",
                   {
-                    className: (0, m.A)(a().AppVideo, se, a().Trailer),
+                    className: (0, m.A)(a().AppVideo, ae, a().Trailer),
                     ref: A,
                     onVolumeChange: (e) => {
                       if (C && C < 1) return;
@@ -877,26 +884,26 @@
                     muted: !(Q > 0),
                     preload: "auto",
                     playsInline: !0,
-                    loop: ae,
+                    loop: oe,
                     controls: !0,
                   },
                   n.createElement("source", {
-                    src: re.GetTrailer480p().strWebMURL,
+                    src: te.GetTrailer480p().strWebMURL,
                     type: "video/webm",
                   }),
                   Boolean(!p.TS.IN_CLIENT) &&
                     n.createElement("source", {
-                      src: re.GetTrailer480p().strMP4URL,
+                      src: te.GetTrailer480p().strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
               s &&
                 n.createElement(_.default, {
-                  classes: (0, m.A)(a().AppVideo, se, a().Trailer),
+                  classes: (0, m.A)(a().AppVideo, ae, a().Trailer),
                   nAppIDVOD: t.GetAppID(),
                   watchLocation: 15,
                   fnOnVideoEnd: B,
-                  fnVideoClick: ne,
+                  fnVideoClick: ie,
                   fnSetBroadcastVideo: D,
                   bStartWithSubtitles: !0,
                 }),
