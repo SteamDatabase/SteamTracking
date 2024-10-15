@@ -1526,6 +1526,7 @@ $tIContent-Length
 16CStructNetPacket
 16CVideoFileStream
 16IKeyValuesSystem
+17:42:57
 17CAudioFileDecoder
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -1620,7 +1621,6 @@ $tIContent-Length
 20IHTTPRedirectHandler
 20IUniformRandomStream
 20VideoAdaptationSet_t
-21:16:57
 21CHTTPClientConnection
 21CHTTPClientWorkThread
 21COpenSSLCachedSession
@@ -1883,7 +1883,7 @@ $tIContent-Length
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
 ?HAI\t81\t9dcG'
-?[export] Failed to add video packet to muxer: %s
+?[export] Failed to parse recording manifest: %s
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?accept error
 ?jOb
@@ -4957,6 +4957,7 @@ KxPSK
 KxRSA
 KxRSA_PSK
 KxSRP
+L0Yn
 L8-\rHO
 L?CTCPHost::BPostSocketAccept
 LABEL_OPTIONAL
@@ -5643,7 +5644,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 11 2024
+Oct 15 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -7827,11 +7828,13 @@ Zong
 [export] Completed for file (%ums): %s
 [export] Could not init segmented reader for track %d
 [export] Could not load init segment for track %d
+[export] Dropped %u frames
 [export] Encoder not initialized
 [export] Failed add output audio stream
 [export] Failed add output video stream
 [export] Failed to add audio packet to muxer: %s
 [export] Failed to add frame to filter graph
+[export] Failed to add video packet to muxer: %s
 [export] Failed to build convert plan
 [export] Failed to get initial encoder codec params
 [export] Failed to init audio demuxer: %s
@@ -7844,7 +7847,6 @@ Zong
 [export] Failed to initialize filter graph
 [export] Failed to make initial encoder
 [export] Failed to open muxer: %s
-[export] Failed to parse recording manifest: %s
 [export] Failed to process recording: %s %s
 [export] Failed to read frame from encoder
 [export] Failed to read frame from filter graph

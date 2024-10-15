@@ -1025,6 +1025,7 @@ $d`D-laM
 /data/src/common/crypto_rsa_openssl.cpp
 /data/src/common/crypto_textencode.cpp
 /data/src/common/cumulativetimer.h
+/data/src/common/environmentmanager.cpp
 /data/src/common/framefunction.cpp
 /data/src/common/interfacemap_service.h
 /data/src/common/ipcserver.cpp
@@ -1211,6 +1212,7 @@ $d`D-laM
 16CMsgKeyValuePair
 16CServiceRegistry
 16IKeyValuesSystem
+17:42:57
 17CCrossProcessPipe
 17CDebugStatsSystem
 17IDebugStatsSystem
@@ -1268,7 +1270,6 @@ $d`D-laM
 20IClientModuleManager
 20IClientSecureDesktop
 20IUniformRandomStream
-21:16:57
 21CUtlCStringConversion
 21CWorkItemFunctionCall
 21CWorkThreadPoolSignal
@@ -1933,6 +1934,7 @@ BN_rshift
 BN_to_felem
 BN_usub
 BOOL ABSENT
+BREAKPAD_DUMP_LOCATION
 BRouteWorkItemCompleted called for a job that could not be found!\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
@@ -2446,6 +2448,16 @@ CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPackageReservationStatus
 CPipeWaiter::BRemove(%d) -- not present
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv invalid index %d\n
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRL Sign
 CRL has expired
@@ -2936,9 +2948,11 @@ EINPROGRESS
 EINTR
 EINVAL
 EISCONN
+ELegacyEnvironmentVariable
 EMPTY
 EMsg
 EMsgClanAccountFlags
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENCRYPTED
 ENCRYPTED PRIVATE KEY
 ENGINE lib
@@ -3599,6 +3613,7 @@ MinghuaQuS
 MinghuaQuw
 Minimum
 Mismatched thread handle during thread Start()
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 Missing field: FileDescriptorProto.name.
 Missing name.
 MkL\f
@@ -3949,7 +3964,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 11 2024
+Oct 15 2024
 October
 On-disk registry has changed and is marked dirty - we're about to lose data.
 Once
@@ -4399,6 +4414,7 @@ SCT_set1_signature
 SCT_set_log_entry_type
 SCT_set_signature_nid
 SCT_set_version
+SDL_GAMECONTROLLERCONFIG
 SDL_GetError
 SDL_SetThreadPriority
 SECG curve over a 112 bit prime field
@@ -4566,6 +4582,7 @@ SSL_write_early_data
 SSL_write_ex
 SSLv2
 SSLv3
+STEAM_BASE_FOLDER
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -4729,6 +4746,7 @@ SteamService_GetIPCServer
 SteamService_Shutdown
 SteamService_StartThread
 SteamService_Stop
+SteamUser
 Steamworks_IPCRecv
 Steamworks_IPCRecv: %s::%s
 Stop spewing for %s::%s, too many calls\n
@@ -5320,6 +5338,7 @@ X9_62_FIELDID
 X9_62_PENTANOMIAL
 X9cm
 XG[r
+XNx1
 XRJ2
 XhHp
 Y77n
@@ -5579,6 +5598,7 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+_STEAM_SETENV_MANAGER
 _Sat 
 _TbF~
 ___tls_get_addr

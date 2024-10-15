@@ -55,7 +55,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123x 7
+ !"#$%&'()*+,-./0123H
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -5934,6 +5934,7 @@ ${LANGUAGE}
 /data/src/common/cumulativetimer.h
 /data/src/common/enum_names.cpp
 /data/src/common/environmenthelpers.cpp
+/data/src/common/environmentmanager.cpp
 /data/src/common/filechooserdialog.cpp
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/framefunction.cpp
@@ -12695,6 +12696,7 @@ BN_usub
 BOOL ABSENT
 BPM Offline controller registration %s, %s, using account %u\n
 BParseISO8601Duration
+BREAKPAD_DUMP_LOCATION
 BRefreshApplicationsInLibrary
 BRefreshApplicationsInLibrary 1: %ums\n
 BRemoveDirectory Yielding IO Job
@@ -14732,6 +14734,16 @@ CPrepareConfigWorker failed for AppID %u
 CPrepareRemotePlayConfigWorker failed for AppID %u
 CPrepopulatePrecompiledCacheAPIJob
 CPrivacySettings
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv invalid index %d\n
 CProcessShaderCacheJob
 CProcessWorkItem
 CProcessWorkItem: thread is exiting, terminate %s\n
@@ -15667,7 +15679,7 @@ ChangePassphrase
 Changing adapter [old=%llu][new=%llu]\n
 Changing record audio process: stopped
 Changing record audio processes. Associated window: %p. pids:
-Changing record window: %p
+Changing record window: %p (%llu)
 Char=
 Chargedback
 Charger required
@@ -16826,6 +16838,7 @@ EKeyEscrowUsage
 ELaunchAppTask
 ELaunchOptionType
 ELauncherType
+ELegacyEnvironmentVariable
 ELibraryAssetType
 ELoginState
 ELogonState
@@ -16839,6 +16852,7 @@ EMsg
 EMsg %d registered multiple times.
 EMsgClanAccountFlags
 EMsg_IsValid( pOldMsgInfo->eMsg )
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENCRYPTED
 ENCRYPTED PRIVATE KEY
 ENGINE lib
@@ -19016,6 +19030,7 @@ Initialized CSystemDockManagerController: %d
 Initialized CSystemPerfController: %d
 Initialized CSystemReportController
 Initialized SSL context with certificate %s\n
+Initializing bluetooth manager: stub
 InitiateAssociation
 Initiating LogOn
 Initiating LogOn via state machine transition
@@ -21698,7 +21713,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 11 2024 21:17:59
+Oct 15 2024 17:45:46
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -23704,6 +23719,7 @@ STEAMOS_STEAM_REBOOT_SENTINEL
 STEAMOS_STEAM_SHUTDOWN_SENTINEL
 STEAM_ALLOW_DRIVE_ADOPT
 STEAM_ALLOW_DRIVE_UNMOUNT
+STEAM_BASE_FOLDER
 STEAM_CLIENT_LOG_FOLDER
 STEAM_ENABLE_CEC
 STEAM_ENABLE_STATUS_LED_BRIGHTNESS
@@ -24766,6 +24782,7 @@ SteamUI_ValveSurvey_Summary_VideoVendorID_Unknown
 SteamUI_ValveSurvey_Summary_XServerVendorName
 SteamUI_ValveSurvey_Summary_XServerVendorRelease
 SteamUI_ValveSurvey_Summary_XWindowManagerName
+SteamUser
 SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
 SteamVProf::CVProfManager::CleanupUnusedProfiles()
 SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
@@ -26422,6 +26439,7 @@ WatchVideo
 Wb8e{ ;
 Wcr"
 We didn't think %d was a connected controller?
+We don't know about process %u for window %llu
 We thought %d was already a connected controller?
 We we first discover the protobuf class used for a particular EMsg, log it
 WeChat
@@ -28972,6 +28990,7 @@ _NET_WM_DESKTOP
 _NET_WM_ICON
 _NET_WM_NAME
 _NET_WM_PID
+_STEAM_SETENV_MANAGER
 _Sat 
 _SpewMessageType
 _TbF~

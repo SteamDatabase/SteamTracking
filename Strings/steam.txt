@@ -35,7 +35,7 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123~8
+ !"#$%&'()*+,-./0123^@
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -1304,6 +1304,7 @@ $d`D-laM
 /data/src/common/crypto_textencode.cpp
 /data/src/common/cumulativetimer.h
 /data/src/common/enum_names.cpp
+/data/src/common/environmentmanager.cpp
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/framefunction.cpp
 /data/src/common/gid.cpp
@@ -1319,6 +1320,7 @@ $d`D-laM
 /data/src/common/jpegloader_common.cpp
 /data/src/common/keypair.cpp
 /data/src/common/keyvaluesignature.cpp
+/data/src/common/linux_setenvwrapper.h
 /data/src/common/logger.cpp
 /data/src/common/metrics/metrics.cpp
 /data/src/common/msg.cpp
@@ -1685,6 +1687,8 @@ $d`D-laM
 172.16
 172.16.3.31
 172.16.3.39
+17:42:57
+17:44:07
 17CBootstrapLogFile
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -1771,8 +1775,6 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:16:57
-21:17:23
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2608,7 +2610,7 @@ B-233
 B-283
 B-409
 B-571
-B21:17:22
+B17:44:06
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -2821,6 +2823,7 @@ BOOL ABSENT
 BParseDownloadHostsFile - 'Hosts' signature check failed in '%s'
 BParseDownloadHostsFile - missing 'Hosts' section from '%s'
 BParseDownloadHostsFile - missing 'Hosts/Realms' section from '%s'
+BREAKPAD_DUMP_LOCATION
 BRepairInstalledFiles: ignoring bootstrap file %s\n
 BRepairInstalledFiles: renaming stale file %s -> %s\n
 BResolveHostString - unexpected DNS lookup flag '%d'\n
@@ -4694,6 +4697,11 @@ CPathString::~CPathString()
 CPendingMsg::InitForSend(CUDPConnection*, EUDPPktType, unsigned char*, int, unsigned int)
 CPendingMsg::SendPkt
 CPendingMsg::SendPkt(unsigned int)
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::~CProcessEnvironmentManager()
 CProtoBufMsgBase::_SetupArenaAllocator()
 CProtoBufNetPacket::BExcludeClientSession(int) const
 CProtoBufNetPacket::BHasMsgTraceTag() const
@@ -6709,6 +6717,7 @@ EMsg
 EMsg %d registered multiple times.
 EMsgClanAccountFlags
 EMsg_IsValid( pOldMsgInfo->eMsg )
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENCRYPTED
 ENCRYPTED PRIVATE KEY
 ENGINE lib
@@ -6718,6 +6727,10 @@ EOSType
 EProtoClanEventType
 ERROR
 ERROR: selector [%d] invalid\n
+ERROR: unsafe call to clearenv count:%d
+ERROR: unsafe call to putenv count:%d var:'%s'
+ERROR: unsafe call to setenv count:%d var:'%s'\n
+ERROR: unsafe call to unsetenv count:%d var:'%s'\n
 ERR_add_error_vdata
 ERR_error_string
 ERR_get_error_line
@@ -8802,7 +8815,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 11 2024
+Oct 15 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -9768,6 +9781,7 @@ SCT_set_signature_nid
 SCT_set_version
 SCT_validate
 SCT_validation_status_string
+SDL_GAMECONTROLLERCONFIG
 SDL_GetError
 SDL_SetThreadPriority
 SECG curve over a 112 bit prime field
@@ -10281,6 +10295,7 @@ SSLv3/TLS write next proto
 SSLv3/TLS write server done
 SSLv3/TLS write server hello
 SSLv3/TLS write session ticket
+STEAM_BASE_FOLDER
 STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
 STEAM_CLIENT_CONFIG_FILE
@@ -10513,7 +10528,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct 11 2024 21:17:22
+Startup - updater built Oct 15 2024 17:44:06
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -10529,6 +10544,7 @@ Steam.cfg
 Steam/Press Master
 Steam2 Migration Complete
 Steam2010 CD-Key
+Steam3Master
 SteamBootstrapper_GetBaseUserDir
 SteamBootstrapper_GetBaseUserDir: %p\n
 SteamBootstrapper_GetEUniverse
@@ -10610,6 +10626,7 @@ SteamThreadTools::g_pCurThread
 SteamThreadTools::g_tlsThreadFileIOBlocked
 SteamUniverse
 SteamUpdater
+SteamUser
 SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
 SteamVProf::CVProfManager::~CVProfManager()
 SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
@@ -12348,6 +12365,7 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+_STEAM_SETENV_MANAGER
 _Sat 
 _SpewMessageTypeSourceV
 _TbF~
@@ -13569,6 +13587,7 @@ clamp_range_slot
 clanid
 cleanup method function failed
 clearance
+clearenv
 cleartext track 2
 client finished
 client-update.steamstatic.com
@@ -21907,6 +21926,7 @@ purchase
 pure virtual method called\n
 push response HEADERS: max concurrent streams exceeded
 push response HEADERS: stream_id == 0
+putenv
 putwc
 putwc@GLIBC_2.2
 pvCallback != NULL
@@ -22235,6 +22255,10 @@ s_bInFatalAssert
 s_dev_urandom_fd >= 0
 s_pSymbolTable
 s_pTable
+s_real_clearenv
+s_real_putenv
+s_real_setenv
+s_real_unsetenv
 safeContentsBag
 salt length check failed
 salt length recovery failed
@@ -24318,6 +24342,7 @@ unrecognized equation type
 unrecognized signature nid
 unregistered scheme
 unsafe legacy renegotiation disabled
+unsetenv
 unsigned
 unsigned __int128
 unsigned char

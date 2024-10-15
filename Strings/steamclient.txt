@@ -99,7 +99,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123`
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -6682,6 +6681,7 @@ $tICAPIJobListHashLoadSave
 /data/src/common/depotbuildbase.cpp
 /data/src/common/enum_names.cpp
 /data/src/common/environmenthelpers.cpp
+/data/src/common/environmentmanager.cpp
 /data/src/common/filetransfer.cpp
 /data/src/common/framefunction.cpp
 /data/src/common/friendsuihelpers.cpp
@@ -18982,6 +18982,16 @@ CPrepopulatePrecompiledCacheAPIJob
 CPrivacySettings
 CProcessChunkWorkItem
 CProcessChunkWorkItem::ThreadProcess
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv invalid index %d\n
 CProcessP2PFailureFromSteamBackend
 CProcessP2PSignalFromSteamBackend
 CProcessP2PSignalFromSteamBackend::OnConnectRequest
@@ -21700,6 +21710,7 @@ ELaunchOptionType
 ELaunchSource
 ELauncherType
 ELeaderboardSortMethod
+ELegacyEnvironmentVariable
 ELegacyKeyRegistrationMethod
 ELicenseFlags
 ELogonState
@@ -23290,8 +23301,8 @@ GameNotificationsClient
 GameNotificationsClient.OnNotificationsRequested#1
 GameNotificationsClient.OnUserStatusChanged#1
 GameOverlay: chdir failed, errno %d\n
-GameOverlay: failed to execute process '%s': %d\n
-GameOverlay: started '%s' (pid %d) for game process %d\n
+GameOverlay: failed to execute process '%s': (%s)\n
+GameOverlay: started '%s' (pid %d) for game process %d
 GameOverlayRender_PIDStream
 GameOverlay_BlockOculusSDK
 GameRecording
@@ -29888,6 +29899,7 @@ SDL_ConvertSurface
 SDL_CreateWindow
 SDL_DestroySurface
 SDL_DestroyWindow
+SDL_GAMECONTROLLERCONFIG
 SDL_GAMECONTROLLER_ALLOW_STEAM_VIRTUAL_GAMEPAD
 SDL_GAMECONTROLLER_IGNORE_DEVICES
 SDL_GAMECONTROLLER_USE_BUTTON_LABELS
@@ -37318,6 +37330,7 @@ _NET_SUPPORTING_WM_CHECK
 _NET_WM_CURRENT_DESKTOP
 _NET_WM_DESKTOP
 _NET_WM_PID
+_STEAM_SETENV_MANAGER
 _Sat 
 _SetBasicServerData
 _SpewMessageType
@@ -41404,8 +41417,6 @@ execl
 execl@GLIBC_2.0
 execv
 execv@GLIBC_2.0
-execvp
-execvp@GLIBC_2.0
 execvpe
 execvpe@GLIBC_2.11
 exepath
@@ -52805,6 +52816,7 @@ setct-PInitResData
 setct-PResData
 setct-RegFormReqTBE
 setct-RegFormResTBS
+setenv
 setext-cv
 setext-genCrypt
 setext-miAuth
@@ -53394,7 +53406,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct 11 2024 21:17:51
+steam Oct 15 2024 17:46:50
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

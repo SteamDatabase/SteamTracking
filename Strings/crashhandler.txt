@@ -84,6 +84,7 @@
 .note.gnu.build-id
 .text
 /bin/steamerrorreporter
+/data/src/common/environmentmanager.cpp
 /data/src/crashhandler/breakpad_linux.cpp
 /data/src/public/tier0/memblockhdr.h
 /data/src/public/tier0/vprof.h
@@ -116,11 +117,11 @@
 13ICrashHandler
 16CBreakpadFactory
 16IBreakpadFactory
+17:42:57
 18CUtlCharConversion
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
-21:16:57
 21CUtlCStringConversion
 9IMemAlloc
 <empty>
@@ -153,6 +154,16 @@ CFileReader::BOpenFile
 CFileReader::Read
 CH\f1
 CPathString
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv invalid index %d\n
 CUtlString::SetValue
 CUtlString::VFormat
 CValidator : too many memory nodes to store, try again with a higher threshold value\n
@@ -165,6 +176,8 @@ DONT_BREAK_ON_ASSERT
 December
 Deleting thread object from the thread, this is bad
 DumpMemTrackingStats %d %d \n
+ELegacyEnvironmentVariable
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ERROR TRYING TO vfork() TO SEND MINIDUMP\nRESORTING TO IN-PROCESS MINIDUMP\n
 ERROR: Could not run steamerrorreporter binary. Uploading minidump in-process\n
 ERROR: execv failed when trying to send minidump\n
@@ -215,6 +228,7 @@ Lowered '%s' -> '%s'\n
 MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
 March
 Matched '%s' -> '%s'\n
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 Monday
 N(knN
 N10__cxxabiv115__forced_unwindE
@@ -242,7 +256,7 @@ No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_
 No tracked allocs currently in use. Total %d\n
 November
 OUT OF MEMORY
-Oct 11 2024
+Oct 15 2024
 October
 PKDd
 PKDe
@@ -256,6 +270,8 @@ Platform
 ProductName
 Public
 Root
+SDL_GAMECONTROLLERCONFIG
+STEAM_BASE_FOLDER
 Saturday
 SendCrashReport
 SendExistingMinidump
@@ -342,8 +358,10 @@ Stack:%2d    %s (%d): %s\n
 StartupTime
 Steam
 Steam Helper
+Steam3Master
 SteamRealPath
 SteamUniverse
+SteamUser
 Sunday
 TLS init function for 
 TLS wrapper function for 
@@ -358,6 +376,7 @@ UTF-8
 Unable to write failure log\n
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unknown
 Unknown universe %d, assuming public\n
 Unmatched %s\n
 Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
@@ -384,6 +403,7 @@ _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_STEAM_SETENV_MANAGER
 _Sat 
 ___tls_get_addr
 ___tls_get_addr@GLIBC_2.3
@@ -807,6 +827,7 @@ non-transaction clone for
 non-virtual thunk to 
 not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
 nsection > 0
+num > 0
 open64@GLIBC_2.2
 opendir@GLIBC_2.0
 operator

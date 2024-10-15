@@ -1,4 +1,4 @@
-var CLSTAMP = "9251263";
+var CLSTAMP = "9256111";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8875,9 +8875,9 @@ var CLSTAMP = "9251263";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 11 2024 : 12:53:19",
-                BUILD_TIME_UTC: "Oct 11 2024 : 19:53:19",
-                BUILD_RTIME_UTC: 1728676399,
+                BUILD_TIME_LOCAL: "Oct 14 2024 : 14:56:58",
+                BUILD_TIME_UTC: "Oct 14 2024 : 21:56:58",
+                BUILD_RTIME_UTC: 1728943018,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -49277,13 +49277,20 @@ var CLSTAMP = "9251263";
           o = r(38215);
         r(42318);
         function l(e) {
-          const t = n.useRef(a);
-          let r = e.children;
-          return e.debug, n.createElement(i.Ht, { client: t.current }, r);
+          const { steamUI: t } = e,
+            r = n.useRef(a);
+          n.useEffect(() => {
+            a.setDefaultOptions({
+              queries: {
+                staleTime: 1 / 0,
+                networkMode: t ? "offlineFirst" : null,
+              },
+            });
+          }, [t]);
+          let o = e.children;
+          return e.debug, n.createElement(i.Ht, { client: r.current }, o);
         }
-        const a = new o.E({
-          defaultOptions: { queries: { staleTime: 1 / 0 } },
-        });
+        const a = new o.E({});
       },
       7076: (e, t, r) => {
         "use strict";
@@ -50680,9 +50687,9 @@ var CLSTAMP = "9251263";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 11 2024 : 12:53:19",
-                    BUILD_TIME_UTC: "Oct 11 2024 : 19:53:19",
-                    BUILD_RTIME_UTC: 1728676399,
+                    BUILD_TIME_LOCAL: "Oct 14 2024 : 14:56:58",
+                    BUILD_TIME_UTC: "Oct 14 2024 : 21:56:58",
+                    BUILD_RTIME_UTC: 1728943018,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -50946,7 +50953,7 @@ var CLSTAMP = "9251263";
                 ))),
             n.createElement(
               M.s,
-              { debug: !0 },
+              { debug: !0, steamUI: !0 },
               n.createElement(Z, { cm: t }, r),
             )
           );
@@ -51369,7 +51376,7 @@ var CLSTAMP = "9251263";
         9418: "ec3bc195e6fb03ad9657",
         9462: "89227ab1a3d278d803ec",
         9711: "03f1a491862bacf7ffc2",
-        9858: "e49ccb7b77d624c7141b",
+        9858: "39dde6ac7521aaafe330",
         9869: "d6449de9c84a3462471d",
         9887: "8d621a0f10f1e1a00f64",
       }[e]),
