@@ -10438,7 +10438,7 @@
                     value: 1,
                   });
                   break;
-                case "gratuitous nudity or sexual content":
+                case "gratuitous/frequent nudity or sexual content":
                   e.rgSubexpressions.push({
                     type: u.EE.k_EStoreFilterClauseTypeContentDescriptor,
                     value: 4,
