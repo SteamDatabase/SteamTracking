@@ -62061,20 +62061,27 @@
           } = e,
           o = (0, m.useMemo)(() => [t], [t]),
           c = (0, l.PZ)(104, o),
-          d = (0, m.useMemo)(() => {
+          d = (e, t) => 1e3 * (e.rtWeekStart + t.rtStartModifier),
+          u = (0, m.useMemo)(() => {
             const e = r.Qo.get(t),
-              a = c?.get(t)?.map((t) => {
-                let a = e.nMaxSlots - t.rgPlans?.length;
-                a < 0 && (a = 0);
-                const n = new Date(1e3 * (t.rtWeekStart + e.rtStartModifier));
-                return (
-                  n.setHours(10),
-                  {
-                    label: e.fnRenderWeekDisplayForSelection(t.rtWeekStart, a),
-                    data: Math.floor(n.getTime() / 1e3),
-                  }
-                );
-              });
+              a = c
+                ?.get(t)
+                ?.filter((t) => d(t, e) > Date.now())
+                .map((t) => {
+                  let a = e.nMaxSlots - t.rgPlans?.length;
+                  a < 0 && (a = 0);
+                  const n = new Date(d(t, e));
+                  return (
+                    n.setHours(10),
+                    {
+                      label: e.fnRenderWeekDisplayForSelection(
+                        t.rtWeekStart,
+                        a,
+                      ),
+                      data: Math.floor(n.getTime() / 1e3),
+                    }
+                  );
+                });
             return a;
           }, [c, t]);
         return (
@@ -62095,7 +62102,7 @@
             m.createElement(p.JU, null, "Choose a week:"),
             m.createElement(p.m, {
               strDropDownClassName: h().DropDownScroll,
-              rgOptions: d,
+              rgOptions: u,
               selectedOption: a,
               onChange: (e) => {
                 const a = r.Qo.get(t);

@@ -7208,7 +7208,7 @@
     },
     25572: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => ui });
+      a.d(t, { H: () => di });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -13077,6 +13077,18 @@
           }
           return [];
         }
+        static GetItemsSortedByWishlistRecommendation(e, t, a) {
+          const n = new Map(t.map((e, t) => [e, t])),
+            r = e.filter((e) => null == n.get(e.id)),
+            s = e.filter((e) => null != n.get(e.id));
+          return (
+            s.sort((e, t) => n.get(e.id) - n.get(t.id)),
+            r.length > 0 &&
+              (0 === (a ?? 0) || a - s.length > 0) &&
+              (0, Pa.fW)(r, 0 === (a ?? 0) ? 0 : a - s.length),
+            [...s, ...r]
+          );
+        }
         static s_globalSingletonStore;
         static Get() {
           return (
@@ -13114,15 +13126,8 @@
         RandomizeCapsules(e, t, a) {
           const n = (e, t) => {
             if (!a || 0 == a.length) return void (0, Pa.fW)(e, t);
-            const n = new Map(a.map((e, t) => [e, t])),
-              r = e.filter((e) => null == n.get(e.id)),
-              s = e.filter((e) => null != n.get(e.id));
-            s.sort((e, t) => n.get(e.id) - n.get(t.id)),
-              r.length > 0 &&
-                (0 === (t ?? 0) || t - s.length > 0) &&
-                (0, Pa.fW)(r, 0 === (t ?? 0) ? 0 : t - s.length);
-            const o = [...s, ...r];
-            e.splice(0, e.length, ...o);
+            const n = fn.GetItemsSortedByWishlistRecommendation(e, a, t);
+            e.splice(0, e.length, ...n);
           };
           if (0 === this.m_nMaxTiers || 0 === this.m_rgCapsuleMap.size)
             return void n(e, 0);
@@ -13647,34 +13652,46 @@
         return e ? t.filter((t) => e.ShouldShowOnTab(t)) : t;
       }
       var On = a(72963);
-      function xn(e, t, a, n = null, r = null) {
-        const s = n?.GetQuery(),
-          o = r ? JSON.stringify(r) : null,
-          i = e.use_random_order ? 1e4 : Math.floor(1.1 * t);
+      function xn(e, t, a, n, r = null, s = null) {
+        const o = r?.GetQuery(),
+          i = s ? JSON.stringify(s) : null,
+          l = t.use_random_order ? 1e4 : Math.floor(1.1 * a);
         return {
-          queryKey: ["GetDynamicCapsulesForSection", i, v.TS.COUNTRY, a, s, o],
+          queryKey: ["GetDynamicCapsulesForSection", l, v.TS.COUNTRY, n, o, i],
           queryFn: async () => {
-            const t = await C().get(
+            const a = await C().get(
               v.TS.STORE_BASE_URL + "actions/ajaxgetdynamicsaleitems",
               {
                 params: {
-                  max_results: i,
+                  max_results: l,
                   cc: v.TS.COUNTRY,
-                  tagids_featured: a,
-                  facet_filter: s,
-                  pre_filter: o,
+                  tagids_featured: n,
+                  facet_filter: o,
+                  pre_filter: i,
                 },
               },
             );
-            let n = t.data.rgCapsules;
-            return (
-              e.use_random_order &&
-                ((n = t.data.rgCapsules.slice()),
-                (0, Pa.fW)(n, e.random_order_top_x)),
-              { ...t.data, rgCapsules: n }
-            );
+            let r = a.data.rgCapsules;
+            if (t.use_random_order)
+              if ((0, me.O8)(e.jsondata.item_order_override)) {
+                const a = await fn
+                  .Get()
+                  .LoadWishlistRecommendations(
+                    e.jsondata.item_order_override.nProjectID,
+                    e.jsondata.item_order_override.nPublishedVersion,
+                    e.jsondata.item_order_override.sAccessToken,
+                  );
+                r = fn.GetItemsSortedByWishlistRecommendation(
+                  r,
+                  a,
+                  t.random_order_top_x,
+                );
+              } else
+                (r = a.data.rgCapsules.slice()),
+                  (0, Pa.fW)(r, t.random_order_top_x);
+            return { ...a.data, rgCapsules: r };
           },
-          enabled: e.enable_faceted_browsing,
+          enabled: t.enable_faceted_browsing,
           staleTime: 36e5,
         };
       }
@@ -14239,7 +14256,7 @@
               o.SetSolrMatchCount(s.nMatchCount));
         } else if (t.enable_faceted_browsing) {
           const a = await On.L.fetchQuery(
-            xn(t, C, e.featured_app_tagid, o, n?.GetTab()?.store_filter),
+            xn(e, t, C, e.featured_app_tagid, o, n?.GetTab()?.store_filter),
           );
           (f = a.rgCapsules),
             (y = a.bMoreResultsRemaining),
@@ -20206,9 +20223,10 @@
         );
       }
       var Xo = a(30600),
-        Zo = a(36064);
-      const Jo = new zn.wd("TrailerAppVideo"),
-        ei = {
+        Zo = a(36064),
+        Jo = a(62093);
+      const ei = new zn.wd("TrailerAppVideo"),
+        ti = {
           include_assets: !0,
           include_trailers: !0,
           include_basic_info: !0,
@@ -20216,9 +20234,9 @@
           include_release: !0,
           include_platforms: !0,
         },
-        ti = "trailercarousel",
-        ai = "trailercarousel_seen_intro_video";
-      function ni(e) {
+        ai = "trailercarousel",
+        ni = "trailercarousel_seen_intro_video";
+      function ri(e) {
         const {
             event: t,
             appVisibilityTracker: a,
@@ -20237,12 +20255,12 @@
             Number(r.trailer_carousel_intro_video_appid)
               ? Number(r.trailer_carousel_intro_video_appid)
               : void 0;
-        (0, o.t7)(b, ei);
+        (0, o.t7)(b, ti);
         const E = n.useMemo(
             () => (b > 0 ? [{ type: "game", id: b }] : []),
             [b],
           ),
-          C = ((I = b), n.useMemo(() => ci().includes(I), [I]));
+          C = ((I = b), n.useMemo(() => mi().includes(I), [I]));
         var I;
         const [A, D] = n.useState(b && C ? 1 : 0),
           [G, T] = n.useState(!0),
@@ -20274,7 +20292,7 @@
               })(e, t, "trailercarousel"),
               h = n.useMemo(() => new Map(), []),
               S = n.useMemo(() => new Map(), []);
-            mi(g, h), mi(g, S);
+            ui(g, h), ui(g, S);
             const f = n.useRef();
             n.useEffect(() => {
               if (t.enable_faceted_browsing) return;
@@ -20311,7 +20329,7 @@
                     g,
                   ),
                   v = S.filter((e) => w.A.Get().GetApp(e.id)?.BHasTrailers());
-                Jo.Debug(
+                ei.Debug(
                   v.length != S.length
                     ? `Loaded ${v.length} items, ${S.length - v.length} items filtered out`
                     : `Loaded ${v.length} items`,
@@ -20337,7 +20355,7 @@
             ]);
             const y = Rn.OQ(c, 0, d.length - 1),
               b = d[y]?.id;
-            Jo.Debug("Displaying appid", b),
+            ei.Debug("Displaying appid", b),
               n.useEffect(() => {
                 b &&
                   !m.find((e) => e.id == b) &&
@@ -20351,7 +20369,7 @@
             const [E, C] = n.useState();
             if (
               (n.useEffect(() => {
-                Jo.IsDebugEnabled() &&
+                ei.IsDebugEnabled() &&
                   fn
                     .Get()
                     .LoadWishlistRecommendations(
@@ -20361,7 +20379,7 @@
                     )
                     .then((e) => C(e));
               }, [e]),
-              Jo.IsDebugEnabled())
+              ei.IsDebugEnabled())
             ) {
               const e = Array.from(
                 { length: Math.min(d.length, 10) },
@@ -20378,7 +20396,7 @@
               )
                 .filter((e) => !!e)
                 .join(", ");
-              Jo.Debug(
+              ei.Debug(
                 `useLoadItems: index ${y}, count ${d.length}, items: ${e}`,
               );
             }
@@ -20388,9 +20406,9 @@
           P = n.useCallback(
             (e) => {
               if (B) {
-                const e = ci();
+                const e = mi();
                 e.includes(k) ||
-                  (e.push(k), localStorage.setItem(ai, JSON.stringify(e)));
+                  (e.push(k), localStorage.setItem(ni, JSON.stringify(e)));
               }
               const t = (((A + (e ? 1 : -1)) % L.length) + L.length) % L.length;
               D(t), T(!1);
@@ -20415,7 +20433,7 @@
               style: (0, c.V)(r, t, S),
             },
             n.createElement(q.jR, { section: r, event: t, language: _ }),
-            n.createElement(ri, {
+            n.createElement(si, {
               appID: k,
               autoAdvanceMsec: r.trailer_carousel_auto_advance_msec,
               bPreferDemoStorePage: r.prefer_demo_store_page,
@@ -20428,7 +20446,7 @@
           ),
         );
       }
-      function ri(e) {
+      function si(e) {
         const {
             appID: t,
             autoAdvanceMsec: a,
@@ -20442,24 +20460,29 @@
           [u, d] = n.useState(!1),
           [_, p] = n.useState(!1),
           [h, S] = n.useState(!1),
-          [v] = (0, o.t7)(t, ei),
+          [v] = (0, o.t7)(t, ti),
           y = (0, qo.R7)(),
           b = y?.ownerWindow || window,
-          E = oi(v, r),
+          E = ii(v, r),
           { bIsIgnored: C, fnUpdateIgnored: w } = (0, Wo.TK)(t),
-          { bIsWishlisted: I, fnUpdateWishlist: A } = (0, Wo.u4)(t, ti),
+          { bIsWishlisted: I, fnUpdateWishlist: A } = (0, Wo.u4)(t, ai),
           [G, T] = n.useState(0),
           [k, L] = n.useState(),
-          B = n.useRef();
+          B = n.useRef(),
+          P = (0, j.ru)(ai),
+          N = (0, Jo.b)();
         n.useEffect(() => {
-          void 0 !== B.current &&
-            B.current !== t &&
-            ((B.current = void 0), T(0));
-        }, [t]);
+          t && N.AddImpression(t, P);
+        }, [t, N, P]),
+          n.useEffect(() => {
+            void 0 !== B.current &&
+              B.current !== t &&
+              ((B.current = void 0), T(0));
+          }, [t]);
         const {
-            bTabHidden: P,
-            bOffscreen: N,
-            refIntersection: F,
+            bTabHidden: F,
+            bOffscreen: R,
+            refIntersection: M,
           } = (function () {
             const [e, t] = n.useState(!1),
               [a, r] = n.useState(!1);
@@ -20475,8 +20498,8 @@
               i = (0, Xo.BL)(s, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: i };
           })(),
-          R = n.useCallback(async () => {
-            if (P || N) return void S(!0);
+          O = n.useCallback(async () => {
+            if (F || R) return void S(!0);
             (B.current = t), T(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
@@ -20492,22 +20515,22 @@
                 T(2),
                 await new Promise((e) => setTimeout(e, 500))),
               T(0);
-          }, [t, P, N, s]);
+          }, [t, F, R, s]);
         n.useEffect(() => {
-          P || N || !h || (S(!1), R());
-        }, [h, P, N, R]);
-        const M = !i;
-        let O;
+          F || R || !h || (S(!1), O());
+        }, [h, F, R, O]);
+        const x = !i;
+        let H;
         if (
           (_
-            ? (O = 4)
+            ? (H = 4)
             : u
-              ? (O = 3)
+              ? (H = 3)
               : 0 != G
-                ? (O = 0)
-                : P
-                  ? (O = 1)
-                  : N && (O = 2),
+                ? (H = 0)
+                : F
+                  ? (H = 1)
+                  : R && (H = 2),
           !v)
         )
           return n.createElement(
@@ -20518,13 +20541,13 @@
               is_trailercarousel: !0,
             }),
           );
-        const x = m || (1 != O && 2 != O);
+        const U = m || (1 != H && 2 != H);
         return n.createElement(
           $.Z,
           {
             focusable: !0,
             className: (0, f.A)(Oo().TrailerCarouselApp),
-            ref: F,
+            ref: M,
             onOptionsActionDescription: I
               ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
               : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
@@ -20568,23 +20591,23 @@
               n.createElement(
                 "div",
                 { className: Oo().VideoArea },
-                n.createElement(li, { appID: t }),
+                n.createElement(ci, { appID: t }),
                 n.createElement(Wo.y3, {
                   appID: t,
-                  focused: x,
-                  snrCode: ti,
+                  focused: U,
+                  snrCode: ai,
                   skipMicroTrailer: i,
                   playWithBroadcastPlayer: i,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                   showScreenshotInsteadOfMainCap: !i,
                   fadeRatio: k,
                   fnPlayPause: p,
-                  fnComplete: R,
+                  fnComplete: O,
                   loopVideo: !1,
                   defaultVolume: 0,
                 }),
               ),
-              n.createElement(si, {
+              n.createElement(oi, {
                 key: t,
                 appID: t,
                 preferDemoStorePage: e.bPreferDemoStorePage,
@@ -20602,22 +20625,22 @@
               ),
           ),
           n.createElement($o, {
-            className: (0, f.A)(Oo().AutoAdvanceRow, M && Oo().Enabled),
-            enabled: M,
+            className: (0, f.A)(Oo().AutoAdvanceRow, x && Oo().Enabled),
+            enabled: x,
             currentItemKey: t,
             autoAdvanceMsec: a,
-            fnAdvance: R,
-            pauseReason: O,
+            fnAdvance: O,
+            pauseReason: H,
             checkboxVisible: u,
           }),
         );
       }
-      function si(e) {
+      function oi(e) {
         const { appID: t, preferDemoStorePage: a, introVideo: r } = e,
-          [s] = (0, o.t7)(t, ei),
+          [s] = (0, o.t7)(t, ti),
           { bIsIgnored: i, fnUpdateIgnored: l } = (0, Wo.TK)(t),
-          { bIsWishlisted: c, fnUpdateWishlist: m } = (0, Wo.u4)(t, ti),
-          u = oi(s, a),
+          { bIsWishlisted: c, fnUpdateWishlist: m } = (0, Wo.u4)(t, ai),
+          u = ii(s, a),
           d = (0, v.Qn)(),
           _ = (0, ge.LG)(s?.GetTagIDs());
         if (!s) return;
@@ -20647,7 +20670,7 @@
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(ii, { rgTagNames: _ }),
+                n.createElement(li, { rgTagNames: _ }),
               ),
             n.createElement(
               "div",
@@ -20719,11 +20742,11 @@
             ),
         );
       }
-      function oi(e, t) {
+      function ii(e, t) {
         const a = (0, j.n9)();
         return e ? (0, zo._)(e.GetStorePageURL(t), a) : void 0;
       }
-      function ii(e) {
+      function li(e) {
         const { rgTagNames: t } = e,
           a = (0, Wo.W3)(t);
         return n.createElement(
@@ -20738,7 +20761,7 @@
           ),
         );
       }
-      function li(e) {
+      function ci(e) {
         const { appID: t } = e,
           a = (0, v.Qn)(),
           { bIsIgnored: r, fnUpdateIgnored: s } = (0, Wo.TK)(t);
@@ -20775,14 +20798,14 @@
           ),
         );
       }
-      function ci() {
+      function mi() {
         try {
-          return JSON.parse(localStorage.getItem(ai)) ?? [];
+          return JSON.parse(localStorage.getItem(ni)) ?? [];
         } catch (e) {
           return [];
         }
       }
-      function mi(e, t) {
+      function ui(e, t) {
         n.useEffect(() => {
           let a;
           try {
@@ -20795,7 +20818,7 @@
             });
         }, [t, e]);
       }
-      function ui(e) {
+      function di(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           o = (0, v.Qn)();
         switch (a.section_type) {
@@ -20981,7 +21004,7 @@
           case "discoveryqueue":
             return n.createElement(ga.kv, { ...e });
           case "trailercarousel":
-            return n.createElement(ni, { ...e });
+            return n.createElement(ri, { ...e });
           case "badge_progress":
             return n.createElement(ha, { ...e });
           case "rewards":
