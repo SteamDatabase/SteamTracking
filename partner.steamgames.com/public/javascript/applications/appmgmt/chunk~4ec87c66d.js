@@ -59941,7 +59941,7 @@
             c.createElement(
               "a",
               {
-                href: `${We.TS.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=0&count=50${i}`,
+                href: `${We.TS.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=1&count=50${i}`,
                 className: (0, F.A)(
                   C().Button,
                   R().Button,

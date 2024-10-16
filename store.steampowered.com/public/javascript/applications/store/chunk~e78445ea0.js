@@ -694,7 +694,7 @@
               (R.current.volume = (j ?? e) * (C ?? 1)),
                 (R.current.muted = null == j || j <= 0 || Y);
             }
-          }, [j, C, Y]);
+          }, [j, C, Y, T]);
         const te = t?.GetMicroTrailer();
         let re = null;
         t?.GetAllTrailers().GetHighlightTrailers().length > 0
