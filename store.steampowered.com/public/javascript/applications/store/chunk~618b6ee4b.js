@@ -6771,7 +6771,7 @@
                   );
                 }
                 const n = c.Z.Get().GetTagNameForSaleSection(e, t);
-                if (!n) {
+                if (!n && 2 == a) {
                   const { nSectionIndex: a, nNumSections: n } = w(e, t);
                   return (0, S.we)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
@@ -20539,6 +20539,7 @@
                   fnPlayPause: p,
                   fnComplete: R,
                   loopVideo: !1,
+                  defaultVolume: 0,
                 }),
               ),
               n.createElement(si, {
