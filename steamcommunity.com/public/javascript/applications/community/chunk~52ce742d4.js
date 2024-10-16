@@ -87,8 +87,8 @@
       (0, o.Cg)([c.oI], p.prototype, "BindCanvasRef", null),
         (0, o.Cg)([c.oI], p.prototype, "updateCanvas", null);
       var h = s(68451),
-        v = s(16569),
-        S = s(63741),
+        S = s(16569),
+        v = s(63741),
         g = s(52038);
       class C extends a.Component {
         render() {
@@ -102,10 +102,10 @@
           } = this.props;
           const r = { ...(t || {}), transitionDuration: s / 1e3 + "s" };
           return a.createElement(
-            v.A,
+            S.A,
             { ...i, className: (0, g.A)("crossfade", o) },
             a.createElement(
-              S.A,
+              v.A,
               {
                 classNames: "crossfade-anim",
                 timeout: s || 500,
@@ -792,7 +792,7 @@
                   { className: o, onClick: this.ToggleMute },
                   a.createElement(f.fSs, null),
                 ),
-                a.createElement(z, { video: e, onDrag: this.OnChildDrag }),
+                a.createElement(W, { video: e, onDrag: this.OnChildDrag }),
               ),
             )
           );
@@ -804,7 +804,7 @@
         (0, o.Cg)([c.oI], U.prototype, "OnMouseLeave", null),
         (0, o.Cg)([c.oI], U.prototype, "OnChildDrag", null),
         (U = (0, o.Cg)([i.PA], U));
-      let z = class extends a.Component {
+      let W = class extends a.Component {
         constructor(e) {
           super(e),
             (this.m_elSlider = null),
@@ -880,12 +880,12 @@
           );
         }
       };
-      (0, o.Cg)([c.oI], z.prototype, "OnMouseDown", null),
-        (0, o.Cg)([c.oI], z.prototype, "OnMouseMove", null),
-        (0, o.Cg)([c.oI], z.prototype, "OnMouseUp", null),
-        (0, o.Cg)([n.XI], z.prototype, "SetVolumeWithCoord", null),
-        (z = (0, o.Cg)([i.PA], z));
-      var W = s(15759);
+      (0, o.Cg)([c.oI], W.prototype, "OnMouseDown", null),
+        (0, o.Cg)([c.oI], W.prototype, "OnMouseMove", null),
+        (0, o.Cg)([c.oI], W.prototype, "OnMouseUp", null),
+        (0, o.Cg)([n.XI], W.prototype, "SetVolumeWithCoord", null),
+        (W = (0, o.Cg)([i.PA], W));
+      var z = s(15759);
       const J = 15;
       let X = class extends a.Component {
         constructor(e) {
@@ -1014,6 +1014,7 @@
                     o.SetOnVideoCallback(this.props.fnOnVideoEnd)),
             o &&
               (this.props.bStartMuted && o.SetMute(!0),
+              this.props.bStartWithSubtitles && o.SetStartWithSubtitles(!0),
               this.props.bStartPaused
                 ? o.StopPlaybackTillUserInput()
                 : o.Play()),
@@ -1194,7 +1195,7 @@
             );
           const u = i && !this.BHideVideoControls(),
             h = i && !this.state.bFullscreen,
-            v =
+            S =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
           return a.createElement(
@@ -1208,7 +1209,7 @@
               onContextMenu: this.OnContextMenu,
               onMouseDown: this.OnMouseDown,
             },
-            v && a.createElement("div", { className: V().BroadcastContext }, v),
+            S && a.createElement("div", { className: V().BroadcastContext }, S),
             n && a.createElement(A, null),
             this.props.showVideoBackgroundBlur &&
               a.createElement(p, {
@@ -1705,10 +1706,10 @@
             ? ((p.left = i), (m.width = i), (c.width = r), (u.width = l))
             : ((p.left = r), (c.width = r), (u.width = l));
           let h = (0, T.ap)(e.GetPlaybackTime()),
-            v = (0, T.ap)(this.state.nHoverValue),
-            S = "STV_timelineContainer";
-          this.state.bGrabberMouseDown && (S += " grabberDown"),
-            e.IsTimelineMapActive() && (S += " minimapActive");
+            S = (0, T.ap)(this.state.nHoverValue),
+            v = "STV_timelineContainer";
+          this.state.bGrabberMouseDown && (v += " grabberDown"),
+            e.IsTimelineMapActive() && (v += " minimapActive");
           let g = "";
           (s = t ? s : o),
             s > 100
@@ -1780,7 +1781,7 @@
             },
             a.createElement(
               "div",
-              { className: S },
+              { className: v },
               a.createElement("div", { className: "DialogLabel" }, h),
               a.createElement(
                 "div",
@@ -1843,7 +1844,7 @@
                             className: "STV_timelineGrabberValue",
                             style: { position: "absolute", bottom: "4px" },
                           },
-                          v,
+                          S,
                         ),
                       ),
                     ),
@@ -2096,7 +2097,7 @@
               { className: "LinkOverlayValidRegion" },
               !this.props.editMode && this.props.linkRegions
                 ? this.props.linkRegions.map((e) => {
-                    const t = (0, W.p)(e.url);
+                    const t = (0, z.p)(e.url);
                     return a.createElement(
                       D.uU,
                       {

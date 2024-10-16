@@ -9688,12 +9688,14 @@
           })(e),
           [s, l] = (0, r.useState)(
             n?.all_time_unlocked_achievements > 0 &&
+              i?.length > 0 &&
               i?.length <= n?.all_time_unlocked_achievements,
           );
         return (
           (0, r.useEffect)(() => {
             l(
               n?.all_time_unlocked_achievements > 0 &&
+                i?.length > 0 &&
                 i?.length <= n?.all_time_unlocked_achievements,
             );
           }, [i?.length, n?.all_time_unlocked_achievements]),

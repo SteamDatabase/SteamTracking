@@ -1478,7 +1478,6 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   background: none;
   color: #6b7072;
   cursor: default;
-  pointer-events: none;
 }
 .contextmenu_contextMenuItem_1n7Wl.disabled:hover {
   background: none;
@@ -1619,7 +1618,6 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   background: none;
   color: #67707b;
   cursor: default;
-  pointer-events: none;
 }
 .DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled:hover,
 .contextmenu_ForceDesktop_3qIuY
@@ -1652,10 +1650,16 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .tooltip_TextToolTip_2FxbH {
   box-sizing: border-box;
   font-size: 13px;
-  background-color: #696773;
+  background: radial-gradient(
+    62.67% 62.67% at 62.67% 100%,
+    #cfd1d3 0%,
+    #b3b8bc 100%
+  );
   border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  color: #17181c;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 5px 8px;
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
@@ -2535,9 +2539,22 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
   padding: 10px 15px;
   cursor: pointer;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-align: left;
+  align-items: stretch;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
 }
-.dropdown_DialogDropDownMenu_Item_2oAiZ:hover {
+.dropdown_DialogDropDownMenu_Item_2oAiZ:focus {
   background: #3e444d;
+  outline: none;
 }
 .dropdown_DialogDropDownMenu_30wJO._DialogInputContainer {
   background: #373c44;
@@ -11603,14 +11620,14 @@ h3.eventbbcodeparser_Header3_3s7cU {
 }
 div.eventbbcodeparser_Header1_SPYFj,
 h1.eventbbcodeparser_Header1_SPYFj {
-  font-size: 32px;
-  line-height: 33px;
+  font-size: clamp(15px, 5.5vw, 32px);
+  line-height: clamp(17px, 6vw, 35px);
   font-weight: 500;
 }
 div.eventbbcodeparser_Header2_QuKtT,
 h2.eventbbcodeparser_Header2_QuKtT {
-  font-size: 26px;
-  line-height: 29px;
+  font-size: clamp(12px, 4.5vw, 26px);
+  line-height: clamp(15px, 5vw, 29px);
   font-weight: 400;
 }
 div.eventbbcodeparser_Header3_3s7cU,
@@ -38538,6 +38555,14 @@ button.TextButton.gpfocus {
 .DialogDropDown {
   cursor: pointer;
   position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  align-items: stretch;
 }
 .DialogDropDown.Disabled {
   cursor: initial;

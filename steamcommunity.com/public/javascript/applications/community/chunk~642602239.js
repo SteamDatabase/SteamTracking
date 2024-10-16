@@ -1993,11 +1993,11 @@
           ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
         ]);
       function B(e, t, n = 0) {
-        if (null == e ? void 0 : e.startsWith(w.l)) return (0, d.v6)(e);
-        if (null == e ? void 0 : e.startsWith(w.e)) {
+        if (null == e ? void 0 : e.startsWith(w.lw)) return (0, d.v6)(e);
+        if (null == e ? void 0 : e.startsWith(w.eg)) {
           const r = new Array(),
             i = (0, d.mJ)(),
-            o = e.substring(w.e.length + 1),
+            o = e.substring(w.eg.length + 1),
             s = u.i6.GetHashFromHashAndExt(o),
             l = u.i6.GetExtensionStringFromHashAndExt(o);
           if (null != t) {

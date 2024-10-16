@@ -738,10 +738,16 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 ._2FxbHJzYoH024ko7zqcJOf {
   box-sizing: border-box;
   font-size: 13px;
-  background-color: #696773;
+  background: radial-gradient(
+    62.67% 62.67% at 62.67% 100%,
+    #cfd1d3 0%,
+    #b3b8bc 100%
+  );
   border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  color: #17181c;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 5px 8px;
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
@@ -2017,7 +2023,6 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   background: none;
   color: #6b7072;
   cursor: default;
-  pointer-events: none;
 }
 ._1n7Wloe5jZ6fSuvV18NNWI.disabled:hover {
   background: none;
@@ -2153,7 +2158,6 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   background: none;
   color: #67707b;
   cursor: default;
-  pointer-events: none;
 }
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI.disabled:hover,
 ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI.disabled:hover {
@@ -2318,9 +2322,22 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 ._2oAiZidGyUxL-hfupFDQ2m {
   padding: 10px 15px;
   cursor: pointer;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-align: left;
+  align-items: stretch;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
 }
-._2oAiZidGyUxL-hfupFDQ2m:hover {
+._2oAiZidGyUxL-hfupFDQ2m:focus {
   background: #3e444d;
+  outline: none;
 }
 ._30wJO3MC4x-I1OWpy1TAeE._DialogInputContainer {
   background: #373c44;
@@ -6068,6 +6085,14 @@ button.TextButton.gpfocus {
 .DialogDropDown {
   cursor: pointer;
   position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  align-items: stretch;
 }
 .DialogDropDown.Disabled {
   cursor: initial;

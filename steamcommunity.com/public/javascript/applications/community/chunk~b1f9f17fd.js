@@ -157,6 +157,7 @@
         wrapper: "_2OTbbpWShFqRXL9ucMB054",
         EventEditorInputPaneContainer: "_2hDSKJoiJlxhrTNtGbwfG8",
         EventEditorTitleInput: "ZAOXnBPqM-Jpp-1EVcR39",
+        MainTitle: "pr-SNhBIp0a0Q9WVTlyWy",
         Subtitle: "_32XZf0gEFw0CwBBwiLjlEv",
         EventEditorInputMaxLength: "_2B38_HWGPTXYxD_fE3vqoP",
         CharactorRemaining: "_153Coy14bJipvA4mvVz0-N",
@@ -1027,15 +1028,16 @@
         "capsule-trans-in": "o8beu_D_8Dbk3xP9TxaiF",
         AppDetailsHeader: "lMrsI5xmwppD0FDpEvhae",
         AppName: "_1mW-U_MsASmVMPP02-3StV",
+        AppDescriptionCtn: "pWPZMFCv8qyGFFjiRJ_3B",
         AppDescription: "GX4vW7Oj1QEzRUDi6wOnO",
         AppActionButtonsCtn: "_3Fbv05BMyyoEG6zimEgcem",
         AppActionJustButtonsCtn: "_3Q_tm9SkDIAKcbDOTExZnn",
         QueueButton: "_3tZYNXnqaO3px3k5QRFOz-",
+        Active: "_1Ko2NGwrR-X4TIRVExBYr0",
         ButtonsRowWrap: "_1B3sMJ5v2o-sCS9CV-6kA3",
         Disabled: "_1iv01Tc8SCeolVfQ-rJIEP",
         YGlyph: "_2shRa-83wgkVmFYGCFxPqS",
         IgnoredCtn: "_35dIjkoAvyCcMivVLT6iJh",
-        Active: "_1Ko2NGwrR-X4TIRVExBYr0",
         IgnoredInfo: "_29i7NMvanEiOccWoicZNCi",
         IgnoredTitle: "_3Wfn-WAO5W8X0bxRpDTDqB",
         IgnoredDescription: "_3r48XyEJehiotQEXgQeZPI",
@@ -44179,7 +44181,7 @@
         v = a(18654),
         S = a.n(v),
         E = a(24421),
-        y = a(57465),
+        y = a(37346),
         b = a(54492),
         f = a(47235),
         w = a(98556),
@@ -45288,7 +45290,7 @@
     },
     44186: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => Ms });
+      a.d(t, { H: () => Ns });
       var n = a(90626),
         i = a(57876),
         r = a(55963),
@@ -45312,7 +45314,7 @@
         w = a.n(f),
         C = a(13952),
         T = a(62792),
-        I = a(57465),
+        I = a(37346),
         D = a(61859);
       function B(e) {
         return "dev" === E.TS.WEB_UNIVERSE
@@ -52825,25 +52827,36 @@
               ((this.m_nDefaultTier = this.m_nMaxTiers), this.m_nMaxTiers++);
           }
         }
-        RandomizeCapsules(e, t) {
-          var a;
+        RandomizeCapsules(e, t, a) {
+          var n;
+          const i = (e, t) => {
+            if (!a || 0 == a.length) return void (0, un.fW)(e, t);
+            const n = new Map(a.map((e, t) => [e, t]));
+            e.sort((e, t) => {
+              var a, i;
+              return (
+                (null !== (a = n.get(e.id)) && void 0 !== a ? a : -1) -
+                (null !== (i = n.get(t.id)) && void 0 !== i ? i : -1)
+              );
+            });
+          };
           if (0 === this.m_nMaxTiers || 0 === this.m_rgCapsuleMap.size)
-            return void (0, un.fW)(e);
-          const n = new Array();
-          for (let e = 0; e < this.m_nMaxTiers; e++) n.push([]);
+            return void i(e, 0);
+          const r = new Array();
+          for (let e = 0; e < this.m_nMaxTiers; e++) r.push([]);
           for (const t of e) {
-            n[
-              null !== (a = this.m_rgCapsuleMap.get(t.id)) && void 0 !== a
-                ? a
+            r[
+              null !== (n = this.m_rgCapsuleMap.get(t.id)) && void 0 !== n
+                ? n
                 : this.m_nDefaultTier
             ].push(t);
           }
           e.length = 0;
-          for (const a of n) (0, un.fW)(a, t), e.push(...a);
+          for (const a of r) i(a, t), e.push(...a);
         }
       }
-      function Xn(e, t, a) {
-        new Kn(e).RandomizeCapsules(t, a);
+      function Xn(e, t, a, n) {
+        new Kn(e).RandomizeCapsules(t, a, n);
       }
       function Zn(e, t, a, n, i, r, o) {
         if (!t.use_random_order || n.length <= 1) return n;
@@ -52897,47 +52910,54 @@
         }
         return l;
       }
-      function $n(e, t, a, n) {
-        var i;
-        if (t.use_random_order && !t.enable_faceted_browsing) {
-          const r = Yn(e, t, a, "section");
-          if (window.sessionStorage) {
-            const a = window.sessionStorage.getItem(r);
-            if (a) {
-              const t = JSON.parse(a);
-              if (t.rtime32_last_modified == e.rtime32_last_modified) return t;
-            }
-            if (!n) {
-              const a = t.use_random_order && t.random_order_top_x;
-              Xn(e, t.capsules, a),
-                (0, un.fW)(t.links, a),
-                (0, un.fW)(
-                  null === (i = t.events) || void 0 === i
-                    ? void 0
-                    : i.filter((e) => Boolean(e)),
-                  a,
-                ),
-                (0, un.fW)(t.featured_curator_list, a),
-                (t.rtime32_last_modified = e.rtime32_last_modified),
-                window.sessionStorage.setItem(r, JSON.stringify(t));
-            }
-          }
+      function $n(e, t, a) {
+        const n = Yn(e, t, a, "section"),
+          i = window.sessionStorage.getItem(n);
+        if (i) {
+          const t = JSON.parse(i);
+          if (t.rtime32_last_modified == e.rtime32_last_modified) return t;
         }
-        return t;
       }
-      function Jn(e, t, a) {
+      async function Jn(e, t, a) {
+        var n;
+        if (
+          !t.use_random_order ||
+          t.enable_faceted_browsing ||
+          !window.sessionStorage
+        )
+          return t;
+        const i = $n(e, t, a);
+        if (i) return i;
+        const r = Yn(e, t, a, "section"),
+          o = t.use_random_order && t.random_order_top_x;
+        return (
+          Xn(e, t.capsules, o, undefined),
+          (0, un.fW)(t.links, o),
+          (0, un.fW)(
+            null === (n = t.events) || void 0 === n
+              ? void 0
+              : n.filter((e) => Boolean(e)),
+            o,
+          ),
+          (0, un.fW)(t.featured_curator_list, o),
+          (t.rtime32_last_modified = e.rtime32_last_modified),
+          window.sessionStorage.setItem(r, JSON.stringify(t)),
+          t
+        );
+      }
+      function ei(e, t, a) {
         if (null == e || null == t) return null;
         let n = e + "_" + t;
         return a && (n += "_" + a), n;
       }
-      class ei {
+      class ti {
         static Get() {
           return (
-            ei.s_Singleton ||
-              ((ei.s_Singleton = new ei()),
+            ti.s_Singleton ||
+              ((ti.s_Singleton = new ti()),
               "dev" == E.TS.WEB_UNIVERSE &&
-                (window.g_EventListSaleStore = ei.s_Singleton)),
-            ei.s_Singleton
+                (window.g_EventListSaleStore = ti.s_Singleton)),
+            ti.s_Singleton
           );
         }
         constructor() {
@@ -52999,7 +53019,7 @@
         }
         async GetRecentEventsForSalesPage(e, t, a) {
           var n, i, r;
-          const o = Jn(
+          const o = ei(
             "recent_events",
             null == t ? void 0 : t.unique_id,
             null == a ? void 0 : a.unique_id,
@@ -53042,7 +53062,7 @@
           return this.m_mapPromises.get(o);
         }
         async GetRecentTaggedEventsForSalesPage(e, t, a) {
-          const n = Jn(
+          const n = ei(
             "recent_tagged_events",
             null == t ? void 0 : t.unique_id,
             null == a ? void 0 : a.unique_id,
@@ -53112,7 +53132,7 @@
           return this.m_rgRecentEvent.get(e);
         }
         GetLiveSaleEvents(e, t, a) {
-          const n = Jn(
+          const n = ei(
             "live_sale_events",
             null == t ? void 0 : t.unique_id,
             null == a ? void 0 : a.unique_id,
@@ -53143,21 +53163,21 @@
           return this.m_mapPromises.get(n);
         }
       }
-      (0, we.Cg)([Te.sH], ei.prototype, "m_rgRecentEvent", void 0),
-        (0, we.Cg)([Te.XI], ei.prototype, "Init", null),
-        (0, we.Cg)([Te.XI], ei.prototype, "AddAllRecentEvents", null);
-      var ti = a(12443),
-        ai = a(99487),
-        ni = a(7716);
-      function ii(e, t, a) {
+      (0, we.Cg)([Te.sH], ti.prototype, "m_rgRecentEvent", void 0),
+        (0, we.Cg)([Te.XI], ti.prototype, "Init", null),
+        (0, we.Cg)([Te.XI], ti.prototype, "AddAllRecentEvents", null);
+      var ai = a(12443),
+        ni = a(99487),
+        ii = a(7716);
+      function ri(e, t, a) {
         if (t.some((t) => t.id == e.appid && "game" == t.type)) return;
         const i = {
           id: e.appid,
           type: "game",
           overrideNavigation: (t) => {
-            (0, ti.tO)(e.appid),
+            (0, ai.tO)(e.appid),
               (0, Da.pg)(
-                n.createElement(ri, {
+                n.createElement(oi, {
                   iDoorIndex: e.payload,
                   datarecord: e.datarecord,
                   bPreviewMode: Boolean(a || e.force_preview_mode),
@@ -53172,7 +53192,7 @@
             ? t.unshift(i)
             : t.splice(Math.floor(Math.random() * t.length), 0, i);
       }
-      function ri(e) {
+      function oi(e) {
         const {
             closeModal: t,
             iDoorIndex: a,
@@ -53210,7 +53230,7 @@
           },
           n.createElement(
             "div",
-            { className: ni.Ctn },
+            { className: ii.Ctn },
             n.createElement(
               "div",
               null,
@@ -53242,7 +53262,7 @@
                           null,
                           n.createElement(
                             "div",
-                            { className: ni.DetailText },
+                            { className: ii.DetailText },
                             (0, D.we)("#Sale_Minigame_FoundIt_Earn"),
                           ),
                           Boolean(
@@ -53250,7 +53270,7 @@
                           ) &&
                             n.createElement(
                               "div",
-                              { className: ni.RewardText },
+                              { className: ii.RewardText },
                               (0, D.we)(d.sale_pg_context_token),
                             ),
                           Boolean(
@@ -53280,7 +53300,7 @@
                             }),
                           n.createElement(
                             "div",
-                            { className: ni.PostText },
+                            { className: ii.PostText },
                             (0, D.we)(
                               a < 10
                                 ? "#Summer2022_hunt_quest_return_clue"
@@ -53293,16 +53313,16 @@
           ),
         );
       }
-      var oi = a(85320),
-        si = a(36141);
-      class li {
+      var si = a(85320),
+        li = a(36141);
+      class ci {
         static Get() {
           return (
-            li.s_SubscriptStore ||
-              ((li.s_SubscriptStore = new li()),
-              li.s_SubscriptStore.Init(),
-              (window.g_SubscriptionStore = li.s_SubscriptStore)),
-            li.s_SubscriptStore
+            ci.s_SubscriptStore ||
+              ((ci.s_SubscriptStore = new ci()),
+              ci.s_SubscriptStore.Init(),
+              (window.g_SubscriptionStore = ci.s_SubscriptStore)),
+            ci.s_SubscriptStore
           );
         }
         constructor() {
@@ -53366,11 +53386,11 @@
           );
         }
       }
-      (0, we.Cg)([Te.sH], li.prototype, "m_mapMasterAppToBenefitApps", void 0);
-      var ci = a(41312),
-        di = a(81393),
-        ui = a(19719);
-      class mi {
+      (0, we.Cg)([Te.sH], ci.prototype, "m_mapMasterAppToBenefitApps", void 0);
+      var di = a(41312),
+        ui = a(81393),
+        mi = a(19719);
+      class _i {
         async LoadWishlistRecommendations() {
           return (
             this.m_promiseLoader ||
@@ -53406,23 +53426,23 @@
         }
         static Get() {
           return (
-            mi.s_globalSingletonStore ||
-              ((mi.s_globalSingletonStore = new mi()),
+            _i.s_globalSingletonStore ||
+              ((_i.s_globalSingletonStore = new _i()),
               "dev" == E.TS.WEB_UNIVERSE &&
-                (window.g_WishlistRecommederStore = mi.s_globalSingletonStore)),
-            mi.s_globalSingletonStore
+                (window.g_WishlistRecommederStore = _i.s_globalSingletonStore)),
+            _i.s_globalSingletonStore
           );
         }
         constructor() {
           (this.m_promiseLoader = null), (0, Te.Gn)(this);
         }
       }
-      function _i(e, t) {
+      function pi(e, t) {
         return e ? t.filter((t) => e.ShouldShowOnTab(t)) : t;
       }
-      (0, we.Cg)([Te.XI], mi.prototype, "LoadWishlistRecommendations", null);
-      var pi = a(72963);
-      function gi(e, t, a, n = null, i = null) {
+      (0, we.Cg)([Te.XI], _i.prototype, "LoadWishlistRecommendations", null);
+      var gi = a(72963);
+      function hi(e, t, a, n = null, i = null) {
         const r = null == n ? void 0 : n.GetQuery(),
           o = i ? JSON.stringify(i) : null,
           s = e.use_random_order ? 1e4 : Math.floor(1.1 * t);
@@ -53453,8 +53473,8 @@
           staleTime: 36e5,
         };
       }
-      async function hi(e, t, a, n, r, o, s, l, c, d = 0, u = void 0, p) {
-        const g = $n(e, t, a);
+      async function vi(e, t, a, n, r, o, s, l, c, d = 0, u = void 0, p) {
+        const g = await Jn(e, t, a);
         if (
           (0, Ae.ye)(g.section_type) &&
           "sale_tabhub" != g.smart_section_type
@@ -53464,7 +53484,7 @@
             nHiddenCapsules: i,
             bCapsuleArrayTruncated: m,
             bAwaitingShowContentLoading: _,
-          } = await vi(e, g, a, n, r, o, s, l, c, d, u, p);
+          } = await Si(e, g, a, n, r, o, s, l, c, d, u, p);
           return {
             rgCapsules: t,
             nHiddenCapsules: i,
@@ -53478,7 +53498,7 @@
             if (t.smart_section) {
               let a = [];
               "recent_events" === t.smart_section_type
-                ? (a = await ei
+                ? (a = await ti
                     .Get()
                     .GetRecentEventsForSalesPage(
                       e,
@@ -53486,7 +53506,7 @@
                       null == n ? void 0 : n.GetTab(),
                     ))
                 : "recent_tagged_events" === t.smart_section_type
-                  ? ((a = await ei
+                  ? ((a = await ti
                       .Get()
                       .GetRecentTaggedEventsForSalesPage(
                         e,
@@ -53535,12 +53555,12 @@
                                     !P.Fm.Get().BIsGameRecommended(e.appid),
                                 );
                               else {
-                                const e = Jn(
+                                const e = ei(
                                     "recent_tagged_events",
                                     a.unique_id,
                                     null == n ? void 0 : n.unique_id,
                                   ),
-                                  t = ei
+                                  t = ti
                                     .Get()
                                     .GetRecentEventsFromConfigJSON(
                                       e,
@@ -53570,7 +53590,7 @@
                         return i;
                       })(e, t, a, null == n ? void 0 : n.GetTab())))
                   : "sale_events_only" === t.smart_section_type
-                    ? (a = await ei
+                    ? (a = await ti
                         .Get()
                         .GetLiveSaleEvents(
                           e,
@@ -53668,20 +53688,28 @@
           return { rgLinks: t };
         }
       }
-      async function vi(e, t, a, n, r, o, s, l, c, d = 0, u, p, g, h, v) {
-        var S;
-        let y;
+      async function Si(e, t, a, n, r, o, s, l, c, d = 0, u, p, g, h, v) {
+        var S, y;
+        let b;
         await P.Fm.Get().HintLoad();
-        let b = !1;
-        const f = Yn(
+        let f = !1;
+        const w = Yn(
             e,
             t,
             a,
             "capsules",
             null == n ? void 0 : n.GetActiveTabUniqueID(),
           ),
-          w = qn(t, d),
-          T = (0, Rn.mT)(t, w, c);
+          T = qn(t, d),
+          I = (0, Rn.mT)(t, T, c),
+          D =
+            null !=
+            (null === (S = e.jsondata.item_order_override) || void 0 === S
+              ? void 0
+              : S.nProjectID)
+              ? await _i.Get().LoadWishlistRecommendations()
+              : void 0,
+          B = (e, t, a) => Xn(e, t, a, D);
         if (t.smart_section) {
           const r = await (async function (e, t, a, n, r, o, s, l, c, d = 0) {
             var u, m, _;
@@ -53695,7 +53723,7 @@
               y = g || 24;
             if ("tag" === p)
               return {
-                capsules: _i(
+                capsules: pi(
                   t,
                   (
                     await re
@@ -53712,7 +53740,7 @@
               };
             if ("category" === p)
               return {
-                capsules: _i(
+                capsules: pi(
                   t,
                   (
                     await re
@@ -53729,7 +53757,7 @@
               };
             if ("top_n" === p)
               return {
-                capsules: _i(t, await re.Get().GetTopN(r, y)).map((e) => ({
+                capsules: pi(t, await re.Get().GetTopN(r, y)).map((e) => ({
                   id: e,
                   type: "game",
                 })),
@@ -53747,7 +53775,7 @@
                     : u.store_filter,
                 );
               return {
-                capsules: _i(t, e.rgAppIDs).map((e) => ({
+                capsules: pi(t, e.rgAppIDs).map((e) => ({
                   id: e,
                   type: "game",
                 })),
@@ -53762,7 +53790,7 @@
               return (
                 n.smart_section_filter_by_deck_compatibility &&
                   (t = t.filter((e) => {
-                    (0, di.w)(
+                    (0, ui.w)(
                       C.A.Get().BHasStoreItem(e, 0, i.Xh),
                       "Missing store item data for deck top 100 section",
                     );
@@ -53779,7 +53807,7 @@
                 {
                   capsules: t.slice(0, y).map((e) => ({ id: e, type: "game" })),
                   bMoreRemaining: !1,
-                  firstCapsule: (0, ui.kf)(e)
+                  firstCapsule: (0, mi.kf)(e)
                     ? { id: parseInt(e), type: "game" }
                     : null,
                 }
@@ -53806,7 +53834,7 @@
                 return (
                   (i = a.BUsesContentHubForItemSource()
                     ? c.appids
-                    : _i(t, c.appids)),
+                    : pi(t, c.appids)),
                   {
                     capsules: i.map((e) => ({ id: e, type: "game" })),
                     bMoreRemaining: c.bHasPossibleMoreResults,
@@ -53850,9 +53878,9 @@
                         bMoreRemaining: !1,
                       };
                     case "wishlist_recommender": {
-                      let e = _i(
+                      let e = pi(
                         t,
-                        (await mi.Get().LoadWishlistRecommendations()).filter(
+                        (await _i.Get().LoadWishlistRecommendations()).filter(
                           (e) => !P.Fm.Get().BOwnsApp(e),
                         ),
                       );
@@ -53883,7 +53911,7 @@
                     r = P.Fm.Get().GetRecommendedGamesInIRPriorityOrder();
                     break;
                   case "wishlist_recommender":
-                    r = await mi.Get().LoadWishlistRecommendations();
+                    r = await _i.Get().LoadWishlistRecommendations();
                     break;
                   default:
                     "dev" == E.TS.WEB_UNIVERSE &&
@@ -53891,7 +53919,7 @@
                         "GetCapsulesForSmartSection unexpected type: " + p,
                       );
                 }
-                const o = _i(t, r);
+                const o = pi(t, r);
                 for (const t of o)
                   if (
                     e.has(t) &&
@@ -53905,7 +53933,7 @@
                 };
               }
               if (E.iA.logged_in && "personalized_carousel" == p) {
-                const e = await ci.Z.Get().GetCapsulesForSaleSection(n, a);
+                const e = await di.Z.Get().GetCapsulesForSaleSection(n, a);
                 if (t && t.BIsTabFilteringEnabled()) {
                   let a =
                     (null === (m = null == e ? void 0 : e.rgCapsules) ||
@@ -53914,7 +53942,7 @@
                       : m.filter((e) => "game" == e.type).map((e) => e.id)) ||
                     [];
                   return (
-                    (a = _i(t, a)),
+                    (a = pi(t, a)),
                     {
                       capsules: a
                         .slice(0, y)
@@ -53947,12 +53975,12 @@
                   r = [];
                 switch (p) {
                   case "wishlist_onsale":
-                    si.D.GetHideWishlist() ||
+                    li.D.GetHideWishlist() ||
                       ((r = await re.Get().GetWishlistOnSale()), (i = "game"));
                     break;
                   case "dlc_onsale":
                     (i = "dlc"),
-                      si.D.GetHideDLC() ||
+                      li.D.GetHideDLC() ||
                         (r = await re.Get().GetDLCForGamesInMyLibraryOnSale());
                     break;
                   case "dlc_music_onsale":
@@ -53963,7 +53991,7 @@
                     break;
                   case "interactive_recommender_onsale":
                     (i = "game"),
-                      si.D.GetHideIRList() ||
+                      li.D.GetHideIRList() ||
                         (r = await re
                           .Get()
                           .GetInteractiveRecommendationsOnSale());
@@ -53985,7 +54013,7 @@
                   case "ir_subscription":
                     i = "game";
                     const o = 402931,
-                      l = li.Get();
+                      l = ci.Get();
                     await l.LoadSubscriptionInfo(o);
                     const c = l.GetAllAppForMaster(o);
                     r = Array.from(c).filter((e) =>
@@ -53995,11 +54023,11 @@
                   case "deck_compatibility":
                     i = "game";
                     const d = n.smart_section_data_source || "library";
-                    await oi.I.Get().LoadCompatabilityAppList(d);
+                    await si.I.Get().LoadCompatabilityAppList(d);
                     const u =
                       "library" == d
-                        ? oi.I.Get().GetUserLibraryCompatList()
-                        : oi.I.Get().GetUserWishlistCompatList();
+                        ? si.I.Get().GetUserLibraryCompatList()
+                        : si.I.Get().GetUserWishlistCompatList();
                     let m = n.smart_section_deck_compatibility;
                     switch (((null != m && null != m) || (m = 3), m)) {
                       case 3:
@@ -54023,7 +54051,7 @@
                     }
                 }
                 return (
-                  (r = _i(t, r)),
+                  (r = pi(t, r)),
                   {
                     capsules: r.slice(0, y).map((e) => ({ id: e, type: i })),
                     bMoreRemaining: !1,
@@ -54036,53 +54064,53 @@
               { capsules: [], bMoreRemaining: !1 }
             );
           })(a, n, e, t, (0, Rn.WG)(s), o, t.prioritize_discounts, u, p);
-          (y = r.capsules),
-            (b = r.bMoreRemaining && y.length < t.smart_section_max_apps),
-            t.enable_faceted_browsing || (y = Zn(e, t, f, y, Xn, g, h)),
+          (b = r.capsules),
+            (f = r.bMoreRemaining && b.length < t.smart_section_max_apps),
+            t.enable_faceted_browsing || (b = Zn(e, t, w, b, B, g, h)),
             r.firstCapsule &&
-              ((y = y.filter((e) => e.id !== r.firstCapsule.id)),
-              y.unshift(r.firstCapsule)),
+              ((b = b.filter((e) => e.id !== r.firstCapsule.id)),
+              b.unshift(r.firstCapsule)),
             t.enable_faceted_browsing &&
               (o.SetFacetCounts(r.facetCounts),
               o.SetSolrMatchCount(r.nMatchCount));
         } else if (t.enable_faceted_browsing) {
-          const a = await pi.L.fetchQuery(
-            gi(
+          const a = await gi.L.fetchQuery(
+            hi(
               t,
-              T,
+              I,
               e.featured_app_tagid,
               o,
-              null === (S = null == n ? void 0 : n.GetTab()) || void 0 === S
+              null === (y = null == n ? void 0 : n.GetTab()) || void 0 === y
                 ? void 0
-                : S.store_filter,
+                : y.store_filter,
             ),
           );
-          (y = a.rgCapsules),
-            (b = a.bMoreResultsRemaining),
+          (b = a.rgCapsules),
+            (f = a.bMoreResultsRemaining),
             o.SetFacetCounts(a.rgSolrFacetCounts),
             o.SetSolrMatchCount(a.nMatchCount);
-        } else (y = t.capsules), (y = Zn(e, t, f, y, Xn, g, h));
-        v && (y = v(y)),
+        } else (b = t.capsules), (b = Zn(e, t, w, b, B, g, h));
+        v && (b = v(b)),
           e.BUsesContentHubForItemSource() ||
             t.enable_faceted_browsing ||
-            (y = y.filter((e) => n.ShouldShowCapsule(e))),
-          (y = ai.O ? (0, ai.O)(y, r) : y),
+            (b = b.filter((e) => n.ShouldShowCapsule(e))),
+          (b = ni.O ? (0, ni.O)(b, r) : b),
           t.enable_faceted_browsing &&
             t.smart_section &&
-            (y = o.ApplyOptInFilters(y));
-        const I = (0, ti.Tb)(
+            (b = o.ApplyOptInFilters(b));
+        const A = (0, ai.Tb)(
           t.unique_id,
           null == n ? void 0 : n.GetActiveTabUniqueID(),
         );
-        I && ii(I, y, a);
-        let D = !1;
+        A && ri(A, b, a);
+        let G = !1;
         {
-          let a = y.length;
-          const n = w > 0 || Xe(e);
+          let a = b.length;
+          const n = T > 0 || Xe(e);
           if (!t.show_as_carousel && n) {
             const e = 20,
-              n = (0, Rn.mT)(t, w, c) + e;
-            a > n + 4 && ((a = n), (D = !0));
+              n = (0, Rn.mT)(t, T, c) + e;
+            a > n + 4 && ((a = n), (G = !0));
           }
           const i = (0, Ae.MW)(t);
           if (i > 0) {
@@ -54091,58 +54119,58 @@
               n = Math.max(i + e, Math.floor(i * t));
             a = Math.min(a, n);
           }
-          y.length > a && (y = y.slice(0, a));
+          b.length > a && (b = b.slice(0, a));
         }
-        const B = (0, m.vR)(t);
-        await (0, _.H2)(y, i.Xh, B);
-        let A,
-          G = new Array();
+        const M = (0, m.vR)(t);
+        await (0, _.H2)(b, i.Xh, M);
+        let k,
+          N = new Array();
         if (t.enable_faceted_browsing) {
-          y = await o.ApplyUserPreferenceFilters(y, B, G);
-          const e = D || b;
-          o.UpdateMatchCount(e, y.length);
+          b = await o.ApplyUserPreferenceFilters(b, M, N);
+          const e = G || f;
+          o.UpdateMatchCount(e, b.length);
         }
-        A = await (0, _.AX)(y, B, G, (t) => jn(t, e) || Hn(t, e));
-        const M = G.length;
+        k = await (0, _.AX)(b, M, N, (t) => jn(t, e) || Hn(t, e));
+        const R = N.length;
         if (
-          ((A = (function (e) {
+          ((k = (function (e) {
             const t = [],
               a = [];
             for (const n of e) (0, _.nt)(n) ? t.push(n) : a.push(n);
             return t.concat(a);
-          })(A)),
+          })(k)),
           t.prioritize_discounts)
         ) {
           const e = [],
             t = [];
-          for (const a of A) (0, _.tJ)(a) ? e.push(a) : t.push(a);
-          A = e.concat(t);
+          for (const a of k) (0, _.tJ)(a) ? e.push(a) : t.push(a);
+          k = e.concat(t);
         }
         if (
           (t.smart_section || t.sale_tag_filter) &&
           !t.enable_faceted_browsing &&
           l
         ) {
-          l.MarkAllAppsNotVisible(t.unique_id), A.sort(l.SortKey.bind(l));
-          const e = (0, m.dm)(t, d, c) || A.length;
-          A.slice(0, e).forEach(l.BMarkAppVisibile.bind(l, t.unique_id));
+          l.MarkAllAppsNotVisible(t.unique_id), k.sort(l.SortKey.bind(l));
+          const e = (0, m.dm)(t, d, c) || k.length;
+          k.slice(0, e).forEach(l.BMarkAppVisibile.bind(l, t.unique_id));
         }
         {
           const e = (0, Ae.MW)(t);
-          e > 0 && e < A.length && (A = A.slice(0, e));
+          e > 0 && e < k.length && (k = k.slice(0, e));
         }
         t.dynamic_reveal &&
           !t.smart_section_type &&
           (Gn.Get().AddSaleCapsules(t.unique_id, t.capsules),
           Gn.Get().IncrementalSectionNeedingReveal(e.clanSteamID, e.GID, a));
         return {
-          rgCapsules: A,
-          nHiddenCapsules: M,
-          bCapsuleArrayTruncated: D,
-          bAwaitingShowContentLoading: A.length <= T && b,
+          rgCapsules: k,
+          nHiddenCapsules: R,
+          bCapsuleArrayTruncated: G,
+          bAwaitingShowContentLoading: k.length <= I && f,
         };
       }
-      function Si(e, t, a) {
+      function Ei(e, t, a) {
         const [i] = (0, n.useState)(
             (function (e, t, a) {
               if (t.enable_faceted_browsing) {
@@ -54165,7 +54193,7 @@
           [r, o]
         );
       }
-      function Ei(e) {
+      function yi(e) {
         var t;
         const {
             event: a,
@@ -54185,7 +54213,7 @@
           [k, N] = (0, n.useState)([]),
           [P, R] = (0, n.useState)(void 0),
           [F, L] = (0, n.useState)([]),
-          [O, x] = Si(a, e.section, r),
+          [O, x] = Ei(a, e.section, r),
           { nMaxCapsulesPerRow: z, bScreenIsWide: U } = (0, y.f_)(
             e.section.section_type,
           ),
@@ -54193,7 +54221,7 @@
         (0, n.useEffect)(
           () =>
             (function (e, t, a, n, i) {
-              const r = (0, ti.M$)(
+              const r = (0, ai.M$)(
                 e.unique_id,
                 null == t ? void 0 : t.GetActiveTabUniqueID(),
               ).Register((r) => {
@@ -54203,7 +54231,7 @@
                   (null == t ? void 0 : t.GetActiveTabUniqueID()) == r.tabID
                 ) {
                   const e = a ? [...a] : [];
-                  ii(r, e, i), n(e);
+                  ri(r, e, i), n(e);
                 }
               }).Unregister;
               return () => r();
@@ -54212,7 +54240,7 @@
         ),
           (0, n.useEffect)(() => {
             (async () => {
-              const t = await hi(
+              const t = await vi(
                 a,
                 e.section,
                 H,
@@ -54280,7 +54308,16 @@
                 ) + 1;
             fe.I.Get().AddInteraction(q.unique_id, t), C(e);
           },
-          q = $n(a, e.section, H, !0);
+          q = (function (e, t, a) {
+            if (
+              !t.use_random_order ||
+              t.enable_faceted_browsing ||
+              !window.sessionStorage
+            )
+              return t;
+            const n = $n(e, t, a);
+            return null != n ? n : t;
+          })(a, e.section, H);
         let V = null;
         if (b) {
           const e = {
@@ -54342,7 +54379,7 @@
           }
           if (!V) {
             if (!H && !q.enable_faceted_browsing) return null;
-            V = n.createElement(yi, { section: q });
+            V = n.createElement(bi, { section: q });
           }
         } else
           V = q.enable_faceted_browsing
@@ -54479,7 +54516,7 @@
           ),
         );
       }
-      function yi(e) {
+      function bi(e) {
         const { section: t } = e;
         return t.enable_faceted_browsing
           ? n.createElement(
@@ -54497,20 +54534,20 @@
               ),
             );
       }
-      var bi = a(60778);
-      const fi = new bi.wd("SalePage"),
-        wi = 50;
-      class Ci {
+      var fi = a(60778);
+      const wi = new fi.wd("SalePage"),
+        Ci = 50;
+      class Ti {
         constructor() {
           (this.m_mapResults = new Map()), (this.m_mapPromises = new Map());
         }
         static Get() {
           return (
-            Ci.s_singleton ||
-              ((Ci.s_singleton = new Ci()),
+            Ti.s_singleton ||
+              ((Ti.s_singleton = new Ti()),
               "dev" === E.TS.WEB_UNIVERSE &&
-                (window.g_SaleItemBrowserStore = Ci.s_singleton)),
-            Ci.s_singleton
+                (window.g_SaleItemBrowserStore = Ti.s_singleton)),
+            Ti.s_singleton
           );
         }
         async GetItemsSoFar(e, t, a, n, i, r, o, s, l, c) {
@@ -54521,12 +54558,12 @@
               ...u,
               rgItems: this.DedupeItems(e.rgItems.concat(u.rgItems)),
             }),
-              fi.Debug(
+              wi.Debug(
                 `GetItemsSoFar (continuing) start ${r} count ${o} items ${d.rgItems.length} next ${d.nNextSolrIndex}`,
               );
           } else
             (d = await this.GetItemsFiltered(t, a, n, i, r, o, s, l, c)),
-              fi.Debug(
+              wi.Debug(
                 `GetItemsSoFar (new) start ${r} count ${o} items ${d.rgItems.length} next ${d.nNextSolrIndex}`,
               );
           return d;
@@ -54540,43 +54577,43 @@
             },
             d = i,
             u = r;
-          const m = Math.floor(d / wi);
+          const m = Math.floor(d / Ci);
           for (let i = 0; i < 10; ++i) {
             let _ = await this.GetItemsPaged(e, t, a, d, u, o, s, l);
             if (
               ((_.rgItems = await this.FilterItems(_.rgItems, n)),
-              fi.Debug(`iteration ${i} matches ${_.rgItems.length}`),
+              wi.Debug(`iteration ${i} matches ${_.rgItems.length}`),
               (c = { ..._, rgItems: c.rgItems.concat(_.rgItems) }),
               !_.bMoreAvailable)
             )
               break;
             if (c.rgItems.length >= r) break;
-            if (Math.floor((d + u - 1) / wi) - m + 1 > 2) break;
+            if (Math.floor((d + u - 1) / Ci) - m + 1 > 2) break;
             (d = c.nNextSolrIndex), (u = r - c.rgItems.length);
           }
           return (
-            fi.Debug(
+            wi.Debug(
               `GetItemsFiltered start ${i} count ${r} items ${c.rgItems.length} next ${c.nNextSolrIndex}`,
             ),
             c
           );
         }
         async GetItemsPaged(e, t, a, n, i, r, o, s) {
-          const l = Math.floor(n / wi),
-            c = Math.floor((n + i - 1) / wi),
+          const l = Math.floor(n / Ci),
+            c = Math.floor((n + i - 1) / Ci),
             d = [];
           for (let n = l; n <= c; ++n)
-            d.push(this.GetItems(e, t, a, n * wi, wi, r, o, s));
+            d.push(this.GetItems(e, t, a, n * Ci, Ci, r, o, s));
           const u = await Promise.all(d);
           let m = { ...u[u.length - 1], rgItems: [] },
             _ = [];
           for (const e of u) _ = _.concat(e.rgItems);
           return (
-            (m.rgItems = _.slice(n - l * wi, n + i - l * wi)),
+            (m.rgItems = _.slice(n - l * Ci, n + i - l * Ci)),
             (m.bMoreAvailable =
-              u[u.length - 1].bMoreAvailable || n + i - 1 - l * wi < _.length),
+              u[u.length - 1].bMoreAvailable || n + i - 1 - l * Ci < _.length),
             (m.nNextSolrIndex = n + i),
-            fi.Debug(
+            wi.Debug(
               `GetItemsPaged start ${n} count ${i} items ${m.rgItems.length} next ${m.nNextSolrIndex}`,
             ),
             m
@@ -54611,7 +54648,7 @@
           if (s) return s(e, t, a, n, i, r, o);
           const h = this.GetItemBrowserQueryKeyForConfig(t, a, n, i),
             v = this.GetItemBrowserQueryKey(t, a, n, i);
-          fi.Debug(v);
+          wi.Debug(v);
           const S = (0, E.Tc)(h, "application_config");
           if (S) {
             const e = [];
@@ -54716,7 +54753,7 @@
                   strRequest:
                     ("dev" === E.TS.WEB_UNIVERSE && e.data.request) || void 0,
                 }),
-                fi.Debug(
+                wi.Debug(
                   `GetItems start ${n} count ${i} items ${t.length} next ${n + i}`,
                 ),
                 this.m_mapResults.get(v)
@@ -54761,11 +54798,11 @@
           );
         }
       }
-      var Ti = a(91941),
-        Ii = a(87736),
-        Di = a.n(Ii),
-        Bi = a(54847);
-      let Ai = class extends n.Component {
+      var Ii = a(91941),
+        Di = a(87736),
+        Bi = a.n(Di),
+        Ai = a(54847);
+      let Gi = class extends n.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -54790,7 +54827,7 @@
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
           const { section: e, activeTab: t } = this.props;
           this.setState({
-            fnUnregisterCallback: (0, ti.M$)(
+            fnUnregisterCallback: (0, ai.M$)(
               e.unique_id,
               null == t ? void 0 : t.GetActiveTabUniqueID(),
             ).Register(this.OnDynamicCapsuleInsert).Unregister,
@@ -54848,7 +54885,7 @@
                   ? void 0
                   : o.GetActiveTabUniqueID())) ||
               (n && n(),
-              (n = (0, ti.M$)(
+              (n = (0, ai.M$)(
                 t.unique_id,
                 null == a ? void 0 : a.GetActiveTabUniqueID(),
               ).Register(this.OnDynamicCapsuleInsert).Unregister)),
@@ -54877,7 +54914,7 @@
             (null == t ? void 0 : t.GetActiveTabUniqueID()) == e.tabID
           ) {
             const t = this.state.rgCapsules ? [...this.state.rgCapsules] : [];
-            ii(e, t, 2 == this.context.eLocation),
+            ri(e, t, 2 == this.context.eLocation),
               this.setState({ rgCapsules: t });
           }
         }
@@ -54967,7 +55004,7 @@
               l = Boolean(c) ? "search" : o;
             let _;
             const h = n.cap_item_count > 12 ? n.cap_item_count : 12;
-            (p = await Ci.Get().GetItemsSoFar(
+            (p = await Ti.Get().GetItemsSoFar(
               this.state.results,
               t,
               l,
@@ -54998,11 +55035,11 @@
             );
           }
           if (this.m_cancelSignal.token.reason) return;
-          const h = (0, ti.Tb)(
+          const h = (0, ai.Tb)(
             n.unique_id,
             null == a ? void 0 : a.GetActiveTabUniqueID(),
           );
-          h && ii(h, s, 2 == this.context.eLocation),
+          h && ri(h, s, 2 == this.context.eLocation),
             this.setState({
               bInitialLoadComplete: !0,
               rgCapsules: s,
@@ -55084,8 +55121,8 @@
                     toolTipContent: s,
                     onClick: () => this.OnFlavorLabelClick(e.flavor),
                     className: (0, S.A)(
-                      Di().FlavorLabel,
-                      i == e.flavor && Di().SelectedFlavor,
+                      Bi().FlavorLabel,
+                      i == e.flavor && Bi().SelectedFlavor,
                     ),
                   },
                   (0, D.we)(o),
@@ -55217,9 +55254,9 @@
                   ? void 0
                   : e.strRequest),
             ) &&
-              n.createElement(Gi, { request: this.state.results.strRequest }),
+              n.createElement(Mi, { request: this.state.results.strRequest }),
             s &&
-              n.createElement(Mi, {
+              n.createElement(ki, {
                 browseInfo: t,
                 rgCapsules: l,
                 fnOnRestartBrowse: f,
@@ -55232,7 +55269,7 @@
               0 == l.length &&
               n.createElement(
                 "div",
-                { className: Di().EmptyResults },
+                { className: Bi().EmptyResults },
                 (0, D.we)("#Sale_EmptySearchResultsOrLoadFailure"),
               ),
             (!s || u) &&
@@ -55240,8 +55277,8 @@
                 "div",
                 {
                   className: (0, S.A)(
-                    Di().ShowContentsContainer,
-                    !s && Di().Loading,
+                    Bi().ShowContentsContainer,
+                    !s && Bi().Loading,
                   ),
                 },
                 !s || m
@@ -55253,7 +55290,7 @@
                       pe.fu,
                       {
                         onClick: this.ShowMoreRows,
-                        className: Di().ShowContentsButton,
+                        className: Bi().ShowContentsButton,
                       },
                       (0, D.we)("#Sale_ShowMore"),
                     ),
@@ -55300,22 +55337,22 @@
               ),
               n.createElement(
                 "div",
-                { className: Di().SaleItemBrowserContainer },
+                { className: Bi().SaleItemBrowserContainer },
                 n.createElement(
-                  Ti.Z,
-                  { className: Di().SaleItemBrowserHeaderContainer },
+                  Ii.Z,
+                  { className: Bi().SaleItemBrowserHeaderContainer },
                   n.createElement(
                     ge.Z,
                     {
                       "flow-children": "row",
-                      className: Di().SaleItemBrowserHeader,
+                      className: Bi().SaleItemBrowserHeader,
                     },
                     v,
                     t.enable_search &&
                       !this.props.bInGamepadUI &&
                       n.createElement(
                         "div",
-                        { className: Di().SuggestContainer },
+                        { className: Bi().SuggestContainer },
                         n.createElement(g.eSy, null),
                         n.createElement(Re.pd, {
                           type: "text",
@@ -55332,7 +55369,7 @@
           );
         }
       };
-      function Gi(e) {
+      function Mi(e) {
         const [t, a] = n.useState(),
           [i, r] = n.useState(),
           [o, s] = n.useState(!1);
@@ -55357,13 +55394,13 @@
                   "div",
                   {
                     className: (0, S.A)(
-                      Di().SaleItemBrowserDebug,
+                      Bi().SaleItemBrowserDebug,
                       cn().ValveOnlyBackground,
                     ),
                   },
                   n.createElement(
                     pe.ml,
-                    { className: Di().ShowHideLink, onClick: () => s(!o) },
+                    { className: Bi().ShowHideLink, onClick: () => s(!o) },
                     o ? "Hide" : "Show",
                     " Solr Query Details",
                   ),
@@ -55375,10 +55412,10 @@
                         i.map((e, t) =>
                           n.createElement(
                             "div",
-                            { key: "filter_" + t, className: Di().QueryTerm },
+                            { key: "filter_" + t, className: Bi().QueryTerm },
                             n.createElement(
                               "div",
-                              { className: Di().Name },
+                              { className: Bi().Name },
                               e[0],
                             ),
                             n.createElement("div", null, e[1]),
@@ -55387,7 +55424,7 @@
                       n.createElement(
                         pe.Ii,
                         {
-                          className: Di().WGTesterLink,
+                          className: Bi().WGTesterLink,
                           target: "_blank",
                           href:
                             "https://local.steam.dev:4443/wg?reqname=QuerySolr&request=" +
@@ -55404,7 +55441,7 @@
               : null
         );
       }
-      function Mi(e) {
+      function ki(e) {
         const {
             browseInfo: t,
             rgCapsules: a,
@@ -55418,7 +55455,7 @@
         return n.createElement(
           h.A,
           { feature: o, depth: s },
-          Boolean(r) && n.createElement(ki, { onClick: r }),
+          Boolean(r) && n.createElement(Ni, { onClick: r }),
           a
             .slice(0)
             .filter(
@@ -55434,7 +55471,7 @@
                     t && (t.preventDefault(), t.stopPropagation()),
                     !1
                   )),
-                n.createElement(Bi.p, {
+                n.createElement(Ai.p, {
                   key: "saleitem_browser_" + e.type + "_" + e.id,
                   bShowDemoButton:
                     t.show_as_demos ||
@@ -55452,7 +55489,7 @@
             }),
         );
       }
-      function ki(e) {
+      function Ni(e) {
         const { onClick: t } = e,
           a = n.useRef();
         return (
@@ -55466,7 +55503,7 @@
             pe.Ii,
             {
               ref: a,
-              className: Di().ResetItemsCtn,
+              className: Bi().ResetItemsCtn,
               onClick: (e) => {
                 t && t(), e.preventDefault(), e.stopPropagation();
               },
@@ -55474,13 +55511,13 @@
             n.createElement(g.MvQ, null),
             n.createElement(
               "span",
-              { className: Di().ResetItems },
+              { className: Bi().ResetItems },
               (0, D.we)("#Sale_ItemBrowser_ShowFromBeginning"),
             ),
           )
         );
       }
-      function Ni(e) {
+      function Pi(e) {
         const { section: t, activeTab: a, event: i, history: r } = e,
           o = n.useRef();
         n.useEffect(() => {
@@ -55514,24 +55551,24 @@
           }
         }, [i.jsondata.sale_sections, r]);
         const s = t.diable_tab_id_filtering
-          ? new ai.y(null, a.GetSaleDay())
+          ? new ni.y(null, a.GetSaleDay())
           : a;
         return n.createElement(
           n.Fragment,
           null,
           n.createElement("div", { ref: o }),
-          n.createElement(Pi, { ...e, activeTab: s }),
+          n.createElement(Ri, { ...e, activeTab: s }),
         );
       }
-      (Ai.contextType = ca.LD),
-        (0, we.Cg)([Pa.oI], Ai.prototype, "OnDynamicCapsuleInsert", null),
-        (0, we.Cg)([Pa.oI], Ai.prototype, "ShowMoreRows", null),
-        (0, we.Cg)([Pa.oI], Ai.prototype, "FilterItems", null),
-        (0, we.Cg)([Pa.oI], Ai.prototype, "OnUpdateSearch", null),
-        (0, we.Cg)([Pa.oI], Ai.prototype, "OnUpdateFacetFilter", null),
-        (0, we.Cg)([Pa.oI], Ai.prototype, "OnResize", null),
-        (Ai = (0, we.Cg)([Ie.PA], Ai));
-      const Pi = (0, Ie.PA)((e) => {
+      (Gi.contextType = ca.LD),
+        (0, we.Cg)([Pa.oI], Gi.prototype, "OnDynamicCapsuleInsert", null),
+        (0, we.Cg)([Pa.oI], Gi.prototype, "ShowMoreRows", null),
+        (0, we.Cg)([Pa.oI], Gi.prototype, "FilterItems", null),
+        (0, we.Cg)([Pa.oI], Gi.prototype, "OnUpdateSearch", null),
+        (0, we.Cg)([Pa.oI], Gi.prototype, "OnUpdateFacetFilter", null),
+        (0, we.Cg)([Pa.oI], Gi.prototype, "OnResize", null),
+        (Gi = (0, we.Cg)([Ie.PA], Gi));
+      const Ri = (0, Ie.PA)((e) => {
         const { section: t, event: a, activeTab: i } = e,
           r = (0, E.Qn)(),
           o =
@@ -55554,7 +55591,7 @@
             style: (0, c.V)(t, a, r),
             onRender: () => fe.I.Get().AddInteraction(t.unique_id, 0),
           },
-          n.createElement(Ai, {
+          n.createElement(Gi, {
             key: o,
             browseInfo: t.item_browse_section_data,
             section: t,
@@ -55563,8 +55600,8 @@
           }),
         );
       });
-      var Ri = a(47691);
-      function Fi(e) {
+      var Fi = a(47691);
+      function Li(e) {
         const {
             section: t,
             selectedTab: a,
@@ -55605,7 +55642,7 @@
                   n.Fragment,
                   null,
                   n.createElement("div", { ref: l }),
-                  n.createElement(Ri.Db, {
+                  n.createElement(Fi.Db, {
                     section: t,
                     ...e,
                     activeTab: null == a ? void 0 : a.GetTab(),
@@ -55621,10 +55658,10 @@
                 : null;
           case "tab_buttons":
             const i = t.diable_tab_id_filtering
-              ? new ai.y(null, r.GetSaleDay())
+              ? new ni.y(null, r.GetSaleDay())
               : r;
             return r
-              ? n.createElement(Ri.fJ, {
+              ? n.createElement(Fi.fJ, {
                   ...e,
                   activeTab: i,
                   onTabSelected: c,
@@ -55640,8 +55677,8 @@
         }
         return null;
       }
-      var Li = a(34010);
-      function Oi(e) {
+      var Oi = a(34010);
+      function xi(e) {
         const { section: t, event: a, language: i } = e,
           r = (0, E.Qn)(),
           o = (0, ca.MU)();
@@ -55669,7 +55706,7 @@
           ),
         );
       }
-      function xi(e) {
+      function zi(e) {
         const { section: t, event: a, language: i } = e,
           r = (0, E.Qn)(),
           [o, s, d, m, _] = (0, De.q3)(() => [
@@ -55677,7 +55714,7 @@
             t.hide_section_if_logged_out,
             t.text_section_contents,
             a.BHasBroadcastEnabled(),
-            Li.j.Get().BIsEmbeddedStreamCollapsed(),
+            Oi.j.Get().BIsEmbeddedStreamCollapsed(),
           ]),
           p = (0, ca.yD)(),
           g = (0, ca.MU)();
@@ -55724,18 +55761,18 @@
           ),
         );
       }
-      var zi = a(14256),
-        Ui = a.n(zi),
-        Hi = a(10886),
-        ji = a(3209),
-        Wi = a(7077),
-        qi = a.n(Wi),
-        Vi = a(12654),
-        Qi = a.n(Vi),
-        Yi = a(61985),
-        Ki = a(3919),
-        Xi = a(68033);
-      function Zi(e) {
+      var Ui = a(14256),
+        Hi = a.n(Ui),
+        ji = a(10886),
+        Wi = a(3209),
+        qi = a(7077),
+        Vi = a.n(qi),
+        Qi = a(12654),
+        Yi = a.n(Qi),
+        Ki = a(61985),
+        Xi = a(3919),
+        Zi = a(68033);
+      function $i(e) {
         var t;
         const { event: a, section: i, language: r } = e,
           o = (0, E.Qn)(),
@@ -55746,10 +55783,10 @@
           u = n.createElement(
             "div",
             {
-              className: (0, S.A)(Qi().DoorOptionsContainer, "DoorOptionsCtn"),
+              className: (0, S.A)(Yi().DoorOptionsContainer, "DoorOptionsCtn"),
             },
             i.social_share.content_options.map((e) =>
-              n.createElement($i, {
+              n.createElement(Ji, {
                 key: e.door,
                 platforms: i.social_share.platforms,
                 contentOption: e,
@@ -55771,7 +55808,7 @@
                   e.localized_option_fields.localized_header[o] ||
                   ""
                 : void 0;
-          u = n.createElement(ir, { eventModel: a, titleOverride: s });
+          u = n.createElement(rr, { eventModel: a, titleOverride: s });
         }
         return n.createElement(
           h.A,
@@ -55788,7 +55825,7 @@
           ),
         );
       }
-      function $i(e) {
+      function Ji(e) {
         var t;
         const {
           platforms: a,
@@ -55810,7 +55847,7 @@
               : void 0;
         return n.createElement(
           "div",
-          { className: (0, S.A)(Qi().DoorOption, "DoorLinkedOption") },
+          { className: (0, S.A)(Yi().DoorOption, "DoorLinkedOption") },
           c &&
             n.createElement(na.f, {
               text: c,
@@ -55839,23 +55876,23 @@
                         "div",
                         {
                           className: (0, S.A)(
-                            qi().TextToolTip,
+                            Vi().TextToolTip,
                             "ShareTooltipContent",
                           ),
                         },
-                        (0, D.we)(er(e.label)),
+                        (0, D.we)(tr(e.label)),
                       ),
                     },
                     n.createElement(
                       dt.uU,
                       {
                         bDisableContextMenu: !0,
-                        href: nr(e.label, i.door),
-                        className: (0, S.A)(Ui().ShareBtn, "SocialShareButton"),
+                        href: ir(e.label, i.door),
+                        className: (0, S.A)(Hi().ShareBtn, "SocialShareButton"),
                       },
                       n.createElement("img", {
                         className: cn().Button,
-                        src: Ji(e.label),
+                        src: er(e.label),
                       }),
                     ),
                   )
@@ -55864,17 +55901,17 @@
           ),
         );
       }
-      function Ji(e) {
+      function er(e) {
         switch (e) {
           case Ae.Zf.Facebook:
-            return Hi.A;
-          case Ae.Zf.Twitter:
             return ji.A;
+          case Ae.Zf.Twitter:
+            return Wi.A;
           default:
             return "";
         }
       }
-      function er(e) {
+      function tr(e) {
         switch (e) {
           case Ae.Zf.Facebook:
             return "#EventDisplay_Share_OnFaceBook";
@@ -55884,36 +55921,36 @@
             return "";
         }
       }
-      const tr = "https://twitter.com/intent/tweet/?",
-        ar = "http://www.facebook.com/sharer.php?";
-      function nr(e, t) {
+      const ar = "https://twitter.com/intent/tweet/?",
+        nr = "http://www.facebook.com/sharer.php?";
+      function ir(e, t) {
         const a = `${window.location}${window.location.search ? "&" : "?"}shareOption=${t}`,
           n = new URLSearchParams({});
         switch (e) {
           case Ae.Zf.Facebook:
-            return n.append("u", a), `${ar}${n.toString()}`;
+            return n.append("u", a), `${nr}${n.toString()}`;
           case Ae.Zf.Twitter:
             return (
               n.append("url", a),
               n.append("via", "steam"),
               n.append("hashtags", "gaming_news"),
-              `${tr}${n.toString()}`
+              `${ar}${n.toString()}`
             );
           default:
             return "";
         }
       }
-      function ir(e) {
+      function rr(e) {
         const { eventModel: t, titleOverride: a } = e;
         if (t.BHasTag("contenthub")) return null;
-        const i = (0, Ki.nD)(t),
-          r = (e) => (0, Ki.Bd)(t, e);
+        const i = (0, Xi.nD)(t),
+          r = (e) => (0, Xi.Bd)(t, e);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
-            { className: Qi().ShareHeader },
+            { className: Yi().ShareHeader },
             null != a ? a : (0, D.we)("#EventDisplay_Share_WithFriendsHeader"),
           ),
           n.createElement(
@@ -55923,16 +55960,16 @@
               className: (0, S.A)(
                 cn().Button,
                 cn().Icon,
-                Qi().ShareButton,
+                Yi().ShareButton,
                 "SocialShareButton",
               ),
               onActivate: (e) => {
                 (0, Da.pg)(
-                  n.createElement(Yi.Wt, {
+                  n.createElement(Ki.Wt, {
                     eventLink: i,
                     fnGetSharePageUrl: r,
                     appid: t.appid,
-                    emoticonStore: Xi.A,
+                    emoticonStore: Zi.A,
                     partnerEventStore: ea.O3,
                   }),
                   (0, Na.uX)(e),
@@ -55941,29 +55978,29 @@
               },
             },
             n.createElement(g.SYj, {
-              className: (0, S.A)(Qi().ShareIcon, "SocialShareIcon"),
+              className: (0, S.A)(Yi().ShareIcon, "SocialShareIcon"),
             }),
             n.createElement(
               "span",
-              { className: (0, S.A)(Qi().ShareText, "SocialShareText") },
+              { className: (0, S.A)(Yi().ShareText, "SocialShareText") },
               (0, D.we)("#Button_Share"),
             ),
           ),
         );
       }
-      var rr = a(92757),
-        or = a(69300),
-        sr = a(60727),
-        lr = a(54728),
-        cr = a(71138);
-      class dr {
+      var or = a(92757),
+        sr = a(69300),
+        lr = a(60727),
+        cr = a(54728),
+        dr = a(71138);
+      class ur {
         constructor() {
           (this.m_mapAnnounceGIDToTrack = new Map()),
             (this.m_mapAnnounceGIDToSaleClanID = new Map()),
             (this.m_mapEventGIDToTrack = new Map());
         }
         static Get() {
-          return dr.s_singleton || (dr.s_singleton = new dr()), dr.s_singleton;
+          return ur.s_singleton || (ur.s_singleton = new ur()), ur.s_singleton;
         }
         AddAllScheduleTrack(e, t) {
           t &&
@@ -56006,8 +56043,8 @@
           return Boolean(this.m_mapEventGIDToTrack.has(e));
         }
       }
-      var ur = a(46067);
-      class mr {
+      var mr = a(46067);
+      class _r {
         constructor() {
           (this.m_gidClanEventSelected = void 0), (0, Te.Gn)(this);
         }
@@ -56034,18 +56071,18 @@
             (this.m_gidClanEventSelected = void 0);
         }
         static Get() {
-          return mr.s_Singleton || (mr.s_Singleton = new mr()), mr.s_Singleton;
+          return _r.s_Singleton || (_r.s_Singleton = new _r()), _r.s_Singleton;
         }
       }
-      (0, we.Cg)([Te.sH], mr.prototype, "m_gidClanEventSelected", void 0);
-      var _r = a(72237),
-        pr = a(94607),
-        gr = a(91675),
-        hr = a(81301),
-        vr = a(74976),
-        Sr = a(6347),
-        Er = a.n(Sr);
-      const yr = (e) => {
+      (0, we.Cg)([Te.sH], _r.prototype, "m_gidClanEventSelected", void 0);
+      var pr = a(72237),
+        gr = a(94607),
+        hr = a(91675),
+        vr = a(81301),
+        Sr = a(74976),
+        Er = a(6347),
+        yr = a.n(Er);
+      const br = (e) => {
           const {
               item: t,
               fnOnEventVisibilityChange: a,
@@ -56058,7 +56095,7 @@
               () => (a(o, t.unique_id, i, r), () => a(!1, t.unique_id, i, r)),
             ),
             n.createElement(
-              pr.Y,
+              gr.Y,
               {
                 topOffset: "55px",
                 bottomOffset: "50px",
@@ -56071,18 +56108,18 @@
                 n.createElement(
                   p.K,
                   { placeholderHeight: "60px", rootMargin: y.$m },
-                  n.createElement(fr, { item: t }),
+                  n.createElement(wr, { item: t }),
                 ),
               ),
             )
           );
         },
-        br = { ...i.Xh, include_trailers: !0, include_screenshots: !0 },
-        fr = (e) => {
+        fr = { ...i.Xh, include_trailers: !0, include_screenshots: !0 },
+        wr = (e) => {
           const { item: t } = e,
             [a, i] = n.useState(!1),
             r = n.useRef(w().CancelToken.source()),
-            [s] = (0, o.t7)(t.appid, br);
+            [s] = (0, o.t7)(t.appid, fr);
           if (
             (n.useEffect(
               () => () => r.current.cancel("unmounting SaleScheduleRowProxy"),
@@ -56112,18 +56149,18 @@
           )
             return n.createElement(
               "div",
-              { className: Er().SaleSchedRowProxy },
+              { className: yr().SaleSchedRowProxy },
               n.createElement(v.t, { size: "small" }),
             );
           let l = ea.O3.GetClanEventModel(t.unique_id),
             c = Mt.ac.GetClanInfoByClanAccountID(t.clanid);
           return !l || (t.appid && !s) || (!t.appid && !c)
             ? null
-            : n.createElement(Tr, { ...e });
+            : n.createElement(Ir, { ...e });
         },
-        wr = new Set([" ", "-", ":"]);
-      function Cr(e, t) {
-        const a = dr.Get().GetScheduleTrackByEvent(e);
+        Cr = new Set([" ", "-", ":"]);
+      function Tr(e, t) {
+        const a = ur.Get().GetScheduleTrackByEvent(e);
         if (a) {
           const n = "encore" == e.jsondata.broadcast_content_type;
           let i = a.label_color,
@@ -56149,7 +56186,7 @@
           );
         }
       }
-      const Tr = (0, Ie.PA)((e) => {
+      const Ir = (0, Ie.PA)((e) => {
         const { item: t, bMiniMode: a } = e,
           i = ea.O3.GetClanEventModel(t.unique_id);
         let r = "";
@@ -56164,60 +56201,60 @@
         const s = o.getTime() / 1e3;
         let l = i.GetNameWithFallback((0, Ce.sf)(E.TS.LANGUAGE));
         if (l.startsWith(r))
-          for (l = l.slice(r.length); wr.has(l[0]); ) l = l.slice(1);
-        const c = dr.Get().BIsPartOfSomeTrack(i),
+          for (l = l.slice(r.length); Cr.has(l[0]); ) l = l.slice(1);
+        const c = ur.Get().BIsPartOfSomeTrack(i),
           d = !i.BIsEventInFuture() && !i.BHasEventEnded(),
-          u = mr.Get().BIsEventSelected(t.unique_id);
+          u = _r.Get().BIsEventSelected(t.unique_id);
         return n.createElement(
-          Ki.tj,
+          Xi.tj,
           {
-            style: Cr(i, u),
+            style: Tr(i, u),
             eventModel: i,
-            route: Ki.PH.k_eStoreView,
+            route: Xi.PH.k_eStoreView,
             onClick: (t) => {
               const a = e.item.unique_id;
-              if (window.innerWidth > parseInt(Er().strMediumWidth))
-                mr.Get().ToggleClanEventGID(a);
-              else if (mr.Get().BIsEventSelected(a)) mr.Get().ClearSelection();
+              if (window.innerWidth > parseInt(yr().strMediumWidth))
+                _r.Get().ToggleClanEventGID(a);
+              else if (_r.Get().BIsEventSelected(a)) _r.Get().ClearSelection();
               else {
-                mr.Get().ClearSelection();
+                _r.Get().ClearSelection();
                 const e = ea.O3.GetClanEventModel(a);
-                e && (0, hr.Y)(e, window);
+                e && (0, vr.Y)(e, window);
               }
               t.preventDefault();
             },
             className: (0, S.A)({
-              [Er().SaleSchedRow]: !0,
-              [Er().SchedRowSelected]: u,
-              [Er().MiniMode]: a,
+              [yr().SaleSchedRow]: !0,
+              [yr().SchedRowSelected]: u,
+              [yr().MiniMode]: a,
               SchedEntryPartOfTrack: c,
-              [Er().LiveNow]: d,
+              [yr().LiveNow]: d,
             }),
           },
-          n.createElement(vr.C, { event: i }),
+          n.createElement(Sr.C, { event: i }),
           d &&
             n.createElement(
               "div",
-              { className: Er().Time },
+              { className: yr().Time },
               n.createElement(lt.K, null),
             ),
           !d &&
             n.createElement(
               "div",
-              { className: Er().Time },
-              (0, gr.KC)(s, { bForce24HourClock: e.bForce24HourClock }),
+              { className: yr().Time },
+              (0, hr.KC)(s, { bForce24HourClock: e.bForce24HourClock }),
             ),
           n.createElement(
             "div",
-            { className: Er().DetailsCtn },
-            n.createElement("div", { className: Er().AppTitle }, r),
-            n.createElement("div", { className: Er().EventTitle }, l),
+            { className: yr().DetailsCtn },
+            n.createElement("div", { className: yr().AppTitle }, r),
+            n.createElement("div", { className: yr().EventTitle }, l),
           ),
           n.createElement(
             "div",
-            { className: Er().Icon },
+            { className: yr().Icon },
             n.createElement("img", {
-              className: Er().CategoryTypeImage,
+              className: yr().CategoryTypeImage,
               width: "26",
               height: "26",
               src:
@@ -56229,24 +56266,24 @@
           ),
         );
       });
-      var Ir = a(14326),
-        Dr = a(84364),
-        Br = a(42951),
-        Ar = a(48079),
-        Gr = a(91970),
-        Mr = a.n(Gr),
-        kr = a(23649);
-      const Nr = (0, Ie.PA)((e) => {
+      var Dr = a(14326),
+        Br = a(84364),
+        Ar = a(42951),
+        Gr = a(48079),
+        Mr = a(91970),
+        kr = a.n(Mr),
+        Nr = a(23649);
+      const Pr = (0, Ie.PA)((e) => {
           const t = (0, Ce.sf)(E.TS.LANGUAGE),
-            a = dr.Get().GetScheduleTrackByEvent(e.event),
-            i = dr.Get().GetBrandingImageURLByEvent(e.event),
+            a = ur.Get().GetScheduleTrackByEvent(e.event),
+            i = ur.Get().GetBrandingImageURLByEvent(e.event),
             r = a ? D.NT.GetWithFallback(a.localized_name || [], t) : "",
             o = null == a ? void 0 : a.background_gradient_left,
             s = null == a ? void 0 : a.background_gradient_right;
           return n.createElement(
             "div",
             {
-              className: (0, S.A)(i && Er().SaleAppWideCtn, Er().ClanEvent),
+              className: (0, S.A)(i && yr().SaleAppWideCtn, yr().ClanEvent),
               style: {
                 color: null == a ? void 0 : a.label_color,
                 background: `linear-gradient(to right, ${o || "transparent"} 0%, ${s || "transparent"} 100%)`,
@@ -56254,27 +56291,27 @@
             },
             i &&
               n.createElement("img", {
-                className: Er().WideHeader,
+                className: yr().WideHeader,
                 src: i,
                 alt: r,
               }),
             n.createElement(
               "div",
-              { className: Er().WideDetailCtn },
+              { className: yr().WideDetailCtn },
               n.createElement(
                 "div",
-                { className: Er().SpeakerEventType },
+                { className: yr().SpeakerEventType },
                 e.event.GetEventTypeAsString(),
               ),
               n.createElement(
                 "div",
-                { className: Er().SpeakerEventTitle },
+                { className: yr().SpeakerEventTitle },
                 e.event.GetNameWithFallback((0, Ce.sf)(E.TS.LANGUAGE)),
               ),
             ),
           );
         }),
-        Pr = (0, Ie.PA)((e) => {
+        Rr = (0, Ie.PA)((e) => {
           const [t, a] = (0, n.useState)(null),
             [i, r] = (0, n.useState)(-1);
           (0, n.useEffect)(
@@ -56316,7 +56353,7 @@
                         ),
                       },
                       n.createElement("img", {
-                        className: Mr().PresenterEventScreenshotThumbnail,
+                        className: kr().PresenterEventScreenshotThumbnail,
                         src: i,
                         onMouseEnter: () => o(a),
                       }),
@@ -56332,25 +56369,25 @@
           }
           return n.createElement(
             "div",
-            { className: Mr().MediaContainer },
+            { className: kr().MediaContainer },
             n.createElement(
               "div",
-              { className: Mr().MainMediaCtn },
+              { className: kr().MainMediaCtn },
               n.createElement("img", { src: s }),
             ),
             n.createElement(
               "div",
               {
-                className: Mr().PresenterEventScreenshot,
+                className: kr().PresenterEventScreenshot,
                 onMouseLeave: () => o(-1),
               },
               l,
             ),
           );
         }),
-        Rr = (0, Ie.PA)((e) => {
+        Fr = (0, Ie.PA)((e) => {
           const t = e.presenters.map((t) =>
-            n.createElement(Ar.S8, {
+            n.createElement(Gr.S8, {
               key: "presenter-" + e.event.GID + "-" + t.name,
               name: t.name,
               title: t.title,
@@ -56364,39 +56401,39 @@
             "div",
             {
               className: (0, S.A)(
-                Er().SaleSchedDetailCtn,
+                yr().SaleSchedDetailCtn,
                 "SaleSchedDetailCtn",
               ),
             },
-            n.createElement(Nr, { ...e }),
+            n.createElement(Pr, { ...e }),
             n.createElement(
               "div",
-              { className: Er().StatementAndHighlights },
+              { className: yr().StatementAndHighlights },
               n.createElement(
                 "div",
-                { className: Er().PresenterEventStatementCtn },
-                n.createElement(kr.h, {
+                { className: yr().PresenterEventStatementCtn },
+                n.createElement(Nr.h, {
                   text: e.event.GetSummaryWithFallback(
                     (0, Ce.sf)(E.TS.LANGUAGE),
                   ),
                 }),
                 t,
               ),
-              n.createElement(Pr, { ...e }),
+              n.createElement(Rr, { ...e }),
             ),
-            n.createElement($r, { event: e.event }),
+            n.createElement(Jr, { event: e.event }),
           );
         });
-      var Fr,
-        Lr = a(24307);
-      function Or(e) {
+      var Lr,
+        Or = a(24307);
+      function xr(e) {
         let t = Math.floor(Date.now() / 1e3);
         const a = e.GetCalendarEndTime();
         t >= a && (t = 0);
         const n = e.GetCurrentlyLoadedEventCount(t, a);
         return !(n.nCount > 0) && n.bIsComplete;
       }
-      function xr(e) {
+      function zr(e) {
         var t;
         return (
           (null == e ? void 0 : e.appid) ||
@@ -56405,7 +56442,7 @@
             : t.associated_appid)
         );
       }
-      let zr = (Fr = class extends n.Component {
+      let Ur = (Lr = class extends n.Component {
         constructor(e) {
           super(e),
             (this.state = { bLoaded: !1, rgVisibleEvents: [] }),
@@ -56416,11 +56453,11 @@
         }
         componentWillUnmount() {
           this.m_bAddedToBroadcastStoreCallback &&
-            (Li.j
+            (Oi.j
               .Get()
               .ClearCallbackOnNewContext(this.props.broadcastEmbedContext),
             (this.m_bAddedToBroadcastStoreCallback = !1)),
-            Li.j.Get().RemoveStreamChangedListener(this.OnBroadcastSelected),
+            Oi.j.Get().RemoveStreamChangedListener(this.OnBroadcastSelected),
             this.m_cancelSignal.cancel(
               "SaleSectionEventScheduleInner to unload",
             ),
@@ -56433,11 +56470,11 @@
             : t.GetActiveTabUniqueID()) !=
             (null === (a = this.props.activeTab) || void 0 === a
               ? void 0
-              : a.GetActiveTabUniqueID()) && mr.Get().ClearSelection();
+              : a.GetActiveTabUniqueID()) && _r.Get().ClearSelection();
         }
         async componentDidMount() {
-          Li.j.Get().AddStreamChangedListener(this.OnBroadcastSelected),
-            dr
+          Oi.j.Get().AddStreamChangedListener(this.OnBroadcastSelected),
+            ur
               .Get()
               .AddAllScheduleTrack(
                 this.props.event,
@@ -56446,7 +56483,7 @@
           let e = this.GetScheduleCalendarStore();
           if (
             (e.SetFilteredView((e) => this.BShouldShowOnTab(e.appid)),
-            Fr.m_bInitialLoad)
+            Lr.m_bInitialLoad)
           ) {
             const t = (0, E.Tc)("sale_schedule_calendar", "application_config");
             t
@@ -56459,7 +56496,7 @@
                 await e.RegisterCalendarEventsAndModels(t))
               : await e.RegisterCalendarEventsAndModels({ success: 1 });
           }
-          (Fr.m_bInitialLoad = !1),
+          (Lr.m_bInitialLoad = !1),
             this.setState({ bLoaded: !0 }, this.ApplyScheduleToBroadcasts);
         }
         get rtTopOfHour() {
@@ -56472,16 +56509,16 @@
         }
         get cachedCurrentCalendarItems() {
           const e = this.rtTopOfHour + sa.Kp.PerHour - 1;
-          return (0, ur.v0)().GetCalendarItemsInTimeRange(this.rtTopOfHour, e);
+          return (0, mr.v0)().GetCalendarItemsInTimeRange(this.rtTopOfHour, e);
         }
         get cachedUpcomingCalenderEvents() {
-          const e = (0, ur.v0)().GetStoreInitializationTimestamp(),
+          const e = (0, mr.v0)().GetStoreInitializationTimestamp(),
             t = (0, sa.MO)(e).getTime() / 1e3,
-            a = (0, ur.v0)().GetCalendarItemsInTimeRange(t, void 0);
-          return dr.Get().BHasTracks() && a.rgCalendarItems.sort(jr), a;
+            a = (0, mr.v0)().GetCalendarItemsInTimeRange(t, void 0);
+          return ur.Get().BHasTracks() && a.rgCalendarItems.sort(Wr), a;
         }
         UpdateBroadcastPresentersFromEvents() {
-          sr.l.SynchronizeEventsWithBroadcasts(
+          lr.l.SynchronizeEventsWithBroadcasts(
             this.GetScheduleCalendarStore(),
             (0, Ce.sf)(E.TS.LANGUAGE),
           );
@@ -56504,13 +56541,13 @@
         }
         OnBroadcastSelected(e) {
           const t = this.GetFirstEventWithBroadcaster(e.steamid);
-          t && (mr.Get().BIsEventSelected(t) || mr.Get().ToggleClanEventGID(t));
+          t && (_r.Get().BIsEventSelected(t) || _r.Get().ToggleClanEventGID(t));
         }
         ApplyScheduleToBroadcasts() {
           if (!this.state.bLoaded) return;
-          if (!Li.j.Get().BHasStreams(this.props.broadcastEmbedContext))
+          if (!Oi.j.Get().BHasStreams(this.props.broadcastEmbedContext))
             return (
-              Li.j
+              Oi.j
                 .Get()
                 .AddCallbackOnNewContext(
                   this.props.broadcastEmbedContext,
@@ -56524,7 +56561,7 @@
                   "SaleSectionEventScheduleInner.ApplyScheduleToBroadcasts unexpected no have stream yet setting up call back instead, context:",
                   this.props.broadcastEmbedContext,
                 ),
-                Li.j
+                Oi.j
                   .Get()
                   .DebugDumpContextAndAvailableContext(
                     this.props.broadcastEmbedContext,
@@ -56532,13 +56569,13 @@
               )
             );
           const e = this.cachedCurrentCalendarItems.rgCalendarItems,
-            t = Li.j.Get().GetStreams(this.props.broadcastEmbedContext),
+            t = Oi.j.Get().GetStreams(this.props.broadcastEmbedContext),
             a = this.props.event.jsondata.broadcast_whitelist,
             n = this.props.event.jsondata.broadcast_priority;
           if (
             "dev" == E.TS.WEB_UNIVERSE &&
             (console.log(
-              `ApplyScheduleToBroadcasts live event count ${e.length} vs total event count ${(0, ur.v0)().GetNumEventsLoaded()}`,
+              `ApplyScheduleToBroadcasts live event count ${e.length} vs total event count ${(0, mr.v0)().GetNumEventsLoaded()}`,
             ),
             e.length > 0 &&
               e.forEach((e) =>
@@ -56550,23 +56587,23 @@
           )
             for (let e = 0; e < a.length; ++e)
               console.log(
-                `ApplyScheduleToBroadcasts allow list ${a[e]} with priority ${e < n.length ? n[e] + " : " + (0, or.PH)(n[e]) : "unknown"} `,
+                `ApplyScheduleToBroadcasts allow list ${a[e]} with priority ${e < n.length ? n[e] + " : " + (0, sr.PH)(n[e]) : "unknown"} `,
               );
           for (const i of t) {
-            const t = lr.es.GetOrCreateBroadcastInfo(
+            const t = cr.es.GetOrCreateBroadcastInfo(
               null == i ? void 0 : i.steamid,
             ).m_nAppID;
             let r = e.some((e) => Number(e.appid) === t)
-              ? or.mY.k_eFeatured
-              : or.mY.k_eGeneral;
+              ? sr.mY.k_eFeatured
+              : sr.mY.k_eGeneral;
             if ((null == a ? void 0 : a.length) > 0) {
               const e = a.findIndex((e) => i.accountid == e);
               if (e >= 0 && e < (null == n ? void 0 : n.length)) {
-                const t = (0, or.PH)(n[e]);
+                const t = (0, sr.PH)(n[e]);
                 r < t && (r = t);
               }
             }
-            r != (0, Li.Rt)(i) && (i.current_selection_priority = r);
+            r != (0, Oi.Rt)(i) && (i.current_selection_priority = r);
           }
           if (
             (this.UpdateBroadcastPresentersFromEvents(),
@@ -56599,13 +56636,13 @@
                 ? void 0
                 : t.length) >= 1 &&
               (i = n.event_schedule_categories[0].tags),
-            (0, ur.Zr)({
+            (0, mr.Zr)({
               saleid: a.GID,
               bSectionByDay: !0,
               rtCalendarEnd: n.event_schedule_rtime_end || a.endTime,
               rgTags: i,
             }),
-            (0, ur.v0)()
+            (0, mr.v0)()
           );
         }
         VisibleEventsChanged(e) {
@@ -56622,12 +56659,12 @@
             });
           const r = this.GetScheduleCalendarStore(),
             o = r.GetNumEventsLoaded(),
-            s = Or(r);
+            s = xr(r);
           if (s && !i && 0 == o) return null;
           const l = new Array();
           for (const e of this.state.rgVisibleEvents) {
             const t = ea.O3.GetClanEventModel(e);
-            if (t && this.BShouldShowOnTab(xr(t)) && (l.push(e), l.length >= 4))
+            if (t && this.BShouldShowOnTab(zr(t)) && (l.push(e), l.length >= 4))
               break;
           }
           return n.createElement(
@@ -56638,13 +56675,13 @@
               {
                 className: (0, S.A)(
                   u().SaleSection,
-                  Er().SaleSchedCtn,
+                  yr().SaleSchedCtn,
                   "SaleSchedCtn",
                 ),
               },
               n.createElement(
                 "div",
-                { className: Er().ScheduleSectionHeader },
+                { className: yr().ScheduleSectionHeader },
                 (0, D.we)("#Sale_BroadcastSchedule"),
               ),
               Boolean(s && 0 == o) &&
@@ -56659,23 +56696,23 @@
                 ),
               n.createElement(
                 "div",
-                { className: Er().SectionCtn },
-                n.createElement(Hr, {
+                { className: yr().SectionCtn },
+                n.createElement(jr, {
                   calendarStore: r,
                   promotionName: t,
                   activeTab: a,
                   fnVisibleEventsChanged: this.VisibleEventsChanged,
                 }),
-                Boolean(mr.Get().BIsSomeEventSelected())
-                  ? n.createElement(Qr, {
-                      eventGID: mr.Get().GetClanEventGID(),
+                Boolean(_r.Get().BIsSomeEventSelected())
+                  ? n.createElement(Yr, {
+                      eventGID: _r.Get().GetClanEventGID(),
                       bShowDemoButton:
                         e.show_as_demos ||
                         (null == a ? void 0 : a.BFilterRequiresFeatureDemo()),
                       bPreferDemoStorePage: e.prefer_demo_store_page,
                       broadcastEmbedContext: this.props.broadcastEmbedContext,
                     })
-                  : n.createElement(qr, {
+                  : n.createElement(Vr, {
                       rgEventGIDs: l,
                       bShowDemoButton:
                         e.show_as_demos ||
@@ -56691,17 +56728,17 @@
           );
         }
       });
-      (zr.contextType = ca.LD),
-        (zr.m_bInitialLoad = !0),
-        (0, we.Cg)([Te.EW], zr.prototype, "rtTopOfHour", null),
-        (0, we.Cg)([Te.EW], zr.prototype, "cachedCurrentCalendarItems", null),
-        (0, we.Cg)([Te.EW], zr.prototype, "cachedUpcomingCalenderEvents", null),
-        (0, we.Cg)([Pa.oI], zr.prototype, "OnBroadcastSelected", null),
-        (0, we.Cg)([Pa.oI], zr.prototype, "ApplyScheduleToBroadcasts", null),
-        (0, we.Cg)([Pa.oI], zr.prototype, "VisibleEventsChanged", null),
-        (zr = Fr = (0, we.Cg)([Ie.PA], zr));
-      const Ur = (0, rr.y)(zr);
-      class Hr extends n.Component {
+      (Ur.contextType = ca.LD),
+        (Ur.m_bInitialLoad = !0),
+        (0, we.Cg)([Te.EW], Ur.prototype, "rtTopOfHour", null),
+        (0, we.Cg)([Te.EW], Ur.prototype, "cachedCurrentCalendarItems", null),
+        (0, we.Cg)([Te.EW], Ur.prototype, "cachedUpcomingCalenderEvents", null),
+        (0, we.Cg)([Pa.oI], Ur.prototype, "OnBroadcastSelected", null),
+        (0, we.Cg)([Pa.oI], Ur.prototype, "ApplyScheduleToBroadcasts", null),
+        (0, we.Cg)([Pa.oI], Ur.prototype, "VisibleEventsChanged", null),
+        (Ur = Lr = (0, we.Cg)([Ie.PA], Ur));
+      const Hr = (0, or.y)(Ur);
+      class jr extends n.Component {
         constructor() {
           super(...arguments),
             (this.state = {}),
@@ -56759,7 +56796,7 @@
                   rootMargin: y.$m,
                   mode: "JustLoad",
                 },
-                n.createElement(Wr, {
+                n.createElement(qr, {
                   strSectionLabel: e,
                   rtSectionStart: t - i,
                   rtSectionEnd: t,
@@ -56780,7 +56817,7 @@
                   rootMargin: y.$m,
                   mode: "JustLoad",
                 },
-                n.createElement(Wr, {
+                n.createElement(qr, {
                   strSectionLabel: e.strSectionLabel,
                   rtSectionStart: e.rtSectionStart,
                   rtSectionEnd: e.rtSectionEnd,
@@ -56793,7 +56830,7 @@
           });
           const i =
             E.TS.STORE_BASE_URL +
-            (0, Ki.LJ)() +
+            (0, Xi.LJ)() +
             "/sale/" +
             e.GetSaleID() +
             "?upcoming=true" +
@@ -56802,14 +56839,14 @@
               : "");
           return n.createElement(
             "div",
-            { className: Er().SaleSchedListCtn },
+            { className: yr().SaleSchedListCtn },
             n.createElement(
               "div",
-              { className: (0, S.A)(Er().SaleSchedList) },
-              Boolean(Or(e) && 0 == a.length) &&
+              { className: (0, S.A)(yr().SaleSchedList) },
+              Boolean(xr(e) && 0 == a.length) &&
                 n.createElement(
                   "div",
-                  { className: Er().NoEventsYet },
+                  { className: yr().NoEventsYet },
                   (0, D.we)("#Sale_EventSchedule_NoEventsScheduled"),
                 ),
               a,
@@ -56817,7 +56854,7 @@
             n.createElement(
               dt.uU,
               {
-                className: (0, S.A)(Er().NewsHubLink, cn().Button),
+                className: (0, S.A)(yr().NewsHubLink, cn().Button),
                 bDisableContextMenu: !0,
                 href: i,
               },
@@ -56826,17 +56863,17 @@
           );
         }
       }
-      function jr(e, t) {
+      function Wr(e, t) {
         if (e.start_time == t.start_time) {
-          const a = dr.Get().BIsPartOfSomeTrackByEventID(e.unique_id),
-            n = dr.Get().BIsPartOfSomeTrackByEventID(t.unique_id);
+          const a = ur.Get().BIsPartOfSomeTrackByEventID(e.unique_id),
+            n = ur.Get().BIsPartOfSomeTrackByEventID(t.unique_id);
           return (a && n) || (!a && !n) ? 0 : a ? 1 : -1;
         }
         return t.start_time - e.start_time;
       }
-      (0, we.Cg)([Pa.oI], Hr.prototype, "TimerRefresh", null),
-        (0, we.Cg)([Pa.oI], Hr.prototype, "OnEventVisibilityChange", null);
-      let Wr = class extends n.Component {
+      (0, we.Cg)([Pa.oI], jr.prototype, "TimerRefresh", null),
+        (0, we.Cg)([Pa.oI], jr.prototype, "OnEventVisibilityChange", null);
+      let qr = class extends n.Component {
         constructor(e) {
           super(e),
             (this.rtSectionStart = 0),
@@ -56870,11 +56907,11 @@
             this.m_cancelSignal.cancel("SaleScheduleCalendarSection to unload");
         }
         get cachedCalendarItems() {
-          const e = (0, ur.v0)().GetCalendarItemsInTimeRange(
+          const e = (0, mr.v0)().GetCalendarItemsInTimeRange(
             Fn.uP(() => this.rtSectionStart),
             Fn.uP(() => this.rtSectionEnd),
           );
-          return dr.Get().BHasTracks() && e.rgCalendarItems.sort(jr), e;
+          return ur.Get().BHasTracks() && e.rgCalendarItems.sort(Wr), e;
         }
         render() {
           const {
@@ -56890,7 +56927,7 @@
               .filter((e) => !t || e.start_time >= s)
               .reverse()
               .map((e, t) =>
-                n.createElement(yr, {
+                n.createElement(br, {
                   key: "schedrow_" + e.unique_id,
                   item: e,
                   fnOnEventVisibilityChange: a,
@@ -56907,7 +56944,7 @@
                   "div",
                   {
                     className: (0, S.A)(
-                      Er().SchedSectionLabel,
+                      yr().SchedSectionLabel,
                       "SchedSectionLabel",
                     ),
                   },
@@ -56926,12 +56963,12 @@
               );
         }
       };
-      (0, we.Cg)([Te.sH], Wr.prototype, "rtSectionStart", void 0),
-        (0, we.Cg)([Te.sH], Wr.prototype, "rtSectionEnd", void 0),
-        (0, we.Cg)([Pa.oI], Wr.prototype, "TimerRefresh", null),
-        (0, we.Cg)([Te.EW], Wr.prototype, "cachedCalendarItems", null),
-        (Wr = (0, we.Cg)([Ie.PA], Wr));
-      const qr = (0, Ie.PA)((e) => {
+      (0, we.Cg)([Te.sH], qr.prototype, "rtSectionStart", void 0),
+        (0, we.Cg)([Te.sH], qr.prototype, "rtSectionEnd", void 0),
+        (0, we.Cg)([Pa.oI], qr.prototype, "TimerRefresh", null),
+        (0, we.Cg)([Te.EW], qr.prototype, "cachedCalendarItems", null),
+        (qr = (0, we.Cg)([Ie.PA], qr));
+      const Vr = (0, Ie.PA)((e) => {
         const {
           rgEventGIDs: t,
           bShowDemoButton: a,
@@ -56940,12 +56977,12 @@
         } = e;
         return n.createElement(
           "div",
-          { className: (0, S.A)(Er().SaleSchedGridCtn) },
+          { className: (0, S.A)(yr().SaleSchedGridCtn) },
           t.map((e) => {
             const t = ea.O3.GetClanEventModel(e),
               o = r.find((t) => t.unique_id == e);
             if (!o) return null;
-            const s = xr(t);
+            const s = zr(t);
             if (s && C.A.Get().GetApp(s)) {
               const t = { id: s, type: "game" };
               return n.createElement(Je.W, {
@@ -56954,13 +56991,13 @@
                 imageType: "main",
                 bShowDemoButton: a,
                 bPreferDemoStorePage: i,
-                elElementToAppendToHover: n.createElement(fr, {
+                elElementToAppendToHover: n.createElement(wr, {
                   item: o,
                   bMiniMode: !0,
                 }),
               });
             }
-            return n.createElement(Vr, {
+            return n.createElement(Qr, {
               key: "schedule_grid_" + e,
               event: t,
               eventCalendarItem: o,
@@ -56968,28 +57005,28 @@
           }),
         );
       });
-      function Vr(e) {
+      function Qr(e) {
         const { event: t, eventCalendarItem: a } = e;
         let i = (0, Ce.sf)(E.TS.LANGUAGE);
-        const r = t.GetImageURLWithFallback("capsule", i, cr.wI.capsule_main);
+        const r = t.GetImageURLWithFallback("capsule", i, dr.wI.capsule_main);
         return n.createElement(
           "div",
           {
-            className: Er().ClanEventCapsuleCtn,
-            onClick: () => mr.Get().SelectClanEventGID(t.GID),
+            className: yr().ClanEventCapsuleCtn,
+            onClick: () => _r.Get().SelectClanEventGID(t.GID),
           },
-          n.createElement("img", { className: Er().ClanEventImage, src: r }),
-          n.createElement(fr, { item: a, bMiniMode: !0 }),
+          n.createElement("img", { className: yr().ClanEventImage, src: r }),
+          n.createElement(wr, { item: a, bMiniMode: !0 }),
         );
       }
-      const Qr = (e) => {
+      const Yr = (e) => {
         const { eventGID: t, bShowDemoButton: a, bPreferDemoStorePage: i } = e;
         if (!t || !ea.O3.BHasClanEventModel(t)) return null;
         const r = ea.O3.GetClanEventModel(t),
-          o = xr(r),
+          o = zr(r),
           s = o && C.A.Get().GetApp(o),
           l = (0, Ce.sf)(E.TS.LANGUAGE),
-          c = sr.m.ParseEventModelPresenters(r, l),
+          c = lr.m.ParseEventModelPresenters(r, l),
           d = (function (e, t) {
             let a = e.jsondata.referenced_appids || [];
             const n =
@@ -57010,12 +57047,12 @@
                 ? void 0
                 : d.some((e) => e != (null == r ? void 0 : r.appid))));
         return u
-          ? n.createElement(Rr, { event: r, eventStore: ea.O3, presenters: c })
+          ? n.createElement(Fr, { event: r, eventStore: ea.O3, presenters: c })
           : n.createElement(
               "div",
               {
                 className: (0, S.A)(
-                  Er().SaleSchedDetailCtn,
+                  yr().SaleSchedDetailCtn,
                   "SaleSchedDetailCtn",
                 ),
               },
@@ -57023,31 +57060,31 @@
                 ? n.createElement(
                     n.Fragment,
                     null,
-                    n.createElement(Kr, {
+                    n.createElement(Xr, {
                       storeItem: s,
                       bShowDemoButton: a,
                       bPreferDemoStorePage: i,
                     }),
-                    n.createElement(Zr, { storeItem: s }),
+                    n.createElement($r, { storeItem: s }),
                   )
-                : n.createElement(Yr, { event: r }),
-              n.createElement($r, {
+                : n.createElement(Kr, { event: r }),
+              n.createElement(Jr, {
                 event: r,
                 broadcastEmbedContext: e.broadcastEmbedContext,
               }),
             );
       };
-      function Yr(e) {
+      function Kr(e) {
         const { event: t } = e;
         let a = (0, Ce.sf)(E.TS.LANGUAGE);
         const i = t.GetImageURLWithFallback("capsule", a),
           r = (0, Ae.j3)(i);
         return n.createElement("div", {
-          className: Er().ClanEventDetailBackground,
+          className: yr().ClanEventDetailBackground,
           style: { backgroundImage: `url(${r})` },
         });
       }
-      function Kr(e) {
+      function Xr(e) {
         const { storeItem: t, bShowDemoButton: a, bPreferDemoStorePage: i } = e;
         if (!t) return null;
         const r = {
@@ -57056,37 +57093,37 @@
         };
         return n.createElement(
           "div",
-          { className: Er().SaleAppWideCtn },
+          { className: yr().SaleAppWideCtn },
           n.createElement(
             yt.Qf,
             {
               item: r,
-              className: Er().SaleAppCapsule,
+              className: yr().SaleAppCapsule,
               bPreferDemoStorePage: i,
             },
             n.createElement("img", {
-              className: Er().WideHeader,
+              className: yr().WideHeader,
               src: null == t ? void 0 : t.GetAssets().GetMainCapsuleURL(),
               alt: null == t ? void 0 : t.GetName(),
             }),
           ),
           n.createElement(
             "div",
-            { className: Er().WideDetailCtn },
+            { className: yr().WideDetailCtn },
             n.createElement(
               "div",
-              { className: Er().AppTitle },
+              { className: yr().AppTitle },
               null == t ? void 0 : t.GetName(),
             ),
             n.createElement(
               "div",
-              { className: Er().ReleaseDate },
+              { className: yr().ReleaseDate },
               null == t ? void 0 : t.GetFormattedSteamReleaseDate(),
             ),
           ),
           n.createElement(
             "div",
-            { className: Er().GameButtons },
+            { className: yr().GameButtons },
             Boolean(P.Fm.Get().BOwnsApp(null == t ? void 0 : t.GetAppID()))
               ? n.createElement(
                   Re.$n,
@@ -57095,19 +57132,19 @@
                 )
               : n.createElement(
                   "div",
-                  { className: Er().GameButton },
-                  n.createElement(Ir._, {
+                  { className: yr().GameButton },
+                  n.createElement(Dr._, {
                     appid: null == t ? void 0 : t.GetAppID(),
                     bIsFree: null == t ? void 0 : t.BIsFree(),
                     bIsComingSoon: null == t ? void 0 : t.BIsComingSoon(),
                   }),
                 ),
             Boolean(a) &&
-              n.createElement(Dr.j, { info: r, className: Er().DemoButton }),
+              n.createElement(Br.j, { info: r, className: yr().DemoButton }),
           ),
         );
       }
-      function Xr(e) {
+      function Zr(e) {
         const { storeItem: t } = e,
           a = (0, Pe.LG)(null == t ? void 0 : t.GetTagIDs()),
           i = {
@@ -57119,7 +57156,7 @@
           };
         return n.createElement(
           "div",
-          { className: Er().SaleTagAndOS },
+          { className: yr().SaleTagAndOS },
           n.createElement(
             "div",
             { className: st().StoreSaleWidgetTags },
@@ -57133,10 +57170,10 @@
                 )
               : void 0,
           ),
-          n.createElement(_r.Q, { item: i }),
+          n.createElement(pr.Q, { item: i }),
         );
       }
-      function Zr(e) {
+      function $r(e) {
         const { storeItem: t } = e,
           a = {
             id: null == t ? void 0 : t.GetID(),
@@ -57147,25 +57184,25 @@
           };
         return n.createElement(
           "div",
-          { className: Er().StatementAndHighlights },
+          { className: yr().StatementAndHighlights },
           n.createElement(
             "div",
-            { className: Er().StatementCtn },
-            n.createElement(Xr, { storeItem: t }),
+            { className: yr().StatementCtn },
+            n.createElement(Zr, { storeItem: t }),
             n.createElement(
               "div",
               null,
               null == t ? void 0 : t.GetShortDescription(),
             ),
           ),
-          n.createElement(Lr.Y, { info: a, bPopOutTrailerPlayback: !0 }),
+          n.createElement(Or.Y, { info: a, bPopOutTrailerPlayback: !0 }),
         );
       }
-      const $r = (e) => {
+      const Jr = (e) => {
         const { event: t, broadcastEmbedContext: a } = e,
           i = n.useCallback(
             (e) => {
-              (0, hr.Y)(t, Na.uX(e)), e.preventDefault();
+              (0, vr.Y)(t, Na.uX(e)), e.preventDefault();
             },
             [t],
           ),
@@ -57173,8 +57210,8 @@
             async (e) => {
               if ((e.preventDefault(), a)) {
                 e.preventDefault();
-                const n = xr(t),
-                  i = Li.j
+                const n = zr(t),
+                  i = Oi.j
                     .Get()
                     .GetStreamsForAppID(n)
                     .sort(
@@ -57182,40 +57219,40 @@
                     ),
                   r = i.length > 0 ? i[0] : void 0;
                 r &&
-                  Li.j.Get().GetPlayReadyStream(a).accountid != r.accountid &&
-                  (await Li.j.Get().AttemptToPlayStream(a, r));
+                  Oi.j.Get().GetPlayReadyStream(a).accountid != r.accountid &&
+                  (await Oi.j.Get().AttemptToPlayStream(a, r));
               }
             },
             [a, t],
           ),
           o = t.BIsEventInFuture(),
           s = (0, Ce.sf)(E.TS.LANGUAGE),
-          l = xr(t),
+          l = zr(t),
           c =
             Boolean(a) &&
             Boolean(l) &&
             !o &&
             !t.BHasEventEnded() &&
-            Li.j.Get().BIsAppStreaming(l);
+            Oi.j.Get().BIsAppStreaming(l);
         return n.createElement(
           "div",
-          { className: Er().EventWideCtn },
+          { className: yr().EventWideCtn },
           n.createElement(
             "div",
-            { className: Er().Title },
+            { className: yr().Title },
             (0, D.we)("#Sale_EventSchedule"),
           ),
           n.createElement(
             "div",
-            { className: Er().EventWideDetailCtn },
+            { className: yr().EventWideDetailCtn },
             n.createElement(
               "div",
-              { className: Er().EventDetails },
+              { className: yr().EventDetails },
               n.createElement(
                 "div",
-                { className: Er().EventIcon },
+                { className: yr().EventIcon },
                 n.createElement("img", {
-                  className: Er().CategoryTypeImage,
+                  className: yr().CategoryTypeImage,
                   width: "40",
                   height: "40",
                   src:
@@ -57230,14 +57267,14 @@
                 null,
                 n.createElement(
                   "div",
-                  { className: Er().EventTitle },
+                  { className: yr().EventTitle },
                   t.GetNameWithFallback(s),
                 ),
                 n.createElement(
                   "div",
-                  { className: Er().EventTime },
+                  { className: yr().EventTime },
                   o
-                    ? (0, gr.KC)(t.startTime, {
+                    ? (0, hr.KC)(t.startTime, {
                         bForce24HourClock: e.bForce24HourClock,
                       }) +
                         " " +
@@ -57248,30 +57285,30 @@
             ),
             n.createElement(
               "div",
-              { className: Er().EventOptionsCtn },
+              { className: yr().EventOptionsCtn },
               c &&
                 n.createElement(
                   Re.$n,
-                  { className: Er().EventDetailsBtn, onClick: r },
+                  { className: yr().EventDetailsBtn, onClick: r },
                   n.createElement(lt.K, null),
                   (0, D.we)("#Sale_WatchNow"),
                 ),
               n.createElement(
-                Ki.tj,
-                { eventModel: t, route: Ki.PH.k_eStoreView },
+                Xi.tj,
+                { eventModel: t, route: Xi.PH.k_eStoreView },
                 n.createElement(
                   Re.$n,
-                  { className: Er().EventDetailsBtn, onClick: i },
+                  { className: yr().EventDetailsBtn, onClick: i },
                   (0, D.we)("#Sale_SeeEventDetails"),
                 ),
               ),
-              o && n.createElement(Br.j, { eventModel: t, lang: s }),
+              o && n.createElement(Ar.j, { eventModel: t, lang: s }),
             ),
           ),
         );
       };
-      var Jr,
-        eo = a(59952);
+      var eo,
+        to = a(59952);
       !(function (e) {
         (e[(e.k_eNone = 0)] = "k_eNone"),
           (e[(e.k_eSecond = 1)] = "k_eSecond"),
@@ -57281,8 +57318,8 @@
           (e[(e.k_eWeek = 5)] = "k_eWeek"),
           (e[(e.k_eMonth = 6)] = "k_eMonth"),
           (e[(e.k_eYear = 7)] = "k_eYear");
-      })(Jr || (Jr = {}));
-      class to {
+      })(eo || (eo = {}));
+      class ao {
         constructor(e) {
           (this.packageid = e.packageid),
             (this.enabled = e.enabled),
@@ -57343,7 +57380,7 @@
           return this.release_date ? Number(this.release_date) : 0;
         }
       }
-      class ao {
+      class no {
         constructor() {
           (this.m_mapPackageInfo = new Map()),
             (this.m_mapMissingPackages = new Map()),
@@ -57362,7 +57399,7 @@
                 ),
               (0, Te.h5)(() =>
                 e.forEach((e) => {
-                  const t = new to(e);
+                  const t = new ao(e);
                   this.m_mapPackageInfo.set(Number(e.packageid), t);
                 }),
               ));
@@ -57448,35 +57485,35 @@
             for (const t of e) {
               const e = Number(t.packageid);
               if (!this.m_mapPackageInfo.has(e)) {
-                const a = new to(t);
+                const a = new ao(t);
                 this.m_mapPackageInfo.set(e, a);
               }
             }
         }
       }
-      (0, we.Cg)([Te.sH], ao.prototype, "m_mapPackageInfo", void 0),
-        (0, we.Cg)([Te.XI], ao.prototype, "AddPackages", null);
-      const no = new ao();
-      window.g_PackageInfoStore = no;
-      var io = a(3088),
-        ro = a(74271),
-        oo = a.n(ro);
-      function so(e, t) {
+      (0, we.Cg)([Te.sH], no.prototype, "m_mapPackageInfo", void 0),
+        (0, we.Cg)([Te.XI], no.prototype, "AddPackages", null);
+      const io = new no();
+      window.g_PackageInfoStore = io;
+      var ro = a(3088),
+        oo = a(74271),
+        so = a.n(oo);
+      function lo(e, t) {
         let a = [];
         for (let n of e.capsules)
           if ("sub" === n.type) {
-            const e = no.GetPackageInfo(n.id);
+            const e = io.GetPackageInfo(n.id);
             if (e) {
               if (e.renewal_time_amount === t) return e.packageid;
             } else a.push(n.id);
           }
-        a.length > 0 && no.LoadPackageInfo(a);
+        a.length > 0 && io.LoadPackageInfo(a);
       }
-      function lo(e, t, a, n) {
+      function co(e, t, a, n) {
         let i = e.createElement("input");
         (i.type = "hidden"), (i.name = a), (i.value = n), t.appendChild(i);
       }
-      function co(e, t) {
+      function uo(e, t) {
         if (!e.renewal_time_amount || !t) return 0;
         const a = Math.ceil(
             (t - e.initial_time_amount) / e.renewal_time_amount,
@@ -57484,7 +57521,7 @@
           n = Math.max(a, 0);
         return e.final_price_cents + n * e.renewal_price_cents;
       }
-      const uo = (0, Ie.PA)((e) => {
+      const mo = (0, Ie.PA)((e) => {
         const t = (0, ue.Gd)(),
           a = (a) => {
             !(function (e, t, a) {
@@ -57499,10 +57536,10 @@
               (i.action = E.TS.STORE_BASE_URL + "cart/"),
                 (i.method = "POST"),
                 (i.style.display = "none"),
-                lo(document, i, "action", "add_to_cart"),
-                lo(document, i, "subid", t.toString()),
-                lo(document, i, "sessionid", E.TS.SESSIONID),
-                lo(document, i, "snr", E.TS.SNR),
+                co(document, i, "action", "add_to_cart"),
+                co(document, i, "subid", t.toString()),
+                co(document, i, "sessionid", E.TS.SESSIONID),
+                co(document, i, "snr", E.TS.SNR),
                 n.document.documentElement.append(i),
                 i.submit();
             })(a, e.sub_package_id, t),
@@ -57520,9 +57557,9 @@
             button_text: m,
             class_name: _,
           } = e,
-          p = no.GetPackageInfo(o),
-          g = no.GetPackageInfo(s);
-        if (!p || (!g && s)) return no.LoadPackageInfo([o, s]), null;
+          p = io.GetPackageInfo(o),
+          g = io.GetPackageInfo(s);
+        if (!p || (!g && s)) return io.LoadPackageInfo([o, s]), null;
         if (!p.formatted_final_price) return null;
         const h = p.formatted_final_price,
           v = p.discount_end_rtime,
@@ -57533,16 +57570,16 @@
                 return;
               let a = e.final_price_cents / t.final_price_cents;
               if (
-                e.renewal_time_units != Jr.k_eNone &&
-                t.renewal_time_units != Jr.k_eNone
+                e.renewal_time_units != eo.k_eNone &&
+                t.renewal_time_units != eo.k_eNone
               ) {
                 if (e.renewal_time_units != t.renewal_time_units) return;
                 const n = Math.max(
                     t.initial_time_amount,
                     e.renewal_time_amount,
                   ),
-                  i = co(e, n),
-                  r = co(t, n);
+                  i = uo(e, n),
+                  r = uo(t, n);
                 if (!i || !r) return;
                 a = i / r;
               }
@@ -57558,13 +57595,13 @@
           (C = (0, D.we)(u, p.renewal_formatted_final_price)));
         let T = null;
         if (r) {
-          const e = (0, eo._D)(r, i);
+          const e = (0, to._D)(r, i);
           let t = null;
           (t =
             "string" == typeof e
               ? n.createElement("img", { src: e })
-              : n.createElement(io.c, { rgSources: e })),
-            (T = n.createElement("div", { className: oo().LogoImg }, t));
+              : n.createElement(ro.c, { rgSources: e })),
+            (T = n.createElement("div", { className: so().LogoImg }, t));
         }
         const I = (function (e) {
           for (let t of e.appids) if (P.Fm.Get().BOwnsApp(t)) return !0;
@@ -57577,8 +57614,8 @@
                 "div",
                 {
                   className: (0, S.A)(
-                    oo().PurchaseButton,
-                    oo().AlreadyOwnedPackage,
+                    so().PurchaseButton,
+                    so().AlreadyOwnedPackage,
                   ),
                 },
                 (0, D.we)("#Sale_Subscription_AlreadyOwnedPackage"),
@@ -57588,8 +57625,8 @@
                   "div",
                   {
                     className: (0, S.A)(
-                      oo().PurchaseButton,
-                      oo().AlreadyOwnedApp,
+                      so().PurchaseButton,
+                      so().AlreadyOwnedApp,
                     ),
                   },
                   (0, D.we)("#Sale_Subscription_AlreadyOwnedApp"),
@@ -57597,7 +57634,7 @@
               : n.createElement(
                   "div",
                   {
-                    className: (0, S.A)(oo().PurchaseButton, oo().UnOwned),
+                    className: (0, S.A)(so().PurchaseButton, so().UnOwned),
                     onClick: a,
                   },
                   m,
@@ -57606,7 +57643,7 @@
             "div",
             {
               className: (0, S.A)(
-                oo().SubscriptionBlock,
+                so().SubscriptionBlock,
                 "SubscriptionBlock",
                 _,
               ),
@@ -57614,14 +57651,14 @@
             T,
             n.createElement(
               "div",
-              { className: oo().PriceBlock },
+              { className: so().PriceBlock },
               n.createElement(
                 "span",
                 {
                   className: (0, S.A)(
-                    oo().PriceDisplay,
+                    so().PriceDisplay,
                     "PriceDisplay",
-                    Boolean(v) ? oo().LimitedDiscount : "",
+                    Boolean(v) ? so().LimitedDiscount : "",
                   ),
                 },
                 f,
@@ -57630,19 +57667,19 @@
                 n.createElement(
                   "span",
                   {
-                    className: (0, S.A)(oo().SavingsDisplay, "SavingsDisplay"),
+                    className: (0, S.A)(so().SavingsDisplay, "SavingsDisplay"),
                   },
                   w,
                 ),
             ),
             n.createElement(
               "div",
-              { className: oo().BodyTextBlock },
+              { className: so().BodyTextBlock },
               C,
               Boolean(v) &&
                 n.createElement(
                   "div",
-                  { className: oo().ExpirationTextBlock },
+                  { className: so().ExpirationTextBlock },
                   (0, D.PP)(
                     "#Sale_Subscription_NewSubsOfferEnds",
                     (0, D.$z)(v),
@@ -57653,12 +57690,12 @@
           )
         );
       });
-      let mo = class extends n.Component {
+      let _o = class extends n.Component {
         render() {
           var e;
           const { section: t, language: a } = this.props,
-            i = so(t, 12),
-            r = so(t, 1),
+            i = lo(t, 12),
+            r = lo(t, 1),
             o =
               null === (e = t.internal_section_data) || void 0 === e
                 ? void 0
@@ -57668,16 +57705,16 @@
             { feature: "salesubscription" },
             n.createElement(
               "div",
-              { className: oo().MainBlock },
+              { className: so().MainBlock },
               n.createElement(
                 "span",
-                { className: oo().SelectAPlan },
+                { className: so().SelectAPlan },
                 (0, D.we)("#Sale_Subscription_SelectPlan"),
               ),
               n.createElement(
                 "div",
-                { className: oo().SubscriptionListBlock },
-                n.createElement(uo, {
+                { className: so().SubscriptionListBlock },
+                n.createElement(mo, {
                   sub_package_id: i,
                   logo_image: o,
                   language: a,
@@ -57690,7 +57727,7 @@
                     "#Sale_Subscription_Annual_Body_Discount",
                   button_text: (0, D.we)("#Sale_Subscription_Annual_Button"),
                 }),
-                n.createElement(uo, {
+                n.createElement(mo, {
                   sub_package_id: r,
                   logo_image: o,
                   language: a,
@@ -57707,11 +57744,11 @@
           );
         }
       };
-      mo = (0, we.Cg)([Ie.PA], mo);
-      var _o = a(63741);
-      class po {
+      _o = (0, we.Cg)([Ie.PA], _o);
+      var po = a(63741);
+      class go {
         static Get() {
-          return po.s_Singleton || (po.s_Singleton = new po()), po.s_Singleton;
+          return go.s_Singleton || (go.s_Singleton = new go()), go.s_Singleton;
         }
         constructor() {
           (this.m_mapGenreToStickerResponse = new Map()),
@@ -57823,29 +57860,29 @@
           );
         }
       }
-      function go(e) {
+      function ho(e) {
         const t = n.useRef(null);
         n.useEffect(() => {
           const e = w().CancelToken.source();
           return (t.current = e), () => e.cancel("useGenreClaim: unmounting");
         }, []),
-          po.Get().LoadClaimForGenre(e, t.current);
+          go.Get().LoadClaimForGenre(e, t.current);
         return [
-          po.Get().GetClaimForGenre(e),
+          go.Get().GetClaimForGenre(e),
           async (a) => {
-            await po.Get().MakeClaimForGenre(e, a, t.current);
+            await go.Get().MakeClaimForGenre(e, a, t.current);
           },
         ];
       }
-      (0, we.Cg)([Te.sH], po.prototype, "m_mapGenreToStickerResponse", void 0),
-        (0, we.Cg)([Te.sH], po.prototype, "m_eStoryBadgeGranted", void 0);
-      function ho(e) {
-        const [t] = go(e);
+      (0, we.Cg)([Te.sH], go.prototype, "m_mapGenreToStickerResponse", void 0),
+        (0, we.Cg)([Te.sH], go.prototype, "m_eStoryBadgeGranted", void 0);
+      function vo(e) {
+        const [t] = ho(e);
         return (null == t ? void 0 : t.sticker_def)
           ? `${E.TS.MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${t.sticker_def.item_image_small}`
           : null;
       }
-      const vo = [
+      const So = [
         null,
         {
           eGenre: 1,
@@ -58058,9 +58095,9 @@
           strGenreName: "#Summer21_Story_Anime_Genre",
         },
       ];
-      var So = a(45585),
-        Eo = a.n(So);
-      const yo = (0, Ie.PA)((e) => {
+      var Eo = a(45585),
+        yo = a.n(Eo);
+      const bo = (0, Ie.PA)((e) => {
           var t, a;
           const { section: i, event: r, language: o } = e,
             s =
@@ -58074,8 +58111,8 @@
                 "https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap"),
               document.head.appendChild(e);
           }, []);
-          const l = ho(s),
-            [c] = go(s),
+          const l = vo(s),
+            [c] = ho(s),
             d = !!(null == c ? void 0 : c.choice);
           let m = i.background_gradient_top || "dimgray",
             _ = i.label_color || "black";
@@ -58106,7 +58143,7 @@
                 : (e) => {
                     const t = (0, Na.uX)(e);
                     (0, Da.mK)(
-                      n.createElement(bo, { eGenre: s, language: o }),
+                      n.createElement(fo, { eGenre: s, language: o }),
                       t,
                       { bNeverPopOut: !0 },
                     );
@@ -58128,14 +58165,14 @@
             );
           return n.createElement(
             "div",
-            { className: (0, S.A)(u().SaleSection, Eo().SaleSection) },
+            { className: (0, S.A)(u().SaleSection, yo().SaleSection) },
             n.createElement(
               "div",
-              { className: Eo().BookmarkCtn, onClick: v },
+              { className: yo().BookmarkCtn, onClick: v },
               n.createElement(
                 "svg",
                 {
-                  className: Eo().BookmarkTriangle,
+                  className: yo().BookmarkTriangle,
                   viewBox: "0 0 120 100",
                   preserveAspectRatio: "none",
                   style: { color: m },
@@ -58151,15 +58188,15 @@
               ),
               n.createElement(
                 "div",
-                { className: Eo().BookmarkText, style: p },
+                { className: yo().BookmarkText, style: p },
                 n.createElement(
                   "div",
-                  { className: Eo().BookmarkFirstLine },
+                  { className: yo().BookmarkFirstLine },
                   y,
                 ),
                 n.createElement(
                   "div",
-                  { className: Eo().BookmarkSecondLine },
+                  { className: yo().BookmarkSecondLine },
                   b,
                 ),
               ),
@@ -58167,14 +58204,14 @@
                 "div",
                 {
                   className: (0, S.A)(
-                    Eo().BookmarkIcon,
-                    d && Eo().BookmarkBadgedIcon,
+                    yo().BookmarkIcon,
+                    d && yo().BookmarkBadgedIcon,
                   ),
                   style: p,
                 },
                 d
                   ? n.createElement("img", {
-                      className: Eo().BookmarkBadge,
+                      className: yo().BookmarkBadge,
                       src: l,
                     })
                   : n.createElement(g.Zo0, null),
@@ -58182,12 +58219,12 @@
             ),
           );
         }),
-        bo = (0, Ie.PA)((e) => {
+        fo = (0, Ie.PA)((e) => {
           const { closeModal: t, eGenre: a, language: i } = e,
             r = (function (e) {
-              return !e || e >= vo.length ? null : vo[e];
+              return !e || e >= So.length ? null : So[e];
             })(a),
-            [o, s] = go(a),
+            [o, s] = ho(a),
             l = null == o ? void 0 : o.choice,
             c = 1 === l,
             d = 2 === l,
@@ -58202,59 +58239,59 @@
           return n.createElement(
             Ia.eV,
             {
-              className: (0, S.A)(Eo().StoryDialog, (0, Ce.Lg)(i)),
+              className: (0, S.A)(yo().StoryDialog, (0, Ce.Lg)(i)),
               closeModal: t,
               bHideCloseIcon: !0,
             },
             n.createElement(
-              _o.A,
+              po.A,
               {
                 timeout: 500,
                 in: !0,
                 appear: !0,
                 classNames: {
-                  appearActive: Eo().Opening,
-                  enterDone: Eo().Open,
+                  appearActive: yo().Opening,
+                  enterDone: yo().Open,
                 },
               },
               n.createElement(
                 "div",
                 {
                   className: (0, S.A)(
-                    Eo().StoryPage,
-                    Eo().PageOne,
-                    u && Eo().OnPageTwo,
+                    yo().StoryPage,
+                    yo().PageOne,
+                    u && yo().OnPageTwo,
                   ),
                 },
                 n.createElement(
                   "div",
-                  { className: Eo().StoryHeader },
+                  { className: yo().StoryHeader },
                   n.createElement(
                     "div",
-                    { className: Eo().PageNumber },
+                    { className: yo().PageNumber },
                     (0, D.we)(r.strPageNumber),
                   ),
                   n.createElement(
                     "div",
-                    { className: Eo().PageTitle },
+                    { className: yo().PageTitle },
                     (0, D.we)(r.strPageTitle),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: Eo().PageText },
+                  { className: yo().PageText },
                   (0, D.we)(r.strPageText),
                 ),
                 n.createElement(
                   "div",
-                  { className: Eo().PageFooter },
+                  { className: yo().PageFooter },
                   n.createElement(
                     "div",
-                    { className: Eo().NoticeBox },
+                    { className: yo().NoticeBox },
                     n.createElement(
                       "a",
                       {
-                        className: Eo().OptionTextNotice,
+                        className: yo().OptionTextNotice,
                         href: E.TS.STORE_BASE_URL + "forgeyourfate",
                       },
                       (0, D.we)("#Summer_21_Story_Decide_Notice"),
@@ -58263,7 +58300,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, S.A)(Eo().OptionText, d && Eo().Disabled),
+                      className: (0, S.A)(yo().OptionText, d && yo().Disabled),
                       onClick: () => _(1),
                     },
                     (0, D.we)(r.strOptionA),
@@ -58271,7 +58308,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, S.A)(Eo().OptionText, c && Eo().Disabled),
+                      className: (0, S.A)(yo().OptionText, c && yo().Disabled),
                       onClick: () => _(2),
                     },
                     (0, D.we)(r.strOptionB),
@@ -58284,37 +58321,37 @@
                 "div",
                 {
                   className: (0, S.A)(
-                    Eo().StoryPage,
-                    Eo().PageTwo,
-                    u && Eo().OnPageTwo,
+                    yo().StoryPage,
+                    yo().PageTwo,
+                    u && yo().OnPageTwo,
                   ),
                 },
                 n.createElement(
                   "div",
-                  { className: Eo().StoryHeader },
+                  { className: yo().StoryHeader },
                   n.createElement(
                     "div",
-                    { className: Eo().PageNumber },
+                    { className: yo().PageNumber },
                     (0, D.we)(c ? r.strPageNumberA : r.strPageNumberB),
                   ),
                   n.createElement(
                     "div",
-                    { className: Eo().PageTitle },
+                    { className: yo().PageTitle },
                     (0, D.we)(r.strPageTitle),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: Eo().PageText },
+                  { className: yo().PageText },
                   (0, D.we)(c ? r.strResultA : r.strResultB),
                 ),
                 n.createElement(
                   "div",
-                  { className: Eo().PageFooter },
+                  { className: yo().PageFooter },
                   n.createElement(
                     "a",
                     {
-                      className: Eo().OptionText,
+                      className: yo().OptionText,
                       href:
                         E.TS.STORE_BASE_URL +
                         "forgeyourfate" +
@@ -58329,15 +58366,15 @@
                     ),
                   ),
                 ),
-                n.createElement(fo, { eGenre: a }),
+                n.createElement(wo, { eGenre: a }),
               ),
           );
         }),
-        fo = (e) => {
+        wo = (e) => {
           var t;
           const { eGenre: a } = e,
-            [i] = go(a),
-            r = ho(a),
+            [i] = ho(a),
+            r = vo(a),
             [o, s] = n.useState(!0);
           if (
             (n.useEffect(() => {
@@ -58350,29 +58387,29 @@
           const l =
             E.TS.COMMUNITY_BASE_URL + "profiles/" + E.iA.steamid + "/inventory";
           return n.createElement(
-            _o.A,
+            po.A,
             {
               timeout: 500,
               in: !0,
               appear: !0,
-              classNames: { appearActive: Eo().Opening, enterDone: Eo().Open },
+              classNames: { appearActive: yo().Opening, enterDone: yo().Open },
             },
             n.createElement(
               "div",
-              { className: Eo().ResultBadge },
+              { className: yo().ResultBadge },
               n.createElement(
                 "a",
                 { href: l },
-                n.createElement("img", { className: Eo().BadgeImage, src: r }),
+                n.createElement("img", { className: yo().BadgeImage, src: r }),
               ),
               n.createElement(
                 "div",
-                { className: Eo().BadgeText },
+                { className: yo().BadgeText },
                 (0, D.we)("#Summer_21_Story_Sticker_Unlock"),
               ),
               n.createElement(
                 "div",
-                { className: Eo().BadgeTitle },
+                { className: yo().BadgeTitle },
                 null === (t = null == i ? void 0 : i.sticker_def) ||
                   void 0 === t
                   ? void 0
@@ -58380,21 +58417,21 @@
               ),
               n.createElement(
                 "a",
-                { className: Eo().BadgeFooter, href: l },
+                { className: yo().BadgeFooter, href: l },
                 (0, D.we)("#Summer_21_Story_Sticker_Inventory"),
               ),
             ),
           );
         };
-      var wo = a(23809),
-        Co = a(4869),
-        To = a(26182),
-        Io = a(92298);
-      function Do(e) {
+      var Co = a(23809),
+        To = a(4869),
+        Io = a(26182),
+        Do = a(92298);
+      function Bo(e) {
         const { controllerCategory: t, setControllerCategory: a } = e,
           i = (0, E.Qn)(),
           { data: r } = (function () {
-            (0, wo.KV)(), (0, Io.L)();
+            (0, Co.KV)(), (0, Do.L)();
             return (0, Ft.I)({
               queryKey: ["GetControllersUsed"],
               queryFn: async () => {
@@ -58468,12 +58505,12 @@
           },
           n.createElement(
             "div",
-            { className: To.FilterHeading },
+            { className: Io.FilterHeading },
             (0, D.we)("#Store_ControllerFilter_Heading"),
           ),
           n.createElement(
             "div",
-            { className: To.ControllerFilterCtn },
+            { className: Io.ControllerFilterCtn },
             o.map((e) =>
               n.createElement(
                 pe.ml,
@@ -58481,20 +58518,20 @@
                   key: "controller_" + e.value,
                   onClick: () => a(e.value),
                   className: (0, S.A)({
-                    [To.ControllerFilter]: !0,
-                    [To.ControllerFilterActive]: t == e.value,
+                    [Io.ControllerFilter]: !0,
+                    [Io.ControllerFilterActive]: t == e.value,
                   }),
                 },
                 n.createElement(
                   "div",
-                  { className: To.ControllerFilterIcon },
-                  n.createElement(Co.pcV, {
+                  { className: Io.ControllerFilterIcon },
+                  n.createElement(To.pcV, {
                     controllerType: (0, y.ZI)(e.value),
                   }),
                 ),
                 n.createElement(
                   "div",
-                  { className: To.ControllerFilterName },
+                  { className: Io.ControllerFilterName },
                   (0, D.we)(e.label),
                 ),
               ),
@@ -58503,8 +58540,8 @@
         );
       }
       a(17690);
-      var Bo = a(75487);
-      class Ao {
+      var Ao = a(75487);
+      class Go {
         BIsPlaytimeLoaded() {
           return Boolean(this.m_mapPlaytime);
         }
@@ -58706,7 +58743,7 @@
             n = null;
           try {
             await P.Fm.Get().HintLoad();
-            const i = F.w.Init(Bo.BL);
+            const i = F.w.Init(Ao.BL);
             if (
               (i.Body().set_queue_type("discounted" === e.strFlavor ? 8 : 7),
               i.Body().set_country_code(E.TS.COUNTRY || "US"),
@@ -58752,7 +58789,7 @@
                   .store_page_filter()
                   .sale_filter()
                   .set_sale_tagid(e.nSaleTagID);
-            const r = await Bo.nd.GetDiscoveryQueue(this.m_serviceTransport, i);
+            const r = await Ao.nd.GetDiscoveryQueue(this.m_serviceTransport, i);
             if (1 === r.GetEResult()) {
               if (
                 (null === (t = r.Body().appids()) || void 0 === t
@@ -59022,12 +59059,12 @@
           "dev" === E.TS.WEB_UNIVERSE && (window.g_dlcForYouStore = this);
         }
         static Get() {
-          return Ao.s_singleton || (Ao.s_singleton = new Ao()), Ao.s_singleton;
+          return Go.s_singleton || (Go.s_singleton = new Go()), Go.s_singleton;
         }
       }
-      var Go = a(25809),
-        Mo = a(72872);
-      function ko(e) {
+      var Mo = a(25809),
+        ko = a(72872);
+      function No(e) {
         var t, a, r, o, l, u, p;
         const { event: g, section: h, activeTab: v } = e,
           y = (function (e) {
@@ -59092,32 +59129,32 @@
                     : l.group_by_parent_app
                 )
                   ? "popular" === i
-                    ? Ao.Get()
+                    ? Go.Get()
                         .LoadPopularDLCByApp(
                           d,
                           { ...t.dlc_for_you_data, parent_app_sort: i },
                           r,
                         )
                         .then(() => {
-                          const e = Ao.Get().GetPopularDLCByApp(d);
+                          const e = Go.Get().GetPopularDLCByApp(d);
                           _(e.slice(0, r)), g(e.length > r), c(!1);
                         })
-                    : Ao.Get()
+                    : Go.Get()
                         .LoadDLCForAppsFiltered(
                           d,
                           { ...t.dlc_for_you_data, parent_app_sort: i },
                           r,
                         )
                         .then((e) => {
-                          u(Ao.Get().GetPlaytime()),
+                          u(Go.Get().GetPlaytime()),
                             _(e.rgDLC),
                             g(e.bMoreAvailable),
                             c(!1);
                         })
-                  : Ao.Get()
+                  : Go.Get()
                       .LoadDLC(d)
                       .then(() => {
-                        _([Ao.Get().GetDLC(d)]), c(!1);
+                        _([Go.Get().GetDLC(d)]), c(!1);
                       });
               }, [e, s, a, r, t, t.dlc_for_you_data, i, o]),
               {
@@ -59159,7 +59196,7 @@
               ? n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(Ro, {
+                  n.createElement(Fo, {
                     ...e,
                     value: w,
                     onChange: (e) => {
@@ -59220,8 +59257,8 @@
                         Boolean(f) &&
                         f > 0 &&
                         (0, D.we)("#DLCForYou_ParentApp_Playtime") +
-                          (0, Go.l)(f);
-                    return n.createElement(Po, {
+                          (0, Mo.l)(f);
+                    return n.createElement(Ro, {
                       key: "capsules_for_app_" + t[0].id,
                       capsules: t,
                       title: v.GetName(),
@@ -59238,7 +59275,7 @@
                   (null == I ? void 0 : I.bMoreAvailable) &&
                     n.createElement(
                       "div",
-                      { className: Mo.ShowMore },
+                      { className: ko.ShowMore },
                       n.createElement(
                         Re.$n,
                         {
@@ -59264,8 +59301,8 @@
                     null === (p = h.dlc_for_you_data) || void 0 === p
                       ? void 0
                       : p.hide_dlc_stats,
-                  ) && n.createElement(No, { ...e }),
-                  n.createElement(Po, {
+                  ) && n.createElement(Po, { ...e }),
+                  n.createElement(Ro, {
                     capsules: N[0],
                     bPreferDemoStorePage: h.prefer_demo_store_page,
                     ...e,
@@ -59286,15 +59323,15 @@
               )
         );
       }
-      function No(e) {
+      function Po(e) {
         const { bLoading: t, dlcStats: a } = (function () {
           const [e, t] = (0, n.useState)();
           return (
             (0, n.useEffect)(() => {
-              Ao.Get()
+              Go.Get()
                 .LoadDLCStats()
                 .then(() => {
-                  t(Ao.Get().GetDLCStats());
+                  t(Go.Get().GetDLCStats());
                 });
             }, []),
             { bLoading: !e, dlcStats: e }
@@ -59304,7 +59341,7 @@
           "div",
           {
             className: (0, S.A)(
-              Mo.DLCStatsCtn,
+              ko.DLCStatsCtn,
               d.SaleSection,
               d.CarouselDisplay,
               s.SaleSectionCtn,
@@ -59314,53 +59351,53 @@
           !t &&
             n.createElement(
               "div",
-              { className: Mo.DLCStatsInnerCtn },
+              { className: ko.DLCStatsInnerCtn },
               n.createElement(
                 "div",
-                { className: Mo.DLCStatColumn },
+                { className: ko.DLCStatColumn },
                 n.createElement(
                   "div",
-                  { className: Mo.DLCStatNumber },
+                  { className: ko.DLCStatNumber },
                   a.nGamesOwned,
                 ),
                 n.createElement(
                   "div",
-                  { className: Mo.DLCStatDesc },
+                  { className: ko.DLCStatDesc },
                   (0, D.we)("#DLCForYou_GamesInLibrary"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: Mo.DLCStatColumn },
+                { className: ko.DLCStatColumn },
                 n.createElement(
                   "div",
-                  { className: Mo.DLCStatNumber },
+                  { className: ko.DLCStatNumber },
                   a.nDLCOwned,
                 ),
                 n.createElement(
                   "div",
-                  { className: Mo.DLCStatDesc },
+                  { className: ko.DLCStatDesc },
                   (0, D.we)("#DLCForYou_DLCInLibrary"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: Mo.DLCStatColumn },
+                { className: ko.DLCStatColumn },
                 n.createElement(
                   "div",
-                  { className: Mo.DLCStatNumber },
+                  { className: ko.DLCStatNumber },
                   a.nDLCNotOwned,
                 ),
                 n.createElement(
                   "div",
-                  { className: Mo.DLCStatDesc },
+                  { className: ko.DLCStatDesc },
                   (0, D.we)("#DLCForYou_DLCAvailable"),
                 ),
               ),
             ),
         );
       }
-      function Po(e) {
+      function Ro(e) {
         var t, a, r;
         const {
             event: o,
@@ -59439,9 +59476,9 @@
                   [d.SaleSection]: !0,
                   [d.CarouselDisplay]: !0,
                   [s.SaleSectionCtn]: !0,
-                  [Mo.GameCtn]: !0,
+                  [ko.GameCtn]: !0,
                   SaleSectionForCustomCSS: !0,
-                  [Mo.GameCtnNoBackground]: !Boolean(
+                  [ko.GameCtnNoBackground]: !Boolean(
                     null === (t = l.dlc_for_you_data) || void 0 === t
                       ? void 0
                       : t.group_by_parent_app,
@@ -59449,7 +59486,7 @@
                 }),
               },
               n.createElement("div", {
-                className: Mo.BackgroundImage,
+                className: ko.BackgroundImage,
                 style: { backgroundImage: `url(${v})` },
               }),
               n.createElement(
@@ -59458,7 +59495,7 @@
                   "flow-children": "row",
                   className: (0, S.A)({
                     [d.SaleSectionTitleCtn]: !0,
-                    [Mo.DLCSectionTitle]:
+                    [ko.DLCSectionTitle]:
                       null === (a = l.dlc_for_you_data) || void 0 === a
                         ? void 0
                         : a.group_by_parent_app,
@@ -59469,7 +59506,7 @@
                   : r.group_by_parent_app) &&
                   n.createElement(
                     "div",
-                    { className: Mo.BaseGameCapsuleCtn },
+                    { className: ko.BaseGameCapsuleCtn },
                     n.createElement(
                       ve.oj,
                       { appid: A },
@@ -59483,7 +59520,7 @@
                           pe.Ii,
                           { href: M },
                           n.createElement("img", {
-                            className: Mo.FullGameArtwork,
+                            className: ko.FullGameArtwork,
                             src: G,
                           }),
                         ),
@@ -59494,7 +59531,7 @@
                 Boolean(h) &&
                   n.createElement(
                     "div",
-                    { className: Mo.SectionTitle },
+                    { className: ko.SectionTitle },
                     n.createElement(
                       Pn.q,
                       { url: h },
@@ -59537,7 +59574,7 @@
                               "div",
                               {
                                 key: "dlc_" + e.id,
-                                className: Mo.CarouselDlcCapsule,
+                                className: ko.CarouselDlcCapsule,
                               },
                               n.createElement(Je.W, {
                                 capsule: e,
@@ -59572,7 +59609,7 @@
               ),
             );
       }
-      function Ro(e) {
+      function Fo(e) {
         var t, a;
         const { event: i, section: r, value: o, onChange: l } = e,
           u = (0, E.Qn)(),
@@ -59589,7 +59626,7 @@
           "div",
           {
             className: (0, S.A)(
-              Mo.ParentAppSortTabsCtn,
+              ko.ParentAppSortTabsCtn,
               d.SaleSection,
               d.CarouselDisplay,
               s.SaleSectionCtn,
@@ -59599,10 +59636,10 @@
           },
           n.createElement(
             "div",
-            { className: Mo.ParentAppSortTabScrollCtn },
+            { className: ko.ParentAppSortTabScrollCtn },
             n.createElement(
               "div",
-              { className: Mo.ParentAppSortTabHeader },
+              { className: ko.ParentAppSortTabHeader },
               (0, D.we)("#DLCForYou_SortTabs_Show"),
             ),
             (null ===
@@ -59622,8 +59659,8 @@
                       {
                         key: e.value,
                         className: (0, S.A)({
-                          [Mo.ParentAppSortTab]: !0,
-                          [Mo.ParentAppSortTabActive]: o === e.value,
+                          [ko.ParentAppSortTab]: !0,
+                          [ko.ParentAppSortTabActive]: o === e.value,
                         }),
                         onClick: () => l && l(e.value),
                       },
@@ -59638,8 +59675,8 @@
                     pe.ml,
                     {
                       className: (0, S.A)({
-                        [Mo.ParentAppSortTab]: !0,
-                        [Mo.ParentAppSortTabActive]: "last_played" === o,
+                        [ko.ParentAppSortTab]: !0,
+                        [ko.ParentAppSortTabActive]: "last_played" === o,
                       }),
                       onClick: () => l && l("last_played"),
                     },
@@ -59649,8 +59686,8 @@
                     pe.ml,
                     {
                       className: (0, S.A)({
-                        [Mo.ParentAppSortTab]: !0,
-                        [Mo.ParentAppSortTabActive]: "playtime" === o,
+                        [ko.ParentAppSortTab]: !0,
+                        [ko.ParentAppSortTabActive]: "playtime" === o,
                       }),
                       onClick: () => l && l("playtime"),
                     },
@@ -59660,14 +59697,14 @@
           ),
         );
       }
-      var Fo = a(93973);
-      function Lo(e) {
+      var Lo = a(93973);
+      function Oo(e) {
         const { countDownUntil: t, fnCallbackOnZero: a, ...i } = e,
           [r, o] = (0, n.useState)(
             Math.floor(Math.max(0, t.getTime() - Fn.tB()) / 1e3),
           ),
           s = n.useRef(null);
-        n.useEffect(() => (zo(s, t, o), () => xo(s)), [t]),
+        n.useEffect(() => (Uo(s, t, o), () => zo(s)), [t]),
           n.useEffect(() => {
             0 == r && a && a();
           }, [a, r]);
@@ -59677,39 +59714,39 @@
         return n.createElement(
           "span",
           { style: { fontFamily: "monospace" }, ...i },
-          Oo(l),
+          xo(l),
           ":",
-          Oo(c),
+          xo(c),
           ":",
-          Oo(d),
+          xo(d),
         );
       }
-      function Oo(e) {
+      function xo(e) {
         return e.toString().padStart(2, "0");
       }
-      function xo(e) {
+      function zo(e) {
         (null == e ? void 0 : e.current) &&
           (window.clearTimeout(e.current), (e.current = null));
       }
-      function zo(e, t, a) {
-        xo(e);
+      function Uo(e, t, a) {
+        zo(e);
         const n = Fn.tB(),
           i = Math.floor(Math.max(0, t.getTime() - n) / 1e3);
         a(i),
           i >= 0 &&
             e &&
-            (e.current = window.setTimeout(() => zo(e, t, a), 1e3));
+            (e.current = window.setTimeout(() => Uo(e, t, a), 1e3));
       }
-      var Uo,
-        Ho = a(90874),
-        jo = a(85637);
-      function Wo(e) {
+      var Ho,
+        jo = a(90874),
+        Wo = a(85637);
+      function qo(e) {
         var t, a, i, r;
         const { event: o, section: s, language: u } = e,
           m = (0, E.Qn)(),
           _ = (0, ca.MU)(),
           [g] = (0, Mn.QD)("beta", !1),
-          b = (0, Fo.Oz)(),
+          b = (0, Lo.Oz)(),
           f =
             !b.bLoading &&
             (_ || g) &&
@@ -59732,7 +59769,7 @@
                 className: (0, S.A)(
                   d.SaleSection,
                   l().SaleSectionCtn,
-                  jo.ClaimSaleSection,
+                  Wo.ClaimSaleSection,
                   "SaleClaimItemCSS",
                 ),
                 style: (0, c.V)(s, o, m),
@@ -59740,11 +59777,11 @@
               n.createElement(ce.jR, { section: s, event: o, language: u }),
               n.createElement(
                 "div",
-                { className: jo.ClaimCtn },
+                { className: Wo.ClaimCtn },
                 n.createElement(
                   "div",
                   {
-                    className: (0, S.A)(jo.ClaimTitle, "ClaimTitle"),
+                    className: (0, S.A)(Wo.ClaimTitle, "ClaimTitle"),
                     style: (0, ce.EB)(s, o, u),
                   },
                   (0, D.we)("#Sale_Section_Redeem_Message"),
@@ -59759,14 +59796,14 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, S.A)(jo.NextStop, "ClaimNextStop"),
+                      className: (0, S.A)(Wo.NextStop, "ClaimNextStop"),
                       style: (0, ce.EB)(s, o, u),
                     },
                     (0, D.we)("#Sale_Section_Redeem_NoItem"),
                   ),
                 Boolean(b.bCanClaimNewItem) &&
-                  n.createElement(Ho.m, {
-                    className: (0, S.A)(jo.ClaimButton, "ClaimButton"),
+                  n.createElement(jo.m, {
+                    className: (0, S.A)(Wo.ClaimButton, "ClaimButton"),
                     bPreviewMode: _,
                     rewardType: 0,
                     strButtonOverride:
@@ -59791,17 +59828,17 @@
                 Boolean(b.rtNextClaimTime && !b.bCanClaimNewItem) &&
                   n.createElement(
                     "div",
-                    { className: jo.NextStop },
+                    { className: Wo.NextStop },
                     n.createElement(
                       "span",
                       {
                         style: (0, ce.EB)(s, o, u),
-                        className: (0, S.A)(jo.Title, "ClaimTimerTitle"),
+                        className: (0, S.A)(Wo.Title, "ClaimTimerTitle"),
                       },
                       (0, D.we)("#Sale_Section_Redeem_Countdown"),
                     ),
-                    n.createElement(Lo, {
-                      className: (0, S.A)(jo.Timer, "ClaimTimer"),
+                    n.createElement(Oo, {
+                      className: (0, S.A)(Wo.Timer, "ClaimTimer"),
                       countDownUntil: new Date(1e3 * b.rtNextClaimTime),
                     }),
                   ),
@@ -59813,7 +59850,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, S.A)(jo.NextStop, "ClaimNextStop"),
+                      className: (0, S.A)(Wo.NextStop, "ClaimNextStop"),
                       style: (0, ce.EB)(s, o, u),
                     },
                     (0, D.we)("#Sale_Section_Redeem_AlreadyRedeemed"),
@@ -59827,29 +59864,29 @@
               {
                 style: { backgroundColor: "hotpink" },
                 onClick: (e) =>
-                  (0, Da.pg)(n.createElement(qo, null), (0, Na.uX)(e)),
+                  (0, Da.pg)(n.createElement(Vo, null), (0, Na.uX)(e)),
               },
               "Test: Change Claim Item State",
             ),
         );
       }
-      function qo(e) {
+      function Vo(e) {
         const { closeModal: t } = e,
-          a = (0, Fo.Oz)(),
-          { fnSetClaimState: i } = (0, Fo.lu)(),
-          [r, o] = (0, n.useState)(Uo.k_ClaimState_None);
+          a = (0, Lo.Oz)(),
+          { fnSetClaimState: i } = (0, Lo.lu)(),
+          [r, o] = (0, n.useState)(Ho.k_ClaimState_None);
         return (
           (0, n.useEffect)(() => {
             a.bLoading ||
               (a.bCanClaimNewItem || a.bAlreadyClaimedCurrentItem
                 ? a.bCanClaimNewItem
-                  ? o(Uo.k_ClaimState_Now)
+                  ? o(Ho.k_ClaimState_Now)
                   : a.rtNextClaimTime
-                    ? o(Uo.k_ClaimState_Next)
+                    ? o(Ho.k_ClaimState_Next)
                     : !a.bCanClaimNewItem &&
                       a.bAlreadyClaimedCurrentItem &&
-                      o(Uo.k_ClaimState_NoMoreClaimsLeft)
-                : o(Uo.k_ClaimState_None));
+                      o(Ho.k_ClaimState_NoMoreClaimsLeft)
+                : o(Ho.k_ClaimState_None));
           }, [
             a.bAlreadyClaimedCurrentItem,
             a.bCanClaimNewItem,
@@ -59863,20 +59900,20 @@
               closeModal: t,
               onOK: () => {
                 switch (r) {
-                  case Uo.k_ClaimState_None:
+                  case Ho.k_ClaimState_None:
                     i({ bAlreadyClaimedCurrentItem: !1, bCanClaimNewItem: !1 });
                     break;
-                  case Uo.k_ClaimState_Now:
+                  case Ho.k_ClaimState_Now:
                     i({ bCanClaimNewItem: !0, bAlreadyClaimedCurrentItem: !1 });
                     break;
-                  case Uo.k_ClaimState_Next:
+                  case Ho.k_ClaimState_Next:
                     i({
                       bCanClaimNewItem: !1,
                       bAlreadyClaimedCurrentItem: !0,
                       rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
                     });
                     break;
-                  case Uo.k_ClaimState_NoMoreClaimsLeft:
+                  case Ho.k_ClaimState_NoMoreClaimsLeft:
                     i({ bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !0 });
                 }
                 t && t();
@@ -59892,22 +59929,22 @@
               },
               n.createElement(
                 Re.a,
-                { value: Uo.k_ClaimState_None },
+                { value: Ho.k_ClaimState_None },
                 "No Claimable item",
               ),
               n.createElement(
                 Re.a,
-                { value: Uo.k_ClaimState_Now },
+                { value: Ho.k_ClaimState_Now },
                 "Claim Now",
               ),
               n.createElement(
                 Re.a,
-                { value: Uo.k_ClaimState_Next },
+                { value: Ho.k_ClaimState_Next },
                 "Claimed, Next Available...",
               ),
               n.createElement(
                 Re.a,
-                { value: Uo.k_ClaimState_NoMoreClaimsLeft },
+                { value: Ho.k_ClaimState_NoMoreClaimsLeft },
                 "Claimed, No more Claimable item",
               ),
             ),
@@ -59919,10 +59956,10 @@
           (e.k_ClaimState_Now = "claimnow"),
           (e.k_ClaimState_Next = "nextclaim"),
           (e.k_ClaimState_NoMoreClaimsLeft = "nomoreclaims");
-      })(Uo || (Uo = {}));
-      var Vo = a(38886),
-        Qo = a(70809);
-      function Yo(e) {
+      })(Ho || (Ho = {}));
+      var Qo = a(38886),
+        Yo = a(70809);
+      function Ko(e) {
         var t, a;
         const { section: i, language: r, event: o } = e,
           s = (0, n.useMemo)(() => {
@@ -59984,7 +60021,7 @@
                         : t.while_supplies_last_option) || void 0 === a
                     ? void 0
                     : a.map((t) =>
-                        n.createElement(Ko, {
+                        n.createElement(Xo, {
                           key: "supply" + t.unique_id,
                           ...e,
                           supplyInfo: t,
@@ -60011,7 +60048,7 @@
           ),
         );
       }
-      function Ko(e) {
+      function Xo(e) {
         const { supplyInfo: t, language: a, event: i } = e,
           r = (0, Jt.DR)(t.supply_package),
           o = (0, ca.MU)(),
@@ -60076,7 +60113,7 @@
                     },
                     (0, D.we)("#Sale_Reservation_ExpectedDeliveryDate"),
                   ),
-                  (0, Qo.x)(r),
+                  (0, Yo.x)(r),
                 ),
             )
           : n.createElement(v.t, {
@@ -60085,9 +60122,9 @@
               size: "medium",
             });
       }
-      var Xo = a(81057),
-        Zo = a.n(Xo);
-      function $o(e) {
+      var Zo = a(81057),
+        $o = a.n(Zo);
+      function Jo(e) {
         const { event: t, section: a, language: i } = e,
           r = (0, E.Qn)();
         return a.media_layout
@@ -60104,7 +60141,7 @@
                     className: (0, S.A)(d.SaleSection, l().SaleSectionCtn),
                     style: (0, c.V)(a, t, r),
                   },
-                  n.createElement(Jo, {
+                  n.createElement(es, {
                     contents: a.media_layout.media_content,
                     language: i,
                   }),
@@ -60112,7 +60149,7 @@
               )
           : null;
       }
-      function Jo(e) {
+      function es(e) {
         const { contents: t, language: a } = e,
           [i, r] = (0, n.useState)(0),
           o = (0, n.useRef)([!1, !1, !1, !1]),
@@ -60120,12 +60157,12 @@
           l = D.A0.GetELanguageFallback(a);
         return n.createElement(
           "div",
-          { className: Zo().QuadLayout },
+          { className: $o().QuadLayout },
           t.map((e, t) =>
             n.createElement(
               "div",
               { key: `media_${t}` },
-              n.createElement(es, {
+              n.createElement(ts, {
                 content: e,
                 IsTargetVideo: i === t,
                 onVisiblityChange: (e) => {
@@ -60147,7 +60184,7 @@
           ),
         );
       }
-      function es(e) {
+      function ts(e) {
         const {
             content: t,
             IsTargetVideo: a,
@@ -60198,7 +60235,7 @@
           n.createElement(
             "div",
             {
-              className: (0, S.A)(Zo().VideoPlayerContainer, a && Zo().Focused),
+              className: (0, S.A)($o().VideoPlayerContainer, a && $o().Focused),
               ref: d,
               onClick: _,
             },
@@ -60213,23 +60250,23 @@
           )
         );
       }
-      var ts = a(88494),
-        as = a(40353),
-        ns = a(65350),
-        is = a(70535),
-        rs = a.n(is),
-        os = a(20019),
-        ss = a(20713),
-        ls = a(44986),
-        cs = a(94095),
-        ds = a(60338),
-        us = a(73860),
-        ms = a(57315),
-        _s = a(51428),
-        ps = a.n(_s),
-        gs = a(2627);
-      const hs = "bTrailerCarouselAutoAdvance";
-      function vs(e) {
+      var as = a(88494),
+        ns = a(40353),
+        is = a(65350),
+        rs = a(70535),
+        os = a.n(rs),
+        ss = a(20019),
+        ls = a(20713),
+        cs = a(44986),
+        ds = a(94095),
+        us = a(60338),
+        ms = a(73860),
+        _s = a(57315),
+        ps = a(51428),
+        gs = a.n(ps),
+        hs = a(2627);
+      const vs = "bTrailerCarouselAutoAdvance";
+      function Ss(e) {
         const {
             className: t,
             currentItemKey: a,
@@ -60240,7 +60277,7 @@
             checkboxVisible: l,
           } = e,
           c = n.useMemo(() => {
-            const e = (0, gs.VY)(hs);
+            const e = (0, hs.VY)(vs);
             return !e || "true" === (null == e ? void 0 : e.toLowerCase());
           }, []),
           [d, u] = n.useState(c),
@@ -60268,7 +60305,7 @@
         );
         const E = n.useCallback(
           (e) => {
-            (0, gs.lc)(hs, String(e), 3650), u(e), p(m);
+            (0, hs.lc)(vs, String(e), 3650), u(e), p(m);
           },
           [m],
         );
@@ -60283,14 +60320,14 @@
               "div",
               {
                 className: (0, S.A)(
-                  ps().AutoAdvanceContent,
-                  (!o || !d) && ps().Disabled,
-                  g && ps().Paused,
+                  gs().AutoAdvanceContent,
+                  (!o || !d) && gs().Disabled,
+                  g && gs().Paused,
                 ),
               },
               n.createElement(
                 "div",
-                { className: ps().AutoAdvanceLabel },
+                { className: gs().AutoAdvanceLabel },
                 g && h
                   ? h
                   : (0, D.Yp)(
@@ -60299,7 +60336,7 @@
                     ),
               ),
               n.createElement("div", {
-                className: ps().AutoAdvanceBar,
+                className: gs().AutoAdvanceBar,
                 style: { "--auto-advance-ratio": 100 - (_ / m) * 100 + "%" },
               }),
             ),
@@ -60307,12 +60344,12 @@
               "div",
               {
                 className: (0, S.A)(
-                  ps().AutoAdvanceCheckboxCtn,
-                  0 == l && ps().Hidden,
+                  gs().AutoAdvanceCheckboxCtn,
+                  0 == l && gs().Hidden,
                 ),
               },
               n.createElement(Re.Yh, {
-                className: ps().AutoAdvanceCheckbox,
+                className: gs().AutoAdvanceCheckbox,
                 controlled: !0,
                 checked: d,
                 label: (0, D.we)("#SaleTrailerCarousel_AutoAdvanceEnabled"),
@@ -60322,9 +60359,10 @@
           )
         );
       }
-      var Ss = a(30600);
-      const Es = new bi.wd("TrailerAppVideo"),
-        ys = {
+      var Es = a(30600),
+        ys = a(36064);
+      const bs = new fi.wd("TrailerAppVideo"),
+        fs = {
           include_assets: !0,
           include_trailers: !0,
           include_basic_info: !0,
@@ -60332,9 +60370,9 @@
           include_release: !0,
           include_platforms: !0,
         },
-        bs = "trailercarousel",
-        fs = "trailercarousel_seen_intro_video";
-      function ws(e) {
+        ws = "trailercarousel",
+        Cs = "trailercarousel_seen_intro_video";
+      function Ts(e) {
         const {
             event: t,
             appVisibilityTracker: a,
@@ -60348,20 +60386,21 @@
           } = e,
           v = (0, E.Qn)(),
           b =
+            (0, ys.Mc)() &&
             i.trailer_carousel_intro_video_appid &&
             Number(i.trailer_carousel_intro_video_appid)
               ? Number(i.trailer_carousel_intro_video_appid)
               : void 0;
-        (0, o.t7)(b, ys);
+        (0, o.t7)(b, fs);
         const f = n.useMemo(
             () => (b > 0 ? [{ type: "game", id: b }] : []),
             [b],
           ),
-          w = ((C = b), n.useMemo(() => As().includes(C), [C]));
-        var C;
-        const [T, I] = n.useState(b && w ? 1 : 0),
-          [D, B] = n.useState(!0),
-          { nAppID: A, rgCapsules: G } = (function (
+          w = ((T = b), n.useMemo(() => Ms().includes(T), [T]));
+        var T;
+        const [I, D] = n.useState(b && w ? 1 : 0),
+          [B, A] = n.useState(!0),
+          { nAppID: G, rgCapsules: M } = (function (
             e,
             t,
             a,
@@ -60390,7 +60429,7 @@
               })(e, t, "trailercarousel"),
               v = n.useMemo(() => new Map(), []),
               S = n.useMemo(() => new Map(), []);
-            Gs(h, v), Gs(h, S);
+            ks(h, v), ks(h, S);
             const y = n.useRef();
             n.useEffect(() => {
               if (t.enable_faceted_browsing) return;
@@ -60416,9 +60455,9 @@
                         .map((e) => e.capsule);
                       return a;
                     })(e, v),
-                  { rgCapsules: h } = await vi(
+                  { rgCapsules: h } = await Si(
                     e,
-                    $n(e, t, g),
+                    await Jn(e, t, g),
                     g,
                     a,
                     i,
@@ -60432,8 +60471,19 @@
                     n,
                     u,
                     _,
-                  );
-                p((null != d ? d : []).concat(h));
+                  ),
+                  S = h.filter((e) => {
+                    var t;
+                    return null === (t = C.A.Get().GetApp(e.id)) || void 0 === t
+                      ? void 0
+                      : t.BHasTrailers();
+                  });
+                bs.Debug(
+                  S.length != h.length
+                    ? `Loaded ${S.length} items, ${h.length - S.length} items filtered out`
+                    : `Loaded ${S.length} items`,
+                ),
+                  p((null != d ? d : []).concat(S));
               };
               n();
             }, [
@@ -60452,10 +60502,10 @@
               d,
               v,
             ]);
-            const b = ui.OQ(c, 0, _.length - 1),
+            const b = mi.OQ(c, 0, _.length - 1),
               f = null === (u = _[b]) || void 0 === u ? void 0 : u.id;
             if (
-              (Es.Debug("Displaying appid", f),
+              (bs.Debug("Displaying appid", f),
               n.useEffect(() => {
                 var e;
                 f &&
@@ -60470,7 +60520,7 @@
                       window.localStorage.setItem(e, JSON.stringify(a));
                   })(h, S));
               }, [S, f, d, h]),
-              Es.IsDebugEnabled())
+              bs.IsDebugEnabled())
             ) {
               const e = Array.from(
                 { length: Math.min(_.length, 10) },
@@ -60485,27 +60535,27 @@
               )
                 .filter((e) => !!e)
                 .join(", ");
-              Es.Debug(
+              bs.Debug(
                 `useLoadItems: index ${b}, count ${_.length}, items: ${e}`,
               );
             }
             return { nAppID: f, rgCapsules: _ };
-          })(t, i, r, s, d, a, m, g, T, f),
-          M = b && A === b,
-          k = n.useCallback(
+          })(t, i, r, s, d, a, m, g, I, f),
+          k = b && G === b,
+          N = n.useCallback(
             (e) => {
-              if (M) {
-                const e = As();
-                e.includes(A) ||
-                  (e.push(A), localStorage.setItem(fs, JSON.stringify(e)));
+              if (k) {
+                const e = Ms();
+                e.includes(G) ||
+                  (e.push(G), localStorage.setItem(Cs, JSON.stringify(e)));
               }
-              const t = (((T + (e ? 1 : -1)) % G.length) + G.length) % G.length;
-              I(t), B(!1);
+              const t = (((I + (e ? 1 : -1)) % M.length) + M.length) % M.length;
+              D(t), A(!1);
             },
-            [M, A, T, G.length],
+            [k, G, I, M.length],
           );
         if (i.enable_faceted_browsing) return;
-        const N = ui.OQ(T, 0, G.length - 1);
+        const P = mi.OQ(I, 0, M.length - 1);
         return n.createElement(
           h.A,
           { feature: "trailercarousel" },
@@ -60517,25 +60567,25 @@
               className: (0, S.A)(
                 u().SaleSection,
                 l().SaleSectionCtn,
-                rs().TrailerCarouselCtn,
+                os().TrailerCarouselCtn,
               ),
               style: (0, c.V)(i, t, v),
             },
             n.createElement(ce.jR, { section: i, event: t, language: _ }),
-            n.createElement(Cs, {
-              appID: A,
+            n.createElement(Is, {
+              appID: G,
               autoAdvanceMsec: i.trailer_carousel_auto_advance_msec,
               bPreferDemoStorePage: i.prefer_demo_store_page,
-              bStartVideoWhenHidden: !D,
-              fnNavigate: k,
-              introVideo: M,
-              bCanGoForward: N < G.length - 1,
-              bCanGoBackward: N > 0,
+              bStartVideoWhenHidden: !B,
+              fnNavigate: N,
+              introVideo: k,
+              bCanGoForward: P < M.length - 1,
+              bCanGoBackward: P > 0,
             }),
           ),
         );
       }
-      function Cs(e) {
+      function Is(e) {
         const {
             appID: t,
             autoAdvanceMsec: a,
@@ -60549,12 +60599,12 @@
           [u, m] = n.useState(!1),
           [_, p] = n.useState(!1),
           [h, v] = n.useState(!1),
-          [E] = (0, o.t7)(t, ys),
-          y = (0, us.R7)(),
+          [E] = (0, o.t7)(t, fs),
+          y = (0, ms.R7)(),
           b = (null == y ? void 0 : y.ownerWindow) || window,
-          f = Is(E, i),
-          { bIsIgnored: w, fnUpdateIgnored: C } = (0, ds.TK)(t),
-          { bIsWishlisted: T, fnUpdateWishlist: I } = (0, ds.u4)(t, bs),
+          f = Bs(E, i),
+          { bIsIgnored: w, fnUpdateIgnored: C } = (0, us.TK)(t),
+          { bIsWishlisted: T, fnUpdateWishlist: I } = (0, us.u4)(t, ws),
           [B, A] = n.useState(0),
           [G, M] = n.useState(),
           k = n.useRef();
@@ -60579,7 +60629,7 @@
             }, []);
             const r = n.useCallback((e) => i(!e.isIntersecting), []),
               o = n.useMemo(() => ({ threshold: 0.5 }), []),
-              s = (0, Ss.BL)(r, o);
+              s = (0, Es.BL)(r, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: s };
           })(),
           F = n.useCallback(async () => {
@@ -60619,7 +60669,7 @@
         )
           return n.createElement(
             "div",
-            { className: rs().TrailerCarouselApp },
+            { className: os().TrailerCarouselApp },
             n.createElement(de.h, {
               capsules_per_row: [1],
               is_trailercarousel: !0,
@@ -60630,7 +60680,7 @@
           ge.Z,
           {
             focusable: !0,
-            className: (0, S.A)(rs().TrailerCarouselApp),
+            className: (0, S.A)(os().TrailerCarouselApp),
             ref: R,
             onOptionsActionDescription: T
               ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
@@ -60651,35 +60701,35 @@
           },
           n.createElement(
             "div",
-            { className: rs().VideoRow },
+            { className: os().VideoRow },
             c &&
               n.createElement(
                 "button",
                 {
-                  className: (0, S.A)(rs().NavButton, rs().Left),
+                  className: (0, S.A)(os().NavButton, os().Left),
                   onClick: () => r(!1),
                 },
                 n.createElement(g.uMb, null),
               ),
             n.createElement(
               "div",
-              { className: rs().AppContent },
+              { className: os().AppContent },
               n.createElement("div", {
                 className: (0, S.A)(
-                  rs().Fade,
-                  1 === B && rs().FadeOut,
-                  2 === B && rs().FadeIn,
+                  os().Fade,
+                  1 === B && os().FadeOut,
+                  2 === B && os().FadeIn,
                 ),
                 style: { "--fade-out-time": "0.5s", "--fade-in-time": "0.5s" },
               }),
               n.createElement(
                 "div",
-                { className: rs().VideoArea },
-                n.createElement(Bs, { appID: t }),
-                n.createElement(ds.y3, {
+                { className: os().VideoArea },
+                n.createElement(Gs, { appID: t }),
+                n.createElement(us.y3, {
                   appID: t,
                   focused: x,
-                  snrCode: bs,
+                  snrCode: ws,
                   skipMicroTrailer: s,
                   playWithBroadcastPlayer: s,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
@@ -60690,7 +60740,8 @@
                   loopVideo: !1,
                 }),
               ),
-              n.createElement(Ts, {
+              n.createElement(Ds, {
+                key: t,
                 appID: t,
                 preferDemoStorePage: e.bPreferDemoStorePage,
                 introVideo: s,
@@ -60700,14 +60751,14 @@
               n.createElement(
                 "button",
                 {
-                  className: (0, S.A)(rs().NavButton, rs().Right),
+                  className: (0, S.A)(os().NavButton, os().Right),
                   onClick: () => r(!0),
                 },
                 n.createElement(g.uMb, null),
               ),
           ),
-          n.createElement(vs, {
-            className: (0, S.A)(rs().AutoAdvanceRow, L && rs().Enabled),
+          n.createElement(Ss, {
+            className: (0, S.A)(os().AutoAdvanceRow, L && os().Enabled),
             enabled: L,
             currentItemKey: t,
             autoAdvanceMsec: a,
@@ -60717,155 +60768,173 @@
           }),
         );
       }
-      function Ts(e) {
+      function Ds(e) {
         const { appID: t, preferDemoStorePage: a, introVideo: i } = e,
-          [r] = (0, o.t7)(t, ys),
-          { bIsIgnored: s, fnUpdateIgnored: l } = (0, ds.TK)(t),
-          { bIsWishlisted: c, fnUpdateWishlist: d } = (0, ds.u4)(t, bs),
-          u = Is(r, a),
+          [r] = (0, o.t7)(t, fs),
+          { bIsIgnored: s, fnUpdateIgnored: l } = (0, us.TK)(t),
+          { bIsWishlisted: c, fnUpdateWishlist: d } = (0, us.u4)(t, ws),
+          u = Bs(r, a),
           m = (0, E.Qn)(),
-          _ = m,
-          p = (0, Pe.LG)(null == r ? void 0 : r.GetTagIDs());
+          _ = (0, Pe.LG)(null == r ? void 0 : r.GetTagIDs());
         if (!r) return;
-        const g = r.GetAssets().GetMainCapsuleURL();
+        const p = r.GetAssets().GetMainCapsuleURL();
         return n.createElement(
           ge.Z,
-          { className: rs().AppDetailsCtn },
-          g &&
+          { className: os().AppDetailsCtn },
+          p &&
             n.createElement(
               pe.Ii,
-              { href: u, className: rs().AppLink },
-              n.createElement("img", { className: rs().AppCapsule, src: g }),
+              { href: u, className: os().AppLink },
+              n.createElement("img", { className: os().AppCapsule, src: p }),
             ),
           n.createElement(
             "div",
-            { className: rs().AppDetailsCtnTop },
+            { className: os().AppDetailsCtnTop },
             n.createElement(
               "div",
-              { className: rs().AppDetailsHeader },
+              { className: os().AppDetailsHeader },
               !i &&
-                n.createElement(cs.wc, {
+                n.createElement(ds.wc, {
                   bSingleLineMode: !0,
-                  info: { id: t, type: (0, os.U)(r.GetAppType()) },
+                  info: { id: t, type: (0, ss.U)(r.GetAppType()) },
                 }),
             ),
             !i &&
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(Ds, { rgTagNames: p }),
+                n.createElement(As, { rgTagNames: _ }),
               ),
             n.createElement(
               "div",
-              { className: (0, S.A)(rs().AppDescription) },
-              r.GetShortDescription(),
+              { className: (0, S.A)(os().AppDescriptionCtn) },
+              n.createElement(
+                "div",
+                { className: (0, S.A)(os().AppDescription) },
+                r.GetShortDescription(),
+              ),
             ),
           ),
           !m &&
             !i &&
             n.createElement(
               "div",
-              { className: rs().AppActionButtonsCtn },
+              { className: os().AppActionButtonsCtn },
               n.createElement(
                 "div",
-                { className: rs().AppActionJustButtonsCtn },
+                { className: os().AppActionJustButtonsCtn },
                 n.createElement(
                   "div",
-                  { className: rs().ButtonsRowWrap },
+                  { className: os().ButtonsRowWrap },
                   r.BHasDemo() &&
-                    n.createElement(Dr.j, {
+                    n.createElement(Br.j, {
                       info: {
                         id: r.GetAppID(),
                         type: (0, T._4)(r.GetStoreItemType(), r.GetAppType()),
                       },
-                      className: (0, S.A)(rs().QueueButton),
+                      className: (0, S.A)(os().QueueButton),
                     }),
                   n.createElement(
-                    ge.Z,
-                    { focusable: !0, className: rs().QueueButton, onClick: d },
-                    _ &&
-                      n.createElement(ls.$m, {
-                        button: ss.g4.Y,
-                        type: ls.wt.Light,
-                        size: ls.xY.Medium,
-                        additionalClassName: rs().YGlyph,
-                      }),
-                    c
-                      ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
-                      : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
+                    ga.he,
+                    {
+                      toolTipContent: c
+                        ? (0, D.we)("#RemoveFromWishlist_ttip")
+                        : (0, D.we)("#AddToWishlist_ttip"),
+                    },
+                    n.createElement(
+                      ge.Z,
+                      {
+                        focusable: !0,
+                        className: (0, S.A)(os().QueueButton, c && os().Active),
+                        onClick: d,
+                      },
+                      c
+                        ? n.createElement(g.qnF, null)
+                        : n.createElement(g.T4m, null),
+                    ),
                   ),
                   n.createElement(
-                    ge.Z,
-                    { focusable: !0, className: rs().QueueButton, onClick: l },
-                    s
-                      ? (0, D.we)("#SaleTrailerCarousel_IgnoreLink_Ignored")
-                      : (0, D.we)("#SaleTrailerCarousel_IgnoreLink"),
+                    ga.he,
+                    {
+                      toolTipContent: (0, D.we)(
+                        "#SaleTrailerCarousel_IgnoreLink_ttip",
+                      ),
+                    },
+                    n.createElement(
+                      ge.Z,
+                      {
+                        focusable: !0,
+                        className: os().QueueButton,
+                        onClick: l,
+                      },
+                      n.createElement(g.NtH, null),
+                    ),
                   ),
                 ),
               ),
             ),
         );
       }
-      function Is(e, t) {
+      function Bs(e, t) {
         const a = (0, ue.n9)();
-        return e ? (0, ms._)(e.GetStorePageURL(t), a) : void 0;
+        return e ? (0, _s._)(e.GetStorePageURL(t), a) : void 0;
       }
-      function Ds(e) {
+      function As(e) {
         const { rgTagNames: t } = e,
-          a = (0, ds.W3)(t);
+          a = (0, us.W3)(t);
         return n.createElement(
           "div",
-          { className: rs().AppTagsCtn },
+          { className: os().AppTagsCtn },
           a.map((e) =>
             n.createElement(
               "div",
-              { key: e.name, className: rs().TagEntry },
+              { key: e.name, className: os().TagEntry },
               e.name,
             ),
           ),
         );
       }
-      function Bs(e) {
+      function Gs(e) {
         const { appID: t } = e,
           a = (0, E.Qn)(),
-          { bIsIgnored: i, fnUpdateIgnored: r } = (0, ds.TK)(t);
+          { bIsIgnored: i, fnUpdateIgnored: r } = (0, us.TK)(t);
         return n.createElement(
           "div",
-          { className: (0, S.A)(rs().IgnoredCtn, i && rs().Active) },
+          { className: (0, S.A)(os().IgnoredCtn, i && os().Active) },
           n.createElement(
             "div",
-            { className: (0, S.A)(rs().IgnoredInfo, i && rs().Active) },
+            { className: (0, S.A)(os().IgnoredInfo, i && os().Active) },
             n.createElement(
               "div",
-              { className: rs().IgnoredTitle },
+              { className: os().IgnoredTitle },
               (0, D.we)("#SaleTrailerCarousel_Ignored"),
             ),
             n.createElement(
               "div",
-              { className: rs().IgnoredDescription },
+              { className: os().IgnoredDescription },
               (0, D.we)("#SaleTrailerCarousel_IgnoredConfirmation"),
             ),
             n.createElement(
               ge.Z,
               {
-                className: (0, S.A)(rs().UndoButton, rs().UndoIgnoreButton),
+                className: (0, S.A)(os().UndoButton, os().UndoIgnoreButton),
                 onClick: r,
               },
               a &&
-                n.createElement(ls.$m, {
-                  button: ss.g4.X,
-                  type: ls.wt.Light,
-                  size: ls.xY.Medium,
+                n.createElement(cs.$m, {
+                  button: ls.g4.X,
+                  type: cs.wt.Light,
+                  size: cs.xY.Medium,
                 }),
               (0, D.we)("#SaleTrailerCarousel_Undo"),
             ),
           ),
         );
       }
-      function As() {
+      function Ms() {
         var e;
         try {
-          return null !== (e = JSON.parse(localStorage.getItem(fs))) &&
+          return null !== (e = JSON.parse(localStorage.getItem(Cs))) &&
             void 0 !== e
             ? e
             : [];
@@ -60873,7 +60942,7 @@
           return [];
         }
       }
-      function Gs(e, t) {
+      function ks(e, t) {
         n.useEffect(() => {
           let a;
           try {
@@ -60886,7 +60955,7 @@
             });
         }, [t, e]);
       }
-      function Ms(e) {
+      function Ns(e) {
         var t, a;
         const { event: i, section: r, activeTab: o, language: s } = e,
           l = (0, E.Qn)();
@@ -60895,11 +60964,11 @@
           case "events":
           case "sale_events":
           case "links":
-            return n.createElement(Ei, { ...e });
+            return n.createElement(yi, { ...e });
           case "itemdef":
             return n.createElement(fa.r, { ...e });
           case "point_shop_smart":
-            return n.createElement(Vo.M, { ...e });
+            return n.createElement(Qo.M, { ...e });
           case "broadcast":
             if (i.BEventCanShowBroadcastWidget()) {
               const o = i.jsondata.sale_sections.find(
@@ -60925,16 +60994,16 @@
             }
             break;
           case "event_description":
-            return n.createElement(Oi, { ...e });
+            return n.createElement(xi, { ...e });
           case "doors":
             return n.createElement(Fa, {
               strFontFamily: (0, ce.sk)(i.jsondata.sale_font, s),
             });
           case "text_section":
-            return n.createElement(xi, { ...e });
+            return n.createElement(zi, { ...e });
           case "tabs":
           case "tab_buttons":
-            return n.createElement(Fi, { ...e });
+            return n.createElement(Li, { ...e });
           case "curator":
           case "footer_self_creator_home":
             if (!l && r.curator_clan_id)
@@ -60959,7 +61028,7 @@
             return n.createElement(Sa, { section: r, event: i });
           case "event_schedule":
             if (!l)
-              return n.createElement(Ur, {
+              return n.createElement(Hr, {
                 ...e,
                 broadcastEmbedContext: e.broadcastEmbedContext,
               });
@@ -60968,15 +61037,15 @@
             if (r.internal_section_data)
               switch (r.internal_section_data.internal_type) {
                 case "subscription_pricing":
-                  return n.createElement(mo, { ...e });
+                  return n.createElement(_o, { ...e });
                 case "tab_contents":
-                  return n.createElement(Ri.YQ, {
+                  return n.createElement(Fi.YQ, {
                     ...e,
                     tab: o.GetTab(),
                     showReferences: !1,
                   });
                 case "tab_references":
-                  return n.createElement(Ri.YQ, {
+                  return n.createElement(Fi.YQ, {
                     ...e,
                     tab: o.GetTab(),
                     showReferences: !0,
@@ -60984,15 +61053,15 @@
                 case "reservation_widget":
                   return n.createElement(ua, { ...e });
                 case "while_supplies_last":
-                  return n.createElement(Yo, { ...e });
+                  return n.createElement(Ko, { ...e });
                 case "cyoa_story":
-                  return n.createElement(yo, { ...e });
+                  return n.createElement(bo, { ...e });
                 case "greatondeck_librarygrid":
                   return n.createElement(It, null);
               }
             break;
           case "sale_item_browser":
-            return n.createElement(Ni, { ...e });
+            return n.createElement(Pi, { ...e });
           case "contenthubtitle":
             return n.createElement(jt, {
               hubtype: i.GetContentHubType(),
@@ -61081,25 +61150,25 @@
           case "discoveryqueue":
             return n.createElement(Va.kv, { ...e });
           case "trailercarousel":
-            return n.createElement(ws, { ...e });
+            return n.createElement(Ts, { ...e });
           case "badge_progress":
             return n.createElement(Qa, { ...e });
           case "rewards":
             return n.createElement(Tn, { ...e });
           case "social_share":
-            return n.createElement(Zi, { ...e });
+            return n.createElement($i, { ...e });
           case "dlc_for_you":
-            return n.createElement(ko, { ...e });
+            return n.createElement(No, { ...e });
           case "claim_item":
-            return n.createElement(Wo, { ...e });
+            return n.createElement(qo, { ...e });
           case "controller_type":
-            return n.createElement(Do, { ...e });
+            return n.createElement(Bo, { ...e });
           case "media_layout":
-            return n.createElement($o, { ...e });
+            return n.createElement(Jo, { ...e });
           case "footer_browse_more":
-            return n.createElement(ts.z, { event: i });
+            return n.createElement(as.z, { event: i });
           case "footer_default_social_share":
-            return n.createElement(ir, { eventModel: i });
+            return n.createElement(rr, { eventModel: i });
           case "unselected_empty":
             break;
           default:
@@ -61109,12 +61178,12 @@
                   r.section_type,
               );
         }
-        return e.ePreviewMode === as.S.EPreviewMode_EditBackground
+        return e.ePreviewMode === ns.S.EPreviewMode_EditBackground
           ? ("dev" == E.TS.WEB_UNIVERSE &&
               console.log(
                 "Dev Debug: not rendering section type: " + r.section_type,
               ),
-            n.createElement(ns.E, {
+            n.createElement(is.E, {
               section: r,
               event: i,
               language: s,
@@ -61166,7 +61235,7 @@
         g = a(18654),
         h = a.n(g),
         v = a(3661),
-        S = a(57465),
+        S = a(37346),
         E = a(72860),
         y = a(70300),
         b = a(47235),
@@ -61319,50 +61388,54 @@
           ));
         const A = Boolean(h);
         return n.createElement(
-          r.Ii,
-          {
-            href: B ? null : I,
-            style: { display: "block", cursor: "pointer" },
-            preferredFocus: _,
-            onClick: B,
-          },
+          n.Fragment,
+          null,
           n.createElement(
-            "div",
-            { className: (0, T.A)({ [G().TwoWidthCtn]: A }) },
+            r.Ii,
+            {
+              href: B ? null : I,
+              style: { display: "block", cursor: "pointer" },
+              preferredFocus: _,
+              onClick: B,
+            },
             n.createElement(
               "div",
-              { className: (0, T.A)({ [G().TwoWidthCapsule]: A }) },
-              n.createElement(S.V, { appids: f, hide_status_banners: o }),
-              n.createElement(p.aU, { imageType: m, info: a }),
-              n.createElement(w.S, {
-                eDeckCompatibilityCategory:
-                  null === (t = null == y ? void 0 : y.GetPlatforms()) ||
-                  void 0 === t
-                    ? void 0
-                    : t.steam_deck_compat_category,
-              }),
-              Boolean(g) && n.createElement(v.m, { appInfo: a }),
-            ),
-            A &&
+              { className: (0, T.A)({ [G().TwoWidthCtn]: A }) },
               n.createElement(
                 "div",
-                { className: G().TwoWidthSideInfo },
-                n.createElement("div", { className: G().Reason }, h),
+                { className: (0, T.A)({ [G().TwoWidthCapsule]: A }) },
+                n.createElement(S.V, { appids: f, hide_status_banners: o }),
+                n.createElement(p.aU, { imageType: m, info: a }),
+                n.createElement(w.S, {
+                  eDeckCompatibilityCategory:
+                    null === (t = null == y ? void 0 : y.GetPlatforms()) ||
+                    void 0 === t
+                      ? void 0
+                      : t.steam_deck_compat_category,
+                }),
+                Boolean(g) && n.createElement(v.m, { appInfo: a }),
+              ),
+              A &&
                 n.createElement(
                   "div",
-                  { className: G().StoreSaleItemRelease },
+                  { className: G().TwoWidthSideInfo },
+                  n.createElement("div", { className: G().Reason }, h),
                   n.createElement(
-                    "span",
-                    null,
-                    y.GetFormattedSteamReleaseDate(),
+                    "div",
+                    { className: G().StoreSaleItemRelease },
+                    n.createElement(
+                      "span",
+                      null,
+                      y.GetFormattedSteamReleaseDate(),
+                    ),
                   ),
+                  n.createElement(M.n, {
+                    bHideTitle: !0,
+                    rgTagIDs: y.GetTagIDs(),
+                    instanceNum: c,
+                  }),
                 ),
-                n.createElement(M.n, {
-                  bHideTitle: !0,
-                  rgTagIDs: y.GetTagIDs(),
-                  instanceNum: c,
-                }),
-              ),
+            ),
           ),
           n.createElement(F, { ...e }),
         );
@@ -61404,7 +61477,6 @@
           creatorAccountID: _,
           bShowName: e.bShowName,
           onlyOneDiscountPct: h,
-          bShowAddToCart: Boolean(v),
           bShowWishlistButton: Boolean(v),
         });
       }
@@ -61580,7 +61652,7 @@
         }
         GetActiveTabSNRPostFix() {
           return this.m_activeTab && !this.BIsDefaultTab()
-            ? `tabid${this.GetActiveTabUniqueID}`
+            ? `tabid${this.GetActiveTabUniqueID()}`
             : "";
         }
       }
@@ -62269,13 +62341,28 @@
               (B.current.volume = (null != W ? W : e) * (null != w ? w : 1)),
                 (B.current.muted = null == W || W <= 0 || Y);
             }
-          }, [W, w, Y]),
-          n.useEffect(() => {
-            let e = !1;
-            P && a && H && (e = 0 === V || (1 === V && !X) || (2 === V && !$)),
-              x(e),
-              null == C || C(k && e);
-          }, [C, V, $, X, a, P, k, H]),
+          }, [W, w, Y]);
+        const ee = null == t ? void 0 : t.GetMicroTrailer();
+        let te = null;
+        (null == t
+          ? void 0
+          : t.GetAllTrailers().GetHighlightTrailers().length) > 0
+          ? (te = t.GetAllTrailers().GetHighlightTrailers()[0])
+          : (null == t
+              ? void 0
+              : t.GetAllTrailers().GetOtherTrailers().length) > 0 &&
+            (te = t.GetAllTrailers().GetOtherTrailers()[0]);
+        const ae = !!ee || !!te;
+        n.useEffect(() => {
+          let e = !1;
+          P &&
+            a &&
+            H &&
+            ae &&
+            (e = 0 === V || (1 === V && !X) || (2 === V && !$)),
+            x(e),
+            null == C || C(k && e);
+        }, [C, V, $, X, a, P, k, H, ae]),
           b(D, Z),
           b(B, J),
           n.useEffect(() => {
@@ -62289,15 +62376,15 @@
           n.useEffect(() => {
             B.current && (B.current.onended = T);
           }, [T, B]);
-        let ee = n.useRef(!1);
+        let ne = n.useRef(!1);
         n.useEffect(() => {
           if (P && a && 0 === V)
             if ((j(!0), F))
               if (B.current) {
                 v.Debug("Starting microtrailer"), Q(1);
                 const e = () => {
-                  ee.current ||
-                    ((ee.current = !0),
+                  ne.current ||
+                    ((ne.current = !0),
                     v.Debug("Starting main trailer"),
                     Q(2),
                     K(!1),
@@ -62343,34 +62430,30 @@
             });
             return () => e();
           }, [A]);
-        const te = null == t ? void 0 : t.GetMicroTrailer(),
-          ae = (null == t ? void 0 : t.GetAllTrailers().BHasTrailers())
-            ? t.GetAllTrailers().GetHighlightTrailers()[0]
-            : null,
-          ne = () => {
-            0 == V
-              ? L(!0)
-              : 1 == V && D.current
-                ? D.current.paused
-                  ? D.current.play()
-                  : D.current.pause()
-                : 2 == V && B.current
-                  ? B.current.paused
-                    ? B.current.play()
-                    : B.current.pause()
-                  : 2 == V && A && A.TogglePlayPause();
-          };
+        const ie = () => {
+          0 == V
+            ? L(!0)
+            : 1 == V && D.current
+              ? D.current.paused
+                ? D.current.play()
+                : D.current.pause()
+              : 2 == V && B.current
+                ? B.current.paused
+                  ? B.current.play()
+                  : B.current.pause()
+                : 2 == V && A && A.TogglePlayPause();
+        };
         if (!t || !t.BIsVisible()) return null;
-        const ie = { [e.autoplayCheckboxPosition || "top"]: 0 };
-        let re = null;
-        re =
+        const re = { [e.autoplayCheckboxPosition || "top"]: 0 };
+        let oe = null;
+        oe =
           2 == V
             ? o().PlayFullTrailer
             : 1 == V
               ? o().PlayMicrotrailer
               : o().NoTrailer;
-        const oe = (null == I || I) && !T,
-          se =
+        const se = (null == I || I) && !T,
+          le =
             f && t.BHasAgeSafeScreenshots()
               ? t.GetOnlyAllAgesSafeScreenshots()[0]
               : t.GetAssets().GetMainCapsuleURL();
@@ -62380,10 +62463,10 @@
           n.createElement("img", {
             ref: M,
             className: (0, u.A)(o().AppMainCap, 0 != V && o().Hidden),
-            src: se,
-            onClick: ne,
+            src: le,
+            onClick: ie,
           }),
-          (t.GetAllTrailers().BHasTrailers() || r) &&
+          (te || r) &&
             n.createElement(
               n.Fragment,
               null,
@@ -62401,7 +62484,7 @@
                     checked: k,
                     key: t.GetAppID(),
                     className: o().AutoplayCheckbox,
-                    style: ie,
+                    style: re,
                     label: (0, c.we)("#StoreTrailer_AutoPlayVideos"),
                     onChange: (e) => {
                       (0, l.lc)(null != y ? y : S, String(!e), 3650),
@@ -62414,36 +62497,36 @@
                 !z &&
                 n.createElement(
                   i.Z,
-                  { focusable: !0, onClick: ne, className: o().PlayButton },
+                  { focusable: !0, onClick: ie, className: o().PlayButton },
                   n.createElement(s.IOc, null),
                 ),
-              te &&
+              ee &&
                 n.createElement(
                   "video",
                   {
-                    className: (0, u.A)(o().AppVideo, re, o().Microtrailer),
+                    className: (0, u.A)(o().AppVideo, oe, o().Microtrailer),
                     ref: D,
                     preload: "auto",
                     playsInline: !0,
                     muted: !0,
-                    onClick: ne,
+                    onClick: ie,
                   },
                   n.createElement("source", {
-                    src: te.strWebMURL,
+                    src: ee.strWebMURL,
                     type: "video/webm",
                   }),
                   Boolean(!_.TS.IN_CLIENT) &&
                     n.createElement("source", {
-                      src: te.strMP4URL,
+                      src: ee.strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
-              ae &&
+              te &&
                 !r &&
                 n.createElement(
                   "video",
                   {
-                    className: (0, u.A)(o().AppVideo, re, o().Trailer),
+                    className: (0, u.A)(o().AppVideo, oe, o().Trailer),
                     ref: B,
                     onVolumeChange: (e) => {
                       if (w && w < 1) return;
@@ -62456,27 +62539,28 @@
                     muted: !(W > 0),
                     preload: "auto",
                     playsInline: !0,
-                    loop: oe,
+                    loop: se,
                     controls: !0,
                   },
                   n.createElement("source", {
-                    src: ae.GetTrailer480p().strWebMURL,
+                    src: te.GetTrailer480p().strWebMURL,
                     type: "video/webm",
                   }),
                   Boolean(!_.TS.IN_CLIENT) &&
                     n.createElement("source", {
-                      src: ae.GetTrailer480p().strMP4URL,
+                      src: te.GetTrailer480p().strMP4URL,
                       type: "video/mp4",
                     }),
                 ),
               r &&
                 n.createElement(g.default, {
-                  classes: (0, u.A)(o().AppVideo, re, o().Trailer),
+                  classes: (0, u.A)(o().AppVideo, oe, o().Trailer),
                   nAppIDVOD: t.GetAppID(),
                   watchLocation: 15,
                   fnOnVideoEnd: T,
-                  fnVideoClick: ne,
+                  fnVideoClick: ie,
                   fnSetBroadcastVideo: G,
+                  bStartWithSubtitles: !0,
                 }),
             ),
         );

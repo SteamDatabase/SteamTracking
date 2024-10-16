@@ -2494,12 +2494,12 @@
     22580: (e, t, r) => {
       "use strict";
       r.d(t, {
-        _O: () => fe,
-        DZ: () => me,
-        tP: () => ve,
-        uv: () => oe,
-        bp: () => de,
-        pp: () => le,
+        _O: () => pe,
+        DZ: () => se,
+        tP: () => Ce,
+        uv: () => ie,
+        bp: () => oe,
+        pp: () => ne,
       });
       var i = r(34629),
         n = r(38506),
@@ -3924,7 +3924,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            U.prototype.account_type || f.Sg(U.M()),
+            U.prototype.steamid || f.Sg(U.M()),
             w.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -3935,18 +3935,18 @@
               (U.sm_m = {
                 proto: U,
                 fields: {
-                  account_type: { n: 1, br: f.qM.readEnum, bw: f.gp.writeEnum },
-                  account_id: {
+                  steamid: {
+                    n: 1,
+                    br: f.qM.readFixed64String,
+                    bw: f.gp.writeFixed64String,
+                  },
+                  client_token: {
                     n: 2,
-                    br: f.qM.readUint64String,
-                    bw: f.gp.writeUint64String,
+                    br: f.qM.readBytes,
+                    bw: f.gp.writeBytes,
                   },
-                  filter: { n: 3, br: f.qM.readEnum, bw: f.gp.writeEnum },
-                  return_access_token: {
-                    n: 4,
-                    br: f.qM.readBool,
-                    bw: f.gp.writeBool,
-                  },
+                  expiry: { n: 3, br: f.qM.readUint32, bw: f.gp.writeUint32 },
+                  deviceid: { n: 4, br: f.qM.readUint32, bw: f.gp.writeUint32 },
                 },
               }),
             U.sm_m
@@ -3984,15 +3984,15 @@
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountLinking_GetLinkedAccountInfo_Request";
+          return "CEmbeddedClient_Token";
         }
       }
       class H extends w {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            H.prototype.external_accounts || f.Sg(H.M()),
-            w.initialize(this, e, 0, -1, [1], null);
+            H.prototype.result || f.Sg(H.M()),
+            w.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -4001,7 +4001,10 @@
             H.sm_m ||
               (H.sm_m = {
                 proto: H,
-                fields: { external_accounts: { n: 1, c: W, r: !0, q: !0 } },
+                fields: {
+                  result: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
+                  token: { n: 2, c: U },
+                },
               }),
             H.sm_m
           );
@@ -4038,14 +4041,14 @@
           return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountLinking_GetLinkedAccountInfo_Response";
+          return "CEmbeddedClient_AuthorizeDevice_Response";
         }
       }
       class W extends w {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            W.prototype.external_type || f.Sg(W.M()),
+            W.prototype.steamid || f.Sg(W.M()),
             w.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -4056,37 +4059,18 @@
               (W.sm_m = {
                 proto: W,
                 fields: {
-                  external_type: {
+                  steamid: {
                     n: 1,
-                    br: f.qM.readEnum,
-                    bw: f.gp.writeEnum,
+                    br: f.qM.readFixed64String,
+                    bw: f.gp.writeFixed64String,
                   },
-                  external_id: {
-                    n: 2,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  external_user_name: {
+                  appid: { n: 2, br: f.qM.readUint32, bw: f.gp.writeUint32 },
+                  device_info: {
                     n: 3,
                     br: f.qM.readString,
                     bw: f.gp.writeString,
                   },
-                  external_url: {
-                    n: 4,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  access_token: {
-                    n: 5,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  access_token_secret: {
-                    n: 6,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  is_valid: { n: 7, br: f.qM.readBool, bw: f.gp.writeBool },
+                  deviceid: { n: 4, br: f.qM.readUint32, bw: f.gp.writeUint32 },
                 },
               }),
             W.sm_m
@@ -4124,201 +4108,10 @@
           return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
-        }
-      }
-      class Z extends w {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Z.prototype.steamid || f.Sg(Z.M()),
-            w.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Z.sm_m ||
-              (Z.sm_m = {
-                proto: Z,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: f.qM.readFixed64String,
-                    bw: f.gp.writeFixed64String,
-                  },
-                  client_token: {
-                    n: 2,
-                    br: f.qM.readBytes,
-                    bw: f.gp.writeBytes,
-                  },
-                  expiry: { n: 3, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                  deviceid: { n: 4, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                },
-              }),
-            Z.sm_m
-          );
-        }
-        static MBF() {
-          return Z.sm_mbf || (Z.sm_mbf = f.w0(Z.M())), Z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.BT(Z.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.Uq(Z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new h.BinaryReader(e),
-            r = new Z();
-          return Z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.zj(Z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new h.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(Z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new h.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEmbeddedClient_Token";
-        }
-      }
-      class q extends w {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            q.prototype.result || f.Sg(q.M()),
-            w.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
-                fields: {
-                  result: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                  token: { n: 2, c: Z },
-                },
-              }),
-            q.sm_m
-          );
-        }
-        static MBF() {
-          return q.sm_mbf || (q.sm_mbf = f.w0(q.M())), q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return q.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.BT(q.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.Uq(q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new h.BinaryReader(e),
-            r = new q();
-          return q.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.zj(q.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new h.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(q.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new h.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEmbeddedClient_AuthorizeDevice_Response";
-        }
-      }
-      class V extends w {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            V.prototype.steamid || f.Sg(V.M()),
-            w.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            V.sm_m ||
-              (V.sm_m = {
-                proto: V,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: f.qM.readFixed64String,
-                    bw: f.gp.writeFixed64String,
-                  },
-                  appid: { n: 2, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                  device_info: {
-                    n: 3,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  deviceid: { n: 4, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                },
-              }),
-            V.sm_m
-          );
-        }
-        static MBF() {
-          return V.sm_mbf || (V.sm_mbf = f.w0(V.M())), V.sm_mbf;
-        }
-        toObject(e = !1) {
-          return V.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.BT(V.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.Uq(V.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new h.BinaryReader(e),
-            r = new V();
-          return V.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.zj(V.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new h.BinaryWriter();
-          return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(V.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new h.BinaryWriter();
-          return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CEmbeddedClient_AuthorizeCurrentDevice_Request";
         }
       }
-      var Q, Y, K;
+      var Z, q;
       !(function (e) {
         (e.GetAvailableValveDiscountPromotions = function (e, t) {
           return e.SendMsg(
@@ -4408,40 +4201,30 @@
               { ePrivilege: 1 },
             );
           });
-      })(Q || (Q = {})),
-        (function (e) {
-          e.GetLinkedAccountInfo = function (e, t) {
-            return e.SendMsg(
-              "AccountLinking.GetLinkedAccountInfo#1",
-              (0, u.I8)(U, t),
-              H,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
-            );
-          };
-        })(Y || (Y = {})),
+      })(Z || (Z = {})),
         (function (e) {
           e.AuthorizeCurrentDevice = function (e, t) {
             return e.SendMsg(
               "EmbeddedClient.AuthorizeCurrentDevice#1",
-              (0, u.I8)(V, t),
-              q,
+              (0, u.I8)(W, t),
+              H,
               { ePrivilege: 1 },
             );
           };
-        })(K || (K = {}));
-      var J = r(82477),
-        X = r(10622),
-        $ = r(17720);
-      const ee =
+        })(q || (q = {}));
+      var V = r(82477),
+        Q = r(10622),
+        Y = r(17720);
+      const K =
         r.p +
         "images/applications/store/RewardsSeason1Hero.png?v=valveisgoodatcaching";
-      var te = r(43527),
-        re = r(44332),
-        ie = r(51006),
-        ne = r(30894),
-        ae = r(14771);
-      const se = 2 === c.TS.EUNIVERSE ? 404860 : 1675200;
-      function oe(e, t = !1) {
+      var J = r(43527),
+        X = r(44332),
+        $ = r(51006),
+        ee = r(30894),
+        te = r(14771);
+      const re = 2 === c.TS.EUNIVERSE ? 404860 : 1675200;
+      function ie(e, t = !1) {
         const r = (e) => (0, s.we)(t ? `${e}_Plural` : e);
         switch (e) {
           case 4:
@@ -4469,15 +4252,15 @@
         }
         return "Unknown ECommunityItemClass";
       }
-      const le = "home";
-      class ce {
+      const ne = "home";
+      class ae {
         original_point_cost;
         point_cost;
         discount;
         items = [];
         mapItemOwnership = new Map();
       }
-      class me {
+      class se {
         constructor() {
           (0, a.Gn)(this);
         }
@@ -4523,14 +4306,14 @@
         m_unAwardPointsTransferred = 0;
         m_bIsSaleActive = !1;
         m_strFreeItemHeader;
-        m_HeroImageFallbackLoader = new Ee(
+        m_HeroImageFallbackLoader = new Ie(
           (e) =>
             fetch(`${c.TS.STORE_BASE_URL}points/heroimage?appid=${e}`)
               .then((e) => e.json())
               .then((e) => e.img_url),
           (e) => e.toString(),
         );
-        m_batchedRewardItemLoader = new Me(
+        m_batchedRewardItemLoader = new we(
           (e) => p.a9.BatchedQueryRewardItems(this.m_anonymousTransport, e),
           (e) => {
             const t = u.w.Init(p.Dj);
@@ -4547,7 +4330,7 @@
                 ),
                 []),
         );
-        m_batchedCommunityInventoryLoader = new Me(
+        m_batchedCommunityInventoryLoader = new we(
           (e) => _.uy.GetCommunityInventory(this.m_transport, e),
           (e) => {
             const t = u.w.Init(_.cU);
@@ -4579,8 +4362,8 @@
             (this.m_config = t),
             this.BIsLoggedIn())
           ) {
-            const e = new $.b(c.iA.steamid);
-            (this.m_persona = new X.Z(e)), this.RetrievePersonaState();
+            const e = new Y.b(c.iA.steamid);
+            (this.m_persona = new Q.Z(e)), this.RetrievePersonaState();
           }
           t.eligible_apps
             ? ((this.m_bLoadedEligibleApps = !0),
@@ -4615,7 +4398,7 @@
             t.golden_profiles &&
               (this.m_goldenProfileConfigs = t.golden_profiles || []),
             t.can_claim_sale_reward &&
-              ve.Get().InitFreeItemReward(t.can_claim_sale_reward),
+              Ce.Get().InitFreeItemReward(t.can_claim_sale_reward),
             t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
             t.free_item_header &&
               (this.m_strFreeItemHeader = t.free_item_header),
@@ -4624,7 +4407,7 @@
         static s_RewardsStore;
         static Get() {
           return (
-            this.s_RewardsStore || (this.s_RewardsStore = new me()),
+            this.s_RewardsStore || (this.s_RewardsStore = new se()),
             this.s_RewardsStore
           );
         }
@@ -4690,7 +4473,7 @@
               : t.endsWith("/") && (t = t.slice(0, t.length - 1)),
               (t += "/reward/" + e);
           }
-          (0, J.pZ)(t);
+          (0, V.pZ)(t);
         }
         BHasAutumnSaleStarted() {
           let e = Date.now() / 1e3;
@@ -4797,7 +4580,7 @@
         }
         QueryRewardDefinitions(e, t, r) {
           const i = e.rewardtype ?? [1],
-            n = ne.Fm.Get().ExcludedContentDescriptor;
+            n = ee.Fm.Get().ExcludedContentDescriptor;
           let a = this.QueryLoyaltyRewardDefinitions(
             { ...e, excludedContentDescriptors: n },
             t,
@@ -4849,7 +4632,7 @@
               searchLanguage: e.searchLanguage,
               searchTerm: e.searchTerm,
             },
-            o = _e(s);
+            o = me(s);
           s.maxToReturn &&
             t + r > s.maxToReturn &&
             (r = Math.max(0, s.maxToReturn - t));
@@ -4955,7 +4738,7 @@
                     this.m_mapLoyaltyRewardDefs.set(t.defid, t),
                       e.push(t.appid);
                   }),
-                  ie.Vw.EnsureAppInfoForAppIDs(e);
+                  $.Vw.EnsureAppInfoForAppIDs(e);
               });
             });
           }
@@ -4981,7 +4764,7 @@
               excludedAppIDs: d,
               searchTerm: u,
             } = e,
-            _ = ge(a),
+            _ = de(a),
             g = new p.GB();
           n.forEach((e) => g.add_appids(e)),
             g.set_language(c.TS.LANGUAGE),
@@ -5120,7 +4903,7 @@
               null);
         }
         GetBundleOfferForUser(e) {
-          let t = new ce();
+          let t = new ae();
           if (
             ((t.original_point_cost = 0),
             (t.point_cost = 0),
@@ -5221,7 +5004,7 @@
           );
           return (
             t || this.GetCommunityItemInventory(e.appid),
-            (0, re.w)(
+            (0, X.w)(
               t.has(e.community_item_type),
               `Missing owned item ${e.community_item_type}`,
             ),
@@ -5521,7 +5304,7 @@
         async LoadCouponPromosForUser() {
           const e = u.w.Init(y);
           e.Body().set_country_code(c.iA.country_code);
-          const t = await Q.GetAvailableValveDiscountPromotions(
+          const t = await Z.GetAvailableValveDiscountPromotions(
             this.m_transport,
             e,
           );
@@ -5629,7 +5412,7 @@
           if (((this.m_bLoadedRecentlyPlayed = !0), !this.BIsLoggedIn()))
             return [];
           const e = u.w.Init(g.t2),
-            t = Math.floor(Date.now() / 1e3) - 14 * ae.Kp.PerDay;
+            t = Math.floor(Date.now() / 1e3) - 14 * te.Kp.PerDay;
           e.Body().set_min_last_played(t);
           const r = await g.xt.ClientGetLastPlayedTimes(this.m_transport, e);
           return 1 == r.GetEResult()
@@ -5759,7 +5542,7 @@
               is_custom: !0,
             };
           return {
-            img_url: this.m_HeroImageFallbackLoader.Get(e) || ee,
+            img_url: this.m_HeroImageFallbackLoader.Get(e) || K,
             is_custom: !1,
           };
         }
@@ -5781,22 +5564,22 @@
         m_mapPages = a.sH.map({}, { deep: !1 });
         GetPageDescriptor(e) {
           return (
-            this.m_mapPages.has(ue(e)) ||
-              this.m_mapPages.set(ue(e), this.BuildPage(e)),
-            this.m_mapPages.get(ue(e))
+            this.m_mapPages.has(le(e)) ||
+              this.m_mapPages.set(le(e), this.BuildPage(e)),
+            this.m_mapPages.get(le(e))
           );
         }
         BuildPage(e) {
           switch (e.type) {
             case "app":
-              return new ye(
+              return new ge(
                 e.appid,
                 e.appid === this.GetCurrentSeasonalAppID()
                   ? (0, s.we)("#HeroCluster_Premier_Collection_Subtitle")
                   : void 0,
               );
             case "event":
-              return new we(
+              return new _e(
                 e.eventname,
                 e.rgIncludedAppIDs,
                 e.rgPriorityAppIDs,
@@ -5814,14 +5597,14 @@
         }
         HydrateCustomPages() {
           const e = (e, t, r) => {
-              const i = new he(e, t, { grouping: 2, maxToReturn: 0, ...r });
+              const i = new ue(e, t, { grouping: 2, maxToReturn: 0, ...r });
               return (
                 this.m_mapClusters.has(i.id) || this.m_mapClusters.set(i.id, i),
                 i.id
               );
             },
             t = (e, t, r) => {
-              const i = new fe(e, t, Se({ grouping: 2 }, r));
+              const i = new pe(e, t, ye({ grouping: 2 }, r));
               return (
                 this.m_mapClusters.has(i.id) || this.m_mapClusters.set(i.id, i),
                 i
@@ -5836,7 +5619,7 @@
                   return (0, s.we)("#HeroCluster_AppTitle", a.title);
                 },
                 get strImage() {
-                  return r || me.Get().GetAppHeroImage(e).img_url;
+                  return r || se.Get().GetAppHeroImage(e).img_url;
                 },
                 get bFullBleedImage() {
                   return !!r;
@@ -5851,7 +5634,7 @@
                 },
               };
             },
-            i = (e) => this.m_mapPages.set(ue(e.params), e),
+            i = (e) => this.m_mapPages.set(le(e.params), e),
             n = e(
               (0, s.we)(
                 "#RewardCluster_Popular_Title",
@@ -5860,7 +5643,7 @@
               (0, s.we)("#RewardCluster_Popular_Subtitle"),
             ),
             o = e(
-              oe(13, !0),
+              ie(13, !0),
               (0, s.we)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               { itemclass: [13] },
             ),
@@ -5869,7 +5652,7 @@
               (0, s.we)("#RewardCluster_AvatarItems_Subtitle"),
               { itemclass: [15, 14] },
             ),
-            c = e(oe(3, !0), (0, s.we)("#RewardCluster_Backgrounds_Subtitle"), {
+            c = e(ie(3, !0), (0, s.we)("#RewardCluster_Backgrounds_Subtitle"), {
               itemclass: [3],
             }),
             m = e(
@@ -5897,28 +5680,28 @@
               { itemclass: [4] },
             ),
             p = e(
-              (0, s.we)("#RewardCluster_All_Title", oe(15, !0)),
+              (0, s.we)("#RewardCluster_All_Title", ie(15, !0)),
               (0, s.we)("#RewardCluster_AnimatedAvatar_Subtitle"),
               { itemclass: [15] },
             ),
             _ = e(
-              (0, s.we)("#RewardCluster_All_Title", oe(14, !0)),
+              (0, s.we)("#RewardCluster_All_Title", ie(14, !0)),
               (0, s.we)("#RewardCluster_AvatarFrames_Subtitle"),
               { itemclass: [14] },
             ),
             g = e(
-              (0, s.we)("#RewardCluster_All_Title", oe(16, !0)),
+              (0, s.we)("#RewardCluster_All_Title", ie(16, !0)),
               (0, s.we)("#RewardCluster_SteamDeckKeyboardSkins_Subtitle"),
               { itemclass: [16] },
             ),
             h = e(
-              (0, s.we)("#RewardCluster_All_Title", oe(17, !0)),
+              (0, s.we)("#RewardCluster_All_Title", ie(17, !0)),
               (0, s.we)("#RewardCluster_SteamDeckStartupMovies_Subtitle"),
               { itemclass: [17] },
             ),
-            f = e((0, s.we)("#RewardCluster_FromGames", oe(17, !0)), void 0, {
+            f = e((0, s.we)("#RewardCluster_FromGames", ie(17, !0)), void 0, {
               itemclass: [17],
-              excludedAppIDs: [se],
+              excludedAppIDs: [re],
             }),
             w = e(
               (0, s.we)(
@@ -5979,7 +5762,7 @@
                 {
                   cluster: y,
                   type: 2,
-                  strImage: ee,
+                  strImage: K,
                   bFullBleedImage: !0,
                   linkedPage: { type: "custom", pageid: "profilebundles" },
                 },
@@ -6018,9 +5801,9 @@
           for (let e = 0; e < Math.max(v[0].length, v[1].length); e++)
             e < v[0].length && E.push({ type: "clusterview", view: v[0][e] }),
               e < v[1].length && E.push({ type: "clusterview", view: v[1][e] });
-          i(new Ie(le, E));
+          i(new he(ne, E));
           i(
-            new Ce(
+            new fe(
               "stickers",
               [{ cluster: d, type: 0 }],
               (0, s.we)("#ShopPageTitle_Stickers"),
@@ -6029,7 +5812,7 @@
             ),
           );
           i(
-            new Ce(
+            new fe(
               "emoticons",
               [{ cluster: u, type: 0 }],
               (0, s.we)("#ShopPageTitle_Emoticons"),
@@ -6038,10 +5821,10 @@
             ),
           ),
             i(
-              new Ce(
+              new fe(
                 "chateffects",
                 [{ cluster: m, type: 0 }],
-                oe(12, !0),
+                ie(12, !0),
                 void 0,
                 (0, s.we)("#SearchPlaceholder_ChatEffects"),
               ),
@@ -6067,7 +5850,7 @@
               { itemclass: [13], queryFilter: [2] },
             );
           i(
-            new Ce(
+            new fe(
               "backgrounds",
               [
                 { cluster: A, type: 1 },
@@ -6081,7 +5864,7 @@
             ),
           ),
             i(
-              new Ce(
+              new fe(
                 "avatar",
                 [
                   { cluster: p, type: 1 },
@@ -6093,7 +5876,7 @@
               ),
             );
           i(
-            new Ce(
+            new fe(
               "steamdeck",
               [
                 { cluster: g, type: 1 },
@@ -6105,7 +5888,7 @@
             ),
           ),
             i(
-              new Ce(
+              new fe(
                 "keyboard",
                 [{ cluster: g, type: 0 }],
                 (0, s.we)("#ShopPageTitle_SteamDeckKeyboardSkin"),
@@ -6114,7 +5897,7 @@
               ),
             ),
             i(
-              new Ce(
+              new fe(
                 "startupmovie",
                 [
                   { cluster: f, type: 1 },
@@ -6126,7 +5909,7 @@
               ),
             ),
             i(
-              new Ce(
+              new fe(
                 "itembundles",
                 [{ cluster: w, type: 0 }],
                 (0, s.we)("#ShopPageTitle_ItemBundles"),
@@ -6135,7 +5918,7 @@
               ),
             );
           i(
-            new Ce(
+            new fe(
               "profilebundles",
               [
                 { cluster: I, type: 1 },
@@ -6148,7 +5931,7 @@
             ),
           );
           i(
-            new Ce(
+            new fe(
               "artistprofiles",
               [{ cluster: C, type: 0, bHomogeneous: !0 }],
               (0, s.we)("#ShopPageTitle_ArtistProfiles"),
@@ -6158,14 +5941,14 @@
           ),
             this.BIsLoggedIn() &&
               (0, a.z7)(
-                () => !!me.Get().GetSortedGamesWithRewards().length,
+                () => !!se.Get().GetSortedGamesWithRewards().length,
               ).then(() => {
-                const e = new he(
+                const e = new ue(
                   (0, s.we)("#HeroCluster_YourGamesTitle"),
                   void 0,
                   {
                     get appid() {
-                      return me.Get().GetSortedGamesWithRewards().slice(0, 10);
+                      return se.Get().GetSortedGamesWithRewards().slice(0, 10);
                     },
                     grouping: 2,
                   },
@@ -6175,14 +5958,14 @@
                   type: 2,
                   linkedPage: { type: "custom", pageid: "games" },
                   cluster: e.id,
-                  strImage: ee,
+                  strImage: K,
                   bFullBleedImage: !0,
                 };
                 E.push({ type: "clusterview", view: t });
-                const i = me.Get().GetSortedGamesWithRewards(),
+                const i = se.Get().GetSortedGamesWithRewards(),
                   n = (e) => {
                     const t = this.m_mapClusters.get(e);
-                    return t && t instanceof fe ? t.appid : null;
+                    return t && t instanceof pe ? t.appid : null;
                   };
                 let a = 0;
                 for (const e of i) {
@@ -6204,14 +5987,14 @@
                     break;
                 }
                 this.m_mapPages.set(
-                  ue({ type: "custom", pageid: le }),
-                  new Ie(le, E),
+                  le({ type: "custom", pageid: ne }),
+                  new he(ne, E),
                 );
               });
         }
       }
-      function de(e) {
-        const t = te.B.LoyaltyStore();
+      function oe(e) {
+        const t = J.B.LoyaltyStore();
         switch (e.type) {
           case "app":
             return `${t}/app/${e.appid}${"number" == typeof e.clusterindex ? `/cluster/${e.clusterindex}` : ""}`;
@@ -6223,13 +6006,13 @@
             return console.error(`Unknown page type ${e.type}`), t;
         }
       }
-      function ue(e) {
+      function le(e) {
         return btoa(JSON.stringify(e));
       }
-      function pe(e, t) {
-        return `${e.join("_")}__${_e(t)}`;
+      function ce(e, t) {
+        return `${e.join("_")}__${me(t)}`;
       }
-      function _e(e) {
+      function me(e) {
         if (!e) return "";
         const {
             appid: t,
@@ -6243,7 +6026,7 @@
             searchLanguage: c,
             searchTerm: m,
           } = e,
-          d = ge(n);
+          d = de(n);
         return [
           t ? [...t].sort().join("_") : "",
           r ? r.join("_") : "",
@@ -6258,7 +6041,7 @@
           m ? encodeURI(m.substring(0, 200)) : "",
         ].join("__");
       }
-      function ge(e) {
+      function de(e) {
         const t = { sort: 1, sort_descending: !0 };
         switch (e) {
           case 1:
@@ -6269,37 +6052,37 @@
         }
         return t;
       }
-      (0, i.Cg)([a.sH.ref], me.prototype, "m_lPointsAvailable", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapCouponPromos", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_nAppIDFiltersInUseCount", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapAppIDFilters", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_strAppFilterText", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_strSearchTerm", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_strSearchPlaceholder", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapCouponDefinitons", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapLoyaltyRewardDefs", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapOwnedCommunityItems", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapAppRewards", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_seasonalBadgeDefinition", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_goldenProfileDefinition", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_goldenProfileConfigs", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_rgSortedAppsWithRewards", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_rgEventAppsWithRewards", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_rgEligibleApps", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_mapEligibleApps", void 0),
+      (0, i.Cg)([a.sH.ref], se.prototype, "m_lPointsAvailable", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapCouponPromos", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_nAppIDFiltersInUseCount", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapAppIDFilters", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_strAppFilterText", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_strSearchTerm", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_strSearchPlaceholder", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapCouponDefinitons", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapLoyaltyRewardDefs", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapOwnedCommunityItems", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapAppRewards", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_seasonalBadgeDefinition", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_goldenProfileDefinition", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_goldenProfileConfigs", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_rgSortedAppsWithRewards", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_rgEventAppsWithRewards", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_rgEligibleApps", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_mapEligibleApps", void 0),
         (0, i.Cg)(
           [a.sH],
-          me.prototype,
+          se.prototype,
           "m_rgProfileCustomizationsConfig",
           void 0,
         ),
-        (0, i.Cg)([a.sH], me.prototype, "m_persona", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_equippedItems", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_rgPurchasedCustomizations", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_rgUpgradedCustomizations", void 0),
-        (0, i.Cg)([a.sH], me.prototype, "m_unAwardPointsTransferred", void 0),
-        (0, i.Cg)([d.oI], me.prototype, "ShowLoginDialog", null);
-      class he {
+        (0, i.Cg)([a.sH], se.prototype, "m_persona", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_equippedItems", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_rgPurchasedCustomizations", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_rgUpgradedCustomizations", void 0),
+        (0, i.Cg)([a.sH], se.prototype, "m_unAwardPointsTransferred", void 0),
+        (0, i.Cg)([d.oI], se.prototype, "ShowLoginDialog", null);
+      class ue {
         m_strId;
         m_filter;
         m_strTitle;
@@ -6308,7 +6091,7 @@
           (this.m_filter = r),
             (this.m_strTitle = e),
             (this.m_strSubtitle = t),
-            (this.m_strId = pe([], r));
+            (this.m_strId = ce([], r));
         }
         get id() {
           return this.m_strId;
@@ -6320,12 +6103,12 @@
           return this.m_strSubtitle;
         }
         GetRewards(e, t, r) {
-          const i = Se(this.m_filter, r);
-          return me.Get().QueryRewardDefinitions(i, e, t);
+          const i = ye(this.m_filter, r);
+          return se.Get().QueryRewardDefinitions(i, e, t);
         }
       }
-      (0, i.Cg)([d.oI], he.prototype, "GetRewards", null);
-      class fe {
+      (0, i.Cg)([d.oI], ue.prototype, "GetRewards", null);
+      class pe {
         m_strId;
         m_appid;
         m_strSubtitle;
@@ -6334,8 +6117,8 @@
           (this.m_appid = e),
             (this.m_strSubtitle = t || ""),
             (this.m_additionalFilter = r || {}),
-            ie.Vw.GetAppInfo(this.m_appid),
-            (this.m_strId = pe([this.m_appid], this.m_additionalFilter));
+            $.Vw.GetAppInfo(this.m_appid),
+            (this.m_strId = ce([this.m_appid], this.m_additionalFilter));
         }
         get id() {
           return this.m_strId;
@@ -6344,18 +6127,18 @@
           return this.m_appid;
         }
         get title() {
-          return ie.Vw.GetAppInfo(this.m_appid).name;
+          return $.Vw.GetAppInfo(this.m_appid).name;
         }
         get subtitle() {
           return this.m_strSubtitle;
         }
         GetRewards(e, t, r) {
-          const i = Se({ appid: [this.m_appid] }, this.m_additionalFilter, r);
-          return me.Get().QueryRewardDefinitions(i, e, t);
+          const i = ye({ appid: [this.m_appid] }, this.m_additionalFilter, r);
+          return se.Get().QueryRewardDefinitions(i, e, t);
         }
       }
-      (0, i.Cg)([d.oI], fe.prototype, "GetRewards", null);
-      class we {
+      (0, i.Cg)([d.oI], pe.prototype, "GetRewards", null);
+      class _e {
         m_strEventName;
         m_rgIncludedAppIDs;
         m_rgPriorityAppIDs;
@@ -6380,14 +6163,14 @@
               type: 1,
               linkedPage: null,
               cluster: {
-                id: ue({ eventname: this.m_strEventName, type: "event" }),
+                id: le({ eventname: this.m_strEventName, type: "event" }),
                 title: (0, s.we)("#RewardCluster_FeaturedItems"),
                 subtitle: "",
                 GetRewards: (e, t, r) =>
-                  me
+                  se
                     .Get()
                     .QueryRewardDefinitions(
-                      Se(
+                      ye(
                         { grouping: 2, categoryTag: [this.m_strEventName] },
                         r,
                       ),
@@ -6405,20 +6188,20 @@
                 type: 1,
                 linkedPage: null,
                 cluster: {
-                  id: ue({
+                  id: le({
                     eventname: this.m_strEventName,
                     type: "event",
                     itemclass: e,
                     rgIncludedAppIDs: this.m_rgIncludedAppIDs,
                     rgPriorityAppIDs: this.m_rgPriorityAppIDs,
                   }),
-                  title: oe(e, !0),
+                  title: ie(e, !0),
                   subtitle: "",
                   GetRewards: (t, i, n) =>
-                    me
+                    se
                       .Get()
                       .QueryRewardDefinitions(
-                        Se({ grouping: 2, itemclass: [e], appid: r }, n),
+                        ye({ grouping: 2, itemclass: [e], appid: r }, n),
                         t,
                         i,
                       ),
@@ -6432,25 +6215,25 @@
                 view: {
                   type: 1,
                   linkedPage: { type: "app", appid: e },
-                  cluster: new fe(e, ""),
+                  cluster: new pe(e, ""),
                 },
               }));
           return e.concat(i, n);
         }
       }
-      class ye {
+      class ge {
         m_appid;
         m_strSubtitle;
         constructor(e, t = "") {
           (this.m_appid = e),
             (this.m_strSubtitle = t),
-            ie.Vw.GetAppInfo(this.m_appid);
+            $.Vw.GetAppInfo(this.m_appid);
         }
         get params() {
           return { type: "app", appid: this.m_appid };
         }
         get title() {
-          return ie.Vw.GetAppInfo(this.m_appid).name;
+          return $.Vw.GetAppInfo(this.m_appid).name;
         }
         get subtitle() {
           return this.m_strSubtitle;
@@ -6463,14 +6246,14 @@
               view: {
                 type: 1,
                 cluster: {
-                  id: pe([this.m_appid], { rewardtype: [5] }),
+                  id: ce([this.m_appid], { rewardtype: [5] }),
                   title: (0, s.we)("#RewardItemType_Bundle_plural"),
                   subtitle: "",
                   GetRewards: (e, t, r) =>
-                    me
+                    se
                       .Get()
                       .QueryRewardDefinitions(
-                        Se({ appid: [this.m_appid], rewardtype: [5, 6] }, r),
+                        ye({ appid: [this.m_appid], rewardtype: [5, 6] }, r),
                         e,
                         t,
                       ),
@@ -6484,14 +6267,14 @@
             view: {
               type: 1,
               cluster: {
-                id: pe([this.m_appid], { itemclass: [e] }),
-                title: oe(e, !0),
+                id: ce([this.m_appid], { itemclass: [e] }),
+                title: ie(e, !0),
                 subtitle: "",
                 GetRewards: (t, r, i) =>
-                  me
+                  se
                     .Get()
                     .QueryRewardDefinitions(
-                      Se({ appid: [this.m_appid], itemclass: [e] }, i),
+                      ye({ appid: [this.m_appid], itemclass: [e] }, i),
                       t,
                       r,
                     ),
@@ -6501,7 +6284,7 @@
           return (e = e.concat(t)), e;
         }
       }
-      class Ie {
+      class he {
         m_strTitle;
         m_strSubtitle;
         m_strSearchPlaceholder;
@@ -6543,7 +6326,7 @@
                     type: "clusterview",
                     view: {
                       ...e.view,
-                      cluster: me.Get().GetClusterDescriptor(e.view.cluster),
+                      cluster: se.Get().GetClusterDescriptor(e.view.cluster),
                     },
                   };
               }
@@ -6551,7 +6334,7 @@
           );
         }
       }
-      class Ce extends Ie {
+      class fe extends he {
         constructor(e, t, r, i, n, a) {
           super(
             e,
@@ -6563,7 +6346,7 @@
           );
         }
       }
-      class Me {
+      class we {
         m_fnJoinRequests;
         m_fnSplitResponse;
         m_fnMakeRequest;
@@ -6592,7 +6375,7 @@
           (this.m_rootPromise = void 0), (this.m_rgRequestParts = []);
         }
       }
-      function Se(e, ...t) {
+      function ye(e, ...t) {
         return t && t.length
           ? [e, ...t].reduce((e, t) => {
               if (!t) return e;
@@ -6647,7 +6430,7 @@
             })
           : e;
       }
-      class Ee {
+      class Ie {
         m_fnRequest;
         m_fnBuildRequestKey;
         m_mapCache;
@@ -6675,7 +6458,7 @@
           return !!this.m_mapInflightRequests.get(t);
         }
       }
-      class ve {
+      class Ce {
         constructor() {
           (0, a.Gn)(this);
         }
@@ -6687,7 +6470,7 @@
         static Get() {
           return (
             this.s_SaleItemRewardsStore ||
-              (this.s_SaleItemRewardsStore = new ve()),
+              (this.s_SaleItemRewardsStore = new Ce()),
             this.s_SaleItemRewardsStore
           );
         }
@@ -6698,7 +6481,7 @@
             this.SetClaimTimer();
         }
         BCanClaimFreeSaleReward() {
-          return !me.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
+          return !se.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
         }
         GetCurrentSaleRewardAppID() {
           return 1880140;
@@ -6707,9 +6490,9 @@
           return this.m_claimedFreeItemDef;
         }
         async LoadCanClaimFreeSticker() {
-          if (!me.Get().BIsLoggedIn()) return;
+          if (!se.Get().BIsLoggedIn()) return;
           const e = u.w.Init(p.c3);
-          let t = await p.Qm.CanClaimItem(me.Get().GetServiceTransport(), e);
+          let t = await p.Qm.CanClaimItem(se.Get().GetServiceTransport(), e);
           1 == t.GetEResult()
             ? this.InitFreeItemReward(t.Body().toObject())
             : console.error(
@@ -6718,12 +6501,12 @@
         }
         async ClaimFreeSaleItem() {
           let e = { eResult: 2, strMessage: "" };
-          if (!me.Get().BIsLoggedIn())
+          if (!se.Get().BIsLoggedIn())
             return (
               (e = { eResult: 21, strMessage: (0, s.we)("#Redeem_SignIn") }), e
             );
           const t = u.w.Init(p.wt),
-            r = await p.Qm.ClaimItem(me.Get().GetServiceTransport(), t);
+            r = await p.Qm.ClaimItem(se.Get().GetServiceTransport(), t);
           return (
             (e.eResult = r.GetEResult()),
             1 == r.GetEResult()
@@ -6731,7 +6514,7 @@
                   .Body()
                   .reward_item()
                   .toObject()),
-                me
+                se
                   .Get()
                   .GetCommunityItemInventory(this.m_claimedFreeItemDef.appid),
                 (this.m_bCanClaimFreeItem = !1),
@@ -6766,9 +6549,9 @@
           );
         }
       }
-      (0, i.Cg)([a.sH], ve.prototype, "m_bCanClaimFreeItem", void 0),
-        (0, i.Cg)([a.sH], ve.prototype, "m_claimedFreeItemDef", void 0),
-        (0, i.Cg)([a.sH], ve.prototype, "m_rtNextClaimTime", void 0);
+      (0, i.Cg)([a.sH], Ce.prototype, "m_bCanClaimFreeItem", void 0),
+        (0, i.Cg)([a.sH], Ce.prototype, "m_claimedFreeItemDef", void 0),
+        (0, i.Cg)([a.sH], Ce.prototype, "m_rtNextClaimTime", void 0);
     },
     63927: (e, t, r) => {
       "use strict";

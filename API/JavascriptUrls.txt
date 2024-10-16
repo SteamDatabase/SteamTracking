@@ -202,6 +202,7 @@ ${COMMUNITY_BASE_URL}gid/${}/ajaxgeteventhistory
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgeteventpublishaudit
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetlastupdatetimeforpartnerevent
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetpartnereventpermissions/
+${COMMUNITY_BASE_URL}gid/${}/ajaxgetsalesectionstats?event_gid=${}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}gid/${}/ajaxrollbackevent
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetlocalization/${}
@@ -1228,6 +1229,7 @@ ${PARTNER_BASE_URL}store/packagelanding/${package_id}
 ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
+${PARTNER_BASE_URL}taxrequirement/${partnerid}/${gid}
 ${PARTNER_BASE_URL}timelinemarkers/ajaxcreatemarker
 ${PARTNER_BASE_URL}timelinemarkers/ajaxdeletemarker
 ${PARTNER_BASE_URL}timelinemarkers/ajaxpublishmarkers

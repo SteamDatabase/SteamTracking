@@ -433,14 +433,14 @@ h3._3s7cUqglDds9wzcWb7OLz6 {
 }
 div.SPYFj8pCLpNmnuQJEDobC,
 h1.SPYFj8pCLpNmnuQJEDobC {
-  font-size: 32px;
-  line-height: 33px;
+  font-size: clamp(15px, 5.5vw, 32px);
+  line-height: clamp(17px, 6vw, 35px);
   font-weight: 500;
 }
 div.QuKtTJ4LCPUlQeWYfLNyX,
 h2.QuKtTJ4LCPUlQeWYfLNyX {
-  font-size: 26px;
-  line-height: 29px;
+  font-size: clamp(12px, 4.5vw, 26px);
+  line-height: clamp(15px, 5vw, 29px);
   font-weight: 400;
 }
 div._3s7cUqglDds9wzcWb7OLz6,

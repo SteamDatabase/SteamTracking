@@ -3062,7 +3062,7 @@
             ),
             (this.m_player = new Ke.Zn(this.m_elVideo, !1)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
-            this.m_player.PlayMPD(t, null, null),
+            this.m_player.PlayMPD(t, null, null, !1),
             (this.m_bMuted = tt("muted")),
             (this.m_nVolume = tt("volume")),
             this.m_player.SetMuted(this.m_bMuted),

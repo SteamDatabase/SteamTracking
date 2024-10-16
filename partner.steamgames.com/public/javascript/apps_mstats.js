@@ -55,7 +55,6 @@ function renderUTMCellData( data, type, row )
 function testUTMLink( linktotest )
 {
 	var errorlabel = '<span style="color:red; text-weight:bold;">Error: </span>';
-	var successlabel = '<span style="color:green; text-weight:bold;">Success: the test passed</span>';
 
 	if ( linktotest.length < 1 )
 	{
@@ -73,13 +72,33 @@ function testUTMLink( linktotest )
 		return errorlabel + 'A utm_campaign or utm_source parameter is required';
 	}
 
+	// look for whitespace
+	const whitespace = "[\\x20\\t\\r\\n\\f]";
+	let rwhitespace = new RegExp( whitespace + "+", "g" );
+	if ( rwhitespace.test( linktotest ) )
+	{
+		return errorlabel + 'The link includes spaces';
+	}
+
 	// check if there are other issues with the link.
-	// Allow steam://openurl/ at the start
-	// The character check A-Za-z0-9$_.!*(),%\'\- is non-reserved URL characters and % to allow for url encoded characters
+	// allow steam://openurl/ at the start
+	// the character check A-Za-z0-9$_.!*(),%\'\- is non-reserved URL characters and % to allow for url encoded characters
 	let re = new RegExp( '^(steam:\/\/openurl\/)?https?:\/\/store\.steampowered\.com\/app\/[0-9]+(\/?|\/[A-Za-z0-9_]*\/?)\\?(utm_[A-Za-z]+=[A-Za-z0-9$_.!*(),%\'\-]+\&*)*(utm_source=[A-Za-z0-9$_.!*(),%\'\-]+|utm_campaign=[A-Za-z0-9$_.!*(),%\'\-]+)+', 'i' );
+	if ( !re.test( linktotest ) )
+		return errorlabel + 'The link does not appear valid. If you believe the link is formatted correctly please <a target="_blank" href="https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=905">contact us</a>.';
 
-	return re.test( linktotest ) ? successlabel : errorlabel + 'The link does not appear valid. If you believe the link is formatted correctly please <a target="_blank" href="https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=905">contact us</a>.';
+	// Success - display the parsed UTM parameters
+	let searchParams = new URLSearchParams( linktotest.split('?')[1] );
+	const k_utm_params = [ 'utm_source', 'utm_campaign', 'utm_medium', 'utm_term', 'utm_content' ];
+	let utm_results = '<span style="">';
+	for ( const utm_param of k_utm_params )
+	{
+		if ( searchParams.has( utm_param ) )
+			utm_results += utm_param + ' = ' + searchParams.get( utm_param ) + '<br>';
+	}
+	utm_results += '</span>';
 
+	return '<span style="color:green;font-weight:bold;">Success! The test passed and returned:</span><br>' + utm_results;
 }
 
 

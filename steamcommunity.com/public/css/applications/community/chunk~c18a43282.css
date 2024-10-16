@@ -1550,7 +1550,18 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   padding: unset;
 }
 ._1Fru-E7WQMr8G_aR2sMg5F {
-  color: #a3cf06;
+  color: #b5df20;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+}
+._1Fru-E7WQMr8G_aR2sMg5F span {
+  margin: 0 auto;
+  background: #344654;
+  padding: 0px 6px;
+  text-shadow: 1px 1px 2px #000;
 }
 .BasicUI ._1Fru-E7WQMr8G_aR2sMg5F {
   color: var(--gpColor-GreenHi);
@@ -1712,6 +1723,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   align-items: center;
 }
 ._3lmdEmwrmqe-kicNCZ9v-I {
+  position: relative;
   background-color: #000;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
@@ -1762,6 +1774,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   background: #2f4b66;
   height: 28px;
   margin-right: 4px;
+  padding: 4px 8px;
 }
 ._2hhNOdcC6yLwL_rugP3YLf ._3lmdEmwrmqe-kicNCZ9v-I {
   margin-left: auto;
@@ -1885,6 +1898,9 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
     #046287 120%
   );
 }
+._1djkdp7OAd0mF3a90RKf27 svg {
+  fill: #fff;
+}
 ._1djkdp7OAd0mF3a90RKf27,
 ._2zssEuiPfY5YdQlnihDfVD {
   display: flex;
@@ -1893,7 +1909,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   margin: 0;
   width: auto;
   min-width: unset;
-  padding: 9px 20px;
+  padding: 4px 16px;
   transition: box-shadow .2s ease-out;
   height: 38px;
   box-sizing: border-box;
@@ -1918,9 +1934,8 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 }
 ._1djkdp7OAd0mF3a90RKf27 svg,
 ._2zssEuiPfY5YdQlnihDfVD svg {
-  width: 18px;
-  height: 18px;
-  margin-left: -7px;
+  width: 22px;
+  height: 22px;
 }
 ._1djkdp7OAd0mF3a90RKf27 {
   gap: 1ch;
@@ -3860,7 +3875,7 @@ html.touch
 ._3euSFGmYfTklNAvMisNvU6:not(._3Fsf5iKYd0GPYaKswndPl5):hover {
   background: linear-gradient(to right, #b6da83 5%, #99cf57 95%);
   color: #000;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .BasicUI .salepg_storenav {

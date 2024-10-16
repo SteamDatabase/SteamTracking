@@ -265,14 +265,6 @@
     66661: (e) => {
       e.exports = { ReferencedApps: "_1bfuawEqNMIto67VTkwdbE" };
     },
-    15392: (e) => {
-      e.exports = {
-        Link: "-HlDBB290kjpl61uUmRed",
-        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
-        Big: "sGy-bB7uqEt4Hoe7U5iA1",
-        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
-      };
-    },
     86244: (e) => {
       e.exports = {
         Container: "_2vGr9KsApU0s59_ZsZVxXY",
@@ -296,15 +288,15 @@
         u = n(71541),
         p = n(84811),
         E = n(34629),
-        g = n(75844),
-        S = n(78327),
+        S = n(75844),
+        g = n(78327),
         h = n(20587);
       class _ extends h.ZQ {
         async DeleteOldAnnouncement(e, t) {
           let n = new URLSearchParams();
-          n.append("sessionid", S.TS.SESSIONID);
+          n.append("sessionid", g.TS.SESSIONID);
           let a =
-              S.TS.COMMUNITY_BASE_URL +
+              g.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               e.ConvertTo64BitString() +
               "/announcements/ajaxdeleteannouncement/" +
@@ -365,13 +357,13 @@
                       strGroupTitle: t.GetName(),
                       id: e,
                       strStoreURL:
-                        (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                        (g.TS.IN_CLIENT ? "steam://openurl/" : "") +
                         t.GetStorePageURL(),
                       strCommunityURL:
-                        (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                        (g.TS.IN_CLIENT ? "steam://openurl/" : "") +
                         t.GetCommunityPageURL(),
                       strForumURL:
-                        (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                        (g.TS.IN_CLIENT ? "steam://openurl/" : "") +
                         t.GetCommunityDiscussionForumsURL(),
                     });
                 });
@@ -384,14 +376,14 @@
                     strGroupTitle: n.group_name,
                     id: t,
                     strStoreURL:
-                      (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
-                      S.TS.STORE_BASE_URL +
+                      (g.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                      g.TS.STORE_BASE_URL +
                       "curator/" +
                       t +
                       "/",
                     strCommunityURL:
-                      (S.TS.IN_CLIENT ? "steam://openurl/" : "") +
-                      S.TS.COMMUNITY_BASE_URL +
+                      (g.TS.IN_CLIENT ? "steam://openurl/" : "") +
+                      g.TS.COMMUNITY_BASE_URL +
                       "gid/" +
                       e.ConvertTo64BitString(),
                     strExtraBannerGroupStyle: x().ClanBanner,
@@ -406,23 +398,23 @@
       function Q(e) {
         const { appId: t, clanId: n, bShowRSSFeed: a } = e,
           { strStoreURL: r, strCommunityURL: s, strForumURL: i } = F(t, n),
-          l = (0, S.Y2)(),
+          l = (0, g.Y2)(),
           m =
-            S.TS.STORE_BASE_URL +
+            g.TS.STORE_BASE_URL +
             "feeds/" +
             (0, R.LJ)() +
             (t ? "/app/" + t : "/group/" + n) +
             "/?cc=" +
-            S.TS.COUNTRY +
+            g.TS.COUNTRY +
             "&l=" +
-            S.TS.LANGUAGE,
+            g.TS.LANGUAGE,
           d = T.KN.Get().GetPartnerEventPermissions(c.b.InitFromClanID(n)),
           p = d && (d.can_edit || d.support_user),
           E = M.Fm.Get().BOwnsApp(t),
-          g = (0, o.useMemo)(() => {
+          S = (0, o.useMemo)(() => {
             const e = [];
             return (
-              S.TS.IN_CLIENT &&
+              g.TS.IN_CLIENT &&
                 E &&
                 e.push({
                   label: (0, b.we)("#EventDisplay_ViewInLibrary_ExtraShort"),
@@ -469,11 +461,11 @@
           strDropDownMenuCtnClass: x().AppBannerLinkDDContainer,
           contextMenuPositionOptions: { bMatchWidth: !1 },
           arrowClassName: x().DDButtonArrow,
-          rgOptions: g,
+          rgOptions: S,
           onChange: (e, t, n) => (0, O.EP)(n, e.data),
         });
       }
-      const W = (0, g.PA)((e) => {
+      const W = (0, S.PA)((e) => {
         const { appId: t, clanId: n } = e,
           {
             strCapsuleUrl: a,
@@ -612,7 +604,7 @@
         }
         Initialize() {
           if (document.getElementById("application_config")) {
-            let e = (0, S.Tc)("repostcontrols", "application_config");
+            let e = (0, g.Tc)("repostcontrols", "application_config");
             oe.ValidateRepostData(e) &&
               e.repost_clan_account_ids.forEach((e) =>
                 this.m_mapClanReposted.add(e),
@@ -628,9 +620,9 @@
         async LoadClansAlreadyRepostedTo(e, t, n) {
           if (this.m_mapSourceEventGIDToPostedClans.has(t))
             return this.m_mapSourceEventGIDToPostedClans.get(t);
-          const a = S.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
+          const a = g.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
             o = {
-              sessionid: S.TS.SESSIONID,
+              sessionid: g.TS.SESSIONID,
               source_clan_accountid: e.GetAccountID(),
               source_event_gid: t,
             };
@@ -664,9 +656,9 @@
           return new Array();
         }
         async RepostEvent(e, t, n, a, o) {
-          const s = S.TS.STORE_BASE_URL + "events/ajaxrepostevent",
+          const s = g.TS.STORE_BASE_URL + "events/ajaxrepostevent",
             i = new FormData();
-          i.append("sessionid", S.TS.SESSIONID),
+          i.append("sessionid", g.TS.SESSIONID),
             i.append("source_clan_accountid", "" + e.GetAccountID()),
             i.append("source_event_gid", "" + t),
             i.append("repost_clan_accountid", "" + n.GetAccountID()),
@@ -708,13 +700,13 @@
       }
       (0, E.Cg)([v.sH], oe.prototype, "m_mapClanReposted", void 0);
       var se = n(22797);
-      const ie = (0, g.PA)((e) => {
+      const ie = (0, S.PA)((e) => {
         const { eventModel: t } = e,
           [n, a] = (0, o.useState)(!0),
           [s, i] = (0, o.useState)(new Set()),
           [l, m] = (0, o.useState)(new Set()),
           [d, E] = (0, o.useState)(new Set()),
-          [g, S] = (0, o.useState)(null),
+          [S, g] = (0, o.useState)(null),
           [h, _] = (0, o.useState)(null),
           v = (0, o.useRef)(null);
         (0, o.useEffect)(() => {
@@ -761,7 +753,7 @@
                       ? (0, b.we)("#EventRepost_Dialog_Existing", n.group_name)
                       : n.group_name,
                     checked: a,
-                    disabled: null !== g,
+                    disabled: null !== S,
                     onChange: (t) => {
                       s.has(e)
                         ? (t ? d.delete(e) : d.add(e), E(new Set(d)))
@@ -825,7 +817,7 @@
                           ),
                       ),
                     ),
-                  Boolean(g) && o.createElement("div", null, g),
+                  Boolean(S) && o.createElement("div", null, S),
                   Boolean(h) && o.createElement("div", null, h),
                 ),
                 o.createElement(
@@ -835,14 +827,14 @@
                     onCancel: () => e.closeModal && e.closeModal(),
                     strOKText: (0, b.we)("#EventRepost_Dialog_OK"),
                     bOKDisabled:
-                      (0 == l.size && 0 == d.size) || null !== g || null !== h,
+                      (0 == l.size && 0 == d.size) || null !== S || null !== h,
                     onOK: async () => {
                       v.current && v.current();
                       const e = r().CancelToken.source();
                       v.current = e.cancel;
                       const n = l.size + d.size;
                       let a = 1;
-                      S((0, b.we)("#EventRepost_Dialog_Progress", a, n));
+                      g((0, b.we)("#EventRepost_Dialog_Progress", a, n));
                       for (const r of Array.from(l)) {
                         const o = c.b.InitFromClanID(r);
                         if (
@@ -853,7 +845,7 @@
                           return void _(
                             (0, b.we)("#EventRepost_Dialog_ResultFail"),
                           );
-                        S((0, b.we)("#EventRepost_Dialog_Progress", ++a, n));
+                        g((0, b.we)("#EventRepost_Dialog_Progress", ++a, n));
                       }
                       for (const r of Array.from(d)) {
                         const o = c.b.InitFromClanID(r);
@@ -865,7 +857,7 @@
                           return void _(
                             (0, b.we)("#EventRepost_Dialog_ResultFail"),
                           );
-                        S((0, b.we)("#EventRepost_Dialog_Progress", ++a, n));
+                        g((0, b.we)("#EventRepost_Dialog_Progress", ++a, n));
                       }
                       _((0, b.we)("#EventRepost_Dialog_ResultSuccess"));
                     },
@@ -883,8 +875,8 @@
         ue = n(19654),
         pe = n(3209),
         Ee = n(32754),
-        ge = n(1909),
-        Se = n(79821),
+        Se = n(1909),
+        ge = n(79821),
         he = n(56545),
         _e = n(51006),
         ve = n(37735),
@@ -892,14 +884,14 @@
         De = n(86244),
         Ne = n.n(De),
         Ce = n(14336);
-      const we = (0, g.PA)((e) => {
+      const we = (0, S.PA)((e) => {
         const { appid: t, eventLink: n } = e,
           a = o.useRef(null),
-          { data: s } = (0, Ce.js)(S.iA.steamid),
+          { data: s } = (0, Ce.js)(g.iA.steamid),
           [i, l] = o.useState(""),
           [m, u] = o.useState(!1),
           [p, E] = o.useState(""),
-          [g, h] = o.useState(!1);
+          [S, h] = o.useState(!1);
         o.useEffect(
           () => () =>
             a.current &&
@@ -907,7 +899,7 @@
           [],
         );
         const _ = s ? s.avatar_url : null,
-          v = c.b.InitFromAccountID(S.iA.accountid),
+          v = c.b.InitFromAccountID(g.iA.accountid),
           A = async () => {
             a.current &&
               a.current("ShareEventOnFriendsActivityFeed: cancel previous...");
@@ -916,12 +908,12 @@
             let o = i;
             0 != o.trim().length && (o += "\n\n"), (o += n);
             const s =
-              S.TS.COMMUNITY_BASE_URL +
+              g.TS.COMMUNITY_BASE_URL +
               "profiles/" +
               v.ConvertTo64BitString() +
               "/ajaxpostuserstatus";
             try {
-              if (S.TS.IN_STEAMUI) {
+              if (g.TS.IN_STEAMUI) {
                 let n = he.w.Init(ve.kV);
                 n.Body().set_appid(t), n.Body().set_status_text(o);
                 let a = await ve.xt.PostStatusToFriends(
@@ -942,7 +934,7 @@
                 const n = new FormData();
                 n.append("appid", "" + t),
                   n.append("status_text", o),
-                  n.append("sessionid", S.TS.SESSIONID);
+                  n.append("sessionid", g.TS.SESSIONID);
                 const a = await r().post(s, n, { withCredentials: !0 });
                 if (200 != a.status || 1 != a?.data?.success) {
                   const t =
@@ -987,16 +979,16 @@
                   0 == p?.length
                     ? o.createElement(se.t, { position: "center" })
                     : o.createElement("div", null, p),
-                  Boolean(g) &&
+                  Boolean(S) &&
                     o.createElement(
                       "a",
                       {
                         href:
-                          S.TS.COMMUNITY_BASE_URL +
+                          g.TS.COMMUNITY_BASE_URL +
                           "profiles/" +
                           v.ConvertTo64BitString() +
                           "/home",
-                        target: S.TS.IN_CLIENT ? void 0 : "_blank",
+                        target: g.TS.IN_CLIENT ? void 0 : "_blank",
                       },
                       (0, b.we)("#EventDisplay_Share_OpenActivityFeed"),
                     ),
@@ -1034,7 +1026,7 @@
                     o.createElement("img", {
                       className: Ne().SmallAvatar,
                       src: _,
-                      "data-miniprofile": "s" + S.iA.steamid,
+                      "data-miniprofile": "s" + g.iA.steamid,
                     }),
                     o.createElement(
                       "div",
@@ -1049,7 +1041,7 @@
                         emoticonStore: e.emoticonStore,
                         bSupportHTMLImport: !1,
                         showFormatHelp: "UserStatusPublished",
-                        limitBBCode: Se.iH,
+                        limitBBCode: ge.iH,
                         classNameForTextArea: Ne().ShareDescription,
                         bEmbeddedInDialog: !0,
                       }),
@@ -1070,9 +1062,9 @@
       class Te extends o.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
-          S.iA.logged_in
+          g.iA.logged_in
             ? this.setState({ bShareOnSteamDialog: !0 })
-            : S.TS.IN_CLIENT
+            : g.TS.IN_CLIENT
               ? console.log(
                   "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
                 )
@@ -1130,8 +1122,8 @@
               fnGetSharePageUrl: n,
               fnShareOnSteamActivityFeed: a,
             } = e,
-            r = (0, S.Y2)(),
-            [i, l] = (0, o.useState)((0, s.sf)(S.TS.LANGUAGE)),
+            r = (0, g.Y2)(),
+            [i, l] = (0, o.useState)((0, s.sf)(g.TS.LANGUAGE)),
             c = (0, o.useMemo)(() => {
               const e = new URL(t);
               return e.searchParams.set("l", (0, s.Lg)(i)), e.href;
@@ -1159,7 +1151,7 @@
                   o.createElement(
                     "div",
                     null,
-                    o.createElement(ge.Ng, {
+                    o.createElement(Se.Ng, {
                       selectedLang: i,
                       fnOnLanguageChanged: l,
                     }),
@@ -1322,7 +1314,7 @@
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
       const ye = (e) => {
-        const t = (0, S.Qn)();
+        const t = (0, g.Qn)();
         return o.createElement(fe, { ...e, bInGamepadUI: t });
       };
       let fe = class extends o.Component {
@@ -1376,7 +1368,7 @@
             return t.BIsUserLoggedIn()
               ? !t.GetPartnerEventPermissions(e.clanSteamID).limited_user ||
                   ((0, K.pg)(o.createElement(re.g, null), window), !1)
-              : (S.TS.IN_CLIENT
+              : (g.TS.IN_CLIENT
                   ? console.log(
                       "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
                     )
@@ -1452,8 +1444,8 @@
             ),
             n = e.GetForumTopicURL(),
             a = (0, G.NT)(n),
-            r = (0, S.Y2)(),
-            s = S.iA.logged_in && oe.Get().BCanRepostPartnerEvent();
+            r = (0, g.Y2)(),
+            s = g.iA.logged_in && oe.Get().BCanRepostPartnerEvent();
           return o.createElement(
             D.Z,
             { className: $().Container, "flow-children": "row", focusable: !1 },
@@ -1621,14 +1613,14 @@
         (0, E.Cg)([Y.oI], fe.prototype, "OnShareDialog", null),
         (0, E.Cg)([Y.oI], fe.prototype, "GotoDiscussion", null),
         (0, E.Cg)([Y.oI], fe.prototype, "OpenRepostDialogs", null),
-        (fe = (0, E.Cg)([g.PA], fe));
+        (fe = (0, E.Cg)([S.PA], fe));
       var ke = n(65946),
         be = n(36148),
         Ge = n(12247),
         Oe = n.n(Ge);
       function Pe(e) {
-        return S.iA.logged_in
-          ? !S.iA.is_limited ||
+        return g.iA.logged_in
+          ? !g.iA.is_limited ||
               ((0, K.pg)(
                 o.createElement(re.g, {
                   strTokenOverride: e
@@ -1653,7 +1645,7 @@
       }
       async function xe(e, t) {
         const n =
-            S.TS.STORE_BASE_URL + "steamawards/ajaxgetsteamawardeventdetails",
+            g.TS.STORE_BASE_URL + "steamawards/ajaxgetsteamawardeventdetails",
           a = {
             rgCategories: e,
             t:
@@ -1716,7 +1708,7 @@
         const p = 1 == i.rgAwardCategoryDetails?.length,
           E =
             t.BIsEventActionEnabled() || d < t.GetStartTimeAndDateUnixSeconds(),
-          g = new Date().getFullYear();
+          S = new Date().getFullYear();
         return o.createElement(
           "div",
           {
@@ -1743,13 +1735,13 @@
                 { className: Oe().SteamAwardSubTitle },
                 E
                   ? (0, b.we)("#SteamAwards_EventCallToAction")
-                  : (0, b.we)("#SteamAwards_EventVotingDateTeaser", g),
+                  : (0, b.we)("#SteamAwards_EventVotingDateTeaser", S),
                 E &&
                   o.createElement(
                     "a",
                     {
                       href: (0, G.NT)(
-                        S.TS.STORE_BASE_URL + "steamawards/nominations/",
+                        g.TS.STORE_BASE_URL + "steamawards/nominations/",
                       ),
                       className: Oe().SteamAwardLearnMore,
                     },
@@ -1772,7 +1764,7 @@
                         {
                           className: Oe().LinkText,
                           href: (0, G.NT)(
-                            S.TS.STORE_BASE_URL + "steamawards/nominations/",
+                            g.TS.STORE_BASE_URL + "steamawards/nominations/",
                           ),
                         },
                         (0, b.we)(
@@ -1887,7 +1879,7 @@
                     "a",
                     {
                       href: (0, G.NT)(
-                        S.TS.STORE_BASE_URL + "steamawards/nominations/",
+                        g.TS.STORE_BASE_URL + "steamawards/nominations/",
                       ),
                     },
                     (0, b.we)(
@@ -1970,8 +1962,8 @@
           );
         }
         async FetchVoteState() {
-          const e = S.TS.STORE_BASE_URL + "steamawards/ajaxgetuservotes";
-          if (S.iA.logged_in)
+          const e = g.TS.STORE_BASE_URL + "steamawards/ajaxgetuservotes";
+          if (g.iA.logged_in)
             try {
               const t = await r().get(e, {
                 withCredentials: !0,
@@ -2033,12 +2025,12 @@
         async SaveVote(e, t) {
           if (
             (this.setState({ eCategoryLoaded: e, votedForAppID: t }),
-            this.props.previewMode && 1 == S.TS.EUNIVERSE)
+            this.props.previewMode && 1 == g.TS.EUNIVERSE)
           )
             return;
-          const n = S.TS.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
+          const n = g.TS.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
             a = new URLSearchParams();
-          a.append("sessionid", S.TS.SESSIONID),
+          a.append("sessionid", g.TS.SESSIONID),
             a.append("categoryid", e.toString()),
             a.append("appid", t.toString());
           try {
@@ -2115,7 +2107,7 @@
       (0, E.Cg)([v.sH], ze.prototype, "m_strPreviousVotedForAppTitle", void 0),
         (0, E.Cg)([Y.oI], ze.prototype, "OnVoteClick", null),
         (0, E.Cg)([Y.oI], ze.prototype, "SaveVote", null),
-        (ze = (0, E.Cg)([g.PA], ze));
+        (ze = (0, E.Cg)([S.PA], ze));
       o.Component;
       let Fe = class extends o.Component {
         m_cancelSignal = r().CancelToken.source();
@@ -2207,7 +2199,7 @@
                             "a",
                             {
                               href: (0, G.NT)(
-                                S.TS.STORE_BASE_URL + "steamawards/",
+                                g.TS.STORE_BASE_URL + "steamawards/",
                               ),
                               className: (0, k.A)(
                                 Oe().SteamAwardLearnMore,
@@ -2221,7 +2213,7 @@
                           "a",
                           {
                             href: (0, G.NT)(
-                              S.TS.STORE_BASE_URL + "steamawards/",
+                              g.TS.STORE_BASE_URL + "steamawards/",
                             ),
                             className: Oe().LinkText,
                           },
@@ -2240,7 +2232,7 @@
         }
       };
       (0, E.Cg)([v.sH], Fe.prototype, "m_awardEventDetails", void 0),
-        (Fe = (0, E.Cg)([g.PA], Fe));
+        (Fe = (0, E.Cg)([S.PA], Fe));
       var He = n(90316),
         Qe = n.n(He),
         We = n(76684),
@@ -2258,7 +2250,7 @@
           [n] = (0, y.t7)(t, { include_basic_info: !0, include_links: !0 });
         if (!n) return null;
         const a = n.GetLinks();
-        return a && 0 != a.length && S.TS.IMG_URL
+        return a && 0 != a.length && g.TS.IMG_URL
           ? o.createElement(
               o.Fragment,
               null,
@@ -2302,7 +2294,7 @@
           "a",
           {
             href: (0, G.NT)(t.url),
-            target: S.TS.IN_CLIENT ? void 0 : "_blank",
+            target: g.TS.IN_CLIENT ? void 0 : "_blank",
             rel: "noopener noreferrer",
           },
           o.createElement(
@@ -2441,7 +2433,7 @@
       n(67165);
       function mt(e) {
         const { children: t } = e;
-        return (0, S.Qn)() && !S.TS.IN_STEAMUI
+        return (0, g.Qn)() && !g.TS.IN_STEAMUI
           ? o.createElement(
               ct.Qg,
               { className: Z.GamepadOnlyScrollPanel },
@@ -2664,7 +2656,7 @@
             const t = e.GID == this.props.initialEvent.GID,
               n = t;
             r.push(
-              o.createElement(St, {
+              o.createElement(gt, {
                 ref: t ? this.m_refScrollAnchor : null,
                 key: e.GID,
                 event: e,
@@ -2777,7 +2769,7 @@
                         ),
                       ),
                       !t &&
-                        o.createElement(gt, {
+                        o.createElement(St, {
                           loader: this.m_loader,
                           location: "top",
                         }),
@@ -2793,7 +2785,7 @@
                         r,
                       ),
                       !t &&
-                        o.createElement(gt, {
+                        o.createElement(St, {
                           loader: this.m_loader,
                           location: "bottom",
                         }),
@@ -2819,8 +2811,8 @@
         (0, E.Cg)([Y.oI], Et.prototype, "OnTouchStart", null),
         (0, E.Cg)([Y.oI], Et.prototype, "OnTouchMove", null),
         (0, E.Cg)([Y.oI], Et.prototype, "OnWheel", null),
-        (Et = (0, E.Cg)([g.PA], Et));
-      const gt = (0, g.PA)((e) => {
+        (Et = (0, E.Cg)([S.PA], Et));
+      const St = (0, S.PA)((e) => {
           let t = e.loader.GetNewerState(),
             n = e.loader.GetOlderState();
           return t == _t.Loading && n == _t.Loading
@@ -2836,8 +2828,8 @@
                 )
               : null;
         }),
-        St = o.forwardRef(function (e, t) {
-          const n = (0, S.Qn)(),
+        gt = o.forwardRef(function (e, t) {
+          const n = (0, g.Qn)(),
             [a, r] = (0, y.t7)(e.event.appid, { include_assets: !0 });
           return o.createElement(ht, {
             ref: t,
@@ -2877,9 +2869,9 @@
               isPreview: d,
               storeItem: u,
             } = this.props,
-            p = t || (0, s.sf)(S.TS.LANGUAGE),
+            p = t || (0, s.sf)(g.TS.LANGUAGE),
             E = e.GetDescriptionWithFallback(p) || "",
-            g = m;
+            S = m;
           let h = e.GetImageForSizeAsArrayWithFallback(
             "background",
             p,
@@ -2910,7 +2902,7 @@
                   r,
                   x().PartnerEvent,
                   Qe().InLibraryView,
-                  "editor" == g ? Qe().InEditor : "",
+                  "editor" == S ? Qe().InEditor : "",
                 ),
               },
               12 != v &&
@@ -3037,7 +3029,7 @@
                       Qe().EventDetailsBody,
                       x().EventDetailsBody,
                     ),
-                    onContextMenu: S.TS.IN_CLIENT ? I.aE : void 0,
+                    onContextMenu: g.TS.IN_CLIENT ? I.aE : void 0,
                   },
                   o.createElement(Ae.f, {
                     text: E,
@@ -3089,7 +3081,7 @@
       var _t;
       (0, E.Cg)([Y.oI], ht.prototype, "OnEnterVisible", null),
         (0, E.Cg)([Y.oI], ht.prototype, "OnLeaveVisible", null),
-        (ht = (0, E.Cg)([g.PA], ht)),
+        (ht = (0, E.Cg)([S.PA], ht)),
         (function (e) {
           (e[(e.Idle = 1)] = "Idle"),
             (e[(e.Loading = 2)] = "Loading"),
@@ -3210,7 +3202,7 @@
       (0, E.Cg)([v.sH.shallow], vt.prototype, "m_rgEvents", void 0),
         (0, E.Cg)([v.sH], vt.prototype, "m_eOlderDirection", void 0),
         (0, E.Cg)([v.sH], vt.prototype, "m_eNewerDirection", void 0);
-      const At = (0, g.PA)((e) =>
+      const At = (0, S.PA)((e) =>
         o.createElement(
           "div",
           {
@@ -3250,7 +3242,7 @@
               className: Dt.Main,
               onClick: this.OnBackgroundClick,
             },
-            o.createElement(St, {
+            o.createElement(gt, {
               key: e.GID,
               event: e,
               emoticonStore: m.A,
@@ -3264,7 +3256,7 @@
       };
       (0, E.Cg)([Y.oI], Nt.prototype, "escFunction", null),
         (0, E.Cg)([Y.oI], Nt.prototype, "OnBackgroundClick", null),
-        (Nt = (0, E.Cg)([g.PA], Nt));
+        (Nt = (0, E.Cg)([S.PA], Nt));
       var Ct = n(25228),
         wt = n(62490),
         Tt = n(87669),
@@ -3312,7 +3304,7 @@
           );
         }
         Init() {
-          const e = (0, S.Tc)("build_notes", "application_config");
+          const e = (0, g.Tc)("build_notes", "application_config");
           (this.m_nBuildVersion = e?.build_version || 0),
             (this.m_bSteamChina = e?.steam_china || !1),
             (this.m_strBuildBranch = e?.build_branch || ""),
@@ -3338,7 +3330,7 @@
         const [t, n] = o.useState(0),
           [a, s] = o.useState(null),
           [m, d] = o.useState(null),
-          [E, g] = o.useState(null),
+          [E, S] = o.useState(null),
           [h, _] = o.useState("editing"),
           [v, A] = o.useState(null);
         if (!ft.Get().BShouldShowPatchNotesEditor()) return null;
@@ -3349,7 +3341,7 @@
             : [i.TU.k_ESteamRealmGlobal],
           w = yt(a, m),
           T =
-            S.TS.COMMUNITY_BASE_URL +
+            g.TS.COMMUNITY_BASE_URL +
             "ogg/" +
             e.appId +
             "/partnerevents/create/";
@@ -3411,11 +3403,11 @@
                   fnGetDescription: (e) => Lt(m, e),
                   fnSetDescription: (e, t) => d(Mt(m, t, e)),
                   fnOnPreviewEvent: () =>
-                    g(
+                    S(
                       (function (e, t) {
                         let n = new l.lh();
                         (n.GID = "PreviewPartnerEventRow_0"),
-                          (n.clanSteamID = new c.b(S.iA.steamid)),
+                          (n.clanSteamID = new c.b(g.iA.steamid)),
                           (n.postTime = Date.now() / 1e3),
                           (n.startTime = Date.now() / 1e3),
                           (n.type = 12);
@@ -3451,14 +3443,14 @@
               event: E,
               eLanguage: t,
               realms: C,
-              fnOnClose: () => g(null),
+              fnOnClose: () => S(null),
               fnOnSubmitEvent: async () => {
-                g(null), _("submitting");
+                S(null), _("submitting");
                 const t = await (async function (e, t, n) {
                   if (yt(t, n)) return null;
                   const a = Boolean(Lt(t, 29).trim()),
                     o = new FormData();
-                  o.append("sessionid", S.TS.SESSIONID),
+                  o.append("sessionid", g.TS.SESSIONID),
                     o.append("appid", "" + e),
                     o.append("post_steam_china", "" + a),
                     o.append("titles", JSON.stringify(t)),
@@ -3466,7 +3458,7 @@
                     o.append("build_id", "" + ft.Get().GetPostedBuildVersion()),
                     o.append("build_branch", ft.Get().GetBuildBranch());
                   const s =
-                    S.TS.PARTNER_BASE_URL +
+                    g.TS.PARTNER_BASE_URL +
                     "partnerevents/ajaxpublishpatchnotes";
                   try {
                     const e = await r().post(s, o, { withCredentials: !0 });
@@ -3517,8 +3509,8 @@
             fnGetTitle: c,
             fnSetTitle: p,
             fnGetDescription: E,
-            fnSetDescription: g,
-            fnOnPreviewEvent: S,
+            fnSetDescription: S,
+            fnOnPreviewEvent: g,
             fnApplyLoc: h,
           } = e;
           let _ = "";
@@ -3566,7 +3558,7 @@
                   },
                   (0, b.we)("#BuildNotes_ImportLocalization"),
                 ),
-                o.createElement(ge.Ng, {
+                o.createElement(Se.Ng, {
                   selectedLang: n,
                   fnOnLanguageChanged: s,
                   fnLangHasData: r,
@@ -3587,8 +3579,8 @@
             ),
             o.createElement(d.I, {
               fnGetCurText: () => E(n),
-              fnOnTextChange: (e) => g(n, e.currentTarget.value),
-              fnSetText: (e) => g(n, e),
+              fnOnTextChange: (e) => S(n, e.currentTarget.value),
+              fnSetText: (e) => S(n, e),
               strPlaceholder: (0, b.we)("#BuildNotes_DescPlaceholder"),
               emoticonStore: m.A,
               bSupportHTMLImport: !0,
@@ -3601,7 +3593,7 @@
               !Boolean(t) &&
                 o.createElement(
                   u.jn,
-                  { onClick: S },
+                  { onClick: g },
                   (0, b.we)("#BuildNotes_Preview"),
                 ),
               Boolean(t) &&
@@ -3627,7 +3619,7 @@
             o.createElement(
               "div",
               { className: It.PreviewHeader },
-              o.createElement(ge.Ng, {
+              o.createElement(Se.Ng, {
                 selectedLang: n,
                 fnOnLanguageChanged: l,
                 fnFilterLanguage: i,
@@ -3692,7 +3684,7 @@
           ),
         Pt = (e) => {
           const { appId: t, eventGid: n } = e,
-            a = `${S.TS.STORE_BASE_URL}news/app/${t}/view/${n}`;
+            a = `${g.TS.STORE_BASE_URL}news/app/${t}/view/${n}`;
           return o.createElement(
             "div",
             { className: (0, k.A)(It.RightPanel, It.SuccessPanel) },
@@ -3776,11 +3768,11 @@
             .Get()
             .GetUnmigratedSalesPages()
             .map((e) =>
-              o.createElement(g, { key: e.pageid, pageid: e.pageid }),
+              o.createElement(S, { key: e.pageid, pageid: e.pageid }),
             ),
         );
       }
-      function g(e) {
+      function S(e) {
         let t = m.Get().GetPageByID(e.pageid);
         return o.createElement(
           "div",
@@ -3793,7 +3785,7 @@
           ),
         );
       }
-      function S(e) {
+      function g(e) {
         const { pageid: t } = e,
           n = m.Get().GetPageByID(t),
           a = (0, p.gS)(n.accountid);
@@ -3869,63 +3861,11 @@
               exact: !0,
               path: _.SaleMigrationPageDebug(":pageid"),
               render: (e) =>
-                o.createElement(S, { pageid: e.match.params.pageid }),
+                o.createElement(g, { pageid: e.match.params.pageid }),
             }),
             o.createElement(i.qh, { component: a.a }),
           ),
         );
-      }
-    },
-    69409: (e, t, n) => {
-      "use strict";
-      n.d(t, { m: () => u });
-      var a = n(90626),
-        r = n(22837),
-        o = n(38390),
-        s = n(27666),
-        i = n(52038),
-        l = n(61859),
-        c = n(61336),
-        m = n(78327),
-        d = n(15392);
-      function u(e) {
-        const { gidEvent: t } = e,
-          n = (0, o.RR)(t),
-          [u, p] = (0, a.useMemo)(() => {
-            if (
-              n?.jsondata?.localized_sale_product_banner?.length > 0 &&
-              n?.jsondata?.localized_sale_product_mobile_banner?.length > 0
-            ) {
-              const e = (0, r.sf)(m.TS.LANGUAGE),
-                t = l.NT.GetWithFallback(
-                  n.jsondata.localized_sale_product_banner,
-                  e,
-                ),
-                a = l.NT.GetWithFallback(
-                  n.jsondata.localized_sale_product_mobile_banner,
-                  e,
-                );
-              if (t?.length > 0 && a?.length > 0) {
-                const e = n.clanSteamID.GetAccountID();
-                return [`${(0, s.mJ)()}${e}/${t}`, `${(0, s.mJ)()}${e}/${a}`];
-              }
-            }
-            return [null, null];
-          }, [n]);
-        return u?.length > 0 && p?.length > 0
-          ? a.createElement(
-              "a",
-              { href: (0, c.k2)(n.GetSaleURL()), className: d.Link },
-              a.createElement("img", {
-                src: u,
-                className: (0, i.A)(d.Banner, d.Big),
-              }),
-              a.createElement("img", {
-                src: p,
-                className: (0, i.A)(d.Banner, d.Mobile),
-              }),
-            )
-          : null;
       }
     },
     96715: (e, t, n) => {

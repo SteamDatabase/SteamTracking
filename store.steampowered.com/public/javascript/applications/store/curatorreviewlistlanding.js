@@ -973,7 +973,7 @@
     },
     49271: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { CuratorReviewListContainer: () => K, default: () => q });
+      a.r(t), a.d(t, { CuratorReviewListContainer: () => X, default: () => K });
       var n = a(75844),
         r = a(90626),
         o = a(15759),
@@ -1192,15 +1192,16 @@
           ),
         );
       }
-      const q = function (e) {
+      var q = a(32630);
+      const K = function (e) {
         const t = (0, C.A)();
         return r.createElement(
           l.u,
           { navID: "StoreCuratorPageRoot", NavigationManager: t },
-          r.createElement(K, { listid: e.listid }),
+          r.createElement(X, { listid: e.listid }),
         );
       };
-      function K(e) {
+      function X(e) {
         const t = parseInt(
             (0, y.Tc)("curator_account_id", "application_config"),
           ),
@@ -1210,8 +1211,8 @@
           (0, L.vb)(),
           n
             ? r.createElement(
-                r.Fragment,
-                null,
+                q.A,
+                { feature: "curatorlistcapsule" },
                 r.createElement($, { clanInfo: a }),
                 r.createElement(
                   "div",
@@ -1222,10 +1223,10 @@
                     r.createElement(
                       "div",
                       { className: H().CuratorListCtn },
-                      r.createElement(Q, { listDetails: n }),
+                      r.createElement(ee, { listDetails: n }),
                       (0, E.cc)(n)
-                        ? r.createElement(X, { listDetails: n })
-                        : r.createElement(J, {
+                        ? r.createElement(J, { listDetails: n })
+                        : r.createElement(Q, {
                             listDetails: n,
                             rgListItems: n.apps,
                           }),
@@ -1250,7 +1251,7 @@
             : null
         );
       }
-      function X(e) {
+      function J(e) {
         const { listDetails: t } = e,
           [a, n] = (0, r.useState)(null),
           o = new d.b(t.sale_clan_steamid),
@@ -1273,10 +1274,10 @@
                 n(t.apps?.filter((t) => e.has(t.recommended_app?.appid)));
               }
           }, [t, i, l]),
-          r.createElement(J, { listDetails: t, rgListItems: a })
+          r.createElement(Q, { listDetails: t, rgListItems: a })
         );
       }
-      function J(e) {
+      function Q(e) {
         const { listDetails: t, rgListItems: a } = e,
           [n, o] = (0, r.useState)(0),
           [i, l] = (0, r.useState)(null),
@@ -1325,7 +1326,7 @@
               "flow-children": "grid",
             },
             i.map((e, a) =>
-              r.createElement(ee, {
+              r.createElement(te, {
                 key: "rec_" + e.recommended_app.appid,
                 item: e,
                 listDetails: t,
@@ -1351,7 +1352,7 @@
             ),
         );
       }
-      function Q(e) {
+      function ee(e) {
         const { listDetails: t } = e,
           a = (0, E.fq)(t),
           n = (0, y.Tc)("showlisttitle", "application_config"),
@@ -1408,10 +1409,10 @@
                 imageClassnames: H().YouTubePreviewImage,
               }),
             ),
-          _ && r.createElement(ne, { url: _ }),
+          _ && r.createElement(re, { url: _ }),
         );
       }
-      const ee = (0, n.PA)((e) => {
+      const te = (0, n.PA)((e) => {
         const { item: t, listDetails: a, bAutoFocus: n } = e,
           o = parseInt((0, y.Tc)("curator_account_id", "application_config")),
           i = (0, E.m1)(o),
@@ -1449,7 +1450,7 @@
             "div",
             { className: H().CapsuleCtn },
             Boolean(v || C)
-              ? r.createElement(te, {
+              ? r.createElement(ae, {
                   strVideoID: v?.strVideoID || C,
                   nStartSeconds: v?.nStartSeconds,
                   info: l,
@@ -1472,7 +1473,7 @@
             r.createElement(
               "div",
               { className: H().RecommendationTypeAndDate },
-              r.createElement(ae, { type: h }),
+              r.createElement(ne, { type: h }),
               r.createElement(
                 "div",
                 { className: H().ReviewDate },
@@ -1490,11 +1491,11 @@
                 { className: H().ReviewBlurb },
                 (0, j.we)("#SteamCurator_ReviewTextQuoted", I),
               ),
-            Boolean(d) && r.createElement(ne, { url: d }),
+            Boolean(d) && r.createElement(re, { url: d }),
           ),
         );
       });
-      function te(e) {
+      function ae(e) {
         const {
             strVideoID: t,
             nStartSeconds: a,
@@ -1559,7 +1560,7 @@
           ),
         );
       }
-      function ae(e) {
+      function ne(e) {
         switch (e.type) {
           case 0:
             return r.createElement(
@@ -1583,7 +1584,7 @@
             return null;
         }
       }
-      function ne(e) {
+      function re(e) {
         let t = (0, p.VZ)(e.url);
         (0, o.p)(t) &&
           (t =

@@ -134,7 +134,6 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   background: none;
   color: #6b7072;
   cursor: default;
-  pointer-events: none;
 }
 ._1n7Wloe5jZ6fSuvV18NNWI.disabled:hover {
   background: none;
@@ -270,7 +269,6 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   background: none;
   color: #67707b;
   cursor: default;
-  pointer-events: none;
 }
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI.disabled:hover,
 ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI.disabled:hover {
@@ -380,10 +378,16 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 ._2FxbHJzYoH024ko7zqcJOf {
   box-sizing: border-box;
   font-size: 13px;
-  background-color: #696773;
+  background: radial-gradient(
+    62.67% 62.67% at 62.67% 100%,
+    #cfd1d3 0%,
+    #b3b8bc 100%
+  );
   border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  color: #17181c;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  padding: 5px 8px;
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
@@ -1253,9 +1257,22 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 ._2oAiZidGyUxL-hfupFDQ2m {
   padding: 10px 15px;
   cursor: pointer;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-align: left;
+  align-items: stretch;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
 }
-._2oAiZidGyUxL-hfupFDQ2m:hover {
+._2oAiZidGyUxL-hfupFDQ2m:focus {
   background: #3e444d;
+  outline: none;
 }
 ._30wJO3MC4x-I1OWpy1TAeE._DialogInputContainer {
   background: #373c44;
@@ -8399,6 +8416,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background: #2f4b66;
   height: 28px;
   margin-right: 4px;
+  padding: 4px 8px;
 }
 ._2hhNOdcC6yLwL_rugP3YLf ._3lmdEmwrmqe-kicNCZ9v-I {
   margin-left: auto;
@@ -8522,6 +8540,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
     #046287 120%
   );
 }
+._1djkdp7OAd0mF3a90RKf27 svg {
+  fill: #fff;
+}
 ._1djkdp7OAd0mF3a90RKf27,
 ._2zssEuiPfY5YdQlnihDfVD {
   display: flex;
@@ -8530,7 +8551,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin: 0;
   width: auto;
   min-width: unset;
-  padding: 9px 20px;
+  padding: 4px 16px;
   transition: box-shadow .2s ease-out;
   height: 38px;
   box-sizing: border-box;
@@ -8555,9 +8576,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 ._1djkdp7OAd0mF3a90RKf27 svg,
 ._2zssEuiPfY5YdQlnihDfVD svg {
-  width: 18px;
-  height: 18px;
-  margin-left: -7px;
+  width: 22px;
+  height: 22px;
 }
 ._1djkdp7OAd0mF3a90RKf27 {
   gap: 1ch;
@@ -10369,7 +10389,7 @@ html.touch
 ._3euSFGmYfTklNAvMisNvU6:not(._3Fsf5iKYd0GPYaKswndPl5):hover {
   background: linear-gradient(to right, #b6da83 5%, #99cf57 95%);
   color: #000;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 ._3-pnCQRItoLzipK50ezpB4 {
   height: 100%;
@@ -11587,7 +11607,11 @@ html.tablet
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   border-radius: 3px;
 }
+._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U a {
+  z-index: 1;
+}
 ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .CapsuleBottomBar {
+  z-index: 2;
   padding-left: 5px;
 }
 ._292IWiCTro5jiTmIxiDfyc._1tX6f_kWb07D_qLWgL7-Ah {
@@ -12777,6 +12801,14 @@ button.TextButton.gpfocus {
 .DialogDropDown {
   cursor: pointer;
   position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  align-items: stretch;
 }
 .DialogDropDown.Disabled {
   cursor: initial;

@@ -1,51 +1,110 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-"use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3350],
   {
-    54330: (e, t, r) => {
-      r.d(t, { u: () => l });
-      var n = r(66418),
-        s = r(20194),
-        a = r(41735),
-        o = r.n(a),
-        i = r(90626);
+    54292: (e) => {
+      e.exports = {
+        header_container: "_1sufRvqysxjE-xyRrrKL5U",
+        header_label: "_36r9iRM8nCGkZBkqJOFd7G",
+        NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
+      };
+    },
+    45737: (e) => {
+      e.exports = {
+        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
+        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
+        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
+        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
+        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
+        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
+        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
+        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
+        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
+        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
+        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
+        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
+        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+        RightCol: "_3kaQhRnhNh_awrnNX90rui",
+        NoSticky: "JQNb8bHftBTAYpCXTx52v",
+        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
+        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
+        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
+        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
+        Indent: "_7PV326-4cpZdmTCEdgC2l",
+        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
+        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
+        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
+        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
+        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
+        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
+        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
+        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
+        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
+        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
+        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
+        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
+        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
+        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
+        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
+        DeleteAll: "rYuknI3K1VFknv90GNUTc",
+        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
+        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
+        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
+        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
+        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
+        BigStat: "lYYwDDss378Sm0FKPBxPh",
+        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+      };
+    },
+    54330: (e, t, n) => {
+      "use strict";
+      n.d(t, { u: () => l });
+      var r = n(66418),
+        a = n(20194),
+        s = n(41735),
+        i = n.n(s),
+        o = n(90626);
       function l(e) {
-        const t = (0, s.I)({
+        const t = (0, a.I)({
           queryKey: ["useMilestoneByAppID", e],
           queryFn: async () => {
-            const t = `${n.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
-              r = { appid: e },
-              s = await o().get(t, { params: r });
-            if (1 == s?.data?.success) return s.data.milestones;
+            const t = `${r.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
+              n = { appid: e },
+              a = await i().get(t, { params: n });
+            if (1 == a?.data?.success) return a.data.milestones;
             throw new Error("failed to load milestonse for appid " + e);
           },
           enabled: Boolean(e),
         });
-        return i.useMemo(() => t?.data, [e, t.isLoading]);
+        return o.useMemo(() => t?.data, [e, t.isLoading]);
       }
     },
-    32179: (e, t, r) => {
-      r.d(t, {
-        MY: () => c,
-        UA: () => p,
-        Yd: () => f,
-        rN: () => _,
-        vh: () => m,
+    32179: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        MY: () => d,
+        UA: () => m,
+        Yd: () => g,
+        rN: () => p,
+        vh: () => _,
       });
-      var n = r(34629),
-        s = r(41735),
-        a = r.n(s),
-        o = r(90626),
-        i = r(68797),
-        l = r(78327),
-        u = r(6419);
-      function c() {
+      var r = n(34629),
+        a = n(41735),
+        s = n.n(a),
+        i = n(90626),
+        o = n(68797),
+        l = n(78327),
+        c = n(6419);
+      function d() {
         return 2 == l.TS.EUNIVERSE ? 12 : 1;
       }
-      class d {
+      class u {
         m_mapOptInToPartners = new Map();
         m_mapPromises = new Map();
         GetPartnerInfo(e) {
@@ -64,29 +123,29 @@
         async InternalFindPartnerByName(e) {
           const t = new Array();
           try {
-            const r = l.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-              n = {
+            const n = l.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+              r = {
                 sessionid: l.TS.SESSIONID,
                 searchtext: e,
                 origin: self.origin,
               },
-              s = await a().get(r, { params: n });
-            200 == s?.status && 1 == s?.data?.success
-              ? s.data.publishers.forEach((e) => {
-                  const r = {
+              a = await s().get(n, { params: r });
+            200 == a?.status && 1 == a?.data?.success
+              ? a.data.publishers.forEach((e) => {
+                  const n = {
                     partnerid: e.publisherid,
                     name: e.publishername,
                     partner_url:
                       l.TS.PARTNER_BASE_URL + `pub/publisher/${e.publisherid}/`,
                     contacts: e.contacts,
                   };
-                  this.m_mapOptInToPartners.set(e.publisherid, r), t.push(r);
+                  this.m_mapOptInToPartners.set(e.publisherid, n), t.push(n);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${s?.status} eresult ${s?.data?.success} and msg ${s?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${a?.status} eresult ${a?.data?.success} and msg ${a?.data?.msg}`,
                 );
           } catch (e) {
-            const t = (0, i.H)(e);
+            const t = (0, o.H)(e);
             console.error(
               "CPartnerInfoStore.FindPartnerByName failed add: " +
                 t.strErrorMsg,
@@ -117,11 +176,11 @@
         static s_Singleton;
         static Get() {
           return (
-            d.s_Singleton ||
-              ((d.s_Singleton = new d()),
+            u.s_Singleton ||
+              ((u.s_Singleton = new u()),
               ("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = d.s_Singleton)),
-            d.s_Singleton
+                (window.g_PartnerInfoStore = u.s_Singleton)),
+            u.s_Singleton
           );
         }
         constructor() {
@@ -147,174 +206,175 @@
           );
         }
       }
-      function m(e) {
-        const [t, r] = (0, o.useState)(!1);
+      function _(e) {
+        const [t, n] = (0, i.useState)(!1);
         return (
-          (0, o.useEffect)(() => {
+          (0, i.useEffect)(() => {
             !t &&
               e?.length > 0 &&
-              d
+              u
                 .Get()
                 .LoadMultiplePartnerInfo(e)
-                .then(() => r(!0));
+                .then(() => n(!0));
           }, [e, t]),
           t
         );
       }
-      function p(e) {
-        const [t, r] = o.useState(() => d.Get().GetPartnerInfo(e));
+      function m(e) {
+        const [t, n] = i.useState(() => u.Get().GetPartnerInfo(e));
         return (
-          o.useEffect(() => {
-            !d.Get().BHasPartnerInfoLoad(e) && e > 0
-              ? d
+          i.useEffect(() => {
+            !u.Get().BHasPartnerInfoLoad(e) && e > 0
+              ? u
                   .Get()
                   .LoadPartnerInfo(e)
-                  .then((e) => r(e))
-              : d.Get().BHasPartnerInfoLoad(e) &&
+                  .then((e) => n(e))
+              : u.Get().BHasPartnerInfoLoad(e) &&
                 t?.partnerid != e &&
-                r(d.Get().GetPartnerInfo(e));
+                n(u.Get().GetPartnerInfo(e));
           }, [e, t]),
           [t]
         );
       }
-      function _() {
-        return { fnFindPartnerByName: d.Get().FindPartnerByName };
+      function p() {
+        return { fnFindPartnerByName: u.Get().FindPartnerByName };
       }
-      function f(e) {
-        return d.Get().GetPartnerInfo(e);
+      function g(e) {
+        return u.Get().GetPartnerInfo(e);
       }
-      (0, n.Cg)([u.o], d.prototype, "FindPartnerByName", null);
+      (0, r.Cg)([c.o], u.prototype, "FindPartnerByName", null);
     },
-    37789: (e, t, r) => {
-      r.r(t), r.d(t, { default: () => G });
-      var n = r(90626),
-        s = r(24484),
-        a = r(18573),
-        o = r.n(a),
-        i = r(52038),
-        l = r(95695),
-        u = r.n(l),
-        c = r(51272),
-        d = r(84811),
-        m = r(71541),
-        p = r(95034),
-        _ = r(55263),
-        f = r(16021),
-        g = r(32179),
-        h = r(66418),
-        E = r(61859),
-        S = r(91675),
-        y = r(26408),
-        I = r(54330);
-      const P = { include_assets: !0, include_release: !0 };
-      function C(e) {
+    37789: (e, t, n) => {
+      "use strict";
+      n.r(t), n.d(t, { default: () => w });
+      var r = n(90626),
+        a = n(24484),
+        s = n(18573),
+        i = n.n(s),
+        o = n(52038),
+        l = n(95695),
+        c = n.n(l),
+        d = n(51272),
+        u = n(84811),
+        _ = n(71541),
+        m = n(95034),
+        p = n(55263),
+        g = n(16021),
+        f = n(32179),
+        h = n(66418),
+        E = n(61859),
+        S = n(91675),
+        C = n(26408),
+        y = n(54330);
+      const I = { include_assets: !0, include_release: !0 };
+      function P(e) {
         const { rgDeadlines: t } = e,
-          [r, s] = (0, p.QD)("query", ""),
-          a = (0, n.useMemo)(
+          [n, a] = (0, m.QD)("query", ""),
+          s = (0, r.useMemo)(
             () =>
               Array.from(
                 new Set(t.map((e) => e.data.store_item_id).filter(Boolean)),
               ),
             [t],
           ),
-          o = (0, n.useMemo)(
+          i = (0, r.useMemo)(
             () =>
               Array.from(
                 new Set(t.map((e) => e.data.partnerid).filter(Boolean)),
               ),
             [t],
           ),
-          i = (0, _.zX)(a, P),
-          l = (0, g.vh)(o),
-          u = (0, n.useMemo)(() => {
-            const e = r.trim().toLocaleLowerCase();
+          o = (0, p.zX)(s, I),
+          l = (0, f.vh)(i),
+          c = (0, r.useMemo)(() => {
+            const e = n.trim().toLocaleLowerCase();
             return t
               .filter(
                 (t) =>
                   0 == e.length ||
-                  1 == i ||
+                  1 == o ||
                   !l ||
-                  f.A.Get()
+                  g.A.Get()
                     .GetApp(t.data.store_item_id)
                     ?.GetName()
                     .toLocaleLowerCase()
                     .includes(e) ||
-                  (0, g.Yd)(t.data.partnerid)
+                  (0, f.Yd)(t.data.partnerid)
                     ?.name.toLocaleLowerCase()
                     .includes(e),
               )
               .sort((e, t) => t.data.due_date - e.data.due_date);
-          }, [r, t, i, l]);
-        return n.createElement(
-          d.tH,
+          }, [n, t, o, l]);
+        return r.createElement(
+          u.tH,
           null,
-          n.createElement("h3", null, "Season Passes"),
-          n.createElement(m.pd, {
+          r.createElement("h3", null, "Season Passes"),
+          r.createElement(_.pd, {
             type: "string",
-            value: r,
-            onChange: (e) => s(e.currentTarget.value.toLocaleLowerCase()),
+            value: n,
+            onChange: (e) => a(e.currentTarget.value.toLocaleLowerCase()),
             label: "Filter",
             tooltip:
               "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
             placeholder: "type here...",
           }),
-          n.createElement(
+          r.createElement(
             "table",
             null,
-            n.createElement(
+            r.createElement(
               "thead",
               null,
-              n.createElement(
+              r.createElement(
                 "tr",
                 null,
-                n.createElement("th", null, "Deadline ID"),
-                n.createElement(
+                r.createElement("th", null, "Deadline ID"),
+                r.createElement(
                   "th",
                   null,
                   "Milestone ID ",
-                  n.createElement(y.o, {
+                  r.createElement(C.o, {
                     tooltip: "This is only unique within a DLC Season Pass",
                   }),
                 ),
-                n.createElement("th", null, "Season Pass DLC"),
-                n.createElement("th", null, "Partner"),
-                n.createElement("th", null, "Season Pass Release Date"),
-                n.createElement("th", null, "Deadline Date"),
-                n.createElement("th", null, "Milestone Name"),
-                n.createElement("th", null, "Ticket?"),
+                r.createElement("th", null, "Season Pass DLC"),
+                r.createElement("th", null, "Partner"),
+                r.createElement("th", null, "Season Pass Release Date"),
+                r.createElement("th", null, "Deadline Date"),
+                r.createElement("th", null, "Milestone Name"),
+                r.createElement("th", null, "Ticket?"),
               ),
             ),
-            n.createElement(
+            r.createElement(
               "tbody",
               null,
-              u.map((e) =>
-                n.createElement(w, { key: "" + e.deadlineid, deadline: e }),
+              c.map((e) =>
+                r.createElement(b, { key: "" + e.deadlineid, deadline: e }),
               ),
             ),
           ),
         );
       }
-      function w(e) {
+      function b(e) {
         const { deadline: t } = e,
-          [r] = (0, _.t7)(t.data.store_item_id, P),
-          [s] = (0, g.UA)(t.data.partnerid),
-          a = (0, I.u)(t.data.store_item_id),
-          o = a?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
-        return n.createElement(
+          [n] = (0, p.t7)(t.data.store_item_id, I),
+          [a] = (0, f.UA)(t.data.partnerid),
+          s = (0, y.u)(t.data.store_item_id),
+          i = s?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
+        return r.createElement(
           "tr",
           null,
-          n.createElement("td", null, t.deadlineid),
-          n.createElement("td", null, t.data.gid),
-          n.createElement(
+          r.createElement("td", null, t.deadlineid),
+          r.createElement("td", null, t.data.gid),
+          r.createElement(
             "td",
             null,
-            n.createElement(
+            r.createElement(
               "a",
-              { href: r?.GetStorePageURL(), target: "_blank" },
-              r?.GetName() || "unknown",
+              { href: n?.GetStorePageURL(), target: "_blank" },
+              n?.GetName() || "unknown",
             ),
             "(",
-            n.createElement(
+            r.createElement(
               "a",
               {
                 href: `${h.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
@@ -324,67 +384,67 @@
               ")",
             ),
           ),
-          n.createElement(
+          r.createElement(
             "td",
             null,
-            n.createElement(
+            r.createElement(
               "a",
               {
                 href: `${h.T}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
-              s?.name || "unknown",
+              a?.name || "unknown",
               " (",
               t.data.partnerid,
               ")",
             ),
           ),
-          n.createElement(
+          r.createElement(
             "td",
             null,
-            (0, E.TW)(r?.GetReleaseDateRTime()),
-            n.createElement("span", null, " - "),
-            (0, S.KC)(r?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
+            (0, E.TW)(n?.GetReleaseDateRTime()),
+            r.createElement("span", null, " - "),
+            (0, S.KC)(n?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
           ),
-          n.createElement(
+          r.createElement(
             "td",
             null,
             (0, E.TW)(t.data.due_date),
-            n.createElement("span", null, " - "),
+            r.createElement("span", null, " - "),
             (0, S.KC)(t.data.due_date, { bForce24HourClock: !1 }),
           ),
-          n.createElement(
+          r.createElement(
             "td",
             null,
-            o?.title.find((e) => 0 == e.language)?.localized_string,
+            i?.title.find((e) => 0 == e.language)?.localized_string,
           ),
-          n.createElement("td", null, "TODO"),
+          r.createElement("td", null, "TODO"),
         );
       }
-      function G(e) {
+      function w(e) {
         const t = (function () {
-          const [e] = (0, n.useState)(
-            (0, s.Tc)("deadlines", "application_config"),
+          const [e] = (0, r.useState)(
+            (0, a.Tc)("deadlines", "application_config"),
           );
           return e;
         })();
-        return n.createElement(
-          d.tH,
+        return r.createElement(
+          u.tH,
           null,
-          n.createElement(
+          r.createElement(
             "div",
-            { className: o().DashboardCtn },
-            n.createElement(
+            { className: i().DashboardCtn },
+            r.createElement(
               "h1",
               null,
               "Missed Deadlines Dashboard",
-              n.createElement(
+              r.createElement(
                 "button",
                 {
-                  className: (0, i.A)(u().Button),
+                  className: (0, o.A)(c().Button),
                   style: { float: "right", marginRight: "16px" },
                   onClick: (e) =>
-                    (0, c.EP)(
+                    (0, d.EP)(
                       e,
                       "https://confluence.valve.org/display/~adils/Steam+Season+Passes",
                     ),
@@ -392,221 +452,310 @@
                 "Help",
               ),
             ),
-            n.createElement("hr", null),
-            n.createElement(
+            r.createElement("hr", null),
+            r.createElement(
               "p",
               null,
               "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
             ),
           ),
-          n.createElement(C, { rgDeadlines: t }),
+          r.createElement(P, { rgDeadlines: t }),
         );
       }
     },
-    66418: (e, t, r) => {
-      r.d(t, { T: () => s, i: () => a });
-      var n = r(30470);
-      const s = window.Config ?? n.TS,
-        a = window.UserConfig ?? n.iA;
-      window.Config && Object.assign(n.TS, window.Config),
-        window.UserConfig && Object.assign(a, window.UserConfig);
+    20880: (e, t, n) => {
+      "use strict";
+      n.r(t), n.d(t, { default: () => u });
+      var r = n(90626),
+        a = n(24484),
+        s = n(84811),
+        i = n(32179),
+        o = n(54292),
+        l = n.n(o),
+        c = n(45737),
+        d = n.n(c);
+      function u(e) {
+        const [t, n, o] = (function () {
+            const [e] = (0, r.useState)(
+                (0, a.Tc)("deadlines", "application_config"),
+              ),
+              [t] = (0, r.useState)(
+                parseInt((0, a.Tc)("actionid", "application_config")),
+              ),
+              [n] = (0, r.useState)(
+                parseInt((0, a.Tc)("publisherid", "application_config")),
+              );
+            return [e, t, n];
+          })(),
+          [c] = (0, i.UA)(o),
+          [u, p] = r.useMemo(() => {
+            const e = [...t];
+            e.sort((e, t) => {
+              const n = new Date(
+                  JSON.parse(e.data.description_jsondata)?.CreatedOn,
+                ),
+                r = new Date(
+                  JSON.parse(t.data.description_jsondata)?.CreatedOn,
+                );
+              return n.getTime() > r.getTime() ? 1 : -1;
+            });
+            return [e.pop(), e];
+          }, [t]);
+        return r.createElement(
+          s.tH,
+          null,
+          r.createElement(
+            "div",
+            { className: d().AdminPageCtn },
+            r.createElement(
+              "div",
+              { className: l().header_container },
+              r.createElement(
+                "div",
+                { className: l().header_label },
+                "Steamworks Document Communication",
+              ),
+            ),
+            p.map((e, t) =>
+              r.createElement(m, { key: "update_" + t, deadline: e }),
+            ),
+            r.createElement(_, { deadline: u }),
+          ),
+        );
+      }
+      function _(e) {
+        const { deadline: t } = e,
+          n = JSON.parse(t.data.description_jsondata);
+        return r.createElement(
+          "div",
+          { className: l().NotificationContainer },
+          r.createElement(
+            "div",
+            { key: n.NotificationID },
+            r.createElement("div", null, "Subject: ", n.Subject),
+            r.createElement("div", null, "Address: ", n.Address),
+          ),
+        );
+      }
+      function m(e) {
+        const { deadline: t } = e,
+          n = JSON.parse(t.data.description_jsondata);
+        return r.createElement(
+          "div",
+          { key: n.NotificationID },
+          "Update",
+          r.createElement("div", null, "Subject: ", n.Subject),
+          r.createElement("div", null, "Address: ", n.Address),
+        );
+      }
     },
-    55263: (e, t, r) => {
-      r.d(t, {
+    66418: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => a, i: () => s });
+      var r = n(30470);
+      const a = window.Config ?? r.TS,
+        s = window.UserConfig ?? r.iA;
+      window.Config && Object.assign(r.TS, window.Config),
+        window.UserConfig && Object.assign(s, window.UserConfig);
+    },
+    55263: (e, t, n) => {
+      "use strict";
+      n.d(t, {
         G6: () => l,
-        Gg: () => d,
-        MS: () => f,
-        Ow: () => c,
-        gF: () => g,
-        mZ: () => m,
-        t7: () => u,
-        zX: () => _,
+        Gg: () => u,
+        MS: () => g,
+        Ow: () => d,
+        gF: () => f,
+        mZ: () => _,
+        t7: () => c,
+        zX: () => p,
       });
-      var n = r(41735),
-        s = r.n(n),
-        a = r(90626),
-        o = r(73745),
-        i = r(16021);
-      function l(e, t, r, n) {
-        const l = (0, a.useRef)(),
-          u = (0, a.useRef)(void 0),
-          c = (0, o.CH)();
+      var r = n(41735),
+        a = n.n(r),
+        s = n(90626),
+        i = n(73745),
+        o = n(16021);
+      function l(e, t, n, r) {
+        const l = (0, s.useRef)(),
+          c = (0, s.useRef)(void 0),
+          d = (0, i.CH)();
         l.current = e;
-        const [d, m] = (0, a.useState)(void 0),
+        const [u, _] = (0, s.useState)(void 0),
           {
-            include_assets: p,
-            include_release: _,
-            include_platforms: f,
-            include_all_purchase_options: g,
+            include_assets: m,
+            include_release: p,
+            include_platforms: g,
+            include_all_purchase_options: f,
             include_screenshots: h,
             include_trailers: E,
             include_ratings: S,
-            include_tag_count: y,
-            include_reviews: I,
-            include_basic_info: P,
-            include_supported_languages: C,
-            include_full_description: w,
-            include_included_items: G,
-            include_assets_without_overrides: b,
-            apply_user_filters: T,
-            include_links: v,
-          } = r;
+            include_tag_count: C,
+            include_reviews: y,
+            include_basic_info: I,
+            include_supported_languages: P,
+            include_full_description: b,
+            include_included_items: w,
+            include_assets_without_overrides: T,
+            apply_user_filters: v,
+            include_links: B,
+          } = n;
         if (
-          ((0, a.useEffect)(() => {
-            const r = {
-              include_assets: p,
-              include_release: _,
-              include_platforms: f,
-              include_all_purchase_options: g,
+          ((0, s.useEffect)(() => {
+            const n = {
+              include_assets: m,
+              include_release: p,
+              include_platforms: g,
+              include_all_purchase_options: f,
               include_screenshots: h,
               include_trailers: E,
               include_ratings: S,
-              include_tag_count: y,
-              include_reviews: I,
-              include_basic_info: P,
-              include_supported_languages: C,
-              include_full_description: w,
-              include_included_items: G,
-              include_assets_without_overrides: b,
-              apply_user_filters: T,
-              include_links: v,
+              include_tag_count: C,
+              include_reviews: y,
+              include_basic_info: I,
+              include_supported_languages: P,
+              include_full_description: b,
+              include_included_items: w,
+              include_assets_without_overrides: T,
+              apply_user_filters: v,
+              include_links: B,
             };
-            let a = null;
+            let s = null;
             return (
               !e ||
                 e < 0 ||
-                i.A.Get().BHasStoreItem(e, t, r) ||
-                (void 0 !== d && n && n == u.current) ||
-                (n !== u.current && (m(void 0), (u.current = n)),
-                (a = s().CancelToken.source()),
-                i.A.Get()
-                  .QueueStoreItemRequest(e, t, r)
+                o.A.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== u && r && r == c.current) ||
+                (r !== c.current && (_(void 0), (c.current = r)),
+                (s = a().CancelToken.source()),
+                o.A.Get()
+                  .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    a?.token.reason || l.current !== e || m(1 == t), c();
+                    s?.token.reason || l.current !== e || _(1 == t), d();
                   })),
-              () => a?.cancel("useStoreItemCache: unmounting")
+              () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, d, p, _, f, g, h, E, S, y, I, P, C, w, G, b, T, v, c]),
+          }, [e, t, r, u, m, p, g, f, h, E, S, C, y, I, P, b, w, T, v, B, d]),
           !e)
         )
           return [null, 2];
-        if (!1 === d) return [void 0, 2];
-        if (i.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!i.A.Get().BHasStoreItem(e, t, r)) return [void 0, 1];
-        const A = i.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        if (!1 === u) return [void 0, 2];
+        if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        const A = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
         return A ? [A, 3] : [null, 2];
       }
-      function u(e, t, r) {
-        return l(e, 0, t, r);
+      function c(e, t, n) {
+        return l(e, 0, t, n);
       }
-      function c(e, t, r) {
-        return l(e, 2, t, r);
+      function d(e, t, n) {
+        return l(e, 2, t, n);
       }
-      function d(e, t, r) {
-        return l(e, 1, t, r);
+      function u(e, t, n) {
+        return l(e, 1, t, n);
       }
-      function m(e, t, r) {
-        const [n, s] = l(e, t, r);
-        let a;
-        1 != n?.GetStoreItemType() ||
-          n.GetAssets()?.GetHeaderURL() ||
-          1 != n?.GetIncludedAppIDs().length ||
-          (a = n.GetIncludedAppIDs()[0]);
-        const [o, i] = u(a, r);
-        return a && o?.BIsVisible() ? [o, i] : [n, s];
+      function _(e, t, n) {
+        const [r, a] = l(e, t, n);
+        let s;
+        1 != r?.GetStoreItemType() ||
+          r.GetAssets()?.GetHeaderURL() ||
+          1 != r?.GetIncludedAppIDs().length ||
+          (s = r.GetIncludedAppIDs()[0]);
+        const [i, o] = c(s, n);
+        return s && i?.BIsVisible() ? [i, o] : [r, a];
       }
-      function p(e, t, r, n) {
-        const l = (0, o.CH)(),
+      function m(e, t, n, r) {
+        const l = (0, i.CH)(),
           {
-            include_assets: u,
-            include_release: c,
-            include_platforms: d,
-            include_all_purchase_options: m,
-            include_screenshots: p,
-            include_trailers: _,
-            include_ratings: f,
-            include_tag_count: g,
+            include_assets: c,
+            include_release: d,
+            include_platforms: u,
+            include_all_purchase_options: _,
+            include_screenshots: m,
+            include_trailers: p,
+            include_ratings: g,
+            include_tag_count: f,
             include_reviews: h,
             include_basic_info: E,
             include_supported_languages: S,
-            include_full_description: y,
-            include_included_items: I,
-            include_assets_without_overrides: P,
-            apply_user_filters: C,
-            include_links: w,
-          } = r;
+            include_full_description: C,
+            include_included_items: y,
+            include_assets_without_overrides: I,
+            apply_user_filters: P,
+            include_links: b,
+          } = n;
         if (
-          ((0, a.useEffect)(() => {
+          ((0, s.useEffect)(() => {
             if (!e || 0 == e.length) return;
-            const r = {
-                include_assets: u,
-                include_release: c,
-                include_platforms: d,
-                include_all_purchase_options: m,
-                include_screenshots: p,
-                include_trailers: _,
-                include_ratings: f,
-                include_tag_count: g,
+            const n = {
+                include_assets: c,
+                include_release: d,
+                include_platforms: u,
+                include_all_purchase_options: _,
+                include_screenshots: m,
+                include_trailers: p,
+                include_ratings: g,
+                include_tag_count: f,
                 include_reviews: h,
                 include_basic_info: E,
                 include_supported_languages: S,
-                include_full_description: y,
-                include_included_items: I,
-                include_assets_without_overrides: P,
-                apply_user_filters: C,
-                include_links: w,
+                include_full_description: C,
+                include_included_items: y,
+                include_assets_without_overrides: I,
+                apply_user_filters: P,
+                include_links: b,
               },
-              n = e.filter(
+              r = e.filter(
                 (e) =>
                   !(
-                    i.A.Get().BHasStoreItem(e, t, r) ||
-                    i.A.Get().BIsStoreItemMissing(e, t)
+                    o.A.Get().BHasStoreItem(e, t, n) ||
+                    o.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == n.length) return;
-            const a = s().CancelToken.source(),
-              o = n.map((e) => i.A.Get().QueueStoreItemRequest(e, t, r));
+            if (0 == r.length) return;
+            const s = a().CancelToken.source(),
+              i = r.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
             return (
-              Promise.all(o).then(() => {
-                a.token.reason || l();
+              Promise.all(i).then(() => {
+                s.token.reason || l();
               }),
-              () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, u, c, d, m, p, _, f, g, h, E, S, y, I, P, C, w]),
+          }, [e, t, r, l, c, d, u, _, m, p, g, f, h, E, S, C, y, I, P, b]),
           !e)
         )
           return 2;
         if (
           !e.every(
             (e) =>
-              i.A.Get().BHasStoreItem(e, t, r) ||
-              i.A.Get().BIsStoreItemMissing(e, t),
+              o.A.Get().BHasStoreItem(e, t, n) ||
+              o.A.Get().BIsStoreItemMissing(e, t),
           )
         )
           return 1;
         return e.every((e) =>
-          i.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
           ? 3
           : 2;
       }
-      function _(e, t, r) {
-        return p(e, 0, t, r);
+      function p(e, t, n) {
+        return m(e, 0, t, n);
       }
-      function f(e, t, r) {
-        return p(e, 2, t, r);
+      function g(e, t, n) {
+        return m(e, 2, t, n);
       }
-      function g(e, t, r) {
-        return p(e, 1, t, r);
+      function f(e, t, n) {
+        return m(e, 1, t, n);
       }
     },
-    68797: (e, t, r) => {
-      r.d(t, { H: () => o });
-      var n = r(41735),
-        s = r.n(n),
-        a = r(56545);
-      function o(e) {
-        if (s().isCancel(e))
+    68797: (e, t, n) => {
+      "use strict";
+      n.d(t, { H: () => i });
+      var r = n(41735),
+        a = n.n(r),
+        s = n(56545);
+      function i(e) {
+        if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -659,7 +808,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof a.w)
+            if ("object" == typeof e && e instanceof s.w)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),

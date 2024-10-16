@@ -816,7 +816,7 @@
         r = a(12611);
       function o(e, t, a) {
         let o = "";
-        const i = r.l + "/" + t.clanAccountID + "/" + l.i6.GetHashAndExt(t);
+        const i = r.lw + "/" + t.clanAccountID + "/" + l.i6.GetHashAndExt(t);
         if (a == n.k_eInsertVideo)
           (o = "[video webm="),
             5 == t.file_type && (o += i),
@@ -829,7 +829,7 @@
             "[url=" +
             i +
             "][img]" +
-            (r.l + "/" + t.clanAccountID + "/" + l.i6.GetThumbHashAndExt(t)) +
+            (r.lw + "/" + t.clanAccountID + "/" + l.i6.GetThumbHashAndExt(t)) +
             "[/img][/url]";
         }
         e.InsertText(o);

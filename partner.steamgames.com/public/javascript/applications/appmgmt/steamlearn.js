@@ -20403,7 +20403,7 @@
                       "#SteamLearn_Config_Node_Extract_AppID_ExtractedCompactTableDesc",
                     ),
                     smallLabel: !0,
-                    hidden: 1 != p || 1 != m,
+                    hidden: 0 == p,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => O,
                     fnValidateValue: (t) => !ar(a, t, e.msgNode),
@@ -24997,7 +24997,7 @@
               label: (0, c.we)("#SteamLearn_TrainSettings_FetchWorkersInput"),
               fnGetInitialValue: () =>
                 e.train_config().fetch_workers().toString() || "16",
-              fnValidateValue: (e) => er(e, 0, 128),
+              fnValidateValue: (e) => er(e, 0, 1024),
               fnSetValue: (t) =>
                 e.train_config().set_fetch_workers(parseInt(t)),
             }),
@@ -25751,13 +25751,12 @@
             } = ir(),
             s = Da(e.nProjectID, e.nTrainID),
             [l, m] = n.useState(-1),
-            [d, _] = n.useState(""),
-            p = s.data,
-            f = s.data?.status(),
-            S = s.data?.epochs().length;
+            d = s.data,
+            _ = s.data?.status(),
+            p = s.data?.epochs().length;
           (0, mr.$$)(() => {
-            if (p)
-              switch (p.status()) {
+            if (d)
+              switch (d.status()) {
                 case 0:
                 case 2:
                 case 1:
@@ -25766,16 +25765,16 @@
                   Fa(e.nProjectID, e.nTrainID);
                   break;
                 case 3:
-                  p.active() && !p.live() && Fa(e.nProjectID, e.nTrainID);
+                  d.active() && !d.live() && Fa(e.nProjectID, e.nTrainID);
               }
           }, 3e3),
             n.useEffect(() => {
-              -1 == l && S && m(3 == f ? 0 : S);
-            }, [f, m, l, S]),
+              -1 == l && p && m(3 == _ ? 0 : p);
+            }, [_, m, l, p]),
             n.useEffect(() => {
-              S && l > S && m(-1);
-            }, [S, l]);
-          const b = n.useCallback(
+              p && l > p && m(-1);
+            }, [p, l]);
+          const f = n.useCallback(
             (e, a) => {
               !(async function (e, t, a, r) {
                 let n = g.w.Init(Ft);
@@ -25802,161 +25801,163 @@
               { className: yi.StatusMessage },
               (0, c.we)("#SteamLearn_Status_Train_Status_Unpublished"),
             );
-          const N = [...new Set(e.arrAllTrainIDs)];
-          if (0 == N.length)
+          const S = [...new Set(e.arrAllTrainIDs)];
+          if (0 == S.length)
             return n.createElement(
               "div",
               { className: yi.StatusMessage },
               (0, c.we)("#SteamLearn_Status_Train_Status_None"),
             );
-          let w,
-            v,
-            B = (0, c.we)("#SteamLearn_Status_Train_Status_Unknown"),
-            E = yi.Unknown;
-          if (p)
-            switch (p.status()) {
+          let b,
+            N,
+            w = (0, c.we)("#SteamLearn_Status_Train_Status_Unknown"),
+            v = yi.Unknown;
+          if (d)
+            switch (d.status()) {
               case 0:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_Unknown")),
-                  (E = yi.Unknown);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_Unknown")),
+                  (v = yi.Unknown);
                 break;
               case 1:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_Unstarted")),
-                  (E = yi.Unstarted);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_Unstarted")),
+                  (v = yi.Unstarted);
                 break;
               case 2:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_InProgress")),
-                  (E = yi.InProgress);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_InProgress")),
+                  (v = yi.InProgress);
                 break;
               case 3:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_Complete")),
-                  (E = yi.Complete);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_Complete")),
+                  (v = yi.Complete);
                 break;
               case 4:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_Error")),
-                  (E = yi.Error);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_Error")),
+                  (v = yi.Error);
                 break;
               case 5:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_StoppedEarly")),
-                  (E = yi.Complete);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_StoppedEarly")),
+                  (v = yi.Complete);
                 break;
               case 6:
-                (B = (0, c.we)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
-                  (E = yi.InProgress);
+                (w = (0, c.we)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
+                  (v = yi.InProgress);
             }
           s.isLoading &&
-            (B = (0, c.we)("#SteamLearn_Status_Train_Status_Loading"));
-          let y = 0,
-            h = 0,
-            M = 0,
-            C = 0;
-          const T = 100;
-          if (p)
+            (w = (0, c.we)("#SteamLearn_Status_Train_Status_Loading"));
+          let B = 0,
+            E = 0,
+            y = 0,
+            h = 0;
+          const M = 100;
+          let C = "";
+          if (d)
             if (0 != l) {
-              const e = l > p.epochs().length ? void 0 : p.epochs()[l - 1];
+              const e = l > d.epochs().length ? void 0 : d.epochs()[l - 1];
               if (e) {
-                (y = e.train_batches().length),
-                  (M = e.validate_batches().length),
+                if (
+                  ((B = e.train_batches().length),
+                  (y = e.validate_batches().length),
                   e.train_batches().length > 0 &&
                   e.train_batches()[0].batch_id() > 0
-                    ? ((h = Math.floor(
-                        p.train_batch_count() / e.train_batches()[0].batch_id(),
+                    ? ((E = Math.floor(
+                        d.train_batch_count() / e.train_batches()[0].batch_id(),
                       )),
-                      (C = Math.floor(
-                        p.validate_batch_count() /
+                      (h = Math.floor(
+                        d.validate_batch_count() /
                           e.train_batches()[0].batch_id(),
                       )))
-                    : ((h = Math.floor(p.train_batch_count() / 100)),
-                      (C = Math.floor(p.validate_batch_count() / 100)));
-                const t = y / h,
-                  a = M / C,
-                  r = (y + M) / (h + C),
-                  n = Date.now() / 1e3 - e.start_time(),
-                  i = n / r;
-                if (e.end_time()) {
-                  const t = (0, c.we)(
-                    "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
-                    hi(e.end_time() - e.start_time()),
-                  );
-                  t != d && _(t);
-                } else if (!s.isFetching) {
-                  let e = i - n;
-                  if (!isNaN(e)) {
-                    const t = (0, c.we)(
-                      "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
-                      hi(e),
+                    : ((E = Math.floor(d.train_batch_count() / 100)),
+                      (h = Math.floor(d.validate_batch_count() / 100))),
+                  2 == d.status() || 3 == d.status())
+                ) {
+                  const t = (B + y) / (E + h),
+                    a = Date.now() / 1e3 - e.start_time(),
+                    r = a / t;
+                  if (e.end_time())
+                    C = (0, c.we)(
+                      "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
+                      hi(e.end_time() - e.start_time()),
                     );
-                    t != d && _(t);
+                  else {
+                    let e = r - a;
+                    isNaN(e) ||
+                      (C = (0, c.we)(
+                        "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
+                        hi(e),
+                      ));
                   }
                 }
-                const o = Mi(
+                const t = B / E,
+                  a = y / h,
+                  r = Mi(
                     e.train_batches().map((e) => e.loss()),
-                    T,
+                    M,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  l = Mi(
+                  n = Mi(
                     e.validate_batches().map((e) => e.loss()),
-                    T,
+                    M,
                   ).map((e, t) => ({ index: t, Validate: e })),
-                  m =
+                  i =
                     e.train_batches().length > 0
                       ? e.train_batches()[e.train_batches().length - 1]
                       : void 0,
-                  u =
+                  s =
                     e.validate_batches().length > 0
                       ? e.validate_batches()[e.validate_batches().length - 1]
                       : void 0;
-                w = [
+                b = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(T, e.train_batches().length) / t],
-                    data: o,
+                    XAxisDomain: [0, Math.min(M, e.train_batches().length) / t],
+                    data: r,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: m?.loss(),
+                    nFinalValue: i?.loss(),
                   },
                   {
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(T, e.validate_batches().length) / a,
+                      Math.min(M, e.validate_batches().length) / a,
+                    ],
+                    data: n,
+                    color: "#609e54",
+                    bAxisLine: !1,
+                    nFinalValue: s?.loss(),
+                  },
+                ];
+                const o = Mi(
+                    e.train_batches().map((e) => Li(e.accuracy())),
+                    M,
+                  ).map((e, t) => ({ index: t, Train: e })),
+                  l = Mi(
+                    e.validate_batches().map((e) => Li(e.accuracy())),
+                    M,
+                  ).map((e, t) => ({ index: t, Validate: e }));
+                N = [
+                  {
+                    strDataLabel: "Train",
+                    XAxisDomain: [0, Math.min(M, e.train_batches().length) / t],
+                    data: o,
+                    color: "#547d9e",
+                    bAxisLine: !1,
+                    nFinalValue: Li(i?.accuracy()),
+                  },
+                  {
+                    strDataLabel: "Validate",
+                    XAxisDomain: [
+                      0,
+                      Math.min(M, e.validate_batches().length) / a,
                     ],
                     data: l,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: u?.loss(),
-                  },
-                ];
-                const g = Mi(
-                    e.train_batches().map((e) => Li(e.accuracy())),
-                    T,
-                  ).map((e, t) => ({ index: t, Train: e })),
-                  f = Mi(
-                    e.validate_batches().map((e) => Li(e.accuracy())),
-                    T,
-                  ).map((e, t) => ({ index: t, Validate: e }));
-                v = [
-                  {
-                    strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(T, e.train_batches().length) / t],
-                    data: g,
-                    color: "#547d9e",
-                    bAxisLine: !1,
-                    nFinalValue: Li(m?.accuracy()),
-                  },
-                  {
-                    strDataLabel: "Validate",
-                    XAxisDomain: [
-                      0,
-                      Math.min(T, e.validate_batches().length) / a,
-                    ],
-                    data: f,
-                    color: "#609e54",
-                    bAxisLine: !1,
-                    nFinalValue: Li(u?.accuracy()),
+                    nFinalValue: Li(s?.accuracy()),
                   },
                 ];
               }
             } else {
-              const e = p
+              const e = d
                   .epochs()
                   .map((e, t) => {
                     let a;
@@ -25970,7 +25971,7 @@
                     );
                   })
                   .filter((e) => null != e.Value),
-                t = p
+                t = d
                   .epochs()
                   .map((e, t) => {
                     let a;
@@ -25986,7 +25987,7 @@
                   .filter((e) => null != e.Value);
               e.length > 0 &&
                 t.length > 0 &&
-                ((w = [
+                ((b = [
                   {
                     strDataLabel: "Value",
                     XAxisDomain: [1, e.length],
@@ -25996,7 +25997,7 @@
                     nFinalValue: void 0,
                   },
                 ]),
-                (v = [
+                (N = [
                   {
                     strDataLabel: "Value",
                     XAxisDomain: [1, t.length],
@@ -26007,47 +26008,47 @@
                   },
                 ]));
             }
-          const L = p && 3 == p.status(),
-            z = p && 5 == p.status(),
-            j = p && p.live(),
-            D = p && p.active(),
-            I = p && 2 == p.status(),
-            O =
+          const T = d && 3 == d.status(),
+            L = d && 5 == d.status(),
+            z = d && d.live(),
+            j = d && d.active(),
+            D = d && 2 == d.status(),
+            I =
               a && i && i.serializeBase64String() != a.serializeBase64String();
-          let P = [
+          let O = [
             {
               label: (0, c.we)("#SteamLearn_Status_Train_AllEpochs"),
               value: 0,
             },
           ];
-          if (p)
-            for (let e = 0; e < p.epochs().length; e++)
-              P.push({
+          if (d)
+            for (let e = 0; e < d.epochs().length; e++)
+              O.push({
                 label: (0, c.we)("#SteamLearn_Status_Train_EpochOption", e + 1),
                 value: e + 1,
               });
-          const F = (0, c.we)(
+          const P = (0, c.we)(
               "#SteamLearn_Status_Train_Duration",
-              hi(p?.end_time() - p?.start_time()),
+              hi(d?.end_time() - d?.start_time()),
             ),
-            R = new Date(1e3 * p?.end_time()),
-            W = (0, c.we)(
+            F = new Date(1e3 * d?.end_time()),
+            R = (0, c.we)(
               "#SteamLearn_Status_Train_Completed",
-              R.getHours() +
+              F.getHours() +
                 ":" +
-                R.getMinutes().toString().padStart(2, "0") +
+                F.getMinutes().toString().padStart(2, "0") +
                 ":" +
-                R.getSeconds().toString().padStart(2, "0") +
+                F.getSeconds().toString().padStart(2, "0") +
                 ", " +
-                R.toDateString(),
+                F.toDateString(),
             );
-          let k,
-            x = 1 / 0;
-          if (p)
-            for (const e of p.epochs())
-              e.epoch_validate_loss() < x &&
-                ((x = e.epoch_validate_loss()),
-                (k = Li(e.epoch_validate_accuracy())));
+          let W,
+            k = 1 / 0;
+          if (d)
+            for (const e of d.epochs())
+              e.epoch_validate_loss() < k &&
+                ((k = e.epoch_validate_loss()),
+                (W = Li(e.epoch_validate_accuracy())));
           return n.createElement(
             "div",
             { className: yi.TrainStatusPanel },
@@ -26067,35 +26068,35 @@
                   ),
                   n.createElement(
                     "div",
-                    { className: (0, o.A)(yi.StatusString, E) },
-                    B,
+                    { className: (0, o.A)(yi.StatusString, v) },
+                    w,
                   ),
-                  L &&
+                  T &&
                     n.createElement(
                       "div",
                       { className: yi.Timinginfo },
-                      n.createElement("div", { className: yi.Timing }, F),
-                      n.createElement("div", { className: yi.Timing }, W),
+                      n.createElement("div", { className: yi.Timing }, P),
+                      n.createElement("div", { className: yi.Timing }, R),
                     ),
-                  !O &&
-                    (L || z) &&
+                  !I &&
+                    (T || L) &&
+                    !z &&
                     !j &&
-                    !D &&
                     n.createElement(
                       Nr.jn,
-                      { onClick: () => b(e.nTrainID, !1) },
+                      { onClick: () => f(e.nTrainID, !1) },
                       (0, c.we)("#SteamLearn_Status_SetInferenceVersion"),
                     ),
-                  O &&
-                    (L || z) &&
+                  I &&
+                    (T || L) &&
+                    !z &&
                     !j &&
-                    !D &&
                     n.createElement(
                       "div",
                       { className: yi.WarningMessage },
                       (0, c.we)("#SteamLearn_Status_SaveOrDiscardFirst"),
                     ),
-                  I &&
+                  D &&
                     n.createElement(
                       Nr.jn,
                       {
@@ -26110,17 +26111,17 @@
                       },
                       (0, c.we)("#SteamLearn_Status_Train_EndEarly"),
                     ),
-                  j &&
+                  z &&
                     n.createElement(
                       "div",
                       {
-                        onClick: () => b(e.nTrainID, !0),
+                        onClick: () => f(e.nTrainID, !0),
                         className: yi.TrainLive,
                       },
                       (0, c.we)("#SteamLearn_Status_InferenceLive"),
                     ),
-                  D &&
-                    !j &&
+                  j &&
+                    !z &&
                     n.createElement(
                       "div",
                       { className: yi.TrainLive },
@@ -26137,7 +26138,7 @@
                     value: e.nTrainID,
                     onChange: (t) => e.fnSetTrainID(parseInt(t.target.value)),
                   },
-                  N.map((e) =>
+                  S.map((e) =>
                     n.createElement(
                       "option",
                       { key: `TrainOption_${e}`, value: e },
@@ -26147,7 +26148,7 @@
                 ),
               ),
             ),
-            p &&
+            d &&
               n.createElement(
                 "div",
                 { className: yi.EpochSelectorSection },
@@ -26158,7 +26159,7 @@
                     value: l,
                     onChange: (e) => m(parseInt(e.target.value)),
                   },
-                  P.map((e) =>
+                  O.map((e) =>
                     n.createElement(
                       "option",
                       { key: `EpochOption_${e.value}`, value: e.value },
@@ -26167,11 +26168,11 @@
                   ),
                 ),
               ),
-            p &&
+            d &&
               n.createElement(
                 "div",
                 { className: yi.BatchStatus },
-                y > 0 &&
+                B > 0 &&
                   0 != l &&
                   n.createElement(
                     "div",
@@ -26180,6 +26181,43 @@
                       "div",
                       { className: yi.PhaseLabel },
                       (0, c.we)("#SteamLearn_Status_Train_BatchCurrent_Train"),
+                    ),
+                    E > 0 &&
+                      B == E &&
+                      n.createElement(
+                        "div",
+                        { className: yi.PhaseValues },
+                        n.createElement(
+                          "span",
+                          { className: yi.Total },
+                          (0, c.we)("#SteamLearn_Status_Train_Status_Complete"),
+                        ),
+                      ),
+                    E > 0 &&
+                      B != E &&
+                      n.createElement(
+                        "div",
+                        { className: yi.PhaseValues },
+                        (100 * B).toLocaleString(),
+                        " / ",
+                        n.createElement(
+                          "span",
+                          { className: yi.Total },
+                          (100 * E).toLocaleString(),
+                        ),
+                      ),
+                  ),
+                y > 0 &&
+                  0 != l &&
+                  n.createElement(
+                    "div",
+                    { className: yi.BatchStatusRow },
+                    n.createElement(
+                      "div",
+                      { className: yi.PhaseLabel },
+                      (0, c.we)(
+                        "#SteamLearn_Status_Train_BatchCurrent_Validate",
+                      ),
                     ),
                     h > 0 &&
                       y == h &&
@@ -26206,46 +26244,9 @@
                         ),
                       ),
                   ),
-                M > 0 &&
-                  0 != l &&
-                  n.createElement(
-                    "div",
-                    { className: yi.BatchStatusRow },
-                    n.createElement(
-                      "div",
-                      { className: yi.PhaseLabel },
-                      (0, c.we)(
-                        "#SteamLearn_Status_Train_BatchCurrent_Validate",
-                      ),
-                    ),
-                    C > 0 &&
-                      M == C &&
-                      n.createElement(
-                        "div",
-                        { className: yi.PhaseValues },
-                        n.createElement(
-                          "span",
-                          { className: yi.Total },
-                          (0, c.we)("#SteamLearn_Status_Train_Status_Complete"),
-                        ),
-                      ),
-                    C > 0 &&
-                      M != C &&
-                      n.createElement(
-                        "div",
-                        { className: yi.PhaseValues },
-                        (100 * M).toLocaleString(),
-                        " / ",
-                        n.createElement(
-                          "span",
-                          { className: yi.Total },
-                          (100 * C).toLocaleString(),
-                        ),
-                      ),
-                  ),
                 0 != l &&
-                  n.createElement("div", { className: yi.BatchStatusRow }, d),
-                x != 1 / 0 &&
+                  n.createElement("div", { className: yi.BatchStatusRow }, C),
+                k != 1 / 0 &&
                   0 == l &&
                   n.createElement(
                     "div",
@@ -26261,11 +26262,11 @@
                       n.createElement(
                         "span",
                         { className: yi.Total },
-                        x.toFixed(4),
+                        k.toFixed(4),
                       ),
                     ),
                   ),
-                x != 1 / 0 &&
+                k != 1 / 0 &&
                   0 == l &&
                   n.createElement(
                     "div",
@@ -26281,14 +26282,14 @@
                       n.createElement(
                         "span",
                         { className: yi.Total },
-                        k.toFixed(4),
+                        W.toFixed(4),
                       ),
                     ),
                   ),
               ),
-            p &&
-              w &&
-              v &&
+            d &&
+              b &&
+              N &&
               n.createElement(
                 "div",
                 { className: yi.CurrentEpoch },
@@ -26297,14 +26298,14 @@
                   { className: yi.GraphPair },
                   n.createElement(Ti, {
                     strHeading: (0, c.we)("#SteamLearn_Status_Train_Axis_Loss"),
-                    lines: w,
+                    lines: b,
                     fAxisPaddingPct: 25,
                   }),
                   n.createElement(Ti, {
                     strHeading: (0, c.we)(
                       "#SteamLearn_Status_Train_Axis_Accuracy",
                     ),
-                    lines: v,
+                    lines: N,
                     fAxisPaddingPct: 25,
                   }),
                 ),

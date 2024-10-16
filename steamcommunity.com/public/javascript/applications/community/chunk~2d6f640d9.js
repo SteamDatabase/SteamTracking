@@ -1173,7 +1173,6 @@
             (this.m_bStatsViewVisible = !1),
             (this.m_schCaptureDisplayStatsTrigger = new d.LU()),
             (this.m_videoRepSelected = null),
-            (this.m_nAudioRepresentationIndex = 0),
             (this.m_timedTextRepSelected = null),
             (this.m_stats = new f._L()),
             (this.m_bClosing = !1),
@@ -1197,13 +1196,13 @@
         GetMPDURL() {
           return this.m_strMPD;
         }
-        async PlayMPD(e, t, i) {
+        async PlayMPD(e, t, i, n) {
           (this.m_strMPD = e),
             (this.m_strHLS = i),
             (this.m_strCDNAuthURLParameters = t);
-          let n = await this.DownloadMPD();
-          if (n)
-            if (((this.m_mpd = new k()), this.m_mpd.BParse(n.data, e))) {
+          let s = await this.DownloadMPD();
+          if (s)
+            if (((this.m_mpd = new k()), this.m_mpd.BParse(s.data, e))) {
               if (
                 (this.IsLiveContent() &&
                   (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
@@ -1211,7 +1210,7 @@
                       1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
                       this.UpdateMPD,
                     ),
-                  this.CalcVideoStartRelativeToSystemClock(n.headers.date)),
+                  this.CalcVideoStartRelativeToSystemClock(s.headers.date)),
                 this.m_bUseHLSManifest)
               )
                 return (
@@ -1225,7 +1224,7 @@
                   )
                 );
               this.BCreateLoaders()
-                ? (this.InitVideoControl(), this.InitTimedText())
+                ? (this.InitVideoControl(), this.InitTimedText(n))
                 : this.CloseWithError(
                     "playbackerror",
                     "Failed to create segment loaders",
@@ -1237,28 +1236,28 @@
                 this.m_strMPD,
               );
         }
-        InitTimedText() {
+        InitTimedText(e) {
           (this.m_nTimedText = 0),
-            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((e) => {
-              let t = (0, o.sf)(p.TS.LANGUAGE);
+            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((t) => {
+              let i = (0, o.sf)(p.TS.LANGUAGE);
               if (
-                e.rgRepresentations.length > 0 &&
-                e.rgRepresentations[0].strClosedCaptionFile &&
-                e.strLanguage in l.bi
+                t.rgRepresentations.length > 0 &&
+                t.rgRepresentations[0].strClosedCaptionFile &&
+                t.strLanguage in l.bi
               ) {
-                const i = document.createElement("track");
-                (i.kind = "subtitles"),
-                  (i.label = (0, l.we)(
-                    "#Language_" + (0, o.Lg)(l.bi[e.strLanguage]),
+                const n = document.createElement("track");
+                (n.kind = "subtitles"),
+                  (n.label = (0, l.we)(
+                    "#Language_" + (0, o.Lg)(l.bi[t.strLanguage]),
                   )),
-                  (i.srclang = e.strLanguage),
-                  (i.src = e.rgRepresentations[0].strClosedCaptionFile),
+                  (n.srclang = t.strLanguage),
+                  (n.src = t.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
-                  0 != t &&
-                    l.bi[e.strLanguage] == t &&
-                    ((i.default = !0),
-                    (this.m_timedTextRepSelected = e.rgRepresentations[0])),
-                  this.m_elVideo.appendChild(i);
+                  (!e && 0 == i) ||
+                    l.bi[t.strLanguage] != i ||
+                    ((n.default = !0),
+                    (this.m_timedTextRepSelected = t.rgRepresentations[0])),
+                  this.m_elVideo.appendChild(n);
               }
             });
         }
@@ -1317,7 +1316,6 @@
             (this.m_nGameDataLastFramePTS = -1),
             (this.m_bStatsViewVisible = !1),
             (this.m_videoRepSelected = null),
-            (this.m_nAudioRepresentationIndex = 0),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = null),
             (this.m_bFirstPlay = !0),
@@ -1779,9 +1777,8 @@
             await this.m_elVideo.play(), i();
           } catch (e) {
             if ("NotAllowedError" === e.name && this.BHasTimedText()) {
-              this.m_elVideo.muted = !0;
-              let e = (0, o.sf)(p.TS.LANGUAGE);
-              this.SetSubtitles(e);
+              (this.m_elVideo.muted = !0),
+                this.SetSubtitles((0, o.sf)(p.TS.LANGUAGE));
               try {
                 await this.m_elVideo.play(), i();
               } catch (e) {}
