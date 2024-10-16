@@ -10259,7 +10259,7 @@
             () => ["seasonpass", "commitments", "" + n, "milestone_desc"],
             [n],
           ),
-          _ = (0, H.K)(d, m, "app", a ? p : void 0);
+          _ = (0, H.K)(d, m, "app", a ? void 0 : p);
         return (
           (0, r.useEffect)(() => {
             if (l) {
