@@ -59627,7 +59627,7 @@
         (0, i.Cg)([s.sH], ue.prototype, "video_preview_id", void 0),
         (0, i.Cg)([s.sH], ue.prototype, "m_overrideCurrentDay", void 0);
       function de(e) {
-        return e?.replace("(", "\\(").replace(")", "\\)");
+        return e?.replace(/[()]/g, "\\$&");
       }
     },
     75933: (e, t, r) => {
