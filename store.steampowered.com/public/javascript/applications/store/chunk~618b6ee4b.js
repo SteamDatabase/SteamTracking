@@ -13054,7 +13054,7 @@
           } catch (e) {
             console.error("InternalLoadWishlistRecommendations failed: ", e);
           }
-          return [];
+          return (0, v.Fd)("topwishlisted", "application_config") ?? [];
         }
         static GetItemsSortedByWishlistRecommendation(e, t, a) {
           const n = new Map(t.map((e, t) => [e, t])),
