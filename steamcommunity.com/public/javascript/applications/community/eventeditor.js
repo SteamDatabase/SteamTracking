@@ -10869,6 +10869,11 @@
           ? d.createElement(
               "div",
               null,
+              d.createElement(
+                "div",
+                null,
+                "Featured : Impressions : Visits : Wishlist : AddToCart ",
+              ),
               a.map((e) =>
                 d.createElement(
                   "div",
@@ -10876,6 +10881,12 @@
                   e.feature,
                   " : ",
                   e.total_impressions,
+                  " : ",
+                  e.total_views,
+                  " : ",
+                  e.total_wishlists,
+                  " : ",
+                  e.total_add_to_carts,
                 ),
               ),
             )

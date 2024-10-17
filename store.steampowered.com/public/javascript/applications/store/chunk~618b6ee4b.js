@@ -9136,6 +9136,11 @@
                     { className: o?.menuTitle || Se.FacetMenuTitle, style: p },
                     (0, D.we)("#FacetedBrowse_Heading"),
                   ),
+                  n.createElement(ye, {
+                    facets: i?.GetSortedFacets(),
+                    onUpdateFilter: h,
+                    ...e,
+                  }),
                   Boolean(i) &&
                     n.createElement(
                       "div",
@@ -9163,27 +9168,6 @@
                       },
                       bShowClearAction: !0,
                     }),
-                  ),
-                  n.createElement(ye, {
-                    facets: i?.GetSortedFacets(),
-                    onUpdateFilter: h,
-                    ...e,
-                  }),
-                  n.createElement(
-                    "div",
-                    { className: o?.reset || Se.FacetedBrowseReset },
-                    n.createElement(
-                      "a",
-                      {
-                        onClick: (e) => {
-                          e.preventDefault(),
-                            (0, oe.h5)(() => {
-                              i.Reset(), l();
-                            });
-                        },
-                      },
-                      (0, D.we)("#FacetedBrowse_Reset"),
-                    ),
                   ),
                   n.createElement(
                     "div",
@@ -9250,11 +9234,6 @@
               ? n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(
-                    "div",
-                    { className: Se.SelectedFacetValuesTitle },
-                    (0, D.we)("#FacetedBrowse_SelectedFacetValues"),
-                  ),
                   n.createElement(
                     "div",
                     { className: Se.SelectedFacetValuesList },
@@ -13069,7 +13048,7 @@
                   publishedversion: t,
                   accesstoken: a,
                 },
-                s = await C().get(n, { params: r });
+                s = await C().get(n, { params: r, withCredentials: !0 });
               if (1 === s?.data?.success) return s.data.appids;
             }
           } catch (e) {
@@ -13659,19 +13638,19 @@
         return {
           queryKey: ["GetDynamicCapsulesForSection", l, v.TS.COUNTRY, n, o, i],
           queryFn: async () => {
-            const a = await C().get(
-              v.TS.STORE_BASE_URL + "actions/ajaxgetdynamicsaleitems",
-              {
-                params: {
-                  max_results: l,
-                  cc: v.TS.COUNTRY,
-                  tagids_featured: n,
-                  facet_filter: o,
-                  pre_filter: i,
-                },
+            const a = {
+                origin: self.origin,
+                max_results: l,
+                cc: v.TS.COUNTRY,
+                tagids_featured: n,
+                facet_filter: o,
+                pre_filter: i,
               },
-            );
-            let r = a.data.rgCapsules;
+              r = await C().get(
+                v.TS.STORE_BASE_URL + "actions/ajaxgetdynamicsaleitems",
+                { params: a },
+              );
+            let s = r.data.rgCapsules;
             if (t.use_random_order)
               if ((0, me.O8)(e.jsondata.item_order_override)) {
                 const a = await fn
@@ -13681,15 +13660,15 @@
                     e.jsondata.item_order_override.nPublishedVersion,
                     e.jsondata.item_order_override.sAccessToken,
                   );
-                r = fn.GetItemsSortedByWishlistRecommendation(
-                  r,
+                s = fn.GetItemsSortedByWishlistRecommendation(
+                  s,
                   a,
                   t.random_order_top_x,
                 );
               } else
-                (r = a.data.rgCapsules.slice()),
-                  (0, Pa.fW)(r, t.random_order_top_x);
-            return { ...a.data, rgCapsules: r };
+                (s = r.data.rgCapsules.slice()),
+                  (0, Pa.fW)(s, t.random_order_top_x);
+            return { ...r.data, rgCapsules: s };
           },
           enabled: t.enable_faceted_browsing,
           staleTime: 36e5,
@@ -20464,21 +20443,21 @@
           y = (0, qo.R7)(),
           b = y?.ownerWindow || window,
           E = ii(v, r),
-          { bIsIgnored: C, fnUpdateIgnored: w } = (0, Wo.TK)(t),
-          { bIsWishlisted: I, fnUpdateWishlist: A } = (0, Wo.u4)(t, ai),
-          [G, T] = n.useState(0),
-          [k, L] = n.useState(),
-          B = n.useRef(),
-          P = (0, j.ru)(ai),
-          N = (0, Jo.b)();
+          [C, w] = n.useState(0),
+          [I, A] = n.useState(),
+          G = n.useRef(),
+          T = (0, j.ru)(ai),
+          k = (0, Jo.b)();
         n.useEffect(() => {
-          t && N.AddImpression(t, P);
-        }, [t, N, P]),
-          n.useEffect(() => {
-            void 0 !== B.current &&
-              B.current !== t &&
-              ((B.current = void 0), T(0));
-          }, [t]);
+          t && k.AddImpression(t, T);
+        }, [t, k, T]);
+        const { bIsIgnored: L, fnUpdateIgnored: B } = (0, Wo.TK)(t, T),
+          { bIsWishlisted: P, fnUpdateWishlist: N } = (0, Wo.u4)(t, T);
+        n.useEffect(() => {
+          void 0 !== G.current &&
+            G.current !== t &&
+            ((G.current = void 0), w(0));
+        }, [t]);
         const {
             bTabHidden: F,
             bOffscreen: R,
@@ -20500,21 +20479,21 @@
           })(),
           O = n.useCallback(async () => {
             if (F || R) return void S(!0);
-            (B.current = t), T(1);
+            (G.current = t), w(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
                 const t = 1 - (new Date().getTime() - e) / 500;
-                L(Math.max(t, 0));
+                A(Math.max(t, 0));
               }, 30);
             await new Promise((e) => setTimeout(e, 500)),
               window.clearTimeout(a),
-              L(void 0),
-              B.current == t &&
-                ((B.current = void 0),
+              A(void 0),
+              G.current == t &&
+                ((G.current = void 0),
                 s(!0),
-                T(2),
+                w(2),
                 await new Promise((e) => setTimeout(e, 500))),
-              T(0);
+              w(0);
           }, [t, F, R, s]);
         n.useEffect(() => {
           F || R || !h || (S(!1), O());
@@ -20526,7 +20505,7 @@
             ? (H = 4)
             : u
               ? (H = 3)
-              : 0 != G
+              : 0 != C
                 ? (H = 0)
                 : F
                   ? (H = 1)
@@ -20548,20 +20527,20 @@
             focusable: !0,
             className: (0, f.A)(Oo().TrailerCarouselApp),
             ref: M,
-            onOptionsActionDescription: I
+            onOptionsActionDescription: P
               ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
               : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
-            onOptionsButton: A,
+            onOptionsButton: N,
             onOKActionDescription: (0, D.we)(
               "#SaleTrailerCarousel_ViewStorePage",
             ),
             onOKButton: () => {
               b.location.href = E;
             },
-            onSecondaryActionDescription: C
+            onSecondaryActionDescription: L
               ? (0, D.we)("#SaleTrailerCarousel_Undo")
               : (0, D.we)("#SaleTrailerCarousel_IgnoreLink"),
-            onSecondaryButton: w,
+            onSecondaryButton: B,
             onMouseEnter: () => d(!0),
             onMouseLeave: () => d(!1),
           },
@@ -20583,8 +20562,8 @@
               n.createElement("div", {
                 className: (0, f.A)(
                   Oo().Fade,
-                  1 === G && Oo().FadeOut,
-                  2 === G && Oo().FadeIn,
+                  1 === C && Oo().FadeOut,
+                  2 === C && Oo().FadeIn,
                 ),
                 style: { "--fade-out-time": "0.5s", "--fade-in-time": "0.5s" },
               }),
@@ -20595,12 +20574,12 @@
                 n.createElement(Wo.y3, {
                   appID: t,
                   focused: U,
-                  snrCode: ai,
+                  snrCode: T,
                   skipMicroTrailer: i,
                   playWithBroadcastPlayer: i,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                   showScreenshotInsteadOfMainCap: !i,
-                  fadeRatio: k,
+                  fadeRatio: I,
                   fnPlayPause: p,
                   fnComplete: O,
                   loopVideo: !1,
@@ -20638,21 +20617,22 @@
       function oi(e) {
         const { appID: t, preferDemoStorePage: a, introVideo: r } = e,
           [s] = (0, o.t7)(t, ti),
-          { bIsIgnored: i, fnUpdateIgnored: l } = (0, Wo.TK)(t),
-          { bIsWishlisted: c, fnUpdateWishlist: m } = (0, Wo.u4)(t, ai),
-          u = ii(s, a),
-          d = (0, v.Qn)(),
-          _ = (0, ge.LG)(s?.GetTagIDs());
+          i = (0, j.ru)(ai),
+          { bIsIgnored: l, fnUpdateIgnored: c } = (0, Wo.TK)(t, i),
+          { bIsWishlisted: m, fnUpdateWishlist: u } = (0, Wo.u4)(t, i),
+          d = ii(s, a),
+          _ = (0, v.Qn)(),
+          p = (0, ge.LG)(s?.GetTagIDs());
         if (!s) return;
-        const p = s.GetAssets().GetMainCapsuleURL();
+        const h = s.GetAssets().GetMainCapsuleURL();
         return n.createElement(
           $.Z,
           { className: Oo().AppDetailsCtn },
-          p &&
+          h &&
             n.createElement(
               Y.Ii,
-              { href: u, className: Oo().AppLink },
-              n.createElement("img", { className: Oo().AppCapsule, src: p }),
+              { href: d, className: Oo().AppLink },
+              n.createElement("img", { className: Oo().AppCapsule, src: h }),
             ),
           n.createElement(
             "div",
@@ -20670,7 +20650,7 @@
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(li, { rgTagNames: _ }),
+                n.createElement(li, { rgTagNames: p }),
               ),
             n.createElement(
               "div",
@@ -20682,7 +20662,7 @@
               ),
             ),
           ),
-          !d &&
+          !_ &&
             !r &&
             n.createElement(
               "div",
@@ -20704,7 +20684,7 @@
                   n.createElement(
                     Ot.he,
                     {
-                      toolTipContent: c
+                      toolTipContent: m
                         ? (0, D.we)("#RemoveFromWishlist_ttip")
                         : (0, D.we)("#AddToWishlist_ttip"),
                     },
@@ -20712,10 +20692,10 @@
                       $.Z,
                       {
                         focusable: !0,
-                        className: (0, f.A)(Oo().QueueButton, c && Oo().Active),
-                        onClick: m,
+                        className: (0, f.A)(Oo().QueueButton, m && Oo().Active),
+                        onClick: u,
                       },
-                      c
+                      m
                         ? n.createElement(g.qnF, null)
                         : n.createElement(g.T4m, null),
                     ),
@@ -20732,7 +20712,7 @@
                       {
                         focusable: !0,
                         className: Oo().QueueButton,
-                        onClick: l,
+                        onClick: c,
                       },
                       n.createElement(g.NtH, null),
                     ),
@@ -20764,13 +20744,14 @@
       function ci(e) {
         const { appID: t } = e,
           a = (0, v.Qn)(),
-          { bIsIgnored: r, fnUpdateIgnored: s } = (0, Wo.TK)(t);
+          r = (0, j.ru)(ai),
+          { bIsIgnored: s, fnUpdateIgnored: o } = (0, Wo.TK)(t, r);
         return n.createElement(
           "div",
-          { className: (0, f.A)(Oo().IgnoredCtn, r && Oo().Active) },
+          { className: (0, f.A)(Oo().IgnoredCtn, s && Oo().Active) },
           n.createElement(
             "div",
-            { className: (0, f.A)(Oo().IgnoredInfo, r && Oo().Active) },
+            { className: (0, f.A)(Oo().IgnoredInfo, s && Oo().Active) },
             n.createElement(
               "div",
               { className: Oo().IgnoredTitle },
@@ -20785,7 +20766,7 @@
               $.Z,
               {
                 className: (0, f.A)(Oo().UndoButton, Oo().UndoIgnoreButton),
-                onClick: s,
+                onClick: o,
               },
               a &&
                 n.createElement(Uo.$m, {

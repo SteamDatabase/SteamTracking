@@ -536,10 +536,14 @@
   column-gap: 8px;
 }
 ._22Bfzcdg2l-RQEn-qKSIol {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   min-width: 10px;
   color: #dcdedf;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   border-radius: 2px;
   box-shadow: none;
   box-sizing: border-box;
@@ -555,6 +559,9 @@
 ._22Bfzcdg2l-RQEn-qKSIol._2xsPifNspMLcbkoUSA5Ujl {
   opacity: 0.4;
   cursor: default;
+}
+._22Bfzcdg2l-RQEn-qKSIol._2D_EZlAEopCvqU0_w21FdH {
+  background-color: #1a9fff;
 }
 ._22Bfzcdg2l-RQEn-qKSIol._3o2jhEGrGiVndMjUbNpOw- {
   background-color: #1a9fff;
@@ -3445,6 +3452,7 @@ html.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
 ._3-lHtLWJ9p9OkKHzA4E5J .DialogInput {
   padding: 4px 10px;
   margin: 8px 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 ._2wxsDF42yO9Frs8xOqwhAA {
   background-color: #1b1b1b;
@@ -6279,6 +6287,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   row-gap: 4px;
   scrollbar-width: none;
   flex-shrink: 1;
+  flex-grow: 1;
 }
 @media screen and (max-width: 1000px) {
   ._1_nZSkaKcUeXxQpXV5ulcm ._3UBx0c_4mXJqBclhB-8J- {
@@ -6367,22 +6376,10 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   margin-top: 6px;
   font-size: 12px;
   width: 100%;
-  height: 50px;
   overflow: visible;
+  flex-grow: 1;
 }
-.pWPZMFCv8qyGFFjiRJ_3B .GX4vW7Oj1QEzRUDi6wOnO {
-  position: absolute;
-  color: var(--gpStoreLighterGrey);
-  line-height: 18px;
-  display: -webkit-box;
-  line-clamp: 4;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(black 94%, transparent);
-  mask-image: linear-gradient(black 94%, transparent);
-}
-.pWPZMFCv8qyGFFjiRJ_3B .GX4vW7Oj1QEzRUDi6wOnO:hover {
+.pWPZMFCv8qyGFFjiRJ_3B:hover .GX4vW7Oj1QEzRUDi6wOnO {
   position: absolute;
   overflow: visible;
   line-clamp: unset;
@@ -6395,6 +6392,19 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   margin: -8px;
   box-sizing: border-box;
   z-index: 2;
+}
+.pWPZMFCv8qyGFFjiRJ_3B .GX4vW7Oj1QEzRUDi6wOnO {
+  pointer-events: none;
+  position: absolute;
+  color: var(--gpStoreLighterGrey);
+  line-height: 18px;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(black 94%, transparent);
+  mask-image: linear-gradient(black 94%, transparent);
 }
 @media screen and (max-width: 1350px) {
   .pWPZMFCv8qyGFFjiRJ_3B .GX4vW7Oj1QEzRUDi6wOnO {

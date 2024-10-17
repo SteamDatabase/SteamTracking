@@ -488,10 +488,14 @@
   column-gap: 8px;
 }
 ._22Bfzcdg2l-RQEn-qKSIol {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   min-width: 10px;
   color: #dcdedf;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
   border-radius: 2px;
   box-shadow: none;
   box-sizing: border-box;
@@ -507,6 +511,9 @@
 ._22Bfzcdg2l-RQEn-qKSIol._2xsPifNspMLcbkoUSA5Ujl {
   opacity: 0.4;
   cursor: default;
+}
+._22Bfzcdg2l-RQEn-qKSIol._2D_EZlAEopCvqU0_w21FdH {
+  background-color: #1a9fff;
 }
 ._22Bfzcdg2l-RQEn-qKSIol._3o2jhEGrGiVndMjUbNpOw- {
   background-color: #1a9fff;
