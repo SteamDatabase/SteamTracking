@@ -84941,7 +84941,7 @@
     },
     84364: (e, t, r) => {
       "use strict";
-      r.d(t, { j: () => p });
+      r.d(t, { j: () => _ });
       var i = r(90626),
         n = r(82415),
         a = r(62792),
@@ -84951,44 +84951,46 @@
         c = r(61859),
         m = r(65937),
         u = r(99559),
-        d = r.n(u);
-      function p(e) {
+        d = r.n(u),
+        p = r(79613);
+      function _(e) {
         const { info: t, className: r } = e,
           u = (0, i.useRef)({ include_release: !0 }),
-          [p] = (0, s.G6)(t?.id, (0, a.SW)(t?.type), u.current),
-          _ = p?.BHasDemo(),
-          g = _ || 1 === p?.GetAppType(),
-          h = g
-            ? (0, c.we)("#Sale_InstallDemo_ttip", p?.GetName())
-            : _
-              ? (0, c.we)("#Sale_CannotInstallDemo_ttip", p?.GetName())
+          [_] = (0, s.G6)(t?.id, (0, a.SW)(t?.type), u.current),
+          g = _?.BHasDemo(),
+          h = g || 1 === _?.GetAppType(),
+          f = h
+            ? (0, c.we)("#Sale_InstallDemo_ttip", _?.GetName())
+            : g
+              ? (0, c.we)("#Sale_CannotInstallDemo_ttip", _?.GetName())
               : (0, c.we)("#Loading");
-        return !g && _ && p?.BIsFree()
-          ? i.createElement(m.h, { info: t, className: r })
-          : i.createElement(
-              o.he,
-              {
-                toolTipContent: h,
-                onClick: (e) => {
-                  e.preventDefault(),
-                    e.stopPropagation(),
-                    g &&
-                      (0, n.o)(
-                        1 === p?.GetAppType()
-                          ? p.GetAppID()
-                          : p.GetDemoAppIDs()[0],
-                      );
+        if (!(0, p.$W)())
+          return !h && g && _?.BIsFree()
+            ? i.createElement(m.h, { info: t, className: r })
+            : i.createElement(
+                o.he,
+                {
+                  toolTipContent: f,
+                  onClick: (e) => {
+                    e.preventDefault(),
+                      e.stopPropagation(),
+                      h &&
+                        (0, n.o)(
+                          1 === _?.GetAppType()
+                            ? _.GetAppID()
+                            : _.GetDemoAppIDs()[0],
+                        );
+                  },
+                  className: (0, l.A)(
+                    r,
+                    d().DemoButton,
+                    !h && d().DisabledButton,
+                  ),
                 },
-                className: (0, l.A)(
-                  r,
-                  d().DemoButton,
-                  !g && d().DisabledButton,
-                ),
-              },
-              g
-                ? (0, c.we)("#Sale_InstallDemo")
-                : (0, c.we)("#Sale_DemoNotFound"),
-            );
+                h
+                  ? (0, c.we)("#Sale_InstallDemo")
+                  : (0, c.we)("#Sale_DemoNotFound"),
+              );
       }
     },
     75113: (e, t, r) => {
@@ -100525,7 +100527,13 @@
     },
     79613: (e, t, r) => {
       "use strict";
-      r.d(t, { Ae: () => m, MP: () => u, OO: () => d, ho: () => c });
+      r.d(t, {
+        $W: () => u,
+        Ae: () => m,
+        MP: () => d,
+        OO: () => p,
+        ho: () => c,
+      });
       let i = !1,
         n = !1,
         a = !1,
@@ -100533,12 +100541,15 @@
         o = !1,
         l = !1;
       function c() {
-        return i || _(), n || a;
+        return i || g(), n || a;
       }
       function m() {
-        return i || _(), l;
+        return i || g(), l;
       }
       function u() {
+        return m() || (i || g(), o);
+      }
+      function d() {
         if (!c()) return 0;
         if ("undefined" != typeof navigator && navigator.userAgent) {
           let e = navigator.userAgent.match(
@@ -100548,12 +100559,12 @@
         }
         return 0;
       }
-      function d() {
+      function p() {
         if (!navigator?.userAgent) return;
         const e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
         return e && 2 == e.length ? e[1] : void 0;
       }
-      function p(e, t) {
+      function _(e, t) {
         return (
           !!window.location.href.match("[?&]" + t + "=") ||
           !(
@@ -100563,17 +100574,17 @@
           )
         );
       }
-      function _() {
-        (s = p("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-          (a = p("Valve Steam GameOverlay", "force_overlay_view")),
-          (n = s || p("Valve Steam Client", "force_client_view")),
+      function g() {
+        (s = _("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+          (a = _("Valve Steam GameOverlay", "force_overlay_view")),
+          (n = s || _("Valve Steam Client", "force_client_view")),
           (l =
-            p("iphone", "force_ios_view") ||
-            p("ipad", "force_ios_view") ||
-            p("ipod", "force_ios_view") ||
-            (p("macintosh", "force_ios_view") &&
-              p("safari", "force_ios_view"))),
-          (o = p("android", "force_android_view")),
+            _("iphone", "force_ios_view") ||
+            _("ipad", "force_ios_view") ||
+            _("ipod", "force_ios_view") ||
+            (_("macintosh", "force_ios_view") &&
+              _("safari", "force_ios_view"))),
+          (o = _("android", "force_android_view")),
           (i = !0);
       }
     },

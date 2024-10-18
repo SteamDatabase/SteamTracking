@@ -7208,7 +7208,7 @@
     },
     25572: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => di });
+      a.d(t, { H: () => pi });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -20203,9 +20203,11 @@
       }
       var Xo = a(30600),
         Zo = a(36064),
-        Jo = a(62093);
-      const ei = new zn.wd("TrailerAppVideo"),
-        ti = {
+        Jo = a(62093),
+        ei = a(53534),
+        ti = a(79613);
+      const ai = new zn.wd("TrailerAppVideo"),
+        ni = {
           include_assets: !0,
           include_trailers: !0,
           include_basic_info: !0,
@@ -20213,9 +20215,9 @@
           include_release: !0,
           include_platforms: !0,
         },
-        ai = "trailercarousel",
-        ni = "trailercarousel_seen_intro_video";
-      function ri(e) {
+        ri = "trailercarousel",
+        si = "trailercarousel_seen_intro_video";
+      function oi(e) {
         const {
             event: t,
             appVisibilityTracker: a,
@@ -20234,12 +20236,12 @@
             Number(r.trailer_carousel_intro_video_appid)
               ? Number(r.trailer_carousel_intro_video_appid)
               : void 0;
-        (0, o.t7)(b, ti);
+        (0, o.t7)(b, ni);
         const E = n.useMemo(
             () => (b > 0 ? [{ type: "game", id: b }] : []),
             [b],
           ),
-          C = ((I = b), n.useMemo(() => mi().includes(I), [I]));
+          C = ((I = b), n.useMemo(() => di().includes(I), [I]));
         var I;
         const [A, D] = n.useState(b && C ? 1 : 0),
           [G, T] = n.useState(!0),
@@ -20271,7 +20273,7 @@
               })(e, t, "trailercarousel"),
               h = n.useMemo(() => new Map(), []),
               S = n.useMemo(() => new Map(), []);
-            ui(g, h), ui(g, S);
+            _i(g, h), _i(g, S);
             const f = n.useRef();
             n.useEffect(() => {
               if (t.enable_faceted_browsing) return;
@@ -20308,7 +20310,7 @@
                     g,
                   ),
                   v = S.filter((e) => w.A.Get().GetApp(e.id)?.BHasTrailers());
-                ei.Debug(
+                ai.Debug(
                   v.length != S.length
                     ? `Loaded ${v.length} items, ${S.length - v.length} items filtered out`
                     : `Loaded ${v.length} items`,
@@ -20334,7 +20336,7 @@
             ]);
             const y = Rn.OQ(c, 0, d.length - 1),
               b = d[y]?.id;
-            ei.Debug("Displaying appid", b),
+            ai.Debug("Displaying appid", b),
               n.useEffect(() => {
                 b &&
                   !m.find((e) => e.id == b) &&
@@ -20348,7 +20350,7 @@
             const [E, C] = n.useState();
             if (
               (n.useEffect(() => {
-                ei.IsDebugEnabled() &&
+                ai.IsDebugEnabled() &&
                   fn
                     .Get()
                     .LoadWishlistRecommendations(
@@ -20358,7 +20360,7 @@
                     )
                     .then((e) => C(e));
               }, [e]),
-              ei.IsDebugEnabled())
+              ai.IsDebugEnabled())
             ) {
               const e = Array.from(
                 { length: Math.min(d.length, 10) },
@@ -20375,7 +20377,7 @@
               )
                 .filter((e) => !!e)
                 .join(", ");
-              ei.Debug(
+              ai.Debug(
                 `useLoadItems: index ${y}, count ${d.length}, items: ${e}`,
               );
             }
@@ -20385,9 +20387,9 @@
           P = n.useCallback(
             (e) => {
               if (B) {
-                const e = mi();
+                const e = di();
                 e.includes(k) ||
-                  (e.push(k), localStorage.setItem(ni, JSON.stringify(e)));
+                  (e.push(k), localStorage.setItem(si, JSON.stringify(e)));
               }
               const t = (((A + (e ? 1 : -1)) % L.length) + L.length) % L.length;
               D(t), T(!1);
@@ -20412,7 +20414,7 @@
               style: (0, c.V)(r, t, S),
             },
             n.createElement(q.jR, { section: r, event: t, language: _ }),
-            n.createElement(si, {
+            n.createElement(ii, {
               appID: k,
               autoAdvanceMsec: r.trailer_carousel_auto_advance_msec,
               bPreferDemoStorePage: r.prefer_demo_store_page,
@@ -20425,7 +20427,7 @@
           ),
         );
       }
-      function si(e) {
+      function ii(e) {
         const {
             appID: t,
             autoAdvanceMsec: a,
@@ -20436,32 +20438,34 @@
             bCanGoBackward: c,
             bStartVideoWhenHidden: m,
           } = e,
-          [u, d] = n.useState(!1),
-          [_, p] = n.useState(!1),
-          [h, S] = n.useState(!1),
-          [v] = (0, o.t7)(t, ti),
-          y = (0, qo.R7)(),
-          b = y?.ownerWindow || window,
-          E = ii(v, r),
-          [C, w] = n.useState(0),
-          [I, A] = n.useState(),
-          G = n.useRef(),
-          T = (0, j.ru)(ai),
-          k = (0, Jo.b)();
+          u = (0, v.Qn)(),
+          [d, _] = n.useState(!1),
+          [p, h] = n.useState(!1),
+          [S, y] = n.useState(!1),
+          [b, E] = n.useState(m),
+          C = n.useRef(),
+          [w] = (0, o.t7)(t, ni),
+          I = (0, qo.R7)(),
+          A = I?.ownerWindow || window,
+          G = ci(w, r),
+          [T, k] = n.useState(0),
+          [L, B] = n.useState(),
+          P = n.useRef(),
+          N = (0, j.ru)(ri),
+          F = (0, Jo.b)();
         n.useEffect(() => {
-          t && k.AddImpression(t, T);
-        }, [t, k, T]);
-        const { bIsIgnored: L, fnUpdateIgnored: B } = (0, Wo.TK)(t, T),
-          { bIsWishlisted: P, fnUpdateWishlist: N } = (0, Wo.u4)(t, T);
+          t && F.AddImpression(t, N);
+        }, [t, F, N]);
+        const { bIsWishlisted: R, fnUpdateWishlist: M } = (0, Wo.u4)(t, N);
         n.useEffect(() => {
-          void 0 !== G.current &&
-            G.current !== t &&
-            ((G.current = void 0), w(0));
+          void 0 !== P.current &&
+            P.current !== t &&
+            ((P.current = void 0), k(0));
         }, [t]);
         const {
-            bTabHidden: F,
-            bOffscreen: R,
-            refIntersection: M,
+            bTabHidden: O,
+            bOffscreen: x,
+            refIntersection: H,
           } = (function () {
             const [e, t] = n.useState(!1),
               [a, r] = n.useState(!1);
@@ -20477,40 +20481,43 @@
               i = (0, Xo.BL)(s, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: i };
           })(),
-          O = n.useCallback(async () => {
-            if (F || R) return void S(!0);
-            (G.current = t), w(1);
+          U = n.useCallback(async () => {
+            if (O || x) return void y(!0);
+            (P.current = t), k(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
                 const t = 1 - (new Date().getTime() - e) / 500;
-                A(Math.max(t, 0));
+                B(Math.max(t, 0));
               }, 30);
             await new Promise((e) => setTimeout(e, 500)),
               window.clearTimeout(a),
-              A(void 0),
-              G.current == t &&
-                ((G.current = void 0),
+              B(void 0),
+              P.current == t &&
+                ((P.current = void 0),
                 s(!0),
-                w(2),
+                k(2),
                 await new Promise((e) => setTimeout(e, 500))),
-              w(0);
-          }, [t, F, R, s]);
+              k(0);
+          }, [t, O, x, s]);
         n.useEffect(() => {
-          F || R || !h || (S(!1), O());
-        }, [h, F, R, O]);
-        const x = !i;
-        let H;
+          O || x || !S || (y(!1), U());
+        }, [S, O, x, U]);
+        const V = !i;
+        let W;
         if (
-          (_
-            ? (H = 4)
-            : u
-              ? (H = 3)
-              : 0 != C
-                ? (H = 0)
-                : F
-                  ? (H = 1)
-                  : R && (H = 2),
-          !v)
+          (p
+            ? (W = 4)
+            : d && !(0, ti.$W)()
+              ? (W = 3)
+              : 0 != T
+                ? (W = 0)
+                : O
+                  ? (W = 1)
+                  : x && (W = 2),
+          n.useEffect(() => {
+            1 != W && 2 != W && E(!0);
+          }, [W]),
+          !w)
         )
           return n.createElement(
             "div",
@@ -20520,29 +20527,32 @@
               is_trailercarousel: !0,
             }),
           );
-        const U = m || (1 != H && 2 != H);
         return n.createElement(
           $.Z,
           {
             focusable: !0,
             className: (0, f.A)(Oo().TrailerCarouselApp),
-            ref: M,
-            onOptionsActionDescription: P
+            ref: H,
+            onOptionsActionDescription: R
               ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
               : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
-            onOptionsButton: N,
+            onOptionsButton: M,
             onOKActionDescription: (0, D.we)(
               "#SaleTrailerCarousel_ViewStorePage",
             ),
             onOKButton: () => {
-              b.location.href = E;
+              A.location.href = G;
             },
-            onSecondaryActionDescription: L
-              ? (0, D.we)("#SaleTrailerCarousel_Undo")
-              : (0, D.we)("#SaleTrailerCarousel_IgnoreLink"),
-            onSecondaryButton: B,
-            onMouseEnter: () => d(!0),
-            onMouseLeave: () => d(!1),
+            onSecondaryActionDescription: (0, D.we)(
+              "#SaleTrailerCarousel_PlayPause",
+            ),
+            onSecondaryButton: () => C.current?.(),
+            onGamepadDirection: (e) =>
+              (e.detail.button == ei.pR.DIR_LEFT ||
+                e.detail.button == ei.pR.DIR_RIGHT) &&
+              (s(e.detail.button == ei.pR.DIR_RIGHT), !0),
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
           },
           n.createElement(
             "div",
@@ -20562,31 +20572,33 @@
               n.createElement("div", {
                 className: (0, f.A)(
                   Oo().Fade,
-                  1 === C && Oo().FadeOut,
-                  2 === C && Oo().FadeIn,
+                  1 === T && Oo().FadeOut,
+                  2 === T && Oo().FadeIn,
                 ),
                 style: { "--fade-out-time": "0.5s", "--fade-in-time": "0.5s" },
               }),
               n.createElement(
                 "div",
                 { className: Oo().VideoArea },
-                n.createElement(ci, { appID: t }),
+                n.createElement(ui, { appID: t }),
                 n.createElement(Wo.y3, {
                   appID: t,
-                  focused: U,
-                  snrCode: T,
+                  focused: b,
+                  snrCode: N,
                   skipMicroTrailer: i,
                   playWithBroadcastPlayer: i,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                   showScreenshotInsteadOfMainCap: !i,
-                  fadeRatio: I,
-                  fnPlayPause: p,
-                  fnComplete: O,
+                  fadeRatio: L,
+                  fnPlayPause: h,
+                  refTogglePlayPause: C,
+                  bRequestPause: O || x,
+                  fnComplete: U,
                   loopVideo: !1,
                   defaultVolume: 0,
                 }),
               ),
-              n.createElement(oi, {
+              n.createElement(li, {
                 key: t,
                 appID: t,
                 preferDemoStorePage: e.bPreferDemoStorePage,
@@ -20603,24 +20615,25 @@
                 n.createElement(g.uMb, null),
               ),
           ),
-          n.createElement($o, {
-            className: (0, f.A)(Oo().AutoAdvanceRow, x && Oo().Enabled),
-            enabled: x,
-            currentItemKey: t,
-            autoAdvanceMsec: a,
-            fnAdvance: O,
-            pauseReason: H,
-            checkboxVisible: u,
-          }),
+          !u &&
+            n.createElement($o, {
+              className: (0, f.A)(Oo().AutoAdvanceRow, V && Oo().Enabled),
+              enabled: V,
+              currentItemKey: t,
+              autoAdvanceMsec: a,
+              fnAdvance: U,
+              pauseReason: W,
+              checkboxVisible: d,
+            }),
         );
       }
-      function oi(e) {
+      function li(e) {
         const { appID: t, preferDemoStorePage: a, introVideo: r } = e,
-          [s] = (0, o.t7)(t, ti),
-          i = (0, j.ru)(ai),
+          [s] = (0, o.t7)(t, ni),
+          i = (0, j.ru)(ri),
           { bIsIgnored: l, fnUpdateIgnored: c } = (0, Wo.TK)(t, i),
           { bIsWishlisted: m, fnUpdateWishlist: u } = (0, Wo.u4)(t, i),
-          d = ii(s, a),
+          d = ci(s, a),
           _ = (0, v.Qn)(),
           p = (0, ge.LG)(s?.GetTagIDs());
         if (!s) return;
@@ -20650,7 +20663,7 @@
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(li, { rgTagNames: p }),
+                n.createElement(mi, { rgTagNames: p }),
               ),
             n.createElement(
               "div",
@@ -20722,11 +20735,11 @@
             ),
         );
       }
-      function ii(e, t) {
+      function ci(e, t) {
         const a = (0, j.n9)();
         return e ? (0, zo._)(e.GetStorePageURL(t), a) : void 0;
       }
-      function li(e) {
+      function mi(e) {
         const { rgTagNames: t } = e,
           a = (0, Wo.W3)(t);
         return n.createElement(
@@ -20741,10 +20754,10 @@
           ),
         );
       }
-      function ci(e) {
+      function ui(e) {
         const { appID: t } = e,
           a = (0, v.Qn)(),
-          r = (0, j.ru)(ai),
+          r = (0, j.ru)(ri),
           { bIsIgnored: s, fnUpdateIgnored: o } = (0, Wo.TK)(t, r);
         return n.createElement(
           "div",
@@ -20779,14 +20792,14 @@
           ),
         );
       }
-      function mi() {
+      function di() {
         try {
-          return JSON.parse(localStorage.getItem(ni)) ?? [];
+          return JSON.parse(localStorage.getItem(si)) ?? [];
         } catch (e) {
           return [];
         }
       }
-      function ui(e, t) {
+      function _i(e, t) {
         n.useEffect(() => {
           let a;
           try {
@@ -20799,7 +20812,7 @@
             });
         }, [t, e]);
       }
-      function di(e) {
+      function pi(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           o = (0, v.Qn)();
         switch (a.section_type) {
@@ -20985,7 +20998,7 @@
           case "discoveryqueue":
             return n.createElement(ga.kv, { ...e });
           case "trailercarousel":
-            return n.createElement(ri, { ...e });
+            return n.createElement(oi, { ...e });
           case "badge_progress":
             return n.createElement(ha, { ...e });
           case "rewards":
