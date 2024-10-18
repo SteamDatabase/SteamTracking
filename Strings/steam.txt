@@ -668,7 +668,6 @@ $d`D-laM
 '\n"k_EMsgClientUCMDeletePublishedFile
 '\n"k_EMsgClientUCMPublishFileResponse
 '\n"k_EMsgClientUCMUpdatePublishedFile
-'\n"k_EMsgClientVerifyPasswordResponse
 '\n"k_EMsgDRMVariabilityReportResponse
 '\n"k_EMsgFSComputeFrenematrixResponse
 '\n"k_EMsgGMGetModifiedConVarsResponse
@@ -1687,8 +1686,6 @@ $d`D-laM
 172.16
 172.16.3.31
 172.16.3.39
-17:42:57
-17:44:07
 17CBootstrapLogFile
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -1785,6 +1782,7 @@ $d`D-laM
 22CClanMatchEventByRange
 22CClientStructNetPacket
 22ISSLConnectionCallback
+23:13:44
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
@@ -2610,7 +2608,7 @@ B-233
 B-283
 B-409
 B-571
-B17:44:06
+B23:14:07
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -6712,6 +6710,7 @@ EINPROGRESS
 EINTR
 EINVAL
 EISCONN
+ELegacyEnvironmentVariable
 EMPTY
 EMsg
 EMsg %d registered multiple times.
@@ -8815,7 +8814,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 15 2024
+Oct 17 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -9781,7 +9780,6 @@ SCT_set_signature_nid
 SCT_set_version
 SCT_validate
 SCT_validation_status_string
-SDL_GAMECONTROLLERCONFIG
 SDL_GetError
 SDL_SetThreadPriority
 SECG curve over a 112 bit prime field
@@ -10528,7 +10526,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct 15 2024 17:44:06
+Startup - updater built Oct 17 2024 23:14:07
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -19438,8 +19436,6 @@ k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
 k_EMsgClientVacStatusResponse
 k_EMsgClientVanityURLChangedNotification
-k_EMsgClientVerifyPassword
-k_EMsgClientVerifyPasswordResponse
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientWalletInfoUpdate

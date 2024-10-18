@@ -581,7 +581,6 @@ $tIContent-Length
 '\n"k_EMsgClientUCMDeletePublishedFile
 '\n"k_EMsgClientUCMPublishFileResponse
 '\n"k_EMsgClientUCMUpdatePublishedFile
-'\n"k_EMsgClientVerifyPasswordResponse
 '\n"k_EMsgDRMVariabilityReportResponse
 '\n"k_EMsgFSComputeFrenematrixResponse
 '\n"k_EMsgGMGetModifiedConVarsResponse
@@ -1526,7 +1525,6 @@ $tIContent-Length
 16CStructNetPacket
 16CVideoFileStream
 16IKeyValuesSystem
-17:42:57
 17CAudioFileDecoder
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -1633,6 +1631,7 @@ $tIContent-Length
 22CCustomAVIOReadContext
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
+23:13:44
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -4957,7 +4956,6 @@ KxPSK
 KxRSA
 KxRSA_PSK
 KxSRP
-L0Yn
 L8-\rHO
 L?CTCPHost::BPostSocketAccept
 LABEL_OPTIONAL
@@ -5644,7 +5642,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 15 2024
+Oct 17 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -12476,8 +12474,6 @@ k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
 k_EMsgClientVacStatusResponse
 k_EMsgClientVanityURLChangedNotification
-k_EMsgClientVerifyPassword
-k_EMsgClientVerifyPasswordResponse
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientWalletInfoUpdate

@@ -537,7 +537,6 @@ $d`D-laM
 '\n"k_EMsgClientUCMDeletePublishedFile
 '\n"k_EMsgClientUCMPublishFileResponse
 '\n"k_EMsgClientUCMUpdatePublishedFile
-'\n"k_EMsgClientVerifyPasswordResponse
 '\n"k_EMsgDRMVariabilityReportResponse
 '\n"k_EMsgFSComputeFrenematrixResponse
 '\n"k_EMsgGMGetModifiedConVarsResponse
@@ -1212,7 +1211,6 @@ $d`D-laM
 16CMsgKeyValuePair
 16CServiceRegistry
 16IKeyValuesSystem
-17:42:57
 17CCrossProcessPipe
 17CDebugStatsSystem
 17IDebugStatsSystem
@@ -1277,6 +1275,7 @@ $d`D-laM
 21IWorkThreadPoolSignal
 22CBaseScheduledFunction
 22CClanMatchEventByRange
+23:13:44
 23CClanEventUserNewsTuple
 24CClientModuleManagerBase
 24CCryptoKeyBase_RawBuffer
@@ -2449,14 +2448,10 @@ CPPTYPE_UINT64
 CPackageReservationStatus
 CPipeWaiter::BRemove(%d) -- not present
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
-CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
-CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
-CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
-CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRL Sign
@@ -3964,7 +3959,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 15 2024
+Oct 17 2024
 October
 On-disk registry has changed and is marked dirty - we're about to lose data.
 Once
@@ -4414,7 +4409,6 @@ SCT_set1_signature
 SCT_set_log_entry_type
 SCT_set_signature_nid
 SCT_set_version
-SDL_GAMECONTROLLERCONFIG
 SDL_GetError
 SDL_SetThreadPriority
 SECG curve over a 112 bit prime field
@@ -5338,7 +5332,6 @@ X9_62_FIELDID
 X9_62_PENTANOMIAL
 X9cm
 XG[r
-XNx1
 XRJ2
 XhHp
 Y77n
@@ -9191,7 +9184,6 @@ k_EMsgClientUserNotifications
 k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
 k_EMsgClientVacStatusResponse
-k_EMsgClientVerifyPassword
 k_EMsgClientWalletInfoUpdate
 k_EMsgCommunityAddFriendNews
 k_EMsgContentDescriptionUpdate

@@ -99,6 +99,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123@
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -2919,7 +2920,6 @@ $tICAPIJobListHashLoadSave
 '\n"k_EMsgClientUCMDeletePublishedFile
 '\n"k_EMsgClientUCMPublishFileResponse
 '\n"k_EMsgClientUCMUpdatePublishedFile
-'\n"k_EMsgClientVerifyPasswordResponse
 '\n"k_EMsgDRMVariabilityReportResponse
 '\n"k_EMsgFSComputeFrenematrixResponse
 '\n"k_EMsgGMGetModifiedConVarsResponse
@@ -4502,8 +4502,8 @@ $tICAPIJobListHashLoadSave
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *N9talk_base16TypedMessageDataIPN12_GLOBAL__N_113ChannelParamsEEE
 *W\n\fEVideoFormat
-*Z20LocalizeSteamDisplayP10CUtlStringPK9KeyValuesRK7CUtlMapIS_S_i8CDefLessEEUlPKcE0_
-*Z20LocalizeSteamDisplayP10CUtlStringPK9KeyValuesRK7CUtlMapIS_S_i8CDefLessEEUlPKcE_
+*Z20LocalizeSteamDisplayP10CUtlStringPK9KeyValuesRK7CUtlMapIS_S_i22CDefCaselessStringLessEEUlPKcE0_
+*Z20LocalizeSteamDisplayP10CUtlStringPK9KeyValuesRK7CUtlMapIS_S_i22CDefCaselessStringLessEEUlPKcE_
 *ZL10patch_dumpPvR9ConParamsR10ConCommandEUlvE_
 *ZL14app_info_printPvR9ConParamsR10ConCommandEUlvE_
 *ZL14app_set_configPvR9ConParamsR10ConCommandEUlvE_
@@ -4528,6 +4528,7 @@ $tICAPIJobListHashLoadSave
 *ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE28CWebUIAchievementsGetInfoJob
 *ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceEUlRK29CAchievements_GetInfo_RequestR30CAchievements_GetInfo_ResponseE_
 *ZN12CSteamClient19FlushBeforeValidateEvEUlvE_
+*ZN12CSteamEngine28OnFilterDictionaryDownloadedE26EBannedWordsDictionaryTypeiP18CHTTPRequestHandleEUlvE_
 *ZN12CSteamEngine29PushSuspendResumeNotificationE20ESuspendResumeActionEUlvE0_
 *ZN12CSteamEngine29PushSuspendResumeNotificationE20ESuspendResumeActionEUlvE_
 *ZN12CSteamEngine4InitE12EAccountTypejE35CWebUISteamEngineGetGameIDForPIDJob
@@ -6537,7 +6538,7 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/clientlinkfilter.cpp
 /data/src/clientdll/clientlinkfilter.h
 /data/src/clientdll/clientnetworkingapi.cpp
-/data/src/clientdll/clientnetworkingapi.cpp:2864
+/data/src/clientdll/clientnetworkingapi.cpp:2839
 /data/src/clientdll/clientparties.cpp
 /data/src/clientdll/clientservicemethodlist.cpp
 /data/src/clientdll/clientsharedconnection.cpp
@@ -7336,7 +7337,6 @@ $tICAPIJobListHashLoadSave
 10CUtlMemoryI18SteamItemDetails_tE
 10CUtlMemoryI19CClientAuthInstanceE
 10CUtlMemoryI19CECSigningPublicKeyE
-10CUtlMemoryI19ClientStat2Detail_tE
 10CUtlMemoryI19PendingWebRequest_tE
 10CUtlMemoryI19PopupMenuTouchKey_tE
 10CUtlMemoryI20ChangedFileMapping_sE
@@ -7385,6 +7385,7 @@ $tICAPIJobListHashLoadSave
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoES_IS5_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringS2_i22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringS2_i8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -7901,6 +7902,7 @@ $tICAPIJobListHashLoadSave
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringS1_i22CDefCaselessStringLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringS1_i8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
@@ -8120,7 +8122,6 @@ $tICAPIJobListHashLoadSave
 10CUtlVectorI18SteamItemDetails_t10CUtlMemoryIS0_EE
 10CUtlVectorI19CClientAuthInstance10CUtlMemoryIS0_EE
 10CUtlVectorI19CECSigningPublicKey10CUtlMemoryIS0_EE
-10CUtlVectorI19ClientStat2Detail_t10CUtlMemoryIS0_EE
 10CUtlVectorI19PendingWebRequest_t10CUtlMemoryIS0_EE
 10CUtlVectorI19PopupMenuTouchKey_t10CUtlMemoryIS0_EE
 10CUtlVectorI20ChangedFileMapping_s10CUtlMemoryIS0_EE
@@ -8658,7 +8659,6 @@ $tICAPIJobListHashLoadSave
 12CProtoBufMsgI13CMsgGSApproveE
 12CProtoBufMsgI15CMsgClientHelloE
 12CProtoBufMsgI15CMsgClientLogonE
-12CProtoBufMsgI15CMsgClientStat2E
 12CProtoBufMsgI16CMsgAMUnlockH264E
 12CProtoBufMsgI16CMsgClientLogOffE
 12CProtoBufMsgI16CMsgClientUIModeE
@@ -8814,7 +8814,6 @@ $tICAPIJobListHashLoadSave
 12CProtoBufMsgI30CMsgClientDeregisterWithServerE
 12CProtoBufMsgI30CMsgClientGetUserStatsResponseE
 12CProtoBufMsgI30CMsgClientMMSJoinLobbyResponseE
-12CProtoBufMsgI30CMsgClientRequestedClientStatsE
 12CProtoBufMsgI30CMsgClientUDSP2PSessionStartedE
 12CProtoBufMsgI30CMsgClientUFSGetSingleFileInfoE
 12CProtoBufMsgI30CMsgClientUFSShareFileResponseE
@@ -9411,42 +9410,14 @@ $tICAPIJobListHashLoadSave
 15WebUINoResponse
 16.0
 16000
-162.254.192.100:27017
-162.254.192.100:27018
-162.254.192.100:27019
-162.254.192.101:27017
-162.254.192.101:27018
-162.254.192.101:27019
-162.254.192.108:27017
-162.254.192.108:27018
-162.254.192.108:27019
-162.254.192.109:27017
-162.254.192.109:27018
-162.254.192.109:27019
-162.254.193.46:27017
-162.254.193.46:27018
-162.254.193.46:27019
-162.254.193.46:27020
-162.254.193.47:27017
-162.254.193.47:27018
-162.254.193.47:27019
-162.254.193.47:27020
-162.254.193.6:27017
-162.254.193.6:27018
-162.254.193.6:27019
-162.254.193.6:27020
-162.254.193.7:27017
-162.254.193.7:27018
-162.254.193.7:27019
-162.254.193.7:27020
+162.254.192.71:27017
+162.254.192.74:27017
+162.254.192.75:27017
+162.254.192.87:27017
+162.254.193.102:27017
+162.254.193.74:27017
 162.254.195.66:27017
-162.254.195.66:27018
-162.254.195.66:27019
-162.254.195.66:27020
-162.254.195.67:27017
-162.254.195.67:27018
-162.254.195.67:27019
-162.254.195.67:27020
+162.254.195.71:27017
 16CAPIJobJoinParty
 16CAPIJobShareFile
 16CAnalogActivator
@@ -10906,7 +10877,6 @@ $tICAPIJobListHashLoadSave
 24CClientJobGetOPFSettings
 24CClientJobGetPreferences
 24CClientJobGetWGAuthToken
-24CClientJobVerifyPassword
 24CClientJobWatchBroadcast
 24CClientServiceMethodList
 24CClientTimedTrialManager
@@ -10983,7 +10953,6 @@ $tICAPIJobListHashLoadSave
 24StoreItem_PurchaseOption
 24UpdateItemAnnouncement_t
 24UpdateUserNotification_t
-24VerifyPasswordResponse_t
 24WebAuthRequestCallback_t
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
 25.CMsgSteamDatagramRouterPingReply.AltAddress.Protocol:
@@ -11112,6 +11081,7 @@ $tICAPIJobListHashLoadSave
 25CWorkItemNetFilterDecrypt
 25CWorkItemNetFilterEncrypt
 25CWorkItemRunSSLConnection
+25CWorkItemSaveBufferToFile
 25CWorkshopContentUpdateJob
 25ClientAppNewsItemUpdate_t
 25ControllerGyroEulerAngles
@@ -14354,6 +14324,7 @@ $tICAPIJobListHashLoadSave
 7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
 7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE
+7CUtlMapI10CUtlStringS0_i22CDefCaselessStringLessE
 7CUtlMapI10CUtlStringS0_i8CDefLessE
 7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringji8CDefLessE
@@ -16497,6 +16468,7 @@ BYieldingRegisterSteamController\n
 BYieldingRequestMissingTokens
 BYieldingRunAPIJob
 BYieldingRunClientJob
+BYieldingSaveBufferToFile
 BYieldingTryCMConnectionForDepotDecryptionKey
 BYieldingWaitOneFrame
 BYieldingWaitTime
@@ -17065,7 +17037,6 @@ CCMInterface::ScheduledAttemptReconnect
 CCMInterface::ScheduledRequestFriendsDetails
 CCMInterface::ScheduledRetryLogon
 CCMInterface::ScheduledSendClientAuthList
-CCMInterface::ScheduledUploadClientStats
 CCMInterface::SendClientLogOn()
 CCMInterface::SendClientLogOn() - MachineID
 CCMInterface::SendClientLogOn() - PSN Ticket
@@ -17374,7 +17345,6 @@ CClientJobUploadControllerUsage
 CClientJobValidateParentalPassword
 CClientJobVerifyChunkStore
 CClientJobVerifyPassword
-CClientJobVerifyPassword: Unexpected message (%s/%d).\n
 CClientJobWatchBroadcast
 CClientJobWriteAppInfoLocCacheToDisk
 CClientMusic::CClientMusic allocated\n
@@ -18983,14 +18953,10 @@ CPrivacySettings
 CProcessChunkWorkItem
 CProcessChunkWorkItem::ThreadProcess
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
-CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
-CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
-CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
-CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CProcessP2PFailureFromSteamBackend
 CProcessP2PSignalFromSteamBackend
@@ -19728,6 +19694,8 @@ CWorkItemReadFromChunkStore
 CWorkItemReadFromChunkStore::ThreadProcess
 CWorkItemRunSSLConnection
 CWorkItemRunSSLConnection::ThreadProcess
+CWorkItemSaveBufferToFile
+CWorkItemSaveBufferToFile::ThreadProcess
 CWorkItemThreadedDeleteCacheFile
 CWorkItemThreadedDeleteCacheFile::ThreadProcess
 CWorkItemThreadedEnsureScreenshotImported
@@ -20245,7 +20213,6 @@ ClientPingSampleRequest
 ClientSeatCheckout
 ClientSeatCheckoutNotification
 ClientSignatureAlgorithms
-ClientStatsUploadRateSeconds
 ClientUpdateAppJobReport
 Clock difference of %d seconds vs relay %s.  Check the local clock.  (Them=%llu, Us=%llu)
 Clock difference of %d seconds.  Them=%llu, Us=%llu.  Dropping.
@@ -23104,7 +23071,6 @@ FvL:R
 FvvE
 F~Tb
 G&MtR
-G33s?
 G3LcP
 G3oML
 G5QaW
@@ -25987,6 +25953,7 @@ Lock '%s' being destroyed while it is held!
 LockParentalLock
 LockSession
 LockSessions
+LockTextFilter
 Locked account ID %u
 Locking Failed
 Log event queue grew unreasonably large in a short time!
@@ -29899,7 +29866,6 @@ SDL_ConvertSurface
 SDL_CreateWindow
 SDL_DestroySurface
 SDL_DestroyWindow
-SDL_GAMECONTROLLERCONFIG
 SDL_GAMECONTROLLER_ALLOW_STEAM_VIRTUAL_GAMEPAD
 SDL_GAMECONTROLLER_IGNORE_DEVICES
 SDL_GAMECONTROLLER_USE_BUTTON_LABELS
@@ -30736,6 +30702,7 @@ Session Idle Timeout
 Session Replaced
 Session error:\n
 SessionDestroyed
+SessionMapKeyForAppID: appID %u is known as an appID override for shortcut %u
 SessionNew
 SessionRemoved
 SessionRequestCheck
@@ -30841,7 +30808,6 @@ SetChatRoomGroupTagline
 SetChatRoomModerated
 SetChatRoomType
 SetClanChatRoomPrivate
-SetClientStat
 SetClientUIProcess
 SetClipDetails
 SetCloudEnabledForAccount
@@ -31598,7 +31564,6 @@ StartRangeTimelineEvent
 StartRecording
 StartSession
 StartSession: appID %u added secondary session %llx to session %llx
-StartSession: appID %u is known as an appID override for shortcut %u
 StartSession: appID %u session %llx
 StartSession: appID k_uAppIdInvalid
 StartShaderConversion
@@ -31803,7 +31768,6 @@ SteamInputManager.NotifyGyroQuaternionStateChanged#1
 SteamInputManager.NotifyGyroSpeedStateChanged#1
 SteamInputManager.StartControllerStateFlow#1
 SteamInstallPath
-SteamLauncherUI
 SteamLibrary
 SteamLinuxRuntime
 SteamLinuxRuntime_sniper
@@ -33266,7 +33230,6 @@ Unrecognized Apple mfi Controller: 0x%x, 0x%x
 Unrecognized Xinput Controller: 0x%x, 0x%x
 Unrecognized character code '%c' in format string, ignoring
 Unrecognized character code (%c) in format string, ignoring
-Unrecognized client stat aggregation method %d
 Unrecognized component IDs %d %d %d, assuming YCbCr
 Unrecognized controller source activity indicator, id "%d", type "%s"
 Unrecognized controller source, id "%d", type "%s"
@@ -33717,7 +33680,6 @@ VerifyCAFile
 VerifyCAPath
 VerifyChunkStore
 VerifyMode
-VerifyPassword
 VerifySignedFiles
 VerifyUpdates
 Verifying
@@ -34389,6 +34351,7 @@ YieldingWriteToDisk
 YldCheckIfAppNeedsPlatformCompatibility: verbose for %u
 YldCreateEmptyFilesAndFolders
 YldFileDeleteInternal
+YldFilterDictionaryDownloaded
 YldFirmwareCheckForUpdate
 YldFirmwareCheckForUpdateInternal
 YldFirmwareUpdate
@@ -39473,6 +39436,14 @@ cm_sysid
 cmcCA
 cmcRA
 cmll_t4_init_key
+cmp1-dfw1.steamserver.net:27018
+cmp1-dfw1.steamserver.net:443
+cmp1-iad1.steamserver.net:27018
+cmp1-iad1.steamserver.net:443
+cmp1-lax1.steamserver.net:27018
+cmp1-lax1.steamserver.net:443
+cmp1-sea1.steamserver.net:27018
+cmp1-sea1.steamserver.net:443
 cms datafinal error
 cms lib
 cms_CompressedData_create
@@ -40950,7 +40921,6 @@ eCallStateDialing
 eCallStateInCall
 eCallStateRinging
 eCallStateWaiting
-eClientStat >= 0 && eClientStat < k_EClientStatMax
 eCmd > 0 && eCmd < eHTMLCommands_None
 eCmdLineType == k_ECompatCmdLine_WaitForExitAndRunGame
 eConnectionMode == k_EConnectionModeClient
@@ -41475,22 +41445,6 @@ exporter
 exptext
 ext binder
 ext length mismatch
-ext1-lax1.steamserver.net:27021
-ext1-lax1.steamserver.net:443
-ext1-ord.steamserver.net:27021
-ext1-ord.steamserver.net:443
-ext2-lax1.steamserver.net:27021
-ext2-lax1.steamserver.net:443
-ext2-ord.steamserver.net:27021
-ext2-ord.steamserver.net:443
-ext3-ord.steamserver.net:27021
-ext3-ord.steamserver.net:443
-ext4-ord.steamserver.net:27021
-ext4-ord.steamserver.net:443
-ext5-iad1.steamserver.net:27021
-ext5-iad1.steamserver.net:443
-ext6-iad1.steamserver.net.:27021
-ext6-iad1.steamserver.net.:443
 extReq
 extend .$0 {\n
 extended master secret
@@ -45264,8 +45218,6 @@ k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
 k_EMsgClientVacStatusResponse
 k_EMsgClientVanityURLChangedNotification
-k_EMsgClientVerifyPassword
-k_EMsgClientVerifyPasswordResponse
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientWalletInfoUpdate
@@ -46600,8 +46552,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6811
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2330
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3665
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2340
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3685
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:105
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3057
@@ -48335,7 +48287,6 @@ m_vecChunks
 m_vecChunks[i]
 m_vecClanNames
 m_vecClanNames[i].m_sClanName
-m_vecClientStatsChanges
 m_vecClientStreams
 m_vecCompatTools
 m_vecCompletedAndWaiting
@@ -51656,6 +51607,7 @@ r$0I
 r'9xDrS
 r.m_nSortScoreLocal < 9999
 r.pop_id() == c.m_pConfig->m_id
+r1?33s?
 r2_half
 r2_soft
 r2i_certpol
@@ -52817,6 +52769,7 @@ setct-PResData
 setct-RegFormReqTBE
 setct-RegFormResTBS
 setenv
+setenv@GLIBC_2.0
 setext-cv
 setext-genCrypt
 setext-miAuth
@@ -53406,7 +53359,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct 15 2024 17:46:50
+steam Oct 17 2024 23:14:38
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -53995,7 +53948,6 @@ temporary_clips
 temporary_enabled_features
 temporary_playtime_restrictions
 tencent
-tenfoot
 term
 terminate
 terminate called after throwing an instance of '
@@ -55235,8 +55187,6 @@ unreliable msgnum
 unreliable msgnum offset
 unreliable size lower bits
 unsafe legacy renegotiation disabled
-unsetenv
-unsetenv@GLIBC_2.0
 unsigned
 unsigned __int128
 unsigned char

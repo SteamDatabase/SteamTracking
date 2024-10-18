@@ -55,7 +55,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123H
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -2426,7 +2425,6 @@ ${LANGUAGE}
 '\n"k_EMsgClientUCMDeletePublishedFile
 '\n"k_EMsgClientUCMPublishFileResponse
 '\n"k_EMsgClientUCMUpdatePublishedFile
-'\n"k_EMsgClientVerifyPasswordResponse
 '\n"k_EMsgDRMVariabilityReportResponse
 '\n"k_EMsgFSComputeFrenematrixResponse
 '\n"k_EMsgGMGetModifiedConVarsResponse
@@ -12795,6 +12793,7 @@ Bengali
 BetaCache
 BetaEnded
 BetaKey
+Bgamestream_debug set to %d\n
 Bh;+j
 BigPicture
 BigPicture/LoggedOutHapticsEnabled
@@ -14735,14 +14734,10 @@ CPrepareRemotePlayConfigWorker failed for AppID %u
 CPrepopulatePrecompiledCacheAPIJob
 CPrivacySettings
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
-CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
-CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
-CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
-CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CProcessShaderCacheJob
 CProcessWorkItem
@@ -15533,7 +15528,7 @@ Cached data for %s must now be invalidated due to PUT, POST, or DELETE\n
 Cached data found and deserialized for %s\n
 Cached data was found for %s, but is unusable (expired and unverifiable)\n
 Cached response for %s includes must-revalidate or no-cache cache control so must be revalidated\n
-Caching cursor image for %s, serial %ld, cache size = %lld\n
+Caching cursor image for %s, size %dx%d, serial %ld, cache size = %lld\n
 Cafe Funded
 CalculateSegmentCount
 Call Mismatch
@@ -16080,6 +16075,7 @@ Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
 Couldn't parse transport signal message\n
 Couldn't query PIDs for %s - possibly exited\n
 Couldn't resolve autosave path %s\n
+Couldn't scale cursor: %s\n
 Couldn't serialize controller configuration.
 Couldn't write %s: %s\n
 CountOrderedBytes
@@ -21713,7 +21709,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 15 2024 17:45:46
+Oct 17 2024 23:14:50
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -23439,6 +23435,8 @@ SDL_RemoveEventWatch@SDL3_0.0.0
 SDL_ResumeAudioDevice
 SDL_ResumeAudioDevice@SDL3_0.0.0
 SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME
+SDL_ScaleSurface
+SDL_ScaleSurface@SDL3_0.0.0
 SDL_SeekIO
 SDL_SeekIO@SDL3_0.0.0
 SDL_SetError
@@ -24564,7 +24562,6 @@ SteamInput/Configurator/CombinedJoycons
 SteamInput/Configurator/ErrorMsgEnabled
 SteamInputManager
 SteamInstaller
-SteamLauncherUI
 SteamLibrary
 SteamNetworkingSockets %s\n
 SteamNetworkingSockets connected state, transport in state 'ready'\n
@@ -33600,7 +33597,6 @@ gamescope_use_game_refresh_rate_in_steam
 gamesearchresult
 gameserver
 gamestream_debug
-gamestream_debug set to %d\n
 gamestream_enable_video_h265
 gamestream_fail
 gamestream_hardware_video_encode
@@ -36621,8 +36617,6 @@ k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
 k_EMsgClientVacStatusResponse
 k_EMsgClientVanityURLChangedNotification
-k_EMsgClientVerifyPassword
-k_EMsgClientVerifyPasswordResponse
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientWalletInfoUpdate
@@ -40322,6 +40316,7 @@ pReuseSession == NULL
 pSSLContext->BHasCertificate()
 pSSLContext->GetConnectionType() == k_ESSLConnectionType_Server
 pSalt
+pScaled->pitch == pScaled->w * 4
 pScheme
 pSourceFunc
 pSpecified

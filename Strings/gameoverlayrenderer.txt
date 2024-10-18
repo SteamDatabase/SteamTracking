@@ -50,7 +50,6 @@
 24CGameStreamBaseMemStream
 24CGameStreamGameMemStream
 4IIME
-6G_H;j
 ?SteamGameStream_%u_mem
 @15CVulkanRenderer
 Applying steamclient.so path workaround.\n

@@ -965,8 +965,6 @@ enum EMsg {
 	k_EMsgClientRequestedClientStats = 5480;
 	k_EMsgClientStat2Int32 = 5481;
 	k_EMsgClientStat2 = 5482;
-	k_EMsgClientVerifyPassword = 5483;
-	k_EMsgClientVerifyPasswordResponse = 5484;
 	k_EMsgClientDRMDownloadRequest = 5485;
 	k_EMsgClientDRMDownloadResponse = 5486;
 	k_EMsgClientDRMFinalResult = 5487;

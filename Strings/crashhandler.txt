@@ -117,12 +117,12 @@
 13ICrashHandler
 16CBreakpadFactory
 16IBreakpadFactory
-17:42:57
 18CUtlCharConversion
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+23:13:44
 9IMemAlloc
 <empty>
 >NULL == pValObjectPrev->m_pValObjectNext
@@ -155,14 +155,10 @@ CFileReader::Read
 CH\f1
 CPathString
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
-CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
-CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
-CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
-CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CUtlString::SetValue
 CUtlString::VFormat
@@ -196,7 +192,6 @@ Fatal assert; application exiting
 February
 FoCLcx
 Friday
-GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
@@ -212,6 +207,7 @@ GLIBC_2.8
 Gunknown
 HOME
 HTTP_PROXY
+IP\9
 Illegal termination of worker thread '%s'
 Init
 InitHandler
@@ -256,7 +252,7 @@ No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_
 No tracked allocs currently in use. Total %d\n
 November
 OUT OF MEMORY
-Oct 15 2024
+Oct 17 2024
 October
 PKDd
 PKDe
@@ -270,7 +266,6 @@ Platform
 ProductName
 Public
 Root
-SDL_GAMECONTROLLERCONFIG
 STEAM_BASE_FOLDER
 Saturday
 SendCrashReport
@@ -958,6 +953,8 @@ strchr
 strchr@GLIBC_2.0
 strcmp
 strcmp@GLIBC_2.0
+strcpy
+strcpy@GLIBC_2.0
 strdup
 strdup@GLIBC_2.0
 strerror
