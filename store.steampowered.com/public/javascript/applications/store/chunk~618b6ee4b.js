@@ -14446,9 +14446,10 @@
             A || (G(!0), W());
           },
           W = async () => {
-            const e = E + 4,
-              t = Math.max(F?.length || 0, P?.length || 0, L?.length || 0) + 1;
-            ne.I.Get().AddInteraction(j.unique_id, t), C(e);
+            const e = Math.max(pn(j, 0), 4),
+              t = E + e,
+              a = Math.max(F?.length || 0, P?.length || 0, L?.length || 0) + 1;
+            ne.I.Get().AddInteraction(j.unique_id, a), C(t);
           },
           j = (function (e, t, a) {
             return t.use_random_order &&
@@ -20445,27 +20446,32 @@
           [b, E] = n.useState(m),
           C = n.useRef(),
           [w] = (0, o.t7)(t, ni),
-          I = (0, qo.R7)(),
-          A = I?.ownerWindow || window,
-          G = ci(w, r),
-          [T, k] = n.useState(0),
-          [L, B] = n.useState(),
-          P = n.useRef(),
-          N = (0, j.ru)(ri),
-          F = (0, Jo.b)();
+          I =
+            r && w?.HasDemoStandaloneStorePage()
+              ? w.GetDemoStandaloneStorePageAppIDs()[0]
+              : 0,
+          [A] = (0, o.t7)(I, ni),
+          G = (0, qo.R7)(),
+          T = G?.ownerWindow || window,
+          k = ci(w, r),
+          [L, B] = n.useState(0),
+          [P, N] = n.useState(),
+          F = n.useRef(),
+          R = (0, j.ru)(ri),
+          M = (0, Jo.b)();
         n.useEffect(() => {
-          t && F.AddImpression(t, N);
-        }, [t, F, N]);
-        const { bIsWishlisted: R, fnUpdateWishlist: M } = (0, Wo.u4)(t, N);
+          t && M.AddImpression(t, R);
+        }, [t, M, R]);
+        const { bIsWishlisted: O, fnUpdateWishlist: x } = (0, Wo.u4)(t, R);
         n.useEffect(() => {
-          void 0 !== P.current &&
-            P.current !== t &&
-            ((P.current = void 0), k(0));
+          void 0 !== F.current &&
+            F.current !== t &&
+            ((F.current = void 0), B(0));
         }, [t]);
         const {
-            bTabHidden: O,
-            bOffscreen: x,
-            refIntersection: H,
+            bTabHidden: H,
+            bOffscreen: U,
+            refIntersection: V,
           } = (function () {
             const [e, t] = n.useState(!1),
               [a, r] = n.useState(!1);
@@ -20481,42 +20487,42 @@
               i = (0, Xo.BL)(s, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: i };
           })(),
-          U = n.useCallback(async () => {
-            if (O || x) return void y(!0);
-            (P.current = t), k(1);
+          W = n.useCallback(async () => {
+            if (H || U) return void y(!0);
+            (F.current = t), B(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
                 const t = 1 - (new Date().getTime() - e) / 500;
-                B(Math.max(t, 0));
+                N(Math.max(t, 0));
               }, 30);
             await new Promise((e) => setTimeout(e, 500)),
               window.clearTimeout(a),
-              B(void 0),
-              P.current == t &&
-                ((P.current = void 0),
+              N(void 0),
+              F.current == t &&
+                ((F.current = void 0),
                 s(!0),
-                k(2),
+                B(2),
                 await new Promise((e) => setTimeout(e, 500))),
-              k(0);
-          }, [t, O, x, s]);
+              B(0);
+          }, [t, H, U, s]);
         n.useEffect(() => {
-          O || x || !S || (y(!1), U());
-        }, [S, O, x, U]);
-        const V = !i;
-        let W;
+          H || U || !S || (y(!1), W());
+        }, [S, H, U, W]);
+        const q = !i;
+        let Q;
         if (
           (p
-            ? (W = 4)
+            ? (Q = 4)
             : d && !(0, ti.$W)()
-              ? (W = 3)
-              : 0 != T
-                ? (W = 0)
-                : O
-                  ? (W = 1)
-                  : x && (W = 2),
+              ? (Q = 3)
+              : 0 != L
+                ? (Q = 0)
+                : H
+                  ? (Q = 1)
+                  : U && (Q = 2),
           n.useEffect(() => {
-            1 != W && 2 != W && E(!0);
-          }, [W]),
+            1 != Q && 2 != Q && E(!0);
+          }, [Q]),
           !w)
         )
           return n.createElement(
@@ -20527,21 +20533,22 @@
               is_trailercarousel: !0,
             }),
           );
+        const K = A?.GetAllTrailers().BHasTrailers() ? A.GetAppID() : t;
         return n.createElement(
           $.Z,
           {
             focusable: !0,
             className: (0, f.A)(Oo().TrailerCarouselApp),
-            ref: H,
-            onOptionsActionDescription: R
+            ref: V,
+            onOptionsActionDescription: O
               ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
               : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
-            onOptionsButton: M,
+            onOptionsButton: x,
             onOKActionDescription: (0, D.we)(
               "#SaleTrailerCarousel_ViewStorePage",
             ),
             onOKButton: () => {
-              A.location.href = G;
+              T.location.href = k;
             },
             onSecondaryActionDescription: (0, D.we)(
               "#SaleTrailerCarousel_PlayPause",
@@ -20572,8 +20579,8 @@
               n.createElement("div", {
                 className: (0, f.A)(
                   Oo().Fade,
-                  1 === T && Oo().FadeOut,
-                  2 === T && Oo().FadeIn,
+                  1 === L && Oo().FadeOut,
+                  2 === L && Oo().FadeIn,
                 ),
                 style: { "--fade-out-time": "0.5s", "--fade-in-time": "0.5s" },
               }),
@@ -20582,18 +20589,18 @@
                 { className: Oo().VideoArea },
                 n.createElement(ui, { appID: t }),
                 n.createElement(Wo.y3, {
-                  appID: t,
+                  appID: K,
                   focused: b,
-                  snrCode: N,
+                  snrCode: R,
                   skipMicroTrailer: i,
                   playWithBroadcastPlayer: i,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                   showScreenshotInsteadOfMainCap: !i,
-                  fadeRatio: L,
+                  fadeRatio: P,
                   fnPlayPause: h,
                   refTogglePlayPause: C,
-                  bRequestPause: O || x,
-                  fnComplete: U,
+                  bRequestPause: H || U,
+                  fnComplete: W,
                   loopVideo: !1,
                   defaultVolume: 0,
                 }),
@@ -20617,12 +20624,12 @@
           ),
           !u &&
             n.createElement($o, {
-              className: (0, f.A)(Oo().AutoAdvanceRow, V && Oo().Enabled),
-              enabled: V,
+              className: (0, f.A)(Oo().AutoAdvanceRow, q && Oo().Enabled),
+              enabled: q,
               currentItemKey: t,
               autoAdvanceMsec: a,
-              fnAdvance: U,
-              pauseReason: W,
+              fnAdvance: W,
+              pauseReason: Q,
               checkboxVisible: d,
             }),
         );
