@@ -239,7 +239,6 @@ ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
-${COMMUNITY_BASE_URL}groups/steamworks/announcements/detail/4201376568915048836
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
@@ -1210,7 +1209,6 @@ ${PARTNER_BASE_URL}public/downloadics.php?${}
 ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
 ${PARTNER_BASE_URL}recap/nextfest/${}/${m_partnerId}
 ${PARTNER_BASE_URL}recommended_actions/missingratingforgermany/?partnerid=${}
-${PARTNER_BASE_URL}recommended_actions/storedescriptionlinks/?partnerid=${}
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
