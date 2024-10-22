@@ -4035,6 +4035,13 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   .Focusable {
   scroll-margin-top: 80px;
 }
+.gamepaddialog_TextareaWrapper_eNk_O {
+  display: flex;
+  flex-direction: column;
+}
+.gamepaddialog_Textarea_35YPS {
+  resize: none;
+}
 .overlappingtransition_TransitionGroup_2PuNB {
   position: absolute;
   top: 0;
@@ -38822,7 +38829,8 @@ button.TextButton.gpfocus {
 .DialogCheckbox.Active .SVGIcon_DialogCheck #stop0 {
   opacity: 1;
 }
-.DialogCheckbox.Disabled {
+.DialogCheckbox.Disabled,
+.DialogCheckbox_Container.Disabled {
   cursor: default;
   opacity: 0.5;
   filter: saturate(0.35);

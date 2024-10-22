@@ -284,6 +284,9 @@ CreateBuyOrderDialog = {
 	m_bPageNeedsRefresh: false,
 	m_nBestBuyPrice: null,
 	m_bActive: false,
+		m_bRequireLocalRate: false,
+	m_bHasLocalRate: false,
+	m_rgLocalRate: {},
 	
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
@@ -293,6 +296,55 @@ CreateBuyOrderDialog = {
 		this.m_strMarketItemName = strMarketItemName;
 	},
 
+		GetLocalTaxRate: function() {
+		this.m_bHasLocalRate = false;
+		this.m_rgLocalRate = {};
+
+		var billing_address = $J('#billing_address') ? $J('#billing_address').val() : '';
+		var billing_address_two = $J('#billing_address_two') ? $J('#billing_address_two').val() : '';
+		var billing_country = $J('#billing_country') ? $J('#billing_country').val() : '';
+		var billing_city = $J('#billing_city') ? $J('#billing_city').val() : '';
+		var billing_state = g_bHasBillingStates ? ( $J('#billing_state_select') ? $J('#billing_state_select').val() : '' ) : '';
+		var billing_postal_code = $J('#billing_postal_code') ? $J('#billing_postal_code').val() : '';
+
+		var caller = this; 		$J.ajax( {
+			url: 'https://steamcommunity.com/market/gettradefeetaxrate/',
+			type: 'GET',
+			data: {
+				sessionid: g_sessionID,
+				appid: this.m_unAppId,
+				billing_address: billing_address,
+				billing_address_two: billing_address_two,
+				billing_country: billing_country,
+				billing_city: billing_city,
+				billing_state: billing_state,
+				billing_postal_code: billing_postal_code
+			},
+			crossDomain: true,
+			async: false,
+			xhrFields: { withCredentials: true }
+		} ).done( function ( data ) {
+			if ( data.success )
+			{
+				if ( data.tradefee_addtax && data.tradefee_taxrate > 0 )
+				{
+					caller.m_rgLocalRate.m_strState = billing_state;
+					caller.m_rgLocalRate.m_strCountry = billing_country;
+					caller.m_rgLocalRate.m_bAddTax = true;
+					caller.m_rgLocalRate.m_flRate = data.tradefee_taxrate;
+				}
+				caller.m_bHasLocalRate = true;
+			}
+		} ).fail( function( jqxhr ) {
+			console.log( 'couldn\'t determine sales tax rate for estimate' );
+			console.log( jqxhr.responseText );
+		} );
+	},
+
+	UpdateLocalTaxRate: function() {
+		CreateBuyOrderDialog.GetLocalTaxRate();
+		CreateBuyOrderDialog.UpdateTotal();
+	},
 	
 	Show: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		if ( !this.m_bInitialized )
@@ -304,7 +356,11 @@ CreateBuyOrderDialog = {
 			return;
 		}
 
-						
+								if ( g_bRequiresBillingInfo && !this.m_bHasLocalRate )
+		{
+			this.GetLocalTaxRate();
+		}
+		
 		this.m_bActive = true;
 
 		// show the frame in the dialog
@@ -326,6 +382,7 @@ CreateBuyOrderDialog = {
 		$J('#market_buy_commodity_input_quantity').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
 		$J('#market_buyorder_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
 		$J('#market_buyorder_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
+				$J('#billing_state_select').change( function() { CreateBuyOrderDialog.UpdateLocalTaxRate();  } );
 				$J('#market_buy_commodity_input_price').blur( function() {
 			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 			var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
@@ -348,12 +405,58 @@ CreateBuyOrderDialog = {
 		this.UpdateTotal();
 	},
 
+	GetFeeTotal: function( base_amt, ppct, spct ) {
+		return Math.max( 1, Math.floor( ( base_amt * ppct ) / 100 ) ) + Math.max( 1, Math.floor( ( base_amt * spct ) / 100 ) );
+	},
 
 	UpdateTotal: function() {
 		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price = Math.round( currency * quantity );
 
+					var ppct = 10;
+			var spct = 5;
+			var fee_amt = 0.0;
+			var local_tax_est = 0.0;
+
+			if ( currency > 3 && this.m_bHasLocalRate && this.m_rgLocalRate.m_bAddTax && this.m_rgLocalRate.m_flRate > 0.0 )
+			{
+				if ( ( currency - 2 ) <= ( ( 2 * 100 ) / Math.max( ppct, spct ) ) )
+				{
+					fee_amt = 2;
+				}
+				else
+				{
+															var base_est = Math.floor(currency * 100 / (100 + ppct + spct));
+					for ( var tries = 0; tries < 3; tries++ ) {
+						fee_amt = this.GetFeeTotal(base_est, ppct, spct);
+						if ((base_est + fee_amt) < currency )
+						{
+							base_est++;
+						}
+						else
+						{
+							if ((base_est + fee_amt) > currency )
+							{
+																base_est--;
+							}
+							break;
+						}
+					}
+				}
+				local_tax_est = Math.floor((((quantity * fee_amt) * this.m_rgLocalRate.m_flRate )/100) + 0.5);
+			}
+			$J('#market_buy_commodity_input_localtax').val( v_currencyformat( local_tax_est, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
+			price += local_tax_est;
+			if ( local_tax_est > 0 )
+			{
+				$J('#market_buy_input_tax').show();
+				$J('#market_buy_taxloc').html( this.m_rgLocalRate.m_strState );
+			}
+			else
+			{
+				$J('#market_buy_input_tax').hide();
+			}
 		
 		var div = $J('#market_buy_commodity_order_total');
 		if ( isNaN(price) || !window.g_rgWalletInfo )
@@ -452,6 +555,7 @@ CreateBuyOrderDialog = {
 				appid: this.m_unAppId,
 				market_hash_name: this.m_strMarketHashName,
 				price_total: price_total,
+								tradefee_tax:  GetPriceValueAsInt( $J('#market_buy_commodity_input_localtax').val() ),
 								quantity: quantity,
 				first_name: first_name,
 				last_name: last_name,

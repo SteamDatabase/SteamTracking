@@ -231,7 +231,7 @@
         if ((0, r.Qn)()) {
           const e = window.__nav_tree_root;
           return l.createElement(
-            o.B,
+            o.B2,
             { ...c, navTreeRef: m, secondary: !0, parentEmbeddedNavTree: e },
             l.createElement(i.q, null, t),
           );
@@ -244,7 +244,7 @@
       a.d(t, { N: () => c });
       var n = a(90626),
         l = a(92757),
-        r = (a(73745), a(39575)),
+        r = (a(375), a(39575)),
         o = a(76217),
         i = a(79613);
       const s = "FocusNavHistoryID";
@@ -464,7 +464,7 @@
         v = a(71138),
         b = a(63556),
         S = a(61859),
-        k = a(73745),
+        k = a(375),
         C = a(30470);
       const w = new Map();
       function f(e, t, a) {

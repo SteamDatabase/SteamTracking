@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9264341";
+var CLSTAMP = "9279751";
 (() => {
   var e,
     t,
@@ -100,9 +100,9 @@ var CLSTAMP = "9264341";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      26726: (e, t, n) => {
+      97124: (e, t, n) => {
         "use strict";
-        n(20558);
+        n(38411);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -310,7 +310,6 @@ var CLSTAMP = "9264341";
         let I = { success: !0, result: 1 };
         class S {
           m_connection = new k();
-          m_bAllowAccountMismatch = !1;
           FailureResult(e = 2) {
             let t = { success: !1, result: e };
             return (
@@ -324,14 +323,17 @@ var CLSTAMP = "9264341";
               t
             );
           }
-          SetAllowAccountMismatch(e) {
-            this.m_bAllowAccountMismatch = e;
-          }
           BClientConnected() {
             return this.m_connection.Connect().then(
               () => I,
               () => this.FailureResult(),
             );
+          }
+          BClientConnectedAndSupportsMessage(e) {
+            return this.m_connection
+              .Connect()
+              .then(() => this.BClientSupportsMessage(e))
+              .catch(() => !1);
           }
           BClientSupportsMessage(e) {
             return (
@@ -350,16 +352,16 @@ var CLSTAMP = "9264341";
             let n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
             return t && (n.chat_room_id = t), this.GenericEResultCall(n);
           }
-          ShowChatRoomGroupInvite(e) {
-            let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
-            return this.GenericEResultCall(t);
+          ShowChatRoomGroupInvite(e, t = !0) {
+            let n = { message: "ShowChatRoomGroupInvite", invite_code: e };
+            return this.GenericEResultCall(n, t);
           }
           m_mapCacheSubscribedApp = new Map();
           BIsSubscribedApp(e) {
             if (this.m_mapCacheSubscribedApp.has(e))
               return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
             let t = { message: "IsSubscribedApp", appid: e };
-            return this.GenericEResultCall(t).then((t) => {
+            return this.GenericEResultCall(t, !0).then((t) => {
               if (t.connect_failed) return;
               let n = 1 == t.result;
               return this.m_mapCacheSubscribedApp.set(e, n), n;
@@ -368,9 +370,9 @@ var CLSTAMP = "9264341";
           OpenFriendsDialog() {
             return this.GenericEResultCall({ message: "OpenFriendsDialog" });
           }
-          OpenSteamURL(e) {
-            let t = { message: "OpenSteamURL", url: e };
-            return this.GenericEResultCall(t);
+          OpenSteamURL(e, t = !1) {
+            let n = { message: "OpenSteamURL", url: e };
+            return this.GenericEResultCall(n, t);
           }
           BClientAccountMatches() {
             return (
@@ -378,17 +380,17 @@ var CLSTAMP = "9264341";
               p.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }
-          GenericEResultCall(e) {
+          GenericEResultCall(e, t = !1) {
             return this.m_connection
               .Connect()
               .then(() =>
-                this.m_bAllowAccountMismatch || this.BClientAccountMatches()
-                  ? this.m_connection
+                t && !this.BClientAccountMatches()
+                  ? { success: !1, result: 19, account_mismatch: !0 }
+                  : this.m_connection
                       .SendMsgAndAwaitResponse(e)
                       .then((e) =>
                         1 === e.success ? I : this.FailureResult(e.success),
-                      )
-                  : { success: !1, result: 19, account_mismatch: !0 },
+                      ),
               )
               .catch(() => this.FailureResult());
           }
@@ -418,7 +420,9 @@ var CLSTAMP = "9264341";
             return !this.m_bSecurityException;
           }
           get connected_to_client() {
-            return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
+            return (
+              !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN
+            );
           }
           SendMsgAndAwaitResponse(e) {
             return new Promise((t, n) => {
@@ -462,7 +466,7 @@ var CLSTAMP = "9264341";
             }
           }
           Connect() {
-            if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
+            if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
               return Promise.resolve();
             if (this.m_promiseConnect) return this.m_promiseConnect;
             let e = new Promise((e, t) => {
@@ -581,7 +585,7 @@ var CLSTAMP = "9264341";
               return t;
           }
         }
-        var T, y, A, j, L, R, M, N, P, w, G, O, U, D, F, B, W;
+        var T, y, A, j, L, R, M, N, P, G, w, O, U, D, F, B, W;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -711,7 +715,7 @@ var CLSTAMP = "9264341";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(w || (w = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -719,7 +723,7 @@ var CLSTAMP = "9264341";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(G || (G = {})),
+          })(w || (w = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
@@ -1400,21 +1404,20 @@ var CLSTAMP = "9264341";
             });
           }
           LaunchSteamIgnoreAccount() {
-            C.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            this.SendInviteToClient(!1);
           }
           ForceLaunchSteamClient() {
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
           }
-          SendInviteToClient() {
+          SendInviteToClient(e = !0) {
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              C.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode()).then(
+              C.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode(), e).then(
                 (e) => {
                   (0, Z.h5)(() => {
                     (this.m_bConnectingToClient = !1),
-                      (this.m_connectResult = e),
-                      console.log(e);
+                      (this.m_connectResult = e);
                   });
                 },
               ));
@@ -1680,7 +1683,7 @@ var CLSTAMP = "9264341";
               })();
           });
       },
-      20558: (e, t, n) => {
+      38411: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1913,18 +1916,18 @@ var CLSTAMP = "9264341";
       {
         43: "2d1569711644a97b27c9",
         762: "20d1805fb19e04428350",
-        976: "f8b8bbee088d84c5ac10",
-        1225: "3b37f784fa6ac791b841",
-        1449: "4cfa8a3b44e1429581b5",
+        976: "a3af66dfea40799de909",
+        1225: "9fd8c339217f9dba6262",
+        1449: "eaa9b4633447d398c51a",
         1499: "c30c2a3b0d5705154bcb",
-        1973: "1f4e6c1dcf176db8d804",
-        2256: "860973ee908408a73bb6",
-        2320: "01d9af9a38d17ece9d55",
-        2435: "027430df8ac465d1b03c",
-        2632: "8687a4ea0b44643e66f7",
-        2749: "26f8e48c9a9f1641f3a8",
+        1973: "868d01605568666e105c",
+        2256: "2aeadaa0e132e4c12688",
+        2320: "4bee7a40f30ed9358c81",
+        2435: "1d62b56c148a25f2ad36",
+        2632: "f609e8d45ccc8f6fadbf",
+        2749: "b9e43ca5f113f657c59f",
         2945: "c2615f0bf698d3ba8095",
-        2954: "015f4169887c8b8d6b1e",
+        2954: "686690bcb38583118964",
         3e3: "6244423f97bbadfb378f",
         3016: "f772487927b08b66167b",
         3232: "68bf2fea1283ff729b8d",
@@ -1932,45 +1935,45 @@ var CLSTAMP = "9264341";
         3485: "1ca36b18b92fbd93c82b",
         3710: "357f6ded3ff9007f8dcb",
         3789: "9b36601687c8c286f813",
-        3912: "f6ecc19dba3cf22bd623",
+        3912: "add8d1e0c06b892e7f5a",
         4154: "7fc5071568014007872e",
         4302: "7532d5d57aab1e69b2d3",
         4434: "cfa87968e65c1b48e58d",
         4488: "2ba22b0983b646f5294a",
         4776: "28db7f99aa77b21fb4e3",
         4787: "c918d5a66e4b1cb82962",
-        5018: "451eb2858a62c9ada32c",
-        5110: "d5315eb38eb9f19a59e5",
-        5241: "de61c2e3d6b54d72651b",
+        5018: "19d1ffdf411fc96d26ea",
+        5110: "d56cfcaa513d9cc5dc5f",
+        5241: "30be23fcd90d12d71ca9",
         5341: "0896561e7e8e04ac497a",
         5480: "09e6317423e85306930c",
-        6031: "20e929c0bcba363f1d13",
+        6031: "962a2815994058389eda",
         6127: "21285c2d4e9089b111bb",
-        6149: "0fa05aaa2150a68103e6",
-        6165: "3dac8d9c2d423ddf7f97",
-        6208: "f255e29d424fcde5bbce",
-        6239: "c5143dad4cf4138a6bfa",
+        6149: "b13640b39086bc0cca75",
+        6165: "f4e30cfcca5417e66b8e",
+        6208: "e47264671efebd1e5fcf",
+        6239: "79fdd76b886b6875964b",
         6385: "46bb8b6ee24f6bd72532",
         6518: "8cd538c22d2143bbefe7",
-        6523: "1a80f7e7685022372660",
-        6562: "ca250c82da2316d8382c",
+        6523: "8434fd765a52c347d8b3",
+        6562: "2b611a3028c5d39e0e2b",
         6609: "acac235fdaf92994d4f8",
         6888: "97fad568d4bc58c3178c",
         6971: "e2d6c5dc22be7d3217e9",
         7487: "d6c8e1242ff218147a7f",
-        7539: "d34f06dc6de7bfc44b63",
-        7591: "4b3623993833b58e6d83",
-        7786: "e261ff072f4497ece41e",
+        7539: "4f2d7b212d7448f6f040",
+        7591: "e92f67be1499e3c7aac1",
+        7786: "c8c7e1ee8c957b9561a7",
         7861: "ec6590999be2754fb930",
-        8025: "9ce4f13ae57a603d1558",
+        8025: "e738d6f4acc8a25c47b5",
         8194: "510ab7f4d7764937eced",
-        8306: "3a2aad3b2e5c0795c7ba",
+        8306: "e7efb43a3c6c9cd5999c",
         8759: "dfc12156f52d20440b1d",
         8766: "b9b7b35f7df91bb55b83",
-        8967: "471cb66eb15684183ed5",
+        8967: "e10506345ff6fcbaf978",
         9027: "8e85e0465fbf17ebf124",
-        9152: "25e918041d956a167ab4",
-        9712: "b9b306dc430801a3fda1",
+        9152: "69a0f2367d8552125b8f",
+        9712: "cdc8f2c75abdd236cc78",
         9746: "e05951d8b37cd69db872",
         9808: "47d563fed12f1789dffb",
       }[e]),
@@ -2109,6 +2112,6 @@ var CLSTAMP = "9264341";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(26726));
+  var c = o.O(void 0, [1068], () => o(97124));
   c = o.O(c);
 })();

@@ -285,7 +285,7 @@
         s = a(44332),
         l = a(68797),
         m = a(6144),
-        c = a(73745),
+        c = a(375),
         p = a(78327);
       class d {
         m_mapDefIDtoDefinition = new Map();
@@ -474,7 +474,7 @@
         l = a(44332),
         m = a(68797),
         c = a(6144),
-        p = a(73745),
+        p = a(375),
         d = a(78327);
       class u {
         m_mapInventoryByApp = new Map();
@@ -607,7 +607,7 @@
         m = a(90626),
         c = a(68797),
         p = a(6144),
-        d = a(73745),
+        d = a(375),
         u = a(14947),
         h = a(58222);
       class g {
@@ -1125,7 +1125,7 @@
     },
     48628: (e, t, a) => {
       "use strict";
-      a.d(t, { f: () => At });
+      a.d(t, { f: () => Bt });
       var n = a(34629),
         r = a(90626),
         o = a(99376),
@@ -1220,7 +1220,7 @@
             super.AppendText(a, t);
         }
       }
-      var _ = a(73745),
+      var _ = a(375),
         C = a(70995),
         S = a(17720),
         f = a(88527),
@@ -1327,7 +1327,7 @@
         N = a(71138),
         R = a(4796),
         F = a(91254),
-        O = a(16021),
+        O = a(82097),
         P = a(22797),
         G = a(3088),
         H = a(75113);
@@ -2353,6 +2353,7 @@
         ze = a(84811);
       const Ye = r.lazy(() =>
           Promise.all([
+            a.e(4607),
             a.e(7937),
             a.e(915),
             a.e(7328),
@@ -2608,7 +2609,7 @@
         return (
           null == ht &&
             (ht = new Map([
-              ["url", { Constructor: _t, autocloses: !1 }],
+              ["url", { Constructor: Ct, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -2657,34 +2658,38 @@
                 "*",
                 { Constructor: s.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Ct, autocloses: !1 }],
+              ["img", { Constructor: St, autocloses: !1 }],
               ["previewyoutube", { Constructor: ut.gH, autocloses: !1 }],
               ["looping_media", { Constructor: s.$A, autocloses: !1 }],
               ["video", { Constructor: s.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: ut.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: ft, autocloses: !0 }],
-              ["vod", { Constructor: Et, autocloses: !1 }],
+              ["trailer", { Constructor: Et, autocloses: !0 }],
+              ["vod", { Constructor: It, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: It,
+                  Constructor: yt,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: vt, autocloses: !1 }],
-              ["claimitem", { Constructor: wt, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: bt, autocloses: !1 }],
-              ["actiondialog", { Constructor: Dt, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: Ut, autocloses: !0 }],
-              ["docimg", { Constructor: St, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: wt, autocloses: !1 }],
+              ["claimitem", { Constructor: bt, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Tt, autocloses: !1 }],
+              ["actiondialog", { Constructor: Lt, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: At, autocloses: !0 }],
+              ["docimg", { Constructor: ft, autocloses: !1 }],
               ["carousel", { Constructor: Je, autocloses: !1 }],
+              ["meetsteam", { Constructor: _t, autocloses: !1 }],
             ])),
           ht
         );
       }
       function _t(e) {
+        return r.createElement("div", null, "hello world");
+      }
+      function Ct(e) {
         let t = (0, s.j$)(e.args);
         const a = (0, s.j$)(e.args, "style"),
           n = (0, s.j$)(e.args, "id"),
@@ -2722,7 +2727,7 @@
                 )
         );
       }
-      function Ct(e) {
+      function St(e) {
         const { showErrorInfo: t, event: a } = e.context;
         let n = e && e.children && e.children.toString();
         if (
@@ -2751,7 +2756,7 @@
         }
         return r.createElement(G.c, { rgSources: o });
       }
-      function St(e) {
+      function ft(e) {
         const t = (0, s.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const a = e && e.children && e.children.toString(),
@@ -2767,27 +2772,27 @@
           r.createElement(G.c, { rgSources: n, alt: a })
         );
       }
-      function ft(e) {
-        const t = yt(
+      function Et(e) {
+        const t = vt(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          a = yt(e.args, "trailerid", 0);
+          a = vt(e.args, "trailerid", 0);
         return r.createElement(He, {
           appid: t,
           trailerBaseID: a,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Et(e) {
-        const t = yt(e.args, "appid", 0);
+      function It(e) {
+        const t = vt(e.args, "appid", 0);
         return r.createElement(je, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function It(e) {
+      function yt(e) {
         const t = (0, s.j$)(e.args, "name"),
           a = (0, s.j$)(e.args, "title"),
           n = (0, s.j$)(e.args, "company"),
@@ -2808,11 +2813,11 @@
               bio: e.children,
             });
       }
-      function yt(e, t, a) {
+      function vt(e, t, a) {
         const n = (0, s.j$)(e, t);
         return void 0 === n || null == n ? a : Number.parseInt(n);
       }
-      function vt(e) {
+      function wt(e) {
         const t = (0, s.j$)(e.args, "name"),
           a =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -2826,7 +2831,7 @@
           ? e.children
           : null;
       }
-      function wt(e) {
+      function bt(e) {
         const t = e.context.showErrorInfo;
         if (!T.iA.logged_in)
           return r.createElement(
@@ -2846,7 +2851,7 @@
           }
         return r.createElement(pt.m, { bPreviewMode: t, rewardType: n });
       }
-      function bt(e) {
+      function Tt(e) {
         const t = Number.parseInt((0, s.j$)(e.args, "id")) || 0,
           a =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -2864,7 +2869,7 @@
           (!l && !a) || (l && a) ? e.children : null
         );
       }
-      function Tt(e) {
+      function Dt(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, Me.h)(e),
             a = (0, Me.Q)();
@@ -2890,12 +2895,12 @@
         }
         return { bInitialState: !0 };
       }
-      function Dt(e) {
+      function Lt(e) {
         const t = (0, s.j$)(e.args, "action"),
           a = (0, s.j$)(e.args, "initialToken"),
           n = (0, s.j$)(e.args, "successToken"),
           o = (0, s.j$)(e.args, "failToken"),
-          i = Tt(t);
+          i = Dt(t);
         if (!(t && a && n && o)) {
           return e.context.showErrorInfo
             ? r.createElement(
@@ -2913,7 +2918,7 @@
                 onClick: (i) => {
                   (0, mt.pg)(
                     r.createElement(
-                      Lt,
+                      Ut,
                       {
                         strAction: t,
                         strInitialToken: a,
@@ -2936,7 +2941,7 @@
               (0, b.we)("#Login_SignIn"),
             );
       }
-      function Lt(e) {
+      function Ut(e) {
         const {
             strAction: t,
             children: a,
@@ -2945,7 +2950,7 @@
             strSuccessToken: i,
             strFailToken: s,
           } = e,
-          l = Tt(t),
+          l = Dt(t),
           [m, c] = r.useState(Boolean(l.fnAction));
         return (
           r.useEffect(() => {
@@ -2984,7 +2989,7 @@
           )
         );
       }
-      function Ut(e) {
+      function At(e) {
         const { showErrorInfo: t, event: a } = e.context,
           n = a.clanSteamID.GetAccountID(),
           [o] = r.useState(
@@ -3024,12 +3029,12 @@
             ? r.createElement("div", null, (0, b.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class At extends r.Component {
+      class Bt extends r.Component {
         m_parser;
         constructor(e) {
           super(e),
             (this.m_parser = new o.B(
-              At.sm_BBCodeDictionary,
+              Bt.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride,
             ));
@@ -3087,8 +3092,8 @@
           ...Array.from(gt().entries()),
         ]);
         static AddDictionary(e) {
-          At.sm_BBCodeDictionary = new Map([
-            ...Array.from(At.sm_BBCodeDictionary.entries()),
+          Bt.sm_BBCodeDictionary = new Map([
+            ...Array.from(Bt.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
@@ -3103,7 +3108,7 @@
           );
         }
       }
-      (0, n.Cg)([_.oI], At.prototype, "ElementAccumulator", null);
+      (0, n.Cg)([_.oI], Bt.prototype, "ElementAccumulator", null);
     },
     92007: (e, t, a) => {
       "use strict";
@@ -3143,7 +3148,7 @@
         c = a(52038),
         p = a(61859),
         d = a(91675),
-        u = a(73745),
+        u = a(375),
         h = a(32754);
       let g = class extends o.Component {
         GenerateLanguageOptions() {
@@ -3468,7 +3473,7 @@
         i = a.n(o),
         s = a(68797),
         l = a(6144),
-        m = a(73745),
+        m = a(375),
         c = a(78327);
       class p {
         m_mapAppToDefs = new Map();
@@ -3687,7 +3692,7 @@
         g = a(27666),
         _ = a(71138),
         C = a(65739),
-        S = a(73745),
+        S = a(375),
         f = a(31698),
         E = a(72739),
         I = a(14947),
@@ -5934,7 +5939,7 @@
       a.d(t, { c: () => i });
       var n = a(34629),
         r = a(90626),
-        o = a(73745);
+        o = a(375);
       class i extends r.Component {
         m_refImage = r.createRef();
         constructor(e) {
@@ -6006,7 +6011,7 @@
         l = a(44325),
         m = a(52038),
         c = a(61859),
-        p = a(73745),
+        p = a(375),
         d = a(50666);
       class u extends r.Component {
         state = {

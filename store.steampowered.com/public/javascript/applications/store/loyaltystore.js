@@ -1557,7 +1557,7 @@
         if ((0, a.Qn)()) {
           const e = window.__nav_tree_root;
           return n.createElement(
-            s.B,
+            s.B2,
             { ...c, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
             n.createElement(o.q, null, t),
           );
@@ -1570,7 +1570,7 @@
       r.d(t, { N: () => c });
       var i = r(90626),
         n = r(92757),
-        a = (r(73745), r(39575)),
+        a = (r(375), r(39575)),
         s = r(76217),
         o = r(79613);
       const l = "FocusNavHistoryID";
@@ -2171,7 +2171,7 @@
           return !this.m_bSecurityException;
         }
         get connected_to_client() {
-          return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
+          return !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
         }
         SendMsgAndAwaitResponse(e) {
           return new Promise((t, r) => {
@@ -2215,7 +2215,7 @@
           }
         }
         Connect() {
-          if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
+          if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
             return Promise.resolve();
           if (this.m_promiseConnect) return this.m_promiseConnect;
           let e = new Promise((e, t) => {
@@ -2262,7 +2262,6 @@
       }
       let s = new (class {
         m_connection = new a();
-        m_bAllowAccountMismatch = !1;
         FailureResult(e = 2) {
           let t = { success: !1, result: e };
           return (
@@ -2276,14 +2275,17 @@
             t
           );
         }
-        SetAllowAccountMismatch(e) {
-          this.m_bAllowAccountMismatch = e;
-        }
         BClientConnected() {
           return this.m_connection.Connect().then(
             () => n,
             () => this.FailureResult(),
           );
+        }
+        BClientConnectedAndSupportsMessage(e) {
+          return this.m_connection
+            .Connect()
+            .then(() => this.BClientSupportsMessage(e))
+            .catch(() => !1);
         }
         BClientSupportsMessage(e) {
           return (
@@ -2301,16 +2303,16 @@
           let r = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
           return t && (r.chat_room_id = t), this.GenericEResultCall(r);
         }
-        ShowChatRoomGroupInvite(e) {
-          let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
-          return this.GenericEResultCall(t);
+        ShowChatRoomGroupInvite(e, t = !0) {
+          let r = { message: "ShowChatRoomGroupInvite", invite_code: e };
+          return this.GenericEResultCall(r, t);
         }
         m_mapCacheSubscribedApp = new Map();
         BIsSubscribedApp(e) {
           if (this.m_mapCacheSubscribedApp.has(e))
             return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
           let t = { message: "IsSubscribedApp", appid: e };
-          return this.GenericEResultCall(t).then((t) => {
+          return this.GenericEResultCall(t, !0).then((t) => {
             if (t.connect_failed) return;
             let r = 1 == t.result;
             return this.m_mapCacheSubscribedApp.set(e, r), r;
@@ -2319,9 +2321,9 @@
         OpenFriendsDialog() {
           return this.GenericEResultCall({ message: "OpenFriendsDialog" });
         }
-        OpenSteamURL(e) {
-          let t = { message: "OpenSteamURL", url: e };
-          return this.GenericEResultCall(t);
+        OpenSteamURL(e, t = !1) {
+          let r = { message: "OpenSteamURL", url: e };
+          return this.GenericEResultCall(r, t);
         }
         BClientAccountMatches() {
           return (
@@ -2329,17 +2331,17 @@
             i.iA.accountid == this.m_connection.ClientInfo.unAccountID
           );
         }
-        GenericEResultCall(e) {
+        GenericEResultCall(e, t = !1) {
           return this.m_connection
             .Connect()
             .then(() =>
-              this.m_bAllowAccountMismatch || this.BClientAccountMatches()
-                ? this.m_connection
+              t && !this.BClientAccountMatches()
+                ? { success: !1, result: 19, account_mismatch: !0 }
+                : this.m_connection
                     .SendMsgAndAwaitResponse(e)
                     .then((e) =>
                       1 === e.success ? n : this.FailureResult(e.success),
-                    )
-                : { success: !1, result: 19, account_mismatch: !0 },
+                    ),
             )
             .catch(() => this.FailureResult());
         }
@@ -2351,7 +2353,7 @@
       r.d(t, { c: () => s });
       var i = r(34629),
         n = r(90626),
-        a = r(73745);
+        a = r(375);
       class s extends n.Component {
         m_refImage = n.createRef();
         constructor(e) {
@@ -2509,7 +2511,7 @@
         l = r.n(o),
         c = r(78327),
         m = r(68797),
-        d = r(73745),
+        d = r(375),
         u = r(56545),
         p = r(83935),
         _ = r(58222),
@@ -8792,7 +8794,7 @@
         l = r(14947),
         c = r(65946),
         m = r(75844),
-        d = r(73745),
+        d = r(375),
         u = r(17083),
         p = r(51819),
         _ = r(44325),
@@ -11931,14 +11933,17 @@
               ),
                 t();
             },
-            n = () => {
-              j.W.BClientSupportsMessage("OpenFriendsDialog")
-                ? j.W.OpenFriendsDialog()
-                    .then((e) => {
-                      e.success || r();
-                    })
-                    .catch(r)
-                : r();
+            n = async () => {
+              let e;
+              if (
+                await j.W.BClientConnectedAndSupportsMessage(
+                  "OpenFriendsDialog",
+                )
+              )
+                try {
+                  e = await j.W.OpenFriendsDialog();
+                } catch (e) {}
+              (e && e.success) || r(), t();
             };
           return y.TS.IN_CLIENT
             ? s.createElement(
@@ -13743,7 +13748,7 @@
         me = r(12155),
         de = r(82227),
         ue = r(6708),
-        pe = r(73745),
+        pe = r(375),
         _e = (r(68451), r(88997), r(64740)),
         ge = r(6519);
       const he = (e) => {

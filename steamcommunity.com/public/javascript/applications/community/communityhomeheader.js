@@ -346,7 +346,7 @@
         if ((0, o.Qn)()) {
           const e = window.__nav_tree_root;
           return r.createElement(
-            i.B,
+            i.B2,
             { ...s, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
             r.createElement(c.q, null, t),
           );

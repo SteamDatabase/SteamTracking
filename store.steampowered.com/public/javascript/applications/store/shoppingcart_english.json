@@ -49,6 +49,7 @@
     "Cart_ViewMyCart": "View My Cart (%1$s)",
     "Cart_RequestPurchase": "Request purchase",
     "Cart_RequestPurchaseExplanation": "The adults in your Steam Family will be notified of your purchase request",
+    "Cart_RequestPurchaseNonGiftableItems": "Cannot request purchase because not all items in the cart are giftable",
     "Cart_CouponModify_Change": "Change / Remove Coupon",
     "Cart_CouponModify_Add": "Add Coupon",
     "Cart_CouponAvailability": "You have a coupon available for this item",

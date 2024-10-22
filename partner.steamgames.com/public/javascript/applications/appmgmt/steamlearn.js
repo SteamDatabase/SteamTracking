@@ -187,12 +187,10 @@
         InputSection: "_2D9cDZLQaQWWmKHVpDkBEa",
         InputSelect: "_1ptzANXmlxjCOoPL4oHJYp",
         NormalizeSection: "_1dPgpqBo3ju2CQXPs0L6u3",
-        PreprocessingType: "vaYnUQL2KpSuaowDJZSat",
         PreprocessingDetails: "_1X62KWqfYW8x4gbBM6Nrfh",
         PreprocessingOptions: "_3LvgTLYIdvwGWb3epYgYp8",
-        Option: "_1JgGhKOj2uWYlFY8iahZZS",
+        Label: "_2cyss0lDVDKHWC6xynwuUS",
         ValueInput: "PLcgRWSIg4o3I1kvamBEf",
-        Wide: "Max2Z2DrURvJVqo316kmM",
         Invalid: "_22UX9Hdoj_hZcpeql8Aaez",
         RightSection: "_3GaIbn2sB61YtHdG4jxu0l",
       };
@@ -1063,6 +1061,16 @@
                     n: 15,
                     br: S.qM.readUint32,
                     bw: S.gp.writeUint32,
+                  },
+                  table_full_sample: {
+                    n: 16,
+                    br: S.qM.readBool,
+                    bw: S.gp.writeBool,
+                  },
+                  sequence_prefix_frequency: {
+                    n: 17,
+                    br: S.qM.readFloat,
+                    bw: S.gp.writeFloat,
                   },
                 },
               }),
@@ -6798,6 +6806,11 @@
                 proto: lt,
                 fields: {
                   result: { n: 1, br: S.qM.readEnum, bw: S.gp.writeEnum },
+                  new_published_version: {
+                    n: 2,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
                 },
               }),
             lt.sm_m
@@ -11296,7 +11309,7 @@
             : n.createElement(sr, { steamLearnContext: {} }, e.children);
         };
       var lr = a(14610),
-        mr = a(73745);
+        mr = a(375);
       const dr = (e) => {
           const t = Math.max(
             0,
@@ -12100,7 +12113,10 @@
             [x, V] = n.useState(""),
             [q, U] = n.useState(!1),
             [A, G] = n.useState(!1),
-            H = 0 == r;
+            [H, K] = n.useState(""),
+            [$, Q] = n.useState(!1),
+            [Z, J] = n.useState(!1),
+            Y = 0 == r;
           n.useEffect(() => {
             l &&
               i &&
@@ -12118,13 +12134,17 @@
                 C(!0)),
               z ||
                 (j(!0), L(l.compact_table_count()?.toFixed(0) || "0"), I(!0)),
-              q ||
-                (U(!0), V(l.sequence_table_count()?.toFixed(0) || "0"), G(!0)),
+              $ ||
+                (Q(!0), K(l.sequence_table_count()?.toFixed(0) || "0"), J(!0)),
               F ||
-                (R(!0), P(l.sequence_min_length()?.toFixed(0) || "0"), k(!0)));
-          }, [_, b, y, z, q, F, l, i]);
-          const K = (e, t, a, r) => {
-            t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? (a(!0), re(r)) : a(!1);
+                (R(!0), P(l.sequence_min_length()?.toFixed(0) || "0"), k(!0)),
+              F ||
+                (U(!0),
+                V(l.sequence_prefix_frequency()?.toFixed(0) || "0"),
+                G(!0)));
+          }, [_, b, y, z, $, F, l, i]);
+          const X = (e, t, a, r) => {
+            t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? (a(!0), le(r)) : a(!1);
           };
           if (!i || null == s)
             return (
@@ -12134,78 +12154,78 @@
               ),
               null
             );
-          const $ = 2 == i.data_type(),
-            Q = 3 == i.data_type(),
-            Z = 1 == i.data_type(),
-            J = 4 == i.data_type(),
-            Y = 5 == i.data_type();
-          let X = "";
+          const ee = 2 == i.data_type(),
+            te = 3 == i.data_type(),
+            ae = 1 == i.data_type(),
+            re = 4 == i.data_type(),
+            ne = 5 == i.data_type();
+          let ie = "";
           switch (i.data_type()) {
             case 1:
-              X = (0, c.we)("#SteamLearn_DataSource_Type_Int", "");
+              ie = (0, c.we)("#SteamLearn_DataSource_Type_Int", "");
               break;
             case 2:
-              X = (0, c.we)("#SteamLearn_DataSource_Type_Float", "");
+              ie = (0, c.we)("#SteamLearn_DataSource_Type_Float", "");
               break;
             case 3:
-              X = (0, c.we)("#SteamLearn_DataSource_Type_Bool", "");
+              ie = (0, c.we)("#SteamLearn_DataSource_Type_Bool", "");
               break;
             case 4:
-              X = (0, c.we)("#SteamLearn_DataSource_Type_String", "");
+              ie = (0, c.we)("#SteamLearn_DataSource_Type_String", "");
               break;
             case 5:
-              X = (0, c.we)("#SteamLearn_DataSource_Type_Object", "");
+              ie = (0, c.we)("#SteamLearn_DataSource_Type_Object", "");
           }
-          let ee = "";
+          let se = "";
           if (l)
             switch (l.preprocessing_type()) {
               case 0:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_None_Desc",
                 );
                 break;
               case 1:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_CompactTable_Desc",
                 );
                 break;
               case 6:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceTable_Desc",
                 );
                 break;
               case 2:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_NormAuto_Desc",
                 );
                 break;
               case 3:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_NormRange_Desc",
                 );
                 break;
               case 4:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_NormStdDev_Desc",
                 );
                 break;
               case 5:
-                ee = (0, c.we)(
+                se = (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_NormLogRange_Desc",
                 );
             }
-          let te = [
+          let oe = [
             {
               label: (0, c.we)("#SteamLearn_Config_DataSource_Input_Exclude"),
               value: 0,
             },
           ];
           for (let e = 1; e < s + 2; e++)
-            te.push({
+            oe.push({
               label: (0, c.we)("#SteamLearn_Config_DataSource_Input_Number", e),
               value: e,
             });
-          const ae = [
+          const ce = [
               {
                 label: (0, c.we)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_None",
@@ -12249,7 +12269,7 @@
                 value: 5,
               },
             ],
-            re = (r) => {
+            le = (r) => {
               e.rgSettings.arrDataElementUsagePathNames.forEach((t) => {
                 let n = a
                   .data_source_element_usages()
@@ -12262,10 +12282,10 @@
               }),
                 Za(t);
             },
-            ne = 3 == l?.preprocessing_type() || 5 == l?.preprocessing_type(),
-            ie = 4 == l?.preprocessing_type(),
-            se = 1 == l?.preprocessing_type(),
-            oe = 6 == l?.preprocessing_type();
+            me = 3 == l?.preprocessing_type() || 5 == l?.preprocessing_type(),
+            de = 4 == l?.preprocessing_type(),
+            _e = 1 == l?.preprocessing_type(),
+            ue = 6 == l?.preprocessing_type();
           return n.createElement(
             "div",
             { className: yr.ProjectConfigDataSourceElementRouting },
@@ -12296,14 +12316,14 @@
                     className: (0, o.A)(
                       yr.Type,
                       yr.DataSourceType,
-                      $ && yr.Float,
-                      Q && yr.Bool,
-                      Z && yr.Int,
-                      J && yr.String,
-                      Y && yr.Object,
+                      ee && yr.Float,
+                      te && yr.Bool,
+                      ae && yr.Int,
+                      re && yr.String,
+                      ne && yr.Object,
                     ),
                   },
-                  X,
+                  ie,
                   e.rgSettings.nCount > 1 &&
                     !e.rgSettings.bArrayExpanded &&
                     n.createElement(
@@ -12348,12 +12368,12 @@
                   "select",
                   {
                     className: yr.InputSelect,
-                    disabled: !H,
+                    disabled: !Y,
                     value: l.input(),
                     onChange: (e) =>
-                      re((t) => t.set_input(parseInt(e.target.value))),
+                      le((t) => t.set_input(parseInt(e.target.value))),
                   },
-                  te.map((e) =>
+                  oe.map((e) =>
                     n.createElement(
                       "option",
                       { key: e.value, value: e.value },
@@ -12380,11 +12400,11 @@
                         disabled: !1,
                         value: l.preprocessing_type(),
                         onChange: (e) =>
-                          re((t) =>
+                          le((t) =>
                             t.set_preprocessing_type(parseInt(e.target.value)),
                           ),
                       },
-                      ae.map((e) =>
+                      ce.map((e) =>
                         n.createElement(
                           "option",
                           { key: e.value, value: e.value },
@@ -12394,232 +12414,259 @@
                     ),
                     n.createElement("div", {
                       className: (0, o.A)(yr.IconSmall, "icon_help"),
-                      title: ee,
+                      title: se,
                     }),
                   ),
               ),
               n.createElement(
                 "div",
                 { className: yr.PreprocessingDetails },
-                ne &&
+                me &&
                   0 != l.input() &&
                   n.createElement(
                     "div",
                     { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_MinRange",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_MinRange",
                       ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, !p && yr.Invalid),
-                        disabled: !1,
-                        value: m,
-                        onChange: (e) =>
-                          K(e.target.value, d, g, (t) =>
-                            t.set_min_range(parseFloat(e.target.value)),
-                          ),
-                      }),
                     ),
-                    n.createElement(
-                      "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_MaxRange",
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !p && yr.Invalid),
+                      disabled: !1,
+                      value: m,
+                      onChange: (e) =>
+                        X(e.target.value, d, g, (t) =>
+                          t.set_min_range(parseFloat(e.target.value)),
                         ),
-                      ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, !w && yr.Invalid),
-                        disabled: !1,
-                        value: f,
-                        onChange: (e) =>
-                          K(e.target.value, S, v, (t) =>
-                            t.set_max_range(parseFloat(e.target.value)),
-                          ),
-                      }),
-                    ),
+                    }),
                   ),
-                ie &&
+                me &&
                   0 != l.input() &&
                   n.createElement(
                     "div",
                     { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_StdDev",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_MaxRange",
                       ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, !M && yr.Invalid),
-                        disabled: !1,
-                        value: B,
-                        onChange: (e) =>
-                          K(e.target.value, E, C, (t) =>
-                            t.set_std_dev(parseFloat(e.target.value)),
-                          ),
-                      }),
                     ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !w && yr.Invalid),
+                      disabled: !1,
+                      value: f,
+                      onChange: (e) =>
+                        X(e.target.value, S, v, (t) =>
+                          t.set_max_range(parseFloat(e.target.value)),
+                        ),
+                    }),
                   ),
-                oe &&
+                de &&
                   0 != l.input() &&
                   n.createElement(
                     "div",
                     { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceTableName",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_StdDev",
                       ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, yr.Wide),
-                        disabled: !1,
-                        value: l.sequence_table(),
-                        onChange: (e) =>
-                          re((t) => t.set_sequence_table(e.target.value)),
-                      }),
                     ),
-                    n.createElement(
-                      "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_TableCount",
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !M && yr.Invalid),
+                      disabled: !1,
+                      value: B,
+                      onChange: (e) =>
+                        X(e.target.value, E, C, (t) =>
+                          t.set_std_dev(parseFloat(e.target.value)),
                         ),
-                      ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, !A && yr.Invalid),
-                        disabled: !1,
-                        value: x,
-                        onChange: (e) =>
-                          K(e.target.value, V, G, (t) =>
-                            t.set_sequence_table_count(
-                              parseInt(e.target.value),
-                            ),
-                          ),
-                      }),
-                    ),
+                    }),
                   ),
-                oe &&
+                ue &&
                   0 != l.input() &&
                   n.createElement(
                     "div",
                     { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceMinLength",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceTableName",
                       ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, !A && yr.Invalid),
-                        disabled: !1,
-                        value: O,
-                        onChange: (e) =>
-                          K(e.target.value, P, k, (t) =>
-                            t.set_sequence_min_length(parseInt(e.target.value)),
-                          ),
-                      }),
                     ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: yr.ValueInput,
+                      disabled: !1,
+                      value: l.sequence_table(),
+                      onChange: (e) =>
+                        le((t) => t.set_sequence_table(e.target.value)),
+                    }),
                   ),
-                oe &&
+                ue &&
                   0 != l.input() &&
                   n.createElement(
                     "div",
                     { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "label",
-                        { htmlFor: "editsort" },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceSort",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_TableCount",
                       ),
-                      n.createElement("input", {
-                        type: "checkbox",
-                        id: "editsort",
-                        checked: l.sort_sequence(),
-                        onChange: () =>
-                          re((e) => e.set_sort_sequence(!e.sort_sequence())),
-                      }),
                     ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !Z && yr.Invalid),
+                      disabled: !1,
+                      value: H,
+                      onChange: (e) =>
+                        X(e.target.value, K, J, (t) =>
+                          t.set_sequence_table_count(parseInt(e.target.value)),
+                        ),
+                    }),
                   ),
-                (se || oe) &&
+                ue &&
                   0 != l.input() &&
                   n.createElement(
                     "div",
                     { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_CompactTableName",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceMinLength",
                       ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, yr.Wide),
-                        disabled: !1,
-                        value: l.compact_table(),
-                        onChange: (e) =>
-                          re((t) => t.set_compact_table(e.target.value)),
-                      }),
                     ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !W && yr.Invalid),
+                      disabled: !1,
+                      value: O,
+                      onChange: (e) =>
+                        X(e.target.value, P, k, (t) =>
+                          t.set_sequence_min_length(parseInt(e.target.value)),
+                        ),
+                    }),
+                  ),
+                ue &&
+                  0 != l.input() &&
+                  n.createElement(
+                    "div",
+                    { className: yr.PreprocessingOptions },
+                    n.createElement(
+                      "label",
+                      { htmlFor: "editsort" },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceSort",
+                      ),
+                    ),
+                    n.createElement("input", {
+                      type: "checkbox",
+                      id: "editsort",
+                      checked: l.sort_sequence(),
+                      onChange: () =>
+                        le((e) => e.set_sort_sequence(!e.sort_sequence())),
+                    }),
+                  ),
+                ue &&
+                  0 != l.input() &&
+                  n.createElement(
+                    "div",
+                    { className: yr.PreprocessingOptions },
                     n.createElement(
                       "div",
-                      { className: yr.Option },
-                      n.createElement(
-                        "div",
-                        { className: yr.Label },
-                        (0, c.we)(
-                          "#SteamLearn_Config_DataSource_Input_Preprocess_TablePercentile",
-                        ),
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_SequencePrefixRemoveThreshold",
                       ),
-                      n.createElement("input", {
-                        type: "text",
-                        className: (0, o.A)(yr.ValueInput, !D && yr.Invalid),
-                        disabled: !1,
-                        value: T,
-                        onChange: (e) =>
-                          K(e.target.value, L, I, (t) =>
-                            t.set_compact_table_count(parseInt(e.target.value)),
-                          ),
-                      }),
                     ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !A && yr.Invalid),
+                      disabled: !1,
+                      value: x,
+                      onChange: (e) =>
+                        X(e.target.value, V, G, (t) =>
+                          t.set_sequence_prefix_frequency(
+                            parseFloat(e.target.value),
+                          ),
+                        ),
+                    }),
+                  ),
+                (_e || ue) &&
+                  0 != l.input() &&
+                  n.createElement(
+                    "div",
+                    { className: yr.PreprocessingOptions },
+                    n.createElement(
+                      "div",
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_CompactTableName",
+                      ),
+                    ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: yr.ValueInput,
+                      disabled: !1,
+                      value: l.compact_table(),
+                      onChange: (e) =>
+                        le((t) => t.set_compact_table(e.target.value)),
+                    }),
+                  ),
+                (_e || ue) &&
+                  0 != l.input() &&
+                  n.createElement(
+                    "div",
+                    { className: yr.PreprocessingOptions },
+                    n.createElement(
+                      "div",
+                      { className: yr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_TablePercentile",
+                      ),
+                    ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: (0, o.A)(yr.ValueInput, !D && yr.Invalid),
+                      disabled: !1,
+                      value: T,
+                      onChange: (e) =>
+                        X(e.target.value, L, I, (t) =>
+                          t.set_compact_table_count(parseInt(e.target.value)),
+                        ),
+                    }),
+                  ),
+                (_e || ue) &&
+                  0 != l.input() &&
+                  n.createElement(
+                    "div",
+                    { className: yr.PreprocessingOptions },
+                    n.createElement(
+                      "label",
+                      { htmlFor: "editsort" },
+                      (0, c.we)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_TableFullSample",
+                      ),
+                    ),
+                    n.createElement("input", {
+                      type: "checkbox",
+                      id: "editsort",
+                      checked: l.table_full_sample(),
+                      onChange: () =>
+                        le((e) =>
+                          e.set_table_full_sample(!e.table_full_sample()),
+                        ),
+                    }),
                   ),
               ),
             ),
@@ -24218,8 +24265,12 @@
             [N, w] = n.useState(_i.Hidden);
           let v = [];
           for (const t of e.arrMsgProjects)
-            v.push({ label: t.project_name(), value: t.project_id() });
-          v.push({ label: (0, c.we)("#SteamLearn_CreateNew"), value: 0 });
+            v.push({
+              label: `${t.project_name()} (${t.project_id()})`,
+              value: t.project_id(),
+            });
+          (v = v.sort((e, t) => (e.label > t.label ? 1 : -1))),
+            v.push({ label: (0, c.we)("#SteamLearn_CreateNew"), value: 0 });
           let B = [
             {
               label: (0, c.we)("#SteamLearn_Header_Version_Unpublished"),
@@ -25045,7 +25096,7 @@
               label: (0, c.we)("#SteamLearn_TrainSettings_FetchChunkSizeInput"),
               fnGetInitialValue: () =>
                 e.train_config().fetch_chunk_size()?.toString() || "10000",
-              fnValidateValue: (e) => er(e, 100, 5e4),
+              fnValidateValue: (e) => er(e, 100, 1e5),
               fnSetValue: (t) =>
                 e.train_config().set_fetch_chunk_size(parseInt(t)),
             }),

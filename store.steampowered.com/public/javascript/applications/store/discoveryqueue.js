@@ -94,7 +94,7 @@
         if ((0, n.Qn)()) {
           const e = window.__nav_tree_root;
           return s.createElement(
-            i.B,
+            i.B2,
             { ...c, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
             s.createElement(o.q, null, t),
           );
@@ -727,7 +727,7 @@
       a.d(t, { c: () => i });
       var r = a(34629),
         s = a(90626),
-        n = a(73745);
+        n = a(375);
       class i extends s.Component {
         m_refImage = s.createRef();
         constructor(e) {

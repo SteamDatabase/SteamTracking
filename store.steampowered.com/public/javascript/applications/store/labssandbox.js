@@ -246,7 +246,7 @@
         i = a(51006),
         n = a(78327),
         o = a(14947),
-        l = a(73745),
+        l = a(375),
         p = a(41735),
         m = a.n(p);
       class c {
@@ -1801,7 +1801,7 @@
           });
       })(K || (K = {}));
       var $ = a(72839),
-        Y = a(16021);
+        Y = a(82097);
       class J {
         m_SteamInterface;
         constructor(e) {

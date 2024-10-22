@@ -197,35 +197,114 @@
         OtherYearLink: "_1AcAxWWu9yo7s4gOpoGGn0",
       };
     },
+    94595: (e) => {
+      e.exports = {
+        new_games_color: "#d67070",
+        used_games_color: "#683db4",
+        old_games_color: "#3898b0",
+        pie_windows: "#d67070",
+        pie_linux: "#683db4",
+        pie_deck: "#3898b0",
+        pie_mac: "#46ab46",
+        pie_vr: "#c7b84e",
+        topApp_0: "#d67070",
+        topApp_1: "#70d670",
+        topApp_2: "#683db4",
+        topApp_3: "#3898b0",
+        topApp_4: "#ab4646",
+        topApp_5: "#46ab46",
+        topApp_6: "#3d138a",
+        topApp_7: "#0e6e86",
+        monthOthersColor: "#7d98aa",
+        chartAccentColor: "#fff",
+        chartAccentColorAlt: "#1a9ffe",
+        ImagesCtn: "_3_yJrtI9CnRo7Vqso02WhP",
+        scaleBackground: "_3FyW_RSMfp3r4eHfuMQIA5",
+        SingleGame: "_11WV2YgKiO-25bj14xN4nF",
+        ImageTint: "aNFQO7OXrOXD4-a8kfVGc",
+        Section: "Lge6g_6u-62TV_cVPD7Ui",
+        StreakSizeFullBar: "_2Xt_oaIv9INpfrjOEmjGxJ",
+        LongestStreakBgImage: "fA_EY16-08_b1VWyI-yWb",
+        Tab: "_2v18EtoQUMe9VTbnzTG8td",
+        UserName: "cpHihmjgrbGMnejVUXb7P",
+        ConclusionName: "_2JN-hnKtHVoX9X7YXp-EBq",
+        SummaryCtnShadow: "zbwndVO7JL53kSxjqeLcs",
+        GridItem: "_2WPcf3wXBhMImWLz22RXmV",
+        TimeRelatedCtn: "_37goiEY1KefzjRKUKkEWgo",
+        TopHonorsSection: "_3Xt_rws_Lz4-TXJH-R3wXI",
+        FriendCtn: "dtzDI1loGbf-ScWbiNsMj",
+        TopGameBlockContainer: "_1_03H_PiAx5_TIA2Y4OOn0",
+        OddGradient: "BdBfXPzFQrAIMxXLgo95x",
+        EvenGradient: "mU0ZPKqgrodRiIqDDPRJN",
+        TopMostGame: "_2U1A0BOBmU2Tm96VMDbN3y",
+        GamePlayDetails: "WBgtvXrESMem0KVSCFohg",
+        PlatformChartsCtn: "p2yOPk8RjNL2sgYPVdUl9",
+        gradient: "_3_0UA8g5haRH050dhrXY1c",
+        IconAchievement: "_1Ary1qr2Dt1ycwBGxfz0fq",
+        IconGamesPlayed: "_1ghrcKVRru_utFcofkcTbk",
+        IconStreak: "_3dUH0KBuoVtpr5alU3jY9M",
+        PlayBehaviorContainer: "-giyIxoOslRPNdoAe4UfS",
+        ProgressBarFilled: "-A2NwyQKoK0uC_zGHLI1N",
+        ProgressBarFilledGradient: "_2l9tBf3n2J5llJPTTog4kT",
+        NewActive: "_2GcnpaqNIZSrMhYtfj_-y0",
+        DataBoxArrow: "_1N16zDKyMMVJzQKmHNX50G",
+        Background: "XZe2fdvY-JGoNhdNV-l1x",
+        UserData: "_3QSJmi9aPGptdgOEFi2gzE",
+        DataBox: "_2Gsb4esS301xmkHX7WT_uO",
+        SteamData: "_2xcH0was3XiZQ5EOfgXfXJ",
+        Border: "_3hMPpTvRMmLyPRK1zxB-Ra",
+        PercentageLabel: "_1to-w6RT2f-vQQ459T4H8J",
+        Color: "_1io-EPyTr2q37DmZS-Iv2u",
+        PercentageDescriptionLabel: "pcHKKuXoww1KZ7a_1F--u",
+        UsedActive: "_1uknQZ7Xmx7VQ1da9Gc4n2",
+        OldActive: "_2gXOsiXV8vP0Ujd_ic1j_r",
+        AllGamesBGImage: "aI_Il7gY1Syqm796Upnp9",
+        SeeRewindButton: "hRwmhfYcSqvrvsdGJuU4J",
+        MMFrame: "_2duB07TZK47UjB_dhb3uK3",
+        MMOverride: "XbqPSndbEUkqiStSowtZK",
+        Header: "_352X1_lNn7pW_yScNLvtb6",
+        YearSubtitle: "_1avfzaLCwU_U1NmpVbFSST",
+        ReplayLogo: "_1Ao61JGqV1c_QgX5WaSiQ8",
+        ReplayLogoAccent: "_1OT6cjmQVBFsHOR0plxmms",
+        Hashtag: "_3ChmiAgSUsYOIDUGcx2ID3",
+        Avatar: "_2Cjn2QF0ijeU0iZlbggit2",
+        DataBlock: "qoG_vuXOr_yl9HwMqT6rV",
+        PersonaName: "_2w7Tb0xkf0VinWQKTn63_4",
+        ReplayHighlight: "_2ovyNB16jUVX1iKDCTFy4s",
+        ViewPageButton: "_2IfJlTSfJ9B2O7GrLSHZEu",
+        Description: "_3OaR0S3fMP3IqzGQkLo2LL",
+        OtherYearLink: "e2J3CJVLkCcWuogJlnJqA",
+      };
+    },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => M, KM: () => A, KT: () => h });
-      var n = t(41735),
-        r = t.n(n),
+      t.d(a, { B3: () => b, KM: () => A, KT: () => h });
+      var r = t(41735),
+        n = t.n(r),
         o = t(58632),
         c = t.n(o),
         l = t(90626),
-        s = t(20194),
-        i = t(75233),
+        i = t(20194),
+        s = t(75233),
         _ = t(17720),
         m = t(68797),
-        C = t(78327),
-        d = t(56545),
-        p = t(37735),
+        d = t(78327),
+        p = t(56545),
+        C = t(37735),
         g = t(23809);
       const u = "nicknames";
       function A(e) {
         const a = (0, g.KV)(),
-          { data: t, isLoading: n } = (0, s.I)({
+          { data: t, isLoading: r } = (0, i.I)({
             queryKey: [u],
             queryFn: async () => {
               const e = new Map();
-              if (C.iA.logged_in) {
-                const t = d.w.Init(p.dN),
-                  n = (await p.xt.GetNicknameList(a, t)).Body().toObject();
-                n?.nicknames &&
-                  n.nicknames.length > 0 &&
-                  n.nicknames.forEach((a) => {
+              if (d.iA.logged_in) {
+                const t = p.w.Init(C.dN),
+                  r = (await C.xt.GetNicknameList(a, t)).Body().toObject();
+                r?.nicknames &&
+                  r.nicknames.length > 0 &&
+                  r.nicknames.forEach((a) => {
                     e.set(a.accountid, a.nickname);
                   });
               }
@@ -234,43 +313,43 @@
           });
         return t ? t.get(e) : null;
       }
-      const v = new (c())(
+      const f = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const a =
-                "community" == (0, C.yK)()
-                  ? C.TS.COMMUNITY_BASE_URL
-                  : C.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const t = { accountid: e[0], origin: self.origin },
-                  n = await r().get(`${a}actions/ajaxgetavatarpersona`, {
+                  r = await n().get(`${a}actions/ajaxgetavatarpersona`, {
                     params: t,
                   });
                 if (
-                  !n ||
-                  200 != n.status ||
-                  1 != n.data?.success ||
-                  !n.data?.userinfo
+                  !r ||
+                  200 != r.status ||
+                  1 != r.data?.success ||
+                  !r.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
-                return [n.data.userinfo];
+                  throw `Load single avatar/persona failed ${((0, m.H))(r).strErrorMsg}`;
+                return [r.data.userinfo];
               }
               {
                 const t = { accountids: e.join(","), origin: self.origin },
-                  n = await r().get(`${a}actions/ajaxgetmultiavatarpersona`, {
+                  r = await n().get(`${a}actions/ajaxgetmultiavatarpersona`, {
                     params: t,
                   });
                 if (
-                  !n ||
-                  200 != n.status ||
-                  1 != n.data?.success ||
-                  !n.data?.userinfos
+                  !r ||
+                  200 != r.status ||
+                  1 != r.data?.success ||
+                  !r.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(r).strErrorMsg}`;
                 const o = new Map();
                 return (
-                  n.data.userinfos.forEach((e) =>
+                  r.data.userinfos.forEach((e) =>
                     o.set(new _.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => o.get(e))
@@ -279,23 +358,23 @@
             })(e),
           { cache: !1 },
         ),
-        f = "avatarandpersonas";
+        v = "avatarandpersonas";
       function h(e) {
-        const { data: a, isLoading: t } = (0, s.I)({
-          queryKey: [f, e],
-          queryFn: () => v.load(e),
+        const { data: a, isLoading: t } = (0, i.I)({
+          queryKey: [v, e],
+          queryFn: () => f.load(e),
         });
         return [a, t];
       }
-      function M(e) {
-        const a = (0, i.jE)(),
-          { data: t, isLoading: n } = (0, s.I)({
-            queryKey: [f, e],
+      function b(e) {
+        const a = (0, s.jE)(),
+          { data: t, isLoading: r } = (0, i.I)({
+            queryKey: [v, e],
             queryFn: async () => {
-              const t = await v.loadMany(e);
+              const t = await f.loadMany(e);
               return (
                 t.forEach((e) => {
-                  const t = [f, new _.b(e.steamid).GetAccountID()];
+                  const t = [v, new _.b(e.steamid).GetAccountID()];
                   a.setQueryData(t, e);
                 }),
                 t
@@ -303,7 +382,7 @@
             },
             enabled: e?.length > 0,
           }),
-          r = (0, l.useMemo)(() => {
+          n = (0, l.useMemo)(() => {
             const e = new Array();
             return (
               t?.forEach((a) => {
@@ -312,65 +391,65 @@
               e
             );
           }, [t]);
-        return n ? null : r;
+        return r ? null : n;
       }
     },
     79194: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => d });
-      var n = t(80620),
-        r = t(67819),
+      t.r(a), t.d(a, { default: () => p });
+      var r = t(80620),
+        n = t(67819),
         o = t(90626),
         c = t(76217),
         l = t(27144),
-        s = t(61859),
-        i = t(78327),
+        i = t(61859),
+        s = t(78327),
         _ = t(32077),
         m = t(37220),
-        C = t(52038);
-      function d(e) {
+        d = t(52038);
+      function p(e) {
         const a = (0, m.b)(e.year),
           t = h();
         return o.createElement(
           "div",
           {
-            className: (0, C.A)(_.MMFrame, a.MMFrame, a.MMOverride),
+            className: (0, d.A)(_.MMFrame, a.MMFrame, a.MMOverride),
             onClick: t,
           },
           o.createElement(
             "div",
             { className: _.HeaderCtn },
             o.createElement(A, {
-              baseClass: (0, C.A)(_.ReplayLogo, a.ReplayLogo),
-              accentClass: (0, C.A)(_.ReplayLogoAccent, a.ReplayLogoAccent),
+              baseClass: (0, d.A)(_.ReplayLogo, a.ReplayLogo),
+              accentClass: (0, d.A)(_.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
-            o.createElement(v, { year: e.year, theme: a }),
+            o.createElement(f, { year: e.year, theme: a }),
           ),
-          o.createElement(u, { className: (0, C.A)(_.SteamLogo, a.SteamLogo) }),
-          o.createElement(f, { theme: a }),
+          o.createElement(u, { className: (0, d.A)(_.SteamLogo, a.SteamLogo) }),
+          o.createElement(v, { theme: a }),
           o.createElement(
             "div",
-            { className: (0, C.A)(_.Content, a.Content) },
-            o.createElement(p, { theme: a }),
+            { className: (0, d.A)(_.Content, a.Content) },
+            o.createElement(C, { theme: a }),
             o.createElement(g, { theme: a }),
             o.createElement(
               "div",
-              { className: (0, C.A)(_.Description, a.Description) },
-              (0, s.we)("#YIR_MM_Generic_Desc"),
+              { className: (0, d.A)(_.Description, a.Description) },
+              (0, i.we)("#YIR_MM_Generic_Desc"),
             ),
           ),
         );
       }
-      function p(e) {
+      function C(e) {
         const { theme: a } = e,
-          [t] = (0, l.KT)(i.iA.accountid);
+          [t] = (0, l.KT)(s.iA.accountid);
         return t
           ? o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
-                { className: (0, C.A)(_.Avatar, a.Avatar) },
+                { className: (0, d.A)(_.Avatar, a.Avatar) },
                 t &&
                   t.avatar_url &&
                   o.createElement("img", {
@@ -379,19 +458,19 @@
               ),
               o.createElement(
                 "div",
-                { className: (0, C.A)(_.DataBlock, a.DataBlock) },
+                { className: (0, d.A)(_.DataBlock, a.DataBlock) },
                 o.createElement(
                   "div",
-                  { className: (0, C.A)(_.PersonaName, a.PersonaName) },
+                  { className: (0, d.A)(_.PersonaName, a.PersonaName) },
                   t ? t.persona_name : "",
                 ),
                 o.createElement(
                   "div",
                   { className: _.GenericTitleBlock },
-                  (0, s.oW)(
+                  (0, i.oW)(
                     "#YIR_MM_Generic_Title",
                     o.createElement("span", {
-                      className: (0, C.A)(_.ReplayHighlight, a.ReplayHighlight),
+                      className: (0, d.A)(_.ReplayHighlight, a.ReplayHighlight),
                     }),
                   ),
                 ),
@@ -405,10 +484,10 @@
         return o.createElement(
           c.Z,
           {
-            className: (0, C.A)(_.ViewPageButton, a.ViewPageButton),
+            className: (0, d.A)(_.ViewPageButton, a.ViewPageButton),
             onActivate: t,
           },
-          (0, s.we)("#YIR_MM_Generic_Action"),
+          (0, i.we)("#YIR_MM_Generic_Action"),
         );
       }
       function u(e) {
@@ -465,47 +544,47 @@
           }),
         );
       }
-      function v(e) {
+      function f(e) {
         const { year: a, theme: t } = e;
         return o.createElement(
           "div",
-          { className: (0, C.A)(_.Header, t.Header) },
-          (0, s.PP)(
+          { className: (0, d.A)(_.Header, t.Header) },
+          (0, i.PP)(
             "#YIR_MM_Header",
             o.createElement("br", null),
             o.createElement(
               "div",
-              { className: (0, C.A)(_.YearSubtitle, t.YearSubtitle) },
-              (0, s.we)("#date_year", a),
+              { className: (0, d.A)(_.YearSubtitle, t.YearSubtitle) },
+              (0, i.we)("#date_year", a),
             ),
           ),
         );
       }
-      function f(e) {
+      function v(e) {
         return o.createElement(
           "div",
-          { className: (0, C.A)(_.Hashtag, e.theme.Hashtag) },
-          (0, s.we)("#YIR_MM_HashTag"),
+          { className: (0, d.A)(_.Hashtag, e.theme.Hashtag) },
+          (0, i.we)("#YIR_MM_HashTag"),
         );
       }
       function h() {
-        const e = (0, r.J)().GetTemplateVars();
-        return (0, n.WN)(e.linkurl);
+        const e = (0, n.J)().GetTemplateVars();
+        return (0, r.WN)(e.linkurl);
       }
     },
     37220: (e, a, t) => {
       "use strict";
       t.d(a, { b: () => l });
-      var n = t(90626);
-      const r = { 2022: t(47277), 2023: t(25150) },
-        o = Object.values(r).reduce((e, a) => ({ ...e, ...a }), {}),
+      var r = t(90626);
+      const n = { 2022: t(47277), 2023: t(25150), 2024: t(94595) },
+        o = Object.values(n).reduce((e, a) => ({ ...e, ...a }), {}),
         c = 2022;
       function l(e) {
-        const [a, t] = (0, n.useState)({});
+        const [a, t] = (0, r.useState)({});
         return (
-          (0, n.useEffect)(() => {
-            let a = r[e];
-            a || (a = r[c]), t({ ...o, ...a });
+          (0, r.useEffect)(() => {
+            let a = n[e];
+            a || (a = n[c]), t({ ...o, ...a });
           }, [e]),
           a
         );

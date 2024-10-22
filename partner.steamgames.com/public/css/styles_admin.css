@@ -4275,3 +4275,7 @@ select#package_included_app_list > option[disabled] {
 	box-shadow: 0 0 10px black;
 	z-index: 1;
 }
+
+.store_localization_download_format_select {
+	width: 60px;
+}

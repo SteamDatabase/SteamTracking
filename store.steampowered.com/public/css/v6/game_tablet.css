@@ -2342,6 +2342,12 @@ html.tablet .DRM_notice a {
 	color: white !important;
 }
 
+html.tablet .anticheat_nonkernel_notice {
+	border-radius: var(--gpCorner-Medium);
+	padding: 8px 12px;
+	margin-top: 8px;
+	line-height: unset;
+}
 
 
 

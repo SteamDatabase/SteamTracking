@@ -611,19 +611,6 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   color: #e0e1e6;
   padding: 8px;
 }
-._1_f_6SqveaHqlcsFRyEHKw {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-top: 10px;
-}
-._1U8SA5PU5gO_3FRsSdtOO3 {
-  padding-bottom: 8px;
-}
-button.DialogButton._3uDH_JfFghCIXoQ9CnlYt8:disabled {
-  background-color: rgba(80, 84, 90, 0.35);
-  color: #9f9396;
-}
 ._26iJ3c5EI_arYCNqRvcLNX {
   overflow: scroll;
   max-height: 300px;
@@ -1105,6 +1092,12 @@ button.DialogButton._3uDH_JfFghCIXoQ9CnlYt8:disabled {
   color: #000;
   padding: 0 10px;
 }
+._8MIrt7rQXkA0xE5sAjOee {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 4px;
+}
 .cMmai1T2HLkMm53hworFg {
   display: flex;
   justify-content: center;
@@ -1495,18 +1488,6 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
 ._3baPwwHaL5S0vl62s9YPRm {
   color: #fff;
   font-weight: bold;
-}
-._3DbDieuctKvVqrsjFRQ0NX {
-  padding: 12px;
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-}
-._3DbDieuctKvVqrsjFRQ0NX ._2A_GDEDb6EvTRvXPQrUD7s {
-  color: red;
-}
-._3DbDieuctKvVqrsjFRQ0NX .VAh1P-kAN0lXKihuD3g1S {
-  margin-bottom: 18px;
 }
 ._3JuTN3-LxaE1Kvz0sU14cv {
   background-image: url("https://community.cloudflare.steamstatic.com/public/images//events/halloween_art_tile.png");

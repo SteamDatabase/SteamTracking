@@ -10180,7 +10180,7 @@
         });
       }
       var pi = r(25809),
-        bi = r(73745);
+        bi = r(375);
       var Bi = r(52035),
         gi = r(51212),
         wi = r(21273),
@@ -11324,6 +11324,7 @@
         "user_filter_failure",
         "links",
         "platforms",
+        "release",
       ];
       function yn(e) {
         const t = { ...e };
@@ -12802,7 +12803,7 @@
         if ((0, a.Qn)()) {
           const e = window.__nav_tree_root;
           return n.createElement(
-            s.B,
+            s.B2,
             { ...c, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
             n.createElement(l.q, null, t),
           );

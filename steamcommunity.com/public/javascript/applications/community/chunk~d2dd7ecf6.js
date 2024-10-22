@@ -233,7 +233,7 @@
         S = a(68797),
         D = a(52038),
         k = a(61859),
-        f = a(73745),
+        f = a(375),
         L = a(17720),
         b = a(33737),
         y = a(9709),
@@ -1039,7 +1039,7 @@
             eEventRount: c,
             bHidePrices: m,
           } = e,
-          [g, d, E, h, v, w, A, S] = (0, i.q3)(() => {
+          [g, d, E, h, _, v] = (0, i.q3)(() => {
             const e = r || (0, n.sf)(N.TS.LANGUAGE),
               l = Boolean(void 0 !== a)
                 ? a
@@ -1048,46 +1048,27 @@
                 ? a
                 : t.GetImageURLWithFallback("capsule", e, u.wI.full);
             return [
-              t.appid,
               l,
               t.GetNameWithFallback(e) || "",
               t.GetCategoryAsString(),
               t.GetSummaryWithFallback(e),
-              (0, p.j3)(l),
-              (0, p.j3)(o),
+              o,
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [k] = (0, _.t7)(g, { include_assets: !0, include_screenshots: !0 }),
-          [f, L] = (0, s.useState)(void 0);
-        if (
-          ((0, s.useEffect)(() => {
-            const e = new Image();
-            (e.src = d),
-              (e.onload = () => {
-                L(w);
-              }),
-              (e.onerror = () => {
-                L(A);
-              });
-          }, [w, d, A]),
-          !t)
-        )
+          [w, A] = (0, s.useState)(void 0),
+          S = w
+            ? { src: w }
+            : { src: g, onLoad: () => A(g), onError: () => A(_) };
+        if (!t)
           return s.createElement("div", {
             className: T().OtherEvents_EventCtn,
           });
-        if (!k && g)
-          return s.createElement(U.t, {
-            className: T().OtherEvents_EventCtn,
-            size: "small",
-            position: "center",
-            string: (0, y.we)("#Loading"),
-          });
-        const R = (0, I.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          G = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let O = S;
+        const k = (0, I.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          f = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let L = v;
         return (
-          S && (S.length > H || E.length > H) && (O = void 0),
+          v && (v.length > H || d.length > H) && (L = void 0),
           s.createElement(
             s.Fragment,
             null,
@@ -1107,14 +1088,14 @@
               s.createElement(
                 "div",
                 { className: T().EventSummaryContainer },
-                s.createElement("div", { className: T().EventSummaryType }, h),
-                s.createElement("div", { className: T().EventSummaryText }, v),
+                s.createElement("div", { className: T().EventSummaryType }, E),
+                s.createElement("div", { className: T().EventSummaryText }, h),
               ),
               s.createElement("div", {
                 className: T().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
-                  backgroundImage: f ? `url(${f})` : "none",
+                  backgroundImage: w ? `url(${(0, p.j3)(w)})` : "none",
                 },
               }),
               s.createElement(
@@ -1124,7 +1105,7 @@
                   "div",
                   { className: T().OtherEvents_MainImageCtn },
                   s.createElement("img", {
-                    src: f || d,
+                    ...S,
                     className: T().OtherEvents_MainImage,
                   }),
                 ),
@@ -1134,15 +1115,15 @@
                   s.createElement(
                     "div",
                     { className: T().OtherEvents_TextTitle },
-                    E,
+                    d,
                   ),
-                  Boolean(O) &&
+                  Boolean(L) &&
                     s.createElement(
                       "div",
                       { className: T().OtherEvents_SubTitle },
-                      O,
+                      L,
                     ),
-                  Boolean(G > R)
+                  Boolean(f > k)
                     ? s.createElement(
                         "div",
                         { className: (0, b.A)(T().UpcomingCtn, "UpcomingCtn") },
@@ -1738,7 +1719,7 @@
         h = a(52038),
         _ = a(56011),
         v = a(61859),
-        C = a(73745),
+        C = a(375),
         w = a(53732),
         A = a.n(w),
         S = a(71647),
@@ -2433,7 +2414,7 @@
         M = a(32754),
         F = a(56011),
         H = a(61859),
-        P = a(73745);
+        P = a(375);
       const z =
         "https://partner.steamgames.com/doc/store/localization#supported_languages";
       var j;
@@ -3401,7 +3382,7 @@
         E = a(12155),
         I = a(56011),
         h = a(61859),
-        _ = a(73745);
+        _ = a(375);
       var v = a(32754);
       let C = class extends i.Component {
         OnCloseDeleteDialog() {}

@@ -29,25 +29,6 @@ function ShowEmbedWidget( )
 	);
 }
 
-function ShowShareDialog( )
-{
-	var $Content = $J('#ShareModal');
-	$Content.detach();
-	$Content.show();
-
-	ShowAlertDialog( "Share", $Content).always(
-		function() {
-			// if results field exists clear it
-			$Content.find('#shareDialogResult').text('');
-
-			// save it away again for later
-			$Content.hide();
-			$J(document.body).append( $Content );
-		}
-	);
-
-}
-
 function CreateWidget( nAppId )
 {
 	$J('#widget_create').hide();

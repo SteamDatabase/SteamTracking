@@ -137,7 +137,6 @@ ${COMMUNITY_BASE_URL}/app/${m_unGamePlayedAppID}
 ${COMMUNITY_BASE_URL}/gid/${}
 ${COMMUNITY_BASE_URL}/gid/${}${}
 ${COMMUNITY_BASE_URL}/gid/${}/ajaxcreateupdatedeletepartnerevents/
-${COMMUNITY_BASE_URL}/gid/${}/ajaxgetcrowdinprojectandfilename?projectId=${}&fileId=${}
 ${COMMUNITY_BASE_URL}/gid/${}/ajaxlisteventsfordashboard/
 ${COMMUNITY_BASE_URL}/gid/${}/announcements/ajaxdeleteannouncement/${}
 ${COMMUNITY_BASE_URL}/gid/${}/deleteimage/
@@ -957,15 +956,18 @@ ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
+${PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo
 ${PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/
 ${PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${}
+${PARTNER_BASE_URL}admin/game/edit/${nItemId}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/game/edit/${}?activetab=tab_graphicalassets
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}?activetab=tab_specialsettings#seasonpass
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets
+${PARTNER_BASE_URL}admin/game/quickupdateajax/${}
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${partnerid}
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxgetcontenthubcategories
@@ -1001,6 +1003,7 @@ ${PARTNER_BASE_URL}apps/landing/${appid}
 ${PARTNER_BASE_URL}apps/landing/${store_item_id}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
+${PARTNER_BASE_URL}apps/releaseapp/${appId}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}appsupport/ajaxgetassets/${}
@@ -1060,6 +1063,7 @@ ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
+${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/analysis/${}
@@ -2831,6 +2835,7 @@ https://steamcommunity.com/market/cancelbuyorder/
 https://steamcommunity.com/market/createbuyorder/
 https://steamcommunity.com/market/dobuyback/
 https://steamcommunity.com/market/getbuyorderstatus/
+https://steamcommunity.com/market/gettradefeetaxrate/
 https://steamcommunity.com/market/itemordersactivity
 https://steamcommunity.com/market/itemordershistogram
 https://steamcommunity.com/market/listings/

@@ -8,7 +8,24 @@
       e.exports = {
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
+        NotificationTwoColumnCtn: "_2VTS3VKKvQTDUtlFKYmEdL",
+        NotificationLeft: "_2x53syiUv9hqSsdl95-QDP",
+        NotificationRight: "_1kwo5QbRB68auJs1VWmwhl",
+        Title: "_1-OdZBWqF_4pVQgke_Di5M",
+        Body: "_3FlGcFeB1vPciinniGumn9",
         NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
+        MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
+        MessageHeader: "_1HU84kVIdNVKbbByTWyyBG",
+        MessageSource: "_3PZihnKXFSjpftsqE-Q2V5",
+        MessageTitle: "_3BTOSqg9pBNBk8tvXHu0PF",
+        MessageSubject: "_3cgDsv4Dvsp7KBgPxHunOe",
+        PartnerName: "q7s_DHsFdDJff_LlGxC28",
+        SectionTitle: "_1txsId4Y8YWZlYs_fDsspE",
+        SectionBody: "mL02bhGYdClHKqzfITR6-",
+        SectionList: "_35PLZbKMt7K8FRHaavOsa9",
+        ListItem: "_3N8ZtUMOp9ag0G28WBzOOg",
+        NotificationButton: "_1ZCVYK700rSky9gR7H9vNv",
+        NotificationUpdate: "_39cJ7AQw3tqr75MieK0VHr",
       };
     },
     45737: (e) => {
@@ -65,19 +82,19 @@
     54330: (e, t, n) => {
       "use strict";
       n.d(t, { u: () => l });
-      var r = n(66418),
-        a = n(20194),
-        s = n(41735),
-        i = n.n(s),
+      var a = n(66418),
+        r = n(20194),
+        i = n(41735),
+        s = n.n(i),
         o = n(90626);
       function l(e) {
-        const t = (0, a.I)({
+        const t = (0, r.I)({
           queryKey: ["useMilestoneByAppID", e],
           queryFn: async () => {
-            const t = `${r.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
+            const t = `${a.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
               n = { appid: e },
-              a = await i().get(t, { params: n });
-            if (1 == a?.data?.success) return a.data.milestones;
+              r = await s().get(t, { params: n });
+            if (1 == r?.data?.success) return r.data.milestones;
             throw new Error("failed to load milestonse for appid " + e);
           },
           enabled: Boolean(e),
@@ -89,15 +106,15 @@
       "use strict";
       n.d(t, {
         MY: () => d,
-        UA: () => m,
-        Yd: () => g,
-        rN: () => p,
-        vh: () => _,
+        UA: () => p,
+        Yd: () => h,
+        rN: () => f,
+        vh: () => m,
       });
-      var r = n(34629),
-        a = n(41735),
-        s = n.n(a),
-        i = n(90626),
+      var a = n(34629),
+        r = n(41735),
+        i = n.n(r),
+        s = n(90626),
         o = n(68797),
         l = n(78327),
         c = n(6419);
@@ -124,14 +141,14 @@
           const t = new Array();
           try {
             const n = l.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-              r = {
+              a = {
                 sessionid: l.TS.SESSIONID,
                 searchtext: e,
                 origin: self.origin,
               },
-              a = await s().get(n, { params: r });
-            200 == a?.status && 1 == a?.data?.success
-              ? a.data.publishers.forEach((e) => {
+              r = await i().get(n, { params: a });
+            200 == r?.status && 1 == r?.data?.success
+              ? r.data.publishers.forEach((e) => {
                   const n = {
                     partnerid: e.publisherid,
                     name: e.publishername,
@@ -142,7 +159,7 @@
                   this.m_mapOptInToPartners.set(e.publisherid, n), t.push(n);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${a?.status} eresult ${a?.data?.success} and msg ${a?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
                 );
           } catch (e) {
             const t = (0, o.H)(e);
@@ -206,10 +223,10 @@
           );
         }
       }
-      function _(e) {
-        const [t, n] = (0, i.useState)(!1);
+      function m(e) {
+        const [t, n] = (0, s.useState)(!1);
         return (
-          (0, i.useEffect)(() => {
+          (0, s.useEffect)(() => {
             !t &&
               e?.length > 0 &&
               u
@@ -220,10 +237,10 @@
           t
         );
       }
-      function m(e) {
-        const [t, n] = i.useState(() => u.Get().GetPartnerInfo(e));
+      function p(e) {
+        const [t, n] = s.useState(() => u.Get().GetPartnerInfo(e));
         return (
-          i.useEffect(() => {
+          s.useEffect(() => {
             !u.Get().BHasPartnerInfoLoad(e) && e > 0
               ? u
                   .Get()
@@ -236,57 +253,57 @@
           [t]
         );
       }
-      function p() {
+      function f() {
         return { fnFindPartnerByName: u.Get().FindPartnerByName };
       }
-      function g(e) {
+      function h(e) {
         return u.Get().GetPartnerInfo(e);
       }
-      (0, r.Cg)([c.o], u.prototype, "FindPartnerByName", null);
+      (0, a.Cg)([c.o], u.prototype, "FindPartnerByName", null);
     },
     37789: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => w });
-      var r = n(90626),
-        a = n(24484),
-        s = n(18573),
-        i = n.n(s),
+      n.r(t), n.d(t, { default: () => C });
+      var a = n(90626),
+        r = n(24484),
+        i = n(18573),
+        s = n.n(i),
         o = n(52038),
         l = n(95695),
         c = n.n(l),
         d = n(51272),
         u = n(84811),
-        _ = n(71541),
-        m = n(95034),
-        p = n(55263),
-        g = n(16021),
-        f = n(32179),
-        h = n(66418),
+        m = n(71541),
+        p = n(95034),
+        f = n(55263),
+        h = n(82097),
+        g = n(32179),
+        _ = n(66418),
         E = n(61859),
-        S = n(91675),
-        C = n(26408),
-        y = n(54330);
-      const I = { include_assets: !0, include_release: !0 };
-      function P(e) {
+        v = n(91675),
+        y = n(26408),
+        w = n(54330);
+      const S = { include_assets: !0, include_release: !0 };
+      function b(e) {
         const { rgDeadlines: t } = e,
-          [n, a] = (0, m.QD)("query", ""),
-          s = (0, r.useMemo)(
+          [n, r] = (0, p.QD)("query", ""),
+          i = (0, a.useMemo)(
             () =>
               Array.from(
                 new Set(t.map((e) => e.data.store_item_id).filter(Boolean)),
               ),
             [t],
           ),
-          i = (0, r.useMemo)(
+          s = (0, a.useMemo)(
             () =>
               Array.from(
                 new Set(t.map((e) => e.data.partnerid).filter(Boolean)),
               ),
             [t],
           ),
-          o = (0, p.zX)(s, I),
-          l = (0, f.vh)(i),
-          c = (0, r.useMemo)(() => {
+          o = (0, f.zX)(i, S),
+          l = (0, g.vh)(s),
+          c = (0, a.useMemo)(() => {
             const e = n.trim().toLocaleLowerCase();
             return t
               .filter(
@@ -294,151 +311,151 @@
                   0 == e.length ||
                   1 == o ||
                   !l ||
-                  g.A.Get()
+                  h.A.Get()
                     .GetApp(t.data.store_item_id)
                     ?.GetName()
                     .toLocaleLowerCase()
                     .includes(e) ||
-                  (0, f.Yd)(t.data.partnerid)
+                  (0, g.Yd)(t.data.partnerid)
                     ?.name.toLocaleLowerCase()
                     .includes(e),
               )
               .sort((e, t) => t.data.due_date - e.data.due_date);
           }, [n, t, o, l]);
-        return r.createElement(
+        return a.createElement(
           u.tH,
           null,
-          r.createElement("h3", null, "Season Passes"),
-          r.createElement(_.pd, {
+          a.createElement("h3", null, "Season Passes"),
+          a.createElement(m.pd, {
             type: "string",
             value: n,
-            onChange: (e) => a(e.currentTarget.value.toLocaleLowerCase()),
+            onChange: (e) => r(e.currentTarget.value.toLocaleLowerCase()),
             label: "Filter",
             tooltip:
               "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
             placeholder: "type here...",
           }),
-          r.createElement(
+          a.createElement(
             "table",
             null,
-            r.createElement(
+            a.createElement(
               "thead",
               null,
-              r.createElement(
+              a.createElement(
                 "tr",
                 null,
-                r.createElement("th", null, "Deadline ID"),
-                r.createElement(
+                a.createElement("th", null, "Deadline ID"),
+                a.createElement(
                   "th",
                   null,
                   "Milestone ID ",
-                  r.createElement(C.o, {
+                  a.createElement(y.o, {
                     tooltip: "This is only unique within a DLC Season Pass",
                   }),
                 ),
-                r.createElement("th", null, "Season Pass DLC"),
-                r.createElement("th", null, "Partner"),
-                r.createElement("th", null, "Season Pass Release Date"),
-                r.createElement("th", null, "Deadline Date"),
-                r.createElement("th", null, "Milestone Name"),
-                r.createElement("th", null, "Ticket?"),
+                a.createElement("th", null, "Season Pass DLC"),
+                a.createElement("th", null, "Partner"),
+                a.createElement("th", null, "Season Pass Release Date"),
+                a.createElement("th", null, "Deadline Date"),
+                a.createElement("th", null, "Milestone Name"),
+                a.createElement("th", null, "Ticket?"),
               ),
             ),
-            r.createElement(
+            a.createElement(
               "tbody",
               null,
               c.map((e) =>
-                r.createElement(b, { key: "" + e.deadlineid, deadline: e }),
+                a.createElement(N, { key: "" + e.deadlineid, deadline: e }),
               ),
             ),
           ),
         );
       }
-      function b(e) {
+      function N(e) {
         const { deadline: t } = e,
-          [n] = (0, p.t7)(t.data.store_item_id, I),
-          [a] = (0, f.UA)(t.data.partnerid),
-          s = (0, y.u)(t.data.store_item_id),
-          i = s?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
-        return r.createElement(
+          [n] = (0, f.t7)(t.data.store_item_id, S),
+          [r] = (0, g.UA)(t.data.partnerid),
+          i = (0, w.u)(t.data.store_item_id),
+          s = i?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
+        return a.createElement(
           "tr",
           null,
-          r.createElement("td", null, t.deadlineid),
-          r.createElement("td", null, t.data.gid),
-          r.createElement(
+          a.createElement("td", null, t.deadlineid),
+          a.createElement("td", null, t.data.gid),
+          a.createElement(
             "td",
             null,
-            r.createElement(
+            a.createElement(
               "a",
               { href: n?.GetStorePageURL(), target: "_blank" },
               n?.GetName() || "unknown",
             ),
             "(",
-            r.createElement(
+            a.createElement(
               "a",
               {
-                href: `${h.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                href: `${_.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                 target: "_blank",
               },
               t.data.store_item_id,
               ")",
             ),
           ),
-          r.createElement(
+          a.createElement(
             "td",
             null,
-            r.createElement(
+            a.createElement(
               "a",
               {
-                href: `${h.T}pub/companydetails/${t.data.partnerid}`,
+                href: `${_.T}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
-              a?.name || "unknown",
+              r?.name || "unknown",
               " (",
               t.data.partnerid,
               ")",
             ),
           ),
-          r.createElement(
+          a.createElement(
             "td",
             null,
             (0, E.TW)(n?.GetReleaseDateRTime()),
-            r.createElement("span", null, " - "),
-            (0, S.KC)(n?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
+            a.createElement("span", null, " - "),
+            (0, v.KC)(n?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
           ),
-          r.createElement(
+          a.createElement(
             "td",
             null,
             (0, E.TW)(t.data.due_date),
-            r.createElement("span", null, " - "),
-            (0, S.KC)(t.data.due_date, { bForce24HourClock: !1 }),
+            a.createElement("span", null, " - "),
+            (0, v.KC)(t.data.due_date, { bForce24HourClock: !1 }),
           ),
-          r.createElement(
+          a.createElement(
             "td",
             null,
-            i?.title.find((e) => 0 == e.language)?.localized_string,
+            s?.title.find((e) => 0 == e.language)?.localized_string,
           ),
-          r.createElement("td", null, "TODO"),
+          a.createElement("td", null, "TODO"),
         );
       }
-      function w(e) {
+      function C(e) {
         const t = (function () {
-          const [e] = (0, r.useState)(
-            (0, a.Tc)("deadlines", "application_config"),
+          const [e] = (0, a.useState)(
+            (0, r.Tc)("deadlines", "application_config"),
           );
           return e;
         })();
-        return r.createElement(
+        return a.createElement(
           u.tH,
           null,
-          r.createElement(
+          a.createElement(
             "div",
-            { className: i().DashboardCtn },
-            r.createElement(
+            { className: s().DashboardCtn },
+            a.createElement(
               "h1",
               null,
               "Missed Deadlines Dashboard",
-              r.createElement(
+              a.createElement(
                 "button",
                 {
                   className: (0, o.A)(c().Button),
@@ -452,197 +469,664 @@
                 "Help",
               ),
             ),
-            r.createElement("hr", null),
-            r.createElement(
+            a.createElement("hr", null),
+            a.createElement(
               "p",
               null,
               "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
             ),
           ),
-          r.createElement(P, { rgDeadlines: t }),
+          a.createElement(b, { rgDeadlines: t }),
         );
       }
     },
     20880: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => u });
-      var r = n(90626),
-        a = n(24484),
-        s = n(84811),
-        i = n(32179),
-        o = n(54292),
-        l = n.n(o),
-        c = n(45737),
-        d = n.n(c);
-      function u(e) {
-        const [t, n, o] = (function () {
-            const [e] = (0, r.useState)(
-                (0, a.Tc)("deadlines", "application_config"),
-              ),
-              [t] = (0, r.useState)(
-                parseInt((0, a.Tc)("actionid", "application_config")),
-              ),
-              [n] = (0, r.useState)(
-                parseInt((0, a.Tc)("publisherid", "application_config")),
-              );
-            return [e, t, n];
-          })(),
-          [c] = (0, i.UA)(o),
-          [u, p] = r.useMemo(() => {
+      n.r(t), n.d(t, { default: () => h });
+      var a = n(90626),
+        r = n(24484),
+        i = n(84811),
+        s = n(54292),
+        o = n.n(s),
+        l = n(45737),
+        c = n.n(l),
+        d = n(61859),
+        u = n(64238),
+        m = n.n(u),
+        p = n(71541);
+      function f() {
+        const [e] = (0, a.useState)(
+            (0, r.Tc)("deadlines", "application_config"),
+          ),
+          [t] = (0, a.useState)(
+            (0, r.Tc)("publishername", "application_config"),
+          ),
+          [n] = (0, a.useState)(
+            parseInt((0, r.Tc)("actionid", "application_config")),
+          ),
+          [i] = (0, a.useState)(
+            parseInt((0, r.Tc)("publisherid", "application_config")),
+          );
+        return [e, t, n, i];
+      }
+      function h(e) {
+        const [t] = f(),
+          [n, r] = a.useMemo(() => {
             const e = [...t];
             e.sort((e, t) => {
               const n = new Date(
                   JSON.parse(e.data.description_jsondata)?.CreatedOn,
                 ),
-                r = new Date(
+                a = new Date(
                   JSON.parse(t.data.description_jsondata)?.CreatedOn,
                 );
-              return n.getTime() > r.getTime() ? 1 : -1;
+              return n.getTime() > a.getTime() ? 1 : -1;
             });
             return [e.pop(), e];
           }, [t]);
-        return r.createElement(
-          s.tH,
+        return a.createElement(
+          i.tH,
           null,
-          r.createElement(
+          a.createElement(
             "div",
-            { className: d().AdminPageCtn },
-            r.createElement(
+            { className: c().AdminPageCtn },
+            a.createElement(
               "div",
-              { className: l().header_container },
-              r.createElement(
+              { className: o().header_container },
+              a.createElement(
                 "div",
-                { className: l().header_label },
+                { className: o().header_label },
                 "Steamworks Document Communication",
               ),
             ),
-            p.map((e, t) =>
-              r.createElement(m, { key: "update_" + t, deadline: e }),
+            a.createElement(
+              "div",
+              { className: o().NotificationTwoColumnCtn },
+              a.createElement(
+                "div",
+                { className: o().NotificationLeft },
+                r.map((e, t) =>
+                  a.createElement(N, { key: "update_" + t, deadline: e }),
+                ),
+                a.createElement(g, { deadline: n }),
+              ),
+              a.createElement(
+                "div",
+                { className: o().NotificationRight },
+                a.createElement(
+                  "div",
+                  { className: o().Title },
+                  "Important Notice",
+                ),
+                a.createElement(
+                  "div",
+                  { className: o().Body },
+                  "Information in this document does not constitute tax, legal, or other professional advice. If you have other questions, please contact your tax, legal, or other professional advisor.",
+                ),
+                a.createElement(
+                  "div",
+                  { className: o().Title },
+                  "Third-party tax vendor",
+                ),
+                a.createElement(
+                  "div",
+                  { className: o().Body },
+                  "Valve uses a service called TaxIdentity provided by a third-party company called Lilaham for many services related to tax information collection, verification, and end-of-year statements.",
+                ),
+              ),
             ),
-            r.createElement(_, { deadline: u }),
           ),
+        );
+      }
+      function g(e) {
+        const { deadline: t } = e,
+          n = JSON.parse(t.data.description_jsondata),
+          [, r] = f(),
+          i = new Date(n?.CreatedOn);
+        let s = null,
+          l = null;
+        return (
+          "Renewal-W8-Initial" == n.TemplateName
+            ? ((s = a.createElement(S, { deadline: t })),
+              (l = a.createElement(b, { deadline: t })))
+            : "FailureToComply" == n.TemplateName
+              ? ((s = a.createElement(y, { deadline: t })),
+                (l = a.createElement(w, { deadline: t })))
+              : "DocReq-KYC-Entity-FR" == n.TemplateName
+                ? ((s = a.createElement(_, { deadline: t })),
+                  (l = a.createElement(E, { deadline: t })))
+                : "DocReq-KYC-FR" == n.TemplateName &&
+                  ((s = a.createElement(_, { deadline: t })),
+                  (l = a.createElement(v, { deadline: t }))),
+          a.createElement(
+            "div",
+            { className: o().NotificationContainer },
+            a.createElement(
+              "div",
+              { className: o().MessageDate },
+              (0, d.$z)(i.getTime() / 1e3),
+            ),
+            a.createElement("div", { className: o().PartnerName }, r),
+            s,
+            l,
+          )
         );
       }
       function _(e) {
-        const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata);
-        return r.createElement(
+        const { deadline: t } = e;
+        (0, d.$z)(t.data.due_date);
+        return a.createElement(
           "div",
-          { className: l().NotificationContainer },
-          r.createElement(
+          { className: o().MessageHeader },
+          a.createElement(
             "div",
-            { key: n.NotificationID },
-            r.createElement("div", null, "Subject: ", n.Subject),
-            r.createElement("div", null, "Address: ", n.Address),
+            { className: o().MessageTitle },
+            "Identity verification required",
+          ),
+          a.createElement(
+            "div",
+            { className: o().MessageSubject },
+            "Know Your Customer (KYC) regulations require Valve to verify the identity credentials of its payees.",
           ),
         );
       }
-      function m(e) {
+      function E(e) {
         const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata);
-        return r.createElement(
+          n = JSON.parse(t.data.description_jsondata),
+          r = n.Parameters?.Dropbox_FileRequest_Url;
+        return a.createElement(
           "div",
-          { key: n.NotificationID },
-          "Update",
-          r.createElement("div", null, "Subject: ", n.Subject),
-          r.createElement("div", null, "Address: ", n.Address),
+          null,
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Why is this important",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "To comply with those regulations, we have reviewed the information that you submitted via the online interview. This notification is being sent to you because additional documents are necessary to complete your KYC verification.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "What do I do next?",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Required documents",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            a.createElement(
+              "ul",
+              { className: o().SectionList },
+              a.createElement(
+                "li",
+                null,
+                a.createElement(
+                  "span",
+                  { className: o().ListItem },
+                  "Companies:",
+                ),
+                " Certificate of Incorporation or Registration details from Governing Authority which provides a summary of company registration, registered address and or members. For all companies registered greater than 12mths, also provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country’s registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. Note: screenshots of business portals are not acceptable.",
+              ),
+              a.createElement(
+                "li",
+                null,
+                a.createElement(
+                  "span",
+                  { className: o().ListItem },
+                  "Partnerships:",
+                ),
+                " Partnership Agreement and registration with local authority. Document providing Name, Address and list of partner(s).",
+              ),
+              a.createElement(
+                "li",
+                null,
+                a.createElement("span", { className: o().ListItem }, "Trusts:"),
+                ": Document providing Name, Address and list of beneficial owner(s).",
+              ),
+            ),
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Providing documents",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "The quickest way to provide the required documentation is by securely uploading to this personalized Dropbox™ File Request. This needs to be completed within 30 days after which time the link will be disabled.",
+          ),
+          a.createElement(
+            p.jn,
+            {
+              onClick: () => window.location.assign(r),
+              className: o().NotificationButton,
+            },
+            "Open Dropbox™ File Request",
+          ),
+        );
+      }
+      function v(e) {
+        const { deadline: t } = e,
+          n = JSON.parse(t.data.description_jsondata),
+          r = n.Parameters?.Dropbox_FileRequest_Url;
+        return a.createElement(
+          "div",
+          null,
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Why is this important",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "To comply with those regulations, we have reviewed the information that you submitted via the online interview. This notification is being sent to you because additional documents are necessary to complete your KYC verification.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "What do I do next?",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "1. Identification document",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "Please provide one of the following:",
+            a.createElement(
+              "ol",
+              null,
+              a.createElement("li", null, "International Passport"),
+              a.createElement("li", null, "Driver's License"),
+              a.createElement(
+                "li",
+                null,
+                "Government issues Identification documentation issues either by a Federal, State / Provisional Government Authority",
+              ),
+            ),
+            a.createElement(
+              "div",
+              null,
+              a.createElement(
+                "i",
+                null,
+                "Note, we are unable to validate the following documents:",
+              ),
+            ),
+            a.createElement(
+              "ol",
+              null,
+              a.createElement("li", null, "Citizen Card"),
+              a.createElement("li", null, "Government Health Cards"),
+              a.createElement("li", null, "Military ID's"),
+              a.createElement("li", null, "Post office card"),
+              a.createElement("li", null, "Paper Documents"),
+            ),
+            a.createElement("br", null),
+            a.createElement(
+              "div",
+              null,
+              "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise will not proceed with your verification.",
+            ),
+            a.createElement("br", null),
+            a.createElement(
+              "div",
+              null,
+              a.createElement("b", null, "Specifically:"),
+              a.createElement(
+                "ul",
+                null,
+                a.createElement(
+                  "li",
+                  null,
+                  "International Passport - Color Photograph and identity page",
+                ),
+                a.createElement(
+                  "li",
+                  null,
+                  "Foreign Driver's License - Color Photograph and identity information - if a card style, front and rear of card",
+                ),
+                a.createElement(
+                  "li",
+                  null,
+                  "Government issued Identification - Color Photograph and identity information - if a card style, front and rear of card",
+                ),
+              ),
+            ),
+            a.createElement("br", null),
+            a.createElement(
+              "div",
+              null,
+              a.createElement("b", null, "Accepted file types"),
+              a.createElement(
+                "ol",
+                null,
+                a.createElement("li", null, "PDF"),
+                a.createElement("li", null, "JPEG / Image files"),
+              ),
+            ),
+          ),
+          a.createElement("div", { className: o().SectionTitle }, "2. Selfie"),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            a.createElement(
+              "div",
+              null,
+              "We also require all payees to provide a selfie of themselves holding the same document they are providing. Please remove all hats, glasses, and other facial obstructions to get through the process as fast as possible",
+            ),
+            a.createElement("br", null),
+            a.createElement(
+              "div",
+              null,
+              "Show your full face, and you holding the Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
+            ),
+            a.createElement("br", null),
+            a.createElement(
+              "div",
+              null,
+              a.createElement("b", null, "Accepted file types"),
+              a.createElement(
+                "ol",
+                null,
+                a.createElement("li", null, "JPEG / Image files"),
+              ),
+            ),
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Providing documents",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "The quickest way to provide the required documentation is by securely uploading to this personalized Dropbox™ File Request. This needs to be completed within 30 days after which time the link will be disabled.",
+          ),
+          a.createElement(
+            p.jn,
+            {
+              onClick: () => window.location.assign(r),
+              className: o().NotificationButton,
+            },
+            "Open Dropbox™ File Request",
+          ),
+        );
+      }
+      function y(e) {
+        const { deadline: t } = e;
+        (0, d.$z)(t.data.due_date);
+        return a.createElement(
+          "div",
+          { className: o().MessageHeader },
+          a.createElement(
+            "div",
+            { className: o().MessageTitle },
+            "Tax Information Has Expired",
+          ),
+          a.createElement(
+            "div",
+            { className: o().MessageSubject },
+            "Our records indicate that you have not completed our recent request to update and/or provide additional tax information",
+          ),
+        );
+      }
+      function w(e) {
+        const { deadline: t } = e,
+          n = `https://valvesoftware-dev.taxidentity.com/Interview/Start?IdentityKey=${JSON.parse(t.data.description_jsondata).IdentityKey}`;
+        return a.createElement(
+          "div",
+          null,
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Why is this important",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "What do I do next?",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "You will be unable to distribute your product via Steam until we receive a valid tax form from you.  When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
+          ),
+          a.createElement(
+            p.jn,
+            {
+              onClick: () => window.location.assign(n),
+              className: o().NotificationButton,
+            },
+            "Begin Tax Interview",
+          ),
+        );
+      }
+      function S(e) {
+        const { deadline: t } = e,
+          n = (0, d.$z)(t.data.due_date);
+        return a.createElement(
+          "div",
+          { className: o().MessageHeader },
+          a.createElement(
+            "div",
+            { className: o().MessageTitle },
+            "Tax Information Is Out Of Date",
+          ),
+          a.createElement(
+            "div",
+            { className: o().MessageSubject },
+            "Our records show that the US tax form W-8BEN we have \t\t\t\ton file for you is due to expire on " +
+              n +
+              ".",
+          ),
+        );
+      }
+      function b(e) {
+        const { deadline: t } = e,
+          n = JSON.parse(t.data.description_jsondata),
+          r = (0, d.$z)(t.data.due_date),
+          i = `https://valvesoftware-dev.taxidentity.com/Interview/Start?IdentityKey=${n.IdentityKey}`;
+        return a.createElement(
+          "div",
+          null,
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Why is this important",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "It's important to renew this information, otherwise we will be unable to make monthly royalty payments to you after " +
+              r +
+              ".",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "What do I do next?",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "You need to review and submit our online tax interview. Following the link below will start a short tax interview which should take less than 10 minutes to complete.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "Required permissions",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "Tax information, including this required tax interview will need to be completed by a Steamworks user with Actual Authority rights.",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionTitle },
+            "What will happen if I choose not to complete the tax interview?",
+          ),
+          a.createElement(
+            "div",
+            { className: o().SectionBody },
+            "On " +
+              r +
+              " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
+          ),
+          a.createElement(
+            p.jn,
+            {
+              onClick: () => window.location.assign(i),
+              className: o().NotificationButton,
+            },
+            "Begin Tax Interview",
+          ),
+        );
+      }
+      function N(e) {
+        const { deadline: t } = e,
+          n = JSON.parse(t.data.description_jsondata),
+          r = new Date(n?.CreatedOn);
+        return a.createElement(
+          "div",
+          { className: m()(o().NotificationContainer, o().NotificationUpdate) },
+          a.createElement(
+            "div",
+            { key: n.NotificationID },
+            a.createElement(
+              "div",
+              { className: o().MessageDate },
+              (0, d.$z)(r.getTime() / 1e3),
+            ),
+            a.createElement(
+              "div",
+              { className: o().MessageSource },
+              "Message from TaxIdentity",
+            ),
+            a.createElement("div", { className: o().MessageBody }, n.Subject),
+          ),
         );
       }
     },
     66418: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => a, i: () => s });
-      var r = n(30470);
-      const a = window.Config ?? r.TS,
-        s = window.UserConfig ?? r.iA;
-      window.Config && Object.assign(r.TS, window.Config),
-        window.UserConfig && Object.assign(s, window.UserConfig);
+      n.d(t, { T: () => r, i: () => i });
+      var a = n(30470);
+      const r = window.Config ?? a.TS,
+        i = window.UserConfig ?? a.iA;
+      window.Config && Object.assign(a.TS, window.Config),
+        window.UserConfig && Object.assign(i, window.UserConfig);
     },
     55263: (e, t, n) => {
       "use strict";
       n.d(t, {
         G6: () => l,
         Gg: () => u,
-        MS: () => g,
+        MS: () => h,
         Ow: () => d,
-        gF: () => f,
-        mZ: () => _,
+        gF: () => g,
+        mZ: () => m,
         t7: () => c,
-        zX: () => p,
+        zX: () => f,
       });
-      var r = n(41735),
-        a = n.n(r),
-        s = n(90626),
-        i = n(73745),
-        o = n(16021);
-      function l(e, t, n, r) {
-        const l = (0, s.useRef)(),
-          c = (0, s.useRef)(void 0),
-          d = (0, i.CH)();
+      var a = n(41735),
+        r = n.n(a),
+        i = n(90626),
+        s = n(375),
+        o = n(82097);
+      function l(e, t, n, a) {
+        const l = (0, i.useRef)(),
+          c = (0, i.useRef)(void 0),
+          d = (0, s.CH)();
         l.current = e;
-        const [u, _] = (0, s.useState)(void 0),
+        const [u, m] = (0, i.useState)(void 0),
           {
-            include_assets: m,
-            include_release: p,
-            include_platforms: g,
-            include_all_purchase_options: f,
-            include_screenshots: h,
+            include_assets: p,
+            include_release: f,
+            include_platforms: h,
+            include_all_purchase_options: g,
+            include_screenshots: _,
             include_trailers: E,
-            include_ratings: S,
-            include_tag_count: C,
-            include_reviews: y,
-            include_basic_info: I,
-            include_supported_languages: P,
-            include_full_description: b,
-            include_included_items: w,
+            include_ratings: v,
+            include_tag_count: y,
+            include_reviews: w,
+            include_basic_info: S,
+            include_supported_languages: b,
+            include_full_description: N,
+            include_included_items: C,
             include_assets_without_overrides: T,
-            apply_user_filters: v,
+            apply_user_filters: I,
             include_links: B,
           } = n;
         if (
-          ((0, s.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             const n = {
-              include_assets: m,
-              include_release: p,
-              include_platforms: g,
-              include_all_purchase_options: f,
-              include_screenshots: h,
+              include_assets: p,
+              include_release: f,
+              include_platforms: h,
+              include_all_purchase_options: g,
+              include_screenshots: _,
               include_trailers: E,
-              include_ratings: S,
-              include_tag_count: C,
-              include_reviews: y,
-              include_basic_info: I,
-              include_supported_languages: P,
-              include_full_description: b,
-              include_included_items: w,
+              include_ratings: v,
+              include_tag_count: y,
+              include_reviews: w,
+              include_basic_info: S,
+              include_supported_languages: b,
+              include_full_description: N,
+              include_included_items: C,
               include_assets_without_overrides: T,
-              apply_user_filters: v,
+              apply_user_filters: I,
               include_links: B,
             };
-            let s = null;
+            let i = null;
             return (
               !e ||
                 e < 0 ||
                 o.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== u && r && r == c.current) ||
-                (r !== c.current && (_(void 0), (c.current = r)),
-                (s = a().CancelToken.source()),
+                (void 0 !== u && a && a == c.current) ||
+                (a !== c.current && (m(void 0), (c.current = a)),
+                (i = r().CancelToken.source()),
                 o.A.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    s?.token.reason || l.current !== e || _(1 == t), d();
+                    i?.token.reason || l.current !== e || m(1 == t), d();
                   })),
-              () => s?.cancel("useStoreItemCache: unmounting")
+              () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, u, m, p, g, f, h, E, S, C, y, I, P, b, w, T, v, B, d]),
+          }, [e, t, a, u, p, f, h, g, _, E, v, y, w, S, b, N, C, T, I, B, d]),
           !e)
         )
           return [null, 2];
         if (!1 === u) return [void 0, 2];
         if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const A = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return A ? [A, 3] : [null, 2];
+        const P = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return P ? [P, 3] : [null, 2];
       }
       function c(e, t, n) {
         return l(e, 0, t, n);
@@ -653,74 +1137,74 @@
       function u(e, t, n) {
         return l(e, 1, t, n);
       }
-      function _(e, t, n) {
-        const [r, a] = l(e, t, n);
-        let s;
-        1 != r?.GetStoreItemType() ||
-          r.GetAssets()?.GetHeaderURL() ||
-          1 != r?.GetIncludedAppIDs().length ||
-          (s = r.GetIncludedAppIDs()[0]);
-        const [i, o] = c(s, n);
-        return s && i?.BIsVisible() ? [i, o] : [r, a];
+      function m(e, t, n) {
+        const [a, r] = l(e, t, n);
+        let i;
+        1 != a?.GetStoreItemType() ||
+          a.GetAssets()?.GetHeaderURL() ||
+          1 != a?.GetIncludedAppIDs().length ||
+          (i = a.GetIncludedAppIDs()[0]);
+        const [s, o] = c(i, n);
+        return i && s?.BIsVisible() ? [s, o] : [a, r];
       }
-      function m(e, t, n, r) {
-        const l = (0, i.CH)(),
+      function p(e, t, n, a) {
+        const l = (0, s.CH)(),
           {
             include_assets: c,
             include_release: d,
             include_platforms: u,
-            include_all_purchase_options: _,
-            include_screenshots: m,
-            include_trailers: p,
-            include_ratings: g,
-            include_tag_count: f,
-            include_reviews: h,
+            include_all_purchase_options: m,
+            include_screenshots: p,
+            include_trailers: f,
+            include_ratings: h,
+            include_tag_count: g,
+            include_reviews: _,
             include_basic_info: E,
-            include_supported_languages: S,
-            include_full_description: C,
-            include_included_items: y,
-            include_assets_without_overrides: I,
-            apply_user_filters: P,
-            include_links: b,
+            include_supported_languages: v,
+            include_full_description: y,
+            include_included_items: w,
+            include_assets_without_overrides: S,
+            apply_user_filters: b,
+            include_links: N,
           } = n;
         if (
-          ((0, s.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
                 include_assets: c,
                 include_release: d,
                 include_platforms: u,
-                include_all_purchase_options: _,
-                include_screenshots: m,
-                include_trailers: p,
-                include_ratings: g,
-                include_tag_count: f,
-                include_reviews: h,
+                include_all_purchase_options: m,
+                include_screenshots: p,
+                include_trailers: f,
+                include_ratings: h,
+                include_tag_count: g,
+                include_reviews: _,
                 include_basic_info: E,
-                include_supported_languages: S,
-                include_full_description: C,
-                include_included_items: y,
-                include_assets_without_overrides: I,
-                apply_user_filters: P,
-                include_links: b,
+                include_supported_languages: v,
+                include_full_description: y,
+                include_included_items: w,
+                include_assets_without_overrides: S,
+                apply_user_filters: b,
+                include_links: N,
               },
-              r = e.filter(
+              a = e.filter(
                 (e) =>
                   !(
                     o.A.Get().BHasStoreItem(e, t, n) ||
                     o.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == r.length) return;
-            const s = a().CancelToken.source(),
-              i = r.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
+            if (0 == a.length) return;
+            const i = r().CancelToken.source(),
+              s = a.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
             return (
-              Promise.all(i).then(() => {
-                s.token.reason || l();
+              Promise.all(s).then(() => {
+                i.token.reason || l();
               }),
-              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, l, c, d, u, _, m, p, g, f, h, E, S, C, y, I, P, b]),
+          }, [e, t, a, l, c, d, u, m, p, f, h, g, _, E, v, y, w, S, b, N]),
           !e)
         )
           return 2;
@@ -738,24 +1222,24 @@
           ? 3
           : 2;
       }
-      function p(e, t, n) {
-        return m(e, 0, t, n);
+      function f(e, t, n) {
+        return p(e, 0, t, n);
+      }
+      function h(e, t, n) {
+        return p(e, 2, t, n);
       }
       function g(e, t, n) {
-        return m(e, 2, t, n);
-      }
-      function f(e, t, n) {
-        return m(e, 1, t, n);
+        return p(e, 1, t, n);
       }
     },
     68797: (e, t, n) => {
       "use strict";
-      n.d(t, { H: () => i });
-      var r = n(41735),
-        a = n.n(r),
-        s = n(56545);
-      function i(e) {
-        if (a().isCancel(e))
+      n.d(t, { H: () => s });
+      var a = n(41735),
+        r = n.n(a),
+        i = n(56545);
+      function s(e) {
+        if (r().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -808,7 +1292,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof s.w)
+            if ("object" == typeof e && e instanceof i.w)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),

@@ -1070,10 +1070,6 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	opacity: 1;
 }
 
-#ShareModal {
-    width: 290px;
-}
-
 .newmodal_content_border {
 	padding: 0 1px 1px 1px;
     display: flex;

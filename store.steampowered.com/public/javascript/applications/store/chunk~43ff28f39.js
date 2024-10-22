@@ -26,8 +26,8 @@
         a = s(88997),
         r = s(55963),
         d = s(54728),
-        m = s(16021),
-        u = s(73745),
+        m = s(82097),
+        u = s(375),
         c = s(6144);
       class p extends l.Component {
         m_elCanvas;

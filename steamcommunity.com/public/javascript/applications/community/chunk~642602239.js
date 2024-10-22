@@ -2581,7 +2581,7 @@
         s = n(44332),
         l = n(68797),
         c = n(6144),
-        m = n(73745),
+        m = n(375),
         d = n(78327);
       class u {
         GetItem(e) {
@@ -2783,7 +2783,7 @@
         o = n(90626),
         s = n(68797),
         l = n(6144),
-        c = n(73745),
+        c = n(375),
         m = n(78327);
       class d {
         GetRegistration(e) {
@@ -2957,7 +2957,7 @@
         l = n(44332),
         c = n(68797),
         m = n(6144),
-        d = n(73745),
+        d = n(375),
         u = n(78327);
       class p {
         GetInventoryForApp(e) {
@@ -3090,7 +3090,7 @@
         c = n(90626),
         m = n(68797),
         d = n(6144),
-        u = n(73745),
+        u = n(375),
         p = n(14947),
         h = n(58222);
       class _ {
@@ -3379,7 +3379,7 @@
         a = n(90626),
         o = n(68797),
         s = n(6144),
-        l = n(73745),
+        l = n(375),
         c = n(78327);
       class m {
         GetItemDefForAppID(e) {
@@ -3789,20 +3789,7 @@
         p = n(11279);
       function h(e) {
         const { padded: t, gap: n, children: r, bLazyRenderChildren: a } = e,
-          o = i.Children.map(r, (e, t) =>
-            a
-              ? i.createElement(
-                  m.K,
-                  {
-                    bHorizontal: !0,
-                    placeholderWidth: "100%",
-                    placeholderHeight: 1,
-                  },
-                  e,
-                )
-              : e,
-          ),
-          l = i.createElement(
+          o = i.createElement(
             "div",
             {
               style: { gap: n ? n + "px" : "unset" },
@@ -3814,15 +3801,15 @@
                 [e.className]: !0,
               }),
             },
-            o,
+            r,
           );
         return a
           ? i.createElement(
               m.K,
               { bHorizontal: !1, placeholderWidth: 1, placeholderHeight: 1 },
-              l,
+              o,
             )
-          : l;
+          : o;
       }
       var _ = n(7445);
       class g extends i.Component {
@@ -4245,7 +4232,7 @@
       var u = n(68451),
         p = n(52038),
         h = n(61859),
-        _ = n(73745);
+        _ = n(375);
       function g(e, t) {
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
@@ -5404,7 +5391,7 @@
       var r = n(34629),
         i = n(90626),
         a = n(75844),
-        o = n(73745),
+        o = n(375),
         s = n(45699),
         l = n(76217),
         c = n(88997),
@@ -5544,14 +5531,14 @@
     },
     53418: (e, t, n) => {
       "use strict";
-      n.d(t, { f: () => yt });
+      n.d(t, { f: () => Ct });
       var r = n(34629),
         i = n(90626),
         a = n(52967),
         o = n(42780),
         s = n(59952),
         l = n(87540),
-        c = n(73745),
+        c = n(375),
         m = n(70995),
         d = n(17720),
         u = n(88527),
@@ -6500,6 +6487,9 @@
         at = n(74410);
       let ot = null;
       function st(e) {
+        return i.createElement("div", null, "hello world");
+      }
+      function lt(e) {
         var t;
         let n = (0, s.j$)(e.args);
         const r = (0, s.j$)(e.args, "style"),
@@ -6544,7 +6534,7 @@
                 )
         );
       }
-      function lt(e) {
+      function ct(e) {
         const { showErrorInfo: t, event: n } = e.context;
         let r = e && e.children && e.children.toString();
         if (
@@ -6577,7 +6567,7 @@
         }
         return i.createElement(L.c, { rgSources: a });
       }
-      function ct(e) {
+      function mt(e) {
         const t = (0, s.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const n = e && e.children && e.children.toString(),
@@ -6593,27 +6583,27 @@
           i.createElement(L.c, { rgSources: r, alt: n })
         );
       }
-      function mt(e) {
-        const t = pt(
+      function dt(e) {
+        const t = ht(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          n = pt(e.args, "trailerid", 0);
+          n = ht(e.args, "trailerid", 0);
         return i.createElement(De, {
           appid: t,
           trailerBaseID: n,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function dt(e) {
-        const t = pt(e.args, "appid", 0);
+      function ut(e) {
+        const t = ht(e.args, "appid", 0);
         return i.createElement(Ge, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function ut(e) {
+      function pt(e) {
         const t = (0, s.j$)(e.args, "name"),
           n = (0, s.j$)(e.args, "title"),
           r = (0, s.j$)(e.args, "company"),
@@ -6634,11 +6624,11 @@
               bio: e.children,
             });
       }
-      function pt(e, t, n) {
+      function ht(e, t, n) {
         const r = (0, s.j$)(e, t);
         return void 0 === r || null == r ? n : Number.parseInt(r);
       }
-      function ht(e) {
+      function _t(e) {
         const t = (0, s.j$)(e.args, "name"),
           n =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -6652,7 +6642,7 @@
           ? e.children
           : null;
       }
-      function _t(e) {
+      function gt(e) {
         const t = e.context.showErrorInfo;
         if (!S.iA.logged_in)
           return i.createElement(
@@ -6672,7 +6662,7 @@
           }
         return i.createElement(rt.m, { bPreviewMode: t, rewardType: r });
       }
-      function gt(e) {
+      function ft(e) {
         const t = Number.parseInt((0, s.j$)(e.args, "id")) || 0,
           n =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -6690,7 +6680,7 @@
           (!l && !n) || (l && n) ? e.children : null
         );
       }
-      function ft(e) {
+      function Et(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, Be.h)(e),
             n = (0, Be.Q)();
@@ -6716,12 +6706,12 @@
         }
         return { bInitialState: !0 };
       }
-      function Et(e) {
+      function St(e) {
         const t = (0, s.j$)(e.args, "action"),
           n = (0, s.j$)(e.args, "initialToken"),
           r = (0, s.j$)(e.args, "successToken"),
           a = (0, s.j$)(e.args, "failToken"),
-          o = ft(t);
+          o = Et(t);
         if (!(t && n && r && a)) {
           return e.context.showErrorInfo
             ? i.createElement(
@@ -6739,7 +6729,7 @@
                 onClick: (o) => {
                   (0, tt.pg)(
                     i.createElement(
-                      St,
+                      vt,
                       {
                         strAction: t,
                         strInitialToken: n,
@@ -6762,7 +6752,7 @@
               (0, E.we)("#Login_SignIn"),
             );
       }
-      function St(e) {
+      function vt(e) {
         const {
             strAction: t,
             children: n,
@@ -6771,7 +6761,7 @@
             strSuccessToken: o,
             strFailToken: s,
           } = e,
-          l = ft(t),
+          l = Et(t),
           [c, m] = i.useState(Boolean(l.fnAction));
         return (
           i.useEffect(() => {
@@ -6810,7 +6800,7 @@
           )
         );
       }
-      function vt(e) {
+      function yt(e) {
         const { showErrorInfo: t, event: n } = e.context,
           r = n.clanSteamID.GetAccountID(),
           [a] = i.useState(
@@ -6850,11 +6840,11 @@
             ? i.createElement("div", null, (0, E.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class yt extends i.Component {
+      class Ct extends i.Component {
         constructor(e) {
           super(e),
             (this.m_parser = new a.B(
-              yt.sm_BBCodeDictionary,
+              Ct.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride,
             ));
@@ -6908,8 +6898,8 @@
           );
         }
         static AddDictionary(e) {
-          yt.sm_BBCodeDictionary = new Map([
-            ...Array.from(yt.sm_BBCodeDictionary.entries()),
+          Ct.sm_BBCodeDictionary = new Map([
+            ...Array.from(Ct.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
@@ -6924,12 +6914,12 @@
           );
         }
       }
-      (yt.sm_BBCodeDictionary = new Map([
+      (Ct.sm_BBCodeDictionary = new Map([
         ...Array.from(s.W4.entries()),
         ...Array.from(
           (null == ot &&
             (ot = new Map([
-              ["url", { Constructor: st, autocloses: !1 }],
+              ["url", { Constructor: lt, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -6978,34 +6968,35 @@
                 "*",
                 { Constructor: s.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: lt, autocloses: !1 }],
+              ["img", { Constructor: ct, autocloses: !1 }],
               ["previewyoutube", { Constructor: at.gH, autocloses: !1 }],
               ["looping_media", { Constructor: s.$A, autocloses: !1 }],
               ["video", { Constructor: s.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: at.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: mt, autocloses: !0 }],
-              ["vod", { Constructor: dt, autocloses: !1 }],
+              ["trailer", { Constructor: dt, autocloses: !0 }],
+              ["vod", { Constructor: ut, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: ut,
+                  Constructor: pt,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: ht, autocloses: !1 }],
-              ["claimitem", { Constructor: _t, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: gt, autocloses: !1 }],
-              ["actiondialog", { Constructor: Et, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: vt, autocloses: !0 }],
-              ["docimg", { Constructor: ct, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: _t, autocloses: !1 }],
+              ["claimitem", { Constructor: gt, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: ft, autocloses: !1 }],
+              ["actiondialog", { Constructor: St, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: yt, autocloses: !0 }],
+              ["docimg", { Constructor: mt, autocloses: !1 }],
               ["carousel", { Constructor: Ve, autocloses: !1 }],
+              ["meetsteam", { Constructor: st, autocloses: !1 }],
             ])),
           ot).entries(),
         ),
       ])),
-        (0, r.Cg)([c.oI], yt.prototype, "ElementAccumulator", null);
+        (0, r.Cg)([c.oI], Ct.prototype, "ElementAccumulator", null);
     },
     92007: (e, t, n) => {
       "use strict";
@@ -7059,7 +7050,7 @@
         b = n(68797),
         I = n(52038),
         B = n(61859),
-        N = n(73745),
+        N = n(375),
         R = n(14771),
         A = n(61336),
         k = n(78327),
@@ -7564,7 +7555,7 @@
         s = n(22837),
         l = n(49771),
         c = n(6336),
-        m = (n(32754), n(73745)),
+        m = (n(32754), n(375)),
         d = n(78327),
         u = n(23649),
         p = n(3246),
@@ -8049,7 +8040,7 @@
         s = n(61859),
         l = n(61336),
         c = n(78327),
-        m = n(73745);
+        m = n(375);
       class d {
         constructor() {
           (this.m_bUserHasVolumePreference = !1),
@@ -8206,7 +8197,7 @@
       n.d(t, { K: () => s });
       var r = n(34629),
         i = n(90626),
-        a = n(73745),
+        a = n(375),
         o = n(60383);
       class s extends i.Component {
         constructor() {
@@ -8276,7 +8267,7 @@
       n.d(t, { c: () => o });
       var r = n(34629),
         i = n(90626),
-        a = n(73745);
+        a = n(375);
       class o extends i.Component {
         constructor(e) {
           super(e),
@@ -8344,7 +8335,7 @@
       var r = n(34629),
         i = n(90626),
         a = n(56011),
-        o = n(73745);
+        o = n(375);
       class s extends i.Component {
         constructor() {
           super(...arguments),
@@ -8453,7 +8444,7 @@
         a = n(90626),
         o = n(62490),
         s = n(94607),
-        l = n(73745),
+        l = n(375),
         c = n(52038),
         m = n(22797);
       !(function (e) {

@@ -708,10 +708,10 @@
       }
       var Be = r(29287);
       var we = r(52038),
-        ye = r(73745),
+        ye = r(375),
         ve = r(78327),
         Me = r(73309);
-      function Ee(e) {
+      const Ee = (0, r(84811).Nr)(function (e) {
         const {
             schemaConfig: t,
             bbcode: r,
@@ -830,7 +830,7 @@
           n.createElement(ie, { onUpdate: o, schema: t.pm_schema }),
           l,
         );
-      }
+      });
       var ke = r(32754),
         Ce = r(27491),
         Ne = r(33645),

@@ -220,7 +220,7 @@
         if ((0, o.Qn)()) {
           const e = window.__nav_tree_root;
           return r.createElement(
-            i.B,
+            i.B2,
             { ...c, navTreeRef: m, secondary: !0, parentEmbeddedNavTree: e },
             r.createElement(s.q, null, t),
           );
@@ -375,7 +375,7 @@
         p = a(62490),
         _ = a(44332),
         h = a(68797),
-        f = a(73745),
+        f = a(375),
         y = a(78327);
       function g(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
@@ -695,7 +695,7 @@
         o = a(90626),
         i = a(62490),
         s = a(94607),
-        l = a(73745),
+        l = a(375),
         c = a(52038),
         u = a(22797);
       !(function (e) {
@@ -1040,7 +1040,7 @@
       var E = a(6626),
         C = a(46115),
         I = a(30894),
-        b = a(16021),
+        b = a(82097),
         w = a(62792),
         S = a(55263),
         L = a(80782),

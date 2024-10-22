@@ -460,7 +460,7 @@
     },
     73967: (e, t, a) => {
       "use strict";
-      a.d(t, { i: () => A, q: () => R });
+      a.d(t, { i: () => F, q: () => k });
       var r = a(23910),
         n = a(65946),
         s = a(90626),
@@ -1051,28 +1051,29 @@
             );
           });
       })(B || (B = {}));
-      var w = a(96001),
-        C = a(20194);
+      var C = a(96001),
+        w = a(20194);
       var E = a(44165),
         v = a(62792),
         M = a(55263),
-        T = a(71541),
-        L = a(56330),
-        I = a(22797),
-        N = a(61859),
-        D = a(30470);
-      function A(e) {
+        T = a(52038),
+        L = a(71541),
+        I = a(56330),
+        N = a(22797),
+        D = a(61859),
+        A = a(30470);
+      function F(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, n.q3)(() => [t.GetStoreItemKey()]);
         return "app" != a.item_type
           ? s.createElement(
               "div",
-              { className: L.ErrorStylesWithIcon },
+              { className: I.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             )
-          : s.createElement(F, { oEditableMessage: t, idKey: a });
+          : s.createElement(R, { oEditableMessage: t, idKey: a });
       }
-      function F(e) {
+      function R(e) {
         const { oEditableMessage: t, idKey: a } = e,
           [o, l] = (0, n.q3)(() => [
             t.GetUpdateEventClanAccountID(),
@@ -1084,12 +1085,12 @@
         return s.createElement(
           "div",
           null,
-          s.createElement(R, {
+          s.createElement(k, {
             appid: d || a.id,
             selectedEventGID: l,
             fnSetUpdateEvent: t.SetUpdateEvent,
-            label: (0, N.we)("#EventDropDown_MM_FeaturedEvent"),
-            tooltip: (0, N.we)("#EventDropDown_MM_FeaturedEvent_ttip"),
+            label: (0, D.we)("#EventDropDown_MM_FeaturedEvent"),
+            tooltip: (0, D.we)("#EventDropDown_MM_FeaturedEvent_ttip"),
             strUrlLearnMore:
               "https://confluence.valve.org/display/SteamBiz/Steam+Promotions+Assets+Guide#SteamPromotionsAssetsGuide-MarketingMessageforUpdates",
           }),
@@ -1100,7 +1101,7 @@
               s.createElement(
                 "a",
                 {
-                  href: `${D.TS.COMMUNITY_BASE_URL}gid/${u.ConvertTo64BitString()}/partnerevents/edit/${l}`,
+                  href: `${A.TS.COMMUNITY_BASE_URL}gid/${u.ConvertTo64BitString()}/partnerevents/edit/${l}`,
                   target: "_blank",
                 },
                 "open event for edit",
@@ -1110,7 +1111,7 @@
             ),
         );
       }
-      function R(e) {
+      function k(e) {
         const {
             appid: t,
             selectedEventGID: a,
@@ -1122,9 +1123,9 @@
           d = (0, E.f1)(),
           { clanInfo: m, bLoadingClanInfo: p } = (0, o.vF)(t),
           _ = (function (e, t) {
-            const a = (0, w.a)(),
+            const a = (0, C.a)(),
               r = (0, s.useMemo)(() => i.b.InitFromClanID(e), [e]),
-              n = (0, C.I)({
+              n = (0, w.I)({
                 queryKey: ["eventdraftrecent", e, t],
                 queryFn: async () => {
                   const e = u.w.Init(g);
@@ -1169,9 +1170,9 @@
                         : "#EventDropDown_Hidden"
                       : "#EventDropDown_Visible";
                     return {
-                      label: (0, N.we)(
+                      label: (0, D.we)(
                         t,
-                        (0, N.TW)(e.rtime32_start_time),
+                        (0, D.TW)(e.rtime32_start_time),
                         e.event_name,
                       ),
                       data: e,
@@ -1190,11 +1191,11 @@
                   s.createElement(
                     "a",
                     { href: c, target: "_blank", style: { float: "right" } },
-                    (0, N.we)(
+                    (0, D.we)(
                       "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                     ),
                   ),
-                s.createElement(T.m, {
+                s.createElement(L.m, {
                   label: n,
                   tooltip: l,
                   selectedOption: f,
@@ -1204,17 +1205,17 @@
               )
             : s.createElement(
                 "div",
-                { className: L.ErrorStylesWithIcon },
-                (0, N.oW)(
+                { className: (0, T.A)(I.ErrorStylesWithIcon, "ErrorCtn") },
+                (0, D.oW)(
                   "#EventDropDown_NoEventFound",
                   s.createElement("a", {
-                    href: `${D.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
+                    href: `${A.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
                     target: "_blank",
                   }),
                 ),
               )
-          : s.createElement(I.t, {
-              string: (0, N.we)("#Loading"),
+          : s.createElement(N.t, {
+              string: (0, D.we)("#Loading"),
               size: "small",
               position: "center",
             });
@@ -1249,7 +1250,7 @@
             bRunQueryOnLoad: S,
             rgParentAppIDs: B,
           } = e,
-          [w, C] = s.useState(""),
+          [C, w] = s.useState(""),
           [E, v] = s.useState(!1),
           [M, T] = s.useState(!1),
           [L] = s.useState(new l.LU()),
@@ -1304,7 +1305,7 @@
           G = (0, s.useCallback)(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
-              C(t);
+              w(t);
               const a = z.current?.checked;
               L.Schedule(1e3, () => x(t, a));
             },
@@ -1313,7 +1314,7 @@
         let O;
         switch (
           (s.useEffect(() => {
-            S && x(w);
+            S && x(C);
           }, []),
           r)
         ) {
@@ -1341,8 +1342,8 @@
               tooltip: g,
               placeholder: O,
               onChange: G,
-              value: w,
-              bAlwaysShowClearAction: w.length > 0,
+              value: C,
+              bAlwaysShowClearAction: C.length > 0,
               focusOnMount: h,
             }),
             U &&
@@ -1820,7 +1821,7 @@
       var r = a(34629),
         n = a(90626),
         s = a(43465),
-        i = a(73745);
+        i = a(375);
       class o extends n.Component {
         state = { color: this.props.color || "rgba(1.0,1.0,1.0,1.0)" };
         static GetColorString(e) {
@@ -1873,11 +1874,11 @@
             bHideCreatorType: o,
             bSmallFormat: S,
             bHideFollowButton: B,
-            bAddLinkToMemberList: w,
+            bAddLinkToMemberList: C,
           } = e,
-          C = (0, s.FV)(t.clan_account_id),
+          w = (0, s.FV)(t.clan_account_id),
           [E] = (0, i.L2)();
-        if (E || !C)
+        if (E || !w)
           return r.createElement(
             "div",
             { className: f.DevSummaryWidgetCtn },
@@ -1894,8 +1895,8 @@
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          T = C.GetCreatorHomeURL(v),
-          L = C.GetNumFollowers();
+          T = w.GetCreatorHomeURL(v),
+          L = w.GetNumFollowers();
         return r.createElement(
           g.tH,
           null,
@@ -1918,7 +1919,7 @@
                 r.createElement("div", {
                   className: f.DevSummaryBackground,
                   style: {
-                    backgroundImage: `url(${C.GetAvatarURLFullSize()} )`,
+                    backgroundImage: `url(${w.GetAvatarURLFullSize()} )`,
                   },
                 }),
                 r.createElement(
@@ -1942,7 +1943,7 @@
                       },
                       r.createElement("img", {
                         className: (0, u.A)(f.Avatar, "Avatar_Trgt"),
-                        src: C.GetAvatarURLFullSize(),
+                        src: w.GetAvatarURLFullSize(),
                       }),
                     ),
                     r.createElement(
@@ -1964,7 +1965,7 @@
                         r.createElement(
                           c,
                           { href: (0, p.k2)(T), className: f.CreatorNameName },
-                          C.GetName(),
+                          w.GetName(),
                         ),
                         Boolean(a) &&
                           r.createElement(
@@ -1975,7 +1976,7 @@
                                 f.CreatorTagline,
                               ),
                             },
-                            C.GetTagLine(),
+                            w.GetTagLine(),
                           ),
                       ),
                       r.createElement(
@@ -2005,14 +2006,14 @@
                       ),
                     ),
                   ),
-                  Boolean(w) &&
+                  Boolean(C) &&
                     r.createElement(
                       "a",
                       {
                         href:
                           l.TS.COMMUNITY_BASE_URL +
                           "gid/" +
-                          C.GetClanSteamID().ConvertTo64BitString() +
+                          w.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
                         target: "_blank",
                         className: f.MembersListLink,
@@ -2041,7 +2042,7 @@
         m = a(52038),
         p = a(61859),
         g = a(91675),
-        _ = a(73745),
+        _ = a(375),
         h = a(32754);
       let f = class extends i.Component {
         GenerateLanguageOptions() {

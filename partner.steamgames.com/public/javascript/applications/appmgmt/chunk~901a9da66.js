@@ -6,7 +6,7 @@
   [5467],
   {
     72839: (e, t, s) => {
-      s.d(t, { Bn: () => l, hS: () => u, rV: () => n });
+      s.d(t, { Bn: () => o, hS: () => u, rV: () => n });
       var r = s(15161),
         a = s(78327),
         i = s(2160);
@@ -24,19 +24,27 @@
           t
         );
       }
-      function l(e, t) {
+      function o(e, t) {
         e.Body().set_data_request(r.gn.fromObject(t));
       }
     },
-    75279: (e, t, s) => {
-      s.d(t, { A: () => o });
-      var r = s(62792),
-        a = s(44332),
-        i = s(61859),
-        n = s(91675),
-        u = s(78327),
-        l = s(63369);
-      class o {
+    82097: (e, t, s) => {
+      s.d(t, { A: () => P });
+      var r = s(34629),
+        a = s(14947),
+        i = s(56545),
+        n = s(96059),
+        u = s(59411),
+        o = s(15161),
+        l = s(44332),
+        _ = s(68797),
+        c = s(78327),
+        m = s(72839),
+        h = s(62792),
+        d = s(61859),
+        p = s(91675),
+        g = s(63369);
+      class I {
         m_eItemType;
         m_unID;
         m_bVisible = !1;
@@ -48,6 +56,7 @@
         m_rgIncludedAppIDs;
         m_bIsFree;
         m_bIsFreeTemporary;
+        m_bIsComingSoon;
         m_bIsEarlyAccess;
         m_RelatedItems;
         m_ContentDescriptorIDs;
@@ -81,9 +90,10 @@
             (this.m_eAppType = e.type()),
             (this.m_rgIncludedAppTypes = e.included_types()),
             (this.m_rgIncludedAppIDs = e.included_appids()),
-            (this.m_bIsFree = e.is_free()),
-            (this.m_bIsFreeTemporary = e.is_free_temporarily()),
-            (this.m_bIsEarlyAccess = e.is_early_access()),
+            (this.m_bIsFree = !!e.is_free()),
+            (this.m_bIsFreeTemporary = !!e.is_free_temporarily()),
+            (this.m_bIsComingSoon = !!e.is_coming_soon()),
+            (this.m_bIsEarlyAccess = !!e.is_early_access()),
             (this.m_RelatedItems = e.related_items()?.toObject()),
             (this.m_ContentDescriptorIDs = e.content_descriptorids()),
             (this.m_StoreCategories = e.categories().toObject()),
@@ -100,11 +110,11 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new c(e.assets(), e.id())),
+            ((this.m_Assets = new f(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_assets_without_overrides &&
               !this.m_AssetsWithoutOverrides &&
-              ((this.m_AssetsWithoutOverrides = new c(
+              ((this.m_AssetsWithoutOverrides = new f(
                 e.assets_without_overrides(),
                 e.id(),
               )),
@@ -125,11 +135,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new d(e.screenshots())),
+              ((this.m_Screenshots = new y(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new m(e.trailers())),
+              ((this.m_Trailers = new S(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -181,16 +191,16 @@
           );
         }
         BContainDataRequest(e) {
-          return o.BDataRequestContainsOtherDataRequest(
+          return I.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e,
           );
         }
         BCheckDataRequestIncluded(e) {
-          ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
-            (0, a.w)(
+          ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
+            (0, l.w)(
               this.BContainDataRequest(e),
-              `Requested data without for ${(0, r.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
+              `Requested data without for ${(0, h.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
               e,
               this.m_DataRequested,
             );
@@ -212,10 +222,10 @@
         }
         GetStorePageURL(e = !1) {
           return e && this.HasDemoStandaloneStorePage()
-            ? u.TS.STORE_BASE_URL +
+            ? c.TS.STORE_BASE_URL +
                 "app/" +
                 this.GetDemoStandaloneStorePageAppIDs()[0]
-            : u.TS.STORE_BASE_URL + this.m_strStoreURLPath;
+            : c.TS.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
           return this.m_strStoreURLPathOverride &&
@@ -228,12 +238,12 @@
         }
         GetCommunityPageURL() {
           return this.GetAppID()
-            ? u.TS.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
+            ? c.TS.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
             : null;
         }
         GetCommunityDiscussionForumsURL() {
           return this.GetAppID()
-            ? u.TS.COMMUNITY_BASE_URL +
+            ? c.TS.COMMUNITY_BASE_URL +
                 "app/" +
                 this.GetAppID() +
                 "/discussions/"
@@ -390,7 +400,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? _([
+              ? R([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -401,19 +411,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? _(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? R(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? _(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? R(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? _(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? R(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -474,33 +484,31 @@
             this.m_ReleaseInfo?.is_coming_soon)
           ) {
             if (this.m_ReleaseInfo?.coming_soon_display)
-              return (0, l.d)(this.m_ReleaseInfo);
+              return (0, g.d)(this.m_ReleaseInfo);
             if (this.m_ReleaseInfo?.custom_release_date_message)
               return this.m_ReleaseInfo.custom_release_date_message;
             const e = this.m_ReleaseInfo?.steam_release_date;
             return e
               ? this.m_ReleaseInfo?.is_abridged_release_date
-                ? (0, n.sq)(new Date(1e3 * e))
-                : (0, i.$z)(e)
+                ? (0, p.sq)(new Date(1e3 * e))
+                : (0, d.$z)(e)
               : "";
           }
           const e = this.GetReleaseDateRTime();
-          return e ? (0, i.$z)(e) : "";
+          return e ? (0, d.$z)(e) : "";
         }
         BIsComingSoon() {
-          return (
-            this.BCheckDataRequestIncluded({ include_release: !0 }),
-            this.m_ReleaseInfo?.is_coming_soon
-          );
+          return this.m_bIsComingSoon;
         }
         BIsCustomComingSoonDisplay() {
           return (
+            this.BCheckDataRequestIncluded({ include_release: !0 }),
             !!this.BIsComingSoon() &&
-            (this.m_ReleaseInfo?.coming_soon_display
-              ? ["text_tba", "text_comingsoon"].includes(
-                  this.m_ReleaseInfo.coming_soon_display,
-                )
-              : !!this.m_ReleaseInfo?.custom_release_date_message)
+              (this.m_ReleaseInfo?.coming_soon_display
+                ? ["text_tba", "text_comingsoon"].includes(
+                    this.m_ReleaseInfo.coming_soon_display,
+                  )
+                : !!this.m_ReleaseInfo?.custom_release_date_message)
           );
         }
         BIsPrePurchase() {
@@ -634,12 +642,12 @@
           return this.m_strInternalName;
         }
       }
-      function _(e) {
+      function R(e) {
         if (!e?.length) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class c {
+      class f {
         m_strMainCapsuleURL;
         m_strSmallCapsuleURL;
         m_strHeaderURL;
@@ -708,7 +716,7 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              (this.m_strCommunityIcon = `${u.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
+              (this.m_strCommunityIcon = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -745,7 +753,7 @@
         }
         ConstructAssetURL(e, t) {
           return (
-            u.TS.BASE_URL_SHARED_CDN +
+            c.TS.BASE_URL_SHARED_CDN +
             "/store_item_assets/" +
             e.replace("${FILENAME}", t)
           );
@@ -754,20 +762,20 @@
           return this.m_strCommunityIcon;
         }
       }
-      class m {
+      class S {
         m_mapTrailer = new Map();
         m_higherTrailers = new Array();
         m_otherTrailers = new Array();
         constructor(e) {
           e.highlights() &&
             e.highlights().forEach((e) => {
-              let t = new h(e);
+              let t = new b(e);
               this.m_mapTrailer.set(t.GetTrailerID(), t),
                 this.m_higherTrailers.push(t);
             }),
             e.other_trailers() &&
               e.other_trailers().forEach((e) => {
-                let t = new h(e);
+                let t = new b(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_otherTrailers.push(t);
               });
@@ -787,7 +795,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class h {
+      class b {
         m_strTrailerName;
         m_nBaseID;
         m_Trailer480p;
@@ -860,20 +868,20 @@
         }
         ConstructScreenshotURL(e, t) {
           return (
-            u.TS.BASE_URL_SHARED_CDN +
+            c.TS.BASE_URL_SHARED_CDN +
             "/store_item_assets/" +
             e.replace("${FILENAME}", t)
           );
         }
         ConstructAssetURL(e, t) {
           return (
-            u.TS.VIDEO_CDN_URL +
+            c.TS.VIDEO_CDN_URL +
             "/store_trailers/" +
             e.replace("${FILENAME}", t)
           );
         }
       }
-      class d {
+      class y {
         m_rgAllScreenshots = new Array();
         m_rgOnlyAllAgesScreenshots = new Array();
         constructor(e) {
@@ -888,7 +896,7 @@
             }
             if (e) {
               const e =
-                u.TS.BASE_URL_SHARED_CDN +
+                c.TS.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
                 r[t].filename();
               this.m_rgAllScreenshots.push(e),
@@ -896,7 +904,7 @@
                 (t += 1);
             } else {
               const e =
-                u.TS.BASE_URL_SHARED_CDN +
+                c.TS.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
                 a[s].filename();
               this.m_rgAllScreenshots.push(e), (s += 1);
@@ -910,22 +918,8 @@
           return this.m_rgOnlyAllAgesScreenshots;
         }
       }
-    },
-    16021: (e, t, s) => {
-      s.d(t, { A: () => I });
-      var r = s(34629),
-        a = s(14947),
-        i = s(56545),
-        n = s(96059),
-        u = s(59411),
-        l = s(15161),
-        o = s(44332),
-        _ = s(68797),
-        c = s(78327),
-        m = s(72839),
-        h = s(75279),
-        d = s(6419);
-      function p(e, t) {
+      var C = s(6419);
+      function k(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -955,12 +949,12 @@
           include_links: e.include_links || t.include_links,
         };
       }
-      async function g(e, t) {
+      async function B(e, t) {
         const s = await e,
           r = await t;
         return 1 != s ? s : r;
       }
-      class I {
+      class P {
         k_QueueWaitUntilRequestMS = 5;
         k_nMaxBatchSize = 250;
         m_bReturnUnavailableItems = !1;
@@ -1005,20 +999,20 @@
         static sm_instance;
         static Get() {
           return (
-            I.sm_instance ||
-              ((I.sm_instance = new I()),
-              (window.StoreItemCache = I.sm_instance)),
-            I.sm_instance
+            P.sm_instance ||
+              ((P.sm_instance = new P()),
+              (window.StoreItemCache = P.sm_instance)),
+            P.sm_instance
           );
         }
         static async Initialize(e, t) {
-          (0, o.w)(
-            !I.Get().m_bInitialized,
+          (0, l.w)(
+            !P.Get().m_bInitialized,
             "CStoreItemCache was already initialized; initialize it only once.",
           ),
-            (I.Get().m_SteamInterface = e),
-            (I.Get().m_bUsePartnerAPI = !!t),
-            (I.Get().m_bInitialized = !0);
+            (P.Get().m_SteamInterface = e),
+            (P.Get().m_bUsePartnerAPI = !!t),
+            (P.Get().m_bInitialized = !0);
         }
         GetSteamInterface() {
           return this.m_SteamInterface;
@@ -1063,7 +1057,7 @@
             (this.m_bActivelyResettingCache = !1);
         }
         static BIsInitialized() {
-          return I.Get().m_bInitialized;
+          return P.Get().m_bInitialized;
         }
         static k_DataRequest_CommonOnly = {};
         static k_DataRequest_BasicInfo = { include_basic_info: !0 };
@@ -1170,8 +1164,8 @@
         }
         async QueueStoreItemRequest(e, t, s) {
           if (
-            ((0, o.w)(
-              I.ValidateDataRequest(s),
+            ((0, l.w)(
+              P.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
             "string" == typeof e && (e = parseInt(e)),
@@ -1185,7 +1179,7 @@
             );
           if (!e)
             return (
-              (0, o.w)(
+              (0, l.w)(
                 !e,
                 `unexpected id ${e} of zero or undefined for type ${t}`,
               ),
@@ -1202,7 +1196,7 @@
                 () => this.FlushPendingInfo(),
                 this.k_QueueWaitUntilRequestMS,
               ))),
-            (this.m_setPendingDataRequest = p(this.m_setPendingDataRequest, s)),
+            (this.m_setPendingDataRequest = k(this.m_setPendingDataRequest, s)),
             t)
           ) {
             case 0:
@@ -1224,7 +1218,7 @@
               this.m_setPendingHubCategoryInfo.add(e);
               break;
             default:
-              (0, o.w)(!1, `Unexpected Type ${t}`);
+              (0, l.w)(!1, `Unexpected Type ${t}`);
           }
           const a = this.m_PendingInfoPromise;
           return (
@@ -1320,26 +1314,26 @@
             case 6:
               r = this.m_mapHubCategoriesInFlight.get(e);
           }
-          return r && h.A.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
+          return r && I.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
             ? r.promise
             : null;
         }
         async HintLoadStoreItems(e, t, s, r, a, i, n, u) {
-          let o = null;
-          const _ = new Promise((e) => (o = e));
+          let l = null;
+          const _ = new Promise((e) => (l = e));
           let c = [],
             m = [];
           (t || []).forEach((e) => {
             const t = this.GetPreviousSupersetLoadPromise(e, 0, u);
             if (t) m.push(t);
             else {
-              c.push(l.O4.fromObject({ appid: e }));
-              let t = p(this.GetStoreItemDataRequest(e, 0), u);
+              c.push(o.O4.fromObject({ appid: e }));
+              let t = k(this.GetStoreItemDataRequest(e, 0), u);
               const s = this.m_mapAppsInFlight.get(e);
-              (t = p(s?.dataRequest, t)),
+              (t = k(s?.dataRequest, t)),
                 s && m.push(s.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: s ? g(s.promise, _) : _,
+                  promise: s ? B(s.promise, _) : _,
                   dataRequest: t,
                 });
             }
@@ -1348,13 +1342,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 1, u);
               if (t) m.push(t);
               else {
-                c.push(l.O4.fromObject({ packageid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 1), u);
+                c.push(o.O4.fromObject({ packageid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 1), u);
                 const s = this.m_mapPackageInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
+                (t = k(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: s ? g(s.promise, _) : _,
+                    promise: s ? B(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
@@ -1363,13 +1357,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 2, u);
               if (t) m.push(t);
               else {
-                c.push(l.O4.fromObject({ bundleid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 2), u);
+                c.push(o.O4.fromObject({ bundleid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 2), u);
                 const s = this.m_mapBundleInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
+                (t = k(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapBundleInFlight.set(e, {
-                    promise: s ? g(s.promise, _) : _,
+                    promise: s ? B(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
@@ -1378,13 +1372,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 4, u);
               if (t) m.push(t);
               else {
-                c.push(l.O4.fromObject({ tagid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 4), u);
+                c.push(o.O4.fromObject({ tagid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 4), u);
                 const s = this.m_mapTagsInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
+                (t = k(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapTagsInFlight.set(e, {
-                    promise: s ? g(s.promise, _) : _,
+                    promise: s ? B(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
@@ -1393,13 +1387,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 5, u);
               if (t) m.push(t);
               else {
-                c.push(l.O4.fromObject({ creatorid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 5), u);
+                c.push(o.O4.fromObject({ creatorid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 5), u);
                 const s = this.m_mapCreatorsInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
+                (t = k(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? g(s.promise, _) : _,
+                    promise: s ? B(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
@@ -1408,13 +1402,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 6, u);
               if (t) m.push(t);
               else {
-                c.push(l.O4.fromObject({ hubcategoryid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 6), u);
+                c.push(o.O4.fromObject({ hubcategoryid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 6), u);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
+                (t = k(s?.dataRequest, t)),
                   s && m.push(s.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? g(s.promise, _) : _,
+                    promise: s ? B(s.promise, _) : _,
                     dataRequest: t,
                   });
               }
@@ -1423,7 +1417,7 @@
           if (
             (c.length > 0 &&
               (h = await this.InternalHandleLoadStoreItems(e, c, u)),
-            o(h),
+            l(h),
             m.length > 0)
           ) {
             const e = await Promise.all(m);
@@ -1476,9 +1470,9 @@
               let n = e.bundleid() ?? 0,
                 u = t.bundleid() ?? 0;
               if (n != u) return n - u;
-              let l = e.tagid() ?? 0,
-                o = t.tagid() ?? 0;
-              if (l != o) return l - o;
+              let o = e.tagid() ?? 0,
+                l = t.tagid() ?? 0;
+              if (o != l) return o - l;
               let _ = e.creatorid() ?? 0,
                 c = t.creatorid() ?? 0;
               if (_ != c) return _ - c;
@@ -1504,25 +1498,25 @@
                   include_included_items: !1,
                 },
               });
-          const o = new Array();
+          const l = new Array();
           try {
             const n = [];
             for (; t.length > 0; ) {
               const r = t.splice(0, this.k_nMaxBatchSize);
-              if ((o.push(r), this.m_bUsePartnerAPI)) {
+              if ((l.push(r), this.m_bUsePartnerAPI)) {
                 const t = i.w.Init(u.St);
                 t.Body().set_include_unpublished(!1);
                 const a = t.Body().request(!0);
                 a.set_context((0, m.hS)(this.m_bUsePartnerAPI)),
-                  a.set_data_request(l.gn.fromObject(s)),
+                  a.set_data_request(o.gn.fromObject(s)),
                   a.set_ids(r),
                   n.push(u.BT.GetItems(e.GetServiceTransport(), t));
               } else {
-                const t = i.w.Init(l.eE);
+                const t = i.w.Init(o.eE);
                 (0, m.rV)(t, this.m_bUsePartnerAPI),
                   (0, m.Bn)(t, s),
                   t.Body().set_ids(r),
-                  n.push(l.$4.GetItems(e.GetAnonymousServiceTransport(), t));
+                  n.push(o.$4.GetItems(e.GetAnonymousServiceTransport(), t));
               }
             }
             (await Promise.all(n)).forEach((e, i) => {
@@ -1535,8 +1529,8 @@
                         n = r.item_type();
                       let u =
                           this.m_bReturnUnavailableItems && 15 == r.success(),
-                        l = 1 == r.success() && !this.BIsStoreItemMissing(i, n);
-                      if (u || l) this.ReadItem(r, s);
+                        o = 1 == r.success() && !this.BIsStoreItemMissing(i, n);
+                      if (u || o) this.ReadItem(r, s);
                       else {
                         switch (
                           ("dev" == c.TS.WEB_UNIVERSE &&
@@ -1616,7 +1610,7 @@
                     (0, a.HO)(t),
                   ),
                   (1 == e.Hdr().transport_error() || c.TS.FROM_WEB) &&
-                    this.MarkStoreItemIDUnavailable(o[i]),
+                    this.MarkStoreItemIDUnavailable(l[i]),
                   1 == r && (r = e.GetEResult()));
             });
           } catch (e) {
@@ -1627,7 +1621,7 @@
                   t.strErrorMsg,
                 t,
               ),
-              o.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
+              l.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
               79
             );
           }
@@ -1814,7 +1808,7 @@
           }
           let a = r.get(e.id());
           if (
-            (a ? a.MergeData(e, t) : ((a = new h.A(e, t)), r.set(e.id(), a)),
+            (a ? a.MergeData(e, t) : ((a = new I(e, t)), r.set(e.id(), a)),
             t.include_included_items && e.included_items(!1))
           ) {
             for (const s of e.included_items().included_apps())
@@ -1825,7 +1819,7 @@
           return a;
         }
       }
-      (0, r.Cg)([d.o], I.prototype, "ReadItem", null);
+      (0, r.Cg)([C.o], P.prototype, "ReadItem", null);
     },
     62792: (e, t, s) => {
       var r;
@@ -1870,7 +1864,7 @@
             return 0;
         }
       }
-      function l(e) {
+      function o(e) {
         switch (e) {
           case 2:
             return "bundle";
@@ -1880,7 +1874,7 @@
             return "app";
         }
       }
-      function o(e, t, s) {
+      function l(e, t, s) {
         return e
           ? { id: e, item_type: "app" }
           : t
@@ -2042,7 +2036,7 @@
         Rz: () => n,
         SW: () => u,
         Si: () => C,
-        TM: () => l,
+        TM: () => o,
         TV: () => S,
         _P: () => I,
         cW: () => f,
@@ -2053,7 +2047,7 @@
         s9: () => y,
         vo: () => m,
         wD: () => d,
-        wR: () => o,
+        wR: () => l,
       }),
         (function (e) {
           (e[(e.k_NotRejected = -1)] = "k_NotRejected"),

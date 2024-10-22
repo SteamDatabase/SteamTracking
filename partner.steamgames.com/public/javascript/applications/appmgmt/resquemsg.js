@@ -29,7 +29,7 @@
         u = r(44332),
         d = r(68797),
         m = r(6144),
-        _ = r(73745),
+        _ = r(375),
         g = r(30470);
       class p {
         m_mapProductPositionMsgList = new Map();
@@ -275,7 +275,7 @@
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          s.createElement(C, { selected: t, setSelected: r }),
+          s.createElement(b, { selected: t, setSelected: r }),
           s.createElement(
             v.$n,
             {
@@ -290,7 +290,7 @@
           ),
         );
       }
-      function C(e) {
+      function b(e) {
         const { selected: t, setSelected: r } = e,
           n = (0, s.useRef)(),
           a = (function () {
@@ -340,7 +340,7 @@
           },
         });
       }
-      var b = r(71298),
+      var C = r(71298),
         R = r(99637),
         P = r(8905),
         w = r(9154),
@@ -614,9 +614,9 @@
             r?.localization_token || "#Sale_Reservation_MonthYear",
           ),
           _ = r ? "Update Queue Range" : "Create Queue Range",
-          g = (0, b.vs)();
+          g = (0, C.vs)();
         return g.bLoading
-          ? s.createElement(b.Hh, {
+          ? s.createElement(C.Hh, {
               state: g,
               strDialogTitle: _,
               closeModal: n,
@@ -686,9 +686,9 @@
         const { positionMsg: t, closeModal: r } = e,
           { fnDeletePositionMessage: n } = f(),
           o = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          a = (0, b.vs)();
+          a = (0, C.vs)();
         return a.bLoading
-          ? s.createElement(b.Hh, {
+          ? s.createElement(C.Hh, {
               state: a,
               strDialogTitle: o,
               closeModal: r,
@@ -852,23 +852,6 @@
               ),
             ),
           ),
-        );
-      }
-    },
-    4434: (e, t, r) => {
-      "use strict";
-      r.d(t, { m: () => a });
-      var s = r(41735),
-        n = r.n(s),
-        o = r(90626);
-      function a(e) {
-        const t = o.useRef(n().CancelToken.source());
-        return (
-          o.useEffect(() => {
-            const r = t.current;
-            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
         );
       }
     },

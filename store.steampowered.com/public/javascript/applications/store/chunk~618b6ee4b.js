@@ -690,13 +690,13 @@
         i = a(90626),
         l = a(57876),
         c = a(30894),
-        m = a(16021),
+        m = a(82097),
         u = a(62792),
         d = a(99032),
         _ = a(62490),
         p = a(68797),
         g = a(6144),
-        h = a(73745),
+        h = a(375),
         S = a(78327),
         f = a(36837);
       function v(e, t, a, n) {
@@ -1424,7 +1424,7 @@
         _ = a(62490),
         p = a(44332),
         g = a(68797),
-        h = a(73745),
+        h = a(375),
         S = a(78327);
       function f(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
@@ -1697,7 +1697,7 @@
         o = a(90626),
         i = a(68797),
         l = a(6144),
-        c = a(73745),
+        c = a(375),
         m = a(78327);
       class u {
         m_library;
@@ -1863,7 +1863,7 @@
         o = a.n(s),
         i = a(90626),
         l = a(6144),
-        c = a(73745),
+        c = a(375),
         m = a(44332);
       class u {
         m_mapBadgeInfo = new Map();
@@ -1989,7 +1989,7 @@
         c = a(72034),
         m = a(62490),
         u = a(6144),
-        d = a(73745),
+        d = a(375),
         _ = a(30470),
         p = a(24484),
         g = a(72839);
@@ -2212,7 +2212,7 @@
         o = a(90626),
         i = a(68797),
         l = a(6144),
-        c = a(73745),
+        c = a(375),
         m = a(78327);
       class u {
         m_mapAppItemDefs = new Map();
@@ -2971,7 +2971,7 @@
         i = a(90626),
         l = a(68797),
         c = a(6144),
-        m = a(73745),
+        m = a(375),
         u = a(78327),
         d = a(44165),
         _ = a(12443);
@@ -3309,10 +3309,10 @@
         o = (a(90626), a(77516)),
         i = a(44332),
         l = a(6144),
-        c = a(73745),
+        c = a(375),
         m = a(78327),
         u = a(91254),
-        d = a(16021),
+        d = a(82097),
         _ = a(3967);
       !(function (e) {
         (e[(e.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
@@ -4032,7 +4032,7 @@
       a.d(t, { Z: () => c });
       var n = a(34629),
         r = a(90626),
-        s = a(73745),
+        s = a(375),
         o = a(52724),
         i = a.n(o),
         l = a(76217);
@@ -4145,6 +4145,7 @@
         g = a.n(p);
       const h = r.lazy(() =>
           Promise.all([
+            a.e(4607),
             a.e(7937),
             a.e(915),
             a.e(7328),
@@ -7230,7 +7231,7 @@
         b = a(17560),
         E = a(41735),
         C = a.n(E),
-        w = a(16021),
+        w = a(82097),
         I = a(62792),
         A = a(89274),
         D = a(61859);
@@ -11174,7 +11175,7 @@
       window.g_SaleTokenPointStore = ea;
       var ta = a(44332),
         aa = a(56011),
-        na = a(73745),
+        na = a(375),
         ra = a(91382);
       let sa = class extends n.Component {
         componentDidMount() {
@@ -13027,13 +13028,12 @@
       class fn {
         m_promiseLoader = null;
         async LoadWishlistRecommendations(e, t, a) {
-          if (e > 0 && t > 0 && a?.length > 0)
-            return (
-              this.m_promiseLoader ||
+          return e > 0 && t > 0 && a?.length > 0
+            ? (this.m_promiseLoader ||
                 (this.m_promiseLoader =
                   this.InternalLoadWishlistRecommendations(e, t, a)),
-              this.m_promiseLoader
-            );
+              this.m_promiseLoader)
+            : [];
         }
         async InternalLoadWishlistRecommendations(e, t, a) {
           try {
@@ -13056,18 +13056,6 @@
           }
           return (0, v.Fd)("topwishlisted", "application_config") ?? [];
         }
-        static GetItemsSortedByWishlistRecommendation(e, t, a) {
-          const n = new Map(t.map((e, t) => [e, t])),
-            r = e.filter((e) => null == n.get(e.id)),
-            s = e.filter((e) => null != n.get(e.id));
-          return (
-            s.sort((e, t) => n.get(e.id) - n.get(t.id)),
-            r.length > 0 &&
-              (0 === (a ?? 0) || a - s.length > 0) &&
-              (0, Pa.fW)(r, 0 === (a ?? 0) ? 0 : a - s.length),
-            [...s, ...r]
-          );
-        }
         static s_globalSingletonStore;
         static Get() {
           return (
@@ -13082,45 +13070,22 @@
           (0, oe.Gn)(this);
         }
       }
-      (0, re.Cg)([oe.XI], fn.prototype, "LoadWishlistRecommendations", null);
-      class vn {
-        m_nMaxTiers = 0;
-        m_nDefaultTier = 0;
-        m_rgCapsuleMap = new Map();
-        constructor(e) {
-          const t = e.jsondata;
-          if (t.sorting_tiers) {
-            this.m_nDefaultTier = -1;
-            for (const e of t.sorting_tiers) {
-              const t = this.m_nMaxTiers;
-              if ((this.m_nMaxTiers++, e.capsules))
-                for (const a of e.capsules)
-                  a.id && this.m_rgCapsuleMap.set(a.id, t);
-              else this.m_nDefaultTier < 0 && (this.m_nDefaultTier = t);
-            }
-            this.m_nDefaultTier < 0 &&
-              ((this.m_nDefaultTier = this.m_nMaxTiers), this.m_nMaxTiers++);
-          }
-        }
-        RandomizeCapsules(e, t, a) {
-          const n = (e, t) => {
-            if (!a || 0 == a.length) return void (0, Pa.fW)(e, t);
-            const n = fn.GetItemsSortedByWishlistRecommendation(e, a, t);
-            e.splice(0, e.length, ...n);
-          };
-          if (0 === this.m_nMaxTiers || 0 === this.m_rgCapsuleMap.size)
-            return void n(e, 0);
-          const r = new Array();
-          for (let e = 0; e < this.m_nMaxTiers; e++) r.push([]);
-          for (const t of e) {
-            r[this.m_rgCapsuleMap.get(t.id) ?? this.m_nDefaultTier].push(t);
-          }
-          e.length = 0;
-          for (const a of r) n(a, t), e.push(...a);
-        }
+      function vn(e, t, a) {
+        const n = new Map(t.map((e, t) => [e, t])),
+          r = e.filter((e) => null == n.get(e.id)),
+          s = e.filter((e) => null != n.get(e.id));
+        return (
+          s.sort((e, t) => n.get(e.id) - n.get(t.id)),
+          r.length > 0 &&
+            (0 === (a ?? 0) || a - s.length > 0) &&
+            (0, Pa.fW)(r, 0 === (a ?? 0) ? 0 : a - s.length),
+          [...s, ...r]
+        );
       }
-      function yn(e, t, a, n) {
-        new vn(e).RandomizeCapsules(t, a, n);
+      function yn(e, t, a) {
+        if (!a || 0 == a.length) return void (0, Pa.fW)(e, t);
+        const n = vn(e, a, t);
+        e.splice(0, e.length, ...n);
       }
       function bn(e, t, a, n, r, s, o) {
         if (!t.use_random_order || n.length <= 1) return n;
@@ -13140,23 +13105,25 @@
         let l;
         if (i) {
           if (i.length >= n.length) return i;
-          const a = new Set(i.map((e) => e.id)),
-            s = n.filter((e) => !a.has(e.id));
+          const e = new Set(i.map((e) => e.id)),
+            a = n.filter((t) => !e.has(t.id));
           if (t.random_order_top_x > 0 && t.random_order_top_x <= i.length)
-            l = i.concat(s);
+            l = i.concat(a);
           else if (
             t.random_order_top_x > 0 &&
-            t.random_order_top_x < i.length + s.length
+            t.random_order_top_x < i.length + a.length
           ) {
-            const a =
+            r(
+              a,
               t.use_random_order &&
-              t.random_order_top_x &&
-              t.random_order_top_x - i.length;
-            r(e, s, a), (l = i.concat(s));
+                t.random_order_top_x &&
+                t.random_order_top_x - i.length,
+            ),
+              (l = i.concat(a));
           }
         } else {
-          const a = t.use_random_order && t.random_order_top_x;
-          (l = Array.from(n)), r(e, l, a);
+          const e = t.use_random_order && t.random_order_top_x;
+          (l = Array.from(n)), r(l, e);
         }
         if (l) {
           const t = (t) => {
@@ -13199,7 +13166,7 @@
               e.jsondata.item_order_override?.sAccessToken,
             );
         return (
-          yn(e, t.capsules, s, o),
+          yn(t.capsules, s, o),
           (0, Pa.fW)(t.links, s),
           (0, Pa.fW)(
             t.events?.filter((e) => Boolean(e)),
@@ -13211,6 +13178,7 @@
           t
         );
       }
+      (0, re.Cg)([oe.XI], fn.prototype, "LoadWishlistRecommendations", null);
       function wn(e, t, a) {
         if (null == e || null == t) return null;
         let n = e + "_" + t;
@@ -13653,16 +13621,15 @@
             let s = r.data.rgCapsules;
             if (t.use_random_order)
               if ((0, me.O8)(e.jsondata.item_order_override)) {
-                const a = await fn
-                  .Get()
-                  .LoadWishlistRecommendations(
-                    e.jsondata.item_order_override.nProjectID,
-                    e.jsondata.item_order_override.nPublishedVersion,
-                    e.jsondata.item_order_override.sAccessToken,
-                  );
-                s = fn.GetItemsSortedByWishlistRecommendation(
+                s = vn(
                   s,
-                  a,
+                  await fn
+                    .Get()
+                    .LoadWishlistRecommendations(
+                      e.jsondata.item_order_override.nProjectID,
+                      e.jsondata.item_order_override.nPublishedVersion,
+                      e.jsondata.item_order_override.sAccessToken,
+                    ),
                   t.random_order_top_x,
                 );
               } else
@@ -13812,7 +13779,7 @@
               "events" + s.length,
               n?.GetActiveTabUniqueID(),
             );
-            (o = bn(e, t, i, o, (e, t, a) => (0, Pa.fW)(t, a))),
+            (o = bn(e, t, i, o, (e, t) => (0, Pa.fW)(e, t))),
               (s = o.map((e) => Ct.O3.GetClanEventModel(e)));
             let l = s.filter(
               (t) =>
@@ -13863,7 +13830,7 @@
                 t,
                 Sn(e, t, a, "links", n?.GetActiveTabUniqueID()),
                 r,
-                (e, t, a) => (0, Pa.fW)(t, a),
+                (e, t) => (0, Pa.fW)(e, t),
               );
             }
             return r;
@@ -13885,7 +13852,7 @@
               e.jsondata.item_order_override?.nPublishedVersion,
               e.jsondata.item_order_override?.sAccessToken,
             ),
-          A = (e, t, a) => yn(e, t, a, I);
+          A = (e, t) => yn(e, t, I);
         if (t.smart_section) {
           const s = await (async function (e, t, a, n, s, o, i, l, c, m = 0) {
             const {
@@ -21198,7 +21165,7 @@
         s = a(20019),
         o = a(76217),
         i = a(30894),
-        l = a(16021),
+        l = a(82097),
         c = a(55263),
         m = a(3734),
         u = a(12155),

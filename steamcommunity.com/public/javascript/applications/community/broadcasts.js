@@ -299,8 +299,8 @@
         I = a(35685),
         w = a(95034),
         D = a(95695),
-        N = a.n(D),
-        T = a(45359),
+        T = a.n(D),
+        N = a(45359),
         y = a(21273),
         G = a(738),
         k = a(52038),
@@ -664,7 +664,7 @@
                 n.createElement(
                   "div",
                   { className: M.AppSummaryWidgetCtn },
-                  n.createElement(T.pb, { id: a.app_id, type: "game" }),
+                  n.createElement(N.pb, { id: a.app_id, type: "game" }),
                 ),
             ),
             n.createElement(
@@ -924,7 +924,7 @@
               e.broadcastSteamID.ConvertTo64BitString();
           return n.createElement(
             "div",
-            { className: (0, k.A)(re.AdminControls, N().ValveOnlyBackground) },
+            { className: (0, k.A)(re.AdminControls, T().ValveOnlyBackground) },
             n.createElement("div", null, "(VO) Support Tools"),
             n.createElement(
               f.$n,
@@ -1262,7 +1262,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, k.A)(N().ValveOnlyBackground, L.DebugCtn),
+                      className: (0, k.A)(T().ValveOnlyBackground, L.DebugCtn),
                     },
                     n.createElement(P, null),
                   ),
@@ -1283,14 +1283,14 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: N().EventSectionSpacer },
+                      { className: T().EventSectionSpacer },
                       " ",
                     ),
                   ),
                   n.createElement(
                     "div",
                     { className: L.GameInfo },
-                    n.createElement(T.pb, {
+                    n.createElement(N.pb, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                     }),
@@ -1696,8 +1696,8 @@
         I = a(12155),
         w = a(60014),
         D = a(62490),
-        N = a(52038),
-        T = a(61859),
+        T = a(52038),
+        N = a(61859),
         y = a(78327),
         G = a(84811),
         k = a(22797),
@@ -1794,19 +1794,19 @@
             null,
             i.createElement(
               "div",
-              { className: (0, N.A)(O().OtherEventsCtn, "OtherEventsCtn") },
+              { className: (0, T.A)(O().OtherEventsCtn, "OtherEventsCtn") },
               i.createElement(
                 "div",
                 { className: C().EventSectionTitleCtn },
                 i.createElement(
                   "div",
                   {
-                    className: (0, N.A)(
+                    className: (0, T.A)(
                       C().EventSectionTitle,
                       "EventSectionTitle",
                     ),
                   },
-                  (0, T.PP)("#EventBrowse_MoreEventsTitle", b.group_name),
+                  (0, N.PP)("#EventBrowse_MoreEventsTitle", b.group_name),
                   " ",
                 ),
                 i.createElement(
@@ -1821,7 +1821,7 @@
                         className: C().EventSectionMoreBtn,
                         onClick: () => f(!0),
                       },
-                      (0, T.we)("#EventBrowse_MoreEventsBtn"),
+                      (0, N.we)("#EventBrowse_MoreEventsBtn"),
                     )
                   : i.createElement(
                       g.tj,
@@ -1830,7 +1830,7 @@
                         route: g.PH.k_eViewWebSiteHub,
                         className: C().EventSectionMoreBtn,
                       },
-                      (0, T.we)("#EventBrowse_MoreEventsBtn"),
+                      (0, N.we)("#EventBrowse_MoreEventsBtn"),
                     ),
               ),
               i.createElement(
@@ -1866,7 +1866,7 @@
             eEventRount: c,
             bHidePrices: m,
           } = e,
-          [d, p, v, A, h, B, C, f] = (0, s.q3)(() => {
+          [d, p, v, A, S, h] = (0, s.q3)(() => {
             const e = l || (0, n.sf)(y.TS.LANGUAGE),
               r = Boolean(void 0 !== a)
                 ? a
@@ -1875,53 +1875,34 @@
                 ? a
                 : t.GetImageURLWithFallback("capsule", e, E.wI.full);
             return [
-              t.appid,
               r,
               t.GetNameWithFallback(e) || "",
               t.GetCategoryAsString(),
               t.GetSummaryWithFallback(e),
-              (0, u.j3)(r),
-              (0, u.j3)(o),
+              o,
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [I] = (0, S.t7)(d, { include_assets: !0, include_screenshots: !0 }),
-          [w, D] = (0, i.useState)(void 0);
-        if (
-          ((0, i.useEffect)(() => {
-            const e = new Image();
-            (e.src = p),
-              (e.onload = () => {
-                D(B);
-              }),
-              (e.onerror = () => {
-                D(C);
-              });
-          }, [B, p, C]),
-          !t)
-        )
+          [B, C] = (0, i.useState)(void 0),
+          f = B
+            ? { src: B }
+            : { src: d, onLoad: () => C(d), onError: () => C(S) };
+        if (!t)
           return i.createElement("div", {
             className: O().OtherEvents_EventCtn,
           });
-        if (!I && d)
-          return i.createElement(k.t, {
-            className: O().OtherEvents_EventCtn,
-            size: "small",
-            position: "center",
-            string: (0, T.we)("#Loading"),
-          });
-        const G = (0, _.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          U = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let R = f;
+        const I = (0, _.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          w = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let D = h;
         return (
-          f && (f.length > F || v.length > F) && (R = void 0),
+          h && (h.length > F || p.length > F) && (D = void 0),
           i.createElement(
             i.Fragment,
             null,
             i.createElement(
               g.tj,
               {
-                className: (0, N.A)(
+                className: (0, T.A)(
                   O().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
                   O().HoversEnabled,
@@ -1934,14 +1915,14 @@
               i.createElement(
                 "div",
                 { className: O().EventSummaryContainer },
-                i.createElement("div", { className: O().EventSummaryType }, A),
-                i.createElement("div", { className: O().EventSummaryText }, h),
+                i.createElement("div", { className: O().EventSummaryType }, v),
+                i.createElement("div", { className: O().EventSummaryText }, A),
               ),
               i.createElement("div", {
                 className: O().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
-                  backgroundImage: w ? `url(${w})` : "none",
+                  backgroundImage: B ? `url(${(0, u.j3)(B)})` : "none",
                 },
               }),
               i.createElement(
@@ -1951,7 +1932,7 @@
                   "div",
                   { className: O().OtherEvents_MainImageCtn },
                   i.createElement("img", {
-                    src: w || p,
+                    ...f,
                     className: O().OtherEvents_MainImage,
                   }),
                 ),
@@ -1961,18 +1942,18 @@
                   i.createElement(
                     "div",
                     { className: O().OtherEvents_TextTitle },
-                    v,
+                    p,
                   ),
-                  Boolean(R) &&
+                  Boolean(D) &&
                     i.createElement(
                       "div",
                       { className: O().OtherEvents_SubTitle },
-                      R,
+                      D,
                     ),
-                  Boolean(U > G)
+                  Boolean(w > I)
                     ? i.createElement(
                         "div",
-                        { className: (0, N.A)(O().UpcomingCtn, "UpcomingCtn") },
+                        { className: (0, T.A)(O().UpcomingCtn, "UpcomingCtn") },
                         i.createElement(b.K4, {
                           bSingleLine: !0,
                           dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
@@ -2005,7 +1986,7 @@
           i.createElement(
             m.Z,
             {
-              className: (0, N.A)(O().AppCapsuleCtn, "AppCapsuleCtn"),
+              className: (0, T.A)(O().AppCapsuleCtn, "AppCapsuleCtn"),
               ...(0, f.S)(n, r, l, !1),
             },
             i.createElement(
@@ -2026,7 +2007,7 @@
               i.createElement(
                 "span",
                 {
-                  className: (0, N.A)(
+                  className: (0, T.A)(
                     O().AppCapsulePrice,
                     Boolean(null == o ? void 0 : o.discount_pct)
                       ? Q().Discounted

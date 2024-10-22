@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9264341";
+var CLSTAMP = "9279751";
 (() => {
   "use strict";
   function e(e) {
@@ -151,28 +151,28 @@ var CLSTAMP = "9264341";
     const a = {},
       u = l("config", _);
     u && (delete u.SESSIONID, Object.assign(n, u), (a.config = !0));
-    const m = l("userinfo", _);
-    m &&
-      (Object.assign(i, m),
+    const E = l("userinfo", _);
+    E &&
+      (Object.assign(i, E),
       (a.userConfig = !0),
       i.is_support &&
         (function () {
           let n = null;
-          t() && (n = e(E));
+          t() && (n = e(S));
           return Boolean(n && 1 === Number.parseInt(n));
         })() &&
         (i.is_support = !1));
-    const S = l("broadcast", _);
-    S && (Object.assign(s, S), (a.broadcastConfig = !0));
+    const m = l("broadcast", _);
+    m && (Object.assign(s, m), (a.broadcastConfig = !0));
     const d = l("community", _);
     d && (Object.assign(o, d), (a.communityConfig = !0));
-    const h = l("event", _);
-    return h && (Object.assign(c, h), (a.eventConfig = !0)), a;
+    const C = l("event", _);
+    return C && (Object.assign(c, C), (a.eventConfig = !0)), a;
   }
   function l(e, t = r) {
-    return m(e, t, !0);
+    return E(e, t, !0);
   }
-  function m(e, t = r, n) {
+  function E(e, t = r, n) {
     let s;
     if (
       ((s =
@@ -204,8 +204,8 @@ var CLSTAMP = "9264341";
       }
     else n && console.error("Missing config element #", t);
   }
-  const E = "presentation_mode";
-  let S = { success: !0, result: 1 };
+  const S = "presentation_mode";
+  let m = { success: !0, result: 1 };
   class d {
     m_mapWaitingCallbacks = new Map();
     m_socket;
@@ -231,7 +231,7 @@ var CLSTAMP = "9264341";
       return !this.m_bSecurityException;
     }
     get connected_to_client() {
-      return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
+      return !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
     }
     SendMsgAndAwaitResponse(e) {
       return new Promise((t, n) => {
@@ -275,7 +275,7 @@ var CLSTAMP = "9264341";
       }
     }
     Connect() {
-      if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
+      if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
         return Promise.resolve();
       if (this.m_promiseConnect) return this.m_promiseConnect;
       let e = new Promise((e, t) => {
@@ -318,9 +318,8 @@ var CLSTAMP = "9264341";
       );
     }
   }
-  let h = new (class {
+  let C = new (class {
     m_connection = new d();
-    m_bAllowAccountMismatch = !1;
     FailureResult(e = 2) {
       let t = { success: !1, result: e };
       return (
@@ -334,14 +333,17 @@ var CLSTAMP = "9264341";
         t
       );
     }
-    SetAllowAccountMismatch(e) {
-      this.m_bAllowAccountMismatch = e;
-    }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => S,
+        () => m,
         () => this.FailureResult(),
       );
+    }
+    BClientConnectedAndSupportsMessage(e) {
+      return this.m_connection
+        .Connect()
+        .then(() => this.BClientSupportsMessage(e))
+        .catch(() => !1);
     }
     BClientSupportsMessage(e) {
       return (
@@ -357,16 +359,16 @@ var CLSTAMP = "9264341";
       let n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
       return t && (n.chat_room_id = t), this.GenericEResultCall(n);
     }
-    ShowChatRoomGroupInvite(e) {
-      let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
-      return this.GenericEResultCall(t);
+    ShowChatRoomGroupInvite(e, t = !0) {
+      let n = { message: "ShowChatRoomGroupInvite", invite_code: e };
+      return this.GenericEResultCall(n, t);
     }
     m_mapCacheSubscribedApp = new Map();
     BIsSubscribedApp(e) {
       if (this.m_mapCacheSubscribedApp.has(e))
         return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
       let t = { message: "IsSubscribedApp", appid: e };
-      return this.GenericEResultCall(t).then((t) => {
+      return this.GenericEResultCall(t, !0).then((t) => {
         if (t.connect_failed) return;
         let n = 1 == t.result;
         return this.m_mapCacheSubscribedApp.set(e, n), n;
@@ -375,32 +377,32 @@ var CLSTAMP = "9264341";
     OpenFriendsDialog() {
       return this.GenericEResultCall({ message: "OpenFriendsDialog" });
     }
-    OpenSteamURL(e) {
-      let t = { message: "OpenSteamURL", url: e };
-      return this.GenericEResultCall(t);
+    OpenSteamURL(e, t = !1) {
+      let n = { message: "OpenSteamURL", url: e };
+      return this.GenericEResultCall(n, t);
     }
     BClientAccountMatches() {
       return (
         !i.logged_in || i.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
-    GenericEResultCall(e) {
+    GenericEResultCall(e, t = !1) {
       return this.m_connection
         .Connect()
         .then(() =>
-          this.m_bAllowAccountMismatch || this.BClientAccountMatches()
-            ? this.m_connection
+          t && !this.BClientAccountMatches()
+            ? { success: !1, result: 19, account_mismatch: !0 }
+            : this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? S : this.FailureResult(e.success),
-                )
-            : { success: !1, result: 19, account_mismatch: !0 },
+                  1 === e.success ? m : this.FailureResult(e.success),
+                ),
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = h),
+  (window.ClientConnectionAPI = C),
     document.addEventListener("DOMContentLoaded", function () {
-      u(), (window.ClientConnectionAPI = h);
+      u(), (window.ClientConnectionAPI = C);
     });
 })();

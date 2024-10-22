@@ -2759,9 +2759,9 @@
       })(Y || (Y = {}));
       var Q = r(78327),
         J = r(72839),
-        ee = r(75279),
-        te = r(44332),
-        re = r(14947);
+        ee = r(44332),
+        te = r(14947),
+        re = r(82097);
       class se {
         m_SteamInterface;
         m_SteamInterfacePromotions;
@@ -2782,7 +2782,7 @@
         }
         static Get() {
           return (
-            (0, te.w)(
+            (0, ee.w)(
               se.sm_Instance,
               "MarketingMessages store not initialized",
             ),
@@ -2850,10 +2850,10 @@
         m_templateVars = void 0;
         m_item;
         constructor(e) {
-          (0, re.Gn)(this),
+          (0, te.Gn)(this),
             (this.m_message = e),
             e.associated_item() &&
-              (this.m_item = new ee.A(
+              (this.m_item = re.A.Get().ReadItem(
                 e.associated_item(),
                 se.sm_DefaultDataRequest,
               )),
@@ -2985,7 +2985,7 @@
           return this.m_item;
         }
       }
-      (0, s.Cg)([re.sH], ie.prototype, "m_templateVars", void 0);
+      (0, s.Cg)([te.sH], ie.prototype, "m_templateVars", void 0);
       const ae = "^(replay)([0-9]{4})";
       function ne(e) {
         const t = e.match(ae);
@@ -3222,7 +3222,7 @@
           ? `${M.TS.MEDIA_CDN_URL}steam/marketing/${e}/${s.path}${i}`
           : `${M.TS.BASE_URL_SHARED_CDN}store_item_assets/mm/${e}/${t}/${s.path}${i}`;
       }
-      var B = r(73745);
+      var B = r(375);
       function p(e) {
         const { path: t, message: r, eLanguage: s, ...a } = e,
           n = r.GetTemplateVars()?.last_asset_mtime,
@@ -3927,7 +3927,9 @@
           )
         );
       }
-      const fe = i.lazy(() => r.e(8287).then(r.bind(r, 79194)));
+      const fe = i.lazy(() =>
+        Promise.all([r.e(5976), r.e(8287)]).then(r.bind(r, 79194)),
+      );
       function we(e) {
         const { message: t, active: r, preview: n } = e,
           c = (0, s.sf)(l.TS.LANGUAGE),

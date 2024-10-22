@@ -27,7 +27,7 @@
         l = s(55963),
         d = s(54728),
         m = s(13952),
-        c = s(73745),
+        c = s(375),
         u = s(6144);
       class p extends a.Component {
         constructor() {
