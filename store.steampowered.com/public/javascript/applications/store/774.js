@@ -763,11 +763,13 @@
           i = n.data?.cart_items.some((e) => !e.can_purchase_as_gift);
         let s = F.k_ECanRequest;
         return (
-          a || (s = F.k_EIsNotChild),
-          (function (e) {
-            return (0, r.c2)(e) || (0, r.kx)(e);
-          })(e) || (s = F.k_EInvalidCartType),
-          i && (s = F.k_ENonGiftableItemPresent),
+          a
+            ? !(function (e) {
+                return (0, r.c2)(e) || (0, r.kx)(e);
+              })(e)
+              ? (s = F.k_EInvalidCartType)
+              : i && (s = F.k_ENonGiftableItemPresent)
+            : (s = F.k_EIsNotChild),
           [s === F.k_ECanRequest, s]
         );
       }
