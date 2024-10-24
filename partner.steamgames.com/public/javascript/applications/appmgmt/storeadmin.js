@@ -398,13 +398,13 @@
         MilestoneButton: "_1qXO7rz_wCXLWRo_houCbh",
         CreateNew: "_22QIeT-g3ZpjjwU27DyBg3",
         LangBox: "oHsool0rU2gYfVTjIVrGt",
+        CreationButtonRow: "BsMGgRExOtnnHfrfRMeJ7",
       };
     },
     64442: (e) => {
       e.exports = {
         BtnCtn: "_15Uzhk19FXMyjsNEpD2w__",
         MilestoneTable: "_32pGw8RvFp8N1tj1ZZFD3V",
-        Title: "_1mKdKX6UWXtF0-eJiDQQdm",
         Date: "_3eoKJfAU5YNpujekRJ29Lt",
         EditBtn: "_3GPoiDQhG2AWZ8zqnefzZt",
         StatusRow: "hs6Pa5T0Gbw8pd9VpJNAs",
@@ -415,6 +415,8 @@
         MilestoneTitleField: "_2J6DntV8BgxcP9CSCueNZu",
         OptionDetails: "_3IQkWWzfVA9kOWtxTMekyW",
         DatePickerRow: "_3ZMVdS_YE75SaKzbxL0ifx",
+        TitlePreviewRow: "_82lvRm6zNUSuia5C-0KVb",
+        Shipped: "_1jDNm9kCJcNIl38lakfF51",
       };
     },
     29602: (e) => {
@@ -2667,17 +2669,17 @@
         );
       }
       var q = n(33645),
-        Q = n.n(q);
-      function j(e, t, n = 0) {
+        j = n.n(q);
+      function Q(e, t, n = 0) {
         return () => [e, { class: t }, n];
       }
       function X(e, t) {
         return () => [
           t,
-          { class: Q().PreservedUnsupportedTag },
-          ["span", { class: Q().Tag }, `[${e}]`],
+          { class: j().PreservedUnsupportedTag },
+          ["span", { class: j().Tag }, `[${e}]`],
           ["span", 0],
-          ["span", { class: Q().Tag }, `[/${e}]`],
+          ["span", { class: j().Tag }, `[/${e}]`],
         ];
       }
       const Z = {
@@ -2686,7 +2688,7 @@
             content: "inline*",
             group: "block",
             parseDOM: [{ tag: "p" }],
-            toDOM: j("p", (0, T.A)("pm_paragraph", Q().Paragraph)),
+            toDOM: Q("p", (0, T.A)("pm_paragraph", j().Paragraph)),
             bbCode: { tag: "p", autocloses: !0 },
           },
           heading: {
@@ -2702,7 +2704,7 @@
               "h" + e.attrs.level,
               {
                 class:
-                  `BB_Header${e.attrs.level} ` + Q()[`Header${e.attrs.level}`],
+                  `BB_Header${e.attrs.level} ` + j()[`Header${e.attrs.level}`],
               },
               0,
             ],
@@ -2733,7 +2735,7 @@
             ],
             toDOM(e) {
               const { src: t, alt: n, title: a } = e.attrs;
-              return ["img", { src: t, alt: n, title: a, class: Q().Image }];
+              return ["img", { src: t, alt: n, title: a, class: j().Image }];
             },
             bbCode: {
               tag: "img",
@@ -2746,20 +2748,20 @@
             ...M.fF,
             content: "list_item+",
             group: "block",
-            toDOM: j("ul", Q().List),
+            toDOM: Q("ul", j().List),
             bbCode: { tag: "list" },
           },
           ordered_list: {
             ...M.o8,
             content: "list_item+",
             group: "block",
-            toDOM: j("ol", Q().OrderedList),
+            toDOM: Q("ol", j().OrderedList),
             bbCode: { tag: "olist" },
           },
           list_item: {
             ...M.Aw,
             content: "paragraph block*",
-            toDOM: j("li", Q().ListItem),
+            toDOM: Q("li", j().ListItem),
             bbCode: { tag: "*", autocloses: !0 },
           },
           code_block: {
@@ -2771,8 +2773,8 @@
             parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
             toDOM: () => [
               "pre",
-              { class: Q().CodeBlock },
-              ["code", { class: Q().Code }, 0],
+              { class: j().CodeBlock },
+              ["code", { class: j().Code }, 0],
             ],
             bbCode: { tag: "code" },
           },
@@ -2794,7 +2796,7 @@
                 getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
               },
             ],
-            toDOM: j("b", (0, T.A)("BB_Bold", Q().Bold)),
+            toDOM: Q("b", (0, T.A)("BB_Bold", j().Bold)),
             bbCode: { tag: "b" },
           },
           italic: {
@@ -2807,22 +2809,22 @@
                 clearMark: (e) => "em" == e.type.name,
               },
             ],
-            toDOM: j("i", (0, T.A)("BB_Italic", Q().Italic)),
+            toDOM: Q("i", (0, T.A)("BB_Italic", j().Italic)),
             bbCode: { tag: "i" },
           },
           underline: {
             parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-            toDOM: j("u", (0, T.A)("BB_Underline", Q().Underline)),
+            toDOM: Q("u", (0, T.A)("BB_Underline", j().Underline)),
             bbCode: { tag: "u" },
           },
           strike: {
             parseDOM: [{ style: "text-decoration=line-through" }],
-            toDOM: j("span", (0, T.A)("BB_Strike", Q().Strike)),
+            toDOM: Q("span", (0, T.A)("BB_Strike", j().Strike)),
             bbCode: { tag: "strike" },
           },
           code: {
             parseDOM: [{ tag: "code" }],
-            toDOM: j("code", (0, T.A)("BB_Code", Q().Code)),
+            toDOM: Q("code", (0, T.A)("BB_Code", j().Code)),
             bbCode: { tag: "c" },
           },
           link: {
@@ -4785,20 +4787,20 @@
             value: r,
             rctToolbarControls: n,
           }),
-          a.createElement(Q, { language: t, value: r, refTextArea: o }),
+          a.createElement(j, { language: t, value: r, refTextArea: o }),
         );
       }
       function Y(e) {
         const { refTextArea: t, value: n, rctToolbarControls: r } = e,
           o = a.useCallback(
             (e, a) => {
-              j(t.current, n, e, a);
+              Q(t.current, n, e, a);
             },
             [t, n],
           ),
           l = a.useCallback(
             (e, a) => {
-              j(t.current, n, e, a, (e) =>
+              Q(t.current, n, e, a, (e) =>
                 e.replace(/(\r\n|\n|\r)/gm, "\r\n[*]"),
               );
             },
@@ -4893,7 +4895,7 @@
         } = e;
         return a.createElement(W.ff, { onClick: () => t(r, o), tooltip: n }, l);
       }
-      function Q(e) {
+      function j(e) {
         const { language: t, value: n, refTextArea: r } = e,
           o = a.useCallback((e) => n.Set(e.currentTarget.value), [n]),
           l = (0, K.gc)(n),
@@ -4912,7 +4914,7 @@
           lang: (0, s.d$)(t),
         });
       }
-      function j(e, t, n, a, r) {
+      function Q(e, t, n, a, r) {
         if (e.selectionStart || 0 === e.selectionStart) {
           const o = e.selectionStart,
             l = e.selectionEnd,
@@ -5539,7 +5541,7 @@
               }),
             g && h && a.createElement("hr", { className: Oe.BothSeparator }),
             h &&
-              a.createElement(Qe, {
+              a.createElement(je, {
                 parentAppId: n,
                 timeStaged: l,
                 noticeVisibleToDate: C,
@@ -5691,7 +5693,7 @@
             ),
         );
       }
-      function Qe(e) {
+      function je(e) {
         const { parentAppId: t, timeStaged: n, noticeVisibleToDate: r } = e,
           o = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
@@ -5732,11 +5734,11 @@
           ),
         );
       }
-      var je = n(75493),
+      var Qe = n(75493),
         Xe = n(7517);
       function Ze(e) {
         const { nAppId: t, nParentAppId: n, strAppType: r } = e,
-          o = (0, je.V)();
+          o = (0, Qe.V)();
         return a.createElement(
           a.Fragment,
           null,
@@ -6185,7 +6187,7 @@
               a.createElement(
                 a.Fragment,
                 null,
-                a.createElement(Qt, {
+                a.createElement(jt, {
                   rgFeaturedList: l.featured_appids,
                   strFeaturedFirstAppToken: l.featured_first_app_token,
                   rgFeaturedClanList: l.featured_creator_clan_account_id,
@@ -6355,7 +6357,7 @@
               string: (0, s.we)("#Loading"),
             });
       }
-      function Qt(e) {
+      function jt(e) {
         const {
           rgFeaturedList: t,
           rgFeaturedClanList: n,
@@ -6396,7 +6398,7 @@
                       creatorClanID: n?.[l],
                       elEditor:
                         0 == l
-                          ? a.createElement(jt, {
+                          ? a.createElement(Qt, {
                               strFeaturedFirstAppToken: o,
                               fnSetFeaturedFirstAppToken: (e) => r(t, n, e),
                             })
@@ -6420,7 +6422,7 @@
           ),
         );
       }
-      function jt(e) {
+      function Qt(e) {
         const { strFeaturedFirstAppToken: t, fnSetFeaturedFirstAppToken: n } =
             e,
           r = (0, a.useMemo)(() => {
@@ -7992,7 +7994,7 @@
             return Kn.k_ERegionCodeInvalid;
         }
       }
-      function Qn(e) {
+      function jn(e) {
         switch (e) {
           case Kn.k_ERegionCodeCIS:
             return "The Commonwealth of Independent Stats";
@@ -8006,7 +8008,7 @@
             return "Invalid Region";
         }
       }
-      class jn {
+      class Qn {
         m_mapUSDPrice = new Map();
         m_mapKeyToGuidePrice = new Map();
         GetKey(e, t, n) {
@@ -8627,7 +8629,7 @@
               a.createElement(
                 "td",
                 { key: "header_region" + e },
-                a.createElement(p.he, { toolTipContent: Qn(e) }, Yn(e)),
+                a.createElement(p.he, { toolTipContent: jn(e) }, Yn(e)),
               ),
             ),
           ),
@@ -9095,7 +9097,7 @@
               Na(r),
               " USD Price doesn't align with any matrix price point. Will compare proposal to scaled guideline.",
             ),
-          a.createElement(ja, { ...e, USDPriceCents: r }),
+          a.createElement(Qa, { ...e, USDPriceCents: r }),
         );
       }
       function qa(e) {
@@ -9134,7 +9136,7 @@
           )
         );
       }
-      function Qa(e) {
+      function ja(e) {
         const { strGuidanceMessage: t, strDirection: n } = e;
         return a.createElement(
           "thead",
@@ -9171,7 +9173,7 @@
           ),
         );
       }
-      function ja(e) {
+      function Qa(e) {
         const {
             proposal: t,
             oGuideline: n,
@@ -9202,7 +9204,7 @@
                 a.createElement(
                   "table",
                   { className: pa.ThresholdMiniTable },
-                  a.createElement(Qa, {
+                  a.createElement(ja, {
                     strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${e}`,
                     strDirection: "above",
                   }),
@@ -9222,7 +9224,7 @@
                 a.createElement(
                   "table",
                   { className: pa.ThresholdMiniTable },
-                  a.createElement(Qa, {
+                  a.createElement(ja, {
                     strGuidanceMessage: `${s.length} currencies below guidance threshold for USD $ ${e}`,
                     strDirection: "below",
                   }),
@@ -9324,7 +9326,7 @@
           r = (function () {
             const [e, t] = (0, a.useState)(
               () =>
-                new jn((0, an.Tc)("pricing_guideline", "application_config")),
+                new Qn((0, an.Tc)("pricing_guideline", "application_config")),
             );
             return e;
           })(),
@@ -10403,7 +10405,7 @@
               "div",
               { className: Hr().EditMilestoneDialog },
               a.createElement(
-                y.JU,
+                "h3",
                 null,
                 (0, s.we)("#SeasonPass_CustomerTitle"),
                 a.createElement(
@@ -10411,6 +10413,11 @@
                   { className: "DialogInputRequirementLabel" },
                   (0, s.we)("#Steamworks_Generic_Required"),
                 ),
+              ),
+              a.createElement(
+                "p",
+                null,
+                (0, s.we)("#SeasonPass_CustomerSubtitle"),
               ),
               a.createElement(xr, {
                 text: S,
@@ -10422,14 +10429,24 @@
                 rgRealms: D,
               }),
               a.createElement(
-                y.JU,
+                "h3",
                 null,
-                (0, s.we)("#SeasonPass_CustomerDescription"),
+                (0, s.we)("#SeasonPass_CustomerDescription_Title"),
                 a.createElement(
                   "span",
                   { className: "DialogInputRequirementLabel" },
                   (0, s.we)("#Steamworks_Generic_Required"),
                 ),
+              ),
+              a.createElement(
+                "p",
+                null,
+                (0, s.we)("#SeasonPass_CustomerDescription_Subtitle"),
+              ),
+              a.createElement(
+                "p",
+                null,
+                (0, s.we)("#SeasonPass_CustomerDescription_Images"),
               ),
               a.createElement(Fr.default, {
                 language: l,
@@ -10448,20 +10465,22 @@
                       "div",
                       null,
                       a.createElement(
-                        y.JU,
+                        "h3",
                         null,
                         (0, s.we)(
                           b
                             ? "#SeasonPass_Backfill_date"
                             : "#SeasonPass_Delivery",
                         ),
-                        a.createElement(Mr.o, {
-                          tooltip: (0, s.we)(
-                            b
-                              ? "#SeasonPass_Backfill_date_ttip"
-                              : "#SeasonPass_Delivery_ttip",
-                          ),
-                        }),
+                      ),
+                      a.createElement(
+                        "p",
+                        null,
+                        (0, s.we)(
+                          b
+                            ? "#SeasonPass_Backfill_date_ttip"
+                            : "#SeasonPass_Delivery_ttip",
+                        ),
                       ),
                       a.createElement(de.K, {
                         nEarliestTime: b ? 0 : m,
@@ -10475,14 +10494,14 @@
                         "div",
                         null,
                         a.createElement(
-                          y.JU,
+                          "h3",
                           null,
                           (0, s.we)("#SeasonPass_CustomerDisplay"),
-                          a.createElement(Mr.o, {
-                            tooltip: (0, s.we)(
-                              "#SeasonPass_CustomerDisplay_ttip",
-                            ),
-                          }),
+                        ),
+                        a.createElement(
+                          "p",
+                          null,
+                          (0, s.we)("#SeasonPass_CustomerDisplay_ttip"),
                         ),
                         a.createElement(ge, {
                           value: C,
@@ -10635,7 +10654,7 @@
               a.Fragment,
               null,
               c &&
-                a.createElement(Qr, {
+                a.createElement(jr, {
                   inputMilestone: t,
                   setCurrentMilestone: n,
                   rgAllMilestones: o,
@@ -10656,7 +10675,7 @@
             ),
         );
       }
-      function Qr(e) {
+      function jr(e) {
         const {
             hideModal: t,
             inputMilestone: n,
@@ -10756,7 +10775,7 @@
                     null,
                     (0, s.we)("#SeasonPass_UpdateLaunch_dlc"),
                   ),
-                  a.createElement(jr, {
+                  a.createElement(Qr, {
                     appid: i,
                     setAppID: c,
                     rgExcludeAppIDs: C,
@@ -10778,7 +10797,7 @@
           ),
         );
       }
-      function jr(e) {
+      function Qr(e) {
         const {
             appid: t,
             setAppID: n,
@@ -10854,11 +10873,6 @@
                   null,
                   (0, s.we)("#SeasonPass_Milestone_Title"),
                 ),
-                a.createElement(
-                  "th",
-                  null,
-                  (0, s.we)("#SeasonPass_Miletone_date_display"),
-                ),
                 a.createElement("th", null),
               ),
             ),
@@ -10907,118 +10921,127 @@
           a.createElement(
             "td",
             null,
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][milestone_id]`,
-              value: i.milestone_id,
-            }),
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][internal_desc]`,
-              value: i.internal_desc,
-            }),
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][submit_time]`,
-              value: i.submit_time,
-            }),
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][submit_accountid]`,
-              value: i.submit_accountid,
-            }),
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][expected_delivery]`,
-              value: i.expected_delivery,
-            }),
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][display_format]`,
-              value: i.display_format,
-            }),
-            a.createElement("input", {
-              type: "hidden",
-              name: `app[seasonpass][commitments][${n}][backfilled_release]`,
-              value: String(Boolean(i.backfilled_release)),
-            }),
-            a.createElement(xr, {
-              text: i.localized_title,
-              className: Hr().Title,
-              onChangeText: null,
-              kvName: `app[seasonpass][commitments][${n}][localized_title]`,
-              bOnlyDisplay: !0,
-              placeholderToken: (0, s.we)(
-                "#SeasonPass_NoLang_Fallback",
-                (0, s.we)("#Language_" + (0, Rr.Lg)(E)),
-                (0, s.we)("#Language_" + (0, Rr.Lg)(g)),
-              ),
-              rgRealms: _,
-            }),
+            a.createElement(
+              "div",
+              {
+                className: (0, u.A)(
+                  Hr().TitlePreviewRow,
+                  i?.completed_time && Hr().Shipped,
+                ),
+              },
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][milestone_id]`,
+                value: i.milestone_id,
+              }),
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][internal_desc]`,
+                value: i.internal_desc,
+              }),
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][submit_time]`,
+                value: i.submit_time,
+              }),
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][submit_accountid]`,
+                value: i.submit_accountid,
+              }),
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][expected_delivery]`,
+                value: i.expected_delivery,
+              }),
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][display_format]`,
+                value: i.display_format,
+              }),
+              a.createElement("input", {
+                type: "hidden",
+                name: `app[seasonpass][commitments][${n}][backfilled_release]`,
+                value: String(Boolean(i.backfilled_release)),
+              }),
+              a.createElement(xr, {
+                text: i.localized_title,
+                className: Hr().Title,
+                onChangeText: null,
+                kvName: `app[seasonpass][commitments][${n}][localized_title]`,
+                bOnlyDisplay: !0,
+                placeholderToken: (0, s.we)(
+                  "#SeasonPass_NoLang_Fallback",
+                  (0, s.we)("#Language_" + (0, Rr.Lg)(E)),
+                  (0, s.we)("#Language_" + (0, Rr.Lg)(g)),
+                ),
+                rgRealms: _,
+              }),
+              i?.completed_time
+                ? a.createElement(
+                    "div",
+                    { className: Hr().Date },
+                    (0, s.we)("#SeasonPass_Available"),
+                  )
+                : a.createElement(
+                    a.Fragment,
+                    null,
+                    Boolean(i?.backfilled_release)
+                      ? a.createElement(
+                          "div",
+                          null,
+                          (0, s.we)("#SeasonPass_Backfill_require_publish"),
+                        )
+                      : a.createElement(
+                          "div",
+                          { className: (0, u.A)(Hr().Date) },
+                          a.createElement(
+                            p.he,
+                            {
+                              toolTipContent:
+                                (0, s.we)("#SeasonPass_Delivery") +
+                                ": " +
+                                (0, s.TW)(i.expected_delivery) +
+                                " @ " +
+                                (0, re.KC)(i.expected_delivery),
+                            },
+                            (0, ae.M)(i.display_format, i.expected_delivery),
+                          ),
+                          m &&
+                            a.createElement(
+                              "div",
+                              {
+                                className: (0, u.A)(
+                                  m ? Ca().ErrorStylesWithIcon : void 0,
+                                ),
+                              },
+                              (0, s.we)("#SeasonPass_PassDueNote"),
+                            ),
+                        ),
+                  ),
+            ),
           ),
           a.createElement(
             "td",
             null,
-            i?.completed_time
-              ? a.createElement(
-                  "div",
-                  { className: Hr().Date },
-                  (0, s.we)("#SeasonPass_Available"),
-                )
-              : a.createElement(
-                  a.Fragment,
-                  null,
-                  Boolean(i?.backfilled_release)
-                    ? a.createElement(
-                        "div",
-                        null,
-                        (0, s.we)("#SeasonPass_Backfill_require_publish"),
-                      )
-                    : a.createElement(
-                        "div",
-                        { className: (0, u.A)(Hr().Date) },
-                        a.createElement(
-                          p.he,
-                          {
-                            toolTipContent:
-                              (0, s.we)("#SeasonPass_Delivery") +
-                              ": " +
-                              (0, s.TW)(i.expected_delivery) +
-                              " @ " +
-                              (0, re.KC)(i.expected_delivery),
-                          },
-                          (0, ae.M)(i.display_format, i.expected_delivery),
-                        ),
-                        m &&
-                          a.createElement(
-                            "div",
-                            {
-                              className: (0, u.A)(
-                                m ? Ca().ErrorStylesWithIcon : void 0,
-                              ),
-                            },
-                            (0, s.we)("#SeasonPass_PassDueNote"),
-                          ),
-                      ),
-                ),
-          ),
-          a.createElement(
-            "td",
-            { className: Hr().BtnCtn },
-            a.createElement(qr, {
-              inputMilestone: i,
-              setCurrentMilestone: c,
-              seasonPassID: r,
-              rgAllMilestones: o,
-              index: n,
-            }),
-            a.createElement(Wr, {
-              milestoneID: i.milestone_id,
-              mileStone: i,
-              onSave: c,
-              index: n,
-              bAppHasSteamChinaToolsEnabled: l,
-            }),
+            a.createElement(
+              "div",
+              { className: Hr().BtnCtn },
+              a.createElement(qr, {
+                inputMilestone: i,
+                setCurrentMilestone: c,
+                seasonPassID: r,
+                rgAllMilestones: o,
+                index: n,
+              }),
+              a.createElement(Wr, {
+                milestoneID: i.milestone_id,
+                mileStone: i,
+                onSave: c,
+                index: n,
+                bAppHasSteamChinaToolsEnabled: l,
+              }),
+            ),
           ),
         );
       }
@@ -11100,39 +11123,88 @@
           bAppHasSteamChinaToolsEnabled: l,
         } = e;
         return a.createElement(
-          "div",
-          { className: (0, u.A)(Ur().EditorCtn) },
+          a.Fragment,
+          null,
           a.createElement(
-            "h2",
-            null,
-            (0, s.we)(
-              "#SeasonPass_Title",
-              t.seasonPassItemName,
-              (0, s.we)(
-                t.dlcAppID ? "#SeasonPass_AppID" : "SeasonPass_PackageID",
-                t.dlcAppID || t.packageID,
+            "div",
+            { className: (0, u.A)("instructions") },
+            a.createElement(
+              "div",
+              { className: (0, u.A)("title2") },
+              (0, s.we)("#SeasonPass_Title"),
+              " ",
+              a.createElement(
+                "span",
+                { className: "small" },
+                a.createElement(
+                  "a",
+                  {
+                    href: `${Rn.TS.PARTNER_BASE_URL}doc/store/seasonpass`,
+                    target: "_blank",
+                  },
+                  (0, s.we)("#AssetRequest_General_SeeDocs"),
+                ),
               ),
             ),
-            " ",
+            a.createElement("br", { style: { clear: "left" } }),
+            a.createElement("div", { className: "grayRule" }, " "),
             a.createElement(
-              "span",
-              { className: "small" },
+              "div",
+              { className: "instructions_table" },
               a.createElement(
-                "a",
-                {
-                  href: `${Rn.TS.PARTNER_BASE_URL}doc/store/seasonpass`,
-                  target: "_blank",
-                },
-                (0, s.we)("#AssetRequest_General_SeeDocs"),
+                "div",
+                { className: "instructions_table_row" },
+                a.createElement(
+                  "div",
+                  { className: "instructions_table_cell left" },
+                  a.createElement(
+                    "strong",
+                    null,
+                    (0, s.we)("#Appmgmg_Generic_Title_Overview"),
+                  ),
+                ),
+                a.createElement(
+                  "div",
+                  { className: "instructions_table_cell" },
+                  a.createElement("p", null, (0, s.we)("#SeasonPass_Desc")),
+                  a.createElement("p", null, (0, s.we)("#SeasonPass_Desc2")),
+                  a.createElement("p", null, (0, s.we)("#SeasonPass_Desc3")),
+                ),
+              ),
+              a.createElement(
+                "div",
+                { className: "instructions_table_row" },
+                a.createElement(
+                  "div",
+                  { className: "instructions_table_cell left" },
+                  a.createElement(
+                    "strong",
+                    null,
+                    (0, s.we)("#Appmgmg_Generic_Title_Releasing"),
+                  ),
+                ),
+                a.createElement(
+                  "div",
+                  { className: "instructions_table_cell" },
+                  a.createElement(
+                    "p",
+                    null,
+                    " ",
+                    (0, s.oW)(
+                      "#SeasonPass_Desc_Releasing",
+                      a.createElement("a", {
+                        href: `${Rn.TS.PARTNER_BASE_URL}doc/store/seasonpass#release`,
+                        target: "_blank",
+                      }),
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
-          a.createElement("hr", null),
-          a.createElement("p", null, (0, s.we)("#SeasonPass_Desc")),
-          a.createElement("p", null, (0, s.we)("#SeasonPass_Desc2")),
           a.createElement(
             "div",
-            null,
+            { className: Ur().CreationButtonRow },
             a.createElement(
               "span",
               { className: Ur().LangBox },
@@ -11150,7 +11222,6 @@
               }),
             ),
           ),
-          a.createElement("br", null),
         );
       }
       function to(e) {
@@ -11171,17 +11242,6 @@
           ? a.createElement(
               a.Fragment,
               null,
-              a.createElement(
-                "div",
-                { className: o ? Ca().WarningStylesWithIcon : void 0 },
-                (0, s.oW)(
-                  "#SeasonPass_ReleaseInfo",
-                  a.createElement("a", {
-                    href: `${Rn.TS.PARTNER_BASE_URL}doc/store/seasonpass#release`,
-                    target: "_blank",
-                  }),
-                ),
-              ),
               l &&
                 a.createElement(
                   "div",
