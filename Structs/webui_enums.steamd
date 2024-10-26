@@ -593,7 +593,7 @@ enum EInputMode
 	k_EInputMode_FlickStickToCameraAngles = 134217728;
 	k_EInputMode_JoystickToCameraAngles = 67108864;
 	k_EInputMode_TrackPadToCameraAngles = 268435456;
-	k_EInputMode_All = 536870911;
+	k_EInputMode_All = 1073741823;
 }
 
 enum EInputSource

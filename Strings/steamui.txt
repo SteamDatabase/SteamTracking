@@ -55,6 +55,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123H
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -242,6 +243,7 @@
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !"failed to base64 encode value"
 !"implement GetPrivateProfileString"
+!"npp
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( m_pHTTPResponseHandler && m_pHTTPStreamingResponseHandler )
 !( pSSLCallback && pKeyCallback )
@@ -660,7 +662,6 @@
 "<\n)CGameRecording_GetTimelinesForApp_Request
 "=\n$CPublishedFile_CanSubscribe_Response
 "=\n%CBroadcast_SessionClosed_Notification
-"=\n&CDataPublisher_GetVRDeviceInfo_Request
 "=\n&CSteamTV_GetBroadcastChannelID_Request
 "=\n(CGameRecording_GetRecordingSize_Response
 "=\n(CParties_OnReservationCompleted_Response
@@ -704,6 +705,7 @@
 "G\n%CMsgRemoteDeviceStreamTransportSignal
 "G\n.CTransportValidation_CountOrderedBytes_Request
 "G\n4CGameRecording_SwitchBackgroundRecordingGame_Request
+"GameRecording\AutomaticGainControl
 "GameRecording\ExportLimitFrameRate
 "GetMapData"
 "GetRawRepeatedField"
@@ -1470,6 +1472,8 @@ $\n k_EExternalYouTubeChannelAccount
 $\n k_EFrameStatPacketLossPercentage
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGetChannelsAlgorithm_Featured
+$\n k_EGpuDriverId_GoogleSwiftshader
+$\n k_EGpuDriverId_NvidiaProprietary
 $\n k_EGraphicsPerfOverlayLevel_Full
 $\n k_EJSRegisterMethodType_Callback
 $\n k_EJSRegisterMethodType_Function
@@ -2256,6 +2260,8 @@ ${LANGUAGE}
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EFamilyGroupsTwoFactorMethodNone
 &\n"k_EGameSearchResult_SearchCanceled
+&\n"k_EGpuDriverId_BroadcomProprietary
+&\n"k_EGpuDriverId_QualcommProprietary
 &\n"k_EGraphicsPerfOverlayLevel_Hidden
 &\n"k_EGraphicsPerfOverlayLevel_Medium
 &\n"k_EHDRVisualization_HeatmapClassic
@@ -2315,7 +2321,7 @@ ${LANGUAGE}
 &session->aob.framebufs == bufs
 &steammessages_clientserver_video.proto"
 &system\InGameOverlayRestoreBrowserTabs
-&webuimessages_gamerecordingfiles.proto".\n,CGameRecording_GetActiveTimelineApps_Request"
+&webuimessages_gamerecordingfiles.proto"3\n1CGameRecording_GetAppsWithBackgroundVideo_Request"
 &yLrG
 ' is already set.
 ' is already set. Cannot set '
@@ -2381,6 +2387,7 @@ ${LANGUAGE}
 '.CTwoFactor_UpdateTokenVersion_Response"
 '.CUserAccount_GetWalletDetails_Response"
 '3<CIOSW[^adfikosvy|~
+'3mB
 '4M^kx
 '5'7'M'S'U'_'k'm's'w'
 '7GWgw
@@ -2637,6 +2644,7 @@ ${LANGUAGE}
 (@(sa{sv})@(sa{sv})@a{sv})
 (@(sa{sv})@a{sv})
 (@a{sv}@a{sv})
+(AmB
 (Customization/StartupMovie/UsedForResume
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
@@ -2882,6 +2890,7 @@ ${LANGUAGE}
 (\r"<\n)CFriendMessages_IsInFriendsUIBeta_Request
 (\r"<\n:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
 (\r"<\n\rCMsgScreenDPI
+(\r"=\n&CDataPublisher_GetVRDeviceInfo_Request
 (\r">\n&CBroadcast_EndBroadcastSession_Request
 (\r">\n.CTransportValidation_GetLargeResponse_Response
 (\r"?\n.CCommunity_PartnerEventsShowMoreForApp_Request
@@ -3336,7 +3345,6 @@ ${LANGUAGE}
 (\v21.CSteamTV_GetBroadcastChannelLinks_Response.Links
 (\v21.CStore_GetUserGameInterestState_Response.InQueue
 (\v22.CClientMetrics_ContentDownloadResponse_HostCountsB
-(\v22.CGameRecording_GetActiveTimelineApps_Response.App
 (\v22.CInventory_ModifyItems_Request.ItemPropertyUpdate
 (\v22.CRemoteClient_UnregisterStatusUpdate_NotificationH
 (\v22.CStoreBrowse_GetStoreCategories_Response.Category
@@ -3365,6 +3373,7 @@ ${LANGUAGE}
 (\v27.CClientMetrics_ReportReactUsage_Notification.RouteData
 (\v27.CControllerConfigMsg.ControllerPersonalizationResponse
 (\v27.CCredentials_GetSteamGuardDetails_Response.SessionData
+(\v27.CGameRecording_GetAppsWithBackgroundVideo_Response.App
 (\v27.CPlayer_RecordDisconnectedPlaytime_Request.PlayHistory
 (\v27.CPublishedFile_GetUserVoteSummary_Response.VoteSummary
 (\v28.CBroadcast_GetBroadcastUploadStats_Response.UploadStats
@@ -3824,7 +3833,6 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE41CWebUIGameRecordingGetTimelinesForClipJob42CGameRecording_GetTimelinesForClip_Request43CGameRecording_GetTimelinesForClip_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE42CWebUIGameRecordingUserAddTimelineEntryJob43CGameRecording_UserAddTimelineEntry_Request44CGameRecording_UserAddTimelineEntry_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingDeletePerGameSettingsJob44CGameRecording_DeletePerGameSettings_Request45CGameRecording_DeletePerGameSettings_ResponseE
-*18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetActiveTimelineAppsJob44CGameRecording_GetActiveTimelineApps_Request45CGameRecording_GetActiveTimelineApps_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetAvailableDiskSpaceJob44CGameRecording_GetAvailableDiskSpace_Request45CGameRecording_GetAvailableDiskSpace_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE44CWebUIGameRecordingGetTotalDiskSpaceUsageJob45CGameRecording_GetTotalDiskSpaceUsage_Request46CGameRecording_GetTotalDiskSpaceUsage_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE45CWebUIGameRecordingGetPlatformCapabilitiesJob46CGameRecording_GetPlatformCapabilities_Request47CGameRecording_GetPlatformCapabilities_ResponseE
@@ -3834,6 +3842,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE46CWebUIGameRecordingDebugSetTimelineGameModeJob47CGameRecordingDebug_SetTimelineGameMode_Request48CGameRecordingDebug_SetTimelineGameMode_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE47CWebUIGameRecordingDebugAddTimelineTimestampJob48CGameRecordingDebug_AddTimelineTimestamp_Request49CGameRecordingDebug_AddTimelineTimestamp_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE48CWebUIGameRecordingDebugAddTimelineRangeStartJob49CGameRecordingDebug_AddTimelineRangeStart_Request50CGameRecordingDebug_AddTimelineRangeStart_ResponseE
+*18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE48CWebUIGameRecordingGetAppsWithBackgroundVideoJob49CGameRecording_GetAppsWithBackgroundVideo_Request50CGameRecording_GetAppsWithBackgroundVideo_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE49CWebUIGameRecordingCleanupBackgroundRecordingsJob50CGameRecording_CleanupBackgroundRecordings_Request51CGameRecording_CleanupBackgroundRecordings_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE50CWebUIGameRecordingGetAndTrimPostGameHighlightsJob51CGameRecording_GetAndTrimPostGameHighlights_Request52CGameRecording_GetAndTrimPostGameHighlights_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE51CWebUIGameRecordingSwitchBackgroundRecordingGameJob52CGameRecording_SwitchBackgroundRecordingGame_Request53CGameRecording_SwitchBackgroundRecordingGame_ResponseE
@@ -4028,7 +4037,6 @@ ${LANGUAGE}
 *ZN24CGameRecordingControllerC4EvE41CWebUIGameRecordingGetTimelinesForClipJob
 *ZN24CGameRecordingControllerC4EvE42CWebUIGameRecordingUserAddTimelineEntryJob
 *ZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingDeletePerGameSettingsJob
-*ZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetActiveTimelineAppsJob
 *ZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetAvailableDiskSpaceJob
 *ZN24CGameRecordingControllerC4EvE44CWebUIGameRecordingGetTotalDiskSpaceUsageJob
 *ZN24CGameRecordingControllerC4EvE45CWebUIGameRecordingGetPlatformCapabilitiesJob
@@ -4038,6 +4046,7 @@ ${LANGUAGE}
 *ZN24CGameRecordingControllerC4EvE46CWebUIGameRecordingDebugSetTimelineGameModeJob
 *ZN24CGameRecordingControllerC4EvE47CWebUIGameRecordingDebugAddTimelineTimestampJob
 *ZN24CGameRecordingControllerC4EvE48CWebUIGameRecordingDebugAddTimelineRangeStartJob
+*ZN24CGameRecordingControllerC4EvE48CWebUIGameRecordingGetAppsWithBackgroundVideoJob
 *ZN24CGameRecordingControllerC4EvE49CWebUIGameRecordingCleanupBackgroundRecordingsJob
 *ZN24CGameRecordingControllerC4EvE50CWebUIGameRecordingGetAndTrimPostGameHighlightsJob
 *ZN24CGameRecordingControllerC4EvE51CWebUIGameRecordingSwitchBackgroundRecordingGameJob
@@ -4065,7 +4074,6 @@ ${LANGUAGE}
 *ZN24CGameRecordingControllerC4EvEUlRK42CGameRecording_GetTimelinesForClip_RequestR43CGameRecording_GetTimelinesForClip_ResponseE7_
 *ZN24CGameRecordingControllerC4EvEUlRK43CGameRecording_UserAddTimelineEntry_RequestR44CGameRecording_UserAddTimelineEntry_ResponseE15_
 *ZN24CGameRecordingControllerC4EvEUlRK44CGameRecording_DeletePerGameSettings_RequestR45CGameRecording_DeletePerGameSettings_ResponseE29_
-*ZN24CGameRecordingControllerC4EvEUlRK44CGameRecording_GetActiveTimelineApps_RequestR45CGameRecording_GetActiveTimelineApps_ResponseE_
 *ZN24CGameRecordingControllerC4EvEUlRK44CGameRecording_GetAvailableDiskSpace_RequestR45CGameRecording_GetAvailableDiskSpace_ResponseE4_
 *ZN24CGameRecordingControllerC4EvEUlRK45CGameRecording_GetTotalDiskSpaceUsage_RequestR46CGameRecording_GetTotalDiskSpaceUsage_ResponseE22_
 *ZN24CGameRecordingControllerC4EvEUlRK46CGameRecording_GetPlatformCapabilities_RequestR47CGameRecording_GetPlatformCapabilities_ResponseE26_
@@ -4075,6 +4083,7 @@ ${LANGUAGE}
 *ZN24CGameRecordingControllerC4EvEUlRK47CGameRecordingDebug_SetTimelineGameMode_RequestR48CGameRecordingDebug_SetTimelineGameMode_ResponseE34_
 *ZN24CGameRecordingControllerC4EvEUlRK48CGameRecordingDebug_AddTimelineTimestamp_RequestR49CGameRecordingDebug_AddTimelineTimestamp_ResponseE31_
 *ZN24CGameRecordingControllerC4EvEUlRK49CGameRecordingDebug_AddTimelineRangeStart_RequestR50CGameRecordingDebug_AddTimelineRangeStart_ResponseE32_
+*ZN24CGameRecordingControllerC4EvEUlRK49CGameRecording_GetAppsWithBackgroundVideo_RequestR50CGameRecording_GetAppsWithBackgroundVideo_ResponseE_
 *ZN24CGameRecordingControllerC4EvEUlRK50CGameRecording_CleanupBackgroundRecordings_RequestR51CGameRecording_CleanupBackgroundRecordings_ResponseE23_
 *ZN24CGameRecordingControllerC4EvEUlRK51CGameRecording_GetAndTrimPostGameHighlights_RequestR52CGameRecording_GetAndTrimPostGameHighlights_ResponseE24_
 *ZN24CGameRecordingControllerC4EvEUlRK52CGameRecording_SwitchBackgroundRecordingGame_RequestR53CGameRecording_SwitchBackgroundRecordingGame_ResponseE25_
@@ -4752,7 +4761,6 @@ ${LANGUAGE}
 -.CGameNotifications_EnumerateSessions_Request
 -.CGameNotifications_GetSessionDetails_Request
 -.CGameRecording_DeletePerGameSettings_Request
--.CGameRecording_GetActiveTimelineApps_Request
 -.CGameRecording_GetAvailableDiskSpace_Request
 -.CGameRecording_PhaseListChanged_Notification
 -.CGameRecording_UserAddTimelineEntry_Response
@@ -4790,6 +4798,7 @@ ${LANGUAGE}
 -DBF
 -Infinity
 -LY8
+-MmB
 -RN1
 -SteamViveSetup
 -\n%adjusted_time_probe_frequency_seconds
@@ -5012,7 +5021,6 @@ ${LANGUAGE}
 ..CGameNotifications_EnumerateSessions_Response"
 ..CGameNotifications_GetSessionDetails_Response"
 ..CGameRecording_DeletePerGameSettings_Response
-..CGameRecording_GetActiveTimelineApps_Response
 ..CGameRecording_GetAvailableDiskSpace_Response
 ..CGameRecording_GetTotalDiskSpaceUsage_Request
 ..CInventory_GetEligiblePromoItemDefIDs_Request
@@ -5909,6 +5917,7 @@ ${LANGUAGE}
 /config
 /controller_configs/%s/
 /data/src/clientcommon/clienthelpers.cpp
+/data/src/clientcommon/gputopology.cpp
 /data/src/clientcommon/include/clientcommon/webui_job_dispatcher.h
 /data/src/clientcommon/waylandcontext.cpp
 /data/src/clientcommon/webui_job_dispatcher.cpp
@@ -5980,6 +5989,7 @@ ${LANGUAGE}
 /data/src/common/parentalinterpreter.cpp
 /data/src/common/pipes.cpp
 /data/src/common/platform_sockets_posix.cpp
+/data/src/common/platformhelpers.cpp
 /data/src/common/processkill.cpp
 /data/src/common/processpipe_posix.cpp
 /data/src/common/processworkitem.h
@@ -6006,6 +6016,7 @@ ${LANGUAGE}
 /data/src/common/websocket.h
 /data/src/common/workthreadpool.cpp
 /data/src/common/workthreadpool.h
+/data/src/common/yieldingfileio.cpp
 /data/src/common/zip_helpers.cpp
 /data/src/external/picojson/picojson.h
 /data/src/external/protobuf-3.15.3/src/google/protobuf/repeated_field.h
@@ -6023,7 +6034,6 @@ ${LANGUAGE}
 /data/src/public/tier1/bitstring.h
 /data/src/public/tier1/functors.h
 /data/src/public/tier1/interface.h
-/data/src/public/tier1/linuxhelpers_nodeps.h
 /data/src/public/tier1/netadr.h
 /data/src/public/tier1/refcount.h
 /data/src/public/tier1/smartptr.h
@@ -6067,10 +6077,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:4930
-/data/src/steamUI/gamerecordingcontroller.cpp:5030
-/data/src/steamUI/gamerecordingcontroller.cpp:6342
-/data/src/steamUI/gamerecordingcontroller.cpp:6415
+/data/src/steamUI/gamerecordingcontroller.cpp:4938
+/data/src/steamUI/gamerecordingcontroller.cpp:5038
+/data/src/steamUI/gamerecordingcontroller.cpp:6350
+/data/src/steamUI/gamerecordingcontroller.cpp:6423
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -6436,6 +6446,7 @@ ${LANGUAGE}
 0\tzc
 0`P0
 0fl:
+0hmB
 0pp@5tqE?|sO541
 0x%llx
 0|t?L
@@ -6525,6 +6536,7 @@ ${LANGUAGE}
 10CUtlMemoryI28IdentifiedControllerConfig_tE
 10CUtlMemoryI30HTTPRequestRouteRegistration_tE
 10CUtlMemoryI7CGameIDE
+10CUtlMemoryI8CGpuInfoE
 10CUtlMemoryI9CSmartPtrI13IMsgNetPacketEE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
@@ -6888,6 +6900,7 @@ ${LANGUAGE}
 10CUtlVectorI28IdentifiedControllerConfig_t10CUtlMemoryIS0_EE
 10CUtlVectorI30HTTPRequestRouteRegistration_t10CUtlMemoryIS0_EE
 10CUtlVectorI7CGameID10CUtlMemoryIS0_EE
+10CUtlVectorI8CGpuInfo10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI13IMsgNetPacketE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tE10CUtlMemoryISD_EE
@@ -7201,6 +7214,7 @@ ${LANGUAGE}
 12CDynamicFuncIPFvvEE
 12CFunctionJob
 12CGameActions
+12CGpuTopology
 12CHTTPRequest
 12CIPRangeList
 12CIntProperty
@@ -7900,6 +7914,7 @@ ${LANGUAGE}
 2.CFriendsMessages_GetActiveMessageSessions_Request
 2.CGameRecordingDebug_AddTimelineRangeStart_Request
 2.CGameRecordingDebug_AddTimelineTimestamp_Response
+2.CGameRecording_GetAppsWithBackgroundVideo_Request
 2.CMarketingMessages_CreateMarketingMessage_Request
 2.CMarketingMessages_DeleteMarketingMessage_Request
 2.CMarketingMessages_FindMarketingMessages_Response"
@@ -8980,6 +8995,7 @@ ${LANGUAGE}
 2prB
 2s\n\rChatUsability
 2sssua
+2vmB
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
 3$EE\f
@@ -9002,6 +9018,7 @@ ${LANGUAGE}
 3.CFriendsMessages_GetActiveMessageSessions_Response"
 3.CGameRecordingDebug_AddTimelineRangeStart_Response
 3.CGameRecording_CleanupBackgroundRecordings_Request
+3.CGameRecording_GetAppsWithBackgroundVideo_Response
 3.CGameRecording_OpenOverlayToGamePhase_Notification
 3.CMarketingMessages_CreateMarketingMessage_Response"
 3.CMarketingMessages_DeleteMarketingMessage_Response"
@@ -10209,7 +10226,6 @@ ${LANGUAGE}
 44CGameNotifications_EnumerateSessions_Request
 44CGameNotifications_GetSessionDetails_Request
 44CGameRecording_DeletePerGameSettings_Request
-44CGameRecording_GetActiveTimelineApps_Request
 44CGameRecording_GetAvailableDiskSpace_Request
 44CGameRecording_PhaseListChanged_Notification
 44CGameRecording_UserAddTimelineEntry_Response
@@ -10282,7 +10298,6 @@ ${LANGUAGE}
 45CGameNotifications_EnumerateSessions_Response
 45CGameNotifications_GetSessionDetails_Response
 45CGameRecording_DeletePerGameSettings_Response
-45CGameRecording_GetActiveTimelineApps_Response
 45CGameRecording_GetAvailableDiskSpace_Response
 45CGameRecording_GetTotalDiskSpaceUsage_Request
 45CInventory_GetEligiblePromoItemDefIDs_Request
@@ -10481,7 +10496,7 @@ ${LANGUAGE}
 49CFriendsMessages_GetActiveMessageSessions_Request
 49CGameRecordingDebug_AddTimelineRangeStart_Request
 49CGameRecordingDebug_AddTimelineTimestamp_Response
-49CGameRecording_GetActiveTimelineApps_Response_App
+49CGameRecording_GetAppsWithBackgroundVideo_Request
 49CGetConfigWorkerThenStartEditingAndResolvePromise
 49CInventory_ModifyItems_Request_ItemPropertyUpdate
 49CMarketingMessages_CreateMarketingMessage_Request
@@ -10586,6 +10601,7 @@ ${LANGUAGE}
 50CFriendsMessages_GetActiveMessageSessions_Response
 50CGameRecordingDebug_AddTimelineRangeStart_Response
 50CGameRecording_CleanupBackgroundRecordings_Request
+50CGameRecording_GetAppsWithBackgroundVideo_Response
 50CGameRecording_OpenOverlayToGamePhase_Notification
 50CMarketingMessages_CreateMarketingMessage_Response
 50CMarketingMessages_DeleteMarketingMessage_Response
@@ -10645,6 +10661,7 @@ ${LANGUAGE}
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
 52F*
+530.41.03
 53CAccountHardware_RegisterValveIndexComponent_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
@@ -10676,6 +10693,7 @@ ${LANGUAGE}
 54CCredentials_GetSteamGuardDetails_Response_SessionData
 54CGameNotifications_UpdateNotificationSettings_Response
 54CGameRecordingDebug_AddTimelineHighlightMarker_Request
+54CGameRecording_GetAppsWithBackgroundVideo_Response_App
 54CGameRecording_ManuallyDeleteRecordingsForApps_Request
 54CGameRecording_OpenOverlayToTimelineEvent_Notification
 54CMarketingMessage_GetMarketingMessagesForApps_Response
@@ -10783,6 +10801,7 @@ ${LANGUAGE}
 59CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response
 59ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
 5EPX_f
+5FError: XSelectionRequestEvent request does not contain a target property
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 5O Z
 5T&w&
@@ -11075,6 +11094,7 @@ ${LANGUAGE}
 8CAutoPtrI7CUtlMapI7CGameIDN24CGameRecordingController17PerGameSettings_tEi8CDefLessEE
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
 8CFunctor
+8CGpuInfo
 8CLogFile
 8CMetrics
 8CMsgCopy
@@ -11734,6 +11754,8 @@ ALL:!COMPLEMENTOFDEFAULT:!eNULL
 ALL_PROXY
 ALREADY_EXISTS
 ALSCalibrationGain
+AMD OpenSource
+AMD RADV
 AMFInit
 AMFQueryVersion
 AMF_VIDEO_ENCODER_AV1_ALIGNMENT_MODE
@@ -12727,6 +12749,8 @@ BWriteValuetoFileAsRoot
 BYieldingGetFreeDiskSpace
 BYieldingLoadFileIntoBuffer
 BYieldingSaveBufferToFile
+BYieldingSaveBufferToFile async failed (%u)
+BYieldingSaveBufferToFile inline failed (%u)
 BYieldingWaitOneFrame
 BYieldingWaitTime
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
@@ -12917,6 +12941,7 @@ Broadcast\RecordSystemAudio
 Broadcast\ShowChat
 Broadcast\ShowDebugInfo
 Broadcast\ShowReminder
+Broadcom
 Browser.RegisterForGestureEvents
 Browser.RegisterForOpenNewTab
 Browser.SetShouldExitSteamOnBrowserClosed
@@ -13120,6 +13145,8 @@ CAST5-ECB
 CAST5-OFB
 CAchievements_GetInfo_Request
 CAchievements_GetInfo_Response
+CAdHocValidation::~CAdHocValidation()
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 CAppBootstrapData
 CAppMoveFolderJob
 CAppOverview_Change
@@ -13744,6 +13771,15 @@ CGetShaderDepotManifestJob
 CGetStaleBucketJob
 CGetTouchConfigDataMsg
 CGetTouchIconDataMsg
+CGpuTopology: failed create vulkan instance: %d\n
+CGpuTopology: failed create vulkan instance: create entrypoint not available\n
+CGpuTopology: failed to create vulkan instance
+CGpuTopology: failed to enumerate physical devices\n
+CGpuTopology: failed to fetch instance version: %d\n
+CGpuTopology: failed to get physical device count\n
+CGpuTopology: failed to load vulkan entrypoints
+CGpuTopology: failed to load vulkan instance entrypoints
+CGpuTopology: vulkan instance version too old: %d.%d.%d\n
 CH264FrameCombiner::BuildFrameFromSlicesH264
 CHACHA20
 CHACHA20/POLY1305(256)
@@ -14734,10 +14770,14 @@ CPrepareRemotePlayConfigWorker failed for AppID %u
 CPrepopulatePrecompiledCacheAPIJob
 CPrivacySettings
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CProcessShaderCacheJob
 CProcessWorkItem
@@ -16816,6 +16856,7 @@ EGetChannelsAlgorithm
 EGetFrameFromMPD
 EGetFramesFromVideo
 EGetGamesAlgorithm
+EGpuDriverId
 EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
@@ -17285,7 +17326,6 @@ Error: Setting LED brightness failed: write failed
 Error: WakeAllowed not supported for device:%s
 Error: X11Context: failed to open display
 Error: X11Context: failed to retrieve root window
-Error: XSelectionRequestEvent request does not contain a target property
 Error: failed to apply steamos mandatory update
 Error: failed to connect to object manager: %s\n
 Error: failed to initialize CSystemReportController
@@ -18055,8 +18095,8 @@ GameRecording.DeleteClip#1
 GameRecording.DeletePerGameSettings#1
 GameRecording.ExportClip#1
 GameRecording.ExportClipPreview#1
-GameRecording.GetActiveTimelineApps#1
 GameRecording.GetAndTrimPostGameHighlights#1
+GameRecording.GetAppsWithBackgroundVideo#1
 GameRecording.GetAvailableDiskSpace#1
 GameRecording.GetBackgroundRecordingFileSize#1
 GameRecording.GetClips#1
@@ -18120,6 +18160,7 @@ GameRecording\ExportLimitHeight
 GameRecording\ExportLimitSize
 GameRecording\ExportLimitType
 GameRecording\ExportLimitWidth
+GameRecording\ForceMicMono
 GameRecording\InstantClipKey
 GameRecording\MarkerKey
 GameRecording\MaxFPS
@@ -18182,7 +18223,6 @@ GetAchievementsProgress
 GetActiveBeta
 GetActiveMarketingMessages
 GetActiveMessageSessions
-GetActiveTimelineApps
 GetAdapterDetails
 GetAll
 GetAllWorkThreadPools()
@@ -18199,6 +18239,7 @@ GetAppRelationshipsBatched
 GetAppRichPresenceLocalization
 GetAppState
 GetApps
+GetAppsWithBackgroundVideo
 GetAssetClassInfo
 GetAuthSessionInfo
 GetAuthSessionRiskInfo
@@ -18458,6 +18499,7 @@ Global Moderator
 GlobalSteamDoc
 Global\SecureDesktop_MovieStream
 Gone
+Google Swiftshader
 Google.Protobuf.Reflection
 Google.Protobuf.WellKnownTypesb
 Got GOAWAY frame with last stream processed %d for stream %d\n
@@ -18929,7 +18971,6 @@ IdUUID
 IdUsage
 IdVersion
 IdempotencyLevel
-Idle
 If logging in user with credentials specified on the command line, proceed as if 'remember my password' had been enabled
 If-Match
 If-Modified-Since
@@ -19197,6 +19238,7 @@ Integer out of range (
 Integrated
 Integrated Guide
 IntegratedGuides
+Intel ANV
 Interac
 Interlace handling should be turned on when using png_read_image
 Internal Error
@@ -19217,6 +19259,7 @@ Invalid CD-Key
 Invalid CEG Submission
 Invalid Data
 Invalid Disk
+Invalid Driver
 Invalid Email
 Invalid FieldMask '
 Invalid FieldMask, unexpected field.
@@ -19362,6 +19405,7 @@ Invalid stream state
 Invalid strings::Substitute() format string: "
 Invalid struct data type. Only number, string, boolean or null values are supported.
 Invalid symbol name: 
+Invalid system directory %d
 Invalid tax address
 Invalid time format: 
 Invalid time specified for tIME chunk
@@ -19822,6 +19866,7 @@ LINUX
 LINUX32
 LINUX64
 LIST LICENSES
+LLVMPipe Mesa
 LOCAL_
 LOCAL_%s
 LOCK_EX
@@ -20179,6 +20224,12 @@ MergeXRGB16To8Row_C
 MergeXRGBRow_C
 Meroitic_Cursive
 Meroitic_Hieroglyphs
+Mesa Dozen
+Mesa HoneyKrisp
+Mesa NVK
+Mesa PanVK
+Mesa Turnip
+Mesa Venus
 Message
 Message '%s' not handled by panel '%s'\n
 Message '%s', sent to '%s', has an invalid parameter type\n
@@ -20279,6 +20330,7 @@ Modalias
 Moderators
 ModifyFamilyGroupDetails
 Modulus:
+MoltenVK
 Mon, 26 Jul 1997 05:00:00 GMT
 Monday
 MoneyBookers
@@ -21285,6 +21337,7 @@ NVENC - failed to allocate buffers on bitrate/resolution change
 NVENC - failed to allocate buffers on format change [type=%d]
 NVENC - nvenc not supported
 NVENC - recreating due to quality or resolution change
+NVIDIA
 N\n\fachievements
 N\n\fgame_history
 N\n\fupload_stats
@@ -21709,7 +21762,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 17 2024 23:14:50
+Oct 25 2024 22:28:08
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -22586,6 +22639,7 @@ Qjh/T
 QkkXa
 Qkkbal
 Qmm5
+Qualcomm
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
@@ -23715,6 +23769,7 @@ SSLv3/TLS write session ticket
 START
 STEAMOS_STEAM_REBOOT_SENTINEL
 STEAMOS_STEAM_SHUTDOWN_SENTINEL
+STEAMVIDEOTOKEN
 STEAM_ALLOW_DRIVE_ADOPT
 STEAM_ALLOW_DRIVE_UNMOUNT
 STEAM_BASE_FOLDER
@@ -24161,7 +24216,6 @@ Settings.SetPreferredMonitor
 Settings.SetRegisteredSteamDeck
 Settings.SetSaveAccountCredentials
 Settings.SetSetting
-Settings.SetSteamPlayEnabled
 Settings.SetTimeZone
 Settings.SetUseNintendoButtonLayout
 Settings.SetUseUniversalFaceButtonGlyphs
@@ -24501,6 +24555,8 @@ Steam Big Picture
 Steam Controller %u Identity is Guest - Forcing Guest Save.\n
 Steam Controller Setting Saved Binding Selection Failed - No Identity
 Steam Controller Setting Saved Binding Selection for AppID: %s, URL: %s, Controller: %s.\n
+Steam Gpu Query
+Steam Gpu Query Engine
 Steam HTML FullScreen
 Steam ID does not pass strict parsing: '%s'
 Steam In-Home Streaming
@@ -25058,6 +25114,7 @@ System.UI.RegisterForFocusChangeEvents
 System.UI.RegisterForOverlayGameWindowFocusChanged
 System.UI.RegisterForSystemKeyEvents
 System.UpdateSettings
+System.VideoRecordingDriverCheck
 System/Bluetooth/Enabled
 SystemReport: found debug wifi trace file. Saving to: %s
 SystemShutdownMachine
@@ -25875,6 +25932,7 @@ Unknown (old code pattern doesn't specify what message to expect)
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
 Unknown Adobe color transform code %d
+Unknown Driver
 Unknown GameID type
 Unknown HTTP 4xx
 Unknown HTTP 5xx
@@ -26118,6 +26176,7 @@ VGUI_Surface039
 VGUI_System011
 VGUI_ivgui007
 VGuiModuleLoader004
+VIDEOS
 VIDEOTEXSTRING
 VISIBLE
 VISTA
@@ -27427,7 +27486,6 @@ Zulu
 \n-CClientMetrics_ReportClientError_Notification
 \n-CDeviceAuth_GetUsedAuthorizedDevices_Response
 \n-CFriendMessages_UpdateMessageReaction_Request
-\n-CGameRecording_GetActiveTimelineApps_Response
 \n-CParental_ParentalSettingsChange_Notification
 \n-CPlayer_GetNewSteamAnnouncementState_Response
 \n-CPublishedFile_GetChangeHistoryEntry_Response
@@ -27502,6 +27560,7 @@ Zulu
 \n2CContentServerDirectory_GetPeerContentInfo_Request
 \n2CFamilyGroupsClient_NotifyRunningApps_Notification
 \n2CFriendsMessages_GetActiveMessageSessions_Response
+\n2CGameRecording_GetAppsWithBackgroundVideo_Response
 \n2CPlayer_GetPurchasedProfileCustomizations_Response
 \n2CPlayer_GetRecentPlaytimeSessionsForChild_Response
 \n2CPublishedFile_AreFilesInSubscriptionList_Response
@@ -27560,6 +27619,7 @@ Zulu
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
 \n\fCStopRequest"
+\n\fEGpuDriverId
 \n\fELobbyStatus
 \n\fEUpdaterType
 \n\fFamilyGroups
@@ -27767,6 +27827,7 @@ Zulu
 \n\fruby_package
 \n\fsearch_score
 \n\fsegment_size
+\n\fshader_depot
 \n\fshare_handle
 \n\fshortcutname
 \n\fsite_steamid
@@ -28814,7 +28875,6 @@ Zulu
 \tN1a
 \tOkI
 \tOzG\r
-\tP6Zd;
 \t\n#CPublishedFile_GetUserFiles_Request
 \t\n%CPlayer_GetPlayerLinkDetails_Response
 \t\n\rClientMetrics
@@ -28955,6 +29015,7 @@ Zulu
 ^Ipg
 ^J_spY
 ^[A-Za-z_][A-Za-z0-9_.]+$
+^\n$gamerecording_automatic_gain_control
 ^\n\fExcludedGame
 ^\n\rGetThumbnails
 ^\n\rQueryByFakeIP
@@ -29939,6 +30000,7 @@ bDPadRight
 bDPadUp
 bDesktopShortcut
 bDeveloper
+bDisableUserMediaUpload
 bDisplayIsExternal
 bDisplayIsUsingAutoScale
 bDoNotDisturbMode
@@ -32094,6 +32156,7 @@ disable_license
 disable_refresh_rate_management
 disable_steam_store
 disable_toasts_in_game
+disable_user_media_upload
 disabled
 disabled group
 disabled_locally
@@ -33567,9 +33630,11 @@ gamepadui_via_gamescope
 gameport
 gameproperties
 gamerecording.pb
+gamerecording_automatic_gain_control
 gamerecording_export_codec
 gamerecording_export_directory
 gamerecording_export_limit_type
+gamerecording_force_mic_mono
 gamerecording_hotkey_ic
 gamerecording_ic_seconds
 gamerecording_video_bitrate
@@ -35689,7 +35754,7 @@ k_EControllerLEDSettingCustomk_EControllerLEDSettingDefaultk_EControllerLEDSetti
 k_EControllerModeInput_Button_Ak_EControllerModeInput_Button_Bk_EControllerModeInput_Button_Xk_EControllerModeInput_Button_Yk_EControllerModeInput_Clickk_EControllerModeInput_Clockwisek_EControllerModeInput_Countk_EControllerModeInput_CounterClockwisek_EControllerModeInput_DoubleTapk_EControllerModeInput_Dpad_Ek_EControllerModeInput_Dpad_Nk_EControllerModeInput_Dpad_NEk_EControllerModeInput_Dpad_NWk_EControllerModeInput_Dpad_Sk_EControllerModeInput_Dpad_SEk_EControllerModeInput_Dpad_SWk_EControllerModeInput_Dpad_Wk_EControllerModeInput_Edgek_EControllerModeInput_Nonek_EControllerModeInput_ScrollWheel_List0k_EControllerModeInput_ScrollWheel_List1k_EControllerModeInput_ScrollWheel_List2k_EControllerModeInput_ScrollWheel_List3k_EControllerModeInput_ScrollWheel_List4k_EControllerModeInput_ScrollWheel_List5k_EControllerModeInput_ScrollWheel_List6k_EControllerModeInput_ScrollWheel_List7k_EControllerModeInput_ScrollWheel_List8k_EControllerModeInput_ScrollWheel_List9k_EControllerModeInput_Switch_ActionSetAlwaysOnk_EControllerModeInput_Switch_CaptureButtonk_EControllerModeInput_Switch_LeftAuxCapSensek_EControllerModeInput_Switch_LeftBumperk_EControllerModeInput_Switch_LeftGripk_EControllerModeInput_Switch_LeftGrip_Upperk_EControllerModeInput_Switch_LeftJoystickClickk_EControllerModeInput_Switch_LeftTrackPadClickk_EControllerModeInput_Switch_LeftTrackPadTouchk_EControllerModeInput_Switch_LeftTriggerk_EControllerModeInput_Switch_LeftTriggerThresholdk_EControllerModeInput_Switch_Macro0k_EControllerModeInput_Switch_Macro1k_EControllerModeInput_Switch_Macro1Fingerk_EControllerModeInput_Switch_Macro2k_EControllerModeInput_Switch_Macro2Fingerk_EControllerModeInput_Switch_Macro3k_EControllerModeInput_Switch_Macro4k_EControllerModeInput_Switch_Macro5k_EControllerModeInput_Switch_Macro6k_EControllerModeInput_Switch_Macro7k_EControllerModeInput_Switch_RightAuxCapSensek_EControllerModeInput_Switch_RightBumperk_EControllerModeInput_Switch_RightGripk_EControllerModeInput_Switch_RightGrip_Upperk_EControllerModeInput_Switch_RightJoystickClickk_EControllerModeInput_Switch_RightTrackPadClickk_EControllerModeInput_Switch_RightTrackPadTouchk_EControllerModeInput_Switch_RightTriggerk_EControllerModeInput_Switch_RightTriggerThresholdk_EControllerModeInput_Switch_Selectk_EControllerModeInput_Switch_Startk_EControllerModeInput_Switch_Steamk_EControllerModeInput_Touchk_EControllerModeInput_TouchMenu_Button0k_EControllerModeInput_TouchMenu_Button1k_EControllerModeInput_TouchMenu_Button10k_EControllerModeInput_TouchMenu_Button11k_EControllerModeInput_TouchMenu_Button12k_EControllerModeInput_TouchMenu_Button13k_EControllerModeInput_TouchMenu_Button14k_EControllerModeInput_TouchMenu_Button15k_EControllerModeInput_TouchMenu_Button16k_EControllerModeInput_TouchMenu_Button17k_EControllerModeInput_TouchMenu_Button18k_EControllerModeInput_TouchMenu_Button19k_EControllerModeInput_TouchMenu_Button2k_EControllerModeInput_TouchMenu_Button20k_EControllerModeInput_TouchMenu_Button3k_EControllerModeInput_TouchMenu_Button4k_EControllerModeInput_TouchMenu_Button5k_EControllerModeInput_TouchMenu_Button6k_EControllerModeInput_TouchMenu_Button7k_EControllerModeInput_TouchMenu_Button8k_EControllerModeInput_TouchMenu_Button9k_EControllerModeInput_TriggerAnalog
 k_EControllerPresetType_Nextk_EControllerPresetType_Nonek_EControllerPresetType_Previous
 k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
-k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FlickStickToCameraAnglesk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToCameraAnglesk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_JoystickToCameraAnglesk_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_TrackPadToCameraAnglesk_EControllerSourceMode_Trigger
+k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_CameraAnglesk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FlickStickToCameraAnglesk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToCameraAnglesk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_JoystickToCameraAnglesk_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_TrackPadToCameraAnglesk_EControllerSourceMode_Trigger
 k_EControllerSource_ABXYk_EControllerSource_CapJoystickLeftk_EControllerSource_CapJoystickRightk_EControllerSource_CenterTrackpadk_EControllerSource_Countk_EControllerSource_DPadk_EControllerSource_Gyrok_EControllerSource_Joystickk_EControllerSource_Keyk_EControllerSource_LeftBumperk_EControllerSource_LeftGyrok_EControllerSource_LeftTrackpadk_EControllerSource_LeftTriggerk_EControllerSource_Mousek_EControllerSource_Nonek_EControllerSource_RightBumperk_EControllerSource_RightJoystickk_EControllerSource_RightTrackpadk_EControllerSource_RightTriggerk_EControllerSource_Switch
 k_EDeviceLocationAny
 k_EDeviceLocationLocal
@@ -35807,6 +35872,22 @@ k_EGetChannelsAlgorithm_Friends
 k_EGetGamesAlgorithm_Default
 k_EGetGamesAlgorithm_MostPlayed
 k_EGetGamesAlgorithm_PopularNew
+k_EGpuDriverId_AmdOpenSource
+k_EGpuDriverId_AmdProprietary
+k_EGpuDriverId_ArmProprietary
+k_EGpuDriverId_IntelPropietary
+k_EGpuDriverId_Invalid
+k_EGpuDriverId_MesaDozen
+k_EGpuDriverId_MesaHoneyKrisp
+k_EGpuDriverId_MesaIntel
+k_EGpuDriverId_MesaLLVMPipe
+k_EGpuDriverId_MesaNVK
+k_EGpuDriverId_MesaPanVK
+k_EGpuDriverId_MesaRadv
+k_EGpuDriverId_MesaTurnip
+k_EGpuDriverId_MesaVenus
+k_EGpuDriverId_MoltenVK
+k_EGpuDriverId_Unknown
 k_EHDRSupport_HDR
 k_EHDRSupport_HDR_Broken
 k_EHDRSupport_SDR
@@ -37687,6 +37768,8 @@ libunity.so.9
 libva.so.2
 libvideo.so
 libvstdlib_s.so
+libvulkan.so
+libvulkan.so.1
 libwayland-client.so.0
 libx264.so.142
 libxcb-res.so.0
@@ -37837,6 +37920,7 @@ lrintf
 lrintf@GLIBC_2.1
 lroundf
 lroundf@GLIBC_2.1
+lsb_release -d -s
 lseek
 lseek64
 lseek64@GLIBC_2.2
@@ -38667,6 +38751,8 @@ m_vecFuncs
 m_vecGameActions
 m_vecGetParams
 m_vecGetParams[i]
+m_vecGpuInfo
+m_vecGpuInfo.IsValidIndex( m_nDefaultGpuIndex)
 m_vecHCursor
 m_vecHMDActivityLevelCallbacks
 m_vecHTTPRequestJobs
@@ -39380,6 +39466,7 @@ need dictionary
 need new setup values
 need one signer
 need organization and numbers
+needUpdate
 need_persona_response
 needs_steam_service_repair
 negative_int_value
@@ -39877,6 +39964,7 @@ number_value
 numbers
 numbers out of order in {} quantifier
 nv->name->len > 0
+nvidia
 nxBT6 
 o&1m&
 o2i_ECPublicKey
@@ -41895,6 +41983,7 @@ sUIL\s
 sVideoCardName
 sVideoDriverVersion
 s_bAllowStaticSymbolTable
+s_instance
 s_pFileSystemInterface
 s_pInstance == this
 s_pScratchBuffer
@@ -41986,6 +42075,7 @@ seconds
 seconds_active
 seconds_allowed
 seconds_allowed_today
+seconds_not_played
 seconds_played
 seconds_remaining
 seconds_time_estimate
@@ -45062,6 +45152,632 @@ visibility
 visibility_state
 visible
 visible_in_game_list
+vkAcquireDrmDisplayEXT
+vkAcquireNextImage2KHR
+vkAcquireNextImageKHR
+vkAcquirePerformanceConfigurationINTEL
+vkAcquireProfilingLockKHR
+vkAllocateCommandBuffers
+vkAllocateDescriptorSets
+vkAllocateMemory
+vkBeginCommandBuffer
+vkBindAccelerationStructureMemoryNV
+vkBindBufferMemory
+vkBindBufferMemory2
+vkBindBufferMemory2KHR
+vkBindImageMemory
+vkBindImageMemory2
+vkBindImageMemory2KHR
+vkBindOpticalFlowSessionImageNV
+vkBindVideoSessionMemoryKHR
+vkBuildAccelerationStructuresKHR
+vkBuildMicromapsEXT
+vkCmdBeginConditionalRenderingEXT
+vkCmdBeginDebugUtilsLabelEXT
+vkCmdBeginQuery
+vkCmdBeginQueryIndexedEXT
+vkCmdBeginRenderPass
+vkCmdBeginRenderPass2
+vkCmdBeginRenderPass2KHR
+vkCmdBeginRendering
+vkCmdBeginRenderingKHR
+vkCmdBeginTransformFeedbackEXT
+vkCmdBeginVideoCodingKHR
+vkCmdBindDescriptorBufferEmbeddedSamplers2EXT
+vkCmdBindDescriptorBufferEmbeddedSamplersEXT
+vkCmdBindDescriptorBuffersEXT
+vkCmdBindDescriptorSets
+vkCmdBindDescriptorSets2KHR
+vkCmdBindIndexBuffer
+vkCmdBindIndexBuffer2KHR
+vkCmdBindInvocationMaskHUAWEI
+vkCmdBindPipeline
+vkCmdBindPipelineShaderGroupNV
+vkCmdBindShadersEXT
+vkCmdBindShadingRateImageNV
+vkCmdBindTransformFeedbackBuffersEXT
+vkCmdBindVertexBuffers
+vkCmdBindVertexBuffers2
+vkCmdBindVertexBuffers2EXT
+vkCmdBlitImage
+vkCmdBlitImage2
+vkCmdBlitImage2KHR
+vkCmdBuildAccelerationStructureNV
+vkCmdBuildAccelerationStructuresIndirectKHR
+vkCmdBuildAccelerationStructuresKHR
+vkCmdBuildMicromapsEXT
+vkCmdClearAttachments
+vkCmdClearColorImage
+vkCmdClearDepthStencilImage
+vkCmdControlVideoCodingKHR
+vkCmdCopyAccelerationStructureKHR
+vkCmdCopyAccelerationStructureNV
+vkCmdCopyAccelerationStructureToMemoryKHR
+vkCmdCopyBuffer
+vkCmdCopyBuffer2
+vkCmdCopyBuffer2KHR
+vkCmdCopyBufferToImage
+vkCmdCopyBufferToImage2
+vkCmdCopyBufferToImage2KHR
+vkCmdCopyImage
+vkCmdCopyImage2
+vkCmdCopyImage2KHR
+vkCmdCopyImageToBuffer
+vkCmdCopyImageToBuffer2
+vkCmdCopyImageToBuffer2KHR
+vkCmdCopyMemoryIndirectNV
+vkCmdCopyMemoryToAccelerationStructureKHR
+vkCmdCopyMemoryToImageIndirectNV
+vkCmdCopyMemoryToMicromapEXT
+vkCmdCopyMicromapEXT
+vkCmdCopyMicromapToMemoryEXT
+vkCmdCopyQueryPoolResults
+vkCmdCuLaunchKernelNVX
+vkCmdCudaLaunchKernelNV
+vkCmdDebugMarkerBeginEXT
+vkCmdDebugMarkerEndEXT
+vkCmdDebugMarkerInsertEXT
+vkCmdDecodeVideoKHR
+vkCmdDecompressMemoryIndirectCountNV
+vkCmdDecompressMemoryNV
+vkCmdDispatch
+vkCmdDispatchBase
+vkCmdDispatchBaseKHR
+vkCmdDispatchIndirect
+vkCmdDraw
+vkCmdDrawClusterHUAWEI
+vkCmdDrawClusterIndirectHUAWEI
+vkCmdDrawIndexed
+vkCmdDrawIndexedIndirect
+vkCmdDrawIndexedIndirectCount
+vkCmdDrawIndexedIndirectCountAMD
+vkCmdDrawIndexedIndirectCountKHR
+vkCmdDrawIndirect
+vkCmdDrawIndirectByteCountEXT
+vkCmdDrawIndirectCount
+vkCmdDrawIndirectCountAMD
+vkCmdDrawIndirectCountKHR
+vkCmdDrawMeshTasksEXT
+vkCmdDrawMeshTasksIndirectCountEXT
+vkCmdDrawMeshTasksIndirectCountNV
+vkCmdDrawMeshTasksIndirectEXT
+vkCmdDrawMeshTasksIndirectNV
+vkCmdDrawMeshTasksNV
+vkCmdDrawMultiEXT
+vkCmdDrawMultiIndexedEXT
+vkCmdEncodeVideoKHR
+vkCmdEndConditionalRenderingEXT
+vkCmdEndDebugUtilsLabelEXT
+vkCmdEndQuery
+vkCmdEndQueryIndexedEXT
+vkCmdEndRenderPass
+vkCmdEndRenderPass2
+vkCmdEndRenderPass2KHR
+vkCmdEndRendering
+vkCmdEndRenderingKHR
+vkCmdEndTransformFeedbackEXT
+vkCmdEndVideoCodingKHR
+vkCmdExecuteCommands
+vkCmdExecuteGeneratedCommandsNV
+vkCmdFillBuffer
+vkCmdInsertDebugUtilsLabelEXT
+vkCmdNextSubpass
+vkCmdNextSubpass2
+vkCmdNextSubpass2KHR
+vkCmdOpticalFlowExecuteNV
+vkCmdPipelineBarrier
+vkCmdPipelineBarrier2
+vkCmdPipelineBarrier2KHR
+vkCmdPreprocessGeneratedCommandsNV
+vkCmdPushConstants
+vkCmdPushConstants2KHR
+vkCmdPushDescriptorSet2KHR
+vkCmdPushDescriptorSetKHR
+vkCmdPushDescriptorSetWithTemplate2KHR
+vkCmdPushDescriptorSetWithTemplateKHR
+vkCmdResetEvent
+vkCmdResetEvent2
+vkCmdResetEvent2KHR
+vkCmdResetQueryPool
+vkCmdResolveImage
+vkCmdResolveImage2
+vkCmdResolveImage2KHR
+vkCmdSetAlphaToCoverageEnableEXT
+vkCmdSetAlphaToOneEnableEXT
+vkCmdSetAttachmentFeedbackLoopEnableEXT
+vkCmdSetBlendConstants
+vkCmdSetCheckpointNV
+vkCmdSetCoarseSampleOrderNV
+vkCmdSetColorBlendAdvancedEXT
+vkCmdSetColorBlendEnableEXT
+vkCmdSetColorBlendEquationEXT
+vkCmdSetColorWriteEnableEXT
+vkCmdSetColorWriteMaskEXT
+vkCmdSetConservativeRasterizationModeEXT
+vkCmdSetCoverageModulationModeNV
+vkCmdSetCoverageModulationTableEnableNV
+vkCmdSetCoverageModulationTableNV
+vkCmdSetCoverageReductionModeNV
+vkCmdSetCoverageToColorEnableNV
+vkCmdSetCoverageToColorLocationNV
+vkCmdSetCullMode
+vkCmdSetCullModeEXT
+vkCmdSetDepthBias
+vkCmdSetDepthBias2EXT
+vkCmdSetDepthBiasEnable
+vkCmdSetDepthBiasEnableEXT
+vkCmdSetDepthBounds
+vkCmdSetDepthBoundsTestEnable
+vkCmdSetDepthBoundsTestEnableEXT
+vkCmdSetDepthClampEnableEXT
+vkCmdSetDepthClipEnableEXT
+vkCmdSetDepthClipNegativeOneToOneEXT
+vkCmdSetDepthCompareOp
+vkCmdSetDepthCompareOpEXT
+vkCmdSetDepthTestEnable
+vkCmdSetDepthTestEnableEXT
+vkCmdSetDepthWriteEnable
+vkCmdSetDepthWriteEnableEXT
+vkCmdSetDescriptorBufferOffsets2EXT
+vkCmdSetDescriptorBufferOffsetsEXT
+vkCmdSetDeviceMask
+vkCmdSetDeviceMaskKHR
+vkCmdSetDiscardRectangleEXT
+vkCmdSetDiscardRectangleEnableEXT
+vkCmdSetDiscardRectangleModeEXT
+vkCmdSetEvent
+vkCmdSetEvent2
+vkCmdSetEvent2KHR
+vkCmdSetExclusiveScissorEnableNV
+vkCmdSetExclusiveScissorNV
+vkCmdSetExtraPrimitiveOverestimationSizeEXT
+vkCmdSetFragmentShadingRateEnumNV
+vkCmdSetFragmentShadingRateKHR
+vkCmdSetFrontFace
+vkCmdSetFrontFaceEXT
+vkCmdSetLineRasterizationModeEXT
+vkCmdSetLineStippleEXT
+vkCmdSetLineStippleEnableEXT
+vkCmdSetLineStippleKHR
+vkCmdSetLineWidth
+vkCmdSetLogicOpEXT
+vkCmdSetLogicOpEnableEXT
+vkCmdSetPatchControlPointsEXT
+vkCmdSetPerformanceMarkerINTEL
+vkCmdSetPerformanceOverrideINTEL
+vkCmdSetPerformanceStreamMarkerINTEL
+vkCmdSetPolygonModeEXT
+vkCmdSetPrimitiveRestartEnable
+vkCmdSetPrimitiveRestartEnableEXT
+vkCmdSetPrimitiveTopology
+vkCmdSetPrimitiveTopologyEXT
+vkCmdSetProvokingVertexModeEXT
+vkCmdSetRasterizationSamplesEXT
+vkCmdSetRasterizationStreamEXT
+vkCmdSetRasterizerDiscardEnable
+vkCmdSetRasterizerDiscardEnableEXT
+vkCmdSetRayTracingPipelineStackSizeKHR
+vkCmdSetRenderingAttachmentLocationsKHR
+vkCmdSetRenderingInputAttachmentIndicesKHR
+vkCmdSetRepresentativeFragmentTestEnableNV
+vkCmdSetSampleLocationsEXT
+vkCmdSetSampleLocationsEnableEXT
+vkCmdSetSampleMaskEXT
+vkCmdSetScissor
+vkCmdSetScissorWithCount
+vkCmdSetScissorWithCountEXT
+vkCmdSetShadingRateImageEnableNV
+vkCmdSetStencilCompareMask
+vkCmdSetStencilOp
+vkCmdSetStencilOpEXT
+vkCmdSetStencilReference
+vkCmdSetStencilTestEnable
+vkCmdSetStencilTestEnableEXT
+vkCmdSetStencilWriteMask
+vkCmdSetTessellationDomainOriginEXT
+vkCmdSetVertexInputEXT
+vkCmdSetViewport
+vkCmdSetViewportShadingRatePaletteNV
+vkCmdSetViewportSwizzleNV
+vkCmdSetViewportWScalingEnableNV
+vkCmdSetViewportWScalingNV
+vkCmdSetViewportWithCount
+vkCmdSetViewportWithCountEXT
+vkCmdSubpassShadingHUAWEI
+vkCmdTraceRaysIndirect2KHR
+vkCmdTraceRaysIndirectKHR
+vkCmdTraceRaysKHR
+vkCmdTraceRaysNV
+vkCmdUpdateBuffer
+vkCmdUpdatePipelineIndirectBufferNV
+vkCmdWaitEvents
+vkCmdWaitEvents2
+vkCmdWaitEvents2KHR
+vkCmdWriteAccelerationStructuresPropertiesKHR
+vkCmdWriteAccelerationStructuresPropertiesNV
+vkCmdWriteBufferMarker2AMD
+vkCmdWriteBufferMarkerAMD
+vkCmdWriteMicromapsPropertiesEXT
+vkCmdWriteTimestamp
+vkCmdWriteTimestamp2
+vkCmdWriteTimestamp2KHR
+vkCompileDeferredNV
+vkCopyAccelerationStructureKHR
+vkCopyAccelerationStructureToMemoryKHR
+vkCopyImageToImageEXT
+vkCopyImageToMemoryEXT
+vkCopyMemoryToAccelerationStructureKHR
+vkCopyMemoryToImageEXT
+vkCopyMemoryToMicromapEXT
+vkCopyMicromapEXT
+vkCopyMicromapToMemoryEXT
+vkCreateAccelerationStructureKHR
+vkCreateAccelerationStructureNV
+vkCreateBuffer
+vkCreateBufferView
+vkCreateCommandPool
+vkCreateComputePipelines
+vkCreateCuFunctionNVX
+vkCreateCuModuleNVX
+vkCreateCudaFunctionNV
+vkCreateCudaModuleNV
+vkCreateDebugReportCallbackEXT
+vkCreateDebugUtilsMessengerEXT
+vkCreateDeferredOperationKHR
+vkCreateDescriptorPool
+vkCreateDescriptorSetLayout
+vkCreateDescriptorUpdateTemplate
+vkCreateDescriptorUpdateTemplateKHR
+vkCreateDevice
+vkCreateDisplayModeKHR
+vkCreateDisplayPlaneSurfaceKHR
+vkCreateEvent
+vkCreateFence
+vkCreateFramebuffer
+vkCreateGraphicsPipelines
+vkCreateHeadlessSurfaceEXT
+vkCreateImage
+vkCreateImageView
+vkCreateIndirectCommandsLayoutNV
+vkCreateInstance
+vkCreateMicromapEXT
+vkCreateOpticalFlowSessionNV
+vkCreatePipelineCache
+vkCreatePipelineLayout
+vkCreatePrivateDataSlot
+vkCreatePrivateDataSlotEXT
+vkCreateQueryPool
+vkCreateRayTracingPipelinesKHR
+vkCreateRayTracingPipelinesNV
+vkCreateRenderPass
+vkCreateRenderPass2
+vkCreateRenderPass2KHR
+vkCreateSampler
+vkCreateSamplerYcbcrConversion
+vkCreateSamplerYcbcrConversionKHR
+vkCreateSemaphore
+vkCreateShaderModule
+vkCreateShadersEXT
+vkCreateSharedSwapchainsKHR
+vkCreateSwapchainKHR
+vkCreateValidationCacheEXT
+vkCreateVideoSessionKHR
+vkCreateVideoSessionParametersKHR
+vkDebugMarkerSetObjectNameEXT
+vkDebugMarkerSetObjectTagEXT
+vkDebugReportMessageEXT
+vkDeferredOperationJoinKHR
+vkDestroyAccelerationStructureKHR
+vkDestroyAccelerationStructureNV
+vkDestroyBuffer
+vkDestroyBufferView
+vkDestroyCommandPool
+vkDestroyCuFunctionNVX
+vkDestroyCuModuleNVX
+vkDestroyCudaFunctionNV
+vkDestroyCudaModuleNV
+vkDestroyDebugReportCallbackEXT
+vkDestroyDebugUtilsMessengerEXT
+vkDestroyDeferredOperationKHR
+vkDestroyDescriptorPool
+vkDestroyDescriptorSetLayout
+vkDestroyDescriptorUpdateTemplate
+vkDestroyDescriptorUpdateTemplateKHR
+vkDestroyDevice
+vkDestroyEvent
+vkDestroyFence
+vkDestroyFramebuffer
+vkDestroyImage
+vkDestroyImageView
+vkDestroyIndirectCommandsLayoutNV
+vkDestroyInstance
+vkDestroyMicromapEXT
+vkDestroyOpticalFlowSessionNV
+vkDestroyPipeline
+vkDestroyPipelineCache
+vkDestroyPipelineLayout
+vkDestroyPrivateDataSlot
+vkDestroyPrivateDataSlotEXT
+vkDestroyQueryPool
+vkDestroyRenderPass
+vkDestroySampler
+vkDestroySamplerYcbcrConversion
+vkDestroySamplerYcbcrConversionKHR
+vkDestroySemaphore
+vkDestroyShaderEXT
+vkDestroyShaderModule
+vkDestroySurfaceKHR
+vkDestroySwapchainKHR
+vkDestroyValidationCacheEXT
+vkDestroyVideoSessionKHR
+vkDestroyVideoSessionParametersKHR
+vkDeviceWaitIdle
+vkDisplayPowerControlEXT
+vkEndCommandBuffer
+vkEnumerateDeviceExtensionProperties
+vkEnumerateDeviceLayerProperties
+vkEnumerateInstanceExtensionProperties
+vkEnumerateInstanceLayerProperties
+vkEnumerateInstanceVersion
+vkEnumeratePhysicalDeviceGroups
+vkEnumeratePhysicalDeviceGroupsKHR
+vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
+vkEnumeratePhysicalDevices
+vkFlushMappedMemoryRanges
+vkFreeCommandBuffers
+vkFreeDescriptorSets
+vkFreeMemory
+vkGetAccelerationStructureBuildSizesKHR
+vkGetAccelerationStructureDeviceAddressKHR
+vkGetAccelerationStructureHandleNV
+vkGetAccelerationStructureMemoryRequirementsNV
+vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT
+vkGetBufferDeviceAddress
+vkGetBufferDeviceAddressEXT
+vkGetBufferDeviceAddressKHR
+vkGetBufferMemoryRequirements
+vkGetBufferMemoryRequirements2
+vkGetBufferMemoryRequirements2KHR
+vkGetBufferOpaqueCaptureAddress
+vkGetBufferOpaqueCaptureAddressKHR
+vkGetBufferOpaqueCaptureDescriptorDataEXT
+vkGetCalibratedTimestampsEXT
+vkGetCalibratedTimestampsKHR
+vkGetCudaModuleCacheNV
+vkGetDeferredOperationMaxConcurrencyKHR
+vkGetDeferredOperationResultKHR
+vkGetDescriptorEXT
+vkGetDescriptorSetHostMappingVALVE
+vkGetDescriptorSetLayoutBindingOffsetEXT
+vkGetDescriptorSetLayoutHostMappingInfoVALVE
+vkGetDescriptorSetLayoutSizeEXT
+vkGetDescriptorSetLayoutSupport
+vkGetDescriptorSetLayoutSupportKHR
+vkGetDeviceAccelerationStructureCompatibilityKHR
+vkGetDeviceBufferMemoryRequirements
+vkGetDeviceBufferMemoryRequirementsKHR
+vkGetDeviceFaultInfoEXT
+vkGetDeviceGroupPeerMemoryFeatures
+vkGetDeviceGroupPeerMemoryFeaturesKHR
+vkGetDeviceGroupPresentCapabilitiesKHR
+vkGetDeviceGroupSurfacePresentModesKHR
+vkGetDeviceImageMemoryRequirements
+vkGetDeviceImageMemoryRequirementsKHR
+vkGetDeviceImageSparseMemoryRequirements
+vkGetDeviceImageSparseMemoryRequirementsKHR
+vkGetDeviceImageSubresourceLayoutKHR
+vkGetDeviceMemoryCommitment
+vkGetDeviceMemoryOpaqueCaptureAddress
+vkGetDeviceMemoryOpaqueCaptureAddressKHR
+vkGetDeviceMicromapCompatibilityEXT
+vkGetDeviceProcAddr
+vkGetDeviceQueue
+vkGetDeviceQueue2
+vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI
+vkGetDisplayModeProperties2KHR
+vkGetDisplayModePropertiesKHR
+vkGetDisplayPlaneCapabilities2KHR
+vkGetDisplayPlaneCapabilitiesKHR
+vkGetDisplayPlaneSupportedDisplaysKHR
+vkGetDrmDisplayEXT
+vkGetDynamicRenderingTilePropertiesQCOM
+vkGetEncodedVideoSessionParametersKHR
+vkGetEventStatus
+vkGetFenceFdKHR
+vkGetFenceStatus
+vkGetFramebufferTilePropertiesQCOM
+vkGetGeneratedCommandsMemoryRequirementsNV
+vkGetImageDrmFormatModifierPropertiesEXT
+vkGetImageMemoryRequirements
+vkGetImageMemoryRequirements2
+vkGetImageMemoryRequirements2KHR
+vkGetImageOpaqueCaptureDescriptorDataEXT
+vkGetImageSparseMemoryRequirements
+vkGetImageSparseMemoryRequirements2
+vkGetImageSparseMemoryRequirements2KHR
+vkGetImageSubresourceLayout
+vkGetImageSubresourceLayout2EXT
+vkGetImageSubresourceLayout2KHR
+vkGetImageViewAddressNVX
+vkGetImageViewHandleNVX
+vkGetImageViewOpaqueCaptureDescriptorDataEXT
+vkGetInstanceProcAddr
+vkGetLatencyTimingsNV
+vkGetMemoryFdKHR
+vkGetMemoryFdPropertiesKHR
+vkGetMemoryHostPointerPropertiesEXT
+vkGetMemoryRemoteAddressNV
+vkGetMicromapBuildSizesEXT
+vkGetPastPresentationTimingGOOGLE
+vkGetPerformanceParameterINTEL
+vkGetPhysicalDeviceCalibrateableTimeDomainsEXT
+vkGetPhysicalDeviceCalibrateableTimeDomainsKHR
+vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR
+vkGetPhysicalDeviceCooperativeMatrixPropertiesNV
+vkGetPhysicalDeviceDisplayPlaneProperties2KHR
+vkGetPhysicalDeviceDisplayPlanePropertiesKHR
+vkGetPhysicalDeviceDisplayProperties2KHR
+vkGetPhysicalDeviceDisplayPropertiesKHR
+vkGetPhysicalDeviceExternalBufferProperties
+vkGetPhysicalDeviceExternalBufferPropertiesKHR
+vkGetPhysicalDeviceExternalFenceProperties
+vkGetPhysicalDeviceExternalFencePropertiesKHR
+vkGetPhysicalDeviceExternalImageFormatPropertiesNV
+vkGetPhysicalDeviceExternalSemaphoreProperties
+vkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkGetPhysicalDeviceFeatures
+vkGetPhysicalDeviceFeatures2
+vkGetPhysicalDeviceFeatures2KHR
+vkGetPhysicalDeviceFormatProperties
+vkGetPhysicalDeviceFormatProperties2
+vkGetPhysicalDeviceFormatProperties2KHR
+vkGetPhysicalDeviceFragmentShadingRatesKHR
+vkGetPhysicalDeviceImageFormatProperties
+vkGetPhysicalDeviceImageFormatProperties2
+vkGetPhysicalDeviceImageFormatProperties2KHR
+vkGetPhysicalDeviceMemoryProperties
+vkGetPhysicalDeviceMemoryProperties2
+vkGetPhysicalDeviceMemoryProperties2KHR
+vkGetPhysicalDeviceMultisamplePropertiesEXT
+vkGetPhysicalDeviceOpticalFlowImageFormatsNV
+vkGetPhysicalDevicePresentRectanglesKHR
+vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2
+vkGetPhysicalDeviceProperties2KHR
+vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
+vkGetPhysicalDeviceQueueFamilyProperties
+vkGetPhysicalDeviceQueueFamilyProperties2
+vkGetPhysicalDeviceQueueFamilyProperties2KHR
+vkGetPhysicalDeviceSparseImageFormatProperties
+vkGetPhysicalDeviceSparseImageFormatProperties2
+vkGetPhysicalDeviceSparseImageFormatProperties2KHR
+vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
+vkGetPhysicalDeviceSurfaceCapabilities2EXT
+vkGetPhysicalDeviceSurfaceCapabilities2KHR
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR
+vkGetPhysicalDeviceSurfaceFormats2KHR
+vkGetPhysicalDeviceSurfaceFormatsKHR
+vkGetPhysicalDeviceSurfacePresentModesKHR
+vkGetPhysicalDeviceSurfaceSupportKHR
+vkGetPhysicalDeviceToolProperties
+vkGetPhysicalDeviceToolPropertiesEXT
+vkGetPhysicalDeviceVideoCapabilitiesKHR
+vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR
+vkGetPhysicalDeviceVideoFormatPropertiesKHR
+vkGetPipelineCacheData
+vkGetPipelineExecutableInternalRepresentationsKHR
+vkGetPipelineExecutablePropertiesKHR
+vkGetPipelineExecutableStatisticsKHR
+vkGetPipelineIndirectDeviceAddressNV
+vkGetPipelineIndirectMemoryRequirementsNV
+vkGetPipelinePropertiesEXT
+vkGetPrivateData
+vkGetPrivateDataEXT
+vkGetQueryPoolResults
+vkGetQueueCheckpointData2NV
+vkGetQueueCheckpointDataNV
+vkGetRayTracingCaptureReplayShaderGroupHandlesKHR
+vkGetRayTracingShaderGroupHandlesKHR
+vkGetRayTracingShaderGroupHandlesNV
+vkGetRayTracingShaderGroupStackSizeKHR
+vkGetRefreshCycleDurationGOOGLE
+vkGetRenderAreaGranularity
+vkGetRenderingAreaGranularityKHR
+vkGetSamplerOpaqueCaptureDescriptorDataEXT
+vkGetSemaphoreCounterValue
+vkGetSemaphoreCounterValueKHR
+vkGetSemaphoreFdKHR
+vkGetShaderBinaryDataEXT
+vkGetShaderInfoAMD
+vkGetShaderModuleCreateInfoIdentifierEXT
+vkGetShaderModuleIdentifierEXT
+vkGetSwapchainCounterEXT
+vkGetSwapchainImagesKHR
+vkGetSwapchainStatusKHR
+vkGetValidationCacheDataEXT
+vkGetVideoSessionMemoryRequirementsKHR
+vkImportFenceFdKHR
+vkImportSemaphoreFdKHR
+vkInitializePerformanceApiINTEL
+vkInvalidateMappedMemoryRanges
+vkLatencySleepNV
+vkMapMemory
+vkMapMemory2KHR
+vkMergePipelineCaches
+vkMergeValidationCachesEXT
+vkQueueBeginDebugUtilsLabelEXT
+vkQueueBindSparse
+vkQueueEndDebugUtilsLabelEXT
+vkQueueInsertDebugUtilsLabelEXT
+vkQueueNotifyOutOfBandNV
+vkQueuePresentKHR
+vkQueueSetPerformanceConfigurationINTEL
+vkQueueSubmit
+vkQueueSubmit2
+vkQueueSubmit2KHR
+vkQueueWaitIdle
+vkRegisterDeviceEventEXT
+vkRegisterDisplayEventEXT
+vkReleaseDisplayEXT
+vkReleasePerformanceConfigurationINTEL
+vkReleaseProfilingLockKHR
+vkReleaseSwapchainImagesEXT
+vkResetCommandBuffer
+vkResetCommandPool
+vkResetDescriptorPool
+vkResetEvent
+vkResetFences
+vkResetQueryPool
+vkResetQueryPoolEXT
+vkSetDebugUtilsObjectNameEXT
+vkSetDebugUtilsObjectTagEXT
+vkSetDeviceMemoryPriorityEXT
+vkSetEvent
+vkSetHdrMetadataEXT
+vkSetLatencyMarkerNV
+vkSetLatencySleepModeNV
+vkSetLocalDimmingAMD
+vkSetPrivateData
+vkSetPrivateDataEXT
+vkSignalSemaphore
+vkSignalSemaphoreKHR
+vkSubmitDebugUtilsMessageEXT
+vkTransitionImageLayoutEXT
+vkTrimCommandPool
+vkTrimCommandPoolKHR
+vkUninitializePerformanceApiINTEL
+vkUnmapMemory
+vkUnmapMemory2KHR
+vkUpdateDescriptorSetWithTemplate
+vkUpdateDescriptorSetWithTemplateKHR
+vkUpdateDescriptorSets
+vkUpdateVideoSessionParametersKHR
+vkWaitForFences
+vkWaitForPresentKHR
+vkWaitSemaphores
+vkWaitSemaphoresKHR
+vkWriteAccelerationStructuresPropertiesKHR
+vkWriteMicromapsPropertiesEXT
 vmc.com
 vmhfjov
 vms_bind_sym
@@ -45177,6 +45893,7 @@ vsAd
 vscode://file/%s:%u
 vsnprintf@GLIBC_2.0
 vstdlib_s
+vtable for CAdHocValidation_SimpleCallback
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

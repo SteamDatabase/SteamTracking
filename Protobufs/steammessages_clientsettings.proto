@@ -222,6 +222,8 @@ message CMsgClientSettings {
 	optional string gamerecording_export_directory = 18223 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_name) = "GameRecording\\ExportDirectory"];
 	optional .EExportCodec gamerecording_export_codec = 18224 [default = k_EExportCodec_Default, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportCodec"];
 	optional int32 gamerecording_video_maxheight = 18225 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\VideoMaxHeight", (setting_default_int) = 0, (setting_clamp_min) = 0, (setting_clamp_max) = 2160];
+	optional bool gamerecording_force_mic_mono = 18226 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ForceMicMono", (setting_default_bool) = false];
+	optional bool gamerecording_automatic_gain_control = 18227 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\AutomaticGainControl", (setting_default_bool) = true];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];

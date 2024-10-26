@@ -9,6 +9,7 @@ message CContentBuilder_InitDepotBuild_Request {
 	optional uint64 workshop_itemid = 3;
 	optional bool for_local_cs = 4;
 	optional string target_branch = 5;
+	optional bool shader_depot = 6;
 }
 
 message CContentBuilder_InitDepotBuild_Response {

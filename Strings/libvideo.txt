@@ -1624,6 +1624,7 @@ $tIContent-Length
 21COpenSSLCachedSession
 21CUtlCStringConversion
 21VideoRepresentation_t
+22:27:03
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -1631,7 +1632,6 @@ $tIContent-Length
 22CCustomAVIOReadContext
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:13:44
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2026,6 +2026,8 @@ AKST
 ALL:!COMPLEMENTOFDEFAULT:!eNULL
 ALL_PROXY
 ALREADY_EXISTS
+AMD OpenSource
+AMD RADV
 ANSI X9.62
 ANY PRIVATE KEY
 AP"\nsQJ
@@ -2569,6 +2571,7 @@ Boolean default must be true or false.
 Borrowed
 Bradesco Online
 Breaking '%s' in '%s'\n
+Broadcom
 Browser
 Bucket size : count\n
 Bugs
@@ -4465,6 +4468,7 @@ Giropay
 Global Collect unknown error
 Global Moderator
 Gone
+Google Swiftshader
 Google.Protobuf.Reflection
 Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
@@ -4783,6 +4787,8 @@ Insufficient funds
 Integer out of range (
 Integrated Guide
 IntegratedGuides
+Intel
+Intel ANV
 Interac
 Internal Error
 Internal Server Error
@@ -4797,6 +4803,7 @@ Invalid %s declaration
 Invalid CD-Key
 Invalid CEG Submission
 Invalid Data
+Invalid Driver
 Invalid Email
 Invalid FileWriterItem_t
 Invalid HTTP header field was received
@@ -4972,6 +4979,7 @@ LIBAVFORMAT_61
 LIBAVUTIL_59
 LIBSWRESAMPLE_5
 LIBSWSCALE_8
+LLVMPipe Mesa
 LOCK_EX
 LOCK_SH
 LV=%zu n=%zu\n
@@ -5111,6 +5119,12 @@ MergeXR30Row_C
 MergeXR64Row_C
 MergeXRGB16To8Row_C
 MergeXRGBRow_C
+Mesa Dozen
+Mesa HoneyKrisp
+Mesa NVK
+Mesa PanVK
+Mesa Turnip
+Mesa Venus
 Message class "
 Message does not support reflection (type 
 Message is too deep, the parser exceeded the configured recursion limit of 
@@ -5166,6 +5180,7 @@ Mobile (Degica)
 Mobile Wallet (Japan)
 Moderators
 Modulus:
+MoltenVK
 Monday
 MoneyBookers
 More than one message named '%s'
@@ -5416,6 +5431,7 @@ NV21ToRGB24Matrix
 NV21ToRGB24Row_C
 NV21ToYUV24
 NV21ToYUV24Row_C
+NVIDIA
 N\r\nyd
 NamePart
 Nanaco
@@ -5642,7 +5658,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 17 2024
+Oct 25 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -6040,6 +6056,7 @@ Qf(I
 Qjh/T
 Qkkbal
 Qmm5
+Qualcomm
 Queueing request for http%s://%s%s, %d already in queue, we are still discovering HTTP/2 support\n
 Queueing request for http%s://%s%s, %d already in queue\n
 R##Fe
@@ -7395,6 +7412,7 @@ Uninterpreted option is missing name or value.
 UninterpretedOption
 UnionPay
 Unknown
+Unknown Driver
 Unknown HTTP 4xx
 Unknown HTTP 5xx
 Unknown cipher suite! using k_ESSLCipherSuiteMaxSecurity

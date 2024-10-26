@@ -219,11 +219,11 @@ $HOME/
 /Steam3PosixRegistryManager
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/language.cpp
+/data/src/common/platformhelpers.cpp
 /data/src/common/registry.cpp
 /data/src/common/timeutils.cpp
 /data/src/public/tier1/bitstring.h
 /data/src/public/tier1/interface.h
-/data/src/public/tier1/linuxhelpers_nodeps.h
 /data/src/public/tier1/utlbuffer.h
 /data/src/public/tier1/utldict.h
 /data/src/public/tier1/utlhashmap.h
@@ -833,6 +833,7 @@ Invalid sCAL unit
 Invalid sCAL width
 Invalid sCAL width ignored
 Invalid sRGB rendering intent specified
+Invalid system directory %d
 Invalid time specified for tIME chunk
 Invalid width or height to AllocatePageForString()
 Irish
@@ -1321,6 +1322,7 @@ VGUI_Surface039
 VGUI_System011
 VGUI_ivgui007
 VGuiModuleLoader004
+VIDEOS
 VISTA
 VProfInternalEnterScopeCurrentThread
 VTT for 

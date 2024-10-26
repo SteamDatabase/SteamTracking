@@ -1273,9 +1273,9 @@ $d`D-laM
 21CWorkThreadPoolSignal
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
+22:27:03
 22CBaseScheduledFunction
 22CClanMatchEventByRange
-23:13:44
 23CClanEventUserNewsTuple
 24CClientModuleManagerBase
 24CCryptoKeyBase_RawBuffer
@@ -2448,10 +2448,14 @@ CPPTYPE_UINT64
 CPackageReservationStatus
 CPipeWaiter::BRemove(%d) -- not present
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRL Sign
@@ -3959,7 +3963,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 17 2024
+Oct 25 2024
 October
 On-disk registry has changed and is marked dirty - we're about to lose data.
 Once
@@ -4576,6 +4580,7 @@ SSL_write_early_data
 SSL_write_ex
 SSLv2
 SSLv3
+STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
 STORE lib
 STORE routines

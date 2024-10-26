@@ -35,7 +35,7 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123^@
+ !"#$%&'()*+,-./0123>@
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -1778,11 +1778,12 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
+22:27:03
+22:27:29
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
 22ISSLConnectionCallback
-23:13:44
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
@@ -2228,6 +2229,8 @@ ALIGN_TYPE is wrong, please fix
 ALL:!COMPLEMENTOFDEFAULT:!eNULL
 ALL_PROXY
 ALREADY_EXISTS
+AMD OpenSource
+AMD RADV
 ANDROID
 ANDROID32
 ANDROID64
@@ -2608,7 +2611,7 @@ B-233
 B-283
 B-409
 B-571
-B23:14:07
+B22:27:28
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -2912,6 +2915,7 @@ Bootstrapper
 Borrowed
 Bradesco Online
 Breaking '%s' in '%s'\n
+Broadcom
 Browser
 Bucket size : count\n
 Buffer passed to JPEG library is too small
@@ -6710,7 +6714,6 @@ EINPROGRESS
 EINTR
 EINVAL
 EISCONN
-ELegacyEnvironmentVariable
 EMPTY
 EMsg
 EMsg %d registered multiple times.
@@ -7237,6 +7240,7 @@ FillDataStruct(_finddata_t*)
 Finalization timeout waiting for processing of %d to complete
 Finansbank
 FindOrCreateStack(CStack*)
+FioClose(int)
 FioCreateFile(StringView, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
 FioRead(int, void*, int, int*)
 FioWrite(int, void const*, int, int*)
@@ -7434,6 +7438,7 @@ Giropay
 Global Collect unknown error
 Global Moderator
 Gone
+Google Swiftshader
 Google.Protobuf.Reflection
 Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
@@ -7709,6 +7714,8 @@ Insufficient memory to store text
 Integer out of range (
 Integrated Guide
 IntegratedGuides
+Intel
+Intel ANV
 Interac
 InterfaceReg::InterfaceReg(void* (*)(), char const*)
 InterfaceReg::s_pInterfaceRegs
@@ -7722,6 +7729,7 @@ Invalid
 Invalid CD-Key
 Invalid CEG Submission
 Invalid Data
+Invalid Driver
 Invalid Email
 Invalid FileWriterItem_t
 Invalid HTTP header field was received
@@ -7958,6 +7966,7 @@ LEGACY_GOST_PKCS12
 LINUX
 LINUX32
 LINUX64
+LLVMPipe Mesa
 LOCK_EX
 LOCK_SH
 LV=%zu n=%zu\n
@@ -8105,6 +8114,12 @@ Memory leak: mempool blocks left in memory: %d\n
 MerPay
 MercadoPago
 Merch
+Mesa Dozen
+Mesa HoneyKrisp
+Mesa NVK
+Mesa PanVK
+Mesa Turnip
+Mesa Venus
 Message class "
 Message does not support reflection (type 
 Message is too deep, the parser exceeded the configured recursion limit of 
@@ -8164,6 +8179,7 @@ Mobile (Degica)
 Mobile Wallet (Japan)
 Moderators
 Modulus:
+MoltenVK
 Monday
 MoneyBookers
 More than one message named '%s'
@@ -8410,6 +8426,7 @@ NULL-MD5
 NULL\n
 NUMERIC
 NUMERICSTRING
+NVIDIA
 N\r\nyd
 NamePart
 Nanaco
@@ -8814,7 +8831,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 17 2024
+Oct 25 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -9405,6 +9422,7 @@ Qjh/T
 QkkXa
 Qkkbal
 Qmm5
+Qualcomm
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
@@ -10293,6 +10311,7 @@ SSLv3/TLS write next proto
 SSLv3/TLS write server done
 SSLv3/TLS write server hello
 SSLv3/TLS write session ticket
+STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
 STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
@@ -10526,7 +10545,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct 17 2024 23:14:07
+Startup - updater built Oct 25 2024 22:27:28
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -11204,6 +11223,7 @@ Unknown
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
 Unknown Adobe color transform code %d
+Unknown Driver
 Unknown HTTP 4xx
 Unknown HTTP 5xx
 Unknown cipher suite! using k_ESSLCipherSuiteMaxSecurity

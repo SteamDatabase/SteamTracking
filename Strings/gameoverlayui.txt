@@ -240,6 +240,8 @@ $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
+$\n k_EGpuDriverId_GoogleSwiftshader
+$\n k_EGpuDriverId_NvidiaProprietary
 $\n k_EGraphicsPerfOverlayLevel_Full
 $\n k_EJSRegisterMethodType_Callback
 $\n k_EJSRegisterMethodType_Function
@@ -323,6 +325,8 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
+&\n"k_EGpuDriverId_BroadcomProprietary
+&\n"k_EGpuDriverId_QualcommProprietary
 &\n"k_EGraphicsPerfOverlayLevel_Hidden
 &\n"k_EGraphicsPerfOverlayLevel_Medium
 &\n"k_EHDRVisualization_HeatmapClassic
@@ -1074,6 +1078,7 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:27:50
 22CClanMatchEventByRange
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
@@ -1084,7 +1089,6 @@ $\n k_SystemAudioPortDirection_Input
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:14:34
 23CClanEventUserNewsTuple
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1269,6 +1273,8 @@ ABORTED
 ACCEPT
 AKST
 ALREADY_EXISTS
+AMD OpenSource
+AMD RADV
 ANDROID
 ANDROID32
 ANDROID64
@@ -1432,6 +1438,7 @@ Brahmi
 Braille
 Break
 Breaking '%s' in '%s'\n
+Broadcom
 Browser
 BrowserBringWindowToFront
 BrowserDisabledKBLink
@@ -2608,6 +2615,7 @@ Global Collect unknown error
 Global Moderator
 Global\Steam_GameOverlayInjector_%s
 Gone
+Google Swiftshader
 Google.Protobuf.Reflection
 Got gameid on commandline: %llu\n
 Gothic
@@ -2735,6 +2743,8 @@ Insufficient funds
 Integer out of range (
 Integrated Guide
 IntegratedGuides
+Intel
+Intel ANV
 Interac
 Internal Error
 Internal Server Error
@@ -2743,6 +2753,7 @@ Invalid
 Invalid CD-Key
 Invalid CEG Submission
 Invalid Data
+Invalid Driver
 Invalid Email
 Invalid Handle
 Invalid Login Auth Code
@@ -3031,6 +3042,7 @@ LIMIT_RECURSION=
 LINUX
 LINUX32
 LINUX64
+LLVMPipe Mesa
 LOCK_EX
 LOCK_SH
 Label
@@ -3203,6 +3215,12 @@ MercadoPago
 Merch
 Meroitic_Cursive
 Meroitic_Hieroglyphs
+Mesa Dozen
+Mesa HoneyKrisp
+Mesa NVK
+Mesa PanVK
+Mesa Turnip
+Mesa Venus
 Message '%s' not handled by panel '%s'\n
 Message '%s', sent to '%s', has an invalid parameter type\n
 Message '%s', sent to '%s', has invalid parameter types\n
@@ -3243,6 +3261,7 @@ Mobile (Degica)
 Mobile Wallet (Japan)
 ModelNumberID
 Moderators
+MoltenVK
 Monday
 MoneyBookers
 Mongolian
@@ -3497,6 +3516,7 @@ NO_START_OPT)
 NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt8ios_base7failureE
+NVIDIA
 NameEntry
 NamePart
 Nanaco
@@ -3588,7 +3608,7 @@ OSX1010
 OUT_OF_RANGE
 OXXO
 O\n\nAnnotation
-Oct 17 2024
+Oct 25 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -3815,6 +3835,7 @@ Purchase pending
 PutInternal: Not enough space for put when locked\n
 QIWI
 QkkXa
+Qualcomm
 QuickAccess
 RESOURCE_EXHAUSTED
 RGBA: %.2X %.2X %.2X %.2X
@@ -4437,6 +4458,7 @@ Uninstalling
 Uninterpreted option is missing name or value.
 UninterpretedOption
 UnionPay
+Unknown Driver
 Unknown HDR colorspace %d
 Unknown HDR10 pixel format %d
 Unknown HTTP 4xx
@@ -4696,6 +4718,7 @@ ZooPropertyPage
 \n(ESteamDeckCompatibilityResultDisplayType
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nParsing attempt:  
+\n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
 \n\fLITE_RUNTIME
@@ -6132,6 +6155,22 @@ k_EGameRecordingType_Unknown
 k_EGamescopeBlurMode_Always
 k_EGamescopeBlurMode_Disabled
 k_EGamescopeBlurMode_IfOccluded
+k_EGpuDriverId_AmdOpenSource
+k_EGpuDriverId_AmdProprietary
+k_EGpuDriverId_ArmProprietary
+k_EGpuDriverId_IntelPropietary
+k_EGpuDriverId_Invalid
+k_EGpuDriverId_MesaDozen
+k_EGpuDriverId_MesaHoneyKrisp
+k_EGpuDriverId_MesaIntel
+k_EGpuDriverId_MesaLLVMPipe
+k_EGpuDriverId_MesaNVK
+k_EGpuDriverId_MesaPanVK
+k_EGpuDriverId_MesaRadv
+k_EGpuDriverId_MesaTurnip
+k_EGpuDriverId_MesaVenus
+k_EGpuDriverId_MoltenVK
+k_EGpuDriverId_Unknown
 k_EHDRToneMapOperator_Invalid
 k_EHDRToneMapOperator_Reinhard
 k_EHDRToneMapOperator_Uncharted
@@ -7022,6 +7061,8 @@ show_broadcast
 showbar
 showhotkey
 showticks
+signal
+signal@GLIBC_2.0
 singleapp
 sint32
 sint64

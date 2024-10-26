@@ -804,6 +804,18 @@ if [ "$STEAM_RUNTIME" != "0" ]; then
 	export LD_LIBRARY_PATH="$STEAM_RUNTIME_LIBRARY_PATH"
 fi
 
+# Not all builds of SDL3 have Wayland enabled. If a user has forced use of
+# the Wayland video driver, make sure to allow fallback to X11.
+if [ "${SDL_VIDEO_DRIVER-}" = wayland ]; then
+	log "warning: SDL_VIDEO_DRIVER='wayland' does not allow fallback, use 'wayland,x11' instead"
+	export SDL_VIDEO_DRIVER=wayland,x11
+fi
+# Same for SDL2
+if [ "${SDL_VIDEODRIVER-}" = wayland ]; then
+	log "warning: SDL_VIDEODRIVER='wayland' does not allow fallback, use 'wayland,x11' instead"
+	export SDL_VIDEODRIVER=wayland,x11
+fi
+
 if [ "${1-}" = "--run" ]; then
 	STEAM_RUNTIME_RUN_SCRIPT="$STEAM_RUNTIME_SCOUT/run.sh"
 	shift

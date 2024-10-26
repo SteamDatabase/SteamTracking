@@ -56,10 +56,10 @@ enum EThumbnailFormat {
 	k_eRGB = 2;
 }
 
-message CGameRecording_GetActiveTimelineApps_Request {
+message CGameRecording_GetAppsWithBackgroundVideo_Request {
 }
 
-message CGameRecording_GetActiveTimelineApps_Response {
+message CGameRecording_GetAppsWithBackgroundVideo_Response {
 	message App {
 		optional uint64 game_id = 1;
 		optional uint32 most_recent_start_time = 2;
@@ -70,7 +70,7 @@ message CGameRecording_GetActiveTimelineApps_Response {
 		optional uint64 file_size = 7;
 	}
 
-	repeated .CGameRecording_GetActiveTimelineApps_Response.App apps = 1;
+	repeated .CGameRecording_GetAppsWithBackgroundVideo_Response.App apps = 1;
 }
 
 message CGameRecording_GetTimelinesForApp_Request {
@@ -551,7 +551,7 @@ message CGameRecordingDebug_SetTimelineGameMode_Response {
 service GameRecording {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
-	rpc GetActiveTimelineApps (.CGameRecording_GetActiveTimelineApps_Request) returns (.CGameRecording_GetActiveTimelineApps_Response);
+	rpc GetAppsWithBackgroundVideo (.CGameRecording_GetAppsWithBackgroundVideo_Request) returns (.CGameRecording_GetAppsWithBackgroundVideo_Response);
 	rpc GetTimelinesForApp (.CGameRecording_GetTimelinesForApp_Request) returns (.CGameRecording_GetTimelinesForApp_Response);
 	rpc GetTimelinesForClip (.CGameRecording_GetTimelinesForClip_Request) returns (.CGameRecording_GetTimelinesForClip_Response);
 	rpc QueryPhases (.CGameRecording_QueryPhases_Request) returns (.CGameRecording_QueryPhases_Response);

@@ -122,7 +122,7 @@
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-23:13:44
+22:27:03
 9IMemAlloc
 <empty>
 >NULL == pValObjectPrev->m_pValObjectNext
@@ -155,10 +155,14 @@ CFileReader::Read
 CH\f1
 CPathString
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
 CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
 CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
 CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv invalid index %d\n
 CUtlString::SetValue
 CUtlString::VFormat
@@ -207,7 +211,6 @@ GLIBC_2.8
 Gunknown
 HOME
 HTTP_PROXY
-IP\9
 Illegal termination of worker thread '%s'
 Init
 InitHandler
@@ -252,7 +255,7 @@ No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_
 No tracked allocs currently in use. Total %d\n
 November
 OUT OF MEMORY
-Oct 17 2024
+Oct 25 2024
 October
 PKDd
 PKDe
@@ -266,6 +269,7 @@ Platform
 ProductName
 Public
 Root
+STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
 Saturday
 SendCrashReport
@@ -953,8 +957,6 @@ strchr
 strchr@GLIBC_2.0
 strcmp
 strcmp@GLIBC_2.0
-strcpy
-strcpy@GLIBC_2.0
 strdup
 strdup@GLIBC_2.0
 strerror
