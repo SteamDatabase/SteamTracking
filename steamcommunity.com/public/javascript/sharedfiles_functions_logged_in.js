@@ -753,6 +753,22 @@ function FollowItem(item_id, app_id)
 	);
 }
 
+function SubscribeCollectionHelper( id, appID, add_only )
+{
+	var params = {
+		id: id,
+		appid: appID,
+		sessionid: g_sessionID,
+		add_only: add_only,
+	};
+	var dialog = ShowBlockingWaitDialog( 'Please Wait', add_only ? 'Adding all items in this collection to your subscriptions...' : 'Overwriting your subscriptions to contain only the contents of this collection...' );
+	$J.post( "https://steamcommunity.com/sharedfiles/subscribecollection", params )
+	.done( function ( data )
+	{
+		top.location.reload();
+	} );
+}
+
 function SubscribeCollection( id, appID )
 {
 	ShowConfirmDialog(
@@ -764,19 +780,30 @@ function SubscribeCollection( id, appID )
 	).done( function( action )
 	{
 		var bAddOnly = action == 'OK';
-		var params = {
-			id: id,
-			appid: appID,
-			sessionid: g_sessionID,
-			add_only: bAddOnly,
-		};
-
-		var dialog = ShowBlockingWaitDialog( 'Please Wait', bAddOnly ? 'Adding all items in this collection to your subscriptions...' : 'Overwriting your subscriptions to contain only the contents of this collection...' );
-		$J.post( "https://steamcommunity.com/sharedfiles/subscribecollection", params )
-			.done( function ( data )
+		if ( !bAddOnly )
+		{
+			ShowConfirmDialog(
+				'Overwrite My Subscriptions',
+				'Are you absolutely sure you want to overwrite your subscriptions?<br><br>This will remove all your current subscriptions and replace them with the contents of this collection.<br><br>You may want to save your current subscriptions to a collection first.',
+				'Yes, Overwrite My Subscriptions',
+				undefined,
+				'Save Current Subscriptions to a Collection'
+			).done( function( action2 )
 			{
-				top.location.reload();
+				if ( action2 == 'OK' )
+				{
+					SubscribeCollectionHelper( id, appID, false );
+				}
+				else
+				{
+					SaveSubscriptionToCollection( appID );
+				}
 			} );
+		}
+		else
+		{
+			SubscribeCollectionHelper( id, appID, true );
+		}
 	} );
 }
 
