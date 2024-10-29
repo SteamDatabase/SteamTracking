@@ -144,11 +144,11 @@
 ";\n\vCSetIconMsg
 "????'????????????????????????????????????????????????????\????
 "A\n%CClientNotificationFriendInviteRollup
+"B\n/CClientNotificationGameRecordingUserMarkerAdded
 "C\n\rCMsgAddHeader
 "DeleteMapValue"
 "GetMapData"
 "GetRawRepeatedField"
-"H\n$CClientNotificationGameRecordingStop
 "InsertOrLookupMapValue"
 "LookupMapValue"
 "MapBegin"
@@ -156,12 +156,13 @@
 "MapSize"
 "MutableRawRepeatedField"
 "N\n"CClientNotificationPlaytimeWarning
-"O\n+CClientNotificationGameRecordingInstantClip
 "P\n*CClientNotificationRemoteClientStartStream
 "\n\fapplist_base
 "\n\farray_values
 "^\n\fOneofOptions
+"_\n$CClientNotificationGameRecordingStop
 "e" must be followed by exponent.
+"f\n+CClientNotificationGameRecordingInstantClip
 "p\n+CClientNotificationFamilySharingStopPlaying
 #3CScs
 #FileOpenDialog_Cancel
@@ -454,7 +455,6 @@ $\n k_SystemAudioPortDirection_Input
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
 (\t":\n\rCLogUploadMsg
-(\t"B\n/CClientNotificationGameRecordingUserMarkerAdded
 (\t"H\n$CClientNotificationDownloadCompleted
 (\t"N\n2CClientNotificationCannotReadControllerGuideButton
 (\t"O\n)CClientNotificationRemoteClientConnection
@@ -4624,6 +4624,7 @@ Zjz\v
 \n\rcombobox_wide
 \n\rcomment_count
 \n\rdefault_value
+\n\rduration_secs
 \n\rerror_message
 \n\rfriendly_name
 \n\rinitial_width

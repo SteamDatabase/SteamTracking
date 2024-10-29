@@ -3157,6 +3157,7 @@
     "Settings_GameRecording_BackgroundUnits_Min": "Minutes",
     "Settings_GameRecording_AddMarkerKey": "Add a timeline marker",
     "Settings_GameRecording_ToggleRecording": "Start/stop recording",
+    "Settings_GameRecording_ToggleRecording_Clip": "Start/stop saving a clip",
     "Settings_GameRecording_InstantClip": "Save the last <1></1> seconds of gameplay as a clip",
     "Settings_GameRecording_TimelineMarker": "Timeline Markers",
     "Settings_GameRecording_TimelineMarker_Description": "You can annotate your recordings with Timeline Markers. These can be used to reference moments to revisit and/or automatically save footage within a specified time range.",

@@ -1258,7 +1258,6 @@ $tIContent-Length
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-04:20:54
 08bX
 0A/8
 0Z@q
@@ -1632,6 +1631,7 @@ $tIContent-Length
 22CCustomAVIOReadContext
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
+23:49:24
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -3546,6 +3546,7 @@ Convert16To8Plane
 Convert16To8Row_C
 Convert8To16Plane
 Convert8To16Row_C
+ConvertFrameFromAVCCToAnnexB
 ConvertToLSBPlane_16
 ConvertToMSBPlane_16
 CopyPlane
@@ -5658,7 +5659,7 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 26 2024
+Oct 28 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -7877,6 +7878,7 @@ Zong
 [export] Starting for file: %s
 [export] Unknown video codec: %d
 [export] Video demuxer can't find the video track: %s
+[export] We detected the "every packet has the key flag" bug. Forcing a full transcode for this export.
 [export] [try_hardware=%s][codec=%d][bitrate=%u][framerate=%u][width=%u][height=%u][encoder_hardware=%d]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
@@ -8698,6 +8700,8 @@ av_get_packed_sample_fmt
 av_get_packed_sample_fmt@LIBAVUTIL_59
 av_gettime
 av_gettime@LIBAVUTIL_59
+av_grow_packet
+av_grow_packet@LIBAVCODEC_61
 av_hwdevice_ctx_create
 av_hwdevice_ctx_create@LIBAVUTIL_59
 av_hwframe_ctx_alloc
@@ -8752,6 +8756,8 @@ av_samples_get_buffer_size
 av_samples_get_buffer_size@LIBAVUTIL_59
 av_seek_frame
 av_seek_frame@LIBAVFORMAT_61
+av_shrink_packet
+av_shrink_packet@LIBAVCODEC_61
 av_write_frame
 av_write_frame@LIBAVFORMAT_61
 av_write_trailer

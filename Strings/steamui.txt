@@ -682,6 +682,7 @@
 "B\n%CBroadcast_GetBuildClipStatus_Request
 "B\n-CTransportValidation_GetLargeResponse_Request
 "B\n.CFriendMessages_UpdateMessageReaction_Response
+"B\n/CClientNotificationGameRecordingUserMarkerAdded
 "C\n)CSiteLicense_InitiateAssociation_Response
 "C\n\rCMsgAddHeader
 "Customization/StartupMovie/MovieID
@@ -708,7 +709,6 @@
 "GameRecording\ExportLimitFrameRate
 "GetMapData"
 "GetRawRepeatedField"
-"H\n$CClientNotificationGameRecordingStop
 "H\n$CMsgClientCreateFriendsGroupResponse
 "H\n*CSteamTV_SetBroadcastChannelImage_Response
 "H\n4CAuthenticationSupport_QueryRefreshTokenByID_Request
@@ -733,7 +733,6 @@
 "N\n"CClientNotificationPlaytimeWarning
 "N\n%CBroadcast_GetBroadcastStatus_Request
 "O\n(CChatRoom_GetChatRoomGroupState_Response
-"O\n+CClientNotificationGameRecordingInstantClip
 "O\n-CInventory_GetEligiblePromoItemDefIDs_Request
 "P\n CEcon_GetAssetClassInfo_Response
 "P\n CGameRecording_SaveClip_Response
@@ -755,6 +754,7 @@
 "S\n'CCloud_AppCloudStateChange_Notification
 "S\n)CPartnerApps_GetDepotBuildResult_Response
 "S\n9CChatUsability_RequestClientUsabilityMetrics_Notification
+"S`SE
 "T\n'CBroadcast_BroadcastStatus_Notification
 "T\n(CPartnerApps_GetDepotBuildResult_Request
 "T\n+CCloud_ClientLogUploadComplete_Notification
@@ -801,6 +801,7 @@
 "^\n5CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 "^\n\fOneofOptions
 "_\n$CChatRoom_DeleteRoleFromUser_Request
+"_\n$CClientNotificationGameRecordingStop
 "_\n-CCredentials_SteamGuardPhishingReport_Request
 "_\n/COffline_GetUnsignedOfflineLogonTicket_Response
 "`\n*CGameRecording_ExportProgress_Notification
@@ -824,6 +825,7 @@
 "e" must be followed by exponent.
 "e\n*CFriendMessages_IsInFriendsUIBeta_Response
 "f\n'CSteamTV_SetSteamTVUserSettings_Request
+"f\n+CClientNotificationGameRecordingInstantClip
 "f\n/CContentServerDirectory_GetCDNAuthToken_Request
 "glAttachShader"
 "glBindFramebuffer"
@@ -3072,7 +3074,6 @@ ${LANGUAGE}
 (\t"@\n.CTransportValidation_NotifyNumber_Notification
 (\t"B\n"CPlayer_GetAnimatedAvatar_Response
 (\t"B\n*CRemoteClient_AllocateRelayServer_Response
-(\t"B\n/CClientNotificationGameRecordingUserMarkerAdded
 (\t"C\n*CCredentials_ValidateEmailAddress_Response
 (\t"C\n-CEcon_ClientGetItemShopOverlayAuthURL_Request
 (\t"C\n-CSteamEngine_GetTextFilterDictionary_Response
@@ -4007,9 +4008,9 @@ ${LANGUAGE}
 *ZN24CFamilySharingController20AuthorizeLocalDeviceE9CSmartPtrI18CJSCallbackPromiseEEUlP23AuthorizeDeviceResult_tbS2_E_
 *ZN24CFamilySharingController22DeauthorizeLocalDeviceE9CSmartPtrI18CJSCallbackPromiseEEUlP25DeauthorizeDeviceResult_tbS2_E_
 *ZN24CFamilySharingController24UpdateAuthorizedBorrowerEjb9CSmartPtrI18CJSCallbackPromiseEEUlP32UpdateAuthorizedBorrowerResult_tbS2_E_
+*ZN24CGameRecordingController13FindIDForClipE7CGameIDEUlPKcE_
 *ZN24CGameRecordingController15BCreateTimelineE7CGameIDP10CUtlStringPP19CGameTimelineWriterEUlPKcE_
 *ZN24CGameRecordingController15YldDownloadClipE10StringViewyEUlPKcE_
-*ZN24CGameRecordingController20EYldSaveClipInternalE7CGameID10StringViewS1_RK40CGameRecording_SaveClip_Request_PositionS4_NS_27ESourceRecordingDispositionEbbP26CGameRecording_ClipSummaryEUlPKcE_
 *ZN24CGameRecordingController21StartBackgroundDeleteEvEUlvE_
 *ZN24CGameRecordingController26BStartGameRecordingSessionEP10CUtlStringS1_7CGameID18EGameRecordingTypeEUlPKcE_
 *ZN24CGameRecordingController31EYldStopManualRecordingInternalE7CGameIDP26CGameRecording_ClipSummaryEUlvE_
@@ -5913,6 +5914,7 @@ ${LANGUAGE}
 /config
 /controller_configs/%s/
 /data/src/clientcommon/clienthelpers.cpp
+/data/src/clientcommon/gputopology.cpp
 /data/src/clientcommon/include/clientcommon/webui_job_dispatcher.h
 /data/src/clientcommon/waylandcontext.cpp
 /data/src/clientcommon/webui_job_dispatcher.cpp
@@ -6072,10 +6074,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:4938
-/data/src/steamUI/gamerecordingcontroller.cpp:5038
-/data/src/steamUI/gamerecordingcontroller.cpp:6350
-/data/src/steamUI/gamerecordingcontroller.cpp:6423
+/data/src/steamUI/gamerecordingcontroller.cpp:5108
+/data/src/steamUI/gamerecordingcontroller.cpp:5208
+/data/src/steamUI/gamerecordingcontroller.cpp:6520
+/data/src/steamUI/gamerecordingcontroller.cpp:6593
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -6370,6 +6372,7 @@ ${LANGUAGE}
 0B_u
 0F`8
 0HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
+0H~B
 0SX;
 0Z@q
 0ZQ;
@@ -6741,7 +6744,7 @@ ${LANGUAGE}
 10CUtlMemoryIN23CSteamUIInputController27UnboundControllerListItem_tEE
 10CUtlMemoryIN23CValveControllerManager27RemoteClientRequestTarget_tEE
 10CUtlMemoryIN24CControllerDeviceSupport11AxisState_tEE
-10CUtlMemoryIN24CGameRecordingController20PendingInstantClip_tEE
+10CUtlMemoryIN24CGameRecordingController13PendingClip_tEE
 10CUtlMemoryIN24CSteamParentalController15UnlockPromise_tEE
 10CUtlMemoryIN26CSteamUISharedJSController15SteamUIWindow_tEE
 10CUtlMemoryIN26CSteamUISharedJSController20FocusableAppWindow_tEE
@@ -6966,7 +6969,7 @@ ${LANGUAGE}
 10CUtlVectorIN23CSteamUIInputController27UnboundControllerListItem_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN23CValveControllerManager27RemoteClientRequestTarget_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN24CControllerDeviceSupport11AxisState_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN24CGameRecordingController20PendingInstantClip_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN24CGameRecordingController13PendingClip_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN26CSteamUISharedJSController15SteamUIWindow_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN26CSteamUISharedJSController20FocusableAppWindow_tE10CUtlMemoryIS1_EE
@@ -7450,7 +7453,7 @@ ${LANGUAGE}
 15CJSCallbackFunc
 15CJobPromiseBase
 15CMemberFunctor0IP24CGameRecordingControllerMS0_FvvE18CFuncMemPolicyNoneE
-15CMemberFunctor1IP24CGameRecordingControllerMS0_F7EResultNS0_20PendingInstantClip_tEES3_18CFuncMemPolicyNoneE
+15CMemberFunctor1IP24CGameRecordingControllerMS0_F7EResultNS0_13PendingClip_tEES3_18CFuncMemPolicyNoneE
 15CMetricsPayload
 15CMsgBrowserSize
 15CMsgDisplayInfo
@@ -7862,6 +7865,7 @@ ${LANGUAGE}
 1\n\vCredentials
 1\n\vlookup_type
 1\n\vpreferences
+1];WD
 1bS1
 1dWrA
 1steammessages_remoteclient_service_messages.proto2
@@ -8926,6 +8930,7 @@ ${LANGUAGE}
 2I5N
 2Ogx
 2RH(
+2V~B
 2Y\n\vVideoClient
 2Yc-
 2\f.EVRLinkCaps:
@@ -9809,6 +9814,7 @@ ${LANGUAGE}
 3\n\temoticons
 3\n\vuser_status
 3\v;8BJ\nH
+3b~B
 3ej\n
 3pay
 3psC'dcG,
@@ -10558,6 +10564,7 @@ ${LANGUAGE}
 4crypto/ec/ec2_oct.c
 4h\4
 4i5U6B738%9
+4q~B
 4tpD
 5$SBq`
 5,czQH
@@ -12711,7 +12718,6 @@ BPM Offline controller registration %s, %s, using account %u\n
 BParseISO8601Duration
 BREAKPAD_DUMP_LOCATION
 BRefreshApplicationsInLibrary
-BRefreshApplicationsInLibrary 1: %ums\n
 BRemoveDirectory Yielding IO Job
 BResizeImageRGBA
 BResolveHostString - unexpected DNS lookup flag '%d'\n
@@ -13764,6 +13770,19 @@ CGetShaderDepotManifestJob
 CGetStaleBucketJob
 CGetTouchConfigDataMsg
 CGetTouchIconDataMsg
+CGpuTopology: EnsureMeetsMinimumRequirements: adapter(%p) apiVersion is too old: %d.%d.%d\n
+CGpuTopology: EnsureMeetsMinimumRequirements: invalid adapter handle\n
+CGpuTopology: failed create vulkan instance: %d\n
+CGpuTopology: failed create vulkan instance: create entrypoint not available\n
+CGpuTopology: failed to create vulkan instance
+CGpuTopology: failed to enumerate physical devices\n
+CGpuTopology: failed to find a compatible physical device\n
+CGpuTopology: failed to get physical device count\n
+CGpuTopology: failed to initialize device: %p\n
+CGpuTopology: failed to load vulkan entrypoints
+CGpuTopology: failed to load vulkan instance entrypoints
+CGpuTopology: previous vulkan init attempt crashed
+CGpuTopology: vulkan instance version too old: %d.%d.%d\n
 CH264FrameCombiner::BuildFrameFromSlicesH264
 CHACHA20
 CHACHA20/POLY1305(256)
@@ -15004,7 +15023,6 @@ CSteamTV_JoinChat_Request
 CSteamTV_JoinChat_Response
 CSteamTV_Search_Request
 CSteamTV_Search_Response
-CSteamUIAppController::BRefreshApplicationsFromData
 CSteamUIAppController::BuildCompleteAppOverviewChange - app
 CSteamUIAppController::FillInAppOverview
 CSteamUIAppController::GetAppByID
@@ -18955,7 +18973,6 @@ IdUUID
 IdUsage
 IdVersion
 IdempotencyLevel
-Idle
 If logging in user with credentials specified on the command line, proceed as if 'remember my password' had been enabled
 If-Match
 If-Modified-Since
@@ -20729,6 +20746,7 @@ N24CDynamicBitrateEstimator30CDynamicBitrateEstimatorThreadE
 N24CFamilySharingController34CCallbackInternal_OnPostLogonStateE
 N24CFamilySharingController38CCallbackInternal_OnFamilyGroupChangedE
 N24CFamilySharingController42CCallbackInternal_OnStopPlayingBorrowedAppE
+N24CGameRecordingController13PendingClip_tE
 N24CGameRecordingController31CCallbackInternal_OnInstantClipE
 N24CGameRecordingController31CCallbackInternal_OnRemoveEventE
 N24CGameRecordingController33CCallbackInternal_OnEndRangeEventE
@@ -21473,10 +21491,10 @@ Not editing a controller configuration for idx %u, so can't save.
 Not editing a controller configuration, so can't save.
 Not enough disk quota
 Not enough disk space
-Not enough disk space to instant clip: %s %s
 Not enough disk space to save clip
 Not enough disk space to save manual clip: %s %s
 Not enough disk space to start recording: %s %s
+Not enough disk space to take pending clip: %s %s
 Not enough disk space, stopping recording: %s %s
 Not enough free disk space
 Not enough image data
@@ -21747,7 +21765,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 26 2024 04:21:57
+Oct 28 2024 23:50:24
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -21823,6 +21841,7 @@ Only SysID zero supported for non-rack boxes
 Only compression method 8 is supported by PNG
 Only compression windows <= 32k supported by PNG
 Only compression windows >= 256 supported by PNG
+Only one in-progress clip allowed at a time
 Only one pipeline supported
 Open Chrome devtools for shared JS context (offscreen window) on launch
 Open Chrome devtools on creation of any overlay browsers
@@ -22898,7 +22917,6 @@ ReconnectMode
 RecordDisconnectedPlaytime
 RecordPadding
 RecordPlaytime
-Recording %s failed with result %d (%s)
 Recording before per app settings available?
 Recording before steamid is available?
 Recording process audio: %d
@@ -22945,8 +22963,6 @@ RegisterApplication
 RegisterBatteryProvider
 RegisterCompatTool
 RegisterEndpoint
-RegisterForAppOverview 1: %ums\n
-RegisterForAppOverview 2: %ums\n
 RegisterGamescopeControl
 RegisterListeners
 RegisterPlayer
@@ -23810,7 +23826,7 @@ SaveFile
 SaveFiles
 Saved to %s\n
 SavedData
-Saving instant clip %s [%llu-%llu]\n
+Saving pending clip %s [%llu-%llu]\n
 Saving unknown chunk:
 SbEwd
 Sberbank
@@ -24540,6 +24556,8 @@ Steam Big Picture
 Steam Controller %u Identity is Guest - Forcing Guest Save.\n
 Steam Controller Setting Saved Binding Selection Failed - No Identity
 Steam Controller Setting Saved Binding Selection for AppID: %s, URL: %s, Controller: %s.\n
+Steam Gpu Query
+Steam Gpu Query Engine
 Steam HTML FullScreen
 Steam ID does not pass strict parsing: '%s'
 Steam In-Home Streaming
@@ -25558,7 +25576,6 @@ Timed out waiting for mutex in PutInternal()\n
 Timed out waiting for network
 TimedOut
 Timeline
-Timeline %s/%s is no longer active; removing instant clip request\n
 Timeline Icons
 Timeout calling process %s\n
 Times Recv     Pct     Bytes Recv     Pct    AvgSize MessageName\n
@@ -25848,6 +25865,7 @@ Unable to export clip: %s %s
 Unable to find boundary string in multipart/form-data: %s\n
 Unable to find new name when downloading clip %s
 Unable to find new name when saving clip
+Unable to find new name when starting in-progress clip
 Unable to hard link clipped recording from %s to %s - %s start offset %llu   duration %llu
 Unable to hard link entire recording from %s to %s
 Unable to increment IOCP eventfd, error %d
@@ -27028,6 +27046,7 @@ Zulu
 [%s] %.*s\r\n
 [%s] %s=%s\n
 [%s] Found %d recordings to consider
+[%s] Manual recording %s failed with result %d (%s)
 [%s] applying key '%s', has changed from '%s' to '%s'\n
 [%s] not configured for background recording, so we can't save an instant clip\n
 [%s][%0.6f] %.*s\r\n
@@ -28140,6 +28159,7 @@ Zulu
 \n\rdevice_serial
 \n\rdevkit_gameid
 \n\rdisplay_index
+\n\rduration_secs
 \n\renable_replay
 \n\rerror_details
 \n\rerror_message
@@ -37751,6 +37771,8 @@ libunity.so.9
 libva.so.2
 libvideo.so
 libvstdlib_s.so
+libvulkan.so
+libvulkan.so.1
 libwayland-client.so.0
 libx264.so.142
 libxcb-res.so.0
@@ -37963,6 +37985,7 @@ m_HTTPClientMgr
 m_HandleTable
 m_Icon
 m_Images
+m_InProgressClipRequest
 m_JobMgr
 m_LastRequestInfo
 m_LibraryAssetCache
@@ -38555,6 +38578,7 @@ m_strAvatarCacheDir
 m_strCacheDirectory
 m_strCaptureMethod
 m_strCertPEMFile
+m_strClipID
 m_strClipIDBeingExported
 m_strClipIDBeingUploaded
 m_strConfigFile
@@ -38616,6 +38640,7 @@ m_strSubject
 m_strSystemReportsDir
 m_strTargetHostName
 m_strTimelineFolder
+m_strTimelineID
 m_strURI
 m_strURL
 m_strURLToLoad
@@ -38733,6 +38758,8 @@ m_vecGameActions
 m_vecGetParams
 m_vecGetParams[i]
 m_vecGpuInfo
+m_vecGpuInfo.Count() > 0
+m_vecGpuInfo.IsValidIndex( m_nDefaultGpuIndex )
 m_vecHCursor
 m_vecHMDActivityLevelCallbacks
 m_vecHTTPRequestJobs
@@ -38745,7 +38772,6 @@ m_vecInstallApps
 m_vecInstallApps.Count() > 0
 m_vecInstallFolders
 m_vecInstalledApps
-m_vecInstantClipRequests
 m_vecJSCallbackFuncs
 m_vecJumpWChars
 m_vecLastFocusableWindows
@@ -38781,6 +38807,7 @@ m_vecParentalPlaytimeWarnings
 m_vecParentalSettingsChanged
 m_vecPendingAppContentBetaRequests
 m_vecPendingClientDeletions
+m_vecPendingClipRequests
 m_vecPendingManualGameRecordingDeletes
 m_vecPendingMessages
 m_vecPendingScreenshotActions
@@ -42960,6 +42987,8 @@ stdout
 stdout@GLIBC_2.0
 steam%d
 steam-pipewire-stream
+steam-vulkan-assert.sentinel
+steam-vulkan-crash.sentinel
 steam.app.%u
 steam.exe
 steam.overlay.%u
@@ -45132,6 +45161,632 @@ visibility
 visibility_state
 visible
 visible_in_game_list
+vkAcquireDrmDisplayEXT
+vkAcquireNextImage2KHR
+vkAcquireNextImageKHR
+vkAcquirePerformanceConfigurationINTEL
+vkAcquireProfilingLockKHR
+vkAllocateCommandBuffers
+vkAllocateDescriptorSets
+vkAllocateMemory
+vkBeginCommandBuffer
+vkBindAccelerationStructureMemoryNV
+vkBindBufferMemory
+vkBindBufferMemory2
+vkBindBufferMemory2KHR
+vkBindImageMemory
+vkBindImageMemory2
+vkBindImageMemory2KHR
+vkBindOpticalFlowSessionImageNV
+vkBindVideoSessionMemoryKHR
+vkBuildAccelerationStructuresKHR
+vkBuildMicromapsEXT
+vkCmdBeginConditionalRenderingEXT
+vkCmdBeginDebugUtilsLabelEXT
+vkCmdBeginQuery
+vkCmdBeginQueryIndexedEXT
+vkCmdBeginRenderPass
+vkCmdBeginRenderPass2
+vkCmdBeginRenderPass2KHR
+vkCmdBeginRendering
+vkCmdBeginRenderingKHR
+vkCmdBeginTransformFeedbackEXT
+vkCmdBeginVideoCodingKHR
+vkCmdBindDescriptorBufferEmbeddedSamplers2EXT
+vkCmdBindDescriptorBufferEmbeddedSamplersEXT
+vkCmdBindDescriptorBuffersEXT
+vkCmdBindDescriptorSets
+vkCmdBindDescriptorSets2KHR
+vkCmdBindIndexBuffer
+vkCmdBindIndexBuffer2KHR
+vkCmdBindInvocationMaskHUAWEI
+vkCmdBindPipeline
+vkCmdBindPipelineShaderGroupNV
+vkCmdBindShadersEXT
+vkCmdBindShadingRateImageNV
+vkCmdBindTransformFeedbackBuffersEXT
+vkCmdBindVertexBuffers
+vkCmdBindVertexBuffers2
+vkCmdBindVertexBuffers2EXT
+vkCmdBlitImage
+vkCmdBlitImage2
+vkCmdBlitImage2KHR
+vkCmdBuildAccelerationStructureNV
+vkCmdBuildAccelerationStructuresIndirectKHR
+vkCmdBuildAccelerationStructuresKHR
+vkCmdBuildMicromapsEXT
+vkCmdClearAttachments
+vkCmdClearColorImage
+vkCmdClearDepthStencilImage
+vkCmdControlVideoCodingKHR
+vkCmdCopyAccelerationStructureKHR
+vkCmdCopyAccelerationStructureNV
+vkCmdCopyAccelerationStructureToMemoryKHR
+vkCmdCopyBuffer
+vkCmdCopyBuffer2
+vkCmdCopyBuffer2KHR
+vkCmdCopyBufferToImage
+vkCmdCopyBufferToImage2
+vkCmdCopyBufferToImage2KHR
+vkCmdCopyImage
+vkCmdCopyImage2
+vkCmdCopyImage2KHR
+vkCmdCopyImageToBuffer
+vkCmdCopyImageToBuffer2
+vkCmdCopyImageToBuffer2KHR
+vkCmdCopyMemoryIndirectNV
+vkCmdCopyMemoryToAccelerationStructureKHR
+vkCmdCopyMemoryToImageIndirectNV
+vkCmdCopyMemoryToMicromapEXT
+vkCmdCopyMicromapEXT
+vkCmdCopyMicromapToMemoryEXT
+vkCmdCopyQueryPoolResults
+vkCmdCuLaunchKernelNVX
+vkCmdCudaLaunchKernelNV
+vkCmdDebugMarkerBeginEXT
+vkCmdDebugMarkerEndEXT
+vkCmdDebugMarkerInsertEXT
+vkCmdDecodeVideoKHR
+vkCmdDecompressMemoryIndirectCountNV
+vkCmdDecompressMemoryNV
+vkCmdDispatch
+vkCmdDispatchBase
+vkCmdDispatchBaseKHR
+vkCmdDispatchIndirect
+vkCmdDraw
+vkCmdDrawClusterHUAWEI
+vkCmdDrawClusterIndirectHUAWEI
+vkCmdDrawIndexed
+vkCmdDrawIndexedIndirect
+vkCmdDrawIndexedIndirectCount
+vkCmdDrawIndexedIndirectCountAMD
+vkCmdDrawIndexedIndirectCountKHR
+vkCmdDrawIndirect
+vkCmdDrawIndirectByteCountEXT
+vkCmdDrawIndirectCount
+vkCmdDrawIndirectCountAMD
+vkCmdDrawIndirectCountKHR
+vkCmdDrawMeshTasksEXT
+vkCmdDrawMeshTasksIndirectCountEXT
+vkCmdDrawMeshTasksIndirectCountNV
+vkCmdDrawMeshTasksIndirectEXT
+vkCmdDrawMeshTasksIndirectNV
+vkCmdDrawMeshTasksNV
+vkCmdDrawMultiEXT
+vkCmdDrawMultiIndexedEXT
+vkCmdEncodeVideoKHR
+vkCmdEndConditionalRenderingEXT
+vkCmdEndDebugUtilsLabelEXT
+vkCmdEndQuery
+vkCmdEndQueryIndexedEXT
+vkCmdEndRenderPass
+vkCmdEndRenderPass2
+vkCmdEndRenderPass2KHR
+vkCmdEndRendering
+vkCmdEndRenderingKHR
+vkCmdEndTransformFeedbackEXT
+vkCmdEndVideoCodingKHR
+vkCmdExecuteCommands
+vkCmdExecuteGeneratedCommandsNV
+vkCmdFillBuffer
+vkCmdInsertDebugUtilsLabelEXT
+vkCmdNextSubpass
+vkCmdNextSubpass2
+vkCmdNextSubpass2KHR
+vkCmdOpticalFlowExecuteNV
+vkCmdPipelineBarrier
+vkCmdPipelineBarrier2
+vkCmdPipelineBarrier2KHR
+vkCmdPreprocessGeneratedCommandsNV
+vkCmdPushConstants
+vkCmdPushConstants2KHR
+vkCmdPushDescriptorSet2KHR
+vkCmdPushDescriptorSetKHR
+vkCmdPushDescriptorSetWithTemplate2KHR
+vkCmdPushDescriptorSetWithTemplateKHR
+vkCmdResetEvent
+vkCmdResetEvent2
+vkCmdResetEvent2KHR
+vkCmdResetQueryPool
+vkCmdResolveImage
+vkCmdResolveImage2
+vkCmdResolveImage2KHR
+vkCmdSetAlphaToCoverageEnableEXT
+vkCmdSetAlphaToOneEnableEXT
+vkCmdSetAttachmentFeedbackLoopEnableEXT
+vkCmdSetBlendConstants
+vkCmdSetCheckpointNV
+vkCmdSetCoarseSampleOrderNV
+vkCmdSetColorBlendAdvancedEXT
+vkCmdSetColorBlendEnableEXT
+vkCmdSetColorBlendEquationEXT
+vkCmdSetColorWriteEnableEXT
+vkCmdSetColorWriteMaskEXT
+vkCmdSetConservativeRasterizationModeEXT
+vkCmdSetCoverageModulationModeNV
+vkCmdSetCoverageModulationTableEnableNV
+vkCmdSetCoverageModulationTableNV
+vkCmdSetCoverageReductionModeNV
+vkCmdSetCoverageToColorEnableNV
+vkCmdSetCoverageToColorLocationNV
+vkCmdSetCullMode
+vkCmdSetCullModeEXT
+vkCmdSetDepthBias
+vkCmdSetDepthBias2EXT
+vkCmdSetDepthBiasEnable
+vkCmdSetDepthBiasEnableEXT
+vkCmdSetDepthBounds
+vkCmdSetDepthBoundsTestEnable
+vkCmdSetDepthBoundsTestEnableEXT
+vkCmdSetDepthClampEnableEXT
+vkCmdSetDepthClipEnableEXT
+vkCmdSetDepthClipNegativeOneToOneEXT
+vkCmdSetDepthCompareOp
+vkCmdSetDepthCompareOpEXT
+vkCmdSetDepthTestEnable
+vkCmdSetDepthTestEnableEXT
+vkCmdSetDepthWriteEnable
+vkCmdSetDepthWriteEnableEXT
+vkCmdSetDescriptorBufferOffsets2EXT
+vkCmdSetDescriptorBufferOffsetsEXT
+vkCmdSetDeviceMask
+vkCmdSetDeviceMaskKHR
+vkCmdSetDiscardRectangleEXT
+vkCmdSetDiscardRectangleEnableEXT
+vkCmdSetDiscardRectangleModeEXT
+vkCmdSetEvent
+vkCmdSetEvent2
+vkCmdSetEvent2KHR
+vkCmdSetExclusiveScissorEnableNV
+vkCmdSetExclusiveScissorNV
+vkCmdSetExtraPrimitiveOverestimationSizeEXT
+vkCmdSetFragmentShadingRateEnumNV
+vkCmdSetFragmentShadingRateKHR
+vkCmdSetFrontFace
+vkCmdSetFrontFaceEXT
+vkCmdSetLineRasterizationModeEXT
+vkCmdSetLineStippleEXT
+vkCmdSetLineStippleEnableEXT
+vkCmdSetLineStippleKHR
+vkCmdSetLineWidth
+vkCmdSetLogicOpEXT
+vkCmdSetLogicOpEnableEXT
+vkCmdSetPatchControlPointsEXT
+vkCmdSetPerformanceMarkerINTEL
+vkCmdSetPerformanceOverrideINTEL
+vkCmdSetPerformanceStreamMarkerINTEL
+vkCmdSetPolygonModeEXT
+vkCmdSetPrimitiveRestartEnable
+vkCmdSetPrimitiveRestartEnableEXT
+vkCmdSetPrimitiveTopology
+vkCmdSetPrimitiveTopologyEXT
+vkCmdSetProvokingVertexModeEXT
+vkCmdSetRasterizationSamplesEXT
+vkCmdSetRasterizationStreamEXT
+vkCmdSetRasterizerDiscardEnable
+vkCmdSetRasterizerDiscardEnableEXT
+vkCmdSetRayTracingPipelineStackSizeKHR
+vkCmdSetRenderingAttachmentLocationsKHR
+vkCmdSetRenderingInputAttachmentIndicesKHR
+vkCmdSetRepresentativeFragmentTestEnableNV
+vkCmdSetSampleLocationsEXT
+vkCmdSetSampleLocationsEnableEXT
+vkCmdSetSampleMaskEXT
+vkCmdSetScissor
+vkCmdSetScissorWithCount
+vkCmdSetScissorWithCountEXT
+vkCmdSetShadingRateImageEnableNV
+vkCmdSetStencilCompareMask
+vkCmdSetStencilOp
+vkCmdSetStencilOpEXT
+vkCmdSetStencilReference
+vkCmdSetStencilTestEnable
+vkCmdSetStencilTestEnableEXT
+vkCmdSetStencilWriteMask
+vkCmdSetTessellationDomainOriginEXT
+vkCmdSetVertexInputEXT
+vkCmdSetViewport
+vkCmdSetViewportShadingRatePaletteNV
+vkCmdSetViewportSwizzleNV
+vkCmdSetViewportWScalingEnableNV
+vkCmdSetViewportWScalingNV
+vkCmdSetViewportWithCount
+vkCmdSetViewportWithCountEXT
+vkCmdSubpassShadingHUAWEI
+vkCmdTraceRaysIndirect2KHR
+vkCmdTraceRaysIndirectKHR
+vkCmdTraceRaysKHR
+vkCmdTraceRaysNV
+vkCmdUpdateBuffer
+vkCmdUpdatePipelineIndirectBufferNV
+vkCmdWaitEvents
+vkCmdWaitEvents2
+vkCmdWaitEvents2KHR
+vkCmdWriteAccelerationStructuresPropertiesKHR
+vkCmdWriteAccelerationStructuresPropertiesNV
+vkCmdWriteBufferMarker2AMD
+vkCmdWriteBufferMarkerAMD
+vkCmdWriteMicromapsPropertiesEXT
+vkCmdWriteTimestamp
+vkCmdWriteTimestamp2
+vkCmdWriteTimestamp2KHR
+vkCompileDeferredNV
+vkCopyAccelerationStructureKHR
+vkCopyAccelerationStructureToMemoryKHR
+vkCopyImageToImageEXT
+vkCopyImageToMemoryEXT
+vkCopyMemoryToAccelerationStructureKHR
+vkCopyMemoryToImageEXT
+vkCopyMemoryToMicromapEXT
+vkCopyMicromapEXT
+vkCopyMicromapToMemoryEXT
+vkCreateAccelerationStructureKHR
+vkCreateAccelerationStructureNV
+vkCreateBuffer
+vkCreateBufferView
+vkCreateCommandPool
+vkCreateComputePipelines
+vkCreateCuFunctionNVX
+vkCreateCuModuleNVX
+vkCreateCudaFunctionNV
+vkCreateCudaModuleNV
+vkCreateDebugReportCallbackEXT
+vkCreateDebugUtilsMessengerEXT
+vkCreateDeferredOperationKHR
+vkCreateDescriptorPool
+vkCreateDescriptorSetLayout
+vkCreateDescriptorUpdateTemplate
+vkCreateDescriptorUpdateTemplateKHR
+vkCreateDevice
+vkCreateDisplayModeKHR
+vkCreateDisplayPlaneSurfaceKHR
+vkCreateEvent
+vkCreateFence
+vkCreateFramebuffer
+vkCreateGraphicsPipelines
+vkCreateHeadlessSurfaceEXT
+vkCreateImage
+vkCreateImageView
+vkCreateIndirectCommandsLayoutNV
+vkCreateInstance
+vkCreateMicromapEXT
+vkCreateOpticalFlowSessionNV
+vkCreatePipelineCache
+vkCreatePipelineLayout
+vkCreatePrivateDataSlot
+vkCreatePrivateDataSlotEXT
+vkCreateQueryPool
+vkCreateRayTracingPipelinesKHR
+vkCreateRayTracingPipelinesNV
+vkCreateRenderPass
+vkCreateRenderPass2
+vkCreateRenderPass2KHR
+vkCreateSampler
+vkCreateSamplerYcbcrConversion
+vkCreateSamplerYcbcrConversionKHR
+vkCreateSemaphore
+vkCreateShaderModule
+vkCreateShadersEXT
+vkCreateSharedSwapchainsKHR
+vkCreateSwapchainKHR
+vkCreateValidationCacheEXT
+vkCreateVideoSessionKHR
+vkCreateVideoSessionParametersKHR
+vkDebugMarkerSetObjectNameEXT
+vkDebugMarkerSetObjectTagEXT
+vkDebugReportMessageEXT
+vkDeferredOperationJoinKHR
+vkDestroyAccelerationStructureKHR
+vkDestroyAccelerationStructureNV
+vkDestroyBuffer
+vkDestroyBufferView
+vkDestroyCommandPool
+vkDestroyCuFunctionNVX
+vkDestroyCuModuleNVX
+vkDestroyCudaFunctionNV
+vkDestroyCudaModuleNV
+vkDestroyDebugReportCallbackEXT
+vkDestroyDebugUtilsMessengerEXT
+vkDestroyDeferredOperationKHR
+vkDestroyDescriptorPool
+vkDestroyDescriptorSetLayout
+vkDestroyDescriptorUpdateTemplate
+vkDestroyDescriptorUpdateTemplateKHR
+vkDestroyDevice
+vkDestroyEvent
+vkDestroyFence
+vkDestroyFramebuffer
+vkDestroyImage
+vkDestroyImageView
+vkDestroyIndirectCommandsLayoutNV
+vkDestroyInstance
+vkDestroyMicromapEXT
+vkDestroyOpticalFlowSessionNV
+vkDestroyPipeline
+vkDestroyPipelineCache
+vkDestroyPipelineLayout
+vkDestroyPrivateDataSlot
+vkDestroyPrivateDataSlotEXT
+vkDestroyQueryPool
+vkDestroyRenderPass
+vkDestroySampler
+vkDestroySamplerYcbcrConversion
+vkDestroySamplerYcbcrConversionKHR
+vkDestroySemaphore
+vkDestroyShaderEXT
+vkDestroyShaderModule
+vkDestroySurfaceKHR
+vkDestroySwapchainKHR
+vkDestroyValidationCacheEXT
+vkDestroyVideoSessionKHR
+vkDestroyVideoSessionParametersKHR
+vkDeviceWaitIdle
+vkDisplayPowerControlEXT
+vkEndCommandBuffer
+vkEnumerateDeviceExtensionProperties
+vkEnumerateDeviceLayerProperties
+vkEnumerateInstanceExtensionProperties
+vkEnumerateInstanceLayerProperties
+vkEnumerateInstanceVersion
+vkEnumeratePhysicalDeviceGroups
+vkEnumeratePhysicalDeviceGroupsKHR
+vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
+vkEnumeratePhysicalDevices
+vkFlushMappedMemoryRanges
+vkFreeCommandBuffers
+vkFreeDescriptorSets
+vkFreeMemory
+vkGetAccelerationStructureBuildSizesKHR
+vkGetAccelerationStructureDeviceAddressKHR
+vkGetAccelerationStructureHandleNV
+vkGetAccelerationStructureMemoryRequirementsNV
+vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT
+vkGetBufferDeviceAddress
+vkGetBufferDeviceAddressEXT
+vkGetBufferDeviceAddressKHR
+vkGetBufferMemoryRequirements
+vkGetBufferMemoryRequirements2
+vkGetBufferMemoryRequirements2KHR
+vkGetBufferOpaqueCaptureAddress
+vkGetBufferOpaqueCaptureAddressKHR
+vkGetBufferOpaqueCaptureDescriptorDataEXT
+vkGetCalibratedTimestampsEXT
+vkGetCalibratedTimestampsKHR
+vkGetCudaModuleCacheNV
+vkGetDeferredOperationMaxConcurrencyKHR
+vkGetDeferredOperationResultKHR
+vkGetDescriptorEXT
+vkGetDescriptorSetHostMappingVALVE
+vkGetDescriptorSetLayoutBindingOffsetEXT
+vkGetDescriptorSetLayoutHostMappingInfoVALVE
+vkGetDescriptorSetLayoutSizeEXT
+vkGetDescriptorSetLayoutSupport
+vkGetDescriptorSetLayoutSupportKHR
+vkGetDeviceAccelerationStructureCompatibilityKHR
+vkGetDeviceBufferMemoryRequirements
+vkGetDeviceBufferMemoryRequirementsKHR
+vkGetDeviceFaultInfoEXT
+vkGetDeviceGroupPeerMemoryFeatures
+vkGetDeviceGroupPeerMemoryFeaturesKHR
+vkGetDeviceGroupPresentCapabilitiesKHR
+vkGetDeviceGroupSurfacePresentModesKHR
+vkGetDeviceImageMemoryRequirements
+vkGetDeviceImageMemoryRequirementsKHR
+vkGetDeviceImageSparseMemoryRequirements
+vkGetDeviceImageSparseMemoryRequirementsKHR
+vkGetDeviceImageSubresourceLayoutKHR
+vkGetDeviceMemoryCommitment
+vkGetDeviceMemoryOpaqueCaptureAddress
+vkGetDeviceMemoryOpaqueCaptureAddressKHR
+vkGetDeviceMicromapCompatibilityEXT
+vkGetDeviceProcAddr
+vkGetDeviceQueue
+vkGetDeviceQueue2
+vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI
+vkGetDisplayModeProperties2KHR
+vkGetDisplayModePropertiesKHR
+vkGetDisplayPlaneCapabilities2KHR
+vkGetDisplayPlaneCapabilitiesKHR
+vkGetDisplayPlaneSupportedDisplaysKHR
+vkGetDrmDisplayEXT
+vkGetDynamicRenderingTilePropertiesQCOM
+vkGetEncodedVideoSessionParametersKHR
+vkGetEventStatus
+vkGetFenceFdKHR
+vkGetFenceStatus
+vkGetFramebufferTilePropertiesQCOM
+vkGetGeneratedCommandsMemoryRequirementsNV
+vkGetImageDrmFormatModifierPropertiesEXT
+vkGetImageMemoryRequirements
+vkGetImageMemoryRequirements2
+vkGetImageMemoryRequirements2KHR
+vkGetImageOpaqueCaptureDescriptorDataEXT
+vkGetImageSparseMemoryRequirements
+vkGetImageSparseMemoryRequirements2
+vkGetImageSparseMemoryRequirements2KHR
+vkGetImageSubresourceLayout
+vkGetImageSubresourceLayout2EXT
+vkGetImageSubresourceLayout2KHR
+vkGetImageViewAddressNVX
+vkGetImageViewHandleNVX
+vkGetImageViewOpaqueCaptureDescriptorDataEXT
+vkGetInstanceProcAddr
+vkGetLatencyTimingsNV
+vkGetMemoryFdKHR
+vkGetMemoryFdPropertiesKHR
+vkGetMemoryHostPointerPropertiesEXT
+vkGetMemoryRemoteAddressNV
+vkGetMicromapBuildSizesEXT
+vkGetPastPresentationTimingGOOGLE
+vkGetPerformanceParameterINTEL
+vkGetPhysicalDeviceCalibrateableTimeDomainsEXT
+vkGetPhysicalDeviceCalibrateableTimeDomainsKHR
+vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR
+vkGetPhysicalDeviceCooperativeMatrixPropertiesNV
+vkGetPhysicalDeviceDisplayPlaneProperties2KHR
+vkGetPhysicalDeviceDisplayPlanePropertiesKHR
+vkGetPhysicalDeviceDisplayProperties2KHR
+vkGetPhysicalDeviceDisplayPropertiesKHR
+vkGetPhysicalDeviceExternalBufferProperties
+vkGetPhysicalDeviceExternalBufferPropertiesKHR
+vkGetPhysicalDeviceExternalFenceProperties
+vkGetPhysicalDeviceExternalFencePropertiesKHR
+vkGetPhysicalDeviceExternalImageFormatPropertiesNV
+vkGetPhysicalDeviceExternalSemaphoreProperties
+vkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkGetPhysicalDeviceFeatures
+vkGetPhysicalDeviceFeatures2
+vkGetPhysicalDeviceFeatures2KHR
+vkGetPhysicalDeviceFormatProperties
+vkGetPhysicalDeviceFormatProperties2
+vkGetPhysicalDeviceFormatProperties2KHR
+vkGetPhysicalDeviceFragmentShadingRatesKHR
+vkGetPhysicalDeviceImageFormatProperties
+vkGetPhysicalDeviceImageFormatProperties2
+vkGetPhysicalDeviceImageFormatProperties2KHR
+vkGetPhysicalDeviceMemoryProperties
+vkGetPhysicalDeviceMemoryProperties2
+vkGetPhysicalDeviceMemoryProperties2KHR
+vkGetPhysicalDeviceMultisamplePropertiesEXT
+vkGetPhysicalDeviceOpticalFlowImageFormatsNV
+vkGetPhysicalDevicePresentRectanglesKHR
+vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2
+vkGetPhysicalDeviceProperties2KHR
+vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
+vkGetPhysicalDeviceQueueFamilyProperties
+vkGetPhysicalDeviceQueueFamilyProperties2
+vkGetPhysicalDeviceQueueFamilyProperties2KHR
+vkGetPhysicalDeviceSparseImageFormatProperties
+vkGetPhysicalDeviceSparseImageFormatProperties2
+vkGetPhysicalDeviceSparseImageFormatProperties2KHR
+vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
+vkGetPhysicalDeviceSurfaceCapabilities2EXT
+vkGetPhysicalDeviceSurfaceCapabilities2KHR
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR
+vkGetPhysicalDeviceSurfaceFormats2KHR
+vkGetPhysicalDeviceSurfaceFormatsKHR
+vkGetPhysicalDeviceSurfacePresentModesKHR
+vkGetPhysicalDeviceSurfaceSupportKHR
+vkGetPhysicalDeviceToolProperties
+vkGetPhysicalDeviceToolPropertiesEXT
+vkGetPhysicalDeviceVideoCapabilitiesKHR
+vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR
+vkGetPhysicalDeviceVideoFormatPropertiesKHR
+vkGetPipelineCacheData
+vkGetPipelineExecutableInternalRepresentationsKHR
+vkGetPipelineExecutablePropertiesKHR
+vkGetPipelineExecutableStatisticsKHR
+vkGetPipelineIndirectDeviceAddressNV
+vkGetPipelineIndirectMemoryRequirementsNV
+vkGetPipelinePropertiesEXT
+vkGetPrivateData
+vkGetPrivateDataEXT
+vkGetQueryPoolResults
+vkGetQueueCheckpointData2NV
+vkGetQueueCheckpointDataNV
+vkGetRayTracingCaptureReplayShaderGroupHandlesKHR
+vkGetRayTracingShaderGroupHandlesKHR
+vkGetRayTracingShaderGroupHandlesNV
+vkGetRayTracingShaderGroupStackSizeKHR
+vkGetRefreshCycleDurationGOOGLE
+vkGetRenderAreaGranularity
+vkGetRenderingAreaGranularityKHR
+vkGetSamplerOpaqueCaptureDescriptorDataEXT
+vkGetSemaphoreCounterValue
+vkGetSemaphoreCounterValueKHR
+vkGetSemaphoreFdKHR
+vkGetShaderBinaryDataEXT
+vkGetShaderInfoAMD
+vkGetShaderModuleCreateInfoIdentifierEXT
+vkGetShaderModuleIdentifierEXT
+vkGetSwapchainCounterEXT
+vkGetSwapchainImagesKHR
+vkGetSwapchainStatusKHR
+vkGetValidationCacheDataEXT
+vkGetVideoSessionMemoryRequirementsKHR
+vkImportFenceFdKHR
+vkImportSemaphoreFdKHR
+vkInitializePerformanceApiINTEL
+vkInvalidateMappedMemoryRanges
+vkLatencySleepNV
+vkMapMemory
+vkMapMemory2KHR
+vkMergePipelineCaches
+vkMergeValidationCachesEXT
+vkQueueBeginDebugUtilsLabelEXT
+vkQueueBindSparse
+vkQueueEndDebugUtilsLabelEXT
+vkQueueInsertDebugUtilsLabelEXT
+vkQueueNotifyOutOfBandNV
+vkQueuePresentKHR
+vkQueueSetPerformanceConfigurationINTEL
+vkQueueSubmit
+vkQueueSubmit2
+vkQueueSubmit2KHR
+vkQueueWaitIdle
+vkRegisterDeviceEventEXT
+vkRegisterDisplayEventEXT
+vkReleaseDisplayEXT
+vkReleasePerformanceConfigurationINTEL
+vkReleaseProfilingLockKHR
+vkReleaseSwapchainImagesEXT
+vkResetCommandBuffer
+vkResetCommandPool
+vkResetDescriptorPool
+vkResetEvent
+vkResetFences
+vkResetQueryPool
+vkResetQueryPoolEXT
+vkSetDebugUtilsObjectNameEXT
+vkSetDebugUtilsObjectTagEXT
+vkSetDeviceMemoryPriorityEXT
+vkSetEvent
+vkSetHdrMetadataEXT
+vkSetLatencyMarkerNV
+vkSetLatencySleepModeNV
+vkSetLocalDimmingAMD
+vkSetPrivateData
+vkSetPrivateDataEXT
+vkSignalSemaphore
+vkSignalSemaphoreKHR
+vkSubmitDebugUtilsMessageEXT
+vkTransitionImageLayoutEXT
+vkTrimCommandPool
+vkTrimCommandPoolKHR
+vkUninitializePerformanceApiINTEL
+vkUnmapMemory
+vkUnmapMemory2KHR
+vkUpdateDescriptorSetWithTemplate
+vkUpdateDescriptorSetWithTemplateKHR
+vkUpdateDescriptorSets
+vkUpdateVideoSessionParametersKHR
+vkWaitForFences
+vkWaitForPresentKHR
+vkWaitSemaphores
+vkWaitSemaphoresKHR
+vkWriteAccelerationStructuresPropertiesKHR
+vkWriteMicromapsPropertiesEXT
 vmc.com
 vmhfjov
 vms_bind_sym

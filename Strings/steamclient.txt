@@ -96,6 +96,7 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123 g
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -22367,7 +22368,6 @@ FAIL
 FAILED
 FAILED to request %s!
 FAILED to set download throttle rate to %d Kbps\n
-FAILED to upload AppInterfaceStats to Steam\n
 FAILED with '%s' (%d) %s%s
 FAILED_PRECONDITION
 FALSE
@@ -23249,9 +23249,7 @@ G\n\nGetTagList
 G\n\rgroup_updated
 Galician
 Game
-Game %s created interface %s / %s\n
 Game %s going away; no longer tracking PID %d
-Game %s method call count for %s::%s : %d\n
 Game Managed Item
 Game Release
 Game Voucher
@@ -32845,7 +32843,6 @@ Too much image data
 Too-large StatID '%d'!\n
 Tool %s (%u) also reverting to declared because of dependencies.
 Tool %s (%u) is not in registered state as expected in YldPostToolRegistrations.
-Tool %s (%u) is not in registered state as expected in pending registrations loop.
 Tool %s (%u) was already registered, reverting to declared.
 Tool %s (%u) with no dependencies is not in registered state as expected.
 Tool %u "%s" has a dependency on tool %u.
@@ -33413,7 +33410,6 @@ UploadBroadcastThumbnail
 UploadClipToSteam
 UploadLeaderboardScore
 UploadLocalClientLogs
-Uploaded AppInterfaceStats to Steam\n
 Uploading %s to %s (%u bytes)\n
 Uploading %u out of %u missing chunks.
 Uploading new manifest to %s (handle %llu, %u bytes).
@@ -46610,8 +46606,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6811
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2407
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3776
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2412
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3781
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:105
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3055
@@ -53417,7 +53413,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct 26 2024 04:21:46
+steam Oct 28 2024 23:50:13
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
