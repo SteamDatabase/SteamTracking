@@ -951,6 +951,7 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
+${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
@@ -1513,6 +1514,8 @@ ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
+${STORE_BASE_URL}recommenderdemos/getfests
+${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere_how
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
 ${STORE_BASE_URL}reservation/cancelreservation
@@ -3184,6 +3187,7 @@ https://www.facebook.com/Steam/videos
 https://www.facebook.com/dota2/
 https://www.google.com/
 https://www.instagram.com/dota2
+https://www.irs.gov/businesses/small-businesses-self-employed/single-member-limited-liability-companies
 https://www.netflix.com/
 https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s
 https://www.paypal.com/sdk/js?disable-funding=credit,card,paylater,bancontact,blik&${src}

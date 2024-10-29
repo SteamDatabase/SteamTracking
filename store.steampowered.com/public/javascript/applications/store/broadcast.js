@@ -12623,7 +12623,7 @@
             className: fi.StoreSaleWidgetEmptyContainer,
           });
         const m = 8 != a.GetAppType(),
-          d = (0, hi.wJ)(a.GetStorePageURL(), r);
+          d = (0, hi.wJ)(a.GetStorePageURL(!0), r);
         return l.createElement(
           "div",
           { className: n },

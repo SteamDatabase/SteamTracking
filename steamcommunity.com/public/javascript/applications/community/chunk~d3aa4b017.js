@@ -61,7 +61,7 @@
             className: _.StoreSaleWidgetEmptyContainer,
           });
         const d = 8 != n.GetAppType(),
-          g = (0, m.wJ)(n.GetStorePageURL(), a);
+          g = (0, m.wJ)(n.GetStorePageURL(!0), a);
         return l.createElement(
           "div",
           { className: o },

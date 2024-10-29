@@ -2929,15 +2929,18 @@
       function s() {
         return i.createRef();
       }
-      const a = (0, n.HR)("div"),
+      const a = (0, n.HR)("div", { bDOMElementFocusByDefault: !1 }),
         o = (0, n.HR)("button", {
           bActivateByDefault: (e) => "submit" === e.type,
         }),
         l = (0, n.HR)("a", { bActivateByDefault: !0 }),
         c = (0, n.v0)("input"),
         u = (0, n.v0)("textarea");
-      (0, n.HR)("img"),
-        (0, n.HR)("label", { bActivateByDefault: !0 }),
+      (0, n.HR)("img", { bDOMElementFocusByDefault: !1 }),
+        (0, n.HR)("label", {
+          bActivateByDefault: !0,
+          bDOMElementFocusByDefault: !1,
+        }),
         (0, n.HR)("section", { bFocusableByDefault: !1 }),
         (0, n.HR)("form", { bFocusableByDefault: !1 });
     },
@@ -3372,45 +3375,49 @@
             navOptions: _,
             gamepadEvents: b,
           } = y(r),
-          { bFocusableByDefault: B = !0, bActivateByDefault: v = !1 } = s || {};
+          {
+            bFocusableByDefault: B = !0,
+            bActivateByDefault: v = !1,
+            bDOMElementFocusByDefault: M = B,
+          } = s || {};
         void 0 === _.focusable && !g.disabled && B && (_.focusable = !0);
-        const M = (0, h.O)(p),
-          { ref: R, node: T } = w({ layout: M, ..._ });
+        const R = (0, h.O)(p),
+          { ref: T, node: I } = w({ layout: R, ..._ });
         b.onOKButton ||
           ((("onClick" in g && g.onClick) || (v && (!0 === v || v(g)))) &&
             (b.onOKButton = S)),
-          _.focusable && !B
+          _.focusable && !M
             ? (g.tabIndex = g.tabIndex || 0)
             : !_.focusable &&
-              B &&
+              M &&
               (g.tabIndex = null !== (l = g.tabIndex) && void 0 !== l ? l : -1),
-          (0, d.Ui)(b, R);
-        const I = (0, n.Ue)(i, R),
-          E =
+          (0, d.Ui)(b, T);
+        const E = (0, n.Ue)(i, T),
+          z =
             null === (c = (0, o.useContext)(C)) || void 0 === c
               ? void 0
               : c.Component;
-        if (!T)
+        if (!I)
           return o.createElement(
             e,
-            { ...g, ref: I, className: a()(g.className, "Focusable") },
+            { ...g, ref: E, className: a()(g.className, "Focusable") },
             m,
           );
-        const z = {
+        const O = {
           ...g,
-          divRef: I,
-          node: T,
+          divRef: E,
+          node: I,
           focusClassName: a()(u, "gpfocus"),
           focusWithinClassName: "gpfocuswithin",
-          bFocusableByDefault: B,
+          bFocusableByDefault: M,
           className: a()(g.className, "Focusable"),
         };
         return o.createElement(
           f.Provider,
-          { value: T },
-          E
-            ? o.createElement(E, { ...z, Component: t }, m)
-            : o.createElement(t, z, m),
+          { value: I },
+          z
+            ? o.createElement(z, { ...O, Component: t }, m)
+            : o.createElement(t, O, m),
         );
       }
       function T(e, t) {
@@ -3510,12 +3517,11 @@
         const {
             rootClassName: t,
             className: r,
-            render: n,
-            bFocusWithin: a,
-            navTarget: l,
-            refMeasure: d,
+            bFocusWithin: n,
+            navTarget: a,
+            refMeasure: l,
           } = e,
-          m = i.useRef(null),
+          [d, m] = i.useState(null),
           h = (0, u.QI)(),
           g = (0, o.Qn)(),
           _ = (0, c.bJ)(!1);
@@ -3524,12 +3530,11 @@
               "div",
               { className: s()(p().FocusRingRoot, t), ref: m },
               i.createElement(b, {
-                refMeasure: d,
+                refMeasure: l,
                 className: s()(r, h && p().DebugFocusRing),
-                render: n,
-                bFocusWithin: a && (_ || h),
-                navTarget: l,
-                refContainer: m,
+                bFocusWithin: n && (_ || h),
+                navTarget: a,
+                elContainer: d,
                 bDebug: h,
               }),
             )
@@ -3538,86 +3543,100 @@
       function b(e) {
         const {
             className: t,
-            render: r,
-            bFocusWithin: n,
-            navTarget: a,
-            refContainer: o,
-            bDebug: l,
-            refMeasure: c,
+            bFocusWithin: r,
+            navTarget: n,
+            elContainer: a,
+            bDebug: o,
+            refMeasure: l,
           } = e,
-          [u, d] = i.useState(a),
-          [m, _] = i.useState(null),
-          [f, b] = i.useState(!1),
-          [w, y] = i.useState(!1),
-          v = i.useRef(performance.now()),
-          M = (0, i.useCallback)(() => {
-            if (!a || !a.BWantsFocusRing()) return null != m && (_(null), !0);
-            let e = a.GetBoundingRect();
-            const t = o.current.getBoundingClientRect();
-            if (l) {
-              let t = a.Element;
-              const r = t.ownerDocument.defaultView,
-                i = (t) =>
-                  "none" == r.getComputedStyle(t).display ||
-                  (0 == (null == e ? void 0 : e.width) &&
-                    0 == e.height &&
-                    0 == e.x &&
-                    0 == e.y);
-              for (; i(t) && (null == t ? void 0 : t.parentElement); )
-                (t = t.parentElement), (e = t.getBoundingClientRect());
-              let n = a.Element != t;
-              n != w &&
-                (y(n),
-                n &&
-                  g(
-                    "Focused on hidden item: ",
-                    a.Element,
-                    ". Closest visible ancestor: ",
-                    t,
-                  ));
-            }
-            const r = {
-              left: e.x - t.x,
-              top: e.y - t.y,
-              height: e.height,
-              width: e.width,
-            };
-            return (
-              (!m ||
-                r.left != m.left ||
-                r.top != m.top ||
-                r.height != m.height ||
-                r.width != m.width) &&
-              (_(r), !0)
-            );
-          }, [a, o, _, m, w, y, l]);
+          [c, u] = i.useState(null),
+          [d, m] = i.useReducer((e) => e + 1, 0),
+          [_, f] = i.useReducer((e) => e + 1, 0);
         (0, h.D5)(
-          c,
-          i.useMemo(() => ({ MeasureElementAndUpdate: M }), [M]),
+          l,
+          i.useMemo(() => ({ MeasureElementAndUpdate: f }), []),
         );
-        let S = n,
-          C = m || {};
-        a && o.current && (a.BWantsFocusRing() || (S = !1)),
-          a != u && (d(a), (v.current = performance.now()), M(), f && b(!1)),
+        const b = (function (e, t) {
+            const [r, n] = i.useState(!1);
+            return (
+              (0, i.useEffect)(() => {
+                if (e && t) {
+                  let e = t.GetBoundingRect(),
+                    r = t.Element;
+                  const i = r.ownerDocument.defaultView,
+                    s = (t) =>
+                      "none" == i.getComputedStyle(t).display ||
+                      (0 == (null == e ? void 0 : e.width) &&
+                        0 == e.height &&
+                        0 == e.x &&
+                        0 == e.y);
+                  for (; s(r) && (null == r ? void 0 : r.parentElement); )
+                    (r = r.parentElement), (e = r.getBoundingClientRect());
+                  let a = t.Element != r;
+                  n(
+                    (e) => (
+                      a &&
+                        a != e &&
+                        g(
+                          "Focused on hidden item: ",
+                          t.Element,
+                          ". Closest visible ancestor: ",
+                          r,
+                        ),
+                      a
+                    ),
+                  );
+                }
+              }, [e, t]),
+              r
+            );
+          })(o, n),
+          w = i.useCallback(() => {
+            if (!n || !n.BWantsFocusRing() || !a) return void u(null);
+            let e = n.GetBoundingRect();
+            const t = a.getBoundingClientRect(),
+              r = {
+                left: e.x - t.x,
+                top: e.y - t.y,
+                height: e.height,
+                width: e.width,
+              };
+            u((e) =>
+              e &&
+              r.left == e.left &&
+              r.top == e.top &&
+              r.height == e.height &&
+              r.width == e.width
+                ? e
+                : r,
+            );
+          }, [n, a]);
+        i.useLayoutEffect(() => w(), [w]),
+          i.useLayoutEffect(() => {
+            m();
+          }, [n]);
+        let y = r;
+        return (
+          n && a && (n.BWantsFocusRing() || (y = !1)),
           i.useEffect(() => {
-            if (!S || performance.now() - v.current > 500) return;
-            let e;
-            const t = () => {
-              e = requestAnimationFrame(() => {
-                M() ? b(!0) : performance.now() - v.current <= 500 && t();
-              });
+            if (!y) return;
+            const e = performance.now();
+            let t;
+            const r = () => {
+              w(),
+                performance.now() - e <= 500 && (t = requestAnimationFrame(r));
             };
-            return t(), () => cancelAnimationFrame(e);
-          });
-        const R = r || B;
-        return i.createElement(R, {
-          ...C,
-          visible: S && null !== m,
-          key: v.current,
-          className: s()(t, w && p().FocusRingOnHiddenItem),
-          animationEnabled: !f,
-          target: a,
-        });
+            return r(), () => cancelAnimationFrame(t);
+          }, [y, w, c, _]),
+          y && c
+            ? i.createElement(B, {
+                ...c,
+                key: d,
+                className: s()(t, b && p().FocusRingOnHiddenItem),
+                target: n,
+              })
+            : null
+        );
       }
       function w(e) {
         const { children: t } = e;
@@ -3627,25 +3646,22 @@
       }
       function B(e) {
         const {
-          className: t,
-          visible: r,
-          left: n,
-          top: a,
-          height: o,
-          width: l,
-          target: c,
-          animationEnabled: u,
-        } = e;
-        if (!r) return null;
-        const d = {
-          left: (null != n ? n : 0) - 0 + "px",
-          top: (null != a ? a : 0) - 0 + "px",
-          height: o + "px",
-          width: l + "px",
-        };
+            className: t,
+            left: r,
+            top: n,
+            height: a,
+            width: o,
+            target: l,
+          } = e,
+          c = {
+            left: (null != r ? r : 0) - 0 + "px",
+            top: (null != n ? n : 0) - 0 + "px",
+            height: a + "px",
+            width: o + "px",
+          };
         return i.createElement("div", {
-          className: s()(p().FocusRing, u && p().Animated, t),
-          style: d,
+          className: s()(p().FocusRing, t),
+          style: c,
         });
       }
     },
@@ -22884,7 +22900,7 @@
         constructor(e = null) {
           super(),
             c.prototype.released_only || n.Sg(c.M()),
-            l.initialize(this, e, 0, -1, [10, 11, 15, 16, 45], null);
+            l.initialize(this, e, 0, -1, [4, 10, 11, 15, 16, 45], null);
         }
         static M() {
           return (
@@ -22903,6 +22919,14 @@
                     bw: n.gp.writeBool,
                   },
                   type_filters: { n: 3, c: u },
+                  exclude_from: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readEnum,
+                    pbr: n.qM.readPackedEnum,
+                    bw: n.gp.writeRepeatedEnum,
+                  },
                   tagids_must_match: { n: 10, c: d, r: !0, q: !0 },
                   tagids_exclude: {
                     n: 11,
@@ -23186,6 +23210,11 @@
                     n: 2,
                     br: n.qM.readBool,
                     bw: n.gp.writeBool,
+                  },
+                  min_discount_percent: {
+                    n: 3,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
                   },
                 },
               }),
@@ -24283,7 +24312,7 @@
     },
     66418: (e, t, r) => {
       "use strict";
-      r.d(t, { T: () => a });
+      r.d(t, { T: () => a, i: () => o });
       var i,
         n,
         s = r(30470);
@@ -30867,26 +30896,30 @@
         };
       class p extends n.nh {
         constructor() {
-          var e, t, r, i;
+          var e, t, r, i, s;
           super(),
             (this.m_rgControllers = new Map()),
             "undefined" != typeof SteamClient &&
-              ((this.m_hUnregisterControllerDigitalInput =
-                null === (e = SteamClient.Input) || void 0 === e
-                  ? void 0
-                  : e.RegisterForControllerInputMessages(
-                      this.HandleControllerInputMessages,
-                    )),
+              (null === (e = SteamClient.Input) ||
+                void 0 === e ||
+                e.RegisterForControllerInputMessages(
+                  this.HandleControllerInputMessages,
+                ),
+              null === (t = SteamClient.Input) ||
+                void 0 === t ||
+                t.RegisterForControllerAnalogInputMessages(
+                  this.HandleControllerInputMessages,
+                ),
               null ===
-                (r =
-                  null === (t = SteamClient.System) || void 0 === t
+                (i =
+                  null === (r = SteamClient.System) || void 0 === r
                     ? void 0
-                    : t.UI) ||
-                void 0 === r ||
-                r.RegisterForSystemKeyEvents(this.HandleSystemKeyEvents),
-              null === (i = SteamClient.Input) ||
+                    : r.UI) ||
                 void 0 === i ||
-                i.RegisterForControllerListChanges(
+                i.RegisterForSystemKeyEvents(this.HandleSystemKeyEvents),
+              null === (s = SteamClient.Input) ||
+                void 0 === s ||
+                s.RegisterForControllerListChanges(
                   this.OnControllerListChanged,
                 )),
             this.SetSourceType(n.Vz.GAMEPAD);
@@ -30917,36 +30950,27 @@
           );
         }
         EnableAnalogInputMessages(e) {
-          var t, r;
-          e
-            ? (this.m_hUnregisterControllerAnalogInput =
-                null === (t = SteamClient.Input) || void 0 === t
-                  ? void 0
-                  : t.RegisterForControllerAnalogInputMessages(
-                      this.HandleControllerInputMessages,
-                    ))
-            : null === (r = this.m_hUnregisterControllerAnalogInput) ||
-              void 0 === r ||
-              r.unregister();
+          var t;
+          null === (t = SteamClient.Input) ||
+            void 0 === t ||
+            t.EnableControllerAnalogInputMessages(e);
         }
-        HandleControllerInputMessages(e) {
-          for (const t of e) {
-            const e = d[t.nA],
-              r = this.GetController(t.nC);
-            null != e
-              ? t.bS && !r.activeButtons[e]
-                ? ((r.activeButtons[e] = !0), this.OnButtonDown(e, t.nC))
-                : !t.bS &&
-                  r.activeButtons[e] &&
-                  ((r.activeButtons[e] = !1), this.OnButtonUp(e, t.nC))
-              : t.nA == c.GAMEPAD_ANALOG_SCROLL ||
-                (t.nA == c.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR
-                  ? r.activeButtons[n.pR.LPAD_TOUCH] &&
-                    this.OnAnalogPad(n.pR.LPAD_TOUCH, t.x, t.y, t.nC)
-                  : t.nA == c.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR &&
-                    r.activeButtons[n.pR.RPAD_TOUCH] &&
-                    this.OnAnalogPad(n.pR.RPAD_TOUCH, t.x, t.y, t.nC));
-          }
+        HandleControllerInputMessages(e, t, r, i, s) {
+          const a = d[t],
+            o = this.GetController(e);
+          null != a
+            ? r && !o.activeButtons[a]
+              ? ((o.activeButtons[a] = !0), this.OnButtonDown(a, e))
+              : !r &&
+                o.activeButtons[a] &&
+                ((o.activeButtons[a] = !1), this.OnButtonUp(a, e))
+            : t == c.GAMEPAD_ANALOG_SCROLL ||
+              (t == c.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR
+                ? o.activeButtons[n.pR.LPAD_TOUCH] &&
+                  this.OnAnalogPad(n.pR.LPAD_TOUCH, i, s, e)
+                : t == c.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR &&
+                  o.activeButtons[n.pR.RPAD_TOUCH] &&
+                  this.OnAnalogPad(n.pR.RPAD_TOUCH, i, s, e));
         }
       }
       (0, i.Cg)([s.o], p.prototype, "OnControllerListChanged", null),
@@ -31919,7 +31943,7 @@
           );
           let d = a,
             m = o;
-          (null != d && null != m) || ([d, m] = this.GetEventTarget(t, r, !0)),
+          (null != d && null != m) || ([d, m] = this.GetEventTarget(t, r, e)),
             !(null == m ? void 0 : m.BIsGamepadInputSuppressed()) || l
               ? (this.ChangeNavigationSource(r, i),
                 e &&
@@ -32168,6 +32192,9 @@
           (this.m_transport = null),
             (this.m_rgErrorQueue = []),
             (this.m_sendTimer = null),
+            (this.m_bReportingPaused = !1),
+            (this.m_pauseTimer = void 0),
+            (this.m_fnGetReportingInterval = R),
             (this.m_bEnabled = !0),
             (this.m_bInitialized = !1),
             e
@@ -32183,11 +32210,13 @@
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
             }, 3e4);
         }
-        Init(e, t, r) {
+        Init(e, t, r, i = {}) {
           (this.m_bInitialized = !0),
             (this.m_strProduct = e),
             (this.m_strVersion = t),
             (this.m_transport = r),
+            i.fnGetReportingInterval &&
+              (this.m_fnGetReportingInterval = i.fnGetReportingInterval),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -32341,6 +32370,22 @@
             return console.log(`Failed to report error: ${e}`), null;
           }
         }
+        PauseReportingForDuration(e) {
+          this.PauseReporting(),
+            (this.m_pauseTimer = window.setTimeout(
+              () => this.ResumeReporting(),
+              e,
+            ));
+        }
+        PauseReporting() {
+          (this.m_bReportingPaused = !0),
+            window.clearTimeout(this.m_pauseTimer);
+        }
+        ResumeReporting() {
+          (this.m_bReportingPaused = !1),
+            window.clearTimeout(this.m_pauseTimer),
+            this.ScheduleSend();
+        }
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let r = JSON.stringify(t);
@@ -32355,17 +32400,20 @@
         SendErrorReport(e) {
           this.BIsBlacklisted(e) ||
             (this.m_transport
-              ? this.QueueSend(e)
+              ? this.QueueReport(e)
               : this.m_rgErrorQueue.push(e));
         }
-        QueueSend(e) {
+        QueueReport(e) {
           this.m_rgErrorQueue.push(e),
-            this.m_sendTimer ||
-              (this.m_sendTimer = window.setTimeout(() => {
-                this.SendErrorReports(this.m_rgErrorQueue),
-                  (this.m_rgErrorQueue = []),
-                  (this.m_sendTimer = null);
-              }, 1e4));
+            this.m_bReportingPaused || this.ScheduleSend();
+        }
+        ScheduleSend() {
+          this.m_sendTimer ||
+            (this.m_sendTimer = window.setTimeout(() => {
+              this.SendErrorReports(this.m_rgErrorQueue),
+                (this.m_rgErrorQueue = []),
+                (this.m_sendTimer = null);
+            }, this.m_fnGetReportingInterval()));
         }
         SendErrorReports(e) {
           if (!e || !e.length) return;
@@ -32464,6 +32512,9 @@
           return "";
         }
         var t;
+      }
+      function R() {
+        return 1e4;
       }
     },
     44165: (e, t, r) => {
@@ -39043,12 +39094,13 @@
         );
       }
       const It = n.forwardRef(function (e, t) {
+          var r;
           return n.createElement(s.BA, {
             noFocusRing: !0,
             ...e,
             ref: t,
             className: (0, u.A)(ot().BasicTextInput, e.className),
-            size: 1,
+            size: null !== (r = e.size) && void 0 !== r ? r : 1,
           });
         }),
         Et = (e) => n.createElement(Pt, { layout: "below", ...e });
@@ -39468,8 +39520,9 @@
             "DisplayMinAnalogGain_Float"),
           (e[(e.DisplayMaxAnalogGain_Float = 2087)] =
             "DisplayMaxAnalogGain_Float"),
+          (e[(e.DashboardLinkSupport_Int32 = 2097)] =
+            "DashboardLinkSupport_Int32"),
           (e[(e.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
-          (e[(e.PeerButtonInfo_String = 2092)] = "PeerButtonInfo_String"),
           (e[(e.IpdUIRangeMinMeters_Float = 2100)] =
             "IpdUIRangeMinMeters_Float"),
           (e[(e.IpdUIRangeMaxMeters_Float = 2101)] =
@@ -39489,6 +39542,7 @@
           (e[(e.DriverProvidedIPDVisibility_Bool = 2108)] =
             "DriverProvidedIPDVisibility_Bool"),
           (e[(e.Prop_Driver_Reserved_01 = 2109)] = "Prop_Driver_Reserved_01"),
+          (e[(e.Prop_Driver_Reserved_03 = 2111)] = "Prop_Driver_Reserved_03"),
           (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -49394,22 +49448,23 @@
     91675: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $w: () => v,
-        $z: () => c,
+        $w: () => M,
+        $z: () => u,
         Hq: () => o,
-        KC: () => d,
-        P0: () => g,
-        R2: () => I,
+        KC: () => m,
+        P0: () => _,
+        R2: () => E,
         TW: () => l,
-        _l: () => h,
+        Vx: () => c,
+        _l: () => g,
         a8: () => i,
-        cc: () => M,
-        dt: () => O,
-        lQ: () => _,
-        qZ: () => F,
-        sq: () => R,
-        u6: () => T,
-        vl: () => C,
+        cc: () => S,
+        dt: () => F,
+        lQ: () => f,
+        qZ: () => D,
+        sq: () => T,
+        u6: () => I,
+        vl: () => R,
       });
       var i,
         n = r(31561),
@@ -49504,11 +49559,36 @@
         return n.toLocaleDateString(s.pf.GetPreferredLocales(), a);
       }
       function c(e, t) {
+        let r = new Date(1e3 * e),
+          i = new Date(1e3 * t);
+        return r.getFullYear() != i.getFullYear() ||
+          r.getMonth() != i.getMonth() ||
+          r.getDate() != i.getDate()
+          ? (function (e, t) {
+              let r = new Date(1e3 * e),
+                i = new Date(1e3 * t);
+              const n = new Date();
+              if (
+                r.getFullYear() != i.getFullYear() ||
+                n.getFullYear() == r.getFullYear()
+              )
+                return `${u(e)} - ${u(t)}`;
+              const a = { month: "short", day: "numeric" },
+                o = r.toLocaleDateString(s.pf.GetPreferredLocales(), a) + " - ";
+              if (r.getMonth() == i.getMonth()) {
+                const e = { day: "numeric" };
+                return o + i.toLocaleDateString(s.pf.GetPreferredLocales(), e);
+              }
+              return o + i.toLocaleDateString(s.pf.GetPreferredLocales(), a);
+            })(e, t)
+          : m(e) + " - " + m(t);
+      }
+      function u(e, t) {
         let r,
           i = new Date(1e3 * e);
         if (!t) {
           const e = i.setHours(0, 0, 0, 0);
-          let t = m.get(e);
+          let t = p.get(e);
           if (t) return t;
         }
         const n = { year: "numeric", month: "short", day: "numeric", ...t };
@@ -49519,14 +49599,14 @@
           (e[(e.Ago = 1)] = "Ago"),
           (e[(e.Remaining = 2)] = "Remaining");
       })(i || (i = {}));
-      const u = new Map();
-      function d(e, t, r) {
+      const d = new Map();
+      function m(e, t, r) {
         const i = new Date(1e3 * e),
           n = s.pf.GetPreferredLocales(),
           a = {
             ...((null == t ? void 0 : t.bForce24HourClock) ||
             (function (e) {
-              let t = u.get(e);
+              let t = d.get(e);
               if (!0 === t || !1 === t) return t;
               const r = new Date();
               return (
@@ -49534,7 +49614,7 @@
                 (t =
                   r.toLocaleTimeString(e, { hour: "numeric" }) ==
                   r.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
-                u.set(e, t),
+                d.set(e, t),
                 t
               );
             })(n[0])
@@ -49544,43 +49624,43 @@
           };
         return i.toLocaleTimeString(n, a);
       }
-      const m = new Map(),
-        p = new Map();
-      function h(e, t, r = !0, i = !0, a = !1) {
+      const p = new Map(),
+        h = new Map();
+      function g(e, t, r = !0, i = !0, a = !1) {
         const o = new Date(),
           l = new Date(1e3 * e);
-        if (l.getFullYear() != o.getFullYear()) return c(e);
+        if (l.getFullYear() != o.getFullYear()) return u(e);
         i && n.tB(new Date().setHours(24, 0, 0, 0) - o.getTime());
-        const u = new Date();
-        if ((u.setHours(0, 0, 0, 0), r))
-          if (l >= u) {
-            if ((u.setDate(u.getDate() + 1), l < u))
+        const c = new Date();
+        if ((c.setHours(0, 0, 0, 0), r))
+          if (l >= c) {
+            if ((c.setDate(c.getDate() + 1), l < c))
               return (0, s.we)("#Time_Today");
-            if ((u.setDate(u.getDate() + 1), l < u))
+            if ((c.setDate(c.getDate() + 1), l < c))
               return (0, s.we)("#Time_Tomorrow");
-          } else if ((u.setDate(u.getDate() - 1), l >= u))
+          } else if ((c.setDate(c.getDate() - 1), l >= c))
             return (0, s.we)("#Time_Yesterday");
         const d = { month: t ? "long" : "short", day: "numeric" };
         a && (d.weekday = "long");
         const m = l.setHours(0, 0, 0, 0) + d.month;
-        let h = p.get(m);
+        let p = h.get(m);
         return (
-          h ||
-          ((h = l.toLocaleDateString(s.pf.GetPreferredLocales(), d)),
-          p.set(m, h),
-          h)
+          p ||
+          ((p = l.toLocaleDateString(s.pf.GetPreferredLocales(), d)),
+          h.set(m, p),
+          p)
         );
       }
-      function g(e, t, r) {
+      function _(e, t, r) {
         return (
-          v(new Date(1e3 * e), !1, !1) +
+          M(new Date(1e3 * e), !1, !1) +
           " " +
-          d(e, { bForce24HourClock: t }) +
+          m(e, { bForce24HourClock: t }) +
           " " +
           r
         );
       }
-      function _(e, t) {
+      function f(e, t) {
         const r = new Date(1e3 * e),
           i = new Date(),
           o = {
@@ -49598,7 +49678,7 @@
           if (!o.bGranularFutureTime)
             return (
               n.tB(r.getTime() - i.getTime()),
-              r.getFullYear() == i.getFullYear() ? S(r) : R(r)
+              r.getFullYear() == i.getFullYear() ? C(r) : T(r)
             );
           n.tB(new Date().setHours(24, 0, 0, 0) - i.getTime());
           let e = new Date();
@@ -49611,7 +49691,7 @@
                 r < e
                   ? (0, s.we)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
-                    r < e ? M(r) : v(r, !0, o.bAbbreviateDayOfWeek)))
+                    r < e ? S(r) : M(r, !0, o.bAbbreviateDayOfWeek)))
           );
         }
         n.tB(new Date().setHours(24, 0, 0, 0) - i.getTime());
@@ -49619,27 +49699,27 @@
         if ((c.setHours(0, 0, 0, 0), r >= c))
           return o.bGranularToday
             ? o.bGranularTodayTimeOnly
-              ? d(e, { bForce24HourClock: o.bForce24HourClock })
+              ? m(e, { bForce24HourClock: o.bForce24HourClock })
               : (0, s.we)(
                   "#Time_Today_At",
-                  d(e, { bForce24HourClock: o.bForce24HourClock }),
+                  m(e, { bForce24HourClock: o.bForce24HourClock }),
                 )
             : (0, s.we)("#Time_Today");
         if ((c.setDate(i.getDate() - 1), r >= c))
           return o.bGranularYesterday
             ? (0, s.we)(
                 "#Time_Yesterday_At",
-                d(e, { bForce24HourClock: o.bForce24HourClock }),
+                m(e, { bForce24HourClock: o.bForce24HourClock }),
               )
             : (0, s.we)("#Time_Yesterday");
         c.setDate(i.getDate() - 6);
         const u = new Date(c);
-        if (o.bGranularWeek && r >= u) return v(r, !1, !o.bAbbreviateDayOfWeek);
+        if (o.bGranularWeek && r >= u) return M(r, !1, !o.bAbbreviateDayOfWeek);
         if (o.bGranularPast)
           return (0, s.we)(
             "#Time_Past_At",
             l(e, r.getFullYear() == i.getFullYear(), !o.bAbbreviateDayOfWeek),
-            d(e, { bForce24HourClock: o.bForce24HourClock }),
+            m(e, { bForce24HourClock: o.bForce24HourClock }),
           );
         if (r >= u) return (0, s.we)("#TimeSince_ThisWeek");
         if (
@@ -49652,76 +49732,76 @@
             ? (0, s.we)("#TimeSince_1Week")
             : (0, s.we)("#TimeSince_XWeeks", e);
         }
-        return r.getFullYear() == i.getFullYear() ? S(r) : R(r);
+        return r.getFullYear() == i.getFullYear() ? C(r) : T(r);
       }
-      const f = new Map(),
-        b = new Map(),
+      const b = new Map(),
         w = new Map(),
         B = new Map(),
-        y = new Map();
+        y = new Map(),
+        v = new Map();
       new Map();
-      function v(e, t = !1, r = !0) {
+      function M(e, t = !1, r = !0) {
         const i = {
             weekday: r ? "long" : "short",
             day: "numeric",
             month: t ? "long" : "short",
           },
           n = e.setHours(0, 0, 0, 0) + i.weekday + i.month;
-        let a = y.get(n);
+        let a = v.get(n);
         return (
           a ||
           ((a = e.toLocaleDateString(s.pf.GetPreferredLocales(), i)),
-          y.set(n, a),
+          v.set(n, a),
           a)
         );
       }
-      function M(e) {
-        let t = f.get(e.getDay());
+      function S(e) {
+        let t = b.get(e.getDay());
         return (
           t ||
           ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
             weekday: "long",
           })),
-          f.set(e.getDay(), t),
+          b.set(e.getDay(), t),
           t)
         );
       }
-      function S(e) {
-        let t = b.get(e.getMonth());
+      function C(e) {
+        let t = w.get(e.getMonth());
         return (
           t ||
           ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
             month: "long",
           })),
-          b.set(e.getMonth(), t),
+          w.set(e.getMonth(), t),
           t)
         );
       }
-      function C(e) {
-        let t = w.get(e.getFullYear());
+      function R(e) {
+        let t = B.get(e.getFullYear());
         return (
           t ||
           ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
             year: "numeric",
           })),
-          w.set(e.getFullYear(), t),
+          B.set(e.getFullYear(), t),
           t)
         );
       }
-      function R(e) {
+      function T(e) {
         const t = e.getMonth() + 12 * e.getFullYear();
-        let r = B.get(t);
+        let r = y.get(t);
         return (
           r ||
           ((r = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
-          B.set(t, r),
+          y.set(t, r),
           r)
         );
       }
-      function T(e) {
+      function I(e) {
         switch (e.getUTCMonth()) {
           case 0:
           case 1:
@@ -49739,7 +49819,7 @@
             return (0, s.we)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
         }
       }
-      function I(e) {
+      function E(e) {
         const t = Math.floor(e / a.Kp.PerYear),
           r = Math.floor(e / a.Kp.PerMonth),
           i = Math.floor((e % a.Kp.PerMonth) / a.Kp.PerDay),
@@ -49772,11 +49852,11 @@
                     )
         );
       }
-      function E(e, t, r) {
+      function z(e, t, r) {
         for (; e.length < t; ) e = r + e;
         return e;
       }
-      function z(e) {
+      function O(e) {
         return (
           (void 0 === e || isNaN(e)) && (e = 0),
           {
@@ -49787,9 +49867,9 @@
           }
         );
       }
-      function O(e, t, r) {
+      function F(e, t, r) {
         let i = e < 0;
-        const n = z((e = i ? 0 - e : e)),
+        const n = O((e = i ? 0 - e : e)),
           a = n.fraction.toFixed(2).split(".")[1],
           o = null == t || t;
         let l = !o || "00" == a;
@@ -49797,15 +49877,15 @@
         let c = "";
         if (n.hours) {
           const e = n.hours.toString(),
-            t = E(n.minutes.toString(), 2, "0"),
-            r = E(n.seconds.toString(), 2, "0"),
+            t = z(n.minutes.toString(), 2, "0"),
+            r = z(n.seconds.toString(), 2, "0"),
             i = o
               ? "#Duration_Abbreviation_HourMinuteSecondMillisecond"
               : "#Duration_Abbreviation_HourMinuteSecond";
           c = (0, s.we)(i, e, t, r, a);
         } else if (n.minutes) {
           const e = n.minutes.toString(),
-            t = E(n.seconds.toString(), 2, "0"),
+            t = z(n.seconds.toString(), 2, "0"),
             r = o
               ? "#Duration_Abbreviation_MinuteSecondMillisecond"
               : "#Duration_Abbreviation_MinuteSecond";
@@ -49821,17 +49901,17 @@
           i && (c = r ? (0, s.we)("#Duration_WrittenNegation", c) : "-" + c), c
         );
       }
-      function F(e, t, r) {
+      function D(e, t, r) {
         let i = e < 0;
-        const n = z((e = i ? 0 - e : e)),
-          a = E(n.seconds.toString(), 2, "0"),
+        const n = O((e = i ? 0 - e : e)),
+          a = z(n.seconds.toString(), 2, "0"),
           o = n.fraction.toFixed(2).split(".")[1],
           l = null == t || t;
         let c = !l || "00" == o;
         i && 0 == n.hours && 0 == n.minutes && 0 == n.seconds && c && (i = !1);
         let u = "";
         if (n.hours) {
-          const e = E(n.minutes.toString(), 2, "0"),
+          const e = z(n.minutes.toString(), 2, "0"),
             t = l
               ? "#Duration_HourMinuteSecondMillisecond"
               : "#Duration_HourMinuteSecond";
@@ -50886,6 +50966,7 @@
         LOGIN_BASE_URL: "",
         SUPPORT_BASE_URL: "",
         STORE_ICON_BASE_URL: "",
+        STORE_ITEM_BASE_URL: "",
         IMG_URL: "",
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",

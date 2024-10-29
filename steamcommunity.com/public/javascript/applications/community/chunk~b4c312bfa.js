@@ -5,7 +5,7 @@
   [9870],
   {
     28819: (e, r, t) => {
-      t.d(r, { KV: () => m, NP: () => w, YK: () => g, uq: () => b });
+      t.d(r, { KV: () => m, NP: () => w, YK: () => B, uq: () => b });
       var i = t(80613),
         n = t(89068),
         a = t(56545);
@@ -96,36 +96,36 @@
           return "CUserReviews_Update_Request";
         }
       }
-      class c extends s {
+      class d extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return c.toObject(e, this);
+          return d.toObject(e, this);
         }
         static toObject(e, r) {
           return e ? { $jspbMessageInstance: r } : {};
         }
         static fromObject(e) {
-          return new c();
+          return new d();
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
-            t = new c();
-          return c.deserializeBinaryFromReader(t, r);
+            t = new d();
+          return d.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserReviews_Update_Response";
@@ -190,18 +190,18 @@
           return "CUserReviews_Recommendation_LoyaltyReaction";
         }
       }
-      class d extends s {
+      class c extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            d.prototype.recommendationid || n.Sg(d.M()),
+            c.prototype.recommendationid || n.Sg(c.M()),
             s.initialize(this, e, 0, -1, [27, 40], null);
         }
         static M() {
           return (
-            d.sm_m ||
-              (d.sm_m = {
-                proto: d,
+            c.sm_m ||
+              (c.sm_m = {
+                proto: c,
                 fields: {
                   recommendationid: {
                     n: 1,
@@ -421,39 +421,39 @@
                   },
                 },
               }),
-            d.sm_m
+            c.sm_m
           );
         }
         static MBF() {
-          return d.sm_mbf || (d.sm_mbf = n.w0(d.M())), d.sm_mbf;
+          return c.sm_mbf || (c.sm_mbf = n.w0(c.M())), c.sm_mbf;
         }
         toObject(e = !1) {
-          return d.toObject(e, this);
+          return c.toObject(e, this);
         }
         static toObject(e, r) {
-          return n.BT(d.M(), e, r);
+          return n.BT(c.M(), e, r);
         }
         static fromObject(e) {
-          return n.Uq(d.M(), e);
+          return n.Uq(c.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
-            t = new d();
-          return d.deserializeBinaryFromReader(t, r);
+            t = new c();
+          return c.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return n.zj(d.MBF(), e, r);
+          return n.zj(c.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          n.i0(d.M(), e, r);
+          n.i0(c.M(), e, r);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "RecommendationDetails";
@@ -705,7 +705,7 @@
             p.sm_m ||
               (p.sm_m = {
                 proto: p,
-                fields: { recommendations: { n: 1, c: d, r: !0, q: !0 } },
+                fields: { recommendations: { n: 1, c, r: !0, q: !0 } },
               }),
             p.sm_m
           );
@@ -745,10 +745,10 @@
           return "CUserReviews_GetIndividualRecommendations_Response";
         }
       }
-      var g;
+      var B;
       !(function (e) {
         (e.Update = function (e, r) {
-          return e.SendMsg("UserReviews.Update#1", (0, a.I8)(o, r), c, {
+          return e.SendMsg("UserReviews.Update#1", (0, a.I8)(o, r), d, {
             ePrivilege: 3,
           });
         }),
@@ -768,71 +768,7 @@
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           });
-      })(g || (g = {}));
-    },
-    95034: (e, r, t) => {
-      t.d(r, { Bm: () => o, QD: () => c, f3: () => a, ip: () => l });
-      var i = t(90626),
-        n = t(92757);
-      function a(e, r) {
-        let t;
-        "string" == typeof e
-          ? (t = e)
-          : "location" in e
-            ? (t = e.location.search)
-            : "search" in e && (t = e.search);
-        const i = new URLSearchParams(t.substring(1));
-        if (i.has(r)) {
-          const e = i.getAll(r);
-          return e[e.length - 1];
-        }
-      }
-      const s = (e) => null != e;
-      function o(e, r, t, i = !1) {
-        const n = new URLSearchParams(e.location.search.substring(1));
-        if (s(t)) {
-          if (n.get(r) == t) return;
-          n.set(r, t);
-        } else {
-          if (!n.has(r)) return;
-          n.delete(r);
-        }
-        i
-          ? e.replace(`?${n.toString()}`, { ...e.location.state })
-          : e.push(`?${n.toString()}`);
-      }
-      function c(e, r) {
-        const t = (0, n.W6)(),
-          c = (0, n.zy)(),
-          l = (0, i.useMemo)(() => {
-            const t = a(c.search, e);
-            return s(t)
-              ? s(r)
-                ? "boolean" == typeof r
-                  ? r.constructor("false" !== t)
-                  : r.constructor(t)
-                : t
-              : r;
-          }, [c.search, e, r]),
-          d = (0, i.useCallback)(
-            (r, i = !1) => {
-              o(t, e, s(r) ? String(r) : null, i);
-            },
-            [t, e],
-          );
-        return [l, d];
-      }
-      function l(e, r, t = !1) {
-        const i = new URLSearchParams(e.location.search.substring(1));
-        for (const e in r)
-          if (r.hasOwnProperty(e)) {
-            const t = r[e];
-            i.delete(e), s(t) && i.append(e, t);
-          }
-        t
-          ? e.replace(`?${i.toString()}`, { ...e.location.state })
-          : e.push(`?${i.toString()}`);
-      }
+      })(B || (B = {}));
     },
     25809: (e, r, t) => {
       t.d(r, { l: () => n });

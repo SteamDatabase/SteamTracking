@@ -427,7 +427,7 @@
           "actiondialog",
           "uploadfilebutton",
           "docimg",
-          "meetsteam",
+          "meetsteamsessiongroup",
         ],
         i = [
           "h1",
@@ -5495,6 +5495,7 @@
           (e.prune_list_optin_name = void 0),
           (e.optin_only = void 0),
           (e.child_demo_appid_for_repost = void 0),
+          (e.sale_vanity_id = void 0),
           (e.automatically_push_updated_source = void 0);
       }
       !(function (e) {

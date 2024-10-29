@@ -8,11 +8,6 @@
       e.exports = {
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
-        NotificationTwoColumnCtn: "_2VTS3VKKvQTDUtlFKYmEdL",
-        NotificationLeft: "_2x53syiUv9hqSsdl95-QDP",
-        NotificationRight: "_1kwo5QbRB68auJs1VWmwhl",
-        Title: "_1-OdZBWqF_4pVQgke_Di5M",
-        Body: "_3FlGcFeB1vPciinniGumn9",
         NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
         MessageHeader: "_1HU84kVIdNVKbbByTWyyBG",
@@ -26,6 +21,8 @@
         ListItem: "_3N8ZtUMOp9ag0G28WBzOOg",
         NotificationButton: "_1ZCVYK700rSky9gR7H9vNv",
         NotificationUpdate: "_39cJ7AQw3tqr75MieK0VHr",
+        RequiredDocumentList: "_1hLKyqNiw3mmMbZf-ERCbA",
+        MailingAddress: "_3Va0U3hw10-sJGSnBDs18Y",
       };
     },
     45737: (e) => {
@@ -41,12 +38,14 @@
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+        Blue: "J7iYYml2Jf_PcaACW1hEr",
         ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
         Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
         ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
         SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
         warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
         RightCol: "_3kaQhRnhNh_awrnNX90rui",
         NoSticky: "JQNb8bHftBTAYpCXTx52v",
         SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
@@ -79,49 +78,49 @@
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
       };
     },
-    54330: (e, t, n) => {
+    54330: (e, t, a) => {
       "use strict";
-      n.d(t, { u: () => l });
-      var a = n(66418),
-        r = n(20194),
-        i = n(41735),
-        s = n.n(i),
-        o = n(90626);
+      a.d(t, { u: () => l });
+      var n = a(66418),
+        i = a(20194),
+        r = a(41735),
+        o = a.n(r),
+        s = a(90626);
       function l(e) {
-        const t = (0, r.I)({
+        const t = (0, i.I)({
           queryKey: ["useMilestoneByAppID", e],
           queryFn: async () => {
-            const t = `${a.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
-              n = { appid: e },
-              r = await s().get(t, { params: n });
-            if (1 == r?.data?.success) return r.data.milestones;
+            const t = `${n.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
+              a = { appid: e },
+              i = await o().get(t, { params: a });
+            if (1 == i?.data?.success) return i.data.milestones;
             throw new Error("failed to load milestonse for appid " + e);
           },
           enabled: Boolean(e),
         });
-        return o.useMemo(() => t?.data, [e, t.isLoading]);
+        return s.useMemo(() => t?.data, [e, t.isLoading]);
       }
     },
-    32179: (e, t, n) => {
+    32179: (e, t, a) => {
       "use strict";
-      n.d(t, {
+      a.d(t, {
         MY: () => d,
-        UA: () => p,
-        Yd: () => h,
+        UA: () => h,
+        Yd: () => p,
         rN: () => f,
-        vh: () => m,
+        vh: () => u,
       });
-      var a = n(34629),
-        r = n(41735),
-        i = n.n(r),
-        s = n(90626),
-        o = n(68797),
-        l = n(78327),
-        c = n(6419);
+      var n = a(34629),
+        i = a(41735),
+        r = a.n(i),
+        o = a(90626),
+        s = a(68797),
+        l = a(78327),
+        c = a(6419);
       function d() {
         return 2 == l.TS.EUNIVERSE ? 12 : 1;
       }
-      class u {
+      class m {
         m_mapOptInToPartners = new Map();
         m_mapPromises = new Map();
         GetPartnerInfo(e) {
@@ -140,29 +139,29 @@
         async InternalFindPartnerByName(e) {
           const t = new Array();
           try {
-            const n = l.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-              a = {
+            const a = l.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+              n = {
                 sessionid: l.TS.SESSIONID,
                 searchtext: e,
                 origin: self.origin,
               },
-              r = await i().get(n, { params: a });
-            200 == r?.status && 1 == r?.data?.success
-              ? r.data.publishers.forEach((e) => {
-                  const n = {
+              i = await r().get(a, { params: n });
+            200 == i?.status && 1 == i?.data?.success
+              ? i.data.publishers.forEach((e) => {
+                  const a = {
                     partnerid: e.publisherid,
                     name: e.publishername,
                     partner_url:
                       l.TS.PARTNER_BASE_URL + `pub/publisher/${e.publisherid}/`,
                     contacts: e.contacts,
                   };
-                  this.m_mapOptInToPartners.set(e.publisherid, n), t.push(n);
+                  this.m_mapOptInToPartners.set(e.publisherid, a), t.push(a);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${i?.status} eresult ${i?.data?.success} and msg ${i?.data?.msg}`,
                 );
           } catch (e) {
-            const t = (0, o.H)(e);
+            const t = (0, s.H)(e);
             console.error(
               "CPartnerInfoStore.FindPartnerByName failed add: " +
                 t.strErrorMsg,
@@ -193,11 +192,11 @@
         static s_Singleton;
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
+            m.s_Singleton ||
+              ((m.s_Singleton = new m()),
               ("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_PartnerInfoStore = m.s_Singleton)),
+            m.s_Singleton
           );
         }
         constructor() {
@@ -223,242 +222,242 @@
           );
         }
       }
-      function m(e) {
-        const [t, n] = (0, s.useState)(!1);
+      function u(e) {
+        const [t, a] = (0, o.useState)(!1);
         return (
-          (0, s.useEffect)(() => {
+          (0, o.useEffect)(() => {
             !t &&
               e?.length > 0 &&
-              u
+              m
                 .Get()
                 .LoadMultiplePartnerInfo(e)
-                .then(() => n(!0));
+                .then(() => a(!0));
           }, [e, t]),
           t
         );
       }
-      function p(e) {
-        const [t, n] = s.useState(() => u.Get().GetPartnerInfo(e));
+      function h(e) {
+        const [t, a] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
-          s.useEffect(() => {
-            !u.Get().BHasPartnerInfoLoad(e) && e > 0
-              ? u
+          o.useEffect(() => {
+            !m.Get().BHasPartnerInfoLoad(e) && e > 0
+              ? m
                   .Get()
                   .LoadPartnerInfo(e)
-                  .then((e) => n(e))
-              : u.Get().BHasPartnerInfoLoad(e) &&
+                  .then((e) => a(e))
+              : m.Get().BHasPartnerInfoLoad(e) &&
                 t?.partnerid != e &&
-                n(u.Get().GetPartnerInfo(e));
+                a(m.Get().GetPartnerInfo(e));
           }, [e, t]),
           [t]
         );
       }
       function f() {
-        return { fnFindPartnerByName: u.Get().FindPartnerByName };
+        return { fnFindPartnerByName: m.Get().FindPartnerByName };
       }
-      function h(e) {
-        return u.Get().GetPartnerInfo(e);
+      function p(e) {
+        return m.Get().GetPartnerInfo(e);
       }
-      (0, a.Cg)([c.o], u.prototype, "FindPartnerByName", null);
+      (0, n.Cg)([c.o], m.prototype, "FindPartnerByName", null);
     },
-    37789: (e, t, n) => {
+    37789: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => C });
-      var a = n(90626),
-        r = n(24484),
-        i = n(18573),
-        s = n.n(i),
-        o = n(52038),
-        l = n(95695),
-        c = n.n(l),
-        d = n(51272),
-        u = n(84811),
-        m = n(71541),
-        p = n(95034),
-        f = n(55263),
-        h = n(82097),
-        g = n(32179),
-        _ = n(66418),
-        E = n(61859),
-        v = n(91675),
-        y = n(26408),
-        w = n(54330);
-      const S = { include_assets: !0, include_release: !0 };
-      function b(e) {
+      a.r(t), a.d(t, { default: () => T });
+      var n = a(90626),
+        i = a(24484),
+        r = a(18573),
+        o = a.n(r),
+        s = a(52038),
+        l = a(95695),
+        c = a.n(l),
+        d = a(51272),
+        m = a(84811),
+        u = a(71541),
+        h = a(95034),
+        f = a(55263),
+        p = a(82097),
+        y = a(32179),
+        v = a(66418),
+        E = a(61859),
+        g = a(91675),
+        S = a(26408),
+        N = a(54330);
+      const b = { include_assets: !0, include_release: !0 };
+      function w(e) {
         const { rgDeadlines: t } = e,
-          [n, r] = (0, p.QD)("query", ""),
-          i = (0, a.useMemo)(
+          [a, i] = (0, h.QD)("query", ""),
+          r = (0, n.useMemo)(
             () =>
               Array.from(
                 new Set(t.map((e) => e.data.store_item_id).filter(Boolean)),
               ),
             [t],
           ),
-          s = (0, a.useMemo)(
+          o = (0, n.useMemo)(
             () =>
               Array.from(
                 new Set(t.map((e) => e.data.partnerid).filter(Boolean)),
               ),
             [t],
           ),
-          o = (0, f.zX)(i, S),
-          l = (0, g.vh)(s),
-          c = (0, a.useMemo)(() => {
-            const e = n.trim().toLocaleLowerCase();
+          s = (0, f.zX)(r, b),
+          l = (0, y.vh)(o),
+          c = (0, n.useMemo)(() => {
+            const e = a.trim().toLocaleLowerCase();
             return t
               .filter(
                 (t) =>
                   0 == e.length ||
-                  1 == o ||
+                  1 == s ||
                   !l ||
-                  h.A.Get()
+                  p.A.Get()
                     .GetApp(t.data.store_item_id)
                     ?.GetName()
                     .toLocaleLowerCase()
                     .includes(e) ||
-                  (0, g.Yd)(t.data.partnerid)
+                  (0, y.Yd)(t.data.partnerid)
                     ?.name.toLocaleLowerCase()
                     .includes(e),
               )
               .sort((e, t) => t.data.due_date - e.data.due_date);
-          }, [n, t, o, l]);
-        return a.createElement(
-          u.tH,
+          }, [a, t, s, l]);
+        return n.createElement(
+          m.tH,
           null,
-          a.createElement("h3", null, "Season Passes"),
-          a.createElement(m.pd, {
+          n.createElement("h3", null, "Season Passes"),
+          n.createElement(u.pd, {
             type: "string",
-            value: n,
-            onChange: (e) => r(e.currentTarget.value.toLocaleLowerCase()),
+            value: a,
+            onChange: (e) => i(e.currentTarget.value.toLocaleLowerCase()),
             label: "Filter",
             tooltip:
               "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
             placeholder: "type here...",
           }),
-          a.createElement(
+          n.createElement(
             "table",
             null,
-            a.createElement(
+            n.createElement(
               "thead",
               null,
-              a.createElement(
+              n.createElement(
                 "tr",
                 null,
-                a.createElement("th", null, "Deadline ID"),
-                a.createElement(
+                n.createElement("th", null, "Deadline ID"),
+                n.createElement(
                   "th",
                   null,
                   "Milestone ID ",
-                  a.createElement(y.o, {
+                  n.createElement(S.o, {
                     tooltip: "This is only unique within a DLC Season Pass",
                   }),
                 ),
-                a.createElement("th", null, "Season Pass DLC"),
-                a.createElement("th", null, "Partner"),
-                a.createElement("th", null, "Season Pass Release Date"),
-                a.createElement("th", null, "Deadline Date"),
-                a.createElement("th", null, "Milestone Name"),
-                a.createElement("th", null, "Ticket?"),
+                n.createElement("th", null, "Season Pass DLC"),
+                n.createElement("th", null, "Partner"),
+                n.createElement("th", null, "Season Pass Release Date"),
+                n.createElement("th", null, "Deadline Date"),
+                n.createElement("th", null, "Milestone Name"),
+                n.createElement("th", null, "Ticket?"),
               ),
             ),
-            a.createElement(
+            n.createElement(
               "tbody",
               null,
               c.map((e) =>
-                a.createElement(N, { key: "" + e.deadlineid, deadline: e }),
+                n.createElement(_, { key: "" + e.deadlineid, deadline: e }),
               ),
             ),
           ),
         );
       }
-      function N(e) {
+      function _(e) {
         const { deadline: t } = e,
-          [n] = (0, f.t7)(t.data.store_item_id, S),
-          [r] = (0, g.UA)(t.data.partnerid),
-          i = (0, w.u)(t.data.store_item_id),
-          s = i?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
-        return a.createElement(
+          [a] = (0, f.t7)(t.data.store_item_id, b),
+          [i] = (0, y.UA)(t.data.partnerid),
+          r = (0, N.u)(t.data.store_item_id),
+          o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
+        return n.createElement(
           "tr",
           null,
-          a.createElement("td", null, t.deadlineid),
-          a.createElement("td", null, t.data.gid),
-          a.createElement(
+          n.createElement("td", null, t.deadlineid),
+          n.createElement("td", null, t.data.gid),
+          n.createElement(
             "td",
             null,
-            a.createElement(
+            n.createElement(
               "a",
-              { href: n?.GetStorePageURL(), target: "_blank" },
-              n?.GetName() || "unknown",
+              { href: a?.GetStorePageURL(), target: "_blank" },
+              a?.GetName() || "unknown",
             ),
             "(",
-            a.createElement(
+            n.createElement(
               "a",
               {
-                href: `${_.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                href: `${v.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                 target: "_blank",
               },
               t.data.store_item_id,
               ")",
             ),
           ),
-          a.createElement(
+          n.createElement(
             "td",
             null,
-            a.createElement(
+            n.createElement(
               "a",
               {
-                href: `${_.T}pub/companydetails/${t.data.partnerid}`,
+                href: `${v.T}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
-              r?.name || "unknown",
+              i?.name || "unknown",
               " (",
               t.data.partnerid,
               ")",
             ),
           ),
-          a.createElement(
+          n.createElement(
             "td",
             null,
-            (0, E.TW)(n?.GetReleaseDateRTime()),
-            a.createElement("span", null, " - "),
-            (0, v.KC)(n?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
+            (0, E.TW)(a?.GetReleaseDateRTime()),
+            n.createElement("span", null, " - "),
+            (0, g.KC)(a?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
           ),
-          a.createElement(
+          n.createElement(
             "td",
             null,
             (0, E.TW)(t.data.due_date),
-            a.createElement("span", null, " - "),
-            (0, v.KC)(t.data.due_date, { bForce24HourClock: !1 }),
+            n.createElement("span", null, " - "),
+            (0, g.KC)(t.data.due_date, { bForce24HourClock: !1 }),
           ),
-          a.createElement(
+          n.createElement(
             "td",
             null,
-            s?.title.find((e) => 0 == e.language)?.localized_string,
+            o?.title.find((e) => 0 == e.language)?.localized_string,
           ),
-          a.createElement("td", null, "TODO"),
+          n.createElement("td", null, "TODO"),
         );
       }
-      function C(e) {
+      function T(e) {
         const t = (function () {
-          const [e] = (0, a.useState)(
-            (0, r.Tc)("deadlines", "application_config"),
+          const [e] = (0, n.useState)(
+            (0, i.Tc)("deadlines", "application_config"),
           );
           return e;
         })();
-        return a.createElement(
-          u.tH,
+        return n.createElement(
+          m.tH,
           null,
-          a.createElement(
+          n.createElement(
             "div",
-            { className: s().DashboardCtn },
-            a.createElement(
+            { className: o().DashboardCtn },
+            n.createElement(
               "h1",
               null,
               "Missed Deadlines Dashboard",
-              a.createElement(
+              n.createElement(
                 "button",
                 {
-                  className: (0, o.A)(c().Button),
+                  className: (0, s.A)(c().Button),
                   style: { float: "right", marginRight: "16px" },
                   onClick: (e) =>
                     (0, d.EP)(
@@ -469,777 +468,1773 @@
                 "Help",
               ),
             ),
-            a.createElement("hr", null),
-            a.createElement(
+            n.createElement("hr", null),
+            n.createElement(
               "p",
               null,
               "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
             ),
           ),
-          a.createElement(b, { rgDeadlines: t }),
+          n.createElement(w, { rgDeadlines: t }),
         );
       }
     },
-    20880: (e, t, n) => {
+    2203: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => h });
-      var a = n(90626),
-        r = n(24484),
-        i = n(84811),
-        s = n(54292),
-        o = n.n(s),
-        l = n(45737),
-        c = n.n(l),
-        d = n(61859),
-        u = n(64238),
-        m = n.n(u),
-        p = n(71541);
+      a.r(t),
+        a.d(t, { default: () => b, k_rgTemplateNameOptionsList: () => g });
+      var n = a(90626),
+        i = a(24484),
+        r = a(84811),
+        o = a(54292),
+        s = a.n(o),
+        l = a(45737),
+        c = a.n(l),
+        d = a(61859),
+        m = a(52038),
+        u = a(71541),
+        h = a(14771);
       function f() {
-        const [e] = (0, a.useState)(
-            (0, r.Tc)("deadlines", "application_config"),
-          ),
-          [t] = (0, a.useState)(
-            (0, r.Tc)("publishername", "application_config"),
-          ),
-          [n] = (0, a.useState)(
-            parseInt((0, r.Tc)("actionid", "application_config")),
-          ),
-          [i] = (0, a.useState)(
-            parseInt((0, r.Tc)("publisherid", "application_config")),
-          );
-        return [e, t, n, i];
-      }
-      function h(e) {
-        const [t] = f(),
-          [n, r] = a.useMemo(() => {
-            const e = [...t];
-            e.sort((e, t) => {
-              const n = new Date(
-                  JSON.parse(e.data.description_jsondata)?.CreatedOn,
-                ),
-                a = new Date(
-                  JSON.parse(t.data.description_jsondata)?.CreatedOn,
-                );
-              return n.getTime() > a.getTime() ? 1 : -1;
-            });
-            return [e.pop(), e];
-          }, [t]);
-        return a.createElement(
-          i.tH,
-          null,
-          a.createElement(
-            "div",
-            { className: c().AdminPageCtn },
-            a.createElement(
-              "div",
-              { className: o().header_container },
-              a.createElement(
-                "div",
-                { className: o().header_label },
-                "Steamworks Document Communication",
-              ),
-            ),
-            a.createElement(
-              "div",
-              { className: o().NotificationTwoColumnCtn },
-              a.createElement(
-                "div",
-                { className: o().NotificationLeft },
-                r.map((e, t) =>
-                  a.createElement(N, { key: "update_" + t, deadline: e }),
-                ),
-                a.createElement(g, { deadline: n }),
-              ),
-              a.createElement(
-                "div",
-                { className: o().NotificationRight },
-                a.createElement(
-                  "div",
-                  { className: o().Title },
-                  "Important Notice",
-                ),
-                a.createElement(
-                  "div",
-                  { className: o().Body },
-                  "Information in this document does not constitute tax, legal, or other professional advice. If you have other questions, please contact your tax, legal, or other professional advisor.",
-                ),
-                a.createElement(
-                  "div",
-                  { className: o().Title },
-                  "Third-party tax vendor",
-                ),
-                a.createElement(
-                  "div",
-                  { className: o().Body },
-                  "Valve uses a service called TaxIdentity provided by a third-party company called Lilaham for many services related to tax information collection, verification, and end-of-year statements.",
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      function g(e) {
-        const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata),
-          [, r] = f(),
-          i = new Date(n?.CreatedOn);
-        let s = null,
-          l = null;
-        return (
-          "Renewal-W8-Initial" == n.TemplateName
-            ? ((s = a.createElement(S, { deadline: t })),
-              (l = a.createElement(b, { deadline: t })))
-            : "FailureToComply" == n.TemplateName
-              ? ((s = a.createElement(y, { deadline: t })),
-                (l = a.createElement(w, { deadline: t })))
-              : "DocReq-KYC-Entity-FR" == n.TemplateName
-                ? ((s = a.createElement(_, { deadline: t })),
-                  (l = a.createElement(E, { deadline: t })))
-                : "DocReq-KYC-FR" == n.TemplateName &&
-                  ((s = a.createElement(_, { deadline: t })),
-                  (l = a.createElement(v, { deadline: t }))),
-          a.createElement(
-            "div",
-            { className: o().NotificationContainer },
-            a.createElement(
-              "div",
-              { className: o().MessageDate },
-              (0, d.$z)(i.getTime() / 1e3),
-            ),
-            a.createElement("div", { className: o().PartnerName }, r),
-            s,
-            l,
-          )
-        );
-      }
-      function _(e) {
-        const { deadline: t } = e;
-        (0, d.$z)(t.data.due_date);
-        return a.createElement(
+        return n.createElement(
           "div",
-          { className: o().MessageHeader },
-          a.createElement(
+          { className: s().MessageHeader },
+          n.createElement("h1", null, "Identity verification required"),
+          n.createElement(
             "div",
-            { className: o().MessageTitle },
-            "Identity verification required",
-          ),
-          a.createElement(
-            "div",
-            { className: o().MessageSubject },
+            { className: s().MessageSubject },
             "Know Your Customer (KYC) regulations require Valve to verify the identity credentials of its payees.",
           ),
         );
       }
-      function E(e) {
-        const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata),
-          r = n.Parameters?.Dropbox_FileRequest_Url;
-        return a.createElement(
+      function p(e) {
+        const { deadline: t, index: a } = e,
+          i = `https://valvesoftware-dev.taxidentity.com/Interview/Start?IdentityKey=${JSON.parse(t.data.description_jsondata).IdentityKey}`;
+        return n.createElement(
+          u.jn,
+          {
+            onClick: () => window.location.assign(i),
+            className: s().NotificationButton,
+          },
+          "Begin Tax Interview",
+        );
+      }
+      function y(e) {
+        const { deadline: t, index: a } = e,
+          i = JSON.parse(t.data.description_jsondata),
+          r = i.Parameters?.Dropbox_FileRequest_Url;
+        return n.createElement(
           "div",
           null,
-          a.createElement(
+          n.createElement(
             "div",
-            { className: o().SectionTitle },
-            "Why is this important",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "To comply with those regulations, we have reviewed the information that you submitted via the online interview. This notification is being sent to you because additional documents are necessary to complete your KYC verification.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "What do I do next?",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "Required documents",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            a.createElement(
-              "ul",
-              { className: o().SectionList },
-              a.createElement(
-                "li",
-                null,
-                a.createElement(
-                  "span",
-                  { className: o().ListItem },
-                  "Companies:",
-                ),
-                " Certificate of Incorporation or Registration details from Governing Authority which provides a summary of company registration, registered address and or members. For all companies registered greater than 12mths, also provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country’s registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. Note: screenshots of business portals are not acceptable.",
-              ),
-              a.createElement(
-                "li",
-                null,
-                a.createElement(
-                  "span",
-                  { className: o().ListItem },
-                  "Partnerships:",
-                ),
-                " Partnership Agreement and registration with local authority. Document providing Name, Address and list of partner(s).",
-              ),
-              a.createElement(
-                "li",
-                null,
-                a.createElement("span", { className: o().ListItem }, "Trusts:"),
-                ": Document providing Name, Address and list of beneficial owner(s).",
-              ),
-            ),
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
+            { className: s().SectionTitle },
             "Providing documents",
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: o().SectionBody },
+            { className: s().SectionBody },
             "The quickest way to provide the required documentation is by securely uploading to this personalized Dropbox™ File Request. This needs to be completed within 30 days after which time the link will be disabled.",
           ),
-          a.createElement(
-            p.jn,
+          n.createElement(
+            u.jn,
             {
               onClick: () => window.location.assign(r),
-              className: o().NotificationButton,
+              className: s().NotificationButton,
             },
             "Open Dropbox™ File Request",
+          ),
+          n.createElement("br", null),
+          n.createElement(
+            "div",
+            { className: s().SectionBody },
+            "Alternatively, you can mail to:",
+            n.createElement(
+              "div",
+              { className: s().MailingAddress },
+              "Tax Identity Solutions / Valve Tax Certification",
+              n.createElement("br", null),
+              "3020 Issaquah Pine Lake Road, PMB 321",
+              n.createElement("br", null),
+              "Sammamish, WA, 98075-7253",
+              n.createElement("br", null),
+              "USA",
+            ),
           ),
         );
       }
       function v(e) {
         const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata),
-          r = n.Parameters?.Dropbox_FileRequest_Url;
-        return a.createElement(
+          a = (0, d.$z)(t.data.due_date);
+        return n.createElement(
           "div",
           null,
-          a.createElement(
+          n.createElement(
             "div",
-            { className: o().SectionTitle },
-            "Why is this important",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "To comply with those regulations, we have reviewed the information that you submitted via the online interview. This notification is being sent to you because additional documents are necessary to complete your KYC verification.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "What do I do next?",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "1. Identification document",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "Please provide one of the following:",
-            a.createElement(
-              "ol",
-              null,
-              a.createElement("li", null, "International Passport"),
-              a.createElement("li", null, "Driver's License"),
-              a.createElement(
-                "li",
-                null,
-                "Government issues Identification documentation issues either by a Federal, State / Provisional Government Authority",
-              ),
-            ),
-            a.createElement(
+            { className: s().MessageHeader },
+            n.createElement("h1", null, "Additional documents required"),
+            n.createElement(
               "div",
-              null,
-              a.createElement(
-                "i",
-                null,
-                "Note, we are unable to validate the following documents:",
-              ),
-            ),
-            a.createElement(
-              "ol",
-              null,
-              a.createElement("li", null, "Citizen Card"),
-              a.createElement("li", null, "Government Health Cards"),
-              a.createElement("li", null, "Military ID's"),
-              a.createElement("li", null, "Post office card"),
-              a.createElement("li", null, "Paper Documents"),
-            ),
-            a.createElement("br", null),
-            a.createElement(
-              "div",
-              null,
-              "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise will not proceed with your verification.",
-            ),
-            a.createElement("br", null),
-            a.createElement(
-              "div",
-              null,
-              a.createElement("b", null, "Specifically:"),
-              a.createElement(
-                "ul",
-                null,
-                a.createElement(
-                  "li",
-                  null,
-                  "International Passport - Color Photograph and identity page",
-                ),
-                a.createElement(
-                  "li",
-                  null,
-                  "Foreign Driver's License - Color Photograph and identity information - if a card style, front and rear of card",
-                ),
-                a.createElement(
-                  "li",
-                  null,
-                  "Government issued Identification - Color Photograph and identity information - if a card style, front and rear of card",
-                ),
-              ),
-            ),
-            a.createElement("br", null),
-            a.createElement(
-              "div",
-              null,
-              a.createElement("b", null, "Accepted file types"),
-              a.createElement(
-                "ol",
-                null,
-                a.createElement("li", null, "PDF"),
-                a.createElement("li", null, "JPEG / Image files"),
-              ),
+              { className: s().MessageSubject },
+              "IRS regulations require Valve to file Form 1099Misc and/or 1042-S for developers earning royalty income in a calendar year. To comply with those regulations, we have reviewed the information that you submitted via the online tax interview. This notification is being sent to you because additional documents are necessary to complete your tax documentation.",
             ),
           ),
-          a.createElement("div", { className: o().SectionTitle }, "2. Selfie"),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: o().SectionBody },
-            a.createElement(
-              "div",
-              null,
-              "We also require all payees to provide a selfie of themselves holding the same document they are providing. Please remove all hats, glasses, and other facial obstructions to get through the process as fast as possible",
-            ),
-            a.createElement("br", null),
-            a.createElement(
-              "div",
-              null,
-              "Show your full face, and you holding the Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
-            ),
-            a.createElement("br", null),
-            a.createElement(
-              "div",
-              null,
-              a.createElement("b", null, "Accepted file types"),
-              a.createElement(
-                "ol",
-                null,
-                a.createElement("li", null, "JPEG / Image files"),
-              ),
-            ),
+            { className: s().SectionTitle },
+            "Why is this important?",
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: o().SectionTitle },
-            "Providing documents",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "The quickest way to provide the required documentation is by securely uploading to this personalized Dropbox™ File Request. This needs to be completed within 30 days after which time the link will be disabled.",
-          ),
-          a.createElement(
-            p.jn,
-            {
-              onClick: () => window.location.assign(r),
-              className: o().NotificationButton,
-            },
-            "Open Dropbox™ File Request",
+            { className: s().SectionBody },
+            `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview.  You will be unable to distribute your product via Steam\n\t\t\t\tuntil we receive a valid tax form from you.`,
           ),
         );
       }
-      function y(e) {
-        const { deadline: t } = e;
-        (0, d.$z)(t.data.due_date);
-        return a.createElement(
-          "div",
-          { className: o().MessageHeader },
-          a.createElement(
-            "div",
-            { className: o().MessageTitle },
-            "Tax Information Has Expired",
+      var E = a(78327);
+      const g = [
+          "AddressCorrection",
+          "DocReq-KYC-Entity-FR",
+          "DocReq-KYC-Entity-FR-CERT",
+          "DocReq-KYC-FR",
+          "DocReq-Selfie-FR",
+          "DocReq-TreatyClaimOthCty-FR",
+          "DocReq-TreatyClaimUSAddress-FR",
+          "DocReq-W8USAddress-FR",
+          "DocReq-W8USParent-FR",
+          "FailureToComply",
+          "FailureToComply-KYC",
+          "Freeform",
+          "InvalidAddress",
+          "InvalidTaxInfo-Partner",
+          "InvalidTIN",
+          "InvalidTINAudit-Partner",
+          "NameMismatch-Partner",
+          "Notify-FailedTIN",
+          "Notify-FailedTIN-SingLLC",
+          "Notify-Mismatch",
+          "Notify-NoTINTreaty-Partner",
+          "Notify-NoTINTreaty-Partner-FR",
+          "Notify-W9BWHT-Partner",
+          "Renewal-W8-Initial",
+        ],
+        S = {
+          AddressCorrection: {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "Please retake the tax interview and enter your full address consistent with the document you previously provided.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Your account will not be validated until we can make an exact match of the address you entered.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Address Requirements",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "The address must be in English and include any Building / Apartment numbers.",
+                  n.createElement("br", null),
+                  "The address must also include the correct postcode / zip if your country uses them.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "DocReq-KYC-Entity-FR": {
+            component: function (e) {
+              const { deadline: t } = e;
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(f, null),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "To comply with those regulations, we have reviewed the information that you submitted via the online interview. This notification is being sent to you because additional documents are necessary to complete your KYC verification.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What do I do next?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Required documents",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  n.createElement(
+                    "ul",
+                    { className: s().SectionList },
+                    n.createElement(
+                      "li",
+                      null,
+                      n.createElement(
+                        "span",
+                        { className: s().ListItem },
+                        "Companies:",
+                      ),
+                      " Certificate of Incorporation or Registration details from Governing Authority which provides a summary of company registration, registered address and or members. For all companies registered greater than 12mths, also provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country’s registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. Note: screenshots of business portals are not acceptable.",
+                    ),
+                    n.createElement(
+                      "li",
+                      null,
+                      n.createElement(
+                        "span",
+                        { className: s().ListItem },
+                        "Partnerships:",
+                      ),
+                      " Partnership Agreement and registration with local authority. Document providing Name, Address and list of partner(s).",
+                    ),
+                    n.createElement(
+                      "li",
+                      null,
+                      n.createElement(
+                        "span",
+                        { className: s().ListItem },
+                        "Trusts:",
+                      ),
+                      " Document providing Name, Address and list of beneficial owner(s).",
+                    ),
+                  ),
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          "DocReq-KYC-Entity-FR-CERT": {
+            component: function (e) {
+              const { deadline: t } = e,
+                a = (0, d.$z)(t.data.due_date);
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(f, null),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  `If the additional documents noted below have not been provided by ${a}, per US KYC requirements, the KYC and\n\t\t\t\ttax form you completed for Valve will be invalidated and you will need to retake the full interview.`,
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Validation Type",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Certification of Good Standing (",
+                  n.createElement("b", null, "Current Year"),
+                  ") for your Company.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Verification Required",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "For all companies registered greater than 12 months, provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country's registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. ",
+                  n.createElement(
+                    "u",
+                    null,
+                    "Note: screenshots of business portals are not acceptable.",
+                  ),
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          "DocReq-KYC-FR": {
+            component: function (e) {
+              return n.createElement(
+                n.Fragment,
+                null,
+                n.createElement(
+                  "div",
+                  {
+                    className: (0, m.A)(
+                      s().NotificationContainer,
+                      c().SectionCtn,
+                    ),
+                  },
+                  n.createElement(f, null),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionTitle },
+                    "Why is this important",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionBody },
+                    "To comply with those regulations, we have reviewed the information that you submitted via the online interview. This notification is being sent to you because additional documents are necessary to complete your KYC verification.",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionTitle },
+                    "What do I do next?",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionBody },
+                    "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  {
+                    className: (0, m.A)(
+                      s().NotificationContainer,
+                      c().SectionCtn,
+                    ),
+                  },
+                  n.createElement(
+                    "div",
+                    { className: s().SectionTitle },
+                    "1. Identification document",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionBody },
+                    "Please provide one of the following:",
+                    n.createElement(
+                      "ol",
+                      null,
+                      n.createElement("li", null, "International Passport"),
+                      n.createElement("li", null, "Driver's License"),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Government issues Identification documentation issues either by a Federal, State / Provisional Government Authority",
+                      ),
+                    ),
+                    n.createElement(
+                      "div",
+                      null,
+                      n.createElement(
+                        "i",
+                        null,
+                        "Note, we are unable to validate the following documents:",
+                      ),
+                    ),
+                    n.createElement(
+                      "ol",
+                      null,
+                      n.createElement("li", null, "Citizen Card"),
+                      n.createElement("li", null, "Government Health Cards"),
+                      n.createElement("li", null, "Military ID's"),
+                      n.createElement("li", null, "Post office card"),
+                      n.createElement("li", null, "Paper Documents"),
+                    ),
+                    n.createElement("br", null),
+                    n.createElement(
+                      "div",
+                      null,
+                      "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise will not proceed with your verification.",
+                    ),
+                    n.createElement("br", null),
+                    n.createElement(
+                      "div",
+                      null,
+                      n.createElement("b", null, "Specifically:"),
+                      n.createElement(
+                        "ul",
+                        null,
+                        n.createElement(
+                          "li",
+                          null,
+                          "International Passport - Color Photograph and identity page",
+                        ),
+                        n.createElement(
+                          "li",
+                          null,
+                          "Foreign Driver's License - Color Photograph and identity information - if a card style, front and rear of card",
+                        ),
+                        n.createElement(
+                          "li",
+                          null,
+                          "Government issued Identification - Color Photograph and identity information - if a card style, front and rear of card",
+                        ),
+                      ),
+                    ),
+                    n.createElement("br", null),
+                    n.createElement(
+                      "div",
+                      null,
+                      n.createElement("b", null, "Accepted file types"),
+                      n.createElement(
+                        "ol",
+                        null,
+                        n.createElement("li", null, "PDF"),
+                        n.createElement("li", null, "JPEG / Image files"),
+                      ),
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionTitle },
+                    "2. Selfie",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().SectionBody },
+                    n.createElement(
+                      "div",
+                      null,
+                      "We also require all payees to provide a selfie of themselves holding the same document they are providing. Please remove all hats, glasses, and other facial obstructions to get through the process as fast as possible",
+                    ),
+                    n.createElement("br", null),
+                    n.createElement(
+                      "div",
+                      null,
+                      "Show your full face, and you holding the Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
+                    ),
+                    n.createElement("br", null),
+                    n.createElement(
+                      "div",
+                      null,
+                      n.createElement("b", null, "Accepted file types"),
+                      n.createElement(
+                        "ol",
+                        null,
+                        n.createElement("li", null, "JPEG / Image files"),
+                      ),
+                    ),
+                  ),
+                  n.createElement(y, { ...e }),
+                ),
+              );
+            },
+          },
+          "DocReq-Selfie-FR": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement("h1", null, "Identity verification required"),
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "Please provide a selfie of you holding your identity document.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Selfie requirements",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          "DocReq-TreatyClaimOthCty-FR": {
+            component: function (e) {
+              const { deadline: t } = e;
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(v, { deadline: t }),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Validation Type",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You have made a claim for a reduced withholding tax rate under tax treaty and you have provided a Permanent address in a non tax treaty country.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Verification Required",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Documentary evidence of foreign status  - the following documents are required:",
+                  n.createElement("br", null),
+                  "Certification of tax Residency for Tax Treaty Purposes",
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          "DocReq-TreatyClaimUSAddress-FR": {
+            component: function (e) {
+              const { deadline: t } = e;
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(v, { deadline: t }),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Validation Type",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You have provided a W-8BEN form with a US mailing address and claim a reduced rate of withholding tax under tax treaty.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Verification Required",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Documentary evidence of foreign status - the following documents are required:",
+                  n.createElement(
+                    "div",
+                    { className: s().RequiredDocumentList },
+                    "1. Foreign Passport (Photograph and identity page only) OR Foreign Drivers License",
+                    n.createElement("br", null),
+                    "2. Certification of tax Residency for Tax Treaty Purposes",
+                  ),
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          "DocReq-W8USAddress-FR": {
+            component: function (e) {
+              const { deadline: t } = e;
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(v, { deadline: t }),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Validation Type",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You have provided a W-8BEN form with a US mailing address.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Verification Required",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Documentary evidence of foreign status - the following document is required:",
+                  n.createElement("br", null),
+                  n.createElement(
+                    "div",
+                    { className: s().RequiredDocumentList },
+                    "Foreign Passport (Photograph and identity page only) OR Foreign Drivers License",
+                  ),
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          "DocReq-W8USParent-FR": {
+            component: function (e) {
+              const { deadline: t } = e;
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(v, { deadline: t }),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Validation Type",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You have indicated that one or both of your parents are born in the United States and you are claiming Foreign person status.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Verification Required",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Documentary evidence of foreign status - the following documents are required:",
+                  n.createElement("br", null),
+                  n.createElement(
+                    "div",
+                    { className: s().RequiredDocumentList },
+                    "Birth Extract",
+                    n.createElement("br", null),
+                    "Foreign Passport (Photograph and identity page only)",
+                    n.createElement("br", null),
+                    "Certification of tax Residency for Tax Treaty Purposes",
+                  ),
+                ),
+                n.createElement(y, { ...e }),
+              );
+            },
+          },
+          FailureToComply: {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement("h1", null, "Tax Information Has Expired"),
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "Our records indicate that you have not completed our recent request to update and/or provide additional tax information.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. You will be unable to distribute your product via Steam until we receive a valid tax form from you.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What do I do next?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "FailureToComply-KYC": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement("h1", null, "Tax Information Has Expired"),
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "Our records indicate that you have not completed our recent request to update and/or provide additional Know Your Customer (KYC) and Tax information.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. You will be unable to distribute your product via Steam until we receive a valid tax form from you.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What do I do next?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "When you have all necessary KYC and tax information prepared, you may retake the full interview by clicking the button below.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          Freeform: {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                "TODO: Freeform data here",
+              );
+            },
+          },
+          InvalidAddress: {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "h1",
+                    null,
+                    "We are unable to validate your Steam account",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "The permanent and or mailing address you entered in the tax interview cannot be verified. This may include not providing a postcode / zip - if this applie to you, please correct - ",
+                    n.createElement(
+                      "b",
+                      null,
+                      "you MUST supply a postcode / zip if your country uses them",
+                    ),
+                    ".",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Your Steam account will not be validated until we can verify the address.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What do I do next?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Please provide one of the following documents, showing the same address as you have entered it in the tax interview.  For prompt verification, please circle the address on the documentation provided (below) and ensure it is an exact match to the address entered in the interview, otherwise your account verification will be delayed:",
+                  n.createElement(
+                    "div",
+                    { className: s().RequiredDocumentList },
+                    "Recent utility bill (if it shows your address)",
+                    n.createElement("br", null),
+                    "Recent bank statement (if it shows your address)",
+                    n.createElement("br", null),
+                    "Government ID Card (if it shows your address)",
+                    n.createElement("br", null),
+                    "Tenant Lease (if it shows your address)",
+                    n.createElement("br", null),
+                    "OR for a company / business you can provide a company registration certificate (if it shows your address)",
+                  ),
+                  "Please do not give us the address of your bank or utility company.",
+                ),
+                n.createElement(
+                  "div",
+                  { style: { color: "orange" } },
+                  "TODO: The email suggests replying with attachments.  We need the notification to provide a dropbox link.",
+                ),
+              );
+            },
+          },
+          "InvalidTaxInfo-Partner": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "A recent audit found that you have provided us with an invalid tax information",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Until your tax information has been verified, you will not be able to receive any further payments. Complete your partner onboarding (if your partner account if already active you will not be able to be paid) until your tax information is valid. Your tax status has been changed to a 'Deactivated' status.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You will need to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information.  Please log onto your Steamworks account, if you are still onboarding your account you should be taken to the tax interview page, (if your partner account is already active go to 'Enter Payment & Tax Info' from the right-hand column of the Steamworks homepage).",
+                ),
+              );
+            },
+          },
+          InvalidTIN: {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "As described in a prior notification, the tax identification information you submitted for your Steamworks partner account does not match US IRS records.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Since you did not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid and you will be unable to distribute your product via Steam.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "InvalidTINAudit-Partner": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "A recent audit found that you have provided us with an invalid tax information",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Until your tax information has been verified, you will not be able to receive any further payments. Your tax status has been changed to a 'Deactivated' status.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You will need to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information.  Please log onto your Steamworks account, go to 'Enter Payment & Tax Info' from the right-hand column of the Steamworks homepage.",
+                ),
+              );
+            },
+          },
+          "NameMismatch-Partner": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "A recent audit found that your Steamworks partner legal name and the identification that you have provided in the tax interview / identity verification do not match.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Your Steamworks partner legal name and the legal name used for tax purposes need to match (unless you are a US single member LLC).",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  {
+                    className: (0, m.A)(
+                      s().SectionBody,
+                      s().RequiredDocumentList,
+                    ),
+                  },
+                  "1. If you need to change your Steamworks partner legal name, please use the 'start over' button located below the tax interview to start the process again to correct your Steamworks partner legal name (note: you will not lose your Steam Direct app credit).",
+                  n.createElement("br", null),
+                  n.createElement("br", null),
+                  "2. If your Steamworks partner legal name is correct, please retake the tax interview and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (you can find the name located in the subject line of this email).",
+                ),
+              );
+            },
+          },
+          "Notify-FailedTIN": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "We've received notification that the taxpayer identification number included on the tax form you have submitted does not match US IRS records.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid and you will be unable to distribute your product via Steam.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You will need to retake the tax interview using your valid taxpayer identification number.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "Notify-FailedTIN-SingLLC": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "We've received notification that the taxpayer identification number included on the tax form you have submitted does not match US IRS records.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "As you have completed the tax interview as a single member LLC, you are required to provide either your SSN or EIN assigned to your own name and not that of the LLC's. Per IRS regulations: \"For federal income tax purposes, a single-member LLC classified as a disregarded entity generally must use the owner's social security number (SSN) or EIN for all information returns and reporting related to income tax. For example, if a disregarded entity LLC that is owned by an individual is required to provide a Form W-9, Request for Taxpayer Identification Number and Certification, the W-9 should provide the owner's SSN or EIN, not the LLC's EIN.”",
+                  n.createElement("br", null),
+                  n.createElement(
+                    "a",
+                    {
+                      href: "https://www.irs.gov/businesses/small-businesses-self-employed/single-member-limited-liability-companies",
+                    },
+                    "Single Member LLC Companies Documentation",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid and you will be unable to distribute your product via Steam.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You will need to retake the tax interview using your valid taxpayer identification number.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "Notify-Mismatch": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "A recent audit found that the name and/or tax number we have on file for you, does not match the United States IRS database.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by the legal representative of the account.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "Notify-NoTINTreaty-Partner": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "You may be eligible to claim tax treaty benefits.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "This is an automated notification that is being sent to you because you may be eligible to claim tax treaty benefits which may reduce your tax withholding on royalty payments from the standard withholding tax rate of 30% to a reduced rate in accordance with US Tax treaty and your country of tax residence. In order to be eligible for treaty benefits, you are required to provide either a US Tax Identification Number (TIN) or your country of tax residency Foreign TIN. If you believe you are eligible for treaty benefits / reduced rate of tax withholding, please complete the tax interview and provide either your US TIN or Foreign TIN. In the meantime, we are required to begin deducting the maximum amount of US tax from your royalty payments.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "Notify-NoTINTreaty-Partner-FR": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "You may be eligible to claim tax treaty benefits.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "This is an automated notification that is being sent to you because you may be eligible to claim tax treaty benefits which may reduce your tax withholding on royalty payments from the standard withholding tax rate of 30% to a reduced rate in accordance with US Tax treaty and your country of tax residence. In order to be eligible for treaty benefits, you are required to provide a US Tax Identification Number (TIN). If you believe you are eligible for treaty benefits / reduced rate of tax withholding, please complete the tax interview and provide your US TIN. In the meantime, we are required to begin deducting the maximum amount of US tax from your royalty payments.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "Notify-W9BWHT-Partner": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    'Your tax status has been changed to a "Deactivated" status',
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "This is an automated notification that is being sent to you because you indicated in the tax interview that Backup Withholding Tax (BWHT) applies to your income. We are unable to support BWHT and therefore, your tax status has been changed to a “Deactivated” status.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What can I do?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "If you believe that BWHT does not apply, you will need to retake the tax interview.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+          "Renewal-W8-Initial": {
+            component: function (e) {
+              const { deadline: t } = e,
+                a = (0, d.$z)(t.data.due_date);
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement("h1", null, "Tax Information Is Out Of Date"),
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "Our records show that the US tax form W-8BEN we have on file for you is due to expire on " +
+                      a +
+                      ".",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "It's important to renew this information, otherwise we will be unable to make monthly royalty payments to you after " +
+                    a +
+                    ".",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What do I do next?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You need to review and submit our online tax interview. Following the link below will start a short tax interview which should take less than 10 minutes to complete.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Required permissions",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Tax information, including this required tax interview will need to be completed by a Steamworks user with Actual Authority rights.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What will happen if I choose not to complete the tax interview?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "On " +
+                    a +
+                    " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
+                ),
+                n.createElement(p, { ...e }),
+              );
+            },
+          },
+        };
+      function N() {
+        const [e] = (0, n.useState)(
+            (0, i.Tc)("deadlines", "application_config"),
           ),
-          a.createElement(
+          [t] = (0, n.useState)(
+            (0, i.Tc)("publishername", "application_config"),
+          ),
+          [a] = (0, n.useState)(
+            parseInt((0, i.Tc)("actionid", "application_config")),
+          ),
+          [r] = (0, n.useState)(
+            parseInt((0, i.Tc)("publisherid", "application_config")),
+          );
+        return [e, t, a, r];
+      }
+      function b(e) {
+        const [t, a] = N(),
+          o = n.useMemo(() => {
+            const e = [...t];
+            return (
+              e.sort((e, t) => {
+                const a = new Date(
+                    JSON.parse(e.data.description_jsondata)?.CreatedOn,
+                  ),
+                  n = new Date(
+                    JSON.parse(t.data.description_jsondata)?.CreatedOn,
+                  );
+                return a.getTime() > n.getTime() ? -1 : 1;
+              }),
+              e
+            );
+          }, [t]),
+          [l, d] = (function () {
+            const [e] = (0, n.useState)(
+                (0, i.Tc)("testpage", "application_config"),
+              ),
+              [t] = (0, n.useState)(
+                (0, i.Tc)("testtemplate", "application_config"),
+              );
+            return [e, t];
+          })();
+        let h = "mailto:taxsupport-valve@taxidentity.com";
+        if (o.length > 0) {
+          const e = JSON.parse(o[0]?.data.description_jsondata)?.Subject,
+            t =
+              "dev" == E.TS.WEB_UNIVERSE || "beta" == E.TS.WEB_UNIVERSE
+                ? "TEST:"
+                : "";
+          h += "?subject=" + t + e;
+        }
+        return n.createElement(
+          r.tH,
+          null,
+          n.createElement(
             "div",
-            { className: o().MessageSubject },
-            "Our records indicate that you have not completed our recent request to update and/or provide additional tax information",
+            { className: c().AdminPageCtn },
+            n.createElement(
+              "div",
+              { className: c().ColumnCtn },
+              n.createElement(
+                "div",
+                { className: c().LeftCol },
+                n.createElement(
+                  "div",
+                  { className: (0, m.A)(c().ColHeader, c().Blue) },
+                  "Steamworks Document Communication",
+                  n.createElement("div", { className: s().PartnerName }, a),
+                ),
+                n.createElement(
+                  n.Fragment,
+                  null,
+                  l && n.createElement(w, { strTemplate: d }),
+                  o.length > 0 &&
+                    o.map((e, t) =>
+                      n.createElement(_, {
+                        key: "update_" + t,
+                        deadline: e,
+                        index: t,
+                      }),
+                    ),
+                ),
+              ),
+              n.createElement(
+                "div",
+                { className: c().RightCol },
+                n.createElement("div", {
+                  className: (0, m.A)(c().ColHeader, c().Blue),
+                }),
+                n.createElement(
+                  "div",
+                  { className: c().SectionCtn },
+                  n.createElement(
+                    "div",
+                    { className: c().TitleSmall },
+                    "Important Notice",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().Body },
+                    "Information in this document does not constitute tax, legal, or other professional advice. If you have other questions, please contact your tax, legal, or other professional advisor.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: c().SectionCtn },
+                  n.createElement(
+                    "div",
+                    { className: c().TitleSmall },
+                    "Third-party tax vendor",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().Body },
+                    "Valve uses a service called TaxIdentity provided by a third-party company called Lilaham for many services related to tax information collection, verification, and end-of-year statements.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: c().SectionCtn },
+                  n.createElement("h1", null, "Have Questions?"),
+                  n.createElement(
+                    "p",
+                    null,
+                    "Our tax and identity veritication partner, TaxIdentity, can help answer questions about this process or necessary documents. Tax information support can only be provided in English language.",
+                  ),
+                  n.createElement(
+                    "p",
+                    null,
+                    n.createElement(
+                      u.jn,
+                      {
+                        onClick: () => window.location.assign(h),
+                        className: s().NotificationButton,
+                      },
+                      "Contact TaxIdentity",
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         );
       }
       function w(e) {
-        const { deadline: t } = e,
-          n = `https://valvesoftware-dev.taxidentity.com/Interview/Start?IdentityKey=${JSON.parse(t.data.description_jsondata).IdentityKey}`;
-        return a.createElement(
-          "div",
-          null,
-          a.createElement(
+        const { strTemplate: t } = e,
+          [a, i] = n.useState(t || "Renewal-W8-Initial"),
+          r = g.map((e) => ({ label: e, data: e })),
+          o = Date.now(),
+          s = {},
+          l = new Intl.DateTimeFormat(navigator.language).format(o);
+        return (
+          (s.data = {}),
+          (s.data.due_date = o / 1e3 + 14 * h.Kp.PerDay),
+          (s.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${l}" }`),
+          n.createElement(
             "div",
-            { className: o().SectionTitle },
-            "Why is this important",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "What do I do next?",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "You will be unable to distribute your product via Steam until we receive a valid tax form from you.  When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
-          ),
-          a.createElement(
-            p.jn,
-            {
-              onClick: () => window.location.assign(n),
-              className: o().NotificationButton,
-            },
-            "Begin Tax Interview",
-          ),
+            null,
+            n.createElement(u.ZU, {
+              rgOptions: r,
+              selectedOption: a,
+              onChange: (e) => {
+                i(e.data);
+              },
+            }),
+            n.createElement("br", null),
+            n.createElement(_, { deadline: s, index: 0 }),
+          )
         );
       }
-      function S(e) {
-        const { deadline: t } = e,
-          n = (0, d.$z)(t.data.due_date);
-        return a.createElement(
-          "div",
-          { className: o().MessageHeader },
-          a.createElement(
+      function _(e) {
+        const { deadline: t, index: a } = e,
+          i = JSON.parse(t.data.description_jsondata),
+          [, r] = N(),
+          o = new Date(i?.CreatedOn);
+        if (!S[i.TemplateName])
+          return n.createElement(
             "div",
-            { className: o().MessageTitle },
-            "Tax Information Is Out Of Date",
-          ),
-          a.createElement(
-            "div",
-            { className: o().MessageSubject },
-            "Our records show that the US tax form W-8BEN we have \t\t\t\ton file for you is due to expire on " +
-              n +
-              ".",
-          ),
-        );
-      }
-      function b(e) {
-        const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata),
-          r = (0, d.$z)(t.data.due_date),
-          i = `https://valvesoftware-dev.taxidentity.com/Interview/Start?IdentityKey=${n.IdentityKey}`;
-        return a.createElement(
-          "div",
-          null,
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "Why is this important",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "It's important to renew this information, otherwise we will be unable to make monthly royalty payments to you after " +
-              r +
-              ".",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "What do I do next?",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "You need to review and submit our online tax interview. Following the link below will start a short tax interview which should take less than 10 minutes to complete.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "Required permissions",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "Tax information, including this required tax interview will need to be completed by a Steamworks user with Actual Authority rights.",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionTitle },
-            "What will happen if I choose not to complete the tax interview?",
-          ),
-          a.createElement(
-            "div",
-            { className: o().SectionBody },
-            "On " +
-              r +
-              " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
-          ),
-          a.createElement(
-            p.jn,
-            {
-              onClick: () => window.location.assign(i),
-              className: o().NotificationButton,
-            },
-            "Begin Tax Interview",
-          ),
-        );
-      }
-      function N(e) {
-        const { deadline: t } = e,
-          n = JSON.parse(t.data.description_jsondata),
-          r = new Date(n?.CreatedOn);
-        return a.createElement(
-          "div",
-          { className: m()(o().NotificationContainer, o().NotificationUpdate) },
-          a.createElement(
-            "div",
-            { key: n.NotificationID },
-            a.createElement(
+            { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
+            n.createElement(
               "div",
-              { className: o().MessageDate },
-              (0, d.$z)(r.getTime() / 1e3),
+              { className: s().MessageDate },
+              (0, d.$z)(o.getTime() / 1e3),
             ),
-            a.createElement(
-              "div",
-              { className: o().MessageSource },
-              "Message from TaxIdentity",
-            ),
-            a.createElement("div", { className: o().MessageBody }, n.Subject),
+            n.createElement("div", null, "Message Not Available"),
+          );
+        const l = S[i.TemplateName].component;
+        return n.createElement(
+          n.Fragment,
+          null,
+          n.createElement(
+            "div",
+            { className: s().MessageDate },
+            (0, d.$z)(o.getTime() / 1e3),
           ),
+          n.createElement(l, { deadline: t, index: a }),
         );
       }
     },
-    66418: (e, t, n) => {
+    66418: (e, t, a) => {
       "use strict";
-      n.d(t, { T: () => r, i: () => i });
-      var a = n(30470);
-      const r = window.Config ?? a.TS,
-        i = window.UserConfig ?? a.iA;
-      window.Config && Object.assign(a.TS, window.Config),
-        window.UserConfig && Object.assign(i, window.UserConfig);
+      a.d(t, { T: () => i, i: () => r });
+      var n = a(30470);
+      const i = window.Config ?? n.TS,
+        r = window.UserConfig ?? n.iA;
+      window.Config && Object.assign(n.TS, window.Config),
+        window.UserConfig && Object.assign(r, window.UserConfig);
     },
-    55263: (e, t, n) => {
+    55263: (e, t, a) => {
       "use strict";
-      n.d(t, {
+      a.d(t, {
         G6: () => l,
-        Gg: () => u,
-        MS: () => h,
+        Gg: () => m,
+        MS: () => p,
         Ow: () => d,
-        gF: () => g,
-        mZ: () => m,
+        gF: () => y,
+        mZ: () => u,
         t7: () => c,
         zX: () => f,
       });
-      var a = n(41735),
-        r = n.n(a),
-        i = n(90626),
-        s = n(375),
-        o = n(82097);
-      function l(e, t, n, a) {
-        const l = (0, i.useRef)(),
-          c = (0, i.useRef)(void 0),
-          d = (0, s.CH)();
+      var n = a(41735),
+        i = a.n(n),
+        r = a(90626),
+        o = a(375),
+        s = a(82097);
+      function l(e, t, a, n) {
+        const l = (0, r.useRef)(),
+          c = (0, r.useRef)(void 0),
+          d = (0, o.CH)();
         l.current = e;
-        const [u, m] = (0, i.useState)(void 0),
+        const [m, u] = (0, r.useState)(void 0),
           {
-            include_assets: p,
+            include_assets: h,
             include_release: f,
-            include_platforms: h,
-            include_all_purchase_options: g,
-            include_screenshots: _,
+            include_platforms: p,
+            include_all_purchase_options: y,
+            include_screenshots: v,
             include_trailers: E,
-            include_ratings: v,
-            include_tag_count: y,
-            include_reviews: w,
-            include_basic_info: S,
-            include_supported_languages: b,
-            include_full_description: N,
-            include_included_items: C,
-            include_assets_without_overrides: T,
+            include_ratings: g,
+            include_tag_count: S,
+            include_reviews: N,
+            include_basic_info: b,
+            include_supported_languages: w,
+            include_full_description: _,
+            include_included_items: T,
+            include_assets_without_overrides: C,
             apply_user_filters: I,
-            include_links: B,
-          } = n;
+            include_links: x,
+          } = a;
         if (
-          ((0, i.useEffect)(() => {
-            const n = {
-              include_assets: p,
+          ((0, r.useEffect)(() => {
+            const a = {
+              include_assets: h,
               include_release: f,
-              include_platforms: h,
-              include_all_purchase_options: g,
-              include_screenshots: _,
+              include_platforms: p,
+              include_all_purchase_options: y,
+              include_screenshots: v,
               include_trailers: E,
-              include_ratings: v,
-              include_tag_count: y,
-              include_reviews: w,
-              include_basic_info: S,
-              include_supported_languages: b,
-              include_full_description: N,
-              include_included_items: C,
-              include_assets_without_overrides: T,
+              include_ratings: g,
+              include_tag_count: S,
+              include_reviews: N,
+              include_basic_info: b,
+              include_supported_languages: w,
+              include_full_description: _,
+              include_included_items: T,
+              include_assets_without_overrides: C,
               apply_user_filters: I,
-              include_links: B,
+              include_links: x,
             };
-            let i = null;
+            let r = null;
             return (
               !e ||
                 e < 0 ||
-                o.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== u && a && a == c.current) ||
-                (a !== c.current && (m(void 0), (c.current = a)),
-                (i = r().CancelToken.source()),
-                o.A.Get()
-                  .QueueStoreItemRequest(e, t, n)
+                s.A.Get().BHasStoreItem(e, t, a) ||
+                (void 0 !== m && n && n == c.current) ||
+                (n !== c.current && (u(void 0), (c.current = n)),
+                (r = i().CancelToken.source()),
+                s.A.Get()
+                  .QueueStoreItemRequest(e, t, a)
                   .then((t) => {
-                    i?.token.reason || l.current !== e || m(1 == t), d();
+                    r?.token.reason || l.current !== e || u(1 == t), d();
                   })),
-              () => i?.cancel("useStoreItemCache: unmounting")
+              () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, a, u, p, f, h, g, _, E, v, y, w, S, b, N, C, T, I, B, d]),
+          }, [e, t, n, m, h, f, p, y, v, E, g, S, N, b, w, _, T, C, I, x, d]),
           !e)
         )
           return [null, 2];
-        if (!1 === u) return [void 0, 2];
-        if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const P = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return P ? [P, 3] : [null, 2];
+        if (!1 === m) return [void 0, 2];
+        if (s.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!s.A.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
+        const B = s.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return B ? [B, 3] : [null, 2];
       }
-      function c(e, t, n) {
-        return l(e, 0, t, n);
+      function c(e, t, a) {
+        return l(e, 0, t, a);
       }
-      function d(e, t, n) {
-        return l(e, 2, t, n);
+      function d(e, t, a) {
+        return l(e, 2, t, a);
       }
-      function u(e, t, n) {
-        return l(e, 1, t, n);
+      function m(e, t, a) {
+        return l(e, 1, t, a);
       }
-      function m(e, t, n) {
-        const [a, r] = l(e, t, n);
-        let i;
-        1 != a?.GetStoreItemType() ||
-          a.GetAssets()?.GetHeaderURL() ||
-          1 != a?.GetIncludedAppIDs().length ||
-          (i = a.GetIncludedAppIDs()[0]);
-        const [s, o] = c(i, n);
-        return i && s?.BIsVisible() ? [s, o] : [a, r];
+      function u(e, t, a) {
+        const [n, i] = l(e, t, a);
+        let r;
+        1 != n?.GetStoreItemType() ||
+          n.GetAssets()?.GetHeaderURL() ||
+          1 != n?.GetIncludedAppIDs().length ||
+          (r = n.GetIncludedAppIDs()[0]);
+        const [o, s] = c(r, a);
+        return r && o?.BIsVisible() ? [o, s] : [n, i];
       }
-      function p(e, t, n, a) {
-        const l = (0, s.CH)(),
+      function h(e, t, a, n) {
+        const l = (0, o.CH)(),
           {
             include_assets: c,
             include_release: d,
-            include_platforms: u,
-            include_all_purchase_options: m,
-            include_screenshots: p,
+            include_platforms: m,
+            include_all_purchase_options: u,
+            include_screenshots: h,
             include_trailers: f,
-            include_ratings: h,
-            include_tag_count: g,
-            include_reviews: _,
+            include_ratings: p,
+            include_tag_count: y,
+            include_reviews: v,
             include_basic_info: E,
-            include_supported_languages: v,
-            include_full_description: y,
-            include_included_items: w,
-            include_assets_without_overrides: S,
-            apply_user_filters: b,
-            include_links: N,
-          } = n;
+            include_supported_languages: g,
+            include_full_description: S,
+            include_included_items: N,
+            include_assets_without_overrides: b,
+            apply_user_filters: w,
+            include_links: _,
+          } = a;
         if (
-          ((0, i.useEffect)(() => {
+          ((0, r.useEffect)(() => {
             if (!e || 0 == e.length) return;
-            const n = {
+            const a = {
                 include_assets: c,
                 include_release: d,
-                include_platforms: u,
-                include_all_purchase_options: m,
-                include_screenshots: p,
+                include_platforms: m,
+                include_all_purchase_options: u,
+                include_screenshots: h,
                 include_trailers: f,
-                include_ratings: h,
-                include_tag_count: g,
-                include_reviews: _,
+                include_ratings: p,
+                include_tag_count: y,
+                include_reviews: v,
                 include_basic_info: E,
-                include_supported_languages: v,
-                include_full_description: y,
-                include_included_items: w,
-                include_assets_without_overrides: S,
-                apply_user_filters: b,
-                include_links: N,
+                include_supported_languages: g,
+                include_full_description: S,
+                include_included_items: N,
+                include_assets_without_overrides: b,
+                apply_user_filters: w,
+                include_links: _,
               },
-              a = e.filter(
+              n = e.filter(
                 (e) =>
                   !(
-                    o.A.Get().BHasStoreItem(e, t, n) ||
-                    o.A.Get().BIsStoreItemMissing(e, t)
+                    s.A.Get().BHasStoreItem(e, t, a) ||
+                    s.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == a.length) return;
-            const i = r().CancelToken.source(),
-              s = a.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
+            if (0 == n.length) return;
+            const r = i().CancelToken.source(),
+              o = n.map((e) => s.A.Get().QueueStoreItemRequest(e, t, a));
             return (
-              Promise.all(s).then(() => {
-                i.token.reason || l();
+              Promise.all(o).then(() => {
+                r.token.reason || l();
               }),
-              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, a, l, c, d, u, m, p, f, h, g, _, E, v, y, w, S, b, N]),
+          }, [e, t, n, l, c, d, m, u, h, f, p, y, v, E, g, S, N, b, w, _]),
           !e)
         )
           return 2;
         if (
           !e.every(
             (e) =>
-              o.A.Get().BHasStoreItem(e, t, n) ||
-              o.A.Get().BIsStoreItemMissing(e, t),
+              s.A.Get().BHasStoreItem(e, t, a) ||
+              s.A.Get().BIsStoreItemMissing(e, t),
           )
         )
           return 1;
         return e.every((e) =>
-          o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          s.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
           ? 3
           : 2;
       }
-      function f(e, t, n) {
-        return p(e, 0, t, n);
+      function f(e, t, a) {
+        return h(e, 0, t, a);
       }
-      function h(e, t, n) {
-        return p(e, 2, t, n);
+      function p(e, t, a) {
+        return h(e, 2, t, a);
       }
-      function g(e, t, n) {
-        return p(e, 1, t, n);
+      function y(e, t, a) {
+        return h(e, 1, t, a);
       }
     },
-    68797: (e, t, n) => {
+    68797: (e, t, a) => {
       "use strict";
-      n.d(t, { H: () => s });
-      var a = n(41735),
-        r = n.n(a),
-        i = n(56545);
-      function s(e) {
-        if (r().isCancel(e))
+      a.d(t, { H: () => o });
+      var n = a(41735),
+        i = a.n(n),
+        r = a(56545);
+      function o(e) {
+        if (i().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -1292,7 +2287,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof i.w)
+            if ("object" == typeof e && e instanceof r.w)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),

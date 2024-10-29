@@ -19900,6 +19900,23 @@
                       ),
                   ),
                 ),
+                l.extract().fest_name().length > 0 &&
+                  n.createElement(
+                    "div",
+                    { className: kr.LabelValue },
+                    n.createElement(
+                      "div",
+                      { className: kr.Label },
+                      (0, c.we)(
+                        "#SteamLearn_Config_Node_Extract_Exclusion_Fest",
+                      ),
+                    ),
+                    n.createElement(
+                      "div",
+                      { className: kr.Value },
+                      l.extract().fest_name(),
+                    ),
+                  ),
                 3 == l.extract().selection() &&
                   n.createElement(
                     "div",

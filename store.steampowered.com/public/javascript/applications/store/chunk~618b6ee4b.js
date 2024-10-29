@@ -438,11 +438,11 @@
         FadeIn: "_18mfI3yI3wDKOOl9rd315x",
         AppDetailsCtn: "_1_nZSkaKcUeXxQpXV5ulcm",
         AppDetailsCtnTop: "_3UBx0c_4mXJqBclhB-8J-",
+        AppName: "_1mW-U_MsASmVMPP02-3StV",
         AppLink: "_3bosSfx_R7a3a8ZJTdKrum",
         AppCapsule: "_8JfsVa2qql_sG4yZvL31M",
         "capsule-trans-in": "o8beu_D_8Dbk3xP9TxaiF",
         AppDetailsHeader: "lMrsI5xmwppD0FDpEvhae",
-        AppName: "_1mW-U_MsASmVMPP02-3StV",
         AppDescriptionCtn: "pWPZMFCv8qyGFFjiRJ_3B",
         AppDescription: "GX4vW7Oj1QEzRUDi6wOnO",
         AppActionButtonsCtn: "_3Fbv05BMyyoEG6zimEgcem",
@@ -9935,7 +9935,7 @@
       function He(e, t) {
         return Pe(e, U([t])[0]);
       }
-      var Ue = a(54171);
+      var Ue = a(31335);
       function Ve(e) {
         const {
             strHubType: t,
@@ -10627,7 +10627,7 @@
         Ct = a(91254),
         wt = a(83284),
         It = a.n(wt),
-        At = a(48628),
+        At = a(54428),
         Dt = a(77291),
         Gt = a(44165),
         Tt = a(78603),
@@ -15509,6 +15509,7 @@
                   id: e.id,
                   type: e.type || "game",
                   fnOnClickOverride: a,
+                  bPreferDemoStorePage: t.prefer_demo_store_page,
                 })
               );
             }),
@@ -20530,7 +20531,7 @@
           },
           n.createElement(
             "div",
-            { className: Oo().VideoRow },
+            { className: (0, f.A)(Oo().VideoRow, "VideoRow") },
             c &&
               n.createElement(
                 "button",
@@ -20624,15 +20625,7 @@
           n.createElement(
             "div",
             { className: Oo().AppDetailsCtnTop },
-            n.createElement(
-              "div",
-              { className: Oo().AppDetailsHeader },
-              !r &&
-                n.createElement(Vo.wc, {
-                  bSingleLineMode: !0,
-                  info: { id: t, type: (0, xo.U)(s.GetAppType()) },
-                }),
-            ),
+            n.createElement("div", { className: Oo().AppName }, s.GetName()),
             !r &&
               n.createElement(
                 n.Fragment,
@@ -20703,6 +20696,15 @@
                       },
                       n.createElement(g.NtH, null),
                     ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: Oo().AppDetailsHeader },
+                    !r &&
+                      n.createElement(Vo.wc, {
+                        bSingleLineMode: !0,
+                        info: { id: t, type: (0, xo.U)(s.GetAppType()) },
+                      }),
                   ),
                 ),
               ),
@@ -21929,7 +21931,7 @@
         }
         return r.createElement(r.Fragment, null);
       }
-      var he = a(48628);
+      var he = a(54428);
       function Se(e) {
         const { bSalePage: t } = e,
           [a, u] = r.useState(i.KN.IsInitialized());

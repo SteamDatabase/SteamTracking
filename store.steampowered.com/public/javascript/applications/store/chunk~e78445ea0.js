@@ -7,6 +7,7 @@
       e.exports = {
         AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
         AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
+        MicroTrailerTitle: "_3IftEzpp9S-1lT-O0Kw3xh",
         AppVideo: "_3sG-J5T8SrzM0Hjkda7sgL",
         Microtrailer: "_24GFDabY2zeyuzhvACpldO",
         PlayFullTrailer: "_115ZF6m0XsEieocbL7zjo-",
@@ -77,6 +78,7 @@
         Primary: "_3o2jhEGrGiVndMjUbNpOw-",
         Launch: "_3SOZx68qVakLwDvAYBOPMG",
         Wide: "_1tFfTbcTKjlfSGsMOJvdf_",
+        ArrowCtn: "_2DnR4EtN0k8Zy_jOfT5QqV",
         QueueNavArrow: "_2sZ7DAljYV5Xd-nbhtlmyM",
         Enable: "_2CTzbHZ-C-FfnXEtLZPv9q",
         RightArrow: "_30_0NBq3DkV-qL7Eyqva-t",
@@ -550,84 +552,6 @@
         }
       }
     },
-    95034: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        Bm: () => o,
-        QD: () => c,
-        f3: () => a,
-        iV: () => m,
-        ip: () => u,
-        le: () => l,
-      });
-      var n = r(90626),
-        i = r(92757);
-      function a(e, t) {
-        let r;
-        "string" == typeof e
-          ? (r = e)
-          : "location" in e
-            ? (r = e.location.search)
-            : "search" in e && (r = e.search);
-        const n = new URLSearchParams(r.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
-          return e[e.length - 1];
-        }
-      }
-      const s = (e) => null != e;
-      function o(e, t, r, n = !1) {
-        const i = new URLSearchParams(e.location.search.substring(1));
-        if (s(r)) {
-          if (i.get(t) == r) return;
-          i.set(t, r);
-        } else {
-          if (!i.has(t)) return;
-          i.delete(t);
-        }
-        n
-          ? e.replace(`?${i.toString()}`, { ...e.location.state })
-          : e.push(`?${i.toString()}`);
-      }
-      function l(e, t, r) {
-        o(e, t, r, !0);
-      }
-      function c(e, t) {
-        const r = (0, i.W6)(),
-          l = (0, i.zy)(),
-          c = (0, n.useMemo)(() => {
-            const r = a(l.search, e);
-            return s(r)
-              ? s(t)
-                ? "boolean" == typeof t
-                  ? t.constructor("false" !== r)
-                  : t.constructor(r)
-                : r
-              : t;
-          }, [l.search, e, t]),
-          u = (0, n.useCallback)(
-            (t, n = !1) => {
-              o(r, e, s(t) ? String(t) : null, n);
-            },
-            [r, e],
-          );
-        return [c, u];
-      }
-      function u(e, t, r = !1) {
-        const n = new URLSearchParams(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const r = t[e];
-            n.delete(e), s(r) && n.append(e, r);
-          }
-        r
-          ? e.replace(`?${n.toString()}`, { ...e.location.state })
-          : e.push(`?${n.toString()}`);
-      }
-      function m(e, t) {
-        u(e, t, !0);
-      }
-    },
     60801: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => b });
@@ -874,6 +798,12 @@
                   i.Z,
                   { focusable: !0, onClick: oe, className: s().PlayButton },
                   n.createElement(o.IOc, null),
+                ),
+              ne &&
+                n.createElement(
+                  "div",
+                  { className: s().MicroTrailerTitle },
+                  (0, c.we)("#StoreTrailer_Preview"),
                 ),
               ne &&
                 n.createElement(
@@ -3436,16 +3366,32 @@
                         ),
                       ),
                       n.createElement(
-                        o.Z,
-                        {
-                          onClick: (e) => Q.current.MoveLeft(e),
-                          className: (0, k.A)(
-                            W().QueueNavArrow,
-                            W().LeftArrow,
-                            D && W().Enable,
-                          ),
-                        },
-                        n.createElement(G.l8x, { angle: 180 }),
+                        "div",
+                        { className: W().ArrowCtn, style: { width: `${S}px` } },
+                        n.createElement(
+                          o.Z,
+                          {
+                            onClick: (e) => Q.current.MoveLeft(e),
+                            className: (0, k.A)(
+                              W().QueueNavArrow,
+                              W().LeftArrow,
+                              D && W().Enable,
+                            ),
+                          },
+                          n.createElement(G.l8x, { angle: 180 }),
+                        ),
+                        n.createElement(
+                          o.Z,
+                          {
+                            onClick: (e) => Q.current.MoveRight(e),
+                            className: (0, k.A)(
+                              W().QueueNavArrow,
+                              W().RightArrow,
+                              T && W().Enable,
+                            ),
+                          },
+                          n.createElement(G.l8x, { angle: 0 }),
+                        ),
                       ),
                       n.createElement(
                         s.g,
@@ -3472,18 +3418,6 @@
                           scrollTiming: "cubic-in-out",
                           overscan: 3,
                         }),
-                      ),
-                      n.createElement(
-                        o.Z,
-                        {
-                          onClick: (e) => Q.current.MoveRight(e),
-                          className: (0, k.A)(
-                            W().QueueNavArrow,
-                            W().RightArrow,
-                            T && W().Enable,
-                          ),
-                        },
-                        n.createElement(G.l8x, { angle: 0 }),
                       ),
                       !j &&
                         n.createElement(
@@ -3806,7 +3740,7 @@
           R = (0, u.er)();
         return n.createElement(
           l.Z,
-          { className: a().AppVideoCtn },
+          { className: (0, s.A)(a().AppVideoCtn, "AppVideoCtn") },
           n.createElement(
             "div",
             { className: (0, s.A)(a().WishlistBadge, A && a().Active) },

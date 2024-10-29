@@ -498,8 +498,8 @@ HighlightPlayer.prototype.HighlightStripItem = function( elem, bSkipAnimation )
 	var nTotalStripWidth = this.m_elemStripScroll.width();
 	var nScrollOffset = this.m_elemStripScroll.position().left;
 
-	var nThumbRightEdge = $Elem.position().left + $Elem.width()  + 2;
-	var nThumbLeftEdge = $Elem.position().left;
+	var nThumbRightEdge = $Elem.position().left + $Elem.width() + 2;
+	var nThumbLeftEdge = $Elem.position().left + 2;
 
 	var nTargetScrollOffset = null;
 	var bNeedScroll = false;

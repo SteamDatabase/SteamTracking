@@ -1023,11 +1023,11 @@
         FadeIn: "_18mfI3yI3wDKOOl9rd315x",
         AppDetailsCtn: "_1_nZSkaKcUeXxQpXV5ulcm",
         AppDetailsCtnTop: "_3UBx0c_4mXJqBclhB-8J-",
+        AppName: "_1mW-U_MsASmVMPP02-3StV",
         AppLink: "_3bosSfx_R7a3a8ZJTdKrum",
         AppCapsule: "_8JfsVa2qql_sG4yZvL31M",
         "capsule-trans-in": "o8beu_D_8Dbk3xP9TxaiF",
         AppDetailsHeader: "lMrsI5xmwppD0FDpEvhae",
-        AppName: "_1mW-U_MsASmVMPP02-3StV",
         AppDescriptionCtn: "pWPZMFCv8qyGFFjiRJ_3B",
         AppDescription: "GX4vW7Oj1QEzRUDi6wOnO",
         AppActionButtonsCtn: "_3Fbv05BMyyoEG6zimEgcem",
@@ -1172,6 +1172,7 @@
       e.exports = {
         AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
         AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
+        MicroTrailerTitle: "_3IftEzpp9S-1lT-O0Kw3xh",
         AppVideo: "_3sG-J5T8SrzM0Hjkda7sgL",
         Microtrailer: "_24GFDabY2zeyuzhvACpldO",
         PlayFullTrailer: "_115ZF6m0XsEieocbL7zjo-",
@@ -1260,6 +1261,7 @@
         Primary: "_3o2jhEGrGiVndMjUbNpOw-",
         Launch: "_3SOZx68qVakLwDvAYBOPMG",
         Wide: "_1tFfTbcTKjlfSGsMOJvdf_",
+        ArrowCtn: "_2DnR4EtN0k8Zy_jOfT5QqV",
         QueueNavArrow: "_2sZ7DAljYV5Xd-nbhtlmyM",
         Enable: "_2CTzbHZ-C-FfnXEtLZPv9q",
         RightArrow: "_30_0NBq3DkV-qL7Eyqva-t",
@@ -4121,7 +4123,7 @@
             if (
               ("sale_item_browser" === a.section_type ||
               a.enable_faceted_browsing
-                ? (a.capsules = void 0)
+                ? (a.capsules = [])
                 : a.sale_tag_filter &&
                   (a.capsules = M(t, a.sale_tag_filter, a.capsules)),
               a.tabs)
@@ -21529,6 +21531,16 @@
             checked: n.show_as_demos,
           }),
           d.createElement(u.Yh, {
+            label: (0, _.we)("#Sale_Section_PreferDemoStorePage"),
+            tooltip: (0, _.we)("#Sale_Section_PreferDemoStorePage_tooltip"),
+            onChange: (e) => {
+              c(),
+                (t.item_browse_section_data.prefer_demo_store_page = e),
+                a.SetDirty(r.IQ.jsondata_sales);
+            },
+            checked: n.prefer_demo_store_page,
+          }),
+          d.createElement(u.Yh, {
             label: (0, _.we)("#Sale_Section_ShowDeckCompatibility"),
             tooltip: (0, _.we)("#Sale_Section_ShowDeckCompatibility_ttip"),
             onChange: (e) => {
@@ -21703,7 +21715,7 @@
       }
       (0, n.Cg)([te.oI], Tn.prototype, "OnEditTabSections", null),
         (Tn = (0, n.Cg)([c.PA], Tn));
-      var Gn = a(53418);
+      var Gn = a(34005);
       function Mn(e) {
         const { fnOnDirty: t, saleSection: a, event: n } = e,
           [i, r] = (0, h.q3)(() => {
@@ -23939,13 +23951,14 @@
                   p.createElement(
                     T.$n,
                     {
+                      disabled: !0,
                       onClick: (e) =>
                         (0, M.pg)(
                           p.createElement(Me, { editModel: t }),
                           (0, z.uX)(e),
                         ),
                     },
-                    "Force Update Featured App Tags",
+                    "The button formerly known as Force Update Featured App Tags",
                     p.createElement(J.o, {
                       tooltip:
                         "Useful when associated with opt-in and we believe solr is out of sync with the optin configuration. This will compare and update the solr tagging with the current optin data and automatically make corrections.",
@@ -38932,7 +38945,7 @@
         C = a(27658),
         T = a(32541),
         I = a(42011),
-        D = a(53418),
+        D = a(34005),
         B = a(3919),
         A = a(42951),
         G = a(64940),
@@ -50144,7 +50157,7 @@
         ea = a(91254),
         ta = a(83284),
         aa = a.n(ta),
-        na = a(53418),
+        na = a(34005),
         ia = a(77291),
         ra = a(44165),
         oa = a(78603),
@@ -55430,6 +55443,7 @@
                   id: e.id,
                   type: e.type || "game",
                   fnOnClickOverride: a,
+                  bPreferDemoStorePage: t.prefer_demo_store_page,
                 })
               );
             }),
@@ -60700,7 +60714,7 @@
           },
           n.createElement(
             "div",
-            { className: os().VideoRow },
+            { className: (0, S.A)(os().VideoRow, "VideoRow") },
             c &&
               n.createElement(
                 "button",
@@ -60794,15 +60808,7 @@
           n.createElement(
             "div",
             { className: os().AppDetailsCtnTop },
-            n.createElement(
-              "div",
-              { className: os().AppDetailsHeader },
-              !i &&
-                n.createElement(ds.wc, {
-                  bSingleLineMode: !0,
-                  info: { id: t, type: (0, ss.U)(r.GetAppType()) },
-                }),
-            ),
+            n.createElement("div", { className: os().AppName }, r.GetName()),
             !i &&
               n.createElement(
                 n.Fragment,
@@ -60873,6 +60879,15 @@
                       },
                       n.createElement(g.NtH, null),
                     ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: os().AppDetailsHeader },
+                    !i &&
+                      n.createElement(ds.wc, {
+                        bSingleLineMode: !0,
+                        info: { id: t, type: (0, ss.U)(r.GetAppType()) },
+                      }),
                   ),
                 ),
               ),
@@ -62534,6 +62549,12 @@
                   i.Z,
                   { focusable: !0, onClick: se, className: o().PlayButton },
                   n.createElement(s.IOc, null),
+                ),
+              ne &&
+                n.createElement(
+                  "div",
+                  { className: o().MicroTrailerTitle },
+                  (0, c.we)("#StoreTrailer_Preview"),
                 ),
               ne &&
                 n.createElement(
@@ -64669,16 +64690,32 @@
                         ),
                       ),
                       i.createElement(
-                        o.Z,
-                        {
-                          onClick: (e) => W.current.MoveLeft(e),
-                          className: (0, x.A)(
-                            q().QueueNavArrow,
-                            q().LeftArrow,
-                            M && q().Enable,
-                          ),
-                        },
-                        i.createElement(u.l8x, { angle: 180 }),
+                        "div",
+                        { className: q().ArrowCtn, style: { width: `${b}px` } },
+                        i.createElement(
+                          o.Z,
+                          {
+                            onClick: (e) => W.current.MoveLeft(e),
+                            className: (0, x.A)(
+                              q().QueueNavArrow,
+                              q().LeftArrow,
+                              M && q().Enable,
+                            ),
+                          },
+                          i.createElement(u.l8x, { angle: 180 }),
+                        ),
+                        i.createElement(
+                          o.Z,
+                          {
+                            onClick: (e) => W.current.MoveRight(e),
+                            className: (0, x.A)(
+                              q().QueueNavArrow,
+                              q().RightArrow,
+                              A && q().Enable,
+                            ),
+                          },
+                          i.createElement(u.l8x, { angle: 0 }),
+                        ),
                       ),
                       i.createElement(
                         p.g,
@@ -64705,18 +64742,6 @@
                           scrollTiming: "cubic-in-out",
                           overscan: 3,
                         }),
-                      ),
-                      i.createElement(
-                        o.Z,
-                        {
-                          onClick: (e) => W.current.MoveRight(e),
-                          className: (0, x.A)(
-                            q().QueueNavArrow,
-                            q().RightArrow,
-                            A && q().Enable,
-                          ),
-                        },
-                        i.createElement(u.l8x, { angle: 0 }),
                       ),
                       !V &&
                         i.createElement(
@@ -65317,7 +65342,7 @@
           A = (0, d.er)();
         return n.createElement(
           l.Z,
-          { className: r().AppVideoCtn },
+          { className: (0, o.A)(r().AppVideoCtn, "AppVideoCtn") },
           n.createElement(
             "div",
             { className: (0, o.A)(r().WishlistBadge, B && r().Active) },

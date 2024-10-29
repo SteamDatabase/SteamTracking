@@ -5,236 +5,709 @@
   [6762],
   {
     85761: (e) => {
-      e.exports = { Ctn: "_8n9wPNrWDu91tlwBW9bHt" };
+      e.exports = {
+        Ctn: "_8n9wPNrWDu91tlwBW9bHt",
+        Indicator: "_355XkH0xfIpJF1YsMX7I7k",
+        EmailInfoRow: "_3bta6oovSNKe3Nv2b67SmP",
+        EmailField: "_1E-g4exFlAQhvXDqspYTR0",
+      };
     },
-    14766: (e, t, n) => {
+    64734: (e) => {
+      e.exports = {
+        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
+      };
+    },
+    70879: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => g });
-      var r = n(90626),
-        s = n(85761),
-        i = n.n(s),
-        a = n(61859),
-        o = n(71541),
-        l = n(14336),
-        u = n(22797),
-        c = n(12155),
-        d = n(41735),
-        m = n.n(d),
-        h = n(78327),
-        p = n(56330),
-        f = n(79645);
-      function g(e) {
+      n.r(t), n.d(t, { MeetSteamRoutes: () => se, default: () => oe });
+      var a = n(43527),
+        l = n(90626),
+        r = n(17083),
+        i = n(92757),
+        c = n(11577),
+        s = n(14932),
+        o = n(97058),
+        m = n(84811),
+        u = n(95695),
+        d = n.n(u),
+        E = n(38135),
+        p = n(24484),
+        g = n(64753),
+        _ = n(41735),
+        v = n.n(_),
+        h = n(38390),
+        S = n(17720),
+        f = n(46575),
+        y = n(96001),
+        I = n(71541),
+        b = n(24054),
+        w = n(78395),
+        M = n(21869),
+        C = n(22797),
+        T = n(26408),
+        N = n(68797),
+        D = n(61859),
+        A = n(91675),
+        k = n(30470);
+      function P(e) {
+        const t = S.b.InitFromClanID(b.z5),
+          n = (function () {
+            const [e] = (0, l.useState)(() =>
+              (0, p.Tc)("event_gids", "application_config"),
+            );
+            return e;
+          })();
+        return l.createElement(
+          "div",
+          null,
+          l.createElement(
+            "div",
+            null,
+            l.createElement(
+              "a",
+              {
+                href: `${k.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
+              },
+              "Open Meet Steam Event Dashboard",
+            ),
+          ),
+          n.map((e) => l.createElement(R, { gid: e, key: e })),
+        );
+      }
+      function R(e) {
+        const { gid: t } = e,
+          n = S.b.InitFromClanID(b.z5),
+          a = (0, y.a)(),
+          r = (0, f.my)(a, b.z5, t),
+          i = (0, h.RR)(t),
+          c = i.GetNameWithFallback(0),
+          [s, o, m] = (0, g.uD)();
+        return l.createElement(
+          "div",
+          null,
+          l.createElement("hr", null),
+          l.createElement("div", null, c),
+          l.createElement("div", null),
+          l.createElement(
+            "div",
+            null,
+            l.createElement(
+              "a",
+              {
+                href: `${k.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/edit/${t}`,
+              },
+              "Edit Event",
+            ),
+          ),
+          i.jsondata.meet_steam_groups?.length > 0
+            ? l.createElement(
+                l.Fragment,
+                null,
+                i.jsondata.meet_steam_groups.map((e) =>
+                  l.createElement(z, {
+                    key: e.group_id,
+                    group: e,
+                    rgAvailability: r,
+                  }),
+                ),
+              )
+            : l.createElement("div", null, "This has no sessions defined"),
+          l.createElement(
+            I.$n,
+            { onClick: o },
+            "Invite to ",
+            c,
+            l.createElement(T.o, {
+              tooltip:
+                "This will email and show the users on their dashboard when the event is live.",
+            }),
+          ),
+          l.createElement(
+            M.E,
+            { active: s },
+            l.createElement(F, { hideModal: m, gid: t }),
+          ),
+        );
+      }
+      function z(e) {
+        const { group: t, rgAvailability: n } = e,
+          a = D.NT.GetWithFallback(t?.localized_session_title, 0);
+        return l.createElement(
+          "div",
+          null,
+          l.createElement("div", null, a),
+          l.createElement(
+            "div",
+            null,
+            "Sessions Instances: ",
+            t.sessions.length,
+          ),
+          l.createElement(
+            l.Fragment,
+            null,
+            t.sessions.map((e) =>
+              l.createElement(x, { key: e.id, session: e, rgAvailability: n }),
+            ),
+          ),
+        );
+      }
+      function x(e) {
+        const { session: t, rgAvailability: n } = e,
+          a = n?.find((e) => e.session_id == t.id);
+        return l.createElement(
+          "div",
+          null,
+          l.createElement(
+            "div",
+            null,
+            (0, D.TW)(t.rtime_start),
+            " for ",
+            (0, A.qZ)(t.rtime_end - t.rtime_start),
+          ),
+          l.createElement(
+            "div",
+            null,
+            t.max_capacity - (a?.guest_count || 0),
+            " / ",
+            t.max_capacity,
+          ),
+        );
+      }
+      function F(e) {
+        const { hideModal: t, gid: n } = e,
+          [a, r] = (0, l.useState)(""),
+          [i, c] = (0, l.useState)(!1),
+          [s, o] = (0, l.useState)(null),
+          [m, u] = (0, l.useState)(null);
+        return l.createElement(
+          w.o0,
+          {
+            strTitle: "Invite Users",
+            bOKDisabled: !a || 0 == a.trim().length || null != s,
+            strDescription:
+              "ADDING: Enter Accounts IDs you wish to invite separated newlines",
+            strCancelButtonText: null !== s ? "Close" : "Cancel",
+            onOK: async () => {
+              c(!0);
+              const e = a
+                .split(/\r?\n/)
+                .filter((e) => "" !== e.trim())
+                .join(",");
+              let t = new FormData();
+              t.append("sessionid", k.TS.SESSIONID),
+                t.append("gid", n),
+                t.append("accounts", e);
+              const l = `${k.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
+              try {
+                const e = await v().post(l, t, { withCredentials: !0 });
+                if (1 == e?.data?.success)
+                  o(e.data.rgInvitedAccounts.length),
+                    u(e.data.rgSkippedAccounts.length);
+                else {
+                  let t = (0, N.H)(e);
+                  console.error(
+                    "DisplayPartnerEventRow error: " + t.strErrorMsg,
+                    t,
+                  );
+                }
+              } catch (e) {
+                let t = (0, N.H)(e);
+                console.error(
+                  "DisplayPartnerEventRow error: " + t.strErrorMsg,
+                  t,
+                );
+              }
+              c(!1);
+            },
+            onCancel: () => {
+              o(null), u(null), c(!1), r(""), t();
+            },
+          },
+          l.createElement("textarea", {
+            cols: 120,
+            rows: 5,
+            onChange: (e) => r(e.currentTarget.value),
+            value: a,
+            autoFocus: !0,
+          }),
+          null != s &&
+            l.createElement(
+              "div",
+              null,
+              "Invited ",
+              s.toLocaleString(),
+              " accounts, skipped previously invited ",
+              m.toLocaleString(),
+            ),
+          i &&
+            l.createElement(C.t, {
+              size: "small",
+              position: "center",
+              string: (0, D.we)("#Saving"),
+            }),
+        );
+      }
+      function Y() {
+        const [e] = (0, l.useState)(() =>
+          (0, p.Tc)("events_list", "application_config"),
+        );
+        return e;
+      }
+      var B = n(48479),
+        L = n(14336),
+        O = n(32179),
+        $ = n(29233),
+        q = n(9161);
+      function j(e) {
+        const t = Y(),
+          n = (function () {
+            const [e] = (0, l.useState)(() =>
+              (0, p.Tc)("interest_results", "application_config"),
+            );
+            return (0, l.useMemo)(
+              () => e.map((e) => ((e.results = JSON.parse(e.jsondata)), e)),
+              [e],
+            );
+          })(),
+          [a, r] = (0, l.useState)(""),
+          i = (0, l.useMemo)(() => {
+            const e = new Map();
+            return (
+              n.forEach((t) => {
+                t.results?.attending?.forEach((t) => {
+                  e.has(t) ? e.set(t, e.get(t) + 1) : e.set(t, 1);
+                });
+              }),
+              e
+            );
+          }, [n]);
+        return l.createElement(
+          "div",
+          null,
+          l.createElement(I.pd, {
+            type: "text",
+            value: a,
+            onChange: (e) => r(e.currentTarget.value.trim()),
+            label: "Filter",
+          }),
+          t
+            .filter(
+              (e) => 0 == a.length || e.name.includes(a) || e.id.includes(a),
+            )
+            .map((e) =>
+              l.createElement(H, {
+                key: e.id,
+                conf: e,
+                nInterestCount: i.get(e.id) ?? 0,
+                rgSurveyInterest: n,
+              }),
+            ),
+        );
+      }
+      function H(e) {
+        const { conf: t, nInterestCount: n, rgSurveyInterest: a } = e;
+        return l.createElement(
+          B.qx,
+          {
+            title: `${t.name} in ${t.place} with Interest: ${n.toLocaleString()}`,
+            bStartMinimized: !0,
+          },
+          l.createElement(U, { conf: t, rgSurveyInterest: a }),
+        );
+      }
+      function U(e) {
+        const { conf: t, rgSurveyInterest: n } = e,
+          a = (0, l.useMemo)(
+            () => n.filter((e) => e.results?.attending?.includes(t.id)),
+            [t, n],
+          );
+        return a && 0 != a.length
+          ? l.createElement(
+              "div",
+              null,
+              l.createElement(
+                I.$n,
+                {
+                  onClick: () => {
+                    const e = [];
+                    e.push(["AccountID", "Name", "Partner ID", "Partner Name"]),
+                      a.forEach((t) => {
+                        const n = [],
+                          a = new $.b2(t.steamid);
+                        n.push("" + a.GetAccountID());
+                        const l = (0, L.z0)(a.GetAccountID());
+                        n.push(l?.m_strPlayerName ? l.m_strPlayerName : "");
+                        const r = t.results.partner_id;
+                        n.push("" + r);
+                        const i = (0, O.Yd)(r);
+                        i && n.push(i?.name), e.push(n);
+                      });
+                    const n = t.name.replace(" ", "_") + "_appeals_data.csv";
+                    q.g.WriteCSVToFile(e, n);
+                  },
+                },
+                "Export to CSV (wait until the table populates fully)",
+              ),
+              l.createElement(
+                "table",
+                null,
+                l.createElement(
+                  "thead",
+                  null,
+                  l.createElement(
+                    "tr",
+                    null,
+                    l.createElement("th", null, "Name"),
+                    l.createElement("th", null, "Partner"),
+                  ),
+                ),
+                l.createElement(
+                  "tbody",
+                  null,
+                  a.map((e) =>
+                    l.createElement(W, {
+                      key: t.id + "_" + e.steamid,
+                      strsteamid: e.steamid,
+                      partnerID: e.results.partner_id,
+                    }),
+                  ),
+                ),
+              ),
+            )
+          : l.createElement("div", null, "No users with interest");
+      }
+      function W(e) {
+        const { strsteamid: t, partnerID: n } = e,
+          a = (0, L.hW)(t),
+          [r] = (0, O.UA)(n);
+        return l.createElement(
+          "tr",
+          null,
+          l.createElement("td", null, a.data?.m_strPlayerName),
+          l.createElement("td", null, r?.name || n),
+        );
+      }
+      function G(e) {
+        const t = (e) =>
+            window.sessionStorage.setItem("meetsteamadmin", `?tab=${e.key}`),
+          n = [
+            {
+              name: "Survey Results",
+              key: "survey",
+              contents: l.createElement(m.tH, null, l.createElement(j, null)),
+              onClick: t,
+            },
+            {
+              name: "Event Management",
+              key: "event",
+              contents: l.createElement(m.tH, null, l.createElement(P, null)),
+              onClick: t,
+            },
+          ];
+        return l.createElement(
+          "div",
+          null,
+          l.createElement(
+            "h2",
+            null,
+            "Meet Steam Admin Dashboard ",
+            (0, p.Fd)("current_year", "application_config"),
+          ),
+          l.createElement("hr", null),
+          l.createElement(E.V, { tabs: n }),
+          l.createElement("div", { className: d().ClearThings }),
+          l.createElement("br", null),
+        );
+      }
+      var J = n(79645),
+        K = n(45737),
+        V = n.n(K),
+        X = n(56330),
+        Q = n(52038),
+        Z = n(78327),
+        ee = n(85761),
+        te = n.n(ee);
+      function ne(e) {
         const t = (function () {
-            const [e] = (0, r.useState)(() =>
-              (0, h.Tc)("bRegistrationOpen", "application_config"),
+            const [e] = (0, l.useState)(() =>
+              (0, Z.Tc)("registration_open", "application_config"),
             );
             return e;
           })(),
           n = (function () {
-            const [e] = (0, r.useState)(
-              () => (0, h.Tc)("rgUserReg", "application_config") || {},
+            const [e] = (0, l.useState)(
+              () => (0, Z.Tc)("user_reg", "application_config") || {},
             );
             return e;
           })(),
-          { data: s } = (0, l.js)(h.iA.accountid),
-          [c, d] = (0, r.useState)(!1),
-          f = _(),
-          g = (function () {
-            const [e] = (0, r.useState)(() =>
-              (0, h.Tc)("nPrimaryPartnerID", "application_config"),
+          { data: a } = (0, L.js)(Z.iA.accountid),
+          [r, i] = (0, l.useState)(!1),
+          c = ie(),
+          s = (function () {
+            const [e] = (0, l.useState)(() =>
+              (0, Z.Tc)("primary_partner_id", "application_config"),
             );
             return e;
           })(),
-          [v, y] = (0, r.useState)(() =>
-            n.email_override ? n : { ...n, email_override: f, partner_id: g },
+          [o, m] = (0, l.useState)(() =>
+            n.email_override ? n : { ...n, email_override: c, partner_id: s },
           );
         return t
-          ? !s || s.m_bPlayerNamePending
-            ? r.createElement(u.t, {
+          ? !a || a.m_bPlayerNamePending
+            ? l.createElement(C.t, {
                 size: "medium",
                 position: "center",
-                string: (0, a.we)("#Loading"),
+                string: (0, D.we)("#Loading"),
               })
-            : r.createElement(
+            : l.createElement(
                 "div",
-                { className: i().Ctn },
-                r.createElement(
+                { className: (0, Q.A)(V().AdminPageCtn, te().Ctn) },
+                l.createElement(
                   "div",
-                  null,
-                  r.createElement(
-                    "h2",
-                    null,
-                    (0, a.we)("#MeetSteam_Intro", s.m_strPlayerName),
-                  ),
-                  r.createElement("h2", null, (0, a.we)("#MeetSteam_Intro2")),
+                  { className: V().PageTitle },
+                  (0, D.we)("#MeetSteam_MainTitle"),
                 ),
-                r.createElement("div", null, (0, a.we)("#MeetSteam_Desc1")),
-                r.createElement(b, { oRegistration: v, fnSetRegistration: y }),
-                r.createElement(E, { oRegistration: v, fnSetRegistration: y }),
-                r.createElement(
-                  o.jn,
-                  {
-                    onClick: async () => {
-                      const e = `${h.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
-                        t = new FormData();
-                      t.append("sessionid", h.TS.SESSIONID),
-                        t.append("registrationJson", JSON.stringify(v));
-                      const n = await m().post(e, t, { withCredentials: !0 });
-                      1 != n.data.success &&
-                        (console.error(
-                          "MeetSteamLanding failed " + n.data.success,
-                        ),
-                        d(!0));
-                    },
-                  },
-                  (0, a.we)("#Button_Submit"),
-                ),
-                c &&
-                  r.createElement(
+                l.createElement("hr", null),
+                l.createElement(
+                  "div",
+                  { className: V().ColumnCtn },
+                  l.createElement(
                     "div",
-                    { className: p.ErrorStylesWithIcon },
-                    (0, a.we)("#Error_ErrorCommunicatingWithNetwork"),
+                    { className: V().LeftCol },
+                    l.createElement(
+                      "div",
+                      { className: V().SectionCtn },
+                      l.createElement(
+                        "h1",
+                        null,
+                        " ",
+                        (0, D.PP)(
+                          "#MeetSteam_Intro",
+                          a.m_strPlayerName,
+                          l.createElement("br", null),
+                        ),
+                      ),
+                      l.createElement(
+                        "p",
+                        { className: V().IntroText },
+                        (0, D.we)("#MeetSteam_Desc1"),
+                      ),
+                    ),
+                    l.createElement(
+                      "div",
+                      { className: V().SectionCtn },
+                      l.createElement(le, {
+                        oRegistration: o,
+                        fnSetRegistration: m,
+                      }),
+                    ),
+                    l.createElement(
+                      "div",
+                      { className: V().SectionCtn },
+                      l.createElement(ae, {
+                        oRegistration: o,
+                        fnSetRegistration: m,
+                      }),
+                    ),
+                    l.createElement(
+                      "div",
+                      { className: (0, Q.A)(V().SectionCtn, V().ActionBar) },
+                      l.createElement(
+                        I.jn,
+                        {
+                          onClick: async () => {
+                            const e = `${Z.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
+                              t = new FormData();
+                            t.append("sessionid", Z.TS.SESSIONID),
+                              t.append("registrationJson", JSON.stringify(o));
+                            const n = await v().post(e, t, {
+                              withCredentials: !0,
+                            });
+                            1 != n.data.success &&
+                              (console.error(
+                                "MeetSteamLanding failed " + n.data.success,
+                              ),
+                              i(!0));
+                          },
+                        },
+                        (0, D.we)("#Button_Submit"),
+                      ),
+                      r &&
+                        l.createElement(
+                          "div",
+                          { className: X.ErrorStylesWithIcon },
+                          (0, D.we)("#Error_ErrorCommunicatingWithNetwork"),
+                        ),
+                    ),
                   ),
+                ),
               )
-          : r.createElement(
+          : l.createElement(
               "div",
-              { className: i().Ctn },
-              (0, a.we)("#MeetSteam_closed"),
+              { className: te().Ctn },
+              (0, D.we)("#MeetSteam_closed"),
             );
       }
-      function E(e) {
+      function ae(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          s = (function () {
-            const [e] = (0, r.useState)(() =>
-              (0, h.Tc)("rgEvents", "application_config"),
-            );
-            return e;
-          })();
-        return r.createElement(
-          r.Fragment,
+          a = Y();
+        return l.createElement(
+          l.Fragment,
           null,
-          r.createElement("h3", null, (0, a.we)("#MeetSteam_Events_title")),
-          r.createElement(
-            "div",
+          l.createElement("h1", null, (0, D.we)("#MeetSteam_Events_Interest")),
+          l.createElement(
+            "p",
             null,
-            (0, a.PP)("#MeetSteam_Events_desc", r.createElement(c.FEq, null)),
+            (0, D.PP)("#MeetSteam_Events_title", "2025"),
           ),
-          r.createElement(
+          l.createElement(
+            "p",
+            null,
+            l.createElement("span", { className: te().Indicator }, "*"),
+            " ",
+            (0, D.PP)("#MeetSteam_Events_desc"),
+          ),
+          l.createElement(
             "table",
             null,
-            r.createElement("thead", null),
-            r.createElement(
+            l.createElement(
+              "thead",
+              null,
+              l.createElement(
+                "tr",
+                null,
+                l.createElement("th", null),
+                l.createElement("th", null),
+                l.createElement("th", null),
+                l.createElement("th", null),
+              ),
+            ),
+            l.createElement(
               "tbody",
               null,
-              s.map((e) =>
-                r.createElement(
+              a.map((e) =>
+                l.createElement(
                   "tr",
                   { key: e.id },
-                  r.createElement(
+                  l.createElement(
                     "td",
                     null,
-                    e.attending ? r.createElement(c.FEq, null) : "",
+                    e.attending
+                      ? l.createElement(
+                          "span",
+                          { className: te().Indicator },
+                          "*",
+                        )
+                      : "",
                   ),
-                  r.createElement(
+                  l.createElement(
                     "td",
                     null,
-                    r.createElement("div", null, e.name),
-                    r.createElement("div", null, e.place),
+                    l.createElement("div", null, e.name),
+                    l.createElement("div", null, e.place),
                   ),
-                  r.createElement(
+                  l.createElement(
                     "td",
                     null,
-                    r.createElement("div", null, e.time),
+                    l.createElement("div", null, e.time),
                   ),
-                  r.createElement(
+                  l.createElement(
                     "td",
                     null,
-                    r.createElement(o.Yh, {
+                    l.createElement(I.Yh, {
                       checked: t.attending?.includes(e.id),
-                      onChange: (r) => {
-                        let s = t.attending ? [...t.attending] : [];
-                        r && !s.includes(e.id)
-                          ? (s.push(e.id), n({ ...t, attending: s }))
-                          : !r &&
-                            s.includes(e.id) &&
-                            (s.splice(s.indexOf(e.id), 1),
-                            n({ ...t, attending: s }));
+                      onChange: (a) => {
+                        let l = t.attending ? [...t.attending] : [];
+                        a && !l.includes(e.id)
+                          ? (l.push(e.id), n({ ...t, attending: l }))
+                          : !a &&
+                            l.includes(e.id) &&
+                            (l.splice(l.indexOf(e.id), 1),
+                            n({ ...t, attending: l }));
                       },
-                      tooltip: (0, a.we)("#MeetSteam_attend_ttip"),
+                      tooltip: (0, D.we)("#MeetSteam_attend_ttip"),
                     }),
                   ),
                 ),
               ),
             ),
           ),
-          r.createElement(o.pd, {
+          l.createElement("br", null),
+          l.createElement(I.pd, {
             type: "text",
             value: t.suggestion || "",
             onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
-            label: (0, a.we)("#MeetSteam_others"),
+            label: (0, D.we)("#MeetSteam_others"),
           }),
         );
       }
-      function b(e) {
+      function le(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          s = (0, l.js)(h.iA.accountid),
-          i = _(),
-          [c, d] = (0, r.useState)(() => Boolean(t.email_override != i));
-        return s.data
-          ? r.createElement(
+          a = (0, L.js)(Z.iA.accountid),
+          r = ie(),
+          [i, c] = (0, l.useState)(() => Boolean(t.email_override != r));
+        return a.data
+          ? l.createElement(
               "div",
               null,
-              r.createElement("h3", null, (0, a.we)("#MeetSteam_You")),
-              r.createElement(
+              l.createElement("h1", null, (0, D.we)("#MeetSteam_You")),
+              l.createElement("p", null, (0, D.we)("#MeetSteam_You_Desc")),
+              l.createElement(
                 "div",
-                null,
-                r.createElement(o.pd, {
-                  type: "string",
-                  label: (0, a.we)("#MeetSteam_You_Email"),
-                  disabled: !c,
-                  value: t.email_override || i || "",
-                  mustBeEmail: !0,
-                  onChange: (e) =>
-                    n({ ...t, email_override: e.currentTarget.value }),
-                }),
-                !c &&
-                  r.createElement(o.Yh, {
-                    checked: c,
-                    onChange: d,
-                    label: (0, a.we)("#MeetSteam_You_Update"),
-                    tooltip: (0, a.we)("#MeetSteam_You_Update_ttip"),
+                { className: te().EmailInfoRow },
+                l.createElement(
+                  "div",
+                  { className: te().EmailField },
+                  l.createElement(I.pd, {
+                    type: "string",
+                    label: (0, D.we)("#MeetSteam_You_Email"),
+                    disabled: !i,
+                    value: t.email_override || r || "",
+                    placeholder: (0, D.we)("#MeetSteam_You_EmailMissing"),
+                    mustBeEmail: !0,
+                    onChange: (e) =>
+                      n({ ...t, email_override: e.currentTarget.value }),
+                  }),
+                ),
+                !i &&
+                  l.createElement(I.Yh, {
+                    checked: i,
+                    onChange: c,
+                    label: (0, D.we)("#MeetSteam_You_Update"),
+                    tooltip: (0, D.we)("#MeetSteam_You_Update_ttip"),
                   }),
               ),
-              r.createElement(v, {
+              l.createElement(re, {
                 nPartnerID: t.partner_id,
-                label: (0, a.we)("#MeetSteam_You_Company"),
+                label: (0, D.we)("#MeetSteam_You_Company"),
                 setPartnerID: (e) => n({ ...t, partner_id: e }),
               }),
             )
-          : r.createElement(u.t, {
+          : l.createElement(C.t, {
               size: "medium",
               position: "center",
-              string: (0, a.we)("#Loading"),
+              string: (0, D.we)("#Loading"),
             });
       }
-      function v(e) {
-        const { nPartnerID: t, setPartnerID: n, label: s } = e,
-          i = (0, f.c)(h.iA.accountid);
-        if (!i)
-          return r.createElement(u.t, {
+      function re(e) {
+        const { nPartnerID: t, setPartnerID: n, label: a } = e,
+          r = (0, J.c)(Z.iA.accountid);
+        if (!r)
+          return l.createElement(C.t, {
             size: "small",
             position: "center",
-            string: (0, a.we)("#Loading"),
+            string: (0, D.we)("#Loading"),
           });
-        const l = [];
+        const i = [];
         return (
-          i.forEach((e) =>
-            l.push({ label: e?.partner_name, data: e.partnerid }),
+          r.forEach((e) =>
+            i.push({ label: e?.partner_name, data: e.partnerid }),
           ),
-          r.createElement(o.m, {
+          l.createElement(I.m, {
             layout: "inline",
-            label: s,
-            rgOptions: l,
+            label: a,
+            rgOptions: i,
             selectedOption: t,
             onChange: (e) => {
               n(e.data);
@@ -242,265 +715,127 @@
           })
         );
       }
-      function _() {
-        const [e] = (0, r.useState)(
-          () => (0, h.Tc)("strPartnerUserEmail", "application_config") || "",
+      function ie() {
+        const [e] = (0, l.useState)(
+          () => (0, Z.Tc)("partner_user_email", "application_config") || "",
         );
         return e;
       }
-    },
-    79645: (e, t, n) => {
-      "use strict";
-      n.d(t, { S: () => c, c: () => u });
-      var r = n(41735),
-        s = n.n(r),
-        i = n(20194),
-        a = n(68797),
-        o = n(30470),
-        l = n(78327);
-      function u(e) {
-        const { data: t, isLoading: n } = (0, i.I)({
-          queryKey: ["PartnerInfoList", e],
-          queryFn: () =>
-            (async function (e) {
-              const t = { accountid: e, origin: self.origin };
-              let n = `${o.TS.COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo`;
-              "partnerweb" == (0, l.yK)() &&
-                (n = `${o.TS.PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo`);
-              const r = await s().get(n, { params: t, withCredentials: !0 });
-              if (
-                !r ||
-                200 != r.status ||
-                1 != r.data?.success ||
-                !r.data?.partners
-              )
-                throw `Load single user partner info failed ${((0, a.H))(r).strErrorMsg}`;
-              return r.data.partners;
-            })(e),
-        });
-        return n ? null : t;
-      }
-      function c(e, t) {
-        const n = u(e);
-        return n?.find((e) => e.partnerid === t);
-      }
-    },
-    54806: (e, t, n) => {
-      "use strict";
-      n.d(t, { E: () => f });
-      var r = n(90626),
-        s = n(86709),
-        i = n(45747),
-        a = n(74500),
-        o = n(57168);
-      function l(e, t) {
-        return e.filter((e) => !t.includes(e));
-      }
-      var u = class extends a.Q {
-          #e;
-          #t;
-          #n;
-          #r;
-          #s;
-          #i;
-          #a;
-          constructor(e, t, n) {
-            super(),
-              (this.#e = e),
-              (this.#n = []),
-              (this.#r = []),
-              (this.#t = []),
-              this.setQueries(t);
-          }
-          onSubscribe() {
-            1 === this.listeners.size &&
-              this.#r.forEach((e) => {
-                e.subscribe((t) => {
-                  this.#o(e, t);
-                });
-              });
-          }
-          onUnsubscribe() {
-            this.listeners.size || this.destroy();
-          }
-          destroy() {
-            (this.listeners = new Set()),
-              this.#r.forEach((e) => {
-                e.destroy();
-              });
-          }
-          setQueries(e, t, n) {
-            (this.#n = e),
-              s.j.batch(() => {
-                const e = this.#r,
-                  t = this.#l(this.#n);
-                t.forEach((e) =>
-                  e.observer.setOptions(e.defaultedQueryOptions, n),
-                );
-                const r = t.map((e) => e.observer),
-                  s = r.map((e) => e.getCurrentResult()),
-                  i = r.some((t, n) => t !== e[n]);
-                (e.length !== r.length || i) &&
-                  ((this.#r = r),
-                  (this.#t = s),
-                  this.hasListeners() &&
-                    (l(e, r).forEach((e) => {
-                      e.destroy();
+      var ce = n(20587);
+      const se = {
+        YearlySurvery: (e = ":year") => `/${e}`,
+        AdminDashboard: () => "/admin",
+      };
+      function oe(e) {
+        return (
+          (0, l.useEffect)(() => {
+            ce.O3.Init();
+          }, []),
+          l.createElement(
+            c.m,
+            null,
+            l.createElement(
+              r.Kd,
+              { basename: (0, a.C)() + "meetsteam/" },
+              l.createElement(
+                i.dO,
+                null,
+                l.createElement(i.qh, {
+                  exact: !0,
+                  path: a.B.DiagData(),
+                  render: (e) =>
+                    l.createElement(s.z, {
+                      ...e,
+                      strConfigID: "application_config",
                     }),
-                    l(r, e).forEach((e) => {
-                      e.subscribe((t) => {
-                        this.#o(e, t);
-                      });
-                    }),
-                    this.#u()));
-              });
-          }
-          getCurrentResult() {
-            return this.#t;
-          }
-          getQueries() {
-            return this.#r.map((e) => e.getCurrentQuery());
-          }
-          getObservers() {
-            return this.#r;
-          }
-          getOptimisticResult(e, t) {
-            const n = this.#l(e),
-              r = n.map((e) =>
-                e.observer.getOptimisticResult(e.defaultedQueryOptions),
-              );
-            return [
-              r,
-              (e) => this.#c(e ?? r, t),
-              () =>
-                n.map((e, t) => {
-                  const s = r[t];
-                  return e.defaultedQueryOptions.notifyOnChangeProps
-                    ? s
-                    : e.observer.trackResult(s, (e) => {
-                        n.forEach((t) => {
-                          t.observer.trackProp(e);
-                        });
-                      });
                 }),
-            ];
-          }
-          #c(e, t) {
-            return t
-              ? ((this.#s && this.#t === this.#a && t === this.#i) ||
-                  ((this.#i = t),
-                  (this.#a = this.#t),
-                  (this.#s = (0, o.BH)(this.#s, t(e)))),
-                this.#s)
-              : e;
-          }
-          #l(e) {
-            const t = this.#r,
-              n = new Map(t.map((e) => [e.options.queryHash, e])),
-              r = e.map((e) => this.#e.defaultQueryOptions(e)),
-              s = r.flatMap((e) => {
-                const t = n.get(e.queryHash);
-                return null != t
-                  ? [{ defaultedQueryOptions: e, observer: t }]
-                  : [];
-              }),
-              a = new Set(s.map((e) => e.defaultedQueryOptions.queryHash)),
-              o = r.filter((e) => !a.has(e.queryHash)),
-              l = (e) => {
-                const t = this.#e.defaultQueryOptions(e);
-                return (
-                  this.#r.find((e) => e.options.queryHash === t.queryHash) ??
-                  new i.$(this.#e, t)
-                );
+                l.createElement(i.qh, {
+                  exact: !0,
+                  path: se.AdminDashboard(),
+                  component: G,
+                }),
+                l.createElement(i.qh, {
+                  exact: !0,
+                  path: se.YearlySurvery(":year(\\d+)"),
+                  component: ne,
+                }),
+                l.createElement(i.qh, { component: o.a }),
+              ),
+            ),
+          )
+        );
+      }
+    },
+    48479: (e, t, n) => {
+      "use strict";
+      n.d(t, { AQ: () => E, qx: () => p });
+      var a = n(71541),
+        l = n(61859),
+        r = n(12155),
+        i = n(90626),
+        c = n(52038),
+        s = n(95695),
+        o = n(84811),
+        m = n(64734),
+        u = n(65946),
+        d = n(26408);
+      function E(e) {
+        const {
+            title: t,
+            tooltip: n,
+            getMinimized: a,
+            toggleMinimized: l,
+            className: r,
+            children: E,
+          } = e,
+          p = (0, u.q3)(() => a());
+        return i.createElement(
+          i.Fragment,
+          null,
+          i.createElement(
+            "div",
+            {
+              className: (0, c.A)(
+                r,
+                m.SectionTitleHeader,
+                m.required_title,
+                "SectionTitleHeader",
+              ),
+            },
+            i.createElement(
+              "div",
+              {
+                className: (0, c.A)(
+                  s.CollapsableSectionTitle,
+                  "EventEditorTextTitle",
+                ),
               },
-              u = o.map((e) => ({ defaultedQueryOptions: e, observer: l(e) }));
-            return s
-              .concat(u)
-              .sort(
-                (e, t) =>
-                  r.indexOf(e.defaultedQueryOptions) -
-                  r.indexOf(t.defaultedQueryOptions),
-              );
-          }
-          #o(e, t) {
-            const n = this.#r.indexOf(e);
-            -1 !== n &&
-              ((this.#t = (function (e, t, n) {
-                const r = e.slice(0);
-                return (r[t] = n), r;
-              })(this.#t, n, t)),
-              this.#u());
-          }
-          #u() {
-            s.j.batch(() => {
-              this.listeners.forEach((e) => {
-                e(this.#t);
-              });
-            });
-          }
-        },
-        c = n(75233),
-        d = n(22730),
-        m = n(43424),
-        h = n(19086),
-        p = n(44407);
-      function f({ queries: e, ...t }, n) {
-        const a = (0, c.jE)(n),
-          o = (0, d.w)(),
-          l = (0, m.h)(),
-          f = r.useMemo(
-            () =>
-              e.map((e) => {
-                const t = a.defaultQueryOptions(e);
-                return (
-                  (t._optimisticResults = o ? "isRestoring" : "optimistic"), t
-                );
-              }),
-            [e, a, o],
-          );
-        f.forEach((e) => {
-          (0, p.tu)(e), (0, h.LJ)(e, l);
-        }),
-          (0, h.wZ)(l);
-        const [g] = r.useState(() => new u(a, f, t)),
-          [E, b, v] = g.getOptimisticResult(f, t.combine);
-        r.useSyncExternalStore(
-          r.useCallback(
-            (e) => (o ? () => {} : g.subscribe(s.j.batchCalls(e))),
-            [g, o],
+              t,
+              Boolean(n) && i.createElement(d.o, { tooltip: n }),
+            ),
+            i.createElement(g, { bIsMinimized: p, fnToggleMinimize: l }),
           ),
-          () => g.getCurrentResult(),
-          () => g.getCurrentResult(),
-        ),
-          r.useEffect(() => {
-            g.setQueries(f, t, { listeners: !1 });
-          }, [f, t, g]);
-        const _ = E.some((e, t) => (0, p.EU)(f[t], e))
-          ? E.flatMap((e, t) => {
-              const n = f[t];
-              if (n) {
-                const t = new i.$(a, n);
-                if ((0, p.EU)(n, e)) return (0, p.iL)(n, t, l);
-                (0, p.nE)(e, o) && (0, p.iL)(n, t, l);
-              }
-              return [];
-            })
-          : [];
-        if (_.length > 0) throw Promise.all(_);
-        const y = E.find((e, t) => {
-          const n = f[t];
-          return (
-            n &&
-            (0, h.$1)({
-              result: e,
-              errorResetBoundary: l,
-              throwOnError: n.throwOnError,
-              query: a.getQueryCache().get(n.queryHash),
-            })
-          );
-        });
-        if (y?.error) throw y.error;
-        return b(v());
+          !p && i.createElement(o.tH, null, E),
+        );
+      }
+      function p(e) {
+        const [t, n] = i.useState(Boolean(e.bStartMinimized));
+        return i.createElement(
+          E,
+          { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
+          e.children,
+        );
+      }
+      function g(e) {
+        const { bIsMinimized: t, fnToggleMinimize: n } = e,
+          c = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return i.createElement(
+          a.$n,
+          { "data-tooltip-text": (0, l.we)(c), onClick: n },
+          e.bIsMinimized
+            ? i.createElement(r.hz4, null)
+            : i.createElement(r.Xjb, null),
+        );
       }
     },
   },

@@ -120,7 +120,10 @@
         );
       }
       function c(e) {
-        const [t, r] = (0, s.useState)(i.O3.GetClanEventModel(e)),
+        const [t, r] = (0, s.useState)(() => {
+            const t = i.O3.GetClanEventModel(e);
+            return console.log("adil", t), t;
+          }),
           n = (0, a.m)("usePartnerEventByEventGID");
         return (
           (0, s.useEffect)(() => {

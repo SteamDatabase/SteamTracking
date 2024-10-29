@@ -934,6 +934,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   .kW6m4Sjqacp5hykrj5LEo
   ._2s-O5T3qJJYR2AUq4b9jIN {
   margin-top: 0px;
+  position: relative;
 }
 .PZY_7wH_NY7OgzH9MBiB8 .oW0H1sBVE8K8u0qbq_Tm5 .MvLJDXjfbme8Uw3OERaCb {
   position: absolute;
@@ -1386,6 +1387,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   min-height: unset;
 }
 .kW6m4Sjqacp5hykrj5LEo ._1JuIpzMtS7-xZrnUmEQ4my {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   flex-direction: row-reverse;
@@ -1550,6 +1552,9 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   padding: unset;
 }
 ._1Fru-E7WQMr8G_aR2sMg5F {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   color: #b5df20;
   position: absolute;
   top: -14px;
@@ -2867,6 +2872,7 @@ html.touch
   ._1JuIpzMtS7-xZrnUmEQ4my
   ._2s-O5T3qJJYR2AUq4b9jIN {
   margin-top: 0;
+  position: relative;
 }
 .gASJ2lL_xmVNuZkWGvrWg
   ._1_P15GG6AKyF_NMX2j4-Mu
@@ -2882,6 +2888,9 @@ html.touch
   border-radius: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .BasicUI
   .gASJ2lL_xmVNuZkWGvrWg

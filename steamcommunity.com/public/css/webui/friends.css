@@ -9953,6 +9953,69 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   right: 0;
   pointer-events: none;
 }
+.segmentedinputs_SegmentedCharacterInput_1gzkm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 280px;
+  background-color: #2b2e33;
+  border-radius: 2px;
+  gap: 20px;
+  padding: 10px 28px 20px;
+  cursor: text;
+  border: 1px solid transparent;
+  position: relative;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_Disabled_4Wrcv {
+  background-color: #26272b;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_Danger_3lEvx {
+  border-color: #c15755;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz {
+  max-width: 392px;
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz {
+    padding: 10px 7px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz
+    input {
+    width: 26px;
+  }
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Loading_3khV2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Input_3xcXq {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
+  padding: 0;
+  color: #fff;
+  width: 40px;
+  font-size: 28px;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Input_3xcXq {
+    width: 20%;
+  }
+}
 .newlogindialog_Login_lat0M {
   position: relative;
   display: flex;
@@ -9982,6 +10045,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .newlogindialog_Login_lat0M .newlogindialog_GuestLink_3zcmX {
   display: flex;
   flex: 2;
+}
+.newlogindialog_Login_lat0M .newlogindialog_ConfirmCredntialsNag_2oMva {
+  background-color: #1999ff;
+  width: 100%;
+  padding: 5px;
+  font-weight: bold;
 }
 .newlogindialog_Login_lat0M .newlogindialog_QRSection_3wSeH {
   flex: 0;
@@ -11058,69 +11127,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-.segmentedinputs_SegmentedCharacterInput_1gzkm {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 280px;
-  background-color: #2b2e33;
-  border-radius: 2px;
-  gap: 20px;
-  padding: 10px 28px 20px;
-  cursor: text;
-  border: 1px solid transparent;
-  position: relative;
-}
-.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_Disabled_4Wrcv {
-  background-color: #26272b;
-}
-.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_Danger_3lEvx {
-  border-color: #c15755;
-}
-.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz {
-  max-width: 392px;
-}
-@media screen and (max-width: 700px) {
-  .segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz {
-    padding: 10px 7px;
-    gap: 16px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz
-    input {
-    width: 26px;
-  }
-}
-.segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Loading_3khV2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #00000077;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Input_3xcXq {
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
-  padding: 0;
-  color: #fff;
-  width: 40px;
-  font-size: 28px;
-  font-family: inherit;
-  font-weight: 500;
-  text-align: center;
-}
-@media screen and (max-width: 700px) {
-  .segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Input_3xcXq {
-    width: 20%;
   }
 }
 .bbcodes_Bold_3cln3 {

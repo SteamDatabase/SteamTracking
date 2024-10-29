@@ -14071,7 +14071,7 @@
             className: Yi.StoreSaleWidgetEmptyContainer,
           });
         const m = 8 != a.GetAppType(),
-          d = (0, Xi.wJ)(a.GetStorePageURL(), r);
+          d = (0, Xi.wJ)(a.GetStorePageURL(!0), r);
         return l.createElement(
           "div",
           { className: n },

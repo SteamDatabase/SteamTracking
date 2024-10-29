@@ -386,7 +386,10 @@
         );
       }
       function c(e) {
-        const [t, a] = (0, r.useState)(n.O3.GetClanEventModel(e)),
+        const [t, a] = (0, r.useState)(() => {
+            const t = n.O3.GetClanEventModel(e);
+            return console.log("adil", t), t;
+          }),
           l = (0, s.m)("usePartnerEventByEventGID");
         return (
           (0, r.useEffect)(() => {
@@ -3540,7 +3543,7 @@
           a.e(7328),
           a.e(2608),
           a.e(7382),
-          a.e(8662),
+          a.e(3058),
           a.e(8019),
           a.e(6341),
           a.e(4657),

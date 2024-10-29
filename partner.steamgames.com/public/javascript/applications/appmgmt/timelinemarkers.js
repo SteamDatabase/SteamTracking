@@ -630,12 +630,14 @@
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+        Blue: "J7iYYml2Jf_PcaACW1hEr",
         ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
         Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
         ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
         SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
         warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
         RightCol: "_3kaQhRnhNh_awrnNX90rui",
         NoSticky: "JQNb8bHftBTAYpCXTx52v",
         SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
@@ -4556,7 +4558,7 @@
             : (0, Ie.tG)("Missing timeline offset metadata for", e);
         }
         OnInvalidate(e) {
-          (0, Ie.q_)("on invalidate ", e);
+          (0, Ie.q_)("on invalidate", e);
           const t = this.m_timelineMask.GetGlobalTimelineEndMS().valMS,
             r = t - this.m_durationMS,
             i = this.m_durationMS <= 0;
@@ -4967,8 +4969,11 @@
               const r = this.ConvertGlobalMSToGlobalPXOffset(t.globalOffsetMS);
               this.GetClipsForTimeline(t.timelineID).forEach((i) => {
                 const n = r + this.GetPXForDuration(i.msTimelineOffset),
-                  a = this.ConvertGlobalMSToGlobalPXOffset(
-                    t.globalOffsetMS + i.msTimelineOffset + i.msDuration,
+                  a = Math.min(
+                    this.GetVirtualWindowEndPX(),
+                    this.ConvertGlobalMSToGlobalPXOffset(
+                      t.globalOffsetMS + i.msTimelineOffset + i.msDuration,
+                    ),
                   );
                 a < this.GetVirtualWindowStartPX() ||
                   n > this.GetVirtualWindowEndPX() ||
@@ -19909,11 +19914,10 @@
       r.r(t),
         r.d(t, {
           CGameTimelineMarkerStore: () => m,
-          GetCombinedMarkerFilename: () => u,
-          GetGameSVGTimelineMarkerPublicURL: () => p,
-          SetTimelineMarkerURLFunction: () => g,
-          useGameMarkerByID: () => d,
-          useGameTimelineMarkers: () => _,
+          GetCombinedMarkerFilename: () => c,
+          GetGameSVGTimelineMarkerPublicURL: () => u,
+          SetTimelineMarkerURLFunction: () => d,
+          useGameTimelineMarkers: () => g,
         });
       var i = r(34629),
         n = r(90626),
@@ -19932,15 +19936,10 @@
         BIsLoaded(e) {
           return this.m_mapAppMarkers.has(e);
         }
-        GetSVGForID(e, t, r) {
-          this.m_mapURLForApp.get(e) != r && this.LoadAppPublicMarkers(e, r);
-          const i = this.m_mapAppMarkers.get(e);
-          if (i) return i.get(t) || void 0;
-        }
         GetGameMarkerSVGById(e, t) {
           const r = this.m_fnTimelineURLGenerator
             ? this.m_fnTimelineURLGenerator(e)
-            : p(e);
+            : u(e);
           return (
             this.m_mapURLForApp.get(e) != r &&
               setTimeout(() => {
@@ -20005,22 +20004,7 @@
           );
         }
       }
-      function c(e) {
-        return (0, o.q3)(() => m.Get().BIsLoaded(e));
-      }
-      function d(e, t) {
-        const r = m.Get(),
-          i = c(e),
-          a = f(e),
-          [s, l] = (0, n.useState)(null);
-        return (
-          (0, n.useEffect)(() => {
-            i ? l(r.GetSVGForID(e, t, a)) : r.LoadAppPublicMarkers(e, a);
-          }, [s, e, t, r, i, a]),
-          s
-        );
-      }
-      async function u(e, t, r) {
+      async function c(e, t, r) {
         let i = "";
         if ("default" != t) {
           const e = new TextEncoder().encode(r),
@@ -20036,22 +20020,23 @@
         }
         return `${e}_${i}markers.svg`;
       }
-      function g(e) {
+      function d(e) {
         m.Get().SetTimelineMarkerURLFunction(e);
       }
-      function p(e) {
+      function u(e) {
         return `${a.TS.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
       }
-      function f(e) {
-        const t = m.Get();
-        return (0, o.q3)(() => {
-          const r = t.GetTimelineMarkerURLFunction();
-          return r ? r(e) : p(e);
-        });
-      }
-      function _(e) {
-        const t = c(e),
-          r = f(e),
+      function g(e) {
+        const t = (function (e) {
+            return (0, o.q3)(() => m.Get().BIsLoaded(e));
+          })(e),
+          r = (function (e) {
+            const t = m.Get();
+            return (0, o.q3)(() => {
+              const r = t.GetTimelineMarkerURLFunction();
+              return r ? r(e) : u(e);
+            });
+          })(e),
           i = m.Get(),
           [a, s] = (0, n.useState)(null);
         return (
@@ -21252,21 +21237,68 @@
         );
       }
     },
-    4434: (e, t, r) => {
+    82227: (e, t, r) => {
       "use strict";
-      r.d(t, { m: () => s });
-      var i = r(41735),
-        n = r.n(i),
-        a = r(90626);
-      function s(e) {
-        const t = a.useRef(n().CancelToken.source());
-        return (
-          a.useEffect(() => {
-            const r = t.current;
-            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
+      r.d(t, { Dq: () => a, NO: () => s, dm: () => n });
+      var i = r(61859);
+      function n(e, t, r, n) {
+        let a = t;
+        a =
+          "number" == typeof a
+            ? {
+                nDigitsAfterDecimal: t,
+                bUseBinary1K: r || void 0 === r,
+                bValueIsInBytes: !n,
+                bValueIsRate: n,
+                nMinimumDigitsAfterDecimal: 0,
+              }
+            : {
+                nDigitsAfterDecimal: 2,
+                bUseBinary1K: !0,
+                bValueIsInBytes: !0,
+                bValueIsRate: !1,
+                nMinimumDigitsAfterDecimal: 0,
+                ...a,
+              };
+        const s = a.bUseBinary1K ? 1024 : 1e3,
+          l = s * s,
+          o = l * s,
+          m = o * s;
+        let c,
+          d = "";
+        e > m
+          ? ((c = e / m), (d = "Tera"))
+          : e > o
+            ? ((c = e / o), (d = "Giga"))
+            : e > l
+              ? ((c = e / l), (d = "Mega"))
+              : e > s
+                ? ((c = e / s), (d = "Kilo"))
+                : (c = e);
+        const u =
+          "#" +
+          d +
+          (a.bValueIsInBytes ? "bytes" : "bits") +
+          (a.bValueIsRate ? "_PerSecond" : "");
+        return (0, i.we)(
+          u,
+          c.toLocaleString(i.pf.GetPreferredLocales(), {
+            minimumFractionDigits: a.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: a.nDigitsAfterDecimal,
+          }),
         );
+      }
+      function a(e) {
+        return e ? e.toLocaleString(i.pf.GetPreferredLocales()) : "" + e;
+      }
+      function s(e) {
+        return e > 1e9
+          ? Math.trunc(e / 1e9).toString() + "B"
+          : e > 1e6
+            ? Math.trunc(e / 1e6).toString() + "M"
+            : e > 1e3
+              ? Math.trunc(e / 1e3).toString() + "K"
+              : e.toString();
       }
     },
   },
