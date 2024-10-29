@@ -60,6 +60,38 @@
             ]
         },
         {
+            "name": "NotifyRiskQuizResults",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "notify the server about risk quiz responses for metrics purposes",
+            "parameters": [
+                {
+                    "name": "client_id",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "client ID for the auth session, used for routing"
+                },
+                {
+                    "name": "results",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "Whether or not the user correctly answered each risk quiz question"
+                },
+                {
+                    "name": "selected_action",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The action being taken selected by the user during the quiz"
+                },
+                {
+                    "name": "did_confirm_login",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Whether or not the user went on to confirm the login or not in the case of a passed quiz"
+                }
+            ]
+        },
+        {
             "name": "GetPasswordRSAPublicKey",
             "version": 1,
             "httpmethod": "GET",
