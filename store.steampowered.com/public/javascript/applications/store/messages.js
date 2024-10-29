@@ -3668,10 +3668,11 @@
         const {
             message: t,
             fnOnClickButton: r,
-            eventModel: s,
-            bUseAnimated: a,
+            eventModel: a,
+            bUseAnimated: n,
           } = e,
-          [n, l] = t.GetTemplateImage();
+          [l, m] = t.GetTemplateImage(),
+          c = (0, s.sf)(M.TS.LANGUAGE);
         return i.createElement(
           "div",
           { className: v().UpdateEventCtn },
@@ -3683,7 +3684,7 @@
           i.createElement(
             "div",
             { className: v().EventTitle },
-            s?.GetNameWithFallback(l),
+            a?.GetNameWithFallback(c),
           ),
           i.createElement(
             u.Z,
@@ -3693,10 +3694,10 @@
               className: (0, f.A)(G().GameImage),
               onActivate: r,
             },
-            n &&
-              !a &&
-              i.createElement(p, { message: t, path: n, eLanguage: l }),
-            a && i.createElement(P, { fnOnClick: r }),
+            l &&
+              !n &&
+              i.createElement(p, { message: t, path: l, eLanguage: m }),
+            n && i.createElement(P, { fnOnClick: r }),
           ),
         );
       }
