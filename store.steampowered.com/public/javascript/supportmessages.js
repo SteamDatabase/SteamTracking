@@ -18,7 +18,8 @@ function InitSupportMessages( cMessages )
 function UpdateCloseWindowButtonText()
 {
 	var elMessage = $('message_' + g_iActiveMessage );
-	if ( elMessage.hasClassName( 'Support_SSAUpdated' ) )
+	var bNewSSAEffectiveNow = false;
+	if ( elMessage.hasClassName( 'Support_SSAUpdated' ) && !bNewSSAEffectiveNow )
 	{
 		$('supportmessages_closebtn').removeClassName( 'btn_grey_white_innerfade' );
 		$('supportmessages_closebtn').removeClassName( 'btn_small_thin' );
