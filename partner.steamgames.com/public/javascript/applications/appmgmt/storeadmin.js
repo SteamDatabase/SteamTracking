@@ -252,6 +252,7 @@
         KernelMode: "iAq_jMg3JrFT_qjIU6gSL",
         CheckboxLabel: "XRMda0yOh0NFnSf3EVLP1",
         CheckboxDescription: "_10omFg-YbEQjz9R0VzeuSC",
+        LanguageSelector: "_2aIJUMbzwAYBpQHVa8E2Pg",
       };
     },
     30935: (e) => {
@@ -2628,8 +2629,8 @@
       var M = n(4188),
         O = n(4869),
         F = n(71541),
-        G = n(9154),
-        U = n(30175);
+        U = n(9154),
+        G = n(30175);
       n(32754);
       a.memo(function (e) {
         const { schema: t, active: n, closeModal: r, view: o } = e,
@@ -2659,7 +2660,7 @@
             }
           }, [n, o]),
           a.createElement(
-            G.o0,
+            U.o0,
             {
               onOK: () => {
                 o.dispatch(
@@ -2697,7 +2698,7 @@
           a.Fragment,
           null,
           a.createElement(
-            U.fx,
+            G.fx,
             {
               tooltip: "#FormattingToolbar_Undo",
               command: D.tN,
@@ -2706,7 +2707,7 @@
             a.createElement(O.VnB, null),
           ),
           a.createElement(
-            U.fx,
+            G.fx,
             {
               tooltip: "#FormattingToolbar_Redo",
               command: D.ZS,
@@ -2728,17 +2729,17 @@
           a.Fragment,
           null,
           a.createElement(
-            U.GY,
+            G.GY,
             { tooltip: "#FormattingToolbar_Bold", mark: t.marks.strong },
             a.createElement(O.l4n, null),
           ),
           a.createElement(
-            U.GY,
+            G.GY,
             { tooltip: "#FormattingToolbar_Italic", mark: t.marks.italic },
             a.createElement(O.UKJ, null),
           ),
           a.createElement(
-            U.GY,
+            G.GY,
             {
               tooltip: "#FormattingToolbar_Underline",
               mark: t.marks.underline,
@@ -2747,13 +2748,13 @@
           ),
           "strike" in t.marks &&
             a.createElement(
-              U.GY,
+              G.GY,
               { tooltip: "#FormattingToolbar_Strike", mark: t.marks.strike },
               a.createElement(O.tI4, null),
             ),
           "code" in t.marks &&
             a.createElement(
-              U.GY,
+              G.GY,
               { tooltip: "#FormattingToolbar_InlineCode", mark: t.marks.code },
               a.createElement(O.bmT, null),
             ),
@@ -2762,7 +2763,7 @@
       function V(e) {
         const { schema: t } = e;
         return a.createElement(
-          U.u3,
+          G.u3,
           {
             tooltip: "#FormattingToolbar_Paragraph",
             nodeType: t.nodes.paragraph,
@@ -2778,7 +2779,7 @@
           null,
           n <= 1 &&
             a.createElement(
-              U.u3,
+              G.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel1",
                 nodeType: t.nodes.heading,
@@ -2789,7 +2790,7 @@
           n <= 2 &&
             o >= 2 &&
             a.createElement(
-              U.u3,
+              G.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel2",
                 nodeType: t.nodes.heading,
@@ -2800,7 +2801,7 @@
           n <= 3 &&
             o >= 3 &&
             a.createElement(
-              U.u3,
+              G.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel3",
                 nodeType: t.nodes.heading,
@@ -2811,7 +2812,7 @@
           n <= 4 &&
             o >= 4 &&
             a.createElement(
-              U.u3,
+              G.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel4",
                 nodeType: t.nodes.heading,
@@ -2822,7 +2823,7 @@
           n <= 5 &&
             o >= 5 &&
             a.createElement(
-              U.u3,
+              G.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel5",
                 nodeType: t.nodes.heading,
@@ -2834,7 +2835,7 @@
       }
       function Y(e) {
         const { schema: t, showIndentButtonsAsNeeded: n = !1 } = e,
-          { callbacks: r, view: o } = (0, U.wU)(),
+          { callbacks: r, view: o } = (0, G.wU)(),
           l = a.useCallback(
             (e) => !!(0, T.d7)(e.state, t.nodes.bullet_list),
             [t],
@@ -2849,7 +2850,7 @@
             a.Fragment,
             null,
             a.createElement(
-              U.cQ,
+              G.cQ,
               {
                 tooltip: "#FormattingToolbar_BulletedList",
                 toggled: s,
@@ -2862,7 +2863,7 @@
                 a.Fragment,
                 null,
                 a.createElement(
-                  U.cQ,
+                  G.cQ,
                   {
                     tooltip: "#FormattingToolbar_OutdentList",
                     disabled: !s,
@@ -2871,7 +2872,7 @@
                   a.createElement(O.LSz, null),
                 ),
                 a.createElement(
-                  U.cQ,
+                  G.cQ,
                   {
                     tooltip: "#FormattingToolbar_IndentList",
                     disabled: !s,
@@ -3440,10 +3441,10 @@
           sticky: l,
         } = e;
         return a.createElement(
-          U.bI,
+          G.bI,
           { refUpdateToolbar: n, view: t },
           a.createElement(
-            U.Ez,
+            G.Ez,
             {
               className: (0, N.A)(
                 me.GameDescriptionEditorToolbar,
@@ -3451,21 +3452,21 @@
               ),
             },
             a.createElement(H, null),
-            a.createElement(U.XQ, null),
+            a.createElement(G.XQ, null),
             a.createElement(z, { schema: o }),
-            a.createElement(U.XQ, null),
+            a.createElement(G.XQ, null),
             a.createElement(V, { schema: o }),
             a.createElement($, { schema: o, maxLevel: 2, levels: 1 }),
-            a.createElement(U.XQ, null),
+            a.createElement(G.XQ, null),
             a.createElement(Y, { schema: o, showIndentButtonsAsNeeded: !0 }),
             "image" in o.nodes &&
               a.createElement(
                 a.Fragment,
                 null,
-                a.createElement(U.XQ, null),
+                a.createElement(G.XQ, null),
                 a.createElement(C.KZ, { nodeType: o.nodes.image }),
               ),
-            a.createElement(U.hK, null),
+            a.createElement(G.hK, null),
             r,
           ),
         );
@@ -4892,10 +4893,10 @@
               "div",
               { className: i.ReleaseDateContent },
               !e.bControllerSupportWizardComplete &&
-                a.createElement(G, { onClick: o }),
+                a.createElement(U, { onClick: o }),
               e.bControllerSupportWizardComplete &&
                 !d &&
-                a.createElement(U, { onClick: o }),
+                a.createElement(G, { onClick: o }),
               e.bControllerSupportWizardComplete &&
                 d &&
                 a.createElement(g, { ...e }),
@@ -4926,7 +4927,7 @@
           ),
         );
       }
-      function G(e) {
+      function U(e) {
         return a.createElement(
           "div",
           null,
@@ -4956,7 +4957,7 @@
           ),
         );
       }
-      function U(e) {
+      function G(e) {
         return a.createElement(
           "div",
           null,
@@ -5688,8 +5689,8 @@
       var Me = n(92757),
         Oe = n(6813),
         Fe = n(94794),
-        Ge = n(75487),
-        Ue = n(56545),
+        Ue = n(75487),
+        Ge = n(56545),
         He = n(23809),
         We = n(6144),
         Ke = n(14771),
@@ -5709,9 +5710,9 @@
           return (
             (async () => {
               o(!1), i(void 0);
-              const a = Ue.w.Init(Ge.as);
+              const a = Ge.w.Init(Ue.as);
               a.Body().set_demo_appid(t), a.Body().set_appid(n);
-              const r = await Ge.nd.GetWishlistDemoEmailStatus(E, a);
+              const r = await Ue.nd.GetWishlistDemoEmailStatus(E, a);
               e.signal.aborted ||
                 (r.BSuccess() &&
                   (o(r.Body().can_fire()), i(r.Body().time_staged())));
@@ -5782,9 +5783,9 @@
           E = a.useCallback(async () => {
             d(!1), i(!0);
             try {
-              const e = Ue.w.Init(Ge.KP);
+              const e = Ge.w.Init(Ue.KP);
               e.Body().set_demo_appid(t), e.Body().set_appid(n);
-              const a = await Ge.nd.QueueWishlistDemoEmailToFire(_, e);
+              const a = await Ue.nd.QueueWishlistDemoEmailToFire(_, e);
               o(a.BSuccess());
             } finally {
               i(!1);
@@ -6220,8 +6221,8 @@
           bShowWishlistButton: Boolean(m),
         });
       }
-      var Gt = n(56654),
-        Ut = n(38135),
+      var Ut = n(56654),
+        Gt = n(38135),
         Ht = n(62490),
         Wt = n(19042),
         Kt = n.n(Wt);
@@ -6384,7 +6385,7 @@
                         baseGameAppID: o,
                         rgFeaturedList: l.featured_appids,
                       })
-                    : a.createElement(Ut.V, { tabs: d }),
+                    : a.createElement(Gt.V, { tabs: d }),
                 )
               : a.createElement(
                   "span",
@@ -6604,7 +6605,7 @@
                   null,
                   (0, s.we)("#Create_Home_No_Featured"),
                 )
-              : a.createElement(Gt.A, {
+              : a.createElement(Ut.A, {
                   items: t || [],
                   render: (e, l) =>
                     a.createElement(Xt, {
@@ -6939,7 +6940,7 @@
       const sn = { include_assets: !0, include_release: !0 };
       function cn(e) {
         const { rgDLCInfo: t, fnSetDLCInfo: n } = e;
-        return a.createElement(Gt.A, {
+        return a.createElement(Ut.A, {
           items: t,
           render: (e, r) =>
             a.createElement(un, {
@@ -7156,7 +7157,7 @@
           a.Fragment,
           null,
           d,
-          a.createElement(Gt.A, {
+          a.createElement(Ut.A, {
             items: r,
             onDelete: (e) =>
               ((e) => {
@@ -7480,7 +7481,7 @@
             { className: kn.EmptyPinnedBundleList },
             (0, s.we)("#PinnedBundles_NoPinnedBundles"),
           );
-        return a.createElement(Gt.A, {
+        return a.createElement(Ut.A, {
           items: t,
           onDelete: n,
           onMove: r,
@@ -7945,7 +7946,7 @@
                     : "usd";
         }
       }
-      function Gn(e) {
+      function Un(e) {
         return `${On(
           (function (e) {
             switch (e) {
@@ -8103,7 +8104,7 @@
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
         })(Tn || (Tn = {}));
-      const Un = [Tn.k_ECurrencyCodeTRY, Tn.k_ECurrencyCodeARS],
+      const Gn = [Tn.k_ECurrencyCodeTRY, Tn.k_ECurrencyCodeARS],
         Hn = [
           Tn.k_ECurrencyCodeUSD,
           Tn.k_ECurrencyCodeGBP,
@@ -8951,7 +8952,7 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(Ga, null),
+          a.createElement(Ua, null),
           a.createElement(Ma, { oGuideline: n }),
           a.createElement("hr", null),
           a.createElement("hr", null),
@@ -9017,7 +9018,7 @@
             )
           : null;
       }
-      function Ga(e) {
+      function Ua(e) {
         return a.createElement(
           Xn.qx,
           {
@@ -9056,7 +9057,7 @@
           ),
         );
       }
-      var Ua = n(95034);
+      var Ga = n(95034);
       function Ha(e) {
         const {
             rgProposals: t,
@@ -9247,7 +9248,7 @@
                 n.length,
                 " currencies: ",
               ),
-              n.map(Gn).join(", "),
+              n.map(Un).join(", "),
             )
           : null;
       }
@@ -9291,7 +9292,7 @@
                 n.length,
                 " currencies: ",
               ),
-              n.map(Gn).join(", "),
+              n.map(Un).join(", "),
             )
           : null;
       }
@@ -9468,7 +9469,7 @@
               null,
               "Package has Country price overrides for Countries:",
               t.proposed_prices.country_amounts
-                .map((e) => Gn(e.name))
+                .map((e) => Un(e.name))
                 .join(","),
             )
           : null;
@@ -9547,7 +9548,7 @@
           })(),
           o = Dn(),
           l = ar(),
-          [s, i] = (0, Ua.QD)("tab", "delta"),
+          [s, i] = (0, Ga.QD)("tab", "delta"),
           c = (e) => i(e.key),
           d = [
             {
@@ -9593,7 +9594,7 @@
               a.createElement("h1", null, "Package Prices Submissions Reviews"),
               a.createElement("p", null, t),
               a.createElement("hr", null),
-              a.createElement(Ut.V, { tabs: d, startingTab: s }),
+              a.createElement(Gt.V, { tabs: d, startingTab: s }),
             ),
           ),
         );
@@ -10292,7 +10293,7 @@
               },
               controlShouldRenderValue: !1,
             }),
-            a.createElement(Gt.A, {
+            a.createElement(Ut.A, {
               render: (e) => {
                 if (e.package_id) {
                   const n = t.rgAllPackages.find(
@@ -10498,9 +10499,9 @@
       var Mr = n(26408),
         Or = n(9482),
         Fr = n(36500),
-        Gr = n.n(Fr),
-        Ur = n(64442),
-        Hr = n.n(Ur);
+        Ur = n.n(Fr),
+        Gr = n(64442),
+        Hr = n.n(Gr);
       function Wr(e) {
         const {
             mileStone: t,
@@ -10531,7 +10532,7 @@
           }),
           a.createElement(
             "div",
-            { className: (0, u.A)(Hr().EditBtn, Gr().CreateNew) },
+            { className: (0, u.A)(Hr().EditBtn, Ur().CreateNew) },
             l && a.createElement(Kr, { hideModal: c, bCreate: r, ...e, ..._ }),
             !r && _.rctHiddenInputs,
             a.createElement(
@@ -11289,7 +11290,7 @@
           );
         return a.createElement(
           "div",
-          { className: Gr().EditorCtn },
+          { className: Ur().EditorCtn },
           a.createElement(Tr.yk, { fnLangHasData: i }),
           a.createElement(eo, {
             seasonPassID: t,
@@ -11419,15 +11420,15 @@
           ),
           a.createElement(
             "div",
-            { className: Gr().CreationButtonRow },
+            { className: Ur().CreationButtonRow },
             a.createElement(
               "span",
-              { className: Gr().LangBox },
+              { className: Ur().LangBox },
               a.createElement(Tr.iN, null),
             ),
             a.createElement(
               "div",
-              { className: Gr().MilestoneButton },
+              { className: Ur().MilestoneButton },
               a.createElement(Wr, {
                 onSave: n,
                 milestoneID: r,
@@ -11504,7 +11505,7 @@
               t.push({ type: e, link: "" }), u(t);
             },
           }),
-          a.createElement(Gt.A, {
+          a.createElement(Ut.A, {
             items: o,
             onDelete: (e) => {
               let t = o.slice();
@@ -12207,8 +12208,13 @@
       }
       var Eo = n(23256);
       function go(e) {
-        const { rgAntiCheatData: t, rgSupportedAntiCheatOptions: n } = e,
-          r = (0, a.useMemo)(
+        const {
+            rgAntiCheatData: t,
+            rgSupportedAntiCheatOptions: n,
+            rgLanguages: r,
+          } = e,
+          o = a.useMemo(() => new Map(r), [r]),
+          l = (0, a.useMemo)(
             () =>
               Object.entries(n).map(([e, t]) => ({
                 label: (0, s.we)(`#StoreAdmin_AntiCheat_Type_${e}`),
@@ -12216,12 +12222,11 @@
               })),
             [n],
           ),
-          [o, l] = (0, a.useState)(t.type),
-          [i, c] = (0, a.useState)(t.otherName),
+          [i, c] = (0, a.useState)(t.type),
           [d, u] = (0, a.useState)(t.kernel),
           [m, p] = (0, a.useState)(t.uninstall),
-          _ = "none" !== o && "other" !== o,
-          E = _ ? n[o].kernel : d;
+          _ = "none" !== i && "other" !== i,
+          E = _ ? n[i].kernel : d;
         return a.createElement(
           "div",
           { className: "section", id: "anti_cheat" },
@@ -12240,22 +12245,22 @@
             Co,
             { label: (0, s.we)("#StoreAdmin_AntiCheat_ServiceLabel") },
             a.createElement(ho, {
-              options: r,
-              selectedOption: o,
+              options: l,
+              selectedOption: i,
               onSelectionChanged: (e) => {
-                e.data && l(e.data);
+                e.data && c(e.data);
               },
             }),
           ),
-          "other" === o && a.createElement(So, { value: i, onChange: c }),
-          "none" !== o &&
+          "other" === i &&
+            a.createElement(So, { values: t.otherNameLoc, mapLanguages: o }),
+          "none" !== i &&
             a.createElement(fo, { checked: E, knownValue: _, onChange: u }),
-          "none" !== o && E && a.createElement(ko, { checked: m, onChange: p }),
+          "none" !== i && E && a.createElement(ko, { checked: m, onChange: p }),
           a.createElement(bo, {
-            selectedOption: "none" !== o ? o : "",
-            otherServiceName: "other" === o ? i : "",
-            kernelMode: "none" !== o && E,
-            uninstallsCompletely: !("none" === o || !E) && m,
+            selectedOption: "none" !== i ? i : "",
+            kernelMode: "none" !== i && E,
+            uninstallsCompletely: !("none" === i || !E) && m,
           }),
         );
       }
@@ -12288,18 +12293,28 @@
         );
       }
       function So(e) {
-        const { value: t, onChange: n } = e;
+        const { values: t, mapLanguages: n } = e,
+          {
+            strActiveLanguage: r,
+            mapValues: o,
+            rctLanguageSelect: l,
+            rctHiddenInputs: s,
+          } = (0, H.K)(n, t, "app", ["game", "3panticheat", "othernameloc"]),
+          i = o.get(r),
+          c = (0, K.gc)(i);
         return a.createElement(
           Co,
           null,
+          a.createElement("div", { className: Eo.LanguageSelector }, l),
           a.createElement(y.pd, {
             className: Eo.OtherSerivceName,
             type: "text",
-            value: t,
+            value: c,
             placeholder: "Enter the service name",
-            onChange: (e) => n(e.target.value),
+            onChange: (e) => i.Set(e.target.value),
             maxLength: 256,
           }),
+          s,
         );
       }
       function fo(e) {
@@ -12347,51 +12362,46 @@
         );
       }
       function bo(e) {
-        const {
-            selectedOption: t,
-            otherServiceName: n,
-            kernelMode: r,
-            uninstallsCompletely: o,
-          } = e,
-          l = a.useMemo(
+        const { selectedOption: t, kernelMode: n, uninstallsCompletely: r } = e,
+          o = a.useMemo(
             () =>
-              (function (e, t, n, r) {
-                let o = Array();
+              (function (e, t, n) {
+                let r = Array();
                 return (
-                  o.push(
+                  r.push(
                     a.createElement("input", {
                       type: "hidden",
                       name: "app[game][3panticheat][type]",
                       value: e,
                     }),
                   ),
-                  o.push(
-                    a.createElement("input", {
-                      type: "hidden",
-                      name: "app[game][3panticheat][othername]",
-                      value: t,
-                    }),
-                  ),
-                  o.push(
+                  r.push(
                     a.createElement("input", {
                       type: "hidden",
                       name: "app[game][3panticheat][kernel]",
-                      value: n ? "1" : "",
+                      value: t ? "1" : "",
                     }),
                   ),
-                  o.push(
+                  r.push(
                     a.createElement("input", {
                       type: "hidden",
                       name: "app[game][3panticheat][uninst]",
-                      value: r ? "1" : "",
+                      value: n ? "1" : "",
                     }),
                   ),
-                  o
+                  r.push(
+                    a.createElement("input", {
+                      type: "hidden",
+                      name: "app[game][3panticheat][othername]",
+                      value: "",
+                    }),
+                  ),
+                  r
                 );
-              })(t, n, r, o),
-            [t, n, r, o],
+              })(t, n, r),
+            [t, n, r],
           );
-        return a.createElement(a.Fragment, null, ...l);
+        return a.createElement(a.Fragment, null, ...o);
       }
       var Po = n(21491),
         yo = n.n(Po);
