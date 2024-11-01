@@ -2519,7 +2519,7 @@
     "MeetSteam_CapabableEnglish_Yes": "I can speak English just fine, thank you.",
     "MeetSteam_CapabableEnglish_No": "No, I am not comfortable conversing in English",
     "MeetSteam_LanguagePref": "Which language would you prefer?",
-    "MeetSteam_LanguagePref_ttip": "This is to help us deteremine if interpretters would be needed when hosting such an event",
+    "MeetSteam_LanguagePref_ttip": "This is to help us determine if interpreters would be needed when hosting such an event",
     "ReactTabulator_Loading": "Loading",
     "ReactTabulator_Error": "Error",
     "ReactTabulator_Item": "item",
