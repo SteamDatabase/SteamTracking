@@ -5214,12 +5214,12 @@ $tICAPIJobListHashLoadSave
 --disable-accelerated-video-decode
 --disable-backgrounding-occluded-windows
 --disable-breakpad
+--disable-ffmpeg-hevc
 --disable-gpu
 --disable-gpu-compositing
 --disable-gpu-sandbox
 --disable-gpu-watchdog
 --disable-hang-monitor
---disable-hevc
 --disable-quick-menu
 --disable-rate-limiter
 --disable-seccomp-filter-sandbox
@@ -5458,6 +5458,7 @@ $tICAPIJobListHashLoadSave
 -cef-enable-debugging
 -cef-enable-fatal-dcheck
 -cef-enable-gpu-debugging
+-cef-enable-low-delay-live-stream
 -cef-enable-vaapi
 -cef-force-32bit
 -cef-force-accessibility
@@ -6610,9 +6611,9 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2000
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2098
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2168
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3780
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3908
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4190
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3774
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3902
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4184
 /data/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
 /data/src/clientdll/sitelicenseclient.cpp
 /data/src/clientdll/steamclient.cpp
@@ -22526,8 +22527,7 @@ Failed to allocate message
 Failed to bind socket.  Error code 0x%08X.
 Failed to build environment for process launch\n
 Failed to build file listing
-Failed to build shader cache path in ProcessNativeDriverCache.
-Failed to build shader cache path in ThreadedReadDepotAndWriteDriverCache.
+Failed to build shader cache path in CProcessShaderCacheJob.
 Failed to build workshop manifest %llu for item %llu
 Failed to cache settings for account ID %u
 Failed to check CEG files
@@ -29355,6 +29355,7 @@ RedCompra
 RedeemFriendInviteToken
 RedeemGuestPass
 RedeemGuestPassResponse
+Reduce buffering requirements for live video playback
 Redundant relay address: 
 RefreshDevices
 RefreshLibraryFolders
@@ -33695,6 +33696,7 @@ Valve
 Valve CD-Key
 Valve/Steam HTTP Client 1.0
 ValveDiscountPromotionDetails
+ValveFFmpegAllowLowDelayHEVC
 ValveHWSurvey.GetSurveySchedule#1
 ValveHookScreenshots
 ValveIsScreenshotsHooked
@@ -53412,7 +53414,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct 30 2024 01:27:06
+steam Oct 31 2024 22:20:13
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

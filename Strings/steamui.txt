@@ -52,10 +52,10 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123(
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123H
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -754,7 +754,6 @@
 "S\n'CCloud_AppCloudStateChange_Notification
 "S\n)CPartnerApps_GetDepotBuildResult_Response
 "S\n9CChatUsability_RequestClientUsabilityMetrics_Notification
-"S`SE
 "T\n'CBroadcast_BroadcastStatus_Notification
 "T\n(CPartnerApps_GetDepotBuildResult_Request
 "T\n+CCloud_ClientLogUploadComplete_Notification
@@ -1893,7 +1892,6 @@ ${LANGUAGE}
 %s : unexpected state %u
 %s < %.*s < ...%s
 %s = "%s" - %s\n
-%s Frame [tick=%llu][delta = %lldms]%s\n
 %s HTTP Client
 %s PARAMETERS
 %s PRIVATE KEY
@@ -1964,7 +1962,7 @@ ${LANGUAGE}
 %s/.steam/steam
 %s/Steam/registry.vdf
 %s/achievement_progress.json
-%s/app_config/timeline/%s
+%s/app_config/timeline/%s?t=%u&cv=%u
 %s/appcache/librarycache
 %s/assets.vdf
 %s/chromehtml
@@ -6372,7 +6370,6 @@ ${LANGUAGE}
 0B_u
 0F`8
 0HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
-0H~B
 0SX;
 0Z@q
 0ZQ;
@@ -6444,6 +6441,7 @@ ${LANGUAGE}
 0\tzc
 0`P0
 0fl:
+0h~B
 0pp@5tqE?|sO541
 0x%llx
 0|t?L
@@ -8929,7 +8927,6 @@ ${LANGUAGE}
 2I5N
 2Ogx
 2RH(
-2V~B
 2Y\n\vVideoClient
 2Yc-
 2\f.EVRLinkCaps:
@@ -8993,6 +8990,7 @@ ${LANGUAGE}
 2prB
 2s\n\rChatUsability
 2sssua
+2v~B
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
 3$EE\f
@@ -9813,7 +9811,6 @@ ${LANGUAGE}
 3\n\temoticons
 3\n\vuser_status
 3\v;8BJ\nH
-3b~B
 3ej\n
 3pay
 3psC'dcG,
@@ -10563,7 +10560,6 @@ ${LANGUAGE}
 4crypto/ec/ec2_oct.c
 4h\4
 4i5U6B738%9
-4q~B
 4tpD
 5$SBq`
 5,czQH
@@ -10660,7 +10656,6 @@ ${LANGUAGE}
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
 52F*
-530.41.03
 53CAccountHardware_RegisterValveIndexComponent_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
@@ -13780,7 +13775,6 @@ CGpuTopology: failed to get physical device count\n
 CGpuTopology: failed to initialize device: %p\n
 CGpuTopology: failed to load vulkan entrypoints
 CGpuTopology: failed to load vulkan instance entrypoints
-CGpuTopology: previous vulkan init attempt crashed
 CGpuTopology: vulkan instance version too old: %d.%d.%d\n
 CH264FrameCombiner::BuildFrameFromSlicesH264
 CHACHA20
@@ -17484,6 +17478,7 @@ Failed system(%s) in execute test: %d\n
 Failed to Generate system report
 Failed to SteamService_GetIPCServer
 Failed to acquire app update lock, using old path\n
+Failed to add audio sample
 Failed to add process audio recorder to mixer
 Failed to add socket to epoll set (read) - errno = %d\n
 Failed to add socket to epoll set (write) - errno = %d\n
@@ -21764,7 +21759,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 30 2024 01:27:15
+Oct 31 2024 22:19:10
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -22888,10 +22883,11 @@ RearLeftUpper
 RearRightLower
 RearRightUpper
 Rebuild
+Received a frame with present time of 0\n
 Received bad client magic byte string
 Received content-type: application/x-www-form-urlencoded with unsupported charset, %s\n
 Received fragment with too large data size, truncating\n
-Received frame time went backward, throwing out frame: %lldms, %lldms, %llu, -%lldms\n
+Received frame time went backward, throwing out frame [repeat=%s]: %lldms, %lldms, %llu, -%lldms\n
 Received frame with a present timestamp in the future: [frame=%llu][now=%llu]
 Received large message over websocket, payload size %llu
 Received logon failure response
@@ -27042,6 +27038,7 @@ Zulu
 [%04d] %07.2f %07.2f
 [%06.2f] %06.3f %06.3f
 [%07d] %09.2f %09.2f %08.2fp
+[%llu] %s Frame [tick=%llu][present=%llu][delta = %lldms]%s\n
 [%s] %.*s\r\n
 [%s] %s=%s\n
 [%s] Found %d recordings to consider
@@ -39971,7 +39968,6 @@ number_value
 numbers
 numbers out of order in {} quantifier
 nv->name->len > 0
-nvidia
 nxBT6 
 o&1m&
 o2i_ECPublicKey

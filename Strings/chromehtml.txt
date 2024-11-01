@@ -476,12 +476,12 @@ $\n k_SystemAudioPortDirection_Input
 --disable-accelerated-video-decode
 --disable-backgrounding-occluded-windows
 --disable-breakpad
+--disable-ffmpeg-hevc
 --disable-gpu
 --disable-gpu-compositing
 --disable-gpu-sandbox
 --disable-gpu-watchdog
 --disable-hang-monitor
---disable-hevc
 --disable-quick-menu
 --disable-seccomp-filter-sandbox
 --disable-smooth-scrolling
@@ -547,6 +547,7 @@ $\n k_SystemAudioPortDirection_Input
 -cef-enable-debugging
 -cef-enable-fatal-dcheck
 -cef-enable-gpu-debugging
+-cef-enable-low-delay-live-stream
 -cef-enable-vaapi
 -cef-force-32bit
 -cef-force-accessibility
@@ -2209,6 +2210,7 @@ Ran out of IPC SharedObjectManager entries!\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Recursion limit at end of parse should be 
+Reduce buffering requirements for live video playback
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
 ReleaseMessage
@@ -2496,6 +2498,7 @@ Value of type "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
+ValveFFmpegAllowLowDelayHEVC
 VulkanFromANGLE
 WARNING
 Warning

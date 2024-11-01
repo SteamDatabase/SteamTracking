@@ -233,7 +233,6 @@ ${COMMUNITY_BASE_URL}groups/${VANITY_ID}
 ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
-${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/5/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
@@ -1279,6 +1278,7 @@ ${STATS_BASE_URL}steamdeck/reservations/
 ${STEAMTV_BASE_URL}parental/ajaxunlock
 ${STORE_BASE_URL}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
+${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser" : "saleaction/ajaxgetsaledynamicappqueryforuser"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxrecentsaleevents" : "saleaction/ajaxrecenttaggedsaleevents"}
 ${STORE_BASE_URL}${image_url}
@@ -1548,7 +1548,6 @@ ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts
 ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatlist
 ${STORE_BASE_URL}saleaction/ajaxgetusergiveawayregistration
 ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
-${STORE_BASE_URL}saleaction/ajaxgetwishlistrecommendation
 ${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration

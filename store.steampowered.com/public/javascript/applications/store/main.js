@@ -58832,16 +58832,15 @@
     77516: (e, t, r) => {
       "use strict";
       r.d(t, {
-        FZ: () => ce,
+        FZ: () => le,
         A4: () => R,
         iy: () => M,
         ZA: () => L,
         Dn: () => W,
-        O8: () => ae,
         kX: () => N,
         ye: () => re,
         Xx: () => U,
-        DJ: () => se,
+        DJ: () => ae,
         G6: () => ie,
         zv: () => P,
         IS: () => K,
@@ -58851,14 +58850,14 @@
         w: () => ne,
         EE: () => H,
         Zf: () => Q,
-        Ac: () => me,
-        lh: () => ue,
+        Ac: () => ce,
+        lh: () => me,
         mz: () => ee,
         qQ: () => X,
         MW: () => J,
         qR: () => te,
         _B: () => x,
-        j3: () => de,
+        j3: () => ue,
         Yw: () => q,
         zK: () => T,
         DU: () => I,
@@ -58868,7 +58867,7 @@
         bv: () => E,
         Kd: () => A,
         b9: () => G,
-        cB: () => oe,
+        cB: () => se,
       });
       var i = r(34629),
         n = r(79821),
@@ -58979,6 +58978,8 @@
         "contenthub_upcoming",
         "contenthub_all",
         "all",
+        "ml_wishlist_recommender",
+        "ml_playtime_recommender",
       ];
       function N(e) {
         return j.indexOf(e) >= 0;
@@ -59078,6 +59079,16 @@
           label: "#Sale_BrowserSortOption_ContentHub_All",
           flavor: "contenthub_all",
           tooltip: "#Sale_BrowserSortOption_ContentHub_All_ttip",
+        },
+        {
+          label: "#Sale_BrowserSortOption_MLWishlist",
+          flavor: "ml_wishlist_recommender",
+          tooltip: "#Sale_BrowserSortOption_MLWishlist_ttip",
+        },
+        {
+          label: "#Sale_BrowserSortOption_MLPlaytime",
+          flavor: "ml_playtime_recommender",
+          tooltip: "#Sale_BrowserSortOption_MLPlaytime_ttip",
         },
       ];
       function x(e) {
@@ -59179,19 +59190,11 @@
         section_type: "unselected_empty",
       };
       var ne;
-      function ae(e) {
-        return (
-          e &&
-          e.nProjectID > 0 &&
-          null != e.nPublishedVersion &&
-          e.sAccessToken?.length > 0
-        );
-      }
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
       })(ne || (ne = {}));
-      const se = {
+      const ae = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -59216,8 +59219,8 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        oe = "old_announce_",
-        le = [
+        se = "old_announce_",
+        oe = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -59233,7 +59236,7 @@
           "betachannel",
           "previewchannel",
         ],
-        ce = [
+        le = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",
@@ -59275,7 +59278,7 @@
           "repost_source_possible",
           "autocreate_promotools",
         ],
-        me = [
+        ce = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -59288,7 +59291,7 @@
           "curator_group_members",
           "curator_public",
         ];
-      class ue {
+      class me {
         constructor() {
           (0, s.Gn)(this);
         }
@@ -59310,7 +59313,7 @@
         postTime = void 0;
         visibility_state = P.k_EEventStateUnpublished;
         broadcaster = void 0;
-        jsondata = se;
+        jsondata = ae;
         nCommentCount = 0;
         nVotesUp = 0;
         nVotesDown = 0;
@@ -59339,7 +59342,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new ue(),
+          let t = new me(),
             r = JSON.parse(e);
           return (
             Object.assign(t, r),
@@ -59375,7 +59378,7 @@
           );
         }
         clone(e = !1) {
-          let t = new ue();
+          let t = new me();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -59427,7 +59430,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  le.includes(e) && t.vecTags.push(e);
+                  oe.includes(e) && t.vecTags.push(e);
                 }),
             t
           );
@@ -59820,13 +59823,13 @@
         GetSubTitleWithSummaryFallback(e) {
           return (
             h.NT.GetWithFallback(this.jsondata?.localized_subtitle, e) ||
-            ue.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            me.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
           return (
             h.NT.GetWithFallback(this.jsondata?.localized_summary, e) ||
-            ue.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            me.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -60087,14 +60090,14 @@
             );
           return (
             this.jsondata.tagged_items?.forEach((e) => {
-              ue.AccumulateCapsuleListIDs([e.capsule], r, i, t);
+              me.AccumulateCapsuleListIDs([e.capsule], r, i, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
               if (re(e.section_type))
-                ue.AccumulateCapsuleListIDs(e.capsules, r, i, t);
+                me.AccumulateCapsuleListIDs(e.capsules, r, i, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const n of e.tabs)
-                  ue.AccumulateCapsuleListIDs(n.capsules, r, i, t);
+                  me.AccumulateCapsuleListIDs(n.capsules, r, i, t);
             }),
             i
           );
@@ -60301,52 +60304,52 @@
           return this.GetIncludedRealmList().includes(e);
         }
       }
-      (0, i.Cg)([s.sH], ue.prototype, "GID", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "AnnouncementGID", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "forumTopicGID", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "type", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "appid", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "name", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "description", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "timestamp_loc_updated", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "startTime", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "endTime", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "visibilityStartTime", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "visibilityEndTime", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "m_nBuildID", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "m_strBuildBranch", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "postTime", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "visibility_state", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "broadcaster", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "jsondata", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "nCommentCount", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "nVotesUp", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "nVotesDown", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "bOldAnnouncement", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "announcementClanSteamID", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "loadedAllLanguages", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "bLoaded", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "deleteInProgress", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "vecTags", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "last_update_steamid", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "rtime32_last_modified", void 0),
+      (0, i.Cg)([s.sH], me.prototype, "GID", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "AnnouncementGID", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "forumTopicGID", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "type", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "appid", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "name", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "description", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "timestamp_loc_updated", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "startTime", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "endTime", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "visibilityStartTime", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "visibilityEndTime", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "m_nBuildID", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "m_strBuildBranch", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "postTime", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "visibility_state", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "broadcaster", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "jsondata", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "nCommentCount", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "nVotesUp", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "nVotesDown", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "bOldAnnouncement", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "announcementClanSteamID", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "loadedAllLanguages", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "bLoaded", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "deleteInProgress", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "vecTags", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "last_update_steamid", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "rtime32_last_modified", void 0),
         (0, i.Cg)(
           [s.sH],
-          ue.prototype,
+          me.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, i.Cg)(
           [s.sH],
-          ue.prototype,
+          me.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, i.Cg)([s.sH], ue.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "video_preview_type", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "video_preview_id", void 0),
-        (0, i.Cg)([s.sH], ue.prototype, "m_overrideCurrentDay", void 0);
-      function de(e) {
+        (0, i.Cg)([s.sH], me.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "video_preview_type", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "video_preview_id", void 0),
+        (0, i.Cg)([s.sH], me.prototype, "m_overrideCurrentDay", void 0);
+      function ue(e) {
         return e?.replace(/[()]/g, "\\$&");
       }
     },

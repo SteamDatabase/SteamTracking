@@ -5114,10 +5114,9 @@
         ZA: () => P,
         g8: () => G,
         Dn: () => N,
-        O8: () => le,
         kX: () => W,
         ye: () => ie,
-        DJ: () => de,
+        DJ: () => ce,
         G6: () => ne,
         p6: () => se,
         zv: () => O,
@@ -5129,20 +5128,20 @@
         EE: () => Z,
         Zf: () => J,
         jR: () => X,
-        Ac: () => ge,
-        lh: () => ye,
+        Ac: () => he,
+        lh: () => ge,
         mz: () => re,
         qQ: () => ee,
         MW: () => te,
         qR: () => ae,
         _B: () => x,
-        sj: () => ce,
-        j3: () => ve,
+        sj: () => le,
+        j3: () => Se,
         Yw: () => q,
         zK: () => R,
-        Pd: () => pe,
-        p$: () => _e,
-        dm: () => ue,
+        Pd: () => ue,
+        p$: () => pe,
+        dm: () => me,
         DU: () => M,
         qF: () => k,
         mW: () => H,
@@ -5152,8 +5151,8 @@
         RZ: () => U,
         b9: () => j,
         go: () => V,
-        cB: () => me,
-        Yz: () => Se,
+        cB: () => de,
+        Yz: () => ye,
       });
       var a = r(34629),
         i = r(79821),
@@ -5260,6 +5259,8 @@
         "contenthub_upcoming",
         "contenthub_all",
         "all",
+        "ml_wishlist_recommender",
+        "ml_playtime_recommender",
       ];
       function W(e) {
         return V.indexOf(e) >= 0;
@@ -5359,6 +5360,16 @@
           label: "#Sale_BrowserSortOption_ContentHub_All",
           flavor: "contenthub_all",
           tooltip: "#Sale_BrowserSortOption_ContentHub_All_ttip",
+        },
+        {
+          label: "#Sale_BrowserSortOption_MLWishlist",
+          flavor: "ml_wishlist_recommender",
+          tooltip: "#Sale_BrowserSortOption_MLWishlist_ttip",
+        },
+        {
+          label: "#Sale_BrowserSortOption_MLPlaytime",
+          flavor: "ml_playtime_recommender",
+          tooltip: "#Sale_BrowserSortOption_MLPlaytime_ttip",
         },
       ];
       function x(e) {
@@ -5461,17 +5472,7 @@
         },
         se = { internal_type: "subscription_pricing" };
       var oe;
-      function le(e) {
-        var t;
-        return (
-          e &&
-          e.nProjectID > 0 &&
-          null != e.nPublishedVersion &&
-          (null === (t = e.sAccessToken) || void 0 === t ? void 0 : t.length) >
-            0
-        );
-      }
-      function ce(e, t) {
+      function le(e, t) {
         (e.library_spotlight = void 0),
           e.email_setting &&
             ((e.email_setting.locked = void 0),
@@ -5502,7 +5503,7 @@
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
       })(oe || (oe = {}));
-      const de = {
+      const ce = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -5527,11 +5528,11 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        me = "old_announce_",
-        ue = 80,
-        pe = 120,
-        _e = 180,
-        he = [
+        de = "old_announce_",
+        me = 80,
+        ue = 120,
+        pe = 180,
+        _e = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -5547,7 +5548,7 @@
           "betachannel",
           "previewchannel",
         ],
-        ge = [
+        he = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -5560,7 +5561,7 @@
           "curator_group_members",
           "curator_public",
         ];
-      class ye {
+      class ge {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -5579,7 +5580,7 @@
             (this.postTime = void 0),
             (this.visibility_state = O.k_EEventStateUnpublished),
             (this.broadcaster = void 0),
-            (this.jsondata = de),
+            (this.jsondata = ce),
             (this.nCommentCount = 0),
             (this.nVotesUp = 0),
             (this.nVotesDown = 0),
@@ -5603,7 +5604,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new ye(),
+          let t = new ge(),
             r = JSON.parse(e);
           return (
             Object.assign(t, r),
@@ -5639,7 +5640,7 @@
           );
         }
         clone(e = !1) {
-          let t = new ye();
+          let t = new ge();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -5691,7 +5692,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  he.includes(e) && t.vecTags.push(e);
+                  _e.includes(e) && t.vecTags.push(e);
                 }),
             t
           );
@@ -6118,7 +6119,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || ye.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || ge.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -6130,7 +6131,7 @@
                 : r.localized_summary,
               e,
             ) ||
-            ye.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            ge.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -6161,7 +6162,7 @@
               ])),
               (e = (0, i.zV)(e)),
               (e = (0, C.aX)(e)),
-              (0, C.bC)(e, t || _e))
+              (0, C.bC)(e, t || pe))
             : "";
         }
         BHasTag(e) {
@@ -6411,14 +6412,14 @@
             null === (r = this.jsondata.tagged_items) ||
               void 0 === r ||
               r.forEach((e) => {
-                ye.AccumulateCapsuleListIDs([e.capsule], a, i, t);
+                ge.AccumulateCapsuleListIDs([e.capsule], a, i, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
               if (ie(e.section_type))
-                ye.AccumulateCapsuleListIDs(e.capsules, a, i, t);
+                ge.AccumulateCapsuleListIDs(e.capsules, a, i, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const r of e.tabs)
-                  ye.AccumulateCapsuleListIDs(r.capsules, a, i, t);
+                  ge.AccumulateCapsuleListIDs(r.capsules, a, i, t);
             }),
             i
           );
@@ -6656,56 +6657,56 @@
           return this.GetIncludedRealmList().includes(e);
         }
       }
-      (0, a.Cg)([s.sH], ye.prototype, "GID", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "AnnouncementGID", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "forumTopicGID", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "type", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "appid", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "name", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "description", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "timestamp_loc_updated", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "startTime", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "endTime", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "visibilityStartTime", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "visibilityEndTime", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "m_nBuildID", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "m_strBuildBranch", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "postTime", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "visibility_state", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "broadcaster", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "jsondata", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "nCommentCount", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "nVotesUp", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "nVotesDown", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "bOldAnnouncement", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "announcementClanSteamID", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "loadedAllLanguages", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "bLoaded", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "deleteInProgress", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "vecTags", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "last_update_steamid", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "rtime32_last_modified", void 0),
+      (0, a.Cg)([s.sH], ge.prototype, "GID", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "AnnouncementGID", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "forumTopicGID", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "type", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "appid", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "name", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "description", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "timestamp_loc_updated", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "startTime", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "endTime", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "visibilityStartTime", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "visibilityEndTime", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "m_nBuildID", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "m_strBuildBranch", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "postTime", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "visibility_state", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "broadcaster", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "jsondata", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "nCommentCount", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "nVotesUp", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "nVotesDown", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "bOldAnnouncement", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "announcementClanSteamID", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "loadedAllLanguages", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "bLoaded", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "deleteInProgress", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "vecTags", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "last_update_steamid", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "rtime32_last_modified", void 0),
         (0, a.Cg)(
           [s.sH],
-          ye.prototype,
+          ge.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, a.Cg)(
           [s.sH],
-          ye.prototype,
+          ge.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, a.Cg)([s.sH], ye.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "video_preview_type", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "video_preview_id", void 0),
-        (0, a.Cg)([s.sH], ye.prototype, "m_overrideCurrentDay", void 0);
-      const Se = (e) => {
+        (0, a.Cg)([s.sH], ge.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "video_preview_type", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "video_preview_id", void 0),
+        (0, a.Cg)([s.sH], ge.prototype, "m_overrideCurrentDay", void 0);
+      const ye = (e) => {
         const t = (0, v.K)(e.appid);
         return e.appid ? t : w.UF.IS_ALLOWED_SC;
       };
-      function ve(e) {
+      function Se(e) {
         return null == e ? void 0 : e.replace(/[()]/g, "\\$&");
       }
     },
