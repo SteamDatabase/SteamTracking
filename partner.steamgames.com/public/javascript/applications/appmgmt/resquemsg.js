@@ -69,6 +69,12 @@
     92825: (e) => {
       e.exports = { Ctn: "_3gnQfZ3NUW9NFF3WllsQ6b" };
     },
+    64734: (e) => {
+      e.exports = {
+        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
+      };
+    },
     43709: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => X });
@@ -316,7 +322,7 @@
       var E = n(33793),
         S = n(65285),
         v = n(71541);
-      function C(e) {
+      function M(e) {
         const [t, n] = (0, r.useState)(null),
           { fnAddProductID: s } = f();
         return r.createElement(
@@ -328,7 +334,7 @@
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          r.createElement(M, { selected: t, setSelected: n }),
+          r.createElement(C, { selected: t, setSelected: n }),
           r.createElement(
             v.$n,
             {
@@ -343,7 +349,7 @@
           ),
         );
       }
-      function M(e) {
+      function C(e) {
         const { selected: t, setSelected: n } = e,
           s = (0, r.useRef)(),
           a = (function () {
@@ -397,9 +403,9 @@
         R = n(99637),
         P = n(8905),
         w = n(9154),
-        k = n(738),
-        y = n(48479),
-        T = n(56011),
+        T = n(738),
+        k = n(48479),
+        y = n(56011),
         D = n(61859),
         I = n(95695),
         L = n(92825),
@@ -479,7 +485,7 @@
               "div",
               null,
               t.map((e) =>
-                r.createElement(q, {
+                r.createElement(U, {
                   key: `${e.edistributor}_${e.product_identifier}`,
                   productID: e,
                 }),
@@ -491,7 +497,7 @@
               "No products with reservation position messages exists.",
             );
       }
-      function Y(e) {
+      function q(e) {
         return r.createElement(
           "div",
           null,
@@ -508,7 +514,7 @@
           ),
         );
       }
-      function U(e) {
+      function z(e) {
         h();
         return r.createElement(
           "div",
@@ -527,13 +533,13 @@
           r.createElement(
             v.$n,
             {
-              onClick: (e) => (0, k.pg)(r.createElement(K, null), (0, T.uX)(e)),
+              onClick: (e) => (0, T.pg)(r.createElement(Q, null), (0, y.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
         );
       }
-      function q(e) {
+      function U(e) {
         const { productID: t } = e,
           n = (function (e) {
             return o.find(
@@ -550,7 +556,7 @@
             return (0, _.hL)(p.Get().GetPositionListChangeCallback(e), n), t;
           })(t);
         return r.createElement(
-          y.qx,
+          k.qx,
           {
             bStartMinimized: !1,
             title: s,
@@ -560,7 +566,7 @@
             v.$n,
             {
               onClick: (e) =>
-                (0, k.pg)(r.createElement(x, { productID: t }), (0, T.uX)(e)),
+                (0, T.pg)(r.createElement(x, { productID: t }), (0, y.uX)(e)),
             },
             "Add new start position",
           ),
@@ -584,7 +590,7 @@
               "tbody",
               null,
               a.map((e) =>
-                r.createElement(Q, {
+                r.createElement(Y, {
                   key: s + e.start_queue_position,
                   positionMsg: e,
                 }),
@@ -593,7 +599,7 @@
           ),
         );
       }
-      function Q(e) {
+      function Y(e) {
         const { positionMsg: t } = e;
         return r.createElement(
           "tr",
@@ -631,12 +637,12 @@
               v.$n,
               {
                 onClick: (e) =>
-                  (0, k.pg)(
+                  (0, T.pg)(
                     r.createElement(x, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
-                    (0, T.uX)(e),
+                    (0, y.uX)(e),
                   ),
               },
               "Update",
@@ -645,9 +651,9 @@
               v.$n,
               {
                 onClick: (e) =>
-                  (0, k.pg)(
-                    r.createElement(W, { positionMsg: t }),
-                    (0, T.uX)(e),
+                  (0, T.pg)(
+                    r.createElement(H, { positionMsg: t }),
+                    (0, y.uX)(e),
                   ),
               },
               "Delete",
@@ -727,7 +733,7 @@
                   fnSetTimeToUpdate: u,
                 }),
                 r.createElement("br", null),
-                r.createElement(O, {
+                r.createElement(K, {
                   strToken: d,
                   fnSetToken: m,
                   rtEstimateDate: c,
@@ -735,7 +741,7 @@
               ),
             );
       }
-      function W(e) {
+      function H(e) {
         const { positionMsg: t, closeModal: n } = e,
           { fnDeletePositionMessage: s } = f(),
           o = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
@@ -764,7 +770,7 @@
               },
             });
       }
-      function K(e) {
+      function Q(e) {
         const { closeModal: t } = e,
           { fnReloadReservationPositionMessages: n } = f(),
           [s, o] = (0, r.useState)(!1);
@@ -782,7 +788,7 @@
           })
         );
       }
-      const H = [
+      const W = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -794,11 +800,11 @@
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
       ];
-      function O(e) {
+      function K(e) {
         const { strToken: t, fnSetToken: n, rtEstimateDate: s } = e,
           o = (0, r.useMemo)(
             () =>
-              H.map((e) => ({
+              W.map((e) => ({
                 label: r.createElement(B, {
                   strToken: e,
                   rtEstimatedNotifcationDate: s,
@@ -839,52 +845,52 @@
           ),
         );
       }
-      var z = n(52038),
-        J = n(45737),
-        V = n.n(J);
+      var O = n(52038),
+        V = n(45737),
+        J = n.n(V);
       function X(e) {
         return r.createElement(
           "div",
-          { className: (0, z.A)(S.ctn, V().AdminPageCtn) },
+          { className: (0, O.A)(S.ctn, J().AdminPageCtn) },
           r.createElement(
             "h1",
-            { className: V().PageTitle },
+            { className: J().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
           r.createElement("hr", { className: "VO" }),
           r.createElement(
             "div",
-            { className: V().ColumnCtn },
+            { className: J().ColumnCtn },
             r.createElement(
               "div",
-              { className: V().LeftCol },
+              { className: J().LeftCol },
               r.createElement(
                 "div",
-                { className: V().SectionCtn },
-                r.createElement(C, null),
+                { className: J().SectionCtn },
+                r.createElement(M, null),
               ),
               r.createElement(
                 "div",
-                { className: V().SectionCtn },
+                { className: J().SectionCtn },
                 r.createElement(F, null),
               ),
             ),
             r.createElement(
               "div",
-              { className: V().RightCol },
+              { className: J().RightCol },
               r.createElement(
                 "div",
-                { className: V().SectionCtn },
-                r.createElement(Y, null),
+                { className: J().SectionCtn },
+                r.createElement(q, null),
               ),
               r.createElement(
                 "div",
-                { className: V().SectionCtn },
-                r.createElement(U, null),
+                { className: J().SectionCtn },
+                r.createElement(z, null),
               ),
               r.createElement(
                 "div",
-                { className: V().SectionCtn },
+                { className: J().SectionCtn },
                 r.createElement(v.JU, null, "Useful Links:"),
                 r.createElement(
                   "ul",
@@ -905,6 +911,78 @@
               ),
             ),
           ),
+        );
+      }
+    },
+    48479: (e, t, n) => {
+      "use strict";
+      n.d(t, { AQ: () => _, qx: () => g });
+      var r = n(71541),
+        s = n(61859),
+        o = n(12155),
+        a = n(90626),
+        i = n(52038),
+        l = n(95695),
+        c = n(84811),
+        u = n(64734),
+        d = n(65946),
+        m = n(26408);
+      function _(e) {
+        const {
+            title: t,
+            tooltip: n,
+            getMinimized: r,
+            toggleMinimized: s,
+            className: o,
+            children: _,
+          } = e,
+          g = (0, d.q3)(() => r());
+        return a.createElement(
+          a.Fragment,
+          null,
+          a.createElement(
+            "div",
+            {
+              className: (0, i.A)(
+                o,
+                u.SectionTitleHeader,
+                u.required_title,
+                "SectionTitleHeader",
+              ),
+            },
+            a.createElement(
+              "div",
+              {
+                className: (0, i.A)(
+                  l.CollapsableSectionTitle,
+                  "EventEditorTextTitle",
+                ),
+              },
+              t,
+              Boolean(n) && a.createElement(m.o, { tooltip: n }),
+            ),
+            a.createElement(p, { bIsMinimized: g, fnToggleMinimize: s }),
+          ),
+          !g && a.createElement(c.tH, null, _),
+        );
+      }
+      function g(e) {
+        const [t, n] = a.useState(Boolean(e.bStartMinimized));
+        return a.createElement(
+          _,
+          { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
+          e.children,
+        );
+      }
+      function p(e) {
+        const { bIsMinimized: t, fnToggleMinimize: n } = e,
+          i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return a.createElement(
+          r.$n,
+          { "data-tooltip-text": (0, s.we)(i), onClick: n },
+          e.bIsMinimized
+            ? a.createElement(o.hz4, null)
+            : a.createElement(o.Xjb, null),
         );
       }
     },

@@ -430,50 +430,6 @@
         AddLinkDropDown: "cmPkLJRitrSssXCUhvpTu",
       };
     },
-    33645: (e) => {
-      e.exports = {
-        Bold: "_3cln317VYhwhE1fSeMCG48",
-        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
-        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
-        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
-        Header2: "_6-VR2WCBCDupCcUN5INQM",
-        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
-        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
-        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
-        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
-        SmallText: "WBzrd438Bd8Z3J-j_iglW",
-        Underline: "GrhFWtBdrSZP611s1UqqT",
-        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
-        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
-        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
-        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
-        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
-        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
-        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
-        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
-        Code: "_2ODaX8lO7DKLKke76c2Wya",
-        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
-        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
-        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
-        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
-        HR: "-xPK0REpludHjRG8xQfih",
-        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
-        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
-        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
-        TableData: "_1PCHOM5zSRFfeHzwDmEukB",
-        TableHeader: "_1NpENNz7rvObsTC99AQFda",
-        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
-        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
-        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
-        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
-        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
-        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
-        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
-        Image: "_3K0NuxYUYncdQ-cNK7udMn",
-        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
-        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
-      };
-    },
     33924: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -568,177 +524,6 @@
         ToolTipContainer: "_3PRdiJdKKfTnwLnTfbCkEz",
       };
     },
-    1990: (e) => {
-      e.exports = {
-        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
-        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
-        Active: "_8XjrTFzaSA8ubHvHCu44L",
-        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
-        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
-        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
-        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
-      };
-    },
-    32179: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        MY: () => d,
-        UA: () => p,
-        Yd: () => E,
-        rN: () => _,
-        vh: () => m,
-      });
-      var a = n(34629),
-        r = n(41735),
-        o = n.n(r),
-        l = n(90626),
-        s = n(68797),
-        i = n(78327),
-        c = n(6419);
-      function d() {
-        return 2 == i.TS.EUNIVERSE ? 12 : 1;
-      }
-      class u {
-        m_mapOptInToPartners = new Map();
-        m_mapPromises = new Map();
-        GetPartnerInfo(e) {
-          return this.m_mapOptInToPartners.get(e);
-        }
-        BHasPartnerInfoLoad(e) {
-          return this.m_mapOptInToPartners.has(e);
-        }
-        async FindPartnerByName(e) {
-          return (
-            this.m_mapPromises.has(e) ||
-              this.m_mapPromises.set(e, this.InternalFindPartnerByName(e)),
-            this.m_mapPromises.get(e)
-          );
-        }
-        async InternalFindPartnerByName(e) {
-          const t = new Array();
-          try {
-            const n = i.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-              a = {
-                sessionid: i.TS.SESSIONID,
-                searchtext: e,
-                origin: self.origin,
-              },
-              r = await o().get(n, { params: a });
-            200 == r?.status && 1 == r?.data?.success
-              ? r.data.publishers.forEach((e) => {
-                  const n = {
-                    partnerid: e.publisherid,
-                    name: e.publishername,
-                    partner_url:
-                      i.TS.PARTNER_BASE_URL + `pub/publisher/${e.publisherid}/`,
-                    contacts: e.contacts,
-                  };
-                  this.m_mapOptInToPartners.set(e.publisherid, n), t.push(n);
-                })
-              : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
-                );
-          } catch (e) {
-            const t = (0, s.H)(e);
-            console.error(
-              "CPartnerInfoStore.FindPartnerByName failed add: " +
-                t.strErrorMsg,
-              t,
-            );
-          }
-          return t;
-        }
-        async LoadPartnerInfo(e) {
-          if (this.m_mapOptInToPartners.has(e))
-            return this.m_mapOptInToPartners.get(e);
-          await this.FindPartnerByName("" + e);
-          return (
-            this.BHasPartnerInfoLoad(e) ||
-              this.m_mapOptInToPartners.set(e, null),
-            this.m_mapOptInToPartners.get(e)
-          );
-        }
-        async LoadMultiplePartnerInfo(e) {
-          if (!e || 0 == e.length) return [];
-          const t = e.map((e) => !this.m_mapOptInToPartners.has(e));
-          if (t.length > 0) {
-            const e = t.map((e) => this.FindPartnerByName("" + e));
-            await Promise.all(e);
-          }
-          return e.map((e) => this.m_mapOptInToPartners.get(e)).filter(Boolean);
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              ("dev" != i.TS.WEB_UNIVERSE && "beta" != i.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = u.s_Singleton)),
-            u.s_Singleton
-          );
-        }
-        constructor() {
-          let e = JSON.parse(
-            JSON.stringify((0, i.Tc)("partner_info", "application_config")),
-          );
-          this.ValidateStoreDefault(e) &&
-            (e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e)),
-            "dev" == i.TS.WEB_UNIVERSE &&
-              console.log("DEV_DEUBG: CPartnerInfoStore::constructor", e));
-        }
-        ValidateStoreDefault(e) {
-          const t = e;
-          return (
-            !!(
-              t &&
-              Array.isArray(t) &&
-              t.length > 0 &&
-              "object" == typeof t[0]
-            ) &&
-            "number" == typeof t[0].partnerid &&
-            "string" == typeof t[0].name
-          );
-        }
-      }
-      function m(e) {
-        const [t, n] = (0, l.useState)(!1);
-        return (
-          (0, l.useEffect)(() => {
-            !t &&
-              e?.length > 0 &&
-              u
-                .Get()
-                .LoadMultiplePartnerInfo(e)
-                .then(() => n(!0));
-          }, [e, t]),
-          t
-        );
-      }
-      function p(e) {
-        const [t, n] = l.useState(() => u.Get().GetPartnerInfo(e));
-        return (
-          l.useEffect(() => {
-            !u.Get().BHasPartnerInfoLoad(e) && e > 0
-              ? u
-                  .Get()
-                  .LoadPartnerInfo(e)
-                  .then((e) => n(e))
-              : u.Get().BHasPartnerInfoLoad(e) &&
-                t?.partnerid != e &&
-                n(u.Get().GetPartnerInfo(e));
-          }, [e, t]),
-          [t]
-        );
-      }
-      function _() {
-        return { fnFindPartnerByName: u.Get().FindPartnerByName };
-      }
-      function E(e) {
-        return u.Get().GetPartnerInfo(e);
-      }
-      (0, a.Cg)([c.o], u.prototype, "FindPartnerByName", null);
-    },
     7517: (e, t, n) => {
       "use strict";
       n.d(t, { $: () => P });
@@ -793,7 +578,7 @@
               s.createElement("p", { className: "valveh2" }, "Valve Only:"),
               s.createElement(v, { nDaysInThePast: a, fnUpdateDaysInPast: i }),
               s.createElement(D, { stats: c }),
-              s.createElement(T, { stats: c }),
+              s.createElement(N, { stats: c }),
             )
           : null;
       }
@@ -885,7 +670,7 @@
           ),
         );
       }
-      function T(e) {
+      function N(e) {
         const { stats: t } = e,
           n = "total_gross_sales_usdx100",
           [a, r, o] = (0, s.useMemo)(() => {
@@ -926,13 +711,13 @@
                 s.createElement(
                   C.tH,
                   null,
-                  s.createElement(N, { Data: o, nPeak: a }),
+                  s.createElement(T, { Data: o, nPeak: a }),
                 ),
               ),
             )
           : null;
       }
-      const N = s.memo((e) => {
+      const T = s.memo((e) => {
         const { Data: t, nPeak: n } = e,
           a = (0, s.useCallback)(
             (e, n) =>
@@ -1314,7 +1099,7 @@
                         bEnablePointerEvents: !0,
                         nBodyDistance: 0,
                       },
-                      o.createElement(T, {
+                      o.createElement(N, {
                         key: S,
                         packageID: n,
                         strPriceKey: s,
@@ -1400,7 +1185,7 @@
           v = P || y || f,
           w = !(E || !l || (r && l == r)),
           D = 4 == p?.eState,
-          T = (0, u.A)(
+          N = (0, u.A)(
             b().PriceCell,
             _ && b().USD,
             E && b().ChangedLocally,
@@ -1413,12 +1198,12 @@
         return o.useMemo(
           () => ({
             strPriceWarning: k,
-            strClassName: T,
+            strClassName: N,
             bBadPrice: P,
             bShowSevereWarning: y,
             bShowWarningIcon: v,
           }),
-          [k, T, P, y, v],
+          [k, N, P, y, v],
         );
       }
       function w(e) {
@@ -1464,7 +1249,7 @@
           minute: "2-digit",
         });
       }
-      function T(e) {
+      function N(e) {
         const { packageID: t, strPriceKey: n } = e,
           {
             nPriceInCents: r,
@@ -1881,13 +1666,13 @@
             l.createElement(
               "div",
               { className: k.ExtraAssetsGrid },
-              t.map((e) => l.createElement(N, { key: e.name, extra_asset: e })),
+              t.map((e) => l.createElement(T, { key: e.name, extra_asset: e })),
             ),
           ),
-          l.createElement(T, { onFilesSelected: a }),
+          l.createElement(N, { onFilesSelected: a }),
         );
       }
-      function T(e) {
+      function N(e) {
         const { onFilesSelected: t } = e,
           [n, a] = (0, h.S)(t, { multiple: !0, accept: r.SG });
         return l.createElement(
@@ -1910,7 +1695,7 @@
           ),
         );
       }
-      function N(e) {
+      function T(e) {
         const { extra_asset: t } = e,
           [n, a] = (0, S.OP)(),
           [o, s, c] = (0, S.uD)(),
@@ -2517,8 +2302,8 @@
       }
       var w = n(29287),
         D = n(98724);
-      var T = n(37834),
-        N = n(52038),
+      var N = n(37834),
+        T = n(52038),
         R = n(61859),
         I = n(375),
         B = n(78327),
@@ -2597,7 +2382,7 @@
                       o = r.offsetTop;
                     if (void 0 !== o && o >= t.current.scrollTop) {
                       let t = r.getBoundingClientRect();
-                      (0, T.bQ)(e.current, t.left, t.top);
+                      (0, N.bQ)(e.current, t.left, t.top);
                       break;
                     }
                   }
@@ -2613,7 +2398,7 @@
           { view: m },
           a.createElement(f.Z, {
             key: `editordiv_${s}`,
-            className: (0, N.A)(r, L.Container),
+            className: (0, T.A)(r, L.Container),
             ref: x,
             spellCheck: s,
             focusable: !0,
@@ -2627,8 +2412,8 @@
         );
       });
       var M = n(4188),
-        O = n(4869),
-        F = n(71541),
+        F = n(4869),
+        O = n(71541),
         U = n(9154),
         G = n(30175);
       n(32754);
@@ -2678,13 +2463,13 @@
               strOKButtonText: (0, R.we)("#FormattingToolbar_InsertLink"),
               bOKDisabled: 0 == i.length,
             },
-            a.createElement(F.pd, {
+            a.createElement(O.pd, {
               ref: d,
               value: l,
               onChange: (e) => s(e.currentTarget.value),
               label: (0, R.we)("#FormattingToolbar_LinkText"),
             }),
-            a.createElement(F.pd, {
+            a.createElement(O.pd, {
               ref: u,
               value: i,
               onChange: (e) => c(e.currentTarget.value),
@@ -2704,7 +2489,7 @@
               command: D.tN,
               fnEnabledCheck: W,
             },
-            a.createElement(O.VnB, null),
+            a.createElement(F.VnB, null),
           ),
           a.createElement(
             G.fx,
@@ -2713,7 +2498,7 @@
               command: D.ZS,
               fnEnabledCheck: K,
             },
-            a.createElement(O.Bal, null),
+            a.createElement(F.Bal, null),
           ),
         );
       }
@@ -2731,12 +2516,12 @@
           a.createElement(
             G.GY,
             { tooltip: "#FormattingToolbar_Bold", mark: t.marks.strong },
-            a.createElement(O.l4n, null),
+            a.createElement(F.l4n, null),
           ),
           a.createElement(
             G.GY,
             { tooltip: "#FormattingToolbar_Italic", mark: t.marks.italic },
-            a.createElement(O.UKJ, null),
+            a.createElement(F.UKJ, null),
           ),
           a.createElement(
             G.GY,
@@ -2744,19 +2529,19 @@
               tooltip: "#FormattingToolbar_Underline",
               mark: t.marks.underline,
             },
-            a.createElement(O.Gj3, null),
+            a.createElement(F.Gj3, null),
           ),
           "strike" in t.marks &&
             a.createElement(
               G.GY,
               { tooltip: "#FormattingToolbar_Strike", mark: t.marks.strike },
-              a.createElement(O.tI4, null),
+              a.createElement(F.tI4, null),
             ),
           "code" in t.marks &&
             a.createElement(
               G.GY,
               { tooltip: "#FormattingToolbar_InlineCode", mark: t.marks.code },
-              a.createElement(O.bmT, null),
+              a.createElement(F.bmT, null),
             ),
         );
       }
@@ -2768,7 +2553,7 @@
             tooltip: "#FormattingToolbar_Paragraph",
             nodeType: t.nodes.paragraph,
           },
-          a.createElement(O.iYj, null),
+          a.createElement(F.iYj, null),
         );
       }
       function $(e) {
@@ -2785,7 +2570,7 @@
                 nodeType: t.nodes.heading,
                 attrs: { level: 1 },
               },
-              a.createElement(O.jRw, null),
+              a.createElement(F.jRw, null),
             ),
           n <= 2 &&
             o >= 2 &&
@@ -2796,7 +2581,7 @@
                 nodeType: t.nodes.heading,
                 attrs: { level: 2 },
               },
-              a.createElement(O.qOW, null),
+              a.createElement(F.qOW, null),
             ),
           n <= 3 &&
             o >= 3 &&
@@ -2807,7 +2592,7 @@
                 nodeType: t.nodes.heading,
                 attrs: { level: 3 },
               },
-              a.createElement(O.x7X, null),
+              a.createElement(F.x7X, null),
             ),
           n <= 4 &&
             o >= 4 &&
@@ -2818,7 +2603,7 @@
                 nodeType: t.nodes.heading,
                 attrs: { level: 4 },
               },
-              a.createElement(O.qzO, null),
+              a.createElement(F.qzO, null),
             ),
           n <= 5 &&
             o >= 5 &&
@@ -2829,7 +2614,7 @@
                 nodeType: t.nodes.heading,
                 attrs: { level: 5 },
               },
-              a.createElement(O.jXA, null),
+              a.createElement(F.jXA, null),
             ),
         );
       }
@@ -2837,7 +2622,7 @@
         const { schema: t, showIndentButtonsAsNeeded: n = !1 } = e,
           { callbacks: r, view: o } = (0, G.wU)(),
           l = a.useCallback(
-            (e) => !!(0, T.d7)(e.state, t.nodes.bullet_list),
+            (e) => !!(0, N.d7)(e.state, t.nodes.bullet_list),
             [t],
           ),
           [s, i] = a.useState(() => l(o));
@@ -2856,7 +2641,7 @@
                 toggled: s,
                 command: M.Sd(t.nodes.bullet_list),
               },
-              a.createElement(O.JPq, null),
+              a.createElement(F.JPq, null),
             ),
             (s || !n) &&
               a.createElement(
@@ -2869,7 +2654,7 @@
                     disabled: !s,
                     command: M.T2(t.nodes.list_item),
                   },
-                  a.createElement(O.LSz, null),
+                  a.createElement(F.LSz, null),
                 ),
                 a.createElement(
                   G.cQ,
@@ -2878,24 +2663,24 @@
                     disabled: !s,
                     command: M.$B(t.nodes.list_item),
                   },
-                  a.createElement(O.ycU, null),
+                  a.createElement(F.ycU, null),
                 ),
               ),
           )
         );
       }
       var q = n(33645),
-        Q = n.n(q);
-      function j(e, t, n = 0) {
+        j = n.n(q);
+      function Q(e, t, n = 0) {
         return () => [e, { class: t }, n];
       }
       function X(e, t) {
         return () => [
           t,
-          { class: Q().PreservedUnsupportedTag },
-          ["span", { class: Q().Tag }, `[${e}]`],
+          { class: j().PreservedUnsupportedTag },
+          ["span", { class: j().Tag }, `[${e}]`],
           ["span", 0],
-          ["span", { class: Q().Tag }, `[/${e}]`],
+          ["span", { class: j().Tag }, `[/${e}]`],
         ];
       }
       const Z = {
@@ -2904,7 +2689,7 @@
             content: "inline*",
             group: "block",
             parseDOM: [{ tag: "p" }],
-            toDOM: j("p", (0, N.A)("pm_paragraph", Q().Paragraph)),
+            toDOM: Q("p", (0, T.A)("pm_paragraph", j().Paragraph)),
             bbCode: { tag: "p", autocloses: !0 },
           },
           heading: {
@@ -2920,7 +2705,7 @@
               "h" + e.attrs.level,
               {
                 class:
-                  `BB_Header${e.attrs.level} ` + Q()[`Header${e.attrs.level}`],
+                  `BB_Header${e.attrs.level} ` + j()[`Header${e.attrs.level}`],
               },
               0,
             ],
@@ -2951,7 +2736,7 @@
             ],
             toDOM(e) {
               const { src: t, alt: n, title: a } = e.attrs;
-              return ["img", { src: t, alt: n, title: a, class: Q().Image }];
+              return ["img", { src: t, alt: n, title: a, class: j().Image }];
             },
             bbCode: {
               tag: "img",
@@ -2964,20 +2749,20 @@
             ...M.fF,
             content: "list_item+",
             group: "block",
-            toDOM: j("ul", Q().List),
+            toDOM: Q("ul", j().List),
             bbCode: { tag: "list" },
           },
           ordered_list: {
             ...M.o8,
             content: "list_item+",
             group: "block",
-            toDOM: j("ol", Q().OrderedList),
+            toDOM: Q("ol", j().OrderedList),
             bbCode: { tag: "olist" },
           },
           list_item: {
             ...M.Aw,
             content: "paragraph block*",
-            toDOM: j("li", Q().ListItem),
+            toDOM: Q("li", j().ListItem),
             bbCode: { tag: "*", autocloses: !0 },
           },
           code_block: {
@@ -2989,8 +2774,8 @@
             parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
             toDOM: () => [
               "pre",
-              { class: Q().CodeBlock },
-              ["code", { class: Q().Code }, 0],
+              { class: j().CodeBlock },
+              ["code", { class: j().Code }, 0],
             ],
             bbCode: { tag: "code" },
           },
@@ -3012,7 +2797,7 @@
                 getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
               },
             ],
-            toDOM: j("b", (0, N.A)("BB_Bold", Q().Bold)),
+            toDOM: Q("b", (0, T.A)("BB_Bold", j().Bold)),
             bbCode: { tag: "b" },
           },
           italic: {
@@ -3025,22 +2810,22 @@
                 clearMark: (e) => "em" == e.type.name,
               },
             ],
-            toDOM: j("i", (0, N.A)("BB_Italic", Q().Italic)),
+            toDOM: Q("i", (0, T.A)("BB_Italic", j().Italic)),
             bbCode: { tag: "i" },
           },
           underline: {
             parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-            toDOM: j("u", (0, N.A)("BB_Underline", Q().Underline)),
+            toDOM: Q("u", (0, T.A)("BB_Underline", j().Underline)),
             bbCode: { tag: "u" },
           },
           strike: {
             parseDOM: [{ style: "text-decoration=line-through" }],
-            toDOM: j("span", (0, N.A)("BB_Strike", Q().Strike)),
+            toDOM: Q("span", (0, T.A)("BB_Strike", j().Strike)),
             bbCode: { tag: "strike" },
           },
           code: {
             parseDOM: [{ tag: "code" }],
-            toDOM: j("code", (0, N.A)("BB_Code", Q().Code)),
+            toDOM: Q("code", (0, T.A)("BB_Code", j().Code)),
             bbCode: { tag: "c" },
           },
           link: {
@@ -3408,7 +3193,7 @@
           a.createElement(
             "div",
             {
-              className: (0, N.A)(
+              className: (0, T.A)(
                 me.AboutTheGameArea,
                 "awards" == t && me.Awards,
               ),
@@ -3446,7 +3231,7 @@
           a.createElement(
             G.Ez,
             {
-              className: (0, N.A)(
+              className: (0, T.A)(
                 me.GameDescriptionEditorToolbar,
                 l && me.Sticky,
               ),
@@ -3501,10 +3286,10 @@
         FD: () => v,
         L4: () => w,
         Z3: () => D,
-        cz: () => T,
+        cz: () => N,
         TQ: () => R,
         gg: () => I,
-        Y7: () => N,
+        Y7: () => T,
       });
       var a = n(81393),
         r = n(51614),
@@ -3577,7 +3362,7 @@
           [P, y] = l.useState(void 0),
           { mutate: A, isPending: v } = (function (e, t) {
             const n = D("ajaxmodifyextraassets"),
-              l = N();
+              l = T();
             return (0, r.n)({
               mutationFn: async (t) => {
                 const a = new FormData(),
@@ -3615,7 +3400,7 @@
             return u.find((t) => t.name == e);
           });
         }, [b, u]);
-        let T =
+        let N =
           (function (e) {
             return e && e.length > 0;
           })(b) && !v
@@ -3634,7 +3419,7 @@
             s.U9,
             {
               onSubmit: (e) => {
-                e.preventDefault(), T && T();
+                e.preventDefault(), N && N();
               },
             },
             l.createElement(
@@ -3662,9 +3447,9 @@
               s.wi,
               null,
               l.createElement(s.CB, {
-                onOK: T,
+                onOK: N,
                 strOKText: I,
-                bOKDisabled: !T,
+                bOKDisabled: !N,
                 onCancel: d,
               }),
             ),
@@ -3841,10 +3626,10 @@
           .useContext(B)
           .strGameControllerURLFormat.replace(":method:", e);
       }
-      function T() {
+      function N() {
         return l.useContext(B).queueExtraAssetUpload;
       }
-      function N() {
+      function T() {
         return l.useContext(B).onExtraAssetsUpdated;
       }
       function R() {
@@ -4309,7 +4094,7 @@
           leftColumnContent: d,
         });
       }
-      function T(e) {
+      function N(e) {
         const {
             nPageNum: t,
             currentValues: n,
@@ -4417,7 +4202,7 @@
           leftColumnContent: p,
         });
       }
-      function N(e) {
+      function T(e) {
         const { nPageNum: t, currentValues: n, setCurrentValues: r } = e,
           o = [
             {
@@ -4681,7 +4466,7 @@
             });
             break;
           case 1:
-            g = a.createElement(T, {
+            g = a.createElement(N, {
               nPageNum: p,
               currentValues: c,
               setCurrentValues: d,
@@ -4689,7 +4474,7 @@
             });
             break;
           case 2:
-            g = a.createElement(N, {
+            g = a.createElement(T, {
               nPageNum: p,
               currentValues: c,
               setCurrentValues: d,
@@ -4717,7 +4502,7 @@
           L.Provider,
           { value: c },
           a.createElement(
-            O,
+            F,
             {
               fnNext: h
                 ? () => E()
@@ -4829,7 +4614,7 @@
           ),
         );
       });
-      function O(e) {
+      function F(e) {
         const {
           fnNext: t,
           fnBack: n,
@@ -4851,7 +4636,7 @@
           }),
         );
       }
-      function F(e) {
+      function O(e) {
         const { unAppID: t } = e,
           [n, r] = a.useState(!1),
           o = a.useCallback(() => r(!0), []),
@@ -5003,20 +4788,20 @@
             value: r,
             rctToolbarControls: n,
           }),
-          a.createElement(Q, { language: t, value: r, refTextArea: o }),
+          a.createElement(j, { language: t, value: r, refTextArea: o }),
         );
       }
       function Y(e) {
         const { refTextArea: t, value: n, rctToolbarControls: r } = e,
           o = a.useCallback(
             (e, a) => {
-              j(t.current, n, e, a);
+              Q(t.current, n, e, a);
             },
             [t, n],
           ),
           l = a.useCallback(
             (e, a) => {
-              j(t.current, n, e, a, (e) =>
+              Q(t.current, n, e, a, (e) =>
                 e.replace(/(\r\n|\n|\r)/gm, "\r\n[*]"),
               );
             },
@@ -5111,7 +4896,7 @@
         } = e;
         return a.createElement(W.ff, { onClick: () => t(r, o), tooltip: n }, l);
       }
-      function Q(e) {
+      function j(e) {
         const { language: t, value: n, refTextArea: r } = e,
           o = a.useCallback((e) => n.Set(e.currentTarget.value), [n]),
           l = (0, K.gc)(n),
@@ -5130,7 +4915,7 @@
           lang: (0, s.d$)(t),
         });
       }
-      function j(e, t, n, a, r) {
+      function Q(e, t, n, a, r) {
         if (e.selectionStart || 0 === e.selectionStart) {
           const o = e.selectionStart,
             l = e.selectionEnd,
@@ -5400,7 +5185,7 @@
                 }),
               ),
             ),
-            a.createElement(Te, null),
+            a.createElement(Ne, null),
           )
         );
       });
@@ -5534,7 +5319,7 @@
       function De(e) {
         return a.createElement("span", { className: Ce.BlueNote }, e.children);
       }
-      function Te(e) {
+      function Ne(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: n,
@@ -5551,7 +5336,7 @@
               ),
             );
       }
-      let Ne = {
+      let Te = {
         GameEdit: (e, t) => `/admin/game/${e}/${t}`,
         GameEditByAppID: (e) => `/admin/game/editbyappid/${e}`,
         AppLanding: (e) => `/apps/landing/${e}`,
@@ -5668,7 +5453,7 @@
             n
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
-                  Ne.GameEditByAppID(t.toString()) + "?activetab=tab_publish"),
+                  Te.GameEditByAppID(t.toString()) + "?activetab=tab_publish"),
               r();
           }, [t, n, r]);
         return a.createElement(
@@ -5687,8 +5472,8 @@
         );
       }
       var Me = n(92757),
-        Oe = n(6813),
-        Fe = n(94794),
+        Fe = n(6813),
+        Oe = n(94794),
         Ue = n(75487),
         Ge = n(56545),
         He = n(23809),
@@ -5733,10 +5518,10 @@
           const e = `${_.TS.PARTNER_BASE_URL}doc/marketing/wishlist`;
           return a.createElement(
             "div",
-            { className: Fe.DemoWishlistCtn },
+            { className: Oe.DemoWishlistCtn },
             a.createElement(
               "div",
-              { className: Fe.Header },
+              { className: Oe.Header },
               a.createElement(
                 "h2",
                 null,
@@ -5744,7 +5529,7 @@
               ),
               a.createElement(
                 "a",
-                { className: Fe.DocumentationLink, href: e },
+                { className: Oe.DocumentationLink, href: e },
                 (0, s.we)("#App_Landing_DemoWishlist_Link"),
               ),
             ),
@@ -5755,9 +5540,9 @@
                 bSendEmailsSucceeded: c,
                 setSendEmailsSucceeded: d,
               }),
-            g && h && a.createElement("hr", { className: Fe.BothSeparator }),
+            g && h && a.createElement("hr", { className: Oe.BothSeparator }),
             h &&
-              a.createElement(Qe, {
+              a.createElement(je, {
                 parentAppId: n,
                 timeStaged: l,
                 noticeVisibleToDate: C,
@@ -5796,12 +5581,12 @@
           null,
           a.createElement(
             "div",
-            { className: Fe.SubTitle },
+            { className: Oe.SubTitle },
             (0, s.we)("#App_Landing_DemoWishlist_SubTitle"),
           ),
           a.createElement(
             "div",
-            { className: Fe.Description },
+            { className: Oe.Description },
             a.createElement(
               "p",
               null,
@@ -5811,7 +5596,7 @@
           p &&
             a.createElement(
               "div",
-              { className: Fe.Warning },
+              { className: Oe.Warning },
               a.createElement(
                 "p",
                 null,
@@ -5824,12 +5609,12 @@
           void 0 === r &&
             a.createElement(
               "div",
-              { className: Fe.ButtonRow },
+              { className: Oe.ButtonRow },
               a.createElement(
                 y.$n,
                 {
                   className: (0, u.A)(
-                    Fe.ButtonDemoWishlistEmails,
+                    Oe.ButtonDemoWishlistEmails,
                     "btn_green_steamui btn_border_2px btn_medium",
                   ),
                   disabled: l,
@@ -5843,31 +5628,31 @@
               ),
               l &&
                 a.createElement(ue.t, {
-                  className: Fe.InProgressThrobber,
+                  className: Oe.InProgressThrobber,
                   size: "small",
                 }),
             ),
           void 0 !== r &&
             a.createElement(
               "div",
-              { className: Fe.ButtonRow },
+              { className: Oe.ButtonRow },
               r &&
                 a.createElement(
                   "div",
-                  { className: Fe.DemoWishlistSendSucceeded },
+                  { className: Oe.DemoWishlistSendSucceeded },
                   (0, s.we)("#App_Landing_DemoWishlist_SendEmails_Succeeded"),
                 ),
               !r &&
                 a.createElement(
                   "div",
-                  { className: Fe.DemoWishlistSendFailed },
+                  { className: Oe.DemoWishlistSendFailed },
                   (0, s.we)("#App_Landing_DemoWishlist_SendEmails_Failed"),
                 ),
             ),
           c &&
             a.createElement(
               A.mt,
-              { active: !0, className: Fe.ControllerWizardModal },
+              { active: !0, className: Oe.ControllerWizardModal },
               a.createElement(
                 "h1",
                 null,
@@ -5875,7 +5660,7 @@
               ),
               a.createElement(
                 y.nB,
-                { className: Fe.WizardBody },
+                { className: Oe.WizardBody },
                 a.createElement(
                   "div",
                   null,
@@ -5909,7 +5694,7 @@
             ),
         );
       }
-      function Qe(e) {
+      function je(e) {
         const { parentAppId: t, timeStaged: n, noticeVisibleToDate: r } = e,
           o = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
@@ -5928,7 +5713,7 @@
           u = `${_.TS.STATS_BASE_URL}app/wishlist/${t}/?dateStart=${l}&dateEnd=${i}`;
         return a.createElement(
           "div",
-          { className: Fe.Description },
+          { className: Oe.Description },
           a.createElement(
             "p",
             null,
@@ -5945,16 +5730,16 @@
           ),
           a.createElement(
             "p",
-            { className: Fe.Notice },
+            { className: Oe.Notice },
             (0, s.we)("#App_Landing_DemoWishlist_SentRecently_Notice", d),
           ),
         );
       }
-      var je = n(75493),
+      var Qe = n(75493),
         Xe = n(7517);
       function Ze(e) {
         const { nAppId: t, nParentAppId: n, strAppType: r } = e,
-          o = (0, je.V)();
+          o = (0, Qe.V)();
         return a.createElement(
           a.Fragment,
           null,
@@ -5996,8 +5781,8 @@
         vt = n(92532),
         wt = n(47235),
         Dt = n(37076),
-        Tt = n(54492),
-        Nt = n(60014),
+        Nt = n(54492),
+        Tt = n(60014),
         Rt = n(91291),
         It = n.n(Rt),
         Bt = n(99956);
@@ -6018,7 +5803,7 @@
           [_] = (0, ze.t7)(n && p?.GetParentAppID(), ut.Xh);
         if (!p) return null;
         const E = Boolean(_),
-          g = a.createElement(Ot, {
+          g = a.createElement(Ft, {
             ...e,
             info: t,
             bIsHovered: d,
@@ -6079,7 +5864,7 @@
             childAppType: r,
             bPreferDemoStorePage: o,
           } = e,
-          l = (0, Nt.n9)(),
+          l = (0, Tt.n9)(),
           i = (0, _.Qn)();
         return a.createElement(
           mt.ml,
@@ -6110,7 +5895,7 @@
           ),
         );
       }
-      function Ot(e) {
+      function Ft(e) {
         const {
             info: t,
             bHideStatusBanners: n,
@@ -6123,7 +5908,7 @@
             bPreferDemoStorePage: d,
           } = e,
           [m] = (0, ze.G6)(t.id, (0, Ct.SW)(t.type), ut.Xh),
-          p = (0, Nt.n9)(),
+          p = (0, Tt.n9)(),
           _ = (0, a.useMemo)(() => m?.GetIncludedAppIDsOrSelf(), [m]);
         if (!m) return null;
         const E = (0, pe.NT)(
@@ -6154,7 +5939,7 @@
                 { className: (0, u.A)({ [It().TwoWidthCapsule]: C }) },
                 a.createElement(yt.V, { appids: _, hide_status_banners: n }),
                 a.createElement(ft.aU, { imageType: l, info: t }),
-                a.createElement(Tt.S, {
+                a.createElement(Nt.S, {
                   eDeckCompatibilityCategory:
                     m?.GetPlatforms()?.steam_deck_compat_category,
                 }),
@@ -6182,10 +5967,10 @@
                 ),
             ),
           ),
-          a.createElement(Ft, { ...e }),
+          a.createElement(Ot, { ...e }),
         );
       }
-      function Ft(e) {
+      function Ot(e) {
         const {
             info: t,
             bHidePriceIfOwned: n,
@@ -6403,7 +6188,7 @@
               a.createElement(
                 a.Fragment,
                 null,
-                a.createElement(Qt, {
+                a.createElement(jt, {
                   rgFeaturedList: l.featured_appids,
                   strFeaturedFirstAppToken: l.featured_first_app_token,
                   rgFeaturedClanList: l.featured_creator_clan_account_id,
@@ -6573,7 +6358,7 @@
               string: (0, s.we)("#Loading"),
             });
       }
-      function Qt(e) {
+      function jt(e) {
         const {
           rgFeaturedList: t,
           rgFeaturedClanList: n,
@@ -6614,7 +6399,7 @@
                       creatorClanID: n?.[l],
                       elEditor:
                         0 == l
-                          ? a.createElement(jt, {
+                          ? a.createElement(Qt, {
                               strFeaturedFirstAppToken: o,
                               fnSetFeaturedFirstAppToken: (e) => r(t, n, e),
                             })
@@ -6638,7 +6423,7 @@
           ),
         );
       }
-      function jt(e) {
+      function Qt(e) {
         const { strFeaturedFirstAppToken: t, fnSetFeaturedFirstAppToken: n } =
             e,
           r = (0, a.useMemo)(() => {
@@ -7517,8 +7302,8 @@
         );
         return e;
       }
-      var Tn,
-        Nn = n(34629),
+      var Nn,
+        Tn = n(34629),
         Rn = n(30470),
         In = n(375),
         Bn = n(68797);
@@ -7644,295 +7429,295 @@
       }
       function Mn(e) {
         switch (e) {
-          case Tn.k_ECurrencyCodeGBP:
+          case Nn.k_ECurrencyCodeGBP:
             return "GBP";
-          case Tn.k_ECurrencyCodeEUR:
+          case Nn.k_ECurrencyCodeEUR:
             return "EUR";
-          case Tn.k_ECurrencyCodeCHF:
+          case Nn.k_ECurrencyCodeCHF:
             return "CHF";
-          case Tn.k_ECurrencyCodeRUB:
+          case Nn.k_ECurrencyCodeRUB:
             return "RUB";
-          case Tn.k_ECurrencyCodePLN:
+          case Nn.k_ECurrencyCodePLN:
             return "PLN";
-          case Tn.k_ECurrencyCodeBRL:
+          case Nn.k_ECurrencyCodeBRL:
             return "BRL";
-          case Tn.k_ECurrencyCodeJPY:
+          case Nn.k_ECurrencyCodeJPY:
             return "JPY";
-          case Tn.k_ECurrencyCodeNOK:
+          case Nn.k_ECurrencyCodeNOK:
             return "NOK";
-          case Tn.k_ECurrencyCodeIDR:
+          case Nn.k_ECurrencyCodeIDR:
             return "IDR";
-          case Tn.k_ECurrencyCodeMYR:
+          case Nn.k_ECurrencyCodeMYR:
             return "MYR";
-          case Tn.k_ECurrencyCodePHP:
+          case Nn.k_ECurrencyCodePHP:
             return "PHP";
-          case Tn.k_ECurrencyCodeSGD:
+          case Nn.k_ECurrencyCodeSGD:
             return "SGD";
-          case Tn.k_ECurrencyCodeTHB:
+          case Nn.k_ECurrencyCodeTHB:
             return "THB";
-          case Tn.k_ECurrencyCodeVND:
+          case Nn.k_ECurrencyCodeVND:
             return "VND";
-          case Tn.k_ECurrencyCodeKRW:
+          case Nn.k_ECurrencyCodeKRW:
             return "KRW";
-          case Tn.k_ECurrencyCodeTRY:
+          case Nn.k_ECurrencyCodeTRY:
             return "TRY";
-          case Tn.k_ECurrencyCodeUAH:
+          case Nn.k_ECurrencyCodeUAH:
             return "UAH";
-          case Tn.k_ECurrencyCodeMXN:
+          case Nn.k_ECurrencyCodeMXN:
             return "MXN";
-          case Tn.k_ECurrencyCodeCAD:
+          case Nn.k_ECurrencyCodeCAD:
             return "CAD";
-          case Tn.k_ECurrencyCodeAUD:
+          case Nn.k_ECurrencyCodeAUD:
             return "AUD";
-          case Tn.k_ECurrencyCodeNZD:
+          case Nn.k_ECurrencyCodeNZD:
             return "NZD";
-          case Tn.k_ECurrencyCodeCNY:
+          case Nn.k_ECurrencyCodeCNY:
             return "CNY";
-          case Tn.k_ECurrencyCodeINR:
+          case Nn.k_ECurrencyCodeINR:
             return "INR";
-          case Tn.k_ECurrencyCodeCLP:
+          case Nn.k_ECurrencyCodeCLP:
             return "CLP";
-          case Tn.k_ECurrencyCodePEN:
+          case Nn.k_ECurrencyCodePEN:
             return "PEN";
-          case Tn.k_ECurrencyCodeCOP:
+          case Nn.k_ECurrencyCodeCOP:
             return "COP";
-          case Tn.k_ECurrencyCodeZAR:
+          case Nn.k_ECurrencyCodeZAR:
             return "ZAR";
-          case Tn.k_ECurrencyCodeHKD:
+          case Nn.k_ECurrencyCodeHKD:
             return "HKD";
-          case Tn.k_ECurrencyCodeTWD:
+          case Nn.k_ECurrencyCodeTWD:
             return "TWD";
-          case Tn.k_ECurrencyCodeSAR:
+          case Nn.k_ECurrencyCodeSAR:
             return "SAR";
-          case Tn.k_ECurrencyCodeAED:
+          case Nn.k_ECurrencyCodeAED:
             return "AED";
-          case Tn.k_ECurrencyCodeSEK:
+          case Nn.k_ECurrencyCodeSEK:
             return "SEK";
-          case Tn.k_ECurrencyCodeARS:
+          case Nn.k_ECurrencyCodeARS:
             return "ARS";
-          case Tn.k_ECurrencyCodeILS:
+          case Nn.k_ECurrencyCodeILS:
             return "ILS";
-          case Tn.k_ECurrencyCodeBYN:
+          case Nn.k_ECurrencyCodeBYN:
             return "BYN";
-          case Tn.k_ECurrencyCodeKZT:
+          case Nn.k_ECurrencyCodeKZT:
             return "KZT";
-          case Tn.k_ECurrencyCodeKWD:
+          case Nn.k_ECurrencyCodeKWD:
             return "KWD";
-          case Tn.k_ECurrencyCodeQAR:
+          case Nn.k_ECurrencyCodeQAR:
             return "QAR";
-          case Tn.k_ECurrencyCodeCRC:
+          case Nn.k_ECurrencyCodeCRC:
             return "CRC";
-          case Tn.k_ECurrencyCodeUYU:
+          case Nn.k_ECurrencyCodeUYU:
             return "UYU";
-          case Tn.k_ECurrencyCodeBGN:
+          case Nn.k_ECurrencyCodeBGN:
             return "BGN";
-          case Tn.k_ECurrencyCodeHRK:
+          case Nn.k_ECurrencyCodeHRK:
             return "HRK";
-          case Tn.k_ECurrencyCodeCZK:
+          case Nn.k_ECurrencyCodeCZK:
             return "CZK";
-          case Tn.k_ECurrencyCodeDKK:
+          case Nn.k_ECurrencyCodeDKK:
             return "DKK";
-          case Tn.k_ECurrencyCodeHUF:
+          case Nn.k_ECurrencyCodeHUF:
             return "HUF";
-          case Tn.k_ECurrencyCodeRON:
+          case Nn.k_ECurrencyCodeRON:
             return "RON";
           default:
             return "USD";
         }
       }
-      function On(e) {
+      function Fn(e) {
         switch (e) {
-          case Tn.k_ECurrencyCodeUSD:
+          case Nn.k_ECurrencyCodeUSD:
             return "US Dollar";
-          case Tn.k_ECurrencyCodeGBP:
+          case Nn.k_ECurrencyCodeGBP:
             return "GB Pounds";
-          case Tn.k_ECurrencyCodeEUR:
+          case Nn.k_ECurrencyCodeEUR:
             return "Euros";
-          case Tn.k_ECurrencyCodeCHF:
+          case Nn.k_ECurrencyCodeCHF:
             return "Swiss Francs";
-          case Tn.k_ECurrencyCodeRUB:
+          case Nn.k_ECurrencyCodeRUB:
             return "Russian Rubles";
-          case Tn.k_ECurrencyCodePLN:
+          case Nn.k_ECurrencyCodePLN:
             return "Polish zloty";
-          case Tn.k_ECurrencyCodeBRL:
+          case Nn.k_ECurrencyCodeBRL:
             return "Brazilian Reals";
-          case Tn.k_ECurrencyCodeJPY:
+          case Nn.k_ECurrencyCodeJPY:
             return "Japanese Yen";
-          case Tn.k_ECurrencyCodeNOK:
+          case Nn.k_ECurrencyCodeNOK:
             return "Norwegian Krone";
-          case Tn.k_ECurrencyCodeIDR:
+          case Nn.k_ECurrencyCodeIDR:
             return "Indonesian Rupiah";
-          case Tn.k_ECurrencyCodeMYR:
+          case Nn.k_ECurrencyCodeMYR:
             return "Malaysian Ringgit";
-          case Tn.k_ECurrencyCodePHP:
+          case Nn.k_ECurrencyCodePHP:
             return "Philippine Peso";
-          case Tn.k_ECurrencyCodeSGD:
+          case Nn.k_ECurrencyCodeSGD:
             return "Singapore Dollar";
-          case Tn.k_ECurrencyCodeTHB:
+          case Nn.k_ECurrencyCodeTHB:
             return "Thai Baht";
-          case Tn.k_ECurrencyCodeVND:
+          case Nn.k_ECurrencyCodeVND:
             return "Vietnamese Dong";
-          case Tn.k_ECurrencyCodeKRW:
+          case Nn.k_ECurrencyCodeKRW:
             return "Korean Won";
-          case Tn.k_ECurrencyCodeTRY:
+          case Nn.k_ECurrencyCodeTRY:
             return "Turkish Lira";
-          case Tn.k_ECurrencyCodeUAH:
+          case Nn.k_ECurrencyCodeUAH:
             return "Ukrainian Hryvnia";
-          case Tn.k_ECurrencyCodeMXN:
+          case Nn.k_ECurrencyCodeMXN:
             return "Mexican Peso";
-          case Tn.k_ECurrencyCodeCAD:
+          case Nn.k_ECurrencyCodeCAD:
             return "Canadian Dollar";
-          case Tn.k_ECurrencyCodeAUD:
+          case Nn.k_ECurrencyCodeAUD:
             return "Australian Dollar";
-          case Tn.k_ECurrencyCodeNZD:
+          case Nn.k_ECurrencyCodeNZD:
             return "New Zealand Dollar";
-          case Tn.k_ECurrencyCodeCNY:
+          case Nn.k_ECurrencyCodeCNY:
             return "Chinese Yuan";
-          case Tn.k_ECurrencyCodeINR:
+          case Nn.k_ECurrencyCodeINR:
             return "Indian Rupee";
-          case Tn.k_ECurrencyCodeCLP:
+          case Nn.k_ECurrencyCodeCLP:
             return "Chilean Peso";
-          case Tn.k_ECurrencyCodePEN:
+          case Nn.k_ECurrencyCodePEN:
             return "Peruvian Sol";
-          case Tn.k_ECurrencyCodeCOP:
+          case Nn.k_ECurrencyCodeCOP:
             return "Colombian Peso";
-          case Tn.k_ECurrencyCodeZAR:
+          case Nn.k_ECurrencyCodeZAR:
             return "South African Rand";
-          case Tn.k_ECurrencyCodeHKD:
+          case Nn.k_ECurrencyCodeHKD:
             return "Hong Kong Dollar";
-          case Tn.k_ECurrencyCodeTWD:
+          case Nn.k_ECurrencyCodeTWD:
             return "Taiwanese Dollar";
-          case Tn.k_ECurrencyCodeSAR:
+          case Nn.k_ECurrencyCodeSAR:
             return "Saudi Arabian Riyal";
-          case Tn.k_ECurrencyCodeAED:
+          case Nn.k_ECurrencyCodeAED:
             return "Emirati Dirham";
-          case Tn.k_ECurrencyCodeSEK:
+          case Nn.k_ECurrencyCodeSEK:
             return "Swedish Krona";
-          case Tn.k_ECurrencyCodeARS:
+          case Nn.k_ECurrencyCodeARS:
             return "Argentine Peso";
-          case Tn.k_ECurrencyCodeILS:
+          case Nn.k_ECurrencyCodeILS:
             return "Israeli New Shequel";
-          case Tn.k_ECurrencyCodeBYN:
+          case Nn.k_ECurrencyCodeBYN:
             return "Belarusian Ruble";
-          case Tn.k_ECurrencyCodeKZT:
+          case Nn.k_ECurrencyCodeKZT:
             return "Kazakhstani Tenge";
-          case Tn.k_ECurrencyCodeKWD:
+          case Nn.k_ECurrencyCodeKWD:
             return "Kuwaiti Dinar";
-          case Tn.k_ECurrencyCodeQAR:
+          case Nn.k_ECurrencyCodeQAR:
             return "Qatari Rial";
-          case Tn.k_ECurrencyCodeCRC:
+          case Nn.k_ECurrencyCodeCRC:
             return "Costa Rican Colon";
-          case Tn.k_ECurrencyCodeUYU:
+          case Nn.k_ECurrencyCodeUYU:
             return "Uruguayan Peso";
-          case Tn.k_ECurrencyCodeBGN:
+          case Nn.k_ECurrencyCodeBGN:
             return "Bulgarian lev";
-          case Tn.k_ECurrencyCodeHRK:
+          case Nn.k_ECurrencyCodeHRK:
             return "Croatian kuna";
-          case Tn.k_ECurrencyCodeCZK:
+          case Nn.k_ECurrencyCodeCZK:
             return "Czech koruna";
-          case Tn.k_ECurrencyCodeDKK:
+          case Nn.k_ECurrencyCodeDKK:
             return "Danish krone";
-          case Tn.k_ECurrencyCodeHUF:
+          case Nn.k_ECurrencyCodeHUF:
             return "Hungarian forint";
-          case Tn.k_ECurrencyCodeRON:
+          case Nn.k_ECurrencyCodeRON:
             return "Romanian leu";
           default:
             return "";
         }
       }
-      function Fn(e, t = Kn.k_ERegionCodeInvalid) {
+      function On(e, t = Kn.k_ERegionCodeInvalid) {
         switch (e) {
-          case Tn.k_ECurrencyCodeGBP:
+          case Nn.k_ECurrencyCodeGBP:
             return "gbp";
-          case Tn.k_ECurrencyCodeEUR:
+          case Nn.k_ECurrencyCodeEUR:
             return "eur";
-          case Tn.k_ECurrencyCodeCHF:
+          case Nn.k_ECurrencyCodeCHF:
             return "chf";
-          case Tn.k_ECurrencyCodeRUB:
+          case Nn.k_ECurrencyCodeRUB:
             return "rub";
-          case Tn.k_ECurrencyCodePLN:
+          case Nn.k_ECurrencyCodePLN:
             return "pln";
-          case Tn.k_ECurrencyCodeBRL:
+          case Nn.k_ECurrencyCodeBRL:
             return "brl";
-          case Tn.k_ECurrencyCodeJPY:
+          case Nn.k_ECurrencyCodeJPY:
             return "jpy";
-          case Tn.k_ECurrencyCodeNOK:
+          case Nn.k_ECurrencyCodeNOK:
             return "nok";
-          case Tn.k_ECurrencyCodeIDR:
+          case Nn.k_ECurrencyCodeIDR:
             return "idr";
-          case Tn.k_ECurrencyCodeMYR:
+          case Nn.k_ECurrencyCodeMYR:
             return "myr";
-          case Tn.k_ECurrencyCodePHP:
+          case Nn.k_ECurrencyCodePHP:
             return "php";
-          case Tn.k_ECurrencyCodeSGD:
+          case Nn.k_ECurrencyCodeSGD:
             return "sgd";
-          case Tn.k_ECurrencyCodeTHB:
+          case Nn.k_ECurrencyCodeTHB:
             return "thb";
-          case Tn.k_ECurrencyCodeVND:
+          case Nn.k_ECurrencyCodeVND:
             return "vnd";
-          case Tn.k_ECurrencyCodeKRW:
+          case Nn.k_ECurrencyCodeKRW:
             return "krw";
-          case Tn.k_ECurrencyCodeTRY:
+          case Nn.k_ECurrencyCodeTRY:
             return "try";
-          case Tn.k_ECurrencyCodeUAH:
+          case Nn.k_ECurrencyCodeUAH:
             return "uah";
-          case Tn.k_ECurrencyCodeMXN:
+          case Nn.k_ECurrencyCodeMXN:
             return "mxn";
-          case Tn.k_ECurrencyCodeCAD:
+          case Nn.k_ECurrencyCodeCAD:
             return "cad";
-          case Tn.k_ECurrencyCodeAUD:
+          case Nn.k_ECurrencyCodeAUD:
             return "aud";
-          case Tn.k_ECurrencyCodeNZD:
+          case Nn.k_ECurrencyCodeNZD:
             return "nzd";
-          case Tn.k_ECurrencyCodeCNY:
+          case Nn.k_ECurrencyCodeCNY:
             return "cny";
-          case Tn.k_ECurrencyCodeINR:
+          case Nn.k_ECurrencyCodeINR:
             return "inr";
-          case Tn.k_ECurrencyCodeCLP:
+          case Nn.k_ECurrencyCodeCLP:
             return "clp";
-          case Tn.k_ECurrencyCodePEN:
+          case Nn.k_ECurrencyCodePEN:
             return "pen";
-          case Tn.k_ECurrencyCodeCOP:
+          case Nn.k_ECurrencyCodeCOP:
             return "cop";
-          case Tn.k_ECurrencyCodeZAR:
+          case Nn.k_ECurrencyCodeZAR:
             return "zar";
-          case Tn.k_ECurrencyCodeHKD:
+          case Nn.k_ECurrencyCodeHKD:
             return "hkd";
-          case Tn.k_ECurrencyCodeTWD:
+          case Nn.k_ECurrencyCodeTWD:
             return "twd";
-          case Tn.k_ECurrencyCodeSAR:
+          case Nn.k_ECurrencyCodeSAR:
             return "sar";
-          case Tn.k_ECurrencyCodeAED:
+          case Nn.k_ECurrencyCodeAED:
             return "aed";
-          case Tn.k_ECurrencyCodeSEK:
+          case Nn.k_ECurrencyCodeSEK:
             return "sek";
-          case Tn.k_ECurrencyCodeARS:
+          case Nn.k_ECurrencyCodeARS:
             return "ars";
-          case Tn.k_ECurrencyCodeILS:
+          case Nn.k_ECurrencyCodeILS:
             return "ils";
-          case Tn.k_ECurrencyCodeBYN:
+          case Nn.k_ECurrencyCodeBYN:
             return "byn";
-          case Tn.k_ECurrencyCodeKZT:
+          case Nn.k_ECurrencyCodeKZT:
             return "kzt";
-          case Tn.k_ECurrencyCodeKWD:
+          case Nn.k_ECurrencyCodeKWD:
             return "kwd";
-          case Tn.k_ECurrencyCodeQAR:
+          case Nn.k_ECurrencyCodeQAR:
             return "qar";
-          case Tn.k_ECurrencyCodeCRC:
+          case Nn.k_ECurrencyCodeCRC:
             return "crc";
-          case Tn.k_ECurrencyCodeUYU:
+          case Nn.k_ECurrencyCodeUYU:
             return "uyu";
-          case Tn.k_ECurrencyCodeBGN:
+          case Nn.k_ECurrencyCodeBGN:
             return "bgn";
-          case Tn.k_ECurrencyCodeHRK:
+          case Nn.k_ECurrencyCodeHRK:
             return "hrk";
-          case Tn.k_ECurrencyCodeCZK:
+          case Nn.k_ECurrencyCodeCZK:
             return "czk";
-          case Tn.k_ECurrencyCodeDKK:
+          case Nn.k_ECurrencyCodeDKK:
             return "dkk";
-          case Tn.k_ECurrencyCodeHUF:
+          case Nn.k_ECurrencyCodeHUF:
             return "huf";
-          case Tn.k_ECurrencyCodeRON:
+          case Nn.k_ECurrencyCodeRON:
             return "ron";
           default:
             return t == Kn.k_ERegionCodeCIS
@@ -7947,112 +7732,112 @@
         }
       }
       function Un(e) {
-        return `${On(
+        return `${Fn(
           (function (e) {
             switch (e) {
               case "USD":
-                return Tn.k_ECurrencyCodeUSD;
+                return Nn.k_ECurrencyCodeUSD;
               case "GBP":
-                return Tn.k_ECurrencyCodeGBP;
+                return Nn.k_ECurrencyCodeGBP;
               case "EUR":
-                return Tn.k_ECurrencyCodeEUR;
+                return Nn.k_ECurrencyCodeEUR;
               case "CHF":
-                return Tn.k_ECurrencyCodeCHF;
+                return Nn.k_ECurrencyCodeCHF;
               case "RUB":
-                return Tn.k_ECurrencyCodeRUB;
+                return Nn.k_ECurrencyCodeRUB;
               case "PLN":
-                return Tn.k_ECurrencyCodePLN;
+                return Nn.k_ECurrencyCodePLN;
               case "BRL":
-                return Tn.k_ECurrencyCodeBRL;
+                return Nn.k_ECurrencyCodeBRL;
               case "JPY":
-                return Tn.k_ECurrencyCodeJPY;
+                return Nn.k_ECurrencyCodeJPY;
               case "NOK":
-                return Tn.k_ECurrencyCodeNOK;
+                return Nn.k_ECurrencyCodeNOK;
               case "IDR":
-                return Tn.k_ECurrencyCodeIDR;
+                return Nn.k_ECurrencyCodeIDR;
               case "MYR":
-                return Tn.k_ECurrencyCodeMYR;
+                return Nn.k_ECurrencyCodeMYR;
               case "PHP":
-                return Tn.k_ECurrencyCodePHP;
+                return Nn.k_ECurrencyCodePHP;
               case "SGD":
-                return Tn.k_ECurrencyCodeSGD;
+                return Nn.k_ECurrencyCodeSGD;
               case "THB":
-                return Tn.k_ECurrencyCodeTHB;
+                return Nn.k_ECurrencyCodeTHB;
               case "VND":
-                return Tn.k_ECurrencyCodeVND;
+                return Nn.k_ECurrencyCodeVND;
               case "KRW":
-                return Tn.k_ECurrencyCodeKRW;
+                return Nn.k_ECurrencyCodeKRW;
               case "TRY":
-                return Tn.k_ECurrencyCodeTRY;
+                return Nn.k_ECurrencyCodeTRY;
               case "UAH":
-                return Tn.k_ECurrencyCodeUAH;
+                return Nn.k_ECurrencyCodeUAH;
               case "MXN":
-                return Tn.k_ECurrencyCodeMXN;
+                return Nn.k_ECurrencyCodeMXN;
               case "CAD":
-                return Tn.k_ECurrencyCodeCAD;
+                return Nn.k_ECurrencyCodeCAD;
               case "AUD":
-                return Tn.k_ECurrencyCodeAUD;
+                return Nn.k_ECurrencyCodeAUD;
               case "NZD":
-                return Tn.k_ECurrencyCodeNZD;
+                return Nn.k_ECurrencyCodeNZD;
               case "CNY":
-                return Tn.k_ECurrencyCodeCNY;
+                return Nn.k_ECurrencyCodeCNY;
               case "INR":
-                return Tn.k_ECurrencyCodeINR;
+                return Nn.k_ECurrencyCodeINR;
               case "CLP":
-                return Tn.k_ECurrencyCodeCLP;
+                return Nn.k_ECurrencyCodeCLP;
               case "PEN":
-                return Tn.k_ECurrencyCodePEN;
+                return Nn.k_ECurrencyCodePEN;
               case "COP":
-                return Tn.k_ECurrencyCodeCOP;
+                return Nn.k_ECurrencyCodeCOP;
               case "ZAR":
-                return Tn.k_ECurrencyCodeZAR;
+                return Nn.k_ECurrencyCodeZAR;
               case "HKD":
-                return Tn.k_ECurrencyCodeHKD;
+                return Nn.k_ECurrencyCodeHKD;
               case "TWD":
-                return Tn.k_ECurrencyCodeTWD;
+                return Nn.k_ECurrencyCodeTWD;
               case "SAR":
-                return Tn.k_ECurrencyCodeSAR;
+                return Nn.k_ECurrencyCodeSAR;
               case "AED":
-                return Tn.k_ECurrencyCodeAED;
+                return Nn.k_ECurrencyCodeAED;
               case "SEK":
-                return Tn.k_ECurrencyCodeSEK;
+                return Nn.k_ECurrencyCodeSEK;
               case "ARS":
-                return Tn.k_ECurrencyCodeARS;
+                return Nn.k_ECurrencyCodeARS;
               case "ILS":
-                return Tn.k_ECurrencyCodeILS;
+                return Nn.k_ECurrencyCodeILS;
               case "BYN":
-                return Tn.k_ECurrencyCodeBYN;
+                return Nn.k_ECurrencyCodeBYN;
               case "KZT":
-                return Tn.k_ECurrencyCodeKZT;
+                return Nn.k_ECurrencyCodeKZT;
               case "KWD":
-                return Tn.k_ECurrencyCodeKWD;
+                return Nn.k_ECurrencyCodeKWD;
               case "QAR":
-                return Tn.k_ECurrencyCodeQAR;
+                return Nn.k_ECurrencyCodeQAR;
               case "CRC":
-                return Tn.k_ECurrencyCodeCRC;
+                return Nn.k_ECurrencyCodeCRC;
               case "UYU":
-                return Tn.k_ECurrencyCodeUYU;
+                return Nn.k_ECurrencyCodeUYU;
               case "BGN":
-                return Tn.k_ECurrencyCodeBGN;
+                return Nn.k_ECurrencyCodeBGN;
               case "HRK":
-                return Tn.k_ECurrencyCodeHRK;
+                return Nn.k_ECurrencyCodeHRK;
               case "CZK":
-                return Tn.k_ECurrencyCodeCZK;
+                return Nn.k_ECurrencyCodeCZK;
               case "DKK":
-                return Tn.k_ECurrencyCodeDKK;
+                return Nn.k_ECurrencyCodeDKK;
               case "HUF":
-                return Tn.k_ECurrencyCodeHUF;
+                return Nn.k_ECurrencyCodeHUF;
               case "RON":
-                return Tn.k_ECurrencyCodeRON;
+                return Nn.k_ECurrencyCodeRON;
               default:
-                return Tn.k_ECurrencyCodeInvalid;
+                return Nn.k_ECurrencyCodeInvalid;
             }
           })(e.toUpperCase()),
         )} (${e})`;
       }
-      (0, Nn.Cg)([In.oI], Ln.prototype, "LoadMoreProposal", null),
-        (0, Nn.Cg)([In.oI], Ln.prototype, "RejectProposal", null),
-        (0, Nn.Cg)([In.oI], Ln.prototype, "AcceptProposal", null),
+      (0, Tn.Cg)([In.oI], Ln.prototype, "LoadMoreProposal", null),
+        (0, Tn.Cg)([In.oI], Ln.prototype, "RejectProposal", null),
+        (0, Tn.Cg)([In.oI], Ln.prototype, "AcceptProposal", null),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -8103,55 +7888,55 @@
             (e[(e.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(Tn || (Tn = {}));
-      const Gn = [Tn.k_ECurrencyCodeTRY, Tn.k_ECurrencyCodeARS],
+        })(Nn || (Nn = {}));
+      const Gn = [Nn.k_ECurrencyCodeTRY, Nn.k_ECurrencyCodeARS],
         Hn = [
-          Tn.k_ECurrencyCodeUSD,
-          Tn.k_ECurrencyCodeGBP,
-          Tn.k_ECurrencyCodeEUR,
-          Tn.k_ECurrencyCodeCHF,
-          Tn.k_ECurrencyCodeRUB,
-          Tn.k_ECurrencyCodePLN,
-          Tn.k_ECurrencyCodeBRL,
-          Tn.k_ECurrencyCodeJPY,
-          Tn.k_ECurrencyCodeNOK,
-          Tn.k_ECurrencyCodeIDR,
-          Tn.k_ECurrencyCodeMYR,
-          Tn.k_ECurrencyCodePHP,
-          Tn.k_ECurrencyCodeSGD,
-          Tn.k_ECurrencyCodeTHB,
-          Tn.k_ECurrencyCodeVND,
-          Tn.k_ECurrencyCodeKRW,
-          Tn.k_ECurrencyCodeUAH,
-          Tn.k_ECurrencyCodeMXN,
-          Tn.k_ECurrencyCodeCAD,
-          Tn.k_ECurrencyCodeAUD,
-          Tn.k_ECurrencyCodeNZD,
-          Tn.k_ECurrencyCodeCNY,
-          Tn.k_ECurrencyCodeINR,
-          Tn.k_ECurrencyCodeCLP,
-          Tn.k_ECurrencyCodePEN,
-          Tn.k_ECurrencyCodeCOP,
-          Tn.k_ECurrencyCodeZAR,
-          Tn.k_ECurrencyCodeHKD,
-          Tn.k_ECurrencyCodeTWD,
-          Tn.k_ECurrencyCodeSAR,
-          Tn.k_ECurrencyCodeAED,
-          Tn.k_ECurrencyCodeILS,
-          Tn.k_ECurrencyCodeKZT,
-          Tn.k_ECurrencyCodeKWD,
-          Tn.k_ECurrencyCodeQAR,
-          Tn.k_ECurrencyCodeCRC,
-          Tn.k_ECurrencyCodeUYU,
+          Nn.k_ECurrencyCodeUSD,
+          Nn.k_ECurrencyCodeGBP,
+          Nn.k_ECurrencyCodeEUR,
+          Nn.k_ECurrencyCodeCHF,
+          Nn.k_ECurrencyCodeRUB,
+          Nn.k_ECurrencyCodePLN,
+          Nn.k_ECurrencyCodeBRL,
+          Nn.k_ECurrencyCodeJPY,
+          Nn.k_ECurrencyCodeNOK,
+          Nn.k_ECurrencyCodeIDR,
+          Nn.k_ECurrencyCodeMYR,
+          Nn.k_ECurrencyCodePHP,
+          Nn.k_ECurrencyCodeSGD,
+          Nn.k_ECurrencyCodeTHB,
+          Nn.k_ECurrencyCodeVND,
+          Nn.k_ECurrencyCodeKRW,
+          Nn.k_ECurrencyCodeUAH,
+          Nn.k_ECurrencyCodeMXN,
+          Nn.k_ECurrencyCodeCAD,
+          Nn.k_ECurrencyCodeAUD,
+          Nn.k_ECurrencyCodeNZD,
+          Nn.k_ECurrencyCodeCNY,
+          Nn.k_ECurrencyCodeINR,
+          Nn.k_ECurrencyCodeCLP,
+          Nn.k_ECurrencyCodePEN,
+          Nn.k_ECurrencyCodeCOP,
+          Nn.k_ECurrencyCodeZAR,
+          Nn.k_ECurrencyCodeHKD,
+          Nn.k_ECurrencyCodeTWD,
+          Nn.k_ECurrencyCodeSAR,
+          Nn.k_ECurrencyCodeAED,
+          Nn.k_ECurrencyCodeILS,
+          Nn.k_ECurrencyCodeKZT,
+          Nn.k_ECurrencyCodeKWD,
+          Nn.k_ECurrencyCodeQAR,
+          Nn.k_ECurrencyCodeCRC,
+          Nn.k_ECurrencyCodeUYU,
         ],
         Wn = new Set(Hn);
-      Tn.k_ECurrencyCodeSEK,
-        Tn.k_ECurrencyCodeBGN,
-        Tn.k_ECurrencyCodeHRK,
-        Tn.k_ECurrencyCodeCZK,
-        Tn.k_ECurrencyCodeDKK,
-        Tn.k_ECurrencyCodeHUF,
-        Tn.k_ECurrencyCodeRON;
+      Nn.k_ECurrencyCodeSEK,
+        Nn.k_ECurrencyCodeBGN,
+        Nn.k_ECurrencyCodeHRK,
+        Nn.k_ECurrencyCodeCZK,
+        Nn.k_ECurrencyCodeDKK,
+        Nn.k_ECurrencyCodeHUF,
+        Nn.k_ECurrencyCodeRON;
       var Kn;
       !(function (e) {
         (e[(e.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
@@ -8210,7 +7995,7 @@
             return Kn.k_ERegionCodeInvalid;
         }
       }
-      function Qn(e) {
+      function jn(e) {
         switch (e) {
           case Kn.k_ERegionCodeCIS:
             return "The Commonwealth of Independent Stats";
@@ -8224,7 +8009,7 @@
             return "Invalid Region";
         }
       }
-      class jn {
+      class Qn {
         m_mapUSDPrice = new Map();
         m_mapKeyToGuidePrice = new Map();
         GetKey(e, t, n) {
@@ -8308,7 +8093,7 @@
       function la(e, t, n, a, r, o) {
         a.price * aa.Oo < t.amount.amount
           ? r.push({
-              strCurrency: n ? $n(n) : Fn(t.amount.currency_code),
+              strCurrency: n ? $n(n) : On(t.amount.currency_code),
               nAmountCents: t.amount.amount,
               nPercent: Math.floor((t.amount.amount / a.price) * 100) - 100,
               nProposedPrice: t.amount.amount,
@@ -8317,7 +8102,7 @@
             })
           : a.price / aa.Oo > t.amount.amount &&
             o.push({
-              strCurrency: n ? $n(n) : Fn(t.amount.currency_code),
+              strCurrency: n ? $n(n) : On(t.amount.currency_code),
               nAmountCents: t.amount.amount,
               nPercent: 100 - Math.floor((t.amount.amount / a.price) * 100),
               nProposedPrice: t.amount.amount,
@@ -8339,8 +8124,8 @@
           a.proposed_prices.region_amounts.map((t) => {
             const a = qn(t.name),
               s =
-                n.GetRecommendPrice(e, Tn.k_ECurrencyCodeUSD, a) ||
-                n.GetScaledRecommendedPrice(e, Tn.k_ECurrencyCodeUSD, a);
+                n.GetRecommendPrice(e, Nn.k_ECurrencyCodeUSD, a) ||
+                n.GetScaledRecommendedPrice(e, Nn.k_ECurrencyCodeUSD, a);
             la(l, t, a, s, r, o);
           }),
           {
@@ -8401,7 +8186,7 @@
                     const o = new Array();
                     ra(t).length > 0 && o.push("currency_missing");
                     const l = t.proposed_prices.base_amounts.find(
-                        (e) => e.amount.currency_code == Tn.k_ECurrencyCodeUSD,
+                        (e) => e.amount.currency_code == Nn.k_ECurrencyCodeUSD,
                       )?.amount.amount,
                       s = sa(l, n, r, t);
                     (s.rgAboveThreshold.length > 0 ||
@@ -8816,10 +8601,10 @@
       function Da(e) {
         const { amountInCents: t, className: n } = e;
         return t
-          ? a.createElement("div", { className: n }, Ta(t))
+          ? a.createElement("div", { className: n }, Na(t))
           : a.createElement("div", { className: n });
       }
-      function Ta(e) {
+      function Na(e) {
         return e
           ? (e / 100).toLocaleString(void 0, {
               minimumFractionDigits: 2,
@@ -8827,7 +8612,7 @@
             })
           : "";
       }
-      function Na(e) {
+      function Ta(e) {
         return a.createElement(
           "thead",
           null,
@@ -8838,14 +8623,14 @@
               a.createElement(
                 "td",
                 { key: "header" + e },
-                a.createElement(p.he, { toolTipContent: On(e) }, Mn(e)),
+                a.createElement(p.he, { toolTipContent: Fn(e) }, Mn(e)),
               ),
             ),
             zn.map((e) =>
               a.createElement(
                 "td",
                 { key: "header_region" + e },
-                a.createElement(p.he, { toolTipContent: Qn(e) }, Yn(e)),
+                a.createElement(p.he, { toolTipContent: jn(e) }, Yn(e)),
               ),
             ),
           ),
@@ -8855,7 +8640,7 @@
         const { proposal: t, oGuideline: n, mapCurrentPrices: r } = e,
           o = r.get(t.packageid),
           l = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == Tn.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == Nn.k_ECurrencyCodeUSD,
           )?.amount.amount;
         return a.createElement(
           "tr",
@@ -8872,7 +8657,7 @@
             });
           }),
           zn.map((e) => {
-            const r = Tn.k_ECurrencyCodeUSD,
+            const r = Nn.k_ECurrencyCodeUSD,
               s =
                 n.GetRecommendPrice(l, r, e) ||
                 n.GetScaledRecommendedPrice(l, r, e);
@@ -8916,10 +8701,10 @@
         if (t)
           if (r && r.price > t.amount.amount) {
             o = Zn.outofmatrixlower;
-            l = `Suggested price ${Ta(r.price)} - ${Math.floor(100 - (t.amount.amount / r.price) * 100)}% ▼`;
+            l = `Suggested price ${Na(r.price)} - ${Math.floor(100 - (t.amount.amount / r.price) * 100)}% ▼`;
           } else if (r && r.price < t.amount.amount) {
             o = Zn.outofmatrix;
-            l = `Suggested price ${Ta(r.price)} - ${Math.floor((t.amount.amount / r.price) * 100 - 100)}% ▲`;
+            l = `Suggested price ${Na(r.price)} - ${Math.floor((t.amount.amount / r.price) * 100 - 100)}% ▲`;
           } else
             n
               ? n.amount > t.amount.amount
@@ -8961,7 +8746,7 @@
               "div",
               { key: e.packageid },
               a.createElement("hr", null),
-              a.createElement(Oa, {
+              a.createElement(Fa, {
                 oGuideline: n,
                 proposal: e,
                 mapCurrentPrices: r,
@@ -8980,10 +8765,10 @@
             { className: Zn.PackageInfoColumn },
             "Package Info",
           ),
-          a.createElement(Na, null),
+          a.createElement(Ta, null),
         );
       }
-      function Oa(e) {
+      function Fa(e) {
         return a.createElement(
           a.Fragment,
           null,
@@ -8993,10 +8778,10 @@
             a.createElement(Aa, { ...e }),
             a.createElement(Ra, { ...e }),
           ),
-          a.createElement(Fa, { ...e }),
+          a.createElement(Oa, { ...e }),
         );
       }
-      function Fa(e) {
+      function Oa(e) {
         const { proposal: t } = e,
           n = t.proposed_prices.country_amounts;
         return n?.length > 0
@@ -9010,9 +8795,9 @@
                   { key: `country_${t.packageid}_${e.amount.currency_code}` },
                   e.name,
                   "/",
-                  Fn(e.amount.currency_code),
+                  On(e.amount.currency_code),
                   " @ ",
-                  Ta(e.account),
+                  Na(e.account),
                 ),
               ),
             )
@@ -9205,12 +8990,12 @@
       function za(e) {
         const { proposal: t, mapCurrentPrices: n } = e,
           r = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == Tn.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == Nn.k_ECurrencyCodeUSD,
           )?.amount.amount,
           o = n
             .get(t.packageid)
             ?.current_costs.base_amounts.find(
-              (e) => e.currency_code == Tn.k_ECurrencyCodeUSD,
+              (e) => e.currency_code == Nn.k_ECurrencyCodeUSD,
             )?.amount;
         return a.createElement(
           a.Fragment,
@@ -9220,7 +9005,7 @@
               "div",
               { className: pa.AboveAutoPublish },
               "USD Price $",
-              Ta(r),
+              Na(r),
               " is above $80 USD Threshold",
             ),
           Boolean(o && r > 2 * o) &&
@@ -9228,9 +9013,9 @@
               "div",
               { className: pa.AboveAutoPublish },
               "USD price $",
-              Ta(r),
+              Na(r),
               " is more than twice existing USD Price $",
-              Ta(o),
+              Na(o),
             ),
         );
       }
@@ -9299,9 +9084,9 @@
       function Ya(e) {
         const { proposal: t, oGuideline: n } = e,
           r = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == Tn.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == Nn.k_ECurrencyCodeUSD,
           )?.amount.amount,
-          o = n.GetRecommendPrice(r, Tn.k_ECurrencyCodeUSD);
+          o = n.GetRecommendPrice(r, Nn.k_ECurrencyCodeUSD);
         return a.createElement(
           a.Fragment,
           null,
@@ -9310,10 +9095,10 @@
               "div",
               { className: pa.MatrixGap },
               "$",
-              Ta(r),
+              Na(r),
               " USD Price doesn't align with any matrix price point. Will compare proposal to scaled guideline.",
             ),
-          a.createElement(ja, { ...e, USDPriceCents: r }),
+          a.createElement(Qa, { ...e, USDPriceCents: r }),
         );
       }
       function qa(e) {
@@ -9332,17 +9117,17 @@
             a.createElement(
               "td",
               { className: (0, u.A)(pa.OriginalPrice, r) },
-              t.nOriginalPrice ? `${Ta(t.nOriginalPrice)}` : "--",
+              t.nOriginalPrice ? `${Na(t.nOriginalPrice)}` : "--",
             ),
             a.createElement(
               "td",
               { className: (0, u.A)(pa.ProposedPrice, r) },
-              `${Ta(t.nProposedPrice)}`,
+              `${Na(t.nProposedPrice)}`,
             ),
             a.createElement(
               "td",
               { className: pa.RecommendedPrice },
-              `${Ta(t.nGuidancePrice)}`,
+              `${Na(t.nGuidancePrice)}`,
             ),
             a.createElement(
               "td",
@@ -9352,7 +9137,7 @@
           )
         );
       }
-      function Qa(e) {
+      function ja(e) {
         const { strGuidanceMessage: t, strDirection: n } = e;
         return a.createElement(
           "thead",
@@ -9389,7 +9174,7 @@
           ),
         );
       }
-      function ja(e) {
+      function Qa(e) {
         const {
             proposal: t,
             oGuideline: n,
@@ -9401,7 +9186,7 @@
             [r, o, n, t],
           );
         if (l.length > 0 || s.length > 0) {
-          const e = Ta(r);
+          const e = Na(r);
           return a.createElement(
             a.Fragment,
             null,
@@ -9410,7 +9195,7 @@
                 "div",
                 { className: pa.AutoPublishCeiling },
                 "USD price $",
-                Ta(r),
+                Na(r),
                 " is above the auto-publish threshold of $80 USD",
               ),
             a.createElement(
@@ -9420,7 +9205,7 @@
                 a.createElement(
                   "table",
                   { className: pa.ThresholdMiniTable },
-                  a.createElement(Qa, {
+                  a.createElement(ja, {
                     strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${e}`,
                     strDirection: "above",
                   }),
@@ -9440,7 +9225,7 @@
                 a.createElement(
                   "table",
                   { className: pa.ThresholdMiniTable },
-                  a.createElement(Qa, {
+                  a.createElement(ja, {
                     strGuidanceMessage: `${s.length} currencies below guidance threshold for USD $ ${e}`,
                     strDirection: "below",
                   }),
@@ -9493,7 +9278,7 @@
           ? a.createElement(
               "div",
               { className: (0, u.A)(Zn.FullCurrencyTable) },
-              a.createElement(Na, null),
+              a.createElement(Ta, null),
               a.createElement(Ra, { ...e }),
             )
           : a.createElement(y.Yh, {
@@ -9542,7 +9327,7 @@
           r = (function () {
             const [e, t] = (0, a.useState)(
               () =>
-                new jn((0, an.Tc)("pricing_guideline", "application_config")),
+                new Qn((0, an.Tc)("pricing_guideline", "application_config")),
             );
             return e;
           })(),
@@ -10451,8 +10236,8 @@
       }
       var wr = n(4544),
         Dr = n(44165),
-        Tr = n(1909),
-        Nr = n(78395),
+        Nr = n(1909),
+        Tr = n(78395),
         Rr = n(22837),
         Ir = n(2160),
         Br = n(63556),
@@ -10497,9 +10282,9 @@
         );
       }
       var Mr = n(26408),
-        Or = n(9482),
-        Fr = n(36500),
-        Ur = n.n(Fr),
+        Fr = n(9482),
+        Or = n(36500),
+        Ur = n.n(Or),
         Gr = n(64442),
         Hr = n.n(Gr);
       function Wr(e) {
@@ -10575,14 +10360,14 @@
                 : [Ir.TU.k_ESteamRealmGlobal],
             [d],
           ),
-          T = (0, s.we)(n ? "#SeasonPass_Update" : "#SeasonPass_Create");
+          N = (0, s.we)(n ? "#SeasonPass_Update" : "#SeasonPass_Create");
         return a.createElement(
           Lr.E,
           { active: !0 },
           a.createElement(
-            Nr.o0,
+            Tr.o0,
             {
-              strTitle: T,
+              strTitle: N,
               strDescription: (0, s.we)("#SeasonPass_Create_desc"),
               bAllowFullSize: !0,
               bDisableBackgroundDismiss: !0,
@@ -10664,7 +10449,7 @@
                 null,
                 (0, s.we)("#SeasonPass_CustomerDescription_Images"),
               ),
-              a.createElement(Or.default, {
+              a.createElement(Fr.default, {
                 language: l,
                 editorType: "milestone",
                 rctToolbarControls: i,
@@ -10809,7 +10594,7 @@
           (0, Vr.Gn)(this);
         }
       }
-      (0, Nn.Cg)([Vr.sH], $r.prototype, "m_mapAppIDToDLCs", void 0);
+      (0, Tn.Cg)([Vr.sH], $r.prototype, "m_mapAppIDToDLCs", void 0);
       const Yr = { include_release: !0, include_included_items: !0 };
       function qr(e) {
         const {
@@ -10870,7 +10655,7 @@
               a.Fragment,
               null,
               c &&
-                a.createElement(Qr, {
+                a.createElement(jr, {
                   inputMilestone: t,
                   setCurrentMilestone: n,
                   rgAllMilestones: o,
@@ -10891,7 +10676,7 @@
             ),
         );
       }
-      function Qr(e) {
+      function jr(e) {
         const {
             hideModal: t,
             inputMilestone: n,
@@ -10919,7 +10704,7 @@
           Lr.E,
           { active: !0 },
           a.createElement(
-            Nr.o0,
+            Tr.o0,
             {
               strTitle: (0, s.PP)(
                 "#SeasonPass_UpdateLaunch_title",
@@ -10991,7 +10776,7 @@
                     null,
                     (0, s.we)("#SeasonPass_UpdateLaunch_dlc"),
                   ),
-                  a.createElement(jr, {
+                  a.createElement(Qr, {
                     appid: i,
                     setAppID: c,
                     rgExcludeAppIDs: C,
@@ -11013,7 +10798,7 @@
           ),
         );
       }
-      function jr(e) {
+      function Qr(e) {
         const {
             appid: t,
             setAppID: n,
@@ -11291,7 +11076,7 @@
         return a.createElement(
           "div",
           { className: Ur().EditorCtn },
-          a.createElement(Tr.yk, { fnLangHasData: i }),
+          a.createElement(Nr.yk, { fnLangHasData: i }),
           a.createElement(eo, {
             seasonPassID: t,
             nNextMilestoneID: s,
@@ -11315,7 +11100,7 @@
                 {
                   onClick: (e) =>
                     (0, En.pg)(
-                      a.createElement(Nr.o0, {
+                      a.createElement(Tr.o0, {
                         strTitle: "Clear?",
                         strDescription: "Are you sure?",
                         onOK: () => l({ commitments: [] }),
@@ -11424,7 +11209,7 @@
             a.createElement(
               "span",
               { className: Ur().LangBox },
-              a.createElement(Tr.iN, null),
+              a.createElement(Nr.iN, null),
             ),
             a.createElement(
               "div",
@@ -12415,8 +12200,8 @@
               const r = t.filter((e, t) => n[t]);
               let o = r.filter((t) => t.rgAppIds.includes(e.appId));
               o.sort((e, t) => {
-                const n = e.rgPrices.base[Tn.k_ECurrencyCodeUSD],
-                  a = t.rgPrices.base[Tn.k_ECurrencyCodeUSD];
+                const n = e.rgPrices.base[Nn.k_ECurrencyCodeUSD],
+                  a = t.rgPrices.base[Nn.k_ECurrencyCodeUSD];
                 return n < a ? -1 : n === a ? 0 : 1;
               });
               const l = o[0].nPackageId,
@@ -12716,16 +12501,16 @@
           null,
           a.createElement(
             Me.qh,
-            { path: Ne.GameEdit(`:action(${Re.join("|")})`, ":itemid") },
+            { path: Te.GameEdit(`:action(${Re.join("|")})`, ":itemid") },
             a.createElement(
               Z._M,
               null,
-              a.createElement(Oe.X, {
+              a.createElement(Fe.X, {
                 config: {
                   "storeadmin-releasedateinfo": (e) =>
                     a.createElement(Ie, { bIsGameEdit: !0, ...e }),
                   "storeadmin-controllersupportinfo": (e) =>
-                    a.createElement(F, { ...e }),
+                    a.createElement(O, { ...e }),
                   "storeadmin-app-description-editor": (e) =>
                     a.createElement(ee, { ...e }),
                   "storeadmin-app-extraassetslist": (e) =>
@@ -12750,9 +12535,9 @@
             ),
           ),
           a.createElement(Me.qh, {
-            path: Ne.AppLanding(":appid"),
+            path: Te.AppLanding(":appid"),
             render: (e) =>
-              a.createElement(Oe.X, {
+              a.createElement(Fe.X, {
                 config: {
                   "storeadmin-releasedateinfo": (e) =>
                     a.createElement(Ie, { ...e }),
@@ -12765,9 +12550,9 @@
               }),
           }),
           a.createElement(Me.qh, {
-            path: Ne.CommunityItems(":appid"),
+            path: Te.CommunityItems(":appid"),
             render: (e) =>
-              a.createElement(Oe.X, {
+              a.createElement(Fe.X, {
                 config: {
                   "storeadmin-profilecolors": (e) =>
                     a.createElement(l, { ...e }),
@@ -12775,7 +12560,7 @@
               }),
           }),
           a.createElement(Me.qh, {
-            path: Ne.ReviewPriceProposals(),
+            path: Te.ReviewPriceProposals(),
             component: rr,
           }),
         );
@@ -12958,38 +12743,6 @@
           const t = e.state.doc.resolve(o.pos);
           e.dispatch(e.state.tr.setSelection(r.U3.near(t)));
         }
-      }
-    },
-    96001: (e, t, n) => {
-      "use strict";
-      n.d(t, { a: () => i, z: () => s });
-      var a = n(81393),
-        r = n(96059),
-        o = n(30470),
-        l = n(24484);
-      class s {
-        m_steamInterface;
-        GetPromotionTransport() {
-          return this.m_steamInterface;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            s.s_Singleton || ((s.s_Singleton = new s()), s.s_Singleton.Init()),
-            s.s_Singleton
-          );
-        }
-        Init() {
-          const e = (0, l.Tc)(
-            "promotion_operation_token",
-            "application_config",
-          );
-          (0, a.w)(Boolean(e), "require promotion_operation_token"),
-            (this.m_steamInterface = new r.D(o.TS.WEBAPI_BASE_URL, e));
-        }
-      }
-      function i() {
-        return s.Get().GetPromotionTransport().GetServiceTransport();
       }
     },
     71696: (e, t, n) => {
@@ -13504,125 +13257,6 @@
           ),
         );
       }
-    },
-    38135: (e, t, n) => {
-      "use strict";
-      n.d(t, { V: () => _ });
-      var a = n(90626),
-        r = n(92757),
-        o = n(52038),
-        l = n(61859),
-        s = n(95034),
-        i = n(1990),
-        c = n.n(i),
-        d = n(32754),
-        u = n(51272),
-        m = n(76217);
-      class p extends a.Component {
-        state = { activeTab: "" };
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({ activeTab: this.props.startingTab })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, s.f3)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(e) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== e.location.key &&
-            this.setState({ activeTab: (0, s.f3)(this.props.location, "tab") });
-        }
-        OnTabClick(e) {
-          this.setState({ activeTab: e.key }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, s.Bm)(this.props.history, "tab", e.key),
-            e.onClick && e.onClick(e);
-        }
-        render() {
-          const e =
-            this.props.tabs.find((e) => e.key === this.state.activeTab) ||
-            this.props.tabs[0];
-          return a.createElement(
-            a.Fragment,
-            null,
-            a.createElement(
-              m.Z,
-              {
-                className: (0, o.A)(
-                  c().GraphicalAssetsTabs,
-                  this.props.classNameCtn,
-                ),
-              },
-              this.props.tabs.map((t) => {
-                if (!t.hidden) {
-                  let n = "";
-                  return (
-                    "success" === t.statusType
-                      ? (n = c().StatusSuccess)
-                      : "danger" === t.statusType
-                        ? (n = c().StatusDanger)
-                        : "caution" === t.statusType && (n = c().StatusCaution),
-                    a.createElement(
-                      u.e7,
-                      {
-                        key: t.key,
-                        condition: Boolean(t.statusToolTip || t.tooltip),
-                        wrap: (e) =>
-                          a.createElement(
-                            d.he,
-                            { toolTipContent: t.statusToolTip || t.tooltip },
-                            e,
-                          ),
-                      },
-                      a.createElement(
-                        m.Z,
-                        {
-                          key: t.key,
-                          className: (0, o.A)(
-                            `${c().GraphicalAssetsTab} ${t.key === e.key ? ((0, o.A))(c().Active, "ActiveTab") : ""}`,
-                            this.props.classNameTab,
-                          ),
-                          onActivate: () => this.OnTabClick(t),
-                        },
-                        Boolean(t.vo_warning) &&
-                          a.createElement(
-                            d.he,
-                            { toolTipContent: t.vo_warning },
-                            a.createElement(
-                              "div",
-                              { className: c().VOWarning },
-                              (0, l.we)("#EventEditor_VOWarning"),
-                            ),
-                          ),
-                        Boolean(t.status) &&
-                          a.createElement(
-                            "div",
-                            {
-                              className: (0, o.A)(c().GraphicalAssetStatus, n),
-                            },
-                            t.status,
-                          ),
-                        t.name,
-                      ),
-                    )
-                  );
-                }
-                return null;
-              }),
-            ),
-            a.createElement(
-              m.Z,
-              null,
-              e && a.createElement(m.Z, null, e.contents),
-            ),
-          );
-        }
-      }
-      const _ = (0, r.y)(p);
     },
   },
 ]);
