@@ -6757,10 +6757,6 @@
               case "interactive_recommender":
               case "tag_recommender":
                 return "#Sale_default_label_RecommendedForYou";
-              case "ml_wishlist_recommender":
-                return "#Sale_default_label_WishlistRecommender";
-              case "ml_playtime_recommender":
-                return "#Sale_default_label_PlaytimeRecommender";
               case "deck_topplayed":
                 return "#Sale_TopPlayedOnDeckSection";
               case "personalized_carousel":
