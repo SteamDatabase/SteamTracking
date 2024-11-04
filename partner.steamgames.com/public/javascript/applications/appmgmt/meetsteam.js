@@ -21,8 +21,8 @@
         l = n(90626),
         r = n(17083),
         i = n(92757),
-        s = n(11577),
-        c = n(14932),
+        c = n(11577),
+        s = n(14932),
         o = n(97058),
         m = n(84811),
         u = n(95695),
@@ -36,8 +36,8 @@
         S = n(17720),
         f = n(46575),
         y = n(96001),
-        w = n(71541),
-        b = n(24054),
+        b = n(71541),
+        w = n(24054),
         C = n(78395),
         N = n(21869),
         I = n(22797),
@@ -47,7 +47,7 @@
         D = n(91675),
         R = n(30470);
       function P(e) {
-        const t = S.b.InitFromClanID(b.z5),
+        const t = S.b.InitFromClanID(w.z5),
           n = (function () {
             const [e] = (0, l.useState)(() =>
               (0, g.Tc)("event_gids", "application_config"),
@@ -73,17 +73,17 @@
       }
       function k(e) {
         const { gid: t } = e,
-          n = S.b.InitFromClanID(b.z5),
+          n = S.b.InitFromClanID(w.z5),
           a = (0, y.a)(),
-          r = (0, f.my)(a, b.z5, t),
+          r = (0, f.my)(a, w.z5, t),
           i = (0, v.RR)(t),
-          s = i.GetNameWithFallback(0),
-          [c, o, m] = (0, p.uD)();
+          c = i.GetNameWithFallback(0),
+          [s, o, m] = (0, p.uD)();
         return l.createElement(
           "div",
           null,
           l.createElement("hr", null),
-          l.createElement("div", null, s),
+          l.createElement("div", null, c),
           l.createElement("div", null),
           l.createElement(
             "div",
@@ -110,10 +110,10 @@
               )
             : l.createElement("div", null, "This has no sessions defined"),
           l.createElement(
-            w.$n,
+            b.$n,
             { onClick: o },
             "Invite to ",
-            s,
+            c,
             l.createElement(M.o, {
               tooltip:
                 "This will email and show the users on their dashboard when the event is live.",
@@ -121,8 +121,8 @@
           ),
           l.createElement(
             N.E,
-            { active: c },
-            l.createElement(L, { hideModal: m, gid: t }),
+            { active: s },
+            l.createElement(O, { hideModal: m, gid: t }),
           ),
         );
       }
@@ -143,12 +143,12 @@
             l.Fragment,
             null,
             t.sessions.map((e) =>
-              l.createElement(O, { key: e.id, session: e, rgAvailability: n }),
+              l.createElement(L, { key: e.id, session: e, rgAvailability: n }),
             ),
           ),
         );
       }
-      function O(e) {
+      function L(e) {
         const { session: t, rgAvailability: n } = e,
           a = n?.find((e) => e.session_id == t.id);
         return l.createElement(
@@ -170,22 +170,22 @@
           ),
         );
       }
-      function L(e) {
+      function O(e) {
         const { hideModal: t, gid: n } = e,
           [a, r] = (0, l.useState)(""),
-          [i, s] = (0, l.useState)(!1),
-          [c, o] = (0, l.useState)(null),
+          [i, c] = (0, l.useState)(!1),
+          [s, o] = (0, l.useState)(null),
           [m, u] = (0, l.useState)(null);
         return l.createElement(
           C.o0,
           {
             strTitle: "Invite Users",
-            bOKDisabled: !a || 0 == a.trim().length || null != c,
+            bOKDisabled: !a || 0 == a.trim().length || null != s,
             strDescription:
               "ADDING: Enter Accounts IDs you wish to invite separated newlines",
-            strCancelButtonText: null !== c ? "Close" : "Cancel",
+            strCancelButtonText: null !== s ? "Close" : "Cancel",
             onOK: async () => {
-              s(!0);
+              c(!0);
               const e = a
                 .split(/\r?\n/)
                 .filter((e) => "" !== e.trim())
@@ -214,10 +214,10 @@
                   t,
                 );
               }
-              s(!1);
+              c(!1);
             },
             onCancel: () => {
-              o(null), u(null), s(!1), r(""), t();
+              o(null), u(null), c(!1), r(""), t();
             },
           },
           l.createElement("textarea", {
@@ -227,12 +227,12 @@
             value: a,
             autoFocus: !0,
           }),
-          null != c &&
+          null != s &&
             l.createElement(
               "div",
               null,
               "Invited ",
-              c.toLocaleString(),
+              s.toLocaleString(),
               " accounts, skipped previously invited ",
               m.toLocaleString(),
             ),
@@ -244,19 +244,20 @@
             }),
         );
       }
-      function F() {
+      function Y() {
         const [e] = (0, l.useState)(() =>
           (0, g.Tc)("events_list", "application_config"),
         );
         return e;
       }
-      var Y = n(48479),
+      var F = n(48479),
         x = n(14336),
-        U = n(32179),
-        $ = n(29233),
-        z = n(9161);
+        U = n(22837),
+        $ = n(32179),
+        z = n(29233),
+        W = n(9161);
       function j(e) {
-        const t = F(),
+        const t = Y(),
           n = (function () {
             const [e] = (0, l.useState)(() =>
               (0, g.Tc)("interest_results", "application_config"),
@@ -281,7 +282,7 @@
         return l.createElement(
           "div",
           null,
-          l.createElement(w.pd, {
+          l.createElement(b.pd, {
             type: "text",
             value: a,
             onChange: (e) => r(e.currentTarget.value.trim()),
@@ -304,15 +305,15 @@
       function J(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: a } = e;
         return l.createElement(
-          Y.qx,
+          F.qx,
           {
             title: `${t.name} in ${t.place} with Interest: ${n.toLocaleString()}`,
             bStartMinimized: !0,
           },
-          l.createElement(W, { conf: t, rgSurveyInterest: a }),
+          l.createElement(q, { conf: t, rgSurveyInterest: a }),
         );
       }
-      function W(e) {
+      function q(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           a = (0, l.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
@@ -323,24 +324,24 @@
               "div",
               null,
               l.createElement(
-                w.$n,
+                b.$n,
                 {
                   onClick: () => {
                     const e = [];
                     e.push(["AccountID", "Name", "Partner ID", "Partner Name"]),
                       a.forEach((t) => {
                         const n = [],
-                          a = new $.b2(t.steamid);
+                          a = new z.b2(t.steamid);
                         n.push("" + a.GetAccountID());
                         const l = (0, x.z0)(a.GetAccountID());
                         n.push(l?.m_strPlayerName ? l.m_strPlayerName : "");
                         const r = t.results.partner_id;
                         n.push("" + r);
-                        const i = (0, U.Yd)(r);
+                        const i = (0, $.Yd)(r);
                         i && n.push(i?.name), e.push(n);
                       });
                     const n = t.name.replace(" ", "_") + "_appeals_data.csv";
-                    z.g.WriteCSVToFile(e, n);
+                    W.g.WriteCSVToFile(e, n);
                   },
                 },
                 "Export to CSV (wait until the table populates fully)",
@@ -356,11 +357,14 @@
                     null,
                     l.createElement("th", null, "Account Name"),
                     l.createElement("th", null, "Actual Name"),
+                    l.createElement("td", null, "Have you met steam?"),
                     l.createElement("th", null, "Email"),
+                    l.createElement("th", null, "Attending count?"),
                     l.createElement("th", null, "Partner"),
                     l.createElement("th", null, "Partner Revenue"),
                     l.createElement("th", null, "Biggest Game"),
-                    l.createElement("th", null, "Country (via IP)"),
+                    l.createElement("th", null, "Alt Language"),
+                    l.createElement("th", null, "Country"),
                     l.createElement("th", null, "Submit Survey Time"),
                   ),
                 ),
@@ -368,10 +372,11 @@
                   "tbody",
                   null,
                   a.map((e) =>
-                    l.createElement(q, {
+                    l.createElement(G, {
                       key: t.id + "_" + e.steamid,
                       strsteamid: e.steamid,
                       partnerID: e.results.partner_id,
+                      registration: e.results,
                     }),
                   ),
                 ),
@@ -379,18 +384,33 @@
             )
           : l.createElement("div", null, "No users with interest");
       }
-      function q(e) {
-        const { strsteamid: t, partnerID: n } = e,
-          a = (0, x.hW)(t),
-          [r] = (0, U.UA)(n);
+      function G(e) {
+        const { strsteamid: t, partnerID: n, registration: a } = e,
+          r = (0, x.hW)(t),
+          [i] = (0, $.UA)(n);
         return l.createElement(
           "tr",
           null,
-          l.createElement("td", null, a.data?.m_strPlayerName),
-          l.createElement("td", null, r?.name || n),
+          l.createElement("td", null, r.data?.m_strAccountName),
+          l.createElement("td", null, r.data?.m_strPlayerName),
+          l.createElement("td", null, a.have_you_met_steam ? "YES" : "NO"),
+          l.createElement("td", null, a.email_override),
+          l.createElement("td", null, a.attending.length),
+          l.createElement("td", null, i?.name || n),
+          l.createElement("td", null, "todo"),
+          l.createElement("td", null, "todo"),
+          l.createElement(
+            "td",
+            null,
+            a.english_not_good && a.preferred_language
+              ? (0, U.Lg)(a.preferred_language)
+              : "",
+          ),
+          l.createElement("td", null, a.country_code),
+          l.createElement("td", null, (0, A.TW)(a.submit_time)),
         );
       }
-      function G(e) {
+      function H(e) {
         const t = (e) =>
             window.sessionStorage.setItem("meetsteamadmin", `?tab=${e.key}`),
           n = [
@@ -422,8 +442,7 @@
           l.createElement("br", null),
         );
       }
-      var H = n(22837),
-        K = n(20194),
+      var K = n(20194),
         V = n(79645),
         X = n(45737),
         Z = n.n(X),
@@ -449,7 +468,7 @@
           })(),
           { data: a } = (0, x.js)(te.iA.accountid),
           [r, i] = (0, l.useState)(!1),
-          [s, c] = (0, l.useState)(!1),
+          [c, s] = (0, l.useState)(!1),
           [o, m] = (0, l.useState)(!1),
           [u, d] = (0, l.useState)(() => JSON.parse(JSON.stringify(n)));
         return t
@@ -496,7 +515,7 @@
                     l.createElement(
                       "div",
                       { className: Z().SectionCtn },
-                      l.createElement(ce, {
+                      l.createElement(se, {
                         oRegistration: u,
                         fnSetRegistration: d,
                       }),
@@ -504,7 +523,7 @@
                     l.createElement(
                       "div",
                       { className: Z().SectionCtn },
-                      l.createElement(se, {
+                      l.createElement(ce, {
                         oRegistration: u,
                         fnSetRegistration: d,
                       }),
@@ -513,10 +532,10 @@
                       "div",
                       { className: (0, ee.A)(Z().SectionCtn, Z().ActionBar) },
                       l.createElement(
-                        w.jn,
+                        b.jn,
                         {
                           onClick: async () => {
-                            c(!0), i(!1), m(!1);
+                            s(!0), i(!1), m(!1);
                             const e = `${te.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
                               t = new FormData();
                             t.append("sessionid", te.TS.SESSIONID),
@@ -537,12 +556,12 @@
                                 e,
                               );
                             }
-                            c(!1);
+                            s(!1);
                           },
                         },
                         (0, A.we)("#Button_Submit"),
                       ),
-                      s &&
+                      c &&
                         l.createElement(I.t, {
                           size: "medium",
                           position: "center",
@@ -570,9 +589,9 @@
               (0, A.we)("#MeetSteam_closed"),
             );
       }
-      function se(e) {
+      function ce(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          a = F();
+          a = Y();
         return l.createElement(
           l.Fragment,
           null,
@@ -636,7 +655,7 @@
                   l.createElement(
                     "td",
                     null,
-                    l.createElement(w.Yh, {
+                    l.createElement(b.Yh, {
                       checked: t.attending?.includes(e.id),
                       onChange: (a) => {
                         let l = t.attending ? [...t.attending] : [];
@@ -655,7 +674,7 @@
             ),
           ),
           l.createElement("br", null),
-          l.createElement(w.pd, {
+          l.createElement(b.pd, {
             type: "text",
             value: t.suggestion || "",
             onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
@@ -663,7 +682,7 @@
           }),
         );
       }
-      function ce(e) {
+      function se(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
           a = (0, x.js)(te.iA.accountid),
           r = (function (e) {
@@ -693,10 +712,10 @@
               });
             return e == n ? t : a.isLoading ? "" : a.data;
           })(t?.partner_id),
-          [i, s] = (0, l.useState)(() =>
+          [i, c] = (0, l.useState)(() =>
             Boolean((t.email_override && t.email_override != r) || !r),
           ),
-          [c, o, m] = (0, le.q3)(() => [
+          [s, o, m] = (0, le.q3)(() => [
             !Boolean(t.have_you_met_steam),
             Boolean(t.english_not_good),
             t.preferred_language,
@@ -718,7 +737,7 @@
                 l.createElement(
                   "div",
                   { className: ae().EmailField },
-                  l.createElement(w.pd, {
+                  l.createElement(b.pd, {
                     type: "string",
                     label: (0, A.we)("#MeetSteam_You_Email"),
                     disabled: !i,
@@ -730,28 +749,28 @@
                   }),
                 ),
                 !i &&
-                  l.createElement(w.Yh, {
+                  l.createElement(b.Yh, {
                     checked: i,
-                    onChange: s,
+                    onChange: c,
                     label: (0, A.we)("#MeetSteam_You_Update"),
                     tooltip: (0, A.we)("#MeetSteam_You_Update_ttip"),
                   }),
               ),
-              l.createElement(w.JU, null, (0, A.we)("#MeetSteam_NeverMet")),
-              l.createElement(w.Yh, {
+              l.createElement(b.JU, null, (0, A.we)("#MeetSteam_NeverMet")),
+              l.createElement(b.Yh, {
                 label: (0, A.we)("#MeetSteam_NeverMetNo"),
-                checked: c,
+                checked: s,
                 onChange: (e) => n({ ...t, have_you_met_steam: !e }),
               }),
               l.createElement(
-                w.JU,
+                b.JU,
                 null,
                 (0, A.we)("#MeetSteam_CapabableEnglish"),
               ),
               l.createElement(
                 "div",
                 { className: ae().RadioButtonCtn },
-                l.createElement(w.Od, {
+                l.createElement(b.Od, {
                   className: ae().RadioButtons,
                   checked: !o,
                   onChange: (e) =>
@@ -763,7 +782,7 @@
                     }),
                   label: (0, A.we)("#MeetSteam_CapabableEnglish_Yes"),
                 }),
-                l.createElement(w.Od, {
+                l.createElement(b.Od, {
                   className: ae().RadioButtons,
                   checked: o,
                   onChange: (e) =>
@@ -771,7 +790,7 @@
                     n({
                       ...t,
                       english_not_good: !0,
-                      preferred_language: (0, H.sf)(te.TS.LANGUAGE),
+                      preferred_language: (0, U.sf)(te.TS.LANGUAGE),
                     }),
                   label: (0, A.we)("#MeetSteam_CapabableEnglish_No"),
                 }),
@@ -782,7 +801,7 @@
                   null,
                   l.createElement("br", null),
                   l.createElement(
-                    w.JU,
+                    b.JU,
                     null,
                     (0, A.we)("#MeetSteam_LanguagePref"),
                   ),
@@ -816,7 +835,7 @@
           r.forEach((e) =>
             i.push({ label: e?.partner_name, data: e.partnerid }),
           ),
-          l.createElement(w.m, {
+          l.createElement(b.m, {
             layout: "inline",
             label: a,
             rgOptions: i,
@@ -838,7 +857,7 @@
             me.O3.Init();
           }, []),
           l.createElement(
-            s.m,
+            c.m,
             null,
             l.createElement(
               r.Kd,
@@ -850,7 +869,7 @@
                   exact: !0,
                   path: a.B.DiagData(),
                   render: (e) =>
-                    l.createElement(c.z, {
+                    l.createElement(s.z, {
                       ...e,
                       strConfigID: "application_config",
                     }),
@@ -858,7 +877,7 @@
                 l.createElement(i.qh, {
                   exact: !0,
                   path: ue.AdminDashboard(),
-                  component: G,
+                  component: H,
                 }),
                 l.createElement(i.qh, {
                   exact: !0,

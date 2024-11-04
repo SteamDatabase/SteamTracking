@@ -914,7 +914,7 @@
 "7\n$CMsgClientManageFriendsGroupResponse
 "7\n$CUserAccount_GetUserCountry_Response
 "7\n5CAccountHardware_RegisterValveIndexComponent_Response"a\n/CAccountHardware_GetSteamDeckComponents_Request
-"7\n5CGameRecording_SwitchBackgroundRecordingGame_Response"r\n6CGameRecordingDebug_AddTimelineHighlightMarker_Request
+"7\n5CGameRecording_SwitchBackgroundRecordingGame_Response*
 "8\n CChatRoom_JoinVoiceChat_Response
 "8\n"CRemoteClient_StartPairing_Request
 "8\n#CParties_CancelReservation_Response
@@ -3372,7 +3372,6 @@ $tICAPIJobListHashLoadSave
 (\r"1\n/CSteamInputService_ControllerStateFlow_Response2
 (\r"2\n!CTimedTrial_ResetPlaytime_Request
 (\r"2\n0CAccountHardware_SetPersonalizationFile_Response"[\n/CAccountHardware_GetPersonalizationFile_Request
-(\r"2\n0CGameRecordingDebug_SetTimelineGameMode_Response*
 (\r"2\n0CPlayer_UpdateSteamAnnouncementLastRead_Response"$\n"CPlayer_GetPrivacySettings_Request"
 (\r"2\n0CSteamTV_SetBroadcastChannelLinkRegions_Response"I\n)CSteamTV_GetBroadcastChannelLinks_Request
 (\r"2\n0CStore_DeleteReservationPositionMessage_Response"2\n0CStore_GetAllReservationPositionMessages_Request"c\n1CStore_GetAllReservationPositionMessages_Response
@@ -3558,14 +3557,11 @@ $tICAPIJobListHashLoadSave
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
 (\t"1\n/CGameRecording_UserUpdateTimelineEntry_Response"y\n.CGameRecording_UserRemoveTimelineEntry_Request
 (\t"2\n!CRemoteClient_AllocateSDR_Request
-(\t"2\n0CGameRecordingDebug_AddTimelineRangeEnd_Response"N\n/CGameRecordingDebug_SetTimelineGameMode_Request
 (\t"3\n CPlayer_GetFavoriteBadge_Request
 (\t"3\n!CMsgClientLaunchClientAppResponse
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
 (\t"3\n1CAccountHardware_RegisterSteamController_Response"n\n<CAccountHardware_CompleteSteamControllerRegistration_Request
-(\t"3\n1CGameRecordingDebug_AddTimelineTimestamp_Response"]\n1CGameRecordingDebug_AddTimelineRangeStart_Request
 (\t"4\n SiteServerUI_SetLanguage_Request
-(\t"4\n2CGameRecordingDebug_AddTimelineRangeStart_Response"L\n/CGameRecordingDebug_AddTimelineRangeEnd_Request
 (\t"4\n\nCMsgGSKick
 (\t"5\n CMsgTest_MessageToServer_Request
 (\t"5\n#CPartnerApps_FindDRMUploads_Request
@@ -3580,7 +3576,6 @@ $tICAPIJobListHashLoadSave
 (\t"7\n$CMsgClientRequestMachineAuthResponse
 (\t"8\n#CParental_ParentalLock_Notification
 (\t"8\n\rCMsgJSConfirm
-(\t"9\n7CGameRecordingDebug_AddTimelineHighlightMarker_Response"P\n0CGameRecordingDebug_AddTimelineTimestamp_Request
 (\t":\n CCloud_CommitHTTPUpload_Response
 (\t":\n\rCLogUploadMsg
 (\t";\n)CCredentials_ValidateEmailAddress_Request
@@ -7112,8 +7107,6 @@ $tICAPIJobListHashLoadSave
 0.CDeviceAuth_AcceptAuthorizationRequest_Response"
 0.CEcon_GetInventoryItemsWithDescriptions_Request
 0.CFamilyGroups_ModifyFamilyGroupDetails_Response"
-0.CGameRecordingDebug_AddTimelineRangeEnd_Request
-0.CGameRecordingDebug_SetTimelineGameMode_Request
 0.CGameRecording_GetPlatformCapabilities_Response
 0.CGameRecording_UserRemoveTimelineEntry_Response
 0.CGameRecording_UserUpdateTimelineEntry_Response
@@ -7248,9 +7241,6 @@ $tICAPIJobListHashLoadSave
 1.CFamilyGroups_ConfirmInviteToFamilyGroup_Request
 1.CFamilyGroups_RespondToRequestedPurchase_Request
 1.CFamilyGroups_SetFamilyCooldownOverrides_Request
-1.CGameRecordingDebug_AddTimelineRangeEnd_Response
-1.CGameRecordingDebug_AddTimelineTimestamp_Request
-1.CGameRecordingDebug_SetTimelineGameMode_Response
 1.CGameRecording_TimelineEntryChanged_Notification
 1.CGameRecording_TimelineEntryRemoved_Notification
 1.CMarketingMessages_FindMarketingMessages_Request
@@ -8587,7 +8577,7 @@ $tICAPIJobListHashLoadSave
 12CDynamicFuncIPFPjPiEE
 12CDynamicFuncIPFPvPKcEE
 12CDynamicFuncIPFPvPKcPN2vr12EVRInitErrorEEE
-12CDynamicFuncIPFb10SDL_GLattriEE
+12CDynamicFuncIPFb10SDL_GLAttriEE
 12CDynamicFuncIPFbP10SDL_WindowP18SDL_GLContextStateEE
 12CDynamicFuncIPFbP11SDL_Gamepad14SDL_SensorTypeEE
 12CDynamicFuncIPFbP11SDL_Gamepad14SDL_SensorTypebEE
@@ -10264,8 +10254,6 @@ $tICAPIJobListHashLoadSave
 2.CFamilyGroups_RespondToRequestedPurchase_Response"
 2.CFamilyGroups_SetFamilyCooldownOverrides_Response"
 2.CFriendsMessages_GetActiveMessageSessions_Request
-2.CGameRecordingDebug_AddTimelineRangeStart_Request
-2.CGameRecordingDebug_AddTimelineTimestamp_Response
 2.CGameRecording_GetAppsWithBackgroundVideo_Request
 2.CMarketingMessages_CreateMarketingMessage_Request
 2.CMarketingMessages_DeleteMarketingMessage_Request
@@ -11772,7 +11760,6 @@ $tICAPIJobListHashLoadSave
 3.CContentServerDirectory_GetPeerContentInfo_Request
 3.CFamilyGroupsClient_NotifyRunningApps_Notification
 3.CFriendsMessages_GetActiveMessageSessions_Response"
-3.CGameRecordingDebug_AddTimelineRangeStart_Response
 3.CGameRecording_CleanupBackgroundRecordings_Request
 3.CGameRecording_GetAppsWithBackgroundVideo_Response
 3.CGameRecording_OpenOverlayToGamePhase_Notification
@@ -13694,8 +13681,6 @@ $tICAPIJobListHashLoadSave
 47CDeviceAuth_AcceptAuthorizationRequest_Response
 47CEcon_GetInventoryItemsWithDescriptions_Request
 47CFamilyGroups_ModifyFamilyGroupDetails_Response
-47CGameRecordingDebug_AddTimelineRangeEnd_Request
-47CGameRecordingDebug_SetTimelineGameMode_Request
 47CGameRecording_GetPlatformCapabilities_Response
 47CGameRecording_GetThumbnails_Response_Thumbnail
 47CGameRecording_UserRemoveTimelineEntry_Response
@@ -13747,9 +13732,6 @@ $tICAPIJobListHashLoadSave
 48CFamilyGroups_ConfirmInviteToFamilyGroup_Request
 48CFamilyGroups_RespondToRequestedPurchase_Request
 48CFamilyGroups_SetFamilyCooldownOverrides_Request
-48CGameRecordingDebug_AddTimelineRangeEnd_Response
-48CGameRecordingDebug_AddTimelineTimestamp_Request
-48CGameRecordingDebug_SetTimelineGameMode_Response
 48CGameRecording_TimelineEntryChanged_Notification
 48CGameRecording_TimelineEntryRemoved_Notification
 48CMarketingMessages_FindMarketingMessages_Request
@@ -13803,8 +13785,6 @@ $tICAPIJobListHashLoadSave
 49CFamilyGroups_RespondToRequestedPurchase_Response
 49CFamilyGroups_SetFamilyCooldownOverrides_Response
 49CFriendsMessages_GetActiveMessageSessions_Request
-49CGameRecordingDebug_AddTimelineRangeStart_Request
-49CGameRecordingDebug_AddTimelineTimestamp_Response
 49CGameRecording_GetAppsWithBackgroundVideo_Request
 49CInventory_ModifyItems_Request_ItemPropertyUpdate
 49CMarketingMessages_CreateMarketingMessage_Request
@@ -13916,7 +13896,6 @@ $tICAPIJobListHashLoadSave
 50CContentServerDirectory_GetPeerContentInfo_Request
 50CFamilyGroupsClient_NotifyRunningApps_Notification
 50CFriendsMessages_GetActiveMessageSessions_Response
-50CGameRecordingDebug_AddTimelineRangeStart_Response
 50CGameRecording_CleanupBackgroundRecordings_Request
 50CGameRecording_GetAppsWithBackgroundVideo_Response
 50CGameRecording_OpenOverlayToGamePhase_Notification
@@ -14020,7 +13999,6 @@ $tICAPIJobListHashLoadSave
 54CControllerConfigMsg_ControllerPersonalizationResponse
 54CCredentials_GetSteamGuardDetails_Response_SessionData
 54CGameNotifications_UpdateNotificationSettings_Response
-54CGameRecordingDebug_AddTimelineHighlightMarker_Request
 54CGameRecording_GetAppsWithBackgroundVideo_Response_App
 54CGameRecording_ManuallyDeleteRecordingsForApps_Request
 54CGameRecording_OpenOverlayToTimelineEvent_Notification
@@ -14052,7 +14030,6 @@ $tICAPIJobListHashLoadSave
 55CContentServerDirectory_GetServersForSteamPipe_Response
 55CDeviceAuth_GetBorrowerPlayHistory_Response_GameHistory
 55CFamilyGroups_GetPreferredLenders_Response_FamilyMember
-55CGameRecordingDebug_AddTimelineHighlightMarker_Response
 55CGameRecording_ManuallyDeleteRecordingsForApps_Response
 55CMarketingMessages_GetMarketingMessagesForUser_Response
 55CMsgClientChatGetFriendMessageHistoryForOfflineMessages
@@ -14288,7 +14265,6 @@ $tICAPIJobListHashLoadSave
 7.CContentServerDirectory_GetManifestRequestCode_Request
 7.CContentServerDirectory_GetServersForSteamPipe_Request
 7.CGameNotifications_UpdateNotificationSettings_Response"
-7.CGameRecordingDebug_AddTimelineHighlightMarker_Request
 7.CGameRecording_ManuallyDeleteRecordingsForApps_Request
 7.CGameRecording_OpenOverlayToTimelineEvent_Notification
 7.CMarketingMessage_GetMarketingMessagesForApps_Response"
@@ -14549,7 +14525,6 @@ $tICAPIJobListHashLoadSave
 8.CCommunity_ClearUserPartnerEventsAppPriorities_Response"
 8.CContentServerDirectory_GetManifestRequestCode_Response"
 8.CContentServerDirectory_GetServersForSteamPipe_Response"
-8.CGameRecordingDebug_AddTimelineHighlightMarker_Response
 8.CGameRecording_ManuallyDeleteRecordingsForApps_Response
 8.CMarketingMessages_GetMarketingMessagesForUser_Response"
 8.CPublishedFile_SetPlaytimeForControllerConfigs_Response"
@@ -15669,10 +15644,6 @@ AddShortcut
 AddString
 AddTemporaryShortcut
 AddTimelineEvent_t
-AddTimelineHighlightMarker
-AddTimelineRangeEnd
-AddTimelineRangeStart
-AddTimelineTimestamp
 AddToBatch
 AddToFirewall
 AddTrackURIs
@@ -22139,6 +22110,7 @@ Error %d growing shared object manager file.
 Error %d locking shared memory file
 Error CProcessWorkItem::WriteStdIn() for %s\n
 Error State on string being set.
+Error UI Details
 Error entering bootloader for firmware update.
 Error erasing firmware flash pages.
 Error in encoding\n
@@ -23291,7 +23263,6 @@ GameRecording.NotifyOpenOverlayToGamePhase#1
 GameRecording.NotifyOpenOverlayToTimelineEvent#1
 GameRecording.UploadClipToSteam#1
 GameRecordingClip
-GameRecordingDebug
 GameRecording\BackgroundRecordMode
 GameSearchParam
 GameServer property '%s' is too long; truncating!  Max length is %d chars\n
@@ -32610,8 +32581,8 @@ Terminating m_ThreadClient, likely to crash down the line... but avoiding hang o
 Terror
 Tesla
 Test CD-Key
+Test Cancel Log Text
 Test Haptic Pulse On: %d Off: %d Repeat: %d\n
-Test cancel
 TestAvailablePassword
 TestChatRoomPeerDisconnect
 TestExternalPrivilege
@@ -50527,6 +50498,7 @@ pRequestHandle->AccessResponse()->GetBodyBuffer()->TellPut() == 0
 pRequestHandle->GetRefCount() > 0 && pRequestHandle->GetRefCount() < 10000
 pResult->m_identityRemote == identityRemote
 pReuseSession == NULL
+pS:>v
 pSNetSocket->m_SteamIDRemote.IsValid()
 pSSLContext->BHasCertificate()
 pSSLContext->GetConnectionType() == k_ESSLConnectionType_Server
@@ -53414,7 +53386,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Oct 31 2024 22:20:13
+steam Nov  1 2024 22:04:35
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

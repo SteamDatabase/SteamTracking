@@ -1,4 +1,4 @@
-var CLSTAMP = "9307248";
+var CLSTAMP = "9311098";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8877,9 +8877,9 @@ var CLSTAMP = "9307248";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 31 2024 : 15:26:56",
-                BUILD_TIME_UTC: "Oct 31 2024 : 22:26:56",
-                BUILD_RTIME_UTC: 1730413616,
+                BUILD_TIME_LOCAL: "Nov 1 2024 : 17:29:38",
+                BUILD_TIME_UTC: "Nov 2 2024 : 00:29:38",
+                BUILD_RTIME_UTC: 1730507378,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -39484,9 +39484,10 @@ var CLSTAMP = "9307248";
           });
         }
         let d = class extends o.Component {
-          Cancel() {
-            this.props.onCancel && this.props.onCancel(),
-              this.props.closeModal && this.props.closeModal();
+          Cancel(e) {
+            return () => {
+              e && e(), this.props.closeModal && this.props.closeModal();
+            };
           }
           render() {
             const {
@@ -39494,39 +39495,40 @@ var CLSTAMP = "9307248";
                 strDescription: t,
                 strOKButtonText: r,
                 strCancelButtonText: n,
-                strMiddleButtonText: i,
-                onMiddleButton: s,
-                bAlertDialog: C,
-                children: u,
-                ...m
+                onGamepadCancel: i,
+                strMiddleButtonText: s,
+                onMiddleButton: C,
+                bAlertDialog: u,
+                children: m,
+                ...d
               } = this.props,
-              d = r || (0, a.we)("#Button_Close");
-            let h = o.createElement(l.CB, {
+              h = r || (0, a.we)("#Button_Close");
+            let p = o.createElement(l.CB, {
               bOKDisabled: this.props.bOKDisabled,
               bCancelDisabled: this.props.bCancelDisabled,
               strOKText: r,
-              onCancel: this.Cancel,
+              onCancel: this.Cancel(this.props.onCancel),
               strCancelText: n,
             });
             return (
-              C
-                ? (h = o.createElement(l.jn, null, d))
-                : s &&
-                  (h = o.createElement(l.VQ, {
+              u
+                ? (p = o.createElement(l.jn, null, h))
+                : C &&
+                  (p = o.createElement(l.VQ, {
                     bOKDisabled: this.props.bOKDisabled,
                     bCancelDisabled: this.props.bCancelDisabled,
                     strOKText: r,
-                    onCancel: this.Cancel,
+                    onCancel: this.Cancel(this.props.onCancel),
                     strCancelText: n,
                     onUpdate: () => {
-                      s(), this.props.closeModal && this.props.closeModal();
+                      C(), this.props.closeModal && this.props.closeModal();
                     },
-                    strUpdateText: i,
+                    strUpdateText: s,
                     bUpdateDisabled: this.props.bMiddleDisabled,
                   })),
               o.createElement(
                 c.e,
-                { ...m },
+                { ...d },
                 o.createElement(
                   l.Y9,
                   null,
@@ -39536,9 +39538,9 @@ var CLSTAMP = "9307248";
                 ),
                 o.createElement(
                   l.f3,
-                  { onCancelButton: this.Cancel },
-                  o.createElement(l.a3, null, t, u),
-                  o.createElement(l.wi, null, h),
+                  { onCancelButton: this.Cancel(i || this.props.onCancel) },
+                  o.createElement(l.a3, null, t, m),
+                  o.createElement(l.wi, null, p),
                 ),
               )
             );
@@ -50707,9 +50709,9 @@ var CLSTAMP = "9307248";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 31 2024 : 15:26:56",
-                    BUILD_TIME_UTC: "Oct 31 2024 : 22:26:56",
-                    BUILD_RTIME_UTC: 1730413616,
+                    BUILD_TIME_LOCAL: "Nov 1 2024 : 17:29:38",
+                    BUILD_TIME_UTC: "Nov 2 2024 : 00:29:38",
+                    BUILD_RTIME_UTC: 1730507378,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -51208,7 +51210,6 @@ var CLSTAMP = "9307248";
         6430: "localization/shared_dutch-json",
         6472: "localization/shared_turkish-json",
         6577: "localization/shared_russian-json",
-        6622: "librarysettingszooshare",
         6752: "localization/shared_spanish-json",
         6785: "localization/steampops_thai-json",
         6888: "localization/shared_german-json",
@@ -51302,7 +51303,7 @@ var CLSTAMP = "9307248";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "12cb297e57ad9e12af7a",
         2646: "656fa8ed44aaaff3e97d",
-        2664: "03c9a264ddb90c4447fb",
+        2664: "69fdbba5b0a17c891d19",
         2761: "0a32b71aab6e198bf2e9",
         2783: "a0153faa8ea3677e0391",
         2862: "b1caa049c8c2a6e7b2e2",
@@ -51316,7 +51317,7 @@ var CLSTAMP = "9307248";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "be2483e6a1754fd763a7",
         3366: "94b027e82a96ab73ffe0",
-        3569: "c298905f729680880851",
+        3569: "b75c75c3350a8e50feb8",
         3583: "b46cc4aceda60e603200",
         3594: "bfc237710ddc9050170b",
         3714: "f85176b5e935dfd11403",
@@ -51346,7 +51347,6 @@ var CLSTAMP = "9307248";
         6430: "dba88f51234ad638bc9b",
         6472: "09233b9cc4c0ed07d905",
         6577: "c896ca2052bf52d6dd4e",
-        6622: "a4e0c36de2e199ded43a",
         6752: "83e4ec57e1a5a04f90fd",
         6785: "8d83cf74246cda2e5d19",
         6888: "04b517bddd192295fdb9",
@@ -51396,7 +51396,7 @@ var CLSTAMP = "9307248";
         9418: "ec3bc195e6fb03ad9657",
         9462: "89227ab1a3d278d803ec",
         9711: "03f1a491862bacf7ffc2",
-        9858: "a37be483cc9437c9b61b",
+        9858: "25d2091d3c11bac3de88",
         9869: "d6449de9c84a3462471d",
         9887: "8d621a0f10f1e1a00f64",
       }[e]),

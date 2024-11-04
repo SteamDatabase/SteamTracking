@@ -1273,7 +1273,7 @@ $d`D-laM
 21CWorkThreadPoolSignal
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
-22:18:05
+22:03:41
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 23CClanEventUserNewsTuple
@@ -3839,6 +3839,7 @@ Not paused
 Not supported.
 Not yet started
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
+Nov  1 2024
 November
 NrZl
 NumTickets
@@ -3963,7 +3964,6 @@ Oakley-EC2N-4
 Object Signer
 Object Signing
 Object Signing CA
-Oct 31 2024
 October
 On-disk registry has changed and is marked dirty - we're about to lose data.
 Once
@@ -4414,7 +4414,7 @@ SCT_set_log_entry_type
 SCT_set_signature_nid
 SCT_set_version
 SDL_GetError
-SDL_SetThreadPriority
+SDL_SetCurrentThreadPriority
 SECG curve over a 112 bit prime field
 SECG curve over a 113 bit binary field
 SECG curve over a 128 bit prime field

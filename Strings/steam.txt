@@ -1778,7 +1778,8 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
-22:18:05
+22:03:41
+22:04:08
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2610,7 +2611,7 @@ B-233
 B-283
 B-409
 B-571
-B22:18:27
+B22:04:07
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8533,6 +8534,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
+Nov  1 2024
 November
 NrZl
 NumTickets
@@ -8830,7 +8832,6 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 31 2024
 October
 Offensive Avatar
 Offensive Persona Name
@@ -9798,7 +9799,7 @@ SCT_set_version
 SCT_validate
 SCT_validation_status_string
 SDL_GetError
-SDL_SetThreadPriority
+SDL_SetCurrentThreadPriority
 SECG curve over a 112 bit prime field
 SECG curve over a 113 bit binary field
 SECG curve over a 128 bit prime field
@@ -10544,7 +10545,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Oct 31 2024 22:18:27
+Startup - updater built Nov  1 2024 22:04:07
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -21074,6 +21075,7 @@ o2i_SCT_LIST
 o2i_SCT_signature
 oFFs
 oMinghuaQu
+oU02
 oaep
 oaep decoding error
 oauthclient

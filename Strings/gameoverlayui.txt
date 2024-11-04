@@ -1078,7 +1078,7 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:18:41
+22:04:31
 22CClanMatchEventByRange
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
@@ -3583,6 +3583,7 @@ Not released
 Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
+Nov  1 2024
 November
 Num Lock
 Num Lock Toggle
@@ -3608,7 +3609,6 @@ OSX1010
 OUT_OF_RANGE
 OXXO
 O\n\nAnnotation
-Oct 31 2024
 October
 Offensive Avatar
 Offensive Persona Name
