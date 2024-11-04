@@ -8,8 +8,8 @@
       e.exports = {
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
-        NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
+        NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         MessageHeader: "_1HU84kVIdNVKbbByTWyyBG",
         MessageSource: "_3PZihnKXFSjpftsqE-Q2V5",
         MessageTitle: "_3BTOSqg9pBNBk8tvXHu0PF",
@@ -105,9 +105,9 @@
       "use strict";
       a.d(t, {
         MY: () => d,
-        UA: () => h,
-        Yd: () => p,
-        rN: () => f,
+        UA: () => p,
+        Yd: () => f,
+        rN: () => h,
         vh: () => u,
       });
       var n = a(34629),
@@ -236,7 +236,7 @@
           t
         );
       }
-      function h(e) {
+      function p(e) {
         const [t, a] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
           o.useEffect(() => {
@@ -252,17 +252,17 @@
           [t]
         );
       }
-      function f() {
+      function h() {
         return { fnFindPartnerByName: m.Get().FindPartnerByName };
       }
-      function p(e) {
+      function f(e) {
         return m.Get().GetPartnerInfo(e);
       }
       (0, n.Cg)([c.o], m.prototype, "FindPartnerByName", null);
     },
     37789: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => T });
+      a.r(t), a.d(t, { default: () => C });
       var n = a(90626),
         i = a(24484),
         r = a(18573),
@@ -273,19 +273,19 @@
         d = a(51272),
         m = a(84811),
         u = a(71541),
-        h = a(95034),
-        f = a(55263),
-        p = a(82097),
-        y = a(32179),
-        v = a(66418),
+        p = a(95034),
+        h = a(55263),
+        f = a(82097),
+        v = a(32179),
+        y = a(66418),
         E = a(61859),
         g = a(91675),
         S = a(26408),
         N = a(54330);
       const b = { include_assets: !0, include_release: !0 };
-      function w(e) {
+      function _(e) {
         const { rgDeadlines: t } = e,
-          [a, i] = (0, h.QD)("query", ""),
+          [a, i] = (0, p.QD)("query", ""),
           r = (0, n.useMemo)(
             () =>
               Array.from(
@@ -300,8 +300,8 @@
               ),
             [t],
           ),
-          s = (0, f.zX)(r, b),
-          l = (0, y.vh)(o),
+          s = (0, h.zX)(r, b),
+          l = (0, v.vh)(o),
           c = (0, n.useMemo)(() => {
             const e = a.trim().toLocaleLowerCase();
             return t
@@ -310,12 +310,12 @@
                   0 == e.length ||
                   1 == s ||
                   !l ||
-                  p.A.Get()
+                  f.A.Get()
                     .GetApp(t.data.store_item_id)
                     ?.GetName()
                     .toLocaleLowerCase()
                     .includes(e) ||
-                  (0, y.Yd)(t.data.partnerid)
+                  (0, v.Yd)(t.data.partnerid)
                     ?.name.toLocaleLowerCase()
                     .includes(e),
               )
@@ -364,16 +364,16 @@
               "tbody",
               null,
               c.map((e) =>
-                n.createElement(_, { key: "" + e.deadlineid, deadline: e }),
+                n.createElement(w, { key: "" + e.deadlineid, deadline: e }),
               ),
             ),
           ),
         );
       }
-      function _(e) {
+      function w(e) {
         const { deadline: t } = e,
-          [a] = (0, f.t7)(t.data.store_item_id, b),
-          [i] = (0, y.UA)(t.data.partnerid),
+          [a] = (0, h.t7)(t.data.store_item_id, b),
+          [i] = (0, v.UA)(t.data.partnerid),
           r = (0, N.u)(t.data.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
         return n.createElement(
@@ -393,7 +393,7 @@
             n.createElement(
               "a",
               {
-                href: `${v.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                href: `${y.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                 target: "_blank",
               },
               t.data.store_item_id,
@@ -406,7 +406,7 @@
             n.createElement(
               "a",
               {
-                href: `${v.T}pub/companydetails/${t.data.partnerid}`,
+                href: `${y.T}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
               i?.name || "unknown",
@@ -437,7 +437,7 @@
           n.createElement("td", null, "TODO"),
         );
       }
-      function T(e) {
+      function C(e) {
         const t = (function () {
           const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
@@ -475,14 +475,14 @@
               "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
             ),
           ),
-          n.createElement(w, { rgDeadlines: t }),
+          n.createElement(_, { rgDeadlines: t }),
         );
       }
     },
     2203: (e, t, a) => {
       "use strict";
       a.r(t),
-        a.d(t, { default: () => b, k_rgTemplateNameOptionsList: () => g });
+        a.d(t, { default: () => w, k_rgTemplateNameOptionsList: () => N });
       var n = a(90626),
         i = a(24484),
         r = a(84811),
@@ -493,7 +493,8 @@
         d = a(61859),
         m = a(52038),
         u = a(71541),
-        h = a(14771);
+        p = a(14771),
+        h = a(78327);
       function f() {
         return n.createElement(
           "div",
@@ -506,22 +507,35 @@
           ),
         );
       }
-      function p(e) {
-        const { deadline: t, index: a } = e,
-          i = `https://valvesoftware-dev.taxidentity.com/Interview/Start?IdentityKey=${JSON.parse(t.data.description_jsondata).IdentityKey}`;
-        return n.createElement(
-          u.jn,
-          {
-            onClick: () => window.location.assign(i),
-            className: s().NotificationButton,
-          },
-          "Begin Tax Interview",
+      let v = -1,
+        y = -1;
+      function E(e) {
+        const { requirement: t } = e;
+        if (-1 == v) v = t.index;
+        else if (v != t.index) return null;
+        const a = JSON.parse(t.deadline.data.description_jsondata);
+        let i =
+          "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
+            ? "https://valvesoftware-dev.taxidentity.com"
+            : "https://valvesoftware.taxidentity.com";
+        return (
+          (i += `/Interview/Start?IdentityKey=${a.IdentityKey}`),
+          n.createElement(
+            u.jn,
+            {
+              onClick: () => window.open(i, "_blank"),
+              className: s().NotificationButton,
+            },
+            "Begin Tax Interview",
+          )
         );
       }
-      function y(e) {
-        const { deadline: t, index: a } = e,
-          i = JSON.parse(t.data.description_jsondata),
-          r = i.Parameters?.Dropbox_FileRequest_Url;
+      function g(e) {
+        const { requirement: t } = e;
+        if (-1 == y) y = t.index;
+        else if (y != t.index) return null;
+        const a = JSON.parse(t.deadline.data.description_jsondata),
+          i = a.Parameters?.Dropbox_FileRequest_Url;
         return n.createElement(
           "div",
           null,
@@ -538,7 +552,7 @@
           n.createElement(
             u.jn,
             {
-              onClick: () => window.location.assign(r),
+              onClick: () => window.open(i, "_blank"),
               className: s().NotificationButton,
             },
             "Open Dropbox™ File Request",
@@ -562,9 +576,12 @@
           ),
         );
       }
-      function v(e) {
-        const { deadline: t } = e,
-          a = (0, d.$z)(t.data.due_date);
+      function S(e) {
+        const { requirement: t } = e,
+          a = (0, d.$z)(t.deadline.data.due_date),
+          i = t.onboarded
+            ? `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview.  You will be unable to distribute your product via Steam\n\t\t\t\tuntil we receive a valid tax form from you.`
+            : `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview.`;
         return n.createElement(
           "div",
           null,
@@ -583,15 +600,10 @@
             { className: s().SectionTitle },
             "Why is this important?",
           ),
-          n.createElement(
-            "div",
-            { className: s().SectionBody },
-            `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview.  You will be unable to distribute your product via Steam\n\t\t\t\tuntil we receive a valid tax form from you.`,
-          ),
+          n.createElement("div", { className: s().SectionBody }, i),
         );
       }
-      var E = a(78327);
-      const g = [
+      const N = [
           "AddressCorrection",
           "DocReq-KYC-Entity-FR",
           "DocReq-KYC-Entity-FR-CERT",
@@ -613,11 +625,9 @@
           "Notify-FailedTIN-SingLLC",
           "Notify-Mismatch",
           "Notify-NoTINTreaty-Partner",
-          "Notify-NoTINTreaty-Partner-FR",
-          "Notify-W9BWHT-Partner",
           "Renewal-W8-Initial",
         ],
-        S = {
+        b = {
           AddressCorrection: {
             component: function (e) {
               return n.createElement(
@@ -659,13 +669,12 @@
                   n.createElement("br", null),
                   "The address must also include the correct postcode / zip if your country uses them.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
           "DocReq-KYC-Entity-FR": {
             component: function (e) {
-              const { deadline: t } = e;
               return n.createElement(
                 "div",
                 {
@@ -714,7 +723,7 @@
                         { className: s().ListItem },
                         "Companies:",
                       ),
-                      " Certificate of Incorporation or Registration details from Governing Authority which provides a summary of company registration, registered address and or members. For all companies registered greater than 12mths, also provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country’s registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. Note: screenshots of business portals are not acceptable.",
+                      " Certificate of Incorporation or Registration details from Governing Authority which provides a summary of company registration, registered address and or members. For all companies registered over 12 months ago, also provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country’s registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. Note: screenshots of business portals are not acceptable.",
                     ),
                     n.createElement(
                       "li",
@@ -724,7 +733,7 @@
                         { className: s().ListItem },
                         "Partnerships:",
                       ),
-                      " Partnership Agreement and registration with local authority. Document providing Name, Address and list of partner(s).",
+                      " Partnership Agreement and registration with local authority. A document providing Name, Address and list of partner(s).",
                     ),
                     n.createElement(
                       "li",
@@ -738,14 +747,14 @@
                     ),
                   ),
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
           "DocReq-KYC-Entity-FR-CERT": {
             component: function (e) {
-              const { deadline: t } = e,
-                a = (0, d.$z)(t.data.due_date);
+              const { requirement: t } = e,
+                a = (0, d.$z)(t.deadline.data.due_date);
               return n.createElement(
                 "div",
                 {
@@ -785,14 +794,14 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "For all companies registered greater than 12 months, provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country's registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. ",
+                  "For all companies established over 12 months ago, provide a Certificate of Good Standing. A Certificate of Good Standing should be attainable through your country's registrar or equivalent. This document serves as proof that your company is still operating and in good standing with the regulating body for the current year. ",
                   n.createElement(
                     "u",
                     null,
                     "Note: screenshots of business portals are not acceptable.",
                   ),
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -839,120 +848,142 @@
                       c().SectionCtn,
                     ),
                   },
+                  n.createElement("h1", null, "Required Documents"),
                   n.createElement(
-                    "div",
-                    { className: s().SectionTitle },
-                    "1. Identification document",
+                    "p",
+                    null,
+                    "We need the following documents as described below, as well as a selfie of you holding the official document",
                   ),
                   n.createElement(
-                    "div",
-                    { className: s().SectionBody },
-                    "Please provide one of the following:",
+                    "ol",
+                    null,
                     n.createElement(
-                      "ol",
+                      "li",
                       null,
-                      n.createElement("li", null, "International Passport"),
-                      n.createElement("li", null, "Driver's License"),
                       n.createElement(
-                        "li",
-                        null,
-                        "Government issues Identification documentation issues either by a Federal, State / Provisional Government Authority",
+                        "div",
+                        { className: s().SectionTitle },
+                        "Identification document",
                       ),
-                    ),
-                    n.createElement(
-                      "div",
-                      null,
                       n.createElement(
-                        "i",
-                        null,
-                        "Note, we are unable to validate the following documents:",
-                      ),
-                    ),
-                    n.createElement(
-                      "ol",
-                      null,
-                      n.createElement("li", null, "Citizen Card"),
-                      n.createElement("li", null, "Government Health Cards"),
-                      n.createElement("li", null, "Military ID's"),
-                      n.createElement("li", null, "Post office card"),
-                      n.createElement("li", null, "Paper Documents"),
-                    ),
-                    n.createElement("br", null),
-                    n.createElement(
-                      "div",
-                      null,
-                      "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise will not proceed with your verification.",
-                    ),
-                    n.createElement("br", null),
-                    n.createElement(
-                      "div",
-                      null,
-                      n.createElement("b", null, "Specifically:"),
-                      n.createElement(
-                        "ul",
-                        null,
+                        "div",
+                        { className: s().SectionBody },
+                        "Please provide one of the following:",
                         n.createElement(
-                          "li",
+                          "ol",
                           null,
-                          "International Passport - Color Photograph and identity page",
+                          n.createElement("li", null, "International Passport"),
+                          n.createElement("li", null, "Driver's License"),
+                          n.createElement(
+                            "li",
+                            null,
+                            "Government issues Identification documentation issues either by a Federal, State / Provisional Government Authority",
+                          ),
                         ),
                         n.createElement(
-                          "li",
+                          "div",
                           null,
-                          "Foreign Driver's License - Color Photograph and identity information - if a card style, front and rear of card",
+                          n.createElement(
+                            "i",
+                            null,
+                            "Note, we are unable to validate the following documents:",
+                          ),
                         ),
                         n.createElement(
-                          "li",
+                          "ol",
                           null,
-                          "Government issued Identification - Color Photograph and identity information - if a card style, front and rear of card",
+                          n.createElement("li", null, "Citizen Card"),
+                          n.createElement(
+                            "li",
+                            null,
+                            "Government Health Cards",
+                          ),
+                          n.createElement("li", null, "Military ID's"),
+                          n.createElement("li", null, "Post office card"),
+                          n.createElement("li", null, "Paper Documents"),
+                        ),
+                        n.createElement("br", null),
+                        n.createElement(
+                          "div",
+                          null,
+                          "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise will not proceed with your verification.",
+                        ),
+                        n.createElement("br", null),
+                        n.createElement(
+                          "div",
+                          null,
+                          n.createElement("b", null, "Specifically:"),
+                          n.createElement(
+                            "ul",
+                            null,
+                            n.createElement(
+                              "li",
+                              null,
+                              "International Passport - Color Photograph and identity page",
+                            ),
+                            n.createElement(
+                              "li",
+                              null,
+                              "Foreign Driver's License - Color Photograph and identity information - if a card style, front and rear of card",
+                            ),
+                            n.createElement(
+                              "li",
+                              null,
+                              "Government issued Identification - Color Photograph and identity information - if a card style, front and rear of card",
+                            ),
+                          ),
+                        ),
+                        n.createElement("br", null),
+                        n.createElement(
+                          "div",
+                          null,
+                          n.createElement("b", null, "Accepted file types"),
+                          n.createElement(
+                            "ol",
+                            null,
+                            n.createElement("li", null, "PDF"),
+                            n.createElement("li", null, "JPEG / Image files"),
+                          ),
                         ),
                       ),
                     ),
-                    n.createElement("br", null),
                     n.createElement(
-                      "div",
+                      "li",
                       null,
-                      n.createElement("b", null, "Accepted file types"),
                       n.createElement(
-                        "ol",
-                        null,
-                        n.createElement("li", null, "PDF"),
-                        n.createElement("li", null, "JPEG / Image files"),
+                        "div",
+                        { className: s().SectionTitle },
+                        "Selfie",
+                      ),
+                      n.createElement(
+                        "div",
+                        { className: s().SectionBody },
+                        n.createElement(
+                          "div",
+                          null,
+                          "We also require all payees to provide a selfie of themselves holding the same document they are providing. Please remove all hats, glasses, and other facial obstructions to get through the process as fast as possible",
+                        ),
+                        n.createElement("br", null),
+                        n.createElement(
+                          "div",
+                          null,
+                          "Show your full face, and you holding the Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
+                        ),
+                        n.createElement("br", null),
+                        n.createElement(
+                          "div",
+                          null,
+                          n.createElement("b", null, "Accepted file types"),
+                          n.createElement(
+                            "ol",
+                            null,
+                            n.createElement("li", null, "JPEG / Image files"),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  n.createElement(
-                    "div",
-                    { className: s().SectionTitle },
-                    "2. Selfie",
-                  ),
-                  n.createElement(
-                    "div",
-                    { className: s().SectionBody },
-                    n.createElement(
-                      "div",
-                      null,
-                      "We also require all payees to provide a selfie of themselves holding the same document they are providing. Please remove all hats, glasses, and other facial obstructions to get through the process as fast as possible",
-                    ),
-                    n.createElement("br", null),
-                    n.createElement(
-                      "div",
-                      null,
-                      "Show your full face, and you holding the Identification document - note, this is not a substitute for supplying a scan / photo of the original document as described above",
-                    ),
-                    n.createElement("br", null),
-                    n.createElement(
-                      "div",
-                      null,
-                      n.createElement("b", null, "Accepted file types"),
-                      n.createElement(
-                        "ol",
-                        null,
-                        n.createElement("li", null, "JPEG / Image files"),
-                      ),
-                    ),
-                  ),
-                  n.createElement(y, { ...e }),
+                  n.createElement(g, { ...e }),
                 ),
               );
             },
@@ -987,13 +1018,12 @@
                   { className: s().SectionBody },
                   "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
           "DocReq-TreatyClaimOthCty-FR": {
             component: function (e) {
-              const { deadline: t } = e;
               return n.createElement(
                 "div",
                 {
@@ -1002,7 +1032,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(v, { deadline: t }),
+                n.createElement(S, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1025,13 +1055,12 @@
                   n.createElement("br", null),
                   "Certification of tax Residency for Tax Treaty Purposes",
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
           "DocReq-TreatyClaimUSAddress-FR": {
             component: function (e) {
-              const { deadline: t } = e;
               return n.createElement(
                 "div",
                 {
@@ -1040,7 +1069,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(v, { deadline: t }),
+                n.createElement(S, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1063,18 +1092,28 @@
                   n.createElement(
                     "div",
                     { className: s().RequiredDocumentList },
-                    "1. Foreign Passport (Photograph and identity page only) OR Foreign Drivers License",
-                    n.createElement("br", null),
-                    "2. Certification of tax Residency for Tax Treaty Purposes",
+                    n.createElement(
+                      "ol",
+                      null,
+                      n.createElement(
+                        "li",
+                        null,
+                        "Foreign Passport (Photograph and identity page only) OR Foreign Drivers License",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Certification of tax Residency for Tax Treaty Purposes",
+                      ),
+                    ),
                   ),
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
           "DocReq-W8USAddress-FR": {
             component: function (e) {
-              const { deadline: t } = e;
               return n.createElement(
                 "div",
                 {
@@ -1083,7 +1122,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(v, { deadline: t }),
+                n.createElement(S, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1107,16 +1146,23 @@
                   n.createElement(
                     "div",
                     { className: s().RequiredDocumentList },
-                    "Foreign Passport (Photograph and identity page only) OR Foreign Drivers License",
+                    n.createElement(
+                      "ul",
+                      null,
+                      n.createElement(
+                        "li",
+                        null,
+                        "Foreign Passport (Photograph and identity page only) OR Foreign Drivers License",
+                      ),
+                    ),
                   ),
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
           "DocReq-W8USParent-FR": {
             component: function (e) {
-              const { deadline: t } = e;
               return n.createElement(
                 "div",
                 {
@@ -1125,7 +1171,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(v, { deadline: t }),
+                n.createElement(S, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1149,14 +1195,24 @@
                   n.createElement(
                     "div",
                     { className: s().RequiredDocumentList },
-                    "Birth Extract",
-                    n.createElement("br", null),
-                    "Foreign Passport (Photograph and identity page only)",
-                    n.createElement("br", null),
-                    "Certification of tax Residency for Tax Treaty Purposes",
+                    n.createElement(
+                      "ol",
+                      null,
+                      n.createElement("li", null, "Birth Extract"),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Foreign Passport (Photograph and identity page only)",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Certification of tax Residency for Tax Treaty Purposes",
+                      ),
+                    ),
                   ),
                 ),
-                n.createElement(y, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1200,7 +1256,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
@@ -1244,7 +1300,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary KYC and tax information prepared, you may retake the full interview by clicking the button below.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
@@ -1258,7 +1314,11 @@
                     c().SectionCtn,
                   ),
                 },
-                "TODO: Freeform data here",
+                n.createElement(
+                  "div",
+                  { style: { color: "orange" } },
+                  "TODO: Freeform template not implemented",
+                ),
               );
             },
           },
@@ -1314,23 +1374,39 @@
                   n.createElement(
                     "div",
                     { className: s().RequiredDocumentList },
-                    "Recent utility bill (if it shows your address)",
-                    n.createElement("br", null),
-                    "Recent bank statement (if it shows your address)",
-                    n.createElement("br", null),
-                    "Government ID Card (if it shows your address)",
-                    n.createElement("br", null),
-                    "Tenant Lease (if it shows your address)",
-                    n.createElement("br", null),
-                    "OR for a company / business you can provide a company registration certificate (if it shows your address)",
+                    n.createElement(
+                      "ul",
+                      null,
+                      n.createElement(
+                        "li",
+                        null,
+                        "Recent utility bill (if it shows your address)",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Recent bank statement (if it shows your address)",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Government ID Card (if it shows your address)",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "Tenant Lease (if it shows your address)",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "OR for a company / business you can provide a company registration certificate (if it shows your address)",
+                      ),
+                    ),
                   ),
                   "Please do not give us the address of your bank or utility company.",
                 ),
-                n.createElement(
-                  "div",
-                  { style: { color: "orange" } },
-                  "TODO: The email suggests replying with attachments.  We need the notification to provide a dropbox link.",
-                ),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1350,7 +1426,7 @@
                   n.createElement(
                     "div",
                     { className: s().MessageSubject },
-                    "A recent audit found that you have provided us with an invalid tax information",
+                    "A recent audit found that you have provided us with invalid tax information",
                   ),
                 ),
                 n.createElement(
@@ -1361,7 +1437,7 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "Until your tax information has been verified, you will not be able to receive any further payments. Complete your partner onboarding (if your partner account if already active you will not be able to be paid) until your tax information is valid. Your tax status has been changed to a 'Deactivated' status.",
+                  "Until your tax information has been verified, you will not be able to release new games on Steam or receive any further payments. Your tax status has been changed to 'Deactivated'.",
                 ),
                 n.createElement(
                   "div",
@@ -1371,7 +1447,12 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "You will need to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information.  Please log onto your Steamworks account, if you are still onboarding your account you should be taken to the tax interview page, (if your partner account is already active go to 'Enter Payment & Tax Info' from the right-hand column of the Steamworks homepage).",
+                  n.createElement(
+                    "p",
+                    null,
+                    "You must to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
+                  ),
+                  n.createElement(E, { ...e }),
                 ),
               );
             },
@@ -1415,7 +1496,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
@@ -1435,7 +1516,7 @@
                   n.createElement(
                     "div",
                     { className: s().MessageSubject },
-                    "A recent audit found that you have provided us with an invalid tax information",
+                    "A recent audit found that you have provided us with invalid tax information",
                   ),
                 ),
                 n.createElement(
@@ -1446,7 +1527,7 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "Until your tax information has been verified, you will not be able to receive any further payments. Your tax status has been changed to a 'Deactivated' status.",
+                  "Until your tax information has been verified, you will not be able to receive any further payments. Your tax status has been changed to 'Deactivated' status.",
                 ),
                 n.createElement(
                   "div",
@@ -1456,7 +1537,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "You will need to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information.  Please log onto your Steamworks account, go to 'Enter Payment & Tax Info' from the right-hand column of the Steamworks homepage.",
+                  "You must correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
+                  n.createElement(E, { ...e }),
                 ),
               );
             },
@@ -1503,10 +1585,21 @@
                       s().RequiredDocumentList,
                     ),
                   },
-                  "1. If you need to change your Steamworks partner legal name, please use the 'start over' button located below the tax interview to start the process again to correct your Steamworks partner legal name (note: you will not lose your Steam Direct app credit).",
-                  n.createElement("br", null),
-                  n.createElement("br", null),
-                  "2. If your Steamworks partner legal name is correct, please retake the tax interview and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (you can find the name located in the subject line of this email).",
+                  n.createElement(
+                    "ol",
+                    null,
+                    n.createElement(
+                      "li",
+                      null,
+                      "If you need to change your Steamworks partner legal name, please use the button below to start the process again to correct your Steamworks partner legal name (note: you will not lose your Steam Direct app credit).",
+                    ),
+                    n.createElement(
+                      "li",
+                      null,
+                      "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
+                    ),
+                  ),
+                  n.createElement(E, { ...e }),
                 ),
               );
             },
@@ -1550,7 +1643,7 @@
                   { className: s().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
@@ -1606,7 +1699,7 @@
                   { className: s().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
@@ -1639,7 +1732,7 @@
                   { className: s().SectionBody },
                   "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by the legal representative of the account.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
@@ -1677,90 +1770,14 @@
                   { className: s().SectionBody },
                   "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(p, { ...e }),
-              );
-            },
-          },
-          "Notify-NoTINTreaty-Partner-FR": {
-            component: function (e) {
-              return n.createElement(
-                "div",
-                {
-                  className: (0, m.A)(
-                    s().NotificationContainer,
-                    c().SectionCtn,
-                  ),
-                },
-                n.createElement(
-                  "div",
-                  { className: s().MessageHeader },
-                  n.createElement(
-                    "div",
-                    { className: s().MessageSubject },
-                    "You may be eligible to claim tax treaty benefits.",
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  { className: s().SectionBody },
-                  "This is an automated notification that is being sent to you because you may be eligible to claim tax treaty benefits which may reduce your tax withholding on royalty payments from the standard withholding tax rate of 30% to a reduced rate in accordance with US Tax treaty and your country of tax residence. In order to be eligible for treaty benefits, you are required to provide a US Tax Identification Number (TIN). If you believe you are eligible for treaty benefits / reduced rate of tax withholding, please complete the tax interview and provide your US TIN. In the meantime, we are required to begin deducting the maximum amount of US tax from your royalty payments.",
-                ),
-                n.createElement(
-                  "div",
-                  { className: s().SectionTitle },
-                  "What can I do?",
-                ),
-                n.createElement(
-                  "div",
-                  { className: s().SectionBody },
-                  "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
-                ),
-                n.createElement(p, { ...e }),
-              );
-            },
-          },
-          "Notify-W9BWHT-Partner": {
-            component: function (e) {
-              return n.createElement(
-                "div",
-                {
-                  className: (0, m.A)(
-                    s().NotificationContainer,
-                    c().SectionCtn,
-                  ),
-                },
-                n.createElement(
-                  "div",
-                  { className: s().MessageHeader },
-                  n.createElement(
-                    "div",
-                    { className: s().MessageSubject },
-                    'Your tax status has been changed to a "Deactivated" status',
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  { className: s().SectionBody },
-                  "This is an automated notification that is being sent to you because you indicated in the tax interview that Backup Withholding Tax (BWHT) applies to your income. We are unable to support BWHT and therefore, your tax status has been changed to a “Deactivated” status.",
-                ),
-                n.createElement(
-                  "div",
-                  { className: s().SectionTitle },
-                  "What can I do?",
-                ),
-                n.createElement(
-                  "div",
-                  { className: s().SectionBody },
-                  "If you believe that BWHT does not apply, you will need to retake the tax interview.",
-                ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
           "Renewal-W8-Initial": {
             component: function (e) {
-              const { deadline: t } = e,
-                a = (0, d.$z)(t.data.due_date);
+              const { requirement: t } = e,
+                a = (0, d.$z)(t.deadline.data.due_date);
               return n.createElement(
                 "div",
                 {
@@ -1825,29 +1842,32 @@
                     a +
                     " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                 ),
-                n.createElement(p, { ...e }),
+                n.createElement(E, { ...e }),
               );
             },
           },
         };
-      function N() {
+      function _() {
         const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
           ),
           [t] = (0, n.useState)(
-            (0, i.Tc)("publishername", "application_config"),
+            parseInt((0, i.Tc)("action_id", "application_config")),
           ),
           [a] = (0, n.useState)(
-            parseInt((0, i.Tc)("actionid", "application_config")),
+            parseInt((0, i.Tc)("publisher_id", "application_config")),
           ),
           [r] = (0, n.useState)(
-            parseInt((0, i.Tc)("publisherid", "application_config")),
+            (0, i.Tc)("publisher_name", "application_config"),
+          ),
+          [o] = (0, n.useState)(
+            parseInt((0, i.Tc)("publisher_onboarded", "application_config")),
           );
-        return [e, t, a, r];
+        return [e, r, t, a, o];
       }
-      function b(e) {
-        const [t, a] = N(),
-          o = n.useMemo(() => {
+      function w(e) {
+        const [t, a, o] = _(),
+          l = n.useMemo(() => {
             const e = [...t];
             return (
               e.sort((e, t) => {
@@ -1862,7 +1882,7 @@
               e
             );
           }, [t]),
-          [l, d] = (function () {
+          [d, p] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
               ),
@@ -1871,14 +1891,14 @@
               );
             return [e, t];
           })();
-        let h = "mailto:taxsupport-valve@taxidentity.com";
-        if (o.length > 0) {
-          const e = JSON.parse(o[0]?.data.description_jsondata)?.Subject,
+        let f = "mailto:taxsupport-valve@taxidentity.com";
+        if (l.length > 0) {
+          const e = JSON.parse(l[0]?.data.description_jsondata)?.Subject,
             t =
-              "dev" == E.TS.WEB_UNIVERSE || "beta" == E.TS.WEB_UNIVERSE
+              "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
                 ? "TEST:"
                 : "";
-          h += "?subject=" + t + e;
+          f += "?subject=" + t + e;
         }
         return n.createElement(
           r.tH,
@@ -1901,13 +1921,16 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  l && n.createElement(w, { strTemplate: d }),
-                  o.length > 0 &&
-                    o.map((e, t) =>
-                      n.createElement(_, {
+                  d && n.createElement(C, { strTemplate: p }),
+                  l.length > 0 &&
+                    l.map((e, t) =>
+                      n.createElement(T, {
                         key: "update_" + t,
-                        deadline: e,
-                        index: t,
+                        requirement: {
+                          deadline: e,
+                          index: t,
+                          onboarded: 0 != o,
+                        },
                       }),
                     ),
                 ),
@@ -1961,7 +1984,7 @@
                     n.createElement(
                       u.jn,
                       {
-                        onClick: () => window.location.assign(h),
+                        onClick: () => window.location.assign(f),
                         className: s().NotificationButton,
                       },
                       "Contact TaxIdentity",
@@ -1973,58 +1996,75 @@
           ),
         );
       }
-      function w(e) {
+      function C(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
-          r = g.map((e) => ({ label: e, data: e })),
-          o = Date.now(),
-          s = {},
-          l = new Intl.DateTimeFormat(navigator.language).format(o);
+          [r, o] = n.useState(!0),
+          s = N.map((e) => ({ label: e, data: e })),
+          l = Date.now(),
+          c = {},
+          d = new Intl.DateTimeFormat(navigator.language).format(l);
         return (
-          (s.data = {}),
-          (s.data.due_date = o / 1e3 + 14 * h.Kp.PerDay),
-          (s.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${l}" }`),
+          (c.data = {}),
+          (c.data.due_date = l / 1e3 + 14 * p.Kp.PerDay),
+          (c.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${d}" }`),
           n.createElement(
             "div",
             null,
-            n.createElement(u.ZU, {
-              rgOptions: r,
-              selectedOption: a,
-              onChange: (e) => {
-                i(e.data);
-              },
-            }),
+            n.createElement(
+              "div",
+              { style: { display: "flex", alignItems: "center" } },
+              n.createElement(u.ZU, {
+                rgOptions: s,
+                selectedOption: a,
+                onChange: (e) => {
+                  i(e.data);
+                },
+              }),
+              n.createElement(u.Yh, {
+                checked: r,
+                style: { marginLeft: "10px", marginRight: "10px" },
+                onClick: () => o(!r),
+              }),
+              n.createElement(
+                "div",
+                { style: { width: "200px" } },
+                "Partner Active",
+              ),
+            ),
             n.createElement("br", null),
-            n.createElement(_, { deadline: s, index: 0 }),
+            n.createElement(T, {
+              requirement: { deadline: c, index: 0, onboarded: r },
+            }),
           )
         );
       }
-      function _(e) {
-        const { deadline: t, index: a } = e,
-          i = JSON.parse(t.data.description_jsondata),
-          [, r] = N(),
-          o = new Date(i?.CreatedOn);
-        if (!S[i.TemplateName])
+      function T(e) {
+        const { requirement: t } = e,
+          a = JSON.parse(t.deadline.data.description_jsondata),
+          [, i] = _(),
+          r = new Date(a?.CreatedOn);
+        if (!b[a.TemplateName])
           return n.createElement(
             "div",
             { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
             n.createElement(
               "div",
               { className: s().MessageDate },
-              (0, d.$z)(o.getTime() / 1e3),
+              (0, d.$z)(r.getTime() / 1e3),
             ),
             n.createElement("div", null, "Message Not Available"),
           );
-        const l = S[i.TemplateName].component;
+        const o = b[a.TemplateName].component;
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
             { className: s().MessageDate },
-            (0, d.$z)(o.getTime() / 1e3),
+            (0, d.$z)(r.getTime() / 1e3),
           ),
-          n.createElement(l, { deadline: t, index: a }),
+          n.createElement(o, { requirement: t }),
         );
       }
     },
@@ -2042,12 +2082,12 @@
       a.d(t, {
         G6: () => l,
         Gg: () => m,
-        MS: () => p,
+        MS: () => f,
         Ow: () => d,
-        gF: () => y,
+        gF: () => v,
         mZ: () => u,
         t7: () => c,
-        zX: () => f,
+        zX: () => h,
       });
       var n = a(41735),
         i = a.n(n),
@@ -2061,40 +2101,40 @@
         l.current = e;
         const [m, u] = (0, r.useState)(void 0),
           {
-            include_assets: h,
-            include_release: f,
-            include_platforms: p,
-            include_all_purchase_options: y,
-            include_screenshots: v,
+            include_assets: p,
+            include_release: h,
+            include_platforms: f,
+            include_all_purchase_options: v,
+            include_screenshots: y,
             include_trailers: E,
             include_ratings: g,
             include_tag_count: S,
             include_reviews: N,
             include_basic_info: b,
-            include_supported_languages: w,
-            include_full_description: _,
-            include_included_items: T,
-            include_assets_without_overrides: C,
+            include_supported_languages: _,
+            include_full_description: w,
+            include_included_items: C,
+            include_assets_without_overrides: T,
             apply_user_filters: I,
             include_links: x,
           } = a;
         if (
           ((0, r.useEffect)(() => {
             const a = {
-              include_assets: h,
-              include_release: f,
-              include_platforms: p,
-              include_all_purchase_options: y,
-              include_screenshots: v,
+              include_assets: p,
+              include_release: h,
+              include_platforms: f,
+              include_all_purchase_options: v,
+              include_screenshots: y,
               include_trailers: E,
               include_ratings: g,
               include_tag_count: S,
               include_reviews: N,
               include_basic_info: b,
-              include_supported_languages: w,
-              include_full_description: _,
-              include_included_items: T,
-              include_assets_without_overrides: C,
+              include_supported_languages: _,
+              include_full_description: w,
+              include_included_items: C,
+              include_assets_without_overrides: T,
               apply_user_filters: I,
               include_links: x,
             };
@@ -2113,7 +2153,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, h, f, p, y, v, E, g, S, N, b, w, _, T, C, I, x, d]),
+          }, [e, t, n, m, p, h, f, v, y, E, g, S, N, b, _, w, C, T, I, x, d]),
           !e)
         )
           return [null, 2];
@@ -2142,25 +2182,25 @@
         const [o, s] = c(r, a);
         return r && o?.BIsVisible() ? [o, s] : [n, i];
       }
-      function h(e, t, a, n) {
+      function p(e, t, a, n) {
         const l = (0, o.CH)(),
           {
             include_assets: c,
             include_release: d,
             include_platforms: m,
             include_all_purchase_options: u,
-            include_screenshots: h,
-            include_trailers: f,
-            include_ratings: p,
-            include_tag_count: y,
-            include_reviews: v,
+            include_screenshots: p,
+            include_trailers: h,
+            include_ratings: f,
+            include_tag_count: v,
+            include_reviews: y,
             include_basic_info: E,
             include_supported_languages: g,
             include_full_description: S,
             include_included_items: N,
             include_assets_without_overrides: b,
-            apply_user_filters: w,
-            include_links: _,
+            apply_user_filters: _,
+            include_links: w,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -2170,18 +2210,18 @@
                 include_release: d,
                 include_platforms: m,
                 include_all_purchase_options: u,
-                include_screenshots: h,
-                include_trailers: f,
-                include_ratings: p,
-                include_tag_count: y,
-                include_reviews: v,
+                include_screenshots: p,
+                include_trailers: h,
+                include_ratings: f,
+                include_tag_count: v,
+                include_reviews: y,
                 include_basic_info: E,
                 include_supported_languages: g,
                 include_full_description: S,
                 include_included_items: N,
                 include_assets_without_overrides: b,
-                apply_user_filters: w,
-                include_links: _,
+                apply_user_filters: _,
+                include_links: w,
               },
               n = e.filter(
                 (e) =>
@@ -2199,7 +2239,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, c, d, m, u, h, f, p, y, v, E, g, S, N, b, w, _]),
+          }, [e, t, n, l, c, d, m, u, p, h, f, v, y, E, g, S, N, b, _, w]),
           !e)
         )
           return 2;
@@ -2217,14 +2257,14 @@
           ? 3
           : 2;
       }
+      function h(e, t, a) {
+        return p(e, 0, t, a);
+      }
       function f(e, t, a) {
-        return h(e, 0, t, a);
+        return p(e, 2, t, a);
       }
-      function p(e, t, a) {
-        return h(e, 2, t, a);
-      }
-      function y(e, t, a) {
-        return h(e, 1, t, a);
+      function v(e, t, a) {
+        return p(e, 1, t, a);
       }
     },
     68797: (e, t, a) => {

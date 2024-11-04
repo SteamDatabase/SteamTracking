@@ -3151,7 +3151,9 @@ https://twitter.com/steam_games
 https://underlords.com/download/androidarm32
 https://underlords.com/download/androidarm64
 https://valvecorp.slack.com/app_redirect?channel=${}
+https://valvesoftware-dev.taxidentity.com
 https://valvesoftware.com
+https://valvesoftware.taxidentity.com
 https://vimeo.com/privacy
 https://www.amazon.com/
 https://www.counter-strike.net/workshop/workshop

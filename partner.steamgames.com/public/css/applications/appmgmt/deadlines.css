@@ -1,3 +1,6 @@
+ul li {
+  list-style-type: square;
+}
 ._1sufRvqysxjE-xyRrrKL5U {
   height: 80px;
   width: 100%;
@@ -10,11 +13,14 @@
 ._1sufRvqysxjE-xyRrrKL5U ._36r9iRM8nCGkZBkqJOFd7G {
   padding-left: 20px;
 }
+._3o-Tl2KWzVGK4YHEgfwWLP {
+  text-transform: uppercase;
+  margin-top: 16px;
+}
 .mXFFZGFLLywwiNBr7ouAn {
   padding: 20px;
   background-color: #2c2e35;
 }
-.mXFFZGFLLywwiNBr7ouAn ._3o-Tl2KWzVGK4YHEgfwWLP,
 .mXFFZGFLLywwiNBr7ouAn ._1HU84kVIdNVKbbByTWyyBG {
   margin-bottom: 16px;
 }
