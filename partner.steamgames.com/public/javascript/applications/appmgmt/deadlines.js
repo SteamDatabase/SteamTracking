@@ -105,9 +105,9 @@
       "use strict";
       a.d(t, {
         MY: () => d,
-        UA: () => p,
+        UA: () => h,
         Yd: () => f,
-        rN: () => h,
+        rN: () => p,
         vh: () => u,
       });
       var n = a(34629),
@@ -236,7 +236,7 @@
           t
         );
       }
-      function p(e) {
+      function h(e) {
         const [t, a] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
           o.useEffect(() => {
@@ -252,7 +252,7 @@
           [t]
         );
       }
-      function h() {
+      function p() {
         return { fnFindPartnerByName: m.Get().FindPartnerByName };
       }
       function f(e) {
@@ -273,11 +273,11 @@
         d = a(51272),
         m = a(84811),
         u = a(71541),
-        p = a(95034),
-        h = a(55263),
+        h = a(95034),
+        p = a(55263),
         f = a(82097),
-        v = a(32179),
-        y = a(66418),
+        y = a(32179),
+        v = a(66418),
         E = a(61859),
         g = a(91675),
         S = a(26408),
@@ -285,7 +285,7 @@
       const b = { include_assets: !0, include_release: !0 };
       function _(e) {
         const { rgDeadlines: t } = e,
-          [a, i] = (0, p.QD)("query", ""),
+          [a, i] = (0, h.QD)("query", ""),
           r = (0, n.useMemo)(
             () =>
               Array.from(
@@ -300,8 +300,8 @@
               ),
             [t],
           ),
-          s = (0, h.zX)(r, b),
-          l = (0, v.vh)(o),
+          s = (0, p.zX)(r, b),
+          l = (0, y.vh)(o),
           c = (0, n.useMemo)(() => {
             const e = a.trim().toLocaleLowerCase();
             return t
@@ -315,7 +315,7 @@
                     ?.GetName()
                     .toLocaleLowerCase()
                     .includes(e) ||
-                  (0, v.Yd)(t.data.partnerid)
+                  (0, y.Yd)(t.data.partnerid)
                     ?.name.toLocaleLowerCase()
                     .includes(e),
               )
@@ -372,8 +372,8 @@
       }
       function w(e) {
         const { deadline: t } = e,
-          [a] = (0, h.t7)(t.data.store_item_id, b),
-          [i] = (0, v.UA)(t.data.partnerid),
+          [a] = (0, p.t7)(t.data.store_item_id, b),
+          [i] = (0, y.UA)(t.data.partnerid),
           r = (0, N.u)(t.data.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
         return n.createElement(
@@ -393,7 +393,7 @@
             n.createElement(
               "a",
               {
-                href: `${y.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                href: `${v.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                 target: "_blank",
               },
               t.data.store_item_id,
@@ -406,7 +406,7 @@
             n.createElement(
               "a",
               {
-                href: `${y.T}pub/companydetails/${t.data.partnerid}`,
+                href: `${v.T}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
               i?.name || "unknown",
@@ -482,7 +482,7 @@
     2203: (e, t, a) => {
       "use strict";
       a.r(t),
-        a.d(t, { default: () => w, k_rgTemplateNameOptionsList: () => N });
+        a.d(t, { default: () => C, k_rgTemplateNameOptionsList: () => b });
       var n = a(90626),
         i = a(24484),
         r = a(84811),
@@ -493,8 +493,8 @@
         d = a(61859),
         m = a(52038),
         u = a(71541),
-        p = a(14771),
-        h = a(78327);
+        h = a(14771),
+        p = a(78327);
       function f() {
         return n.createElement(
           "div",
@@ -507,15 +507,15 @@
           ),
         );
       }
-      let v = -1,
-        y = -1;
+      let y = -1,
+        v = -1;
       function E(e) {
         const { requirement: t } = e;
-        if (-1 == v) v = t.index;
-        else if (v != t.index) return null;
+        if (-1 == y) y = t.index;
+        else if (y != t.index) return null;
         const a = JSON.parse(t.deadline.data.description_jsondata);
         let i =
-          "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
+          "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
             ? "https://valvesoftware-dev.taxidentity.com"
             : "https://valvesoftware.taxidentity.com";
         return (
@@ -532,8 +532,8 @@
       }
       function g(e) {
         const { requirement: t } = e;
-        if (-1 == y) y = t.index;
-        else if (y != t.index) return null;
+        if (-1 == v) v = t.index;
+        else if (v != t.index) return null;
         const a = JSON.parse(t.deadline.data.description_jsondata),
           i = a.Parameters?.Dropbox_FileRequest_Url;
         return n.createElement(
@@ -580,8 +580,8 @@
         const { requirement: t } = e,
           a = (0, d.$z)(t.deadline.data.due_date),
           i = t.onboarded
-            ? `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview.  You will be unable to distribute your product via Steam\n\t\t\t\tuntil we receive a valid tax form from you.`
-            : `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview.`;
+            ? `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview. Until your tax information has been verified, you will not be able to receive any further payments.`
+            : `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview. You will be unable to distribute your product via Steam\n\t\t\t\tuntil we receive a valid tax form from you.`;
         return n.createElement(
           "div",
           null,
@@ -603,7 +603,13 @@
           n.createElement("div", { className: s().SectionBody }, i),
         );
       }
-      const N = [
+      function N(e) {
+        const { requirement: t } = e;
+        return t.onboarded
+          ? "Until your tax information has been verified, you will not be able to receive any further payments."
+          : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
+      }
+      const b = [
           "AddressCorrection",
           "DocReq-KYC-Entity-FR",
           "DocReq-KYC-Entity-FR-CERT",
@@ -627,7 +633,7 @@
           "Notify-NoTINTreaty-Partner",
           "Renewal-W8-Initial",
         ],
-        b = {
+        _ = {
           AddressCorrection: {
             component: function (e) {
               return n.createElement(
@@ -702,7 +708,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
+                  "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
+                  N(e),
                 ),
                 n.createElement(
                   "div",
@@ -837,7 +844,8 @@
                   n.createElement(
                     "div",
                     { className: s().SectionBody },
-                    "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview.  You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.",
+                    "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
+                    N(e),
                   ),
                 ),
                 n.createElement(
@@ -1244,7 +1252,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. You will be unable to distribute your product via Steam until we receive a valid tax form from you.",
+                  "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
+                  N(e),
                 ),
                 n.createElement(
                   "div",
@@ -1288,7 +1297,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. You will be unable to distribute your product via Steam until we receive a valid tax form from you.",
+                  "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
+                  N(e),
                 ),
                 n.createElement(
                   "div",
@@ -1412,6 +1422,10 @@
           },
           "InvalidTaxInfo-Partner": {
             component: function (e) {
+              const { requirement: t } = e,
+                a = t.onboarded
+                  ? "Until your tax information has been verified, you will not be able to receive any further payments."
+                  : "Until your tax information has been verified, you will not be able to release games on Steam.";
               return n.createElement(
                 "div",
                 {
@@ -1437,7 +1451,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "Until your tax information has been verified, you will not be able to release new games on Steam or receive any further payments. Your tax status has been changed to 'Deactivated'.",
+                  "Your tax status has been changed to 'Deactivated'. ",
+                  a,
                 ),
                 n.createElement(
                   "div",
@@ -1484,7 +1499,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "Since you did not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid and you will be unable to distribute your product via Steam.",
+                  "Since you did not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
+                  N(e),
                 ),
                 n.createElement(
                   "div",
@@ -1545,6 +1561,70 @@
           },
           "NameMismatch-Partner": {
             component: function (e) {
+              const { requirement: t } = e,
+                a = n.createElement(
+                  n.Fragment,
+                  null,
+                  n.createElement(
+                    "ol",
+                    null,
+                    n.createElement(
+                      "li",
+                      null,
+                      "If you need to change your Steamworks partner legal name, please create a Steamworks Support ticket.",
+                      n.createElement(
+                        u.jn,
+                        {
+                          onClick: () =>
+                            window.open(
+                              p.TS.HELP_BASE_URL +
+                                "en/wizard/HelpWithPublishing?issueid=904",
+                              "_blank",
+                            ),
+                          className: s().NotificationButton,
+                        },
+                        "Steamworks Support",
+                      ),
+                    ),
+                    n.createElement(
+                      "li",
+                      null,
+                      "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
+                    ),
+                    n.createElement(E, { ...e }),
+                  ),
+                ),
+                i = n.createElement(
+                  n.Fragment,
+                  null,
+                  n.createElement(
+                    "ol",
+                    null,
+                    n.createElement(
+                      "li",
+                      null,
+                      "If you need to change your Steamworks partner legal name, please return to the payment information page using the button below and click 'start over' to start the process again to correct your Steamworks partner legal name (note: you will not lose your Steam Direct app credit).",
+                      n.createElement(
+                        u.jn,
+                        {
+                          onClick: () =>
+                            window.open(
+                              p.TS.PARTNER_BASE_URL + "newpartner",
+                              "_blank",
+                            ),
+                          className: s().NotificationButton,
+                        },
+                        "Payment Information Page",
+                      ),
+                    ),
+                    n.createElement(
+                      "li",
+                      null,
+                      "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
+                      n.createElement(E, { ...e }),
+                    ),
+                  ),
+                );
               return n.createElement(
                 "div",
                 {
@@ -1585,21 +1665,8 @@
                       s().RequiredDocumentList,
                     ),
                   },
-                  n.createElement(
-                    "ol",
-                    null,
-                    n.createElement(
-                      "li",
-                      null,
-                      "If you need to change your Steamworks partner legal name, please use the button below to start the process again to correct your Steamworks partner legal name (note: you will not lose your Steam Direct app credit).",
-                    ),
-                    n.createElement(
-                      "li",
-                      null,
-                      "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
-                    ),
-                  ),
-                  n.createElement(E, { ...e }),
+                  t.onboarded && a,
+                  !t.onboarded && i,
                 ),
               );
             },
@@ -1631,7 +1698,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid and you will be unable to distribute your product via Steam.",
+                  "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
+                  N(e),
                 ),
                 n.createElement(
                   "div",
@@ -1687,7 +1755,8 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid and you will be unable to distribute your product via Steam.",
+                  "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
+                  N(e),
                 ),
                 n.createElement(
                   "div",
@@ -1847,7 +1916,7 @@
             },
           },
         };
-      function _() {
+      function w() {
         const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
           ),
@@ -1865,8 +1934,8 @@
           );
         return [e, r, t, a, o];
       }
-      function w(e) {
-        const [t, a, o] = _(),
+      function C(e) {
+        const [t, a, o] = w(),
           l = n.useMemo(() => {
             const e = [...t];
             return (
@@ -1882,7 +1951,7 @@
               e
             );
           }, [t]),
-          [d, p] = (function () {
+          [d, h] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
               ),
@@ -1895,7 +1964,7 @@
         if (l.length > 0) {
           const e = JSON.parse(l[0]?.data.description_jsondata)?.Subject,
             t =
-              "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
+              "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
                 ? "TEST:"
                 : "";
           f += "?subject=" + t + e;
@@ -1921,10 +1990,10 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  d && n.createElement(C, { strTemplate: p }),
+                  d && n.createElement(T, { strTemplate: h }),
                   l.length > 0 &&
                     l.map((e, t) =>
-                      n.createElement(T, {
+                      n.createElement(I, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -1996,17 +2065,17 @@
           ),
         );
       }
-      function C(e) {
+      function T(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
-          s = N.map((e) => ({ label: e, data: e })),
+          s = b.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           d = new Intl.DateTimeFormat(navigator.language).format(l);
         return (
           (c.data = {}),
-          (c.data.due_date = l / 1e3 + 14 * p.Kp.PerDay),
+          (c.data.due_date = l / 1e3 + 14 * h.Kp.PerDay),
           (c.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${d}" }`),
           n.createElement(
             "div",
@@ -2033,18 +2102,18 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(T, {
+            n.createElement(I, {
               requirement: { deadline: c, index: 0, onboarded: r },
             }),
           )
         );
       }
-      function T(e) {
+      function I(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, i] = _(),
+          [, i] = w(),
           r = new Date(a?.CreatedOn);
-        if (!b[a.TemplateName])
+        if (!_[a.TemplateName])
           return n.createElement(
             "div",
             { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
@@ -2055,7 +2124,7 @@
             ),
             n.createElement("div", null, "Message Not Available"),
           );
-        const o = b[a.TemplateName].component;
+        const o = _[a.TemplateName].component;
         return n.createElement(
           n.Fragment,
           null,
@@ -2084,10 +2153,10 @@
         Gg: () => m,
         MS: () => f,
         Ow: () => d,
-        gF: () => v,
+        gF: () => y,
         mZ: () => u,
         t7: () => c,
-        zX: () => h,
+        zX: () => p,
       });
       var n = a(41735),
         i = a.n(n),
@@ -2101,11 +2170,11 @@
         l.current = e;
         const [m, u] = (0, r.useState)(void 0),
           {
-            include_assets: p,
-            include_release: h,
+            include_assets: h,
+            include_release: p,
             include_platforms: f,
-            include_all_purchase_options: v,
-            include_screenshots: y,
+            include_all_purchase_options: y,
+            include_screenshots: v,
             include_trailers: E,
             include_ratings: g,
             include_tag_count: S,
@@ -2121,11 +2190,11 @@
         if (
           ((0, r.useEffect)(() => {
             const a = {
-              include_assets: p,
-              include_release: h,
+              include_assets: h,
+              include_release: p,
               include_platforms: f,
-              include_all_purchase_options: v,
-              include_screenshots: y,
+              include_all_purchase_options: y,
+              include_screenshots: v,
               include_trailers: E,
               include_ratings: g,
               include_tag_count: S,
@@ -2153,7 +2222,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, p, h, f, v, y, E, g, S, N, b, _, w, C, T, I, x, d]),
+          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, _, w, C, T, I, x, d]),
           !e)
         )
           return [null, 2];
@@ -2182,18 +2251,18 @@
         const [o, s] = c(r, a);
         return r && o?.BIsVisible() ? [o, s] : [n, i];
       }
-      function p(e, t, a, n) {
+      function h(e, t, a, n) {
         const l = (0, o.CH)(),
           {
             include_assets: c,
             include_release: d,
             include_platforms: m,
             include_all_purchase_options: u,
-            include_screenshots: p,
-            include_trailers: h,
+            include_screenshots: h,
+            include_trailers: p,
             include_ratings: f,
-            include_tag_count: v,
-            include_reviews: y,
+            include_tag_count: y,
+            include_reviews: v,
             include_basic_info: E,
             include_supported_languages: g,
             include_full_description: S,
@@ -2210,11 +2279,11 @@
                 include_release: d,
                 include_platforms: m,
                 include_all_purchase_options: u,
-                include_screenshots: p,
-                include_trailers: h,
+                include_screenshots: h,
+                include_trailers: p,
                 include_ratings: f,
-                include_tag_count: v,
-                include_reviews: y,
+                include_tag_count: y,
+                include_reviews: v,
                 include_basic_info: E,
                 include_supported_languages: g,
                 include_full_description: S,
@@ -2239,7 +2308,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, c, d, m, u, p, h, f, v, y, E, g, S, N, b, _, w]),
+          }, [e, t, n, l, c, d, m, u, h, p, f, y, v, E, g, S, N, b, _, w]),
           !e)
         )
           return 2;
@@ -2257,14 +2326,14 @@
           ? 3
           : 2;
       }
-      function h(e, t, a) {
-        return p(e, 0, t, a);
+      function p(e, t, a) {
+        return h(e, 0, t, a);
       }
       function f(e, t, a) {
-        return p(e, 2, t, a);
+        return h(e, 2, t, a);
       }
-      function v(e, t, a) {
-        return p(e, 1, t, a);
+      function y(e, t, a) {
+        return h(e, 1, t, a);
       }
     },
     68797: (e, t, a) => {
