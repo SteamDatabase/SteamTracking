@@ -45,6 +45,8 @@
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
+        CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
+        CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
       };
     },
     49693: (e, t, o) => {

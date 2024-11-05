@@ -11413,6 +11413,17 @@ a.bbcodes_LinkButton_3TN0u:hover {
   display: inline-block;
   margin: 0 2px;
 }
+.bbcodes_CalendarEventContainer_S-ElB {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.bbcodes_CalendarEventContainer_S-ElB .bbcodes_CalendarEventLink_106tp {
+  border-radius: 20px;
+  padding: 4px 22px;
+  color: #fff;
+  background-color: red;
+}
 .youtubeembed_DynamicLinkBox_1IGUR {
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
