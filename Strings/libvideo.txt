@@ -1258,7 +1258,6 @@ $tIContent-Length
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-04:50:57
 08bX
 0A/8
 0Z@q
@@ -1606,6 +1605,7 @@ $tIContent-Length
 2+.google.protobuf.FieldDescriptorProto.Label
 2+ss
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:19:39
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
@@ -7873,11 +7873,13 @@ Zong
 [export] Failed to send flushing packet
 [export] Failed to send frame to encoder
 [export] Failed to send packet to decoder: %s
+[export] Hit end of recording without recieving a frame
 [export] Manifest is missing an audio or video track: %s
 [export] No video codec selected
 [export] No video width and height selected
 [export] Processing file: %s
 [export] Starting for file: %s
+[export] Tryign to send flushing packet without a decoder
 [export] Unknown video codec: %d
 [export] Video demuxer can't find the video track: %s
 [export] We detected the "every packet has the key flag" bug. Forcing a full transcode for this export.
