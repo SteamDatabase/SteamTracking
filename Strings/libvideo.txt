@@ -1258,6 +1258,7 @@ $tIContent-Length
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+04:50:57
 08bX
 0A/8
 0Z@q
@@ -1624,7 +1625,6 @@ $tIContent-Length
 21COpenSSLCachedSession
 21CUtlCStringConversion
 21VideoRepresentation_t
-22:03:41
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -5532,7 +5532,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  1 2024
+Nov  5 2024
 November
 NrZl
 NullMetrics()
@@ -7849,6 +7849,7 @@ Zong
 [export] Encoder not initialized
 [export] Failed add output audio stream
 [export] Failed add output video stream
+[export] Failed because packet pts (%lld) was greater than dts (%lld)
 [export] Failed to add audio packet to muxer: %s
 [export] Failed to add frame to filter graph
 [export] Failed to add video packet to muxer: %s
@@ -7864,6 +7865,7 @@ Zong
 [export] Failed to initialize filter graph
 [export] Failed to make initial encoder
 [export] Failed to open muxer: %s
+[export] Failed to parse reference codec params
 [export] Failed to process recording: %s %s
 [export] Failed to read frame from encoder
 [export] Failed to read frame from filter graph

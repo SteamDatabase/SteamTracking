@@ -50498,7 +50498,6 @@ pRequestHandle->AccessResponse()->GetBodyBuffer()->TellPut() == 0
 pRequestHandle->GetRefCount() > 0 && pRequestHandle->GetRefCount() < 10000
 pResult->m_identityRemote == identityRemote
 pReuseSession == NULL
-pS:>v
 pSNetSocket->m_SteamIDRemote.IsValid()
 pSSLContext->BHasCertificate()
 pSSLContext->GetConnectionType() == k_ESSLConnectionType_Server
@@ -53386,7 +53385,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov  1 2024 22:04:35
+steam Nov  5 2024 04:51:57
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

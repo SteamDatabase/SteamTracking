@@ -52,6 +52,7 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./0123(
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -6051,10 +6052,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:5043
-/data/src/steamUI/gamerecordingcontroller.cpp:5143
-/data/src/steamUI/gamerecordingcontroller.cpp:6455
-/data/src/steamUI/gamerecordingcontroller.cpp:6528
+/data/src/steamUI/gamerecordingcontroller.cpp:5048
+/data/src/steamUI/gamerecordingcontroller.cpp:5148
+/data/src/steamUI/gamerecordingcontroller.cpp:6460
+/data/src/steamUI/gamerecordingcontroller.cpp:6533
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -16103,6 +16104,7 @@ CreatedByFollowedUsersRankedByPublicationDate
 CreatedByFriendsRankedByPublicationDate
 Creating broadcast WebRTC session
 Creating new encoder for codec %d
+Creating pulse audio recorder for process %d
 Creating steam library for storage mount: %s
 CreatingProcess
 CreatorHomeLink
@@ -21535,7 +21537,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov  1 2024 22:04:47
+Nov  5 2024 04:52:08
 November
 NrZl
 Num Lock
@@ -45737,7 +45739,6 @@ vms_load
 vms_merger
 vms_unload
 vng]VPKFA;5/(
-voT9
 voice_input_gain
 voice_mic_device_name
 voice_mic_input_gain
