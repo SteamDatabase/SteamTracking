@@ -5092,7 +5092,7 @@ e35591b2 steamdeps.txt
 074bdc7c steamui/broadcast.js
 453aa0f3 steamui/broadcastapp.js
 94283dbf steamui/chunk~1a96cdf59.js
-2b424b58 steamui/chunk~2dcc5aaf7.js
+27087321 steamui/chunk~2dcc5aaf7.js
 f3138a4f steamui/css/awardicon.css
 f53828c3 steamui/css/broadcast.css
 1ebf6b27 steamui/css/broadcastapp.css
@@ -5472,10 +5472,10 @@ f11d799e steamui/images/tvnoise.png
 6c038289 steamui/images/whatsnew_playnext.jpg
 ee9f76ea steamui/images/workshopbackground.png
 26108669 steamui/index.html
-0130774f steamui/libraries/libraries~00299a408.js
+b01f1005 steamui/libraries/libraries~00299a408.js
 6536c7df steamui/libraries/libraries~2dcc5aaf7.js
 3c44e6da steamui/libraries/libraries~4f371177a.js
-c641d667 steamui/library.js
+826084cb steamui/library.js
 c768b843 steamui/licenses.js
 e415b53a steamui/licenses.txt
 111ba05a steamui/localization/friendsui_arabic-json.js
