@@ -335,17 +335,17 @@ function GameHover( elem, event, divHover, rgHoverData )
 		if ( rgHoverData['type'] == 'app' )
 		{
 			strTargetPrefix = 'hover_app_';
-			strUrlTarget = 'apphover' + ( bPublic ? 'public' : '' ) + '/' + rgHoverData['id'];
+			strUrlTarget = ( bPublic ? 'apphoverpublic/' : 'apphover/' ) + rgHoverData['id'];
 		}
 		else if ( rgHoverData['type'] == 'sub' )
 		{
 			strTargetPrefix = 'hover_sub_';
-			strUrlTarget = 'subhover' + ( bPublic ? 'public' : '' ) + '/' + rgHoverData['id'];
+			strUrlTarget = ( bPublic ? 'subhoverpublic/' : 'subhover/' ) + rgHoverData['id'];
 		}
 		else if ( rgHoverData['type'] == 'bundle' )
 		{
 			strTargetPrefix = 'hover_bundle_';
-			strUrlTarget = 'bundle/' + rgHoverData['id'] + '/hover' + ( bPublic ? '_public' : '' ) + '/';
+			strUrlTarget = 'bundle/' + rgHoverData['id'] + '/' + ( bPublic ? 'hover_public/' : 'hover/' );
 		}
 		else
 		{
@@ -371,7 +371,11 @@ function GameHover( elem, event, divHover, rgHoverData )
 			if ( bPublic )
 			{
 				// is cc needed?
-				rgAjaxParams = { /*cc: rgHoverData['cc'],*/ l: 'english' };
+				rgAjaxParams = {
+					/*cc: rgHoverData['cc'],*/
+					l: 'english',
+					origin: self.origin
+				};
 			}
 			if ( rgHoverData['v6'] )
 			{

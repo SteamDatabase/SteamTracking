@@ -36095,19 +36095,13 @@
                   ),
                 ),
                 l.createElement(
-                  Ke.he,
-                  {
-                    className: (0, y.A)(_().HelperTooltip, "HelperTooltip"),
-                    toolTipContent: (0, R.we)(
-                      "#OptIn_Discount_Intent_Desc_ttip",
-                    ),
-                  },
+                  "div",
+                  null,
                   l.createElement(
                     "div",
                     null,
                     (0, R.we)("#OptIn_Discount_Intent_Desc"),
                   ),
-                  l.createElement(Ve._VW, null),
                 ),
                 l.createElement(
                   "div",
@@ -36481,17 +36475,16 @@
           "ChangeAppAdditionalFeaturingState",
           null,
         );
-      var Ss = a(11577),
-        ys = a(29863),
-        vs = a(96236),
-        fs = a(74303);
-      const bs = {
+      var Ss = a(29863),
+        ys = a(96236),
+        vs = a(74303);
+      const fs = {
         include_basic_info: !0,
         include_assets: !0,
         include_tag_count: 10,
         include_release: !0,
       };
-      function ws(e) {
+      function bs(e) {
         const {
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: a,
@@ -36502,10 +36495,10 @@
           o = (0, tn.m)("OptInAppReviewFilter");
         l.useEffect(() => {
           Pt.A.Get()
-            .QueueMultipleAppRequests(t?.slice(0, 100) || [], bs)
+            .QueueMultipleAppRequests(t?.slice(0, 100) || [], fs)
             .then(() => {
               Pt.A.Get()
-                .QueueMultipleAppRequests(t?.slice(100) || [], bs)
+                .QueueMultipleAppRequests(t?.slice(100) || [], fs)
                 .then(() => {
                   s(!1);
                 });
@@ -36597,7 +36590,7 @@
                       p(e.target.value), y(1);
                     },
                   }),
-                  l.createElement(Ds, {
+                  l.createElement(ws, {
                     setFilterTagIDs: c,
                     fnUpdateSetFilterTagIDs: (e) => {
                       d(e), y(1);
@@ -36629,7 +36622,7 @@
           )
         );
       }
-      function Ds(e) {
+      function ws(e) {
         const {
             setFilterTagIDs: t,
             fnUpdateSetFilterTagIDs: a,
@@ -36671,7 +36664,7 @@
           );
         return l.createElement(
           "div",
-          { className: fs.TagFilterBar },
+          { className: vs.TagFilterBar },
           l.createElement(m.JU, null, "Filter by Tag:"),
           l.createElement(mt.Ay, {
             isSearchable: !0,
@@ -36688,9 +36681,9 @@
           }),
         );
       }
-      var Cs = a(79359),
-        Is = a(81943);
-      function Bs(e) {
+      var Ds = a(79359),
+        Cs = a(81943);
+      function Is(e) {
         const { rgAppealReviewReg: t, pageid: a } = e,
           n = l.useMemo(
             () =>
@@ -36704,13 +36697,13 @@
         return l.createElement(
           "div",
           null,
-          l.createElement(As, { bShowPruningCriteria: !0 }),
+          l.createElement(Ts, { bShowPruningCriteria: !0 }),
           Boolean(n.length > 0)
             ? l.createElement(
                 l.Fragment,
                 null,
                 n.map((e, t) =>
-                  l.createElement(Ms, {
+                  l.createElement(As, {
                     key: "appeal" + e.appid,
                     pageid: a,
                     registration: e,
@@ -36725,11 +36718,11 @@
               ),
         );
       }
-      const Ts = "app_review_elig_crit";
-      function As(e) {
+      const Bs = "app_review_elig_crit";
+      function Ts(e) {
         const { bShowPruningCriteria: t } = e,
           a = (0, Ii.Tc)("optin_eligibility_criteria", "application_config"),
-          [n, r] = (0, Cs.M)(Ts, !1);
+          [n, r] = (0, Ds.M)(Bs, !1);
         return t && a?.length > 1
           ? l.createElement(
               Qe.AQ,
@@ -36737,23 +36730,23 @@
                 title: "Pruning Eligibility Criteria",
                 getMinimized: () => n,
                 toggleMinimized: () => r(!n),
-                className: Is.CollapseableTitle,
+                className: Cs.CollapseableTitle,
               },
               l.createElement(ji.f, { text: a }),
             )
           : null;
       }
-      function Ms(e) {
+      function As(e) {
         return l.createElement(
-          vs.K,
+          ys.K,
           { placeholderHeight: "160px", rootMargin: "0px 0px 200px 0px" },
-          l.createElement(ks, { ...e, appid: e.registration.appid }),
+          l.createElement(Ms, { ...e, appid: e.registration.appid }),
         );
       }
-      function ks(e) {
+      function Ms(e) {
         const { appid: t, pageid: a, index: n } = e,
           r = (0, kt._q)(t, a),
-          [i, s] = (0, Nt.t7)(t, bs),
+          [i, s] = (0, Nt.t7)(t, fs),
           o = l.useMemo(() => ({ type: "game", id: t }), [t]);
         if (!r)
           return l.createElement("div", null, "Error: Missing registration");
@@ -36777,28 +36770,28 @@
         }
         return l.createElement(
           "div",
-          { className: (0, y.A)(fs.Row) },
+          { className: (0, y.A)(vs.Row) },
           l.createElement(
-            ys.Qf,
+            Ss.Qf,
             { item: o },
             l.createElement("img", {
-              className: fs.CapsuleImg,
+              className: vs.CapsuleImg,
               src: i.GetAssets().GetMainCapsuleURL(),
             }),
           ),
           l.createElement(
             "div",
-            { className: (0, y.A)(fs.Column) },
+            { className: (0, y.A)(vs.Column) },
             l.createElement(
               "div",
-              { className: fs.TopSection },
+              { className: vs.TopSection },
               l.createElement(
                 "div",
-                { className: fs.GameInfo },
+                { className: vs.GameInfo },
                 l.createElement(
                   "a",
                   { href: i.GetStorePageURL() },
-                  l.createElement("div", { className: fs.Title }, i.GetName()),
+                  l.createElement("div", { className: vs.Title }, i.GetName()),
                 ),
                 l.createElement(
                   "div",
@@ -36828,13 +36821,13 @@
                 ),
                 l.createElement(
                   "div",
-                  { className: fs.Desc },
+                  { className: vs.Desc },
                   i.GetShortDescription(),
                 ),
               ),
               l.createElement(
                 "div",
-                { className: fs.ActionsCtn },
+                { className: vs.ActionsCtn },
                 Boolean(1 == r.appeal_state)
                   ? l.createElement("div", null, "Marked Approved")
                   : l.createElement(
@@ -36842,7 +36835,7 @@
                       {
                         onClick: (e) =>
                           (0, h.pg)(
-                            l.createElement(Rs, {
+                            l.createElement(ks, {
                               appid: t,
                               registration: r,
                               bAcceptAppeal: !0,
@@ -36859,7 +36852,7 @@
                       {
                         onClick: (e) =>
                           (0, h.pg)(
-                            l.createElement(Rs, {
+                            l.createElement(ks, {
                               appid: t,
                               registration: r,
                               bAcceptAppeal: !1,
@@ -36892,11 +36885,11 @@
             ),
             l.createElement(
               "div",
-              { className: fs.GameInfo },
-              l.createElement(zs, { storeItem: i }),
+              { className: vs.GameInfo },
+              l.createElement(Us, { storeItem: i }),
               l.createElement(
                 "div",
-                { className: fs.AppealWordsCtn },
+                { className: vs.AppealWordsCtn },
                 l.createElement(
                   "div",
                   null,
@@ -36915,19 +36908,19 @@
           ),
           l.createElement(
             "div",
-            { className: fs.RowNumber },
+            { className: vs.RowNumber },
             (n + 1).toLocaleString(),
           ),
         );
       }
-      function Rs(e) {
+      function ks(e) {
         const {
             appid: t,
             registration: a,
             bAcceptAppeal: n,
             closeModal: r,
           } = e,
-          [i] = (0, Nt.t7)(t, bs),
+          [i] = (0, Nt.t7)(t, fs),
           { fnUpdateAppealState: s } = (0, kt.fw)(),
           o = (0, Ct.vs)();
         return o.bLoading
@@ -36956,7 +36949,7 @@
               },
             });
       }
-      function Ps(e) {
+      function Rs(e) {
         return l.createElement(
           "div",
           null,
@@ -36965,7 +36958,7 @@
             {
               onClick: (t) =>
                 (0, h.pg)(
-                  l.createElement(Ns, { ...e, bInvite: !0 }),
+                  l.createElement(Ps, { ...e, bInvite: !0 }),
                   (0, v.uX)(t),
                 ),
             },
@@ -36976,7 +36969,7 @@
             {
               onClick: (t) =>
                 (0, h.pg)(
-                  l.createElement(Ns, { ...e, bInvite: !1 }),
+                  l.createElement(Ps, { ...e, bInvite: !1 }),
                   (0, v.uX)(t),
                 ),
             },
@@ -36984,7 +36977,7 @@
           ),
         );
       }
-      function Ns(e) {
+      function Ps(e) {
         const { closeModal: t, rgAppIDs: a, strOptInName: n, bInvite: r } = e,
           { fnChangeAppPruneState: i } = Es(),
           [s, o] = (0, l.useState)(void 0),
@@ -37028,7 +37021,7 @@
             ),
         );
       }
-      function Gs(e) {
+      function Ns(e) {
         const { pageid: t } = e,
           a = (0, f.Tc)("optin_title", "application_config"),
           {
@@ -37064,13 +37057,8 @@
               rgAppToNotPrune: t.isLoading ? null : t.data,
               bIsLoadError: t.isError,
             };
-          })(t);
-        l.useEffect(() => {
-          (0, f.Tc)("optin_webapi_token", "application_config")
-            ? (0, Ss.a)(!0)
-            : console.error("OptInAppReviewLanding missing API token");
-        }, []);
-        const u = l.useMemo(() => {
+          })(t),
+          u = l.useMemo(() => {
             if (s) {
               const e = new Map();
               return s.forEach((t) => e.set(t.appid, t)), e;
@@ -37121,7 +37109,7 @@
               contents: l.createElement(
                 d.tH,
                 null,
-                l.createElement(Os, {
+                l.createElement(Gs, {
                   key: "reviewapp",
                   rgOrderedAppIDs: p,
                   pageid: t,
@@ -37141,7 +37129,7 @@
               contents: l.createElement(
                 d.tH,
                 null,
-                l.createElement(Bs, {
+                l.createElement(Is, {
                   key: "appealmap",
                   rgAppealReviewReg: _,
                   pageid: t,
@@ -37155,7 +37143,7 @@
               contents: l.createElement(
                 d.tH,
                 null,
-                l.createElement(Os, {
+                l.createElement(Gs, {
                   key: "invitedapps",
                   rgOrderedAppIDs: n,
                   pageid: t,
@@ -37172,7 +37160,7 @@
               contents: l.createElement(
                 d.tH,
                 null,
-                l.createElement(Os, {
+                l.createElement(Gs, {
                   key: "prunedapps",
                   rgOrderedAppIDs: r,
                   pageid: t,
@@ -37199,7 +37187,7 @@
           l.createElement(E.V, { tabs: h }),
         );
       }
-      function Os(e) {
+      function Gs(e) {
         const {
             rgOrderedAppIDs: t,
             pageid: a,
@@ -37213,9 +37201,9 @@
         return l.createElement(
           "div",
           null,
-          Boolean(i) && l.createElement(Ps, { strOptInName: a, rgAppIDs: m }),
-          l.createElement(As, { bShowPruningCriteria: s }),
-          l.createElement(ws, {
+          Boolean(i) && l.createElement(Rs, { strOptInName: a, rgAppIDs: m }),
+          l.createElement(Ts, { bShowPruningCriteria: s }),
+          l.createElement(bs, {
             pageid: a,
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: c,
@@ -37226,7 +37214,7 @@
                 l.Fragment,
                 null,
                 m.map((e, t) =>
-                  l.createElement(Fs, {
+                  l.createElement(Os, {
                     key: (n ? "prune" : "invited") + e,
                     pageid: a,
                     appid: e,
@@ -37243,14 +37231,14 @@
               ),
         );
       }
-      function Fs(e) {
+      function Os(e) {
         return l.createElement(
-          vs.K,
+          ys.K,
           { placeholderHeight: "160px", rootMargin: "0px 0px 200px 0px" },
-          l.createElement(Ls, { ...e }),
+          l.createElement(Fs, { ...e }),
         );
       }
-      function Ls(e) {
+      function Fs(e) {
         const {
             appid: t,
             bInvited: a,
@@ -37258,7 +37246,7 @@
             index: r,
             bPendingReview: i,
           } = e,
-          [s, o] = (0, Nt.t7)(t, bs),
+          [s, o] = (0, Nt.t7)(t, fs),
           { fnChangeAppPruneState: c } = Es(),
           d = l.useMemo(() => ({ type: "game", id: t }), [t]);
         switch (o) {
@@ -37281,28 +37269,28 @@
         }
         return l.createElement(
           "div",
-          { className: (0, y.A)(fs.Row, a ? fs.Invited : fs.Pruned) },
+          { className: (0, y.A)(vs.Row, a ? vs.Invited : vs.Pruned) },
           l.createElement(
-            ys.Qf,
+            Ss.Qf,
             { item: d },
             l.createElement("img", {
-              className: fs.CapsuleImg,
+              className: vs.CapsuleImg,
               src: s.GetAssets().GetMainCapsuleURL(),
             }),
           ),
           l.createElement(
             "div",
-            { className: (0, y.A)(fs.Column) },
+            { className: (0, y.A)(vs.Column) },
             l.createElement(
               "div",
-              { className: fs.TopSection },
+              { className: vs.TopSection },
               l.createElement(
                 "div",
-                { className: fs.GameInfo },
+                { className: vs.GameInfo },
                 l.createElement(
                   "a",
                   { href: s.GetStorePageURL() },
-                  l.createElement("div", { className: fs.Title }, s.GetName()),
+                  l.createElement("div", { className: vs.Title }, s.GetName()),
                 ),
                 l.createElement(
                   "div",
@@ -37333,7 +37321,7 @@
               ),
               l.createElement(
                 "div",
-                { className: fs.ActionsCtn },
+                { className: vs.ActionsCtn },
                 l.createElement(
                   m.$n,
                   { onClick: () => c(n, [t], a || i) },
@@ -37350,28 +37338,28 @@
                     (0, R.we)("#OptIn_AppReview_Invite"),
                   ),
                 Boolean(f.iA.is_support && a) &&
-                  l.createElement(Us, { appid: t, pageid: n }),
+                  l.createElement(Ls, { appid: t, pageid: n }),
               ),
             ),
             l.createElement(
               "div",
-              { className: fs.GameInfo },
+              { className: vs.GameInfo },
               l.createElement(
                 "div",
-                { className: fs.Desc },
+                { className: vs.Desc },
                 s.GetShortDescription(),
               ),
-              l.createElement(zs, { storeItem: s }),
+              l.createElement(Us, { storeItem: s }),
             ),
           ),
           l.createElement(
             "div",
-            { className: fs.RowNumber },
+            { className: vs.RowNumber },
             (r + 1).toLocaleString(),
           ),
         );
       }
-      function Us(e) {
+      function Ls(e) {
         const { appid: t, pageid: a } = e,
           n = (function (e) {
             const [t, a] = (0, l.useState)(hs.Get().GetStateForApp(e));
@@ -37417,13 +37405,13 @@
           ),
         );
       }
-      function zs(e) {
+      function Us(e) {
         const { storeItem: t } = e,
           a = l.useMemo(() => t?.GetTags().map((e) => e.tagid), [t]),
           n = (0, Ra.LG)(a);
         return l.createElement(
           "div",
-          { className: fs.StoreTags },
+          { className: vs.StoreTags },
           (0, R.PP)(
             "#OptIn_AppReview_Tags",
             l.createElement(
@@ -37436,7 +37424,8 @@
           ),
         );
       }
-      var xs = a(62007),
+      var zs = a(11577),
+        xs = a(62007),
         qs = a.n(xs),
         Ws = a(82348),
         js = a.n(Ws);
@@ -37742,7 +37731,7 @@
                   {
                     onClick: (e) =>
                       (0, h.pg)(
-                        l.createElement(Rs, {
+                        l.createElement(ks, {
                           appid: a.appid,
                           registration: a,
                           bAcceptAppeal: !0,
@@ -37757,7 +37746,7 @@
                   {
                     onClick: (e) =>
                       (0, h.pg)(
-                        l.createElement(Rs, {
+                        l.createElement(ks, {
                           appid: a.appid,
                           registration: a,
                           bAcceptAppeal: !1,
@@ -39379,7 +39368,7 @@
             "td",
             { className: Ll.Img },
             l.createElement(
-              ys.Qf,
+              Ss.Qf,
               {
                 item: i,
                 hoverProps: {
@@ -39433,7 +39422,7 @@
       }
       function Vl(e) {
         return l.createElement(
-          Ss.m,
+          zs.m,
           null,
           l.createElement(
             o.Kd,
@@ -39509,7 +39498,7 @@
               l.createElement(fn.qh, {
                 path: Wl.OptInAppReview(":pageid"),
                 render: (e) =>
-                  l.createElement(Gs, { pageid: e.match.params.pageid }),
+                  l.createElement(Ns, { pageid: e.match.params.pageid }),
               }),
               l.createElement(fn.qh, {
                 path: Wl.OptInAppAppeal(":partialpageid", ":appid"),
@@ -69429,7 +69418,6 @@
         }
         BIsInsertableSectionType(e) {
           if (e) {
-            if ("contenthubsections" == e.section_type) return !0;
             if ("sale_item_browser" == e.section_type) return !0;
             if ((0, O.ye)(e.section_type))
               return (
@@ -89540,7 +89528,7 @@
         constructor(e) {
           (0, m.Gn)(this),
             (this.m_message = e),
-            e.associated_item() &&
+            e.associated_item(!1) &&
               (this.m_item = d.A.Get().ReadItem(
                 e.associated_item(),
                 u.sm_DefaultDataRequest,
@@ -91946,6 +91934,42 @@
             r && r();
           },
         });
+      }
+    },
+    79645: (e, t, a) => {
+      "use strict";
+      a.d(t, { S: () => m, c: () => c });
+      var n = a(41735),
+        r = a.n(n),
+        i = a(20194),
+        s = a(68797),
+        l = a(30470),
+        o = a(78327);
+      function c(e) {
+        const { data: t, isLoading: a } = (0, i.I)({
+          queryKey: ["PartnerInfoList", e],
+          queryFn: () =>
+            (async function (e) {
+              const t = { accountid: e, origin: self.origin };
+              let a = `${l.TS.COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo`;
+              "partnerweb" == (0, o.yK)() &&
+                (a = `${l.TS.PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo`);
+              const n = await r().get(a, { params: t, withCredentials: !0 });
+              if (
+                !n ||
+                200 != n.status ||
+                1 != n.data?.success ||
+                !n.data?.partners
+              )
+                throw `Load single user partner info failed ${((0, s.H))(n).strErrorMsg}`;
+              return n.data.partners;
+            })(e),
+        });
+        return a ? null : t;
+      }
+      function m(e, t) {
+        const a = c(e);
+        return a?.find((e) => e.partnerid === t);
       }
     },
     42569: (e, t, a) => {
@@ -101606,8 +101630,6 @@
               case "interactive_recommender":
               case "tag_recommender":
                 return "#Sale_default_label_RecommendedForYou";
-              case "wishlist_recommender":
-                return "#Sale_default_label_WishlistRecommender";
               case "deck_topplayed":
                 return "#Sale_TopPlayedOnDeckSection";
               case "personalized_carousel":

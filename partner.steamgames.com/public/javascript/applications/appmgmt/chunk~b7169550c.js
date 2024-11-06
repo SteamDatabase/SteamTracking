@@ -4,50 +4,6 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4440],
   {
-    33645: (t) => {
-      t.exports = {
-        Bold: "_3cln317VYhwhE1fSeMCG48",
-        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
-        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
-        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
-        Header2: "_6-VR2WCBCDupCcUN5INQM",
-        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
-        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
-        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
-        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
-        SmallText: "WBzrd438Bd8Z3J-j_iglW",
-        Underline: "GrhFWtBdrSZP611s1UqqT",
-        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
-        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
-        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
-        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
-        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
-        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
-        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
-        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
-        Code: "_2ODaX8lO7DKLKke76c2Wya",
-        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
-        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
-        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
-        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
-        HR: "-xPK0REpludHjRG8xQfih",
-        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
-        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
-        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
-        TableData: "_1PCHOM5zSRFfeHzwDmEukB",
-        TableHeader: "_1NpENNz7rvObsTC99AQFda",
-        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
-        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
-        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
-        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
-        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
-        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
-        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
-        Image: "_3K0NuxYUYncdQ-cNK7udMn",
-        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
-        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
-      };
-    },
     1990: (t) => {
       t.exports = {
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
@@ -71,14 +27,14 @@
       a.d(e, {
         MY: () => p,
         UA: () => m,
-        Yd: () => _,
+        Yd: () => h,
         rN: () => d,
         vh: () => g,
       });
       var n = a(34629),
-        r = a(41735),
-        o = a.n(r),
-        s = a(90626),
+        s = a(41735),
+        o = a.n(s),
+        r = a(90626),
         i = a(68797),
         l = a(78327),
         c = a(6419);
@@ -110,9 +66,9 @@
                 searchtext: t,
                 origin: self.origin,
               },
-              r = await o().get(a, { params: n });
-            200 == r?.status && 1 == r?.data?.success
-              ? r.data.publishers.forEach((t) => {
+              s = await o().get(a, { params: n });
+            200 == s?.status && 1 == s?.data?.success
+              ? s.data.publishers.forEach((t) => {
                   const a = {
                     partnerid: t.publisherid,
                     name: t.publishername,
@@ -123,7 +79,7 @@
                   this.m_mapOptInToPartners.set(t.publisherid, a), e.push(a);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${s?.status} eresult ${s?.data?.success} and msg ${s?.data?.msg}`,
                 );
           } catch (t) {
             const e = (0, i.H)(t);
@@ -188,9 +144,9 @@
         }
       }
       function g(t) {
-        const [e, a] = (0, s.useState)(!1);
+        const [e, a] = (0, r.useState)(!1);
         return (
-          (0, s.useEffect)(() => {
+          (0, r.useEffect)(() => {
             !e &&
               t?.length > 0 &&
               u
@@ -202,9 +158,9 @@
         );
       }
       function m(t) {
-        const [e, a] = s.useState(() => u.Get().GetPartnerInfo(t));
+        const [e, a] = r.useState(() => u.Get().GetPartnerInfo(t));
         return (
-          s.useEffect(() => {
+          r.useEffect(() => {
             !u.Get().BHasPartnerInfoLoad(t) && t > 0
               ? u
                   .Get()
@@ -220,7 +176,7 @@
       function d() {
         return { fnFindPartnerByName: u.Get().FindPartnerByName };
       }
-      function _(t) {
+      function h(t) {
         return u.Get().GetPartnerInfo(t);
       }
       (0, n.Cg)([c.o], u.prototype, "FindPartnerByName", null);
@@ -229,15 +185,15 @@
       "use strict";
       a.d(e, { E: () => g, O: () => u });
       var n = a(34629),
-        r = a(14947),
+        s = a(14947),
         o = a(65946),
-        s = a(22837),
+        r = a(22837),
         i = a(62490),
         l = a(6419),
         c = a(78327),
         p = a(91986);
       class u {
-        m_eCurLang = (0, s.sf)(c.TS.LANGUAGE);
+        m_eCurLang = (0, r.sf)(c.TS.LANGUAGE);
         m_rgHasData = (0, i.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new p.l();
@@ -279,27 +235,27 @@
           );
         }
         constructor() {
-          (0, r.Gn)(this);
+          (0, s.Gn)(this);
         }
       }
       function g() {
         return (0, o.q3)(() => u.Get().GetCurEditLanguage());
       }
-      (0, n.Cg)([r.sH], u.prototype, "m_eCurLang", void 0),
-        (0, n.Cg)([r.sH], u.prototype, "m_rgHasData", void 0),
-        (0, n.Cg)([r.sH], u.prototype, "m_bHasLocalizationContext", void 0),
+      (0, n.Cg)([s.sH], u.prototype, "m_eCurLang", void 0),
+        (0, n.Cg)([s.sH], u.prototype, "m_rgHasData", void 0),
+        (0, n.Cg)([s.sH], u.prototype, "m_bHasLocalizationContext", void 0),
         (0, n.Cg)([l.o], u.prototype, "GetCurEditLanguage", null),
         (0, n.Cg)([l.o], u.prototype, "SetCurEditLanguage", null),
-        (0, n.Cg)([r.XI.bound], u.prototype, "SetHasLanguage", null),
+        (0, n.Cg)([s.XI.bound], u.prototype, "SetHasLanguage", null),
         (0, n.Cg)([l.o], u.prototype, "BHasLanguageData", null);
     },
     96001: (t, e, a) => {
       "use strict";
       a.d(e, { a: () => l, z: () => i });
       var n = a(81393),
-        r = a(96059),
+        s = a(96059),
         o = a(30470),
-        s = a(24484);
+        r = a(24484);
       class i {
         m_steamInterface;
         GetPromotionTransport() {
@@ -313,12 +269,12 @@
           );
         }
         Init() {
-          const t = (0, s.Tc)(
+          const t = (0, r.Tc)(
             "promotion_operation_token",
             "application_config",
           );
           (0, n.w)(Boolean(t), "require promotion_operation_token"),
-            (this.m_steamInterface = new r.D(o.TS.WEBAPI_BASE_URL, t));
+            (this.m_steamInterface = new s.D(o.TS.WEBAPI_BASE_URL, t));
         }
       }
       function l() {
@@ -329,9 +285,9 @@
       "use strict";
       a.d(e, { Ng: () => S, iN: () => b, yk: () => f });
       var n = a(34629),
-        r = a(75844),
+        s = a(75844),
         o = a(65946),
-        s = a(90626),
+        r = a(90626),
         i = a(22837),
         l = a(2160),
         c = a(63556),
@@ -340,20 +296,20 @@
         g = a(52038),
         m = a(61859),
         d = a(91675),
-        _ = a(375),
-        h = a(32754);
-      let S = class extends s.Component {
+        h = a(375),
+        _ = a(32754);
+      let S = class extends r.Component {
         GenerateLanguageOptions() {
           let t = [];
           const {
             fnFilterLanguage: e,
             fnLangHasData: a,
             fnLastUpdateRTime: n,
-            fnIsLangSupported: r,
+            fnIsLangSupported: s,
           } = this.props;
           this.props.bAllowUnsetOption &&
             t.push(
-              s.createElement(
+              r.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
                 (0, m.we)("#language_selection_none"),
@@ -365,8 +321,8 @@
             if (e && !e(t)) continue;
             const a = (0, i.Lg)(t),
               n = (0, m.we)("#Language_" + a),
-              s = Boolean(r) && r(t);
-            o.push({ eLang: t, sLocName: n, bSupported: s });
+              r = Boolean(s) && s(t);
+            o.push({ eLang: t, sLocName: n, bSupported: r });
           }
           o.sort((t, e) =>
             t.bSupported != e.bSupported
@@ -379,7 +335,7 @@
           for (const e of o) {
             e.bSupported != p &&
               (t.push(
-                s.createElement(
+                r.createElement(
                   "option",
                   {
                     key: e.bSupported ? "SupportedGroup" : "UnsupportedGroup",
@@ -394,7 +350,7 @@
                 ),
               ),
               (p = e.bSupported));
-            const r = a && a(e.eLang),
+            const s = a && a(e.eLang),
               o = n && n(e.eLang);
             let i = e.sLocName;
             o &&
@@ -405,13 +361,13 @@
                 (0, m.$z)(o) + " @ " + (0, d.KC)(o, { bForce24HourClock: !1 }),
               ))),
               t.push(
-                s.createElement(
+                r.createElement(
                   "option",
                   {
-                    key: "langpicker" + e.eLang + (r ? "_hasdata" : ""),
+                    key: "langpicker" + e.eLang + (s ? "_hasdata" : ""),
                     value: e.eLang,
                     className: (0, g.A)(
-                      { [u().LanguageWithContent]: r },
+                      { [u().LanguageWithContent]: s },
                       e.bSupported
                         ? u().SupportedLanguage
                         : u().UnsupportedLanguage,
@@ -431,10 +387,10 @@
         render() {
           const { selectedLang: t, bDisabled: e, strTooltip: a } = this.props;
           let n = this.GenerateLanguageOptions();
-          return s.createElement(
-            h.he,
+          return r.createElement(
+            _.he,
             { toolTipContent: a },
-            s.createElement(
+            r.createElement(
               "select",
               { value: t, onChange: this.OnLanguageChange, disabled: e },
               n,
@@ -447,7 +403,7 @@
           c.O.Get().GetHasLocalizationContext(),
           c.O.Get().GetCurEditLanguage(),
         ]);
-        return s.createElement(S, {
+        return r.createElement(S, {
           selectedLang: a,
           fnLangHasData: c.O.Get().BHasLanguageData,
           fnOnLanguageChanged: c.O.Get().SetCurEditLanguage,
@@ -457,7 +413,7 @@
       }
       function f(t) {
         const { fnLangHasData: e } = t;
-        s.useEffect(
+        r.useEffect(
           () => (
             c.O.Get().SetHasLocalizationContext(!0),
             () => c.O.Get().SetHasLocalizationContext(!1)
@@ -470,20 +426,20 @@
           return t;
         });
         return (
-          s.useEffect(() => c.O.Get().SetHasLanguage(a), [a]),
-          s.createElement(s.Fragment, null)
+          r.useEffect(() => c.O.Get().SetHasLanguage(a), [a]),
+          r.createElement(r.Fragment, null)
         );
       }
-      (0, n.Cg)([_.oI], S.prototype, "OnLanguageChange", null),
-        (S = (0, n.Cg)([r.PA], S));
+      (0, n.Cg)([h.oI], S.prototype, "OnLanguageChange", null),
+        (S = (0, n.Cg)([s.PA], S));
     },
     38135: (t, e, a) => {
       "use strict";
       a.d(e, { V: () => d });
       var n = a(90626),
-        r = a(92757),
+        s = a(92757),
         o = a(52038),
-        s = a(61859),
+        r = a(61859),
         i = a(95034),
         l = a(1990),
         c = a.n(l),
@@ -567,7 +523,7 @@
                             n.createElement(
                               "div",
                               { className: c().VOWarning },
-                              (0, s.we)("#EventEditor_VOWarning"),
+                              (0, r.we)("#EventEditor_VOWarning"),
                             ),
                           ),
                         Boolean(e.status) &&
@@ -594,15 +550,15 @@
           );
         }
       }
-      const d = (0, r.y)(m);
+      const d = (0, s.y)(m);
     },
     48479: (t, e, a) => {
       "use strict";
       a.d(e, { AQ: () => m, qx: () => d });
       var n = a(71541),
-        r = a(61859),
+        s = a(61859),
         o = a(12155),
-        s = a(90626),
+        r = a(90626),
         i = a(52038),
         l = a(95695),
         c = a(84811),
@@ -614,15 +570,15 @@
             title: e,
             tooltip: a,
             getMinimized: n,
-            toggleMinimized: r,
+            toggleMinimized: s,
             className: o,
             children: m,
           } = t,
           d = (0, u.q3)(() => n());
-        return s.createElement(
-          s.Fragment,
+        return r.createElement(
+          r.Fragment,
           null,
-          s.createElement(
+          r.createElement(
             "div",
             {
               className: (0, i.A)(
@@ -632,7 +588,7 @@
                 "SectionTitleHeader",
               ),
             },
-            s.createElement(
+            r.createElement(
               "div",
               {
                 className: (0, i.A)(
@@ -641,30 +597,30 @@
                 ),
               },
               e,
-              Boolean(a) && s.createElement(g.o, { tooltip: a }),
+              Boolean(a) && r.createElement(g.o, { tooltip: a }),
             ),
-            s.createElement(_, { bIsMinimized: d, fnToggleMinimize: r }),
+            r.createElement(h, { bIsMinimized: d, fnToggleMinimize: s }),
           ),
-          !d && s.createElement(c.tH, null, m),
+          !d && r.createElement(c.tH, null, m),
         );
       }
       function d(t) {
-        const [e, a] = s.useState(Boolean(t.bStartMinimized));
-        return s.createElement(
+        const [e, a] = r.useState(Boolean(t.bStartMinimized));
+        return r.createElement(
           m,
           { ...t, getMinimized: () => e, toggleMinimized: () => a(!e) },
           t.children,
         );
       }
-      function _(t) {
+      function h(t) {
         const { bIsMinimized: e, fnToggleMinimize: a } = t,
           i = e ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return s.createElement(
+        return r.createElement(
           n.$n,
-          { "data-tooltip-text": (0, r.we)(i), onClick: a },
+          { "data-tooltip-text": (0, s.we)(i), onClick: a },
           t.bIsMinimized
-            ? s.createElement(o.hz4, null)
-            : s.createElement(o.Xjb, null),
+            ? r.createElement(o.hz4, null)
+            : r.createElement(o.Xjb, null),
         );
       }
     },

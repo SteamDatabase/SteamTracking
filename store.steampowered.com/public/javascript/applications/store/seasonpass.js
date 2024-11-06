@@ -21,54 +21,217 @@
         Chevron: "_1KM0040wsc_C2KCgj2t9Ev",
       };
     },
+    8107: (e, t, n) => {
+      "use strict";
+      n.d(t, { N: () => f });
+      var a = n(34629),
+        s = n(41735),
+        l = n.n(s),
+        o = n(75844),
+        r = n(90626),
+        i = n(60746),
+        c = n(68033),
+        m = n(41550),
+        p = n(51706),
+        d = n(88843),
+        E = n(64641),
+        u = n.n(E),
+        h = n(22797),
+        _ = n(68797),
+        S = n(78327),
+        v = n(66418),
+        g = n(30894),
+        P = n(51272),
+        I = n(82715);
+      const f = (e) => {
+        let { bShowOnlyInitialEvent: t } = e;
+        const n = (0, S.Qn)();
+        return r.createElement(
+          I.tH,
+          null,
+          r.createElement(b, { ...e, bShowOnlyInitialEvent: t || n }),
+        );
+      };
+      let b = class extends r.Component {
+        state = { bLoading: !1, eventModel: this.props.eventModel };
+        m_refParent = r.createRef();
+        m_cancelSignal = l().CancelToken.source();
+        componentDidMount() {
+          this.state.eventModel ||
+            this.setState({ bLoading: !0 }, this.LoadEvent);
+          let e = this.GetBodyElement();
+          e &&
+            this.props.bPrimaryPageFeature &&
+            e.classList.add(d.BodyNoScroll);
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
+          let e = this.GetBodyElement();
+          e &&
+            this.props.bPrimaryPageFeature &&
+            e.classList.remove(d.BodyNoScroll);
+        }
+        GetBodyElement() {
+          return this.m_refParent.current
+            ? this.m_refParent.current.closest("body")
+            : null;
+        }
+        async LoadEvent() {
+          const {
+            appid: e,
+            clanSteamID: t,
+            announcementGID: n,
+            partnerEventStore: a,
+            additionalParams: s,
+          } = this.props;
+          a.LoadAdjacentPartnerEventsByAnnouncement(
+            n,
+            t,
+            e,
+            0,
+            3,
+            s,
+            this.m_cancelSignal,
+          )
+            .then((e) => {
+              e.length > 0
+                ? this.setState(
+                    { bLoading: !1, eventModel: e[0] },
+                    this.HandleReadEvent,
+                  )
+                : (this.props.onEventNotFound && this.props.onEventNotFound(),
+                  this.setState({ bLoading: !1 }));
+            })
+            .catch((e) => {
+              let t = (0, _.H)(e);
+              console.error(
+                "EventInfiniteScrollModal failed " + t.strErrorMsg,
+                t,
+              ),
+                this.setState({ bLoading: !1 });
+            });
+        }
+        async HandleReadEvent() {
+          const { eventModel: e } = this.state,
+            { trackingLocation: t } = this.props;
+          e &&
+            e.BIsPartnerEvent() &&
+            i.KN.Get()
+              .GetTracker()
+              .MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
+            i.KN.Get().GetTracker().Flush();
+        }
+        render() {
+          const { bShowOnlyInitialEvent: e } = this.props,
+            { bLoading: t, eventModel: n } = this.state;
+          if (t)
+            return r.createElement(
+              p.of,
+              null,
+              r.createElement(
+                "div",
+                { className: u().FlexCenter, style: { height: "400px" } },
+                r.createElement(h.t, null),
+              ),
+            );
+          const {
+            closeModal: a,
+            appid: s,
+            clanSteamID: l,
+            className: o,
+            partnerEventStore: i,
+            showAppHeader: d,
+            bPrimaryPageFeature: E,
+            additionalParams: _,
+            eventClassName: S,
+          } = this.props;
+          let I;
+          v.T.IN_CLIENT &&
+            n?.appid &&
+            (g.Fm.Get().HintLoad(),
+            g.Fm.Get().BOwnsApp(n.appid) &&
+              (I = (e) =>
+                (0, P.EP)(e, "steam://nav/games/details/" + n.appid)));
+          const f = r.createElement(
+            "div",
+            null,
+            r.createElement(m.AD, {
+              initialEvent: n,
+              appid: s,
+              clanSteamID: l,
+              partnerEventStore: i,
+              emoticonStore: c.A,
+              closeModal: !E && a,
+              showAppHeader: d,
+              bShowOnlyInitialEvent: e,
+              additionalParams: _,
+              eventClassName: S,
+              onAppIconClick: I,
+            }),
+          );
+          return E
+            ? f
+            : r.createElement(
+                p.of,
+                { className: o },
+                r.createElement(
+                  p.Qs,
+                  { navID: "WebRowEventInfiniteScroll", closeModal: a },
+                  f,
+                ),
+              );
+        }
+      };
+      b = (0, a.Cg)([o.PA], b);
+    },
     50295: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => C });
+      n.r(t), n.d(t, { default: () => A });
       var a = n(90626),
         s = n(66618),
         l = n.n(s),
         o = n(61859),
         r = n(63369),
-        c = n(55263),
-        i = n(66418),
+        i = n(55263),
+        c = n(66418),
         m = n(52038),
         p = n(8107),
-        u = n(38390),
-        _ = n(91254),
-        d = n(99376),
-        E = n(42780),
-        S = n(59952),
-        g = n(12611),
-        h = n(30470);
-      function v() {
+        d = n(38390),
+        E = n(91254),
+        u = n(99376),
+        h = n(42780),
+        _ = n(59952),
+        S = n(12611),
+        v = n(30470);
+      function g() {
         const e = new URL(window.location.href),
           t = e.pathname.split("/"),
           n = t?.[2];
         e.searchParams.get("beta");
-        return `${h.TS.STORE_ICON_BASE_URL}${n}/`;
+        return `${v.TS.STORE_ICON_BASE_URL}${n}/`;
       }
       var P = n(26296),
-        f = n(4852),
-        w = n.n(f),
-        R = n(24484);
-      function D(e) {
-        return new E.OJ(new E.R8(), 0);
+        I = n(4852),
+        f = n.n(I),
+        b = n(24484);
+      function w(e) {
+        return new h.OJ(new h.R8(), 0);
       }
-      function I(e) {
+      function D(e) {
         const { text: t, languageOverride: n } = e,
           [s] = (0, a.useState)(
-            new d.B(
+            new u.B(
               new Map([
-                ...Array.from(S.W4.entries()),
-                ["img", { Constructor: A, autocloses: !1 }],
+                ...Array.from(_.W4.entries()),
+                ["img", { Constructor: N, autocloses: !1 }],
               ]),
-              D,
+              w,
               n,
             ),
           );
         return a.createElement(a.Fragment, null, s.ParseBBCode(t, {}));
       }
-      function A(e) {
+      function N(e) {
         const { showErrorInfo: t } = e.context;
         let n = e?.children?.toString();
         if (
@@ -77,22 +240,22 @@
           null == n || null == n || 0 == n.length)
         )
           return "";
-        const s = (0, R.Fd)("store_page_asset_url", "application_config");
+        const s = (0, b.Fd)("store_page_asset_url", "application_config");
         return (
           (n =
-            s && n.startsWith(g.qR)
-              ? s.replace("%s", n.replace(g.qR, ""))
-              : n.replace(g.qR, v()).replace("http://", "https://")),
+            s && n.startsWith(S.qR)
+              ? s.replace("%s", n.replace(S.qR, ""))
+              : n.replace(S.qR, g()).replace("http://", "https://")),
           t
-            ? a.createElement(P.i, { className: w().StoreImage, src: n })
+            ? a.createElement(P.i, { className: f().StoreImage, src: n })
             : a.createElement("img", {
-                className: w().StoreImage,
+                className: f().StoreImage,
                 src: n,
                 alt: (0, o.we)("#EventEditor_InsertImage_URL"),
               })
         );
       }
-      function C(e) {
+      function A(e) {
         const { season_pass: t } = e;
         return t && t.milestones && 0 != t.milestones.length
           ? a.createElement(
@@ -110,14 +273,14 @@
                 (0, o.oW)(
                   "#SeasonPass_Incomplete_Desc2",
                   a.createElement("a", {
-                    href: `${i.T.STORE_BASE_URL}account/emailoptout`,
+                    href: `${c.T.STORE_BASE_URL}account/emailoptout`,
                   }),
                 ),
               ),
               t.milestones
                 .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
                 .map((e) =>
-                  a.createElement(b, {
+                  a.createElement(G, {
                     key: "ms_" + e.milestone_id,
                     baseGameAppID: t.appid,
                     milestone: e,
@@ -126,7 +289,7 @@
             )
           : null;
       }
-      function b(e) {
+      function G(e) {
         const { milestone: t, baseGameAppID: n } = e,
           s = t.milestone_desc?.length > 0;
         return a.createElement(
@@ -147,24 +310,24 @@
             a.createElement(
               "div",
               { className: l().DateAndControl },
-              a.createElement(k, { milestone: t }),
+              a.createElement(y, { milestone: t }),
             ),
           ),
-          s && a.createElement(G, { milestone: t, baseGameAppID: n }),
+          s && a.createElement(R, { milestone: t, baseGameAppID: n }),
         );
       }
-      function G(e) {
+      function R(e) {
         const { milestone: t, baseGameAppID: n } = e,
           s = o.A0.GetTokenWithFallback(t.milestone_desc);
         return a.createElement(
           "div",
           { className: l().Description },
-          a.createElement(I, { text: s }),
+          a.createElement(D, { text: s }),
           Boolean(t.shipped) &&
-            a.createElement(T, { milestone: t, baseGameAppID: n }),
+            a.createElement(L, { milestone: t, baseGameAppID: n }),
         );
       }
-      function k(e) {
+      function y(e) {
         const { milestone: t } = e;
         return t.shipped
           ? a.createElement(
@@ -196,8 +359,8 @@
               ),
             );
       }
-      const N = {};
-      function T(e) {
+      const C = {};
+      function L(e) {
         const { milestone: t, baseGameAppID: n } = e;
         return a.createElement(
           a.Fragment,
@@ -209,26 +372,26 @@
               t.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
             ),
           ),
-          t.appid && a.createElement(B, { milestone: t }),
+          t.appid && a.createElement(k, { milestone: t }),
           Boolean(t.event_gid) &&
-            a.createElement(U, { milestone: t, baseGameAppID: n }),
+            a.createElement(B, { milestone: t, baseGameAppID: n }),
         );
       }
-      function B(e) {
+      function k(e) {
         const { milestone: t } = e,
-          [n] = (0, c.t7)(t.appid, N);
+          [n] = (0, i.t7)(t.appid, C);
         return a.createElement(
           "a",
           {
-            href: n?.GetStorePageURL() || `${i.T.STORE_BASE_URL}app/${t.appid}`,
+            href: n?.GetStorePageURL() || `${c.T.STORE_BASE_URL}app/${t.appid}`,
           },
           (0, o.we)("#SeasonPass_ShowStore"),
         );
       }
-      function U(e) {
+      function B(e) {
         const { milestone: t, baseGameAppID: n } = e,
           [s, l] = (0, a.useState)(!1),
-          r = (0, u.RR)(t.event_gid);
+          r = (0, d.RR)(t.event_gid);
         return r
           ? a.createElement(
               a.Fragment,
@@ -244,13 +407,13 @@
                   eventModel: r,
                   announcementGID: r.AnnouncementGID,
                   closeModal: () => l(!1),
-                  partnerEventStore: _.O3,
+                  partnerEventStore: E.O3,
                 }),
             )
           : a.createElement(
               "a",
               {
-                href: `${i.T.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
+                href: `${c.T.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
               },
               (0, o.we)("#SeasonPass_ReadEvent"),
             );

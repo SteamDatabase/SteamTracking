@@ -3543,56 +3543,70 @@
         const { deadline: t, json: a } = e,
           s = (0, $e.FN)(t?.due_date, !0),
           l = `${r.TS.PARTNER_BASE_URL}taxrequirement/${t.partnerid}/${t.gid}`,
-          o = (function (e, t) {
-            switch (e) {
-              case "Renewal-W8-Initial":
-                return (0, i.we)(
-                  "#PartnerDeadline_TaxRequirement_Renewal-W8-Initial",
-                  t,
-                );
-              case "DocReq-KYC-FR":
-              case "DocReq-KYC-Entity-FR-CERT":
-              case "DocReq-KYC-Entity-FR":
-                return (0, i.we)(
-                  "#PartnerDeadline_TaxRequirement_AdditionalKYCDocuments",
-                );
-              case "DocReq-Selfie-FR":
-              case "DocReq-TreatyClaimOthCty-FR":
-              case "DocReq-TreatyClaimUSAddress-FR":
-              case "DocReq-W8USAddress-FR":
-              case "DocReq-W8USParent-FR":
-                return (0, i.we)(
-                  "#PartnerDeadline_TaxRequirement_AdditionalDocuments",
-                );
-              case "FailureToComply":
-              case "FailureToComply-KYC":
-                return (0, i.we)("#PartnerDeadline_TaxRequirement_Expired");
-              case "AddressCorrection":
-              case "InvalidAddress":
-              case "InvalidTaxInfo-Partner":
-              case "InvalidTIN":
-              case "InvalidTINAudit-Partner":
-              case "NameMismatch-Partner":
-              case "Notify-FailedTIN":
-              case "Notify-FailedTIN-SingLLC":
-              case "Notify-Mismatch":
-                return (0, i.we)("#PartnerDeadline_TaxRequirement_Invalid");
-              case "Notify-NoTINTreaty-Partner":
-                return (0, i.we)("#PartnerDeadline_TaxRequirement_NoTINTreaty");
-              default:
-                return "";
-            }
-          })(a.TemplateName, s);
-        return n.createElement(it, {
-          urlImage: null,
-          strTitle: (0, i.we)("#PartnerDeadline_TaxRequirement_Title"),
-          strBody: o,
-          rightCol: n.createElement(
-            ie.z9,
-            { url: l },
-            (0, i.we)("#PartnerDeadline_TaxRequirement_ButtonViewDetails"),
-          ),
-        });
+          o = (function () {
+            const [e] = n.useState(
+              (0, r.Tc)("bActualAuthority", "application_config"),
+            );
+            return e;
+          })();
+        let c = (function (e, t) {
+          switch (e) {
+            case "Renewal-W8-Initial":
+              return (0, i.we)(
+                "#PartnerDeadline_TaxRequirement_Renewal-W8-Initial",
+                t,
+              );
+            case "DocReq-KYC-FR":
+            case "DocReq-KYC-Entity-FR-CERT":
+            case "DocReq-KYC-Entity-FR":
+              return (0, i.we)(
+                "#PartnerDeadline_TaxRequirement_AdditionalKYCDocuments",
+              );
+            case "DocReq-Selfie-FR":
+            case "DocReq-TreatyClaimOthCty-FR":
+            case "DocReq-TreatyClaimUSAddress-FR":
+            case "DocReq-W8USAddress-FR":
+            case "DocReq-W8USParent-FR":
+              return (0, i.we)(
+                "#PartnerDeadline_TaxRequirement_AdditionalDocuments",
+              );
+            case "FailureToComply":
+            case "FailureToComply-KYC":
+              return (0, i.we)("#PartnerDeadline_TaxRequirement_Expired");
+            case "AddressCorrection":
+            case "InvalidAddress":
+            case "InvalidTaxInfo-Partner":
+            case "InvalidTIN":
+            case "InvalidTINAudit-Partner":
+            case "NameMismatch-Partner":
+            case "Notify-FailedTIN":
+            case "Notify-FailedTIN-SingLLC":
+            case "Notify-Mismatch":
+              return (0, i.we)("#PartnerDeadline_TaxRequirement_Invalid");
+            case "Notify-NoTINTreaty-Partner":
+              return (0, i.we)("#PartnerDeadline_TaxRequirement_NoTINTreaty");
+            default:
+              return "";
+          }
+        })(a.TemplateName, s);
+        return (
+          o ||
+            (c +=
+              " " +
+              (0, i.we)(
+                "#PartnerDeadline_TaxRequirement_ActualAuthorityRequired",
+              )),
+          n.createElement(it, {
+            urlImage: null,
+            strTitle: (0, i.we)("#PartnerDeadline_TaxRequirement_Title"),
+            strBody: c,
+            rightCol: n.createElement(
+              ie.z9,
+              { url: l },
+              (0, i.we)("#PartnerDeadline_TaxRequirement_ButtonViewDetails"),
+            ),
+          })
+        );
       }
       function it(e) {
         const {

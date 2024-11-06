@@ -887,6 +887,12 @@
     "RecommenderDemos_OverrideAccountID": "Using override AccountID:",
     "RecommenderDemos_HotWishlists": "Recommended Hot Wishlists",
     "RecommenderDemos_HotWishlists_Desc": "Based on the top wishlisted games in the last week (trained every Friday)",
+    "RecommenderDemos_RecAllTime": "Recommended Games (All Time)",
+    "RecommenderDemos_RecFiveYear": "Recommended Games (released in the last Five Years)",
+    "RecommenderDemos_RecTwoYear": "Recommended Games (released in the last Two Years)",
+    "RecommenderDemos_RecOneYear": "Recommended Games (released in the last Year)",
+    "RecommenderDemos_RecSixMonths": "Recommended Games (released in the last Six Months)",
+    "RecommenderDemos_Rec_Desc": "Based on playtime (trained every Thursday)",
     "RecommenderDemos_NewReleases": "Recommended New Releases",
     "RecommenderDemos_NewReleases_Desc": "Based on wishlists for games that have released in the last month (trained every Friday)",
     "dummy_for_end_of_file_convenience": "dummy"

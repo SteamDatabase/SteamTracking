@@ -7,6 +7,7 @@
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
+        ValveOnly: "_2ZsOR8fOOBXPuOjciIviGd",
         App: "_1DD-MN6M7fw9v4AEfy9VBS",
         Login: "_1hgW6B71pwJWHd34-SX7hq",
         Text: "_22sY8U8gQnI5A51kM3WFa9",
@@ -87,18 +88,18 @@
       var o = n(90626),
         u = n(33737),
         p = n(82477),
-        I = n(32630),
-        d = n(52038),
+        d = n(32630),
+        I = n(52038),
         x = n(61859),
         f = n(34842),
-        S = n(23809),
-        y = n(57168),
+        y = n(23809),
+        S = n(57168),
         h = n(56545),
         E = n(94601),
         A = n(72839);
       const D = (e) => {
           const t = (function (e) {
-              const t = (0, S.KV)(),
+              const t = (0, y.KV)(),
                 n = ["GameMixerSearchSuggestions", e];
               return (0, c.I)({
                 queryKey: n,
@@ -136,7 +137,7 @@
                         })
                     : [];
                 },
-                placeholderData: y.rX,
+                placeholderData: S.rX,
               });
             })(e.strSearch),
             n = e.fnSetResultApps;
@@ -152,7 +153,7 @@
                   "div",
                   {
                     key: t.appid,
-                    className: (0, d.A)(
+                    className: (0, I.A)(
                       f.Result,
                       n == e.nSelectedResult && f.Selected,
                     ),
@@ -180,7 +181,7 @@
           o.useEffect(() => {
             p.current = a;
           }, [a]);
-          const I = () => {
+          const d = () => {
               Date.now() - p.current < 300 || (l(0), u([]), c(!0));
             },
             x = (t) => {
@@ -191,12 +192,12 @@
             { className: f.AppSelector },
             o.createElement("input", {
               type: "text",
-              className: (0, d.A)(f.ValueInput),
+              className: (0, I.A)(f.ValueInput),
               value: t,
               onChange: (e) => {
                 var a;
                 (a = e.target.value) != t &&
-                  (n(a), s(Date.now()), c(!1), setTimeout(I, 300));
+                  (n(a), s(Date.now()), c(!1), setTimeout(d, 300));
               },
               onKeyDown: (e) =>
                 ((e) => {
@@ -225,7 +226,7 @@
       !(function (e) {
         (e[(e.AppID = 0)] = "AppID"), (e[(e.AccountID = 1)] = "AccountID");
       })(g || (g = {}));
-      const M = (e) => {
+      const v = (e) => {
           const [t, n] = o.useState(e.mixItem.nPercent);
           o.useEffect(() => {
             n(e.mixItem.nPercent);
@@ -269,7 +270,7 @@
             ),
           );
         },
-        T = (e) => {
+        M = (e) => {
           const [t, n] = o.useState(e.mixItem.nPercent);
           o.useEffect(() => {
             n(e.mixItem.nPercent);
@@ -297,7 +298,7 @@
             }),
           );
         },
-        v = (e) => {
+        T = (e) => {
           const [t, n] = o.useState(""),
             a = (t) => {
               let n = [],
@@ -348,7 +349,7 @@
                 e.arrMixItems.map((t) => {
                   switch (t.eType) {
                     case g.AccountID:
-                      return o.createElement(T, {
+                      return o.createElement(M, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
                         setMixItem: s,
@@ -356,7 +357,7 @@
                         bLocked: 1 == e.arrMixItems.length,
                       });
                     case g.AppID:
-                      return o.createElement(M, {
+                      return o.createElement(v, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
                         setMixItem: s,
@@ -400,7 +401,7 @@
                 ),
                 o.createElement("input", {
                   type: "text",
-                  className: (0, d.A)(f.ValueInput),
+                  className: (0, I.A)(f.ValueInput),
                   value: t,
                   onChange: (e) => n(e.target.value),
                   onKeyDown: (a) =>
@@ -537,7 +538,7 @@
               n(e.nValue);
             }, [e.nValue]),
             o.createElement(u.Kc, {
-              className: (0, d.A)(f.MixerSlider, f.PopularitySlider),
+              className: (0, I.A)(f.MixerSlider, f.PopularitySlider),
               label: e.strName,
               min: 1,
               max: 100,
@@ -553,7 +554,7 @@
             [s, c] = o.useState(1);
           return r.iA.logged_in
             ? o.createElement(
-                I.A,
+                d.A,
                 {
                   controller: "gamemixer",
                   method: "default",
@@ -561,8 +562,13 @@
                 },
                 o.createElement(
                   "div",
+                  { className: f.ValveOnly },
+                  "(Valve-Only)",
+                ),
+                o.createElement(
+                  "div",
                   { className: f.App },
-                  o.createElement(v, {
+                  o.createElement(T, {
                     arrMixItems: e,
                     setMixItems: t,
                     nPopularity: n,
@@ -591,7 +597,7 @@
                   o.createElement(
                     "div",
                     {
-                      className: (0, d.A)(
+                      className: (0, I.A)(
                         "btn_green_white_innerfade",
                         " btn_medium",
                       ),

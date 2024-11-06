@@ -1571,7 +1571,7 @@
         v = n(95695),
         S = n.n(v),
         E = n(34418),
-        w = n(44325),
+        w = n(51706),
         C = n(738),
         b = n(22797),
         A = n(51272),
@@ -2706,7 +2706,7 @@
     },
     58426: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Ze });
+      n.r(t), n.d(t, { default: () => Xe });
       var a = n(43527),
         r = n(30885),
         s = n(78327),
@@ -2801,7 +2801,7 @@
         f = n(61859),
         R = n(52081),
         T = n.n(R),
-        B = n(44325);
+        B = n(51706);
       const I = (0, p.y)((e) => {
           const [t, n] = (0, u.useState)(!0);
           if (
@@ -5976,7 +5976,22 @@
         Ye = n(7338);
       function Qe(e) {
         const [t, n] = (0, u.useState)(!1),
-          [a] = (0, u.useState)(() => Ke()),
+          [a] = (0, u.useState)(() =>
+            (function () {
+              const e = (0, s.Tc)(
+                "partnerbrowse_webapi_token",
+                "application_config",
+              );
+              (0, Ve.w)(Boolean(e), "require partnerbrowse_webapi_token");
+              const t = new We.D(s.TS.WEBAPI_BASE_URL, e);
+              ("dev" != s.TS.WEB_UNIVERSE && "beta" != s.TS.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  e,
+                );
+              return t;
+            })(),
+          ),
           r = (0, u.useMemo)(
             () => ({
               country: s.TS.COUNTRY,
@@ -5987,9 +6002,18 @@
             [],
           );
         return (
-          (0, u.useEffect)(() => {
-            Xe(a).then(() => n(!0));
-          }, [a]),
+          (0, u.useEffect)(
+            () => (
+              n(!0),
+              (function (e) {
+                return ue.A.Initialize(
+                  e.GetServiceTransport(),
+                  s.iA.is_partner_member,
+                );
+              })(a)
+            ),
+            [a],
+          ),
           t
             ? (0, u.createElement)(Ye.V3, {
                 context: r,
@@ -5999,29 +6023,13 @@
             : null
         );
       }
-      function Ke() {
-        const e = (0, s.Tc)("partnerbrowse_webapi_token", "application_config");
-        (0, Ve.w)(Boolean(e), "require partnerbrowse_webapi_token");
-        const t = new We.D(s.TS.WEBAPI_BASE_URL, e);
-        return (
-          ("dev" != s.TS.WEB_UNIVERSE && "beta" != s.TS.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Initializing CStoreItemCache with access token",
-              e,
-            ),
-          t
-        );
-      }
-      async function Xe(e) {
-        return ue.A.Initialize(e, s.iA.is_partner_member);
-      }
-      var Je = n(81881);
-      const Ze = () =>
+      var Ke = n(81881);
+      const Xe = () =>
         u.createElement(
           Qe,
           null,
           u.createElement(
-            Je.d,
+            Ke.d,
             null,
             u.createElement(
               p.dO,

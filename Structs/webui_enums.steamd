@@ -443,6 +443,14 @@ enum EDownloadSection
 	k_EDownloadSection_Max = 5;
 }
 
+enum EEventStat
+{
+	k_EEventStateUnpublished = 0;
+	k_EEventStateStaged = 1;
+	k_EEventStateVisible = 2;
+	k_EEventStatsUnlisted = 3;
+}
+
 enum EEventState
 {
 	k_EEventStateUnpublished = 0;

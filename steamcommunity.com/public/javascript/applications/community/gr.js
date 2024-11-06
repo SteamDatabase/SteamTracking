@@ -578,6 +578,7 @@
         ImageHighlightBlock: "_1BeXpXQyetKgeO2_6NuHiJ",
         TooltipRangeContainer: "Ytt19E3fOLhHsFDpTCviL",
         Duration: "_1kvsGVxJZ9tkKXwysVa5PP",
+        RangeIcon: "qV2yorV1nAB0bIQrbROqm",
       };
     },
     54637: (e) => {
@@ -590,29 +591,6 @@
         ViewClip: "_3YpMycJiNuGZOe9A5ddrxL",
         ClipPhase: "_3BLSZg3UyXhaQ4rkXaTvhs",
         active: "_1D7oiWH7xjJ2nI27nnFzwI",
-      };
-    },
-    56330: (e) => {
-      e.exports = {
-        ErrorStyles: "_2Sg7W8jsvFcXVuQ7fbhSLJ",
-        ErrorStylesWithIcon: "Lc2PK-Vkkvr2TUS0TfCqq",
-        ErrorIconLayout: "_42__6kBR5lkICeFfkFnwz",
-        ErrorStylesBackground: "_3fVv6M5HyJXcQ6kNF1SvoH",
-        ErrorFloatBelow: "_2aKylEXoZKcXuXfFcmcuQc",
-        WarningStyles: "_3gxgE6PMPecWZDBSlGjMX_",
-        WarningStylesWithIcon: "_1S_uSkD_E5ayHa48JzzE0E",
-        WarningIconLayout: "_2jM80ZtA-oI5okavBZZqnF",
-        WarningStylesBackground: "UYrHsewdjj7dSkpWGgikw",
-        Stuck: "_2b5wWgFg1yvry3TDzRUfFt",
-        WarningFloatBelow: "_3e0cNuLANduciMmeZz1dnk",
-        InfoStyles: "_2lreMbIjEILzP1Eomy1QZM",
-        InfoStylesWithIcon: "_1_-PibdcIVQzDZEP0_PeLV",
-        InfoIconLayout: "_3kyPzolDIjhIh7zW0wA6fy",
-        InfoStylesBackground: "_3gNTI5UYknHdJwDfou9Iih",
-        Padding: "_36hmaGtzxNb1Pql2UhfM5Z",
-        NotTooWideModal: "UfQcb76CCbHawnpQ9tbu3",
-        ImageManageDialog: "Pl7AIUjh5siFakQJbPFO9",
-        SuccessErrorDialog: "_1wBO1L1tT0f1wtl3CpBWbn",
       };
     },
     91929: (e) => {
@@ -648,13 +626,13 @@
         "ItemFocusAnim-green": "_3ZDnxVKI3Xfr_a6bvaivKR",
       };
     },
-    8857: (e, t, r) => {
+    10284: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
-          GameRecordingClipContent: () => yn,
-          default: () => bn,
-          useTimelineLoaderForCommunityClip: () => Cn,
+          GameRecordingClipContent: () => Ta,
+          default: () => va,
+          useTimelineLoaderForCommunityClip: () => wa,
         });
       var i = r(90626),
         n = r(23809),
@@ -1931,18 +1909,18 @@
           return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response";
         }
       }
-      class z extends h {
+      class P extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.recording_id || o.Sg(z.M()),
+            P.prototype.recording_id || o.Sg(P.M()),
             h.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            P.sm_m ||
+              (P.sm_m = {
+                proto: P,
                 fields: {
                   recording_id: {
                     n: 1,
@@ -1952,57 +1930,20 @@
                   segments_uploaded: { n: 2, c: g, r: !0, q: !0 },
                 },
               }),
-            z.sm_m
+            P.sm_m
           );
         }
         static MBF() {
-          return z.sm_mbf || (z.sm_mbf = o.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return o.BT(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return o.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new l.BinaryReader(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return o.zj(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new l.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          o.i0(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new l.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingCommitSegmentUploads_Request";
-        }
-      }
-      class P extends h {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), h.initialize(this, e, 0, -1, void 0, null);
+          return P.sm_mbf || (P.sm_mbf = o.w0(P.M())), P.sm_mbf;
         }
         toObject(e = !1) {
           return P.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return o.BT(P.M(), e, t);
         }
         static fromObject(e) {
-          return new P();
+          return o.Uq(P.M(), e);
         }
         static deserializeBinary(e) {
           let t = new l.BinaryReader(e),
@@ -2010,16 +1951,53 @@
           return P.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return o.zj(P.MBF(), e, t);
         }
         serializeBinary() {
           var e = new l.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          o.i0(P.M(), e, t);
+        }
         serializeBase64String() {
           var e = new l.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CVideo_GameRecordingCommitSegmentUploads_Request";
+        }
+      }
+      class z extends h {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), h.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new z();
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new z();
+          return z.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CVideo_GameRecordingCommitSegmentUploads_Response";
@@ -2080,20 +2058,38 @@
             (e.CommitSegmentUploads = function (e, t) {
               return e.SendMsg(
                 "VideoClip.CommitSegmentUploads#1",
-                (0, s.I8)(z, t),
-                P,
+                (0, s.I8)(P, t),
+                z,
                 { ePrivilege: 1 },
               );
             });
         })(k || (k = {}));
-      var W = r(65946),
-        D = r(14947);
-      function L() {
+      var D = r(65946),
+        W = r(14947),
+        L = null;
+      function q() {
         return window.g_GRS;
       }
-      function q() {
-        if (null != L()) {
-          const e = L();
+      async function F(e, t, i) {
+        if (!q()) {
+          const [{ CGameRecordingStore: a }] = await Promise.all([
+            r.e(6209).then(r.bind(r, 76209)),
+          ]);
+          i &&
+            ((n = i),
+            L
+              ? console.error(
+                  "Attempt to set timeline marker hook a second time",
+                )
+              : (L = n));
+          let s = new a();
+          await s.Init(e, t), (window.g_GRS = s);
+        }
+        var n;
+      }
+      function x() {
+        if (null != q()) {
+          const e = q();
           return {
             bLoading: e.BLoadingAppsWithBackgroundVideo(),
             rgApps: e.GetAppsWithBackgroundVideo(),
@@ -2101,71 +2097,71 @@
         }
         return { bLoading: !1, rgApps: [] };
       }
-      function F(e) {
+      function N(e) {
         const { bLoading: t, rgApps: r } = (function () {
-          const [e, t] = (0, i.useState)(q());
-          return (0, i.useEffect)(() => (0, D.mJ)(q, t), []), e;
+          const [e, t] = (0, i.useState)(x());
+          return (0, i.useEffect)(() => (0, W.mJ)(x, t), []), e;
         })();
         return {
           bLoading: t,
           app: (0, i.useMemo)(() => r.find((t) => t.game_id === e), [r, e]),
         };
       }
-      function x(e, t, r, i, n, a) {
-        return null != L()
-          ? L().LoadThumbnails(e, t, r, i, n, null == a || a)
+      function U(e, t, r, i, n, a) {
+        return null != q()
+          ? q().LoadThumbnails(e, t, r, i, n, null == a || a)
           : null;
       }
-      function N(e, t, r) {
-        return null != L() ? L().TakeScreenshot(e, t, r.valMS) : null;
+      function j(e, t, r) {
+        return null != q() ? q().TakeScreenshot(e, t, r.valMS) : null;
       }
-      function U() {
-        return null != L()
+      function A() {
+        return null != q()
           ? {
-              fnCreateUserTimelineMarkers: L().CreateUserTimelineMarkers,
-              fnUpdateUserTimelineMarkers: L().UpdateUserTimelineMarkers,
-              fnRemoveUserTimelineMarker: L().RemoveUserTimelineMarker,
+              fnCreateUserTimelineMarkers: q().CreateUserTimelineMarkers,
+              fnUpdateUserTimelineMarkers: q().UpdateUserTimelineMarkers,
+              fnRemoveUserTimelineMarker: q().RemoveUserTimelineMarker,
             }
           : null;
       }
-      function j(e, t) {
-        return (0, W.q3)(() => {
-          if (null != L()) return L().GetAchievementInfo(e, t);
+      function H(e, t) {
+        return (0, D.q3)(() => {
+          if (null != q()) return q().GetAchievementInfo(e, t);
         });
       }
-      function A() {
-        return (0, W.q3)(() => {
-          if (null != L()) return !L().BEnoughDiskSpace();
+      function V() {
+        return (0, D.q3)(() => {
+          if (null != q()) return !q().BEnoughDiskSpace();
         });
       }
-      var H,
-        V = r(86318),
-        X = r(34629),
-        Z = r(375),
-        J = r(61788),
-        Q = r(39393),
-        K = r(19719),
-        Y = r(4926),
-        $ = r(62490),
-        ee = r(47831),
-        te = r(6144);
+      var X,
+        Z = r(86318),
+        Q = r(34629),
+        J = r(375),
+        K = r(61788),
+        Y = r(39393),
+        $ = r(19719),
+        ee = r(4926),
+        te = r(62490),
+        re = r(47831),
+        ie = r(6144);
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.DownloadFailed = 1)] = "DownloadFailed"),
           (e[(e.PlaybackError = 2)] = "PlaybackError"),
           (e[(e.MediaTypeError = 3)] = "MediaTypeError");
-      })(H || (H = {}));
-      class re {
+      })(X || (X = {}));
+      class ne {
         constructor(e) {
           (this.m_elVideo = null),
             (this.m_player = null),
-            (this.m_listeners = new te.Ji()),
+            (this.m_listeners = new ie.Ji()),
             (this.m_nDownloadFailureCount = 0),
             (this.m_bInitailized = !1),
             (this.m_bPaused = !1),
             (this.m_bAtEnd = !1),
             (this.m_strMediaTypeError = null),
-            (this.m_ePlayerError = H.None),
+            (this.m_ePlayerError = X.None),
             (this.m_bUserInputNeeded = !1),
             (this.m_bMuted = !1),
             (this.m_bSeekReadyToPlay = !1),
@@ -2177,8 +2173,8 @@
             (this.m_nVideoStartTime = 0),
             (this.m_nVideoDuration = 0),
             (this.m_nVolume = 1),
-            (this.m_eSeekType = ee.lU.Absolute),
-            (0, D.Gn)(this),
+            (this.m_eSeekType = re.lU.Absolute),
+            (0, W.Gn)(this),
             (this.m_bAutoPlay = !!e);
         }
         IsPaused() {
@@ -2200,12 +2196,12 @@
           return this.m_bUserInputNeeded;
         }
         GetPlaybackTime() {
-          return this.m_eSeekType === ee.lU.Absolute
+          return this.m_eSeekType === re.lU.Absolute
             ? this.m_nPlaybackTime
             : this.m_nPlaybackTime - this.m_nVideoStartTime;
         }
         GetTimelineDuration() {
-          return this.m_eSeekType === ee.lU.Absolute
+          return this.m_eSeekType === re.lU.Absolute
             ? this.m_nVideoDuration
             : this.m_nVideoDuration - this.m_nVideoStartTime;
         }
@@ -2252,7 +2248,7 @@
         GetLoadedMetadata() {
           return this.m_bLoadedMetadata;
         }
-        Start(e, t, r, i = ee.lU.Absolute) {
+        Start(e, t, r, i = re.lU.Absolute) {
           this.Stop(),
             (this.m_bAtEnd = !1),
             (this.m_elVideo = e),
@@ -2331,17 +2327,17 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new ee.Zn(this.m_elVideo, !1)),
+            (this.m_player = new re.Zn(this.m_elVideo, !1)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(t, null, null, !1),
-            (this.m_bMuted = ae("muted")),
-            (this.m_nVolume = ae("volume")),
+            (this.m_bMuted = le("muted")),
+            (this.m_nVolume = le("volume")),
             this.m_player.SetMuted(this.m_bMuted),
             this.m_player.SetVolume(this.m_nVolume),
             (this.m_bSeekReadyToPlay = !1),
             (this.m_eSeekType = i);
           const n = `seeking_${t}_${r.toFixed(3)}`;
-          (0, V.q_)(`CGameRecordingVideo:: perf mark ${n}`),
+          (0, Z.q_)(`CGameRecordingVideo:: perf mark ${n}`),
             performance.mark(n),
             this.m_player.Seek(r, this.m_eSeekType),
             (this.m_bPaused = this.m_player.IsPaused()),
@@ -2357,7 +2353,7 @@
             (this.m_bAtEnd = !1),
             (this.m_bSeekReadyToPlay = !1),
             (this.m_bVideoElementPlaying = !1),
-            (this.m_ePlayerError = H.None),
+            (this.m_ePlayerError = X.None),
             (this.m_bUserInputNeeded = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_nVideoStartTime = 0),
@@ -2384,10 +2380,10 @@
           (this.m_bVideoElementPlaying = !0),
             (this.m_bIsWaiting = !1),
             this.SetPlaybackSpeed(this.m_nPlaybackSpeed),
-            (0, V.tG)("video playing");
+            (0, Z.tG)("video playing");
         }
         OnVideoPause() {
-          (this.m_bVideoElementPlaying = !1), (0, V.tG)("video paused");
+          (this.m_bVideoElementPlaying = !1), (0, Z.tG)("video paused");
         }
         OnVideoTimeUpdate() {
           (this.m_nVideoStartTime = this.m_player.GetAvailableVideoStartTime()),
@@ -2400,10 +2396,10 @@
         OnVideoEnd() {
           (this.m_bVideoElementPlaying = !1),
             (this.m_bAtEnd = !0),
-            (0, V.tG)("video ended");
+            (0, Z.tG)("video ended");
         }
         OnSeeking() {
-          (0, V.tG)("video on seeking"),
+          (0, Z.tG)("video on seeking"),
             (this.m_bVideoElementPlaying = !1),
             this.m_nVideoDuration - this.m_nPlaybackTime < 1
               ? (this.m_bAtEnd = !0)
@@ -2414,34 +2410,34 @@
         }
         async OnDownloadFailed() {
           var e;
-          (0, V.ZI)("video download failed"),
+          (0, Z.ZI)("video download failed"),
             this.m_nDownloadFailureCount < 2
               ? (await (null === (e = this.m_player) || void 0 === e
                   ? void 0
                   : e.UpdateMPD()),
                 this.m_nDownloadFailureCount++)
-              : (this.m_ePlayerError = H.DownloadFailed);
+              : (this.m_ePlayerError = X.DownloadFailed);
         }
         OnMediaTypeError(e) {
           "string" == typeof e.detail && (this.m_strMediaTypeError = e.detail),
-            (0, V.ZI)("media type error", e.detail),
-            (this.m_ePlayerError = H.MediaTypeError);
+            (0, Z.ZI)("media type error", e.detail),
+            (this.m_ePlayerError = X.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
-            (0, V.ZI)("video playback error"),
-            (this.m_ePlayerError = H.PlaybackError);
+            (0, Z.ZI)("video playback error"),
+            (this.m_ePlayerError = X.PlaybackError);
         }
         OnUserInputNeeded() {
           (this.m_bUserInputNeeded = !0),
             !this.m_bMuted &&
               this.m_elVideo.autoplay &&
-              ((0, V.fX)("Failed to autoplay video. Muting and trying again."),
+              ((0, Z.fX)("Failed to autoplay video. Muting and trying again."),
               this.SetMute(!0),
               this.Play());
         }
         OnVolumeChange() {
-          (0, V.tG)("volume change");
+          (0, Z.tG)("volume change");
         }
         OnVideoWaiting() {
           (this.m_bIsWaiting = !0),
@@ -2455,14 +2451,14 @@
         }
         SetVolume(e) {
           (this.m_nVolume = e),
-            se("volume", e),
+            oe("volume", e),
             e > 0 ? this.SetMute(!1, !0) : this.SetMute(!0, !0),
             this.IsInitialized() && this.m_player.SetVolume(e);
         }
         SetMute(e, t) {
           this.IsInitialized() && this.m_player.SetMuted(e),
             (this.m_bMuted = e),
-            t && se("muted", e);
+            t && oe("muted", e);
         }
         TogglePlayPause() {
           this.IsInitialized() &&
@@ -2488,15 +2484,15 @@
           (this.m_bAtEnd = !1),
             (this.m_bSeekReadyToPlay = !1),
             performance.mark(t),
-            (0, V.q_)(`CGameRecordingVideo:: perf mark ${t}`),
-            (0, V.q_)(`CGameRecordingVideo::Seek to ${e}`),
+            (0, Z.q_)(`CGameRecordingVideo:: perf mark ${t}`),
+            (0, Z.q_)(`CGameRecordingVideo::Seek to ${e}`),
             (this.m_nPlaybackTime = e),
             this.m_player.Seek(e, this.m_eSeekType);
         }
       }
-      let ie;
-      function ne() {
-        if (!ie) {
+      let ae;
+      function se() {
+        if (!ae) {
           let e,
             t = window.localStorage.getItem("gameRecordingPlayer") || "{}";
           try {
@@ -2504,105 +2500,1068 @@
           } catch (t) {
             e = {};
           }
-          ie = { muted: e.muted || !1, volume: e.volume || 1 };
+          ae = { muted: e.muted || !1, volume: e.volume || 1 };
         }
-        return ie;
+        return ae;
       }
-      function ae(e) {
-        return ne()[e];
+      function le(e) {
+        return se()[e];
       }
-      function se(e, t) {
-        let r = ne();
+      function oe(e, t) {
+        let r = se();
         r[e] = t;
         let i = JSON.stringify(r);
         window.localStorage.setItem("gameRecordingPlayer", i);
       }
-      (0, X.Cg)([D.sH], re.prototype, "m_bInitailized", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bPaused", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bAtEnd", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_strMediaTypeError", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_ePlayerError", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bUserInputNeeded", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bMuted", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bSeekReadyToPlay", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bVideoElementPlaying", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_nPlaybackSpeed", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bIsWaiting", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_bLoadedMetadata", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_nPlaybackTime", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_nVideoStartTime", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_nVideoDuration", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_nVolume", void 0),
-        (0, X.Cg)([D.sH], re.prototype, "m_eSeekType", void 0),
-        (0, X.Cg)([D.XI], re.prototype, "Start", null),
-        (0, X.Cg)([D.XI], re.prototype, "Stop", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnCanPlay", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnUserPauseChange", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnVideoPlaying", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnVideoPause", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnVideoTimeUpdate", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnVideoEnd", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnSeeking", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnLoadedMetadata", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnDownloadFailed", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnMediaTypeError", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnPlaybackError", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnUserInputNeeded", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnVolumeChange", null),
-        (0, X.Cg)([Z.oI], re.prototype, "OnVideoWaiting", null),
-        (0, X.Cg)([Z.oI], re.prototype, "UserInputReceived", null);
-      var le,
-        oe = r(35009),
-        me = r(52038),
-        ce = r(61859),
-        ue = r(32754),
-        de = r(52694),
-        ge = r(76217);
-      function fe() {
-        const e = he(Ie().GetGameID());
-        return e === le.NotRecording || e === le.NotRunning
-          ? null
-          : i.createElement(pe, null);
+      (0, Q.Cg)([W.sH], ne.prototype, "m_bInitailized", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bPaused", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bAtEnd", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_strMediaTypeError", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_ePlayerError", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bUserInputNeeded", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bMuted", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bSeekReadyToPlay", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bVideoElementPlaying", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_nPlaybackSpeed", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bIsWaiting", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_bLoadedMetadata", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_nPlaybackTime", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_nVideoStartTime", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_nVideoDuration", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_nVolume", void 0),
+        (0, Q.Cg)([W.sH], ne.prototype, "m_eSeekType", void 0),
+        (0, Q.Cg)([W.XI], ne.prototype, "Start", null),
+        (0, Q.Cg)([W.XI], ne.prototype, "Stop", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnCanPlay", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnUserPauseChange", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnVideoPlaying", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnVideoPause", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnVideoTimeUpdate", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnVideoEnd", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnSeeking", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnLoadedMetadata", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnDownloadFailed", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnMediaTypeError", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnPlaybackError", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnUserInputNeeded", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnVolumeChange", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "OnVideoWaiting", null),
+        (0, Q.Cg)([J.oI], ne.prototype, "UserInputReceived", null);
+      var me = r(35009),
+        ce = r(52038),
+        ue = r(61859),
+        de = r(32754);
+      r(91929);
+      function ge(e) {
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M5.48744 28.293V31.3988H35V9.65272H31.8924V28.293H5.48744Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M1 4V24.7106H28.6141V4H1ZM6.17764 22.1217H3.58882V18.67H6.17764V22.1217ZM6.17764 16.0812H3.58882V12.6294H6.17764V16.0812ZM6.17764 10.0406H3.58882V6.58882H6.17764V10.0406ZM11.3553 19.3345V9.37612L19.9847 14.3553L11.3553 19.3345ZM26.0253 22.1217H23.4365V18.67H26.0253V22.1217ZM26.0253 16.0812H23.4365V12.6294H26.0253V16.0812ZM26.0253 10.0406H23.4365V6.58882H26.0253V10.0406Z",
+          }),
+        );
+      }
+      function fe(e) {
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18 4L3 30H33L18 4ZM21.025 12.9375L20.0167 21.0625H15.9833L14.975 12.9375H21.025ZM18 27.5625C17.5055 27.5625 17.0222 27.4195 16.6111 27.1517C16.2 26.8839 15.8795 26.5032 15.6903 26.0578C15.5011 25.6124 15.4516 25.1223 15.548 24.6495C15.6445 24.1766 15.8826 23.7423 16.2322 23.4014C16.5819 23.0605 17.0273 22.8284 17.5123 22.7343C17.9972 22.6403 18.4999 22.6886 18.9567 22.873C19.4135 23.0575 19.804 23.37 20.0787 23.7708C20.3534 24.1716 20.5 24.6429 20.5 25.125C20.5 25.7715 20.2366 26.3915 19.7678 26.8486C19.2989 27.3057 18.663 27.5625 18 27.5625Z",
+          }),
+        );
       }
       function pe(e) {
-        const t = Ie(),
-          r = (0, W.q3)(() => t.GetIsLiveEdge() && !t.GetHidePlayer()),
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M14.8423 5.23802H8.25602C8.06408 5.23802 7.8781 5.334 7.76408 5.48998L3.89928 11H10.0685L14.8423 5.23802Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M3.66016 13.5L14.8423 28.8125L9.68747 13.5H3.66016Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M12.1675 13.5L17.4301 30.33C17.4339 30.3454 17.4403 30.3559 17.4475 30.3678L17.4527 30.3763L17.4574 30.3847L17.4601 30.39C17.4661 30.4139 17.478 30.4379 17.4961 30.4619C17.5201 30.504 17.5501 30.54 17.5801 30.57L17.6341 30.624C17.6882 30.666 17.7541 30.7019 17.8201 30.726C17.8623 30.7365 17.9044 30.7424 17.9424 30.7478L17.9582 30.75H17.9941L18.0001 30.756C18.0031 30.756 18.0046 30.7545 18.0061 30.753C18.0076 30.7515 18.0091 30.75 18.0121 30.75H18.0361C18.0841 30.75 18.1321 30.744 18.1801 30.726H18.1861C18.2521 30.702 18.318 30.666 18.3721 30.624C18.3811 30.615 18.3886 30.606 18.3961 30.597C18.4036 30.588 18.4111 30.579 18.4201 30.57C18.4561 30.54 18.4861 30.5039 18.5101 30.4619L18.5461 30.39C18.5491 30.378 18.5551 30.369 18.5611 30.36C18.5671 30.351 18.5731 30.342 18.5761 30.33L19.3385 27.889L19.3262 27.8851L21.4894 21.0028L23.8329 13.5L12.1675 13.5Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M20.875 28.8125L32.346 13.5H26.3313L20.875 28.8125Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M32.1009 11L28.236 5.48993C28.1221 5.33395 27.9421 5.23798 27.7441 5.23798H21.0513L25.8251 11H32.1009Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M23.076 11L18.4622 5.45398C18.4562 5.448 18.4487 5.44199 18.4412 5.43599C18.4338 5.42998 18.4262 5.42397 18.4203 5.418C18.4157 5.41341 18.412 5.40792 18.4081 5.40222C18.4019 5.39309 18.3954 5.38341 18.3843 5.37605C18.3753 5.37007 18.3663 5.36556 18.3573 5.36105C18.3483 5.35654 18.3393 5.35202 18.3303 5.34605C18.2949 5.32248 18.2596 5.30479 18.2243 5.28709L18.2222 5.28605L18.2195 5.28515C18.1843 5.27349 18.1492 5.26187 18.1142 5.25605C18.0782 5.25007 18.0421 5.24409 18.0002 5.24409C17.9641 5.24409 17.9281 5.25007 17.8921 5.25605C17.85 5.26202 17.8141 5.27398 17.7781 5.29202C17.7421 5.3041 17.7121 5.32202 17.6761 5.34605C17.6671 5.35202 17.6566 5.35654 17.6461 5.36105C17.6356 5.36556 17.6252 5.37007 17.6161 5.37605C17.6102 5.38202 17.6056 5.38952 17.6011 5.39702C17.5966 5.40452 17.5921 5.41203 17.5861 5.418C17.5811 5.42132 17.5761 5.42418 17.5712 5.42696C17.5585 5.4342 17.5467 5.44094 17.5381 5.45398L12.9293 11H23.076Z",
+          }),
+        );
+      }
+      function he(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18 33C18 33 29 20.5586 29 14.3115C29 8.06432 24.0751 3 18 3C11.9249 3 7 8.06432 7 14.3115C7 20.5586 18 33 18 33ZM18 20C21.3137 20 24 17.3137 24 14C24 10.6863 21.3137 8 18 8C14.6863 8 12 10.6863 12 14C12 17.3137 14.6863 20 18 20Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _e(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M30 30.05H26L24 34.05L20.11 27.57L22.9 24.87L26.9 24.81L30 30.05ZM13.1 24.87L9.1 24.81L6 30.05H10L12 34.05L15.89 27.57L13.1 24.87ZM22.5 13.05C22.5 12.16 22.2361 11.2899 21.7416 10.5499C21.2471 9.8099 20.5443 9.23312 19.7221 8.89253C18.8998 8.55194 17.995 8.46282 17.1221 8.63645C16.2492 8.81009 15.4474 9.23867 14.818 9.86801C14.1887 10.4973 13.7601 11.2992 13.5865 12.1721C13.4128 13.045 13.5019 13.9498 13.8425 14.7721C14.1831 15.5943 14.7599 16.2971 15.4999 16.7916C16.24 17.2861 17.11 17.55 18 17.55C18.5913 17.5513 19.1771 17.4358 19.7236 17.2101C20.2702 16.9845 20.7668 16.653 21.1849 16.2349C21.603 15.8168 21.9345 15.3202 22.1601 14.7736C22.3858 14.2271 22.5013 13.6413 22.5 13.05ZM29 13.05L25.85 16.3L25.78 20.83L21.25 20.9L18 24.05L14.75 20.9L10.22 20.83L10.15 16.3L7 13.05L10.15 9.79999L10.22 5.26999L14.75 5.19999L18 2.04999L21.25 5.19999L25.78 5.26999L25.85 9.79999L29 13.05Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Se(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3V3ZM20.5 26H15.5V16H20.5V26ZM18 14C17.4067 14 16.8266 13.8241 16.3333 13.4944C15.8399 13.1648 15.4554 12.6962 15.2284 12.1481C15.0013 11.5999 14.9419 10.9967 15.0577 10.4147C15.1734 9.83279 15.4591 9.29824 15.8787 8.87868C16.2982 8.45912 16.8328 8.1734 17.4147 8.05764C17.9967 7.94189 18.5999 8.0013 19.1481 8.22836C19.6962 8.45542 20.1648 8.83994 20.4944 9.33329C20.8241 9.82664 21 10.4067 21 11C21 11.7956 20.6839 12.5587 20.1213 13.1213C19.5587 13.6839 18.7957 14 18 14V14Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function be(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M12.34 33.73L16 20H8L24 2L21 15H29L12.34 33.73Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function ye(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM7 19.9L14.9188 28L29 13.57L25.5017 10L14.9188 20.845L10.4983 16.315L7 19.9Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Me(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M27.2344 6L13.8123 20.0948L7.76561 13.77L3 18.7086L13.8123 30L32 10.9386L27.2344 6Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ce(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M14.5 7L17.2 15.37C17.5375 16.5175 18.4825 17.395 19.63 17.8L28 20.5L19.63 23.2C18.4825 23.5375 17.605 24.4825 17.2 25.63L14.5 34L11.8 25.63C11.4625 24.4825 10.5175 23.605 9.37 23.2L1 20.5L9.37 17.8C10.5175 17.4625 11.395 16.5175 11.8 15.37L14.5 7Z",
+            fill: "currentColor",
+          }),
+          i.createElement("path", {
+            d: "M24.9231 2L26.3077 6.33599C26.4923 6.94209 26.9538 7.40833 27.5538 7.59482L31.8462 8.99353L27.5538 10.3922C26.9538 10.5787 26.4923 11.045 26.3077 11.6511L24.9231 15.9871L23.5385 11.6511C23.3538 11.045 22.8923 10.5787 22.2923 10.3922L18 8.99353L22.2923 7.59482C22.8923 7.40833 23.3538 6.94209 23.5385 6.33599L24.9231 2Z",
+            fill: "currentColor",
+          }),
+          i.createElement("path", {
+            d: "M7.46154 3L8.15385 5.1913C8.24615 5.47105 8.47692 5.70416 8.75384 5.79741L10.9231 6.49676L8.75384 7.19611C8.47692 7.28936 8.24615 7.52248 8.15385 7.80222L7.46154 9.99352L6.76923 7.80222C6.67692 7.52248 6.44615 7.28936 6.16923 7.19611L4 6.49676L6.16923 5.79741C6.44615 5.70416 6.67692 5.47105 6.76923 5.1913L7.46154 3Z",
+            fill: "currentColor",
+          }),
+          i.createElement("path", {
+            d: "M31.4615 12L32.1538 14.1913C32.2462 14.471 32.4769 14.7042 32.7538 14.7974L34.9231 15.4968L32.7538 16.1961C32.4769 16.2894 32.2462 16.5225 32.1538 16.8022L31.4615 18.9935L30.7692 16.8022C30.6769 16.5225 30.4462 16.2894 30.1692 16.1961L28 15.4968L30.1692 14.7974C30.4462 14.7042 30.6769 14.471 30.7692 14.1913L31.4615 12Z",
+            fill: "currentColor",
+          }),
+          i.createElement("path", {
+            d: "M26.4615 25L27.1538 27.1913C27.2462 27.471 27.4769 27.7042 27.7538 27.7974L29.9231 28.4968L27.7538 29.1961C27.4769 29.2894 27.2462 29.5225 27.1538 29.8022L26.4615 31.9935L25.7692 29.8022C25.6769 29.5225 25.4462 29.2894 25.1692 29.1961L23 28.4968L25.1692 27.7974C25.4462 27.7042 25.6769 27.471 25.7692 27.1913L26.4615 25Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function ve(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M33.78 19.22L19.22 33.78L4 18.56V4H18.56L33.78 19.22Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Te(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M26 24.5V36L18 33L10 36V24.5L12 24.56C12.4845 24.5765 12.9464 24.7684 13.3 25.1L16.59 28.2C16.9609 28.5488 17.4509 28.7429 17.96 28.7429C18.4691 28.7429 18.9591 28.5488 19.33 28.2L22.62 25.1C22.9736 24.7684 23.4355 24.5765 23.92 24.56L26 24.5ZM30 12L28.2 13.91C27.1867 14.9805 26.6029 16.3866 26.56 17.86L26.49 20.49L23.86 20.56C22.3866 20.6029 20.9805 21.1867 19.91 22.2L18 24L16.09 22.2C15.0195 21.1867 13.6134 20.6029 12.14 20.56L9.51 20.49L9.44 17.86C9.3971 16.3866 8.81331 14.9805 7.8 13.91L6 12L7.8 10.09C8.81331 9.01949 9.3971 7.61342 9.44 6.14L9.51 3.51L12.14 3.44C13.6134 3.3971 15.0195 2.81331 16.09 1.8L18 0L19.91 1.8C20.9805 2.81331 22.3866 3.3971 23.86 3.44L26.49 3.51L26.56 6.14C26.5906 7.6308 27.1753 9.05677 28.2 10.14L30 12ZM23 12C23 11.0111 22.7068 10.0444 22.1573 9.22215C21.6079 8.3999 20.827 7.75904 19.9134 7.3806C18.9998 7.00216 17.9945 6.90315 17.0245 7.09607C16.0546 7.289 15.1637 7.7652 14.4645 8.46447C13.7652 9.16373 13.289 10.0546 13.0961 11.0245C12.9031 11.9945 13.0022 12.9998 13.3806 13.9134C13.759 14.827 14.3999 15.6079 15.2221 16.1573C16.0444 16.7068 17.0111 17 18 17C18.6566 17 19.3068 16.8707 19.9134 16.6194C20.52 16.3681 21.0712 15.9998 21.5355 15.5355C21.9998 15.0712 22.3681 14.52 22.6194 13.9134C22.8707 13.3068 23 12.6566 23 12Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Be(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M8.22 33.93C9.00446 33.7747 9.71061 33.3517 10.2177 32.7334C10.7248 32.115 11.0013 31.3397 11 30.54V25H28V4H4V30.83C4.00192 31.3 4.11422 31.7629 4.32787 32.1815C4.54152 32.6002 4.85053 32.9627 5.23 33.24C5.65215 33.5582 6.13651 33.7841 6.65162 33.903C7.16674 34.0218 7.7011 34.0311 8.22 33.93Z",
+            fill: "currentColor",
+          }),
+          i.createElement("path", {
+            d: "M14 30.54C13.9892 31.7631 13.6434 32.9598 13 34H30.7C33.42 34 34 32 34 30.25V28H14V30.54Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function we(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M32 30L34 7L25.32 13.41L18 4L10.68 13.41L2 7L4 30H32Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Re(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M17.9997 6.16803L22.2873 2L23.9155 7.75347L29.7123 6.287L28.2465 12.0838L34 13.7127L29.8313 17.9997L34 22.2873L28.2465 23.9155L29.7123 29.7123L23.9155 28.2465L22.2873 34L17.9997 29.8313L13.7127 34L12.0838 28.2465L6.287 29.7123L7.75347 23.9155L2 22.2873L6.16803 17.9997L2 13.7127L7.75347 12.0838L6.287 6.287L12.0838 7.75347L13.7127 2L17.9997 6.16803Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ge(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M32 3.83C20 6.44 13.86 -1.37 6 3.83V32H10V17.8C16.19 16.66 22.11 21.6 32 19.45L28.27 11.64L32 3.83Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ie(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M33.63 8.04999L30.11 20.81C29.9416 21.453 29.5645 22.0218 29.0378 22.4273C28.5111 22.8327 27.8647 23.0517 27.2 23.05H14.75C14.1022 23.0506 13.4715 22.8415 12.9524 22.454C12.4333 22.0664 12.0536 21.5213 11.87 20.9L7.56 8.04999H2V4.04999H8.28C8.90845 4.05116 9.52067 4.24967 10.0302 4.61749C10.5398 4.98532 10.921 5.50388 11.12 6.09999L11.78 8.09999L33.63 8.04999ZM15 27.05C14.5055 27.05 14.0222 27.1966 13.6111 27.4713C13.2 27.746 12.8795 28.1365 12.6903 28.5933C12.5011 29.0501 12.4516 29.5528 12.548 30.0377C12.6445 30.5227 12.8826 30.9681 13.2322 31.3178C13.5819 31.6674 14.0273 31.9055 14.5123 32.002C14.9972 32.0984 15.4999 32.0489 15.9567 31.8597C16.4135 31.6705 16.804 31.35 17.0787 30.9389C17.3534 30.5278 17.5 30.0444 17.5 29.55C17.5 28.8869 17.2366 28.2511 16.7678 27.7822C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1966 25.6111 27.4713C25.2 27.746 24.8795 28.1365 24.6903 28.5933C24.5011 29.0501 24.4516 29.5528 24.548 30.0377C24.6445 30.5227 24.8826 30.9681 25.2322 31.3178C25.5819 31.6674 26.0273 31.9055 26.5123 32.002C26.9972 32.0984 27.4999 32.0489 27.9567 31.8597C28.4135 31.6705 28.804 31.35 29.0787 30.9389C29.3534 30.5278 29.5 30.0444 29.5 29.55C29.5 28.8869 29.2366 28.2511 28.7678 27.7822C28.2989 27.3134 27.663 27.05 27 27.05Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ee(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M20 11.85V17L23.41 20.42L20.59 23.24L16 18.68V11.85H20ZM29 18.43C28.9612 19.5207 28.7589 20.5994 28.4 21.63L32.16 23C32.6583 21.5767 32.9414 20.0869 33 18.58L29 18.43ZM28.68 15.33L32.56 14.33C32.1998 12.8866 31.6268 11.5048 30.86 10.23L27.44 12.3C28.0013 13.2418 28.416 14.2635 28.67 15.33H28.68ZM28.09 6.90001C27.011 5.91173 25.7909 5.08941 24.47 4.46001L22.74 8.07C23.7087 8.53467 24.6047 9.13764 25.4 9.86L28.09 6.90001ZM26.93 24.42C25.8301 25.9503 24.3555 27.1724 22.6475 27.969C20.9396 28.7656 19.0557 29.11 17.1764 28.9693C15.297 28.8285 13.4854 28.2073 11.9152 27.1652C10.3449 26.1231 9.06879 24.6951 8.20908 23.018C7.34937 21.3409 6.93495 19.4711 7.00556 17.5879C7.07616 15.7046 7.62943 13.8711 8.61229 12.2631C9.59516 10.6552 10.9747 9.32667 12.6185 8.40506C14.2624 7.48345 16.1154 6.99963 18 7.00001C18.5659 6.99777 19.1311 7.04124 19.69 7.13001L20.3 3.18001C19.5393 3.05968 18.7702 2.99949 18 3.00001C15.527 2.99797 13.0918 3.60743 10.9112 4.77411C8.7307 5.9408 6.87245 7.62852 5.5019 9.68704C4.13134 11.7456 3.29102 14.111 3.05572 16.5728C2.82043 19.0347 3.19746 21.5165 4.15326 23.7973C5.10906 26.0782 6.61398 28.0874 8.53404 29.646C10.4541 31.2046 12.7297 32.2643 15.1584 32.7308C17.587 33.1972 20.0933 33.056 22.4542 32.3196C24.8151 31.5832 26.9572 30.2745 28.69 28.51V28.51L28.77 28.43L28.82 28.38C29.3109 27.8727 29.7654 27.3313 30.18 26.76L26.93 24.42Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Pe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M2 6V27H12L18 34L24 27H34V6H2ZM9.5 19C9.00555 19 8.5222 18.8534 8.11107 18.5787C7.69995 18.304 7.37952 17.9135 7.1903 17.4567C7.00108 16.9999 6.95157 16.4972 7.04804 16.0123C7.1445 15.5273 7.3826 15.0819 7.73223 14.7322C8.08186 14.3826 8.52732 14.1445 9.01227 14.048C9.49723 13.9516 9.99989 14.0011 10.4567 14.1903C10.9135 14.3795 11.304 14.7 11.5787 15.1111C11.8534 15.5222 12 16.0055 12 16.5C12 16.8283 11.9353 17.1534 11.8097 17.4567C11.6841 17.76 11.4999 18.0356 11.2678 18.2678C11.0356 18.4999 10.76 18.6841 10.4567 18.8097C10.1534 18.9353 9.8283 19 9.5 19ZM18 19C17.5055 19 17.0222 18.8534 16.6111 18.5787C16.2 18.304 15.8795 17.9135 15.6903 17.4567C15.5011 16.9999 15.4516 16.4972 15.548 16.0123C15.6445 15.5273 15.8826 15.0819 16.2322 14.7322C16.5819 14.3826 17.0273 14.1445 17.5123 14.048C17.9972 13.9516 18.4999 14.0011 18.9567 14.1903C19.4135 14.3795 19.804 14.7 20.0787 15.1111C20.3534 15.5222 20.5 16.0055 20.5 16.5C20.5 16.8283 20.4353 17.1534 20.3097 17.4567C20.1841 17.76 19.9999 18.0356 19.7678 18.2678C19.5356 18.4999 19.26 18.6841 18.9567 18.8097C18.6534 18.9353 18.3283 19 18 19ZM26.5 19C26.0055 19 25.5222 18.8534 25.1111 18.5787C24.7 18.304 24.3795 17.9135 24.1903 17.4567C24.0011 16.9999 23.9516 16.4972 24.048 16.0123C24.1445 15.5273 24.3826 15.0819 24.7322 14.7322C25.0819 14.3826 25.5273 14.1445 26.0123 14.048C26.4972 13.9516 26.9999 14.0011 27.4567 14.1903C27.9135 14.3795 28.304 14.7 28.5787 15.1111C28.8534 15.5222 29 16.0055 29 16.5C29 17.163 28.7366 17.7989 28.2678 18.2678C27.7989 18.7366 27.163 19 26.5 19Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function ze(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M3 27.6503L13.8393 16.7238C12.5466 13.3983 13.2648 9.49449 15.9937 6.74736C18.8662 3.85564 23.175 3.2773 26.6221 4.86774L19.7308 11.8003L24.0396 16.1379L31.0745 9.20532C32.798 12.6754 32.0799 17.013 29.2074 19.9047C26.4784 22.6518 22.6005 23.3747 19.2971 22.0735L8.45782 33L3 27.6503Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Oe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M9.99999 4H22V16H18.06V10.73L5.38999 23.39L2.60999 20.61L15.27 7.94H9.99999V4ZM26 28.06H20.73L33.39 15.39L30.61 12.61L17.94 25.27V20H14V32H26V28.06Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function ke(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M28.1684 2.16431L23.5793 6.75343L29.2362 12.4103L33.8253 7.82116L28.1684 2.16431Z",
+            fill: "currentColor",
+          }),
+          i.createElement("path", {
+            d: "M20.76 9.58999L5.67 24.67L4 32L11.33 30.33L26.41 15.24L20.76 9.58999Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function De(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M30 35L18 28L6 35V2H30V35Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function We(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3V3ZM7.00001 18C7.00169 15.7749 7.67812 13.6027 8.94001 11.77L24.23 27.06C22.5787 28.1948 20.6488 28.857 18.6486 28.9752C16.6484 29.0933 14.654 28.6629 12.8805 27.7304C11.1071 26.7978 9.62204 25.3986 8.58569 23.6838C7.54934 21.969 7.00105 20.0037 7.00001 18V18ZM27.06 24.23L11.77 8.94C13.8875 7.49109 16.4449 6.82796 18.9996 7.06536C21.5544 7.30275 23.9457 8.42573 25.76 10.24C27.5743 12.0543 28.6973 14.4457 28.9347 17.0004C29.172 19.5551 28.5089 22.1125 27.06 24.23V24.23Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Le(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M18 0L22.888 11.2722L35.119 12.4377L25.909 20.5698L28.5801 32.5623L18 26.316L7.41987 32.5623L10.091 20.5698L0.880983 12.4377L13.112 11.2722L18 0Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function qe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Fe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("rect", {
+            x: "4",
+            y: "4",
+            width: "28",
+            height: "28",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function xe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18 1L1 31.2222H35L18 1Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ne(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M31.4799 6.31003C30.7506 5.57832 29.884 4.99776 28.9299 4.60163C27.9758 4.2055 26.9529 4.00159 25.9199 4.00159C24.8868 4.00159 23.8639 4.2055 22.9098 4.60163C21.9557 4.99776 21.0891 5.57832 20.3599 6.31003L17.9999 8.51003L15.6399 6.31003C14.147 4.90006 12.1628 4.12852 10.1096 4.15966C8.05643 4.1908 6.0965 5.02218 4.64713 6.47677C3.19775 7.93136 2.37342 9.89425 2.34965 11.9475C2.32588 14.0008 3.10454 15.9823 4.51986 17.47L17.9999 31L31.4799 17.47C32.9552 15.9877 33.7835 13.9814 33.7835 11.89C33.7835 9.79863 32.9552 7.79235 31.4799 6.31003V6.31003Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ue(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M31.4359 18L18.2179 35L5 18L18.2179 1L31.4359 18Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function je(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M7.48 21.11C7.00858 22.3527 6.76797 23.6709 6.77 25V30H1V26.38C0.999999 25.6726 1.13949 24.9722 1.41048 24.3189C1.68148 23.6655 2.07866 23.0719 2.5793 22.5722C3.07994 22.0725 3.67421 21.6764 4.32809 21.4067C4.98198 21.1369 5.68265 20.9987 6.39 21C6.75605 21.001 7.12114 21.0378 7.48 21.11ZM6.27 11C5.57777 11 4.90108 11.2053 4.3255 11.5899C3.74993 11.9744 3.30133 12.5211 3.03642 13.1606C2.77151 13.8002 2.7022 14.5039 2.83725 15.1828C2.9723 15.8618 3.30564 16.4854 3.79513 16.9749C4.28461 17.4644 4.90825 17.7977 5.58718 17.9328C6.26612 18.0678 6.96985 17.9985 7.60939 17.7336C8.24893 17.4687 8.79556 17.0201 9.18014 16.4445C9.56473 15.8689 9.77 15.1922 9.77 14.5C9.77 13.5717 9.40125 12.6815 8.74487 12.0251C8.0885 11.3688 7.19826 11 6.27 11ZM13.27 10.5C13.27 9.60999 13.5339 8.73996 14.0284 7.99994C14.5229 7.25991 15.2257 6.68314 16.0479 6.34254C16.8702 6.00195 17.775 5.91283 18.6479 6.08647C19.5208 6.2601 20.3226 6.68868 20.952 7.31802C21.5813 7.94736 22.0099 8.74918 22.1835 9.6221C22.3572 10.495 22.2681 11.3998 21.9275 12.2221C21.5869 13.0443 21.0101 13.7471 20.2701 14.2416C19.53 14.7361 18.66 15 17.77 15C17.1787 15.0013 16.5929 14.8858 16.0464 14.6601C15.4998 14.4345 15.0032 14.103 14.5851 13.6849C14.167 13.2668 13.8355 12.7702 13.6099 12.2236C13.3842 11.6771 13.2687 11.0913 13.27 10.5ZM24.77 25V30H10.77V25C10.77 23.1435 11.5075 21.363 12.8203 20.0503C14.133 18.7375 15.9135 18 17.77 18C19.6265 18 21.407 18.7375 22.7197 20.0503C24.0325 21.363 24.77 23.1435 24.77 25ZM34.77 26.38V30H28.77V25C28.7738 23.6921 28.54 22.3944 28.08 21.17C28.5076 21.0576 28.9479 21.0004 29.39 21C30.8169 21 32.1853 21.5668 33.1942 22.5758C34.2032 23.5847 34.77 24.9531 34.77 26.38ZM29.27 18C28.5778 18 27.9011 17.7947 27.3255 17.4101C26.7499 17.0256 26.3013 16.4789 26.0364 15.8394C25.7715 15.1999 25.7022 14.4961 25.8373 13.8172C25.9723 13.1383 26.3056 12.5146 26.7951 12.0251C27.2846 11.5356 27.9083 11.2023 28.5872 11.0673C29.2661 10.9322 29.9699 11.0015 30.6094 11.2664C31.2489 11.5313 31.7956 11.9799 32.1801 12.5555C32.5647 13.1311 32.77 13.8078 32.77 14.5C32.77 15.4283 32.4013 16.3185 31.7449 16.9749C31.0885 17.6313 30.1983 18 29.27 18Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ae(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M18 26V31H2V26C2 23.8783 2.84285 21.8434 4.34315 20.3431C5.84344 18.8429 7.87827 18 10 18C12.1217 18 14.1566 18.8429 15.6569 20.3431C17.1571 21.8434 18 23.8783 18 26ZM10 15C10.89 15 11.76 14.7361 12.5001 14.2416C13.2401 13.7471 13.8169 13.0443 14.1575 12.2221C14.4981 11.3998 14.5872 10.495 14.4135 9.6221C14.2399 8.74918 13.8113 7.94736 13.182 7.31802C12.5526 6.68868 11.7508 6.2601 10.8779 6.08647C10.005 5.91283 9.10019 6.00195 8.27792 6.34254C7.45566 6.68314 6.75285 7.25991 6.25839 7.99994C5.76392 8.73996 5.5 9.60999 5.5 10.5C5.49868 11.0913 5.61418 11.6771 5.83986 12.2236C6.06554 12.7702 6.39695 13.2668 6.81508 13.6849C7.23321 14.103 7.72981 14.4345 8.27637 14.6601C8.82293 14.8858 9.40868 15.0013 10 15ZM31.66 18.34C30.8643 17.5434 29.9094 16.9238 28.8578 16.5216C27.8062 16.1194 26.6815 15.9437 25.5574 16.006C24.4332 16.0683 23.3348 16.3672 22.3341 16.8831C21.3334 17.399 20.4528 18.1204 19.75 19C21.2201 21.0373 22.0077 23.4877 22 26V29H34V24C34.0008 22.9491 33.7946 21.9084 33.3931 20.9372C32.9916 19.966 32.4027 19.0835 31.66 18.34ZM26 13C26.89 13 27.76 12.7361 28.5001 12.2416C29.2401 11.7471 29.8169 11.0443 30.1575 10.2221C30.4981 9.39981 30.5872 8.49501 30.4135 7.6221C30.2399 6.74918 29.8113 5.94736 29.182 5.31802C28.5526 4.68868 27.7508 4.2601 26.8779 4.08647C26.005 3.91283 25.1002 4.00195 24.2779 4.34254C23.4557 4.68314 22.7529 5.25991 22.2584 5.99994C21.7639 6.73996 21.5 7.60999 21.5 8.5C21.4987 9.09132 21.6142 9.67708 21.8399 10.2236C22.0655 10.7702 22.397 11.2668 22.8151 11.6849C23.2332 12.103 23.7298 12.4345 24.2764 12.6601C24.8229 12.8858 25.4087 13.0013 26 13Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function He(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M30 32H6V31C6 27.8174 7.26428 24.7652 9.51472 22.5147C11.7652 20.2643 14.8174 19 18 19C21.1826 19 24.2348 20.2643 26.4853 22.5147C28.7357 24.7652 30 27.8174 30 31V32ZM18 3C16.8133 3 15.6533 3.35189 14.6666 4.01118C13.6799 4.67047 12.9108 5.60754 12.4567 6.7039C12.0026 7.80026 11.8838 9.00666 12.1153 10.1705C12.3468 11.3344 12.9182 12.4035 13.7574 13.2426C14.5965 14.0818 15.6656 14.6532 16.8295 14.8847C17.9933 15.1162 19.1997 14.9974 20.2961 14.5433C21.3925 14.0892 22.3295 13.3201 22.9888 12.3334C23.6481 11.3467 24 10.1867 24 9C24 7.4087 23.3679 5.88258 22.2426 4.75736C21.1174 3.63214 19.5913 3 18 3Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ve(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M3.1154 27.6838L8.39576 20.3968C8.50481 20.251 8.55119 20.0677 8.52472 19.8875C8.49836 19.7073 8.40123 19.5451 8.25498 19.4367L4.25152 16.3806C4.10812 16.27 4.01405 16.1073 3.98977 15.9278C3.96548 15.7484 4.01295 15.5665 4.1219 15.4218C4.23074 15.2772 4.39241 15.1813 4.57159 15.1549L9.09981 14.4028C9.32514 14.3675 9.51799 14.2222 9.61435 14.0155C9.7106 13.8088 9.6977 13.5677 9.57978 13.3724L4.58729 5.03256C4.48403 4.85393 4.46631 4.63857 4.53905 4.4456C4.61168 4.25254 4.76711 4.10236 4.96247 4.0363C5.15783 3.97023 5.37244 3.99517 5.54735 4.10444L14.508 9.91936C14.6733 10.0263 14.8763 10.0575 15.066 10.0049C15.2557 9.95229 15.4137 9.82092 15.5001 9.64415L18.0604 4.38927C18.1473 4.22213 18.299 4.098 18.4801 4.0458C18.6611 3.99362 18.8556 4.01791 19.0182 4.11307C19.1808 4.20823 19.2973 4.36585 19.3405 4.54929L20.595 10.5241H20.5949C20.6381 10.7286 20.772 10.9025 20.9588 10.9965C21.1455 11.0905 21.365 11.0945 21.5551 11.0073L28.3075 7.86803L28.3074 7.86792C28.4907 7.78118 28.7031 7.78009 28.8873 7.86497C29.0715 7.94996 29.2086 8.11217 29.2615 8.30796C29.3146 8.50376 29.278 8.71301 29.1619 8.87926L24.9856 14.9949C24.8537 15.1863 24.8279 15.4317 24.9172 15.6464C25.0064 15.8611 25.1985 16.0159 25.4273 16.0574L32.3943 17.3375C32.6059 17.363 32.7939 17.4852 32.903 17.6684C33.0122 17.8515 33.0302 18.075 32.9519 18.2733C32.8737 18.4716 32.7079 18.6224 32.503 18.6816L25.4176 21.0338C25.237 21.0946 25.0898 21.2276 25.011 21.4011C24.9321 21.5746 24.9287 21.773 25.0017 21.9491L28.4131 30.2248C28.491 30.4095 28.4841 30.6189 28.3942 30.7981C28.3043 30.9773 28.1405 31.108 27.9459 31.156C27.7513 31.2039 27.5454 31.1642 27.3827 31.0473L19.558 25.5493C19.3872 25.4307 19.1719 25.3953 18.972 25.4531C18.7721 25.5108 18.6089 25.6554 18.5275 25.847L15.8106 32.3594C15.734 32.5434 15.5814 32.6852 15.3924 32.7481C15.2032 32.8108 14.9962 32.7886 14.8247 32.6871C14.6533 32.5855 14.5343 32.4147 14.4985 32.2187L13.3368 25.9047C13.2995 25.7027 13.1738 25.528 12.9942 25.4284C12.8147 25.3286 12.5999 25.3144 12.4088 25.3894L3.92498 28.7113C3.7422 28.7784 3.5395 28.7648 3.36723 28.674C3.19495 28.5832 3.06926 28.4237 3.02126 28.2351C2.97325 28.0464 3.00737 27.8461 3.11533 27.6841L3.1154 27.6838Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Xe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M32.1364 3.05916C32.3257 3.11958 32.4978 3.22426 32.6386 3.36452C32.7774 3.50482 32.8811 3.67603 32.941 3.86413C33.001 4.05222 33.0155 4.25184 32.9834 4.44663L31.7339 12.0377C31.6841 12.3356 31.5288 12.6056 31.2965 12.7987L19.2946 22.7251L17.1703 20.6009L27.2742 10.497L25.5074 8.7301L15.406 18.8365L13.2817 16.7123L23.2694 4.69904C23.4614 4.46893 23.7297 4.31549 24.0254 4.2667L31.5502 3.01714C31.7462 2.98434 31.9471 2.99875 32.1364 3.05916ZM9.26762 16.7603C9.59525 16.7574 9.91089 16.8834 10.1466 17.111L18.8934 25.8578C19.1211 26.0935 19.247 26.4092 19.2442 26.7368C19.2413 27.0644 19.1099 27.3778 18.8782 27.6095C18.6465 27.8412 18.3331 27.9726 18.0055 27.9754C17.6779 27.9783 17.3622 27.8523 17.1266 27.6247L14.6275 25.1256L10.1466 29.6065L11.3961 30.8561C11.5155 30.9713 11.6107 31.1092 11.6761 31.2617C11.7416 31.4141 11.7761 31.5781 11.7775 31.744C11.779 31.9099 11.7474 32.0745 11.6845 32.228C11.6217 32.3816 11.5289 32.5211 11.4116 32.6384C11.2943 32.7557 11.1548 32.8485 11.0012 32.9114C10.8476 32.9742 10.6831 33.0058 10.5172 33.0044C10.3513 33.0029 10.1873 32.9684 10.0348 32.903C9.88239 32.8375 9.74451 32.7423 9.62925 32.6229L3.38147 26.3752C3.26213 26.2599 3.16694 26.122 3.10145 25.9696C3.03596 25.8171 3.00149 25.6531 3.00005 25.4872C2.99861 25.3213 3.03022 25.1568 3.09305 25.0032C3.15588 24.8496 3.24866 24.7101 3.36599 24.5928C3.48331 24.4755 3.62283 24.3827 3.77639 24.3199C3.92996 24.257 4.0945 24.2254 4.26041 24.2269C4.42633 24.2283 4.59029 24.2628 4.74274 24.3283C4.89519 24.3938 5.03308 24.4889 5.14834 24.6083L6.3979 25.8578L10.8788 21.3769L8.37969 18.8778C8.15207 18.6422 8.02613 18.3265 8.02897 17.9989C8.03182 17.6713 8.16323 17.3579 8.39491 17.1262C8.62659 16.8945 8.93999 16.7631 9.26762 16.7603Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ze(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M17.6253 34.113C17.743 34.1717 17.8718 34.2012 18 34.2012C18.1282 34.2012 18.257 34.1717 18.3748 34.113C18.8953 33.8524 31.1275 27.6036 31.1275 16.0461L31.1274 8.2254C31.1274 7.76274 30.7522 7.38762 30.2892 7.38762C30.2258 7.38762 23.8719 7.32574 18.5922 2.04672C18.265 1.71954 17.7346 1.71954 17.4075 2.04672C12.1509 7.30272 5.77225 7.38762 5.71045 7.38762C5.24779 7.38762 4.87231 7.76274 4.87231 8.2254V16.0464C4.87278 27.6033 17.1048 33.8523 17.6253 34.113H17.6253Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Qe(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M3.50571 11.2155C3.87965 9.34584 5.52131 8 7.42804 8H28.5578C30.4645 8 32.1061 9.34584 32.4801 11.2155L32.9759 13.6947C33.0378 14.0041 32.8011 14.2928 32.4856 14.2928H3.50017C3.18465 14.2928 2.948 14.0041 3.00988 13.6947L3.50571 11.2155ZM14.2172 16.8099H4.42812C4.27911 16.8099 4.16319 16.9394 4.17965 17.0875L5.20967 26.3577C5.32221 27.3706 6.17834 28.1368 7.19744 28.1368H28.7883C29.8074 28.1368 30.6635 27.3706 30.7761 26.3577L31.8061 17.0875C31.8226 16.9394 31.7066 16.8099 31.5576 16.8099H21.7686V19.8441C21.7686 20.9486 20.8731 21.8441 19.7686 21.8441H16.2172C15.1127 21.8441 14.2172 20.9486 14.2172 19.8441V16.8099ZM17.2343 16.8099C16.9582 16.8099 16.7343 17.0337 16.7343 17.3099V18.827C16.7343 19.1031 16.9582 19.327 17.2343 19.327H18.7514C19.0276 19.327 19.2514 19.1031 19.2514 18.827V17.3099C19.2514 17.0337 19.0276 16.8099 18.7514 16.8099H17.2343Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Je(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M31.9513 28.4678L31.6814 28.3401C31.4615 28.2254 31.2594 28.0795 31.0814 27.9068L26.6464 23.4718L27.1797 22.9385C27.3887 22.7296 27.5545 22.4816 27.6676 22.2086C27.7807 21.9356 27.8389 21.6431 27.8389 21.3476C27.8389 21.0521 27.7807 20.7595 27.6676 20.4865C27.5545 20.2136 27.3887 19.9656 27.1797 19.7567C27.1101 19.687 27.0274 19.6317 26.9364 19.594C26.8454 19.5563 26.7479 19.5369 26.6494 19.5369C26.5509 19.5369 26.4533 19.5563 26.3624 19.594C26.2714 19.6317 26.1887 19.687 26.1191 19.7567L25.1055 20.77L22.6057 18.1838L32.1273 9.16542L32.234 9.06543C32.3638 8.94364 32.4441 8.77816 32.4593 8.60079L32.9926 3.83112C32.9966 3.80307 32.9986 3.77478 32.9986 3.74646C32.9985 3.54799 32.921 3.35739 32.7826 3.21516C32.7023 3.13644 32.6054 3.07672 32.499 3.04038C32.3926 3.00404 32.2793 2.99201 32.1677 3.00518L27.398 3.53847C27.2201 3.55335 27.0539 3.63334 26.9314 3.76312L17.9986 13.1935L9.06592 3.76312C8.94377 3.63368 8.77827 3.55371 8.60095 3.53847L3.83094 3.00518C3.71926 2.99201 3.60605 3.00404 3.49963 3.04038C3.39321 3.07672 3.29629 3.13644 3.21598 3.21516C3.07757 3.35739 3.00009 3.54799 3 3.74646C3.00002 3.77478 3.00202 3.80307 3.006 3.83112L3.53929 8.60079C3.55452 8.77816 3.63477 8.94364 3.76461 9.06543L3.87128 9.16542L13.393 18.1838L10.8931 20.77L9.87953 19.7567C9.80992 19.687 9.72725 19.6317 9.63625 19.594C9.54526 19.5563 9.44773 19.5369 9.34923 19.5369C9.25073 19.5369 9.15321 19.5563 9.06221 19.594C8.97122 19.6317 8.88855 19.687 8.81894 19.7567C8.61002 19.9656 8.44429 20.2136 8.33123 20.4866C8.21816 20.7596 8.15996 21.0521 8.15996 21.3476C8.15996 21.643 8.21816 21.9356 8.33123 22.2086C8.44429 22.4815 8.61002 22.7296 8.81894 22.9385L9.35223 23.4718L4.9172 27.9068C4.7392 28.0795 4.53711 28.2254 4.31724 28.3401L4.04726 28.4678C3.77896 28.599 3.54621 28.7929 3.36868 29.0331C3.19116 29.2733 3.07407 29.5527 3.02733 29.8477C2.97954 30.1411 3.00219 30.4417 3.0934 30.7247C3.18462 31.0077 3.34179 31.2649 3.55196 31.4752L4.52723 32.4498C4.8798 32.8009 5.35723 32.9979 5.85481 32.9975C5.95521 32.9973 6.05547 32.9898 6.15479 32.9751C6.44819 32.9294 6.7262 32.8135 6.96513 32.6372C7.20407 32.4609 7.39684 32.2294 7.52702 31.9625L7.67701 31.6625C7.7898 31.4475 7.93392 31.2505 8.10465 31.0779L12.532 26.6505L13.062 27.1805C13.2709 27.3894 13.5189 27.5552 13.7919 27.6682C14.0649 27.7813 14.3574 27.8395 14.6529 27.8395C14.9483 27.8395 15.2409 27.7813 15.5139 27.6682C15.7868 27.5552 16.0348 27.3894 16.2438 27.1805C16.3844 27.0398 16.4634 26.849 16.4634 26.6501C16.4634 26.4511 16.3844 26.2603 16.2438 26.1196L15.2302 25.106L17.9933 22.4395L18.0016 22.4315L18.01 22.4395L20.7728 25.106L19.7592 26.1196C19.6186 26.2603 19.5396 26.4511 19.5396 26.6501C19.5396 26.849 19.6186 27.0398 19.7592 27.1805C19.9681 27.3894 20.2161 27.5552 20.4891 27.6682C20.7621 27.7813 21.0546 27.8395 21.3501 27.8395C21.6455 27.8395 21.9381 27.7813 22.2111 27.6682C22.484 27.5552 22.732 27.3894 22.941 27.1805L23.4709 26.6505L27.8983 31.0779C28.0692 31.2503 28.2134 31.4474 28.3259 31.6625L28.4759 31.9625C28.6061 32.2294 28.7989 32.4609 29.0378 32.6372C29.2767 32.8135 29.5548 32.9294 29.8482 32.9751C29.9475 32.9898 30.0477 32.9973 30.1481 32.9975C30.6457 32.9979 31.1231 32.8009 31.4757 32.4498L32.451 31.4752C32.6611 31.2649 32.8183 31.0077 32.9095 30.7247C33.0008 30.4417 33.0234 30.1411 32.9756 29.8477C32.9284 29.5522 32.8107 29.2726 32.6324 29.0323C32.4541 28.7921 32.2205 28.5985 31.9513 28.4678Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ke(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0967 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57C28 10 26.5 9.00003 23.94 7.94003C20.9843 6.77799 17.7541 6.50247 14.6444 7.14715C11.5346 7.79183 8.68012 9.32878 6.43 11.57L0 18L6.43 24.43C8.10419 26.1042 10.2596 27.5 12.73 28.34ZM18 25C21.866 25 25 21.866 25 18C25 14.134 21.866 11 18 11C14.134 11 11 14.134 11 18C11 21.866 14.134 25 18 25Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function Ye(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M32.991 20.3742C31.996 19.9541 30.8307 20.4415 30.3037 21.4683L27.0772 20.1006C27.0852 19.9739 27.089 19.8507 27.089 19.724V16.0418L30.3197 14.6703C30.8511 15.6771 32.0045 16.1567 32.9913 15.7405C34.0339 15.2966 34.4896 14.0161 34.0061 12.8824C33.784 12.3555 33.4034 11.9551 32.9517 11.7171C33.0943 11.2297 33.0705 10.6745 32.8487 10.1515C32.3691 9.01382 31.1322 8.45483 30.0896 8.89511C29.0945 9.31523 28.6348 10.4924 29.0075 11.5864L26.8273 12.5099C25.8561 8.53397 22.2688 5.58887 17.9998 5.58887C13.7269 5.58887 10.1434 8.53403 9.17233 12.5099L6.98818 11.5864C7.36084 10.4924 6.90111 9.31523 5.90995 8.89511C4.86733 8.45519 3.63076 9.01393 3.14725 10.1515C2.92518 10.6746 2.90537 11.2297 3.04424 11.7171C2.59634 11.9551 2.21198 12.3554 1.9898 12.8824C1.51028 14.0161 1.96601 15.2966 3.00863 15.7405C3.99182 16.1567 5.14919 15.6771 5.68016 14.6703L8.91086 16.0418L8.91121 19.7243C8.91121 19.851 8.9152 19.9742 8.92305 20.1009L5.69235 21.4686C5.16501 20.4419 3.99957 19.9544 3.00888 20.3745C1.96626 20.8184 1.51053 22.0986 1.99005 23.2326C2.21212 23.7557 2.59662 24.1599 3.04449 24.3979C2.90586 24.8853 2.92566 25.4405 3.1475 25.9635C3.63101 27.0972 4.86794 27.6602 5.9102 27.2199C6.89339 26.7998 7.35314 25.6385 7.00028 24.5562L9.80681 23.3671C9.9854 23.716 10.1913 24.0529 10.4253 24.3702L11.9593 26.4751V26.9902C11.9593 28.8809 13.4933 30.4108 15.3841 30.4108H20.6164C22.5071 30.4108 24.037 28.8808 24.037 26.9902V26.4751L25.575 24.3702C25.809 24.0531 26.0149 23.716 26.1935 23.3671L29 24.5562C28.6433 25.6383 29.103 26.7998 30.0901 27.2199C31.1327 27.6598 32.3693 27.0971 32.8492 25.9635C33.0712 25.4404 33.095 24.8853 32.9522 24.3979C33.404 24.1599 33.7844 23.7557 34.0066 23.2326C34.49 22.0986 34.0339 20.8184 32.9917 20.3742L32.991 20.3742ZM24.6825 18.0554C24.6825 18.3885 24.5993 18.7016 24.4485 18.987C24.0324 19.8035 23.0808 20.3706 21.9671 20.3706C21.111 20.3706 20.346 19.8194 19.8503 19.1102C19.4738 18.5792 19.2516 17.9607 19.2516 17.4135C19.2516 17.1953 19.2872 17.0014 19.3585 16.8306C19.6796 16.0102 20.7262 15.7446 21.9667 15.7446C23.0924 15.7446 24.0558 16.3235 24.464 17.1517C24.6073 17.429 24.6825 17.7343 24.6825 18.0554L24.6825 18.0554ZM11.3124 18.0554C11.3124 17.7343 11.3877 17.429 11.5306 17.1518C11.9428 16.3234 12.9062 15.7446 14.0279 15.7446C15.2685 15.7446 16.3149 16.0103 16.6361 16.8307C16.7074 17.0013 16.743 17.1954 16.743 17.4136C16.743 17.9604 16.5209 18.5749 16.1443 19.1064C15.6529 19.8199 14.8879 20.3707 14.0275 20.3707C12.9176 20.3707 11.9622 19.8038 11.5461 18.9872C11.3955 18.7016 11.3124 18.3885 11.3124 18.0554L11.3124 18.0554ZM19.0341 21.8843C19.0341 22.578 18.5704 23.1407 17.9995 23.1407C17.4286 23.1407 16.9649 22.5776 16.9649 21.8843C16.9649 21.3691 17.2227 20.481 17.5912 20.0649L17.9995 19.8942L18.4078 20.0649C18.7764 20.4813 19.0341 21.3692 19.0341 21.8843Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function $e(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M32.895 7.34625L28.9237 3.375L18.135 14.1525L7.34625 3.375L3.375 7.34625L14.1525 18.135L3.375 28.9237L7.34625 32.895L18.135 22.1175L28.9237 32.895L32.895 28.9237L22.1175 18.135L32.895 7.34625Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function et(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M16 34V21H3V16H16V3H21V16H34V21H21V34H16Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function tt(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M33 16H3V21H33V16Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function rt(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M2 6.05005V30.05H34V6.05005H2ZM25 10.05C25.5933 10.05 26.1734 10.226 26.6667 10.5556C27.1601 10.8853 27.5446 11.3538 27.7716 11.902C27.9987 12.4502 28.0581 13.0534 27.9424 13.6353C27.8266 14.2173 27.5409 14.7518 27.1213 15.1714C26.7018 15.5909 26.1672 15.8766 25.5853 15.9924C25.0033 16.1082 24.4001 16.0488 23.8519 15.8217C23.3038 15.5946 22.8352 15.2101 22.5056 14.7168C22.1759 14.2234 22 13.6434 22 13.05C22 12.2544 22.3161 11.4913 22.8787 10.9287C23.4413 10.3661 24.2044 10.05 25 10.05V10.05ZM23 26.05H6L14.5 15.05L19.4 21.39L22 18.05L28.22 26.05H23Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function it(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M18.0001 2C16.4019 2.02152 14.8236 2.36052 13.3555 2.99755C11.8873 3.63458 10.558 4.55714 9.44364 5.71257C8.32928 6.868 7.45165 8.2336 6.86098 9.73129C6.27031 11.229 5.97819 12.8294 6.00127 14.441C6.00127 21.316 18.0001 35 18.0001 35C18.0001 35 29.9989 21.316 29.9989 14.441C30.0426 11.187 28.8032 8.04868 26.5532 5.71579C24.3033 3.3829 21.2268 2.04636 18.0001 2ZM25.6357 15.53C25.6328 15.8694 25.4971 16.1939 25.2581 16.4329C25.019 16.6719 24.696 16.806 24.3594 16.806H20.5416V20.656C20.5416 20.9974 20.4072 21.3247 20.1678 21.5661C19.9285 21.8074 19.6039 21.943 19.2654 21.943H16.7238C16.3853 21.943 16.0607 21.8074 15.8214 21.5661C15.5821 21.3247 15.4476 20.9974 15.4476 20.656V16.806H11.6407C11.3051 16.806 10.9833 16.6716 10.746 16.4323C10.5087 16.193 10.3754 15.8684 10.3754 15.53V12.956C10.3754 12.6176 10.5087 12.293 10.746 12.0537C10.9833 11.8145 11.3051 11.68 11.6407 11.68H15.4585V7.82999C15.4585 7.48865 15.593 7.16135 15.8323 6.91999C16.0717 6.67863 16.3962 6.54301 16.7347 6.54301H19.2763C19.6148 6.54301 19.9394 6.67863 20.1787 6.91999C20.4181 7.16135 20.5525 7.48865 20.5525 7.82999V11.68H24.3703C24.7069 11.68 25.0299 11.8141 25.2689 12.0531C25.5079 12.2921 25.6437 12.6166 25.6466 12.956L25.6357 15.53Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function nt(e) {
+        let { direction: t, ...r } = e,
+          n = { transform: `scaleX( ${"right" == t ? "-1" : "1"} )` };
+        return i.createElement(
+          "svg",
+          {
+            style: n,
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "2",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "9",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "16",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "23",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "30",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M10.0001 22.0989V17.8189L16.2074 15.869L16.2459 12.2486C16.2407 11.8588 16.0085 11.482 15.6333 11.3488C14.9327 11.0739 14.2894 10.6674 13.7463 10.0736C12.4484 8.65217 12.1894 6.49723 13.1336 4.75391C14.5932 1.99742 18.1636 1.18729 20.5946 2.88529C22.7995 4.4254 23.2317 7.43069 21.5622 9.61139C20.9843 10.3662 20.2727 10.8991 19.4342 11.2575C19.0506 11.4186 18.8005 11.8019 18.8058 12.1916L18.7749 15.6885L22.2544 14.6004C22.6449 14.4869 22.9514 14.1433 22.9958 13.7452C23.1147 12.6267 23.6444 11.538 24.5846 10.6499C26.1799 9.18956 28.571 8.84302 30.4666 9.82377C33.324 11.3048 33.8524 14.9779 31.6005 17.3526C30.0756 18.9478 27.5988 19.4062 25.6321 18.4616C25.0025 18.1506 24.4586 17.7277 24.0568 17.2325C23.8101 16.9314 23.3638 16.8342 22.9733 16.9477L19.373 18.0802L19.2532 29.7966C19.2494 32.0682 17.3331 33.9479 14.9505 34L15.093 20.4972L10.0001 22.0989ZM18.8394 5.17784C19.7723 5.82945 19.9292 7.09773 19.2443 7.99235C18.5379 8.91502 17.2182 9.10883 16.3136 8.47697C15.3807 7.82537 15.2238 6.55708 15.9087 5.66246C16.6151 4.73979 17.9349 4.54605 18.8394 5.17784ZM29.2418 12.4438C30.1747 13.0954 30.3316 14.3637 29.6467 15.2584C28.9403 16.181 27.6205 16.3748 26.716 15.743C25.7831 15.0914 25.6262 13.8231 26.3111 12.9285C27.0175 12.0058 28.3373 11.812 29.2418 12.4438ZM17.3194 17.5897C17.7434 17.8859 17.8326 18.5061 17.5116 18.9255C17.1691 19.3728 16.5447 19.4515 16.1207 19.1555C15.6967 18.8593 15.6074 18.2391 15.9285 17.8197C16.2496 17.4003 16.8954 17.2935 17.3194 17.5897Z",
+          }),
+        );
+      }
+      function at(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M34 9.42197C32.4337 7.40864 29.497 6.99082 27.4217 8.47232L16.6537 16.2215L13.3254 13.8283C12.973 13.5625 12.7772 13.1065 12.8947 12.6887C13.0905 11.891 13.1296 11.0553 12.9339 10.1817C12.464 8.09242 10.6627 6.42103 8.47002 6.07916C5.02425 5.50936 2.00921 8.09249 2.00921 11.3592C2.00921 14.3222 4.47613 16.7153 7.53026 16.7153C8.58742 16.7153 9.52721 16.4494 10.3887 15.9556C10.7803 15.7277 11.2894 15.7656 11.6417 16.0315L14.8525 18.3486L11.6417 20.6657C11.2892 20.9316 10.7803 20.9697 10.3887 20.7417C9.2923 20.096 7.96112 19.83 6.55142 20.0579C4.20203 20.4757 2.36168 22.337 2.04843 24.6542C1.57862 28.1489 4.5936 31.0739 8.19599 30.694C10.6236 30.4281 12.6207 28.5668 13.0122 26.2116C13.1298 25.4519 13.0905 24.6922 12.8947 24.0084C12.7772 23.5905 12.973 23.1346 13.3254 22.8688L16.6537 20.4756L27.4217 28.2248C29.4971 29.7442 32.4337 29.3264 34 27.2751L21.5874 18.3483L34 9.42197ZM7.53026 13.6005C6.27732 13.6005 5.22 12.6128 5.22 11.3592C5.22 10.1437 6.23803 9.11802 7.53026 9.11802C8.7832 9.11802 9.84052 10.1056 9.84052 11.3592C9.84052 12.5749 8.82249 13.6005 7.53026 13.6005ZM7.53026 27.5794C6.27732 27.5794 5.22 26.5918 5.22 25.3382C5.22 24.1227 6.23803 23.0969 7.53026 23.0969C8.7832 23.0969 9.84052 24.0846 9.84052 25.3382C9.84052 26.5537 8.82249 27.5794 7.53026 27.5794ZM18.6115 19.4123C18.0242 19.4123 17.5151 18.9185 17.5151 18.3487C17.5151 17.7789 18.0242 17.285 18.6115 17.285C19.1989 17.285 19.708 17.7789 19.708 18.3487C19.7078 18.9185 19.238 19.4123 18.6115 19.4123Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function st(e) {
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M27 20.1931C26.9943 23.588 25.6228 26.8421 23.1861 29.2427C20.7495 31.6432 17.4463 32.9943 14.0003 32.9999C12.2937 33.0055 10.603 32.6766 9.02663 32.0323C7.45029 31.3879 6.01984 30.4411 4.81854 29.2469C2.3908 26.8485 1.01923 23.6049 1.0006 20.2178C0.93382 13.0373 6.47794 7.52611 13.8968 7.3896H19.6875V4L27 9.19871L19.6875 14.3991V11.1723H13.9519C8.7116 11.271 4.7935 15.1424 4.84024 20.1783C4.88532 25.1649 8.99373 29.2238 14.0003 29.2238C16.4289 29.2212 18.7572 28.2696 20.4745 26.5778C22.1918 24.8861 23.1577 22.5923 23.1604 20.1997",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            width: "3",
+            height: "32",
+            transform: "matrix(-1 0 0 1 34.1738 2)",
+          }),
+        );
+      }
+      function lt(e) {
+        return i.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+          },
+          i.createElement("path", {
+            d: "M22.6666 6.28132C21.6224 4.93909 19.6646 4.66055 18.2811 5.64821L11.1024 10.8143L8.88352 9.21887C8.64856 9.04164 8.51804 8.73769 8.5964 8.45915C8.72692 7.92736 8.75301 7.37017 8.62249 6.78778C8.30928 5.39495 7.10839 4.28069 5.6466 4.05277C3.34942 3.67291 1.33939 5.39499 1.33939 7.57283C1.33939 9.54815 2.984 11.1435 5.0201 11.1435C5.72487 11.1435 6.35139 10.9663 6.92575 10.637C7.18679 10.4851 7.52619 10.5104 7.76104 10.6877L9.90155 12.2324L7.76104 13.7772C7.52608 13.9544 7.18679 13.9798 6.92575 13.8278C6.19479 13.3973 5.30733 13.22 4.36753 13.3719C2.80127 13.6504 1.57437 14.8913 1.36554 16.4361C1.05233 18.7659 3.06232 20.7159 5.46391 20.4627C7.08233 20.2854 8.4137 19.0445 8.67474 17.4744C8.75309 16.9679 8.72691 16.4614 8.59639 16.0056C8.51804 15.727 8.64856 15.4231 8.88352 15.2458L11.1024 13.6504L18.2811 18.8165C19.6646 19.8295 21.6224 19.5509 22.6666 18.1834L14.3915 12.2322L22.6666 6.28132ZM5.02009 9.06697C4.1848 9.06697 3.47992 8.40856 3.47992 7.57283C3.47992 6.7625 4.15861 6.07868 5.02009 6.07868C5.85538 6.07868 6.56027 6.73709 6.56027 7.57283C6.56027 8.38324 5.88158 9.06697 5.02009 9.06697ZM5.02009 18.3863C4.1848 18.3863 3.47992 17.7278 3.47992 16.8921C3.47992 16.0818 4.15861 15.398 5.02009 15.398C5.85538 15.398 6.56027 16.0564 6.56027 16.8921C6.56027 17.7024 5.88158 18.3863 5.02009 18.3863ZM12.4076 12.9416C12.016 12.9416 11.6766 12.6123 11.6766 12.2324C11.6766 11.8526 12.016 11.5233 12.4076 11.5233C12.7992 11.5233 13.1386 11.8526 13.1386 12.2324C13.1385 12.6123 12.8253 12.9416 12.4076 12.9416Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function ot(e) {
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M10 8H2V32H34V8H26L24.2764 4.55279C24.107 4.214 23.7607 4 23.382 4H12.618C12.2393 4 11.893 4.214 11.7236 4.55279L10 8ZM18 27C21.866 27 25 23.866 25 20C25 16.134 21.866 13 18 13C14.134 13 11 16.134 11 20C11 23.866 14.134 27 18 27Z",
+          }),
+        );
+      }
+      var mt,
+        ct,
+        ut,
+        dt = r(76217);
+      function gt() {
+        const e = pt(vt().GetGameID());
+        return e === mt.NotRecording || e === mt.NotRunning
+          ? null
+          : i.createElement(ft, null);
+      }
+      function ft(e) {
+        const t = vt(),
+          r = (0, D.q3)(() => t.GetIsLiveEdge() && !t.GetHidePlayer()),
           n = i.useCallback(() => {
             t.SetHidePlayer(!1), t.GetGameRecordingVideo().Play();
             const e = t.GetLiveEdgeMS();
             t.SetPlaytimeFromGlobalMS(e), t.FocusGlobalMS(e);
           }, [t]);
         return i.createElement(
-          ue.he,
+          de.he,
           {
-            className: oe.GoLiveButtonCtn,
-            toolTipContent: (0, ce.we)(
+            className: me.GoLiveButtonCtn,
+            toolTipContent: (0, ue.we)(
               r ? "#Playback_AtLatest" : "#Playback_JumpToLatest",
             ),
             direction: "bottom",
           },
           i.createElement(
-            ge.Z,
+            dt.Z,
             {
               onClick: n,
-              className: (0, me.A)(oe.GoLiveButton, r && oe.IsLive),
+              className: (0, ce.A)(me.GoLiveButton, r && me.IsLive),
             },
-            i.createElement(de.xA, { className: (0, me.A)(oe.JumpToEndIcon) }),
+            i.createElement(st, { className: (0, ce.A)(me.JumpToEndIcon) }),
           ),
         );
       }
-      function he(e) {
-        const { app: t } = F(e);
-        if (!t) return le.NotRecording;
+      function pt(e) {
+        const { app: t } = N(e);
+        if (!t) return mt.NotRecording;
         switch (t.recording_type) {
           default:
           case 0:
           case 1:
-            return le.NotRecording;
+            return mt.NotRecording;
           case 2:
-            return le.ManualRecording;
+            return mt.ManualRecording;
           case 3:
-            return le.BackgroundRecording;
+            return mt.BackgroundRecording;
         }
       }
       !(function (e) {
@@ -2611,34 +3570,7 @@
           (e.ManualRecording = "ManualRecording"),
           (e.BackgroundRecording = "BackgroundRecording"),
           (e.ForeverRecording = "ForeverRecording");
-      })(le || (le = {}));
-      var _e,
-        Se,
-        be = r(14864),
-        ye = r(78327);
-      class Me {
-        constructor() {
-          (this.m_markerStoreOverrides = null), (0, D.Gn)(this);
-        }
-        UpdateOverrides(e) {
-          this.m_markerStoreOverrides = e;
-        }
-        GetMarkerStore() {
-          return (
-            this.m_markerStoreOverrides || be.CGameTimelineMarkerStore.Get()
-          );
-        }
-        static Get() {
-          return (
-            Me.s_Singleton ||
-              ((Me.s_Singleton = new Me()),
-              "dev" == ye.TS.WEB_UNIVERSE &&
-                (window.g_MarkerStore = Me.s_Singleton)),
-            Me.s_Singleton
-          );
-        }
-      }
-      (0, X.Cg)([D.sH], Me.prototype, "m_markerStoreOverrides", void 0),
+      })(mt || (mt = {})),
         (function (e) {
           (e.Overlay = "Overlay"),
             (e.Clips = "Clips"),
@@ -2646,15 +3578,15 @@
             (e.CommunityClip = "Community"),
             (e.ChatClip = "Chat"),
             (e.Partner = "Partner");
-        })(_e || (_e = {})),
+        })(ct || (ct = {})),
         (function (e) {
           (e.Never = "Never"), (e.Always = "Always"), (e.Manual = "Manual");
-        })(Se || (Se = {}));
-      const Ce = 3 * Q.kh,
-        ve = 5 * Q.kh,
-        Te = Q.kh + 2e3,
-        Be = 1e3;
-      class we {
+        })(ut || (ut = {}));
+      const ht = 3 * Y.kh,
+        _t = 5 * Y.kh,
+        St = Y.kh + 2e3,
+        bt = 1e3;
+      class yt {
         constructor(e, t, r, i, n, a, s, l) {
           (this.m_gameRecordingVideo = null),
             (this.m_timelineLoader = null),
@@ -2665,15 +3597,15 @@
             (this.m_nPendingSeekSec = -1),
             (this.m_playbackDefinition = null),
             (this.m_pendingStop = null),
-            (this.m_durationMS = (0, Y.Sb)(null)),
-            (this.m_lastRecordingGlobalMS = (0, Y.Sb)(null)),
+            (this.m_durationMS = (0, ee.Sb)(null)),
+            (this.m_lastRecordingGlobalMS = (0, ee.Sb)(null)),
             (this.m_bWasLiveEdge = !1),
             (this.m_nGlobalTimelinePlaybackMS = null),
             (this.m_nGlobalTimelinePlaybackSec = null),
             (this.m_fnUnregisterAutorun = []),
             (this.m_rgSeekPerf = []),
-            (this.m_eRecordingState = le.NotRecording),
-            (this.m_eRecordingSetting = Se.Never),
+            (this.m_eRecordingState = mt.NotRecording),
+            (this.m_eRecordingSetting = ut.Never),
             (this.m_bGamepadMode = !1),
             (this.m_bControlsVisible = !0),
             (this.m_fnRenderGlyph = void 0),
@@ -2683,9 +3615,9 @@
             (this.m_nRelativeTimeForDisplay = void 0),
             (this.m_rgClipOffsets = []),
             (this.m_phasePreview = void 0),
-            (0, D.Gn)(this),
+            (0, W.Gn)(this),
             (this.m_fnGetManifest = t),
-            (this.m_gameRecordingVideo = new re(!0)),
+            (this.m_gameRecordingVideo = new ne(!0)),
             (this.m_eGameRecordingMode = r),
             (this.m_bGamepadMode = n),
             (this.m_playbackDefinition = s),
@@ -2694,7 +3626,7 @@
             l && this.SetClipOffsets(l),
             (this.m_fnRenderGlyph = a),
             this.m_fnUnregisterAutorun.push(
-              (0, D.mJ)(
+              (0, W.mJ)(
                 () => ({
                   bIsAtEnd: this.m_gameRecordingVideo.IsAtEnd(),
                   bIsPaused: this.m_gameRecordingVideo.IsPaused(),
@@ -2708,7 +3640,7 @@
               ),
             ),
             this.m_fnUnregisterAutorun.push(
-              (0, D.mJ)(
+              (0, W.mJ)(
                 () => this.m_gameRecordingVideo.GetPlaybackTime(),
                 (e) => {
                   if (
@@ -2727,7 +3659,7 @@
               ),
             ),
             this.m_fnUnregisterAutorun.push(
-              (0, D.mJ)(
+              (0, W.mJ)(
                 () => ({
                   playback: this.m_gameRecordingVideo.GetPlaybackTime(),
                   bVideoPlaying:
@@ -2762,7 +3694,7 @@
               ),
             ),
             this.m_fnUnregisterAutorun.push(
-              (0, D.mJ)(
+              (0, W.mJ)(
                 () => ({
                   globalPlaybackMS: this.m_nGlobalTimelinePlaybackMS,
                   bVideoPaused: this.m_gameRecordingVideo.IsPaused(),
@@ -2796,7 +3728,7 @@
                         ? void 0
                         : n.globalMS) &&
                       e.globalPlaybackMS >=
-                        this.m_previousHighlightEntry.globalMS.valMS + Be)) &&
+                        this.m_previousHighlightEntry.globalMS.valMS + bt)) &&
                     (this.CalculatePreviousHighlightEntry(
                       e.globalPlaybackMS,
                       e.bVideoPaused,
@@ -2810,7 +3742,7 @@
               ),
             ),
             this.m_fnUnregisterAutorun.push(
-              (0, D.mJ)(
+              (0, W.mJ)(
                 () => this.m_gameRecordingVideo.BSeekReadyToPlay(),
                 (e) => {
                   if (e) {
@@ -2818,12 +3750,12 @@
                     try {
                       const t = `measure_${this.m_strRecordingID}_${this.m_gameRecordingVideo.GetPlaybackTime().toFixed(3)}`,
                         r = performance.measure(t, e);
-                      (0, V.q_)(
+                      (0, Z.q_)(
                         `CGameRecordingVideo:: perf measure ${e} duration ${r.duration}`,
                       ),
                         r && this.m_rgSeekPerf.push(r.duration);
                     } catch (t) {
-                      (0, V.q_)(
+                      (0, Z.q_)(
                         `CGameRecordingVideo:: cant measure ${e}, error: ${t}`,
                       );
                     }
@@ -2835,7 +3767,7 @@
             this.SetLoader(e);
         }
         AddEventListener(e) {
-          return this.m_rgListeners.push(e), () => $.x9(this.m_rgListeners, e);
+          return this.m_rgListeners.push(e), () => te.x9(this.m_rgListeners, e);
         }
         FireEvent(e, ...t) {
           for (let r of this.m_rgListeners) {
@@ -2861,7 +3793,7 @@
         OnInvalidateRecording(e, t) {
           const r = this.m_fnGetManifest(t);
           this.m_gameRecordingVideo.GetMPDURL() == r &&
-            ((0, V.q_)(`Recording invalidated for ${t}. Reloading MPD`),
+            ((0, Z.q_)(`Recording invalidated for ${t}. Reloading MPD`),
             this.m_gameRecordingVideo.UpdateMPD());
         }
         OnLoaderInitialized() {
@@ -2872,7 +3804,7 @@
             this.TryPlayInitialTimelineVideo();
           const e =
             ((t = this.m_timelineLoader.GetGameID()),
-            (null != L() && t && L().GetClipSummariesForGame(t)) || []);
+            (null != q() && t && q().GetClipSummariesForGame(t)) || []);
           var t;
           this.SetClipOffsets(e);
         }
@@ -2926,7 +3858,7 @@
             (this.m_nextHighlightEntry = null);
         }
         CalculatePreviousHighlightEntry(e, t) {
-          const r = t ? 1 : Be * this.m_gameRecordingVideo.GetPlaybackSpeed(),
+          const r = t ? 1 : bt * this.m_gameRecordingVideo.GetPlaybackSpeed(),
             i = this.m_timelineLoader.GetClosestPreviousEntryInGlobalTimeline(
               e - r,
             );
@@ -2943,7 +3875,7 @@
           if ("loaded" !== r.timelineState || r.entry)
             this.m_nextHighlightEntry = r;
           else {
-            const r = t ? 1 : Be * this.m_gameRecordingVideo.GetPlaybackSpeed();
+            const r = t ? 1 : bt * this.m_gameRecordingVideo.GetPlaybackSpeed();
             this.m_nextHighlightEntry =
               this.m_timelineLoader.GetClosestNextEntryInGlobalTimeline(e - r);
           }
@@ -3065,9 +3997,9 @@
         }
         ShouldModeShowClipControls() {
           switch (this.m_eGameRecordingMode) {
-            case _e.Overlay:
-            case _e.Clips:
-            case _e.Background:
+            case ct.Overlay:
+            case ct.Clips:
+            case ct.Background:
               return !0;
             default:
               return !1;
@@ -3075,9 +4007,9 @@
         }
         CanModeAddMarker() {
           switch (this.m_eGameRecordingMode) {
-            case _e.Overlay:
-            case _e.Clips:
-            case _e.Background:
+            case ct.Overlay:
+            case ct.Clips:
+            case ct.Background:
               return !0;
             default:
               return !1;
@@ -3142,7 +4074,7 @@
         TryPlayInitialTimelineVideo() {
           if (this.m_timelineLoader.BInitialized() && !this.m_bHidePlayer)
             if (this.m_playbackDefinition) this.StartPlaybackForRange();
-            else if (this.m_eGameRecordingMode === _e.Overlay) {
+            else if (this.m_eGameRecordingMode === ct.Overlay) {
               const e = this.GetLiveEdgeMS(),
                 t =
                   this.m_timelineLoader.GetFirstRecordingOfLastTimelineSession(),
@@ -3155,7 +4087,7 @@
                 ? (this.UpdateGlobalPlayTime(r.nGlobalOffsetMS),
                   this.ChangePlaybackRecording(t, 0))
                 : isNaN(e.valMS) || this.SetPlaytimeFromGlobalMS(e, !1, !0);
-            } else if (this.m_eGameRecordingMode === _e.Background) {
+            } else if (this.m_eGameRecordingMode === ct.Background) {
               const e =
                 this.m_timelineLoader.GetFirstRecordingOfLastTimelineSession();
               this.SetPlaytimeFromRecordingOffset(e, 0);
@@ -3191,9 +4123,9 @@
           ) {
             const e = Math.max(
               0,
-              this.m_lastRecordingGlobalMS.valMS - Ce - 1e3,
+              this.m_lastRecordingGlobalMS.valMS - ht - 1e3,
             );
-            return (0, Y.Sb)(e);
+            return (0, ee.Sb)(e);
           }
           return this.GetTotalMS();
         }
@@ -3202,16 +4134,16 @@
             "Overlay" === this.m_eGameRecordingMode &&
             this.m_lastRecordingGlobalMS
           ) {
-            const e = Math.max(0, this.m_lastRecordingGlobalMS.valMS - Te);
-            return (0, Y.Sb)(e);
+            const e = Math.max(0, this.m_lastRecordingGlobalMS.valMS - St);
+            return (0, ee.Sb)(e);
           }
-          return (0, Y.Sb)(Math.max(0, this.GetTotalMS().valMS - 1));
+          return (0, ee.Sb)(Math.max(0, this.GetTotalMS().valMS - 1));
         }
         GetTimelineAndOffsetRelativeToCurrentPlayback(e = 0) {
           const t = this.GetCurrentPlaybackGlobalMS(e);
           return (
             t ||
-            ((0, V.ZI)(
+            ((0, Z.ZI)(
               `failed to find offset for ${this.m_strRecordingID} at ${Math.floor(1e3 * this.m_gameRecordingVideo.GetPlaybackTime())} MS`,
             ),
             null)
@@ -3237,8 +4169,8 @@
               "Overlay" === this.m_eGameRecordingMode
                 ? this.GetLiveEdgeMS().valMS
                 : this.GetTotalMS().valMS,
-            i = K.OQ(t.valMS + e, 0, r - 1e3);
-          this.SetPlaytimeFromGlobalMS((0, Y.Sb)(i));
+            i = $.OQ(t.valMS + e, 0, r - 1e3);
+          this.SetPlaytimeFromGlobalMS((0, ee.Sb)(i));
         }
         ConvertGlobaOffsetToRecordingAndRelativeOffset(e) {
           return this.m_timelineLoader.ConvertGlobaOffsetToRecordingAndRelativeOffset(
@@ -3254,7 +4186,7 @@
           else {
             const e =
               this.m_timelineLoader.GetClosestNextRecordingInGlobalTimeline(
-                (0, Y.Sb)(this.m_nGlobalTimelinePlaybackMS),
+                (0, ee.Sb)(this.m_nGlobalTimelinePlaybackMS),
               );
             t = null == e ? void 0 : e.recording_id;
           }
@@ -3316,8 +4248,8 @@
           if (!this.m_videoRef) return void (this.m_nPendingSeekSec = t);
           const n = this.GetManifestFromRecordingID(e),
             a = this.m_timelineLoader.BRecordingHasZeroOffset(e)
-              ? ee.lU.Absolute
-              : ee.lU.FromAvailableStart;
+              ? re.lU.Absolute
+              : re.lU.FromAvailableStart;
           this.m_gameRecordingVideo.Start(this.m_videoRef, n, t, a),
             (r || i) && this.m_gameRecordingVideo.Pause();
         }
@@ -3338,7 +4270,7 @@
             : this.m_gameRecordingVideo.Pause();
         }
         GetGlobalMSPlaytime() {
-          return (0, Y.Sb)(this.m_nGlobalTimelinePlaybackMS);
+          return (0, ee.Sb)(this.m_nGlobalTimelinePlaybackMS);
         }
         GetGlobalPlaytimeSec() {
           return this.m_nGlobalTimelinePlaybackSec;
@@ -3351,7 +4283,7 @@
             this.m_lastRecordingGlobalMS &&
               null !== this.m_lastRecordingGlobalMS.valMS)
           ) {
-            const e = this.m_bWasLiveEdge ? ve : Ce;
+            const e = this.m_bWasLiveEdge ? _t : ht;
             this.m_bWasLiveEdge =
               this.m_lastRecordingGlobalMS.valMS -
                 ((null === (t = this.GetGlobalMSPlaytime()) || void 0 === t
@@ -3457,11 +4389,11 @@
           );
           if (i) {
             const e = this.m_timelineLoader.GetGameID(),
-              { fnCreateUserTimelineMarkers: n } = U(),
+              { fnCreateUserTimelineMarkers: n } = A(),
               a = this.m_timelineLoader.GetTimelineStartBeforeGlobalZeroMS(
                 i.strTimelineID,
               );
-            J.y.ReportTrackedAction(t);
+            K.y.ReportTrackedAction(t);
             const s = "steam_marker",
               l = await n(e, this.GetClipID(), {
                 timeline_id: i.strTimelineID,
@@ -3482,17 +4414,17 @@
           }
         }
         async RemoveUserMarker(e, t) {
-          const { fnRemoveUserTimelineMarker: r } = U(),
+          const { fnRemoveUserTimelineMarker: r } = A(),
             i = this.m_timelineLoader.GetGameID();
           return 1 == (await r(i, this.GetClipID(), e, t))
             ? (this.m_timelineLoader.RemoveUserMarker(e, t), !0)
-            : ((0, V.tG)(
+            : ((0, Z.tG)(
                 `Failed to delete user marker for timeline ${e} entry ${t}`,
               ),
               !1);
         }
         async UpdateUserMarker(e, t, r, i) {
-          const { fnUpdateUserTimelineMarkers: n } = U(),
+          const { fnUpdateUserTimelineMarkers: n } = A(),
             a = this.m_timelineLoader.GetGameID(),
             s = {
               timeline_id: e,
@@ -3553,35 +4485,35 @@
           null != e && (this.m_bControlsVisible = e);
         }
       }
-      (0, X.Cg)([D.sH], we.prototype, "m_bHidePlayer", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_strRecordingID", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_durationMS", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_lastRecordingGlobalMS", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_nGlobalTimelinePlaybackMS", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_nGlobalTimelinePlaybackSec", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_rgSeekPerf", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_eRecordingState", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_eRecordingSetting", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_bGamepadMode", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_bControlsVisible", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_fnRenderGlyph", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_previousHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_nextHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_displayHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], we.prototype, "m_nRelativeTimeForDisplay", void 0),
-        (0, X.Cg)([D.sH.ref], we.prototype, "m_rgClipOffsets", void 0),
-        (0, X.Cg)([D.sH.ref], we.prototype, "m_phasePreview", void 0),
-        (0, X.Cg)([Z.oI], we.prototype, "SetVideoElement", null),
-        (0, X.Cg)([Z.oI], we.prototype, "OnInvalidateRecording", null),
-        (0, X.Cg)([D.XI], we.prototype, "OnLoaderInitialized", null),
-        (0, X.Cg)([Z.oI], we.prototype, "OnInvalidate", null),
-        (0, X.Cg)([Z.oI], we.prototype, "OnTimelineLoaded", null),
-        (0, X.Cg)([Z.oI], we.prototype, "GetLiveEdgeMS", null),
-        (0, X.Cg)([Z.oI], we.prototype, "StopPlayback", null),
-        (0, X.Cg)([Z.oI], we.prototype, "TogglePlayPause", null),
-        (0, X.Cg)([D.XI], we.prototype, "UpdateGlobalPlayTime", null);
-      const Re = i.createContext({ timelinePlaybackCoordinator: null });
-      function Ge(e) {
+      (0, Q.Cg)([W.sH], yt.prototype, "m_bHidePlayer", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_strRecordingID", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_durationMS", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_lastRecordingGlobalMS", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_nGlobalTimelinePlaybackMS", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_nGlobalTimelinePlaybackSec", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_rgSeekPerf", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_eRecordingState", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_eRecordingSetting", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_bGamepadMode", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_bControlsVisible", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_fnRenderGlyph", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_previousHighlightEntry", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_nextHighlightEntry", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_displayHighlightEntry", void 0),
+        (0, Q.Cg)([W.sH], yt.prototype, "m_nRelativeTimeForDisplay", void 0),
+        (0, Q.Cg)([W.sH.ref], yt.prototype, "m_rgClipOffsets", void 0),
+        (0, Q.Cg)([W.sH.ref], yt.prototype, "m_phasePreview", void 0),
+        (0, Q.Cg)([J.oI], yt.prototype, "SetVideoElement", null),
+        (0, Q.Cg)([J.oI], yt.prototype, "OnInvalidateRecording", null),
+        (0, Q.Cg)([W.XI], yt.prototype, "OnLoaderInitialized", null),
+        (0, Q.Cg)([J.oI], yt.prototype, "OnInvalidate", null),
+        (0, Q.Cg)([J.oI], yt.prototype, "OnTimelineLoaded", null),
+        (0, Q.Cg)([J.oI], yt.prototype, "GetLiveEdgeMS", null),
+        (0, Q.Cg)([J.oI], yt.prototype, "StopPlayback", null),
+        (0, Q.Cg)([J.oI], yt.prototype, "TogglePlayPause", null),
+        (0, Q.Cg)([W.XI], yt.prototype, "UpdateGlobalPlayTime", null);
+      const Mt = i.createContext({ timelinePlaybackCoordinator: null });
+      function Ct(e) {
         const {
             children: t,
             mode: r,
@@ -3591,63 +4523,53 @@
             controlsVisible: l,
             gamepadMode: o,
             renderGlyph: m,
-            markerStoreOverrides: c,
-            recordingSetting: u,
-            playbackDefinition: d,
-            clipSummaries: g,
+            recordingSetting: c,
+            playbackDefinition: u,
+            clipSummaries: d,
           } = e,
-          [f] = i.useState(() => new we(a, n, r, l, o, m, d, g));
+          [g] = i.useState(() => new yt(a, n, r, l, o, m, u, d));
         (0, i.useEffect)(() => {
-          var e;
-          return (
-            c && ((e = c), Me.Get().UpdateOverrides(e)),
-            () => {
-              Me.Get().UpdateOverrides(null);
-            }
-          );
-        }, [c]),
+          g.SetLoader(a);
+        }, [g, a]),
           (0, i.useEffect)(() => {
-            f.SetLoader(a);
-          }, [f, a]),
+            g.SetRecordingState(s);
+          }, [g, s]),
           (0, i.useEffect)(() => {
-            f.SetRecordingState(s);
-          }, [f, s]),
+            g.SetRecordingSetting(c);
+          }, [g, c]),
           (0, i.useEffect)(() => {
-            f.SetRecordingSetting(u);
-          }, [f, u]),
+            g.SetGetManifest(n);
+          }, [g, n]),
           (0, i.useEffect)(() => {
-            f.SetGetManifest(n);
-          }, [f, n]),
+            g.SetControlsVisible(l);
+          }, [g, l]),
           (0, i.useEffect)(() => {
-            f.SetControlsVisible(l);
-          }, [f, l]),
+            g.SetGamepadMode(o);
+          }, [g, o]),
           (0, i.useEffect)(() => {
-            f.SetGamepadMode(o);
-          }, [f, o]),
+            g.SetRenderGlyph(m);
+          }, [g, m]),
           (0, i.useEffect)(() => {
-            f.SetRenderGlyph(m);
-          }, [f, m]),
-          (0, i.useEffect)(() => {
-            f.SetClipOffsets(g);
-          }, [f, g]),
-          (0, i.useEffect)(() => () => f.dispose(), [f]);
-        const p = i.useMemo(() => ({ timelinePlaybackCoordinator: f }), [f]);
-        return i.createElement(Re.Provider, { value: p }, t);
+            g.SetClipOffsets(d);
+          }, [g, d]),
+          (0, i.useEffect)(() => () => g.dispose(), [g]);
+        const f = i.useMemo(() => ({ timelinePlaybackCoordinator: g }), [g]);
+        return i.createElement(Mt.Provider, { value: f }, t);
       }
-      function Ie() {
-        return (0, i.useContext)(Re).timelinePlaybackCoordinator;
+      function vt() {
+        return (0, i.useContext)(Mt).timelinePlaybackCoordinator;
       }
-      var Ee = r(64919),
-        ze = r.n(Ee),
-        Pe = r(60778),
-        Oe = r(4434),
-        ke = r(44332),
-        We = r(30470);
-      class De {
+      var Tt = r(64919),
+        Bt = r.n(Tt),
+        wt = r(60778),
+        Rt = r(4434),
+        Gt = r(44332),
+        It = r(30470);
+      class Et {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 10),
             (this.k_nMaxBatchSize = 50),
-            (this.m_nMaxCacheSize = 18e5 / Q.kh),
+            (this.m_nMaxCacheSize = 18e5 / Y.kh),
             (this.m_LRUTrackerSet = new Set()),
             (this.m_mapPromises = new Map()),
             (this.m_mapThumbnailImages = new Map()),
@@ -3656,7 +4578,7 @@
             (this.m_PendingTimer = void 0),
             (this.k_AlreadyResolvedOK = Promise.resolve(!0)),
             (this.m_rgThumbnailPerf = []),
-            (0, D.Gn)(this);
+            (0, W.Gn)(this);
         }
         AddPerfMeasure(e) {
           this.m_rgThumbnailPerf.push(e);
@@ -3683,7 +4605,7 @@
         }
         GetKey(e, t, r, i, n, a, s) {
           const l = n + i;
-          return `${e}_${t}_${r}_${s ? l : l - (l % Q.kh)}_${a}_${s}`;
+          return `${e}_${t}_${r}_${s ? l : l - (l % Y.kh)}_${a}_${s}`;
         }
         GetThumbnailData(e) {
           const t = this.m_mapThumbnailImages.get(e);
@@ -3723,9 +4645,9 @@
               this.QueueThumbnailRequest(e, t, r, i, n, a, s).then(() => {
                 try {
                   const e = performance.measure(`measure_${m}`, m);
-                  e && De.Get().AddPerfMeasure(e.duration);
+                  e && Et.Get().AddPerfMeasure(e.duration);
                 } catch (e) {
-                  (0, V.q_)(`CThumbnailCache:: cant measure ${m}, error: ${e}`);
+                  (0, Z.q_)(`CThumbnailCache:: cant measure ${m}, error: ${e}`);
                 }
               }),
               (o = this.GetThumbnailData(l));
@@ -3793,7 +4715,7 @@
           e.sort((e, t) => e.nRecordingOffsetMS - t.nRecordingOffsetMS);
           try {
             const t = e.map((e) => 1e3 * e.nRecordingOffsetMS),
-              r = await x(
+              r = await U(
                 e[0].strRecordingID,
                 e[0].strClipID,
                 void 0,
@@ -3801,7 +4723,7 @@
                 e[0].cPxMajorAxis,
                 e[0].bPreciseTiming,
               );
-            (0, ke.w)(
+            (0, Gt.w)(
               (null == r ? void 0 : r.length) == t.length,
               `CThumbnailCache.InternalLoadMultipleThumbnails request ${t.length} and got back ${null == r ? void 0 : r.length}`,
             );
@@ -3824,7 +4746,7 @@
               this.SetThumbnailData(n, { data: a, bIsLoading: !1 });
             }
           } catch (t) {
-            (0, V.ZI)("Failed to load multiple request thumbnails", t);
+            (0, Z.ZI)("Failed to load multiple request thumbnails", t);
             for (let t = 0; t < e.length; ++t) {
               const r = e[t],
                 i = this.GetKey(
@@ -3856,16 +4778,16 @@
         async InternalLoadThumbnail(e, t, r, i, n, a, s) {
           const l = this.GetKey(e, t, r, i, n, a, s);
           try {
-            const e = await x(t, r, void 0, [1e3 * i], a, s);
+            const e = await U(t, r, void 0, [1e3 * i], a, s);
             if ((null == e ? void 0 : e.length) > 0) {
               let t = e ? e[0].image_data() : null;
               return this.SetThumbnailData(l, { data: t, bIsLoading: !1 }), !0;
             }
-            (0, V.tH)(
+            (0, Z.tH)(
               `ThumbnailImage: got empty jpeg ${e.length} list back ${t} @ ${i}`,
             );
           } catch (e) {
-            (0, V.ZI)(
+            (0, Z.ZI)(
               `ThumbnailImage: Fail to load thumbnail ${t} @ ${i} with ${e}`,
             ),
               this.SetThumbnailData(l, { data: null, bIsLoading: !1 });
@@ -3874,23 +4796,23 @@
         }
         static Get() {
           return (
-            De.s_Singleton ||
-              ((De.s_Singleton = new De()),
-              "dev" == We.TS.WEB_UNIVERSE &&
-                (window.g_ThumbnailCache = De.s_Singleton)),
-            De.s_Singleton
+            Et.s_Singleton ||
+              ((Et.s_Singleton = new Et()),
+              "dev" == It.TS.WEB_UNIVERSE &&
+                (window.g_ThumbnailCache = Et.s_Singleton)),
+            Et.s_Singleton
           );
         }
       }
-      function Le(e, t, r, n, a, s, l) {
-        const o = (0, W.q3)(() =>
-          De.Get().GetOrQueueThumbnail(e, r, t, n, a, s, l),
+      function Pt(e, t, r, n, a, s, l) {
+        const o = (0, D.q3)(() =>
+          Et.Get().GetOrQueueThumbnail(e, r, t, n, a, s, l),
         );
         return (function (e) {
           var t;
           const r = (0, i.useRef)(null),
-            n = (0, Z.CH)(),
-            a = (0, Oe.m)("useThumbnailAsURL");
+            n = (0, J.CH)(),
+            a = (0, Rt.m)("useThumbnailAsURL");
           return (
             (0, i.useEffect)(() => {
               var t;
@@ -3919,10 +4841,10 @@
           );
         })(null == o ? void 0 : o.data);
       }
-      (0, X.Cg)([D.sH], De.prototype, "m_mapThumbnailImages", void 0);
-      var qe = r(4869);
-      const Fe = { nBeforeMS: 0, nAfterMS: 12e3 },
-        xe = i.createContext({
+      (0, Q.Cg)([W.sH], Et.prototype, "m_mapThumbnailImages", void 0);
+      var zt = r(4869);
+      const Ot = { nBeforeMS: 0, nAfterMS: 12e3 },
+        kt = i.createContext({
           globalStartMS: void 0,
           globalEndMS: void 0,
           setRange: null,
@@ -3939,35 +4861,35 @@
           zoomIntoSelection: null,
           zoomOutSelection: null,
         });
-      function Ne() {
-        const e = (0, i.useContext)(xe);
+      function Dt() {
+        const e = (0, i.useContext)(kt);
         return { nGlobalStartMS: e.globalStartMS, nGlobalEndMS: e.globalEndMS };
       }
-      function Ue() {
-        return (0, i.useContext)(xe).globalStartMS;
+      function Wt() {
+        return (0, i.useContext)(kt).globalStartMS;
       }
-      function je() {
-        return (0, i.useContext)(xe).globalEndMS;
+      function Lt() {
+        return (0, i.useContext)(kt).globalEndMS;
       }
-      function Ae() {
-        return (0, i.useContext)(xe).setRange;
+      function qt() {
+        return (0, i.useContext)(kt).setRange;
       }
-      function He() {
-        return (0, i.useContext)(xe).setStartMS;
+      function Ft() {
+        return (0, i.useContext)(kt).setStartMS;
       }
-      function Ve() {
-        return (0, i.useContext)(xe).setEndMS;
+      function xt() {
+        return (0, i.useContext)(kt).setEndMS;
       }
-      function Xe() {
-        const e = (0, i.useContext)(xe);
+      function Nt() {
+        const e = (0, i.useContext)(kt);
         return {
           selectedMarker: e.selectedMarker,
           setSelectedMarker: e.setSelectedMarker,
         };
       }
-      function Ze() {
+      function Ut() {
         var e, t;
-        const r = (0, i.useContext)(xe);
+        const r = (0, i.useContext)(kt);
         return (
           !isNaN(
             null === (e = r.globalStartMS) || void 0 === e ? void 0 : e.valMS,
@@ -3977,16 +4899,16 @@
           )
         );
       }
-      function Je() {
-        return (0, i.useContext)(xe).clearSelection;
+      function jt() {
+        return (0, i.useContext)(kt).clearSelection;
       }
-      function Qe() {
-        const e = Ae(),
-          t = He(),
-          r = Ve(),
-          n = Ne(),
-          a = (0, i.useContext)(xe).selectionZoomCount,
-          s = (0, i.useContext)(xe).zoomIntoSelection;
+      function At() {
+        const e = qt(),
+          t = Ft(),
+          r = xt(),
+          n = Dt(),
+          a = (0, i.useContext)(kt).selectionZoomCount,
+          s = (0, i.useContext)(kt).zoomIntoSelection;
         return i.useCallback(
           (i, a, s, l) => {
             if (void 0 === s && void 0 === l) return;
@@ -3997,9 +4919,9 @@
               m &&
               m.valMS <= o.valMS &&
               (void 0 !== s ? (m = void 0) : (o = void 0));
-            const c = Fe.nBeforeMS + Fe.nAfterMS;
-            void 0 === o && (o = (0, Y.Sb)(m.valMS - c)),
-              void 0 === m && (m = (0, Y.Sb)(o.valMS + c));
+            const c = Ot.nBeforeMS + Ot.nAfterMS;
+            void 0 === o && (o = (0, ee.Sb)(m.valMS - c)),
+              void 0 === m && (m = (0, ee.Sb)(o.valMS + c));
             const u = o != n.nGlobalStartMS,
               d = m != n.nGlobalEndMS;
             u && d ? e(a, o, m) : u ? t(a, o) : d && r(a, m);
@@ -4007,19 +4929,19 @@
           [n, e, t, r, a, s],
         );
       }
-      var Ke = r(68451),
-        Ye = r(88997);
-      var $e;
+      var Ht = r(68451),
+        Vt = r(88997);
+      var Xt;
       !(function (e) {
         (e.Playhead = "Playhead"),
           (e.RangeLeft = "RangeLeft"),
           (e.RangeRight = "RangeRight"),
           (e.Highlight = "Highlight");
-      })($e || ($e = {}));
-      class et {
+      })(Xt || (Xt = {}));
+      class Zt {
         constructor(e, t) {
           (this.m_maskBounds = [-1, -1]),
-            (0, D.Gn)(this),
+            (0, W.Gn)(this),
             (this.m_loader = e),
             (this.m_eventTarget = t);
         }
@@ -4041,7 +4963,7 @@
           return this.m_loader.IsActiveTimeline(e);
         }
         GetStateDescriptionAtGlobalMS(e) {
-          return this.m_loader.GetStateDescriptionAtGlobalMS((0, Y.Sb)(e));
+          return this.m_loader.GetStateDescriptionAtGlobalMS((0, ee.Sb)(e));
         }
         GetTimelineOffsetFromGlobal(e, t) {
           return this.m_loader.GetTimelineOffsetFromGlobal(e, t);
@@ -4095,10 +5017,10 @@
             this.m_eventTarget.OnInvalidateRecording(e, t);
         }
       }
-      class tt {
+      class Qt {
         constructor(e, t, r) {
           (this.m_durationMS = 0),
-            (this.m_mapTimelineClips = D.sH.map([], { deep: !1 })),
+            (this.m_mapTimelineClips = W.sH.map([], { deep: !1 })),
             (this.m_scrollLeftPX = 0),
             (this.m_scrollWindowWidth = null),
             (this.m_scrollWindowOffsetPX = null),
@@ -4109,15 +5031,15 @@
             (this.m_bUserClipping = !1),
             (this.m_prevLeftAndVisible = null),
             (this.m_rgTimelineOffsets = []),
-            (this.m_mapTimelineEntries = D.sH.map([], { deep: !1 })),
+            (this.m_mapTimelineEntries = W.sH.map([], { deep: !1 })),
             (this.m_bInitialized = !1),
             (this.m_eThumbnailComponent = null),
             (this.m_nGlobalRelativeThumbnailPositionPX = void 0),
             (this.m_thumbnailHighlightEntry = void 0),
             (this.m_phaseToHighlight = void 0),
-            (0, D.Gn)(this),
+            (0, W.Gn)(this),
             (this.m_playbackCoordinator = t),
-            (this.m_timelineMask = new et(e, this)),
+            (this.m_timelineMask = new Zt(e, this)),
             (this.m_fnUnregisterPlaybackCoordinator = t.AddEventListener(this)),
             this.UpdateClipSummaries(r),
             this.m_timelineMask.Init();
@@ -4142,13 +5064,13 @@
             ));
         }
         OnTimelineLoaded(e) {
-          (0, V.q_)("OnTimelineLoaded", e);
+          (0, Z.q_)("OnTimelineLoaded", e);
           this.FindTimelineOffsets(e)
             ? this.ComputeEntriesForTimeline(e)
-            : (0, V.tG)("Missing timeline offset metadata for", e);
+            : (0, Z.tG)("Missing timeline offset metadata for", e);
         }
         OnInvalidate(e) {
-          (0, V.q_)("on invalidate", e);
+          (0, Z.q_)("on invalidate", e);
           const t = this.m_timelineMask.GetGlobalTimelineEndMS().valMS,
             r = t - this.m_durationMS,
             i = this.m_durationMS <= 0;
@@ -4189,7 +5111,7 @@
             const e = this.FindTimelineOffsets(n.strTimelineID);
             if (e) {
               const t = e.globalOffsetMS + n.nTimelineOffsetMS,
-                r = (0, K.OQ)(
+                r = (0, $.OQ)(
                   this.ConvertGlobalMSToGlobalPXOffset(t),
                   0,
                   this.GetMaxScrollLeftPX(),
@@ -4216,7 +5138,7 @@
         SetThumbnailComponent(e) {
           (this.m_eThumbnailComponent = e),
             e || (this.m_nGlobalRelativeThumbnailPositionPX = void 0),
-            e !== $e.Highlight && (this.m_thumbnailHighlightEntry = null);
+            e !== Xt.Highlight && (this.m_thumbnailHighlightEntry = null);
         }
         GetThumbnailComponent() {
           return this.m_eThumbnailComponent;
@@ -4231,7 +5153,7 @@
           this.m_thumbnailHighlightEntry = e;
         }
         GetThumbnailEntry() {
-          return this.m_eThumbnailComponent === $e.Highlight
+          return this.m_eThumbnailComponent === Xt.Highlight
             ? this.m_thumbnailHighlightEntry
             : null;
         }
@@ -4402,7 +5324,7 @@
           this.ScrollToOffsetCentered(t);
         }
         ScrollToOffset(e) {
-          this.m_scrollLeftPX = (0, K.OQ)(e, 0, this.GetMaxScrollLeftPX());
+          this.m_scrollLeftPX = (0, $.OQ)(e, 0, this.GetMaxScrollLeftPX());
         }
         ScrollToOffsetCentered(e) {
           const t = Math.max(0, e - 0.5 * this.m_scrollWindowWidth);
@@ -4498,7 +5420,7 @@
           return Math.max(this.m_scrollLeftPX - this.GetOverscanWidth(), 0);
         }
         GetVirtualWindowWidthPX() {
-          const e = (0, K.OQ)(this.m_scrollLeftPX, 0, this.GetOverscanWidth()),
+          const e = (0, $.OQ)(this.m_scrollLeftPX, 0, this.GetOverscanWidth()),
             t = Math.min(
               this.GetScrollableWidthPX() -
                 (this.m_scrollLeftPX + this.m_scrollWindowWidth),
@@ -4651,7 +5573,7 @@
         }
         ConvertGlobalMSToGlobalPXOffset(e, t = -1) {
           t < 0 &&
-            (t = $.rJ(this.m_rgTimelineOffsets, (t) => e - t.globalOffsetMS));
+            (t = te.rJ(this.m_rgTimelineOffsets, (t) => e - t.globalOffsetMS));
           const r = 10 * t;
           return this.ConvertDurationMSToDeltaPX(e) + r;
         }
@@ -4678,7 +5600,7 @@
           return this.m_rgTimelineOffsets[t];
         }
         FindIndexOfClosestTimelineEndForOffsetPX(e) {
-          return $.rJ(this.m_rgTimelineOffsets, (t) => {
+          return te.rJ(this.m_rgTimelineOffsets, (t) => {
             const r =
               this.ConvertGlobalMSToGlobalPXOffset(t.globalOffsetMS) +
               this.ConvertDurationMSToDeltaPX(t.nDurationMS);
@@ -4686,7 +5608,7 @@
           });
         }
         FindIndexOfClosestTimelineStartForOffsetPX(e) {
-          return $.rJ(this.m_rgTimelineOffsets, (t) => {
+          return te.rJ(this.m_rgTimelineOffsets, (t) => {
             const r = this.ConvertGlobalMSToGlobalPXOffset(t.globalOffsetMS);
             return e - r;
           });
@@ -4720,36 +5642,36 @@
           return this.m_phaseToHighlight;
         }
       }
-      (0, X.Cg)([D.sH], tt.prototype, "m_durationMS", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_scrollLeftPX", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_scrollWindowWidth", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_scrollWindowOffsetPX", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_bAutoScrollPaused", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_autoScrollPauseTimeout", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_msVisible", void 0),
-        (0, X.Cg)([D.sH.ref], tt.prototype, "m_rgTimelineOffsets", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_bInitialized", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_eThumbnailComponent", void 0),
-        (0, X.Cg)(
-          [D.sH],
-          tt.prototype,
+      (0, Q.Cg)([W.sH], Qt.prototype, "m_durationMS", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_scrollLeftPX", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_scrollWindowWidth", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_scrollWindowOffsetPX", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_bAutoScrollPaused", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_autoScrollPauseTimeout", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_msVisible", void 0),
+        (0, Q.Cg)([W.sH.ref], Qt.prototype, "m_rgTimelineOffsets", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_bInitialized", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_eThumbnailComponent", void 0),
+        (0, Q.Cg)(
+          [W.sH],
+          Qt.prototype,
           "m_nGlobalRelativeThumbnailPositionPX",
           void 0,
         ),
-        (0, X.Cg)([D.sH], tt.prototype, "m_thumbnailHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], tt.prototype, "m_phaseToHighlight", void 0),
-        (0, X.Cg)([D.XI], tt.prototype, "OnLoaderInitialized", null),
-        (0, X.Cg)([D.XI], tt.prototype, "InitDefaultsIfReady", null),
-        (0, X.Cg)([D.XI], tt.prototype, "OnInvalidate", null),
-        (0, X.Cg)([D.XI], tt.prototype, "ZoomIn", null),
-        (0, X.Cg)([D.XI], tt.prototype, "ZoomOut", null),
-        (0, X.Cg)([D.XI], tt.prototype, "SetTempZoomScale", null),
-        (0, X.Cg)([D.XI], tt.prototype, "ClearTempZoomScale", null),
-        (0, X.Cg)([D.XI], tt.prototype, "UpdateClipSummaries", null),
-        (0, X.Cg)([Z.oI], tt.prototype, "BReachedMaxScroll", null),
-        (0, X.Cg)([Z.oI], tt.prototype, "BReachedMinScroll", null);
-      const rt = i.createContext(null);
-      function it(e) {
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_thumbnailHighlightEntry", void 0),
+        (0, Q.Cg)([W.sH], Qt.prototype, "m_phaseToHighlight", void 0),
+        (0, Q.Cg)([W.XI], Qt.prototype, "OnLoaderInitialized", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "InitDefaultsIfReady", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "OnInvalidate", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "ZoomIn", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "ZoomOut", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "SetTempZoomScale", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "ClearTempZoomScale", null),
+        (0, Q.Cg)([W.XI], Qt.prototype, "UpdateClipSummaries", null),
+        (0, Q.Cg)([J.oI], Qt.prototype, "BReachedMaxScroll", null),
+        (0, Q.Cg)([J.oI], Qt.prototype, "BReachedMinScroll", null);
+      const Jt = i.createContext(null);
+      function Kt(e) {
         let {
             loader: t,
             playbackCoordinator: r,
@@ -4761,7 +5683,7 @@
         return (
           (0, i.useEffect)(() => {
             if (!t) return;
-            let e = new tt(t, r, a);
+            let e = new Qt(t, r, a);
             return o(e), () => e.Close();
           }, [t]),
           (0, i.useEffect)(() => {
@@ -4771,7 +5693,7 @@
             l && s && l.SetTimelineParentCtnRef(s.current);
           }, [l, s]),
           (function (e) {
-            let t = Ze();
+            let t = Ut();
             (0, i.useEffect)(() => {
               e && e.SetUserIsClipping(t);
             }, [e, t]);
@@ -4790,7 +5712,7 @@
               [e],
             );
             !(function (e) {
-              let t = (0, i.useContext)(xe),
+              let t = (0, i.useContext)(kt),
                 r = t.selectionZoomCount,
                 n = t.globalStartMS,
                 a = t.globalEndMS,
@@ -4808,20 +5730,20 @@
                 }, [r, n, a, s, l]);
             })(t);
           })(l),
-          l ? i.createElement(rt.Provider, { value: l }, n) : null
+          l ? i.createElement(Jt.Provider, { value: l }, n) : null
         );
       }
-      function nt() {
-        return (0, i.useContext)(rt);
+      function Yt() {
+        return (0, i.useContext)(Jt);
       }
-      var at = r(54637);
-      const st = (0, i.createContext)({});
-      function lt() {
-        return (0, i.useContext)(st);
+      var $t = r(54637);
+      const er = (0, i.createContext)({});
+      function tr() {
+        return (0, i.useContext)(er);
       }
       r(53184), r(14771);
-      var ot = r(29210);
-      class mt {
+      var rr = r(29210);
+      class ir {
         constructor(e, t, r, i, n, a, s, l) {
           (this.m_bCleanedUp = !1),
             (this.m_fnCreate = e),
@@ -4840,7 +5762,7 @@
             bExistingClip: !1,
             nClipLengthSeconds: this.m_nClipLengthSeconds,
             strSuggestedClipName: this.m_strSuggestedClipName,
-            gameID: new ot.VS(this.m_strGameID),
+            gameID: new rr.VS(this.m_strGameID),
             strSrcClipID: this.m_strSrcClipID,
             eInitMethod: this.m_eInitMethod,
             startMetrics: this.m_startMetrics,
@@ -4853,9 +5775,9 @@
               ((this.m_creationResult = await this.m_fnCreate(e, t)),
               (this.m_bCreationWasTemporary = e),
               (function (e, t, r, i, n) {
-                L().ReportClipRange(e, t, r, i, n);
+                q().ReportClipRange(e, t, r, i, n);
               })(
-                new ot.VS(this.m_strGameID),
+                new rr.VS(this.m_strGameID),
                 this.m_eInitMethod,
                 this.m_nClipLengthSeconds,
                 this.m_startMetrics,
@@ -4875,18 +5797,18 @@
               : e.clipSummary) && this.m_bCreationWasTemporary)
           ) {
             const { fnDeleteClip: e } =
-              null != L() ? { fnDeleteClip: L().DeleteClip } : {};
+              null != q() ? { fnDeleteClip: q().DeleteClip } : {};
             await e(this.m_creationResult.clipSummary.clip_id);
           }
         }
       }
-      function ct(e, t, r, i, n, a, s, l, o, m, c) {
-        return new mt(
+      function nr(e, t, r, i, n, a, s, l, o, m, c) {
+        return new ir(
           (l, o) =>
             (async function (e, t, r, i, n, a, s, l, o) {
               const { fnSaveClip: m } =
-                null != L() ? { fnSaveClip: L().SaveClip } : {};
-              (0, V.tG)(`start ${i} @ ${n} upto ${a} @ ${s}`);
+                null != q() ? { fnSaveClip: q().SaveClip } : {};
+              (0, Z.tG)(`start ${i} @ ${n} upto ${a} @ ${s}`);
               try {
                 const c = await m(
                     e,
@@ -4900,12 +5822,12 @@
                   { clipSummary: u, result: d } = c;
                 return (
                   u
-                    ? (0, V.tG)(`Clip ${u.clip_id} created`)
-                    : (0, V.tG)(`Clip was not created: ${d}`),
+                    ? (0, Z.tG)(`Clip ${u.clip_id} created`)
+                    : (0, Z.tG)(`Clip was not created: ${d}`),
                   c
                 );
               } catch (e) {
-                (0, V.ZI)(e);
+                (0, Z.ZI)(e);
               }
               return { result: 2 };
             })(e, t, r, i, n, a, s, l, o),
@@ -4918,11 +5840,11 @@
           c,
         ).Request();
       }
-      (0, X.Cg)([Z.oI], mt.prototype, "create", null),
-        (0, X.Cg)([Z.oI], mt.prototype, "cleanup", null);
-      var ut = r(56011),
-        dt = r(7450);
-      const gt = i.createContext({
+      (0, Q.Cg)([J.oI], ir.prototype, "create", null),
+        (0, Q.Cg)([J.oI], ir.prototype, "cleanup", null);
+      var ar = r(56011),
+        sr = r(7450);
+      const lr = i.createContext({
         bInContainer: !1,
         bContainerFocus: !1,
         nMouseClientXPX: null,
@@ -4932,33 +5854,33 @@
         bContextMenuOpen: !1,
         setContextMenuOpen: () => {},
       });
-      function ft(e) {
+      function or(e) {
         const { children: t } = e,
           [r, n] = (0, i.useState)(!1),
           [a, s] = (0, i.useState)(!1),
           [l, o] = (0, i.useState)(!1),
           [m, c] = (0, i.useState)(),
           u = (0, i.useRef)(),
-          d = nt(),
-          g = (0, W.q3)(() => d.GetScrollableWidthPX()),
-          f = (0, W.q3)(() => d.GetVisualWindowStartPX()),
-          p = (0, W.q3)(() => d.GetScrollWindowWidth()),
-          h = (0, W.q3)(() => d.GetScrollWindowOffset()),
-          _ = (0, W.q3)(() => d.GetTimelineMarginWidth()),
+          d = Yt(),
+          g = (0, D.q3)(() => d.GetScrollableWidthPX()),
+          f = (0, D.q3)(() => d.GetVisualWindowStartPX()),
+          p = (0, D.q3)(() => d.GetScrollWindowWidth()),
+          h = (0, D.q3)(() => d.GetScrollWindowOffset()),
+          _ = (0, D.q3)(() => d.GetTimelineMarginWidth()),
           S = i.useMemo(() => {
             if (u.current) {
               const e = f - h - _;
-              return (0, Y.OB)(K.OQ(m + e, 0, g));
+              return (0, ee.OB)($.OQ(m + e, 0, g));
             }
-            return (0, Y.OB)(0);
+            return (0, ee.OB)(0);
           }, [_, m, h, f, g]),
           b = i.useMemo(() => {
             if (u.current) {
               const e = u.current.getBoundingClientRect(),
                 t = g > p ? h : e.x;
-              return (0, Y.QP)(K.OQ(m - t, 0, p));
+              return (0, ee.QP)($.OQ(m - t, 0, p));
             }
-            return (0, Y.QP)(0);
+            return (0, ee.QP)(0);
           }, [m, h, p, g]),
           y = (0, i.useCallback)(
             (e, t) => (
@@ -4978,7 +5900,7 @@
           T = (0, i.useCallback)((e) => s(!0), []),
           B = (0, i.useCallback)((e) => s(!1), []);
         (0, i.useEffect)(() => {
-          const e = (0, ut.qf)(u.current);
+          const e = (0, ar.qf)(u.current);
           return (
             e.addEventListener("mousemove", v),
             () => e.removeEventListener("mousemove", v)
@@ -4998,7 +5920,7 @@
           [a, r, l, m, S, b, y],
         );
         return i.createElement(
-          gt.Provider,
+          lr.Provider,
           { value: w },
           i.createElement(
             "div",
@@ -5010,33 +5932,33 @@
               onBlur: B,
               onMouseEnter: M,
               onMouseLeave: C,
-              className: dt.MouseListenerContainer,
+              className: sr.MouseListenerContainer,
             },
             t,
           ),
         );
       }
-      function pt() {
-        return (0, i.useContext)(gt);
+      function mr() {
+        return (0, i.useContext)(lr);
       }
-      function ht() {
-        return pt().globalMouseXPX;
+      function cr() {
+        return mr().globalMouseXPX;
       }
-      function _t() {
-        return pt().scrollWindowMouseXPX;
+      function ur() {
+        return mr().scrollWindowMouseXPX;
       }
-      function St() {
-        return pt().bInContainer;
+      function dr() {
+        return mr().bInContainer;
       }
-      function bt() {
-        return pt().bContainerFocus;
+      function gr() {
+        return mr().bContainerFocus;
       }
-      function yt() {
-        const e = pt();
+      function fr() {
+        const e = mr();
         return [e.bContextMenuOpen, e.setContextMenuOpen];
       }
-      function Mt(e, t) {
-        const r = pt().fnRegisterMouseEvent,
+      function pr(e, t) {
+        const r = mr().fnRegisterMouseEvent,
           n = (0, i.useRef)(),
           a = (0, i.useCallback)(() => {
             n.current = r(e, t);
@@ -5046,20 +5968,20 @@
           }, []);
         (0, i.useEffect)(() => (a(), () => s()), [a, s]);
       }
-      function Ct() {
-        const e = nt(),
-          t = Ie(),
-          r = Qe(),
-          n = (0, W.q3)(() => !t.ShouldModeShowClipControls()),
-          a = A(),
-          { onMarkerCreated: s, onNavigateToClip: l } = lt(),
-          [o, m] = yt();
+      function hr() {
+        const e = Yt(),
+          t = vt(),
+          r = At(),
+          n = (0, D.q3)(() => !t.ShouldModeShowClipControls()),
+          a = V(),
+          { onMarkerCreated: s, onNavigateToClip: l } = tr(),
+          [o, m] = fr();
         return i.useCallback(
           (o, c, u, d) =>
             n || a
               ? null
-              : (0, Ye.lX)(
-                  i.createElement(vt, {
+              : (0, Vt.lX)(
+                  i.createElement(_r, {
                     isCurrentPlayback: u,
                     nGlobalOffsetMS: c,
                     playbackCoordinator: t,
@@ -5075,7 +5997,7 @@
           [n, a, t, e, r, s, l, m],
         );
       }
-      function vt(e) {
+      function _r(e) {
         const {
             playbackCoordinator: t,
             timelineView: r,
@@ -5086,8 +6008,8 @@
             onNavigateToClip: o,
             onContextMenuOpenChange: m,
           } = e,
-          c = (0, W.q3)(() => t.GetClipsAtGlobalMS(n)),
-          u = Bt(r);
+          c = (0, D.q3)(() => t.GetClipsAtGlobalMS(n)),
+          u = br(r);
         (0, i.useEffect)(() => (m(!0), () => m(!1)), [m]);
         const d = (() => {
             const { strTimelineID: e, nTimelineOffsetMS: r } =
@@ -5095,7 +6017,7 @@
             if (!e) return null;
             const i = t.GetLoader().GetTimelineData(e);
             if (!i) return null;
-            const a = $.rJ(i.m_rgPhases, (e) => r.valMS - parseInt(e.time));
+            const a = te.rJ(i.m_rgPhases, (e) => r.valMS - parseInt(e.time));
             if (a < 0) return null;
             const s = i.m_rgPhases[a];
             return r.valMS >= parseInt(s.time) &&
@@ -5107,10 +6029,10 @@
         return (
           (0, i.useEffect)(() => () => r.SetPhaseToHighlight(null), [r]),
           i.createElement(
-            Ke.tz,
+            Ht.tz,
             { refInstance: u },
             i.createElement(
-              Ke.kt,
+              Ht.kt,
               {
                 onSelected: (e) => {
                   t.AddUserMarkerAtGlobalMS(
@@ -5123,13 +6045,13 @@
                     t.SetPlaytimeFromGlobalMS(n),
                     t.FocusGlobalMS(n);
                 },
-                className: at.TimelineContextMenuItem,
+                className: $t.TimelineContextMenuItem,
               },
               i.createElement(
                 "div",
-                { className: (0, me.A)(at.MenuItem, at.AddUserMarker) },
-                i.createElement(de.pH, null),
-                (0, ce.we)(
+                { className: (0, ce.A)($t.MenuItem, $t.AddUserMarker) },
+                i.createElement(he, null),
+                (0, ue.we)(
                   s
                     ? "#Playback_UserSelectionControls_AddUserMarker"
                     : "#TimelineDialog_AddMarker",
@@ -5137,20 +6059,20 @@
               ),
             ),
             i.createElement(
-              Ke.kt,
+              Ht.kt,
               {
                 onSelected: () => {
                   const { strTimelineID: e, nTimelineOffsetMS: r } =
                     t.ConvertGlobalOffsetToTimelineRelativeOffset(n.valMS);
-                  N(t.GetGameID(), e, r);
+                  j(t.GetGameID(), e, r);
                 },
-                className: at.TimelineContextMenuItem,
+                className: $t.TimelineContextMenuItem,
               },
               i.createElement(
                 "div",
-                { className: (0, me.A)(at.MenuItem, at.TakeScreenshot) },
-                i.createElement(de.i7, null),
-                (0, ce.we)(
+                { className: (0, ce.A)($t.MenuItem, $t.TakeScreenshot) },
+                i.createElement(ot, null),
+                (0, ue.we)(
                   s
                     ? "#Playback_UserSelectionControls_TakeScreenshot"
                     : "#TimelineDialog_TakeScreenshot",
@@ -5158,20 +6080,20 @@
               ),
             ),
             i.createElement(
-              Ke.kt,
+              Ht.kt,
               {
                 onSelected: () => {
                   a(t, 4, n, void 0),
                     t.SetPlaytimeFromGlobalMS(n),
                     t.FocusGlobalMS(n);
                 },
-                className: at.TimelineContextMenuItem,
+                className: $t.TimelineContextMenuItem,
               },
               i.createElement(
                 "div",
-                { className: (0, me.A)(at.MenuItem, at.StartEndClip) },
-                i.createElement(de.Nm, { direction: "left" }),
-                (0, ce.we)(
+                { className: (0, ce.A)($t.MenuItem, $t.StartEndClip) },
+                i.createElement(nt, { direction: "left" }),
+                (0, ue.we)(
                   s
                     ? "#Playback_UserSelectionControls_SetClipStart"
                     : "#TimelineContext_SetClipStart",
@@ -5179,20 +6101,20 @@
               ),
             ),
             i.createElement(
-              Ke.kt,
+              Ht.kt,
               {
                 onSelected: () => {
                   a(t, 4, void 0, n),
                     t.SetPlaytimeFromGlobalMS(n),
                     t.FocusGlobalMS(n);
                 },
-                className: at.TimelineContextMenuItem,
+                className: $t.TimelineContextMenuItem,
               },
               i.createElement(
                 "div",
-                { className: (0, me.A)(at.MenuItem, at.StartEndClip) },
-                i.createElement(de.Nm, { direction: "right" }),
-                (0, ce.we)(
+                { className: (0, ce.A)($t.MenuItem, $t.StartEndClip) },
+                i.createElement(nt, { direction: "right" }),
+                (0, ue.we)(
                   s
                     ? "#Playback_UserSelectionControls_SetClipEnd"
                     : "#TimelineContext_SetClipEnd",
@@ -5201,7 +6123,7 @@
             ),
             !!d &&
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   onSelected: () => {
                     if (!d) return;
@@ -5209,7 +6131,7 @@
                     !(function (e, t, r, i) {
                       const n = r + 1,
                         a = n + i - 2;
-                      ct(
+                      nr(
                         e,
                         void 0,
                         void 0,
@@ -5237,49 +6159,49 @@
                       parseInt(e.duration),
                     );
                   },
-                  className: at.TimelineContextMenuItem,
+                  className: $t.TimelineContextMenuItem,
                   onMouseOver: () => g([d.strTimelineID, d.phase.time]),
                   onMouseLeave: () => g(null),
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(at.MenuItem, at.ClipPhase) },
-                  i.createElement(de.O5, null),
-                  (0, ce.we)("#TimelineDialog_ClipPhase"),
+                  { className: (0, ce.A)($t.MenuItem, $t.ClipPhase) },
+                  i.createElement(lt, null),
+                  (0, ue.we)("#TimelineDialog_ClipPhase"),
                 ),
               ),
             c.length > 0 &&
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   onSelected: () => {
                     c.length > 0 &&
-                      (J.y.ReportTrackedAction(
+                      (K.y.ReportTrackedAction(
                         "/GameRecording/Tooltip/ViewClip/TimelineCtxMenu",
                       ),
                       o && o(c[0].strClipID));
                   },
-                  className: at.TimelineContextMenuItem,
+                  className: $t.TimelineContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(at.MenuItem, at.ViewClip) },
-                  i.createElement(qe.CeX, null),
-                  (0, ce.we)("#TimelineDialog_ViewClip"),
+                  { className: (0, ce.A)($t.MenuItem, $t.ViewClip) },
+                  i.createElement(zt.CeX, null),
+                  (0, ue.we)("#TimelineDialog_ViewClip"),
                 ),
               ),
           )
         );
       }
-      function Tt(e) {
+      function Sr(e) {
         const { playbackCoordinator: t, fnSetSelectionClipRange: r } = e,
           n = (0, i.useRef)(),
-          { onMarkerCreated: a } = lt();
+          { onMarkerCreated: a } = tr();
         return i.createElement(
-          Ke.tz,
+          Ht.tz,
           { refInstance: n },
           i.createElement(
-            Ke.kt,
+            Ht.kt,
             {
               onSelected: (e) => {
                 const r = t.GetGlobalMSPlaytime();
@@ -5293,35 +6215,35 @@
                   t.SetPlaytimeFromGlobalMS(r),
                   t.FocusGlobalMS(r);
               },
-              className: at.TimelineContextMenuItem,
+              className: $t.TimelineContextMenuItem,
             },
             i.createElement(
               "div",
-              { className: (0, me.A)(at.MenuItem, at.AddUserMarker) },
-              i.createElement(de.Od, null),
-              (0, ce.we)("#Playback_UserSelectionControls_AddUserMarker"),
+              { className: (0, ce.A)($t.MenuItem, $t.AddUserMarker) },
+              i.createElement(it, null),
+              (0, ue.we)("#Playback_UserSelectionControls_AddUserMarker"),
             ),
           ),
           i.createElement(
-            Ke.kt,
+            Ht.kt,
             {
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime(),
                   { strTimelineID: r, nTimelineOffsetMS: i } =
                     t.ConvertGlobalOffsetToTimelineRelativeOffset(e.valMS);
-                N(t.GetGameID(), r, i);
+                j(t.GetGameID(), r, i);
               },
-              className: at.TimelineContextMenuItem,
+              className: $t.TimelineContextMenuItem,
             },
             i.createElement(
               "div",
-              { className: (0, me.A)(at.MenuItem, at.TakeScreenshot) },
-              i.createElement(de.i7, null),
-              (0, ce.we)("#Playback_UserSelectionControls_TakeScreenshot"),
+              { className: (0, ce.A)($t.MenuItem, $t.TakeScreenshot) },
+              i.createElement(ot, null),
+              (0, ue.we)("#Playback_UserSelectionControls_TakeScreenshot"),
             ),
           ),
           i.createElement(
-            Ke.kt,
+            Ht.kt,
             {
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime();
@@ -5329,17 +6251,17 @@
                   t.SetPlaytimeFromGlobalMS(e),
                   t.FocusGlobalMS(e);
               },
-              className: at.TimelineContextMenuItem,
+              className: $t.TimelineContextMenuItem,
             },
             i.createElement(
               "div",
-              { className: (0, me.A)(at.MenuItem, at.StartEndClip) },
-              i.createElement(de.Nm, { direction: "left" }),
-              (0, ce.we)("#Playback_UserSelectionControls_SetClipStart"),
+              { className: (0, ce.A)($t.MenuItem, $t.StartEndClip) },
+              i.createElement(nt, { direction: "left" }),
+              (0, ue.we)("#Playback_UserSelectionControls_SetClipStart"),
             ),
           ),
           i.createElement(
-            Ke.kt,
+            Ht.kt,
             {
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime();
@@ -5347,20 +6269,20 @@
                   t.SetPlaytimeFromGlobalMS(e),
                   t.FocusGlobalMS(e);
               },
-              className: at.TimelineContextMenuItem,
+              className: $t.TimelineContextMenuItem,
             },
             i.createElement(
               "div",
-              { className: (0, me.A)(at.MenuItem, at.StartEndClip) },
-              i.createElement(de.Nm, { direction: "right" }),
-              (0, ce.we)("#Playback_UserSelectionControls_SetClipEnd"),
+              { className: (0, ce.A)($t.MenuItem, $t.StartEndClip) },
+              i.createElement(nt, { direction: "right" }),
+              (0, ue.we)("#Playback_UserSelectionControls_SetClipEnd"),
             ),
           ),
         );
       }
-      function Bt(e) {
-        const t = (0, W.q3)(() => e.GetAutoScrollPauseTimeout()),
-          r = (0, W.q3)(() => e.GetVisualWindowStartPX()),
+      function br(e) {
+        const t = (0, D.q3)(() => e.GetAutoScrollPauseTimeout()),
+          r = (0, D.q3)(() => e.GetVisualWindowStartPX()),
           n = (0, i.useRef)(),
           a = (0, i.useRef)();
         return (
@@ -5376,10 +6298,174 @@
           a
         );
       }
-      var wt = r(70692),
-        Rt = r(23144),
-        Gt = r(95896);
-      function It(e) {
+      var yr = r(70692),
+        Mr = r(78327);
+      const Cr = "steam_";
+      var vr;
+      function Tr(e) {
+        switch (e) {
+          default:
+          case vr.White:
+            return "#DCDEDF";
+          case vr.Red:
+            return "#FB7C7C";
+          case vr.Orange:
+            return "#FBB17C";
+          case vr.Yellow:
+            return "#FBDF7C";
+          case vr.Green:
+            return "#9DFB7C";
+          case vr.Blue:
+            return "#7CD5FB";
+          case vr.Purple:
+            return "#A57CFB";
+          case vr.Brown:
+            return "#C18C5B";
+          case vr.Gray:
+            return "#B8BCBF";
+        }
+      }
+      function Br(e) {
+        return Object.keys(e).filter((e) => !Number.isNaN(e));
+      }
+      !(function (e) {
+        (e[(e.White = 0)] = "White"),
+          (e[(e.Red = 1)] = "Red"),
+          (e[(e.Orange = 2)] = "Orange"),
+          (e[(e.Yellow = 3)] = "Yellow"),
+          (e[(e.Green = 4)] = "Green"),
+          (e[(e.Blue = 5)] = "Blue"),
+          (e[(e.Purple = 6)] = "Purple"),
+          (e[(e.Brown = 7)] = "Brown"),
+          (e[(e.Gray = 8)] = "Gray");
+      })(vr || (vr = {}));
+      const wr = Br(vr).map((e) => vr[e]);
+      class Rr {
+        constructor() {
+          this.m_mapSteamTimelineMarkers = new Map();
+        }
+        GetMarkerByID(e) {
+          const t = e.toLowerCase().startsWith(Cr)
+            ? e.slice(Cr.length).toLowerCase()
+            : e.toLowerCase();
+          if (this.m_mapSteamTimelineMarkers.has(t))
+            return this.m_mapSteamTimelineMarkers.get(t);
+          const r = parseInt(t);
+          return "number" == typeof r && r >= 0 && r <= 99
+            ? {
+                func: (e) =>
+                  (function (e) {
+                    return i.createElement(
+                      "svg",
+                      {
+                        width: "36",
+                        height: "36",
+                        viewBox: "0 0 36 36",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                      },
+                      i.createElement(
+                        "text",
+                        {
+                          color: "currentColor",
+                          fontFamily:
+                            '"Motiva Sans", Arial, Helvetica, sans-serif',
+                          fontSize: 30,
+                          fontWeight: 600,
+                          textAnchor: "middle",
+                          x: 18,
+                          y: 30,
+                        },
+                        e.nNumber,
+                      ),
+                    );
+                  })({ nNumber: r }),
+                color: vr.Gray,
+              }
+            : Ir();
+        }
+        GetAllUseableMarkerID() {
+          return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
+            (e) => Cr + e,
+          );
+        }
+        static Get() {
+          return (
+            Rr.s_Singleton ||
+              ((Rr.s_Singleton = new Rr()),
+              Rr.s_Singleton.Init(),
+              "dev" == It.TS.WEB_UNIVERSE &&
+                (window.g_SteamTimelineMarker = Rr.s_Singleton)),
+            Rr.s_Singleton
+          );
+        }
+        AddMarker(e, t, r) {
+          const i = null != r ? r : vr.White;
+          this.m_mapSteamTimelineMarkers.set(e, { func: t, color: i });
+          for (const r of wr) {
+            const i = `${e}_${vr[r]}`.toLowerCase();
+            this.m_mapSteamTimelineMarkers.set(i, { func: t, color: r });
+          }
+        }
+        Init() {
+          this.AddMarker("explosion", Ve, vr.Gray),
+            this.AddMarker("attack", Xe, vr.Gray),
+            this.AddMarker("defend", Ze, vr.Gray),
+            this.AddMarker("combat", Je, vr.Gray),
+            this.AddMarker("chest", Qe, vr.Gray),
+            this.AddMarker("view", Ke, vr.Gray),
+            (0, Mr.Y2)()
+              ? this.AddMarker("death", $e, vr.Gray)
+              : this.AddMarker("death", Ye, vr.Gray),
+            this.AddMarker("x", $e, vr.Gray),
+            this.AddMarker("plus", et, vr.Gray),
+            this.AddMarker("minus", tt, vr.Gray),
+            this.AddMarker("info", Se, vr.Gray),
+            this.AddMarker("bolt", be, vr.Gray),
+            this.AddMarker("caution", fe, vr.Gray),
+            this.AddMarker("completed", ye, vr.Gray),
+            this.AddMarker("checkmark", Me, vr.Gray),
+            this.AddMarker("effect", Ce, vr.Gray),
+            this.AddMarker("purchase", ve, vr.Gray),
+            this.AddMarker("ribbon", Te, vr.Gray),
+            this.AddMarker("scroll", Be, vr.Gray),
+            this.AddMarker("crown", we, vr.Gray),
+            this.AddMarker("starburst", Re, vr.Gray),
+            this.AddMarker("flag", Ge, vr.Gray),
+            this.AddMarker("cart", Ie, vr.Gray),
+            this.AddMarker("timer", Ee, vr.Gray),
+            this.AddMarker("chat", Pe, vr.Gray),
+            this.AddMarker("wrench", ze, vr.Gray),
+            this.AddMarker("transfer", Oe, vr.Gray),
+            this.AddMarker("edit", ke, vr.Gray),
+            this.AddMarker("bookmark", De, vr.Gray),
+            this.AddMarker("invalid", We, vr.Gray),
+            this.AddMarker("star", Le, vr.Gray),
+            this.AddMarker("circle", qe, vr.Gray),
+            this.AddMarker("square", Fe, vr.Gray),
+            this.AddMarker("triangle", xe, vr.Gray),
+            this.AddMarker("heart", Ne, vr.Gray),
+            this.AddMarker("diamond", Ue, vr.Gray),
+            this.AddMarker("gem", pe, vr.Gray),
+            this.AddMarker("group", je, vr.Gray),
+            this.AddMarker("pair", Ae, vr.Gray),
+            this.AddMarker("single", He, vr.Gray),
+            this.AddMarker("trophy", _e, vr.Gray),
+            this.AddMarker("achievement", _e, vr.Gray),
+            this.AddMarker("screenshot", rt, vr.Gray);
+        }
+      }
+      function Gr(e) {
+        return Rr.Get().GetMarkerByID(e);
+      }
+      function Ir() {
+        return { func: he, color: vr.Gray };
+      }
+      function Er(e) {
+        return e && e.toLowerCase().startsWith(Cr);
+      }
+      var Pr = r(95896);
+      function zr(e) {
         let {
           entry: t,
           strMarkerIcon: r,
@@ -5396,10 +6482,10 @@
           "div",
           {
             style: null != m ? m : {},
-            className: (0, me.A)(o, {
-              [Gt.HighlightIcon]: !0,
-              [Gt.Selected]: u,
-              [Gt.Faded]: c,
+            className: (0, ce.A)(o, {
+              [Pr.HighlightIcon]: !0,
+              [Pr.Selected]: u,
+              [Pr.Faded]: c,
             }),
             onClick: (e) => {
               n && n(e);
@@ -5408,75 +6494,83 @@
             onMouseEnter: a,
             onMouseLeave: s,
           },
-          i.createElement(Et, { entry: t, strMarkerIcon: r }),
+          i.createElement(Or, { entry: t, strMarkerIcon: r }),
         );
       }
-      function Et(e) {
+      function Or(e) {
         let { entry: t, strMarkerIcon: r } = e;
-        const n = Ie().GetGameID();
-        return (0, wt.xz)(t)
-          ? i.createElement(zt, { achievementEntry: t, strGameID: n })
-          : (0, wt.In)(t)
-            ? i.createElement(Ot, null)
-            : (0, Rt.KJ)(r)
-              ? i.createElement(Pt, { entry: t, strMarkerIcon: r })
-              : i.createElement(kt, { strMarkerIcon: r, strGameID: n });
+        const n = vt().GetGameID();
+        return (0, yr.xz)(t)
+          ? i.createElement(kr, { achievementEntry: t, strGameID: n })
+          : (0, yr.In)(t)
+            ? i.createElement(Lr, null)
+            : Er(r)
+              ? i.createElement(Dr, { entry: t, strMarkerIcon: r })
+              : i.createElement(qr, { strMarkerIcon: r, strGameID: n });
       }
-      function zt(e) {
+      function kr(e) {
         const { achievementEntry: t, strGameID: r } = e,
-          n = j(new ot.VS(r).GetAppID(), t.achievement_name);
+          n = H(new rr.VS(r).GetAppID(), t.achievement_name);
         let a, s;
         if (n) (a = "white"), (s = i.createElement("img", { src: n.iconURL }));
         else {
-          const e = (0, Rt.Xw)();
-          (a = (0, Rt.b9)(e.color)), (s = e.func({}));
+          const e = { func: _e, color: vr.White };
+          (a = Tr(e.color)), (s = e.func({}));
         }
         return i.createElement(
           "div",
-          { className: Gt.Marker, style: { color: a } },
+          { className: Pr.Marker, style: { color: a } },
           s,
         );
       }
-      function Pt(e) {
+      function Dr(e) {
         const { entry: t, strMarkerIcon: r } = e;
         let n, a;
-        (0, wt.N$)(t)
-          ? ((n = (0, Rt.DP)()), (a = Gt.CustomMarker))
-          : (n = (0, Rt.o1)(r));
-        const s = (0, Rt.b9)(n.color);
+        (0, yr.N$)(t)
+          ? ((n = { func: he, color: vr.Blue }), (a = Pr.CustomMarker))
+          : (n = Gr(r));
+        const s = Tr(n.color);
         return i.createElement(
-          Dt,
+          xr,
           { color: s },
           i.createElement("div", { className: a }, n.func({})),
         );
       }
-      function Ot(e) {
-        const t = (0, Rt.o1)("steam_invalid"),
-          r = (0, Rt.b9)(t.color);
+      function Wr(e) {
+        const { icon: t, className: r } = e;
+        return Gr(t).func({ className: r });
+      }
+      function Lr(e) {
+        const t = Gr("steam_invalid"),
+          r = Tr(t.color);
         return i.createElement(
-          Dt,
+          xr,
           { color: r },
           i.createElement("div", null, t.func({})),
         );
       }
-      function kt(e) {
+      function qr(e) {
         const { strMarkerIcon: t, strGameID: r } = e;
         return i.createElement(
-          Dt,
+          xr,
           null,
-          i.createElement(Wt, { icon: t, gameID: r }),
+          i.createElement(Fr, { icon: t, gameID: r }),
         );
       }
-      function Wt(e) {
+      function Fr(e) {
         const { icon: t, gameID: r, className: n } = e,
           a = (function (e, t) {
-            return (0, W.q3)(() =>
-              Me.Get().GetMarkerStore().GetGameMarkerSVGById(e, t),
-            );
-          })(new ot.VS(r).GetAppID(), t);
+            return L
+              ? L(e, t)
+              : (console.error(
+                  "useGameMarkerFromID called in a context where the hook isn't defined.",
+                ),
+                null);
+          })(new rr.VS(r).GetAppID(), t);
+        if (Er(t)) return i.createElement(Wr, { ...e });
         if (null === a) return null;
         if (void 0 === a) {
-          const e = (0, Rt.K_)();
+          const e = Ir();
           return i.createElement("div", { className: n }, e.func({}));
         }
         let s = "";
@@ -5490,38 +6584,38 @@
             {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
-              className: (0, me.A)(n, Gt.GameMarkerSVG),
+              className: (0, ce.A)(n, Pr.GameMarkerSVG),
             },
             i.createElement("g", { dangerouslySetInnerHTML: { __html: s } }),
           )
         );
       }
-      function Dt(e) {
+      function xr(e) {
         const { children: t, color: r } = e;
         return i.createElement(
           "div",
-          { className: Gt.MarkerCtn },
+          { className: Pr.MarkerCtn },
           i.createElement(
             "div",
-            { className: Gt.Marker, style: r ? { color: r } : null },
+            { className: Pr.Marker, style: r ? { color: r } : null },
             t,
           ),
         );
       }
-      var Lt = r(36890),
-        qt = r.n(Lt);
-      const Ft = parseInt(qt().animationDuration);
-      function xt() {
-        const e = Ie(),
-          t = (0, W.q3)(() => e.GetDisplayHighlightEntry()),
+      var Nr = r(36890),
+        Ur = r.n(Nr);
+      const jr = parseInt(Ur().animationDuration);
+      function Ar() {
+        const e = vt(),
+          t = (0, D.q3)(() => e.GetDisplayHighlightEntry()),
           [r, n] = (0, i.useState)(null),
           a = i.useRef(0);
         return (
           (0, i.useEffect)(() => {
             if (
               (null == t ? void 0 : t.entry) &&
-              !(0, wt.hT)(t.entry) &&
-              !(0, wt.Te)(t.entry)
+              !(0, yr.hT)(t.entry) &&
+              !(0, yr.Te)(t.entry)
             )
               return (
                 n(t.entry),
@@ -5529,49 +6623,49 @@
                   () => {
                     e.SetDisplayHighlightEntry(null);
                   },
-                  t.duration ? t.duration : Ft,
+                  t.duration ? t.duration : jr,
                 )),
                 () => window.clearTimeout(a.current)
               );
             n(null);
           }, [t, e]),
-          r ? i.createElement(Nt, { entry: r }) : null
+          r ? i.createElement(Hr, { entry: r }) : null
         );
       }
-      function Nt(e) {
+      function Hr(e) {
         const { entry: t } = e,
-          r = Ie(),
-          n = (0, W.q3)(() => r.GetGameID()),
+          r = vt(),
+          n = (0, D.q3)(() => r.GetGameID()),
           a = r.GetGameRecordingVideo(),
-          s = (0, W.q3)(() => r.GetRecordingID()),
-          l = (0, W.q3)(() => a.IsInitialized()),
+          s = (0, D.q3)(() => r.GetRecordingID()),
+          l = (0, D.q3)(() => a.IsInitialized()),
           o = a.GetVideoHeight(),
           m = a.GetVideoWidth(),
           c = s && l && o > 0 && m > 0 ? { height: o, width: m } : {};
         let u;
         return (
-          (0, wt.xz)(t)
-            ? (u = i.createElement(Ut, { entry: t, strGameID: n }))
-            : (0, wt.N$)(t)
-              ? (u = i.createElement(jt, {
+          (0, yr.xz)(t)
+            ? (u = i.createElement(Vr, { entry: t, strGameID: n }))
+            : (0, yr.N$)(t)
+              ? (u = i.createElement(Xr, {
                   key: t.id,
                   entry: t,
                   strMarkerIcon: t.icon,
                   title: t.title
                     ? t.title
-                    : (0, ce.we)("#Marker_UserMarker_Title"),
+                    : (0, ue.we)("#Marker_UserMarker_Title"),
                   description: t.description || "",
                 }))
-              : (0, wt.sX)(t)
-                ? (u = i.createElement(jt, {
+              : (0, yr.sX)(t)
+                ? (u = i.createElement(Xr, {
                     key: t.id,
                     entry: t,
                     strMarkerIcon: t.icon,
-                    title: (0, ce.we)("#MediaManager_ItemType_Screenshot"),
+                    title: (0, ue.we)("#MediaManager_ItemType_Screenshot"),
                     description: "",
                   }))
-                : (0, wt.eJ)(t) &&
-                  (u = i.createElement(jt, {
+                : (0, yr.eJ)(t) &&
+                  (u = i.createElement(Xr, {
                     key: t.id,
                     entry: t,
                     strMarkerIcon: t.icon,
@@ -5580,17 +6674,17 @@
                   })),
           i.createElement(
             "div",
-            { className: qt().BannerVideoOverlay, style: c },
+            { className: Ur().BannerVideoOverlay, style: c },
             u,
           )
         );
       }
-      function Ut(e) {
+      function Vr(e) {
         var t, r;
         const { entry: n, strGameID: a } = e,
-          s = j(new ot.VS(a).GetAppID(), n.achievement_name);
+          s = H(new rr.VS(a).GetAppID(), n.achievement_name);
         return s
-          ? i.createElement(jt, {
+          ? i.createElement(Xr, {
               key: n.id,
               entry: n,
               strMarkerIcon: "steam_achievement",
@@ -5600,45 +6694,45 @@
             })
           : null;
       }
-      function jt(e) {
+      function Xr(e) {
         const { entry: t, strMarkerIcon: r, title: n, description: a } = e;
         return i.createElement(
           "div",
-          { className: qt().PlayerHighlightBanner },
+          { className: Ur().PlayerHighlightBanner },
           i.createElement(
             "div",
-            { className: qt().BannerContents },
+            { className: Ur().BannerContents },
             i.createElement(
               "div",
-              { className: qt().HighlightIcon },
-              i.createElement(Et, { entry: t, strMarkerIcon: r }),
+              { className: Ur().HighlightIcon },
+              i.createElement(Or, { entry: t, strMarkerIcon: r }),
             ),
             i.createElement(
               "div",
-              { className: qt().InfoBox },
+              { className: Ur().InfoBox },
               n &&
-                i.createElement("div", { className: qt().HighlightTitle }, n),
-              a && i.createElement("div", { className: qt().HighlightDesc }, a),
+                i.createElement("div", { className: Ur().HighlightTitle }, n),
+              a && i.createElement("div", { className: Ur().HighlightDesc }, a),
             ),
           ),
         );
       }
-      var At = r(45699),
-        Ht = r(76970),
-        Vt = r.n(Ht),
-        Xt = r(91675);
-      const Zt = parseInt(Vt().animationDuration);
-      function Jt() {
-        const e = Ie(),
+      var Zr = r(45699),
+        Qr = r(76970),
+        Jr = r.n(Qr),
+        Kr = r(91675);
+      const Yr = parseInt(Jr().animationDuration);
+      function $r() {
+        const e = vt(),
           t = e.GetGameRecordingVideo(),
-          r = (0, W.q3)(() => e.GetRecordingID()),
-          n = (0, W.q3)(() => t.IsInitialized()),
+          r = (0, D.q3)(() => e.GetRecordingID()),
+          n = (0, D.q3)(() => t.IsInitialized()),
           a = t.GetVideoHeight(),
           s = t.GetVideoWidth(),
           l = r && n && a > 0 && s > 0 ? { height: a, width: s } : {},
           o = i.useRef(0),
-          m = (0, W.q3)(() => e.GetRelativeTimeForDisplay()),
-          c = (0, W.q3)(() => e.GetGameRecordingVideo().IsInitialized()),
+          m = (0, D.q3)(() => e.GetRelativeTimeForDisplay()),
+          c = (0, D.q3)(() => e.GetGameRecordingVideo().IsInitialized()),
           u = (0, i.useMemo)(() => {
             if (isNaN(m) || !c) return null;
             const t = e.ConvertGlobalOffsetToTimelineRelativeOffset(m);
@@ -5647,7 +6741,7 @@
                 t.strTimelineID,
                 t.nTimelineOffsetMS.valMS,
               );
-              return (0, Xt.dt)(r / 1e3, !1, !0);
+              return (0, Kr.dt)(r / 1e3, !1, !0);
             }
             return null;
           }, [c, m, e]);
@@ -5657,7 +6751,7 @@
               return (
                 (o.current = window.setTimeout(() => {
                   e.ClearRelativeTimeDisplay();
-                }, Zt)),
+                }, Yr)),
                 () => window.clearTimeout(o.current)
               );
           }, [m, e]),
@@ -5665,16 +6759,16 @@
             ? null
             : i.createElement(
                 "div",
-                { className: Vt().RelativeTimeContainer, style: l },
+                { className: Jr().RelativeTimeContainer, style: l },
                 i.createElement(
                   "div",
-                  { className: Vt().RelativeTime, key: u },
+                  { className: Jr().RelativeTime, key: u },
                   u,
                 ),
               )
         );
       }
-      function Qt(e) {
+      function ei(e) {
         const {
             disableSound: t,
             positionAbsolute: r = !0,
@@ -5682,46 +6776,46 @@
             style: a,
             refFullscreen: s,
           } = e,
-          l = Ie(),
+          l = vt(),
           o =
             ((m = l.StopPlayback),
             (c = l.SetVideoElement),
-            (0, Z.QS)((e) => (c(e), () => m()), [c]));
+            (0, J.QS)((e) => (c(e), () => m()), [c]));
         var m, c;
         const u = l.GetGameRecordingVideo(),
-          d = (0, W.q3)(() => l.GetRecordingID()),
-          g = (0, W.q3)(() => u.GetPlaybackError()),
-          f = (0, W.q3)(() => "Overlay" === l.GetRecordingMode()),
+          d = (0, D.q3)(() => l.GetRecordingID()),
+          g = (0, D.q3)(() => u.GetPlaybackError()),
+          f = (0, D.q3)(() => "Overlay" === l.GetRecordingMode()),
           p = (function () {
-            const e = Ie(),
-              t = (0, W.q3)(() => e.GetGlobalMSPlaytime()),
-              { nGlobalEndMS: r, nGlobalStartMS: i } = Ne(),
+            const e = vt(),
+              t = (0, D.q3)(() => e.GetGlobalMSPlaytime()),
+              { nGlobalEndMS: r, nGlobalStartMS: i } = Dt(),
               n = e.GetGameRecordingVideo();
             return (
-              !((0, W.q3)(() => n.GetPlaybackError()) || !t || !i || !r) &&
+              !((0, D.q3)(() => n.GetPlaybackError()) || !t || !i || !r) &&
               t.valMS >= i.valMS &&
               t.valMS <= r.valMS
             );
           })(),
-          h = Ze(),
+          h = Ut(),
           _ = g || !d,
           S = i.useRef();
-        let b = (0, Z.Ue)(o, n);
+        let b = (0, J.Ue)(o, n);
         const y = (function () {
-          const e = Ie(),
-            t = Qe(),
-            r = (0, W.q3)(() => !e.ShouldModeShowClipControls()),
-            n = A(),
-            { onMarkerCreated: a } = lt();
+          const e = vt(),
+            t = At(),
+            r = (0, D.q3)(() => !e.ShouldModeShowClipControls()),
+            n = V(),
+            { onMarkerCreated: a } = tr();
           return i.useCallback(
             (s, l) => {
               if (r || n) return;
-              const o = i.createElement(Tt, {
+              const o = i.createElement(Sr, {
                 onMarkerCreated: a,
                 playbackCoordinator: e,
                 fnSetSelectionClipRange: t,
               });
-              (0, Ye.lX)(o, s, l);
+              (0, Vt.lX)(o, s, l);
             },
             [r, n, a, e, t],
           );
@@ -5737,14 +6831,14 @@
             },
             [_, y],
           ),
-          C = !We.TS.IN_STEAMUI && !!e.autoPlay;
-        let v = (0, me.A)(
-          ze().GameRecordingPlayer,
-          _ && ze().NoVideo,
-          r && ze().PositionAbsolute,
-          h && ze().ClippingMode,
-          f && ze().Overlay,
-          p && ze().PlayingClippedRegion,
+          C = !It.TS.IN_STEAMUI && !!e.autoPlay;
+        let v = (0, ce.A)(
+          Bt().GameRecordingPlayer,
+          _ && Bt().NoVideo,
+          r && Bt().PositionAbsolute,
+          h && Bt().ClippingMode,
+          f && Bt().Overlay,
+          p && Bt().PlayingClippedRegion,
         );
         return i.createElement(
           "div",
@@ -5757,7 +6851,7 @@
             onContextMenu: M,
             style: a,
             onDoubleClick: function () {
-              d && s.current && (0, ut.Vr)(s.current);
+              d && s.current && (0, ar.Vr)(s.current);
             },
           },
           i.createElement("video", {
@@ -5767,23 +6861,23 @@
             autoPlay: C,
             playsInline: C,
           }),
-          i.createElement(er, { player: u }),
-          i.createElement(Kt, null),
-          i.createElement(Yt, null),
-          i.createElement($t, null),
-          !d && i.createElement(tr, null),
-          i.createElement(xt, null),
-          i.createElement(Jt, null),
+          i.createElement(ni, { player: u }),
+          i.createElement(ti, null),
+          i.createElement(ri, null),
+          i.createElement(ii, null),
+          !d && i.createElement(ai, null),
+          i.createElement(Ar, null),
+          i.createElement($r, null),
         );
       }
-      function Kt() {
-        const e = Ie(),
-          t = Pe.fi.Get().IsDebugLogEnabled("GR"),
-          r = (0, W.q3)(() => e.GetPlaybackStats());
+      function ti() {
+        const e = vt(),
+          t = wt.fi.Get().IsDebugLogEnabled("GR"),
+          r = (0, D.q3)(() => e.GetPlaybackStats());
         return t && r
           ? i.createElement(
               "div",
-              { className: ze().PerfCtnVideo },
+              { className: Bt().PerfCtnVideo },
               i.createElement(
                 "div",
                 null,
@@ -5823,18 +6917,18 @@
             )
           : null;
       }
-      function Yt() {
-        const e = Pe.fi.Get().IsDebugLogEnabled("GR"),
-          t = Ie(),
+      function ri() {
+        const e = wt.fi.Get().IsDebugLogEnabled("GR"),
+          t = vt(),
           r =
-            ((0, W.q3)(() => {
+            ((0, D.q3)(() => {
               t.GetGlobalMSPlaytime();
             }),
-            De.Get().GetPerfMeasures());
+            Et.Get().GetPerfMeasures());
         return e && r
           ? i.createElement(
               "div",
-              { className: ze().PerfCtnThumbnails },
+              { className: Bt().PerfCtnThumbnails },
               i.createElement(
                 "div",
                 null,
@@ -5874,49 +6968,49 @@
             )
           : null;
       }
-      function $t() {
-        const e = Ie(),
+      function ii() {
+        const e = vt(),
           t = e.GetGameRecordingVideo(),
           r = t.GetVideoHeight(),
-          n = (0, W.q3)(() => t.BVideoElementWaiting()),
-          a = (0, W.q3)(() => t.IsPaused()),
-          s = (0, W.q3)(() => t.GetPlaybackError()),
-          l = (0, W.q3)(() => t.IsInitialized());
-        return !(0, W.q3)(() => e.GetRecordingID()) || (l && !n) || s || a
+          n = (0, D.q3)(() => t.BVideoElementWaiting()),
+          a = (0, D.q3)(() => t.IsPaused()),
+          s = (0, D.q3)(() => t.GetPlaybackError()),
+          l = (0, D.q3)(() => t.IsInitialized());
+        return !(0, D.q3)(() => e.GetRecordingID()) || (l && !n) || s || a
           ? null
           : i.createElement(
               "div",
-              { className: ze().LoadingSpinner, style: { height: r } },
-              i.createElement(qe.y$y, null),
+              { className: Bt().LoadingSpinner, style: { height: r } },
+              i.createElement(zt.y$y, null),
             );
       }
-      function er(e) {
+      function ni(e) {
         const { player: t } = e,
-          r = (0, W.q3)(() => t.GetPlaybackError());
-        (0, W.q3)(() => t.GetMediaTypeError());
+          r = (0, D.q3)(() => t.GetPlaybackError());
+        (0, D.q3)(() => t.GetMediaTypeError());
         let n = "";
         switch (r) {
-          case H.DownloadFailed:
-          case H.PlaybackError:
-          case H.MediaTypeError:
+          case X.DownloadFailed:
+          case X.PlaybackError:
+          case X.MediaTypeError:
             n = "#GameRecording_PlayerError_Generic";
         }
         return n
           ? i.createElement(
               "div",
-              { className: ze().PlayerError },
-              i.createElement("div", { className: ze().Text }, (0, ce.we)(n)),
+              { className: Bt().PlayerError },
+              i.createElement("div", { className: Bt().Text }, (0, ue.we)(n)),
             )
           : null;
       }
-      function tr() {
-        const e = Ie(),
-          t = (0, W.q3)(() => e.GetGamepadMode()),
-          { onNavigateToClip: r, onNavigateToFAQ: n } = lt(),
-          a = (0, W.q3)(() => e.GetGlobalMSPlaytime()),
+      function ai() {
+        const e = vt(),
+          t = (0, D.q3)(() => e.GetGamepadMode()),
+          { onNavigateToClip: r, onNavigateToFAQ: n } = tr(),
+          a = (0, D.q3)(() => e.GetGlobalMSPlaytime()),
           s = e.GetClosestPreviousRecordingForGlobalMS(a),
           l = e.GetClosestNextRecordingForGlobalMS(a),
-          o = (0, W.q3)(() => e.GetClipsAtGlobalMS(a)),
+          o = (0, D.q3)(() => e.GetClipsAtGlobalMS(a)),
           m = (0, i.useCallback)(
             (t) => {
               if (s) {
@@ -5938,7 +7032,7 @@
           u = (0, i.useCallback)(
             (e) => {
               o.length > 0 &&
-                (J.y.ReportTrackedAction(
+                (K.y.ReportTrackedAction(
                   "/GameRecording/Tooltip/ViewClip/PlayerNoContent",
                 ),
                 r(o[0].strClipID),
@@ -5948,105 +7042,105 @@
           );
         return i.createElement(
           "div",
-          { className: ze().PlayerError },
+          { className: Bt().PlayerError },
           i.createElement(
             "div",
-            { className: ze().Title },
-            (0, ce.we)("#GameRecording_PlayerNoContent"),
+            { className: Bt().Title },
+            (0, ue.we)("#GameRecording_PlayerNoContent"),
           ),
           i.createElement(
             "div",
-            { className: ze().Description },
-            (0, ce.oW)(
+            { className: Bt().Description },
+            (0, ue.oW)(
               "#GameRecording_PlayerNoContentDescription",
-              i.createElement(At.Ii, { href: "#", onClick: n }),
+              i.createElement(Zr.Ii, { href: "#", onClick: n }),
             ),
           ),
           !t &&
             i.createElement(
               "div",
-              { className: ze().Buttons },
+              { className: Bt().Buttons },
               i.createElement(
-                ue.he,
+                de.he,
                 {
                   direction: "bottom",
-                  toolTipContent: (0, ce.we)(
+                  toolTipContent: (0, ue.we)(
                     s
                       ? "#GameRecording_PlayerNoContentJumpPrevious_tooltip"
                       : "#GameRecording_PlayerNoContentJumpNoContent_tooltip",
                   ),
                 },
                 i.createElement(
-                  ge.Z,
+                  dt.Z,
                   {
-                    className: (0, me.A)(
-                      ze().Button,
-                      ze().JumpPrevious,
-                      !s && ze().DisableButton,
+                    className: (0, ce.A)(
+                      Bt().Button,
+                      Bt().JumpPrevious,
+                      !s && Bt().DisableButton,
                     ),
                     onClick: m,
                     onActivate: m,
                   },
-                  (0, ce.we)("#GameRecording_PlayerNoContentJumpPrevious"),
+                  (0, ue.we)("#GameRecording_PlayerNoContentJumpPrevious"),
                 ),
               ),
               o.length > 0 &&
                 i.createElement(
-                  ue.he,
+                  de.he,
                   {
                     direction: "bottom",
-                    toolTipContent: (0, ce.we)(
+                    toolTipContent: (0, ue.we)(
                       "#GameRecording_PlayerNoContentSeeClip_tooltip",
                     ),
                   },
                   i.createElement(
-                    ge.Z,
+                    dt.Z,
                     {
                       onClick: u,
                       onActivate: u,
-                      className: (0, me.A)(ze().Button, ze().GoToClip),
+                      className: (0, ce.A)(Bt().Button, Bt().GoToClip),
                     },
-                    (0, ce.we)("#GameRecording_PlayerNoContentSeeClip"),
+                    (0, ue.we)("#GameRecording_PlayerNoContentSeeClip"),
                   ),
                 ),
               i.createElement(
-                ue.he,
+                de.he,
                 {
                   direction: "bottom",
-                  toolTipContent: (0, ce.we)(
+                  toolTipContent: (0, ue.we)(
                     l
                       ? "#GameRecording_PlayerNoContentJumpNext_tooltip"
                       : "#GameRecording_PlayerNoContentJumpNoContent_tooltip",
                   ),
                 },
                 i.createElement(
-                  ge.Z,
+                  dt.Z,
                   {
-                    className: (0, me.A)(
-                      ze().Button,
-                      ze().JumpNext,
-                      !l && ze().DisableButton,
+                    className: (0, ce.A)(
+                      Bt().Button,
+                      Bt().JumpNext,
+                      !l && Bt().DisableButton,
                     ),
                     onClick: c,
                     onActivate: c,
                   },
-                  (0, ce.we)("#GameRecording_PlayerNoContentJumpNext"),
+                  (0, ue.we)("#GameRecording_PlayerNoContentJumpNext"),
                 ),
               ),
             ),
         );
       }
-      var rr = r(8959),
-        ir = r(59254);
-      const nr = [1e3, 5e3, 3e4, 6e4, 15e4, 3e5, 9e5, 18e5],
-        ar = i.memo(function (e) {
-          const t = nt(),
-            r = (0, W.q3)(() => t.GetVisibleTimelines());
+      var si = r(8959),
+        li = r(59254);
+      const oi = [1e3, 5e3, 3e4, 6e4, 15e4, 3e5, 9e5, 18e5],
+        mi = i.memo(function (e) {
+          const t = Yt(),
+            r = (0, D.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(sr, {
+              i.createElement(ci, {
                 key: e.timelineID,
                 msVisibleStart: e.msVisibleStart,
                 pxVisibleDuration: e.pxVisibleDuration,
@@ -6056,7 +7150,7 @@
             ),
           );
         }),
-        sr = i.memo(function (e) {
+        ci = i.memo(function (e) {
           const {
               msVisibleStart: t,
               msTimelineStart: r,
@@ -6064,15 +7158,15 @@
               pxVisibleStart: a,
             } = e,
             { msTickSpacing: s, pxTickSpacing: l } = (function () {
-              const e = nt(),
-                t = (0, W.q3)(() => e.GetCurrentZoomScale()),
+              const e = Yt(),
+                t = (0, D.q3)(() => e.GetCurrentZoomScale()),
                 r = 300,
                 i = (e) => Math.abs(r - e / t),
-                n = nr.reduce((e, t) => (i(e) - i(t) < 0 ? e : t)) / 20,
+                n = oi.reduce((e, t) => (i(e) - i(t) < 0 ? e : t)) / 20,
                 a = n / t;
               return { msTickSpacing: n, pxTickSpacing: a };
             })(),
-            o = nt(),
+            o = Yt(),
             m = Math.ceil((t - r) / s),
             c = r + m * s,
             u = o.ConvertGlobalMSToGlobalPXOffset(c),
@@ -6091,11 +7185,11 @@
                 i.Fragment,
                 null,
                 i.createElement("div", {
-                  className: ir.TimelineBacking,
+                  className: li.TimelineBacking,
                   style: { transform: `translateX(${a}px)`, width: n },
                 }),
                 d.map((e) =>
-                  i.createElement(lr, {
+                  i.createElement(ui, {
                     key: e.key,
                     timelineRelativeIndex: e.iTimelineRelativeTick,
                     globalOffsetPX: e.offsetPX,
@@ -6104,20 +7198,20 @@
               )
             : null;
         });
-      function lr(e) {
+      function ui(e) {
         const { globalOffsetPX: t, timelineRelativeIndex: r } = e,
-          n = r % 20 == 0 ? ir.Major : ir.Minor;
+          n = r % 20 == 0 ? li.Major : li.Minor;
         return i.createElement(
           "div",
           {
-            className: ir.TimeTick,
+            className: li.TimeTick,
             style: { transform: `translateX(${t}px)` },
           },
-          i.createElement("div", { className: (0, me.A)(ir.TickLine, n) }),
+          i.createElement("div", { className: (0, ce.A)(li.TickLine, n) }),
         );
       }
-      var or = r(23533);
-      class mr {
+      var di = r(23533);
+      class gi {
         constructor(e) {
           (this.m_reservations = []), (this.m_nIconWidth = e);
         }
@@ -6137,11 +7231,11 @@
           return this.m_reservations.splice(r, 0, t), !0;
         }
       }
-      var cr = r(41972),
-        ur = r(71298),
-        dr = r(21273),
-        gr = r(33737);
-      function fr(e) {
+      var fi = r(41972),
+        pi = r(71298),
+        hi = r(49300),
+        _i = r(33737);
+      function Si(e) {
         const {
             closeModal: t,
             strTimelineID: r,
@@ -6151,43 +7245,43 @@
           } = e,
           [l, o] = i.useState(n.title || ""),
           [m, c] = i.useState(n.description || ""),
-          u = (0, ur.vs)();
+          u = (0, pi.vs)();
         return u.bLoading
-          ? i.createElement(ur.Hh, {
+          ? i.createElement(pi.Hh, {
               state: u,
-              strDialogTitle: (0, ce.we)("#Marker_Dialog"),
+              strDialogTitle: (0, ue.we)("#Marker_Dialog"),
               closeModal: t,
             })
           : i.createElement(
-              dr.o0,
+              hi.o0,
               {
-                strTitle: (0, ce.we)("#Marker_Dialog"),
-                strMiddleButtonText: (0, ce.we)("#Marker_Action_Delete"),
+                strTitle: (0, ue.we)("#Marker_Dialog"),
+                strMiddleButtonText: (0, ue.we)("#Marker_Action_Delete"),
                 onCancel: t,
                 onOK: async () => {
                   u.fnSetLoading(!0);
                   (await a.UpdateUserMarker(r, n, l, m))
                     ? t()
                     : (u.fnSetError(!0),
-                      u.fnSetStrError((0, ce.we)("#Marker_UpdateFailed")));
+                      u.fnSetStrError((0, ue.we)("#Marker_UpdateFailed")));
                 },
               },
-              i.createElement(gr.pd, {
+              i.createElement(_i.pd, {
                 type: "text",
                 value: l,
                 onChange: (e) => o(e.currentTarget.value),
-                label: (0, ce.we)("#Marker_Title"),
+                label: (0, ue.we)("#Marker_Title"),
               }),
-              i.createElement(gr.pd, {
+              i.createElement(_i.pd, {
                 type: "text",
                 value: m,
                 onChange: (e) => c(e.currentTarget.value),
-                label: (0, ce.we)("#Marker_Description"),
+                label: (0, ue.we)("#Marker_Description"),
               }),
             );
       }
-      var pr = r(738);
-      function hr(e) {
+      var bi = r(738);
+      function yi(e) {
         const {
             playbackCoordinator: t,
             timelineView: r,
@@ -6198,15 +7292,15 @@
             onNavigateToClip: o,
             onNavigateToScreenshot: m,
           } = e,
-          c = (0, W.q3)(() => r.ConvertGlobalMSToClipOrNone(n.nGlobalMS.valMS)),
-          u = (0, W.q3)(() =>
+          c = (0, D.q3)(() => r.ConvertGlobalMSToClipOrNone(n.nGlobalMS.valMS)),
+          u = (0, D.q3)(() =>
             t.ConvertGlobaOffsetToRecordingAndRelativeOffset(n.nGlobalMS.valMS),
           ),
-          d = Bt(r),
+          d = br(r),
           g = (e) => {
-            let r = _r,
-              i = Sr;
-            (0, wt.zG)(n.entry) && ((r = 0), (i = parseInt(n.entry.duration)));
+            let r = Mi,
+              i = Ci;
+            (0, yr.zG)(n.entry) && ((r = 0), (i = parseInt(n.entry.duration)));
             const [s, l] = t
               .GetLoader()
               .CreateGlobalRangeForTimeline(
@@ -6215,67 +7309,67 @@
                 r,
                 i,
               );
-            t.SetPlaytimeFromGlobalMS((0, Y.Sb)(s)),
+            t.SetPlaytimeFromGlobalMS((0, ee.Sb)(s)),
               null == a || a(n.entry.id, n.strTimelineID, s, l),
-              J.y.ReportTrackedAction(
+              K.y.ReportTrackedAction(
                 "/GameRecording/HighlightCtxMenu/ClipFromHighlight",
               ),
               e.stopPropagation();
           },
           f = () => {
             c &&
-              (J.y.ReportTrackedAction(
+              (K.y.ReportTrackedAction(
                 `/GameRecording/MarkerCtxMenu/ViewClip/${n.entry.type}`,
               ),
               o && o(c.clipID));
           },
           p = (e) => {
-            if (!(0, wt.N$)(n.entry)) return;
-            J.y.ReportTrackedAction(
+            if (!(0, yr.N$)(n.entry)) return;
+            K.y.ReportTrackedAction(
               `/GameRecording/HighlightCtxMenu/Marker/Edit/${n.entry.type}`,
             );
-            let r = i.createElement(fr, {
+            let r = i.createElement(Si, {
               entry: n.entry,
               playbackCoordinator: t,
               fnClearSelection: s,
               strTimelineID: n.strTimelineID,
             });
-            (0, pr.pg)(r, (0, ut.uX)(e)),
+            (0, bi.pg)(r, (0, ar.uX)(e)),
               e.stopPropagation(),
               e.preventDefault();
           },
           h = (e) => {
-            (0, wt.N$)(n.entry) &&
-              (J.y.ReportTrackedAction(
+            (0, yr.N$)(n.entry) &&
+              (K.y.ReportTrackedAction(
                 `/GameRecording/HighlightCtxMenu/Marker/Delete/${n.entry.type}`,
               ),
               t.RemoveUserMarker(n.strTimelineID, n.entry.id));
           },
           _ = () => {
             var e;
-            (0, wt.sX)(n.entry) &&
+            (0, yr.sX)(n.entry) &&
               (null === (e = n.entry) || void 0 === e ? void 0 : e.handle) &&
-              (J.y.ReportTrackedAction(
+              (K.y.ReportTrackedAction(
                 "/GameRecording/HighlightCtxMenu/Screenshot",
               ),
               m(r.GetGameID(), n.entry.handle));
           };
         let S = [];
         return (
-          (0, wt.N$)(n.entry) &&
+          (0, yr.N$)(n.entry) &&
             S.push(
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   key: "edit",
                   onSelected: p,
-                  className: cr.HighlightContextMenuItem,
+                  className: fi.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(cr.MenuItem, cr.EditMarker) },
-                  i.createElement(de.ff, null),
-                  (0, ce.we)("#Marker_Action_Edit"),
+                  { className: (0, ce.A)(fi.MenuItem, fi.EditMarker) },
+                  i.createElement(ke, null),
+                  (0, ue.we)("#Marker_Action_Edit"),
                 ),
               ),
             ),
@@ -6283,51 +7377,51 @@
             !l &&
             S.push(
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   key: "clip",
                   onSelected: g,
-                  className: cr.HighlightContextMenuItem,
+                  className: fi.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(cr.MenuItem, cr.CreateClip) },
-                  i.createElement(de.Wd, null),
-                  (0, ce.we)("#TimelineDialog_ClipVideo"),
+                  { className: (0, ce.A)(fi.MenuItem, fi.CreateClip) },
+                  i.createElement(at, null),
+                  (0, ue.we)("#TimelineDialog_ClipVideo"),
                 ),
               ),
             ),
-          (0, wt.N$)(n.entry) &&
+          (0, yr.N$)(n.entry) &&
             S.push(
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   key: "delete",
                   onSelected: h,
-                  className: cr.HighlightContextMenuItem,
+                  className: fi.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(cr.MenuItem, cr.DeleteMarker) },
-                  i.createElement(qe.lMJ, null),
-                  (0, ce.we)("#Marker_Action_Delete"),
+                  { className: (0, ce.A)(fi.MenuItem, fi.DeleteMarker) },
+                  i.createElement(zt.lMJ, null),
+                  (0, ue.we)("#Marker_Action_Delete"),
                 ),
               ),
             ),
-          (0, wt.sX)(n.entry) &&
+          (0, yr.sX)(n.entry) &&
             S.push(
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   key: "view_screenshot",
                   onSelected: _,
-                  className: cr.HighlightContextMenuItem,
+                  className: fi.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(cr.MenuItem, cr.ViewScreenshot) },
-                  i.createElement(de.pw, null),
-                  (0, ce.we)("#TimelineDialog_ViewScreenshot"),
+                  { className: (0, ce.A)(fi.MenuItem, fi.ViewScreenshot) },
+                  i.createElement(rt, null),
+                  (0, ue.we)("#TimelineDialog_ViewScreenshot"),
                 ),
               ),
             ),
@@ -6335,26 +7429,26 @@
             f &&
             S.push(
               i.createElement(
-                Ke.kt,
+                Ht.kt,
                 {
                   key: "view_clip",
                   onSelected: f,
-                  className: cr.HighlightContextMenuItem,
+                  className: fi.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(cr.MenuItem, cr.ViewClip) },
-                  i.createElement(de.ai, null),
-                  (0, ce.we)("#TimelineDialog_ViewClip"),
+                  { className: (0, ce.A)(fi.MenuItem, fi.ViewClip) },
+                  i.createElement(ge, null),
+                  (0, ue.we)("#TimelineDialog_ViewClip"),
                 ),
               ),
             ),
-          S.length ? i.createElement(Ke.tz, { refInstance: d }, S) : null
+          S.length ? i.createElement(Ht.tz, { refInstance: d }, S) : null
         );
       }
-      const _r = 5e3,
-        Sr = 3e3;
-      function br(e) {
+      const Mi = 5e3,
+        Ci = 3e3;
+      function vi(e) {
         var t;
         const {
             markerInfo: r,
@@ -6366,23 +7460,23 @@
             faded: m,
           } = e,
           c = r.nGlobalMS,
-          u = (0, W.q3)(() => n.ConvertGlobalMSToGlobalPXOffset(c.valMS)),
-          d = (0, W.q3)(() => {
+          u = (0, D.q3)(() => n.ConvertGlobalMSToGlobalPXOffset(c.valMS)),
+          d = (0, D.q3)(() => {
             const e = n.GetThumbnailComponent();
-            return e && e !== $e.Highlight;
+            return e && e !== Xt.Highlight;
           }),
           g = (function () {
-            const e = nt(),
-              t = Ie(),
-              { setSelectedMarker: r } = Xe(),
-              n = Je(),
-              { onNavigateToClip: a, onNavigateToScreenshot: s } = lt(),
-              l = A(),
-              o = (0, W.q3)(() => !t.ShouldModeShowClipControls());
+            const e = Yt(),
+              t = vt(),
+              { setSelectedMarker: r } = Nt(),
+              n = jt(),
+              { onNavigateToClip: a, onNavigateToScreenshot: s } = tr(),
+              l = V(),
+              o = (0, D.q3)(() => !t.ShouldModeShowClipControls());
             return i.useCallback(
               (m, c, u) => {
                 if (o) return;
-                const d = i.createElement(hr, {
+                const d = i.createElement(yi, {
                   markerInfo: c,
                   playbackCoordinator: t,
                   timelineView: e,
@@ -6392,12 +7486,12 @@
                   bLowDiskSpace: l,
                   clearRange: n,
                 });
-                (0, Ye.lX)(d, m, u);
+                (0, Vt.lX)(d, m, u);
               },
               [o, l, t, e, r, a, s, n],
             );
           })(),
-          { selectedMarker: f } = Xe(),
+          { selectedMarker: f } = Nt(),
           p =
             (null === (t = r.entry) || void 0 === t ? void 0 : t.id) ==
               (null == f ? void 0 : f.strEntryID) &&
@@ -6416,7 +7510,7 @@
                         void (n.current = null))
                       : void 0;
                   const a = i.left + 0.5 * i.width;
-                  (t.clientX < a - yr || t.clientX > a + yr) &&
+                  (t.clientX < a - Ti || t.clientX > a + Ti) &&
                     (e.SetThumbnailComponent(null),
                     n.current && n.current(),
                     (n.current = null));
@@ -6426,11 +7520,11 @@
               s = i.useCallback(
                 (r) => {
                   if (
-                    (e.SetThumbnailComponent($e.Highlight),
+                    (e.SetThumbnailComponent(Xt.Highlight),
                     e.SetThumbnailEntry(t),
                     !n.current)
                   ) {
-                    const e = (0, ut.uX)(r);
+                    const e = (0, ar.uX)(r);
                     e.addEventListener("mousemove", a),
                       (n.current = () => e.removeEventListener("mousemove", a));
                   }
@@ -6449,7 +7543,7 @@
                       n.current && n.current(),
                       void (n.current = null)
                     );
-                  (0, ut.id)(r.current, t.relatedTarget) ||
+                  (0, ar.id)(r.current, t.relatedTarget) ||
                     (t.clientY - i.top > 1 &&
                       i.bottom - t.clientY > 1 &&
                       t.clientX - i.left > 1 &&
@@ -6471,10 +7565,10 @@
               const t = c.valMS - 5e3,
                 i = n.FindTimelineOffsets(o),
                 s = Math.max(t, i.globalOffsetMS);
-              a.SetPlaytimeFromGlobalMS((0, Y.Sb)(s)),
+              a.SetPlaytimeFromGlobalMS((0, ee.Sb)(s)),
                 a.SetDisplayHighlightEntry(r.entry),
                 e.stopPropagation(),
-                J.y.ReportTrackedAction(
+                K.y.ReportTrackedAction(
                   `/GameRecording/Marker/Click/${r.entry.type}`,
                 );
             },
@@ -6484,10 +7578,10 @@
         return i.createElement(
           "div",
           {
-            className: (0, me.A)(
-              or.MarkerAndDropline,
-              d && or.NoPointer,
-              m && or.Faded,
+            className: (0, ce.A)(
+              di.MarkerAndDropline,
+              d && di.NoPointer,
+              m && di.Faded,
             ),
             style: b,
             ref: h,
@@ -6503,9 +7597,9 @@
           },
           i.createElement(
             "div",
-            { key: c.valMS, className: (0, me.A)(or.TimelineMarkerCtn) },
-            i.createElement(It, {
-              classNames: or.TimelineMarker,
+            { key: c.valMS, className: (0, ce.A)(di.TimelineMarkerCtn) },
+            i.createElement(zr, {
+              classNames: di.TimelineMarker,
               key: r.entry.id,
               entry: r.entry,
               strMarkerIcon: r.strMarkerIcon,
@@ -6516,60 +7610,60 @@
           ),
           i.createElement(
             "div",
-            { className: or.DroplineCtn },
+            { className: di.DroplineCtn },
             i.createElement("div", {
-              className: (0, me.A)(or.TimelineMarkerDropLine),
+              className: (0, ce.A)(di.TimelineMarkerDropLine),
             }),
           ),
         );
       }
-      const yr = 150;
-      function Mr(e) {
+      const Ti = 150;
+      function Bi(e) {
         return "achievement" === e.type ? 9e3 : e.priority;
       }
-      const Cr = i.memo(function (e) {
-          const t = nt(),
-            r = (0, W.q3)(() => t.GetVisibleTimelines());
+      const wi = i.memo(function (e) {
+          const t = Yt(),
+            r = (0, D.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(Br, { key: e.timelineID, timeline: e }),
+              i.createElement(Ii, { key: e.timelineID, timeline: e }),
             ),
           );
         }),
-        vr = { screenshot: 0, event: 0, achievement: 1, usermarker: 2 };
-      function Tr(e, t) {
-        if (vr[e.type] !== vr[t.type]) return vr[t.type] - vr[e.type];
-        const r = Mr(e),
-          i = Mr(t);
+        Ri = { screenshot: 0, event: 0, achievement: 1, usermarker: 2 };
+      function Gi(e, t) {
+        if (Ri[e.type] !== Ri[t.type]) return Ri[t.type] - Ri[e.type];
+        const r = Bi(e),
+          i = Bi(t);
         return r != i
           ? i - r
           : e.time != t.time
             ? parseInt(e.time) - parseInt(t.time)
             : e.id.localeCompare(t.id);
       }
-      const Br = i.memo(function (e) {
+      const Ii = i.memo(function (e) {
         const { timeline: t } = e,
-          r = nt(),
-          n = Ie(),
-          a = (0, W.q3)(
+          r = Yt(),
+          n = vt(),
+          a = (0, D.q3)(
             () => r.GetVisibleTimelineHighlights(t.timelineID) || [],
           )
             .slice()
-            .sort(Tr),
-          s = (0, W.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
+            .sort(Gi),
+          s = (0, D.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
           l = t.globalOffsetMS - s,
           o = n.GetGameID(),
           m = n.GetClipID(),
           c = 16 * r.GetCurrentZoomScale();
-        let u = new mr(c);
+        let u = new gi(c);
         return a.map((e, a) => {
-          if ("highlight" !== Rr(e)) return null;
+          if ("highlight" !== Pi(e)) return null;
           const s = `${e.type}_${e.id}_${t.timelineID}_${a}`,
-            c = wr(t.timelineID, l, e),
+            c = Ei(t.timelineID, l, e),
             d = u.BAllowIcon(c.nGlobalMS.valMS);
-          return i.createElement(br, {
+          return i.createElement(vi, {
             gameID: o,
             clipID: m,
             key: s,
@@ -6581,7 +7675,7 @@
           });
         });
       });
-      function wr(e, t, r) {
+      function Ei(e, t, r) {
         if (
           ![
             "event",
@@ -6592,24 +7686,24 @@
           ].includes(r.type)
         )
           return (
-            (0, V.q_)(
+            (0, Z.q_)(
               `Unexpected timeline entry type ${r.type}, returning empty highlight marker`,
             ),
             null
           );
         let i = r;
-        const n = (0, wt.xz)(i);
+        const n = (0, yr.xz)(i);
         return {
           entry: i,
           strMarkerIcon: n ? "steam_achievement" : i.icon,
-          nMarkerPriority: Mr(i),
+          nMarkerPriority: Bi(i),
           strTimelineID: e,
           strTitle: (!n && i.title) || "",
           strDescription: (!n && i.description) || "",
-          nGlobalMS: (0, Y.Sb)(parseInt(i.time) + t),
+          nGlobalMS: (0, ee.Sb)(parseInt(i.time) + t),
         };
       }
-      function Rr(e) {
+      function Pi(e) {
         switch (e.type) {
           case "usermarker":
           case "achievement":
@@ -6622,63 +7716,63 @@
             return "none";
         }
       }
-      var Gr = r(53298);
-      function Ir(e) {
+      var zi = r(53298);
+      function Oi(e) {
         const {
             view: t,
             entry: r,
             nGlobalEntryEndMS: n,
             nGlobalTLStartMS: a,
           } = e,
-          s = Ie(),
-          l = (0, Y.Sb)(parseInt(r.time) + a.valMS),
-          o = (0, W.q3)(() => {
+          s = vt(),
+          l = (0, ee.Sb)(parseInt(r.time) + a.valMS),
+          o = (0, D.q3)(() => {
             const e = t.ConvertGlobalMSToGlobalPXOffset(l.valMS),
               r = t.GetVirtualWindowStartPX();
             return r < e ? e : r;
           }),
-          m = (0, W.q3)(() => {
+          m = (0, D.q3)(() => {
             const e = t.ConvertGlobalMSToGlobalPXOffset(n.valMS),
               r = t.GetVirtualWindowEndPX();
             return r < e ? r : e;
           }),
           c = !!s.GetClipID(),
           u = { transform: `translateX( ${o}px )`, width: m - o },
-          d = (0, me.A)({
-            [Gr.Unspecified]: r.mode === wt.il.Invalid,
-            [Gr.Staging]: r.mode === wt.il.Staging,
-            [Gr.Menus]: r.mode === wt.il.Menus,
-            [Gr.Playing]: r.mode === wt.il.Playing,
+          d = (0, ce.A)({
+            [zi.Unspecified]: r.mode === yr.il.Invalid,
+            [zi.Staging]: r.mode === yr.il.Staging,
+            [zi.Menus]: r.mode === yr.il.Menus,
+            [zi.Playing]: r.mode === yr.il.Playing,
           });
         return i.createElement("div", {
           key: r.id,
-          className: (0, me.A)(
-            Gr.GameModeMarker,
+          className: (0, ce.A)(
+            zi.GameModeMarker,
             d,
-            c && Gr.GameModeMarkerClip,
+            c && zi.GameModeMarkerClip,
           ),
           style: u,
         });
       }
-      const Er = i.memo(function (e) {
-          const t = nt(),
-            r = (0, W.q3)(() => t.GetVisibleTimelines());
+      const ki = i.memo(function (e) {
+          const t = Yt(),
+            r = (0, D.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(zr, { key: e.timelineID, timeline: e }),
+              i.createElement(Di, { key: e.timelineID, timeline: e }),
             ),
           );
         }),
-        zr = i.memo(function (e) {
+        Di = i.memo(function (e) {
           const {
               timelineID: t,
               globalOffsetMS: r,
               nDurationMS: n,
             } = e.timeline,
-            a = nt(),
-            s = (0, W.q3)(() => {
+            a = Yt(),
+            s = (0, D.q3)(() => {
               const e = a.GetVisibleTimelineGameModes(t);
               return e && 0 !== e.length
                 ? e
@@ -6686,38 +7780,38 @@
                     {
                       time: "0",
                       type: "gamemode",
-                      mode: wt.il.Invalid,
+                      mode: yr.il.Invalid,
                       id: "synthetic",
                     },
                   ];
             }),
-            l = (0, Y.Sb)(r + n),
+            l = (0, ee.Sb)(r + n),
             o = r - a.GetTimelineOffsetMS(t);
           let m = [];
           for (let e = 0; e < s.length; e++) {
-            const r = (0, Y.Sb)(
+            const r = (0, ee.Sb)(
               e < s.length - 1 ? parseInt(s[e + 1].time) + o : l.valMS - 1,
             );
             m.push(
-              i.createElement(Ir, {
+              i.createElement(Oi, {
                 key: `gameMode_${t}_${e}`,
                 view: a,
                 entry: s[e],
                 nGlobalEntryEndMS: r,
-                nGlobalTLStartMS: (0, Y.Sb)(o),
+                nGlobalTLStartMS: (0, ee.Sb)(o),
               }),
             );
           }
           return i.createElement(i.Fragment, null, m);
         });
-      var Pr = r(36616),
-        Or = r(5540);
-      const kr = (0, i.memo)(function (e) {
-        const t = Ie(),
-          r = (0, W.q3)(() => t.GetHidePlayer()),
+      var Wi = r(36616),
+        Li = r(5540);
+      const qi = (0, i.memo)(function (e) {
+        const t = vt(),
+          r = (0, D.q3)(() => t.GetHidePlayer()),
           [n, a] = (0, i.useState)({ bDragActive: !1, bPausedOnDragStart: !1 }),
-          s = nt(),
-          l = (0, W.q3)(() => {
+          s = Yt(),
+          l = (0, D.q3)(() => {
             if (
               s.GetAutoScrollPaused() ||
               s.BReachedMaxScroll() ||
@@ -6732,27 +7826,27 @@
             );
           });
         return r
-          ? i.createElement(Dr, { setDragActive: a })
+          ? i.createElement(xi, { setDragActive: a })
           : l
-            ? i.createElement(Wr, { view: s, setDragActive: a })
-            : i.createElement(Lr, { dragState: n, setDragActive: a });
+            ? i.createElement(Fi, { view: s, setDragActive: a })
+            : i.createElement(Ni, { dragState: n, setDragActive: a });
       });
-      function Wr(e) {
+      function Fi(e) {
         const { view: t, setDragActive: r } = e,
-          n = (0, W.q3)(
+          n = (0, D.q3)(
             () => t.GetVisualWindowStartPX() + t.GetScrollWindowWidth() / 2,
           );
         return i.createElement(
-          Nr,
+          Hi,
           { playheadPosition: n },
-          i.createElement(qr, { setDragActive: r, bDragActive: !1 }),
+          i.createElement(Ui, { setDragActive: r, bDragActive: !1 }),
         );
       }
-      const Dr = (0, i.memo)(function (e) {
+      const xi = (0, i.memo)(function (e) {
           const { setDragActive: t } = e,
-            r = nt(),
-            n = (0, W.q3)(() => r.GetScrollableWidthPX()),
-            a = (0, Z._g)(100),
+            r = Yt(),
+            n = (0, D.q3)(() => r.GetScrollableWidthPX()),
+            a = (0, J._g)(100),
             s = (0, i.useCallback)(
               (e) => {
                 r.GetAutoScrollPaused() || a(() => r.ScrollToOffset(e));
@@ -6763,22 +7857,22 @@
             (0, i.useEffect)(() => r.ScrollToEnd(), [r]),
             (0, i.useEffect)(() => s(n), [n, s]),
             i.createElement(
-              Nr,
+              Hi,
               { playheadPosition: n },
-              i.createElement(qr, { setDragActive: t, bDragActive: !1 }),
+              i.createElement(Ui, { setDragActive: t, bDragActive: !1 }),
             )
           );
         }),
-        Lr = (0, i.memo)(function (e) {
+        Ni = (0, i.memo)(function (e) {
           const { dragState: t, setDragActive: r } = e,
             { bDragActive: n, bPausedOnDragStart: a } = t,
-            s = Ie(),
-            l = nt(),
-            o = ht(),
+            s = vt(),
+            l = Yt(),
+            o = cr(),
             m = (function (e, t, r, n, a) {
               const s = (0, i.useRef)(),
-                l = (0, W.q3)(() => t.GetScrollableWidthPX()),
-                o = (0, W.q3)(() => t.GetScrollWindowWidth()),
+                l = (0, D.q3)(() => t.GetScrollableWidthPX()),
+                o = (0, D.q3)(() => t.GetScrollWindowWidth()),
                 [m, c] = (0, i.useState)(0),
                 u = (0, i.useRef)(),
                 d = (0, i.useRef)(),
@@ -6860,7 +7954,7 @@
                 (e, t, r, i, n) => {
                   if (n(t))
                     c(
-                      (0, K.OQ)(
+                      (0, $.OQ)(
                         t.GetVisualWindowStartPX() + r,
                         0,
                         t.GetScrollableWidthPX(),
@@ -6879,7 +7973,7 @@
                     ) {
                       const r = ((e - d.current) / 500) * i;
                       t.ScrollBy(r),
-                        c((e) => (0, K.OQ)(e + r, 0, t.GetScrollableWidthPX()));
+                        c((e) => (0, $.OQ)(e + r, 0, t.GetScrollableWidthPX()));
                     }
                     d.current = e;
                   }
@@ -6888,8 +7982,8 @@
               );
               return (
                 (0, i.useEffect)(() => {
-                  const i = o * (1 - un),
-                    a = o * un;
+                  const i = o * (1 - pa),
+                    a = o * pa;
                   if (
                     (u.current &&
                       (cancelAnimationFrame(u.current),
@@ -6900,7 +7994,7 @@
                     if ((g(), e.valPX < a && !t.BReachedMinScroll())) {
                       if (e.valPX <= s.current) {
                         const r = e.valPX - a,
-                          i = (0, K.OQ)(Math.abs(r / a), 0, 1) * r;
+                          i = (0, $.OQ)(Math.abs(r / a), 0, 1) * r;
                         u.current = requestAnimationFrame((r) =>
                           p(r, t, e.valPX, i, t.BReachedMinScroll),
                         );
@@ -6909,18 +8003,18 @@
                     } else if (e.valPX > i && !t.BReachedMaxScroll()) {
                       if (e.valPX >= s.current) {
                         const r = e.valPX - i,
-                          n = (0, K.OQ)(Math.abs(r / (o - i)), 0, 1) * r;
+                          n = (0, $.OQ)(Math.abs(r / (o - i)), 0, 1) * r;
                         u.current = requestAnimationFrame((r) =>
                           p(r, t, e.valPX, n, t.BReachedMaxScroll),
                         );
                       }
                       s.current = e.valPX;
-                    } else c((0, K.OQ)(n.valPX, 0, l));
+                    } else c((0, $.OQ)(n.valPX, 0, l));
                   else f();
                 }, [r, g, n.valPX, o, l, p, e.valPX, f, t]),
                 m
               );
-            })(_t(), l, n, o, s);
+            })(ur(), l, n, o, s);
           return (
             (0, i.useEffect)(() => {
               if (!n) return;
@@ -6929,7 +8023,7 @@
               if (!e) return;
               const t = s.GetLiveEdgeMS();
               s.SetPlaytimeFromGlobalMS(
-                t.valMS < e ? t : (0, Y.Sb)(e),
+                t.valMS < e ? t : (0, ee.Sb)(e),
                 a,
                 !0,
                 !0,
@@ -6938,24 +8032,24 @@
             i.createElement(
               "div",
               {
-                className: (0, me.A)(
-                  Or.PlayheadInteractionCtn,
-                  n && Or.ActiveCtn,
+                className: (0, ce.A)(
+                  Li.PlayheadInteractionCtn,
+                  n && Li.ActiveCtn,
                 ),
               },
               i.createElement(
-                Nr,
-                { className: n ? Or.Active : void 0, playheadPosition: m },
-                i.createElement(qr, { setDragActive: r, bDragActive: n }),
+                Hi,
+                { className: n ? Li.Active : void 0, playheadPosition: m },
+                i.createElement(Ui, { setDragActive: r, bDragActive: n }),
               ),
             )
           );
         }),
-        qr = (0, i.memo)(function (e) {
+        Ui = (0, i.memo)(function (e) {
           const { setDragActive: t, bDragActive: r } = e,
-            n = nt(),
+            n = Yt(),
             a = (e) => {
-              r || n.SetThumbnailComponent($e.Playhead), e.stopPropagation();
+              r || n.SetThumbnailComponent(Xt.Playhead), e.stopPropagation();
             },
             s = (e) => {
               r || n.SetThumbnailComponent(null), e.stopPropagation();
@@ -6963,33 +8057,33 @@
           return i.createElement(
             "div",
             {
-              className: Or.PlayHeadContent,
+              className: Li.PlayHeadContent,
               onMouseOver: a,
               onMouseOut: s,
               onFocus: a,
               onBlur: s,
             },
-            i.createElement(Fr, { setDragActive: t }),
+            i.createElement(ji, { setDragActive: t }),
           );
         }),
-        Fr = i.memo(function (e) {
+        ji = i.memo(function (e) {
           const { setDragActive: t } = e,
-            r = Ie(),
-            n = Ct(),
-            a = nt(),
-            s = (0, W.q3)(() => {
+            r = vt(),
+            n = hr(),
+            a = Yt(),
+            s = (0, D.q3)(() => {
               const e = a.GetThumbnailComponent();
-              return e === $e.RangeLeft || e === $e.RangeRight;
+              return e === Xt.RangeLeft || e === Xt.RangeRight;
             }),
             l = (0, i.useCallback)(
               (e) => {
                 if (0 != e.button) return;
-                const i = (0, ut.uX)(e);
+                const i = (0, ar.uX)(e);
                 let n, s;
                 const l = () => {
                   const e = r.GetGameRecordingVideo().IsPaused();
                   t({ bDragActive: !0, bPausedOnDragStart: e }),
-                    a.SetThumbnailComponent($e.Playhead),
+                    a.SetThumbnailComponent(Xt.Playhead),
                     n();
                 };
                 i.addEventListener("mousemove", l),
@@ -7021,14 +8115,14 @@
           return i.createElement(
             "div",
             {
-              className: (0, me.A)(Or.PlayHead, s && Or.NoPointer),
+              className: (0, ce.A)(Li.PlayHead, s && Li.NoPointer),
               onMouseDown: l,
               onContextMenu: o,
             },
-            i.createElement(xr, null),
+            i.createElement(Ai, null),
           );
         });
-      function xr(e) {
+      function Ai(e) {
         return i.createElement(
           "svg",
           {
@@ -7052,20 +8146,20 @@
           }),
         );
       }
-      function Nr(e) {
+      function Hi(e) {
         const { className: t, playheadPosition: r, children: n } = e;
         return i.createElement(
           "div",
           {
-            className: (0, me.A)(Or.PlayHeadContainer, t),
+            className: (0, ce.A)(Li.PlayHeadContainer, t),
             style: { transform: `translateX( calc(${r}px - 50% ))` },
           },
           n,
         );
       }
-      var Ur = r(48419);
-      const jr = parseInt(Ur.thumbnailWidth),
-        Ar = i.forwardRef(function (e, t) {
+      var Vi = r(48419);
+      const Xi = parseInt(Vi.thumbnailWidth),
+        Zi = i.forwardRef(function (e, t) {
           const {
               globalMS: r,
               children: n,
@@ -7073,21 +8167,21 @@
               className: s,
               ...l
             } = e,
-            o = Ie(),
+            o = vt(),
             m = o.GetGameID(),
             c = o.GetClipID(),
-            u = (0, W.q3)(() => o.GetRecordingMode()),
-            d = (0, W.q3)(() =>
+            u = (0, D.q3)(() => o.GetRecordingMode()),
+            d = (0, D.q3)(() =>
               o.ConvertGlobaOffsetToRecordingAndRelativeOffset(r),
             ),
-            g = (Ze(), null == d ? void 0 : d.nRecordingOffsetMS),
-            f = Le(
+            g = (Ut(), null == d ? void 0 : d.nRecordingOffsetMS),
+            f = Pt(
               m,
               c,
               null == d ? void 0 : d.strRecordingID,
               g,
               null == d ? void 0 : d.nStartOffsetMS,
-              jr,
+              Xi,
               false,
             ),
             [p, h] = (0, i.useState)();
@@ -7099,57 +8193,57 @@
               "div",
               {
                 ref: t,
-                className: (0, me.A)(Ur.ThumbnailContainerOffset, Ur[u], s),
+                className: (0, ce.A)(Vi.ThumbnailContainerOffset, Vi[u], s),
                 ...l,
               },
               i.createElement(
                 "div",
                 {
-                  className: (0, me.A)(
-                    Ur.ThumbnailContents,
-                    (null == d ? void 0 : d.strRecordingID) && !p && Ur.Hide,
-                    Ur[u],
+                  className: (0, ce.A)(
+                    Vi.ThumbnailContents,
+                    (null == d ? void 0 : d.strRecordingID) && !p && Vi.Hide,
+                    Vi[u],
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: Ur.ImageAndInfoBoxContainer },
+                  { className: Vi.ImageAndInfoBoxContainer },
                   i.createElement(
                     "div",
-                    { className: Ur.ImageContainer },
+                    { className: Vi.ImageContainer },
                     (null == d ? void 0 : d.strRecordingID)
                       ? i.createElement("img", {
-                          className: Ur.ThumbnailImage,
+                          className: Vi.ThumbnailImage,
                           src: p,
                         })
                       : i.createElement(
                           "div",
-                          { className: Ur.NoRecordedContent },
-                          (0, ce.we)("#GameRecording_PlayerNoContent"),
+                          { className: Vi.NoRecordedContent },
+                          (0, ue.we)("#GameRecording_PlayerNoContent"),
                         ),
-                    i.createElement(Hr, null),
+                    i.createElement(Qi, null),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(Ur.TooltipChildren) },
+                  { className: (0, ce.A)(Vi.TooltipChildren) },
                   n,
                 ),
               ),
               i.createElement("div", {
-                className: (0, me.A)(Ur.ThumbnailHitBoxPadding),
+                className: (0, ce.A)(Vi.ThumbnailHitBoxPadding),
               }),
             )
           );
         });
-      function Hr() {
-        const e = nt(),
-          t = (0, W.q3)(() => e.GetGameID()),
-          r = (0, W.q3)(() => e.GetThumbnailComponent()),
-          n = (0, W.q3)(() => e.GetThumbnailEntry());
-        if (!n || r !== $e.Highlight) return null;
-        if ((0, wt.xz)(n.entry))
-          return i.createElement(Vr, {
+      function Qi() {
+        const e = Yt(),
+          t = (0, D.q3)(() => e.GetGameID()),
+          r = (0, D.q3)(() => e.GetThumbnailComponent()),
+          n = (0, D.q3)(() => e.GetThumbnailEntry());
+        if (!n || r !== Xt.Highlight) return null;
+        if ((0, yr.xz)(n.entry))
+          return i.createElement(Ji, {
             thumbnailEntry: n,
             achievementEntry: n.entry,
             strGameID: t,
@@ -7157,19 +8251,19 @@
         let a = "",
           s = "";
         return (
-          (0, wt.In)(n.entry)
+          (0, yr.In)(n.entry)
             ? (s =
-                (0, ce.we)(n.entry.description) ||
+                (0, ue.we)(n.entry.description) ||
                 "#GameRecording_UnknownError")
-            : (0, wt.N$)(n.entry)
+            : (0, yr.N$)(n.entry)
               ? ((a = n.entry.title
                   ? n.entry.title
-                  : (0, ce.we)("#Marker_UserMarker_Title")),
+                  : (0, ue.we)("#Marker_UserMarker_Title")),
                 (s = n.entry.description || ""))
-              : (0, wt.eJ)(n.entry) &&
+              : (0, yr.eJ)(n.entry) &&
                 ((a = n.entry.title || ""), (s = n.entry.description || "")),
           a || s
-            ? i.createElement(Xr, {
+            ? i.createElement(Ki, {
                 title: a,
                 description: s,
                 thumbnailEntry: n,
@@ -7177,12 +8271,12 @@
             : null
         );
       }
-      function Vr(e) {
+      function Ji(e) {
         var t, r;
         const { strGameID: n, thumbnailEntry: a, achievementEntry: s } = e,
-          l = j(new ot.VS(n).GetAppID(), s.achievement_name);
+          l = H(new rr.VS(n).GetAppID(), s.achievement_name);
         return l
-          ? i.createElement(Xr, {
+          ? i.createElement(Ki, {
               title: null !== (t = l.name) && void 0 !== t ? t : "",
               description:
                 null !== (r = l.description) && void 0 !== r ? r : "",
@@ -7190,77 +8284,77 @@
             })
           : null;
       }
-      function Xr(e) {
+      function Ki(e) {
         const { title: t, description: r, thumbnailEntry: n } = e;
         return i.createElement(
           "div",
-          { className: Ur.InfoBoxContainer },
+          { className: Vi.InfoBoxContainer },
           i.createElement(
             "div",
-            { className: Ur.Header },
+            { className: Vi.Header },
             i.createElement(
               "div",
-              { className: Ur.Icon },
-              i.createElement(Et, {
+              { className: Vi.Icon },
+              i.createElement(Or, {
                 entry: n.entry,
                 strMarkerIcon: n.strMarkerIcon,
               }),
             ),
-            t && i.createElement("div", { className: Ur.Title }, t),
+            t && i.createElement("div", { className: Vi.Title }, t),
           ),
           i.createElement(
             "div",
-            { className: Ur.DescriptionBlock },
-            r && i.createElement("div", { className: Ur.Description }, r),
+            { className: Vi.DescriptionBlock },
+            r && i.createElement("div", { className: Vi.Description }, r),
           ),
         );
       }
-      const Zr = i.forwardRef(function (e, t) {
+      const Yi = i.forwardRef(function (e, t) {
         const { globalPX: r, onMouseEnter: n, onMouseLeave: a } = e,
-          s = nt(),
-          l = (0, W.q3)(() => s.ConvertPXOffsetToGlobalMS(r, !1)),
-          o = (0, W.q3)(() => s.GetThumbnailComponent()),
-          m = Ie(),
-          c = (0, W.q3)(() => m.GetRecordingMode());
+          s = Yt(),
+          l = (0, D.q3)(() => s.ConvertPXOffsetToGlobalMS(r, !1)),
+          o = (0, D.q3)(() => s.GetThumbnailComponent()),
+          m = vt(),
+          c = (0, D.q3)(() => m.GetRecordingMode());
         return i.createElement(
-          Ar,
+          Zi,
           {
-            className: (0, me.A)(Ur.ThumbnailTooltip, Ur[c], Ur[o]),
+            className: (0, ce.A)(Vi.ThumbnailTooltip, Vi[c], Vi[o]),
             globalMS: l,
             ref: t,
             onMouseEnter: n,
             onMouseLeave: a,
           },
-          i.createElement(Kr, { globalMS: l }),
-          i.createElement(Jr, { globalMS: l }),
+          i.createElement(tn, { globalMS: l }),
+          i.createElement($i, { globalMS: l }),
           i.createElement(
             "div",
-            { className: Ur.TooltipInteractionRegion },
-            o === $e.Highlight
-              ? i.createElement(Yr, null)
-              : i.createElement($r, { globalPX: r }),
-            i.createElement(ei, { globalMS: l }),
+            { className: Vi.TooltipInteractionRegion },
+            o === Xt.Highlight
+              ? i.createElement(rn, null)
+              : i.createElement(nn, { globalPX: r }),
+            i.createElement(an, { globalMS: l }),
           ),
         );
       });
-      function Jr(e) {
+      function $i(e) {
         const { globalMS: t } = e,
-          r = nt(),
-          n = (0, W.q3)(() => r.GetStateDescriptionAtGlobalMS(t));
+          r = Yt(),
+          n = (0, D.q3)(() => r.GetStateDescriptionAtGlobalMS(t));
         return (null == n ? void 0 : n.title)
-          ? i.createElement("div", { className: Ur.StateDescription }, n.title)
+          ? i.createElement("div", { className: Vi.StateDescription }, n.title)
           : null;
       }
-      function Qr(e, t) {
+      function en(e, t) {
         return e.priority - t.priority;
       }
-      function Kr(e) {
+      function tn(e) {
         const { globalMS: t } = e,
-          { setSelectedMarker: r } = Xe(),
-          n = nt(),
-          a = Ie(),
-          s = (0, W.q3)(() => n.FindRangeEventsAtGlobalMS(t)),
-          l = s.length > 3 ? s.sort(Qr).slice(0, 3) : s;
+          { setSelectedMarker: r } = Nt(),
+          n = Yt(),
+          a = vt(),
+          s = (0, D.q3)(() => n.FindRangeEventsAtGlobalMS(t)),
+          l = s.length > 3 ? s.sort(en).slice(0, 3) : s;
         return i.createElement(
           i.Fragment,
           null,
@@ -7269,7 +8363,7 @@
               "div",
               {
                 key: `${e.time}_${n}`,
-                className: Ur.TooltipRangeContainer,
+                className: Vi.TooltipRangeContainer,
                 onClick: (i) =>
                   ((e, i) => {
                     const n = parseInt(i.duration),
@@ -7279,131 +8373,135 @@
                       [m, c] = a
                         .GetLoader()
                         .CreateGlobalRangeForTimeline(l, o, 0, n);
-                    a.SetPlaytimeFromGlobalMS((0, Y.Sb)(m)),
+                    a.SetPlaytimeFromGlobalMS((0, ee.Sb)(m)),
                       null == r || r(i.id, l, m, c),
-                      J.y.ReportTrackedAction(
+                      K.y.ReportTrackedAction(
                         "/GameRecording/Tooltip/ClipFromRangeEvent",
                       ),
                       e.stopPropagation();
                   })(i, e),
               },
               e.icon &&
-                i.createElement(Et, { entry: e, strMarkerIcon: e.icon }),
-              i.createElement("div", { className: Ur.Title }, e.title),
+                i.createElement(Fr, {
+                  gameID: a.GetGameID(),
+                  icon: e.icon,
+                  className: Vi.RangeIcon,
+                }),
+              i.createElement("div", { className: Vi.Title }, e.title),
               i.createElement(
                 "div",
-                { className: Ur.Duration },
-                (0, Xt.qZ)(parseInt(e.duration) / 1e3, !1),
+                { className: Vi.Duration },
+                (0, Kr.qZ)(parseInt(e.duration) / 1e3, !1),
               ),
             ),
           ),
         );
       }
-      function Yr() {
-        const e = Ie(),
-          t = (0, W.q3)(() => e.GetRecordingMode()),
-          r = nt(),
-          n = (0, W.q3)(() => r.GetThumbnailEntry());
+      function rn() {
+        const e = vt(),
+          t = (0, D.q3)(() => e.GetRecordingMode()),
+          r = Yt(),
+          n = (0, D.q3)(() => r.GetThumbnailEntry());
         if (!n) return null;
         const a = r.GetTimelineOffsetMS(n.strTimelineID),
           s = parseInt(n.entry.time),
-          l = (0, Y.sK)(s - a),
+          l = (0, ee.sK)(s - a),
           o = e.MakeRelativeToTimelineEndIfActive(n.strTimelineID, l.valMS);
         let m = "";
-        if ((0, wt.zG)(n.entry)) {
+        if ((0, yr.zG)(n.entry)) {
           const e = o + parseInt(n.entry.duration);
           if (o < 0) {
-            const t = (0, Xt.qZ)(Math.abs(o / 1e3), !1, !1),
-              r = (0, Xt.qZ)(Math.abs(e / 1e3), !1, !1);
-            m = (0, ce.we)("#Duration_WrittenNegation", t + " - " + r);
+            const t = (0, Kr.qZ)(Math.abs(o / 1e3), !1, !1),
+              r = (0, Kr.qZ)(Math.abs(e / 1e3), !1, !1);
+            m = (0, ue.we)("#Duration_WrittenNegation", t + " - " + r);
           } else {
             m =
-              (0, Xt.qZ)(o / 1e3, !1, !1) + " - " + (0, Xt.qZ)(e / 1e3, !1, !1);
+              (0, Kr.qZ)(o / 1e3, !1, !1) + " - " + (0, Kr.qZ)(e / 1e3, !1, !1);
           }
-        } else m = (0, Xt.qZ)(o / 1e3, !1, !0);
+        } else m = (0, Kr.qZ)(o / 1e3, !1, !0);
         return i.createElement(
           "div",
           {
-            className: (0, me.A)(Ur.TimeDisplayContainer, Ur.Highlight, Ur[t]),
+            className: (0, ce.A)(Vi.TimeDisplayContainer, Vi.Highlight, Vi[t]),
           },
           m,
         );
       }
-      function $r(e) {
+      function nn(e) {
         const { globalPX: t } = e,
-          r = nt(),
-          n = (0, W.q3)(() =>
+          r = Yt(),
+          n = (0, D.q3)(() =>
             r.ConvertPXToTimelineRelativeMS(t, "end-if-active"),
           );
         return Boolean(n)
           ? i.createElement(
               "div",
-              { className: Ur.TimeDisplayContainer },
-              (0, Xt.qZ)(n / 1e3, !1, !0),
+              { className: Vi.TimeDisplayContainer },
+              (0, Kr.qZ)(n / 1e3, !1, !0),
             )
           : null;
       }
-      function ei(e) {
+      function an(e) {
         const { globalMS: t } = e,
-          r = nt(),
-          n = (0, W.q3)(() => r.GetGameID()),
-          a = (0, W.q3)(() => r.GetThumbnailComponent()),
-          s = (0, W.q3)(() => r.GetThumbnailEntry());
+          r = Yt(),
+          n = (0, D.q3)(() => r.GetGameID()),
+          a = (0, D.q3)(() => r.GetThumbnailComponent()),
+          s = (0, D.q3)(() => r.GetThumbnailEntry());
         let l = [
-          i.createElement(si, { key: "add_marker", globalMS: t }),
-          i.createElement(li, { key: "view_clip", globalMS: t }),
+          i.createElement(un, { key: "add_marker", globalMS: t }),
+          i.createElement(dn, { key: "view_clip", globalMS: t }),
         ];
         return (
-          a == $e.Highlight &&
+          a == Xt.Highlight &&
             s &&
-            ((0, wt.In)(s.entry) || (0, wt.xz)(s.entry) || (0, wt.eJ)(s.entry)
+            ((0, yr.In)(s.entry) || (0, yr.xz)(s.entry) || (0, yr.eJ)(s.entry)
               ? (l = [
-                  i.createElement(ti, {
+                  i.createElement(sn, {
                     key: "create_marker_clip",
                     markerInfo: s,
                   }),
-                  i.createElement(ri, { key: "view_clip", markerInfo: s }),
+                  i.createElement(ln, { key: "view_clip", markerInfo: s }),
                 ])
-              : (0, wt.sX)(s.entry)
+              : (0, yr.sX)(s.entry)
                 ? (l = [
-                    i.createElement(ti, {
+                    i.createElement(sn, {
                       key: "create_marker_clip",
                       markerInfo: s,
                     }),
-                    i.createElement(ai, {
+                    i.createElement(cn, {
                       key: "view_screen",
                       entry: s.entry,
                       gameID: n,
                     }),
-                    i.createElement(ri, { key: "view_clip", markerInfo: s }),
+                    i.createElement(ln, { key: "view_clip", markerInfo: s }),
                   ])
-                : (0, wt.N$)(s.entry) &&
+                : (0, yr.N$)(s.entry) &&
                   (l = [
-                    i.createElement(ni, { key: "edit_user", markerInfo: s }),
-                    i.createElement(ti, {
+                    i.createElement(mn, { key: "edit_user", markerInfo: s }),
+                    i.createElement(sn, {
                       key: "create_marker_clip",
                       markerInfo: s,
                     }),
-                    i.createElement(ii, { key: "delete_user", markerInfo: s }),
-                    i.createElement(ri, { key: "view_clip", markerInfo: s }),
+                    i.createElement(on, { key: "delete_user", markerInfo: s }),
+                    i.createElement(ln, { key: "view_clip", markerInfo: s }),
                   ])),
-          i.createElement("div", { className: Ur.TooltipButtons }, l)
+          i.createElement("div", { className: Vi.TooltipButtons }, l)
         );
       }
-      function ti(e) {
-        const { setSelectedMarker: t } = Xe(),
+      function sn(e) {
+        const { setSelectedMarker: t } = Nt(),
           { markerInfo: r } = e,
-          n = Ie(),
-          a = (0, W.q3)(() => n.ShouldModeShowClipControls()),
-          s = (0, W.q3)(() =>
+          n = vt(),
+          a = (0, D.q3)(() => n.ShouldModeShowClipControls()),
+          s = (0, D.q3)(() =>
             n.ConvertGlobaOffsetToRecordingAndRelativeOffset(r.nGlobalMS.valMS),
           ),
-          l = A();
+          l = V();
         return (null == s ? void 0 : s.strRecordingID) && a
           ? i.createElement(
-              ue.he,
+              de.he,
               {
-                toolTipContent: (0, ce.we)(
+                toolTipContent: (0, ue.we)(
                   l
                     ? "#RecordingState_Clip_LowDiskSpace"
                     : "#TimelineDialog_ClipVideo",
@@ -7414,11 +8512,11 @@
               i.createElement(
                 "div",
                 {
-                  className: (0, me.A)(Ur.Button, Ur.CreateClipButton),
+                  className: (0, ce.A)(Vi.Button, Vi.CreateClipButton),
                   onClick: (e) => {
-                    let i = _r,
-                      a = Sr;
-                    (0, wt.zG)(r.entry) &&
+                    let i = Mi,
+                      a = Ci;
+                    (0, yr.zG)(r.entry) &&
                       ((i = 0), (a = parseInt(r.entry.duration)));
                     const [s, l] = n
                       .GetLoader()
@@ -7428,210 +8526,210 @@
                         i,
                         a,
                       );
-                    n.SetPlaytimeFromGlobalMS((0, Y.Sb)(s)),
+                    n.SetPlaytimeFromGlobalMS((0, ee.Sb)(s)),
                       null == t || t(r.entry.id, r.strTimelineID, s, l),
-                      J.y.ReportTrackedAction(
+                      K.y.ReportTrackedAction(
                         "/GameRecording/Tooltip/ClipFromHighlight",
                       ),
                       e.stopPropagation();
                   },
                 },
-                i.createElement(de.Wd, null),
+                i.createElement(at, null),
               ),
             )
           : null;
       }
-      function ri(e) {
+      function ln(e) {
         const { markerInfo: t } = e,
-          r = nt(),
-          n = (0, W.q3)(() => r.ConvertGlobalMSToClipOrNone(t.nGlobalMS.valMS)),
-          { onNavigateToClip: a } = lt();
+          r = Yt(),
+          n = (0, D.q3)(() => r.ConvertGlobalMSToClipOrNone(t.nGlobalMS.valMS)),
+          { onNavigateToClip: a } = tr();
         return n
           ? i.createElement(
-              ue.he,
+              de.he,
               {
-                toolTipContent: (0, ce.we)("#TimelineDialog_ViewClip"),
+                toolTipContent: (0, ue.we)("#TimelineDialog_ViewClip"),
                 direction: "top",
                 bTopmost: !0,
               },
               i.createElement(
                 "div",
                 {
-                  className: (0, me.A)(Ur.Button, Ur.GoToClipFromMarker),
+                  className: (0, ce.A)(Vi.Button, Vi.GoToClipFromMarker),
                   onClick: () => {
                     n &&
-                      (J.y.ReportTrackedAction(
+                      (K.y.ReportTrackedAction(
                         `/GameRecording/Tooltip/ViewClip/${t.entry.type}`,
                       ),
                       a(n.clipID));
                   },
                 },
-                i.createElement(qe.CeX, null),
+                i.createElement(zt.CeX, null),
               ),
             )
           : null;
       }
-      function ii(e) {
+      function on(e) {
         const { markerInfo: t } = e,
-          r = Ie(),
-          n = nt();
+          r = vt(),
+          n = Yt();
         return i.createElement(
-          ue.he,
+          de.he,
           {
-            toolTipContent: (0, ce.we)("#Marker_Action_Delete"),
+            toolTipContent: (0, ue.we)("#Marker_Action_Delete"),
             direction: "top",
             bTopmost: !0,
           },
           i.createElement(
             "div",
             {
-              className: (0, me.A)(Ur.Button, Ur.DeleteMarker),
+              className: (0, ce.A)(Vi.Button, Vi.DeleteMarker),
               onClick: (e) => {
-                (0, wt.N$)(t.entry) &&
-                  (J.y.ReportTrackedAction(
+                (0, yr.N$)(t.entry) &&
+                  (K.y.ReportTrackedAction(
                     `/GameRecording/Marker/Delete/${t.entry.type}`,
                   ),
                   r.RemoveUserMarker(t.strTimelineID, t.entry.id),
                   n.SetThumbnailComponent(null));
               },
             },
-            i.createElement(qe.lMJ, null),
+            i.createElement(zt.lMJ, null),
           ),
         );
       }
-      function ni(e) {
+      function mn(e) {
         const { markerInfo: t } = e,
-          r = Ie(),
-          n = Je();
+          r = vt(),
+          n = jt();
         return i.createElement(
-          ue.he,
+          de.he,
           {
-            toolTipContent: (0, ce.we)("#Marker_Action_Edit"),
+            toolTipContent: (0, ue.we)("#Marker_Action_Edit"),
             direction: "top",
             bTopmost: !0,
           },
           i.createElement(
             "div",
             {
-              className: (0, me.A)(Ur.Button, Ur.EditMarker),
+              className: (0, ce.A)(Vi.Button, Vi.EditMarker),
               onClick: (e) => {
-                if (!(0, wt.N$)(t.entry)) return;
-                J.y.ReportTrackedAction(
+                if (!(0, yr.N$)(t.entry)) return;
+                K.y.ReportTrackedAction(
                   `/GameRecording/Marker/Edit/${t.entry.type}`,
                 );
-                let a = i.createElement(fr, {
+                let a = i.createElement(Si, {
                   entry: t.entry,
                   playbackCoordinator: r,
                   fnClearSelection: n,
                   strTimelineID: t.strTimelineID,
                 });
-                (0, pr.pg)(a, (0, ut.uX)(e)),
+                (0, bi.pg)(a, (0, ar.uX)(e)),
                   e.stopPropagation(),
                   e.preventDefault();
               },
             },
-            i.createElement(de.ff, null),
+            i.createElement(ke, null),
           ),
         );
       }
-      function ai(e) {
+      function cn(e) {
         const { entry: t, gameID: r } = e,
           n = t.handle,
-          { onNavigateToScreenshot: a } = lt();
+          { onNavigateToScreenshot: a } = tr();
         return i.createElement(
-          ue.he,
+          de.he,
           {
-            toolTipContent: (0, ce.we)("#TimelineDialog_ViewScreenshot"),
+            toolTipContent: (0, ue.we)("#TimelineDialog_ViewScreenshot"),
             direction: "top",
             bTopmost: !0,
           },
           i.createElement(
             "div",
             {
-              className: (0, me.A)(Ur.Button, Ur.ViewScreenshot),
+              className: (0, ce.A)(Vi.Button, Vi.ViewScreenshot),
               onClick: () => {
                 n &&
-                  (J.y.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
+                  (K.y.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
                   a(r, n));
               },
             },
-            i.createElement(de.pw, null),
+            i.createElement(rt, null),
           ),
         );
       }
-      function si(e) {
+      function un(e) {
         const { globalMS: t } = e,
-          r = Ie(),
-          n = (0, W.q3)(() =>
+          r = vt(),
+          n = (0, D.q3)(() =>
             r.ConvertGlobaOffsetToRecordingAndRelativeOffset(t),
           );
         if (!(null == n ? void 0 : n.strRecordingID)) return null;
         return i.createElement(
-          ue.he,
+          de.he,
           {
-            toolTipContent: (0, ce.we)("#TimelineDialog_AddMarker"),
+            toolTipContent: (0, ue.we)("#TimelineDialog_AddMarker"),
             direction: "top",
           },
           i.createElement(
             "div",
             {
-              className: (0, me.A)(Ur.Button, Ur.AddMarker),
+              className: (0, ce.A)(Vi.Button, Vi.AddMarker),
               onClick: () => {
                 r.AddUserMarkerAtGlobalMS(
-                  (0, Y.Sb)(t),
+                  (0, ee.Sb)(t),
                   "/GameRecording/AddMarker/Thumbnail",
                   null,
                 ),
-                  r.SetPlaytimeFromGlobalMS((0, Y.Sb)(t));
+                  r.SetPlaytimeFromGlobalMS((0, ee.Sb)(t));
               },
             },
-            i.createElement(de.pH, null),
+            i.createElement(he, null),
           ),
         );
       }
-      function li(e) {
+      function dn(e) {
         const { globalMS: t } = e,
-          r = nt(),
-          n = (0, W.q3)(() => r.ConvertGlobalMSToClipOrNone(t)),
-          { onNavigateToClip: a } = lt();
+          r = Yt(),
+          n = (0, D.q3)(() => r.ConvertGlobalMSToClipOrNone(t)),
+          { onNavigateToClip: a } = tr();
         return n
           ? i.createElement(
-              ue.he,
+              de.he,
               {
-                toolTipContent: (0, ce.we)("#TimelineDialog_ViewClip"),
+                toolTipContent: (0, ue.we)("#TimelineDialog_ViewClip"),
                 direction: "top",
               },
               i.createElement(
                 "div",
                 {
-                  className: (0, me.A)(Ur.Button, Ur.GoToClip),
+                  className: (0, ce.A)(Vi.Button, Vi.GoToClip),
                   onClick: () => {
                     n &&
-                      (J.y.ReportTrackedAction(
+                      (K.y.ReportTrackedAction(
                         "/GameRecording/Tooltip/ViewClip/timeline",
                       ),
                       a(n.clipID));
                   },
                 },
-                i.createElement(qe.CeX, null),
+                i.createElement(zt.CeX, null),
               ),
             )
           : null;
       }
-      const oi = i.memo(function (e) {
-          const t = pt(),
-            r = bt(),
-            n = nt(),
-            a = Ie(),
-            s = Ct(),
+      const gn = i.memo(function (e) {
+          const t = mr(),
+            r = gr(),
+            n = Yt(),
+            a = vt(),
+            s = hr(),
             l = (0, i.useCallback)(
               (e) => {
                 if (!r) return;
                 const t = e.currentTarget.getBoundingClientRect(),
-                  i = K.OQ(e.clientX - t.x, 0, t.width),
+                  i = $.OQ(e.clientX - t.x, 0, t.width),
                   s = n.ConvertPXOffsetToGlobalMS(i, !1);
                 s &&
-                  a.SetPlaytimeFromGlobalMS((0, Y.Sb)(s), void 0, void 0, !0);
+                  a.SetPlaytimeFromGlobalMS((0, ee.Sb)(s), void 0, void 0, !0);
               },
               [r, a, n],
             ),
@@ -7639,10 +8737,10 @@
               (e) => {
                 if (!r) return;
                 const t = e.currentTarget.getBoundingClientRect(),
-                  i = K.OQ(e.clientX - t.x, 0, t.width),
+                  i = $.OQ(e.clientX - t.x, 0, t.width),
                   a = n.ConvertPXOffsetToGlobalMS(i, !1);
                 a &&
-                  (s(e, (0, Y.Sb)(a), !1, {
+                  (s(e, (0, ee.Sb)(a), !1, {
                     bDisableMouseOverlay: !0,
                     bForcePopup: !0,
                     bAlwaysOnTop: !0,
@@ -7653,17 +8751,17 @@
               [r, n, s],
             );
           return (
-            Mt("click", l),
-            Mt("contextmenu", o),
-            i.createElement(mi, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
+            pr("click", l),
+            pr("contextmenu", o),
+            i.createElement(fn, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
           );
         }),
-        mi = i.memo(function (e) {
+        fn = i.memo(function (e) {
           const { globalMouseXPX: t } = e,
-            r = St(),
-            n = nt(),
-            a = bt(),
-            s = (0, W.q3)(() => {
+            r = dr(),
+            n = Yt(),
+            a = gr(),
+            s = (0, D.q3)(() => {
               if (n.GetThumbnailComponent()) return n.GetThumbnailPosition();
             }),
             [l, o] = (0, i.useState)(),
@@ -7676,10 +8774,10 @@
             i.createElement(
               "div",
               {
-                className: Pr.GhostPlayheadCtn,
+                className: Wi.GhostPlayheadCtn,
                 style: { transform: `translateX( calc(${l}px - 50%))` },
               },
-              i.createElement(ci, {
+              i.createElement(pn, {
                 globalPX: l,
                 setInteractingWithThumbnail: c,
                 bInteractingWithThumbnail: m,
@@ -7687,24 +8785,24 @@
             )
           );
         });
-      function ci(e) {
+      function pn(e) {
         const {
             globalPX: t,
             setInteractingWithThumbnail: r,
             bInteractingWithThumbnail: n,
           } = e,
-          a = nt(),
-          s = Ie(),
-          l = (0, W.q3)(() => "Overlay" === s.GetRecordingMode()),
-          o = (0, W.q3)(() => a.ConvertPXOffsetToGlobalMS(t, !1)),
-          m = (0, W.q3)(() => a.GetTimelineParentCtnRef()),
+          a = Yt(),
+          s = vt(),
+          l = (0, D.q3)(() => "Overlay" === s.GetRecordingMode()),
+          o = (0, D.q3)(() => a.ConvertPXOffsetToGlobalMS(t, !1)),
+          m = (0, D.q3)(() => a.GetTimelineParentCtnRef()),
           c = (0, i.useRef)(),
           u = (0, i.useRef)(),
           d = (0, i.useRef)(),
-          g = (0, W.q3)(() => a.GetThumbnailComponent()),
-          f = bt(),
-          p = (0, ue.fS)({
-            toolTipContent: i.createElement(Zr, {
+          g = (0, D.q3)(() => a.GetThumbnailComponent()),
+          f = gr(),
+          p = (0, de.fS)({
+            toolTipContent: i.createElement(Yi, {
               globalPX: t,
               ref: c,
               onMouseEnter: () => r(!0),
@@ -7743,7 +8841,7 @@
           y = (0, i.useCallback)(
             (e) => {
               const t = a.GetThumbnailComponent();
-              (t && t !== $e.Highlight) || b(e.clientX, e.clientY);
+              (t && t !== Xt.Highlight) || b(e.clientX, e.clientY);
             },
             [b, a],
           ),
@@ -7753,11 +8851,11 @@
             },
             [b],
           );
-        Mt(
+        pr(
           "mouseenter",
           (0, i.useCallback)(() => {
             h(!0), _(u.current);
-            const e = (0, ut.qf)(u.current);
+            const e = (0, ar.qf)(u.current);
             e &&
               !d.current &&
               (e.addEventListener("mousemove", y),
@@ -7771,10 +8869,10 @@
           (0, i.useEffect)(() => {
             const e = (e) => {
               const t = a.GetThumbnailComponent();
-              (t && t === $e.Playhead) ||
-                t === $e.RangeLeft ||
-                t === $e.RangeRight ||
-                (c.current && !(0, ut.id)(c.current, e.relatedTarget) && S());
+              (t && t === Xt.Playhead) ||
+                t === Xt.RangeLeft ||
+                t === Xt.RangeRight ||
+                (c.current && !(0, ar.id)(c.current, e.relatedTarget) && S());
             };
             return (
               m && m.addEventListener("mouseleave", e),
@@ -7785,40 +8883,40 @@
         const C = (f || n) && o && !g;
         return i.createElement(
           "div",
-          { ref: u, className: Pr.TooltipHoverSource },
-          i.createElement(xr, {
-            className: (0, me.A)(Pr.GhostPlayhead, C && Pr.Show),
+          { ref: u, className: Wi.TooltipHoverSource },
+          i.createElement(Ai, {
+            className: (0, ce.A)(Wi.GhostPlayhead, C && Wi.Show),
           }),
           !!o && p.tooltip,
         );
       }
-      var ui = r(2508);
-      const di = 500,
-        gi = (0, i.memo)(function () {
+      var hn = r(2508);
+      const _n = 500,
+        Sn = (0, i.memo)(function () {
           const [e, t] = (0, i.useState)("none"),
-            r = Ae(),
-            n = Ue(),
-            a = je();
+            r = qt(),
+            n = Wt(),
+            a = Lt();
           return r && n && a
             ? i.createElement(
                 "div",
-                { className: ui.RangeControls },
-                i.createElement(fi, {
+                { className: hn.RangeControls },
+                i.createElement(bn, {
                   activeControlState: e,
                   setActiveControlState: t,
                 }),
               )
             : null;
         }),
-        fi = (0, i.memo)(function (e) {
+        bn = (0, i.memo)(function (e) {
           const { activeControlState: t, setActiveControlState: r } = e,
             [n, a] = (0, i.useState)(),
             [s, l] = (0, i.useState)(),
-            o = Ue(),
-            m = je(),
-            c = nt(),
-            u = (0, W.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(o.valMS)),
-            d = (0, W.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(m.valMS)),
+            o = Wt(),
+            m = Lt(),
+            c = Yt(),
+            u = (0, D.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(o.valMS)),
+            d = (0, D.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(m.valMS)),
             g = (0, i.useCallback)(
               (e) => {
                 a(e), c.SetAutoScrollPauseTimeout();
@@ -7846,9 +8944,9 @@
           return i.createElement(
             "div",
             {
-              className: (0, me.A)(
-                ui.RangeSelectorCtn,
-                "none" !== t && ui.Active,
+              className: (0, ce.A)(
+                hn.RangeSelectorCtn,
+                "none" !== t && hn.Active,
               ),
               onMouseOver: p,
               onMouseOut: h,
@@ -7857,19 +8955,19 @@
             },
             i.createElement(
               "div",
-              { className: ui.TrackRangeControls },
-              i.createElement(hi, {
+              { className: hn.TrackRangeControls },
+              i.createElement(Mn, {
                 isActive: "left" === t,
                 setControlState: r,
                 setRangeControlPX: g,
                 pxOffset: n,
               }),
-              i.createElement(Mi, {
+              i.createElement(wn, {
                 startOffsetPX: ("left" === t && n) || u,
                 endOffsetPX: ("right" === t && s) || d,
-                className: ui.SelectedRangeMask,
+                className: hn.SelectedRangeMask,
               }),
-              i.createElement(Si, {
+              i.createElement(vn, {
                 isActive: "right" === t,
                 setControlState: r,
                 setRangeControlPX: f,
@@ -7878,48 +8976,48 @@
             ),
           );
         });
-      function pi(e, t, r) {
+      function yn(e, t, r) {
         const i = t.GetVisualWindowStartPX() - t.GetTimelineMarginWidth(),
           n = i + t.GetVisualWidth(),
           a = Math.max(0, i + 3),
           s = Math.min(t.GetScrollableWidthPX(), n - 3);
-        r(K.OQ(e, a, s));
+        r($.OQ(e, a, s));
       }
-      const hi = (0, i.memo)(function (e) {
+      const Mn = (0, i.memo)(function (e) {
         const {
             isActive: t,
             setControlState: r,
             setRangeControlPX: n,
             pxOffset: a,
           } = e,
-          s = Ue();
+          s = Wt();
         return t
-          ? i.createElement(_i, {
+          ? i.createElement(Cn, {
               setControlState: r,
               setRangeControlPX: n,
               pxOffset: a,
             })
-          : i.createElement(yi, {
+          : i.createElement(Bn, {
               offsetMS: s.valMS,
               direction: "left",
               setControlState: r,
               setRangeControlPX: n,
             });
       });
-      function _i(e) {
+      function Cn(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: n } = e,
-          a = He(),
-          s = je(),
-          l = nt(),
-          o = ht();
+          a = Ft(),
+          s = Lt(),
+          l = Yt(),
+          o = cr();
         return (
           (function (e, t, r, n, a, s) {
             const l = (0, i.useRef)(),
               o = (0, i.useRef)(!1),
               m = (0, i.useRef)(),
               c = (0, i.useRef)(),
-              u = (0, W.q3)(() => t.GetScrollableWidthPX()),
-              d = (0, W.q3)(() => t.GetScrollWindowWidth());
+              u = (0, D.q3)(() => t.GetScrollableWidthPX()),
+              d = (0, D.q3)(() => t.GetScrollWindowWidth());
             (0, i.useEffect)(
               () => () => {
                 m.current &&
@@ -7933,7 +9031,7 @@
               (e, t, r, i, n) => {
                 if (n(t))
                   s(
-                    K.OQ(
+                    $.OQ(
                       t.GetVisualWindowStartPX() + r,
                       0,
                       t.GetScrollableWidthPX(),
@@ -7950,9 +9048,9 @@
                       )),
                     c.current)
                   ) {
-                    const r = ((e - c.current) / di) * i;
+                    const r = ((e - c.current) / _n) * i;
                     t.ScrollBy(r),
-                      s((e) => K.OQ(e + r, 0, t.GetScrollableWidthPX()));
+                      s((e) => $.OQ(e + r, 0, t.GetScrollableWidthPX()));
                   }
                   c.current = e;
                 }
@@ -7964,26 +9062,26 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = d * (1 - un),
-                f = d * un,
+              const i = d * (1 - pa),
+                f = d * pa,
                 p = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 h = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX > p)
                 return (
-                  s(p), a("right"), void t.SetThumbnailComponent($e.RangeRight)
+                  s(p), a("right"), void t.SetThumbnailComponent(Xt.RangeRight)
                 );
               if (e.valPX < f && !t.BReachedMinScroll()) {
                 if (e.valPX > l.current) o.current = !0;
                 else if (e.valPX < l.current || !o.current) {
                   const r = Math.min(f, h),
                     i = e.valPX - r,
-                    n = K.OQ(Math.abs(i / r), 0, 1) * i;
+                    n = $.OQ(Math.abs(i / r), 0, 1) * i;
                   (m.current = requestAnimationFrame((r) =>
                     g(r, t, e.valPX, n, t.BReachedMinScroll),
                   )),
                     (o.current = !1);
                 }
-                pi(n.valPX, t, s);
+                yn(n.valPX, t, s);
               } else if (e.valPX > i && h > i && !t.BReachedMaxScroll()) {
                 if (e.valPX < l.current) o.current = !0;
                 else if (e.valPX > l.current || !o.current) {
@@ -7994,60 +9092,60 @@
                       return e.BReachedMaxScroll() || t <= i;
                     },
                     a = e.valPX - i,
-                    s = K.OQ(Math.abs(a / (d - i)), 0, 1) * a;
+                    s = $.OQ(Math.abs(a / (d - i)), 0, 1) * a;
                   (m.current = requestAnimationFrame((r) =>
                     g(r, t, e.valPX, s, n),
                   )),
                     (o.current = !1);
                 }
-                pi(n.valPX, t, s);
-              } else s(K.OQ(n.valPX, 0, u));
+                yn(n.valPX, t, s);
+              } else s($.OQ(n.valPX, 0, u));
               l.current = e.valPX;
             }, [n.valPX, r.valMS, e.valPX, a, t, s, u, g, d]);
-          })(_t(), l, s, o, t, r),
+          })(ur(), l, s, o, t, r),
           (0, i.useEffect)(() => {
             isNaN(n) ||
               (l.SetThumbnailPosition(n),
-              a(5, (0, Y.Sb)(l.ConvertPXOffsetToGlobalMS(n))));
+              a(5, (0, ee.Sb)(l.ConvertPXOffsetToGlobalMS(n))));
           }, [n, a, l]),
-          i.createElement(Ci, { offsetPX: n, direction: "left" })
+          i.createElement(Rn, { offsetPX: n, direction: "left" })
         );
       }
-      const Si = (0, i.memo)(function (e) {
+      const vn = (0, i.memo)(function (e) {
         const {
             isActive: t,
             setControlState: r,
             setRangeControlPX: n,
             pxOffset: a,
           } = e,
-          s = je();
+          s = Lt();
         return t
-          ? i.createElement(bi, {
+          ? i.createElement(Tn, {
               setControlState: r,
               setRangeControlPX: n,
               pxOffset: a,
             })
-          : i.createElement(yi, {
+          : i.createElement(Bn, {
               offsetMS: s.valMS,
               direction: "right",
               setControlState: r,
               setRangeControlPX: n,
             });
       });
-      function bi(e) {
+      function Tn(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: n } = e,
-          a = Ve(),
-          s = Ue(),
-          l = nt(),
-          o = ht();
+          a = xt(),
+          s = Wt(),
+          l = Yt(),
+          o = cr();
         return (
           (function (e, t, r, n, a, s) {
             const l = (0, i.useRef)(),
               o = (0, i.useRef)(!1),
               m = (0, i.useRef)(),
               c = (0, i.useRef)(),
-              u = (0, W.q3)(() => t.GetScrollableWidthPX()),
-              d = (0, W.q3)(() => t.GetScrollWindowWidth());
+              u = (0, D.q3)(() => t.GetScrollableWidthPX()),
+              d = (0, D.q3)(() => t.GetScrollWindowWidth());
             (0, i.useEffect)(
               () => () => {
                 m.current &&
@@ -8061,7 +9159,7 @@
               (e, t, r, i, n) => {
                 if (n(t))
                   s(
-                    K.OQ(
+                    $.OQ(
                       t.GetVisualWindowStartPX() + r,
                       0,
                       t.GetScrollableWidthPX(),
@@ -8078,9 +9176,9 @@
                       )),
                     c.current)
                   ) {
-                    const r = ((e - c.current) / di) * i;
+                    const r = ((e - c.current) / _n) * i;
                     t.ScrollBy(r),
-                      s((e) => K.OQ(e + r, 0, t.GetScrollableWidthPX()));
+                      s((e) => $.OQ(e + r, 0, t.GetScrollableWidthPX()));
                   }
                   c.current = e;
                 }
@@ -8092,26 +9190,26 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = d * (1 - un),
-                f = d * un,
+              const i = d * (1 - pa),
+                f = d * pa,
                 p = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 h = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX < p)
                 return (
-                  s(p), a("left"), void t.SetThumbnailComponent($e.RangeLeft)
+                  s(p), a("left"), void t.SetThumbnailComponent(Xt.RangeLeft)
                 );
               if (e.valPX > i && !t.BReachedMaxScroll()) {
                 if (e.valPX < l.current) o.current = !0;
                 else if (e.valPX > l.current || !o.current) {
                   const r = Math.max(i, h),
                     n = e.valPX - r,
-                    a = K.OQ(Math.abs(n / (d - r)), 0, 1) * n;
+                    a = $.OQ(Math.abs(n / (d - r)), 0, 1) * n;
                   (m.current = requestAnimationFrame((r) =>
                     g(r, t, e.valPX, a, t.BReachedMaxScroll),
                   )),
                     (o.current = !1);
                 }
-                pi(n.valPX, t, s);
+                yn(n.valPX, t, s);
               } else if (
                 e.valPX < f &&
                 h < f &&
@@ -8121,7 +9219,7 @@
                 if (e.valPX > l.current) o.current = !0;
                 else if (e.valPX < l.current || !o.current) {
                   const i = e.valPX - f,
-                    n = K.OQ(Math.abs(i / f), 0, 1) * i,
+                    n = $.OQ(Math.abs(i / f), 0, 1) * i,
                     a = (e) =>
                       e.ConvertGlobalMSToScrollWindowPXOffset(r.valMS) > f ||
                       e.BReachedMinScroll();
@@ -8130,28 +9228,28 @@
                   )),
                     (o.current = !1);
                 }
-                pi(n.valPX, t, s);
-              } else s(K.OQ(n.valPX, 0, u));
+                yn(n.valPX, t, s);
+              } else s($.OQ(n.valPX, 0, u));
               l.current = e.valPX;
             }, [r.valMS, e.valPX, a, t, s, u, d, n.valPX, g]);
-          })(_t(), l, s, o, t, r),
+          })(ur(), l, s, o, t, r),
           (0, i.useEffect)(() => {
             isNaN(n) ||
               (l.SetThumbnailPosition(n),
-              a(5, (0, Y.Sb)(l.ConvertPXOffsetToGlobalMS(n))));
+              a(5, (0, ee.Sb)(l.ConvertPXOffsetToGlobalMS(n))));
           }, [n, a, l]),
-          i.createElement(Ci, { offsetPX: n, direction: "right" })
+          i.createElement(Rn, { offsetPX: n, direction: "right" })
         );
       }
-      function yi(e) {
+      function Bn(e) {
         const {
             offsetMS: t,
             direction: r,
             setControlState: n,
             setRangeControlPX: a,
           } = e,
-          s = nt(),
-          l = (0, W.q3)(() => s.ConvertGlobalMSToGlobalPXOffset(t));
+          s = Yt(),
+          l = (0, D.q3)(() => s.ConvertGlobalMSToGlobalPXOffset(t));
         (0, i.useEffect)(
           () => (
             a(void 0),
@@ -8163,12 +9261,12 @@
         );
         const o = (0, i.useCallback)(
             (e) => {
-              const t = (0, ut.uX)(e);
+              const t = (0, ar.uX)(e);
               let i, a;
               const l = () => {
                 n(r),
                   s.SetThumbnailComponent(
-                    "left" === r ? $e.RangeLeft : $e.RangeRight,
+                    "left" === r ? Xt.RangeLeft : Xt.RangeRight,
                   ),
                   i();
               };
@@ -8184,7 +9282,7 @@
           ),
           m = (e) => {
             s.SetThumbnailComponent(
-              "left" === r ? $e.RangeLeft : $e.RangeRight,
+              "left" === r ? Xt.RangeLeft : Xt.RangeRight,
             );
           },
           c = (e) => {
@@ -8193,47 +9291,47 @@
         return i.createElement(
           "div",
           {
-            className: ui.InactiveSelectedRangeControl,
+            className: hn.InactiveSelectedRangeControl,
             onMouseDown: o,
             onMouseOver: m,
             onFocus: m,
             onMouseOut: c,
             onBlur: c,
           },
-          i.createElement(Ci, { offsetPX: l, direction: r }),
+          i.createElement(Rn, { offsetPX: l, direction: r }),
         );
       }
-      const Mi = (0, i.memo)(function (e) {
+      const wn = (0, i.memo)(function (e) {
           const { startOffsetPX: t, endOffsetPX: r, className: n } = e;
           if (isNaN(t) || isNaN(r)) return null;
           const a = { width: r - t || 0, transform: `translateX(${t}px)` };
           return i.createElement("div", {
-            className: (0, me.A)(ui.RangeMask, n),
+            className: (0, ce.A)(hn.RangeMask, n),
             style: a,
           });
         }),
-        Ci = (0, i.memo)(function (e) {
+        Rn = (0, i.memo)(function (e) {
           const { direction: t, offsetPX: r } = e,
             n = { transform: `translateX( calc( ${r}px - 50%) )` },
-            a = nt(),
-            s = (0, W.q3)(() => a.GetThumbnailComponent() === $e.Playhead);
+            a = Yt(),
+            s = (0, D.q3)(() => a.GetThumbnailComponent() === Xt.Playhead);
           return i.createElement(
             "div",
-            { style: n, className: (0, me.A)(ui.RangeControl) },
+            { style: n, className: (0, ce.A)(hn.RangeControl) },
             i.createElement(
               "div",
               {
-                className: (0, me.A)(
-                  ui.RangeIcon,
-                  "left" === t && ui.Left,
-                  s && ui.Hide,
+                className: (0, ce.A)(
+                  hn.RangeIcon,
+                  "left" === t && hn.Left,
+                  s && hn.Hide,
                 ),
               },
-              i.createElement(vi, { innerFill: "#171d25", direction: t }),
+              i.createElement(Gn, { innerFill: "#171d25", direction: t }),
             ),
           );
         });
-      function vi(e) {
+      function Gn(e) {
         return i.createElement(
           "svg",
           {
@@ -8270,16 +9368,16 @@
           }),
         );
       }
-      var Ti = r(28361);
-      const Bi = i.memo(function (e) {
-        const t = nt(),
-          r = (0, W.q3)(() => t.GetVisibleWindowRelativeTimelines()),
-          n = Ie().GetRecordingMode();
+      var In = r(28361);
+      const En = i.memo(function (e) {
+        const t = Yt(),
+          r = (0, D.q3)(() => t.GetVisibleWindowRelativeTimelines()),
+          n = vt().GetRecordingMode();
         let a = [],
           s = "";
         for (let e of r) {
           let r = t.GetTimeRecorded(e.timelineID),
-            i = (0, ce._l)(r);
+            i = (0, ue._l)(r);
           i != s && (a.push({ timeline: e, strLabel: i }), (s = i));
         }
         for (let e = a.length - 2; e >= 0; e--) {
@@ -8291,7 +9389,7 @@
           i.Fragment,
           null,
           a.map((e) =>
-            i.createElement(wi, {
+            i.createElement(Pn, {
               key: e.timeline.timelineID,
               startPX: e.timeline.nVisibleStartPX,
               label: e.strLabel,
@@ -8300,27 +9398,27 @@
           ),
         );
       });
-      function wi(e) {
+      function Pn(e) {
         const { label: t, startPX: r, recordingMode: n } = e;
-        let a = n == _e.Overlay;
+        let a = n == ct.Overlay;
         return i.createElement(
           "div",
           {
-            className: (0, me.A)(Ti.TimelineRelativeDate, a && Ti.Overlay),
+            className: (0, ce.A)(In.TimelineRelativeDate, a && In.Overlay),
             style: { transform: `translateX(${r}px)` },
           },
           t,
         );
       }
-      var Ri = r(78760);
-      const Gi = (0, i.memo)(function (e) {
-        const t = nt(),
-          r = (0, W.q3)(() => t.GetVisibleRecordings());
+      var zn = r(78760);
+      const On = (0, i.memo)(function (e) {
+        const t = Yt(),
+          r = (0, D.q3)(() => t.GetVisibleRecordings());
         return i.createElement(
           i.Fragment,
           null,
           r.map((e) =>
-            i.createElement(Ii, {
+            i.createElement(kn, {
               key: e.recordingID,
               startPX: e.nStartPX,
               endPX: e.nEndPX,
@@ -8330,54 +9428,54 @@
           ),
         );
       });
-      function Ii(e) {
+      function kn(e) {
         const { isActive: t, endPX: r, startPX: n, recordingType: a } = e,
           s = { width: r - n || 0, transform: `translateX(${n}px)` },
-          l = Ze(),
+          l = Ut(),
           o = 4 === a,
           m = 2 === a;
         return i.createElement(
           i.Fragment,
           null,
           i.createElement("div", {
-            className: (0, me.A)(
-              Ri.RecordingDecorator,
-              o && Ri.Clip,
-              m && Ri.Manual,
-              l && Ri.ClipMode,
+            className: (0, ce.A)(
+              zn.RecordingDecorator,
+              o && zn.Clip,
+              m && zn.Manual,
+              l && zn.ClipMode,
             ),
             style: s,
           }),
-          t && i.createElement(Ei, { endPX: r }),
+          t && i.createElement(Dn, { endPX: r }),
         );
       }
-      function Ei(e) {
+      function Dn(e) {
         const { endPX: t } = e,
-          r = Ie(),
-          n = nt(),
-          a = (0, W.q3)(() => "Overlay" === r.GetRecordingMode()),
-          s = he(r.GetGameID()),
-          l = (0, W.q3)(() => r.GetIsLiveEdge() && !r.GetHidePlayer()),
-          o = (0, W.q3)(() => {
+          r = vt(),
+          n = Yt(),
+          a = (0, D.q3)(() => "Overlay" === r.GetRecordingMode()),
+          s = pt(r.GetGameID()),
+          l = (0, D.q3)(() => r.GetIsLiveEdge() && !r.GetHidePlayer()),
+          o = (0, D.q3)(() => {
             const e = r.GetLiveEdgeBufferWindowStartMS();
             return n.ConvertGlobalMSToGlobalPXOffset(e.valMS);
           });
-        if (!a || s !== le.BackgroundRecording) return null;
+        if (!a || s !== mt.BackgroundRecording) return null;
         const m = { width: t - o || 0, transform: `translateX(${o}px)` };
         return i.createElement("div", {
-          className: (0, me.A)(Ri.LiveRecordingBuffer, l && Ri.IsLive),
+          className: (0, ce.A)(zn.LiveRecordingBuffer, l && zn.IsLive),
           style: m,
         });
       }
-      var zi = r(10564);
-      const Pi = (0, i.memo)(function (e) {
-          const t = nt(),
-            r = (0, W.q3)(() => t.GetVisibleClips());
+      var Wn = r(10564);
+      const Ln = (0, i.memo)(function (e) {
+          const t = Yt(),
+            r = (0, D.q3)(() => t.GetVisibleClips());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(Oi, {
+              i.createElement(qn, {
                 key: e.clipID,
                 startPX: e.pxClipStart,
                 endPX: e.pxClipEnd,
@@ -8385,29 +9483,29 @@
             ),
           );
         }),
-        Oi = (0, i.memo)(function (e) {
+        qn = (0, i.memo)(function (e) {
           const { endPX: t, startPX: r } = e,
             n = { width: t - r || 0, transform: `translateX(${r}px)` };
           return i.createElement("div", {
-            className: zi.ClipDecorator,
+            className: Wn.ClipDecorator,
             style: n,
           });
         });
-      var ki = r(99550);
-      const Wi = (0, i.forwardRef)(function (e, t) {
-          const r = nt();
-          return (0, W.q3)(() => !r.BEmpty())
-            ? i.createElement(Li, { ...e, timelineView: r, ref: t })
-            : i.createElement(Di, { ref: t });
+      var Fn = r(99550);
+      const xn = (0, i.forwardRef)(function (e, t) {
+          const r = Yt();
+          return (0, D.q3)(() => !r.BEmpty())
+            ? i.createElement(Un, { ...e, timelineView: r, ref: t })
+            : i.createElement(Nn, { ref: t });
         }),
-        Di = (0, i.forwardRef)(function (e, t) {
+        Nn = (0, i.forwardRef)(function (e, t) {
           return i.createElement("div", {
             ref: t,
-            className: (0, me.A)(ki.ScrollbarPlaceholder, e.className),
+            className: (0, ce.A)(Fn.ScrollbarPlaceholder, e.className),
           });
         }),
-        Li = (0, i.forwardRef)(function (e, t) {
-          const r = Ie(),
+        Un = (0, i.forwardRef)(function (e, t) {
+          const r = vt(),
             { children: n, className: a, timelineView: s, disableZoom: l } = e,
             [o, m] = (0, i.useState)(),
             c = i.useCallback(
@@ -8419,7 +9517,7 @@
               },
               [s],
             ),
-            u = (0, Z.wY)(c),
+            u = (0, J.wY)(c),
             d = i.useCallback(
               (e) => {
                 if (e.ctrlKey && !l) {
@@ -8433,7 +9531,7 @@
             );
           return (
             (function (e, t) {
-              const r = (0, W.q3)(
+              const r = (0, D.q3)(
                 () =>
                   !t.GetAutoScrollPaused() &&
                   e.GetGameRecordingVideo().BVideoElementPlaying(),
@@ -8465,40 +9563,40 @@
               },
               i.createElement(
                 "div",
-                { className: ki.LeftControlsAndContent },
+                { className: Fn.LeftControlsAndContent },
                 i.createElement(
                   "div",
-                  { ref: u, className: (0, me.A)(ki.ContentAndGradient, a) },
+                  { ref: u, className: (0, ce.A)(Fn.ContentAndGradient, a) },
                   n,
-                  i.createElement(qi, { timelineView: s }),
+                  i.createElement(jn, { timelineView: s }),
                 ),
-                r.GetRecordingMode() === _e.Overlay &&
-                  i.createElement(fe, null),
+                r.GetRecordingMode() === ct.Overlay &&
+                  i.createElement(gt, null),
               ),
               i.createElement(
                 "div",
-                { className: ki.ScrollbarAndSiblings },
-                !r.GetGamepadMode() && i.createElement(Fi, null),
+                { className: Fn.ScrollbarAndSiblings },
+                !r.GetGamepadMode() && i.createElement(An, null),
               ),
             )
           );
         });
-      function qi(e) {
+      function jn(e) {
         const { timelineView: t } = e,
-          r = (0, W.q3)(() => t.GetVisualWindowStartPX()),
-          n = (0, W.q3)(() => t.BReachedMaxScroll());
+          r = (0, D.q3)(() => t.GetVisualWindowStartPX()),
+          n = (0, D.q3)(() => t.BReachedMaxScroll());
         return i.createElement(
           "div",
-          { className: ki.ScrollGradientCtn },
+          { className: Fn.ScrollGradientCtn },
           i.createElement("div", {
-            className: (0, me.A)(ki.FrontGradient, 0 === r && ki.HideGradient),
+            className: (0, ce.A)(Fn.FrontGradient, 0 === r && Fn.HideGradient),
           }),
           i.createElement("div", {
-            className: (0, me.A)(ki.EndGradient, n && ki.HideGradient),
+            className: (0, ce.A)(Fn.EndGradient, n && Fn.HideGradient),
           }),
         );
       }
-      function Fi() {
+      function An() {
         const [e, t] = (0, i.useState)({
             scrollBarWidth: 0,
             scrollBarXOffset: 0,
@@ -8507,28 +9605,28 @@
             const r = e.target.getBoundingClientRect();
             t({ scrollBarWidth: r.width, scrollBarXOffset: r.x });
           }, []),
-          n = nt(),
-          a = (0, W.q3)(
+          n = Yt(),
+          a = (0, D.q3)(
             () => n.GetScrollableWidthPX() + 2 * n.GetTimelineMarginWidth(),
           ),
-          s = (0, W.q3)(() => n.GetVisualWidth()),
+          s = (0, D.q3)(() => n.GetVisualWidth()),
           l = (0, i.useMemo)(
             () => (s * e.scrollBarWidth) / a || 0,
             [s, e.scrollBarWidth, a],
           ),
-          o = (0, Z.wY)(r);
+          o = (0, J.wY)(r);
         return i.createElement(
           "div",
           {
-            className: (0, me.A)(
-              ki.ScrollBarCtn,
+            className: (0, ce.A)(
+              Fn.ScrollBarCtn,
               Math.round(l) === Math.round(e.scrollBarWidth) &&
-                ki.HideScrollBar,
+                Fn.HideScrollBar,
             ),
             ref: o,
           },
-          i.createElement(xi, { timelineView: n, scrollSize: e }),
-          i.createElement(Ai, {
+          i.createElement(Hn, { timelineView: n, scrollSize: e }),
+          i.createElement(Qn, {
             scrollSize: e,
             timelineView: n,
             timelineWidth: a,
@@ -8536,15 +9634,15 @@
           }),
         );
       }
-      function xi(e) {
+      function Hn(e) {
         const { timelineView: t, scrollSize: r } = e,
-          n = Ie(),
+          n = vt(),
           a = (function (e, t) {
             const r = (0, i.useRef)(),
               n = (0, i.useRef)(),
-              a = (0, W.q3)(() => e.GetScrollableWidthPX()),
+              a = (0, D.q3)(() => e.GetScrollableWidthPX()),
               s = (0, i.useCallback)(
-                (e) => (0, Y.OB)((a * e) / t.scrollBarWidth),
+                (e) => (0, ee.OB)((a * e) / t.scrollBarWidth),
                 [t.scrollBarWidth, a],
               ),
               l = (0, i.useCallback)(() => {
@@ -8590,39 +9688,39 @@
               { onMouseDown: o, onMouseMove: c, onMouseUp: m, onMouseLeave: m }
             );
           })(t, r),
-          s = (0, W.q3)(() => t.GetTimelineMarginWidth()),
-          l = (0, W.q3)(() => t.GetScrollableWidthPX()),
+          s = (0, D.q3)(() => t.GetTimelineMarginWidth()),
+          l = (0, D.q3)(() => t.GetScrollableWidthPX()),
           o = (0, i.useCallback)(
             (e) => {
               const t = e + s;
-              return K.OQ((t * r.scrollBarWidth) / l, 0, r.scrollBarWidth);
+              return $.OQ((t * r.scrollBarWidth) / l, 0, r.scrollBarWidth);
             },
             [r.scrollBarWidth, s, l],
           );
         return i.createElement(
           "div",
-          { className: ki.ScrollTrack, ...a },
-          i.createElement(Ni, {
+          { className: Fn.ScrollTrack, ...a },
+          i.createElement(Vn, {
             timelineView: t,
             playbackCoordinator: n,
             fnConvertGlobalPXToTrackPX: o,
             scrollBarWidth: r.scrollBarWidth,
           }),
-          i.createElement(ji, {
+          i.createElement(Zn, {
             timelineView: t,
             fnConvertGlobalPXToTrackPX: o,
           }),
         );
       }
-      function Ni(e) {
+      function Vn(e) {
         const {
             timelineView: t,
             playbackCoordinator: r,
             fnConvertGlobalPXToTrackPX: n,
             scrollBarWidth: a,
           } = e,
-          s = (0, W.q3)(() => r.GetHidePlayer()),
-          l = (0, W.q3)(() => {
+          s = (0, D.q3)(() => r.GetHidePlayer()),
+          l = (0, D.q3)(() => {
             const e = r.GetGlobalMSPlaytime();
             if (e && t.BInitialized()) {
               const r = Math.floor(t.ConvertGlobalMSToGlobalPXOffset(e.valMS));
@@ -8634,17 +9732,17 @@
         return i.createElement(
           "div",
           {
-            className: ki.PlayHeadAnnotation,
+            className: Fn.PlayHeadAnnotation,
             onClick: () => {
               let e = r.GetGlobalMSPlaytime();
               s && (e = r.GetLiveEdgeMS()), t.ScrollToCenteredGlobalMS(e.valMS);
             },
             style: { transform: `translateX(${s ? a : l}px)` },
           },
-          i.createElement(Ui, null),
+          i.createElement(Xn, null),
         );
       }
-      function Ui() {
+      function Xn() {
         return i.createElement(
           "svg",
           {
@@ -8660,11 +9758,11 @@
           }),
         );
       }
-      function ji(e) {
+      function Zn(e) {
         const { timelineView: t, fnConvertGlobalPXToTrackPX: r } = e,
-          n = Ze(),
-          a = Ne(),
-          s = (0, W.q3)(() => {
+          n = Ut(),
+          a = Dt(),
+          s = (0, D.q3)(() => {
             if (n && t.BInitialized()) {
               const e = Math.floor(
                   t.ConvertGlobalMSToGlobalPXOffset(a.nGlobalStartMS.valMS),
@@ -8680,7 +9778,7 @@
           });
         if (!s) return null;
         return i.createElement("div", {
-          className: ki.RangeAnnotation,
+          className: Fn.RangeAnnotation,
           onClick: () => {
             t.ScrollToCenteredGlobalMS(a.nGlobalStartMS.valMS);
           },
@@ -8690,7 +9788,7 @@
           },
         });
       }
-      function Ai(e) {
+      function Qn(e) {
         const {
             scrollSize: t,
             timelineWidth: r,
@@ -8704,11 +9802,11 @@
           } = (function (e, t, r, n) {
             const [a, s] = (0, i.useState)(!1),
               [l, o] = (0, i.useState)(0),
-              m = (0, W.q3)(() => {
+              m = (0, D.q3)(() => {
                 const i = n.BInitialized(),
                   a = n.GetVisualWindowStartPX();
                 return i
-                  ? K.OQ((a * e.scrollBarWidth) / t, 0, e.scrollBarWidth - r)
+                  ? $.OQ((a * e.scrollBarWidth) / t, 0, e.scrollBarWidth - r)
                   : 0;
               }),
               [c, u] = (0, i.useState)(!1),
@@ -8731,7 +9829,7 @@
                     a =
                       null !== (r = n.GetTimelineParentCtnRef()) && void 0 !== r
                         ? r
-                        : (0, ut.uX)(t);
+                        : (0, ar.uX)(t);
                   let l, c, u;
                   const d = (t) => {
                     o(t.clientX - e.scrollBarXOffset - i);
@@ -8749,7 +9847,7 @@
                 [m, e.scrollBarXOffset, n],
               ),
               f = (0, i.useMemo)(
-                () => (a ? K.OQ(l, 0, e.scrollBarWidth - r) : m),
+                () => (a ? $.OQ(l, 0, e.scrollBarWidth - r) : m),
                 [l, a, m, e.scrollBarWidth, r],
               );
             return (
@@ -8763,24 +9861,24 @@
             );
           })(t, r, n, a);
         return i.createElement("div", {
-          className: (0, me.A)(ki.ScrollThumb, o && ki.Highlight),
+          className: (0, ce.A)(Fn.ScrollThumb, o && Fn.Highlight),
           style: { width: n, transform: `translateX(${s}px)` },
           onMouseDown: l,
         });
       }
-      var Hi = r(88006);
+      var Jn = r(88006);
       r(2596), r(12155), r(13871), r(72739);
-      class Vi {
+      class Kn {
         constructor() {
           (this.m_tours = {}),
             (this.m_strActiveTour = ""),
             (this.m_bReady = !1),
-            (0, D.Gn)(this);
+            (0, W.Gn)(this);
         }
         async Init(e) {
           if (this.m_storage) return;
           this.m_storage = e;
-          const t = await Zi(e);
+          const t = await $n(e);
           Object.keys(t || {}).forEach((e) => {
             const r = !!t[e];
             this.m_tours[e] = {
@@ -8818,40 +9916,40 @@
             this.m_strActiveTour === e && (this.m_strActiveTour = ""));
         }
         MarkTourSeen(e) {
-          return Ji(this.m_storage, e, Date.now());
+          return ea(this.m_storage, e, Date.now());
         }
         MarkTourUnseen(e) {
-          return Ji(this.m_storage, e, void 0);
+          return ea(this.m_storage, e, void 0);
         }
       }
-      (0, X.Cg)([D.sH], Vi.prototype, "m_tours", void 0),
-        (0, X.Cg)([D.sH], Vi.prototype, "m_strActiveTour", void 0),
-        (0, X.Cg)([D.sH], Vi.prototype, "m_bReady", void 0),
-        (0, X.Cg)([D.XI.bound], Vi.prototype, "UpdateStop", null),
-        (0, X.Cg)([D.XI], Vi.prototype, "ActivateTour", null),
-        (0, X.Cg)([D.XI], Vi.prototype, "DismissTour", null);
-      const Xi = "tour_history";
-      async function Zi(e) {
-        const t = await e.GetObject(Xi);
+      (0, Q.Cg)([W.sH], Kn.prototype, "m_tours", void 0),
+        (0, Q.Cg)([W.sH], Kn.prototype, "m_strActiveTour", void 0),
+        (0, Q.Cg)([W.sH], Kn.prototype, "m_bReady", void 0),
+        (0, Q.Cg)([W.XI.bound], Kn.prototype, "UpdateStop", null),
+        (0, Q.Cg)([W.XI], Kn.prototype, "ActivateTour", null),
+        (0, Q.Cg)([W.XI], Kn.prototype, "DismissTour", null);
+      const Yn = "tour_history";
+      async function $n(e) {
+        const t = await e.GetObject(Yn);
         return t && "object" == typeof t ? t : {};
       }
-      async function Ji(e, t, r) {
-        const i = await Zi(e);
-        return e.StoreObject(Xi, { ...i, [t]: r });
+      async function ea(e, t, r) {
+        const i = await $n(e);
+        return e.StoreObject(Yn, { ...i, [t]: r });
       }
-      const Qi = new Vi();
-      function Ki() {
+      const ta = new Kn();
+      function ra() {
         const e = (0, n.rX)();
         return (
           (0, i.useEffect)(() => {
-            Qi.Init(e);
+            ta.Init(e);
           }, [e]),
-          Qi
+          ta
         );
       }
-      function Yi(e) {
-        const t = Ki(),
-          { bShowTour: r, stopElems: n } = (0, W.q3)(() => ({
+      function ia(e) {
+        const t = ra(),
+          { bShowTour: r, stopElems: n } = (0, D.q3)(() => ({
             bShowTour: !t.BHasSeenTour(e),
             stopElems: t.GetTrackedStops(e),
           }));
@@ -8864,22 +9962,22 @@
           updateStop: t.UpdateStop,
         };
       }
-      function $i(e) {
+      function na(e) {
         const { name: t, tour: r, options: n, children: a } = e,
-          { updateStop: s } = Yi(r),
+          { updateStop: s } = ia(r),
           l = (0, i.useCallback)((e) => s(r, t, n, e), [s, r, t]);
         return (0, i.cloneElement)(i.Children.only(a), { ref: l });
       }
-      var en = r(62745);
-      function tn(e) {
-        const t = nt(),
-          r = (0, W.q3)(() => t.GetVisibleTimelines());
+      var aa = r(62745);
+      function sa(e) {
+        const t = Yt(),
+          r = (0, D.q3)(() => t.GetVisibleTimelines());
         return i.createElement(
           i.Fragment,
           null,
           r.flatMap((e) =>
             e.phaseOffsets.map((t, r) =>
-              i.createElement(rn, {
+              i.createElement(la, {
                 ...t,
                 timeline: e,
                 key: `${e.timelineID}_${r}`,
@@ -8888,7 +9986,7 @@
           ),
         );
       }
-      function rn(e) {
+      function la(e) {
         const {
           timelineOffsetMS: t,
           nDurationMS: r,
@@ -8896,14 +9994,14 @@
           timeline: a,
         } = e;
         return i.createElement(
-          nn,
+          oa,
           { ...e },
-          i.createElement(sn, null),
-          i.createElement(an, null),
-          i.createElement(sn, null),
+          i.createElement(ca, null),
+          i.createElement(ma, null),
+          i.createElement(ca, null),
         );
       }
-      function nn(e) {
+      function oa(e) {
         var t;
         const {
             children: r,
@@ -8912,16 +10010,16 @@
             nDurationMS: s,
             phase: l,
           } = e,
-          o = nt(),
-          m = Ie(),
-          c = (null === (t = ht()) || void 0 === t ? void 0 : t.valPX) || -1,
-          u = St(),
-          [d] = yt(),
+          o = Yt(),
+          m = vt(),
+          c = (null === (t = cr()) || void 0 === t ? void 0 : t.valPX) || -1,
+          u = dr(),
+          [d] = fr(),
           {
             pxStart: g,
             pxWidth: f,
             bHighlight: p,
-          } = (0, W.q3)(() => {
+          } = (0, D.q3)(() => {
             const e = o.GetPhaseToHighlight();
             return {
               pxStart: o.ConvertGlobalMSToGlobalPXOffset(n.globalOffsetMS + a),
@@ -8934,9 +10032,9 @@
           }),
           h = (u || d) && c >= g && c <= g + f,
           [_, S] = (function () {
-            const e = Ie();
+            const e = vt();
             return [
-              (0, W.q3)(
+              (0, D.q3)(
                 () => (null == e ? void 0 : e.GetPhasePreview()) || null,
               ),
               (t) => (null == e ? void 0 : e.SetPhasePreview(t)),
@@ -8953,10 +10051,10 @@
         return i.createElement(
           "div",
           {
-            className: (0, me.A)(
-              en.Positioner,
-              h && en.MouseWithin,
-              p && en.Highlight,
+            className: (0, ce.A)(
+              aa.Positioner,
+              h && aa.MouseWithin,
+              p && aa.Highlight,
             ),
             style: { transform: `translateX( ${g}px )`, width: `${f}px` },
             onMouseOver: b,
@@ -8967,37 +10065,37 @@
           r,
         );
       }
-      function an(e) {
-        return i.createElement("div", { className: en.Body });
+      function ma(e) {
+        return i.createElement("div", { className: aa.Body });
       }
-      function sn(e) {
-        return i.createElement("div", { className: en.Edge });
+      function ca(e) {
+        return i.createElement("div", { className: aa.Edge });
       }
-      var ln = r(14296);
-      function on(e) {
-        const t = nt(),
-          r = (0, W.q3)(() => t.GetVisibleTimelines());
+      var ua = r(14296);
+      function da(e) {
+        const t = Yt(),
+          r = (0, D.q3)(() => t.GetVisibleTimelines());
         return i.createElement(
           i.Fragment,
           null,
-          r.map((e) => i.createElement(mn, { timeline: e, key: e.timelineID })),
+          r.map((e) => i.createElement(ga, { timeline: e, key: e.timelineID })),
         );
       }
-      function mn(e) {
+      function ga(e) {
         const { timeline: t } = e,
-          r = nt(),
-          n = (0, W.q3)(
+          r = Yt(),
+          n = (0, D.q3)(
             () => r.GetVisibleTimelineHighlights(t.timelineID) || [],
           ),
-          a = (0, W.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
+          a = (0, D.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
           s = t.globalOffsetMS - a;
         return i.createElement(
           i.Fragment,
           null,
           n
-            .filter((e) => "range_highlight" === Rr(e))
+            .filter((e) => "range_highlight" === Pi(e))
             .map((e) =>
-              i.createElement(cn, {
+              i.createElement(fa, {
                 entry: e,
                 timeline: t,
                 timelineView: r,
@@ -9007,21 +10105,21 @@
             ),
         );
       }
-      function cn(e) {
+      function fa(e) {
         const { timeline: t, timelineView: r, entry: n, timelineOffset: a } = e,
           s = a + parseInt(n.time),
-          { pxStart: l, pxWidth: o } = (0, W.q3)(() => ({
+          { pxStart: l, pxWidth: o } = (0, D.q3)(() => ({
             pxStart: r.ConvertGlobalMSToGlobalPXOffset(s),
             pxWidth: r.ConvertDurationMSToDeltaPX(parseInt(n.duration)),
           })),
           m = { width: `${o}px`, transform: `translateX( ${l}px )` };
         return i.createElement("div", {
-          className: ln.RangeHighlight,
+          className: ua.RangeHighlight,
           style: m,
         });
       }
-      const un = 0.08;
-      function dn(e) {
+      const pa = 0.08;
+      function ha(e) {
         const {
             loader: t,
             className: r,
@@ -9029,16 +10127,16 @@
             refTimelineParentCtn: a,
             disableZoom: s,
           } = e,
-          l = (0, W.q3)(() => t.BInitialized()),
-          o = Ie();
-        l || i.createElement("div", { className: rr.LoadingTimeline });
-        let m = (0, me.A)(
-          rr.ScrollAndControlsCtn,
-          o.GetGamepadMode() && rr.GamepadMode,
+          l = (0, D.q3)(() => t.BInitialized()),
+          o = vt();
+        l || i.createElement("div", { className: si.LoadingTimeline });
+        let m = (0, ce.A)(
+          si.ScrollAndControlsCtn,
+          o.GetGamepadMode() && si.GamepadMode,
           r,
         );
         return i.createElement(
-          it,
+          Kt,
           {
             loader: t,
             clipSummaries: n,
@@ -9048,39 +10146,39 @@
           i.createElement(
             "div",
             { className: m },
-            i.createElement(hn, null),
-            i.createElement(_n, null),
+            i.createElement(ya, null),
+            i.createElement(Ma, null),
             i.createElement(
-              $i,
+              na,
               {
                 tour: "recording_timeline",
                 name: "timeline",
                 options: { position: "left", offset: 30 },
               },
               i.createElement(
-                Wi,
-                { className: rr.TimelineScrollContainer, disableZoom: s },
-                i.createElement(gn, null),
+                xn,
+                { className: si.TimelineScrollContainer, disableZoom: s },
+                i.createElement(_a, null),
               ),
             ),
           ),
         );
       }
-      const gn = (0, i.memo)(function (e) {
-        const t = nt();
-        return (0, W.q3)(() => t.BInitialized())
-          ? i.createElement(fn, null)
+      const _a = (0, i.memo)(function (e) {
+        const t = Yt();
+        return (0, D.q3)(() => t.BInitialized())
+          ? i.createElement(Sa, null)
           : null;
       });
-      function fn() {
-        const e = nt(),
-          t = (0, W.q3)(() => e.GetScrollableWidthPX()),
-          r = (0, W.q3)(() => e.GetVisualWindowStartPX()),
-          n = (0, W.q3)(() => e.GetTimelineMarginWidth());
+      function Sa() {
+        const e = Yt(),
+          t = (0, D.q3)(() => e.GetScrollableWidthPX()),
+          r = (0, D.q3)(() => e.GetVisualWindowStartPX()),
+          n = (0, D.q3)(() => e.GetTimelineMarginWidth());
         return i.createElement(
           "div",
           {
-            className: rr.ContentContainer,
+            className: si.ContentContainer,
             style: {
               minWidth: t || 0,
               marginRight: n,
@@ -9089,108 +10187,95 @@
             },
           },
           i.createElement(
-            pn,
-            { id: "recordings", className: rr.RecordingDecorators },
-            i.createElement(Gi, null),
+            ba,
+            { id: "recordings", className: si.RecordingDecorators },
+            i.createElement(On, null),
           ),
           i.createElement(
-            pn,
-            { id: "clips", className: rr.ClipDecorators },
-            i.createElement(Pi, null),
+            ba,
+            { id: "clips", className: si.ClipDecorators },
+            i.createElement(Ln, null),
           ),
           i.createElement(
-            pn,
-            { id: "game_modes", className: rr.GameModes },
-            i.createElement(Er, null),
+            ba,
+            { id: "game_modes", className: si.GameModes },
+            i.createElement(ki, null),
           ),
           i.createElement(
-            pn,
-            { id: "date_decorators", className: rr.DateDecorator },
-            i.createElement(Bi, null),
+            ba,
+            { id: "date_decorators", className: si.DateDecorator },
+            i.createElement(En, null),
           ),
           i.createElement(
-            pn,
-            { id: "ticks", className: rr.BackgroundTicks },
-            i.createElement(ar, null),
+            ba,
+            { id: "ticks", className: si.BackgroundTicks },
+            i.createElement(mi, null),
           ),
           i.createElement(
-            ft,
+            or,
             null,
             i.createElement(
-              pn,
-              { id: "highlights", className: rr.Highlights },
-              i.createElement(Cr, null),
+              ba,
+              { id: "highlights", className: si.Highlights },
+              i.createElement(wi, null),
             ),
             i.createElement(
-              pn,
-              { id: "range_selection", className: rr.RangeSelector },
-              i.createElement(gi, null),
+              ba,
+              { id: "range_selection", className: si.RangeSelector },
+              i.createElement(Sn, null),
             ),
             i.createElement(
-              pn,
-              { id: "seek_scrub", className: rr.SeekScrubber },
-              i.createElement(oi, null),
+              ba,
+              { id: "seek_scrub", className: si.SeekScrubber },
+              i.createElement(gn, null),
             ),
             i.createElement(
-              pn,
-              { id: "play_head", className: rr.PlayHead },
-              i.createElement(kr, null),
+              ba,
+              { id: "play_head", className: si.PlayHead },
+              i.createElement(qi, null),
             ),
             i.createElement(
-              pn,
-              { id: "phases", className: rr.Phases },
-              i.createElement(tn, null),
+              ba,
+              { id: "phases", className: si.Phases },
+              i.createElement(sa, null),
             ),
             i.createElement(
-              pn,
-              { id: "range_highlights", className: rr.RangeHighlights },
-              i.createElement(on, null),
+              ba,
+              { id: "range_highlights", className: si.RangeHighlights },
+              i.createElement(da, null),
             ),
           ),
         );
       }
-      function pn(e) {
+      function ba(e) {
         const { children: t, id: r, className: n } = e;
         return i.createElement(
           "div",
-          { id: r, className: (0, me.A)(n, rr.AbsoluteLayer) },
-          i.createElement("div", { className: rr.RelativeLayer }, t),
+          { id: r, className: (0, ce.A)(n, si.AbsoluteLayer) },
+          i.createElement("div", { className: si.RelativeLayer }, t),
         );
       }
-      function hn(e) {
-        const t = Ie().GetRenderGlyph();
-        return t ? t(Hi.pR.TRIGGER_LEFT, !1, !1, rr.PositionLeft) : null;
+      function ya(e) {
+        const t = vt().GetRenderGlyph();
+        return t ? t(Jn.pR.TRIGGER_LEFT, !1, !1, si.PositionLeft) : null;
       }
-      function _n(e) {
-        const t = Ie().GetRenderGlyph();
-        return t ? t(Hi.pR.TRIGGER_RIGHT, !1, !1, rr.PositionRight) : null;
+      function Ma(e) {
+        const t = vt().GetRenderGlyph();
+        return t ? t(Jn.pR.TRIGGER_RIGHT, !1, !1, si.PositionRight) : null;
       }
-      var Sn = r(42577);
-      function bn(e) {
-        const [t, n] = i.useState(!1);
+      var Ca = r(42577);
+      function va(e) {
+        const [t, r] = i.useState(!1);
         return (
           i.useEffect(() => {
-            (async function (e, t, i) {
-              if (!L()) {
-                const [
-                  { CGameRecordingStore: n },
-                  { SetTimelineMarkerURLFunction: a },
-                ] = await Promise.all([
-                  r.e(6209).then(r.bind(r, 76209)),
-                  Promise.resolve().then(r.bind(r, 14864)),
-                ]);
-                i && a(i);
-                let s = new n();
-                await s.Init(e, t), (window.g_GRS = s);
-              }
-            })(void 0, void 0).then(() => {
-              n(!0);
+            F(void 0, void 0).then(() => {
+              r(!0);
             });
           }, []),
-          i.createElement(i.Fragment, null, t && i.createElement(yn, { ...e }))
+          i.createElement(i.Fragment, null, t && i.createElement(Ta, { ...e }))
         );
       }
-      function yn(e) {
+      function Ta(e) {
         const { clipID: t } = e,
           r = (function (e) {
             const t = (0, n.KV)();
@@ -9202,7 +10287,7 @@
                 const i = await O.GetSingleSharedClip(t, r);
                 if (1 != i.GetEResult())
                   return (
-                    (0, V.ZI)("GetSingleSharedClip failed"),
+                    (0, Z.ZI)("GetSingleSharedClip failed"),
                     void i.DEBUG_LogToConsole()
                   );
                 let n,
@@ -9210,12 +10295,12 @@
                   l = [];
                 if (0 == a.video_ids.length)
                   return (
-                    (0, V.ZI)("No video ids in clip", e),
+                    (0, Z.ZI)("No video ids in clip", e),
                     void i.DEBUG_LogToConsole()
                   );
                 for (let e of a.video_ids)
                   (n && n.timeline_id == e.server_timeline_id) ||
-                    ((n = Mn(a, e)), l.push(n)),
+                    ((n = Ba(a, e)), l.push(n)),
                     n.recordings.push({
                       recording_id: e.video_manager_video_id,
                       start_offset_ms: e.start_offset_ms.toFixed(0),
@@ -9228,10 +10313,10 @@
             });
           })(t);
         return r.data
-          ? i.createElement(vn, { clip: r.data })
+          ? i.createElement(Ra, { clip: r.data })
           : i.createElement("div", { style: { color: "white" } }, "Loading...");
       }
-      function Mn(e, t) {
+      function Ba(e, t) {
         return {
           timeline_id: t.server_timeline_id,
           game_id: e.clip_id,
@@ -9240,11 +10325,11 @@
           recordings: [],
         };
       }
-      function Cn(e) {
+      function wa(e) {
         const t = i.useMemo(
             () =>
               (function (e) {
-                return L().GetTimelineLoaderForSharedClip(e);
+                return q().GetTimelineLoaderForSharedClip(e);
               })(e),
             [e],
           ),
@@ -9261,24 +10346,24 @@
           { loader: t.loader, fnGetManifest: r }
         );
       }
-      function vn(e) {
+      function Ra(e) {
         const { clip: t } = e,
-          { loader: r, fnGetManifest: n } = Cn(t);
+          { loader: r, fnGetManifest: n } = wa(t);
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            Ge,
-            { loader: r, fnGetManifest: n, mode: _e.CommunityClip },
+            Ct,
+            { loader: r, fnGetManifest: n, mode: ct.CommunityClip },
             i.createElement(
               "div",
-              { className: Sn.ClipDetails },
+              { className: Ca.ClipDetails },
               i.createElement(
                 "div",
-                { className: Sn.VideoContainer },
-                i.createElement(Qt, { positionAbsolute: !1, autoPlay: !0 }),
+                { className: Ca.VideoContainer },
+                i.createElement(ei, { positionAbsolute: !1, autoPlay: !0 }),
               ),
-              i.createElement(dn, { loader: r }),
+              i.createElement(ha, { loader: r }),
             ),
           ),
         );
@@ -10652,7 +11737,7 @@
     },
     53184: (e, t, r) => {
       "use strict";
-      r.d(t, { xM: () => it });
+      r.d(t, { xM: () => Xe });
       var i = r(80613),
         n = r(89068),
         a = r(56545),
@@ -11814,7 +12899,7 @@
                     br: n.qM.readString,
                     bw: n.gp.writeString,
                   },
-                  significant_events: { n: 16, c: D, r: !0, q: !0 },
+                  significant_events: { n: 16, c: W, r: !0, q: !0 },
                   attributes: { n: 17, c: f, r: !0, q: !0 },
                 },
               }),
@@ -12069,73 +13154,36 @@
           return "CGameRecording_GetEnoughDiskSpace_Request";
         }
       }
-      class z extends p {
+      class P extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.enough_space || n.Sg(z.M()),
+            P.prototype.enough_space || n.Sg(P.M()),
             p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            P.sm_m ||
+              (P.sm_m = {
+                proto: P,
                 fields: {
                   enough_space: { n: 1, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
-            z.sm_m
+            P.sm_m
           );
         }
         static MBF() {
-          return z.sm_mbf || (z.sm_mbf = n.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_GetEnoughDiskSpace_Response";
-        }
-      }
-      class P extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
+          return P.sm_mbf || (P.sm_mbf = n.w0(P.M())), P.sm_mbf;
         }
         toObject(e = !1) {
           return P.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(P.M(), e, t);
         }
         static fromObject(e) {
-          return new P();
+          return n.Uq(P.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -12143,16 +13191,53 @@
           return P.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(P.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(P.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetEnoughDiskSpace_Response";
+        }
+      }
+      class z extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), p.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new z();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new z();
+          return z.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_GetAvailableDiskSpace_Request";
@@ -12290,18 +13375,18 @@
           return "CGameRecording_TimelineChanged_Notification";
         }
       }
-      class W extends p {
+      class D extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            W.prototype.notification_type || n.Sg(W.M()),
+            D.prototype.notification_type || n.Sg(D.M()),
             p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
                 fields: {
                   notification_type: {
                     n: 1,
@@ -12340,56 +13425,56 @@
                   },
                 },
               }),
-            W.sm_m
+            D.sm_m
           );
         }
         static MBF() {
-          return W.sm_mbf || (W.sm_mbf = n.w0(W.M())), W.sm_mbf;
+          return D.sm_mbf || (D.sm_mbf = n.w0(D.M())), D.sm_mbf;
         }
         toObject(e = !1) {
-          return W.toObject(e, this);
+          return D.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(W.M(), e, t);
+          return n.BT(D.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(W.M(), e);
+          return n.Uq(D.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
+            r = new D();
+          return D.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(W.MBF(), e, t);
+          return n.zj(D.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(W.M(), e, t);
+          n.i0(D.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_RecordingSessionChanged_Notification";
         }
       }
-      class D extends p {
+      class W extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            D.prototype.timeline_id || n.Sg(D.M()),
+            W.prototype.timeline_id || n.Sg(W.M()),
             p.initialize(this, e, 0, -1, [17, 19], null);
         }
         static M() {
           return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
                 fields: {
                   timeline_id: {
                     n: 1,
@@ -12462,39 +13547,39 @@
                   attributes: { n: 19, c: f, r: !0, q: !0 },
                 },
               }),
-            D.sm_m
+            W.sm_m
           );
         }
         static MBF() {
-          return D.sm_mbf || (D.sm_mbf = n.w0(D.M())), D.sm_mbf;
+          return W.sm_mbf || (W.sm_mbf = n.w0(W.M())), W.sm_mbf;
         }
         toObject(e = !1) {
-          return D.toObject(e, this);
+          return W.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(D.M(), e, t);
+          return n.BT(W.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(D.M(), e);
+          return n.Uq(W.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new D();
-          return D.deserializeBinaryFromReader(r, t);
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(D.MBF(), e, t);
+          return n.zj(W.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(D.M(), e, t);
+          n.i0(W.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTimelineEntry";
@@ -12513,7 +13598,7 @@
               (L.sm_m = {
                 proto: L,
                 fields: {
-                  entry: { n: 1, c: D },
+                  entry: { n: 1, c: W },
                   game_id: {
                     n: 2,
                     br: n.qM.readFixed64String,
@@ -13241,53 +14326,53 @@
           return "CGameRecording_DeleteClip_Request";
         }
       }
-      class J extends p {
+      class Q extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), p.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return J.toObject(e, this);
+          return Q.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new J();
+          return new Q();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new J();
-          return J.deserializeBinaryFromReader(r, t);
+            r = new Q();
+          return Q.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_DeleteClip_Response";
         }
       }
-      class Q extends p {
+      class J extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Q.prototype.bitrate_kbps || n.Sg(Q.M()),
+            J.prototype.bitrate_kbps || n.Sg(J.M()),
             p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Q.sm_m ||
-              (Q.sm_m = {
-                proto: Q,
+            J.sm_m ||
+              (J.sm_m = {
+                proto: J,
                 fields: {
                   bitrate_kbps: {
                     n: 1,
@@ -13304,39 +14389,39 @@
                   codec: { n: 5, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
-            Q.sm_m
+            J.sm_m
           );
         }
         static MBF() {
-          return Q.sm_mbf || (Q.sm_mbf = n.w0(Q.M())), Q.sm_mbf;
+          return J.sm_mbf || (J.sm_mbf = n.w0(J.M())), J.sm_mbf;
         }
         toObject(e = !1) {
-          return Q.toObject(e, this);
+          return J.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(Q.M(), e, t);
+          return n.BT(J.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(Q.M(), e);
+          return n.Uq(J.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new Q();
-          return Q.deserializeBinaryFromReader(r, t);
+            r = new J();
+          return J.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(Q.MBF(), e, t);
+          return n.zj(J.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(Q.M(), e, t);
+          n.i0(J.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_ExportClip_Settings";
@@ -13361,7 +14446,7 @@
                     br: n.qM.readString,
                     bw: n.gp.writeString,
                   },
-                  settings: { n: 3, c: Q },
+                  settings: { n: 3, c: J },
                   use_unique_filename: {
                     n: 4,
                     br: n.qM.readBool,
@@ -13456,7 +14541,7 @@
                 proto: $,
                 fields: {
                   clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                  settings: { n: 2, c: Q },
+                  settings: { n: 2, c: J },
                   run_policy_checks: {
                     n: 3,
                     br: n.qM.readBool,
@@ -13520,7 +14605,7 @@
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
-                  settings: { n: 2, c: Q },
+                  settings: { n: 2, c: J },
                 },
               }),
             ee.sm_m
@@ -14154,7 +15239,7 @@
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
-                  entry: { n: 2, c: D },
+                  entry: { n: 2, c: W },
                   clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
@@ -14272,7 +15357,7 @@
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
-                  entry: { n: 2, c: D },
+                  entry: { n: 2, c: W },
                   clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
@@ -15210,41 +16295,6 @@
           return "CGameRecording_CleanupBackgroundRecordings_Request";
         }
       }
-      class ze extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return ze.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new ze();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new ze();
-          return ze.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_CleanupBackgroundRecordings_Response";
-        }
-      }
       class Pe extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -15275,6 +16325,41 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return Pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_CleanupBackgroundRecordings_Response";
+        }
+      }
+      class ze extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), p.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return ze.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new ze();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new ze();
+          return ze.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_GetPlatformCapabilities_Request";
@@ -15387,70 +16472,11 @@
           return "CGameRecording_ClipCreated_Notification";
         }
       }
-      class We extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            We.prototype.clip_id || n.Sg(We.M()),
-            p.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            We.sm_m ||
-              (We.sm_m = {
-                proto: We,
-                fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                  game_id: {
-                    n: 2,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            We.sm_m
-          );
-        }
-        static MBF() {
-          return We.sm_mbf || (We.sm_mbf = n.w0(We.M())), We.sm_mbf;
-        }
-        toObject(e = !1) {
-          return We.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(We.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(We.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new We();
-          return We.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(We.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(We.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_ClipDeleted_Notification";
-        }
-      }
       class De extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            De.prototype.progress || n.Sg(De.M()),
+            De.prototype.clip_id || n.Sg(De.M()),
             p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15459,9 +16485,12 @@
               (De.sm_m = {
                 proto: De,
                 fields: {
-                  progress: { n: 1, br: n.qM.readFloat, bw: n.gp.writeFloat },
-                  clip_id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  eresult: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  game_id: {
+                    n: 2,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
                 },
               }),
             De.sm_m
@@ -15497,6 +16526,62 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_ClipDeleted_Notification";
+        }
+      }
+      class We extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            We.prototype.progress || n.Sg(We.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            We.sm_m ||
+              (We.sm_m = {
+                proto: We,
+                fields: {
+                  progress: { n: 1, br: n.qM.readFloat, bw: n.gp.writeFloat },
+                  clip_id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  eresult: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                },
+              }),
+            We.sm_m
+          );
+        }
+        static MBF() {
+          return We.sm_mbf || (We.sm_mbf = n.w0(We.M())), We.sm_mbf;
+        }
+        toObject(e = !1) {
+          return We.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(We.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(We.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new We();
+          return We.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(We.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(We.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_ExportProgress_Notification";
@@ -15980,460 +17065,7 @@
           return "CGameRecording_SwitchBackgroundRecordingGame_Response";
         }
       }
-      class Xe extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Xe.prototype.appid || n.Sg(Xe.M()),
-            p.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Xe.sm_m ||
-              (Xe.sm_m = {
-                proto: Xe,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  icon: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  title: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                  desc: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            Xe.sm_m
-          );
-        }
-        static MBF() {
-          return Xe.sm_mbf || (Xe.sm_mbf = n.w0(Xe.M())), Xe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Xe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(Xe.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(Xe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Xe();
-          return Xe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(Xe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(Xe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineHighlightMarker_Request";
-        }
-      }
-      class Ze extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Ze.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Ze();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Ze();
-          return Ze.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineHighlightMarker_Response";
-        }
-      }
-      class Je extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Je.prototype.appid || n.Sg(Je.M()),
-            p.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Je.sm_m ||
-              (Je.sm_m = {
-                proto: Je,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            Je.sm_m
-          );
-        }
-        static MBF() {
-          return Je.sm_mbf || (Je.sm_mbf = n.w0(Je.M())), Je.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Je.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(Je.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(Je.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Je();
-          return Je.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(Je.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Je.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(Je.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Je.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineTimestamp_Request";
-        }
-      }
-      class Qe extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Qe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Qe();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Qe();
-          return Qe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Qe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineTimestamp_Response";
-        }
-      }
-      class Ke extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ke.prototype.appid || n.Sg(Ke.M()),
-            p.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Ke.sm_m ||
-              (Ke.sm_m = {
-                proto: Ke,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  title: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            Ke.sm_m
-          );
-        }
-        static MBF() {
-          return Ke.sm_mbf || (Ke.sm_mbf = n.w0(Ke.M())), Ke.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ke.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(Ke.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(Ke.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Ke();
-          return Ke.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(Ke.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(Ke.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeStart_Request";
-        }
-      }
-      class Ye extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Ye.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Ye();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Ye();
-          return Ye.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Ye.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeStart_Response";
-        }
-      }
-      class $e extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            $e.prototype.appid || n.Sg($e.M()),
-            p.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            $e.sm_m ||
-              ($e.sm_m = {
-                proto: $e,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            $e.sm_m
-          );
-        }
-        static MBF() {
-          return $e.sm_mbf || ($e.sm_mbf = n.w0($e.M())), $e.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $e.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT($e.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq($e.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new $e();
-          return $e.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj($e.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return $e.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0($e.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeEnd_Request";
-        }
-      }
-      class et extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return et.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new et();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new et();
-          return et.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return et.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return et.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeEnd_Response";
-        }
-      }
-      class tt extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            tt.prototype.appid || n.Sg(tt.M()),
-            p.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            tt.sm_m ||
-              (tt.sm_m = {
-                proto: tt,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  mode: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                },
-              }),
-            tt.sm_m
-          );
-        }
-        static MBF() {
-          return tt.sm_mbf || (tt.sm_mbf = n.w0(tt.M())), tt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return tt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(tt.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(tt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new tt();
-          return tt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(tt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return tt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(tt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_SetTimelineGameMode_Request";
-        }
-      }
-      class rt extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), p.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return rt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new rt();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new rt();
-          return rt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_SetTimelineGameMode_Response";
-        }
-      }
-      var it, nt;
+      var Xe;
       !(function (e) {
         (e.GetAppsWithBackgroundVideoHandler = {
           name: "GameRecording.GetAppsWithBackgroundVideo#1",
@@ -16605,7 +17237,7 @@
           (e.GetEnoughDiskSpaceHandler = {
             name: "GameRecording.GetEnoughDiskSpace#1",
             request: E,
-            response: z,
+            response: P,
           }),
           (e.GetEnoughDiskSpace = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -16618,7 +17250,7 @@
               : t.SendMsg(
                   "GameRecording.GetEnoughDiskSpace#1",
                   (0, a.I8)(E, e),
-                  z,
+                  P,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -16633,13 +17265,13 @@
               : t.SendMsg(
                   "GameRecording.GetEnoughDiskSpace#1",
                   (0, a.I8)(E, e),
-                  z,
+                  P,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetAvailableDiskSpaceHandler = {
             name: "GameRecording.GetAvailableDiskSpace#1",
-            request: P,
+            request: z,
             response: O,
           }),
           (e.GetAvailableDiskSpace = function (e, t) {
@@ -16652,7 +17284,7 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetAvailableDiskSpace#1",
-                  (0, a.I8)(P, e),
+                  (0, a.I8)(z, e),
                   O,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
@@ -16667,7 +17299,7 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetAvailableDiskSpace#1",
-                  (0, a.I8)(P, e),
+                  (0, a.I8)(z, e),
                   O,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
@@ -16706,7 +17338,7 @@
           (e.DeleteClipHandler = {
             name: "GameRecording.DeleteClip#1",
             request: Z,
-            response: J,
+            response: Q,
           }),
           (e.DeleteClip = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -16716,7 +17348,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(Z, e), J, {
+              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(Z, e), Q, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -16729,7 +17361,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(Z, e), J, {
+              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(Z, e), Q, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -17040,7 +17672,7 @@
           (e.CleanupBackgroundRecordingsHandler = {
             name: "GameRecording.CleanupBackgroundRecordings#1",
             request: Ee,
-            response: ze,
+            response: Pe,
           }),
           (e.CleanupBackgroundRecordings = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -17053,7 +17685,7 @@
               : t.SendMsg(
                   "GameRecording.CleanupBackgroundRecordings#1",
                   (0, a.I8)(Ee, e),
-                  ze,
+                  Pe,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17068,7 +17700,7 @@
               : t.SendMsg(
                   "GameRecording.CleanupBackgroundRecordings#1",
                   (0, a.I8)(Ee, e),
-                  ze,
+                  Pe,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17144,7 +17776,7 @@
           }),
           (e.GetPlatformCapabilitiesHandler = {
             name: "GameRecording.GetPlatformCapabilities#1",
-            request: Pe,
+            request: ze,
             response: Oe,
           }),
           (e.GetPlatformCapabilities = function (e, t) {
@@ -17157,7 +17789,7 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetPlatformCapabilities#1",
-                  (0, a.I8)(Pe, e),
+                  (0, a.I8)(ze, e),
                   Oe,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
@@ -17172,7 +17804,7 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetPlatformCapabilities#1",
-                  (0, a.I8)(Pe, e),
+                  (0, a.I8)(ze, e),
                   Oe,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
@@ -17218,7 +17850,7 @@
           }),
           (e.NotifyRecordingSessionChangedHandler = {
             name: "GameRecording.NotifyRecordingSessionChanged#1",
-            request: W,
+            request: D,
           }),
           (e.RegisterForNotifyRecordingSessionChanged = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -17239,7 +17871,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyRecordingSessionChanged#1",
-                  (0, a.I8)(W, e),
+                  (0, a.I8)(D, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17251,7 +17883,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyRecordingSessionChanged#1",
-                  (0, a.I8)(W, e),
+                  (0, a.I8)(D, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17374,7 +18006,7 @@
           }),
           (e.NotifyClipDeletedHandler = {
             name: "GameRecording.NotifyClipDeleted#1",
-            request: We,
+            request: De,
           }),
           (e.RegisterForNotifyClipDeleted = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -17395,7 +18027,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyClipDeleted#1",
-                  (0, a.I8)(We, e),
+                  (0, a.I8)(De, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17407,13 +18039,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyClipDeleted#1",
-                  (0, a.I8)(We, e),
+                  (0, a.I8)(De, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyExportProgressHandler = {
             name: "GameRecording.NotifyExportProgress#1",
-            request: De,
+            request: We,
           }),
           (e.RegisterForNotifyExportProgress = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -17434,7 +18066,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyExportProgress#1",
-                  (0, a.I8)(De, e),
+                  (0, a.I8)(We, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17446,7 +18078,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyExportProgress#1",
-                  (0, a.I8)(De, e),
+                  (0, a.I8)(We, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -17999,204 +18631,7 @@
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           });
-      })(it || (it = {})),
-        (function (e) {
-          (e.AddTimelineHighlightMarkerHandler = {
-            name: "GameRecordingDebug.AddTimelineHighlightMarker#1",
-            request: Xe,
-            response: Ze,
-          }),
-            (e.AddTimelineHighlightMarker = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineHighlightMarker#1",
-                    (0, a.I8)(Xe, e),
-                    Ze,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.SendMsgAddTimelineHighlightMarker = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineHighlightMarker#1",
-                    (0, a.I8)(Xe, e),
-                    Ze,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.AddTimelineTimestampHandler = {
-              name: "GameRecordingDebug.AddTimelineTimestamp#1",
-              request: Je,
-              response: Qe,
-            }),
-            (e.AddTimelineTimestamp = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineTimestamp#1",
-                    (0, a.I8)(Je, e),
-                    Qe,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.SendMsgAddTimelineTimestamp = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineTimestamp#1",
-                    (0, a.I8)(Je, e),
-                    Qe,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.AddTimelineRangeStartHandler = {
-              name: "GameRecordingDebug.AddTimelineRangeStart#1",
-              request: Ke,
-              response: Ye,
-            }),
-            (e.AddTimelineRangeStart = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineRangeStart#1",
-                    (0, a.I8)(Ke, e),
-                    Ye,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.SendMsgAddTimelineRangeStart = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineRangeStart#1",
-                    (0, a.I8)(Ke, e),
-                    Ye,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.AddTimelineRangeEndHandler = {
-              name: "GameRecordingDebug.AddTimelineRangeEnd#1",
-              request: $e,
-              response: et,
-            }),
-            (e.AddTimelineRangeEnd = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineRangeEnd#1",
-                    (0, a.I8)($e, e),
-                    et,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.SendMsgAddTimelineRangeEnd = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.AddTimelineRangeEnd#1",
-                    (0, a.I8)($e, e),
-                    et,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.SetTimelineGameModeHandler = {
-              name: "GameRecordingDebug.SetTimelineGameMode#1",
-              request: tt,
-              response: rt,
-            }),
-            (e.SetTimelineGameMode = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.SetTimelineGameMode#1",
-                    (0, a.I8)(tt, e),
-                    rt,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            }),
-            (e.SendMsgSetTimelineGameMode = function (e, t) {
-              return null == (t = t || (0, s.OI)().GetDefaultTransport())
-                ? new Promise((e, t) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      t(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : t.SendMsg(
-                    "GameRecordingDebug.SetTimelineGameMode#1",
-                    (0, a.I8)(tt, e),
-                    rt,
-                    { ePrivilege: 1, eClientExecutionSite: 1 },
-                  );
-            });
-        })(nt || (nt = {}));
+      })(Xe || (Xe = {}));
     },
     29210: (e, t, r) => {
       "use strict";
@@ -18261,322 +18696,6 @@
         static InitFromShortcutID(e) {
           return new l(n.Rh.k_EGameIDTypeShortcut, 0, e);
         }
-      }
-    },
-    14864: (e, t, r) => {
-      "use strict";
-      r.r(t),
-        r.d(t, {
-          CGameTimelineMarkerStore: () => m,
-          GetCombinedMarkerFilename: () => c,
-          GetGameSVGTimelineMarkerPublicURL: () => d,
-          SetTimelineMarkerURLFunction: () => u,
-          useGameTimelineMarkers: () => g,
-        });
-      var i = r(34629),
-        n = r(90626),
-        a = r(30470),
-        s = r(23144),
-        l = r(14947),
-        o = r(65946);
-      class m {
-        constructor() {
-          (this.m_mapAppMarkerLoadingPromises = new Map()),
-            (this.m_mapAppMarkers = new Map()),
-            (this.m_mapURLForApp = new Map()),
-            (this.m_fnTimelineURLGenerator = void 0),
-            (0, l.Gn)(this);
-        }
-        BIsLoaded(e) {
-          return this.m_mapAppMarkers.has(e);
-        }
-        GetGameMarkerSVGById(e, t) {
-          var r, i;
-          const n = this.m_fnTimelineURLGenerator
-            ? this.m_fnTimelineURLGenerator(e)
-            : d(e);
-          return (
-            this.m_mapURLForApp.get(e) != n &&
-              setTimeout(() => {
-                this.LoadAppPublicMarkers(e, n);
-              }, 0),
-            null ===
-              (i =
-                null === (r = this.m_mapAppMarkers.get(e)) || void 0 === r
-                  ? void 0
-                  : r.get(t)) || void 0 === i
-              ? void 0
-              : i.svg
-          );
-        }
-        GetAllUseableMarkerID(e, t) {
-          this.m_mapURLForApp.get(e) != t && this.LoadAppPublicMarkers(e, t);
-          const r = this.m_mapAppMarkers.get(e);
-          return r ? Array.from(r.keys()) : [];
-        }
-        async LoadAppPublicMarkers(e, t) {
-          return (
-            this.m_mapAppMarkerLoadingPromises.has(e) ||
-              this.m_mapAppMarkerLoadingPromises.set(
-                e,
-                this.InternalAppPublicMarkers(e, t),
-              ),
-            this.m_mapAppMarkerLoadingPromises.get(e)
-          );
-        }
-        async InternalAppPublicMarkers(e, t) {
-          const r = new Map();
-          try {
-            const i = await fetch(t);
-            i.ok ||
-              (a.TS.IN_CLIENT &&
-                SteamClient.Apps.ReportLibraryAssetCacheMiss(e, 6));
-            const n = await i.text(),
-              l = new DOMParser(),
-              o = l
-                .parseFromString(n, "image/svg+xml")
-                .getElementsByTagName("defs")[0];
-            Array.from(o.children).forEach((e) => {
-              var t;
-              const i = (0, s.Bo)(
-                  null ===
-                    (t = e.attributes.getNamedItem("steam-timeline-color")) ||
-                    void 0 === t
-                    ? void 0
-                    : t.value,
-                ),
-                n = e;
-              r.set(e.id, { color: i, svg: n });
-            });
-          } catch (e) {}
-          this.m_mapAppMarkerLoadingPromises.delete(e),
-            this.m_mapAppMarkers.set(e, r),
-            this.m_mapURLForApp.set(e, t);
-        }
-        SetTimelineMarkerURLFunction(e) {
-          this.m_fnTimelineURLGenerator = e;
-        }
-        GetTimelineMarkerURLFunction() {
-          return this.m_fnTimelineURLGenerator;
-        }
-        static Get() {
-          return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              "dev" == a.TS.WEB_UNIVERSE &&
-                (window.g_GameTimelineMarker = m.s_Singleton)),
-            m.s_Singleton
-          );
-        }
-      }
-      async function c(e, t, r) {
-        let i = "";
-        if ("default" != t) {
-          const e = new TextEncoder().encode(r),
-            t = await crypto.subtle.digest("MD5", e);
-          i =
-            Array.from(new Uint8Array(t))
-              .map((e) =>
-                1 === e.toString(16).length
-                  ? "0" + e.toString(16)
-                  : e.toString(16),
-              )
-              .join("") + "_";
-        }
-        return `${e}_${i}markers.svg`;
-      }
-      function u(e) {
-        m.Get().SetTimelineMarkerURLFunction(e);
-      }
-      function d(e) {
-        return `${a.TS.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
-      }
-      function g(e) {
-        const t = (function (e) {
-            return (0, o.q3)(() => m.Get().BIsLoaded(e));
-          })(e),
-          r = (function (e) {
-            const t = m.Get();
-            return (0, o.q3)(() => {
-              const r = t.GetTimelineMarkerURLFunction();
-              return r ? r(e) : d(e);
-            });
-          })(e),
-          i = m.Get(),
-          [a, s] = (0, n.useState)(null);
-        return (
-          (0, n.useEffect)(() => {
-            t && s(i.GetAllUseableMarkerID(e, r));
-          }, [e, t, a, i, r]),
-          a
-        );
-      }
-      (0, i.Cg)([l.sH], m.prototype, "m_mapAppMarkerLoadingPromises", void 0),
-        (0, i.Cg)([l.sH], m.prototype, "m_mapAppMarkers", void 0),
-        (0, i.Cg)([l.sH], m.prototype, "m_mapURLForApp", void 0),
-        (0, i.Cg)([l.sH], m.prototype, "m_fnTimelineURLGenerator", void 0);
-    },
-    23144: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        Bo: () => m,
-        DP: () => f,
-        KJ: () => _,
-        K_: () => h,
-        Xw: () => p,
-        b9: () => o,
-        o1: () => g,
-      });
-      var i = r(30470),
-        n = r(52694),
-        a = r(78327);
-      const s = "steam_";
-      var l;
-      function o(e) {
-        switch (e) {
-          default:
-          case l.White:
-            return "#DCDEDF";
-          case l.Red:
-            return "#FB7C7C";
-          case l.Orange:
-            return "#FBB17C";
-          case l.Yellow:
-            return "#FBDF7C";
-          case l.Green:
-            return "#9DFB7C";
-          case l.Blue:
-            return "#7CD5FB";
-          case l.Purple:
-            return "#A57CFB";
-          case l.Brown:
-            return "#C18C5B";
-          case l.Gray:
-            return "#B8BCBF";
-        }
-      }
-      function m(e) {
-        if (!e) return l.White;
-        const t = e.toLowerCase(),
-          r = c(l);
-        for (const e of r) if (e.toLowerCase() == t) return l[e];
-        return l.White;
-      }
-      function c(e) {
-        return Object.keys(e).filter((e) => !Number.isNaN(e));
-      }
-      !(function (e) {
-        (e[(e.White = 0)] = "White"),
-          (e[(e.Red = 1)] = "Red"),
-          (e[(e.Orange = 2)] = "Orange"),
-          (e[(e.Yellow = 3)] = "Yellow"),
-          (e[(e.Green = 4)] = "Green"),
-          (e[(e.Blue = 5)] = "Blue"),
-          (e[(e.Purple = 6)] = "Purple"),
-          (e[(e.Brown = 7)] = "Brown"),
-          (e[(e.Gray = 8)] = "Gray");
-      })(l || (l = {}));
-      const u = c(l).map((e) => l[e]);
-      class d {
-        constructor() {
-          this.m_mapSteamTimelineMarkers = new Map();
-        }
-        GetMarkerByID(e) {
-          const t = e.toLowerCase().startsWith(s)
-            ? e.slice(s.length).toLowerCase()
-            : e.toLowerCase();
-          if (this.m_mapSteamTimelineMarkers.has(t))
-            return this.m_mapSteamTimelineMarkers.get(t);
-          const r = parseInt(t);
-          return "number" == typeof r && r >= 0 && r <= 99
-            ? { func: (e) => n.wN({ nNumber: r }), color: l.Gray }
-            : h();
-        }
-        GetAllUseableMarkerID() {
-          return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
-            (e) => s + e,
-          );
-        }
-        static Get() {
-          return (
-            d.s_Singleton ||
-              ((d.s_Singleton = new d()),
-              d.s_Singleton.Init(),
-              "dev" == i.TS.WEB_UNIVERSE &&
-                (window.g_SteamTimelineMarker = d.s_Singleton)),
-            d.s_Singleton
-          );
-        }
-        AddMarker(e, t, r) {
-          const i = null != r ? r : l.White;
-          this.m_mapSteamTimelineMarkers.set(e, { func: t, color: i });
-          for (const r of u) {
-            const i = `${e}_${l[r]}`.toLowerCase();
-            this.m_mapSteamTimelineMarkers.set(i, { func: t, color: r });
-          }
-        }
-        Init() {
-          this.AddMarker("explosion", n.Wq, l.Gray),
-            this.AddMarker("attack", n.LB, l.Gray),
-            this.AddMarker("defend", n.po, l.Gray),
-            this.AddMarker("combat", n.t4, l.Gray),
-            this.AddMarker("chest", n.k8, l.Gray),
-            this.AddMarker("view", n.Ss, l.Gray),
-            (0, a.Y2)()
-              ? this.AddMarker("death", n.X, l.Gray)
-              : this.AddMarker("death", n.lQ, l.Gray),
-            this.AddMarker("x", n.X, l.Gray),
-            this.AddMarker("plus", n.FW, l.Gray),
-            this.AddMarker("minus", n.Hs, l.Gray),
-            this.AddMarker("info", n.R2, l.Gray),
-            this.AddMarker("bolt", n.y$, l.Gray),
-            this.AddMarker("caution", n.eT, l.Gray),
-            this.AddMarker("completed", n.AY, l.Gray),
-            this.AddMarker("checkmark", n.MG, l.Gray),
-            this.AddMarker("effect", n.Mj, l.Gray),
-            this.AddMarker("purchase", n.QY, l.Gray),
-            this.AddMarker("ribbon", n.y4, l.Gray),
-            this.AddMarker("scroll", n.OY, l.Gray),
-            this.AddMarker("crown", n.Oe, l.Gray),
-            this.AddMarker("starburst", n.bL, l.Gray),
-            this.AddMarker("flag", n.lN, l.Gray),
-            this.AddMarker("cart", n.Z3, l.Gray),
-            this.AddMarker("timer", n.M4, l.Gray),
-            this.AddMarker("chat", n.ry, l.Gray),
-            this.AddMarker("wrench", n.Ml, l.Gray),
-            this.AddMarker("transfer", n.mr, l.Gray),
-            this.AddMarker("edit", n.ff, l.Gray),
-            this.AddMarker("bookmark", n.Xh, l.Gray),
-            this.AddMarker("invalid", n.WO, l.Gray),
-            this.AddMarker("star", n.FE, l.Gray),
-            this.AddMarker("circle", n.jl, l.Gray),
-            this.AddMarker("square", n.M6, l.Gray),
-            this.AddMarker("triangle", n.lM, l.Gray),
-            this.AddMarker("heart", n.B1, l.Gray),
-            this.AddMarker("diamond", n.JB, l.Gray),
-            this.AddMarker("gem", n.gD, l.Gray),
-            this.AddMarker("group", n.YJ, l.Gray),
-            this.AddMarker("pair", n.Rm, l.Gray),
-            this.AddMarker("single", n.KJ, l.Gray),
-            this.AddMarker("trophy", n.Oi, l.Gray),
-            this.AddMarker("achievement", n.Oi, l.Gray),
-            this.AddMarker("screenshot", n.pw, l.Gray);
-        }
-      }
-      function g(e) {
-        return d.Get().GetMarkerByID(e);
-      }
-      function f() {
-        return { func: n.pH, color: l.Blue };
-      }
-      function p() {
-        return { func: n.Oi, color: l.White };
-      }
-      function h() {
-        return { func: n.pH, color: l.Gray };
-      }
-      function _(e) {
-        return e && e.toLowerCase().startsWith(s);
       }
     },
     61788: (e, t, r) => {
@@ -18668,7 +18787,7 @@
       "use strict";
       r.d(t, { Hh: () => c, vs: () => o, wB: () => m });
       var i = r(90626),
-        n = r(21273),
+        n = r(49300),
         a = r(56330),
         s = r(61859),
         l = r(22797);
@@ -18762,1050 +18881,6 @@
                   position: "center",
                 }),
               );
-      }
-    },
-    52694: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        AY: () => u,
-        B1: () => P,
-        FE: () => G,
-        FW: () => H,
-        Hs: () => V,
-        JB: () => O,
-        KJ: () => D,
-        LB: () => q,
-        M4: () => M,
-        M6: () => E,
-        MG: () => d,
-        Mj: () => g,
-        Ml: () => v,
-        Nm: () => J,
-        O5: () => Y,
-        OY: () => h,
-        Od: () => Z,
-        Oe: () => _,
-        Oi: () => o,
-        QY: () => f,
-        R2: () => m,
-        Rm: () => W,
-        Ss: () => U,
-        WO: () => R,
-        Wd: () => Q,
-        Wq: () => L,
-        X: () => A,
-        Xh: () => w,
-        YJ: () => k,
-        Z3: () => y,
-        ai: () => n,
-        bL: () => S,
-        eT: () => a,
-        ff: () => B,
-        gD: () => s,
-        i7: () => ee,
-        jl: () => I,
-        k8: () => x,
-        lM: () => z,
-        lN: () => b,
-        lQ: () => j,
-        mr: () => T,
-        pH: () => l,
-        po: () => F,
-        pw: () => X,
-        ry: () => C,
-        t4: () => N,
-        wN: () => $,
-        xA: () => K,
-        y$: () => c,
-        y4: () => p,
-      });
-      var i = r(90626);
-      r(91929);
-      function n(e) {
-        return i.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M5.48744 28.293V31.3988H35V9.65272H31.8924V28.293H5.48744Z",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M1 4V24.7106H28.6141V4H1ZM6.17764 22.1217H3.58882V18.67H6.17764V22.1217ZM6.17764 16.0812H3.58882V12.6294H6.17764V16.0812ZM6.17764 10.0406H3.58882V6.58882H6.17764V10.0406ZM11.3553 19.3345V9.37612L19.9847 14.3553L11.3553 19.3345ZM26.0253 22.1217H23.4365V18.67H26.0253V22.1217ZM26.0253 16.0812H23.4365V12.6294H26.0253V16.0812ZM26.0253 10.0406H23.4365V6.58882H26.0253V10.0406Z",
-          }),
-        );
-      }
-      function a(e) {
-        return i.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18 4L3 30H33L18 4ZM21.025 12.9375L20.0167 21.0625H15.9833L14.975 12.9375H21.025ZM18 27.5625C17.5055 27.5625 17.0222 27.4195 16.6111 27.1517C16.2 26.8839 15.8795 26.5032 15.6903 26.0578C15.5011 25.6124 15.4516 25.1223 15.548 24.6495C15.6445 24.1766 15.8826 23.7423 16.2322 23.4014C16.5819 23.0605 17.0273 22.8284 17.5123 22.7343C17.9972 22.6403 18.4999 22.6886 18.9567 22.873C19.4135 23.0575 19.804 23.37 20.0787 23.7708C20.3534 24.1716 20.5 24.6429 20.5 25.125C20.5 25.7715 20.2366 26.3915 19.7678 26.8486C19.2989 27.3057 18.663 27.5625 18 27.5625Z",
-          }),
-        );
-      }
-      function s(e) {
-        return i.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M14.8423 5.23802H8.25602C8.06408 5.23802 7.8781 5.334 7.76408 5.48998L3.89928 11H10.0685L14.8423 5.23802Z",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M3.66016 13.5L14.8423 28.8125L9.68747 13.5H3.66016Z",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M12.1675 13.5L17.4301 30.33C17.4339 30.3454 17.4403 30.3559 17.4475 30.3678L17.4527 30.3763L17.4574 30.3847L17.4601 30.39C17.4661 30.4139 17.478 30.4379 17.4961 30.4619C17.5201 30.504 17.5501 30.54 17.5801 30.57L17.6341 30.624C17.6882 30.666 17.7541 30.7019 17.8201 30.726C17.8623 30.7365 17.9044 30.7424 17.9424 30.7478L17.9582 30.75H17.9941L18.0001 30.756C18.0031 30.756 18.0046 30.7545 18.0061 30.753C18.0076 30.7515 18.0091 30.75 18.0121 30.75H18.0361C18.0841 30.75 18.1321 30.744 18.1801 30.726H18.1861C18.2521 30.702 18.318 30.666 18.3721 30.624C18.3811 30.615 18.3886 30.606 18.3961 30.597C18.4036 30.588 18.4111 30.579 18.4201 30.57C18.4561 30.54 18.4861 30.5039 18.5101 30.4619L18.5461 30.39C18.5491 30.378 18.5551 30.369 18.5611 30.36C18.5671 30.351 18.5731 30.342 18.5761 30.33L19.3385 27.889L19.3262 27.8851L21.4894 21.0028L23.8329 13.5L12.1675 13.5Z",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M20.875 28.8125L32.346 13.5H26.3313L20.875 28.8125Z",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M32.1009 11L28.236 5.48993C28.1221 5.33395 27.9421 5.23798 27.7441 5.23798H21.0513L25.8251 11H32.1009Z",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M23.076 11L18.4622 5.45398C18.4562 5.448 18.4487 5.44199 18.4412 5.43599C18.4338 5.42998 18.4262 5.42397 18.4203 5.418C18.4157 5.41341 18.412 5.40792 18.4081 5.40222C18.4019 5.39309 18.3954 5.38341 18.3843 5.37605C18.3753 5.37007 18.3663 5.36556 18.3573 5.36105C18.3483 5.35654 18.3393 5.35202 18.3303 5.34605C18.2949 5.32248 18.2596 5.30479 18.2243 5.28709L18.2222 5.28605L18.2195 5.28515C18.1843 5.27349 18.1492 5.26187 18.1142 5.25605C18.0782 5.25007 18.0421 5.24409 18.0002 5.24409C17.9641 5.24409 17.9281 5.25007 17.8921 5.25605C17.85 5.26202 17.8141 5.27398 17.7781 5.29202C17.7421 5.3041 17.7121 5.32202 17.6761 5.34605C17.6671 5.35202 17.6566 5.35654 17.6461 5.36105C17.6356 5.36556 17.6252 5.37007 17.6161 5.37605C17.6102 5.38202 17.6056 5.38952 17.6011 5.39702C17.5966 5.40452 17.5921 5.41203 17.5861 5.418C17.5811 5.42132 17.5761 5.42418 17.5712 5.42696C17.5585 5.4342 17.5467 5.44094 17.5381 5.45398L12.9293 11H23.076Z",
-          }),
-        );
-      }
-      function l(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18 33C18 33 29 20.5586 29 14.3115C29 8.06432 24.0751 3 18 3C11.9249 3 7 8.06432 7 14.3115C7 20.5586 18 33 18 33ZM18 20C21.3137 20 24 17.3137 24 14C24 10.6863 21.3137 8 18 8C14.6863 8 12 10.6863 12 14C12 17.3137 14.6863 20 18 20Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function o(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M30 30.05H26L24 34.05L20.11 27.57L22.9 24.87L26.9 24.81L30 30.05ZM13.1 24.87L9.1 24.81L6 30.05H10L12 34.05L15.89 27.57L13.1 24.87ZM22.5 13.05C22.5 12.16 22.2361 11.2899 21.7416 10.5499C21.2471 9.8099 20.5443 9.23312 19.7221 8.89253C18.8998 8.55194 17.995 8.46282 17.1221 8.63645C16.2492 8.81009 15.4474 9.23867 14.818 9.86801C14.1887 10.4973 13.7601 11.2992 13.5865 12.1721C13.4128 13.045 13.5019 13.9498 13.8425 14.7721C14.1831 15.5943 14.7599 16.2971 15.4999 16.7916C16.24 17.2861 17.11 17.55 18 17.55C18.5913 17.5513 19.1771 17.4358 19.7236 17.2101C20.2702 16.9845 20.7668 16.653 21.1849 16.2349C21.603 15.8168 21.9345 15.3202 22.1601 14.7736C22.3858 14.2271 22.5013 13.6413 22.5 13.05ZM29 13.05L25.85 16.3L25.78 20.83L21.25 20.9L18 24.05L14.75 20.9L10.22 20.83L10.15 16.3L7 13.05L10.15 9.79999L10.22 5.26999L14.75 5.19999L18 2.04999L21.25 5.19999L25.78 5.26999L25.85 9.79999L29 13.05Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function m(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3V3ZM20.5 26H15.5V16H20.5V26ZM18 14C17.4067 14 16.8266 13.8241 16.3333 13.4944C15.8399 13.1648 15.4554 12.6962 15.2284 12.1481C15.0013 11.5999 14.9419 10.9967 15.0577 10.4147C15.1734 9.83279 15.4591 9.29824 15.8787 8.87868C16.2982 8.45912 16.8328 8.1734 17.4147 8.05764C17.9967 7.94189 18.5999 8.0013 19.1481 8.22836C19.6962 8.45542 20.1648 8.83994 20.4944 9.33329C20.8241 9.82664 21 10.4067 21 11C21 11.7956 20.6839 12.5587 20.1213 13.1213C19.5587 13.6839 18.7957 14 18 14V14Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function c(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M12.34 33.73L16 20H8L24 2L21 15H29L12.34 33.73Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function u(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM7 19.9L14.9188 28L29 13.57L25.5017 10L14.9188 20.845L10.4983 16.315L7 19.9Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function d(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M27.2344 6L13.8123 20.0948L7.76561 13.77L3 18.7086L13.8123 30L32 10.9386L27.2344 6Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function g(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M14.5 7L17.2 15.37C17.5375 16.5175 18.4825 17.395 19.63 17.8L28 20.5L19.63 23.2C18.4825 23.5375 17.605 24.4825 17.2 25.63L14.5 34L11.8 25.63C11.4625 24.4825 10.5175 23.605 9.37 23.2L1 20.5L9.37 17.8C10.5175 17.4625 11.395 16.5175 11.8 15.37L14.5 7Z",
-            fill: "currentColor",
-          }),
-          i.createElement("path", {
-            d: "M24.9231 2L26.3077 6.33599C26.4923 6.94209 26.9538 7.40833 27.5538 7.59482L31.8462 8.99353L27.5538 10.3922C26.9538 10.5787 26.4923 11.045 26.3077 11.6511L24.9231 15.9871L23.5385 11.6511C23.3538 11.045 22.8923 10.5787 22.2923 10.3922L18 8.99353L22.2923 7.59482C22.8923 7.40833 23.3538 6.94209 23.5385 6.33599L24.9231 2Z",
-            fill: "currentColor",
-          }),
-          i.createElement("path", {
-            d: "M7.46154 3L8.15385 5.1913C8.24615 5.47105 8.47692 5.70416 8.75384 5.79741L10.9231 6.49676L8.75384 7.19611C8.47692 7.28936 8.24615 7.52248 8.15385 7.80222L7.46154 9.99352L6.76923 7.80222C6.67692 7.52248 6.44615 7.28936 6.16923 7.19611L4 6.49676L6.16923 5.79741C6.44615 5.70416 6.67692 5.47105 6.76923 5.1913L7.46154 3Z",
-            fill: "currentColor",
-          }),
-          i.createElement("path", {
-            d: "M31.4615 12L32.1538 14.1913C32.2462 14.471 32.4769 14.7042 32.7538 14.7974L34.9231 15.4968L32.7538 16.1961C32.4769 16.2894 32.2462 16.5225 32.1538 16.8022L31.4615 18.9935L30.7692 16.8022C30.6769 16.5225 30.4462 16.2894 30.1692 16.1961L28 15.4968L30.1692 14.7974C30.4462 14.7042 30.6769 14.471 30.7692 14.1913L31.4615 12Z",
-            fill: "currentColor",
-          }),
-          i.createElement("path", {
-            d: "M26.4615 25L27.1538 27.1913C27.2462 27.471 27.4769 27.7042 27.7538 27.7974L29.9231 28.4968L27.7538 29.1961C27.4769 29.2894 27.2462 29.5225 27.1538 29.8022L26.4615 31.9935L25.7692 29.8022C25.6769 29.5225 25.4462 29.2894 25.1692 29.1961L23 28.4968L25.1692 27.7974C25.4462 27.7042 25.6769 27.471 25.7692 27.1913L26.4615 25Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function f(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M33.78 19.22L19.22 33.78L4 18.56V4H18.56L33.78 19.22Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function p(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M26 24.5V36L18 33L10 36V24.5L12 24.56C12.4845 24.5765 12.9464 24.7684 13.3 25.1L16.59 28.2C16.9609 28.5488 17.4509 28.7429 17.96 28.7429C18.4691 28.7429 18.9591 28.5488 19.33 28.2L22.62 25.1C22.9736 24.7684 23.4355 24.5765 23.92 24.56L26 24.5ZM30 12L28.2 13.91C27.1867 14.9805 26.6029 16.3866 26.56 17.86L26.49 20.49L23.86 20.56C22.3866 20.6029 20.9805 21.1867 19.91 22.2L18 24L16.09 22.2C15.0195 21.1867 13.6134 20.6029 12.14 20.56L9.51 20.49L9.44 17.86C9.3971 16.3866 8.81331 14.9805 7.8 13.91L6 12L7.8 10.09C8.81331 9.01949 9.3971 7.61342 9.44 6.14L9.51 3.51L12.14 3.44C13.6134 3.3971 15.0195 2.81331 16.09 1.8L18 0L19.91 1.8C20.9805 2.81331 22.3866 3.3971 23.86 3.44L26.49 3.51L26.56 6.14C26.5906 7.6308 27.1753 9.05677 28.2 10.14L30 12ZM23 12C23 11.0111 22.7068 10.0444 22.1573 9.22215C21.6079 8.3999 20.827 7.75904 19.9134 7.3806C18.9998 7.00216 17.9945 6.90315 17.0245 7.09607C16.0546 7.289 15.1637 7.7652 14.4645 8.46447C13.7652 9.16373 13.289 10.0546 13.0961 11.0245C12.9031 11.9945 13.0022 12.9998 13.3806 13.9134C13.759 14.827 14.3999 15.6079 15.2221 16.1573C16.0444 16.7068 17.0111 17 18 17C18.6566 17 19.3068 16.8707 19.9134 16.6194C20.52 16.3681 21.0712 15.9998 21.5355 15.5355C21.9998 15.0712 22.3681 14.52 22.6194 13.9134C22.8707 13.3068 23 12.6566 23 12Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function h(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M8.22 33.93C9.00446 33.7747 9.71061 33.3517 10.2177 32.7334C10.7248 32.115 11.0013 31.3397 11 30.54V25H28V4H4V30.83C4.00192 31.3 4.11422 31.7629 4.32787 32.1815C4.54152 32.6002 4.85053 32.9627 5.23 33.24C5.65215 33.5582 6.13651 33.7841 6.65162 33.903C7.16674 34.0218 7.7011 34.0311 8.22 33.93Z",
-            fill: "currentColor",
-          }),
-          i.createElement("path", {
-            d: "M14 30.54C13.9892 31.7631 13.6434 32.9598 13 34H30.7C33.42 34 34 32 34 30.25V28H14V30.54Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function _(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M32 30L34 7L25.32 13.41L18 4L10.68 13.41L2 7L4 30H32Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function S(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M17.9997 6.16803L22.2873 2L23.9155 7.75347L29.7123 6.287L28.2465 12.0838L34 13.7127L29.8313 17.9997L34 22.2873L28.2465 23.9155L29.7123 29.7123L23.9155 28.2465L22.2873 34L17.9997 29.8313L13.7127 34L12.0838 28.2465L6.287 29.7123L7.75347 23.9155L2 22.2873L6.16803 17.9997L2 13.7127L7.75347 12.0838L6.287 6.287L12.0838 7.75347L13.7127 2L17.9997 6.16803Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function b(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M32 3.83C20 6.44 13.86 -1.37 6 3.83V32H10V17.8C16.19 16.66 22.11 21.6 32 19.45L28.27 11.64L32 3.83Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function y(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M33.63 8.04999L30.11 20.81C29.9416 21.453 29.5645 22.0218 29.0378 22.4273C28.5111 22.8327 27.8647 23.0517 27.2 23.05H14.75C14.1022 23.0506 13.4715 22.8415 12.9524 22.454C12.4333 22.0664 12.0536 21.5213 11.87 20.9L7.56 8.04999H2V4.04999H8.28C8.90845 4.05116 9.52067 4.24967 10.0302 4.61749C10.5398 4.98532 10.921 5.50388 11.12 6.09999L11.78 8.09999L33.63 8.04999ZM15 27.05C14.5055 27.05 14.0222 27.1966 13.6111 27.4713C13.2 27.746 12.8795 28.1365 12.6903 28.5933C12.5011 29.0501 12.4516 29.5528 12.548 30.0377C12.6445 30.5227 12.8826 30.9681 13.2322 31.3178C13.5819 31.6674 14.0273 31.9055 14.5123 32.002C14.9972 32.0984 15.4999 32.0489 15.9567 31.8597C16.4135 31.6705 16.804 31.35 17.0787 30.9389C17.3534 30.5278 17.5 30.0444 17.5 29.55C17.5 28.8869 17.2366 28.2511 16.7678 27.7822C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1966 25.6111 27.4713C25.2 27.746 24.8795 28.1365 24.6903 28.5933C24.5011 29.0501 24.4516 29.5528 24.548 30.0377C24.6445 30.5227 24.8826 30.9681 25.2322 31.3178C25.5819 31.6674 26.0273 31.9055 26.5123 32.002C26.9972 32.0984 27.4999 32.0489 27.9567 31.8597C28.4135 31.6705 28.804 31.35 29.0787 30.9389C29.3534 30.5278 29.5 30.0444 29.5 29.55C29.5 28.8869 29.2366 28.2511 28.7678 27.7822C28.2989 27.3134 27.663 27.05 27 27.05Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function M(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M20 11.85V17L23.41 20.42L20.59 23.24L16 18.68V11.85H20ZM29 18.43C28.9612 19.5207 28.7589 20.5994 28.4 21.63L32.16 23C32.6583 21.5767 32.9414 20.0869 33 18.58L29 18.43ZM28.68 15.33L32.56 14.33C32.1998 12.8866 31.6268 11.5048 30.86 10.23L27.44 12.3C28.0013 13.2418 28.416 14.2635 28.67 15.33H28.68ZM28.09 6.90001C27.011 5.91173 25.7909 5.08941 24.47 4.46001L22.74 8.07C23.7087 8.53467 24.6047 9.13764 25.4 9.86L28.09 6.90001ZM26.93 24.42C25.8301 25.9503 24.3555 27.1724 22.6475 27.969C20.9396 28.7656 19.0557 29.11 17.1764 28.9693C15.297 28.8285 13.4854 28.2073 11.9152 27.1652C10.3449 26.1231 9.06879 24.6951 8.20908 23.018C7.34937 21.3409 6.93495 19.4711 7.00556 17.5879C7.07616 15.7046 7.62943 13.8711 8.61229 12.2631C9.59516 10.6552 10.9747 9.32667 12.6185 8.40506C14.2624 7.48345 16.1154 6.99963 18 7.00001C18.5659 6.99777 19.1311 7.04124 19.69 7.13001L20.3 3.18001C19.5393 3.05968 18.7702 2.99949 18 3.00001C15.527 2.99797 13.0918 3.60743 10.9112 4.77411C8.7307 5.9408 6.87245 7.62852 5.5019 9.68704C4.13134 11.7456 3.29102 14.111 3.05572 16.5728C2.82043 19.0347 3.19746 21.5165 4.15326 23.7973C5.10906 26.0782 6.61398 28.0874 8.53404 29.646C10.4541 31.2046 12.7297 32.2643 15.1584 32.7308C17.587 33.1972 20.0933 33.056 22.4542 32.3196C24.8151 31.5832 26.9572 30.2745 28.69 28.51V28.51L28.77 28.43L28.82 28.38C29.3109 27.8727 29.7654 27.3313 30.18 26.76L26.93 24.42Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function C(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M2 6V27H12L18 34L24 27H34V6H2ZM9.5 19C9.00555 19 8.5222 18.8534 8.11107 18.5787C7.69995 18.304 7.37952 17.9135 7.1903 17.4567C7.00108 16.9999 6.95157 16.4972 7.04804 16.0123C7.1445 15.5273 7.3826 15.0819 7.73223 14.7322C8.08186 14.3826 8.52732 14.1445 9.01227 14.048C9.49723 13.9516 9.99989 14.0011 10.4567 14.1903C10.9135 14.3795 11.304 14.7 11.5787 15.1111C11.8534 15.5222 12 16.0055 12 16.5C12 16.8283 11.9353 17.1534 11.8097 17.4567C11.6841 17.76 11.4999 18.0356 11.2678 18.2678C11.0356 18.4999 10.76 18.6841 10.4567 18.8097C10.1534 18.9353 9.8283 19 9.5 19ZM18 19C17.5055 19 17.0222 18.8534 16.6111 18.5787C16.2 18.304 15.8795 17.9135 15.6903 17.4567C15.5011 16.9999 15.4516 16.4972 15.548 16.0123C15.6445 15.5273 15.8826 15.0819 16.2322 14.7322C16.5819 14.3826 17.0273 14.1445 17.5123 14.048C17.9972 13.9516 18.4999 14.0011 18.9567 14.1903C19.4135 14.3795 19.804 14.7 20.0787 15.1111C20.3534 15.5222 20.5 16.0055 20.5 16.5C20.5 16.8283 20.4353 17.1534 20.3097 17.4567C20.1841 17.76 19.9999 18.0356 19.7678 18.2678C19.5356 18.4999 19.26 18.6841 18.9567 18.8097C18.6534 18.9353 18.3283 19 18 19ZM26.5 19C26.0055 19 25.5222 18.8534 25.1111 18.5787C24.7 18.304 24.3795 17.9135 24.1903 17.4567C24.0011 16.9999 23.9516 16.4972 24.048 16.0123C24.1445 15.5273 24.3826 15.0819 24.7322 14.7322C25.0819 14.3826 25.5273 14.1445 26.0123 14.048C26.4972 13.9516 26.9999 14.0011 27.4567 14.1903C27.9135 14.3795 28.304 14.7 28.5787 15.1111C28.8534 15.5222 29 16.0055 29 16.5C29 17.163 28.7366 17.7989 28.2678 18.2678C27.7989 18.7366 27.163 19 26.5 19Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function v(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M3 27.6503L13.8393 16.7238C12.5466 13.3983 13.2648 9.49449 15.9937 6.74736C18.8662 3.85564 23.175 3.2773 26.6221 4.86774L19.7308 11.8003L24.0396 16.1379L31.0745 9.20532C32.798 12.6754 32.0799 17.013 29.2074 19.9047C26.4784 22.6518 22.6005 23.3747 19.2971 22.0735L8.45782 33L3 27.6503Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function T(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M9.99999 4H22V16H18.06V10.73L5.38999 23.39L2.60999 20.61L15.27 7.94H9.99999V4ZM26 28.06H20.73L33.39 15.39L30.61 12.61L17.94 25.27V20H14V32H26V28.06Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function B(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M28.1684 2.16431L23.5793 6.75343L29.2362 12.4103L33.8253 7.82116L28.1684 2.16431Z",
-            fill: "currentColor",
-          }),
-          i.createElement("path", {
-            d: "M20.76 9.58999L5.67 24.67L4 32L11.33 30.33L26.41 15.24L20.76 9.58999Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function w(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M30 35L18 28L6 35V2H30V35Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function R(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3V3ZM7.00001 18C7.00169 15.7749 7.67812 13.6027 8.94001 11.77L24.23 27.06C22.5787 28.1948 20.6488 28.857 18.6486 28.9752C16.6484 29.0933 14.654 28.6629 12.8805 27.7304C11.1071 26.7978 9.62204 25.3986 8.58569 23.6838C7.54934 21.969 7.00105 20.0037 7.00001 18V18ZM27.06 24.23L11.77 8.94C13.8875 7.49109 16.4449 6.82796 18.9996 7.06536C21.5544 7.30275 23.9457 8.42573 25.76 10.24C27.5743 12.0543 28.6973 14.4457 28.9347 17.0004C29.172 19.5551 28.5089 22.1125 27.06 24.23V24.23Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function G(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M18 0L22.888 11.2722L35.119 12.4377L25.909 20.5698L28.5801 32.5623L18 26.316L7.41987 32.5623L10.091 20.5698L0.880983 12.4377L13.112 11.2722L18 0Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function I(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function E(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("rect", {
-            x: "4",
-            y: "4",
-            width: "28",
-            height: "28",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function z(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18 1L1 31.2222H35L18 1Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function P(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M31.4799 6.31003C30.7506 5.57832 29.884 4.99776 28.9299 4.60163C27.9758 4.2055 26.9529 4.00159 25.9199 4.00159C24.8868 4.00159 23.8639 4.2055 22.9098 4.60163C21.9557 4.99776 21.0891 5.57832 20.3599 6.31003L17.9999 8.51003L15.6399 6.31003C14.147 4.90006 12.1628 4.12852 10.1096 4.15966C8.05643 4.1908 6.0965 5.02218 4.64713 6.47677C3.19775 7.93136 2.37342 9.89425 2.34965 11.9475C2.32588 14.0008 3.10454 15.9823 4.51986 17.47L17.9999 31L31.4799 17.47C32.9552 15.9877 33.7835 13.9814 33.7835 11.89C33.7835 9.79863 32.9552 7.79235 31.4799 6.31003V6.31003Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function O(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M31.4359 18L18.2179 35L5 18L18.2179 1L31.4359 18Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function k(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M7.48 21.11C7.00858 22.3527 6.76797 23.6709 6.77 25V30H1V26.38C0.999999 25.6726 1.13949 24.9722 1.41048 24.3189C1.68148 23.6655 2.07866 23.0719 2.5793 22.5722C3.07994 22.0725 3.67421 21.6764 4.32809 21.4067C4.98198 21.1369 5.68265 20.9987 6.39 21C6.75605 21.001 7.12114 21.0378 7.48 21.11ZM6.27 11C5.57777 11 4.90108 11.2053 4.3255 11.5899C3.74993 11.9744 3.30133 12.5211 3.03642 13.1606C2.77151 13.8002 2.7022 14.5039 2.83725 15.1828C2.9723 15.8618 3.30564 16.4854 3.79513 16.9749C4.28461 17.4644 4.90825 17.7977 5.58718 17.9328C6.26612 18.0678 6.96985 17.9985 7.60939 17.7336C8.24893 17.4687 8.79556 17.0201 9.18014 16.4445C9.56473 15.8689 9.77 15.1922 9.77 14.5C9.77 13.5717 9.40125 12.6815 8.74487 12.0251C8.0885 11.3688 7.19826 11 6.27 11ZM13.27 10.5C13.27 9.60999 13.5339 8.73996 14.0284 7.99994C14.5229 7.25991 15.2257 6.68314 16.0479 6.34254C16.8702 6.00195 17.775 5.91283 18.6479 6.08647C19.5208 6.2601 20.3226 6.68868 20.952 7.31802C21.5813 7.94736 22.0099 8.74918 22.1835 9.6221C22.3572 10.495 22.2681 11.3998 21.9275 12.2221C21.5869 13.0443 21.0101 13.7471 20.2701 14.2416C19.53 14.7361 18.66 15 17.77 15C17.1787 15.0013 16.5929 14.8858 16.0464 14.6601C15.4998 14.4345 15.0032 14.103 14.5851 13.6849C14.167 13.2668 13.8355 12.7702 13.6099 12.2236C13.3842 11.6771 13.2687 11.0913 13.27 10.5ZM24.77 25V30H10.77V25C10.77 23.1435 11.5075 21.363 12.8203 20.0503C14.133 18.7375 15.9135 18 17.77 18C19.6265 18 21.407 18.7375 22.7197 20.0503C24.0325 21.363 24.77 23.1435 24.77 25ZM34.77 26.38V30H28.77V25C28.7738 23.6921 28.54 22.3944 28.08 21.17C28.5076 21.0576 28.9479 21.0004 29.39 21C30.8169 21 32.1853 21.5668 33.1942 22.5758C34.2032 23.5847 34.77 24.9531 34.77 26.38ZM29.27 18C28.5778 18 27.9011 17.7947 27.3255 17.4101C26.7499 17.0256 26.3013 16.4789 26.0364 15.8394C25.7715 15.1999 25.7022 14.4961 25.8373 13.8172C25.9723 13.1383 26.3056 12.5146 26.7951 12.0251C27.2846 11.5356 27.9083 11.2023 28.5872 11.0673C29.2661 10.9322 29.9699 11.0015 30.6094 11.2664C31.2489 11.5313 31.7956 11.9799 32.1801 12.5555C32.5647 13.1311 32.77 13.8078 32.77 14.5C32.77 15.4283 32.4013 16.3185 31.7449 16.9749C31.0885 17.6313 30.1983 18 29.27 18Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function W(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M18 26V31H2V26C2 23.8783 2.84285 21.8434 4.34315 20.3431C5.84344 18.8429 7.87827 18 10 18C12.1217 18 14.1566 18.8429 15.6569 20.3431C17.1571 21.8434 18 23.8783 18 26ZM10 15C10.89 15 11.76 14.7361 12.5001 14.2416C13.2401 13.7471 13.8169 13.0443 14.1575 12.2221C14.4981 11.3998 14.5872 10.495 14.4135 9.6221C14.2399 8.74918 13.8113 7.94736 13.182 7.31802C12.5526 6.68868 11.7508 6.2601 10.8779 6.08647C10.005 5.91283 9.10019 6.00195 8.27792 6.34254C7.45566 6.68314 6.75285 7.25991 6.25839 7.99994C5.76392 8.73996 5.5 9.60999 5.5 10.5C5.49868 11.0913 5.61418 11.6771 5.83986 12.2236C6.06554 12.7702 6.39695 13.2668 6.81508 13.6849C7.23321 14.103 7.72981 14.4345 8.27637 14.6601C8.82293 14.8858 9.40868 15.0013 10 15ZM31.66 18.34C30.8643 17.5434 29.9094 16.9238 28.8578 16.5216C27.8062 16.1194 26.6815 15.9437 25.5574 16.006C24.4332 16.0683 23.3348 16.3672 22.3341 16.8831C21.3334 17.399 20.4528 18.1204 19.75 19C21.2201 21.0373 22.0077 23.4877 22 26V29H34V24C34.0008 22.9491 33.7946 21.9084 33.3931 20.9372C32.9916 19.966 32.4027 19.0835 31.66 18.34ZM26 13C26.89 13 27.76 12.7361 28.5001 12.2416C29.2401 11.7471 29.8169 11.0443 30.1575 10.2221C30.4981 9.39981 30.5872 8.49501 30.4135 7.6221C30.2399 6.74918 29.8113 5.94736 29.182 5.31802C28.5526 4.68868 27.7508 4.2601 26.8779 4.08647C26.005 3.91283 25.1002 4.00195 24.2779 4.34254C23.4557 4.68314 22.7529 5.25991 22.2584 5.99994C21.7639 6.73996 21.5 7.60999 21.5 8.5C21.4987 9.09132 21.6142 9.67708 21.8399 10.2236C22.0655 10.7702 22.397 11.2668 22.8151 11.6849C23.2332 12.103 23.7298 12.4345 24.2764 12.6601C24.8229 12.8858 25.4087 13.0013 26 13Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function D(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M30 32H6V31C6 27.8174 7.26428 24.7652 9.51472 22.5147C11.7652 20.2643 14.8174 19 18 19C21.1826 19 24.2348 20.2643 26.4853 22.5147C28.7357 24.7652 30 27.8174 30 31V32ZM18 3C16.8133 3 15.6533 3.35189 14.6666 4.01118C13.6799 4.67047 12.9108 5.60754 12.4567 6.7039C12.0026 7.80026 11.8838 9.00666 12.1153 10.1705C12.3468 11.3344 12.9182 12.4035 13.7574 13.2426C14.5965 14.0818 15.6656 14.6532 16.8295 14.8847C17.9933 15.1162 19.1997 14.9974 20.2961 14.5433C21.3925 14.0892 22.3295 13.3201 22.9888 12.3334C23.6481 11.3467 24 10.1867 24 9C24 7.4087 23.3679 5.88258 22.2426 4.75736C21.1174 3.63214 19.5913 3 18 3Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function L(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M3.1154 27.6838L8.39576 20.3968C8.50481 20.251 8.55119 20.0677 8.52472 19.8875C8.49836 19.7073 8.40123 19.5451 8.25498 19.4367L4.25152 16.3806C4.10812 16.27 4.01405 16.1073 3.98977 15.9278C3.96548 15.7484 4.01295 15.5665 4.1219 15.4218C4.23074 15.2772 4.39241 15.1813 4.57159 15.1549L9.09981 14.4028C9.32514 14.3675 9.51799 14.2222 9.61435 14.0155C9.7106 13.8088 9.6977 13.5677 9.57978 13.3724L4.58729 5.03256C4.48403 4.85393 4.46631 4.63857 4.53905 4.4456C4.61168 4.25254 4.76711 4.10236 4.96247 4.0363C5.15783 3.97023 5.37244 3.99517 5.54735 4.10444L14.508 9.91936C14.6733 10.0263 14.8763 10.0575 15.066 10.0049C15.2557 9.95229 15.4137 9.82092 15.5001 9.64415L18.0604 4.38927C18.1473 4.22213 18.299 4.098 18.4801 4.0458C18.6611 3.99362 18.8556 4.01791 19.0182 4.11307C19.1808 4.20823 19.2973 4.36585 19.3405 4.54929L20.595 10.5241H20.5949C20.6381 10.7286 20.772 10.9025 20.9588 10.9965C21.1455 11.0905 21.365 11.0945 21.5551 11.0073L28.3075 7.86803L28.3074 7.86792C28.4907 7.78118 28.7031 7.78009 28.8873 7.86497C29.0715 7.94996 29.2086 8.11217 29.2615 8.30796C29.3146 8.50376 29.278 8.71301 29.1619 8.87926L24.9856 14.9949C24.8537 15.1863 24.8279 15.4317 24.9172 15.6464C25.0064 15.8611 25.1985 16.0159 25.4273 16.0574L32.3943 17.3375C32.6059 17.363 32.7939 17.4852 32.903 17.6684C33.0122 17.8515 33.0302 18.075 32.9519 18.2733C32.8737 18.4716 32.7079 18.6224 32.503 18.6816L25.4176 21.0338C25.237 21.0946 25.0898 21.2276 25.011 21.4011C24.9321 21.5746 24.9287 21.773 25.0017 21.9491L28.4131 30.2248C28.491 30.4095 28.4841 30.6189 28.3942 30.7981C28.3043 30.9773 28.1405 31.108 27.9459 31.156C27.7513 31.2039 27.5454 31.1642 27.3827 31.0473L19.558 25.5493C19.3872 25.4307 19.1719 25.3953 18.972 25.4531C18.7721 25.5108 18.6089 25.6554 18.5275 25.847L15.8106 32.3594C15.734 32.5434 15.5814 32.6852 15.3924 32.7481C15.2032 32.8108 14.9962 32.7886 14.8247 32.6871C14.6533 32.5855 14.5343 32.4147 14.4985 32.2187L13.3368 25.9047C13.2995 25.7027 13.1738 25.528 12.9942 25.4284C12.8147 25.3286 12.5999 25.3144 12.4088 25.3894L3.92498 28.7113C3.7422 28.7784 3.5395 28.7648 3.36723 28.674C3.19495 28.5832 3.06926 28.4237 3.02126 28.2351C2.97325 28.0464 3.00737 27.8461 3.11533 27.6841L3.1154 27.6838Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function q(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M32.1364 3.05916C32.3257 3.11958 32.4978 3.22426 32.6386 3.36452C32.7774 3.50482 32.8811 3.67603 32.941 3.86413C33.001 4.05222 33.0155 4.25184 32.9834 4.44663L31.7339 12.0377C31.6841 12.3356 31.5288 12.6056 31.2965 12.7987L19.2946 22.7251L17.1703 20.6009L27.2742 10.497L25.5074 8.7301L15.406 18.8365L13.2817 16.7123L23.2694 4.69904C23.4614 4.46893 23.7297 4.31549 24.0254 4.2667L31.5502 3.01714C31.7462 2.98434 31.9471 2.99875 32.1364 3.05916ZM9.26762 16.7603C9.59525 16.7574 9.91089 16.8834 10.1466 17.111L18.8934 25.8578C19.1211 26.0935 19.247 26.4092 19.2442 26.7368C19.2413 27.0644 19.1099 27.3778 18.8782 27.6095C18.6465 27.8412 18.3331 27.9726 18.0055 27.9754C17.6779 27.9783 17.3622 27.8523 17.1266 27.6247L14.6275 25.1256L10.1466 29.6065L11.3961 30.8561C11.5155 30.9713 11.6107 31.1092 11.6761 31.2617C11.7416 31.4141 11.7761 31.5781 11.7775 31.744C11.779 31.9099 11.7474 32.0745 11.6845 32.228C11.6217 32.3816 11.5289 32.5211 11.4116 32.6384C11.2943 32.7557 11.1548 32.8485 11.0012 32.9114C10.8476 32.9742 10.6831 33.0058 10.5172 33.0044C10.3513 33.0029 10.1873 32.9684 10.0348 32.903C9.88239 32.8375 9.74451 32.7423 9.62925 32.6229L3.38147 26.3752C3.26213 26.2599 3.16694 26.122 3.10145 25.9696C3.03596 25.8171 3.00149 25.6531 3.00005 25.4872C2.99861 25.3213 3.03022 25.1568 3.09305 25.0032C3.15588 24.8496 3.24866 24.7101 3.36599 24.5928C3.48331 24.4755 3.62283 24.3827 3.77639 24.3199C3.92996 24.257 4.0945 24.2254 4.26041 24.2269C4.42633 24.2283 4.59029 24.2628 4.74274 24.3283C4.89519 24.3938 5.03308 24.4889 5.14834 24.6083L6.3979 25.8578L10.8788 21.3769L8.37969 18.8778C8.15207 18.6422 8.02613 18.3265 8.02897 17.9989C8.03182 17.6713 8.16323 17.3579 8.39491 17.1262C8.62659 16.8945 8.93999 16.7631 9.26762 16.7603Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function F(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M17.6253 34.113C17.743 34.1717 17.8718 34.2012 18 34.2012C18.1282 34.2012 18.257 34.1717 18.3748 34.113C18.8953 33.8524 31.1275 27.6036 31.1275 16.0461L31.1274 8.2254C31.1274 7.76274 30.7522 7.38762 30.2892 7.38762C30.2258 7.38762 23.8719 7.32574 18.5922 2.04672C18.265 1.71954 17.7346 1.71954 17.4075 2.04672C12.1509 7.30272 5.77225 7.38762 5.71045 7.38762C5.24779 7.38762 4.87231 7.76274 4.87231 8.2254V16.0464C4.87278 27.6033 17.1048 33.8523 17.6253 34.113H17.6253Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function x(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M3.50571 11.2155C3.87965 9.34584 5.52131 8 7.42804 8H28.5578C30.4645 8 32.1061 9.34584 32.4801 11.2155L32.9759 13.6947C33.0378 14.0041 32.8011 14.2928 32.4856 14.2928H3.50017C3.18465 14.2928 2.948 14.0041 3.00988 13.6947L3.50571 11.2155ZM14.2172 16.8099H4.42812C4.27911 16.8099 4.16319 16.9394 4.17965 17.0875L5.20967 26.3577C5.32221 27.3706 6.17834 28.1368 7.19744 28.1368H28.7883C29.8074 28.1368 30.6635 27.3706 30.7761 26.3577L31.8061 17.0875C31.8226 16.9394 31.7066 16.8099 31.5576 16.8099H21.7686V19.8441C21.7686 20.9486 20.8731 21.8441 19.7686 21.8441H16.2172C15.1127 21.8441 14.2172 20.9486 14.2172 19.8441V16.8099ZM17.2343 16.8099C16.9582 16.8099 16.7343 17.0337 16.7343 17.3099V18.827C16.7343 19.1031 16.9582 19.327 17.2343 19.327H18.7514C19.0276 19.327 19.2514 19.1031 19.2514 18.827V17.3099C19.2514 17.0337 19.0276 16.8099 18.7514 16.8099H17.2343Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function N(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M31.9513 28.4678L31.6814 28.3401C31.4615 28.2254 31.2594 28.0795 31.0814 27.9068L26.6464 23.4718L27.1797 22.9385C27.3887 22.7296 27.5545 22.4816 27.6676 22.2086C27.7807 21.9356 27.8389 21.6431 27.8389 21.3476C27.8389 21.0521 27.7807 20.7595 27.6676 20.4865C27.5545 20.2136 27.3887 19.9656 27.1797 19.7567C27.1101 19.687 27.0274 19.6317 26.9364 19.594C26.8454 19.5563 26.7479 19.5369 26.6494 19.5369C26.5509 19.5369 26.4533 19.5563 26.3624 19.594C26.2714 19.6317 26.1887 19.687 26.1191 19.7567L25.1055 20.77L22.6057 18.1838L32.1273 9.16542L32.234 9.06543C32.3638 8.94364 32.4441 8.77816 32.4593 8.60079L32.9926 3.83112C32.9966 3.80307 32.9986 3.77478 32.9986 3.74646C32.9985 3.54799 32.921 3.35739 32.7826 3.21516C32.7023 3.13644 32.6054 3.07672 32.499 3.04038C32.3926 3.00404 32.2793 2.99201 32.1677 3.00518L27.398 3.53847C27.2201 3.55335 27.0539 3.63334 26.9314 3.76312L17.9986 13.1935L9.06592 3.76312C8.94377 3.63368 8.77827 3.55371 8.60095 3.53847L3.83094 3.00518C3.71926 2.99201 3.60605 3.00404 3.49963 3.04038C3.39321 3.07672 3.29629 3.13644 3.21598 3.21516C3.07757 3.35739 3.00009 3.54799 3 3.74646C3.00002 3.77478 3.00202 3.80307 3.006 3.83112L3.53929 8.60079C3.55452 8.77816 3.63477 8.94364 3.76461 9.06543L3.87128 9.16542L13.393 18.1838L10.8931 20.77L9.87953 19.7567C9.80992 19.687 9.72725 19.6317 9.63625 19.594C9.54526 19.5563 9.44773 19.5369 9.34923 19.5369C9.25073 19.5369 9.15321 19.5563 9.06221 19.594C8.97122 19.6317 8.88855 19.687 8.81894 19.7567C8.61002 19.9656 8.44429 20.2136 8.33123 20.4866C8.21816 20.7596 8.15996 21.0521 8.15996 21.3476C8.15996 21.643 8.21816 21.9356 8.33123 22.2086C8.44429 22.4815 8.61002 22.7296 8.81894 22.9385L9.35223 23.4718L4.9172 27.9068C4.7392 28.0795 4.53711 28.2254 4.31724 28.3401L4.04726 28.4678C3.77896 28.599 3.54621 28.7929 3.36868 29.0331C3.19116 29.2733 3.07407 29.5527 3.02733 29.8477C2.97954 30.1411 3.00219 30.4417 3.0934 30.7247C3.18462 31.0077 3.34179 31.2649 3.55196 31.4752L4.52723 32.4498C4.8798 32.8009 5.35723 32.9979 5.85481 32.9975C5.95521 32.9973 6.05547 32.9898 6.15479 32.9751C6.44819 32.9294 6.7262 32.8135 6.96513 32.6372C7.20407 32.4609 7.39684 32.2294 7.52702 31.9625L7.67701 31.6625C7.7898 31.4475 7.93392 31.2505 8.10465 31.0779L12.532 26.6505L13.062 27.1805C13.2709 27.3894 13.5189 27.5552 13.7919 27.6682C14.0649 27.7813 14.3574 27.8395 14.6529 27.8395C14.9483 27.8395 15.2409 27.7813 15.5139 27.6682C15.7868 27.5552 16.0348 27.3894 16.2438 27.1805C16.3844 27.0398 16.4634 26.849 16.4634 26.6501C16.4634 26.4511 16.3844 26.2603 16.2438 26.1196L15.2302 25.106L17.9933 22.4395L18.0016 22.4315L18.01 22.4395L20.7728 25.106L19.7592 26.1196C19.6186 26.2603 19.5396 26.4511 19.5396 26.6501C19.5396 26.849 19.6186 27.0398 19.7592 27.1805C19.9681 27.3894 20.2161 27.5552 20.4891 27.6682C20.7621 27.7813 21.0546 27.8395 21.3501 27.8395C21.6455 27.8395 21.9381 27.7813 22.2111 27.6682C22.484 27.5552 22.732 27.3894 22.941 27.1805L23.4709 26.6505L27.8983 31.0779C28.0692 31.2503 28.2134 31.4474 28.3259 31.6625L28.4759 31.9625C28.6061 32.2294 28.7989 32.4609 29.0378 32.6372C29.2767 32.8135 29.5548 32.9294 29.8482 32.9751C29.9475 32.9898 30.0477 32.9973 30.1481 32.9975C30.6457 32.9979 31.1231 32.8009 31.4757 32.4498L32.451 31.4752C32.6611 31.2649 32.8183 31.0077 32.9095 30.7247C33.0008 30.4417 33.0234 30.1411 32.9756 29.8477C32.9284 29.5522 32.8107 29.2726 32.6324 29.0323C32.4541 28.7921 32.2205 28.5985 31.9513 28.4678Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function U(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M12.73 28.34C15.6223 29.3235 18.732 29.4785 21.7078 28.7876C24.6836 28.0967 27.4069 26.5873 29.57 24.43L36 18L29.57 11.57C28 10 26.5 9.00003 23.94 7.94003C20.9843 6.77799 17.7541 6.50247 14.6444 7.14715C11.5346 7.79183 8.68012 9.32878 6.43 11.57L0 18L6.43 24.43C8.10419 26.1042 10.2596 27.5 12.73 28.34ZM18 25C21.866 25 25 21.866 25 18C25 14.134 21.866 11 18 11C14.134 11 11 14.134 11 18C11 21.866 14.134 25 18 25Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function j(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M32.991 20.3742C31.996 19.9541 30.8307 20.4415 30.3037 21.4683L27.0772 20.1006C27.0852 19.9739 27.089 19.8507 27.089 19.724V16.0418L30.3197 14.6703C30.8511 15.6771 32.0045 16.1567 32.9913 15.7405C34.0339 15.2966 34.4896 14.0161 34.0061 12.8824C33.784 12.3555 33.4034 11.9551 32.9517 11.7171C33.0943 11.2297 33.0705 10.6745 32.8487 10.1515C32.3691 9.01382 31.1322 8.45483 30.0896 8.89511C29.0945 9.31523 28.6348 10.4924 29.0075 11.5864L26.8273 12.5099C25.8561 8.53397 22.2688 5.58887 17.9998 5.58887C13.7269 5.58887 10.1434 8.53403 9.17233 12.5099L6.98818 11.5864C7.36084 10.4924 6.90111 9.31523 5.90995 8.89511C4.86733 8.45519 3.63076 9.01393 3.14725 10.1515C2.92518 10.6746 2.90537 11.2297 3.04424 11.7171C2.59634 11.9551 2.21198 12.3554 1.9898 12.8824C1.51028 14.0161 1.96601 15.2966 3.00863 15.7405C3.99182 16.1567 5.14919 15.6771 5.68016 14.6703L8.91086 16.0418L8.91121 19.7243C8.91121 19.851 8.9152 19.9742 8.92305 20.1009L5.69235 21.4686C5.16501 20.4419 3.99957 19.9544 3.00888 20.3745C1.96626 20.8184 1.51053 22.0986 1.99005 23.2326C2.21212 23.7557 2.59662 24.1599 3.04449 24.3979C2.90586 24.8853 2.92566 25.4405 3.1475 25.9635C3.63101 27.0972 4.86794 27.6602 5.9102 27.2199C6.89339 26.7998 7.35314 25.6385 7.00028 24.5562L9.80681 23.3671C9.9854 23.716 10.1913 24.0529 10.4253 24.3702L11.9593 26.4751V26.9902C11.9593 28.8809 13.4933 30.4108 15.3841 30.4108H20.6164C22.5071 30.4108 24.037 28.8808 24.037 26.9902V26.4751L25.575 24.3702C25.809 24.0531 26.0149 23.716 26.1935 23.3671L29 24.5562C28.6433 25.6383 29.103 26.7998 30.0901 27.2199C31.1327 27.6598 32.3693 27.0971 32.8492 25.9635C33.0712 25.4404 33.095 24.8853 32.9522 24.3979C33.404 24.1599 33.7844 23.7557 34.0066 23.2326C34.49 22.0986 34.0339 20.8184 32.9917 20.3742L32.991 20.3742ZM24.6825 18.0554C24.6825 18.3885 24.5993 18.7016 24.4485 18.987C24.0324 19.8035 23.0808 20.3706 21.9671 20.3706C21.111 20.3706 20.346 19.8194 19.8503 19.1102C19.4738 18.5792 19.2516 17.9607 19.2516 17.4135C19.2516 17.1953 19.2872 17.0014 19.3585 16.8306C19.6796 16.0102 20.7262 15.7446 21.9667 15.7446C23.0924 15.7446 24.0558 16.3235 24.464 17.1517C24.6073 17.429 24.6825 17.7343 24.6825 18.0554L24.6825 18.0554ZM11.3124 18.0554C11.3124 17.7343 11.3877 17.429 11.5306 17.1518C11.9428 16.3234 12.9062 15.7446 14.0279 15.7446C15.2685 15.7446 16.3149 16.0103 16.6361 16.8307C16.7074 17.0013 16.743 17.1954 16.743 17.4136C16.743 17.9604 16.5209 18.5749 16.1443 19.1064C15.6529 19.8199 14.8879 20.3707 14.0275 20.3707C12.9176 20.3707 11.9622 19.8038 11.5461 18.9872C11.3955 18.7016 11.3124 18.3885 11.3124 18.0554L11.3124 18.0554ZM19.0341 21.8843C19.0341 22.578 18.5704 23.1407 17.9995 23.1407C17.4286 23.1407 16.9649 22.5776 16.9649 21.8843C16.9649 21.3691 17.2227 20.481 17.5912 20.0649L17.9995 19.8942L18.4078 20.0649C18.7764 20.4813 19.0341 21.3692 19.0341 21.8843Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function A(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M32.895 7.34625L28.9237 3.375L18.135 14.1525L7.34625 3.375L3.375 7.34625L14.1525 18.135L3.375 28.9237L7.34625 32.895L18.135 22.1175L28.9237 32.895L32.895 28.9237L22.1175 18.135L32.895 7.34625Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function H(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M16 34V21H3V16H16V3H21V16H34V21H21V34H16Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function V(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M33 16H3V21H33V16Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function X(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M2 6.05005V30.05H34V6.05005H2ZM25 10.05C25.5933 10.05 26.1734 10.226 26.6667 10.5556C27.1601 10.8853 27.5446 11.3538 27.7716 11.902C27.9987 12.4502 28.0581 13.0534 27.9424 13.6353C27.8266 14.2173 27.5409 14.7518 27.1213 15.1714C26.7018 15.5909 26.1672 15.8766 25.5853 15.9924C25.0033 16.1082 24.4001 16.0488 23.8519 15.8217C23.3038 15.5946 22.8352 15.2101 22.5056 14.7168C22.1759 14.2234 22 13.6434 22 13.05C22 12.2544 22.3161 11.4913 22.8787 10.9287C23.4413 10.3661 24.2044 10.05 25 10.05V10.05ZM23 26.05H6L14.5 15.05L19.4 21.39L22 18.05L28.22 26.05H23Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function Z(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M18.0001 2C16.4019 2.02152 14.8236 2.36052 13.3555 2.99755C11.8873 3.63458 10.558 4.55714 9.44364 5.71257C8.32928 6.868 7.45165 8.2336 6.86098 9.73129C6.27031 11.229 5.97819 12.8294 6.00127 14.441C6.00127 21.316 18.0001 35 18.0001 35C18.0001 35 29.9989 21.316 29.9989 14.441C30.0426 11.187 28.8032 8.04868 26.5532 5.71579C24.3033 3.3829 21.2268 2.04636 18.0001 2ZM25.6357 15.53C25.6328 15.8694 25.4971 16.1939 25.2581 16.4329C25.019 16.6719 24.696 16.806 24.3594 16.806H20.5416V20.656C20.5416 20.9974 20.4072 21.3247 20.1678 21.5661C19.9285 21.8074 19.6039 21.943 19.2654 21.943H16.7238C16.3853 21.943 16.0607 21.8074 15.8214 21.5661C15.5821 21.3247 15.4476 20.9974 15.4476 20.656V16.806H11.6407C11.3051 16.806 10.9833 16.6716 10.746 16.4323C10.5087 16.193 10.3754 15.8684 10.3754 15.53V12.956C10.3754 12.6176 10.5087 12.293 10.746 12.0537C10.9833 11.8145 11.3051 11.68 11.6407 11.68H15.4585V7.82999C15.4585 7.48865 15.593 7.16135 15.8323 6.91999C16.0717 6.67863 16.3962 6.54301 16.7347 6.54301H19.2763C19.6148 6.54301 19.9394 6.67863 20.1787 6.91999C20.4181 7.16135 20.5525 7.48865 20.5525 7.82999V11.68H24.3703C24.7069 11.68 25.0299 11.8141 25.2689 12.0531C25.5079 12.2921 25.6437 12.6166 25.6466 12.956L25.6357 15.53Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function J(e) {
-        let { direction: t, ...r } = e,
-          n = { transform: `scaleX( ${"right" == t ? "-1" : "1"} )` };
-        return i.createElement(
-          "svg",
-          {
-            style: n,
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("rect", {
-            fill: "currentColor",
-            x: "3.82617",
-            y: "2",
-            width: "3",
-            height: "4",
-          }),
-          i.createElement("rect", {
-            fill: "currentColor",
-            x: "3.82617",
-            y: "9",
-            width: "3",
-            height: "4",
-          }),
-          i.createElement("rect", {
-            fill: "currentColor",
-            x: "3.82617",
-            y: "16",
-            width: "3",
-            height: "4",
-          }),
-          i.createElement("rect", {
-            fill: "currentColor",
-            x: "3.82617",
-            y: "23",
-            width: "3",
-            height: "4",
-          }),
-          i.createElement("rect", {
-            fill: "currentColor",
-            x: "3.82617",
-            y: "30",
-            width: "3",
-            height: "4",
-          }),
-          i.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M10.0001 22.0989V17.8189L16.2074 15.869L16.2459 12.2486C16.2407 11.8588 16.0085 11.482 15.6333 11.3488C14.9327 11.0739 14.2894 10.6674 13.7463 10.0736C12.4484 8.65217 12.1894 6.49723 13.1336 4.75391C14.5932 1.99742 18.1636 1.18729 20.5946 2.88529C22.7995 4.4254 23.2317 7.43069 21.5622 9.61139C20.9843 10.3662 20.2727 10.8991 19.4342 11.2575C19.0506 11.4186 18.8005 11.8019 18.8058 12.1916L18.7749 15.6885L22.2544 14.6004C22.6449 14.4869 22.9514 14.1433 22.9958 13.7452C23.1147 12.6267 23.6444 11.538 24.5846 10.6499C26.1799 9.18956 28.571 8.84302 30.4666 9.82377C33.324 11.3048 33.8524 14.9779 31.6005 17.3526C30.0756 18.9478 27.5988 19.4062 25.6321 18.4616C25.0025 18.1506 24.4586 17.7277 24.0568 17.2325C23.8101 16.9314 23.3638 16.8342 22.9733 16.9477L19.373 18.0802L19.2532 29.7966C19.2494 32.0682 17.3331 33.9479 14.9505 34L15.093 20.4972L10.0001 22.0989ZM18.8394 5.17784C19.7723 5.82945 19.9292 7.09773 19.2443 7.99235C18.5379 8.91502 17.2182 9.10883 16.3136 8.47697C15.3807 7.82537 15.2238 6.55708 15.9087 5.66246C16.6151 4.73979 17.9349 4.54605 18.8394 5.17784ZM29.2418 12.4438C30.1747 13.0954 30.3316 14.3637 29.6467 15.2584C28.9403 16.181 27.6205 16.3748 26.716 15.743C25.7831 15.0914 25.6262 13.8231 26.3111 12.9285C27.0175 12.0058 28.3373 11.812 29.2418 12.4438ZM17.3194 17.5897C17.7434 17.8859 17.8326 18.5061 17.5116 18.9255C17.1691 19.3728 16.5447 19.4515 16.1207 19.1555C15.6967 18.8593 15.6074 18.2391 15.9285 17.8197C16.2496 17.4003 16.8954 17.2935 17.3194 17.5897Z",
-          }),
-        );
-      }
-      function Q(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M34 9.42197C32.4337 7.40864 29.497 6.99082 27.4217 8.47232L16.6537 16.2215L13.3254 13.8283C12.973 13.5625 12.7772 13.1065 12.8947 12.6887C13.0905 11.891 13.1296 11.0553 12.9339 10.1817C12.464 8.09242 10.6627 6.42103 8.47002 6.07916C5.02425 5.50936 2.00921 8.09249 2.00921 11.3592C2.00921 14.3222 4.47613 16.7153 7.53026 16.7153C8.58742 16.7153 9.52721 16.4494 10.3887 15.9556C10.7803 15.7277 11.2894 15.7656 11.6417 16.0315L14.8525 18.3486L11.6417 20.6657C11.2892 20.9316 10.7803 20.9697 10.3887 20.7417C9.2923 20.096 7.96112 19.83 6.55142 20.0579C4.20203 20.4757 2.36168 22.337 2.04843 24.6542C1.57862 28.1489 4.5936 31.0739 8.19599 30.694C10.6236 30.4281 12.6207 28.5668 13.0122 26.2116C13.1298 25.4519 13.0905 24.6922 12.8947 24.0084C12.7772 23.5905 12.973 23.1346 13.3254 22.8688L16.6537 20.4756L27.4217 28.2248C29.4971 29.7442 32.4337 29.3264 34 27.2751L21.5874 18.3483L34 9.42197ZM7.53026 13.6005C6.27732 13.6005 5.22 12.6128 5.22 11.3592C5.22 10.1437 6.23803 9.11802 7.53026 9.11802C8.7832 9.11802 9.84052 10.1056 9.84052 11.3592C9.84052 12.5749 8.82249 13.6005 7.53026 13.6005ZM7.53026 27.5794C6.27732 27.5794 5.22 26.5918 5.22 25.3382C5.22 24.1227 6.23803 23.0969 7.53026 23.0969C8.7832 23.0969 9.84052 24.0846 9.84052 25.3382C9.84052 26.5537 8.82249 27.5794 7.53026 27.5794ZM18.6115 19.4123C18.0242 19.4123 17.5151 18.9185 17.5151 18.3487C17.5151 17.7789 18.0242 17.285 18.6115 17.285C19.1989 17.285 19.708 17.7789 19.708 18.3487C19.7078 18.9185 19.238 19.4123 18.6115 19.4123Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function K(e) {
-        return i.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M27 20.1931C26.9943 23.588 25.6228 26.8421 23.1861 29.2427C20.7495 31.6432 17.4463 32.9943 14.0003 32.9999C12.2937 33.0055 10.603 32.6766 9.02663 32.0323C7.45029 31.3879 6.01984 30.4411 4.81854 29.2469C2.3908 26.8485 1.01923 23.6049 1.0006 20.2178C0.93382 13.0373 6.47794 7.52611 13.8968 7.3896H19.6875V4L27 9.19871L19.6875 14.3991V11.1723H13.9519C8.7116 11.271 4.7935 15.1424 4.84024 20.1783C4.88532 25.1649 8.99373 29.2238 14.0003 29.2238C16.4289 29.2212 18.7572 28.2696 20.4745 26.5778C22.1918 24.8861 23.1577 22.5923 23.1604 20.1997",
-          }),
-          i.createElement("rect", {
-            fill: "currentColor",
-            width: "3",
-            height: "32",
-            transform: "matrix(-1 0 0 1 34.1738 2)",
-          }),
-        );
-      }
-      function Y(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "24",
-            height: "24",
-            viewBox: "0 0 24 24",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            ...e,
-          },
-          i.createElement("path", {
-            d: "M22.6666 6.28132C21.6224 4.93909 19.6646 4.66055 18.2811 5.64821L11.1024 10.8143L8.88352 9.21887C8.64856 9.04164 8.51804 8.73769 8.5964 8.45915C8.72692 7.92736 8.75301 7.37017 8.62249 6.78778C8.30928 5.39495 7.10839 4.28069 5.6466 4.05277C3.34942 3.67291 1.33939 5.39499 1.33939 7.57283C1.33939 9.54815 2.984 11.1435 5.0201 11.1435C5.72487 11.1435 6.35139 10.9663 6.92575 10.637C7.18679 10.4851 7.52619 10.5104 7.76104 10.6877L9.90155 12.2324L7.76104 13.7772C7.52608 13.9544 7.18679 13.9798 6.92575 13.8278C6.19479 13.3973 5.30733 13.22 4.36753 13.3719C2.80127 13.6504 1.57437 14.8913 1.36554 16.4361C1.05233 18.7659 3.06232 20.7159 5.46391 20.4627C7.08233 20.2854 8.4137 19.0445 8.67474 17.4744C8.75309 16.9679 8.72691 16.4614 8.59639 16.0056C8.51804 15.727 8.64856 15.4231 8.88352 15.2458L11.1024 13.6504L18.2811 18.8165C19.6646 19.8295 21.6224 19.5509 22.6666 18.1834L14.3915 12.2322L22.6666 6.28132ZM5.02009 9.06697C4.1848 9.06697 3.47992 8.40856 3.47992 7.57283C3.47992 6.7625 4.15861 6.07868 5.02009 6.07868C5.85538 6.07868 6.56027 6.73709 6.56027 7.57283C6.56027 8.38324 5.88158 9.06697 5.02009 9.06697ZM5.02009 18.3863C4.1848 18.3863 3.47992 17.7278 3.47992 16.8921C3.47992 16.0818 4.15861 15.398 5.02009 15.398C5.85538 15.398 6.56027 16.0564 6.56027 16.8921C6.56027 17.7024 5.88158 18.3863 5.02009 18.3863ZM12.4076 12.9416C12.016 12.9416 11.6766 12.6123 11.6766 12.2324C11.6766 11.8526 12.016 11.5233 12.4076 11.5233C12.7992 11.5233 13.1386 11.8526 13.1386 12.2324C13.1385 12.6123 12.8253 12.9416 12.4076 12.9416Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function $(e) {
-        return i.createElement(
-          "svg",
-          {
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          i.createElement(
-            "text",
-            {
-              color: "currentColor",
-              fontFamily: '"Motiva Sans", Arial, Helvetica, sans-serif',
-              fontSize: 30,
-              fontWeight: 600,
-              textAnchor: "middle",
-              x: 18,
-              y: 30,
-            },
-            e.nNumber,
-          ),
-        );
-      }
-      function ee(e) {
-        return i.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M10 8H2V32H34V8H26L24.2764 4.55279C24.107 4.214 23.7607 4 23.382 4H12.618C12.2393 4 11.893 4.214 11.7236 4.55279L10 8ZM18 27C21.866 27 25 23.866 25 20C25 16.134 21.866 13 18 13C14.134 13 11 16.134 11 20C11 23.866 14.134 27 18 27Z",
-          }),
-        );
       }
     },
   },

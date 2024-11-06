@@ -294,7 +294,7 @@
         (0, r.Cg)([n.sH], u.prototype, "m_bOnSteamDeck", void 0);
     },
     14336: (e, t, a) => {
-      a.d(t, { z0: () => S, DW: () => y, js: () => h, hW: () => g });
+      a.d(t, { z0: () => y, DW: () => S, js: () => h, hW: () => g });
       var r = a(90626),
         n = a(20194),
         s = a(54806),
@@ -342,12 +342,12 @@
               )),
             { ...a, data: t.current });
       }
-      function y(e) {
+      function S(e) {
         const t = (0, i.KV)(),
           a = r.useContext(f);
         return (0, s.E)({ queries: e.map((e) => P(a, t, e)) });
       }
-      function S(e) {
+      function y(e) {
         return c.L.getQueryData(["PlayerSummary", e]);
       }
       const f = r.createContext({
@@ -390,7 +390,7 @@
       let b;
     },
     11577: (e, t, a) => {
-      a.d(t, { a: () => u, m: () => m });
+      a.d(t, { m: () => m });
       var r = a(90626),
         n = a(96059),
         s = a(82097),
@@ -399,8 +399,23 @@
         _ = a(38452);
       function m(e) {
         const [t, a] = (0, r.useState)(!1),
-          [n] = (0, r.useState)(() => c()),
-          s = (0, r.useMemo)(
+          [m] = (0, r.useState)(() =>
+            (function () {
+              const e = (0, o.Tc)(
+                "partnerbrowse_webapi_token",
+                "application_config",
+              );
+              (0, i.w)(Boolean(e), "require partnerbrowse_webapi_token");
+              const t = new n.D(o.TS.WEBAPI_BASE_URL, e);
+              ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  e,
+                );
+              return t;
+            })(),
+          ),
+          c = (0, r.useMemo)(
             () => ({
               country: o.TS.COUNTRY,
               language: o.TS.LANGUAGE,
@@ -410,36 +425,26 @@
             [],
           );
         return (
-          (0, r.useEffect)(() => {
-            l(n).then(() => a(!0));
-          }, [n]),
+          (0, r.useEffect)(
+            () => (
+              a(!0),
+              (function (e) {
+                return s.A.Initialize(
+                  e.GetServiceTransport(),
+                  o.iA.is_partner_member,
+                );
+              })(m)
+            ),
+            [m],
+          ),
           t
             ? (0, r.createElement)(_.V3, {
-                context: s,
-                serviceTransportOverride: n.GetServiceTransport(),
+                context: c,
+                serviceTransportOverride: m.GetServiceTransport(),
                 children: e.children,
               })
             : null
         );
-      }
-      function c() {
-        const e = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
-        (0, i.w)(Boolean(e), "require partnerbrowse_webapi_token");
-        const t = new n.D(o.TS.WEBAPI_BASE_URL, e);
-        return (
-          ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Initializing CStoreItemCache with access token",
-              e,
-            ),
-          t
-        );
-      }
-      async function u(e = !1) {
-        if (!e || !s.A.BIsInitialized()) return l(c());
-      }
-      async function l(e) {
-        return s.A.Initialize(e, o.iA.is_partner_member);
       }
     },
   },

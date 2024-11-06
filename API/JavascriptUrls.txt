@@ -398,6 +398,7 @@ ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}en/ticketmaster/ticket/${}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${_ ? _ : _}
+${HELP_BASE_URL}en/wizard/HelpRequest/${}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=904
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
@@ -1230,6 +1231,8 @@ ${PARTNER_BASE_URL}steamml/get_problem_details?problemid=${}&sessionid=${SESSION
 ${PARTNER_BASE_URL}steamml/get_problems?sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${SESSIONID}
+${PARTNER_BASE_URL}store/ajaxpackagepublish
+${PARTNER_BASE_URL}store/ajaxpackagesave/${}
 ${PARTNER_BASE_URL}store/packagelanding/${package_id}
 ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
@@ -1475,6 +1478,7 @@ ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}logout
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
+${STORE_BASE_URL}meetsteam/${}
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}mobile?show=steamapp

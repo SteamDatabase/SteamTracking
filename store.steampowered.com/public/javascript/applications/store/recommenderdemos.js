@@ -7,6 +7,7 @@
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
+        ValveOnly: "_3BlEI-AzJaZZmX2NYANWUM",
         RecommenderDemosApp: "Yd0GQ7ZuwBZvFndfWls_V",
         TopControls: "_3pk8aklP1QvRisTxx7jKBk",
         AccountIDControl: "NHix7NSJXYUhKUfq37DfV",
@@ -44,36 +45,36 @@
       a.r(t), a.d(t, { default: () => A });
       var s = a(39777),
         c = a(41735),
-        n = a.n(c),
-        l = a(90626),
-        m = a(64466),
+        m = a.n(c),
+        n = a(90626),
+        l = a(64466),
         r = a(82477),
-        i = a(37076),
-        o = a(32630),
+        o = a(37076),
+        i = a(32630),
         d = a(52038),
         u = a(61859),
         p = a(78327),
         E = a(32792),
         _ = a(33737);
-      const N = (e) => {
+      const D = (e) => {
           const t = (0, s.lv)({ appid: e.nAppID }),
             a = (0, s.wl)({ appid: e.nAppID });
           if (!t.data || !a.data) return null;
-          const c = (0, m.l)(t.data, "header");
-          return l.createElement(
+          const c = (0, l.l)(t.data, "header");
+          return n.createElement(
             "div",
             { className: E.AppCapsule },
-            l.createElement(
-              i.u,
+            n.createElement(
+              o.u,
               { id: e.nAppID, type: "app" },
-              l.createElement("img", { className: E.Image, src: c }),
+              n.createElement("img", { className: E.Image, src: c }),
             ),
-            l.createElement(
+            n.createElement(
               "div",
               { className: E.UnderInfo },
-              l.createElement("div", { className: E.Name }, a.data.name),
+              n.createElement("div", { className: E.Name }, a.data.name),
               e.fWeight &&
-                l.createElement(
+                n.createElement(
                   "div",
                   { className: E.Weight },
                   `${(100 * e.fWeight).toFixed(2)}%`,
@@ -81,11 +82,11 @@
             ),
           );
         },
-        D = (e) => {
-          const [t, a] = l.useState([]),
-            [s, c] = l.useState([]);
+        N = (e) => {
+          const [t, a] = n.useState([]),
+            [s, c] = n.useState([]);
           return (
-            l.useEffect(() => {
+            n.useEffect(() => {
               (async () => {
                 const t = {
                   rec: e.strName,
@@ -94,7 +95,7 @@
                   accountid: e.nAccountID,
                 };
                 try {
-                  const e = await n().get(
+                  const e = await m().get(
                     `${p.TS.STORE_BASE_URL}recommenderdemos/getlist`,
                     { params: t, timeout: 1e4 },
                   );
@@ -104,16 +105,16 @@
                 }
               })();
             }, [e.strName, e.nAccountID, e.bExclude]),
-            l.createElement(
+            n.createElement(
               "div",
               { className: E.RecommenderList },
-              l.createElement("div", { className: E.Title }, e.strTitle),
-              l.createElement("div", { className: E.SubTitle }, e.strSubtitle),
-              l.createElement(
+              n.createElement("div", { className: E.Title }, e.strTitle),
+              n.createElement("div", { className: E.SubTitle }, e.strSubtitle),
+              n.createElement(
                 "div",
                 { className: E.CapsuleList },
                 t?.map((t, a) =>
-                  l.createElement(N, {
+                  n.createElement(D, {
                     key: `${e.strName}_${a}`,
                     nAppID: t,
                     fWeight: s[a],
@@ -123,41 +124,41 @@
             )
           );
         },
-        v = (e) =>
-          l.createElement(
+        R = (e) =>
+          n.createElement(
             "div",
             { className: E.RecommenderList },
-            l.createElement("div", { className: E.Title }, e.strName),
-            l.createElement(
+            n.createElement("div", { className: E.Title }, e.strName),
+            n.createElement(
               "div",
               { className: E.SubTitle },
               (0, u.we)("#RecommenderDemos_ReleasedGames"),
             ),
-            l.createElement(
+            n.createElement(
               "div",
               { className: E.CapsuleList },
               e.arrPlaytimeAppIDs.map((t, a) =>
-                l.createElement(N, { key: `${e.strName}_${a}`, nAppID: t }),
+                n.createElement(D, { key: `${e.strName}_${a}`, nAppID: t }),
               ),
             ),
-            l.createElement("div", { className: E.Spacer }),
-            l.createElement(
+            n.createElement("div", { className: E.Spacer }),
+            n.createElement(
               "div",
               { className: E.SubTitle },
               (0, u.we)("#RecommenderDemos_UnreleasedGames"),
             ),
-            l.createElement(
+            n.createElement(
               "div",
               { className: E.CapsuleList },
               e.arrWishlistAppIDs.map((t, a) =>
-                l.createElement(N, { key: `${e.strName}_${a}`, nAppID: t }),
+                n.createElement(D, { key: `${e.strName}_${a}`, nAppID: t }),
               ),
             ),
           ),
-        h = (e) => {
-          const [t, a] = l.useState(void 0);
+        v = (e) => {
+          const [t, a] = n.useState(void 0);
           return (
-            l.useEffect(() => {
+            n.useEffect(() => {
               (async () => {
                 const t = {
                   max: 40,
@@ -165,7 +166,7 @@
                   accountid: e.nAccountID,
                 };
                 try {
-                  const e = await n().get(
+                  const e = await m().get(
                     `${p.TS.STORE_BASE_URL}recommenderdemos/getfests`,
                     { params: t, timeout: 1e4 },
                   );
@@ -175,11 +176,11 @@
                 }
               })();
             }, [e.bExclude, e.nAccountID]),
-            l.createElement(
+            n.createElement(
               "div",
               { className: E.RecommenderFests },
               t?.map((e) =>
-                l.createElement(v, {
+                n.createElement(R, {
                   key: `Fest_${e.name}`,
                   strName: e.title,
                   nStartTime: e.start_date,
@@ -192,23 +193,23 @@
           );
         },
         A = () => {
-          const [e, t] = l.useState(!1),
-            [a, s] = l.useState(0),
-            [c, n] = l.useState(""),
-            [m, i] = l.useState(!0);
+          const [e, t] = n.useState(!1),
+            [a, s] = n.useState(0),
+            [c, m] = n.useState(""),
+            [l, o] = n.useState(!0);
           if (!p.iA.logged_in)
-            return l.createElement(
+            return n.createElement(
               "div",
               { className: E.App },
-              l.createElement(
+              n.createElement(
                 "div",
                 { className: E.Login },
-                l.createElement(
+                n.createElement(
                   "div",
                   { className: E.Text },
                   (0, u.we)("#LoginText"),
                 ),
-                l.createElement(
+                n.createElement(
                   "div",
                   {
                     className: (0, d.A)(
@@ -217,32 +218,37 @@
                     ),
                     onClick: r.vg,
                   },
-                  l.createElement("span", null, (0, u.we)("#LoginButton")),
+                  n.createElement("span", null, (0, u.we)("#LoginButton")),
                 ),
               ),
             );
-          return l.createElement(
-            o.A,
+          return n.createElement(
+            i.A,
             {
               controller: "recommenderdemos",
               method: "default",
               feature: "capsule",
             },
-            l.createElement(
+            n.createElement(
               "div",
               { className: E.RecommenderDemosApp },
-              l.createElement(
+              n.createElement(
+                "div",
+                { className: E.ValveOnly },
+                "(Valve-Only)",
+              ),
+              n.createElement(
                 "div",
                 { className: E.TopControls },
-                l.createElement(
+                n.createElement(
                   "div",
                   { className: E.AccountIDControl },
-                  l.createElement("input", {
+                  n.createElement("input", {
                     type: "text",
                     value: c,
-                    onChange: (e) => n(e.target.value),
+                    onChange: (e) => m(e.target.value),
                   }),
-                  l.createElement(
+                  n.createElement(
                     _.$n,
                     {
                       className: E.RecDemoButton,
@@ -252,56 +258,91 @@
                     },
                     "Use AccountID",
                   ),
-                  l.createElement(
+                  n.createElement(
                     _.$n,
                     {
                       disabled: !e,
                       className: E.RecDemoButton,
                       onClick: () => {
-                        t(!1), s(0), n("");
+                        t(!1), s(0), m("");
                       },
                     },
                     "Clear",
                   ),
                 ),
                 e &&
-                  l.createElement(
+                  n.createElement(
                     "div",
                     { className: E.AccountIDOverride },
                     (0, u.we)("#RecommenderDemos_OverrideAccountID"),
-                    l.createElement("div", { className: E.AccountID }, a),
+                    n.createElement("div", { className: E.AccountID }, a),
                   ),
-                l.createElement(
+                n.createElement(
                   "div",
                   { className: E.CheckBox },
-                  l.createElement("input", {
+                  n.createElement("input", {
                     type: "checkbox",
                     id: "exclude_owned_wishlisted",
-                    checked: m,
-                    onChange: () => i(!m),
+                    checked: l,
+                    onChange: () => o(!l),
                   }),
-                  l.createElement(
+                  n.createElement(
                     "label",
                     { htmlFor: "exclude_owned_wishlisted" },
                     (0, u.we)("#RecommenderDemos_Exclude"),
                   ),
                 ),
               ),
-              l.createElement(D, {
+              n.createElement(N, {
                 nAccountID: a,
-                bExclude: m,
+                bExclude: l,
                 strName: "WishlistsOneWeek",
                 strTitle: (0, u.we)("#RecommenderDemos_HotWishlists"),
                 strSubtitle: (0, u.we)("#RecommenderDemos_HotWishlists_Desc"),
               }),
-              l.createElement(D, {
+              n.createElement(N, {
                 nAccountID: a,
-                bExclude: m,
+                bExclude: l,
                 strName: "WishlistsNewReleases",
                 strTitle: (0, u.we)("#RecommenderDemos_NewReleases"),
                 strSubtitle: (0, u.we)("#RecommenderDemos_NewReleases_Desc"),
               }),
-              l.createElement(h, { nAccountID: a, bExclude: m }),
+              n.createElement(v, { nAccountID: a, bExclude: l }),
+              n.createElement(N, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecAllTime",
+                strTitle: (0, u.we)("#RecommenderDemos_RecAllTime"),
+                strSubtitle: (0, u.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              n.createElement(N, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecFiveYear",
+                strTitle: (0, u.we)("#RecommenderDemos_RecFiveYear"),
+                strSubtitle: (0, u.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              n.createElement(N, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecTwoYear",
+                strTitle: (0, u.we)("#RecommenderDemos_RecTwoYear"),
+                strSubtitle: (0, u.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              n.createElement(N, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecOneYear",
+                strTitle: (0, u.we)("#RecommenderDemos_RecOneYear"),
+                strSubtitle: (0, u.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              n.createElement(N, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecSixMonths",
+                strTitle: (0, u.we)("#RecommenderDemos_RecSixMonths"),
+                strSubtitle: (0, u.we)("#RecommenderDemos_Rec_Desc"),
+              }),
             ),
           );
         };

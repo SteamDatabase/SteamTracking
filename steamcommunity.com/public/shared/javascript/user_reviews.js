@@ -330,7 +330,7 @@ function UserReview_ShowContentCheckResultsDialog( recommendationID, baseURL )
 			{
 				var r = data.results[i];
 				var reportDiv = $J('<div/>', {'class': 'review_report' } );
-					var divProvider = $J('<div/>', {'class': 'review_report_data' } ).append( r.provider == 1 || r.provider == 4 || r.provider == k_EContentCheckProvider_GoogleGemini ? 'Google' : 'Unknown' );
+					var divProvider = $J('<div/>', {'class': 'review_report_data' } ).append( r.provider == 1 || r.provider == 4 || r.provider == 5 ? 'Google' : 'Unknown' );
 					reportDiv.append( divProvider );
 					var divResult = $J('<div/>', {'class': 'review_report_data' } ).append( r.ban_check_result_string );
 					reportDiv.append( divResult );

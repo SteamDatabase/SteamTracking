@@ -3111,7 +3111,7 @@
         O = r(283),
         z = r(95695),
         x = r.n(z),
-        F = r(21273),
+        F = r(49300),
         k = r(738),
         U = r(41609),
         G = r.n(U),
@@ -4947,7 +4947,7 @@
         );
       });
       var U = r(42011),
-        G = r(34005),
+        G = r(53418),
         j = r(64940),
         W = r(90316),
         P = r.n(W),
@@ -5755,7 +5755,7 @@
         a = r(71138),
         i = r(33737),
         s = r(84811),
-        o = r(21273),
+        o = r(49300),
         l = r(61859),
         c = r(22797),
         m = r(17618);
@@ -5900,41 +5900,27 @@
       "use strict";
       r.d(t, { W: () => U, F: () => j });
       var n = r(34629),
-        a = r(90626),
-        i = r(75844),
-        s = r(78327),
-        o = r(61859),
-        l = r(375),
-        c = r(95695),
-        m = r.n(c),
-        d = r(738),
-        u = r(56011),
-        p = r(52038),
-        h = r(14256),
-        g = r.n(h),
-        S = r(21273),
-        _ = r(19719),
-        v = r(41735),
-        E = r.n(v),
-        B = r(68797),
-        w = r(60746),
-        y = r(12155),
-        C = r(82477),
-        f = r(86090),
-        M = r(4796),
-        I = r(61336),
-        b = r(14947);
-      class T {
+        a = r(45699),
+        i = r(76217),
+        s = r(41735),
+        o = r.n(s),
+        l = r(75844),
+        c = r(90626),
+        m = r(4796),
+        d = r(14947),
+        u = r(68797),
+        p = r(78327);
+      class h {
         constructor() {
           (this.m_mapClanReposted = new Set()),
             (this.m_mapSourceEventGIDToPostedClans = new Map()),
-            (0, b.Gn)(this);
+            (0, d.Gn)(this);
         }
         static Get() {
           return (
-            T.s_EventRepost ||
-              ((T.s_EventRepost = new T()), T.s_EventRepost.Initialize()),
-            T.s_EventRepost
+            h.s_EventRepost ||
+              ((h.s_EventRepost = new h()), h.s_EventRepost.Initialize()),
+            h.s_EventRepost
           );
         }
         static ValidateRepostData(e) {
@@ -5950,8 +5936,8 @@
         }
         Initialize() {
           if (document.getElementById("application_config")) {
-            let e = (0, s.Tc)("repostcontrols", "application_config");
-            T.ValidateRepostData(e) &&
+            let e = (0, p.Tc)("repostcontrols", "application_config");
+            h.ValidateRepostData(e) &&
               e.repost_clan_account_ids.forEach((e) =>
                 this.m_mapClanReposted.add(e),
               );
@@ -5967,14 +5953,14 @@
           var n, a, i;
           if (this.m_mapSourceEventGIDToPostedClans.has(t))
             return this.m_mapSourceEventGIDToPostedClans.get(t);
-          const o = s.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
+          const s = p.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
             l = {
-              sessionid: s.TS.SESSIONID,
+              sessionid: p.TS.SESSIONID,
               source_clan_accountid: e.GetAccountID(),
               source_event_gid: t,
             };
           try {
-            const e = await E().get(o, {
+            const e = await o().get(s, {
               params: l,
               withCredentials: !0,
               cancelToken: null == r ? void 0 : r.token,
@@ -6003,7 +5989,7 @@
                   : i.msg),
             );
           } catch (e) {
-            const t = (0, B.H)(e);
+            const t = (0, u.H)(e);
             console.error(
               "GetRepostClanAccountID: fail repost with " + t.strErrorMsg,
               t,
@@ -6012,16 +5998,16 @@
           return new Array();
         }
         async RepostEvent(e, t, r, n, a) {
-          var i, o, l;
-          const c = s.TS.STORE_BASE_URL + "events/ajaxrepostevent",
+          var i, s, l;
+          const c = p.TS.STORE_BASE_URL + "events/ajaxrepostevent",
             m = new FormData();
-          m.append("sessionid", s.TS.SESSIONID),
+          m.append("sessionid", p.TS.SESSIONID),
             m.append("source_clan_accountid", "" + e.GetAccountID()),
             m.append("source_event_gid", "" + t),
             m.append("repost_clan_accountid", "" + r.GetAccountID()),
             m.append("add", "" + n);
           try {
-            let e = await E().post(c, m, {
+            let e = await o().post(c, m, {
               withCredentials: !0,
               cancelToken: null == a ? void 0 : a.token,
             });
@@ -6050,194 +6036,205 @@
             }
             console.error(
               "RepostEvent: failed " +
-                (null === (o = null == e ? void 0 : e.data) || void 0 === o
+                (null === (s = null == e ? void 0 : e.data) || void 0 === s
                   ? void 0
-                  : o.success) +
+                  : s.success) +
                 " and msg: " +
                 (null === (l = null == e ? void 0 : e.data) || void 0 === l
                   ? void 0
                   : l.msg),
             );
           } catch (e) {
-            const t = (0, B.H)(e);
+            const t = (0, u.H)(e);
             console.error("RepostEvent: fail repost with " + t.strErrorMsg, t);
           }
           return null;
         }
       }
-      (0, n.Cg)([b.sH], T.prototype, "m_mapClanReposted", void 0);
-      var D = r(17720),
-        A = r(33737),
-        L = r(84811),
-        N = r(22797);
-      const R = (0, i.PA)((e) => {
+      (0, n.Cg)([d.sH], h.prototype, "m_mapClanReposted", void 0);
+      var g = r(60746),
+        S = r(95695),
+        _ = r.n(S),
+        v = r(82477),
+        E = r(61985),
+        B = r(738),
+        w = r(12155),
+        y = r(52038),
+        C = r(56011),
+        f = r(61859),
+        M = r(82227),
+        I = r(19719),
+        b = r(375),
+        T = r(61336),
+        D = r(49300),
+        A = r(14256),
+        L = r.n(A),
+        N = r(3919),
+        R = r(86090),
+        O = r(17720),
+        z = r(33737),
+        x = r(84811),
+        F = r(22797);
+      const k = (0, l.PA)((e) => {
         const { eventModel: t } = e,
-          [r, n] = (0, a.useState)(!0),
-          [i, s] = (0, a.useState)(new Set()),
-          [l, c] = (0, a.useState)(new Set()),
-          [m, d] = (0, a.useState)(new Set()),
-          [u, p] = (0, a.useState)(null),
-          [h, g] = (0, a.useState)(null),
-          _ = (0, a.useRef)(null);
-        (0, a.useEffect)(() => {
+          [r, n] = (0, c.useState)(!0),
+          [a, i] = (0, c.useState)(new Set()),
+          [s, l] = (0, c.useState)(new Set()),
+          [d, u] = (0, c.useState)(new Set()),
+          [p, g] = (0, c.useState)(null),
+          [S, _] = (0, c.useState)(null),
+          v = (0, c.useRef)(null);
+        (0, c.useEffect)(() => {
           if (r) {
             (async () => {
-              const e = E().CancelToken.source();
-              _.current = e.cancel;
-              const r = T.Get().LoadClansAlreadyRepostedTo(
-                t.clanSteamID,
-                t.GID,
-                e,
-              );
+              const e = o().CancelToken.source();
+              v.current = e.cancel;
+              const r = h
+                .Get()
+                .LoadClansAlreadyRepostedTo(t.clanSteamID, t.GID, e);
               r.then((e) => {
                 const t = new Set();
-                e.forEach((e) => t.add(e)), s(t);
+                e.forEach((e) => t.add(e)), i(t);
               });
               let a = new Array();
               a.push(r),
-                T.Get()
+                h
+                  .Get()
                   .GetRepostClanAccountID()
                   .forEach((e) => {
-                    const t = D.b.InitFromClanID(e);
-                    a.push(M.ac.LoadClanInfoForClanSteamID(t));
+                    const t = O.b.InitFromClanID(e);
+                    a.push(m.ac.LoadClanInfoForClanSteamID(t));
                   }),
                 await Promise.all(a),
                 n(!1);
             })();
           }
-          return () => _.current && _.current();
+          return () => v.current && v.current();
         }, [r, t.GID, t.clanSteamID]);
-        const v = new Array();
+        const E = new Array();
         return (
-          T.Get()
+          h
+            .Get()
             .GetRepostClanAccountID()
             .forEach((e) => {
-              const r = M.ac.GetClanInfoByClanAccountID(e);
+              const r = m.ac.GetClanInfoByClanAccountID(e);
               if (r && e != t.clanSteamID.GetAccountID()) {
-                const t = i.has(e),
-                  n = l.has(e) || (t && !m.has(e));
-                v.push(
-                  a.createElement(A.Yh, {
+                const t = a.has(e),
+                  n = s.has(e) || (t && !d.has(e));
+                E.push(
+                  c.createElement(z.Yh, {
                     key: "checkbox" + e,
                     label: t
-                      ? (0, o.we)("#EventRepost_Dialog_Existing", r.group_name)
+                      ? (0, f.we)("#EventRepost_Dialog_Existing", r.group_name)
                       : r.group_name,
                     checked: n,
-                    disabled: null !== u,
+                    disabled: null !== p,
                     onChange: (t) => {
-                      i.has(e)
-                        ? (t ? m.delete(e) : m.add(e), d(new Set(m)))
-                        : (t ? l.add(e) : l.delete(e), c(new Set(l)));
+                      a.has(e)
+                        ? (t ? d.delete(e) : d.add(e), u(new Set(d)))
+                        : (t ? s.add(e) : s.delete(e), l(new Set(s)));
                     },
                   }),
                 );
               }
             }),
-          a.createElement(
-            L.tH,
+          c.createElement(
+            x.tH,
             null,
-            a.createElement(
-              S.x_,
+            c.createElement(
+              D.x_,
               { onEscKeypress: () => e.closeModal && e.closeModal() },
-              a.createElement(
-                A.UC,
+              c.createElement(
+                z.UC,
                 null,
-                a.createElement(
-                  A.Y9,
+                c.createElement(
+                  z.Y9,
                   null,
-                  (0, o.we)("#EventRepost_Dialog_Title"),
+                  (0, f.we)("#EventRepost_Dialog_Title"),
                 ),
-                a.createElement(
-                  A.nB,
+                c.createElement(
+                  z.nB,
                   null,
-                  a.createElement(
-                    A.a3,
+                  c.createElement(
+                    z.a3,
                     null,
-                    (0, o.we)("#EventRepost_Dialog_Desc"),
+                    (0, f.we)("#EventRepost_Dialog_Desc"),
                   ),
                   r
-                    ? a.createElement(N.t, { string: (0, o.we)("#Loading") })
-                    : a.createElement("div", null, v),
-                  Boolean(l.size || m.size) &&
-                    a.createElement(
+                    ? c.createElement(F.t, { string: (0, f.we)("#Loading") })
+                    : c.createElement("div", null, E),
+                  Boolean(s.size || d.size) &&
+                    c.createElement(
                       "div",
                       null,
-                      a.createElement(
+                      c.createElement(
                         "span",
                         null,
-                        (0, o.we)("#EventRepost_Dialog_Action_Desc"),
+                        (0, f.we)("#EventRepost_Dialog_Action_Desc"),
                       ),
-                      a.createElement(
+                      c.createElement(
                         "ul",
                         null,
-                        Boolean(l.size) &&
-                          a.createElement(
+                        Boolean(s.size) &&
+                          c.createElement(
                             "li",
                             null,
-                            (0, o.we)("#EventRepost_Dialog_Action_Add", l.size),
+                            (0, f.we)("#EventRepost_Dialog_Action_Add", s.size),
                           ),
-                        Boolean(m.size) &&
-                          a.createElement(
+                        Boolean(d.size) &&
+                          c.createElement(
                             "li",
                             null,
-                            (0, o.we)(
+                            (0, f.we)(
                               "#EventRepost_Dialog_Action_Remove",
-                              m.size,
+                              d.size,
                             ),
                           ),
                       ),
                     ),
-                  Boolean(u) && a.createElement("div", null, u),
-                  Boolean(h) && a.createElement("div", null, h),
+                  Boolean(p) && c.createElement("div", null, p),
+                  Boolean(S) && c.createElement("div", null, S),
                 ),
-                a.createElement(
-                  A.wi,
+                c.createElement(
+                  z.wi,
                   null,
-                  a.createElement(A.CB, {
+                  c.createElement(z.CB, {
                     onCancel: () => e.closeModal && e.closeModal(),
-                    strOKText: (0, o.we)("#EventRepost_Dialog_OK"),
+                    strOKText: (0, f.we)("#EventRepost_Dialog_OK"),
                     bOKDisabled:
-                      (0 == l.size && 0 == m.size) || null !== u || null !== h,
+                      (0 == s.size && 0 == d.size) || null !== p || null !== S,
                     onOK: async () => {
-                      _.current && _.current();
-                      const e = E().CancelToken.source();
-                      _.current = e.cancel;
-                      const r = l.size + m.size;
+                      v.current && v.current();
+                      const e = o().CancelToken.source();
+                      v.current = e.cancel;
+                      const r = s.size + d.size;
                       let n = 1;
-                      p((0, o.we)("#EventRepost_Dialog_Progress", n, r));
-                      for (const a of Array.from(l)) {
-                        const i = D.b.InitFromClanID(a);
+                      g((0, f.we)("#EventRepost_Dialog_Progress", n, r));
+                      for (const a of Array.from(s)) {
+                        const i = O.b.InitFromClanID(a);
                         if (
-                          !(await T.Get().RepostEvent(
-                            t.clanSteamID,
-                            t.GID,
-                            i,
-                            !0,
-                            e,
-                          ))
+                          !(await h
+                            .Get()
+                            .RepostEvent(t.clanSteamID, t.GID, i, !0, e))
                         )
-                          return void g(
-                            (0, o.we)("#EventRepost_Dialog_ResultFail"),
+                          return void _(
+                            (0, f.we)("#EventRepost_Dialog_ResultFail"),
                           );
-                        p((0, o.we)("#EventRepost_Dialog_Progress", ++n, r));
+                        g((0, f.we)("#EventRepost_Dialog_Progress", ++n, r));
                       }
-                      for (const a of Array.from(m)) {
-                        const i = D.b.InitFromClanID(a);
+                      for (const a of Array.from(d)) {
+                        const i = O.b.InitFromClanID(a);
                         if (
-                          !(await T.Get().RepostEvent(
-                            t.clanSteamID,
-                            t.GID,
-                            i,
-                            !1,
-                            e,
-                          ))
+                          !(await h
+                            .Get()
+                            .RepostEvent(t.clanSteamID, t.GID, i, !1, e))
                         )
-                          return void g(
-                            (0, o.we)("#EventRepost_Dialog_ResultFail"),
+                          return void _(
+                            (0, f.we)("#EventRepost_Dialog_ResultFail"),
                           );
-                        p((0, o.we)("#EventRepost_Dialog_Progress", ++n, r));
+                        g((0, f.we)("#EventRepost_Dialog_Progress", ++n, r));
                       }
-                      g((0, o.we)("#EventRepost_Dialog_ResultSuccess"));
+                      _((0, f.we)("#EventRepost_Dialog_ResultSuccess"));
                     },
                   }),
                 ),
@@ -6246,26 +6243,21 @@
           )
         );
       });
-      var O = r(76217),
-        z = r(45699),
-        x = r(82227),
-        F = r(61985),
-        k = r(3919);
       function U(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
-            s.TS.IN_CLIENT
+            p.TS.IN_CLIENT
               ? console.log(
                   "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
                 )
-              : (0, d.pg)(
-                  a.createElement(S.o0, {
-                    strTitle: (0, o.we)("#EventDisplay_Share_NotLoggedIn"),
-                    strDescription: (0, o.we)(
+              : (0, B.pg)(
+                  c.createElement(D.o0, {
+                    strTitle: (0, f.we)("#EventDisplay_Share_NotLoggedIn"),
+                    strDescription: (0, f.we)(
                       "#EventDisplay_Share_NotLoggedIn_Description",
                     ),
-                    strOKButtonText: (0, o.we)("#MobileLogin_SignIn"),
-                    onOK: () => (0, C.vg)(),
+                    strOKButtonText: (0, f.we)("#MobileLogin_SignIn"),
+                    onOK: () => (0, v.vg)(),
                   }),
                   window,
                 ),
@@ -6273,7 +6265,7 @@
           );
         return (
           !t.GetPartnerEventPermissions(e.clanSteamID).limited_user ||
-          ((0, d.pg)(a.createElement(f.g, null), window), !1)
+          ((0, B.pg)(c.createElement(R.g, null), window), !1)
         );
       }
       function G(e) {
@@ -6281,32 +6273,32 @@
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
       const j = (e) => {
-        const t = (0, s.Qn)();
-        return a.createElement(W, { ...e, bInGamepadUI: t });
+        const t = (0, p.Qn)();
+        return c.createElement(W, { ...e, bInGamepadUI: t });
       };
-      let W = class extends a.Component {
+      let W = class extends c.Component {
         constructor(e) {
-          super(e), (this.m_cancelSignal = E().CancelToken.source());
-          const t = w.KN.Get().BHasMyVote(e.eventModel);
+          super(e), (this.m_cancelSignal = o().CancelToken.source());
+          const t = g.KN.Get().BHasMyVote(e.eventModel);
           let r;
-          t && (r = G(w.KN.Get().GetPreviouslyLoadedVote(e.eventModel))),
+          t && (r = G(g.KN.Get().GetPreviouslyLoadedVote(e.eventModel))),
             (this.state = { bLoadedVote: !!t, myVote: r });
         }
         async HandleRefreshMyVotingInformation() {
           const { eventModel: e, partnerEventStore: t } = this.props;
-          w.KN.Get().BIsUserLoggedIn() &&
-            (w.KN.Get()
+          g.KN.Get().BIsUserLoggedIn() &&
+            (g.KN.Get()
               .LoadMyVote(e, this.m_cancelSignal)
               .then((e) => {
                 let t = G(e);
                 this.setState({ myVote: t, bLoadedVote: !0 });
               })
               .catch((e) => {
-                let t = (0, B.H)(e);
+                let t = (0, u.H)(e);
                 console.error("EventDiscussionWidget = " + t.strErrorMsg);
               }),
-            M.ac.LoadClanInfoForClanSteamID(e.clanSteamID).catch((e) => {
-              let t = (0, B.H)(e);
+            m.ac.LoadClanInfoForClanSteamID(e.clanSteamID).catch((e) => {
+              let t = (0, u.H)(e);
               console.error("EventDiscussionWidget = " + t.strErrorMsg);
             }));
         }
@@ -6330,17 +6322,17 @@
         }
         Vote(e) {
           const { eventModel: t } = this.props;
-          U(t, w.KN.Get()) &&
+          U(t, g.KN.Get()) &&
             this.state.myVote != e &&
             null != e &&
             this.state.bLoadedVote &&
             this.setState(
               { bVotingUp: "up" == e, bVotingDown: "down" == e },
               () => {
-                w.KN.Get()
+                g.KN.Get()
                   .Vote(t, "up" === e, this.m_cancelSignal)
                   .catch((t) => {
-                    let r = (0, B.H)(t);
+                    let r = (0, u.H)(t);
                     console.error(
                       "EventDiscussionWidget.OnVote" + e + " " + r.strErrorMsg,
                       r,
@@ -6352,153 +6344,154 @@
             );
         }
         OnShareDialog(e) {
-          const t = (0, k.cq)(this.props.eventModel);
-          (0, d.pg)(
-            a.createElement(F.Wt, {
+          const t = (0, N.cq)(this.props.eventModel);
+          (0, B.pg)(
+            c.createElement(E.Wt, {
               eventLink: t,
-              fnGetSharePageUrl: (e) => (0, k.Bd)(this.props.eventModel, e),
+              fnGetSharePageUrl: (e) => (0, N.Bd)(this.props.eventModel, e),
               appid: this.props.eventModel.appid,
               emoticonStore: this.props.emoticonStore,
               partnerEventStore: this.props.partnerEventStore,
             }),
-            (0, u.uX)(e),
-            { strTitle: (0, o.we)("#Button_Share") },
+            (0, C.uX)(e),
+            { strTitle: (0, f.we)("#Button_Share") },
           );
         }
         GotoDiscussion(e) {
-          (0, d.pg)(
-            a.createElement(S.KG, {
-              strDescription: (0, o.we)(
+          (0, B.pg)(
+            c.createElement(D.KG, {
+              strDescription: (0, f.we)(
                 "#EventDisplay_Share_CommentMigrationInProcess",
               ),
             }),
-            (0, u.uX)(e),
+            (0, C.uX)(e),
           );
         }
         OpenRepostDialogs(e) {
-          (0, d.pg)(
-            a.createElement(R, { eventModel: this.props.eventModel }),
-            (0, u.uX)(e),
+          (0, B.pg)(
+            c.createElement(k, { eventModel: this.props.eventModel }),
+            (0, C.uX)(e),
           );
         }
         render() {
           const { eventModel: e } = this.props,
-            t = (0, _.OQ)(
+            t = (0, I.OQ)(
               e.nVotesUp - e.nVotesDown,
               0,
               Number.MAX_SAFE_INTEGER,
             ),
             r = e.GetForumTopicURL(),
-            n = (0, I.NT)(r),
-            i = (0, s.Y2)(),
-            l = s.iA.logged_in && T.Get().BCanRepostPartnerEvent();
-          return a.createElement(
-            O.Z,
-            { className: g().Container, "flow-children": "row", focusable: !1 },
-            a.createElement(
+            n = (0, T.NT)(r),
+            a = (0, p.Y2)(),
+            s = e.BIsUnlistedEvent(),
+            o = p.iA.logged_in && h.Get().BCanRepostPartnerEvent();
+          return c.createElement(
+            i.Z,
+            { className: L().Container, "flow-children": "row", focusable: !1 },
+            c.createElement(
               "div",
-              { className: g().InnerContainer },
-              a.createElement(
+              { className: L().InnerContainer },
+              c.createElement(
                 "div",
-                { className: g().VoteContainer },
-                a.createElement(
+                { className: L().VoteContainer },
+                c.createElement(
                   "div",
-                  { className: g().VoteCount },
-                  a.createElement(y.bfp, { className: g().VoteUpStaticIcon }),
-                  (0, x.Dq)(t),
+                  { className: L().VoteCount },
+                  c.createElement(w.bfp, { className: L().VoteUpStaticIcon }),
+                  (0, M.Dq)(t),
                 ),
-                a.createElement(
-                  O.Z,
+                c.createElement(
+                  i.Z,
                   {
                     focusable: !0,
-                    className: (0, p.A)(
-                      m().Button,
-                      m().Icon,
-                      g().DiscussionButton,
-                      "up" == this.state.myVote ? g().VoteButtonSelected : "",
+                    className: (0, y.A)(
+                      _().Button,
+                      _().Icon,
+                      L().DiscussionButton,
+                      "up" == this.state.myVote ? L().VoteButtonSelected : "",
                     ),
                     onActivate: this.OnVoteUp,
                   },
-                  a.createElement(y.bfp, {
+                  c.createElement(w.bfp, {
                     className:
                       "up" == this.state.myVote
-                        ? g().VoteUpSelectedIcon
-                        : g().VoteUpIcon,
+                        ? L().VoteUpSelectedIcon
+                        : L().VoteUpIcon,
                   }),
-                  a.createElement(
+                  c.createElement(
                     "span",
-                    { className: g().DiscussionButtonText },
-                    (0, o.we)("#Button_RateUp"),
+                    { className: L().DiscussionButtonText },
+                    (0, f.we)("#Button_RateUp"),
                   ),
                 ),
-                a.createElement(
-                  O.Z,
+                c.createElement(
+                  i.Z,
                   {
                     focusable: !0,
-                    className: (0, p.A)(
-                      m().Button,
-                      m().Icon,
-                      g().DiscussionButton,
-                      "down" == this.state.myVote ? g().VoteButtonSelected : "",
+                    className: (0, y.A)(
+                      _().Button,
+                      _().Icon,
+                      L().DiscussionButton,
+                      "down" == this.state.myVote ? L().VoteButtonSelected : "",
                     ),
                     onActivate: this.OnVoteDown,
                   },
-                  a.createElement(y.bfp, {
+                  c.createElement(w.bfp, {
                     className:
                       "down" == this.state.myVote
-                        ? g().VoteDownSelectedIcon
-                        : g().VoteDownIcon,
+                        ? L().VoteDownSelectedIcon
+                        : L().VoteDownIcon,
                   }),
                 ),
               ),
-              !i &&
-                a.createElement(P, {
+              Boolean(!a && !s) &&
+                c.createElement(P, {
                   commentCount: e.nCommentCount,
                   discussionURL: n,
                   gotoDiscussion: this.GotoDiscussion,
                 }),
-              l &&
-                a.createElement(
+              o &&
+                c.createElement(
                   "div",
-                  { className: g().VoteContainer },
-                  a.createElement(
-                    O.Z,
+                  { className: L().VoteContainer },
+                  c.createElement(
+                    i.Z,
                     {
                       focusable: !0,
-                      className: (0, p.A)(
-                        m().Button,
-                        m().Icon,
-                        g().DiscussionButton,
+                      className: (0, y.A)(
+                        _().Button,
+                        _().Icon,
+                        L().DiscussionButton,
                         "down" == this.state.myVote
-                          ? g().VoteButtonSelected
+                          ? L().VoteButtonSelected
                           : "",
                       ),
                       onActivate: this.OpenRepostDialogs,
                     },
-                    (0, o.we)("#EventRepost_Dialog_Title"),
+                    (0, f.we)("#EventRepost_Dialog_Title"),
                   ),
                 ),
             ),
-            a.createElement(
+            c.createElement(
               "div",
-              { className: g().ShareContainer },
+              { className: L().ShareContainer },
               !this.props.bInGamepadUI &&
-                a.createElement(
-                  O.Z,
+                c.createElement(
+                  i.Z,
                   {
                     focusable: !0,
-                    className: (0, p.A)(
-                      m().Button,
-                      m().Icon,
-                      g().DiscussionButton,
+                    className: (0, y.A)(
+                      _().Button,
+                      _().Icon,
+                      L().DiscussionButton,
                     ),
                     onActivate: this.OnShareDialog,
                   },
-                  a.createElement(y.SYj, { className: g().ShareIcon }),
-                  a.createElement(
+                  c.createElement(w.SYj, { className: L().ShareIcon }),
+                  c.createElement(
                     "span",
-                    { className: g().DiscussionButtonText },
-                    (0, o.we)("#Button_Share"),
+                    { className: L().DiscussionButtonText },
+                    (0, f.we)("#Button_Share"),
                   ),
                 ),
             ),
@@ -6507,59 +6500,59 @@
       };
       function P(e) {
         const { commentCount: t, discussionURL: r, gotoDiscussion: n } = e;
-        return a.createElement(
+        return c.createElement(
           "div",
-          { className: g().DiscussContainer },
-          a.createElement(
+          { className: L().DiscussContainer },
+          c.createElement(
             "div",
-            { className: g().DiscussionCount },
-            a.createElement(y.ROZ, null),
-            (0, x.Dq)(t),
+            { className: L().DiscussionCount },
+            c.createElement(w.ROZ, null),
+            (0, M.Dq)(t),
           ),
           r &&
-            a.createElement(
-              z.Ii,
-              { href: (0, I.k2)(r) },
-              a.createElement(
+            c.createElement(
+              a.Ii,
+              { href: (0, T.k2)(r) },
+              c.createElement(
                 "div",
                 {
-                  className: (0, p.A)(
-                    m().Button,
-                    m().Icon,
-                    g().DiscussionButton,
+                  className: (0, y.A)(
+                    _().Button,
+                    _().Icon,
+                    L().DiscussionButton,
                   ),
                 },
-                a.createElement(y.ROZ, null),
-                a.createElement(
+                c.createElement(w.ROZ, null),
+                c.createElement(
                   "span",
-                  { className: g().DiscussionButtonText },
-                  (0, o.we)("#Button_Discuss"),
+                  { className: L().DiscussionButtonText },
+                  (0, f.we)("#Button_Discuss"),
                 ),
               ),
             ),
           !r &&
-            a.createElement(
-              O.Z,
+            c.createElement(
+              i.Z,
               {
                 focusable: !0,
                 onActivate: n,
-                className: (0, p.A)(m().Button, m().Icon, g().DiscussionButton),
+                className: (0, y.A)(_().Button, _().Icon, L().DiscussionButton),
               },
-              a.createElement(y.ROZ, null),
-              a.createElement(
+              c.createElement(w.ROZ, null),
+              c.createElement(
                 "span",
-                { className: g().DiscussionButtonText },
-                (0, o.we)("#Button_Discuss"),
+                { className: L().DiscussionButtonText },
+                (0, f.we)("#Button_Discuss"),
               ),
             ),
         );
       }
-      (0, n.Cg)([l.oI], W.prototype, "OnVoteUp", null),
-        (0, n.Cg)([l.oI], W.prototype, "OnVoteDown", null),
-        (0, n.Cg)([l.oI], W.prototype, "OnShareDialog", null),
-        (0, n.Cg)([l.oI], W.prototype, "GotoDiscussion", null),
-        (0, n.Cg)([l.oI], W.prototype, "OpenRepostDialogs", null),
-        (W = (0, n.Cg)([i.PA], W));
+      (0, n.Cg)([b.oI], W.prototype, "OnVoteUp", null),
+        (0, n.Cg)([b.oI], W.prototype, "OnVoteDown", null),
+        (0, n.Cg)([b.oI], W.prototype, "OnShareDialog", null),
+        (0, n.Cg)([b.oI], W.prototype, "GotoDiscussion", null),
+        (0, n.Cg)([b.oI], W.prototype, "OpenRepostDialogs", null),
+        (W = (0, n.Cg)([l.PA], W));
     },
     8107: (e, t, r) => {
       "use strict";
@@ -6572,7 +6565,7 @@
         l = r(60746),
         c = r(68033),
         m = r(27658),
-        d = r(21273),
+        d = r(49300),
         u = r(88843),
         p = r(64641),
         h = r.n(p),
@@ -6869,7 +6862,7 @@
         w = r(375),
         y = r(61336),
         C = r(78327),
-        f = r(21273),
+        f = r(49300),
         M = r(738),
         I = r(22797),
         b = r(86090),
@@ -7541,7 +7534,7 @@
       var n = r(13952),
         a = r(65946),
         i = r(90626),
-        s = r(34005),
+        s = r(53418),
         o = r(61859),
         l = r(66661),
         c = r.n(l);
@@ -7697,7 +7690,7 @@
       var g = r(10886),
         S = r(19654),
         _ = r(3209),
-        v = r(21273),
+        v = r(49300),
         E = r(32754),
         B = r(51272),
         w = r(14256),
@@ -7714,7 +7707,7 @@
         N = r(50842),
         R = r(68797),
         O = r(22797),
-        z = r(34005),
+        z = r(53418),
         x = r(86244),
         F = r.n(x),
         k = r(14336);
@@ -8165,7 +8158,7 @@
         i = r(73744),
         s = r(33737),
         o = r(81416),
-        l = r(21273),
+        l = r(49300),
         c = r(52038),
         m = r(61859),
         d = r(375),

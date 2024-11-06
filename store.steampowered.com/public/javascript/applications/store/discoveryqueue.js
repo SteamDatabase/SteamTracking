@@ -69,6 +69,38 @@
         Mobile: "mhii5hgMCQvO2tXOUdWPQ",
       };
     },
+    81315: (e) => {
+      e.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
+      };
+    },
     71109: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -79,42 +111,42 @@
         Y: "_1FD7rgQVEqkzjDjzYa-1BC",
       };
     },
-    12447: (e, t, a) => {
+    12447: (e, t, s) => {
       "use strict";
-      a.d(t, { u: () => l });
-      var r = a(8871),
-        s = a(90626),
-        n = a(78327),
-        i = a(85585),
-        o = a(7445);
-      function l(e) {
-        const { children: t, navTreeRef: a, NavigationManager: l, ...c } = e,
-          m = s.useRef(),
-          u = (0, r.Ue)(m, a);
-        if ((0, n.Qn)()) {
+      s.d(t, { u: () => c });
+      var i = s(8871),
+        n = s(90626),
+        a = s(78327),
+        o = s(85585),
+        r = s(7445);
+      function c(e) {
+        const { children: t, navTreeRef: s, NavigationManager: c, ...l } = e,
+          m = n.useRef(),
+          u = (0, i.Ue)(m, s);
+        if ((0, a.Qn)()) {
           const e = window.__nav_tree_root;
-          return s.createElement(
-            i.B2,
-            { ...c, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
-            s.createElement(o.q, null, t),
+          return n.createElement(
+            o.B2,
+            { ...l, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
+            n.createElement(r.q, null, t),
           );
         }
-        return s.createElement(s.Fragment, null, t);
+        return n.createElement(n.Fragment, null, t);
       }
     },
-    34181: (e, t, a) => {
+    34181: (e, t, s) => {
       "use strict";
-      a.d(t, { A: () => Q, D: () => f });
-      var r = a(34629),
-        s = a(90626),
-        n = a(75844),
-        i = a(61859),
-        o = a(22837),
-        l = a(10622),
-        c = a(52038),
-        m = a(56420),
-        u = a.n(m);
-      let A = class extends s.Component {
+      s.d(t, { A: () => b, D: () => v });
+      var i = s(34629),
+        n = s(90626),
+        a = s(75844),
+        o = s(61859),
+        r = s(22837),
+        c = s(10622),
+        l = s(52038),
+        m = s(56420),
+        u = s.n(m);
+      let h = class extends n.Component {
         static get hoverClass() {
           return u().hoverParent;
         }
@@ -122,370 +154,370 @@
           const {
             persona: e,
             animating: t,
-            className: a,
-            size: r,
-            dim: n,
-            ...i
+            className: s,
+            size: i,
+            dim: a,
+            ...o
           } = this.props;
-          let o = "";
+          let r = "";
           return (
-            "medium" == r ? (o = u().Medium) : "large" == r && (o = u().Large),
-            s.createElement(
+            "medium" == i ? (r = u().Medium) : "large" == i && (r = u().Large),
+            n.createElement(
               "div",
               {
-                className: (0, c.A)(
+                className: (0, l.A)(
                   u().SnoozeContainer,
                   e.online_state,
-                  a,
+                  s,
                   t && u().animating,
-                  o,
-                  n && u().Dim,
+                  r,
+                  a && u().Dim,
                 ),
-                ...i,
+                ...o,
               },
-              s.createElement(
+              n.createElement(
                 "div",
-                { "data-text": "Z", className: (0, c.A)(u().SnoozeZ, u().Z1) },
+                { "data-text": "Z", className: (0, l.A)(u().SnoozeZ, u().Z1) },
                 "Z",
               ),
-              s.createElement(
+              n.createElement(
                 "div",
-                { "data-text": "Z", className: (0, c.A)(u().SnoozeZ, u().Z2) },
+                { "data-text": "Z", className: (0, l.A)(u().SnoozeZ, u().Z2) },
                 "Z",
               ),
-              s.createElement(
+              n.createElement(
                 "div",
-                { "data-text": "Z", className: (0, c.A)(u().SnoozeZ, u().Z3) },
+                { "data-text": "Z", className: (0, l.A)(u().SnoozeZ, u().Z3) },
                 "Z",
               ),
             )
           );
         }
       };
-      A = (0, r.Cg)([n.PA], A);
-      var p = a(12155),
-        h = a(70342),
-        g = a.n(h),
-        d = a(97232);
-      const E = (0, n.PA)((e) => {
-        const { persona: t, className: a, ...r } = e;
+      h = (0, i.Cg)([a.PA], h);
+      var p = s(12155),
+        g = s(70342),
+        d = s.n(g),
+        A = s(97232);
+      const P = (0, a.PA)((e) => {
+        const { persona: t, className: s, ...i } = e;
         if (!t) return null;
         if (!t.is_online) return null;
-        const n = t.HasStateFlag(512),
-          o = t.HasStateFlag(2048),
+        const a = t.HasStateFlag(512),
+          r = t.HasStateFlag(2048),
           m = t.IsOnSteamDeck(),
-          u = !m && !o && t.HasStateFlag(1024);
-        return s.createElement(
-          s.Fragment,
+          u = !m && !r && t.HasStateFlag(1024);
+        return n.createElement(
+          n.Fragment,
           null,
-          n &&
-            s.createElement(
+          a &&
+            n.createElement(
               "div",
               {
-                className: (0, c.A)(
-                  a,
-                  g().PersonaStatusIcon,
-                  g().MobilePhoneIcon,
-                  (0, l.rO)(t),
+                className: (0, l.A)(
+                  s,
+                  d().PersonaStatusIcon,
+                  d().MobilePhoneIcon,
+                  (0, c.rO)(t),
                 ),
-                title: (0, i.we)("#Platform_Hint_Mobile"),
-                ...r,
+                title: (0, o.we)("#Platform_Hint_Mobile"),
+                ...i,
               },
-              s.createElement(d.rf, null),
+              n.createElement(A.rf, null),
             ),
-          o &&
-            s.createElement(
+          r &&
+            n.createElement(
               "div",
               {
-                className: (0, c.A)(
-                  a,
-                  g().PersonaStatusIcon,
-                  g().VRIcon,
-                  (0, l.rO)(t),
+                className: (0, l.A)(
+                  s,
+                  d().PersonaStatusIcon,
+                  d().VRIcon,
+                  (0, c.rO)(t),
                 ),
-                title: (0, i.we)("#Platform_Hint_VR"),
-                ...r,
+                title: (0, o.we)("#Platform_Hint_VR"),
+                ...i,
               },
-              s.createElement(p.MUh, null),
+              n.createElement(p.MUh, null),
             ),
           u &&
-            s.createElement(
+            n.createElement(
               "div",
               {
-                className: (0, c.A)(
-                  a,
-                  g().PersonaStatusIcon,
-                  g().BigPictureIcon,
-                  (0, l.rO)(t),
+                className: (0, l.A)(
+                  s,
+                  d().PersonaStatusIcon,
+                  d().BigPictureIcon,
+                  (0, c.rO)(t),
                 ),
-                title: (0, i.we)("#Platform_Hint_BigPicture"),
-                ...r,
+                title: (0, o.we)("#Platform_Hint_BigPicture"),
+                ...i,
               },
-              s.createElement(p.bPr, null),
+              n.createElement(p.bPr, null),
             ),
           m &&
-            s.createElement(
+            n.createElement(
               "div",
               {
-                className: (0, c.A)(
-                  a,
-                  g().PersonaStatusIcon,
-                  g().SteamDeckIcon,
-                  (0, l.rO)(t),
+                className: (0, l.A)(
+                  s,
+                  d().PersonaStatusIcon,
+                  d().SteamDeckIcon,
+                  (0, c.rO)(t),
                 ),
-                title: (0, i.we)("#Platform_Hint_SteamDeck"),
-                ...r,
+                title: (0, o.we)("#Platform_Hint_SteamDeck"),
+                ...i,
               },
-              s.createElement(p.DQe, null),
+              n.createElement(p.DQe, null),
             ),
         );
       });
-      var B = a(18828),
-        S = a.n(B),
-        b = a(78327);
-      function v(e) {
-        return s.createElement(
-          s.Fragment,
+      var E = s(18828),
+        _ = s.n(E),
+        f = s(78327);
+      function B(e) {
+        return n.createElement(
+          n.Fragment,
           null,
-          s.createElement(
+          n.createElement(
             "span",
-            { className: S().partyBeaconJoin },
-            (0, i.we)("#User_WantsToPlay"),
+            { className: _().partyBeaconJoin },
+            (0, o.we)("#User_WantsToPlay"),
           ),
           " – ",
           e.persona.GetCurrentGameName(),
         );
       }
-      let f = class extends s.Component {
+      let v = class extends n.Component {
         render() {
           const {
             className: e,
             onContextMenu: t,
-            persona: a,
-            eFriendRelationship: r,
-            bIsSelf: n,
+            persona: s,
+            eFriendRelationship: i,
+            bIsSelf: a,
             bParenthesizeNicknames: m,
             strNickname: u,
-            bCompactView: h,
-            bHideGameName: g,
-            bHideEnhancedRichPresenceLabel: d,
-            bHideSnooze: B,
-            bHideStatus: f,
-            renderStatus: Q,
-            renderRichPresence: C,
-            bHidePersona: N,
-            bDNDSet: _,
-            bHasPartyBeacon: D,
-            bHasGamePrivacy: P,
-            bNoMask: y,
-            ...R
+            bCompactView: g,
+            bHideGameName: d,
+            bHideEnhancedRichPresenceLabel: A,
+            bHideSnooze: E,
+            bHideStatus: v,
+            renderStatus: b,
+            renderRichPresence: k,
+            bHidePersona: L,
+            bDNDSet: R,
+            bHasPartyBeacon: S,
+            bHasGamePrivacy: C,
+            bNoMask: D,
+            ...w
           } = this.props;
-          let I = null,
-            T = null,
-            w = null,
-            M = [
+          let Q = null,
+            N = null,
+            M = null,
+            y = [
               e,
-              S().personaNameAndStatusLabel,
-              (0, l.rO)(a),
-              h && S().compactView,
-              y && S().NoMask,
+              _().personaNameAndStatusLabel,
+              (0, c.rO)(s),
+              g && _().compactView,
+              D && _().NoMask,
             ];
-          D || a.has_public_party_beacon
-            ? (T = s.createElement(v, { persona: a }))
-            : (0, o.aP)(r)
-              ? ((T = (0, i.we)("#PersonaStateBlocked")), M.push(S().blocked))
-              : a.is_ingame
-                ? ((T =
-                    !a.is_in_nonsteam_game || n || (0, o.S$)(r)
-                      ? a.GetCurrentGameName()
-                      : (0, i.we)("#PersonaStateInNonSteamGame")),
-                  n || N
-                    ? n &&
-                      a.is_awayOrSnooze &&
-                      (w = (0, i.we)("#PersonaStateAway"))
-                    : (w = a.GetCurrentGameRichPresence()))
-                : a.m_broadcastAccountId &&
-                  (T = (0, i.we)("#PersonaStateWatchingBroadcast")),
-            T || (T = a.GetLocalizedOnlineStatus()),
-            Q && (T = Q());
-          let k = !N && !B;
-          !1 === B && (k = !0),
-            a.is_awayOrSnooze && k && (I = s.createElement(A, { persona: a }));
-          let U = null;
+          S || s.has_public_party_beacon
+            ? (N = n.createElement(B, { persona: s }))
+            : (0, r.aP)(i)
+              ? ((N = (0, o.we)("#PersonaStateBlocked")), y.push(_().blocked))
+              : s.is_ingame
+                ? ((N =
+                    !s.is_in_nonsteam_game || a || (0, r.S$)(i)
+                      ? s.GetCurrentGameName()
+                      : (0, o.we)("#PersonaStateInNonSteamGame")),
+                  a || L
+                    ? a &&
+                      s.is_awayOrSnooze &&
+                      (M = (0, o.we)("#PersonaStateAway"))
+                    : (M = s.GetCurrentGameRichPresence()))
+                : s.m_broadcastAccountId &&
+                  (N = (0, o.we)("#PersonaStateWatchingBroadcast")),
+            N || (N = s.GetLocalizedOnlineStatus()),
+            b && (N = b());
+          let I = !L && !E;
+          !1 === E && (I = !0),
+            s.is_awayOrSnooze && I && (Q = n.createElement(h, { persona: s }));
+          let T = null;
           t
-            ? (U = s.createElement(
+            ? (T = n.createElement(
                 "div",
                 { className: "ContextMenuButton", onClick: t },
-                s.createElement(p.GB9, null),
+                n.createElement(p.GB9, null),
               ))
-            : M.push(S().noContextMenu),
-            N && M.push(S().hidePersona),
-            C && (w = C()),
-            (!g && w) || M.push(S().twoLine);
-          const H = !a.is_ingame && !f,
-            L = !d && w,
-            O = T && (!g || !L),
-            F = (0, o.ID)(b.TS.LAUNCHER_TYPE);
-          let K = u && !m,
-            W = K ? u : a.m_strPlayerName,
-            G = !N && (O || H) && L;
-          return s.createElement(
+            : y.push(_().noContextMenu),
+            L && y.push(_().hidePersona),
+            k && (M = k()),
+            (!d && M) || y.push(_().twoLine);
+          const O = !s.is_ingame && !v,
+            U = !A && M,
+            x = N && (!d || !U),
+            H = (0, r.ID)(f.TS.LAUNCHER_TYPE);
+          let F = u && !m,
+            K = F ? u : s.m_strPlayerName,
+            G = !L && (x || O) && U;
+          return n.createElement(
             "div",
-            { ...R, className: (0, c.A)(...M), onContextMenu: t },
-            s.createElement(
+            { ...w, className: (0, l.A)(...y), onContextMenu: t },
+            n.createElement(
               "div",
-              { className: (0, c.A)(S().statusAndName, G && S().threeLines) },
-              s.createElement(
+              { className: (0, l.A)(_().statusAndName, G && _().threeLines) },
+              n.createElement(
                 "div",
-                { className: S().playerName },
-                W || " ",
+                { className: _().playerName },
+                K || " ",
                 m &&
                   u &&
-                  s.createElement(
+                  n.createElement(
                     "span",
-                    { className: S().playerNickname },
+                    { className: _().playerNickname },
                     "(",
                     u,
                     ")",
                   ),
               ),
-              _ &&
-                s.createElement(
+              R &&
+                n.createElement(
                   "div",
                   {
-                    className: S().DNDContainer,
-                    title: (0, i.we)("#User_ToggleDoNotDisturb"),
+                    className: _().DNDContainer,
+                    title: (0, o.we)("#User_ToggleDoNotDisturb"),
                   },
-                  s.createElement(p.Aj0, null),
+                  n.createElement(p.Aj0, null),
                 ),
-              K &&
-                s.createElement(
+              F &&
+                n.createElement(
                   "span",
                   {
-                    className: S().playerNicknameBracket,
-                    title: (0, i.we)("#isNickname"),
+                    className: _().playerNicknameBracket,
+                    title: (0, o.we)("#isNickname"),
                   },
                   " *",
                 ),
-              s.createElement(E, { persona: a }),
-              I,
-              (a.m_bPlayerNamePending || a.m_bAvatarPending) &&
-                F &&
-                s.createElement(
+              n.createElement(P, { persona: s }),
+              Q,
+              (s.m_bPlayerNamePending || s.m_bAvatarPending) &&
+                H &&
+                n.createElement(
                   "div",
                   {
-                    className: S().PendingPersona,
-                    title: (0, i.we)("#SteamChina_PendingPersonaName"),
+                    className: _().PendingPersona,
+                    title: (0, o.we)("#SteamChina_PendingPersonaName"),
                   },
-                  s.createElement(p.zD7, null),
+                  n.createElement(p.zD7, null),
                 ),
-              U,
+              T,
             ),
-            !N &&
-              s.createElement(
+            !L &&
+              n.createElement(
                 "div",
-                { className: S().richPresenceContainer },
-                (O || H) &&
-                  s.createElement(
+                { className: _().richPresenceContainer },
+                (x || O) &&
+                  n.createElement(
                     "div",
                     {
-                      className: (0, c.A)(
-                        S().gameName,
-                        G && S().threeLines,
-                        S().richPresenceLabel,
+                      className: (0, l.A)(
+                        _().gameName,
+                        G && _().threeLines,
+                        _().richPresenceLabel,
                         "no-drag",
                       ),
                     },
-                    P &&
-                      s.createElement(
+                    C &&
+                      n.createElement(
                         "div",
                         {
-                          className: S().gameIsPrivateIcon,
-                          title: (0, i.we)("#User_GameInfoHidden"),
+                          className: _().gameIsPrivateIcon,
+                          title: (0, o.we)("#User_GameInfoHidden"),
                         },
-                        s.createElement(p.jZl, null),
+                        n.createElement(p.jZl, null),
                       ),
-                    T,
+                    N,
                   ),
-                L &&
-                  s.createElement(
+                U &&
+                  n.createElement(
                     "div",
-                    { className: (0, c.A)(S().richPresenceLabel, "no-drag") },
-                    w,
+                    { className: (0, l.A)(_().richPresenceLabel, "no-drag") },
+                    M,
                     " ",
                   ),
               ),
           );
         }
       };
-      f = (0, r.Cg)([n.PA], f);
-      const Q = (0, n.PA)((e) => {
+      v = (0, i.Cg)([a.PA], v);
+      const b = (0, a.PA)((e) => {
         const {
           persona: t,
-          bParenthesizeNicknames: a,
-          strNickname: r,
-          bIgnorePersonaStatus: n,
-          bDisableColoring: i,
-          className: o,
+          bParenthesizeNicknames: s,
+          strNickname: i,
+          bIgnorePersonaStatus: a,
+          bDisableColoring: o,
+          className: r,
           ...m
         } = e;
-        let u = r && !a ? r : t.m_strPlayerName;
-        return s.createElement(
+        let u = i && !s ? i : t.m_strPlayerName;
+        return n.createElement(
           "span",
           {
             ...m,
-            className: (0, c.A)(
-              o,
-              i && S().DisableColoring,
-              !n && (0, l.rO)(t),
+            className: (0, l.A)(
+              r,
+              o && _().DisableColoring,
+              !a && (0, c.rO)(t),
             ),
           },
-          s.createElement(
+          n.createElement(
             "span",
-            { className: S().playerName },
+            { className: _().playerName },
             u || " ",
-            a &&
-              r &&
-              s.createElement(
+            s &&
+              i &&
+              n.createElement(
                 "span",
-                { className: S().playerNickname },
+                { className: _().playerNickname },
                 "(",
-                r,
+                i,
                 ")",
               ),
           ),
         );
       });
     },
-    1035: (e, t, a) => {
+    1035: (e, t, s) => {
       "use strict";
-      a.d(t, { Ul: () => g, xz: () => B, $Y: () => E, i8: () => d });
-      var r = a(34629),
-        s = a(90626),
-        n = a(75844),
-        i = a(10622),
-        o = a(52038),
-        l = a(78327),
-        c = a(3088);
+      s.d(t, { Ul: () => d, xz: () => E, $Y: () => P, i8: () => A });
+      var i = s(34629),
+        n = s(90626),
+        a = s(75844),
+        o = s(10622),
+        r = s(52038),
+        c = s(78327),
+        l = s(3088);
       const m =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
         u =
-          a.p +
+          s.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var A = a(43047),
-        p = a.n(A),
-        h = a(81393);
-      const g = s.memo(function (e) {
+      var h = s(43047),
+        p = s.n(h),
+        g = s(81393);
+      const d = n.memo(function (e) {
         const {
             strAvatarURL: t,
-            size: a = "Medium",
-            className: r,
-            statusStyle: n,
-            statusPosition: i,
-            children: l,
-            ...A
+            size: s = "Medium",
+            className: i,
+            statusStyle: a,
+            statusPosition: o,
+            children: c,
+            ...h
           } = e,
-          g = s.useMemo(() => {
+          d = n.useMemo(() => {
             const e = [];
             return (
               t && e.push(t),
@@ -503,82 +535,82 @@
                     case "FillArea":
                       return u;
                     default:
-                      return (0, h.z)(e, `Unhandled size ${e}`), m;
+                      return (0, g.z)(e, `Unhandled size ${e}`), m;
                   }
-                })(a),
+                })(s),
               ),
               e
             );
-          }, [t, a]);
-        return s.createElement(
+          }, [t, s]);
+        return n.createElement(
           "div",
           {
-            className: (0, o.A)(
+            className: (0, r.A)(
               p().avatarHolder,
               "avatarHolder",
               "no-drag",
-              a,
-              r,
+              s,
+              i,
             ),
-            ...A,
+            ...h,
           },
-          s.createElement("div", {
-            className: (0, o.A)(p().avatarStatus, "avatarStatus", i),
-            style: n,
+          n.createElement("div", {
+            className: (0, r.A)(p().avatarStatus, "avatarStatus", o),
+            style: a,
           }),
-          s.createElement(c.c, {
-            className: (0, o.A)(p().avatar, "avatar"),
-            rgSources: g,
+          n.createElement(l.c, {
+            className: (0, r.A)(p().avatar, "avatar"),
+            rgSources: d,
             draggable: !1,
           }),
-          l,
+          c,
         );
       });
-      let d = class extends s.Component {
+      let A = class extends n.Component {
         render() {
           const {
             persona: e,
             size: t = "Medium",
-            animatedAvatar: a,
-            className: r,
-            ...n
+            animatedAvatar: s,
+            className: i,
+            ...a
           } = this.props;
-          let c = "";
+          let l = "";
           return (
-            a && a.image_small && 0 != a.image_small.length
-              ? (c = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+            s && s.image_small && 0 != s.image_small.length
+              ? (l = c.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
               : e &&
-                ((c = e.avatar_url_medium),
+                ((l = e.avatar_url_medium),
                 "Small" == t || "X-Small" == t
-                  ? (c = e.avatar_url)
+                  ? (l = e.avatar_url)
                   : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                    (c = e.avatar_url_full)),
-            s.createElement(g, {
-              strAvatarURL: c,
+                    (l = e.avatar_url_full)),
+            n.createElement(d, {
+              strAvatarURL: l,
               size: t,
-              className: (0, o.A)((0, i.rO)(e), r),
-              ...n,
+              className: (0, r.A)((0, o.rO)(e), i),
+              ...a,
             })
           );
         }
       };
-      d = (0, r.Cg)([n.PA], d);
-      const E = (0, n.PA)((e) => {
-        const { profileItem: t, className: a, bDisableAnimation: r, ...n } = e;
+      A = (0, i.Cg)([a.PA], A);
+      const P = (0, a.PA)((e) => {
+        const { profileItem: t, className: s, bDisableAnimation: i, ...a } = e;
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let i = r ? t.image_large : t.image_small;
+        let o = i ? t.image_large : t.image_small;
         return (
-          i || (i = t.image_small),
-          i.startsWith("https://") ||
-            (i = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + i),
-          s.createElement(
+          o || (o = t.image_small),
+          o.startsWith("https://") ||
+            (o = c.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + o),
+          n.createElement(
             "div",
-            { className: (0, o.A)(p().avatarFrame, a, "avatarFrame"), ...n },
-            s.createElement("img", { className: p().avatarFrameImg, src: i }),
+            { className: (0, r.A)(p().avatarFrame, s, "avatarFrame"), ...a },
+            n.createElement("img", { className: p().avatarFrameImg, src: o }),
           )
         );
       });
-      let B = class extends s.Component {
+      let E = class extends n.Component {
         m_timer;
         constructor(e) {
           super(e),
@@ -636,17 +668,17 @@
           let {
             loopDuration: e,
             animatedAvatar: t,
-            avatarFrame: a,
-            children: r,
-            style: n,
-            bLimitProfileFrameAnimationTime: i,
-            bParentHovered: o,
-            ...l
+            avatarFrame: s,
+            children: i,
+            style: a,
+            bLimitProfileFrameAnimationTime: o,
+            bParentHovered: r,
+            ...c
           } = this.props;
           return (
-            l.onClick && (n = { ...n, cursor: "pointer" }),
+            c.onClick && (a = { ...a, cursor: "pointer" }),
             this.state.bAnimate || (t = null),
-            s.createElement(
+            n.createElement(
               "div",
               {
                 onMouseEnter: () =>
@@ -655,81 +687,563 @@
                   }),
                 onMouseLeave: () => this.SetupAnimationTimer(),
               },
-              s.createElement(
-                d,
-                { animatedAvatar: t, ...l },
-                r,
-                s.createElement(E, {
-                  profileItem: a,
-                  bDisableAnimation: i && !this.state.bAnimate,
+              n.createElement(
+                A,
+                { animatedAvatar: t, ...c },
+                i,
+                n.createElement(P, {
+                  profileItem: s,
+                  bDisableAnimation: o && !this.state.bAnimate,
                 }),
               ),
             )
           );
         }
       };
-      B = (0, r.Cg)([n.PA], B);
+      E = (0, i.Cg)([a.PA], E);
     },
-    69409: (e, t, a) => {
+    69409: (e, t, s) => {
       "use strict";
-      a.d(t, { m: () => A });
-      var r = a(90626),
-        s = a(22837),
-        n = a(38390),
-        i = a(27666),
-        o = a(52038),
-        l = a(61859),
-        c = a(61336),
-        m = a(78327),
-        u = a(15392);
-      function A(e) {
+      s.d(t, { m: () => h });
+      var i = s(90626),
+        n = s(22837),
+        a = s(38390),
+        o = s(27666),
+        r = s(52038),
+        c = s(61859),
+        l = s(61336),
+        m = s(78327),
+        u = s(15392);
+      function h(e) {
         const { gidEvent: t } = e,
-          a = (0, n.RR)(t),
-          [A, p] = (0, r.useMemo)(() => {
+          s = (0, a.RR)(t),
+          [h, p] = (0, i.useMemo)(() => {
             if (
-              a?.jsondata?.localized_sale_product_banner?.length > 0 &&
-              a?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+              s?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              s?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
-              const e = (0, s.sf)(m.TS.LANGUAGE),
-                t = l.NT.GetWithFallback(
-                  a.jsondata.localized_sale_product_banner,
+              const e = (0, n.sf)(m.TS.LANGUAGE),
+                t = c.NT.GetWithFallback(
+                  s.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                r = l.NT.GetWithFallback(
-                  a.jsondata.localized_sale_product_mobile_banner,
+                i = c.NT.GetWithFallback(
+                  s.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
-              if (t?.length > 0 && r?.length > 0) {
-                const e = a.clanSteamID.GetAccountID();
-                return [`${(0, i.mJ)()}${e}/${t}`, `${(0, i.mJ)()}${e}/${r}`];
+              if (t?.length > 0 && i?.length > 0) {
+                const e = s.clanSteamID.GetAccountID();
+                return [`${(0, o.mJ)()}${e}/${t}`, `${(0, o.mJ)()}${e}/${i}`];
               }
             }
             return [null, null];
-          }, [a]);
-        return A?.length > 0 && p?.length > 0
-          ? r.createElement(
+          }, [s]);
+        return h?.length > 0 && p?.length > 0
+          ? i.createElement(
               "a",
-              { href: (0, c.k2)(a.GetSaleURL()), className: u.Link },
-              r.createElement("img", {
-                src: A,
-                className: (0, o.A)(u.Banner, u.Big),
+              { href: (0, l.k2)(s.GetSaleURL()), className: u.Link },
+              i.createElement("img", {
+                src: h,
+                className: (0, r.A)(u.Banner, u.Big),
               }),
-              r.createElement("img", {
+              i.createElement("img", {
                 src: p,
-                className: (0, o.A)(u.Banner, u.Mobile),
+                className: (0, r.A)(u.Banner, u.Mobile),
               }),
             )
           : null;
       }
     },
-    3088: (e, t, a) => {
+    81416: (e, t, s) => {
       "use strict";
-      a.d(t, { c: () => i });
-      var r = a(34629),
-        s = a(90626),
-        n = a(375);
-      class i extends s.Component {
-        m_refImage = s.createRef();
+      s.d(t, { I: () => d });
+      var i,
+        n = s(34629),
+        a = s(90626),
+        o = s(375),
+        r = s(75844),
+        c = s(6144),
+        l = s(61859),
+        m = s(33737),
+        u = s(12155),
+        h = s(81315),
+        p = s.n(h),
+        g = s(19719);
+      !(function (e) {
+        (e.topleft = "topleft"),
+          (e.top = "top"),
+          (e.topright = "topright"),
+          (e.left = "left"),
+          (e.middle = "middle"),
+          (e.right = "right"),
+          (e.bottomleft = "bottomleft"),
+          (e.bottom = "bottom"),
+          (e.bottomright = "bottomright");
+      })(i || (i = {}));
+      let d = class extends a.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new c.Ji();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(e) {
+          super(e),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: null,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(e) {
+          this.m_elLinkRegionBox = e;
+        }
+        OnMouseDown(e, t) {
+          (this.m_fnMouseUp = (e) => {
+            this.OnMouseUp(e, t);
+          }),
+            (this.m_fnMouseMove = (e) => {
+              this.OnMouseMove(e, t);
+            }),
+            this.setState({ EdgeDown: t }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((e.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((e.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            ),
+            e.preventDefault(),
+            e.stopPropagation();
+        }
+        OnMouseMove(e, t) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((e.shiftKey && this.m_fnMouseUp(), t)) {
+              case i.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                });
+                break;
+              case i.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                });
+                break;
+              case i.top:
+                this.UpdateState({ curTopPosPct: this.CalcTopEdge(e.clientY) });
+                break;
+              case i.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                });
+                break;
+              case i.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(e.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                });
+                break;
+              case i.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(e.clientY),
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                });
+                break;
+              case i.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                });
+                break;
+              case i.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                });
+                break;
+              case i.middle: {
+                const t = (0, g.OQ)(
+                    this.CalcLeftEdge(e.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  s = 100 - (t + this.state.curWidthPct),
+                  i = (0, g.OQ)(
+                    this.CalcTopEdge(e.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  n = {
+                    curLeftPosPct: t,
+                    curRightPosPct: s,
+                    curTopPosPct: i,
+                    curBottomPosPct: 100 - (i + this.state.curHeightPct),
+                  };
+                this.setState(n);
+                break;
+              }
+            }
+            e.preventDefault(), e.stopPropagation();
+          }
+        }
+        IsValidPct(e) {
+          return e >= 0 && e <= 100;
+        }
+        UpdateState(e) {
+          let t =
+              void 0 !== e.curTopPosPct
+                ? e.curTopPosPct
+                : this.state.curTopPosPct,
+            s =
+              void 0 !== e.curBottomPosPct
+                ? e.curBottomPosPct
+                : this.state.curBottomPosPct,
+            i =
+              void 0 !== e.curLeftPosPct
+                ? e.curLeftPosPct
+                : this.state.curLeftPosPct,
+            n =
+              void 0 !== e.curRightPosPct
+                ? e.curRightPosPct
+                : this.state.curRightPosPct,
+            a = (0, g.OQ)(
+              100 - n - i,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            o = (0, g.OQ)(
+              100 - s - t,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== e.curLeftPosPct || void 0 !== e.curRightPosPct
+              ? (o = a / this.m_aspectRatio)
+              : (a = o * this.m_aspectRatio)),
+            void 0 !== e.curLeftPosPct
+              ? (i = 100 - n - a)
+              : (n = 100 - (i + a)),
+            void 0 !== e.curTopPosPct ? (t = 100 - s - o) : (s = 100 - (t + o));
+          const r = 100 - n - i,
+            c = 100 - s - t;
+          this.IsValidPct(i) &&
+            this.IsValidPct(n) &&
+            this.IsValidPct(t) &&
+            this.IsValidPct(s) &&
+            this.IsValidPct(r) &&
+            this.IsValidPct(c) &&
+            this.setState({
+              curLeftPosPct: i,
+              curRightPosPct: n,
+              curTopPosPct: t,
+              curBottomPosPct: s,
+            });
+        }
+        GetXPercent(e) {
+          return (
+            ((e - this.m_rectLinkRegion.left) /
+              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+              100 -
+            this.m_nLocalOffsetXPct
+          );
+        }
+        GetYPercent(e) {
+          return (
+            ((e - this.m_rectLinkRegion.top) /
+              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+              100 -
+            this.m_nLocalOffsetYPct
+          );
+        }
+        CalcLeftEdge(e) {
+          return (0, g.OQ)(this.GetXPercent(e), 0, 100);
+        }
+        CalcRightEdge(e) {
+          return (0, g.OQ)(
+            100 - (this.GetXPercent(e) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(e) {
+          return (0, g.OQ)(this.GetYPercent(e), 0, 100);
+        }
+        CalcBottomEdge(e) {
+          return (0, g.OQ)(
+            100 - (this.GetYPercent(e) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(e, t) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({ EdgeDown: void 0 }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(e) {
+          this.setState({
+            text_link_url: e.target.value,
+            valid_link: this.validateUrl(e.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(e) {
+          this.setState({ text_link_description: e.target.value });
+        }
+        validateUrl(e) {
+          return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+            e,
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description),
+            this.setState({ bEditingLink: !this.state.bEditingLink }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({ bEditingLink: !this.state.bEditingLink });
+        }
+        render() {
+          let e = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            t = p().LinkRegionDragBox;
+          return (
+            null !== this.state.EdgeDown &&
+              (t += ` ${p().EdgeDown} ` + p()[this.state.EdgeDown]),
+            a.createElement(
+              "div",
+              {
+                className: t,
+                style: e,
+                ref: this.LinkRegionBoxRef,
+                draggable: !1,
+              },
+              a.createElement(
+                "div",
+                { className: p().LinkRegionGridBox },
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().TopLeft}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.topleft);
+                  },
+                  draggable: !1,
+                }),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().Top}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.top);
+                  },
+                }),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().TopRight}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.topright);
+                  },
+                  draggable: !1,
+                }),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().Left}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.left);
+                  },
+                  draggable: !1,
+                }),
+                a.createElement(
+                  "div",
+                  {
+                    className: `${p().LinkRegionEdge} ${p().Middle}`,
+                    onMouseDown: (e) => {
+                      this.OnMouseDown(e, i.middle);
+                    },
+                    draggable: !1,
+                  },
+                  this.props.deleteFn &&
+                    a.createElement(
+                      "div",
+                      {
+                        className: p().LinkRegionDelete,
+                        onClick: this.HandleDelete,
+                      },
+                      a.createElement(u.sED, null),
+                    ),
+                  !this.props.bDisableLink &&
+                    a.createElement(
+                      "div",
+                      {
+                        className: p().LinkRegionSettings,
+                        onClick: this.OnEditLink,
+                      },
+                      a.createElement(u.xv8, null),
+                    ),
+                  a.createElement(
+                    "div",
+                    { className: p().LinkText },
+                    " ",
+                    this.m_strDescription,
+                    " ",
+                  ),
+                ),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().Right}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.right);
+                  },
+                  draggable: !1,
+                }),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().BottomLeft}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.bottomleft);
+                  },
+                  draggable: !1,
+                }),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().Bottom}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.bottom);
+                  },
+                  draggable: !1,
+                }),
+                a.createElement("div", {
+                  className: `${p().LinkRegionEdge} ${p().BottomRight}`,
+                  onMouseDown: (e) => {
+                    this.OnMouseDown(e, i.bottomright);
+                  },
+                  draggable: !1,
+                }),
+              ),
+              this.state.bEditingLink &&
+                a.createElement(
+                  "div",
+                  { className: p().LinkRegionInfo },
+                  a.createElement(m.pd, {
+                    className: p().LinkRegionInput,
+                    type: "text",
+                    name: "link_url",
+                    value: this.state.text_link_url,
+                    label: (0, l.we)("#SteamTV_LinkURL"),
+                    placeholder: "https://www.example.com",
+                    onChange: this.OnSetLinkURLChange,
+                    mustBeURL: !0,
+                  }),
+                  a.createElement(m.pd, {
+                    className: p().LinkRegionInput,
+                    type: "text",
+                    name: "link_description",
+                    value: this.state.text_link_description,
+                    label: (0, l.we)("#SteamTV_LinkDescription"),
+                    placeholder: (0, l.we)(
+                      "#SteamTV_LinkDescription_Placeholder",
+                    ),
+                    onChange: this.OnSetLinkDescriptionChange,
+                  }),
+                  a.createElement(
+                    "div",
+                    { className: p().LinkRegionButtonContainer },
+                    a.createElement(
+                      m.$n,
+                      {
+                        disabled: !this.state.valid_link,
+                        onClick: this.OnSaveLink,
+                      },
+                      " ",
+                      (0, l.we)("#Button_OK"),
+                      " ",
+                    ),
+                    a.createElement(
+                      m.$n,
+                      { onClick: this.OnEditLink },
+                      " ",
+                      (0, l.we)("#Button_Cancel"),
+                    ),
+                  ),
+                ),
+            )
+          );
+        }
+      };
+      (0, n.Cg)([o.oI], d.prototype, "LinkRegionBoxRef", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnMouseDown", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnMouseMove", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnMouseUp", null),
+        (0, n.Cg)([o.oI], d.prototype, "HandleDelete", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnSetLinkURLChange", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnSetLinkDescriptionChange", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnSaveLink", null),
+        (0, n.Cg)([o.oI], d.prototype, "OnEditLink", null),
+        (d = (0, n.Cg)([r.PA], d));
+    },
+    3088: (e, t, s) => {
+      "use strict";
+      s.d(t, { c: () => o });
+      var i = s(34629),
+        n = s(90626),
+        a = s(375);
+      class o extends n.Component {
+        m_refImage = n.createRef();
         constructor(e) {
           super(e), (this.state = { nImage: 0 });
         }
@@ -774,205 +1288,205 @@
           const {
               rgSources: e,
               onIncrementalError: t,
-              onError: a,
-              ...r
+              onError: s,
+              ...i
             } = this.props,
-            n = this.src;
-          return s.createElement("img", {
+            a = this.src;
+          return n.createElement("img", {
             ref: this.m_refImage,
-            ...r,
-            src: n,
+            ...i,
+            src: a,
             onError: this.OnImageError,
           });
         }
       }
-      (0, r.Cg)([n.oI], i.prototype, "OnImageError", null);
+      (0, i.Cg)([a.oI], o.prototype, "OnImageError", null);
     },
-    47554: (e, t, a) => {
+    47554: (e, t, s) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => E });
-      var r = a(90626),
-        s = a(12447),
-        n = a(76217),
-        i = a(46115),
-        o = a(39199),
-        l = a(55263),
-        c = a(95034),
-        m = a(12155),
-        u = a(35391),
-        A = a(26749),
-        p = a(61859),
-        h = a(71109),
-        g = a.n(h),
-        d = a(78327);
-      function E(e) {
+      s.r(t), s.d(t, { default: () => P });
+      var i = s(90626),
+        n = s(12447),
+        a = s(76217),
+        o = s(91336),
+        r = s(39199),
+        c = s(55263),
+        l = s(95034),
+        m = s(12155),
+        u = s(35391),
+        h = s(26749),
+        p = s(61859),
+        g = s(71109),
+        d = s.n(g),
+        A = s(78327);
+      function P(e) {
         const { appID: t } = e,
-          a = (0, A.G)(),
-          [h] = (0, c.QD)("inqueue", "0"),
-          [E, B] = (0, r.useState)(!1),
-          [S, b] = (0, r.useState)(!1),
-          [v] = (0, l.t7)(t, { include_assets: !0 }),
-          f = (0, i.A)(),
-          Q = r.useRef();
-        r.useEffect(() => Q.current?.Activate(!0), []);
-        const C = (0, d.Qn)(),
-          { eStoreDiscoveryQueueType: N, storePageFilter: _ } =
-            r.useMemo(() => {
-              if (h?.length > 0) {
-                const e = h.split("_"),
+          s = (0, h.G)(),
+          [g] = (0, l.QD)("inqueue", "0"),
+          [P, E] = (0, i.useState)(!1),
+          [_, f] = (0, i.useState)(!1),
+          [B] = (0, c.t7)(t, { include_assets: !0 }),
+          v = (0, o.A)(),
+          b = i.useRef();
+        i.useEffect(() => b.current?.Activate(!0), []);
+        const k = (0, A.Qn)(),
+          { eStoreDiscoveryQueueType: L, storePageFilter: R } =
+            i.useMemo(() => {
+              if (g?.length > 0) {
+                const e = g.split("_"),
                   t = Number(e[0]);
-                let a;
+                let s;
                 return (
-                  e.length > 1 && (a = (0, o.bz)(e[1])),
-                  { eStoreDiscoveryQueueType: t, storePageFilter: a }
+                  e.length > 1 && (s = (0, r.bz)(e[1])),
+                  { eStoreDiscoveryQueueType: t, storePageFilter: s }
                 );
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
-            }, [h]),
-          D = r.useCallback(() => {
-            b(!0);
+            }, [g]),
+          S = i.useCallback(() => {
+            f(!0);
           }, []),
-          P = r.useCallback(() => {
-            B(!0);
+          C = i.useCallback(() => {
+            E(!0);
           }, []),
-          y = (0, o.WX)(N, _);
-        return a && v
-          ? S
+          D = (0, r.WX)(L, R);
+        return s && B
+          ? _
             ? null
-            : r.createElement(
-                s.u,
+            : i.createElement(
+                n.u,
                 {
-                  NavigationManager: f,
-                  navTreeRef: Q,
+                  NavigationManager: v,
+                  navTreeRef: b,
                   navID: "DiscoveryQueueAppWidget",
                 },
-                r.createElement(
-                  n.Z,
+                i.createElement(
+                  a.Z,
                   {
                     focusable: !0,
-                    className: g().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: D,
-                    onOKButton: P,
+                    className: d().DiscoveryQueueWidgetCtn,
+                    onSecondaryButton: S,
+                    onOKButton: C,
                     onOKActionDescription: (0, p.we)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
                     onSecondaryActionDescription: (0, p.we)("#Button_Close"),
                   },
-                  r.createElement("img", {
-                    className: g().WidgetCapsule,
-                    src: v?.GetAssets().GetSmallCapsuleURL(),
+                  i.createElement("img", {
+                    className: d().WidgetCapsule,
+                    src: B?.GetAssets().GetSmallCapsuleURL(),
                   }),
-                  r.createElement(
+                  i.createElement(
                     "div",
-                    { onClick: P, className: g().WidgetText },
+                    { onClick: C, className: d().WidgetText },
                     (0, p.we)("#DiscoveryQueue_ResumeWizard"),
-                    y?.length > 0 && ": " + y,
+                    D?.length > 0 && ": " + D,
                   ),
-                  !C &&
-                    r.createElement(
+                  !k &&
+                    i.createElement(
                       "div",
-                      { className: g().CloseButton, onClick: D },
-                      r.createElement(m.X, null),
+                      { className: d().CloseButton, onClick: S },
+                      i.createElement(m.X, null),
                     ),
-                  E &&
-                    r.createElement(u.jM, {
+                  P &&
+                    i.createElement(u.jM, {
                       includeAppID: t,
-                      bWizardVisible: E,
-                      fnCloseModal: () => B(!1),
-                      eStoreDiscoveryQueueType: N,
-                      storePageFilter: _,
+                      bWizardVisible: P,
+                      fnCloseModal: () => E(!1),
+                      eStoreDiscoveryQueueType: L,
+                      storePageFilter: R,
                     }),
                 ),
               )
           : null;
       }
     },
-    25054: (e, t, a) => {
+    25054: (e, t, s) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => u });
-      var r = a(90626),
-        s = a(61859),
-        n = a(35391),
-        i = a(26749),
-        o = a(76217),
-        l = a(78327),
-        c = a(44325),
-        m = a(738);
+      s.r(t), s.d(t, { default: () => u });
+      var i = s(90626),
+        n = s(61859),
+        a = s(35391),
+        o = s(26749),
+        r = s(76217),
+        c = s(78327),
+        l = s(51706),
+        m = s(738);
       function u(e) {
-        const t = (0, i.G)(),
-          [a, u] = (0, r.useState)(!1),
-          A = r.useCallback(() => {
-            l.iA.logged_in
+        const t = (0, o.G)(),
+          [s, u] = (0, i.useState)(!1),
+          h = i.useCallback(() => {
+            c.iA.logged_in
               ? u(!0)
               : (0, m.pg)(
-                  r.createElement(c.KG, {
+                  i.createElement(l.KG, {
                     onOK: () => {
-                      window.location.href = `${l.TS.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
+                      window.location.href = `${c.TS.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
                     },
-                    strOKButtonText: (0, s.we)(
+                    strOKButtonText: (0, n.we)(
                       "#DiscoveryQueue_Error_Login_Title",
                     ),
-                    strDescription: (0, s.we)("#DiscoveryQueue_Error_Login"),
-                    strTitle: (0, s.we)("#DiscoveryQueue_Error_Login_Title"),
+                    strDescription: (0, n.we)("#DiscoveryQueue_Error_Login"),
+                    strTitle: (0, n.we)("#DiscoveryQueue_Error_Login_Title"),
                   }),
                   window,
                 );
           }, []);
         return t
-          ? r.createElement(
-              o.Z,
+          ? i.createElement(
+              r.Z,
               null,
-              r.createElement(
+              i.createElement(
                 "a",
-                { onClick: A, className: "experiment-button" },
-                (0, s.we)("#DiscoveryQueue_OpenWizard"),
+                { onClick: h, className: "experiment-button" },
+                (0, n.we)("#DiscoveryQueue_OpenWizard"),
               ),
-              a &&
-                r.createElement(n.jM, {
-                  bWizardVisible: a,
+              s &&
+                i.createElement(a.jM, {
+                  bWizardVisible: s,
                   fnCloseModal: () => u(!1),
                   eStoreDiscoveryQueueType: 0,
                 }),
             )
-          : r.createElement(
+          : i.createElement(
               "div",
               { className: "experiment-button-placeholder" },
               " ",
             );
       }
     },
-    54806: (e, t, a) => {
+    54806: (e, t, s) => {
       "use strict";
-      a.d(t, { E: () => g });
-      var r = a(90626),
-        s = a(86709),
-        n = a(45747),
-        i = a(74500),
-        o = a(57168);
-      function l(e, t) {
+      s.d(t, { E: () => d });
+      var i = s(90626),
+        n = s(86709),
+        a = s(45747),
+        o = s(74500),
+        r = s(57168);
+      function c(e, t) {
         return e.filter((e) => !t.includes(e));
       }
-      var c = class extends i.Q {
+      var l = class extends o.Q {
           #e;
           #t;
-          #a;
-          #r;
           #s;
-          #n;
           #i;
-          constructor(e, t, a) {
+          #n;
+          #a;
+          #o;
+          constructor(e, t, s) {
             super(),
               (this.#e = e),
-              (this.#a = []),
-              (this.#r = []),
+              (this.#s = []),
+              (this.#i = []),
               (this.#t = []),
               this.setQueries(t);
           }
           onSubscribe() {
             1 === this.listeners.size &&
-              this.#r.forEach((e) => {
+              this.#i.forEach((e) => {
                 e.subscribe((t) => {
-                  this.#o(e, t);
+                  this.#r(e, t);
                 });
               });
           }
@@ -981,60 +1495,60 @@
           }
           destroy() {
             (this.listeners = new Set()),
-              this.#r.forEach((e) => {
+              this.#i.forEach((e) => {
                 e.destroy();
               });
           }
-          setQueries(e, t, a) {
-            (this.#a = e),
-              s.j.batch(() => {
-                const e = this.#r,
-                  t = this.#l(this.#a);
+          setQueries(e, t, s) {
+            (this.#s = e),
+              n.j.batch(() => {
+                const e = this.#i,
+                  t = this.#c(this.#s);
                 t.forEach((e) =>
-                  e.observer.setOptions(e.defaultedQueryOptions, a),
+                  e.observer.setOptions(e.defaultedQueryOptions, s),
                 );
-                const r = t.map((e) => e.observer),
-                  s = r.map((e) => e.getCurrentResult()),
-                  n = r.some((t, a) => t !== e[a]);
-                (e.length !== r.length || n) &&
-                  ((this.#r = r),
-                  (this.#t = s),
+                const i = t.map((e) => e.observer),
+                  n = i.map((e) => e.getCurrentResult()),
+                  a = i.some((t, s) => t !== e[s]);
+                (e.length !== i.length || a) &&
+                  ((this.#i = i),
+                  (this.#t = n),
                   this.hasListeners() &&
-                    (l(e, r).forEach((e) => {
+                    (c(e, i).forEach((e) => {
                       e.destroy();
                     }),
-                    l(r, e).forEach((e) => {
+                    c(i, e).forEach((e) => {
                       e.subscribe((t) => {
-                        this.#o(e, t);
+                        this.#r(e, t);
                       });
                     }),
-                    this.#c()));
+                    this.#l()));
               });
           }
           getCurrentResult() {
             return this.#t;
           }
           getQueries() {
-            return this.#r.map((e) => e.getCurrentQuery());
+            return this.#i.map((e) => e.getCurrentQuery());
           }
           getObservers() {
-            return this.#r;
+            return this.#i;
           }
           getOptimisticResult(e, t) {
-            const a = this.#l(e),
-              r = a.map((e) =>
+            const s = this.#c(e),
+              i = s.map((e) =>
                 e.observer.getOptimisticResult(e.defaultedQueryOptions),
               );
             return [
-              r,
-              (e) => this.#m(e ?? r, t),
+              i,
+              (e) => this.#m(e ?? i, t),
               () =>
-                a.map((e, t) => {
-                  const s = r[t];
+                s.map((e, t) => {
+                  const n = i[t];
                   return e.defaultedQueryOptions.notifyOnChangeProps
-                    ? s
-                    : e.observer.trackResult(s, (e) => {
-                        a.forEach((t) => {
+                    ? n
+                    : e.observer.trackResult(n, (e) => {
+                        s.forEach((t) => {
                           t.observer.trackProp(e);
                         });
                       });
@@ -1043,120 +1557,120 @@
           }
           #m(e, t) {
             return t
-              ? ((this.#s && this.#t === this.#i && t === this.#n) ||
-                  ((this.#n = t),
-                  (this.#i = this.#t),
-                  (this.#s = (0, o.BH)(this.#s, t(e)))),
-                this.#s)
+              ? ((this.#n && this.#t === this.#o && t === this.#a) ||
+                  ((this.#a = t),
+                  (this.#o = this.#t),
+                  (this.#n = (0, r.BH)(this.#n, t(e)))),
+                this.#n)
               : e;
           }
-          #l(e) {
-            const t = this.#r,
-              a = new Map(t.map((e) => [e.options.queryHash, e])),
-              r = e.map((e) => this.#e.defaultQueryOptions(e)),
-              s = r.flatMap((e) => {
-                const t = a.get(e.queryHash);
+          #c(e) {
+            const t = this.#i,
+              s = new Map(t.map((e) => [e.options.queryHash, e])),
+              i = e.map((e) => this.#e.defaultQueryOptions(e)),
+              n = i.flatMap((e) => {
+                const t = s.get(e.queryHash);
                 return null != t
                   ? [{ defaultedQueryOptions: e, observer: t }]
                   : [];
               }),
-              i = new Set(s.map((e) => e.defaultedQueryOptions.queryHash)),
-              o = r.filter((e) => !i.has(e.queryHash)),
-              l = (e) => {
+              o = new Set(n.map((e) => e.defaultedQueryOptions.queryHash)),
+              r = i.filter((e) => !o.has(e.queryHash)),
+              c = (e) => {
                 const t = this.#e.defaultQueryOptions(e);
                 return (
-                  this.#r.find((e) => e.options.queryHash === t.queryHash) ??
-                  new n.$(this.#e, t)
+                  this.#i.find((e) => e.options.queryHash === t.queryHash) ??
+                  new a.$(this.#e, t)
                 );
               },
-              c = o.map((e) => ({ defaultedQueryOptions: e, observer: l(e) }));
-            return s
-              .concat(c)
+              l = r.map((e) => ({ defaultedQueryOptions: e, observer: c(e) }));
+            return n
+              .concat(l)
               .sort(
                 (e, t) =>
-                  r.indexOf(e.defaultedQueryOptions) -
-                  r.indexOf(t.defaultedQueryOptions),
+                  i.indexOf(e.defaultedQueryOptions) -
+                  i.indexOf(t.defaultedQueryOptions),
               );
           }
-          #o(e, t) {
-            const a = this.#r.indexOf(e);
-            -1 !== a &&
-              ((this.#t = (function (e, t, a) {
-                const r = e.slice(0);
-                return (r[t] = a), r;
-              })(this.#t, a, t)),
-              this.#c());
+          #r(e, t) {
+            const s = this.#i.indexOf(e);
+            -1 !== s &&
+              ((this.#t = (function (e, t, s) {
+                const i = e.slice(0);
+                return (i[t] = s), i;
+              })(this.#t, s, t)),
+              this.#l());
           }
-          #c() {
-            s.j.batch(() => {
+          #l() {
+            n.j.batch(() => {
               this.listeners.forEach((e) => {
                 e(this.#t);
               });
             });
           }
         },
-        m = a(75233),
-        u = a(22730),
-        A = a(43424),
-        p = a(19086),
-        h = a(44407);
-      function g({ queries: e, ...t }, a) {
-        const i = (0, m.jE)(a),
-          o = (0, u.w)(),
-          l = (0, A.h)(),
-          g = r.useMemo(
+        m = s(75233),
+        u = s(22730),
+        h = s(43424),
+        p = s(19086),
+        g = s(44407);
+      function d({ queries: e, ...t }, s) {
+        const o = (0, m.jE)(s),
+          r = (0, u.w)(),
+          c = (0, h.h)(),
+          d = i.useMemo(
             () =>
               e.map((e) => {
-                const t = i.defaultQueryOptions(e);
+                const t = o.defaultQueryOptions(e);
                 return (
-                  (t._optimisticResults = o ? "isRestoring" : "optimistic"), t
+                  (t._optimisticResults = r ? "isRestoring" : "optimistic"), t
                 );
               }),
-            [e, i, o],
+            [e, o, r],
           );
-        g.forEach((e) => {
-          (0, h.tu)(e), (0, p.LJ)(e, l);
+        d.forEach((e) => {
+          (0, g.tu)(e), (0, p.LJ)(e, c);
         }),
-          (0, p.wZ)(l);
-        const [d] = r.useState(() => new c(i, g, t)),
-          [E, B, S] = d.getOptimisticResult(g, t.combine);
-        r.useSyncExternalStore(
-          r.useCallback(
-            (e) => (o ? () => {} : d.subscribe(s.j.batchCalls(e))),
-            [d, o],
+          (0, p.wZ)(c);
+        const [A] = i.useState(() => new l(o, d, t)),
+          [P, E, _] = A.getOptimisticResult(d, t.combine);
+        i.useSyncExternalStore(
+          i.useCallback(
+            (e) => (r ? () => {} : A.subscribe(n.j.batchCalls(e))),
+            [A, r],
           ),
-          () => d.getCurrentResult(),
-          () => d.getCurrentResult(),
+          () => A.getCurrentResult(),
+          () => A.getCurrentResult(),
         ),
-          r.useEffect(() => {
-            d.setQueries(g, t, { listeners: !1 });
-          }, [g, t, d]);
-        const b = E.some((e, t) => (0, h.EU)(g[t], e))
-          ? E.flatMap((e, t) => {
-              const a = g[t];
-              if (a) {
-                const t = new n.$(i, a);
-                if ((0, h.EU)(a, e)) return (0, h.iL)(a, t, l);
-                (0, h.nE)(e, o) && (0, h.iL)(a, t, l);
+          i.useEffect(() => {
+            A.setQueries(d, t, { listeners: !1 });
+          }, [d, t, A]);
+        const f = P.some((e, t) => (0, g.EU)(d[t], e))
+          ? P.flatMap((e, t) => {
+              const s = d[t];
+              if (s) {
+                const t = new a.$(o, s);
+                if ((0, g.EU)(s, e)) return (0, g.iL)(s, t, c);
+                (0, g.nE)(e, r) && (0, g.iL)(s, t, c);
               }
               return [];
             })
           : [];
-        if (b.length > 0) throw Promise.all(b);
-        const v = E.find((e, t) => {
-          const a = g[t];
+        if (f.length > 0) throw Promise.all(f);
+        const B = P.find((e, t) => {
+          const s = d[t];
           return (
-            a &&
+            s &&
             (0, p.$1)({
               result: e,
-              errorResetBoundary: l,
-              throwOnError: a.throwOnError,
-              query: i.getQueryCache().get(a.queryHash),
+              errorResetBoundary: c,
+              throwOnError: s.throwOnError,
+              query: o.getQueryCache().get(s.queryHash),
             })
           );
         });
-        if (v?.error) throw v.error;
-        return B(S());
+        if (B?.error) throw B.error;
+        return E(_());
       }
     },
   },

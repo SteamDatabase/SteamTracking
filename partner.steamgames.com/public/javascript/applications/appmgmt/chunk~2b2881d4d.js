@@ -6,15 +6,15 @@
   [9001],
   {
     72839: (e, t, s) => {
-      s.d(t, { Bn: () => o, hS: () => u, rV: () => n });
+      s.d(t, { Bn: () => u, hS: () => o, rV: () => n });
       var r = s(15161),
         a = s(78327),
         i = s(2160);
       s(94601);
       function n(e, t) {
-        e.Body().set_context(u(t));
+        e.Body().set_context(o(t));
       }
-      function u(e) {
+      function o(e) {
         let t = new r.TS();
         return (
           e || t.set_country_code(a.TS.COUNTRY),
@@ -24,18 +24,18 @@
           t
         );
       }
-      function o(e, t) {
+      function u(e, t) {
         e.Body().set_data_request(r.gn.fromObject(t));
       }
     },
     82097: (e, t, s) => {
-      s.d(t, { A: () => P });
+      s.d(t, { A: () => B });
       var r = s(34629),
         a = s(14947),
         i = s(56545),
         n = s(96059),
-        u = s(59411),
-        o = s(15161),
+        o = s(59411),
+        u = s(15161),
         l = s(44332),
         _ = s(68797),
         c = s(78327),
@@ -139,7 +139,7 @@
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new S(e.trailers())),
+              ((this.m_Trailers = new b(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -762,20 +762,20 @@
           return this.m_strCommunityIcon;
         }
       }
-      class S {
+      class b {
         m_mapTrailer = new Map();
         m_higherTrailers = new Array();
         m_otherTrailers = new Array();
         constructor(e) {
           e.highlights() &&
             e.highlights().forEach((e) => {
-              let t = new b(e);
+              let t = new S(e);
               this.m_mapTrailer.set(t.GetTrailerID(), t),
                 this.m_higherTrailers.push(t);
             }),
             e.other_trailers() &&
               e.other_trailers().forEach((e) => {
-                let t = new b(e);
+                let t = new S(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_otherTrailers.push(t);
               });
@@ -795,7 +795,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class b {
+      class S {
         m_strTrailerName;
         m_nBaseID;
         m_Trailer480p;
@@ -949,12 +949,12 @@
           include_links: e.include_links || t.include_links,
         };
       }
-      async function B(e, t) {
+      async function P(e, t) {
         const s = await e,
           r = await t;
         return 1 != s ? s : r;
       }
-      class P {
+      class B {
         k_QueueWaitUntilRequestMS = 5;
         k_nMaxBatchSize = 250;
         m_bReturnUnavailableItems = !1;
@@ -979,7 +979,7 @@
         m_mapTagsInFlight = new Map();
         m_mapCreatorsInFlight = new Map();
         m_mapHubCategoriesInFlight = new Map();
-        m_SteamInterface = null;
+        m_serviceTransport;
         m_bUsePartnerAPI = !1;
         m_bInitialized = !1;
         m_bActivelyResettingCache = !1;
@@ -999,26 +999,34 @@
         static sm_instance;
         static Get() {
           return (
-            P.sm_instance ||
-              ((P.sm_instance = new P()),
-              (window.StoreItemCache = P.sm_instance)),
-            P.sm_instance
+            B.sm_instance ||
+              ((B.sm_instance = new B()),
+              (window.StoreItemCache = B.sm_instance)),
+            B.sm_instance
           );
         }
-        static async Initialize(e, t) {
-          (0, l.w)(
-            !P.Get().m_bInitialized,
-            "CStoreItemCache was already initialized; initialize it only once.",
-          ),
-            (P.Get().m_SteamInterface = e),
-            (P.Get().m_bUsePartnerAPI = !!t),
-            (P.Get().m_bInitialized = !0);
-        }
-        GetSteamInterface() {
-          return this.m_SteamInterface;
+        static Initialize(e, t) {
+          const s = B.Get();
+          return (
+            (0, l.w)(
+              !s.m_bInitialized,
+              "CStoreItemCache was already initialized; initialize it only once.",
+            ),
+            (s.m_serviceTransport = e),
+            (s.m_bUsePartnerAPI = !!t),
+            (s.m_bInitialized = !0),
+            () => {
+              (s.m_serviceTransport = void 0),
+                (s.m_bUsePartnerAPI = !1),
+                (s.m_bInitialized = !1);
+            }
+          );
         }
         SetSteamInterface(e) {
-          this.m_SteamInterface = e;
+          this.SetServiceTransport(e.GetServiceTransport());
+        }
+        SetServiceTransport(e) {
+          this.m_serviceTransport = e;
         }
         SetReturnUnavailableItems(e) {
           this.m_bReturnUnavailableItems = e;
@@ -1057,7 +1065,7 @@
             (this.m_bActivelyResettingCache = !1);
         }
         static BIsInitialized() {
-          return P.Get().m_bInitialized;
+          return B.Get().m_bInitialized;
         }
         static k_DataRequest_CommonOnly = {};
         static k_DataRequest_BasicInfo = { include_basic_info: !0 };
@@ -1165,7 +1173,7 @@
         async QueueStoreItemRequest(e, t, s) {
           if (
             ((0, l.w)(
-              P.ValidateDataRequest(s),
+              B.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
             "string" == typeof e && (e = parseInt(e)),
@@ -1240,7 +1248,7 @@
             a = Array.from(this.m_setPendingTagInfo),
             i = Array.from(this.m_setPendingCreatorInfo),
             n = Array.from(this.m_setPendingHubCategoryInfo),
-            u = this.m_setPendingDataRequest;
+            o = this.m_setPendingDataRequest;
           (this.m_PendingInfoPromise = void 0),
             (this.m_PendingInfoResolve = void 0),
             this.m_setPendingAppInfo.clear(),
@@ -1251,45 +1259,16 @@
             this.m_setPendingHubCategoryInfo.clear(),
             (this.m_setPendingDataRequest = {}),
             (this.m_PendingTimer = void 0),
-            this.HintLoadStoreItems(void 0, t, s, r, a, i, n, u).then((t) =>
-              e(t),
-            );
+            this.HintLoadStoreItems(t, s, r, a, i, n, o).then((t) => e(t));
         }
         async HintLoadStoreApps(e, t) {
-          return this.HintLoadStoreItems(
-            null,
-            e,
-            null,
-            null,
-            null,
-            null,
-            null,
-            t,
-          );
+          return this.HintLoadStoreItems(e, null, null, null, null, null, t);
         }
         async HintLoadStorePackages(e, t) {
-          return this.HintLoadStoreItems(
-            null,
-            null,
-            e,
-            null,
-            null,
-            null,
-            null,
-            t,
-          );
+          return this.HintLoadStoreItems(null, e, null, null, null, null, t);
         }
         async HintLoadStoreBundles(e, t) {
-          return this.HintLoadStoreItems(
-            null,
-            null,
-            null,
-            e,
-            null,
-            null,
-            null,
-            t,
-          );
+          return this.HintLoadStoreItems(null, null, e, null, null, null, t);
         }
         GetPreviousSupersetLoadPromise(e, t, s) {
           if (this.BHasStoreItem(e, t, s) || this.BIsStoreItemMissing(e, t))
@@ -1318,119 +1297,119 @@
             ? r.promise
             : null;
         }
-        async HintLoadStoreItems(e, t, s, r, a, i, n, u) {
-          let l = null;
-          const _ = new Promise((e) => (l = e));
-          let c = [],
-            m = [];
-          (t || []).forEach((e) => {
-            const t = this.GetPreviousSupersetLoadPromise(e, 0, u);
-            if (t) m.push(t);
+        async HintLoadStoreItems(e, t, s, r, a, i, n) {
+          let o = null;
+          const l = new Promise((e) => (o = e));
+          let _ = [],
+            c = [];
+          (e || []).forEach((e) => {
+            const t = this.GetPreviousSupersetLoadPromise(e, 0, n);
+            if (t) c.push(t);
             else {
-              c.push(o.O4.fromObject({ appid: e }));
-              let t = k(this.GetStoreItemDataRequest(e, 0), u);
+              _.push(u.O4.fromObject({ appid: e }));
+              let t = k(this.GetStoreItemDataRequest(e, 0), n);
               const s = this.m_mapAppsInFlight.get(e);
               (t = k(s?.dataRequest, t)),
-                s && m.push(s.promise),
+                s && c.push(s.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: s ? B(s.promise, _) : _,
+                  promise: s ? P(s.promise, l) : l,
                   dataRequest: t,
                 });
             }
           }),
-            (s || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 1, u);
-              if (t) m.push(t);
+            (t || []).forEach((e) => {
+              const t = this.GetPreviousSupersetLoadPromise(e, 1, n);
+              if (t) c.push(t);
               else {
-                c.push(o.O4.fromObject({ packageid: e }));
-                let t = k(this.GetStoreItemDataRequest(e, 1), u);
+                _.push(u.O4.fromObject({ packageid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 1), n);
                 const s = this.m_mapPackageInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
-                  s && m.push(s.promise),
+                  s && c.push(s.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: s ? B(s.promise, _) : _,
+                    promise: s ? P(s.promise, l) : l,
+                    dataRequest: t,
+                  });
+              }
+            }),
+            (s || []).forEach((e) => {
+              const t = this.GetPreviousSupersetLoadPromise(e, 2, n);
+              if (t) c.push(t);
+              else {
+                _.push(u.O4.fromObject({ bundleid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 2), n);
+                const s = this.m_mapBundleInFlight.get(e);
+                (t = k(s?.dataRequest, t)),
+                  s && c.push(s.promise),
+                  this.m_mapBundleInFlight.set(e, {
+                    promise: s ? P(s.promise, l) : l,
                     dataRequest: t,
                   });
               }
             }),
             (r || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 2, u);
-              if (t) m.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, 4, n);
+              if (t) c.push(t);
               else {
-                c.push(o.O4.fromObject({ bundleid: e }));
-                let t = k(this.GetStoreItemDataRequest(e, 2), u);
-                const s = this.m_mapBundleInFlight.get(e);
+                _.push(u.O4.fromObject({ tagid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 4), n);
+                const s = this.m_mapTagsInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
-                  s && m.push(s.promise),
-                  this.m_mapBundleInFlight.set(e, {
-                    promise: s ? B(s.promise, _) : _,
+                  s && c.push(s.promise),
+                  this.m_mapTagsInFlight.set(e, {
+                    promise: s ? P(s.promise, l) : l,
                     dataRequest: t,
                   });
               }
             }),
             (a || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 4, u);
-              if (t) m.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, 5, n);
+              if (t) c.push(t);
               else {
-                c.push(o.O4.fromObject({ tagid: e }));
-                let t = k(this.GetStoreItemDataRequest(e, 4), u);
-                const s = this.m_mapTagsInFlight.get(e);
+                _.push(u.O4.fromObject({ creatorid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 5), n);
+                const s = this.m_mapCreatorsInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
-                  s && m.push(s.promise),
-                  this.m_mapTagsInFlight.set(e, {
-                    promise: s ? B(s.promise, _) : _,
+                  s && c.push(s.promise),
+                  this.m_mapCreatorsInFlight.set(e, {
+                    promise: s ? P(s.promise, l) : l,
                     dataRequest: t,
                   });
               }
             }),
             (i || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 5, u);
-              if (t) m.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, 6, n);
+              if (t) c.push(t);
               else {
-                c.push(o.O4.fromObject({ creatorid: e }));
-                let t = k(this.GetStoreItemDataRequest(e, 5), u);
-                const s = this.m_mapCreatorsInFlight.get(e);
-                (t = k(s?.dataRequest, t)),
-                  s && m.push(s.promise),
-                  this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? B(s.promise, _) : _,
-                    dataRequest: t,
-                  });
-              }
-            }),
-            (n || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 6, u);
-              if (t) m.push(t);
-              else {
-                c.push(o.O4.fromObject({ hubcategoryid: e }));
-                let t = k(this.GetStoreItemDataRequest(e, 6), u);
+                _.push(u.O4.fromObject({ hubcategoryid: e }));
+                let t = k(this.GetStoreItemDataRequest(e, 6), n);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
-                  s && m.push(s.promise),
+                  s && c.push(s.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? B(s.promise, _) : _,
+                    promise: s ? P(s.promise, l) : l,
                     dataRequest: t,
                   });
               }
             });
-          let h = 1;
+          let m = 1;
           if (
-            (c.length > 0 &&
-              (h = await this.InternalHandleLoadStoreItems(e, c, u)),
-            l(h),
-            m.length > 0)
+            (_.length > 0 &&
+              (m = await this.InternalHandleLoadStoreItems(_, n)),
+            o(m),
+            c.length > 0)
           ) {
-            const e = await Promise.all(m);
-            for (const t of e) 1 != t && 1 == h && (h = t);
+            const e = await Promise.all(c);
+            for (const t of e) 1 != t && 1 == m && (m = t);
           }
           return (
-            (t || []).forEach((e) => this.m_mapAppsInFlight.delete(e)),
-            (s || []).forEach((e) => this.m_mapPackageInFlight.delete(e)),
-            (r || []).forEach((e) => this.m_mapBundleInFlight.delete(e)),
-            (a || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
-            (i || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
-            (n || []).forEach((e) => this.m_mapHubCategoriesInFlight.delete(e)),
-            h
+            (e || []).forEach((e) => this.m_mapAppsInFlight.delete(e)),
+            (t || []).forEach((e) => this.m_mapPackageInFlight.delete(e)),
+            (s || []).forEach((e) => this.m_mapBundleInFlight.delete(e)),
+            (r || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
+            (a || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
+            (i || []).forEach((e) => this.m_mapHubCategoriesInFlight.delete(e)),
+            m
           );
         }
         MarkStoreItemIDUnavailable(e) {
@@ -1468,11 +1447,11 @@
                 i = t.packageid() ?? 0;
               if (a != i) return a - i;
               let n = e.bundleid() ?? 0,
-                u = t.bundleid() ?? 0;
-              if (n != u) return n - u;
-              let o = e.tagid() ?? 0,
+                o = t.bundleid() ?? 0;
+              if (n != o) return n - o;
+              let u = e.tagid() ?? 0,
                 l = t.tagid() ?? 0;
-              if (o != l) return o - l;
+              if (u != l) return u - l;
               let _ = e.creatorid() ?? 0,
                 c = t.creatorid() ?? 0;
               if (_ != c) return _ - c;
@@ -1483,110 +1462,118 @@
             t
           );
         }
-        async InternalHandleLoadStoreItems(e, t, s) {
-          let r = 1;
-          e ||
-            (this.GetSteamInterface() ||
-              this.SetSteamInterface(new n.D(c.TS.WEBAPI_BASE_URL)),
-            (e = this.GetSteamInterface())),
-            (t = this.SortStoreItems(t)),
-            s.include_included_items &&
-              (s = {
-                ...s,
+        GetServiceTransport() {
+          return (
+            this.m_serviceTransport ||
+              (console.warn(
+                "Service transport not initialized for StoreItemCache",
+              ),
+              (this.m_serviceTransport = new n.D(
+                c.TS.WEBAPI_BASE_URL,
+              ).GetAnonymousServiceTransport())),
+            this.m_serviceTransport
+          );
+        }
+        async InternalHandleLoadStoreItems(e, t) {
+          let s = 1;
+          (e = this.SortStoreItems(e)),
+            t.include_included_items &&
+              (t = {
+                ...t,
                 included_item_data_request: {
-                  ...s,
+                  ...t,
                   include_included_items: !1,
                 },
               });
-          const l = new Array();
+          const r = new Array();
           try {
             const n = [];
-            for (; t.length > 0; ) {
-              const r = t.splice(0, this.k_nMaxBatchSize);
-              if ((l.push(r), this.m_bUsePartnerAPI)) {
-                const t = i.w.Init(u.St);
-                t.Body().set_include_unpublished(!1);
-                const a = t.Body().request(!0);
-                a.set_context((0, m.hS)(this.m_bUsePartnerAPI)),
-                  a.set_data_request(o.gn.fromObject(s)),
-                  a.set_ids(r),
-                  n.push(u.BT.GetItems(e.GetServiceTransport(), t));
+            for (; e.length > 0; ) {
+              const s = e.splice(0, this.k_nMaxBatchSize);
+              if ((r.push(s), this.m_bUsePartnerAPI)) {
+                const e = i.w.Init(o.St);
+                e.Body().set_include_unpublished(!1);
+                const r = e.Body().request(!0);
+                r.set_context((0, m.hS)(this.m_bUsePartnerAPI)),
+                  r.set_data_request(u.gn.fromObject(t)),
+                  r.set_ids(s),
+                  n.push(o.BT.GetItems(this.GetServiceTransport(), e));
               } else {
-                const t = i.w.Init(o.eE);
-                (0, m.rV)(t, this.m_bUsePartnerAPI),
-                  (0, m.Bn)(t, s),
-                  t.Body().set_ids(r),
-                  n.push(o.$4.GetItems(e.GetAnonymousServiceTransport(), t));
+                const e = i.w.Init(u.eE);
+                (0, m.rV)(e, this.m_bUsePartnerAPI),
+                  (0, m.Bn)(e, t),
+                  e.Body().set_ids(s),
+                  n.push(u.$4.GetItems(this.GetServiceTransport(), e));
               }
             }
-            (await Promise.all(n)).forEach((e, i) => {
-              1 == e.GetEResult()
-                ? e
+            (await Promise.all(n)).forEach((i, n) => {
+              1 == i.GetEResult()
+                ? i
                     .Body()
                     .store_items()
-                    .forEach((r) => {
-                      const i = r.id(),
-                        n = r.item_type();
-                      let u =
-                          this.m_bReturnUnavailableItems && 15 == r.success(),
-                        o = 1 == r.success() && !this.BIsStoreItemMissing(i, n);
-                      if (u || o) this.ReadItem(r, s);
+                    .forEach((s) => {
+                      const r = s.id(),
+                        n = s.item_type();
+                      let o =
+                          this.m_bReturnUnavailableItems && 15 == s.success(),
+                        u = 1 == s.success() && !this.BIsStoreItemMissing(r, n);
+                      if (o || u) this.ReadItem(s, t);
                       else {
                         switch (
                           ("dev" == c.TS.WEB_UNIVERSE &&
                             console.warn(
-                              `Failed to load ${i} type ${n} with error ${r.success()}`,
-                              r,
+                              `Failed to load ${r} type ${n} with error ${s.success()}`,
+                              s,
                             ),
                           n)
                         ) {
                           case 0:
-                            this.m_setUnavailableApps.add(i),
-                              this.m_mapApps.delete(i);
+                            this.m_setUnavailableApps.add(r),
+                              this.m_mapApps.delete(r);
                             break;
                           case 1:
-                            this.m_setUnavailablePackages.add(i),
-                              this.m_mapPackages.delete(i);
+                            this.m_setUnavailablePackages.add(r),
+                              this.m_mapPackages.delete(r);
                             break;
                           case 2:
-                            this.m_setUnavailableBundles.add(i),
-                              this.m_mapBundles.delete(i);
+                            this.m_setUnavailableBundles.add(r),
+                              this.m_mapBundles.delete(r);
                             break;
                           case 4:
-                            this.m_setUnavailableTags.add(i),
-                              this.m_mapTags.delete(i);
+                            this.m_setUnavailableTags.add(r),
+                              this.m_mapTags.delete(r);
                             break;
                           case 5:
-                            this.m_setUnavailableCreators.add(i),
-                              this.m_mapCreators.delete(i);
+                            this.m_setUnavailableCreators.add(r),
+                              this.m_mapCreators.delete(r);
                             break;
                           case 6:
-                            this.m_setUnavailableHubCategories.add(i),
-                              this.m_mapHubCategories.delete(i);
+                            this.m_setUnavailableHubCategories.add(r),
+                              this.m_mapHubCategories.delete(r);
                             break;
                           default:
                             console.error(
                               "CStoreItemCache.InternalHandleLoadStoreItems unexpected item_type in response " +
                                 n +
                                 " " +
-                                i,
+                                r,
                             );
                         }
-                        if (r.unvailable_for_country_restriction())
+                        if (s.unvailable_for_country_restriction())
                           switch (n) {
                             case 0:
                               this.m_setUnavailableDueToCountryRestrictionApps.add(
-                                i,
+                                r,
                               );
                               break;
                             case 1:
                               this.m_setUnavailableDueToCountryRestrictionPackages.add(
-                                i,
+                                r,
                               );
                               break;
                             case 2:
                               this.m_setUnavailableDueToCountryRestrictionBundles.add(
-                                i,
+                                r,
                               );
                               break;
                             case 4:
@@ -1594,24 +1581,24 @@
                             case 6:
                               console.error(
                                 "CStoreItemCache::InternalHandleLoadStoreItems - tags, creators or categories don't have country restrictions. eResult: " +
-                                  e.GetEResult() +
+                                  i.GetEResult() +
                                   " message: " +
-                                  e.Hdr().error_message(),
-                                (0, a.HO)(t),
+                                  i.Hdr().error_message(),
+                                (0, a.HO)(e),
                               );
                           }
                       }
                     })
                 : (console.warn(
                     "CStoreItemCache::InternalHandleLoadStoreItems failed with eResult: " +
-                      e.GetEResult() +
+                      i.GetEResult() +
                       " message: " +
-                      e.Hdr().error_message(),
-                    (0, a.HO)(t),
+                      i.Hdr().error_message(),
+                    (0, a.HO)(e),
                   ),
-                  (1 == e.Hdr().transport_error() || c.TS.FROM_WEB) &&
-                    this.MarkStoreItemIDUnavailable(l[i]),
-                  1 == r && (r = e.GetEResult()));
+                  (1 == i.Hdr().transport_error() || c.TS.FROM_WEB) &&
+                    this.MarkStoreItemIDUnavailable(r[n]),
+                  1 == s && (s = i.GetEResult()));
             });
           } catch (e) {
             const t = (0, _.H)(e);
@@ -1621,11 +1608,11 @@
                   t.strErrorMsg,
                 t,
               ),
-              l.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
+              r.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
               79
             );
           }
-          return r;
+          return s;
         }
         GetMapForType(e) {
           let t;
@@ -1819,7 +1806,7 @@
           return a;
         }
       }
-      (0, r.Cg)([C.o], P.prototype, "ReadItem", null);
+      (0, r.Cg)([C.o], B.prototype, "ReadItem", null);
     },
     62792: (e, t, s) => {
       var r;
@@ -1854,7 +1841,7 @@
         }
         return "invalid";
       }
-      function u(e) {
+      function o(e) {
         switch (e) {
           case "sub":
             return 1;
@@ -1864,7 +1851,7 @@
             return 0;
         }
       }
-      function o(e) {
+      function u(e) {
         switch (e) {
           case 2:
             return "bundle";
@@ -2003,7 +1990,7 @@
             return { bundleid: t };
         }
       }
-      function S(e) {
+      function b(e) {
         return "application" == e
           ? 0
           : "bundle" == e
@@ -2012,7 +1999,7 @@
               ? 1
               : -1;
       }
-      function b(e) {
+      function S(e) {
         return 0 == e
           ? "application"
           : 1 == e
@@ -2034,15 +2021,15 @@
         Je: () => h,
         M9: () => g,
         Rz: () => n,
-        SW: () => u,
+        SW: () => o,
         Si: () => C,
-        TM: () => o,
-        TV: () => S,
+        TM: () => u,
+        TV: () => b,
         _P: () => I,
         cW: () => f,
         gy: () => R,
         hh: () => c,
-        lY: () => b,
+        lY: () => S,
         pk: () => i,
         s9: () => y,
         vo: () => m,

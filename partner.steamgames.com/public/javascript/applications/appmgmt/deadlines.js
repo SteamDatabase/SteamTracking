@@ -1571,7 +1571,7 @@
                     n.createElement(
                       "li",
                       null,
-                      "If you need to change your Steamworks partner legal name, please create a Steamworks Support ticket.",
+                      "If you need to change your Steamworks partner legal name, please open a Steamworks support ticket to make that change.",
                       n.createElement(
                         u.jn,
                         {
@@ -1583,7 +1583,7 @@
                             ),
                           className: s().NotificationButton,
                         },
-                        "Steamworks Support",
+                        "Visit Steamworks Support",
                       ),
                     ),
                     n.createElement(

@@ -2186,7 +2186,7 @@
       "use strict";
       r.d(t, { jM: () => _e, LB: () => de, lS: () => me });
       var n = r(90626),
-        i = r(73860),
+        i = r(13871),
         a = r(45699),
         s = r(7445),
         o = r(76217),
@@ -2258,7 +2258,7 @@
         S = r(19719),
         v = r(79516),
         C = r(48399),
-        I = r(53534),
+        I = r(88006),
         B = r(69381),
         E = r(60778),
         T = r(76011);
@@ -2782,7 +2782,7 @@
         (0, y.Cg)([b.oI], D.prototype, "MoveRight", null),
         (0, y.Cg)([b.oI], D.prototype, "OnGamepadButtonDown", null),
         (0, y.Cg)([b.oI], D.prototype, "OnGamepadDirection", null);
-      var M = r(44325),
+      var M = r(51706),
         G = r(12155),
         F = r(32630),
         N = r(4434),
