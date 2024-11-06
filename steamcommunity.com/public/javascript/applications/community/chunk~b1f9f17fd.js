@@ -5987,7 +5987,6 @@
               }
               const d = e.GetClanSteamID().ConvertTo64BitString();
               return l.createElement(w.X0, { clanSteamId: d }, (t) => {
-                if (t.isLoading) return null;
                 let a = !1;
                 return (
                   t.isSuccess && (a = !!t.data.crowdin_project_id),
