@@ -2078,7 +2078,7 @@
           case "date_month":
             return (0, a.sq)(new Date(1e3 * t));
           case "date_quarter":
-            return (0, a.u6)(new Date(1e3 * t));
+            return (0, a.u6)(new Date(1e3 * t), i);
           case "date_year":
             return (0, a.vl)(new Date(1e3 * t));
           case "text_comingsoon":

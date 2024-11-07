@@ -5020,27 +5020,32 @@
             value: n,
             onChange: r,
             rgComingSoonOptionOverride: o,
+            bExpandedDisplay: l,
           } = e,
-          l = !!t,
-          i = a.useMemo(
-            () => (o || _e).map((e) => ({ label: (0, ae.M)(e, t), data: e })),
-            [t, o],
+          i = !!t,
+          c = a.useMemo(
+            () =>
+              (o || _e).map((e) => ({
+                label: (0, ae.M)(e, t, null, l),
+                data: e,
+              })),
+            [t, o, l],
           ),
-          c = a.useCallback(
+          d = a.useCallback(
             (e) => {
               r(e.data);
             },
             [r],
           ),
-          d = t
+          u = t
             ? (0, s.we)("#GameEdit_ComingSoon_SelectAnOption")
             : (0, s.we)("#App_Landing_NoDateSelected");
         return a.createElement(P.ZU, {
-          disabled: !l,
-          strDefaultLabel: d,
-          rgOptions: i,
-          selectedOption: l ? n : null,
-          onChange: c,
+          disabled: !i,
+          strDefaultLabel: u,
+          rgOptions: c,
+          selectedOption: i ? n : null,
+          onChange: d,
         });
       }
       var Ce = n(51780);
@@ -10522,6 +10527,7 @@
                           onChange: h,
                           rgComingSoonOptionOverride: Ee,
                           rtSteamReleaseDate: E,
+                          bExpandedDisplay: !0,
                         }),
                       ),
                   ),

@@ -346,7 +346,12 @@
                 "#SeasonPass_Release_Date",
                 a.createElement("br", null),
                 [...t.dates].reverse().map((e, n) => {
-                  const s = (0, r.M)(e.coming_soon_display_type, e.rtime);
+                  const s = (0, r.M)(
+                    e.coming_soon_display_type,
+                    e.rtime,
+                    null,
+                    !0,
+                  );
                   return a.createElement(
                     "div",
                     {

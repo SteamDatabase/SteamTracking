@@ -12519,6 +12519,12 @@
                     tooltip: (0, D.we)("#EventEditor_Localization_Tooltip"),
                     className: v.tooltip_Ctn,
                   }),
+                  d.createElement("br", null),
+                  d.createElement(
+                    "span",
+                    null,
+                    (0, D.we)("#EventEditor_Localization_RememberToSave"),
+                  ),
                 ),
               ),
             );

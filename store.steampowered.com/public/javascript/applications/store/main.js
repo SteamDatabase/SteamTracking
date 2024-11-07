@@ -77728,14 +77728,14 @@
           e.custom_release_date_message,
         );
       }
-      function s(e, t, r) {
+      function s(e, t, r, a) {
         switch (e) {
           case "date_full":
             return (0, i.$z)(t);
           case "date_month":
             return (0, n.sq)(new Date(1e3 * t));
           case "date_quarter":
-            return (0, n.u6)(new Date(1e3 * t));
+            return (0, n.u6)(new Date(1e3 * t), a);
           case "date_year":
             return (0, n.vl)(new Date(1e3 * t));
           case "text_comingsoon":
@@ -102058,22 +102058,34 @@
           r)
         );
       }
-      function k(e) {
+      function k(e, t) {
         switch (e.getUTCMonth()) {
           case 0:
           case 1:
           case 2:
-            return (0, a.we)("#Time_QuarterOfYear_Q1", e.getUTCFullYear());
+            return (0, a.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q1" : "#Time_QuarterOfYear_Q1",
+              e.getUTCFullYear(),
+            );
           case 3:
           case 4:
           case 5:
-            return (0, a.we)("#Time_QuarterOfYear_Q2", e.getUTCFullYear());
+            return (0, a.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q2" : "#Time_QuarterOfYear_Q2",
+              e.getUTCFullYear(),
+            );
           case 6:
           case 7:
           case 8:
-            return (0, a.we)("#Time_QuarterOfYear_Q3", e.getUTCFullYear());
+            return (0, a.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
+              e.getUTCFullYear(),
+            );
           default:
-            return (0, a.we)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
+            return (0, a.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",
+              e.getUTCFullYear(),
+            );
         }
       }
       function A(e) {

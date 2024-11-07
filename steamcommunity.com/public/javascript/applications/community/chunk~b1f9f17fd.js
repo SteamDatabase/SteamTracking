@@ -5813,7 +5813,13 @@
         const a = n.w.Init(o.hA);
         a.Body().set_steamid(t);
         const i = await o.BE.GetClanCrowdInMetadata(e, a);
-        if (1 != i.GetEResult()) throw i.GetEResult();
+        if (42 === i.GetEResult())
+          return {
+            crowdin_project_id: null,
+            crowdin_directory_id: null,
+            push_by_default: !1,
+          };
+        if (1 !== i.GetEResult()) throw i.GetEResult();
         return i.Body().toObject();
       }
       function d(e) {
@@ -5841,17 +5847,19 @@
       const m = (0, s.createContext)(null);
       function _(e) {
         const t = d(e.clanInfo.clanSteamID.ConvertTo64BitString());
-        if (t.isLoading) return null;
-        const a = t.isSuccess && !!t.data.push_by_default;
-        return s.createElement(
-          m.Provider,
-          {
-            value: {
-              clanSteamId: e.clanInfo.clanSteamID,
-              bPushToCrowdInByDefault: a,
+        let a = !1;
+        return (
+          t.isSuccess && (a = t.data.push_by_default),
+          s.createElement(
+            m.Provider,
+            {
+              value: {
+                clanSteamId: e.clanInfo.clanSteamID,
+                bPushToCrowdInByDefault: a,
+              },
             },
-          },
-          e.children,
+            e.children,
+          )
         );
       }
     },
