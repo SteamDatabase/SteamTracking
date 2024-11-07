@@ -11018,7 +11018,12 @@
                                 " @ " +
                                 (0, re.KC)(i.expected_delivery),
                             },
-                            (0, ae.M)(i.display_format, i.expected_delivery),
+                            (0, ae.M)(
+                              i.display_format,
+                              i.expected_delivery,
+                              null,
+                              !0,
+                            ),
                           ),
                           m &&
                             a.createElement(

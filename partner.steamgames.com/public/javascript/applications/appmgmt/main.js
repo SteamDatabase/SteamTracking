@@ -32326,22 +32326,34 @@
           r)
         );
       }
-      function I(e) {
+      function I(e, t) {
         switch (e.getUTCMonth()) {
           case 0:
           case 1:
           case 2:
-            return (0, s.we)("#Time_QuarterOfYear_Q1", e.getUTCFullYear());
+            return (0, s.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q1" : "#Time_QuarterOfYear_Q1",
+              e.getUTCFullYear(),
+            );
           case 3:
           case 4:
           case 5:
-            return (0, s.we)("#Time_QuarterOfYear_Q2", e.getUTCFullYear());
+            return (0, s.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q2" : "#Time_QuarterOfYear_Q2",
+              e.getUTCFullYear(),
+            );
           case 6:
           case 7:
           case 8:
-            return (0, s.we)("#Time_QuarterOfYear_Q3", e.getUTCFullYear());
+            return (0, s.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
+              e.getUTCFullYear(),
+            );
           default:
-            return (0, s.we)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
+            return (0, s.we)(
+              t ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",
+              e.getUTCFullYear(),
+            );
         }
       }
       function T(e) {
