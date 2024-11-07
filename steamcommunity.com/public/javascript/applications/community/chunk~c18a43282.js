@@ -5078,10 +5078,10 @@
                   l = new Date(a),
                   c = l.getUTCFullYear(),
                   d = ("0" + (l.getUTCMonth() + 1)).slice(-2),
-                  m = ("0" + l.getDate()).slice(-2),
-                  u = ("0" + l.getHours()).slice(-2),
-                  p = ("0" + l.getMinutes()).slice(-2),
-                  _ = `${c}${d}${m}T${u}${p}Z`;
+                  m = ("0" + l.getUTCDate()).slice(-2),
+                  u = ("0" + l.getUTCHours()).slice(-2),
+                  p = ("0" + l.getUTCMinutes()).slice(-2),
+                  _ = `${c}${d}${m}T${u}${p}00Z`;
                 let h = "BEGIN:VCALENDAR\r\n";
                 (h += "VERSION:2.0\r\n"),
                   (h += "BEGIN:VEVENT\r\n"),
