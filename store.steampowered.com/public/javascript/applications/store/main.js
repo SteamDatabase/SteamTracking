@@ -713,12 +713,18 @@
     },
     34542: (e) => {
       e.exports = {
-        ctn: "_1cSWcRFDwYRb9UhccslP3s",
-        ctn_registered: "_19SNKkP9Oo8jIyAEBx-Zu0",
-        row: "Fw43Qs_sCjPjTkr0n9Si7",
-        day: "_1wcqDkNgAA7ZRjmuIS-6Jn",
-        time: "_2ublGw_Y7Tyr5UObu9RWeY",
-        max: "_2v16tDXmm123Y5NGJmig3p",
+        Ctn: "ZXluexXJ1Y_muqBcBgGU-",
+        CtnRegistered: "_3PeTrgTLLyRMIUb_pRn4rO",
+        SessionTitle: "_3vGq3WcmmGaYbbqYkD9Ysp",
+        SessionDesc: "_24r8E1kKzw_9iIVhmvEZ3T",
+        SessionOptions: "_3KAHxFNUEscoxtvBzwWKvs",
+        SessionInstance: "_1igTM-TlnNkIhWxl95pTyB",
+        Button: "_2qgSQSN_hv-UncznBRb42v",
+        Title: "_3iF42Uos8JELw32j386Kco",
+        Max: "_1-LTOHwZqSK67eUyq4qscx",
+        InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
+        Day: "_2Zkbwdhs4WPVI1ZyUHtHUG",
+        Time: "_8oQG_Wbl2-Eamq1WKMAoo",
         Registered: "_1D1F4nOnNKanKGRqRk3pWr",
       };
     },
@@ -61209,10 +61215,7 @@
         );
       }
       function c(e) {
-        const [t, r] = (0, i.useState)(() => {
-            const t = n.O3.GetClanEventModel(e);
-            return console.log("adil", t), t;
-          }),
+        const [t, r] = (0, i.useState)(() => n.O3.GetClanEventModel(e)),
           s = (0, a.m)("usePartnerEventByEventGID");
         return (
           (0, i.useEffect)(() => {
@@ -71677,7 +71680,7 @@
     },
     60746: (e, t, r) => {
       "use strict";
-      r.d(t, { KN: () => y, Nh: () => _, Ec: () => B });
+      r.d(t, { KN: () => B, Nh: () => _, Ec: () => w });
       var i = r(34629),
         n = r(41735),
         a = r.n(n),
@@ -71790,8 +71793,9 @@
       var _,
         g = r(17720),
         h = r(44332),
-        f = r(90626);
-      class b {
+        f = r(90626),
+        b = r(3132);
+      class y {
         clanid = void 0;
         appid = 0;
         can_edit = !1;
@@ -71807,23 +71811,23 @@
           (0, s.Gn)(this), (this.clanid = e);
         }
       }
-      (0, i.Cg)([s.sH], b.prototype, "clanid", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "appid", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "can_edit", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "owns_app", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "follows_app", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "support_user", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "valve_admin", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "limited_user", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "event_ignored", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "event_followed", void 0),
-        (0, i.Cg)([s.sH], b.prototype, "event_followed_flags", void 0),
+      (0, i.Cg)([s.sH], y.prototype, "clanid", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "appid", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "can_edit", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "owns_app", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "follows_app", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "support_user", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "valve_admin", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "limited_user", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "event_ignored", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "event_followed", void 0),
+        (0, i.Cg)([s.sH], y.prototype, "event_followed_flags", void 0),
         (function (e) {
           (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
             (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
             (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
         })(_ || (_ = {}));
-      class y {
+      class B {
         constructor() {
           (0, s.Gn)(this);
         }
@@ -71837,20 +71841,20 @@
         static Get() {
           return (
             (0, h.w)(
-              !!y.s_EventUserStore,
+              !!B.s_EventUserStore,
               "Have not yet initialized global EventUserStore",
             ),
-            y.s_EventUserStore
+            B.s_EventUserStore
           );
         }
         static IsInitialized() {
-          return !!y.s_EventUserStore;
+          return !!B.s_EventUserStore;
         }
         static async InitGlobal(e) {
-          if (!y.s_EventUserStore) {
-            const t = new y();
+          if (!B.s_EventUserStore) {
+            const t = new B();
             await t.Init(e),
-              (y.s_EventUserStore = t),
+              (B.s_EventUserStore = t),
               "dev" == u.TS.WEB_UNIVERSE && (window.g_EventUserStore = t);
           }
         }
@@ -71860,8 +71864,8 @@
           this.ValidateStoreDefault(t) &&
             ((0, s.h5)(() => {
               t.forEach((e) => {
-                let t = new b(e.clanid),
-                  r = { result: t, promise: y.RemapToPromise(t) };
+                let t = new y(e.clanid),
+                  r = { result: t, promise: B.RemapToPromise(t) };
                 this.CopyFromResponseToTrack(r, e),
                   this.m_mapClanToUserPermissions.set(e.clanid, r);
               });
@@ -71933,7 +71937,7 @@
           return this.m_mapClanToUserPermissions.has(e);
         }
         GetPartnerEventPermissions(e) {
-          if (!e || !e.BIsValid()) return new b(0);
+          if (!e || !e.BIsValid()) return new y(0);
           const t = e.GetAccountID();
           this.m_mapClanToUserPermissions.has(t) ||
             this.LoadSingleAppEventPermissions(e);
@@ -71961,7 +71965,7 @@
             r ||
               ((r = {
                 promise: this.InternalLoadSingleAppEventPermissions(e),
-                result: new b(t),
+                result: new y(t),
               }),
               this.m_mapClanToUserPermissions.set(t, r)),
             r.promise
@@ -71989,10 +71993,10 @@
             r = e.GetAccountID(),
             i = !Boolean(u.iA.logged_in);
           if (!this.m_mapClanToUserPermissions.has(r)) {
-            let t = new b(e.GetAccountID());
+            let t = new y(e.GetAccountID());
             this.m_mapClanToUserPermissions.set(r, {
               result: t,
-              promise: y.RemapToPromise(t),
+              promise: B.RemapToPromise(t),
             });
           }
           try {
@@ -72004,11 +72008,16 @@
                   "/ajaxgetpartnereventpermissions/",
                 s = {};
               if (
-                ("partnerweb" == (0, u.yK)() &&
-                  ((n =
-                    u.TS.PARTNER_BASE_URL +
-                    "partnerevents/ajaxgetpartnereventpermissions"),
-                  (s = { clanaccountid: e.GetAccountID() })),
+                ("partnerweb" == (0, u.yK)()
+                  ? ((n =
+                      u.TS.PARTNER_BASE_URL +
+                      "partnerevents/ajaxgetpartnereventpermissions"),
+                    (s = { clanaccountid: e.GetAccountID() }))
+                  : "store" == (0, u.yK)() &&
+                    ((n =
+                      u.TS.STORE_BASE_URL +
+                      "events/ajaxgetpartnereventpermissions"),
+                    (s = { clanaccountid: e.GetAccountID() })),
                 (t = await a().get(n, { params: s, withCredentials: !0 })),
                 1 != t.data.success)
               )
@@ -72204,6 +72213,7 @@
         }
         BShowEmailEditorTab(e) {
           if (e.BHasEmailEnabled()) return !0;
+          if (e.clanSteamID.GetAccountID() == (0, b.H7)()) return !0;
           let t = this.GetPartnerEventPermissions(e.clanSteamID);
           return (u.UF.IS_OGG || u.UF.IS_VALVE_GROUP) && t.valve_admin;
         }
@@ -72218,17 +72228,17 @@
           );
         }
       }
-      function B(e) {
+      function w(e) {
         const [t, r] = (0, f.useState)(
-            y.Get().BIsPartnerEventPermissionsLoaded(e),
+            B.Get().BIsPartnerEventPermissionsLoaded(e),
           ),
           i = g.b.InitFromClanID(e),
-          [n, a] = (0, f.useState)(y.Get().GetPartnerEventPermissions(i));
+          [n, a] = (0, f.useState)(B.Get().GetPartnerEventPermissions(i));
         return (
           (0, f.useEffect)(() => {
             if (!t) {
               const t = g.b.InitFromClanID(e);
-              y.Get()
+              B.Get()
                 .LoadSingleAppEventPermissions(t)
                 .then((e) => {
                   a(e), r(!0);
@@ -72238,10 +72248,10 @@
           n
         );
       }
-      (0, i.Cg)([s.sH], y.prototype, "m_mapClanToUserPermissions", void 0),
-        (0, i.Cg)([s.sH], y.prototype, "m_mapAnnounceGIDToVote", void 0),
-        (0, i.Cg)([s.sH], y.prototype, "m_setReadEventGIDs", void 0),
-        (0, i.Cg)([s.XI], y.prototype, "CopyFromResponseToTrack", null);
+      (0, i.Cg)([s.sH], B.prototype, "m_mapClanToUserPermissions", void 0),
+        (0, i.Cg)([s.sH], B.prototype, "m_mapAnnounceGIDToVote", void 0),
+        (0, i.Cg)([s.sH], B.prototype, "m_setReadEventGIDs", void 0),
+        (0, i.Cg)([s.XI], B.prototype, "CopyFromResponseToTrack", null);
     },
     1059: (e, t, r) => {
       "use strict";
@@ -86462,7 +86472,7 @@
                 l.createElement(H, {
                   group: t,
                   session: c,
-                  oReg: y.find((e) => e.group_id === t.group_id),
+                  oReg: y?.find((e) => e.group_id === t.group_id),
                   fnSetReg: async (e) => {
                     C(!0);
                     try {
@@ -86494,7 +86504,7 @@
                   const i = b.find(
                       (r) => r.group_id === t.group_id && r.session_id === e.id,
                     ),
-                    n = y.find(
+                    n = y?.find(
                       (r) => r.group_id === t.group_id && r.session_id == e.id,
                     );
                   return l.createElement(Y, {
@@ -86523,10 +86533,12 @@
         return t
           ? l.createElement(
               "div",
-              { className: (0, W.A)({ [N.ctn]: !0, [N.ctn_registered]: !1 }) },
-              Boolean(a) && l.createElement("div", { className: N.day }, a),
-              Boolean(s) && l.createElement("div", { className: N.desc }, s),
-              r,
+              { className: (0, W.A)({ [N.Ctn]: !0, [N.CtnRegistered]: !1 }) },
+              Boolean(a) &&
+                l.createElement("div", { className: N.SessionTitle }, a),
+              Boolean(s) &&
+                l.createElement("div", { className: N.SessionDesc }, s),
+              l.createElement("div", { className: N.SessionOptions }, r),
             )
           : null;
       }
@@ -86549,7 +86561,7 @@
           null,
           l.createElement(
             "div",
-            null,
+            { className: N.SessionInstance },
             Boolean(a > 0) &&
               l.createElement(
                 "div",
@@ -86558,21 +86570,26 @@
               ),
             l.createElement(
               "div",
-              { className: N.row, onClick: i },
+              { className: N.Button, onClick: i },
               l.createElement(
                 "div",
-                { className: N.day },
+                { className: N.Title },
                 (0, j.$w)(new Date(1e3 * s)),
               ),
-              l.createElement("div", { className: N.time }, (0, j.Vx)(s, c)),
+              l.createElement("div", null, (0, j.Vx)(s, c)),
             ),
             l.createElement(
               "div",
-              { className: N.max },
+              { className: N.Max },
               (0, L.Yp)("#MeetSteam_Spot", u.toLocaleString()),
             ),
           ),
-          r && l.createElement("div", null, (0, L.we)("#MeetSteam_Or")),
+          r &&
+            l.createElement(
+              "div",
+              { className: N.InstanceDivider },
+              (0, L.we)("#MeetSteam_Or"),
+            ),
         );
       }
     },

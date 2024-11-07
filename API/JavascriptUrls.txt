@@ -1419,6 +1419,7 @@ ${STORE_BASE_URL}events/ajaxgetbesteventsforuser
 ${STORE_BASE_URL}events/ajaxgetcreatorhomeidforapp
 ${STORE_BASE_URL}events/ajaxgetnewscurators
 ${STORE_BASE_URL}events/ajaxgetpartnerevent
+${STORE_BASE_URL}events/ajaxgetpartnereventpermissions
 ${STORE_BASE_URL}events/ajaxgetpartnereventspageable/
 ${STORE_BASE_URL}events/ajaxgetrepostedevent
 ${STORE_BASE_URL}events/ajaxgettodayboundedevents

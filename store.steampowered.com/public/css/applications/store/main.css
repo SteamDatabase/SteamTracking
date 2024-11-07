@@ -6989,17 +6989,19 @@ html:not(.touch)
   border: 1px solid;
   padding: 10px;
 }
-._1cSWcRFDwYRb9UhccslP3s {
+.ZXluexXJ1Y_muqBcBgGU- {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
+  box-sizing: border-box;
   margin: auto;
-  border: 2px solid #007bff;
+  background: #41454e;
+  border-radius: 7px;
   padding: 20px;
-  border-radius: 1px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
-._19SNKkP9Oo8jIyAEBx-Zu0 {
+._3PeTrgTLLyRMIUb_pRn4rO {
   background-color: #fff;
   border: 2px solid #007bff;
   border-radius: 8px;
@@ -7007,7 +7009,7 @@ html:not(.touch)
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
-._19SNKkP9Oo8jIyAEBx-Zu0::before {
+._3PeTrgTLLyRMIUb_pRn4rO::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -7018,23 +7020,58 @@ html:not(.touch)
   border-radius: 10px;
   z-index: -1;
 }
-.Fw43Qs_sCjPjTkr0n9Si7 {
+._3vGq3WcmmGaYbbqYkD9Ysp {
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+._24r8E1kKzw_9iIVhmvEZ3T {
+  color: #fff;
+  font-size: 14px;
+}
+._3KAHxFNUEscoxtvBzwWKvs {
+  display: flex;
+  flex-direction: row;
+}
+._1igTM-TlnNkIhWxl95pTyB {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+}
+._1igTM-TlnNkIhWxl95pTyB ._2qgSQSN_hv-UncznBRb42v {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #4da1f2, #a6d6f7);
+  background: linear-gradient(to bottom, #707787, #555b67);
   margin: 10px 0;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 12px 16px;
+  border-radius: 4px;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 19px;
+  transition: filter .2s ease-in-out;
 }
-._1wcqDkNgAA7ZRjmuIS-6Jn {
+._1igTM-TlnNkIhWxl95pTyB ._2qgSQSN_hv-UncznBRb42v:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+._1igTM-TlnNkIhWxl95pTyB ._2qgSQSN_hv-UncznBRb42v ._3iF42Uos8JELw32j386Kco {
+  font-weight: 600;
+}
+._1-LTOHwZqSK67eUyq4qscx {
+  font-size: 13px;
+}
+._2IUfDPL02-oni7NXCV_ipu {
+  margin: auto 8px;
+}
+._2Zkbwdhs4WPVI1ZyUHtHUG {
   font-size: 24px;
   font-weight: bold;
 }
-._2ublGw_Y7Tyr5UObu9RWeY,
-._2v16tDXmm123Y5NGJmig3p {
+._8oQG_Wbl2-Eamq1WKMAoo {
   font-size: 16px;
 }
 ._1D1F4nOnNKanKGRqRk3pWr {

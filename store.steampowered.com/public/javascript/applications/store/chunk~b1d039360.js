@@ -5071,7 +5071,7 @@
         st = r(52038),
         ot = r(56011);
       function lt(e, t) {
-        if (!e || !e.BIsClanAccount) return !1;
+        if (!e || !e.BIsClanAccount()) return !1;
         const r = Ae.KN.Get().GetPartnerEventPermissions(e);
         return !!r && (t ? r.valve_admin : r.valve_admin || r.support_user);
       }
