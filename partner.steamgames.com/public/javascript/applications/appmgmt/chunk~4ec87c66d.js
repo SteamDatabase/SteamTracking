@@ -58750,7 +58750,11 @@
               i = new Set(O.split(",")),
               s = a.filter((a) => {
                 if (!p && a.content_descriptors?.includes(3)) return !1;
-                if (!d && a.freetoplay) return !1;
+                if (!d) {
+                  if (a.freetoplay) return !1;
+                  if (null != a.tagids.split(",").find((e) => "113" == e))
+                    return !1;
+                }
                 if (!g && a.earlyaccess) return !1;
                 if (
                   !y &&
