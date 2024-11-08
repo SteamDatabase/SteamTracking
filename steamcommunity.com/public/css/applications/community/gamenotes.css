@@ -983,12 +983,16 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
   display: inline-block;
   margin: 0 2px;
 }
-.S-ElBHomDkV0L3K4XChxt {
+.S-ElBHomDkV0L3K4XChxt.S-ElBHomDkV0L3K4XChxt.S-ElBHomDkV0L3K4XChxt {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: left;
   gap: 8px;
+  margin-bottom: 0;
 }
-.S-ElBHomDkV0L3K4XChxt ._106tp5gLWBvoekGEC8HXQ {
+.S-ElBHomDkV0L3K4XChxt.S-ElBHomDkV0L3K4XChxt.S-ElBHomDkV0L3K4XChxt
+  ._106tp5gLWBvoekGEC8HXQ._106tp5gLWBvoekGEC8HXQ._106tp5gLWBvoekGEC8HXQ {
   border-radius: 20px;
   padding: 4px 22px;
   color: #fff;
