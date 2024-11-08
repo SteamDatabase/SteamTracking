@@ -487,6 +487,7 @@ ${IMG_URL}/international2022/sticker_book_main.png
 ${IMG_URL}/nav/logomark.svg
 ${IMG_URL}Underlords_WordMark_Vertical.svg
 ${IMG_URL}abilities/${name}.png
+${IMG_URL}abilities/${}.png
 ${IMG_URL}apple_store.png
 ${IMG_URL}applications/community/
 ${IMG_URL}arrow_left.png
