@@ -99,6 +99,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123@
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -14900,6 +14901,7 @@ $tICAPIJobListHashLoadSave
 >AppID %u does not advertise linux as a supported platform, but a linux specific depot is present.\n
 >Attempt to call SetActiveMode() on a mode not associated with this source
 >EHfOTX
+>HkXp
 >I{TrEX
 >KY5
 >O-p?A6
@@ -17175,6 +17177,8 @@ CClientJobFetchConfigSets
 CClientJobFetchLoginToken
 CClientJobFetchPersonalizationFileID
 CClientJobFetchPersonalizationFileID - AutoCloud\n
+CClientJobFetchPersonalizationFileID - Server response empty, writing out initial AutoCloud value\n
+CClientJobFetchPersonalizationFileID - Writing out initial AutoCloud value\n
 CClientJobFetchPersonalizationFileID - connected controller changed during yield\n
 CClientJobFetchPersonalizationFileID - server unavailable, checking local cache\n
 CClientJobFetchPersonalizationFileID\n
@@ -27224,7 +27228,6 @@ NO_ERROR
 NO_PROXY
 NO_SIDE_EFFECTS
 NO_START_OPT)
-NQc2
 NSU1\dd
 NSt3_V214error_categoryE
 NSt6locale5facetE
@@ -53386,7 +53389,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov  5 2024 21:33:44
+steam Nov  8 2024 23:37:17
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

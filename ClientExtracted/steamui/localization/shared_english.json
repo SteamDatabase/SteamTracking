@@ -3227,7 +3227,7 @@
     "Settings_GameRecording_BitRate_Medium": "<1>Medium</1> - Balanced, some quality loss",
     "Settings_GameRecording_BitRate_Low": "<1>Low</1> - Most compression, least disk space",
     "Settings_GameRecording_BitRate_Ultra_Short": "Ultra",
-    "Settings_GameRecording_BitRate_High_Short": "High (Default)",
+    "Settings_GameRecording_BitRate_High_Short": "High <1>(Default)</1>",
     "Settings_GameRecording_BitRate_Medium_Short": "Medium",
     "Settings_GameRecording_BitRate_Low_Short": "Low",
     "Settings_GameRecording_BitRate_Modal_Auto_Explainer": "Steam uses the game's video resolution to choose an appropriate bit rate for each recording. Selecting a higher quality level will result in a better looking recording but consume more disk space.",

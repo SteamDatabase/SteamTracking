@@ -7427,7 +7427,6 @@ xdigit
 xhotspot
 xpos
 y9*O
-yEvl
 y_local
 yhotspot
 ypos

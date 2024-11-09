@@ -1772,8 +1772,6 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:32:52
-21:33:19
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -1784,6 +1782,7 @@ $d`D-laM
 22CClanMatchEventByRange
 22CClientStructNetPacket
 22ISSLConnectionCallback
+23:36:21
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
@@ -2611,7 +2610,7 @@ B-233
 B-283
 B-409
 B-571
-B21:33:18
+B23:36:44
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8534,7 +8533,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov  5 2024
+Nov  8 2024
 November
 NrZl
 NumTickets
@@ -10545,7 +10544,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Nov  5 2024 21:33:18
+Startup - updater built Nov  8 2024 23:36:43
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

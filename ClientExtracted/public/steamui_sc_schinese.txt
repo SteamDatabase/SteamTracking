@@ -656,6 +656,7 @@
 	"Steam_MoveAppFolder_SelectFolder" "请选择移动文件的目标蒸汽平台库文件夹："
 	"Steam_MoveAppFolder_FolderExists" "游戏安装文件夹已经存在于选择的蒸汽平台库中"
 	"Steam_HelpUsTranslate" "可以很流利地使用另一门语言？帮助我们翻译蒸汽平台吧。"
+	"Steam_AppUpdateError_6" "未连接至蒸汽平台"
 	"Steam_AppUpdateError_47" "蒸汽平台客户端版本过旧"
 	"Steam_AppUpdateError_49" "蒸汽平台文件已损坏"
 	"Steam_DeviceAuth_ChooseDialog_Text" "此游戏属于蒸汽平台用户 %owner%，您想要请求在此设备上访问 %owner% 的游戏吗？"

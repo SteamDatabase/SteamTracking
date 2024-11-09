@@ -7261,6 +7261,7 @@
     "Notification_CannotReadControllerGuideButton_Title": "Xbox 控制器问题",
     "Notification_CannotReadControllerGuideButton_Body": "Steam 无法读取您 Xbox 控制器上的 Xbox 键来通过控制器打开叠加界面或快捷访问菜单。请前往“游戏栏控制器设置”页，选择“快捷方式”选项卡并取消勾选第一个复选框（Window 10）或该处的两个复选框（Windows 11）。",
     "Notification_OverlaySplashScreen": "在进行游戏时访问 Steam 社区。",
+    "Notification_OverlayGeneric": "在进行游戏时通过叠加界面访问 Steam 功能。",
     "Notification_Overlay_ShiftTab": "按 %1$s 以开始",
     "Notification_BroadcastAvailableToWatch_Title": "直播已启用！",
     "Notification_OverlaySplashScreen_Friends": "您的好友可随时加入您的直播。",
