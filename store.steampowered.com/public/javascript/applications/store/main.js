@@ -41646,32 +41646,41 @@
           {
             Constructor: function (e) {
               const t = R(e.args, "title"),
-                r = R(e.args, "datetime"),
-                i = R(e.args, "body"),
+                r = R(e.args, "start") ?? R(e.args, "datetime"),
+                i =
+                  (R(e.args, "end") ?? R(e.args, "datetime"),
+                  R(e.args, "body")),
                 a = R(e.args, "id") ?? "",
                 o = new Date(r),
                 l = o.getUTCFullYear(),
                 c = ("0" + (o.getUTCMonth() + 1)).slice(-2),
-                m = ("0" + o.getDate()).slice(-2),
-                u = ("0" + o.getHours()).slice(-2),
-                d = ("0" + o.getMinutes()).slice(-2),
-                p = `${l}${c}${m}T${u}${d}Z`;
-              let _ = "BEGIN:VCALENDAR\r\n";
-              (_ += "VERSION:2.0\r\n"),
-                (_ += "BEGIN:VEVENT\r\n"),
-                (_ += `DTSTART:${p}\r\n`),
-                (_ += `DTEND:${p}\r\n`),
-                (_ += `SUMMARY:${t}\r\n`),
-                (_ += `DESCRIPTION:${i}\r\n`),
-                (_ += "END:VEVENT\r\n"),
-                (_ += "END:VCALENDAR\r\n");
-              const g = `data:text/plain;charset=utf-8;base64,${btoa(_)}`;
-              let h =
+                m = ("0" + o.getUTCDate()).slice(-2),
+                u = ("0" + o.getUTCHours()).slice(-2),
+                d = ("0" + o.getUTCMinutes()).slice(-2),
+                p = `${l}${c}${m}T${u}${d}00Z`,
+                _ = new Date(r),
+                g = _.getUTCFullYear(),
+                h = ("0" + (_.getUTCMonth() + 1)).slice(-2),
+                f = ("0" + _.getUTCDate()).slice(-2),
+                b = ("0" + _.getUTCHours()).slice(-2),
+                B = ("0" + _.getUTCMinutes()).slice(-2),
+                w = `${g}${h}${f}T${b}${B}00Z`;
+              let S = "BEGIN:VCALENDAR\r\n";
+              (S += "VERSION:2.0\r\n"),
+                (S += "BEGIN:VEVENT\r\n"),
+                (S += `DTSTART:${p}\r\n`),
+                (S += `DTEND:${w}\r\n`),
+                (S += `SUMMARY:${t}\r\n`),
+                (S += `DESCRIPTION:${i}\r\n`),
+                (S += "END:VEVENT\r\n"),
+                (S += "END:VCALENDAR\r\n");
+              const C = `data:text/plain;charset=utf-8;base64,${btoa(S)}`;
+              let M =
                 "https://calendar.google.com/calendar/render?action=TEMPLATE";
               return (
-                (h += `&text=${encodeURI(t)}`),
-                (h += `&details=${encodeURI(i)}`),
-                (h += `&dates=${encodeURI(p + "/" + p)}`),
+                (M += `&text=${encodeURI(t)}`),
+                (M += `&details=${encodeURI(i)}`),
+                (M += `&dates=${encodeURI(p + "/" + w)}`),
                 s.createElement(
                   "div",
                   {
@@ -41688,7 +41697,7 @@
                         "SaleSectionCalendarEventLink",
                         n().CalendarEventLink,
                       ),
-                      href: g,
+                      href: C,
                       download: "steam_deck_white_release.ics",
                     },
                     "Apple",
@@ -41700,7 +41709,7 @@
                         "SaleSectionCalendarEventLink",
                         n().CalendarEventLink,
                       ),
-                      href: h,
+                      href: M,
                     },
                     "Google",
                   ),
@@ -41711,7 +41720,7 @@
                         "SaleSectionCalendarEventLink",
                         n().CalendarEventLink,
                       ),
-                      href: g,
+                      href: C,
                       download: "steam_deck_white_release.ics",
                     },
                     "Outlook",

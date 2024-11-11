@@ -11413,12 +11413,16 @@ a.bbcodes_LinkButton_3TN0u:hover {
   display: inline-block;
   margin: 0 2px;
 }
-.bbcodes_CalendarEventContainer_S-ElB {
+.bbcodes_CalendarEventContainer_S-ElB.bbcodes_CalendarEventContainer_S-ElB.bbcodes_CalendarEventContainer_S-ElB {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: left;
   gap: 8px;
+  margin-bottom: 0;
 }
-.bbcodes_CalendarEventContainer_S-ElB .bbcodes_CalendarEventLink_106tp {
+.bbcodes_CalendarEventContainer_S-ElB.bbcodes_CalendarEventContainer_S-ElB.bbcodes_CalendarEventContainer_S-ElB
+  .bbcodes_CalendarEventLink_106tp.bbcodes_CalendarEventLink_106tp.bbcodes_CalendarEventLink_106tp {
   border-radius: 20px;
   padding: 4px 22px;
   color: #fff;
