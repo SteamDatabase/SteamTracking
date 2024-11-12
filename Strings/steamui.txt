@@ -55,7 +55,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123hL7
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -149,6 +148,7 @@
  BackUp() can only be called after Next().
  Beta
  Can't back up over more bytes than were returned by the last call to Next().
+ EpA
  GET[ '%s' ]: %s\n
  GameRecording\ExportLimitBitrate
  Gamescope/MuraCorrectionDisabled
@@ -297,7 +297,6 @@
 !.CWorkshop_GetEULAStatus_Response"
 !.google.protobuf.EnumValueOptions
 !1AQaq
-!2pA
 !3Mt
 !5!A!I!O!Y![!_!s!}!
 !5@Su
@@ -315,6 +314,7 @@
 !IsRetailInstall()
 !IsThreadAlive()
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
+!RpA
 !STREAM_NEWER_PACKET_ID( cursor, outgoing.GetWindowStart() + outgoing.GetWindowSize() )
 !STREAM_NEWER_PACKET_ID( cursorStart, outgoing.GetWindowStart() + outgoing.GetWindowSize() )
 !STREAM_OLDER_PACKET_ID( cursor, outgoing.GetWindowStart() )
@@ -680,7 +680,6 @@
 "A\n(CChatRoom_GetInviteLinksForGroup_Request
 "A\n+CMsgRemoteClientBroadcastClientIDDeconflict
 "A\n2CMarketingMessages_CreateMarketingMessage_Response
-"ApA
 "B\n%CBroadcast_GetBuildClipStatus_Request
 "B\n-CTransportValidation_GetLargeResponse_Request
 "B\n.CFriendMessages_UpdateMessageReaction_Response
@@ -752,6 +751,7 @@
 "R\n#CPlayer_GetPrivacySettings_Response
 "R\n$CBroadcast_InviteToBroadcast_Request
 "R\n'CParties_OnReservationCompleted_Request
+"S FD
 "S\n%CSteamTV_GetFollowedChannels_Response
 "S\n'CCloud_AppCloudStateChange_Notification
 "S\n)CPartnerApps_GetDepotBuildResult_Response
@@ -813,6 +813,7 @@
 "a\n(CFamilyGroups_CreateFamilyGroup_Response
 "a\n+CBluetoothManager_GetDeviceDetails_Response
 "a\n,CAuthentication_MigrateMobileSession_Request
+"apA
 "b\n#CRemoteClient_AddClientTask_Request
 "b\n#CSteamTV_HomePageTemplate_Developer
 "b\n0CFamilyGroups_SetFamilyCooldownOverrides_Request
@@ -1057,7 +1058,6 @@
 #Q7z
 #QueryBox_Cancel
 #RescueDialog_Explanation
-#RpA
 #ServerBrowser_InvalidIPAddress
 #ServerBrowser_NoGamesFound
 #ServerBrowser_NoGamesFoundNoPort
@@ -1326,6 +1326,7 @@
 #friends_online
 #include
 #include is NULL 
+#rpA
 #sCiY\t9
 #steam_menu_community
 #steam_menu_community_home
@@ -1535,7 +1536,6 @@ $\n\nattributes
 $\n\rGameRecording
 $\n\rprofile_theme
 $\n\vreport_type
-$bpA
 $d`D-laM
 $google/protobuf/source_context.proto"
 $steammessages_parental_objects.proto"
@@ -2097,7 +2097,6 @@ ${LANGUAGE}
 %u_markers.svg
 %umin
 %x:%x.%x "%x" "%x" "%x"
-%zpA
 &&Lj66lZ??~A
 &'&)&5&;&?&K&S&Y&e&i&o&{&
 &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
@@ -8970,6 +8969,7 @@ ${LANGUAGE}
 2sssua
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
+3"qA
 3$EE\f
 3$ae
 3%3+3/353A3G3[3_3g3k3s3y3
@@ -9984,6 +9984,7 @@ ${LANGUAGE}
 41CUserAccount_GetAccountLinkStatus_Request
 41CValveHWSurvey_GetSurveySchedule_Response
 41GameServerClient_QueryServerData_Response
+41qA
 42CAuthenticationSupport_RevokeToken_Request
 42CAuthentication_GetAuthSessionInfo_Request
 42CBluetoothManager_GetDeviceDetails_Request
@@ -10533,7 +10534,6 @@ ${LANGUAGE}
 5$SBq`
 5,czQH
 5-535;5A5Q5e5o5q5w5{5}5
-5-qA
 5.CAccountHardware_RegisterValveIndexComponent_Request
 5.CAuthenticationSupport_MarkTokenCompromised_Response"
 5.CAuthenticationSupport_QueryRefreshTokenByID_Request
@@ -10764,6 +10764,7 @@ ${LANGUAGE}
 5EPX_f
 5FError: XSelectionRequestEvent request does not contain a target property
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
+5MqA
 5O Z
 5T&w&
 5\n0k_EMsgAMIsPackageRestrictedInUserCountryResponse
@@ -12425,8 +12426,8 @@ Audio Behind
 Audio Encoder Thread
 Audio Init Failed
 Audio Streaming: %s
-Audio capture state change failed - no process state available
 Audio capture state change failed - overlay is not ready
+Audio capture state change pid %d to %s failed - no process state available
 Audio capture state changed
 Audio mix error: invalid buffer length\n
 Audio mix: start=%lld, returned=%lld
@@ -21533,7 +21534,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 11 2024 23:54:31
+Nov 12 2024 17:10:26
 November
 NrZl
 Num Lock
@@ -28756,7 +28757,6 @@ Zulu
 \nkhT
 \nlT2
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
-\nooA
 \noxAV<+
 \ntfPB
 \nzjZJ
@@ -28830,7 +28830,6 @@ Zulu
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t00000000000000007777777777777777crypto/asn1/asn_moid.c
 \t\taJj
-\tboA
 \tbwH]
 \teqMY
 \ttqE5

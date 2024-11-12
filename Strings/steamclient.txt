@@ -53388,7 +53388,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov 11 2024 23:54:22
+steam Nov 12 2024 17:09:39
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
