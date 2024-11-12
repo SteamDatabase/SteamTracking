@@ -27331,9 +27331,9 @@
           [a, n, i] = (0, s.q3)(() => [
             t.GetVisibilityState(),
             m.KN.Get().GetPartnerEventPermissions(t.GetClanSteamID()),
-            t.BWillShowOnLibraryOverviewDueToSettings() ||
-              (t.BWillShowOnLibraryDetailDueToSettings() &&
-                (0, d.Dn)(t.GetEventModel())),
+            (t.BWillShowOnLibraryOverviewDueToSettings() ||
+              t.BWillShowOnLibraryDetailDueToSettings()) &&
+              (0, d.Dn)(t.GetEventModel()),
           ]);
         if (a == d.zv.k_EEventStateVisible)
           return l.createElement(
