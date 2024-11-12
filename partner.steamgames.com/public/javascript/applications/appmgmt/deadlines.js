@@ -482,7 +482,7 @@
     2203: (e, t, a) => {
       "use strict";
       a.r(t),
-        a.d(t, { default: () => C, k_rgTemplateNameOptionsList: () => b });
+        a.d(t, { default: () => T, k_rgTemplateNameOptionsList: () => _ });
       var n = a(90626),
         i = a(24484),
         r = a(84811),
@@ -495,7 +495,18 @@
         u = a(71541),
         h = a(14771),
         p = a(78327);
-      function f() {
+      function f(e) {
+        const { requirement: t } = e,
+          a = JSON.parse(t.deadline.data.description_jsondata),
+          i = a.Parameters?.CustomMessageBody ?? "Message not available";
+        return n.createElement(
+          "div",
+          { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
+          n.createElement("div", null, i),
+          n.createElement(S, { ...e }),
+        );
+      }
+      function y() {
         return n.createElement(
           "div",
           { className: s().MessageHeader },
@@ -507,12 +518,12 @@
           ),
         );
       }
-      let y = -1,
-        v = -1;
-      function E(e) {
+      let v = -1,
+        E = -1;
+      function g(e) {
         const { requirement: t } = e;
-        if (-1 == y) y = t.index;
-        else if (y != t.index) return null;
+        if (-1 == v) v = t.index;
+        else if (v != t.index) return null;
         const a = JSON.parse(t.deadline.data.description_jsondata);
         let i =
           "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
@@ -530,12 +541,13 @@
           )
         );
       }
-      function g(e) {
-        const { requirement: t } = e;
-        if (-1 == v) v = t.index;
-        else if (v != t.index) return null;
-        const a = JSON.parse(t.deadline.data.description_jsondata),
+      function S(e) {
+        const { requirement: t } = e,
+          a = JSON.parse(t.deadline.data.description_jsondata),
           i = a.Parameters?.Dropbox_FileRequest_Url;
+        if (!i) return null;
+        if (-1 == E) E = t.index;
+        else if (E != t.index) return null;
         return n.createElement(
           "div",
           null,
@@ -576,7 +588,7 @@
           ),
         );
       }
-      function S(e) {
+      function N(e) {
         const { requirement: t } = e,
           a = (0, d.$z)(t.deadline.data.due_date),
           i = t.onboarded
@@ -603,13 +615,13 @@
           n.createElement("div", { className: s().SectionBody }, i),
         );
       }
-      function N(e) {
+      function b(e) {
         const { requirement: t } = e;
         return t.onboarded
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      const b = [
+      const _ = [
           "AddressCorrection",
           "DocReq-KYC-Entity-FR",
           "DocReq-KYC-Entity-FR-CERT",
@@ -622,7 +634,8 @@
           "FailureToComply",
           "FailureToComply-KYC",
           "Freeform",
-          "InvalidAddress",
+          "Freeform-FR",
+          "DocReq-InvalidAddress-FR",
           "InvalidTaxInfo-Partner",
           "InvalidTIN",
           "InvalidTINAudit-Partner",
@@ -633,7 +646,7 @@
           "Notify-NoTINTreaty-Partner",
           "Renewal-W8-Initial",
         ],
-        _ = {
+        w = {
           AddressCorrection: {
             component: function (e) {
               return n.createElement(
@@ -656,7 +669,7 @@
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
-                  "Why is this important",
+                  "Why is this important?",
                 ),
                 n.createElement(
                   "div",
@@ -675,7 +688,7 @@
                   n.createElement("br", null),
                   "The address must also include the correct postcode / zip if your country uses them.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -689,11 +702,11 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(f, null),
+                n.createElement(y, null),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
-                  "Why is this important",
+                  "Why is this important?",
                 ),
                 n.createElement(
                   "div",
@@ -709,7 +722,7 @@
                   "div",
                   { className: s().SectionBody },
                   "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
-                  N(e),
+                  b(e),
                 ),
                 n.createElement(
                   "div",
@@ -754,7 +767,7 @@
                     ),
                   ),
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -770,7 +783,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(f, null),
+                n.createElement(y, null),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -808,7 +821,7 @@
                     "Note: screenshots of business portals are not acceptable.",
                   ),
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -825,11 +838,11 @@
                       c().SectionCtn,
                     ),
                   },
-                  n.createElement(f, null),
+                  n.createElement(y, null),
                   n.createElement(
                     "div",
                     { className: s().SectionTitle },
-                    "Why is this important",
+                    "Why is this important?",
                   ),
                   n.createElement(
                     "div",
@@ -845,7 +858,7 @@
                     "div",
                     { className: s().SectionBody },
                     "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
-                    N(e),
+                    b(e),
                   ),
                 ),
                 n.createElement(
@@ -991,7 +1004,7 @@
                       ),
                     ),
                   ),
-                  n.createElement(g, { ...e }),
+                  n.createElement(S, { ...e }),
                 ),
               );
             },
@@ -1026,7 +1039,7 @@
                   { className: s().SectionBody },
                   "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -1040,7 +1053,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(S, { ...e }),
+                n.createElement(N, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1063,7 +1076,7 @@
                   n.createElement("br", null),
                   "Certification of tax Residency for Tax Treaty Purposes",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -1077,7 +1090,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(S, { ...e }),
+                n.createElement(N, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1116,7 +1129,7 @@
                     ),
                   ),
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -1130,7 +1143,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(S, { ...e }),
+                n.createElement(N, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1165,7 +1178,7 @@
                     ),
                   ),
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -1179,7 +1192,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(S, { ...e }),
+                n.createElement(N, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1220,7 +1233,7 @@
                     ),
                   ),
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -1253,7 +1266,7 @@
                   "div",
                   { className: s().SectionBody },
                   "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
-                  N(e),
+                  b(e),
                 ),
                 n.createElement(
                   "div",
@@ -1265,7 +1278,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1298,7 +1311,7 @@
                   "div",
                   { className: s().SectionBody },
                   "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
-                  N(e),
+                  b(e),
                 ),
                 n.createElement(
                   "div",
@@ -1310,29 +1323,13 @@
                   { className: s().SectionBody },
                   "When you have all necessary KYC and tax information prepared, you may retake the full interview by clicking the button below.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
-          Freeform: {
-            component: function (e) {
-              return n.createElement(
-                "div",
-                {
-                  className: (0, m.A)(
-                    s().NotificationContainer,
-                    c().SectionCtn,
-                  ),
-                },
-                n.createElement(
-                  "div",
-                  { style: { color: "orange" } },
-                  "TODO: Freeform template not implemented",
-                ),
-              );
-            },
-          },
-          InvalidAddress: {
+          Freeform: { component: f },
+          "Freeform-FR": { component: f },
+          "DocReq-InvalidAddress-FR": {
             component: function (e) {
               return n.createElement(
                 "div",
@@ -1353,7 +1350,7 @@
                   n.createElement(
                     "div",
                     { className: s().MessageSubject },
-                    "The permanent and or mailing address you entered in the tax interview cannot be verified. This may include not providing a postcode / zip - if this applie to you, please correct - ",
+                    "The permanent and or mailing address you entered in the tax interview cannot be verified. This may include not providing a postcode / zip - if this applies to you, please correct - ",
                     n.createElement(
                       "b",
                       null,
@@ -1365,7 +1362,7 @@
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
-                  "Why is this important",
+                  "Why is this important?",
                 ),
                 n.createElement(
                   "div",
@@ -1416,7 +1413,7 @@
                   ),
                   "Please do not give us the address of your bank or utility company.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(S, { ...e }),
               );
             },
           },
@@ -1467,7 +1464,7 @@
                     null,
                     "You must to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
                   ),
-                  n.createElement(E, { ...e }),
+                  n.createElement(g, { ...e }),
                 ),
               );
             },
@@ -1500,7 +1497,7 @@
                   "div",
                   { className: s().SectionBody },
                   "Since you did not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  N(e),
+                  b(e),
                 ),
                 n.createElement(
                   "div",
@@ -1512,7 +1509,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1554,7 +1551,7 @@
                   "div",
                   { className: s().SectionBody },
                   "You must correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
-                  n.createElement(E, { ...e }),
+                  n.createElement(g, { ...e }),
                 ),
               );
             },
@@ -1591,7 +1588,7 @@
                       null,
                       "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
                     ),
-                    n.createElement(E, { ...e }),
+                    n.createElement(g, { ...e }),
                   ),
                 ),
                 i = n.createElement(
@@ -1621,7 +1618,7 @@
                       "li",
                       null,
                       "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
-                      n.createElement(E, { ...e }),
+                      n.createElement(g, { ...e }),
                     ),
                   ),
                 );
@@ -1699,7 +1696,7 @@
                   "div",
                   { className: s().SectionBody },
                   "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  N(e),
+                  b(e),
                 ),
                 n.createElement(
                   "div",
@@ -1711,7 +1708,7 @@
                   { className: s().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1756,7 +1753,7 @@
                   "div",
                   { className: s().SectionBody },
                   "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  N(e),
+                  b(e),
                 ),
                 n.createElement(
                   "div",
@@ -1768,7 +1765,7 @@
                   { className: s().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1801,7 +1798,7 @@
                   { className: s().SectionBody },
                   "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by the legal representative of the account.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1839,7 +1836,7 @@
                   { className: s().SectionBody },
                   "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
@@ -1870,7 +1867,7 @@
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
-                  "Why is this important",
+                  "Why is this important?",
                 ),
                 n.createElement(
                   "div",
@@ -1911,12 +1908,12 @@
                     a +
                     " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                 ),
-                n.createElement(E, { ...e }),
+                n.createElement(g, { ...e }),
               );
             },
           },
         };
-      function w() {
+      function C() {
         const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
           ),
@@ -1934,12 +1931,14 @@
           );
         return [e, r, t, a, o];
       }
-      function C(e) {
-        const [t, a, o] = w(),
+      function T(e) {
+        const [t, a, o] = C(),
           l = n.useMemo(() => {
             const e = [...t];
             return (
               e.sort((e, t) => {
+                if (e.data.status != t.data.status)
+                  return 0 == e.data.status ? -1 : 1;
                 const a = new Date(
                     JSON.parse(e.data.description_jsondata)?.CreatedOn,
                   ),
@@ -1990,10 +1989,10 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  d && n.createElement(T, { strTemplate: h }),
+                  d && n.createElement(I, { strTemplate: h }),
                   l.length > 0 &&
                     l.map((e, t) =>
-                      n.createElement(I, {
+                      n.createElement(x, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2065,11 +2064,11 @@
           ),
         );
       }
-      function T(e) {
+      function I(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
-          s = b.map((e) => ({ label: e, data: e })),
+          s = _.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           d = new Intl.DateTimeFormat(navigator.language).format(l);
@@ -2102,18 +2101,18 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(I, {
+            n.createElement(x, {
               requirement: { deadline: c, index: 0, onboarded: r },
             }),
           )
         );
       }
-      function I(e) {
+      function x(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, i] = w(),
+          [, i] = C(),
           r = new Date(a?.CreatedOn);
-        if (!_[a.TemplateName])
+        if (!w[a.TemplateName])
           return n.createElement(
             "div",
             { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
@@ -2124,7 +2123,7 @@
             ),
             n.createElement("div", null, "Message Not Available"),
           );
-        const o = _[a.TemplateName].component;
+        const o = w[a.TemplateName].component;
         return n.createElement(
           n.Fragment,
           null,
@@ -2229,8 +2228,8 @@
         if (!1 === m) return [void 0, 2];
         if (s.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!s.A.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
-        const B = s.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return B ? [B, 3] : [null, 2];
+        const R = s.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return R ? [R, 3] : [null, 2];
       }
       function c(e, t, a) {
         return l(e, 0, t, a);
