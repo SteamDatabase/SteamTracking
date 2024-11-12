@@ -1056,7 +1056,7 @@
     "ChatRoom_GameInvite_Accept_And_Voice_Chat": "Spustit + hlasová konverzace",
     "ChatRoom_GameInvite_Family_View": "Tato hra nebyla schválena pro rodinný režim.",
     "ChatRoom_GameInvite_InviteTime": "Pozvánka odeslána v ",
-    "ChatRoom_GameInvite_PartyMore": "+ %1$s dalšími",
+    "ChatRoom_GameInvite_PartyMore": "+ dalšími (%1$s)",
     "ChatRoom_GameInvite_Dismissed": "%1$s Vás pozval do hry %2$s%3$s",
     "ChatRoom_GameInvite_YouInvited": "Pozvali jste uživatele %1$s do hry %2$s%3$s",
     "ChatRoom_GameInvite_Accepted": "Přijali jste pozvánku do hry %1$s%2$s",

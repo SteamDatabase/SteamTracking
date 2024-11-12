@@ -950,7 +950,7 @@
     "FriendSettings_HideOfflineFriendsInCategories": "맞춤 카테고리에서 오프라인 친구 숨기기",
     "FriendSettings_CategorizeInGameFriendsByGame": "게임별로 친구 그룹 짓기",
     "FriendSettings_HideCategorizedFriends": "온라인/오프라인 친구에서 카테고리로 분류된 친구 숨기기",
-    "FriendSettings_AlwaysUse24HourClock": "항상 24시간제 형식으로 타임스탬프 표시",
+    "FriendSettings_AlwaysUse24HourClock": "24시간제 형식으로 시간 표시",
     "FriendSettings_DisableEmbedInlining": "이미지 및 다른 미디어 인라인을 포함하지 않음",
     "FriendSettings_SignInToFriends": "Steam 클라이언트가 시작될 때 친구 목록에 로그인",
     "FriendSettings_ExampleFriend": "친구 예시",

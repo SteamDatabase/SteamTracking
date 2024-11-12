@@ -99,7 +99,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123@
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -14901,7 +14900,6 @@ $tICAPIJobListHashLoadSave
 >AppID %u does not advertise linux as a supported platform, but a linux specific depot is present.\n
 >Attempt to call SetActiveMode() on a mode not associated with this source
 >EHfOTX
->HkXp
 >I{TrEX
 >KY5
 >O-p?A6
@@ -31282,6 +31280,7 @@ Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Size() == operand.Size()
 SizeOnDisk
 Skip VR initialization entirely no matter who asks for it
+Skip mapping AppID %u to tool "%s" with priority %d: mapping to tool "%s" with priority %d already exists.
 Skip streaming driver checks
 SkipDiscoveryQueueItem
 SkipShaderProcessing
@@ -46584,7 +46583,7 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6811
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2412
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3782
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3788
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:105
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3055
@@ -53389,7 +53388,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov  8 2024 23:37:17
+steam Nov 11 2024 23:54:22
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

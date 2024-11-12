@@ -515,7 +515,7 @@
     "ChatRoom_Timestamp_InvalidDate": "Data inválida",
     "ChatRoom_Timestamp_Yesterday": "Ontem, %1$s",
     "Chat_ErrorSending_Title": "Não foi possível enviar a mensagem",
-    "Chat_ErrorSending": "Não foi possível enviar a mensagem. Tenta de novo mais tarde.",
+    "Chat_ErrorSending": "Não foi possível enviar a mensagem. Tenta mais tarde.",
     "Chat_VideoLoadError": "Não foi possível carregar o vídeo. URL: %1$s",
     "Chat_ErrorSending_NotFriends": "A tua conta não tem permissão para enviar mensagens a utilizadores que não estejam na tua lista de amigos.",
     "Chat_ErrorSending_RateLimitExceeded": "Enviaste demasiadas mensagens num curto espaço de tempo. Aguarda e tenta mais tarde.",

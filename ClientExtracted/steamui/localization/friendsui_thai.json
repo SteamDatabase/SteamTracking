@@ -914,7 +914,7 @@
     "RemotePlay_ControllerSlot_Empty": "ว่างเปล่า",
     "RemotePlay_InactiveControllers": "คอนโทรลเลอร์ที่ไม่ใช้งาน",
     "RemotePlay_IdentifyController": "ระบุคอนโทรลเลอร์",
-    "RemotePlay_DeactivateController": "ยกเลิกการใช้งานคอนโทรลเลอร์",
+    "RemotePlay_DeactivateController": "ปิดใช้งานคอนโทรลเลอร์",
     "RemotePlay_ReactivateController": "เปิดใช้งานคอนโทรลเลอร์อีกครั้ง",
     "RemotePlay_CreateSession": "สร้างเซสชัน",
     "RemotePlay_EndSession": "ปิดเซสชัน",

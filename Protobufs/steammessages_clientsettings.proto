@@ -212,7 +212,7 @@ message CMsgClientSettings {
 	optional .EGRAudio g_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_max_fps = 18214 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\MaxFPS", (setting_default_int) = 60, (setting_clamp_min) = 24, (setting_clamp_max) = 120];
 	optional .CMsgHotkey gamerecording_hotkey_ic = 18215 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipKey", (setting_default_string) = "None"];
-	optional float gamerecording_ic_seconds = 18216 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipDuration", (setting_default_float) = 10];
+	optional float gamerecording_ic_seconds = 18216 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipDuration", (setting_default_float) = 30];
 	optional .EGRExportLimitType gamerecording_export_limit_type = 18217 [default = k_EGRExportLimitType_Native, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitType"];
 	optional int32 gamerecording_export_limit_size_mb = 18218 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitSize", (setting_default_int) = 100];
 	optional int32 gamerecording_export_limit_bitrate = 18219 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitBitrate", (setting_default_int) = 1];
