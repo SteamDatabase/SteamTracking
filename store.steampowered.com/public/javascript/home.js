@@ -24,7 +24,6 @@ GHomepage = {
 
 	rgRecommendedGames: [],
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
-	rgRecommendedAppsByCreators: [], // { appid, creatorid }
 	rgRecommendedBySteamLabsApps: [],
 
 	rgCommunityRecommendations: [],
@@ -188,7 +187,6 @@ GHomepage = {
 
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
 			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
-			GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
 			GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
 			GHomepage.rgCommunityRecommendations = rgParams.rgCommunityRecommendations || [];
 			GHomepage.strCommunityRecommendationsPrefLastSaved = rgParams.strCommunityRecommendationsPrefLastSaved || false,
@@ -239,7 +237,7 @@ GHomepage = {
 				$J.ajax( {
 					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
 					data: {
-						bNeedRecommendedCurators: 0,
+						v: 2,							bNeedRecommendedCurators: 0,
 						u: g_AccountID,
 					},
 					dataType: 'json',
@@ -268,6 +266,9 @@ GHomepage = {
 			GHomepage.RenderFriendsRecentlyPurchased();
 		} catch( e ) { OnHomepageException(e); }
 
+		try {
+			GHomepage.RenderRecommendedCreatorApps();
+		} catch( e ) { OnHomepageException(e); }
 
 		try {
 			GHomepage.RenderRecentlyUpdatedV2();
@@ -370,12 +371,6 @@ GHomepage = {
 		} catch( e ) { OnHomepageException(e); }
 
 		// Logged in
-		// Recommended Curators
-		try {
-			GHomepage.RenderRecommendedCreatorApps();
-		} catch( e ) { OnHomepageException(e); }
-
-
 		try {
 			GHomepage.RenderTopVRApps();
 		} catch( e ) { OnHomepageException(e); }
@@ -1097,11 +1092,13 @@ GHomepage = {
 
 	RenderRecommendedCreatorApps: function()
 	{
+		let rgRecommendedAppsByCreators = v_shuffle( GHomepage.oAdditionalData.rgRecommendedAppsByCreators ) || [];
+
 		var $RecommendedCreators =  $J('.recommended_creators_ctn' );
 		$RecommendedCreators.hide();
 
         var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.rgRecommendedAppsByCreators, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			rgRecommendedAppsByCreators, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
 		rgCapsulesToRender = [];
