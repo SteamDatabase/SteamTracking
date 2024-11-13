@@ -13,59 +13,6 @@
         DatePreview: "_2p-FIFIwIlMJ256q0Zj7lo",
       };
     },
-    45737: (e) => {
-      e.exports = {
-        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
-        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
-        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
-        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
-        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
-        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
-        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
-        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
-        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
-        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
-        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
-        Blue: "J7iYYml2Jf_PcaACW1hEr",
-        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
-        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
-        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
-        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
-        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
-        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
-        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
-        RightCol: "_3kaQhRnhNh_awrnNX90rui",
-        NoSticky: "JQNb8bHftBTAYpCXTx52v",
-        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
-        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
-        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
-        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
-        Indent: "_7PV326-4cpZdmTCEdgC2l",
-        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
-        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
-        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
-        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
-        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
-        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
-        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
-        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
-        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
-        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
-        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
-        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
-        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
-        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
-        DeleteAll: "rYuknI3K1VFknv90GNUTc",
-        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
-        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
-        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
-        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
-        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
-        BigStat: "lYYwDDss378Sm0FKPBxPh",
-        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
-      };
-    },
     92825: (e) => {
       e.exports = { Ctn: "_3gnQfZ3NUW9NFF3WllsQ6b" };
     },
@@ -77,12 +24,12 @@
     },
     43709: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => X });
+      n.r(t), n.d(t, { default: () => j });
       var r = n(90626),
         s = n(24484);
       const o = (0, s.Tc)("physical_goods", "application_config");
-      var a = n(34629),
-        i = n(56545),
+      var i = n(34629),
+        a = n(56545),
         l = n(75487),
         c = n(96059),
         u = n(44332),
@@ -139,7 +86,7 @@
             ));
         }
         async SetPositionMessages(e) {
-          const t = i.w.Init(l.ku);
+          const t = a.w.Init(l.ku);
           if (0 == e.length)
             return (
               console.log(
@@ -174,9 +121,9 @@
                   const o = s.findIndex(
                     (t) => t.start_queue_position == e.start_queue_position,
                   );
-                  let a = [...s];
-                  o >= 0 ? (a[o] = e) : (a.push(e), this.SortList(a)),
-                    this.m_mapProductPositionMsgList.set(r, a),
+                  let i = [...s];
+                  o >= 0 ? (i[o] = e) : (i.push(e), this.SortList(i)),
+                    this.m_mapProductPositionMsgList.set(r, i),
                     t.add(this.GetKey(e));
                 }),
                 Array.from(t).forEach((e) => {
@@ -201,7 +148,7 @@
           );
         }
         async DeletePositionMessage(e) {
-          const t = i.w.Init(l.$J);
+          const t = a.w.Init(l.$J);
           t.Body().set_edistributor(e.edistributor),
             t.Body().set_product_identifier(e.product_identifier),
             t.Body().set_start_queue_position(e.start_queue_position);
@@ -239,7 +186,7 @@
           );
         }
         async ReloadReservationPositionMessages() {
-          const e = i.w.Init(l.jd);
+          const e = a.w.Init(l.jd);
           return await l.nd.ReloadAllReservationPositionMessages(
             this.m_steamInterface.GetServiceTransport(),
             e,
@@ -310,10 +257,10 @@
             e.ReloadReservationPositionMessages,
         };
       }
-      (0, a.Cg)([_.oI], p.prototype, "AddProductID", null),
-        (0, a.Cg)([_.oI], p.prototype, "SetPositionMessages", null),
-        (0, a.Cg)([_.oI], p.prototype, "DeletePositionMessage", null),
-        (0, a.Cg)(
+      (0, i.Cg)([_.oI], p.prototype, "AddProductID", null),
+        (0, i.Cg)([_.oI], p.prototype, "SetPositionMessages", null),
+        (0, i.Cg)([_.oI], p.prototype, "DeletePositionMessage", null),
+        (0, i.Cg)(
           [_.oI],
           p.prototype,
           "ReloadReservationPositionMessages",
@@ -334,7 +281,7 @@
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          r.createElement(C, { selected: t, setSelected: n }),
+          r.createElement(b, { selected: t, setSelected: n }),
           r.createElement(
             v.$n,
             {
@@ -349,22 +296,22 @@
           ),
         );
       }
-      function C(e) {
+      function b(e) {
         const { selected: t, setSelected: n } = e,
           s = (0, r.useRef)(),
-          a = (function () {
+          i = (function () {
             const [e] = (0, r.useState)(() => o);
             return e;
           })(),
-          i = h(),
+          a = h(),
           l = (0, r.useMemo)(
             () =>
-              a && i
-                ? a
+              i && a
+                ? i
                     .filter(
                       (e) =>
                         -1 ==
-                        i.findIndex(
+                        a.findIndex(
                           (t) =>
                             t.edistributor == e.edistributor &&
                             t.product_identifier == e.product_identifier,
@@ -375,11 +322,11 @@
                       label: `${e.product_description} @ ${e.distributor} - product id: ${e.product_identifier}, part number ${e.part_number} `,
                     }))
                 : [],
-            [a, i],
+            [i, a],
           );
         (0, r.useEffect)(() => {
           s?.current && s.current.clearValue();
-        }, [i]);
+        }, [a]);
         const c = l?.find(
           (e) =>
             t &&
@@ -399,63 +346,63 @@
           },
         });
       }
-      var b = n(71298),
+      var C = n(71298),
         R = n(99637),
         P = n(8905),
         w = n(9154),
-        T = n(738),
-        k = n(48479),
-        y = n(56011),
-        D = n(61859),
-        I = n(95695),
-        L = n(92825),
-        N = n.n(L),
+        k = n(738),
+        y = n(48479),
+        D = n(56011),
+        T = n(61859),
+        L = n(95695),
+        I = n(92825),
+        N = n.n(I),
         A = n(44165);
       function G(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
-      function B(e) {
+      function q(e) {
         const { strToken: t, rtEstimatedNotifcationDate: n } = e,
           s = new Date(1e3 * n),
           o = s.getMonth() + 1;
-        let a = "",
-          i = "",
+        let i = "",
+          a = "",
           l = "",
           c = t;
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
-            a = "" + s.getFullYear();
+            i = "" + s.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
-            (a = (0, D.we)("#Sale_Reservation_MonthNoun_" + o)),
-              (i = "" + s.getFullYear());
+            (i = (0, T.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (a = "" + s.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (a = (0, D.we)("#Sale_Reservation_MonthNoun_" + G(o, 1))),
-              (i = (0, D.we)("#Sale_Reservation_MonthNoun_" + o)),
+            (i = (0, T.we)("#Sale_Reservation_MonthNoun_" + G(o, 1))),
+              (a = (0, T.we)("#Sale_Reservation_MonthNoun_" + o)),
               (l = "" + s.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (a = (0, D.we)("#Sale_Reservation_MonthNoun_" + G(o, 2))),
-              (i = (0, D.we)("#Sale_Reservation_MonthNoun_" + o)),
+            (i = (0, T.we)("#Sale_Reservation_MonthNoun_" + G(o, 2))),
+              (a = (0, T.we)("#Sale_Reservation_MonthNoun_" + o)),
               (l = "" + s.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (a = (0, D.we)("#Sale_Reservation_MonthNoun_" + G(o, 3))),
-              (i = (0, D.we)("#Sale_Reservation_MonthNoun_" + o)),
+            (i = (0, T.we)("#Sale_Reservation_MonthNoun_" + G(o, 3))),
+              (a = (0, T.we)("#Sale_Reservation_MonthNoun_" + o)),
               (l = "" + s.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
             (c = "#Sale_Reservation_Quarter" + (Math.floor((o - 1) / 3) + 1)),
-              (a = "" + s.getFullYear());
+              (i = "" + s.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (c =
               "#Sale_Reservation_AfterQuarter" + (Math.floor((o - 1) / 3) + 1)),
-              (a = (0, D.we)("#Sale_Reservation_MonthNoun_" + o)),
-              (i = "" + s.getFullYear());
+              (i = (0, T.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (a = "" + s.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
@@ -464,9 +411,9 @@
               t < 7 ||
                 (t < 28
                   ? ((c = "#Sale_Reservation_RelativeWeekly_Plural"),
-                    (a = "" + Math.floor(t / 7 + 1)))
+                    (i = "" + Math.floor(t / 7 + 1)))
                   : ((c = "#Sale_Reservation_RelativeMonthly"),
-                    (a = "" + Math.floor(t / 28 + 1))));
+                    (i = "" + Math.floor(t / 28 + 1))));
             }
             break;
           default:
@@ -475,7 +422,7 @@
         return r.createElement(
           "div",
           { className: N().Ctn },
-          (0, D.we)(c, a, i, l, ""),
+          (0, T.we)(c, i, a, l, ""),
         );
       }
       function F(e) {
@@ -497,7 +444,7 @@
               "No products with reservation position messages exists.",
             );
       }
-      function q(e) {
+      function z(e) {
         return r.createElement(
           "div",
           null,
@@ -514,7 +461,7 @@
           ),
         );
       }
-      function z(e) {
+      function Y(e) {
         h();
         return r.createElement(
           "div",
@@ -533,7 +480,7 @@
           r.createElement(
             v.$n,
             {
-              onClick: (e) => (0, T.pg)(r.createElement(Q, null), (0, y.uX)(e)),
+              onClick: (e) => (0, k.pg)(r.createElement(B, null), (0, D.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
@@ -549,14 +496,14 @@
             );
           })(t),
           s = n.product_description + " " + n.distributor,
-          a = (function (e) {
+          i = (function (e) {
             const [t, n] = (0, r.useState)(() =>
               p.Get().GetPositionMessagingForProduct(e),
             );
             return (0, _.hL)(p.Get().GetPositionListChangeCallback(e), n), t;
           })(t);
         return r.createElement(
-          k.qx,
+          y.qx,
           {
             bStartMinimized: !1,
             title: s,
@@ -566,7 +513,7 @@
             v.$n,
             {
               onClick: (e) =>
-                (0, T.pg)(r.createElement(x, { productID: t }), (0, y.uX)(e)),
+                (0, k.pg)(r.createElement(Q, { productID: t }), (0, D.uX)(e)),
             },
             "Add new start position",
           ),
@@ -589,8 +536,8 @@
             r.createElement(
               "tbody",
               null,
-              a.map((e) =>
-                r.createElement(Y, {
+              i.map((e) =>
+                r.createElement($, {
                   key: s + e.start_queue_position,
                   positionMsg: e,
                 }),
@@ -599,7 +546,7 @@
           ),
         );
       }
-      function Y(e) {
+      function $(e) {
         const { positionMsg: t } = e;
         return r.createElement(
           "tr",
@@ -608,12 +555,12 @@
           r.createElement(
             "td",
             null,
-            (0, D.TW)(t.rtime_estimated_notification),
+            (0, T.TW)(t.rtime_estimated_notification),
           ),
           r.createElement(
             "td",
             null,
-            r.createElement(B, {
+            r.createElement(q, {
               rtEstimatedNotifcationDate: t.rtime_estimated_notification,
               strToken: t.localization_token,
             }),
@@ -628,7 +575,7 @@
             ),
             r.createElement("br", null),
             "On: ",
-            (0, D.TW)(t.rtime_created),
+            (0, T.TW)(t.rtime_created),
           ),
           r.createElement(
             "td",
@@ -637,12 +584,12 @@
               v.$n,
               {
                 onClick: (e) =>
-                  (0, T.pg)(
-                    r.createElement(x, {
+                  (0, k.pg)(
+                    r.createElement(Q, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
-                    (0, y.uX)(e),
+                    (0, D.uX)(e),
                   ),
               },
               "Update",
@@ -651,9 +598,9 @@
               v.$n,
               {
                 onClick: (e) =>
-                  (0, T.pg)(
-                    r.createElement(H, { positionMsg: t }),
-                    (0, y.uX)(e),
+                  (0, k.pg)(
+                    r.createElement(x, { positionMsg: t }),
+                    (0, D.uX)(e),
                   ),
               },
               "Delete",
@@ -661,21 +608,21 @@
           ),
         );
       }
-      function x(e) {
+      function Q(e) {
         const { productID: t, existingPositionMsg: n, closeModal: s } = e,
           { fnSetPositionMessages: o } = f(),
-          a = Math.floor(Date.now() / 1e3),
-          [i, l] = (0, r.useState)(n?.start_queue_position || 0),
+          i = Math.floor(Date.now() / 1e3),
+          [a, l] = (0, r.useState)(n?.start_queue_position || 0),
           [c, u] = (0, r.useState)(
-            n?.rtime_estimated_notification || a + 86400,
+            n?.rtime_estimated_notification || i + 86400,
           ),
           [d, m] = (0, r.useState)(
             n?.localization_token || "#Sale_Reservation_MonthYear",
           ),
           _ = n ? "Update Queue Range" : "Create Queue Range",
-          g = (0, b.vs)();
+          g = (0, C.vs)();
         return g.bLoading
-          ? r.createElement(b.Hh, {
+          ? r.createElement(C.Hh, {
               state: g,
               strDialogTitle: _,
               closeModal: s,
@@ -690,7 +637,7 @@
                   g.fnSetLoading(!0);
                   const e = {
                     ...t,
-                    start_queue_position: i,
+                    start_queue_position: a,
                     rtime_estimated_notification: c,
                     localization_token: d,
                   };
@@ -718,7 +665,7 @@
                 r.createElement(v.pd, {
                   type: "number",
                   min: "0",
-                  value: i,
+                  value: a,
                   label: "Starting Queue Position",
                   onChange: (e) =>
                     l(Number.parseInt(e?.currentTarget?.value || "0")),
@@ -728,12 +675,12 @@
                   strDescription: "Estimated Time Users will receive invite",
                   strDescToolTip:
                     "Everyone above this queue position until the next entry, we expect to have been invited by or on this date",
-                  nEarliestTime: a,
+                  nEarliestTime: i,
                   fnGetTimeToUpdate: () => c,
                   fnSetTimeToUpdate: u,
                 }),
                 r.createElement("br", null),
-                r.createElement(K, {
+                r.createElement(O, {
                   strToken: d,
                   fnSetToken: m,
                   rtEstimateDate: c,
@@ -741,14 +688,14 @@
               ),
             );
       }
-      function H(e) {
+      function x(e) {
         const { positionMsg: t, closeModal: n } = e,
           { fnDeletePositionMessage: s } = f(),
           o = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          a = (0, b.vs)();
-        return a.bLoading
-          ? r.createElement(b.Hh, {
-              state: a,
+          i = (0, C.vs)();
+        return i.bLoading
+          ? r.createElement(C.Hh, {
+              state: i,
               strDialogTitle: o,
               closeModal: n,
             })
@@ -757,20 +704,20 @@
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: n,
               onOK: () => {
-                a.fnSetLoading(!0),
+                i.fnSetLoading(!0),
                   s(t).then((e) => {
                     e
-                      ? (a.fnSetSuccess(!0),
-                        a.fnSetStrSuccess("Successfully delete position"))
-                      : (a.fnSetSuccess(!1),
-                        a.fnSetStrError(
+                      ? (i.fnSetSuccess(!0),
+                        i.fnSetStrSuccess("Successfully delete position"))
+                      : (i.fnSetSuccess(!1),
+                        i.fnSetStrError(
                           "Failed, please check console logs and/or try again",
                         ));
                   });
               },
             });
       }
-      function Q(e) {
+      function B(e) {
         const { closeModal: t } = e,
           { fnReloadReservationPositionMessages: n } = f(),
           [s, o] = (0, r.useState)(!1);
@@ -788,7 +735,7 @@
           })
         );
       }
-      const W = [
+      const K = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -800,12 +747,12 @@
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
       ];
-      function K(e) {
+      function O(e) {
         const { strToken: t, fnSetToken: n, rtEstimateDate: s } = e,
           o = (0, r.useMemo)(
             () =>
-              W.map((e) => ({
-                label: r.createElement(B, {
+              K.map((e) => ({
+                label: r.createElement(q, {
                   strToken: e,
                   rtEstimatedNotifcationDate: s,
                 }),
@@ -817,7 +764,7 @@
           "div",
           null,
           r.createElement(v.m, {
-            strDropDownClassName: I.DropDownScroll,
+            strDropDownClassName: L.DropDownScroll,
             label: "Date Format",
             rgOptions: o,
             selectedOption: t,
@@ -835,9 +782,9 @@
               r.createElement(
                 "div",
                 null,
-                (0, D.we)("#Sale_Reservation_ExpectedDate"),
+                (0, T.we)("#Sale_Reservation_ExpectedDate"),
               ),
-              r.createElement(B, {
+              r.createElement(q, {
                 rtEstimatedNotifcationDate: s,
                 strToken: t,
               }),
@@ -845,52 +792,52 @@
           ),
         );
       }
-      var O = n(52038),
-        V = n(45737),
-        J = n.n(V);
-      function X(e) {
+      var W = n(52038),
+        H = n(45737),
+        V = n.n(H);
+      function j(e) {
         return r.createElement(
           "div",
-          { className: (0, O.A)(S.ctn, J().AdminPageCtn) },
+          { className: (0, W.A)(S.ctn, V().AdminPageCtn) },
           r.createElement(
             "h1",
-            { className: J().PageTitle },
+            { className: V().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
           r.createElement("hr", { className: "VO" }),
           r.createElement(
             "div",
-            { className: J().ColumnCtn },
+            { className: V().ColumnCtn },
             r.createElement(
               "div",
-              { className: J().LeftCol },
+              { className: V().LeftCol },
               r.createElement(
                 "div",
-                { className: J().SectionCtn },
+                { className: V().SectionCtn },
                 r.createElement(M, null),
               ),
               r.createElement(
                 "div",
-                { className: J().SectionCtn },
+                { className: V().SectionCtn },
                 r.createElement(F, null),
               ),
             ),
             r.createElement(
               "div",
-              { className: J().RightCol },
+              { className: V().RightCol },
               r.createElement(
                 "div",
-                { className: J().SectionCtn },
-                r.createElement(q, null),
-              ),
-              r.createElement(
-                "div",
-                { className: J().SectionCtn },
+                { className: V().SectionCtn },
                 r.createElement(z, null),
               ),
               r.createElement(
                 "div",
-                { className: J().SectionCtn },
+                { className: V().SectionCtn },
+                r.createElement(Y, null),
+              ),
+              r.createElement(
+                "div",
+                { className: V().SectionCtn },
                 r.createElement(v.JU, null, "Useful Links:"),
                 r.createElement(
                   "ul",
@@ -920,8 +867,8 @@
       var r = n(71541),
         s = n(61859),
         o = n(12155),
-        a = n(90626),
-        i = n(52038),
+        i = n(90626),
+        a = n(52038),
         l = n(95695),
         c = n(84811),
         u = n(64734),
@@ -937,38 +884,38 @@
             children: _,
           } = e,
           g = (0, d.q3)(() => r());
-        return a.createElement(
-          a.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          a.createElement(
+          i.createElement(
             "div",
             {
-              className: (0, i.A)(
+              className: (0, a.A)(
                 o,
                 u.SectionTitleHeader,
                 u.required_title,
                 "SectionTitleHeader",
               ),
             },
-            a.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, i.A)(
+                className: (0, a.A)(
                   l.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
               t,
-              Boolean(n) && a.createElement(m.o, { tooltip: n }),
+              Boolean(n) && i.createElement(m.o, { tooltip: n }),
             ),
-            a.createElement(p, { bIsMinimized: g, fnToggleMinimize: s }),
+            i.createElement(p, { bIsMinimized: g, fnToggleMinimize: s }),
           ),
-          !g && a.createElement(c.tH, null, _),
+          !g && i.createElement(c.tH, null, _),
         );
       }
       function g(e) {
-        const [t, n] = a.useState(Boolean(e.bStartMinimized));
-        return a.createElement(
+        const [t, n] = i.useState(Boolean(e.bStartMinimized));
+        return i.createElement(
           _,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
@@ -976,23 +923,23 @@
       }
       function p(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
-          i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return a.createElement(
+          a = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return i.createElement(
           r.$n,
-          { "data-tooltip-text": (0, s.we)(i), onClick: n },
+          { "data-tooltip-text": (0, s.we)(a), onClick: n },
           e.bIsMinimized
-            ? a.createElement(o.hz4, null)
-            : a.createElement(o.Xjb, null),
+            ? i.createElement(o.hz4, null)
+            : i.createElement(o.Xjb, null),
         );
       }
     },
     4434: (e, t, n) => {
       "use strict";
-      n.d(t, { m: () => a });
+      n.d(t, { m: () => i });
       var r = n(41735),
         s = n.n(r),
         o = n(90626);
-      function a(e) {
+      function i(e) {
         const t = o.useRef(s().CancelToken.source());
         return (
           o.useEffect(() => {
@@ -1005,11 +952,11 @@
     },
     68797: (e, t, n) => {
       "use strict";
-      n.d(t, { H: () => a });
+      n.d(t, { H: () => i });
       var r = n(41735),
         s = n.n(r),
         o = n(56545);
-      function a(e) {
+      function i(e) {
         if (s().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (

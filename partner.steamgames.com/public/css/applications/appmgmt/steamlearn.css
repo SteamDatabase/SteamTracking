@@ -1205,7 +1205,7 @@ button.DialogButton {
     ), #2c2f34;
   display: flex;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 240px;
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc .meAbe3Sy_IJ4PngdGme2- {
   padding: 0px 4px;
@@ -1277,7 +1277,7 @@ button.DialogButton {
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc .Nhk_tWo2F_uAAc3FK70kf {
   font-size: 13px;
-  padding: 8px;
+  padding: 8px 14px;
   width: 100%;
   flex-grow: 1;
   display: flex;

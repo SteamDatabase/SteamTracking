@@ -127,7 +127,7 @@
           const e = window.__nav_tree_root;
           return n.createElement(
             o.B2,
-            { ...l, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
+            { ...l, navTreeRef: u, parentEmbeddedNavTree: e },
             n.createElement(r.q, null, t),
           );
         }
@@ -136,7 +136,7 @@
     },
     34181: (e, t, s) => {
       "use strict";
-      s.d(t, { A: () => b, D: () => v });
+      s.d(t, { A: () => b, D: () => B });
       var i = s(34629),
         n = s(90626),
         a = s(75844),
@@ -275,7 +275,7 @@
       var E = s(18828),
         _ = s.n(E),
         f = s(78327);
-      function B(e) {
+      function v(e) {
         return n.createElement(
           n.Fragment,
           null,
@@ -288,7 +288,7 @@
           e.persona.GetCurrentGameName(),
         );
       }
-      let v = class extends n.Component {
+      let B = class extends n.Component {
         render() {
           const {
             className: e,
@@ -302,12 +302,12 @@
             bHideGameName: d,
             bHideEnhancedRichPresenceLabel: A,
             bHideSnooze: E,
-            bHideStatus: v,
+            bHideStatus: B,
             renderStatus: b,
             renderRichPresence: k,
             bHidePersona: L,
-            bDNDSet: R,
-            bHasPartyBeacon: S,
+            bDNDSet: S,
+            bHasPartyBeacon: R,
             bHasGamePrivacy: C,
             bNoMask: D,
             ...w
@@ -322,8 +322,8 @@
               g && _().compactView,
               D && _().NoMask,
             ];
-          S || s.has_public_party_beacon
-            ? (N = n.createElement(B, { persona: s }))
+          R || s.has_public_party_beacon
+            ? (N = n.createElement(v, { persona: s }))
             : (0, r.aP)(i)
               ? ((N = (0, o.we)("#PersonaStateBlocked")), y.push(_().blocked))
               : s.is_ingame
@@ -354,7 +354,7 @@
             L && y.push(_().hidePersona),
             k && (M = k()),
             (!d && M) || y.push(_().twoLine);
-          const O = !s.is_ingame && !v,
+          const O = !s.is_ingame && !B,
             U = !A && M,
             x = N && (!d || !U),
             H = (0, r.ID)(f.TS.LAUNCHER_TYPE);
@@ -381,7 +381,7 @@
                     ")",
                   ),
               ),
-              R &&
+              S &&
                 n.createElement(
                   "div",
                   {
@@ -450,7 +450,7 @@
           );
         }
       };
-      v = (0, i.Cg)([a.PA], v);
+      B = (0, i.Cg)([a.PA], B);
       const b = (0, a.PA)((e) => {
         const {
           persona: t,
@@ -1325,12 +1325,12 @@
           [g] = (0, l.QD)("inqueue", "0"),
           [P, E] = (0, i.useState)(!1),
           [_, f] = (0, i.useState)(!1),
-          [B] = (0, c.t7)(t, { include_assets: !0 }),
-          v = (0, o.A)(),
+          [v] = (0, c.t7)(t, { include_assets: !0 }),
+          B = (0, o.A)(),
           b = i.useRef();
         i.useEffect(() => b.current?.Activate(!0), []);
         const k = (0, A.Qn)(),
-          { eStoreDiscoveryQueueType: L, storePageFilter: R } =
+          { eStoreDiscoveryQueueType: L, storePageFilter: S } =
             i.useMemo(() => {
               if (g?.length > 0) {
                 const e = g.split("_"),
@@ -1343,20 +1343,20 @@
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
             }, [g]),
-          S = i.useCallback(() => {
+          R = i.useCallback(() => {
             f(!0);
           }, []),
           C = i.useCallback(() => {
             E(!0);
           }, []),
-          D = (0, r.WX)(L, R);
-        return s && B
+          D = (0, r.WX)(L, S);
+        return s && v
           ? _
             ? null
             : i.createElement(
                 n.u,
                 {
-                  NavigationManager: v,
+                  NavigationManager: B,
                   navTreeRef: b,
                   navID: "DiscoveryQueueAppWidget",
                 },
@@ -1365,7 +1365,7 @@
                   {
                     focusable: !0,
                     className: d().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: S,
+                    onSecondaryButton: R,
                     onOKButton: C,
                     onOKActionDescription: (0, p.we)(
                       "#DiscoveryQueue_ResumeWizard",
@@ -1374,7 +1374,7 @@
                   },
                   i.createElement("img", {
                     className: d().WidgetCapsule,
-                    src: B?.GetAssets().GetSmallCapsuleURL(),
+                    src: v?.GetAssets().GetSmallCapsuleURL(),
                   }),
                   i.createElement(
                     "div",
@@ -1385,7 +1385,7 @@
                   !k &&
                     i.createElement(
                       "div",
-                      { className: d().CloseButton, onClick: S },
+                      { className: d().CloseButton, onClick: R },
                       i.createElement(m.X, null),
                     ),
                   P &&
@@ -1394,11 +1394,25 @@
                       bWizardVisible: P,
                       fnCloseModal: () => E(!1),
                       eStoreDiscoveryQueueType: L,
-                      storePageFilter: R,
+                      storePageFilter: S,
                     }),
                 ),
               )
           : null;
+      }
+    },
+    6804: (e, t, s) => {
+      "use strict";
+      s.r(t), s.d(t, { default: () => o });
+      var i = s(90626),
+        n = s(96236),
+        a = s(71922);
+      function o() {
+        return i.createElement(
+          n.K,
+          { placeholderHeight: "200px", rootMargin: "0px 0px 100% 0px" },
+          i.createElement(a.g, { eStoreDiscoveryQueueType: 0 }),
+        );
       }
     },
     25054: (e, t, s) => {
@@ -1657,7 +1671,7 @@
             })
           : [];
         if (f.length > 0) throw Promise.all(f);
-        const B = P.find((e, t) => {
+        const v = P.find((e, t) => {
           const s = d[t];
           return (
             s &&
@@ -1669,7 +1683,7 @@
             })
           );
         });
-        if (B?.error) throw B.error;
+        if (v?.error) throw v.error;
         return E(_());
       }
     },

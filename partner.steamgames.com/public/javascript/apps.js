@@ -3560,11 +3560,11 @@ function ReleaseGameCommon( url, data )
 	});
 }
 
-function AddToDedicatedServerPackage( appid, bAdd )
+function SetToolFreeToDownload( appid, bAdd )
 {
 	$J.ajax({
 		type: "POST",
-		url: "https://partner.steamgames.com/apps/ajaxaddtodedicatedserverpackage/"+appid,
+		url: "https://partner.steamgames.com/apps/ajaxsettoolfreetodownload/"+appid,
 		dataType: "json",
 		data: {
 			'add' : bAdd,

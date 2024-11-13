@@ -153,6 +153,7 @@
         AppLabels: "_1gCoNWQfTPQf4Oo6uJLX9",
         AppType: "_2ZrhAQm3GQlhhKkqzdGwsF",
         DLC: "_3joD2YzY0xQ4OQFjl8vTK1",
+        Playtest: "_2BpsHGvYJ2BpGraZ66oN_-",
         AppRelease: "_1XsM2jNRjoVa7SfxlYIXAb",
       };
     },
@@ -5576,19 +5577,19 @@
         );
       }
       function la(e) {
-        const { appType: t } = e,
-          a = "Game" == t,
-          r = "DLC" == t,
-          s = a
-            ? (0, i.we)("#Dashboard_RecentApps_Game")
-            : (0, i.we)("#Dashboard_RecentApps_DLC");
+        const { appType: t } = e;
+        let a = null,
+          r = null;
         return (
-          (a || r) &&
-          n.createElement(
-            "div",
-            { className: (0, _.A)(aa.AppType, r && aa.DLC) },
-            s,
-          )
+          "Game" == t
+            ? (a = (0, i.we)("#Dashboard_RecentApps_Game"))
+            : "DLC" == t
+              ? ((a = (0, i.we)("#Dashboard_RecentApps_DLC")), (r = aa.DLC))
+              : "Beta" == t &&
+                ((a = (0, i.we)("#Dashboard_RecentApps_Playtest")),
+                (r = aa.Playtest)),
+          !!a &&
+            n.createElement("div", { className: (0, _.A)(aa.AppType, r) }, a)
         );
       }
       function oa(e) {

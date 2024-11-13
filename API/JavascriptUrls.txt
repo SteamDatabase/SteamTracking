@@ -953,6 +953,7 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
+${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxgetuseremailforpartnerid
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
@@ -2597,12 +2598,12 @@ https://partner.steamgames.com/admin/store/suggestpackagejson/
 https://partner.steamgames.com/apprelease/ajaxupdatereleaserequest/${nAppId}
 https://partner.steamgames.com/apps/addworkshopcreatorapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/ajaxaddtag/${nAppId}
-https://partner.steamgames.com/apps/ajaxaddtodedicatedserverpackage/${appid}
 https://partner.steamgames.com/apps/ajaxcreatenewapp/
 https://partner.steamgames.com/apps/ajaxcreatevideoseries
 https://partner.steamgames.com/apps/ajaxsetadmintagsvisibility/${appid}
 https://partner.steamgames.com/apps/ajaxsetappfield/${appid}
 https://partner.steamgames.com/apps/ajaxsetcouponstate
+https://partner.steamgames.com/apps/ajaxsettoolfreetodownload/${appid}
 https://partner.steamgames.com/apps/ajaxupgradegreenlightentry/
 https://partner.steamgames.com/apps/banapp/${appid}
 https://partner.steamgames.com/apps/landing/${appID}

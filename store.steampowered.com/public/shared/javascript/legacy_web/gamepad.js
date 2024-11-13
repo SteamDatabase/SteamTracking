@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    396: (e, t, n) => {
+    147: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => G });
       var o = n(669),
         a = n.n(o),
-        s = n(353),
-        i = n(75),
-        r = n(482),
-        c = n(679),
-        l = n(778),
-        u = n(910),
-        d = n(969),
-        g = n(202),
-        m = n(136),
-        h = n(257);
+        s = n(361),
+        i = n(587),
+        r = n(714),
+        c = n(695),
+        l = n(380),
+        u = n(942),
+        d = n(865),
+        g = n(586),
+        m = n(504),
+        h = n(977);
       function _(e, t, ...n) {
         try {
           console.assert
@@ -95,9 +95,9 @@
           OnForceMeasureFocusRing: () => m(s),
         };
       }
-      var S = n(841),
-        w = n(274),
-        E = n(361);
+      var S = n(20),
+        w = n(986),
+        E = n(857);
       function I(e) {
         return e ? Function("event", e) : null;
       }
@@ -145,7 +145,7 @@
         }
         return !1;
       }
-      var A = n(418);
+      var A = n(866);
       const D = !1;
       function y(e) {
         const { name: t, root: n, navState: o } = e;
@@ -186,20 +186,25 @@
           (function (e) {
             a()("html").addClass("gpnav_active");
             const t = a()("body"),
-              n = e.NewGamepadNavigationTree(e.GetDefaultContext(), "legacy"),
+              n = e.NewGamepadNavigationTree(
+                e.GetDefaultContext(),
+                "legacy",
+                void 0,
+              ),
               o = p(t);
             (n.Root.m_FocusRing = o),
               n.Root.SetProperties({
                 scrollIntoViewType: d.Yo.NoTransformSparseContent,
               }),
+              n.SetIsEnabled(!0),
               (window.__nav_tree_root = n),
               (window.__virtual_keyboard_client = O),
               x.set(document.body, n.Root),
               H(document.body, n.Root),
               X(void 0, !0),
-              e.RegisterGamepadNavigationTree(n, window, !1),
+              e.RegisterGamepadNavigationTree(n, window),
               a()(document.body).on("vgp_onbuttondown", function (e) {
-                n.HandleButtonDownEventAsLogicalEvent(e.originalEvent);
+                n.OnRootButtonDown(e.originalEvent);
               }),
               (0, s.u8)(document.body, R);
             new MutationObserver(V).observe(document.body, {
@@ -340,6 +345,7 @@
               P = U.NewGamepadNavigationTree(
                 U.GetDefaultContext(),
                 "modal_dialog",
+                void 0,
               );
               const t = p(a()("body"));
               (P.Root.m_FocusRing = t),
@@ -347,7 +353,7 @@
                 H(e, P.Root),
                 X(e),
                 (0, s.u8)(P.Root.m_element, (e) => !0),
-                (F = U.RegisterGamepadNavigationTree(P, window, !1));
+                (F = U.RegisterGamepadNavigationTree(P, window));
             })(e),
           "A" == e.tagName || "BUTTON" == e.tagName || "LABEL" == e.tagName)
         )
@@ -557,11 +563,11 @@
         },
       };
     },
-    781: (e, t, n) => {
+    141: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(956),
-        s = n(799);
+        a = n(892),
+        s = n(199);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -628,13 +634,13 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    752: (e, t, n) => {
+    8: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    916: (e, t, n) => {
+    956: (e, t, n) => {
       n.d(t, { JV: () => i, Q8: () => s });
-      var o = n(274);
+      var o = n(986);
       class a {
         m_options;
         m_msStart;
@@ -740,7 +746,7 @@
         }
       }
     },
-    927: (e, t, n) => {
+    751: (e, t, n) => {
       n.d(t, {
         Jc: () => c,
         LU: () => d,
@@ -749,9 +755,9 @@
         lu: () => i.l,
       });
       var o = n(629),
-        a = n(941),
-        s = n(956),
-        i = n(27);
+        a = n(861),
+        s = n(892),
+        i = n(891);
       class r {
         m_callbacks;
         m_currentValue;
@@ -851,7 +857,7 @@
       }
       (0, o.Cg)([s.o], g.prototype, "Unregister", null);
     },
-    274: (e, t, n) => {
+    986: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -961,10 +967,10 @@
         }
       }
     },
-    269: (e, t, n) => {
+    910: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(956);
+        a = n(892);
       class s {
         async GetObject(e, t) {
           try {
@@ -990,7 +996,7 @@
         }
       }
       var r,
-        c = n(927);
+        c = n(751);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1223,7 +1229,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    212: (e, t, n) => {
+    511: (e, t, n) => {
       function o(e, t) {
         return (
           (e = Math.ceil(e)),
@@ -1236,7 +1242,7 @@
       }
       n.d(t, { OQ: () => a, Tg: () => o });
     },
-    619: (e, t, n) => {
+    859: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1247,9 +1253,9 @@
       }
       n.d(t, { e: () => o });
     },
-    514: (e, t, n) => {
+    987: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(212);
+      var o = n(511);
       function a() {
         return !!window.document;
       }

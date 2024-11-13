@@ -240,8 +240,8 @@
           enabled: !!e,
         }).data;
       }
-      var F = r(22797);
-      function U() {
+      var U = r(22797);
+      function F() {
         const { data: e, isLoading: t } = (function () {
           const e = g();
           return (0, i.I)({
@@ -250,7 +250,7 @@
           });
         })();
         return t
-          ? n.createElement(F.t, { msDelayAppear: 300 })
+          ? n.createElement(U.t, { msDelayAppear: 300 })
           : n.createElement(
               "div",
               null,
@@ -505,43 +505,51 @@
       }
       var ce = r(59722);
       function de(e) {
-        const { linkMarkType: t, schema: r, onClickURL: a = me } = e,
-          o = n.useRef(a);
-        o.current = a;
-        const [s, i] = n.useState(),
-          [l, c] = n.useState(),
-          [d, u] = n.useState(),
-          m = n.useMemo(
+        const {
+            linkMarkType: t,
+            onURLPasted: r,
+            schema: a,
+            onClickURL: o = me,
+          } = e,
+          s = n.useRef(o);
+        s.current = o;
+        const [i, l] = n.useState(),
+          [c, d] = n.useState(),
+          [u, m] = n.useState(),
+          p = n.useMemo(
             () =>
               new Y.k_({
                 props: {
-                  handleClickOn(e, r, n, a, s, i) {
-                    if (i && (s.ctrlKey || 1 == s.button)) {
+                  handleClickOn(e, r, n, a, o, i) {
+                    if (i && (o.ctrlKey || 1 == o.button)) {
                       const e = n
                         .resolve(r - a)
                         .marks()
                         .find((e) => e.type == t);
                       if (e)
                         return (
-                          o.current(e.attrs.href, s.view),
-                          s.preventDefault(),
+                          s.current(e.attrs.href, o.view),
+                          o.preventDefault(),
                           !0
                         );
                     }
                     return !1;
                   },
-                  clipboardTextParser(e, n, a, o) {
-                    let s,
-                      i = [];
-                    for (; (s = e.match(V.O)); )
-                      s.index > 0 && i.push(r.text(e.substring(0, s.index))),
-                        i.push(
-                          r.text(s[0], [t.create({ href: (0, V.S)(s[0]) })]),
-                        ),
-                        (e = e.substring(s.index + s[0].length));
+                  clipboardTextParser(e, n, o, s) {
+                    let i,
+                      l = [];
+                    for (; (i = e.match(V.O)); ) {
+                      i.index > 0 && l.push(a.text(e.substring(0, i.index)));
+                      const n = (0, V.S)(i[0]),
+                        o = r && r(n);
+                      o && "default" !== o
+                        ? "remove" !== o && l.push(o)
+                        : l.push(a.text(i[0], [t.create({ href: n })])),
+                        (e = e.substring(i.index + i[0].length));
+                    }
                     return (
-                      e.length && i.push(r.text(e)),
-                      new H.Ji(H.FK.from(i), n.start(), n.end())
+                      e.length && l.push(a.text(e)),
+                      new H.Ji(H.FK.from(l), n.start(), n.end())
                     );
                   },
                   handleDOMEvents: {
@@ -553,22 +561,22 @@
                         "A" == r.nodeName
                       ) {
                         const e = r.getBoundingClientRect();
-                        i(e.left + e.width / 2), c(e.bottom + 2), u(r);
-                      } else u(void 0);
+                        l(e.left + e.width / 2), d(e.bottom + 2), m(r);
+                      } else m(void 0);
                       return !1;
                     },
-                    mouseleave: (e, t) => (u(void 0), !1),
+                    mouseleave: (e, t) => (m(void 0), !1),
                   },
                 },
               }),
-            [t, r],
+            [t, r, a],
           );
-        if ((le(m), !d || !l || !s)) return null;
-        const p = d.getAttribute("href");
+        if ((le(p), !u || !c || !i)) return null;
+        const h = u.getAttribute("href");
         return n.createElement(
           ue,
-          { top: l, left: s },
-          n.createElement("div", { className: ce.Link }, p),
+          { top: c, left: i },
+          n.createElement("div", { className: ce.Link }, h),
           n.createElement(
             "div",
             { className: ce.LinkHelp },
@@ -1156,8 +1164,8 @@
               });
           }
         })(Ae);
-      var Fe = r(67660);
-      const Ue =
+      var Ue = r(67660);
+      const Fe =
         r.p +
         "images/applications/community/image_error.svg?v=valveisgoodatcaching";
       function Ge(e) {
@@ -1180,7 +1188,7 @@
                         ) {
                           let t = [
                             e.create({
-                              src: Ue,
+                              src: Fe,
                               title: (0, f.we)("#UserGameNotes_ImageTooLarge"),
                             }),
                           ];
@@ -1201,7 +1209,7 @@
                               for (const n of e) {
                                 const e = await fetch(n),
                                   a = await e.blob(),
-                                  o = (0, Fe.wI)(await a.arrayBuffer());
+                                  o = (0, Ue.wI)(await a.arrayBuffer());
                                 De(
                                   n,
                                   await r(e.headers.get("Content-Type"), o),
@@ -1436,7 +1444,6 @@
                 onMouseDown: (e) => {
                   e.preventDefault(), d();
                 },
-                title: (0, f.we)("#FormattingToolbar_InsertLink"),
               },
               r,
             ),
@@ -2675,7 +2682,7 @@
           return "CUserGameNotes_GetGamesWithNotes_Response_GameWithNotes";
         }
       }
-      var Ft;
+      var Ut;
       !(function (e) {
         (e.GetNotesForGame = function (e, t) {
           return e.SendMsg(
@@ -2706,15 +2713,15 @@
               { ePrivilege: 1 },
             );
           });
-      })(Ft || (Ft = {}));
-      class Ut {
+      })(Ut || (Ut = {}));
+      class Ft {
         constructor(e) {
           this.m_SteamInterface = e;
         }
         async GetGamesWithNotes() {
           const e = E.w.Init(Rt);
           return (
-            await Ft.GetGamesWithNotes(
+            await Ut.GetGamesWithNotes(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             )
@@ -2725,7 +2732,7 @@
         async GetGameNotesList(e, t) {
           const r = E.w.Init(Ct);
           this.SetParentOnRequest(r, e), r.Body().set_include_content(t);
-          const n = await Ft.GetNotesForGame(
+          const n = await Ut.GetNotesForGame(
             this.m_SteamInterface.GetServiceTransport(),
             r,
           );
@@ -2743,7 +2750,7 @@
               : n.Body().set_shortcut_name(e.shortcut_name),
             n.Body().set_title(t),
             n.Body().set_content(r);
-          const a = await Ft.SaveNote(
+          const a = await Ut.SaveNote(
             this.m_SteamInterface.GetServiceTransport(),
             n,
           );
@@ -2753,7 +2760,7 @@
         async DeleteGameNote(e, t) {
           const r = E.w.Init(Nt);
           this.SetParentOnRequest(r, e), r.Body().set_note_id(t);
-          const n = await Ft.DeleteNote(
+          const n = await Ut.DeleteNote(
             this.m_SteamInterface.GetServiceTransport(),
             r,
           );
@@ -2771,7 +2778,7 @@
           return (
             "appid" in e ? (r.appid = e.appid) : (r.shortcut_name = e.shortcut),
             {
-              id: "temp_" + Ut.sm_lastNoteID++,
+              id: "temp_" + Ft.sm_lastNoteID++,
               ...r,
               ordinal: 0,
               time_created: Date.now() / 1e3,
@@ -2788,14 +2795,14 @@
       }
       function Gt(e) {
         const t = (0, k.TR)(),
-          [r] = n.useState(() => new Ut(t));
+          [r] = n.useState(() => new Ft(t));
         return n.createElement(
           p,
           { mode: "page", store: r },
           n.createElement(
             a.dO,
             null,
-            n.createElement(a.qh, { path: o.List() }, n.createElement(U, null)),
+            n.createElement(a.qh, { path: o.List() }, n.createElement(F, null)),
             n.createElement(
               a.qh,
               { path: o.AppNotes(":appid", ":noteid?") },
@@ -2809,7 +2816,7 @@
           ),
         );
       }
-      Ut.sm_lastNoteID = 0;
+      Ft.sm_lastNoteID = 0;
     },
     61788: (e, t, r) => {
       "use strict";

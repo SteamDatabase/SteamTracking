@@ -497,9 +497,12 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	} );
 
 	var $FranchiseBlock = $J('#franchise_target' );
-	new CScrollOffsetWatcher( $FranchiseBlock, function() {
-		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
-	});
+	if ( $FranchiseBlock.length )
+	{
+		new CScrollOffsetWatcher($FranchiseBlock, function () {
+			SaleFranchiseBlock($FranchiseBlock, rgFranchiseData);
+		});
+	}
 
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );

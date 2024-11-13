@@ -26,8 +26,9 @@
         FAQ_Q: "_3Mou7FjFlqrR-kKuTt9N8g",
         FAQ_A: "-K9ED0JWohLoxFufaRmWt",
         SteamAwardCategory: "_3i1u-y7pjl-qc98gufdZUu",
-        Nominated: "_4GIBs4zFQvYzih0mbwMoB",
+        PickerOpen: "_1rSWia4DrhNXjIAW9m_H7R",
         SteamAwardCategoryBackground: "_35LJC3vUDhyY8YWBfRTzRB",
+        Nominated: "_4GIBs4zFQvYzih0mbwMoB",
         SteamAwardCategoryBlurryBackground: "_3obFcpxM1lY5DMX8dIuroo",
         CategoryRow: "_1n-khJ_oWP9-ADtdauxmaP",
         LeftColumn: "_3Od-8EtYzDWL-rqzXdco_3",
@@ -41,7 +42,6 @@
         PickerShown: "_2O-paI1bSbPTq6FALASFAe",
         ActionLogin: "_3s5xsmskAdOpXRyYWej0pj",
         ActionEdit: "_2p6oT45t7Kjk11DKng_WDR",
-        PickerOpen: "_1rSWia4DrhNXjIAW9m_H7R",
         CapsuleContainer: "_1fSqpH3qLOnMPsLvsocjDD",
         CapsuleBlurryContainer: "_1NTFi-9ML6rmzzrsR1dDt4",
         SectionTitle: "_2pyDiHU7ljm9ZRO_MWsJwr",
@@ -55,7 +55,6 @@
         BadgeImageRow: "_2MLgogShQSsdXcjJVnCrs_",
         BadgeItem: "PJRtCS56eG2Y0_F_VSsx7",
         BadgeImage: "_2sB2cTqit-_ethQFZRSqSN",
-        BadgeDesc: "_1JuO2h3RXTrXd8h52rYGyZ",
         Active: "_20Ol8bIY8KcNPBctmmB8zn",
         NominationPickerCtn: "_3I1Ga7kMZPDXXbOfgfBTDj",
         CarouselView: "_3mKDmumAiG1vMlU0jWpTe0",
@@ -167,21 +166,21 @@
     },
     54954: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => Ve });
+      t.r(a), t.d(a, { default: () => Le });
       var n = t(43527),
         r = t(90626),
         s = t(92757),
         i = t(85415),
         l = t.n(i),
-        m = t(45699),
-        o = t(76217),
+        o = t(45699),
+        m = t(76217),
         c = t(37076),
         d = t(36148),
         _ = t(55263),
         u = t(30470),
         E = t(56011),
-        w = t(78327),
-        g = t(33737),
+        g = t(78327),
+        w = t(33737),
         A = t(12155),
         S = t(61859),
         p = t(52038),
@@ -191,9 +190,9 @@
         F = t(22797),
         h = t(32630),
         y = t(75933),
-        Q = t(43568),
-        T = t(91254),
-        f = t(17720),
+        f = t(43568),
+        Q = t(91254),
+        T = t(17720),
         I = t(35685),
         B = t(82097),
         k = t(60746),
@@ -201,52 +200,56 @@
         D = t(375),
         b = t(13871),
         P = t(28124),
-        V = t(64940);
-      const L = { include_basic_info: !0, include_assets: !0 };
-      function M(e) {
-        const { category: a, fnShowPicker: t } = e,
-          [n, s] = r.useState("");
+        L = t(64940);
+      const V = { include_basic_info: !0, include_assets: !0 };
+      function W(e) {
+        const { category: a, fnShowPicker: t, rgPrevLaborOfLoveWinners: n } = e,
+          [s, i] = r.useState("");
         if (!(0, d.jT)(a.voteid).data)
           return r.createElement(F.t, {
             size: "medium",
             position: "center",
             msDelayAppear: 200,
           });
-        let i = (0, S.we)("#Steamawards_Nominate_ThisYear");
+        let m = (0, S.we)("#Steamawards_Nominate_ThisYear");
         return (
-          3 == a.flag && (i = (0, S.we)("#Steamawards_Nominate_PastYear")),
+          3 == a.flag && (m = (0, S.we)("#Steamawards_Nominate_PastYear")),
           r.createElement(
             "div",
             { className: l().NominationPickerCtn },
             r.createElement(
               "div",
               { className: l().TopRow },
-              r.createElement("div", { className: l().TopBarText }, i),
+              r.createElement("div", { className: l().TopBarText }, m),
               r.createElement(
                 "div",
                 { className: l().SearchBarCtn },
-                r.createElement(g.pd, {
+                r.createElement(w.pd, {
                   focusOnMount: !0,
-                  onChange: (e) => s(e.currentTarget.value.toLocaleLowerCase()),
-                  value: n,
+                  onChange: (e) => i(e.currentTarget.value.toLocaleLowerCase()),
+                  value: s,
                   className: l().SearchBar,
                   placeholder: (0, S.we)("#Steamawards_Nominate_Search"),
                   bShowClearAction: !0,
                 }),
               ),
               r.createElement(
-                m.Ii,
+                o.Ii,
                 { className: l().CloseButton, onClick: () => t(!1) },
                 (0, S.we)("#Button_Close"),
               ),
             ),
-            n.trim().length > 0
-              ? r.createElement(H, { strSearch: n, category: a })
-              : r.createElement(W, { category: a }),
+            s.trim().length > 0
+              ? r.createElement(O, {
+                  strSearch: s,
+                  category: a,
+                  rgPrevLaborOfLoveWinners: n,
+                })
+              : r.createElement(M, { category: a }),
             r.createElement(
               "div",
               { className: l().BottomRow },
-              r.createElement(X, {
+              r.createElement(j, {
                 unAppID: d.Fq,
                 eSteamAwardCategoryID: a.voteid,
                 eNominatonSource: 0,
@@ -255,11 +258,11 @@
           )
         );
       }
-      function W(e) {
+      function M(e) {
         const { category: a } = e,
           t = (0, d.jT)(a.voteid),
           n = (0, d.cO)(),
-          s = (0, w.Qn)(),
+          s = (0, g.Qn)(),
           i = r.useMemo(() => {
             let e = [];
             return t.data.played_app
@@ -290,8 +293,9 @@
                   rgGameCarouselItems: i,
                 }),
               )
-            : r.createElement(G, { eSteamAwardCategoryID: a.voteid }),
+            : r.createElement(H, { eSteamAwardCategoryID: a.voteid }),
           Boolean(!s) &&
+            t.data?.suggested_events?.length > 0 &&
             r.createElement(
               "div",
               { className: (0, p.A)(l().RecommendationRow, l().Events) },
@@ -300,8 +304,7 @@
                 { className: l().RecommendationRowTitle },
                 (0, S.we)("#Steamawards_Nominate_Events"),
               ),
-              t.data?.suggested_events &&
-                r.createElement(j, { rgEvents: t.data.suggested_events }),
+              r.createElement(X, { rgEvents: t.data.suggested_events }),
             ),
           r.createElement(
             "div",
@@ -322,7 +325,7 @@
           ),
         );
       }
-      function G(e) {
+      function H(e) {
         const { eSteamAwardCategoryID: a } = e;
         return r.createElement(
           "div",
@@ -339,26 +342,26 @@
             { className: l().RecommendationRowSubtitle },
             (0, S.we)("#Steamawards_Nominate_NoEligibleGames_cont"),
           ),
-          r.createElement(X, {
+          r.createElement(j, {
             unAppID: d.Fq,
             eSteamAwardCategoryID: a,
             eNominatonSource: 0,
           }),
         );
       }
-      function H(e) {
-        const { strSearch: a, category: t } = e,
-          n = (0, d.lE)(a, t),
-          s = r.useRef(),
-          i = (0, w.Qn)();
+      function O(e) {
+        const { strSearch: a, category: t, rgPrevLaborOfLoveWinners: n } = e,
+          s = (0, d.lE)(a, t, n),
+          i = r.useRef(),
+          o = (0, g.Qn)();
         return (
           r.useEffect(() => {
-            s?.current && i && s.current.scrollIntoView();
-          }, [n, i]),
+            i?.current && o && i.current.scrollIntoView();
+          }, [s, o]),
           r.createElement(
             "div",
-            { ref: s },
-            Boolean(n.isLoading)
+            { ref: i },
+            Boolean(s.isLoading)
               ? r.createElement(F.t, {
                   size: "medium",
                   position: "center",
@@ -367,12 +370,12 @@
               : r.createElement(
                   r.Fragment,
                   null,
-                  Boolean(n.data?.length > 0)
+                  Boolean(s.data?.length > 0)
                     ? r.createElement(
-                        o.Z,
+                        m.Z,
                         { className: l().SearchResultsContainer },
-                        n.data.map((e) =>
-                          r.createElement(x, {
+                        s.data.map((e) =>
+                          r.createElement(G, {
                             key: e.id,
                             eSteamAwardCategoryID: t.voteid,
                             eNominatonSource: 3,
@@ -389,7 +392,7 @@
           )
         );
       }
-      function x(e) {
+      function G(e) {
         const {
             appSuggestion: a,
             eSteamAwardCategoryID: t,
@@ -397,21 +400,21 @@
           } = e,
           s = parseInt(a.id);
         return r.createElement(
-          o.Z,
+          m.Z,
           { className: l().SearchResultApp },
           r.createElement(
             c.u,
             { id: s, type: "app" },
             r.createElement("img", { src: a.small_cap }),
           ),
-          r.createElement(X, {
+          r.createElement(j, {
             eSteamAwardCategoryID: t,
             eNominatonSource: n,
             unAppID: s,
           }),
         );
       }
-      function O(e) {
+      function x(e) {
         let a = 1;
         return (
           e.innerWidth >= 1080
@@ -430,21 +433,21 @@
           } = e,
           s = (0, _.zX)(
             a?.map((e) => e.appID),
-            L,
+            V,
           ),
           i = (0, b.R7)(),
-          m = i?.ownerWindow || window,
-          [o, c] = r.useState(() => O(m)),
-          d = (0, w.Qn)(),
+          o = i?.ownerWindow || window,
+          [m, c] = r.useState(() => x(o)),
+          d = (0, g.Qn)(),
           u = r.useCallback(
             (e) => {
-              c(O(m));
+              c(x(o));
             },
-            [m],
+            [o],
           ),
           E = (0, D.wY)(u);
         if (1 == s) return null;
-        const g = a.filter((e) => B.A.Get().BHasApp(e.appID));
+        const w = a.filter((e) => B.A.Get().BHasApp(e.appID));
         return r.createElement(
           "div",
           { ref: E, className: l().SuggestionCarousel },
@@ -452,18 +455,18 @@
             h.A,
             { feature: "steamawards_nominate" },
             r.createElement(
-              Q.F,
+              f.F,
               {
                 gap: 12,
                 hideArrows: !(0, y.rp)(),
-                visibleElements: o,
+                visibleElements: m,
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
                 hidePips: d,
                 innerClassName: l().GameCarousel,
                 screenIsWide: (0, y.rp)(),
               },
-              g.map((e) =>
+              w.map((e) =>
                 r.createElement(q, {
                   eNominatonSource: n,
                   eSteamAwardCategoryID: t,
@@ -483,19 +486,19 @@
             eNominatonSource: n,
             nPlaytime: s,
           } = e,
-          [i] = (0, _.t7)(a, L);
+          [i] = (0, _.t7)(a, V);
         if (!i) return null;
-        let m = null;
+        let o = null;
         return (
-          s && (m = (s / 60).toFixed(1)),
+          s && (o = (s / 60).toFixed(1)),
           r.createElement(
             "div",
             { className: l().GameCarouselItemCtn },
-            m &&
+            o &&
               r.createElement(
                 "div",
                 { className: l().PlaytimeIndicator },
-                (0, S.we)("#Steamawards_Playtime_Hours", m),
+                (0, S.we)("#Steamawards_Playtime_Hours", o),
               ),
             r.createElement(
               c.u,
@@ -505,7 +508,7 @@
                 src: i.GetAssets().GetSmallCapsuleURL(),
               }),
             ),
-            r.createElement(X, {
+            r.createElement(j, {
               unAppID: a,
               eNominatonSource: n,
               eSteamAwardCategoryID: t,
@@ -513,12 +516,12 @@
           )
         );
       }
-      function X(e) {
+      function j(e) {
         const { unAppID: a, eSteamAwardCategoryID: t, eNominatonSource: n } = e,
           s = (0, d.cO)(),
           i = (0, b.R7)(),
-          m = i?.ownerWindow || window,
-          o = a === d.Fq,
+          o = i?.ownerWindow || window,
+          m = a === d.Fq,
           c = r.useMemo(() => {
             const e = s.data?.find((e) => e.category_id == t);
             return e?.appid === a;
@@ -532,42 +535,42 @@
               );
               42 == e &&
                 (t = (0, S.we)("#Steamawards_Nominate_Error_NoMatch", a)),
-                (0, N.pY)(t, m);
+                (0, N.pY)(t, o);
             },
-            [m, a],
+            [o, a],
           ),
           u = (0, d.$d)(a, t, n, _);
         let E = (0, S.we)("#Steamawards_Nominate"),
-          w = null,
+          g = null,
           v = () => {
-            (0, V.UserEligibleToNominateOrVote)(!1)
+            (0, L.UserEligibleToNominateOrVote)(!1)
               ? u.mutate()
               : console.log(
                   "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
                 );
           };
         return (
-          o
+          m
             ? ((E = (0, S.we)("#Steamawards_Skip_Btn")),
-              (w = r.createElement(A.MOk, null)))
+              (g = r.createElement(A.MOk, null)))
             : c && ((E = (0, S.we)("#Steamawards_Nominated")), (v = null)),
           r.createElement(
-            g.$n,
+            w.$n,
             {
               onClick: v,
               className: (0, p.A)(l().NominateGameButton, c && l().Nominated),
             },
-            w,
+            g,
             E,
           )
         );
       }
-      function j(e) {
+      function X(e) {
         const { rgEvents: a } = e,
           [t, n] = r.useState(!1),
           s = (0, b.R7)(),
           i = s?.ownerWindow || window,
-          [m, o] = r.useState(4),
+          [o, m] = r.useState(4),
           c = r.useCallback(
             (e) => {
               let a = 1;
@@ -576,7 +579,7 @@
                 : i.innerWidth >= 920
                   ? (a = 3)
                   : i.innerWidth >= 600 && (a = 2),
-                o(a);
+                m(a);
             },
             [i],
           ),
@@ -586,15 +589,15 @@
             if (t) return;
             (async () => {
               a.forEach((e) => {
-                T.O3.QueueLoadPartnerEvent(
+                Q.O3.QueueLoadPartnerEvent(
                   e.clanid,
                   e.event_gid,
                   "dev" == u.TS.WEB_UNIVERSE,
                 );
               });
               const e = a.map((e) =>
-                T.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  f.b.InitFromClanID(e.clanid),
+                Q.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  T.b.InitFromClanID(e.clanid),
                   e.event_gid,
                   0,
                   "dev" == u.TS.WEB_UNIVERSE,
@@ -603,43 +606,45 @@
               await Promise.all(e), n(!0);
             })();
           }, [a, t]),
-          t
-            ? r.createElement(
-                "div",
-                { ref: d, className: l().EventCarousel },
-                r.createElement(
-                  h.A,
-                  { feature: "steamawards_event" },
+          a.length
+            ? t
+              ? r.createElement(
+                  "div",
+                  { ref: d, className: l().EventCarousel },
                   r.createElement(
-                    Q.F,
-                    {
-                      gap: 12,
-                      hideArrows: !(0, y.rp)(),
-                      visibleElements: m,
-                      useTestScrollbar: !0,
-                      bLazyRenderChildren: !0,
-                      className: l().GameCarousel,
-                      screenIsWide: (0, y.rp)(),
-                    },
-                    a.map((e) =>
-                      r.createElement(Y, {
-                        gidEvent: e.event_gid,
-                        key: e.event_gid,
-                      }),
+                    h.A,
+                    { feature: "steamawards_event" },
+                    r.createElement(
+                      f.F,
+                      {
+                        gap: 12,
+                        hideArrows: !(0, y.rp)(),
+                        visibleElements: o,
+                        useTestScrollbar: !0,
+                        bLazyRenderChildren: !0,
+                        className: l().GameCarousel,
+                        screenIsWide: (0, y.rp)(),
+                      },
+                      a.map((e) =>
+                        r.createElement(Y, {
+                          gidEvent: e.event_gid,
+                          key: e.event_gid,
+                        }),
+                      ),
                     ),
                   ),
-                ),
-              )
-            : r.createElement(F.t, {
-                className: l().EventCarousel,
-                size: "xlarge",
-                position: "center",
-              })
+                )
+              : r.createElement(F.t, {
+                  className: l().EventCarousel,
+                  size: "xlarge",
+                  position: "center",
+                })
+            : null
         );
       }
       function Y(e) {
         const { gidEvent: a } = e,
-          t = T.O3.GetClanEventModel(a);
+          t = Q.O3.GetClanEventModel(a);
         if (!t) return null;
         return r.createElement(I.uY, {
           event: t,
@@ -663,18 +668,18 @@
           [t, n] = r.useState(() => k.KN.IsInitialized()),
           [s] = (0, z.QD)("k", null),
           i = Boolean((a && a != u.iA.steamid) || s),
-          m = J()("2023-11-28T10:00:00-08:00").unix(),
+          o = J()("2024-12-04T10:00:00-08:00").unix(),
           c = $.HD.GetTimeNowWithOverride(),
-          d = !i && c <= m;
+          d = !i && c <= o;
         return (
           r.useEffect(() => {
-            T.O3.Init(), k.KN.InitGlobal().then(() => n(!0));
+            Q.O3.Init(), k.KN.InitGlobal().then(() => n(!0));
           }, []),
           r.createElement(
             h.A,
             { method: "nominations" },
             r.createElement(
-              o.Z,
+              m.Z,
               { className: l().NominationsPageContent },
               i
                 ? r.createElement(te, { bEnableNominating: d, steamid: a })
@@ -695,7 +700,7 @@
               r.createElement(
                 "div",
                 { className: l().BackgroundDark },
-                !i && r.createElement(oe, null),
+                !i && r.createElement(me, null),
                 r.createElement(de, null),
               ),
             ),
@@ -778,7 +783,7 @@
                 r.createElement(
                   "a",
                   {
-                    href: `${w.TS.STORE_BASE_URL}steamawards/nominations`,
+                    href: `${g.TS.STORE_BASE_URL}steamawards/nominations`,
                     className: (0, p.A)(l().NominateGameButton, l().White),
                   },
                   (0, S.we)("#Steamawards_MakeYourOwnNominations_Btn"),
@@ -789,54 +794,71 @@
       }
       function ne(e) {
         const a = (0, d.cO)(),
-          t = a.data && 0 != a.data.length ? "" + a.data.length : "0";
+          t = (0, d.Jo)(d.YW);
+        if (!t.data?.votes) return null;
+        const n = a.data && 0 != a.data.length ? "" + a.data.length : "0";
         return r.createElement(
-          o.Z,
+          m.Z,
           { className: (0, p.A)(l().NominationProgressCtn) },
           r.createElement(
             "div",
             { className: l().ProgressTitle },
-            (0, S.PP)("#Steamawards_TotalNominations", t, "11"),
+            (0, S.PP)(
+              "#Steamawards_TotalNominations",
+              n,
+              t.data?.votes?.length,
+            ),
           ),
         );
       }
       function re(e) {
         const { bEnableNominating: a } = e,
-          t = (0, d.Jo)(d.RZ);
+          t = (0, d.Jo)(d.YW);
         if (!t.data) return null;
         const n = t.data.votes.map((e) =>
           r.createElement(se, {
             bEnableNominating: a,
             key: e.voteid,
             category: e,
+            rgPrevLaborOfLoveWinners: t.data.labor_of_love_winners,
           }),
         );
         return r.createElement(
-          o.Z,
+          m.Z,
           { className: (0, p.A)(l().SectionContent, l().SteamAwardCategories) },
           n,
         );
       }
       function se(e) {
-        const { category: a, bEnableNominating: t } = e,
-          { currentNomination: n } = (0, d.Vz)(a.voteid),
-          [s, i] = r.useState(!1),
-          m = a.voteid,
-          c =
-            w.TS.BASE_URL_STORE_CDN_ASSETS +
-            "promo/steamawards2023/backgrounds/awardbg_" +
-            m +
+        const {
+            category: a,
+            bEnableNominating: t,
+            rgPrevLaborOfLoveWinners: n,
+          } = e,
+          { currentNomination: s } = (0, d.Vz)(a.voteid),
+          [i, o] = r.useState(!1),
+          c = a.internal_name,
+          _ =
+            g.TS.BASE_URL_STORE_CDN_ASSETS +
+            "promo/steamawards2024/backgrounds/" +
+            c +
             ".jpg?v=3";
         return r.createElement(
-          o.Z,
-          { className: (0, p.A)(l().SteamAwardCategory, n && l().Nominated) },
+          m.Z,
+          {
+            className: (0, p.A)(
+              l().SteamAwardCategory,
+              s && l().Nominated,
+              i && l().PickerOpen,
+            ),
+          },
           r.createElement("div", {
             className: (0, p.A)(l().SteamAwardCategoryBackground),
-            style: { backgroundImage: `url( ${c} )` },
+            style: { backgroundImage: `url( ${_} )` },
           }),
           r.createElement("div", {
             className: (0, p.A)(l().SteamAwardCategoryBlurryBackground),
-            style: { backgroundImage: `url( ${c} )` },
+            style: { backgroundImage: `url( ${_} )` },
           }),
           r.createElement(
             "div",
@@ -851,7 +873,7 @@
                   r.createElement(
                     "div",
                     { className: l().Checkbox },
-                    n &&
+                    s &&
                       r.createElement(A.X4B, {
                         color: "#ffffff",
                         highlightColor: "#ffffff",
@@ -871,29 +893,34 @@
             ),
             r.createElement(
               "div",
-              { className: (0, p.A)(l().RightColumn, s && l().PickerOpen) },
+              { className: (0, p.A)(l().RightColumn, i && l().PickerOpen) },
               r.createElement(
                 "div",
                 { className: l().CapsuleBlurryContainer },
-                Boolean(n)
-                  ? r.createElement(ie, { nomination: n, bBlurry: !0 })
+                Boolean(s)
+                  ? r.createElement(ie, { nomination: s, bBlurry: !0 })
                   : r.createElement(le, null),
               ),
               r.createElement(
                 "div",
                 { className: l().CapsuleContainer },
-                Boolean(n)
-                  ? r.createElement(ie, { nomination: n, bBlurry: !1 })
+                Boolean(s)
+                  ? r.createElement(ie, { nomination: s, bBlurry: !1 })
                   : r.createElement(le, null),
               ),
               t &&
-                r.createElement(me, {
-                  fnShowPicker: i,
-                  has_nomination: Boolean(n),
+                r.createElement(oe, {
+                  fnShowPicker: o,
+                  has_nomination: Boolean(s),
                 }),
             ),
           ),
-          s && r.createElement(M, { fnShowPicker: i, category: a }),
+          i &&
+            r.createElement(W, {
+              fnShowPicker: o,
+              category: a,
+              rgPrevLaborOfLoveWinners: n,
+            }),
         );
       }
       function ie(e) {
@@ -919,7 +946,7 @@
       function le() {
         return r.createElement("div", { className: l().NominatedGameCapsule });
       }
-      function me(e) {
+      function oe(e) {
         const { has_nomination: a, fnShowPicker: t } = e;
         let n = (0, S.we)("#Steamawards_Nominate_Btn"),
           s = l().ActionNominate,
@@ -935,15 +962,15 @@
             "div",
             { className: (0, p.A)(l().NominateBtnCtn, s) },
             r.createElement(
-              g.$n,
+              w.$n,
               { onClick: i, className: (0, p.A)(l().NominateButton) },
               n,
             ),
           )
         );
       }
-      function oe() {
-        const e = (0, d.ed)(65);
+      function me() {
+        const e = (0, d.ed)(67);
         let a = 0;
         const t = e.data?.quests?.map(
           (e) => (
@@ -993,7 +1020,7 @@
                   { className: l().BadgeImage },
                   r.createElement("img", {
                     src:
-                      w.TS.BASE_URL_STORE_CDN_ASSETS +
+                      g.TS.BASE_URL_STORE_CDN_ASSETS +
                       "promo/steamawards2023/level_01.png",
                   }),
                 ),
@@ -1011,7 +1038,7 @@
                   { className: l().BadgeImage },
                   r.createElement("img", {
                     src:
-                      w.TS.BASE_URL_STORE_CDN_ASSETS +
+                      g.TS.BASE_URL_STORE_CDN_ASSETS +
                       "promo/steamawards2023/level_02.png",
                   }),
                 ),
@@ -1029,7 +1056,7 @@
                   { className: l().BadgeImage },
                   r.createElement("img", {
                     src:
-                      w.TS.BASE_URL_STORE_CDN_ASSETS +
+                      g.TS.BASE_URL_STORE_CDN_ASSETS +
                       "promo/steamawards2023/level_03.png",
                   }),
                 ),
@@ -1047,7 +1074,7 @@
                   { className: l().BadgeImage },
                   r.createElement("img", {
                     src:
-                      w.TS.BASE_URL_STORE_CDN_ASSETS +
+                      g.TS.BASE_URL_STORE_CDN_ASSETS +
                       "promo/steamawards2023/level_04.png",
                   }),
                 ),
@@ -1076,13 +1103,13 @@
             { className: l().TaskTitle },
             (function (e) {
               switch (e) {
-                case 590:
+                case 600:
                   return (0, S.we)("#Steamawards_Task1");
-                case 591:
+                case 601:
                   return (0, S.we)("#Steamawards_Task2");
-                case 592:
+                case 602:
                   return (0, S.we)("#Steamawards_Task3");
-                case 593:
+                case 603:
                   return (0, S.we)("#Steamawards_Task4");
                 default:
                   return "Unknown Task";
@@ -1092,7 +1119,7 @@
         );
       }
       function de() {
-        const e = w.TS.COMMUNITY_BASE_URL + "my/badges/";
+        const e = g.TS.COMMUNITY_BASE_URL + "my/badges/";
         return r.createElement(
           "div",
           { className: (0, p.A)(l().NominationsFAQ, l().SectionContent) },
@@ -1316,11 +1343,11 @@
           n = (0, d._C)(),
           [s, i] = (0, r.useState)(!1);
         if (!t.data) return null;
-        const [m, c] = t.data;
+        const [o, c] = t.data;
         let _ = "";
         c.code &&
           (_ =
-            w.TS.STORE_BASE_URL +
+            g.TS.STORE_BASE_URL +
             "steamawards/nominations/" +
             u.iA.steamid +
             "?k=" +
@@ -1334,7 +1361,7 @@
             strTitle: (0, S.we)("#Steamawards_ShareLink_Title"),
           },
           r.createElement(
-            o.Z,
+            m.Z,
             { className: l().ShareModalBody, "flow-children": "column" },
             r.createElement(
               "p",
@@ -1346,7 +1373,7 @@
                 r.Fragment,
                 null,
                 r.createElement(
-                  g.JU,
+                  w.JU,
                   null,
                   (0, S.we)("#YIR_ShareModal_YourLink"),
                 ),
@@ -1355,7 +1382,7 @@
                   { className: l().UrlContainer },
                   r.createElement("div", { className: l().Url }, _),
                   r.createElement(
-                    g.jn,
+                    w.jn,
                     {
                       className: l().Button,
                       onClick: () => {
@@ -1376,7 +1403,7 @@
                 ),
               ),
             r.createElement(
-              g.$n,
+              w.$n,
               {
                 className: l().GenerateShareLinkBtn,
                 onClick: () => n.mutate(),
@@ -1397,7 +1424,7 @@
               "div",
               { className: l().ShareLinkCtn },
               r.createElement(
-                m.Ii,
+                o.Ii,
                 {
                   className: l().ShareBtn,
                   onClick: (e) => {
@@ -1427,8 +1454,8 @@
             );
       }
       var Ee = t(26019),
-        we = t.n(Ee),
-        ge = t(90740),
+        ge = t.n(Ee),
+        we = t(90740),
         Ae = t(60383),
         Se = t(60014),
         pe = t(84811),
@@ -1447,18 +1474,18 @@
           i = t >= n && t < s,
           l = t >= s;
         return r.createElement(
-          o.Z,
-          { className: we().VotingPageContent },
+          m.Z,
+          { className: ge().VotingPageContent },
           r.createElement(he, { bIsVotingOpen: i, bIsVotingPast: l }),
           r.createElement(
             "div",
-            { className: we().VotingArea },
+            { className: ge().VotingArea },
             r.createElement(ye, {
               unSaleAppID: a,
               bIsVotingOpen: i,
               bIsVotingPast: l,
             }),
-            r.createElement(Te, {
+            r.createElement(Qe, {
               bIsVotingOpen: i,
               bIsVotingPast: l,
               unSaleAppID: a,
@@ -1477,20 +1504,20 @@
               ? (0, S.we)("#Steamawards_Voting_Header_WinnersUp")
               : (0, S.we)("#Steamawards_Voting_Header_VoteSoon")),
           r.createElement(
-            o.Z,
+            m.Z,
             null,
             r.createElement(
               "div",
-              { className: we().HeaderCtn },
+              { className: ge().HeaderCtn },
               r.createElement(
                 "div",
-                { className: we().HeaderContent },
+                { className: ge().HeaderContent },
                 r.createElement(
                   "div",
-                  { className: we().TextColumn },
+                  { className: ge().TextColumn },
                   r.createElement(
                     "div",
-                    { className: we().EventTitle },
+                    { className: ge().EventTitle },
                     (0, S.PP)(
                       "#Steamawards_Title_WithYear",
                       "2023",
@@ -1499,7 +1526,7 @@
                   ),
                   r.createElement(
                     "div",
-                    { className: (0, p.A)(we().InfoText, we().Large) },
+                    { className: (0, p.A)(ge().InfoText, ge().Large) },
                     n,
                   ),
                   t
@@ -1508,7 +1535,7 @@
                         null,
                         r.createElement(
                           "div",
-                          { className: we().InfoText },
+                          { className: ge().InfoText },
                           (0, S.PP)(
                             "#Steamawards_Voting_Header_Winners",
                             "2023",
@@ -1520,17 +1547,17 @@
                         null,
                         r.createElement(
                           "div",
-                          { className: we().InfoText },
+                          { className: ge().InfoText },
                           (0, S.we)("#Steamawards_Voting_Header_Finalists"),
                         ),
                         r.createElement(
                           "div",
-                          { className: we().InfoText },
+                          { className: ge().InfoText },
                           (0, S.we)("#Steamawards_Voting_Header_HowTo"),
                         ),
                         r.createElement(
                           "div",
-                          { className: we().InfoText },
+                          { className: ge().InfoText },
                           (0, S.we)("#Steamawards_Voting_Header_Dates"),
                         ),
                       ),
@@ -1546,18 +1573,18 @@
           i = (0, d.a8)(a);
         if (!s.data) return null;
         const l = s.data.votes.map((e) =>
-          r.createElement(Qe, { key: e.voteid, unSaleAppID: a, definition: e }),
+          r.createElement(fe, { key: e.voteid, unSaleAppID: a, definition: e }),
         );
-        let m = null;
+        let o = null;
         return (
-          (m = n
+          (o = n
             ? (0, S.PP)(
                 "#Steamawards_Progress_Title_Past",
                 i.data?.length ?? 0,
                 s.data.votes.length,
               )
             : t
-              ? w.iA.logged_in
+              ? g.iA.logged_in
                 ? i.data?.length > 0
                   ? (0, S.PP)(
                       "#Steamawards_Progress_Title",
@@ -1574,28 +1601,28 @@
                   s.data.votes.length,
                 )),
           r.createElement(
-            o.Z,
-            { className: (0, p.A)(we().ProgressCtn, we().SectionContent) },
-            r.createElement("div", { className: we().Title }, m),
-            r.createElement("div", { className: we().StickerRow }, l),
+            m.Z,
+            { className: (0, p.A)(ge().ProgressCtn, ge().SectionContent) },
+            r.createElement("div", { className: ge().Title }, o),
+            r.createElement("div", { className: ge().StickerRow }, l),
           )
         );
       }
-      function Qe(e) {
+      function fe(e) {
         const { definition: a, unSaleAppID: t } = e,
           n = (0, d.Mn)(t, a.voteid),
           s = (0, d.PV)(t, a.voteid),
-          i = `${w.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n ? s?.item_image_small : s?.item_image_large}`,
-          l = `${w.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s?.item_image_small}`;
+          i = `${g.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n ? s?.item_image_small : s?.item_image_large}`,
+          l = `${g.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s?.item_image_small}`;
         return r.createElement(
           "div",
-          { className: we().CategoryStickerCtn },
+          { className: ge().CategoryStickerCtn },
           r.createElement("img", {
-            className: we().CategoryStickerHover,
+            className: ge().CategoryStickerHover,
             src: l,
           }),
-          r.createElement(o.Z, {
-            className: (0, p.A)(we().CategorySticker, !n && we().Inactive),
+          r.createElement(m.Z, {
+            className: (0, p.A)(ge().CategorySticker, !n && ge().Inactive),
             onActivate: () =>
               (window.location.href =
                 "#" + a.localization.title.replace(/\s/g, "")),
@@ -1603,10 +1630,10 @@
           }),
         );
       }
-      function Te(e) {
+      function Qe(e) {
         const { unSaleAppID: a, bIsVotingOpen: t, bIsVotingPast: n } = e,
           s = (0, d.Jo)(a).data.votes.map((e) =>
-            r.createElement(fe, {
+            r.createElement(Te, {
               key: e.voteid,
               bIsVotingOpen: t,
               bIsVotingPast: n,
@@ -1615,15 +1642,15 @@
             }),
           );
         return r.createElement(
-          o.Z,
+          m.Z,
           {
             id: "Categories",
-            className: (0, p.A)(we().CategoryList, we().SectionContent),
+            className: (0, p.A)(ge().CategoryList, ge().SectionContent),
           },
           s,
         );
       }
-      function fe(e) {
+      function Te(e) {
         const {
             definition: a,
             unSaleAppID: t,
@@ -1635,51 +1662,51 @@
             Ce,
           ),
           l = (0, d.Mn)(t, a.voteid),
-          m = r.useRef(0),
+          o = r.useRef(0),
           c = (0, b.R7)(),
           [u, E] = r.useState([]),
           [A, N] = r.useState(0),
           [v, C] = r.useState(!1),
           [h, y] = r.useState(0),
-          [Q, T] = r.useState(!l && !s),
-          [f, I] = r.useState(),
+          [f, Q] = r.useState(!l && !s),
+          [T, I] = r.useState(),
           [B, k] = r.useState(669),
           R =
-            w.TS.BASE_URL_STORE_CDN_ASSETS +
+            g.TS.BASE_URL_STORE_CDN_ASSETS +
             "promo/steamawards2023/backgrounds/awardbg_" +
             a.voteid +
             ".jpg?v=3",
-          P = w.TS.IMG_URL + "promo/steamawards2023/placeholder_main.png",
-          V = c?.ownerWindow || window,
-          L = r.useCallback((e) => {
+          P = g.TS.IMG_URL + "promo/steamawards2023/placeholder_main.png",
+          L = c?.ownerWindow || window,
+          V = r.useCallback((e) => {
             k(e.contentRect.height);
           }, []),
-          M = (0, D.wY)(L),
-          W = r.useCallback(() => {
+          W = (0, D.wY)(V),
+          M = r.useCallback(() => {
             let e = "-20% 0px -50% 0px";
-            if (V.innerHeight <= B) e = "0px 0px 0px 0px";
+            if (L.innerHeight <= B) e = "0px 0px 0px 0px";
             else {
               const a = 40,
-                t = V.innerHeight / B,
-                n = Math.min(t * a + t * B - (B + a), 0.65 * V.innerHeight);
-              e = `-${Math.min(0.4 * B, 0.1 * V.innerHeight)}px 0px -${n}px 0px`;
+                t = L.innerHeight / B,
+                n = Math.min(t * a + t * B - (B + a), 0.65 * L.innerHeight);
+              e = `-${Math.min(0.4 * B, 0.1 * L.innerHeight)}px 0px -${n}px 0px`;
             }
             I(e);
-          }, [V.innerHeight, B]);
+          }, [L.innerHeight, B]);
         r.useEffect(
           () => (
-            window.addEventListener("resize", W),
-            () => window.removeEventListener("resize", W)
+            window.addEventListener("resize", M),
+            () => window.removeEventListener("resize", M)
           ),
         ),
           r.useEffect(() => {
             u.length ||
               (async () => {
                 let e = [];
-                if (w.iA.logged_in) {
+                if (g.iA.logged_in) {
                   const t = await Promise.all(
                     a.app_discounts?.map(async (e) => {
-                      const a = [e.appid, w.iA.accountid].toString(),
+                      const a = [e.appid, g.iA.accountid].toString(),
                         t = await (0, ve.sx)(a);
                       return { appid: e.appid, hash: t };
                     }),
@@ -1687,23 +1714,23 @@
                   t.sort((e, a) => (e.hash > a.hash ? 1 : -1)),
                     (e = t.map((e) => e.appid));
                 } else (e = a.app_discounts.map((e) => e.appid)), (0, Ne.fW)(e);
-                E(e), N(e[m.current]), W();
+                E(e), N(e[o.current]), M();
               })();
-          }, [a.app_discounts, W, u]);
-        const G = r.useCallback(() => {
+          }, [a.app_discounts, M, u]);
+        const H = r.useCallback(() => {
             if (!h) {
-              let e = m.current + 1;
-              e >= u.length && (e = 0), (m.current = e), N(u[m.current]);
+              let e = o.current + 1;
+              e >= u.length && (e = 0), (o.current = e), N(u[o.current]);
             }
           }, [u, h]),
-          H = r.useCallback((e) => {
+          O = r.useCallback((e) => {
             C(e);
           }, []),
-          x = r.useCallback((e) => {
+          G = r.useCallback((e) => {
             y(e), N(e);
           }, []),
-          O = r.useCallback(() => {
-            y(0), N(u[m.current]);
+          x = r.useCallback(() => {
+            y(0), N(u[o.current]);
           }, [u]);
         if (1 == i)
           return r.createElement(F.t, {
@@ -1720,8 +1747,8 @@
               unAppID: e,
               bIsVotingOpen: n,
               bIsCurrentVoteApp: l == e,
-              fnOnMouseLeaveApp: O,
-              fnOnMouseEnterApp: x,
+              fnOnMouseLeaveApp: x,
+              fnOnMouseEnterApp: G,
             }),
           ),
           q = u?.map((e) =>
@@ -1731,14 +1758,14 @@
               unAppID: e,
               bPlayMicrotrailers: v,
               bCurrentlyActive: A === e,
-              fnOnVideoEnd: G,
+              fnOnVideoEnd: H,
             }),
           );
-        let X = r.createElement(r.Fragment, null, q);
+        let j = r.createElement(r.Fragment, null, q);
         return (
           a.winner_appid && s
-            ? (X = r.createElement(Be, { unAppID: a.winner_appid }))
-            : l && (X = r.createElement(Ie, { unAppID: l })),
+            ? (j = r.createElement(Be, { unAppID: a.winner_appid }))
+            : l && (j = r.createElement(Ie, { unAppID: l })),
           r.createElement(
             pe.tH,
             null,
@@ -1746,44 +1773,44 @@
               Ae.J,
               {
                 thresholds: [0.4],
-                rootMargin: f,
+                rootMargin: T,
                 trigger: "repeated",
-                onVisibilityChange: H,
+                onVisibilityChange: O,
               },
               r.createElement(
-                o.Z,
+                m.Z,
                 {
-                  ref: M,
+                  ref: W,
                   className: (0, p.A)(
-                    we().SteamAwardCategory,
-                    l && we().CategoryVoted,
-                    v && we().Active,
+                    ge().SteamAwardCategory,
+                    l && ge().CategoryVoted,
+                    v && ge().Active,
                   ),
                 },
                 r.createElement("a", {
                   id: a.localization.title.replace(/\s/g, ""),
-                  className: we().Anchor,
+                  className: ge().Anchor,
                 }),
                 r.createElement("div", {
-                  className: (0, p.A)(we().SteamAwardCategoryBackground),
+                  className: (0, p.A)(ge().SteamAwardCategoryBackground),
                   style: { backgroundImage: `url( ${R} )` },
                 }),
                 r.createElement("div", {
-                  className: (0, p.A)(we().SteamAwardCategoryBlurryBackground),
+                  className: (0, p.A)(ge().SteamAwardCategoryBlurryBackground),
                   style: { backgroundImage: `url( ${R} )` },
                 }),
                 r.createElement(
                   "div",
-                  { className: we().CategoryRow },
+                  { className: ge().CategoryRow },
                   r.createElement(
                     "div",
-                    { className: we().LeftColumn },
+                    { className: ge().LeftColumn },
                     r.createElement(
                       "div",
-                      { className: we().CategoryTitleRow },
+                      { className: ge().CategoryTitleRow },
                       r.createElement(
                         "div",
-                        { className: we().CategoryYear },
+                        { className: ge().CategoryYear },
                         (0, S.PP)(
                           "#Steamawards_Title_WithYear_NoBreaks",
                           "2023",
@@ -1791,55 +1818,55 @@
                       ),
                       r.createElement(
                         "div",
-                        { className: we().CategoryTitle },
+                        { className: ge().CategoryTitle },
                         a.localization.title_award,
                       ),
                     ),
                     r.createElement(
                       "div",
-                      { className: we().CategoryDescription },
+                      { className: ge().CategoryDescription },
                       a.localization.award_description,
                     ),
                     (l || s) &&
                       r.createElement(
-                        g.$n,
-                        { className: we().HideShowBtn, onClick: () => T(!Q) },
-                        Q
+                        w.$n,
+                        { className: ge().HideShowBtn, onClick: () => Q(!f) },
+                        f
                           ? (0, S.we)("#Steamawards_HideFinalists_Btn")
                           : (0, S.we)("#Steamawards_ShowFinalists_Btn"),
                       ),
                   ),
                   r.createElement(
                     "div",
-                    { className: (0, p.A)(we().RightColumn) },
+                    { className: (0, p.A)(ge().RightColumn) },
                     r.createElement(
                       "div",
-                      { className: we().CapsuleContainer },
-                      X,
+                      { className: ge().CapsuleContainer },
+                      j,
                       r.createElement("img", { src: P }),
                     ),
                   ),
                 ),
                 r.createElement(
-                  ge.A,
+                  we.A,
                   {
                     timeout: 500,
                     unmountOnExit: !0,
                     mountOnEnter: !0,
-                    in: Q,
+                    in: f,
                     classNames: {
-                      enter: we().Enter,
-                      enterActive: we().EnterActive,
-                      exit: we().Exit,
-                      exitActive: we().ExitActive,
+                      enter: ge().Enter,
+                      enterActive: ge().EnterActive,
+                      exit: ge().Exit,
+                      exitActive: ge().ExitActive,
                     },
                   },
                   r.createElement(
                     "div",
-                    { className: we().FinalistsCtn },
+                    { className: ge().FinalistsCtn },
                     r.createElement(
                       "div",
-                      { className: we().FinalistsIntro },
+                      { className: ge().FinalistsIntro },
                       r.createElement(
                         "div",
                         null,
@@ -1847,9 +1874,9 @@
                           ? (0, S.we)("#Steamawards_Voting_Finalists_Past")
                           : (0, S.we)("#Steamawards_Voting_Finalists"),
                       ),
-                      r.createElement("div", { className: we().FinalistsLine }),
+                      r.createElement("div", { className: ge().FinalistsLine }),
                     ),
-                    r.createElement("div", { className: we().FinalistsRow }, U),
+                    r.createElement("div", { className: ge().FinalistsRow }, U),
                   ),
                 ),
               ),
@@ -1867,7 +1894,7 @@
               null,
               r.createElement(
                 "div",
-                { className: we().CurrentVoteBanner },
+                { className: ge().CurrentVoteBanner },
                 (0, S.we)("#Steamawards_Voting_YourVote"),
               ),
               r.createElement(
@@ -1890,12 +1917,12 @@
               null,
               r.createElement(
                 "div",
-                { className: we().CurrentVoteBanner },
+                { className: ge().CurrentVoteBanner },
                 (0, S.we)("#Steamawards_Voting_Winner"),
               ),
               r.createElement(
                 "a",
-                { className: we().WinnerCapsule, href: n },
+                { className: ge().WinnerCapsule, href: n },
                 r.createElement("img", {
                   src: t.GetAssetsWithoutOverrides().GetMainCapsuleURL(),
                 }),
@@ -1912,19 +1939,19 @@
             bHoveringApp: i,
           } = e,
           [l] = (0, _.t7)(a, Ce),
-          m = r.useRef();
+          o = r.useRef();
         return (
           r.useEffect(() => {
-            m.current && (t && s ? m.current.play() : m.current.pause());
+            o.current && (t && s ? o.current.play() : o.current.pause());
           }, [t, s]),
           l && l.GetMicroTrailer()?.strWebMURL
             ? r.createElement(
                 "video",
                 {
-                  className: (0, p.A)(we().MicrotrailerVideo, t && we().Active),
+                  className: (0, p.A)(ge().MicrotrailerVideo, t && ge().Active),
                   poster: l.GetAssetsWithoutOverrides().GetMainCapsuleURL(),
                   onEnded: n,
-                  ref: m,
+                  ref: o,
                   preload: "auto",
                   loop: i,
                   playsInline: !0,
@@ -1934,7 +1961,7 @@
                   src: l.GetMicroTrailer()?.strWebMURL,
                   type: "video/webm",
                 }),
-                Boolean(!w.TS.IN_CLIENT) &&
+                Boolean(!g.TS.IN_CLIENT) &&
                   r.createElement("source", {
                     src: l.GetMicroTrailer()?.strMP4URL,
                     type: "video/mp4",
@@ -1951,16 +1978,16 @@
             bCurrentlyActive: s,
             fnOnMouseEnterApp: i,
             fnOnMouseLeaveApp: l,
-            bIsVotingOpen: m,
+            bIsVotingOpen: o,
             bIsCurrentVoteApp: c,
           } = e,
           [u] = (0, _.t7)(a, Ce),
           E = (0, d.ZB)(a, n, t),
-          w = (0, Se.aL)(u?.GetStorePageURL(), "nominee_capsule"),
+          g = (0, Se.aL)(u?.GetStorePageURL(), "nominee_capsule"),
           A = (0, d.Vz)(n),
           N = A && A.currentNomination?.appid === a,
           v = r.useCallback(() => {
-            (0, V.UserEligibleToNominateOrVote)(!0)
+            (0, L.UserEligibleToNominateOrVote)(!0)
               ? c || E.mutate()
               : console.log(
                   "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
@@ -1971,12 +1998,12 @@
           ? (0, S.we)("#Steamawards_Voting_Action_Voted")
           : (0, S.we)("#Steamawards_Voting_Action_Vote");
         return r.createElement(
-          o.Z,
+          m.Z,
           {
             className: (0, p.A)(
-              we().FinalistGameCtn,
-              s ? we().CurrentlyFeatured : "",
-              c ? we().MyVote : "",
+              ge().FinalistGameCtn,
+              s ? ge().CurrentlyFeatured : "",
+              c ? ge().MyVote : "",
             ),
             onMouseEnter: () => i(a),
             onBlur: l,
@@ -1985,29 +2012,29 @@
           },
           r.createElement(
             "a",
-            { href: w, className: we().CapsuleLink },
+            { href: g, className: ge().CapsuleLink },
             r.createElement("img", {
               src: u.GetAssetsWithoutOverrides().GetHeroCapsuleURL(),
-              className: we().Capsule,
+              className: ge().Capsule,
             }),
-            r.createElement("div", { className: we().Highlight }, " "),
+            r.createElement("div", { className: ge().Highlight }, " "),
           ),
-          m &&
+          o &&
             r.createElement(
-              g.$n,
-              { onClick: v, className: we().ActionButton },
+              w.$n,
+              { onClick: v, className: ge().ActionButton },
               C,
             ),
           N &&
             r.createElement(
               "div",
-              { className: we().YourNomination },
+              { className: ge().YourNomination },
               (0, S.we)("#Steamawards_Voting_Action_YourNominee"),
             ),
         );
       }
       function De() {
-        const e = w.TS.HELP_BASE_URL + "faqs/view/71D3-35C2-AD96-AA3A",
+        const e = g.TS.HELP_BASE_URL + "faqs/view/71D3-35C2-AD96-AA3A",
           a = [
             r.createElement(be, {
               key: "FAQ_1",
@@ -2055,22 +2082,22 @@
           ];
         return r.createElement(
           "div",
-          { className: (0, p.A)(we().FAQWrapper, we().SectionContent) },
+          { className: (0, p.A)(ge().FAQWrapper, ge().SectionContent) },
           r.createElement(
             "h3",
-            { className: we().FaqSectionTitle },
+            { className: ge().FaqSectionTitle },
             (0, S.we)("#Steamawards_Voting_FAQ_Title"),
           ),
-          r.createElement("div", { className: we().FAQCtn }, a),
+          r.createElement("div", { className: ge().FAQCtn }, a),
         );
       }
       function be(e) {
         const { strQuestion: a, strAnswer: t } = e;
         return r.createElement(
-          o.Z,
-          { className: we().FaqEntry },
-          r.createElement("div", { className: we().FAQ_Q }, a),
-          r.createElement("div", { className: we().FAQ_A }, t),
+          m.Z,
+          { className: ge().FaqEntry },
+          r.createElement("div", { className: ge().FAQ_Q }, a),
+          r.createElement("div", { className: ge().FAQ_A }, t),
         );
       }
       function Pe(e) {
@@ -2080,7 +2107,7 @@
           r.createElement(Fe, { unSaleAppID: d.RZ }),
         );
       }
-      const Ve = () =>
+      const Le = () =>
         r.createElement(
           h.A,
           { controller: "steamawards" },

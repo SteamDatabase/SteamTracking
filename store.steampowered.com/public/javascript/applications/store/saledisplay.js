@@ -232,7 +232,7 @@
           const e = window.__nav_tree_root;
           return l.createElement(
             o.B2,
-            { ...c, navTreeRef: m, secondary: !0, parentEmbeddedNavTree: e },
+            { ...c, navTreeRef: m, parentEmbeddedNavTree: e },
             l.createElement(i.q, null, t),
           );
         }
@@ -592,7 +592,7 @@
           );
         }
         return n.createElement(
-          y,
+          A,
           {
             eventModel: e,
             key: "background_group_" + t.groupID,
@@ -602,7 +602,7 @@
           t.elSaleSections,
         );
       }
-      function y(e) {
+      function A(e) {
         const {
             displayDef: t,
             children: a,
@@ -674,7 +674,7 @@
           a,
         );
       }
-      var A = a(96971),
+      var y = a(96971),
         G = a(52393),
         T = a.n(G),
         L = a(91382),
@@ -999,11 +999,11 @@
         we = a(73744),
         fe = a(64953),
         De = a(72739);
-      function ye(e) {
+      function Ae(e) {
         e.preventDefault();
       }
-      var Ae = a(71647),
-        Ge = a.n(Ae);
+      var ye = a(71647),
+        Ge = a.n(ye);
       function Te(e) {
         const {
             onDropFiles: t,
@@ -1025,7 +1025,7 @@
                   ce.NO(e) && a(!1);
                 }, []),
                 onDragEnd: n.useCallback(() => a(!1), []),
-                onDragOver: t ? ye : void 0,
+                onDragOver: t ? Ae : void 0,
                 onDrop: n.useCallback(
                   (t) => {
                     t.dataTransfer.files?.length &&
@@ -1051,7 +1051,7 @@
               De.createPortal(
                 n.createElement(
                   "form",
-                  { onSubmit: ye, style: { display: "none" } },
+                  { onSubmit: Ae, style: { display: "none" } },
                   n.createElement("input", {
                     ...t,
                     type: "file",
@@ -2920,7 +2920,7 @@
           }),
         );
       }
-      function yt(e) {
+      function At(e) {
         const { lang: t, eventModel: a, partnerEventStore: l } = e,
           [r, o, i, s, c] = (0, g.q3)(() => [
             a.GetNameWithFallback(t),
@@ -3017,7 +3017,7 @@
       }
       (0, de.Cg)([k.oI], ft.prototype, "ShowLangChangeDialog", null),
         (ft = (0, de.Cg)([ke.PA], ft));
-      const At = (e) => {
+      const yt = (e) => {
           const [t] = (0, et.t7)(e.event.appid, { include_assets: !0 });
           if (!t) return null;
           const a = t.GetName(),
@@ -3104,7 +3104,7 @@
                   eventModel: o,
                 }),
               "background" === a &&
-                n.createElement(yt, {
+                n.createElement(At, {
                   imgURL:
                     M.TS.IMG_URL + "events/defaults/default_img_header.jpg",
                   lang: t,
@@ -3112,21 +3112,21 @@
                   partnerEventStore: i,
                 }),
               "spotlight" === a &&
-                n.createElement(At, {
+                n.createElement(yt, {
                   lang: t,
                   imgURL:
                     M.TS.IMG_URL + "events/defaults/default_img_spotlight.jpg",
                   event: o,
                 }),
               "localized_store_app_spotlight" === a &&
-                n.createElement(At, {
+                n.createElement(yt, {
                   lang: t,
                   imgURL:
                     M.TS.IMG_URL + "events/defaults/default_img_spotlight.jpg",
                   event: o,
                 }),
               "localized_store_app_spotlight_mobile" === a &&
-                n.createElement(At, {
+                n.createElement(yt, {
                   lang: t,
                   imgURL:
                     M.TS.IMG_URL + "events/defaults/default_img_spotlight.jpg",
@@ -3144,18 +3144,18 @@
               "capsule" === a &&
                 n.createElement(Dt, { imgURL: _, eventModel: o }),
               "background" === a &&
-                n.createElement(yt, {
+                n.createElement(At, {
                   imgURL: _,
                   lang: t,
                   eventModel: o,
                   partnerEventStore: i,
                 }),
               "spotlight" === a &&
-                n.createElement(At, { imgURL: _, event: o, lang: t }),
+                n.createElement(yt, { imgURL: _, event: o, lang: t }),
               "localized_store_app_spotlight" === a &&
-                n.createElement(At, { imgURL: _, event: o, lang: t }),
+                n.createElement(yt, { imgURL: _, event: o, lang: t }),
               "localized_store_app_spotlight_mobile" === a &&
-                n.createElement(At, { imgURL: _, event: o, lang: t }),
+                n.createElement(yt, { imgURL: _, event: o, lang: t }),
               ("broadcast_left" === a || "broadcast_right" === a) &&
                 n.createElement(Gt, {
                   imgURL: _,
@@ -4249,7 +4249,7 @@
               Y.P,
               null,
               n.createElement(
-                A.Cs,
+                y.Cs,
                 { location: l ? 2 : 0 },
                 n.createElement(
                   x,
@@ -4348,10 +4348,10 @@
             ];
           });
         let w = !1;
-        const y = [{ elements: [], activeTab: new V.y(null, l) }];
-        let A = null;
+        const A = [{ elements: [], activeTab: new V.y(null, l) }];
+        let y = null;
         C.forEach((l, c) => {
-          const g = y[y.length - 1].activeTab;
+          const g = A[A.length - 1].activeTab;
           if (g && !g.ShouldShowSection(l)) return;
           const m = p.nY
               .Get()
@@ -4378,7 +4378,7 @@
               : g;
             "tabs" == l.section_type &&
               l.tabs?.some((e) => e.unique_id == o?.GetActiveTabUniqueID()) &&
-              y.push({ activeTab: o, elements: [] }),
+              A.push({ activeTab: o, elements: [] }),
               (u = n.createElement(ta.H, {
                 ...e,
                 section: l,
@@ -4396,7 +4396,7 @@
             {
               key: "SaleSectionIndex_" + l.unique_id + "_" + c,
               section: l,
-              nActiveTabID: y[y.length - 1].activeTab.GetActiveTabUniqueID(),
+              nActiveTabID: A[A.length - 1].activeTab.GetActiveTabUniqueID(),
               saleSectionIndex: c,
               ePreviewMode: r,
               salePageBackgroundDerivedConfig: k,
@@ -4406,24 +4406,24 @@
             u,
           );
           const I = k.mapSectionToGroup.get(l.unique_id);
-          A &&
-            A.groupID != I &&
-            (y[y.length - 1].elements.push(D(t, A, o?.GetActiveTabUniqueID())),
-            (A = null)),
+          y &&
+            y.groupID != I &&
+            (A[A.length - 1].elements.push(D(t, y, o?.GetActiveTabUniqueID())),
+            (y = null)),
             I
-              ? (A ||
-                  (A = {
+              ? (y ||
+                  (y = {
                     groupID: I,
                     elSaleSections: [],
                     derivedGroupInfo: k.mapGroupToSections.get(I),
                   }),
-                A.elSaleSections.push(E))
-              : y[y.length - 1].elements.push(E);
+                y.elSaleSections.push(E))
+              : A[A.length - 1].elements.push(E);
         }),
-          A &&
-            (y[y.length - 1].elements.push(D(t, A, o?.GetActiveTabUniqueID())),
-            (A = null));
-        const G = y.map((e, t) =>
+          y &&
+            (A[A.length - 1].elements.push(D(t, y, o?.GetActiveTabUniqueID())),
+            (y = null));
+        const G = A.map((e, t) =>
           n.createElement(
             "div",
             {

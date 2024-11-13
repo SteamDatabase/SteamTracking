@@ -396,12 +396,14 @@ button._3VW3jphjSrFsWyh8CQ7qkl._3VW3jphjSrFsWyh8CQ7qkl:disabled:hover {
 ._3YIwjQZlP_YdCZH2DIj5f7 {
   background-color: #2e3138;
   max-width: 100%;
-  width: 900px;
   margin: 16px auto;
   padding: 24px;
   color: #fff;
   display: flex;
   flex-direction: column;
+}
+._3YIwjQZlP_YdCZH2DIj5f7 ._3TyuR_ycmrQIlt-wuVBtaD {
+  width: 100%;
 }
 button._22iwdea7XXbiuZrrLZUU11._22iwdea7XXbiuZrrLZUU11 {
   background-color: green;

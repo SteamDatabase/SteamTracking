@@ -1932,8 +1932,8 @@
         return [e, r, t, a, o];
       }
       function T(e) {
-        const [t, a, o] = C(),
-          l = n.useMemo(() => {
+        const [t, a, o, l, d] = C(),
+          h = n.useMemo(() => {
             const e = [...t];
             return (
               e.sort((e, t) => {
@@ -1950,7 +1950,7 @@
               e
             );
           }, [t]),
-          [d, h] = (function () {
+          [f, y] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
               ),
@@ -1959,14 +1959,14 @@
               );
             return [e, t];
           })();
-        let f = "mailto:taxsupport-valve@taxidentity.com";
-        if (l.length > 0) {
-          const e = JSON.parse(l[0]?.data.description_jsondata)?.Subject,
+        let v = "mailto:taxsupport-valve@taxidentity.com";
+        if (h.length > 0) {
+          const e = JSON.parse(h[0]?.data.description_jsondata)?.Subject,
             t =
               "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
                 ? "TEST:"
                 : "";
-          f += "?subject=" + t + e;
+          v += "?subject=" + t + e;
         }
         return n.createElement(
           r.tH,
@@ -1989,15 +1989,15 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  d && n.createElement(I, { strTemplate: h }),
-                  l.length > 0 &&
-                    l.map((e, t) =>
+                  f && n.createElement(I, { strTemplate: y }),
+                  h.length > 0 &&
+                    h.map((e, t) =>
                       n.createElement(x, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
                           index: t,
-                          onboarded: 0 != o,
+                          onboarded: 0 != d,
                         },
                       }),
                     ),
@@ -2052,7 +2052,7 @@
                     n.createElement(
                       u.jn,
                       {
-                        onClick: () => window.location.assign(f),
+                        onClick: () => window.location.assign(v),
                         className: s().NotificationButton,
                       },
                       "Contact TaxIdentity",

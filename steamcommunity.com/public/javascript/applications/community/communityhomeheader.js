@@ -347,7 +347,7 @@
           const e = window.__nav_tree_root;
           return r.createElement(
             i.B2,
-            { ...s, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
+            { ...s, navTreeRef: u, parentEmbeddedNavTree: e },
             r.createElement(c.q, null, t),
           );
         }

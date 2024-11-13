@@ -322,6 +322,7 @@ var kStandardTag_Unmarketable =
 	localized_category_name: 'Misc'
 };
 
+
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 {
 	// add the context menu
@@ -711,7 +712,7 @@ CInventory.prototype.AddInventoryData = function( data )
 				if ( !description.tags )
 					description.tags = [];
 
-				if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
+								if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
 				{
 					if ( description.tradable )
 						description.tags.push( kStandardTag_Tradable );
@@ -1122,6 +1123,7 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	if ( description.background_color )
 		$Item.css( 'backgroundColor', '#' + description.background_color );
 
+	
 	// compat
 	$Item[0].rgItem = asset;
 
@@ -1541,11 +1543,11 @@ CInventory.prototype.PreloadPageImages = function( iPage )
 {
 	// this page
 	this.m_rgPages[ iPage ].LoadPageImages();
-	
+
 	// next page
 	if ( iPage < this.m_cPages - 1 )
 		this.m_rgPages[ iPage + 1 ].LoadPageImages();
-		
+
 	// previous page
 	if ( iPage > 0 )
 		this.m_rgPages[ iPage - 1 ].LoadPageImages();
@@ -2731,7 +2733,7 @@ CUserYou = Class.create( CUser, {
 
 		return inventory;
 	},
-	
+
 	GetInventoryLoadDisplayElement: function() {
 		return $J('#inventory_load_error_ctn');
 	},
@@ -4698,7 +4700,7 @@ var Filter = {
 		}
 
 		this.strLastFilter = filter;
-		
+
 		var rgTerms = filter.length ? filter.split( ' ' ) : false;
 		for( var i = 0; i < rgTerms.length; i++ )
 		{
@@ -4770,7 +4772,7 @@ var Filter = {
 						elItemHolder.filtered=false;
 					}
 				}
-				
+
 				if ( !elItemHolder.filtered )
 					cElementsDisplayed++;
 

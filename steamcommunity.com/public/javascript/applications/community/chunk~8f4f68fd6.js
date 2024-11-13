@@ -1407,6 +1407,7 @@
                     br: o.qM.readString,
                     bw: o.gp.writeString,
                   },
+                  sealed: { n: 32, br: o.qM.readBool, bw: o.gp.writeBool },
                 },
               }),
             d.sm_m

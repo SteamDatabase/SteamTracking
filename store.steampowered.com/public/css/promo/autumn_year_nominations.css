@@ -63,7 +63,7 @@ body.SteamAwardsNominations .responsive_page_frame {
     width: 100%;
     top: 0;
     bottom: 0;
-    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg);
+    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2024/header_notrophy.webp);
     background-size: cover;
     background-position: center;
     background-color: #21081f;
@@ -104,7 +104,7 @@ a.steamaward_nominate_link {
 }
 
 .steamaward_nominate_link:hover {
-    box-shadow: 0 0 8px #e5c6df;
+    box-shadow: 0 0 8px #111111;
 }
 .steamaward_nominate_link:hover .steamaward_nominate_background {
     transform: scale(1.1);
@@ -222,20 +222,20 @@ a.steamaward_nominate_link {
 
 		    font-size: 24px;
     line-height: 26px;
-    color: #e5c6df;
+    color: #FFFFFF;
     text-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 .game_nominate_line2 span {
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
-		    color: #ffcb60;
+		    color: #EBF000;
 }
 
 .game_nominate_line3 {
     font-size: 13px;
     line-height: 15px;
-    color: #c7b4c4;
+    color: #FFFFFF;
 }
 
 .game_nominate_toupper {
@@ -244,4 +244,164 @@ a.steamaward_nominate_link {
 
 .game_nominate .game_nominate_collapsed_only {
     display: none;
+}
+
+/*
+---------------------
+APP PAGE BANNER SECTION
+---------------------
+*/
+
+.steamawards2023_app_banner_awardstitle {
+	color: #c7b4c4;
+	text-transform: uppercase;
+}
+
+.steamawards2023_app_banner_ctn {
+    position: relative;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg');
+	background-size: cover;
+	border: 2px solid rgba( 87,131,151, 0.35);
+	display: flex;
+	padding: 10px;
+	margin-bottom: 35px;
+	user-select: none;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.steamawards2023_app_banner_ctn img {
+    position: absolute;
+    top: -30px;
+    left: 9px;
+    width: 54px;
+}
+
+#AwardsDefault .steamawards2023_app_square_ctn {
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg');
+	border: 2px solid rgba( 87,131,151, 0.35);
+    background-size: cover;
+    background-position: center left;
+	padding: 20px 0 10px 20px;
+	margin-bottom: 20px;
+	user-select: none;
+	float: none;
+	display: block;
+	height: auto;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+#AwardsDefault .steamawards2023_app_square_ctn:hover {
+	color: #ffffff;
+}
+
+.steamawards2023_app_square_ctn .steamawards_app_banner_contents img {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    width: 52px;
+}
+
+.steamawards2023_app_banner_year {
+    color: #b4469f;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.steamawards2023_app_banner_left {
+	margin: 10px 70px 16px 10px;
+    padding-left: 56px;
+    box-sizing: border-box;
+}
+
+.steamawards2023_app_square_ctn .steamawards2023_app_banner_left {
+    padding-left: unset;
+    margin-left: 0;
+}
+
+.steamawards2023_app_banner_year {
+	color: #c7b4c4;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 15px;
+}
+
+.steamawards2023_app_banner_winner {
+	background-color: white;
+	color: black;
+	padding: 2px 6px;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.steamawards2023_app_banner_header {
+	margin: 15px 0px 10px 0px;
+	text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-size: 17px;
+}
+
+.steamawards2023_app_banner_header .award_title.small {
+    font-size: 22px;
+}
+
+.steamawards2023_app_banner_header span {
+	color: #c7b4c4;
+}
+
+.steamawards2023_app_square_ctn .steamawards_app_banner_contents {
+	display: flex;
+	flex-direction: row;
+    position: relative;
+}
+
+.steamawards_app_banner_appname, .steamawards2023_app_banner_appname {
+	font-size: 28px;
+	color: ;
+	font-weight: 700;
+}
+
+.steamawards_app_banner_left {
+	max-width: 70%;
+}
+
+.steamawards2023_app_banner_toprow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.steamawards2023_app_banner_event_title {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    margin-left: 8px;
+    font-size: 19px;
+}
+
+.steamawards_app_banner_event {
+	display: flex;
+	margin-bottom: 24px;
+}
+
+.steamawards_app_banner_2018 {
+	color: #665e7a;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 15px;
+}
+
+.steamawards_app_banner_awardstitle {
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 15px;
 }

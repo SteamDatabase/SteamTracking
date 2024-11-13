@@ -4153,6 +4153,7 @@
                     br: u.qM.readString,
                     bw: u.gp.writeString,
                   },
+                  sealed: { n: 32, br: u.qM.readBool, bw: u.gp.writeBool },
                 },
               }),
             Ge.sm_m

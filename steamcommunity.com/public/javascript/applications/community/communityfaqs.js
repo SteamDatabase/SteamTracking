@@ -54,6 +54,7 @@
         FAQMenuCtn: "_1DISv1JGZ0pxbGtYHeBsJU",
         FAQEditorCtn: "sjpl-ow0jbdSysRG8jsFA",
         FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
+        LeftCol: "_3TyuR_ycmrQIlt-wuVBtaD",
         EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
         EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
         EditorTitleField: "_37R-2WttVdEqucotluEzW_",
@@ -9298,7 +9299,7 @@
                     { className: L().Columns },
                     s.createElement(
                       "div",
-                      { className: (0, f.A)(L().LeftCol) },
+                      { className: (0, f.A)(L().LeftCol, Te().LeftCol) },
                       s.createElement(et, { draft: a, eLanguage: n }),
                       s.createElement(tt, {
                         bbcodeEditorRef: i,

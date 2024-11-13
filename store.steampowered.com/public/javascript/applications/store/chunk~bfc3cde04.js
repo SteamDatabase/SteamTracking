@@ -90,6 +90,29 @@
     65835: (e) => {
       e.exports = { Ctn: "_2L6sVk9vOgKcXO6DgZHpJ9" };
     },
+    56330: (e) => {
+      e.exports = {
+        ErrorStyles: "_2Sg7W8jsvFcXVuQ7fbhSLJ",
+        ErrorStylesWithIcon: "Lc2PK-Vkkvr2TUS0TfCqq",
+        ErrorIconLayout: "_42__6kBR5lkICeFfkFnwz",
+        ErrorStylesBackground: "_3fVv6M5HyJXcQ6kNF1SvoH",
+        ErrorFloatBelow: "_2aKylEXoZKcXuXfFcmcuQc",
+        WarningStyles: "_3gxgE6PMPecWZDBSlGjMX_",
+        WarningStylesWithIcon: "_1S_uSkD_E5ayHa48JzzE0E",
+        WarningIconLayout: "_2jM80ZtA-oI5okavBZZqnF",
+        WarningStylesBackground: "UYrHsewdjj7dSkpWGgikw",
+        Stuck: "_2b5wWgFg1yvry3TDzRUfFt",
+        WarningFloatBelow: "_3e0cNuLANduciMmeZz1dnk",
+        InfoStyles: "_2lreMbIjEILzP1Eomy1QZM",
+        InfoStylesWithIcon: "_1_-PibdcIVQzDZEP0_PeLV",
+        InfoIconLayout: "_3kyPzolDIjhIh7zW0wA6fy",
+        InfoStylesBackground: "_3gNTI5UYknHdJwDfou9Iih",
+        Padding: "_36hmaGtzxNb1Pql2UhfM5Z",
+        NotTooWideModal: "UfQcb76CCbHawnpQ9tbu3",
+        ImageManageDialog: "Pl7AIUjh5siFakQJbPFO9",
+        SuccessErrorDialog: "_1wBO1L1tT0f1wtl3CpBWbn",
+      };
+    },
     37341: (e) => {
       e.exports = {
         CheckMark: "_2RwDkHMoOnosJANzYXpE",
@@ -1305,8 +1328,8 @@
         R = a(4796),
         F = a(91254),
         O = a(82097),
-        G = a(22797),
-        P = a(3088),
+        P = a(22797),
+        G = a(3088),
         H = a(75113);
       let V = class extends r.Component {
         state = {
@@ -1385,7 +1408,7 @@
             fnImageFailureCallback: i,
           } = this.props;
           if (this.state.bFailedLoad) return (0, p.Pm)(n);
-          if (this.state.bLoading) return r.createElement(G.t, null);
+          if (this.state.bLoading) return r.createElement(P.t, null);
           let s =
             void 0 !== t
               ? F.O3.GetClanEventFromAnnouncementGID(t)
@@ -1411,7 +1434,7 @@
               "data-modal-content-sizetofit": !0,
               "data-appid": e,
             },
-            r.createElement(P.c, {
+            r.createElement(G.c, {
               className: I().DynamicLink_Preview,
               rgSources: m,
               onIncrementalError: (e, t, a) => i && i(t),
@@ -1445,10 +1468,10 @@
         }
       };
       V = (0, n.Cg)([k.PA], V);
-      var Y = a(6878),
-        W = a.n(Y),
-        z = a(39978),
-        j = a.n(z);
+      var W = a(6878),
+        z = a.n(W),
+        Y = a(39978),
+        j = a.n(Y);
       let K = class extends r.Component {
         state = { bSummaryMode: !0, bLoadedMetaData: !1 };
         async componentDidMount() {
@@ -1527,7 +1550,7 @@
                           ),
                         ),
                       )
-                    : r.createElement(G.t, { size: "medium" }),
+                    : r.createElement(P.t, { size: "medium" }),
                 )
               : r.createElement(
                   "div",
@@ -1619,7 +1642,7 @@
               "/?autoplay=0&donate=0" +
               (t && t.event ? "&steamappid=" + t.event.appid : "");
             return r.createElement("iframe", {
-              className: Y.MedalTVWidget,
+              className: W.MedalTVWidget,
               src: a,
               frameBorder: 0,
               allow: "autoplay",
@@ -1682,7 +1705,7 @@
             if (a > 0)
               return r.createElement(
                 "div",
-                { className: (0, A.A)(Y.LoyaltyRewardCtn) },
+                { className: (0, A.A)(W.LoyaltyRewardCtn) },
                 r.createElement(q, { defid: a, url: e }),
               );
           }
@@ -1751,8 +1774,8 @@
         const l = (0, p.Pm)(e, n?.event, o ?? e);
         return r.createElement(
           "div",
-          { className: Y.SocialLink },
-          r.createElement("div", { className: Y.SocialIcon }, t),
+          { className: W.SocialLink },
+          r.createElement("div", { className: W.SocialIcon }, t),
           l,
         );
       }
@@ -2252,8 +2275,8 @@
         Re = a(33737),
         Fe = a(48079),
         Oe = a(93267),
-        Ge = a(67523),
-        Pe = a.n(Ge);
+        Pe = a(67523),
+        Ge = a.n(Pe);
       const He = (e) => {
         const [t, a] = (0, r.useState)(!0),
           [n, o] = (0, r.useState)(null);
@@ -2299,10 +2322,10 @@
           n)
         )
           return e.bIsPreviewMode
-            ? r.createElement("div", { className: Pe().ErrorDiv }, n)
+            ? r.createElement("div", { className: Ge().ErrorDiv }, n)
             : null;
         if (t)
-          return r.createElement(G.t, {
+          return r.createElement(P.t, {
             string: (0, b.we)("#Loading"),
             size: "small",
           });
@@ -2326,9 +2349,9 @@
         });
       };
       var Ve = a(19432),
-        Ye = a(6469),
-        We = a(84811);
-      const ze = r.lazy(() =>
+        We = a(6469),
+        ze = a(84811);
+      const Ye = r.lazy(() =>
           Promise.all([
             a.e(4359),
             a.e(6341),
@@ -2339,9 +2362,9 @@
         ),
         je = (e) => {
           const t = (0, r.useRef)(null),
-            [a, n] = (0, r.useState)(Ye.K.Get().GetVODForAppID(e.appid)),
+            [a, n] = (0, r.useState)(We.K.Get().GetVODForAppID(e.appid)),
             [o, i] = (0, r.useState)(
-              !Boolean(Ye.K.Get().GetVODForAppID(e.appid)),
+              !Boolean(We.K.Get().GetVODForAppID(e.appid)),
             );
           return (
             (0, r.useEffect)(
@@ -2352,14 +2375,14 @@
               if (
                 (a &&
                   a.appid != e.appid &&
-                  (r = Ye.K.Get().GetVODForAppID(e.appid)),
+                  (r = We.K.Get().GetVODForAppID(e.appid)),
                 !r)
               ) {
                 const a = async () => {
                   t.current && t.current();
                   const a = x().CancelToken.source();
                   (t.current = a.cancel),
-                    (r = await Ye.K.Get().LoadVODForAppID(e.appid)),
+                    (r = await We.K.Get().LoadVODForAppID(e.appid)),
                     a.token.reason || n(r),
                     i(!1);
                 };
@@ -2380,12 +2403,12 @@
                   "div",
                   { className: Ve.BroadcastCtn },
                   r.createElement(
-                    We.tH,
+                    ze.tH,
                     null,
                     r.createElement(
                       r.Suspense,
                       { fallback: null },
-                      r.createElement(ze, {
+                      r.createElement(Ye, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
                         bStartPaused: !0,
@@ -2414,7 +2437,7 @@
             bLazyRenderChildren: !0,
             screenIsWide: a,
             bAutoAdvance: n,
-            className: W().ScreenshotCarousel,
+            className: z().ScreenshotCarousel,
           },
           e.children,
         );
@@ -2578,7 +2601,7 @@
         pt = a(90874),
         dt = a(41951),
         ut = a(74410),
-        ht = a(3132);
+        ht = a(99163);
       let gt = null;
       function _t() {
         return (
@@ -2588,7 +2611,7 @@
               [
                 "h1",
                 {
-                  Constructor: s.Tu(s.Zb, Y.Header1),
+                  Constructor: s.Tu(s.Zb, W.Header1),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
@@ -2596,7 +2619,7 @@
               [
                 "h2",
                 {
-                  Constructor: s.Tu(s.Sz, Y.Header2),
+                  Constructor: s.Tu(s.Sz, W.Header2),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
@@ -2604,19 +2627,19 @@
               [
                 "h3",
                 {
-                  Constructor: s.Tu(s.ZS, Y.Header3),
+                  Constructor: s.Tu(s.ZS, W.Header3),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
               ],
               [
                 "quote",
-                { Constructor: s.Tu(s.Pk, Y.BlockQuote), autocloses: !1 },
+                { Constructor: s.Tu(s.Pk, W.BlockQuote), autocloses: !1 },
               ],
               [
                 "list",
                 {
-                  Constructor: s.Tu(s.B8, Y.UnorderedList),
+                  Constructor: s.Tu(s.B8, W.UnorderedList),
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
@@ -2624,7 +2647,7 @@
               [
                 "olist",
                 {
-                  Constructor: s.Tu(s._J, Y.OrderedList),
+                  Constructor: s.Tu(s._J, W.OrderedList),
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
@@ -2662,13 +2685,13 @@
         );
       }
       function Ct(e) {
-        let t = (0, s.j$)(e.args);
+        let t = (0, s.j$)(e.args) || (0, s.j$)(e.args, "href");
         const a = (0, s.j$)(e.args, "style"),
           n = (0, s.j$)(e.args, "id"),
           o = (function (e) {
             return "button" === e
-              ? (0, A.A)(Y.LinkButton, "LinkButton")
-              : (0, A.A)(Y.Link, "Link");
+              ? (0, A.A)(W.LinkButton, "LinkButton")
+              : (0, A.A)(W.Link, "Link");
           })(a);
         e.context.event;
         if (void 0 === t) return e.children || "";
@@ -2701,13 +2724,8 @@
       }
       function St(e) {
         const { showErrorInfo: t, event: a } = e.context;
-        let n = e && e.children && e.children.toString();
-        if (
-          (null == n || null == n || 0 == n.length) &&
-          ((n = e && e.args && e.args[""]),
-          null == n || null == n || 0 == n.length)
-        )
-          return r.createElement(r.Fragment, null);
+        let n = (0, s.j$)(e.args, "src") || e.children?.toString();
+        if (!n && ((n = (0, s.j$)(e.args)), null == !n)) return null;
         const o = s._D(n, e.language, a?.rtime32_last_modified);
         if ("string" == typeof o) {
           let e;
@@ -2726,7 +2744,7 @@
                 })
           );
         }
-        return r.createElement(P.c, { rgSources: o });
+        return r.createElement(G.c, { rgSources: o });
       }
       function ft(e) {
         const t = (0, s.j$)(e.args);
@@ -2741,7 +2759,7 @@
             n.push(
               `${T.TS.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`,
             ),
-          r.createElement(P.c, { rgSources: n, alt: a })
+          r.createElement(G.c, { rgSources: n, alt: a })
         );
       }
       function Et(e) {
@@ -2950,7 +2968,7 @@
                 Re.a3,
                 null,
                 m
-                  ? r.createElement(G.t, {
+                  ? r.createElement(P.t, {
                       size: "medium",
                       position: "center",
                       string: (0, b.we)("#Loading"),
@@ -4175,13 +4193,13 @@
       var R = a(33737),
         F = a(283),
         O = a(95695),
-        G = a.n(O),
-        P = a(51706),
+        P = a.n(O),
+        G = a(51706),
         H = a(738),
         V = a(41609),
-        Y = a.n(V),
-        W = a(56011),
-        z = a(78327);
+        W = a.n(V),
+        z = a(56011),
+        Y = a(78327);
       var j = a(26505),
         K = a(14336),
         $ = a(68451),
@@ -4210,42 +4228,36 @@
           l = i.useMemo(() => ({ width: n, height: r }), [n, r]),
           [m, p] = i.useState(void 0),
           [d, u] = i.useState(Boolean(a)),
-          [h, C] = i.useState(void 0),
-          [S, f] = i.useState(!1),
-          [E] = (0, ee.q3)(() => [ie.O.Get().GetCurEditLanguage()]),
-          I = i.useCallback(
-            async (e, t) => {
+          [h, C] = i.useState(!1),
+          [S] = (0, ee.q3)(() => [ie.O.Get().GetCurEditLanguage()]),
+          f = i.useMemo(() => new oe.V(t), [t.ConvertTo64BitString()]),
+          E = i.useCallback(
+            async (e) => {
               if (
-                (e.ClearImages(),
-                t && (u(!0), await e.AddExistingClanImage(t, 0, s)))
+                (f.ClearImages(),
+                e && (u(!0), await f.AddExistingClanImage(e, 0, s)))
               ) {
-                p(t);
-                const n = e.GetUploadImages()[0].IsValidAssetType(s, l);
-                0 != n.error.length ||
-                  n.needsCrop ||
-                  (a && a.image_hash == t.image_hash) ||
-                  o(t);
+                p(e);
+                const t = f.GetUploadImages()[0].IsValidAssetType(s, l);
+                0 != t.error.length ||
+                  t.needsCrop ||
+                  (a && a.image_hash == e.image_hash) ||
+                  o(e);
               }
               u(!1);
             },
-            [a, o, s, l],
+            [f, a, o, s, l],
           );
         i.useEffect(() => {
-          (h &&
-            h.GetClanSteamID().ConvertTo64BitString() ==
-              t.ConvertTo64BitString()) ||
-            C(new oe.V(t));
-        }, [h, t]),
-          i.useEffect(() => {
-            I(h, a);
-          }, [I, h, a]);
-        let y,
-          v = "",
-          w = !1;
-        if (h && h.GetFilesToUpload().length > 0) {
-          y = h.GetUploadImages()[0];
-          const e = y.IsValidAssetType(s, l);
-          (v = e.error), (w = e.needsCrop);
+          E(a);
+        }, [E, a]);
+        let I,
+          y = "",
+          v = !1;
+        if (f && f.GetFilesToUpload().length > 0) {
+          I = f.GetUploadImages()[0];
+          const e = I.IsValidAssetType(s, l);
+          (y = e.error), (v = e.needsCrop);
         }
         return i.createElement(
           i.Fragment,
@@ -4259,19 +4271,19 @@
                 i.createElement("div", {
                   className: re.Image,
                   style: {
-                    backgroundImage: `url( '${y ? y.dataUrl : m.url}' )`,
+                    backgroundImage: `url( '${I ? I.dataUrl : m.url}' )`,
                     height: `${r}px`,
                     width: `${n}px`,
                   },
                 }),
-          Boolean(v) && i.createElement("p", null, v),
-          w &&
+          Boolean(y) && i.createElement("p", null, y),
+          v &&
             i.createElement(
               R.$n,
               {
                 onClick: (e) => {
-                  const t = (0, W.uX)(e);
-                  let a = h.GetUploadImages()[0];
+                  const t = (0, z.uX)(e);
+                  let a = f.GetUploadImages()[0];
                   (0, H.pg)(
                     i.createElement(ae.q, {
                       ownerWin: t,
@@ -4285,16 +4297,16 @@
               },
               (0, k.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(y && y.bCropped) &&
+          Boolean(I && I.bCropped) &&
             i.createElement(
               i.Fragment,
               null,
               i.createElement(
                 "div",
                 null,
-                (0, k.we)("#ClanImagePickAndResize_UploadStatus", y.status),
+                (0, k.we)("#ClanImagePickAndResize_UploadStatus", I.status),
               ),
-              S
+              h
                 ? i.createElement(Z.t, {
                     string: (0, k.we)("#Uploading"),
                     size: "small",
@@ -4303,11 +4315,11 @@
                     R.$n,
                     {
                       onClick: async () => {
-                        f(!0);
+                        C(!0);
                         try {
-                          const e = await h.UploadAllImages(
+                          const e = await f.UploadAllImages(
                               [se.TU.k_ESteamRealmGlobal],
-                              E,
+                              S,
                               s,
                               l,
                             ),
@@ -4345,7 +4357,7 @@
                             p(l), o(l);
                           }
                         } finally {
-                          f(!1);
+                          C(!1);
                         }
                       },
                     },
@@ -4356,13 +4368,13 @@
             R.$n,
             {
               onClick: (e) => {
-                const t = new c.b(z.UF.CLANSTEAMID);
+                const t = new c.b(Y.UF.CLANSTEAMID);
                 (0, H.pg)(
                   i.createElement(ne.z, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => I(h, e),
+                    fnImageSelectCallBack: (e) => E(e),
                   }),
-                  (0, W.uX)(e),
+                  (0, z.uX)(e),
                 );
               },
             },
@@ -4400,7 +4412,7 @@
         }
         static GetHelpURL(e, t) {
           return (
-            z.TS.COMMUNITY_BASE_URL +
+            Y.TS.COMMUNITY_BASE_URL +
             "comment/" +
             e +
             "/formattinghelp" +
@@ -4410,7 +4422,7 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: z.TS.SESSIONID };
+              t = { sessionid: Y.TS.SESSIONID };
             (e = await r().get(me.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
@@ -4431,7 +4443,7 @@
             : "" == this.state.formattingHelp.__html
               ? i.createElement(Z.t, null)
               : i.createElement(
-                  P.o0,
+                  G.o0,
                   {
                     strTitle: (0, k.we)(
                       "#EventEditor_FormattingHelp_GetHelpLink",
@@ -4502,7 +4514,7 @@
             null,
             i.createElement(Se, {
               pathToImages:
-                z.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
+                Y.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
               emoticonStore: this.props.emoticonStore,
               supportBBCodes: this.props.limitBBCode
@@ -4656,18 +4668,18 @@
         OnAddLink(e) {
           (0, H.HT)(
             i.createElement(Ie, { textareaRef: this.props.fnTextareaRef() }),
-            (0, W.uX)(e),
+            (0, z.uX)(e),
           );
         }
         ShowHelpDialog(e) {
           this.props.showFormatHelp &&
             (0, H.HT)(
               i.createElement(pe, { formatType: this.props.showFormatHelp }),
-              (0, W.uX)(e),
+              (0, z.uX)(e),
             );
         }
         OnConvertHTMLToBBCodeDialog(e) {
-          const t = (0, W.uX)(e);
+          const t = (0, z.uX)(e);
           (0, H.HT)(
             i.createElement(Te, {
               ownerWindow: t,
@@ -4677,19 +4689,19 @@
           );
         }
         OnOpenYoutubeDialog(e) {
-          let t = z.TS.IMG_URL + "applications/community/";
+          let t = Y.TS.IMG_URL + "applications/community/";
           (0, H.HT)(
             i.createElement(Ee, {
               textareaRef: this.props.fnTextareaRef(),
               pathToImages: t,
             }),
-            (0, W.uX)(e),
+            (0, z.uX)(e),
           );
         }
         OnOpenImageDialog(e) {
           (0, H.HT)(
             i.createElement(ye, { textareaRef: this.props.fnTextareaRef() }),
-            (0, W.uX)(e),
+            (0, z.uX)(e),
           );
         }
         OnOpenSpeakerDialog(e) {
@@ -4698,7 +4710,7 @@
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
-            (0, W.uX)(e),
+            (0, z.uX)(e),
           );
         }
         OnEmoticonSelected(e, t = !1) {
@@ -4734,7 +4746,7 @@
                         "a",
                         {
                           href: pe.GetHelpURL(this.props.showFormatHelp, !1),
-                          target: z.TS.IN_CLIENT ? void 0 : "_blank",
+                          target: Y.TS.IN_CLIENT ? void 0 : "_blank",
                         },
                         i.createElement("img", { src: n + "/action_help.png" }),
                         " ",
@@ -4860,7 +4872,7 @@
                   imgURL: this.props.pathToImages + "/insert_img.png",
                 }),
               Boolean(
-                z.iA.is_support &&
+                Y.iA.is_support &&
                   this.props.clanSteamID &&
                   this.BSupports("speaker"),
               ) &&
@@ -4960,7 +4972,7 @@
         OnOuterDivClickPassDown(e) {}
         render() {
           return i.createElement(
-            P.o0,
+            G.o0,
             {
               strTitle: (0, k.we)("#EventEditor_InsertYouTube"),
               strDescription: "",
@@ -5149,7 +5161,7 @@
         }
         render() {
           return i.createElement(
-            P.o0,
+            G.o0,
             {
               strTitle: (0, k.we)("#Editor_Link"),
               strDescription: "",
@@ -5242,7 +5254,7 @@
         render() {
           const { imgURL: e, anchorURL: t } = this.state;
           return i.createElement(
-            P.o0,
+            G.o0,
             {
               strTitle: (0, k.we)("#EventEditor_InsertImage_Title"),
               strDescription: "",
@@ -5332,7 +5344,7 @@
           { isLoading: S, data: f } = (0, K.js)(h?.GetAccountID()),
           E = 0 != t.trim().length && 0 != l.trim().length;
         return i.createElement(
-          P.o0,
+          G.o0,
           {
             strTitle: (0, k.we)("#EventEditor_AddSpeaker"),
             strDescription: (0, k.we)("#EventEditor_AddSpeaker_Desc"),
@@ -5407,7 +5419,7 @@
                   "a",
                   {
                     href:
-                      z.TS.COMMUNITY_BASE_URL +
+                      Y.TS.COMMUNITY_BASE_URL +
                       "profiles/" +
                       h.ConvertTo64BitString(),
                     target: "_blank",
@@ -5425,7 +5437,7 @@
                 { className: q().AssociateRowCtn },
                 i.createElement(
                   R.$n,
-                  { onClick: () => g(new c.b(z.iA.steamid)) },
+                  { onClick: () => g(new c.b(Y.iA.steamid)) },
                   (0, k.we)("#EventEditor_SteamAccount_addme"),
                 ),
                 i.createElement(
@@ -5521,7 +5533,7 @@
             { style: { display: "flex", alignItems: "center" } },
             n &&
               i.createElement("img", {
-                className: Y().WhitelistAvatar,
+                className: W().WhitelistAvatar,
                 src: n.avatar_url,
               }),
             n?.m_strPlayerName,
@@ -5552,7 +5564,7 @@
           let n = null;
           return (
             (n = await r().post(
-              z.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
+              Y.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
               a,
             )),
             n.data.content
@@ -5573,7 +5585,7 @@
               })
               .catch((e) => {
                 (0, H.pg)(
-                  i.createElement(P.KG, {
+                  i.createElement(G.KG, {
                     strTitle: (0, k.we)("#EventEditor_ConvertHTML_Error"),
                     strDescription: (0, k.we)(
                       "#EventEditor_ConvertHTML_Error_Desc",
@@ -5599,7 +5611,7 @@
           const { closeModal: e } = this.props;
           return this.state.bConverting
             ? i.createElement(
-                P.o0,
+                G.o0,
                 {
                   strTitle: (0, k.we)("#EventEditor_ImportFromHTML"),
                   strDescription: (0, k.we)(
@@ -5613,7 +5625,7 @@
                 i.createElement(Z.t, null),
               )
             : this.state.bFinishedConverting
-              ? i.createElement(P.o0, {
+              ? i.createElement(G.o0, {
                   strTitle: (0, k.we)("#EventEditor_ImportFromHTML"),
                   strDescription: (0, k.we)(
                     "#EventEditor_ImportFromHTML_ConvertFinished",
@@ -5624,7 +5636,7 @@
                   onCancel: e,
                 })
               : i.createElement(
-                  P.eV,
+                  G.eV,
                   {
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
@@ -5647,19 +5659,19 @@
                         "div",
                         {
                           className: (0, w.A)(
-                            G().FlexColumnContainer,
+                            P().FlexColumnContainer,
                             q().ImportHTMLCtn,
                           ),
                         },
                         i.createElement(
                           "div",
-                          { className: G().FlexColumnContainer },
+                          { className: P().FlexColumnContainer },
                           (0, k.PP)(
                             "#EventEditor_ImportFromHTML_ConvertDescription",
                             i.createElement(
                               "a",
                               {
-                                target: z.TS.IN_CLIENT ? void 0 : "_blank",
+                                target: Y.TS.IN_CLIENT ? void 0 : "_blank",
                                 href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
                               },
                               (0, k.we)(
@@ -5733,7 +5745,7 @@
       const Ae = (0, o.PA)((e) => {
         const { appid: t, eventLink: a } = e,
           n = i.useRef(null),
-          { data: o } = (0, K.js)(z.iA.steamid),
+          { data: o } = (0, K.js)(Y.iA.steamid),
           [d, u] = i.useState(""),
           [h, g] = i.useState(!1),
           [_, C] = i.useState(""),
@@ -5745,7 +5757,7 @@
           [],
         );
         const E = o ? o.avatar_url : null,
-          I = c.b.InitFromAccountID(z.iA.accountid),
+          I = c.b.InitFromAccountID(Y.iA.accountid),
           y = async () => {
             n.current &&
               n.current("ShareEventOnFriendsActivityFeed: cancel previous...");
@@ -5754,12 +5766,12 @@
             let o = d;
             0 != o.trim().length && (o += "\n\n"), (o += a);
             const i =
-              z.TS.COMMUNITY_BASE_URL +
+              Y.TS.COMMUNITY_BASE_URL +
               "profiles/" +
               I.ConvertTo64BitString() +
               "/ajaxpostuserstatus";
             try {
-              if (z.TS.IN_STEAMUI) {
+              if (Y.TS.IN_STEAMUI) {
                 let a = l.w.Init(p.kV);
                 a.Body().set_appid(t), a.Body().set_status_text(o);
                 let n = await p.xt.PostStatusToFriends(
@@ -5780,7 +5792,7 @@
                 const a = new FormData();
                 a.append("appid", "" + t),
                   a.append("status_text", o),
-                  a.append("sessionid", z.TS.SESSIONID);
+                  a.append("sessionid", Y.TS.SESSIONID);
                 const n = await r().post(i, a, { withCredentials: !0 });
                 if (200 != n.status || 1 != n?.data?.success) {
                   const t =
@@ -5803,7 +5815,7 @@
           };
         return h
           ? i.createElement(
-              P.o0,
+              G.o0,
               {
                 strDescription: "",
                 strTitle: (0, k.we)("#Button_Share"),
@@ -5813,7 +5825,7 @@
               },
               i.createElement(
                 "div",
-                { className: G().FlexColumnContainer },
+                { className: P().FlexColumnContainer },
                 i.createElement(
                   "div",
                   null,
@@ -5830,11 +5842,11 @@
                       "a",
                       {
                         href:
-                          z.TS.COMMUNITY_BASE_URL +
+                          Y.TS.COMMUNITY_BASE_URL +
                           "profiles/" +
                           I.ConvertTo64BitString() +
                           "/home",
-                        target: z.TS.IN_CLIENT ? void 0 : "_blank",
+                        target: Y.TS.IN_CLIENT ? void 0 : "_blank",
                       },
                       (0, k.we)("#EventDisplay_Share_OpenActivityFeed"),
                     ),
@@ -5842,7 +5854,7 @@
               ),
             )
           : i.createElement(
-              P.o0,
+              G.o0,
               {
                 strDescription: "",
                 strTitle: (0, k.we)("#Button_Share"),
@@ -5852,7 +5864,7 @@
               },
               i.createElement(
                 "div",
-                { className: G().FlexColumnContainer },
+                { className: P().FlexColumnContainer },
                 i.createElement(
                   "div",
                   null,
@@ -5863,7 +5875,7 @@
                   {
                     className: (0, w.A)(
                       Ue().Container,
-                      G().FlexColumnContainer,
+                      P().FlexColumnContainer,
                     ),
                   },
                   i.createElement(
@@ -5872,11 +5884,11 @@
                     i.createElement("img", {
                       className: Ue().SmallAvatar,
                       src: E,
-                      "data-miniprofile": "s" + z.iA.steamid,
+                      "data-miniprofile": "s" + Y.iA.steamid,
                     }),
                     i.createElement(
                       "div",
-                      { className: (0, w.A)(G().FlexColumnContainer) },
+                      { className: (0, w.A)(P().FlexColumnContainer) },
                       i.createElement(_e, {
                         strPlaceholder: (0, k.we)(
                           "#EventDisplay_Share_OnMyStatus_Placeholder",

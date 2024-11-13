@@ -49,6 +49,9 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 .E9t9jUT0k_0xGdy7HbJfd {
   color: #e76e34;
 }
+._1QCMW1MwEkiLeTlmhMvSs_ {
+  display: block;
+}
 ._2g5oNomwd2lv8wL2qlsLVA {
   display: flex;
 }
@@ -66,6 +69,13 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 }
 ._2g5oNomwd2lv8wL2qlsLVA .EventEditorTextTitle {
   padding-top: 6px;
+}
+._3iKeBOMuwqPC87BLxvCKll .SectionTitleHeader {
+  margin-top: 0px;
+}
+._3iKeBOMuwqPC87BLxvCKll .EventEditorTextTitle {
+  text-transform: unset;
+  letter-spacing: 0;
 }
 ._8n9wPNrWDu91tlwBW9bHt table tr:nth-child(odd) td {
   background: #3b3e47;

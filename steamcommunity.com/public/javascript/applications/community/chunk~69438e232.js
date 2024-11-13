@@ -136,12 +136,14 @@
         NominateCtn: "_1SKPLx2FBvP9iC-lJHTkKQ",
         SteamAwardNominateButton: "_1uxCjZZ940xsM0idye1IP-",
         Nominated: "_1No9r92B3LLgMOaSMSC9vE",
+        SteamAwardNominationWidget: "_38gTf-DsRc7bVnxxQXxT3B",
         SteamAwardLinkToNominationPage: "_3p83sGhSP-hikRKwITXId-",
         SteamAwardVoteCheckBox: "_1G4MUqubjzDize874UIeYh",
         SteamAwardModalGameTitle: "_15lc0ft7pgAlFXYbgePb-8",
         ExpiredEventHeader: "_3O3XsKT-SiMNsMqyidMLvS",
         AwardCategoriesCtn: "_2u4z7OT5MqNj-6wojCGnsr",
         SteamAwardConflictModal: "_2Xqc9FL9PfCQl8Fo8d7I_L",
+        ConflictBody: "_3WKl_XpHUMGcIm4cNhlc_W",
         NominationSwitchCtn: "r9nDOvHWyABfkiiurnMwl",
       };
     },
@@ -1018,7 +1020,7 @@
     },
     36148: (e, t, r) => {
       "use strict";
-      r.d(t, { RZ: () => U, Jo: () => W, Vz: () => H, $d: () => V });
+      r.d(t, { YW: () => U, Jo: () => W, Vz: () => H, $d: () => V });
       var n = r(56545),
         a = (r(37735), r(80613)),
         i = r(89068);
@@ -1371,14 +1373,24 @@
         constructor(e = null) {
           super(),
             u.prototype.votes || i.Sg(u.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
             u.sm_m ||
               (u.sm_m = {
                 proto: u,
-                fields: { votes: { n: 1, c: o, r: !0, q: !0 } },
+                fields: {
+                  votes: { n: 1, c: o, r: !0, q: !0 },
+                  labor_of_love_winners: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.qM.readUint32,
+                    pbr: i.qM.readPackedUint32,
+                    bw: i.gp.writeRepeatedUint32,
+                  },
+                },
               }),
             u.sm_m
           );
@@ -2494,7 +2506,7 @@
         F = r(30470),
         k = r(24484);
       r(30894), r(41735), r(90626), r(58222);
-      const U = 2640290;
+      const U = 3334340;
       let G;
       function j() {
         return (
@@ -3145,42 +3157,36 @@
           l = o.useMemo(() => ({ width: n, height: a }), [n, a]),
           [c, m] = o.useState(void 0),
           [h, g] = o.useState(Boolean(r)),
-          [S, _] = o.useState(void 0),
-          [v, E] = o.useState(!1),
-          [B] = (0, J.q3)(() => [ne.O.Get().GetCurEditLanguage()]),
-          w = o.useCallback(
-            async (e, t) => {
+          [S, _] = o.useState(!1),
+          [v] = (0, J.q3)(() => [ne.O.Get().GetCurEditLanguage()]),
+          E = o.useMemo(() => new re.V(t), [t.ConvertTo64BitString()]),
+          B = o.useCallback(
+            async (e) => {
               if (
-                (e.ClearImages(),
-                t && (g(!0), await e.AddExistingClanImage(t, 0, s)))
+                (E.ClearImages(),
+                e && (g(!0), await E.AddExistingClanImage(e, 0, s)))
               ) {
-                m(t);
-                const n = e.GetUploadImages()[0].IsValidAssetType(s, l);
-                0 != n.error.length ||
-                  n.needsCrop ||
-                  (r && r.image_hash == t.image_hash) ||
-                  i(t);
+                m(e);
+                const t = E.GetUploadImages()[0].IsValidAssetType(s, l);
+                0 != t.error.length ||
+                  t.needsCrop ||
+                  (r && r.image_hash == e.image_hash) ||
+                  i(e);
               }
               g(!1);
             },
-            [r, i, s, l],
+            [E, r, i, s, l],
           );
         o.useEffect(() => {
-          (S &&
-            S.GetClanSteamID().ConvertTo64BitString() ==
-              t.ConvertTo64BitString()) ||
-            _(new re.V(t));
-        }, [S, t]),
-          o.useEffect(() => {
-            w(S, r);
-          }, [w, S, r]);
-        let y,
-          C = "",
-          f = !1;
-        if (S && S.GetFilesToUpload().length > 0) {
-          y = S.GetUploadImages()[0];
-          const e = y.IsValidAssetType(s, l);
-          (C = e.error), (f = e.needsCrop);
+          B(r);
+        }, [B, r]);
+        let w,
+          y = "",
+          C = !1;
+        if (E && E.GetFilesToUpload().length > 0) {
+          w = E.GetUploadImages()[0];
+          const e = w.IsValidAssetType(s, l);
+          (y = e.error), (C = e.needsCrop);
         }
         return o.createElement(
           o.Fragment,
@@ -3194,19 +3200,19 @@
                 o.createElement("div", {
                   className: te.Image,
                   style: {
-                    backgroundImage: `url( '${y ? y.dataUrl : c.url}' )`,
+                    backgroundImage: `url( '${w ? w.dataUrl : c.url}' )`,
                     height: `${a}px`,
                     width: `${n}px`,
                   },
                 }),
-          Boolean(C) && o.createElement("p", null, C),
-          f &&
+          Boolean(y) && o.createElement("p", null, y),
+          C &&
             o.createElement(
               R.$n,
               {
                 onClick: (e) => {
                   const t = (0, j.uX)(e);
-                  let r = S.GetUploadImages()[0];
+                  let r = E.GetUploadImages()[0];
                   (0, k.pg)(
                     o.createElement($.q, {
                       ownerWin: t,
@@ -3220,16 +3226,16 @@
               },
               (0, A.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(y && y.bCropped) &&
+          Boolean(w && w.bCropped) &&
             o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
                 null,
-                (0, A.we)("#ClanImagePickAndResize_UploadStatus", y.status),
+                (0, A.we)("#ClanImagePickAndResize_UploadStatus", w.status),
               ),
-              v
+              S
                 ? o.createElement(Y.t, {
                     string: (0, A.we)("#Uploading"),
                     size: "small",
@@ -3238,11 +3244,11 @@
                     R.$n,
                     {
                       onClick: async () => {
-                        E(!0);
+                        _(!0);
                         try {
-                          const e = await S.UploadAllImages(
+                          const e = await E.UploadAllImages(
                               [ae.TU.k_ESteamRealmGlobal],
-                              B,
+                              v,
                               s,
                               l,
                             ),
@@ -3280,7 +3286,7 @@
                             m(l), i(l);
                           }
                         } finally {
-                          E(!1);
+                          _(!1);
                         }
                       },
                     },
@@ -3295,7 +3301,7 @@
                 (0, k.pg)(
                   o.createElement(ee.z, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => w(S, e),
+                    fnImageSelectCallBack: (e) => B(e),
                   }),
                   (0, j.uX)(e),
                 );
@@ -6933,55 +6939,55 @@
       }
       const R = { include_assets: !0 };
       function O(e) {
-        var t, r;
-        const { event: n, lang: a, previewMode: i } = e,
-          [s] = (0, o.q3)(() => [n.GetSteamAwardCategory()]),
-          l = (0, _.m)("EventDisplaySteamAwardNomination"),
-          [u, p] = (0, c.useState)(null),
-          { currentNomination: h, bLoadingNominationForCategory: g } = (0,
-          d.Vz)(s);
+        var t, r, n, a, i;
+        const { event: s, lang: l, previewMode: u } = e,
+          [p] = (0, o.q3)(() => [s.GetSteamAwardCategory()]),
+          h = (0, _.m)("EventDisplaySteamAwardNomination"),
+          [g, v] = (0, c.useState)(null),
+          { currentNomination: w, bLoadingNominationForCategory: f } = (0,
+          d.Vz)(p);
         if (
           ((0, c.useEffect)(() => {
-            N([s], l).then((e) => {
-              p(e);
+            N([p], h).then((e) => {
+              v(e);
             });
-          }, [l, s]),
-          !u ||
-            !(null === (t = u.rgAwardCategoryDetails) || void 0 === t
+          }, [h, p]),
+          !g ||
+            !(null === (t = g.rgAwardCategoryDetails) || void 0 === t
               ? void 0
               : t.length) ||
-            g)
+            f)
         )
           return c.createElement(I.t, {
-            size: "small",
+            className: D().SteamAwardContainer,
+            size: "medium",
             position: "center",
             string: (0, B.we)("#Loading"),
           });
-        const v = m.HD.GetTimeNowWithOverride();
-        if (!i && !u.bIsAutumnSaleActive)
-          return c.createElement(
-            "div",
-            { className: D().ExpiredEventHeader },
-            " ",
-            (0, B.we)("#SteamAwards_ExpiredEvent"),
-            " ",
-          );
-        let w = {};
-        u.strBackgroundCSS.length && (w.backgroundColor = u.strBackgroundCSS),
-          u.strBackgroundImage.length &&
-            (w.backgroundImage = `url( ${u.strBackgroundImage} )`);
-        const f =
+        const M = m.HD.GetTimeNowWithOverride();
+        if (!u && !g.bIsAutumnSaleActive) return null;
+        let b = {};
+        (null === (r = g.strBackgroundCSS) || void 0 === r
+          ? void 0
+          : r.length) && (b.backgroundColor = g.strBackgroundCSS),
+          (null === (n = g.strBackgroundImage) || void 0 === n
+            ? void 0
+            : n.length) &&
+            (b.backgroundImage = `url( ${g.strBackgroundImage} )`),
+          (null === (a = g.strTextColor) || void 0 === a ? void 0 : a.length) &&
+            (b.color = g.strTextColor);
+        const T =
             1 ==
-            (null === (r = u.rgAwardCategoryDetails) || void 0 === r
+            (null === (i = g.rgAwardCategoryDetails) || void 0 === i
               ? void 0
-              : r.length),
-          M =
-            n.BIsEventActionEnabled() || v < n.GetStartTimeAndDateUnixSeconds(),
-          b = new Date().getFullYear();
+              : i.length),
+          A =
+            s.BIsEventActionEnabled() || M < s.GetStartTimeAndDateUnixSeconds(),
+          L = new Date().getFullYear();
         return c.createElement(
           "div",
           {
-            style: w,
+            style: b,
             className: (0, E.A)(D().SteamAwardContainer, S().PartnerEventFont),
           },
           c.createElement(
@@ -6989,7 +6995,7 @@
             { className: D().SteamAwardHeader },
             c.createElement("img", {
               className: D().SteamAwardHeaderImage,
-              src: `${u.strTrophyImg}`,
+              src: `${g.strTrophyImg}`,
             }),
             c.createElement(
               "div",
@@ -7002,10 +7008,10 @@
               c.createElement(
                 "div",
                 { className: D().SteamAwardSubTitle },
-                M
+                A
                   ? (0, B.we)("#SteamAwards_EventCallToAction")
-                  : (0, B.we)("#SteamAwards_EventVotingDateTeaser", b),
-                M &&
+                  : (0, B.we)("#SteamAwards_EventVotingDateTeaser", L),
+                A &&
                   c.createElement(
                     "a",
                     {
@@ -7022,11 +7028,11 @@
               c.createElement(
                 "div",
                 { className: D().SteamAwardHeaderText },
-                M
-                  ? f
+                A
+                  ? T
                     ? (0, B.we)(
                         "#SteamAwards_EventNominateGamePrompt_Long",
-                        n.GetGameTitle(a),
+                        s.GetGameTitle(l),
                       )
                     : c.createElement(
                         "a",
@@ -7038,7 +7044,7 @@
                         },
                         (0, B.we)(
                           "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                          n.GetGameTitle(a),
+                          s.GetGameTitle(l),
                         ),
                       )
                   : (0, B.we)("#SteamAwards_Event_NominationsClosed"),
@@ -7046,9 +7052,9 @@
             ),
           ),
           c.createElement(z, {
-            event: n,
-            nominationEventDetails: u,
-            currentNomination: h,
+            event: s,
+            nominationEventDetails: g,
+            currentNomination: w,
           }),
         );
       }
@@ -7097,7 +7103,12 @@
         return _ && (v || p)
           ? c.createElement(
               "div",
-              { className: D().SteamAwardVoteWidget },
+              {
+                className: (0, E.A)(
+                  D().SteamAwardNominationWidget,
+                  D().SteamAwardVoteWidget,
+                ),
+              },
               c.createElement(
                 "div",
                 { className: D().NominateCtn },
@@ -7146,7 +7157,7 @@
                   }),
                 ),
                 c.createElement(
-                  "span",
+                  "div",
                   { className: D().SteamAwardCategoryDesc },
                   n.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
                 ),
@@ -7186,7 +7197,14 @@
           {
             modalClassName: D().SteamAwardConflictModal,
             strTitle: (0, B.we)(`#SteamAward_${n}ConflictWarning_Title`),
-            strDescription: (0, B.PP)(
+            closeModal: s,
+            onOK: a,
+            onCancel: i,
+          },
+          c.createElement(
+            "div",
+            { className: D().ConflictBody },
+            (0, B.PP)(
               `#SteamAward_${e.strLocTokenInfix}ConflictWarning_Explanation`,
               c.createElement(
                 "span",
@@ -7199,27 +7217,24 @@
                 null == l ? void 0 : l.GetName(),
               ),
             ),
-            closeModal: s,
-            onOK: a,
-            onCancel: i,
-          },
-          Boolean(!o || !l)
-            ? c.createElement(I.t, {
-                size: "small",
-                position: "center",
-                string: (0, B.we)("#Loading"),
-              })
-            : c.createElement(
-                "div",
-                { className: D().NominationSwitchCtn },
-                c.createElement("img", {
-                  src: o.GetAssets().GetSmallCapsuleURL(),
-                }),
-                "→",
-                c.createElement("img", {
-                  src: l.GetAssets().GetSmallCapsuleURL(),
-                }),
-              ),
+            Boolean(!o || !l)
+              ? c.createElement(I.t, {
+                  size: "small",
+                  position: "center",
+                  string: (0, B.we)("#Loading"),
+                })
+              : c.createElement(
+                  "div",
+                  { className: D().NominationSwitchCtn },
+                  c.createElement("img", {
+                    src: o.GetAssets().GetSmallCapsuleURL(),
+                  }),
+                  "→",
+                  c.createElement("img", {
+                    src: l.GetAssets().GetSmallCapsuleURL(),
+                  }),
+                ),
+          ),
         );
       }
       let F = class extends c.Component {
@@ -7337,56 +7352,61 @@
           const e = this.props.eVoteCategory,
             t =
               this.state.eCategoryLoaded == e &&
-              this.state.votedForAppID == this.props.appID;
-          return this.props.bIsEventActionEnabled || this.props.previewMode || t
-            ? c.createElement(
-                "div",
-                { className: (0, E.A)(D().SteamAwardVoteWidget) },
-                c.createElement("div", { className: D().SteamAwardVotePrompt }),
-                c.createElement(
+              this.state.votedForAppID == this.props.appID,
+            r = this.props.bIsEventActionEnabled || this.props.previewMode || t;
+          let n = {};
+          return (
+            this.props.strBackgroundColor.length &&
+              (n.backgroundColor = this.props.strBackgroundColor),
+            r
+              ? c.createElement(
                   "div",
-                  { className: D().SteamAwardVoteButtonArea },
+                  { style: n, className: (0, E.A)(D().SteamAwardVoteWidget) },
                   c.createElement(
                     "div",
-                    {
-                      className: (0, E.A)(
-                        D().SteamAwardCategoryTitle,
-                        D().VotingTitle,
-                      ),
-                    },
-                    this.props.strCategoryTitle,
-                  ),
-                  !this.props.bRenderFromStorePage &&
+                    { className: D().SteamAwardVoteButtonArea },
                     c.createElement(
-                      "span",
-                      { className: D().SteamAwardCategoryDesc },
-                      this.props.strCategoryDesc,
+                      "div",
+                      {
+                        className: (0, E.A)(
+                          D().SteamAwardCategoryTitle,
+                          D().VotingTitle,
+                        ),
+                      },
+                      this.props.strCategoryTitle,
                     ),
-                  t
-                    ? c.createElement(
+                    !this.props.bRenderFromStorePage &&
+                      c.createElement(
                         "div",
-                        { className: D().SteamAwardVoteButtonSubmitted },
-                        c.createElement(
-                          "span",
-                          { className: D().SteamAwardVoteButtonText },
-                          (0, B.we)("#SteamAward_VoteButton_VotedText"),
-                        ),
-                      )
-                    : c.createElement(
-                        "button",
-                        {
-                          className: D().SteamAwardVoteButton,
-                          onClick: this.OnVoteClick,
-                        },
-                        c.createElement(
-                          "span",
-                          { className: D().SteamAwardVoteButtonText },
-                          (0, B.we)("#SteamAward_VoteButton_PromptText"),
-                        ),
+                        { className: D().SteamAwardCategoryDesc },
+                        this.props.strCategoryDesc,
                       ),
-                ),
-              )
-            : null;
+                    t
+                      ? c.createElement(
+                          "button",
+                          { className: D().SteamAwardVoteButtonSubmitted },
+                          c.createElement(
+                            "span",
+                            { className: D().SteamAwardVoteButtonText },
+                            (0, B.we)("#SteamAward_VoteButton_VotedText"),
+                          ),
+                        )
+                      : c.createElement(
+                          "button",
+                          {
+                            className: D().SteamAwardVoteButton,
+                            onClick: this.OnVoteClick,
+                          },
+                          c.createElement(
+                            "span",
+                            { className: D().SteamAwardVoteButtonText },
+                            (0, B.we)("#SteamAward_VoteButton_PromptText"),
+                          ),
+                        ),
+                  ),
+                )
+              : null
+          );
         }
       };
       (0, n.Cg)([s.sH], F.prototype, "m_strPreviousVotedForAppTitle", void 0),
@@ -7431,6 +7451,8 @@
                     eVoteCategory: e.eSteamAwardCategoryID,
                     strCategoryDesc: e.strSuggestedCategoryDesc,
                     strCategoryTitle: e.strSuggestedCategoryTitle,
+                    strBackgroundColor:
+                      this.m_awardEventDetails.strNominateButtonBGColor,
                     ...this.props,
                   }),
                 );
@@ -7439,20 +7461,30 @@
           );
         }
         render() {
-          var e;
+          var e, t, r, n;
           if (!this.state.bAppInfoLoaded || !this.props.voteCategories)
             return null;
           if (!this.m_awardEventDetails) return null;
-          let t = {};
+          let a = {};
           return (
-            this.m_awardEventDetails.strBackgroundCSS.length &&
-              (t.backgroundColor = this.m_awardEventDetails.strBackgroundCSS),
-            this.m_awardEventDetails.strBackgroundImage.length &&
-              (t.backgroundImage = `url( ${this.m_awardEventDetails.strBackgroundImage} )`),
+            (null === (e = this.m_awardEventDetails.strBackgroundCSS) ||
+            void 0 === e
+              ? void 0
+              : e.length) &&
+              (a.backgroundColor = this.m_awardEventDetails.strBackgroundCSS),
+            (null === (t = this.m_awardEventDetails.strBackgroundImage) ||
+            void 0 === t
+              ? void 0
+              : t.length) &&
+              (a.backgroundImage = `url( ${this.m_awardEventDetails.strBackgroundImage} )`),
+            (null === (r = this.m_awardEventDetails.strTextColor) ||
+            void 0 === r
+              ? void 0
+              : r.length) && (a.color = this.m_awardEventDetails.strTextColor),
             c.createElement(
               "div",
               {
-                style: t,
+                style: a,
                 className: (0, E.A)(
                   D().SteamAwardContainer,
                   S().PartnerEventFont,
@@ -7484,23 +7516,10 @@
                           null,
                           (0, B.we)(
                             "#SteamAwards_EventVoteForGamePrompt",
-                            null === (e = u.A.Get().GetApp(this.props.appID)) ||
-                              void 0 === e
+                            null === (n = u.A.Get().GetApp(this.props.appID)) ||
+                              void 0 === n
                               ? void 0
-                              : e.GetName(),
-                          ),
-                          c.createElement(
-                            "a",
-                            {
-                              href: (0, y.NT)(
-                                C.TS.STORE_BASE_URL + "steamawards/",
-                              ),
-                              className: (0, E.A)(
-                                D().SteamAwardLearnMore,
-                                D().BottomRight,
-                              ),
-                            },
-                            (0, B.we)("#EventDisplay_CallToAction_LearnMore"),
+                              : n.GetName(),
                           ),
                         )
                       : c.createElement(
@@ -7519,6 +7538,15 @@
                     { className: D().AwardCategoriesCtn },
                     this.GetNominatedAwardCategories(),
                   ),
+                ),
+              ),
+              c.createElement(
+                "div",
+                { className: D().SteamAwardLinkToNominationPage },
+                c.createElement(
+                  "a",
+                  { href: (0, y.NT)(C.TS.STORE_BASE_URL + "steamawards/") },
+                  (0, B.we)("#EventDisplay_CallToAction_LearnMore"),
                 ),
               ),
             )

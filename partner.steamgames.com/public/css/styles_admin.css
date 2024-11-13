@@ -4057,6 +4057,7 @@ complete #A4D007
 	position: relative;
 	margin-bottom: 2px;
 	background-color: rgba( 0, 0, 0, 0.2 );
+	max-width: 300px;
 }
 
 .game_area_details_specs .icon {
@@ -4237,6 +4238,28 @@ img.category_icon {
 .featureNote strong {
     font-size: 16px;
     color: orange;
+}
+
+.feature_options_list {
+	display: flex;
+	flex-direction: column;
+}
+
+.feature_options_list .feature_row {
+	margin: 1px 0;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 8px 8px;
+	display: flex;
+	flex-direction: row;
+}
+.feature_options_list .feature_row:nth-child(odd) {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.feature_options_list .feature_row .fancyCheckboxLabel {
+	width: 200px;
+	flex-shrink: 0;
+	color: #e5e5e5;
 }
 
 table.root_path_table {

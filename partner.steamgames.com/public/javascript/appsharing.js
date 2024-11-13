@@ -62,7 +62,7 @@ function CreateShareInvite( nPublisherID )
 				}
 				else
 				{
-					ShowAlertDialog( 'Your Request Failed...', data.msg || 'Error' );
+					ShowAlertDialog( 'Your Request Failed...', data.msg ?? 'We experienced an issue in processing your request. Please try again later. If the issue persists, please contact Steamworks Support.' );
 				}
 			} );
 	} );

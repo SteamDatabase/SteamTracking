@@ -937,6 +937,11 @@ body.v6 .discount_block {}
     }
 }
 
+.content_hub_capsule_ctn .label {
+	font-size: clamp( 16px, 1.3vw, 21px );
+	line-height: 24px;
+}
+
 .content_hub_carousel_ctn .home_section_title {
 	background-color: unset;
     color: #ffffff;
@@ -2637,10 +2642,10 @@ body.v6 .sale_capsule .discount_block_inline
 	}
 }
 
-.sale_capsule_image_ctn
-{
+.sale_capsule_image_ctn {
     position: relative;
     z-index: 2;
+	transition: transform 0.2s ease-in-out;
 
 	&:hover {
 		transform: scale(1.1);
@@ -3293,6 +3298,22 @@ img.franchise_placeholder {
 
 .content_hub_carousel_ctn .content_hub_capsule_ctn {
     scroll-snap-align: start;
+	height: 280px;
+}
+
+@media screen and (max-width: 1315px )
+{
+
+	html.responsive .content_hub_carousel_ctn .content_hub_capsule_ctn {
+		height: 20vw;
+	}
+}
+@media screen and (max-width: 910px )
+{
+
+	html.responsive .content_hub_carousel_ctn .content_hub_capsule_ctn {
+		height: 215px;
+	}
 }
 
 

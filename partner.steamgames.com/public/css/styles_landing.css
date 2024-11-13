@@ -912,6 +912,7 @@ p {
 
 .landingInfoTable {
 	width: 100%;
+	box-sizing: border-box;
 }
 	.landingInfoTable td, .landingInfoTable .td {
 		background-color: transparent;
@@ -1867,7 +1868,7 @@ a.btn_download:hover {
 		text-align: right;
 	}
 .notice {
-	color: #D0434B;
+	color: #e66e34;
 	margin-top: 8px;
 }
 
@@ -1876,7 +1877,7 @@ a.btn_download:hover {
 }
 
 .section.redbox {
-	border: 2px solid #e24044;
+	border: 2px solid #e66e34;
 	border-radius: 3px;
 	background-color: #000;
 	padding: 10px;
@@ -1891,7 +1892,7 @@ a.btn_download:hover {
 }
 
 	.section.redbox h1 {
-		color: #e24044;
+		color: #e66e34;
 		font-weight: normal;
 	}
 

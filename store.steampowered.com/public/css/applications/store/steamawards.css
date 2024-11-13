@@ -3,7 +3,7 @@ body.SteamAwardsNominations {
   font-weight: normal;
 }
 body.SteamAwardsNominations .responsive_page_frame {
-  background: linear-gradient(to bottom right, #21081f, #843873);
+  background: linear-gradient(to bottom right, #232341, #201e2d);
 }
 body.v6.SteamAwardsNominations #footer_spacer {
   height: 183px;
@@ -29,17 +29,17 @@ body.v6.SteamAwardsNominations #footer_spacer {
   display: flex;
 }
 ._1tIgRv45QmeUOQXrV9mdMq {
-  background: #21081f;
+  background: #111;
   box-sizing: border-box;
   padding: 1px;
 }
 ._1TnKc86XFqFWZThfWLgaRw {
   position: relative;
-  background: url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2")
+  background: url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2024/header_trophy.webp?v=2")
     no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: #21081f;
+  background-color: #111;
 }
 ._1TnKc86XFqFWZThfWLgaRw ._2Mwx1ICH6jNzJoeIPhhFDv {
   padding: 30px 3% 30px 3%;
@@ -81,7 +81,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 900;
   font-size: 80px;
-  color: #e5c6df;
+  color: #ebf000;
   line-height: 71px;
   margin: 15px 0;
   text-shadow: 0 0 16px #22131b75;
@@ -95,7 +95,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 ._1TnKc86XFqFWZThfWLgaRw ._1cG2WETjKlQ8Z5EC0lw0i9 {
   text-transform: uppercase;
   font-size: 16px;
-  color: #e5c6df;
+  color: #f7f7f7;
   letter-spacing: 1px;
   margin: 5px 0;
   text-shadow: 0 0 16px #22131b75;
@@ -112,7 +112,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   }
 }
 ._296AV5WTzSw4KsXXNtA2_x h3._1XIaoVZxTy-yIN4iv4QqL1 {
-  color: #ffb335;
+  color: #ebf000;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -144,23 +144,24 @@ body.v6.SteamAwardsNominations #footer_spacer {
 ._296AV5WTzSw4KsXXNtA2_x ._3QrF1mai6HX6dr7jJijnTT ._3Mou7FjFlqrR-kKuTt9N8g {
   font-size: 18px;
   font-weight: 700;
-  color: #e3d1e0;
+  color: #e3e0fe;
 }
 ._296AV5WTzSw4KsXXNtA2_x ._3QrF1mai6HX6dr7jJijnTT .-K9ED0JWohLoxFufaRmWt {
   font-size: 14px;
   line-height: 18px;
   margin-top: 4px;
-  color: #e3d1e0;
+  color: #e3e0fe;
   margin-bottom: 12px;
 }
 ._296AV5WTzSw4KsXXNtA2_x ._3QrF1mai6HX6dr7jJijnTT .-K9ED0JWohLoxFufaRmWt a {
   text-decoration: underline;
-  color: #e3d1e0;
+  color: #e3e0fe;
 }
 ._3i1u-y7pjl-qc98gufdZUu {
   margin-top: 20px;
   padding: 25px;
-  background: #21081f;
+  background: #191639;
+  box-shadow: 0 0 16px #000;
   color: #fff;
   position: relative;
 }
@@ -168,6 +169,15 @@ body.v6.SteamAwardsNominations #footer_spacer {
   ._3i1u-y7pjl-qc98gufdZUu {
     margin-left: 2%;
   }
+}
+._3i1u-y7pjl-qc98gufdZUu._1rSWia4DrhNXjIAW9m_H7R ._35LJC3vUDhyY8YWBfRTzRB {
+  box-shadow: 0 0 19px #07060b;
+  -webkit-mask-image: radial-gradient(
+    317% 68% at 10% 5%,
+    black,
+    rgba(0, 0, 0, 0) 75%
+  );
+  mask-image: radial-gradient(317% 68% at 10% 5%, black, rgba(0, 0, 0, 0) 75%);
 }
 ._3i1u-y7pjl-qc98gufdZUu._4GIBs4zFQvYzih0mbwMoB {
   box-shadow: 0 0 10px #000;
@@ -179,7 +189,11 @@ body.v6.SteamAwardsNominations #footer_spacer {
   box-shadow: 1px 1px 0px #ffffff14 inset;
 }
 ._3i1u-y7pjl-qc98gufdZUu._4GIBs4zFQvYzih0mbwMoB ._3obFcpxM1lY5DMX8dIuroo {
-  opacity: 1;
+  opacity: 0.6;
+}
+._3i1u-y7pjl-qc98gufdZUu._4GIBs4zFQvYzih0mbwMoB._1rSWia4DrhNXjIAW9m_H7R
+  ._3obFcpxM1lY5DMX8dIuroo {
+  transform: scaleX(1.03) scaleY(1.7) translatey(248px);
 }
 ._3i1u-y7pjl-qc98gufdZUu ._35LJC3vUDhyY8YWBfRTzRB,
 ._3i1u-y7pjl-qc98gufdZUu ._3obFcpxM1lY5DMX8dIuroo {
@@ -193,7 +207,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   background-repeat: no-repeat;
   opacity: 0.6;
   transition: opacity .3s ease-in-out;
-  filter: brightness(0.5) saturate(0.4);
+  filter: brightness(0.7) saturate(0.5);
 }
 ._3i1u-y7pjl-qc98gufdZUu ._3obFcpxM1lY5DMX8dIuroo {
   z-index: 0;
@@ -283,7 +297,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   ._1n-khJ_oWP9-ADtdauxmaP
   ._1HYrGX2M4CebVc7ClAyqi5
   ._3yYqk-nDDM0DcyB3Id8NjD {
-  background-color: #cc8ec0;
+  background-color: #b0abe5;
   border-radius: 3px;
   width: fit-content;
   padding: 8px 16px;
@@ -296,7 +310,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   ._1n-khJ_oWP9-ADtdauxmaP
   ._1HYrGX2M4CebVc7ClAyqi5
   ._3yYqk-nDDM0DcyB3Id8NjD:hover {
-  background-color: #fff;
+  background-color: #e5e3ff;
   cursor: pointer;
 }
 ._3i1u-y7pjl-qc98gufdZUu
@@ -312,7 +326,6 @@ body.v6.SteamAwardsNominations #footer_spacer {
   font-size: 13px;
   font-weight: 400;
   padding: 4px 8px;
-  background-color: #a18f9d;
 }
 ._3i1u-y7pjl-qc98gufdZUu
   ._1n-khJ_oWP9-ADtdauxmaP
@@ -328,7 +341,6 @@ body.v6.SteamAwardsNominations #footer_spacer {
   font-size: 13px;
   font-weight: 400;
   padding: 4px 8px;
-  background-color: #a18f9d;
 }
 ._3i1u-y7pjl-qc98gufdZUu
   ._1n-khJ_oWP9-ADtdauxmaP
@@ -400,17 +412,16 @@ body.v6.SteamAwardsNominations #footer_spacer {
   font-weight: 600;
 }
 ._2lMcC-ffwNaKEZXfHcIZ2R ._2y8n9AG3gE8R7p0vnCu11y {
-  background: #dfb6d7;
+  background: #b0abe5;
   padding: 22px;
   margin-top: 20px;
+  color: #111;
 }
 ._2lMcC-ffwNaKEZXfHcIZ2R ._2y8n9AG3gE8R7p0vnCu11y ._2sMYOvGVozOqLO6WXFCAMk {
-  color: #0f1522;
   font-size: 20px;
   font-weight: 700;
 }
 ._2lMcC-ffwNaKEZXfHcIZ2R ._2y8n9AG3gE8R7p0vnCu11y ._3L4e0hBb8fmEtnQ8yFIoZe {
-  color: #0f1522;
   font-size: 14px;
   margin-bottom: 30px;
 }
@@ -444,13 +455,6 @@ body.v6.SteamAwardsNominations #footer_spacer {
   margin-bottom: 18px;
   margin-left: 20px;
   margin-right: 20px;
-}
-._2lMcC-ffwNaKEZXfHcIZ2R
-  ._2y8n9AG3gE8R7p0vnCu11y
-  ._2MLgogShQSsdXcjJVnCrs_
-  .PJRtCS56eG2Y0_F_VSsx7
-  ._1JuO2h3RXTrXd8h52rYGyZ {
-  color: #0f1522;
 }
 ._2lMcC-ffwNaKEZXfHcIZ2R
   ._2y8n9AG3gE8R7p0vnCu11y
@@ -659,7 +663,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   top: -1px;
 }
 ._3G1iNhfSRJ9NLuaxjN8MRA {
-  color: #ffb335;
+  color: #ebf000;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -671,7 +675,7 @@ button.DialogButton.CEmahjyiRmgWZlXL6XEpv {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #cc8ec0;
+  background-color: #b0abe5;
   border-radius: 3px;
   width: fit-content;
   padding: 4px 8px;
@@ -748,7 +752,7 @@ html.tablet .carousel__slider-tray-wrapper {
 }
 ._3FdxnzdLCLEUpdpoJJThYZ ._3x6HhTNw3LbAwygEgTzwDr {
   font-size: 20px;
-  color: #e5c6df;
+  color: #e3e0fe;
 }
 ._3FdxnzdLCLEUpdpoJJThYZ ._1t4jW207kK9lq0dm7UwBIq {
   display: flex;

@@ -1938,12 +1938,17 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   left: 0;
   z-index: 1599;
 }
-._1S6CCCQlcTTAAHh3LMTLh1:focus {
+._2yAm5LY_eu-Vg_52l0HFlM {
+  position: absolute;
+}
+dialog ._2yAm5LY_eu-Vg_52l0HFlM {
+  position: fixed;
+}
+._2yAm5LY_eu-Vg_52l0HFlM:focus {
   outline: none;
 }
 .GreenEnvelopeMenu,
 .PP7LM0Ow1K5qkR8WElLpt {
-  position: absolute;
   opacity: 1;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
@@ -2214,6 +2219,13 @@ body._3jhMIr8hczcBK_fOVtEVOK {
   display: flex;
   flex-direction: column;
   min-height: 0;
+}
+dialog._32QRvPPBL733SpNR9x0Gp3 {
+  padding: 0;
+  outline: none;
+}
+dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
+  background: transparent;
 }
 ._3Sl0QHQ69uK7ZMQo5vBfrA {
   width: 40px;
@@ -6080,7 +6092,6 @@ button.TextButton.gpfocus {
   color: #fff;
 }
 .DialogMenuPosition {
-  position: absolute;
   z-index: 1600;
   overflow: auto;
   -webkit-app-region: none;

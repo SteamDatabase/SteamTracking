@@ -131,6 +131,29 @@
     65835: (e) => {
       e.exports = { Ctn: "_2L6sVk9vOgKcXO6DgZHpJ9" };
     },
+    56330: (e) => {
+      e.exports = {
+        ErrorStyles: "_2Sg7W8jsvFcXVuQ7fbhSLJ",
+        ErrorStylesWithIcon: "Lc2PK-Vkkvr2TUS0TfCqq",
+        ErrorIconLayout: "_42__6kBR5lkICeFfkFnwz",
+        ErrorStylesBackground: "_3fVv6M5HyJXcQ6kNF1SvoH",
+        ErrorFloatBelow: "_2aKylEXoZKcXuXfFcmcuQc",
+        WarningStyles: "_3gxgE6PMPecWZDBSlGjMX_",
+        WarningStylesWithIcon: "_1S_uSkD_E5ayHa48JzzE0E",
+        WarningIconLayout: "_2jM80ZtA-oI5okavBZZqnF",
+        WarningStylesBackground: "UYrHsewdjj7dSkpWGgikw",
+        Stuck: "_2b5wWgFg1yvry3TDzRUfFt",
+        WarningFloatBelow: "_3e0cNuLANduciMmeZz1dnk",
+        InfoStyles: "_2lreMbIjEILzP1Eomy1QZM",
+        InfoStylesWithIcon: "_1_-PibdcIVQzDZEP0_PeLV",
+        InfoIconLayout: "_3kyPzolDIjhIh7zW0wA6fy",
+        InfoStylesBackground: "_3gNTI5UYknHdJwDfou9Iih",
+        Padding: "_36hmaGtzxNb1Pql2UhfM5Z",
+        NotTooWideModal: "UfQcb76CCbHawnpQ9tbu3",
+        ImageManageDialog: "Pl7AIUjh5siFakQJbPFO9",
+        SuccessErrorDialog: "_1wBO1L1tT0f1wtl3CpBWbn",
+      };
+    },
     3246: (e) => {
       e.exports = {
         SpeakerOuter: "_3rRqPJdGrYx9YMtQMciIFY",
@@ -2994,7 +3017,7 @@
     31698: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Q4: () => z,
+        Q4: () => O,
         nl: () => L,
         iY: () => H,
         CE: () => j,
@@ -3310,10 +3333,10 @@
       function P(e) {
         return e.recent_stickers;
       }
-      function O(e) {
+      function z(e) {
         return x(e).length + P(e).length > 0;
       }
-      const z = (0, a.PA)((e) => {
+      const O = (0, a.PA)((e) => {
         const {
           emoticonStore: t,
           emoticonHoverStore: r,
@@ -3339,7 +3362,7 @@
         })(t);
         const m = [];
         return (
-          O(t) &&
+          z(t) &&
             m.push({
               renderTab: (e) =>
                 s.createElement(
@@ -3398,7 +3421,7 @@
                       s.createElement(ae, null),
                     ),
                   renderContent: () =>
-                    s.createElement(Z, {
+                    s.createElement(Q, {
                       store: t,
                       onItemSelect: (e) => c(e.name),
                     }),
@@ -3414,7 +3437,7 @@
                       s.createElement(oe, null),
                     ),
                   renderContent: () =>
-                    s.createElement(Q, {
+                    s.createElement(Y, {
                       store: t,
                       effectSettings: n,
                       onItemSelect: (e) => l(e.name),
@@ -3449,7 +3472,7 @@
             } = this.props,
             a = [];
           return (
-            O(e) &&
+            z(e) &&
               a.push({
                 renderTab: (e) =>
                   s.createElement(
@@ -3514,7 +3537,7 @@
                         s.createElement(ae, null),
                       ),
                     renderContent: () =>
-                      s.createElement(Z, {
+                      s.createElement(Q, {
                         store: e,
                         onItemSelect: (e) => n(e.name),
                       }),
@@ -3700,11 +3723,11 @@
             renderEmpty: () =>
               i
                 ? s.createElement(T, null, (0, h.we)("#AddonPicker_NoResults"))
-                : s.createElement(Y, null),
+                : s.createElement(Z, null),
           });
         }
       }
-      function Y() {
+      function Z() {
         return s.createElement(
           s.Fragment,
           null,
@@ -3735,7 +3758,7 @@
           ),
         );
       }
-      class Z extends s.Component {
+      class Q extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -3784,7 +3807,7 @@
           });
         }
       }
-      class Q extends s.Component {
+      class Y extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -3887,7 +3910,7 @@
                           null,
                           (0, h.we)("#AddonPicker_NoResults"),
                         )
-                      : s.createElement(Y, null),
+                      : s.createElement(Z, null),
                 },
               ],
             })
@@ -3925,7 +3948,7 @@
                         null,
                         (0, h.we)("#AddonPicker_NoResults"),
                       )
-                    : s.createElement(Y, null),
+                    : s.createElement(Z, null),
               },
             ],
           });
@@ -4609,8 +4632,8 @@
       F = (0, n.Cg)([A.PA], F);
       var x = r(6878),
         P = r.n(x),
-        O = r(39978),
-        z = r.n(O);
+        z = r(39978),
+        O = r.n(z);
       let W = class extends i.Component {
         constructor() {
           super(...arguments),
@@ -4639,7 +4662,7 @@
             ? i.createElement(
                 "div",
                 {
-                  className: z().dynamiclink_box,
+                  className: O().dynamiclink_box,
                   onClick: this.OnSketchFabClick,
                 },
                 i.createElement("span", null, e),
@@ -4653,7 +4676,7 @@
               ? i.createElement(
                   "div",
                   {
-                    className: z().dynamiclink_box,
+                    className: O().dynamiclink_box,
                     onClick: this.OnSketchFabClick,
                   },
                   Boolean(this.state.bLoadedMetaData)
@@ -4661,21 +4684,21 @@
                         i.Fragment,
                         null,
                         i.createElement("img", {
-                          className: z().dynamiclink_preview,
+                          className: O().dynamiclink_preview,
                           src: this.state.data.thumbnail_url,
                         }),
                         i.createElement("img", {
-                          className: z().sketchfab_play_overlay_image,
+                          className: O().sketchfab_play_overlay_image,
                         }),
                         i.createElement(
                           "div",
-                          { className: z().dynamiclink_content },
+                          { className: O().dynamiclink_content },
                           i.createElement(
                             "div",
-                            { className: z().dynamiclink_name },
+                            { className: O().dynamiclink_name },
                             i.createElement(
                               "span",
-                              { className: z().dynamiclink_type },
+                              { className: O().dynamiclink_type },
                               (0, S.we)("#EventDisplay_Sketchfab"),
                             ),
                             i.createElement(
@@ -4687,7 +4710,7 @@
                           ),
                           i.createElement(
                             "div",
-                            { className: z().dynamiclink_author },
+                            { className: O().dynamiclink_author },
                             this.state.data.author_name,
                           ),
                         ),
@@ -4696,9 +4719,9 @@
                 )
               : i.createElement(
                   "div",
-                  { className: z().sketchfabmodelembedded },
+                  { className: O().sketchfabmodelembedded },
                   i.createElement("iframe", {
-                    className: z().sketchfabmodelembedded,
+                    className: O().sketchfabmodelembedded,
                     src:
                       "https://sketchfab.com/models/" +
                       this.props.modelID +
@@ -4715,8 +4738,8 @@
         j = r(83059),
         q = r(32754),
         V = r(65835),
-        Y = r.n(V);
-      function Z(e) {
+        Z = r.n(V);
+      function Q(e) {
         const { defid: t, url: r } = e,
           n = (0, j.w)(t);
         if (!n || !n.community_item_data) return null;
@@ -4728,7 +4751,7 @@
             console.log("reward itemdef", (0, H.HO)(n)),
           i.createElement(
             "div",
-            { className: Y().Ctn },
+            { className: Z().Ctn },
             i.createElement(
               q.he,
               { toolTipContent: n.community_item_data.item_description },
@@ -4740,7 +4763,7 @@
           )
         );
       }
-      var Q = r(92007);
+      var Y = r(92007);
       const $ =
           /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
         J =
@@ -4834,7 +4857,7 @@
           if (t && t.length > 2) {
             let e = t[1],
               r = Number(t[2]);
-            if (r > 0) return i.createElement(Q.e, { id: r, inputType: e });
+            if (r > 0) return i.createElement(Y.e, { id: r, inputType: e });
           }
         }
         return (0, L.Pm)(e, null == t ? void 0 : t.event);
@@ -4848,7 +4871,7 @@
               return i.createElement(
                 "div",
                 { className: (0, y.A)(x.LoyaltyRewardCtn) },
-                i.createElement(Z, { defid: r, url: e }),
+                i.createElement(Q, { defid: r, url: e }),
               );
           }
         }
@@ -5108,8 +5131,8 @@
           );
         };
       var Pe = r(26296),
-        Oe = r(51272),
-        ze = r(56011),
+        ze = r(51272),
+        Oe = r(56011),
         We = r(75933),
         He = r(43568);
       function je(e) {
@@ -5133,7 +5156,7 @@
       }
       var qe = r(45699),
         Ve = r(39362);
-      function Ye(e) {
+      function Ze(e) {
         const { fileUploadManager: t } = e,
           r = (0, i.useRef)();
         return i.createElement(
@@ -5170,11 +5193,11 @@
           ),
         );
       }
-      var Ze = r(65946),
-        Qe = r(49333);
+      var Qe = r(65946),
+        Ye = r(49333);
       function $e(e) {
         const { fileUploadManager: t } = e,
-          r = (0, Ze.q3)(() => t.file_upload_props.eUploadState);
+          r = (0, Qe.q3)(() => t.file_upload_props.eUploadState);
         return 1 == r
           ? i.createElement(Je, { fileUploadManager: t })
           : 3 == r || 5 == r || 4 == r
@@ -5188,30 +5211,30 @@
           r = t.file;
         return i.createElement(
           "div",
-          { className: Qe.UploadPreviewContainer },
+          { className: Ye.UploadPreviewContainer },
           Boolean(-1 != r.type.indexOf("image")) &&
             i.createElement("img", {
-              className: Qe.UploadPreview,
+              className: Ye.UploadPreview,
               src: t.file_upload_data_url,
             }),
           Boolean(-1 != r.type.indexOf("video")) &&
             i.createElement(w.CeX, null),
           i.createElement(
             "div",
-            { className: Qe.FileUploadFileName },
+            { className: Ye.FileUploadFileName },
             "'",
             r.name,
             "'",
           ),
           i.createElement(
             "div",
-            { className: Qe.FileUploadCancel, onClick: () => t.Reset() },
+            { className: Ye.FileUploadCancel, onClick: () => t.Reset() },
             i.createElement(w.sED, null),
           ),
           i.createElement(
             Me.jn,
             {
-              className: Qe.FileUploadBtn,
+              className: Ye.FileUploadBtn,
               onClick: async () => {
                 await t.BeginFileUpload(), t.Reset();
               },
@@ -5222,7 +5245,7 @@
       }
       function Xe(e) {
         const { fileUploadManager: t } = e,
-          [r, n, a] = (0, Ze.q3)(() => [
+          [r, n, a] = (0, Qe.q3)(() => [
             t.file_upload_props.file,
             t.file_upload_props.displayFileName,
             t.file_upload_props.uploadProgress,
@@ -5231,13 +5254,13 @@
           o = { width: a + "%" };
         return i.createElement(
           "div",
-          { className: Qe.FileUploadProgressContainer },
-          i.createElement("div", { className: Qe.FileUploadProgressName }, s),
+          { className: Ye.FileUploadProgressContainer },
+          i.createElement("div", { className: Ye.FileUploadProgressName }, s),
           i.createElement(
             "div",
             {
               className: (0, y.A)(
-                Qe.FileUploadProgressBarContainer,
+                Ye.FileUploadProgressBarContainer,
                 "DialogProgressBar_ProgressBarContainer",
               ),
             },
@@ -5250,7 +5273,7 @@
       }
       function Ke(e) {
         const { fileUploadManager: t } = e,
-          [r, n, a] = (0, Ze.q3)(() => [
+          [r, n, a] = (0, Qe.q3)(() => [
             t.file_upload_props.strErrorDescription,
             t.file_upload_props.displayFileName,
             t.file_upload_props.eUploadState,
@@ -5259,16 +5282,16 @@
           o = r || (0, S.we)("#Chat_Upload_ErrorCloud");
         return i.createElement(
           "div",
-          { className: Qe.FileUploadProgressContainer },
-          i.createElement("div", { className: Qe.FileUploadProgressName }, s),
+          { className: Ye.FileUploadProgressContainer },
+          i.createElement("div", { className: Ye.FileUploadProgressName }, s),
           i.createElement(
             "div",
-            { className: Qe.FileUploadErrorDescription },
+            { className: Ye.FileUploadErrorDescription },
             o,
           ),
           i.createElement(
             "div",
-            { className: Qe.FileUploadActions },
+            { className: Ye.FileUploadActions },
             i.createElement(
               Me.dR,
               { className: "DialogLayout_NoMinWidth" },
@@ -5297,11 +5320,11 @@
         nt = r(90874),
         it = r(41951),
         at = r(74410),
-        st = r(3132);
+        st = r(19675);
       let ot = null;
       function lt(e) {
         var t;
-        let r = (0, o.j$)(e.args);
+        let r = (0, o.j$)(e.args) || (0, o.j$)(e.args, "href");
         const n = (0, o.j$)(e.args, "style"),
           a = (0, o.j$)(e.args, "id"),
           s = (function (e) {
@@ -5333,7 +5356,7 @@
             ? i.createElement("a", { className: s, href: r }, e.children)
             : "steam://settings/account" == r
               ? i.createElement(
-                  Oe.uU,
+                  ze.uU,
                   { className: s, href: "steam://settings/account" },
                   e.children,
                 )
@@ -5345,37 +5368,35 @@
         );
       }
       function ct(e) {
-        const { showErrorInfo: t, event: r } = e.context;
-        let n = e && e.children && e.children.toString();
-        if (
-          (null == n || null == n || 0 == n.length) &&
-          ((n = e && e.args && e.args[""]),
-          null == n || null == n || 0 == n.length)
-        )
-          return i.createElement(i.Fragment, null);
-        const a = o._D(
-          n,
+        var t;
+        const { showErrorInfo: r, event: n } = e.context;
+        let a =
+          (0, o.j$)(e.args, "src") ||
+          (null === (t = e.children) || void 0 === t ? void 0 : t.toString());
+        if (!a && ((a = (0, o.j$)(e.args)), null == !a)) return null;
+        const s = o._D(
+          a,
           e.language,
-          null == r ? void 0 : r.rtime32_last_modified,
+          null == n ? void 0 : n.rtime32_last_modified,
         );
-        if ("string" == typeof a) {
+        if ("string" == typeof s) {
           let e;
           return (
-            (n = a),
-            (e = (!r || !r.BHasTag("auto_rssfeed")) && !(0, b.ZF)(n)),
-            t || (n = (0, b.L$)(n)),
-            t
+            (a = s),
+            (e = (!n || !n.BHasTag("auto_rssfeed")) && !(0, b.ZF)(a)),
+            r || (a = (0, b.L$)(a)),
+            r
               ? i.createElement(Pe.i, {
-                  src: n,
+                  src: a,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
               : i.createElement(it.o, {
-                  src: n,
+                  src: a,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
           );
         }
-        return i.createElement(U.c, { rgSources: a });
+        return i.createElement(U.c, { rgSources: s });
       }
       function mt(e) {
         const t = (0, o.j$)(e.args);
@@ -5548,7 +5569,7 @@
                       },
                       e.children,
                     ),
-                    (0, ze.uX)(s),
+                    (0, Oe.uX)(s),
                   );
                 },
               },
@@ -5643,7 +5664,7 @@
           ? i.createElement(
               "div",
               null,
-              i.createElement(Ye, { fileUploadManager: a }),
+              i.createElement(Ze, { fileUploadManager: a }),
               i.createElement($e, { fileUploadManager: a }),
             )
           : t

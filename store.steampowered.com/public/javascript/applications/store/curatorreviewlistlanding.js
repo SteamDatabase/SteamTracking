@@ -145,8 +145,8 @@
           h = e.isActive,
           C = e.location,
           b = e.sensitive,
-          y = e.strict,
-          w = e.style,
+          w = e.strict,
+          y = e.style,
           I = e.to,
           S = e.innerRef,
           L = (0, s.A)(e, [
@@ -174,12 +174,12 @@
                   path: N,
                   exact: E,
                   sensitive: b,
-                  strict: y,
+                  strict: w,
                 })
               : null,
             R = !!(h ? h(A, a) : A),
             T = "function" == typeof p ? p(R) : p,
-            D = "function" == typeof w ? w(R) : w;
+            D = "function" == typeof y ? y(R) : y;
           R &&
             ((T = (function () {
               for (
@@ -221,7 +221,7 @@
           const e = window.__nav_tree_root;
           return r.createElement(
             o.B2,
-            { ...c, navTreeRef: m, secondary: !0, parentEmbeddedNavTree: e },
+            { ...c, navTreeRef: m, parentEmbeddedNavTree: e },
             r.createElement(i.q, null, t),
           );
         }
@@ -272,11 +272,11 @@
       "use strict";
       a.d(t, {
         F6: () => h,
-        ME: () => y,
+        ME: () => w,
         RA: () => b,
         cc: () => I,
         fq: () => S,
-        m1: () => w,
+        m1: () => y,
       });
       var n = a(34629),
         r = a(41735),
@@ -481,7 +481,7 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function y(e, t) {
+      function w(e, t) {
         const a = (0, g.CH)();
         return (
           (0, i.useEffect)(() => {
@@ -511,7 +511,7 @@
           b.Get().GetListDetails(t)
         );
       }
-      function w(e) {
+      function y(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
           [a, n] = (0, i.useState)(!!t);
         return (
@@ -764,8 +764,8 @@
       }
       var C = a(6626),
         b = a(91336),
-        y = a(30894),
-        w = a(82097),
+        w = a(30894),
+        y = a(82097),
         I = a(62792),
         S = a(55263),
         L = a(80782),
@@ -1011,11 +1011,11 @@
           (r.useEffect(() => {
             a &&
               (l(a?.length || 0),
-              y.Fm.Get()
+              w.Fm.Get()
                 .HintLoad()
                 .then(() => {
                   const e = a.map((e) => e.recommended_app.appid);
-                  w.A.Get()
+                  y.A.Get()
                     .QueueMultipleAppRequests(e, P.jy)
                     .then(() => {
                       u.token.reason ||
@@ -1023,7 +1023,7 @@
                           a.filter(
                             (e) =>
                               !(0, P.Li)(
-                                w.A.Get().GetApp(e.recommended_app.appid),
+                                y.A.Get().GetApp(e.recommended_app.appid),
                               ),
                           ),
                         );
@@ -1164,8 +1164,8 @@
           E = a.list_jsondata.app_data?.[m],
           h = d && (0, u.XU)(d),
           b = d && k(d),
-          y = _ != C.F6 && _,
-          w = i.BHasDemo(),
+          w = _ != C.F6 && _,
+          y = i.BHasDemo(),
           L = E?.img_url,
           N = `curator_clanid=${o.clanAccountID}&curator_listid=${a.listid}`;
         return r.createElement(
@@ -1180,14 +1180,14 @@
                   nStartSeconds: h?.nStartSeconds,
                   info: s,
                   strImgOverrideUrl: L,
-                  bShowDemoButton: w,
+                  bShowDemoButton: y,
                   strExtraParams: N,
                   bTwitchVideo: Boolean(b),
                 })
               : r.createElement(x.W, {
                   imageType: "header",
                   capsule: s,
-                  bShowDemoButton: w,
+                  bShowDemoButton: y,
                   strExtraParams: N,
                 }),
           ),
@@ -1210,11 +1210,11 @@
                   : (0, z.$z)(p),
               ),
             ),
-            Boolean(y) &&
+            Boolean(w) &&
               r.createElement(
                 "div",
                 { className: H().ReviewBlurb },
-                (0, z.we)("#SteamCurator_ReviewTextQuoted", y),
+                (0, z.we)("#SteamCurator_ReviewTextQuoted", w),
               ),
             Boolean(d) && r.createElement(re, { url: d }),
           ),

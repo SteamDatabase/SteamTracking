@@ -5298,7 +5298,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
         padding-bottom: 50px;
     }
 
-    html.responsive .responsive_giant_curator_capsule .curator_giant_capsule {
+    html.responsive:not( .BasicUI ) .responsive_giant_curator_capsule .curator_giant_capsule {
         flex-wrap: wrap;
     }
 
@@ -5516,10 +5516,16 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	margin-bottom: 16px;
 	position: relative;
 	max-width: 300px;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .content_hub_carousel_ctn .content_hub_capsule_ctn img {
 	width: 100%;
+	display: block;
+	filter: saturate(0.7);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+	transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 
 .content_hub_capsule_ctn .gradient {
@@ -5527,32 +5533,46 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	top: 0;
 	height: 100%;
 	width: 100%;
+	background: radial-gradient(115% 120% at 0% 0%, transparent, #2880a6);
+	transition: opacity 0.2s ease-in-out;
 }
 
 .content_hub_capsule_ctn .label_ctn {
 	position: absolute;
-	bottom: 16px;
+	bottom: 50px;
 	text-align: center;
 	width: 90%;
 	padding: 1em;
+	pointer-events: none;
+	transition: transform 0.2s ease-in-out;
 }
 
 .content_hub_capsule_ctn .label {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
 	font-size: 16px;
+	line-height: 19px;
     font-weight: bold;
     letter-spacing: 0.1ch;
-    color: white;
-    text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+    color: #2881a7;
     text-transform: uppercase;
+	background: #ffffff;
+	padding: 6px 12px;
+	border-radius: 4px;
 }
 
-.content_hub_capsule_ctn:hover {
+.content_hub_capsule_ctn:hover img {
 	transform: scale(1.05);
-	transition: all .2s;
+	filter: brightness(1.1);
 }
 
-.content_hub_capsule_ctn .gradient:hover {
-	filter: brightness(1.25);
+.content_hub_capsule_ctn:hover .gradient {
+	opacity: 0.5;
+}
+
+.content_hub_capsule_ctn:hover .label_ctn {
+	transform: translateY(44px);
 }
 
 .content_hub_carousel_ctn .arrow.left, .content_hub_carousel_ctn .arrow.right {

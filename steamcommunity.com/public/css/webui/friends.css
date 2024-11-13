@@ -1393,12 +1393,17 @@
   left: 0;
   z-index: 1599;
 }
-.contextmenu_ContextMenuFocusContainer_1S6CC:focus {
+.contextmenu_ContextMenuPosition_2yAm5 {
+  position: absolute;
+}
+dialog .contextmenu_ContextMenuPosition_2yAm5 {
+  position: fixed;
+}
+.contextmenu_ContextMenuPosition_2yAm5:focus {
   outline: none;
 }
 .GreenEnvelopeMenu,
 .contextmenu_contextMenu_PP7LM {
-  position: absolute;
   opacity: 1;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
@@ -1675,6 +1680,13 @@ body.modals_BodyNoScrollDialog_3jhMI {
   display: flex;
   flex-direction: column;
   min-height: 0;
+}
+dialog.modals_ModalDialog_32QRv {
+  padding: 0;
+  outline: none;
+}
+dialog.modals_ModalDialog_32QRv::backdrop {
+  background: transparent;
 }
 .tooltip_TextToolTip_2FxbH {
   box-sizing: border-box;
@@ -11570,6 +11582,112 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   float: none;
   padding: 0px;
 }
+.meetsteambbcode_Ctn_ZXlue {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  background: #41454e;
+  border-radius: 7px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.meetsteambbcode_CtnRegistered_3PeTr {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+.meetsteambbcode_CtnRegistered_3PeTr::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  z-index: -1;
+}
+.meetsteambbcode_SessionTitle_3vGq3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.meetsteambbcode_SessionDesc_24r8E {
+  color: #fff;
+  font-size: 14px;
+}
+.meetsteambbcode_SessionOptions_3KAHx {
+  display: flex;
+  flex-direction: row;
+}
+.meetsteambbcode_SessionInstance_1igTM {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+}
+.meetsteambbcode_SessionInstance_1igTM .meetsteambbcode_Button_2qgSQ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #707787, #555b67);
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 19px;
+  transition: filter .2s ease-in-out;
+  user-select: none;
+}
+.meetsteambbcode_SessionInstance_1igTM
+  .meetsteambbcode_Button_2qgSQ:not(:disabled):hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+.meetsteambbcode_SessionInstance_1igTM
+  .meetsteambbcode_Button_2qgSQ
+  .meetsteambbcode_Title_3iF42 {
+  font-weight: 600;
+}
+.meetsteambbcode_Max_1-LTO {
+  font-size: 13px;
+}
+.meetsteambbcode_InstanceDivider_2IUfD {
+  margin: auto 8px;
+}
+.meetsteambbcode_Day_2Zkbw {
+  font-size: 24px;
+  font-weight: bold;
+}
+.meetsteambbcode_Time_8oQG_ {
+  font-size: 16px;
+}
+.meetsteambbcode_Registered_1D1F4 {
+  color: green;
+}
+.meetsteambbcode_Registering_td3x9 {
+  color: #adff2f;
+}
+.meetsteambbcode_Unregistering_twKyI {
+  color: #ff0;
+}
+.meetsteambbcode_CompleteRegistrationCtn_6ykmN {
+  display: none;
+}
+.meetsteambbcode_CompleteRegistrationCtn_6ykmN.meetsteambbcode_Visible_3WTs5 {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+}
 .localdateandtime_DateAndTime_2V6GL,
 .localdateandtime_DateAndTimeInline_HZ6b2 {
   display: inline-flex;
@@ -11843,173 +11961,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .eventbbcodeparser_ScreenshotCarousel_3uA0h:hover button.CarouselBtnRight,
 .eventbbcodeparser_ScreenshotCarousel_3uA0h:hover button.CarouselBtnLeft {
   opacity: 1;
-}
-.meetsteambbcode_ctn_1cSWc {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-  border: 2px solid #007bff;
-  padding: 20px;
-  border-radius: 1px;
-}
-.meetsteambbcode_ctn_registered_19SNK {
-  background-color: #fff;
-  border: 2px solid #007bff;
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-}
-.meetsteambbcode_ctn_registered_19SNK::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border: 2px solid #007bff;
-  border-radius: 10px;
-  z-index: -1;
-}
-.meetsteambbcode_row_Fw43Q {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom, #4da1f2, #a6d6f7);
-  margin: 10px 0;
-  padding: 20px;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-.meetsteambbcode_day_1wcqD {
-  font-size: 24px;
-  font-weight: bold;
-}
-.meetsteambbcode_time_2ublG,
-.meetsteambbcode_max_2v16t {
-  font-size: 16px;
-}
-.meetsteambbcode_Registered_1D1F4 {
-  color: green;
-}
-.partnereventdialog_ErrorStyles_2Sg7W,
-.partnereventdialog_ErrorStylesWithIcon_Lc2PK {
-  color: #c44848;
-}
-.partnereventdialog_ErrorIconLayout_42__6,
-.partnereventdialog_ErrorStylesWithIcon_Lc2PK,
-.partnereventdialog_ErrorStylesBackground_3fVv6 {
-  display: block;
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 6px;
-}
-.partnereventdialog_ErrorStylesBackground_3fVv6 {
-  background-color: #472025;
-}
-.partnereventdialog_ErrorStylesWithIcon_Lc2PK.partnereventdialog_ErrorFloatBelow_2aKyl {
-  padding: 5px;
-  padding-left: 32px;
-  font-size: 14px;
-  position: absolute;
-  bottom: -5px;
-  background-color: #682d2c;
-  z-index: 1;
-  box-shadow: 2px 2px 5px #000;
-  text-wrap: nowrap;
-}
-.partnereventdialog_ErrorStyles_2Sg7W > div,
-.partnereventdialog_ErrorStylesWithIcon_Lc2PK > div {
-  display: inline;
-  color: #d78484;
-}
-.partnereventdialog_WarningStyles_3gxgE,
-.partnereventdialog_WarningStylesWithIcon_1S_uS {
-  color: #b8860b;
-}
-.partnereventdialog_WarningIconLayout_2jM80,
-.partnereventdialog_WarningStylesWithIcon_1S_uS,
-.partnereventdialog_WarningStylesBackground_UYrHs {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_WarningStylesBackground_UYrHs {
-  background-color: #b8860b;
-  color: #fff;
-}
-.partnereventdialog_WarningStylesBackground_UYrHs
-  .partnereventdialog_Stuck_2b5wW {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-.partnereventdialog_WarningStylesWithIcon_1S_uS.partnereventdialog_WarningFloatBelow_3e0cN {
-  padding: 5px;
-  padding-left: 32px;
-  font-size: 14px;
-  position: absolute;
-  bottom: -5px;
-  background-color: #523d07;
-  z-index: 1;
-  box-shadow: 2px 2px 5px #000;
-  text-wrap: nowrap;
-}
-.partnereventdialog_InfoStyles_2lreM,
-.partnereventdialog_InfoStylesWithIcon_1_-Pi {
-  color: #556b2f;
-}
-.partnereventdialog_InfoIconLayout_3kyPz,
-.partnereventdialog_InfoStylesWithIcon_1_-Pi,
-.partnereventdialog_InfoStylesBackground_3gNTI {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_spoiler_tag.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_InfoStylesBackground_3gNTI {
-  background-color: #556b2f;
-  color: #fff;
-}
-.partnereventdialog_InfoStylesBackground_3gNTI .partnereventdialog_Stuck_2b5wW {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-.partnereventdialog_Padding_36hma {
-  padding-top: 10px;
-}
-.ModalPosition_Content .partnereventdialog_NotTooWideModal_UfQcb.DialogContent {
-  width: initial;
-}
-.ModalPosition_Content
-  .partnereventdialog_NotTooWideModal_UfQcb.DialogContent
-  .DialogContent_InnerWidth
-  > form {
-  padding-right: 8px;
-}
-.partnereventdialog_ImageManageDialog_Pl7AI .DialogFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.partnereventdialog_ImageManageDialog_Pl7AI .DialogFooter button.DialogButton {
-  margin-left: 8px;
-  width: fit-content;
-}
-.partnereventdialog_SuccessErrorDialog_1wBO1 .DialogFooter .DialogTwoColLayout {
-  gap: 8px;
 }
 .eventreminder_FlexColumnContainer_15ufN {
   display: flex;
@@ -38738,7 +38689,6 @@ button.TextButton.gpfocus {
   color: #fff;
 }
 .DialogMenuPosition {
-  position: absolute;
   z-index: 1600;
   overflow: auto;
   -webkit-app-region: none;

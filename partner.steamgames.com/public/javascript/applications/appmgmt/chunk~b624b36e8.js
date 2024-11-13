@@ -3,7 +3,7 @@
 "use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [5839],
+  [7224],
   {
     36064: (e, t, i) => {
       i.d(t, { Mc: () => a, aM: () => o, ap: () => r, q_: () => s });
@@ -152,15 +152,15 @@
           0 == e.rgRoles.length || e.rgRoles.findIndex((e) => "main" == e) >= 0
         );
       }
-      function P(e) {
+      function A(e) {
         if (!e) return 0;
         let t = e.segmentTemplate;
         return 1e3 == t.nTimeScale
           ? t.nDuration
           : (t.nDuration / t.nTimeScale) * 1e3;
       }
-      function A(e, t, i) {
-        let n = P(t),
+      function P(e, t, i) {
+        let n = A(t),
           s = i + ((1e3 * e.GetStartTime()) % n);
         return Math.floor(s / n) + t.segmentTemplate.nStartNumber;
       }
@@ -633,7 +633,7 @@
           return this.m_representation.nBandwidth;
         }
         GetCurrentSegmentDurationMS() {
-          return P(this.m_representation);
+          return A(this.m_representation);
         }
         GetCurrentSegmentInitializationURL() {
           return V(this.m_representation);
@@ -666,7 +666,7 @@
           if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
           {
             let e = this.m_mpd.GetEndTime() - this.m_mpd.GetStartTime();
-            return A(this.m_mpd, this.m_representation, 1e3 * e);
+            return P(this.m_mpd, this.m_representation, 1e3 * e);
           }
         }
         GetAmountBufferedInPlayerMS(e) {
@@ -799,7 +799,7 @@
             t = this.m_callbacks.GetPlaybackRate(),
             i = (function (e, t, i) {
               if (!e.IsLiveContent()) return 0;
-              let n = P(t);
+              let n = A(t);
               return (
                 (i - t.segmentTemplate.nStartNumber + 1) * n -
                 e.GetDurationSinceStarted()
@@ -820,7 +820,7 @@
               ),
               void this.DownloadNextSegment()
             );
-          let s = 1.1 * P(this.m_representation),
+          let s = 1.1 * A(this.m_representation),
             r = this.GetAmountBufferedInPlayerMS(
               this.m_callbacks.GetCurrentPlayTime(),
             );
@@ -845,7 +845,7 @@
             (n = this.m_representation),
               (s = this.m_nNextSegment),
               (e = C(n.segmentTemplate.strMedia, n.strID, s)),
-              (t = P(this.m_representation)),
+              (t = A(this.m_representation)),
               this.m_nNextSegment++;
           }
           var n, s;
@@ -1050,7 +1050,7 @@
             return void this.ScheduleNextDownload();
           (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
           const s = e - this.m_mpd.GetStartTime();
-          let r = A(this.m_mpd, this.m_representation, 1e3 * s);
+          let r = P(this.m_mpd, this.m_representation, 1e3 * s);
           if (
             ((this.m_nNextSegment = Math.min(r, this.GetMaxSegment())),
             (0, g.q_)(
@@ -1640,30 +1640,31 @@
             : this.m_elVideo.currentTime;
         }
         OnVideoTimeUpdate() {
-          if (this.m_bUserLiveEdgeChoice && this.IsLiveContent()) {
-            let e = this.GetBufferedLiveEdgeTime();
-            if (
-              1 == this.m_elVideo.playbackRate &&
-              this.m_elVideo.currentTime <= e - 4.5 &&
-              this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, e)
-            ) {
-              let t = e - this.m_elVideo.currentTime;
-              (this.m_elVideo.playbackRate = 1.1),
-                (0, g.q_)(
-                  "User is behind by " +
-                    t.toFixed(2) +
-                    " seconds, increasing playback speed to catch-up to live edge.",
-                );
-            } else
-              1.1 == this.m_elVideo.playbackRate &&
-                this.m_elVideo.currentTime >= e - 1 &&
-                ((this.m_elVideo.playbackRate = 1),
-                (0, g.q_)("User is caught up, returning to normal playrate"));
-          } else {
-            const e = this.GetAvailableVideoStartTime(),
-              t = this.GetBufferedLiveEdgeTime() - e;
-            this.GetCurrentPlayTime() - e >= t && this.Pause();
-          }
+          if (this?.m_elVideo)
+            if (this.m_bUserLiveEdgeChoice && this.IsLiveContent()) {
+              let e = this.GetBufferedLiveEdgeTime();
+              if (
+                1 == this.m_elVideo.playbackRate &&
+                this.m_elVideo.currentTime <= e - 4.5 &&
+                this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, e)
+              ) {
+                let t = e - this.m_elVideo.currentTime;
+                (this.m_elVideo.playbackRate = 1.1),
+                  (0, g.q_)(
+                    "User is behind by " +
+                      t.toFixed(2) +
+                      " seconds, increasing playback speed to catch-up to live edge.",
+                  );
+              } else
+                1.1 == this.m_elVideo.playbackRate &&
+                  this.m_elVideo.currentTime >= e - 1 &&
+                  ((this.m_elVideo.playbackRate = 1),
+                  (0, g.q_)("User is caught up, returning to normal playrate"));
+            } else {
+              const e = this.GetAvailableVideoStartTime(),
+                t = this.GetBufferedLiveEdgeTime() - e;
+              this.GetCurrentPlayTime() - e >= t && this.Pause();
+            }
         }
         SetBookmarkAdapter(e) {
           this.m_bookMarkAdapter = e;
@@ -2963,6 +2964,69 @@
       (0, n.Cg)([s.sH], T.prototype, "m_bDroppingFrameDetected", void 0),
         (0, n.Cg)([s.sH], T.prototype, "m_nCurrentFPS", void 0),
         (0, n.Cg)([s.XI.bound], T.prototype, "TakeReading", null);
+    },
+    82227: (e, t, i) => {
+      i.d(t, { Dq: () => r, NO: () => a, dm: () => s });
+      var n = i(61859);
+      function s(e, t, i, s) {
+        let r = t;
+        r =
+          "number" == typeof r
+            ? {
+                nDigitsAfterDecimal: t,
+                bUseBinary1K: i || void 0 === i,
+                bValueIsInBytes: !s,
+                bValueIsRate: s,
+                nMinimumDigitsAfterDecimal: 0,
+              }
+            : {
+                nDigitsAfterDecimal: 2,
+                bUseBinary1K: !0,
+                bValueIsInBytes: !0,
+                bValueIsRate: !1,
+                nMinimumDigitsAfterDecimal: 0,
+                ...r,
+              };
+        const a = r.bUseBinary1K ? 1024 : 1e3,
+          o = a * a,
+          m = o * a,
+          d = m * a;
+        let l,
+          h = "";
+        e > d
+          ? ((l = e / d), (h = "Tera"))
+          : e > m
+            ? ((l = e / m), (h = "Giga"))
+            : e > o
+              ? ((l = e / o), (h = "Mega"))
+              : e > a
+                ? ((l = e / a), (h = "Kilo"))
+                : (l = e);
+        const u =
+          "#" +
+          h +
+          (r.bValueIsInBytes ? "bytes" : "bits") +
+          (r.bValueIsRate ? "_PerSecond" : "");
+        return (0, n.we)(
+          u,
+          l.toLocaleString(n.pf.GetPreferredLocales(), {
+            minimumFractionDigits: r.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: r.nDigitsAfterDecimal,
+          }),
+        );
+      }
+      function r(e) {
+        return e ? e.toLocaleString(n.pf.GetPreferredLocales()) : "" + e;
+      }
+      function a(e) {
+        return e > 1e9
+          ? Math.trunc(e / 1e9).toString() + "B"
+          : e > 1e6
+            ? Math.trunc(e / 1e6).toString() + "M"
+            : e > 1e3
+              ? Math.trunc(e / 1e3).toString() + "K"
+              : e.toString();
+      }
     },
   },
 ]);

@@ -1565,7 +1565,7 @@ GHomepage = {
 
 				var $gradient = $J( '<div/>', {
 					"class": "gradient",
-					"style": "background: linear-gradient(rgba(0,0,0,0), " + rgColors[iColor] + " 100%"
+					// "style": "background: linear-gradient(rgba(0,0,0,0), " + rgColors[iColor] + " 100%"
 				} );
 				$capsule.append( $gradient );
 

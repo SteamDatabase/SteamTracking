@@ -87,6 +87,9 @@
         Description: "_2fAxlp5l2ZkuTUe5oYvdRB",
       };
     },
+    31896: (e) => {
+      e.exports = { PlaytestStatusCtn: "_2eYiuTSkBQNywb-x-gquMD" };
+    },
     12447: (e, t, a) => {
       "use strict";
       a.d(t, { u: () => o });
@@ -103,7 +106,7 @@
           const e = window.__nav_tree_root;
           return r.createElement(
             s.B2,
-            { ...l, navTreeRef: _, secondary: !0, parentEmbeddedNavTree: e },
+            { ...l, navTreeRef: _, parentEmbeddedNavTree: e },
             r.createElement(c.q, null, t),
           );
         }
@@ -112,7 +115,7 @@
     },
     1035: (e, t, a) => {
       "use strict";
-      a.d(t, { Ul: () => f, xz: () => v, $Y: () => h, i8: () => A });
+      a.d(t, { Ul: () => f, xz: () => A, $Y: () => h, i8: () => v });
       var n = a(34629),
         r = a(90626),
         i = a(75844),
@@ -187,7 +190,7 @@
           o,
         );
       });
-      let A = class extends r.Component {
+      let v = class extends r.Component {
         render() {
           const {
             persona: e,
@@ -215,7 +218,7 @@
           );
         }
       };
-      A = (0, n.Cg)([i.PA], A);
+      v = (0, n.Cg)([i.PA], v);
       const h = (0, i.PA)((e) => {
         const { profileItem: t, className: a, bDisableAnimation: n, ...i } = e;
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
@@ -231,7 +234,7 @@
           )
         );
       });
-      let v = class extends r.Component {
+      let A = class extends r.Component {
         m_timer;
         constructor(e) {
           super(e),
@@ -309,7 +312,7 @@
                 onMouseLeave: () => this.SetupAnimationTimer(),
               },
               r.createElement(
-                A,
+                v,
                 { animatedAvatar: t, ...o },
                 n,
                 r.createElement(h, {
@@ -321,7 +324,7 @@
           );
         }
       };
-      v = (0, n.Cg)([i.PA], v);
+      A = (0, n.Cg)([i.PA], A);
     },
     3088: (e, t, a) => {
       "use strict";
@@ -389,9 +392,9 @@
       }
       (0, n.Cg)([i.oI], s.prototype, "OnImageError", null);
     },
-    95306: (e, t, a) => {
+    29826: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { AccountPreferencesRoutes: () => Ce, default: () => we });
+      a.r(t), a.d(t, { AccountPreferencesRoutes: () => Be, default: () => be });
       var n = a(90626),
         r = a(92757),
         i = a(34629),
@@ -550,9 +553,9 @@
         u = a(33737),
         d = a(72518),
         f = a(52038),
-        A = a(76217),
+        v = a(76217),
         h = a(91336),
-        v = a(12447),
+        A = a(12447),
         g = a(45699);
       let E;
       const P = (0, p.PA)(() => {
@@ -571,7 +574,7 @@
               e.SetPreferenceState(2);
             }, [e]);
           return n.createElement(
-            v.u,
+            A.u,
             { navID: "StoreCookiesSettings", NavigationManager: t },
             n.createElement(
               "div",
@@ -591,7 +594,7 @@
               "div",
               { className: "account_settings_container" },
               n.createElement(
-                A.Z,
+                v.Z,
                 { "flow-children": "row", className: d.ButtonGroup },
                 n.createElement(
                   g.ml,
@@ -943,7 +946,7 @@
             ),
           );
         });
-      class T {
+      class D {
         m_Preferences = void 0;
         m_bUpdating = !1;
         constructor(e) {
@@ -992,17 +995,17 @@
           }
         }
       }
-      (0, i.Cg)([s.sH], T.prototype, "m_Preferences", void 0),
-        (0, i.Cg)([s.sH], T.prototype, "m_bUpdating", void 0);
-      var D = a(6695),
-        C = a(4869);
-      let w;
+      (0, i.Cg)([s.sH], D.prototype, "m_Preferences", void 0),
+        (0, i.Cg)([s.sH], D.prototype, "m_bUpdating", void 0);
+      var w = a(6695),
+        T = a(4869);
+      let C;
       function I() {
-        if (!w) {
+        if (!C) {
           let e = (0, c.Tc)("notificationpreferences", "application_config");
-          w = new T(e);
+          C = new D(e);
         }
-        return w;
+        return C;
       }
       const B = (0, p.PA)(() => {
           let e = I();
@@ -1011,13 +1014,13 @@
           for (const t of e.GetPreferences())
             a.push(n.createElement(b, { preferenceSetting: t }));
           return n.createElement(
-            v.u,
+            A.u,
             { navID: "StoreNotificationSettings", NavigationManager: t },
             n.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  D.NotificationSettingsHeader,
+                  w.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
@@ -1032,12 +1035,12 @@
               { className: "account_settings_container" },
               n.createElement(
                 "p",
-                { className: D.SectionDescription },
+                { className: w.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc1"),
               ),
               n.createElement(
                 "p",
-                { className: D.SectionDescription },
+                { className: w.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc2"),
               ),
               n.createElement(
@@ -1045,7 +1048,7 @@
                 { className: "notification_settings_container" },
                 n.createElement(
                   "div",
-                  { className: D.NotificationSendWhen },
+                  { className: w.NotificationSendWhen },
                   (0, m.we)("#NotificationSettings_SendMeWhen"),
                 ),
                 a,
@@ -1070,21 +1073,21 @@
             _ = 1 == (1 & t.notification_targets),
             p = 2 == (2 & t.notification_targets),
             d = 8 == (8 & t.notification_targets),
-            A =
+            v =
               ((h = t.notification_type),
               (0, m.c9)("#SteamNotificationTypeDesc_" + h)
                 ? (0, m.we)("#SteamNotificationTypeDesc_" + h)
                 : null);
           var h;
-          return A
+          return v
             ? n.createElement(
                 "div",
-                { className: D.NotificationGroup },
+                { className: w.NotificationGroup },
                 n.createElement(
                   "div",
-                  { className: D.NotificationSection },
+                  { className: w.NotificationSection },
                   n.createElement(u.y4, {
-                    className: D.NotificationFeedToggle,
+                    className: w.NotificationFeedToggle,
                     padding: "compact",
                     onChange: r,
                     disabled: l,
@@ -1093,25 +1096,25 @@
                   }),
                   n.createElement(
                     "p",
-                    { className: D.NotificationDescription },
-                    A,
+                    { className: w.NotificationDescription },
+                    v,
                   ),
                   n.createElement(
                     u.wl,
                     {
                       className: (0, f.A)({
-                        [D.PrefDetailsToggle]: !0,
-                        [D.Selected]: c,
+                        [w.PrefDetailsToggle]: !0,
+                        [w.Selected]: c,
                       }),
                       onClick: () => o(!c),
                     },
-                    n.createElement(C.b8_, { direction: "down" }),
+                    n.createElement(T.b8_, { direction: "down" }),
                   ),
                 ),
                 c &&
                   n.createElement(
                     "div",
-                    { className: D.NotificationPrefDetails },
+                    { className: w.NotificationPrefDetails },
                     n.createElement(u.Yh, {
                       label: (0, m.we)("#NotificationSettings_SendToast"),
                       disabled: l || !_,
@@ -1197,8 +1200,8 @@
         L = a(56011),
         K = a(14771),
         W = a(32754),
-        J = a(11838);
-      const V = (0, p.PA)(() => {
+        X = a(11838);
+      const J = (0, p.PA)(() => {
         let e = Q.Get();
         const t = (0, h.A)(),
           a = (function () {
@@ -1218,7 +1221,7 @@
           o = [];
         for (const t of e.GetRecentDevices()) {
           const e = t.logged_in && t.last_seen?.time > r - 900,
-            c = n.createElement(X, {
+            c = n.createElement(V, {
               device: t,
               key: t.token_id,
               bActiveNow: e,
@@ -1230,14 +1233,14 @@
         let l = [];
         for (const t of e.GetDevices())
           l.push(
-            n.createElement(X, {
+            n.createElement(V, {
               device: t,
               key: t.token_id,
               strActiveCountry: i,
             }),
           );
         return n.createElement(
-          v.u,
+          A.u,
           { navID: "StoreAuthorizedDevices", NavigationManager: t },
           n.createElement(
             "div",
@@ -1341,7 +1344,7 @@
           ),
         );
       });
-      function X(e) {
+      function V(e) {
         const {
             device: t,
             bActiveNow: a,
@@ -1351,7 +1354,7 @@
           [s, c] = (0, n.useState)(!1);
         let o = (function (e) {
           if (2 == e.platform_type) {
-            let t = new J.UAParser(e.token_description).getResult();
+            let t = new X.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
                 ? t.os.name
@@ -1385,7 +1388,7 @@
                     "div",
                     { className: G.LocationSuspicious },
                     l.location,
-                    n.createElement(C.$$j, null),
+                    n.createElement(T.$$j, null),
                   ),
                 )
               : n.createElement(
@@ -1440,7 +1443,7 @@
                           [G.Selected]: s,
                         }),
                       },
-                      n.createElement(C.b8_, { direction: "down" }),
+                      n.createElement(T.b8_, { direction: "down" }),
                     ),
                   ),
                 ),
@@ -1509,16 +1512,16 @@
       function Y(e) {
         const { device: t } = e;
         if (2 == t.platform_type)
-          return n.createElement(C.FH7, { className: G.DeviceLogo });
+          return n.createElement(T.FH7, { className: G.DeviceLogo });
         if (
           1 == t.platform_type &&
           t.gaming_device_type === F.zm.k_EGamingDeviceType_SteamDeck
         )
-          return n.createElement(C.oEi, { className: G.DeviceLogo });
+          return n.createElement(T.oEi, { className: G.DeviceLogo });
         switch (t.os_platform) {
           case U.k_EPlatformTypeWin32:
           case U.k_EPlatformTypeWin64:
-            return n.createElement(C.TV, { className: G.DeviceLogo });
+            return n.createElement(T.TV, { className: G.DeviceLogo });
           case U.k_EPlatformTypeAndroid32:
           case U.k_EPlatformTypeAndroid64:
           case U.k_EPlatformTypeLinux32:
@@ -1638,12 +1641,13 @@
         ue = a(51272),
         de = a(84811),
         fe = a(22797),
-        Ae = a(1977),
+        ve = a(1977),
         he = a(61855);
-      const ve = 1422450;
+      const Ae = 1422450;
       function ge(e) {
-        const t = (0, h.A)(),
-          a = (function () {
+        const { bShowPlaytestOverview: t } = e,
+          a = (0, h.A)(),
+          r = (function () {
             const e = (0, se.KV)();
             return (0, ne.I)({
               queryKey: [ce],
@@ -1658,10 +1662,10 @@
               },
             });
           })();
-        let r = [];
+        let i = [];
         return (
-          a.isSuccess &&
-            (r = a.data
+          r.isSuccess &&
+            (i = r.data
               .filter((e) => 1 === e.status || 3 === e.status)
               .map((e) =>
                 3 === e.status
@@ -1669,8 +1673,8 @@
                   : n.createElement(Pe, { invite: e, key: e.invite_id }),
               )),
           n.createElement(
-            v.u,
-            { navID: "StorePlaytestInvites", NavigationManager: t },
+            A.u,
+            { navID: "StorePlaytestInvites", NavigationManager: a },
             n.createElement(
               "div",
               { className: "account_header_line noicon" },
@@ -1678,37 +1682,43 @@
             ),
             n.createElement(
               "div",
-              { className: ee().PlaytestInvites },
-              a.isLoading || r.length > 0
-                ? r
+              {
+                className: (0, f.A)(
+                  ee().PlaytestInvites,
+                  "account_settings_container",
+                ),
+              },
+              r.isLoading || i.length > 0
+                ? i
                 : (0, m.we)("#PlaytestInvites_NoInvites"),
             ),
-            n.createElement(
-              "div",
-              null,
+            t &&
               n.createElement(
-                "h2",
-                null,
-                (0, m.we)("#PlaytestInvites_Desc_Title"),
+                "div",
+                { className: "account_settings_container" },
+                n.createElement(
+                  "h2",
+                  null,
+                  (0, m.we)("#PlaytestInvites_Desc_Title"),
+                ),
+                n.createElement(
+                  "p",
+                  { className: ee().Description },
+                  (0, m.we)("#PlaytestInvites_Desc1"),
+                ),
+                n.createElement(
+                  "p",
+                  { className: ee().Description },
+                  (0, m.we)("#PlaytestInvites_Desc2"),
+                ),
               ),
-              n.createElement(
-                "p",
-                { className: ee().Description },
-                (0, m.we)("#PlaytestInvites_Desc1"),
-              ),
-              n.createElement(
-                "p",
-                { className: ee().Description },
-                (0, m.we)("#PlaytestInvites_Desc2"),
-              ),
-            ),
           )
         );
       }
       function Ee(e) {
         const { invite: t } = e,
           a = t.appid,
-          r = Te(t.appid);
+          r = De(t.appid);
         let i = r?.GetName() ?? t.app_name;
         const s = n.useCallback(
           (e) => {
@@ -1733,7 +1743,7 @@
               "div",
               { className: ee().StatusCtn },
               n.createElement(
-                A.Z,
+                v.Z,
                 { className: ee().Buttons },
                 n.createElement(
                   u.jn,
@@ -1747,7 +1757,7 @@
       function Pe(e) {
         const { invite: t } = e,
           a = (0, pe.f1)(),
-          r = Te(t.appid);
+          r = De(t.appid);
         let i = r?.GetName() ?? t.app_name;
         const s = (function (e) {
             const t = (0, se.KV)(),
@@ -1787,10 +1797,10 @@
           de.tH,
           null,
           n.createElement(
-            A.Z,
+            v.Z,
             {
               className: ee().PlaytestInvite,
-              navEntryPreferPosition: Ae.iU.MAINTAIN_X,
+              navEntryPreferPosition: ve.iU.MAINTAIN_X,
             },
             n.createElement(
               "div",
@@ -1845,7 +1855,7 @@
             src: t?.GetAssets().GetSmallCapsuleURL() ?? he.A,
           });
         return (
-          r == ve && (i = "Valve"),
+          r == Ae && (i = "Valve"),
           n.createElement(
             "div",
             { className: ee().AppInfoCtn },
@@ -1910,14 +1920,58 @@
           (0, m.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
-      function Te(e) {
+      function De(e) {
         const [t, a] = (0, _e.t7)(e, {
           include_basic_info: !0,
           include_assets: !0,
         });
         return t && 3 == a ? t : null;
       }
-      const De = n.lazy(() =>
+      var we = a(31896),
+        Te = a.n(we);
+      function Ce(e) {
+        const t = (0, h.A)();
+        return n.createElement(
+          A.u,
+          { navID: "StorePlaytests", NavigationManager: t },
+          n.createElement(ge, { bShowPlaytestOverview: !1 }),
+          n.createElement(
+            "div",
+            { className: "account_header_line noicon" },
+            (0, m.we)("#PlaytestStatus_Title"),
+          ),
+          n.createElement(
+            "div",
+            {
+              className: (0, f.A)(
+                Te().PlaytestStatusCtn,
+                "account_settings_container",
+              ),
+            },
+            (0, m.we)("#PlaytestStatus_None"),
+          ),
+          n.createElement(
+            "div",
+            { className: "account_settings_container" },
+            n.createElement(
+              "h2",
+              null,
+              (0, m.we)("#PlaytestInvites_Desc_Title"),
+            ),
+            n.createElement(
+              "p",
+              { className: Te().Description },
+              (0, m.we)("#PlaytestInvites_Desc1"),
+            ),
+            n.createElement(
+              "p",
+              { className: Te().Description },
+              (0, m.we)("#PlaytestInvites_Desc2"),
+            ),
+          ),
+        );
+      }
+      const Ie = n.lazy(() =>
           Promise.all([
             a.e(2298),
             a.e(576),
@@ -1927,16 +1981,17 @@
             a.e(7072),
           ]).then(a.bind(a, 42048)),
         ),
-        Ce = {
+        Be = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
           FamilyManagement: () => "/familymanagement",
           AuthorizedDevices: () => "/authorizeddevices",
           PlaytestInvites: () => "/playtestinvites",
+          Playtests: () => "/playtests",
         },
-        we = (e) => {
+        be = (e) => {
           const t = e.match.url,
-            a = Ce;
+            a = Be;
           return n.createElement(
             r.dO,
             null,
@@ -1963,7 +2018,7 @@
               render: () =>
                 n.createElement(R.X, {
                   config: {
-                    "family-management": () => n.createElement(De, null),
+                    "family-management": () => n.createElement(Ie, null),
                   },
                 }),
             }),
@@ -1972,7 +2027,7 @@
               render: () =>
                 n.createElement(R.X, {
                   config: {
-                    "authorized-devices": () => n.createElement(V, null),
+                    "authorized-devices": () => n.createElement(J, null),
                   },
                 }),
             }),
@@ -1981,8 +2036,16 @@
               render: () =>
                 n.createElement(R.X, {
                   config: {
-                    "playtest-invites": () => n.createElement(ge, null),
+                    "playtest-invites": () =>
+                      n.createElement(ge, { bShowPlaytestOverview: !0 }),
                   },
+                }),
+            }),
+            n.createElement(r.qh, {
+              path: `${t}${a.Playtests()}`,
+              render: () =>
+                n.createElement(R.X, {
+                  config: { playtests: (e) => n.createElement(Ce, { ...e }) },
                 }),
             }),
           );
