@@ -130,7 +130,7 @@
         p = n(22797),
         h = n(68797),
         S = n(78327),
-        I = n(66418),
+        I = n(8527),
         g = n(30894),
         C = n(51272),
         f = n(82715);
@@ -237,7 +237,7 @@
             eventClassName: S,
           } = this.props;
           let f;
-          I.T.IN_CLIENT &&
+          I.TS.IN_CLIENT &&
             n?.appid &&
             (g.Fm.Get().HintLoad(),
             g.Fm.Get().BOwnsApp(n.appid) &&

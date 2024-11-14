@@ -34,7 +34,7 @@
       var r = n(82715),
         a = n(22837),
         s = n(2160),
-        c = n(66418),
+        c = n(8527),
         l = n(90626),
         i = n(92757),
         u = n(60746),
@@ -69,10 +69,10 @@
               "NOTE: Event needs to be published in unlisted mode for Steam partners to see it. Admin account bypass this check",
             ),
           l.createElement(m.jA, {
-            lang: (0, a.sf)(c.T.LANGUAGE),
+            lang: (0, a.sf)(c.TS.LANGUAGE),
             event: b,
             adminPanel:
-              c.T.EREALM === s.TU.k_ESteamRealmChina
+              c.TS.EREALM === s.TU.k_ESteamRealmChina
                 ? l.createElement(v.P, { eventModel: b })
                 : l.createElement(d.g, { eventModel: b }),
           }),

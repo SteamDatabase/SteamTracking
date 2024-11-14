@@ -37,15 +37,15 @@
         E = n(64641),
         u = n.n(E),
         h = n(22797),
-        _ = n(68797),
-        S = n(78327),
-        v = n(66418),
+        S = n(68797),
+        _ = n(78327),
+        v = n(8527),
         g = n(30894),
         P = n(51272),
         I = n(82715);
       const f = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
-        const n = (0, S.Qn)();
+        const n = (0, _.Qn)();
         return r.createElement(
           I.tH,
           null,
@@ -103,7 +103,7 @@
                   this.setState({ bLoading: !1 }));
             })
             .catch((e) => {
-              let t = (0, _.H)(e);
+              let t = (0, S.H)(e);
               console.error(
                 "EventInfiniteScrollModal failed " + t.strErrorMsg,
                 t,
@@ -142,11 +142,11 @@
             partnerEventStore: i,
             showAppHeader: d,
             bPrimaryPageFeature: E,
-            additionalParams: _,
-            eventClassName: S,
+            additionalParams: S,
+            eventClassName: _,
           } = this.props;
           let I;
-          v.T.IN_CLIENT &&
+          v.TS.IN_CLIENT &&
             n?.appid &&
             (g.Fm.Get().HintLoad(),
             g.Fm.Get().BOwnsApp(n.appid) &&
@@ -164,8 +164,8 @@
               closeModal: !E && a,
               showAppHeader: d,
               bShowOnlyInitialEvent: e,
-              additionalParams: _,
-              eventClassName: S,
+              additionalParams: S,
+              eventClassName: _,
               onAppIconClick: I,
             }),
           );
@@ -193,15 +193,15 @@
         o = n(61859),
         r = n(63369),
         i = n(55263),
-        c = n(66418),
+        c = n(8527),
         m = n(52038),
         p = n(8107),
         d = n(38390),
         E = n(91254),
         u = n(99376),
         h = n(42780),
-        _ = n(59952),
-        S = n(12611),
+        S = n(59952),
+        _ = n(12611),
         v = n(30470);
       function g() {
         const e = new URL(window.location.href),
@@ -222,7 +222,7 @@
           [s] = (0, a.useState)(
             new u.B(
               new Map([
-                ...Array.from(_.W4.entries()),
+                ...Array.from(S.W4.entries()),
                 ["img", { Constructor: N, autocloses: !1 }],
               ]),
               w,
@@ -243,9 +243,9 @@
         const s = (0, b.Fd)("store_page_asset_url", "application_config");
         return (
           (n =
-            s && n.startsWith(S.qR)
-              ? s.replace("%s", n.replace(S.qR, ""))
-              : n.replace(S.qR, g()).replace("http://", "https://")),
+            s && n.startsWith(_.qR)
+              ? s.replace("%s", n.replace(_.qR, ""))
+              : n.replace(_.qR, g()).replace("http://", "https://")),
           t
             ? a.createElement(P.i, { className: f().StoreImage, src: n })
             : a.createElement("img", {
@@ -273,7 +273,7 @@
                 (0, o.oW)(
                   "#SeasonPass_Incomplete_Desc2",
                   a.createElement("a", {
-                    href: `${c.T.STORE_BASE_URL}account/emailoptout`,
+                    href: `${c.TS.STORE_BASE_URL}account/emailoptout`,
                   }),
                 ),
               ),
@@ -388,7 +388,8 @@
         return a.createElement(
           "a",
           {
-            href: n?.GetStorePageURL() || `${c.T.STORE_BASE_URL}app/${t.appid}`,
+            href:
+              n?.GetStorePageURL() || `${c.TS.STORE_BASE_URL}app/${t.appid}`,
           },
           (0, o.we)("#SeasonPass_ShowStore"),
         );
@@ -418,7 +419,7 @@
           : a.createElement(
               "a",
               {
-                href: `${c.T.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
+                href: `${c.TS.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
               },
               (0, o.we)("#SeasonPass_ReadEvent"),
             );

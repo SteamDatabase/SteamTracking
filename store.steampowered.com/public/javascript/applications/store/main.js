@@ -3425,9 +3425,9 @@
       var i = r(91933),
         n = r(38861),
         a = r(90626),
-        s = r(66418);
+        s = r(8527);
       function o() {
-        return s.i.logged_in
+        return s.iA.logged_in
           ? { type: "account" }
           : { type: "anonymous", gid: (0, i.j_)(n.TP) };
       }
@@ -3444,17 +3444,17 @@
     93676: (e, t, r) => {
       "use strict";
       r.d(t, { Cd: () => c, GO: () => s, LN: () => m, m4: () => o });
-      var i = r(66418),
+      var i = r(8527),
         n = r(79443);
       function a(e) {
         return (0, n.c2)(e) ? e.type : e.gid;
       }
       function s(e) {
-        return ["shopping_cart", a(e), i.i.accountid];
+        return ["shopping_cart", a(e), i.iA.accountid];
       }
       function o(e, t) {
         return (0, n.c2)(e)
-          ? ["validate_checkout", a(e), i.i.accountid]
+          ? ["validate_checkout", a(e), i.iA.accountid]
           : ["validate_checkout", a(e), t?.accountid_giftee];
       }
       function l(e, t) {
@@ -43641,14 +43641,17 @@
           }, [e, t]);
       }
     },
-    66418: (e, t, r) => {
+    8527: (e, t, r) => {
       "use strict";
-      r.d(t, { T: () => n, i: () => a });
+      r.d(t, { YJ: () => n, TS: () => a, iA: () => s });
       var i = r(30470);
-      const n = window.Config ?? i.TS,
-        a = window.UserConfig ?? i.iA;
+      function n(e) {
+        return e;
+      }
+      const a = window.Config ?? i.TS,
+        s = window.UserConfig ?? i.iA;
       window.Config && Object.assign(i.TS, window.Config),
-        window.UserConfig && Object.assign(a, window.UserConfig);
+        window.UserConfig && Object.assign(s, window.UserConfig);
     },
     23809: (e, t, r) => {
       "use strict";
@@ -43911,14 +43914,14 @@
           );
         }
       }
-      var p = r(66418);
+      var p = r(8527);
       function _() {
         const e = window;
         e.g_wapitRefreshEnabled = !1;
         const t = "function" == typeof e.g_wapitRefresh;
         let r;
         return (
-          !p.T.IN_CLIENT &&
+          !p.TS.IN_CLIENT &&
             t &&
             (r = () =>
               new Promise((t, r) => {
@@ -43927,7 +43930,7 @@
                 }),
                   window.setTimeout(() => r("Refresh Timeout"), 1e4);
               })),
-          new d(p.T.WEBAPI_BASE_URL, e.g_wapit, !1, r)
+          new d(p.TS.WEBAPI_BASE_URL, e.g_wapit, !1, r)
         );
       }
     },
@@ -44720,7 +44723,7 @@
       });
       var i = r(90626),
         n = r(3578),
-        a = r(66418);
+        a = r(8527);
       const s = i.createContext({}),
         o = i.createContext(void 0);
       function l(e) {
@@ -44771,8 +44774,8 @@
           ...e,
           feature: t || e.feature,
           depth: r || e.depth,
-          countrycode: a.T.COUNTRY,
-          is_client: a.T.IN_CLIENT,
+          countrycode: a.TS.COUNTRY,
+          is_client: a.TS.IN_CLIENT,
         };
       }
       function _(e, t, r) {
@@ -89167,7 +89170,7 @@
         n = r(22837),
         a = r(81393),
         s = r(64753),
-        o = r(66418),
+        o = r(8527),
         l = r(65946),
         c = r(90626),
         m = r(59952),
@@ -90019,7 +90022,7 @@
           f =
             ((b = r.clanSteamID.GetAccountID()),
             (y = r.GID),
-            (B = new G.b(o.i.steamid)),
+            (B = new G.b(o.iA.steamid)),
             (0, F.I)({
               queryKey: A(b, y),
               queryFn: async () => {
@@ -90420,7 +90423,7 @@
               new Map(),
             ),
           );
-        if (!a.isSuccess || (n && o.i.accountid))
+        if (!a.isSuccess || (n && o.iA.accountid))
           return c.createElement(U.t, {
             size: "medium",
             position: "center",
@@ -90554,7 +90557,7 @@
               Q.Get().Init(e, t, r, i), await Q.Get().Load();
             })();
           }, [e, t, r, i]);
-        })(m, o.i.accountid, t.clanSteamID.GetAccountID(), t.GID);
+        })(m, o.iA.accountid, t.clanSteamID.GetAccountID(), t.GID);
         const g = D(m, t.clanSteamID.GetAccountID(), t.GID),
           [h, f, b] = (0, s.uD)(),
           y = le(),
@@ -103676,7 +103679,7 @@
     },
     22797: (e, t, r) => {
       "use strict";
-      r.d(t, { t: () => c });
+      r.d(t, { t: () => m });
       var i = r(90626),
         n = r(52038),
         a = r(20978),
@@ -103684,46 +103687,47 @@
       const o =
         r.p +
         "images/applications/store/steam_spinner.png?v=valveisgoodatcaching";
-      var l = r(42248);
-      const c = i.memo(function (e) {
+      var l = r(42248),
+        c = r(8527);
+      const m = i.memo(function (e) {
         const {
           className: t,
           size: r,
           string: a,
-          position: c,
-          static: u,
-          msDelayAppear: d,
+          position: m,
+          static: d,
+          msDelayAppear: p,
         } = e;
-        let p = [s().LoadingWrapper, "SteamLogoThrobber", m(r)];
-        const [_, g] = i.useState(!d),
-          h = !(0, l.q)();
+        let _ = [s().LoadingWrapper, "SteamLogoThrobber", u(r)];
+        const [g, h] = i.useState(!p),
+          f = !(0, l.q)();
         return (
           (0, i.useEffect)(() => {
-            if (_) return;
-            const e = setTimeout(() => g(!0), d);
+            if (g) return;
+            const e = setTimeout(() => h(!0), p);
             return () => clearTimeout(e);
-          }, [d, _]),
-          void 0 === a && p.push(s().noString),
-          t && p.push(t),
-          u && p.push(s().Static),
+          }, [p, g]),
+          void 0 === a && _.push(s().noString),
+          t && _.push(t),
+          d && _.push(s().Static),
           i.createElement(
             "div",
             {
               className: (0, n.A)(
-                "center" == c && s().throbber_center_wrapper,
-                !!d && s().ThrobberDelayAppear,
-                _ && s().Visible,
+                "center" == m && s().throbber_center_wrapper,
+                !!p && s().ThrobberDelayAppear,
+                g && s().Visible,
               ),
             },
-            _ &&
-              h &&
+            g &&
+              f &&
               i.createElement(
                 "div",
-                { className: p.join(" ") },
+                { className: _.join(" ") },
                 i.createElement(
                   "div",
                   { className: s().NewThrobber },
-                  i.createElement("img", { src: o }),
+                  i.createElement("img", { src: (0, c.YJ)(o) }),
                 ),
               ),
             Boolean(a) &&
@@ -103740,7 +103744,7 @@
           static: l,
           msDelayAppear: c,
         } = e;
-        let d = [s().LoadingWrapper, "SteamLogoThrobber", m(r)];
+        let m = [s().LoadingWrapper, "SteamLogoThrobber", u(r)];
         const [p, _] = i.useState(!c);
         return (
           (0, i.useEffect)(() => {
@@ -103748,9 +103752,9 @@
             const e = setTimeout(() => _(!0), c);
             return () => clearTimeout(e);
           }, [c, p]),
-          void 0 === a && d.push(s().noString),
-          t && d.push(t),
-          l && d.push(s().Static),
+          void 0 === a && m.push(s().noString),
+          t && m.push(t),
+          l && m.push(s().Static),
           i.createElement(
             "div",
             {
@@ -103763,12 +103767,12 @@
             p &&
               i.createElement(
                 "div",
-                { className: d.join(" ") },
+                { className: m.join(" ") },
                 i.createElement(
                   "div",
                   { className: s().Throbber },
-                  i.createElement(u, { className: s().base }),
-                  i.createElement(u, { className: s().blur }),
+                  i.createElement(d, { className: s().base }),
+                  i.createElement(d, { className: s().blur }),
                 ),
               ),
             Boolean(a) &&
@@ -103776,7 +103780,7 @@
           )
         );
       });
-      function m(e) {
+      function u(e) {
         switch (e) {
           case "small":
             return s().throbber_small;
@@ -103790,7 +103794,7 @@
             return s().throbber_large;
         }
       }
-      function u(e) {
+      function d(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -110325,7 +110329,7 @@
       r.d(t, { U: () => h });
       var i = r(61859),
         n = r(30470),
-        a = r(66418),
+        a = r(8527),
         s = r(90626);
       const o = new Set([
         "sc_schinese",
@@ -110409,13 +110413,13 @@
       let u;
       u ??= new Set();
       function d() {
-        if (((e = a.T.LANGUAGE), !o.has(e)))
-          throw `unknown language ${a.T.LANGUAGE}`;
+        if (((e = a.TS.LANGUAGE), !o.has(e)))
+          throw `unknown language ${a.TS.LANGUAGE}`;
         return {
           languages: [
             {
-              strLanguage: a.T.LANGUAGE,
-              strISOCode: c.get(a.T.LANGUAGE),
+              strLanguage: a.TS.LANGUAGE,
+              strISOCode: c.get(a.TS.LANGUAGE),
               eSource: 5,
             },
           ],
