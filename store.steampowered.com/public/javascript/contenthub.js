@@ -199,7 +199,7 @@ GContentHub = {
 
 		var $sectionContainer = $J('#page_section_container');
 
-		var strTemplate = "<div class=\"page_content_ctn %4$s\" >\r\n\t\t\t\t<div class=\"page_content \" >\r\n\r\n\t\t\t\t\t<div class=\"carousel_container paging_capsules featured_items\">\r\n\t\t\t\t\t\t<h2>%1$s\r\n\t\t\t\t\t\t\t<span class=\"header_inline\">%2$s<\/span>\r\n\t\t\t\t\t\t<\/h2>\r\n\r\n\t\t\t\t\t\t<div class=\"carousel_items %3$s store_capsule_container\"><\/div>\r\n\t\t\t\t\t\t<div class=\"carousel_thumbs\"><\/div>\r\n\t\t\t\t\t\t<div class=\"arrow left\"><div><\/div><\/div>\r\n\t\t\t\t\t\t<div class=\"arrow right\"><div><\/div><\/div>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>"				.replace(/%1\$s/, rgSectionInfo.title)
+		var strTemplate = "<div class=\"page_content_ctn %4$s\" >\n\t\t\t\t<div class=\"page_content \" >\n\n\t\t\t\t\t<div class=\"carousel_container paging_capsules featured_items\">\n\t\t\t\t\t\t<h2>%1$s\n\t\t\t\t\t\t\t<span class=\"header_inline\">%2$s<\/span>\n\t\t\t\t\t\t<\/h2>\n\n\t\t\t\t\t\t<div class=\"carousel_items %3$s store_capsule_container\"><\/div>\n\t\t\t\t\t\t<div class=\"carousel_thumbs\"><\/div>\n\t\t\t\t\t\t<div class=\"arrow left\"><div><\/div><\/div>\n\t\t\t\t\t\t<div class=\"arrow right\"><div><\/div><\/div>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>"				.replace(/%1\$s/, rgSectionInfo.title)
 				.replace(/%2\$s/, rgSectionInfo.description)
 				.replace(/%3\$s/, rgSectionInfo.type == 'creator4wide' ? 'creator_carousel_items' : '' )
 				.replace(/%4\$s/, rgSectionInfo.type == 'creator4wide' ? 'recommended_creators_ctn' : '' );

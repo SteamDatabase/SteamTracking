@@ -317,7 +317,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 
 	if ( !$Hover.length )
 	{
-				$Hover = $J("\t\t<div class=\"hover game_hover\" id=\"global_hover\" style=\"display: none; left: 0; top: 0;\">\r\n\t\t\t<div class=\"game_hover_box hover_box\">\r\n\t\t\t\t<div class=\"content\" id=\"global_hover_content\">\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"hover_arrow_left\"><\/div>\r\n\t\t\t<div class=\"hover_arrow_right\"><\/div>\r\n\t\t<\/div>");
+				$Hover = $J("\t\t<div class=\"hover game_hover\" id=\"global_hover\" style=\"display: none; left: 0; top: 0;\">\n\t\t\t<div class=\"game_hover_box hover_box\">\n\t\t\t\t<div class=\"content\" id=\"global_hover_content\">\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"hover_arrow_left\"><\/div>\n\t\t\t<div class=\"hover_arrow_right\"><\/div>\n\t\t<\/div>");
 		$J(document.body).append( $Hover );
 	}
 

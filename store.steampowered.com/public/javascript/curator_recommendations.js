@@ -512,37 +512,37 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 		var elTypeSelect = null;
 		if( !bIsCreatorHome )
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Feature A Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\n\t\t\t\t<select name=\"type\">\n\t\t\t\t\t<option value=\"none\">None<\/option>\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\n\t\t\t\t\t<option value=\"featured_tag\">Feature A Tag<\/option>\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\n\t\t\t\t<\/select>");
 		}
 		else if ( bIsDLCPage )
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_creations\">Games DLC<\/option>\r\n\t\t\t\t<option value=\"featured_single_creation\">Feature Single DLC<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t<option value=\"featured_tag_creation\">Feature A Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t<option value=\"discounted_creations\">Discounted<\/option>\r\n\t\t\t<\/select>");
+			elTypeSelect = $J("\n\t\t\t\t<select name=\"type\">\n\t\t\t\t<option value=\"none\">None<\/option>\n\t\t\t\t<option value=\"featured_creations\">Games DLC<\/option>\n\t\t\t\t<option value=\"featured_single_creation\">Feature Single DLC<\/option>\n\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\n\t\t\t\t<option value=\"featured_tag_creation\">Feature A Tag<\/option>\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\n\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\n\t\t\t\t<option value=\"discounted_creations\">Discounted<\/option>\n\t\t\t<\/select>");
 		}
 		else
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_single_creation\">Feature A Single Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\n\t\t\t\t<select name=\"type\">\n\t\t\t\t\t<option value=\"none\">None<\/option>\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\n\t\t\t\t\t<option value=\"featured_single_creation\">Feature A Single Games You've Made<\/option>\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\n\t\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\n\t\t\t\t<\/select>");
 
 		}
 		elTypeSelect.val( rgNodeData.type );
 
-		var elRecSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
+		var elRecSortSelect = $J("\n\t\t\t<select name=\"sort\">\n\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\n\t\t\t<\/select>");
 
 		var elCreatedSortSelect = null;
 		if( bIsDLCPage )
 		{
-			elCreatedSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"app_dlc_rank\">DLC order from Store Edit Special Setting<\/option>\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
+			elCreatedSortSelect = $J("\n\t\t\t\t<select name=\"sort\">\n\t\t\t\t\t<option value=\"app_dlc_rank\">DLC order from Store Edit Special Setting<\/option>\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\n\t\t\t\t<\/select>");
 		}
 		else
 		{
-			elCreatedSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
+			elCreatedSortSelect = $J("\n\t\t\t\t<select name=\"sort\">\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\n\t\t\t\t<\/select>");
 		}
 
 		elRecSortSelect.val( rgNodeData.type == 'featured_recommendations' ? rgNodeData.sort : 'recent' );
 		elCreatedSortSelect.val( rgNodeData.type == 'featured_creations' ? rgNodeData.sort : 'newreleases' );
 
-		var elPresentationSelect = $J("\r\n\t\t\t<select name=\"presentation\">\r\n\t\t\t\t<option value=\"featuredcarousel\">Carousel with custom video or screenshot grid<\/option>\r\n\t\t\t\t<option value=\"circularlist\">List of four small capsules<\/option>\r\n\t\t\t\t<option value=\"bigthengrid\">Large capsule followed by four small capsule grid<\/option>\r\n\t\t\t<\/select>");
+		var elPresentationSelect = $J("\n\t\t\t<select name=\"presentation\">\n\t\t\t\t<option value=\"featuredcarousel\">Carousel with custom video or screenshot grid<\/option>\n\t\t\t\t<option value=\"circularlist\">List of four small capsules<\/option>\n\t\t\t\t<option value=\"bigthengrid\">Large capsule followed by four small capsule grid<\/option>\n\t\t\t<\/select>");
 
-		var elLinkTitleSelect = $J( "\r\n\t\t\t<select name=\"linktitle\">\r\n\t\t\t\t<option value=\"franchise\">Our Franchises<\/option>\r\n\t\t\t\t<option value=\"developer\">Our Developers<\/option>\r\n\t\t\t\t<option value=\"publisher\">Our Publishers<\/option>\r\n\t\t\t\t<option value=\"homepage\">Our Homepages<\/option>\r\n\t\t\t<\/select>" );
+		var elLinkTitleSelect = $J( "\n\t\t\t<select name=\"linktitle\">\n\t\t\t\t<option value=\"franchise\">Our Franchises<\/option>\n\t\t\t\t<option value=\"developer\">Our Developers<\/option>\n\t\t\t\t<option value=\"publisher\">Our Publishers<\/option>\n\t\t\t\t<option value=\"homepage\">Our Homepages<\/option>\n\t\t\t<\/select>" );
 
 		var elSelectHomepages = null;
 		if( g_rgMyOtherCreatorHomes && Object.keys( g_rgMyOtherCreatorHomes ).length > 0 )
@@ -704,7 +704,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 				appid: elAppID.val()
 			};
 
-			var elUpdating = $J("\r\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\r\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\r\n\t\t\t\t\t<img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t<\/div>" );
+			var elUpdating = $J("\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\n\t\t\t\t\t<img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/login\/throbber.gif\">\n\t\t\t\t<\/div>" );
 			elOverlay.replaceWith( elUpdating );
 			elOptions.hide();
 			$container.removeClass('editing_open');
@@ -1116,7 +1116,7 @@ function ShowHeaderImageHandle( )
 
 	var elOptions = $J('<form class="edit_options"><p>'+"Pick a .jpg or .png file to set as your background. Maximum 3MB file size. For best results, use an image sized 1500px wide and 220px tall.<br><br>Images must be appropriate for all audiences and not contain offensive or illegal content."+'</p></form>');
 
-	var elSelectImage = $J("\r\n\t\t<select name=\"selectimage\">\r\n\t\t\t<option value=\"none\">None<\/option>\r\n\t\t<\/select>\r\n\t");
+	var elSelectImage = $J("\n\t\t<select name=\"selectimage\">\n\t\t\t<option value=\"none\">None<\/option>\n\t\t<\/select>\n\t");
 	var elUpload = $J("<input type=\"file\" name=\"clanimage\" value=\"@Upload\">");
 
 	var elSave = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Update"+'</span></a>');
