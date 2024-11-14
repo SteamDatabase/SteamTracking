@@ -5927,7 +5927,8 @@ html:not(.touch)
     #225dce 80%
   );
   border-radius: 3px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 .vPo2jxLA9iAVrt49Ic3c1._553rCUt4qxX8_S5jBNMrv:hover,
 .vPo2jxLA9iAVrt49Ic3c1._1YjsRp8XbwoXVWYYvWD7iv:hover:hover,

@@ -3,6 +3,13 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5139],
   {
+    1431: (e) => {
+      e.exports = {
+        StoreItemCtn: "_2SxhiHrQSCtBnKf3oKdon2",
+        StoreItemRow: "_3cBgZqhPaJpdeZl8hARr1o",
+        StoreItemDescription: "_2pkGLftA9XILpaWN0kejPk",
+      };
+    },
     4852: (e) => {
       e.exports = { StoreImage: "_1XiTdhCGWl9dUCWd6Eg89o" };
     },
@@ -36,8 +43,8 @@
         d = n(88843),
         E = n(64641),
         u = n.n(E),
-        h = n(22797),
-        S = n(68797),
+        S = n(22797),
+        h = n(68797),
         _ = n(78327),
         v = n(8527),
         g = n(30894),
@@ -49,10 +56,10 @@
         return r.createElement(
           I.tH,
           null,
-          r.createElement(b, { ...e, bShowOnlyInitialEvent: t || n }),
+          r.createElement(w, { ...e, bShowOnlyInitialEvent: t || n }),
         );
       };
-      let b = class extends r.Component {
+      let w = class extends r.Component {
         state = { bLoading: !1, eventModel: this.props.eventModel };
         m_refParent = r.createRef();
         m_cancelSignal = l().CancelToken.source();
@@ -103,7 +110,7 @@
                   this.setState({ bLoading: !1 }));
             })
             .catch((e) => {
-              let t = (0, S.H)(e);
+              let t = (0, h.H)(e);
               console.error(
                 "EventInfiniteScrollModal failed " + t.strErrorMsg,
                 t,
@@ -131,7 +138,7 @@
               r.createElement(
                 "div",
                 { className: u().FlexCenter, style: { height: "400px" } },
-                r.createElement(h.t, null),
+                r.createElement(S.t, null),
               ),
             );
           const {
@@ -142,7 +149,7 @@
             partnerEventStore: i,
             showAppHeader: d,
             bPrimaryPageFeature: E,
-            additionalParams: S,
+            additionalParams: h,
             eventClassName: _,
           } = this.props;
           let I;
@@ -164,7 +171,7 @@
               closeModal: !E && a,
               showAppHeader: d,
               bShowOnlyInitialEvent: e,
-              additionalParams: S,
+              additionalParams: h,
               eventClassName: _,
               onAppIconClick: I,
             }),
@@ -182,11 +189,11 @@
               );
         }
       };
-      b = (0, a.Cg)([o.PA], b);
+      w = (0, a.Cg)([o.PA], w);
     },
-    50295: (e, t, n) => {
+    19011: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => A });
+      n.r(t), n.d(t, { default: () => B });
       var a = n(90626),
         s = n(66618),
         l = n.n(s),
@@ -199,8 +206,8 @@
         d = n(38390),
         E = n(91254),
         u = n(99376),
-        h = n(42780),
-        S = n(59952),
+        S = n(42780),
+        h = n(59952),
         _ = n(12611),
         v = n(30470);
       function g() {
@@ -213,19 +220,19 @@
       var P = n(26296),
         I = n(4852),
         f = n.n(I),
-        b = n(24484);
-      function w(e) {
-        return new h.OJ(new h.R8(), 0);
-      }
+        w = n(24484);
       function D(e) {
+        return new S.OJ(new S.R8(), 0);
+      }
+      function G(e) {
         const { text: t, languageOverride: n } = e,
           [s] = (0, a.useState)(
             new u.B(
               new Map([
-                ...Array.from(S.W4.entries()),
+                ...Array.from(h.W4.entries()),
                 ["img", { Constructor: N, autocloses: !1 }],
               ]),
-              w,
+              D,
               n,
             ),
           );
@@ -240,7 +247,7 @@
           null == n || null == n || 0 == n.length)
         )
           return "";
-        const s = (0, b.Fd)("store_page_asset_url", "application_config");
+        const s = (0, w.Fd)("store_page_asset_url", "application_config");
         return (
           (n =
             s && n.startsWith(_.qR)
@@ -255,41 +262,79 @@
               })
         );
       }
-      function A(e) {
-        const { season_pass: t } = e;
-        return t && t.milestones && 0 != t.milestones.length
+      var b = n(32630),
+        A = n(60014),
+        R = n(55963),
+        C = n(1431),
+        L = n.n(C);
+      const y = { include_assets: !0, include_basic_info: !0 };
+      function k(e) {
+        const { appid: t } = e,
+          [n] = (0, i.t7)(t, y),
+          s = (0, A.n9)();
+        return n && t
           ? a.createElement(
               "div",
-              { className: "game_area_description overflow_allowed" },
-              a.createElement("h2", null, (0, o.we)("#SeasonPass_Header")),
+              { className: L().StoreItemCtn },
               a.createElement(
-                "p",
-                null,
-                (0, o.oW)("#SeasonPass_Incomplete_Desc"),
-              ),
-              a.createElement(
-                "p",
-                null,
-                (0, o.oW)(
-                  "#SeasonPass_Incomplete_Desc2",
-                  a.createElement("a", {
-                    href: `${c.TS.STORE_BASE_URL}account/emailoptout`,
+                "div",
+                { className: L().StoreItemRow },
+                a.createElement(
+                  "a",
+                  { href: (0, R.wJ)(n.GetStorePageURL(), s) },
+                  a.createElement("img", {
+                    src: n.GetAssets().GetSmallCapsuleURL(),
                   }),
                 ),
-              ),
-              t.milestones
-                .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
-                .map((e) =>
-                  a.createElement(G, {
-                    key: "ms_" + e.milestone_id,
-                    baseGameAppID: t.appid,
-                    milestone: e,
-                  }),
+                a.createElement(
+                  "div",
+                  { className: L().StoreItemDescription },
+                  n.GetShortDescription(),
+                  " ",
                 ),
+              ),
             )
           : null;
       }
-      function G(e) {
+      function B(e) {
+        const { season_pass: t } = e;
+        return t && t.milestones && 0 != t.milestones.length
+          ? a.createElement(
+              b.A,
+              { feature: "seasonpassproductpage" },
+              a.createElement(
+                "div",
+                { className: "game_area_description overflow_allowed" },
+                a.createElement("h2", null, (0, o.we)("#SeasonPass_Header")),
+                a.createElement(
+                  "p",
+                  null,
+                  (0, o.oW)("#SeasonPass_Incomplete_Desc"),
+                ),
+                a.createElement(
+                  "p",
+                  null,
+                  (0, o.oW)(
+                    "#SeasonPass_Incomplete_Desc2",
+                    a.createElement("a", {
+                      href: `${c.TS.STORE_BASE_URL}account/emailoptout`,
+                    }),
+                  ),
+                ),
+                t.milestones
+                  .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
+                  .map((e) =>
+                    a.createElement(M, {
+                      key: "ms_" + e.milestone_id,
+                      baseGameAppID: t.appid,
+                      milestone: e,
+                    }),
+                  ),
+              ),
+            )
+          : null;
+      }
+      function M(e) {
         const { milestone: t, baseGameAppID: n } = e,
           s = t.milestone_desc?.length > 0;
         return a.createElement(
@@ -310,24 +355,29 @@
             a.createElement(
               "div",
               { className: l().DateAndControl },
-              a.createElement(y, { milestone: t }),
+              a.createElement(U, { milestone: t }),
             ),
           ),
-          s && a.createElement(R, { milestone: t, baseGameAppID: n }),
+          s && a.createElement(T, { milestone: t, baseGameAppID: n }),
         );
       }
-      function R(e) {
+      function T(e) {
         const { milestone: t, baseGameAppID: n } = e,
           s = o.A0.GetTokenWithFallback(t.milestone_desc);
         return a.createElement(
-          "div",
-          { className: l().Description },
-          a.createElement(D, { text: s }),
-          Boolean(t.shipped) &&
-            a.createElement(L, { milestone: t, baseGameAppID: n }),
+          a.Fragment,
+          null,
+          Boolean(t.appid) && a.createElement(k, { appid: t.appid }),
+          a.createElement(
+            "div",
+            { className: l().Description },
+            a.createElement(G, { text: s }),
+            Boolean(t.shipped) &&
+              a.createElement(x, { milestone: t, baseGameAppID: n }),
+          ),
         );
       }
-      function y(e) {
+      function U(e) {
         const { milestone: t } = e;
         return t.shipped
           ? a.createElement(
@@ -364,8 +414,8 @@
               ),
             );
       }
-      const C = {};
-      function L(e) {
+      const F = {};
+      function x(e) {
         const { milestone: t, baseGameAppID: n } = e;
         return a.createElement(
           a.Fragment,
@@ -377,14 +427,14 @@
               t.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
             ),
           ),
-          t.appid && a.createElement(k, { milestone: t }),
+          t.appid && a.createElement(O, { milestone: t }),
           Boolean(t.event_gid) &&
-            a.createElement(B, { milestone: t, baseGameAppID: n }),
+            a.createElement(W, { milestone: t, baseGameAppID: n }),
         );
       }
-      function k(e) {
+      function O(e) {
         const { milestone: t } = e,
-          [n] = (0, i.t7)(t.appid, C);
+          [n] = (0, i.t7)(t.appid, F);
         return a.createElement(
           "a",
           {
@@ -394,7 +444,7 @@
           (0, o.we)("#SeasonPass_ShowStore"),
         );
       }
-      function B(e) {
+      function W(e) {
         const { milestone: t, baseGameAppID: n } = e,
           [s, l] = (0, a.useState)(!1),
           r = (0, d.RR)(t.event_gid);
