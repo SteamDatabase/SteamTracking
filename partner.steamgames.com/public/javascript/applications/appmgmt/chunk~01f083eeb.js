@@ -261,22 +261,23 @@
           this.UpdateError();
         }
         UpdateError() {
-          const { fnIsValidDateTime: e } = this.props,
-            t = e && e();
-          let i = null;
+          const { fnIsValidDateTime: e, strInvalidDateTimeLocalizedMsg: t } =
+              this.props,
+            i = e && e();
+          let n = null;
           (this.state.timeAsString ||
             this.state.dateAsString ||
-            "string" == typeof t ||
-            !1 === t) &&
-            ((i = (0, p.we)("#DateTimePicker_Fallback_Invalid_DateTime")),
+            "string" == typeof i ||
+            !1 === i) &&
+            ((n = (0, p.we)(t || "#DateTimePicker_Fallback_Invalid_DateTime")),
             this.state.timeAsString
-              ? (i = (0, p.we)("#DateTimePicker_Time_CannotParse"))
+              ? (n = (0, p.we)("#DateTimePicker_Time_CannotParse"))
               : this.state.dateAsString
-                ? (i = (0, p.we)("#DateTimePicker_Date_CannotParse"))
-                : "string" == typeof t && (i = t)),
-            this.state.strError !== i &&
-              (this.setState({ strError: i }),
-              this.props.onError && this.props.onError(i));
+                ? (n = (0, p.we)("#DateTimePicker_Date_CannotParse"))
+                : "string" == typeof i && (n = i)),
+            this.state.strError !== n &&
+              (this.setState({ strError: n }),
+              this.props.onError && this.props.onError(n));
         }
         render() {
           const {

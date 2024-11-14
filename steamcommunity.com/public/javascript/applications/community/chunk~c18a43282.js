@@ -5088,52 +5088,52 @@
                       ? t
                       : T(e.args, "datetime"),
                   m =
-                    ((null !== (r = T(e.args, "end")) && void 0 !== r) ||
-                      T(e.args, "datetime"),
-                    null !== (i = T(e.args, "body")) && void 0 !== i
-                      ? i
-                      : null),
+                    null !== (r = T(e.args, "end")) && void 0 !== r
+                      ? r
+                      : T(e.args, "datetime"),
                   u =
+                    null !== (i = T(e.args, "body")) && void 0 !== i ? i : null,
+                  p =
                     null !== (n = T(e.args, "location")) && void 0 !== n
                       ? n
                       : null,
-                  p = null !== (s = T(e.args, "id")) && void 0 !== s ? s : "",
-                  _ = new Date(l),
-                  g = _.getUTCFullYear(),
-                  h = ("0" + (_.getUTCMonth() + 1)).slice(-2),
-                  y = ("0" + _.getUTCDate()).slice(-2),
-                  b = ("0" + _.getUTCHours()).slice(-2),
-                  w = ("0" + _.getUTCMinutes()).slice(-2),
-                  f = `${g}${h}${y}T${b}${w}00Z`,
-                  S = new Date(l),
-                  v = S.getUTCFullYear(),
-                  C = ("0" + (S.getUTCMonth() + 1)).slice(-2),
-                  I = ("0" + S.getUTCDate()).slice(-2),
-                  E = ("0" + S.getUTCHours()).slice(-2),
-                  M = ("0" + S.getUTCMinutes()).slice(-2),
-                  R = `${v}${C}${I}T${E}${M}00Z`;
-                let A;
+                  _ = null !== (s = T(e.args, "id")) && void 0 !== s ? s : "",
+                  g = new Date(l),
+                  h = g.getUTCFullYear(),
+                  y = ("0" + (g.getUTCMonth() + 1)).slice(-2),
+                  b = ("0" + g.getUTCDate()).slice(-2),
+                  w = ("0" + g.getUTCHours()).slice(-2),
+                  f = ("0" + g.getUTCMinutes()).slice(-2),
+                  S = `${h}${y}${b}T${w}${f}00Z`,
+                  v = new Date(m),
+                  C = v.getUTCFullYear(),
+                  I = ("0" + (v.getUTCMonth() + 1)).slice(-2),
+                  E = ("0" + v.getUTCDate()).slice(-2),
+                  M = ("0" + v.getUTCHours()).slice(-2),
+                  R = ("0" + v.getUTCMinutes()).slice(-2),
+                  A = `${C}${I}${E}T${M}${R}00Z`;
+                let G;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
                   (e += "VERSION:2.0\r\n"),
                     (e += "BEGIN:VEVENT\r\n"),
-                    (e += `DTSTART:${f}\r\n`),
-                    (e += `DTEND:${R}\r\n`),
+                    (e += `DTSTART:${S}\r\n`),
+                    (e += `DTEND:${A}\r\n`),
                     (e += `SUMMARY:${o.replace("\n", "\\n")}\r\n`),
-                    m && (e += `DESCRIPTION:${m.replace("\n", "\\n")}\r\n`),
-                    u && (e += `LOCATION:${u.replace("\n", "\\n")}\r\n`),
+                    u && (e += `DESCRIPTION:${u.replace("\n", "\\n")}\r\n`),
+                    p && (e += `LOCATION:${p.replace("\n", "\\n")}\r\n`),
                     (e += "END:VEVENT\r\n"),
                     (e += "END:VCALENDAR\r\n"),
-                    (A = `data:text/calendar;charset=utf-8;base64,${c.iI(new TextEncoder().encode(e))}`);
+                    (G = `data:text/calendar;charset=utf-8;base64,${c.iI(new TextEncoder().encode(e))}`);
                 } catch (e) {
                   console.error(e);
                 }
-                let G =
+                let k =
                   "https://calendar.google.com/calendar/render?action=TEMPLATE";
                 return (
-                  (G += `&text=${encodeURI(o)}`),
-                  (G += `&details=${encodeURI(m)}`),
-                  (G += `&dates=${encodeURI(f + "/" + R)}`),
+                  (k += `&text=${encodeURI(o)}`),
+                  (k += `&details=${encodeURI(u)}`),
+                  (k += `&dates=${encodeURI(S + "/" + A)}`),
                   d.createElement(
                     "div",
                     {
@@ -5141,9 +5141,9 @@
                         "SaleSectionCalendarEventContainer",
                         a().CalendarEventContainer,
                       ),
-                      id: p,
+                      id: _,
                     },
-                    A &&
+                    G &&
                       d.createElement(
                         "a",
                         {
@@ -5151,7 +5151,7 @@
                             "SaleSectionCalendarEventLink",
                             a().CalendarEventLink,
                           ),
-                          href: A,
+                          href: G,
                           download: "steam_deck_white_release.ics",
                         },
                         "Apple",
@@ -5163,11 +5163,11 @@
                           "SaleSectionCalendarEventLink",
                           a().CalendarEventLink,
                         ),
-                        href: G,
+                        href: k,
                       },
                       "Google",
                     ),
-                    A &&
+                    G &&
                       d.createElement(
                         "a",
                         {
@@ -5175,7 +5175,7 @@
                             "SaleSectionCalendarEventLink",
                             a().CalendarEventLink,
                           ),
-                          href: A,
+                          href: G,
                           download: "steam_deck_white_release.ics",
                         },
                         "Outlook",

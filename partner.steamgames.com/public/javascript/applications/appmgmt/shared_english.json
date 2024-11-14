@@ -563,6 +563,7 @@
     "EventEditor_SaleValveApproval_Request_Approval_ttip": "Creates a ticket for requesting a review for sale page publish approval. Do this when your sale page has the final artwork and includes all of the games included you want to feature.",
     "EventEditor_SaleValveApproval_Request_Desc": "This will create a Steamworks Support Ticket requesting a review of your sale page by Valve. This should only be done once your art and messaging is final and the list of games is completed.",
     "EventEditor_SaleValveApproval_Request_Desc2": "Please make sure that your event title and purpose is clearly described near the top of the page. For showcases, you may need a text section at the top of your page to describe what your showcase is and how it works.",
+    "EventEditor_SaleValveApproval_Request_Desc3": "The sale page will be locked once it’s been reviewed. If you need to make changes after the review or once the event starts, please write in the comment what those changes entail and why they couldn’t be completed before the review.",
     "EventEditor_SaleValveApproval_Request_InputText": "Optional: Information you wish to include for the reviewers",
     "EventEditor_SaleValveApproval_Request_Partner": "Choose Partners whose Members can also access the request ticket",
     "EventEditor_SaleValveApproval_Request_Partner_ttip": "Optional: If chosen, other members of the partners can access and respond to the ticket.  By default only you can read, update and respond to the ticket created",

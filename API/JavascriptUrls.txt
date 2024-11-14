@@ -1344,6 +1344,7 @@ ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=b
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
+${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${id}/#app_reviews_hash
 ${STORE_BASE_URL}app/${m_strAppId}
