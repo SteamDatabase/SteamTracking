@@ -2260,6 +2260,12 @@
         GetFeaturedVideoWebMUrl() {
           return this.m_oTemplateVars.featured_video_webm;
         }
+        GetFeaturedVideoAutoPlay() {
+          return this.m_oTemplateVars.featured_video_autoplay;
+        }
+        GetFeaturedVideoLoop() {
+          return this.m_oTemplateVars.featured_video_loop;
+        }
         GetMustOwnAppID() {
           return this.m_oMessage.must_own_appid;
         }
@@ -2848,6 +2854,15 @@
         SetFeaturedVideoWebMUrl(e) {
           this.m_oTemplateVars.featured_video_webm != e &&
             ((this.m_oTemplateVars.featured_video_webm = e), this.Dispatch());
+        }
+        SetFeaturedVideoAutoPlay(e) {
+          this.m_oTemplateVars.featured_video_autoplay != e &&
+            ((this.m_oTemplateVars.featured_video_autoplay = e),
+            this.Dispatch());
+        }
+        SetFeaturedVideoLooping(e) {
+          this.m_oTemplateVars.featured_video_loop != e &&
+            ((this.m_oTemplateVars.featured_video_loop = e), this.Dispatch());
         }
         SetExplicitNoAssociatedItem(e) {
           this.m_oAdditionalRestrictions.explicit_no_associated_item != e &&
@@ -50241,10 +50256,12 @@
       }
       function G(e) {
         const { oEditableMessage: t } = e,
-          [a, n, r] = (0, s.q3)(() => [
+          [a, n, r, i, o] = (0, s.q3)(() => [
             t.GetCustomTemplate(),
             t.GetFeaturedVideoMP4Url() || "",
             t.GetFeaturedVideoWebMUrl() || "",
+            t.GetFeaturedVideoAutoPlay(),
+            t.GetFeaturedVideoLoop(),
           ]);
         return "featured_video" != a
           ? null
@@ -50272,6 +50289,25 @@
                 ),
                 ".",
               ),
+              l.createElement(
+                "p",
+                null,
+                "Make sure to also supply a poster image, this is shown while the video is loading and is important for places with slower internet. It can always be the first frame of the video. It will be replaced by the video once it loads.",
+              ),
+              l.createElement(_.JU, null, "Optional Featured Video Settings"),
+              l.createElement(_.Yh, {
+                label: "Auto Play & Mute",
+                tooltip: "Note: This will force the video to be muted.",
+                checked: i,
+                onChange: (e) => t.SetFeaturedVideoAutoPlay(e),
+              }),
+              l.createElement(_.Yh, {
+                label: "Loop & Hide Controls",
+                tooltip:
+                  "Looping means you really want it to behave like an animated GIF and you want the controls to be hidden and video to keep looping.",
+                checked: o,
+                onChange: (e) => t.SetFeaturedVideoLooping(e),
+              }),
               l.createElement(_.pd, {
                 type: "url",
                 label: "MP4 (1920x1080)",
@@ -89586,6 +89622,12 @@
         }
         GetFeaturedVideoWebMURL() {
           return this.m_templateVars.featured_video_webm;
+        }
+        GetFeaturedVideoAutoPlay() {
+          return this.m_templateVars.featured_video_autoplay;
+        }
+        GetFeaturedVideoLoop() {
+          return this.m_templateVars.featured_video_loop;
         }
         GetPosterImage() {
           let e = this.m_templateVars.poster[l.TS.LANGUAGE],
