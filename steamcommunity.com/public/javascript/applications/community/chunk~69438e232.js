@@ -3525,19 +3525,30 @@
             t.setSelectionRange(t.value.length, t.value.length),
             he.InsertTextAtSelect(e, t));
         }
+        static ClearTextArea(e) {
+          if (e) {
+            e.focus();
+            const t = 0,
+              r = e.value.length;
+            t !== r && e.setRangeText("", t, r, "end"), e.focus();
+          }
+        }
         static overwrite(e, t) {
-          t &&
-            (t.focus(),
-            document.execCommand("selectAll", !1, e),
-            he.BIsFireFox()
-              ? (t.value = "")
-              : document.execCommand("delete", !1),
-            he.InsertTextAtSelect(e, t));
+          t && (he.ClearTextArea(t), he.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
-          he.BIsFireFox() && t.setRangeText
-            ? t.setRangeText(e)
-            : document.execCommand("insertText", !1, e);
+          if (he.BIsFireFox() && t.setRangeText) t.setRangeText(e);
+          else {
+            const r = t.selectionStart,
+              n = t.selectionEnd;
+            null !== r &&
+              null !== n &&
+              (t.setRangeText
+                ? t.setRangeText(e)
+                : (t.value = t.value.slice(0, r) + e + t.value.slice(n)),
+              (t.selectionStart = t.selectionEnd = r + e.length));
+          }
+          t.focus();
         }
       }
       let ge = class extends o.Component {
