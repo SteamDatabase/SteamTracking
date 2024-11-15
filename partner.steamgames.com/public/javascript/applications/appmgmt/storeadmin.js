@@ -10742,7 +10742,7 @@
               a.createElement("input", {
                 type: "hidden",
                 name: `app[seasonpass][commitments][${l}][completed_event_gid]`,
-                value: t.completed_event_gid,
+                value: "" + t.completed_event_gid,
               }),
             ),
           Boolean(!p) &&
@@ -10801,6 +10801,8 @@
           a.createElement(
             Rr.o0,
             {
+              bAllowFullSize: !0,
+              bDisableBackgroundDismiss: !0,
               strTitle: (0, s.PP)(
                 "#SeasonPass_UpdateLaunch_title",
                 n.localized_title?.[In.TS.LANGUAGE] ||
@@ -10864,7 +10866,14 @@
                     appid: o.parentAppID,
                     selectedEventGID: d,
                     fnSetUpdateEvent: (e, t) => m(t),
+                    bFilterOutDrafts: !0,
                   }),
+                  Boolean(tt.i.is_support) &&
+                    a.createElement(
+                      "div",
+                      { className: ut().ValveOnlyBackground },
+                      a.createElement("div", null, "Selected GID: ", d),
+                    ),
                 ),
               p &&
                 a.createElement(
@@ -11225,58 +11234,64 @@
         if (c > s.commitments?.length)
           for (let e = s.commitments?.length; e < c; e++)
             p.push(a.createElement(ao, { key: e, index: e, milestone: null }));
-        return a.createElement(
-          "div",
-          { className: Ur().EditorCtn },
-          a.createElement(Tr.yk, { fnLangHasData: m }),
-          a.createElement(lo, {
-            seasonPassID: t,
-            nNextMilestoneID: u,
-            index: s?.commitments?.length || 0,
-            fnAppendSeasonPass: (e) => {
-              i({ ...s, commitments: [...(s.commitments || []), e] }),
-                d(Math.max(c, s.commitments ? s.commitments.length + 1 : 1));
-            },
-            bAppHasSteamChinaToolsEnabled: r,
-            rgShippedMilestoneIDs: l,
-          }),
-          a.createElement(so, { seasonPassData: s, rgShippedMilestoneIDs: l }),
-          a.createElement(no, {
-            seasonPassID: t,
-            seasonPassData: s,
-            bAppHasSteamChinaToolsEnabled: r,
-            rgPublishedMilestoneIDs: o,
-            rgShippedMilestoneIDs: l,
-            fnDeleteMilestoneByID: (e) => {
-              const t = s.commitments.findIndex((t) => t.milestone_id == e);
-              t >= 0 &&
-                (s.commitments.splice(t, 1),
-                i({ ...s, commitments: [...s.commitments] }));
-            },
-          }),
-          p,
-          Boolean(tt.i.is_support) &&
-            a.createElement(
-              "div",
-              { className: ut().ValveOnlyBackground },
+        return (
+          console.log("adil1", n),
+          a.createElement(
+            "div",
+            { className: Ur().EditorCtn },
+            a.createElement(Tr.yk, { fnLangHasData: m }),
+            a.createElement(lo, {
+              seasonPassID: t,
+              nNextMilestoneID: u,
+              index: s?.commitments?.length || 0,
+              fnAppendSeasonPass: (e) => {
+                i({ ...s, commitments: [...(s.commitments || []), e] }),
+                  d(Math.max(c, s.commitments ? s.commitments.length + 1 : 1));
+              },
+              bAppHasSteamChinaToolsEnabled: r,
+              rgShippedMilestoneIDs: l,
+            }),
+            a.createElement(so, {
+              seasonPassData: s,
+              rgShippedMilestoneIDs: l,
+            }),
+            a.createElement(no, {
+              seasonPassID: t,
+              seasonPassData: s,
+              bAppHasSteamChinaToolsEnabled: r,
+              rgPublishedMilestoneIDs: o,
+              rgShippedMilestoneIDs: l,
+              fnDeleteMilestoneByID: (e) => {
+                const t = s.commitments.findIndex((t) => t.milestone_id == e);
+                t >= 0 &&
+                  (s.commitments.splice(t, 1),
+                  i({ ...s, commitments: [...s.commitments] }));
+              },
+            }),
+            p,
+            Boolean(tt.i.is_support) &&
               a.createElement(
-                v.$n,
-                {
-                  onClick: (e) =>
-                    (0, gn.pg)(
-                      a.createElement(Rr.o0, {
-                        strTitle: "Clear?",
-                        strDescription: "Are you sure?",
-                        onOK: () => i({ commitments: [] }),
-                      }),
-                      (0, Cn.uX)(e),
-                    ),
-                },
-                "(VO) Clear All Milestones (in memory)",
+                "div",
+                { className: ut().ValveOnlyBackground },
+                a.createElement(
+                  v.$n,
+                  {
+                    onClick: (e) =>
+                      (0, gn.pg)(
+                        a.createElement(Rr.o0, {
+                          strTitle: "Clear?",
+                          strDescription: "Are you sure?",
+                          onOK: () => i({ commitments: [] }),
+                        }),
+                        (0, Cn.uX)(e),
+                      ),
+                  },
+                  "(VO) Clear All Milestones (in memory)",
+                ),
               ),
-            ),
-          a.createElement("br", null),
-          a.createElement("br", null),
+            a.createElement("br", null),
+            a.createElement("br", null),
+          )
         );
       }
       function lo(e) {

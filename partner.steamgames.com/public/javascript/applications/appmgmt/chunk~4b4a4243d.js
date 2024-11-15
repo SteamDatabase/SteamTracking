@@ -853,9 +853,9 @@
       })(B || (B = {}));
       var C = r(96001),
         v = r(20194);
-      var M = r(44165),
-        S = r(62792),
-        E = r(55263),
+      var E = r(44165),
+        M = r(62792),
+        S = r(55263),
         A = r(52038),
         R = r(71541),
         D = r(56330),
@@ -879,7 +879,7 @@
             t.GetUpdateEventClanAccountID(),
             t.GetUpdateEventGID(),
           ]),
-          [c] = (0, E.G6)(r?.id, (0, S.JK)(r?.item_type), a.rz),
+          [c] = (0, S.G6)(r?.id, (0, M.JK)(r?.item_type), a.rz),
           m = (0, i.useMemo)(() => s.b.InitFromClanID(o), [o]),
           d = 12 != c?.GetAppType() ? c?.GetParentAppID() : void 0;
         return i.createElement(
@@ -919,10 +919,11 @@
             label: n,
             tooltip: l,
             strUrlLearnMore: c,
+            bFilterOutDrafts: d,
           } = e,
-          d = (0, M.f1)(),
-          { clanInfo: u, bLoadingClanInfo: p } = (0, o.vF)(t),
-          h = (function (e, t) {
+          u = (0, E.f1)(),
+          { clanInfo: p, bLoadingClanInfo: h } = (0, o.vF)(t),
+          b = (function (e, t) {
             const r = (0, C.a)(),
               a = (0, i.useMemo)(() => s.b.InitFromClanID(e), [e]),
               n = (0, v.I)({
@@ -959,11 +960,15 @@
                     ),
               [n.data, n.isLoading],
             );
-          })(u?.clanAccountID, d - 2592e3),
-          b = (0, i.useMemo)(
+          })(p?.clanAccountID, u - 2592e3),
+          f = (0, i.useMemo)(
+            () => (d ? b?.filter((e) => !e.hidden) : b),
+            [b, d],
+          ),
+          y = (0, i.useMemo)(
             () =>
-              h
-                ? h.map((e) => {
+              f
+                ? f.map((e) => {
                     const t = e.hidden
                       ? e.published
                         ? "#EventDropDown_HiddenPublish"
@@ -979,46 +984,55 @@
                     };
                   })
                 : [],
-            [h],
+            [f],
           ),
-          f = h?.find((e) => e.gid == r);
-        return h || (!p && !u?.appid)
-          ? h && 0 != h.length
-            ? i.createElement(
-                i.Fragment,
-                null,
-                Boolean(c) &&
-                  i.createElement(
-                    "a",
-                    { href: c, target: "_blank", style: { float: "right" } },
-                    (0, x.we)(
-                      "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
+          _ = f?.find((e) => e.gid === r);
+        return (
+          "dev" == N.TS.WEB_UNIVERSE &&
+            console.log(
+              `AssetRequestSelectPartnerEvent: selectedEventGID=${r} === selected?.gid=${_?.gid}`,
+              r,
+              _,
+              _?.gid,
+            ),
+          f || (!h && !p?.appid)
+            ? f && 0 != f.length
+              ? i.createElement(
+                  i.Fragment,
+                  null,
+                  Boolean(c) &&
+                    i.createElement(
+                      "a",
+                      { href: c, target: "_blank", style: { float: "right" } },
+                      (0, x.we)(
+                        "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
+                      ),
                     ),
-                  ),
-                i.createElement(R.m, {
-                  label: n,
-                  tooltip: l,
-                  selectedOption: f,
-                  onChange: (e) => a(u.clanAccountID, e.data.gid),
-                  rgOptions: b,
-                }),
-              )
-            : i.createElement(
-                "div",
-                { className: (0, A.A)(D.ErrorStylesWithIcon, "ErrorCtn") },
-                (0, x.oW)(
-                  "#EventDropDown_NoEventFound",
-                  i.createElement("a", {
-                    href: `${N.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
-                    target: "_blank",
+                  i.createElement(R.m, {
+                    label: n,
+                    tooltip: l,
+                    selectedOption: _,
+                    onChange: (e) => a(p.clanAccountID, e.data.gid),
+                    rgOptions: y,
                   }),
-                ),
-              )
-          : i.createElement(I.t, {
-              string: (0, x.we)("#Loading"),
-              size: "small",
-              position: "center",
-            });
+                )
+              : i.createElement(
+                  "div",
+                  { className: (0, A.A)(D.ErrorStylesWithIcon, "ErrorCtn") },
+                  (0, x.oW)(
+                    "#EventDropDown_NoEventFound",
+                    i.createElement("a", {
+                      href: `${N.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
+                      target: "_blank",
+                    }),
+                  ),
+                )
+            : i.createElement(I.t, {
+                string: (0, x.we)("#Loading"),
+                size: "small",
+                position: "center",
+              })
+        );
       }
     },
     90710: (e, t, r) => {
@@ -1051,8 +1065,8 @@
             rgParentAppIDs: B,
           } = e,
           [C, v] = i.useState(""),
-          [M, S] = i.useState(!1),
-          [E, A] = i.useState(!1),
+          [E, M] = i.useState(!1),
+          [S, A] = i.useState(!1),
           [R] = i.useState(new l.LU()),
           [D, I] = i.useState(new Array()),
           [x, N] = i.useState(new Array()),
@@ -1098,7 +1112,7 @@
           ),
           L = (0, i.useCallback)(
             (e) => {
-              S(e), W(z.current?.value, e);
+              M(e), W(z.current?.value, e);
             },
             [W, z],
           ),
@@ -1149,7 +1163,7 @@
             O &&
               i.createElement(o.Yh, {
                 ref: k,
-                checked: M,
+                checked: E,
                 onChange: L,
                 className: u.AppSearchDLCCheckbox,
                 label: (0, m.we)("#StoreAdmin_Search_IncludeDLC"),
@@ -1158,7 +1172,7 @@
           i.createElement(
             "div",
             { className: u.Results },
-            E &&
+            S &&
               i.createElement(
                 "div",
                 { className: u.LoadingContainer },
@@ -1577,8 +1591,8 @@
             bAddLinkToMemberList: C,
           } = e,
           v = (0, i.FV)(t.clan_account_id),
-          [M] = (0, s.L2)();
-        if (M || !v)
+          [E] = (0, s.L2)();
+        if (E || !v)
           return a.createElement(
             "div",
             { className: f.DevSummaryWidgetCtn },
@@ -1588,14 +1602,14 @@
               position: "center",
             }),
           );
-        const S = t.type,
-          E =
+        const M = t.type,
+          S =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          A = v.GetCreatorHomeURL(S),
+          A = v.GetCreatorHomeURL(M),
           R = v.GetNumFollowers();
         return a.createElement(
           g.tH,
@@ -1612,7 +1626,7 @@
                 ),
                 "flow-children": "row",
               },
-              !o && a.createElement("span", { className: f.Title }, E),
+              !o && a.createElement("span", { className: f.Title }, S),
               a.createElement(
                 "div",
                 { className: f.DevSummaryWidgetCtn },

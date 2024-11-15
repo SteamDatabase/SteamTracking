@@ -898,7 +898,7 @@
                           n.createElement(
                             "li",
                             null,
-                            "Government issues Identification documentation issues either by a Federal, State / Provisional Government Authority",
+                            "Government issued identification documentation either by a Federal, State / Provisional Government Authority",
                           ),
                         ),
                         n.createElement(
@@ -927,7 +927,7 @@
                         n.createElement(
                           "div",
                           null,
-                          "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise will not proceed with your verification.",
+                          "A high-quality photo or scan of the original, physical document, ensuring that the image is in focus, no external light impacts quality and that all watermarks, imprints, features and color are clearly visible. Do not Crop the images of your ID document - the corners and edges must be clearly visible. Ensure you do not deprecate any aspect of the image, otherwise we will not proceed with your verification.",
                         ),
                         n.createElement("br", null),
                         n.createElement(
@@ -1350,7 +1350,7 @@
                   n.createElement(
                     "div",
                     { className: s().MessageSubject },
-                    "The permanent and or mailing address you entered in the tax interview cannot be verified. This may include not providing a postcode / zip - if this applies to you, please correct - ",
+                    "The permanent and/or mailing address you entered in the tax interview cannot be verified. This may include not providing a postcode / zip - if this applies to you, please correct - ",
                     n.createElement(
                       "b",
                       null,
@@ -1796,7 +1796,7 @@
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
-                  "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by the legal representative of the account.",
+                  "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by a Steamworks user with Actual Authority rights.",
                 ),
                 n.createElement(g, { ...e }),
               );
@@ -1937,8 +1937,6 @@
             const e = [...t];
             return (
               e.sort((e, t) => {
-                if (e.data.status != t.data.status)
-                  return 0 == e.data.status ? -1 : 1;
                 const a = new Date(
                     JSON.parse(e.data.description_jsondata)?.CreatedOn,
                   ),
