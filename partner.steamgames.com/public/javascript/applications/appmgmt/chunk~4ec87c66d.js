@@ -9994,7 +9994,7 @@
       function b(e, t, a, r, s, o, c, m, d, u, p, g, h, E, S) {
         const y = (0, i.e5)(u, d),
           v = (0, l.UT)(d),
-          f = d.startsWith("steam://open/");
+          f = Boolean(d?.startsWith("steam://open/"));
         let b = n.k_StoreInvalidState;
         return (
           2 == o
