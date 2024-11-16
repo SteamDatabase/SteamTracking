@@ -502,7 +502,6 @@ June
 KAUFEN
 KITCHEN
 KIWI
-KKaC
 KOELN
 KRED
 KeyValuesSystem()
@@ -646,7 +645,6 @@ Parameter file '%s' not found, skipping...\n
 Plat_GetProcessArgv
 Plat_OutputDebugString
 Plat_RelativeTicks
-QNv}
 QPON
 QUEBEC
 RECIPES

@@ -55,6 +55,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123HW7
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -148,7 +149,6 @@
  BackUp() can only be called after Next().
  Beta
  Can't back up over more bytes than were returned by the last call to Next().
- EpA
  GET[ '%s' ]: %s\n
  GameRecording\ExportLimitBitrate
  Gamescope/MuraCorrectionDisabled
@@ -185,6 +185,7 @@
  count  job:\n
  definition file imports the proto which defines the option.
  details: 
+ epA
  exceeded maximum protobuf size of 2GB: 
  filename="%s"%s
  filename="smime.p7s"%s%s
@@ -314,7 +315,6 @@
 !IsRetailInstall()
 !IsThreadAlive()
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
-!RpA
 !STREAM_NEWER_PACKET_ID( cursor, outgoing.GetWindowStart() + outgoing.GetWindowSize() )
 !STREAM_NEWER_PACKET_ID( cursorStart, outgoing.GetWindowStart() + outgoing.GetWindowSize() )
 !STREAM_OLDER_PACKET_ID( cursor, outgoing.GetWindowStart() )
@@ -392,6 +392,7 @@
 !pchSSLPrivateKey && !pchSSLExtraCerts
 !pszString || pszString[nChars] == '\0'
 !pvCallbackCur
+!rpA
 !s_pInstance
 !session->server
 !sm_pMemPoolPendingMsg
@@ -751,7 +752,7 @@
 "R\n#CPlayer_GetPrivacySettings_Response
 "R\n$CBroadcast_InviteToBroadcast_Request
 "R\n'CParties_OnReservationCompleted_Request
-"S FD
+"S@FD
 "S\n%CSteamTV_GetFollowedChannels_Response
 "S\n'CCloud_AppCloudStateChange_Notification
 "S\n)CPartnerApps_GetDepotBuildResult_Response
@@ -813,7 +814,6 @@
 "a\n(CFamilyGroups_CreateFamilyGroup_Response
 "a\n+CBluetoothManager_GetDeviceDetails_Response
 "a\n,CAuthentication_MigrateMobileSession_Request
-"apA
 "b\n#CRemoteClient_AddClientTask_Request
 "b\n#CSteamTV_HomePageTemplate_Developer
 "b\n0CFamilyGroups_SetFamilyCooldownOverrides_Request
@@ -1326,7 +1326,6 @@
 #friends_online
 #include
 #include is NULL 
-#rpA
 #sCiY\t9
 #steam_menu_community
 #steam_menu_community_home
@@ -4387,6 +4386,7 @@ ${LANGUAGE}
 +5FSgr
 +:JYix
 +HpXhE
++JpA
 +QQ 3K%
 +U2L
 +\n#display_adaptive_brightness_enabled
@@ -6298,6 +6298,7 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
+0(qA
 0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -8700,6 +8701,7 @@ ${LANGUAGE}
 26SiteServerUI_Quit_Response
 26StoreBrowseItemDataRequest
 26StoreItem_Trailers_Trailer
+26qA
 278=&#,)JO@E^[TQbghmvs|y
 27;C
 27CBroadcast_WebRTC_Candidate
@@ -8969,7 +8971,6 @@ ${LANGUAGE}
 2sssua
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
-3"qA
 3$EE\f
 3$ae
 3%3+3/353A3G3[3_3g3k3s3y3
@@ -9759,6 +9760,7 @@ ${LANGUAGE}
 39SiteServerUI_ContentCacheConfig_Request
 39SiteServerUI_ContentCacheStatus_Request
 39StoreItem_PurchaseOption_RecurrenceInfo
+3BqA
 3DES(168)
 3I2H
 3M*T
@@ -9984,7 +9986,6 @@ ${LANGUAGE}
 41CUserAccount_GetAccountLinkStatus_Request
 41CValveHWSurvey_GetSurveySchedule_Response
 41GameServerClient_QueryServerData_Response
-41qA
 42CAuthenticationSupport_RevokeToken_Request
 42CAuthentication_GetAuthSessionInfo_Request
 42CBluetoothManager_GetDeviceDetails_Request
@@ -10492,6 +10493,7 @@ ${LANGUAGE}
 4F]t
 4J-S
 4K+T
+4QqA
 4T9\n
 4\fZQ
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
@@ -10764,7 +10766,6 @@ ${LANGUAGE}
 5EPX_f
 5FError: XSelectionRequestEvent request does not contain a target property
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-5MqA
 5O Z
 5T&w&
 5\n0k_EMsgAMIsPackageRestrictedInUserCountryResponse
@@ -10806,6 +10807,7 @@ ${LANGUAGE}
 5i]lX
 5mF\tfE
 5mmQ
+5mqA
 5q\teH
 5steamos-set-system-proxy
 5y?4
@@ -12169,6 +12171,7 @@ Allow drive adopt: %d
 Allow drive unmount: %d
 AllowAutoLogin
 AllowNoDHEKEX
+Allowed Codecs: %s
 Allowed playtime exceeded
 Already Active
 Already Logged In Elsewhere
@@ -21534,7 +21537,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 12 2024 17:10:26
+Nov 15 2024 22:15:31
 November
 NrZl
 Num Lock
@@ -26176,6 +26179,7 @@ V_GetFileExtension
 V_IsAbsolutePath
 V_IsSteamCloseProtocol
 V_IsValidURLCharacter
+V_JoinNumbers
 V_JoinNumbersUint(char, CUtlVector<unsigned int, CUtlMemory<unsigned int>> const&)
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath

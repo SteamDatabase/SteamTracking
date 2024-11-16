@@ -7218,7 +7218,6 @@ $tICAPIJobListHashLoadSave
 0x%llX, 
 0x%x 0x%x
 0x2808/0x1015,
-0x28de/0x1205,
 0|t?L
 0|t?uj
 1 == pBeaconData->m_vecLocations.Count()
@@ -20640,6 +20639,7 @@ CreateConnectionSocket() %s starting connection to %s\n
 CreateConnections
 CreateControllerActivator, unknown activator type %d
 CreateControllerActivator: Invalid Activator type\n
+CreateControllerMode, attempted to create camera mode using an unsupported source
 CreateControllerMode, attempted to create reference mode
 CreateControllerMode, unknown mode type %d
 CreateControllerMode: Invalid mode type\n
@@ -53388,7 +53388,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov 12 2024 17:09:39
+steam Nov 15 2024 22:15:16
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
