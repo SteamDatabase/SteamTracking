@@ -114,6 +114,7 @@
           "#msg_weekend_play_free",
           "#msg_action_buy",
           "#msg_action_info",
+          "#msg_try_it_now",
         ];
       function i(e) {
         switch (e) {
@@ -578,7 +579,7 @@
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  requests: { n: 1, c: y, r: !0, q: !0 },
+                  requests: { n: 1, c: _, r: !0, q: !0 },
                   cursor: { n: 2, br: c.qM.readString, bw: c.gp.writeString },
                   count: {
                     n: 3,
@@ -626,20 +627,20 @@
           return "CClan_GetPartnerEventsByBuildIDRange_Request";
         }
       }
-      class y extends d {
+      class _ extends d {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.appid || c.Sg(y.M()),
+            _.prototype.appid || c.Sg(_.M()),
             d.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
                 fields: {
                   appid: { n: 1, br: c.qM.readUint32, bw: c.gp.writeUint32 },
                   start_build_id: {
@@ -653,72 +654,6 @@
                     bw: c.gp.writeUint32,
                   },
                   branch: { n: 4, br: c.qM.readString, bw: c.gp.writeString },
-                },
-              }),
-            y.sm_m
-          );
-        }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = c.w0(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return c.BT(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return c.Uq(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new l.BinaryReader(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return c.zj(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new l.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          c.i0(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new l.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Request_PatchNoteRange";
-        }
-      }
-      class _ extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _.prototype.matches || c.Sg(_.M()),
-            d.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  matches: { n: 1, c: w, r: !0, q: !0 },
-                  num_total_results: {
-                    n: 2,
-                    br: c.qM.readUint32,
-                    bw: c.gp.writeUint32,
-                  },
-                  next_cursor: {
-                    n: 3,
-                    br: c.qM.readString,
-                    bw: c.gp.writeString,
-                  },
                 },
               }),
             _.sm_m
@@ -754,6 +689,72 @@
         serializeBase64String() {
           var e = new l.BinaryWriter();
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetPartnerEventsByBuildIDRange_Request_PatchNoteRange";
+        }
+      }
+      class y extends d {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            y.prototype.matches || c.Sg(y.M()),
+            d.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  matches: { n: 1, c: w, r: !0, q: !0 },
+                  num_total_results: {
+                    n: 2,
+                    br: c.qM.readUint32,
+                    bw: c.gp.writeUint32,
+                  },
+                  next_cursor: {
+                    n: 3,
+                    br: c.qM.readString,
+                    bw: c.gp.writeString,
+                  },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = c.w0(y.M())), y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return c.BT(y.M(), e, t);
+        }
+        static fromObject(e) {
+          return c.Uq(y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return c.zj(y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          c.i0(y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClan_GetPartnerEventsByBuildIDRange_Response";
@@ -846,7 +847,7 @@
             return e.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
               (0, m.I8)(f, t),
-              _,
+              y,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           });
@@ -965,7 +966,7 @@
             () => (d ? b?.filter((e) => !e.hidden) : b),
             [b, d],
           ),
-          y = (0, i.useMemo)(
+          _ = (0, i.useMemo)(
             () =>
               f
                 ? f.map((e) => {
@@ -986,14 +987,14 @@
                 : [],
             [f],
           ),
-          _ = f?.find((e) => e.gid === r);
+          y = f?.find((e) => e.gid === r);
         return (
           "dev" == N.TS.WEB_UNIVERSE &&
             console.log(
-              `AssetRequestSelectPartnerEvent: selectedEventGID=${r} === selected?.gid=${_?.gid}`,
+              `AssetRequestSelectPartnerEvent: selectedEventGID=${r} === selected?.gid=${y?.gid}`,
               r,
-              _,
-              _?.gid,
+              y,
+              y?.gid,
             ),
           f || (!h && !p?.appid)
             ? f && 0 != f.length
@@ -1011,9 +1012,9 @@
                   i.createElement(R.m, {
                     label: n,
                     tooltip: l,
-                    selectedOption: _,
+                    selectedOption: y,
                     onChange: (e) => a(p.clanAccountID, e.data.gid),
-                    rgOptions: y,
+                    rgOptions: _,
                   }),
                 )
               : i.createElement(
@@ -1059,8 +1060,8 @@
             tooltip: g,
             autoFocus: b,
             bIncludeRetired: f,
-            bShowDLCToggle: y,
-            bOnlyDLC: _,
+            bShowDLCToggle: _,
+            bOnlyDLC: y,
             bRunQueryOnLoad: w,
             rgParentAppIDs: B,
           } = e,
@@ -1086,7 +1087,7 @@
                   i = `${d.TS.PARTNER_BASE_URL}bundles/suggestbundle`;
                   break;
                 default:
-                  _ ? (r.includedlc = !0) : !1 === t && (r.includedlc = !1),
+                  y ? (r.includedlc = !0) : !1 === t && (r.includedlc = !1),
                     B &&
                       ((r.bfilterappids = !0),
                       (r.rgParentAppIds = JSON.stringify(B)));
@@ -1108,7 +1109,7 @@
                 : (I([]), N([]), T([])),
                 A(!1);
             },
-            [s, a, f, _, B],
+            [s, a, f, y, B],
           ),
           L = (0, i.useCallback)(
             (e) => {
@@ -1141,7 +1142,7 @@
           default:
             U = (0, m.we)("#StoreAdmin_Search_Placeholder");
         }
-        const O = y && !_ && 0 == a;
+        const O = _ && !y && 0 == a;
         return i.createElement(
           "div",
           { className: c },
@@ -1579,8 +1580,8 @@
         h = r(32630),
         b = r(22797),
         f = r(56524),
-        y = r(2193),
-        _ = r(95695);
+        _ = r(2193),
+        y = r(95695);
       function w(e) {
         const {
             creatorID: t,
@@ -1641,13 +1642,13 @@
                   {
                     className: (0, m.A)(
                       f.DevSummaryContent,
-                      _.FlexColumnContainer,
-                      _.FlexContainSpaceBetween,
+                      y.FlexColumnContainer,
+                      y.FlexContainSpaceBetween,
                     ),
                   },
                   a.createElement(
                     "div",
-                    { className: _.FlexRowContainer },
+                    { className: y.FlexRowContainer },
                     a.createElement(
                       c,
                       {
@@ -1664,7 +1665,7 @@
                       "div",
                       {
                         className: (0, m.A)(
-                          _.FlexColumnContainer,
+                          y.FlexColumnContainer,
                           f.CreatorDescCtn,
                         ),
                       },
@@ -1673,7 +1674,7 @@
                         {
                           className: (0, m.A)(
                             f.CreatorTitleCtn,
-                            _.FlexColumnContainer,
+                            y.FlexColumnContainer,
                           ),
                         },
                         a.createElement(
@@ -1686,7 +1687,7 @@
                             "div",
                             {
                               className: (0, m.A)(
-                                _.FlexColumnContainer,
+                                y.FlexColumnContainer,
                                 f.CreatorTagline,
                               ),
                             },
@@ -1697,7 +1698,7 @@
                         "div",
                         {
                           className: (0, m.A)(
-                            w ? _.FlexColumnContainer : _.FlexRowContainer,
+                            w ? y.FlexColumnContainer : y.FlexRowContainer,
                             f.SocialFollowersCtn,
                           ),
                         },
@@ -1705,7 +1706,7 @@
                           "div",
                           { className: f.FollowBtnCtn },
                           Boolean(!B) &&
-                            a.createElement(y.of, {
+                            a.createElement(_.of, {
                               clanAccountID: t.clan_account_id,
                               creatorID: t,
                             }),
@@ -1743,7 +1744,7 @@
     },
     56654: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => y });
+      r.d(t, { A: () => _ });
       var a = r(34629),
         n = r(90626),
         i = r(75844),
@@ -1759,7 +1760,7 @@
         h = r.n(g),
         b = r(19719),
         f = r(52038);
-      let y = class extends n.Component {
+      let _ = class extends n.Component {
         state = {
           bGrabbing: !1,
           startY: 0,
@@ -1875,7 +1876,7 @@
                 { key: a },
                 this.state.rowDelta < 0 &&
                   a == this.state.index + this.state.rowDelta &&
-                  n.createElement(_, { width: this.state.actualRowWidth }),
+                  n.createElement(y, { width: this.state.actualRowWidth }),
                 n.createElement(
                   "div",
                   {
@@ -1930,13 +1931,13 @@
                   }),
                 this.state.rowDelta > 0 &&
                   a == this.state.index + this.state.rowDelta &&
-                  n.createElement(_, { width: this.state.actualRowWidth }),
+                  n.createElement(y, { width: this.state.actualRowWidth }),
               ),
             ),
           );
         }
       };
-      function _(e) {
+      function y(e) {
         const { width: t } = e;
         return n.createElement(
           "div",
@@ -1947,10 +1948,10 @@
           }),
         );
       }
-      (0, a.Cg)([s.oI], y.prototype, "OnListItemGrab", null),
-        (0, a.Cg)([s.oI], y.prototype, "OnGrabItemRelease", null),
-        (0, a.Cg)([s.oI], y.prototype, "OnGrabItemMove", null),
-        (y = (0, a.Cg)([i.PA], y));
+      (0, a.Cg)([s.oI], _.prototype, "OnListItemGrab", null),
+        (0, a.Cg)([s.oI], _.prototype, "OnGrabItemRelease", null),
+        (0, a.Cg)([s.oI], _.prototype, "OnGrabItemMove", null),
+        (_ = (0, a.Cg)([i.PA], _));
     },
     32630: (e, t, r) => {
       "use strict";

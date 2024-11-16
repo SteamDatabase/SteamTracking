@@ -9859,26 +9859,26 @@
         r = a(22837),
         i = a(23910),
         s = a(43258),
-        l = a(65946),
-        o = a(90626),
-        c = a(56186),
-        m = a(62792),
-        d = a(55263),
-        u = a(71541),
-        p = a(34288),
-        _ = a(68612),
-        g = a(10592),
-        h = a(14514),
-        E = a(38390);
+        l = a(14514),
+        o = a(65946),
+        c = a(90626),
+        m = a(38390),
+        d = a(56186),
+        u = a(62792),
+        p = a(55263),
+        _ = a(71541),
+        g = a(34288),
+        h = a(68612),
+        E = a(10592);
       function S(e, t, a, n, i, s, l, o, c, m) {
         const d = Boolean(1 != t),
           u = Boolean(0 != t);
-        let _ = 0;
-        for (let t = 0; t < 31; ++t) e && e[(0, r.Lg)(t)] && (_ += 1);
-        let h,
-          E = g.G;
-        if ((1 == t ? (E = 1) : 2 == t && (E += 1), a)) {
-          h = !0;
+        let p = 0;
+        for (let t = 0; t < 31; ++t) e && e[(0, r.Lg)(t)] && (p += 1);
+        let _,
+          h = E.G;
+        if ((1 == t ? (h = 1) : 2 == t && (h += 1), a)) {
+          _ = !0;
           let t = 0;
           for (let a = 0; a < 31; ++a) {
             const s = (0, r.Lg)(a);
@@ -9886,20 +9886,20 @@
               (n && n[s] && i && i[s] && (t += 1),
               n && n[s] && (!i || !i[s] || !e || !e[s]))
             ) {
-              h = !1;
+              _ = !1;
               break;
             }
             if (i && i[s] && (!n || !n[s] || !e || !e[s])) {
-              h = !1;
+              _ = !1;
               break;
             }
           }
-          0 == t && (h = !1);
+          0 == t && (_ = !1);
         }
         let S = 0,
           y = 0;
         if ("featured_video" == s) {
-          h = (0, p.BQ)(c, ".mp4") && (0, p.BQ)(m, ".webm");
+          _ = (0, g.BQ)(c, ".mp4") && (0, g.BQ)(m, ".webm");
           for (let e = 0; e < 31; ++e) {
             const t = (0, r.Lg)(e);
             l && l[t] && (S += 1), o && o[t] && (y += 1);
@@ -9909,17 +9909,17 @@
           bMinimumAssetsSetup: Boolean(
             e && (!d || e.english) && (!u || e.sc_schinese),
           ),
-          nAssetSetup: _,
-          nCompleteAssetRequired: E,
-          bMatchingVideoAssets: h,
+          nAssetSetup: p,
+          nCompleteAssetRequired: h,
+          bMatchingVideoAssets: _,
           nSubtitleCount: S,
           nPosterCount: y,
           strCustomTemplateType: s,
         };
       }
       function y(e) {
-        const t = (0, p.zw)(e),
-          [a, n, r, i, s, o, c, m, d, u] = (0, l.q3)(() => [
+        const t = (0, g.zw)(e),
+          [a, n, r, i, s, l, c, m, d, u] = (0, o.q3)(() => [
             t?.GetAssetsObject("ll_image"),
             t?.GetRealm(),
             t?.BHasAnimatedAssets(),
@@ -9932,7 +9932,7 @@
             t?.GetFeaturedVideoWebMUrl(),
           ]);
         return t?.GetGID() == e
-          ? S(a, n, r, i, s, o, c, m, d, u)
+          ? S(a, n, r, i, s, l, c, m, d, u)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -9944,22 +9944,22 @@
             };
       }
       function v(e) {
-        const t = (0, _.dr)(e),
-          [a, n] = (0, o.useState)(t ? e : null),
-          [r, i] = (0, o.useState)((0, c.c2)(t?.template_vars_json)),
-          [m, d] = (0, o.useState)(
+        const t = (0, h.dr)(e),
+          [a, n] = (0, c.useState)(t ? e : null),
+          [r, i] = (0, c.useState)((0, d.c2)(t?.template_vars_json)),
+          [l, m] = (0, c.useState)(
             (0, s.AK)(e, t?.additional_restrictions_json),
           );
-        (0, o.useEffect)(() => {
+        (0, c.useEffect)(() => {
           a != e &&
             t &&
             (n(e),
-            i((0, c.c2)(t.template_vars_json)),
-            d((0, s.AK)(e, t.additional_restrictions_json)));
+            i((0, d.c2)(t.template_vars_json)),
+            m((0, s.AK)(e, t.additional_restrictions_json)));
         }, [a, e, t]);
-        const [u, p, g, h, E, y, v, f, b, w] = (0, l.q3)(() => [
+        const [u, p, _, g, E, y, v, f, b, w] = (0, o.q3)(() => [
           r?.ll_image,
-          m?.valid_realms || 0,
+          l?.valid_realms || 0,
           r?.has_animated_assets,
           r?.mp4,
           r?.webm,
@@ -9970,7 +9970,7 @@
           r?.featured_video_webm,
         ]);
         return t
-          ? S(u, p, g, h, E, y, v, f, b, w)
+          ? S(u, p, _, g, E, y, v, f, b, w)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -9991,37 +9991,38 @@
             "k_StoreGeneralAvailability");
       })(n || (n = {}));
       const f = { include_release: !0 };
-      function b(e, t, a, r, s, l, o, c, m, d, p, _, g, E, S) {
-        const y = (0, i.e5)(d, m),
-          v = (0, h.UT)(m);
-        let f = n.k_StoreInvalidState;
+      function b(e, t, a, r, s, o, c, m, d, u, p, g, h, E, S) {
+        const y = (0, i.e5)(u, d),
+          v = (0, l.UT)(d),
+          f = d.startsWith("steam://open/");
+        let b = n.k_StoreInvalidState;
         return (
-          2 == l
-            ? (f = n.k_StoreUnavailable)
+          2 == o
+            ? (b = n.k_StoreUnavailable)
             : s &&
               (s.BIsPrePurchase()
-                ? (f = n.k_StorePrePurchase)
+                ? (b = n.k_StorePrePurchase)
                 : s.BIsComingSoon()
-                  ? (f = n.k_StoreComingSoon)
+                  ? (b = n.k_StoreComingSoon)
                   : s.BIsEarlyAccess()
-                    ? (f = n.k_StoreEarlyAccess)
+                    ? (b = n.k_StoreEarlyAccess)
                     : s.BIsReleased() &&
                       !s.BIsComingSoon() &&
-                      (f = n.k_StoreGeneralAvailability)),
+                      (b = n.k_StoreGeneralAvailability)),
           {
             eVisibility: e,
             bDateSet: Boolean(t) && Boolean(a) && t < a,
-            bItemAssociated: Boolean(r) || _,
-            bFiltersSetup: Boolean(o > 0 || c),
-            bValidLink: Boolean(m && u.pd.validateUrl(m) && y && v),
+            bItemAssociated: Boolean(r) || g,
+            bFiltersSetup: Boolean(c > 0 || m),
+            bValidLink: Boolean(d && _.pd.validateUrl(d) && ((y && v) || f)),
             bButtonTokenEntered: Boolean(p),
-            bExplicitNoItemAssociation: _,
-            bLegalLineHandled: g,
+            bExplicitNoItemAssociation: g,
+            bLegalLineHandled: h,
             bAdvertisingAppWithoutURL:
               14 == s?.GetAppType() &&
               (!s.GetStorePageURLOverride() ||
                 0 == s.GetStorePageURLOverride().trim().length),
-            eStoreItemMarketingMessageState: f,
+            eStoreItemMarketingMessageState: b,
             bRequiresPartnerEvent: 10 == E,
             bUpdateEventLinked: Boolean(S),
             bUpdateEventLive: S?.BIsVisibleEvent(),
@@ -10046,8 +10047,8 @@
         };
       }
       function D(e) {
-        const t = (0, p.zw)(e),
-          [a, n, r, i, s, o, c, u, _, g, h, S, y, v] = (0, l.q3)(() => [
+        const t = (0, g.zw)(e),
+          [a, n, r, i, s, l, c, d, _, h, E, S, y, v] = (0, o.q3)(() => [
             t?.GetVisibilty(),
             t?.GetStartRTime(),
             t?.GetEndRTime(),
@@ -10065,45 +10066,45 @@
             t?.GetUpdateEventClanAccountID(),
             t?.GetUpdateEventGID(),
           ]),
-          { eventModel: D } = (0, E.B9)(y, v, !0),
-          [C, I] = (0, d.G6)((0, m.M9)(i), (0, m.pk)(i), f);
+          { eventModel: D } = (0, m.B9)(y, v, !0),
+          [C, I] = (0, p.G6)((0, u.M9)(i), (0, u.pk)(i), f);
         return t?.GetGID() == e
-          ? b(a, n, r, i, C, I, s, o, c, u, _, g, h, S, D)
+          ? b(a, n, r, i, C, I, s, l, c, d, _, h, E, S, D)
           : w();
       }
       function C(e) {
-        const t = (0, _.dr)(e),
-          [a, n] = (0, o.useState)(t ? e : null),
-          [r, i] = (0, o.useState)((0, c.c2)(t?.template_vars_json)),
-          [u, p] = (0, o.useState)(
+        const t = (0, h.dr)(e),
+          [a, n] = (0, c.useState)(t ? e : null),
+          [r, i] = (0, c.useState)((0, d.c2)(t?.template_vars_json)),
+          [l, _] = (0, c.useState)(
             (0, s.AK)(e, t?.additional_restrictions_json),
           );
-        (0, o.useEffect)(() => {
+        (0, c.useEffect)(() => {
           a != e &&
             t &&
             (n(e),
-            i((0, c.c2)(t.template_vars_json)),
-            p((0, s.AK)(e, t.additional_restrictions_json)));
+            i((0, d.c2)(t.template_vars_json)),
+            _((0, s.AK)(e, t.additional_restrictions_json)));
         }, [a, e, t]);
-        const [g, h, S, y, v, D, C, I, B, T, A, M, k, R] = (0, l.q3)(() => [
+        const [g, E, S, y, v, D, C, I, B, T, A, M, k, R] = (0, o.q3)(() => [
             t?.visibility,
             t?.start_date,
             t?.end_date,
-            (0, m.Di)((0, s.Z8)(t?.association_type, t?.associated_id)),
-            (0, s.mH)(u),
-            u?.no_filters_required,
+            (0, u.Di)((0, s.Z8)(t?.association_type, t?.associated_id)),
+            (0, s.mH)(l),
+            l?.no_filters_required,
             r?.linkurl,
-            u?.valid_realms || 0,
+            l?.valid_realms || 0,
             r?.button_text,
-            u?.explicit_no_associated_item,
-            r?.partner?.trim().length > 0 || u?.explicit_no_partner_name_needed,
+            l?.explicit_no_associated_item,
+            r?.partner?.trim().length > 0 || l?.explicit_no_partner_name_needed,
             t?.type,
             r?.update_event_clan_accountid,
             r?.update_event_gid,
           ]),
-          [P, N] = (0, d.G6)((0, m.M9)(y), (0, m.pk)(y), f),
-          { eventModel: G } = (0, E.B9)(k, R);
-        return origin ? b(g, h, S, y, P, N, v, D, C, I, B, T, A, M, G) : w();
+          [P, N] = (0, p.G6)((0, u.M9)(y), (0, u.pk)(y), f),
+          { eventModel: G } = (0, m.B9)(k, R);
+        return origin ? b(g, E, S, y, P, N, v, D, C, I, B, T, A, M, G) : w();
       }
       function I(e) {
         const {

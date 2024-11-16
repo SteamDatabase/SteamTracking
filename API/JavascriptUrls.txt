@@ -3264,6 +3264,7 @@ steam://joinlobby/${}/${}/${}
 steam://nav/games/
 steam://nav/games/details/${appid}
 steam://nav/games/details/${}
+steam://open/
 steam://open/about
 steam://open/addnonsteamgame
 steam://open/bigpicture
