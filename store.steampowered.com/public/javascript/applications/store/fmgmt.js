@@ -1705,43 +1705,55 @@
               nRows: a,
               nItemHeight: l,
               nRowGap: r,
-              renderItem: s,
-              bDynamic: i,
-              className: o,
-              forceVirtualizeType: c,
-              initialOffset: m,
-              onOffsetChange: u,
-              ...d
+              overscan: s,
+              renderItem: i,
+              bDynamic: o,
+              className: c,
+              forceVirtualizeType: m,
+              initialOffset: u,
+              onOffsetChange: d,
+              ...p
             } = e,
-            [p, _] = (0, n.useState)(c),
-            [y, g] = n.useState(),
-            [E, f] = n.useState(),
-            h = n.useCallback(
+            [_, y] = (0, n.useState)(m),
+            [g, E] = n.useState(),
+            [f, h] = n.useState(),
+            w = n.useCallback(
               (e) => {
-                if (!e || "window" == c) return;
+                if (!e || "window" == m) return;
                 const t = (0, O._f)(e, "y");
                 (0, n.startTransition)(() => {
-                  g(t || void 0),
-                    f(e.offsetTop),
-                    c || _(t ? "element" : "window");
+                  E(t || void 0),
+                    h(e.offsetTop),
+                    m || y(t ? "element" : "window");
                 });
               },
-              [c],
+              [m],
             ),
-            w = (0, W.Ue)(h, t);
+            F = (0, W.Ue)(w, t),
+            v = {
+              nRows: a,
+              nItemHeight: l,
+              nRowGap: r,
+              overscan: s,
+              renderItem: i,
+              bDynamic: o,
+              forceVirtualizeType: m,
+              initialOffset: u,
+              onOffsetChange: d,
+            };
           return n.createElement(
             x.Z,
-            { className: o, ref: w, ...d },
+            { className: c, ref: F, ...p },
             n.createElement(
               n.Suspense,
               null,
-              "element" === p &&
+              "element" === _ &&
                 n.createElement(V, {
-                  ...e,
-                  nScrollMargin: E || 0,
-                  elScrollable: y,
+                  ...v,
+                  nScrollMargin: f || 0,
+                  elScrollable: g,
                 }),
-              "window" === p && n.createElement(U, { ...e, nScrollMargin: E }),
+              "window" === _ && n.createElement(U, { ...v, nScrollMargin: f }),
             ),
           );
         });
@@ -1751,53 +1763,20 @@
             nRows: a,
             nItemHeight: l,
             nRowGap: r = 10,
-            initialOffset: s,
-            onOffsetChange: i,
-          } = e,
-          o = l + r,
-          c = (0, H.XW)({
-            count: a,
-            scrollMargin: t,
-            estimateSize: n.useCallback(() => o, [o]),
-            overscan: 6,
-            initialOffset: s,
-            initialRect: void 0,
-            observeElementOffset: J,
-            observeElementRect: Y,
-            onChange(e, t) {
-              i?.(e.scrollOffset);
-            },
-          });
-        return (
-          n.useEffect(() => {
-            (0, n.startTransition)(() => {
-              c.measure();
-            });
-          }, [c, o]),
-          n.createElement(j, { ...e, virtualizer: c })
-        );
-      }
-      function V(e) {
-        const {
-            nRows: t,
-            nScrollMargin: a,
-            elScrollable: l,
-            nItemHeight: r,
-            nRowGap: s = 10,
+            overscan: s = 6,
             initialOffset: i,
             onOffsetChange: o,
           } = e,
-          c = r + s,
-          m = (0, H.Te)({
-            count: t,
-            scrollMargin: a - (l?.offsetTop || 0),
-            getScrollElement: () => l,
+          c = l + r,
+          m = (0, H.XW)({
+            count: a,
+            scrollMargin: t,
             estimateSize: n.useCallback(() => c, [c]),
-            overscan: 5,
-            initialRect: l ? void 0 : { height: 1e3, width: 1e3 },
+            overscan: s,
             initialOffset: i,
+            initialRect: void 0,
             observeElementOffset: J,
-            observeElementRect: X,
+            observeElementRect: Y,
             onChange(e, t) {
               o?.(e.scrollOffset);
             },
@@ -1809,6 +1788,41 @@
             });
           }, [m, c]),
           n.createElement(j, { ...e, virtualizer: m })
+        );
+      }
+      function V(e) {
+        const {
+            nRows: t,
+            nScrollMargin: a,
+            elScrollable: l,
+            nItemHeight: r,
+            nRowGap: s = 10,
+            overscan: i = 6,
+            initialOffset: o,
+            onOffsetChange: c,
+          } = e,
+          m = r + s,
+          u = (0, H.Te)({
+            count: t,
+            scrollMargin: a - (l?.offsetTop || 0),
+            getScrollElement: () => l,
+            estimateSize: n.useCallback(() => m, [m]),
+            overscan: i,
+            initialRect: l ? void 0 : { height: 1e3, width: 1e3 },
+            initialOffset: o,
+            observeElementOffset: J,
+            observeElementRect: X,
+            onChange(e, t) {
+              c?.(e.scrollOffset);
+            },
+          });
+        return (
+          n.useEffect(() => {
+            (0, n.startTransition)(() => {
+              u.measure();
+            });
+          }, [u, m]),
+          n.createElement(j, { ...e, virtualizer: u })
         );
       }
       function j(e) {
