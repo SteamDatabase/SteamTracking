@@ -665,66 +665,12 @@
           return "CMarketingMessages_GetMarketingMessagesForUser_Request";
         }
       }
-      class f extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.messages || c.Sg(f.M()),
-            u.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: { messages: { n: 1, c: b, r: !0, q: !0 } },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = c.w0(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return c.BT(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return c.Uq(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new f();
-          return f.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return c.zj(f.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          c.i0(f.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesForUser_Response";
-        }
-      }
       class b extends u {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            b.prototype.already_seen || c.Sg(b.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            b.prototype.messages || c.Sg(b.M()),
+            u.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -733,10 +679,7 @@
             b.sm_m ||
               (b.sm_m = {
                 proto: b,
-                fields: {
-                  already_seen: { n: 1, br: c.qM.readBool, bw: c.gp.writeBool },
-                  message: { n: 2, c: d },
-                },
+                fields: { messages: { n: 1, c: f, r: !0, q: !0 } },
               }),
             b.sm_m
           );
@@ -771,6 +714,63 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessages_GetMarketingMessagesForUser_Response";
+        }
+      }
+      class f extends u {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            f.prototype.already_seen || c.Sg(f.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
+                fields: {
+                  already_seen: { n: 1, br: c.qM.readBool, bw: c.gp.writeBool },
+                  message: { n: 2, c: d },
+                },
+              }),
+            f.sm_m
+          );
+        }
+        static MBF() {
+          return f.sm_mbf || (f.sm_mbf = c.w0(f.M())), f.sm_mbf;
+        }
+        toObject(e = !1) {
+          return f.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return c.BT(f.M(), e, t);
+        }
+        static fromObject(e) {
+          return c.Uq(f.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new f();
+          return f.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return c.zj(f.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          c.i0(f.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMarketingMessages_GetMarketingMessagesForUser_Response_MarketingMessageForUser";
@@ -2533,7 +2533,7 @@
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
               (0, l.I8)(y, t),
-              f,
+              b,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -3124,7 +3124,7 @@
     },
     59505: (e, t, r) => {
       "use strict";
-      r.d(t, { Q: () => be, J: () => fe });
+      r.d(t, { Q: () => fe, J: () => be });
       var s = r(22837),
         i = r(90626),
         a = r(51433),
@@ -3175,8 +3175,8 @@
           )
         );
       }
-      var f = r(32630),
-        b = r(52038),
+      var b = r(32630),
+        f = r(52038),
         w = r(56011),
         z = r(61859),
         S = r(720),
@@ -3190,82 +3190,83 @@
         I = r(31343);
       const W = 2e4;
       function C(e) {
-        const t = fe(),
+        const t = be(),
           [r, s] = (0, i.useState)(() => t.GetFeaturedVideoAutoPlay()),
           a = (0, i.useRef)(null);
-        return (
-          (function (e) {
-            const t = (0, i.useRef)(!1),
-              r = (0, i.useRef)(null);
-            (0, i.useEffect)(() => {
-              const s = () => {
-                  r.current = setTimeout(() => {
-                    e.current &&
-                      !e.current.paused &&
-                      (e.current.pause(),
-                      (t.current = !0),
-                      "dev" == l.TS.WEB_UNIVERSE &&
-                        console.log(
-                          "useVideoAutoPauseOnBlur: Video paused due to inactivity.",
-                        ));
-                  }, W);
+        !(function (e) {
+          const t = (0, i.useRef)(!1),
+            r = (0, i.useRef)(null);
+          (0, i.useEffect)(() => {
+            const s = () => {
+                r.current = setTimeout(() => {
+                  e.current &&
+                    !e.current.paused &&
+                    (e.current.pause(),
+                    (t.current = !0),
+                    "dev" == l.TS.WEB_UNIVERSE &&
+                      console.log(
+                        "useVideoAutoPauseOnBlur: Video paused due to inactivity.",
+                      ));
+                }, W);
+              },
+              i = () => {
+                r.current && (clearTimeout(r.current), (r.current = null)),
+                  e.current &&
+                    t.current &&
+                    (e.current.play(),
+                    (t.current = !1),
+                    "dev" == l.TS.WEB_UNIVERSE &&
+                      console.log(
+                        "useVideoAutoPauseOnBlur: Video resumed on focus.",
+                      ));
+              };
+            return (
+              window.addEventListener("blur", s),
+              window.addEventListener("focus", i),
+              () => {
+                window.removeEventListener("blur", s),
+                  window.removeEventListener("focus", i),
+                  r.current && clearTimeout(r.current);
+              }
+            );
+          }, [e]);
+        })(a);
+        const n = (0, o.WN)(t.GetTemplateVars().linkurl, "button"),
+          m = (0, l.Qn)();
+        return i.createElement(
+          u.Z,
+          {
+            focusable: !0,
+            noFocusRing: !0,
+            onActivate: (e) =>
+              !m && t.GetFeaturedVideoAutoPlay() ? n(e) : s(!0),
+            className: I.PosterCtn,
+          },
+          r
+            ? i.createElement(
+                "video",
+                {
+                  controls: !t.GetFeaturedVideoLoop(),
+                  ref: a,
+                  muted: !0,
+                  autoPlay: !0,
+                  className: I.Video,
+                  loop: t.GetFeaturedVideoLoop(),
+                  crossOrigin:
+                    "dev" == M.TS.WEB_UNIVERSE ? void 0 : "anonymous",
                 },
-                i = () => {
-                  r.current && (clearTimeout(r.current), (r.current = null)),
-                    e.current &&
-                      t.current &&
-                      (e.current.play(),
-                      (t.current = !1),
-                      "dev" == l.TS.WEB_UNIVERSE &&
-                        console.log(
-                          "useVideoAutoPauseOnBlur: Video resumed on focus.",
-                        ));
-                };
-              return (
-                window.addEventListener("blur", s),
-                window.addEventListener("focus", i),
-                () => {
-                  window.removeEventListener("blur", s),
-                    window.removeEventListener("focus", i),
-                    r.current && clearTimeout(r.current);
-                }
-              );
-            }, [e]);
-          })(a),
-          i.createElement(
-            u.Z,
-            {
-              focusable: !0,
-              noFocusRing: !0,
-              onActivate: () => s(!0),
-              className: I.PosterCtn,
-            },
-            r
-              ? i.createElement(
-                  "video",
-                  {
-                    controls: !t.GetFeaturedVideoLoop(),
-                    ref: a,
-                    muted: !0,
-                    autoPlay: !0,
-                    className: I.Video,
-                    loop: t.GetFeaturedVideoLoop(),
-                    crossOrigin:
-                      "dev" == M.TS.WEB_UNIVERSE ? void 0 : "anonymous",
-                  },
+                i.createElement("source", {
+                  src: (0, F.L$)(t.GetFeaturedVideoWebMURL()),
+                  type: "video/webm",
+                }),
+                Boolean(!M.TS.IN_CLIENT) &&
                   i.createElement("source", {
-                    src: (0, F.L$)(t.GetFeaturedVideoWebMURL()),
-                    type: "video/webm",
+                    src: (0, F.L$)(t.GetFeaturedVideoMP4URL()),
+                    type: "video/mp4",
                   }),
-                  Boolean(!M.TS.IN_CLIENT) &&
-                    i.createElement("source", {
-                      src: (0, F.L$)(t.GetFeaturedVideoMP4URL()),
-                      type: "video/mp4",
-                    }),
-                  i.createElement(j, { message: t }),
-                )
-              : i.createElement(O, { message: t }),
-          )
+                i.createElement(j, { message: t }),
+              )
+            : i.createElement(O, { message: t }),
         );
       }
       function O(e) {
@@ -3312,7 +3313,7 @@
         P = r.n(G);
       function q(e) {
         const { fnOnClick: t } = e,
-          r = fe(),
+          r = be(),
           a = (0, s.sf)(l.TS.LANGUAGE),
           n = r.GetTemplateMP4(a),
           m = r.GetTemplateWebM(a);
@@ -3321,7 +3322,7 @@
           {
             focusable: !0,
             noFocusRing: !0,
-            className: (0, b.A)(G.GameImage),
+            className: (0, f.A)(G.GameImage),
             onActivate: t,
           },
           i.createElement(y, {
@@ -3338,10 +3339,10 @@
       }
       function N(e) {
         const { bLowBandwidthMode: t } = e,
-          r = fe(),
+          r = be(),
           s = !t && "featured_video" === r.GetTemplateVars().custom_display;
         return i.createElement(
-          f.A,
+          b.A,
           null,
           i.createElement(
             "div",
@@ -3362,7 +3363,7 @@
         );
       }
       function U(e) {
-        const t = fe(),
+        const t = be(),
           r = (0, o.WN)(t.GetTemplateVars().linkurl, "image");
         return i.createElement(
           "div",
@@ -3379,7 +3380,7 @@
       }
       function A(e) {
         const { isBackgroundBlur: t, bOverrideUseBackgroundImage: r } = e,
-          s = fe(),
+          s = be(),
           a = (0, o.WN)(s.GetTemplateVars().linkurl, "image"),
           [n, l] = r ? s.GetTemplateBackgroundImage() : s.GetTemplateImage();
         return i.createElement(
@@ -3387,14 +3388,14 @@
           {
             focusable: !0,
             noFocusRing: !0,
-            className: (0, b.A)(G.GameImage, t && G.IsBlur),
+            className: (0, f.A)(G.GameImage, t && G.IsBlur),
             onActivate: a,
           },
           n && i.createElement(p, { message: s, path: n, eLanguage: l }),
         );
       }
       function x(e) {
-        const t = fe(),
+        const t = be(),
           r = (0, o.WN)(t.GetTemplateVars().linkurl, "button");
         return i.createElement(L, {
           bHidePrice: e.bHidePrice,
@@ -3403,7 +3404,7 @@
       }
       function L(e) {
         const { bHidePrice: t, fnOnClickButton: r } = e,
-          s = fe(),
+          s = be(),
           [a, n] = (0, R.q3)(() => [
             s.GetTemplateVars().button_text_custom ||
               s.GetTemplateVars().button_text,
@@ -3412,7 +3413,7 @@
           l = Boolean(t || n);
         return i.createElement(
           "div",
-          { className: (0, b.A)(G.MessageFooter, !1, h.MessageFooter) },
+          { className: (0, f.A)(G.MessageFooter, !1, h.MessageFooter) },
           i.createElement(
             "div",
             { className: G.ButtonAndPriceCtn },
@@ -3433,7 +3434,7 @@
         );
       }
       function V() {
-        const e = fe().associated_item;
+        const e = be().associated_item;
         return e &&
           e.GetBestPurchaseOption() &&
           e.GetBestPurchaseOption().formatted_final_price
@@ -3445,7 +3446,7 @@
           : i.createElement("div", { className: G.NoPrice });
       }
       function D(e) {
-        const t = fe();
+        const t = be();
         return (0, n.ho)()
           ? null
           : i.createElement("div", {
@@ -3573,7 +3574,7 @@
       }
       var Y = r(79613);
       function Q(e) {
-        const t = fe(),
+        const t = be(),
           {
             eventModel: r,
             bLoading: s,
@@ -3607,11 +3608,11 @@
         const { bPreview: t, bUseAnimated: r } = e,
           { message: s, eventModel: a, fnOnClick: n } = Q(t);
         return i.createElement(
-          f.A,
+          b.A,
           { submethod: "partner_event" },
           i.createElement(
             "div",
-            { className: (0, b.A)(h.MainContainer) },
+            { className: (0, f.A)(h.MainContainer) },
             i.createElement(
               "div",
               { className: h.BackgroundImage },
@@ -3657,7 +3658,7 @@
             {
               focusable: !0,
               noFocusRing: !0,
-              className: (0, b.A)(P().GameImage),
+              className: (0, f.A)(P().GameImage),
               onActivate: r,
             },
             l &&
@@ -3700,7 +3701,7 @@
       const oe = { include_assets: !0 };
       function ue(e) {
         const { bPreview: t } = e,
-          r = fe(),
+          r = be(),
           [s, a] = (0, i.useMemo)(
             () => [
               r.GetDLCAppIDs(),
@@ -3723,7 +3724,7 @@
             }
           }, [r, n]),
           i.createElement(
-            f.A,
+            b.A,
             { submethod: "dlc_override" },
             i.createElement(
               "div",
@@ -3872,10 +3873,10 @@
         });
       }
       const ye = i.createContext(null);
-      function fe() {
+      function be() {
         return i.useContext(ye);
       }
-      function be(e) {
+      function fe(e) {
         const { message: t, preview: r } = e,
           s = !1 !== e.active,
           a = (0, n.NZ)();
@@ -3997,8 +3998,8 @@
         B = r(90740),
         p = r(46773),
         y = r(22797),
-        f = r(59505);
-      const b = 8;
+        b = r(59505);
+      const f = 8;
       function w(e) {
         const { MarketingMessagesStore: t } = e,
           r = (0, g.ri)(),
@@ -4032,7 +4033,7 @@
             null,
             (0, u.we)("#MarketingMessages_NoneAvailable"),
           );
-        const B = r.bIncludeSeenMessages ? s : s?.slice(0, b);
+        const B = r.bIncludeSeenMessages ? s : s?.slice(0, f);
         return i.createElement(
           "div",
           { className: d.MessageListPage },
@@ -4148,7 +4149,7 @@
               )
             : s.params.messageid
               ? n
-                ? i.createElement(f.Q, { message: n, preview: r })
+                ? i.createElement(b.Q, { message: n, preview: r })
                 : null
               : i.createElement(
                   R,
@@ -4207,7 +4208,7 @@
           i.createElement(
             "div",
             { className: (0, _.A)(d.MessageWrapper, s && d.Active), ref: l },
-            i.createElement(f.Q, { message: t, active: s }),
+            i.createElement(b.Q, { message: t, active: s }),
           ),
         );
       }
