@@ -388,10 +388,11 @@ enum EBrowserGPUStatus {
 	k_EBrowserGPUStatus_DisabledUnknown = 2;
 	k_EBrowserGPUStatus_DisabledCrashCount = 4;
 	k_EBrowserGPUStatus_DisabledBlocklist = 5;
-	k_EBrowserGPUStatus_DisabledDebugRequest = 6;
+	k_EBrowserGPUStatus_DisabledJSRequest = 6;
 	k_EBrowserGPUStatus_DisabledCommandLine = 7;
 	k_EBrowserGPUStatus_DisabledRuntimeDetect = 8;
 	k_EBrowserGPUStatus_DisabledChildCommandLine = 9;
+	k_EBrowserGPUStatus_DisabledCompositingCommandLine = 10;
 }
 
 enum EBrowserFeatureStatus {

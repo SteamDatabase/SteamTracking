@@ -248,6 +248,7 @@ St9bad_alloc
 St9exception
 St9type_info
 Starting movie recording at %dx%d\n
+SteamDeck
 SteamDisableOverlayDPIScaling
 SteamGameId
 SteamGameStream_%u_mutex

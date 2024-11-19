@@ -2440,7 +2440,6 @@
     "DiscoveryQueue_OpenWizard": "เปิดคิวค้นพบใหม่ดังกล่าว",
     "DiscoveryQueue_Error_Login": "คุณต้องเข้าสู่ระบบ Steam เพื่อเปิดคิวค้นพบใหม่นั้น",
     "DiscoveryQueue_Error_Login_Title": "เข้าสู่ระบบ",
-    "DiscoveryQueue_LabsHeader": "<1>แล็บ Steam</1> <2>ให้ข้อเสนอแนะ</2>",
     "DiscoveryQueue_WidgetHeader": "สำรวจคิวของคุณที่ประกอบด้วยผลิตภัณฑ์ที่ขายดีที่สุด ผลิตภัณฑ์ใหม่ และผลิตภัณฑ์ที่คล้ายคลึงกับผลิตภัณฑ์ที่คุณเล่นและใช้งานบน Steam",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "เข้าสู่ระบบเพื่อค้นหาผลิตภัณฑ์ที่ขายดีที่สุด ผลิตภัณฑ์ใหม่ และผลิตภัณฑ์ที่คล้ายคลึงกับผลิตภัณฑ์ที่คุณเล่นและใช้งานบน Steam",
     "DiscoveryQueue_LaunchAction": "เปิดคิวค้นพบ",
@@ -3162,7 +3161,6 @@
     "Settings_GameRecording_VideoRecording": "การบันทึกวิดีโอ",
     "Settings_GameRecording_MaxFrameRate": "อัตราเฟรมสูงสุด",
     "Settings_GameRecording_CleanUp": "การบันทึกที่เหลืออยู่: %1$s",
-    "Settings_GameRecording_Cleanup_Desc": "ตอนนี้การบันทึกในพื้นหลังปิดอยู่ การบันทึกในพื้นหลังของคุณก่อนหน้าจะไม่ถูกเขียนทับด้วยเกมเพลย์ใหม่ แต่คุณสามารถลบออกได้หากต้องการเพิ่มพื้นที่ว่าง",
     "Settings_GameRecording_Cleanup_Button": "ลบการบันทึก",
     "Settings_GameRecording_AudioSelection_Title": "บันทึกเสียงจาก...",
     "Settings_GameRecording_AudioSelection_GameOnly": "เสียงในเกมเท่านั้น",
@@ -3171,11 +3169,6 @@
     "Settings_GameRecording_LowDiskSpace_Header": "พื้นที่ว่างบนดิสก์เหลือน้อย - ไม่สามารถบันทึกหรือสร้างคลิปได้",
     "Settings_GameRecording_LowDiskSpace_Description": "หากต้องการเพิ่มพื้นที่ว่างบนฮาร์ดไดรฟ์ของคุณ คุณสามารถลบไฟล์ แก้ไขการตั้งค่าการบันทึกในพื้นหลัง หรือเปลี่ยนตำแหน่งโฟลเดอร์บันทึกของคุณไปเป็นไดรฟ์อื่นได้",
     "Settings_GameRecording_NotEnoughDiskSpace": "พื้นที่ว่างในฮาร์ดไดรฟ์ไม่เพียงพอให้ใช้กับรายการที่คุณเลือก (พร้อมใช้งาน %1$s)",
-    "Settings_GameRecording_Bitrate_Lowest": "%1$s (ต่ำสุด)",
-    "Settings_GameRecording_Bitrate_Low": "%1$s (ต่ำ)",
-    "Settings_GameRecording_Bitrate_Medium": "%1$s (ปานกลาง)",
-    "Settings_GameRecording_Bitrate_High": "%1$s (ค่าเริ่มต้น - 1080p)",
-    "Settings_GameRecording_Bitrate_AutoDefault": "อัตโนมัติ - ค่าเริ่มต้น",
     "Marker_Dialog": "อัปเดตตัวชี้ของผู้ใช้",
     "Marker_Title": "ชื่อ",
     "Marker_Description": "คำอธิบาย",
@@ -3358,5 +3351,8 @@
     "Settings_GameRecording_VideoMaxHeight_Pixels": "%1$s พิกเซล",
     "Settings_GameRecording_VideoMaxHeight": "ความสูงสูงสุดของวิดีโอ",
     "Settings_GameRecording_VideoMaxHeight_Description": "ความกว้างจะถูกตั้งค่าโดยอัตโนมัติเพื่อรักษาอัตราส่วนภาพของเกม",
-    "Settings_GameRecording_BitRate_High_Short": "สูง <1>(ค่าเริ่มต้น)</1>"
+    "Settings_GameRecording_BitRate_High_Short": "สูง <1>(ค่าเริ่มต้น)</1>",
+    "SendToPhone_Exporting": "กำลังส่งออก...",
+    "Settings_GameRecording_InstantClipDropdown_Label": "ระยะเวลาของคลิป",
+    "Settings_GameRecording_InstantClipDropdown_Option": "%1$s วินาที"
 }

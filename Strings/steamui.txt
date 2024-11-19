@@ -55,7 +55,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123HW7
+ !"#$%&'()*+,-./0123hW7
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -185,7 +185,6 @@
  count  job:\n
  definition file imports the proto which defines the option.
  details: 
- epA
  exceeded maximum protobuf size of 2GB: 
  filename="%s"%s
  filename="smime.p7s"%s%s
@@ -392,7 +391,6 @@
 !pchSSLPrivateKey && !pchSSLExtraCerts
 !pszString || pszString[nChars] == '\0'
 !pvCallbackCur
-!rpA
 !s_pInstance
 !session->server
 !sm_pMemPoolPendingMsg
@@ -752,7 +750,6 @@
 "R\n#CPlayer_GetPrivacySettings_Response
 "R\n$CBroadcast_InviteToBroadcast_Request
 "R\n'CParties_OnReservationCompleted_Request
-"S@FD
 "S\n%CSteamTV_GetFollowedChannels_Response
 "S\n'CCloud_AppCloudStateChange_Notification
 "S\n)CPartnerApps_GetDepotBuildResult_Response
@@ -2390,6 +2387,7 @@ ${LANGUAGE}
 '.CTwoFactor_UpdateTokenVersion_Response"
 '.CUserAccount_GetWalletDetails_Response"
 '3<CIOSW[^adfikosvy|~
+'3qA
 '4M^kx
 '5'7'M'S'U'_'k'm's'w'
 '7GWgw
@@ -2646,6 +2644,7 @@ ${LANGUAGE}
 (@(sa{sv})@(sa{sv})@a{sv})
 (@(sa{sv})@a{sv})
 (@a{sv}@a{sv})
+(AqA
 (Customization/StartupMovie/UsedForResume
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
@@ -3665,6 +3664,7 @@ ${LANGUAGE}
 )\n%k_EBroadcastWatchLocation_SteamTV_Web
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
+)\n%k_EBrowserGPUStatus_DisabledJSRequest
 )\n%k_EClientNotificationType_Achievement
 )\n%k_EClientNotificationType_HelpRequest
 )\n%k_ECommunityItemClass_ProfileModifier
@@ -4386,7 +4386,6 @@ ${LANGUAGE}
 +5FSgr
 +:JYix
 +HpXhE
-+JpA
 +QQ 3K%
 +U2L
 +\n#display_adaptive_brightness_enabled
@@ -4612,7 +4611,6 @@ ${LANGUAGE}
 ,\n(k_EAuthTokenRevokeNonRememberedPermanent
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
-,\n(k_EBrowserGPUStatus_DisabledDebugRequest
 ,\n(k_EChatRoomMemberStateChange_RankChanged
 ,\n(k_EChatroomNotificationLevel_AllMessages
 ,\n(k_EClientNotificationType_ClipDownloaded
@@ -4779,6 +4777,7 @@ ${LANGUAGE}
 -DBF
 -Infinity
 -LY8
+-MqA
 -RN1
 -SteamViveSetup
 -\n%adjusted_time_probe_frequency_seconds
@@ -6298,7 +6297,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0(qA
 0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -6425,6 +6423,7 @@ ${LANGUAGE}
 0\tzc
 0`P0
 0fl:
+0hqA
 0pp@5tqE?|sO541
 0x%llx
 0|t?L
@@ -8701,7 +8700,6 @@ ${LANGUAGE}
 26SiteServerUI_Quit_Response
 26StoreBrowseItemDataRequest
 26StoreItem_Trailers_Trailer
-26qA
 278=&#,)JO@E^[TQbghmvs|y
 27;C
 27CBroadcast_WebRTC_Candidate
@@ -8969,6 +8967,7 @@ ${LANGUAGE}
 2prB
 2s\n\rChatUsability
 2sssua
+2vqA
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
 3$EE\f
@@ -9760,7 +9759,6 @@ ${LANGUAGE}
 39SiteServerUI_ContentCacheConfig_Request
 39SiteServerUI_ContentCacheStatus_Request
 39StoreItem_PurchaseOption_RecurrenceInfo
-3BqA
 3DES(168)
 3I2H
 3M*T
@@ -10493,7 +10491,6 @@ ${LANGUAGE}
 4F]t
 4J-S
 4K+T
-4QqA
 4T9\n
 4\fZQ
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
@@ -10807,7 +10804,6 @@ ${LANGUAGE}
 5i]lX
 5mF\tfE
 5mmQ
-5mqA
 5q\teH
 5steamos-set-system-proxy
 5y?4
@@ -10882,6 +10878,7 @@ ${LANGUAGE}
 6\n1k_EMsgClientRequestForgottenPasswordEmailResponse
 6\n1k_EMsgClientUCMSetUserPublishedFileActionResponse
 6\n1k_EMsgUpdateScheduledTaskEnableStateResponse_TEST
+6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
 6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse
@@ -15697,7 +15694,7 @@ CheckForOpenContextMenu
 CheckParentalPlaytime
 CheckShaderDepotManifest
 CheckTimedTrial
-Checked: %d
+Checked: %d/%d
 Cherokee
 Child
 ChromeHTML_Controller_003
@@ -16471,8 +16468,9 @@ DisableWithRecoveryCode
 Disabled/Blocklist
 Disabled/ChildCommandLine
 Disabled/CommandLine
+Disabled/CompositingCommandLine
 Disabled/CrashCount
-Disabled/DebugRequest
+Disabled/JSRequest
 Disabled/Off
 Disabled/OffOk
 Disabled/RuntimeDetect
@@ -21537,7 +21535,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 15 2024 22:15:31
+Nov 19 2024 02:05:38
 November
 NrZl
 Num Lock

@@ -2440,7 +2440,6 @@
     "DiscoveryQueue_OpenWizard": "Відкрити нову чергу знахідок",
     "DiscoveryQueue_Error_Login": "Щоб відкрити нову чергу знахідок, треба ввійти до акаунта Steam.",
     "DiscoveryQueue_Error_Login_Title": "Увійдіть до акаунта",
-    "DiscoveryQueue_LabsHeader": "<1>ЛАБОРАТОРІЇ STEAM</1> <2>Залишити відгук</2>",
     "DiscoveryQueue_WidgetHeader": "Перегляньте свою чергу хітів продажу, нових продуктів і схожих на ті, в які ви граєте чи якими користуєтеся в Steam.",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "Увійдіть, щоб дізнатися про хіти продажу, нові продукти та схожі на ті, в які ви граєте чи якими користуєтеся в Steam.",
     "DiscoveryQueue_LaunchAction": "Переглянути чергу знахідок",
@@ -3162,7 +3161,6 @@
     "Settings_GameRecording_VideoRecording": "Запис відео",
     "Settings_GameRecording_MaxFrameRate": "Максимальна частота кадрів",
     "Settings_GameRecording_CleanUp": "Записи, що залишилися: %1$s",
-    "Settings_GameRecording_Cleanup_Desc": "Оскільки фоновий запис вимкнено, нові записи ігроладу не замінюватимуть старі фонові. Ви можете видалити їх, щоб звільнити місце.",
     "Settings_GameRecording_Cleanup_Button": "Видалити записи",
     "Settings_GameRecording_AudioSelection_Title": "Записувати аудіо…",
     "Settings_GameRecording_AudioSelection_GameOnly": "Лише з гри",
@@ -3171,12 +3169,6 @@
     "Settings_GameRecording_LowDiskSpace_Header": "Мало місця на диску: неможливо записати чи створити кліпи",
     "Settings_GameRecording_LowDiskSpace_Description": "Щоб звільнити місце на жорсткому диску, видаліть файли, змініть налаштування фонових записів або перемістіть теку із записами на інший диск.",
     "Settings_GameRecording_NotEnoughDiskSpace": "Замало місця на жорсткому диску для вашого вибору (вільно — %1$s)",
-    "Settings_GameRecording_Bitrate_Lowest": "%1$s (найнижча)",
-    "Settings_GameRecording_Bitrate_Low": "%1$s (низька)",
-    "Settings_GameRecording_Bitrate_Medium": "%1$s (середня)",
-    "Settings_GameRecording_Bitrate_High": "%1$s (стандартно — 1080p)",
-    "Settings_GameRecording_Bitrate_2k": "%1$s (1440p, 60 к/с)",
-    "Settings_GameRecording_Bitrate_AutoDefault": "Автоматично (стандартно)",
     "Marker_Dialog": "Оновити мітку користувача",
     "Marker_Title": "Назва",
     "Marker_Description": "Опис",
@@ -3359,5 +3351,8 @@
     "Settings_GameRecording_VideoMaxHeight_Pixels": "%1$s пікс.",
     "Settings_GameRecording_VideoMaxHeight": "Максимальна висота відео",
     "Settings_GameRecording_VideoMaxHeight_Description": "Ширину буде задано автоматично, щоб зберегти співвідношення сторін гри.",
-    "Settings_GameRecording_BitRate_High_Short": "Висока <1>(стандартно)</1>"
+    "Settings_GameRecording_BitRate_High_Short": "Висока <1>(стандартно)</1>",
+    "SendToPhone_Exporting": "Експорт…",
+    "Settings_GameRecording_InstantClipDropdown_Label": "Тривалість кліпу",
+    "Settings_GameRecording_InstantClipDropdown_Option": "%1$s с"
 }

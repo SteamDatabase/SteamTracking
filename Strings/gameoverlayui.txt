@@ -442,6 +442,7 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_EBanContentCheckResult_VeryUnlikely
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
+)\n%k_EBrowserGPUStatus_DisabledJSRequest
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_TradeEvent
 )\n%k_EProfileCustomizationTypeCustomText
@@ -509,7 +510,6 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
-,\n(k_EBrowserGPUStatus_DisabledDebugRequest
 ,\n(k_ECommentThreadTypePublishedFile_Public
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
@@ -703,6 +703,7 @@ $\n k_SystemAudioPortDirection_Input
 01/01/00
 0123456789ABCDEF
 0123456789abcdef
+02:05:24
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
@@ -1078,7 +1079,6 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:14:58
 22CClanMatchEventByRange
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
@@ -1185,6 +1185,7 @@ $\n k_SystemAudioPortDirection_Input
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
 6ConVar
+6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n\fmessage_type
 7CCookie
@@ -2190,8 +2191,9 @@ DirectoryTreeView
 Disabled/Blocklist
 Disabled/ChildCommandLine
 Disabled/CommandLine
+Disabled/CompositingCommandLine
 Disabled/CrashCount
-Disabled/DebugRequest
+Disabled/JSRequest
 Disabled/Off
 Disabled/OffOk
 Disabled/RuntimeDetect
@@ -3583,7 +3585,7 @@ Not released
 Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 15 2024
+Nov 19 2024
 November
 Num Lock
 Num Lock Toggle

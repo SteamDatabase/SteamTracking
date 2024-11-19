@@ -4290,6 +4290,7 @@ $tICAPIJobListHashLoadSave
 )\n%k_EBroadcastWatchLocation_SteamTV_Web
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
+)\n%k_EBrowserGPUStatus_DisabledJSRequest
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_TradeEvent
 )\n%k_EContentDescriptor_AnyMatureContent
@@ -5054,7 +5055,6 @@ $tICAPIJobListHashLoadSave
 ,\n(k_EAuthTokenRevokeNonRememberedPermanent
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
-,\n(k_EBrowserGPUStatus_DisabledDebugRequest
 ,\n(k_EChatRoomMemberStateChange_RankChanged
 ,\n(k_EChatroomNotificationLevel_AllMessages
 ,\n(k_ECommentThreadTypePublishedFile_Public
@@ -14232,6 +14232,7 @@ $tICAPIJobListHashLoadSave
 6\n1k_EMsgClientRequestForgottenPasswordEmailResponse
 6\n1k_EMsgClientUCMSetUserPublishedFileActionResponse
 6\n1k_EMsgUpdateScheduledTaskEnableStateResponse_TEST
+6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
 6\n2k_EPartnerEventDisplayLocation_AppDetailsSpotlight
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n2k_ESharedLibrary_LicenseExcluded_FlagPendingRefund
@@ -15788,6 +15789,7 @@ AppID %u : preallocation failed for %s (%u MB), retrying without
 AppID %u : requesting %u MB additional space from host for preallocation
 AppID %u : soft shutdown after %u seconds exceeded
 AppID %u auto-updates no longer disabled by app, clearing flag
+AppID %u beta changed: %s
 AppID %u canceled moving : %s (%s)
 AppID %u canceled moving : %s at %llu/%llu bytes, %u files moved (%s)
 AppID %u depends on AppID %u - installing.
@@ -20086,7 +20088,7 @@ CheckSetGameServerSDRLogin
 CheckState
 CheckSteamReachable
 CheckUpdateJobFlags failed: old %u, new %u
-Checked: %d
+Checked: %d/%d
 Checkout request for app (%u): FAILED
 Checkout request to %s %s for app (%u): FAILED - EResult (%d) %s (%ums)
 Checkout request to %s %s for app (%u): SUCCESS - %ums
@@ -21210,8 +21212,9 @@ Disabled license for package: %u\n
 Disabled/Blocklist
 Disabled/ChildCommandLine
 Disabled/CommandLine
+Disabled/CompositingCommandLine
 Disabled/CrashCount
-Disabled/DebugRequest
+Disabled/JSRequest
 Disabled/Off
 Disabled/OffOk
 Disabled/RuntimeDetect
@@ -22678,6 +22681,7 @@ Failed to resolve path before download\n
 Failed to resolve path for '%s' for upload\n
 Failed to retrieve app dependencies (batched)!: %s (%s)
 Failed to retrieve info for AppID %u private beta "%s" (%s)
+Failed to retrieve info for AppID %u private beta "%s", token %llu (%s)
 Failed to save download to filesystem\n
 Failed to save legacy session file for other user to '%s'
 Failed to save legacy session file to '%s'
@@ -46583,7 +46587,7 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6811
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2412
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3788
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3796
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:105
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3055
@@ -53388,7 +53392,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov 15 2024 22:15:16
+steam Nov 19 2024 02:05:29
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -517,6 +517,7 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_EBanContentCheckResult_VeryUnlikely
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
+)\n%k_EBrowserGPUStatus_DisabledJSRequest
 )\n%k_EClientNotificationType_Achievement
 )\n%k_EClientNotificationType_HelpRequest
 )\n%k_ECommunityItemClass_ProfileModifier
@@ -625,7 +626,6 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
-,\n(k_EBrowserGPUStatus_DisabledDebugRequest
 ,\n(k_EClientNotificationType_ClipDownloaded
 ,\n(k_EClientNotificationType_HardwareSurvey
 ,\n(k_ECommentThreadTypePublishedFile_Public
@@ -1664,6 +1664,7 @@ $\n k_SystemAudioPortDirection_Input
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
 6ConVar
+6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
 6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse

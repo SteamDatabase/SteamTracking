@@ -2440,7 +2440,6 @@
     "DiscoveryQueue_OpenWizard": "Åbn den nye opdagelseskø",
     "DiscoveryQueue_Error_Login": "Du skal være logget på Steam for at åbne den nye opdagelseskø.",
     "DiscoveryQueue_Error_Login_Title": "Log på",
-    "DiscoveryQueue_LabsHeader": "<1>STEAM-LABORATORIET</1> <2>Giv feedback</2>",
     "DiscoveryQueue_WidgetHeader": "Udforsk din kø af topsællerter, nyheder og produkter, som ligner dem, du spiller og bruger på Steam.",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "Log på for at opdage topsællerter, nyheder og produkter, som ligner dem, du spiller og bruger på Steam.",
     "DiscoveryQueue_LaunchAction": "Åbn opdagelseskøen",
@@ -3162,7 +3161,6 @@
     "Settings_GameRecording_VideoRecording": "Videooptagelse",
     "Settings_GameRecording_MaxFrameRate": "Maks. billedhastighed",
     "Settings_GameRecording_CleanUp": "Resterende optagelser: %1$s",
-    "Settings_GameRecording_Cleanup_Desc": "Nu hvor baggrundsoptagelser er slået fra, bliver dine gamle baggrundsoptagelser ikke overskrevet med nyt gameplay. Du kan slette dem for at frigøre plads.",
     "Settings_GameRecording_Cleanup_Button": "Slet optagelser",
     "Settings_GameRecording_AudioSelection_Title": "Optag lyd fra...",
     "Settings_GameRecording_AudioSelection_GameOnly": "Kun spillyd",
@@ -3171,11 +3169,6 @@
     "Settings_GameRecording_LowDiskSpace_Header": "Ikke nok ledig diskplads – kan ikke optage eller oprette klip",
     "Settings_GameRecording_LowDiskSpace_Description": "For at frigøre plads på din harddisk kan du slette filer, ændre indstillingerne for baggrundsoptagelse eller ændre placeringen af optagelsesmappen til et andet drev.",
     "Settings_GameRecording_NotEnoughDiskSpace": "Der er ikke nok plads på harddisken til dit valg (%1$s tilgængelig)",
-    "Settings_GameRecording_Bitrate_Lowest": "%1$s (laveste)",
-    "Settings_GameRecording_Bitrate_Low": "%1$s (lav)",
-    "Settings_GameRecording_Bitrate_Medium": "%1$s (medium)",
-    "Settings_GameRecording_Bitrate_High": "%1$s (standard – 1080p)",
-    "Settings_GameRecording_Bitrate_AutoDefault": "Automatisk – standard",
     "Marker_Dialog": "Opdater brugermarkør",
     "Marker_Title": "Titel",
     "Marker_Description": "Beskrivelse",
@@ -3358,5 +3351,8 @@
     "Settings_GameRecording_VideoMaxHeight_Pixels": "%1$s pixels",
     "Settings_GameRecording_VideoMaxHeight": "Maks. videohøjde",
     "Settings_GameRecording_VideoMaxHeight_Description": "Bredden indstilles automatisk for at bevare spillets billedformat",
-    "Settings_GameRecording_BitRate_High_Short": "Høj <1>(standardindstilling)</1>"
+    "Settings_GameRecording_BitRate_High_Short": "Høj <1>(standardindstilling)</1>",
+    "SendToPhone_Exporting": "Eksporterer...",
+    "Settings_GameRecording_InstantClipDropdown_Label": "Kliplængde",
+    "Settings_GameRecording_InstantClipDropdown_Option": "%1$s sekunder"
 }

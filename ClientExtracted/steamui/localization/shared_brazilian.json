@@ -2440,7 +2440,6 @@
     "DiscoveryQueue_OpenWizard": "Abrir a nova lista de descobrimento",
     "DiscoveryQueue_Error_Login": "É necessário iniciar a sessão no Steam para abrir a nova lista de descobrimento.",
     "DiscoveryQueue_Error_Login_Title": "Iniciar sessão",
-    "DiscoveryQueue_LabsHeader": "<1>LABORATÓRIO STEAM</1> <2>Deixar comentário</2>",
     "DiscoveryQueue_WidgetHeader": "Explore a sua lista de produtos mais vendidos, novos e similares ao que você joga e usa no Steam.",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "Inicie a sessão para descobrir os produtos mais vendidos, novos e similares ao que você joga e usa no Steam.",
     "DiscoveryQueue_LaunchAction": "Acessar a lista de descobrimento",
@@ -3163,7 +3162,6 @@
     "Settings_GameRecording_VideoRecording": "Gravação de vídeo",
     "Settings_GameRecording_MaxFrameRate": "Taxa de quadros máxima",
     "Settings_GameRecording_CleanUp": "Gravações restantes: %1$s",
-    "Settings_GameRecording_Cleanup_Desc": "Como você desativou a gravação em segundo plano, as suas gravações em segundo plano antigas não serão substituídas por novas. Você pode excluí-las para liberar espaço.",
     "Settings_GameRecording_Cleanup_Button": "Excluir gravações",
     "Settings_GameRecording_AudioSelection_Title": "Gravar áudio...",
     "Settings_GameRecording_AudioSelection_GameOnly": "Apenas do jogo",
@@ -3172,11 +3170,6 @@
     "Settings_GameRecording_LowDiskSpace_Header": "Pouco espaço disponível: não é possível gravar nem criar clipes",
     "Settings_GameRecording_LowDiskSpace_Description": "Para liberar espaço, exclua arquivos, modifique as configurações de gravação em segundo plano ou altere a pasta de gravações para outro volume.",
     "Settings_GameRecording_NotEnoughDiskSpace": "Não há espaço disponível no volume selecionado (disponível: %1$s)",
-    "Settings_GameRecording_Bitrate_Lowest": "%1$s (mais baixa)",
-    "Settings_GameRecording_Bitrate_Low": "%1$s (baixa)",
-    "Settings_GameRecording_Bitrate_Medium": "%1$s (média)",
-    "Settings_GameRecording_Bitrate_High": "%1$s (1080p) [padrão]",
-    "Settings_GameRecording_Bitrate_AutoDefault": "Automática (padrão)",
     "Marker_Dialog": "Atualizar marcador do usuário",
     "Marker_Title": "Título",
     "Marker_Description": "Descrição",
@@ -3358,5 +3351,8 @@
     "Settings_GameRecording_VideoMaxHeight_Pixels": "%1$s pixels",
     "Settings_GameRecording_VideoMaxHeight": "Tamanho máximo do vídeo",
     "Settings_GameRecording_VideoMaxHeight_Description": "A largura será definida automaticamente para preservar o formato da imagem do jogo.",
-    "Settings_GameRecording_BitRate_High_Short": "Alta <1>(padrão)</1>"
+    "Settings_GameRecording_BitRate_High_Short": "Alta <1>(padrão)</1>",
+    "SendToPhone_Exporting": "Exportando...",
+    "Settings_GameRecording_InstantClipDropdown_Label": "Duração do clipe",
+    "Settings_GameRecording_InstantClipDropdown_Option": "%1$s segundos"
 }

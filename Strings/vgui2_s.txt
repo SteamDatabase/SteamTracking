@@ -1280,6 +1280,7 @@ Turkmen
 UTF-8
 UTF8_STRING
 UUUU
+Ug08
 Unable to find font named %s\n
 Unable to initalize freetype library, is it installed?
 Unable to open display
