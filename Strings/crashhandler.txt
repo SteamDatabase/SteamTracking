@@ -111,7 +111,7 @@
 /proc/self/exe
 /tmp/dumps
 0123456789ABCDEFbool google_breakpad::{anonymous}::ElfFileSoName(const google_breakpad::MappingInfo&, char*, size_t)
-02:04:36
+03:53:36
 11CPathString
 12CStdMemAlloc
 13CCrashHandler
@@ -367,7 +367,6 @@ TLS wrapper function for
 Tgid:\t
 Thread cannot be joined with self
 Thursday
-Tr;B
 TracerPid:
 Tracked allocs currently in use. %d Total %d\n
 Tuesday
