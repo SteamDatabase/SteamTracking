@@ -439,6 +439,9 @@
         EventDetailTitle: "TqEPC9bhvVpZ1rb3Z8Mbd",
         EventDetailTitleContainer: "_3z2NYCkFizMu4fMvWTIBUG",
         EventDetailsSubTitle: "_20f2sKS2M7PlPSnPCinT26",
+        EventDescriptionArea: "_3UMJE2bBtqZcj2w_S-n8o4",
+        EventDescriptionRichField: "_1dV0eemBulIeNuwlrxbJA_",
+        ToolBar: "zMpwi4v_VKAJy80GriVLg",
         LibraryEventBodyContainer: "_32mHvRSmD7AVK9OIOPlaFu",
         "lang_zh-cn": "_2oAxPvOHyVkOcOFbH-ROOn",
         lang_ko: "_36n2d0WrYP7qNfJaBDPBzE",
@@ -1481,7 +1484,7 @@
             )
           : t;
       }
-      var j = r(375),
+      var j = r(73745),
         N = r(72963);
       const U = n.lazy(() =>
           Promise.all([
@@ -2077,7 +2080,7 @@
         ge = r(96059),
         _e = r(17204),
         fe = r(56011);
-      r(12155), r(60778), r(49300), r(738), r(41775);
+      r(12155), r(60778), r(9154), r(738), r(41775);
       r(64641);
       (0, pe.jK)({ enforceActions: "never" }),
         (0, fe.oQ)(async () => {
@@ -23862,16 +23865,19 @@
           }, [e, t]);
       }
     },
-    66418: (e, t, r) => {
+    8527: (e, t, r) => {
       "use strict";
-      r.d(t, { T: () => a, i: () => o });
+      r.d(t, { YJ: () => a, TS: () => o, iA: () => l });
       var i,
         n,
         s = r(30470);
-      const a = null !== (i = window.Config) && void 0 !== i ? i : s.TS,
-        o = null !== (n = window.UserConfig) && void 0 !== n ? n : s.iA;
+      function a(e) {
+        return e;
+      }
+      const o = null !== (i = window.Config) && void 0 !== i ? i : s.TS,
+        l = null !== (n = window.UserConfig) && void 0 !== n ? n : s.iA;
       window.Config && Object.assign(s.TS, window.Config),
-        window.UserConfig && Object.assign(o, window.UserConfig);
+        window.UserConfig && Object.assign(l, window.UserConfig);
     },
     23809: (e, t, r) => {
       "use strict";
@@ -24142,14 +24148,14 @@
           );
         }
       }
-      var m = r(66418);
+      var m = r(8527);
       function p() {
         const e = window;
         e.g_wapitRefreshEnabled = !1;
         const t = "function" == typeof e.g_wapitRefresh;
         let r;
         return (
-          !m.T.IN_CLIENT &&
+          !m.TS.IN_CLIENT &&
             t &&
             (r = () =>
               new Promise((t, r) => {
@@ -24158,7 +24164,7 @@
                 }),
                   window.setTimeout(() => r("Refresh Timeout"), 1e4);
               })),
-          new d(m.T.WEBAPI_BASE_URL, e.g_wapit, !1, r)
+          new d(m.TS.WEBAPI_BASE_URL, e.g_wapit, !1, r)
         );
       }
     },
@@ -24794,7 +24800,7 @@
       r.d(t, { A: () => s });
       var i = r(26205);
       const n = JSON.parse(
-        '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741}',
+        '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742}',
       );
       class s {
         static InstrumentLink(e, t, r = null) {
@@ -24880,7 +24886,7 @@
       });
       var i = r(90626),
         n = r(3578),
-        s = r(66418);
+        s = r(8527);
       const a = i.createContext({}),
         o = i.createContext(void 0);
       function l(e) {
@@ -24916,8 +24922,8 @@
           ...e,
           feature: t || e.feature,
           depth: r || e.depth,
-          countrycode: s.T.COUNTRY,
-          is_client: s.T.IN_CLIENT,
+          countrycode: s.TS.COUNTRY,
+          is_client: s.TS.IN_CLIENT,
         };
       }
       function p(e, t, r) {
@@ -27690,7 +27696,7 @@
       r.d(t, { U: () => S, N: () => C });
       var i = r(34629),
         n = r(22837),
-        s = r(375),
+        s = r(73745),
         a = r(44654),
         o = r(56545),
         l = r(21920),
@@ -29188,7 +29194,7 @@
         _ = r(79516),
         f = r(56011),
         b = r(61859),
-        w = (r(375), r(78327)),
+        w = (r(73745), r(78327)),
         B = r(6419),
         y = r(62490);
       class v {
@@ -30347,7 +30353,7 @@
         s = r(90626),
         a = r(6144),
         o = r(52038),
-        l = r(375),
+        l = r(73745),
         c = r(37739),
         u = r.n(c);
       let d = class extends s.Component {
@@ -33571,7 +33577,7 @@
       var i = r(41735),
         n = r.n(i),
         s = r(90626),
-        a = r(375),
+        a = r(73745),
         o = r(13952);
       function l(e, t, r, i) {
         const l = (0, s.useRef)(),
@@ -33820,7 +33826,7 @@
         f = r(79516),
         b = r(56011),
         w = r(61859),
-        B = r(375),
+        B = r(73745),
         y = r(78327),
         v = r(40650),
         M = r.n(v);
@@ -35267,7 +35273,7 @@
       (0, i.Cg)([c.o], G.prototype, "OnOffKeyDown", null),
         (0, i.Cg)([c.o], G.prototype, "OnNewUIToggle", null);
       var H = r(44332),
-        V = r(375),
+        V = r(73745),
         Z = r(72739),
         K = r(56011),
         Y = r(69381);
@@ -39586,6 +39592,7 @@
               onContextMenu: this.props.onContextMenu,
               actionDescriptionMap: t,
               onClick: this.props.onClick,
+              indentLevel: this.props.indentLevel,
               ...r,
             },
             n.createElement(lr, {
@@ -39630,7 +39637,7 @@
       r.d(t, { Nr: () => a, tH: () => l, wC: () => o });
       var i = r(34629),
         n = r(90626),
-        s = r(375);
+        s = r(73745);
       function a(e) {
         return function (t) {
           return n.createElement(l, null, n.createElement(e, { ...t }));
@@ -41725,6 +41732,47 @@
       }
       w = (0, i.Cg)([o.PA], w);
     },
+    83882: (e, t, r) => {
+      "use strict";
+      r.d(t, { mt: () => o, of: () => l });
+      var i = r(90626),
+        n = r(33737),
+        s = r(21869),
+        a = r(2654);
+      r(72739),
+        r(48902),
+        r(68451),
+        r(25118),
+        r(73745),
+        r(97348),
+        r(13871),
+        r(78327),
+        r(28460);
+      const o = ({
+        active: e,
+        onDismiss: t,
+        className: r,
+        modalClassName: o,
+        children: l,
+      }) =>
+        i.createElement(
+          s.E,
+          { active: e },
+          i.createElement(
+            a.x_,
+            { onEscKeypress: t, className: o },
+            i.createElement(n.UC, { className: r }, l),
+          ),
+        );
+      function l(e) {
+        const { className: t, children: r } = e;
+        return i.createElement(
+          s.E,
+          { active: !0 },
+          i.createElement("div", { className: t }, r),
+        );
+      }
+    },
     81194: (e, t, r) => {
       "use strict";
       r.d(t, { L: () => S });
@@ -41920,7 +41968,7 @@
         );
       }
       var f = r(52038),
-        b = r(375),
+        b = r(73745),
         w = r(78025),
         B = r(76222),
         y = r(88843),
@@ -42090,7 +42138,11 @@
         return i.createElement(
           z,
           { active: r },
-          i.createElement("div", { className: t, tabIndex: -1 }, n),
+          i.createElement(
+            v.C$,
+            null,
+            i.createElement("div", { className: t, tabIndex: -1 }, n),
+          ),
         );
       }
       function z(e) {
@@ -42108,7 +42160,7 @@
               className: y.ModalDialog,
               onCancel: (e) => e.preventDefault(),
             },
-            i.createElement(v.C$, null, e.children),
+            e.children,
           )
         );
       }
@@ -42289,117 +42341,59 @@
         );
       });
     },
-    49300: (e, t, r) => {
+    9154: (e, t, r) => {
       "use strict";
       r.d(t, {
-        mt: () => d,
-        Qs: () => f,
-        o0: () => b.o0,
-        eV: () => w.e,
-        KG: () => b.KG,
-        Ee: () => b.Ee,
-        x_: () => c.x_,
-        of: () => m,
-        EN: () => l,
+        mt: () => i.mt,
+        Qs: () => u,
+        o0: () => d.o0,
+        eV: () => m.e,
+        KG: () => d.KG,
+        Ee: () => d.Ee,
+        x_: () => p.x_,
+        of: () => i.of,
+        EN: () => h.E,
       });
-      var i = r(90626),
-        n = r(33737),
-        s = r(72739),
-        a = r(97348),
-        o = r(76222);
-      function l(e) {
-        const { active: t, children: r } = e,
-          n = (0, a.yk)() || (0, o.tx)(window),
-          l = (0, a.oJ)(),
-          [c, u] = i.useState(null),
-          [d, m] = i.useState(!1),
-          p = i.useRef();
-        if (
-          (i.useLayoutEffect(() => {
-            if (t) {
-              const e = n.ShowPortalModal(),
-                t = e.OnElementReadyCallbacks.Register(u),
-                r = e.OnModalActiveCallbacks.Register(m);
-              return (
-                (p.current = e.key),
-                () => {
-                  u(null), m(!1), e.Close(), t.Unregister(), r.Unregister();
-                }
-              );
-            }
-          }, [n, t]),
-          !c || !t)
-        )
-          return null;
-        let h = r;
-        return (
-          l && (h = i.createElement(l, { active: d, modalKey: p.current }, r)),
-          s.createPortal(h, c)
-        );
-      }
-      var c = r(2654),
-        u = (r(48902), r(68451), r(25118), r(375), r(13871), r(78327));
-      r(28460);
-      const d = ({
-        active: e,
-        onDismiss: t,
-        className: r,
-        modalClassName: s,
-        children: a,
-      }) =>
-        i.createElement(
-          l,
-          { active: e },
-          i.createElement(
-            c.x_,
-            { onEscKeypress: t, className: s },
-            i.createElement(n.UC, { className: r }, a),
-          ),
-        );
-      function m(e) {
-        const { className: t, children: r } = e;
-        return i.createElement(
-          l,
-          { active: !0 },
-          i.createElement("div", { className: t }, r),
-        );
-      }
-      r(81194);
-      var p = r(85585),
-        h = r(7445),
-        g = r(76217),
-        _ = r(88843);
-      function f(e) {
-        const { children: t, navID: r, closeModal: n } = e,
-          s = i.createRef(),
-          a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, u.Qn)() && !u.TS.IN_STEAMUI
-          ? i.createElement(
-              p.B2,
+      var i = r(83882),
+        n = (r(81194), r(85585)),
+        s = r(7445),
+        a = r(76217),
+        o = r(90626),
+        l = r(78327),
+        c = r(88843);
+      function u(e) {
+        const { children: t, navID: r, closeModal: i } = e,
+          u = o.createRef(),
+          d = (e) => (e.stopPropagation(), e.preventDefault(), !0);
+        return (0, l.Qn)() && !l.TS.IN_STEAMUI
+          ? o.createElement(
+              n.B2,
               {
                 navID: r,
-                navTreeRef: s,
-                onCancelButton: n,
-                className: _.GamepadOnlyModalWrapper,
+                navTreeRef: u,
+                onCancelButton: i,
+                className: c.GamepadOnlyModalWrapper,
               },
-              i.createElement(
-                h.q,
+              o.createElement(
+                s.q,
                 null,
-                i.createElement(
-                  g.Z,
+                o.createElement(
+                  a.Z,
                   {
-                    className: _.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: a,
+                    className: c.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: d,
                     focusableIfNoChildren: !0,
                   },
                   t,
                 ),
               ),
             )
-          : i.createElement(i.Fragment, null, t);
+          : o.createElement(o.Fragment, null, t);
       }
-      var b = r(78395),
-        w = r(10411);
+      var d = r(78395),
+        m = r(10411),
+        p = (r(76222), r(2654)),
+        h = r(21869);
     },
     78025: (e, t, r) => {
       "use strict";
@@ -42468,7 +42462,7 @@
         a = r(88997),
         o = r(29636),
         l = r(13871),
-        c = r(375);
+        c = r(73745);
       const u = n.createContext(null);
       function d(e) {
         const {
@@ -42718,7 +42712,7 @@
       r(90626);
       var i = r(44332),
         n = r(6144),
-        s = (r(375), r(78025));
+        s = (r(73745), r(78025));
       r(97348);
       class a {
         constructor() {
@@ -43000,6 +42994,45 @@
           "div",
           { className: o.join(" "), ...r, ref: t },
           l({ className: "ModalPosition_Content", children: c }),
+        );
+      }
+    },
+    21869: (e, t, r) => {
+      "use strict";
+      r.d(t, { E: () => l });
+      var i = r(90626),
+        n = r(72739),
+        s = r(97348),
+        a = r(76222),
+        o = r(32754);
+      function l(e) {
+        const { active: t, children: r } = e,
+          l = (0, s.yk)() || (0, a.tx)(window),
+          c = (0, s.oJ)(),
+          [u, d] = i.useState(null),
+          [m, p] = i.useState(!1),
+          h = i.useRef();
+        if (
+          (i.useLayoutEffect(() => {
+            if (t) {
+              const e = l.ShowPortalModal(),
+                t = e.OnElementReadyCallbacks.Register(d),
+                r = e.OnModalActiveCallbacks.Register(p);
+              return (
+                (h.current = e.key),
+                () => {
+                  d(null), p(!1), e.Close(), t.Unregister(), r.Unregister();
+                }
+              );
+            }
+          }, [l, t]),
+          !u || !t)
+        )
+          return null;
+        let g = i.createElement(o.C$, null, r);
+        return (
+          c && (g = i.createElement(c, { active: m, modalKey: h.current }, g)),
+          n.createPortal(g, u)
         );
       }
     },
@@ -47875,6 +47908,7 @@
         A0: () => u,
         Hq: () => c.Hq,
         NT: () => b,
+        O9: () => v,
         PP: () => m,
         TW: () => c.TW,
         Yp: () => _,
@@ -47884,8 +47918,9 @@
         l4: () => y,
         lQ: () => c.lQ,
         oW: () => p,
-        pf: () => v,
+        pf: () => S,
         um: () => h,
+        vR: () => M,
         we: () => d,
       });
       var i = r(90626),
@@ -48018,11 +48053,11 @@
         }
       }
       function d(e, ...t) {
-        let r = v.LocalizeString(e);
+        let r = S.LocalizeString(e);
         return void 0 === r ? e : f(r, ...t);
       }
       function m(e, ...t) {
-        let r = v.LocalizeString(e);
+        let r = S.LocalizeString(e);
         if (void 0 === r) return e;
         let n,
           s = [],
@@ -48036,7 +48071,7 @@
         return s.push(r.substr(o)), i.createElement(i.Fragment, null, ...s);
       }
       function p(e, ...t) {
-        let r = v.LocalizeIfToken(e);
+        let r = S.LocalizeIfToken(e);
         return void 0 === r ? e : g(r, ...t);
       }
       function h(e, t, ...r) {
@@ -48164,8 +48199,28 @@
       function y() {
         return w[a.TS.LANGUAGE] || null;
       }
-      const v = new u();
-      window.LocalizationManager = v;
+      function v(e = !1) {
+        const t = new Map();
+        for (let r = 0; r < 31; ++r) {
+          if (25 == r) continue;
+          if (29 == r && !e) continue;
+          const i = (0, n.Lg)(r);
+          t.set(i, d("#Language_" + i));
+        }
+        return t;
+      }
+      function M(e, t) {
+        const r = [];
+        return (
+          e.forEach((e, i, n) => {
+            const s = t(e, i, n);
+            r.push(s);
+          }),
+          r
+        );
+      }
+      const S = new u();
+      window.LocalizationManager = S;
     },
     91675: (e, t, r) => {
       "use strict";
@@ -49010,7 +49065,7 @@
         return r != t ? r : (0, i.we)("#PartnerEvent_Other");
       }
     },
-    375: (e, t, r) => {
+    73745: (e, t, r) => {
       "use strict";
       r.d(t, {
         md: () => s.md,
@@ -49035,25 +49090,41 @@
         D5: () => n.D5,
         _g: () => i._g,
         DF: () => i.DF,
-        hd: () => a.h,
+        hd: () => o,
       });
       var i = r(64753),
         n = r(8871),
         s = r(30600),
-        a = r(34547),
-        o = r(90626);
+        a = r(90626);
+      function o() {
+        const [e, t] = (0, a.useState)(!1),
+          r = (0, s.BL)((0, a.useCallback)((e) => t(e.isIntersecting), [])),
+          { style: i, ref: o } = (function () {
+            const [e, t] = (0, a.useState)(null),
+              [r, i] = (0, a.useState)(null);
+            return (
+              (0, a.useEffect)(() => {
+                e && i(window.getComputedStyle(e));
+              }, [e]),
+              { style: r, ref: t }
+            );
+          })(),
+          l = (0, n.Ue)(r, o),
+          c = !i || "hidden" !== i.visibility;
+        return { bVisible: e && c, ref: l };
+      }
       function l(e) {
-        const t = o.useRef(!0),
-          r = o.useRef(void 0),
-          i = o.useRef(void 0),
-          a = o.useRef();
-        a.current = e;
-        const l = o.useRef(),
-          c = o.useCallback((e) => {
+        const t = a.useRef(!0),
+          r = a.useRef(void 0),
+          i = a.useRef(void 0),
+          o = a.useRef();
+        o.current = e;
+        const l = a.useRef(),
+          c = a.useCallback((e) => {
             l.current !== e && ((l.current = e), (t.current = !0));
           }, []),
-          u = o.useCallback(() => {
-            var e, t, n, s, o;
+          u = a.useCallback(() => {
+            var e, t, n, s, a;
             const c =
                 null !==
                   (t =
@@ -49071,11 +49142,11 @@
                   ? s
                   : 0;
             (r.current === c && i.current === u) ||
-              (null === (o = a.current) || void 0 === o || o.call(a, c, u),
+              (null === (a = o.current) || void 0 === a || a.call(o, c, u),
               (r.current = c),
               (i.current = u));
           }, []);
-        o.useLayoutEffect(() => {
+        a.useLayoutEffect(() => {
           t.current && (u(), (t.current = !1));
         });
         const d = (0, s.wY)(u);
@@ -49207,30 +49278,6 @@
       function u(e, ...t) {
         const r = new e.ownerDocument.defaultView.IntersectionObserver(...t);
         return r.observe(e), r;
-      }
-    },
-    34547: (e, t, r) => {
-      "use strict";
-      r.d(t, { h: () => a });
-      var i = r(90626),
-        n = r(30600),
-        s = r(8871);
-      function a() {
-        const [e, t] = (0, i.useState)(!1),
-          r = (0, n.BL)((0, i.useCallback)((e) => t(e.isIntersecting), [])),
-          { style: a, ref: o } = (function () {
-            const [e, t] = (0, i.useState)(null),
-              [r, n] = (0, i.useState)(null);
-            return (
-              (0, i.useEffect)(() => {
-                e && n(window.getComputedStyle(e));
-              }, [e]),
-              { style: r, ref: t }
-            );
-          })(),
-          l = (0, s.Ue)(r, o),
-          c = !a || "hidden" !== a.visibility;
-        return { bVisible: e && c, ref: l };
       }
     },
     41338: (e, t, r) => {
@@ -49481,7 +49528,7 @@
       r.d(t, { GD: () => a, jt: () => o });
       var i = r(90626),
         n = r(66703),
-        s = r(375);
+        s = r(73745);
       function a(e) {
         const [t, r] = i.useState(!1),
           a = i.useCallback(() => {

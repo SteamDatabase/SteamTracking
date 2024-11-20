@@ -3876,6 +3876,7 @@
                   value: { n: 2, br: u.qM.readString, bw: u.gp.writeString },
                   color: { n: 3, br: u.qM.readString, bw: u.gp.writeString },
                   label: { n: 4, br: u.qM.readString, bw: u.gp.writeString },
+                  name: { n: 5, br: u.qM.readString, bw: u.gp.writeString },
                 },
               }),
             Pe.sm_m

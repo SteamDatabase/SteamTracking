@@ -35,7 +35,7 @@
         u = n(44332),
         d = n(68797),
         m = n(6144),
-        _ = n(375),
+        _ = n(73745),
         g = n(30470);
       class p {
         m_mapProductPositionMsgList = new Map();

@@ -1288,6 +1288,7 @@ a.apphub_more_friends_who_play:hover
 {
 	margin: 0px;
 	padding-bottom: 10px;
+	clear: left;	/* images are all floated in app hubs for some reason */
 }
 
 .apphub_CardContentNewsFade

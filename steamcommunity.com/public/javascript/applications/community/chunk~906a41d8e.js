@@ -60,7 +60,7 @@
     },
     22797: (e, r, t) => {
       "use strict";
-      t.d(r, { t: () => n });
+      t.d(r, { t: () => f });
       var c = t(90626),
         o = t(52038),
         l = t(20978),
@@ -68,46 +68,47 @@
       const i =
         t.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
-      var a = t(42248);
-      const n = c.memo(function (e) {
+      var a = t(42248),
+        n = t(8527);
+      const f = c.memo(function (e) {
         const {
           className: r,
           size: t,
           string: l,
-          position: n,
-          static: b,
-          msDelayAppear: m,
+          position: f,
+          static: m,
+          msDelayAppear: h,
         } = e;
-        let h = [s().LoadingWrapper, "SteamLogoThrobber", f(t)];
-        const [u, d] = c.useState(!m),
-          p = !(0, a.q)();
+        let u = [s().LoadingWrapper, "SteamLogoThrobber", b(t)];
+        const [d, p] = c.useState(!h),
+          k = !(0, a.q)();
         return (
           (0, c.useEffect)(() => {
-            if (u) return;
-            const e = setTimeout(() => d(!0), m);
+            if (d) return;
+            const e = setTimeout(() => p(!0), h);
             return () => clearTimeout(e);
-          }, [m, u]),
-          void 0 === l && h.push(s().noString),
-          r && h.push(r),
-          b && h.push(s().Static),
+          }, [h, d]),
+          void 0 === l && u.push(s().noString),
+          r && u.push(r),
+          m && u.push(s().Static),
           c.createElement(
             "div",
             {
               className: (0, o.A)(
-                "center" == n && s().throbber_center_wrapper,
-                !!m && s().ThrobberDelayAppear,
-                u && s().Visible,
+                "center" == f && s().throbber_center_wrapper,
+                !!h && s().ThrobberDelayAppear,
+                d && s().Visible,
               ),
             },
-            u &&
-              p &&
+            d &&
+              k &&
               c.createElement(
                 "div",
-                { className: h.join(" ") },
+                { className: u.join(" ") },
                 c.createElement(
                   "div",
                   { className: s().NewThrobber },
-                  c.createElement("img", { src: i }),
+                  c.createElement("img", { src: (0, n.YJ)(i) }),
                 ),
               ),
             Boolean(l) &&
@@ -124,7 +125,7 @@
           static: a,
           msDelayAppear: n,
         } = e;
-        let m = [s().LoadingWrapper, "SteamLogoThrobber", f(t)];
+        let f = [s().LoadingWrapper, "SteamLogoThrobber", b(t)];
         const [h, u] = c.useState(!n);
         return (
           (0, c.useEffect)(() => {
@@ -132,9 +133,9 @@
             const e = setTimeout(() => u(!0), n);
             return () => clearTimeout(e);
           }, [n, h]),
-          void 0 === l && m.push(s().noString),
-          r && m.push(r),
-          a && m.push(s().Static),
+          void 0 === l && f.push(s().noString),
+          r && f.push(r),
+          a && f.push(s().Static),
           c.createElement(
             "div",
             {
@@ -147,12 +148,12 @@
             h &&
               c.createElement(
                 "div",
-                { className: m.join(" ") },
+                { className: f.join(" ") },
                 c.createElement(
                   "div",
                   { className: s().Throbber },
-                  c.createElement(b, { className: s().base }),
-                  c.createElement(b, { className: s().blur }),
+                  c.createElement(m, { className: s().base }),
+                  c.createElement(m, { className: s().blur }),
                 ),
               ),
             Boolean(l) &&
@@ -160,7 +161,7 @@
           )
         );
       });
-      function f(e) {
+      function b(e) {
         switch (e) {
           case "small":
             return s().throbber_small;
@@ -174,7 +175,7 @@
             return s().throbber_large;
         }
       }
-      function b(e) {
+      function m(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),

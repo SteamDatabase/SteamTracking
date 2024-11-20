@@ -2478,7 +2478,8 @@ GSteamCurators = {
 
 		var $ImgCtn = $J('<div class="capsule headerv5"/>');
 
-		$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5, alt: rgItemData.name } ) );
+		if ( rgItemData.headerv5 )
+			$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5, alt: rgItemData.name } ) );
 
 		if( rgItemData.has_live_broadcast )
 		{

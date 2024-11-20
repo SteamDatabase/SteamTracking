@@ -1151,6 +1151,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminremovedailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminupdatedailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxarchiveold
+${PARTNER_BASE_URL}promotion/dailydeals/ajaxgetdailydealreport/${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxgetpartner
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout

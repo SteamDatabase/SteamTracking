@@ -3068,6 +3068,42 @@
           : (0, s.we)(t + "Minutes", e);
       }
     },
+    30700: (e, t, r) => {
+      "use strict";
+      r.d(t, { q: () => l });
+      var s = r(90626),
+        i = r(78327),
+        a = r(73745);
+      const n = 2e4;
+      function l(e) {
+        const t = (0, s.useRef)(!1),
+          r = (0, s.useRef)(null),
+          l = (0, s.useCallback)(() => {
+            r.current = setTimeout(() => {
+              e.current &&
+                !e.current.paused &&
+                (e.current.pause(),
+                (t.current = !0),
+                "dev" == i.TS.WEB_UNIVERSE &&
+                  console.log(
+                    "useVideoAutoPauseOnBlur: Video paused due to inactivity.",
+                  ));
+            }, n);
+          }, [e]),
+          m = (0, s.useCallback)(() => {
+            r.current && (clearTimeout(r.current), (r.current = null)),
+              e.current &&
+                t.current &&
+                (e.current.play(),
+                (t.current = !1),
+                "dev" == i.TS.WEB_UNIVERSE &&
+                  console.log(
+                    "useVideoAutoPauseOnBlur: Video resumed on focus.",
+                  ));
+          }, [e]);
+        (0, a.l6)(window, "blur", l), (0, a.l6)(window, "focus", m);
+      }
+    },
     80620: (e, t, r) => {
       "use strict";
       r.d(t, { NI: () => M, WN: () => _, lS: () => d });
@@ -3122,7 +3158,7 @@
         );
       }
     },
-    59505: (e, t, r) => {
+    67819: (e, t, r) => {
       "use strict";
       r.d(t, { Q: () => fe, J: () => be });
       var s = r(22837),
@@ -3144,7 +3180,7 @@
           ? `${M.TS.MEDIA_CDN_URL}steam/marketing/${e}/${s.path}${i}`
           : `${M.TS.BASE_URL_SHARED_CDN}store_item_assets/mm/${e}/${t}/${s.path}${i}`;
       }
-      var B = r(375);
+      var B = r(73745);
       function p(e) {
         const { path: t, message: r, eLanguage: s, ...a } = e,
           n = r.GetTemplateVars()?.last_asset_mtime,
@@ -3187,50 +3223,13 @@
         E = r(94095),
         k = (r(51272), r(12155)),
         F = r(61336),
-        I = r(31343);
-      const W = 2e4;
+        I = r(31343),
+        W = r(30700);
       function C(e) {
         const t = be(),
           [r, s] = (0, i.useState)(() => t.GetFeaturedVideoAutoPlay()),
           a = (0, i.useRef)(null);
-        !(function (e) {
-          const t = (0, i.useRef)(!1),
-            r = (0, i.useRef)(null);
-          (0, i.useEffect)(() => {
-            const s = () => {
-                r.current = setTimeout(() => {
-                  e.current &&
-                    !e.current.paused &&
-                    (e.current.pause(),
-                    (t.current = !0),
-                    "dev" == l.TS.WEB_UNIVERSE &&
-                      console.log(
-                        "useVideoAutoPauseOnBlur: Video paused due to inactivity.",
-                      ));
-                }, W);
-              },
-              i = () => {
-                r.current && (clearTimeout(r.current), (r.current = null)),
-                  e.current &&
-                    t.current &&
-                    (e.current.play(),
-                    (t.current = !1),
-                    "dev" == l.TS.WEB_UNIVERSE &&
-                      console.log(
-                        "useVideoAutoPauseOnBlur: Video resumed on focus.",
-                      ));
-              };
-            return (
-              window.addEventListener("blur", s),
-              window.addEventListener("focus", i),
-              () => {
-                window.removeEventListener("blur", s),
-                  window.removeEventListener("focus", i),
-                  r.current && clearTimeout(r.current);
-              }
-            );
-          }, [e]);
-        })(a);
+        (0, W.q)(a);
         const n = (0, o.WN)(t.GetTemplateVars().linkurl, "button"),
           m = (0, l.Qn)();
         return i.createElement(
@@ -3998,7 +3997,7 @@
         B = r(90740),
         p = r(46773),
         y = r(22797),
-        b = r(59505);
+        b = r(67819);
       const f = 8;
       function w(e) {
         const { MarketingMessagesStore: t } = e,

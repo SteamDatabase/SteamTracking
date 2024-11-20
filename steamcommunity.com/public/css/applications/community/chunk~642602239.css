@@ -863,6 +863,11 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   display: flex;
   flex-wrap: nowrap;
 }
+@media screen and (max-width: 940px) {
+  ._1nUtBXgWizhgU1jv-8wVC7 {
+    margin-right: -2vw;
+  }
+}
 ._1xGaMOW4aakB5uwqOCT3nI {
   position: relative;
 }

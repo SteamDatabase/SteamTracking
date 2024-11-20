@@ -1536,7 +1536,7 @@
       var a = r(34629),
         n = r(90626),
         i = r(43465),
-        s = r(375);
+        s = r(73745);
       class o extends n.Component {
         state = { color: this.props.color || "rgba(1.0,1.0,1.0,1.0)" };
         static GetColorString(e) {
@@ -1748,7 +1748,7 @@
       var a = r(34629),
         n = r(90626),
         i = r(75844),
-        s = r(375);
+        s = r(73745);
       var o = r(44894),
         l = r(62490),
         c = r(41609),

@@ -4549,6 +4549,106 @@ CIndexedInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
 	}
 };
 
+
+/**
+ * Similar to CTextInputSuggest, but applies styling using the app_type value of each suggestion
+ *
+ * Each suggestion should include the suggestion text, and the app_type
+ *
+ * @param $InputElement
+ * @param fnSuggestForTerm
+ * @param fnOnSuggest
+ * @constructor
+ */
+function CAppTypeInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
+{
+	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass );
+}
+
+CAppTypeInputSuggest.prototype = Object.create( CTextInputSuggest.prototype );
+
+CAppTypeInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
+{
+	var strLastFocus = this.m_strLastFocusVal;
+
+	this.m_$Suggestions.empty();
+
+	this.m_$Focus = $J();
+	this.m_strLastFocus = null;
+
+	if ( rgSuggestions && rgSuggestions.length )
+	{
+		var _this = this;
+		for ( var i = 0; i < rgSuggestions.length; i++ )
+		{
+			var $class = 'suggestion_item popup_menu_item';
+			var $suggestionText = rgSuggestions[i][0];
+
+			if ( typeof rgSuggestions[i][1] !== 'undefined' )
+			{
+				switch ( parseInt( rgSuggestions[i][1] ) )
+				{
+					case 1:
+						$class += ' app_Game';
+						$suggestionText = '[Game] ' + $suggestionText;
+						break;
+					case 2:
+						$suggestionText = '[App] ' + $suggestionText;
+						break;
+					case 4:
+						$suggestionText = '[Tool] ' + $suggestionText;
+						break;
+					case 8:
+						$class += ' app_Demo';
+						$suggestionText = '[Demo] ' + $suggestionText;
+						break;
+					case 16:
+						$suggestionText = '[Media] ' + $suggestionText;
+						break;
+					case 32:
+						$class += ' app_DLC';
+						$suggestionText = '[DLC] ' + $suggestionText;
+						break;
+					case 256:
+						$suggestionText = '[Config] ' + $suggestionText;
+						break;
+					case 2048:
+						$class += ' app_Movie';
+						$suggestionText = '[Video] ' + $suggestionText;
+						break;
+					case 8192:
+						$class += ' app_Music';
+						$suggestionText = '[Music] ' + $suggestionText;
+						break;
+					case 65536:
+						$class += ' app_Beta';
+						$suggestionText = '[Beta] ' + $suggestionText;
+						break;
+				}
+			}
+
+			var $Suggestion = $J('<div/>', {'class': $class } );
+			$Suggestion.text( $suggestionText );
+
+			$Suggestion.click( $J.proxy( this.OnSuggestionSelected, this, $Suggestion ) );
+			$Suggestion.mouseenter( $J.proxy( this.SetFocus, this, $Suggestion ) );
+
+			this.m_$Suggestions.append( $Suggestion );
+
+			if ( rgSuggestions[i] == strLastFocus )
+				this.SetFocus( $Suggestion );
+		}
+		this.m_bHaveSuggestions = true;
+		this.ShowSuggestions();
+	}
+	else
+	{
+		this.m_bHaveSuggestions = false;
+		this.HideSuggestions();
+	}
+};
+
+
 function InitBBCodeVideos( bAllowAutoPlay )
 {
 	var videos = $J( "video" );

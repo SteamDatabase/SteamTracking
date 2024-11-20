@@ -1366,6 +1366,7 @@
                     bw: n.gp.writeUint32,
                   },
                   machine_id: { n: 6, br: n.qM.readBytes, bw: n.gp.writeBytes },
+                  app_type: { n: 7, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
             u.sm_m
@@ -2086,6 +2087,7 @@
                     br: n.qM.readInt32,
                     bw: n.gp.writeInt32,
                   },
+                  app_type: { n: 14, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
             b.sm_m
@@ -5136,7 +5138,7 @@
         S = (r(97875), r(22797)),
         M = r(32754),
         R = r(61859),
-        v = r(375),
+        v = r(73745),
         z = r(78327),
         C = r(28240),
         T = r(34629),

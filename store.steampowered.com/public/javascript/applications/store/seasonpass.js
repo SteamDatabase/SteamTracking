@@ -24,7 +24,7 @@
         Status: "hsVfYc1PxvDcBuC6uvKVs",
         Content: "_2xEP9Nk68W8GGzPlKeD2Pm",
         Text: "_1s9wb2xTKTarIgMnEy3ggl",
-        padding: "_3RFybJbGoG8y80WpEGuOMz",
+        Padding: "_3NZPwN6ASHrrBSGBaVpiDL",
         Strike: "beE-h2-Nw_6g1LqM9LyaK",
         Chevron: "_1KM0040wsc_C2KCgj2t9Ev",
       };
@@ -249,11 +249,11 @@
         return `${I.TS.STORE_ICON_BASE_URL}${n}/`;
       }
       var w = n(61859),
-        G = n(26296),
-        b = n(4852),
-        A = n.n(b),
-        D = n(24484);
-      function N(e) {
+        N = n(26296),
+        A = n(4852),
+        D = n.n(A),
+        G = n(24484);
+      function b(e) {
         return new v.OJ(new v.R8(), 0);
       }
       function R(e) {
@@ -262,15 +262,15 @@
             new h.B(
               new Map([
                 ...Array.from(g.W4.entries()),
-                ["img", { Constructor: C, autocloses: !1 }],
+                ["img", { Constructor: L, autocloses: !1 }],
               ]),
-              N,
+              b,
               n,
             ),
           );
         return s.createElement(s.Fragment, null, a.ParseBBCode(t, {}));
       }
-      function C(e) {
+      function L(e) {
         const { showErrorInfo: t } = e.context;
         let n = e?.children?.toString();
         if (
@@ -279,24 +279,24 @@
           null == n || null == n || 0 == n.length)
         )
           return "";
-        const a = (0, D.Fd)("store_page_asset_url", "application_config");
+        const a = (0, G.Fd)("store_page_asset_url", "application_config");
         return (
           (n =
             a && n.startsWith(P.qR)
               ? a.replace("%s", n.replace(P.qR, ""))
               : n.replace(P.qR, f()).replace("http://", "https://")),
           t
-            ? s.createElement(G.i, { className: A().StoreImage, src: n })
+            ? s.createElement(N.i, { className: D().StoreImage, src: n })
             : s.createElement("img", {
-                className: A().StoreImage,
+                className: D().StoreImage,
                 src: n,
                 alt: (0, w.we)("#EventEditor_InsertImage_URL"),
               })
         );
       }
-      var L = n(52038),
-        y = n(66618),
-        B = n.n(y);
+      var C = n(52038),
+        B = n(66618),
+        y = n.n(B);
       function k(e) {
         const { season_pass: t } = e;
         return t && t.milestones && 0 != t.milestones.length
@@ -305,7 +305,10 @@
               { feature: "seasonpassproductpage" },
               s.createElement(
                 "div",
-                { className: "game_area_description overflow_allowed" },
+                {
+                  className:
+                    "game_area_description overflow_allowed season_pass_area",
+                },
                 s.createElement("h2", null, (0, w.we)("#SeasonPass_Header")),
                 s.createElement(
                   "p",
@@ -325,7 +328,7 @@
                 t.milestones
                   .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
                   .map((e) =>
-                    s.createElement(M, {
+                    s.createElement(T, {
                       key: "ms_" + e.milestone_id,
                       baseGameAppID: t.appid,
                       milestone: e,
@@ -335,16 +338,16 @@
             )
           : null;
       }
-      function M(e) {
+      function T(e) {
         const { milestone: t, baseGameAppID: n } = e,
           a = t.milestone_desc?.length > 0;
         return s.createElement(
           "div",
-          { className: B().SeasonPass },
+          { className: y().SeasonPass },
           s.createElement(
             "div",
             {
-              className: (0, L.A)(B().Title, Boolean(t.shipped) && B().Shipped),
+              className: (0, C.A)(y().Title, Boolean(t.shipped) && y().Shipped),
             },
             s.createElement(
               "span",
@@ -355,14 +358,14 @@
             ),
             s.createElement(
               "div",
-              { className: B().DateAndControl },
-              s.createElement(O, { milestone: t }),
+              { className: y().DateAndControl },
+              s.createElement(U, { milestone: t }),
             ),
           ),
-          a && s.createElement(T, { milestone: t, baseGameAppID: n }),
+          a && s.createElement(M, { milestone: t, baseGameAppID: n }),
         );
       }
-      function T(e) {
+      function M(e) {
         const { milestone: t, baseGameAppID: n } = e,
           a = w.A0.GetTokenWithFallback(t.milestone_desc);
         return s.createElement(
@@ -371,19 +374,19 @@
           Boolean(t.appid) && s.createElement(S, { appid: t.appid }),
           s.createElement(
             "div",
-            { className: B().Description },
+            { className: y().Description },
             s.createElement(R, { text: a }),
             Boolean(t.shipped) &&
               s.createElement(F, { milestone: t, baseGameAppID: n }),
           ),
         );
       }
-      function O(e) {
+      function U(e) {
         const { milestone: t } = e;
         return t.shipped
           ? s.createElement(
               "div",
-              { className: B().Shipped },
+              { className: y().Shipped },
               (0, w.PP)(
                 "#SeasonPass_Released_Date",
                 s.createElement("br", null),
@@ -392,7 +395,7 @@
             )
           : s.createElement(
               "div",
-              { className: B().Upcoming },
+              { className: y().Upcoming },
               (0, w.PP)(
                 "#SeasonPass_Release_Date",
                 s.createElement("br", null),
@@ -407,7 +410,7 @@
                     "div",
                     {
                       key: "dd" + e.rtime + e.coming_soon_display_type,
-                      className: n + 1 < t.dates.length ? B().Strike : void 0,
+                      className: n + 1 < t.dates.length ? y().Strike : void 0,
                     },
                     a,
                   );
@@ -415,7 +418,7 @@
               ),
             );
       }
-      const U = {};
+      const O = {};
       function F(e) {
         const { milestone: t, baseGameAppID: n } = e;
         return s.createElement(
@@ -423,21 +426,21 @@
           null,
           s.createElement(
             "div",
-            { className: B().Status },
+            { className: y().Status },
             (0, w.PP)(
               t.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
             ),
           ),
           t.appid && s.createElement(x, { milestone: t }),
           Boolean(t.appid && t.event_gid) &&
-            s.createElement("span", { className: B().padding }),
+            s.createElement("span", { className: y().Padding }),
           Boolean(t.event_gid) &&
             s.createElement(W, { milestone: t, baseGameAppID: n }),
         );
       }
       function x(e) {
         const { milestone: t } = e,
-          [n] = (0, r.t7)(t.appid, U);
+          [n] = (0, r.t7)(t.appid, O);
         return s.createElement(
           "a",
           {

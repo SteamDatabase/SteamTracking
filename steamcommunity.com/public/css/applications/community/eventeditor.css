@@ -1093,6 +1093,12 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   gap: 8px;
   padding: 4px;
 }
+._8MIrt7rQXkA0xE5sAjOee > * {
+  flex-grow: 0;
+}
+._8MIrt7rQXkA0xE5sAjOee > ._22b0C1Xi03QNdTFKsYypHR {
+  flex-grow: 1;
+}
 .cMmai1T2HLkMm53hworFg {
   display: flex;
   justify-content: center;

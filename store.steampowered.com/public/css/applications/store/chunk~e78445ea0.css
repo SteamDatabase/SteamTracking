@@ -266,6 +266,7 @@
   row-gap: 8px;
   overflow: scroll;
   -webkit-mask-image: linear-gradient(black 94%, transparent);
+  mask-image: linear-gradient(black 94%, transparent);
   scrollbar-width: none;
 }
 .BasicUI ._2Zwt2P5vy4W9Ha5ePOv54U ._3TkhdqIi1gqwMzexQDS8Ab {
@@ -300,6 +301,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
@@ -311,6 +313,11 @@
   display: flex;
   white-space: nowrap;
   -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  mask-image: linear-gradient(
     to right,
     black calc(100% - 32px),
     transparent calc(100% - 8px)
@@ -670,6 +677,7 @@
   transform: translateX(-50%);
   z-index: 10;
   justify-content: space-between;
+  pointer-events: none;
 }
 ._2DnR4EtN0k8Zy_jOfT5QqV ._2sZ7DAljYV5Xd-nbhtlmyM {
   cursor: pointer;
@@ -692,6 +700,7 @@
 }
 ._2DnR4EtN0k8Zy_jOfT5QqV ._2sZ7DAljYV5Xd-nbhtlmyM._2CTzbHZ-C-FfnXEtLZPv9q {
   visibility: visible;
+  pointer-events: all;
 }
 ._2DnR4EtN0k8Zy_jOfT5QqV ._2sZ7DAljYV5Xd-nbhtlmyM:hover {
   background-color: #fff;
@@ -777,6 +786,11 @@
     black calc(100% - 32px),
     transparent calc(100% - 8px)
   );
+  mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
   margin-right: -16px;
   margin-top: 2px;
 }
@@ -840,6 +854,7 @@
 ._1PuKitjqWv0B0oiYlNtQLC {
   text-align: center;
   margin-top: 16px;
+  min-height: 20px;
 }
 ._1PuKitjqWv0B0oiYlNtQLC .TlkSt1YkgKK9YnX7QQE4Z {
   margin-left: 4px;

@@ -3460,11 +3460,13 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorStandard_GxgIy::after {
   bottom: -0.5px;
+  margin-left: calc(var(--indent-level) * 18px);
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorThick_39x36::after {
   bottom: -0.75px;
+  margin-left: calc(var(--indent-level) * 18px);
   height: 1.5px;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -11627,10 +11629,13 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   display: flex;
   flex-direction: row;
 }
+.meetsteambbcode_SessionColumnCtn_iUmtJ {
+  width: 30%;
+}
 .meetsteambbcode_SessionInstance_1igTM {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 30%;
   text-align: center;
 }
 .meetsteambbcode_SessionInstance_1igTM .meetsteambbcode_Button_2qgSQ {
@@ -11638,6 +11643,7 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #707787, #555b67);
+  border: none;
   margin: 10px 0;
   padding: 12px 16px;
   border-radius: 4px;
@@ -11656,7 +11662,15 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
 .meetsteambbcode_SessionInstance_1igTM
   .meetsteambbcode_Button_2qgSQ
   .meetsteambbcode_Title_3iF42 {
+  font-size: 15px;
   font-weight: 600;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+.meetsteambbcode_SessionInstance_1igTM
+  .meetsteambbcode_Button_2qgSQ
+  .meetsteambbcode_TimeFrame_3HLk0 {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
 }
 .meetsteambbcode_Max_1-LTO {
   font-size: 13px;
@@ -11671,22 +11685,57 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
 .meetsteambbcode_Time_8oQG_ {
   font-size: 16px;
 }
-.meetsteambbcode_Registered_1D1F4 {
-  color: green;
-}
-.meetsteambbcode_Registering_td3x9 {
-  color: #adff2f;
-}
+.meetsteambbcode_Registering_td3x9,
+.meetsteambbcode_Registered_1D1F4,
 .meetsteambbcode_Unregistering_twKyI {
-  color: #ff0;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.meetsteambbcode_Registering_td3x9 span,
+.meetsteambbcode_Registered_1D1F4 span,
+.meetsteambbcode_Unregistering_twKyI span {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  background-color: #47ffc8;
+  font-size: 12px;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.meetsteambbcode_Registered_1D1F4 span {
+  background-color: #47bfff;
+}
+.meetsteambbcode_Unregistering_twKyI span {
+  background-color: #9c9c21;
+}
+@keyframes meetsteambbcode_confirm-panel-intro_1zMMd {
+  0% {
+    filter: brightness(0.5);
+  }
+  30% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }
 .meetsteambbcode_CompleteRegistrationCtn_6ykmN {
   display: none;
+  padding: 16px;
+  background: #545963;
+  box-shadow: 0 0 10px #000;
+  margin-top: 20px;
 }
 .meetsteambbcode_CompleteRegistrationCtn_6ykmN.meetsteambbcode_Visible_3WTs5 {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   position: sticky;
   bottom: 0;
+  animation: meetsteambbcode_confirm-panel-intro_1zMMd .2s;
 }
 .localdateandtime_DateAndTime_2V6GL,
 .localdateandtime_DateAndTimeInline_HZ6b2 {
@@ -12147,7 +12196,8 @@ html:not(.touch)
     #225dce 80%
   );
   border-radius: 3px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 .eventreminder_ReminderCheckBox_vPo2j.eventreminder_TextMode_553rC:hover,
 .eventreminder_ReminderCheckBox_vPo2j.eventreminder_IconMode_1YjsR:hover:hover,

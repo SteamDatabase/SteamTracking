@@ -99,18 +99,21 @@
         SessionTitle: "_3vGq3WcmmGaYbbqYkD9Ysp",
         SessionDesc: "_24r8E1kKzw_9iIVhmvEZ3T",
         SessionOptions: "_3KAHxFNUEscoxtvBzwWKvs",
+        SessionColumnCtn: "iUmtJvs3v_bmv-tu43tpL",
         SessionInstance: "_1igTM-TlnNkIhWxl95pTyB",
         Button: "_2qgSQSN_hv-UncznBRb42v",
         Title: "_3iF42Uos8JELw32j386Kco",
+        TimeFrame: "_3HLk01gOqM10DYThBCLuUx",
         Max: "_1-LTOHwZqSK67eUyq4qscx",
         InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         Day: "_2Zkbwdhs4WPVI1ZyUHtHUG",
         Time: "_8oQG_Wbl2-Eamq1WKMAoo",
-        Registered: "_1D1F4nOnNKanKGRqRk3pWr",
         Registering: "td3x9QaINc75mi2ppkGoF",
+        Registered: "_1D1F4nOnNKanKGRqRk3pWr",
         Unregistering: "twKyIz0VYgtl76vlWI0Xn",
         CompleteRegistrationCtn: "_6ykmNnOs_SfkGOYurJogH",
         Visible: "_3WTs5L7ce_Du4_KNac_sXd",
+        "confirm-panel-intro": "_1zMMdC3loRunAeI72QvaDX",
       };
     },
     56524: (e) => {
@@ -252,6 +255,7 @@
         CarouselDisplay: "mntHD0WiARnsfz_kMYssq",
         SaleSectionCtn: "i2PTzRNXOK1OXvXb9-wzd",
         SaleHeaderContainer: "W4mvnnQ0uYKKoCfVm8QgX",
+        SaleSectionTabs: "_1FPIVJTLsw1nvAN24BGGKg",
         SaleViewAll: "_1bsBzvGKJui5_QaWVRBFDo",
         SaleSectionLoginPrompt: "_2-dSBTJ6PQzCGvK48gjCCf",
         LoginButton: "_3h6sHYHa8EFm2_xoGiVAnh",
@@ -279,7 +283,6 @@
         SalePageBroadcastContextHover: "hbVdlTqhylKeYY8mtvLqP",
         AlbumCoverImage: "_2JfUA1GR2GBllJws5Gspq-",
         AlbumTitle: "keaMw-O2oHvRxLDK6gqEG",
-        SaleSectionTabs: "_1FPIVJTLsw1nvAN24BGGKg",
         DesktopTabs: "_2utXvAVvZJb3Wlt5jGxCs",
         SaleSectionTabsTab: "_3BgHmwox82MCNAE15H28dc",
         SaleSectionTabContainer: "_1Svj0QB6CvcmNGjDP2woOu",
@@ -1394,15 +1397,6 @@
           });
       })(b || (b = {}));
     },
-    66418: (e, t, r) => {
-      "use strict";
-      r.d(t, { T: () => i, i: () => n });
-      var a = r(30470);
-      const i = window.Config ?? a.TS,
-        n = window.UserConfig ?? a.iA;
-      window.Config && Object.assign(a.TS, window.Config),
-        window.UserConfig && Object.assign(n, window.UserConfig);
-    },
     3578: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => n });
@@ -1485,7 +1479,7 @@
       r.d(t, { n9: () => l, nn: () => o, pn: () => c, ru: () => m });
       var a = r(90626),
         i = r(3578),
-        n = r(66418);
+        n = r(8527);
       const s = a.createContext({});
       a.createContext(void 0);
       function o(e) {
@@ -1513,8 +1507,8 @@
           ...e,
           feature: t || e.feature,
           depth: r || e.depth,
-          countrycode: n.T.COUNTRY,
-          is_client: n.T.IN_CLIENT,
+          countrycode: n.TS.COUNTRY,
+          is_client: n.TS.IN_CLIENT,
         };
       }
       function m(e, t) {
@@ -1966,47 +1960,46 @@
             Constructor: function (e) {
               const t = T(e.args, "title"),
                 r = T(e.args, "start") ?? T(e.args, "datetime"),
-                a =
-                  (T(e.args, "end") ?? T(e.args, "datetime"),
-                  T(e.args, "body") ?? null),
-                n = T(e.args, "location") ?? null,
-                s = T(e.args, "id") ?? "",
-                o = new Date(r),
-                l = o.getUTCFullYear(),
-                d = ("0" + (o.getUTCMonth() + 1)).slice(-2),
-                u = ("0" + o.getUTCDate()).slice(-2),
-                p = ("0" + o.getUTCHours()).slice(-2),
-                _ = ("0" + o.getUTCMinutes()).slice(-2),
-                h = `${l}${d}${u}T${p}${_}00Z`,
-                g = new Date(r),
-                y = g.getUTCFullYear(),
-                S = ("0" + (g.getUTCMonth() + 1)).slice(-2),
-                b = ("0" + g.getUTCDate()).slice(-2),
-                w = ("0" + g.getUTCHours()).slice(-2),
-                v = ("0" + g.getUTCMinutes()).slice(-2),
-                B = `${y}${S}${b}T${w}${v}00Z`;
-              let I;
+                a = T(e.args, "end") ?? T(e.args, "datetime"),
+                n = T(e.args, "body") ?? null,
+                s = T(e.args, "location") ?? null,
+                o = T(e.args, "id") ?? "",
+                l = new Date(r),
+                d = l.getUTCFullYear(),
+                u = ("0" + (l.getUTCMonth() + 1)).slice(-2),
+                p = ("0" + l.getUTCDate()).slice(-2),
+                _ = ("0" + l.getUTCHours()).slice(-2),
+                h = ("0" + l.getUTCMinutes()).slice(-2),
+                g = `${d}${u}${p}T${_}${h}00Z`,
+                y = new Date(a),
+                S = y.getUTCFullYear(),
+                b = ("0" + (y.getUTCMonth() + 1)).slice(-2),
+                w = ("0" + y.getUTCDate()).slice(-2),
+                v = ("0" + y.getUTCHours()).slice(-2),
+                B = ("0" + y.getUTCMinutes()).slice(-2),
+                I = `${S}${b}${w}T${v}${B}00Z`;
+              let C;
               try {
                 let e = "BEGIN:VCALENDAR\r\n";
                 (e += "VERSION:2.0\r\n"),
                   (e += "BEGIN:VEVENT\r\n"),
-                  (e += `DTSTART:${h}\r\n`),
-                  (e += `DTEND:${B}\r\n`),
+                  (e += `DTSTART:${g}\r\n`),
+                  (e += `DTEND:${I}\r\n`),
                   (e += `SUMMARY:${t.replace("\n", "\\n")}\r\n`),
-                  a && (e += `DESCRIPTION:${a.replace("\n", "\\n")}\r\n`),
-                  n && (e += `LOCATION:${n.replace("\n", "\\n")}\r\n`),
+                  n && (e += `DESCRIPTION:${n.replace("\n", "\\n")}\r\n`),
+                  s && (e += `LOCATION:${s.replace("\n", "\\n")}\r\n`),
                   (e += "END:VEVENT\r\n"),
                   (e += "END:VCALENDAR\r\n"),
-                  (I = `data:text/calendar;charset=utf-8;base64,${c.fromByteArray(new TextEncoder().encode(e))}`);
+                  (C = `data:text/calendar;charset=utf-8;base64,${c.fromByteArray(new TextEncoder().encode(e))}`);
               } catch (e) {
                 console.error(e);
               }
-              let C =
+              let E =
                 "https://calendar.google.com/calendar/render?action=TEMPLATE";
               return (
-                (C += `&text=${encodeURI(t)}`),
-                (C += `&details=${encodeURI(a)}`),
-                (C += `&dates=${encodeURI(h + "/" + B)}`),
+                (E += `&text=${encodeURI(t)}`),
+                (E += `&details=${encodeURI(n)}`),
+                (E += `&dates=${encodeURI(g + "/" + I)}`),
                 m.createElement(
                   "div",
                   {
@@ -2014,9 +2007,9 @@
                       "SaleSectionCalendarEventContainer",
                       i().CalendarEventContainer,
                     ),
-                    id: s,
+                    id: o,
                   },
-                  I &&
+                  C &&
                     m.createElement(
                       "a",
                       {
@@ -2024,7 +2017,7 @@
                           "SaleSectionCalendarEventLink",
                           i().CalendarEventLink,
                         ),
-                        href: I,
+                        href: C,
                         download: "steam_deck_white_release.ics",
                       },
                       "Apple",
@@ -2036,11 +2029,11 @@
                         "SaleSectionCalendarEventLink",
                         i().CalendarEventLink,
                       ),
-                      href: C,
+                      href: E,
                     },
                     "Google",
                   ),
-                  I &&
+                  C &&
                     m.createElement(
                       "a",
                       {
@@ -2048,7 +2041,7 @@
                           "SaleSectionCalendarEventLink",
                           i().CalendarEventLink,
                         ),
-                        href: I,
+                        href: C,
                         download: "steam_deck_white_release.ics",
                       },
                       "Outlook",
@@ -7252,7 +7245,7 @@
         _ = r(44332),
         h = r(68797),
         g = r(6144),
-        y = (r(375), r(14771)),
+        y = (r(73745), r(14771)),
         S = r(78327),
         b = r(27666),
         f = r(82705),
@@ -13508,7 +13501,7 @@
           );
         }
       }
-      var pe = r(66418);
+      var pe = r(8527);
       var _e = r(20194),
         he = r(44736),
         ge = r(14771);
@@ -13545,7 +13538,7 @@
                 const t = "function" == typeof e.g_wapitRefresh;
                 let r;
                 return (
-                  !pe.T.IN_CLIENT &&
+                  !pe.TS.IN_CLIENT &&
                     t &&
                     (r = () =>
                       new Promise((t, r) => {
@@ -13554,7 +13547,7 @@
                         }),
                           window.setTimeout(() => r("Refresh Timeout"), 1e4);
                       })),
-                  new ue(pe.T.WEBAPI_BASE_URL, e.g_wapit, !1, r)
+                  new ue(pe.TS.WEBAPI_BASE_URL, e.g_wapit, !1, r)
                 );
               })(),
               n = await ie.GetUserActionData(t.GetServiceTransport(), e);
@@ -14581,7 +14574,7 @@
         g = r(41338),
         y = r(78327),
         S = r(90626),
-        b = r(375);
+        b = r(73745);
       class f {
         appid;
         date;
@@ -15765,7 +15758,7 @@
       var a = r(41735),
         i = r.n(a),
         n = r(90626),
-        s = r(375),
+        s = r(73745),
         o = r(82097);
       function l(e, t, r, a) {
         const l = (0, n.useRef)(),
@@ -16891,7 +16884,7 @@
         p = r(34629),
         _ = r(62490),
         h = r(94607),
-        g = r(375);
+        g = r(73745);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
@@ -17467,7 +17460,7 @@
         i = r(22837),
         n = r(81393),
         s = r(64753),
-        o = r(66418),
+        o = r(8527),
         l = r(65946),
         c = r(90626),
         m = r(59952),
@@ -17505,7 +17498,7 @@
             t,
             r.clanSteamID.GetAccountID(),
             r.GID,
-            new w.b(o.i.steamid),
+            new w.b(o.iA.steamid),
           ),
           {
             sUserAccountEmail: E,
@@ -17515,7 +17508,7 @@
             () => ({
               sUserAccountRealName: (0, b.Tc)("realname", "application_config"),
               sUserAccountEmail: (0, b.Tc)("email", "application_config"),
-              rgPartners: (0, b.Tc)("partners", "application_config"),
+              rgPartners: (0, b.Tc)("partners", "application_config") ?? [],
             }),
             [],
           ),
@@ -17850,7 +17843,7 @@
           r = e.context.showErrorInfo,
           a = (0, m.j$)(e.args, "group_id"),
           i = Number.parseInt(a),
-          n = (0, l.q3)(() => N(t, i));
+          n = (0, l.q3)(() => W(t, i));
         return n
           ? t.clanSteamID.GetAccountID() != k()
             ? r
@@ -17860,7 +17853,7 @@
                 c.Fragment,
                 null,
                 c.createElement(L, { groupData: n, eventModel: t }),
-                c.createElement(z, { eventModel: t }),
+                c.createElement(N, { eventModel: t }),
               )
           : r
             ? c.createElement(
@@ -17874,26 +17867,26 @@
       function U() {
         const e = (0, b.Tc)("promotion_operation_token", "application_config");
         (0, n.w)(Boolean(e), "require promotion_operation_token");
-        const [t] = (0, c.useState)(() =>
+        const [t] = c.useState(() =>
           new d.D(S.TS.WEBAPI_BASE_URL, e).GetServiceTransport(),
         );
         return t;
       }
       function L(e) {
         const { groupData: t, eventModel: r } = e,
-          a = U(),
-          i = G(),
-          n = (0, u.m)(a, r.clanSteamID.GetAccountID(), r.GID),
-          s = t?.sessions,
-          m = W(),
-          d = (0, l.q3)(() =>
-            s?.reduce(
+          i = U(),
+          n = G(),
+          s = (0, u.m)(i, r.clanSteamID.GetAccountID(), r.GID),
+          m = t?.sessions,
+          d = H(),
+          p = (0, l.q3)(() =>
+            m?.reduce(
               (e, r) =>
                 e.set(r.id, A.Get().GetRegistrationStatus(t.group_id, r.id)),
               new Map(),
             ),
           );
-        if (!n.isSuccess || (i && o.i.accountid))
+        if (!s.isSuccess || (n && o.iA.accountid))
           return c.createElement(_.t, {
             size: "medium",
             position: "center",
@@ -17902,25 +17895,33 @@
         return c.createElement(
           P,
           { groupData: t },
-          s?.map((e, r) => {
-            const a = n.data.find(
+          m?.map((e, r) => {
+            const i = s.data.find(
                 (r) => r.group_id === t.group_id && r.session_id === e.id,
               ),
-              i = d.get(e.id);
-            return c.createElement(O, {
-              key: "timecol_" + t.group_id + "_" + e.id,
-              sessionData: e,
-              bShowOR: r + 1 < s.length,
-              onClick: () =>
-                m(() =>
-                  ((e) => {
-                    const r = A.Get().GetSelection(t.group_id) == e;
-                    A.Get().SetSelection(t.group_id, r ? void 0 : e);
-                  })(e.id),
-                ),
-              nGuestReservations: a?.guest_count || 0,
-              eRegistrationStatus: i,
-            });
+              n = p.get(e.id),
+              o = r + 1 < m.length;
+            return c.createElement(
+              c.Fragment,
+              { key: "timecol_" + t.group_id + "_" + e.id },
+              c.createElement(
+                "div",
+                { className: a.SessionColumnCtn },
+                c.createElement(O, {
+                  sessionData: e,
+                  onClick: () =>
+                    d(() =>
+                      ((e) => {
+                        const r = A.Get().GetSelection(t.group_id) == e;
+                        A.Get().SetSelection(t.group_id, r ? void 0 : e);
+                      })(e.id),
+                    ),
+                  nGuestReservations: i?.guest_count || 0,
+                  eRegistrationStatus: n,
+                }),
+              ),
+              o && c.createElement(z, null),
+            );
           }),
         );
       }
@@ -17944,67 +17945,83 @@
       function O(e) {
         const {
             sessionData: t,
-            bShowOR: r,
-            onClick: i,
-            nGuestReservations: n,
-            eRegistrationStatus: s = 0,
+            onClick: r,
+            nGuestReservations: i,
+            eRegistrationStatus: n = 0,
           } = e,
-          [o, m, d] = (0, l.q3)(() => [
+          [s, o, m] = (0, l.q3)(() => [
             t.rtime_start,
             t.rtime_end,
             t.max_capacity,
           ]),
-          u = Math.max(0, d - (n || 0)),
-          p = (0 === s && u > 0) || 1 === s || 2 === s || 3 === s;
+          d = Math.max(0, m - (i || 0)),
+          u = (0 === n && d > 0) || 1 === n || 2 === n || 3 === n;
         return c.createElement(
           c.Fragment,
           null,
           c.createElement(
             "div",
             { className: a.SessionInstance },
-            1 == s &&
+            1 == n &&
               c.createElement(
                 "div",
                 { className: a.Registered },
-                (0, g.we)("#MeetSteam_Registered"),
+                c.createElement(
+                  "span",
+                  null,
+                  (0, g.we)("#MeetSteam_Registered"),
+                ),
               ),
-            2 == s &&
+            2 == n &&
               c.createElement(
                 "div",
                 { className: a.Registering },
-                (0, g.we)("#MeetSteam_Registering"),
+                c.createElement(
+                  "span",
+                  null,
+                  (0, g.we)("#MeetSteam_Registering"),
+                ),
               ),
-            3 == s &&
+            3 == n &&
               c.createElement(
                 "div",
                 { className: a.Unregistering },
-                (0, g.we)("#MeetSteam_Unegistering"),
+                c.createElement(
+                  "span",
+                  null,
+                  (0, g.we)("#MeetSteam_Unegistering"),
+                ),
               ),
             c.createElement(
               "button",
-              { className: a.Button, disabled: !p, onClick: i },
+              { className: a.Button, disabled: !u, onClick: r },
               c.createElement(
                 "div",
                 { className: a.Title },
-                (0, y.$w)(new Date(1e3 * o)),
+                (0, y.$w)(new Date(1e3 * s)),
               ),
-              c.createElement("div", null, (0, y.Vx)(o, m)),
+              c.createElement(
+                "div",
+                { className: a.TimeFrame },
+                (0, y.Vx)(s, o),
+              ),
             ),
             c.createElement(
               "div",
               { className: a.max },
-              (0, g.Yp)("#MeetSteam_Spot", u.toLocaleString()),
+              (0, g.Yp)("#MeetSteam_Spot", d.toLocaleString()),
             ),
           ),
-          r &&
-            c.createElement(
-              "div",
-              { className: a.InstanceDivider },
-              (0, g.we)("#MeetSteam_Or"),
-            ),
         );
       }
-      function z(e) {
+      function z() {
+        return c.createElement(
+          "div",
+          { className: a.InstanceDivider },
+          (0, g.we)("#MeetSteam_Or"),
+        );
+      }
+      function N(e) {
         const { eventModel: t } = e,
           r = "complete-registration-marker",
           { refIsLast: i, bIsLast: n } = (function (e) {
@@ -18019,18 +18036,18 @@
             );
           })(r),
           m = U(),
-          [d, y] = (0, c.useState)(!1),
-          [S, b] = (0, c.useState)(!1);
+          [d, y] = c.useState(!1),
+          [S, b] = c.useState(!1);
         !(function (e, t, r, a) {
           c.useEffect(() => {
             (async () => {
               A.Get().Init(e, t, r, a), await A.Get().Load();
             })();
           }, [e, t, r, a]);
-        })(m, o.i.accountid, t.clanSteamID.GetAccountID(), t.GID);
+        })(m, o.iA.accountid, t.clanSteamID.GetAccountID(), t.GID);
         const f = (0, u.m)(m, t.clanSteamID.GetAccountID(), t.GID),
           [w, I, C] = (0, s.uD)(),
-          E = W(),
+          E = H(),
           T = G(),
           D = d || T,
           M = (0, l.q3)(() => A.Get().BHaveSelectionsChanged()),
@@ -18039,7 +18056,7 @@
             A.Get()
               .GetSelectedGroups()
               .reduce((e, r) => {
-                const a = N(t, r),
+                const a = W(t, r),
                   i = A.Get().GetSelection(a.group_id),
                   n = a.sessions?.find((e) => e.id == i)?.max_per_team ?? 1;
                 return Math.max(e, n);
@@ -18062,8 +18079,17 @@
             "div",
             {
               ref: i,
-              className: (0, h.A)(r, a.CompleteRegistrationCtn, n && a.Visible),
+              className: (0, h.A)(
+                r,
+                a.CompleteRegistrationCtn,
+                n && M && a.Visible,
+              ),
             },
+            c.createElement(
+              "p",
+              null,
+              (0, g.we)("#MeetSteam_CompleteRegistration_Desc"),
+            ),
             n &&
               c.createElement(
                 c.Fragment,
@@ -18107,11 +18133,11 @@
           )
         );
       }
-      function N(e, t) {
+      function W(e, t) {
         const r = e?.jsondata?.meet_steam_groups || [];
         return r?.find((e) => e.group_id == t);
       }
-      function W() {
+      function H() {
         return D.KN.Get().BIsUserLoggedIn()
           ? (e) => e()
           : () =>
@@ -18521,7 +18547,7 @@
         G = r(68797),
         D = r(52038),
         M = r(61859),
-        R = r(375),
+        R = r(73745),
         k = r(14771),
         F = r(61336),
         U = r(6878),
@@ -20133,7 +20159,7 @@
         D = r(6144),
         M = r(52038),
         R = r(61859),
-        k = r(375),
+        k = r(73745),
         F = r(78327),
         U = r(84364),
         L = r(83284),
@@ -22356,7 +22382,7 @@
     },
     92532: (e, t, r) => {
       "use strict";
-      r.d(t, { oj: () => d, qr: () => c, nz: () => m });
+      r.d(t, { oj: () => u, qr: () => m, nz: () => d });
       var a = r(90626),
         i = r(81886),
         n = r(60014);
@@ -22366,21 +22392,31 @@
         },
         BIsValid: () => !1,
       });
-      var o = r(34547);
-      function l(e) {
-        const { appID: t, feature: r, depth: i, children: l } = e,
-          c = (0, n.ru)(r, i),
-          m = a.useContext(s),
-          { bVisible: d, ref: u } = (0, o.h)(),
-          [p, _] = a.useState(!1);
-        return (
-          a.useEffect(() => {
-            d && !p && (t && m.AddImpression(t, c), _(!0));
-          }, [d, m, t, c, p]),
-          a.createElement("div", { ref: u }, l)
-        );
-      }
+      var o = r(30600),
+        l = r(8871);
       function c(e) {
+        const { appID: t, feature: r, depth: i, children: c } = e,
+          m = (0, n.ru)(r, i),
+          d = a.useContext(s),
+          [u, p] = a.useState(void 0),
+          _ = a.useCallback(
+            (e) => {
+              e.isIntersecting &&
+                p((e) =>
+                  e?.appID == t && e.snr == m ? e : { appID: t, snr: m },
+                );
+            },
+            [t, m],
+          );
+        (0, a.useEffect)(() => {
+          u && d.AddImpression(u.appID, u.snr);
+        }, [d, u]);
+        const h = (0, o.BL)(_),
+          g = t && (!u || (u.appID != t && u.snr != m)),
+          y = (0, l.Ue)(c.ref, g ? h : void 0);
+        return a.cloneElement(c, { ref: y });
+      }
+      function m(e) {
         return "bundle" == e
           ? "bundle"
           : "sub" == e
@@ -22389,17 +22425,17 @@
               ? "app"
               : null;
       }
-      function m(e) {
+      function d(e) {
         return 2 == e ? "bundle" : 1 == e ? "sub" : 0 == e ? "app" : null;
       }
-      const d = (e) => {
+      const u = (e) => {
         const { appid: t } = e,
           r = a.createElement(
             "div",
             { className: "ImpressionTrackedElement" },
             e.children,
           );
-        return t ? a.createElement(l, { appID: t }, r) : r;
+        return t ? a.createElement(c, { appID: t }, r) : r;
       };
     },
     14326: (e, t, r) => {
@@ -22692,7 +22728,7 @@
         o = r(61859),
         l = r(61336),
         c = r(78327),
-        m = r(375);
+        m = r(73745);
       class d {
         m_bUserHasVolumePreference = !1;
         m_flVolumePreference = 0;
@@ -23514,8 +23550,10 @@
     10224: (e, t, r) => {
       "use strict";
       r.d(t, { c: () => n });
+      r(90626);
       var a = r(45387),
         i = r.n(a);
+      r(73745);
       function n() {
         return window.innerWidth < parseInt(i().strMaxMobileWidth);
       }

@@ -1742,7 +1742,7 @@
         W = r(68797),
         F = r(6419),
         x = r(6144),
-        q = r(375),
+        q = r(73745),
         N = r(78327);
       const U = "default",
         H = "steam_default_assetset",

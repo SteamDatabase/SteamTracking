@@ -564,6 +564,7 @@
     "EventEditor_Localization_NotMappedToCrowdIn": "Not yet pushed to CrowdIn",
     "EventEditor_Localization_Tooltip": "When enabled, changes to this event will be pushed to CrowdIn for localization when they are saved. Leave this off until your event's text is stable and ready for localization. If you will be doing lots of editing over a period of time, disable it until you are done, then re-enable it.",
     "EventEditor_Localization_RememberToSave": "Remember to click Save after changing this setting.",
+    "EventEditor_Localization_FetchLocalization": "Fetch now",
     "EventEdit_Error_PublishingDesc": "The following errors with the current event prevent publishing this event. Please correct them and retry to publish.",
     "EventEdit_Error_StartTimeNotSet": "The event start time is not set.",
     "EventEdit_Error_StartTimeInPast": "The start time for the event (%1$s) is in the past. Either adjust the start time into the future or set it to now.  If publishing in the past was permitted, events could be missed by users who have more recently visited your page as their last read would be after your event starts.",

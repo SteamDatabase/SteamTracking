@@ -76,6 +76,7 @@
         DDButtonArrow: "_3URBCM-OKlL3sg0hORPS01",
         AppBannerLinkDDContainer: "_2cjCliV2mnVX6dlRRce-fD",
         WishlistBtnShort: "_3WcW8PJCSEWwVA6qJ-RUOF",
+        RssRow: "_2pyH3D6qw0sOXhrtoYqCVL",
         AppPartnerEventsContainer: "_3GCEyyVil-cCS-8hoI2Zo1",
         PartnerEvent: "_1KsYSVzmvIfRivBTcx-_GE",
         LibraryViewSubtitle: "_1rbgKYHeRvzrIyqHCzaLIr",
@@ -2616,7 +2617,7 @@
         u = r(27666),
         p = r(71138),
         h = r(65739),
-        g = r(375),
+        g = r(73745),
         S = r(31698),
         _ = r(72739),
         v = r(14947),
@@ -3123,7 +3124,7 @@
         O = r(283),
         z = r(95695),
         x = r.n(z),
-        F = r(49300),
+        F = r(9154),
         k = r(738),
         U = r(41609),
         G = r.n(U),
@@ -4837,8 +4838,8 @@
                 n &&
                   e.push({
                     label: s.createElement(
-                      s.Fragment,
-                      null,
+                      "div",
+                      { className: D().RssRow },
                       s.createElement(w.ZPc, null),
                       (0, f.we)("#EventDisplay_RSSFeed_ExtraShort"),
                     ),
@@ -4977,7 +4978,7 @@
         Z = r(44332),
         J = r(6144),
         X = r(56011),
-        $ = r(375),
+        $ = r(73745),
         ee = r(42951),
         te = r(71746),
         re = r(47204),
@@ -5772,7 +5773,7 @@
         a = r(71138),
         i = r(33737),
         s = r(84811),
-        o = r(49300),
+        o = r(9154),
         l = r(61859),
         c = r(22797),
         m = r(17618);
@@ -6081,9 +6082,9 @@
         f = r(61859),
         M = r(82227),
         I = r(19719),
-        b = r(375),
+        b = r(73745),
         T = r(61336),
-        D = r(49300),
+        D = r(9154),
         A = r(14256),
         L = r.n(A),
         N = r(3919),
@@ -6582,14 +6583,14 @@
         l = r(60746),
         c = r(68033),
         m = r(27658),
-        d = r(49300),
+        d = r(9154),
         u = r(88843),
         p = r(64641),
         h = r.n(p),
         g = r(22797),
         S = r(68797),
         _ = r(78327),
-        v = r(66418),
+        v = r(8527),
         E = r(30894),
         B = r(51272),
         w = r(82715);
@@ -6699,7 +6700,7 @@
             eventClassName: _,
           } = this.props;
           let w;
-          v.T.IN_CLIENT &&
+          v.TS.IN_CLIENT &&
             (null == r ? void 0 : r.appid) &&
             (E.Fm.Get().HintLoad(),
             E.Fm.Get().BOwnsApp(r.appid) &&
@@ -6750,7 +6751,7 @@
         m = r(52038),
         d = r(61859),
         u = r(91675),
-        p = r(375),
+        p = r(73745),
         h = r(32754);
       let g = class extends i.Component {
         GenerateLanguageOptions() {
@@ -6876,10 +6877,10 @@
         v = r(68797),
         E = r(52038),
         B = r(61859),
-        w = r(375),
+        w = r(73745),
         y = r(61336),
         C = r(78327),
-        f = r(49300),
+        f = r(9154),
         M = r(738),
         I = r(22797),
         b = r(86090),
@@ -7723,13 +7724,13 @@
         c = r(82477),
         m = r(52038),
         d = r(61859),
-        u = r(375),
+        u = r(73745),
         p = r(78327),
         h = r(96715);
       var g = r(10886),
         S = r(19654),
         _ = r(3209),
-        v = r(49300),
+        v = r(9154),
         E = r(32754),
         B = r(51272),
         w = r(14256),
@@ -8197,10 +8198,10 @@
         i = r(73744),
         s = r(33737),
         o = r(81416),
-        l = r(49300),
+        l = r(9154),
         c = r(52038),
         m = r(61859),
-        d = r(375),
+        d = r(73745),
         u = r(50666);
       class p extends a.Component {
         constructor() {

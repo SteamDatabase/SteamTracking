@@ -914,6 +914,17 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
 .qexk-JocS7jjDM31IcGZn ._3WcW8PJCSEWwVA6qJ-RUOF {
   height: 30px;
 }
+._2pyH3D6qw0sOXhrtoYqCVL {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+._2pyH3D6qw0sOXhrtoYqCVL svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  margin-right: 4px;
+}
 ._1HRiMtg_SGUiOa-NXDzZl7 {
   width: 100%;
   background-color: #3d424c;

@@ -1207,38 +1207,47 @@ a.applink {
 	text-decoration: none;
 }
 
+.popup_menu .popup_menu_item.app_Game,
 .app_Game {
 	color: #FFFFFF;
 }
 
+.popup_menu .popup_menu_item.app_Advertising,
 .app_Advertising {
 	color: #90278e;
 }
 
+.popup_menu .popup_menu_item.app_Movie,
 .app_Movie {
 	color: #6ba1bd;
 }
 
+.popup_menu .popup_menu_item.app_Demo,
 .app_Demo {
 	color: #89c53f;
 }
 
+.popup_menu .popup_menu_item.app_Mod,
 .app_Mod {
 	color: #e1b21e;
 }
 
+.popup_menu .popup_menu_item.app_DLC,
 .app_DLC {
 	color: #eebfef;
 }
 
+.popup_menu .popup_menu_item.app_Music,
 .app_Music {
 	color: #3b91aa;
 }
 
+.popup_menu .popup_menu_item.app_Beta,
 .app_Beta {
 	color: #999999;
 }
 
+.popup_menu .popup_menu_item.app_Hidden,
 .app_Hidden, a.app_Hidden {
 	color: #999999;
 	text-decoration: line-through;
@@ -4280,7 +4289,6 @@ table.root_path_table {
 .crossPlatform_no {
     color: #fff03a;
 }
-
 select.additional_languages {
     margin-top: 12px;
 }

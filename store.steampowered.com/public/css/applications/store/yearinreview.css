@@ -3945,14 +3945,16 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   border-radius: 5px;
   padding: 8px;
   font-size: 14px;
-  filter: drop-shadow(2px 4px 6px #021b23e8);
+  filter: brightness(1) drop-shadow(2px 4px 6px #021b23e8);
   transition-property: filter, transform;
   transition-duration: .2s;
-  transition-timing-function: linear;
+  transition-timing-function: ease-in-out;
+  color: #fff;
 }
 ._1dEBrEq6v5neOeVMAn5etR:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.2) drop-shadow(2px 4px 6px #021b23e8);
   transform: translateY(-2px);
+  color: #fff;
 }
 ._3zKPE2ZlhrQ9o2OKqQY2wz {
   display: flex;
@@ -3973,7 +3975,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 }
 .OQcaqm5MQt2_pbrXD1P21 {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: min-content min-content min-content min-content;
   justify-content: center;
   gap: 8px;
   padding: 10px;

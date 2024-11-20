@@ -81,7 +81,7 @@
     54330: (e, t, a) => {
       "use strict";
       a.d(t, { u: () => l });
-      var n = a(66418),
+      var n = a(8527),
         i = a(20194),
         r = a(41735),
         o = a.n(r),
@@ -90,7 +90,7 @@
         const t = (0, i.I)({
           queryKey: ["useMilestoneByAppID", e],
           queryFn: async () => {
-            const t = `${n.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
+            const t = `${n.TS.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
               a = { appid: e },
               i = await o().get(t, { params: a });
             if (1 == i?.data?.success) return i.data.milestones;
@@ -277,7 +277,7 @@
         p = a(55263),
         f = a(82097),
         y = a(32179),
-        v = a(66418),
+        v = a(8527),
         E = a(61859),
         g = a(91675),
         S = a(26408),
@@ -393,7 +393,7 @@
             n.createElement(
               "a",
               {
-                href: `${v.T.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                href: `${v.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                 target: "_blank",
               },
               t.data.store_item_id,
@@ -406,7 +406,7 @@
             n.createElement(
               "a",
               {
-                href: `${v.T}pub/companydetails/${t.data.partnerid}`,
+                href: `${v.TS}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
               i?.name || "unknown",
@@ -2134,15 +2134,6 @@
         );
       }
     },
-    66418: (e, t, a) => {
-      "use strict";
-      a.d(t, { T: () => i, i: () => r });
-      var n = a(30470);
-      const i = window.Config ?? n.TS,
-        r = window.UserConfig ?? n.iA;
-      window.Config && Object.assign(n.TS, window.Config),
-        window.UserConfig && Object.assign(r, window.UserConfig);
-    },
     55263: (e, t, a) => {
       "use strict";
       a.d(t, {
@@ -2158,7 +2149,7 @@
       var n = a(41735),
         i = a.n(n),
         r = a(90626),
-        o = a(375),
+        o = a(73745),
         s = a(82097);
       function l(e, t, a, n) {
         const l = (0, r.useRef)(),

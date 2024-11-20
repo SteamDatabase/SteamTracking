@@ -1596,6 +1596,9 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   position: relative;
   overflow: hidden;
 }
+.ContentHubSalePage ._2qyLPxO8_nkczRvFiaju8N {
+  max-height: 197px;
+}
 ._3_wKbXvT7_y5YkrtadL0I6 {
   width: 100%;
   height: auto;
@@ -3071,6 +3074,8 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   margin-bottom: 8px;
 }
 ._82lvRm6zNUSuia5C-0KVb {
+  width: 616px;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 500;
   color: #fff;
@@ -3093,6 +3098,11 @@ div._36qS74l1tXSXwGdyfIFQ-G {
     #4c6b22 100%
   );
   color: #bce681;
+}
+._82lvRm6zNUSuia5C-0KVb ._1FnrHyPuXP7yRZRvgoNvLi {
+  font-size: 14px;
+  font-weight: 300;
+  color: orange;
 }
 ._2SxhiHrQSCtBnKf3oKdon2 {
   display: flex;
@@ -3431,7 +3441,7 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 ._1xiTQEBFDACW6ssXe_rkaa ._2oGxJ3wpmY3NkzAlmhzPeu {
   padding: 0px 12px 8px 12px;
 }
-._1xiTQEBFDACW6ssXe_rkaa ._2oGxJ3wpmY3NkzAlmhzPeu ._7FXxSnPqHELzXNZo5jDcU {
+._1xiTQEBFDACW6ssXe_rkaa ._2oGxJ3wpmY3NkzAlmhzPeu ._2QqnI_s10DOvb-HPBd-QeA {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -3440,27 +3450,32 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 }
 ._1xiTQEBFDACW6ssXe_rkaa
   ._2oGxJ3wpmY3NkzAlmhzPeu
-  ._7FXxSnPqHELzXNZo5jDcU
+  ._2QqnI_s10DOvb-HPBd-QeA
   :first-child {
   flex-grow: 1;
 }
 ._1xiTQEBFDACW6ssXe_rkaa
   ._2oGxJ3wpmY3NkzAlmhzPeu
-  ._7FXxSnPqHELzXNZo5jDcU
-  :nth-child(2),
-._1xiTQEBFDACW6ssXe_rkaa
-  ._2oGxJ3wpmY3NkzAlmhzPeu
-  ._7FXxSnPqHELzXNZo5jDcU
-  :nth-child(3) {
+  ._2QqnI_s10DOvb-HPBd-QeA
+  :nth-child(2) {
   flex-grow: 0;
 }
 ._1xiTQEBFDACW6ssXe_rkaa
   ._2oGxJ3wpmY3NkzAlmhzPeu
-  ._7FXxSnPqHELzXNZo5jDcU
+  ._2QqnI_s10DOvb-HPBd-QeA
   select {
   max-width: 12em;
 }
-._1xiTQEBFDACW6ssXe_rkaa ._2oGxJ3wpmY3NkzAlmhzPeu ._2FXQnqMTcJMwKJRn4CzFa9 {
+._1xiTQEBFDACW6ssXe_rkaa ._2oGxJ3wpmY3NkzAlmhzPeu ._1NH9ZOrC3ltObbXnTj7Wn0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+._1xiTQEBFDACW6ssXe_rkaa ._2oGxJ3wpmY3NkzAlmhzPeu .L9MKw629aEVZfhOrL8HFX {
   display: flex;
   flex-direction: column;
   align-items: left;

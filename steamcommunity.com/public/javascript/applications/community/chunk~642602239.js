@@ -1667,7 +1667,7 @@
         o = r(44332),
         l = r(68797),
         c = r(6144),
-        m = r(375),
+        m = r(73745),
         d = r(78327);
       class u {
         GetItem(e) {
@@ -1869,7 +1869,7 @@
         s = r(90626),
         o = r(68797),
         l = r(6144),
-        c = r(375),
+        c = r(73745),
         m = r(78327);
       class d {
         GetRegistration(e) {
@@ -2043,7 +2043,7 @@
         l = r(44332),
         c = r(68797),
         m = r(6144),
-        d = r(375),
+        d = r(73745),
         u = r(78327);
       class p {
         GetInventoryForApp(e) {
@@ -2176,7 +2176,7 @@
         c = r(90626),
         m = r(68797),
         d = r(6144),
-        u = r(375),
+        u = r(73745),
         p = r(14947),
         h = r(58222);
       class g {
@@ -2465,7 +2465,7 @@
         a = r(90626),
         s = r(68797),
         o = r(6144),
-        l = r(375),
+        l = r(73745),
         c = r(78327);
       class m {
         GetItemDefForAppID(e) {
@@ -2918,7 +2918,7 @@
       "use strict";
       r.d(t, { Hh: () => m, vs: () => l, wB: () => c });
       var n = r(90626),
-        i = r(49300),
+        i = r(9154),
         a = r(56330),
         s = r(61859),
         o = r(22797);
@@ -3067,7 +3067,7 @@
       var u = r(68451),
         p = r(52038),
         h = r(61859),
-        g = r(375);
+        g = r(73745);
       function _(e, t) {
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
@@ -4226,7 +4226,7 @@
       var n = r(34629),
         i = r(90626),
         a = r(75844),
-        s = r(375),
+        s = r(73745),
         o = r(45699),
         l = r(76217),
         c = r(88997),
@@ -4373,7 +4373,7 @@
         s = r(42780),
         o = r(59952),
         l = r(87540),
-        c = r(375),
+        c = r(73745),
         m = r(70995),
         d = r(17720),
         u = r(88527),
@@ -5314,7 +5314,7 @@
           ),
         );
       }
-      var et = r(49300),
+      var et = r(9154),
         tt = r(738),
         rt = r(82477),
         nt = r(90874),
@@ -5864,7 +5864,7 @@
         o = r(22837),
         l = r(49771),
         c = r(6336),
-        m = (r(32754), r(375)),
+        m = (r(32754), r(73745)),
         d = r(78327),
         u = r(23649),
         p = r(3246),
@@ -6360,7 +6360,7 @@
       r.d(t, { K: () => o });
       var n = r(34629),
         i = r(90626),
-        a = r(375),
+        a = r(73745),
         s = r(60383);
       class o extends i.Component {
         constructor() {
@@ -6430,7 +6430,7 @@
       r.d(t, { c: () => s });
       var n = r(34629),
         i = r(90626),
-        a = r(375);
+        a = r(73745);
       class s extends i.Component {
         constructor(e) {
           super(e),
@@ -6498,7 +6498,7 @@
       var n = r(34629),
         i = r(90626),
         a = r(56011),
-        s = r(375);
+        s = r(73745);
       class o extends i.Component {
         constructor() {
           super(...arguments),

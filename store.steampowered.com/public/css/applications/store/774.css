@@ -51,12 +51,6 @@ Body.v6.tag_page.contenthub_page {
   width: 100%;
   position: unset;
 }
-._3SWsMT4_EVVsmPbanjlEy4 .carousel .CarouselBtnLeft {
-  left: calc(50% - 564px);
-}
-._3SWsMT4_EVVsmPbanjlEy4 .carousel .CarouselBtnRight {
-  left: calc(50% + 504px);
-}
 ._3SWsMT4_EVVsmPbanjlEy4 .carousel .SliderBody button {
   width: 60px;
   top: 0px;
@@ -183,8 +177,13 @@ html.tablet .contenthubsections {
   }
 }
 .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
-  max-width: 940px;
+  max-width: 1100px;
   margin: 0px auto 20px auto;
+}
+@media screen and (max-width: 1250px) {
+  .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
+    max-width: 84vw;
+  }
 }
 html.tablet .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
   max-width: unset;
@@ -267,10 +266,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray:after {
     min-width: var(--gpSpace-Gutter);
   }
 }
-.ContentHubSalePage .contenthubmaincarousel.expanded ._3SWsMT4_EVVsmPbanjlEy4 {
-  max-width: 1920px;
-  margin: 0px auto;
-}
 .ContentHubSalePage .contenthubmaincarousel.expanded {
   display: block;
   width: 100%;
@@ -310,14 +305,14 @@ html.tablet
     margin-bottom: unset;
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1000px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
     .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
     margin-bottom: 470px;
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1000px) {
   .ContentHubSalePage .SaleTagBlockCtn .TagBox {
     display: none;
   }

@@ -1136,6 +1136,7 @@
                   value: { n: 2, br: o.qM.readString, bw: o.gp.writeString },
                   color: { n: 3, br: o.qM.readString, bw: o.gp.writeString },
                   label: { n: 4, br: o.qM.readString, bw: o.gp.writeString },
+                  name: { n: 5, br: o.qM.readString, bw: o.gp.writeString },
                 },
               }),
             c.sm_m

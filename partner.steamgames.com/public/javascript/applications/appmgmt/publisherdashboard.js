@@ -188,7 +188,7 @@
     54330: (e, t, a) => {
       "use strict";
       a.d(t, { u: () => o });
-      var n = a(66418),
+      var n = a(8527),
         r = a(20194),
         s = a(41735),
         i = a.n(s),
@@ -197,7 +197,7 @@
         const t = (0, r.I)({
           queryKey: ["useMilestoneByAppID", e],
           queryFn: async () => {
-            const t = `${n.T.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
+            const t = `${n.TS.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
               a = { appid: e },
               r = await i().get(t, { params: a });
             if (1 == r?.data?.success) return r.data.milestones;
@@ -275,7 +275,7 @@
       var d = a(1936),
         p = a(95821),
         _ = a(52038),
-        u = a(375),
+        u = a(73745),
         g = a(72843),
         v = a(61318),
         E = a(32754),
