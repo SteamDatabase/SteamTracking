@@ -967,7 +967,7 @@
     "StoreAdmin_EditEditions_DragAndDropHere": "Click or drag an image here to upload",
     "StoreAdmin_EditEditions_Delete": "Delete",
     "StoreAdmin_EditEditions_DragAndDropToReplace": "Click or drag an image here to replace this image.",
-    "StoreAdmin_EditEditions_UploadComparisonGraphicsDescription": "Upload images comparing the editions you selected. These will be displayed in a dialog when a user clicks 'Compare editions' on your app's store page.",
+    "StoreAdmin_EditEditions_UploadComparisonGraphicsDescription": "Upload %1$spx × %2$spx images comparing the editions you selected. These will be displayed in a dialog when a user clicks 'Compare editions' on your app's store page.",
     "StoreAdmin_EditEditions_NeedToPublishNotice": "Changes saved here must be <1>published</1> before they will be visible to users.",
     "StoreAdmin_EditEditions_NeedToPublishAlert": "Remember to <1>publish</1> your changes.",
     "StoreAdmin_EditEditions_ImageSizeError": "Comparison images must be %1$sx%2$s pixels in size. Provided image was %3$sx%4$s.",

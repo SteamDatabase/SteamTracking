@@ -12087,6 +12087,8 @@
             null,
             (0, s.we)(
               "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
+              go,
+              Co,
             ),
           ),
           a.createElement(
