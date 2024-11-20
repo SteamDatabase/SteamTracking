@@ -3531,23 +3531,29 @@
             e.focus();
             const t = 0,
               r = e.value.length;
-            t !== r && e.setRangeText("", t, r, "end"), e.focus();
+            if (t !== r) {
+              e.setRangeText
+                ? e.setRangeText("", t, r, "preserve")
+                : (e.value = "");
+              const n = new Event("input", { bubbles: !0 });
+              e.dispatchEvent(n);
+            }
+            e.focus();
           }
         }
         static overwrite(e, t) {
           t && (he.ClearTextArea(t), he.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
-          if (he.BIsFireFox() && t.setRangeText) t.setRangeText(e);
-          else {
-            const r = t.selectionStart,
-              n = t.selectionEnd;
-            null !== r &&
-              null !== n &&
-              (t.setRangeText
-                ? t.setRangeText(e)
-                : (t.value = t.value.slice(0, r) + e + t.value.slice(n)),
-              (t.selectionStart = t.selectionEnd = r + e.length));
+          const r = t.selectionStart,
+            n = t.selectionEnd;
+          if (null !== r && null !== n) {
+            t.setRangeText
+              ? t.setRangeText(e, r, n, "preserve")
+              : (t.value = t.value.slice(0, r) + e + t.value.slice(n));
+            const a = new Event("input", { bubbles: !0 });
+            t.dispatchEvent(a),
+              (t.selectionStart = t.selectionEnd = r + e.length);
           }
           t.focus();
         }
