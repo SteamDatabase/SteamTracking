@@ -3155,6 +3155,7 @@
     "Settings_GameRecording_Description": "* Raw recordings need to be made clips via the timeline in order to be saved as video files.",
     "Settings_GameRecording_Path_Title": "Select Recordings folder",
     "Settings_GameRecording_Path_NeedRestart": "You will need to restart Steam to change your Recordings folder.",
+    "Settings_GameRecording_Path_Reset": "Reset Folder",
     "Settings_GameRecording_BackgroundUnits_Min": "Minutes",
     "Settings_GameRecording_AddMarkerKey": "Add a timeline marker",
     "Settings_GameRecording_ToggleRecording": "Start/stop recording",
