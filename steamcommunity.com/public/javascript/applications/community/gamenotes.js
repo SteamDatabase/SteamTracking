@@ -49,13 +49,6 @@
         CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
       };
     },
-    59722: (e) => {
-      e.exports = {
-        Hover: "_1lo3nIamSX1TzzE4TlhFXA",
-        Link: "_1ds3uh7ntoekPm635F2Ziv",
-        LinkHelp: "_3Vn5X8bzPjWx5p545nkB6k",
-      };
-    },
     27491: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -72,101 +65,85 @@
         CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
       };
     },
-    73309: (e) => {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        Container: "_30v-6zb_axOypIUr5VRHE1",
-        ToolbarRow: "LCeIT0gmFTY8fdfaVgk4j",
-        Gap: "_19z0fjj7o0n9vAjVjvYZNU",
-        Spacer: "_2m1BBIp5Ewr1TI-BkqFGLM",
-        CommandButton: "_1dEi5qzSDdPOzoOQXYbNLN",
-        Toggled: "_1Iw5xoXQXfmRjgjWTKbm_G",
-        FileUploadPlaceholder: "_2P-FBc3tZWGeeBFplDSb9g",
-        Throbber: "_12t6JmDCFT6MqtNVrSi5NJ",
-        PendingImage: "_2HezQYTfmFfdRmuB8l9QPI",
-        FileUploadDragDrop: "_1WRaNQqBKcUp67ntgoyEeQ",
-        FileUploadDropFilesMessage: "I2CE9X_I0GBNYbJf7VYBg",
-      };
-    },
-    77018: (e, t, r) => {
+    65453: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Dt });
+      r.r(t), r.d(t, { default: () => qe });
       var n = r(90626),
-        a = r(92757);
-      const o = {
+        i = r(92757);
+      const a = {
         List: () => "/notes/list",
         AppNotes: (e, t) => `/notes/app/${e}/${null != t ? t : ""}`,
         ShortcutNotes: (e, t) => `/notes/shortcut/${e}/${null != t ? t : ""}`,
       };
       var s = r(17083),
-        i = r(37674),
-        l = r(29385),
-        c = r(61739);
+        o = r(37674),
+        c = r(29385),
+        l = r(61739);
       function u(e) {
         return e.trim();
       }
-      function d(e) {
+      function m(e) {
         return e.appid ? { appid: e.appid } : { shortcut: e.shortcut_name };
       }
-      const m = n.createContext({ mode: "page", store: null });
+      const d = n.createContext({ mode: "page", store: null });
       function p(e) {
         const {
             mode: t,
             store: r,
-            closePopup: a,
-            bPinnedView: o,
+            closePopup: i,
+            bPinnedView: a,
             onClickURL: s,
-            bSpellcheckEnabled: i = !0,
-            setSpellcheckEnabled: l,
-            children: c,
+            bSpellcheckEnabled: o = !0,
+            setSpellcheckEnabled: c,
+            children: l,
           } = e,
           u = n.useMemo(
             () => ({
               mode: t,
               store: r,
-              closePopup: a,
-              bPinnedView: o,
+              closePopup: i,
+              bPinnedView: a,
               onClickURL: s,
-              bSpellcheckEnabled: i,
-              setSpellcheckEnabled: l,
+              bSpellcheckEnabled: o,
+              setSpellcheckEnabled: c,
             }),
-            [t, r, a, o, s, i, l],
+            [t, r, i, a, s, o, c],
           );
-        return n.createElement(m.Provider, { value: u }, c);
+        return n.createElement(d.Provider, { value: u }, l);
+      }
+      function _() {
+        return n.useContext(d).closePopup;
       }
       function h() {
-        return n.useContext(m).closePopup;
+        return n.useContext(d).store;
       }
-      function g() {
-        return n.useContext(m).store;
-      }
-      var f = r(61859);
+      var B = r(61859);
       function b(e) {
         return "appid" in e
           ? ["GameNotes", "NotesByAppID", e.appid]
           : ["GameNotes", "NotesForShortcut", u(e.shortcut)];
       }
-      function _(e) {
-        const t = g();
-        return (0, i.I)({
+      function g(e) {
+        const t = h();
+        return (0, o.I)({
           queryKey: b(e),
           queryFn: async () => (await t.GetGameNotesList(e, !0)) || [],
           enabled: !!e,
         });
       }
-      function B(e, t) {
-        const r = (0, l.jE)(),
-          n = g(),
-          a = e.id;
-        return (0, c.n)({
+      function w(e, t) {
+        const r = (0, c.jE)(),
+          n = h(),
+          i = e.id;
+        return (0, l.n)({
           mutationFn: async () =>
-            e.not_persisted ? a : await n.DeleteGameNote(d(e), a),
+            e.not_persisted ? i : await n.DeleteGameNote(m(e), i),
           onSuccess: () => {
-            w(r, d(e), (e) => e.filter((e) => e.id != a)), t && t();
+            f(r, m(e), (e) => e.filter((e) => e.id != i)), t && t();
           },
         });
       }
-      function w(e, t, r) {
+      function f(e, t, r) {
         e.getQueryData(b(t)) && e.setQueryData(b(t), r);
       }
       function y(e, t) {
@@ -182,47 +159,47 @@
           [e, t],
         );
       }
-      var v = r(58632),
-        M = r.n(v),
-        E = r(56545),
-        C = r(37403),
-        k = r(23809),
-        T = r(30470),
-        S = r(22837);
-      let N;
-      const z = 864e5;
-      function R(e) {
-        return `appinfo_${e}_${T.TS.LANGUAGE}`;
+      var S = r(58632),
+        N = r.n(S),
+        M = r(56545),
+        E = r(37403),
+        z = r(23809),
+        v = r(30470),
+        C = r(22837);
+      let R;
+      const T = 864e5;
+      function U(e) {
+        return `appinfo_${e}_${v.TS.LANGUAGE}`;
       }
-      function A(e) {
-        return Boolean(e && Date.now() - e.timeCached < z);
+      function G(e) {
+        return Boolean(e && Date.now() - e.timeCached < T);
       }
-      function O(e) {
-        const t = (0, k.KV)(),
-          r = (0, k.rX)();
-        return (0, i.I)({
+      function W(e) {
+        const t = (0, z.KV)(),
+          r = (0, z.rX)();
+        return (0, o.I)({
           queryKey: ["appinfo", e],
           queryFn: async () =>
             (function (e, t) {
               return (
-                N ||
-                  (N = new (M())(
+                R ||
+                  (R = new (N())(
                     async (r) => {
                       const n = new Map();
-                      (await Promise.all(r.map((e) => t.GetObject(R(e)))))
-                        .filter(A)
+                      (await Promise.all(r.map((e) => t.GetObject(U(e)))))
+                        .filter(G)
                         .forEach(({ value: e }) => n.set(e.appid, e));
-                      const a = r.slice().filter((e) => !n.has(e));
-                      if (a.length) {
-                        const r = E.w.Init(C._z);
-                        r.Body().set_language((0, S.sf)(T.TS.LANGUAGE)),
-                          r.Body().set_appids(a);
-                        const o = await C.BE.GetApps(e, r);
-                        if (1 != o.GetEResult()) throw o.GetErrorMessage();
-                        o.Body()
+                      const i = r.slice().filter((e) => !n.has(e));
+                      if (i.length) {
+                        const r = M.w.Init(E._z);
+                        r.Body().set_language((0, C.sf)(v.TS.LANGUAGE)),
+                          r.Body().set_appids(i);
+                        const a = await E.BE.GetApps(e, r);
+                        if (1 != a.GetEResult()) throw a.GetErrorMessage();
+                        a.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            t.StoreObject(R(e.appid), {
+                            t.StoreObject(U(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
@@ -233,1647 +210,313 @@
                     },
                     { cache: !1 },
                   )),
-                N
+                R
               );
             })(t, r).load(e),
-          staleTime: z,
+          staleTime: T,
           enabled: !!e,
         }).data;
       }
-      var U = r(22797);
-      function F() {
+      var I = r(22797);
+      function O() {
         const { data: e, isLoading: t } = (function () {
-          const e = g();
-          return (0, i.I)({
+          const e = h();
+          return (0, o.I)({
             queryKey: ["GameNotes", "GamesWithNotes"],
             queryFn: () => e.GetGamesWithNotes(),
           });
         })();
         return t
-          ? n.createElement(U.t, { msDelayAppear: 300 })
+          ? n.createElement(I.t, { msDelayAppear: 300 })
           : n.createElement(
               "div",
               null,
               n.createElement(
                 "h1",
                 null,
-                (0, f.we)("#UserGameNotes_NotesList"),
+                (0, B.we)("#UserGameNotes_NotesList"),
               ),
               n.createElement(
                 "ul",
                 null,
-                e.map((e) => n.createElement(G, { key: e.appid, game: e })),
+                e.map((e) => n.createElement(k, { key: e.appid, game: e })),
               ),
             );
       }
-      function G(e) {
+      function k(e) {
         const { game: t } = e,
-          r = O(t.appid);
+          r = W(t.appid);
         return n.createElement(
           "li",
           null,
           n.createElement(
             s.N_,
-            { to: o.AppNotes(t.appid) },
+            { to: a.AppNotes(t.appid) },
             null == r ? void 0 : r.name,
           ),
         );
       }
-      var D = r(61788),
-        I = r(33737),
-        x = r(4869),
-        W = r(9154),
-        P = r(49693),
-        L = r(81393);
-      function j(e, t) {
-        return q(t.pm_schema, t.pm_to_bbcode_config, e, []);
-      }
-      function q(e, t, r, n) {
-        let a = r.marks,
-          o = "";
-        const s = t.mapNodes.get(r.type),
-          { tag: i, args: l } = K(s, r.attrs);
-        return (
-          i && (o += (0, P.CS)(i, l)),
-          r.content.forEach((r) => {
-            ([o, a] = $(t, a, r.marks, o)),
-              ([o, a] = (function (e, t, r, n) {
-                let a;
-                for (const o of r)
-                  if (-1 === t.indexOf(o)) {
-                    a || (a = t.slice());
-                    const r = e.mapMarks.get(o.type);
-                    if (((0, L.w)(r, "mark missing bbtag"), r)) {
-                      a.push(o);
-                      const { args: e, tag: t } = K(r, o.attrs);
-                      n += (0, P.CS)(t, e || {});
-                    }
-                  }
-                return [n, null != a ? a : t];
-              })(t, a, r.marks, o)),
-              r.type.isText
-                ? (o += (0, P.vE)(r.text || ""))
-                : r.type == e.nodes.hard_break
-                  ? (o += "\n")
-                  : (o += q(e, t, r, a));
-          }),
-          ([o] = $(t, a, n, o)),
-          i && (o += (0, P.op)(i)),
-          o
-        );
-      }
-      function $(e, t, r, n) {
-        const a = [];
-        for (const e of t) -1 === r.indexOf(e) && a.push(e);
-        if (!a.length) return [n, t];
-        const o = t.slice();
-        for (
-          ;
-          a.length && ((0, L.w)(o.length, "no marks left to close"), o.length);
-        ) {
-          const t = o.pop(),
-            r = e.mapMarks.get(t.type),
-            { tag: s } = K(r, t.attrs);
-          n += (0, P.op)(s);
-          const i = a.indexOf(t);
-          -1 != i && a.splice(i, 1);
-        }
-        return [n, o];
-      }
-      function K(e, t) {
-        let r,
-          n = {};
-        return (
-          e &&
-            (e.AttrsToBBArgs && ({ tag: r, args: n } = e.AttrsToBBArgs(t)),
-            r || (r = e.tag),
-            n || (n = {})),
-          { tag: r, args: n }
-        );
-      }
-      var V = r(26205),
-        H = r(57053),
-        Y = r(52893),
-        X = r(12362),
-        Z = r(7502),
-        J = r(98724),
-        Q = r(79216),
-        ee = r(4188);
-      function te(e, t) {
-        const { from: r, $from: n, to: a, empty: o } = e.selection;
-        return o
-          ? !!t.isInSet(e.storedMarks || n.marks())
-          : e.doc.rangeHasMark(r, a, t);
-      }
-      function re(e, t, r) {
-        let { $from: n, to: a, node: o } = e.selection;
-        return !o && a <= n.end() && (o = n.parent), !!o && o.hasMarkup(t, r);
-      }
-      function ne(e, t, r = {}) {
-        return new Q.fV(e, (e, n, a, o) => {
-          const s = r instanceof Function ? r(n) : r,
-            i = e.tr;
-          if (n[1]) {
-            const e = a + n[0].indexOf(n[1]),
-              t = e + n[1].length;
-            t < o && i.delete(t, o),
-              e > a && i.delete(a, e),
-              (o = a + n[1].length);
-          }
-          return i.addMark(a, o, t.create(s)), i.removeStoredMark(t), i;
-        });
-      }
-      function ae(e, t, r) {
-        const n = { left: t, top: r },
-          a = e.posAtCoords(n);
-        if (null == a ? void 0 : a.pos) {
-          const t = e.state.doc.resolve(a.pos);
-          e.dispatch(e.state.tr.setSelection(Y.U3.near(t)));
-        }
-      }
-      r(74763);
-      const oe = n.createContext(null);
-      function se(e) {
-        return n.createElement(oe.Provider, { value: e.view }, e.children);
-      }
-      function ie(e) {
-        const { schema: t, onUpdate: r } = e,
-          a = n.useRef(r);
-        return (
-          (a.current = r),
-          le(
-            n.useMemo(
-              () =>
-                new Y.k_({
-                  view: (e) => ({ update: (...e) => a.current(...e) }),
-                }),
-              [],
-            ),
-          ),
-          le(
-            n.useMemo(
-              () =>
-                (function (e) {
-                  const t = (0, X.st)(
-                    X.I$,
-                    (t, r) => (
-                      r &&
-                        r(
-                          t.tr
-                            .replaceSelectionWith(
-                              e.nodes.hard_break.createChecked(),
-                            )
-                            .scrollIntoView(),
-                        ),
-                      !0
-                    ),
-                  );
-                  return (0, Z.w)({
-                    "Mod-z": J.tN,
-                    "Mod-y": J.ZS,
-                    Backspace: Q.dv,
-                    "Mod-Enter": t,
-                    "Shift-Enter": t,
-                    "Mod-b": (0, X.wh)(e.marks.strong),
-                    "Mod-i": (0, X.wh)(e.marks.italic),
-                    Enter: (0, ee.wn)(e.nodes.list_item),
-                    "Mod-[": (0, ee.T2)(e.nodes.list_item),
-                    "Mod-]": (0, ee.$B)(e.nodes.list_item),
-                    "Shift-Ctrl-1": (0, X.y_)(e.nodes.heading, { level: 1 }),
-                    "Shift-Ctrl-2": (0, X.y_)(e.nodes.heading, { level: 2 }),
-                    "Shift-Ctrl-3": (0, X.y_)(e.nodes.heading, { level: 3 }),
-                    "Shift-Ctrl-0": (0, X.y_)(e.nodes.paragraph),
-                  });
-                })(t),
-              [t],
-            ),
-          ),
-          le(n.useMemo(() => (0, Z.w)(X.RV), [])),
-          le(
-            n.useMemo(
-              () =>
-                (function (e) {
-                  return (0, Q.sM)({
-                    rules: [
-                      (0, Q.tG)(
-                        /^(\d+)\.\s$/,
-                        e.nodes.ordered_list,
-                        (e) => ({ order: parseInt(e[1]) }),
-                        (e, t) =>
-                          t.childCount + t.attrs.order == parseInt(e[1]),
-                      ),
-                      (0, Q.tG)(/^\s*([-+*])\s$/, e.nodes.bullet_list),
-                      ne(/\*([^*]+)\*/, e.marks.strong),
-                      ne(/_([^_]+)_/, e.marks.italic),
-                      ne(/~([^~]+)~/, e.marks.strike),
-                      ne(/`([^`]+)`/, e.marks.code),
-                      (0, Q.JJ)(/^```$/, e.nodes.code_block),
-                      (0, Q.JJ)(/^(#{1,5})\s$/, e.nodes.heading, (e) => ({
-                        level: e[1].length,
-                      })),
-                    ],
-                  });
-                })(t),
-              [t],
-            ),
-          ),
-          null
-        );
-      }
-      function le(e) {
-        const t = n.useContext(oe);
-        n.useEffect(() => {
-          if (t && e && !t.isDestroyed)
-            return (
-              (function (e, t) {
-                const r = e.state;
-                if (!e.state.plugins.includes(t)) {
-                  const n = [...e.state.plugins, t];
-                  e.updateState(r.reconfigure({ plugins: n }));
-                }
-              })(t, e),
-              () =>
-                (function (e, t) {
-                  if (!e.isDestroyed) {
-                    const r = e.state,
-                      n = r.plugins.filter((e) => e !== t);
-                    e.updateState(r.reconfigure({ plugins: n }));
-                  }
-                })(t, e)
-            );
-        }, [t, e]);
-      }
-      var ce = r(59722);
-      function ue(e) {
-        const {
-            linkMarkType: t,
-            onURLPasted: r,
-            schema: a,
-            onClickURL: o = me,
-          } = e,
-          s = n.useRef(o);
-        s.current = o;
-        const [i, l] = n.useState(),
-          [c, u] = n.useState(),
-          [d, m] = n.useState(),
-          p = n.useMemo(
-            () =>
-              new Y.k_({
-                props: {
-                  handleClickOn(e, r, n, a, o, i) {
-                    if (i && (o.ctrlKey || 1 == o.button)) {
-                      const e = n
-                        .resolve(r - a)
-                        .marks()
-                        .find((e) => e.type == t);
-                      if (e)
-                        return (
-                          s.current(e.attrs.href, o.view),
-                          o.preventDefault(),
-                          !0
-                        );
-                    }
-                    return !1;
-                  },
-                  clipboardTextParser(e, n, o, s) {
-                    let i,
-                      l = [];
-                    for (; (i = e.match(V.O)); ) {
-                      i.index > 0 && l.push(a.text(e.substring(0, i.index)));
-                      const n = (0, V.S)(i[0]),
-                        o = r && r(n);
-                      o && "default" !== o
-                        ? "remove" !== o && l.push(o)
-                        : l.push(a.text(i[0], [t.create({ href: n })])),
-                        (e = e.substring(i.index + i[0].length));
-                    }
-                    return (
-                      e.length && l.push(a.text(e)),
-                      new H.Ji(H.FK.from(l), n.start(), n.end())
-                    );
-                  },
-                  handleDOMEvents: {
-                    mouseover: (e, t) => {
-                      const r = t.target;
-                      if (
-                        r &&
-                        "getBoundingClientRect" in r &&
-                        "A" == r.nodeName
-                      ) {
-                        const e = r.getBoundingClientRect();
-                        l(e.left + e.width / 2), u(e.bottom + 2), m(r);
-                      } else m(void 0);
-                      return !1;
-                    },
-                    mouseleave: (e, t) => (m(void 0), !1),
-                  },
-                },
-              }),
-            [t, r, a],
-          );
-        if ((le(p), !d || !c || !i)) return null;
-        const h = d.getAttribute("href");
-        return n.createElement(
-          de,
-          { top: c, left: i },
-          n.createElement("div", { className: ce.Link }, h),
-          n.createElement(
-            "div",
-            { className: ce.LinkHelp },
-            (0, f.we)("#UserGameNotes_ClickToOpenLink"),
-          ),
-        );
-      }
-      function de(e) {
-        const { top: t, left: r, children: a } = e,
-          [o, s] = n.useState(0),
-          i = n.useRef(null);
-        n.useLayoutEffect(() => {
-          s(i.current.getBoundingClientRect().width);
-        }, [t, r, a]);
-        const l = { top: `${t}px`, left: `${Math.max(r - o / 2, 12)}px` };
-        return n.createElement(
-          "div",
-          { className: ce.Hover, style: l, ref: i },
-          a,
-        );
-      }
-      function me(e, t) {
-        t.open(e);
-      }
-      var pe = r(76217),
-        he = r(63512),
-        ge = r(73170);
-      class fe {
-        constructor(e) {
-          (this.m_nodes = []), (this.m_schema = e);
-        }
-        AppendText(e, t) {
-          let r = 0;
-          for (let t = e.indexOf("\n", r); -1 !== t; t = e.indexOf("\n", r))
-            r != t && this.m_nodes.push(this.m_schema.text(e.substring(r, t))),
-              this.m_nodes.push(this.m_schema.nodes.hard_break.createChecked()),
-              (r = t + 1);
-          r < e.length && this.m_nodes.push(this.m_schema.text(e.substring(r)));
-        }
-        AppendNode(e) {
-          this.m_nodes.push(e);
-        }
-        GetElements() {
-          return this.m_nodes;
-        }
-      }
-      function be(e) {
-        return e
-          .filter((e) => e.isText)
-          .map((e) => e.text)
-          .join();
-      }
-      class _e extends P.Al {
-        constructor(e) {
-          super(e.bbcode_dictionary, () => new fe(e.pm_schema)),
-            (this.m_mapPMBBNodes = new Map()),
-            (this.m_schemaConfig = e),
-            this.m_schemaConfig.bbcode_dictionary.forEach((e) => {
-              "node" in e.Constructor &&
-                this.m_mapPMBBNodes.set(e.Constructor.node.name, e.Constructor);
-            });
-        }
-        get schema() {
-          return this.m_schemaConfig.pm_schema;
-        }
-        ParseBBCode(e) {
-          const t = this.Parse(e, this.BBNodeToPMNode.bind(this), !0);
-          return this.m_schemaConfig.pm_schema.topNodeType.createChecked(
-            {},
-            this.ConvertLineBreaksToParagraphs(H.FK.fromArray(t)),
-          );
-        }
-        TryCreateNode(e, t, r) {
-          let n = H.FK.from(t);
-          if (!e.node.validContent(n) && e.acceptNode) {
-            let r = t.filter((t) => t.type == e.acceptNode);
-            if (!r.length) {
-              let n = t;
-              e.acceptNode.isBlock &&
-                n.length > 1 &&
-                n[n.length - 1].type == this.schema.nodes.hard_break &&
-                (n = n.slice(0, -1));
-              const a = this.m_mapPMBBNodes.get(e.acceptNode.name);
-              (0, L.w)(
-                a,
-                `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
-              ),
-                (r = a
-                  ? [this.TryCreateNode(a, n, void 0)]
-                  : [e.acceptNode.create(void 0, n)]);
-            }
-            n = H.FK.from(r);
-          }
-          return e.node.createAndFill(r, n) || e.node.create(r, n);
-        }
-        BBNodeToPMNode(e, t, ...r) {
-          let n = e.BBArgsToAttrs ? e.BBArgsToAttrs(t.args || {}) : void 0;
-          try {
-            return (
-              "convertContentToAttr" in e &&
-                e.convertContentToAttr &&
-                ((n && n[e.convertContentToAttr]) ||
-                  (n = { ...(n || {}), [e.convertContentToAttr]: be(r) }),
-                "node" in e && (r = [])),
-              "node" in e
-                ? this.TryCreateNode(e, r, n)
-                : r.map((t) => t.mark([...t.marks, e.mark.create(n)]))
-            );
-          } catch (e) {
-            return (
-              console.error(`Error parsing [${t.tagname}] tag: ${e}`, e), []
-            );
-          }
-        }
-        ConvertLineBreaksToParagraphs(e) {
-          const t = new Map(),
-            r = this.m_schemaConfig.pm_schema;
-          this.m_mapPMBBNodes.forEach((e) => {
-            e.acceptNode && t.set(e.acceptNode.name, e.node);
-          });
-          const n = [],
-            a = {
-              nodes: [],
-              nodeType: void 0,
-              reset() {
-                (this.nodes = []), (this.nodeType = void 0);
-              },
-              accumulate(e, t) {
-                return (
-                  this.nodeType && e != this.nodeType && this.emit(),
-                  (this.nodeType = e),
-                  this.nodes.push(t),
-                  !0
-                );
-              },
-              emit(e = !1) {
-                const t = this.nodeType || (e ? r.nodes.paragraph : void 0);
-                t && (n.push(t.createChecked({}, this.nodes)), this.reset());
-              },
-            };
-          return (
-            e.forEach((e) => {
-              const o = e.type == r.nodes.hard_break,
-                s = H.FK.from(e);
-              if (o || r.topNodeType.validContent(s)) {
-                const t = o && a.nodes.length > 0;
-                a.emit(),
-                  o
-                    ? t || n.push(r.nodes.paragraph.createChecked())
-                    : n.push(e);
-              } else {
-                let n;
-                (n = r.nodes.paragraph.validContent(s)
-                  ? r.nodes.paragraph
-                  : t.get(e.type.name)),
-                  n
-                    ? a.accumulate(n, e)
-                    : ((0, L.w)(
-                        !1,
-                        `Couldn't accept ${e.type.name} at root of document, converting to paragraph`,
-                      ),
-                      (n = r.nodes.paragraph),
-                      a.accumulate(
-                        r.nodes.paragraph,
-                        r.text(
-                          (function (e) {
-                            let t = "";
-                            return (
-                              e.descendants((e) => {
-                                e.isText && (t += e.text);
-                              }),
-                              t
-                            );
-                          })(e),
-                        ),
-                      ));
-              }
-            }),
-            (!a.nodes.length && n.length) || a.emit(!0),
-            H.FK.from(n)
-          );
-        }
-      }
-      var Be = r(29287);
-      var we = r(52038),
-        ye = r(73745),
-        ve = r(78327),
-        Me = r(73309);
-      const Ee = (0, r(84811).Nr)(function (e) {
-        const {
-            schemaConfig: t,
-            bbcode: r,
-            className: a,
-            onUpdate: o,
-            refView: s,
-            bSpellcheckEnabled: i = !0,
-            panelProps: l,
-            children: c,
-            dataKey: u,
-          } = e,
-          [d, m] = n.useState(),
-          p = n.useRef(),
-          h = n.useMemo(() => new _e(t), [t]),
-          g = n.useRef(h);
-        g.current = h;
-        const b = n.useCallback(
-          (e) => {
-            var r, n;
-            if (!e)
-              return void (
-                null === (r = p.current) ||
-                void 0 === r ||
-                r.destroy()
-              );
-            const a = p.current;
-            a && a.destroy();
-            const o = t.pm_schema;
-            (p.current = new Be.Lz(e, {
-              state:
-                null !== (n = null == a ? void 0 : a.state) && void 0 !== n
-                  ? n
-                  : Y.$t.create({ schema: o }),
-              transformPasted: (e, t) =>
-                (function (e, t, r) {
-                  let n = !1;
-                  if (
-                    (r.content.forEach((e) => {
-                      e.type == t && (n = !0);
-                    }),
-                    !n)
-                  )
-                    return r;
-                  const a = e.current.ConvertLineBreaksToParagraphs(r.content);
-                  return H.Ji.maxOpen(a);
-                })(g, o.nodes.hard_break, e),
-            })),
-              m(p.current);
-          },
-          [t],
-        );
-        n.useEffect(() => {
-          d &&
-            d.updateState(
-              (function (e, t, r) {
-                var n;
-                const a = (0, J.b6)(),
-                  o =
-                    null === (n = a.spec.key) || void 0 === n
-                      ? void 0
-                      : n.get(r),
-                  s = [...r.plugins.filter((e) => e != o), a];
-                return Y.$t.create({ schema: t, doc: e, plugins: s });
-              })(g.current.ParseBBCode(r), t.pm_schema, d.state),
-            );
-        }, [t, r, d, u]),
-          (0, ye.D5)(s, d);
-        const {
-            refDiv: _,
-            onActivate: B,
-            onGamepadDirection: w,
-          } = (function (e) {
-            (0, ve.rP)();
-            const t = n.useRef(),
-              r = (0, ge.FN)(),
-              a = n.useCallback(() => {
-                var n, a;
-                if (
-                  (r.ShowVirtualKeyboard(),
-                  !(null === (n = e.current) || void 0 === n
-                    ? void 0
-                    : n.hasFocus()))
-                ) {
-                  null === (a = e.current) || void 0 === a || a.focus();
-                  let r = e.current.dom.childNodes;
-                  for (let n = 0; n < r.length; ++n) {
-                    let a = r[n],
-                      o = a.offsetTop;
-                    if (void 0 !== o && o >= t.current.scrollTop) {
-                      let t = a.getBoundingClientRect();
-                      ae(e.current, t.left, t.top);
-                      break;
-                    }
-                  }
-                }
-              }, [r, e]),
-              o = n.useCallback((e) => e.currentTarget == e.target, []),
-              s = (0, he.ak)(t, null, null, o);
-            return { refDiv: t, onActivate: a, onGamepadDirection: s };
-          })(p),
-          y = (0, ye.Ue)(_, b);
-        return n.createElement(
-          se,
-          { view: d },
-          n.createElement(pe.Z, {
-            key: `editordiv_${i}`,
-            className: (0, we.A)(a, Me.Container),
-            ref: y,
-            spellCheck: i,
-            focusable: !0,
-            onActivate: B,
-            onOKActionDescription: (0, f.we)("#UserGameNotes_Edit"),
-            onGamepadDirection: w,
-            ...l,
-          }),
-          n.createElement(ie, { onUpdate: o, schema: t.pm_schema }),
-          c,
-        );
-      });
-      var Ce = r(32754),
-        ke = r(27491),
-        Te = r(33645),
-        Se = r.n(Te);
-      function Ne(e, t, r = 0) {
-        return () => [e, { class: t }, r];
-      }
-      const ze = {
-          paragraph: {
-            content: "inline*",
-            group: "block",
-            parseDOM: [{ tag: "p" }],
-            toDOM: Ne("p", (0, we.A)("pm_paragraph", Se().Paragraph)),
-            bbCode: { tag: "p", autocloses: !0 },
-          },
-          heading: {
-            attrs: { level: { default: 1 } },
-            content: "inline*",
-            group: "block",
-            defining: !0,
-            parseDOM: [1, 2, 3, 4, 5].map((e) => ({
-              tag: `h${e}`,
-              attrs: { level: e },
-            })),
-            toDOM: (e) => [
-              "h" + e.attrs.level,
-              {
-                class:
-                  `BB_Header${e.attrs.level} ` + Se()[`Header${e.attrs.level}`],
-              },
-              0,
-            ],
-            bbCode: [1, 2, 3, 4, 5].map((e) => ({
-              tag: `h${e}`,
-              BBArgsToAttrs: () => ({ level: e }),
-              AttrsToBBArgs: (e) => ({ tag: `h${e.level}` }),
-            })),
-          },
-          image: {
-            inline: !0,
-            attrs: {
-              src: {},
-              alt: { default: null },
-              title: { default: null },
-            },
-            group: "inline",
-            draggable: !0,
-            parseDOM: [
-              {
-                tag: "img[src]",
-                getAttrs: (e) => ({
-                  src: e.getAttribute("src"),
-                  title: e.getAttribute("title"),
-                  alt: e.getAttribute("alt"),
-                }),
-              },
-            ],
-            toDOM(e) {
-              const { src: t, alt: r, title: n } = e.attrs;
-              return ["img", { src: t, alt: r, title: n, class: Se().Image }];
-            },
-            bbCode: {
-              tag: "img",
-              BBArgsToAttrs: (e) => ({ src: e.src }),
-              AttrsToBBArgs: (e) => ({ args: { src: e.src } }),
-              convertContentToAttr: "src",
-            },
-          },
-          bullet_list: {
-            ...ee.fF,
-            content: "list_item+",
-            group: "block",
-            toDOM: Ne("ul", Se().List),
-            bbCode: { tag: "list" },
-          },
-          ordered_list: {
-            ...ee.o8,
-            content: "list_item+",
-            group: "block",
-            toDOM: Ne("ol", Se().OrderedList),
-            bbCode: { tag: "olist" },
-          },
-          list_item: {
-            ...ee.Aw,
-            content: "paragraph block*",
-            toDOM: Ne("li", Se().ListItem),
-            bbCode: { tag: "*", autocloses: !0 },
-          },
-          code_block: {
-            content: "inline*",
-            marks: "",
-            group: "block",
-            code: !0,
-            defining: !0,
-            parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
-            toDOM: () => [
-              "pre",
-              { class: Se().CodeBlock },
-              ["code", { class: Se().Code }, 0],
-            ],
-            bbCode: { tag: "code" },
-          },
-        },
-        Re = {
-          strong: {
-            parseDOM: [
-              { tag: "strong" },
-              {
-                tag: "b",
-                getAttrs: (e) => "normal" != e.style.fontWeight && null,
-              },
-              {
-                style: "font-weight=400",
-                clearMark: (e) => "strong" == e.type.name,
-              },
-              {
-                style: "font-weight",
-                getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
-              },
-            ],
-            toDOM: Ne("b", (0, we.A)("BB_Bold", Se().Bold)),
-            bbCode: { tag: "b" },
-          },
-          italic: {
-            parseDOM: [
-              { tag: "i" },
-              { tag: "em" },
-              { style: "font-style=italic" },
-              {
-                style: "font-style=normal",
-                clearMark: (e) => "em" == e.type.name,
-              },
-            ],
-            toDOM: Ne("i", (0, we.A)("BB_Italic", Se().Italic)),
-            bbCode: { tag: "i" },
-          },
-          underline: {
-            parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-            toDOM: Ne("u", (0, we.A)("BB_Underline", Se().Underline)),
-            bbCode: { tag: "u" },
-          },
-          strike: {
-            parseDOM: [{ style: "text-decoration=line-through" }],
-            toDOM: Ne("span", (0, we.A)("BB_Strike", Se().Strike)),
-            bbCode: { tag: "strike" },
-          },
-          code: {
-            parseDOM: [{ tag: "code" }],
-            toDOM: Ne("code", (0, we.A)("BB_Code", Se().Code)),
-            bbCode: { tag: "c" },
-          },
-          link: {
-            attrs: { href: {}, title: { default: null } },
-            inclusive: !1,
-            parseDOM: [
-              {
-                tag: "a[href]",
-                getAttrs: (e) => ({
-                  href: e.getAttribute("href"),
-                  title: e.getAttribute("title"),
-                }),
-              },
-            ],
-            toDOM(e) {
-              const { href: t, title: r } = e.attrs;
-              return ["a", { href: t, title: r, class: "BB_Link" }, 0];
-            },
-            bbCode: {
-              tag: "url",
-              BBArgsToAttrs: (e) => ({ href: e[""] }),
-              AttrsToBBArgs: (e) => ({ args: { "": e.href } }),
-              convertContentToAttr: "href",
-            },
-          },
-        };
-      const Ae = { nodes: { ...ze }, marks: { ...Re } },
-        Oe = new (class {
-          get pm_schema() {
-            return this.m_ProseMirrorSchema;
-          }
-          get bbcode_dictionary() {
-            return this.m_mapBBCodeDictionary;
-          }
-          get pm_to_bbcode_config() {
-            return this.m_PMToBBCodeConfig;
-          }
-          constructor(e) {
-            (this.m_mapBBCodeDictionary = new Map()),
-              (this.m_PMToBBCodeConfig = {
-                mapNodes: new Map(),
-                mapMarks: new Map(),
-              });
-            const t = {
-                doc: { content: "block+" },
-                text: { group: "inline" },
-                hard_break: {
-                  inline: !0,
-                  group: "inline",
-                  selectable: !1,
-                  linebreakReplacement: !0,
-                  parseDOM: [{ tag: "br" }],
-                  toDOM: () => ["br"],
-                },
-              },
-              r = new Map(),
-              n = new Map();
-            for (const n in e.nodes) {
-              const { bbCode: a, ...o } = e.nodes[n];
-              (t[n] = o), r.set(n, a);
-            }
-            const a = {};
-            for (const t in e.marks) {
-              const { bbCode: r, ...o } = e.marks[t];
-              (a[t] = o), n.set(t, r);
-            }
-            (this.m_ProseMirrorSchema = new H.Sj({ nodes: t, marks: a })),
-              r.forEach((t, r) => {
-                var n;
-                const a = this.m_ProseMirrorSchema.nodes[r],
-                  o = e.nodes[r],
-                  s = Array.isArray(t) ? t : [t];
-                let i;
-                "list_item+" == o.content
-                  ? (i = this.m_ProseMirrorSchema.nodes.list_item)
-                  : -1 !=
-                      (null === (n = o.content) || void 0 === n
-                        ? void 0
-                        : n.indexOf("paragraph")) &&
-                    (i = this.m_ProseMirrorSchema.nodes.paragraph),
-                  s.forEach(
-                    ({
-                      tag: e,
-                      BBArgsToAttrs: t,
-                      AttrsToBBArgs: r,
-                      convertContentToAttr: n,
-                      ...o
-                    }) => {
-                      this.m_mapBBCodeDictionary.set(e, {
-                        Constructor: {
-                          node: a,
-                          BBArgsToAttrs: t,
-                          convertContentToAttr: n,
-                          acceptNode: i,
-                        },
-                        skipFollowingNewline: !0,
-                        ...o,
-                      });
-                    },
-                  );
-                const { tag: l, AttrsToBBArgs: c } = s[0];
-                this.m_PMToBBCodeConfig.mapNodes.set(a, {
-                  tag: l,
-                  AttrsToBBArgs: c,
-                });
-              }),
-              n.forEach((e, t) => {
-                const r = this.m_ProseMirrorSchema.marks[t],
-                  {
-                    tag: n,
-                    BBArgsToAttrs: a,
-                    AttrsToBBArgs: o,
-                    convertContentToAttr: s,
-                    ...i
-                  } = e;
-                this.m_mapBBCodeDictionary.set(n, {
-                  Constructor: {
-                    mark: r,
-                    BBArgsToAttrs: a,
-                    convertContentToAttr: s,
-                  },
-                  ...i,
-                }),
-                  this.m_PMToBBCodeConfig.mapMarks.set(r, {
-                    tag: n,
-                    AttrsToBBArgs: o,
-                  });
-              });
-          }
-        })(Ae);
-      var Ue = r(67660);
-      const Fe =
+      var j = r(61788),
+        q = r(33737),
+        F = r(4869),
+        D = r(9154),
+        P = r(10331),
+        x = r(28106),
+        L = r(55393),
+        A = r(32754),
+        V = r(73745),
+        K = r(78327),
+        Q = r(27491),
+        Y = r(55608),
+        X = r(79497);
+      const H = { nodes: { ...Y.DQ.nodes }, marks: { ...Y.DQ.marks } },
+        $ = new X.W(H);
+      var Z = r(22145),
+        J = r(52893),
+        ee = r(57053),
+        te = r(67660);
+      const re =
         r.p +
         "images/applications/community/image_error.svg?v=valveisgoodatcaching";
-      function Ge(e) {
-        const { uploadImage: t, nodeType: r, nMaxImageSize: a = Ie } = e;
+      function ne(e) {
+        const { uploadImage: t, nodeType: r, nMaxImageSize: i = ae } = e;
         return (
-          le(
+          (0, Z.c$)(
             n.useMemo(
               () =>
-                new Y.k_({
-                  key: new Y.hs(`PMUploadImage_${r.name}`),
+                new J.k_({
+                  key: new J.hs(`PMUploadImage_${r.name}`),
                   props: {
                     transformPasted: (...e) =>
                       (function (e, t, r, n) {
-                        let a = !1;
+                        let i = !1;
                         if (
                           (r.content.descendants((r, n) => {
-                            r.type == e && r.attrs.src.length > t && (a = !0);
+                            r.type == e && r.attrs.src.length > t && (i = !0);
                           }),
-                          a)
+                          i)
                         ) {
                           let t = [
                             e.create({
-                              src: Fe,
-                              title: (0, f.we)("#UserGameNotes_ImageTooLarge"),
+                              src: re,
+                              title: (0, B.we)("#UserGameNotes_ImageTooLarge"),
                             }),
                           ];
-                          return new H.Ji(H.FK.from(t), 0, 0);
+                          return new ee.Ji(ee.FK.from(t), 0, 0);
                         }
                         return r;
-                      })(r, a, ...e),
-                    handlePaste: (e, n, a) => {
-                      const o = [];
-                      a.content.descendants((e) => {
+                      })(r, i, ...e),
+                    handlePaste: (e, n, i) => {
+                      const a = [];
+                      i.content.descendants((e) => {
                         e.type == r &&
                           e.attrs.src.startsWith("data:image") &&
-                          o.push(e.attrs.src);
+                          a.push(e.attrs.src);
                       }),
-                        o.length > 0 &&
+                        a.length > 0 &&
                           setTimeout(() => {
                             !(async function (e, t, r) {
                               for (const n of e) {
                                 const e = await fetch(n),
-                                  a = await e.blob(),
-                                  o = (0, Ue.wI)(await a.arrayBuffer());
-                                De(
+                                  i = await e.blob(),
+                                  a = (0, te.wI)(await i.arrayBuffer());
+                                ie(
                                   n,
-                                  await r(e.headers.get("Content-Type"), o),
+                                  await r(e.headers.get("Content-Type"), a),
                                   t,
                                 );
                               }
-                            })(o, e, t);
+                            })(a, e, t);
                           }, 100);
                     },
                   },
                 }),
-              [t, a, r],
+              [t, i, r],
             ),
           ),
           null
         );
       }
-      function De(e, t, r) {
-        r.state.doc.descendants((n, a) => {
+      function ie(e, t, r) {
+        r.state.doc.descendants((n, i) => {
           if ("image" === n.type.name && n.attrs.src === e) {
-            const e = r.state.tr.setNodeAttribute(a, "src", t);
+            const e = r.state.tr.setNodeAttribute(i, "src", t);
             r.dispatch(e);
           }
         });
       }
-      const Ie = 1048576;
-      var xe = r(72739);
-      function We(e) {
+      const ae = 1048576;
+      var se = r(72739);
+      function oe(e) {
         const {
             visible: t = !0,
             className: r,
-            keepMounted: a = !1,
-            expandDirection: o = "height",
+            keepMounted: i = !1,
+            expandDirection: a = "height",
             msAnimationDuration: s = 250,
-            children: i,
+            children: o,
           } = e,
           {
-            style: l,
-            active: c,
+            style: c,
+            active: l,
             refDiv: u,
           } = (function (e, t = "height", r = 250) {
-            const a = n.useRef(),
-              o = n.useRef(!0),
-              [s, i] = n.useState("idle"),
-              [l, c] = n.useState({});
+            const i = n.useRef(),
+              a = n.useRef(!0),
+              [s, o] = n.useState("idle"),
+              [c, l] = n.useState({});
             n.useLayoutEffect(() => {
-              o.current ? (o.current = !1) : i("start");
+              a.current ? (a.current = !1) : o("start");
             }, [e]),
               n.useLayoutEffect(() => {
-                const r = a.current,
+                const r = i.current,
                   n = "height" == t ? "scrollHeight" : "scrollWidth";
                 if ("start" == s) {
-                  const a = r[n];
-                  c((r) => ({
-                    [t]: e ? "0px" : `${a}px`,
+                  const i = r[n];
+                  l((r) => ({
+                    [t]: e ? "0px" : `${i}px`,
                     ...r,
                     overflow: "hidden",
                   })),
-                    i("active");
+                    o("active");
                 } else if ("active" == s) {
                   r.scrollTop;
-                  const a = r[n];
-                  c({ overflow: "hidden", [t]: e ? `${a}px` : "0px" });
-                  const o = () => {
-                    xe.unstable_batchedUpdates(() => {
-                      c({}), i("idle");
+                  const i = r[n];
+                  l({ overflow: "hidden", [t]: e ? `${i}px` : "0px" });
+                  const a = () => {
+                    se.unstable_batchedUpdates(() => {
+                      l({}), o("idle");
                     });
                   };
                   return (
-                    r.addEventListener("transitionend", o),
+                    r.addEventListener("transitionend", a),
                     () => {
-                      r.removeEventListener("transitionend", o);
+                      r.removeEventListener("transitionend", a);
                     }
                   );
                 }
               }, [s, e]);
-            const u = { ...l, transition: `${t} ${r}ms` };
-            return { style: u, active: "idle" != s, refDiv: a };
-          })(t, o, s);
-        return t || c || a
-          ? n.createElement("div", { className: r, ref: u, style: l }, i)
+            const u = { ...c, transition: `${t} ${r}ms` };
+            return { style: u, active: "idle" != s, refDiv: i };
+          })(t, a, s);
+        return t || l || i
+          ? n.createElement("div", { className: r, ref: u, style: c }, o)
           : null;
       }
-      var Pe = r(6144);
-      const Le = () => n.useContext(qe);
-      function je(e) {
-        const { view: t, refUpdateToolbar: r, children: a } = e,
-          o = n.useRef();
-        o.current || (o.current = new Pe.lu()),
-          n.useEffect(
-            () => (
-              (0, ye.cZ)(r, () => o.current.Dispatch(t)),
-              () => (0, ye.cZ)(r, void 0)
-            ),
-            [t, r],
-          );
-        const s = n.useMemo(() => ({ callbacks: o.current, view: t }), [t]);
-        return t ? n.createElement(qe.Provider, { value: s }, a) : null;
-      }
-      const qe = n.createContext(void 0);
-      function $e() {
-        return n.createElement("div", { className: Me.Gap });
-      }
-      function Ke() {
-        return n.createElement("div", { className: Me.Spacer });
-      }
-      function Ve(e) {
-        return n.createElement(
-          pe.Z,
-          {
-            className: (0, we.A)(e.className, Me.ToolbarRow),
-            "flow-children": "row",
-          },
-          e.children,
-        );
-      }
-      function He(e) {
-        const { nodeType: t, tooltip: r, attrs: a, children: o } = e,
-          { callbacks: s, view: i } = Le(),
-          [l, c] = n.useState(() => re(i.state, t, a)),
-          u = n.useCallback((e) => c(re(e.state, t, a)), [t, a]);
-        (0, ye.hL)(s, u);
-        const d = n.useMemo(() => X.y_(t, a), [a, t]);
-        return n.createElement(Ze, {
-          command: d,
-          tooltip: r,
-          toggled: l,
-          children: o,
-        });
-      }
-      function Ye(e) {
-        const { mark: t, tooltip: r, children: a } = e,
-          { callbacks: o, view: s } = Le(),
-          [i, l] = n.useState(() => te(s.state, t)),
-          c = n.useCallback((e) => l(te(e.state, t)), [t]);
-        (0, ye.hL)(o, c);
-        const u = n.useMemo(() => X.wh(t), [t]);
-        return n.createElement(Ze, {
-          command: u,
-          tooltip: r,
-          toggled: i,
-          children: a,
-        });
-      }
-      function Xe(e) {
-        const { fnEnabledCheck: t, ...r } = e,
-          { callbacks: a, view: o } = Le(),
-          [s, i] = n.useState(() => t(o)),
-          l = n.useCallback((e) => i(t(e)), [t]);
-        return (0, ye.hL)(a, l), n.createElement(Ze, { ...r, disabled: !s });
-      }
-      function Ze(e) {
-        const {
-            command: t,
-            toggled: r,
-            tooltip: a,
-            disabled: o,
-            children: s,
-          } = e,
-          { view: i } = Le();
-        return n.createElement(
-          Ce.Gq,
-          { toolTipContent: a, bDisabled: !a, direction: "bottom" },
-          n.createElement(
-            I.$n,
-            {
-              className: (0, we.A)(Me.CommandButton, r && Me.Toggled),
-              onMouseDown: (e) => {
-                e.preventDefault(), t(i.state, i.dispatch, i);
-              },
-              disabled: !0 === o,
-              focusable: !o,
-            },
-            s,
-          ),
-        );
-      }
-      function Je(e) {
-        const {
-          onClick: t,
-          toggled: r,
-          tooltip: a,
-          disabled: o,
-          children: s,
-        } = e;
-        return n.createElement(
-          Ce.Gq,
-          { toolTipContent: a, bDisabled: !a, direction: "bottom" },
-          n.createElement(
-            I.$n,
-            {
-              className: (0, we.A)(Me.CommandButton, r && Me.Toggled),
-              onMouseDown: (e) => {
-                e.preventDefault(), t();
-              },
-              disabled: !0 === o,
-            },
-            s,
-          ),
-        );
-      }
-      function Qe(e) {
-        const { schema: t, children: r } = e,
-          { callbacks: a, view: o } = Le(),
-          [s, i] = n.useState(() => te(o.state, t.marks.link)),
-          l = n.useCallback((e) => i(te(e.state, t.marks.link)), [t]);
-        (0, ye.hL)(a, l);
-        const [c, u, d] = (0, ye.uD)();
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            W.EN,
-            { active: c },
-            n.createElement(et, {
-              schema: t,
-              active: c,
-              closeModal: d,
-              view: o,
-            }),
-          ),
-          n.createElement(
-            Ce.Gq,
-            {
-              toolTipContent: "#FormattingToolbar_InsertLink",
-              direction: "bottom",
-            },
-            n.createElement(
-              I.$n,
-              {
-                className: (0, we.A)(Me.CommandButton, s && Me.Toggled),
-                onMouseDown: (e) => {
-                  e.preventDefault(), u();
-                },
-              },
-              r,
-            ),
-          ),
-        );
-      }
-      const et = n.memo(function (e) {
-        const { schema: t, active: r, closeModal: a, view: o } = e,
-          [s, i] = n.useState(""),
-          [l, c] = n.useState(""),
-          u = n.useRef(),
-          d = n.useRef();
-        return (
-          n.useLayoutEffect(() => {
-            if (r) {
-              let e = "";
-              o.state.selection.empty ||
-                (e = o.state.doc.cut(
-                  o.state.selection.from,
-                  o.state.selection.to,
-                ).textContent),
-                i(e),
-                e.startsWith("http")
-                  ? (c(e),
-                    u.current.Focus(),
-                    window.setTimeout(() => {
-                      u.current.element.select();
-                    }, 0))
-                  : 0 == e.length
-                    ? u.current.Focus()
-                    : d.current.Focus();
-            }
-          }, [r, o]),
-          n.createElement(
-            W.o0,
-            {
-              onOK: () => {
-                o.dispatch(
-                  o.state.tr.replaceRangeWith(
-                    o.state.selection.from,
-                    o.state.selection.to,
-                    t.text(s || l, [t.marks.link.create({ href: l })]),
-                  ),
-                ),
-                  o.focus(),
-                  a();
-              },
-              closeModal: a,
-              strTitle: (0, f.we)("#FormattingToolbar_InsertLink"),
-              strOKButtonText: (0, f.we)("#FormattingToolbar_InsertLink"),
-              bOKDisabled: 0 == l.length,
-            },
-            n.createElement(I.pd, {
-              ref: u,
-              value: s,
-              onChange: (e) => i(e.currentTarget.value),
-              label: (0, f.we)("#FormattingToolbar_LinkText"),
-            }),
-            n.createElement(I.pd, {
-              ref: d,
-              value: l,
-              onChange: (e) => c(e.currentTarget.value),
-              label: (0, f.we)("#FormattingToolbar_LinkAddress"),
-            }),
-          )
-        );
-      });
-      function tt() {
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            Xe,
-            {
-              tooltip: "#FormattingToolbar_Undo",
-              command: J.tN,
-              fnEnabledCheck: rt,
-            },
-            n.createElement(x.VnB, null),
-          ),
-          n.createElement(
-            Xe,
-            {
-              tooltip: "#FormattingToolbar_Redo",
-              command: J.ZS,
-              fnEnabledCheck: nt,
-            },
-            n.createElement(x.Bal, null),
-          ),
-        );
-      }
-      function rt(e) {
-        return J.mk(e.state) > 0;
-      }
-      function nt(e) {
-        return J.mL(e.state) > 0;
-      }
-      function at(e) {
-        const { schema: t } = e;
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            Ye,
-            { tooltip: "#FormattingToolbar_Bold", mark: t.marks.strong },
-            n.createElement(x.l4n, null),
-          ),
-          n.createElement(
-            Ye,
-            { tooltip: "#FormattingToolbar_Italic", mark: t.marks.italic },
-            n.createElement(x.UKJ, null),
-          ),
-          n.createElement(
-            Ye,
-            {
-              tooltip: "#FormattingToolbar_Underline",
-              mark: t.marks.underline,
-            },
-            n.createElement(x.Gj3, null),
-          ),
-          "strike" in t.marks &&
-            n.createElement(
-              Ye,
-              { tooltip: "#FormattingToolbar_Strike", mark: t.marks.strike },
-              n.createElement(x.tI4, null),
-            ),
-          "code" in t.marks &&
-            n.createElement(
-              Ye,
-              { tooltip: "#FormattingToolbar_InlineCode", mark: t.marks.code },
-              n.createElement(x.bmT, null),
-            ),
-        );
-      }
-      function ot(e) {
-        const { schema: t } = e;
-        return n.createElement(
-          He,
-          {
-            tooltip: "#FormattingToolbar_Paragraph",
-            nodeType: t.nodes.paragraph,
-          },
-          n.createElement(x.iYj, null),
-        );
-      }
-      function st(e) {
-        const { schema: t, maxLevel: r = 1, levels: a } = e,
-          o = r + a - 1;
-        return n.createElement(
-          n.Fragment,
-          null,
-          r <= 1 &&
-            n.createElement(
-              He,
-              {
-                tooltip: "#FormattingToolbar_HeadingLevel1",
-                nodeType: t.nodes.heading,
-                attrs: { level: 1 },
-              },
-              n.createElement(x.jRw, null),
-            ),
-          r <= 2 &&
-            o >= 2 &&
-            n.createElement(
-              He,
-              {
-                tooltip: "#FormattingToolbar_HeadingLevel2",
-                nodeType: t.nodes.heading,
-                attrs: { level: 2 },
-              },
-              n.createElement(x.qOW, null),
-            ),
-          r <= 3 &&
-            o >= 3 &&
-            n.createElement(
-              He,
-              {
-                tooltip: "#FormattingToolbar_HeadingLevel3",
-                nodeType: t.nodes.heading,
-                attrs: { level: 3 },
-              },
-              n.createElement(x.x7X, null),
-            ),
-          r <= 4 &&
-            o >= 4 &&
-            n.createElement(
-              He,
-              {
-                tooltip: "#FormattingToolbar_HeadingLevel4",
-                nodeType: t.nodes.heading,
-                attrs: { level: 4 },
-              },
-              n.createElement(x.qzO, null),
-            ),
-          r <= 5 &&
-            o >= 5 &&
-            n.createElement(
-              He,
-              {
-                tooltip: "#FormattingToolbar_HeadingLevel5",
-                nodeType: t.nodes.heading,
-                attrs: { level: 5 },
-              },
-              n.createElement(x.jXA, null),
-            ),
-        );
-      }
-      function it(e) {
-        const { schema: t, showIndentButtonsAsNeeded: r = !1 } = e,
-          { callbacks: a, view: o } = Le(),
-          { bullet_list: s, ordered_list: i, list_item: l } = t.nodes,
-          c = n.useMemo(() => ee.T2(l), [l]),
-          u = n.useMemo(() => ee.$B(l), [l]),
-          [d, m] = n.useState(() => c(o.state)),
-          [p, h] = n.useState(() => u(o.state));
-        return (
-          (0, ye.hL)(
-            a,
-            n.useCallback(
-              (e) => {
-                m(c(e.state)), h(u(e.state));
-              },
-              [c, u],
-            ),
-          ),
-          n.createElement(
-            n.Fragment,
-            null,
-            n.createElement(
-              lt,
-              {
-                tooltip: "#FormattingToolbar_BulletedList",
-                list_type: s,
-                list_item: l,
-              },
-              n.createElement(x.JPq, null),
-            ),
-            i && !1,
-            (!r || d || p) &&
-              n.createElement(
-                n.Fragment,
-                null,
-                n.createElement(
-                  Ze,
-                  {
-                    tooltip: "#FormattingToolbar_OutdentList",
-                    disabled: !d,
-                    command: c,
-                  },
-                  n.createElement(x.LSz, null),
-                ),
-                n.createElement(
-                  Ze,
-                  {
-                    tooltip: "#FormattingToolbar_IndentList",
-                    disabled: !p,
-                    command: u,
-                  },
-                  n.createElement(x.ycU, null),
-                ),
-              ),
-          )
-        );
-      }
-      function lt(e) {
-        const { list_type: t, list_item: r, tooltip: a, children: o } = e,
-          { callbacks: s, view: i } = Le(),
-          l = n.useCallback(
-            (e) =>
-              !!(function (e, t, r) {
-                const { $from: n, to: a } = e.selection;
-                for (let e = n.sharedDepth(a); e > 0; e--) {
-                  const a = n.node(e);
-                  if (a.hasMarkup(t, r)) return a;
-                }
-                return !1;
-              })(e.state, t),
-            [t],
-          ),
-          [c, u] = n.useState(() => l(i)),
-          d = n.useMemo(() => ee.Sd(t), [t]),
-          m = n.useMemo(() => ee.T2(r), [r]),
-          p = n.useCallback((e) => (e ? m : d), [m, d]),
-          [h, g] = n.useState(() => p(c)(i.state));
-        return (
-          (0, ye.hL)(
-            s,
-            n.useCallback(
-              (e) => {
-                const t = l(e);
-                u(t), g(p(t)(e.state));
-              },
-              [l, p],
-            ),
-          ),
-          n.createElement(
-            Ze,
-            { tooltip: a, disabled: !h, toggled: c, command: p(c) },
-            o,
-          )
-        );
-      }
-      function ct(e) {
-        const { schema: t } = e;
-        return n.createElement(Qe, { schema: t }, n.createElement(x.YqK, null));
-      }
-      function ut(e) {
-        const { bSpellcheckEnabled: t, setSpellcheckEnabled: r } = e;
-        return n.createElement(
-          Je,
-          {
-            tooltip: t
-              ? "#FormattingToolbar_DisableSpellcheck"
-              : "#FormattingToolbar_EnableSpellcheck",
-            toggled: t,
-            onClick: () => r(!t),
-          },
-          n.createElement(x.DEV, null),
-        );
-      }
-      var dt = r(76011);
-      function mt(e) {
+      var ce = r(73309),
+        le = r(79570),
+        ue = r(30175),
+        me = r(52038),
+        de = r(76011);
+      function pe(e) {
         const {
             schema: t,
             view: r,
-            refUpdateToolbar: a,
-            className: o,
+            refUpdateToolbar: i,
+            className: a,
             bSpellcheckEnabled: s,
-            setSpellcheckEnabled: i,
+            setSpellcheckEnabled: o,
           } = e,
-          [l, c] = (0, dt.SP)("FormattingToolbar_Expanded", !1);
+          [c, l] = (0, de.SP)("FormattingToolbar_Expanded", !1);
         return n.createElement(
-          je,
-          { refUpdateToolbar: a, view: r },
+          ue.bI,
+          { refUpdateToolbar: i, view: r },
           n.createElement(
             "div",
-            { className: (0, we.A)(Me.Toolbar, o) },
+            { className: (0, me.A)(ce.Toolbar, a) },
             n.createElement(
-              Ve,
+              ue.Ez,
               null,
-              n.createElement(tt, null),
-              n.createElement($e, null),
-              n.createElement(at, { schema: t }),
-              n.createElement(Ke, null),
+              n.createElement(le.MV, null),
+              n.createElement(ue.XQ, null),
+              n.createElement(le.Km, { schema: t }),
+              n.createElement(ue.hK, null),
               n.createElement(
-                Je,
+                ue.ff,
                 {
-                  onClick: () => c(!l),
+                  onClick: () => l(!c),
                   tooltip: "#FormattingToolbar_ExpandOptions",
                 },
-                n.createElement(x.cLJ, { direction: l ? "up" : "down" }),
+                n.createElement(F.cLJ, { direction: c ? "up" : "down" }),
               ),
             ),
             n.createElement(
-              We,
-              { visible: l },
+              oe,
+              { visible: c },
               n.createElement(
-                Ve,
+                ue.Ez,
                 null,
-                n.createElement(ot, { schema: t }),
-                n.createElement(st, { schema: t, levels: 5 }),
+                n.createElement(le.Hz, { schema: t }),
+                n.createElement(le.WJ, { schema: t, levels: 5 }),
                 n.createElement(
-                  He,
+                  ue.u3,
                   {
                     nodeType: t.nodes.code_block,
-                    tooltip: (0, f.we)("#FormattingToolbar_CodeBlock"),
+                    tooltip: (0, B.we)("#FormattingToolbar_CodeBlock"),
                   },
-                  n.createElement(x.kNE, null),
+                  n.createElement(F.kNE, null),
                 ),
-                n.createElement($e, null),
-                n.createElement(it, { schema: t }),
-                n.createElement($e, null),
-                n.createElement(ct, { schema: t }),
-                n.createElement(Ke, null),
-                i &&
-                  n.createElement(ut, {
+                n.createElement(ue.XQ, null),
+                n.createElement(le.C$, { schema: t }),
+                n.createElement(ue.XQ, null),
+                n.createElement(le.z9, { schema: t }),
+                n.createElement(ue.hK, null),
+                o &&
+                  n.createElement(le.Nt, {
                     bSpellcheckEnabled: s,
-                    setSpellcheckEnabled: i,
+                    setSpellcheckEnabled: o,
                   }),
               ),
             ),
           ),
         );
       }
-      const pt = 15;
-      function ht(e) {
+      const _e = 15;
+      function he(e) {
         const { note: t } = e,
-          [r, a] = n.useState(!1),
-          [o, s] = n.useState(),
-          i = n.useRef(),
+          [r, i] = n.useState(!1),
+          [a, s] = n.useState(),
+          o = n.useRef(),
           u = n.useRef(),
           p = n.useRef(t.content),
           b = n.useRef(!1),
-          _ = n.useContext(m).onClickURL,
+          g = n.useContext(d).onClickURL,
           y =
-            null === (v = n.useContext(m).bSpellcheckEnabled) ||
-            void 0 === v ||
-            v;
-        var v;
-        const M = n.useContext(m).setSpellcheckEnabled,
-          E = (function (e) {
-            const t = g();
+            null === (S = n.useContext(d).bSpellcheckEnabled) ||
+            void 0 === S ||
+            S;
+        var S;
+        const N = n.useContext(d).setSpellcheckEnabled,
+          M = (function (e) {
+            const t = h();
             return n.useCallback(
               async (r, n) => {
-                const a = new Uint8Array(n),
-                  o = await t.UploadImage(`notes_${e}_images/`, r, a);
-                return Promise.resolve("/gamenotes/" + o);
+                const i = new Uint8Array(n),
+                  a = await t.UploadImage(`notes_${e}_images/`, r, i);
+                return Promise.resolve("/gamenotes/" + a);
               },
               [t, e],
             );
           })(t.appid),
-          C = (0, ve.Qn)();
+          E = (0, K.Qn)();
         p.current == t.content || b.current || (p.current = t.content);
-        const k = p.current,
-          T = (function () {
-            const e = (0, l.jE)(),
-              t = g();
-            return (0, c.n)({
+        const z = p.current,
+          v = (function () {
+            const e = (0, c.jE)(),
+              t = h();
+            return (0, l.n)({
               mutationFn: (e) => t.SaveGameNote(e.note, e.title, e.bbcode),
               onMutate(t) {
                 const r = { ...t.note, title: t.title, content: t.bbcode };
                 return (
-                  w(e, d(t.note), (e) => e.map((e) => (e.id == r.id ? r : e))),
+                  f(e, m(t.note), (e) => e.map((e) => (e.id == r.id ? r : e))),
                   console.log(r),
                   r
                 );
               },
               onSuccess(t, r, n) {
                 console.log(n, t),
-                  w(e, d(r.note), (e) =>
+                  f(e, m(r.note), (e) =>
                     e.map((e) =>
                       e.id === n.id ? { ...e, id: t, not_persisted: !1 } : e,
                     ),
@@ -1881,18 +524,18 @@
               },
             });
           })(),
-          S = n.useCallback((e, t) => {
-            i.current && i.current(),
+          C = n.useCallback((e, t) => {
+            o.current && o.current(),
               t.doc &&
                 t.doc != e.state.doc &&
                 (b.current ||
                   ((b.current = !0),
-                  D.y.ReportTrackedAction("/GameNotes/NoteModified")),
+                  j.y.ReportTrackedAction("/GameNotes/NoteModified")),
                 (u.current = () => ({
-                  title: _t(e.state.doc),
-                  bbcode: j(e.state.doc, Oe),
+                  title: we(e.state.doc),
+                  bbcode: (0, P.m)(e.state.doc, $),
                 })),
-                a(!0));
+                i(!0));
           }, []);
         n.useEffect(() => {
           if (!r) return;
@@ -1901,863 +544,863 @@
               if (e) {
                 const { title: r, bbcode: n } = e();
                 (t.not_persisted && !(null == n ? void 0 : n.length)) ||
-                  T.mutate({ note: t, title: r, bbcode: n }),
-                  a(!1);
+                  v.mutate({ note: t, title: r, bbcode: n }),
+                  i(!1);
               }
               (e = void 0), (u.current = void 0);
             },
-            o = window.setTimeout(n, 1e3 * pt);
+            a = window.setTimeout(n, 1e3 * _e);
           return () => {
-            window.clearTimeout(o), n();
+            window.clearTimeout(a), n();
           };
-        }, [T, r, t]),
+        }, [v, r, t]),
           n.useEffect(() => {
-            o && o.focus();
-          }, [o]);
-        const N = h(),
-          z = B(t, N),
-          R = {
-            onSecondaryButton: () => z.mutate(),
-            onSecondaryActionDescription: (0, f.we)(
+            a && a.focus();
+          }, [a]);
+        const R = _(),
+          T = w(t, R),
+          U = {
+            onSecondaryButton: () => T.mutate(),
+            onSecondaryActionDescription: (0, B.we)(
               "#UserGameNotes_DeleteNote",
             ),
           };
         return n.createElement(
           "div",
-          { className: ke.NoteEditorArea },
-          !C &&
-            n.createElement(mt, {
-              schema: Oe.pm_schema,
-              view: o,
-              refUpdateToolbar: i,
-              className: ke.Toolbar,
+          { className: Q.NoteEditorArea },
+          !E &&
+            n.createElement(pe, {
+              schema: $.pm_schema,
+              view: a,
+              refUpdateToolbar: o,
+              className: Q.Toolbar,
               bSpellcheckEnabled: y,
-              setSpellcheckEnabled: M,
+              setSpellcheckEnabled: N,
             }),
           n.createElement(
-            Ee,
+            L.l,
             {
-              schemaConfig: Oe,
-              className: ke.EditorInput,
-              bbcode: k,
-              onUpdate: S,
+              schemaConfig: $,
+              className: Q.EditorInput,
+              bbcode: z,
+              onUpdate: C,
               refView: s,
               bSpellcheckEnabled: y,
-              panelProps: R,
+              panelProps: U,
             },
-            n.createElement(Ge, {
-              uploadImage: E,
-              nodeType: Oe.pm_schema.nodes.image,
+            n.createElement(ne, {
+              uploadImage: M,
+              nodeType: $.pm_schema.nodes.image,
             }),
-            n.createElement(ue, {
-              linkMarkType: Oe.pm_schema.marks.link,
-              schema: Oe.pm_schema,
-              onClickURL: _,
+            n.createElement(x.W, {
+              linkMarkType: $.pm_schema.marks.link,
+              schema: $.pm_schema,
+              onClickURL: g,
             }),
           ),
-          !C && n.createElement(gt, { note: t, bDirty: r }),
+          !E && n.createElement(Be, { note: t, bDirty: r }),
         );
       }
-      function gt(e) {
+      function Be(e) {
         const { note: t, bDirty: r } = e,
-          [a, o, s] = (0, ye.uD)(!1),
-          i = "single" == n.useContext(m).mode,
-          l = h(),
-          c = B(t, l),
+          [i, a, s] = (0, V.uD)(!1),
+          o = "single" == n.useContext(d).mode,
+          c = _(),
+          l = w(t, c),
           u = n.useCallback(() => {
-            !r && t.not_persisted ? c.mutate() : o();
-          }, [r, t, c, o]);
+            !r && t.not_persisted ? l.mutate() : a();
+          }, [r, t, l, a]);
         return n.createElement(
           "div",
-          { className: ke.NoteActions },
-          a && n.createElement(bt, { note: t, closeModal: s, deleteNote: c }),
+          { className: Q.NoteActions },
+          i && n.createElement(ge, { note: t, closeModal: s, deleteNote: l }),
           n.createElement(
-            Ce.he,
+            A.he,
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
-            n.createElement(I.$n, { onClick: u }, n.createElement(x.lMJ, null)),
+            n.createElement(q.$n, { onClick: u }, n.createElement(F.lMJ, null)),
           ),
-          i && n.createElement(ft, { bDirty: r }),
+          o && n.createElement(be, { bDirty: r }),
         );
       }
-      function ft(e) {
+      function be(e) {
         const { bDirty: t } = e,
-          r = h();
+          r = _();
         return t
           ? n.createElement(
-              I.jn,
-              { onClick: () => r(), className: ke.CloseWindowButton },
-              (0, f.we)("#Button_SaveAndClose"),
+              q.jn,
+              { onClick: () => r(), className: Q.CloseWindowButton },
+              (0, B.we)("#Button_SaveAndClose"),
             )
           : n.createElement(
-              I.$n,
-              { onClick: () => r(), className: ke.CloseWindowButton },
-              (0, f.we)("#Button_Close"),
+              q.$n,
+              { onClick: () => r(), className: Q.CloseWindowButton },
+              (0, B.we)("#Button_Close"),
             );
       }
-      function bt(e) {
-        const { note: t, closeModal: r, deleteNote: a } = e;
+      function ge(e) {
+        const { note: t, closeModal: r, deleteNote: i } = e;
         return n.createElement(
-          W.EN,
+          D.EN,
           { active: !0 },
-          n.createElement(W.o0, {
-            strTitle: (0, f.we)("#UserGameNotes_DeleteNote"),
-            strDescription: (0, f.we)("#UserGameNotes_PromptDelete"),
-            onOK: () => a.mutate(),
-            bOKDisabled: a.isPending,
-            strOKButtonText: (0, f.we)("#Button_Delete"),
+          n.createElement(D.o0, {
+            strTitle: (0, B.we)("#UserGameNotes_DeleteNote"),
+            strDescription: (0, B.we)("#UserGameNotes_PromptDelete"),
+            onOK: () => i.mutate(),
+            bOKDisabled: i.isPending,
+            strOKButtonText: (0, B.we)("#Button_Delete"),
             closeModal: r,
           }),
         );
       }
-      function _t(e) {
+      function we(e) {
         let t = "";
         for (let r = 0; r < e.content.childCount; r++) {
           const n = e.content.child(r);
           if (n.isText) t += n.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = _t(n)), t.length > 4)) return t;
+            if (((t = we(n)), t.length > 4)) return t;
           }
         }
         return t.trim();
       }
-      function Bt() {
-        const e = (0, a.W5)(),
+      function fe() {
+        const e = (0, i.W5)(),
           t = y(
             "appid" in e.params && Number(e.params.appid),
             "shortcut_name" in e.params && e.params.shortcut_name,
           );
         let r = e.params.noteid;
-        const o = (0, a.W6)(),
+        const a = (0, i.W6)(),
           s = (function (e) {
-            const t = (0, l.jE)(),
-              r = g();
+            const t = (0, c.jE)(),
+              r = h();
             return n.useCallback(() => {
-              const n = (0, f.we)("#UserGameNotes_UntitledNote_Title"),
-                a = r.NewNote(e, n);
-              return w(t, e, (e) => [...e, a]), a.id;
+              const n = (0, B.we)("#UserGameNotes_UntitledNote_Title"),
+                i = r.NewNote(e, n);
+              return f(t, e, (e) => [...e, i]), i.id;
             }, [t, r, e]);
           })(t),
-          { data: i, isLoading: c } = _(t);
+          { data: o, isLoading: l } = g(t);
         let u;
-        i && r && (u = i.find((e) => e.id === r)),
+        o && r && (u = o.find((e) => e.id === r)),
           n.useLayoutEffect(() => {
-            !i ||
-              (r && i.find((e) => e.id === r)) ||
-              (i.length > 0 && i[0].id ? yt(o, t, i[0].id) : yt(o, t, s()));
-          }, [o, t, r, i, s]);
-        const d = n.createElement(
-          Ce.he,
+            !o ||
+              (r && o.find((e) => e.id === r)) ||
+              (o.length > 0 && o[0].id ? Se(a, t, o[0].id) : Se(a, t, s()));
+          }, [a, t, r, o, s]);
+        const m = n.createElement(
+          A.he,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           n.createElement(
-            I.$n,
+            q.$n,
             {
-              className: ke.NewNoteButton,
+              className: Q.NewNoteButton,
               onClick: () => {
                 const e = s();
-                yt(o, t, e);
+                Se(a, t, e);
               },
             },
-            n.createElement(x.qY3, null),
+            n.createElement(F.qY3, null),
           ),
         );
-        return i
-          ? n.createElement(wt, {
+        return o
+          ? n.createElement(ye, {
               noteParent: t,
-              notes: i,
+              notes: o,
               activeNoteID: null == u ? void 0 : u.id,
-              actions: d,
+              actions: m,
             })
           : null;
       }
-      function wt(e) {
-        const { noteParent: t, notes: r, activeNoteID: o, actions: s } = e,
-          [i, l] = (0, dt.SP)("NotesListCollapsed", !1),
-          c = n.useContext(m).bPinnedView,
-          u = (0, ve.Qn)(),
-          d = r.map((e) => {
+      function ye(e) {
+        const { noteParent: t, notes: r, activeNoteID: a, actions: s } = e,
+          [o, c] = (0, de.SP)("NotesListCollapsed", !1),
+          l = n.useContext(d).bPinnedView,
+          u = (0, K.Qn)(),
+          m = r.map((e) => {
             var t;
             return {
               title:
                 (null === (t = e.title) || void 0 === t ? void 0 : t.length) > 0
                   ? e.title
-                  : (0, f.we)("#UserGameNotes_Untitled"),
+                  : (0, B.we)("#UserGameNotes_Untitled"),
               identifier: e.id,
-              content: n.createElement(ht, { note: e }),
-              pageClassName: ke.NotePage,
+              content: n.createElement(he, { note: e }),
+              pageClassName: Q.NotePage,
               hideTitle: !0,
             };
           }),
-          p = (0, a.W6)(),
-          h = n.useCallback((e) => yt(p, t, e), [p, t]);
-        return n.createElement(I.Bv, {
-          title: (0, f.we)("#UserGameNotes_NotesList"),
-          pages: d,
-          className: (0, we.A)(ke.NotesPagedSettings, c && ke.PinnedView),
-          page: o,
-          onPageRequested: h,
+          p = (0, i.W6)(),
+          _ = n.useCallback((e) => Se(p, t, e), [p, t]);
+        return n.createElement(q.Bv, {
+          title: (0, B.we)("#UserGameNotes_NotesList"),
+          pages: m,
+          className: (0, me.A)(Q.NotesPagedSettings, l && Q.PinnedView),
+          page: a,
+          onPageRequested: _,
           bottomControls: s,
-          hideList: i,
-          toggleHideList: c || u ? void 0 : () => l(!i),
+          hideList: o,
+          toggleHideList: l || u ? void 0 : () => c(!o),
         });
       }
-      function yt(e, t, r) {
+      function Se(e, t, r) {
         let n;
         (n =
           "appid" in t
-            ? o.AppNotes(t.appid, r)
-            : o.ShortcutNotes(t.shortcut, r)),
+            ? a.AppNotes(t.appid, r)
+            : a.ShortcutNotes(t.shortcut, r)),
           e.replace(n, e.location.state);
       }
-      var vt = r(80613),
-        Mt = r(89068);
-      const Et = vt.Message;
-      class Ct extends Et {
+      var Ne = r(80613),
+        Me = r(89068);
+      const Ee = Ne.Message;
+      class ze extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ct.prototype.id || Mt.Sg(Ct.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            ze.prototype.id || Me.Sg(ze.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Ct.sm_m ||
-              (Ct.sm_m = {
-                proto: Ct,
+            ze.sm_m ||
+              (ze.sm_m = {
+                proto: ze,
                 fields: {
-                  id: { n: 1, br: Mt.qM.readString, bw: Mt.gp.writeString },
-                  appid: { n: 2, br: Mt.qM.readUint32, bw: Mt.gp.writeUint32 },
+                  id: { n: 1, br: Me.qM.readString, bw: Me.gp.writeString },
+                  appid: { n: 2, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
                   shortcut_name: {
                     n: 3,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                   shortcutid: {
                     n: 4,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   ordinal: {
                     n: 5,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   time_created: {
                     n: 6,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   time_modified: {
                     n: 7,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
-                  title: { n: 8, br: Mt.qM.readString, bw: Mt.gp.writeString },
+                  title: { n: 8, br: Me.qM.readString, bw: Me.gp.writeString },
                   content: {
                     n: 9,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                 },
               }),
-            Ct.sm_m
+            ze.sm_m
           );
         }
         static MBF() {
-          return Ct.sm_mbf || (Ct.sm_mbf = Mt.w0(Ct.M())), Ct.sm_mbf;
+          return ze.sm_mbf || (ze.sm_mbf = Me.w0(ze.M())), ze.sm_mbf;
         }
         toObject(e = !1) {
-          return Ct.toObject(e, this);
+          return ze.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(Ct.M(), e, t);
+          return Me.BT(ze.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(Ct.M(), e);
+          return Me.Uq(ze.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new Ct();
-          return Ct.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new ze();
+          return ze.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(Ct.MBF(), e, t);
+          return Me.zj(ze.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return Ct.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(Ct.M(), e, t);
+          Me.i0(ze.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return Ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNote";
         }
       }
-      class kt extends Et {
+      class ve extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            kt.prototype.appid || Mt.Sg(kt.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            ve.prototype.appid || Me.Sg(ve.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            kt.sm_m ||
-              (kt.sm_m = {
-                proto: kt,
+            ve.sm_m ||
+              (ve.sm_m = {
+                proto: ve,
                 fields: {
-                  appid: { n: 1, br: Mt.qM.readUint32, bw: Mt.gp.writeUint32 },
+                  appid: { n: 1, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
                   shortcut_name: {
                     n: 2,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                   shortcutid: {
                     n: 3,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   include_content: {
                     n: 4,
-                    br: Mt.qM.readBool,
-                    bw: Mt.gp.writeBool,
+                    br: Me.qM.readBool,
+                    bw: Me.gp.writeBool,
                   },
                 },
               }),
-            kt.sm_m
+            ve.sm_m
           );
         }
         static MBF() {
-          return kt.sm_mbf || (kt.sm_mbf = Mt.w0(kt.M())), kt.sm_mbf;
+          return ve.sm_mbf || (ve.sm_mbf = Me.w0(ve.M())), ve.sm_mbf;
         }
         toObject(e = !1) {
-          return kt.toObject(e, this);
+          return ve.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(kt.M(), e, t);
+          return Me.BT(ve.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(kt.M(), e);
+          return Me.Uq(ve.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new kt();
-          return kt.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new ve();
+          return ve.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(kt.MBF(), e, t);
+          return Me.zj(ve.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return kt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(kt.M(), e, t);
+          Me.i0(ve.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return kt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_GetNotesForGame_Request";
         }
       }
-      class Tt extends Et {
+      class Ce extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Tt.prototype.notes || Mt.Sg(Tt.M()),
-            Et.initialize(this, e, 0, -1, [1], null);
+            Ce.prototype.notes || Me.Sg(Ce.M()),
+            Ee.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            Tt.sm_m ||
-              (Tt.sm_m = {
-                proto: Tt,
-                fields: { notes: { n: 1, c: Ct, r: !0, q: !0 } },
+            Ce.sm_m ||
+              (Ce.sm_m = {
+                proto: Ce,
+                fields: { notes: { n: 1, c: ze, r: !0, q: !0 } },
               }),
-            Tt.sm_m
+            Ce.sm_m
           );
         }
         static MBF() {
-          return Tt.sm_mbf || (Tt.sm_mbf = Mt.w0(Tt.M())), Tt.sm_mbf;
+          return Ce.sm_mbf || (Ce.sm_mbf = Me.w0(Ce.M())), Ce.sm_mbf;
         }
         toObject(e = !1) {
-          return Tt.toObject(e, this);
+          return Ce.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(Tt.M(), e, t);
+          return Me.BT(Ce.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(Tt.M(), e);
+          return Me.Uq(Ce.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new Tt();
-          return Tt.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Ce();
+          return Ce.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(Tt.MBF(), e, t);
+          return Me.zj(Ce.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return Tt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(Tt.M(), e, t);
+          Me.i0(Ce.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return Tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_GetNotesForGame_Response";
         }
       }
-      class St extends Et {
+      class Re extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            St.prototype.appid || Mt.Sg(St.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            Re.prototype.appid || Me.Sg(Re.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            St.sm_m ||
-              (St.sm_m = {
-                proto: St,
+            Re.sm_m ||
+              (Re.sm_m = {
+                proto: Re,
                 fields: {
-                  appid: { n: 1, br: Mt.qM.readUint32, bw: Mt.gp.writeUint32 },
+                  appid: { n: 1, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
                   shortcut_name: {
                     n: 2,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                   shortcutid: {
                     n: 3,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   note_id: {
                     n: 4,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
-                  create_new: { n: 5, br: Mt.qM.readBool, bw: Mt.gp.writeBool },
-                  title: { n: 6, br: Mt.qM.readString, bw: Mt.gp.writeString },
+                  create_new: { n: 5, br: Me.qM.readBool, bw: Me.gp.writeBool },
+                  title: { n: 6, br: Me.qM.readString, bw: Me.gp.writeString },
                   content: {
                     n: 7,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                 },
               }),
-            St.sm_m
+            Re.sm_m
           );
         }
         static MBF() {
-          return St.sm_mbf || (St.sm_mbf = Mt.w0(St.M())), St.sm_mbf;
+          return Re.sm_mbf || (Re.sm_mbf = Me.w0(Re.M())), Re.sm_mbf;
         }
         toObject(e = !1) {
-          return St.toObject(e, this);
+          return Re.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(St.M(), e, t);
+          return Me.BT(Re.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(St.M(), e);
+          return Me.Uq(Re.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new St();
-          return St.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Re();
+          return Re.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(St.MBF(), e, t);
+          return Me.zj(Re.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return St.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Re.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(St.M(), e, t);
+          Me.i0(Re.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return St.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_SaveNote_Request";
         }
       }
-      class Nt extends Et {
+      class Te extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Nt.prototype.note_id || Mt.Sg(Nt.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            Te.prototype.note_id || Me.Sg(Te.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Nt.sm_m ||
-              (Nt.sm_m = {
-                proto: Nt,
+            Te.sm_m ||
+              (Te.sm_m = {
+                proto: Te,
                 fields: {
                   note_id: {
                     n: 1,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                 },
               }),
-            Nt.sm_m
+            Te.sm_m
           );
         }
         static MBF() {
-          return Nt.sm_mbf || (Nt.sm_mbf = Mt.w0(Nt.M())), Nt.sm_mbf;
+          return Te.sm_mbf || (Te.sm_mbf = Me.w0(Te.M())), Te.sm_mbf;
         }
         toObject(e = !1) {
-          return Nt.toObject(e, this);
+          return Te.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(Nt.M(), e, t);
+          return Me.BT(Te.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(Nt.M(), e);
+          return Me.Uq(Te.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new Nt();
-          return Nt.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Te();
+          return Te.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(Nt.MBF(), e, t);
+          return Me.zj(Te.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return Nt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Te.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(Nt.M(), e, t);
+          Me.i0(Te.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return Nt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_SaveNote_Response";
         }
       }
-      class zt extends Et {
+      class Ue extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            zt.prototype.appid || Mt.Sg(zt.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            Ue.prototype.appid || Me.Sg(Ue.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            zt.sm_m ||
-              (zt.sm_m = {
-                proto: zt,
+            Ue.sm_m ||
+              (Ue.sm_m = {
+                proto: Ue,
                 fields: {
-                  appid: { n: 1, br: Mt.qM.readUint32, bw: Mt.gp.writeUint32 },
+                  appid: { n: 1, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
                   shortcut_name: {
                     n: 2,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                   shortcutid: {
                     n: 3,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   note_id: {
                     n: 4,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                 },
               }),
-            zt.sm_m
+            Ue.sm_m
           );
         }
         static MBF() {
-          return zt.sm_mbf || (zt.sm_mbf = Mt.w0(zt.M())), zt.sm_mbf;
+          return Ue.sm_mbf || (Ue.sm_mbf = Me.w0(Ue.M())), Ue.sm_mbf;
         }
         toObject(e = !1) {
-          return zt.toObject(e, this);
+          return Ue.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(zt.M(), e, t);
+          return Me.BT(Ue.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(zt.M(), e);
+          return Me.Uq(Ue.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new zt();
-          return zt.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Ue();
+          return Ue.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(zt.MBF(), e, t);
+          return Me.zj(Ue.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Ue.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(zt.M(), e, t);
+          Me.i0(Ue.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_DeleteNote_Request";
         }
       }
-      class Rt extends Et {
+      class Ge extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), Et.initialize(this, e, 0, -1, void 0, null);
+          super(), Ee.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Rt.toObject(e, this);
+          return Ge.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Rt();
+          return new Ge();
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new Rt();
-          return Rt.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Ge();
+          return Ge.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Ge.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_DeleteNote_Response";
         }
       }
-      class At extends Et {
+      class We extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), Et.initialize(this, e, 0, -1, void 0, null);
+          super(), Ee.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return At.toObject(e, this);
+          return We.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new At();
+          return new We();
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new At();
-          return At.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new We();
+          return We.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return At.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return At.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_GetGamesWithNotes_Request";
         }
       }
-      class Ot extends Et {
+      class Ie extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ot.prototype.games_with_notes || Mt.Sg(Ot.M()),
-            Et.initialize(this, e, 0, -1, [1], null);
+            Ie.prototype.games_with_notes || Me.Sg(Ie.M()),
+            Ee.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            Ot.sm_m ||
-              (Ot.sm_m = {
-                proto: Ot,
-                fields: { games_with_notes: { n: 1, c: Ut, r: !0, q: !0 } },
+            Ie.sm_m ||
+              (Ie.sm_m = {
+                proto: Ie,
+                fields: { games_with_notes: { n: 1, c: Oe, r: !0, q: !0 } },
               }),
-            Ot.sm_m
+            Ie.sm_m
           );
         }
         static MBF() {
-          return Ot.sm_mbf || (Ot.sm_mbf = Mt.w0(Ot.M())), Ot.sm_mbf;
+          return Ie.sm_mbf || (Ie.sm_mbf = Me.w0(Ie.M())), Ie.sm_mbf;
         }
         toObject(e = !1) {
-          return Ot.toObject(e, this);
+          return Ie.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(Ot.M(), e, t);
+          return Me.BT(Ie.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(Ot.M(), e);
+          return Me.Uq(Ie.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new Ot();
-          return Ot.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Ie();
+          return Ie.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(Ot.MBF(), e, t);
+          return Me.zj(Ie.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return Ot.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(Ot.M(), e, t);
+          Me.i0(Ie.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return Ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_GetGamesWithNotes_Response";
         }
       }
-      class Ut extends Et {
+      class Oe extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ut.prototype.appid || Mt.Sg(Ut.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            Oe.prototype.appid || Me.Sg(Oe.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Ut.sm_m ||
-              (Ut.sm_m = {
-                proto: Ut,
+            Oe.sm_m ||
+              (Oe.sm_m = {
+                proto: Oe,
                 fields: {
-                  appid: { n: 1, br: Mt.qM.readUint32, bw: Mt.gp.writeUint32 },
+                  appid: { n: 1, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
                   shortcutid: {
                     n: 2,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   shortcut_name: {
                     n: 3,
-                    br: Mt.qM.readString,
-                    bw: Mt.gp.writeString,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
                   },
                   last_modified: {
                     n: 4,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                   note_count: {
                     n: 5,
-                    br: Mt.qM.readUint32,
-                    bw: Mt.gp.writeUint32,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
                   },
                 },
               }),
-            Ut.sm_m
+            Oe.sm_m
           );
         }
         static MBF() {
-          return Ut.sm_mbf || (Ut.sm_mbf = Mt.w0(Ut.M())), Ut.sm_mbf;
+          return Oe.sm_mbf || (Oe.sm_mbf = Me.w0(Oe.M())), Oe.sm_mbf;
         }
         toObject(e = !1) {
-          return Ut.toObject(e, this);
+          return Oe.toObject(e, this);
         }
         static toObject(e, t) {
-          return Mt.BT(Ut.M(), e, t);
+          return Me.BT(Oe.M(), e, t);
         }
         static fromObject(e) {
-          return Mt.Uq(Ut.M(), e);
+          return Me.Uq(Oe.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new vt.BinaryReader(e),
-            r = new Ut();
-          return Ut.deserializeBinaryFromReader(r, t);
+          let t = new Ne.BinaryReader(e),
+            r = new Oe();
+          return Oe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return Mt.zj(Ut.MBF(), e, t);
+          return Me.zj(Oe.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new vt.BinaryWriter();
-          return Ut.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new Ne.BinaryWriter();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          Mt.i0(Ut.M(), e, t);
+          Me.i0(Oe.M(), e, t);
         }
         serializeBase64String() {
-          var e = new vt.BinaryWriter();
-          return Ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new Ne.BinaryWriter();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_GetGamesWithNotes_Response_GameWithNotes";
         }
       }
-      var Ft;
+      var ke;
       !(function (e) {
         (e.GetNotesForGame = function (e, t) {
           return e.SendMsg(
             "UserGameNotes.GetNotesForGame#1",
-            (0, E.I8)(kt, t),
-            Tt,
+            (0, M.I8)(ve, t),
+            Ce,
             { ePrivilege: 1 },
           );
         }),
           (e.SaveNote = function (e, t) {
-            return e.SendMsg("UserGameNotes.SaveNote#1", (0, E.I8)(St, t), Nt, {
+            return e.SendMsg("UserGameNotes.SaveNote#1", (0, M.I8)(Re, t), Te, {
               ePrivilege: 1,
             });
           }),
           (e.DeleteNote = function (e, t) {
             return e.SendMsg(
               "UserGameNotes.DeleteNote#1",
-              (0, E.I8)(zt, t),
-              Rt,
+              (0, M.I8)(Ue, t),
+              Ge,
               { ePrivilege: 1 },
             );
           }),
           (e.GetGamesWithNotes = function (e, t) {
             return e.SendMsg(
               "UserGameNotes.GetGamesWithNotes#1",
-              (0, E.I8)(At, t),
-              Ot,
+              (0, M.I8)(We, t),
+              Ie,
               { ePrivilege: 1 },
             );
           });
-      })(Ft || (Ft = {}));
-      class Gt {
+      })(ke || (ke = {}));
+      class je {
         constructor(e) {
           this.m_SteamInterface = e;
         }
         async GetGamesWithNotes() {
-          const e = E.w.Init(At);
+          const e = M.w.Init(We);
           return (
-            await Ft.GetGamesWithNotes(
+            await ke.GetGamesWithNotes(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             )
@@ -2766,9 +1409,9 @@
             .toObject().games_with_notes;
         }
         async GetGameNotesList(e, t) {
-          const r = E.w.Init(kt);
+          const r = M.w.Init(ve);
           this.SetParentOnRequest(r, e), r.Body().set_include_content(t);
-          const n = await Ft.GetNotesForGame(
+          const n = await ke.GetNotesForGame(
             this.m_SteamInterface.GetServiceTransport(),
             r,
           );
@@ -2777,7 +1420,7 @@
             : [this.NewNote(e, "New Note")];
         }
         async SaveGameNote(e, t, r) {
-          const n = E.w.Init(St);
+          const n = M.w.Init(Re);
           e.not_persisted
             ? n.Body().set_create_new(!0)
             : n.Body().set_note_id(e.id),
@@ -2786,17 +1429,17 @@
               : n.Body().set_shortcut_name(e.shortcut_name),
             n.Body().set_title(t),
             n.Body().set_content(r);
-          const a = await Ft.SaveNote(
+          const i = await ke.SaveNote(
             this.m_SteamInterface.GetServiceTransport(),
             n,
           );
-          if (!a.BSuccess()) throw a.GetErrorMessage();
-          return a.Body().note_id();
+          if (!i.BSuccess()) throw i.GetErrorMessage();
+          return i.Body().note_id();
         }
         async DeleteGameNote(e, t) {
-          const r = E.w.Init(zt);
+          const r = M.w.Init(Ue);
           this.SetParentOnRequest(r, e), r.Body().set_note_id(t);
-          const n = await Ft.DeleteNote(
+          const n = await ke.DeleteNote(
             this.m_SteamInterface.GetServiceTransport(),
             r,
           );
@@ -2814,7 +1457,7 @@
           return (
             "appid" in e ? (r.appid = e.appid) : (r.shortcut_name = e.shortcut),
             {
-              id: "temp_" + Gt.sm_lastNoteID++,
+              id: "temp_" + je.sm_lastNoteID++,
               ...r,
               ordinal: 0,
               time_created: Date.now() / 1e3,
@@ -2829,43 +1472,43 @@
           return Promise.reject("NYI");
         }
       }
-      function Dt(e) {
-        const t = (0, k.TR)(),
-          [r] = n.useState(() => new Gt(t));
+      function qe(e) {
+        const t = (0, z.TR)(),
+          [r] = n.useState(() => new je(t));
         return n.createElement(
           p,
           { mode: "page", store: r },
           n.createElement(
-            a.dO,
+            i.dO,
             null,
-            n.createElement(a.qh, { path: o.List() }, n.createElement(F, null)),
+            n.createElement(i.qh, { path: a.List() }, n.createElement(O, null)),
             n.createElement(
-              a.qh,
-              { path: o.AppNotes(":appid", ":noteid?") },
-              n.createElement(Bt, null),
+              i.qh,
+              { path: a.AppNotes(":appid", ":noteid?") },
+              n.createElement(fe, null),
             ),
             n.createElement(
-              a.qh,
+              i.qh,
               null,
-              n.createElement(a.rd, { to: `${o.List()}` }),
+              n.createElement(i.rd, { to: `${a.List()}` }),
             ),
           ),
         );
       }
-      Gt.sm_lastNoteID = 0;
+      je.sm_lastNoteID = 0;
     },
     61788: (e, t, r) => {
       "use strict";
-      r.d(t, { y: () => m });
+      r.d(t, { y: () => d });
       var n = r(34629),
-        a = r(56545),
-        o = r(59134),
+        i = r(56545),
+        a = r(59134),
         s = r(60778),
-        i = r(14771),
-        l = r(6419);
-      const c = new s.wd("ReactUsageReporting").Debug,
-        u = 1e3 * i.Kp.PerMinute;
-      class d {
+        o = r(14771),
+        c = r(6419);
+      const l = new s.wd("ReactUsageReporting").Debug,
+        u = 1e3 * o.Kp.PerMinute;
+      class m {
         constructor() {
           (this.m_transport = null),
             (this.m_mapRoutes = new Map()),
@@ -2894,40 +1537,40 @@
             this.ShouldSendMetricsImmediately() && this.SendMetrics();
         }
         ReportRouteMatch(e) {
-          c("Route match: " + e), this.ReportInternal(e, this.m_mapRoutes);
+          l("Route match: " + e), this.ReportInternal(e, this.m_mapRoutes);
         }
         ReportTrackedComponent(e) {
-          c("Tracked component: " + e),
+          l("Tracked component: " + e),
             this.ReportInternal(e, this.m_mapComponents);
         }
         ReportTrackedAction(e) {
-          c("User action: " + e), this.ReportInternal(e, this.m_mapActions);
+          l("User action: " + e), this.ReportInternal(e, this.m_mapActions);
         }
         ShouldSendMetricsImmediately() {
           return this.m_reportCount >= 100;
         }
         SendMetrics() {
           if (!this.m_bInitialized) return;
-          const e = a.w.Init(o.bc);
+          const e = i.w.Init(a.bc);
           e.Body().set_product(this.m_strProduct),
             e.Body().set_version(this.m_strVersion),
             this.m_mapRoutes.forEach((t, r) => {
-              let n = new o.N4();
+              let n = new a.N4();
               n.set_route(r), n.set_count(t), e.Body().add_routes(n);
             }),
             this.m_mapComponents.forEach((t, r) => {
-              let n = new o.Zd();
+              let n = new a.Zd();
               n.set_component(r), n.set_count(t), e.Body().add_components(n);
             }),
             this.m_mapActions.forEach((t, r) => {
-              let n = new o.Ys();
+              let n = new a.Ys();
               n.set_action(r), n.set_count(t), e.Body().add_actions(n);
             }),
             this.m_mapRoutes.clear(),
             this.m_mapComponents.clear(),
             this.m_mapActions.clear(),
             (this.m_reportCount = 0),
-            o._5.ReportReactUsage(this.m_transport, e);
+            a._5.ReportReactUsage(this.m_transport, e);
         }
         get version() {
           return this.m_strVersion;
@@ -2936,8 +1579,8 @@
           return this.m_strProduct;
         }
       }
-      (0, n.Cg)([l.o], d.prototype, "CheckSend", null);
-      const m = new d();
+      (0, n.Cg)([c.o], m.prototype, "CheckSend", null);
+      const d = new m();
     },
   },
 ]);

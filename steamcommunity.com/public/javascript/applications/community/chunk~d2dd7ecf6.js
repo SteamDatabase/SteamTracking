@@ -223,7 +223,7 @@
         d = a(2805),
         u = a(96866),
         E = a.n(u),
-        I = a(46518),
+        I = a(61924),
         h = a(36509),
         _ = a(95695),
         v = a.n(_),
@@ -1283,7 +1283,7 @@
         m = a(69343),
         g = a(63556),
         p = a(33737),
-        d = a(46518),
+        d = a(61924),
         u = a(95695),
         E = a.n(u),
         I = a(9154),
@@ -2114,91 +2114,33 @@
         (0, n.Cg)([C.oI], L.prototype, "OnCloseDialog", null),
         (0, n.Cg)([C.oI], L.prototype, "OnImageClick", null);
     },
-    46518: (e, t, a) => {
+    61924: (e, t, a) => {
       "use strict";
-      a.d(t, { D: () => g });
+      a.d(t, { D: () => c });
       var n = a(90626),
         l = a(52038),
         r = a(61859),
-        o = a(72739),
-        i = a(56011);
-      function s(e) {
-        e.preventDefault();
-      }
-      var c = a(71647),
-        m = a.n(c);
-      function g(e) {
+        o = a(27650),
+        i = a(71647),
+        s = a.n(i);
+      function c(e) {
         const {
             onDropFiles: t,
             renderDesciption: a,
-            elAdditonalButtons: c,
-            strOverrideDragAndDropText: g,
+            elAdditonalButtons: i,
+            strOverrideDragAndDropText: c,
           } = e,
-          [p, d] = (function (e) {
-            const [t, a] = n.useState(!1);
-            return [
-              {
-                onDragEnter: n.useCallback((e) => {
-                  ((e.dataTransfer.files && e.dataTransfer.files[0]) ||
-                    (e.dataTransfer.types &&
-                      "Files" == e.dataTransfer.types[0])) &&
-                    a(!0);
-                }, []),
-                onDragLeave: n.useCallback((e) => {
-                  i.NO(e) && a(!1);
-                }, []),
-                onDragEnd: n.useCallback(() => a(!1), []),
-                onDragOver: t ? s : void 0,
-                onDrop: n.useCallback(
-                  (t) => {
-                    var n;
-                    (null === (n = t.dataTransfer.files) || void 0 === n
-                      ? void 0
-                      : n.length) &&
-                      (e(t.dataTransfer.files, t), t.preventDefault()),
-                      a(!1);
-                  },
-                  [e],
-                ),
-              },
-              t,
-            ];
-          })(t),
-          [u, E] = (function (e, t) {
-            const a = n.useRef(),
-              l = n.useCallback(
-                (t) => {
-                  t.currentTarget.files.length > 0 && e(t.currentTarget.files);
-                },
-                [e],
-              ),
-              r = n.useCallback(() => a.current.click(), []);
-            return [
-              o.createPortal(
-                n.createElement(
-                  "form",
-                  { onSubmit: s, style: { display: "none" } },
-                  n.createElement("input", {
-                    ...t,
-                    type: "file",
-                    ref: a,
-                    onChange: l,
-                  }),
-                ),
-                window.document.body,
-              ),
-              r,
-            ];
-          })(t, {
+          [m, g] = (0, o.hk)(t),
+          [p, d] = (0, o.Ss)(t, {
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
         return n.createElement(
           "div",
           {
-            ...p,
+            ...m,
             className: (0, l.A)(
-              d ? m().DragAndDropContainerDragging : m().DragAndDropContainer,
+              g ? s().DragAndDropContainerDragging : s().DragAndDropContainer,
               "DragAndDropContainer",
             ),
           },
@@ -2206,15 +2148,15 @@
           n.createElement(
             "div",
             null,
-            g || (0, r.we)("#ImagePicker_DragAndDrop"),
+            c || (0, r.we)("#ImagePicker_DragAndDrop"),
           ),
           n.createElement(
             "div",
-            { className: m().ImageUploadBar },
-            u,
+            { className: s().ImageUploadBar },
+            p,
             n.createElement(
               "label",
-              { onClick: E },
+              { onClick: d },
               n.createElement(
                 "span",
                 null,
@@ -2223,12 +2165,12 @@
               ),
               n.createElement(
                 "span",
-                { className: m().SelectImageButton },
+                { className: s().SelectImageButton },
                 (0, r.we)("#selectimage_select_file"),
               ),
             ),
           ),
-          c,
+          i,
           e.children,
         );
       }
@@ -3606,6 +3548,80 @@
             }),
           ),
         );
+      }
+    },
+    27650: (e, t, a) => {
+      "use strict";
+      a.d(t, { DB: () => s, Ss: () => o, hk: () => i });
+      var n = a(90626),
+        l = a(72739),
+        r = a(56011);
+      function o(e, t) {
+        const a = n.useRef(),
+          r = n.useCallback(
+            (t) => {
+              t.currentTarget.files.length > 0 && e(t.currentTarget.files);
+            },
+            [e],
+          ),
+          o = n.useCallback(() => a.current.click(), []);
+        return [
+          l.createPortal(
+            n.createElement(
+              "form",
+              { onSubmit: c, style: { display: "none" } },
+              n.createElement("input", {
+                ...t,
+                type: "file",
+                ref: a,
+                onChange: r,
+              }),
+            ),
+            window.document.body,
+          ),
+          o,
+        ];
+      }
+      function i(e) {
+        const [t, a] = n.useState(!1);
+        return [
+          {
+            onDragEnter: n.useCallback((e) => {
+              ((e.dataTransfer.files && e.dataTransfer.files[0]) ||
+                (e.dataTransfer.types && "Files" == e.dataTransfer.types[0])) &&
+                a(!0);
+            }, []),
+            onDragLeave: n.useCallback((e) => {
+              r.NO(e) && a(!1);
+            }, []),
+            onDragEnd: n.useCallback(() => a(!1), []),
+            onDragOver: t ? c : void 0,
+            onDrop: n.useCallback(
+              (t) => {
+                var n;
+                (null === (n = t.dataTransfer.files) || void 0 === n
+                  ? void 0
+                  : n.length) &&
+                  (e(t.dataTransfer.files, t), t.preventDefault()),
+                  a(!1);
+              },
+              [e],
+            ),
+          },
+          t,
+        ];
+      }
+      async function s(e, t = 1e3) {
+        return await new Promise((a, n) => {
+          const l = new Image();
+          (l.src = e),
+            (l.onload = () => a("success")),
+            (l.onerror = () => a("error")),
+            t > 0 && window.setTimeout(() => a("timeout"), t);
+        });
+      }
+      function c(e) {
+        e.preventDefault();
       }
     },
     59461: (e, t, a) => {

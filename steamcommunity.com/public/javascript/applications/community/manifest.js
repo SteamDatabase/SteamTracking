@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9361114";
+var CLSTAMP = "9361733";
 (() => {
   "use strict";
   var a,
@@ -22,13 +22,13 @@ var CLSTAMP = "9361114";
     (s.O = (e, n, c, o) => {
       if (!n) {
         var i = 1 / 0;
-        for (f = 0; f < a.length; f++) {
-          for (var [n, c, o] = a[f], d = !0, l = 0; l < n.length; l++)
-            (!1 & o || i >= o) && Object.keys(s.O).every((a) => s.O[a](n[l]))
-              ? n.splice(l--, 1)
+        for (l = 0; l < a.length; l++) {
+          for (var [n, c, o] = a[l], d = !0, f = 0; f < n.length; f++)
+            (!1 & o || i >= o) && Object.keys(s.O).every((a) => s.O[a](n[f]))
+              ? n.splice(f--, 1)
               : ((d = !1), o < i && (i = o));
           if (d) {
-            a.splice(f--, 1);
+            a.splice(l--, 1);
             var t = c();
             void 0 !== t && (e = t);
           }
@@ -36,8 +36,8 @@ var CLSTAMP = "9361114";
         return e;
       }
       o = o || 0;
-      for (var f = a.length; f > 0 && a[f - 1][2] > o; f--) a[f] = a[f - 1];
-      a[f] = [n, c, o];
+      for (var l = a.length; l > 0 && a[l - 1][2] > o; l--) a[l] = a[l - 1];
+      a[l] = [n, c, o];
     }),
     (s.n = (a) => {
       var e = a && a.__esModule ? () => a.default : () => a;
@@ -77,7 +77,6 @@ var CLSTAMP = "9361114";
         129: "localization/shared_swedish-json",
         139: "localization/shared_koreana-json",
         198: "localization/main_schinese-json",
-        231: "libraries~4f371177a",
         258: "eventinternal",
         286: "localization/main_ukrainian-json",
         297: "localization/sales_german-json",
@@ -226,7 +225,6 @@ var CLSTAMP = "9361114";
         129: "aa79fb9176ad69fe44b5",
         139: "4d6ff8396f4ec309f9f9",
         198: "ffcee0338a3b3df4ca46",
-        231: "977e692b2e6d3bcb71d4",
         258: "f5029e2132560dd5d4d2",
         286: "5e9106a616306153e29d",
         297: "408814adab2fb9b16048",
@@ -240,7 +238,7 @@ var CLSTAMP = "9361114";
         976: "b4706b1765cd9cdb4718",
         1023: "d4c295e0a0ba904f0af5",
         1063: "852fc96813d5241cc041",
-        1220: "fb2221d5bb3d239a84df",
+        1220: "7005db95137754fbc89e",
         1389: "274047b7ee262c232812",
         1410: "0d8c29932d693143e4df",
         1423: "26eb3b137a6872073ecd",
@@ -251,6 +249,7 @@ var CLSTAMP = "9361114";
         1880: "4e29293ccb6747b7040d",
         1951: "0f500d533f1a78e2f65f",
         2021: "4c64560dbebbfc1e81c4",
+        2064: "a3e210599e724cd005f3",
         2079: "37f788a47805cad600d4",
         2092: "f0eb0a32e3c8b3d99028",
         2121: "c735f39eb04685e91bec",
@@ -269,7 +268,7 @@ var CLSTAMP = "9361114";
         3256: "915e7416389410db8326",
         3589: "1fa32f0a16207e4fb05c",
         3594: "3b26154e7c5d309bd629",
-        3781: "3b1dcbd0b15f1ea50e8b",
+        3781: "1546d0850767516f09cf",
         3867: "c7e6039aedde9d21684c",
         3976: "6b8d8bf861851367d8a4",
         4009: "c9b5ec0def5febcad127",
@@ -282,6 +281,7 @@ var CLSTAMP = "9361114";
         4694: "de344e785cdf7ad81234",
         4922: "953a0f2e92fa7c404c03",
         4952: "52a59a28b73d708b23b5",
+        5006: "b23d8f6c468bcb80297a",
         5043: "58190177ef9381cb13a9",
         5052: "c7c40fa558ee5bff80bb",
         5082: "71a78cf07260718362fc",
@@ -298,6 +298,7 @@ var CLSTAMP = "9361114";
         5803: "25902270332d2622f87d",
         5836: "f2cd88ad137e26f815aa",
         5876: "fbb65fef76390b97ef73",
+        5879: "552a7004b1cc930cef99",
         5955: "e3f7fe8be2a08ebcff88",
         6120: "6133d79657fd8cc7fea2",
         6209: "774bcf4bc84c11738424",
@@ -309,7 +310,7 @@ var CLSTAMP = "9361114";
         6528: "8e2ea8503627a34e8d5d",
         6577: "d75704178039e43ccc7f",
         6635: "fb95b8b77ada9e194b8f",
-        6662: "ca9ff22bbe8dc97bb545",
+        6662: "2b1ca24182e44a3db520",
         6752: "4da5e181fa31cb7885ff",
         6888: "99cf4e718fc059a10049",
         6893: "a05b91a4398024d02e8f",
@@ -345,7 +346,7 @@ var CLSTAMP = "9361114";
         8724: "39261832c3af21f2899e",
         8732: "6582b51279915c751880",
         8749: "8001a3e68b7032c1d2c5",
-        8780: "545b0714264cc84745f0",
+        8780: "c42056fb3df8a06c84c1",
         8872: "ad34df585a47078623bc",
         9053: "d4ce7c781bf97349b6b4",
         9118: "7a4cbda4f611f6ec1e08",
@@ -356,14 +357,14 @@ var CLSTAMP = "9361114";
         9402: "8d18d84791d390e31061",
         9436: "d39b1552486bed62398e",
         9453: "c620b533c3cb2056d2db",
-        9505: "d80a8c19e4a41e6656da",
+        9505: "73783bfe50f435f6698b",
         9515: "8ed9a45644a9eaccf293",
         9517: "a5e3d948875d4793faef",
         9536: "b5bfdf3dd4f48bb33eb3",
         9617: "3e5cb211c045c9e969c2",
-        9638: "4d21b974ce8af0200037",
+        9638: "3673be0159ce860d7f7f",
         9743: "1a408fd3ba503f76d48b",
-        9774: "7d082fad125d57bedcf3",
+        9774: "875468bd0dab3a60d3ab",
         9783: "d64b1782be83306671a3",
         9855: "7dffdaf6eca1c653971c",
         9857: "ed3607bb41da5cc1a722",
@@ -373,7 +374,7 @@ var CLSTAMP = "9361114";
       }[a]),
     (s.miniCssF = (a) =>
       "css/applications/community/" +
-      {
+      ({
         91: "libraries~362728d1f",
         258: "eventinternal",
         976: "greenenvelope",
@@ -403,7 +404,7 @@ var CLSTAMP = "9361114";
         9505: "chunk~d2dd7ecf6",
         9638: "chunk~c18a43282",
         9774: "chunk~69438e232",
-      }[a] +
+      }[a] || a) +
       ".css?contenthash=" +
       {
         91: "7d10e6dfc63b4b955640",
@@ -420,6 +421,7 @@ var CLSTAMP = "9361114";
         5278: "7ad41ee51bad4c4189d1",
         5836: "012b734f1a7ae3ee2447",
         5876: "07b3cb346c58c180dfe2",
+        5879: "490e97c9d02b165c9754",
         6635: "0d3d69f2f2bf2c25a2c8",
         6662: "034fb7fa09d00d31b5ab",
         6893: "b640cecb2ca8794180c2",
@@ -450,14 +452,14 @@ var CLSTAMP = "9361114";
     (s.l = (a, e, n, i) => {
       if (c[a]) c[a].push(e);
       else {
-        var d, l;
+        var d, f;
         if (void 0 !== n)
           for (
-            var t = document.getElementsByTagName("script"), f = 0;
-            f < t.length;
-            f++
+            var t = document.getElementsByTagName("script"), l = 0;
+            l < t.length;
+            l++
           ) {
-            var b = t[f];
+            var b = t[l];
             if (
               b.getAttribute("src") == a ||
               b.getAttribute("data-webpack") == o + n
@@ -467,7 +469,7 @@ var CLSTAMP = "9361114";
             }
           }
         d ||
-          ((l = !0),
+          ((f = !0),
           ((d = document.createElement("script")).charset = "utf-8"),
           (d.timeout = 120),
           s.nc && d.setAttribute("nonce", s.nc),
@@ -491,7 +493,7 @@ var CLSTAMP = "9361114";
           );
         (d.onerror = r.bind(null, d.onerror)),
           (d.onload = r.bind(null, d.onload)),
-          l && document.head.appendChild(d);
+          f && document.head.appendChild(d);
       }
     }),
     (s.r = (a) => {
@@ -544,7 +546,7 @@ var CLSTAMP = "9361114";
                       else {
                         var d = n && n.type,
                           s = (n && n.target && n.target.href) || e,
-                          l = new Error(
+                          f = new Error(
                             "Loading CSS chunk " +
                               a +
                               " failed.\n(" +
@@ -553,12 +555,12 @@ var CLSTAMP = "9361114";
                               s +
                               ")",
                           );
-                        (l.name = "ChunkLoadError"),
-                          (l.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (l.type = d),
-                          (l.request = s),
+                        (f.name = "ChunkLoadError"),
+                          (f.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (f.type = d),
+                          (f.request = s),
                           i.parentNode && i.parentNode.removeChild(i),
-                          o(l);
+                          o(f);
                       }
                     }),
                   (i.href = e),
@@ -587,6 +589,7 @@ var CLSTAMP = "9361114";
                 5278: 1,
                 5836: 1,
                 5876: 1,
+                5879: 1,
                 6635: 1,
                 6662: 1,
                 6893: 1,
@@ -651,15 +654,15 @@ var CLSTAMP = "9361114";
       var e = (e, n) => {
           var c,
             o,
-            [i, d, l] = n,
+            [i, d, f] = n,
             t = 0;
           if (i.some((e) => 0 !== a[e])) {
             for (c in d) s.o(d, c) && (s.m[c] = d[c]);
-            if (l) var f = l(s);
+            if (f) var l = f(s);
           }
           for (e && e(n); t < i.length; t++)
             (o = i[t]), s.o(a, o) && a[o] && a[o][0](), (a[o] = 0);
-          return s.O(f);
+          return s.O(l);
         },
         n = (self.webpackChunkcommunity = self.webpackChunkcommunity || []);
       n.forEach(e.bind(null, 0)), (n.push = e.bind(null, n.push.bind(n)));
