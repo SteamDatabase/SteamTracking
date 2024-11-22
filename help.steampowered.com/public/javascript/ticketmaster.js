@@ -6,7 +6,7 @@ function ClaimTickerCategoryHelper( elButton, ulCategoryID, strUrl, strCategoryN
 {
 	// replace with throbber, save old html
 	var $Button = $J( elButton );
-	var $Throbber = $J( "<div class=\"throbber\">\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t<\/div>" );
+	var $Throbber = $J( "<div class=\"throbber\">\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t<\/div>" );
 	var oldHTML = $Button.html();
 	$Button.html( $Throbber );
 	$Throbber.addClass( 'loading' );
@@ -69,7 +69,7 @@ function ClaimPreapprovalType( elButton, eType, strTypeName )
 {
 	// replace with throbber, save old html
 	var $Button = $J( elButton );
-	var $Throbber = $J( "<div class=\"throbber\">\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t<\/div>" );
+	var $Throbber = $J( "<div class=\"throbber\">\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t<\/div>" );
 	var oldHTML = $Button.html();
 	$Button.html( $Throbber );
 	$Throbber.addClass( 'loading' );
@@ -916,7 +916,7 @@ function SearchForTickets( elForm, $SearchContents, strSort, nPage )
 	var strSearchParams = $J.param( rgParams ) + "&" + $J.param( { sort: strSort, page: nPage }  );
 	SetSearchHistoryState( $Form, strSearchParams );
 
-	var $Throbber = $J( "<div class=\"throbber\">\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t<\/div>" );
+	var $Throbber = $J( "<div class=\"throbber\">\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t<\/div>" );
 	$SearchContents.html( $Throbber );
 	$Throbber.addClass( 'loading' );
 
@@ -1032,7 +1032,7 @@ function SearchBoxKeyUp( event, searchFunction, funcLinkGenerator, strLanguage )
 
 	if ($J('.throbber').length == 0)
 	{
-		var $Throbber = $J( "<div class=\"throbber\">\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t<\/div>" );
+		var $Throbber = $J( "<div class=\"throbber\">\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t<\/div>" );
 		$J('#request_type_search').html($Throbber);
 		$Throbber.addClass('loading');
 	}
@@ -2557,7 +2557,7 @@ function ShowChangeLanguageDialog( strReferenceCode, eCurrentLanguage, eHelpRequ
 {
 	// create dialog with throbber
 	var $DialogContents = $J( '<div class="ticket_language_dialog"></div>' );
-	var $Throbber = $J( "<div class=\"throbber\">\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t<\/div>" );
+	var $Throbber = $J( "<div class=\"throbber\">\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t\t<div><\/div>\n\t\t\t\t<\/div>" );
 	$DialogContents.html( $Throbber );
 	$Throbber.addClass( 'loading' );
 

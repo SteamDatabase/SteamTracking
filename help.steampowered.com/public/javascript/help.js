@@ -365,7 +365,7 @@ HelpWizard = {
 				'<div class="help_page_title">Are you sure?</div>' +
 					'You can cancel this refund request if you\'d like to keep your purchase. You can submit a new refund request in the future.' +
 					'<div id="help_cancel_refund_request_receipt" class="help_purchase_detail_box help_purchase_package">' +
-					"<div class=\"LoadingWrapper\">\r\n\t\t\t\t\t<div class=\"LoadingThrobber\">\r\n\t\t\t\t\t\t<div class=\"Bar Bar1\"><\/div>\r\n\t\t\t\t\t\t<div class=\"Bar Bar2\"><\/div>\r\n\t\t\t\t\t\t<div class=\"Bar Bar3\"><\/div>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>" +
+					"<div class=\"LoadingWrapper\">\n\t\t\t\t\t<div class=\"LoadingThrobber\">\n\t\t\t\t\t\t<div class=\"Bar Bar1\"><\/div>\n\t\t\t\t\t\t<div class=\"Bar Bar2\"><\/div>\n\t\t\t\t\t\t<div class=\"Bar Bar3\"><\/div>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>" +
 					'</div>',
 				'Cancel refund request',
 				'I\'d like a refund'
