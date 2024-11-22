@@ -9335,7 +9335,7 @@
                 appid: void 0,
                 clanSteamID: t,
                 imageInsertCallBack: (e, t) =>
-                  o.current && (0, ke.f)(null == o ? void 0 : o.current, e, t),
+                  o.current && (0, ke.fW)(null == o ? void 0 : o.current, e, t),
                 fnSetImageURL: () => {},
                 rgRealmList: a.GetIncludedRealmList(),
                 fnLangHasData: a.BHasSomeTextForLanguage,

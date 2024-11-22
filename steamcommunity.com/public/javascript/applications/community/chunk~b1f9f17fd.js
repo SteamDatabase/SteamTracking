@@ -21235,7 +21235,7 @@
             t.GetAppID(),
           ]),
           E = d.useCallback((e, t) => {
-            n.current && (0, Sn.f)(n.current, e, t);
+            n.current && (0, Sn.fW)(n.current, e, t);
           }, []);
         return d.createElement(
           d.Fragment,
