@@ -1005,7 +1005,7 @@ CInventory.prototype.ShowInventoryLoadError = function()
 		/*
 				*/
 
-		this.m_$ErrorDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\r\n\t\t\t\t<div class=\"inventory_load_error_header\">\r\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\r\n\t\t\t\t\t<div class=\"message\">This inventory is not available at this time.  Please try again later.<\/div>\r\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small retry_load_btn\">\r\n\t\t\t\t\t\t<span>Try Again<\/span>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t\t<span class=\"inventory_loading_indicator\">\r\n\t\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t\t<\/span>\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t" ).hide();
+		this.m_$ErrorDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\n\t\t\t\t<div class=\"inventory_load_error_header\">\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\n\t\t\t\t\t<div class=\"message\">This inventory is not available at this time.  Please try again later.<\/div>\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small retry_load_btn\">\n\t\t\t\t\t\t<span>Try Again<\/span>\n\t\t\t\t\t<\/div>\n\t\t\t\t\t<span class=\"inventory_loading_indicator\">\n\t\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/login\/throbber.gif\">\n\t\t\t\t\t<\/span>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t" ).hide();
 
 		var _this = this;
 		this.m_$ErrorDisplay.find( '.retry_load_btn').click( function() { _this.RetryLoad(); } );
@@ -1041,7 +1041,7 @@ CInventory.prototype.ShowInventoryReloadMessage = function()
 		/*
 				*/
 
-		this.m_$ReloadDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\r\n\t\t\t\t<div class=\"inventory_load_error_header\">\r\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\r\n\t\t\t\t\t <div class=\"message\">Items in this inventory may be out of date and displaying old data.  For performance reasons, automatic refresh has been disabled.<\/div>\r\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small reload_btn\">\r\n\t\t\t\t\t\t<span>Refresh<\/span>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t" ).hide();
+		this.m_$ReloadDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\n\t\t\t\t<div class=\"inventory_load_error_header\">\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\n\t\t\t\t\t <div class=\"message\">Items in this inventory may be out of date and displaying old data.  For performance reasons, automatic refresh has been disabled.<\/div>\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small reload_btn\">\n\t\t\t\t\t\t<span>Refresh<\/span>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t" ).hide();
 
 		var _this = this;
 		this.m_$ReloadDisplay.find( '.reload_btn').click( function() { _this.ReloadIfNeeded() } );
