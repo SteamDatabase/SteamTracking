@@ -34,8 +34,8 @@
       n.d(t, { N: () => f });
       var a = n(34629),
         s = n(41735),
-        l = n.n(s),
-        o = n(75844),
+        o = n.n(s),
+        l = n(75844),
         r = n(90626),
         i = n(60746),
         c = n(68033),
@@ -63,7 +63,7 @@
       let w = class extends r.Component {
         state = { bLoading: !1, eventModel: this.props.eventModel };
         m_refParent = r.createRef();
-        m_cancelSignal = l().CancelToken.source();
+        m_cancelSignal = o().CancelToken.source();
         componentDidMount() {
           this.state.eventModel ||
             this.setState({ bLoading: !0 }, this.LoadEvent);
@@ -145,8 +145,8 @@
           const {
             closeModal: a,
             appid: s,
-            clanSteamID: l,
-            className: o,
+            clanSteamID: o,
+            className: l,
             partnerEventStore: i,
             showAppHeader: d,
             bPrimaryPageFeature: E,
@@ -166,7 +166,7 @@
             r.createElement(m.AD, {
               initialEvent: n,
               appid: s,
-              clanSteamID: l,
+              clanSteamID: o,
               partnerEventStore: i,
               emoticonStore: c.A,
               closeModal: !E && a,
@@ -181,7 +181,7 @@
             ? f
             : r.createElement(
                 p.of,
-                { className: o },
+                { className: l },
                 r.createElement(
                   p.Qs,
                   { navID: "WebRowEventInfiniteScroll", closeModal: a },
@@ -190,15 +190,15 @@
               );
         }
       };
-      w = (0, a.Cg)([o.PA], w);
+      w = (0, a.Cg)([l.PA], w);
     },
     19011: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => k });
       var a = n(8527),
         s = n(90626),
-        l = n(38390),
-        o = n(91254),
+        o = n(38390),
+        l = n(91254),
         r = n(55263),
         i = n(63369),
         c = n(8107),
@@ -367,11 +367,12 @@
       }
       function M(e) {
         const { milestone: t, baseGameAppID: n } = e,
-          a = w.A0.GetTokenWithFallback(t.milestone_desc);
+          a = w.A0.GetTokenWithFallback(t.milestone_desc),
+          o = t.appid || t.coming_soon_appid;
         return s.createElement(
           s.Fragment,
           null,
-          Boolean(t.appid) && s.createElement(S, { appid: t.appid }),
+          Boolean(o) && s.createElement(S, { appid: o }),
           s.createElement(
             "div",
             { className: y().Description },
@@ -453,7 +454,7 @@
       function W(e) {
         const { milestone: t, baseGameAppID: n } = e,
           [r, i] = (0, s.useState)(!1),
-          m = (0, l.RR)(t.event_gid);
+          m = (0, o.RR)(t.event_gid);
         return m
           ? s.createElement(
               s.Fragment,
@@ -474,7 +475,7 @@
                   eventModel: m,
                   announcementGID: m.AnnouncementGID,
                   closeModal: () => i(!1),
-                  partnerEventStore: o.O3,
+                  partnerEventStore: l.O3,
                   bShowOnlyInitialEvent: !0,
                   showAppHeader: !0,
                   trackingLocation: 3,

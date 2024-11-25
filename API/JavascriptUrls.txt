@@ -1226,6 +1226,7 @@ ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
 ${PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo
 ${PARTNER_BASE_URL}seasonpass/ajaxgetreleaseddlc?parentappid=${}
+${PARTNER_BASE_URL}seasonpass/ajaxgetreleasedorupcomingdlc?parentappid=${}
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
 ${PARTNER_BASE_URL}steamml/edit_problem
