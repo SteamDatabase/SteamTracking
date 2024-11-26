@@ -2144,7 +2144,7 @@
     "Settings_Interface_EnableSmoothScrolling": "Enable smooth scrolling in web views (requires restart)",
     "Settings_Interface_EnableGPURendering": "Enable GPU accelerated rendering in web views (requires restart)",
     "Settings_Interface_EnableHardwareDecoding": "Enable hardware video decoding, if supported (requires restart)",
-    "Settings_Interface_EnableHardwareDecoding_Disabled": "Requires GPU accelerated rendering",
+    "Settings_Interface_EnableHardwareDecoding_Disabled": "\"Enable GPU accelerated rendering in web views\" setting must be enabled",
     "Settings_Interface_EnableDirectWrite": "Enable DirectWrite for improved font smoothing and kerning",
     "Settings_Interface_ShowMarketingMessages": "Notify me about additions or changes to my games, new releases, and upcoming releases",
     "Settings_Interface_TaskbarPreferences": "Taskbar Preferences",

@@ -1504,11 +1504,14 @@
           f = (0, a.EC)(),
           b = (0, a.WA)(),
           E = (0, r.H0)(t.appid),
-          k = (0, H.Qn)();
+          k = (0, H.Qn)(),
+          T = o.useCallback((e) => {
+            (h.current = !1), i(e);
+          }, []);
         p.current == t.content || h.current || (p.current = t.content);
-        const T = p.current,
-          C = (0, r.df)(),
-          v = o.useCallback((e, t) => {
+        const C = p.current,
+          v = (0, r.df)(),
+          B = o.useCallback((e, t) => {
             d.current && d.current(),
               t.doc &&
                 t.doc != e.state.doc &&
@@ -1528,7 +1531,7 @@
               if (e) {
                 const { title: n, bbcode: o } = e();
                 (t.not_persisted && !o?.length) ||
-                  C.mutate({ note: t, title: n, bbcode: o }),
+                  v.mutate({ note: t, title: n, bbcode: o }),
                   l(!1);
               }
               (e = void 0), (m.current = void 0);
@@ -1537,14 +1540,14 @@
           return () => {
             window.clearTimeout(r), o();
           };
-        }, [C, n, t]),
+        }, [v, n, t]),
           o.useEffect(() => {
             c && c.focus();
           }, [c]);
-        const B = (0, a.qq)(),
-          N = (0, r.Bc)(t, B),
-          w = {
-            onSecondaryButton: () => N.mutate(),
+        const N = (0, a.qq)(),
+          w = (0, r.Bc)(t, N),
+          y = {
+            onSecondaryButton: () => w.mutate(),
             onSecondaryActionDescription: (0, _.we)(
               "#UserGameNotes_DeleteNote",
             ),
@@ -1566,11 +1569,11 @@
             {
               schemaConfig: oe,
               className: X.EditorInput,
-              bbcode: T,
-              onUpdate: v,
-              refView: i,
+              bbcode: C,
+              onUpdate: B,
+              refView: T,
               bSpellcheckEnabled: f,
-              panelProps: w,
+              panelProps: y,
             },
             o.createElement(se, {
               uploadImage: E,

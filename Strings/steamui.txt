@@ -2162,6 +2162,7 @@ ${LANGUAGE}
 &6FVfv
 &8Yv
 &CLOUD_GAMING_PLATFORM=%u
+&CqA
 &IY6
 &Lj&6lZ6?~A?
 &PLATFORM=%s
@@ -2387,7 +2388,6 @@ ${LANGUAGE}
 '.CTwoFactor_UpdateTokenVersion_Response"
 '.CUserAccount_GetWalletDetails_Response"
 '3<CIOSW[^adfikosvy|~
-'3qA
 '4M^kx
 '5'7'M'S'U'_'k'm's'w'
 '7GWgw
@@ -2395,6 +2395,7 @@ ${LANGUAGE}
 'JT9
 'RL6
 'Software\Valve\Steam\NoSavePersonalInfo
+'SqA
 'SteamInput/Configurator/ErrorMsgEnabled
 '\n!k_EClientPersonaStateFlagWatching
 '\n"k_EClientPersonaStateFlagBroadcast
@@ -2644,7 +2645,6 @@ ${LANGUAGE}
 (@(sa{sv})@(sa{sv})@a{sv})
 (@(sa{sv})@a{sv})
 (@a{sv}@a{sv})
-(AqA
 (Customization/StartupMovie/UsedForResume
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
@@ -3476,6 +3476,7 @@ ${LANGUAGE}
 (^aosst@a{sv})
 (^ay@a{sv})
 (anonymous namespace)
+(aqA
 (cannot determine missing fields for lite message)
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
@@ -4777,7 +4778,6 @@ ${LANGUAGE}
 -DBF
 -Infinity
 -LY8
--MqA
 -RN1
 -SteamViveSetup
 -\n%adjusted_time_probe_frequency_seconds
@@ -4901,6 +4901,7 @@ ${LANGUAGE}
 -longestloc
 -master_ipc_name_override
 -mod=
+-mqA
 -name=%s
 -nexon -fromlauncher
 -nexus 
@@ -6423,7 +6424,6 @@ ${LANGUAGE}
 0\tzc
 0`P0
 0fl:
-0hqA
 0pp@5tqE?|sO541
 0x%llx
 0|t?L
@@ -8967,7 +8967,6 @@ ${LANGUAGE}
 2prB
 2s\n\rChatUsability
 2sssua
-2vqA
 2{\n\rValveHWSurvey
 2}\n\nFovasVideo
 3$EE\f
@@ -21535,7 +21534,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 20 2024 22:24:00
+Nov 26 2024 00:12:46
 November
 NrZl
 Num Lock
@@ -28770,6 +28769,7 @@ Zulu
 \r*7dy^C
 \r0wJ
 \r1uI
+\r6pA
 \r7AO\n
 \r8STs\ne
 \r;)WEsa
@@ -31657,18 +31657,18 @@ ctrl not implemented
 ctrl operation not implemented
 ctrl_key
 ctype
-cuCtxCreate
-cuCtxDestroy
+cuCtxCreate_v2
+cuCtxDestroy_v2
 cuCtxGetCurrent
-cuCtxPopCurrent
+cuCtxPopCurrent_v2
 cuCtxSetCurrent
 cuDeviceComputeCapability
 cuDeviceGet
 cuDeviceGetCount
 cuInit
-cuMemAllocPitch
-cuMemFree
-cuMemcpy2D
+cuMemAllocPitch_v2
+cuMemFree_v2
+cuMemcpy2D_v2
 cubAdded >= 0
 cubBuffer >= cbWritten + ( m_pNetPacket->CubData() - cubSkip )
 cubBuffer >= cbWritten + m_ReplacementBody.Count()
