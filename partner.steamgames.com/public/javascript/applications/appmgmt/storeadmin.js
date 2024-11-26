@@ -10468,7 +10468,7 @@
             [p],
           );
         return p
-          ? 0 == _.length
+          ? 0 == _.length && l
             ? a.createElement(
                 "div",
                 { className: (0, u.A)(Ca.ErrorStylesWithIcon, "ErrorCtn") },
@@ -10678,7 +10678,7 @@
                 rctToolbarControls: c,
                 value: d.get(i),
                 rctAboveEditor: a.createElement(Ur, {
-                  appid: r.completed_appid || r.coming_soon_appid,
+                  appid: r?.completed_appid || r?.coming_soon_appid,
                 }),
               }),
               !L &&
