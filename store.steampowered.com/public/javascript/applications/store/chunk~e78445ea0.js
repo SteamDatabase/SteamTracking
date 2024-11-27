@@ -65,15 +65,16 @@
         DiscoveryQueueCarouselCtn: "_2u0N2gUX44_tavazJJb_QP",
         TextLink: "_3ZdNCUMz9KZMkwPZlO8zmi",
         DiscoveryQueueApp: "_1xJSMubUWBlahkrtb4IFTc",
-        Selected: "_2aeAhZ2Y99YIR2-zD6l27U",
         DiscoveryQueueWrapper: "_2BYaxM7mBfooJbZYzhEv4D",
         revealDiscoveryQueueWrapper: "brzQbY6Z8TH8Ww-rFL4E0",
         DiscoveryQueueItemsCtn: "_3q6eNRFBrPSFSGEn8uRFZ3",
         DiscoveryQueueItemPositioner: "_16tdfw6vxg9Hdy0KfCutXn",
+        Selected: "_2aeAhZ2Y99YIR2-zD6l27U",
         InRange: "_1XPIeNMxObbkYolTEj0Bwh",
         Dragging: "_3fTO0TgoWEAo4zdaHOCTh0",
         FarLeft: "vkLp1smRjDnZg7XQcMqjk",
         Left: "_3gBoKuhIxMBjlxU7FZ2L3a",
+        Current: "_2CgJDPFhM9rbjsq9n0c9I_",
         Right: "_1AGP_wKeaN9phzlq_2K9H7",
         FarRight: "hBGRzfrW2Obp7QpzYCi2L",
         AppDetailsCtn: "_2Zwt2P5vy4W9Ha5ePOv54U",
@@ -2937,42 +2938,46 @@
             refContainer: Z,
             bIsDragging: $,
             nDragOffset: te,
-            handleTouchStart: ne,
-            handleTouchMove: ae,
-            handleTouchEnd: ie,
+            nDragSelectedOffsetIndex: ne,
+            handleTouchStart: ae,
+            handleTouchMove: ie,
+            handleTouchEnd: se,
           } = (function (e, t) {
             const r = n.useRef(null),
               [a, i] = n.useState(0),
               [s, o] = n.useState(!1),
-              l = n.useRef(0),
-              c = (e) => {
-                o(!0), (l.current = e.touches[0].clientX), i(0);
+              [l, c] = n.useState(0),
+              u = n.useRef(0),
+              d = 50,
+              m = (e) => {
+                o(!0), (u.current = e.touches[0].clientX), i(0), c(0);
               },
-              u = (e) => {
+              p = (e) => {
                 if (!s) return;
-                const t = e.touches[0].clientX - l.current;
-                i(t);
+                const t = e.touches[0].clientX - u.current;
+                i(t), c(a > d ? 1 : a < -d ? -1 : 0);
               },
-              d = () => {
-                if (!s) return;
-                o(!1);
-                const r = 100;
-                a > r
-                  ? e((e) => Math.max(e - 1, 0))
-                  : a < -r && e((e) => Math.min(e + 1, t - 1)),
-                  i(0);
+              _ = () => {
+                s &&
+                  (o(!1),
+                  a > d
+                    ? e((e) => Math.max(e - 1, 0))
+                    : a < -d && e((e) => Math.min(e + 1, t - 1)),
+                  i(0),
+                  c(0));
               };
             return {
               refContainer: r,
               bIsDragging: s,
               nDragOffset: a,
-              handleTouchStart: c,
-              handleTouchMove: u,
-              handleTouchEnd: d,
+              nDragSelectedOffsetIndex: l,
+              handleTouchStart: m,
+              handleTouchMove: p,
+              handleTouchEnd: _,
             };
           })((e) => E(e), U.length),
-          se = (e) => x.LA(e, -1, 1) && x.W(C + e, U),
-          le = (0, q._)(h.TS.STORE_BASE_URL + "explore?dq=widget");
+          le = (e) => x.W(C + e, U) && (x.LA(e, -1, 1) || $),
+          ce = (0, q._)(h.TS.STORE_BASE_URL + "explore?dq=widget");
         return n.createElement(
           m.EN,
           { active: r },
@@ -3011,7 +3016,7 @@
                       "#DiscoveryQueue_LearnMore_Default",
                       n.createElement(i.Ii, {
                         className: B().LearnMoreLink,
-                        href: le,
+                        href: ce,
                       }),
                     ),
                   ),
@@ -3060,9 +3065,9 @@
                     ref: Z,
                     className: B().DiscoveryQueueItemsCtn,
                     focusable: !1,
-                    onTouchStart: ne,
-                    onTouchMove: ae,
-                    onTouchEnd: ie,
+                    onTouchStart: ae,
+                    onTouchMove: ie,
+                    onTouchEnd: se,
                   },
                   [-2, -1, 0, 1, 2].map((e) =>
                     n.createElement(
@@ -3072,15 +3077,17 @@
                         className: (0, y.A)({
                           [B().DiscoveryQueueItemPositioner]: !0,
                           [B().Dragging]: $,
-                          [B().InRange]: se(e),
+                          [B().InRange]: le(e),
                           [B().FarLeft]: -2 == e,
                           [B().Left]: -1 == e,
+                          [B().Current]: 0 == e,
                           [B().Right]: 1 == e,
                           [B().FarRight]: 2 == e,
+                          [B().Selected]: e + ne == 0,
                         }),
                         style: { "--dragOffsetX": `${te}px` },
                       },
-                      se(e) &&
+                      le(e) &&
                         n.createElement(re, {
                           eStoreDiscoveryQueueType: t,
                           storePageFilter: b,
