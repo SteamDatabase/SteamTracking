@@ -8,6 +8,15 @@ ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
 ${BASE_URL_SHARED_CDN}store_item_assets/optin/${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/steam/apps/${}/${}
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/backgrounds/awardbg_${voteid}.jpg?v=3
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/backgrounds/awardbg_${}.jpg?v=3
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_01.png
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_02.png
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_03.png
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_04.png
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${}.jpg?v=3
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/level_0${}.png
+${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=2
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
