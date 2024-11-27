@@ -821,7 +821,7 @@
     "Steamawards_GenerateLink_Btn": "Generate Share Link",
     "Steamawards_Nominate_Error_NoMatch": "The game (%1$s) isn't eligible for this category. If you think this is incorrect please contact Steam Support.",
     "Steamawards_Nominate_Error_Generic": "We encountered an error while nominating this game (%1$s). Please try again later. (%2$s)",
-    "Steamawards_GenerateLink_Fallback": "Get Started Below",
+    "Steamawards_GenerateLink_Fallback": "Get started below.",
     "Steamawards_Close_Btn": "Close",
     "Steamawards_GenerateLink_Btn_Renew": "Invalidate Link & Generate New One",
     "Steamawards_ShareModal_Description": "Click below to generate a unique, sharable link. Only users that are signed in to Steam and have this link can see your nominations.",

@@ -660,6 +660,7 @@
         m_strLibraryHeroURL;
         m_strLibraryHeroURL_2x;
         m_strCommunityIcon;
+        m_strCommunityIcon_Full;
         constructor(e, t) {
           const s = e.asset_url_format();
           s &&
@@ -716,7 +717,8 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              (this.m_strCommunityIcon = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
+              ((this.m_strCommunityIcon = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`),
+              (this.m_strCommunityIcon_Full = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`));
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -760,6 +762,9 @@
         }
         GetCommunityIconURL() {
           return this.m_strCommunityIcon;
+        }
+        GetCommunityIconURL_Full() {
+          return this.m_strCommunityIcon_Full;
         }
       }
       class b {

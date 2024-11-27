@@ -199,9 +199,9 @@
     },
     94595: (e) => {
       e.exports = {
-        new_games_color: "#d67070",
-        used_games_color: "#683db4",
-        old_games_color: "#3898b0",
+        new_games_color: "#34f3fe",
+        used_games_color: "#cc6670",
+        old_games_color: "#f4d760",
         pie_windows: "#d67070",
         pie_linux: "#683db4",
         pie_deck: "#3898b0",
@@ -398,7 +398,7 @@
       "use strict";
       t.r(a), t.d(a, { default: () => p });
       var r = t(80620),
-        n = t(59505),
+        n = t(67819),
         o = t(90626),
         c = t(76217),
         l = t(27144),

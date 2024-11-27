@@ -7052,7 +7052,7 @@
           n = (0, i.useRef)(),
           a = (0, i.useRef)();
         return (
-          (0, i.useLayoutEffect)(() => {
+          (0, i.useEffect)(() => {
             n.current && a.current ? a.current.Hide() : (n.current = !0);
           }, [r]),
           (0, i.useEffect)(() => {

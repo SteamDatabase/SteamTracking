@@ -117,8 +117,8 @@
       function h() {
         return n.useContext(d).store;
       }
-      var B = r(61859);
-      function b(e) {
+      var b = r(61859);
+      function B(e) {
         return "appid" in e
           ? ["GameNotes", "NotesByAppID", e.appid]
           : ["GameNotes", "NotesForShortcut", u(e.shortcut)];
@@ -126,7 +126,7 @@
       function g(e) {
         const t = h();
         return (0, o.I)({
-          queryKey: b(e),
+          queryKey: B(e),
           queryFn: async () => (await t.GetGameNotesList(e, !0)) || [],
           enabled: !!e,
         });
@@ -144,7 +144,7 @@
         });
       }
       function f(e, t, r) {
-        e.getQueryData(b(t)) && e.setQueryData(b(t), r);
+        e.getQueryData(B(t)) && e.setQueryData(B(t), r);
       }
       function y(e, t) {
         return n.useMemo(
@@ -234,7 +234,7 @@
               n.createElement(
                 "h1",
                 null,
-                (0, B.we)("#UserGameNotes_NotesList"),
+                (0, b.we)("#UserGameNotes_NotesList"),
               ),
               n.createElement(
                 "ul",
@@ -299,7 +299,7 @@
                           let t = [
                             e.create({
                               src: re,
-                              title: (0, B.we)("#UserGameNotes_ImageTooLarge"),
+                              title: (0, b.we)("#UserGameNotes_ImageTooLarge"),
                             }),
                           ];
                           return new ee.Ji(ee.FK.from(t), 0, 0);
@@ -452,7 +452,7 @@
                   ue.u3,
                   {
                     nodeType: t.nodes.code_block,
-                    tooltip: (0, B.we)("#FormattingToolbar_CodeBlock"),
+                    tooltip: (0, b.we)("#FormattingToolbar_CodeBlock"),
                   },
                   n.createElement(F.kNE, null),
                 ),
@@ -479,7 +479,7 @@
           o = n.useRef(),
           u = n.useRef(),
           p = n.useRef(t.content),
-          b = n.useRef(!1),
+          B = n.useRef(!1),
           g = n.useContext(d).onClickURL,
           y =
             null === (S = n.useContext(d).bSpellcheckEnabled) ||
@@ -498,10 +498,13 @@
               [t, e],
             );
           })(t.appid),
-          E = (0, K.Qn)();
-        p.current == t.content || b.current || (p.current = t.content);
-        const z = p.current,
-          v = (function () {
+          E = (0, K.Qn)(),
+          z = n.useCallback((e) => {
+            (B.current = !1), s(e);
+          }, []);
+        p.current == t.content || B.current || (p.current = t.content);
+        const v = p.current,
+          C = (function () {
             const e = (0, c.jE)(),
               t = h();
             return (0, l.n)({
@@ -524,12 +527,12 @@
               },
             });
           })(),
-          C = n.useCallback((e, t) => {
+          R = n.useCallback((e, t) => {
             o.current && o.current(),
               t.doc &&
                 t.doc != e.state.doc &&
-                (b.current ||
-                  ((b.current = !0),
+                (B.current ||
+                  ((B.current = !0),
                   j.y.ReportTrackedAction("/GameNotes/NoteModified")),
                 (u.current = () => ({
                   title: we(e.state.doc),
@@ -544,7 +547,7 @@
               if (e) {
                 const { title: r, bbcode: n } = e();
                 (t.not_persisted && !(null == n ? void 0 : n.length)) ||
-                  v.mutate({ note: t, title: r, bbcode: n }),
+                  C.mutate({ note: t, title: r, bbcode: n }),
                   i(!1);
               }
               (e = void 0), (u.current = void 0);
@@ -553,15 +556,15 @@
           return () => {
             window.clearTimeout(a), n();
           };
-        }, [v, r, t]),
+        }, [C, r, t]),
           n.useEffect(() => {
             a && a.focus();
           }, [a]);
-        const R = _(),
-          T = w(t, R),
-          U = {
-            onSecondaryButton: () => T.mutate(),
-            onSecondaryActionDescription: (0, B.we)(
+        const T = _(),
+          U = w(t, T),
+          G = {
+            onSecondaryButton: () => U.mutate(),
+            onSecondaryActionDescription: (0, b.we)(
               "#UserGameNotes_DeleteNote",
             ),
           };
@@ -582,11 +585,11 @@
             {
               schemaConfig: $,
               className: Q.EditorInput,
-              bbcode: z,
-              onUpdate: C,
-              refView: s,
+              bbcode: v,
+              onUpdate: R,
+              refView: z,
               bSpellcheckEnabled: y,
-              panelProps: U,
+              panelProps: G,
             },
             n.createElement(ne, {
               uploadImage: M,
@@ -598,10 +601,10 @@
               onClickURL: g,
             }),
           ),
-          !E && n.createElement(Be, { note: t, bDirty: r }),
+          !E && n.createElement(be, { note: t, bDirty: r }),
         );
       }
-      function Be(e) {
+      function be(e) {
         const { note: t, bDirty: r } = e,
           [i, a, s] = (0, V.uD)(!1),
           o = "single" == n.useContext(d).mode,
@@ -619,22 +622,22 @@
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             n.createElement(q.$n, { onClick: u }, n.createElement(F.lMJ, null)),
           ),
-          o && n.createElement(be, { bDirty: r }),
+          o && n.createElement(Be, { bDirty: r }),
         );
       }
-      function be(e) {
+      function Be(e) {
         const { bDirty: t } = e,
           r = _();
         return t
           ? n.createElement(
               q.jn,
               { onClick: () => r(), className: Q.CloseWindowButton },
-              (0, B.we)("#Button_SaveAndClose"),
+              (0, b.we)("#Button_SaveAndClose"),
             )
           : n.createElement(
               q.$n,
               { onClick: () => r(), className: Q.CloseWindowButton },
-              (0, B.we)("#Button_Close"),
+              (0, b.we)("#Button_Close"),
             );
       }
       function ge(e) {
@@ -643,11 +646,11 @@
           D.EN,
           { active: !0 },
           n.createElement(D.o0, {
-            strTitle: (0, B.we)("#UserGameNotes_DeleteNote"),
-            strDescription: (0, B.we)("#UserGameNotes_PromptDelete"),
+            strTitle: (0, b.we)("#UserGameNotes_DeleteNote"),
+            strDescription: (0, b.we)("#UserGameNotes_PromptDelete"),
             onOK: () => i.mutate(),
             bOKDisabled: i.isPending,
-            strOKButtonText: (0, B.we)("#Button_Delete"),
+            strOKButtonText: (0, b.we)("#Button_Delete"),
             closeModal: r,
           }),
         );
@@ -676,7 +679,7 @@
             const t = (0, c.jE)(),
               r = h();
             return n.useCallback(() => {
-              const n = (0, B.we)("#UserGameNotes_UntitledNote_Title"),
+              const n = (0, b.we)("#UserGameNotes_UntitledNote_Title"),
                 i = r.NewNote(e, n);
               return f(t, e, (e) => [...e, i]), i.id;
             }, [t, r, e]);
@@ -684,7 +687,7 @@
           { data: o, isLoading: l } = g(t);
         let u;
         o && r && (u = o.find((e) => e.id === r)),
-          n.useLayoutEffect(() => {
+          n.useEffect(() => {
             !o ||
               (r && o.find((e) => e.id === r)) ||
               (o.length > 0 && o[0].id ? Se(a, t, o[0].id) : Se(a, t, s()));
@@ -724,7 +727,7 @@
               title:
                 (null === (t = e.title) || void 0 === t ? void 0 : t.length) > 0
                   ? e.title
-                  : (0, B.we)("#UserGameNotes_Untitled"),
+                  : (0, b.we)("#UserGameNotes_Untitled"),
               identifier: e.id,
               content: n.createElement(he, { note: e }),
               pageClassName: Q.NotePage,
@@ -734,7 +737,7 @@
           p = (0, i.W6)(),
           _ = n.useCallback((e) => Se(p, t, e), [p, t]);
         return n.createElement(q.Bv, {
-          title: (0, B.we)("#UserGameNotes_NotesList"),
+          title: (0, b.we)("#UserGameNotes_NotesList"),
           pages: m,
           className: (0, me.A)(Q.NotesPagedSettings, l && Q.PinnedView),
           page: a,

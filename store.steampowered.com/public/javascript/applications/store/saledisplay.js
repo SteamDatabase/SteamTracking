@@ -315,7 +315,7 @@
         r = a(12447),
         o = a(76217),
         i = a(75204),
-        s = a(1977),
+        s = a(97907),
         c = a(84746),
         g = a(91336),
         m = a(96236),
@@ -1426,7 +1426,7 @@
           }),
         );
       }
-      function Ye(e) {
+      const Ye = n.memo(function (e) {
         const {
             fileNameSearch: t,
             clanAccountID: a,
@@ -1436,69 +1436,53 @@
             InternalOpenLocalizeImageGroup: s,
           } = e,
           c = (0, v.n9)(a),
-          g = n.useMemo(() => {
-            let e = [],
-              g = t?.trim().toLowerCase() || "";
-            const m = i.b.InitFromClanID(a);
-            let d = v.pU.GetFilteredClanImagesList(c, g);
-            if (d.length > 0)
-              for (let t of d)
-                e.push(
-                  n.createElement(Qe, {
-                    key: t.imageid,
-                    clanImage: t,
-                    searchStringHilight: g,
-                    imageInsertCallBack: l,
-                    fnOnOpenLocalizedImageGroup: s,
-                    insertActions: o?.filter(
-                      (e) =>
-                        (5 != t.file_type && 4 != t.file_type) ||
-                        e == xe.k_eInsertFullImage,
-                    ),
-                    OnImageClick: r,
-                  }),
+          g = t?.trim().toLowerCase() || "",
+          m = v.pU.GetFilteredClanImagesList(c, g);
+        if (0 == m.length) {
+          const e = i.b.InitFromClanID(a);
+          let t = v.pU.GetLoadState(e);
+          return t && t.loaded
+            ? n.createElement(
+                "div",
+                {
+                  key: "ImagePicker_Result",
+                  className: Ve().ResultNotification,
+                },
+                g.length > 0
+                  ? (0, S.we)("#ImagePicker_EmptySearch")
+                  : (0, S.we)("#ImagePicker_Empty"),
+              )
+            : t && t.errMsg
+              ? n.createElement(
+                  "div",
+                  { key: "ImagePicker_Result", className: Ve().ErrorCode },
+                  (0, S.we)("#ImagePicker_Error", t.errMsg),
+                )
+              : n.createElement(
+                  "div",
+                  {
+                    key: "ImagePicker_Result",
+                    className: Ve().ResultNotification,
+                  },
+                  (0, S.we)("#Loading"),
                 );
-            if (0 == e.length) {
-              let t = v.pU.GetLoadState(m);
-              t && t.loaded
-                ? e.push(
-                    n.createElement(
-                      "div",
-                      {
-                        key: "ImagePicker_Result",
-                        className: Ve().ResultNotification,
-                      },
-                      g.length > 0
-                        ? (0, S.we)("#ImagePicker_EmptySearch")
-                        : (0, S.we)("#ImagePicker_Empty"),
-                    ),
-                  )
-                : t && t.errMsg
-                  ? e.push(
-                      n.createElement(
-                        "div",
-                        {
-                          key: "ImagePicker_Result",
-                          className: Ve().ErrorCode,
-                        },
-                        (0, S.we)("#ImagePicker_Error", t.errMsg),
-                      ),
-                    )
-                  : e.push(
-                      n.createElement(
-                        "div",
-                        {
-                          key: "ImagePicker_Result",
-                          className: Ve().ResultNotification,
-                        },
-                        (0, S.we)("#Loading"),
-                      ),
-                    );
-            }
-            return e;
-          }, [t, a, l, o, r, s, c]);
-        return n.createElement(n.Fragment, null, g);
-      }
+        }
+        return m.map((e) =>
+          n.createElement(Qe, {
+            key: e.imageid,
+            clanImage: e,
+            searchStringHilight: g,
+            imageInsertCallBack: l,
+            fnOnOpenLocalizedImageGroup: s,
+            insertActions: o?.filter(
+              (t) =>
+                (5 != e.file_type && 4 != e.file_type) ||
+                t == xe.k_eInsertFullImage,
+            ),
+            OnImageClick: r,
+          }),
+        );
+      });
       class Qe extends n.Component {
         m_linkPopupRef = n.createRef();
         state = { bDeleting: !1 };
@@ -1726,21 +1710,15 @@
         }
       }
       function Ze(e) {
-        const {
-            clanSteamID: t,
-            closeModal: a,
-            OnClanImageSelected: l,
-            fnSetImageURL: r,
-            rgRealmList: o,
-          } = e,
-          i = (0, n.useCallback)(
+        const { clanSteamID: t, closeModal: a, OnClanImageSelected: l } = e,
+          r = (0, n.useCallback)(
             (e, t) => {
               l(e, t), a();
             },
             [l, a],
           ),
-          s = (0, n.useMemo)(() => [], []),
-          [c, g] = (0, n.useState)(null);
+          o = (0, n.useMemo)(() => [], []),
+          [i, s] = (0, n.useState)(null);
         return n.createElement(
           $.o0,
           {
@@ -1750,13 +1728,12 @@
             onOK: a,
             onCancel: a,
           },
-          n.createElement(qe, { fnSetImageSearch: g }),
+          n.createElement(qe, { fnSetImageSearch: s }),
           n.createElement(Ye, {
             clanAccountID: t.GetAccountID(),
-            fileNameSearch: c,
-            imageInsertCallBack: i,
-            fnOnExpandImage: () => {},
-            insertActions: s,
+            fileNameSearch: i,
+            imageInsertCallBack: r,
+            insertActions: o,
             InternalOpenLocalizeImageGroup: null,
           }),
         );
@@ -1792,12 +1769,7 @@
             type: "button",
             onClick: (e) => {
               (0, ee.pg)(
-                n.createElement(Ze, {
-                  fnSetImageURL: a,
-                  clanSteamID: t,
-                  OnClanImageSelected: l,
-                  rgRealmList: r,
-                }),
+                n.createElement(Ze, { clanSteamID: t, OnClanImageSelected: l }),
                 (0, ce.uX)(e),
               );
             },

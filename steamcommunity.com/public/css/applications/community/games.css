@@ -283,6 +283,16 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
     background-position-x: calc(100% + 250px);
   }
 }
+._3wMS41OoTPnZyEddTVwzy_ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+._3wMS41OoTPnZyEddTVwzy_._3t_UEZDy1QxxcYfn3TTvD2 svg {
+  filter: drop-shadow(0 0 2px #000000) drop-shadow(0 0 16px #1a9fff)
+    drop-shadow(10px 10px 16px #1a9fff);
+}
 
 ._3tY9vKLCmyG2H2Q4rUJpkr {
   margin: auto;

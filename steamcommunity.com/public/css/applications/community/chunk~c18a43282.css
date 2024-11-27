@@ -2409,6 +2409,8 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   ._3j4dI1yA7cRfCvK8h406OB {
   background: #344654;
   padding: 0 12px;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
 }
 ._2s-O5T3qJJYR2AUq4b9jIN ._2_KY_e11FV0ftXR2_7TMmP {
   height: 100%;
@@ -2603,9 +2605,9 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   padding: 5px 8px;
   align-items: center;
   display: flex;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
   white-space: nowrap;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .BasicUI ._3j4dI1yA7cRfCvK8h406OB {
   padding: unset;
@@ -2721,6 +2723,8 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 }
 ._1dKR2IPNQSHs1MAIXBvt_R a {
   text-decoration: none;
+  position: relative;
+  z-index: 3;
 }
 .BasicUI ._1dKR2IPNQSHs1MAIXBvt_R a {
   box-shadow: var(--gpShadow-Medium);

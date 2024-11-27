@@ -3,7 +3,7 @@ body.SteamAwardsNominations {
   font-weight: normal;
 }
 body.SteamAwardsNominations .responsive_page_frame {
-  background: linear-gradient(to bottom right, #232341, #201e2d);
+  background: linear-gradient(to bottom right, #232341, #67629c);
 }
 body.v6.SteamAwardsNominations #footer_spacer {
   height: 183px;
@@ -471,7 +471,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 ._3I1Ga7kMZPDXXbOfgfBTDj ._3mKDmumAiG1vMlU0jWpTe0 {
   backdrop-filter: blur(9px);
   background-color: rgba(0, 0, 0, 0.36);
-  min-height: 790px;
+  min-height: 488px;
 }
 ._3I1Ga7kMZPDXXbOfgfBTDj .a3_pmPQJhnwuVtzHgSyu8 {
   margin-top: 20px;
@@ -597,12 +597,20 @@ body.v6.SteamAwardsNominations #footer_spacer {
 }
 ._3I1Ga7kMZPDXXbOfgfBTDj ._3Xwn8eFK1QXh1ckrOXov07._2AqJTwluya2l8sHRS0Nrne {
   width: 100%;
+  height: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 24px;
   box-sizing: border-box;
   font-size: 14px;
+}
+._3I1Ga7kMZPDXXbOfgfBTDj .KBqkfDknFrTcr7ETAE2OW {
+  min-height: 500px;
+}
+._3I1Ga7kMZPDXXbOfgfBTDj .i4KlSZuYm2iFdxbjUegqJ {
+  margin-top: 30px;
 }
 ._3I1Ga7kMZPDXXbOfgfBTDj ._3M2mdkv-ZvUKBkLPH46U8S {
   display: grid;
@@ -698,7 +706,7 @@ button.DialogButton.CEmahjyiRmgWZlXL6XEpv._4GIBs4zFQvYzih0mbwMoB {
   opacity: 0.5;
 }
 button.DialogButton.CEmahjyiRmgWZlXL6XEpv._4GIBs4zFQvYzih0mbwMoB:hover {
-  background-color: #cc8ec0;
+  background-color: #b0abe5;
 }
 button.DialogButton.CEmahjyiRmgWZlXL6XEpv:hover {
   background-color: #fff;

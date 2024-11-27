@@ -117,7 +117,7 @@ ${CHAT_BASE_URL}comment/recommendation/formattinghelp
 ${CHAT_BASE_URL}miniprofile/${accountid}/json
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
-${CHAT_BASE_URL}public/images/broadcast/cs2_major2024_cph_icon.png
+${CHAT_BASE_URL}public/images/broadcast/cs2_major2024_sha_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
@@ -261,6 +261,7 @@ ${COMMUNITY_BASE_URL}my/edit/miniprofile
 ${COMMUNITY_BASE_URL}my/friends/add
 ${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/groups/
+${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
@@ -322,6 +323,7 @@ ${COMMUNITY_BASE_URL}sale/ajaxdiscounteventdetails
 ${COMMUNITY_BASE_URL}sale/ajaxdiscountevents
 ${COMMUNITY_BASE_URL}sale/ajaxgetcategoriesbytag
 ${COMMUNITY_BASE_URL}sale/ajaxgetcommunityitemsfordrops
+${COMMUNITY_BASE_URL}sale/ajaxgetsalepagefeaturedapptagid/
 ${COMMUNITY_BASE_URL}sale/ajaxoptineventdetail
 ${COMMUNITY_BASE_URL}sale/ajaxoptinsummary
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetactiveoptins
@@ -910,6 +912,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${icon}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${img_icon_hash}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
+${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}_full.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/
@@ -983,6 +986,7 @@ ${PARTNER_BASE_URL}admin/store/contenthub/ajaxsavecontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/categories
 ${PARTNER_BASE_URL}admin/store/dailydeal/${gid}
 ${PARTNER_BASE_URL}admin/store/dailydeal/${id}
+${PARTNER_BASE_URL}admin/store/packagepublish/${}
 ${PARTNER_BASE_URL}admin/store/page/${}
 ${PARTNER_BASE_URL}admin/store/page/${}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${cluster_name}/${id}?activetab=tab_capsules
@@ -1225,7 +1229,6 @@ ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
 ${PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo
-${PARTNER_BASE_URL}seasonpass/ajaxgetreleaseddlc?parentappid=${}
 ${PARTNER_BASE_URL}seasonpass/ajaxgetreleasedorupcomingdlc?parentappid=${}
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
@@ -1445,6 +1448,7 @@ ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
+${STORE_BASE_URL}explore?dq=widget
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}

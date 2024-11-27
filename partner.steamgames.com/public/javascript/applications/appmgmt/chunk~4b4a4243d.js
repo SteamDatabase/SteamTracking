@@ -224,6 +224,88 @@
         include_release: !0,
       };
     },
+    82829: (e, t, r) => {
+      "use strict";
+      r.d(t, { y5: () => y, c2: () => f });
+      var a = r(56545),
+        n = r(59411),
+        i = r(15161),
+        s = r(58632),
+        o = r.n(s),
+        l = r(90626),
+        c = r(20194),
+        m = r(62792),
+        d = r(72963),
+        u = r(81393),
+        p = r(96059),
+        g = r(30470),
+        h = r(24484);
+      class b {
+        m_steamInterface;
+        GetPromotionTransport() {
+          return this.m_steamInterface;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            b.s_Singleton || ((b.s_Singleton = new b()), b.s_Singleton.Init()),
+            b.s_Singleton
+          );
+        }
+        Init() {
+          const e = (0, h.Tc)(
+            "partnerbrowse_webapi_token",
+            "application_config",
+          );
+          (0, u.w)(Boolean(e), "require partnerbrowse_webapi_token"),
+            (this.m_steamInterface = new p.D(g.TS.WEBAPI_BASE_URL, e));
+        }
+      }
+      function f(e) {
+        const t = b.Get().GetPromotionTransport().GetServiceTransport(),
+          r = l.useContext(_);
+        return (0, c.I)(w(r, t, e));
+      }
+      function y(e) {
+        return d.L.getQueryData(["StoreItemCountryRestriction", (0, m.wD)(e)]);
+      }
+      const _ = l.createContext({
+        loadStoreItemCountryRestriction: async (e, t) =>
+          await (function (e) {
+            B ||
+              (B = new (o())(
+                async (t) => {
+                  const r = a.w.Init(n.zo);
+                  r.Body().set_ids(t.map((e) => i.O4.fromObject(e)));
+                  const s = await n.BT.GetCountryRestrictions(e, r);
+                  if (!s.BSuccess())
+                    throw `Failed to call store Item Country Restriction with details: ${s.GetErrorMessage()}`;
+                  const o = new Map();
+                  return (
+                    s
+                      .Body()
+                      .results()
+                      .forEach((e) => {
+                        const t = e.toObject();
+                        o.set((0, m.wD)(t.id), t);
+                      }),
+                    t.map((e) => o.get((0, m.wD)(e)) ?? null)
+                  );
+                },
+                { maxBatchSize: 100 },
+              ));
+            return B;
+          })(t).load(e),
+      });
+      function w(e, t, r) {
+        return {
+          queryKey: ["StoreItemCountryRestriction", (0, m.wD)(r)],
+          queryFn: () => e.loadStoreItemCountryRestriction(r, t),
+          enabled: !!r,
+        };
+      }
+      let B;
+    },
     27429: (e, t, r) => {
       "use strict";
       function a(e, t) {
@@ -261,7 +343,7 @@
     },
     73967: (e, t, r) => {
       "use strict";
-      r.d(t, { i: () => F, q: () => z });
+      r.d(t, { i: () => T, q: () => z });
       var a = r(23910),
         n = r(65946),
         i = r(90626),
@@ -853,17 +935,17 @@
           });
       })(B || (B = {}));
       var C = r(96001),
-        v = r(20194);
-      var E = r(44165),
-        M = r(62792),
-        S = r(55263),
-        A = r(52038),
-        R = r(71541),
+        S = r(20194);
+      var v = r(44165),
+        E = r(62792),
+        M = r(55263),
+        R = r(52038),
+        A = r(71541),
         D = r(56330),
         I = r(22797),
         x = r(61859),
         N = r(30470);
-      function F(e) {
+      function T(e) {
         const { oEditableMessage: t } = e,
           [r] = (0, n.q3)(() => [t.GetStoreItemKey()]);
         return "app" != r.item_type
@@ -872,15 +954,15 @@
               { className: D.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             )
-          : i.createElement(T, { oEditableMessage: t, idKey: r });
+          : i.createElement(F, { oEditableMessage: t, idKey: r });
       }
-      function T(e) {
+      function F(e) {
         const { oEditableMessage: t, idKey: r } = e,
           [o, l] = (0, n.q3)(() => [
             t.GetUpdateEventClanAccountID(),
             t.GetUpdateEventGID(),
           ]),
-          [c] = (0, S.G6)(r?.id, (0, M.JK)(r?.item_type), a.rz),
+          [c] = (0, M.G6)(r?.id, (0, E.JK)(r?.item_type), a.rz),
           m = (0, i.useMemo)(() => s.b.InitFromClanID(o), [o]),
           d = 12 != c?.GetAppType() ? c?.GetParentAppID() : void 0;
         return i.createElement(
@@ -922,12 +1004,12 @@
             strUrlLearnMore: c,
             bFilterOutDrafts: d,
           } = e,
-          u = (0, E.f1)(),
+          u = (0, v.f1)(),
           { clanInfo: p, bLoadingClanInfo: h } = (0, o.vF)(t),
           b = (function (e, t) {
             const r = (0, C.a)(),
               a = (0, i.useMemo)(() => s.b.InitFromClanID(e), [e]),
-              n = (0, v.I)({
+              n = (0, S.I)({
                 queryKey: ["eventdraftrecent", e, t],
                 queryFn: async () => {
                   const e = m.w.Init(g);
@@ -1009,7 +1091,7 @@
                         "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                       ),
                     ),
-                  i.createElement(R.m, {
+                  i.createElement(A.m, {
                     label: n,
                     tooltip: l,
                     selectedOption: _,
@@ -1019,7 +1101,7 @@
                 )
               : i.createElement(
                   "div",
-                  { className: (0, A.A)(D.ErrorStylesWithIcon, "ErrorCtn") },
+                  { className: (0, R.A)(D.ErrorStylesWithIcon, "ErrorCtn") },
                   (0, x.oW)(
                     "#EventDropDown_NoEventFound",
                     i.createElement("a", {
@@ -1065,18 +1147,18 @@
             bRunQueryOnLoad: w,
             rgParentAppIDs: B,
           } = e,
-          [C, v] = i.useState(""),
-          [E, M] = i.useState(!1),
-          [S, A] = i.useState(!1),
-          [R] = i.useState(new l.LU()),
+          [C, S] = i.useState(""),
+          [v, E] = i.useState(!1),
+          [M, R] = i.useState(!1),
+          [A] = i.useState(new l.LU()),
           [D, I] = i.useState(new Array()),
           [x, N] = i.useState(new Array()),
-          [F, T] = i.useState(new Array()),
+          [T, F] = i.useState(new Array()),
           z = i.createRef(),
           k = i.createRef();
         const W = (0, i.useCallback)(
             async (e, t) => {
-              A(!0);
+              R(!0);
               let r = { json: 1, term: e, bexcluderetired: !f },
                 i = `${d.TS.PARTNER_BASE_URL}apps/suggestapps`;
               switch (a) {
@@ -1100,31 +1182,31 @@
                       o.data.package_matches?.filter((e) => s(e.packageid)) ||
                         [],
                     ),
-                    T(
+                    F(
                       o.data.bundle_matches?.filter((e) => s(e.bundleid)) || [],
                     ))
                   : (I(o.data.matches || []),
                     N(o.data.package_matches || []),
-                    T(o.data.bundle_matches || []))
-                : (I([]), N([]), T([])),
-                A(!1);
+                    F(o.data.bundle_matches || []))
+                : (I([]), N([]), F([])),
+                R(!1);
             },
             [s, a, f, _, B],
           ),
-          L = (0, i.useCallback)(
+          G = (0, i.useCallback)(
             (e) => {
-              M(e), W(z.current?.value, e);
+              E(e), W(z.current?.value, e);
             },
             [W, z],
           ),
-          G = (0, i.useCallback)(
+          L = (0, i.useCallback)(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
-              v(t);
+              S(t);
               const r = k.current?.checked;
-              R.Schedule(1e3, () => W(t, r));
+              A.Schedule(1e3, () => W(t, r));
             },
-            [W, R, k],
+            [W, A, k],
           );
         let U;
         switch (
@@ -1156,7 +1238,7 @@
               label: r,
               tooltip: g,
               placeholder: U,
-              onChange: G,
+              onChange: L,
               value: C,
               bAlwaysShowClearAction: C.length > 0,
               focusOnMount: b,
@@ -1164,8 +1246,8 @@
             O &&
               i.createElement(o.Yh, {
                 ref: k,
-                checked: E,
-                onChange: L,
+                checked: v,
+                onChange: G,
                 className: u.AppSearchDLCCheckbox,
                 label: (0, m.we)("#StoreAdmin_Search_IncludeDLC"),
               }),
@@ -1173,7 +1255,7 @@
           i.createElement(
             "div",
             { className: u.Results },
-            S &&
+            M &&
               i.createElement(
                 "div",
                 { className: u.LoadingContainer },
@@ -1205,8 +1287,8 @@
                   },
                 }),
               ),
-            Boolean(F?.length > 0) &&
-              F.map((e) =>
+            Boolean(T?.length > 0) &&
+              T.map((e) =>
                 i.createElement(h, {
                   key: e.bundleid,
                   name: e.name,
@@ -1214,7 +1296,7 @@
                   type: 2,
                   is_visible: e.is_visible,
                   fnSetItemID: () => {
-                    T([]), t(e.bundleid);
+                    F([]), t(e.bundleid);
                   },
                 }),
               ),
@@ -1591,9 +1673,9 @@
             bHideFollowButton: B,
             bAddLinkToMemberList: C,
           } = e,
-          v = (0, i.FV)(t.clan_account_id),
-          [E] = (0, s.L2)();
-        if (E || !v)
+          S = (0, i.FV)(t.clan_account_id),
+          [v] = (0, s.L2)();
+        if (v || !S)
           return a.createElement(
             "div",
             { className: f.DevSummaryWidgetCtn },
@@ -1603,15 +1685,15 @@
               position: "center",
             }),
           );
-        const M = t.type,
-          S =
+        const E = t.type,
+          M =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          A = v.GetCreatorHomeURL(M),
-          R = v.GetNumFollowers();
+          R = S.GetCreatorHomeURL(E),
+          A = S.GetNumFollowers();
         return a.createElement(
           g.tH,
           null,
@@ -1627,14 +1709,14 @@
                 ),
                 "flow-children": "row",
               },
-              !o && a.createElement("span", { className: f.Title }, S),
+              !o && a.createElement("span", { className: f.Title }, M),
               a.createElement(
                 "div",
                 { className: f.DevSummaryWidgetCtn },
                 a.createElement("div", {
                   className: f.DevSummaryBackground,
                   style: {
-                    backgroundImage: `url(${v.GetAvatarURLFullSize()} )`,
+                    backgroundImage: `url(${S.GetAvatarURLFullSize()} )`,
                   },
                 }),
                 a.createElement(
@@ -1652,13 +1734,13 @@
                     a.createElement(
                       c,
                       {
-                        href: (0, p.k2)(A),
+                        href: (0, p.k2)(R),
                         className: f.AvatarLink,
                         bAllowFocuseableAnchor: !0,
                       },
                       a.createElement("img", {
                         className: (0, m.A)(f.Avatar, "Avatar_Trgt"),
-                        src: v.GetAvatarURLFullSize(),
+                        src: S.GetAvatarURLFullSize(),
                       }),
                     ),
                     a.createElement(
@@ -1679,8 +1761,8 @@
                         },
                         a.createElement(
                           c,
-                          { href: (0, p.k2)(A), className: f.CreatorNameName },
-                          v.GetName(),
+                          { href: (0, p.k2)(R), className: f.CreatorNameName },
+                          S.GetName(),
                         ),
                         Boolean(r) &&
                           a.createElement(
@@ -1691,7 +1773,7 @@
                                 f.CreatorTagline,
                               ),
                             },
-                            v.GetTagLine(),
+                            S.GetTagLine(),
                           ),
                       ),
                       a.createElement(
@@ -1713,7 +1795,7 @@
                           a.createElement(
                             "div",
                             { className: f.Followers },
-                            a.createElement("span", null, (0, u.Dq)(R)),
+                            a.createElement("span", null, (0, u.Dq)(A)),
                             a.createElement("br", null),
                             (0, d.we)("#CreatorHome_JustFollowers"),
                           ),
@@ -1728,7 +1810,7 @@
                         href:
                           l.TS.COMMUNITY_BASE_URL +
                           "gid/" +
-                          v.GetClanSteamID().ConvertTo64BitString() +
+                          S.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
                         target: "_blank",
                         className: f.MembersListLink,

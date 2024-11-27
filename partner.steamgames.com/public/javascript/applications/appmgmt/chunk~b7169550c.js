@@ -32,8 +32,8 @@
         vh: () => g,
       });
       var n = a(34629),
-        s = a(41735),
-        o = a.n(s),
+        o = a(41735),
+        s = a.n(o),
         r = a(90626),
         i = a(68797),
         l = a(78327),
@@ -66,9 +66,9 @@
                 searchtext: t,
                 origin: self.origin,
               },
-              s = await o().get(a, { params: n });
-            200 == s?.status && 1 == s?.data?.success
-              ? s.data.publishers.forEach((t) => {
+              o = await s().get(a, { params: n });
+            200 == o?.status && 1 == o?.data?.success
+              ? o.data.publishers.forEach((t) => {
                   const a = {
                     partnerid: t.publisherid,
                     name: t.publishername,
@@ -79,7 +79,7 @@
                   this.m_mapOptInToPartners.set(t.publisherid, a), e.push(a);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${s?.status} eresult ${s?.data?.success} and msg ${s?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${o?.status} eresult ${o?.data?.success} and msg ${o?.data?.msg}`,
                 );
           } catch (t) {
             const e = (0, i.H)(t);
@@ -185,8 +185,8 @@
       "use strict";
       a.d(e, { E: () => g, O: () => u });
       var n = a(34629),
-        s = a(14947),
-        o = a(65946),
+        o = a(14947),
+        s = a(65946),
         r = a(22837),
         i = a(62490),
         l = a(6419),
@@ -235,26 +235,26 @@
           );
         }
         constructor() {
-          (0, s.Gn)(this);
+          (0, o.Gn)(this);
         }
       }
       function g() {
-        return (0, o.q3)(() => u.Get().GetCurEditLanguage());
+        return (0, s.q3)(() => u.Get().GetCurEditLanguage());
       }
-      (0, n.Cg)([s.sH], u.prototype, "m_eCurLang", void 0),
-        (0, n.Cg)([s.sH], u.prototype, "m_rgHasData", void 0),
-        (0, n.Cg)([s.sH], u.prototype, "m_bHasLocalizationContext", void 0),
+      (0, n.Cg)([o.sH], u.prototype, "m_eCurLang", void 0),
+        (0, n.Cg)([o.sH], u.prototype, "m_rgHasData", void 0),
+        (0, n.Cg)([o.sH], u.prototype, "m_bHasLocalizationContext", void 0),
         (0, n.Cg)([l.o], u.prototype, "GetCurEditLanguage", null),
         (0, n.Cg)([l.o], u.prototype, "SetCurEditLanguage", null),
-        (0, n.Cg)([s.XI.bound], u.prototype, "SetHasLanguage", null),
+        (0, n.Cg)([o.XI.bound], u.prototype, "SetHasLanguage", null),
         (0, n.Cg)([l.o], u.prototype, "BHasLanguageData", null);
     },
     96001: (t, e, a) => {
       "use strict";
       a.d(e, { a: () => l, z: () => i });
       var n = a(81393),
-        s = a(96059),
-        o = a(30470),
+        o = a(96059),
+        s = a(30470),
         r = a(24484);
       class i {
         m_steamInterface;
@@ -274,7 +274,7 @@
             "application_config",
           );
           (0, n.w)(Boolean(t), "require promotion_operation_token"),
-            (this.m_steamInterface = new s.D(o.TS.WEBAPI_BASE_URL, t));
+            (this.m_steamInterface = new o.D(s.TS.WEBAPI_BASE_URL, t));
         }
       }
       function l() {
@@ -285,8 +285,8 @@
       "use strict";
       a.d(e, { Ng: () => S, iN: () => b, yk: () => f });
       var n = a(34629),
-        s = a(75844),
-        o = a(65946),
+        o = a(75844),
+        s = a(65946),
         r = a(90626),
         i = a(22837),
         l = a(2160),
@@ -305,7 +305,7 @@
             fnFilterLanguage: e,
             fnLangHasData: a,
             fnLastUpdateRTime: n,
-            fnIsLangSupported: s,
+            fnIsLangSupported: o,
           } = this.props;
           this.props.bAllowUnsetOption &&
             t.push(
@@ -315,16 +315,16 @@
                 (0, m.we)("#language_selection_none"),
               ),
             );
-          let o = new Array();
+          let s = new Array();
           const c = this.props.realms || [l.TU.k_ESteamRealmGlobal];
           for (const t of m.A0.GetLanguageListForRealms(c)) {
             if (e && !e(t)) continue;
             const a = (0, i.Lg)(t),
               n = (0, m.we)("#Language_" + a),
-              r = Boolean(s) && s(t);
-            o.push({ eLang: t, sLocName: n, bSupported: r });
+              r = Boolean(o) && o(t);
+            s.push({ eLang: t, sLocName: n, bSupported: r });
           }
-          o.sort((t, e) =>
+          s.sort((t, e) =>
             t.bSupported != e.bSupported
               ? t.bSupported
                 ? -1
@@ -332,7 +332,7 @@
               : t.sLocName.localeCompare(e.sLocName),
           );
           let p = !1;
-          for (const e of o) {
+          for (const e of s) {
             e.bSupported != p &&
               (t.push(
                 r.createElement(
@@ -350,24 +350,24 @@
                 ),
               ),
               (p = e.bSupported));
-            const s = a && a(e.eLang),
-              o = n && n(e.eLang);
+            const o = a && a(e.eLang),
+              s = n && n(e.eLang);
             let i = e.sLocName;
-            o &&
-              0 !== o &&
+            s &&
+              0 !== s &&
               ((i += " "),
               (i += (0, m.we)(
                 "#Language_Last_Update",
-                (0, m.$z)(o) + " @ " + (0, d.KC)(o, { bForce24HourClock: !1 }),
+                (0, m.$z)(s) + " @ " + (0, d.KC)(s, { bForce24HourClock: !1 }),
               ))),
               t.push(
                 r.createElement(
                   "option",
                   {
-                    key: "langpicker" + e.eLang + (s ? "_hasdata" : ""),
+                    key: "langpicker" + e.eLang + (o ? "_hasdata" : ""),
                     value: e.eLang,
                     className: (0, g.A)(
-                      { [u().LanguageWithContent]: s },
+                      { [u().LanguageWithContent]: o },
                       e.bSupported
                         ? u().SupportedLanguage
                         : u().UnsupportedLanguage,
@@ -399,7 +399,7 @@
         }
       };
       function b(t) {
-        const [e, a] = (0, o.q3)(() => [
+        const [e, a] = (0, s.q3)(() => [
           c.O.Get().GetHasLocalizationContext(),
           c.O.Get().GetCurEditLanguage(),
         ]);
@@ -420,7 +420,7 @@
           ),
           [],
         );
-        const a = (0, o.q3)(() => {
+        const a = (0, s.q3)(() => {
           const t = [];
           for (let a = 0; a < 31; ++a) t[a] = e && e(a);
           return t;
@@ -431,22 +431,25 @@
         );
       }
       (0, n.Cg)([h.oI], S.prototype, "OnLanguageChange", null),
-        (S = (0, n.Cg)([s.PA], S));
+        (S = (0, n.Cg)([o.PA], S));
     },
     38135: (t, e, a) => {
       "use strict";
-      a.d(e, { V: () => d });
-      var n = a(90626),
-        s = a(92757),
-        o = a(52038),
-        r = a(61859),
-        i = a(95034),
-        l = a(1990),
-        c = a.n(l),
-        p = a(32754),
-        u = a(51272),
-        g = a(76217);
-      class m extends n.Component {
+      a.d(e, { V: () => f, a: () => S });
+      var n = a(34629),
+        o = a(90626),
+        s = a(75844),
+        r = a(92757),
+        i = a(52038),
+        l = a(61859),
+        c = a(95034),
+        p = a(1990),
+        u = a.n(p),
+        g = a(32754),
+        m = a(51272),
+        d = a(76217),
+        h = a(6419);
+      class _ extends o.Component {
         state = { activeTab: "" };
         componentDidMount() {
           this.props.startingTab
@@ -454,110 +457,121 @@
             : !this.props.bDisableRouting &&
               this.props.location &&
               this.setState({
-                activeTab: (0, i.f3)(this.props.location, "tab"),
+                activeTab: (0, c.f3)(this.props.location, "tab"),
               });
         }
         componentDidUpdate(t) {
           !this.props.bDisableRouting &&
             this.props.location &&
             this.props.location.key !== t.location.key &&
-            this.setState({ activeTab: (0, i.f3)(this.props.location, "tab") });
+            this.setState({ activeTab: (0, c.f3)(this.props.location, "tab") });
         }
         OnTabClick(t) {
           this.setState({ activeTab: t.key }),
             !this.props.bDisableRouting &&
               this.props.history &&
-              (0, i.Bm)(this.props.history, "tab", t.key),
+              (0, c.Bm)(this.props.history, "tab", t.key),
             t.onClick && t.onClick(t);
         }
         render() {
           const t =
             this.props.tabs.find((t) => t.key === this.state.activeTab) ||
             this.props.tabs[0];
-          return n.createElement(
-            n.Fragment,
+          return o.createElement(
+            o.Fragment,
             null,
-            n.createElement(
-              g.Z,
+            o.createElement(
+              d.Z,
               {
-                className: (0, o.A)(
-                  c().GraphicalAssetsTabs,
+                className: (0, i.A)(
+                  u().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
               },
-              this.props.tabs.map((e) => {
-                if (!e.hidden) {
-                  let a = "";
-                  return (
-                    "success" === e.statusType
-                      ? (a = c().StatusSuccess)
-                      : "danger" === e.statusType
-                        ? (a = c().StatusDanger)
-                        : "caution" === e.statusType && (a = c().StatusCaution),
-                    n.createElement(
-                      u.e7,
-                      {
-                        key: e.key,
-                        condition: Boolean(e.statusToolTip || e.tooltip),
-                        wrap: (t) =>
-                          n.createElement(
-                            p.he,
-                            { toolTipContent: e.statusToolTip || e.tooltip },
-                            t,
-                          ),
-                      },
-                      n.createElement(
-                        g.Z,
-                        {
-                          key: e.key,
-                          className: (0, o.A)(
-                            `${c().GraphicalAssetsTab} ${e.key === t.key ? ((0, o.A))(c().Active, "ActiveTab") : ""}`,
-                            this.props.classNameTab,
-                          ),
-                          onActivate: () => this.OnTabClick(e),
-                        },
-                        Boolean(e.vo_warning) &&
-                          n.createElement(
-                            p.he,
-                            { toolTipContent: e.vo_warning },
-                            n.createElement(
-                              "div",
-                              { className: c().VOWarning },
-                              (0, r.we)("#EventEditor_VOWarning"),
-                            ),
-                          ),
-                        Boolean(e.status) &&
-                          n.createElement(
-                            "div",
-                            {
-                              className: (0, o.A)(c().GraphicalAssetStatus, a),
-                            },
-                            e.status,
-                          ),
-                        e.name,
-                      ),
-                    )
-                  );
-                }
-                return null;
-              }),
+              this.props.tabs.map((e) =>
+                o.createElement(b, {
+                  key: e.key,
+                  tab: e,
+                  OnTabClick: this.OnTabClick,
+                  classNameTab: this.props.classNameTab,
+                  active: e.key === t.key,
+                }),
+              ),
             ),
-            n.createElement(
-              g.Z,
+            o.createElement(
+              d.Z,
               null,
-              t && n.createElement(g.Z, null, t.contents),
+              t && o.createElement(d.Z, null, t.contents),
             ),
           );
         }
       }
-      const d = (0, s.y)(m);
+      function S(t) {
+        const { statusType: e = "success", children: a } = t;
+        let n = "";
+        return (
+          "success" === e
+            ? (n = u().StatusSuccess)
+            : "danger" === e
+              ? (n = u().StatusDanger)
+              : "caution" === e && (n = u().StatusCaution),
+          o.createElement(
+            "div",
+            { className: (0, i.A)(u().GraphicalAssetStatus, n) },
+            a,
+          )
+        );
+      }
+      (0, n.Cg)([h.o], _.prototype, "OnTabClick", null);
+      const b = (0, s.PA)(function (t) {
+          const { tab: e, OnTabClick: a, classNameTab: n, active: s } = t;
+          return e.hidden
+            ? null
+            : o.createElement(
+                m.e7,
+                {
+                  condition: Boolean(e.statusToolTip || e.tooltip),
+                  wrap: (t) =>
+                    o.createElement(
+                      g.he,
+                      { toolTipContent: e.statusToolTip || e.tooltip },
+                      t,
+                    ),
+                },
+                o.createElement(
+                  d.Z,
+                  {
+                    className: (0, i.A)(
+                      u().GraphicalAssetsTab,
+                      s && u().Active,
+                      s && "ActiveTab",
+                      n,
+                    ),
+                    onActivate: () => a(e),
+                  },
+                  Boolean(e.vo_warning) &&
+                    o.createElement(
+                      g.he,
+                      { toolTipContent: e.vo_warning },
+                      o.createElement(
+                        "div",
+                        { className: u().VOWarning },
+                        (0, l.we)("#EventEditor_VOWarning"),
+                      ),
+                    ),
+                  e.status,
+                  e.name,
+                ),
+              );
+        }),
+        f = (0, r.y)(_);
     },
     48479: (t, e, a) => {
       "use strict";
       a.d(e, { AQ: () => m, qx: () => d });
       var n = a(71541),
-        s = a(61859),
-        o = a(12155),
+        o = a(61859),
+        s = a(12155),
         r = a(90626),
         i = a(52038),
         l = a(95695),
@@ -570,8 +584,8 @@
             title: e,
             tooltip: a,
             getMinimized: n,
-            toggleMinimized: s,
-            className: o,
+            toggleMinimized: o,
+            className: s,
             children: m,
           } = t,
           d = (0, u.q3)(() => n());
@@ -582,7 +596,7 @@
             "div",
             {
               className: (0, i.A)(
-                o,
+                s,
                 p.SectionTitleHeader,
                 p.required_title,
                 "SectionTitleHeader",
@@ -599,7 +613,7 @@
               e,
               Boolean(a) && r.createElement(g.o, { tooltip: a }),
             ),
-            r.createElement(h, { bIsMinimized: d, fnToggleMinimize: s }),
+            r.createElement(h, { bIsMinimized: d, fnToggleMinimize: o }),
           ),
           !d && r.createElement(c.tH, null, m),
         );
@@ -617,10 +631,10 @@
           i = e ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return r.createElement(
           n.$n,
-          { "data-tooltip-text": (0, s.we)(i), onClick: a },
+          { "data-tooltip-text": (0, o.we)(i), onClick: a },
           t.bIsMinimized
-            ? r.createElement(o.hz4, null)
-            : r.createElement(o.Xjb, null),
+            ? r.createElement(s.hz4, null)
+            : r.createElement(s.Xjb, null),
         );
       }
     },

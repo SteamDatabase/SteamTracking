@@ -2912,6 +2912,23 @@ img.package_header {
 	padding: 16px;
 	margin: 0px auto 16px auto;
 	font-size: 14px;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.mature_content_notice > a {
+	flex: 0;
+	align-self: center;
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 500px)
+{
+
+	html.responsive .mature_content_notice {
+		flex-direction: column;
+	}
 }
 
 .agegate_text_container .btn_next_in_queue {

@@ -6299,6 +6299,7 @@
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
           Games: () => "games",
+          ItemCollection: () => "itemcollection",
         },
         ja = {
           Info: () => "/info",

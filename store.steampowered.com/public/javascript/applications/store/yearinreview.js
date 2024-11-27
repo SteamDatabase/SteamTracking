@@ -673,9 +673,9 @@
     },
     94595: (e) => {
       e.exports = {
-        new_games_color: "#d67070",
-        used_games_color: "#683db4",
-        old_games_color: "#3898b0",
+        new_games_color: "#34f3fe",
+        used_games_color: "#cc6670",
+        old_games_color: "#f4d760",
         pie_windows: "#d67070",
         pie_linux: "#683db4",
         pie_deck: "#3898b0",
@@ -1117,18 +1117,21 @@
     },
     38135: (e, t, a) => {
       "use strict";
-      a.d(t, { V: () => p });
-      var n = a(90626),
-        r = a(92757),
-        s = a(52038),
-        l = a(61859),
-        i = a(95034),
-        o = a(1990),
-        m = a.n(o),
-        c = a(32754),
-        d = a(51272),
-        u = a(76217);
-      class _ extends n.Component {
+      a.d(t, { V: () => E });
+      var n = a(34629),
+        r = a(90626),
+        s = a(75844),
+        l = a(92757),
+        i = a(52038),
+        o = a(61859),
+        m = a(95034),
+        c = a(1990),
+        d = a.n(c),
+        u = a(32754),
+        _ = a(51272),
+        p = a(76217),
+        g = a(6419);
+      class h extends r.Component {
         state = { activeTab: "" };
         componentDidMount() {
           this.props.startingTab
@@ -1136,103 +1139,98 @@
             : !this.props.bDisableRouting &&
               this.props.location &&
               this.setState({
-                activeTab: (0, i.f3)(this.props.location, "tab"),
+                activeTab: (0, m.f3)(this.props.location, "tab"),
               });
         }
         componentDidUpdate(e) {
           !this.props.bDisableRouting &&
             this.props.location &&
             this.props.location.key !== e.location.key &&
-            this.setState({ activeTab: (0, i.f3)(this.props.location, "tab") });
+            this.setState({ activeTab: (0, m.f3)(this.props.location, "tab") });
         }
         OnTabClick(e) {
           this.setState({ activeTab: e.key }),
             !this.props.bDisableRouting &&
               this.props.history &&
-              (0, i.Bm)(this.props.history, "tab", e.key),
+              (0, m.Bm)(this.props.history, "tab", e.key),
             e.onClick && e.onClick(e);
         }
         render() {
           const e =
             this.props.tabs.find((e) => e.key === this.state.activeTab) ||
             this.props.tabs[0];
-          return n.createElement(
-            n.Fragment,
+          return r.createElement(
+            r.Fragment,
             null,
-            n.createElement(
-              u.Z,
+            r.createElement(
+              p.Z,
               {
-                className: (0, s.A)(
-                  m().GraphicalAssetsTabs,
+                className: (0, i.A)(
+                  d().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
               },
-              this.props.tabs.map((t) => {
-                if (!t.hidden) {
-                  let a = "";
-                  return (
-                    "success" === t.statusType
-                      ? (a = m().StatusSuccess)
-                      : "danger" === t.statusType
-                        ? (a = m().StatusDanger)
-                        : "caution" === t.statusType && (a = m().StatusCaution),
-                    n.createElement(
-                      d.e7,
-                      {
-                        key: t.key,
-                        condition: Boolean(t.statusToolTip || t.tooltip),
-                        wrap: (e) =>
-                          n.createElement(
-                            c.he,
-                            { toolTipContent: t.statusToolTip || t.tooltip },
-                            e,
-                          ),
-                      },
-                      n.createElement(
-                        u.Z,
-                        {
-                          key: t.key,
-                          className: (0, s.A)(
-                            `${m().GraphicalAssetsTab} ${t.key === e.key ? ((0, s.A))(m().Active, "ActiveTab") : ""}`,
-                            this.props.classNameTab,
-                          ),
-                          onActivate: () => this.OnTabClick(t),
-                        },
-                        Boolean(t.vo_warning) &&
-                          n.createElement(
-                            c.he,
-                            { toolTipContent: t.vo_warning },
-                            n.createElement(
-                              "div",
-                              { className: m().VOWarning },
-                              (0, l.we)("#EventEditor_VOWarning"),
-                            ),
-                          ),
-                        Boolean(t.status) &&
-                          n.createElement(
-                            "div",
-                            {
-                              className: (0, s.A)(m().GraphicalAssetStatus, a),
-                            },
-                            t.status,
-                          ),
-                        t.name,
-                      ),
-                    )
-                  );
-                }
-                return null;
-              }),
+              this.props.tabs.map((t) =>
+                r.createElement(v, {
+                  key: t.key,
+                  tab: t,
+                  OnTabClick: this.OnTabClick,
+                  classNameTab: this.props.classNameTab,
+                  active: t.key === e.key,
+                }),
+              ),
             ),
-            n.createElement(
-              u.Z,
+            r.createElement(
+              p.Z,
               null,
-              e && n.createElement(u.Z, null, e.contents),
+              e && r.createElement(p.Z, null, e.contents),
             ),
           );
         }
       }
-      const p = (0, r.y)(_);
+      (0, n.Cg)([g.o], h.prototype, "OnTabClick", null);
+      const v = (0, s.PA)(function (e) {
+          const { tab: t, OnTabClick: a, classNameTab: n, active: s } = e;
+          return t.hidden
+            ? null
+            : r.createElement(
+                _.e7,
+                {
+                  condition: Boolean(t.statusToolTip || t.tooltip),
+                  wrap: (e) =>
+                    r.createElement(
+                      u.he,
+                      { toolTipContent: t.statusToolTip || t.tooltip },
+                      e,
+                    ),
+                },
+                r.createElement(
+                  p.Z,
+                  {
+                    className: (0, i.A)(
+                      d().GraphicalAssetsTab,
+                      s && d().Active,
+                      s && "ActiveTab",
+                      n,
+                    ),
+                    onActivate: () => a(t),
+                  },
+                  Boolean(t.vo_warning) &&
+                    r.createElement(
+                      u.he,
+                      { toolTipContent: t.vo_warning },
+                      r.createElement(
+                        "div",
+                        { className: d().VOWarning },
+                        (0, o.we)("#EventEditor_VOWarning"),
+                      ),
+                    ),
+                  t.status,
+                  t.name,
+                ),
+              );
+        }),
+        E = (0, l.y)(h);
     },
     30700: (e, t, a) => {
       "use strict";
@@ -3451,7 +3449,7 @@
                       style:
                         "NewActive" === o
                           ? { opacity: "1" }
-                          : { opacity: "0.25" },
+                          : { opacity: "0.75" },
                     }),
                     n.createElement($e.f, {
                       onMouseEnter: () => m("UsedActive"),
@@ -3464,7 +3462,7 @@
                       style:
                         "UsedActive" === o
                           ? { opacity: "1" }
-                          : { opacity: "0.25" },
+                          : { opacity: "0.75" },
                     }),
                     n.createElement($e.f, {
                       onMouseEnter: () => m("OldActive"),
@@ -3477,7 +3475,7 @@
                       style:
                         "OldActive" === o
                           ? { opacity: "1" }
-                          : { opacity: "0.25" },
+                          : { opacity: "0.75" },
                     }),
                   ),
                 ),

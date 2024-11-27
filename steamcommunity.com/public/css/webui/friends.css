@@ -2639,7 +2639,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  color: #b8bcbf;
+  color: #dcdedf;
+}
+.dropdownlabel_DropDownLabelTitle_3g-QH.DesktopUI,
+.DesktopUI .dropdownlabel_DropDownLabelTitle_3g-QH {
+  font-size: 14px;
+  line-height: 18px;
 }
 .gpfocus .dropdownlabel_DropDownLabelTitle_3g-QH {
   color: #0e141b;

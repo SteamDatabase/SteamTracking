@@ -1763,7 +1763,12 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  color: #b8bcbf;
+  color: #dcdedf;
+}
+._3g-QHB82IGz91Hsk1Hw4lh.DesktopUI,
+.DesktopUI ._3g-QHB82IGz91Hsk1Hw4lh {
+  font-size: 14px;
+  line-height: 18px;
 }
 .gpfocus ._3g-QHB82IGz91Hsk1Hw4lh {
   color: #0e141b;
@@ -9148,6 +9153,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   ._3j4dI1yA7cRfCvK8h406OB {
   background: #344654;
   padding: 0 12px;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
 }
 ._2s-O5T3qJJYR2AUq4b9jIN ._2_KY_e11FV0ftXR2_7TMmP {
   height: 100%;
@@ -9342,9 +9349,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   padding: 5px 8px;
   align-items: center;
   display: flex;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
   white-space: nowrap;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .BasicUI ._3j4dI1yA7cRfCvK8h406OB {
   padding: unset;
@@ -9460,6 +9467,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 ._1dKR2IPNQSHs1MAIXBvt_R a {
   text-decoration: none;
+  position: relative;
+  z-index: 3;
 }
 .BasicUI ._1dKR2IPNQSHs1MAIXBvt_R a {
   box-shadow: var(--gpShadow-Medium);

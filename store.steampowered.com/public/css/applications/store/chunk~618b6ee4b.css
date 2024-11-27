@@ -920,6 +920,13 @@
 ._1A_Lw0CFJIQtfGHmTkIpEy {
   height: auto;
 }
+._3xTWQPntvW4ZC3wLrEh4Tk {
+  background-color: hotpink;
+}
+._3aOQ0Sjc2wuN64fXK8NrTX {
+  font-size: 16px;
+  color: #fff;
+}
 ._3Kh2xkNOxK9yAzjUL6Ivgx {
   width: 100%;
 }
@@ -5629,7 +5636,6 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   height: 50px;
   opacity: 0.7;
   transition: opacity .2s ease-in-out, filter .2s ease-in-out;
-  fill: #fff;
 }
 @media screen and (max-width: 700px) {
   ._21MFgj1haszC9qIPTg-xWD svg {

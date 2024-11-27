@@ -1641,7 +1641,7 @@
         ue = a(51272),
         de = a(84811),
         fe = a(22797),
-        ve = a(1977),
+        ve = a(97907),
         he = a(61855);
       const Ae = 1422450;
       function ge(e) {
@@ -1979,7 +1979,7 @@
             a.e(7368),
             a.e(8567),
             a.e(7072),
-          ]).then(a.bind(a, 42048)),
+          ]).then(a.bind(a, 79816)),
         ),
         Be = {
           CookieSettings: () => "/cookiepreferences",

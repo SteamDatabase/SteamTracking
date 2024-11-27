@@ -179,6 +179,27 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   text-shadow: 2px 2px 4px #000;
   pointer-events: none;
 }
+._1TEbObXeFqUF-IRZKx0Qg5 {
+  position: relative;
+  display: inline-block;
+}
+._1TEbObXeFqUF-IRZKx0Qg5 ._1O2yIhwy4xQA69icI2lXEH {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: calc(100% - 16px);
+  min-width: fit-content;
+  opacity: 1;
+  transition: opacity .25s;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+}
+._1TEbObXeFqUF-IRZKx0Qg5:not(._3wRq55uuel7mw7DG3Vys63)
+  ._1O2yIhwy4xQA69icI2lXEH {
+  opacity: 0;
+  pointer-events: none;
+}
 .f2X3toOiE6SBBj8gkgwsN {
   position: relative;
   display: inline-block;

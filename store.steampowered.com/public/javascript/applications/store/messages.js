@@ -3980,7 +3980,7 @@
             return {};
           }, [s.search]);
         return (
-          i.useLayoutEffect(() => {
+          i.useEffect(() => {
             (0, n.Tc)("marketingmessage_config", "application_config");
             r({});
           }, [m]),
@@ -4226,7 +4226,7 @@
           const [e, t] = i.useState(null),
             r = (0, E.TR)();
           return (
-            i.useLayoutEffect(() => {
+            i.useEffect(() => {
               e ||
                 t(
                   (function (e) {

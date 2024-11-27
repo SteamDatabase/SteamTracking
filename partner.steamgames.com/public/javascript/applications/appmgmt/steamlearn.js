@@ -2658,6 +2658,11 @@
                     br: S.qM.readFloat,
                     bw: S.gp.writeFloat,
                   },
+                  uses_weight_mask: {
+                    n: 8,
+                    br: S.qM.readBool,
+                    bw: S.gp.writeBool,
+                  },
                 },
               }),
             $.sm_m

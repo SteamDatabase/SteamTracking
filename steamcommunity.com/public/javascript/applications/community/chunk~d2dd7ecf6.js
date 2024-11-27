@@ -661,7 +661,7 @@
             s.createElement(
               "div",
               { className: E().ImagesContainer },
-              s.createElement(d.G, {
+              s.createElement(d.GF, {
                 clanAccountID: a.GetAccountID(),
                 fileNameSearch: this.state.filenameSearch,
                 imageInsertCallBack: this.props.imageInsertCallBack,
@@ -852,7 +852,7 @@
         s = a(90626),
         c = a(57876),
         m = a(76217),
-        g = a(1977),
+        g = a(89350),
         p = a(70078),
         d = a(17720),
         u = a(71138),
@@ -1671,7 +1671,7 @@
               I
                 ? [
                     [
-                      l.createElement(u.H, {
+                      l.createElement(u.Hd, {
                         key: "clanartworkpicker",
                         clanSteamID: t,
                         fnSetImageURL: _,
@@ -1701,7 +1701,7 @@
     },
     2805: (e, t, a) => {
       "use strict";
-      a.d(t, { G: () => f, H: () => y });
+      a.d(t, { GF: () => f, Hd: () => y, _6: () => b });
       var n = a(34629),
         l = a(90626),
         r = a(81047),
@@ -2012,21 +2012,15 @@
         }
       }
       function b(e) {
-        const {
-            clanSteamID: t,
-            closeModal: a,
-            OnClanImageSelected: n,
-            fnSetImageURL: r,
-            rgRealmList: o,
-          } = e,
-          i = (0, l.useCallback)(
+        const { clanSteamID: t, closeModal: a, OnClanImageSelected: n } = e,
+          r = (0, l.useCallback)(
             (e, t) => {
               n(e, t), a();
             },
             [n, a],
           ),
-          s = (0, l.useMemo)(() => [], []),
-          [c, m] = (0, l.useState)(null);
+          o = (0, l.useMemo)(() => [], []),
+          [i, s] = (0, l.useState)(null);
         return l.createElement(
           d.o0,
           {
@@ -2036,12 +2030,12 @@
             onOK: a,
             onCancel: a,
           },
-          l.createElement(k.g, { fnSetImageSearch: m }),
+          l.createElement(k.g, { fnSetImageSearch: s }),
           l.createElement(f, {
             clanAccountID: t.GetAccountID(),
-            fileNameSearch: c,
-            imageInsertCallBack: i,
-            insertActions: s,
+            fileNameSearch: i,
+            imageInsertCallBack: r,
+            insertActions: o,
             InternalOpenLocalizeImageGroup: null,
           }),
         );
@@ -2077,12 +2071,7 @@
             type: "button",
             onClick: (e) => {
               (0, u.pg)(
-                l.createElement(b, {
-                  fnSetImageURL: a,
-                  clanSteamID: t,
-                  OnClanImageSelected: n,
-                  rgRealmList: r,
-                }),
+                l.createElement(b, { clanSteamID: t, OnClanImageSelected: n }),
                 (0, h.uX)(e),
               );
             },

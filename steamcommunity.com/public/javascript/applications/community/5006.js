@@ -36,7 +36,7 @@
         l = n(61859),
         c = n(22145),
         i = n(59722);
-      function d(e) {
+      const d = s.memo(function (e) {
         const {
             linkMarkType: t,
             onURLPasted: n,
@@ -115,7 +115,7 @@
             (0, l.we)("#UserGameNotes_ClickToOpenLink"),
           ),
         );
-      }
+      });
       function u(e) {
         const { top: t, left: n, children: o } = e,
           [r, a] = s.useState(0),
@@ -148,13 +148,13 @@
         get pm_to_bbcode_config() {
           return this.m_PMToBBCodeConfig;
         }
-        constructor(e) {
+        constructor(e, t) {
           (this.m_mapBBCodeDictionary = new Map()),
             (this.m_PMToBBCodeConfig = {
               mapNodes: new Map(),
               mapMarks: new Map(),
             });
-          const t = {
+          const n = {
               doc: { content: "block+" },
               text: { group: "inline" },
               hard_break: {
@@ -166,19 +166,21 @@
                 toDOM: () => ["br"],
               },
             },
-            n = new Map(),
-            r = new Map();
-          for (const o in e.nodes) {
-            const { bbCode: r, ...a } = e.nodes[o];
-            (t[o] = a), n.set(o, r);
+            r = new Map(),
+            s = new Map(),
+            l = t ? new Set(t) : void 0;
+          for (const t in e.nodes) {
+            const { bbCode: o, ...s } = e.nodes[t],
+              c = a(o, l);
+            c && ((n[t] = s), r.set(t, c));
           }
-          const a = {};
+          const c = {};
           for (const t in e.marks) {
             const { bbCode: n, ...o } = e.marks[t];
-            (a[t] = o), r.set(t, n);
+            (l && !l.has(n.tag)) || ((c[t] = o), s.set(t, n));
           }
-          (this.m_ProseMirrorSchema = new o.Sj({ nodes: t, marks: a })),
-            n.forEach((t, n) => {
+          (this.m_ProseMirrorSchema = new o.Sj({ nodes: n, marks: c })),
+            r.forEach((t, n) => {
               var o;
               const r = this.m_ProseMirrorSchema.nodes[n],
                 a = e.nodes[n],
@@ -217,7 +219,7 @@
                 AttrsToBBArgs: i,
               });
             }),
-            r.forEach((e, t) => {
+            s.forEach((e, t) => {
               const n = this.m_ProseMirrorSchema.marks[t],
                 {
                   tag: o,
@@ -240,6 +242,16 @@
                 });
             });
         }
+      }
+      function a(e, t) {
+        if (t) {
+          if (Array.isArray(e)) {
+            const n = e.filter((e) => t.has(e.tag));
+            return n.length > 0 ? n : void 0;
+          }
+          return t.has(e.tag) ? e : void 0;
+        }
+        return e;
       }
     },
     22145: (e, t, n) => {
