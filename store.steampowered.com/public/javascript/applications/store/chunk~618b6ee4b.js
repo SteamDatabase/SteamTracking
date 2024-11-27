@@ -5603,13 +5603,13 @@
     30294: (e, t, a) => {
       "use strict";
       a.d(t, {
-        E: () => w,
-        EB: () => I,
-        h_: () => G,
-        jR: () => C,
-        sk: () => D,
-        ue: () => y,
-        yO: () => E,
+        E: () => G,
+        EB: () => T,
+        h_: () => P,
+        jR: () => D,
+        sk: () => B,
+        ue: () => w,
+        yO: () => I,
       });
       var n = a(75844),
         r = a(90626),
@@ -5627,18 +5627,12 @@
         h = a(52038),
         S = a(61859),
         f = a(78327),
-        v = a(46745);
-      function y(e, t) {
-        return (
-          S.NT.GetWithFallback(e.localized_label, t) ||
-          ("#Sale_default_label" === e.default_label
-            ? ""
-            : (0, S.we)(e.default_label))
-        );
-      }
-      function E(e, t, a, n, s, m) {
-        if (!e) return "";
-        const u = (function (e, t, a) {
+        v = a(46745),
+        y = a(91254),
+        E = a(38390),
+        b = a(10224);
+      function C(e, t, a) {
+        const n = (function (e, t, a) {
           if ("items" === e.section_type)
             switch (e.smart_section_type) {
               case "wishlist":
@@ -5650,7 +5644,7 @@
                 return "#Sale_TopPlayedOnDeckSection";
               case "personalized_carousel":
                 if (1 == a || 3 == a) {
-                  const { nSectionIndex: a, nNumSections: n } = w(e, t);
+                  const { nSectionIndex: a, nNumSections: n } = G(e, t);
                   return (0, S.we)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
                     a + 1,
@@ -5659,7 +5653,7 @@
                 }
                 const n = c.Z.Get().GetTagNameForSaleSection(e, t);
                 if (!n && 2 == a) {
-                  const { nSectionIndex: a, nNumSections: n } = w(e, t);
+                  const { nSectionIndex: a, nNumSections: n } = G(e, t);
                   return (0, S.we)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
                     a + 1,
@@ -5687,24 +5681,48 @@
                 ? "#DiscoveryQueue_Title"
                 : "sale_events" === e.section_type
                   ? "#Sale_SaleEvent_Section"
-                  : null;
-        })(e, t, s);
-        if (null !== u) return u && u.startsWith("#") ? (0, S.we)(u) : u;
+                  : "crosspromotesalepage" === e.section_type && 1 == a
+                    ? "#Sale_CrossPromoSale_DefaultSectionTitle"
+                    : null;
+        })(e, t, a);
+        return null !== n ? (n && n.startsWith("#") ? (0, S.we)(n) : n) : null;
+      }
+      function w(e, t) {
+        return (
+          S.NT.GetWithFallback(e.localized_label, t) ||
+          ("#Sale_default_label" === e.default_label
+            ? ""
+            : (0, S.we)(e.default_label))
+        );
+      }
+      function I(e, t, a, n, s, o) {
+        if (!e) return "";
+        const l = C(e, t, s);
+        if (null !== l) return l;
+        if ("crosspromotesalepage" === e.section_type) {
+          const t = y.O3.GetClanEventModel(e.sale_page_cross_promo_event_gid);
+          return t
+            ? (0, S.we)(
+                "#Sale_CrossPromoSale_SectionTitle",
+                t.GetNameWithFallback(a),
+              )
+            : (0, S.we)("#Sale_CrossPromoSale_DefaultSectionTitle");
+        }
         if (3 == s && Boolean(e.internal_section_title))
           return e.internal_section_title;
-        const d =
+        const c =
             S.NT.GetWithFallback(e.localized_label, a) ||
             ("#Sale_default_label" === e.default_label
               ? ""
               : (0, S.we)(e.default_label)),
-          _ = S.NT.GetWithFallback(e.localized_label_image, a);
-        if (!m && _) {
-          const e = `${(0, i.mJ)()}${n}/${_}`;
-          return r.createElement("img", { loading: "lazy", src: e, alt: d });
+          m = S.NT.GetWithFallback(e.localized_label_image, a);
+        if (!o && m) {
+          const e = `${(0, i.mJ)()}${n}/${m}`;
+          return r.createElement("img", { loading: "lazy", src: e, alt: c });
         }
-        return d;
+        return c;
       }
-      function b(e, t, a) {
+      function A(e, t, a) {
         const n = (function (e, t) {
           if (
             (0, s.ye)(e.section_type) &&
@@ -5725,7 +5743,7 @@
             : "")
         );
       }
-      const C = (0, n.PA)((e) => {
+      const D = (0, n.PA)((e) => {
         const {
             section: t,
             event: a,
@@ -5735,18 +5753,32 @@
             subtitle: l,
           } = e,
           c = (0, m.yD)(),
-          u = i || E(t, a, n, a.clanSteamID.GetAccountID(), c.eLocation);
-        if (!u) return null;
-        const y = l || b(t, a, n);
-        let C = r.createElement(
+          u = (0, b.z)(),
+          { eventModel: y } = (0, E.B9)(
+            t.sale_page_cross_promo_clan_account_id,
+            t.sale_page_cross_promo_event_gid,
+            !1,
+          ),
+          C = i || I(t, a, n, a.clanSteamID.GetAccountID(), c.eLocation);
+        if (!C) return null;
+        const w = l || A(t, a, n);
+        let D = r.createElement(
             "div",
             {
               className: (0, h.A)(d().SaleSectionHeader, "SaleSectionHeader"),
-              style: I(t, a, n),
+              style: T(t, a, n),
             },
-            u,
+            y?.BHasSomeImage("product_banner")
+              ? r.createElement("img", {
+                  src: y.GetImageURLWithFallback(
+                    u ? "product_mobile_banner" : "product_banner",
+                    n,
+                  ),
+                  alt: C,
+                })
+              : C,
           ),
-          w = r.createElement(
+          G = r.createElement(
             "div",
             {
               className: (0, h.A)(
@@ -5754,23 +5786,24 @@
                 d().SaleSectionSubtitle,
                 "SaleSectionSubtitle",
               ),
-              style: A(t, a, n),
+              style: k(t, a, n),
             },
-            y,
+            w,
           );
-        const D =
+        const B =
           e.link ||
           (function (e) {
             return (0, s.ye)(e.section_type) &&
               "deck_topplayed" === e.smart_section_type
               ? f.TS.STORE_BASE_URL + "charts/steamdecktopplayed"
               : e.label_link;
-          })(t);
-        let G = null;
+          })(t) ||
+          y?.GetSaleURL();
+        let P = null;
         return (
-          D &&
-            ((C = r.createElement(p.q, { url: D }, C)),
-            (G = (function (e, t) {
+          B?.length > 0 &&
+            ((D = r.createElement(p.q, { url: B }, D)),
+            (P = (function (e, t) {
               let a = null;
               if ("browseall" === e.label_link_style) {
                 const e = (0, S.we)("#Sale_SectionLink_BrowseAll");
@@ -5800,15 +5833,15 @@
                 );
               }
               return a;
-            })(t, D))),
+            })(t, B))),
           r.createElement(
             "div",
             { className: (0, h.A)(v.SectionLabelCtn, "SaleSectionLabelCtn") },
             r.createElement(
               "div",
               { className: v.SectionTitleInnerCtn },
-              C,
-              Boolean(y) && w,
+              D,
+              Boolean(w) && G,
             ),
             r.createElement(
               "div",
@@ -5831,12 +5864,12 @@
                     ),
                   ),
                 ),
-              G,
+              P,
             ),
           )
         );
       });
-      function w(e, t) {
+      function G(e, t) {
         const a = t
           .GetSaleSections()
           .filter(
@@ -5848,9 +5881,9 @@
         const n = a.findIndex((t) => t.unique_id == e.unique_id);
         return { nNumSections: a.length, nSectionIndex: n };
       }
-      function I(e, t, a) {
+      function T(e, t, a) {
         return {
-          fontFamily: D(t.jsondata.sale_font, a),
+          fontFamily: B(t.jsondata.sale_font, a),
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -5859,9 +5892,9 @@
           color: e.label_color,
         };
       }
-      function A(e, t, a) {
+      function k(e, t, a) {
         return {
-          fontFamily: D(t.jsondata.sale_font, a),
+          fontFamily: B(t.jsondata.sale_font, a),
           fontWeight: 300,
           fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
           letterSpacing: 0,
@@ -5873,7 +5906,7 @@
           opacity: "50%",
         };
       }
-      function D(e, t) {
+      function B(e, t) {
         return (
           (e = e || ""),
           12 === t
@@ -5898,8 +5931,8 @@
                         : e
         );
       }
-      function G(e, t, a, n, r) {
-        const s = E(t, n, a, n.clanSteamID.GetAccountID(), e);
+      function P(e, t, a, n, r) {
+        const s = I(t, n, a, n.clanSteamID.GetAccountID(), e);
         if (s) return s;
         let o = (0, S.we)("#Sale_Section_Header", r + 1);
         const i = "#Sale_Section_Type_" + (t?.section_type || "unknowntype"),
@@ -16743,12 +16776,12 @@
       var zs = a(23809),
         js = a(4869),
         Qs = a(26182),
-        Ks = a(92298);
+        Ks = a(68950);
       function Ys(e) {
         const { controllerCategory: t, setControllerCategory: a } = e,
           r = (0, v.Qn)(),
           { data: s } = (function () {
-            (0, zs.KV)(), (0, Ks.L)();
+            (0, zs.KV)(), (0, Ks.LH)();
             return (0, at.I)({
               queryKey: ["GetControllersUsed"],
               queryFn: async () => {

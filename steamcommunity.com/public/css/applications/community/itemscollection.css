@@ -489,10 +489,13 @@
   background-color: #1d2e47;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 }
+body.item_collection_page {
+  background-color: #000;
+}
 ._1E99FsAAFaUjsZvZ4P5Vzl {
   display: flex;
   flex-direction: row;
-  padding: 20px;
+  padding: 30px;
   margin-top: 100px;
 }
 ._1E99FsAAFaUjsZvZ4P5Vzl img {
@@ -510,15 +513,15 @@
   }
 }
 ._1E99FsAAFaUjsZvZ4P5Vzl .o1m9BbS1X5-LqjZ8B1v64 {
-  font-size: 30px;
-  line-height: 33px;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.2;
   color: #fff;
   font-weight: 500;
   margin-right: 8px;
 }
 ._1E99FsAAFaUjsZvZ4P5Vzl ._1qzjiDNpGZYKIvwBx1el1t {
-  font-size: 30px;
-  line-height: 33px;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 200;
 }
@@ -637,10 +640,10 @@
   gap: 20px;
   margin-top: 20px;
 }
-@media screen and (max-width: 851px) {
+@media screen and (max-width: 499px) {
   ._1QrzyWO-Wl--rxSjTbLz5p {
-    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(55px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(55px, 1fr));
     gap: 10px;
   }
 }
@@ -654,7 +657,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-@media screen and (max-width: 851px) {
+@media screen and (max-width: 499px) {
   ._15b3bAwBMv-0X3I6uaac6o {
     grid-column: span 2;
     grid-row: span 2;
@@ -678,7 +681,7 @@
   padding: 16px;
   box-sizing: border-box;
 }
-@media screen and (max-width: 851px) {
+@media screen and (max-width: 499px) {
   ._1b-IbdTr9R3ZKUWl3WIZj5 {
     width: 55px;
     height: 55px;
@@ -692,4 +695,29 @@
 ._3n2Ur4vZ1ojk_YPqd7iZfq {
   mix-blend-mode: luminosity;
   opacity: 0.5;
+}
+.zZIkdIHeeChogTvItWGO2 {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.zZIkdIHeeChogTvItWGO2 video {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 940px) {
+  .zZIkdIHeeChogTvItWGO2 video {
+    min-width: 940px;
+    right: 0;
+    left: unset;
+    transform: unset;
+  }
 }

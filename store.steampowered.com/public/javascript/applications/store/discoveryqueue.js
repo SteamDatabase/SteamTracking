@@ -1632,13 +1632,10 @@
                     ),
                     onSecondaryActionDescription: (0, d.we)("#Button_Close"),
                   },
-                  a.createElement("img", {
-                    className: g().WidgetCapsule,
-                    src: E?.GetAssets().GetSmallCapsuleURL(),
-                  }),
                   a.createElement(
                     "div",
                     { onClick: y, className: g().WidgetText },
+                    a.createElement(m.mcU, null),
                     (0, d.we)("#DiscoveryQueue_ResumeWizard"),
                     w?.length > 0 && ": " + w,
                   ),

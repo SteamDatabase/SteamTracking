@@ -50259,15 +50259,17 @@
     },
     627: (e, t, a) => {
       "use strict";
-      a.d(t, { K: () => d, O: () => m });
+      a.d(t, { K: () => p, O: () => u });
       var n = a(32703),
         r = a(90626),
         i = a(45737),
         s = a.n(i),
         l = a(71541),
         o = a(36431),
-        c = a(30470);
-      function m(e) {
+        c = a(30470),
+        m = a(65946),
+        d = a(56186);
+      function u(e) {
         const { oEditableMessage: t, promotionPlanID: a } = e;
         return r.createElement(
           "div",
@@ -50276,7 +50278,7 @@
             "div",
             { className: s().SectionCtn },
             r.createElement(l.JU, null, "Asset Progress"),
-            r.createElement(d, { oEditableMessage: t }),
+            r.createElement(p, { oEditableMessage: t }),
           ),
           r.createElement(
             "div",
@@ -50306,7 +50308,7 @@
           ),
         );
       }
-      function d(e) {
+      function p(e) {
         const { oEditableMessage: t } = e,
           {
             bMinimumAssetsSetup: a,
@@ -50314,14 +50316,20 @@
             nCompleteAssetRequired: s,
             bMatchingVideoAssets: l,
             strCustomTemplateType: c,
-            nPosterCount: m,
-            nSubtitleCount: d,
-          } = (0, n.M)(t?.GetGID());
+            nPosterCount: u,
+            nSubtitleCount: p,
+          } = (0, n.M)(t?.GetGID()),
+          _ = (0, m.q3)(() => (0, d.$I)(t?.GetCustomTemplate() || ""));
         return t
           ? r.createElement(
               r.Fragment,
               null,
-              r.createElement(o._, { bDone: a, name: `Assets (${i}/${s})` }),
+              _
+                ? r.createElement("div", null, "No Asset Required")
+                : r.createElement(o._, {
+                    bDone: a,
+                    name: `Assets (${i}/${s})`,
+                  }),
               !c &&
                 void 0 !== l &&
                 r.createElement(o._, {
@@ -50341,12 +50349,12 @@
                       "Requries both .webm and .mp4 for featuring to work",
                   }),
                   r.createElement(o._, {
-                    bDone: m > 0,
-                    name: `Poster Assets (${m}/${s})`,
+                    bDone: u > 0,
+                    name: `Poster Assets (${u}/${s})`,
                   }),
                   r.createElement(o._, {
-                    bDone: d > 0,
-                    name: `Subtitles (${d}/${s})`,
+                    bDone: p > 0,
+                    name: `Subtitles (${p}/${s})`,
                   }),
                 ),
             )
@@ -50355,7 +50363,7 @@
     },
     95896: (e, t, a) => {
       "use strict";
-      a.d(t, { NM: () => P, rR: () => k });
+      a.d(t, { NM: () => N, rR: () => R });
       var n = a(2160),
         r = a(22837),
         i = a(34288),
@@ -50363,53 +50371,56 @@
         l = a(90626),
         o = a(73744),
         c = a(56004),
-        m = a(45737),
-        d = a.n(m),
-        u = a(32625),
-        p = a(42508),
-        _ = a(71541),
-        g = a(84811),
-        h = a(56330),
-        E = a(95695),
-        S = a.n(E),
-        y = a(91693),
-        v = a(9154),
-        f = a(738),
-        b = a(22797),
-        w = a(44332),
-        D = a(52038),
-        C = a(56011),
-        I = a(61859),
-        B = a(30470),
-        T = a(627),
-        A = a(7706),
-        M = a(98076);
-      function k(e) {
+        m = a(56186),
+        d = a(45737),
+        u = a.n(d),
+        p = a(32625),
+        _ = a(42508),
+        g = a(71541),
+        h = a(84811),
+        E = a(56330),
+        S = a(95695),
+        y = a.n(S),
+        v = a(91693),
+        f = a(9154),
+        b = a(738),
+        w = a(22797),
+        D = a(44332),
+        C = a(52038),
+        I = a(56011),
+        B = a(61859),
+        T = a(30470),
+        A = a(627),
+        M = a(7706),
+        k = a(98076);
+      function R(e) {
         const { bAssetUploadOnly: t, promotionPlanID: a, id: n } = e,
-          r = (0, i.zw)(n);
+          r = (0, i.zw)(n),
+          o = (0, s.q3)(() => (0, m.$I)(r?.GetCustomTemplate() || ""));
         return r
           ? l.createElement(
               "div",
               null,
               l.createElement(
                 "div",
-                { className: M.EditCtn },
+                { className: k.EditCtn },
                 l.createElement(
                   "div",
-                  { className: d().PageTitle },
+                  { className: u().PageTitle },
                   "Marketing Message - Asset Management",
                 ),
                 l.createElement("hr", null),
                 l.createElement(
                   "div",
-                  { className: d().ColumnCtn },
+                  { className: u().ColumnCtn },
                   l.createElement(
                     "div",
-                    { className: d().LeftCol },
-                    Boolean(!t) && l.createElement(R, { oEditableMessage: r }),
-                    l.createElement(F, { oEditableMessage: r }),
+                    { className: u().LeftCol },
+                    Boolean(!t) && l.createElement(P, { oEditableMessage: r }),
+                    Boolean(!o) && l.createElement(L, { oEditableMessage: r }),
+                    l.createElement(M.u, { oEditableMessage: r }),
                   ),
-                  l.createElement(T.O, {
+                  l.createElement(A.O, {
                     oEditableMessage: r,
                     bAssetUploadOnly: t,
                     promotionPlanID: a,
@@ -50418,21 +50429,21 @@
                 l.createElement("br", null),
               ),
             )
-          : l.createElement(b.t, {
+          : l.createElement(w.t, {
               size: "medium",
               position: "center",
-              string: (0, I.we)("#Loading"),
+              string: (0, B.we)("#Loading"),
             });
       }
-      function R(e) {
+      function P(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, s.q3)(() => [t?.GetInternalAssetURL()]);
         return t
           ? l.createElement(
               "div",
-              { className: d().SectionCtn },
-              l.createElement(_.JU, null, "Internal Assets Location"),
-              l.createElement(_.pd, {
+              { className: u().SectionCtn },
+              l.createElement(g.JU, null, "Internal Assets Location"),
+              l.createElement(g.pd, {
                 type: "text",
                 value: a,
                 placeholder: "enter fileserver location",
@@ -50442,16 +50453,16 @@
               }),
               l.createElement("br", null),
               l.createElement("br", null),
-              l.createElement(N, { oEditableMessage: t }),
               l.createElement(G, { oEditableMessage: t }),
+              l.createElement(O, { oEditableMessage: t }),
             )
-          : l.createElement(b.t, {
+          : l.createElement(w.t, {
               size: "medium",
               position: "center",
-              string: (0, I.we)("#Loading"),
+              string: (0, B.we)("#Loading"),
             });
       }
-      function P(e, t) {
+      function N(e, t) {
         switch ((e.SetAnimatedAssetsEnabled(!1), e.ClearCustomTemplate(), t)) {
           default:
           case "mm_image":
@@ -50468,9 +50479,12 @@
           case "mm_partner_event_animated":
             e.SetCustomTemplate("partner_event"),
               e.SetAnimatedAssetsEnabled(!0);
+            break;
+          case "mm_year_in_review":
+            e.SetCustomTemplate(`replay${(new Date()).getFullYear()}`);
         }
       }
-      function N(e) {
+      function G(e) {
         const { oEditableMessage: t } = e,
           [a, n] = (0, l.useState)(
             (function (e) {
@@ -50481,6 +50495,7 @@
                 return e.BHasAnimatedAssets()
                   ? "mm_partner_event_animated"
                   : "mm_partner_event";
+              if ((0, m.$I)(e.GetCustomTemplate())) return "mm_year_in_review";
               return "mm_image";
             })(t),
           ),
@@ -50515,20 +50530,26 @@
                 tooltip:
                   "We use an event capsule wide display and surface the game for owners. We will show animated assets unless customer is in low bandwidth mode",
               },
+              {
+                label: "Year in Review",
+                data: "mm_year_in_review",
+                tooltip:
+                  "Only use this to setup the Year In Review marketingmessage",
+              },
             ],
             [],
           );
-        return l.createElement(_.m, {
+        return l.createElement(g.m, {
           label: "Marketing Message Display",
-          strClassName: (0, D.A)(S().DropDownScroll),
+          strClassName: (0, C.A)(y().DropDownScroll),
           rgOptions: r,
           selectedOption: a,
           onChange: (e) => {
-            P(t, e.data), n(e.data);
+            N(t, e.data), n(e.data);
           },
         });
       }
-      function G(e) {
+      function O(e) {
         const { oEditableMessage: t } = e,
           [a, n, r, i, o] = (0, s.q3)(() => [
             t.GetCustomTemplate(),
@@ -50568,47 +50589,47 @@
                 null,
                 "Make sure to also supply a poster image, this is shown while the video is loading and is important for places with slower internet. It can always be the first frame of the video. It will be replaced by the video once it loads.",
               ),
-              l.createElement(_.JU, null, "Optional Featured Video Settings"),
-              l.createElement(_.Yh, {
+              l.createElement(g.JU, null, "Optional Featured Video Settings"),
+              l.createElement(g.Yh, {
                 label: "Auto Play & Mute",
                 tooltip: "Note: This will force the video to be muted.",
                 checked: i,
                 onChange: (e) => t.SetFeaturedVideoAutoPlay(e),
               }),
-              l.createElement(_.Yh, {
+              l.createElement(g.Yh, {
                 label: "Loop & Hide Controls",
                 tooltip:
                   "Looping means you really want it to behave like an animated GIF and you want the controls to be hidden and video to keep looping.",
                 checked: o,
                 onChange: (e) => t.SetFeaturedVideoLooping(e),
               }),
-              l.createElement(_.pd, {
+              l.createElement(g.pd, {
                 type: "url",
                 label: "MP4 (1920x1080)",
                 value: n,
                 onChange: (e) =>
                   t.SetFeaturedVideoMP4Url(e.currentTarget.value),
               }),
-              l.createElement(O, {
+              l.createElement(F, {
                 strURL: n,
                 mimetype: "video/mp4",
                 extension: ".mp4",
               }),
-              l.createElement(_.pd, {
+              l.createElement(g.pd, {
                 type: "url",
                 label: "WebM (1920x1080)",
                 value: r,
                 onChange: (e) =>
                   t.SetFeaturedVideoWebMUrl(e.currentTarget.value),
               }),
-              l.createElement(O, {
+              l.createElement(F, {
                 strURL: r,
                 mimetype: "video/webm",
                 extension: ".webm",
               }),
             );
       }
-      function O(e) {
+      function F(e) {
         const { strURL: t, extension: a, mimetype: n } = e;
         if (!t || 0 == t.trim().length) return null;
         const r = !(0, i.BQ)(t, a);
@@ -50618,18 +50639,18 @@
           r
             ? l.createElement(
                 "div",
-                { className: h.ErrorStylesWithIcon },
+                { className: E.ErrorStylesWithIcon },
                 "Error: URL format is wrong or missing extensions (",
                 a,
                 ")",
               )
             : l.createElement(
-                _.$n,
+                g.$n,
                 {
                   onClick: (e) =>
-                    (0, f.pg)(
+                    (0, b.pg)(
                       l.createElement(
-                        v.o0,
+                        f.o0,
                         { strTitle: "Preview " + a, bAllowFullSize: !0 },
                         l.createElement(
                           "video",
@@ -50637,16 +50658,16 @@
                           l.createElement("source", { src: t, type: n }),
                         ),
                       ),
-                      (0, C.uX)(e),
+                      (0, I.uX)(e),
                     ),
                 },
                 "Preview",
               ),
         );
       }
-      function F(e) {
+      function L(e) {
         const { oEditableMessage: t } = e,
-          [a, r, i, m, p, _] = (0, s.q3)(() => [
+          [a, r, i, m, d, _] = (0, s.q3)(() => [
             t?.GetRealm(),
             t?.GetAssetsObject("ll_image"),
             t?.BHasAnimatedAssets(),
@@ -50654,7 +50675,7 @@
             t?.GetGID(),
             "partner_event" === t?.GetCustomTemplate(),
           ]),
-          E = Boolean(0 != a),
+          g = Boolean(0 != a),
           S = (0, l.useMemo)(() => {
             const e = [_ ? "capsule" : "localized_marketing_message"];
             return (
@@ -50664,7 +50685,7 @@
                       e.push("localized_partnerevent_webm"))
                     : (e.push("localized_marketingmessage_mp4"),
                       e.push("localized_marketingmessage_webm")),
-                  (0, w.w)(
+                  (0, D.w)(
                     !m,
                     "Animated Image and Featured video are mutually exclusive.",
                   ))
@@ -50681,9 +50702,9 @@
           ),
           v = (0, l.useCallback)(
             (e, a, n, r, i, s, l) => {
-              (0, w.w)(
+              (0, D.w)(
                 null != n && n >= 0 && n < 31,
-                "Unexpected value for elang: " + n + " " + p,
+                "Unexpected value for elang: " + n + " " + d,
               );
               let m = null;
               switch (r) {
@@ -50716,7 +50737,7 @@
               }
               m && t.SetTemplateAssetImagePath(e + (0, c.qR)(r), m, n);
             },
-            [t, p],
+            [t, d],
           );
         return t
           ? l.createElement(
@@ -50724,17 +50745,17 @@
               null,
               l.createElement(
                 "div",
-                { className: d().SectionCtn },
+                { className: u().SectionCtn },
                 l.createElement(
                   "h2",
                   { className: "inline" },
                   "MARKETING MESSAGE ASSETS",
                 ),
                 l.createElement("hr", null),
-                Boolean(E && (!r || !r.sc_schinese)) &&
+                Boolean(g && (!r || !r.sc_schinese)) &&
                   l.createElement(
                     "div",
-                    { className: h.WarningStylesWithIcon },
+                    { className: E.WarningStylesWithIcon },
                     l.createElement(
                       "div",
                       null,
@@ -50749,7 +50770,7 @@
                         "If we mention Steam, in Steam China has a specific name: ",
                         l.createElement("img", {
                           src:
-                            B.TS.STORE_CDN_URL +
+                            T.TS.STORE_CDN_URL +
                             "public/shared/images/header/logo_steamchina.svg?t=962016",
                           height: "40",
                         }),
@@ -50761,22 +50782,22 @@
                       ),
                     ),
                   ),
-                Boolean("dev" == B.TS.WEB_UNIVERSE) &&
+                Boolean("dev" == T.TS.WEB_UNIVERSE) &&
                   l.createElement(
                     "div",
-                    { className: h.WarningStylesWithIcon },
+                    { className: E.WarningStylesWithIcon },
                     "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
                   ),
-                l.createElement(u.U, {
+                l.createElement(p.U, {
                   rgSupportArtwork: S,
                   rgRealmList: y,
                   strOverrideDragAndDropText:
                     "Drag any asset here to upload (max 5MB)",
-                  strUploadAjaxURL: `${B.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
+                  strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
                   fnOnUploadSuccess: v,
                 }),
                 l.createElement(
-                  g.tH,
+                  h.tH,
                   null,
                   l.createElement("br", null),
                   l.createElement("h3", null, "Static Assets Only"),
@@ -50790,19 +50811,18 @@
                     ),
                     " (.jpg,.png,.gif,.webp)",
                   ),
-                  l.createElement(z, {
+                  l.createElement(x, {
                     oEditableMessage: t,
                     assetType: "ll_image",
                   }),
-                  l.createElement(L, { oEditableMessage: t }),
                   l.createElement(U, { oEditableMessage: t }),
+                  l.createElement(z, { oEditableMessage: t }),
                 ),
               ),
-              l.createElement(A.u, { oEditableMessage: t }),
             )
           : null;
       }
-      function L(e) {
+      function U(e) {
         const { oEditableMessage: t } = e,
           [a, n] = (0, s.q3)(() => [
             t.BHasAnimatedAssets(),
@@ -50821,7 +50841,7 @@
             "Animated Assets require both matching .webm/.mp4 files. Will fallback to static assets if animated asset is missing or client is setup for low-bandwidth mode.",
           ),
           l.createElement("br", null),
-          l.createElement(_.JU, null, "WebM"),
+          l.createElement(g.JU, null, "WebM"),
           l.createElement(
             "div",
             null,
@@ -50829,14 +50849,14 @@
             r,
             " (required for Steam Client)",
           ),
-          l.createElement(z, { oEditableMessage: t, assetType: "webm" }),
+          l.createElement(x, { oEditableMessage: t, assetType: "webm" }),
           l.createElement("br", null),
-          l.createElement(_.JU, null, "MP4"),
+          l.createElement(g.JU, null, "MP4"),
           l.createElement("div", null, ".Mp4 ", r, " (required for iOS)"),
-          l.createElement(z, { oEditableMessage: t, assetType: "mp4" }),
+          l.createElement(x, { oEditableMessage: t, assetType: "mp4" }),
         );
       }
-      function U(e) {
+      function z(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, s.q3)(() => [t.GetCustomTemplate()]);
         return "featured_video" != a
@@ -50851,40 +50871,40 @@
                 "Feature Video Template Specific Assets",
               ),
               l.createElement("br", null),
-              l.createElement(_.JU, null, "Background Image"),
+              l.createElement(g.JU, null, "Background Image"),
               l.createElement(
                 "div",
                 null,
                 l.createElement("span", null, "570px by 600px"),
                 " (Video sits on top of this asset; .png/.jpg) ",
               ),
-              l.createElement(z, {
+              l.createElement(x, {
                 oEditableMessage: t,
                 assetType: "background",
               }),
               l.createElement("br", null),
-              l.createElement(_.JU, null, "Poster Image"),
+              l.createElement(g.JU, null, "Poster Image"),
               l.createElement(
                 "div",
                 null,
                 l.createElement("span", null, "528px by 297px"),
                 " (localized video poster image; shown on top of video prior to play; .png/.jpg)",
               ),
-              l.createElement(z, { oEditableMessage: t, assetType: "poster" }),
+              l.createElement(x, { oEditableMessage: t, assetType: "poster" }),
               l.createElement("br", null),
-              l.createElement(_.JU, null, "Subtitles"),
+              l.createElement(g.JU, null, "Subtitles"),
               l.createElement(
                 "div",
                 null,
                 ".vtt/.srt format (include extension or mapping will fail)",
               ),
-              l.createElement(z, {
+              l.createElement(x, {
                 oEditableMessage: t,
                 assetType: "subtitles",
               }),
             );
       }
-      function z(e) {
+      function x(e) {
         const { oEditableMessage: t, assetType: a } = e,
           [n, i, o] = (0, s.q3)(() => [
             t.GetAssetsObject(a),
@@ -50897,14 +50917,14 @@
           m = (0, l.useCallback)(
             (e) => {
               const t = (0, r.Lg)(e);
-              return n[t] ? (0, y.T)(i, e, o, n[t]) : null;
+              return n[t] ? (0, v.T)(i, e, o, n[t]) : null;
             },
             [i, o, n],
           );
         return l.createElement(
           "div",
-          { className: d().MarketingMessage },
-          l.createElement(p.z, {
+          { className: u().MarketingMessage },
+          l.createElement(_.z, {
             rgAssetLangs: c,
             fnGetAssetUrl: m,
             fnDeletAssetLang: (e) => t.DeleteAssetObjectLang(a, e),
@@ -52402,7 +52422,7 @@
     },
     25476: (e, t, a) => {
       "use strict";
-      a.d(t, { D: () => C, t: () => D });
+      a.d(t, { D: () => I, t: () => C });
       var n = a(23910),
         r = a(67239),
         i = a(68612),
@@ -52423,8 +52443,9 @@
         v = a(98076),
         f = a(71298),
         b = a(68797),
-        w = a(50250);
-      function D(e) {
+        w = a(50250),
+        D = a(65946);
+      function C(e) {
         const { oEditablePlan: t, index: a } = e;
         return l.createElement(
           "div",
@@ -52445,7 +52466,7 @@
               {
                 onClick: (e) => {
                   (0, _.pg)(
-                    l.createElement(I, { oEditablePlan: t, index: a }),
+                    l.createElement(T, { oEditablePlan: t, index: a }),
                     (0, h.uX)(e),
                   );
                 },
@@ -52457,7 +52478,7 @@
               {
                 onClick: (e) => {
                   (0, _.pg)(
-                    l.createElement(T, { oEditablePlan: t, index: a }),
+                    l.createElement(M, { oEditablePlan: t, index: a }),
                     (0, h.uX)(e),
                   );
                 },
@@ -52467,7 +52488,7 @@
           ),
         );
       }
-      function C(e, t, a, r, i, s) {
+      function I(e, t, a, r, i, s) {
         let l, o;
         if (s)
           switch (s.GetStoreItemType()) {
@@ -52520,33 +52541,36 @@
           u
         );
       }
-      function I(e) {
+      const B = { include_platforms: !0 };
+      function T(e) {
         const { oEditablePlan: t, index: a, closeModal: r } = e,
-          [s] = (0, d.G6)(t.GetFeaturedItemID(), t.GetFeaturedItemType(), {
-            include_platforms: !0,
-          }),
-          [o, c] = (0, l.useState)(t.GetName()),
-          [m, _] = (0, l.useState)(2),
-          g = (0, l.useMemo)(
+          [s, o] = (0, D.q3)(() => [
+            t.GetFeaturedItemID(),
+            t.GetFeaturedItemType(),
+          ]),
+          [c] = (0, d.G6)(s, o, B),
+          [m, _] = (0, l.useState)(t.GetName()),
+          [g, h] = (0, l.useState)(2),
+          E = (0, l.useMemo)(
             () => n.uu.map((e) => ({ label: (0, n.Rw)(e), data: e })),
             [],
           ),
-          [h, E] = (0, l.useState)(t.BHasMarketingMessages(a)),
-          [S, y] = (0, l.useState)("#msg_action_details"),
-          { fnCreateMarketingMessage: w } = (0, i.Z7)(),
-          D = (0, f.vs)();
-        return D.bLoading
+          [S, y] = (0, l.useState)(t.BHasMarketingMessages(a)),
+          [w, C] = (0, l.useState)("#msg_action_details"),
+          { fnCreateMarketingMessage: T } = (0, i.Z7)(),
+          M = (0, f.vs)();
+        return M.bLoading
           ? l.createElement(f.Hh, {
-              state: D,
+              state: M,
               strDialogTitle: "Create New Marketing Message?",
               closeModal: r,
             })
-          : h
+          : S
             ? l.createElement(p.o0, {
                 strTitle: "Create New Marketing Message?",
                 strDescription: `You already have Marketing Message with ID ${t.GetMarketingMessageID(a)} associated with this promotion plan.  Are you sure you want to create a new one?`,
                 onCancel: r,
-                onOK: () => E(!1),
+                onOK: () => y(!1),
                 strOKButtonText: "Create New Marketing Message Anyways",
               })
             : l.createElement(
@@ -52558,30 +52582,30 @@
                   onCancel: r,
                   className: v.CreationDialogCtn,
                   bOKDisabled:
-                    0 == o.trim().length ||
-                    0 == m ||
-                    (!t.BHasAssociatedSaleEvent() && !s) ||
-                    0 == S.trim().length ||
-                    D.bLoading,
+                    0 == m.trim().length ||
+                    0 == g ||
+                    (!t.BHasAssociatedSaleEvent() && !c) ||
+                    0 == w.trim().length ||
+                    M.bLoading,
                   bAllowFullSize: !0,
                   onOK: () => {
-                    D.fnSetLoading(!0);
-                    const e = C(
-                      o,
+                    M.fnSetLoading(!0);
+                    const e = I(
                       m,
+                      g,
                       t.GetStartDate(),
                       t.GetEndDate(),
-                      S || "#msg_action_details",
-                      s,
+                      w || "#msg_action_details",
+                      c,
                     );
-                    w(e, !0)
+                    T(e, !0)
                       .then((e) => {
                         e
                           ? (t.SetMarketingMessageID(e, a),
-                            D.fnSetStrSuccess(
+                            M.fnSetStrSuccess(
                               "Create Marketing Message Successful. Remember to Save the Promotion Plan.",
                             ))
-                          : D.fnSetStrError(
+                          : M.fnSetStrError(
                               "Create Marketing Message failed. Check console output",
                             );
                       })
@@ -52595,31 +52619,31 @@
                           (0, b.H)(e),
                           e,
                         ),
-                          D.fnSetStrError(t);
+                          M.fnSetStrError(t);
                       });
                   },
                 },
                 l.createElement("br", null),
                 l.createElement("br", null),
                 l.createElement(u.pd, {
-                  value: o,
-                  onChange: (e) => c(e.currentTarget.value),
+                  value: m,
+                  onChange: (e) => _(e.currentTarget.value),
                   label: "Internal Name",
                 }),
                 l.createElement(u.m, {
                   label: "Type",
-                  rgOptions: g,
-                  selectedOption: m,
-                  onChange: (e) => _(e.data),
+                  rgOptions: E,
+                  selectedOption: g,
+                  onChange: (e) => h(e.data),
                 }),
                 l.createElement(
                   "div",
                   { className: v.LargeSelectorCtn },
-                  l.createElement(B, { selected: S, fnSetSelected: y }),
+                  l.createElement(A, { selected: w, fnSetSelected: C }),
                 ),
               );
       }
-      function B(e) {
+      function A(e) {
         const { selected: t, fnSetSelected: a } = e,
           n = (0, s.i)(),
           r = (0, l.useMemo)(
@@ -52647,7 +52671,7 @@
               size: "medium",
             });
       }
-      function T(e) {
+      function M(e) {
         const { oEditablePlan: t, closeModal: a, index: n } = e,
           r = (0, i.kn)(),
           [s, d] = (0, l.useState)(null);
@@ -89187,7 +89211,7 @@
     },
     56186: (e, t, a) => {
       "use strict";
-      a.d(t, { Wq: () => _, c2: () => p, fL: () => E });
+      a.d(t, { $I: () => S, Wq: () => _, c2: () => p, fL: () => E });
       var n = a(34629),
         r = (a(90626), a(22837)),
         i = a(56545),
@@ -89433,6 +89457,10 @@
       function E(e) {
         const t = e.match(h);
         return t?.[2];
+      }
+      function S(e) {
+        const t = e.match(h);
+        return t?.[2] && !isNaN(Number(t?.[2]));
       }
     },
     3173: (e, t, a) => {

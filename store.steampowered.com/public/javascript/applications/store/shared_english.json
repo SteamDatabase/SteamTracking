@@ -1912,6 +1912,8 @@
     "SalePage_WatchForDrop_Hours_Developer": "Watch the stream for %1$s hours and get item drops from the developer when the event is over!",
     "SalePage_WatchForDrop_Hours_CreatorNamed": "Watch the stream for %1$s hours and get item drops from %2$s when the event is over!",
     "SalePage_WatchForDrop_LearnMore": "Learn more about the drops here.",
+    "Sale_CrossPromoSale_DefaultSectionTitle": "Cross-Promote Sale Page Section",
+    "Sale_CrossPromoSale_SectionTitle": "Cross Promo: %1$s",
     "SalePresented_By": "This third-party event is presented by %1$s",
     "SalePresented_By_Multi": "This third-party event is presented by %1$s and %2$s",
     "SalePresented_By_Admin": "Requires the organizer to enter which 3rd parties are hosting this event",

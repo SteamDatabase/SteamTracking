@@ -46,19 +46,19 @@
         RZ: () => K,
         YW: () => H,
         Fq: () => $,
-        _C: () => se,
-        Mn: () => le,
-        PV: () => ce,
-        ed: () => ee,
-        jT: () => te,
-        np: () => ne,
+        _C: () => oe,
+        Mn: () => ce,
+        PV: () => de,
+        ed: () => te,
+        jT: () => re,
+        np: () => se,
         Jo: () => Y,
         cO: () => J,
         Vz: () => Z,
-        a8: () => me,
-        $d: () => re,
-        ZB: () => oe,
-        lE: () => ie,
+        a8: () => le,
+        $d: () => ie,
+        ZB: () => me,
+        lE: () => ae,
       });
       var i = r(2160),
         a = r(56545),
@@ -1641,10 +1641,13 @@
               bLoadingNominationForCategory: !1,
             };
       }
-      function ee(e) {
+      function ee() {
+        return [`SteamAwardBadgeProgress_${D.iA.accountid}`];
+      }
+      function te(e) {
         const t = (0, q.KV)();
         return (0, j.I)({
-          queryKey: [`SteamAwardBadgeProgress_${e}`],
+          queryKey: ee(),
           queryFn: async () => {
             const r = a.w.Init(n.jn);
             r.Body().set_badgeid(e), r.Body().set_steamid(D.iA.steamid);
@@ -1656,7 +1659,7 @@
           enabled: D.iA.logged_in,
         });
       }
-      function te(e) {
+      function re(e) {
         const t = (0, q.KV)();
         return (0, j.I)({
           queryKey: [`SteamAwardSuggestions_${e}`],
@@ -1670,7 +1673,7 @@
           staleTime: 1 / 0,
         });
       }
-      function re(e, t, r, i) {
+      function ie(e, t, r, i) {
         const n = (0, q.KV)(),
           s = (0, W.jE)();
         return (0, U.n)({
@@ -1689,12 +1692,16 @@
             })(n, e, t, r),
           onSuccess: ([e, t]) => {
             1 == e
-              ? (function (e, t) {
+              ? (!(function (e, t) {
                   e.setQueryData(
                     [`SteamAwardNominations_${D.iA.accountid}`],
                     t,
                   );
-                })(s, t.nominations)
+                })(s, t.nominations),
+                window.setTimeout(
+                  () => s.invalidateQueries({ queryKey: ee() }),
+                  1e3,
+                ))
               : i && i(e);
           },
           onError: () => {
@@ -1702,7 +1709,7 @@
           },
         });
       }
-      function ie(e, t, r) {
+      function ae(e, t, r) {
         return (0, j.I)({
           queryKey: [e, t.voteid, r],
           queryFn: () =>
@@ -1740,7 +1747,7 @@
           staleTime: 1 / 0,
         });
       }
-      async function ae(e, t) {
+      async function ne(e, t) {
         const r = a.w.Init(E);
         r.Body().set_generate_new(t);
         const i = await O.GetNominationShareLink(e, r);
@@ -1750,21 +1757,21 @@
           [i.GetEResult(), i.Body().toObject()]
         );
       }
-      function ne() {
+      function se() {
         const e = (0, q.KV)();
         return (0, j.I)({
           queryKey: [`GetNominationShareLink_${D.iA.accountid}`],
-          queryFn: async () => ae(e, !1),
+          queryFn: async () => ne(e, !1),
           initialData: () => [1, X()?.share_link],
           staleTime: 1 / 0,
           enabled: D.iA.logged_in,
         });
       }
-      function se() {
+      function oe() {
         const e = (0, q.KV)(),
           t = (0, W.jE)();
         return (0, U.n)({
-          mutationFn: () => ae(e, !0),
+          mutationFn: () => ne(e, !0),
           onSuccess: ([e, r]) => {
             1 == e &&
               t.setQueryData(
@@ -1774,7 +1781,7 @@
           },
         });
       }
-      function oe(e, t, r) {
+      function me(e, t, r) {
         const i = (0, q.KV)(),
           n = (0, W.jE)();
         return (0, U.n)({
@@ -1802,7 +1809,7 @@
           },
         });
       }
-      function me(e) {
+      function le(e) {
         const t = (0, q.KV)();
         return (0, j.I)({
           queryKey: [`SteamAwardUserVotes_${D.iA.accountid}`],
@@ -1823,14 +1830,14 @@
           enabled: D.iA.logged_in,
         });
       }
-      function le(e, t) {
-        const r = me(e);
+      function ce(e, t) {
+        const r = le(e);
         return (0, L.useMemo)(
           () => r.data?.find((e) => e.voteid == t)?.appid,
           [t, r.data],
         );
       }
-      function ce(e, t) {
+      function de(e, t) {
         const r = (function (e) {
             const t = (0, q.KV)();
             return (0, j.I)({

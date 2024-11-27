@@ -623,6 +623,13 @@ body.v6.sale_autumn2024 .sale_capsule_carousel .carousel_items > * {
 	background: linear-gradient(161deg, #fed79a99 8.84%, #ca8c6bc4 86.04%), url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2024/Tile-Bg-Autumn.webp') repeat center top;
 }
 
+@media screen and (max-width: 500px )
+{
+	body.v6 .home_pagecontent_ctn.featured_special_deals .ctn_background {
+		border-radius: 0;
+	}
+}
+
 .home_pagecontent_ctn.featured_special_deals .carousel_thumbs > div {
 	background-color: #cba36c;
 }
@@ -754,6 +761,12 @@ body.v6.sale_autumn2024 .sale_capsule_carousel .carousel_items > * {
 
 .main_content_ctn {
     position: relative;
+}
+
+@media screen and (max-width: 910px ) {
+	body.v6 .main_content_ctn {
+		margin-top: 60px;
+	}
 }
 
 /* @media screen and (max-width: 852px ) {
@@ -1997,9 +2010,6 @@ p.home_subtitle_ctn a {
         margin: 20px 0px;
         min-width: 100%;
     }
-    body.responsive_page .home_discount_games_ctn .sale_capsule:nth-child(odd) {
-        margin-right: 0px;
-    }
     body.responsive_page .see_more_text {
         display: block;
     }
@@ -2226,15 +2236,16 @@ p.home_subtitle_ctn a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 18px;
+    padding: clamp(8px, 3vw, 18px);
+	gap: 16px;
     background-color: rgba(255,255,255,0.07);
     border-radius: 4px;
 }
 
 .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule,
 .home_newupcoming_ctn .home_tab_content .sale_capsule, .home_under10_games_ctn .sale_capsule {
-    margin: 10px;
-    max-width: 46%;
+    margin: 0;
+    max-width: 50%;
     flex: 1;
     min-width: 23%;
 }
@@ -2243,7 +2254,6 @@ p.home_subtitle_ctn a {
     .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule,
     .home_newupcoming_ctn .home_tab_content .sale_capsule, .home_under10_games_ctn .sale_capsule {
         min-width: 44%;
-        margin: 2%;
     }
 }
 
@@ -2425,7 +2435,8 @@ p.home_subtitle_ctn a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-	padding: 18px;
+	padding: clamp(8px, 2vw, 18px);
+	gap: 16px;
 	background-color: rgba(255,255,255,0.07);
 }
 
@@ -2748,6 +2759,7 @@ body.v6 .sale_capsule .discount_block_inline
     overflow: hidden;
     font-size: 12px;
 	scroll-snap-align: start;
+	box-shadow: 0 0 25px black;
 }
 
 .hero_capsule.hidden
@@ -3267,15 +3279,16 @@ img.franchise_placeholder {
 {
     display: flex;
     flex-wrap: wrap;
-	padding: 18px;
+	padding: clamp(8px, 2vw, 18px);
     margin-bottom: 10px;
     background-color: rgba(255,255,255,0.07);
     border-radius: 4px;
+	gap: 16px;
 }
 
 .home_discount_games_ctn .sale_capsule
 {
-    margin: 10px;
+    margin: 0;
     max-width: 50%;
     min-width: 40%;
     flex: 1;

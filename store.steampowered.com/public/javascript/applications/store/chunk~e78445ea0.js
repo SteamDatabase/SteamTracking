@@ -80,7 +80,6 @@
         AppDetailsCtn: "_2Zwt2P5vy4W9Ha5ePOv54U",
         AppDetailsCtnTop: "_3TkhdqIi1gqwMzexQDS8Ab",
         AppLibraryHero: "_uGgOnTsOzgIVK9BHMTUV",
-        AppStoreHeader: "_2T79kbBPPj3RHLv-CMLOrB",
         RightColumn: "VVNgZo2T-rubrTvNMPSoh",
         AppName: "_3lk6f1XI_loCIhBevOddHP",
         AppTagsCtn: "xXcRKEuacDG8kYtDXu6OH",
@@ -2298,7 +2297,7 @@
           );
           return t ? t.GetItemIDs().map((e) => e.appid) : void 0;
         })(!y.iA.logged_in);
-        d || y.iA.logged_in || (d = q),
+        d.length || y.iA.logged_in || (d = q),
           a.useEffect(() => {
             C ||
               (async () => {
@@ -2473,27 +2472,42 @@
         const t = e?.data.reward_items;
         (0, S.fW)(t);
         const r = t.slice(0, 3);
-        return a.createElement(
-          "div",
-          { className: w().SaleTopSection },
-          a.createElement(D, { rgRewardItems: r }),
+        let n = null;
+        return (
+          y.iA.logged_in &&
+            (n = a.createElement(
+              a.Fragment,
+              null,
+              " - ",
+              a.createElement(
+                "a",
+                { href: y.TS.COMMUNITY_BASE_URL + "my/itemcollection" },
+                (0, g.we)("#DiscoveryQueue_SaleStatus_Link"),
+              ),
+            )),
           a.createElement(
             "div",
-            { className: w().SaleTextCtn },
+            { className: w().SaleTopSection },
+            a.createElement(D, { rgRewardItems: r }),
             a.createElement(
               "div",
-              { className: w().BoldText },
-              (0, g.we)("#DiscoveryQueue_Widget_SaleDesc"),
-            ),
-            a.createElement(
-              "div",
-              null,
-              (0, g.we)(
-                "#DiscoveryQueue_Widget_SaleTitle",
-                (0, g._l)(e.data.definition.rtime_end_time, !1, !1, !1, !1),
+              { className: w().SaleTextCtn },
+              a.createElement(
+                "div",
+                { className: w().BoldText },
+                (0, g.we)("#DiscoveryQueue_Widget_SaleDesc"),
+              ),
+              a.createElement(
+                "div",
+                null,
+                (0, g.we)(
+                  "#DiscoveryQueue_Widget_SaleTitle",
+                  (0, g._l)(e.data.definition.rtime_end_time, !1, !1, !1, !1),
+                ),
+                n,
               ),
             ),
-          ),
+          )
         );
       }
       function D(e) {
@@ -2663,8 +2677,8 @@
           g = _,
           b = (0, D.LG)(l?.GetTagIDs());
         if (!l) return;
-        const w = l.GetAssets().GetLibraryCapsuleURL(),
-          v = l.GetAssets().GetHeaderURL();
+        const w = l.GetAssets().GetLibraryCapsuleURL();
+        l.GetAssets().GetHeaderURL();
         return n.createElement(
           s.Z,
           { className: B().AppDetailsCtn },
@@ -2673,8 +2687,6 @@
             { className: B().AppDetailsCtnTop },
             w &&
               n.createElement("img", { className: B().AppLibraryHero, src: w }),
-            v &&
-              n.createElement("img", { className: B().AppStoreHeader, src: v }),
             n.createElement(
               "div",
               { className: B().RightColumn },

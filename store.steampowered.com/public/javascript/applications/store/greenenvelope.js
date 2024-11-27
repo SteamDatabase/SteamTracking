@@ -238,7 +238,7 @@
       var i = n(22837),
         o = n(65946),
         a = n(90626),
-        r = n(92298),
+        r = n(68950),
         l = n(15419),
         s = n(23809),
         c = n(88997),
@@ -271,28 +271,28 @@
         k = n(76217),
         M = n(91675),
         U = n(14771),
-        R = n(93761),
-        B = n.n(R);
-      const H = !0;
+        H = n(93761),
+        R = n.n(H);
+      const B = !0;
       function C(e) {
         let { onActivate: t, icon: n, body: i, eUIMode: o, classNames: r } = e,
           l = t,
-          s = B().PinnedTemplate;
+          s = R().PinnedTemplate;
         return (
           7 == o
-            ? (s = B().PinnedTemplateDesktop)
-            : 3 == o && (s = B().PinnedTemplateWeb),
+            ? (s = R().PinnedTemplateDesktop)
+            : 3 == o && (s = R().PinnedTemplateWeb),
           (s = (0, _.A)(s, r)),
           a.createElement(
             k.Z,
             { className: s, onActivate: l },
             a.createElement(
               "div",
-              { className: B().Content },
+              { className: R().Content },
               a.createElement(
                 "div",
-                { className: B().PinnedBody },
-                a.createElement("span", { className: B().Icon }, n),
+                { className: R().PinnedBody },
+                a.createElement("span", { className: R().Icon }, n),
                 i,
               ),
             ),
@@ -340,43 +340,43 @@
         }, [s, o]),
           a.useEffect(() => {
             let e =
-              parseInt(B().loadinganimationiterationcount) *
-              parseInt(B().loadinganimationduration) *
+              parseInt(R().loadinganimationiterationcount) *
+              parseInt(R().loadinganimationduration) *
               1e3;
             const t = window.setTimeout(() => c(D.none), e);
             return () => window.clearTimeout(t);
           }, []),
           a.useEffect(() => {
-            t && t > 0 && m !== B().Unread && 2 != n && 1 != n
-              ? u(B().Unread)
-              : t || m != B().Unread || u(B().MarkedRead);
+            t && t > 0 && m !== R().Unread && 2 != n && 1 != n
+              ? u(R().Unread)
+              : t || m != R().Unread || u(R().MarkedRead);
           }, [t, n, m]);
         let d = e.onActivate;
         d || (d = () => console.log("Missing activate function")),
           s == D.loadingActive && (d = void 0);
-        let p = B().StandardTemplate;
+        let p = R().StandardTemplate;
         4 == n
-          ? (p = B().AllNotificationsTemplate)
+          ? (p = R().AllNotificationsTemplate)
           : 2 == n
-            ? (p = B().DesktopToastTemplate)
-            : (7 != i && 3 != i) || (p = B().StandardTemplateDesktop);
+            ? (p = R().DesktopToastTemplate)
+            : (7 != i && 3 != i) || (p = R().StandardTemplateDesktop);
         let f = null;
         if (s != D.none && 2 != n && 1 != n) {
-          let e = s == D.loadingComplete ? B().Hide : null;
+          let e = s == D.loadingComplete ? R().Hide : null;
           f = a.createElement(
             "div",
-            { className: (0, _.A)(B().LoadingTemplate, e) },
+            { className: (0, _.A)(R().LoadingTemplate, e) },
             a.createElement("div", {
-              className: (0, _.A)(B().StandardLogoDimensions, B().ShimmerLogo),
+              className: (0, _.A)(R().StandardLogoDimensions, R().ShimmerLogo),
             }),
             a.createElement(
               "div",
-              { className: B().Content },
+              { className: R().Content },
               a.createElement("div", {
-                className: (0, _.A)(B().Header, B().ShimmerHeader),
+                className: (0, _.A)(R().Header, R().ShimmerHeader),
               }),
               a.createElement("div", {
-                className: (0, _.A)(B().Body, B().ShimmerBody),
+                className: (0, _.A)(R().Body, R().ShimmerBody),
               }),
             ),
           );
@@ -385,7 +385,7 @@
           k.Z,
           {
             onActivate: d,
-            className: B().StandardTemplateContainer,
+            className: R().StandardTemplateContainer,
             onOptionsButton: e.onOptionsButton,
             onOptionsActionDescription: e.onOptionsButtonDesc,
           },
@@ -394,14 +394,14 @@
             { className: (0, _.A)(p, m) },
             a.createElement(
               "div",
-              { className: B().StandardLogoDimensions },
+              { className: R().StandardLogoDimensions },
               e.logo,
             ),
             e.personaStatus &&
               a.createElement("div", {
-                className: (0, _.A)(B().AvatarStatus, e.personaStatus),
+                className: (0, _.A)(R().AvatarStatus, e.personaStatus),
               }),
-            a.createElement("div", { className: B().Content }, e.children),
+            a.createElement("div", { className: R().Content }, e.children),
             f,
             l && a.createElement(O, { location: n }),
           ),
@@ -410,10 +410,10 @@
       }
       function O(e) {
         const { location: t } = e;
-        return H && 3 == t
+        return B && 3 == t
           ? a.createElement(
               "div",
-              { className: B().NewIndicator },
+              { className: R().NewIndicator },
               a.createElement(d.jlt, null),
             )
           : null;
@@ -432,7 +432,7 @@
           (s = 4 == o ? Y : (r ?? j)),
           a.createElement(
             "div",
-            { className: B().Header },
+            { className: R().Header },
             a.createElement(W, { icon: t }),
             !!n && a.createElement(x, { title: n }),
             l && s({ timestamp: i }),
@@ -440,22 +440,22 @@
         );
       }
       function W(e) {
-        return a.createElement("div", { className: B().Icon }, e.icon);
+        return a.createElement("div", { className: R().Icon }, e.icon);
       }
       function x(e) {
-        return a.createElement("div", { className: B().Title }, e.title);
+        return a.createElement("div", { className: R().Title }, e.title);
       }
       function Q(e) {
         let t = (0, _.A)(
-          B().StandardNotificationDescription,
-          e.multiline && B().Multiline,
+          R().StandardNotificationDescription,
+          e.multiline && R().Multiline,
         );
         return a.createElement("div", { className: t }, e.children);
       }
       function q(e) {
         let t = (0, _.A)(
-          B().StandardNotificationSubText,
-          e.multiline && B().Multiline,
+          R().StandardNotificationSubText,
+          e.multiline && R().Multiline,
         );
         return a.createElement("div", { className: t }, e.children);
       }
@@ -466,7 +466,7 @@
           i = (0, M.KC)(e.timestamp);
         return (
           (0, U.JD)(t, n) || (i = (0, M._l)(e.timestamp, !1, !1, !1) + " " + i),
-          a.createElement("div", { className: B().Timestamp }, i)
+          a.createElement("div", { className: R().Timestamp }, i)
         );
       }
       function j(e) {
@@ -476,7 +476,7 @@
           i = (0, U.JD)(t, n)
             ? (0, M.KC)(e.timestamp)
             : (0, M._l)(e.timestamp, !1, !1, !1);
-        return a.createElement("div", { className: B().Timestamp }, i);
+        return a.createElement("div", { className: R().Timestamp }, i);
       }
       !(function (e) {
         (e[(e.none = 0)] = "none"),
@@ -1037,12 +1037,12 @@
               ))
             : (M = M + " " + e);
         }
-        let R = n;
+        let H = n;
         if (!v) {
           const e = h ? $().ShortLogoDimensions : $().StandardLogoDimensions;
           if (o && (0, m.n8)(l)) {
             const t = l.bhas_friend && 1 != s;
-            R = a.createElement(
+            H = a.createElement(
               "div",
               { style: { position: "relative" } },
               t && a.createElement(d.GSe, { className: $().FriendIndicator }),
@@ -1050,7 +1050,7 @@
             );
           } else
             L?.avatar_medium_url &&
-              (R = a.createElement("img", {
+              (H = a.createElement("img", {
                 className: e,
                 src: L.avatar_medium_url,
                 onError: T,
@@ -1059,7 +1059,7 @@
         return h
           ? a.createElement(V, {
               ...e,
-              logo: R,
+              logo: H,
               icon: e.icon,
               title: M,
               body: S,
@@ -1069,7 +1069,7 @@
               null,
               a.createElement(
                 G,
-                { logo: R, ...e },
+                { logo: H, ...e },
                 a.createElement(F, {
                   icon: c,
                   title: M,
@@ -1256,7 +1256,7 @@
               onHide: l,
             } = e,
             s = v(t),
-            c = (0, r.L)(),
+            c = (0, r.LH)(),
             u = f.TS.COMMUNITY_BASE_URL + t.url,
             _ = (0, m.iO)(s) ? s?.account_steam_id?.GetAccountID() : null,
             { data: p } = (0, b.js)(_),
@@ -1311,7 +1311,7 @@
             s = v(t),
             [c] = (0, w.t7)(s.appid, { include_assets: !0 }),
             [u, _] = (0, a.useState)(""),
-            p = (0, r.L)();
+            p = (0, r.LH)();
           (0, a.useEffect)(() => {
             if (s.count > 1 && s.appids?.length)
               return _(
@@ -1350,7 +1350,7 @@
               uimode: o,
               onHide: l,
             } = e,
-            s = (0, r.L)(),
+            s = (0, r.LH)(),
             c = `${f.TS.COMMUNITY_BASE_URL}profiles/${s}/friends/pending`,
             u = v(t),
             { data: _ } = (0, b.js)(u.requestorID);
@@ -1381,7 +1381,7 @@
               uimode: o,
               onHide: l,
             } = e,
-            c = (0, r.L)(),
+            c = (0, r.LH)(),
             u = (0, s.KV)(),
             _ = (0, m.IL)(t.item, c, u),
             p = v(t),
@@ -1412,7 +1412,7 @@
               uimode: o,
               onHide: l,
             } = e,
-            s = (0, r.L)(),
+            s = (0, r.LH)(),
             c = `${f.TS.COMMUNITY_BASE_URL}profiles/${s}/inventory/#pending_gifts`,
             u = v(t),
             _ = S.b.InitFromAccountID(u),
@@ -1442,7 +1442,7 @@
               uimode: o,
               onHide: l,
             } = e,
-            s = (0, r.L)(),
+            s = (0, r.LH)(),
             c = v(t),
             u = `${f.TS.COMMUNITY_BASE_URL}profiles/${s}/tradeoffers`,
             _ = S.b.InitFromAccountID(c),
@@ -1758,7 +1758,7 @@
                 a.Fragment,
                 null,
                 a.createElement(Pe, null),
-                a.createElement(Re, null),
+                a.createElement(He, null),
               )
             : a.createElement(ke, { nTotalUnviewed: r.nUnviewed });
         });
@@ -1772,7 +1772,7 @@
       }
       function be() {
         const e = Ie(),
-          t = (0, r.L)(),
+          t = (0, r.LH)(),
           { data: n } = (0, l.S0)(t),
           i = (0, l.BM)(),
           o = n?.settings;
@@ -1856,7 +1856,7 @@
                 ref: n,
               },
               a.createElement(Pe, null),
-              a.createElement(He, null),
+              a.createElement(Be, null),
               a.createElement(De, null),
             ),
           );
@@ -1882,7 +1882,7 @@
             ),
           );
         },
-        Re = () => {
+        He = () => {
           const e = `${f.TS.COMMUNITY_BASE_URL}profiles/${f.iA.steamid}/notifications`;
           return a.createElement(
             "div",
@@ -1903,14 +1903,14 @@
             ),
           );
         };
-      function Be(e, t, n) {
+      function Re(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
           !t.notification_id ||
           Ae.MarkItemRead(t.notification_id),
           e();
       }
-      function He() {
+      function Be() {
         const e = be();
         return 0 == e.length
           ? null
@@ -1921,7 +1921,7 @@
                 a.createElement(ye, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: Be,
+                  onNotificationClick: Re,
                   uimode: 3,
                   location: 3,
                 }),

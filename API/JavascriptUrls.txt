@@ -940,7 +940,10 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_webm}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${_ ? _ : _}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_movie_mp4}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_movie_webm}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}

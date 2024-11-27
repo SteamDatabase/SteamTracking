@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2298],
   {
-    69917: (e, t, n) => {
+    92298: (e, t, n) => {
       e.exports = (function (e) {
         var t = {};
         function n(r) {

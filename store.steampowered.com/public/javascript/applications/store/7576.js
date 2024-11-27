@@ -12,7 +12,7 @@
         Nd: () => N,
         EW: () => q,
       });
-      var i = r(92298),
+      var i = r(68950),
         n = r(23809),
         s = r(75233),
         a = r(20194),
@@ -735,7 +735,7 @@
         S = r(14336);
       function O(e) {
         const t = (0, n.KV)(),
-          r = (0, i.L)(),
+          r = (0, i.LH)(),
           c = (0, S.tb)(),
           o = (0, s.jE)();
         let u = { loadNicknames: !1, loadFavorites: !1, ...e };
@@ -772,7 +772,7 @@
       }
       function I() {
         const e = (0, n.KV)(),
-          t = (0, i.L)();
+          t = (0, i.LH)();
         return (0, a.I)(T(e, t));
       }
       function T(e, t) {
@@ -799,7 +799,7 @@
       }
       function q() {
         const e = (0, n.KV)(),
-          t = (0, i.L)();
+          t = (0, i.LH)();
         return (0, a.I)({
           queryKey: ["GetIgnoredAccounts", t],
           queryFn: async () => {
@@ -833,7 +833,7 @@
       function L(e = {}) {
         return (function (e = {}) {
           const t = (0, n.KV)(),
-            r = (0, i.L)();
+            r = (0, i.LH)();
           return (0, a.I)({ ...C(t, r), ...e });
         })({
           ...e,
@@ -865,7 +865,7 @@
       }
       function N(e, t = {}) {
         const r = (0, n.KV)(),
-          s = (0, i.L)();
+          s = (0, i.LH)();
         return (0, a.I)({
           queryKey: [`GameplayInfo_${s}_${e}`],
           queryFn: async () => await U(r, e),
