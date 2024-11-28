@@ -1,0 +1,7 @@
+"manifest"
+{
+  "version" "2"
+  "commandline" "/scout-legacy"
+  "filter_exclusive_priority" "10"
+  "unlisted" "2"
+}

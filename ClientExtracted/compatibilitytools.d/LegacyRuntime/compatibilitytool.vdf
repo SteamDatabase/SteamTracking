@@ -1,0 +1,14 @@
+"compatibilitytools"
+{
+  "compat_tools"
+  {
+    "scout_ldlp"
+    {
+      "display_name" "Legacy runtime 1.0"
+      "install_path" "."
+      "from_oslist"  "linux"
+      "to_oslist"    "linux"
+      "aliases"      "scout_legacy"
+    }
+  }
+}

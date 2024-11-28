@@ -55,7 +55,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123HW7
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -75,7 +74,11 @@
  (Unicast/Multicast)
  (Unknown SAFI %u)
  (VPLS)
+ (display)
  (dropped)
+ (encode)
+ (game)
+ (network)
  (pipe is disconnected)
  (repeat period: %lldms)
  (wireless)
@@ -2162,7 +2165,6 @@ ${LANGUAGE}
 &6FVfv
 &8Yv
 &CLOUD_GAMING_PLATFORM=%u
-&CqA
 &IY6
 &Lj&6lZ6?~A?
 &PLATFORM=%s
@@ -2395,7 +2397,6 @@ ${LANGUAGE}
 'JT9
 'RL6
 'Software\Valve\Steam\NoSavePersonalInfo
-'SqA
 'SteamInput/Configurator/ErrorMsgEnabled
 '\n!k_EClientPersonaStateFlagWatching
 '\n"k_EClientPersonaStateFlagBroadcast
@@ -3476,7 +3477,6 @@ ${LANGUAGE}
 (^aosst@a{sv})
 (^ay@a{sv})
 (anonymous namespace)
-(aqA
 (cannot determine missing fields for lite message)
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
@@ -4901,7 +4901,6 @@ ${LANGUAGE}
 -longestloc
 -master_ipc_name_override
 -mod=
--mqA
 -name=%s
 -nexon -fromlauncher
 -nexus 
@@ -5538,8 +5537,8 @@ ${LANGUAGE}
 .EStreamFrameResult
 .EStreamHostPlayAudioPreference:
 .EStreamInterface
-.EStreamMouseButton"8\n
 .EStreamMouseButton"K\n
+.EStreamMouseButton"\\n
 .EStreamMouseWheelDirection
 .EStreamP2PScope:
 .EStreamQualityPreference:
@@ -7285,6 +7284,7 @@ ${LANGUAGE}
 13CCallbackImplILi84EE
 13CCallbackImplILi88EE
 13CCallbackImplILi8EE
+13CCallbackImplILi9EE
 13CChatMentions
 13CCloudManager
 13CDebugDumpMsg
@@ -8880,6 +8880,7 @@ ${LANGUAGE}
 29CPlayer_RemoveFriend_Response
 29CPublishedFile_Delete_Request
 29CPublishedFile_Update_Request
+29CRemotePlayInputBaseMemStream
 29CSettingsValidationController
 29CSteamOSSLS_GetState_Response
 29CSteamTV_GetChannels_Response
@@ -9047,6 +9048,7 @@ ${LANGUAGE}
 30CPublishedFile_Delete_Response
 30CPublishedFile_Publish_Request
 30CPublishedFile_Update_Response
+30CRemotePlayInputSteamMemStream
 30CShader_GetStaleBucket_Request
 30CShader_RegisterShader_Request
 30CSteamOSSLS_SetEnabled_Request
@@ -13616,6 +13618,7 @@ CGameStreamManager::OnRemoteClientInputSettingsChange
 CGameStreamManager::OnRemoteClientRemotePlayBitrateOverride
 CGameStreamManager::OnRemoteClientRemotePlayQualityOverride
 CGameStreamManager::OnRemoteClientRemotePlayTogetherPlayerJoined
+CGameStreamManager::OnRemoteClientRemotePlayTogetherSharedMemoryInput
 CGameStreamManager::OnRemoteClientRemotePlayUIMovedController
 CGameStreamManager::OnRemoteClientRemotePlayUpdateComplete
 CGameStreamManager::OnRemoteClientStartStream
@@ -20064,6 +20067,7 @@ Mandaic
 MangirKart
 Manifest unavailable
 ManifestSignature
+Manual recording for game %s, no retention interval
 ManualGPUClock
 ManualGPUClockMax
 ManualGPUClockMin
@@ -20456,6 +20460,7 @@ N18CGameStreamManager59CCallbackInternal_OnRemoteClientRemotePlayUIMovedControll
 N18CGameStreamManager60CCallbackInternal_OnRemoteClientRemotePlayTogetherPlayerLeftE
 N18CGameStreamManager61CCallbackInternal_OnStreamingControllerPersonalizationUpdatedE
 N18CGameStreamManager62CCallbackInternal_OnRemoteClientRemotePlayTogetherPlayerJoinedE
+N18CGameStreamManager67CCallbackInternal_OnRemoteClientRemotePlayTogetherSharedMemoryInputE
 N18CGameStreamManager74CCallbackInternal_OnRemoteClientStreamingDesktopToRemotePlayTogetherChangeE
 N18CGameStreamSession16CRemoteHIDThreadE
 N18CGameStreamSession19CVirtualHereManagerE
@@ -21534,7 +21539,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 26 2024 00:12:46
+Nov 27 2024 22:06:09
 November
 NrZl
 Num Lock
@@ -23148,7 +23153,7 @@ ResumeAppSession
 ResumeProcess
 Retail
 RetailInstall
-Retention interval for game %s is %u seconds
+Retention interval for background recording game %s is %u seconds
 Retired
 Retro-bit Controller
 Reusing HTTP connection (%p) for %s\n
@@ -24596,6 +24601,7 @@ SteamOSTelemetry: set plugin enabled: %d->%d
 SteamPipeWorkStatsReport
 SteamProcessRecording
 SteamRealPath
+SteamRemotePlayInput
 SteamRuntimeEnabled
 SteamRuntimeVersion
 SteamServiceCheck
@@ -28769,7 +28775,6 @@ Zulu
 \r*7dy^C
 \r0wJ
 \r1uI
-\r6pA
 \r7AO\n
 \r8STs\ne
 \r;)WEsa

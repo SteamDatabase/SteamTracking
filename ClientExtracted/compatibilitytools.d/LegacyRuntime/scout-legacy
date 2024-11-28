@@ -1,0 +1,5 @@
+#!/bin/sh
+# Compatibility tools are invoked from the legacy scout environment, so
+# if we want the game to run in the legacy scout environment, there's
+# no further setup to do
+exec "$@"

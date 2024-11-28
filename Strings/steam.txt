@@ -1457,7 +1457,6 @@ $d`D-laM
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:11:44
 01/01/00
 0123456789.
 0123456789.:abcdefABCDEF
@@ -1779,6 +1778,7 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
+22:04:47
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2610,7 +2610,7 @@ B-233
 B-283
 B-409
 B-571
-B00:12:07
+B22:05:10
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8534,7 +8534,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov 26 2024
+Nov 27 2024
 November
 NrZl
 NumTickets
@@ -10545,7 +10545,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Nov 26 2024 00:12:07
+Startup - updater built Nov 27 2024 22:05:10
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

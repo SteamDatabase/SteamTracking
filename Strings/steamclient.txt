@@ -99,6 +99,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123`
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -6164,8 +6165,8 @@ $tICAPIJobListHashLoadSave
 .EStreamFrameResult
 .EStreamHostPlayAudioPreference:
 .EStreamInterface
-.EStreamMouseButton"8\n
 .EStreamMouseButton"K\n
+.EStreamMouseButton"\\n
 .EStreamMouseWheelDirection
 .EStreamP2PScope:
 .EStreamQualityPreference:
@@ -7716,6 +7717,8 @@ $tICAPIJobListHashLoadSave
 10CUtlMemoryIN11CUtlHashMapIjPN12CUserFriends24FriendsWhoPlayGameData_tE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjPN14CCompatManager12AppMapping_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjPN14CCompatManager12AppMapping_tE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIjPN20CRemoteClientManager22RemotePlayCursorData_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIjPN20CRemoteClientManager22RemotePlayCursorData_tE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjPN25SteamNetworkingSocketsLib17SharedClusterDataESt8equal_toIjESt4hashIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjPN25SteamNetworkingSocketsLib17SharedClusterDataESt8equal_toIjESt4hashIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjPN25SteamNetworkingSocketsLib24CMessagesEndPointSessionESt8equal_toIjESt4hashIjEjE12HashBucket_tEE
@@ -8225,6 +8228,7 @@ $tICAPIJobListHashLoadSave
 10CUtlVectorIN11CUtlHashMapIjPN10ClFriend_t21AppRichPresenceInfo_tE10CDefEqualsIjE28HashFunctorUnpaddedStructureIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjPN12CUserFriends24FriendsWhoPlayGameData_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjPN14CCompatManager12AppMapping_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapIjPN20CRemoteClientManager22RemotePlayCursorData_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjPN25SteamNetworkingSocketsLib17SharedClusterDataESt8equal_toIjESt4hashIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjPN25SteamNetworkingSocketsLib24CMessagesEndPointSessionESt8equal_toIjESt4hashIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjPS0_Iiy10CDefEqualsIiE11HashFunctorIiEiES1_IjES3_IjEjE12HashBucket_tE10CUtlMemoryISA_EE
@@ -8472,6 +8476,7 @@ $tICAPIJobListHashLoadSave
 11CUtlHashMapIjPN10ClFriend_t21AppRichPresenceInfo_tE10CDefEqualsIjE28HashFunctorUnpaddedStructureIjEjE
 11CUtlHashMapIjPN12CUserFriends24FriendsWhoPlayGameData_tE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjPN14CCompatManager12AppMapping_tE10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIjPN20CRemoteClientManager22RemotePlayCursorData_tE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjPN25SteamNetworkingSocketsLib17SharedClusterDataESt8equal_toIjESt4hashIjEjE
 11CUtlHashMapIjPN25SteamNetworkingSocketsLib24CMessagesEndPointSessionESt8equal_toIjESt4hashIjEjE
 11CUtlHashMapIjPS_Iiy10CDefEqualsIiE11HashFunctorIiEiES0_IjES2_IjEjE
@@ -11139,6 +11144,7 @@ $tICAPIJobListHashLoadSave
 26CAdapterSteamNetworking006
 26CAdapterSteamRemotePlay001
 26CAdapterSteamRemotePlay002
+26CAdapterSteamRemotePlay003
 26CAppPrefetchUpdateInfosJob
 26CAuthenticationResponseMsg
 26CCacheOffSteamPlayStateJob
@@ -11638,6 +11644,8 @@ $tICAPIJobListHashLoadSave
 29CPublishedFile_Update_Request
 29CRebootIntoBootloaderWorkItem
 29CRemoteClientBroadcastHandler
+29CRemotePlayInputBaseMemStream
+29CRemotePlayInputGameMemStream
 29CRemoteStorageFileSyncContext
 29CServiceNotificationClientJob
 29CSetControllerSettingWorkItem
@@ -16073,6 +16081,7 @@ BDownloadsDisabled
 BEBGCZDKDEEEIEELGRESFRHRISITCYLILVLTLUHUMTNLNOATPLPTROSISKFISEUKABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 BEGIN
 BEnableEmbeddedClient
+BEnableRemotePlayTogetherInputEvents
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BEnumerateKey
 BEnumerateValue
@@ -16118,6 +16127,7 @@ BGetOfflineLogonTicket
 BGetParentalWebToken
 BGetProcessIDsForGame
 BGetRecoveryEmail
+BGetRemotePlayTogetherMouseCursor
 BGetSerializedParentalSettings
 BGetSessionClientResolution
 BGetStreamTransportSignal
@@ -16367,7 +16377,6 @@ BSetValueBin
 BSetValueStr
 BSetValueUint
 BShouldWaitForSteamStreamingEncoderConfig
-BStartRemotePlayTogether
 BStartStreaming
 BStartUpdateDepotsJob: %u missing required app %u
 BStarted()
@@ -20681,6 +20690,7 @@ CreateQueryAllUGCRequest
 CreateQueryUGCDetailsRequest
 CreateQueryUserUGCRequest
 CreateReconstructionContexts
+CreateRemotePlayTogetherMouseCursor
 CreateServerDataForCluster
 CreateSession
 CreateShareClip
@@ -21205,6 +21215,7 @@ DisableMoveApp
 DisableOverlay
 DisableOverlayInjection
 DisableParentalSettings
+DisableRemotePlayTogetherInputEvents
 DisableShaderReporting
 DisableTestLicense
 DisableWithRecoveryCode
@@ -30329,6 +30340,7 @@ STEAMPS3 - AsyncTCPSocket created
 STEAMPS3 - TCPPort::OnAcceptEvent (tcpport=%p), (socket=%p), (incoming.addr=%s)(incoming_=%u)\n
 STEAMREMOTEPLAY_INTERFACE_VERSION001
 STEAMREMOTEPLAY_INTERFACE_VERSION002
+STEAMREMOTEPLAY_INTERFACE_VERSION003
 STEAMREMOTESTORAGE_INTERFACE_VERSION001
 STEAMREMOTESTORAGE_INTERFACE_VERSION002
 STEAMREMOTESTORAGE_INTERFACE_VERSION003
@@ -31849,6 +31861,7 @@ SteamParties002
 SteamPipeWorkStatsReport
 SteamPipewireLoop
 SteamRealPath
+SteamRemotePlayInput
 SteamRuntimeSystemInfo
 SteamServerConnectFailure_t
 SteamServersConnectedPreAuthentication_t
@@ -46116,6 +46129,7 @@ key_up
 keyblob header parse error
 keyblob too short
 keyboard_enabled
+keycode
 keyfunc
 keygen failure
 keymap
@@ -46586,8 +46600,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6811
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2412
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3796
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2430
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3819
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:105
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3055
@@ -46941,6 +46955,7 @@ m_bUsedRelayOverride
 m_bWirelessDongle == GetSteamController()->BIsControllerWirelessDongle( GetControllerIndex() )
 m_bitsMigratedBuckets
 m_bufAuthToken
+m_bufBGRA
 m_bufBody
 m_bufBody.TellPut() == 0
 m_bufCachedData
@@ -47126,6 +47141,7 @@ m_hashPipes
 m_hashPipes[ iIndex ]
 m_hashRemotePlayInputSettings
 m_hashRemotePlayInviteJobs
+m_hashRemotePlayTogetherCursors
 m_hashRequestedTasks
 m_hashSessionData
 m_hashVRHeadsetStreamingOverride
@@ -53392,7 +53408,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Nov 26 2024 00:12:36
+steam Nov 27 2024 22:05:34
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
