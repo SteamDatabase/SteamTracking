@@ -2928,20 +2928,22 @@
             e != I && (e && e != K && F.AddImpression(e, N), A(e));
           }, [F, C, I, U, N]);
         const W = (e) => {
-          const r = x.OQ(C + (e ? 1 : -1), 0, U.length - 1);
-          r != C &&
-            (U[C] !== K &&
-              (P((e) => e + 1),
-              S.aI
-                .Get()
-                .SkipDiscoveryQueueItem(U[C], t, b)
-                .then(() => P((e) => e - 1))),
-            E(r),
-            Y("New selected index: ", r, " Prev selected index: ", C));
+          const t = x.OQ(C + (e ? 1 : -1), 0, U.length - 1);
+          t != C &&
+            (E(t), Y("New selected index: ", t, " Prev selected index: ", C));
         };
         n.useEffect(() => {
-          U.length != D && (T(U.length), U.length > D && U[C] == K && E(C + 1));
-        }, [D, C, U]);
+          U[C] !== K &&
+            (P((e) => e + 1),
+            S.aI
+              .Get()
+              .SkipDiscoveryQueueItem(U[C], t, b)
+              .then(() => P((e) => e - 1)));
+        }, [t, C, U, b]),
+          n.useEffect(() => {
+            U.length != D &&
+              (T(U.length), U.length > D && U[C] == K && E(C + 1));
+          }, [D, C, U]);
         const [z] = n.useState(new Map()),
           H = (0, S.WX)(t, b),
           j = !(0, O.c)() && C > 0,
