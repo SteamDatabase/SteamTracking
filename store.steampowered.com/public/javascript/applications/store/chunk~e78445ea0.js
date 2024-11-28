@@ -2933,7 +2933,8 @@
             (E(t), Y("New selected index: ", t, " Prev selected index: ", C));
         };
         n.useEffect(() => {
-          U[C] !== K &&
+          U?.length &&
+            U[C] !== K &&
             (P((e) => e + 1),
             S.aI
               .Get()

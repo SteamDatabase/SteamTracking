@@ -400,8 +400,9 @@
                     _.createElement(
                       "video",
                       {
+                        preload: "auto",
+                        playsInline: !0,
                         muted: !0,
-                        controls: !1,
                         autoPlay: !0,
                         loop: !0,
                         poster: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${g}/${k.item_image_large}`,
