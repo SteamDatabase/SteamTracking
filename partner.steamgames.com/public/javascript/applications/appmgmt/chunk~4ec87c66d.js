@@ -49765,23 +49765,14 @@
               l.createElement(bt, null),
             ),
             Boolean(!n) ? l.createElement(vt, null) : l.createElement(ft, null),
+            l.createElement("h3", null, "Promotion Plan Save Buttons"),
+            l.createElement(x.M, { oEditablePlan: t }),
           ),
           l.createElement(It, {
             bShowInternalControls: !1,
             bDisableRouting: !0,
             rgArtworkToDisplay: r,
           }),
-          l.createElement(
-            "div",
-            {
-              className: (0, E.A)(
-                c().DefaultSectionCtn,
-                c().ValveOnlyBackground,
-                c().ActionBar,
-              ),
-            },
-            l.createElement(x.M, { oEditablePlan: t }),
-          ),
         );
       }
       function vt(e) {
@@ -89459,8 +89450,11 @@
         return t?.[2];
       }
       function S(e) {
-        const t = e.match(h);
-        return t?.[2] && !isNaN(Number(t?.[2]));
+        if (e) {
+          const t = e.match(h);
+          return t?.[2] && !isNaN(Number(t?.[2]));
+        }
+        return !1;
       }
     },
     3173: (e, t, a) => {
