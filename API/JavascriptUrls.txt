@@ -1638,6 +1638,8 @@ ${STORE_ICON_BASE_URL}${}/
 ${STORE_ICON_BASE_URL}${}/${}
 ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ICON_BASE_URL}/${appid}/${}
+${STORE_ITEM_BASE_URL}${}
+${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${STORE_URL}app/730/CounterStrike_2/

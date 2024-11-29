@@ -56965,11 +56965,6 @@
                   },
                   name: { n: 6, br: d.qM.readString, bw: d.gp.writeString },
                   sort_as: { n: 7, br: d.qM.readString, bw: d.gp.writeString },
-                  capsule_filename: {
-                    n: 8,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
                   img_icon_hash: {
                     n: 9,
                     br: d.qM.readString,
@@ -92689,6 +92684,7 @@
             [w] = (0, f.G6)(t.id, (0, h.SW)(t.type), {
               include_release: !0,
               include_platforms: !0,
+              include_reviews: !0,
               include_tag_count: 20,
             }),
             [C] = (0, f.G6)(r.id, (0, h.SW)(r.type), { include_assets: !0 }),
