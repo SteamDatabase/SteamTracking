@@ -2749,8 +2749,8 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 img.package_header {
-	width: 586px;
-	height: 192px;
+	width: 100%;
+	height: auto;
 }
 
 .package_info_block {

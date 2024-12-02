@@ -354,18 +354,25 @@
     grid-template-areas: "capsule appInfo" "capsule tags" "review review" "relevance relevance";
   }
 }
-._uGgOnTsOzgIVK9BHMTUV {
+._2m8YEKXvKa2bcFNjqXdJu7 {
   grid-area: capsule;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+._2m8YEKXvKa2bcFNjqXdJu7 ._uGgOnTsOzgIVK9BHMTUV {
+  display: block;
+  position: relative;
   width: 100%;
   height: auto;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
 }
 .VVNgZo2T-rubrTvNMPSoh {
   grid-area: appInfo;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 .VVNgZo2T-rubrTvNMPSoh ._3lk6f1XI_loCIhBevOddHP {
   font-size: clamp(18px, 1.5vw, 40px);

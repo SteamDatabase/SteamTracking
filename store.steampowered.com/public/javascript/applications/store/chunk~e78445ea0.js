@@ -79,6 +79,7 @@
         FarRight: "hBGRzfrW2Obp7QpzYCi2L",
         AppDetailsCtn: "_2Zwt2P5vy4W9Ha5ePOv54U",
         AppDetailsCtnTop: "_3TkhdqIi1gqwMzexQDS8Ab",
+        CapsuleLink: "_2m8YEKXvKa2bcFNjqXdJu7",
         AppLibraryHero: "_uGgOnTsOzgIVK9BHMTUV",
         RightColumn: "VVNgZo2T-rubrTvNMPSoh",
         AppName: "_3lk6f1XI_loCIhBevOddHP",
@@ -628,8 +629,8 @@
             autoPlayCookieName: h,
             showScreenshotInsteadOfMainCap: S,
             nFadeRatio: C,
-            fnPlayPause: B,
-            refTogglePlayPause: E,
+            fnPlayPause: E,
+            refTogglePlayPause: B,
             bRequestPause: I,
             fnComplete: A,
             bLoopVideo: D,
@@ -683,8 +684,8 @@
             ie &&
             (e = 0 === Y || (1 === Y && !$) || (2 === Y && !te)),
             z(e),
-            B?.(P && e);
-        }, [B, Y, te, $, r, q, P, H, ie]),
+            E?.(P && e);
+        }, [E, Y, te, $, r, q, P, H, ie]),
           v(R, ee),
           v(M, re),
           n.useEffect(() => {
@@ -787,8 +788,8 @@
             }, [o, t, e, l, a, s, r, i]);
           })(I, Y, R.current, $, M.current, te, G),
           n.useEffect(() => {
-            E && (E.current = oe);
-          }, [oe, E]),
+            B && (B.current = oe);
+          }, [oe, B]),
           !t || !t.BIsVisible())
         )
           return null;
@@ -1046,55 +1047,55 @@
           return "CUserReviews_Update_Request";
         }
       }
-      class B extends S {
+      class E extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), S.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return B.toObject(e, this);
+          return E.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new B();
+          return new E();
         }
         static deserializeBinary(e) {
           let t = new h.BinaryReader(e),
-            r = new B();
-          return B.deserializeBinaryFromReader(r, t);
+            r = new E();
+          return E.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new h.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new h.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserReviews_Update_Response";
         }
       }
-      class E extends S {
+      class B extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            E.prototype.reaction_type || v.Sg(E.M()),
+            B.prototype.reaction_type || v.Sg(B.M()),
             S.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
                 fields: {
                   reaction_type: {
                     n: 1,
@@ -1104,39 +1105,39 @@
                   count: { n: 2, br: v.qM.readUint32, bw: v.gp.writeUint32 },
                 },
               }),
-            E.sm_m
+            B.sm_m
           );
         }
         static MBF() {
-          return E.sm_mbf || (E.sm_mbf = v.w0(E.M())), E.sm_mbf;
+          return B.sm_mbf || (B.sm_mbf = v.w0(B.M())), B.sm_mbf;
         }
         toObject(e = !1) {
-          return E.toObject(e, this);
+          return B.toObject(e, this);
         }
         static toObject(e, t) {
-          return v.BT(E.M(), e, t);
+          return v.BT(B.M(), e, t);
         }
         static fromObject(e) {
-          return v.Uq(E.M(), e);
+          return v.Uq(B.M(), e);
         }
         static deserializeBinary(e) {
           let t = new h.BinaryReader(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
+            r = new B();
+          return B.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return v.zj(E.MBF(), e, t);
+          return v.zj(B.MBF(), e, t);
         }
         serializeBinary() {
           var e = new h.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          v.i0(E.M(), e, t);
+          v.i0(B.M(), e, t);
         }
         serializeBase64String() {
           var e = new h.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserReviews_Recommendation_LoyaltyReaction";
@@ -1327,7 +1328,7 @@
                     br: v.qM.readInt32,
                     bw: v.gp.writeInt32,
                   },
-                  reactions: { n: 40, c: E, r: !0, q: !0 },
+                  reactions: { n: 40, c: B, r: !0, q: !0 },
                   ipaddress: {
                     n: 41,
                     br: v.qM.readString,
@@ -1712,7 +1713,7 @@
       var G;
       !(function (e) {
         (e.Update = function (e, t) {
-          return e.SendMsg("UserReviews.Update#1", (0, w.I8)(C, t), B, {
+          return e.SendMsg("UserReviews.Update#1", (0, w.I8)(C, t), E, {
             ePrivilege: 3,
           });
         }),
@@ -1910,13 +1911,13 @@
           C.isLoading
         )
           return n.createElement(L.t, { size: "medium", position: "center" });
-        let B = [];
+        let E = [];
         g.isSuccess &&
           g.data.arrSimilarPlayedApps &&
           g.data.arrSimilarPlayedApps.forEach((e) => {
             const r = p.A.Get().GetApp(e.appid);
             r
-              ? B.push(
+              ? E.push(
                   n.createElement(Z, {
                     key: e.appid,
                     lifetimePlaytime: e.playtimeForever,
@@ -1925,9 +1926,9 @@
                 )
               : console.error("Failed to load store data ", t);
           });
-        const E = b.GetItemIDs().findIndex((e) => e.appid === t),
+        const B = b.GetItemIDs().findIndex((e) => e.appid === t),
           I = g.data?.bRecommendedByIR,
-          A = B.length > 0,
+          A = E.length > 0,
           D = d.data?.owns?.length,
           T = d.data?.in_wishlist?.length,
           R = _.data?.accountids_recommended?.length;
@@ -1937,8 +1938,8 @@
           T > 0 && M++,
           R > 0 && M++,
           I && M++,
-          E >= 0 && M++,
-          B.length > 0 && M++,
+          B >= 0 && M++,
+          E.length > 0 && M++,
           o && h?.data?.length > 0 && M++,
           l && Boolean(S.data) && M++,
           O(
@@ -1971,7 +1972,7 @@
                       n.createElement(
                         "div",
                         { className: W().ReleventSimilarAppsCtn },
-                        B,
+                        E,
                       ),
                     ),
                   o &&
@@ -2004,11 +2005,11 @@
                   l &&
                     Boolean(S.data) &&
                     n.createElement(j, { creatorInfo: S.data }),
-                  E >= 0 &&
+                  B >= 0 &&
                     n.createElement($, {
                       header: (0, f.um)(
                         "#DiscoveryQueue_TopSellers",
-                        (E + 1).toLocaleString(),
+                        (B + 1).toLocaleString(),
                         n.createElement("span", {
                           className: W().RelevantTextBold,
                         }),
@@ -2231,7 +2232,7 @@
     },
     71922: (e, t, r) => {
       "use strict";
-      r.d(t, { E: () => B, g: () => C });
+      r.d(t, { E: () => E, g: () => C });
       var n = r(65946),
         a = r(90626),
         i = r(76217),
@@ -2254,10 +2255,10 @@
         S = r(62490);
       function C(e) {
         return (0, d.G)()
-          ? a.createElement(B, null, a.createElement(E, { ...e }))
+          ? a.createElement(E, null, a.createElement(B, { ...e }))
           : null;
       }
-      function B(e) {
+      function E(e) {
         const [t, r] = (0, s.L2)();
         let i = (0, n.q3)(() => r.ExcludedContentDescriptor),
           o = a.useMemo(() => ({ content_descriptors_excluded: i }), [i]);
@@ -2265,7 +2266,7 @@
           ? null
           : a.createElement(c.E2, { defaultOptions: o }, e.children);
       }
-      function E(e) {
+      function B(e) {
         const {
           eStoreDiscoveryQueueType: t,
           storePageFilter: r,
@@ -2274,9 +2275,9 @@
         } = e;
         let [d, b] = (0, a.useState)([]);
         const [v, S] = (0, a.useState)(!1),
-          [C, B] = (0, a.useState)(!1),
-          E = (0, y.Qn)(),
-          [D, T] = (0, a.useState)(!E),
+          [C, E] = (0, a.useState)(!1),
+          B = (0, y.Qn)(),
+          [D, T] = (0, a.useState)(!B),
           R = a.useRef(),
           M = a.useRef(0),
           G = a.useRef(performance.now()),
@@ -2322,9 +2323,9 @@
                       appID: d[0],
                     }),
                   ),
-                    P?.token?.reason || (k(t), B(!0));
+                    P?.token?.reason || (k(t), E(!0));
                 }
-                e && !P?.token?.reason && B(!0);
+                e && !P?.token?.reason && E(!0);
               })();
           }, [t, d, C, r, P?.token?.reason]),
           a.useEffect(() => {
@@ -2344,9 +2345,9 @@
           }, [R, C, D, v, M]);
         const Q = a.useCallback(
           (e) => {
-            E || T(e);
+            B || T(e);
           },
-          [E],
+          [B],
         );
         if (C && (!N || 0 === N.length)) return null;
         const L = () => {
@@ -2358,15 +2359,15 @@
         return a.createElement(
           m.J,
           { trigger: "repeated", onVisibilityChange: Q },
-          !E && a.createElement(A, null),
+          !B && a.createElement(A, null),
           a.createElement(
             i.Z,
             {
               focusable: !0,
               onGamepadFocus: () => T(!0),
-              onMouseEnter: () => E && T(!0),
+              onMouseEnter: () => B && T(!0),
               onGamepadBlur: () => T(!1),
-              onMouseLeave: () => E && T(!1),
+              onMouseLeave: () => B && T(!1),
               onOKButton: L,
               onOKActionDescription: (0, g.we)("#DiscoveryQueue_OpenWizard"),
               onClick: L,
@@ -2550,8 +2551,8 @@
         v = r(30143),
         S = r(39199),
         C = r(57834),
-        B = r.n(C),
-        E = r(20019),
+        E = r.n(C),
+        B = r(20019),
         I = r(62792),
         A = r(55263),
         D = r(80782),
@@ -2585,7 +2586,7 @@
           w = b?.ownerWindow || window,
           v = U(_, c, u, d),
           S = (0, G.ru)(J),
-          { bIsIgnored: C, fnUpdateIgnored: E } = (0, Q.TK)(t, S),
+          { bIsIgnored: C, fnUpdateIgnored: B } = (0, Q.TK)(t, S),
           { bIsWishlisted: I, fnUpdateWishlist: D } = (0, Q.u4)(t, S),
           T = n.useRef();
         if (
@@ -2601,7 +2602,7 @@
           {
             ref: T,
             style: R,
-            className: (0, y.A)(B().DiscoveryQueueApp, o && B().Selected),
+            className: (0, y.A)(E().DiscoveryQueueApp, o && E().Selected),
             onOptionsActionDescription: I
               ? (0, f.we)("#DiscoveryQueue_RemoveFromWishlist")
               : (0, f.we)("#DiscoveryQueue_AddToWishlist"),
@@ -2613,30 +2614,30 @@
             onSecondaryActionDescription: C
               ? (0, f.we)("#DiscoveryQueue_Undo")
               : (0, f.we)("#DiscoveryQueue_IgnoreLink"),
-            onSecondaryButton: E,
+            onSecondaryButton: B,
             fnScrollIntoViewHandler: () => (l(), !0),
           },
           n.createElement(
             "div",
-            { className: (0, y.A)(B().IgnoredCtn, C && B().Active) },
+            { className: (0, y.A)(E().IgnoredCtn, C && E().Active) },
             n.createElement(
               "div",
-              { className: (0, y.A)(B().IgnoredInfo, C && B().Active) },
+              { className: (0, y.A)(E().IgnoredInfo, C && E().Active) },
               n.createElement(
                 "div",
-                { className: B().IgnoredTitle },
+                { className: E().IgnoredTitle },
                 (0, f.we)("#DiscoveryQueue_Ignored"),
               ),
               n.createElement(
                 "div",
-                { className: B().IgnoredDescription },
+                { className: E().IgnoredDescription },
                 (0, f.we)("#DiscoveryQueue_IgnoredConfirmation"),
               ),
               n.createElement(
                 s.Z,
                 {
-                  className: (0, y.A)(B().QueueButton, B().UndoIgnoreButton),
-                  onClick: E,
+                  className: (0, y.A)(E().QueueButton, E().UndoIgnoreButton),
+                  onClick: B,
                 },
                 g &&
                   n.createElement(M.$m, {
@@ -2681,34 +2682,45 @@
         l.GetAssets().GetHeaderURL();
         return n.createElement(
           s.Z,
-          { className: B().AppDetailsCtn },
+          { className: E().AppDetailsCtn },
           n.createElement(
             "div",
-            { className: B().AppDetailsCtnTop },
+            { className: E().AppDetailsCtnTop },
             w &&
-              n.createElement("img", { className: B().AppLibraryHero, src: w }),
+              n.createElement(
+                "a",
+                { className: (0, y.A)(E().CapsuleLink), href: m },
+                n.createElement("img", {
+                  className: E().AppLibraryHero,
+                  src: w,
+                }),
+              ),
             n.createElement(
               "div",
-              { className: B().RightColumn },
-              n.createElement("div", { className: B().AppName }, l.GetName()),
+              { className: E().RightColumn },
+              n.createElement(
+                "a",
+                { className: (0, y.A)(E().AppName), href: m },
+                l.GetName(),
+              ),
               n.createElement(R.wc, {
                 bSingleLineMode: !0,
-                info: { id: t, type: (0, E.U)(l.GetAppType()) },
+                info: { id: t, type: (0, B.U)(l.GetAppType()) },
               }),
             ),
             n.createElement(z, { rgTagNames: b }),
             n.createElement(
               "div",
-              { className: B().AppReviews },
+              { className: E().AppReviews },
               n.createElement(T.Jz, {
                 bShowTooltip: !0,
                 bTruncateTotalReviews: r,
-                appInfo: { id: t, type: (0, E.U)(l.GetAppType()) },
+                appInfo: { id: t, type: (0, B.U)(l.GetAppType()) },
               }),
             ),
             n.createElement(
               "div",
-              { className: B().AppRelevanceCtn },
+              { className: E().AppRelevanceCtn },
               n.createElement(P.v, {
                 bShowAvatars: !r,
                 storeItem: l,
@@ -2719,13 +2731,13 @@
           !_ &&
             n.createElement(
               "div",
-              { className: B().AppActionButtonsCtn },
+              { className: E().AppActionButtonsCtn },
               n.createElement(
                 "div",
-                { className: B().AppActionJustButtonsCtn },
+                { className: E().AppActionJustButtonsCtn },
                 n.createElement(
                   "div",
-                  { className: B().ButtonsRowWrap },
+                  { className: E().ButtonsRowWrap },
                   l.BHasDemo() &&
                     n.createElement(k.j, {
                       info: {
@@ -2733,15 +2745,15 @@
                         type: (0, I._4)(l.GetStoreItemType(), l.GetAppType()),
                       },
                       className: (0, y.A)(
-                        B().QueueButton,
-                        B().Primary,
-                        B().Launch,
+                        E().QueueButton,
+                        E().Primary,
+                        E().Launch,
                       ),
                     }),
                   n.createElement(
                     "a",
                     {
-                      className: (0, y.A)(B().QueueButton, B().Primary),
+                      className: (0, y.A)(E().QueueButton, E().Primary),
                       href: m,
                     },
                     g &&
@@ -2749,7 +2761,7 @@
                         button: N.g4.Y,
                         type: M.wt.Light,
                         size: M.xY.Medium,
-                        additionalClassName: B().YGlyph,
+                        additionalClassName: E().YGlyph,
                       }),
                     " ",
                     (0, f.we)("#DiscoveryQueue_ViewStorePage"),
@@ -2765,7 +2777,7 @@
                       s.Z,
                       {
                         focusable: !0,
-                        className: (0, y.A)(B().QueueButton, u && B().Active),
+                        className: (0, y.A)(E().QueueButton, u && E().Active),
                         onClick: d,
                       },
                       g &&
@@ -2773,7 +2785,7 @@
                           button: N.g4.Y,
                           type: M.wt.Light,
                           size: M.xY.Medium,
-                          additionalClassName: B().YGlyph,
+                          additionalClassName: E().YGlyph,
                         }),
                       u
                         ? n.createElement(p.qnF, null)
@@ -2789,7 +2801,7 @@
                     },
                     n.createElement(
                       s.Z,
-                      { focusable: !0, className: B().QueueButton, onClick: c },
+                      { focusable: !0, className: E().QueueButton, onClick: c },
                       n.createElement(p.NtH, null),
                     ),
                   ),
@@ -2803,11 +2815,11 @@
           r = (0, Q.W3)(t);
         return n.createElement(
           "div",
-          { className: B().AppTagsCtn },
+          { className: E().AppTagsCtn },
           r.map((e) =>
             n.createElement(
               "div",
-              { key: e.name, className: B().TagEntry },
+              { key: e.name, className: E().TagEntry },
               e.name,
             ),
           ),
@@ -2888,7 +2900,7 @@
             storePageFilter: b,
             bPreferDemoStorePage: v,
           } = e,
-          [C, E] = n.useState(0),
+          [C, B] = n.useState(0),
           [I, A] = n.useState(void 0),
           [D, T] = n.useState(0),
           R = (0, a.R7)(),
@@ -2930,7 +2942,7 @@
         const W = (e) => {
           const t = x.OQ(C + (e ? 1 : -1), 0, U.length - 1);
           t != C &&
-            (E(t), Y("New selected index: ", t, " Prev selected index: ", C));
+            (B(t), Y("New selected index: ", t, " Prev selected index: ", C));
         };
         n.useEffect(() => {
           U?.length &&
@@ -2943,7 +2955,7 @@
         }, [t, C, U, b]),
           n.useEffect(() => {
             U.length != D &&
-              (T(U.length), U.length > D && U[C] == K && E(C + 1));
+              (T(U.length), U.length > D && U[C] == K && B(C + 1));
           }, [D, C, U]);
         const [z] = n.useState(new Map()),
           H = (0, S.WX)(t, b),
@@ -2990,7 +3002,7 @@
               handleTouchMove: p,
               handleTouchEnd: _,
             };
-          })((e) => E(e), U.length),
+          })((e) => B(e), U.length),
           le = (e) => x.W(C + e, U) && (x.LA(e, -1, 1) || $),
           ce = (0, q._)(h.TS.STORE_BASE_URL + "explore?dq=widget");
         return n.createElement(
@@ -3003,7 +3015,7 @@
               s.Z,
               {
                 focusable: !1,
-                className: B().DiscoveryQueueCarouselCtn,
+                className: E().DiscoveryQueueCarouselCtn,
                 navEntryPreferPosition: l.iU.LAST,
                 onCancelButton: () => o?.(),
                 onCancelActionDescription: (0, f.we)("#Button_Close"),
@@ -3011,38 +3023,38 @@
               n.createElement(
                 "div",
                 {
-                  className: B().DiscoveryQueueWrapper,
+                  className: E().DiscoveryQueueWrapper,
                   onClick: (e) => {
                     e.target == e.currentTarget && (o?.(), e.stopPropagation());
                   },
                 },
                 n.createElement(
                   s.Z,
-                  { "flow-children": "row", className: B().DiscoveryQueueName },
+                  { "flow-children": "row", className: E().DiscoveryQueueName },
                   H,
                 ),
                 n.createElement(
                   s.Z,
-                  { "flow-children": "row", className: B().TopBarCtn },
+                  { "flow-children": "row", className: E().TopBarCtn },
                   n.createElement(
                     s.Z,
-                    { className: B().LearnMore },
+                    { className: E().LearnMore },
                     (0, f.oW)(
                       "#DiscoveryQueue_LearnMore_Default",
                       n.createElement(i.Ii, {
-                        className: B().LearnMoreLink,
+                        className: E().LearnMoreLink,
                         href: ce,
                       }),
                     ),
                   ),
                   n.createElement(
                     s.Z,
-                    { className: B().ControlsCtn },
+                    { className: E().ControlsCtn },
                     n.createElement(
                       s.Z,
                       {
                         focusable: !0,
-                        className: B().QueueButton,
+                        className: E().QueueButton,
                         onClick: o,
                         onActivate: () => o && o(),
                       },
@@ -3055,9 +3067,9 @@
                   {
                     onClick: () => W(!1),
                     className: (0, y.A)(
-                      B().QueueNavArrow,
-                      B().LeftArrow,
-                      j && B().Enable,
+                      E().QueueNavArrow,
+                      E().LeftArrow,
+                      j && E().Enable,
                     ),
                   },
                   n.createElement(p.l8x, { angle: 180 }),
@@ -3067,9 +3079,9 @@
                   {
                     onClick: () => W(!0),
                     className: (0, y.A)(
-                      B().QueueNavArrow,
-                      B().RightArrow,
-                      V && B().Enable,
+                      E().QueueNavArrow,
+                      E().RightArrow,
+                      V && E().Enable,
                     ),
                   },
                   n.createElement(p.l8x, { angle: 0 }),
@@ -3078,7 +3090,7 @@
                   s.Z,
                   {
                     ref: Z,
-                    className: B().DiscoveryQueueItemsCtn,
+                    className: E().DiscoveryQueueItemsCtn,
                     focusable: !1,
                     onTouchStart: ae,
                     onTouchMove: ie,
@@ -3090,15 +3102,15 @@
                       {
                         key: C + e,
                         className: (0, y.A)({
-                          [B().DiscoveryQueueItemPositioner]: !0,
-                          [B().Dragging]: $,
-                          [B().InRange]: le(e),
-                          [B().FarLeft]: -2 == e,
-                          [B().Left]: -1 == e,
-                          [B().Current]: 0 == e,
-                          [B().Right]: 1 == e,
-                          [B().FarRight]: 2 == e,
-                          [B().Selected]: e + ne == 0,
+                          [E().DiscoveryQueueItemPositioner]: !0,
+                          [E().Dragging]: $,
+                          [E().InRange]: le(e),
+                          [E().FarLeft]: -2 == e,
+                          [E().Left]: -1 == e,
+                          [E().Current]: 0 == e,
+                          [E().Right]: 1 == e,
+                          [E().FarRight]: 2 == e,
+                          [E().Selected]: e + ne == 0,
                         }),
                         style: { "--dragOffsetX": `${te}px` },
                       },
@@ -3223,13 +3235,13 @@
             bSkipAppRequestPending: w,
           } = e,
           [v, C] = n.useState([]),
-          [E, I] = n.useState(!1),
+          [B, I] = n.useState(!1),
           A = (0, h.Qn)(),
           D = (0, H.Qt)(2, h.TS.LANGUAGE, !1);
         n.useEffect(() => {
           l &&
             !v.length &&
-            !E &&
+            !B &&
             (I(!0),
             c.Fm.Get()
               .HintLoad()
@@ -3241,7 +3253,7 @@
                     C(e), I(!1);
                   });
               }));
-        }, [E, t, v.length, l, d]);
+        }, [B, t, v.length, l, d]);
         const T = n.useMemo(
             () =>
               v?.reduce(
@@ -3275,9 +3287,9 @@
             {
               ref: L,
               className: (0, y.A)(
-                B().SummaryCtn,
-                B().DiscoveryQueueApp,
-                l && B().Selected,
+                E().SummaryCtn,
+                E().DiscoveryQueueApp,
+                l && E().Selected,
               ),
               onOptionsActionDescription: (0, f.we)(
                 "#DiscoveryQueue_ViewWishlist",
@@ -3298,10 +3310,10 @@
             },
             n.createElement(
               "div",
-              { className: B().SummaryContentCtn },
+              { className: E().SummaryContentCtn },
               n.createElement(
                 "div",
-                { className: B().SummaryTitle },
+                { className: E().SummaryTitle },
                 (0, f.we)("#DiscoveryQueue_SummaryTitle"),
               ),
               !P &&
@@ -3313,48 +3325,48 @@
                 }),
               n.createElement(
                 "div",
-                { className: B().YourStats },
+                { className: E().YourStats },
                 (0, f.we)("#DiscoveryQueue_YourStats"),
               ),
               n.createElement(
                 s.Z,
-                { "flow-children": "row", className: B().SummaryGrid },
+                { "flow-children": "row", className: E().SummaryGrid },
                 n.createElement(
                   "div",
-                  { className: B().GridItem },
+                  { className: E().GridItem },
                   n.createElement(
                     "div",
-                    { className: B().GridTitle },
+                    { className: E().GridTitle },
                     (0, f.we)("#DiscoveryQueue_ViewedCaps"),
                   ),
                   n.createElement(
                     "div",
-                    { className: B().GridNumber },
+                    { className: E().GridNumber },
                     p.toLocaleString(),
                   ),
                   n.createElement(
                     "div",
-                    { className: B().GridSubTitle },
+                    { className: E().GridSubTitle },
                     (0, f.we)("#DiscoveryQueue_Titles"),
                   ),
                 ),
                 n.createElement(
                   "div",
-                  { className: B().GridItem },
+                  { className: E().GridItem },
                   n.createElement(
                     "div",
-                    { className: B().GridTitle },
+                    { className: E().GridTitle },
                     (0, f.we)("#DiscoveryQueue_WishlistedCaps"),
                   ),
                   n.createElement(
                     "div",
-                    { className: B().GridNumber },
+                    { className: E().GridNumber },
                     T.toLocaleString(),
                   ),
                   n.createElement(
                     "a",
                     {
-                      className: (0, y.A)(B().GridSubTitle, B().TextLink),
+                      className: (0, y.A)(E().GridSubTitle, E().TextLink),
                       href: (0, q._)(h.TS.STORE_BASE_URL + "wishlist", k),
                     },
                     (0, f.we)("#DiscoveryQueue_ViewWishlist"),
@@ -3362,21 +3374,21 @@
                 ),
                 n.createElement(
                   "div",
-                  { className: B().GridItem },
+                  { className: E().GridItem },
                   n.createElement(
                     "div",
-                    { className: B().GridTitle },
+                    { className: E().GridTitle },
                     (0, f.we)("#DiscoveryQueue_IgnoredCaps"),
                   ),
                   n.createElement(
                     "div",
-                    { className: B().GridNumber },
+                    { className: E().GridNumber },
                     R.toLocaleString(),
                   ),
                   n.createElement(
                     "a",
                     {
-                      className: (0, y.A)(B().GridSubTitle, B().TextLink),
+                      className: (0, y.A)(E().GridSubTitle, E().TextLink),
                       href: (0, q._)(
                         h.TS.STORE_BASE_URL + "account/notinterested",
                         k,
@@ -3389,11 +3401,11 @@
               !A &&
                 n.createElement(
                   s.Z,
-                  { className: B().SummaryActionButtonsCtn },
+                  { className: E().SummaryActionButtonsCtn },
                   n.createElement(
                     s.Z,
                     {
-                      className: (0, y.A)(B().QueueButton, B().Wide),
+                      className: (0, y.A)(E().QueueButton, E().Wide),
                       onClick: r,
                     },
                     (0, f.we)("#ActionButtonLabelDone"),
@@ -3403,10 +3415,10 @@
                       s.Z,
                       {
                         className: (0, y.A)(
-                          M && B().Disabled,
-                          B().QueueButton,
-                          B().Primary,
-                          B().Wide,
+                          M && E().Disabled,
+                          E().QueueButton,
+                          E().Primary,
+                          E().Wide,
                         ),
                         onClick: Q,
                       },
@@ -3422,7 +3434,7 @@
       function ae() {
         return n.createElement(
           s.Z,
-          { className: B().SaleRewardsCtn },
+          { className: E().SaleRewardsCtn },
           n.createElement(Z.t, { size: "large", position: "center" }),
         );
       }
@@ -3444,14 +3456,14 @@
           c = (i / o) * 100;
         return n.createElement(
           s.Z,
-          { className: B().SaleRewardsCtn },
+          { className: E().SaleRewardsCtn },
           n.createElement(V, { nPercent: c, size: 70, strokeWidth: 12 }),
           n.createElement(
             s.Z,
-            { className: B().RewardStatusCtn },
+            { className: E().RewardStatusCtn },
             n.createElement(
               "div",
-              { className: B().SaleRewardAppTitle },
+              { className: E().SaleRewardAppTitle },
               (0, f.we)(
                 "#DiscoveryQueue_SaleStatus_Title" + (l ? "" : "_Complete"),
                 i.toLocaleString(),
@@ -3461,7 +3473,7 @@
             l > 0 &&
               n.createElement(
                 "div",
-                { className: B().SaleRewardAppTitle },
+                { className: E().SaleRewardAppTitle },
                 (0, f.we)(
                   "#DiscoveryQueue_SaleStatus_Desc",
                   l.toLocaleString(),
@@ -3494,16 +3506,16 @@
             n.createElement("img", {
               key: "dot_" + e,
               className: (0, y.A)({
-                [B().ProgressDot]: !0,
-                [B().ProgressDotActive]: e <= t,
-                [B().ProgressDotHidden]: r[t] === K,
+                [E().ProgressDot]: !0,
+                [E().ProgressDotActive]: e <= t,
+                [E().ProgressDotHidden]: r[t] === K,
               }),
               src: v.A,
             }),
           );
         return n.createElement(
           s.Z,
-          { "flow-children": "row", className: B().ProgressCtn },
+          { "flow-children": "row", className: E().ProgressCtn },
           o,
         );
       });
@@ -3568,8 +3580,8 @@
             refTogglePlayPause: v,
             bRequestPause: S,
             fnComplete: C,
-            loopVideo: B,
-            defaultVolume: E,
+            loopVideo: E,
+            defaultVolume: B,
           } = e,
           [I] = (0, p.t7)(t, _),
           { bIsIgnored: A } = y(t, a),
@@ -3602,8 +3614,8 @@
             refTogglePlayPause: v,
             bRequestPause: S,
             fnComplete: C,
-            bLoopVideo: B,
-            nDefaultVolume: E,
+            bLoopVideo: E,
+            nDefaultVolume: B,
           }),
         );
       }
