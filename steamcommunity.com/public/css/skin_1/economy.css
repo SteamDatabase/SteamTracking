@@ -650,7 +650,7 @@ body.compact_trading_ui .appselect {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	
+
 	background-image: radial-gradient(90px 110px, circle closest-corner, #333, #1D1D1D);
 	background-image: -moz-radial-gradient(90px 110px, circle closest-corner, #333, #1D1D1D);
 	background-image: -webkit-radial-gradient(90px 110px, circle closest-corner, #333, #1D1D1D);
@@ -665,7 +665,7 @@ body.compact_trading_ui .appselect {
 .market_dialog_title_cancel_X {
 	position: relative;
 	top: -1px;
-	
+
 	margin-left: 10px;
 	color: #C4C4C4;
 	font-size: 14pt;
@@ -1001,6 +1001,10 @@ a.item_market_action_button {
 	background-color: #2B475E;
 }
 
+.market_listing_row_action:hover > a {
+	background-color: #2B475E;
+}
+
 .item_market_action_button_edit {
 	height: 30px;
 	line-height: 30px;
@@ -1222,7 +1226,7 @@ a.game_button {
 	top: 1px;
 	width: 16px;
 	height: 16px;
-	
+
 	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_warning.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
