@@ -7407,6 +7407,7 @@
           return this.jsondata.sale_vanity_id;
         }
         GetSaleURL() {
+          if (!this.jsondata.bSaleEnabled) return null;
           if (!Boolean(this.jsondata.sale_vanity_id))
             return (
               S.TS.STORE_BASE_URL +
@@ -28514,13 +28515,26 @@
     },
     10224: (e, t, r) => {
       "use strict";
-      r.d(t, { c: () => n });
-      r(90626);
-      var i = r(45387),
-        a = r.n(i);
-      r(73745);
-      function n() {
-        return window.innerWidth < parseInt(a().strMaxMobileWidth);
+      r.d(t, { c: () => o, z: () => l });
+      var i = r(90626),
+        a = r(45387),
+        n = r.n(a),
+        s = r(73745);
+      function o() {
+        return window.innerWidth < parseInt(n().strMaxMobileWidth);
+      }
+      function l() {
+        const e = (0, s.CH)();
+        return (
+          i.useEffect(
+            () => (
+              window.addEventListener("resize", e),
+              () => window.removeEventListener("resize", e)
+            ),
+            [e],
+          ),
+          window.innerWidth < parseInt(n().strMaxMobileWidth)
+        );
       }
     },
     48211: (e, t, r) => {

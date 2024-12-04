@@ -2368,8 +2368,47 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
 .BasicUI .ContentHubSalePage .partnereventshared_SaleSectionHeader_2WMiQ {
   padding-left: 0px;
 }
-.partnereventshared_SaleSectionHeader_2WMiQ img {
+.partnereventshared_SaleSectionHeader_2WMiQ
+  .partnereventshared_SaleImageCtn_1_lNQ {
+  position: relative;
+}
+.partnereventshared_SaleSectionHeader_2WMiQ
+  .partnereventshared_SaleImageCtn_1_lNQ
+  .partnereventshared_SaleImageHelper_12S7L {
+  opacity: 0;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  text-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  padding: 2px 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  transition: opacity .2s ease-out, transform .2s ease-out;
+}
+.partnereventshared_SaleSectionHeader_2WMiQ
+  .partnereventshared_SaleImageCtn_1_lNQ
+  img {
   max-width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  transition: box-shadow .2s ease-out;
+}
+.partnereventshared_SaleSectionHeader_2WMiQ
+  .partnereventshared_SaleImageCtn_1_lNQ:hover
+  img {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.7);
+}
+.partnereventshared_SaleSectionHeader_2WMiQ
+  .partnereventshared_SaleImageCtn_1_lNQ:hover
+  .partnereventshared_SaleImageHelper_12S7L {
+  transform: translateX(-50%) translateY(-10px);
+  opacity: 1;
 }
 .partnereventshared_SaleSectionHeader_2WMiQ span {
   color: #fff;

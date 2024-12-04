@@ -3416,19 +3416,20 @@
                     1,
                   ),
                 ),
-                n.createElement(
-                  K.$n,
-                  {
-                    onClick: () =>
-                      i({ ...o, background_color1: u, background_color2: d }),
-                  },
-                  (0, S.we)("#BackgroundGroups_Color_Swap"),
-                ),
+                " ",
                 n.createElement(
                   K.$n,
                   { onClick: () => i({ ...o, background_color1: void 0 }) },
                   (0, S.we)("#BackgroundGroups_Color_Clear"),
                 ),
+              ),
+              n.createElement(
+                K.$n,
+                {
+                  onClick: () =>
+                    i({ ...o, background_color1: u, background_color2: d }),
+                },
+                (0, S.we)("#BackgroundGroups_Color_Swap"),
               ),
               Boolean("single-color" !== p) &&
                 n.createElement(
@@ -3455,6 +3456,7 @@
                       2,
                     ),
                   ),
+                  " ",
                   n.createElement(
                     K.$n,
                     { onClick: () => i({ ...o, background_color2: void 0 }) },

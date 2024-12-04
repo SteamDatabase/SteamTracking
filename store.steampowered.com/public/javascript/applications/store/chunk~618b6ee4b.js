@@ -5769,13 +5769,18 @@
               style: T(t, a, n),
             },
             y?.BHasSomeImage("product_banner")
-              ? r.createElement("img", {
-                  src: y.GetImageURLWithFallback(
-                    u ? "product_mobile_banner" : "product_banner",
-                    n,
-                  ),
-                  alt: C,
-                })
+              ? r.createElement(
+                  "div",
+                  { className: d().SaleImageCtn },
+                  r.createElement("div", { className: d().SaleImageHelper }, C),
+                  r.createElement("img", {
+                    src: y.GetImageURLWithFallback(
+                      u ? "product_mobile_banner" : "product_banner",
+                      n,
+                    ),
+                    alt: C,
+                  }),
+                )
               : C,
           ),
           G = r.createElement(

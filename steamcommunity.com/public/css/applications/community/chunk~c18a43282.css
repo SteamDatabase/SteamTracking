@@ -1710,7 +1710,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   background: linear-gradient(to bottom, #3b3b3b 5%, #171717 95%);
   border-top-right-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  margin: 8px;
+  margin: 8px 0;
 }
 .BasicUI ._2hhNOdcC6yLwL_rugP3YLf.PZY_7wH_NY7OgzH9MBiB8 {
   box-shadow: var(--gpShadow-Medium);
@@ -5044,9 +5044,6 @@ html.responsive.touch .ContentHubSalePage {
   padding: 16px var(--gpSpace-Gutter);
   max-width: 100%;
 }
-._1cOoCFwafBlSkwllIMf3XM.mntHD0WiARnsfz_kMYssq {
-  max-width: 950px;
-}
 .BasicUI ._1cOoCFwafBlSkwllIMf3XM.mntHD0WiARnsfz_kMYssq {
   max-width: unset;
 }
@@ -5151,7 +5148,7 @@ html.responsive.touch .ContentHubSalePage {
 ._2H8BmYvTdIYKMgG-XiCkc- {
   flex-grow: 2;
   flex-basis: 0;
-  padding: 8px;
+  padding: 8px 0;
 }
 .BasicUI ._2H8BmYvTdIYKMgG-XiCkc- {
   flex-grow: 0;
@@ -5268,7 +5265,7 @@ html.responsive.touch .ContentHubSalePage {
 .W9_WAYXgEe-t-7aqqC4Jp {
   display: grid;
   grid-gap: 16px;
-  padding-bottom: 14px;
+  padding: 0 8px 14px 8px;
 }
 .compactlist .W9_WAYXgEe-t-7aqqC4Jp {
   padding-bottom: 2px;
@@ -5625,8 +5622,6 @@ html.tablet
   max-width: 1100px;
 }
 .HlkukqE4fB5si76sBJzKX {
-  padding-left: 8px;
-  padding-right: 8px;
   min-width: 0;
   flex-shrink: 0;
 }
