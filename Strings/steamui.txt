@@ -74,11 +74,7 @@
  (Unicast/Multicast)
  (Unknown SAFI %u)
  (VPLS)
- (display)
  (dropped)
- (encode)
- (game)
- (network)
  (pipe is disconnected)
  (repeat period: %lldms)
  (wireless)
@@ -961,6 +957,7 @@
 #.CTimedTrial_RecordPlaytime_Request
 #.CTimedTrial_ResetPlaytime_Response"
 #2=IVanw
+#2qA
 #3CScs
 #:*S8,}gNzl
 #<CRemoteSteamAppMgr::OnRemoteClientAppStateChanged
@@ -1431,6 +1428,7 @@ $3br
 $4DTdt
 $6HZl~
 $AYn
+$BqA
 $CSettingsPanelGameController.Timeout
 $CSettingsPanelGameController.TurnOff
 $Customization/StartupMovie/LocalPath
@@ -1705,6 +1703,7 @@ ${LANGUAGE}
 %Y-%m-%d %H:%M:%S
 %Y-%m-%dT%H:%M:%S+00:00
 %Y-%m-%dT%H:%M:%SZ
+%ZqA
 %\n k_EMsgAMAccountPS3UnlinkResponse
 %\n k_EMsgAMAuthenticateUserResponse
 %\n k_EMsgAMBoaCompraPaymentResponse
@@ -5537,8 +5536,8 @@ ${LANGUAGE}
 .EStreamFrameResult
 .EStreamHostPlayAudioPreference:
 .EStreamInterface
+.EStreamMouseButton"8\n
 .EStreamMouseButton"K\n
-.EStreamMouseButton"\\n
 .EStreamMouseWheelDirection
 .EStreamP2PScope:
 .EStreamQualityPreference:
@@ -6207,6 +6206,7 @@ ${LANGUAGE}
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_uv.cc
 /index.html
+/oqA
 /org/bluez
 /org/freedeskop/DBus
 /org/freedesktop/UDisks2
@@ -7284,7 +7284,6 @@ ${LANGUAGE}
 13CCallbackImplILi84EE
 13CCallbackImplILi88EE
 13CCallbackImplILi8EE
-13CCallbackImplILi9EE
 13CChatMentions
 13CCloudManager
 13CDebugDumpMsg
@@ -8880,7 +8879,6 @@ ${LANGUAGE}
 29CPlayer_RemoveFriend_Response
 29CPublishedFile_Delete_Request
 29CPublishedFile_Update_Request
-29CRemotePlayInputBaseMemStream
 29CSettingsValidationController
 29CSteamOSSLS_GetState_Response
 29CSteamTV_GetChannels_Response
@@ -9048,7 +9046,6 @@ ${LANGUAGE}
 30CPublishedFile_Delete_Response
 30CPublishedFile_Publish_Request
 30CPublishedFile_Update_Response
-30CRemotePlayInputSteamMemStream
 30CShader_GetStaleBucket_Request
 30CShader_RegisterShader_Request
 30CSteamOSSLS_SetEnabled_Request
@@ -10801,6 +10798,7 @@ ${LANGUAGE}
 5\n\vStoreFilter
 5\n\vnested_type
 5\n\vsale_filter
+5\rrA
 5\tuy
 5i]lX
 5mF\tfE
@@ -13618,7 +13616,6 @@ CGameStreamManager::OnRemoteClientInputSettingsChange
 CGameStreamManager::OnRemoteClientRemotePlayBitrateOverride
 CGameStreamManager::OnRemoteClientRemotePlayQualityOverride
 CGameStreamManager::OnRemoteClientRemotePlayTogetherPlayerJoined
-CGameStreamManager::OnRemoteClientRemotePlayTogetherSharedMemoryInput
 CGameStreamManager::OnRemoteClientRemotePlayUIMovedController
 CGameStreamManager::OnRemoteClientRemotePlayUpdateComplete
 CGameStreamManager::OnRemoteClientStartStream
@@ -16346,6 +16343,7 @@ Debit Card (Nodwin)
 Debug Stats View
 DebugStatsChart
 DebugStatsSystem
+Dec  2 2024 21:26:40
 December
 Decipher Only
 DeclareCurrentThreadIsMainThread
@@ -20460,7 +20458,6 @@ N18CGameStreamManager59CCallbackInternal_OnRemoteClientRemotePlayUIMovedControll
 N18CGameStreamManager60CCallbackInternal_OnRemoteClientRemotePlayTogetherPlayerLeftE
 N18CGameStreamManager61CCallbackInternal_OnStreamingControllerPersonalizationUpdatedE
 N18CGameStreamManager62CCallbackInternal_OnRemoteClientRemotePlayTogetherPlayerJoinedE
-N18CGameStreamManager67CCallbackInternal_OnRemoteClientRemotePlayTogetherSharedMemoryInputE
 N18CGameStreamManager74CCallbackInternal_OnRemoteClientStreamingDesktopToRemotePlayTogetherChangeE
 N18CGameStreamSession16CRemoteHIDThreadE
 N18CGameStreamSession19CVirtualHereManagerE
@@ -21539,7 +21536,6 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 27 2024 22:06:09
 November
 NrZl
 Num Lock
@@ -24601,7 +24597,6 @@ SteamOSTelemetry: set plugin enabled: %d->%d
 SteamPipeWorkStatsReport
 SteamProcessRecording
 SteamRealPath
-SteamRemotePlayInput
 SteamRuntimeEnabled
 SteamRuntimeVersion
 SteamServiceCheck
@@ -27560,6 +27555,7 @@ Zulu
 \n?CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 \n@CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nOpA
 \nParsing attempt:  
 \nSteam logging initialized: directory: %s\n\n
 \nW2a
@@ -28802,6 +28798,7 @@ Zulu
 \ri1I
 \rmj>zjZ
 \royCU
+\rvpA
 \sG7tPD
 \t#\t%\t+\t/\t5\tC\tI\tM\tO\tU\tY\t_\tk\tq\tw\t
 \t(%zu) comparing %s with %s\n
@@ -28815,6 +28812,7 @@ Zulu
 \t6trF
 \t>gPpG
 \t?5+!ic}wAKU_93-'
+\tBpA
 \tCache cracker:\t%u\n
 \tCache version:\t%u\n
 \tHAI8xpH\f

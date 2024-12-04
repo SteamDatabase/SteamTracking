@@ -712,6 +712,7 @@ $\n k_SystemAudioPortDirection_Input
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0\n\nrouting_gc
+0q+v
 0x%llx
 1000
 10BlankImage
@@ -1065,6 +1066,7 @@ $\n k_SystemAudioPortDirection_Input
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:26:33
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1078,7 +1080,6 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:05:32
 22CClanMatchEventByRange
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
@@ -2155,6 +2156,7 @@ Data Exploit
 Deaccel
 Debit Card (Nodwin)
 Debug
+Dec  2 2024
 December
 Default value for an enum field must be an identifier.
 DefaultFixed
@@ -3585,7 +3587,6 @@ Not released
 Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 27 2024
 November
 Num Lock
 Num Lock Toggle
@@ -7539,7 +7540,6 @@ y_local
 year
 yhotspot
 ypos
-zX8Z
 zoom
 zpos
 {default arg#

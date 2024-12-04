@@ -1772,13 +1772,13 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:25:48
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
-22:04:47
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2610,7 +2610,7 @@ B-233
 B-283
 B-409
 B-571
-B22:05:10
+B21:26:11
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -6421,6 +6421,7 @@ DbUseIOCP
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
+Dec  2 2024
 December
 Decipher Only
 Default
@@ -8534,7 +8535,6 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov 27 2024
 November
 NrZl
 NumTickets
@@ -10545,7 +10545,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Nov 27 2024 22:05:10
+Startup - updater built Dec  2 2024 21:26:10
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

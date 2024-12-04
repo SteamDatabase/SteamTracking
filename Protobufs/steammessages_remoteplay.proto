@@ -571,15 +571,11 @@ message CInputMouseUpMsg {
 message CInputKeyDownMsg {
 	optional uint32 input_mark = 1;
 	required uint32 scancode = 2;
-	optional uint32 modifiers = 3;
-	optional uint32 keycode = 4;
 }
 
 message CInputKeyUpMsg {
 	optional uint32 input_mark = 1;
 	required uint32 scancode = 2;
-	optional uint32 modifiers = 3;
-	optional uint32 keycode = 4;
 }
 
 message CInputTextMsg {

@@ -750,8 +750,8 @@ $\n k_SystemAudioPortDirection_Input
 .EStreamFrameEvent
 .EStreamFrameResult
 .EStreamHostPlayAudioPreference:
+.EStreamMouseButton"8\n
 .EStreamMouseButton"K\n
-.EStreamMouseButton"\\n
 .EStreamMouseWheelDirection
 .EStreamP2PScope:
 .EStreamQualityPreference:
@@ -6307,7 +6307,6 @@ key_down
 key_up
 keyboard_enabled
 keyboardinputenabled
-keycode
 keymap
 keyword "@1": bad character '0x@2'
 keyword truncated
