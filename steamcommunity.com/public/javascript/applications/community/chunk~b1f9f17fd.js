@@ -22364,7 +22364,8 @@
                         n.data.match.featured_app_tagid,
                       ),
                     }
-                  : null;
+                  : (404 == (null == n ? void 0 : n.status) && n.data.success,
+                    null);
               },
               enabled: Boolean(jn(e)),
             });
@@ -22480,14 +22481,19 @@
       }
       function Wn(e) {
         const { nClanAccountID: t, gidClanEvent: a } = e,
-          { eventModel: n, bLoading: r, sErrorMessage: i } = (0, Un.B9)(t, a),
-          o = (0, b.E)();
+          {
+            eventModel: n,
+            bLoading: r,
+            sErrorMessage: i,
+            eResult: o,
+          } = (0, Un.B9)(t, a),
+          s = (0, b.E)();
         if (r)
           return d.createElement($.t, {
             string: (0, _.we)("#Sale_CrossPromoSale_Loading"),
             size: "small",
           });
-        if (i)
+        if (i && 42 != o)
           return d.createElement(
             "div",
             null,
@@ -22495,7 +22501,8 @@
             " ",
             i,
           );
-        const s = n.GetImageURLWithFallback("product_banner", o);
+        const l =
+          null == n ? void 0 : n.GetImageURLWithFallback("product_banner", s);
         return d.createElement(
           "div",
           null,
@@ -22513,11 +22520,11 @@
                   null,
                   (0, _.we)(
                     "#Sale_CrossPromoSale_PageTitle",
-                    n.GetNameWithFallback(o),
+                    n.GetNameWithFallback(s),
                   ),
                 ),
-                s
-                  ? d.createElement("img", { src: s })
+                l
+                  ? d.createElement("img", { src: l })
                   : d.createElement(
                       "div",
                       null,

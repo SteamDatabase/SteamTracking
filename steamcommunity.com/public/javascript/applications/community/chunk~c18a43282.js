@@ -7905,18 +7905,19 @@
         const [i, l] = (0, a.useState)(n.O3.GetClanEventModel(t)),
           [c, d] = (0, a.useState)(!!e && !!t),
           [m, u] = (0, a.useState)(),
-          p = (0, s.m)("usePartnerEventByClanAccountAndEventGID");
+          [p, _] = (0, a.useState)(1),
+          g = (0, s.m)("usePartnerEventByClanAccountAndEventGID");
         return (
           (0, a.useEffect)(() => {
             (async () => {
-              var a, s;
+              var a, s, c, m;
               try {
                 if ((null == i ? void 0 : i.GID) != t && t) {
                   n.O3.Init();
                   const i = o.b.InitFromClanID(e);
-                  let c;
+                  let d;
                   try {
-                    c =
+                    d =
                       await n.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                         i,
                         t,
@@ -7933,16 +7934,26 @@
                             : a.data) || void 0 === s
                         ? void 0
                         : s.err_msg,
-                    );
+                    ),
+                      _(
+                        (null ===
+                          (m =
+                            null === (c = null == e ? void 0 : e.response) ||
+                            void 0 === c
+                              ? void 0
+                              : c.data) || void 0 === m
+                          ? void 0
+                          : m.success) || 2,
+                      );
                   }
-                  p.token.reason || l(c);
+                  g.token.reason || l(d);
                 }
               } finally {
                 d(!1);
               }
             })();
-          }, [e, t, i, r, p]),
-          { eventModel: i, bLoading: c, sErrorMessage: m }
+          }, [e, t, i, r, g]),
+          { eventModel: i, bLoading: c, sErrorMessage: m, eResult: p }
         );
       }
     },
