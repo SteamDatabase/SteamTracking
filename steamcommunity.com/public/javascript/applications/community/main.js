@@ -49382,11 +49382,23 @@
           !Number.isNaN(Number.parseFloat(e))
         );
       }
+      function u(e) {
+        if (!/^-?\d+$/.test(e)) return !1;
+        const t = BigInt("-9223372036854775808"),
+          r = BigInt("9223372036854775807");
+        try {
+          const i = BigInt(e);
+          return i >= t && i <= r;
+        } catch (e) {
+          return !1;
+        }
+      }
       r.d(t, {
         Fu: () => o,
         LA: () => s,
         OQ: () => n,
         Tg: () => i,
+        Un: () => u,
         W: () => a,
         bT: () => l,
         kf: () => c,
