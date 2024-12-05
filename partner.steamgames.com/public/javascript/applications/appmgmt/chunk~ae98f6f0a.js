@@ -3122,6 +3122,11 @@
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
                   },
+                  allow_late_firing: {
+                    n: 3,
+                    br: a.qM.readBool,
+                    bw: a.gp.writeBool,
+                  },
                 },
               }),
             ie.sm_m
@@ -3253,6 +3258,11 @@
                     n: 2,
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
+                  },
+                  allow_late_firing: {
+                    n: 3,
+                    br: a.qM.readBool,
+                    bw: a.gp.writeBool,
                   },
                 },
               }),
