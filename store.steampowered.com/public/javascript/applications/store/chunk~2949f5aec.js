@@ -86,7 +86,7 @@
       "use strict";
       n.d(t, { K0: () => i, OJ: () => a, R8: () => s });
       var o = n(81393),
-        r = n(34062);
+        r = n(90626);
       class s {
         reactNodes = [];
         AppendText(e, t = !1) {
@@ -155,7 +155,7 @@
       "use strict";
       n.d(t, { B: () => l });
       var o = n(22837),
-        r = n(34062),
+        r = n(90626),
         s = n(42780);
       class i {
         type = 0;

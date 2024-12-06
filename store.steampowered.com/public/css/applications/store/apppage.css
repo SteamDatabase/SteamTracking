@@ -1785,51 +1785,6 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
     background-position: top;
   }
 }
-._49thIpYeG08pUfNc1x_w9 {
-  display: flex;
-  flex-direction: row;
-}
-._78Qv2C95AM2DNCuLD5o8U {
-  width: 220px;
-  position: relative;
-  flex-shrink: 0;
-}
-._78Qv2C95AM2DNCuLD5o8U video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-}
-._2qz5D65VkY796Xw-al9f_a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  width: 220px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px;
-}
-._2qz5D65VkY796Xw-al9f_a ._2h0GKAYcXRP10ryZHFn79d {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 18px;
-  font-weight: 300;
-  background: #66c0f4;
-  width: fit-content;
-  padding: 0 6px;
-  border-radius: 3px;
-  margin-bottom: 4px;
-}
-._2qz5D65VkY796Xw-al9f_a .wJ7ZiTc09km2kH4mSsZ9j {
-  font-size: 12px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-}
-._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
-  max-height: 38px;
-}
 @media (min-width: 1024px) {
   .jGiY7rrZh0o9qrh7XNnZU {
     width: 100%;

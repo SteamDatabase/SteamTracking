@@ -608,13 +608,19 @@
         ReportContentLoading: "ofzSErWBGTA9b7Oa7aspM",
         PromotionReportBody: "_2mb7pLtJdKt2j1_vxjPzck",
         DailyDeal_HistoryTable: "_2vOl63XenlnDpHLEOzTY_S",
-        ReportDetails: "_2EK-WdUhncr3I5QEVaeH3B",
+        SalesBarChartContainer: "_2JgSuwG2CUtxwJghqdv9Zj",
         SalesBarChart: "_2Y1Ohp4FmEJOm-dx1L1L3d",
-        ColumnHeader: "_2AlFdtDt9AitQGKP94UsBv",
+        Cell: "_1Q9K5v8R5ezHFBS4YGo-jb",
+        HighlightHeader: "_3kjFfMNTukBJT9yVjCU3TO",
+        HighlightValue: "O3oPG0TSGjqJOYeji-sIq",
+        HighlightText: "_1r3D6HvVwu-Yv5ZNiQF9cc",
         RightColumnData: "GBPrYNmIH4miVg5tSFS98",
-        ColumnData: "_3yUR_xMt6ReOsDXv3MtDoE",
-        Revenue: "kuP-Ljhkmuqh3JcQIJjTO",
-        PackageColumn: "_2skJGviltY75BQPejS1A1M",
+        BlueHighlight: "_241qQtWfs185gPVfRT7v-o",
+        SalesPackageTitleCell: "_3i684FwaWvxJsJf4YpICZc",
+        MarketingAppTitleCell: "in2n3ALH613p-Y5td8PVV",
+        MarketingCell: "_1PBHFKvI48-zcNDtRDdE0e",
+        SalesCell: "EsNiiuvw4iJrlroxDY5W7",
+        DiscountPercentageContainer: "_3mWzC2go9Rk4_zsL3fXKYK",
       };
     },
     18791: (e) => {
@@ -44102,13 +44108,13 @@
     18976: (e, t, a) => {
       "use strict";
       a.d(t, {
-        mf: () => Me,
-        ue: () => Ce,
-        kT: () => ve,
-        rX: () => Ie,
-        cm: () => fe,
-        Do: () => ke,
-        Z2: () => Ne,
+        mf: () => Re,
+        ue: () => Be,
+        kT: () => be,
+        rX: () => Te,
+        cm: () => we,
+        Do: () => Pe,
+        Z2: () => Oe,
       });
       var n = a(86318),
         r = a(33428),
@@ -44226,14 +44232,14 @@
           s = null;
         return (
           i == c.of.DealFailed &&
-            (s = u.createElement(Me, {
+            (s = u.createElement(Re, {
               strMessage: (0, M.we)("#DailyDeals_DealFailed"),
             })),
           i == c.of.DealCompleted &&
             (s = u.createElement(
-              Me,
+              Re,
               null,
-              u.createElement(ke, {
+              u.createElement(Pe, {
                 deal: t,
                 eDealState: i,
                 dtDiscountStart: n,
@@ -44241,7 +44247,7 @@
               }),
             )),
           i == c.of.Cancelled &&
-            (s = u.createElement(Me, {
+            (s = u.createElement(Re, {
               strMessage: (0, M.we)("#DailyDeals_DealCancelled"),
             })),
           u.createElement(
@@ -44363,48 +44369,55 @@
         }, [t, a]);
       }
       var oe,
-        ce = a(8527);
-      function me(e) {
+        ce = a(8527),
+        me = a(4434),
+        de = a(64753);
+      function ue(e) {
         return ce.iA.is_support
-          ? u.createElement(de, { ...e })
-          : u.createElement(Ce, { ...e });
+          ? u.createElement(pe, { ...e })
+          : u.createElement(Be, { ...e });
       }
-      function de(e) {
+      function pe(e) {
         const { deal: t, strPublisherID: a } = e,
           [n, r] = (0, _.G6)(t?.store_item_id, (0, P.Dw)(t?.store_item_type), {
             include_assets: !0,
           }),
           i = le(parseInt(a), t?.gid),
           [s, l] = (0, u.useState)(oe.Summary);
-        return t && i
-          ? t.cancelled || t.deleted
-            ? u.createElement(Ce, {
-                key: "ud_" + t.gid,
-                deal: t,
-                strPublisherID: a,
-              })
-            : u.createElement(
-                "div",
-                { className: (0, T.A)($.DailyDeal_HistoryContainer) },
-                u.createElement(
-                  "div",
-                  { className: $.HistoryTitleRow },
-                  u.createElement(
-                    "div",
-                    { className: $.PromoTitle },
-                    n?.GetName() || t.store_item_name,
-                  ),
-                  u.createElement(pe, { tab: s, setTab: l }),
-                ),
-                u.createElement(ue, { tab: s, deal: t, reportData: i }),
-              )
-          : u.createElement(
+        if (!t || !i)
+          return u.createElement(
+            "div",
+            { style: { padding: "20px" } },
+            u.createElement(ee.k, { size: "medium" }),
+          );
+        if (t.cancelled || t.deleted)
+          return u.createElement(Be, {
+            key: "ud_" + t.gid,
+            deal: t,
+            strPublisherID: a,
+          });
+        let o =
+          i.marketing?.length > 1
+            ? (0, M.we)("#DailyDeals_GamesHeader", i.marketing.length)
+            : null;
+        return u.createElement(
+          "div",
+          { className: (0, T.A)($.DailyDeal_HistoryContainer) },
+          u.createElement(
+            "div",
+            { className: $.HistoryTitleRow },
+            u.createElement(
               "div",
-              { style: { padding: "20px" } },
-              u.createElement(ee.k, { size: "medium" }),
-            );
+              { className: $.PromoTitle },
+              n?.GetName() || t.store_item_name,
+              o,
+            ),
+            u.createElement(ge, { tab: s, setTab: l }),
+          ),
+          u.createElement(_e, { tab: s, deal: t, reportData: i }),
+        );
       }
-      function ue(e) {
+      function _e(e) {
         const { tab: t, deal: a, reportData: n } = e,
           [r, i] = (0, _.G6)(a?.store_item_id, (0, P.Dw)(a?.store_item_type), {
             include_assets: !0,
@@ -44419,17 +44432,17 @@
         else
           switch (t) {
             case oe.Summary:
-              s = u.createElement(Ee, { reportData: n, deal: a, storeItem: r });
+              s = u.createElement(Se, { reportData: n, deal: a, storeItem: r });
               break;
             case oe.Sales:
-              s = u.createElement(_e, { reportData: n, deal: a, storeItem: r });
+              s = u.createElement(he, { reportData: n, deal: a, storeItem: r });
               break;
             case oe.Marketing:
-              s = u.createElement(he, { reportData: n, deal: a, storeItem: r });
+              s = u.createElement(Ee, { reportData: n, deal: a, storeItem: r });
           }
         return u.createElement("div", { className: $.PromotionReportBody }, s);
       }
-      function pe(e) {
+      function ge(e) {
         const { tab: t, setTab: a } = e,
           n = u.useMemo(
             () => [
@@ -44455,116 +44468,128 @@
           ),
         );
       }
-      function _e(e) {
+      function he(e) {
         const { reportData: t, deal: a, storeItem: n } = e,
-          { rgDiscounts: r } = (0, c.Y4)(a);
-        let i;
-        i = n?.GetAssets().GetHeaderURL()
-          ? u.createElement("img", { src: n.GetAssets().GetHeaderURL() })
-          : n
-            ? (0, M.we)("#DailyDeals_HeaderArtMissing")
-            : (0, M.we)("#DailyDeals_StoreItem_Hidden");
-        const s = t.products?.sort(Se),
-          l = s ? s[0]?.gross_sales : 1;
-        return (
-          console.log(s, l),
+          { rgDiscounts: r } = (0, c.Y4)(a),
+          i = (0, de.CH)(),
+          s = u.useMemo(() => {
+            let e = [];
+            return t.products?.forEach((t) => e.push(t.packageid)), e;
+          }, [t]),
+          l = (0, me.m)("DealyDealHistorySales");
+        let o;
+        u.useEffect(() => {
+          ae.A.Get()
+            .HintLoadStorePackages(s, { include_basic_info: !0 })
+            .then(() => i());
+        }, [s, l, i]),
+          (o = n?.GetAssets().GetHeaderURL()
+            ? u.createElement("img", { src: n.GetAssets().GetHeaderURL() })
+            : n
+              ? (0, M.we)("#DailyDeals_HeaderArtMissing")
+              : (0, M.we)("#DailyDeals_StoreItem_Hidden"));
+        const m = t.products?.sort(ve),
+          d = m ? m[0]?.gross_sales : 1;
+        return u.createElement(
+          "div",
+          { className: $.DailyDeal_HistoryTable },
+          u.createElement("div", { className: $.CapsuleContainer }, o),
+          u.createElement("div", { className: $.Cell }),
+          u.createElement("div", { className: $.Cell }),
+          u.createElement("div", { className: $.Cell }),
           u.createElement(
             "div",
-            { className: $.DailyDeal_HistoryTable },
-            u.createElement("div", { className: $.CapsuleContainer }, i),
-            u.createElement("div", { className: $.Column }),
-            u.createElement("div", { className: $.Column }),
-            u.createElement("div", { className: $.Column }),
-            u.createElement(
-              "div",
-              { className: $.Column },
-              null != t?.gross_sales &&
-                u.createElement(
-                  u.Fragment,
-                  null,
-                  u.createElement(
-                    "div",
-                    { className: $.ColumnHeader },
-                    (0, M.we)("#DailyDeals_Report_Revenue"),
-                  ),
-                  u.createElement(
-                    "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
-                    (0, re.xE)(t.gross_sales),
-                  ),
-                ),
-            ),
-            u.createElement(
-              "div",
-              { className: $.Column },
-              null != t?.units &&
-                u.createElement(
-                  u.Fragment,
-                  null,
-                  u.createElement(
-                    "div",
-                    { className: $.ColumnHeader },
-                    (0, M.we)("#DailyDeals_Report_Units"),
-                  ),
-                  u.createElement(
-                    "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
-                    (0, ie.Dq)(parseInt("" + t.units)),
-                  ),
-                ),
-            ),
-            s?.map((e) =>
+            { className: $.Cell },
+            null != t?.gross_sales &&
               u.createElement(
                 u.Fragment,
                 null,
                 u.createElement(
                   "div",
-                  { className: (0, T.A)($.Column, $.PackageColumn) },
-                  "Package: ",
-                  e.packageid,
-                  u.createElement(ge, {
-                    percentage:
-                      r.find((t) => t.packageID == e.packageid)?.nDiscountPct ??
-                      0,
-                  }),
+                  { className: $.HighlightHeader },
+                  (0, M.we)("#DailyDeals_Report_Revenue"),
                 ),
                 u.createElement(
                   "div",
-                  { className: $.SalesBarChart },
-                  u.createElement("div", {
-                    style: {
-                      backgroundColor: "#1A9FFF",
-                      height: "60%",
-                      width: (100 * e.gross_sales) / l + "%",
-                    },
-                  }),
-                ),
-                u.createElement(
-                  "div",
-                  { className: $.Column },
-                  (0, re.xE)(e.gross_sales),
-                ),
-                u.createElement(
-                  "div",
-                  { className: $.Column },
-                  (0, ie.Dq)(parseInt("" + e.units)),
+                  { className: (0, T.A)($.HighlightValue, $.BlueHighlight) },
+                  (0, re.xE)(t.gross_sales),
                 ),
               ),
+          ),
+          u.createElement(
+            "div",
+            { className: $.Cell },
+            null != t?.units &&
+              u.createElement(
+                u.Fragment,
+                null,
+                u.createElement(
+                  "div",
+                  { className: $.HighlightHeader },
+                  (0, M.we)("#DailyDeals_Report_Units"),
+                ),
+                u.createElement(
+                  "div",
+                  { className: $.HighlightValue },
+                  (0, ie.Dq)(parseInt("" + t.units)),
+                ),
+              ),
+          ),
+          m?.map((e) =>
+            u.createElement(
+              u.Fragment,
+              null,
+              u.createElement(
+                "div",
+                { className: (0, T.A)($.Cell, $.SalesPackageTitleCell) },
+                (ae.A.Get().GetPackage(e.packageid)?.GetName() ?? "") +
+                  " (#" +
+                  e.packageid +
+                  ")",
+                u.createElement(ye, {
+                  percentage:
+                    r.find((t) => t.packageID == e.packageid)?.nDiscountPct ??
+                    0,
+                }),
+              ),
+              u.createElement(
+                "div",
+                { className: $.SalesBarChartContainer },
+                u.createElement("div", {
+                  className: $.SalesBarChart,
+                  style: { width: (100 * e.gross_sales) / d + "%" },
+                }),
+              ),
+              u.createElement(
+                "div",
+                { className: (0, T.A)($.Cell, $.SalesCell, $.BlueHighlight) },
+                (0, re.xE)(e.gross_sales),
+              ),
+              u.createElement(
+                "div",
+                { className: (0, T.A)($.Cell, $.SalesCell) },
+                (0, ie.Dq)(parseInt("" + e.units)),
+              ),
             ),
-          )
+          ),
         );
       }
-      function ge(e) {
-        const { percentage: t } = e;
-        return t
-          ? u.createElement("div", { className: $.DiscountPercentage }, t, "%")
-          : null;
-      }
-      function he(e) {
-        const { reportData: t, deal: a, storeItem: n } = e;
-        let r;
+      function Ee(e) {
+        const { reportData: t, deal: a, storeItem: n } = e,
+          r = (0, de.CH)(),
+          i = u.useMemo(() => {
+            let e = [];
+            return t.marketing?.forEach((t) => e.push(t.appid)), e;
+          }, [t]),
+          s = (0, me.m)("DealyDealHistorySales");
+        let l;
         return (
-          (r = n?.GetAssets().GetHeaderURL()
+          u.useEffect(() => {
+            ae.A.Get()
+              .HintLoadStoreApps(i, { include_basic_info: !0 })
+              .then(() => r());
+          }, [i, s, r]),
+          (l = n?.GetAssets().GetHeaderURL()
             ? u.createElement("img", { src: n.GetAssets().GetHeaderURL() })
             : n
               ? (0, M.we)("#DailyDeals_HeaderArtMissing")
@@ -44572,61 +44597,61 @@
           u.createElement(
             "div",
             { className: $.DailyDeal_HistoryTable },
-            u.createElement("div", { className: $.CapsuleContainer }, r),
-            u.createElement("div", { className: $.Column }),
+            u.createElement("div", { className: $.CapsuleContainer }, l),
+            u.createElement("div", { className: $.Cell }),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               null != t?.visits &&
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.ColumnHeader },
+                    { className: $.HighlightHeader },
                     (0, M.we)("#DailyDeals_Report_Visits"),
                   ),
                   u.createElement(
                     "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
+                    { className: $.HighlightValue },
                     (0, ie.Dq)(t.visits),
                   ),
                 ),
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               null != t?.visits &&
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.ColumnHeader },
+                    { className: $.HighlightHeader },
                     (0, M.we)("#DailyDeals_Report_Impressions"),
                   ),
                   u.createElement(
                     "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
+                    { className: $.HighlightValue },
                     (0, ie.Dq)(t.impressions),
                   ),
                 ),
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               null != t?.wishlist_additions &&
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.ColumnHeader },
+                    { className: $.HighlightHeader },
                     (0, M.we)("#DailyDeals_Report_Wishlists"),
                   ),
                   u.createElement(
                     "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
+                    { className: $.HighlightValue },
                     "+",
                     (0, ie.Dq)(t.wishlist_additions),
                   ),
@@ -44634,55 +44659,57 @@
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               null != t?.wishlist_purchases &&
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.ColumnHeader },
+                    { className: $.HighlightHeader },
                     (0, M.we)("#DailyDeals_Report_WishlistPurchases"),
                   ),
                   u.createElement(
                     "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
+                    { className: $.HighlightValue },
                     "+",
                     (0, ie.Dq)(t.wishlist_purchases),
                   ),
                 ),
             ),
             t.marketing
-              ?.sort(ye)
+              ?.sort(fe)
               .map((e) =>
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.Column },
-                    "AppID: ",
-                    e.appid,
+                    { className: (0, T.A)($.Cell, $.MarketingAppTitleCell) },
+                    (ae.A.Get().GetApp(e.appid)?.GetName() ?? "") +
+                      " (#" +
+                      e.appid +
+                      ")",
                   ),
-                  u.createElement("div", { className: $.Column }),
+                  u.createElement("div", { className: $.Cell }),
                   u.createElement(
                     "div",
-                    { className: $.Column },
+                    { className: (0, T.A)($.Cell, $.MarketingCell) },
                     (0, ie.Dq)(e.visits ?? 0),
                   ),
                   u.createElement(
                     "div",
-                    { className: $.Column },
+                    { className: (0, T.A)($.Cell, $.MarketingCell) },
                     (0, ie.Dq)(e.impressions ?? 0),
                   ),
                   u.createElement(
                     "div",
-                    { className: $.Column },
+                    { className: (0, T.A)($.Cell, $.MarketingCell) },
                     (0, ie.Dq)(e.wishlist_additions ?? 0),
                   ),
                   u.createElement(
                     "div",
-                    { className: $.Column },
+                    { className: (0, T.A)($.Cell, $.MarketingCell) },
                     (0, ie.Dq)(e.wishlist_purchases ?? 0),
                   ),
                 ),
@@ -44690,7 +44717,7 @@
           )
         );
       }
-      function Ee(e) {
+      function Se(e) {
         const { reportData: t, deal: a, storeItem: n } = e,
           { dtDiscountStart: r, dtDiscountEnd: i } = (0, c.Y4)(a),
           s = { weekday: void 0, day: "numeric", month: "short", year: void 0 };
@@ -44707,25 +44734,29 @@
             u.createElement("div", { className: $.CapsuleContainer }, l),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               u.createElement(
                 "div",
-                { className: $.ColumnHeader },
+                { className: $.HighlightHeader },
                 (0, M.we)("#DailyDeals_Report_Feature"),
               ),
-              u.createElement("div", { className: $.ColumnData }, (0, M.TW)(r)),
+              u.createElement(
+                "div",
+                { className: $.HighlightText },
+                (0, M.TW)(r),
+              ),
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               u.createElement(
                 "div",
-                { className: $.ColumnHeader },
+                { className: $.HighlightHeader },
                 (0, M.we)("#DailyDeals_Report_Discount"),
               ),
               u.createElement(
                 "div",
-                { className: $.ColumnData },
+                { className: $.HighlightText },
                 u.createElement(
                   "div",
                   null,
@@ -44738,45 +44769,45 @@
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               t?.impressions &&
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.ColumnHeader },
+                    { className: $.HighlightHeader },
                     (0, M.we)("#DailyDeals_Report_Impressions"),
                   ),
                   u.createElement(
                     "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
+                    { className: (0, T.A)($.HighlightValue, $.Revenue) },
                     (0, ie.Dq)(t.impressions),
                   ),
                 ),
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               t?.gross_sales &&
                 u.createElement(
                   u.Fragment,
                   null,
                   u.createElement(
                     "div",
-                    { className: $.ColumnHeader },
+                    { className: $.HighlightHeader },
                     (0, M.we)("#DailyDeals_Report_Revenue"),
                   ),
                   u.createElement(
                     "div",
-                    { className: (0, T.A)($.ColumnData, $.Revenue) },
+                    { className: (0, T.A)($.HighlightValue, $.Revenue) },
                     t.gross_sales ? (0, re.xE)(t.gross_sales) : "?",
                   ),
                 ),
             ),
             u.createElement(
               "div",
-              { className: $.Column },
+              { className: $.Cell },
               null != t?.units &&
                 u.createElement(
                   "div",
@@ -44842,7 +44873,22 @@
           )
         );
       }
-      function Se(e, t) {
+      function ye(e) {
+        const { percentage: t } = e;
+        return t
+          ? u.createElement(
+              "div",
+              { className: $.DiscountPercentageContainer },
+              u.createElement(
+                "div",
+                { className: $.DiscountPercentage },
+                t,
+                "%",
+              ),
+            )
+          : null;
+      }
+      function ve(e, t) {
         const a = e.gross_sales ?? 0,
           n = t.gross_sales ?? 0;
         if (a != n) return a > n ? -1 : 1;
@@ -44850,7 +44896,7 @@
           i = t.units ?? 0;
         return r != i ? (r > i ? -1 : 1) : 0;
       }
-      function ye(e, t) {
+      function fe(e, t) {
         const a = e.visits ?? 0,
           n = t.visits ?? 0;
         if (a != n) return a > n ? -1 : 1;
@@ -44858,7 +44904,7 @@
           i = t.impressions ?? 0;
         return r != i ? (r > i ? -1 : 1) : 0;
       }
-      function ve(e) {
+      function be(e) {
         const [t, a] = (0, l.hn)(),
           n = (0, s.V)(),
           r = !n && R.iA.is_support;
@@ -44869,11 +44915,11 @@
             null,
             Boolean(r)
               ? u.createElement(V, null)
-              : u.createElement(fe, { strPublisherID: n.toString() }),
+              : u.createElement(we, { strPublisherID: n.toString() }),
           )
         );
       }
-      function fe(e) {
+      function we(e) {
         const { strPublisherID: t } = e,
           a = (0, m.ho)(1),
           n = Number.parseInt(t),
@@ -44939,13 +44985,13 @@
                   ),
                 ),
                 u.createElement("hr", null),
-                u.createElement(be, {
+                u.createElement(De, {
                   rgInvites: o,
                   rgIncompleteDeals: _,
                   strPublisherID: t,
                 }),
-                u.createElement(we, { rgDeals: g, strPublisherID: t }),
-                u.createElement(De, {
+                u.createElement(Ce, { rgDeals: g, strPublisherID: t }),
+                u.createElement(Ie, {
                   rgInvites: d,
                   rgDeals: E,
                   strPublisherID: t,
@@ -44958,7 +45004,7 @@
               (0, M.we)("#DailyDeals_InvalidPartner"),
             );
       }
-      function be(e) {
+      function De(e) {
         const { rgInvites: t, rgIncompleteDeals: a, strPublisherID: n } = e;
         return 0 == t.length && 0 == a.length
           ? u.createElement(
@@ -44997,7 +45043,7 @@
                 ),
               ),
               t.map((e) =>
-                u.createElement(Ie, {
+                u.createElement(Te, {
                   key: "invite_" + e.inviteid,
                   strPublisherID: n,
                   invite: e,
@@ -45005,7 +45051,7 @@
                 }),
               ),
               a.map((e) =>
-                u.createElement(Ce, {
+                u.createElement(Be, {
                   key: "inc_" + e.gid,
                   deal: e,
                   strPublisherID: n,
@@ -45013,7 +45059,7 @@
               ),
             );
       }
-      function we(e) {
+      function Ce(e) {
         const { rgDeals: t, strPublisherID: a } = e;
         return u.createElement(
           "div",
@@ -45033,7 +45079,7 @@
                 u.Fragment,
                 null,
                 t.map((e) =>
-                  u.createElement(Ce, {
+                  u.createElement(Be, {
                     key: "ud_" + e.gid,
                     deal: e,
                     strPublisherID: a,
@@ -45042,7 +45088,7 @@
               ),
         );
       }
-      function De(e) {
+      function Ie(e) {
         const { rgInvites: t, rgDeals: a, strPublisherID: n } = e,
           [r, i] = u.useState(""),
           s = t.filter((e) => !!e.appid).map((e) => e.appid),
@@ -45134,12 +45180,12 @@
                   }),
                   g.map((e) =>
                     e.hasOwnProperty("rtinvitetime")
-                      ? u.createElement(Ie, {
+                      ? u.createElement(Te, {
                           key: "invite_" + e.inviteid,
                           invite: e,
                           strPublisherID: n,
                         })
-                      : u.createElement(me, {
+                      : u.createElement(ue, {
                           key: "rpt_" + e.gid,
                           deal: e,
                           strPublisherID: n,
@@ -45148,7 +45194,7 @@
                 ),
               );
       }
-      function Ce(e) {
+      function Be(e) {
         const { deal: t, strPublisherID: a } = e,
           { nDiscountPercentHigh: n } = (0, c.Y4)(t),
           r = u.useMemo(() => (0, c.Dt)(t, n), [t, n]),
@@ -45186,11 +45232,11 @@
               { className: (0, T.A)($.CapsuleContainer, b().CapsuleContainer) },
               l,
             ),
-            u.createElement(Te, { deal: t, strPublisherID: a }),
+            u.createElement(Me, { deal: t, strPublisherID: a }),
           )
         );
       }
-      function Ie(e) {
+      function Te(e) {
         const {
             strPublisherID: t,
             invite: a,
@@ -45210,22 +45256,22 @@
           },
           u.createElement("div", { className: $.PromoTitle }, i?.GetName()),
           u.createElement(X.t, { invite: a }),
-          u.createElement(Be, { invite: a, strPublisherID: t }, r),
+          u.createElement(Ae, { invite: a, strPublisherID: t }, r),
         );
       }
-      function Be(e) {
+      function Ae(e) {
         const { invite: t, strPublisherID: a, children: n } = e,
           r = u.useMemo(() => (0, m.kF)(t), [t]);
         if (r == c.of.Unknown) return null;
         if (r == c.of.InviteExpired)
-          return u.createElement(Me, {
+          return u.createElement(Re, {
             strMessage: (0, M.we)(
               "#DailyDeals_InviteExpired",
               (0, N.FN)(t?.rtexpiretime),
             ),
           });
         if (r == c.of.Cancelled)
-          return u.createElement(Me, {
+          return u.createElement(Re, {
             strMessage: (0, M.we)("#DailyDeals_InviteCancelled"),
           });
         let i = null,
@@ -45257,13 +45303,13 @@
                 (0, M.we)("#DailyDeals_Invite_Accepted"),
               )),
           u.createElement(
-            Ae,
+            ke,
             { inviteBody: i, discountBody: s, invite: t, displayState: r },
             n,
           )
         );
       }
-      function Te(e) {
+      function Me(e) {
         const { deal: t, strPublisherID: a, children: n } = e,
           {
             nDiscountPercentHigh: r,
@@ -45273,14 +45319,14 @@
         let l = u.useMemo(() => (0, c.Dt)(t, r), [t, r]);
         if (!t) return null;
         if (l == c.of.DealFailed)
-          return u.createElement(Me, {
+          return u.createElement(Re, {
             strMessage: (0, M.we)("#DailyDeals_DealFailed"),
           });
         if (l == c.of.DealCompleted)
           return u.createElement(
-            Me,
+            Re,
             null,
-            u.createElement(ke, {
+            u.createElement(Pe, {
               deal: t,
               eDealState: l,
               dtDiscountStart: i,
@@ -45288,7 +45334,7 @@
             }),
           );
         if (l == c.of.Cancelled)
-          return u.createElement(Me, {
+          return u.createElement(Re, {
             strMessage: (0, M.we)("#DailyDeals_DealCancelled"),
           });
         let o = null,
@@ -45311,7 +45357,7 @@
               ));
             break;
           case c.of.DealReady:
-            (o = u.createElement(ke, {
+            (o = u.createElement(Pe, {
               deal: t,
               eDealState: l,
               dtDiscountStart: i,
@@ -45336,7 +45382,7 @@
               ));
             break;
           case c.of.DealLive:
-            (o = u.createElement(ke, {
+            (o = u.createElement(Pe, {
               deal: t,
               eDealState: l,
               dtDiscountStart: i,
@@ -45352,12 +45398,12 @@
               ));
         }
         return u.createElement(
-          Ae,
+          ke,
           { inviteBody: o, discountBody: m, displayState: l, deal: t },
           n,
         );
       }
-      function Ae(e) {
+      function ke(e) {
         const {
             inviteBody: t,
             discountBody: a,
@@ -45418,26 +45464,26 @@
             (S = g
               ? u.createElement(E.Yh, {
                   className: (0, T.A)($.DailyDealCheckbox),
-                  label: Ge(e),
+                  label: Fe(e),
                   checked: !0,
                   disabled: !0,
                 })
               : u.createElement(
                   "div",
                   { className: (0, T.A)($.DailyDealTitle, $.Orange) },
-                  Ge(e),
+                  Fe(e),
                 )),
               (h = p.sale_clan_event_gid
-                ? u.createElement(Pe, { deal: s, eRequireSalePageType: e })
-                : u.createElement(Ne, { deal: s, eRequireSalePageType: e }));
+                ? u.createElement(Ge, { deal: s, eRequireSalePageType: e })
+                : u.createElement(Oe, { deal: s, eRequireSalePageType: e }));
           }
         } else if (n?.require_sale_page) {
           const e = n.require_sale_page_type || 1;
-          (h = u.createElement(Ne, { eRequireSalePageType: e })),
+          (h = u.createElement(Oe, { eRequireSalePageType: e })),
             (S = u.createElement(
               "div",
               { className: (0, T.A)($.DailyDealTitle, $.Orange) },
-              Ge(e),
+              Fe(e),
             ));
         }
         return u.createElement(
@@ -45474,7 +45520,7 @@
             ),
         );
       }
-      function Me(e) {
+      function Re(e) {
         const { strMessage: t, children: a } = e;
         return u.createElement(
           "div",
@@ -45487,7 +45533,7 @@
           ),
         );
       }
-      function ke(e) {
+      function Pe(e) {
         const {
           deal: t,
           eDealState: a,
@@ -45523,7 +45569,7 @@
           )
         );
       }
-      function Re(e) {
+      function Ne(e) {
         const {
             closeModal: t,
             deal: a,
@@ -45542,7 +45588,7 @@
         return u.createElement(
           D.eV,
           { onCancel: t },
-          u.createElement(E.Y9, null, Oe(i)),
+          u.createElement(E.Y9, null, Le(i)),
           u.createElement(
             E.nB,
             null,
@@ -45613,7 +45659,7 @@
           ),
         );
       }
-      function Pe(e) {
+      function Ge(e) {
         const { deal: t, eRequireSalePageType: a } = e,
           n = JSON.parse(t.partner_jsondata),
           r = Q.b.InitFromClanID(n?.sale_clan_account);
@@ -45659,11 +45705,11 @@
                         u.createElement(
                           D.eV,
                           null,
-                          u.createElement(E.Y9, null, Ge(a)),
+                          u.createElement(E.Y9, null, Fe(a)),
                           u.createElement(
                             E.nB,
                             null,
-                            u.createElement(Ne, {
+                            u.createElement(Oe, {
                               deal: t,
                               eRequireSalePageType: a,
                             }),
@@ -45679,7 +45725,7 @@
             ),
         );
       }
-      function Ne(e) {
+      function Oe(e) {
         const { deal: t, eRequireSalePageType: a, fnOnSalePageSelected: r } = e,
           i = (0, p.jE)(),
           { fnSetDailyDealSalePage: l } = (0, c.Yg)(),
@@ -45808,7 +45854,7 @@
                       {
                         onClick: (e) => {
                           (0, C.pg)(
-                            u.createElement(Re, {
+                            u.createElement(Ne, {
                               deal: t,
                               clanID: h,
                               clanName: y.clan_name,
@@ -45819,7 +45865,7 @@
                           );
                         },
                       },
-                      Oe(a),
+                      Le(a),
                     ),
                 )
               : u.createElement(
@@ -45861,7 +45907,7 @@
               ),
             );
       }
-      function Ge(e) {
+      function Fe(e) {
         switch (e) {
           case 1:
             return (0, M.we)("#DailyDeals_SelectSalePage_Title_Publisher");
@@ -45877,7 +45923,7 @@
             return "";
         }
       }
-      function Oe(e) {
+      function Le(e) {
         switch (e) {
           case 1:
             return (0, M.we)("#DailyDeals_CreateSalePage_Title_Publisher");
