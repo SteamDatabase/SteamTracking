@@ -3102,7 +3102,7 @@
             'The server used "renderToString" which does not support Suspense. If you intended for this Suspense boundary to render the fallback content on the server consider throwing an Error somewhere within the Suspense boundary. If you intended to have the server wait for the suspended component please switch to "renderToReadableStream" which supports Suspense on the server',
           );
         }),
-        (t.version = "18.2.0");
+        (t.version = "18.3.1");
     },
     62885: (e, t, n) => {
       "use strict";
@@ -5143,7 +5143,7 @@
           Cn(s);
         });
       }),
-        (t.version = "18.2.0");
+        (t.version = "18.3.1");
     },
     67998: (e, t, n) => {
       "use strict";

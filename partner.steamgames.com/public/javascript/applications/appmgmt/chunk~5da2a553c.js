@@ -51,13 +51,16 @@
       t.exports = {
         UnknownValue: "_3ovtfYPeggcsA44NZPuTAh",
         PackageName: "t8fSjo20nSXqky8aCgQwm",
-        PackageType: "_3LZvjdGD8NF2mke6oav-MK",
         LastRow: "_18dUcjzcI8gjV1xagLSWI6",
+        PackageType: "_3LZvjdGD8NF2mke6oav-MK",
         AppCount: "_2J3kNbz7o9Fd161kGxFARG",
         PackageID: "_1E3TVBOn6hjLXBLwqCPV4J",
         PackageNameColumn: "_2pjx8S7EGnMJcmc9CzX9UK",
         PackagePricesBelowMin: "_2x4be2ySvHHrfL_FaOtZPm",
       };
+    },
+    88452: (t) => {
+      t.exports = { DefaultTabulator: "_3T2W9GVRxN5nPgT1IhmrHO" };
     },
     33428: (t, e, n) => {
       "use strict";

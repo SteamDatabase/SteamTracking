@@ -212,7 +212,7 @@ body.v6 > .perf_timing_area .perf_timing_link {
 	z-index: 5;
 }
 
-body.v6 h2 {
+body.v6 h2:not(.BB_Header2) {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -2810,6 +2810,7 @@ span.vr_required {
     vertical-align: top;
     line-height: 21px;
     font-size: 11px;
+	color: white;
 }
 
 .hover_release span.platform_img.valveindex {

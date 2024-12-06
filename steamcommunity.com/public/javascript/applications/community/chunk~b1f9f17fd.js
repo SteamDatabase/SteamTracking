@@ -1228,21 +1228,22 @@
         DiscoveryQueueCarouselCtn: "_2u0N2gUX44_tavazJJb_QP",
         TextLink: "_3ZdNCUMz9KZMkwPZlO8zmi",
         DiscoveryQueueApp: "_1xJSMubUWBlahkrtb4IFTc",
-        Selected: "_2aeAhZ2Y99YIR2-zD6l27U",
         DiscoveryQueueWrapper: "_2BYaxM7mBfooJbZYzhEv4D",
         revealDiscoveryQueueWrapper: "brzQbY6Z8TH8Ww-rFL4E0",
         DiscoveryQueueItemsCtn: "_3q6eNRFBrPSFSGEn8uRFZ3",
         DiscoveryQueueItemPositioner: "_16tdfw6vxg9Hdy0KfCutXn",
+        Selected: "_2aeAhZ2Y99YIR2-zD6l27U",
         InRange: "_1XPIeNMxObbkYolTEj0Bwh",
         Dragging: "_3fTO0TgoWEAo4zdaHOCTh0",
         FarLeft: "vkLp1smRjDnZg7XQcMqjk",
         Left: "_3gBoKuhIxMBjlxU7FZ2L3a",
+        Current: "_2CgJDPFhM9rbjsq9n0c9I_",
         Right: "_1AGP_wKeaN9phzlq_2K9H7",
         FarRight: "hBGRzfrW2Obp7QpzYCi2L",
         AppDetailsCtn: "_2Zwt2P5vy4W9Ha5ePOv54U",
         AppDetailsCtnTop: "_3TkhdqIi1gqwMzexQDS8Ab",
+        CapsuleLink: "_2m8YEKXvKa2bcFNjqXdJu7",
         AppLibraryHero: "_uGgOnTsOzgIVK9BHMTUV",
-        AppStoreHeader: "_2T79kbBPPj3RHLv-CMLOrB",
         RightColumn: "VVNgZo2T-rubrTvNMPSoh",
         AppName: "_3lk6f1XI_loCIhBevOddHP",
         AppTagsCtn: "xXcRKEuacDG8kYtDXu6OH",
@@ -5845,7 +5846,7 @@
       });
       var n = a(56545),
         r = a(37674),
-        i = a(61739),
+        i = a(3160),
         o = a(23809),
         s = a(37403),
         l = a(90626);
@@ -22449,7 +22450,11 @@
                 (0, _.we)("#Sale_CrossPromoSale_EventGID_invalid"),
               ),
             Boolean(s) &&
-              d.createElement(qn, { nClanAccountID: s, gidClanEvent: l }),
+              d.createElement(qn, {
+                nClanAccountID: s,
+                gidClanEvent: l,
+                nSaleTagID: o,
+              }),
             Boolean(!s && l) &&
               d.createElement($.t, {
                 string: (0, _.we)("#Loading"),
@@ -22507,38 +22512,44 @@
         );
       }
       function qn(e) {
-        const { nClanAccountID: t, gidClanEvent: a } = e,
+        const { nClanAccountID: t, gidClanEvent: a, nSaleTagID: n } = e,
           {
-            eventModel: n,
-            bLoading: r,
-            sErrorMessage: i,
-            eResult: o,
+            eventModel: r,
+            bLoading: i,
+            sErrorMessage: o,
+            eResult: s,
           } = (0, Un.B9)(t, a),
-          s = (0, b.E)();
-        if (r)
+          l = (0, b.E)();
+        if (i)
           return d.createElement($.t, {
             string: (0, _.we)("#Sale_CrossPromoSale_Loading"),
             size: "small",
           });
-        if (i && 42 != o)
+        if (o && 42 != s)
           return d.createElement(
             "div",
             null,
             (0, _.we)("#EventDisplay_Share_Failure"),
             " ",
-            i,
+            o,
           );
-        const l =
-          null == n ? void 0 : n.GetImageURLWithFallback("product_banner", s);
+        const c =
+          null == r ? void 0 : r.GetImageURLWithFallback("product_banner", l);
         return d.createElement(
           "div",
           null,
-          d.createElement(
-            "div",
-            null,
-            (0, _.we)("#Sale_CrossPromoSale_Linked"),
-          ),
           n
+            ? d.createElement(
+                "div",
+                null,
+                (0, _.we)("#Sale_CrossPromoSale_Linked"),
+              )
+            : d.createElement(
+                "div",
+                null,
+                (0, _.we)("#Sale_CrossPromoSale_LinkIncomplete"),
+              ),
+          r
             ? d.createElement(
                 d.Fragment,
                 null,
@@ -22547,11 +22558,11 @@
                   null,
                   (0, _.we)(
                     "#Sale_CrossPromoSale_PageTitle",
-                    n.GetNameWithFallback(s),
+                    r.GetNameWithFallback(l),
                   ),
                 ),
-                l
-                  ? d.createElement("img", { src: l })
+                c
+                  ? d.createElement("img", { src: c })
                   : d.createElement(
                       "div",
                       null,
@@ -39858,7 +39869,7 @@
       var n = a(34629),
         r = a(75844),
         i = a(90626),
-        o = a(69917),
+        o = a(92298),
         s = a.n(o),
         l = a(44894),
         c = a(44165),
@@ -44125,7 +44136,7 @@
               !e.sale_page_cross_promo_event_gid ||
               !e.sale_page_cross_promo_featured_app_tagid
             )
-              return t == n.EPreviewMode_EditBackground
+              return t && t != n.EPreviewMode_Disabled
                 ? r.createElement(l.E, {
                     section: e,
                     event: a,
@@ -44140,7 +44151,7 @@
                 e.sale_page_cross_promo_event_gid,
               );
               if (!i || !i.BIsVisibleEvent())
-                return t == n.EPreviewMode_EditBackground
+                return t && t != n.EPreviewMode_Disabled
                   ? r.createElement(l.E, {
                       section: e,
                       event: a,
@@ -58235,12 +58246,12 @@
       var ho = a(23809),
         vo = a(4869),
         So = a(26182),
-        Eo = a(92298);
+        Eo = a(68950);
       function yo(e) {
         const { controllerCategory: t, setControllerCategory: a } = e,
           r = (0, E.Qn)(),
           { data: i } = (function () {
-            (0, ho.KV)(), (0, Eo.L)();
+            (0, ho.KV)(), (0, Eo.LH)();
             return (0, At.I)({
               queryKey: ["GetControllersUsed"],
               queryFn: async () => {
@@ -63443,8 +63454,8 @@
           g = p,
           v = (0, G.LG)(null == c ? void 0 : c.GetTagIDs());
         if (!c) return;
-        const S = c.GetAssets().GetLibraryCapsuleURL(),
-          b = c.GetAssets().GetHeaderURL();
+        const S = c.GetAssets().GetLibraryCapsuleURL();
+        c.GetAssets().GetHeaderURL();
         return r.createElement(
           i.Z,
           { className: D().AppDetailsCtn },
@@ -63452,13 +63463,22 @@
             "div",
             { className: D().AppDetailsCtnTop },
             S &&
-              r.createElement("img", { className: D().AppLibraryHero, src: S }),
-            b &&
-              r.createElement("img", { className: D().AppStoreHeader, src: b }),
+              r.createElement(
+                "a",
+                { className: (0, E.A)(D().CapsuleLink), href: _ },
+                r.createElement("img", {
+                  className: D().AppLibraryHero,
+                  src: S,
+                }),
+              ),
             r.createElement(
               "div",
               { className: D().RightColumn },
-              r.createElement("div", { className: D().AppName }, c.GetName()),
+              r.createElement(
+                "a",
+                { className: (0, E.A)(D().AppName), href: _ },
+                c.GetName(),
+              ),
               r.createElement(k.wc, {
                 bSingleLineMode: !0,
                 info: { id: t, type: (0, B.U)(c.GetAppType()) },
@@ -63668,20 +63688,23 @@
             e != C && (e && e != Z && F.AddImpression(e, k), I(e));
           }, [F, m, C, z, k]);
         const U = (e) => {
-          const a = W.OQ(m + (e ? 1 : -1), 0, z.length - 1);
-          a != m &&
-            (z[m] !== Z &&
-              (R((e) => e + 1),
-              T.aI
-                .Get()
-                .SkipDiscoveryQueueItem(z[m], t, l)
-                .then(() => R((e) => e - 1))),
-            b(a),
-            X("New selected index: ", a, " Prev selected index: ", m));
+          const t = W.OQ(m + (e ? 1 : -1), 0, z.length - 1);
+          t != m &&
+            (b(t), X("New selected index: ", t, " Prev selected index: ", m));
         };
         r.useEffect(() => {
-          z.length != B && (A(z.length), z.length > B && z[m] == Z && b(m + 1));
-        }, [B, m, z]);
+          (null == z ? void 0 : z.length) &&
+            z[m] !== Z &&
+            (R((e) => e + 1),
+            T.aI
+              .Get()
+              .SkipDiscoveryQueueItem(z[m], t, l)
+              .then(() => R((e) => e - 1)));
+        }, [t, m, z, l]),
+          r.useEffect(() => {
+            z.length != B &&
+              (A(z.length), z.length > B && z[m] == Z && b(m + 1));
+          }, [B, m, z]);
         const [H] = r.useState(new Map()),
           j = (0, T.WX)(t, l),
           q = !(0, V.c)() && m > 0,
@@ -63690,42 +63713,46 @@
             refContainer: Y,
             bIsDragging: K,
             nDragOffset: ee,
-            handleTouchStart: ae,
-            handleTouchMove: re,
-            handleTouchEnd: ie,
+            nDragSelectedOffsetIndex: ae,
+            handleTouchStart: re,
+            handleTouchMove: ie,
+            handleTouchEnd: oe,
           } = (function (e, t) {
             const a = r.useRef(null),
               [n, i] = r.useState(0),
               [o, s] = r.useState(!1),
-              l = r.useRef(0),
-              c = (e) => {
-                s(!0), (l.current = e.touches[0].clientX), i(0);
+              [l, c] = r.useState(0),
+              d = r.useRef(0),
+              u = 50,
+              m = (e) => {
+                s(!0), (d.current = e.touches[0].clientX), i(0), c(0);
               },
-              d = (e) => {
+              _ = (e) => {
                 if (!o) return;
-                const t = e.touches[0].clientX - l.current;
-                i(t);
+                const t = e.touches[0].clientX - d.current;
+                i(t), c(n > u ? 1 : n < -u ? -1 : 0);
               },
-              u = () => {
-                if (!o) return;
-                s(!1);
-                const a = 100;
-                n > a
-                  ? e((e) => Math.max(e - 1, 0))
-                  : n < -a && e((e) => Math.min(e + 1, t - 1)),
-                  i(0);
+              p = () => {
+                o &&
+                  (s(!1),
+                  n > u
+                    ? e((e) => Math.max(e - 1, 0))
+                    : n < -u && e((e) => Math.min(e + 1, t - 1)),
+                  i(0),
+                  c(0));
               };
             return {
               refContainer: a,
               bIsDragging: o,
               nDragOffset: n,
-              handleTouchStart: c,
-              handleTouchMove: d,
-              handleTouchEnd: u,
+              nDragSelectedOffsetIndex: l,
+              handleTouchStart: m,
+              handleTouchMove: _,
+              handleTouchEnd: p,
             };
           })((e) => b(e), z.length),
-          oe = (e) => W.LA(e, -1, 1) && W.W(m + e, z),
-          se = (0, x._)(w.TS.STORE_BASE_URL + "explore?dq=widget");
+          se = (e) => W.W(m + e, z) && (W.LA(e, -1, 1) || K),
+          ce = (0, x._)(w.TS.STORE_BASE_URL + "explore?dq=widget");
         return r.createElement(
           g.EN,
           { active: a },
@@ -63765,7 +63792,7 @@
                       "#DiscoveryQueue_LearnMore_Default",
                       r.createElement(u.Ii, {
                         className: D().LearnMoreLink,
-                        href: se,
+                        href: ce,
                       }),
                     ),
                   ),
@@ -63814,9 +63841,9 @@
                     ref: Y,
                     className: D().DiscoveryQueueItemsCtn,
                     focusable: !1,
-                    onTouchStart: ae,
-                    onTouchMove: re,
-                    onTouchEnd: ie,
+                    onTouchStart: re,
+                    onTouchMove: ie,
+                    onTouchEnd: oe,
                   },
                   [-2, -1, 0, 1, 2].map((e) =>
                     r.createElement(
@@ -63826,15 +63853,17 @@
                         className: (0, E.A)({
                           [D().DiscoveryQueueItemPositioner]: !0,
                           [D().Dragging]: K,
-                          [D().InRange]: oe(e),
+                          [D().InRange]: se(e),
                           [D().FarLeft]: -2 == e,
                           [D().Left]: -1 == e,
+                          [D().Current]: 0 == e,
                           [D().Right]: 1 == e,
                           [D().FarRight]: 2 == e,
+                          [D().Selected]: e + ae == 0,
                         }),
                         style: { "--dragOffsetX": `${ee}px` },
                       },
-                      oe(e) &&
+                      se(e) &&
                         r.createElement(ne, {
                           eStoreDiscoveryQueueType: t,
                           storePageFilter: l,
@@ -64321,7 +64350,7 @@
           );
           return t ? t.GetItemIDs().map((e) => e.appid) : void 0;
         })(!w.iA.logged_in);
-        u || w.iA.logged_in || (u = k),
+        u.length || w.iA.logged_in || (u = k),
           r.useEffect(() => {
             g ||
               (async () => {
@@ -64526,27 +64555,42 @@
         const n = null == a ? void 0 : a.data.reward_items;
         (0, pe.fW)(n);
         const i = n.slice(0, 3);
-        return r.createElement(
-          "div",
-          { className: me().SaleTopSection },
-          r.createElement(ye, { rgRewardItems: i }),
+        let o = null;
+        return (
+          w.iA.logged_in &&
+            (o = r.createElement(
+              r.Fragment,
+              null,
+              " - ",
+              r.createElement(
+                "a",
+                { href: w.TS.COMMUNITY_BASE_URL + "my/itemcollection" },
+                (0, y.we)("#DiscoveryQueue_SaleStatus_Link"),
+              ),
+            )),
           r.createElement(
             "div",
-            { className: me().SaleTextCtn },
+            { className: me().SaleTopSection },
+            r.createElement(ye, { rgRewardItems: i }),
             r.createElement(
               "div",
-              { className: me().BoldText },
-              (0, y.we)("#DiscoveryQueue_Widget_SaleDesc"),
-            ),
-            r.createElement(
-              "div",
-              null,
-              (0, y.we)(
-                "#DiscoveryQueue_Widget_SaleTitle",
-                (0, y._l)(a.data.definition.rtime_end_time, !1, !1, !1, !1),
+              { className: me().SaleTextCtn },
+              r.createElement(
+                "div",
+                { className: me().BoldText },
+                (0, y.we)("#DiscoveryQueue_Widget_SaleDesc"),
+              ),
+              r.createElement(
+                "div",
+                null,
+                (0, y.we)(
+                  "#DiscoveryQueue_Widget_SaleTitle",
+                  (0, y._l)(a.data.definition.rtime_end_time, !1, !1, !1, !1),
+                ),
+                o,
               ),
             ),
-          ),
+          )
         );
       }
       function ye(e) {

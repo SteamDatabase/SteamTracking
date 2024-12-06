@@ -5,7 +5,7 @@
   [1063],
   {
     56228: (e, t, r) => {
-      r.d(t, { s: () => W, Q: () => O });
+      r.d(t, { s: () => z, Q: () => R });
       var i = r(34629),
         n = r(41735),
         a = r.n(n),
@@ -17,23 +17,23 @@
         u = r(37735),
         g = r(78327),
         m = r(17204),
-        f = r(44332),
-        y = r(80613),
+        y = r(44332),
+        f = r(80613),
         h = r(89068),
-        _ = r(21920);
-      const S = y.Message;
-      class p extends S {
+        S = r(21920);
+      const p = f.Message;
+      class _ extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            p.prototype.language || h.Sg(p.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
+            _.prototype.language || h.Sg(_.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
                 fields: {
                   language: {
                     n: 1,
@@ -49,50 +49,50 @@
                   },
                 },
               }),
-            p.sm_m
+            _.sm_m
           );
         }
         static MBF() {
-          return p.sm_mbf || (p.sm_mbf = h.w0(p.M())), p.sm_mbf;
+          return _.sm_mbf || (_.sm_mbf = h.w0(_.M())), _.sm_mbf;
         }
         toObject(e = !1) {
-          return p.toObject(e, this);
+          return _.toObject(e, this);
         }
         static toObject(e, t) {
-          return h.BT(p.M(), e, t);
+          return h.BT(_.M(), e, t);
         }
         static fromObject(e) {
-          return h.Uq(p.M(), e);
+          return h.Uq(_.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
+          let t = new f.BinaryReader(e),
+            r = new _();
+          return _.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return h.zj(p.MBF(), e, t);
+          return h.zj(_.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new y.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new f.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          h.i0(p.M(), e, t);
+          h.i0(_.M(), e, t);
         }
         serializeBase64String() {
-          var e = new y.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new f.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_UpdateTextFilterDictionary_Notification";
         }
       }
-      class T extends S {
+      class T extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.language || h.Sg(T.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
+            p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -130,7 +130,7 @@
           return h.Uq(T.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
+          let t = new f.BinaryReader(e),
             r = new T();
           return T.deserializeBinaryFromReader(r, t);
         }
@@ -138,84 +138,26 @@
           return h.zj(T.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           h.i0(T.M(), e, t);
         }
         serializeBase64String() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_GetTextFilterDictionary_Request";
         }
       }
-      class x extends S {
+      class B extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.dictionary || h.Sg(x.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
-                fields: {
-                  dictionary: {
-                    n: 1,
-                    br: h.qM.readString,
-                    bw: h.gp.writeString,
-                  },
-                },
-              }),
-            x.sm_m
-          );
-        }
-        static MBF() {
-          return x.sm_mbf || (x.sm_mbf = h.w0(x.M())), x.sm_mbf;
-        }
-        toObject(e = !1) {
-          return x.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return h.BT(x.M(), e, t);
-        }
-        static fromObject(e) {
-          return h.Uq(x.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return h.zj(x.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new y.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          h.i0(x.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new y.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_GetTextFilterDictionary_Response";
-        }
-      }
-      class B extends S {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            B.prototype.language || h.Sg(B.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
+            B.prototype.dictionary || h.Sg(B.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -223,15 +165,8 @@
               (B.sm_m = {
                 proto: B,
                 fields: {
-                  language: {
+                  dictionary: {
                     n: 1,
-                    q: !0,
-                    br: h.qM.readString,
-                    bw: h.gp.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
                     br: h.qM.readString,
                     bw: h.gp.writeString,
                   },
@@ -253,7 +188,7 @@
           return h.Uq(B.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
+          let t = new f.BinaryReader(e),
             r = new B();
           return B.deserializeBinaryFromReader(r, t);
         }
@@ -261,26 +196,26 @@
           return h.zj(B.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           h.i0(B.M(), e, t);
         }
         serializeBase64String() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_TextFilterDictionaryChanged_Notification";
+          return "CSteamEngine_GetTextFilterDictionary_Response";
         }
       }
-      class b extends S {
+      class b extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            b.prototype.pid || h.Sg(b.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
+            b.prototype.language || h.Sg(b.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -288,7 +223,18 @@
               (b.sm_m = {
                 proto: b,
                 fields: {
-                  pid: { n: 1, br: h.qM.readUint32, bw: h.gp.writeUint32 },
+                  language: {
+                    n: 1,
+                    q: !0,
+                    br: h.qM.readString,
+                    bw: h.gp.writeString,
+                  },
+                  type: {
+                    n: 2,
+                    q: !0,
+                    br: h.qM.readString,
+                    bw: h.gp.writeString,
+                  },
                 },
               }),
             b.sm_m
@@ -307,7 +253,7 @@
           return h.Uq(b.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
+          let t = new f.BinaryReader(e),
             r = new b();
           return b.deserializeBinaryFromReader(r, t);
         }
@@ -315,26 +261,138 @@
           return h.zj(b.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           h.i0(b.M(), e, t);
         }
         serializeBase64String() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_TextFilterDictionaryChanged_Notification";
+        }
+      }
+      class w extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            w.prototype.pid || h.Sg(w.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
+                fields: {
+                  pid: { n: 1, br: h.qM.readUint32, bw: h.gp.writeUint32 },
+                },
+              }),
+            w.sm_m
+          );
+        }
+        static MBF() {
+          return w.sm_mbf || (w.sm_mbf = h.w0(w.M())), w.sm_mbf;
+        }
+        toObject(e = !1) {
+          return w.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.BT(w.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.Uq(w.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            r = new w();
+          return w.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.zj(w.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.i0(w.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_GetGameIDForPID_Request";
         }
       }
-      class F extends S {
+      class x extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            x.prototype.gameid || h.Sg(x.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
+                fields: {
+                  gameid: {
+                    n: 1,
+                    br: h.qM.readUint64String,
+                    bw: h.gp.writeUint64String,
+                  },
+                },
+              }),
+            x.sm_m
+          );
+        }
+        static MBF() {
+          return x.sm_mbf || (x.sm_mbf = h.w0(x.M())), x.sm_mbf;
+        }
+        toObject(e = !1) {
+          return x.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.BT(x.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.Uq(x.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.zj(x.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.i0(x.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_GetGameIDForPID_Response";
+        }
+      }
+      class F extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             F.prototype.gameid || h.Sg(F.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
+            p.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -344,8 +402,15 @@
                 fields: {
                   gameid: {
                     n: 1,
+                    q: !0,
                     br: h.qM.readUint64String,
                     bw: h.gp.writeUint64String,
+                  },
+                  should_handle: {
+                    n: 2,
+                    q: !0,
+                    br: h.qM.readBool,
+                    bw: h.gp.writeBool,
                   },
                 },
               }),
@@ -365,7 +430,7 @@
           return h.Uq(F.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
+          let t = new f.BinaryReader(e),
             r = new F();
           return F.deserializeBinaryFromReader(r, t);
         }
@@ -373,93 +438,152 @@
           return h.zj(F.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           h.i0(F.M(), e, t);
         }
         serializeBase64String() {
-          var e = new y.BinaryWriter();
+          var e = new f.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_GetGameIDForPID_Response";
-        }
-      }
-      class w extends S {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            w.prototype.gameid || h.Sg(w.M()),
-            S.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  gameid: {
-                    n: 1,
-                    q: !0,
-                    br: h.qM.readUint64String,
-                    bw: h.gp.writeUint64String,
-                  },
-                  should_handle: {
-                    n: 2,
-                    q: !0,
-                    br: h.qM.readBool,
-                    bw: h.gp.writeBool,
-                  },
-                },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = h.w0(w.M())), w.sm_mbf;
-        }
-        toObject(e = !1) {
-          return w.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return h.BT(w.M(), e, t);
-        }
-        static fromObject(e) {
-          return h.Uq(w.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new y.BinaryReader(e),
-            r = new w();
-          return w.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return h.zj(w.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new y.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          h.i0(w.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new y.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_SetOverlayEscapeKeyHandling_Notification";
         }
       }
-      var v;
+      class C extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            C.prototype.search_term || h.Sg(C.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
+                fields: {
+                  search_term: {
+                    n: 1,
+                    br: h.qM.readString,
+                    bw: h.gp.writeString,
+                  },
+                  max_results: {
+                    n: 2,
+                    br: h.qM.readUint32,
+                    bw: h.gp.writeUint32,
+                  },
+                },
+              }),
+            C.sm_m
+          );
+        }
+        static MBF() {
+          return C.sm_mbf || (C.sm_mbf = h.w0(C.M())), C.sm_mbf;
+        }
+        toObject(e = !1) {
+          return C.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.BT(C.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.Uq(C.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            r = new C();
+          return C.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.zj(C.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.i0(C.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
+        }
+      }
+      class v extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            v.prototype.appids || h.Sg(v.M()),
+            p.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: h.qM.readUint32,
+                    pbr: h.qM.readPackedUint32,
+                    bw: h.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            v.sm_m
+          );
+        }
+        static MBF() {
+          return v.sm_mbf || (v.sm_mbf = h.w0(v.M())), v.sm_mbf;
+        }
+        toObject(e = !1) {
+          return v.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return h.BT(v.M(), e, t);
+        }
+        static fromObject(e) {
+          return h.Uq(v.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return h.zj(v.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          h.i0(v.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Response";
+        }
+      }
+      var M;
       !(function (e) {
         (e.UpdateTextFilterDictionaryHandler = {
           name: "SteamEngine.UpdateTextFilterDictionary#1",
-          request: p,
+          request: _,
         }),
           (e.RegisterForUpdateTextFilterDictionary = function (t, r) {
-            return null == (r = r || (0, _.OI)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, S.OI)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -470,36 +594,36 @@
                 );
           }),
           (e.UpdateTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.UpdateTextFilterDictionary#1",
-                  (0, c.I8)(p, e),
+                  (0, c.I8)(_, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgUpdateTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.UpdateTextFilterDictionary#1",
-                  (0, c.I8)(p, e),
+                  (0, c.I8)(_, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.GetTextFilterDictionaryHandler = {
             name: "SteamEngine.GetTextFilterDictionary#1",
             request: T,
-            response: x,
+            response: B,
           }),
           (e.GetTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -509,12 +633,12 @@
               : t.SendMsg(
                   "SteamEngine.GetTextFilterDictionary#1",
                   (0, c.I8)(T, e),
-                  x,
+                  B,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgGetTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -524,16 +648,16 @@
               : t.SendMsg(
                   "SteamEngine.GetTextFilterDictionary#1",
                   (0, c.I8)(T, e),
-                  x,
+                  B,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.NotifyTextFilterDictionaryChangedHandler = {
             name: "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-            request: B,
+            request: b,
           }),
           (e.RegisterForNotifyTextFilterDictionaryChanged = function (t, r) {
-            return null == (r = r || (0, _.OI)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, S.OI)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -544,66 +668,66 @@
                 );
           }),
           (e.NotifyTextFilterDictionaryChanged = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-                  (0, c.I8)(B, e),
+                  (0, c.I8)(b, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgNotifyTextFilterDictionaryChanged = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-                  (0, c.I8)(B, e),
+                  (0, c.I8)(b, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.GetGameIDForPIDHandler = {
             name: "SteamEngine.GetGameIDForPID#1",
-            request: b,
-            response: F,
+            request: w,
+            response: x,
           }),
           (e.GetGameIDForPID = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("SteamEngine.GetGameIDForPID#1", (0, c.I8)(b, e), F, {
+              : t.SendMsg("SteamEngine.GetGameIDForPID#1", (0, c.I8)(w, e), x, {
                   ePrivilege: 1,
                   eClientExecutionSite: 2,
                 });
           }),
           (e.SendMsgGetGameIDForPID = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("SteamEngine.GetGameIDForPID#1", (0, c.I8)(b, e), F, {
+              : t.SendMsg("SteamEngine.GetGameIDForPID#1", (0, c.I8)(w, e), x, {
                   ePrivilege: 1,
                   eClientExecutionSite: 2,
                 });
           }),
           (e.SetOverlayEscapeKeyHandlingHandler = {
             name: "SteamEngine.SetOverlayEscapeKeyHandling#1",
-            request: w,
+            request: F,
           }),
           (e.RegisterForSetOverlayEscapeKeyHandling = function (t, r) {
-            return null == (r = r || (0, _.OI)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, S.OI)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -614,37 +738,72 @@
                 );
           }),
           (e.SetOverlayEscapeKeyHandling = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.SetOverlayEscapeKeyHandling#1",
-                  (0, c.I8)(w, e),
+                  (0, c.I8)(F, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgSetOverlayEscapeKeyHandling = function (e, t) {
-            return null == (t = t || (0, _.OI)().GetDefaultTransport())
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.SetOverlayEscapeKeyHandling#1",
-                  (0, c.I8)(w, e),
+                  (0, c.I8)(F, e),
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.SearchAppDataCacheByStoreKeywordsHandler = {
+            name: "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
+            request: C,
+            response: v,
+          }),
+          (e.SearchAppDataCacheByStoreKeywords = function (e, t) {
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg(
+                  "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
+                  (0, c.I8)(C, e),
+                  v,
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.SendMsgSearchAppDataCacheByStoreKeywords = function (e, t) {
+            return null == (t = t || (0, S.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg(
+                  "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
+                  (0, c.I8)(C, e),
+                  v,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           });
-      })(v || (v = {}));
+      })(M || (M = {}));
       var I = r(42865),
-        C = r(6419);
-      function M() {
+        E = r(6419);
+      function W() {
         return g.TS.IN_MOBILE ? g.NQ : (0, g.xv)();
       }
-      const E = "(1)";
-      class W {
+      const D = "(1)";
+      class z {
         constructor(e) {
           (this.m_Transport = null),
             (this.m_Storage = null),
@@ -693,7 +852,7 @@
         InitSteamEngineLanguages() {
           this.m_WebUIServiceTransport.BIsValid() &&
             (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
-              v.NotifyTextFilterDictionaryChangedHandler,
+              M.NotifyTextFilterDictionaryChangedHandler,
               this.OnTextFilterDictionaryChanged,
             ),
             this.InitSteamEngineLanguage(g.TS.LANGUAGE),
@@ -709,15 +868,15 @@
           );
         }
         InitSteamEngineLanguage(e) {
-          const t = c.w.Init(p);
+          const t = c.w.Init(_);
           t.Body().set_language(e),
             t.Body().set_type("profanity"),
-            v.SendMsgUpdateTextFilterDictionary(
+            M.SendMsgUpdateTextFilterDictionary(
               t,
               this.m_WebUIServiceTransport,
             ),
             t.Body().set_type("banned"),
-            v.SendMsgUpdateTextFilterDictionary(
+            M.SendMsgUpdateTextFilterDictionary(
               t,
               this.m_WebUIServiceTransport,
             );
@@ -727,7 +886,7 @@
           return (
             r.Body().set_language(e),
             r.Body().set_type(t),
-            v.SendMsgGetTextFilterDictionary(r, this.m_WebUIServiceTransport)
+            M.SendMsgGetTextFilterDictionary(r, this.m_WebUIServiceTransport)
           );
         }
         GetStorageKey(e) {
@@ -750,7 +909,7 @@
         }
         ObfuscateString(e) {
           try {
-            const t = new TextEncoder().encode(E + e);
+            const t = new TextEncoder().encode(D + e);
             return s.iI(t);
           } catch (e) {
             return "";
@@ -760,7 +919,7 @@
           try {
             const t = s.bg(e);
             let r = new TextDecoder().decode(t);
-            return r.startsWith(E)
+            return r.startsWith(D)
               ? ((r = r.slice(3)), r)
               : (console.log(
                   "DeobfuscateString given invalid base64 data, ignoring: " + e,
@@ -831,7 +990,7 @@
                   .Body()
                   .preferences();
               } else {
-                let t = { sessionid: g.TS.SESSIONID, origin: M() };
+                let t = { sessionid: g.TS.SESSIONID, origin: W() };
                 const r = await a().get(
                   g.TS.COMMUNITY_BASE_URL +
                     "textfilter/ajaxgetcommunitypreferences",
@@ -854,7 +1013,7 @@
                     .Body()
                     .words();
                 } else {
-                  let e = { sessionid: g.TS.SESSIONID, origin: M() };
+                  let e = { sessionid: g.TS.SESSIONID, origin: W() };
                   const r = await a().get(
                     g.TS.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgettextfiltercustomwords",
@@ -899,7 +1058,7 @@
                 (await this.LoadLanguage("english"));
           } catch (t) {
             this.m_nLoadLanguagesRetryTimeout &&
-              ((0, f.w)(
+              ((0, y.w)(
                 !this.m_nLoadLanguagesRetryTimeout,
                 "Got two concurrent calls to TextFilteringStore.LoadLanguages",
               ),
@@ -941,18 +1100,18 @@
               console.warn("LoadLanguage caught while loading from cache:", e);
             }
           if (!r) {
-            t = `${g.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${M()}`;
+            t = `${g.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${W()}`;
             {
               const e = await a().get(t);
               this.m_strBannedWords += e.data;
             }
-            t = `${g.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${M()}`;
+            t = `${g.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${W()}`;
             {
               const e = await a().get(t);
               this.m_strProfanityWords += e.data;
             }
           }
-          t = `${g.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${M()}`;
+          t = `${g.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${W()}`;
           {
             const e = await a().get(t);
             this.m_strCleanWords += e.data;
@@ -1073,11 +1232,11 @@
               );
         }
       }
-      let D;
-      function O() {
-        if (!D) {
+      let O;
+      function R() {
+        if (!O) {
           const e = new Set();
-          let t = { sessionid: g.TS.SESSIONID, origin: M() };
+          let t = { sessionid: g.TS.SESSIONID, origin: W() };
           a()
             .get(g.TS.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,
@@ -1095,19 +1254,19 @@
                 (0, l.S$)(n.efriendrelationship) &&
                   e.add(new d.b(n.ulfriendid).GetAccountID());
             }),
-            (D = (t) => e.has(t));
+            (O = (t) => e.has(t));
         }
-        return D;
+        return O;
       }
-      (0, i.Cg)([o.sH], W.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.Cg)([o.sH], W.prototype, "m_mapPlayerCache", void 0),
-        (0, i.Cg)([o.sH], W.prototype, "m_regexBannedWords", void 0),
-        (0, i.Cg)([o.sH], W.prototype, "m_regexCleanWords", void 0),
-        (0, i.Cg)([o.sH], W.prototype, "m_bInitialized", void 0),
-        (0, i.Cg)([o.XI], W.prototype, "Init", null),
-        (0, i.Cg)([C.o], W.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, i.Cg)([o.XI], W.prototype, "UpdateCommunityPreferences", null),
-        (0, i.Cg)([o.XI], W.prototype, "BRebuildFilter", null);
+      (0, i.Cg)([o.sH], z.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.Cg)([o.sH], z.prototype, "m_mapPlayerCache", void 0),
+        (0, i.Cg)([o.sH], z.prototype, "m_regexBannedWords", void 0),
+        (0, i.Cg)([o.sH], z.prototype, "m_regexCleanWords", void 0),
+        (0, i.Cg)([o.sH], z.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([o.XI], z.prototype, "Init", null),
+        (0, i.Cg)([E.o], z.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, i.Cg)([o.XI], z.prototype, "UpdateCommunityPreferences", null),
+        (0, i.Cg)([o.XI], z.prototype, "BRebuildFilter", null);
     },
   },
 ]);

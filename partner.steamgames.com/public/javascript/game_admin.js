@@ -339,6 +339,10 @@ function OnScreenshotLoadComplete(target, nParentID, images )
 				option.prop( 'selected', true );
 		}
 		selectLanguage.appendTo( targetDiv );
+
+		const elFilename =  $J( '<div/>', { 'class': 'image_file_name' } ).text(  filename );
+		targetDiv.append( elFilename );
+
 		selectLanguage.show();
 	}
 }
@@ -557,6 +561,9 @@ function OnImagesLoadComplete( images )
 				option.prop( 'selected', true );
 		}
 		selectLanguage.appendTo( targetDiv );
+
+		const elFilename =  $J( '<div/>', { 'class': 'image_file_name' } ).text( filename );
+		targetDiv.append( elFilename );
 
 		if ( localizedType )
 			selectLanguage.show();

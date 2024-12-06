@@ -2754,5 +2754,24 @@ function RequestLanguageRuleChanges()
 	});
 }
 
+function FetchLocalizationFromCrowdIn( ulQuicktextId )
+{
+	const eLanguage = document.getElementById( 'elanguage_to_pull' ).value;
+
+	$J.ajax( {
+		type: 'POST',
+		url: "https://help.steampowered.com/ticketmaster/AjaxPullQuicktextLocalization/",
+		data: {
+			quicktextid: ulQuicktextId,
+			elanguage: eLanguage,
+		}
+	} ).done( function( data )
+	{
+		$J( '#fetch_localization_from_crowdin_result' ).html( 'Successfully pulled translation from CrowdIn.' ).removeClass( 'failure' ).addClass( 'success' );
+	} ).fail( function (xhr )
+	{
+		$J( '#fetch_localization_from_crowdin_result' ).html( 'Failed to pull translation from CrowdIn.' ).removeClass( 'success' ).addClass( 'failure' );
+	});
+}
 
 

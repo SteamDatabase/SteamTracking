@@ -234,6 +234,7 @@
         TopHonorsSection: "_3Xt_rws_Lz4-TXJH-R3wXI",
         FriendCtn: "dtzDI1loGbf-ScWbiNsMj",
         TopGameBlockContainer: "_1_03H_PiAx5_TIA2Y4OOn0",
+        BackgroundImageFull: "XkDtww__eYTaxTvGXlhip",
         OddGradient: "BdBfXPzFQrAIMxXLgo95x",
         EvenGradient: "mU0ZPKqgrodRiIqDDPRJN",
         TopMostGame: "_2U1A0BOBmU2Tm96VMDbN3y",
@@ -270,7 +271,6 @@
         Avatar: "_2Cjn2QF0ijeU0iZlbggit2",
         DataBlock: "qoG_vuXOr_yl9HwMqT6rV",
         PersonaName: "_2w7Tb0xkf0VinWQKTn63_4",
-        ReplayHighlight: "_2ovyNB16jUVX1iKDCTFy4s",
         ViewPageButton: "_2IfJlTSfJ9B2O7GrLSHZEu",
         Description: "_3OaR0S3fMP3IqzGQkLo2LL",
         OtherYearLink: "e2J3CJVLkCcWuogJlnJqA",
@@ -278,22 +278,22 @@
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => b, KM: () => A, KT: () => h });
+      t.d(a, { B3: () => b, KM: () => f, KT: () => h });
       var r = t(41735),
         n = t.n(r),
         o = t(58632),
         c = t.n(o),
         l = t(90626),
         i = t(20194),
-        s = t(75233),
-        _ = t(17720),
+        _ = t(75233),
+        s = t(17720),
         m = t(68797),
         d = t(78327),
         p = t(56545),
         C = t(37735),
         g = t(23809);
       const u = "nicknames";
-      function A(e) {
+      function f(e) {
         const a = (0, g.KV)(),
           { data: t, isLoading: r } = (0, i.I)({
             queryKey: [u],
@@ -313,7 +313,7 @@
           });
         return t ? t.get(e) : null;
       }
-      const f = new (c())(
+      const A = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -350,7 +350,7 @@
                 const o = new Map();
                 return (
                   r.data.userinfos.forEach((e) =>
-                    o.set(new _.b(e.steamid).GetAccountID(), e),
+                    o.set(new s.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => o.get(e))
                 );
@@ -362,19 +362,19 @@
       function h(e) {
         const { data: a, isLoading: t } = (0, i.I)({
           queryKey: [v, e],
-          queryFn: () => f.load(e),
+          queryFn: () => A.load(e),
         });
         return [a, t];
       }
       function b(e) {
-        const a = (0, s.jE)(),
+        const a = (0, _.jE)(),
           { data: t, isLoading: r } = (0, i.I)({
             queryKey: [v, e],
             queryFn: async () => {
-              const t = await f.loadMany(e);
+              const t = await A.loadMany(e);
               return (
                 t.forEach((e) => {
-                  const t = [v, new _.b(e.steamid).GetAccountID()];
+                  const t = [v, new s.b(e.steamid).GetAccountID()];
                   a.setQueryData(t, e);
                 }),
                 t
@@ -403,8 +403,8 @@
         c = t(76217),
         l = t(27144),
         i = t(61859),
-        s = t(78327),
-        _ = t(32077),
+        _ = t(78327),
+        s = t(32077),
         m = t(37220),
         d = t(52038);
       function p(e) {
@@ -413,43 +413,43 @@
         return o.createElement(
           "div",
           {
-            className: (0, d.A)(_.MMFrame, a.MMFrame, a.MMOverride),
+            className: (0, d.A)(s.MMFrame, a.MMFrame, a.MMOverride),
             onClick: t,
           },
           o.createElement(
             "div",
-            { className: _.HeaderCtn },
-            o.createElement(A, {
-              baseClass: (0, d.A)(_.ReplayLogo, a.ReplayLogo),
-              accentClass: (0, d.A)(_.ReplayLogoAccent, a.ReplayLogoAccent),
+            { className: s.HeaderCtn },
+            o.createElement(f, {
+              baseClass: (0, d.A)(s.ReplayLogo, a.ReplayLogo),
+              accentClass: (0, d.A)(s.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
-            o.createElement(f, { year: e.year, theme: a }),
+            o.createElement(A, { year: e.year, theme: a }),
           ),
-          o.createElement(u, { className: (0, d.A)(_.SteamLogo, a.SteamLogo) }),
+          o.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
           o.createElement(v, { theme: a }),
           o.createElement(
             "div",
-            { className: (0, d.A)(_.Content, a.Content) },
+            { className: (0, d.A)(s.Content, a.Content) },
             o.createElement(C, { theme: a }),
-            o.createElement(g, { theme: a }),
             o.createElement(
               "div",
-              { className: (0, d.A)(_.Description, a.Description) },
+              { className: (0, d.A)(s.Description, a.Description) },
               (0, i.we)("#YIR_MM_Generic_Desc"),
             ),
+            o.createElement(g, { theme: a }),
           ),
         );
       }
       function C(e) {
         const { theme: a } = e,
-          [t] = (0, l.KT)(s.iA.accountid);
+          [t] = (0, l.KT)(_.iA.accountid);
         return t
           ? o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
-                { className: (0, d.A)(_.Avatar, a.Avatar) },
+                { className: (0, d.A)(s.Avatar, a.Avatar) },
                 t &&
                   t.avatar_url &&
                   o.createElement("img", {
@@ -458,21 +458,11 @@
               ),
               o.createElement(
                 "div",
-                { className: (0, d.A)(_.DataBlock, a.DataBlock) },
+                { className: (0, d.A)(s.DataBlock, a.DataBlock) },
                 o.createElement(
                   "div",
-                  { className: (0, d.A)(_.PersonaName, a.PersonaName) },
+                  { className: (0, d.A)(s.PersonaName, a.PersonaName) },
                   t ? t.persona_name : "",
-                ),
-                o.createElement(
-                  "div",
-                  { className: _.GenericTitleBlock },
-                  (0, i.oW)(
-                    "#YIR_MM_Generic_Title",
-                    o.createElement("span", {
-                      className: (0, d.A)(_.ReplayHighlight, a.ReplayHighlight),
-                    }),
-                  ),
                 ),
               ),
             )
@@ -484,7 +474,7 @@
         return o.createElement(
           c.Z,
           {
-            className: (0, d.A)(_.ViewPageButton, a.ViewPageButton),
+            className: (0, d.A)(s.ViewPageButton, a.ViewPageButton),
             onActivate: t,
           },
           (0, i.we)("#YIR_MM_Generic_Action"),
@@ -516,7 +506,7 @@
           }),
         );
       }
-      function A(e) {
+      function f(e) {
         const { baseClass: a, accentClass: t } = e;
         return o.createElement(
           "svg",
@@ -544,17 +534,17 @@
           }),
         );
       }
-      function f(e) {
+      function A(e) {
         const { year: a, theme: t } = e;
         return o.createElement(
           "div",
-          { className: (0, d.A)(_.Header, t.Header) },
+          { className: (0, d.A)(s.Header, t.Header) },
           (0, i.PP)(
             "#YIR_MM_Header",
             o.createElement("br", null),
             o.createElement(
               "div",
-              { className: (0, d.A)(_.YearSubtitle, t.YearSubtitle) },
+              { className: (0, d.A)(s.YearSubtitle, t.YearSubtitle) },
               (0, i.we)("#date_year", a),
             ),
           ),
@@ -563,7 +553,7 @@
       function v(e) {
         return o.createElement(
           "div",
-          { className: (0, d.A)(_.Hashtag, e.theme.Hashtag) },
+          { className: (0, d.A)(s.Hashtag, e.theme.Hashtag) },
           (0, i.we)("#YIR_MM_HashTag"),
         );
       }

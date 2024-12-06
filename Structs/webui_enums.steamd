@@ -1299,6 +1299,13 @@ enum UnnamedEnum082dd12e6086021e
 	Down = 2;
 }
 
+enum UnnamedEnum08a7599cef1b51d6
+{
+	Summary = 0;
+	Sales = 1;
+	Marketing = 2;
+}
+
 enum UnnamedEnum09e3cce3b6071fcb
 {
 	None = 0;

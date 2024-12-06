@@ -954,9 +954,10 @@
         }
       }
       const he = (0, o.PA)((e) => {
-        const { steamIDBroadcast: t } = e,
-          a = w.es.GetOrCreateBroadcastInfo(t).m_nAppID,
-          [r] = (0, p.t7)(a, {});
+        const { steamIDBroadcast: t } = e;
+        let a = w.es.GetOrCreateBroadcastInfo(t).m_nAppID;
+        a = a != w.fO ? a : 0;
+        const [r] = (0, p.t7)(a, {});
         return l.createElement(
           "div",
           { className: [F().PopOutVideoTitleBar, F().NoSeslect].join(" ") },
@@ -1063,17 +1064,19 @@
       function be(e) {
         var t;
         const {
-            onStreamSelect: a,
-            bSelected: r,
-            stream: n,
-            bShowCapsuleArt: s,
-          } = e,
-          o = (0, i.q3)(
-            () => w.es.GetOrCreateBroadcastInfo(n.steamid).m_nAppID,
-          ),
-          [c] = (0, p.t7)(null !== (t = n.nAppIDVOD) && void 0 !== t ? t : o, {
-            include_assets: !0,
-          });
+          onStreamSelect: a,
+          bSelected: r,
+          stream: n,
+          bShowCapsuleArt: s,
+        } = e;
+        let o = (0, i.q3)(
+          () => w.es.GetOrCreateBroadcastInfo(n.steamid).m_nAppID,
+        );
+        o = o != w.fO ? o : 0;
+        const [c] = (0, p.t7)(
+          null !== (t = n.nAppIDVOD) && void 0 !== t ? t : o,
+          { include_assets: !0 },
+        );
         if (!(0, y.fn)(n)) return null;
         const d = s && (null == c ? void 0 : c.GetAssets().GetHeaderURL()),
           m = Number.parseInt("" + n.viewer_count),

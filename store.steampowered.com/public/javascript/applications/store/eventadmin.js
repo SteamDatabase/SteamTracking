@@ -9,7 +9,7 @@
         ExpandModActions: "_3nNMeqxuySIiNcmt7YEXb7",
       };
     },
-    34418: (e) => {
+    12037: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
@@ -1570,7 +1570,7 @@
         h = n(81301),
         v = n(95695),
         S = n.n(v),
-        E = n(34418),
+        E = n(12037),
         w = n(51706),
         C = n(738),
         b = n(22797),

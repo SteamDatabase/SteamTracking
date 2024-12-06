@@ -65,24 +65,24 @@
         Gr: () => M,
         KP: () => se,
         as: () => ie,
-        fe: () => j,
+        fe: () => h,
         jd: () => V,
         ku: () => L,
-        nd: () => ye,
-        pS: () => oe,
+        nd: () => we,
+        pS: () => le,
       });
       var i = r(80613),
         a = r(89068),
         s = r(56545),
         n = r(8114),
-        o = r(36003);
-      const l = i.Message;
-      class c extends l {
+        l = r(36003);
+      const o = i.Message;
+      class c extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.activation_code || a.Sg(c.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -147,12 +147,12 @@
           return "CStore_RegisterCDKey_Request";
         }
       }
-      class m extends l {
+      class m extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.transactionid || a.Sg(m.M()),
-            l.initialize(this, e, 0, -1, [18], null);
+            o.initialize(this, e, 0, -1, [18], null);
         }
         static sm_m;
         static sm_mbf;
@@ -288,12 +288,12 @@
           return "CStore_PurchaseReceiptInfo";
         }
       }
-      class u extends l {
+      class u extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             u.prototype.packageid || a.Sg(u.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -354,12 +354,12 @@
           return "CStore_PurchaseReceiptInfo_LineItem";
         }
       }
-      class B extends l {
+      class B extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.purchase_result_details || a.Sg(B.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -415,12 +415,12 @@
           return "CStore_RegisterCDKey_Response";
         }
       }
-      class d extends l {
+      class d extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.language || a.Sg(d.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -471,12 +471,12 @@
           return "CStore_GetMostPopularTags_Request";
         }
       }
-      class b extends l {
+      class b extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             b.prototype.tags || a.Sg(b.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -525,12 +525,12 @@
           return "CStore_GetMostPopularTags_Response";
         }
       }
-      class g extends l {
+      class g extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             g.prototype.tagid || a.Sg(g.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -582,12 +582,12 @@
           return "CStore_GetMostPopularTags_Response_Tag";
         }
       }
-      class _ extends l {
+      class _ extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             _.prototype.language || a.Sg(_.M()),
-            l.initialize(this, e, 0, -1, [2], null);
+            o.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -646,12 +646,12 @@
           return "CStore_GetLocalizedNameForTags_Request";
         }
       }
-      class y extends l {
+      class y extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             y.prototype.tags || a.Sg(y.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -700,12 +700,12 @@
           return "CStore_GetLocalizedNameForTags_Response";
         }
       }
-      class p extends l {
+      class p extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             p.prototype.tagid || a.Sg(p.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -767,12 +767,12 @@
           return "CStore_GetLocalizedNameForTags_Response_Tag";
         }
       }
-      class M extends l {
+      class M extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.language || a.Sg(M.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -828,12 +828,12 @@
           return "CStore_GetTagList_Request";
         }
       }
-      class w extends l {
+      class w extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             w.prototype.version_hash || a.Sg(w.M()),
-            l.initialize(this, e, 0, -1, [2], null);
+            o.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -889,12 +889,12 @@
           return "CStore_GetTagList_Response";
         }
       }
-      class z extends l {
+      class z extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             z.prototype.tagid || a.Sg(z.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -946,12 +946,12 @@
           return "CStore_GetTagList_Response_Tag";
         }
       }
-      class f extends l {
+      class f extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             f.prototype.os_win || a.Sg(f.M()),
-            l.initialize(this, e, 0, -1, [10, 16], null);
+            o.initialize(this, e, 0, -1, [10, 16], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1056,12 +1056,12 @@
           return "CStoreDiscoveryQueueSettings";
         }
       }
-      class S extends l {
+      class S extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             S.prototype.queue_type || a.Sg(S.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1154,12 +1154,12 @@
           return "CStore_GetDiscoveryQueue_Request";
         }
       }
-      class R extends l {
+      class R extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.appids || a.Sg(R.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1235,12 +1235,12 @@
           return "CStore_GetDiscoveryQueue_Response";
         }
       }
-      class W extends l {
+      class W extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             W.prototype.queue_type || a.Sg(W.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1292,73 +1292,12 @@
           return "CStore_GetDiscoveryQueueSettings_Request";
         }
       }
-      class h extends l {
+      class j extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.country_code || a.Sg(h.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  country_code: {
-                    n: 1,
-                    br: a.qM.readString,
-                    bw: a.gp.writeString,
-                  },
-                  settings: { n: 2, c: f },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = a.w0(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetDiscoveryQueueSettings_Response";
-        }
-      }
-      class j extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            j.prototype.queue_type || a.Sg(j.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            j.prototype.country_code || a.Sg(j.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1368,9 +1307,12 @@
               (j.sm_m = {
                 proto: j,
                 fields: {
-                  queue_type: { n: 1, br: a.qM.readEnum, bw: a.gp.writeEnum },
-                  appid: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  store_page_filter: { n: 3, c: n.S7 },
+                  country_code: {
+                    n: 1,
+                    br: a.qM.readString,
+                    bw: a.gp.writeString,
+                  },
+                  settings: { n: 2, c: f },
                 },
               }),
             j.sm_m
@@ -1408,13 +1350,71 @@
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStore_GetDiscoveryQueueSettings_Response";
+        }
+      }
+      class h extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            h.prototype.queue_type || a.Sg(h.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  queue_type: { n: 1, br: a.qM.readEnum, bw: a.gp.writeEnum },
+                  appid: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  store_page_filter: { n: 3, c: n.S7 },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = a.w0(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStore_SkipDiscoveryQueueItem_Request";
         }
       }
-      class q extends l {
+      class q extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return q.toObject(e, this);
@@ -1446,12 +1446,12 @@
           return "CStore_SkipDiscoveryQueueItem_Response";
         }
       }
-      class T extends l {
+      class T extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.appid || a.Sg(T.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1512,12 +1512,12 @@
           return "CStore_GetUserGameInterestState_Request";
         }
       }
-      class v extends l {
+      class v extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             v.prototype.owned || a.Sg(v.M()),
-            l.initialize(this, e, 0, -1, [5, 6, 7, 8, 10], null);
+            o.initialize(this, e, 0, -1, [5, 6, 7, 8, 10], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1615,12 +1615,12 @@
           return "CStore_GetUserGameInterestState_Response";
         }
       }
-      class F extends l {
+      class F extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             F.prototype.type || a.Sg(F.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1687,12 +1687,12 @@
           return "CStore_GetUserGameInterestState_Response_InQueue";
         }
       }
-      class O extends l {
+      class O extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             O.prototype.appid || a.Sg(O.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1745,10 +1745,10 @@
           return "CStore_ReportApp_Request";
         }
       }
-      class I extends l {
+      class I extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return I.toObject(e, this);
@@ -1780,12 +1780,12 @@
           return "CStore_ReportApp_Response";
         }
       }
-      class U extends l {
+      class U extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             U.prototype.primary_language || a.Sg(U.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1886,12 +1886,12 @@
           return "CStore_UserPreferences";
         }
       }
-      class C extends l {
+      class C extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.tags_to_exclude || a.Sg(C.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1940,12 +1940,12 @@
           return "CStore_UserTagPreferences";
         }
       }
-      class P extends l {
+      class P extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             P.prototype.tagid || a.Sg(P.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2002,10 +2002,10 @@
           return "CStore_UserTagPreferences_Tag";
         }
       }
-      class x extends l {
+      class x extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return x.toObject(e, this);
@@ -2037,12 +2037,12 @@
           return "CStore_GetStorePreferences_Request";
         }
       }
-      class N extends l {
+      class N extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             N.prototype.preferences || a.Sg(N.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2054,7 +2054,7 @@
                 fields: {
                   preferences: { n: 1, c: U },
                   tag_preferences: { n: 2, c: C },
-                  content_descriptor_preferences: { n: 3, c: o.u2 },
+                  content_descriptor_preferences: { n: 3, c: l.u2 },
                 },
               }),
             N.sm_m
@@ -2095,12 +2095,12 @@
           return "CStore_GetStorePreferences_Response";
         }
       }
-      class k extends l {
+      class k extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             k.prototype.num_apps || a.Sg(k.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2156,12 +2156,12 @@
           return "CStore_GetTrendingAppsAmongFriends_Request";
         }
       }
-      class G extends l {
+      class G extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             G.prototype.trending_apps || a.Sg(G.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2210,12 +2210,12 @@
           return "CStore_GetTrendingAppsAmongFriends_Response";
         }
       }
-      class E extends l {
+      class E extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             E.prototype.appid || a.Sg(E.M()),
-            l.initialize(this, e, 0, -1, [2], null);
+            o.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2279,20 +2279,20 @@
           return "CStore_GetTrendingAppsAmongFriends_Response_TrendingAppData";
         }
       }
-      class D extends l {
+      class A extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            D.prototype.packages_to_reserve || a.Sg(D.M()),
-            l.initialize(this, e, 0, -1, [1, 2], null);
+            A.prototype.packages_to_reserve || a.Sg(A.M()),
+            o.initialize(this, e, 0, -1, [1, 2], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   packages_to_reserve: {
                     n: 1,
@@ -2316,60 +2316,6 @@
                     bw: a.gp.writeString,
                   },
                 },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = a.w0(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new D();
-          return D.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_UpdatePackageReservations_Request";
-        }
-      }
-      class A extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            A.prototype.reservation_status || a.Sg(A.M()),
-            l.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: { reservation_status: { n: 1, c: o.ke, r: !0, q: !0 } },
               }),
             A.sm_m
           );
@@ -2406,15 +2352,69 @@
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStore_UpdatePackageReservations_Request";
+        }
+      }
+      class D extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            D.prototype.reservation_status || a.Sg(D.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
+                fields: { reservation_status: { n: 1, c: l.ke, r: !0, q: !0 } },
+              }),
+            D.sm_m
+          );
+        }
+        static MBF() {
+          return D.sm_mbf || (D.sm_mbf = a.w0(D.M())), D.sm_mbf;
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(D.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(D.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new D();
+          return D.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(D.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(D.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStore_UpdatePackageReservations_Response";
         }
       }
-      class Q extends l {
+      class Q extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Q.prototype.edistributor || a.Sg(Q.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2499,12 +2499,12 @@
           return "CReservationPositionMessage";
         }
       }
-      class L extends l {
+      class L extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             L.prototype.settings || a.Sg(L.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2553,10 +2553,10 @@
           return "CStore_SetReservationPositionMessage_Request";
         }
       }
-      class K extends l {
+      class K extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return K.toObject(e, this);
@@ -2588,12 +2588,12 @@
           return "CStore_SetReservationPositionMessage_Response";
         }
       }
-      class H extends l {
+      class H extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             H.prototype.edistributor || a.Sg(H.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2658,10 +2658,10 @@
           return "CStore_DeleteReservationPositionMessage_Request";
         }
       }
-      class J extends l {
+      class J extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return J.toObject(e, this);
@@ -2693,10 +2693,10 @@
           return "CStore_DeleteReservationPositionMessage_Response";
         }
       }
-      class X extends l {
+      class X extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return X.toObject(e, this);
@@ -2728,12 +2728,12 @@
           return "CStore_GetAllReservationPositionMessages_Request";
         }
       }
-      class Y extends l {
+      class Y extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Y.prototype.settings || a.Sg(Y.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2782,10 +2782,10 @@
           return "CStore_GetAllReservationPositionMessages_Response";
         }
       }
-      class V extends l {
+      class V extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return V.toObject(e, this);
@@ -2817,12 +2817,12 @@
           return "CStore_ReloadAllReservationPositionMessages_Notification";
         }
       }
-      class Z extends l {
+      class Z extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Z.prototype.accountid || a.Sg(Z.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2887,12 +2887,12 @@
           return "CStore_MigratePartnerLinkTracking_Notification";
         }
       }
-      class $ extends l {
+      class $ extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             $.prototype.appid || a.Sg($.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2944,10 +2944,10 @@
           return "CSteamDeckCompatibility_SetFeedback_Request";
         }
       }
-      class ee extends l {
+      class ee extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return ee.toObject(e, this);
@@ -2979,12 +2979,12 @@
           return "CSteamDeckCompatibility_SetFeedback_Response";
         }
       }
-      class te extends l {
+      class te extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             te.prototype.appid || a.Sg(te.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3035,12 +3035,12 @@
           return "CSteamDeckCompatibility_ShouldPrompt_Request";
         }
       }
-      class re extends l {
+      class re extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             re.prototype.prompt || a.Sg(re.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3101,12 +3101,12 @@
           return "CSteamDeckCompatibility_ShouldPrompt_Response";
         }
       }
-      class ie extends l {
+      class ie extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ie.prototype.appid || a.Sg(ie.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3167,12 +3167,12 @@
           return "CStore_GetWishlistDemoEmailStatus_Request";
         }
       }
-      class ae extends l {
+      class ae extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ae.prototype.can_fire || a.Sg(ae.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3238,12 +3238,12 @@
           return "CStore_GetWishlistDemoEmailStatus_Response";
         }
       }
-      class se extends l {
+      class se extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             se.prototype.appid || a.Sg(se.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3304,10 +3304,10 @@
           return "CStore_QueueWishlistDemoEmailToFire_Request";
         }
       }
-      class ne extends l {
+      class ne extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return ne.toObject(e, this);
@@ -3339,74 +3339,12 @@
           return "CStore_QueueWishlistDemoEmailToFire_Response";
         }
       }
-      class oe extends l {
+      class le extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            oe.prototype.steamid || a.Sg(oe.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            oe.sm_m ||
-              (oe.sm_m = {
-                proto: oe,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: a.qM.readFixed64String,
-                    bw: a.gp.writeFixed64String,
-                  },
-                  queue_type: { n: 2, br: a.qM.readEnum, bw: a.gp.writeEnum },
-                  store_page_filter: { n: 3, c: n.S7 },
-                },
-              }),
-            oe.sm_m
-          );
-        }
-        static MBF() {
-          return oe.sm_mbf || (oe.sm_mbf = a.w0(oe.M())), oe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return oe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(oe.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(oe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new oe();
-          return oe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(oe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(oe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetDiscoveryQueueSkippedApps_Request";
-        }
-      }
-      class le extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            le.prototype.appids || a.Sg(le.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            le.prototype.steamid || a.Sg(le.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3416,14 +3354,13 @@
               (le.sm_m = {
                 proto: le,
                 fields: {
-                  appids: {
+                  steamid: {
                     n: 1,
-                    r: !0,
-                    q: !0,
-                    br: a.qM.readUint32,
-                    pbr: a.qM.readPackedUint32,
-                    bw: a.gp.writeRepeatedUint32,
+                    br: a.qM.readFixed64String,
+                    bw: a.gp.writeFixed64String,
                   },
+                  queue_type: { n: 2, br: a.qM.readEnum, bw: a.gp.writeEnum },
+                  store_page_filter: { n: 3, c: n.S7 },
                 },
               }),
             le.sm_m
@@ -3461,15 +3398,78 @@
           return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStore_GetDiscoveryQueueSkippedApps_Request";
+        }
+      }
+      class oe extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            oe.prototype.appids || a.Sg(oe.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            oe.sm_m ||
+              (oe.sm_m = {
+                proto: oe,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            oe.sm_m
+          );
+        }
+        static MBF() {
+          return oe.sm_mbf || (oe.sm_mbf = a.w0(oe.M())), oe.sm_mbf;
+        }
+        toObject(e = !1) {
+          return oe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(oe.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(oe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new oe();
+          return oe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(oe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(oe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStore_GetDiscoveryQueueSkippedApps_Response";
         }
       }
-      class ce extends l {
+      class ce extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ce.prototype.preferences || a.Sg(ce.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3481,7 +3481,7 @@
                 fields: {
                   preferences: { n: 1, c: U },
                   tag_preferences: { n: 2, c: C },
-                  content_descriptor_preferences: { n: 3, c: o.u2 },
+                  content_descriptor_preferences: { n: 3, c: l.u2 },
                 },
               }),
             ce.sm_m
@@ -3522,12 +3522,12 @@
           return "CStore_StorePreferencesChanged_Notification";
         }
       }
-      class me extends l {
+      class me extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             me.prototype.appid || a.Sg(me.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3583,12 +3583,12 @@
           return "CPlaytest_RequestInvite_Request";
         }
       }
-      class ue extends l {
+      class ue extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ue.prototype.invites_remaining || a.Sg(ue.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3644,12 +3644,12 @@
           return "CPlaytest_RequestInvite_Response";
         }
       }
-      class Be extends l {
+      class Be extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Be.prototype.invite_ids || a.Sg(Be.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -3708,12 +3708,12 @@
           return "CPlaytest_UpdateInvites_Request";
         }
       }
-      class de extends l {
+      class de extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             de.prototype.invites_updated || a.Sg(de.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3768,12 +3768,12 @@
           return "CPlaytest_UpdateInvites_Response";
         }
       }
-      class be extends l {
+      class be extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             be.prototype.invite_id || a.Sg(be.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3828,12 +3828,12 @@
           return "CPlaytest_GetInvites_Request";
         }
       }
-      class ge extends l {
+      class ge extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ge.prototype.invites || a.Sg(ge.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -3882,12 +3882,12 @@
           return "CPlaytest_GetInvites_Response";
         }
       }
-      class _e extends l {
+      class _e extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             _e.prototype.invite_id || a.Sg(_e.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -3955,7 +3955,158 @@
           return "CPlaytest_GetInvites_Response_Invite";
         }
       }
-      var ye, pe, Me;
+      class ye extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), o.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return ye.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new ye();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new ye();
+          return ye.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return ye.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlaytest_GetUserStatus_Request";
+        }
+      }
+      class pe extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            pe.prototype.results || a.Sg(pe.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            pe.sm_m ||
+              (pe.sm_m = {
+                proto: pe,
+                fields: { results: { n: 1, c: Me, r: !0, q: !0 } },
+              }),
+            pe.sm_m
+          );
+        }
+        static MBF() {
+          return pe.sm_mbf || (pe.sm_mbf = a.w0(pe.M())), pe.sm_mbf;
+        }
+        toObject(e = !1) {
+          return pe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(pe.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(pe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new pe();
+          return pe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(pe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return pe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(pe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlaytest_GetUserStatus_Response";
+        }
+      }
+      class Me extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Me.prototype.appid || a.Sg(Me.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Me.sm_m ||
+              (Me.sm_m = {
+                proto: Me,
+                fields: {
+                  appid: { n: 1, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  status: { n: 2, br: a.qM.readEnum, bw: a.gp.writeEnum },
+                  invites_remaining: {
+                    n: 3,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                },
+              }),
+            Me.sm_m
+          );
+        }
+        static MBF() {
+          return Me.sm_mbf || (Me.sm_mbf = a.w0(Me.M())), Me.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Me.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(Me.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(Me.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Me();
+          return Me.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(Me.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Me.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(Me.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Me.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlaytest_GetUserStatus_Response_AppStatus";
+        }
+      }
+      var we, ze, fe;
       !(function (e) {
         (e.RegisterCDKey = function (e, t) {
           return e.SendMsg("Store.RegisterCDKey#1", (0, s.I8)(c, t), B, {
@@ -3994,14 +4145,14 @@
             return e.SendMsg(
               "Store.GetDiscoveryQueueSettings#1",
               (0, s.I8)(W, t),
-              h,
+              j,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.SkipDiscoveryQueueItem = function (e, t) {
             return e.SendMsg(
               "Store.SkipDiscoveryQueueItem#1",
-              (0, s.I8)(j, t),
+              (0, s.I8)(h, t),
               q,
               { ePrivilege: 1 },
             );
@@ -4017,8 +4168,8 @@
           (e.GetDiscoveryQueueSkippedApps = function (e, t) {
             return e.SendMsg(
               "Store.GetDiscoveryQueueSkippedApps#1",
-              (0, s.I8)(oe, t),
-              le,
+              (0, s.I8)(le, t),
+              oe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -4053,8 +4204,8 @@
           (e.UpdatePackageReservations = function (e, t) {
             return e.SendMsg(
               "Store.UpdatePackageReservations#1",
-              (0, s.I8)(D, t),
-              A,
+              (0, s.I8)(A, t),
+              D,
               { ePrivilege: 1 },
             );
           }),
@@ -4121,13 +4272,13 @@
               { ePrivilege: 1 },
             );
           });
-      })(ye || (ye = {})),
+      })(we || (we = {})),
         (function (e) {
           e.NotifyStorePreferencesChangedHandler = {
             name: "StoreClient.NotifyStorePreferencesChanged#1",
             request: ce,
           };
-        })(pe || (pe = {})),
+        })(ze || (ze = {})),
         (function (e) {
           (e.RequestInvite = function (e, t) {
             return e.SendMsg("Playtest.RequestInvite#1", (0, s.I8)(me, t), ue, {
@@ -4146,8 +4297,16 @@
               return e.SendMsg("Playtest.GetInvites#1", (0, s.I8)(be, t), ge, {
                 ePrivilege: 1,
               });
+            }),
+            (e.GetUserStatus = function (e, t) {
+              return e.SendMsg(
+                "Playtest.GetUserStatus#1",
+                (0, s.I8)(ye, t),
+                pe,
+                { ePrivilege: 1 },
+              );
             });
-        })(Me || (Me = {}));
+        })(fe || (fe = {}));
     },
   },
 ]);

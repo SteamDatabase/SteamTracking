@@ -20,13 +20,13 @@
                 return "[object Array]" === Object.prototype.toString.call(e);
               },
           n = 0,
-          r = void 0,
           s = void 0,
+          r = void 0,
           a = function (e, t) {
-            (w[n] = e), (w[n + 1] = t), 2 === (n += 2) && (s ? s(E) : x());
+            (w[n] = e), (w[n + 1] = t), 2 === (n += 2) && (r ? r(E) : x());
           };
         function l(e) {
-          s = e;
+          r = e;
         }
         function u(e) {
           a = e;
@@ -48,9 +48,9 @@
           };
         }
         function g() {
-          return void 0 !== r
+          return void 0 !== s
             ? function () {
-                r(E);
+                s(E);
               }
             : y();
         }
@@ -89,7 +89,7 @@
         function C() {
           try {
             var e = Function("return this")().require("vertx");
-            return (r = e.runOnLoop || e.runOnContext), g();
+            return (s = e.runOnLoop || e.runOnContext), g();
           } catch (e) {
             return y();
           }
@@ -97,13 +97,13 @@
         var x = void 0;
         function R(e, t) {
           var o = this,
-            i = new this.constructor(L);
-          void 0 === i[D] && q(i);
+            i = new this.constructor(D);
+          void 0 === i[L] && q(i);
           var n = o._state;
           if (n) {
-            var r = arguments[n - 1];
+            var s = arguments[n - 1];
             a(function () {
-              return W(n, i, r, o._result);
+              return W(n, i, s, o._result);
             });
           } else j(o, i, e, t);
           return i;
@@ -111,12 +111,12 @@
         function M(e) {
           var t = this;
           if (e && "object" == typeof e && e.constructor === t) return e;
-          var o = new t(L);
+          var o = new t(D);
           return O(o, e), o;
         }
         x = p ? f() : h ? b() : m ? v() : void 0 === c ? C() : y();
-        var D = Math.random().toString(36).substring(2);
-        function L() {}
+        var L = Math.random().toString(36).substring(2);
+        function D() {}
         var T = void 0,
           k = 1,
           S = 2;
@@ -205,47 +205,47 @@
         }
         function j(e, t, o, i) {
           var n = e._subscribers,
-            r = n.length;
+            s = n.length;
           (e._onerror = null),
-            (n[r] = t),
-            (n[r + k] = o),
-            (n[r + S] = i),
-            0 === r && e._state && a(V, e);
+            (n[s] = t),
+            (n[s + k] = o),
+            (n[s + S] = i),
+            0 === s && e._state && a(V, e);
         }
         function V(e) {
           var t = e._subscribers,
             o = e._state;
           if (0 !== t.length) {
             for (
-              var i = void 0, n = void 0, r = e._result, s = 0;
-              s < t.length;
-              s += 3
+              var i = void 0, n = void 0, s = e._result, r = 0;
+              r < t.length;
+              r += 3
             )
-              (i = t[s]), (n = t[s + o]), i ? W(o, i, n, r) : n(r);
+              (i = t[r]), (n = t[r + o]), i ? W(o, i, n, s) : n(s);
             e._subscribers.length = 0;
           }
         }
         function W(e, o, i, n) {
-          var r = t(i),
-            s = void 0,
+          var s = t(i),
+            r = void 0,
             a = void 0,
             l = !0;
-          if (r) {
+          if (s) {
             try {
-              s = i(n);
+              r = i(n);
             } catch (e) {
               (l = !1), (a = e);
             }
-            if (o === s) return void B(o, z());
-          } else s = n;
+            if (o === r) return void B(o, z());
+          } else r = n;
           o._state !== T ||
-            (r && l
-              ? O(o, s)
+            (s && l
+              ? O(o, r)
               : !1 === l
                 ? B(o, a)
                 : e === k
-                  ? I(o, s)
-                  : e === S && B(o, s));
+                  ? I(o, r)
+                  : e === S && B(o, r));
         }
         function G(e, t) {
           try {
@@ -266,7 +266,7 @@
           return U++;
         }
         function q(e) {
-          (e[D] = U++),
+          (e[L] = U++),
             (e._state = void 0),
             (e._result = void 0),
             (e._subscribers = []);
@@ -277,8 +277,8 @@
         var K = (function () {
           function e(e, t) {
             (this._instanceConstructor = e),
-              (this.promise = new e(L)),
-              this.promise[D] || q(this.promise),
+              (this.promise = new e(D)),
+              this.promise[L] || q(this.promise),
               i(t)
                 ? ((this.length = t.length),
                   (this._remaining = t.length),
@@ -300,20 +300,20 @@
                 i = o.resolve;
               if (i === M) {
                 var n = void 0,
-                  r = void 0,
-                  s = !1;
+                  s = void 0,
+                  r = !1;
                 try {
                   n = e.then;
                 } catch (e) {
-                  (s = !0), (r = e);
+                  (r = !0), (s = e);
                 }
                 if (n === R && e._state !== T)
                   this._settledAt(e._state, t, e._result);
                 else if ("function" != typeof n)
                   this._remaining--, (this._result[t] = e);
                 else if (o === te) {
-                  var a = new o(L);
-                  s ? B(a, r) : F(a, e, n), this._willSettleAt(a, t);
+                  var a = new o(D);
+                  r ? B(a, s) : F(a, e, n), this._willSettleAt(a, t);
                 } else
                   this._willSettleAt(
                     new o(function (t) {
@@ -352,15 +352,15 @@
           var t = this;
           return i(e)
             ? new t(function (o, i) {
-                for (var n = e.length, r = 0; r < n; r++)
-                  t.resolve(e[r]).then(o, i);
+                for (var n = e.length, s = 0; s < n; s++)
+                  t.resolve(e[s]).then(o, i);
               })
             : new t(function (e, t) {
                 return t(new TypeError("You must pass an array to race."));
               });
         }
         function $(e) {
-          var t = new this(L);
+          var t = new this(D);
           return B(t, e), t;
         }
         function Z() {
@@ -375,10 +375,10 @@
         }
         var te = (function () {
           function e(t) {
-            (this[D] = Y()),
+            (this[L] = Y()),
               (this._result = this._state = void 0),
               (this._subscribers = []),
-              L !== t &&
+              D !== t &&
                 ("function" != typeof t && Z(),
                 this instanceof e ? G(this, t) : ee());
           }
@@ -460,25 +460,25 @@
             o = !t.document && !!t.postMessage,
             i = t.IS_PAPA_WORKER || !1,
             n = {},
-            r = 0,
-            s = {
+            s = 0,
+            r = {
               parse: function (o, i) {
                 var a = (i = i || {}).dynamicTyping || !1;
                 if (
                   (E(a) && ((i.dynamicTypingFunction = a), (a = {})),
                   (i.dynamicTyping = a),
                   (i.transform = !!E(i.transform) && i.transform),
-                  i.worker && s.WORKERS_SUPPORTED)
+                  i.worker && r.WORKERS_SUPPORTED)
                 ) {
                   var l = (function () {
-                    if (!s.WORKERS_SUPPORTED) return !1;
+                    if (!r.WORKERS_SUPPORTED) return !1;
                     var o,
                       i,
                       a =
                         ((o = t.URL || t.webkitURL || null),
                         (i = e.toString()),
-                        s.BLOB_URL ||
-                          (s.BLOB_URL = o.createObjectURL(
+                        r.BLOB_URL ||
+                          (r.BLOB_URL = o.createObjectURL(
                             new Blob(
                               [
                                 "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
@@ -490,7 +490,7 @@
                             ),
                           ))),
                       l = new t.Worker(a);
-                    return (l.onmessage = g), (l.id = r++), (n[l.id] = l);
+                    return (l.onmessage = g), (l.id = s++), (n[l.id] = l);
                   })();
                   return (
                     (l.userStep = i.step),
@@ -507,7 +507,7 @@
                 }
                 var p = null;
                 return (
-                  s.NODE_STREAM_INPUT,
+                  r.NODE_STREAM_INPUT,
                   "string" == typeof o
                     ? ((o = (function (e) {
                         return 65279 === e.charCodeAt(0) ? e.slice(1) : e;
@@ -525,7 +525,7 @@
                 var o = !1,
                   i = !0,
                   n = ",",
-                  r = "\r\n",
+                  s = "\r\n",
                   a = '"',
                   l = a + a,
                   u = !1,
@@ -535,7 +535,7 @@
                   if ("object" == typeof t) {
                     if (
                       ("string" != typeof t.delimiter ||
-                        s.BAD_DELIMITERS.filter(function (e) {
+                        r.BAD_DELIMITERS.filter(function (e) {
                           return -1 !== t.delimiter.indexOf(e);
                         }).length ||
                         (n = t.delimiter),
@@ -546,7 +546,7 @@
                       ("boolean" != typeof t.skipEmptyLines &&
                         "string" != typeof t.skipEmptyLines) ||
                         (u = t.skipEmptyLines),
-                      "string" == typeof t.newline && (r = t.newline),
+                      "string" == typeof t.newline && (s = t.newline),
                       "string" == typeof t.quoteChar && (a = t.quoteChar),
                       "boolean" == typeof t.header && (i = t.header),
                       Array.isArray(t.columns))
@@ -590,15 +590,15 @@
                   );
                 throw new Error("Unable to serialize unrecognized input");
                 function p(e, t, o) {
-                  var s = "";
+                  var r = "";
                   "string" == typeof e && (e = JSON.parse(e)),
                     "string" == typeof t && (t = JSON.parse(t));
                   var a = Array.isArray(e) && 0 < e.length,
                     l = !Array.isArray(t[0]);
                   if (a && i) {
                     for (var u = 0; u < e.length; u++)
-                      0 < u && (s += n), (s += f(e[u], u));
-                    0 < t.length && (s += r);
+                      0 < u && (r += n), (r += f(e[u], u));
+                    0 < t.length && (r += s);
                   }
                   for (var c = 0; c < t.length; c++) {
                     var d = a ? e.length : t[c].length,
@@ -623,14 +623,14 @@
                     }
                     if (!h) {
                       for (var v = 0; v < d; v++) {
-                        0 < v && !p && (s += n);
+                        0 < v && !p && (r += n);
                         var y = a && l ? e[v] : v;
-                        s += f(t[c][y], v);
+                        r += f(t[c][y], v);
                       }
-                      c < t.length - 1 && (!o || (0 < d && !p)) && (s += r);
+                      c < t.length - 1 && (!o || (0 < d && !p)) && (r += s);
                     }
                   }
-                  return s;
+                  return r;
                 }
                 function f(e, t) {
                   if (null == e) return "";
@@ -641,7 +641,7 @@
                     "string" == typeof e &&
                     d.test(e) &&
                     ((e = "'" + e), (i = !0));
-                  var r = e.toString().replace(h, l);
+                  var s = e.toString().replace(h, l);
                   return (i =
                     i ||
                     !0 === o ||
@@ -651,31 +651,31 @@
                       for (var o = 0; o < t.length; o++)
                         if (-1 < e.indexOf(t[o])) return !0;
                       return !1;
-                    })(r, s.BAD_DELIMITERS) ||
-                    -1 < r.indexOf(n) ||
-                    " " === r.charAt(0) ||
-                    " " === r.charAt(r.length - 1))
-                    ? a + r + a
-                    : r;
+                    })(s, r.BAD_DELIMITERS) ||
+                    -1 < s.indexOf(n) ||
+                    " " === s.charAt(0) ||
+                    " " === s.charAt(s.length - 1))
+                    ? a + s + a
+                    : s;
                 }
               },
             };
           if (
-            ((s.RECORD_SEP = String.fromCharCode(30)),
-            (s.UNIT_SEP = String.fromCharCode(31)),
-            (s.BYTE_ORDER_MARK = "\ufeff"),
-            (s.BAD_DELIMITERS = ["\r", "\n", '"', s.BYTE_ORDER_MARK]),
-            (s.WORKERS_SUPPORTED = !o && !!t.Worker),
-            (s.NODE_STREAM_INPUT = 1),
-            (s.LocalChunkSize = 10485760),
-            (s.RemoteChunkSize = 5242880),
-            (s.DefaultDelimiter = ","),
-            (s.Parser = f),
-            (s.ParserHandle = p),
-            (s.NetworkStreamer = u),
-            (s.FileStreamer = c),
-            (s.StringStreamer = d),
-            (s.ReadableStreamStreamer = h),
+            ((r.RECORD_SEP = String.fromCharCode(30)),
+            (r.UNIT_SEP = String.fromCharCode(31)),
+            (r.BYTE_ORDER_MARK = "\ufeff"),
+            (r.BAD_DELIMITERS = ["\r", "\n", '"', r.BYTE_ORDER_MARK]),
+            (r.WORKERS_SUPPORTED = !o && !!t.Worker),
+            (r.NODE_STREAM_INPUT = 1),
+            (r.LocalChunkSize = 10485760),
+            (r.RemoteChunkSize = 5242880),
+            (r.DefaultDelimiter = ","),
+            (r.Parser = f),
+            (r.ParserHandle = p),
+            (r.NetworkStreamer = u),
+            (r.FileStreamer = c),
+            (r.StringStreamer = d),
+            (r.ReadableStreamStreamer = h),
             t.jQuery)
           ) {
             var a = t.jQuery;
@@ -720,22 +720,22 @@
                           (l = c.reason),
                           void (E(e.error) && e.error({ name: t }, o, n, l))
                         );
-                      if ("skip" === c.action) return void r();
+                      if ("skip" === c.action) return void s();
                       "object" == typeof c.config &&
                         (u.instanceConfig = a.extend(
                           u.instanceConfig,
                           c.config,
                         ));
-                    } else if ("skip" === c) return void r();
+                    } else if ("skip" === c) return void s();
                   }
                   var d = u.instanceConfig.complete;
                   (u.instanceConfig.complete = function (e) {
-                    E(d) && d(e, u.file, u.inputElem), r();
+                    E(d) && d(e, u.file, u.inputElem), s();
                   }),
-                    s.parse(u.file, u.instanceConfig);
+                    r.parse(u.file, u.instanceConfig);
                 } else E(e.complete) && e.complete();
               }
-              function r() {
+              function s() {
                 i.splice(0, 1), n();
               }
             };
@@ -766,13 +766,13 @@
                   void 0 !== n && (e = n);
                 }
                 (this.isFirstChunk = !1), (this._halted = !1);
-                var r = this._partialLine + e;
+                var s = this._partialLine + e;
                 this._partialLine = "";
-                var a = this._handle.parse(r, this._baseIndex, !this._finished);
+                var a = this._handle.parse(s, this._baseIndex, !this._finished);
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   var l = a.meta.cursor;
                   this._finished ||
-                    ((this._partialLine = r.substring(l - this._baseIndex)),
+                    ((this._partialLine = s.substring(l - this._baseIndex)),
                     (this._baseIndex = l)),
                     a && a.data && (this._rowCount += a.data.length);
                   var u =
@@ -782,7 +782,7 @@
                   if (i)
                     t.postMessage({
                       results: a,
-                      workerId: s.WORKER_ID,
+                      workerId: r.WORKER_ID,
                       finished: u,
                     });
                   else if (E(this._config.chunk) && !o) {
@@ -822,7 +822,7 @@
                   : i &&
                     this._config.error &&
                     t.postMessage({
-                      workerId: s.WORKER_ID,
+                      workerId: r.WORKER_ID,
                       error: e,
                       finished: !1,
                     });
@@ -830,7 +830,7 @@
           }
           function u(e) {
             var t;
-            (e = e || {}).chunkSize || (e.chunkSize = s.RemoteChunkSize),
+            (e = e || {}).chunkSize || (e.chunkSize = r.RemoteChunkSize),
               l.call(this, e),
               (this._nextChunk = o
                 ? function () {
@@ -902,7 +902,7 @@
           }
           function c(e) {
             var t, o;
-            (e = e || {}).chunkSize || (e.chunkSize = s.LocalChunkSize),
+            (e = e || {}).chunkSize || (e.chunkSize = r.LocalChunkSize),
               l.call(this, e);
             var i = "undefined" != typeof FileReader;
             (this.stream = function (e) {
@@ -932,8 +932,8 @@
                   );
                   e = o.call(e, this._start, n);
                 }
-                var r = t.readAsText(e, this._config.encoding);
-                i || this._chunkLoaded({ target: { result: r } });
+                var s = t.readAsText(e, this._config.encoding);
+                i || this._chunkLoaded({ target: { result: s } });
               }),
               (this._chunkLoaded = function (e) {
                 (this._start += this._config.chunkSize),
@@ -1021,7 +1021,7 @@
               o,
               i,
               n = Math.pow(2, 53),
-              r = -n,
+              s = -n,
               a = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
               l =
                 /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
@@ -1058,7 +1058,7 @@
                     "Delimiter",
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
-                      s.DefaultDelimiter +
+                      r.DefaultDelimiter +
                       "'",
                   ),
                   (i = !1)),
@@ -1086,14 +1086,14 @@
                     var i,
                       n = e.header ? {} : [];
                     for (i = 0; i < t.length; i++) {
-                      var r = i,
-                        s = t[i];
-                      e.header && (r = i >= g.length ? "__parsed_extra" : g[i]),
-                        e.transform && (s = e.transform(s, r)),
-                        (s = R(r, s)),
-                        "__parsed_extra" === r
-                          ? ((n[r] = n[r] || []), n[r].push(s))
-                          : (n[r] = s);
+                      var s = i,
+                        r = t[i];
+                      e.header && (s = i >= g.length ? "__parsed_extra" : g[i]),
+                        e.transform && (r = e.transform(r, s)),
+                        (r = R(s, r)),
+                        "__parsed_extra" === s
+                          ? ((n[s] = n[s] || []), n[s].push(r))
+                          : (n[s] = r);
                     }
                     return (
                       e.header &&
@@ -1149,7 +1149,7 @@
                       ((function (e) {
                         if (a.test(e)) {
                           var t = parseFloat(e);
-                          if (r < t && t < n) return !0;
+                          if (s < t && t < n) return !0;
                         }
                         return !1;
                       })(o)
@@ -1167,7 +1167,7 @@
               var n = { type: e, code: t, message: o };
               void 0 !== i && (n.row = i), b.errors.push(n);
             }
-            (this.parse = function (n, r, a) {
+            (this.parse = function (n, s, a) {
               var l = e.quoteChar || '"';
               if (
                 (e.newline ||
@@ -1176,11 +1176,11 @@
                     var o = new RegExp(m(t) + "([^]*?)" + m(t), "gm"),
                       i = (e = e.replace(o, "")).split("\r"),
                       n = e.split("\n"),
-                      r = 1 < n.length && n[0].length < i[0].length;
-                    if (1 === i.length || r) return "\n";
-                    for (var s = 0, a = 0; a < i.length; a++)
-                      "\n" === i[a][0] && s++;
-                    return s >= i.length / 2 ? "\r\n" : "\r";
+                      s = 1 < n.length && n[0].length < i[0].length;
+                    if (1 === i.length || s) return "\n";
+                    for (var r = 0, a = 0; a < i.length; a++)
+                      "\n" === i[a][0] && r++;
+                    return r >= i.length / 2 ? "\r\n" : "\r";
                   })(n, l)),
                 (i = !1),
                 e.delimiter)
@@ -1189,11 +1189,11 @@
                   ((e.delimiter = e.delimiter(n)),
                   (b.meta.delimiter = e.delimiter));
               else {
-                var u = (function (t, o, i, n, r) {
+                var u = (function (t, o, i, n, s) {
                   var a, l, u, c;
-                  r = r || [",", "\t", "|", ";", s.RECORD_SEP, s.UNIT_SEP];
-                  for (var d = 0; d < r.length; d++) {
-                    var h = r[d],
+                  s = s || [",", "\t", "|", ";", r.RECORD_SEP, r.UNIT_SEP];
+                  for (var d = 0; d < s.length; d++) {
+                    var h = s[d],
                       p = 0,
                       m = 0,
                       g = 0;
@@ -1233,7 +1233,7 @@
                 );
                 u.successful
                   ? (e.delimiter = u.bestDelimiter)
-                  : ((i = !0), (e.delimiter = s.DefaultDelimiter)),
+                  : ((i = !0), (e.delimiter = r.DefaultDelimiter)),
                   (b.meta.delimiter = e.delimiter);
               }
               var c = y(e);
@@ -1241,7 +1241,7 @@
                 e.preview && e.header && c.preview++,
                 (t = n),
                 (o = new f(c)),
-                (b = o.parse(t, r, a)),
+                (b = o.parse(t, s, a)),
                 C(),
                 h ? { meta: { paused: !0 } } : b || { meta: { paused: !1 } }
               );
@@ -1278,7 +1278,7 @@
               o = (e = e || {}).delimiter,
               i = e.newline,
               n = e.comments,
-              r = e.step,
+              s = e.step,
               a = e.preview,
               l = e.fastMode,
               u = (t =
@@ -1287,55 +1287,55 @@
                   : e.quoteChar);
             if (
               (void 0 !== e.escapeChar && (u = e.escapeChar),
-              ("string" != typeof o || -1 < s.BAD_DELIMITERS.indexOf(o)) &&
+              ("string" != typeof o || -1 < r.BAD_DELIMITERS.indexOf(o)) &&
                 (o = ","),
               n === o)
             )
               throw new Error("Comment character same as delimiter");
             !0 === n
               ? (n = "#")
-              : ("string" != typeof n || -1 < s.BAD_DELIMITERS.indexOf(n)) &&
+              : ("string" != typeof n || -1 < r.BAD_DELIMITERS.indexOf(n)) &&
                 (n = !1),
               "\n" !== i && "\r" !== i && "\r\n" !== i && (i = "\n");
             var c = 0,
               d = !1;
-            (this.parse = function (s, h, p) {
-              if ("string" != typeof s)
+            (this.parse = function (r, h, p) {
+              if ("string" != typeof r)
                 throw new Error("Input must be a string");
-              var f = s.length,
+              var f = r.length,
                 g = o.length,
                 b = i.length,
                 v = n.length,
-                y = E(r),
+                y = E(s),
                 w = [],
                 C = [],
                 x = [],
                 R = (c = 0);
-              if (!s) return Y();
+              if (!r) return Y();
               if (e.header && !h) {
-                var M = s.split(i)[0].split(o),
-                  D = [],
-                  L = {},
+                var M = r.split(i)[0].split(o),
+                  L = [],
+                  D = {},
                   T = !1;
                 for (var k in M) {
                   var S = M[k];
                   E(e.transformHeader) && (S = e.transformHeader(S, k));
                   var _ = S,
-                    z = L[S] || 0;
+                    z = D[S] || 0;
                   for (
-                    0 < z && ((T = !0), (_ = S + "_" + z)), L[S] = z + 1;
-                    D.includes(_);
+                    0 < z && ((T = !0), (_ = S + "_" + z)), D[S] = z + 1;
+                    L.includes(_);
                   )
                     _ = _ + "_" + z;
-                  D.push(_);
+                  L.push(_);
                 }
                 if (T) {
-                  var P = s.split(i);
-                  (P[0] = D.join(o)), (s = P.join(i));
+                  var P = r.split(i);
+                  (P[0] = L.join(o)), (r = P.join(i));
                 }
               }
-              if (l || (!1 !== l && -1 === s.indexOf(t))) {
-                for (var H = s.split(i), A = 0; A < H.length; A++) {
+              if (l || (!1 !== l && -1 === r.indexOf(t))) {
+                for (var H = r.split(i), A = 0; A < H.length; A++) {
                   if (((x = H[A]), (c += x.length), A !== H.length - 1))
                     c += i.length;
                   else if (p) return Y();
@@ -1349,29 +1349,29 @@
                 return Y();
               }
               for (
-                var F = s.indexOf(o, c),
-                  O = s.indexOf(i, c),
+                var F = r.indexOf(o, c),
+                  O = r.indexOf(i, c),
                   N = new RegExp(m(u) + m(t), "g"),
-                  I = s.indexOf(t, c);
+                  I = r.indexOf(t, c);
                 ;
               )
-                if (s[c] !== t)
-                  if (n && 0 === x.length && s.substring(c, c + v) === n) {
+                if (r[c] !== t)
+                  if (n && 0 === x.length && r.substring(c, c + v) === n) {
                     if (-1 === O) return Y();
-                    (c = O + b), (O = s.indexOf(i, c)), (F = s.indexOf(o, c));
+                    (c = O + b), (O = r.indexOf(i, c)), (F = r.indexOf(o, c));
                   } else if (-1 !== F && (F < O || -1 === O))
-                    x.push(s.substring(c, F)),
+                    x.push(r.substring(c, F)),
                       (c = F + g),
-                      (F = s.indexOf(o, c));
+                      (F = r.indexOf(o, c));
                   else {
                     if (-1 === O) break;
-                    if ((x.push(s.substring(c, O)), U(O + b), y && (q(), d)))
+                    if ((x.push(r.substring(c, O)), U(O + b), y && (q(), d)))
                       return Y();
                     if (a && w.length >= a) return Y(!0);
                   }
                 else
                   for (I = c, c++; ; ) {
-                    if (-1 === (I = s.indexOf(t, I + 1)))
+                    if (-1 === (I = r.indexOf(t, I + 1)))
                       return (
                         p ||
                           C.push({
@@ -1383,27 +1383,27 @@
                           }),
                         G()
                       );
-                    if (I === f - 1) return G(s.substring(c, I).replace(N, t));
-                    if (t !== u || s[I + 1] !== u) {
-                      if (t === u || 0 === I || s[I - 1] !== u) {
-                        -1 !== F && F < I + 1 && (F = s.indexOf(o, I + 1)),
-                          -1 !== O && O < I + 1 && (O = s.indexOf(i, I + 1));
+                    if (I === f - 1) return G(r.substring(c, I).replace(N, t));
+                    if (t !== u || r[I + 1] !== u) {
+                      if (t === u || 0 === I || r[I - 1] !== u) {
+                        -1 !== F && F < I + 1 && (F = r.indexOf(o, I + 1)),
+                          -1 !== O && O < I + 1 && (O = r.indexOf(i, I + 1));
                         var B = W(-1 === O ? F : Math.min(F, O));
-                        if (s.substr(I + 1 + B, g) === o) {
-                          x.push(s.substring(c, I).replace(N, t)),
-                            s[(c = I + 1 + B + g)] !== t &&
-                              (I = s.indexOf(t, c)),
-                            (F = s.indexOf(o, c)),
-                            (O = s.indexOf(i, c));
+                        if (r.substr(I + 1 + B, g) === o) {
+                          x.push(r.substring(c, I).replace(N, t)),
+                            r[(c = I + 1 + B + g)] !== t &&
+                              (I = r.indexOf(t, c)),
+                            (F = r.indexOf(o, c)),
+                            (O = r.indexOf(i, c));
                           break;
                         }
                         var j = W(O);
-                        if (s.substring(I + 1 + j, I + 1 + j + b) === i) {
+                        if (r.substring(I + 1 + j, I + 1 + j + b) === i) {
                           if (
-                            (x.push(s.substring(c, I).replace(N, t)),
+                            (x.push(r.substring(c, I).replace(N, t)),
                             U(I + 1 + j + b),
-                            (F = s.indexOf(o, c)),
-                            (I = s.indexOf(t, c)),
+                            (F = r.indexOf(o, c)),
+                            (I = r.indexOf(t, c)),
                             y && (q(), d))
                           )
                             return Y();
@@ -1429,7 +1429,7 @@
               function W(e) {
                 var t = 0;
                 if (-1 !== e) {
-                  var o = s.substring(I + 1, e);
+                  var o = r.substring(I + 1, e);
                   o && "" === o.trim() && (t = o.length);
                 }
                 return t;
@@ -1437,7 +1437,7 @@
               function G(e) {
                 return (
                   p ||
-                    (void 0 === e && (e = s.substring(c)),
+                    (void 0 === e && (e = r.substring(c)),
                     x.push(e),
                     (c = f),
                     V(x),
@@ -1446,7 +1446,7 @@
                 );
               }
               function U(e) {
-                (c = e), V(x), (x = []), (O = s.indexOf(i, c));
+                (c = e), V(x), (x = []), (O = r.indexOf(i, c));
               }
               function Y(e) {
                 return {
@@ -1462,7 +1462,7 @@
                 };
               }
               function q() {
-                r(Y()), (w = []), (C = []);
+                s(Y()), (w = []), (C = []);
               }
             }),
               (this.abort = function () {
@@ -1478,7 +1478,7 @@
               i = !1;
             if (t.error) o.userError(t.error, t.file);
             else if (t.results && t.results.data) {
-              var r = {
+              var s = {
                 abort: function () {
                   (i = !0),
                     b(t.workerId, {
@@ -1492,23 +1492,23 @@
               };
               if (E(o.userStep)) {
                 for (
-                  var s = 0;
-                  s < t.results.data.length &&
+                  var r = 0;
+                  r < t.results.data.length &&
                   (o.userStep(
                     {
-                      data: t.results.data[s],
+                      data: t.results.data[r],
                       errors: t.results.errors,
                       meta: t.results.meta,
                     },
-                    r,
+                    s,
                   ),
                   !i);
-                  s++
+                  r++
                 );
                 delete t.results;
               } else
                 E(o.userChunk) &&
-                  (o.userChunk(t.results, r, t.file), delete t.results);
+                  (o.userChunk(t.results, s, t.file), delete t.results);
             }
             t.finished && !i && b(t.workerId, t.results);
           }
@@ -1538,22 +1538,22 @@
               (t.onmessage = function (e) {
                 var o = e.data;
                 if (
-                  (void 0 === s.WORKER_ID && o && (s.WORKER_ID = o.workerId),
+                  (void 0 === r.WORKER_ID && o && (r.WORKER_ID = o.workerId),
                   "string" == typeof o.input)
                 )
                   t.postMessage({
-                    workerId: s.WORKER_ID,
-                    results: s.parse(o.input, o.config),
+                    workerId: r.WORKER_ID,
+                    results: r.parse(o.input, o.config),
                     finished: !0,
                   });
                 else if (
                   (t.File && o.input instanceof File) ||
                   o.input instanceof Object
                 ) {
-                  var i = s.parse(o.input, o.config);
+                  var i = r.parse(o.input, o.config);
                   i &&
                     t.postMessage({
-                      workerId: s.WORKER_ID,
+                      workerId: r.WORKER_ID,
                       results: i,
                       finished: !0,
                     });
@@ -1563,7 +1563,7 @@
             ((c.prototype = Object.create(l.prototype)).constructor = c),
             ((d.prototype = Object.create(d.prototype)).constructor = d),
             ((h.prototype = Object.create(l.prototype)).constructor = h),
-            s
+            r
           );
         }),
         void 0 === (n = "function" == typeof o ? o.apply(t, i) : o) ||
@@ -1585,9 +1585,9 @@
           "use strict";
           Object.defineProperty(t, "__esModule", { value: !0 }),
             (t.pickSVGProps = t.pickHTMLProps = void 0);
-          var i = r(o(1)),
-            n = r(o(5));
-          function r(e) {
+          var i = s(o(1)),
+            n = s(o(5));
+          function s(e) {
             return e && e.__esModule ? e : { default: e };
           }
           (t.pickHTMLProps = i.default), (t.pickSVGProps = n.default);
@@ -1605,9 +1605,9 @@
                 }
                 return e;
               },
-            n = s(o(2)),
-            r = s(o(3));
-          function s(e) {
+            n = r(o(2)),
+            s = r(o(3));
+          function r(e) {
             return e && e.__esModule ? e : { default: e };
           }
           var a = i(
@@ -1724,7 +1724,7 @@
               return (e[t] = t), e;
             }, {}),
           );
-          t.default = (0, r.default)(function (e) {
+          t.default = (0, s.default)(function (e) {
             return Boolean(a[e]) || /^(data|aria)-/.test(e);
           });
         },
@@ -1862,10 +1862,10 @@
           Object.defineProperty(t, "__esModule", { value: !0 });
           var i,
             n = o(4),
-            r = (i = n) && i.__esModule ? i : { default: i };
+            s = (i = n) && i.__esModule ? i : { default: i };
           t.default = function (e) {
             return function (t) {
-              if (!(0, r.default)(t))
+              if (!(0, s.default)(t))
                 throw new Error("props should be a plain object");
               var o = {};
               for (var i in t) t.hasOwnProperty(i) && e(i) && (o[i] = t[i]);
@@ -1877,11 +1877,11 @@
           var o,
             i,
             n = Function.prototype,
-            r = Object.prototype,
-            s = n.toString,
-            a = r.hasOwnProperty,
-            l = s.call(Object),
-            u = r.toString,
+            s = Object.prototype,
+            r = n.toString,
+            a = s.hasOwnProperty,
+            l = r.call(Object),
+            u = s.toString,
             c =
               ((o = Object.getPrototypeOf),
               (i = Object),
@@ -1907,15 +1907,15 @@
             var t = c(e);
             if (null === t) return !0;
             var o = a.call(t, "constructor") && t.constructor;
-            return "function" == typeof o && o instanceof o && s.call(o) == l;
+            return "function" == typeof o && o instanceof o && r.call(o) == l;
           };
         },
         function (e, t, o) {
           "use strict";
           Object.defineProperty(t, "__esModule", { value: !0 });
-          var i = r(o(3)),
-            n = r(o(6));
-          function r(e) {
+          var i = s(o(3)),
+            n = s(o(6));
+          function s(e) {
             return e && e.__esModule ? e : { default: e };
           }
           t.default = (0, i.default)(function (e) {
@@ -2192,19 +2192,19 @@
       var i =
           (this && this.__awaiter) ||
           function (e, t, o, i) {
-            return new (o || (o = Promise))(function (n, r) {
-              function s(e) {
+            return new (o || (o = Promise))(function (n, s) {
+              function r(e) {
                 try {
                   l(i.next(e));
                 } catch (e) {
-                  r(e);
+                  s(e);
                 }
               }
               function a(e) {
                 try {
                   l(i.throw(e));
                 } catch (e) {
-                  r(e);
+                  s(e);
                 }
               }
               function l(e) {
@@ -2216,7 +2216,7 @@
                       ? t
                       : new o(function (e) {
                           e(t);
-                        })).then(s, a);
+                        })).then(r, a);
               }
               l((i = i.apply(e, t || [])).next());
             });
@@ -2227,8 +2227,8 @@
             var o,
               i,
               n,
-              r,
-              s = {
+              s,
+              r = {
                 label: 0,
                 sent: function () {
                   if (1 & n[0]) throw n[1];
@@ -2238,97 +2238,97 @@
                 ops: [],
               };
             return (
-              (r = { next: a(0), throw: a(1), return: a(2) }),
+              (s = { next: a(0), throw: a(1), return: a(2) }),
               "function" == typeof Symbol &&
-                (r[Symbol.iterator] = function () {
+                (s[Symbol.iterator] = function () {
                   return this;
                 }),
-              r
+              s
             );
-            function a(r) {
+            function a(s) {
               return function (a) {
-                return (function (r) {
+                return (function (s) {
                   if (o) throw new TypeError("Generator is already executing.");
-                  for (; s; )
+                  for (; r; )
                     try {
                       if (
                         ((o = 1),
                         i &&
                           (n =
-                            2 & r[0]
+                            2 & s[0]
                               ? i.return
-                              : r[0]
+                              : s[0]
                                 ? i.throw || ((n = i.return) && n.call(i), 0)
                                 : i.next) &&
-                          !(n = n.call(i, r[1])).done)
+                          !(n = n.call(i, s[1])).done)
                       )
                         return n;
-                      switch (((i = 0), n && (r = [2 & r[0], n.value]), r[0])) {
+                      switch (((i = 0), n && (s = [2 & s[0], n.value]), s[0])) {
                         case 0:
                         case 1:
-                          n = r;
+                          n = s;
                           break;
                         case 4:
-                          return s.label++, { value: r[1], done: !1 };
+                          return r.label++, { value: s[1], done: !1 };
                         case 5:
-                          s.label++, (i = r[1]), (r = [0]);
+                          r.label++, (i = s[1]), (s = [0]);
                           continue;
                         case 7:
-                          (r = s.ops.pop()), s.trys.pop();
+                          (s = r.ops.pop()), r.trys.pop();
                           continue;
                         default:
                           if (
-                            !((n = s.trys),
+                            !((n = r.trys),
                             (n = n.length > 0 && n[n.length - 1]) ||
-                              (6 !== r[0] && 2 !== r[0]))
+                              (6 !== s[0] && 2 !== s[0]))
                           ) {
-                            s = 0;
+                            r = 0;
                             continue;
                           }
                           if (
-                            3 === r[0] &&
-                            (!n || (r[1] > n[0] && r[1] < n[3]))
+                            3 === s[0] &&
+                            (!n || (s[1] > n[0] && s[1] < n[3]))
                           ) {
-                            s.label = r[1];
+                            r.label = s[1];
                             break;
                           }
-                          if (6 === r[0] && s.label < n[1]) {
-                            (s.label = n[1]), (n = r);
+                          if (6 === s[0] && r.label < n[1]) {
+                            (r.label = n[1]), (n = s);
                             break;
                           }
-                          if (n && s.label < n[2]) {
-                            (s.label = n[2]), s.ops.push(r);
+                          if (n && r.label < n[2]) {
+                            (r.label = n[2]), r.ops.push(s);
                             break;
                           }
-                          n[2] && s.ops.pop(), s.trys.pop();
+                          n[2] && r.ops.pop(), r.trys.pop();
                           continue;
                       }
-                      r = t.call(e, s);
+                      s = t.call(e, r);
                     } catch (e) {
-                      (r = [6, e]), (i = 0);
+                      (s = [6, e]), (i = 0);
                     } finally {
                       o = n = 0;
                     }
-                  if (5 & r[0]) throw r[1];
-                  return { value: r[0] ? r[1] : void 0, done: !0 };
-                })([r, a]);
+                  if (5 & s[0]) throw s[1];
+                  return { value: s[0] ? s[1] : void 0, done: !0 };
+                })([s, a]);
               };
             }
           };
       (t.__esModule = !0), (t.propsToOptions = void 0);
-      var r = o(36378),
-        s = o(72739),
+      var s = o(36378),
+        r = o(72739),
         a = function () {};
       function l(e, t) {
-        return new r.Promise(function (o, i) {
-          s.render(e, t, function () {
+        return new s.Promise(function (o, i) {
+          r.render(e, t, function () {
             o(t);
           });
         });
       }
       t.propsToOptions = function (e) {
         return i(void 0, void 0, void 0, function () {
-          var t, o, i, r, s, u, c, d;
+          var t, o, i, s, r, u, c, d;
           return n(this, function (n) {
             switch (n.label) {
               case 0:
@@ -2367,9 +2367,9 @@
                   o < i.length;
                   o++
                 )
-                  void 0 !== e[(r = i[o])] && (t[r] = e[r]);
+                  void 0 !== e[(s = i[o])] && (t[s] = e[s]);
                 for (
-                  s = 0,
+                  r = 0,
                     u = [
                       "tableBuilt",
                       "rowClick",
@@ -2439,10 +2439,10 @@
                       "downloadReady",
                       "downloadComplete",
                     ];
-                  s < u.length;
-                  s++
+                  r < u.length;
+                  r++
                 )
-                  t[(c = u[s])] = e[c] || a;
+                  t[(c = u[r])] = e[c] || a;
                 return "object" != typeof e.footerElement
                   ? [3, 2]
                   : [4, l(e.footerElement, document.createElement("div"))];
@@ -2491,11 +2491,11 @@
                   ? Object.create(t)
                   : ((o.prototype = t.prototype), new o()));
           }),
-        r =
+        s =
           (this && this.__assign) ||
           function () {
             return (
-              (r =
+              (s =
                 Object.assign ||
                 function (e) {
                   for (var t, o = 1, i = arguments.length; o < i; o++)
@@ -2504,25 +2504,25 @@
                         (e[n] = t[n]);
                   return e;
                 }),
-              r.apply(this, arguments)
+              s.apply(this, arguments)
             );
           },
-        s =
+        r =
           (this && this.__awaiter) ||
           function (e, t, o, i) {
-            return new (o || (o = Promise))(function (n, r) {
-              function s(e) {
+            return new (o || (o = Promise))(function (n, s) {
+              function r(e) {
                 try {
                   l(i.next(e));
                 } catch (e) {
-                  r(e);
+                  s(e);
                 }
               }
               function a(e) {
                 try {
                   l(i.throw(e));
                 } catch (e) {
-                  r(e);
+                  s(e);
                 }
               }
               function l(e) {
@@ -2534,7 +2534,7 @@
                       ? t
                       : new o(function (e) {
                           e(t);
-                        })).then(s, a);
+                        })).then(r, a);
               }
               l((i = i.apply(e, t || [])).next());
             });
@@ -2545,8 +2545,8 @@
             var o,
               i,
               n,
-              r,
-              s = {
+              s,
+              r = {
                 label: 0,
                 sent: function () {
                   if (1 & n[0]) throw n[1];
@@ -2556,80 +2556,80 @@
                 ops: [],
               };
             return (
-              (r = { next: a(0), throw: a(1), return: a(2) }),
+              (s = { next: a(0), throw: a(1), return: a(2) }),
               "function" == typeof Symbol &&
-                (r[Symbol.iterator] = function () {
+                (s[Symbol.iterator] = function () {
                   return this;
                 }),
-              r
+              s
             );
-            function a(r) {
+            function a(s) {
               return function (a) {
-                return (function (r) {
+                return (function (s) {
                   if (o) throw new TypeError("Generator is already executing.");
-                  for (; s; )
+                  for (; r; )
                     try {
                       if (
                         ((o = 1),
                         i &&
                           (n =
-                            2 & r[0]
+                            2 & s[0]
                               ? i.return
-                              : r[0]
+                              : s[0]
                                 ? i.throw || ((n = i.return) && n.call(i), 0)
                                 : i.next) &&
-                          !(n = n.call(i, r[1])).done)
+                          !(n = n.call(i, s[1])).done)
                       )
                         return n;
-                      switch (((i = 0), n && (r = [2 & r[0], n.value]), r[0])) {
+                      switch (((i = 0), n && (s = [2 & s[0], n.value]), s[0])) {
                         case 0:
                         case 1:
-                          n = r;
+                          n = s;
                           break;
                         case 4:
-                          return s.label++, { value: r[1], done: !1 };
+                          return r.label++, { value: s[1], done: !1 };
                         case 5:
-                          s.label++, (i = r[1]), (r = [0]);
+                          r.label++, (i = s[1]), (s = [0]);
                           continue;
                         case 7:
-                          (r = s.ops.pop()), s.trys.pop();
+                          (s = r.ops.pop()), r.trys.pop();
                           continue;
                         default:
                           if (
-                            !((n = s.trys),
+                            !((n = r.trys),
                             (n = n.length > 0 && n[n.length - 1]) ||
-                              (6 !== r[0] && 2 !== r[0]))
+                              (6 !== s[0] && 2 !== s[0]))
                           ) {
-                            s = 0;
+                            r = 0;
                             continue;
                           }
                           if (
-                            3 === r[0] &&
-                            (!n || (r[1] > n[0] && r[1] < n[3]))
+                            3 === s[0] &&
+                            (!n || (s[1] > n[0] && s[1] < n[3]))
                           ) {
-                            s.label = r[1];
+                            r.label = s[1];
                             break;
                           }
-                          if (6 === r[0] && s.label < n[1]) {
-                            (s.label = n[1]), (n = r);
+                          if (6 === s[0] && r.label < n[1]) {
+                            (r.label = n[1]), (n = s);
                             break;
                           }
-                          if (n && s.label < n[2]) {
-                            (s.label = n[2]), s.ops.push(r);
+                          if (n && r.label < n[2]) {
+                            (r.label = n[2]), r.ops.push(s);
                             break;
                           }
-                          n[2] && s.ops.pop(), s.trys.pop();
+                          n[2] && r.ops.pop(), r.trys.pop();
                           continue;
                       }
-                      r = t.call(e, s);
+                      s = t.call(e, r);
                     } catch (e) {
-                      (r = [6, e]), (i = 0);
+                      (s = [6, e]), (i = 0);
                     } finally {
                       o = n = 0;
                     }
-                  if (5 & r[0]) throw r[1];
-                  return { value: r[0] ? r[1] : void 0, done: !0 };
-                })([r, a]);
+                  if (5 & s[0]) throw s[1];
+                  return { value: s[0] ? s[1] : void 0, done: !0 };
+                })([s, a]);
               };
             }
           };
@@ -2665,8 +2665,8 @@
           return (
             n(t, e),
             (t.prototype.componentDidMount = function () {
-              return s(this, void 0, void 0, function () {
-                var e, t, o, i, n, s, l;
+              return r(this, void 0, void 0, function () {
+                var e, t, o, i, n, r, l;
                 return a(this, function (a) {
                   switch (a.label) {
                     case 0:
@@ -2676,7 +2676,7 @@
                         (o = this.props),
                         (i = o.columns),
                         (n = o.data),
-                        (s = o.options),
+                        (r = o.options),
                         [4, d.propsToOptions(this.props)]
                       );
                     case 1:
@@ -2684,9 +2684,9 @@
                         (l = a.sent()),
                         new p.default(
                           e,
-                          r(
-                            r(
-                              r(r({ columns: i }, l), {
+                          s(
+                            s(
+                              s(s({ columns: i }, l), {
                                 layout: "fitColumns",
                                 tableBuilding: function () {
                                   (t.table = this),
@@ -2698,7 +2698,7 @@
                                 },
                                 invalidOptionWarnings: !1,
                               }),
-                              s,
+                              r,
                             ),
                             { data: n },
                           ),
@@ -2730,7 +2730,7 @@
               var t = this.props.className;
               return l.createElement(
                 "div",
-                r(
+                s(
                   {
                     ref: function (t) {
                       return (e.ref = t);
@@ -2783,11 +2783,11 @@
                   ? Object.create(t)
                   : ((o.prototype = t.prototype), new o()));
           }),
-        r =
+        s =
           (this && this.__assign) ||
           function () {
             return (
-              (r =
+              (s =
                 Object.assign ||
                 function (e) {
                   for (var t, o = 1, i = arguments.length; o < i; o++)
@@ -2796,25 +2796,25 @@
                         (e[n] = t[n]);
                   return e;
                 }),
-              r.apply(this, arguments)
+              s.apply(this, arguments)
             );
           },
-        s =
+        r =
           (this && this.__awaiter) ||
           function (e, t, o, i) {
-            return new (o || (o = Promise))(function (n, r) {
-              function s(e) {
+            return new (o || (o = Promise))(function (n, s) {
+              function r(e) {
                 try {
                   l(i.next(e));
                 } catch (e) {
-                  r(e);
+                  s(e);
                 }
               }
               function a(e) {
                 try {
                   l(i.throw(e));
                 } catch (e) {
-                  r(e);
+                  s(e);
                 }
               }
               function l(e) {
@@ -2826,7 +2826,7 @@
                       ? t
                       : new o(function (e) {
                           e(t);
-                        })).then(s, a);
+                        })).then(r, a);
               }
               l((i = i.apply(e, t || [])).next());
             });
@@ -2837,8 +2837,8 @@
             var o,
               i,
               n,
-              r,
-              s = {
+              s,
+              r = {
                 label: 0,
                 sent: function () {
                   if (1 & n[0]) throw n[1];
@@ -2848,80 +2848,80 @@
                 ops: [],
               };
             return (
-              (r = { next: a(0), throw: a(1), return: a(2) }),
+              (s = { next: a(0), throw: a(1), return: a(2) }),
               "function" == typeof Symbol &&
-                (r[Symbol.iterator] = function () {
+                (s[Symbol.iterator] = function () {
                   return this;
                 }),
-              r
+              s
             );
-            function a(r) {
+            function a(s) {
               return function (a) {
-                return (function (r) {
+                return (function (s) {
                   if (o) throw new TypeError("Generator is already executing.");
-                  for (; s; )
+                  for (; r; )
                     try {
                       if (
                         ((o = 1),
                         i &&
                           (n =
-                            2 & r[0]
+                            2 & s[0]
                               ? i.return
-                              : r[0]
+                              : s[0]
                                 ? i.throw || ((n = i.return) && n.call(i), 0)
                                 : i.next) &&
-                          !(n = n.call(i, r[1])).done)
+                          !(n = n.call(i, s[1])).done)
                       )
                         return n;
-                      switch (((i = 0), n && (r = [2 & r[0], n.value]), r[0])) {
+                      switch (((i = 0), n && (s = [2 & s[0], n.value]), s[0])) {
                         case 0:
                         case 1:
-                          n = r;
+                          n = s;
                           break;
                         case 4:
-                          return s.label++, { value: r[1], done: !1 };
+                          return r.label++, { value: s[1], done: !1 };
                         case 5:
-                          s.label++, (i = r[1]), (r = [0]);
+                          r.label++, (i = s[1]), (s = [0]);
                           continue;
                         case 7:
-                          (r = s.ops.pop()), s.trys.pop();
+                          (s = r.ops.pop()), r.trys.pop();
                           continue;
                         default:
                           if (
-                            !((n = s.trys),
+                            !((n = r.trys),
                             (n = n.length > 0 && n[n.length - 1]) ||
-                              (6 !== r[0] && 2 !== r[0]))
+                              (6 !== s[0] && 2 !== s[0]))
                           ) {
-                            s = 0;
+                            r = 0;
                             continue;
                           }
                           if (
-                            3 === r[0] &&
-                            (!n || (r[1] > n[0] && r[1] < n[3]))
+                            3 === s[0] &&
+                            (!n || (s[1] > n[0] && s[1] < n[3]))
                           ) {
-                            s.label = r[1];
+                            r.label = s[1];
                             break;
                           }
-                          if (6 === r[0] && s.label < n[1]) {
-                            (s.label = n[1]), (n = r);
+                          if (6 === s[0] && r.label < n[1]) {
+                            (r.label = n[1]), (n = s);
                             break;
                           }
-                          if (n && s.label < n[2]) {
-                            (s.label = n[2]), s.ops.push(r);
+                          if (n && r.label < n[2]) {
+                            (r.label = n[2]), r.ops.push(s);
                             break;
                           }
-                          n[2] && s.ops.pop(), s.trys.pop();
+                          n[2] && r.ops.pop(), r.trys.pop();
                           continue;
                       }
-                      r = t.call(e, s);
+                      s = t.call(e, r);
                     } catch (e) {
-                      (r = [6, e]), (i = 0);
+                      (s = [6, e]), (i = 0);
                     } finally {
                       o = n = 0;
                     }
-                  if (5 & r[0]) throw r[1];
-                  return { value: r[0] ? r[1] : void 0, done: !0 };
-                })([r, a]);
+                  if (5 & s[0]) throw s[1];
+                  return { value: s[0] ? s[1] : void 0, done: !0 };
+                })([s, a]);
               };
             }
           },
@@ -2969,8 +2969,8 @@
             n(t, e),
             (t.prototype.initTabulator = function () {
               var e;
-              return s(this, void 0, void 0, function () {
-                var t, o, i, n, s, l, u;
+              return r(this, void 0, void 0, function () {
+                var t, o, i, n, r, l, u;
                 return a(this, function (a) {
                   switch (a.label) {
                     case 0:
@@ -2979,7 +2979,7 @@
                         (o = this),
                         (i = this.props),
                         (n = i.columns),
-                        (s = i.data),
+                        (r = i.data),
                         (l = i.options),
                         [4, h.propsToOptions(this.props)]
                       );
@@ -2988,9 +2988,9 @@
                         (u = a.sent()),
                         new m.default(
                           t,
-                          r(
-                            r(
-                              r(r({ columns: n }, u), {
+                          s(
+                            s(
+                              s(s({ columns: n }, u), {
                                 layout:
                                   null !== (e = this.props.layout) &&
                                   void 0 !== e
@@ -3008,10 +3008,10 @@
                               }),
                               l,
                             ),
-                            { data: s },
+                            { data: r },
                           ),
                         ),
-                        s && s.length > 0 && this.setState({ data: s }),
+                        r && r.length > 0 && this.setState({ data: r }),
                         [2]
                       );
                   }
@@ -3019,7 +3019,7 @@
               });
             }),
             (t.prototype.componentDidMount = function () {
-              return s(this, void 0, void 0, function () {
+              return r(this, void 0, void 0, function () {
                 return a(this, function (e) {
                   switch (e.label) {
                     case 0:
@@ -3049,10 +3049,10 @@
                       p.isSameArray(t.columns, e.columns) &&
                       p.isSameObject(t.options, e.options))
                   ? {}
-                  : r(r({}, t), {
+                  : s(s({}, t), {
                       data: l([], e.data),
                       columns: l([], e.columns),
-                      options: r({}, e.options),
+                      options: s({}, e.options),
                     });
             }),
             (t.prototype.componentDidUpdate = function (e, t) {
@@ -3069,7 +3069,7 @@
               var t = this.props.className;
               return u.createElement(
                 "div",
-                r(
+                s(
                   {
                     ref: function (t) {
                       return (e.ref = t);
@@ -3090,7 +3090,7 @@
       "use strict";
       var i,
         n,
-        r =
+        s =
           (this && this.__extends) ||
           ((i = function (e, t) {
             return (
@@ -3124,7 +3124,7 @@
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var s = o(90626),
+      var r = o(90626),
         a = o(85646),
         l = o(37875),
         u = o(4448),
@@ -3157,10 +3157,10 @@
             hozAlign: "center",
             editor: "input",
             formatter: o(35060).reactFormatter(
-              s.createElement(function (e) {
+              r.createElement(function (e) {
                 var t = e.cell._cell.row.data,
                   o = e.cell._cell.value || "Edit | Show";
-                return s.createElement(
+                return r.createElement(
                   "button",
                   {
                     onClick: function () {
@@ -3338,7 +3338,7 @@
                     console.log("ajaxError", e);
                   },
                 };
-                return s.createElement(a.default, {
+                return r.createElement(a.default, {
                   ref: function (e) {
                     return (t.ref = e);
                   },
@@ -3355,13 +3355,13 @@
             );
           }
           return (
-            r(t, e),
+            s(t, e),
             (t.prototype.render = function () {
               var e = this;
-              return s.createElement(
+              return r.createElement(
                 "div",
                 null,
-                s.createElement(a.default, {
+                r.createElement(a.default, {
                   ref: function (t) {
                     return (e.ref = t);
                   },
@@ -3372,34 +3372,34 @@
                   "data-custom-attr": "test-custom-attribute",
                   className: "custom-css-class",
                 }),
-                s.createElement(
+                r.createElement(
                   "i",
                   null,
                   "Selected Name: ",
-                  s.createElement("strong", null, this.state.selectedName),
+                  r.createElement("strong", null, this.state.selectedName),
                 ),
-                s.createElement(
+                r.createElement(
                   "h3",
                   null,
                   "Asynchronous data: (e.g. fetch) - ",
-                  s.createElement(
+                  r.createElement(
                     "button",
                     { onClick: this.setData },
                     "Set Data",
                   ),
                   " ",
-                  s.createElement(
+                  r.createElement(
                     "button",
                     { onClick: this.clearData },
                     "Clear",
                   ),
                 ),
-                s.createElement(a.default, {
+                r.createElement(a.default, {
                   columns: d,
                   data: this.state.data,
                 }),
-                s.createElement("h3", null, "Editable Table"),
-                s.createElement(a.default, {
+                r.createElement("h3", null, "Editable Table"),
+                r.createElement(a.default, {
                   columns: m,
                   data: h,
                   cellEdited: function (e) {
@@ -3408,19 +3408,19 @@
                   dataChanged: function (e) {
                     return console.log("dataChanged", e);
                   },
-                  footerElement: s.createElement("span", null, "Footer"),
+                  footerElement: r.createElement("span", null, "Footer"),
                   options: { movableColumns: !0, movableRows: !0 },
                 }),
-                s.createElement(
+                r.createElement(
                   "h3",
                   null,
                   "Infinite Scrolling with Ajax Requests",
                 ),
                 this.renderAjaxScrollExample(),
-                s.createElement(
+                r.createElement(
                   "p",
                   null,
-                  s.createElement(
+                  r.createElement(
                     "a",
                     {
                       href: "https://github.com/ngduc/react-tabulator",
@@ -3429,10 +3429,10 @@
                     "Back to: Github Repo: react-tabulator",
                   ),
                 ),
-                s.createElement(
+                r.createElement(
                   "p",
                   null,
-                  s.createElement(
+                  r.createElement(
                     "a",
                     {
                       href: "http://tabulator.info/examples/4.0",
@@ -3445,7 +3445,7 @@
             }),
             t
           );
-        })(s.Component);
+        })(r.Component);
       t.default = f;
     },
     35060: (e, t, o) => {
@@ -3454,7 +3454,7 @@
         (t.reactFormatter = t.isSameObject = t.isSameArray = t.clone = void 0);
       var i = o(90626),
         n = o(72739);
-      function r(e) {
+      function s(e) {
         var t = 0;
         return function (o, i) {
           return 0 !== t &&
@@ -3477,21 +3477,21 @@
           return !0;
         }),
         (t.isSameObject = function (e, t) {
-          return JSON.stringify(e, r(e)) === JSON.stringify(t, r(t));
+          return JSON.stringify(e, s(e)) === JSON.stringify(t, s(t));
         }),
         (t.reactFormatter = function (e) {
-          return function (t, o, r) {
-            var s = function () {
+          return function (t, o, s) {
+            var r = function () {
               var o = t.getElement();
               if (o && o.querySelector(".formatterCell")) {
-                var r = i.cloneElement(e, { cell: t });
-                n.render(r, o.querySelector(".formatterCell"));
+                var s = i.cloneElement(e, { cell: t });
+                n.render(s, o.querySelector(".formatterCell"));
               }
             };
             return (
-              r(s),
+              s(r),
               setTimeout(function () {
-                s();
+                r();
               }, 0),
               '<div class="formatterCell"></div>'
             );
@@ -3535,8 +3535,8 @@
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var r = o(90626),
-        s = o(72739),
+      var s = o(90626),
+        r = o(72739),
         a = o(2834),
         l = "YYYY-MM-DD",
         u = {
@@ -3603,7 +3603,7 @@
               try {
                 i = a.format(o, l);
               } catch (e) {}
-              return r.createElement("input", {
+              return s.createElement("input", {
                 type: "date",
                 ref: function (t) {
                   return (e.ref = t);
@@ -3617,13 +3617,13 @@
             }),
             t
           );
-        })(r.Component);
+        })(s.Component);
       t.default = function (e, t, o, i, n) {
         var a = document.createElement("div");
         return (
           (a.style.height = "100%"),
-          s.render(
-            r.createElement(c, {
+          r.render(
+            s.createElement(c, {
               cell: e,
               onRendered: t,
               success: o,
@@ -3650,8 +3650,8 @@
           /d{1,4}|M{1,4}|YY(?:YY)?|S{1,3}|Do|ZZ|Z|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g,
         i = "[1-9]\\d?",
         n = "\\d\\d",
-        r = "[^\\s]+",
-        s = /\[([^]*?)\]/gm;
+        s = "[^\\s]+",
+        r = /\[([^]*?)\]/gm;
       function a(e, t) {
         for (var o = [], i = 0, n = e.length; i < n; i++)
           o.push(e[i].substr(0, t));
@@ -3670,8 +3670,8 @@
         for (var t = [], o = 1; o < arguments.length; o++)
           t[o - 1] = arguments[o];
         for (var i = 0, n = t; i < n.length; i++) {
-          var r = n[i];
-          for (var s in r) e[s] = r[s];
+          var s = n[i];
+          for (var r in s) e[r] = s[r];
         }
         return e;
       }
@@ -3831,10 +3831,10 @@
           return +e - 1;
         },
         w = [null, i],
-        E = [null, r],
+        E = [null, s],
         C = [
           "isPm",
-          r,
+          s,
           function (e, t) {
             var o = e.toLowerCase();
             return o === t.amPm[0] ? 0 : o === t.amPm[1] ? 1 : null;
@@ -3857,7 +3857,7 @@
           DD: ["day", n],
           Do: [
             "day",
-            i + r,
+            i + s,
             function (e) {
               return parseInt(e, 10);
             },
@@ -3900,8 +3900,8 @@
           dd: w,
           ddd: E,
           dddd: E,
-          MMM: ["month", r, l("monthNamesShort")],
-          MMMM: ["month", r, l("monthNames")],
+          MMM: ["month", s, l("monthNamesShort")],
+          MMMM: ["month", s, l("monthNames")],
           a: C,
           A: C,
           ZZ: x,
@@ -3919,11 +3919,11 @@
           mediumTime: "HH:mm:ss",
           longTime: "HH:mm:ss.SSS",
         },
-        D = function (e) {
+        L = function (e) {
           return u(M, e);
         };
-      t.setGlobalDateMasks = D;
-      var L = function (e, t, i) {
+      t.setGlobalDateMasks = L;
+      var D = function (e, t, i) {
         if (
           (void 0 === t && (t = M.default),
           void 0 === i && (i = {}),
@@ -3933,12 +3933,12 @@
         )
           throw new Error("Invalid Date pass to format");
         var n = [];
-        t = (t = M[t] || t).replace(s, function (e, t) {
+        t = (t = M[t] || t).replace(r, function (e, t) {
           return n.push(t), "@@@";
         });
-        var r = u(u({}, m), i);
+        var s = u(u({}, m), i);
         return (t = t.replace(o, function (t) {
-          return v[t](e, r);
+          return v[t](e, s);
         })).replace(/@@@/g, function () {
           return n.shift();
         });
@@ -3958,9 +3958,9 @@
             isPm: null,
             timezoneOffset: null,
           },
-          r = [],
+          s = [],
           a = [],
-          l = t.replace(s, function (e, t) {
+          l = t.replace(r, function (e, t) {
             return a.push(g(t)), "@@@";
           }),
           c = {},
@@ -3974,7 +3974,7 @@
             throw new Error(
               "Invalid format. " + o + " specified twice in format",
             );
-          return (c[o] = !0), n && (d[n] = !0), r.push(t), "(" + i + ")";
+          return (c[o] = !0), n && (d[n] = !0), s.push(t), "(" + i + ")";
         })),
           Object.keys(d).forEach(function (e) {
             if (!c[e])
@@ -3988,7 +3988,7 @@
         var h = e.match(new RegExp(l, "i"));
         if (!h) return null;
         for (var p = u(u({}, m), i), f = 1; f < h.length; f++) {
-          var b = r[f - 1],
+          var b = s[f - 1],
             v = b[0],
             y = b[2],
             w = y ? y(h[f], p) : +h[f];
@@ -4034,14 +4034,14 @@
               ),
             );
       }
-      (t.format = L),
+      (t.format = D),
         (t.parse = T),
         (t.default = {
-          format: L,
+          format: D,
           parse: T,
           defaultI18n: p,
           setGlobalDateI18n: f,
-          setGlobalDateMasks: D,
+          setGlobalDateMasks: L,
         });
     },
     4448: function (e, t, o) {
@@ -4081,8 +4081,8 @@
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var r = o(90626),
-        s = o(72739),
+      var s = o(90626),
+        r = o(72739),
         a = o(35060),
         l = o(2465),
         u = (function (e) {
@@ -4121,7 +4121,7 @@
                   var i = a.clone(t.state.values);
                   i.push({ id: o, name: o }), t.setValueOnSuccess(i);
                 } else e();
-                var n = s.findDOMNode(t.ref);
+                var n = r.findDOMNode(t.ref);
                 n &&
                   n.parentElement.parentElement.parentElement &&
                   (n.parentElement.parentElement.parentElement.style.overflow =
@@ -4135,7 +4135,7 @@
             (t.prototype.componentDidMount = function () {
               var e = this;
               this.props.onRendered(function () {
-                var t = s.findDOMNode(e.ref);
+                var t = r.findDOMNode(e.ref);
                 (t.style.zIndex = 1),
                   (t.parentElement.parentElement.parentElement.style.overflow =
                     "inherit"),
@@ -4151,10 +4151,10 @@
                 t = this.props.editorParams,
                 o = this.state.values,
                 i = t.values;
-              return r.createElement(
+              return s.createElement(
                 "div",
                 null,
-                r.createElement(l, {
+                s.createElement(l, {
                   ref: function (t) {
                     return (e.ref = t);
                   },
@@ -4173,13 +4173,13 @@
             }),
             t
           );
-        })(r.Component);
+        })(s.Component);
       t.default = function (e, t, o, i, n) {
         var a = document.createElement("div");
         return (
           (a.style.height = "100%"),
-          s.render(
-            r.createElement(u, {
+          r.render(
+            s.createElement(u, {
               cell: e,
               onRendered: t,
               success: o,
@@ -4198,17 +4198,17 @@
       var i = o(90626),
         n = o(72739);
       t.default = function (e, t, o) {
-        var r = t.style || "",
-          s = e.getValue() || [],
+        var s = t.style || "",
+          r = e.getValue() || [],
           a =
-            s && s.length > 0 && "string" == typeof s[0]
-              ? i.createElement("span", null, s.join(", "))
+            r && r.length > 0 && "string" == typeof r[0]
+              ? i.createElement("span", null, r.join(", "))
               : i.createElement("span", null);
-        "PILL" === r &&
+        "PILL" === s &&
           (a = i.createElement(
             "div",
             null,
-            s.map(function (e) {
+            r.map(function (e) {
               return "string" == typeof e
                 ? i.createElement("span", { key: e }, e)
                 : i.createElement("span", { key: e.name }, e.name);
@@ -4221,7 +4221,7 @@
         return (
           (l.className = "multi-value-formatter-content"),
           (l.title =
-            s && s.length > 0 && "string" == typeof s[0] ? s.join(", ") : ""),
+            r && r.length > 0 && "string" == typeof r[0] ? r.join(", ") : ""),
           n.render(a, l),
           l
         );
@@ -4266,7 +4266,7 @@
           overflow: "scroll",
           whiteSpace: "pre",
         },
-        r = [
+        s = [
           "fontSize",
           "fontFamily",
           "fontWeight",
@@ -4274,7 +4274,7 @@
           "letterSpacing",
           "textTransform",
         ],
-        s = (function (e) {
+        r = (function (e) {
           function t(t) {
             e.call(this, t), (this.state = { inputWidth: null });
           }
@@ -4296,7 +4296,7 @@
             (t.prototype.copyInputStyles = function () {
               var e = this,
                 t = window.getComputedStyle(this.input);
-              r.forEach(function (o) {
+              s.forEach(function (o) {
                 e.sizer.style[o] = t[o];
               });
             }),
@@ -4310,8 +4310,8 @@
               var e = this,
                 t = this.props,
                 o = t.inputAttributes,
-                r = t.inputEventHandlers,
-                s = t.query,
+                s = t.inputEventHandlers,
+                r = t.query,
                 a = t.placeholder,
                 l = t.expandable,
                 u = t.listboxId,
@@ -4322,11 +4322,11 @@
                 { className: this.props.classNames.searchInput },
                 i.createElement(
                   "input",
-                  Object.assign({}, o, r, {
+                  Object.assign({}, o, s, {
                     ref: function (t) {
                       e.input = t;
                     },
-                    value: s,
+                    value: r,
                     placeholder: a,
                     role: "combobox",
                     "aria-autocomplete": "list",
@@ -4345,21 +4345,21 @@
                     },
                     style: n,
                   },
-                  s || a,
+                  r || a,
                 ),
               );
             }),
             t
           );
         })(i.Component);
-      e.exports = s;
+      e.exports = r;
     },
     2465: (e, t, o) => {
       "use strict";
       var i = o(90626),
         n = o(61410),
-        r = o(60299),
-        s = o(53255),
+        s = o(60299),
+        r = o(53255),
         a = o(33602),
         l = 13,
         u = 9,
@@ -4414,9 +4414,9 @@
                 o = t.query,
                 i = t.selectedIndex,
                 n = this.props,
-                r = n.delimiters,
-                s = n.delimiterChars;
-              (r.indexOf(e.keyCode) > -1 || s.indexOf(e.key) > -1) &&
+                s = n.delimiters,
+                r = n.delimiterChars;
+              (s.indexOf(e.keyCode) > -1 || r.indexOf(e.key) > -1) &&
                 ((o || i > -1) && e.preventDefault(), this.handleDelimiter()),
                 e.keyCode === c &&
                   0 === o.length &&
@@ -4491,7 +4491,7 @@
             (t.prototype.render = function () {
               var e = this,
                 t = "ReactTags-listbox",
-                o = this.props.tagComponent || r,
+                o = this.props.tagComponent || s,
                 n = this.props.tags.map(function (t, n) {
                   return i.createElement(o, {
                     key: n,
@@ -4526,7 +4526,7 @@
                     "div",
                     { className: this.state.classNames.search },
                     i.createElement(
-                      s,
+                      r,
                       Object.assign({}, this.state, {
                         inputAttributes: this.props.inputAttributes,
                         inputEventHandlers: this.inputEventHandlers,
@@ -4617,18 +4617,18 @@
       function n(e) {
         return e.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
       }
-      function r(e, t) {
+      function s(e, t) {
         if (t) {
           var o = RegExp(n(t), "gi");
           e = e.replace(o, "<mark>$&</mark>");
         }
         return { __html: e };
       }
-      function s(e, t, o, i, r) {
+      function r(e, t, o, i, s) {
         if (!i) {
-          var s = new RegExp("(?:^|\\s)" + n(e), "i");
+          var r = new RegExp("(?:^|\\s)" + n(e), "i");
           i = function (e) {
-            return s.test(e.name);
+            return r.test(e.name);
           };
         }
         var a = t
@@ -4638,8 +4638,8 @@
           .slice(0, o);
         return (
           0 === a.length &&
-            r &&
-            a.push({ id: 0, name: r, disabled: !0, disableMarkIt: !0 }),
+            s &&
+            a.push({ id: 0, name: s, disabled: !0, disableMarkIt: !0 }),
           a
         );
       }
@@ -4647,7 +4647,7 @@
         function t(t) {
           e.call(this, t),
             (this.state = {
-              options: s(
+              options: r(
                 this.props.query,
                 this.props.suggestions,
                 this.props.maxSuggestionsLength,
@@ -4662,7 +4662,7 @@
           (t.prototype.constructor = t),
           (t.prototype.componentWillReceiveProps = function (e) {
             this.setState({
-              options: s(
+              options: r(
                 e.query,
                 e.suggestions,
                 e.maxSuggestionsLength,
@@ -4680,25 +4680,25 @@
               return null;
             var t = this.state.options.map(function (t, o) {
               var n = e.props.listboxId + "-" + o,
-                s = [];
+                r = [];
               return (
                 e.props.selectedIndex === o &&
-                  s.push(e.props.classNames.suggestionActive),
-                t.disabled && s.push(e.props.classNames.suggestionDisabled),
+                  r.push(e.props.classNames.suggestionActive),
+                t.disabled && r.push(e.props.classNames.suggestionDisabled),
                 i.createElement(
                   "li",
                   {
                     id: n,
                     key: n,
                     role: "option",
-                    className: s.join(" "),
+                    className: r.join(" "),
                     "aria-disabled": !0 === t.disabled,
                     onMouseDown: e.handleMouseDown.bind(e, t),
                   },
                   t.disableMarkIt
                     ? t.name
                     : i.createElement("span", {
-                        dangerouslySetInnerHTML: r(
+                        dangerouslySetInnerHTML: s(
                           t.name,
                           e.props.query,
                           t.markInput,
@@ -4745,7 +4745,7 @@
     50996: (t, o, n) => {
       "use strict";
       n.r(o), n.d(o, { default: () => oe });
-      var r =
+      var s =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
           ? function (e) {
               return typeof e;
@@ -4768,8 +4768,8 @@
             if ("function" != typeof e)
               throw new TypeError("predicate must be a function");
             for (var i = arguments[1], n = 0; n < o; ) {
-              var r = t[n];
-              if (e.call(i, r, n, t)) return n;
+              var s = t[n];
+              if (e.call(i, s, n, t)) return n;
               n++;
             }
             return -1;
@@ -4785,8 +4785,8 @@
               if ("function" != typeof e)
                 throw new TypeError("predicate must be a function");
               for (var i = arguments[1], n = 0; n < o; ) {
-                var r = t[n];
-                if (e.call(i, r, n, t)) return r;
+                var s = t[n];
+                if (e.call(i, s, n, t)) return s;
                 n++;
               }
             },
@@ -4806,16 +4806,16 @@
                 i = o.length >>> 0;
               if (0 === i) return !1;
               var n,
-                r,
-                s = 0 | t,
-                a = Math.max(s >= 0 ? s : i - Math.abs(s), 0);
+                s,
+                r = 0 | t,
+                a = Math.max(r >= 0 ? r : i - Math.abs(r), 0);
               for (; a < i; ) {
                 if (
-                  (n = o[a]) === (r = e) ||
+                  (n = o[a]) === (s = e) ||
                   ("number" == typeof n &&
-                    "number" == typeof r &&
+                    "number" == typeof s &&
                     isNaN(n) &&
-                    isNaN(r))
+                    isNaN(s))
                 )
                   return !0;
                 a++;
@@ -4833,15 +4833,15 @@
               for (var o = Object(e), i = 1; i < arguments.length; i++) {
                 var n = arguments[i];
                 if (null != n)
-                  for (var r in n)
-                    Object.prototype.hasOwnProperty.call(n, r) && (o[r] = n[r]);
+                  for (var s in n)
+                    Object.prototype.hasOwnProperty.call(n, s) && (o[s] = n[s]);
               }
               return o;
             },
             writable: !0,
             configurable: !0,
           });
-      var s = function (e) {
+      var r = function (e) {
         (this.table = e),
           (this.blockHozScrollEvent = !1),
           (this.headersElement = this.createHeadersElement()),
@@ -4856,11 +4856,11 @@
             this.element.firstChild,
           );
       };
-      (s.prototype.createHeadersElement = function () {
+      (r.prototype.createHeadersElement = function () {
         var e = document.createElement("div");
         return e.classList.add("tabulator-headers"), e;
       }),
-        (s.prototype.createHeaderElement = function () {
+        (r.prototype.createHeaderElement = function () {
           var e = document.createElement("div");
           return (
             e.classList.add("tabulator-header"),
@@ -4869,17 +4869,17 @@
             e
           );
         }),
-        (s.prototype.initialize = function () {}),
-        (s.prototype.setRowManager = function (e) {
+        (r.prototype.initialize = function () {}),
+        (r.prototype.setRowManager = function (e) {
           this.rowManager = e;
         }),
-        (s.prototype.getElement = function () {
+        (r.prototype.getElement = function () {
           return this.element;
         }),
-        (s.prototype.getHeadersElement = function () {
+        (r.prototype.getHeadersElement = function () {
           return this.headersElement;
         }),
-        (s.prototype.scrollHorizontal = function (e) {
+        (r.prototype.scrollHorizontal = function (e) {
           var t = 0,
             o = this.element.scrollWidth - this.table.element.clientWidth;
           (this.element.scrollLeft = e),
@@ -4890,16 +4890,16 @@
             this.table.modExists("frozenColumns") &&
               this.table.modules.frozenColumns.scrollHorizontal();
         }),
-        (s.prototype.generateColumnsFromRowData = function (e) {
+        (r.prototype.generateColumnsFromRowData = function (e) {
           var t,
             o,
             i = [],
             n = this.table.options.autoColumnsDefinitions;
           if (e && e.length) {
-            for (var s in (t = e[0])) {
-              var a = { field: s, title: s },
-                l = t[s];
-              switch (void 0 === l ? "undefined" : r(l)) {
+            for (var r in (t = e[0])) {
+              var a = { field: r, title: r },
+                l = t[r];
+              switch (void 0 === l ? "undefined" : s(l)) {
                 case "undefined":
                   o = "string";
                   break;
@@ -4920,7 +4920,7 @@
               (a.sorter = o), i.push(a);
             }
             if (n)
-              switch (void 0 === n ? "undefined" : r(n)) {
+              switch (void 0 === n ? "undefined" : s(n)) {
                 case "function":
                   this.table.options.columns = n.call(this.table, i);
                   break;
@@ -4941,7 +4941,7 @@
             this.setColumns(this.table.options.columns);
           }
         }),
-        (s.prototype.setColumns = function (e, t) {
+        (r.prototype.setColumns = function (e, t) {
           for (var o = this; o.headersElement.firstChild; )
             o.headersElement.removeChild(o.headersElement.firstChild);
           (o.columns = []),
@@ -4960,16 +4960,16 @@
               this.table.vdomHoz.reinitialize(!1, !0),
             o.redraw(!0);
         }),
-        (s.prototype._addColumn = function (e, t, o) {
+        (r.prototype._addColumn = function (e, t, o) {
           var i = new l(e, this),
             n = i.getElement(),
-            r = o ? this.findColumnIndex(o) : o;
-          if (o && r > -1) {
-            var s = this.columns.indexOf(o.getTopColumn()),
+            s = o ? this.findColumnIndex(o) : o;
+          if (o && s > -1) {
+            var r = this.columns.indexOf(o.getTopColumn()),
               a = o.getElement();
             t
-              ? (this.columns.splice(s, 0, i), a.parentNode.insertBefore(n, a))
-              : (this.columns.splice(s + 1, 0, i),
+              ? (this.columns.splice(r, 0, i), a.parentNode.insertBefore(n, a))
+              : (this.columns.splice(r + 1, 0, i),
                 a.parentNode.insertBefore(n, a.nextSibling));
           } else
             t
@@ -4983,19 +4983,19 @@
               i.columnRendered();
           return i;
         }),
-        (s.prototype.registerColumnField = function (e) {
+        (r.prototype.registerColumnField = function (e) {
           e.definition.field && (this.columnsByField[e.definition.field] = e);
         }),
-        (s.prototype.registerColumnPosition = function (e) {
+        (r.prototype.registerColumnPosition = function (e) {
           this.columnsByIndex.push(e);
         }),
-        (s.prototype._reIndexColumns = function () {
+        (r.prototype._reIndexColumns = function () {
           (this.columnsByIndex = []),
             this.columns.forEach(function (e) {
               e.reRegisterPosition();
             });
         }),
-        (s.prototype._verticalAlignHeaders = function () {
+        (r.prototype._verticalAlignHeaders = function () {
           var e = this,
             t = 0;
           e.columns.forEach(function (e) {
@@ -5007,8 +5007,8 @@
             }),
             e.rowManager.adjustTableSize();
         }),
-        (s.prototype.findColumn = function (e) {
-          return "object" != (void 0 === e ? "undefined" : r(e))
+        (r.prototype.findColumn = function (e) {
+          return "object" != (void 0 === e ? "undefined" : s(e))
             ? this.columnsByField[e] || !1
             : e instanceof l
               ? e
@@ -5021,10 +5021,10 @@
                     })) ||
                   !1;
         }),
-        (s.prototype.getColumnByField = function (e) {
+        (r.prototype.getColumnByField = function (e) {
           return this.columnsByField[e];
         }),
-        (s.prototype.getColumnsByFieldRoot = function (e) {
+        (r.prototype.getColumnsByFieldRoot = function (e) {
           var t = this,
             o = [];
           return (
@@ -5034,33 +5034,33 @@
             o
           );
         }),
-        (s.prototype.getColumnByIndex = function (e) {
+        (r.prototype.getColumnByIndex = function (e) {
           return this.columnsByIndex[e];
         }),
-        (s.prototype.getFirstVisibileColumn = function (e) {
+        (r.prototype.getFirstVisibileColumn = function (e) {
           return (
             (e = this.columnsByIndex.findIndex(function (e) {
               return e.visible;
             })) > -1 && this.columnsByIndex[e]
           );
         }),
-        (s.prototype.getColumns = function () {
+        (r.prototype.getColumns = function () {
           return this.columns;
         }),
-        (s.prototype.findColumnIndex = function (e) {
+        (r.prototype.findColumnIndex = function (e) {
           return this.columnsByIndex.findIndex(function (t) {
             return e === t;
           });
         }),
-        (s.prototype.getRealColumns = function () {
+        (r.prototype.getRealColumns = function () {
           return this.columnsByIndex;
         }),
-        (s.prototype.traverse = function (e) {
+        (r.prototype.traverse = function (e) {
           this.columnsByIndex.forEach(function (t, o) {
             e(t, o);
           });
         }),
-        (s.prototype.getDefinitions = function (e) {
+        (r.prototype.getDefinitions = function (e) {
           var t = [];
           return (
             this.columnsByIndex.forEach(function (o) {
@@ -5069,7 +5069,7 @@
             t
           );
         }),
-        (s.prototype.getDefinitionTree = function () {
+        (r.prototype.getDefinitionTree = function () {
           var e = [];
           return (
             this.columns.forEach(function (t) {
@@ -5078,7 +5078,7 @@
             e
           );
         }),
-        (s.prototype.getComponents = function (e) {
+        (r.prototype.getComponents = function (e) {
           var t = [];
           return (
             (e ? this.columns : this.columnsByIndex).forEach(function (e) {
@@ -5087,7 +5087,7 @@
             t
           );
         }),
-        (s.prototype.getWidth = function () {
+        (r.prototype.getWidth = function () {
           var e = 0;
           return (
             this.columnsByIndex.forEach(function (t) {
@@ -5096,7 +5096,7 @@
             e
           );
         }),
-        (s.prototype.moveColumn = function (e, t, o) {
+        (r.prototype.moveColumn = function (e, t, o) {
           this.moveColumnActual(e, t, o),
             this.table.options.responsiveLayout &&
               this.table.modExists("responsiveLayout", !0) &&
@@ -5110,7 +5110,7 @@
             this._verticalAlignHeaders(),
             this.table.rowManager.reinitialize();
         }),
-        (s.prototype.moveColumnActual = function (e, t, o) {
+        (r.prototype.moveColumnActual = function (e, t, o) {
           e.parent.isGroup
             ? this._moveColumnInArray(e.parent.columns, e, t, o)
             : this._moveColumnInArray(this.columns, e, t, o),
@@ -5131,35 +5131,35 @@
               this.table.modules.persistence.config.columns &&
               this.table.modules.persistence.save("columns");
         }),
-        (s.prototype._moveColumnInArray = function (e, t, o, i, n) {
-          var r,
-            s = this,
+        (r.prototype._moveColumnInArray = function (e, t, o, i, n) {
+          var s,
+            r = this,
             a = e.indexOf(t),
             l = [];
           a > -1 &&
             (e.splice(a, 1),
-            (r = e.indexOf(o)) > -1 ? i && (r += 1) : (r = a),
-            e.splice(r, 0, t),
+            (s = e.indexOf(o)) > -1 ? i && (s += 1) : (s = a),
+            e.splice(s, 0, t),
             n &&
               (this.table.options.dataTree &&
                 this.table.modExists("dataTree", !0) &&
                 this.table.rowManager.rows.forEach(function (e) {
                   l = l.concat(
-                    s.table.modules.dataTree.getTreeChildren(e, !1, !0),
+                    r.table.modules.dataTree.getTreeChildren(e, !1, !0),
                   );
                 }),
               (l = l.concat(this.table.rowManager.rows)).forEach(function (e) {
                 if (e.cells.length) {
                   var t = e.cells.splice(a, 1)[0];
-                  e.cells.splice(r, 0, t);
+                  e.cells.splice(s, 0, t);
                 }
               })));
         }),
-        (s.prototype.scrollToColumn = function (e, t, o) {
+        (r.prototype.scrollToColumn = function (e, t, o) {
           var i = this,
             n = 0,
-            r = 0,
             s = 0,
+            r = 0,
             a = e.getElement();
           return new Promise(function (l, u) {
             if (
@@ -5170,18 +5170,18 @@
               switch (t) {
                 case "middle":
                 case "center":
-                  s = -i.element.clientWidth / 2;
+                  r = -i.element.clientWidth / 2;
                   break;
                 case "right":
-                  s = a.clientWidth - i.headersElement.clientWidth;
+                  r = a.clientWidth - i.headersElement.clientWidth;
               }
               if (
                 !o &&
-                (r = a.offsetLeft) > 0 &&
-                r + a.offsetWidth < i.element.clientWidth
+                (s = a.offsetLeft) > 0 &&
+                s + a.offsetWidth < i.element.clientWidth
               )
                 return !1;
-              (n = a.offsetLeft + s),
+              (n = a.offsetLeft + r),
                 (n = Math.max(
                   Math.min(
                     n,
@@ -5198,7 +5198,7 @@
                 u("Scroll Error - Column not visible");
           });
         }),
-        (s.prototype.generateCells = function (e) {
+        (r.prototype.generateCells = function (e) {
           var t = [];
           return (
             this.columnsByIndex.forEach(function (o) {
@@ -5207,7 +5207,7 @@
             t
           );
         }),
-        (s.prototype.getFlexBaseWidth = function () {
+        (r.prototype.getFlexBaseWidth = function () {
           var e = this,
             t = e.table.element.clientWidth,
             o = 0;
@@ -5218,28 +5218,28 @@
                 e.rowManager.element.offsetWidth -
                 e.rowManager.element.clientWidth),
             this.columnsByIndex.forEach(function (i) {
-              var n, r, s;
+              var n, s, r;
               i.visible &&
                 ((n = i.definition.width || 0),
-                (r =
+                (s =
                   void 0 === i.minWidth
                     ? e.table.options.columnMinWidth
                     : parseInt(i.minWidth)),
-                (s =
+                (r =
                   "string" == typeof n
                     ? n.indexOf("%") > -1
                       ? (t / 100) * parseInt(n)
                       : parseInt(n)
                     : n),
-                (o += s > r ? s : r));
+                (o += r > s ? r : s));
             }),
             o
           );
         }),
-        (s.prototype.addColumn = function (e, t, o) {
+        (r.prototype.addColumn = function (e, t, o) {
           var i = this;
-          return new Promise(function (n, r) {
-            var s = i._addColumn(e, t, o);
+          return new Promise(function (n, s) {
+            var r = i._addColumn(e, t, o);
             i._reIndexColumns(),
               i.table.options.responsiveLayout &&
                 i.table.modExists("responsiveLayout", !0) &&
@@ -5250,14 +5250,14 @@
                 ),
               i.redraw(!0),
               "fitColumns" != i.table.modules.layout.getMode() &&
-                s.reinitializeWidth(),
+                r.reinitializeWidth(),
               i._verticalAlignHeaders(),
               i.table.rowManager.reinitialize(),
               i.table.options.virtualDomHoz && i.table.vdomHoz.reinitialize(),
-              n(s);
+              n(r);
           });
         }),
-        (s.prototype.deregisterColumn = function (e) {
+        (r.prototype.deregisterColumn = function (e) {
           var t,
             o = e.getField();
           o && delete this.columnsByField[o],
@@ -5270,7 +5270,7 @@
             this._verticalAlignHeaders(),
             this.redraw();
         }),
-        (s.prototype.redraw = function (e) {
+        (r.prototype.redraw = function (e) {
           e &&
             (g.prototype.helpers.elVisible(this.element) &&
               this._verticalAlignHeaders(),
@@ -5741,7 +5741,7 @@
             o.modules.validate.initializeColumn(this),
           o.modExists("mutator") && o.modules.mutator.initializeColumn(this),
           o.modExists("accessor") && o.modules.accessor.initializeColumn(this),
-          r(o.options.responsiveLayout) &&
+          s(o.options.responsiveLayout) &&
             o.modExists("responsiveLayout") &&
             o.modules.responsiveLayout.initializeColumn(this),
           void 0 !== t.visible && (t.visible ? this.show(!0) : this.hide(!0)),
@@ -5825,7 +5825,7 @@
           var o,
             i,
             n,
-            s,
+            r,
             a,
             l = this;
           if (this.definition.titleFormatter && this.table.modExists("format"))
@@ -5836,7 +5836,7 @@
               (a = function (e) {
                 l.titleFormatterRendered = e;
               }),
-              (s = {
+              (r = {
                 getValue: function () {
                   return t;
                 },
@@ -5849,9 +5849,9 @@
                 typeof (n = this.definition.titleFormatterParams || {})
                   ? n()
                   : n),
-              void 0 === (i = o.call(this.table.modules.format, s, n, a))
+              void 0 === (i = o.call(this.table.modules.format, r, n, a))
                 ? "undefined"
-                : r(i))
+                : s(i))
             ) {
               case "object":
                 i instanceof Node
@@ -5893,9 +5893,9 @@
         }),
         (l.prototype._getNestedData = function (e) {
           for (
-            var t, o = e, i = this.fieldStructure, n = i.length, r = 0;
-            r < n && ((t = o = o[i[r]]), o);
-            r++
+            var t, o = e, i = this.fieldStructure, n = i.length, s = 0;
+            s < n && ((t = o = o[i[s]]), o);
+            s++
           );
           return t;
         }),
@@ -5904,17 +5904,17 @@
         }),
         (l.prototype._setNestedData = function (e, t) {
           for (
-            var o = e, i = this.fieldStructure, n = i.length, r = 0;
-            r < n;
-            r++
+            var o = e, i = this.fieldStructure, n = i.length, s = 0;
+            s < n;
+            s++
           )
-            if (r == n - 1) o[i[r]] = t;
+            if (s == n - 1) o[i[s]] = t;
             else {
-              if (!o[i[r]]) {
+              if (!o[i[s]]) {
                 if (void 0 === t) break;
-                o[i[r]] = {};
+                o[i[s]] = {};
               }
-              o = o[i[r]];
+              o = o[i[s]];
             }
         }),
         (l.prototype.attachColumn = function (e) {
@@ -6486,7 +6486,7 @@
         }),
         (u.prototype.findRow = function (e) {
           var t = this;
-          return "object" != (void 0 === e ? "undefined" : r(e))
+          return "object" != (void 0 === e ? "undefined" : s(e))
             ? null != e &&
                 (t.rows.find(function (o) {
                   return o.data[t.table.options.index] == e;
@@ -6516,11 +6516,11 @@
         (u.prototype.scrollToRow = function (e, t, o) {
           var i,
             n = this,
-            r = this.getDisplayRows().indexOf(e),
-            s = e.getElement(),
+            s = this.getDisplayRows().indexOf(e),
+            r = e.getElement(),
             a = 0;
           return new Promise(function (e, l) {
-            if (r > -1) {
+            if (s > -1) {
               if (
                 (void 0 === t && (t = n.table.options.scrollToRowPosition),
                 void 0 === o && (o = n.table.options.scrollToRowIfVisible),
@@ -6528,7 +6528,7 @@
               )
                 switch (n.renderMode) {
                   case "classic":
-                    (i = g.prototype.helpers.elOffset(s).top),
+                    (i = g.prototype.helpers.elOffset(r).top),
                       (t =
                         Math.abs(n.element.scrollTop - i) >
                         Math.abs(
@@ -6539,28 +6539,28 @@
                     break;
                   case "virtual":
                     t =
-                      Math.abs(n.vDomTop - r) > Math.abs(n.vDomBottom - r)
+                      Math.abs(n.vDomTop - s) > Math.abs(n.vDomBottom - s)
                         ? "bottom"
                         : "top";
                 }
               if (
                 !o &&
-                g.prototype.helpers.elVisible(s) &&
+                g.prototype.helpers.elVisible(r) &&
                 (a =
-                  g.prototype.helpers.elOffset(s).top -
+                  g.prototype.helpers.elOffset(r).top -
                   g.prototype.helpers.elOffset(n.element).top) > 0 &&
-                a < n.element.clientHeight - s.offsetHeight
+                a < n.element.clientHeight - r.offsetHeight
               )
                 return !1;
               switch (n.renderMode) {
                 case "classic":
                   n.element.scrollTop =
-                    g.prototype.helpers.elOffset(s).top -
+                    g.prototype.helpers.elOffset(r).top -
                     g.prototype.helpers.elOffset(n.element).top +
                     n.element.scrollTop;
                   break;
                 case "virtual":
-                  n._virtualRenderFill(r, !0);
+                  n._virtualRenderFill(s, !0);
               }
               switch (t) {
                 case "middle":
@@ -6569,8 +6569,8 @@
                   n.element.clientHeight
                     ? (n.element.scrollTop =
                         n.element.scrollTop +
-                        (s.offsetTop - n.element.scrollTop) -
-                        (n.element.scrollHeight - s.offsetTop) / 2)
+                        (r.offsetTop - n.element.scrollTop) -
+                        (n.element.scrollHeight - r.offsetTop) / 2)
                     : (n.element.scrollTop =
                         n.element.scrollTop - n.element.clientHeight / 2);
                   break;
@@ -6579,12 +6579,12 @@
                   n.element.clientHeight
                     ? (n.element.scrollTop =
                         n.element.scrollTop -
-                        (n.element.scrollHeight - s.offsetTop) +
-                        s.offsetHeight)
+                        (n.element.scrollHeight - r.offsetTop) +
+                        r.offsetHeight)
                     : (n.element.scrollTop =
                         n.element.scrollTop -
                         n.element.clientHeight +
-                        s.offsetHeight);
+                        r.offsetHeight);
               }
               e();
             } else
@@ -6595,7 +6595,7 @@
         (u.prototype.setData = function (e, t, o) {
           var i = this,
             n = this;
-          return new Promise(function (r, s) {
+          return new Promise(function (s, r) {
             t && i.getDisplayRows().length
               ? n.table.options.pagination
                 ? n._setDataActual(e, !0)
@@ -6607,7 +6607,7 @@
                   i.table.columnManager.generateColumnsFromRowData(e),
                 i.resetScroll(),
                 i._setDataActual(e)),
-              r();
+              s();
           });
         }),
         (u.prototype._setDataActual = function (e, t) {
@@ -6624,7 +6624,7 @@
                   this.table.modExists("reactiveData", !0) &&
                   this.table.modules.reactiveData.watchData(e),
                 e.forEach(function (e, t) {
-                  if (e && "object" === (void 0 === e ? "undefined" : r(e))) {
+                  if (e && "object" === (void 0 === e ? "undefined" : s(e))) {
                     var i = new h(e, o);
                     o.rows.push(i);
                   } else
@@ -6637,7 +6637,7 @@
                 o.table.options.dataLoaded.call(this.table, e))
               : console.error(
                   "Data Loading Error - Unable to process data due to invalid data type \nExpecting: array \nReceived: ",
-                  void 0 === e ? "undefined" : r(e),
+                  void 0 === e ? "undefined" : s(e),
                   "\nData:     ",
                   e,
                 );
@@ -6695,15 +6695,15 @@
         (u.prototype.addRows = function (e, t, o) {
           var i = this,
             n = this,
-            r = [];
-          return new Promise(function (s, a) {
+            s = [];
+          return new Promise(function (r, a) {
             (t = i.findAddRowPos(t)),
               Array.isArray(e) || (e = [e]),
               e.length - 1,
               ((void 0 === o && t) || (void 0 !== o && !t)) && e.reverse(),
               e.forEach(function (e, i) {
-                var s = n.addRow(e, t, o, !0);
-                r.push(s);
+                var r = n.addRow(e, t, o, !0);
+                s.push(r);
               }),
               i.table.options.groupBy && i.table.modExists("groupRows")
                 ? i.table.modules.groupRows.updateGroupRows(!0)
@@ -6715,7 +6715,7 @@
                   i.table.rowManager.activeRows,
                 ),
               i.regenerateRowNumbers(),
-              s(r);
+              r(s);
           });
         }),
         (u.prototype.findAddRowPos = function (e) {
@@ -6728,39 +6728,39 @@
         }),
         (u.prototype.addRowActual = function (e, t, o, i) {
           var n,
-            r,
-            s = e instanceof h ? e : new h(e || {}, this),
+            s,
+            r = e instanceof h ? e : new h(e || {}, this),
             a = this.findAddRowPos(t),
             l = -1;
           if (
             (!o &&
               this.table.options.pagination &&
               "page" == this.table.options.paginationAddRow &&
-              ((r = this.getDisplayRows()),
+              ((s = this.getDisplayRows()),
               a
-                ? r.length
-                  ? (o = r[0])
+                ? s.length
+                  ? (o = s[0])
                   : this.activeRows.length &&
                     ((o = this.activeRows[this.activeRows.length - 1]),
                     (a = !1))
-                : r.length &&
-                  ((o = r[r.length - 1]),
-                  (a = !(r.length < this.table.modules.page.getPageSize())))),
+                : s.length &&
+                  ((o = s[s.length - 1]),
+                  (a = !(s.length < this.table.modules.page.getPageSize())))),
             void 0 !== o && (o = this.findRow(o)),
             this.table.options.groupBy && this.table.modExists("groupRows"))
           ) {
-            this.table.modules.groupRows.assignRowToGroup(s);
-            var u = s.getGroup().rows;
+            this.table.modules.groupRows.assignRowToGroup(r);
+            var u = r.getGroup().rows;
             u.length > 1 &&
               (!o || (o && -1 == u.indexOf(o))
                 ? a
-                  ? u[0] !== s &&
+                  ? u[0] !== r &&
                     ((o = u[0]),
-                    this._moveRowInArray(s.getGroup().rows, s, o, !a))
-                  : u[u.length - 1] !== s &&
+                    this._moveRowInArray(r.getGroup().rows, r, o, !a))
+                  : u[u.length - 1] !== r &&
                     ((o = u[u.length - 1]),
-                    this._moveRowInArray(s.getGroup().rows, s, o, !a))
-                : this._moveRowInArray(s.getGroup().rows, s, o, !a));
+                    this._moveRowInArray(r.getGroup().rows, r, o, !a))
+                : this._moveRowInArray(r.getGroup().rows, r, o, !a));
           }
           return (
             o && (l = this.rows.indexOf(o)),
@@ -6768,27 +6768,27 @@
               ? ((n = this.activeRows.indexOf(o)),
                 this.displayRowIterator(function (e) {
                   var t = e.indexOf(o);
-                  t > -1 && e.splice(a ? t : t + 1, 0, s);
+                  t > -1 && e.splice(a ? t : t + 1, 0, r);
                 }),
-                n > -1 && this.activeRows.splice(a ? n : n + 1, 0, s),
-                this.rows.splice(a ? l : l + 1, 0, s))
+                n > -1 && this.activeRows.splice(a ? n : n + 1, 0, r),
+                this.rows.splice(a ? l : l + 1, 0, r))
               : a
                 ? (this.displayRowIterator(function (e) {
-                    e.unshift(s);
+                    e.unshift(r);
                   }),
-                  this.activeRows.unshift(s),
-                  this.rows.unshift(s))
+                  this.activeRows.unshift(r),
+                  this.rows.unshift(r))
                 : (this.displayRowIterator(function (e) {
-                    e.push(s);
+                    e.push(r);
                   }),
-                  this.activeRows.push(s),
-                  this.rows.push(s)),
+                  this.activeRows.push(r),
+                  this.rows.push(r)),
             this.setActiveRows(this.activeRows),
-            this.table.options.rowAdded.call(this.table, s.getComponent()),
+            this.table.options.rowAdded.call(this.table, r.getComponent()),
             this.table.options.dataChanged &&
               this.table.options.dataChanged.call(this.table, this.getData()),
             i || this.reRenderInPosition(),
-            s
+            r
           );
         }),
         (u.prototype.moveRow = function (e, t, o) {
@@ -6818,27 +6818,27 @@
               t instanceof F &&
               (t = this.table.rowManager.prevDisplayRow(e) || t);
             var n = t.getGroup(),
-              r = e.getGroup();
-            n === r
+              s = e.getGroup();
+            n === s
               ? this._moveRowInArray(n.rows, e, t, o)
-              : (r && r.removeRow(e), n.insertRow(e, t, o));
+              : (s && s.removeRow(e), n.insertRow(e, t, o));
           }
         }),
         (u.prototype._moveRowInArray = function (e, t, o, i) {
-          var n, r, s;
+          var n, s, r;
           if (
             t !== o &&
             ((n = e.indexOf(t)) > -1 &&
               (e.splice(n, 1),
-              (r = e.indexOf(o)) > -1
+              (s = e.indexOf(o)) > -1
                 ? i
-                  ? e.splice(r + 1, 0, t)
-                  : e.splice(r, 0, t)
+                  ? e.splice(s + 1, 0, t)
+                  : e.splice(s, 0, t)
                 : e.splice(n, 0, t)),
             e === this.getDisplayRows())
           ) {
-            s = r > n ? r : n + 1;
-            for (var a = n < r ? n : r; a <= s; a++)
+            r = s > n ? s : n + 1;
+            for (var a = n < s ? n : s; a <= r; a++)
               e[a] && this.styleRow(e[a], a);
           }
         }),
@@ -6914,8 +6914,8 @@
                   n);
             }
             if (o.ajaxFiltering) {
-              var r = this.table.modules.filter.getFilters(!0, !0);
-              i[this.table.modules.page.paginationDataSentNames.filters] = r;
+              var s = this.table.modules.filter.getFilters(!0, !0);
+              i[this.table.modules.page.paginationDataSentNames.filters] = s;
             }
             this.table.modules.ajax.setParams(i, !0);
           }
@@ -6978,8 +6978,8 @@
         (u.prototype.refreshActiveData = function (e, t, o) {
           var i,
             n = this,
-            r = this.table,
-            s = [
+            s = this.table,
+            r = [
               "all",
               "filter",
               "sort",
@@ -6991,7 +6991,7 @@
             ];
           if (this.redrawBlock)
             (!this.redrawBlockRestoreConfig ||
-              s.indexOf(e) < s.indexOf(this.redrawBlockRestoreConfig.stage)) &&
+              r.indexOf(e) < r.indexOf(this.redrawBlockRestoreConfig.stage)) &&
               (this.redrawBlockRestoreConfig = {
                 stage: e,
                 skipStage: t,
@@ -7001,23 +7001,23 @@
             switch (
               (n.table.modExists("edit") && n.table.modules.edit.cancelEdit(),
               e || (e = "all"),
-              r.options.selectable &&
-                !r.options.selectablePersistence &&
-                r.modExists("selectRow") &&
-                r.modules.selectRow.deselectRows(),
+              s.options.selectable &&
+                !s.options.selectablePersistence &&
+                s.modExists("selectRow") &&
+                s.modules.selectRow.deselectRows(),
               e)
             ) {
               case "all":
               case "filter":
                 t
                   ? (t = !1)
-                  : r.modExists("filter")
-                    ? n.setActiveRows(r.modules.filter.filter(n.rows))
+                  : s.modExists("filter")
+                    ? n.setActiveRows(s.modules.filter.filter(n.rows))
                     : n.setActiveRows(n.rows.slice(0));
               case "sort":
                 t
                   ? (t = !1)
-                  : r.modExists("sort") && r.modules.sort.sort(this.activeRows),
+                  : s.modExists("sort") && s.modules.sort.sort(this.activeRows),
                   this.regenerateRowNumbers();
               case "display":
                 this.resetDisplayRows();
@@ -7025,73 +7025,73 @@
                 t
                   ? (t = !1)
                   : this.table.modExists("frozenRows") &&
-                    r.modules.frozenRows.isFrozen() &&
-                    (r.modules.frozenRows.getDisplayIndex() ||
-                      r.modules.frozenRows.setDisplayIndex(
+                    s.modules.frozenRows.isFrozen() &&
+                    (s.modules.frozenRows.getDisplayIndex() ||
+                      s.modules.frozenRows.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.frozenRows.getDisplayIndex()),
+                    (i = s.modules.frozenRows.getDisplayIndex()),
                     !0 !==
                       (i = n.setDisplayRows(
-                        r.modules.frozenRows.getRows(
+                        s.modules.frozenRows.getRows(
                           this.getDisplayRows(i - 1),
                         ),
                         i,
-                      )) && r.modules.frozenRows.setDisplayIndex(i));
+                      )) && s.modules.frozenRows.setDisplayIndex(i));
               case "group":
                 t
                   ? (t = !1)
-                  : r.options.groupBy &&
-                    r.modExists("groupRows") &&
-                    (r.modules.groupRows.getDisplayIndex() ||
-                      r.modules.groupRows.setDisplayIndex(
+                  : s.options.groupBy &&
+                    s.modExists("groupRows") &&
+                    (s.modules.groupRows.getDisplayIndex() ||
+                      s.modules.groupRows.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.groupRows.getDisplayIndex()),
+                    (i = s.modules.groupRows.getDisplayIndex()),
                     !0 !==
                       (i = n.setDisplayRows(
-                        r.modules.groupRows.getRows(this.getDisplayRows(i - 1)),
+                        s.modules.groupRows.getRows(this.getDisplayRows(i - 1)),
                         i,
-                      )) && r.modules.groupRows.setDisplayIndex(i));
+                      )) && s.modules.groupRows.setDisplayIndex(i));
               case "tree":
                 t
                   ? (t = !1)
-                  : r.options.dataTree &&
-                    r.modExists("dataTree") &&
-                    (r.modules.dataTree.getDisplayIndex() ||
-                      r.modules.dataTree.setDisplayIndex(
+                  : s.options.dataTree &&
+                    s.modExists("dataTree") &&
+                    (s.modules.dataTree.getDisplayIndex() ||
+                      s.modules.dataTree.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.dataTree.getDisplayIndex()),
+                    (i = s.modules.dataTree.getDisplayIndex()),
                     !0 !==
                       (i = n.setDisplayRows(
-                        r.modules.dataTree.getRows(this.getDisplayRows(i - 1)),
+                        s.modules.dataTree.getRows(this.getDisplayRows(i - 1)),
                         i,
-                      )) && r.modules.dataTree.setDisplayIndex(i)),
-                  r.options.pagination &&
-                    r.modExists("page") &&
+                      )) && s.modules.dataTree.setDisplayIndex(i)),
+                  s.options.pagination &&
+                    s.modExists("page") &&
                     !o &&
-                    "local" == r.modules.page.getMode() &&
-                    r.modules.page.reset();
+                    "local" == s.modules.page.getMode() &&
+                    s.modules.page.reset();
               case "page":
                 t
                   ? (t = !1)
-                  : r.options.pagination &&
-                    r.modExists("page") &&
-                    (r.modules.page.getDisplayIndex() ||
-                      r.modules.page.setDisplayIndex(
+                  : s.options.pagination &&
+                    s.modExists("page") &&
+                    (s.modules.page.getDisplayIndex() ||
+                      s.modules.page.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.page.getDisplayIndex()),
-                    "local" == r.modules.page.getMode() &&
-                      r.modules.page.setMaxRows(
+                    (i = s.modules.page.getDisplayIndex()),
+                    "local" == s.modules.page.getMode() &&
+                      s.modules.page.setMaxRows(
                         this.getDisplayRows(i - 1).length,
                       ),
                     !0 !==
                       (i = n.setDisplayRows(
-                        r.modules.page.getRows(this.getDisplayRows(i - 1)),
+                        s.modules.page.getRows(this.getDisplayRows(i - 1)),
                         i,
-                      )) && r.modules.page.setDisplayIndex(i));
+                      )) && s.modules.page.setDisplayIndex(i));
             }
             g.prototype.helpers.elVisible(n.element) &&
               (o
@@ -7100,10 +7100,10 @@
                     this.table.options.virtualDomHoz &&
                     this.table.vdomHoz.dataChange(),
                   n.renderTable(),
-                  r.options.layoutColumnsOnNewData &&
+                  s.options.layoutColumnsOnNewData &&
                     n.table.columnManager.redraw(!0))),
-              r.modExists("columnCalcs") &&
-                r.modules.columnCalcs.recalc(this.activeRows);
+              s.modExists("columnCalcs") &&
+                s.modules.columnCalcs.recalc(this.activeRows);
           }
         }),
         (u.prototype.regenerateRowNumbers = function () {
@@ -7159,23 +7159,23 @@
             o = this.element.clientHeight + t,
             i = !1,
             n = 0,
-            r = 0,
-            s = this.getDisplayRows();
+            s = 0,
+            r = this.getDisplayRows();
           if (e) {
             this.getDisplayRows();
             for (var a = this.vDomTop; a <= this.vDomBottom; a++)
-              if (s[a])
+              if (r[a])
                 if (i) {
-                  if (!(o - s[a].getElement().offsetTop >= 0)) break;
-                  r = a;
-                } else if (t - s[a].getElement().offsetTop >= 0) n = a;
+                  if (!(o - r[a].getElement().offsetTop >= 0)) break;
+                  s = a;
+                } else if (t - r[a].getElement().offsetTop >= 0) n = a;
                 else {
-                  if (((i = !0), !(o - s[a].getElement().offsetTop >= 0)))
+                  if (((i = !0), !(o - r[a].getElement().offsetTop >= 0)))
                     break;
-                  r = a;
+                  s = a;
                 }
-          } else (n = this.vDomTop), (r = this.vDomBottom);
-          return s.slice(n, r + 1);
+          } else (n = this.vDomTop), (s = this.vDomBottom);
+          return r.slice(n, s + 1);
         }),
         (u.prototype.displayRowIterator = function (e) {
           this.displayRows.forEach(e),
@@ -7212,15 +7212,15 @@
                   o = !1,
                   i = !1,
                   n = this.scrollLeft,
-                  r = this.getDisplayRows(),
-                  s = this.vDomTop;
-                s <= this.vDomBottom;
-                s++
+                  s = this.getDisplayRows(),
+                  r = this.vDomTop;
+                r <= this.vDomBottom;
+                r++
               )
-                if (r[s]) {
-                  var a = t - r[s].getElement().offsetTop;
+                if (s[r]) {
+                  var a = t - s[r].getElement().offsetTop;
                   if (!(!1 === i || Math.abs(a) < i)) break;
-                  (i = a), (o = s);
+                  (i = a), (o = r);
                 }
               e && e(),
                 this._virtualRenderFill(
@@ -7333,8 +7333,8 @@
         (u.prototype._virtualRenderFill = function (e, t, o) {
           var i = this,
             n = i.tableElement,
-            r = i.element,
-            s = 0,
+            s = i.element,
+            r = 0,
             a = 0,
             l = 0,
             u = 0,
@@ -7346,7 +7346,7 @@
             h < i.height &&
               (e -= Math.ceil((i.height - h) / i.vDomRowHeight)) < 0 &&
               (e = 0),
-              (e -= s =
+              (e -= r =
                 Math.min(
                   Math.max(
                     Math.floor(i.vDomWindowBuffer / i.vDomRowHeight),
@@ -7370,7 +7370,7 @@
                 f.initialize(),
                 f.heightInitialized || f.normalizeHeight(!0),
                 (p = f.getHeight()),
-                u < s ? (l += p) : (a += p),
+                u < r ? (l += p) : (a += p),
                 p > this.vDomWindowBuffer && (this.vDomWindowBuffer = 2 * p),
                 "group" !== f.type && (c = !1),
                 i.vDomBottom++,
@@ -7409,7 +7409,7 @@
                   this.element.offsetHeight - this.element.clientHeight),
               (this.vDomScrollPosTop = this.scrollTop),
               (this.vDomScrollPosBottom = this.scrollTop),
-              (r.scrollTop = this.scrollTop),
+              (s.scrollTop = this.scrollTop),
               (n.style.minWidth = c
                 ? i.table.columnManager.getWidth() + "px"
                 : ""),
@@ -7457,24 +7457,24 @@
             i = this.getDisplayRows();
           if (this.vDomTop) {
             var n = this.vDomTop - 1,
-              r = i[n],
-              s = r.getHeight() || this.vDomRowHeight;
-            e >= s &&
-              (this.styleRow(r, n),
-              o.insertBefore(r.getElement(), o.firstChild),
-              (r.initialized && r.heightInitialized) ||
-                (this.vDomTopNewRows.push(r),
-                r.heightInitialized || r.clearCellHeight()),
-              r.initialize(),
-              (this.vDomTopPad -= s),
+              s = i[n],
+              r = s.getHeight() || this.vDomRowHeight;
+            e >= r &&
+              (this.styleRow(s, n),
+              o.insertBefore(s.getElement(), o.firstChild),
+              (s.initialized && s.heightInitialized) ||
+                (this.vDomTopNewRows.push(s),
+                s.heightInitialized || s.clearCellHeight()),
+              s.initialize(),
+              (this.vDomTopPad -= r),
               this.vDomTopPad < 0 && (this.vDomTopPad = n * this.vDomRowHeight),
               n || (this.vDomTopPad = 0),
               (o.style.paddingTop = this.vDomTopPad + "px"),
-              (this.vDomScrollPosTop -= s),
+              (this.vDomScrollPosTop -= r),
               this.vDomTop--),
               (e = -(this.scrollTop - this.vDomScrollPosTop)),
-              r.getHeight() > this.vDomWindowBuffer &&
-                (this.vDomWindowBuffer = 2 * r.getHeight()),
+              s.getHeight() > this.vDomWindowBuffer &&
+                (this.vDomWindowBuffer = 2 * s.getHeight()),
               t < this.vDomMaxRenderChain &&
               this.vDomTop &&
               e >= (i[this.vDomTop - 1].getHeight() || this.vDomRowHeight)
@@ -7508,24 +7508,24 @@
             i = this.getDisplayRows();
           if (this.vDomBottom < this.displayRowsCount - 1) {
             var n = this.vDomBottom + 1,
-              r = i[n],
-              s = r.getHeight() || this.vDomRowHeight;
-            e >= s &&
-              (this.styleRow(r, n),
-              o.appendChild(r.getElement()),
-              (r.initialized && r.heightInitialized) ||
-                (this.vDomBottomNewRows.push(r),
-                r.heightInitialized || r.clearCellHeight()),
-              r.initialize(),
-              (this.vDomBottomPad -= s),
+              s = i[n],
+              r = s.getHeight() || this.vDomRowHeight;
+            e >= r &&
+              (this.styleRow(s, n),
+              o.appendChild(s.getElement()),
+              (s.initialized && s.heightInitialized) ||
+                (this.vDomBottomNewRows.push(s),
+                s.heightInitialized || s.clearCellHeight()),
+              s.initialize(),
+              (this.vDomBottomPad -= r),
               (this.vDomBottomPad < 0 || n == this.displayRowsCount - 1) &&
                 (this.vDomBottomPad = 0),
               (o.style.paddingBottom = this.vDomBottomPad + "px"),
-              (this.vDomScrollPosBottom += s),
+              (this.vDomScrollPosBottom += r),
               this.vDomBottom++),
               (e = this.scrollTop - this.vDomScrollPosBottom),
-              r.getHeight() > this.vDomWindowBuffer &&
-                (this.vDomWindowBuffer = 2 * r.getHeight()),
+              s.getHeight() > this.vDomWindowBuffer &&
+                (this.vDomWindowBuffer = 2 * s.getHeight()),
               t < this.vDomMaxRenderChain &&
               this.vDomBottom < this.displayRowsCount - 1 &&
               e >= (i[this.vDomBottom + 1].getHeight() || this.vDomRowHeight)
@@ -7736,11 +7736,11 @@
                 e.generateCells(),
                 this.element.appendChild(t);
               for (n = 0; n < e.cells.length; n++) {
-                var r = e.cells[n];
+                var s = e.cells[n];
                 if (
-                  (t.appendChild(r.getElement()),
-                  r.column.reinitializeWidth(),
-                  (i += r.column.getWidth()) > this.vDomScrollPosRight)
+                  (t.appendChild(s.getElement()),
+                  s.column.reinitializeWidth(),
+                  (i += s.column.getWidth()) > this.vDomScrollPosRight)
                 )
                   break;
               }
@@ -8317,7 +8317,7 @@
             o = this,
             i = this.element && g.prototype.helpers.elVisible(this.element),
             n = {};
-          return new Promise(function (r, s) {
+          return new Promise(function (s, r) {
             for (var a in ("string" == typeof e && (e = JSON.parse(e)),
             o.table.options.reactiveData &&
               o.table.modExists("reactiveData", !0) &&
@@ -8338,9 +8338,9 @@
                 .forEach(function (e) {
                   var n = o.getCell(e.getField());
                   if (n) {
-                    var r = e.getFieldValue(t);
-                    n.getValue() != r &&
-                      (n.setValueProcessData(r), i && n.cellRendered());
+                    var s = e.getFieldValue(t);
+                    n.getValue() != s &&
+                      (n.setValueProcessData(s), i && n.cellRendered());
                   }
                 });
             }
@@ -8366,7 +8366,7 @@
                   o.table,
                   o.table.rowManager.getData(),
                 ),
-              r();
+              s();
           });
         }),
         (h.prototype.getData = function (e) {
@@ -8751,17 +8751,17 @@
             o,
             i,
             n = this,
-            r = n.element;
+            s = n.element;
           (e.cellTap || this.table.options.cellTap) &&
             ((i = !1),
-            r.addEventListener(
+            s.addEventListener(
               "touchstart",
               function (e) {
                 i = !0;
               },
               { passive: !0 },
             ),
-            r.addEventListener("touchend", function (t) {
+            s.addEventListener("touchend", function (t) {
               if (i) {
                 var o = n.getComponent();
                 e.cellTap && e.cellTap.call(n.table, t, o),
@@ -8772,7 +8772,7 @@
             })),
             (e.cellDblTap || this.table.options.cellDblTap) &&
               ((t = null),
-              r.addEventListener("touchend", function (o) {
+              s.addEventListener("touchend", function (o) {
                 if (t) {
                   clearTimeout(t), (t = null);
                   var i = n.getComponent();
@@ -8786,21 +8786,21 @@
               })),
             (e.cellTapHold || this.table.options.cellTapHold) &&
               ((o = null),
-              r.addEventListener(
+              s.addEventListener(
                 "touchstart",
                 function (t) {
                   clearTimeout(o),
                     (o = setTimeout(function () {
                       clearTimeout(o), (o = null), (i = !1);
-                      var r = n.getComponent();
-                      e.cellTapHold && e.cellTapHold.call(n.table, t, r),
+                      var s = n.getComponent();
+                      e.cellTapHold && e.cellTapHold.call(n.table, t, s),
                         n.table.options.cellTapHold &&
-                          n.table.options.cellTapHold.call(n.table, t, r);
+                          n.table.options.cellTapHold.call(n.table, t, s);
                     }, 1e3));
                 },
                 { passive: !0 },
               ),
-              r.addEventListener("touchend", function (e) {
+              s.addEventListener("touchend", function (e) {
                 clearTimeout(o), (o = null);
               }));
         }),
@@ -8812,7 +8812,7 @@
               ? this.table.modules.format.formatValue(this)
               : (this.element.innerHTML = this.value))
               ? "undefined"
-              : r(e)
+              : s(e)
           ) {
             case "object":
               if (e instanceof Node) {
@@ -9097,7 +9097,7 @@
       }),
         (f.prototype._initialize = function (e) {
           if (this.table.options.footerElement)
-            if ("string" === r(this.table.options.footerElement))
+            if ("string" === s(this.table.options.footerElement))
               "<" === this.table.options.footerElement[0]
                 ? (this.element.innerHTML = this.table.options.footerElement)
                 : ((this.external = !0),
@@ -9409,7 +9409,7 @@
               ? (this.options[t] = e[t])
               : Array.isArray(this.defaultOptions[t])
                 ? (this.options[t] = Object.assign([], this.defaultOptions[t]))
-                : "object" === r(this.defaultOptions[t]) &&
+                : "object" === s(this.defaultOptions[t]) &&
                     null !== this.defaultOptions[t]
                   ? (this.options[t] = Object.assign(
                       {},
@@ -9524,7 +9524,7 @@
             "TABLE" === this.element.tagName &&
               this.modExists("htmlTableImport", !0) &&
               this.modules.htmlTableImport.parseTable(),
-            (this.columnManager = new s(this)),
+            (this.columnManager = new r(this)),
             (this.rowManager = new u(this)),
             (this.footerManager = new f(this)),
             this.columnManager.setRowManager(this.rowManager),
@@ -9575,12 +9575,12 @@
           if (
             (o.localize.setLocale(i.locale), "string" == typeof i.placeholder)
           ) {
-            var r = document.createElement("div");
-            r.classList.add("tabulator-placeholder");
-            var s = document.createElement("span");
-            (s.innerHTML = i.placeholder),
-              r.appendChild(s),
-              (i.placeholder = r);
+            var s = document.createElement("div");
+            s.classList.add("tabulator-placeholder");
+            var r = document.createElement("span");
+            (r.innerHTML = i.placeholder),
+              s.appendChild(r),
+              (i.placeholder = s);
           }
           if (
             (t.appendChild(this.columnManager.getElement()),
@@ -9758,13 +9758,13 @@
             (n.type = "file"),
               (n.accept = e || ".json,application/json"),
               n.addEventListener("change", function (e) {
-                var r,
-                  s = n.files[0],
+                var s,
+                  r = n.files[0],
                   a = new FileReader();
-                a.readAsText(s),
+                a.readAsText(r),
                   (a.onload = function (e) {
                     try {
-                      r = JSON.parse(a.result);
+                      s = JSON.parse(a.result);
                     } catch (e) {
                       return (
                         console.warn(
@@ -9774,7 +9774,7 @@
                         void i(e)
                       );
                     }
-                    t.setData(r)
+                    t.setData(s)
                       .then(function (e) {
                         o(e);
                       })
@@ -9796,25 +9796,25 @@
           );
         }),
         (g.prototype._setData = function (e, t, o, i, n) {
-          var r = this;
+          var s = this;
           return "string" != typeof e
             ? e
-              ? r.rowManager.setData(e, i, n)
-              : r.modExists("ajax") &&
-                  (r.modules.ajax.getUrl || r.options.ajaxURLGenerator)
-                ? "remote" == r.options.pagination && r.modExists("page", !0)
-                  ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
-                  : r.modules.ajax.loadData(i, n)
-                : r.rowManager.setData([], i, n)
+              ? s.rowManager.setData(e, i, n)
+              : s.modExists("ajax") &&
+                  (s.modules.ajax.getUrl || s.options.ajaxURLGenerator)
+                ? "remote" == s.options.pagination && s.modExists("page", !0)
+                  ? (s.modules.page.reset(!0, !0), s.modules.page.setPage(1))
+                  : s.modules.ajax.loadData(i, n)
+                : s.rowManager.setData([], i, n)
             : 0 == e.indexOf("{") || 0 == e.indexOf("[")
-              ? r.rowManager.setData(JSON.parse(e), i, n)
-              : r.modExists("ajax", !0)
-                ? (t && r.modules.ajax.setParams(t),
-                  o && r.modules.ajax.setConfig(o),
-                  r.modules.ajax.setUrl(e),
-                  "remote" == r.options.pagination && r.modExists("page", !0)
-                    ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
-                    : r.modules.ajax.loadData(i, n))
+              ? s.rowManager.setData(JSON.parse(e), i, n)
+              : s.modExists("ajax", !0)
+                ? (t && s.modules.ajax.setParams(t),
+                  o && s.modules.ajax.setConfig(o),
+                  s.modules.ajax.setUrl(e),
+                  "remote" == s.options.pagination && s.modExists("page", !0)
+                    ? (s.modules.page.reset(!0, !0), s.modules.page.setPage(1))
+                    : s.modules.ajax.loadData(i, n))
                 : void 0;
         }),
         (g.prototype.clearData = function () {
@@ -9870,7 +9870,7 @@
           var t = this,
             o = this,
             i = 0;
-          return new Promise(function (n, r) {
+          return new Promise(function (n, s) {
             t.modExists("ajax") && t.modules.ajax.blockActiveRequest(),
               "string" == typeof e && (e = JSON.parse(e)),
               e
@@ -9883,12 +9883,12 @@
                       }));
                   })
                 : (console.warn("Update Error - No data provided"),
-                  r("Update Error - No data provided"));
+                  s("Update Error - No data provided"));
           });
         }),
         (g.prototype.addData = function (e, t, o) {
           var i = this;
-          return new Promise(function (n, r) {
+          return new Promise(function (n, s) {
             i.modExists("ajax") && i.modules.ajax.blockActiveRequest(),
               "string" == typeof e && (e = JSON.parse(e)),
               e
@@ -9900,7 +9900,7 @@
                       n(t);
                   })
                 : (console.warn("Update Error - No data provided"),
-                  r("Update Error - No data provided"));
+                  s("Update Error - No data provided"));
           });
         }),
         (g.prototype.updateOrAddData = function (e) {
@@ -9908,7 +9908,7 @@
             o = this,
             i = [],
             n = 0;
-          return new Promise(function (r, s) {
+          return new Promise(function (s, r) {
             t.modExists("ajax") && t.modules.ajax.blockActiveRequest(),
               "string" == typeof e && (e = JSON.parse(e)),
               e
@@ -9917,14 +9917,14 @@
                     n++,
                       t
                         ? t.updateData(e).then(function () {
-                            n--, i.push(t.getComponent()), n || r(i);
+                            n--, i.push(t.getComponent()), n || s(i);
                           })
                         : o.rowManager.addRows(e).then(function (e) {
-                            n--, i.push(e[0].getComponent()), n || r(i);
+                            n--, i.push(e[0].getComponent()), n || s(i);
                           });
                   })
                 : (console.warn("Update Error - No data provided"),
-                  s("Update Error - No data provided"));
+                  r("Update Error - No data provided"));
           });
         }),
         (g.prototype.getRow = function (e) {
@@ -9943,11 +9943,11 @@
           var t = this;
           return new Promise(function (o, i) {
             var n = t,
-              r = 0,
               s = 0,
+              r = 0,
               a = [];
             function l() {
-              ++r == e.length && s && (n.rowManager.reRenderInPosition(), o());
+              ++s == e.length && r && (n.rowManager.reRenderInPosition(), o());
             }
             Array.isArray(e) || (e = [e]),
               e.forEach(function (e) {
@@ -9967,7 +9967,7 @@
               a.forEach(function (e) {
                 e.delete()
                   .then(function () {
-                    s++, l();
+                    r++, l();
                   })
                   .catch(function (e) {
                     l(), i(e);
@@ -9977,7 +9977,7 @@
         }),
         (g.prototype.addRow = function (e, t, o) {
           var i = this;
-          return new Promise(function (n, r) {
+          return new Promise(function (n, s) {
             "string" == typeof e && (e = JSON.parse(e)),
               i.rowManager.addRows(e, t, o).then(function (e) {
                 i.modExists("columnCalcs") &&
@@ -9989,20 +9989,20 @@
         (g.prototype.updateOrAddRow = function (e, t) {
           var o = this;
           return new Promise(function (i, n) {
-            var r = o.rowManager.findRow(e);
+            var s = o.rowManager.findRow(e);
             "string" == typeof t && (t = JSON.parse(t)),
-              r
-                ? r
+              s
+                ? s
                     .updateData(t)
                     .then(function () {
                       o.modExists("columnCalcs") &&
                         o.modules.columnCalcs.recalc(o.rowManager.activeRows),
-                        i(r.getComponent());
+                        i(s.getComponent());
                     })
                     .catch(function (e) {
                       n(e);
                     })
-                : (r = o.rowManager
+                : (s = o.rowManager
                     .addRows(t)
                     .then(function (e) {
                       o.modExists("columnCalcs") &&
@@ -10017,13 +10017,13 @@
         (g.prototype.updateRow = function (e, t) {
           var o = this;
           return new Promise(function (i, n) {
-            var r = o.rowManager.findRow(e);
+            var s = o.rowManager.findRow(e);
             "string" == typeof t && (t = JSON.parse(t)),
-              r
-                ? r
+              s
+                ? s
                     .updateData(t)
                     .then(function () {
-                      i(r.getComponent());
+                      i(s.getComponent());
                     })
                     .catch(function (e) {
                       n(e);
@@ -10034,19 +10034,19 @@
         }),
         (g.prototype.scrollToRow = function (e, t, o) {
           var i = this;
-          return new Promise(function (n, r) {
-            var s = i.rowManager.findRow(e);
-            s
+          return new Promise(function (n, s) {
+            var r = i.rowManager.findRow(e);
+            r
               ? i.rowManager
-                  .scrollToRow(s, t, o)
+                  .scrollToRow(r, t, o)
                   .then(function () {
                     n();
                   })
                   .catch(function (e) {
-                    r(e);
+                    s(e);
                   })
               : (console.warn("Scroll Error - No matching row found:", e),
-                r("Scroll Error - No matching row found"));
+                s("Scroll Error - No matching row found"));
           });
         }),
         (g.prototype.moveRow = function (e, t, o) {
@@ -10142,15 +10142,15 @@
         }),
         (g.prototype.addColumn = function (e, t, o) {
           var i = this;
-          return new Promise(function (n, r) {
-            var s = i.columnManager.findColumn(o);
+          return new Promise(function (n, s) {
+            var r = i.columnManager.findColumn(o);
             i.columnManager
-              .addColumn(e, t, s)
+              .addColumn(e, t, r)
               .then(function (e) {
                 n(e.getComponent());
               })
               .catch(function (e) {
-                r(e);
+                s(e);
               });
           });
         }),
@@ -10177,9 +10177,9 @@
         (g.prototype.updateColumnDefinition = function (e, t) {
           var o = this;
           return new Promise(function (i, n) {
-            var r = o.columnManager.findColumn(e);
-            r
-              ? r
+            var s = o.columnManager.findColumn(e);
+            s
+              ? s
                   .updateDefinition(t)
                   .then(function (e) {
                     i(e);
@@ -10205,19 +10205,19 @@
         }),
         (g.prototype.scrollToColumn = function (e, t, o) {
           var i = this;
-          return new Promise(function (n, r) {
-            var s = i.columnManager.findColumn(e);
-            s
+          return new Promise(function (n, s) {
+            var r = i.columnManager.findColumn(e);
+            r
               ? i.columnManager
-                  .scrollToColumn(s, t, o)
+                  .scrollToColumn(r, t, o)
                   .then(function () {
                     n();
                   })
                   .catch(function (e) {
-                    r(e);
+                    s(e);
                   })
               : (console.warn("Scroll Error - No matching column found:", e),
-                r("Scroll Error - No matching column found"));
+                s("Scroll Error - No matching column found"));
           });
         }),
         (g.prototype.setLocale = function (e) {
@@ -10615,7 +10615,7 @@
           if (g.prototype.moduleBindings[e]) {
             var i = g.prototype.moduleBindings[e].prototype[t];
             if (i)
-              if ("object" == (void 0 === o ? "undefined" : r(o)))
+              if ("object" == (void 0 === o ? "undefined" : s(o)))
                 for (var n in o) i[n] = o[n];
               else
                 console.warn(
@@ -10656,7 +10656,7 @@
             var t = Object.assign(Array.isArray(e) ? [] : {}, e);
             for (var o in e)
               null != e[o] &&
-                "object" === r(e[o]) &&
+                "object" === s(e[o]) &&
                 (e[o] instanceof Date
                   ? (t[o] = new Date(e[o]))
                   : (t[o] = this.deepClone(e[o])));
@@ -10678,8 +10678,8 @@
               n = [];
             if ("string" == typeof e) {
               if ((o = document.querySelectorAll(e)).length)
-                for (var r = 0; r < o.length; r++)
-                  (i = g.prototype.comms.matchElement(o[r])) && n.push(i);
+                for (var s = 0; s < o.length; s++)
+                  (i = g.prototype.comms.matchElement(o[s])) && n.push(i);
             } else
               ("undefined" != typeof HTMLElement && e instanceof HTMLElement) ||
               e instanceof g
@@ -10763,21 +10763,21 @@
               o = 0,
               i = this.table.rowManager.element.clientWidth,
               n = 0,
-              r = !1;
+              s = !1;
             e.forEach(function (e, i) {
               e.widthFixed || e.reinitializeWidth(),
                 (t.table.options.responsiveLayout
                   ? e.modules.responsive.visible
-                  : e.visible) && (r = e),
+                  : e.visible) && (s = e),
                 e.visible && (o += e.getWidth());
             }),
-              r
-                ? ((n = i - o + r.getWidth()),
+              s
+                ? ((n = i - o + s.getWidth()),
                   this.table.options.responsiveLayout &&
                     this.table.modExists("responsiveLayout", !0) &&
-                    (r.setWidth(0),
+                    (s.setWidth(0),
                     this.table.modules.responsiveLayout.update()),
-                  n > 0 ? r.setWidth(n) : r.reinitializeWidth())
+                  n > 0 ? s.setWidth(n) : s.reinitializeWidth())
                 : this.table.options.responsiveLayout &&
                   this.table.modExists("responsiveLayout", !0) &&
                   this.table.modules.responsiveLayout.update();
@@ -10787,8 +10787,8 @@
               o,
               i = this.table.element.clientWidth,
               n = 0,
-              r = 0,
               s = 0,
+              r = 0,
               a = [],
               l = [],
               u = 0,
@@ -10802,10 +10802,10 @@
             }
             function h(e, t, o, i) {
               var n = [],
-                r = 0,
+                s = 0,
                 a = 0,
                 l = 0,
-                u = s,
+                u = r,
                 c = 0,
                 p = 0,
                 m = [];
@@ -10816,11 +10816,11 @@
                 return d(e.width) - o * (e.column.definition.widthShrink || 0);
               }
               return (
-                e.forEach(function (e, r) {
-                  var s = i ? g(e) : f(e);
-                  e.column.minWidth >= s
+                e.forEach(function (e, s) {
+                  var r = i ? g(e) : f(e);
+                  e.column.minWidth >= r
                     ? n.push(e)
-                    : e.column.maxWidth && e.column.maxWidth < s
+                    : e.column.maxWidth && e.column.maxWidth < r
                       ? ((e.width = e.column.maxWidth),
                         (t -= e.column.maxWidth),
                         (u -= i
@@ -10834,12 +10834,12 @@
                 }),
                 n.length
                   ? (n.forEach(function (e) {
-                      (r += i
+                      (s += i
                         ? e.width - e.column.minWidth
                         : e.column.minWidth),
                         (e.width = e.column.minWidth);
                     }),
-                    (c = (a = t - r) - (l = p ? Math.floor(a / p) : a) * p),
+                    (c = (a = t - s) - (l = p ? Math.floor(a / p) : a) * p),
                     (c += h(m, a, l, i)))
                   : ((c = p ? t - Math.floor(t / p) * p : t),
                     m.forEach(function (e) {
@@ -10868,16 +10868,16 @@
                         (l.push({ column: e, width: i > o ? i : o }),
                         (u += e.definition.widthShrink)))
                     : (a.push({ column: e, width: 0 }),
-                      (s += e.definition.widthGrow || 1)));
+                      (r += e.definition.widthGrow || 1)));
               }),
-              (r = i - n),
-              (t = Math.floor(r / s));
-            c = h(a, r, t, !1);
+              (s = i - n),
+              (t = Math.floor(s / r));
+            c = h(a, s, t, !1);
             a.length && c > 0 && (a[a.length - 1].width += +c),
               a.forEach(function (e) {
-                r -= e.width;
+                s -= e.width;
               }),
-              (o = Math.abs(c) + r) > 0 &&
+              (o = Math.abs(c) + s) > 0 &&
                 u &&
                 (c = h(l, o, Math.floor(o / u), !0)),
               l.length && (l[l.length - 1].width -= c),
@@ -10916,7 +10916,7 @@
         }),
         (v.prototype._setLangProp = function (e, t) {
           for (var o in t)
-            e[o] && "object" == r(e[o])
+            e[o] && "object" == s(e[o])
               ? this._setLangProp(e[o], t[o])
               : (e[o] = t[o]);
         }),
@@ -10947,7 +10947,7 @@
             "default" != e &&
               (function e(t, o) {
                 for (var i in t)
-                  "object" == r(t[i])
+                  "object" == s(t[i])
                     ? (o[i] || (o[i] = {}), e(t[i], o[i]))
                     : (o[i] = t[i]);
               })(t.langList[e], t.lang),
@@ -11025,11 +11025,11 @@
       }),
         (y.prototype.send = function (e, t, o, i) {
           var n = this,
-            r = this.getConnections(e);
-          r.forEach(function (e) {
+            s = this.getConnections(e);
+          s.forEach(function (e) {
             e.tableComms(n.table.element, t, o, i);
           }),
-            !r.length &&
+            !s.length &&
               e &&
               console.warn(
                 "Table Connection Error - No tables matching selector found",
@@ -11058,18 +11058,18 @@
           o = !1,
           i = {};
         this.allowedTypes.forEach(function (n) {
-          var r,
-            s = "accessor" + (n.charAt(0).toUpperCase() + n.slice(1));
-          e.definition[s] &&
-            (r = t.lookupAccessor(e.definition[s])) &&
+          var s,
+            r = "accessor" + (n.charAt(0).toUpperCase() + n.slice(1));
+          e.definition[r] &&
+            (s = t.lookupAccessor(e.definition[r])) &&
             ((o = !0),
-            (i[s] = { accessor: r, params: e.definition[s + "Params"] || {} }));
+            (i[r] = { accessor: s, params: e.definition[r + "Params"] || {} }));
         }),
           o && (e.modules.accessor = i);
       }),
         (w.prototype.lookupAccessor = function (e) {
           var t = !1;
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "string":
               this.accessors[e]
                 ? (t = this.accessors[e])
@@ -11089,17 +11089,17 @@
             n = g.prototype.helpers.deepClone(e.data || {});
           return (
             this.table.columnManager.traverse(function (e) {
-              var r, s, a, l;
+              var s, r, a, l;
               e.modules.accessor &&
-                (s =
+                (r =
                   e.modules.accessor[o] || e.modules.accessor.accessor || !1) &&
-                "undefined" != (r = e.getFieldValue(n)) &&
+                "undefined" != (s = e.getFieldValue(n)) &&
                 ((l = e.getComponent()),
                 (a =
-                  "function" == typeof s.params
-                    ? s.params(r, n, t, l, i)
-                    : s.params),
-                e.setFieldValue(n, s.accessor(r, n, t, a, l, i)));
+                  "function" == typeof r.params
+                    ? r.params(s, n, t, l, i)
+                    : r.params),
+                e.setFieldValue(n, r.accessor(s, n, t, a, l, i)));
             }),
             n
           );
@@ -11227,9 +11227,9 @@
           var o = this;
           return new Promise(function (i, n) {
             o.sendRequest(e)
-              .then(function (r) {
+              .then(function (s) {
                 o.table.rowManager
-                  .setData(r, e, t)
+                  .setData(s, e, t)
                   .then(function () {
                     i();
                   })
@@ -11249,7 +11249,7 @@
             e.forEach(function (e, n) {
               i = i.concat(o.generateParamsList(e, t ? t + "[" + n + "]" : n));
             });
-          else if ("object" === (void 0 === e ? "undefined" : r(e)))
+          else if ("object" === (void 0 === e ? "undefined" : s(e)))
             for (var n in e)
               i = i.concat(
                 o.generateParamsList(e[n], t ? t + "[" + n + "]" : n),
@@ -11278,7 +11278,7 @@
             i.requestOrder++,
             (t = i.requestOrder),
             i._loadDefaultConfig(),
-            new Promise(function (r, s) {
+            new Promise(function (s, r) {
               !1 !==
               i.table.options.ajaxRequesting.call(o.table, i.url, i.params)
                 ? ((i.loading = !0),
@@ -11294,7 +11294,7 @@
                               i.params,
                               e,
                             )),
-                          r(e),
+                          s(e),
                           i.hideLoader(),
                           (i.loading = !1))
                         : console.warn(
@@ -11309,9 +11309,9 @@
                           i.hideLoader();
                         }, 3e3),
                         (i.loading = !1),
-                        s(e);
+                        r(e);
                     }))
-                : s();
+                : r();
             })
           );
         }),
@@ -11364,14 +11364,14 @@
         (E.prototype.defaultLoaderPromise = function (e, t, o) {
           var i,
             n = this;
-          return new Promise(function (s, a) {
+          return new Promise(function (r, a) {
             if (
               ((e = n.urlGenerator.call(n.table, e, t, o)),
               "GET" != t.method.toUpperCase())
             )
               if (
                 (i =
-                  "object" === r(n.table.options.ajaxContentType)
+                  "object" === s(n.table.options.ajaxContentType)
                     ? n.table.options.ajaxContentType
                     : n.contentTypeFormatters[n.table.options.ajaxContentType])
               ) {
@@ -11403,7 +11403,7 @@
                       ? e
                           .json()
                           .then(function (e) {
-                            s(e);
+                            r(e);
                           })
                           .catch(function (e) {
                             a(e),
@@ -11422,7 +11422,7 @@
                     console.error("Ajax Load Error - Connection Error: ", e),
                       a(e);
                   }))
-              : (console.warn("Ajax Load Error - No URL Set"), s([]));
+              : (console.warn("Ajax Load Error - No URL Set"), r([]));
           });
         }),
         (E.prototype.contentTypeFormatters = {
@@ -11503,7 +11503,7 @@
               botCalcParams: t.bottomCalcParams || {},
             };
           if (t.topCalc) {
-            switch (r(t.topCalc)) {
+            switch (s(t.topCalc)) {
               case "string":
                 this.calculations[t.topCalc]
                   ? (o.topCalc = this.calculations[t.topCalc])
@@ -11522,7 +11522,7 @@
                 this.initializeTopRow());
           }
           if (t.bottomCalc) {
-            switch (r(t.bottomCalc)) {
+            switch (s(t.bottomCalc)) {
               case "string":
                 this.calculations[t.bottomCalc]
                   ? (o.botCalc = this.calculations[t.bottomCalc])
@@ -11692,13 +11692,13 @@
                         params: {},
                       }),
                   (i.genColumn.definition.cssClass = n.definition.cssClass);
-                var r = new m(i.genColumn, o);
-                r.getElement(),
-                  (r.column = n),
-                  r.setWidth(),
-                  n.cells.push(r),
-                  t.push(r),
-                  n.visible || r.hide();
+                var s = new m(i.genColumn, o);
+                s.getElement(),
+                  (s.column = n),
+                  s.setWidth(),
+                  n.cells.push(s),
+                  t.push(s),
+                  n.visible || s.hide();
               }),
                 (this.cells = t);
             }),
@@ -11709,22 +11709,22 @@
           var o,
             i,
             n = {},
-            r = "top" == e ? this.topCalcs : this.botCalcs,
-            s = "top" == e ? "topCalc" : "botCalc";
+            s = "top" == e ? this.topCalcs : this.botCalcs,
+            r = "top" == e ? "topCalc" : "botCalc";
           return (
-            r.forEach(function (e) {
-              var r = [];
+            s.forEach(function (e) {
+              var s = [];
               e.modules.columnCalcs &&
-                e.modules.columnCalcs[s] &&
+                e.modules.columnCalcs[r] &&
                 (t.forEach(function (t) {
-                  r.push(e.getFieldValue(t));
+                  s.push(e.getFieldValue(t));
                 }),
-                (i = s + "Params"),
+                (i = r + "Params"),
                 (o =
                   "function" == typeof e.modules.columnCalcs[i]
-                    ? e.modules.columnCalcs[i](r, t)
+                    ? e.modules.columnCalcs[i](s, t)
                     : e.modules.columnCalcs[i]),
-                e.setFieldValue(n, e.modules.columnCalcs[s](r, t, o)));
+                e.setFieldValue(n, e.modules.columnCalcs[r](s, t, o)));
             }),
             n
           );
@@ -11912,7 +11912,7 @@
                   )
                     i = "";
                   else
-                    switch (r(t.value)) {
+                    switch (s(t.value)) {
                       case "object":
                         i = JSON.stringify(t.value);
                         break;
@@ -11954,7 +11954,7 @@
               o && o.removeAllRanges());
         }),
         (R.prototype.setPasteAction = function (e) {
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "string":
               (this.pasteAction = this.pasteActions[e]),
                 this.pasteAction ||
@@ -11968,7 +11968,7 @@
           }
         }),
         (R.prototype.setPasteParser = function (e) {
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "string":
               (this.pasteParser = this.pasteParsers[e]),
                 this.pasteParser ||
@@ -12032,7 +12032,7 @@
               o = !0,
               i = this.table.columnManager.columns,
               n = [],
-              r = [];
+              s = [];
             return (
               (e = e.split("\n")).forEach(function (e) {
                 t.push(e.split("\t"));
@@ -12068,9 +12068,9 @@
                   e.forEach(function (e, o) {
                     n[o] && (t[n[o].field] = e);
                   }),
-                    r.push(t);
+                    s.push(t);
                 }),
-                r)
+                s)
             );
           },
         }),
@@ -12136,7 +12136,7 @@
               (this.expandEl.tabIndex = 0),
               (this.expandEl.innerHTML =
                 "<div class='tabulator-data-tree-control-expand'></div>")),
-          r(o.dataTreeStartExpanded))
+          s(o.dataTreeStartExpanded))
         ) {
           case "boolean":
             this.startOpen = function (e, t) {
@@ -12158,7 +12158,7 @@
             i =
               o ||
               (!o &&
-                "object" === (void 0 === t ? "undefined" : r(t)) &&
+                "object" === (void 0 === t ? "undefined" : s(t)) &&
                 null !== t);
           !i &&
             e.modules.dataTree &&
@@ -12285,7 +12285,7 @@
           var o = this,
             i = e.modules.dataTree,
             n = [],
-            r = [];
+            s = [];
           return (
             !1 !== i.children &&
               (i.open || t) &&
@@ -12300,12 +12300,12 @@
                 this.table.options.dataTreeSort &&
                 this.table.modules.sort.sort(n),
               n.forEach(function (e) {
-                r.push(e),
+                s.push(e),
                   o.getChildren(e).forEach(function (e) {
-                    r.push(e);
+                    s.push(e);
                   });
               })),
-            r
+            s
           );
         }),
         (M.prototype.generateChildren = function (e) {
@@ -12412,7 +12412,7 @@
           var o = this,
             i = !1;
           return (
-            "object" == (void 0 === e ? "undefined" : r(e))
+            "object" == (void 0 === e ? "undefined" : s(e))
               ? e instanceof h
                 ? (i = e.data)
                 : e instanceof d
@@ -12439,17 +12439,17 @@
         (M.prototype.getTreeChildren = function (e, t, o) {
           var i = this,
             n = e.modules.dataTree,
-            r = [];
+            s = [];
           return (
             n.children &&
               (Array.isArray(n.children) ||
                 (n.children = this.generateChildren(e)),
               n.children.forEach(function (e) {
                 e instanceof h &&
-                  (r.push(t ? e.getComponent() : e),
-                  o && (r = r.concat(i.getTreeChildren(e, t, o))));
+                  (s.push(t ? e.getComponent() : e),
+                  o && (s = s.concat(i.getTreeChildren(e, t, o))));
               })),
-            r
+            s
           );
         }),
         (M.prototype.checkForRestyle = function (e) {
@@ -12465,34 +12465,34 @@
           );
         }),
         g.prototype.registerModule("dataTree", M);
-      var D = function (e) {
+      var L = function (e) {
         this.table = e;
       };
-      (D.prototype.download = function (e, t, o, i, n) {
-        var r = this,
-          s = !1;
+      (L.prototype.download = function (e, t, o, i, n) {
+        var s = this,
+          r = !1;
         if (
           ("function" == typeof e
-            ? (s = e)
-            : r.downloaders[e]
-              ? (s = r.downloaders[e])
+            ? (r = e)
+            : s.downloaders[e]
+              ? (r = s.downloaders[e])
               : console.warn(
                   "Download Error - No such download type found: ",
                   e,
                 ),
-          s)
+          r)
         ) {
           var a = this.generateExportList(i);
-          s.call(this.table, a, o || {}, function (o, i) {
+          r.call(this.table, a, o || {}, function (o, i) {
             n
               ? !0 === n
-                ? r.triggerDownload(o, i, e, t, !0)
+                ? s.triggerDownload(o, i, e, t, !0)
                 : n(o)
-              : r.triggerDownload(o, i, e, t);
+              : s.triggerDownload(o, i, e, t);
           });
         }
       }),
-        (D.prototype.generateExportList = function (e) {
+        (L.prototype.generateExportList = function (e) {
           var t = this.table.modules.export.generateExportList(
               this.table.options.downloadConfig,
               !1,
@@ -12518,33 +12518,33 @@
             t
           );
         }),
-        (D.prototype.triggerDownload = function (e, t, o, i, n) {
-          var r = document.createElement("a"),
-            s = new Blob([e], { type: t });
+        (L.prototype.triggerDownload = function (e, t, o, i, n) {
+          var s = document.createElement("a"),
+            r = new Blob([e], { type: t });
           i = i || "Tabulator." + ("function" == typeof o ? "txt" : o);
-          (s = this.table.options.downloadReady.call(this.table, e, s)) &&
+          (r = this.table.options.downloadReady.call(this.table, e, r)) &&
             (n
-              ? window.open(window.URL.createObjectURL(s))
+              ? window.open(window.URL.createObjectURL(r))
               : navigator.msSaveOrOpenBlob
-                ? navigator.msSaveOrOpenBlob(s, i)
-                : (r.setAttribute("href", window.URL.createObjectURL(s)),
-                  r.setAttribute("download", i),
-                  (r.style.display = "none"),
-                  document.body.appendChild(r),
-                  r.click(),
-                  document.body.removeChild(r)),
+                ? navigator.msSaveOrOpenBlob(r, i)
+                : (s.setAttribute("href", window.URL.createObjectURL(r)),
+                  s.setAttribute("download", i),
+                  (s.style.display = "none"),
+                  document.body.appendChild(s),
+                  s.click(),
+                  document.body.removeChild(s)),
             this.table.options.downloadComplete &&
               this.table.options.downloadComplete());
         }),
-        (D.prototype.commsReceived = function (e, t, o) {
+        (L.prototype.commsReceived = function (e, t, o) {
           if ("intercept" === t)
             this.download(o.type, "", o.options, o.active, o.intercept);
         }),
-        (D.prototype.downloaders = {
+        (L.prototype.downloaders = {
           csv: function (e, t, o) {
             var i = t && t.delimiter ? t.delimiter : ",",
               n = [],
-              s = [];
+              r = [];
             e.forEach(function (e) {
               var t = [];
               switch (e.type) {
@@ -12562,7 +12562,7 @@
                   e.columns.forEach(function (e, t) {
                     e &&
                       1 === e.depth &&
-                      (s[t] =
+                      (r[t] =
                         void 0 === e.value || null === e.value
                           ? ""
                           : '"' + String(e.value).split('"').join('""') + '"');
@@ -12571,7 +12571,7 @@
                 case "row":
                   e.columns.forEach(function (e) {
                     if (e) {
-                      switch (r(e.value)) {
+                      switch (s(e.value)) {
                         case "object":
                           e.value = JSON.stringify(e.value);
                           break;
@@ -12585,7 +12585,7 @@
                     n.push(t.join(i));
               }
             }),
-              s.length && n.unshift(s.join(i)),
+              r.length && n.unshift(r.join(i)),
               (n = n.join("\n")),
               t.bom && (n = "\ufeff" + n),
               o(n, "text/csv");
@@ -12619,7 +12619,7 @@
           pdf: function (e, t, o) {
             var i = [],
               n = [],
-              s = {},
+              r = {},
               a = t.rowGroupStyles || {
                 fontStyle: "bold",
                 fontSize: 12,
@@ -12640,7 +12640,7 @@
                 e.columns.forEach(function (e) {
                   var i;
                   if (e) {
-                    switch (r(e.value)) {
+                    switch (s(e.value)) {
                       case "object":
                         e.value = JSON.stringify(e.value);
                         break;
@@ -12680,24 +12680,24 @@
             var h = new jsPDF(u);
             t &&
               t.autoTable &&
-              (s =
+              (r =
                 "function" == typeof t.autoTable
                   ? t.autoTable(h) || {}
                   : t.autoTable),
               c &&
-                (s.addPageContent = function (e) {
+                (r.addPageContent = function (e) {
                   h.text(c, 40, 30);
                 }),
-              (s.head = i),
-              (s.body = n),
-              h.autoTable(s),
+              (r.head = i),
+              (r.body = n),
+              h.autoTable(r),
               t && t.documentProcessing && t.documentProcessing(h),
               o(h.output("arraybuffer"), "application/pdf");
           },
           xlsx: function (e, t, o) {
             var i = t.sheetName || "Sheet1",
               n = XLSX.utils.book_new();
-            function s() {
+            function r() {
               var t = [],
                 o = [],
                 i = {},
@@ -12718,7 +12718,7 @@
                   e.columns.forEach(function (e, t) {
                     e
                       ? (n.push(
-                          e.value instanceof Date || "object" !== r(e.value)
+                          e.value instanceof Date || "object" !== s(e.value)
                             ? e.value
                             : JSON.stringify(e.value),
                         ),
@@ -12737,12 +12737,12 @@
                 i
               );
             }
-            if (((n.SheetNames = []), (n.Sheets = {}), t.sheetOnly)) o(s());
+            if (((n.SheetNames = []), (n.Sheets = {}), t.sheetOnly)) o(r());
             else {
               if (t.sheets)
                 for (var a in t.sheets)
                   !0 === t.sheets[a]
-                    ? (n.SheetNames.push(a), (n.Sheets[a] = s()))
+                    ? (n.SheetNames.push(a), (n.Sheets[a] = r()))
                     : (n.SheetNames.push(a),
                       this.modules.comms.send(
                         t.sheets[a],
@@ -12757,7 +12757,7 @@
                           },
                         },
                       ));
-              else n.SheetNames.push(i), (n.Sheets[i] = s());
+              else n.SheetNames.push(i), (n.Sheets[i] = r());
               t.documentProcessing && (n = t.documentProcessing(n)),
                 o(
                   (function (e) {
@@ -12786,8 +12786,8 @@
               o(this.modules.export.genereateHTMLTable(e), "text/html");
           },
         }),
-        g.prototype.registerModule("download", D);
-      var L = function (e) {
+        g.prototype.registerModule("download", L);
+      var D = function (e) {
         (this.table = e),
           (this.currentCell = !1),
           (this.mouseClick = !1),
@@ -12795,7 +12795,7 @@
           (this.invalidEdit = !1),
           (this.editedCells = []);
       };
-      (L.prototype.initializeColumn = function (e) {
+      (D.prototype.initializeColumn = function (e) {
         var t = this,
           o = {
             editor: !1,
@@ -12803,7 +12803,7 @@
             check: e.definition.editable,
             params: e.definition.editorParams || {},
           };
-        switch (r(e.definition.editor)) {
+        switch (s(e.definition.editor)) {
           case "string":
             "tick" === e.definition.editor &&
               ((e.definition.editor = "tickCross"),
@@ -12838,10 +12838,10 @@
         }
         o.editor && (e.modules.edit = o);
       }),
-        (L.prototype.getCurrentCell = function () {
+        (D.prototype.getCurrentCell = function () {
           return !!this.currentCell && this.currentCell.getComponent();
         }),
-        (L.prototype.clearEditor = function (e) {
+        (D.prototype.clearEditor = function (e) {
           var t,
             o = this.currentCell;
           if (((this.invalidEdit = !1), o)) {
@@ -12858,7 +12858,7 @@
             o.row.getElement().classList.remove("tabulator-row-editing");
           }
         }),
-        (L.prototype.cancelEdit = function () {
+        (D.prototype.cancelEdit = function () {
           if (this.currentCell) {
             var e = this.currentCell,
               t = this.currentCell.getComponent();
@@ -12873,7 +12873,7 @@
               this.table.options.cellEditCancelled.call(this.table, t);
           }
         }),
-        (L.prototype.bindEditor = function (e) {
+        (D.prototype.bindEditor = function (e) {
           var t = this,
             o = e.getElement(!0);
           o.setAttribute("tabindex", 0),
@@ -12888,16 +12888,16 @@
               t.recursionBlock || t.edit(e, o, !1);
             });
         }),
-        (L.prototype.focusCellNoEvent = function (e, t) {
+        (D.prototype.focusCellNoEvent = function (e, t) {
           (this.recursionBlock = !0),
             (t && "ie" === this.table.browser) ||
               e.getElement().focus({ preventScroll: !0 }),
             (this.recursionBlock = !1);
         }),
-        (L.prototype.editCell = function (e, t) {
+        (D.prototype.editCell = function (e, t) {
           this.focusCellNoEvent(e), this.edit(e, !1, t);
         }),
-        (L.prototype.focusScrollAdjust = function (e) {
+        (D.prototype.focusScrollAdjust = function (e) {
           if ("virtual" == this.table.rowManager.getRenderMode()) {
             var t = this.table.rowManager.element.scrollTop,
               o =
@@ -12911,28 +12911,28 @@
                 (this.table.rowManager.element.scrollTop +=
                   i.offsetTop + i.offsetHeight - o);
             var n = this.table.rowManager.element.scrollLeft,
-              r =
+              s =
                 this.table.rowManager.element.clientWidth +
                 this.table.rowManager.element.scrollLeft,
-              s = e.getElement();
-            s.offsetLeft;
+              r = e.getElement();
+            r.offsetLeft;
             this.table.modExists("frozenColumns") &&
               ((n += parseInt(this.table.modules.frozenColumns.leftMargin)),
-              (r -= parseInt(this.table.modules.frozenColumns.rightMargin))),
+              (s -= parseInt(this.table.modules.frozenColumns.rightMargin))),
               this.table.options.virtualDomHoz &&
                 ((n -= parseInt(this.table.vdomHoz.vDomPadLeft)),
-                (r -= parseInt(this.table.vdomHoz.vDomPadLeft))),
-              s.offsetLeft < n
-                ? (this.table.rowManager.element.scrollLeft -= n - s.offsetLeft)
-                : s.offsetLeft + s.offsetWidth > r &&
+                (s -= parseInt(this.table.vdomHoz.vDomPadLeft))),
+              r.offsetLeft < n
+                ? (this.table.rowManager.element.scrollLeft -= n - r.offsetLeft)
+                : r.offsetLeft + r.offsetWidth > s &&
                   (this.table.rowManager.element.scrollLeft +=
-                    s.offsetLeft + s.offsetWidth - r);
+                    r.offsetLeft + r.offsetWidth - s);
           }
         }),
-        (L.prototype.edit = function (e, t, o) {
+        (D.prototype.edit = function (e, t, o) {
           var i,
             n,
-            s,
+            r,
             a = this,
             l = !0,
             u = function () {},
@@ -12941,7 +12941,7 @@
             if (e.column.modules.edit.blocked)
               return (this.mouseClick = !1), c.blur(), !1;
             switch (
-              (t && t.stopPropagation(), r(e.column.modules.edit.check))
+              (t && t.stopPropagation(), s(e.column.modules.edit.check))
             ) {
               case "function":
                 l = e.column.modules.edit.check(e.getComponent());
@@ -12962,7 +12962,7 @@
                 e.column.cellEvents.cellEditing &&
                   e.column.cellEvents.cellEditing.call(this.table, n),
                 a.table.options.cellEditing.call(this.table, n),
-                (s =
+                (r =
                   "function" == typeof e.column.modules.edit.params
                     ? e.column.modules.edit.params(n)
                     : e.column.modules.edit.params),
@@ -13026,7 +13026,7 @@
                           a.table.modExists("dataTree") &&
                           a.table.modules.dataTree.checkForRestyle(e));
                     },
-                    s,
+                    r,
                   )))
               )
                 return c.blur(), !1;
@@ -13056,26 +13056,26 @@
           }
           this.invalidEdit || this.cancelEdit();
         }),
-        (L.prototype.maskInput = function (e, t) {
+        (D.prototype.maskInput = function (e, t) {
           var o = t.mask,
             i = void 0 !== t.maskLetterChar ? t.maskLetterChar : "A",
             n = void 0 !== t.maskNumberChar ? t.maskNumberChar : "9",
-            r = void 0 !== t.maskWildcardChar ? t.maskWildcardChar : "*";
-          function s(t) {
+            s = void 0 !== t.maskWildcardChar ? t.maskWildcardChar : "*";
+          function r(t) {
             var a = o[t];
             void 0 !== a &&
-              a !== r &&
+              a !== s &&
               a !== i &&
               a !== n &&
-              ((e.value = e.value + "" + a), s(t + 1));
+              ((e.value = e.value + "" + a), r(t + 1));
           }
           e.addEventListener("keydown", function (t) {
-            var s = e.value.length,
+            var r = e.value.length,
               a = t.key;
             if (t.keyCode > 46) {
-              if (s >= o.length)
+              if (r >= o.length)
                 return t.preventDefault(), t.stopPropagation(), !1, !1;
-              switch (o[s]) {
+              switch (o[r]) {
                 case i:
                   if (a.toUpperCase() == a.toLowerCase())
                     return t.preventDefault(), t.stopPropagation(), !1, !1;
@@ -13084,22 +13084,22 @@
                   if (isNaN(a))
                     return t.preventDefault(), t.stopPropagation(), !1, !1;
                   break;
-                case r:
+                case s:
                   break;
                 default:
-                  if (a !== o[s])
+                  if (a !== o[r])
                     return t.preventDefault(), t.stopPropagation(), !1, !1;
               }
               !0;
             }
           }),
             e.addEventListener("keyup", function (o) {
-              o.keyCode > 46 && t.maskAutoFill && s(e.value.length);
+              o.keyCode > 46 && t.maskAutoFill && r(e.value.length);
             }),
             e.placeholder || (e.placeholder = o),
-            t.maskAutoFill && s(e.value.length);
+            t.maskAutoFill && r(e.value.length);
         }),
-        (L.prototype.getEditedCells = function () {
+        (D.prototype.getEditedCells = function () {
           var e = [];
           return (
             this.editedCells.forEach(function (t) {
@@ -13108,7 +13108,7 @@
             e
           );
         }),
-        (L.prototype.clearEdited = function (e) {
+        (D.prototype.clearEdited = function (e) {
           var t;
           e.modules.edit &&
             e.modules.edit.edited &&
@@ -13117,16 +13117,16 @@
             (t = this.editedCells.indexOf(e)) > -1 &&
               this.editedCells.splice(t, 1);
         }),
-        (L.prototype.editors = {
+        (D.prototype.editors = {
           input: function (e, t, o, i, n) {
-            var s = e.getValue(),
+            var r = e.getValue(),
               a = document.createElement("input");
             if (
               (a.setAttribute("type", n.search ? "search" : "text"),
               (a.style.padding = "4px"),
               (a.style.width = "100%"),
               (a.style.boxSizing = "border-box"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var l in n.elementAttributes)
                 "+" == l.charAt(0)
@@ -13137,12 +13137,12 @@
                     ))
                   : a.setAttribute(l, n.elementAttributes[l]);
             function u(e) {
-              (null == s && "" !== a.value) || a.value !== s
-                ? o(a.value) && (s = a.value)
+              (null == r && "" !== a.value) || a.value !== r
+                ? o(a.value) && (r = a.value)
                 : i();
             }
             return (
-              (a.value = void 0 !== s ? s : ""),
+              (a.value = void 0 !== r ? r : ""),
               t(function () {
                 a.focus({ preventScroll: !0 }), (a.style.height = "100%");
               }),
@@ -13166,9 +13166,9 @@
             );
           },
           textarea: function (e, t, o, i, n) {
-            var s = e.getValue(),
+            var r = e.getValue(),
               a = n.verticalNavigation || "hybrid",
-              l = String(null != s ? s : ""),
+              l = String(null != r ? r : ""),
               u =
                 ((l.match(/(?:\r\n|\r|\n)/g) || []).length,
                 document.createElement("textarea")),
@@ -13181,7 +13181,7 @@
               (u.style.boxSizing = "border-box"),
               (u.style.whiteSpace = "pre-wrap"),
               (u.style.resize = "none"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var d in n.elementAttributes)
                 "+" == d.charAt(0)
@@ -13192,8 +13192,8 @@
                     ))
                   : u.setAttribute(d, n.elementAttributes[d]);
             function h(t) {
-              (null == s && "" !== u.value) || u.value !== s
-                ? (o(u.value) && (s = u.value),
+              (null == r && "" !== u.value) || u.value !== r
+                ? (o(u.value) && (r = u.value),
                   setTimeout(function () {
                     e.getRow().normalizeHeight();
                   }, 300))
@@ -13240,7 +13240,7 @@
             );
           },
           number: function (e, t, o, i, n) {
-            var s = e.getValue(),
+            var r = e.getValue(),
               a = n.verticalNavigation || "editor",
               l = document.createElement("input");
             if (
@@ -13251,7 +13251,7 @@
               (l.style.padding = "4px"),
               (l.style.width = "100%"),
               (l.style.boxSizing = "border-box"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var u in n.elementAttributes)
                 "+" == u.charAt(0)
@@ -13261,14 +13261,14 @@
                       l.getAttribute(u) + n.elementAttributes["+" + u],
                     ))
                   : l.setAttribute(u, n.elementAttributes[u]);
-            l.value = s;
+            l.value = r;
             var c = function (e) {
               d();
             };
             function d() {
               var e = l.value;
               isNaN(e) || "" === e || (e = Number(e)),
-                e !== s ? o(e) && (s = e) : i();
+                e !== r ? o(e) && (r = e) : i();
             }
             return (
               t(function () {
@@ -13300,7 +13300,7 @@
             );
           },
           range: function (e, t, o, i, n) {
-            var s = e.getValue(),
+            var r = e.getValue(),
               a = document.createElement("input");
             if (
               (a.setAttribute("type", "range"),
@@ -13310,7 +13310,7 @@
               (a.style.padding = "4px"),
               (a.style.width = "100%"),
               (a.style.boxSizing = "border-box"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var l in n.elementAttributes)
                 "+" == l.charAt(0)
@@ -13323,10 +13323,10 @@
             function u() {
               var e = a.value;
               isNaN(e) || "" === e || (e = Number(e)),
-                e != s ? o(e) && (s = e) : i();
+                e != r ? o(e) && (r = e) : i();
             }
             return (
-              (a.value = s),
+              (a.value = r),
               t(function () {
                 a.focus({ preventScroll: !0 }), (a.style.height = "100%");
               }),
@@ -13346,7 +13346,7 @@
             );
           },
           select: function (e, t, o, i, n) {
-            var s = this,
+            var r = this,
               a = this,
               l = e.getElement(),
               u = e.getValue(),
@@ -13391,7 +13391,7 @@
             }
             function M(t, o) {
               var i = [],
-                s = [];
+                r = [];
               function a(e) {
                 e = {
                   label: e.label,
@@ -13400,12 +13400,12 @@
                   elementAttributes: e.elementAttributes,
                   element: !1,
                 };
-                return o.indexOf(e.value) > -1 && L(e), i.push(e), s.push(e), e;
+                return o.indexOf(e.value) > -1 && D(e), i.push(e), r.push(e), e;
               }
               if (("function" == typeof t && (t = t(e)), Array.isArray(t)))
                 t.forEach(function (e) {
                   var t;
-                  "object" === (void 0 === e ? "undefined" : r(e))
+                  "object" === (void 0 === e ? "undefined" : s(e))
                     ? e.options
                       ? ((t = {
                           label: e.label,
@@ -13414,31 +13414,31 @@
                           elementAttributes: e.elementAttributes,
                           element: !1,
                         }),
-                        s.push(t),
+                        r.push(t),
                         e.options.forEach(function (e) {
                           a(e);
                         }))
                       : a(e)
                     : ((t = { label: e, value: e, element: !1 }),
-                      o.indexOf(t.value) > -1 && L(t),
+                      o.indexOf(t.value) > -1 && D(t),
                       i.push(t),
-                      s.push(t));
+                      r.push(t));
                 });
               else
                 for (var l in t) {
                   var u = { label: t[l], value: l, element: !1 };
-                  o.indexOf(u.value) > -1 && L(u), i.push(u), s.push(u);
+                  o.indexOf(u.value) > -1 && D(u), i.push(u), r.push(u);
                 }
               n.sortValuesList &&
                 (i.sort(function (e, t) {
                   return e.label < t.label ? -1 : e.label > t.label ? 1 : 0;
                 }),
-                s.sort(function (e, t) {
+                r.sort(function (e, t) {
                   return e.label < t.label ? -1 : e.label > t.label ? 1 : 0;
                 }),
-                "asc" !== n.sortValuesList && (i.reverse(), s.reverse())),
+                "asc" !== n.sortValuesList && (i.reverse(), r.reverse())),
                 (f = i),
-                (v = s),
+                (v = r),
                 (function () {
                   for (; p.firstChild; ) p.removeChild(p.firstChild);
                   v.forEach(function (t) {
@@ -13473,7 +13473,7 @@
                             }),
                             y.indexOf(t) > -1 && o.classList.add("active")),
                         t.elementAttributes &&
-                          "object" == r(t.elementAttributes))
+                          "object" == s(t.elementAttributes))
                       )
                         for (var i in t.elementAttributes)
                           "+" == i.charAt(0)
@@ -13496,7 +13496,7 @@
                   });
                 })();
             }
-            function D(e, t) {
+            function L(e, t) {
               !m && b && b.element && b.element.classList.remove("active"),
                 b && b.element && b.element.classList.remove("focused"),
                 (b = e),
@@ -13512,8 +13512,8 @@
                     inline: "start",
                   });
             }
-            function L(e) {
-              -1 == y.indexOf(e) && (y.push(e), D(e, !0)), z();
+            function D(e) {
+              -1 == y.indexOf(e) && (y.push(e), L(e, !0)), z();
             }
             function T(e) {
               var t = y[e];
@@ -13524,7 +13524,7 @@
             function k(e) {
               e || (e = b);
               var t = y.indexOf(e);
-              t > -1 ? T(t) : (!0 !== m && y.length >= m && T(0), L(e)), z();
+              t > -1 ? T(t) : (!0 !== m && y.length >= m && T(0), D(e)), z();
             }
             function S(e) {
               H(),
@@ -13559,7 +13559,7 @@
             if (
               ((Array.isArray(n) ||
                 (!Array.isArray(n) &&
-                  "object" === (void 0 === n ? "undefined" : r(n)) &&
+                  "object" === (void 0 === n ? "undefined" : s(n)) &&
                   !n.values)) &&
                 (console.warn(
                   "DEPRECATION WARNING - values for the select editor must now be passed into the values property of the editorParams object, not as the editorParams object",
@@ -13571,7 +13571,7 @@
               (h.style.boxSizing = "border-box"),
               (h.style.cursor = "default"),
               (h.readOnly = 0 != this.currentCell),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var A in n.elementAttributes)
                 "+" == A.charAt(0)
@@ -13599,7 +13599,7 @@
                         (e.stopImmediatePropagation(),
                         e.stopPropagation(),
                         e.preventDefault(),
-                        t > 0 && D(f[t - 1], !m));
+                        t > 0 && L(f[t - 1], !m));
                     break;
                   case 40:
                     (t = f.indexOf(b)),
@@ -13607,7 +13607,7 @@
                         (e.stopImmediatePropagation(),
                         e.stopPropagation(),
                         e.preventDefault(),
-                        t < f.length - 1 && D(-1 == t ? f[0] : f[t + 1], !m));
+                        t < f.length - 1 && L(-1 == t ? f[0] : f[t + 1], !m));
                     break;
                   case 37:
                   case 39:
@@ -13639,7 +13639,7 @@
                               e.label.toLowerCase().startsWith(C)
                             );
                           });
-                          o && D(o, !m),
+                          o && L(o, !m),
                             (x = setTimeout(function () {
                               C = "";
                             }, 800));
@@ -13679,13 +13679,13 @@
                 (h.style.height = "100%"), h.focus({ preventScroll: !0 });
               }),
               setTimeout(function () {
-                s.table.rowManager.element.addEventListener("scroll", P);
+                r.table.rowManager.element.addEventListener("scroll", P);
               }, 10),
               h
             );
           },
           autocomplete: function (e, t, o, i, n) {
-            var s = this,
+            var r = this,
               a = this,
               l = e.getElement(),
               u = e.getValue(),
@@ -13707,7 +13707,7 @@
               (h.style.padding = "4px"),
               (h.style.width = "100%"),
               (h.style.boxSizing = "border-box"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var y in n.elementAttributes)
                 "+" == y.charAt(0)
@@ -13725,12 +13725,12 @@
             function E(t) {
               var o,
                 i = {},
-                r = a.table.getData();
+                s = a.table.getData();
               return (
                 (o = t
                   ? a.table.columnManager.getColumnByField(t)
                   : e.getColumn()._getSelf())
-                  ? (r.forEach(function (e) {
+                  ? (s.forEach(function (e) {
                       var t = o.getFieldValue(e);
                       null != t && "" !== t && (i[t] = !0);
                     }),
@@ -13749,18 +13749,18 @@
             function C(e, t) {
               var o,
                 i,
-                r = [];
+                s = [];
               (o = v || n.values || []),
                 n.searchFunc
-                  ? (r = n.searchFunc(e, o)) instanceof Promise
+                  ? (s = n.searchFunc(e, o)) instanceof Promise
                     ? (x(
                         void 0 !== n.searchingPlaceholder
                           ? n.searchingPlaceholder
                           : "Searching...",
                       ),
-                      r
+                      s
                         .then(function (e) {
-                          D(R(e), t);
+                          L(R(e), t);
                         })
                         .catch(function (e) {
                           console.err(
@@ -13768,10 +13768,10 @@
                             e,
                           );
                         }))
-                    : D(R(r), t)
+                    : L(R(s), t)
                   : ((i = R(o)),
                     "" === e
-                      ? n.showListOnEmpty && (r = i)
+                      ? n.showListOnEmpty && (s = i)
                       : i.forEach(function (t) {
                           (null === t.value && void 0 === t.value) ||
                             ((String(t.value)
@@ -13780,9 +13780,9 @@
                               String(t.title)
                                 .toLowerCase()
                                 .indexOf(String(e).toLowerCase()) > -1) &&
-                              r.push(t));
+                              s.push(t));
                         }),
-                    D(r, t));
+                    L(s, t));
             }
             function x(e) {
               var t = document.createElement("div");
@@ -13798,7 +13798,7 @@
               if (Array.isArray(e))
                 e.forEach(function (e) {
                   var o = {};
-                  "object" === (void 0 === e ? "undefined" : r(e))
+                  "object" === (void 0 === e ? "undefined" : s(e))
                     ? ((o.title = n.listItemFormatter
                         ? n.listItemFormatter(e.value, e.label)
                         : e.label),
@@ -13824,7 +13824,7 @@
             function M() {
               for (; p.firstChild; ) p.removeChild(p.firstChild);
             }
-            function D(e, t) {
+            function L(e, t) {
               e.length
                 ? (function (e, t) {
                     var o = !1;
@@ -13839,7 +13839,7 @@
                           (i.tabIndex = 0),
                           (i.innerHTML = e.title),
                           i.addEventListener("click", function (t) {
-                            T(e), L();
+                            T(e), D();
                           }),
                           i.addEventListener("mousedown", function (e) {
                             (b = !1),
@@ -13861,7 +13861,7 @@
                   })(e, t)
                 : n.emptyPlaceholder && x(n.emptyPlaceholder);
             }
-            function L() {
+            function D() {
               k(),
                 f
                   ? u !== f.value
@@ -13923,7 +13923,7 @@
                     e.stopImmediatePropagation(), e.stopPropagation();
                     break;
                   case 13:
-                    L();
+                    D();
                     break;
                   case 27:
                     S();
@@ -13950,7 +13950,7 @@
                 C(h.value);
               }),
               h.addEventListener("blur", function (e) {
-                b && L();
+                b && D();
               }),
               h.addEventListener("focus", function (e) {
                 var t = d;
@@ -13974,7 +13974,7 @@
               }),
               n.mask && this.table.modules.edit.maskInput(h, n),
               setTimeout(function () {
-                s.table.rowManager.element.addEventListener("scroll", S);
+                r.table.rowManager.element.addEventListener("scroll", S);
               }, 10),
               w(),
               (h.value = d),
@@ -13983,7 +13983,7 @@
             );
           },
           star: function (e, t, o, i, n) {
-            var s = this,
+            var r = this,
               a = e.getElement(),
               l = e.getValue(),
               u = a.getElementsByTagName("svg").length || 5,
@@ -13996,7 +13996,7 @@
             function m(e) {
               d.forEach(function (t, o) {
                 o < e
-                  ? ("ie" == s.table.browser
+                  ? ("ie" == r.table.browser
                       ? t.setAttribute("class", "tabulator-star-active")
                       : t.classList.replace(
                           "tabulator-star-inactive",
@@ -14004,7 +14004,7 @@
                         ),
                     (t.innerHTML =
                       '<polygon fill="#488CE9" stroke="#014AAE" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>'))
-                  : ("ie" == s.table.browser
+                  : ("ie" == r.table.browser
                       ? t.setAttribute("class", "tabulator-star-inactive")
                       : t.classList.replace(
                           "tabulator-star-active",
@@ -14048,7 +14048,7 @@
               p.setAttribute("viewBox", "0 0 512 512"),
               p.setAttribute("xml:space", "preserve"),
               (p.style.padding = "0 1px"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var b in n.elementAttributes)
                 "+" == b.charAt(0)
@@ -14089,7 +14089,7 @@
             );
           },
           progress: function (e, t, o, i, n) {
-            var s,
+            var r,
               a,
               l = e.getElement(),
               u =
@@ -14133,7 +14133,7 @@
               (m.style.backgroundColor = "#488CE9"),
               (m.style.maxWidth = "100%"),
               (m.style.minWidth = "0%"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var g in n.elementAttributes)
                 "+" == g.charAt(0)
@@ -14153,19 +14153,19 @@
               l.setAttribute("aria-valuemax", u),
               m.appendChild(p),
               p.addEventListener("mousedown", function (e) {
-                (s = e.screenX), (a = m.offsetWidth);
+                (r = e.screenX), (a = m.offsetWidth);
               }),
               p.addEventListener("mouseover", function () {
                 p.style.cursor = "ew-resize";
               }),
               l.addEventListener("mousemove", function (e) {
-                s && (m.style.width = a + e.screenX - s + "px");
+                r && (m.style.width = a + e.screenX - r + "px");
               }),
               l.addEventListener("mouseup", function (e) {
-                s &&
+                r &&
                   (e.stopPropagation(),
                   e.stopImmediatePropagation(),
-                  (s = !1),
+                  (r = !1),
                   (a = !1),
                   f());
               }),
@@ -14196,7 +14196,7 @@
             );
           },
           tickCross: function (e, t, o, i, n) {
-            var s = e.getValue(),
+            var r = e.getValue(),
               a = document.createElement("input"),
               l = n.tristate,
               u = void 0 === n.indeterminateValue ? null : n.indeterminateValue,
@@ -14205,7 +14205,7 @@
               (a.setAttribute("type", "checkbox"),
               (a.style.marginTop = "5px"),
               (a.style.boxSizing = "border-box"),
-              n.elementAttributes && "object" == r(n.elementAttributes))
+              n.elementAttributes && "object" == s(n.elementAttributes))
             )
               for (var d in n.elementAttributes)
                 "+" == d.charAt(0)
@@ -14227,15 +14227,15 @@
                 : a.checked;
             }
             return (
-              (a.value = s),
+              (a.value = r),
               !l ||
-                (void 0 !== s && s !== u && "" !== s) ||
+                (void 0 !== r && r !== u && "" !== r) ||
                 ((c = !0), (a.indeterminate = !0)),
               "firefox" != this.table.browser &&
                 t(function () {
                   a.focus({ preventScroll: !0 });
                 }),
-              (a.checked = !0 === s || "true" === s || "True" === s || 1 === s),
+              (a.checked = !0 === r || "true" === r || "True" === r || 1 === r),
               t(function () {
                 a.focus();
               }),
@@ -14252,7 +14252,7 @@
             );
           },
         }),
-        g.prototype.registerModule("edit", L);
+        g.prototype.registerModule("edit", D);
       var T = function (e, t, o, i) {
           (this.type = e),
             (this.columns = t),
@@ -14280,8 +14280,8 @@
             !1 !== this.config.columnHeaders
               ? this.headersToExportRows(this.generateColumnGroupHeaders())
               : [],
-          r = this.bodyToExportRows(this.rowLookup(o));
-        return n.concat(r);
+          s = this.bodyToExportRows(this.rowLookup(o));
+        return n.concat(s);
       }),
         (S.prototype.genereateTable = function (e, t, o, i) {
           var n = this.generateExportList(e, t, o, i);
@@ -14375,15 +14375,15 @@
             o = 0,
             i = [];
           function n(e, i) {
-            var r = o - i;
+            var s = o - i;
             if (
               (void 0 === t[i] && (t[i] = []),
-              (e.height = e.subGroups ? 1 : r - e.depth + 1),
+              (e.height = e.subGroups ? 1 : s - e.depth + 1),
               t[i].push(e),
               e.height > 1)
             )
-              for (var s = 1; s < e.height; s++)
-                void 0 === t[i + s] && (t[i + s] = []), t[i + s].push(!1);
+              for (var r = 1; r < e.height; r++)
+                void 0 === t[i + r] && (t[i + r] = []), t[i + r].push(!1);
             if (e.width > 1) for (var a = 1; a < e.width; a++) t[i].push(!1);
             e.subGroups &&
               e.subGroups.forEach(function (e) {
@@ -14446,24 +14446,24 @@
               }
               return !0;
             })).forEach(function (e, n) {
-              var r = e.getData(t.colVisProp),
-                s = [],
+              var s = e.getData(t.colVisProp),
+                r = [],
                 a = 0;
               switch (e.type) {
                 case "group":
                   (a = e.level),
-                    s.push(new k(e.key, e.getComponent(), o.length, 1));
+                    r.push(new k(e.key, e.getComponent(), o.length, 1));
                   break;
                 case "calc":
                 case "row":
                   o.forEach(function (e) {
-                    s.push(new k(e._column.getFieldValue(r), e, 1, 1));
+                    r.push(new k(e._column.getFieldValue(s), e, 1, 1));
                   }),
                     t.table.options.dataTree &&
                       !1 !== t.config.dataTree &&
                       (a = e.modules.dataTree.index);
               }
-              i.push(new T(e.type, s, e.getComponent(), a));
+              i.push(new T(e.type, r, e.getComponent(), a));
             }),
             i
           );
@@ -14473,8 +14473,8 @@
             o = document.createElement("table"),
             i = document.createElement("thead"),
             n = document.createElement("tbody"),
-            r = this.lookupTableStyles(),
-            s =
+            s = this.lookupTableStyles(),
+            r =
               this.table.options[
                 "rowFormatter" +
                   (this.colVisProp.charAt(0).toUpperCase() +
@@ -14482,7 +14482,7 @@
               ],
             a = {};
           return (
-            (a.rowFormatter = null !== s ? s : this.table.options.rowFormatter),
+            (a.rowFormatter = null !== r ? r : this.table.options.rowFormatter),
             this.table.options.dataTree &&
               !1 !== this.config.dataTree &&
               this.table.modExists("columnCalcs") &&
@@ -14519,19 +14519,19 @@
             e.forEach(function (e, o) {
               switch (e.type) {
                 case "header":
-                  i.appendChild(t.genereateHeaderElement(e, a, r));
+                  i.appendChild(t.genereateHeaderElement(e, a, s));
                   break;
                 case "group":
-                  n.appendChild(t.genereateGroupElement(e, a, r));
+                  n.appendChild(t.genereateGroupElement(e, a, s));
                   break;
                 case "calc":
-                  n.appendChild(t.genereateCalcElement(e, a, r));
+                  n.appendChild(t.genereateCalcElement(e, a, s));
                   break;
                 case "row":
-                  var s = t.genereateRowElement(e, a, r);
+                  var r = t.genereateRowElement(e, a, s);
                   t.mapElementStyles(
-                    o % 2 && r.evenRow ? r.evenRow : r.oddRow,
-                    s,
+                    o % 2 && s.evenRow ? s.evenRow : s.oddRow,
+                    r,
                     [
                       "border-top",
                       "border-left",
@@ -14544,7 +14544,7 @@
                       "background-color",
                     ],
                   ),
-                    n.appendChild(s);
+                    n.appendChild(r);
               }
             }),
             i.innerHTML && o.appendChild(i),
@@ -14642,29 +14642,29 @@
         (S.prototype.genereateGroupElement = function (e, t, o) {
           var i = document.createElement("tr"),
             n = document.createElement("td"),
-            r = e.columns[0];
+            s = e.columns[0];
           return (
             i.classList.add("tabulator-print-table-row"),
             t.groupHeader && t.groupHeader[e.indent]
-              ? (r.value = t.groupHeader[e.indent](
-                  r.value,
+              ? (s.value = t.groupHeader[e.indent](
+                  s.value,
                   e.component._group.getRowCount(),
                   e.component._group.getData(),
                   e.component,
                 ))
               : !1 === t.groupHeader
-                ? (r.value = r.value)
-                : (r.value = e.component._group.generator(
-                    r.value,
+                ? (s.value = s.value)
+                : (s.value = e.component._group.generator(
+                    s.value,
                     e.component._group.getRowCount(),
                     e.component._group.getData(),
                     e.component,
                   )),
-            (n.colSpan = r.width),
-            (n.innerHTML = r.value),
+            (n.colSpan = s.width),
+            (n.innerHTML = s.value),
             i.classList.add("tabulator-print-table-group"),
             i.classList.add("tabulator-group-level-" + e.indent),
-            r.component.isVisible() &&
+            s.component.isVisible() &&
               i.classList.add("tabulator-group-visible"),
             this.mapElementStyles(o.firstGroup, i, [
               "border-top",
@@ -14707,9 +14707,9 @@
         }),
         (S.prototype.genereateRowElement = function (e, t, o) {
           var n = this,
-            s = document.createElement("tr");
+            r = document.createElement("tr");
           return (
-            s.classList.add("tabulator-print-table-row"),
+            r.classList.add("tabulator-print-table-row"),
             e.columns.forEach(function (a) {
               if (a) {
                 var l = document.createElement("td"),
@@ -14751,7 +14751,7 @@
                 )
                   c = n.table.modules.format.formatExportValue(d, n.colVisProp);
                 else
-                  switch (void 0 === c ? "undefined" : r(c)) {
+                  switch (void 0 === c ? "undefined" : s(c)) {
                     case "object":
                       c = JSON.stringify(c);
                       break;
@@ -14795,7 +14795,7 @@
                         ),
                         l.firstChild,
                       )),
-                  s.appendChild(l),
+                  r.appendChild(l),
                   d.modules.format &&
                     d.modules.format.renderedCallback &&
                     d.modules.format.renderedCallback(),
@@ -14804,7 +14804,7 @@
                     t.rowFormatter(e.component);
               }
             }),
-            s
+            r
           );
         }),
         (S.prototype.genereateHTMLTable = function (e) {
@@ -14863,7 +14863,7 @@
         (e.modules.filter = {
           success: function (t) {
             var n,
-              s =
+              r =
                 ("input" == e.modules.filter.tagType &&
                   "text" == e.modules.filter.attrType) ||
                 "textarea" == e.modules.filter.tagType
@@ -14883,17 +14883,17 @@
               else {
                 switch (
                   ((e.modules.filter.value = t),
-                  r(e.definition.headerFilterFunc))
+                  s(e.definition.headerFilterFunc))
                 ) {
                   case "string":
                     o.filters[e.definition.headerFilterFunc]
                       ? ((a = e.definition.headerFilterFunc),
                         (n = function (i) {
                           var n = e.definition.headerFilterFuncParams || {},
-                            r = e.getFieldValue(i);
+                            s = e.getFieldValue(i);
                           return (
-                            (n = "function" == typeof n ? n(t, r, i) : n),
-                            o.filters[e.definition.headerFilterFunc](t, r, i, n)
+                            (n = "function" == typeof n ? n(t, s, i) : n),
+                            o.filters[e.definition.headerFilterFunc](t, s, i, n)
                           );
                         }))
                       : console.warn(
@@ -14913,7 +14913,7 @@
                       (a = n);
                 }
                 if (!n)
-                  if ("partial" === s)
+                  if ("partial" === r)
                     (n = function (o) {
                       var i = e.getFieldValue(o);
                       return (
@@ -14948,7 +14948,7 @@
         (_.prototype.generateHeaderFilterElement = function (e, t, o) {
           var i,
             n,
-            s,
+            r,
             a,
             l,
             u,
@@ -14974,7 +14974,7 @@
               (i = document.createElement("div")).classList.add(
                 "tabulator-header-filter",
               ),
-              r(e.definition.headerFilter))
+              s(e.definition.headerFilter))
             ) {
               case "string":
                 h.table.modules.edit.editors[e.definition.headerFilter]
@@ -15033,7 +15033,7 @@
                   typeof (c = e.definition.headerFilterParams || {})
                     ? c.call(h.table)
                     : c),
-                !(s = n.call(
+                !(r = n.call(
                   this.table.modules.edit,
                   a,
                   function () {},
@@ -15047,18 +15047,18 @@
                     m +
                     " column, editor returned a value of false",
                 );
-              if (!(s instanceof Node))
+              if (!(r instanceof Node))
                 return void console.warn(
                   "Filter Error - Cannot add filter to " +
                     m +
                     " column, editor should return an instance of Node, the editor returned:",
-                  s,
+                  r,
                 );
               m
                 ? h.table.modules.localize.bind(
                     "headerFilters|columns|" + e.definition.field,
                     function (e) {
-                      s.setAttribute(
+                      r.setAttribute(
                         "placeholder",
                         void 0 !== e && e
                           ? e
@@ -15071,7 +15071,7 @@
                 : h.table.modules.localize.bind(
                     "headerFilters|default",
                     function (e) {
-                      s.setAttribute(
+                      r.setAttribute(
                         "placeholder",
                         void 0 !==
                           h.column.definition.headerFilterPlaceholder &&
@@ -15081,10 +15081,10 @@
                       );
                     },
                   ),
-                s.addEventListener("click", function (e) {
-                  e.stopPropagation(), s.focus();
+                r.addEventListener("click", function (e) {
+                  e.stopPropagation(), r.focus();
                 }),
-                s.addEventListener("focus", function (e) {
+                r.addEventListener("focus", function (e) {
                   var t = d.table.columnManager.element.scrollLeft;
                   t !== d.table.rowManager.element.scrollLeft &&
                     (d.table.rowManager.scrollHorizontal(t),
@@ -15094,36 +15094,36 @@
                 (u = function (e) {
                   l && clearTimeout(l),
                     (l = setTimeout(function () {
-                      p(s.value);
+                      p(r.value);
                     }, h.table.options.headerFilterLiveFilterDelay));
                 }),
-                (e.modules.filter.headerElement = s),
-                (e.modules.filter.attrType = s.hasAttribute("type")
-                  ? s.getAttribute("type").toLowerCase()
+                (e.modules.filter.headerElement = r),
+                (e.modules.filter.attrType = r.hasAttribute("type")
+                  ? r.getAttribute("type").toLowerCase()
                   : ""),
-                (e.modules.filter.tagType = s.tagName.toLowerCase()),
+                (e.modules.filter.tagType = r.tagName.toLowerCase()),
                 !1 !== e.definition.headerFilterLiveFilter &&
                   ("autocomplete" !== e.definition.headerFilter &&
                     "tickCross" !== e.definition.headerFilter &&
                     (("autocomplete" !== e.definition.editor &&
                       "tickCross" !== e.definition.editor) ||
                       !0 !== e.definition.headerFilter) &&
-                    (s.addEventListener("keyup", u),
-                    s.addEventListener("search", u),
+                    (r.addEventListener("keyup", u),
+                    r.addEventListener("search", u),
                     "number" == e.modules.filter.attrType &&
-                      s.addEventListener("change", function (e) {
-                        p(s.value);
+                      r.addEventListener("change", function (e) {
+                        p(r.value);
                       }),
                     "text" == e.modules.filter.attrType &&
                       "ie" !== this.table.browser &&
-                      s.setAttribute("type", "search")),
+                      r.setAttribute("type", "search")),
                   ("input" != e.modules.filter.tagType &&
                     "select" != e.modules.filter.tagType &&
                     "textarea" != e.modules.filter.tagType) ||
-                    s.addEventListener("mousedown", function (e) {
+                    r.addEventListener("mousedown", function (e) {
                       e.stopPropagation();
                     })),
-                i.appendChild(s),
+                i.appendChild(r),
                 e.contentElement.appendChild(i),
                 o || h.headerFilterColumns.push(e);
             }
@@ -15292,7 +15292,7 @@
             e.forEach(function (e) {
               var t = -1;
               (t =
-                "object" == r(e.field)
+                "object" == s(e.field)
                   ? i.filterList.findIndex(function (t) {
                       return e === t;
                     })
@@ -15337,22 +15337,22 @@
         }),
         (_.prototype.search = function (e, t, o, i) {
           var n = this,
-            r = [],
-            s = [];
+            s = [],
+            r = [];
           return (
             Array.isArray(t) || (t = [{ field: t, type: o, value: i }]),
             t.forEach(function (e) {
-              (e = n.findFilter(e)) && s.push(e);
+              (e = n.findFilter(e)) && r.push(e);
             }),
             this.table.rowManager.rows.forEach(function (t) {
               var o = !0;
-              s.forEach(function (e) {
+              r.forEach(function (e) {
                 n.filterRecurse(e, t.getData()) || (o = !1);
               }),
                 o &&
-                  r.push("data" === e ? t.getData("data") : t.getComponent());
+                  s.push("data" === e ? t.getData("data") : t.getComponent());
             }),
-            r
+            s
           );
         }),
         (_.prototype.filter = function (e, t) {
@@ -15380,11 +15380,11 @@
           var o = this,
             i = !0,
             n = e.getData();
-          for (var r in (o.filterList.forEach(function (e) {
+          for (var s in (o.filterList.forEach(function (e) {
             o.filterRecurse(e, n) || (i = !1);
           }),
           o.headerFilters))
-            o.headerFilters[r].func(n) || (i = !1);
+            o.headerFilters[s].func(n) || (i = !1);
           return i;
         }),
         (_.prototype.filterRecurse = function (e, t) {
@@ -15431,13 +15431,13 @@
             var n = e
                 .toLowerCase()
                 .split(void 0 === i.separator ? " " : i.separator),
-              r = String(null == t ? "" : t).toLowerCase(),
-              s = [];
+              s = String(null == t ? "" : t).toLowerCase(),
+              r = [];
             return (
               n.forEach(function (e) {
-                r.includes(e) && s.push(!0);
+                s.includes(e) && r.push(!0);
               }),
-              i.matchAll ? s.length === n.length : !!s.length
+              i.matchAll ? r.length === n.length : !!r.length
             );
           },
           starts: function (e, t, o, i) {
@@ -15480,7 +15480,7 @@
         (z.prototype.lookupFormatter = function (e, t) {
           var o = { params: e.definition["formatter" + t + "Params"] || {} },
             i = e.definition["formatter" + t];
-          switch (void 0 === i ? "undefined" : r(i)) {
+          switch (void 0 === i ? "undefined" : s(i)) {
             case "string":
               "tick" === i &&
                 ((i = "tickCross"),
@@ -15567,7 +15567,7 @@
           return null == e || "" === e ? "&nbsp;" : e;
         }),
         (z.prototype.getFormatter = function (e) {
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "string":
               this.formatters[e]
                 ? (e = this.formatters[e])
@@ -15600,8 +15600,8 @@
           money: function (e, t, o) {
             var i,
               n,
-              r,
               s,
+              r,
               a = parseFloat(e.getValue()),
               l = t.decimal || ".",
               u = t.thousand || ",",
@@ -15613,21 +15613,21 @@
             for (
               i = !1 !== h ? a.toFixed(h) : a,
                 n = (i = String(i).split("."))[0],
-                r = i.length > 1 ? l + i[1] : "",
-                s = /(\d+)(\d{3})/;
-              s.test(n);
+                s = i.length > 1 ? l + i[1] : "",
+                r = /(\d+)(\d{3})/;
+              r.test(n);
             )
-              n = n.replace(s, "$1" + u + "$2");
-            return d ? n + r + c : c + n + r;
+              n = n.replace(r, "$1" + u + "$2");
+            return d ? n + s + c : c + n + s;
           },
           link: function (e, t, o) {
             var i = e.getValue(),
               n = t.urlPrefix || "",
-              s = t.download,
+              r = t.download,
               a = i,
               l = document.createElement("a");
             if ((t.labelField && (a = e.getData()[t.labelField]), t.label))
-              switch (r(t.label)) {
+              switch (s(t.label)) {
                 case "string":
                   a = t.label;
                   break;
@@ -15636,7 +15636,7 @@
               }
             if (a) {
               if ((t.urlField && (i = e.getData()[t.urlField]), t.url))
-                switch (r(t.url)) {
+                switch (s(t.url)) {
                   case "string":
                     i = t.url;
                     break;
@@ -15647,8 +15647,8 @@
                 l.setAttribute("href", n + i),
                 t.target && l.setAttribute("target", t.target),
                 t.download &&
-                  ((s = "function" == typeof s ? s(e) : !0 === s ? "" : s),
-                  l.setAttribute("download", s)),
+                  ((r = "function" == typeof r ? r(e) : !0 === r ? "" : r),
+                  l.setAttribute("download", r)),
                 (l.innerHTML = this.emptyToSpace(this.sanitizeHTML(a))),
                 l
               );
@@ -15662,7 +15662,7 @@
               (t.urlPrefix && (n = t.urlPrefix + e.getValue()),
               t.urlSuffix && (n += t.urlSuffix),
               i.setAttribute("src", n),
-              r(t.height))
+              s(t.height))
             ) {
               case "number":
                 i.style.height = t.height + "px";
@@ -15670,7 +15670,7 @@
               case "string":
                 i.style.height = t.height;
             }
-            switch (r(t.width)) {
+            switch (s(t.width)) {
               case "number":
                 i.style.width = t.width + "px";
                 break;
@@ -15687,8 +15687,8 @@
           tickCross: function (e, t, o) {
             var i = e.getValue(),
               n = e.getElement(),
-              r = t.allowEmpty,
-              s = t.allowTruthy,
+              s = t.allowEmpty,
+              r = t.allowTruthy,
               a =
                 void 0 !== t.tickElement
                   ? t.tickElement
@@ -15697,46 +15697,46 @@
                 void 0 !== t.crossElement
                   ? t.crossElement
                   : '<svg enable-background="new 0 0 24 24" height="14" width="14"  viewBox="0 0 24 24" xml:space="preserve" ><path fill="#CE1515" d="M22.245,4.015c0.313,0.313,0.313,0.826,0,1.139l-6.276,6.27c-0.313,0.312-0.313,0.826,0,1.14l6.273,6.272  c0.313,0.313,0.313,0.826,0,1.14l-2.285,2.277c-0.314,0.312-0.828,0.312-1.142,0l-6.271-6.271c-0.313-0.313-0.828-0.313-1.141,0  l-6.276,6.267c-0.313,0.313-0.828,0.313-1.141,0l-2.282-2.28c-0.313-0.313-0.313-0.826,0-1.14l6.278-6.269  c0.313-0.312,0.313-0.826,0-1.14L1.709,5.147c-0.314-0.313-0.314-0.827,0-1.14l2.284-2.278C4.308,1.417,4.821,1.417,5.135,1.73  L11.405,8c0.314,0.314,0.828,0.314,1.141,0.001l6.276-6.267c0.312-0.312,0.826-0.312,1.141,0L22.245,4.015z"/></svg>';
-            return (s && i) ||
+            return (r && i) ||
               !0 === i ||
               "true" === i ||
               "True" === i ||
               1 === i ||
               "1" === i
               ? (n.setAttribute("aria-checked", !0), a || "")
-              : !r || ("null" !== i && "" !== i && null != i)
+              : !s || ("null" !== i && "" !== i && null != i)
                 ? (n.setAttribute("aria-checked", !1), l || "")
                 : (n.setAttribute("aria-checked", "mixed"), "");
           },
           datetime: function (e, t, o) {
             var i = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
               n = t.outputFormat || "DD/MM/YYYY hh:mm:ss",
-              r = void 0 !== t.invalidPlaceholder ? t.invalidPlaceholder : "",
-              s = e.getValue(),
-              a = moment(s, i);
+              s = void 0 !== t.invalidPlaceholder ? t.invalidPlaceholder : "",
+              r = e.getValue(),
+              a = moment(r, i);
             return a.isValid()
               ? t.timezone
                 ? a.tz(t.timezone).format(n)
                 : a.format(n)
-              : !0 === r
-                ? s
-                : "function" == typeof r
-                  ? r(s)
-                  : r;
+              : !0 === s
+                ? r
+                : "function" == typeof s
+                  ? s(r)
+                  : s;
           },
           datetimediff: function (e, t, o) {
             var i = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
               n = void 0 !== t.invalidPlaceholder ? t.invalidPlaceholder : "",
-              r = void 0 !== t.suffix && t.suffix,
-              s = void 0 !== t.unit ? t.unit : void 0,
+              s = void 0 !== t.suffix && t.suffix,
+              r = void 0 !== t.unit ? t.unit : void 0,
               a = void 0 !== t.humanize && t.humanize,
               l = void 0 !== t.date ? t.date : moment(),
               u = e.getValue(),
               c = moment(u, i);
             return c.isValid()
               ? a
-                ? moment.duration(c.diff(l)).humanize(r)
-                : c.diff(l, s) + (r ? " " + r : "")
+                ? moment.duration(c.diff(l)).humanize(s)
+                : c.diff(l, r) + (s ? " " + s : "")
               : !0 === n
                 ? u
                 : "function" == typeof n
@@ -15752,57 +15752,57 @@
           star: function (e, t, o) {
             var i = e.getValue(),
               n = e.getElement(),
-              r = t && t.stars ? t.stars : 5,
-              s = document.createElement("span"),
+              s = t && t.stars ? t.stars : 5,
+              r = document.createElement("span"),
               a = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            (s.style.verticalAlign = "middle"),
+            (r.style.verticalAlign = "middle"),
               a.setAttribute("width", "14"),
               a.setAttribute("height", "14"),
               a.setAttribute("viewBox", "0 0 512 512"),
               a.setAttribute("xml:space", "preserve"),
               (a.style.padding = "0 1px"),
               (i = i && !isNaN(i) ? parseInt(i) : 0),
-              (i = Math.max(0, Math.min(i, r)));
-            for (var l = 1; l <= r; l++) {
+              (i = Math.max(0, Math.min(i, s)));
+            for (var l = 1; l <= s; l++) {
               var u = a.cloneNode(!0);
               (u.innerHTML =
                 l <= i
                   ? '<polygon fill="#FFEA00" stroke="#C1AB60" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>'
                   : '<polygon fill="#D2D2D2" stroke="#686868" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>'),
-                s.appendChild(u);
+                r.appendChild(u);
             }
             return (
               (n.style.whiteSpace = "nowrap"),
               (n.style.overflow = "hidden"),
               (n.style.textOverflow = "ellipsis"),
               n.setAttribute("aria-label", i),
-              s
+              r
             );
           },
           traffic: function (e, t, o) {
             var i,
               n,
-              s = this.sanitizeHTML(e.getValue()) || 0,
+              r = this.sanitizeHTML(e.getValue()) || 0,
               a = document.createElement("span"),
               l = t && t.max ? t.max : 100,
               u = t && t.min ? t.min : 0,
               c =
                 t && void 0 !== t.color ? t.color : ["red", "orange", "green"],
               d = "#666666";
-            if (!isNaN(s) && void 0 !== e.getValue()) {
+            if (!isNaN(r) && void 0 !== e.getValue()) {
               switch (
                 (a.classList.add("tabulator-traffic-light"),
-                (n = parseFloat(s) <= l ? parseFloat(s) : l),
+                (n = parseFloat(r) <= l ? parseFloat(r) : l),
                 (n = parseFloat(n) >= u ? parseFloat(n) : u),
                 (i = (l - u) / 100),
                 (n = Math.round((n - u) / i)),
-                void 0 === c ? "undefined" : r(c))
+                void 0 === c ? "undefined" : s(c))
               ) {
                 case "string":
                   d = c;
                   break;
                 case "function":
-                  d = c(s);
+                  d = c(r);
                   break;
                 case "object":
                   if (Array.isArray(c)) {
@@ -15819,7 +15819,7 @@
           progress: function (e, t, o) {
             var i,
               n,
-              s,
+              r,
               a,
               l,
               u = this.sanitizeHTML(e.getValue()) || 0,
@@ -15832,13 +15832,13 @@
               (n = parseFloat(n) >= h ? parseFloat(n) : h),
               (i = (d - h) / 100),
               (n = Math.round((n - h) / i)),
-              r(t.color))
+              s(t.color))
             ) {
               case "string":
-                s = t.color;
+                r = t.color;
                 break;
               case "function":
-                s = t.color(u);
+                r = t.color(u);
                 break;
               case "object":
                 if (Array.isArray(t.color)) {
@@ -15846,13 +15846,13 @@
                     g = Math.floor(n / f);
                   (g = Math.min(g, t.color.length - 1)),
                     (g = Math.max(g, 0)),
-                    (s = t.color[g]);
+                    (r = t.color[g]);
                   break;
                 }
               default:
-                s = "#2DC214";
+                r = "#2DC214";
             }
-            switch (r(t.legend)) {
+            switch (s(t.legend)) {
               case "string":
                 a = t.legend;
                 break;
@@ -15865,7 +15865,7 @@
               default:
                 a = !1;
             }
-            switch (r(t.legendColor)) {
+            switch (s(t.legendColor)) {
               case "string":
                 l = t.legendColor;
                 break;
@@ -15891,7 +15891,7 @@
               ((b.style.display = "inline-block"),
               (b.style.position = "relative"),
               (b.style.width = n + "%"),
-              (b.style.backgroundColor = s),
+              (b.style.backgroundColor = r),
               (b.style.height = "100%"),
               b.setAttribute("data-max", d),
               b.setAttribute("data-min", h),
@@ -15952,7 +15952,7 @@
           responsiveCollapse: function (e, t, o) {
             var i = document.createElement("div"),
               n = e.getRow()._row.modules.responsiveLayout;
-            function r(e) {
+            function s(e) {
               var t = n.element;
               (n.open = e),
                 t &&
@@ -15966,9 +15966,9 @@
                 "<span class='tabulator-responsive-collapse-toggle-open'>+</span><span class='tabulator-responsive-collapse-toggle-close'>-</span>"),
               e.getElement().classList.add("tabulator-row-handle"),
               i.addEventListener("click", function (e) {
-                e.stopImmediatePropagation(), r(!n.open);
+                e.stopImmediatePropagation(), s(!n.open);
               }),
-              r(n.open),
+              s(n.open),
               i
             );
           },
@@ -15982,14 +15982,14 @@
                 }),
                 "function" == typeof e.getRow)
               ) {
-                var r = e.getRow();
-                r instanceof d
+                var s = e.getRow();
+                s instanceof d
                   ? (n.addEventListener("change", function (e) {
-                      r.toggleSelect();
+                      s.toggleSelect();
                     }),
-                    (n.checked = r.isSelected && r.isSelected()),
+                    (n.checked = s.isSelected && s.isSelected()),
                     this.table.modules.selectRow.registerRowSelectCheckbox(
-                      r,
+                      s,
                       n,
                     ))
                   : (n = "");
@@ -16103,10 +16103,10 @@
                 : (i.modules.frozen.edge = !1),
               i.parent.isGroup)
             ) {
-              var r = t.getColGroupParentElement(i);
-              o.includes(r) || (t.layoutElement(r, i), o.push(r)),
+              var s = t.getColGroupParentElement(i);
+              o.includes(s) || (t.layoutElement(s, i), o.push(s)),
                 i.modules.frozen.edge &&
-                  r.classList.add(
+                  s.classList.add(
                     "tabulator-frozen-" + i.modules.frozen.position,
                   );
             } else t.layoutElement(i.getElement(), i);
@@ -16291,7 +16291,7 @@
         (A.prototype.getTable = function () {
           return this._group.groupManager.table;
         });
-      var F = function (e, t, o, i, n, r, s) {
+      var F = function (e, t, o, i, n, s, r) {
         (this.groupManager = e),
           (this.parent = t),
           (this.key = i),
@@ -16302,11 +16302,11 @@
             ? this._addRowToGroup
             : this._addRow),
           (this.type = "group"),
-          (this.old = s),
+          (this.old = r),
           (this.rows = []),
           (this.groups = []),
           (this.groupList = []),
-          (this.generator = r),
+          (this.generator = s),
           (this.elementContents = !1),
           (this.height = 0),
           (this.outerHeight = 0),
@@ -16315,8 +16315,8 @@
           (this.initialized = !1),
           (this.modules = {}),
           (this.arrowElement = !1),
-          (this.visible = s
-            ? s.visible
+          (this.visible = r
+            ? r.visible
             : void 0 !== e.startOpen[o]
               ? e.startOpen[o]
               : e.startOpen[0]),
@@ -17247,7 +17247,7 @@
           o = e.table.options,
           i = (o.columns, t.getElementsByTagName("th")),
           n = t.getElementsByTagName("tbody")[0],
-          s = [];
+          r = [];
         (e.hasIndex = !1),
           e.table.options.htmlImporting.call(this.table),
           (n = n ? n.getElementsByTagName("tr") : []),
@@ -17262,33 +17262,33 @@
             void 0 !== this.fieldIndex[c] &&
               (u[this.fieldIndex[c]] = d.innerHTML);
           }
-          s.push(u);
+          r.push(u);
         }
         var h = document.createElement("div"),
           p = t.attributes;
         for (var c in p)
-          "object" == r(p[c]) && h.setAttribute(p[c].name, p[c].value);
+          "object" == s(p[c]) && h.setAttribute(p[c].name, p[c].value);
         t.parentNode.replaceChild(h, t),
-          (o.data = s),
+          (o.data = r),
           e.table.options.htmlImported.call(this.table),
           (this.table.element = h);
       }),
         (I.prototype._extractOptions = function (e, t, o) {
           var i = e.attributes,
             n = o ? Object.assign([], o) : Object.keys(t),
-            s = {};
+            r = {};
           for (var a in (n.forEach(function (e) {
-            s[e.toLowerCase()] = e;
+            r[e.toLowerCase()] = e;
           }),
           i)) {
             var l,
               u = i[a];
             u &&
-              "object" == (void 0 === u ? "undefined" : r(u)) &&
+              "object" == (void 0 === u ? "undefined" : s(u)) &&
               u.name &&
               0 === u.name.indexOf("tabulator-") &&
               ((l = u.name.replace("tabulator-", "")),
-              void 0 !== s[l] && (t[s[l]] = this._attribValue(u.value)));
+              void 0 !== r[l] && (t[r[l]] = this._attribValue(u.value)));
           }
         }),
         (I.prototype._attribValue = function (e) {
@@ -17305,20 +17305,20 @@
           for (var o = 0; o < e.length; o++) {
             var i,
               n = e[o],
-              r = !1,
-              s = this._findCol(n.textContent);
-            s ? (r = !0) : (s = { title: n.textContent.trim() }),
-              s.field ||
-                (s.field = n.textContent
+              s = !1,
+              r = this._findCol(n.textContent);
+            r ? (s = !0) : (r = { title: n.textContent.trim() }),
+              r.field ||
+                (r.field = n.textContent
                   .trim()
                   .toLowerCase()
                   .replace(" ", "_")),
-              (i = n.getAttribute("width")) && !s.width && (s.width = i),
+              (i = n.getAttribute("width")) && !r.width && (r.width = i),
               n.attributes,
-              this._extractOptions(n, s, l.prototype.defaultOptionList),
-              (this.fieldIndex[o] = s.field),
-              s.field == this.table.options.index && (this.hasIndex = !0),
-              r || this.table.options.columns.push(s);
+              this._extractOptions(n, r, l.prototype.defaultOptionList),
+              (this.fieldIndex[o] = r.field),
+              r.field == this.table.options.index && (this.hasIndex = !0),
+              s || this.table.options.columns.push(r);
           }
         }),
         (I.prototype._generateBlankHeaders = function (e, t) {
@@ -17326,8 +17326,8 @@
             var i = e[o],
               n = { title: "", field: "col" + o };
             this.fieldIndex[o] = n.field;
-            var r = i.getAttribute("width");
-            r && (n.width = r), this.table.options.columns.push(n);
+            var s = i.getAttribute("width");
+            s && (n.width = s), this.table.options.columns.push(n);
           }
         }),
         g.prototype.registerModule("htmlTableImport", I);
@@ -17353,7 +17353,7 @@
             i = function (i) {
               t.actions[i]
                 ? e[i] &&
-                  ("object" !== r(e[i]) && (e[i] = [e[i]]),
+                  ("object" !== s(e[i]) && (e[i] = [e[i]]),
                   e[i].forEach(function (e) {
                     o.mapBinding(i, e);
                   }))
@@ -17609,23 +17609,23 @@
           var o = this,
             i = e.getElement(),
             n = null,
-            r = !1;
+            s = !1;
           i.addEventListener(
             "touchstart",
             function (i) {
               clearTimeout(n),
-                (r = !1),
+                (s = !1),
                 (n = setTimeout(function () {
                   clearTimeout(n),
                     (n = null),
-                    (r = !0),
+                    (s = !0),
                     o.LoadMenuEvent(e, t, i);
                 }, 1e3));
             },
             { passive: !0 },
           ),
             i.addEventListener("touchend", function (e) {
-              clearTimeout(n), (n = null), r && e.preventDefault();
+              clearTimeout(n), (n = null), s && e.preventDefault();
             });
         }),
         (j.prototype.initializeCell = function (e) {
@@ -17705,11 +17705,11 @@
         }),
         (j.prototype.loadMenu = function (e, t, o, i) {
           var n = this,
-            r = !(e instanceof MouseEvent),
-            s = document.createElement("div");
+            s = !(e instanceof MouseEvent),
+            r = document.createElement("div");
           if (
-            (s.classList.add("tabulator-menu"),
-            r || e.preventDefault(),
+            (r.classList.add("tabulator-menu"),
+            s || e.preventDefault(),
             o && o.length)
           ) {
             if (!i) {
@@ -17724,16 +17724,16 @@
             o.forEach(function (e) {
               var o = document.createElement("div"),
                 i = e.label,
-                r = e.disabled;
+                s = e.disabled;
               e.separator
                 ? o.classList.add("tabulator-menu-separator")
                 : (o.classList.add("tabulator-menu-item"),
                   "function" == typeof i &&
                     (i = i.call(n.table, t.getComponent())),
                   i instanceof Node ? o.appendChild(i) : (o.innerHTML = i),
-                  "function" == typeof r &&
-                    (r = r.call(n.table, t.getComponent())),
-                  r
+                  "function" == typeof s &&
+                    (s = s.call(n.table, t.getComponent())),
+                  s
                     ? (o.classList.add("tabulator-menu-item-disabled"),
                       o.addEventListener("click", function (e) {
                         e.stopPropagation();
@@ -17741,7 +17741,7 @@
                     : e.menu && e.menu.length
                       ? o.addEventListener("click", function (i) {
                           i.stopPropagation(),
-                            n.hideOldSubMenus(s),
+                            n.hideOldSubMenus(r),
                             n.loadMenu(i, t, e.menu, o);
                         })
                       : e.action &&
@@ -17751,13 +17751,13 @@
                   e.menu &&
                     e.menu.length &&
                     o.classList.add("tabulator-menu-item-submenu")),
-                s.appendChild(o);
+                r.appendChild(o);
             }),
-              s.addEventListener("click", function (e) {
+              r.addEventListener("click", function (e) {
                 n.hideMenu();
               }),
-              this.menuElements.push(s),
-              this.positionMenu(s, i, r, e);
+              this.menuElements.push(r),
+              this.positionMenu(r, i, s, e);
           }
         }),
         (j.prototype.hideOldSubMenus = function (e) {
@@ -17771,17 +17771,17 @@
         }),
         (j.prototype.positionMenu = function (e, t, o, i) {
           var n,
-            r,
             s,
+            r,
             a = this,
             l = Math.max(document.body.offsetHeight, window.innerHeight);
           t
-            ? ((n = (s = g.prototype.helpers.elOffset(t)).left + t.offsetWidth),
-              (r = s.top - 1))
+            ? ((n = (r = g.prototype.helpers.elOffset(t)).left + t.offsetWidth),
+              (s = r.top - 1))
             : ((n = o ? i.touches[0].pageX : i.pageX),
-              (r = o ? i.touches[0].pageY : i.pageY),
+              (s = o ? i.touches[0].pageY : i.pageY),
               (this.positionReversedX = !1)),
-            (e.style.top = r + "px"),
+            (e.style.top = s + "px"),
             (e.style.left = n + "px"),
             setTimeout(function () {
               a.table.rowManager.element.addEventListener(
@@ -17794,16 +17794,16 @@
                 document.body.addEventListener("keydown", a.escEvent);
             }, 100),
             document.body.appendChild(e),
-            r + e.offsetHeight >= l &&
+            s + e.offsetHeight >= l &&
               ((e.style.top = ""),
               (e.style.bottom = t
-                ? l - s.top - t.offsetHeight - 1 + "px"
-                : l - r + "px")),
+                ? l - r.top - t.offsetHeight - 1 + "px"
+                : l - s + "px")),
             (n + e.offsetWidth >= document.body.offsetWidth ||
               this.positionReversedX) &&
               ((e.style.left = ""),
               (e.style.right = t
-                ? document.documentElement.offsetWidth - s.left + "px"
+                ? document.documentElement.offsetWidth - r.left + "px"
                 : document.documentElement.offsetWidth - n + "px"),
               (this.positionReversedX = !0));
         }),
@@ -17893,8 +17893,8 @@
             o,
             i,
             n,
-            r,
             s,
+            r,
             a = this,
             l = e.getElement(),
             u = !1;
@@ -17908,8 +17908,8 @@
                   (i = t ? t.getWidth() / 2 : 0),
                   (o = e.prevColumn()),
                   (n = o ? o.getWidth() / 2 : 0),
-                  (r = 0),
                   (s = 0),
+                  (r = 0),
                   (u = !1),
                   a.startMove(l, e);
               }, a.checkPeriod);
@@ -17925,7 +17925,7 @@
                   u || (u = l.touches[0].pageX),
                   (c = l.touches[0].pageX - u) > 0
                     ? t &&
-                      c - r > i &&
+                      c - s > i &&
                       (d = t) !== e &&
                       ((u = l.touches[0].pageX),
                       d
@@ -17936,7 +17936,7 @@
                         ),
                       a.moveColumn(d, !0))
                     : o &&
-                      -c - s > n &&
+                      -c - r > n &&
                       (d = o) !== e &&
                       ((u = l.touches[0].pageX),
                       d
@@ -17949,10 +17949,10 @@
                   d &&
                     (d,
                     (t = d.nextColumn()),
-                    (r = i),
+                    (s = i),
                     (i = t ? t.getWidth() / 2 : 0),
                     (o = d.prevColumn()),
-                    (s = n),
+                    (r = n),
                     (n = o ? o.getWidth() / 2 : 0)));
               },
               { passive: !0 },
@@ -18049,19 +18049,19 @@
             o = this,
             i = o.table.columnManager.getElement(),
             n = i.scrollLeft,
-            r =
+            s =
               (o.touchMove ? e.touches[0].pageX : e.pageX) -
               g.prototype.helpers.elOffset(i).left +
               n;
-          (o.hoverElement.style.left = r - o.startX + "px"),
-            r - n < o.autoScrollMargin &&
+          (o.hoverElement.style.left = s - o.startX + "px"),
+            s - n < o.autoScrollMargin &&
               (o.autoScrollTimeout ||
                 (o.autoScrollTimeout = setTimeout(function () {
                   (t = Math.max(0, n - 5)),
                     (o.table.rowManager.getElement().scrollLeft = t),
                     (o.autoScrollTimeout = !1);
                 }, 1))),
-            n + i.clientWidth - r < o.autoScrollMargin &&
+            n + i.clientWidth - s < o.autoScrollMargin &&
               (o.autoScrollTimeout ||
                 (o.autoScrollTimeout = setTimeout(function () {
                   (t = Math.min(i.clientWidth, n + 5)),
@@ -18193,8 +18193,8 @@
           var o,
             i,
             n,
-            r,
             s,
+            r,
             a,
             l = this,
             u = !1;
@@ -18207,8 +18207,8 @@
                   (o = e.nextRow()),
                   (n = o ? o.getHeight() / 2 : 0),
                   (i = e.prevRow()),
-                  (r = i ? i.getHeight() / 2 : 0),
-                  (s = 0),
+                  (s = i ? i.getHeight() / 2 : 0),
+                  (r = 0),
                   (a = 0),
                   (u = !1),
                   l.startMove(t, e);
@@ -18227,7 +18227,7 @@
                 u || (u = t.touches[0].pageY),
                 (c = t.touches[0].pageY - u) > 0
                   ? o &&
-                    c - s > n &&
+                    c - r > n &&
                     (d = o) !== e &&
                     ((u = t.touches[0].pageY),
                     d
@@ -18238,7 +18238,7 @@
                       ),
                     l.moveRow(d, !0))
                   : i &&
-                    -c - a > r &&
+                    -c - a > s &&
                     (d = i) !== e &&
                     ((u = t.touches[0].pageY),
                     d
@@ -18251,11 +18251,11 @@
                 d &&
                   (d,
                   (o = d.nextRow()),
-                  (s = n),
+                  (r = n),
                   (n = o ? o.getHeight() / 2 : 0),
                   (i = d.prevRow()),
-                  (a = r),
-                  (r = i ? i.getHeight() / 2 : 0)));
+                  (a = s),
+                  (s = i ? i.getHeight() / 2 : 0)));
             }),
             t.addEventListener("touchend", function (e) {
               l.checkTimeout && clearTimeout(l.checkTimeout),
@@ -18319,13 +18319,13 @@
           var o,
             i,
             n = this.touchMove ? e.touches[0].pageX : e.pageX,
-            r = this.touchMove ? e.touches[0].pageY : e.pageY;
+            s = this.touchMove ? e.touches[0].pageY : e.pageY;
           (o = t.getElement()),
             this.connection
               ? ((i = o.getBoundingClientRect()),
                 (this.startX = i.left - n + window.pageXOffset),
-                (this.startY = i.top - r + window.pageYOffset))
-              : (this.startY = r - o.getBoundingClientRect().top);
+                (this.startY = i.top - s + window.pageYOffset))
+              : (this.startY = s - o.getBoundingClientRect().top);
         }),
         (W.prototype.endMove = function (e) {
           (e && 1 !== e.which && !this.touchMove) ||
@@ -18502,7 +18502,7 @@
         (W.prototype.dropComplete = function (e, t, o) {
           var i = !1;
           if (o) {
-            switch (r(this.table.options.movableRowsSender)) {
+            switch (s(this.table.options.movableRowsSender)) {
               case "string":
                 i = this.senders[this.table.options.movableRowsSender];
                 break;
@@ -18541,7 +18541,7 @@
             i = !1;
           switch (
             (e.stopImmediatePropagation(),
-            r(this.table.options.movableRowsReceiver))
+            s(this.table.options.movableRowsReceiver))
           ) {
             case "string":
               o = this.receivers[this.table.options.movableRowsReceiver];
@@ -18622,18 +18622,18 @@
           o = !1,
           i = {};
         this.allowedTypes.forEach(function (n) {
-          var r,
-            s = "mutator" + (n.charAt(0).toUpperCase() + n.slice(1));
-          e.definition[s] &&
-            (r = t.lookupMutator(e.definition[s])) &&
+          var s,
+            r = "mutator" + (n.charAt(0).toUpperCase() + n.slice(1));
+          e.definition[r] &&
+            (s = t.lookupMutator(e.definition[r])) &&
             ((o = !0),
-            (i[s] = { mutator: r, params: e.definition[s + "Params"] || {} }));
+            (i[r] = { mutator: s, params: e.definition[r + "Params"] || {} }));
         }),
           o && (e.modules.mutate = i);
       }),
         (G.prototype.lookupMutator = function (e) {
           var t = !1;
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "string":
               this.mutators[e]
                 ? (t = this.mutators[e])
@@ -18652,18 +18652,18 @@
             n = "mutator" + (t.charAt(0).toUpperCase() + t.slice(1));
           return (
             this.enabled &&
-              this.table.columnManager.traverse(function (r) {
-                var s, a, l;
-                r.modules.mutate &&
-                  (s = r.modules.mutate[n] || r.modules.mutate.mutator || !1) &&
-                  ((i = r.getFieldValue(void 0 !== o ? o : e)),
+              this.table.columnManager.traverse(function (s) {
+                var r, a, l;
+                s.modules.mutate &&
+                  (r = s.modules.mutate[n] || s.modules.mutate.mutator || !1) &&
+                  ((i = s.getFieldValue(void 0 !== o ? o : e)),
                   ("data" != t && void 0 === i) ||
-                    ((l = r.getComponent()),
+                    ((l = s.getComponent()),
                     (a =
-                      "function" == typeof s.params
-                        ? s.params(i, e, t, l)
-                        : s.params),
-                    r.setFieldValue(e, s.mutator(i, e, t, a, l))));
+                      "function" == typeof r.params
+                        ? r.params(i, e, t, l)
+                        : r.params),
+                    s.setFieldValue(e, r.mutator(i, e, t, a, l))));
               }),
             e
           );
@@ -18966,8 +18966,8 @@
               .getDisplayRows(t.displayIndex - 1)
               .indexOf(e);
             if (n > -1) {
-              var r = !0 === t.size ? 1 : Math.ceil((n + 1) / t.size);
-              t.setPage(r)
+              var s = !0 === t.size ? 1 : Math.ceil((n + 1) / t.size);
+              t.setPage(s)
                 .then(function () {
                   o();
                 })
@@ -19010,10 +19010,10 @@
             e.page == e.max
               ? ((e.lastBut.disabled = !0), (e.nextBut.disabled = !0))
               : ((e.lastBut.disabled = !1), (e.nextBut.disabled = !1));
-          for (var r = i; r <= n; r++)
-            r > 0 &&
-              r <= e.max &&
-              e.pagesElement.appendChild(e._generatePageButton(r));
+          for (var s = i; s <= n; s++)
+            s > 0 &&
+              s <= e.max &&
+              e.pagesElement.appendChild(e._generatePageButton(s));
           this.footerRedraw();
         }),
         (U.prototype._generatePageButton = function (e) {
@@ -19156,9 +19156,9 @@
             t,
             o = this,
             i = this;
-          return new Promise(function (n, r) {
+          return new Promise(function (n, s) {
             if (
-              (i.table.modExists("ajax", !0) || r(),
+              (i.table.modExists("ajax", !0) || s(),
               (e = g.prototype.helpers.deepClone(
                 i.table.modules.ajax.getParams() || {},
               )),
@@ -19167,11 +19167,11 @@
               o.size && (t[o.dataSentNames.size] = o.size),
               o.table.options.ajaxSorting && o.table.modExists("sort"))
             ) {
-              var s = i.table.modules.sort.getSort();
-              s.forEach(function (e) {
+              var r = i.table.modules.sort.getSort();
+              r.forEach(function (e) {
                 delete e.column;
               }),
-                (t[o.dataSentNames.sorters] = s);
+                (t[o.dataSentNames.sorters] = r);
             }
             if (o.table.options.ajaxFiltering && o.table.modExists("filter")) {
               var a = i.table.modules.filter.getFilters(!0, !0);
@@ -19184,7 +19184,7 @@
                   i._parseRemoteData(e), n();
                 })
                 .catch(function (e) {
-                  r();
+                  s();
                 }),
               i.table.modules.ajax.setParams(e);
           });
@@ -19426,18 +19426,18 @@
             i = [];
           return (
             (t = t || []).forEach(function (t, n) {
-              var r,
-                s = o._findColumn(e, t);
-              s &&
+              var s,
+                r = o._findColumn(e, t);
+              r &&
                 (!0 === o.config.columns || null == o.config.columns
-                  ? (r = Object.keys(s)).push("width")
-                  : (r = o.config.columns),
-                r.forEach(function (e) {
-                  "columns" !== e && void 0 !== t[e] && (s[e] = t[e]);
+                  ? (s = Object.keys(r)).push("width")
+                  : (s = o.config.columns),
+                s.forEach(function (e) {
+                  "columns" !== e && void 0 !== t[e] && (r[e] = t[e]);
                 }),
-                s.columns &&
-                  (s.columns = o.mergeDefinition(s.columns, t.columns)),
-                i.push(s));
+                r.columns &&
+                  (r.columns = o.mergeDefinition(r.columns, t.columns)),
+                i.push(r));
             }),
             e.forEach(function (e, n) {
               o._findColumn(t, e) ||
@@ -19520,30 +19520,30 @@
           return (
             e.forEach(function (e) {
               var n,
-                r = {},
-                s = e.getDefinition();
+                s = {},
+                r = e.getDefinition();
               e.isGroup
-                ? ((r.title = s.title),
-                  (r.columns = t.parseColumns(e.getColumns())))
-                : ((r.field = e.getField()),
+                ? ((s.title = r.title),
+                  (s.columns = t.parseColumns(e.getColumns())))
+                : ((s.field = e.getField()),
                   !0 === t.config.columns || null == t.config.columns
-                    ? (n = Object.keys(s)).push("width")
+                    ? (n = Object.keys(r)).push("width")
                     : (n = t.config.columns),
                   n.forEach(function (t) {
                     switch (t) {
                       case "width":
-                        r.width = e.getWidth();
+                        s.width = e.getWidth();
                         break;
                       case "visible":
-                        r.visible = e.visible;
+                        s.visible = e.visible;
                         break;
                       default:
-                        "function" != typeof s[t] &&
+                        "function" != typeof r[t] &&
                           -1 === i.indexOf(t) &&
-                          (r[t] = s[t]);
+                          (s[t] = r[t]);
                     }
                   })),
-                o.push(r);
+                o.push(s);
             }),
             o
           );
@@ -19557,13 +19557,13 @@
             var o,
               i,
               n = document.cookie,
-              r = e + "-" + t,
-              s = n.indexOf(r + "=");
+              s = e + "-" + t,
+              r = n.indexOf(s + "=");
             return (
-              s > -1 &&
-                ((n = n.substr(s)),
+              r > -1 &&
+                ((n = n.substr(r)),
                 (o = n.indexOf(";")) > -1 && (n = n.substr(0, o)),
-                (i = n.replace(r + "=", ""))),
+                (i = n.replace(s + "=", ""))),
               !!i && JSON.parse(i)
             );
           },
@@ -19621,8 +19621,8 @@
         (q.prototype.printFullscreen = function (e, t, o) {
           var i,
             n,
-            r = window.scrollX,
-            s = window.scrollY,
+            s = window.scrollX,
+            r = window.scrollY,
             a = document.createElement("div"),
             l = document.createElement("div"),
             u = this.table.modules.export.genereateTable(
@@ -19661,7 +19661,7 @@
               this.table.options.printFormatter(this.element, u),
             window.print(),
             this.cleanup(),
-            window.scrollTo(r, s),
+            window.scrollTo(s, r),
             (this.manualBlock = !1);
         }),
         g.prototype.registerModule("print", q);
@@ -19752,29 +19752,29 @@
             value: function () {
               var i,
                 n = Array.from(arguments),
-                r = n[0] < 0 ? e.length + n[0] : n[0],
-                s = n[1],
+                s = n[0] < 0 ? e.length + n[0] : n[0],
+                r = n[1],
                 a = !!n[2] && n.slice(2);
               if (!o.blocked && t === o.currentVersion) {
                 if (
                   (a &&
                     ((i =
-                      !!e[r] && o.table.rowManager.getRowFromDataObject(e[r]))
+                      !!e[s] && o.table.rowManager.getRowFromDataObject(e[s]))
                       ? a.forEach(function (e) {
                           o.table.rowManager.addRowActual(e, !0, i, !0);
                         })
                       : (a = a.slice().reverse()).forEach(function (e) {
                           o.table.rowManager.addRowActual(e, !0, !1, !0);
                         })),
-                  0 !== s)
+                  0 !== r)
                 ) {
-                  var l = e.slice(r, void 0 === n[1] ? n[1] : r + s);
+                  var l = e.slice(s, void 0 === n[1] ? n[1] : s + r);
                   l.forEach(function (e, t) {
                     var i = o.table.rowManager.getRowFromDataObject(e);
                     i && i.deleteActual(t !== l.length - 1);
                   });
                 }
-                (a || 0 !== s) && o.table.rowManager.reRenderInPosition();
+                (a || 0 !== r) && o.table.rowManager.reRenderInPosition();
               }
               return o.origFuncs.splice.apply(e, arguments);
             },
@@ -19855,18 +19855,18 @@
         (X.prototype.watchKey = function (e, t, o) {
           var i = this,
             n = Object.getOwnPropertyDescriptor(t, o),
-            r = t[o],
-            s = this.currentVersion;
+            s = t[o],
+            r = this.currentVersion;
           Object.defineProperty(t, o, {
             set: function (t) {
-              if (((r = t), !i.blocked && s === i.currentVersion)) {
+              if (((s = t), !i.blocked && r === i.currentVersion)) {
                 var a = {};
                 (a[o] = t), e.updateData(a);
               }
               n.set && n.set(t);
             },
             get: function () {
-              return n.get && n.get(), r;
+              return n.get && n.get(), s;
             },
           });
         }),
@@ -19892,31 +19892,31 @@
       (K.prototype.initializeColumn = function (e, t, o) {
         var i = this,
           n = !1,
-          r = this.table.options.resizableColumns;
+          s = this.table.options.resizableColumns;
         if (
           ("header" === e &&
             ((n =
               "textarea" == t.definition.formatter ||
               t.definition.variableHeight),
             (t.modules.resize = { variableHeight: n })),
-          !0 === r || r == e)
+          !0 === s || s == e)
         ) {
-          var s = document.createElement("div");
-          s.className = "tabulator-col-resize-handle";
+          var r = document.createElement("div");
+          r.className = "tabulator-col-resize-handle";
           var a = document.createElement("div");
           (a.className = "tabulator-col-resize-handle prev"),
-            s.addEventListener("click", function (e) {
+            r.addEventListener("click", function (e) {
               e.stopPropagation();
             });
           var l = function (e) {
             var o = t.getLastColumn();
             o &&
               i._checkResizability(o) &&
-              ((i.startColumn = t), i._mouseDown(e, o, s));
+              ((i.startColumn = t), i._mouseDown(e, o, r));
           };
-          s.addEventListener("mousedown", l),
-            s.addEventListener("touchstart", l, { passive: !0 }),
-            s.addEventListener("dblclick", function (e) {
+          r.addEventListener("mousedown", l),
+            r.addEventListener("touchstart", l, { passive: !0 }),
+            r.addEventListener("dblclick", function (e) {
               var o = t.getLastColumn();
               o &&
                 i._checkResizability(o) &&
@@ -19926,26 +19926,26 @@
               e.stopPropagation();
             });
           var u = function (e) {
-            var o, n, r;
+            var o, n, s;
             (o = t.getFirstColumn()) &&
-              (r =
+              (s =
                 (n = i.table.columnManager.findColumnIndex(o)) > 0 &&
                 i.table.columnManager.getColumnByIndex(n - 1)) &&
-              i._checkResizability(r) &&
-              ((i.startColumn = t), i._mouseDown(e, r, a));
+              i._checkResizability(s) &&
+              ((i.startColumn = t), i._mouseDown(e, s, a));
           };
           a.addEventListener("mousedown", u),
             a.addEventListener("touchstart", u, { passive: !0 }),
             a.addEventListener("dblclick", function (e) {
-              var o, n, r;
+              var o, n, s;
               (o = t.getFirstColumn()) &&
-                (r =
+                (s =
                   (n = i.table.columnManager.findColumnIndex(o)) > 0 &&
                   i.table.columnManager.getColumnByIndex(n - 1)) &&
-                i._checkResizability(r) &&
-                (e.stopPropagation(), r.reinitializeWidth(!0));
+                i._checkResizability(s) &&
+                (e.stopPropagation(), s.reinitializeWidth(!0));
             }),
-            o.appendChild(s),
+            o.appendChild(r),
             o.appendChild(a);
         }
       }),
@@ -19974,17 +19974,17 @@
                 t.modules.resize.variableHeight &&
                 t.checkCellHeights();
           }
-          function r(e) {
+          function s(e) {
             i.startColumn.modules.edit &&
               (i.startColumn.modules.edit.blocked = !1),
               i.table.browserSlow &&
                 t.modules.resize &&
                 t.modules.resize.variableHeight &&
                 t.checkCellHeights(),
-              document.body.removeEventListener("mouseup", r),
+              document.body.removeEventListener("mouseup", s),
               document.body.removeEventListener("mousemove", n),
               o.removeEventListener("touchmove", n),
-              o.removeEventListener("touchend", r),
+              o.removeEventListener("touchend", s),
               i.table.element.classList.remove("tabulator-block-select"),
               i.table.options.persistence &&
                 i.table.modExists("persistence", !0) &&
@@ -20000,9 +20000,9 @@
               void 0 === e.screenX ? e.touches[0].screenX : e.screenX),
             (i.startWidth = t.getWidth()),
             document.body.addEventListener("mousemove", n),
-            document.body.addEventListener("mouseup", r),
+            document.body.addEventListener("mouseup", s),
             o.addEventListener("touchmove", n, { passive: !0 }),
-            o.addEventListener("touchend", r);
+            o.addEventListener("touchend", s);
         }),
         g.prototype.registerModule("resizeColumns", K);
       var J = function (e) {
@@ -20023,20 +20023,20 @@
           i.addEventListener("click", function (e) {
             e.stopPropagation();
           });
-        var r = function (o) {
+        var s = function (o) {
           (t.startRow = e), t._mouseDown(o, e, i);
         };
-        i.addEventListener("mousedown", r),
-          i.addEventListener("touchstart", r, { passive: !0 }),
+        i.addEventListener("mousedown", s),
+          i.addEventListener("touchstart", s, { passive: !0 }),
           n.addEventListener("click", function (e) {
             e.stopPropagation();
           });
-        var s = function (o) {
+        var r = function (o) {
           var i = t.table.rowManager.prevDisplayRow(e);
           i && ((t.startRow = i), t._mouseDown(o, i, n));
         };
-        n.addEventListener("mousedown", s),
-          n.addEventListener("touchstart", s, { passive: !0 }),
+        n.addEventListener("mousedown", r),
+          n.addEventListener("touchstart", r, { passive: !0 }),
           o.appendChild(i),
           o.appendChild(n);
       }),
@@ -20049,11 +20049,11 @@
                   i.startY),
             );
           }
-          function r(e) {
+          function s(e) {
             document.body.removeEventListener("mouseup", n),
               document.body.removeEventListener("mousemove", n),
               o.removeEventListener("touchmove", n),
-              o.removeEventListener("touchend", r),
+              o.removeEventListener("touchend", s),
               i.table.element.classList.remove("tabulator-block-select"),
               i.table.options.rowResized.call(this.table, t.getComponent());
           }
@@ -20063,9 +20063,9 @@
               void 0 === e.screenY ? e.touches[0].screenY : e.screenY),
             (i.startHeight = t.getHeight()),
             document.body.addEventListener("mousemove", n),
-            document.body.addEventListener("mouseup", r),
+            document.body.addEventListener("mouseup", s),
             o.addEventListener("touchmove", n, { passive: !0 }),
-            o.addEventListener("touchend", r);
+            o.addEventListener("touchend", s);
         }),
         g.prototype.registerModule("resizeRows", J);
       var Q = function (e) {
@@ -20186,17 +20186,17 @@
           i = Array.isArray(o),
           n = 0;
         for (o = i ? o : o[Symbol.iterator](); ; ) {
-          var r;
+          var s;
           if (i) {
             if (n >= o.length) break;
-            r = o[n++];
+            s = o[n++];
           } else {
             if ((n = o.next()).done) break;
-            r = n.value;
+            s = n.value;
           }
-          var s = r;
-          if ("responsiveCollapse" == s.definition.formatter) {
-            this.collapseHandleColumn = s;
+          var r = s;
+          if ("responsiveCollapse" == r.definition.formatter) {
+            this.collapseHandleColumn = r;
             break;
           }
         }
@@ -20270,9 +20270,9 @@
               var n = e.columns[e.index];
               n ? (e.hideColumn(n), e.index++) : (t = !1);
             } else {
-              var r = e.columns[e.index - 1];
-              r && i > 0 && i >= r.getWidth()
-                ? (e.showColumn(r), e.index--)
+              var s = e.columns[e.index - 1];
+              s && i > 0 && i >= s.getWidth()
+                ? (e.showColumn(s), e.index--)
                 : (t = !1);
             }
             e.table.rowManager.activeRowsCount ||
@@ -20300,17 +20300,17 @@
             i = e.getData(),
             n = [];
           return (
-            this.hiddenColumns.forEach(function (r) {
-              var s = r.getFieldValue(i);
-              r.definition.title &&
-                r.field &&
-                (r.modules.format &&
+            this.hiddenColumns.forEach(function (s) {
+              var r = s.getFieldValue(i);
+              s.definition.title &&
+                s.field &&
+                (s.modules.format &&
                 o.table.options.responsiveLayoutCollapseUseFormatters
                   ? ((t = {
                       value: !1,
                       data: {},
                       getValue: function () {
-                        return s;
+                        return r;
                       },
                       getData: function () {
                         return i;
@@ -20322,22 +20322,22 @@
                         return e.getComponent();
                       },
                       getColumn: function () {
-                        return r.getComponent();
+                        return s.getComponent();
                       },
                     }),
                     n.push({
-                      field: r.field,
-                      title: r.definition.title,
-                      value: r.modules.format.formatter.call(
+                      field: s.field,
+                      title: s.definition.title,
+                      value: s.modules.format.formatter.call(
                         o.table.modules.format,
                         t,
-                        r.modules.format.params,
+                        s.modules.format.params,
                       ),
                     }))
                   : n.push({
-                      field: r.field,
-                      title: r.definition.title,
-                      value: s,
+                      field: s.field,
+                      title: s.definition.title,
+                      value: r,
                     }));
             }),
             n
@@ -20350,21 +20350,21 @@
               var o,
                 i = document.createElement("tr"),
                 n = document.createElement("td"),
-                r = document.createElement("td"),
-                s = document.createElement("strong");
-              n.appendChild(s),
+                s = document.createElement("td"),
+                r = document.createElement("strong");
+              n.appendChild(r),
                 this.table.modules.localize.bind(
                   "columns|" + e.field,
                   function (t) {
-                    s.innerText = t || e.title;
+                    r.innerText = t || e.title;
                   },
                 ),
                 e.value instanceof Node
                   ? ((o = document.createElement("div")).appendChild(e.value),
-                    r.appendChild(o))
-                  : (r.innerHTML = e.value),
+                    s.appendChild(o))
+                  : (s.innerHTML = e.value),
                 i.appendChild(n),
-                i.appendChild(r),
+                i.appendChild(s),
                 t.appendChild(i);
             }, this),
             Object.keys(e).length ? t : ""
@@ -20410,12 +20410,12 @@
                               t.lastClickedRow,
                             ),
                             n = t.table.rowManager.getDisplayRowIndex(e),
-                            r = i <= n ? i : n,
-                            s = i >= n ? i : n,
+                            s = i <= n ? i : n,
+                            r = i >= n ? i : n,
                             a = t.table.rowManager
                               .getDisplayRows()
                               .slice(0)
-                              .splice(r, s - r + 1);
+                              .splice(s, r - s + 1);
                           o.ctrlKey || o.metaKey
                             ? (a.forEach(function (o) {
                                 o !== t.lastClickedRow &&
@@ -20482,7 +20482,7 @@
         (Z.prototype.selectRows = function (e) {
           var t,
             o = this;
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "undefined":
               this.table.rowManager.rows.forEach(function (e) {
                 o._selectRow(e, !0, !0);
@@ -20631,17 +20631,17 @@
           if (t) {
             var i = o,
               n = Array.isArray(i),
-              r = 0;
+              s = 0;
             for (i = n ? i : i[Symbol.iterator](); ; ) {
-              var s;
+              var r;
               if (n) {
-                if (r >= i.length) break;
-                s = i[r++];
+                if (s >= i.length) break;
+                r = i[s++];
               } else {
-                if ((r = i.next()).done) break;
-                s = r.value;
+                if ((s = i.next()).done) break;
+                r = s.value;
               }
-              var a = s;
+              var a = r;
               this._selectRow(a, !0);
             }
           } else {
@@ -20670,21 +20670,21 @@
         var o,
           i,
           n = this,
-          s = !1;
-        switch (r(e.definition.sorter)) {
+          r = !1;
+        switch (s(e.definition.sorter)) {
           case "string":
             n.sorters[e.definition.sorter]
-              ? (s = n.sorters[e.definition.sorter])
+              ? (r = n.sorters[e.definition.sorter])
               : console.warn(
                   "Sort Error - No such sorter found: ",
                   e.definition.sorter,
                 );
             break;
           case "function":
-            s = e.definition.sorter;
+            r = e.definition.sorter;
         }
         (e.modules.sort = {
-          sorter: s,
+          sorter: r,
           dir: "none",
           params: e.definition.sorterParams || {},
           startingDir: e.definition.headerSortStartingDir || "asc",
@@ -20700,7 +20700,7 @@
             (i = document.createElement("div")).classList.add(
               "tabulator-col-sorter",
             ),
-            "object" == r(this.table.options.headerSortElement)
+            "object" == s(this.table.options.headerSortElement)
               ? i.appendChild(this.table.options.headerSortElement)
               : (i.innerHTML = this.table.options.headerSortElement),
             t.appendChild(i),
@@ -20708,7 +20708,7 @@
             o.addEventListener("click", function (t) {
               var o = "",
                 i = [],
-                r = !1;
+                s = !1;
               if (e.modules.sort) {
                 if (e.modules.sort.tristate)
                   o =
@@ -20732,13 +20732,13 @@
                   }
                 n.table.options.columnHeaderSortMulti &&
                 (t.shiftKey || t.ctrlKey)
-                  ? ((r = (i = n.getSort()).findIndex(function (t) {
+                  ? ((s = (i = n.getSort()).findIndex(function (t) {
                       return t.field === e.getField();
                     })),
-                    r > -1
-                      ? ((i[r].dir = o),
-                        r != i.length - 1 &&
-                          ((r = i.splice(r, 1)[0]), "none" != o && i.push(r)))
+                    s > -1
+                      ? ((i[s].dir = o),
+                        s != i.length - 1 &&
+                          ((s = i.splice(s, 1)[0]), "none" != o && i.push(s)))
                       : "none" != o && i.push({ column: e, dir: o }),
                     n.setSort(i))
                   : "none" == o
@@ -20793,7 +20793,7 @@
             o = this.table.rowManager.activeRows[0],
             i = "string";
           if (o && ((o = o.getData()), e.getField()))
-            switch (void 0 === (t = e.getFieldValue(o)) ? "undefined" : r(t)) {
+            switch (void 0 === (t = e.getFieldValue(o)) ? "undefined" : s(t)) {
               case "undefined":
                 i = "string";
                 break;
@@ -20855,32 +20855,32 @@
           var o = this,
             i = t.length - 1;
           e.sort(function (e, n) {
-            for (var r, s = i; s >= 0; s--) {
-              var a = t[s];
-              if (0 !== (r = o._sortRow(e, n, a.column, a.dir, a.params)))
+            for (var s, r = i; r >= 0; r--) {
+              var a = t[r];
+              if (0 !== (s = o._sortRow(e, n, a.column, a.dir, a.params)))
                 break;
             }
-            return r;
+            return s;
           });
         }),
         (ee.prototype._sortRow = function (e, t, o, i, n) {
-          var r,
-            s,
+          var s,
+            r,
             a = "asc" == i ? e : t,
             l = "asc" == i ? t : e;
           return (
             (e = void 0 !== (e = o.getFieldValue(a.getData())) ? e : ""),
             (t = void 0 !== (t = o.getFieldValue(l.getData())) ? t : ""),
-            (r = a.getComponent()),
-            (s = l.getComponent()),
-            o.modules.sort.sorter.call(this, e, t, r, s, o.getComponent(), i, n)
+            (s = a.getComponent()),
+            (r = l.getComponent()),
+            o.modules.sort.sorter.call(this, e, t, s, r, o.getComponent(), i, n)
           );
         }),
         (ee.prototype.sorters = {
-          number: function (e, t, o, i, n, r, s) {
-            var a = s.alignEmptyValues,
-              l = s.decimalSeparator,
-              u = s.thousandSeparator,
+          number: function (e, t, o, i, n, s, r) {
+            var a = r.alignEmptyValues,
+              l = r.decimalSeparator,
+              u = r.thousandSeparator,
               c = 0;
             if (
               ((e = String(e)),
@@ -20897,19 +20897,19 @@
               c = 1;
             }
             return (
-              (("top" === a && "desc" === r) ||
-                ("bottom" === a && "asc" === r)) &&
+              (("top" === a && "desc" === s) ||
+                ("bottom" === a && "asc" === s)) &&
                 (c *= -1),
               c
             );
           },
-          string: function (e, t, o, i, n, s, a) {
+          string: function (e, t, o, i, n, r, a) {
             var l,
               u = a.alignEmptyValues,
               c = 0;
             if (e) {
               if (t) {
-                switch (r(a.locale)) {
+                switch (s(a.locale)) {
                   case "boolean":
                     a.locale && (l = this.table.modules.localize.getLocale());
                     break;
@@ -20923,27 +20923,27 @@
               c = 1;
             } else c = t ? -1 : 0;
             return (
-              (("top" === u && "desc" === s) ||
-                ("bottom" === u && "asc" === s)) &&
+              (("top" === u && "desc" === r) ||
+                ("bottom" === u && "asc" === r)) &&
                 (c *= -1),
               c
             );
           },
-          date: function (e, t, o, i, n, r, s) {
+          date: function (e, t, o, i, n, s, r) {
             return (
-              s.format || (s.format = "DD/MM/YYYY"),
-              this.sorters.datetime.call(this, e, t, o, i, n, r, s)
+              r.format || (r.format = "DD/MM/YYYY"),
+              this.sorters.datetime.call(this, e, t, o, i, n, s, r)
             );
           },
-          time: function (e, t, o, i, n, r, s) {
+          time: function (e, t, o, i, n, s, r) {
             return (
-              s.format || (s.format = "HH:mm"),
-              this.sorters.datetime.call(this, e, t, o, i, n, r, s)
+              r.format || (r.format = "HH:mm"),
+              this.sorters.datetime.call(this, e, t, o, i, n, s, r)
             );
           },
-          datetime: function (e, t, o, i, n, r, s) {
-            var a = s.format || "DD/MM/YYYY HH:mm:ss",
-              l = s.alignEmptyValues,
+          datetime: function (e, t, o, i, n, s, r) {
+            var a = r.format || "DD/MM/YYYY HH:mm:ss",
+              l = r.alignEmptyValues,
               u = 0;
             if ("undefined" != typeof moment) {
               if (((e = moment(e, a)), (t = moment(t, a)), e.isValid())) {
@@ -20951,8 +20951,8 @@
                 u = 1;
               } else u = t.isValid() ? -1 : 0;
               return (
-                (("top" === l && "desc" === r) ||
-                  ("bottom" === l && "asc" === r)) &&
+                (("top" === l && "desc" === s) ||
+                  ("bottom" === l && "asc" === s)) &&
                   (u *= -1),
                 u
               );
@@ -20961,15 +20961,15 @@
               "Sort Error - 'datetime' sorter is dependant on moment.js",
             );
           },
-          boolean: function (e, t, o, i, n, r, s) {
+          boolean: function (e, t, o, i, n, s, r) {
             return (
               (!0 === e || "true" === e || "True" === e || 1 === e ? 1 : 0) -
               (!0 === t || "true" === t || "True" === t || 1 === t ? 1 : 0)
             );
           },
-          array: function (e, t, o, i, n, r, s) {
-            var a = s.type || "length",
-              l = s.alignEmptyValues,
+          array: function (e, t, o, i, n, s, r) {
+            var a = r.type || "length",
+              l = r.alignEmptyValues,
               u = 0;
             function c(e) {
               switch (a) {
@@ -20996,16 +20996,16 @@
               l = 1;
             } else l = Array.isArray(t) ? -1 : 0;
             return (
-              (("top" === l && "desc" === r) ||
-                ("bottom" === l && "asc" === r)) &&
+              (("top" === l && "desc" === s) ||
+                ("bottom" === l && "asc" === s)) &&
                 (u *= -1),
               u
             );
           },
-          exists: function (e, t, o, i, n, r, s) {
+          exists: function (e, t, o, i, n, s, r) {
             return (void 0 === e ? 0 : 1) - (void 0 === t ? 0 : 1);
           },
-          alphanum: function (e, t, o, i, n, r, s) {
+          alphanum: function (e, t, o, i, n, s, r) {
             var a,
               l,
               u,
@@ -21014,7 +21014,7 @@
               h = 0,
               p = /(\d+)|(\D+)/g,
               m = /\d/,
-              f = s.alignEmptyValues,
+              f = r.alignEmptyValues,
               g = 0;
             if (e || 0 === e) {
               if (t || 0 === t) {
@@ -21044,8 +21044,8 @@
               g = 1;
             } else g = t || 0 === t ? -1 : 0;
             return (
-              (("top" === f && "desc" === r) ||
-                ("bottom" === f && "asc" === r)) &&
+              (("top" === f && "desc" === s) ||
+                ("bottom" === f && "asc" === s)) &&
                 (g *= -1),
               g
             );
@@ -21069,7 +21069,7 @@
       }),
         (te.prototype._extractValidator = function (e) {
           var t, o, i;
-          switch (void 0 === e ? "undefined" : r(e)) {
+          switch (void 0 === e ? "undefined" : s(e)) {
             case "string":
               return (
                 (i = e.indexOf(":")) > -1
@@ -21100,7 +21100,7 @@
         (te.prototype.validate = function (e, t, o) {
           var i = this,
             n = [],
-            r = this.invalidCells.indexOf(t);
+            s = this.invalidCells.indexOf(t);
           return (
             e &&
               e.forEach(function (e) {
@@ -21112,11 +21112,11 @@
             !0 === n
               ? ((t.modules.validate.invalid = !1),
                 t.getElement().classList.remove("tabulator-validation-fail"),
-                r > -1 && this.invalidCells.splice(r, 1))
+                s > -1 && this.invalidCells.splice(s, 1))
               : ((t.modules.validate.invalid = !0),
                 "manual" !== this.table.options.validationMode &&
                   t.getElement().classList.add("tabulator-validation-fail"),
-                -1 == r && this.invalidCells.push(t)),
+                -1 == s && this.invalidCells.push(t)),
             n
           );
         }),
@@ -21202,11 +21202,11 @@
             if ("" === t || null == t) return !0;
             var i = !0,
               n = e.getData(),
-              r = e.getColumn()._getSelf();
+              s = e.getColumn()._getSelf();
             return (
               this.table.rowManager.rows.forEach(function (e) {
                 var o = e.getData();
-                o !== n && t == r.getFieldValue(o) && (i = !1);
+                o !== n && t == s.getFieldValue(o) && (i = !1);
               }),
               i
             );
@@ -21218,38 +21218,40 @@
         g.prototype.registerModule("validate", te);
       const oe = g;
     },
-    54806: (e, t, o) => {
+    59768: (e, t, o) => {
       "use strict";
-      o.d(t, { E: () => f });
+      o.d(t, { E: () => g });
       var i = o(90626),
-        n = o(86709),
-        r = o(45747),
-        s = o(74500),
-        a = o(57168);
+        n = o(14097),
+        s = o(45839),
+        r = o(52368),
+        a = o(70996);
       function l(e, t) {
         return e.filter((e) => !t.includes(e));
       }
-      var u = class extends s.Q {
+      var u = class extends r.Q {
           #e;
           #t;
           #o;
           #i;
           #n;
-          #r;
           #s;
+          #r;
+          #a;
           constructor(e, t, o) {
             super(),
               (this.#e = e),
+              (this.#i = o),
               (this.#o = []),
-              (this.#i = []),
+              (this.#n = []),
               (this.#t = []),
               this.setQueries(t);
           }
           onSubscribe() {
             1 === this.listeners.size &&
-              this.#i.forEach((e) => {
+              this.#n.forEach((e) => {
                 e.subscribe((t) => {
-                  this.#a(e, t);
+                  this.#l(e, t);
                 });
               });
           }
@@ -21258,23 +21260,24 @@
           }
           destroy() {
             (this.listeners = new Set()),
-              this.#i.forEach((e) => {
+              this.#n.forEach((e) => {
                 e.destroy();
               });
           }
           setQueries(e, t, o) {
             (this.#o = e),
+              (this.#i = t),
               n.j.batch(() => {
-                const e = this.#i,
-                  t = this.#l(this.#o);
+                const e = this.#n,
+                  t = this.#u(this.#o);
                 t.forEach((e) =>
                   e.observer.setOptions(e.defaultedQueryOptions, o),
                 );
                 const i = t.map((e) => e.observer),
                   n = i.map((e) => e.getCurrentResult()),
-                  r = i.some((t, o) => t !== e[o]);
-                (e.length !== i.length || r) &&
-                  ((this.#i = i),
+                  s = i.some((t, o) => t !== e[o]);
+                (e.length !== i.length || s) &&
+                  ((this.#n = i),
                   (this.#t = n),
                   this.hasListeners() &&
                     (l(e, i).forEach((e) => {
@@ -21282,158 +21285,162 @@
                     }),
                     l(i, e).forEach((e) => {
                       e.subscribe((t) => {
-                        this.#a(e, t);
+                        this.#l(e, t);
                       });
                     }),
-                    this.#u()));
+                    this.#c()));
               });
           }
           getCurrentResult() {
             return this.#t;
           }
           getQueries() {
-            return this.#i.map((e) => e.getCurrentQuery());
+            return this.#n.map((e) => e.getCurrentQuery());
           }
           getObservers() {
-            return this.#i;
+            return this.#n;
           }
           getOptimisticResult(e, t) {
-            const o = this.#l(e),
-              i = o.map((e) =>
-                e.observer.getOptimisticResult(e.defaultedQueryOptions),
-              );
-            return [
-              i,
-              (e) => this.#c(e ?? i, t),
-              () =>
-                o.map((e, t) => {
-                  const n = i[t];
-                  return e.defaultedQueryOptions.notifyOnChangeProps
-                    ? n
-                    : e.observer.trackResult(n, (e) => {
-                        o.forEach((t) => {
-                          t.observer.trackProp(e);
-                        });
-                      });
-                }),
-            ];
+            const o = this.#u(e).map((e) =>
+              e.observer.getOptimisticResult(e.defaultedQueryOptions),
+            );
+            return [o, (e) => this.#d(e ?? o, t), () => this.#h(o, e)];
           }
-          #c(e, t) {
+          #h(e, t) {
+            const o = this.#u(t);
+            return o.map((t, i) => {
+              const n = e[i];
+              return t.defaultedQueryOptions.notifyOnChangeProps
+                ? n
+                : t.observer.trackResult(n, (e) => {
+                    o.forEach((t) => {
+                      t.observer.trackProp(e);
+                    });
+                  });
+            });
+          }
+          #d(e, t) {
             return t
-              ? ((this.#n && this.#t === this.#s && t === this.#r) ||
+              ? ((this.#s && this.#t === this.#a && t === this.#r) ||
                   ((this.#r = t),
-                  (this.#s = this.#t),
-                  (this.#n = (0, a.BH)(this.#n, t(e)))),
-                this.#n)
+                  (this.#a = this.#t),
+                  (this.#s = (0, a.BH)(this.#s, t(e)))),
+                this.#s)
               : e;
           }
-          #l(e) {
-            const t = this.#i,
-              o = new Map(t.map((e) => [e.options.queryHash, e])),
-              i = e.map((e) => this.#e.defaultQueryOptions(e)),
-              n = i.flatMap((e) => {
-                const t = o.get(e.queryHash);
-                return null != t
-                  ? [{ defaultedQueryOptions: e, observer: t }]
-                  : [];
+          #u(e) {
+            const t = new Map(this.#n.map((e) => [e.options.queryHash, e])),
+              o = [];
+            return (
+              e.forEach((e) => {
+                const i = this.#e.defaultQueryOptions(e),
+                  n = t.get(i.queryHash);
+                if (n) o.push({ defaultedQueryOptions: i, observer: n });
+                else {
+                  const e = this.#n.find(
+                    (e) => e.options.queryHash === i.queryHash,
+                  );
+                  o.push({
+                    defaultedQueryOptions: i,
+                    observer: e ?? new s.$(this.#e, i),
+                  });
+                }
               }),
-              s = new Set(n.map((e) => e.defaultedQueryOptions.queryHash)),
-              a = i.filter((e) => !s.has(e.queryHash)),
-              l = (e) => {
-                const t = this.#e.defaultQueryOptions(e);
-                return (
-                  this.#i.find((e) => e.options.queryHash === t.queryHash) ??
-                  new r.$(this.#e, t)
-                );
-              },
-              u = a.map((e) => ({ defaultedQueryOptions: e, observer: l(e) }));
-            return n
-              .concat(u)
-              .sort(
-                (e, t) =>
-                  i.indexOf(e.defaultedQueryOptions) -
-                  i.indexOf(t.defaultedQueryOptions),
-              );
+              o.sort(
+                (t, o) =>
+                  e.findIndex(
+                    (e) => e.queryHash === t.defaultedQueryOptions.queryHash,
+                  ) -
+                  e.findIndex(
+                    (e) => e.queryHash === o.defaultedQueryOptions.queryHash,
+                  ),
+              )
+            );
           }
-          #a(e, t) {
-            const o = this.#i.indexOf(e);
+          #l(e, t) {
+            const o = this.#n.indexOf(e);
             -1 !== o &&
               ((this.#t = (function (e, t, o) {
                 const i = e.slice(0);
                 return (i[t] = o), i;
               })(this.#t, o, t)),
-              this.#u());
+              this.#c());
           }
-          #u() {
-            n.j.batch(() => {
-              this.listeners.forEach((e) => {
-                e(this.#t);
-              });
-            });
+          #c() {
+            if (this.hasListeners()) {
+              this.#s !==
+                this.#d(this.#h(this.#t, this.#o), this.#i?.combine) &&
+                n.j.batch(() => {
+                  this.listeners.forEach((e) => {
+                    e(this.#t);
+                  });
+                });
+            }
           }
         },
         c = o(75233),
         d = o(22730),
         h = o(43424),
         p = o(19086),
-        m = o(44407);
-      function f({ queries: e, ...t }, o) {
-        const s = (0, c.jE)(o),
+        m = o(44407),
+        f = o(19866);
+      function g({ queries: e, ...t }, o) {
+        const r = (0, c.jE)(o),
           a = (0, d.w)(),
           l = (0, h.h)(),
-          f = i.useMemo(
+          g = i.useMemo(
             () =>
               e.map((e) => {
-                const t = s.defaultQueryOptions(e);
+                const t = r.defaultQueryOptions(e);
                 return (
                   (t._optimisticResults = a ? "isRestoring" : "optimistic"), t
                 );
               }),
-            [e, s, a],
+            [e, r, a],
           );
-        f.forEach((e) => {
-          (0, m.tu)(e), (0, p.LJ)(e, l);
+        g.forEach((e) => {
+          (0, m.jv)(e), (0, p.LJ)(e, l);
         }),
           (0, p.wZ)(l);
-        const [g] = i.useState(() => new u(s, f, t)),
-          [b, v, y] = g.getOptimisticResult(f, t.combine);
+        const [b] = i.useState(() => new u(r, g, t)),
+          [v, y, w] = b.getOptimisticResult(g, t.combine);
         i.useSyncExternalStore(
           i.useCallback(
-            (e) => (a ? () => {} : g.subscribe(n.j.batchCalls(e))),
-            [g, a],
+            (e) => (a ? f.l : b.subscribe(n.j.batchCalls(e))),
+            [b, a],
           ),
-          () => g.getCurrentResult(),
-          () => g.getCurrentResult(),
+          () => b.getCurrentResult(),
+          () => b.getCurrentResult(),
         ),
           i.useEffect(() => {
-            g.setQueries(f, t, { listeners: !1 });
-          }, [f, t, g]);
-        const w = b.some((e, t) => (0, m.EU)(f[t], e))
-          ? b.flatMap((e, t) => {
-              const o = f[t];
+            b.setQueries(g, t, { listeners: !1 });
+          }, [g, t, b]);
+        const E = v.some((e, t) => (0, m.EU)(g[t], e))
+          ? v.flatMap((e, t) => {
+              const o = g[t];
               if (o) {
-                const t = new r.$(s, o);
+                const t = new s.$(r, o);
                 if ((0, m.EU)(o, e)) return (0, m.iL)(o, t, l);
                 (0, m.nE)(e, a) && (0, m.iL)(o, t, l);
               }
               return [];
             })
           : [];
-        if (w.length > 0) throw Promise.all(w);
-        const E = b.find((e, t) => {
-          const o = f[t];
+        if (E.length > 0) throw Promise.all(E);
+        const C = v.find((e, t) => {
+          const o = g[t];
           return (
             o &&
             (0, p.$1)({
               result: e,
               errorResetBoundary: l,
               throwOnError: o.throwOnError,
-              query: s.getQueryCache().get(o.queryHash),
+              query: r.getQueryCache().get(o.queryHash),
             })
           );
         });
-        if (E?.error) throw E.error;
-        return v(y());
+        if (C?.error) throw C.error;
+        return y(w());
       }
     },
   },

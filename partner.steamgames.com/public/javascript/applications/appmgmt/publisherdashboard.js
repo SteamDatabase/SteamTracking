@@ -4727,7 +4727,7 @@
           [y, w, T],
         );
         return (
-          U?.length > 0 &&
+          (U?.length > 0 || 0 != w) &&
           n.createElement(
             Ct.Provider,
             { value: I },

@@ -13,211 +13,48 @@
     4852: (e) => {
       e.exports = { StoreImage: "_1XiTdhCGWl9dUCWd6Eg89o" };
     },
-    66618: (e) => {
+    29298: (e) => {
       e.exports = {
-        SeasonPass: "_2Bwk-8eR05R2CUhVO2vLSO",
-        Description: "_23Gpk3EX3VPMV0ISPZP7Ne",
-        Title: "_3fPxFqoMwus-E-uUeyqE07",
-        Shipped: "_3CU0KkcloclUaXflEXQu_p",
-        DateAndControl: "_3aIQuGztbn-NrA-SWYiEUV",
-        Upcoming: "_2P7zxKWCoHKOfqDB310z0V",
-        Status: "hsVfYc1PxvDcBuC6uvKVs",
-        Content: "_2xEP9Nk68W8GGzPlKeD2Pm",
-        Text: "_1s9wb2xTKTarIgMnEy3ggl",
-        Padding: "_3NZPwN6ASHrrBSGBaVpiDL",
-        Strike: "beE-h2-Nw_6g1LqM9LyaK",
-        Chevron: "_1KM0040wsc_C2KCgj2t9Ev",
+        SeasonPass: "oa0Mg649faNiGrRBlXZ7b",
+        Description: "_3ZmgNZ5nbBbDojlnZLRkgc",
+        Title: "_1PoePgbQRAy0Sbtz2Po_R7",
+        Shipped: "Y4pxifDaDKS1sYR7j-35X",
+        DateAndControl: "_3-5TufllBcRHGRpNEAuY5u",
+        Upcoming: "lZmBeL-zQf8GORGTr4uX-",
+        Status: "_2uj7WLmhl5-zIS1NE_Ig-9",
+        Content: "_1Axq2b2LqJszxamtTvrnTV",
+        Text: "_3zXxPvXsjZinhyyYuHArVW",
+        Padding: "_26DsxbVP4TJh-d5NBcU6Qc",
+        Strike: "CoE7R_RffGU0rYbU4eHwa",
+        Chevron: "_1qoDole_3YKojGNDyp72EY",
       };
     },
-    8107: (e, t, n) => {
+    51899: (e, t, n) => {
       "use strict";
-      n.d(t, { N: () => f });
-      var a = n(34629),
-        s = n(41735),
-        o = n.n(s),
-        l = n(75844),
-        r = n(90626),
-        i = n(60746),
-        c = n(68033),
-        m = n(41550),
-        p = n(51706),
-        d = n(88843),
-        E = n(64641),
-        u = n.n(E),
-        S = n(22797),
-        _ = n(68797),
-        h = n(78327),
-        v = n(8527),
-        g = n(30894),
-        P = n(51272),
-        I = n(82715);
-      const f = (e) => {
-        let { bShowOnlyInitialEvent: t } = e;
-        const n = (0, h.Qn)();
-        return r.createElement(
-          I.tH,
-          null,
-          r.createElement(w, { ...e, bShowOnlyInitialEvent: t || n }),
-        );
-      };
-      let w = class extends r.Component {
-        state = { bLoading: !1, eventModel: this.props.eventModel };
-        m_refParent = r.createRef();
-        m_cancelSignal = o().CancelToken.source();
-        componentDidMount() {
-          this.state.eventModel ||
-            this.setState({ bLoading: !0 }, this.LoadEvent);
-          let e = this.GetBodyElement();
-          e &&
-            this.props.bPrimaryPageFeature &&
-            e.classList.add(d.BodyNoScroll);
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
-          let e = this.GetBodyElement();
-          e &&
-            this.props.bPrimaryPageFeature &&
-            e.classList.remove(d.BodyNoScroll);
-        }
-        GetBodyElement() {
-          return this.m_refParent.current
-            ? this.m_refParent.current.closest("body")
-            : null;
-        }
-        async LoadEvent() {
-          const {
-            appid: e,
-            clanSteamID: t,
-            announcementGID: n,
-            partnerEventStore: a,
-            additionalParams: s,
-          } = this.props;
-          a.LoadAdjacentPartnerEventsByAnnouncement(
-            n,
-            t,
-            e,
-            0,
-            3,
-            s,
-            this.m_cancelSignal,
-          )
-            .then((e) => {
-              e.length > 0
-                ? this.setState(
-                    { bLoading: !1, eventModel: e[0] },
-                    this.HandleReadEvent,
-                  )
-                : (this.props.onEventNotFound && this.props.onEventNotFound(),
-                  this.setState({ bLoading: !1 }));
-            })
-            .catch((e) => {
-              let t = (0, _.H)(e);
-              console.error(
-                "EventInfiniteScrollModal failed " + t.strErrorMsg,
-                t,
-              ),
-                this.setState({ bLoading: !1 });
-            });
-        }
-        async HandleReadEvent() {
-          const { eventModel: e } = this.state,
-            { trackingLocation: t } = this.props;
-          e &&
-            e.BIsPartnerEvent() &&
-            i.KN.Get()
-              .GetTracker()
-              .MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
-            i.KN.Get().GetTracker().Flush();
-        }
-        render() {
-          const { bShowOnlyInitialEvent: e } = this.props,
-            { bLoading: t, eventModel: n } = this.state;
-          if (t)
-            return r.createElement(
-              p.of,
-              null,
-              r.createElement(
-                "div",
-                { className: u().FlexCenter, style: { height: "400px" } },
-                r.createElement(S.t, null),
-              ),
-            );
-          const {
-            closeModal: a,
-            appid: s,
-            clanSteamID: o,
-            className: l,
-            partnerEventStore: i,
-            showAppHeader: d,
-            bPrimaryPageFeature: E,
-            additionalParams: _,
-            eventClassName: h,
-          } = this.props;
-          let I;
-          v.TS.IN_CLIENT &&
-            n?.appid &&
-            (g.Fm.Get().HintLoad(),
-            g.Fm.Get().BOwnsApp(n.appid) &&
-              (I = (e) =>
-                (0, P.EP)(e, "steam://nav/games/details/" + n.appid)));
-          const f = r.createElement(
-            "div",
-            null,
-            r.createElement(m.AD, {
-              initialEvent: n,
-              appid: s,
-              clanSteamID: o,
-              partnerEventStore: i,
-              emoticonStore: c.A,
-              closeModal: !E && a,
-              showAppHeader: d,
-              bShowOnlyInitialEvent: e,
-              additionalParams: _,
-              eventClassName: h,
-              onAppIconClick: I,
-            }),
-          );
-          return E
-            ? f
-            : r.createElement(
-                p.of,
-                { className: l },
-                r.createElement(
-                  p.Qs,
-                  { navID: "WebRowEventInfiniteScroll", closeModal: a },
-                  f,
-                ),
-              );
-        }
-      };
-      w = (0, a.Cg)([l.PA], w);
-    },
-    19011: (e, t, n) => {
-      "use strict";
-      n.r(t), n.d(t, { default: () => k });
+      n.r(t), n.d(t, { default: () => L });
       var a = n(8527),
         s = n(90626),
         o = n(38390),
         l = n(91254),
         r = n(55263),
-        i = n(63369),
-        c = n(8107),
+        c = n(63369),
+        i = n(8107),
         m = n(60014),
         p = n(55963),
         d = n(1431),
-        E = n.n(d);
+        _ = n.n(d);
       const u = { include_assets: !0, include_basic_info: !0 };
-      function S(e) {
+      function E(e) {
         const { appid: t } = e,
           [n] = (0, r.t7)(t, u),
           a = (0, m.n9)();
         return n && t
           ? s.createElement(
               "div",
-              { className: E().StoreItemCtn },
+              { className: _().StoreItemCtn },
               s.createElement(
                 "div",
-                { className: E().StoreItemRow },
+                { className: _().StoreItemRow },
                 s.createElement(
                   "a",
                   { href: (0, p.wJ)(n.GetStorePageURL(), a) },
@@ -227,7 +64,7 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: E().StoreItemDescription },
+                  { className: _().StoreItemDescription },
                   n.GetShortDescription(),
                   " ",
                 ),
@@ -235,42 +72,42 @@
             )
           : null;
       }
-      var _ = n(32630),
-        h = n(99376),
-        v = n(42780),
-        g = n(59952),
-        P = n(12611),
-        I = n(30470);
-      function f() {
+      var S = n(32630),
+        g = n(99376),
+        h = n(42780),
+        v = n(59952),
+        R = n(12611),
+        f = n(30470);
+      function P() {
         const e = new URL(window.location.href),
           t = e.pathname.split("/"),
           n = t?.[2];
         e.searchParams.get("beta");
-        return `${I.TS.STORE_ICON_BASE_URL}${n}/`;
+        return `${f.TS.STORE_ICON_BASE_URL}${n}/`;
       }
-      var w = n(61859),
-        N = n(26296),
-        A = n(4852),
-        D = n.n(A),
-        G = n(24484);
-      function b(e) {
-        return new v.OJ(new v.R8(), 0);
+      var A = n(61859),
+        D = n(26296),
+        I = n(4852),
+        w = n.n(I),
+        b = n(24484);
+      function G(e) {
+        return new h.OJ(new h.R8(), 0);
       }
-      function R(e) {
+      function N(e) {
         const { text: t, languageOverride: n } = e,
           [a] = (0, s.useState)(
-            new h.B(
+            new g.B(
               new Map([
-                ...Array.from(g.W4.entries()),
-                ["img", { Constructor: L, autocloses: !1 }],
+                ...Array.from(v.W4.entries()),
+                ["img", { Constructor: B, autocloses: !1 }],
               ]),
-              b,
+              G,
               n,
             ),
           );
         return s.createElement(s.Fragment, null, a.ParseBBCode(t, {}));
       }
-      function L(e) {
+      function B(e) {
         const { showErrorInfo: t } = e.context;
         let n = e?.children?.toString();
         if (
@@ -279,29 +116,29 @@
           null == n || null == n || 0 == n.length)
         )
           return "";
-        const a = (0, G.Fd)("store_page_asset_url", "application_config");
+        const a = (0, b.Fd)("store_page_asset_url", "application_config");
         return (
           (n =
-            a && n.startsWith(P.qR)
-              ? a.replace("%s", n.replace(P.qR, ""))
-              : n.replace(P.qR, f()).replace("http://", "https://")),
+            a && n.startsWith(R.qR)
+              ? a.replace("%s", n.replace(R.qR, ""))
+              : n.replace(R.qR, P()).replace("http://", "https://")),
           t
-            ? s.createElement(N.i, { className: D().StoreImage, src: n })
+            ? s.createElement(D.i, { className: w().StoreImage, src: n })
             : s.createElement("img", {
-                className: D().StoreImage,
+                className: w().StoreImage,
                 src: n,
-                alt: (0, w.we)("#EventEditor_InsertImage_URL"),
+                alt: (0, A.we)("#EventEditor_InsertImage_URL"),
               })
         );
       }
-      var C = n(52038),
-        B = n(66618),
-        y = n.n(B);
-      function k(e) {
+      var T = n(52038),
+        k = n(29298),
+        C = n.n(k);
+      function L(e) {
         const { season_pass: t } = e;
         return t && t.milestones && 0 != t.milestones.length
           ? s.createElement(
-              _.A,
+              S.A,
               { feature: "seasonpassproductpage" },
               s.createElement(
                 "div",
@@ -309,16 +146,16 @@
                   className:
                     "game_area_description overflow_allowed season_pass_area",
                 },
-                s.createElement("h2", null, (0, w.we)("#SeasonPass_Header")),
+                s.createElement("h2", null, (0, A.we)("#SeasonPass_Header")),
                 s.createElement(
                   "p",
                   null,
-                  (0, w.oW)("#SeasonPass_Incomplete_Desc"),
+                  (0, A.oW)("#SeasonPass_Incomplete_Desc"),
                 ),
                 s.createElement(
                   "p",
                   null,
-                  (0, w.oW)(
+                  (0, A.oW)(
                     "#SeasonPass_Incomplete_Desc2",
                     s.createElement("a", {
                       href: `${a.TS.STORE_BASE_URL}account/emailoptout`,
@@ -328,7 +165,7 @@
                 t.milestones
                   .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
                   .map((e) =>
-                    s.createElement(T, {
+                    s.createElement(U, {
                       key: "ms_" + e.milestone_id,
                       baseGameAppID: t.appid,
                       milestone: e,
@@ -338,70 +175,70 @@
             )
           : null;
       }
-      function T(e) {
+      function U(e) {
         const { milestone: t, baseGameAppID: n } = e,
           a = t.milestone_desc?.length > 0;
         return s.createElement(
           "div",
-          { className: y().SeasonPass },
+          { className: C().SeasonPass },
           s.createElement(
             "div",
             {
-              className: (0, C.A)(y().Title, Boolean(t.shipped) && y().Shipped),
+              className: (0, T.A)(C().Title, Boolean(t.shipped) && C().Shipped),
             },
             s.createElement(
               "span",
               null,
               Boolean(t.shipped) && "✓",
               " ",
-              w.A0.GetTokenWithFallback(t.title),
+              A.A0.GetTokenWithFallback(t.title),
             ),
             s.createElement(
               "div",
-              { className: y().DateAndControl },
-              s.createElement(U, { milestone: t }),
+              { className: C().DateAndControl },
+              s.createElement(y, { milestone: t }),
             ),
           ),
-          a && s.createElement(M, { milestone: t, baseGameAppID: n }),
+          a && s.createElement(x, { milestone: t, baseGameAppID: n }),
         );
       }
-      function M(e) {
+      function x(e) {
         const { milestone: t, baseGameAppID: n } = e,
-          a = w.A0.GetTokenWithFallback(t.milestone_desc),
+          a = A.A0.GetTokenWithFallback(t.milestone_desc),
           o = t.appid || t.coming_soon_appid;
         return s.createElement(
           s.Fragment,
           null,
-          Boolean(o) && s.createElement(S, { appid: o }),
+          Boolean(o) && s.createElement(E, { appid: o }),
           s.createElement(
             "div",
-            { className: y().Description },
-            s.createElement(R, { text: a }),
+            { className: C().Description },
+            s.createElement(N, { text: a }),
             Boolean(t.shipped) &&
-              s.createElement(F, { milestone: t, baseGameAppID: n }),
+              s.createElement(O, { milestone: t, baseGameAppID: n }),
           ),
         );
       }
-      function U(e) {
+      function y(e) {
         const { milestone: t } = e;
         return t.shipped
           ? s.createElement(
               "div",
-              { className: y().Shipped },
-              (0, w.PP)(
+              { className: C().Shipped },
+              (0, A.PP)(
                 "#SeasonPass_Released_Date",
                 s.createElement("br", null),
-                (0, w.TW)(t.rtime_complete),
+                (0, A.TW)(t.rtime_complete),
               ),
             )
           : s.createElement(
               "div",
-              { className: y().Upcoming },
-              (0, w.PP)(
+              { className: C().Upcoming },
+              (0, A.PP)(
                 "#SeasonPass_Release_Date",
                 s.createElement("br", null),
                 [...t.dates].reverse().map((e, n) => {
-                  const a = (0, i.M)(
+                  const a = (0, c.M)(
                     e.coming_soon_display_type,
                     e.rtime,
                     null,
@@ -411,7 +248,7 @@
                     "div",
                     {
                       key: "dd" + e.rtime + e.coming_soon_display_type,
-                      className: n + 1 < t.dates.length ? y().Strike : void 0,
+                      className: n + 1 < t.dates.length ? C().Strike : void 0,
                     },
                     a,
                   );
@@ -419,41 +256,41 @@
               ),
             );
       }
-      const O = {};
-      function F(e) {
+      const W = {};
+      function O(e) {
         const { milestone: t, baseGameAppID: n } = e;
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "div",
-            { className: y().Status },
-            (0, w.PP)(
+            { className: C().Status },
+            (0, A.PP)(
               t.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
             ),
           ),
-          t.appid && s.createElement(x, { milestone: t }),
+          t.appid && s.createElement($, { milestone: t }),
           Boolean(t.appid && t.event_gid) &&
-            s.createElement("span", { className: y().Padding }),
+            s.createElement("span", { className: C().Padding }),
           Boolean(t.event_gid) &&
-            s.createElement(W, { milestone: t, baseGameAppID: n }),
+            s.createElement(Z, { milestone: t, baseGameAppID: n }),
         );
       }
-      function x(e) {
+      function $(e) {
         const { milestone: t } = e,
-          [n] = (0, r.t7)(t.appid, O);
+          [n] = (0, r.t7)(t.appid, W);
         return s.createElement(
           "a",
           {
             href:
               n?.GetStorePageURL() || `${a.TS.STORE_BASE_URL}app/${t.appid}`,
           },
-          (0, w.we)("#SeasonPass_ShowStore"),
+          (0, A.we)("#SeasonPass_ShowStore"),
         );
       }
-      function W(e) {
+      function Z(e) {
         const { milestone: t, baseGameAppID: n } = e,
-          [r, i] = (0, s.useState)(!1),
+          [r, c] = (0, s.useState)(!1),
           m = (0, o.RR)(t.event_gid);
         return m
           ? s.createElement(
@@ -464,17 +301,17 @@
                 {
                   href: `${a.TS.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
                   onClick: (e) => {
-                    e.preventDefault(), e.stopPropagation(), i(!0);
+                    e.preventDefault(), e.stopPropagation(), c(!0);
                   },
                 },
-                (0, w.we)("#SeasonPass_ReadEvent"),
+                (0, A.we)("#SeasonPass_ReadEvent"),
               ),
               Boolean(r) &&
-                s.createElement(c.N, {
+                s.createElement(i.N, {
                   appid: n,
                   eventModel: m,
                   announcementGID: m.AnnouncementGID,
-                  closeModal: () => i(!1),
+                  closeModal: () => c(!1),
                   partnerEventStore: l.O3,
                   bShowOnlyInitialEvent: !0,
                   showAppHeader: !0,
@@ -486,7 +323,7 @@
               {
                 href: `${a.TS.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
               },
-              (0, w.we)("#SeasonPass_ReadEvent"),
+              (0, A.we)("#SeasonPass_ReadEvent"),
             );
       }
     },

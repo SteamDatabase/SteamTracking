@@ -134,10 +134,13 @@
         async InternalLoadOGGClanInfoForAppID(t) {
           const a =
             c.TS.COMMUNITY_BASE_URL + "ogg/" + t + "/ajaxgetvanityandclanid/";
-          let e = await o().get(a, { params: this.GetRequestParam() });
-          return (
-            this.InternalSetupValue(e.data), this.m_mapAppIDToClanInfo.get(t)
-          );
+          let e = null;
+          try {
+            e = (await o().get(a, { params: this.GetRequestParam() })).data;
+          } catch (t) {}
+          return e
+            ? (this.InternalSetupValue(e), this.m_mapAppIDToClanInfo.get(t))
+            : null;
         }
         async LoadOGGClanInfoForIdentifier(t) {
           if (
@@ -315,7 +318,7 @@
                   "string" == typeof t ? Number.parseInt(t) : t,
                 );
                 _.LoadClanInfoForClanSteamID(a).then((t) => {
-                  e(t), r(!1);
+                  e(null != t ? t : void 0), r(!1);
                 });
               }
             else e(void 0), r(!1);

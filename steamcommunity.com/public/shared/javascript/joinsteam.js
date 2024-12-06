@@ -12,7 +12,9 @@ function CaptchaText()
 		return legacy;
 	
 	if ( typeof hcaptcha !== 'undefined' )
+	{
 		return hcaptcha.getResponse() 
+	}	
 	else if ( typeof grecaptcha !== 'undefined' )
 		return grecaptcha.enterprise.getResponse(g_recaptchaInstance);
 
@@ -22,7 +24,10 @@ function CaptchaText()
 function StartCreationSession()
 {
 	if ( g_parentalConsentDialog )
+	{
 		g_parentalConsentDialog.Dismiss();
+		g_parentalConsentDialog = null;
+	}
 
 	$J.ajax( {
 		type: 'POST',

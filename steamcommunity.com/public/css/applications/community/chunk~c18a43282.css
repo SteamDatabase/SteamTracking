@@ -9,6 +9,13 @@
 p._3lnqGBzYap-Z2T81XBiBUU {
   margin: .5em 0;
 }
+._2LYsFAwy8wdRJQTNJOUcsT,
+._6-VR2WCBCDupCcUN5INQM,
+._1sGnlGwCeaGUp63h4Lx-pU,
+._3VHY5vmO07MFpoOgTB9eOi,
+._1Vk-9-C_y-lBA5ucPl6t8X {
+  margin: 0;
+}
 ._2LYsFAwy8wdRJQTNJOUcsT {
   display: block;
   color: #fff;
@@ -155,12 +162,9 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 ._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY ._3FJk0y6E6I8nSYfCIqGP8,
 ._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY
   ._3FJk0y6E6I8nSYfCIqGP8:first-of-type,
-._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY ._1PCHOM5zSRFfeHzwDmEukB,
+._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY ._3rLIt0O8F7iG6B2RmC3cYa,
 ._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY
-  ._1PCHOM5zSRFfeHzwDmEukB:first-of-type,
-._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY ._1NpENNz7rvObsTC99AQFda,
-._2CAsiFd9UHbUOqzd0e7ioe._1rO4D9vLxJRWz9sW4-ahSY
-  ._1NpENNz7rvObsTC99AQFda:first-of-type {
+  ._3rLIt0O8F7iG6B2RmC3cYa:first-of-type {
   border: none;
 }
 ._2CAsiFd9UHbUOqzd0e7ioe._1CtoyG6UPAlYp7PCGLXx8L {
@@ -173,28 +177,28 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 ._2CAsiFd9UHbUOqzd0e7ioe ._3FJk0y6E6I8nSYfCIqGP8:first-of-type {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-._2CAsiFd9UHbUOqzd0e7ioe ._1PCHOM5zSRFfeHzwDmEukB {
+._2CAsiFd9UHbUOqzd0e7ioe ._3rLIt0O8F7iG6B2RmC3cYa {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
-._2CAsiFd9UHbUOqzd0e7ioe ._1PCHOM5zSRFfeHzwDmEukB:first-of-type {
+._2CAsiFd9UHbUOqzd0e7ioe ._3rLIt0O8F7iG6B2RmC3cYa:first-of-type {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
-._1NpENNz7rvObsTC99AQFda {
+._3rLIt0O8F7iG6B2RmC3cYa {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4px;
+}
+th._3rLIt0O8F7iG6B2RmC3cYa {
   display: table-cell;
   font-weight: bold;
   padding: 4px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
-._1NpENNz7rvObsTC99AQFda:first-of-type {
+th._3rLIt0O8F7iG6B2RmC3cYa:first-of-type {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 ._3FJk0y6E6I8nSYfCIqGP8 {
   display: table-row;
-}
-._1PCHOM5zSRFfeHzwDmEukB {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 4px;
 }
 ._2cmZMzZlRrszDBF97Di0cD .uAvfe31kBh5TZrse069d1 {
   padding: 3px 8px;

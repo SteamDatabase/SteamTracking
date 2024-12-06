@@ -8,12 +8,12 @@ ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
 ${BASE_URL_SHARED_CDN}store_item_assets/optin/${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/steam/apps/${}/${}
-${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/backgrounds/awardbg_${voteid}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/backgrounds/awardbg_${}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_01.png
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_02.png
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_03.png
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_04.png
+${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${internal_name}.jpg?v=1
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/level_0${}.png
 ${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=2
@@ -901,8 +901,8 @@ ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${IMG_URL}yearinreview/achievement_grid_02.webp
 ${IMG_URL}yearinreview/bg_2023.svg
-${IMG_URL}yearinreview/controllers.png
-${IMG_URL}yearinreview/keyboard.png
+${IMG_URL}yearinreview/controllers.png?v=2
+${IMG_URL}yearinreview/keyboard.png?v=3
 ${IMG_URL}yearinreview/screenshot_placeholder.png
 ${IMG_URL}yearinreview/steamControllerGrid_02.png
 ${IMG_URL}yearinreview/streak_bg.jpg
@@ -2529,6 +2529,7 @@ https://help.steampowered.com/ticketmaster/AjaxGetTicketSubmissionForm/
 https://help.steampowered.com/ticketmaster/AjaxMarkHelpRequestAsViewed/
 https://help.steampowered.com/ticketmaster/AjaxPreapproveTxns/
 https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/${strTicketRef}
+https://help.steampowered.com/ticketmaster/AjaxPullQuicktextLocalization/
 https://help.steampowered.com/ticketmaster/AjaxSearchFAQs
 https://help.steampowered.com/ticketmaster/AjaxSearchForAgentByName
 https://help.steampowered.com/ticketmaster/AjaxSearchForAppByName

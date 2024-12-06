@@ -292,7 +292,7 @@
                     t.map((e) => o.get((0, m.wD)(e)) ?? null)
                   );
                 },
-                { maxBatchSize: 100 },
+                { maxBatchSize: 100, cache: !1 },
               ));
             return B;
           })(t).load(e),
@@ -1490,10 +1490,10 @@
       }
       function i(e, t) {
         let r = "[" + e;
-        t?.[""] && (r += `=${s(t[""])}`);
+        t?.[""] && (r += `=${s("" + t[""])}`);
         for (const e in t)
           "" !== e &&
-            (r += ` ${((a = e), a.replace(/(\\| |\])/g, "\\$1"))}=${s(t[e])}`);
+            (r += ` ${((a = e), a.replace(/(\\| |\])/g, "\\$1"))}=${s("" + t[e])}`);
         var a;
         return (r += "]"), r;
       }

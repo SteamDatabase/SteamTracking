@@ -8938,7 +8938,7 @@
         (hi.defaultProps = { width: 652, styles: {}, header: "Color picker" });
       _n(hi);
     },
-    69917: (e, t, r) => {
+    92298: (e, t, r) => {
       e.exports = (function (e) {
         var t = {};
         function r(n) {

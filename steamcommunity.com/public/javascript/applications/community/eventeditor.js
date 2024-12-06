@@ -12924,7 +12924,7 @@
         );
       }
       const yi = d.lazy(() =>
-        Promise.all([a.e(2064), a.e(5006), a.e(5879)]).then(a.bind(a, 90056)),
+        Promise.all([a.e(2579), a.e(5006), a.e(2956)]).then(a.bind(a, 53963)),
       );
       function Ii(e) {
         const { editModel: t, refOnInsertImage: a } = e,

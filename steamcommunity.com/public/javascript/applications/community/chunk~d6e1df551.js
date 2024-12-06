@@ -163,10 +163,10 @@
       }
       function a(e, t) {
         let o = "[" + e;
-        (null == t ? void 0 : t[""]) && (o += `=${s(t[""])}`);
+        (null == t ? void 0 : t[""]) && (o += `=${s("" + t[""])}`);
         for (const e in t)
           "" !== e &&
-            (o += ` ${((l = e), l.replace(/(\\| |\])/g, "\\$1"))}=${s(t[e])}`);
+            (o += ` ${((l = e), l.replace(/(\\| |\])/g, "\\$1"))}=${s("" + t[e])}`);
         var l;
         return (o += "]"), o;
       }

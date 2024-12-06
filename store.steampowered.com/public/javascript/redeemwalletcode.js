@@ -4,7 +4,7 @@ var g_recaptchaInstance = null;
 function DisplayPage( page )
 {
 		$('error_display').innerHTML = '';
-		$('error_display').style.display = 'none';	
+		$('error_display').style.display = 'none';
 
 		switch ( page )
 		{
@@ -13,10 +13,10 @@ function DisplayPage( page )
 				$('redeem_wallet_code_upsell_text').style.display = '';
 				$('address_form').style.display = 'none';
 				$('validate_btn').style.display = '';
-				$('validate_btn_in_progress').style.display = 'none';		
+				$('validate_btn_in_progress').style.display = 'none';
 				$('wallet_code').value = '';
 			break;
-			
+
 			case 'address':
 				$('address_btn').style.display = '';
 				$('address_btn_in_progress').style.display = 'none';
@@ -30,7 +30,7 @@ function DisplayPage( page )
 
 function UpdateStateSelection()
 {
-	try 
+	try
 	{
 		if ( $('billing_country').value == 'US' )
 		{
@@ -42,8 +42,8 @@ function UpdateStateSelection()
 			$('billing_state_text').style.display = 'block';
 			$('billing_state_select_dselect_container').style.display = 'none';
 		}
-	} 
-	catch( e ) 
+	}
+	catch( e )
 	{
 		ReportRedeemJSError( 'Failed in UpdateStateSelection()', e );
 	}
@@ -51,13 +51,13 @@ function UpdateStateSelection()
 
 function ReportRedeemJSError( message, e )
 {
-	try 
+	try
 	{
 		if (typeof e == 'string')
     		e = new Error(e);
-    		
+
 		ReportError( '/public/javascript/redeemwalletcode.js?l=english', message, message+":\n\n  Exception: "+e.name+" - "+e.message+"\n" );
-	} catch( e ) 
+	} catch( e )
 	{
 			}
 }
@@ -124,24 +124,24 @@ function RedeemWalletCode()
 {
 		if( g_bRedeemWalletCodeCallRunning )
 		return;
-		
+
 	if ( $('wallet_code').value == '' )
 	{
-		DisplayErrorMessage( 'You must enter a wallet code to proceed.' );		
+		DisplayErrorMessage( 'You must enter a wallet code to proceed.' );
 	}
 	else
 	{
-		try 
+		try
 		{
 						g_bRedeemWalletCodeCallRunning = true;
-			
+
 			$('validate_btn').style.display = 'none';
 			$('validate_btn_in_progress').style.display = '';
-			
+
 			new Ajax.Request('https://store.steampowered.com/account/ajaxredeemwalletcode/',
 			{
 			    method:'post',
-			    parameters: { 
+			    parameters: {
 					'wallet_code' : $('wallet_code').value,
 									    'sessionid' : g_sessionID
 				},
@@ -174,7 +174,7 @@ function RedeemWalletCode()
 			      	   		return;
 			      	   	}
 				  	}
-				  	
+
 										OnRedeemWalletCodeFailure( 0, 0  );
 			    },
 			    onFailure: function(){
@@ -182,8 +182,8 @@ function RedeemWalletCode()
 					OnRedeemWalletCodeFailure( 0, 0  );
 				}
 			});
-		} 
-		catch(e) 
+		}
+		catch(e)
 		{
 			ReportRedeemJSError( 'Failed gathering form data and calling RedeemWalletCode', e );
 		}
@@ -193,29 +193,29 @@ function RedeemWalletCode()
 function SubmitAddressForm()
 {
 		var errorString = '';
-	
-		var rgBadFields = { 
+
+		var rgBadFields = {
 		billing_address : false,
 		billing_city : false,
 		billing_state_text : false,
 		billing_postal_code : false,
 		billing_state_select_trigger : false
 	}
-	
-	try 
+
+	try
 	{
 		if ( $( 'billing_address' ).value.length < 1 )
 		{
 			errorString += 'Please enter your billing address.<br/>';
 			rgBadFields.billing_address = true;
 		}
-				
+
 		if ( $( 'billing_city' ).value.length < 1 )
 		{
 			errorString += 'Please enter your billing city.<br/>';
 			rgBadFields.billing_city = true;
 		}
-			
+
 				if  ( $( 'billing_country' ).value == 'US' )
 		{
 			if ( $('billing_state_select').value.length < 1 )
@@ -224,7 +224,7 @@ function SubmitAddressForm()
 				rgBadFields.billing_state_select_trigger = true;
 			}
 		}
-			
+
 		if ( $( 'billing_country' ).value == 'US' )
 		{
 			if ( $( 'billing_postal_code' ).value.length < 5 )
@@ -239,12 +239,12 @@ function SubmitAddressForm()
 			rgBadFields.billing_postal_code = true;
 		}
 	}
-	catch(e) 
+	catch(e)
 	{
 		ReportRedeemJSError( 'Failed validating address info form', e );
 	}
 
-	try 
+	try
 	{
 				for ( var key in rgBadFields )
 		{
@@ -265,19 +265,19 @@ function SubmitAddressForm()
 			{
 				errorString = '';
 				errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
-			}		
-		
+			}
+
 			DisplayErrorMessage( errorString );
 		}
 		else
 		{
 						$('error_display').innerHTML = '';
 			$('error_display').style.display = 'none';
-			
+
 						CreateWalletAndCheckFunds( true );
 		}
-	} 
-	catch(e) 
+	}
+	catch(e)
 	{
 		ReportRedeemJSError( 'Failed showing error or submitting payment info form', e );
 	}
@@ -288,18 +288,18 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 {
 		if( g_bCreateWalletAndCheckFundsRunning )
 		return;
-		
-	try 
+
+	try
 	{
 				g_bCreateWalletAndCheckFundsRunning = true;
-		
+
 		$('address_btn').style.display = 'none';
 		$('address_btn_in_progress').style.display = '';
-		
+
 		new Ajax.Request('https://store.steampowered.com/account/ajaxcreatewalletandcheckfunds/',
 		{
 		    method:'post',
-		    parameters: { 
+		    parameters: {
 					'wallet_code' : $('wallet_code').value,
 					'CreateFromAddress' : bCreateFromAddress ? 1 : 0,
 					'Address' : $('billing_address').value,
@@ -330,7 +330,7 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 		      	   		return;
 		      	   	}
 			  	}
-			  	
+
 								OnCreateWalletAndCheckFundsFailure( 2  );
 		    },
 		    onFailure: function(){
@@ -338,8 +338,8 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 				OnCreateWalletAndCheckFundsFailure( 2  );
 			}
 		});
-	} 
-	catch(e) 
+	}
+	catch(e)
 	{
 		ReportRedeemJSError( 'Failed gathering form data and calling CreateWallet', e );
 	}
@@ -352,7 +352,7 @@ function UpdateRedeemForm( result )
 		$('redeem_wallet_success_app_image_link').href = result.redirect_url;
 		$('redeem_wallet_success_button').href = result.redirect_url;
 		$('redeem_wallet_success_button_text').innerHTML = result.redirect_button_text;
-		
+
 		if ( result.bRedirectToApp )
 		{
 			$('redeem_wallet_success_default_image').style.display = 'none';
@@ -363,16 +363,16 @@ function UpdateRedeemForm( result )
 		{
 			$('redeem_wallet_success_default_image').style.display = '';
 			$('redeem_wallet_success_app_image').style.display = 'none';
-		}	
+		}
 }
 
 function OnCreateWalletAndCheckFundsSuccess( result )
 {
-	try 
+	try
 	{
 		RedeemWalletCode();
-	} 
-	catch( e ) 
+	}
+	catch( e )
 	{
 		ReportRedeemJSError( 'Failed handling CreateWallet success', e );
 	}
@@ -380,15 +380,15 @@ function OnCreateWalletAndCheckFundsSuccess( result )
 
 function OnCreateWalletAndCheckFundsFailure( detail )
 {
-	try 
+	try
 	{
 		DisplayErrorMessage( 'There was an error validating your wallet.  Your wallet code has not been redeemed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.' );
 		$('address_btn').style.display = '';
 		$('address_btn_in_progress').style.display = 'none';
 		$('validate_btn').style.display = '';
 		$('validate_btn_in_progress').style.display = 'none';
-	} 
-	catch (e) 
+	}
+	catch (e)
 	{
 		ReportRedeemJSError( 'Failed handling CreateWallet failure', e );
 	}
@@ -397,13 +397,13 @@ function OnCreateWalletAndCheckFundsFailure( detail )
 
 function OnRedeemWalletCodeSuccess( result )
 {
-	try 
+	try
 	{
 		$('wallet_current_balance').innerHTML = result.formattednewwalletbalance;
 		DisplayPage( 'code' );
 		showModal ( 'redirectStorePageModal', true );
-	} 
-	catch( e ) 
+	}
+	catch( e )
 	{
 		ReportRedeemJSError( 'Failed handling RedeemWalletCode success', e );
 	}
@@ -414,14 +414,14 @@ function OnRedeemWalletCodeSuccess( result )
 
 function OnRedeemWalletCodeFailure( success, detail )
 {
-	try 
+	try
 	{
 		var sErrorMessage = 'There was an error redeeming the entered code.';
 
 		switch ( success )
 		{
 			case 16:
-				sErrorMessage = '#youraccount_wallet_code_generic_not_redeemed';
+				sErrorMessage = 'There was an error redeeming the entered code.';
 				break;
 
             case 101:
@@ -442,7 +442,7 @@ function OnRedeemWalletCodeFailure( success, detail )
 					case 9:
 						sErrorMessage = 'The Steam Wallet code you have entered has already been previously redeemed on your account.';
 						break;
-				
+
 					default:
 						sErrorMessage = 'There was an error redeeming the entered code.'
 											+ '<ul class="wallet_redeem_error"><li>The code may be invalid. Please carefully verify the characters as you re-enter the code and double check to see if you\'ve mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O.</li>'
@@ -453,14 +453,14 @@ function OnRedeemWalletCodeFailure( success, detail )
 				}
 				break;
 		}
-		
+
 		DisplayErrorMessage( sErrorMessage );
 
 		$('validate_btn').style.display = '';
 		$('validate_btn_in_progress').style.display = 'none';
 
-	} 
-	catch (e) 
+	}
+	catch (e)
 	{
 		ReportRedeemJSError( 'Failed handling RedeemWalletCode failure', e );
 	}
@@ -470,7 +470,7 @@ function DisplayErrorMessage( strMessage )
 {
 	$('error_display').innerHTML = strMessage;
 	$('error_display').style.display = 'block';
-	
+
 	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
 }
 

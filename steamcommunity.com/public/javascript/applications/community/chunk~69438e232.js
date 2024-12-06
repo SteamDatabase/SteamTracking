@@ -265,7 +265,7 @@
     26505: (e, t, r) => {
       "use strict";
       r.d(t, { Dv: () => T, Nd: () => L });
-      var n = r(92298),
+      var n = r(68950),
         a = r(23809),
         i = r(37674),
         s = r(56545),
@@ -969,7 +969,7 @@
       r(14336);
       function T() {
         const e = (0, a.KV)(),
-          t = (0, n.L)();
+          t = (0, n.LH)();
         return (0, i.I)(D(e, t));
       }
       function D(e, t) {
@@ -1011,7 +1011,7 @@
       }
       function L(e, t = {}) {
         const r = (0, a.KV)(),
-          s = (0, n.L)();
+          s = (0, n.LH)();
         return (0, i.I)({
           queryKey: [`GameplayInfo_${s}_${e}`],
           queryFn: async () => await A(r, e),
@@ -1021,7 +1021,7 @@
     },
     36148: (e, t, r) => {
       "use strict";
-      r.d(t, { YW: () => U, Jo: () => W, Vz: () => H, $d: () => V });
+      r.d(t, { YW: () => G, Jo: () => P, Vz: () => V, $d: () => Y });
       var n = r(56545),
         a = (r(37735), r(80613)),
         i = r(89068);
@@ -2117,6 +2117,11 @@
                   played_app: { n: 1, c: I, r: !0, q: !0 },
                   suggested_events: { n: 2, c: b, r: !0, q: !0 },
                   suggested_apps: { n: 3, c: T, r: !0, q: !0 },
+                  debug_query: {
+                    n: 4,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
                 },
               }),
             M.sm_m
@@ -2502,19 +2507,21 @@
         })(N || (N = {}));
       var R = r(37674),
         O = r(29385),
-        z = r(61739),
+        z = r(3160),
         x = r(23809),
         F = r(30470),
-        k = r(24484);
-      r(30894), r(41735), r(90626), r(58222);
-      const U = 3334340;
-      let G;
-      function j() {
+        k = r(24484),
+        U = (r(30894), r(41735), r(90626));
+      r(58222);
+      const G = 3334340;
+      let j;
+      function W() {
         return (
-          G || (G = (0, k.Fd)("steam_awards_config", "application_config")), G
+          j || (j = (0, k.Fd)("steam_awards_config", "application_config")), j
         );
       }
-      function W(e) {
+      U.createContext(null);
+      function P(e) {
         const t = (0, x.KV)();
         return (0, R.I)({
           queryKey: [`SteamAwardDefs_${e}`],
@@ -2525,12 +2532,12 @@
           },
           initialData: () => {
             var e;
-            return null === (e = j()) || void 0 === e ? void 0 : e.definitions;
+            return null === (e = W()) || void 0 === e ? void 0 : e.definitions;
           },
           enabled: e > 0,
         });
       }
-      function P() {
+      function H() {
         const e = (0, x.KV)();
         return (0, R.I)({
           queryKey: [`SteamAwardNominations_${F.iA.accountid}`],
@@ -2547,7 +2554,7 @@
             var e, t;
             return null ===
               (t =
-                null === (e = j()) || void 0 === e
+                null === (e = W()) || void 0 === e
                   ? void 0
                   : e.user_nominations) || void 0 === t
               ? void 0
@@ -2556,9 +2563,9 @@
           enabled: F.iA.logged_in,
         });
       }
-      function H(e) {
+      function V(e) {
         var t;
-        const r = P();
+        const r = H();
         return r.isLoading
           ? { bLoadingNominationForCategory: !0 }
           : {
@@ -2569,7 +2576,10 @@
               bLoadingNominationForCategory: !1,
             };
       }
-      function V(e, t, r, a) {
+      function q() {
+        return [`SteamAwardBadgeProgress_${F.iA.accountid}`];
+      }
+      function Y(e, t, r, a) {
         const i = (0, x.KV)(),
           s = (0, O.jE)();
         return (0, z.n)({
@@ -2588,12 +2598,16 @@
             })(i, e, t, r),
           onSuccess: ([e, t]) => {
             1 == e
-              ? (function (e, t) {
+              ? (!(function (e, t) {
                   e.setQueryData(
                     [`SteamAwardNominations_${F.iA.accountid}`],
                     t,
                   );
-                })(s, t.nominations)
+                })(s, t.nominations),
+                window.setTimeout(
+                  () => s.invalidateQueries({ queryKey: q() }),
+                  1e3,
+                ))
               : a && a(e);
           },
           onError: () => {

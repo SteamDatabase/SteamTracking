@@ -33,8 +33,7 @@
         Table: "_2CAsiFd9UHbUOqzd0e7ioe",
         NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
         TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
-        TableData: "_1PCHOM5zSRFfeHzwDmEukB",
-        TableHeader: "_1NpENNz7rvObsTC99AQFda",
+        TableCell: "_3rLIt0O8F7iG6B2RmC3cYa",
         EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
         ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
         ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
@@ -78,7 +77,7 @@
       var s = r(17083),
         o = r(37674),
         c = r(29385),
-        l = r(61739);
+        l = r(3160);
       function u(e) {
         return e.trim();
       }
@@ -117,8 +116,8 @@
       function h() {
         return n.useContext(d).store;
       }
-      var b = r(61859);
-      function B(e) {
+      var B = r(61859);
+      function b(e) {
         return "appid" in e
           ? ["GameNotes", "NotesByAppID", e.appid]
           : ["GameNotes", "NotesForShortcut", u(e.shortcut)];
@@ -126,7 +125,7 @@
       function g(e) {
         const t = h();
         return (0, o.I)({
-          queryKey: B(e),
+          queryKey: b(e),
           queryFn: async () => (await t.GetGameNotesList(e, !0)) || [],
           enabled: !!e,
         });
@@ -144,7 +143,7 @@
         });
       }
       function f(e, t, r) {
-        e.getQueryData(B(t)) && e.setQueryData(B(t), r);
+        e.getQueryData(b(t)) && e.setQueryData(b(t), r);
       }
       function y(e, t) {
         return n.useMemo(
@@ -167,12 +166,12 @@
         v = r(30470),
         C = r(22837);
       let R;
-      const T = 864e5;
-      function U(e) {
+      const U = 864e5;
+      function G(e) {
         return `appinfo_${e}_${v.TS.LANGUAGE}`;
       }
-      function G(e) {
-        return Boolean(e && Date.now() - e.timeCached < T);
+      function T(e) {
+        return Boolean(e && Date.now() - e.timeCached < U);
       }
       function W(e) {
         const t = (0, z.KV)(),
@@ -186,8 +185,8 @@
                   (R = new (N())(
                     async (r) => {
                       const n = new Map();
-                      (await Promise.all(r.map((e) => t.GetObject(U(e)))))
-                        .filter(G)
+                      (await Promise.all(r.map((e) => t.GetObject(G(e)))))
+                        .filter(T)
                         .forEach(({ value: e }) => n.set(e.appid, e));
                       const i = r.slice().filter((e) => !n.has(e));
                       if (i.length) {
@@ -199,7 +198,7 @@
                         a.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            t.StoreObject(U(e.appid), {
+                            t.StoreObject(G(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
@@ -213,7 +212,7 @@
                 R
               );
             })(t, r).load(e),
-          staleTime: T,
+          staleTime: U,
           enabled: !!e,
         }).data;
       }
@@ -234,7 +233,7 @@
               n.createElement(
                 "h1",
                 null,
-                (0, b.we)("#UserGameNotes_NotesList"),
+                (0, B.we)("#UserGameNotes_NotesList"),
               ),
               n.createElement(
                 "ul",
@@ -269,9 +268,9 @@
         Q = r(27491),
         Y = r(55608),
         X = r(79497);
-      const H = { nodes: { ...Y.DQ.nodes }, marks: { ...Y.DQ.marks } },
-        $ = new X.W(H);
-      var Z = r(22145),
+      const $ = { nodes: { ...Y.DQ.nodes }, marks: { ...Y.DQ.marks } },
+        Z = new X.W($);
+      var H = r(22145),
         J = r(52893),
         ee = r(57053),
         te = r(67660);
@@ -281,7 +280,7 @@
       function ne(e) {
         const { uploadImage: t, nodeType: r, nMaxImageSize: i = ae } = e;
         return (
-          (0, Z.c$)(
+          (0, H.c$)(
             n.useMemo(
               () =>
                 new J.k_({
@@ -299,7 +298,7 @@
                           let t = [
                             e.create({
                               src: re,
-                              title: (0, b.we)("#UserGameNotes_ImageTooLarge"),
+                              title: (0, B.we)("#UserGameNotes_ImageTooLarge"),
                             }),
                           ];
                           return new ee.Ji(ee.FK.from(t), 0, 0);
@@ -452,7 +451,7 @@
                   ue.u3,
                   {
                     nodeType: t.nodes.code_block,
-                    tooltip: (0, b.we)("#FormattingToolbar_CodeBlock"),
+                    tooltip: (0, B.we)("#FormattingToolbar_CodeBlock"),
                   },
                   n.createElement(F.kNE, null),
                 ),
@@ -479,7 +478,7 @@
           o = n.useRef(),
           u = n.useRef(),
           p = n.useRef(t.content),
-          B = n.useRef(!1),
+          b = n.useRef(!1),
           g = n.useContext(d).onClickURL,
           y =
             null === (S = n.useContext(d).bSpellcheckEnabled) ||
@@ -498,13 +497,10 @@
               [t, e],
             );
           })(t.appid),
-          E = (0, K.Qn)(),
-          z = n.useCallback((e) => {
-            (B.current = !1), s(e);
-          }, []);
-        p.current == t.content || B.current || (p.current = t.content);
-        const v = p.current,
-          C = (function () {
+          E = (0, K.Qn)();
+        p.current == t.content || b.current || (p.current = t.content);
+        const z = p.current,
+          v = (function () {
             const e = (0, c.jE)(),
               t = h();
             return (0, l.n)({
@@ -513,30 +509,28 @@
                 const r = { ...t.note, title: t.title, content: t.bbcode };
                 return (
                   f(e, m(t.note), (e) => e.map((e) => (e.id == r.id ? r : e))),
-                  console.log(r),
                   r
                 );
               },
               onSuccess(t, r, n) {
-                console.log(n, t),
-                  f(e, m(r.note), (e) =>
-                    e.map((e) =>
-                      e.id === n.id ? { ...e, id: t, not_persisted: !1 } : e,
-                    ),
-                  );
+                f(e, m(r.note), (e) =>
+                  e.map((e) =>
+                    e.id === n.id ? { ...e, id: t, not_persisted: !1 } : e,
+                  ),
+                );
               },
             });
           })(),
-          R = n.useCallback((e, t) => {
+          C = n.useCallback((e, t) => {
             o.current && o.current(),
               t.doc &&
                 t.doc != e.state.doc &&
-                (B.current ||
-                  ((B.current = !0),
+                (b.current ||
+                  ((b.current = !0),
                   j.y.ReportTrackedAction("/GameNotes/NoteModified")),
                 (u.current = () => ({
                   title: we(e.state.doc),
-                  bbcode: (0, P.m)(e.state.doc, $),
+                  bbcode: (0, P.m)(e.state.doc, Z),
                 })),
                 i(!0));
           }, []);
@@ -547,7 +541,7 @@
               if (e) {
                 const { title: r, bbcode: n } = e();
                 (t.not_persisted && !(null == n ? void 0 : n.length)) ||
-                  C.mutate({ note: t, title: r, bbcode: n }),
+                  v.mutate({ note: t, title: r, bbcode: n }),
                   i(!1);
               }
               (e = void 0), (u.current = void 0);
@@ -556,15 +550,15 @@
           return () => {
             window.clearTimeout(a), n();
           };
-        }, [C, r, t]),
+        }, [v, r, t]),
           n.useEffect(() => {
             a && a.focus();
           }, [a]);
-        const T = _(),
-          U = w(t, T),
+        const R = _(),
+          U = w(t, R),
           G = {
             onSecondaryButton: () => U.mutate(),
-            onSecondaryActionDescription: (0, b.we)(
+            onSecondaryActionDescription: (0, B.we)(
               "#UserGameNotes_DeleteNote",
             ),
           };
@@ -573,7 +567,7 @@
           { className: Q.NoteEditorArea },
           !E &&
             n.createElement(pe, {
-              schema: $.pm_schema,
+              schema: Z.pm_schema,
               view: a,
               refUpdateToolbar: o,
               className: Q.Toolbar,
@@ -583,28 +577,28 @@
           n.createElement(
             L.l,
             {
-              schemaConfig: $,
+              schemaConfig: Z,
               className: Q.EditorInput,
-              bbcode: v,
-              onUpdate: R,
-              refView: z,
+              bbcode: z,
+              onUpdate: C,
+              refView: s,
               bSpellcheckEnabled: y,
               panelProps: G,
             },
             n.createElement(ne, {
               uploadImage: M,
-              nodeType: $.pm_schema.nodes.image,
+              nodeType: Z.pm_schema.nodes.image,
             }),
             n.createElement(x.W, {
-              linkMarkType: $.pm_schema.marks.link,
-              schema: $.pm_schema,
+              linkMarkType: Z.pm_schema.marks.link,
+              schema: Z.pm_schema,
               onClickURL: g,
             }),
           ),
-          !E && n.createElement(be, { note: t, bDirty: r }),
+          !E && n.createElement(Be, { note: t, bDirty: r }),
         );
       }
-      function be(e) {
+      function Be(e) {
         const { note: t, bDirty: r } = e,
           [i, a, s] = (0, V.uD)(!1),
           o = "single" == n.useContext(d).mode,
@@ -622,22 +616,22 @@
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             n.createElement(q.$n, { onClick: u }, n.createElement(F.lMJ, null)),
           ),
-          o && n.createElement(Be, { bDirty: r }),
+          o && n.createElement(be, { bDirty: r }),
         );
       }
-      function Be(e) {
+      function be(e) {
         const { bDirty: t } = e,
           r = _();
         return t
           ? n.createElement(
               q.jn,
               { onClick: () => r(), className: Q.CloseWindowButton },
-              (0, b.we)("#Button_SaveAndClose"),
+              (0, B.we)("#Button_SaveAndClose"),
             )
           : n.createElement(
               q.$n,
               { onClick: () => r(), className: Q.CloseWindowButton },
-              (0, b.we)("#Button_Close"),
+              (0, B.we)("#Button_Close"),
             );
       }
       function ge(e) {
@@ -646,11 +640,11 @@
           D.EN,
           { active: !0 },
           n.createElement(D.o0, {
-            strTitle: (0, b.we)("#UserGameNotes_DeleteNote"),
-            strDescription: (0, b.we)("#UserGameNotes_PromptDelete"),
+            strTitle: (0, B.we)("#UserGameNotes_DeleteNote"),
+            strDescription: (0, B.we)("#UserGameNotes_PromptDelete"),
             onOK: () => i.mutate(),
             bOKDisabled: i.isPending,
-            strOKButtonText: (0, b.we)("#Button_Delete"),
+            strOKButtonText: (0, B.we)("#Button_Delete"),
             closeModal: r,
           }),
         );
@@ -679,7 +673,7 @@
             const t = (0, c.jE)(),
               r = h();
             return n.useCallback(() => {
-              const n = (0, b.we)("#UserGameNotes_UntitledNote_Title"),
+              const n = (0, B.we)("#UserGameNotes_UntitledNote_Title"),
                 i = r.NewNote(e, n);
               return f(t, e, (e) => [...e, i]), i.id;
             }, [t, r, e]);
@@ -727,7 +721,7 @@
               title:
                 (null === (t = e.title) || void 0 === t ? void 0 : t.length) > 0
                   ? e.title
-                  : (0, b.we)("#UserGameNotes_Untitled"),
+                  : (0, B.we)("#UserGameNotes_Untitled"),
               identifier: e.id,
               content: n.createElement(he, { note: e }),
               pageClassName: Q.NotePage,
@@ -737,7 +731,7 @@
           p = (0, i.W6)(),
           _ = n.useCallback((e) => Se(p, t, e), [p, t]);
         return n.createElement(q.Bv, {
-          title: (0, b.we)("#UserGameNotes_NotesList"),
+          title: (0, B.we)("#UserGameNotes_NotesList"),
           pages: m,
           className: (0, me.A)(Q.NotesPagedSettings, l && Q.PinnedView),
           page: a,
@@ -1041,69 +1035,11 @@
           return "CUserGameNotes_SaveNote_Request";
         }
       }
-      class Te extends Ee {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Te.prototype.note_id || Me.Sg(Te.M()),
-            Ee.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Te.sm_m ||
-              (Te.sm_m = {
-                proto: Te,
-                fields: {
-                  note_id: {
-                    n: 1,
-                    br: Me.qM.readString,
-                    bw: Me.gp.writeString,
-                  },
-                },
-              }),
-            Te.sm_m
-          );
-        }
-        static MBF() {
-          return Te.sm_mbf || (Te.sm_mbf = Me.w0(Te.M())), Te.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Te.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return Me.BT(Te.M(), e, t);
-        }
-        static fromObject(e) {
-          return Me.Uq(Te.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new Ne.BinaryReader(e),
-            r = new Te();
-          return Te.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return Me.zj(Te.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new Ne.BinaryWriter();
-          return Te.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          Me.i0(Te.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new Ne.BinaryWriter();
-          return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserGameNotes_SaveNote_Response";
-        }
-      }
       class Ue extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ue.prototype.appid || Me.Sg(Ue.M()),
+            Ue.prototype.note_id || Me.Sg(Ue.M()),
             Ee.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -1112,19 +1048,8 @@
               (Ue.sm_m = {
                 proto: Ue,
                 fields: {
-                  appid: { n: 1, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
-                  shortcut_name: {
-                    n: 2,
-                    br: Me.qM.readString,
-                    bw: Me.gp.writeString,
-                  },
-                  shortcutid: {
-                    n: 3,
-                    br: Me.qM.readUint32,
-                    bw: Me.gp.writeUint32,
-                  },
                   note_id: {
-                    n: 4,
+                    n: 1,
                     br: Me.qM.readString,
                     bw: Me.gp.writeString,
                   },
@@ -1165,22 +1090,54 @@
           return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CUserGameNotes_DeleteNote_Request";
+          return "CUserGameNotes_SaveNote_Response";
         }
       }
       class Ge extends Ee {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), Ee.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Ge.prototype.appid || Me.Sg(Ge.M()),
+            Ee.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ge.sm_m ||
+              (Ge.sm_m = {
+                proto: Ge,
+                fields: {
+                  appid: { n: 1, br: Me.qM.readUint32, bw: Me.gp.writeUint32 },
+                  shortcut_name: {
+                    n: 2,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
+                  },
+                  shortcutid: {
+                    n: 3,
+                    br: Me.qM.readUint32,
+                    bw: Me.gp.writeUint32,
+                  },
+                  note_id: {
+                    n: 4,
+                    br: Me.qM.readString,
+                    bw: Me.gp.writeString,
+                  },
+                },
+              }),
+            Ge.sm_m
+          );
+        }
+        static MBF() {
+          return Ge.sm_mbf || (Ge.sm_mbf = Me.w0(Ge.M())), Ge.sm_mbf;
         }
         toObject(e = !1) {
           return Ge.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return Me.BT(Ge.M(), e, t);
         }
         static fromObject(e) {
-          return new Ge();
+          return Me.Uq(Ge.M(), e);
         }
         static deserializeBinary(e) {
           let t = new Ne.BinaryReader(e),
@@ -1188,16 +1145,53 @@
           return Ge.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return Me.zj(Ge.MBF(), e, t);
         }
         serializeBinary() {
           var e = new Ne.BinaryWriter();
           return Ge.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          Me.i0(Ge.M(), e, t);
+        }
         serializeBase64String() {
           var e = new Ne.BinaryWriter();
           return Ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserGameNotes_DeleteNote_Request";
+        }
+      }
+      class Te extends Ee {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), Ee.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Te.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Te();
+        }
+        static deserializeBinary(e) {
+          let t = new Ne.BinaryReader(e),
+            r = new Te();
+          return Te.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new Ne.BinaryWriter();
+          return Te.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new Ne.BinaryWriter();
+          return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserGameNotes_DeleteNote_Response";
@@ -1375,15 +1369,15 @@
           );
         }),
           (e.SaveNote = function (e, t) {
-            return e.SendMsg("UserGameNotes.SaveNote#1", (0, M.I8)(Re, t), Te, {
+            return e.SendMsg("UserGameNotes.SaveNote#1", (0, M.I8)(Re, t), Ue, {
               ePrivilege: 1,
             });
           }),
           (e.DeleteNote = function (e, t) {
             return e.SendMsg(
               "UserGameNotes.DeleteNote#1",
-              (0, M.I8)(Ue, t),
-              Ge,
+              (0, M.I8)(Ge, t),
+              Te,
               { ePrivilege: 1 },
             );
           }),
@@ -1440,7 +1434,7 @@
           return i.Body().note_id();
         }
         async DeleteGameNote(e, t) {
-          const r = M.w.Init(Ue);
+          const r = M.w.Init(Ge);
           this.SetParentOnRequest(r, e), r.Body().set_note_id(t);
           const n = await ke.DeleteNote(
             this.m_SteamInterface.GetServiceTransport(),

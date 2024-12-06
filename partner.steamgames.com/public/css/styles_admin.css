@@ -2720,6 +2720,19 @@ div.image_all_ages_appropriate
 	font-size: 12px;
 }
 
+#game_image_drop_preview .image_file_name {
+	text-align: center;
+	width: fit-content;
+	max-width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	color: white;
+	margin: 4px auto;
+}
+
 .screenshot_upload_preview .actual_screenshot
 {
 	width: 248px;
