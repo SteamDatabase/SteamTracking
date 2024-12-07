@@ -714,6 +714,7 @@
 		flex-direction: row;
 		width: 100%;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 	html.responsive #shareBtn span,
 	html.responsive #reportBtn span {
@@ -725,7 +726,11 @@
 		display: flex !important;
 		margin-right: 4px;
 	}
-	/* using a share img instead of 'share' text on desktop */
+	html.responsive #shareBtn:not(:nth-child(2)) {
+		margin-left: 4px;
+		margin-right: 0;
+	}
+		/* using a share img instead of 'share' text on desktop */
 	html.responsive #reportBtn img,
 	html.responsive #shareBtn img {
 		vertical-align: middle;

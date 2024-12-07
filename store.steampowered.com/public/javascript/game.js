@@ -1673,6 +1673,14 @@ function ShowReportDialog( nAppId )
 	});
 }
 
+function ShowNavigatorShare()
+{
+	if ( typeof navigator === 'object' && typeof navigator.share === 'function' )
+	{
+		navigator.share( { url: window.location.href } );
+	}
+}
+
 function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
 {
 		var $ModalContent = $J("<div class=\"gotsteamModal\">\n\t<div class=\"got_steam_ctn\">\n\t<div class=\"got_steam_box\">\n\t\t<h1>Got Steam?<\/h1>\n\t\t<p>You need to have the <a href=\"https:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\n\t\t<div class=\"gotsteam_buttons\">\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\n\t\t\t<\/a>\n\t\t\t<a href=\"https:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\n\t\t\t\t<h3>No, I need Steam<\/h3>\n\t\t\t\t<h5>Read about and download Steam<\/h5>\n\t\t\t<\/a>\n\t\t\t<div style=\"clear: left;\"><\/div>\n\t\t<\/div>\n\t\t<div class=\"got_steam_low_block\">\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"https:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\n\t\t<\/div><\/div>\n\t<\/div>\n<\/div>");
@@ -1882,10 +1890,10 @@ function ReparentAppLandingPageForSmallScreens()
 	fn_reparent( '#game_area_purchase', $J('#purchaseOptionsContent') );
 
 	// order the action buttons
-	fn_reparent( '#shareBtn', $J('#rowBtnActions') );
 	fn_reparent( '#reportBtn', $J('#rowBtnActions') );
 	fn_reparent( '#queueBtnFollow', $J('#rowBtnActions') );
 	fn_reparent( '#ignoreBtn', $J('#rowBtnActions') );
+	fn_reparent( '#shareBtn', $J('#rowBtnActions') );
 	fn_reparent( '#rowBtnActions', $J('#queueActionsCtn') );
 
 	// place discovery queue below the action buttons
