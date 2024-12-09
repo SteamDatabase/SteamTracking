@@ -2323,7 +2323,7 @@
         I = n(61859),
         L = n(73745),
         B = n(73309);
-      const M = (0, T.Nr)(function (e) {
+      const x = (0, T.Nr)(function (e) {
         const {
             schemaConfig: t,
             bbcode: n,
@@ -2393,14 +2393,14 @@
               l = (0, b.ak)(t, null, null, o);
             return { refDiv: t, onActivate: r, onGamepadDirection: l };
           })(E),
-          M = (0, L.Ue)(v, _);
+          x = (0, L.Ue)(v, _);
         return a.createElement(
           p.Ot,
           { view: E },
           a.createElement(f.Z, {
             key: `editordiv_${s}`,
             className: (0, R.A)(r, B.Container),
-            ref: M,
+            ref: x,
             spellCheck: s,
             focusable: !0,
             onActivate: y,
@@ -2409,11 +2409,11 @@
             ...i,
           }),
           a.createElement(p.KF, { onUpdate: o, schema: t.pm_schema }),
-          a.createElement(x, { parser: A, schema: t.pm_schema }),
+          a.createElement(M, { parser: A, schema: t.pm_schema }),
           c,
         );
       });
-      const x = a.memo(function (e) {
+      const M = a.memo(function (e) {
         const { parser: t, schema: n } = e;
         return (
           (0, p.c$)(
@@ -3167,7 +3167,7 @@
                 rctAboveEditor: s,
               },
               a.createElement(
-                M,
+                x,
                 {
                   panelProps: { lang: (0, I.d$)(t), onBlur: g },
                   className: pe.EditorPanel,
@@ -3608,7 +3608,7 @@
           y,
           { queueExtraAssetUpload: o },
           l.createElement(
-            M,
+            x,
             null,
             l.createElement(k.j, null, l.createElement(g, { rgUploads: n }), t),
           ),
@@ -3688,7 +3688,7 @@
       }
       const L = l.createContext(void 0),
         B = l.createContext(void 0);
-      function M(e) {
+      function x(e) {
         const t = "storeEditorDisableRichEditor",
           [n, a] = l.useState(() => !localStorage.getItem(t)),
           r = l.useCallback((e) => {
@@ -4134,7 +4134,7 @@
               (0, s.we)("#ControllerSupportModal_PgOne_Instructions_VR"),
             ),
           );
-        return a.createElement(x, {
+        return a.createElement(M, {
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgOne_Header",
           strInstructionsToken: m,
@@ -4241,7 +4241,7 @@
               ),
             ),
           );
-        return a.createElement(x, {
+        return a.createElement(M, {
           stepIMG: a.createElement(m.xIk, { type: "xbox" }),
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgTwo_Header",
@@ -4355,7 +4355,7 @@
               ),
             ),
           );
-        return a.createElement(x, {
+        return a.createElement(M, {
           stepIMG: a.createElement(m.xIk, { type: "ps4" }),
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgThree_Header",
@@ -4450,7 +4450,7 @@
               (0, s.we)("#ControllerSupportModal_PgFour_Instructions_note"),
             ),
           );
-        return a.createElement(x, {
+        return a.createElement(M, {
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFour_Header",
           strInstructionsToken: d,
@@ -4470,7 +4470,7 @@
             t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport
               ? "#ControllerSupportModal_PgFive_Question"
               : "#ControllerSupportModal_PgFive_QuestionNoController";
-        return a.createElement(x, {
+        return a.createElement(M, {
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", 5),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFive_Header",
           strInstructionsToken: void 0,
@@ -4540,7 +4540,7 @@
           case 4:
             g = a.createElement(I, { currentValues: c });
         }
-        const C = a.createElement(M, {
+        const C = a.createElement(x, {
             nPageIdx: p,
             nPages: 5,
             strHeaderText: (0, s.we)("#ControllerSupportModal_Title"),
@@ -4590,7 +4590,7 @@
               "k_eNoSteamInputAPISupport");
         })(A || (A = {}));
       const B = a.createContext(null);
-      function M(e) {
+      function x(e) {
         const { nPages: t, nPageIdx: n, strHeaderText: r } = e,
           o = (100 * (n + 1)) / (t + 1);
         return a.createElement(
@@ -4614,7 +4614,7 @@
           ),
         );
       }
-      const x = a.memo(function (e) {
+      const M = a.memo(function (e) {
         const {
           strStepName: t,
           strStepSubHeaderToken: n,
@@ -5424,7 +5424,7 @@
           null,
           m && a.createElement(Se, { appid: n, onClose: C, onCommit: h }),
           _ &&
-            a.createElement(xe, {
+            a.createElement(Me, {
               appid: n,
               bIsGameEdit: t,
               closeModal: () => E(!1),
@@ -5436,12 +5436,12 @@
               "div",
               { className: le.ReleaseDateContent },
               a.createElement(
-                Me,
+                xe,
                 { label: (0, s.we)("#App_Landing_SpecifiedReleaseDate") },
                 a.createElement(Be, { rtReleaseDate: o }),
               ),
               a.createElement(
-                Me,
+                xe,
                 { label: (0, s.we)("#App_Landing_CustomersSeeReleaseDate") },
                 a.createElement(
                   "div",
@@ -5470,7 +5470,7 @@
           ),
           1e3 * r > new Date().getTime() &&
             a.createElement(
-              Me,
+              xe,
               { label: (0, s.we)("#App_Landing_EarliestAdvancedAccessDate") },
               a.createElement(Be, { rtReleaseDate: r }),
             ),
@@ -5499,7 +5499,7 @@
               (0, s.we)("#App_Landing_UnsetReleaseDate"),
             );
       }
-      function Me(e) {
+      function xe(e) {
         return a.createElement(
           "div",
           { className: le.LabelField },
@@ -5507,7 +5507,7 @@
           e.children,
         );
       }
-      function xe(e) {
+      function Me(e) {
         const { appid: t, bIsGameEdit: n, closeModal: r } = e,
           o = a.useCallback(() => {
             n
@@ -5935,8 +5935,8 @@
         It = n(60014),
         Lt = n(91291),
         Bt = n.n(Lt),
-        Mt = n(99956);
-      const xt = "capsule_index_";
+        xt = n(99956);
+      const Mt = "capsule_index_";
       function Ft(e) {
         const {
             capsule: t,
@@ -5965,7 +5965,7 @@
           {
             className: (0, u.A)({
               [vt().OuterCapsuleContainer]: !0,
-              [xt + o]: 0 == o,
+              [Mt + o]: 0 == o,
             }),
             navEntryPreferPosition: gt.iU.PREFERRED_CHILD,
             navKey: l,
@@ -6109,7 +6109,7 @@
                       m.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  a.createElement(Mt.n, {
+                  a.createElement(xt.n, {
                     bHideTitle: !0,
                     rgTagIDs: m.GetTagIDs(),
                     instanceNum: o,
@@ -7439,8 +7439,8 @@
         In = n(34629),
         Ln = n(30470),
         Bn = n(73745),
-        Mn = n(68797);
-      class xn {
+        xn = n(68797);
+      class Mn {
         m_rgMapProposal = new Map();
         m_nTotalItems = 0;
         m_proposalAddRemoveCallback = new We.lu();
@@ -7473,9 +7473,9 @@
                 this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()),
                 !0
               );
-            a = (0, Mn.H)(l);
+            a = (0, xn.H)(l);
           } catch (e) {
-            a = (0, Mn.H)(e);
+            a = (0, xn.H)(e);
           }
           return (
             console.error(
@@ -7508,7 +7508,7 @@
                 this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()),
                 null
               );
-            if (((r = (0, Mn.H)(s)), s?.data?.output))
+            if (((r = (0, xn.H)(s)), s?.data?.output))
               return (
                 console.log(
                   "CPriceProposalReviewRequiredStore::AcceptProposal message information:",
@@ -7518,7 +7518,7 @@
                 s.data.output
               );
           } catch (e) {
-            r = (0, Mn.H)(e);
+            r = (0, xn.H)(e);
           }
           return (
             console.error(
@@ -7532,11 +7532,11 @@
         static s_Singleton;
         static Get() {
           return (
-            xn.s_Singleton ||
-              ((xn.s_Singleton = new xn()),
+            Mn.s_Singleton ||
+              ((Mn.s_Singleton = new Mn()),
               "dev" == Ln.TS.WEB_UNIVERSE &&
-                (window.g_PriceProposalReviewRequiredStore = xn.s_Singleton)),
-            xn.s_Singleton
+                (window.g_PriceProposalReviewRequiredStore = Mn.s_Singleton)),
+            Mn.s_Singleton
           );
         }
         constructor() {
@@ -7555,9 +7555,9 @@
       }
       function Fn() {
         return {
-          fnLoadMoreProposal: xn.Get().LoadMoreProposal,
-          fnRejectProposal: xn.Get().RejectProposal,
-          fnAcceptProposal: xn.Get().AcceptProposal,
+          fnLoadMoreProposal: Mn.Get().LoadMoreProposal,
+          fnRejectProposal: Mn.Get().RejectProposal,
+          fnAcceptProposal: Mn.Get().AcceptProposal,
         };
       }
       function On(e) {
@@ -7968,9 +7968,9 @@
           })(e.toUpperCase()),
         )} (${e})`;
       }
-      (0, In.Cg)([Bn.oI], xn.prototype, "LoadMoreProposal", null),
-        (0, In.Cg)([Bn.oI], xn.prototype, "RejectProposal", null),
-        (0, In.Cg)([Bn.oI], xn.prototype, "AcceptProposal", null),
+      (0, In.Cg)([Bn.oI], Mn.prototype, "LoadMoreProposal", null),
+        (0, In.Cg)([Bn.oI], Mn.prototype, "RejectProposal", null),
+        (0, In.Cg)([Bn.oI], Mn.prototype, "AcceptProposal", null),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -8794,7 +8794,7 @@
               s =
                 n.GetRecommendPrice(l, r, e) ||
                 n.GetScaledRecommendedPrice(l, r, e);
-            return a.createElement(Ma, {
+            return a.createElement(xa, {
               key: t.packageid + "-" + e,
               eCurrencyCode: r,
               eRegionCode: e,
@@ -8811,24 +8811,24 @@
             (e) => e.amount.currency_code == t,
           ),
           s = n?.current_costs?.base_amounts.find((e) => e.currency_code == t);
-        return a.createElement(xa, {
+        return a.createElement(Ma, {
           proposed: l,
           originalAmount: s,
           guidePrice: o,
         });
       }
-      function Ma(e) {
+      function xa(e) {
         const { eRegionCode: t, curPrice: n, proposal: r, guidePrice: o } = e,
           l = jn(t),
           s = r.proposed_prices.region_amounts.find((e) => e.name == l),
           i = n?.current_costs?.region_amounts.find((e) => e.region == l);
-        return a.createElement(xa, {
+        return a.createElement(Ma, {
           proposed: s,
           originalAmount: i?.amount,
           guidePrice: o,
         });
       }
-      function xa(e) {
+      function Ma(e) {
         const { proposed: t, originalAmount: n, guidePrice: r } = e;
         let o, l;
         if (t)
@@ -9454,8 +9454,8 @@
             () => (0, on.Tc)("filter_name", "application_config") || "",
           ),
           n = (function () {
-            const [e, t] = (0, a.useState)(() => xn.Get().GetProposals());
-            return (0, Bn.hL)(xn.Get().GetProposalListChange(), t), e;
+            const [e, t] = (0, a.useState)(() => Mn.Get().GetProposals());
+            return (0, Bn.hL)(Mn.Get().GetProposalListChange(), t), e;
           })(),
           r = (function () {
             const [e, t] = (0, a.useState)(
@@ -10370,8 +10370,8 @@
         Ir = n(78395),
         Lr = n(22837),
         Br = n(2160),
-        Mr = n(63556),
-        xr = n(21869),
+        xr = n(63556),
+        Mr = n(21869),
         Fr = n(1431),
         Or = n.n(Fr);
       const Ur = { include_assets: !0, include_basic_info: !0 };
@@ -10413,7 +10413,7 @@
             rgRealms: i,
             className: c,
           } = e,
-          d = (0, Mr.E)(),
+          d = (0, xr.E)(),
           u = s.A0.GetLanguageListForRealms(i),
           m = new Array();
         r &&
@@ -10486,7 +10486,7 @@
                 }),
                 this.m_mapAppIDToDLCs.set(e, o);
             } catch (t) {
-              const n = (0, Mn.H)(t);
+              const n = (0, xn.H)(t);
               console.error(
                 "LoadDLCForAppID for appid: " + e + " hit: " + n.strErrorMsg,
                 n,
@@ -10616,10 +10616,10 @@
           (0, a.useEffect)(() => {
             if (i) {
               const e = (0, Lr.sf)(E.strActiveLanguage, 0);
-              Mr.O.Get().SetCurEditLanguage(e);
+              xr.O.Get().SetCurEditLanguage(e);
             }
           }, [E.strActiveLanguage, i]),
-          (0, W.hL)(Mr.O.Get().GetCallback(), (e) => {
+          (0, W.hL)(xr.O.Get().GetCallback(), (e) => {
             E.setActiveLanguage((0, Lr.Lg)(e));
           }),
           a.createElement(
@@ -10673,7 +10673,7 @@
           L = (0, s.we)(r ? "#SeasonPass_Update" : "#SeasonPass_Create"),
           B = p?.includes(o);
         return a.createElement(
-          xr.E,
+          Mr.E,
           { active: !0 },
           a.createElement(
             Ir.o0,
@@ -10875,7 +10875,7 @@
               "div",
               { className: (0, u.A)(Vr().EditBtn, $r().BtnCtn) },
               a.createElement(
-                xr.E,
+                Mr.E,
                 { active: o },
                 a.createElement(Ir.o0, {
                   strTitle: (0, s.we)("#Button_Delete"),
@@ -11006,7 +11006,7 @@
             );
           }, [n.milestone_id, l, o.dlcAppID]);
         return a.createElement(
-          xr.E,
+          Mr.E,
           { active: !0 },
           a.createElement(
             Ir.o0,
@@ -11253,7 +11253,7 @@
                 : [Br.TU.k_ESteamRealmGlobal],
             [l],
           ),
-          S = (0, Mr.E)(),
+          S = (0, xr.E)(),
           f = s.A0.GetELanguageFallback(S);
         return a.createElement(
           "tr",
@@ -11848,7 +11848,7 @@
           a.Fragment,
           null,
           a.createElement(
-            xr.E,
+            Mr.E,
             { active: "editor" === t || "alert" === t },
             a.createElement(
               So.e,
@@ -12348,9 +12348,7 @@
           [i, c] = (0, a.useState)(t.type),
           [d, u] = (0, a.useState)(t.kernel),
           [m, p] = (0, a.useState)(t.uninstall),
-          _ = "none" !== i && "unspecified" !== i,
-          E = _ && "other" !== i,
-          g = E ? n[i].kernel : d;
+          _ = "none" !== i && "unspecified" !== i;
         return a.createElement(
           "div",
           { className: "section", id: "anti_cheat" },
@@ -12377,18 +12375,23 @@
               options: l,
               selectedOption: i,
               onSelectionChanged: (e) => {
-                e.data && c(e.data);
+                e.data &&
+                  (c(e.data),
+                  "none" !== e.data &&
+                    "unspecified" !== e.data &&
+                    "other" !== e.data &&
+                    u(n[e.data].kernel));
               },
             }),
           ),
           "other" === i &&
             a.createElement(No, { values: t.otherNameLoc, mapLanguages: o }),
-          _ && a.createElement(To, { checked: g, knownValue: E, onChange: u }),
-          _ && g && a.createElement(Ro, { checked: m, onChange: p }),
+          _ && a.createElement(To, { checked: d, onChange: u }),
+          _ && d && a.createElement(Ro, { checked: m, onChange: p }),
           a.createElement(Io, {
             selectedOption: "unspecified" !== i ? i : "",
-            kernelMode: !!_ && g,
-            uninstallsCompletely: !(!_ || !g) && m,
+            kernelMode: !!_ && d,
+            uninstallsCompletely: !(!_ || !d) && m,
           }),
         );
       }
@@ -12446,29 +12449,21 @@
         );
       }
       function To(e) {
-        const { checked: t, knownValue: n, onChange: r } = e;
-        let o = "#StoreAdmin_AntiCheat_KernelModelDescription_Other";
-        return (
-          n &&
-            (o = t
-              ? "#StoreAdmin_AntiCheat_KernelModelDescription_KnownYes"
-              : "#StoreAdmin_AntiCheat_KernelModelDescription_KnownNo"),
+        const { checked: t, onChange: n } = e;
+        return a.createElement(
+          wo,
+          null,
+          a.createElement(v.Yh, {
+            className: (0, u.A)(yo.KernelMode, yo.CheckboxLabel),
+            label: (0, s.we)("#StoreAdmin_AntiCheat_KernelModeLabel"),
+            checked: t,
+            onChange: n,
+          }),
           a.createElement(
-            wo,
-            null,
-            a.createElement(v.Yh, {
-              className: (0, u.A)(yo.KernelMode, yo.CheckboxLabel),
-              label: (0, s.we)("#StoreAdmin_AntiCheat_KernelModeLabel"),
-              checked: t,
-              onChange: r,
-              disabled: n,
-            }),
-            a.createElement(
-              "div",
-              { className: yo.CheckboxDescription },
-              (0, s.we)(o),
-            ),
-          )
+            "div",
+            { className: yo.CheckboxDescription },
+            (0, s.we)("#StoreAdmin_AntiCheat_KernelModelDescription_Other"),
+          ),
         );
       }
       function Ro(e) {
@@ -12533,7 +12528,7 @@
       }
       var Lo = n(30041),
         Bo = n(83882);
-      function Mo(e) {
+      function xo(e) {
         const [t, n] = a.useState(!1);
         return a.createElement(
           a.Fragment,
@@ -12583,7 +12578,7 @@
                 ),
               e.rgItems.length > 0 &&
                 e.rgItems.map((t, n) =>
-                  a.createElement(xo, {
+                  a.createElement(Mo, {
                     key: n,
                     item: t,
                     language: e.language,
@@ -12609,7 +12604,7 @@
           ),
         );
       }
-      function xo(e) {
+      function Mo(e) {
         const { item: t, language: n } = e;
         let r = (0, s.we)("#StoreAdmin_NonAppContent_MissingLanguage");
         t.localized_title &&
@@ -13225,7 +13220,7 @@
             a.createElement(Oe.X, {
               config: {
                 "packagelanding-nonappcontents-edit": (e) =>
-                  a.createElement(Mo, { ...e }),
+                  a.createElement(xo, { ...e }),
                 "packagelanding-showcapsuleart": (e) =>
                   a.createElement(Ho, { ...e }),
               },
