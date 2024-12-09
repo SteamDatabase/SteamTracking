@@ -5308,6 +5308,9 @@
         );
       }
       function wa(e) {
+        return e >= 2024;
+      }
+      function Na(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
           r = t.GetPlayTimeStats().total_stats,
@@ -5333,11 +5336,15 @@
             )
             .filter((e) => null !== e),
           g = [
-            fa(m, t),
-            Ba(a, r),
-            Ga(a, d, t.GetPreviousYearSummary().longest_streak),
+            Ga(m, t),
+            Ta(a, r),
+            Ra(
+              a,
+              d,
+              wa(a) ? t.GetPreviousYearSummary()?.longest_streak : void 0,
+            ),
           ].filter((e) => null !== e),
-          v = n.createElement(ka, {
+          v = n.createElement(Ya, {
             key: "overview",
             rgGamesLength: i.length,
             nNewGames: c,
@@ -5345,7 +5352,9 @@
             nEarlyAccessPlayed: o,
             nPlaytestPlayed: l,
             nYear: t.GetYear(),
-            nPreviousYearsGames: t.GetPreviousYearSummary()?.games_played,
+            nPreviousYearsGames: wa(a)
+              ? t.GetPreviousYearSummary()?.games_played
+              : void 0,
           });
         return n.createElement(
           Ye,
@@ -5353,7 +5362,7 @@
           n.createElement(
             "div",
             { className: (0, de.A)(E().YearInReviewContent, E().SummaryArea) },
-            n.createElement(Ta, {
+            n.createElement(ka, {
               rgGamesLength: i.length,
               nNewGames: c,
               totalAchievementUnlocked: m,
@@ -5372,7 +5381,7 @@
                     { className: E().SectionSubTitle },
                     _("#YIR_YourSummary_SubTitle"),
                   ),
-                  n.createElement(Na, {
+                  n.createElement(fa, {
                     overview: v,
                     statFillers: g,
                     gameFillers: p,
@@ -5382,7 +5391,7 @@
           ),
         );
       }
-      function Na(e) {
+      function fa(e) {
         let { statFillers: t, gameFillers: a, overview: r } = e;
         return a.length > 2 && t.length > 1
           ? n.createElement("div", { className: E().SummaryGridStandard }, [
@@ -5419,7 +5428,7 @@
                   ])
                 : null;
       }
-      function fa(e, t) {
+      function Ga(e, t) {
         return e > 0
           ? n.createElement(ba, {
               key: "totalAchievements",
@@ -5427,7 +5436,7 @@
             })
           : null;
       }
-      function Ga(e, t, a) {
+      function Ra(e, t, a) {
         return t &&
           t.longest_consecutive_days > 0 &&
           "cn" !== o.iA.country_code.toLowerCase()
@@ -5439,14 +5448,14 @@
             })
           : null;
       }
-      const Ra = 1e3;
-      function Ba(e, t) {
+      const Ba = 1e3;
+      function Ta(e, t) {
         const a = t.controller_playtime_percentagex100,
           r =
             t.total_playtime_percentagex100 -
             t.controller_playtime_percentagex100 -
             t.vr_playtime_percentagex100;
-        return a < Ra || r < Ra
+        return a < Ba || r < Ba
           ? null
           : n.createElement(Da, {
               key: "hardwareTime",
@@ -5454,7 +5463,7 @@
               nYear: e,
             });
       }
-      function Ta(e) {
+      function ka(e) {
         const {
             rgGamesLength: t,
             nNewGames: a,
@@ -5490,7 +5499,7 @@
           n.createElement("div", { className: E().SectionTitle }, o)
         );
       }
-      function ka(e) {
+      function Ya(e) {
         const t = (0, n.useContext)(On).persona_name,
           {
             rgGamesLength: a,
@@ -5558,7 +5567,11 @@
                   { className: E().SmallText },
                   (0, v.we)("#YIR_YourSummary_Games"),
                 ),
-                n.createElement(Ya, { nCurValue: a, nPrevValue: c }),
+                n.createElement(Pa, {
+                  strTokenPrefix: "#YIR_YourSummary_PrevYear_Game",
+                  nCurValue: a,
+                  nPrevValue: c,
+                }),
               ),
             ),
             n.createElement(
@@ -5628,53 +5641,12 @@
           ),
         );
       }
-      function Ya(e) {
-        const { nCurValue: t, nPrevValue: a } = e;
-        if (null != a && 0 !== a && 0 !== t)
-          return t == a
-            ? n.createElement(
-                "div",
-                null,
-                (0, v.we)("#YIR_YourSummary_PrevYear_Same"),
-              )
-            : t < a
-              ? n.createElement(
-                  "div",
-                  null,
-                  n.createElement(le.i3G, { angle: 180 }),
-                  n.createElement(
-                    "div",
-                    null,
-                    (0, v.we)(
-                      "#YIR_YourSummary_PrevYear_Less",
-                      (a - t).toLocaleString(),
-                    ),
-                  ),
-                )
-              : n.createElement(
-                  "div",
-                  null,
-                  n.createElement(le.i3G, { angle: 0 }),
-                  n.createElement(
-                    "div",
-                    null,
-                    (0, v.we)(
-                      "#YIR_YourSummary_PrevYear_More",
-                      (t - a).toLocaleString(),
-                    ),
-                  ),
-                );
-      }
       function Pa(e) {
-        const { nCurValue: t, nPrevValue: a } = e;
-        if (null != a && 0 !== a && 0 !== t)
-          return t == a
-            ? n.createElement(
-                "div",
-                null,
-                (0, v.we)("#YIR_YourSummary_PrevYear_DaySame"),
-              )
-            : t < a
+        const { strTokenPrefix: t, nCurValue: a, nPrevValue: r } = e;
+        if (null != r && 0 !== r && 0 !== a)
+          return a == r
+            ? n.createElement("div", null, (0, v.we)(t + "Same"))
+            : a < r
               ? n.createElement(
                   "div",
                   null,
@@ -5682,11 +5654,7 @@
                   n.createElement(
                     "div",
                     null,
-                    (0, v.Yp)(
-                      "#YIR_YourSummary_PrevYear_DayLess",
-                      a - t,
-                      (a - t).toLocaleString(),
-                    ),
+                    (0, v.Yp)(t + "Less", r - a, (r - a).toLocaleString()),
                   ),
                 )
               : n.createElement(
@@ -5696,33 +5664,30 @@
                   n.createElement(
                     "div",
                     null,
-                    (0, v.Yp)(
-                      "#YIR_YourSummary_PrevYear_DayMore",
-                      t - a,
-                      (t - a).toLocaleString(),
-                    ),
+                    (0, v.Yp)(t + "More", a - r, (a - r).toLocaleString()),
                   ),
                 );
       }
       function ba(e) {
         const { userYearInReview: t } = e,
           a = t.GetPlayTimeStats().summary_stats,
-          r = (t.GetFilteredGameSummary(), t.GetYear(), A()),
-          s = `${o.TS.IMG_URL}yearinreview/achievement_grid_02.webp`;
+          r = (t.GetFilteredGameSummary(), t.GetYear()),
+          s = A(),
+          l = `${o.TS.IMG_URL}yearinreview/achievement_grid_02.webp`;
         return n.createElement(
           "div",
-          { className: (0, de.A)(E().SummaryCtnShadow, r.SummaryCtnShadow) },
+          { className: (0, de.A)(E().SummaryCtnShadow, s.SummaryCtnShadow) },
           n.createElement(
             "div",
             {
               className: (0, de.A)(
                 E().SummaryCtn,
                 E().GridItem,
-                r.GridItem,
+                s.GridItem,
                 E().Achievements,
                 E().AchievementBlock,
-                r.SummaryCtn,
-                r.AchievementBlock,
+                s.SummaryCtn,
+                s.AchievementBlock,
               ),
             },
             n.createElement("div", { className: E().SubtleBorder }),
@@ -5731,7 +5696,7 @@
                 E().BackgroundImage,
                 E().BackgroundImageCover,
               ),
-              style: { backgroundImage: `url(${s})` },
+              style: { backgroundImage: `url(${l})` },
             }),
             n.createElement(
               "div",
@@ -5746,9 +5711,12 @@
                 { className: E().SmallText },
                 (0, v.we)("#YIR_YourSummary_Achievement"),
               ),
-              n.createElement(Ya, {
+              n.createElement(Pa, {
+                strTokenPrefix: "#YIR_YourSummary_PrevYear_Ach",
                 nCurValue: a.total_achievements,
-                nPrevValue: t.GetPreviousYearSummary().unlocked_achievements,
+                nPrevValue: wa(r)
+                  ? t.GetPreviousYearSummary().unlocked_achievements
+                  : void 0,
               }),
             ),
             n.createElement(
@@ -5836,6 +5804,7 @@
                 (0, v.we)("#YIR_YourSummary_Stat_Streak"),
               ),
               n.createElement(Pa, {
+                strTokenPrefix: "#YIR_YourSummary_PrevYear_Day",
                 nCurValue: t.longest_consecutive_days,
                 nPrevValue: r,
               }),
@@ -7442,7 +7411,7 @@
             n.createElement(
               je,
               { userYearInReview: t },
-              n.createElement(wa, { userYearInReview: t }),
+              n.createElement(Na, { userYearInReview: t }),
               Boolean(1 === p) && n.createElement(Bn, { userYearInReview: t }),
             ),
           ),
