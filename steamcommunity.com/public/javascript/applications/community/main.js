@@ -1029,7 +1029,7 @@
         "./sales_greek.json": [22250, 5651],
         "./sales_hungarian.json": [56715, 4278],
         "./sales_indonesian.json": [86570, 9367],
-        "./sales_italian.json": [75750, 1783],
+        "./sales_italian.json": [53369, 1783],
         "./sales_japanese.json": [95849, 8064],
         "./sales_koreana.json": [22417, 5184],
         "./sales_latam.json": [56969, 2744],
@@ -1074,7 +1074,7 @@
         "./sales_greek.json": [22250, 5651],
         "./sales_hungarian.json": [56715, 4278],
         "./sales_indonesian.json": [86570, 9367],
-        "./sales_italian.json": [75750, 1783],
+        "./sales_italian.json": [53369, 1783],
         "./sales_japanese.json": [95849, 8064],
         "./sales_koreana.json": [22417, 5184],
         "./sales_latam.json": [56969, 2744],
@@ -25294,7 +25294,7 @@
         S0: () => le,
         gB: () => pe,
       });
-      var i = r(3160),
+      var i = r(61739),
         n = r(37674),
         s = r(56545),
         a = r(23809),
@@ -49579,7 +49579,7 @@
       r.d(t, { L: () => o, s: () => a });
       var i = r(90626),
         n = r(29385),
-        s = r(10329);
+        s = r(40485);
       r(84811);
       function a(e) {
         const { steamUI: t } = e,

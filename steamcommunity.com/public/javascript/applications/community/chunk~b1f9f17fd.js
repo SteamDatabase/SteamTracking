@@ -5846,7 +5846,7 @@
       });
       var n = a(56545),
         r = a(37674),
-        i = a(3160),
+        i = a(61739),
         o = a(23809),
         s = a(37403),
         l = a(90626);
@@ -38817,15 +38817,16 @@
         (0, r.useEffect)(() => {
           T(!1),
             s.pU.ClearImageGroup(),
-            v.forEach((e, t) => {
-              const a = i.b.InitFromClanID(D);
-              if (0 == s.pU.GetAllLocalizedGroupImages().length) {
-                const t = e && s.i6.GetHashFromHashAndExt(e),
-                  n = t && s.pU.GetClanImageByImageHash(a, t);
-                n && s.pU.SetPrimaryImageForImageGroup(n, S);
-              }
-              s.pU.SetLocalizedImageGroupAtLang(t, a, e);
-            }),
+            null == v ||
+              v.forEach((e, t) => {
+                const a = i.b.InitFromClanID(D);
+                if (0 == s.pU.GetAllLocalizedGroupImages().length) {
+                  const t = e && s.i6.GetHashFromHashAndExt(e),
+                    n = t && s.pU.GetClanImageByImageHash(a, t);
+                  n && s.pU.SetPrimaryImageForImageGroup(n, S);
+                }
+                s.pU.SetLocalizedImageGroupAtLang(t, a, e);
+              }),
             T(!0);
         }, [v, D, S]);
         const A = (0, r.useCallback)(
