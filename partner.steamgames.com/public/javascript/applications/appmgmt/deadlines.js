@@ -9,6 +9,7 @@
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
+        DocumentProcessingNotice: "_1g1PXMANzYwlWDNpKVMpgk",
         NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         MessageHeader: "_1HU84kVIdNVKbbByTWyyBG",
         MessageSource: "_3PZihnKXFSjpftsqE-Q2V5",
@@ -105,9 +106,9 @@
       "use strict";
       a.d(t, {
         MY: () => d,
-        UA: () => h,
+        UA: () => p,
         Yd: () => f,
-        rN: () => p,
+        rN: () => h,
         vh: () => u,
       });
       var n = a(34629),
@@ -236,7 +237,7 @@
           t
         );
       }
-      function h(e) {
+      function p(e) {
         const [t, a] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
           o.useEffect(() => {
@@ -252,7 +253,7 @@
           [t]
         );
       }
-      function p() {
+      function h() {
         return { fnFindPartnerByName: m.Get().FindPartnerByName };
       }
       function f(e) {
@@ -273,8 +274,8 @@
         d = a(51272),
         m = a(84811),
         u = a(71541),
-        h = a(95034),
-        p = a(55263),
+        p = a(95034),
+        h = a(55263),
         f = a(82097),
         y = a(32179),
         v = a(8527),
@@ -285,7 +286,7 @@
       const b = { include_assets: !0, include_release: !0 };
       function _(e) {
         const { rgDeadlines: t } = e,
-          [a, i] = (0, h.QD)("query", ""),
+          [a, i] = (0, p.QD)("query", ""),
           r = (0, n.useMemo)(
             () =>
               Array.from(
@@ -300,7 +301,7 @@
               ),
             [t],
           ),
-          s = (0, p.zX)(r, b),
+          s = (0, h.zX)(r, b),
           l = (0, y.vh)(o),
           c = (0, n.useMemo)(() => {
             const e = a.trim().toLocaleLowerCase();
@@ -372,7 +373,7 @@
       }
       function w(e) {
         const { deadline: t } = e,
-          [a] = (0, p.t7)(t.data.store_item_id, b),
+          [a] = (0, h.t7)(t.data.store_item_id, b),
           [i] = (0, y.UA)(t.data.partnerid),
           r = (0, N.u)(t.data.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
@@ -493,8 +494,8 @@
         d = a(61859),
         m = a(52038),
         u = a(71541),
-        h = a(14771),
-        p = a(78327);
+        p = a(14771),
+        h = a(78327);
       function f(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
@@ -526,7 +527,7 @@
         else if (v != t.index) return null;
         const a = JSON.parse(t.deadline.data.description_jsondata);
         let i =
-          "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
+          "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
             ? "https://valvesoftware-dev.taxidentity.com"
             : "https://valvesoftware.taxidentity.com";
         return (
@@ -560,6 +561,12 @@
             "div",
             { className: s().SectionBody },
             "The quickest way to provide the required documentation is by securely uploading to this personalized Dropbox™ File Request. This needs to be completed within 30 days after which time the link will be disabled.",
+            n.createElement("p", null),
+            n.createElement(
+              "span",
+              { className: s().DocumentProcessingNotice },
+              "Please note that this action item will remain active and on your dashboard until our tax vendor has reviewed and approved your documents. The document approval process typically takes 2 to 7 days.",
+            ),
           ),
           n.createElement(
             u.jn,
@@ -1574,7 +1581,7 @@
                         {
                           onClick: () =>
                             window.open(
-                              p.TS.HELP_BASE_URL +
+                              h.TS.HELP_BASE_URL +
                                 "en/wizard/HelpWithPublishing?issueid=904",
                               "_blank",
                             ),
@@ -1606,7 +1613,7 @@
                         {
                           onClick: () =>
                             window.open(
-                              p.TS.PARTNER_BASE_URL + "newpartner",
+                              h.TS.PARTNER_BASE_URL + "newpartner",
                               "_blank",
                             ),
                           className: s().NotificationButton,
@@ -1933,7 +1940,7 @@
       }
       function T(e) {
         const [t, a, o, l, d] = C(),
-          h = n.useMemo(() => {
+          p = n.useMemo(() => {
             const e = [...t];
             return (
               e.sort((e, t) => {
@@ -1958,10 +1965,10 @@
             return [e, t];
           })();
         let v = "mailto:taxsupport-valve@taxidentity.com";
-        if (h.length > 0) {
-          const e = JSON.parse(h[0]?.data.description_jsondata)?.Subject,
+        if (p.length > 0) {
+          const e = JSON.parse(p[0]?.data.description_jsondata)?.Subject,
             t =
-              "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
+              "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
                 ? "TEST:"
                 : "";
           v += "?subject=" + t + e;
@@ -1988,8 +1995,8 @@
                   n.Fragment,
                   null,
                   f && n.createElement(I, { strTemplate: y }),
-                  h.length > 0 &&
-                    h.map((e, t) =>
+                  p.length > 0 &&
+                    p.map((e, t) =>
                       n.createElement(x, {
                         key: "update_" + t,
                         requirement: {
@@ -2072,7 +2079,7 @@
           d = new Intl.DateTimeFormat(navigator.language).format(l);
         return (
           (c.data = {}),
-          (c.data.due_date = l / 1e3 + 14 * h.Kp.PerDay),
+          (c.data.due_date = l / 1e3 + 14 * p.Kp.PerDay),
           (c.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${d}" }`),
           n.createElement(
             "div",
@@ -2144,7 +2151,7 @@
         gF: () => y,
         mZ: () => u,
         t7: () => c,
-        zX: () => p,
+        zX: () => h,
       });
       var n = a(41735),
         i = a.n(n),
@@ -2158,8 +2165,8 @@
         l.current = e;
         const [m, u] = (0, r.useState)(void 0),
           {
-            include_assets: h,
-            include_release: p,
+            include_assets: p,
+            include_release: h,
             include_platforms: f,
             include_all_purchase_options: y,
             include_screenshots: v,
@@ -2178,8 +2185,8 @@
         if (
           ((0, r.useEffect)(() => {
             const a = {
-              include_assets: h,
-              include_release: p,
+              include_assets: p,
+              include_release: h,
               include_platforms: f,
               include_all_purchase_options: y,
               include_screenshots: v,
@@ -2210,7 +2217,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, _, w, C, T, I, x, d]),
+          }, [e, t, n, m, p, h, f, y, v, E, g, S, N, b, _, w, C, T, I, x, d]),
           !e)
         )
           return [null, 2];
@@ -2239,15 +2246,15 @@
         const [o, s] = c(r, a);
         return r && o?.BIsVisible() ? [o, s] : [n, i];
       }
-      function h(e, t, a, n) {
+      function p(e, t, a, n) {
         const l = (0, o.CH)(),
           {
             include_assets: c,
             include_release: d,
             include_platforms: m,
             include_all_purchase_options: u,
-            include_screenshots: h,
-            include_trailers: p,
+            include_screenshots: p,
+            include_trailers: h,
             include_ratings: f,
             include_tag_count: y,
             include_reviews: v,
@@ -2267,8 +2274,8 @@
                 include_release: d,
                 include_platforms: m,
                 include_all_purchase_options: u,
-                include_screenshots: h,
-                include_trailers: p,
+                include_screenshots: p,
+                include_trailers: h,
                 include_ratings: f,
                 include_tag_count: y,
                 include_reviews: v,
@@ -2296,7 +2303,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, c, d, m, u, h, p, f, y, v, E, g, S, N, b, _, w]),
+          }, [e, t, n, l, c, d, m, u, p, h, f, y, v, E, g, S, N, b, _, w]),
           !e)
         )
           return 2;
@@ -2314,14 +2321,14 @@
           ? 3
           : 2;
       }
-      function p(e, t, a) {
-        return h(e, 0, t, a);
+      function h(e, t, a) {
+        return p(e, 0, t, a);
       }
       function f(e, t, a) {
-        return h(e, 2, t, a);
+        return p(e, 2, t, a);
       }
       function y(e, t, a) {
-        return h(e, 1, t, a);
+        return p(e, 1, t, a);
       }
     },
     68797: (e, t, a) => {
