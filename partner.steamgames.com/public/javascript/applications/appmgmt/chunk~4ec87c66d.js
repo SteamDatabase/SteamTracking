@@ -47554,6 +47554,7 @@
                       headers: {
                         Authorization: e,
                         "Content-Type": "application/json",
+                        "API-Version": "2024-01",
                       },
                     },
                   );
