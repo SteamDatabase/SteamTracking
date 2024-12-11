@@ -9264,7 +9264,7 @@
       const Je = (0, i.PA)((e) => {
           const { faqid: t } = e,
             [a, o] = (0, p.z5)(t),
-            i = s.useRef();
+            i = s.useRef(void 0);
           if (!o)
             return s.createElement(P.t, {
               position: "center",

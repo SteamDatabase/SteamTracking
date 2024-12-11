@@ -3061,7 +3061,7 @@
       function lt(e) {
         const t = 2,
           { nRows: a, setShowAll: l, setRows: r, nIncrement: s = t } = e,
-          i = n.useRef();
+          i = n.useRef(void 0);
         return (
           n.useEffect(() => {
             i.current?.BHasFocus() &&
@@ -3359,7 +3359,7 @@
       var yt = a(32754),
         gt = a(99428),
         Et = a(20194),
-        ft = a(70996),
+        ft = a(57168),
         ht = a(94601),
         wt = a(56545),
         vt = a(72839),
@@ -6203,7 +6203,7 @@
             E,
           ),
           n.createElement(
-            yt.he,
+            yt.m9,
             { toolTipContent: f, nDelayShowMS: 0 },
             n.createElement(
               "div",

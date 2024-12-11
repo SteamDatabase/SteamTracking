@@ -495,7 +495,6 @@
             try {
               e = await t.json();
             } catch (e) {}
-            if (!e || !e.result) throw new Error();
             if (!t.ok) {
               let o = null;
               throw (
@@ -515,6 +514,7 @@
                 o)
               );
             }
+            if (!e || !e.result) throw new Error();
             return (
               (this.m_fileUploadProps.timestamp = e.timestamp),
               (this.m_fileUploadProps.hmac = e.hmac),

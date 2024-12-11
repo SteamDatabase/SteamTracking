@@ -2196,6 +2196,7 @@
                     bw: a.gp.writeUint32,
                   },
                   profile_colors: { n: 15, c: P, r: !0, q: !0 },
+                  tiled: { n: 16, br: a.qM.readBool, bw: a.gp.writeBool },
                 },
               }),
             I.sm_m

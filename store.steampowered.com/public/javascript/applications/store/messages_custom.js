@@ -203,7 +203,7 @@
         used_games_color: "#cc6670",
         old_games_color: "#f4d760",
         pie_windows: "#d67070",
-        pie_linux: "#683db4",
+        pie_linux: "#aa3db4",
         pie_deck: "#3898b0",
         pie_mac: "#46ab46",
         pie_vr: "#c7b84e",
@@ -223,24 +223,28 @@
         SingleGame: "_11WV2YgKiO-25bj14xN4nF",
         ImageTint: "aNFQO7OXrOXD4-a8kfVGc",
         Section: "Lge6g_6u-62TV_cVPD7Ui",
-        StreakSizeFullBar: "_2Xt_oaIv9INpfrjOEmjGxJ",
         LongestStreakBgImage: "fA_EY16-08_b1VWyI-yWb",
+        StreakSizeFullBar: "_2Xt_oaIv9INpfrjOEmjGxJ",
         Tab: "_2v18EtoQUMe9VTbnzTG8td",
         UserName: "cpHihmjgrbGMnejVUXb7P",
         ConclusionName: "_2JN-hnKtHVoX9X7YXp-EBq",
         SummaryCtnShadow: "zbwndVO7JL53kSxjqeLcs",
         GridItem: "_2WPcf3wXBhMImWLz22RXmV",
+        BackgroundImage: "DZcTcsyLmBEj_dmGqve9",
         TimeRelatedCtn: "_37goiEY1KefzjRKUKkEWgo",
-        TopHonorsSection: "_3Xt_rws_Lz4-TXJH-R3wXI",
         FriendCtn: "dtzDI1loGbf-ScWbiNsMj",
         TopGameBlockContainer: "_1_03H_PiAx5_TIA2Y4OOn0",
         BackgroundImageFull: "XkDtww__eYTaxTvGXlhip",
         OddGradient: "BdBfXPzFQrAIMxXLgo95x",
         EvenGradient: "mU0ZPKqgrodRiIqDDPRJN",
         TopMostGame: "_2U1A0BOBmU2Tm96VMDbN3y",
+        FirstPlayCtn: "NpBL8pFdh_GoRix0dQr1v",
         GamePlayDetails: "WBgtvXrESMem0KVSCFohg",
+        DemoPlayDetails: "_3uYyceaz7yAPg09RUwssF-",
         PlatformChartsCtn: "p2yOPk8RjNL2sgYPVdUl9",
         gradient: "_3_0UA8g5haRH050dhrXY1c",
+        TopHonorsSection: "_3Xt_rws_Lz4-TXJH-R3wXI",
+        SectionDesc: "_3-uWyGRhRgXQz4UayHqn62",
         IconAchievement: "_1Ary1qr2Dt1ycwBGxfz0fq",
         IconGamesPlayed: "_1ghrcKVRru_utFcofkcTbk",
         IconStreak: "_3dUH0KBuoVtpr5alU3jY9M",
@@ -278,7 +282,7 @@
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => b, KM: () => f, KT: () => h });
+      t.d(a, { B3: () => b, KM: () => A, KT: () => h });
       var r = t(41735),
         n = t.n(r),
         o = t(58632),
@@ -293,7 +297,7 @@
         C = t(37735),
         g = t(23809);
       const u = "nicknames";
-      function f(e) {
+      function A(e) {
         const a = (0, g.KV)(),
           { data: t, isLoading: r } = (0, i.I)({
             queryKey: [u],
@@ -313,7 +317,7 @@
           });
         return t ? t.get(e) : null;
       }
-      const A = new (c())(
+      const f = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -362,7 +366,7 @@
       function h(e) {
         const { data: a, isLoading: t } = (0, i.I)({
           queryKey: [v, e],
-          queryFn: () => A.load(e),
+          queryFn: () => f.load(e),
         });
         return [a, t];
       }
@@ -371,7 +375,7 @@
           { data: t, isLoading: r } = (0, i.I)({
             queryKey: [v, e],
             queryFn: async () => {
-              const t = await A.loadMany(e);
+              const t = await f.loadMany(e);
               return (
                 t.forEach((e) => {
                   const t = [v, new s.b(e.steamid).GetAccountID()];
@@ -419,11 +423,11 @@
           o.createElement(
             "div",
             { className: s.HeaderCtn },
-            o.createElement(f, {
+            o.createElement(A, {
               baseClass: (0, d.A)(s.ReplayLogo, a.ReplayLogo),
               accentClass: (0, d.A)(s.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
-            o.createElement(A, { year: e.year, theme: a }),
+            o.createElement(f, { year: e.year, theme: a }),
           ),
           o.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
           o.createElement(v, { theme: a }),
@@ -506,7 +510,7 @@
           }),
         );
       }
-      function f(e) {
+      function A(e) {
         const { baseClass: a, accentClass: t } = e;
         return o.createElement(
           "svg",
@@ -534,7 +538,7 @@
           }),
         );
       }
-      function A(e) {
+      function f(e) {
         const { year: a, theme: t } = e;
         return o.createElement(
           "div",

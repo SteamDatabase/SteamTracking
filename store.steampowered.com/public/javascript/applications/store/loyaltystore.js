@@ -9346,7 +9346,7 @@
       var w = r(61336),
         y = r(30470);
       const C = ({ className: e, ...t }) => {
-          const r = i.useRef();
+          const r = i.useRef(void 0);
           return i.createElement(
             i.Fragment,
             null,
@@ -14696,7 +14696,7 @@
       function fe(e) {
         const { children: t } = e,
           r = (0, ce.A)(),
-          n = i.useRef();
+          n = i.useRef(void 0);
         i.useEffect(() => n.current?.Activate(!0), []);
         const a = (0, W.h)("(max-width: 965px)") || s.TS.IN_GAMEPADUI;
         return i.createElement(

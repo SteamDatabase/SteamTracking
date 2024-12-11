@@ -625,7 +625,7 @@
         _ = a(61859),
         g = a(34842),
         f = a(23809),
-        S = a(70996),
+        S = a(57168),
         E = a(56545),
         y = a(94601),
         C = a(72839);
@@ -2767,7 +2767,7 @@
         re = a(84811);
       function se(e) {
         const { SteamInterface: t } = e,
-          a = _.useRef();
+          a = _.useRef(void 0);
         return (
           a.current || (a.current = new Z(t)),
           _.createElement(

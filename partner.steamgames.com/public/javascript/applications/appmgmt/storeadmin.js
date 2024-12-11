@@ -943,7 +943,7 @@
       function u(e) {
         let { hoverKey: t, className: n, renderHover: r } = e,
           i = (0, s.A)(o().MoreDots, n),
-          u = a.useRef(),
+          u = a.useRef(void 0),
           m = a.useCallback(() => {
             d.HideElement(u.current.ownerDocument, t);
           }, [t]);
@@ -1002,7 +1002,7 @@
         C = n.n(g);
       function h(e) {
         const { packageID: t } = e,
-          n = o.useRef();
+          n = o.useRef(void 0);
         return o.createElement(
           "div",
           {
@@ -1075,7 +1075,7 @@
           } = (0, a.xQ)(n, s),
           [p, _, E] = (0, a.Wx)(c, s),
           g = (0, a.Gs)(s),
-          C = o.useRef(),
+          C = o.useRef(void 0),
           S = n + s,
           { strClassName: b } = P(n, s),
           A = "USD" == s,
@@ -1392,7 +1392,7 @@
     36225: (e, t, n) => {
       "use strict";
       n.d(t, { AS: () => A, KZ: () => y, c$: () => D });
-      var a = n(92240),
+      var a = n(51614),
         r = n(60863),
         o = n(92503),
         l = n(90626),
@@ -1981,9 +1981,9 @@
         return a.createElement("input", { type: "hidden", name: i, value: l });
       });
     },
-    9482: (e, t, n) => {
+    59772: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { StoreAppPageHeader: () => Ce, default: () => _e });
+      n.r(t), n.d(t, { StoreAppPageHeader: () => ve, default: () => be });
       var a = n(90626),
         r = n(49693),
         o = n(81393);
@@ -1994,7 +1994,16 @@
         let l = n.marks,
           d = "";
         const u = t.mapNodes.get(n.type),
-          { tag: m, args: p } = c(u, n.attrs);
+          { tag: m, args: p } = (function (e, t) {
+            if (e && e.AttrsToBBArgs) {
+              const { tag: n = e.tag, args: a = {} } = e.AttrsToBBArgs(
+                t.attrs,
+                t,
+              );
+              return { tag: n, args: a };
+            }
+            return { tag: e?.tag, args: {} };
+          })(u, n);
         return (
           m && (d += (0, r.CS)(m, p)),
           n.content.forEach((n) => {
@@ -2007,7 +2016,7 @@
                     const n = e.mapMarks.get(s.type);
                     if (((0, o.w)(n, "mark missing bbtag"), n)) {
                       l.push(s);
-                      const { args: e, tag: t } = c(n, s.attrs);
+                      const { args: e, tag: t } = c(n, s);
                       a += (0, r.CS)(t, e);
                     }
                   }
@@ -2035,7 +2044,7 @@
         ) {
           const t = s.pop(),
             n = e.mapMarks.get(t.type),
-            { tag: o } = c(n, t.attrs);
+            { tag: o } = c(n, t);
           a += (0, r.op)(o);
           const i = l.indexOf(t);
           -1 != i && l.splice(i, 1);
@@ -2044,7 +2053,7 @@
       }
       function c(e, t) {
         if (e && e.AttrsToBBArgs) {
-          const { tag: n = e.tag, args: a = {} } = e.AttrsToBBArgs(t);
+          const { tag: n = e.tag, args: a = {} } = e.AttrsToBBArgs(t.attrs, t);
           return { tag: n, args: a };
         }
         return { tag: e?.tag, args: {} };
@@ -2322,8 +2331,258 @@
         R = n(52038),
         I = n(61859),
         L = n(73745),
-        B = n(73309);
-      const x = (0, T.Nr)(function (e) {
+        B = n(73309),
+        M = n(33645),
+        x = n.n(M),
+        F = n(38539),
+        O = n(4188);
+      function U(e, t, n = 0) {
+        return () => [e, { class: t }, n];
+      }
+      function G(e, t) {
+        return () => [
+          t,
+          { class: x().PreservedUnsupportedTag },
+          ["span", { class: x().Tag }, `[${e}]`],
+          ["span", 0],
+          ["span", { class: x().Tag }, `[/${e}]`],
+        ];
+      }
+      const H = {
+          nodes: {
+            paragraph: {
+              content: "inline*",
+              group: "block",
+              parseDOM: [{ tag: "p" }],
+              toDOM: U("p", (0, R.A)("pm_paragraph", x().Paragraph)),
+              bbCode: { tag: "p", autocloses: !0 },
+            },
+            heading: {
+              attrs: { level: { default: 1 } },
+              content: "inline*",
+              group: "block",
+              defining: !0,
+              parseDOM: [1, 2, 3, 4, 5].map((e) => ({
+                tag: `h${e}`,
+                attrs: { level: e },
+              })),
+              toDOM: (e) => [
+                "h" + e.attrs.level,
+                {
+                  class:
+                    `BB_Header${e.attrs.level} ` +
+                    x()[`Header${e.attrs.level}`],
+                },
+                0,
+              ],
+              bbCode: [1, 2, 3, 4, 5].map((e) => ({
+                tag: `h${e}`,
+                BBArgsToAttrs: () => ({ level: e }),
+                AttrsToBBArgs: (e) => ({ tag: `h${e.level}` }),
+              })),
+            },
+            image: {
+              inline: !0,
+              attrs: {
+                src: {},
+                alt: { default: null },
+                title: { default: null },
+              },
+              group: "inline",
+              draggable: !0,
+              parseDOM: [
+                {
+                  tag: "img[src]",
+                  getAttrs: (e) => ({
+                    src: e.getAttribute("src"),
+                    title: e.getAttribute("title"),
+                    alt: e.getAttribute("alt"),
+                  }),
+                },
+              ],
+              toDOM(e) {
+                const { src: t, alt: n, title: a } = e.attrs;
+                return ["img", { src: t, alt: n, title: a, class: x().Image }];
+              },
+              bbCode: {
+                tag: "img",
+                BBArgsToAttrs: (e) => ({ src: e.src }),
+                AttrsToBBArgs: (e) => ({ args: { src: e.src } }),
+                convertContentToAttr: "src",
+              },
+            },
+            bullet_list: {
+              ...O.fF,
+              content: "list_item+",
+              group: "block",
+              toDOM: U("ul", x().List),
+              bbCode: { tag: "list" },
+            },
+            ordered_list: {
+              ...O.o8,
+              content: "list_item+",
+              group: "block",
+              toDOM: U("ol", x().OrderedList),
+              bbCode: { tag: "olist" },
+            },
+            list_item: {
+              ...O.Aw,
+              content: "paragraph block*",
+              toDOM: U("li", x().ListItem),
+              bbCode: { tag: "*", autocloses: !0 },
+            },
+            code_block: {
+              content: "inline*",
+              marks: "",
+              group: "block",
+              code: !0,
+              defining: !0,
+              parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
+              toDOM: () => [
+                "pre",
+                { class: x().CodeBlock },
+                ["code", { class: x().Code }, 0],
+              ],
+              bbCode: { tag: "code" },
+            },
+          },
+          marks: {
+            strong: {
+              parseDOM: [
+                { tag: "strong" },
+                {
+                  tag: "b",
+                  getAttrs: (e) => "normal" != e.style.fontWeight && null,
+                },
+                {
+                  style: "font-weight=400",
+                  clearMark: (e) => "strong" == e.type.name,
+                },
+                {
+                  style: "font-weight",
+                  getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
+                },
+              ],
+              toDOM: U("b", (0, R.A)("BB_Bold", x().Bold)),
+              bbCode: { tag: "b" },
+            },
+            italic: {
+              parseDOM: [
+                { tag: "i" },
+                { tag: "em" },
+                { style: "font-style=italic" },
+                {
+                  style: "font-style=normal",
+                  clearMark: (e) => "em" == e.type.name,
+                },
+              ],
+              toDOM: U("i", (0, R.A)("BB_Italic", x().Italic)),
+              bbCode: { tag: "i" },
+            },
+            underline: {
+              parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
+              toDOM: U("u", (0, R.A)("BB_Underline", x().Underline)),
+              bbCode: { tag: "u" },
+            },
+            strike: {
+              parseDOM: [{ style: "text-decoration=line-through" }],
+              toDOM: U("span", (0, R.A)("BB_Strike", x().Strike)),
+              bbCode: { tag: "strike" },
+            },
+            code: {
+              parseDOM: [{ tag: "code" }],
+              toDOM: U("code", (0, R.A)("BB_Code", x().Code)),
+              bbCode: { tag: "c" },
+            },
+            link: {
+              attrs: { href: {}, title: { default: null } },
+              inclusive: !1,
+              parseDOM: [
+                {
+                  tag: "a[href]",
+                  getAttrs: (e) => ({
+                    href: e.getAttribute("href"),
+                    title: e.getAttribute("title"),
+                  }),
+                },
+              ],
+              toDOM(e) {
+                const { href: t, title: n } = e.attrs;
+                return ["a", { href: t, title: n, class: "BB_Link" }, 0];
+              },
+              bbCode: {
+                tag: "url",
+                BBArgsToAttrs: (e) => ({ href: e[""] }),
+                AttrsToBBArgs: (e) => ({ args: { "": e.href } }),
+                convertContentToAttr: "href",
+              },
+            },
+          },
+        },
+        K = "noborder",
+        W = "equalcells",
+        $ = F.of({
+          tableGroup: "block",
+          cellContent: "paragraph block*",
+          cellAttributes: {
+            class: {
+              default: x().TableCell,
+              setDOMAttr: (e, t) => {
+                t.class = e;
+              },
+            },
+          },
+        }),
+        z = {
+          BBArgsToAttrs: (e) => {
+            const t = {};
+            return (
+              e.colspan && (t.colspan = parseInt(e.colspan)),
+              e.rowspan && (t.rowspan = parseInt(e.rowspan)),
+              e.colwidth &&
+                (t.colwidth = e.colwidth.split(",").map((e) => parseInt(e))),
+              t
+            );
+          },
+          AttrsToBBArgs: (e) => {
+            const t = {};
+            return (
+              e.colspan && 1 != e.colspan && (t.colspan = e.colspan.toString()),
+              e.rowspan && 1 != e.rowspan && (t.rowspan = e.rowspan.toString()),
+              e.colwidth && (t.colwidth = e.colwidth.join(",")),
+              { args: t }
+            );
+          },
+        },
+        V =
+          ($.table,
+          $.table_row,
+          U("tr", x().TableRow),
+          $.table_cell,
+          $.table_header,
+          a.memo(function () {
+            return (
+              (0, p.c$)(a.useMemo(() => F.AL({ View: Y }), [])),
+              (0, p.c$)(a.useMemo(() => F.LF(), [])),
+              null
+            );
+          }));
+      class Y extends F.Qg {
+        constructor(e, t) {
+          super(e, t), this.SetTableClass(e);
+        }
+        update(e) {
+          return !!super.update(e) && (this.SetTableClass(e), !0);
+        }
+        SetTableClass(e) {
+          this.table.className = (0, R.A)(
+            x().Table,
+            e.attrs[K] && x().NoBorder,
+            e.attrs[W] && x().EqualCells,
+          );
+        }
+      }
+      const q = (0, T.Nr)(function (e) {
         const {
             schemaConfig: t,
             bbcode: n,
@@ -2393,14 +2652,14 @@
               l = (0, b.ak)(t, null, null, o);
             return { refDiv: t, onActivate: r, onGamepadDirection: l };
           })(E),
-          x = (0, L.Ue)(v, _);
+          M = (0, L.Ue)(v, _);
         return a.createElement(
           p.Ot,
           { view: E },
           a.createElement(f.Z, {
             key: `editordiv_${s}`,
             className: (0, R.A)(r, B.Container),
-            ref: x,
+            ref: M,
             spellCheck: s,
             focusable: !0,
             onActivate: y,
@@ -2409,11 +2668,12 @@
             ...i,
           }),
           a.createElement(p.KF, { onUpdate: o, schema: t.pm_schema }),
-          a.createElement(M, { parser: A, schema: t.pm_schema }),
+          a.createElement(j, { parser: A, schema: t.pm_schema }),
+          "table" in t.pm_schema.nodes && a.createElement(V, null),
           c,
         );
       });
-      const M = a.memo(function (e) {
+      const j = a.memo(function (e) {
         const { parser: t, schema: n } = e;
         return (
           (0, p.c$)(
@@ -2442,11 +2702,10 @@
           null
         );
       });
-      var F = n(4188),
-        O = n(4869),
-        U = n(71541),
-        G = n(9154),
-        H = n(30175);
+      var Q = n(4869),
+        X = n(71541),
+        Z = n(9154),
+        J = n(30175);
       n(32754);
       a.memo(function (e) {
         const { schema: t, active: n, closeModal: r, view: o } = e,
@@ -2476,7 +2735,7 @@
             }
           }, [n, o]),
           a.createElement(
-            G.o0,
+            Z.o0,
             {
               onOK: () => {
                 o.dispatch(
@@ -2494,13 +2753,13 @@
               strOKButtonText: (0, I.we)("#FormattingToolbar_InsertLink"),
               bOKDisabled: 0 == i.length,
             },
-            a.createElement(U.pd, {
+            a.createElement(X.pd, {
               ref: d,
               value: l,
               onChange: (e) => s(e.currentTarget.value),
               label: (0, I.we)("#FormattingToolbar_LinkText"),
             }),
-            a.createElement(U.pd, {
+            a.createElement(X.pd, {
               ref: u,
               value: i,
               onChange: (e) => c(e.currentTarget.value),
@@ -2509,71 +2768,71 @@
           )
         );
       });
-      function K() {
+      function ee() {
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
-            H.cQ,
+            J.cQ,
             { tooltip: "#FormattingToolbar_Undo", command: w.tN },
-            a.createElement(O.VnB, null),
+            a.createElement(Q.VnB, null),
           ),
           a.createElement(
-            H.cQ,
+            J.cQ,
             { tooltip: "#FormattingToolbar_Redo", command: w.ZS },
-            a.createElement(O.Bal, null),
+            a.createElement(Q.Bal, null),
           ),
         );
       }
-      function W(e) {
+      function te(e) {
         const { schema: t } = e;
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
-            H.GY,
+            J.GY,
             { tooltip: "#FormattingToolbar_Bold", mark: t.marks.strong },
-            a.createElement(O.l4n, null),
+            a.createElement(Q.l4n, null),
           ),
           a.createElement(
-            H.GY,
+            J.GY,
             { tooltip: "#FormattingToolbar_Italic", mark: t.marks.italic },
-            a.createElement(O.UKJ, null),
+            a.createElement(Q.UKJ, null),
           ),
           a.createElement(
-            H.GY,
+            J.GY,
             {
               tooltip: "#FormattingToolbar_Underline",
               mark: t.marks.underline,
             },
-            a.createElement(O.Gj3, null),
+            a.createElement(Q.Gj3, null),
           ),
           "strike" in t.marks &&
             a.createElement(
-              H.GY,
+              J.GY,
               { tooltip: "#FormattingToolbar_Strike", mark: t.marks.strike },
-              a.createElement(O.tI4, null),
+              a.createElement(Q.tI4, null),
             ),
           "code" in t.marks &&
             a.createElement(
-              H.GY,
+              J.GY,
               { tooltip: "#FormattingToolbar_InlineCode", mark: t.marks.code },
-              a.createElement(O.bmT, null),
+              a.createElement(Q.bmT, null),
             ),
         );
       }
-      function $(e) {
+      function ne(e) {
         const { schema: t } = e;
         return a.createElement(
-          H.u3,
+          J.u3,
           {
             tooltip: "#FormattingToolbar_Paragraph",
             nodeType: t.nodes.paragraph,
           },
-          a.createElement(O.iYj, null),
+          a.createElement(Q.iYj, null),
         );
       }
-      function z(e) {
+      function ae(e) {
         const { schema: t, maxLevel: n = 1, levels: r } = e,
           o = n + r - 1;
         return a.createElement(
@@ -2581,66 +2840,66 @@
           null,
           n <= 1 &&
             a.createElement(
-              H.u3,
+              J.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel1",
                 nodeType: t.nodes.heading,
                 attrs: { level: 1 },
               },
-              a.createElement(O.jRw, null),
+              a.createElement(Q.jRw, null),
             ),
           n <= 2 &&
             o >= 2 &&
             a.createElement(
-              H.u3,
+              J.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel2",
                 nodeType: t.nodes.heading,
                 attrs: { level: 2 },
               },
-              a.createElement(O.qOW, null),
+              a.createElement(Q.qOW, null),
             ),
           n <= 3 &&
             o >= 3 &&
             a.createElement(
-              H.u3,
+              J.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel3",
                 nodeType: t.nodes.heading,
                 attrs: { level: 3 },
               },
-              a.createElement(O.x7X, null),
+              a.createElement(Q.x7X, null),
             ),
           n <= 4 &&
             o >= 4 &&
             a.createElement(
-              H.u3,
+              J.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel4",
                 nodeType: t.nodes.heading,
                 attrs: { level: 4 },
               },
-              a.createElement(O.qzO, null),
+              a.createElement(Q.qzO, null),
             ),
           n <= 5 &&
             o >= 5 &&
             a.createElement(
-              H.u3,
+              J.u3,
               {
                 tooltip: "#FormattingToolbar_HeadingLevel5",
                 nodeType: t.nodes.heading,
                 attrs: { level: 5 },
               },
-              a.createElement(O.jXA, null),
+              a.createElement(Q.jXA, null),
             ),
         );
       }
-      function V(e) {
+      function re(e) {
         const { schema: t, showIndentButtonsAsNeeded: n = !1 } = e,
-          { callbacks: r, view: o } = (0, H.wU)(),
+          { callbacks: r, view: o } = (0, J.wU)(),
           { bullet_list: l, ordered_list: s, list_item: i } = t.nodes,
-          c = a.useMemo(() => F.T2(i), [i]),
-          d = a.useMemo(() => F.$B(i), [i]),
+          c = a.useMemo(() => O.T2(i), [i]),
+          d = a.useMemo(() => O.$B(i), [i]),
           [u, m] = a.useState(() => c(o.state) || d(o.state));
         return (
           (0, L.hL)(
@@ -2656,13 +2915,13 @@
             a.Fragment,
             null,
             a.createElement(
-              Y,
+              oe,
               {
                 tooltip: "#FormattingToolbar_BulletedList",
                 list_type: l,
                 list_item: i,
               },
-              a.createElement(O.JPq, null),
+              a.createElement(Q.JPq, null),
             ),
             s && !1,
             (!n || u) &&
@@ -2670,26 +2929,26 @@
                 a.Fragment,
                 null,
                 a.createElement(
-                  H.cQ,
+                  J.cQ,
                   { tooltip: "#FormattingToolbar_OutdentList", command: c },
-                  a.createElement(O.LSz, null),
+                  a.createElement(Q.LSz, null),
                 ),
                 a.createElement(
-                  H.cQ,
+                  J.cQ,
                   { tooltip: "#FormattingToolbar_IndentList", command: d },
-                  a.createElement(O.ycU, null),
+                  a.createElement(Q.ycU, null),
                 ),
               ),
           )
         );
       }
-      function Y(e) {
+      function oe(e) {
         const { list_type: t, list_item: n, tooltip: r, children: o } = e,
-          { callbacks: l, view: s } = (0, H.wU)(),
+          { callbacks: l, view: s } = (0, J.wU)(),
           i = a.useCallback((e) => void 0 !== (0, N.wt)(e.state, t), [t]),
           [c, d] = a.useState(() => i(s)),
-          u = a.useMemo(() => F.Sd(t), [t]),
-          m = a.useMemo(() => F.T2(n), [n]);
+          u = a.useMemo(() => O.Sd(t), [t]),
+          m = a.useMemo(() => O.T2(n), [n]);
         return (
           (0, L.hL)(
             l,
@@ -2701,197 +2960,13 @@
             ),
           ),
           a.createElement(
-            H.cQ,
+            J.cQ,
             { tooltip: r, toggled: c, command: c ? m : u },
             o,
           )
         );
       }
-      var q = n(33645),
-        j = n.n(q);
-      function Q(e, t, n = 0) {
-        return () => [e, { class: t }, n];
-      }
-      function X(e, t) {
-        return () => [
-          t,
-          { class: j().PreservedUnsupportedTag },
-          ["span", { class: j().Tag }, `[${e}]`],
-          ["span", 0],
-          ["span", { class: j().Tag }, `[/${e}]`],
-        ];
-      }
-      const Z = {
-        nodes: {
-          paragraph: {
-            content: "inline*",
-            group: "block",
-            parseDOM: [{ tag: "p" }],
-            toDOM: Q("p", (0, R.A)("pm_paragraph", j().Paragraph)),
-            bbCode: { tag: "p", autocloses: !0 },
-          },
-          heading: {
-            attrs: { level: { default: 1 } },
-            content: "inline*",
-            group: "block",
-            defining: !0,
-            parseDOM: [1, 2, 3, 4, 5].map((e) => ({
-              tag: `h${e}`,
-              attrs: { level: e },
-            })),
-            toDOM: (e) => [
-              "h" + e.attrs.level,
-              {
-                class:
-                  `BB_Header${e.attrs.level} ` + j()[`Header${e.attrs.level}`],
-              },
-              0,
-            ],
-            bbCode: [1, 2, 3, 4, 5].map((e) => ({
-              tag: `h${e}`,
-              BBArgsToAttrs: () => ({ level: e }),
-              AttrsToBBArgs: (e) => ({ tag: `h${e.level}` }),
-            })),
-          },
-          image: {
-            inline: !0,
-            attrs: {
-              src: {},
-              alt: { default: null },
-              title: { default: null },
-            },
-            group: "inline",
-            draggable: !0,
-            parseDOM: [
-              {
-                tag: "img[src]",
-                getAttrs: (e) => ({
-                  src: e.getAttribute("src"),
-                  title: e.getAttribute("title"),
-                  alt: e.getAttribute("alt"),
-                }),
-              },
-            ],
-            toDOM(e) {
-              const { src: t, alt: n, title: a } = e.attrs;
-              return ["img", { src: t, alt: n, title: a, class: j().Image }];
-            },
-            bbCode: {
-              tag: "img",
-              BBArgsToAttrs: (e) => ({ src: e.src }),
-              AttrsToBBArgs: (e) => ({ args: { src: e.src } }),
-              convertContentToAttr: "src",
-            },
-          },
-          bullet_list: {
-            ...F.fF,
-            content: "list_item+",
-            group: "block",
-            toDOM: Q("ul", j().List),
-            bbCode: { tag: "list" },
-          },
-          ordered_list: {
-            ...F.o8,
-            content: "list_item+",
-            group: "block",
-            toDOM: Q("ol", j().OrderedList),
-            bbCode: { tag: "olist" },
-          },
-          list_item: {
-            ...F.Aw,
-            content: "paragraph block*",
-            toDOM: Q("li", j().ListItem),
-            bbCode: { tag: "*", autocloses: !0 },
-          },
-          code_block: {
-            content: "inline*",
-            marks: "",
-            group: "block",
-            code: !0,
-            defining: !0,
-            parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
-            toDOM: () => [
-              "pre",
-              { class: j().CodeBlock },
-              ["code", { class: j().Code }, 0],
-            ],
-            bbCode: { tag: "code" },
-          },
-        },
-        marks: {
-          strong: {
-            parseDOM: [
-              { tag: "strong" },
-              {
-                tag: "b",
-                getAttrs: (e) => "normal" != e.style.fontWeight && null,
-              },
-              {
-                style: "font-weight=400",
-                clearMark: (e) => "strong" == e.type.name,
-              },
-              {
-                style: "font-weight",
-                getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
-              },
-            ],
-            toDOM: Q("b", (0, R.A)("BB_Bold", j().Bold)),
-            bbCode: { tag: "b" },
-          },
-          italic: {
-            parseDOM: [
-              { tag: "i" },
-              { tag: "em" },
-              { style: "font-style=italic" },
-              {
-                style: "font-style=normal",
-                clearMark: (e) => "em" == e.type.name,
-              },
-            ],
-            toDOM: Q("i", (0, R.A)("BB_Italic", j().Italic)),
-            bbCode: { tag: "i" },
-          },
-          underline: {
-            parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-            toDOM: Q("u", (0, R.A)("BB_Underline", j().Underline)),
-            bbCode: { tag: "u" },
-          },
-          strike: {
-            parseDOM: [{ style: "text-decoration=line-through" }],
-            toDOM: Q("span", (0, R.A)("BB_Strike", j().Strike)),
-            bbCode: { tag: "strike" },
-          },
-          code: {
-            parseDOM: [{ tag: "code" }],
-            toDOM: Q("code", (0, R.A)("BB_Code", j().Code)),
-            bbCode: { tag: "c" },
-          },
-          link: {
-            attrs: { href: {}, title: { default: null } },
-            inclusive: !1,
-            parseDOM: [
-              {
-                tag: "a[href]",
-                getAttrs: (e) => ({
-                  href: e.getAttribute("href"),
-                  title: e.getAttribute("title"),
-                }),
-              },
-            ],
-            toDOM(e) {
-              const { href: t, title: n } = e.attrs;
-              return ["a", { href: t, title: n, class: "BB_Link" }, 0];
-            },
-            bbCode: {
-              tag: "url",
-              BBArgsToAttrs: (e) => ({ href: e[""] }),
-              AttrsToBBArgs: (e) => ({ args: { "": e.href } }),
-              convertContentToAttr: "href",
-            },
-          },
-        },
-      };
-      class J {
+      class le {
         m_ProseMirrorSchema;
         m_mapBBCodeDictionary = new Map();
         m_PMToBBCodeConfig = { mapNodes: new Map(), mapMarks: new Map() };
@@ -2922,7 +2997,7 @@
             o = t ? new Set(t) : void 0;
           for (const t in e.nodes) {
             const { bbCode: r, ...l } = e.nodes[t],
-              s = ee(r, o);
+              s = se(r, o);
             s && ((n[t] = l), a.set(t, s));
           }
           const l = {};
@@ -2968,20 +3043,10 @@
             }),
             r.forEach((e, t) => {
               const n = this.m_ProseMirrorSchema.marks[t],
-                {
-                  tag: a,
-                  BBArgsToAttrs: r,
-                  AttrsToBBArgs: o,
-                  convertContentToAttr: l,
-                  ...s
-                } = e;
+                { tag: a, BBArgsToAttrs: r, AttrsToBBArgs: o, ...l } = e;
               this.m_mapBBCodeDictionary.set(a, {
-                Constructor: {
-                  mark: n,
-                  BBArgsToAttrs: r,
-                  convertContentToAttr: l,
-                },
-                ...s,
+                Constructor: { mark: n, BBArgsToAttrs: r },
+                ...l,
               }),
                 this.m_PMToBBCodeConfig.mapMarks.set(n, {
                   tag: a,
@@ -2990,7 +3055,7 @@
             });
         }
       }
-      function ee(e, t) {
+      function se(e, t) {
         if (t) {
           if (Array.isArray(e)) {
             const n = e.filter((e) => t.has(e.tag));
@@ -3001,23 +3066,23 @@
         return e;
       }
       const {
-          paragraph: te,
-          heading: ne,
-          bullet_list: ae,
-          list_item: re,
-          image: oe,
-        } = Z.nodes,
+          paragraph: ie,
+          heading: ce,
+          bullet_list: de,
+          list_item: ue,
+          image: me,
+        } = H.nodes,
         {
-          strong: le,
-          italic: se,
-          underline: ie,
-          link: ce,
-          strike: de,
-        } = Z.marks;
-      var ue = n(30600),
-        me = n(30470),
-        pe = n(80968);
-      function _e(e) {
+          strong: pe,
+          italic: _e,
+          underline: Ee,
+          link: ge,
+          strike: Ce,
+        } = H.marks;
+      var he = n(30600),
+        Se = n(30470),
+        fe = n(80968);
+      function be(e) {
         const {
             language: t,
             rctToolbarControls: n,
@@ -3026,24 +3091,24 @@
             rctAboveEditor: s,
           } = e,
           [i, c] = a.useState(),
-          d = a.useRef(),
-          u = a.useRef(),
-          m = a.useRef();
+          d = a.useRef(void 0),
+          u = a.useRef(void 0),
+          m = a.useRef(void 0);
         m.current != r && (u.current = r.Value);
         const p = (function () {
             const e = (0, h.FD)(),
               t = a.useRef(e);
             t.current = e;
-            const n = a.useRef();
+            const n = a.useRef(void 0);
             if (!n.current) {
               const e = (e) => t.current.find((t) => t.name === e)?.url;
               n.current =
                 ((r = e),
-                new J({
+                new le({
                   nodes: {
-                    paragraph: te,
+                    paragraph: ie,
                     heading: {
-                      ...ne,
+                      ...ce,
                       attrs: { level: { default: 2 } },
                       parseDOM: [1, 2, 3, 4, 5, 6]
                         .map((e) => ({ tag: `h${e}`, attrs: { level: 2 } }))
@@ -3059,45 +3124,45 @@
                         AttrsToBBArgs: (e) => ({ tag: `h${e.level}` }),
                       })),
                     },
-                    bullet_list: ae,
-                    list_item: re,
+                    bullet_list: de,
+                    list_item: ue,
                     image: {
-                      ...oe,
+                      ...me,
                       toDOM: (e) => ["img", { src: r(e.attrs.src) }],
                     },
                     table: {
                       content: "tr+",
                       group: "block",
-                      toDOM: X("table", "div"),
+                      toDOM: G("table", "div"),
                       bbCode: { tag: "table" },
                     },
                     tr: {
                       content: "(th | td)+",
-                      toDOM: X("tr", "div"),
+                      toDOM: G("tr", "div"),
                       bbCode: { tag: "tr" },
                     },
                     th: {
                       content: "paragraph block*",
-                      toDOM: X("th", "span"),
+                      toDOM: G("th", "span"),
                       bbCode: { tag: "th" },
                     },
                     td: {
                       content: "paragraph block*",
-                      toDOM: X("td", "span"),
+                      toDOM: G("td", "span"),
                       bbCode: { tag: "td" },
                     },
                   },
                   marks: {
-                    strong: le,
-                    italic: se,
-                    underline: ie,
-                    strike: de,
+                    strong: pe,
+                    italic: _e,
+                    underline: Ee,
+                    strike: Ce,
                     link: {
-                      ...ce,
+                      ...ge,
                       toDOM: (e, t) => [
                         "a",
                         {
-                          ...ce.toDOM(e, t)[1],
+                          ...ge.toDOM(e, t)[1],
                           title: (0, I.we)(
                             "#StoreAdmin_GameDescription_LinksDisabled",
                           ),
@@ -3119,21 +3184,21 @@
               [s, i] = a.useState(!1),
               c = a.useRef(),
               d = a.useCallback(
-                (t, n) => {
+                (e, t) => {
                   o?.current && o.current(),
-                    n.doc &&
-                      n.doc != t.state.doc &&
-                      ((c.current = () => l(t.state.doc, e)), i(!0));
+                    t.doc &&
+                      t.doc != e.state.doc &&
+                      ((c.current = e.state.doc), i(!0));
                 },
-                [o, e],
+                [o],
               ),
               u = a.useCallback(() => {
                 if (c.current) {
-                  const e = c.current();
-                  t(e), i(!1);
+                  const n = l(c.current, e);
+                  t(n, c.current), i(!1);
                 }
                 c.current = void 0;
-              }, [t]);
+              }, [t, e]);
             return (
               a.useEffect(() => {
                 if (!s) return;
@@ -3154,10 +3219,10 @@
             d.current && d.current(), (m.current = r);
           }, [i, r]),
           a.createElement(
-            Ee,
+            ke,
             { imageNodeType: p.pm_schema.nodes.image },
             a.createElement(
-              ge,
+              Ae,
               {
                 editorType: o,
                 view: i,
@@ -3167,23 +3232,23 @@
                 rctAboveEditor: s,
               },
               a.createElement(
-                x,
+                q,
                 {
                   panelProps: { lang: (0, I.d$)(t), onBlur: g },
-                  className: pe.EditorPanel,
+                  className: fe.EditorPanel,
                   schemaConfig: p,
                   bbcode: u.current,
                   onUpdate: E,
                   refView: c,
                   dataKey: t,
                 },
-                a.createElement(Se, { schema: p }),
+                a.createElement(Pe, { schema: p }),
               ),
             ),
           )
         );
       }
-      function Ee(e) {
+      function ke(e) {
         const { imageNodeType: t, children: n } = e,
           r = (0, h.cz)(),
           o = a.useCallback(
@@ -3204,7 +3269,7 @@
             [t, r],
           ),
           l = a.useCallback(async (e) => {
-            const t = new URL(`${me.TS.PARTNER_BASE_URL}gfxproxy/externalgfx/`);
+            const t = new URL(`${Se.TS.PARTNER_BASE_URL}gfxproxy/externalgfx/`);
             t.searchParams.append("url", e);
             const n = await fetch(t, { method: "GET" });
             return await n.blob();
@@ -3215,7 +3280,7 @@
           n,
         );
       }
-      function ge(e) {
+      function Ae(e) {
         const {
             editorType: t,
             view: n,
@@ -3232,11 +3297,11 @@
               d(e.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          m = (0, ue.wY)(u);
+          m = (0, he.wY)(u);
         return a.createElement(
           "div",
           null,
-          a.createElement(he, {
+          a.createElement(ye, {
             view: n,
             refUpdateToolbar: r,
             sticky: c,
@@ -3247,8 +3312,8 @@
             "div",
             {
               className: (0, R.A)(
-                pe.AboutTheGameArea,
-                "awards" == t && pe.Awards,
+                fe.AboutTheGameArea,
+                "awards" == t && fe.Awards,
               ),
               ref: m,
             },
@@ -3257,15 +3322,15 @@
           ),
         );
       }
-      function Ce(e) {
+      function ve(e) {
         return a.createElement(
           "h2",
-          { className: pe.StoreAppPageHeader },
+          { className: fe.StoreAppPageHeader },
           e.children,
-          a.createElement("div", { className: pe.GradientRule }),
+          a.createElement("div", { className: fe.GradientRule }),
         );
       }
-      function he(e) {
+      function ye(e) {
         const {
           view: t,
           refUpdateToolbar: n,
@@ -3274,37 +3339,37 @@
           sticky: l,
         } = e;
         return a.createElement(
-          H.bI,
+          J.bI,
           { refUpdateToolbar: n, view: t },
           a.createElement(
-            H.Ez,
+            J.Ez,
             {
               className: (0, R.A)(
-                pe.GameDescriptionEditorToolbar,
-                l && pe.Sticky,
+                fe.GameDescriptionEditorToolbar,
+                l && fe.Sticky,
               ),
             },
-            a.createElement(K, null),
-            a.createElement(H.XQ, null),
-            a.createElement(W, { schema: o }),
-            a.createElement(H.XQ, null),
-            a.createElement($, { schema: o }),
-            a.createElement(z, { schema: o, maxLevel: 2, levels: 1 }),
-            a.createElement(H.XQ, null),
-            a.createElement(V, { schema: o, showIndentButtonsAsNeeded: !0 }),
+            a.createElement(ee, null),
+            a.createElement(J.XQ, null),
+            a.createElement(te, { schema: o }),
+            a.createElement(J.XQ, null),
+            a.createElement(ne, { schema: o }),
+            a.createElement(ae, { schema: o, maxLevel: 2, levels: 1 }),
+            a.createElement(J.XQ, null),
+            a.createElement(re, { schema: o, showIndentButtonsAsNeeded: !0 }),
             "image" in o.nodes &&
               a.createElement(
                 a.Fragment,
                 null,
-                a.createElement(H.XQ, null),
+                a.createElement(J.XQ, null),
                 a.createElement(C.KZ, { nodeType: o.nodes.image }),
               ),
-            a.createElement(H.hK, null),
+            a.createElement(J.hK, null),
             r,
           ),
         );
       }
-      function Se(e) {
+      function Pe(e) {
         const { schema: t } = e,
           n = a.useMemo(
             () => [
@@ -3340,7 +3405,7 @@
         Y7: () => T,
       });
       var a = n(81393),
-        r = n(92240),
+        r = n(51614),
         o = n(60863),
         l = n(90626),
         s = n(71541),
@@ -3608,7 +3673,7 @@
           y,
           { queueExtraAssetUpload: o },
           l.createElement(
-            x,
+            M,
             null,
             l.createElement(k.j, null, l.createElement(g, { rgUploads: n }), t),
           ),
@@ -3688,7 +3753,7 @@
       }
       const L = l.createContext(void 0),
         B = l.createContext(void 0);
-      function x(e) {
+      function M(e) {
         const t = "storeEditorDisableRichEditor",
           [n, a] = l.useState(() => !localStorage.getItem(t)),
           r = l.useCallback((e) => {
@@ -3724,7 +3789,7 @@
                 { className: "form_data_flex" },
                 (function (e) {
                   let [t, n] = a.useState(e.strCurrentColor);
-                  const l = a.useRef(),
+                  const l = a.useRef(void 0),
                     s = (e) => {
                       const l = (e) => {
                         n(e);
@@ -4134,7 +4199,7 @@
               (0, s.we)("#ControllerSupportModal_PgOne_Instructions_VR"),
             ),
           );
-        return a.createElement(M, {
+        return a.createElement(x, {
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgOne_Header",
           strInstructionsToken: m,
@@ -4241,7 +4306,7 @@
               ),
             ),
           );
-        return a.createElement(M, {
+        return a.createElement(x, {
           stepIMG: a.createElement(m.xIk, { type: "xbox" }),
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgTwo_Header",
@@ -4355,7 +4420,7 @@
               ),
             ),
           );
-        return a.createElement(M, {
+        return a.createElement(x, {
           stepIMG: a.createElement(m.xIk, { type: "ps4" }),
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgThree_Header",
@@ -4450,7 +4515,7 @@
               (0, s.we)("#ControllerSupportModal_PgFour_Instructions_note"),
             ),
           );
-        return a.createElement(M, {
+        return a.createElement(x, {
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFour_Header",
           strInstructionsToken: d,
@@ -4470,7 +4535,7 @@
             t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport
               ? "#ControllerSupportModal_PgFive_Question"
               : "#ControllerSupportModal_PgFive_QuestionNoController";
-        return a.createElement(M, {
+        return a.createElement(x, {
           strStepName: (0, s.we)("#ControllerSupportModal_StepString", 5),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFive_Header",
           strInstructionsToken: void 0,
@@ -4540,7 +4605,7 @@
           case 4:
             g = a.createElement(I, { currentValues: c });
         }
-        const C = a.createElement(x, {
+        const C = a.createElement(M, {
             nPageIdx: p,
             nPages: 5,
             strHeaderText: (0, s.we)("#ControllerSupportModal_Title"),
@@ -4590,7 +4655,7 @@
               "k_eNoSteamInputAPISupport");
         })(A || (A = {}));
       const B = a.createContext(null);
-      function x(e) {
+      function M(e) {
         const { nPages: t, nPageIdx: n, strHeaderText: r } = e,
           o = (100 * (n + 1)) / (t + 1);
         return a.createElement(
@@ -4614,7 +4679,7 @@
           ),
         );
       }
-      const M = a.memo(function (e) {
+      const x = a.memo(function (e) {
         const {
           strStepName: t,
           strStepSubHeaderToken: n,
@@ -4985,8 +5050,8 @@
         e.Set(t), window.setTimeout(n, 1);
       }
       var Z = n(92503),
-        J = n(9482);
-      const ee = a.lazy(() => Promise.resolve().then(n.bind(n, 9482)));
+        J = n(59772);
+      const ee = a.lazy(() => Promise.resolve().then(n.bind(n, 59772)));
       function te(e) {
         const {
             rgLanguages: t,
@@ -5424,7 +5489,7 @@
           null,
           m && a.createElement(Se, { appid: n, onClose: C, onCommit: h }),
           _ &&
-            a.createElement(Me, {
+            a.createElement(xe, {
               appid: n,
               bIsGameEdit: t,
               closeModal: () => E(!1),
@@ -5436,12 +5501,12 @@
               "div",
               { className: le.ReleaseDateContent },
               a.createElement(
-                xe,
+                Me,
                 { label: (0, s.we)("#App_Landing_SpecifiedReleaseDate") },
                 a.createElement(Be, { rtReleaseDate: o }),
               ),
               a.createElement(
-                xe,
+                Me,
                 { label: (0, s.we)("#App_Landing_CustomersSeeReleaseDate") },
                 a.createElement(
                   "div",
@@ -5470,7 +5535,7 @@
           ),
           1e3 * r > new Date().getTime() &&
             a.createElement(
-              xe,
+              Me,
               { label: (0, s.we)("#App_Landing_EarliestAdvancedAccessDate") },
               a.createElement(Be, { rtReleaseDate: r }),
             ),
@@ -5499,7 +5564,7 @@
               (0, s.we)("#App_Landing_UnsetReleaseDate"),
             );
       }
-      function xe(e) {
+      function Me(e) {
         return a.createElement(
           "div",
           { className: le.LabelField },
@@ -5507,7 +5572,7 @@
           e.children,
         );
       }
-      function Me(e) {
+      function xe(e) {
         const { appid: t, bIsGameEdit: n, closeModal: r } = e,
           o = a.useCallback(() => {
             n
@@ -5935,8 +6000,8 @@
         It = n(60014),
         Lt = n(91291),
         Bt = n.n(Lt),
-        xt = n(99956);
-      const Mt = "capsule_index_";
+        Mt = n(99956);
+      const xt = "capsule_index_";
       function Ft(e) {
         const {
             capsule: t,
@@ -5965,7 +6030,7 @@
           {
             className: (0, u.A)({
               [vt().OuterCapsuleContainer]: !0,
-              [Mt + o]: 0 == o,
+              [xt + o]: 0 == o,
             }),
             navEntryPreferPosition: gt.iU.PREFERRED_CHILD,
             navKey: l,
@@ -6109,7 +6174,7 @@
                       m.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  a.createElement(xt.n, {
+                  a.createElement(Mt.n, {
                     bHideTitle: !0,
                     rgTagIDs: m.GetTagIDs(),
                     instanceNum: o,
@@ -7439,8 +7504,8 @@
         In = n(34629),
         Ln = n(30470),
         Bn = n(73745),
-        xn = n(68797);
-      class Mn {
+        Mn = n(68797);
+      class xn {
         m_rgMapProposal = new Map();
         m_nTotalItems = 0;
         m_proposalAddRemoveCallback = new We.lu();
@@ -7473,9 +7538,9 @@
                 this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()),
                 !0
               );
-            a = (0, xn.H)(l);
+            a = (0, Mn.H)(l);
           } catch (e) {
-            a = (0, xn.H)(e);
+            a = (0, Mn.H)(e);
           }
           return (
             console.error(
@@ -7508,7 +7573,7 @@
                 this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()),
                 null
               );
-            if (((r = (0, xn.H)(s)), s?.data?.output))
+            if (((r = (0, Mn.H)(s)), s?.data?.output))
               return (
                 console.log(
                   "CPriceProposalReviewRequiredStore::AcceptProposal message information:",
@@ -7518,7 +7583,7 @@
                 s.data.output
               );
           } catch (e) {
-            r = (0, xn.H)(e);
+            r = (0, Mn.H)(e);
           }
           return (
             console.error(
@@ -7532,11 +7597,11 @@
         static s_Singleton;
         static Get() {
           return (
-            Mn.s_Singleton ||
-              ((Mn.s_Singleton = new Mn()),
+            xn.s_Singleton ||
+              ((xn.s_Singleton = new xn()),
               "dev" == Ln.TS.WEB_UNIVERSE &&
-                (window.g_PriceProposalReviewRequiredStore = Mn.s_Singleton)),
-            Mn.s_Singleton
+                (window.g_PriceProposalReviewRequiredStore = xn.s_Singleton)),
+            xn.s_Singleton
           );
         }
         constructor() {
@@ -7555,9 +7620,9 @@
       }
       function Fn() {
         return {
-          fnLoadMoreProposal: Mn.Get().LoadMoreProposal,
-          fnRejectProposal: Mn.Get().RejectProposal,
-          fnAcceptProposal: Mn.Get().AcceptProposal,
+          fnLoadMoreProposal: xn.Get().LoadMoreProposal,
+          fnRejectProposal: xn.Get().RejectProposal,
+          fnAcceptProposal: xn.Get().AcceptProposal,
         };
       }
       function On(e) {
@@ -7968,9 +8033,9 @@
           })(e.toUpperCase()),
         )} (${e})`;
       }
-      (0, In.Cg)([Bn.oI], Mn.prototype, "LoadMoreProposal", null),
-        (0, In.Cg)([Bn.oI], Mn.prototype, "RejectProposal", null),
-        (0, In.Cg)([Bn.oI], Mn.prototype, "AcceptProposal", null),
+      (0, In.Cg)([Bn.oI], xn.prototype, "LoadMoreProposal", null),
+        (0, In.Cg)([Bn.oI], xn.prototype, "RejectProposal", null),
+        (0, In.Cg)([Bn.oI], xn.prototype, "AcceptProposal", null),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -8409,7 +8474,7 @@
       }
       var Ea = n(2897),
         ga = n(75233),
-        Ca = n(92240);
+        Ca = n(51614);
       var ha = n(56330),
         Sa = n.n(ha),
         fa = n(77428),
@@ -8794,7 +8859,7 @@
               s =
                 n.GetRecommendPrice(l, r, e) ||
                 n.GetScaledRecommendedPrice(l, r, e);
-            return a.createElement(xa, {
+            return a.createElement(Ma, {
               key: t.packageid + "-" + e,
               eCurrencyCode: r,
               eRegionCode: e,
@@ -8811,24 +8876,24 @@
             (e) => e.amount.currency_code == t,
           ),
           s = n?.current_costs?.base_amounts.find((e) => e.currency_code == t);
-        return a.createElement(Ma, {
+        return a.createElement(xa, {
           proposed: l,
           originalAmount: s,
           guidePrice: o,
         });
       }
-      function xa(e) {
+      function Ma(e) {
         const { eRegionCode: t, curPrice: n, proposal: r, guidePrice: o } = e,
           l = jn(t),
           s = r.proposed_prices.region_amounts.find((e) => e.name == l),
           i = n?.current_costs?.region_amounts.find((e) => e.region == l);
-        return a.createElement(Ma, {
+        return a.createElement(xa, {
           proposed: s,
           originalAmount: i?.amount,
           guidePrice: o,
         });
       }
-      function Ma(e) {
+      function xa(e) {
         const { proposed: t, originalAmount: n, guidePrice: r } = e;
         let o, l;
         if (t)
@@ -9454,8 +9519,8 @@
             () => (0, on.Tc)("filter_name", "application_config") || "",
           ),
           n = (function () {
-            const [e, t] = (0, a.useState)(() => Mn.Get().GetProposals());
-            return (0, Bn.hL)(Mn.Get().GetProposalListChange(), t), e;
+            const [e, t] = (0, a.useState)(() => xn.Get().GetProposals());
+            return (0, Bn.hL)(xn.Get().GetProposalListChange(), t), e;
           })(),
           r = (function () {
             const [e, t] = (0, a.useState)(
@@ -10370,8 +10435,8 @@
         Ir = n(78395),
         Lr = n(22837),
         Br = n(2160),
-        xr = n(63556),
-        Mr = n(21869),
+        Mr = n(63556),
+        xr = n(21869),
         Fr = n(1431),
         Or = n.n(Fr);
       const Ur = { include_assets: !0, include_basic_info: !0 };
@@ -10413,7 +10478,7 @@
             rgRealms: i,
             className: c,
           } = e,
-          d = (0, xr.E)(),
+          d = (0, Mr.E)(),
           u = s.A0.GetLanguageListForRealms(i),
           m = new Array();
         r &&
@@ -10486,7 +10551,7 @@
                 }),
                 this.m_mapAppIDToDLCs.set(e, o);
             } catch (t) {
-              const n = (0, xn.H)(t);
+              const n = (0, Mn.H)(t);
               console.error(
                 "LoadDLCForAppID for appid: " + e + " hit: " + n.strErrorMsg,
                 n,
@@ -10616,10 +10681,10 @@
           (0, a.useEffect)(() => {
             if (i) {
               const e = (0, Lr.sf)(E.strActiveLanguage, 0);
-              xr.O.Get().SetCurEditLanguage(e);
+              Mr.O.Get().SetCurEditLanguage(e);
             }
           }, [E.strActiveLanguage, i]),
-          (0, W.hL)(xr.O.Get().GetCallback(), (e) => {
+          (0, W.hL)(Mr.O.Get().GetCallback(), (e) => {
             E.setActiveLanguage((0, Lr.Lg)(e));
           }),
           a.createElement(
@@ -10661,7 +10726,7 @@
           [A] = (0, a.useState)(r?.milestone_desc || {}),
           [y, P] = (0, a.useState)(r?.coming_soon_appid),
           [w, D] = (0, a.useState)(Boolean(r?.backfilled_release)),
-          N = (0, a.useRef)(),
+          N = (0, a.useRef)(void 0),
           [T, R] = (0, a.useState)(!1),
           I = (0, a.useMemo)(
             () =>
@@ -10673,7 +10738,7 @@
           L = (0, s.we)(r ? "#SeasonPass_Update" : "#SeasonPass_Create"),
           B = p?.includes(o);
         return a.createElement(
-          Mr.E,
+          xr.E,
           { active: !0 },
           a.createElement(
             Ir.o0,
@@ -10875,7 +10940,7 @@
               "div",
               { className: (0, u.A)(Vr().EditBtn, $r().BtnCtn) },
               a.createElement(
-                Mr.E,
+                xr.E,
                 { active: o },
                 a.createElement(Ir.o0, {
                   strTitle: (0, s.we)("#Button_Delete"),
@@ -11006,7 +11071,7 @@
             );
           }, [n.milestone_id, l, o.dlcAppID]);
         return a.createElement(
-          Mr.E,
+          xr.E,
           { active: !0 },
           a.createElement(
             Ir.o0,
@@ -11253,7 +11318,7 @@
                 : [Br.TU.k_ESteamRealmGlobal],
             [l],
           ),
-          S = (0, xr.E)(),
+          S = (0, Mr.E)(),
           f = s.A0.GetELanguageFallback(S);
         return a.createElement(
           "tr",
@@ -11848,7 +11913,7 @@
           a.Fragment,
           null,
           a.createElement(
-            Mr.E,
+            xr.E,
             { active: "editor" === t || "alert" === t },
             a.createElement(
               So.e,
@@ -12528,7 +12593,7 @@
       }
       var Lo = n(30041),
         Bo = n(83882);
-      function xo(e) {
+      function Mo(e) {
         const [t, n] = a.useState(!1);
         return a.createElement(
           a.Fragment,
@@ -12578,7 +12643,7 @@
                 ),
               e.rgItems.length > 0 &&
                 e.rgItems.map((t, n) =>
-                  a.createElement(Mo, {
+                  a.createElement(xo, {
                     key: n,
                     item: t,
                     language: e.language,
@@ -12604,7 +12669,7 @@
           ),
         );
       }
-      function Mo(e) {
+      function xo(e) {
         const { item: t, language: n } = e;
         let r = (0, s.we)("#StoreAdmin_NonAppContent_MissingLanguage");
         t.localized_title &&
@@ -13220,7 +13285,7 @@
             a.createElement(Oe.X, {
               config: {
                 "packagelanding-nonappcontents-edit": (e) =>
-                  a.createElement(xo, { ...e }),
+                  a.createElement(Mo, { ...e }),
                 "packagelanding-showcapsuleart": (e) =>
                   a.createElement(Ho, { ...e }),
               },
@@ -13235,23 +13300,24 @@
       var a = n(12362),
         r = n(7502),
         o = n(52893),
-        l = n(38539),
-        s = n(90626),
-        i = n(98724),
-        c = n(79216),
-        d = n(4188),
-        u = n(37834);
-      n(74763);
-      const m = s.createContext(null);
+        l = n(90626),
+        s = n(98724),
+        i = n(79216),
+        c = n(4188),
+        d = n(37834);
+      var u = n(15024);
+      n(74763), n(45772);
+      const m = l.createContext(null);
       function p(e) {
-        return s.createElement(m.Provider, { value: e.view }, e.children);
+        return l.createElement(m.Provider, { value: e.view }, e.children);
       }
-      function _(e) {
+      const _ = l.memo(function (e) {
         const { schema: t, onUpdate: n } = e,
-          m = s.useRef(n);
-        (m.current = n),
+          m = l.useRef(n);
+        return (
+          (m.current = n),
           E(
-            s.useMemo(
+            l.useMemo(
               () =>
                 new o.k_({
                   view: (e) => ({ update: (...e) => m.current(...e) }),
@@ -13259,8 +13325,9 @@
               [],
             ),
           ),
+          E(l.useMemo(() => (0, u.z)(), [])),
           E(
-            s.useMemo(
+            l.useMemo(
               () =>
                 (function (e) {
                   const t = (0, a.st)(
@@ -13278,18 +13345,18 @@
                       ),
                     ),
                     n = {
-                      "Mod-z": i.tN,
-                      "Mod-y": i.ZS,
-                      Backspace: c.dv,
+                      "Mod-z": s.tN,
+                      "Mod-y": s.ZS,
+                      Backspace: i.dv,
                       Escape: a.hy,
                       "Mod-Enter": t,
                       "Shift-Enter": t,
                       "Mod-b": (0, a.wh)(e.marks.strong),
                       "Mod-i": (0, a.wh)(e.marks.italic),
                       "Mod-u": (0, a.wh)(e.marks.underline),
-                      Enter: (0, d.wn)(e.nodes.list_item),
-                      "Mod-[": (0, d.T2)(e.nodes.list_item),
-                      "Mod-]": (0, d.$B)(e.nodes.list_item),
+                      Enter: (0, c.wn)(e.nodes.list_item),
+                      "Mod-[": (0, c.T2)(e.nodes.list_item),
+                      "Mod-]": (0, c.$B)(e.nodes.list_item),
                       "Shift-Ctrl-1": (0, a.y_)(e.nodes.heading, { level: 1 }),
                       "Shift-Ctrl-2": (0, a.y_)(e.nodes.heading, { level: 2 }),
                       "Shift-Ctrl-3": (0, a.y_)(e.nodes.heading, { level: 3 }),
@@ -13316,33 +13383,33 @@
               [t],
             ),
           ),
-          E(s.useMemo(() => (0, r.w)(a.RV), [])),
+          E(l.useMemo(() => (0, r.w)(a.RV), [])),
           E(
-            s.useMemo(
+            l.useMemo(
               () =>
                 (function (e) {
-                  return (0, c.sM)({
+                  return (0, i.sM)({
                     rules: [
-                      (0, c.tG)(
+                      (0, i.tG)(
                         /^(\d+)\.\s$/,
                         e.nodes.ordered_list,
                         (e) => ({ order: parseInt(e[1]) }),
                         (e, t) =>
                           t.childCount + t.attrs.order == parseInt(e[1]),
                       ),
-                      (0, c.tG)(/^\s*([-+*])\s$/, e.nodes.bullet_list),
-                      (0, u.OX)(/\*([^*]+)\*/, e.marks.strong),
-                      (0, u.OX)(/_([^_]+)_/, e.marks.italic),
-                      (0, u.OX)(/~([^~]+)~/, e.marks.strike),
-                      (0, u.OX)(/`([^`]+)`/, e.marks.code),
-                      (0, c.JJ)(/^```$/, e.nodes.code_block),
-                      (0, c.JJ)(/^(#{1,5})\s$/, e.nodes.heading, (e) => ({
+                      (0, i.tG)(/^\s*([-+*])\s$/, e.nodes.bullet_list),
+                      (0, d.OX)(/\*([^*]+)\*/, e.marks.strong),
+                      (0, d.OX)(/_([^_]+)_/, e.marks.italic),
+                      (0, d.OX)(/~([^~]+)~/, e.marks.strike),
+                      (0, d.OX)(/`([^`]+)`/, e.marks.code),
+                      (0, i.JJ)(/^```$/, e.nodes.code_block),
+                      (0, i.JJ)(/^(#{1,5})\s$/, e.nodes.heading, (e) => ({
                         level: e[1].length,
                       })),
                       e.nodes.horizontal_rule &&
                         ((t = /^(\*\*\*|---|___)$/),
                         (n = e.nodes.horizontal_rule),
-                        new c.fV(t, (e, t, a, r) =>
+                        new i.fV(t, (e, t, a, r) =>
                           e.tr.replaceWith(a, r, n.create()),
                         )),
                     ].filter(Boolean),
@@ -13351,19 +13418,19 @@
                 })(t),
               [t],
             ),
-          );
-        const p = t.nodes.table;
-        return E(s.useMemo(() => p && (0, l.LF)(), [p])), null;
-      }
+          ),
+          null
+        );
+      });
       function E(e) {
-        const t = s.useContext(m);
-        s.useEffect(() => {
+        const t = l.useContext(m);
+        l.useEffect(() => {
           if (t && e && !t.isDestroyed)
-            return (0, u.JD)(t, e), () => (0, u.xv)(t, e);
+            return (0, d.JD)(t, e), () => (0, d.xv)(t, e);
         }, [t, e]);
       }
       function g() {
-        return s.useContext(m);
+        return l.useContext(m);
       }
     },
     37834: (e, t, n) => {

@@ -605,21 +605,20 @@
     31698: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Q4: () => D,
-        nl: () => R,
-        iY: () => V,
+        Q4: () => M,
+        nl: () => H,
+        iY: () => J,
         CE: () => Z,
-        iD: () => oe,
+        iD: () => ne,
       });
       var o = n(34629),
         r = n(14947),
         s = n(75844),
         i = n(90626),
-        a = n(72739),
-        c = n(6336),
-        l = n(30193),
-        m = n(55263);
-      class p extends i.Component {
+        a = n(6336),
+        c = n(30193),
+        l = n(55263);
+      class m extends i.Component {
         constructor(e) {
           super(e);
         }
@@ -652,19 +651,19 @@
           );
         }
       }
-      var d = n(68451),
-        u = n(52038),
-        h = n(61859),
-        E = n(73745);
-      function S(e, t) {
+      var p = n(68451),
+        d = n(52038),
+        u = n(61859),
+        h = n(73745);
+      function E(e, t) {
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var A = n(78327),
-        g = n(33737),
-        f = n(76217),
-        C = n(88006),
-        _ = n(19418);
-      class v extends i.Component {
+        S = n(33737),
+        g = n(76217),
+        f = n(88006),
+        C = n(19418);
+      class _ extends i.Component {
         constructor(e) {
           super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
         }
@@ -675,11 +674,11 @@
             o = e.length > 1,
             r = o
               ? ({ detail: { button: t } }) => {
-                  t === C.pR.BUMPER_LEFT
+                  t === f.pR.BUMPER_LEFT
                     ? this.setState({
                         activeIndex: Math.max(0, this.state.activeIndex - 1),
                       })
-                    : t === C.pR.BUMPER_RIGHT &&
+                    : t === f.pR.BUMPER_RIGHT &&
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
@@ -689,9 +688,9 @@
                 }
               : void 0;
           return i.createElement(
-            f.Z,
-            { className: _.Picker, onButtonDown: r },
-            o && i.createElement(k, null, this.RenderTabs()),
+            g.Z,
+            { className: C.Picker, onButtonDown: r },
+            o && i.createElement(v, null, this.RenderTabs()),
             n,
           );
         }
@@ -699,7 +698,7 @@
           return this.props.config.map(({ renderTab: e }, t) => {
             const n = this.state.activeIndex === t;
             return i.createElement(
-              I,
+              w,
               {
                 key: t,
                 active: n,
@@ -710,33 +709,33 @@
           });
         }
       }
-      function k(e) {
+      function v(e) {
         return i.createElement(
-          f.Z,
-          { className: _.Tabs, "flow-children": "row" },
+          g.Z,
+          { className: C.Tabs, "flow-children": "row" },
           e.children,
         );
       }
-      function w(e) {
-        return i.createElement("div", { className: _.Content }, e.children);
+      function k(e) {
+        return i.createElement("div", { className: C.Content }, e.children);
       }
-      function I(e) {
+      function w(e) {
         const { active: t, children: n, onClick: o } = e;
         return i.createElement(
-          f.Z,
+          g.Z,
           {
-            className: (0, u.A)(_.Tab, t && _.Active),
-            focusClassName: _.Focus,
+            className: (0, d.A)(C.Tab, t && C.Active),
+            focusClassName: C.Focus,
             onActivate: o,
           },
           i.createElement(
             "div",
-            { className: (0, u.A)(_.TabContent, t && _.Active) },
+            { className: (0, d.A)(C.TabContent, t && C.Active) },
             n,
           ),
         );
       }
-      function N(e) {
+      function I(e) {
         const {
           items: t,
           renderItem: n,
@@ -746,13 +745,13 @@
         } = e;
         let a = t.map((e, s) =>
           i.createElement(
-            f.Z,
+            g.Z,
             {
               key: r(e),
-              className: _.Item,
+              className: C.Item,
               onActivate: () => o(t[s]),
               autoFocus: 0 === s,
-              focusClassName: _.Focus,
+              focusClassName: C.Focus,
             },
             n(t[s]),
           ),
@@ -760,62 +759,62 @@
         return (
           0 === t.length && s && (a = s()),
           i.createElement(
-            f.Z,
-            { "flow-children": "grid", className: _.ItemList },
+            g.Z,
+            { "flow-children": "grid", className: C.ItemList },
             a,
           )
         );
       }
-      function P(e) {
+      function N(e) {
         const { title: t, onFilterChange: n, filter: o, onSubmit: r, ...s } = e;
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            w,
+            k,
             null,
-            i.createElement(b, { title: t }, i.createElement(N, { ...s })),
+            i.createElement(y, { title: t }, i.createElement(I, { ...s })),
           ),
           i.createElement(L, { value: o, onChange: n, onSubmit: r }),
         );
       }
-      function y(e) {
+      function P(e) {
         const { onFilterChange: t, filter: n, sections: o, title: r } = e;
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            w,
+            k,
             null,
-            r && i.createElement("div", { className: _.SectionedPageTitle }, r),
+            r && i.createElement("div", { className: C.SectionedPageTitle }, r),
             o.map(({ title: e, ...t }) =>
               i.createElement(
-                b,
+                y,
                 { title: e, key: e },
-                i.createElement(N, { ...t }),
+                i.createElement(I, { ...t }),
               ),
             ),
           ),
           i.createElement(L, { value: n, onChange: t }),
         );
       }
-      function b(e) {
+      function y(e) {
         return i.createElement(
           "div",
-          { className: _.Section },
-          i.createElement("div", { className: _.SectionTitle }, e.title),
-          i.createElement("div", { className: _.SectionContent }, e.children),
+          { className: C.Section },
+          i.createElement("div", { className: C.SectionTitle }, e.title),
+          i.createElement("div", { className: C.SectionContent }, e.children),
         );
       }
       function L(e) {
         const { value: t, onChange: n, onSubmit: o } = e;
         return i.createElement(
           "div",
-          { className: _.FilterInputContainer },
-          i.createElement(g.pd, {
+          { className: C.FilterInputContainer },
+          i.createElement(S.pd, {
             type: "text",
             placeholder: "Search...",
-            className: _.FilterInput,
+            className: C.FilterInput,
             value: t,
             onChange: (e) => n(e.target.value),
             onSubmit: o,
@@ -825,14 +824,14 @@
       function x(e) {
         const { className: t, ...n } = e;
         return i.createElement("div", {
-          className: (0, u.A)(t, _.AddonPickerMessage),
+          className: (0, d.A)(t, C.AddonPickerMessage),
           ...n,
         });
       }
-      var T = n(70646),
-        B = n.n(T),
-        H = n(51272);
-      class R extends i.PureComponent {
+      var b = n(70646),
+        T = n.n(b),
+        B = n(51272);
+      class H extends i.PureComponent {
         state = { showHover: !1 };
         m_ref = i.createRef();
         OnMouseEnter(e) {
@@ -844,16 +843,16 @@
         render() {
           const { emoticon: e, large: t, emoticonHoverStore: n } = this.props,
             o = `:${e}:`,
-            r = t && n.BLoaded(e) ? n.Get(e).url : l.p.GetEmoticonURL(e, t);
+            r = t && n.BLoaded(e) ? n.Get(e).url : c.p.GetEmoticonURL(e, t);
           return i.createElement(
             i.Fragment,
             null,
             i.createElement(
-              p,
+              m,
               { text: o, style: "merge-adjacent" },
               i.createElement("img", {
                 src: r,
-                className: (0, u.A)(B().emoticon, t ? B().large : void 0),
+                className: (0, d.A)(T().emoticon, t ? T().large : void 0),
                 "data-emoticon": e,
                 onMouseEnter: this.OnMouseEnter,
                 onMouseLeave: this.OnMouseLeave,
@@ -861,7 +860,7 @@
               }),
             ),
             this.state.showHover &&
-              i.createElement(F, {
+              i.createElement(R, {
                 target: this.m_ref.current,
                 store: n,
                 emoticon: e,
@@ -869,59 +868,59 @@
           );
         }
       }
-      (0, o.Cg)([E.oI], R.prototype, "OnMouseEnter", null),
-        (0, o.Cg)([E.oI], R.prototype, "OnMouseLeave", null);
-      const F = (0, s.PA)((e) => {
+      (0, o.Cg)([h.oI], H.prototype, "OnMouseEnter", null),
+        (0, o.Cg)([h.oI], H.prototype, "OnMouseLeave", null);
+      const R = (0, s.PA)((e) => {
           const { target: t, store: n, emoticon: o } = e,
             r = n.Get(o);
           return i.createElement(
-            G,
+            F,
             {
               target: t,
               title: `:${o}:`,
               subtitle: r && r.app_name ? r.app_name : void 0,
             },
-            i.createElement(R, {
+            i.createElement(H, {
               emoticon: o,
               emoticonHoverStore: n,
               large: !0,
             }),
           );
         }),
-        G = ({ target: e, title: t, subtitle: n, children: o }) =>
+        F = ({ target: e, title: t, subtitle: n, children: o }) =>
           i.createElement(
-            c.g,
+            a.g,
             {
               target: e,
               style: { zIndex: 1700 },
-              className: B().EmoticonHover,
+              className: T().EmoticonHover,
             },
             o,
             i.createElement(
               "div",
-              { className: B().Info },
+              { className: T().Info },
               i.createElement(
                 "div",
-                { className: B().Name },
+                { className: T().Name },
                 t || i.createElement("span", null, " "),
               ),
               i.createElement(
                 "div",
-                { className: B().AppName },
+                { className: T().AppName },
                 n || i.createElement("span", null, " "),
               ),
             ),
           );
-      function U(e) {
+      function G(e) {
         return e.recent_emoticons;
       }
-      function M(e) {
+      function U(e) {
         return e.recent_stickers;
       }
       function O(e) {
-        return U(e).length + M(e).length > 0;
+        return G(e).length + U(e).length > 0;
       }
-      const D = (0, s.PA)((e) => {
+      const M = (0, s.PA)((e) => {
         const {
           emoticonStore: t,
           emoticonHoverStore: n,
@@ -953,17 +952,17 @@
                 i.createElement(
                   "span",
                   {
-                    title: (0, h.we)("#AddonPicker_RecentlyUsed"),
-                    className: (0, u.A)(
-                      B().PickerTab,
-                      B().Clock,
-                      e && B().ActiveTab,
+                    title: (0, u.we)("#AddonPicker_RecentlyUsed"),
+                    className: (0, d.A)(
+                      T().PickerTab,
+                      T().Clock,
+                      e && T().ActiveTab,
                     ),
                   },
-                  i.createElement(ce, null),
+                  i.createElement(ie, null),
                 ),
               renderContent: () =>
-                i.createElement(z, {
+                i.createElement(V, {
                   store: t,
                   hoverStore: n,
                   onEmoticonSelect: (e) => a(e.name),
@@ -972,9 +971,9 @@
                 }),
             }),
           i.createElement(
-            d.tz,
+            p.tz,
             null,
-            i.createElement(v, {
+            i.createElement(_, {
               config: [
                 ...m,
                 {
@@ -982,13 +981,13 @@
                     i.createElement(
                       "span",
                       {
-                        title: (0, h.we)("#AddonPicker_Emoticons"),
-                        className: (0, u.A)(B().PickerTab, e && B().ActiveTab),
+                        title: (0, u.we)("#AddonPicker_Emoticons"),
+                        className: (0, d.A)(T().PickerTab, e && T().ActiveTab),
                       },
-                      i.createElement(ie, null),
+                      i.createElement(re, null),
                     ),
                   renderContent: () =>
-                    i.createElement(W, {
+                    i.createElement(z, {
                       store: t,
                       hoverStore: n,
                       onItemSelect: (e) => a(e.name),
@@ -1000,13 +999,13 @@
                     i.createElement(
                       "span",
                       {
-                        title: (0, h.we)("#AddonPicker_Stickers"),
-                        className: (0, u.A)(B().PickerTab, e && B().ActiveTab),
+                        title: (0, u.we)("#AddonPicker_Stickers"),
+                        className: (0, d.A)(T().PickerTab, e && T().ActiveTab),
                       },
-                      i.createElement(se, null),
+                      i.createElement(oe, null),
                     ),
                   renderContent: () =>
-                    i.createElement(q, {
+                    i.createElement(Y, {
                       store: t,
                       onItemSelect: (e) => l(e.name),
                     }),
@@ -1016,13 +1015,13 @@
                     i.createElement(
                       "span",
                       {
-                        title: (0, h.we)("#AddonPicker_RoomEffects"),
-                        className: (0, u.A)(B().PickerTab, e && B().ActiveTab),
+                        title: (0, u.we)("#AddonPicker_RoomEffects"),
+                        className: (0, d.A)(T().PickerTab, e && T().ActiveTab),
                       },
-                      i.createElement(ae, null),
+                      i.createElement(se, null),
                     ),
                   renderContent: () =>
-                    i.createElement(Q, {
+                    i.createElement(q, {
                       store: t,
                       effectSettings: o,
                       onItemSelect: (e) => c(e.name),
@@ -1033,7 +1032,7 @@
           )
         );
       });
-      let J = class extends i.Component {
+      let D = class extends i.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -1064,17 +1063,17 @@
                   i.createElement(
                     "span",
                     {
-                      title: (0, h.we)("#AddonPicker_RecentlyUsed"),
-                      className: (0, u.A)(
-                        B().PickerTab,
-                        B().Clock,
-                        e && B().ActiveTab,
+                      title: (0, u.we)("#AddonPicker_RecentlyUsed"),
+                      className: (0, d.A)(
+                        T().PickerTab,
+                        T().Clock,
+                        e && T().ActiveTab,
                       ),
                     },
-                    i.createElement(ce, null),
+                    i.createElement(ie, null),
                   ),
                 renderContent: () =>
-                  i.createElement(z, {
+                  i.createElement(V, {
                     store: e,
                     hoverStore: t,
                     onEmoticonSelect: (e) => n(e.name),
@@ -1083,9 +1082,9 @@
                   }),
               }),
             i.createElement(
-              d.tz,
+              p.tz,
               null,
-              i.createElement(v, {
+              i.createElement(_, {
                 config: [
                   ...s,
                   {
@@ -1093,16 +1092,16 @@
                       i.createElement(
                         "span",
                         {
-                          title: (0, h.we)("#AddonPicker_Emoticons"),
-                          className: (0, u.A)(
-                            B().PickerTab,
-                            e && B().ActiveTab,
+                          title: (0, u.we)("#AddonPicker_Emoticons"),
+                          className: (0, d.A)(
+                            T().PickerTab,
+                            e && T().ActiveTab,
                           ),
                         },
-                        i.createElement(ie, null),
+                        i.createElement(re, null),
                       ),
                     renderContent: () =>
-                      i.createElement(W, {
+                      i.createElement(z, {
                         store: e,
                         hoverStore: t,
                         onItemSelect: (e) => n(e.name),
@@ -1114,16 +1113,16 @@
                       i.createElement(
                         "span",
                         {
-                          title: (0, h.we)("#AddonPicker_Stickers"),
-                          className: (0, u.A)(
-                            B().PickerTab,
-                            e && B().ActiveTab,
+                          title: (0, u.we)("#AddonPicker_Stickers"),
+                          className: (0, d.A)(
+                            T().PickerTab,
+                            e && T().ActiveTab,
                           ),
                         },
-                        i.createElement(se, null),
+                        i.createElement(oe, null),
                       ),
                     renderContent: () =>
-                      i.createElement(q, {
+                      i.createElement(Y, {
                         store: e,
                         onItemSelect: (e) => o(e.name),
                       }),
@@ -1134,8 +1133,8 @@
           );
         }
       };
-      J = (0, o.Cg)([s.PA], J);
-      class V extends i.Component {
+      D = (0, o.Cg)([s.PA], D);
+      class J extends i.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -1152,22 +1151,22 @@
         }
         render() {
           return i.createElement(
-            d.tz,
+            p.tz,
             null,
-            i.createElement(v, {
+            i.createElement(_, {
               config: [
                 {
                   renderTab: () =>
                     i.createElement(
                       "span",
                       {
-                        title: (0, h.we)("#AddonPicker_Emoticons"),
-                        className: B().PickerTab,
+                        title: (0, u.we)("#AddonPicker_Emoticons"),
+                        className: T().PickerTab,
                       },
-                      i.createElement(ie, null),
+                      i.createElement(re, null),
                     ),
                   renderContent: () =>
-                    i.createElement(X, {
+                    i.createElement(Q, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -1196,22 +1195,22 @@
         }
         render() {
           return i.createElement(
-            d.tz,
+            p.tz,
             null,
-            i.createElement(v, {
+            i.createElement(_, {
               config: [
                 {
                   renderTab: () =>
                     i.createElement(
                       "span",
                       {
-                        title: (0, h.we)("#AddonPicker_Emoticons"),
-                        className: B().PickerTab,
+                        title: (0, u.we)("#AddonPicker_Emoticons"),
+                        className: T().PickerTab,
                       },
-                      i.createElement(ie, null),
+                      i.createElement(re, null),
                     ),
                   renderContent: () =>
-                    i.createElement(K, {
+                    i.createElement(X, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -1223,7 +1222,7 @@
           );
         }
       }
-      class z extends i.Component {
+      class V extends i.Component {
         state = { filter: "" };
         render() {
           const {
@@ -1235,46 +1234,46 @@
             { filter: r } = this.state,
             s = [];
           return (
-            U(e) &&
+            G(e) &&
               s.push({
-                title: (0, h.we)("#AddonPicker_RecentEmoticons"),
-                items: l.p.FilterEmoticons(U(e), r),
+                title: (0, u.we)("#AddonPicker_RecentEmoticons"),
+                items: c.p.FilterEmoticons(G(e), r),
                 onItemSelect: n,
                 renderItem: (e) =>
-                  i.createElement(j, { emoticon: e, emoticonHoverStore: t }),
+                  i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   i.createElement(
                     x,
                     null,
                     r
-                      ? (0, h.we)("#AddonPicker_NoResults")
-                      : (0, h.we)(
+                      ? (0, u.we)("#AddonPicker_NoResults")
+                      : (0, u.we)(
                           "#AddonPicker_NoRecent",
-                          (0, h.we)("#AddonPicker_Emoticons"),
+                          (0, u.we)("#AddonPicker_Emoticons"),
                         ),
                   ),
               }),
-            M(e).length &&
+            U(e).length &&
               s.push({
-                title: (0, h.we)("#AddonPicker_RecentStickers"),
-                items: l.p.FilterStickers(M(e), r),
+                title: (0, u.we)("#AddonPicker_RecentStickers"),
+                items: c.p.FilterStickers(U(e), r),
                 onItemSelect: o,
-                renderItem: (e) => i.createElement($, { sticker: e }),
+                renderItem: (e) => i.createElement(j, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   i.createElement(
                     x,
                     null,
                     r
-                      ? (0, h.we)("#AddonPicker_NoResults")
-                      : (0, h.we)(
+                      ? (0, u.we)("#AddonPicker_NoResults")
+                      : (0, u.we)(
                           "#AddonPicker_NoRecent",
-                          (0, h.we)("#AddonPicker_Stickers"),
+                          (0, u.we)("#AddonPicker_Stickers"),
                         ),
                   ),
               }),
-            i.createElement(y, {
+            i.createElement(P, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: s,
@@ -1282,7 +1281,7 @@
           );
         }
       }
-      class W extends i.Component {
+      class z extends i.Component {
         state = { filter: "" };
         render() {
           const {
@@ -1293,95 +1292,95 @@
             } = this.props,
             { filter: r } = this.state,
             s = !r && o ? e.GetFlairListByGroupID(o) : e.emoticon_list,
-            a = l.p.FilterEmoticons(s, r).slice(0, 1e3);
-          return i.createElement(P, {
-            title: (0, h.we)("#AddonPicker_Emoticons"),
+            a = c.p.FilterEmoticons(s, r).slice(0, 1e3);
+          return i.createElement(N, {
+            title: (0, u.we)("#AddonPicker_Emoticons"),
             items: a,
             onItemSelect: n,
             renderItem: (e) =>
-              i.createElement(j, { emoticon: e, emoticonHoverStore: t }),
+              i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
             keyExtractor: (e) => e.name,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: r,
             onSubmit: () => n(a[0]),
             renderEmpty: () =>
               r
-                ? i.createElement(x, null, (0, h.we)("#AddonPicker_NoResults"))
-                : i.createElement(Y, null),
+                ? i.createElement(x, null, (0, u.we)("#AddonPicker_NoResults"))
+                : i.createElement(W, null),
           });
         }
       }
-      function Y() {
+      function W() {
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
             x,
             null,
-            (0, h.we)(
+            (0, u.we)(
               "#AddonPicker_NoneOwned",
-              (0, h.we)("#AddonPicker_Emoticons"),
+              (0, u.we)("#AddonPicker_Emoticons"),
             ),
           ),
           i.createElement(
             x,
             null,
-            (0, h.PP)(
+            (0, u.PP)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               i.createElement(
-                H.uU,
+                B.uU,
                 { href: `${A.TS.STORE_BASE_URL}points/shop/c/emoticons` },
-                (0, h.we)("#AddonPicker_AcquireAtPointsShop_Link"),
+                (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
               ),
               i.createElement(
-                H.uU,
+                B.uU,
                 { href: `${A.TS.COMMUNITY_BASE_URL}market` },
-                (0, h.we)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
+                (0, u.we)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
               ),
             ),
           ),
         );
       }
-      class q extends i.Component {
+      class Y extends i.Component {
         state = { filter: "" };
         render() {
           const { store: e, onItemSelect: t } = this.props,
             { filter: n } = this.state,
-            o = l.p.FilterStickers(e.GetStickerList(), n);
-          return i.createElement(P, {
-            title: (0, h.we)("#EmoticonPicker_StickerHeading"),
+            o = c.p.FilterStickers(e.GetStickerList(), n);
+          return i.createElement(N, {
+            title: (0, u.we)("#EmoticonPicker_StickerHeading"),
             items: o,
             onItemSelect: t,
-            renderItem: (e) => i.createElement($, { sticker: e }),
+            renderItem: (e) => i.createElement(j, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             onSubmit: () => t(o[0]),
             renderEmpty: () =>
               n
-                ? i.createElement(x, null, (0, h.we)("#AddonPicker_NoResults"))
+                ? i.createElement(x, null, (0, u.we)("#AddonPicker_NoResults"))
                 : i.createElement(
                     i.Fragment,
                     null,
                     i.createElement(
                       x,
                       null,
-                      (0, h.we)(
+                      (0, u.we)(
                         "#AddonPicker_NoneOwned",
-                        (0, h.we)("#AddonPicker_Stickers"),
+                        (0, u.we)("#AddonPicker_Stickers"),
                       ),
                     ),
                     i.createElement(
                       x,
                       null,
-                      (0, h.PP)(
+                      (0, u.PP)(
                         "#AddonPicker_AcquireAtPointsShop",
                         i.createElement(
-                          H.uU,
+                          B.uU,
                           {
                             href: `${A.TS.STORE_BASE_URL}points/shop/c/stickers`,
                           },
-                          (0, h.we)("#AddonPicker_AcquireAtPointsShop_Link"),
+                          (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                         ),
                       ),
                     ),
@@ -1389,47 +1388,47 @@
           });
         }
       }
-      class Q extends i.Component {
+      class q extends i.Component {
         state = { filter: "" };
         render() {
           const { store: e, effectSettings: t, onItemSelect: n } = this.props,
             { filter: o } = this.state,
             r = e.GetEffectList().filter(({ name: e }) => e.indexOf(o) > -1);
-          return i.createElement(P, {
-            title: (0, h.we)("#EmoticonPicker_EffectHeading"),
+          return i.createElement(N, {
+            title: (0, u.we)("#EmoticonPicker_EffectHeading"),
             items: r,
             onItemSelect: n,
             renderItem: (e) =>
-              i.createElement(te, { effect: e, roomEffectSettings: t }),
+              i.createElement(ee, { effect: e, roomEffectSettings: t }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: o,
             onSubmit: () => n(r[0]),
             renderEmpty: () =>
               o
-                ? i.createElement(x, null, (0, h.we)("#AddonPicker_NoResults"))
+                ? i.createElement(x, null, (0, u.we)("#AddonPicker_NoResults"))
                 : i.createElement(
                     i.Fragment,
                     null,
                     i.createElement(
                       x,
                       null,
-                      (0, h.we)(
+                      (0, u.we)(
                         "#AddonPicker_NoneOwned",
-                        (0, h.we)("#AddonPicker_RoomEffects"),
+                        (0, u.we)("#AddonPicker_RoomEffects"),
                       ),
                     ),
                     i.createElement(
                       x,
                       null,
-                      (0, h.PP)(
+                      (0, u.PP)(
                         "#AddonPicker_AcquireAtPointsShop",
                         i.createElement(
-                          H.uU,
+                          B.uU,
                           {
                             href: `${A.TS.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
-                          (0, h.we)("#AddonPicker_AcquireAtPointsShop_Link"),
+                          (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                         ),
                       ),
                     ),
@@ -1437,7 +1436,7 @@
           });
         }
       }
-      let X = class extends i.Component {
+      let Q = class extends i.Component {
         state = { filter: "" };
         render() {
           const {
@@ -1449,54 +1448,54 @@
             { filter: r } = this.state,
             s = [];
           return (
-            U(e).length &&
+            G(e).length &&
               s.push({
-                title: (0, h.we)("#AddonPicker_RecentEmoticons"),
-                items: l.p.FilterEmoticons(U(e), r),
+                title: (0, u.we)("#AddonPicker_RecentEmoticons"),
+                items: c.p.FilterEmoticons(G(e), r),
                 onItemSelect: n,
                 renderItem: (e) =>
-                  i.createElement(j, { emoticon: e, emoticonHoverStore: t }),
+                  i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   i.createElement(
                     x,
                     null,
                     r
-                      ? (0, h.we)("#AddonPicker_NoResults")
-                      : (0, h.we)(
+                      ? (0, u.we)("#AddonPicker_NoResults")
+                      : (0, u.we)(
                           "#AddonPicker_NoRecent",
-                          (0, h.we)("#AddonPicker_Emoticons"),
+                          (0, u.we)("#AddonPicker_Emoticons"),
                         ),
                   ),
               }),
-            i.createElement(y, {
+            i.createElement(P, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: [
                 ...s,
                 {
-                  title: (0, h.we)("#AddonPicker_AllEmoticons"),
-                  items: l.p.FilterStickers(e.emoticon_list, r).slice(0, 1e3),
+                  title: (0, u.we)("#AddonPicker_AllEmoticons"),
+                  items: c.p.FilterStickers(e.emoticon_list, r).slice(0, 1e3),
                   onItemSelect: n,
                   renderItem: (e) =>
-                    i.createElement(j, { emoticon: e, emoticonHoverStore: t }),
+                    i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                   keyExtractor: (e) => e.name,
                   renderEmpty: () =>
                     r
                       ? i.createElement(
                           x,
                           null,
-                          (0, h.we)("#AddonPicker_NoResults"),
+                          (0, u.we)("#AddonPicker_NoResults"),
                         )
-                      : i.createElement(Y, null),
+                      : i.createElement(W, null),
                 },
               ],
             })
           );
         }
       };
-      X = (0, o.Cg)([s.PA], X);
-      let K = class extends i.Component {
+      Q = (0, o.Cg)([s.PA], Q);
+      let X = class extends i.Component {
         state = { filter: "" };
         render() {
           const {
@@ -1506,56 +1505,56 @@
               flairGroupID: o,
             } = this.props,
             { filter: r } = this.state;
-          return i.createElement(y, {
+          return i.createElement(P, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: r,
             sections: [
               {
-                title: (0, h.we)("#ChatEntryButton_Flair"),
-                items: l.p.FilterStickers(e.GetFlairListByGroupID(o), r),
+                title: (0, u.we)("#ChatEntryButton_Flair"),
+                items: c.p.FilterStickers(e.GetFlairListByGroupID(o), r),
                 onItemSelect: n,
                 renderItem: (e) =>
-                  i.createElement(j, { emoticon: e, emoticonHoverStore: t }),
+                  i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   r
                     ? i.createElement(
                         x,
                         null,
-                        (0, h.we)("#AddonPicker_NoResults"),
+                        (0, u.we)("#AddonPicker_NoResults"),
                       )
-                    : i.createElement(Y, null),
+                    : i.createElement(W, null),
               },
             ],
           });
         }
       };
-      K = (0, o.Cg)([s.PA], K);
-      const j = (e) => {
+      X = (0, o.Cg)([s.PA], X);
+      const K = (e) => {
         const { emoticon: t, emoticonHoverStore: n, large: o } = e,
           r = !t.last_used && t.time_received;
         return i.createElement(
           "div",
-          { className: B().EmoticonItem },
-          i.createElement(R, {
+          { className: T().EmoticonItem },
+          i.createElement(H, {
             emoticon: t.name,
             emoticonHoverStore: n,
             large: o,
           }),
-          r && i.createElement(oe, null),
+          r && i.createElement(ne, null),
         );
       };
-      class $ extends i.Component {
+      class j extends i.Component {
         state = { showHover: !1 };
         m_ref = i.createRef();
         render() {
           const { sticker: e, className: t, ...n } = this.props,
-            o = S(A.TS.COMMUNITY_CDN_URL, e.name);
+            o = E(A.TS.COMMUNITY_CDN_URL, e.name);
           return i.createElement(
             "div",
             {
               ref: this.m_ref,
-              className: (0, u.A)(t, B().StickerButton),
+              className: (0, d.A)(t, T().StickerButton),
               onMouseOver: () => this.setState({ showHover: !0 }),
               onFocus: () => this.setState({ showHover: !0 }),
               onMouseLeave: () => this.setState({ showHover: !1 }),
@@ -1564,26 +1563,26 @@
             },
             i.createElement("img", { style: { width: "100%" }, src: o }),
             this.state.showHover &&
-              i.createElement(ee, { target: this.m_ref.current, sticker: e }),
+              i.createElement($, { target: this.m_ref.current, sticker: e }),
           );
         }
       }
-      const ee = (0, s.PA)((e) => {
+      const $ = (0, s.PA)((e) => {
         const {
             target: t,
             sticker: { name: n, appid: o },
           } = e,
-          [r] = (0, m.t7)(o, {});
+          [r] = (0, l.t7)(o, {});
         return i.createElement(
-          G,
+          F,
           { target: t, title: n, subtitle: r?.GetName() },
           i.createElement("img", {
-            src: S(A.TS.COMMUNITY_CDN_URL, n),
-            className: B().StickerHoverSticker,
+            src: E(A.TS.COMMUNITY_CDN_URL, n),
+            className: T().StickerHoverSticker,
           }),
         );
       });
-      class te extends i.Component {
+      class ee extends i.Component {
         state = { showHover: !1 };
         m_ref = i.createRef();
         render() {
@@ -1602,12 +1601,12 @@
               onFocus: () => this.setState({ showHover: !0 }),
               onMouseLeave: () => this.setState({ showHover: !1 }),
               onBlur: () => this.setState({ showHover: !1 }),
-              className: (0, u.A)(n, B().EffectButton),
+              className: (0, d.A)(n, T().EffectButton),
               ...o,
             },
             r.renderEffectIcon(),
             this.state.showHover &&
-              i.createElement(ne, {
+              i.createElement(te, {
                 target: this.m_ref.current,
                 effect: e,
                 roomEffectSettings: t,
@@ -1615,74 +1614,32 @@
           );
         }
       }
-      const ne = (0, s.PA)((e) => {
+      const te = (0, s.PA)((e) => {
         const {
             target: t,
             effect: { name: n, appid: o },
             roomEffectSettings: r,
           } = e,
           s = r[n],
-          [a] = (0, m.t7)(o, {});
+          [a] = (0, l.t7)(o, {});
         return i.createElement(
-          G,
+          F,
           { target: t, title: n, subtitle: a?.GetName() },
           i.createElement(
             "div",
-            { className: B().EffectHoverEffect },
+            { className: T().EffectHoverEffect },
             s.renderEffectIcon(),
           ),
         );
       });
-      function oe() {
+      function ne() {
         return i.createElement(
           "div",
-          { className: B().NewEmoticonIndicator },
-          i.createElement("div", { className: B().NewEmoticonCircle }),
+          { className: T().NewEmoticonIndicator },
+          i.createElement("div", { className: T().NewEmoticonCircle }),
         );
       }
-      class re extends i.Component {
-        constructor(e) {
-          super(e), (this.state = { visible: !1 });
-        }
-        SetVisible(e) {
-          e && !this.state.visible && this.setState({ visible: !0 });
-        }
-        componentDidMount() {
-          this.props.coordinator.RegisterChild(
-            a.findDOMNode(this),
-            this.SetVisible,
-          );
-        }
-        componentWillUnmount() {
-          this.props.coordinator.UnregisterChild(a.findDOMNode(this));
-        }
-        render() {
-          let e = this.props.emoticon,
-            t = [B().EmoticonSelector_Item],
-            n = !1;
-          return (
-            !e.last_used &&
-              e.time_received &&
-              (t.push(B().EmoticonSelector_Item_New), (n = !0)),
-            i.createElement(
-              "div",
-              {
-                className: (0, u.A)(...t),
-                "data-emoticon": e.name,
-                onClick: this.props.onClick,
-              },
-              this.state.visible &&
-                i.createElement(R, {
-                  emoticonHoverStore: this.props.emoticonHoverStore,
-                  emoticon: e.name,
-                  large: !0,
-                }),
-              n && i.createElement(oe, null),
-            )
-          );
-        }
-      }
-      function se(e) {
+      function oe(e) {
         return i.createElement(
           "svg",
           {
@@ -1721,7 +1678,7 @@
           }),
         );
       }
-      function ie(e) {
+      function re(e) {
         return i.createElement(
           "svg",
           {
@@ -1738,7 +1695,7 @@
           }),
         );
       }
-      function ae(e) {
+      function se(e) {
         return i.createElement(
           "svg",
           {
@@ -1769,12 +1726,12 @@
           }),
         );
       }
-      function ce(e) {
+      function ie(e) {
         const { className: t, ...n } = e;
         return i.createElement(
           "svg",
           {
-            className: (0, u.A)("SVGIcon_Button SVGIcon_Clock", t),
+            className: (0, d.A)("SVGIcon_Button SVGIcon_Clock", t),
             version: "1.1",
             x: "0px",
             y: "0px",
@@ -1788,7 +1745,6 @@
           }),
         );
       }
-      (0, o.Cg)([E.oI], re.prototype, "SetVisible", null);
     },
     283: (e, t, n) => {
       "use strict";
@@ -1806,8 +1762,8 @@
         u = n(90024),
         h = n.n(u),
         E = n(97232),
-        S = n(32754);
-      const A = 1576780700;
+        A = n(32754);
+      const S = 1576780700;
       let g = class extends r.Component {
         OnEmoticonClick(e) {
           const {
@@ -1855,7 +1811,7 @@
             this.BHaveUnseenEmoticons() && o)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < A) && (e = A), o("rtLastAckedNewEmoticons", e);
+            (!e || e < S) && (e = S), o("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -1869,7 +1825,7 @@
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < A || (t && (!e || e < t));
+          return !e || e < S || (t && (!e || e < t));
         }
         render() {
           const { disabled: e, className: t, ttip: n, useImg: o } = this.props;
@@ -1889,7 +1845,7 @@
                     focusable: !0,
                   },
                   r.createElement(
-                    S.he,
+                    A.he,
                     { toolTipContent: n },
                     r.createElement("img", {
                       src: this.props.useImg,
@@ -1916,7 +1872,7 @@
                     disabled: e,
                   },
                   r.createElement(
-                    S.he,
+                    A.he,
                     { toolTipContent: n },
                     this.props.buttonIcon || r.createElement(E.nl, null),
                     i && r.createElement(m.iD, null),
@@ -1931,7 +1887,7 @@
     },
     48079: (e, t, n) => {
       "use strict";
-      n.d(t, { $k: () => E, S8: () => A, fI: () => S });
+      n.d(t, { $k: () => E, S8: () => S, fI: () => A });
       var o = n(34629),
         r = n(75844),
         s = n(90626),
@@ -1984,7 +1940,7 @@
             ),
         );
       });
-      class S extends s.Component {
+      class A extends s.Component {
         static sm_embeddedElements = new c.MX(
           "presenter-hover-source-elements",
         );
@@ -2015,10 +1971,10 @@
             },
             o = "presenter-hover-" + Math.floor(1e8 * Math.random());
           (this.m_fnHidePopup = () =>
-            S.sm_embeddedElements.HideElement(t.ownerDocument, o)),
+            A.sm_embeddedElements.HideElement(t.ownerDocument, o)),
             window.addEventListener("scroll", this.OnScroll),
             (this.m_nScrollPosAtHoverStart = window.scrollY);
-          S.sm_embeddedElements.ShowElementDelayed(
+          A.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             150,
             s.createElement(
@@ -2047,11 +2003,11 @@
           );
         }
       }
-      (0, o.Cg)([m.oI], S.prototype, "ClosePopup", null),
-        (0, o.Cg)([m.oI], S.prototype, "OnScroll", null),
-        (0, o.Cg)([m.oI], S.prototype, "OnHover", null),
-        (0, o.Cg)([m.oI], S.prototype, "OnLeave", null);
-      class A extends s.Component {
+      (0, o.Cg)([m.oI], A.prototype, "ClosePopup", null),
+        (0, o.Cg)([m.oI], A.prototype, "OnScroll", null),
+        (0, o.Cg)([m.oI], A.prototype, "OnHover", null),
+        (0, o.Cg)([m.oI], A.prototype, "OnLeave", null);
+      class S extends s.Component {
         render() {
           const e = this.props.photo
               ? (0, i._D)(this.props.photo, (0, a.sf)(p.TS.LANGUAGE))
@@ -2068,7 +2024,7 @@
             "div",
             { className: h().SpeakerOuter },
             s.createElement(
-              S,
+              A,
               { ...this.props },
               s.createElement(
                 "div",

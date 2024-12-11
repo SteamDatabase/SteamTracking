@@ -802,6 +802,7 @@
       }
       class S {
         m_strTrailerName;
+        m_eTrailerCategory;
         m_nBaseID;
         m_Trailer480p;
         m_TrailerMax;
@@ -810,7 +811,8 @@
         m_strScreenshotFull;
         constructor(e) {
           (this.m_strTrailerName = e.trailer_name()),
-            (this.m_nBaseID = e.trailer_base_id());
+            (this.m_nBaseID = e.trailer_base_id()),
+            (this.m_eTrailerCategory = e.trailer_category());
           const t = e.trailer_url_format();
           t &&
             (e.trailer_480p() &&
@@ -844,6 +846,9 @@
         }
         GetTrailerID() {
           return this.m_nBaseID;
+        }
+        GetTrailerCategory() {
+          return this.m_eTrailerCategory;
         }
         GetTrailer480p() {
           return this.m_Trailer480p;

@@ -1617,7 +1617,7 @@
       function u(e) {
         let { hoverKey: t, className: a, renderHover: r } = e,
           c = (0, o.A)(i().MoreDots, a),
-          u = n.useRef(),
+          u = n.useRef(void 0),
           m = n.useCallback(() => {
             d.HideElement(u.current.ownerDocument, t);
           }, [t]);
@@ -1676,7 +1676,7 @@
         _ = a.n(h);
       function E(e) {
         const { packageID: t } = e,
-          a = i.useRef();
+          a = i.useRef(void 0);
         return i.createElement(
           "div",
           {
@@ -1749,7 +1749,7 @@
           } = (0, n.xQ)(a, o),
           [P, g, p] = (0, n.Wx)(s, o),
           h = (0, n.Gs)(o),
-          _ = i.useRef(),
+          _ = i.useRef(void 0),
           b = a + o,
           { strClassName: w } = S(a, o),
           v = "USD" == o,

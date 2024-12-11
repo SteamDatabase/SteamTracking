@@ -13493,7 +13493,7 @@
               n.createElement(
                 Rr.he,
                 {
-                  toolTipContent: n.createElement(Rr.zQ, null, e.labelTooltip),
+                  toolTipContent: e.labelTooltip,
                   direction: "top",
                   bDisabled: null == e.labelTooltip,
                 },
@@ -20279,11 +20279,7 @@
                 r = _a(e.connector_id());
               return n.createElement(
                 Rr.he,
-                {
-                  key: r,
-                  toolTipContent: n.createElement(Rr.zQ, null, `Input ${t}`),
-                  direction: "top",
-                },
+                { key: r, toolTipContent: `Input ${t}`, direction: "top" },
                 n.createElement(
                   Vr.h7,
                   {
@@ -20530,11 +20526,7 @@
                 Rr.he,
                 {
                   key: r,
-                  toolTipContent: n.createElement(
-                    Rr.zQ,
-                    null,
-                    `Filtered Output ${t}`,
-                  ),
+                  toolTipContent: `Filtered Output ${t}`,
                   direction: "top",
                 },
                 n.createElement(
@@ -20560,11 +20552,7 @@
                 Rr.he,
                 {
                   key: r,
-                  toolTipContent: n.createElement(
-                    Rr.zQ,
-                    null,
-                    `Pos/Neg (1 or -1) ${t}`,
-                  ),
+                  toolTipContent: `Pos/Neg (1 or -1) ${t}`,
                   direction: "top",
                 },
                 n.createElement(
@@ -20591,11 +20579,7 @@
                 Rr.he,
                 {
                   key: r,
-                  toolTipContent: n.createElement(
-                    Rr.zQ,
-                    null,
-                    `Extracted Output ${t}`,
-                  ),
+                  toolTipContent: `Extracted Output ${t}`,
                   direction: "top",
                 },
                 n.createElement(
@@ -23867,10 +23851,8 @@
                 Rr.he,
                 {
                   key: r,
-                  toolTipContent: n.createElement(
-                    Rr.zQ,
-                    null,
-                    (0, c.we)(`#SteamLearn_Config_Node_TokenMask_Output_${t}`),
+                  toolTipContent: (0, c.we)(
+                    `#SteamLearn_Config_Node_TokenMask_Output_${t}`,
                   ),
                   direction: "top",
                 },
@@ -24644,10 +24626,8 @@
                 Rr.he,
                 {
                   key: r,
-                  toolTipContent: n.createElement(
-                    Rr.zQ,
-                    null,
-                    (0, c.we)(`#SteamLearn_Config_Node_MaskedHead_Input_${t}`),
+                  toolTipContent: (0, c.we)(
+                    `#SteamLearn_Config_Node_MaskedHead_Input_${t}`,
                   ),
                   direction: "top",
                 },
@@ -25324,7 +25304,7 @@
           n.createElement(
             Rr.he,
             {
-              toolTipContent: n.createElement(Rr.zQ, null, e.strTooltip),
+              toolTipContent: e.strTooltip,
               direction: "top",
               bDisabled: null == e.strTooltip,
             },
@@ -27443,7 +27423,7 @@
               label: (0, c.we)("#SteamLearn_TrainSettings_TrainBatchSizeInput"),
               fnGetInitialValue: () =>
                 e.train_config().train_batch_size()?.toString() || "1000",
-              fnValidateValue: (e) => ir(e, 100, 5e3),
+              fnValidateValue: (e) => ir(e, 10, 5e3),
               fnSetValue: (t) =>
                 e.train_config().set_train_batch_size(parseInt(t)),
             }),

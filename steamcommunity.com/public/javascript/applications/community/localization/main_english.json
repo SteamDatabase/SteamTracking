@@ -1841,7 +1841,7 @@
     "Sale_Section_RewardShelf_ItemInActiveWarning": "This item is currently in-active, please ensure app is release and publish community item before event starts.",
     "Sale_Section_Hide": "Hide section",
     "Sale_Section_Hide_ttip": "Hide this section completely from displaying",
-    "Sale_Section_Disable": "Disable section",
+    "Sale_Section_Disable": "Disable section as 'Techincal Difficulties' message",
     "Sale_Section_Disable_ttip": "Disable section with technical difficulty message, and will show title and other styles applied",
     "Sale_Section_DisableLocalization": "Disable Import/Export Localization for this section",
     "Sale_Section_DisableLocalization_ttip": "Indicates that we do not want to import/export the content of this section. For instance, we are using localization tokens instead.",

@@ -432,6 +432,8 @@
     "OptIn_Appeals_Possible_warning": "The release date of your game is set in the past, which is why your game wasn't automatically eligible. If your release date is set to a past date, but you still haven't released, you may appeal to be included by clicking the button below.",
     "OptIn_NextFest_QAndA_Registration": "Next Fest Registration Question and Answers",
     "OptIn_NextFest_QAndA": "Next Fest Question and Answers",
+    "OptIn_FreeToKeep_Title": "Free-to-keep Item Drops",
+    "OptIn_FreeToKeep_Desc": "For setting up a DLC and announcement to support item drops.",
     "OptIn_SurveyTitle": "Survey: %1$s",
     "OptIn_SurveySubTitle": "Game: %1$s",
     "OptIn_SurveyIntroTitle": "Thank you for participating in %1$s!",

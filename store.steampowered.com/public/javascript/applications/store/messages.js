@@ -4469,7 +4469,7 @@
             next: i,
             displayIndex: n,
           } = e,
-          l = a.useRef(),
+          l = a.useRef(void 0),
           m = a.useRef(s || i);
         if (
           ((function (e, t, r) {

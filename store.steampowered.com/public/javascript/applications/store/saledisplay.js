@@ -411,7 +411,7 @@
             return { sections: t };
           })(),
           t = (0, g.A)(),
-          a = n.useRef();
+          a = n.useRef(void 0);
         return (
           n.useEffect(() => a.current?.Activate(!0), []),
           n.createElement(
@@ -3176,7 +3176,7 @@
         (0, n.useEffect)(() => {
           E(!1),
             v.pU.ClearImageGroup(),
-            o.forEach((e, t) => {
+            o?.forEach((e, t) => {
               const a = i.b.InitFromClanID(h);
               if (0 == v.pU.GetAllLocalizedGroupImages().length) {
                 const t = e && v.i6.GetHashFromHashAndExt(e),

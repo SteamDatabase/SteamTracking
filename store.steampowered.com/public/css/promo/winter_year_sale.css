@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_winter2024 {
-	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2024/Tile-Bg-Autumn.webp') repeat center top, #212531;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/tile_bg_winter_2024_b.webp') repeat center top, #18225e;
     font-family: "Motiva Sans", Sans-serif;
 }
 
@@ -1482,8 +1482,19 @@ p.home_subtitle_ctn a {
     }
 }
 
+@media screen and ( max-width: 1475px )
+{
+    body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
+		height: 40vw !important;
+		background-size: cover !important;
+	}
 
-@media screen and (max-width: 1200px )
+	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
+		height: 32vw;
+	}
+}
+
+@media screen and ( max-width: 1200px )
 {
 
     html.responsive .summer_bottom_text {
@@ -1544,7 +1555,7 @@ p.home_subtitle_ctn a {
     }
 
 	body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
-		height: 45vw !important;
+		height: 40vw !important;
 		background-size: cover !important;
 	}
 
@@ -1586,6 +1597,15 @@ p.home_subtitle_ctn a {
     html.responsive .home_category_games_ctn .salerow3 .sale_capsule {
         max-width: 450px;
     }
+
+    body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
+		height: 45vw !important;
+		background-size: cover !important;
+	}
+
+	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
+		height: 32vw;
+	}
 }
 
 @media screen and (max-width: 910px )
@@ -1854,8 +1874,17 @@ p.home_subtitle_ctn a {
     }
 
 	body.v6.sale_winter2024 .split_banner_ctn .home_sticker_ctn.desktop {
-	display: flex;
-}
+	display: flex;    
+    }
+
+    body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
+		height: 47vw !important;
+		background-size: cover !important;
+	}
+
+	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
+		height: 30vw;
+	}
 
 }
 

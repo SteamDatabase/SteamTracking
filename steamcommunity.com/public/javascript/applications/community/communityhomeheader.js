@@ -36,7 +36,7 @@
     },
     92598: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => v });
+      a.r(t), a.d(t, { default: () => b });
       var n = a(90626),
         r = a(61859),
         o = a(84202),
@@ -54,10 +54,10 @@
         H = a(92757),
         f = a(76217),
         C = a(12447),
-        b = a(91336);
-      function v() {
-        const e = (0, b.A)(),
-          t = (0, n.useRef)();
+        v = a(91336);
+      function b() {
+        const e = (0, v.A)(),
+          t = (0, n.useRef)(void 0);
         return (
           (0, n.useEffect)(() => {
             t.current && t.current.TakeFocus();
@@ -251,7 +251,7 @@
       }
       function I(e) {
         const { activeTab: t, activeSort: a } = e,
-          o = n.useRef();
+          o = n.useRef(void 0);
         n.useEffect(() => {
           const e = document.getElementById(t);
           if (e && (null == o ? void 0 : o.current)) {

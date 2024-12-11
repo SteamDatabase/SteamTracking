@@ -669,7 +669,7 @@
       }
       var g = a(90626),
         T = a(75233),
-        k = a(70996),
+        k = a(57168),
         f = a(80613),
         v = a(89068),
         w = a(15161);
@@ -1241,7 +1241,7 @@
               : "",
             cListSize: n,
           },
-          i = (0, g.useRef)(),
+          i = (0, g.useRef)(void 0),
           c = i.current;
         let m = !1;
         c &&
@@ -2131,7 +2131,7 @@
             DynamicUserStore: s,
             children: l,
           } = e,
-          o = g.useRef();
+          o = g.useRef(void 0);
         if (!o.current) {
           let e = document.getElementById("steam_charts_root_content");
           e ||
@@ -3417,7 +3417,7 @@
       }
       const Wt = g.memo((e) => {
         const { TopSellers: t } = e,
-          a = g.useRef();
+          a = g.useRef(void 0);
         if (t && t.rgRanks.length) {
           const e = t.rgRanks;
           let r = e.find((e) => 1 === e.nConsecutiveWeeks);
@@ -3445,7 +3445,6 @@
           a.e(4607),
           a.e(7937),
           a.e(7810),
-          a.e(79),
           a.e(7276),
           a.e(6525),
           a.e(7436),
@@ -3469,6 +3468,7 @@
           a.e(8458),
           a.e(5424),
           a.e(7854),
+          a.e(119),
           a.e(2062),
           a.e(2837),
           a.e(6855),

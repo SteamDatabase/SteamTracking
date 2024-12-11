@@ -298,7 +298,7 @@
       }
       function b(e) {
         const { selected: t, setSelected: n } = e,
-          s = (0, r.useRef)(),
+          s = (0, r.useRef)(void 0),
           i = (function () {
             const [e] = (0, r.useState)(() => o);
             return e;

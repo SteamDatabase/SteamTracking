@@ -948,13 +948,13 @@
       function T(e) {
         const { oEditableMessage: t } = e,
           [r] = (0, n.q3)(() => [t.GetStoreItemKey()]);
-        return "app" != r.item_type
-          ? i.createElement(
+        return r && "app" == r.item_type
+          ? i.createElement(F, { oEditableMessage: t, idKey: r })
+          : i.createElement(
               "div",
               { className: D.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
-            )
-          : i.createElement(F, { oEditableMessage: t, idKey: r });
+            );
       }
       function F(e) {
         const { oEditableMessage: t, idKey: r } = e,

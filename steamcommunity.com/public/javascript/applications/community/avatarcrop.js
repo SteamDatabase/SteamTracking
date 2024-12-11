@@ -21,19 +21,19 @@
         i = a(61859),
         s = a(35471),
         l = a(4111);
-      const u = 184,
-        d = 5,
+      const d = 184,
+        u = 5,
         g = 1048576,
         m = r.forwardRef(function (e, t) {
           const {
             isLoading: a,
             imageRef: n,
             loaderRef: c,
-            getBlob: u,
+            getBlob: d,
           } = (function (e) {
             const [t, a] = r.useState(!0),
-              n = r.useRef(),
-              c = r.useRef(),
+              n = r.useRef(void 0),
+              c = r.useRef(void 0),
               i = r.useRef(null);
             return (
               r.useEffect(() => {
@@ -82,7 +82,7 @@
             );
           })(e.imageData);
           return (
-            r.useImperativeHandle(t, () => ({ getBlob: u })),
+            r.useImperativeHandle(t, () => ({ getBlob: d })),
             r.createElement(
               "div",
               { className: l.AvatarCrop },
@@ -120,17 +120,17 @@
       }
       async function f(e, t) {
         const a = e.getData();
-        let r = d;
+        let r = u;
         for (;;) {
           const e = await w(
-            v(t, { left: a.x, top: a.y, size: a.width, maxSize: u * r }),
+            v(t, { left: a.x, top: a.y, size: a.width, maxSize: d * r }),
           );
           if (1 === r || e.size < g) return e;
           r--;
         }
       }
       function v(e, t) {
-        const a = Math.min(Math.max(u, t.size), t.maxSize),
+        const a = Math.min(Math.max(d, t.size), t.maxSize),
           r = document.createElement("canvas");
         (r.width = a), (r.height = a);
         const n = r.getContext("2d");

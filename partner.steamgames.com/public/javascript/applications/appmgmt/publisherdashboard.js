@@ -409,7 +409,7 @@
           n.createElement("div", { className: v.DayTooltipDate }, r.format(t)),
           a.map((e) => n.createElement(T, { key: e.id, event: e })),
         );
-        return n.createElement(E.he, { toolTipContent: i }, s);
+        return n.createElement(E.m9, { toolTipContent: i }, s);
       }
       function T(e) {
         const { event: t } = e;
@@ -420,7 +420,7 @@
             return () => a?.Unregister();
           }, [e, t]);
         })(t);
-        const a = n.useRef();
+        const a = n.useRef(void 0);
         return (
           n.useEffect(() => {
             a.current?.style.setProperty("--event-color", t.color);
@@ -2998,7 +2998,7 @@
       function ke(e) {
         const { text: t, count: a, tooltip: r, hidden: s } = e;
         return n.createElement(
-          E.he,
+          E.m9,
           { toolTipContent: r },
           n.createElement(
             "div",
@@ -4004,7 +4004,7 @@
                 ),
               ),
               n.createElement(
-                E.he,
+                E.m9,
                 { className: wt.AppsCountToolTipSource, toolTipContent: m },
                 n.createElement(
                   "a",
@@ -4687,9 +4687,9 @@
         var P, F;
         const G = 0 != w || (y && y.trim().length > 0),
           L = n.useMemo(() => new Map(), []),
-          z = n.useRef(),
+          z = n.useRef(void 0),
           k = (function (e, t) {
-            const a = n.useRef(),
+            const a = n.useRef(void 0),
               r = n.useCallback(
                 (n) => {
                   e ? n.scrollIntoView() : (t(!0), (a.current = n));
@@ -4922,7 +4922,7 @@
             [t, h],
           ),
           [w, b] = n.useState(!1),
-          R = n.useRef();
+          R = n.useRef(void 0);
         n.useLayoutEffect(() => {
           const e = () => {
             if (R.current) {
@@ -5060,7 +5060,7 @@
             [E, t],
           ),
           f = n.useMemo(() => Array.from((0, g.bv)(a, g.xi)).sort(Yt), [a]),
-          T = n.useRef(),
+          T = n.useRef(void 0),
           b = n.useMemo(
             () =>
               f.reduce(
