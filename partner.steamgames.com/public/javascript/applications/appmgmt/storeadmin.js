@@ -2560,10 +2560,12 @@
           U("tr", x().TableRow),
           $.table_cell,
           $.table_header,
-          a.memo(function () {
+          a.memo(function (e) {
+            const { schema: t } = e,
+              n = !(!("table" in t.nodes) || !t.nodes.table.spec.tableRole);
             return (
-              (0, p.c$)(a.useMemo(() => F.AL({ View: Y }), [])),
-              (0, p.c$)(a.useMemo(() => F.LF(), [])),
+              (0, p.c$)(a.useMemo(() => n && F.AL({ View: Y }), [n])),
+              (0, p.c$)(a.useMemo(() => n && F.LF(), [n])),
               null
             );
           }));
@@ -2669,7 +2671,7 @@
           }),
           a.createElement(p.KF, { onUpdate: o, schema: t.pm_schema }),
           a.createElement(j, { parser: A, schema: t.pm_schema }),
-          "table" in t.pm_schema.nodes && a.createElement(V, null),
+          a.createElement(V, { schema: t.pm_schema }),
           c,
         );
       });
