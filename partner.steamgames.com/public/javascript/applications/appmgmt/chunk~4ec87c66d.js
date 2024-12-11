@@ -34833,7 +34833,7 @@
                       {
                         className: (0, y.A)(I.WarningStylesBackground, I.Stuck),
                       },
-                      "This Opt-In has unpublished changes",
+                      "This Opt-In has unpublished changes. NOTE: Draft mode is in the process of going away, consider all saved changes to be immediately live. Please publish now.",
                     ),
                   l.createElement(E.V, { tabs: o }),
                   l.createElement("div", { className: _().ClearThings }),
