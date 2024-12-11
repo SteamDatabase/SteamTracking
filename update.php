@@ -31,6 +31,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private bool $SyncProtobufs = false;
 		private bool $DumpJavascriptFiles = false;
 		private bool $UpdateManifestUrls = false;
+		private bool $UpdateSSRUrls = false;
 
 		/** @var array<string, string> */
 		private array $ClientArchiveFolder =
@@ -133,7 +134,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			}
 
-			if( !empty( $this->CurrentSSRFiles ) )
+			if( $this->UpdateSSRUrls && !empty( $this->CurrentSSRFiles ) )
 			{
 				do
 				{
@@ -528,12 +529,15 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				mkdir( $Folder, 0755, true );
 			}
 
+			$IsSSR =
+				str_starts_with( $OriginalFile, 'store.steampowered.com/ssr' );
+
 			if(
+				$IsSSR ||
 				str_ends_with( $File, 'english-json.js' ) ||
 				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.counter-strike.net/' ) ||
-				str_starts_with( $OriginalFile, 'store.steampowered.com/ssr' ) ||
 				str_starts_with( $OriginalFile, 'Scripts/WebUI/steammobile' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/legacy_web/' ) ||
@@ -563,6 +567,11 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				}
 
 				file_put_contents( $File, $Data );
+
+				if( $IsSSR )
+				{
+					$this->UpdateSSRUrls = true;
+				}
 
 				if( str_ends_with( $File, '.js' ) )
 				{
