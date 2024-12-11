@@ -135,21 +135,27 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( !empty( $this->CurrentSSRFiles ) )
 			{
-				$this->URLsToFetch = $this->ProcessSSRFiles();
-
 				do
 				{
-					$URLs = $this->URLsToFetch;
-					$this->URLsToFetch = [];
+					$this->URLsToFetch = $this->ProcessSSRFiles();
 
-					$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
-					$this->Fetch( $URLs, 5 );
+					if( empty( $this->URLsToFetch ) )
+					{
+						break;
+					}
+
+					do
+					{
+						$URLs = $this->URLsToFetch;
+						$this->URLsToFetch = [];
+
+						$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
+						$this->Fetch( $URLs, 5 );
+					}
+					while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 				}
-				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
-			}			
+				while( true );
 
-			if( !empty( $this->CurrentSSRFiles ) )
-			{
 				$this->DeleteOldSSRFiles();
 			}
 
@@ -390,7 +396,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						}
 
 						$this->CurrentSSRFiles[ $File ] = true;
-						
+
 						$this->URLsToFetch[ ] =
 						[
 							'URL'  => $Asset[ 'href' ],
