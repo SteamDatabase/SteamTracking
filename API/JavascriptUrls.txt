@@ -1,7 +1,7 @@
 ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
-${BASE_URL_SHARED_CDN}app_config/timeline/${}_markers.svg
+${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
 ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
@@ -1875,8 +1875,6 @@ ${g_strProfileURL}/stickersopen/
 ${g_strProfileURL}/stickerssave/
 ${g_strRedirectURL}${_ ? '&' : '?'}creationid=${g_creationSessionID}
 ${g_strTabRequestURL}${m_strName}
-${g_strWishlistBaseURL}reorder/
-${g_strWishlistBaseURL}wishlistdata/
 ${g_szBaseURL}/${controller}/${method}/${newID}
 ${g_szBaseURL}/admin/actiononpackagesajax
 ${g_szBaseURL}/admin/addpublisherajax
@@ -2824,9 +2822,6 @@ https://steamcommunity.com/${path}
 https://steamcommunity.com//gid/${clan_steamid}
 https://steamcommunity.com//profiles
 https://steamcommunity.com//tradingcards/boostercreator/
-https://steamcommunity.com/account_linking/${internal_account_id}/begin_link/
-https://steamcommunity.com/account_linking/${internal_account_id}/unlink/
-https://steamcommunity.com/account_linking/${internal_account_id}/update/
 https://steamcommunity.com/actions/AddFriendAjax
 https://steamcommunity.com/actions/AddToWishlist
 https://steamcommunity.com/actions/BlockUserAjax
@@ -3043,7 +3038,6 @@ https://steamloopback.host/${}
 https://steamsupport.valvesoftware.com/account/overview/${}
 https://steamsupport.valvesoftware.com/account_support.php?steamID=${strSteamID}
 https://steamsupport.valvesoftware.com/clan/overview/${}
-https://store.akamai.steamstatic.com/public/shared/images/apphubs/play_icon80.png
 https://store.cloudflare.steamstatic.com/public/images/blank.gif
 https://store.cloudflare.steamstatic.com/public/images/loyalty/reactions/still/${award}.png
 https://store.cloudflare.steamstatic.com/public/images/recommended_thumb.png
@@ -3095,9 +3089,7 @@ https://store.steampowered.com/app/730/CounterStrike_2/
 https://store.steampowered.com/appreport/${nAppId}/report/
 https://store.steampowered.com/appreviewhistogram/${appid}
 https://store.steampowered.com/appreviews/${appid}
-https://store.steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts/
 https://store.steampowered.com/bundle/${unBundleID}/
-https://store.steampowered.com/cart
 https://store.steampowered.com/cart/
 https://store.steampowered.com/cart/addtocart
 https://store.steampowered.com/cart/forgetcart
@@ -3139,7 +3131,6 @@ https://store.steampowered.com/explore/startnew/${g_eDiscoveryQueueType}/
 https://store.steampowered.com/explore/updatediscoveryqueuesettings
 https://store.steampowered.com/franchise/${vanity_url}
 https://store.steampowered.com/freelicense/addfreebundle/${bundleid}
-https://store.steampowered.com/freelicense/addfreelicense
 https://store.steampowered.com/freelicense/addfreelicense/${}
 https://store.steampowered.com/friends/frienddata
 https://store.steampowered.com/friends/recommendgame
@@ -3388,7 +3379,6 @@ steam://remoteplay/connect/${}?appid=${}&${}
 steam://run/${app_to_run}
 steam://run/${appid}
 steam://run/${}
-steam://run/%1$s
 steam://run/250820
 steam://rungame/${appID}/${}
 steam://rungame/${}/${}

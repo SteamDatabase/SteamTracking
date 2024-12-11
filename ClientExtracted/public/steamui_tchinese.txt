@@ -2135,7 +2135,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"此遊戲將會在更新釋出時自動更新。Steam 將會優先下載此遊戲的更新。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=demo"		"此試用版將會在更新釋出時自動更新。Steam 將會優先下載此試用版的更新。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"此媒體將會在更新釋出時自動更新。Steam 將會優先下載此媒體的更新。"
-"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"此原聲帶及其更新會在釋出時自動下載。Steam 將會優先下載此媒體。"
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"此原聲帶及其更新會在釋出時自動下載。Steam 將會優先下載此媒體的更新。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"此工具將會在更新釋出時自動更新。Steam 將會優先下載此工具的更新。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "此內容將會在更新釋出時自動更新。Steam 將會優先下載此內容的更新。"
 
@@ -3462,7 +3462,7 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_LibrariesLabel"	"收藏庫管理"
 "Steam_DownloadRestrictionsLabel"	"下載限制"
 
-"Steam_ServerBrowserPingRateLabel"	"伺服器瀏覽器 Ping / 分鐘"
+"Steam_ServerBrowserPingRateLabel"	"伺服器瀏覽器每分鐘 Ping 數"
 "Steam_ServerBrowserPingRateInfo"	"瀏覽遊戲伺服器時發生連線問題？請試著降低此數值。"
 "Steam_ServerBrowserPingRateDefault"	"自動（%PingsPerMin%）"
 

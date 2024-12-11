@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Erreur fatale"
 "SteamBootstrapper_Warning_Title"			"%appname% - Avertissement"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% n'est plus pris en charge par la version de votre système d'exploitation."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname% n'est plus pris en charge sur la version de votre système d'exploitation.\nVous pouvez ignorer cette vérification avec l'option de lancement -⁠⁠overrideminos.\nIl est possible que %appname% ne fonctionne pas correctement et que cette manipulation devienne obsolète.\nVeuillez mettre à jour votre système d'exploitation vers une version compatible pour garantir le bon fonctionnement de cette application."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% n'est plus pris en charge sur la version de votre système d'exploitation.\n\nCliquez sur OK pour fermer la version bêta sélectionnée de %appname%."
 "SteamBootstrapper_Starting"                  "Démarrage…"
 }

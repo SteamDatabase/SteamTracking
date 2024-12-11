@@ -170,6 +170,8 @@
     "FamilyManagement_Household_JoinFamily": "您目前没有资格加入此蒸汽平台家庭，因为您的蒸汽平台活动并未表明您与该家庭的其他成员属于同一户人家。",
     "RemotePlay_StoreFunctionalityBlocked_Description": "通过此蒸汽平台流式应用客户端运行时无法访问商店。",
     "Settings_Hotkey_ToggleOverlay": "切换蒸汽平台叠加界面",
+    "MeetSteam_Reg_Preset": "蒸汽平台合作伙伴",
+    "MeetSteam_Reg_Preset_ttip": "根据您的蒸汽平台合作伙伴帐户自动填写表格",
     "ClipDialog_ShareOnCommunity": "在蒸汽平台上分享…",
     "ClipExport_NoResolutionOptions": "蒸汽平台不支持缩放到低于原始录制尺寸的分辨率。",
     "ShareClip_SaveToRecordings": "在蒸汽平台中保存",
@@ -188,10 +190,12 @@
     "Settings_GameRecording_ModeDescription_Always": "<1>当您开始游戏时，蒸汽平台会自动录制游戏视频，这样您就不会错过那些意想不到的时刻了。</1><2>最后的 <4>%1$s</4> 分钟视频将以暂时性格式保留，供您回放或永久保存为剪辑。</2>",
     "Settings_GameRecording_ModeDescription_Manual": "只有当您按下 %1$s 后，蒸汽平台才会录制视频。",
     "Settings_GameRecording_Path_NeedRestart": "您需要重启蒸汽平台才能更改录像文件夹。",
+    "Settings_GameRecording_DiskSpaceTooltip": "蒸汽平台会根据游戏的视频分辨率来选择适合每个录像的比特率。游戏分辨率越高，需要磁盘空间越多。",
     "Settings_GameRecording_RequiresGPUAcceleration": "需要蒸汽平台客户端 GPU 加速",
     "Settings_GameRecording_Length_Modal_MinutesExplainer": "蒸汽平台将保存最近 %1$s 分钟的视频。",
     "Settings_GameRecording_Length_Modal_InfiniteExplainer": "只要有可用空间，蒸汽平台将进行无限期录制。",
     "Settings_GameRecording_Length_Modal_NeverExplainer": "蒸汽平台将永远不会录制此游戏。录制热键已禁用。",
     "Settings_VideoRecording_NvidiaDriverUpdate": "您的 NVIDIA 驱动程序已过期。要想用您的显卡来加速视频编码，请从 NVIDIA 网站更新至最新的驱动程序版本（%1$s 或更新），然后重启蒸汽平台。",
+    "Settings_GameRecording_BitRate_Modal_Auto_Explainer": "蒸汽平台用游戏的视频分辨率来选择适合每个录像的比特率。选择更高的质量水平可以获得观感更好的录像，但会消耗更多磁盘空间。",
     "MediaManager_AppHeader_NonSteamGame": "非蒸汽平台游戏"
 }

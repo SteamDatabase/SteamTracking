@@ -48,6 +48,7 @@ BufferDeviceAddress
 CH\f1
 CRC mismatch!\n
 Cannot copy unknown pNext sType: %d.\n
+Cannot shallow copy unknown pNext sType: %d.\n
 Compute pipeline
 December
 Descriptor set layout
@@ -61,8 +62,6 @@ EydV
 FOSSILIZEDB
 FOSSILIZE_APPLICATION_INFO_FILTER_PATH
 FOSSILIZE_DUMP_SYNC
-FOSSILIZE_IDENTIFIER_DUMP_PATH
-FOSSILIZE_LAST_USE_TAG
 Failed to add blob to cache.\n
 Failed to capture eagerly.\n
 Failed to open file: %s\n
@@ -74,11 +73,13 @@ Failed to record application info.\n
 Failed to record physical device features.\n
 Failed to seek in file: %s\n
 Failed to serialize application info.\n
+Failed to shallow copy pNext chain.
 February
 FoCLcx
 Fossilize ERROR: Base pipeline index is out of range.\n
 Fossilize ERROR: CRC mismatch!\n
 Fossilize ERROR: Cannot copy unknown pNext sType: %d.\n
+Fossilize ERROR: Cannot shallow copy unknown pNext sType: %d.\n
 Fossilize ERROR: Failed to create directory %s.\n
 Fossilize ERROR: Failed to parse ApplicationInfoFilter, letting recording go through.\n
 Fossilize ERROR: Failed to prepare database, will not dump data to database.\n
@@ -87,6 +88,7 @@ Fossilize ERROR: Failed to prepare on-use database, will not dump those.\n
 Fossilize ERROR: Failed to record application info.\n
 Fossilize ERROR: Failed to record physical device features.\n
 Fossilize ERROR: Failed to serialize application info.\n
+Fossilize ERROR: Failed to shallow copy pNext chain.
 Fossilize ERROR: Member not found.\n
 Fossilize ERROR: Not a string.\n
 Fossilize ERROR: Not an array.\n
@@ -96,6 +98,8 @@ Fossilize ERROR: blacklistEnvironment element must be object.\n
 Fossilize ERROR: blacklistedEnvironments must be an object.\n
 Fossilize ERROR: bucketVariantDependencies must be an array.\n
 Fossilize INFO: Overriding serialization path: "%s".\n
+Fossilize INFO: QA: Required fallback compilation for a total of %llu pipelines.\n
+Fossilize INFO: QA: Successfully created total of %llu pipelines without compilation.\n
 Fossilize INFO: Skipping recording due to environment rule for: %s.\n
 Fossilize INFO: apiVersion %u is too low for pApplicationName %s. Skipping.\n
 Fossilize INFO: apiVersion %u is too low for pEngineName %s. Skipping.\n
@@ -127,6 +131,7 @@ Fossilize WARN: Failed to record render pass, usually caused by unsupported pNex
 Fossilize WARN: Failed to record sampler, usually caused by unsupported pNext.\n
 Fossilize WARN: Failed to record shader module, usually caused by unsupported pNext.\n
 Fossilize WARN: Failed to touch last access in %s.\n
+Fossilize WARN: QA: Pipeline compilation required for pipeline, flags %08x'%08x.\n
 Fossilize WARN: Recording compute pipeline failed, usually caused by unsupported pNext.\n
 Fossilize WARN: Recording graphics pipeline failed, usually caused by unsupported pNext.\n
 Fossilize WARN: Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
@@ -181,6 +186,9 @@ Raytracing pipeline
 Render pass
 STEAM_FOSSILIZE_DUMP_PATH
 STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
+STEAM_FOSSILIZE_IDENTIFIER_DUMP_PATH
+STEAM_FOSSILIZE_LAST_USE_TAG
+STEAM_FOSSILIZE_PRECOMPILE_QA
 STv/N
 Saturday
 September
@@ -264,6 +272,8 @@ U1(\Q
 UTF-8
 Unsupported pNext found, cannot hash sType.
 Unsupported pNext found, cannot hash.
+VK_EXT_pipeline_creation_cache_control
+VK_KHR_get_physical_device_properties2
 VK_LAYER_fossilize_GetDeviceProcAddr
 VK_LAYER_fossilize_GetInstanceProcAddr
 VTT for 
@@ -440,7 +450,10 @@ closestHitShader
 cntrl
 code
 codeSize
+colorAttachmentCount
 colorAttachmentFormats
+colorAttachmentInputIndices
+colorAttachmentLocations
 colorAttachments
 colorBlendOp
 colorBlendState
@@ -487,9 +500,12 @@ depthBiasRepresentation
 depthBiasSlopeFactor
 depthBoundsTestEnable
 depthClampEnable
+depthClampMode
+depthClampRange
 depthClipEnable
 depthCompareOp
 depthFailOp
+depthInputAttachmentIndex
 depthResolveMode
 depthStencilAttachment
 depthStencilResolveAttachment
@@ -587,6 +603,7 @@ iconv_close
 iconv_close@GLIBC_2.1
 iconv_open
 iconv_open@GLIBC_2.1
+image2DViewOf3D
 images
 imaginary 
 immutableSamplers
@@ -627,6 +644,7 @@ mapEntries
 maxAnisotropy
 maxDepth
 maxDepthBounds
+maxDepthClamp
 maxLod
 maxPipelineRayHitAttributeSize
 maxPipelineRayPayloadSize
@@ -643,6 +661,7 @@ meshShader
 meshShaderQueries
 minDepth
 minDepthBounds
+minDepthClamp
 minFilter
 minLod
 minSampleShading
@@ -695,6 +714,9 @@ preserveAttachments
 primitiveFragmentShadingRate
 primitiveFragmentShadingRateMeshShader
 primitiveRestartEnable
+primitivesGeneratedQuery
+primitivesGeneratedQueryWithNonZeroStreams
+primitivesGeneratedQueryWithRasterizerDiscard
 print
 provokingVertexMode
 pthread_cond_destroy
@@ -751,12 +773,14 @@ sampleLocationsInfo
 sampleLocationsPerPixel
 sampleMask
 sampleShadingEnable
+sampler2DViewOf3D
 samplers
 samples
 scissorCount
 scissors
 setLayouts
 shaderModules
+shaderObject
 shadingRateAttachmentTexelSize
 sizeof 
 sizeof...
@@ -793,6 +817,7 @@ stderr@GLIBC_2.0
 stencilAttachmentFormat
 stencilFinalLayout
 stencilInitialLayout
+stencilInputAttachmentIndex
 stencilLayout
 stencilLoadOp
 stencilResolveMode

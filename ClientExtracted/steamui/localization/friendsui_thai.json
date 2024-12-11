@@ -719,7 +719,7 @@
     "Friend_InviteError_RateLimitExceeded": "ดูเหมือนว่าเมื่อเร็ว ๆ นี้ คุณได้ส่งคำเชิญเป็นเพื่อนไว้มากเกินไป เพื่อป้องกันสแปม คุณจะต้องรอก่อนที่คุณจะสามารถส่งคำเชิญเป็นเพื่อนเพิ่มเติมได้ โปรดทราบว่าผู้เล่นอื่นยังคงสามารถเพิ่มคุณเป็นเพื่อนได้ในช่วงเวลานี้",
     "Friend_InviteError_LimitedUser": "บัญชีของคุณมีคุณสมบัติไม่ตรงกับข้อกำหนดที่จะใช้คุณสมบัตินี้",
     "Friend_InviteError_LimitedUserLink": "บัญชีของคุณมีคุณสมบัติไม่ตรงกับข้อกำหนดที่จะใช้คุณสมบัตินี้ โปรดดูข้อมูลเพิ่มเติมใน %1$s",
-    "Friend_InviteError_VisitSteamSupport": "โปรดเยี่ยมชมฝ่ายสนับสนุน Steam",
+    "Friend_InviteError_VisitSteamSupport": "โปรดการเยี่ยมชมฝ่ายสนับสนุน Steam",
     "Friend_IgnoreIncomingInvite_Success": "คำร้องขอเป็นเพื่อนจาก %1$s ได้ถูกละเว้น",
     "Friend_IgnoreIncomingInvite_Error": "ตรวจพบข้อผิดพลาดในการละเว้นคำร้องขอเป็นเพื่อนจาก %1$s",
     "Friend_BlockIncomingInvite_Error": "ตรวจพบข้อผิดพลาดในการบล็อคคำร้องขอเป็นเพื่อนจาก %1$s",

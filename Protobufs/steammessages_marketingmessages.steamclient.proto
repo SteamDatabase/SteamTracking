@@ -95,6 +95,15 @@ message CMarketingMessages_GetActiveMarketingMessages_Response {
 	optional uint32 time_next_message_age = 2;
 }
 
+message CMarketingMessages_GetPastMarketingMessages_Request {
+	optional uint32 start_past_days = 1;
+	optional uint32 upto_past_days = 2;
+}
+
+message CMarketingMessages_GetPastMarketingMessages_Response {
+	repeated .CMarketingMessageProto messages = 1;
+}
+
 message CMarketingMessages_GetMarketingMessagesForUser_Request {
 	optional bool include_seen_messages = 1;
 	optional string country_code = 2;
@@ -265,6 +274,7 @@ message CMarketingMessage_GetMarketingMessagesForApps_Response {
 
 service MarketingMessages {
 	rpc GetActiveMarketingMessages (.CMarketingMessages_GetActiveMarketingMessages_Request) returns (.CMarketingMessages_GetActiveMarketingMessages_Response);
+	rpc GetPastMarketingMessages (.CMarketingMessages_GetPastMarketingMessages_Request) returns (.CMarketingMessages_GetPastMarketingMessages_Response);
 	rpc GetMarketingMessagesForUser (.CMarketingMessages_GetMarketingMessagesForUser_Request) returns (.CMarketingMessages_GetMarketingMessagesForUser_Response);
 	rpc DoesUserHavePendingMarketingMessages (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request) returns (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Response);
 	rpc GetDisplayMarketingMessage (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);

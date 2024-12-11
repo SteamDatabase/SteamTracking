@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% — Критична помилка"
 "SteamBootstrapper_Warning_Title"			"%appname% — Попередження"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% більше не підтримується вашою версією операційної системи."
+"SteamCmd_OperatingSystemNoLongerSupported" "Версія вашої операційної системи більше не підтримує %appname%.\nВи можете обійти цю перевірку за допомогою -overrideminos.\n%appname% може не працювати як слід, а підтримка цього способу обходу перевірки може бути вилучена в майбутньому.\nОновіть свою версію операційної системи до підтримуваної для продовження використання."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "Версія вашої операційної системи більше не підтримує %appname%.\n\nНатисніть на кнопку «Гаразд», щоб вийти з вибраної бети %appname%."
 "SteamBootstrapper_Starting"                  "Триває запуск…"
 }

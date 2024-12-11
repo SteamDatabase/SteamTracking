@@ -813,7 +813,7 @@
     "FriendGroup_Search_NoResults": "nessun risultato trovato per \"%1$s\"",
     "FriendGroup_Search_CantFind": "Non riesci a trovare la persona che stai cercando?",
     "FriendGroup_Search_Link": "Cerca in Steam",
-    "FriendsList_Favorites_Hint": "Trascina qui gli amici e le chat per un accesso facilitato",
+    "FriendsList_Favorites_Hint": "Trascina qui amici e chat per l'accesso rapido",
     "Tooltip_FriendsListUpdate": "È disponibile una nuova versione della lista amici",
     "Tooltip_FriendsListUpdate_VeryOld": "È disponibile una nuova versione della lista amici. La versione che stai usando è più vecchia di una settimana.",
     "Friends_ConfirmUpdate_Title": "Aggiorna la lista amici",

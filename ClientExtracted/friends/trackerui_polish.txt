@@ -57,30 +57,30 @@
 "Friends_InShortcut"		"W grze spoza Steam"
 "Friends_Blocked"		"Zablokowany"
 
-"Friends_AddFriend"		"Dodaj znajomego..."
-"Friends_Edit_Profile"	"Edycja profilu..."
+"Friends_AddFriend"		"Dodaj znajomego…"
+"Friends_Edit_Profile"	"Edycja profilu…"
 
 "Friends_FriendList_CurrentGame"	"BIEŻĄCA GRA"
 "Friends_FriendList_InGame"		"W GRZE"
 "Friends_FriendList_Online"		"ONLINE"
 "Friends_FriendList_Offline"		"OFFLINE"
 
-"Friends_SendInstantMessage"		"Wyślij wiadomość..."
-"Friends_Ignore"			"Zablokuj wszelką komunikację..."
+"Friends_SendInstantMessage"		"Wyślij wiadomość…"
+"Friends_Ignore"			"Zablokuj wszelką komunikację…"
 "Friends_UnIgnore"			"Odblokuj"
 "Friends_InviteFriendToGame"		"Zaproś do gry"
 "Friends_JoinGame"				"Dołącz do gry"
 "Friends_LaunchGame"				"Uruchom grę"
 "Friends_ViewGameInfo"			"Wyświetl informacje o grze"
 "Friends_UserDetails"				"Wyświetl informacje o użytkowniku"
-"Friends_RemoveUser"				"Usuń tego znajomego..."
+"Friends_RemoveUser"				"Usuń tego znajomego…"
 
 "Friends_RemoveFriend_Title"			"Znajomi - Usuń użytkownika"
 "Friends_RemoveFriend_Info"				"Czy na pewno chcesz usunąć użytkownika %friend% z listy znajomych?\n\nMożesz dodać go ponownie za pomocą opcji „Dodaj do znajomych”.\n"
 "Friends_RemoveFriend_Button"			"Usuń %friend%"
 
 "Friends_HideFriend_Title"				"Znajomi - Zignoruj użytkownika"
-"Friends_HideFriend_Info"				"Czy na pewno chcesz zignorować i usunąć użytkownika %friend% z twojej listy proponowanych znajomych?\n\nMożesz dodać go później za pomocą przycisku „Dodaj znajomego...”.\n"
+"Friends_HideFriend_Info"				"Czy na pewno chcesz zignorować i usunąć użytkownika %friend% z twojej listy proponowanych znajomych?\n\nMożesz dodać go później za pomocą przycisku „Dodaj znajomego…”.\n"
 "Friends_HideFriend_Button"				"Zignoruj %friend%"
 "Friends_HideFriend_Failed"				"Nie można było zignorować %friend%"
 
@@ -93,7 +93,7 @@
 
 
 "Friends_EnterAccountNameOrEmailAddress"	"Podaj nazwę konta Steam LUB adres e-mail osoby, którą chcesz dodać do listy znajomych."
-"Friends_SearchingForFriend"				"Szukanie %search%..."
+"Friends_SearchingForFriend"				"Szukanie %search%…"
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% został dodany do listy znajomych pod nazwą „%friend%”."
 "Friends_FriendHasBeenAddedToYourList"		"Gracz %friend% został dodany do listy znajomych."
 "Friends_UnableToFindFriendByThatName"		"Nie można znaleźć %search%. Naciśnij „Wstecz”, aby spróbować ponownie."
@@ -103,10 +103,10 @@
 "Friends_ConnectedButOffline"					"Aktualnie wszyscy twoi znajomi widzą, że jesteś offline."
 "Friends_NoFriendsInList"						"Może zaprosisz kogoś do swoich znajomych?"
 "Friends_GoOnline"							"Zaloguj się"
-"Friends_SignIn_RefreshPassword"				"Zaloguj się..."
-"Friends_SignIn_ActivateFriends"				"Dołącz do Znajomych Beta..."
-"Friends_ConnectingToFriendsNetwork"			"Łączenie z siecią znajomych..."
-"Friends_ScanningForFriends"					"Pobieranie listy znajomych..."
+"Friends_SignIn_RefreshPassword"				"Zaloguj się…"
+"Friends_SignIn_ActivateFriends"				"Dołącz do Znajomych Beta…"
+"Friends_ConnectingToFriendsNetwork"			"Łączenie z siecią znajomych…"
+"Friends_ScanningForFriends"					"Pobieranie listy znajomych…"
 
 "Friends_NotConnectedToFriendsNetwork"		"Nie można nawiązać połączenia z siecią znajomych. Steam będzie ponawiał próby połączenia, dopóki usługa nie zacznie działać."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Musisz ponownie zalogować się w Steam, aby korzystać ze Znajomych."
@@ -154,7 +154,7 @@
 "Friends_BetaHomePage"				"Strona z informacjami o Znajomych Beta"
 
 "Friends_PleaseSetFriendsName"		"Nie podano nazwy używanej w Znajomych."
-"Friends_SetFriendsName"				"Zmień pseudonim..."
+"Friends_SetFriendsName"				"Zmień pseudonim…"
 
 "Friends_TargetBlocked"				"Ustawienia w profilu tego użytkownika uniemożliwiają kontakt z nim w tej chwili."
 "Friends_TargetIgnored"				"%search% cię ignoruje."
@@ -162,7 +162,7 @@
 "Friends_TargetHasTooManyFriends"		"Lista znajomych %search% jest pełna!"
 "Friends_DefaultAddError"	 			"Wystąpił problem przy dodawaniu %search% do listy znajomych."
 "Friends_UnableToFindFriendByThatNameInvitePrompt"		"Nie znaleziono użytkownika Steam o adresie e-mail %search%.\n\nJeśli chcesz zaprosić %search% do korzystania ze Steam oraz dodać go do listy znajomych, kliknij „Dalej” lub wybierz „Wstecz”, aby wyszukać ponownie."
-"Friends_InvitingFriend"				"Wysyłanie zaproszenia do %search%..."
+"Friends_InvitingFriend"				"Wysyłanie zaproszenia do %search%…"
 "Friends_InvitationPending"			"%search% został zaproszony do Steam. Gdy odpowie, zostanie dodany do Twojej listy znajomych.\n"
 "Friends_InvitationSent"				"Do %search% zostało wysłane zaproszenie. Gdy odpowie, zostanie dodany to Twojej listy znajomych.\n"
 "Friends_DefaultInviteError"			"Wystąpił problem z wysyłaniem zaproszenia do %search%." 
@@ -202,7 +202,7 @@
 "Friends_menu_view_showsteamids"		"Pokaż identyfikatory konta"
 "Friends_menu_view_sortbyname"			"Sortowanie według nazw"
 "Friends_menu_view_onlineonly"			"Pokazuj tylko użytkowników online"
-"Friends_menu_view_settings"			"Ustawienia..."
+"Friends_menu_view_settings"			"Ustawienia…"
 "Friends_menu_players_current"			"Lista graczy – bieżąca gra"
 "Friends_menu_players_recent"			"Lista graczy – ostatnie gry"
 
@@ -305,8 +305,8 @@
 "Friends_MsgNotification_Sender"		"%name% pisze:"
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"Dodaj do znajomych..."
-"Friends_HideUser"				"Zignoruj użytkownika..."
+"Friends_AddUser"				"Dodaj do znajomych…"
+"Friends_HideUser"				"Zignoruj użytkownika…"
 
 "Friends_Voice_Call"				"Rozpocznij czat głosowy"
 "Friends_Voice_EndCall"			"Zakończ rozmowę"
@@ -317,7 +317,7 @@
 "Friends_Voice_AudioSettings"		"Ustawienia"
 "Friends_Voice_Answer"			"Odpowiedz"
 "Friends_Voice_IncomingStatus"	"%friend% chce nawiązać połączenie głosowe."
-"Friends_Voice_OutgoingStatus"	"Łączenie z %friend%..."
+"Friends_Voice_OutgoingStatus"	"Łączenie z %friend%…"
 "Friends_Voice_Resume"			"Wznów"
 "Friends_Voice_ResumeStatusLocalHold"		"Zawieszone"
 "Friends_Voice_ResumeStatusRemoteHold"	"%friend% zawiesił połączenie głosowe"
@@ -355,7 +355,7 @@
 "Friends_LeaveThisGroup"				"Opuść tę grupę"
 
 "Friends_SteamIDLink"					"Wyświetl profil"
-"Friends_EditAlias"						"Edytuj alias..."
+"Friends_EditAlias"						"Edytuj alias…"
 "Friends_UnsetAlias"					"Zresetuj"
 "Friends_ViewAliases"					"Wyświetl pseudonimy"
 "Friends_NotificationOptions"			"Konfiguracja powiadomień"
@@ -409,7 +409,7 @@
 "Friends_PlayersDialog_Title"				"Gracze"
 "Friends_CurrentPlayers_TabTitle"			"Bieżąca gra"
 "Friends_RecentPlayers_TabTitle"			"Wcześniejsze gry"
-"Friends_AddPlayerAsFriend"				"Dodaj do znajomych..."
+"Friends_AddPlayerAsFriend"				"Dodaj do znajomych…"
 "Friends_NoRecentlyPlayedWithUsers"		"W ostatnim czasie nie grano z nikim w żadną grę Steam."
 "Friends_NoCurrentlyPlayedWithUsers"		"Serwer gry nie zgłosił obecności użytkowników Steam."
 "Friends_PlayerName"						"Pseudonim"
@@ -507,7 +507,7 @@
 "Friends_ChatIntro_WarningInfo" "Przypomnienie: Pomoc techniczna Steam nigdy nie zapyta cię o hasło. Wszelkie otrzymane prośby o hasło należy zignorować."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"Urządzenie do nagrywania (wejście audio)"
-"Friends_Voice_ChangeDevice"			"Zmień urządzenie..."
+"Friends_Voice_ChangeDevice"			"Zmień urządzenie…"
 "Friends_Voice_ChangeDeviceNote"		"(zostanie otwarty panel sterowania dźwiękiem systemu Windows)"
 "Friends_Voice_ChangingDevice_Title"	"Steam – zmiana urządzenia do nagrywania"
 "Friends_Voice_ChangingDevice_Info"		"Panel sterowania dźwiękiem systemu Windows został otwarty. Naciśnij „OK” po wprowadzeniu zmian w ustawieniach."
@@ -606,7 +606,7 @@
 "friends_trade_invite_action"		"KLIKNIJ TUTAJ, ABY DOKONAĆ WYMIANY"
 
 "friends_trade_invite_sent"	"Zaproszenie do wymiany zostało wysłane do użytkownika %friend%"
-"friends_trade_invite_sent_waiting"	"Oczekiwanie na odpowiedź..."
+"friends_trade_invite_sent_waiting"	"Oczekiwanie na odpowiedź…"
 
 "friends_trade_generic_failure"		"Nie możesz dokonać wymiany z użytkownikiem %friend%."
 "friends_trade_declined"		"Twoje zaproszenie do wymiany zostało odrzucone przez użytkownika %friend%."
@@ -653,12 +653,12 @@
 
 "friends_voice_usedbygame"			"Mikrofon jest wykorzystywany przez grę"
 
-"friends_group_tag_as"			"Otaguj jako..."
+"friends_group_tag_as"			"Otaguj jako…"
 "friends_group_edit_categories" 	"Oznacz tego znajomego, aby można go było łatwiej znaleźć w przyszłości. Znajomi oznaczeni tagami będą oddzielnie grupowani na twojej liście znajomych."
 "friends_group_addtag"			"DODAJ TAG"
 "friends_group_edittags_title"		"%friend% - tagi"
 
-"friends_insertitem"			"Pokaż przedmiot z twojego ekwipunku..."
+"friends_insertitem"			"Pokaż przedmiot z twojego ekwipunku…"
 "group_enterchatroom"			"Dołącz do czatu grupy"
 
 "friends_giftreceived_info"		"przesyła ci prezent"
@@ -689,7 +689,7 @@
 "Friends_BroadcastApprove_Ignore" "ZIGNORUJ"
 
 "Broadcast_FirstTime_Header" "Witaj w Transmisjach Steam! Możesz oglądać innych graczy i transmitować własne gry przez Steam."
-"Broadcast_FirstTime_PermissionHeader" "Ustaw swoje preferencje, zajmie to tylko chwilę..."
+"Broadcast_FirstTime_PermissionHeader" "Ustaw swoje preferencje, zajmie to tylko chwilę…"
 "Broadcast_FirstTime_DesktopOnly" "Domyślnie można oglądać tylko zawartość gry. Twój pulpit nie będzie transmitowany."
 "Broadcast_FirstTime_FAQ" "Przeczytaj FAQ Transmisji Steam"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=polish"

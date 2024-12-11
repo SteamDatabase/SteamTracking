@@ -11,6 +11,12 @@ enum EAuthTokenPlatformType {
 	k_EAuthTokenPlatformType_MobileApp = 3;
 }
 
+enum EAuthTokenAppType {
+	k_EAuthTokenAppType_Unknown = 0;
+	k_EAuthTokenAppType_Mobile_SteamApp = 1;
+	k_EAuthTokenAppType_Mobile_ChatApp = 2;
+}
+
 enum EAuthSessionGuardType {
 	k_EAuthSessionGuardType_Unknown = 0;
 	k_EAuthSessionGuardType_None = 1;
@@ -80,6 +86,7 @@ message CAuthentication_DeviceDetails {
 	optional uint32 gaming_device_type = 4;
 	optional uint32 client_count = 5;
 	optional bytes machine_id = 6;
+	optional .EAuthTokenAppType app_type = 7 [default = k_EAuthTokenAppType_Unknown];
 }
 
 message CAuthentication_BeginAuthSessionViaQR_Request {
@@ -164,6 +171,7 @@ message CAuthentication_GetAuthSessionInfo_Response {
 	optional bool high_usage_login = 11;
 	optional .ESessionPersistence requested_persistence = 12 [default = k_ESessionPersistence_Invalid];
 	optional int32 device_trust = 13;
+	optional .EAuthTokenAppType app_type = 14 [default = k_EAuthTokenAppType_Unknown];
 }
 
 message CAuthentication_GetAuthSessionRiskInfo_Request {
@@ -176,6 +184,19 @@ message CAuthentication_GetAuthSessionRiskInfo_Response {
 	optional string location_requestor = 2;
 	optional string location_other = 3;
 	optional .EAuthTokenPlatformType platform_type = 4 [default = k_EAuthTokenPlatformType_Unknown];
+}
+
+message CAuthentication_NotifyRiskQuizResults_Notification {
+	message RiskQuizResults {
+		optional bool platform = 1;
+		optional bool location = 2;
+		optional bool action = 3;
+	}
+
+	optional uint64 client_id = 1;
+	optional .CAuthentication_NotifyRiskQuizResults_Notification.RiskQuizResults results = 2;
+	optional string selected_action = 3;
+	optional bool did_confirm_login = 4;
 }
 
 message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
@@ -383,6 +404,7 @@ service Authentication {
 	rpc PollAuthSessionStatus (.CAuthentication_PollAuthSessionStatus_Request) returns (.CAuthentication_PollAuthSessionStatus_Response);
 	rpc GetAuthSessionInfo (.CAuthentication_GetAuthSessionInfo_Request) returns (.CAuthentication_GetAuthSessionInfo_Response);
 	rpc GetAuthSessionRiskInfo (.CAuthentication_GetAuthSessionRiskInfo_Request) returns (.CAuthentication_GetAuthSessionRiskInfo_Response);
+	rpc NotifyRiskQuizResults (.CAuthentication_NotifyRiskQuizResults_Notification) returns (.NoResponse);
 	rpc UpdateAuthSessionWithMobileConfirmation (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request) returns (.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response);
 	rpc UpdateAuthSessionWithSteamGuardCode (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request) returns (.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response);
 	rpc GenerateAccessTokenForApp (.CAuthentication_AccessToken_GenerateForApp_Request) returns (.CAuthentication_AccessToken_GenerateForApp_Response);

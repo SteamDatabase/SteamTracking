@@ -3,24 +3,6 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
-enum EInternalAccountType {
-	k_EInternalSteamAccountType = 1;
-	k_EInternalClanType = 2;
-	k_EInternalAppType = 3;
-	k_EInternalBroadcastChannelType = 4;
-}
-
-enum EExternalAccountType {
-	k_EExternalNone = 0;
-	k_EExternalSteamAccount = 1;
-	k_EExternalGoogleAccount = 2;
-	k_EExternalFacebookAccount = 3;
-	k_EExternalTwitterAccount = 4;
-	k_EExternalTwitchAccount = 5;
-	k_EExternalYouTubeChannelAccount = 6;
-	k_EExternalFacebookPage = 7;
-}
-
 message CUserAccount_GetAvailableValveDiscountPromotions_Request {
 	optional string country_code = 1;
 }
@@ -148,27 +130,6 @@ message CUserAccount_RegisterCompatTool_Request {
 message CUserAccount_RegisterCompatTool_Response {
 }
 
-message CAccountLinking_GetLinkedAccountInfo_Request {
-	optional .EInternalAccountType account_type = 1 [default = k_EInternalSteamAccountType];
-	optional uint64 account_id = 2;
-	optional .EExternalAccountType filter = 3 [default = k_EExternalNone];
-	optional bool return_access_token = 4;
-}
-
-message CAccountLinking_GetLinkedAccountInfo_Response {
-	message CExternalAccountTuple_Response {
-		optional .EExternalAccountType external_type = 1 [default = k_EExternalNone];
-		optional string external_id = 2;
-		optional string external_user_name = 3;
-		optional string external_url = 4;
-		optional string access_token = 5;
-		optional string access_token_secret = 6;
-		optional bool is_valid = 7;
-	}
-
-	repeated .CAccountLinking_GetLinkedAccountInfo_Response.CExternalAccountTuple_Response external_accounts = 1;
-}
-
 message CEmbeddedClient_AuthorizeCurrentDevice_Request {
 	optional fixed64 steamid = 1;
 	optional uint32 appid = 2;
@@ -200,10 +161,6 @@ service UserAccount {
 	rpc RedeemFriendInviteToken (.CUserAccount_RedeemFriendInviteToken_Request) returns (.CUserAccount_RedeemFriendInviteToken_Response);
 	rpc RevokeFriendInviteToken (.CUserAccount_RevokeFriendInviteToken_Request) returns (.CUserAccount_RevokeFriendInviteToken_Response);
 	rpc RegisterCompatTool (.CUserAccount_RegisterCompatTool_Request) returns (.CUserAccount_RegisterCompatTool_Response);
-}
-
-service AccountLinking {
-	rpc GetLinkedAccountInfo (.CAccountLinking_GetLinkedAccountInfo_Request) returns (.CAccountLinking_GetLinkedAccountInfo_Response);
 }
 
 service EmbeddedClient {

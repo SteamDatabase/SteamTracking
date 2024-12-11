@@ -162,6 +162,7 @@ message CMsgClientSettings {
 	optional bool download_while_app_running = 8010 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool download_throttle_while_streaming = 8011 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 download_throttle_rate = 8012 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 default_app_update_behavior = 8013 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool cloud_enabled = 10000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_screenshot_manager = 10001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "Software\\Valve\\Steam\\ShowScreenshotManager"];
 	optional int32 music_volume = 11000 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -245,6 +246,8 @@ message CMsgClientSettings {
 	optional bool gamescope_composite_debug = 21010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/CompositeDebug", (setting_default_bool) = false];
 	optional bool gamescope_force_composite = 21011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/ForceComposite", (setting_default_bool) = false];
 	optional string gamescope_game_resolution_global = 21012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GameResolutionGlobal", (setting_default_string) = "Default"];
+	optional .CMsgHotkey gamescope_guide_hotkey = 21013 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GuideKeyboardHotkey"];
+	optional .CMsgHotkey gamescope_qam_hotkey = 21014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/QAMKeyboardHotkey"];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
 	optional bool steamos_tdp_limit_enabled = 22001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimitEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_tdp_limit = 22002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimit", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
@@ -260,5 +263,7 @@ message CMsgClientSettings {
 	optional uint64 setting_validation_uint64 = 23005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyUInt64"];
 	optional float setting_validation_float = 23006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyFloat"];
 	optional string setting_validation_string = 23007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyString"];
+	optional .CMsgHotkey setting_validation_hotkey = 23008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyHotkey"];
 	optional bool system_bluetooth_enabled = 24000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/Bluetooth/Enabled", (setting_default_bool) = false];
+	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
 }

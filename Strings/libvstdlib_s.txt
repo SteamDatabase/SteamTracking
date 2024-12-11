@@ -299,9 +299,10 @@ CHURCH
 CITIC
 CITY
 CKeyValuesSystem
+CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
-CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
+CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
 CLAIMS
 CLEANING
 CLINIC

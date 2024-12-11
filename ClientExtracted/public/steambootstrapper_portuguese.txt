@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Erro Crítico"
 "SteamBootstrapper_Warning_Title"			"%appname% - Aviso"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% já não é suportado na versão atual do teu sistema operativo."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname% já não é suportado na versão atual do teu sistema operativo.\nEsta verificação pode ser ignorada com o comando -overrideminos.\n%appname% pode não funcionar corretamente e este comando pode deixar de funcionar no futuro.\nAtualiza o teu sistema operativo para uma versão suportada para poderes continuar a jogar o jogo."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% já não é suportado na versão atual do teu sistema operativo.\n\nClica em OK para sair da versão beta selecionada do %appname%."
 "SteamBootstrapper_Starting"                  "A iniciar..."
 }

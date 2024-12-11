@@ -88,24 +88,6 @@ message CMsgClientUpdateMachineAuthResponse {
 	optional string otp_identifier = 10;
 }
 
-message CMsgClientRequestMachineAuth {
-	optional string filename = 1;
-	optional uint32 eresult_sentryfile = 2;
-	optional uint32 filesize = 3;
-	optional bytes sha_sentryfile = 4;
-	optional int32 lock_account_action = 6;
-	optional uint32 otp_type = 7;
-	optional string otp_identifier = 8;
-	optional bytes otp_sharedsecret = 9;
-	optional uint32 otp_value = 10;
-	optional string machine_name = 11;
-	optional string machine_name_userchosen = 12;
-}
-
-message CMsgClientRequestMachineAuthResponse {
-	optional uint32 eresult = 1;
-}
-
 message CMsgClientRegisterKey {
 	optional string key = 1;
 }
@@ -164,12 +146,6 @@ message CMsgTrading_StartSession {
 	optional uint64 other_steamid = 1;
 }
 
-message CMsgClientGetCDNAuthToken {
-	optional uint32 depot_id = 1;
-	optional string host_name = 2;
-	optional uint32 app_id = 3;
-}
-
 message CMsgClientGetDepotDecryptionKey {
 	optional uint32 depot_id = 1;
 	optional uint32 app_id = 2;
@@ -196,45 +172,6 @@ message CMsgClientCheckAppBetaPasswordResponse {
 
 	optional int32 eresult = 1 [default = 2];
 	repeated .CMsgClientCheckAppBetaPasswordResponse.BetaPassword betapasswords = 4;
-}
-
-message CMsgClientGetCDNAuthTokenResponse {
-	optional uint32 eresult = 1 [default = 2];
-	optional string token = 2;
-	optional uint32 expiration_time = 3;
-}
-
-message CMsgDownloadRateStatistics {
-	message StatsInfo {
-		optional uint32 source_type = 1;
-		optional uint32 source_id = 2;
-		optional uint32 seconds = 3;
-		optional uint64 bytes = 4;
-		optional string host_name = 5;
-		optional uint64 microseconds = 6;
-		optional bool used_ipv6 = 7;
-		optional bool proxied = 8;
-	}
-
-	optional uint32 cell_id = 1;
-	repeated .CMsgDownloadRateStatistics.StatsInfo stats = 2;
-	optional uint32 throttling_kbps = 3;
-	optional uint32 steam_realm = 4;
-}
-
-message CMsgClientRequestAccountData {
-	optional string account_or_email = 1;
-	optional uint32 action = 2;
-}
-
-message CMsgClientRequestAccountDataResponse {
-	optional uint32 action = 1;
-	optional uint32 eresult = 2;
-	optional string account_name = 3;
-	optional uint32 ct_matches = 4;
-	optional string account_name_suggestion1 = 5;
-	optional string account_name_suggestion2 = 6;
-	optional string account_name_suggestion3 = 7;
 }
 
 message CMsgClientUGSGetGlobalStats {

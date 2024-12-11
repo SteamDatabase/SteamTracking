@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Lỗi nghiêm trọng"
 "SteamBootstrapper_Warning_Title"			"%appname% - Cảnh báo"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% không còn được hỗ trợ trên phiên bản hệ điều hành của bạn."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname% không còn được hỗ trợ trên phiên bản hệ điều hành của bạn.\nCó thể ghi đè bước kiểm tra này bằng cách truyền vào -overrideminos.\n%appname% có thể không hoạt động đúng cách và hỗ trợ cho cách ghi đè trên sẽ gỡ bỏ trong tương lai.\nVui lòng cập nhật lên phiên bản HĐH được hỗ trợ để tiếp tục sử dụng."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% không còn được hỗ trợ trên phiên bản hệ điều hành của bạn.\n\nNhấp OK để thoát beta %appname% đã chọn."
 "SteamBootstrapper_Starting"                  "Đang bắt đầu..."
 }

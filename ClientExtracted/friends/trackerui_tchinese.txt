@@ -524,7 +524,7 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "已完成下載"
 
-"Friends_PeerUploadNotification_Info" "正在轉移遊戲檔案至"
+"Friends_PeerUploadNotification_Info" "正在傳輸遊戲檔案至"
 
 "Friends_SteamInputActionSetChangedTitle"	"控制器操作組合"
 "Friends_SteamInputActionSetChanged"	"%action_set%"

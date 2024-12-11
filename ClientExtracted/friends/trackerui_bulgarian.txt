@@ -745,7 +745,7 @@
 "Steam_Settings_Broadcast_HelpURL_Desc" "Преглед на страниците за поддръжка относно „Предаване“"
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "Настройка за поверителност:"
-"Steam_Settings_Broadcast_BitrateHeader" "Максимален битрейт:"
+"Steam_Settings_Broadcast_BitrateHeader" "Макс. битова честота:"
 "Steam_Settings_Broadcast_DimensionsHeader" "Измерение на видеото:"
 "Steam_Settings_Broadcast_EncoderHeader" "Оптимизиране на кодиране за:"
 "Steam_Settings_Broadcast_EncoderQuality" "Най-добро качество"

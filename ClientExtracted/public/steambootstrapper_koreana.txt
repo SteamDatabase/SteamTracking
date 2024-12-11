@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - 치명적인 오류"
 "SteamBootstrapper_Warning_Title"			"%appname% - 경고"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% 앱은 현재 사용 중인 운영 체제 버전에서 더 이상 지원되지 않습니다."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname% 게임은 더 이상 현재 사용 중인 운영 체제 버전에서 지원되지 않습니다.\n-overrideminos 명령을 사용하여 이를 무시할 수 있습니다.\n%appname% 게임이 제대로 실행되지 않거나 향후 해당 명령이 제거될 수 있습니다.\n계속 사용하려면 지원되는 운영 체제 버전으로 업데이트하세요."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% 게임은 더 이상 현재 사용 중인 운영 체제 버전에서 지원되지 않습니다.\n\n선택한 %appname% 베타를 종료하려면 '확인'을 클릭하세요."
 "SteamBootstrapper_Starting"                  "시작 중..."
 }

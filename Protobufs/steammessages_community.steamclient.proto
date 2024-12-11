@@ -203,6 +203,35 @@ message CCommunity_GetAvatarHistory_Response {
 	repeated .CCommunity_GetAvatarHistory_Response.AvatarData avatars = 1;
 }
 
+message CCommunity_GetClanEventCrowdInMetadata_Request {
+	optional fixed64 steamid = 1;
+	optional uint64 itemid = 2;
+}
+
+message CCommunity_GetClanEventCrowdInMetadata_Response {
+	optional uint64 crowdin_project_id = 1;
+	optional uint64 crowdin_file_id = 2;
+}
+
+message CCommunity_GetClanCrowdInMetadata_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CCommunity_GetClanCrowdInMetadata_Response {
+	optional uint64 crowdin_project_id = 1;
+	optional uint64 crowdin_directory_id = 2;
+	optional bool push_by_default = 3;
+}
+
+message CCommunity_FetchTranslationFromCrowdIn_Request {
+	optional fixed64 steamid = 1;
+	optional uint64 itemid = 2;
+	optional uint32 language = 3;
+}
+
+message CCommunity_FetchTranslationFromCrowdIn_Response {
+}
+
 message CAppPriority {
 	optional uint32 priority = 1;
 	repeated uint32 appid = 2;
@@ -326,6 +355,9 @@ service Community {
 	rpc RateClanAnnouncement (.CCommunity_RateClanAnnouncement_Request) returns (.CCommunity_RateClanAnnouncement_Response);
 	rpc GetClanAnnouncementVoteForUser (.CCommunity_GetClanAnnouncementVoteForUser_Request) returns (.CCommunity_GetClanAnnouncementVoteForUser_Response);
 	rpc GetAvatarHistory (.CCommunity_GetAvatarHistory_Request) returns (.CCommunity_GetAvatarHistory_Response);
+	rpc GetClanEventCrowdInMetadata (.CCommunity_GetClanEventCrowdInMetadata_Request) returns (.CCommunity_GetClanEventCrowdInMetadata_Response);
+	rpc GetClanCrowdInMetadata (.CCommunity_GetClanCrowdInMetadata_Request) returns (.CCommunity_GetClanCrowdInMetadata_Response);
+	rpc FetchTranslationFromCrowdIn (.CCommunity_FetchTranslationFromCrowdIn_Request) returns (.CCommunity_FetchTranslationFromCrowdIn_Response);
 	rpc GetUserPartnerEventNews (.CCommunity_GetUserPartnerEventNews_Request) returns (.CCommunity_GetUserPartnerEventNews_Response);
 	rpc GetBestEventsForUser (.CCommunity_GetBestEventsForUser_Request) returns (.CCommunity_GetBestEventsForUser_Response);
 	rpc MarkPartnerEventsForUser (.CCommunity_MarkPartnerEventsForUser_Request) returns (.CCommunity_MarkPartnerEventsForUser_Response);

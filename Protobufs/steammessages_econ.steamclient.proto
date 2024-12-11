@@ -39,6 +39,7 @@ message CEconItem_DescriptionLine {
 	optional string value = 2;
 	optional string color = 3;
 	optional string label = 4;
+	optional string name = 5;
 }
 
 message CEconItem_Action {
@@ -77,6 +78,7 @@ message CEconItem_Description {
 	optional string item_expiration = 27;
 	optional string market_buy_country_restriction = 30;
 	optional string market_sell_country_restriction = 31;
+	optional bool sealed = 32;
 }
 
 message CEconItem_Tag {

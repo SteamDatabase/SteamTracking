@@ -196,6 +196,7 @@ CreateMilesVoiceAudioDevice
 DBG_PATHMATCH
 December
 Element( i )
+Failed to load "%s"
 Failed to load optional module %s\n
 Failed to move pulse sink input
 Failed to move pulse source output
@@ -696,7 +697,6 @@ m_nChannels == 1 || m_nChannels == 2
 m_nCount == 0
 m_nCount == 1
 m_nCount >= 0
-m_pModule
 m_strFileName
 m_strUniqueName
 m_vecAudioDeviceListeners

@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - 重大錯誤"
 "SteamBootstrapper_Warning_Title"			"%appname% - 警告"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "您目前的作業系統版本已無法支援 %appname%。"
+"SteamCmd_OperatingSystemNoLongerSupported" "您的作業系統版本不再支援 %appname%。\n您可傳入 -overrideminos 以覆寫這項檢查。\n%appname% 可能無法正確執行，且未來可能會移除對此覆寫的支援。\n請升級至支援的作業系統版本以繼續使用此應用程式。"
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "您的作業系統版本不再支援 %appname%。\n\n點擊確定以退出所選的 %appname% 測試版。"
 "SteamBootstrapper_Starting"                  "開始進行…"
 }

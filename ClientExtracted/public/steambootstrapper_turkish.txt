@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Kritik Hata"
 "SteamBootstrapper_Warning_Title"			"%appname% - Uyarı"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname%, artık mevcut işletim sistemi sürümünüzde desteklenmiyor."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname%, artık mevcut işletim sistemi sürümünüzde desteklenmiyor.\nBu denetimi -overrideminos komutuyla geçersiz kılabilirsiniz.\n%appname% düzgün çalışmayabilir ve bu geçersiz kılma desteği gelecekte kaldırılabilir.\nKullanıma devam edebilmek için lütfen desteklenen bir işletim sistemi sürümüne güncelleyin."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname%, artık mevcut işletim sistemi sürümünüzde desteklenmiyor.\n\nSeçili %appname% betasından çıkmak için Tamam'ı tıklayın."
 "SteamBootstrapper_Starting"                  "Başlatılıyor..."
 }

@@ -558,7 +558,7 @@
 
 "Limited_OpenChat"	"Abrir chat"
 "Friends_SteamCommunity"	"Comunidad de Steam"
-"Limited_Explanation"	"Tu cuenta no cumple los requisitos necesarios para utilizar esta característica."
+"Limited_Explanation"	"Tu cuenta no cumple los requisitos necesarios para utilizar esta función."
 "Limited_ForDetails"	"Visita el Soporte de Steam para más información."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/es-419/wizard/HelpWithLimitedAccount"
 

@@ -477,7 +477,7 @@ Tämä kestää alle minuutin."
 "Steam_BPMOnStartup_Option"				"Käynnistä Steam Televisiotilassa"
 "Steam_ShowUrlBar_Option"				"Näytä verkko-osoiterivi, kun se on käytettävissä"
 "Steam_UseDirectWrite_Option"			"Käytä DirectWriteä fonttien pehmennykseen ja tasaukseen"
-"Steam_UseH264HWAccel_Option"			"Ota laitteistopohjainen videopurku käyttöön, jos tuettu (uudelleenkäynnistettävä)"
+"Steam_UseH264HWAccel_Option"			"Ota laitteistopohjainen videon purku käyttöön, jos sitä tuetaan (vaatii uudelleenkäynnistyksen)"
 
 "Steam_ErrorFilesystemNotExecutable_Title"	"Steam - Virhe"
 "Steam_ErrorFilesystemNotExecutable"		"Valittu tiedostojärjestelmä ei salli tiedostojen suorittamista.\nLiitä se uudelleen käyttäen exec-asetusta ja yritä uudelleen."
@@ -3462,7 +3462,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_LibrariesLabel"	"Sisältökirjastot"
 "Steam_DownloadRestrictionsLabel"	"Latausrajoitukset"
 
-"Steam_ServerBrowserPingRateLabel"	"Palvelinselaimen pingiä / minuutti"
+"Steam_ServerBrowserPingRateLabel"	"Palvelinselaimen pingiä minuutissa"
 "Steam_ServerBrowserPingRateInfo"	"Jos havaitset yhteysongelmia pelipalvelimia selatessasi, kokeile pienentää tätä arvoa."
 "Steam_ServerBrowserPingRateDefault"	"Automaattinen (%PingsPerMin%)"
 
@@ -4850,7 +4850,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "RescueDialog_Explanation" "Steamin keskeinen komponentti steamwebhelper on lakannut toimimasta. Steamin käyttöliittymä ei ole käytettävissä. Lue lisätietoja klikkaamalla <a href=steam://openurl_external/https://help.steampowered.com/fi/faqs/view/6C3E-9504-CC20-AF49>tästä</a>."
 "RescueDialog_RadioHeader" "Toimi näin:"
 "RescueDialog_RestartSteam" "Käynnistä Steam uudelleen."
-"RescueDialog_RestartSteam_NoGPU" "Käynnistä Steam uudelleen ilman nopeutettua renderöintiä."
+"RescueDialog_RestartSteam_NoGPU" "Käynnistä Steam uudelleen ilman grafiikkasuorittimen kiihdytystä."
 "RescueDialog_RestartSteam_NoSandbox" "Käynnistä Steam uudelleen ilman selaimen hiekkalaatikkoa."
 "RescueDialog_RestartSteamWebHelper" "Käynnistä steamwebhelper uudelleen"
 "RescueDialog_ExitSteam" "Sulje Steam."

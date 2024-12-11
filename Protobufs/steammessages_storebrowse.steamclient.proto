@@ -77,7 +77,11 @@ enum EStoreLinkType {
 	k_EStoreLinkType_LinkedIn = 16;
 	k_EStoreLinkType_WeChat = 17;
 	k_EStoreLinkType_QQLink = 18;
-	k_EStoreLinkType_MAX = 19;
+	k_EStoreLinkType_Douyin = 19;
+	k_EStoreLinkType_Bluesky = 20;
+	k_EStoreLinkType_Mastodon = 21;
+	k_EStoreLinkType_Threads = 22;
+	k_EStoreLinkType_MAX = 23;
 }
 
 enum EStoreCategoryType {
@@ -248,16 +252,14 @@ message StoreItem {
 		optional string purchase_option_name = 3;
 		optional int64 final_price_in_cents = 5;
 		optional int64 original_price_in_cents = 6;
-		optional int64 user_final_price_in_cents = 7;
 		optional string formatted_final_price = 8;
 		optional string formatted_original_price = 9;
 		optional int32 discount_pct = 10;
-		optional int32 user_discount_pct = 11;
 		optional int32 bundle_discount_pct = 12;
+		optional bool is_free_to_keep = 13;
+		optional int64 price_before_bundle_discount = 14;
+		optional string formatted_price_before_bundle_discount = 15;
 		repeated .StoreItem.PurchaseOption.Discount active_discounts = 20;
-		repeated .StoreItem.PurchaseOption.Discount user_active_discounts = 21;
-		repeated .StoreItem.PurchaseOption.Discount inactive_discounts = 22;
-		optional bool user_can_purchase = 30;
 		optional bool user_can_purchase_as_gift = 31;
 		optional bool is_commercial_license = 40;
 		optional bool should_suppress_discount_pct = 41;
@@ -266,6 +268,7 @@ message StoreItem {
 		optional int64 lowest_recent_price_in_cents = 44;
 		optional bool requires_shipping = 45;
 		optional .StoreItem.PurchaseOption.RecurrenceInfo recurrence_info = 46;
+		optional uint32 free_to_keep_ends = 47;
 	}
 
 	message Screenshots {
@@ -344,6 +347,7 @@ message StoreItem {
 	optional .StoreItem.ReleaseInfo release = 31;
 	optional .StoreItem.Platforms platforms = 32;
 	optional .StoreGameRating game_rating = 33;
+	optional bool is_coming_soon = 34;
 	optional .StoreItem.PurchaseOption best_purchase_option = 40;
 	repeated .StoreItem.PurchaseOption purchase_options = 41;
 	repeated .StoreItem.PurchaseOption accessories = 42;
@@ -406,6 +410,8 @@ message CStoreBrowse_GetStoreCategories_Response {
 		optional string image_url = 5;
 		optional bool show_in_search = 6;
 		optional bool computed = 7;
+		optional string edit_url = 8;
+		optional uint32 edit_sort_order = 9;
 	}
 
 	repeated .CStoreBrowse_GetStoreCategories_Response.Category categories = 1;

@@ -180,7 +180,6 @@ $HOME/
 (anonymous namespace)
 (context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
 (context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
-(m_mapChildWindowZOrder[i])->m_pVector
 (no name)
 (unsigned)elem <= (unsigned)m_Size
 )9IYiy
@@ -201,10 +200,8 @@ $HOME/
 -ccsyntax
 -compat
 -display-scale=
--fasthtml
 -language
 -nodpiscale
--nofasthtml
 -pid
 -vguifocus
 -vguimessages
@@ -301,7 +298,6 @@ $HOME/
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_tS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS1_EE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tEE
@@ -309,7 +305,6 @@ $HOME/
 10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E6Node_tEE
 10CUtlMemoryIN12CBaseSurface16TraversalEntry_tEE
-10CUtlMemoryIN12CBaseSurface17ChildWindowZPos_tEE
 10CUtlMemoryIN12CFontAmalgam10TFontRangeEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI13MessageItem_tiE10ListElem_tEE
@@ -350,7 +345,6 @@ $HOME/
 10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
-10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS0_EE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE
 10CUtlString
@@ -365,7 +359,6 @@ $HOME/
 10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN12CBaseSurface17ChildWindowZPos_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorIN16CStyleAppearance8DrawOp_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CNotificationManager17NotificationPanelE10CUtlMemoryIS1_EE
@@ -429,11 +422,11 @@ $HOME/
 19CUtlNoEscConversion
 1A26b
 1wsHp
-20CDirWatcherPS3Thread
 20CNotificationManager
 21CLocalizedStringTable
 21CUtlCStringConversion
 23CVGuiSystemModuleLoader
+24CDirWatcherPollingThread
 2@KEY_2
 3#KEY_3
 3333
@@ -463,7 +456,6 @@ $HOME/
 7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS1_EEi8CDefLessE
 7CUtlMapIjss8CDefLessE
 7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
-7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE
 7CUtlPtrI16CStyleAppearanceE
 7style_t
 7~8A
@@ -641,13 +633,14 @@ CustomFontFiles
 DBG_PATHMATCH
 DDDDUUUU
 DISPLAY
+DOCUMENTS
+DOWNLOAD
 Dari
 Days
 December
 DejaVu Sans
 Delayed
 DialogConfigOverlay_%dx%d.vdf
-Disables new fast child hwnd direct in vgui hwnd rendering path
 DrawRenderCharFromInfo is not implemented and should not be needed in overlay\n
 DrawSetSubTextureRGBA called on invalid texture\n
 DrawSetSubTextureRGBA called on unallocated texture\n
@@ -656,7 +649,6 @@ DrawSetSubTextureRGBA out of bounds (width)\n
 E=FZGrH
 EXECUTABLE_PATH
 Element( i )
-Enable fast child html for any platform
 Error
 Error Serial #%d
 Error State on string being set.
@@ -678,6 +670,7 @@ FT_New_Face
 FT_New_Memory_Face
 FT_Set_Pixel_Sizes
 Failed loading registry KV.
+Failed to load "%s"
 Failed to load custom font file '%s'\n
 Failed to load optional module %s\n
 Fatal IO error %d (%s) on X server %s.\n
@@ -1024,7 +1017,6 @@ Notifications.StackSize
 November
 Num %5u, Size %4u, Total Kb %2u, Class %s\n
 O*9y]
-OSIsCompatible
 OSX1010
 OZw3(?
 October
@@ -1045,6 +1037,7 @@ OpenGL GLX extension not supported by display
 Out of Memory
 Overwriting on-disk registry with newly created registry.
 PCS illuminant is not D50
+PICTURES
 PLATFORM
 PNG file corrupted by ASCII conversion
 PNG load error %s\n
@@ -1060,8 +1053,6 @@ Plat_CommandLineParamExists
 Plat_CommandLineParamValue
 Plat_FloatTime
 Plat_IsChromeOS
-Plat_IsGamescope
-Plat_IsSteamDeck
 Plat_MSTime
 Plat_RelativeTicks
 Plat_localtime
@@ -1095,7 +1086,6 @@ Render command has left edge > right edge: '%s'\n
 Render command has top edge > bottom edge: '%s'\n
 Render command has x0 and x1 reversed: '%s'\n
 Render command has y0 and y1 reversed: '%s'\n
-ReparentChildPlatformWindow - not implemented
 Request Major code %d
 ResourceID
 ResourceID 0x%x
@@ -1139,7 +1129,6 @@ SetAlpha
 SetFocus
 SetForegroundWindow
 SetMouseFocus()
-SetPlatformWindowVisibility - not implemented
 SetScreenSize from (%d, %d) to ( %d, %d )\n
 SetTopLevelFocus
 ShellExecute
@@ -1280,7 +1269,6 @@ Turkmen
 UTF-8
 UTF8_STRING
 UUUU
-Ug08
 Unable to find font named %s\n
 Unable to initalize freetype library, is it installed?
 Unable to open display
@@ -1446,7 +1434,6 @@ XInitThreads
 XInitThreads failed!
 XInternAtom
 XLookupKeysym
-XLowerWindow
 XMapRaised
 XMapWindow
 XMissingExtension
@@ -1498,9 +1485,7 @@ XRRGetScreenResources
 XRRQueryExtension
 XRRQueryVersion
 XRaiseWindow
-XReparentWindow
 XRequest
-XRestackWindows
 XSelectInput
 XSendEvent
 XSetClassHint
@@ -1567,6 +1552,7 @@ _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 _KDE_NET_WM_WINDOW_TYPE_OVERRIDE
 _MOTIF_WM_HINTS
@@ -2397,7 +2383,6 @@ m_iStart <= m_iEnd
 m_kvFile
 m_kvSettings
 m_listChangedFiles
-m_mapChildWindowZOrder
 m_mapFileTimes
 m_mapFonts
 m_mapFonts.Key( i ).m_sFontFamily
@@ -2408,7 +2393,6 @@ m_memNodes
 m_nAllocationCount >= 0
 m_pData
 m_pMemory
-m_pModule
 m_pPlatformModuleData
 m_pRef->m_pT
 m_pUserConfigData

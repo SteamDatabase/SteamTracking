@@ -369,7 +369,7 @@
 "Friends_Settings_TabTitle"			"Φίλοι"
 "Friends_Nickname"					"Όνομα προφίλ"
 "Friends_Avatar"						"Άβαταρ"
-"Friends_AutoSignIntoFriendsOnStartup"	"Αυτόματη είσοδος στους φίλους με την εκκίνηση του Steam"
+"Friends_AutoSignIntoFriendsOnStartup"	"Αυτόματη σύνδεση στους φίλους με την εκκίνηση του Steam"
 "Friends_ShowTimeInChatLog"	"Εμφάνιση χρονικής σήμανσης στη συνομιλία"
 "Friends_AlwaysNewChatCheck" "Πάντα άνοιγμα νέου παραθύρου συνομιλίας αντί για μια καρτέλα"
 "Friends_NotificationsAndSounds"		"Ειδοποιήσεις και ήχοι"

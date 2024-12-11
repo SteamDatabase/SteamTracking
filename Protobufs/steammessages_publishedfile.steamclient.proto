@@ -161,6 +161,9 @@ message PublishedFileDetails {
 		optional float score = 1;
 		optional uint32 votes_up = 2;
 		optional uint32 votes_down = 3;
+		optional float trusted_score = 4;
+		optional uint32 trusted_votes_up = 5;
+		optional uint32 trusted_votes_down = 6;
 	}
 
 	message ForSaleData {

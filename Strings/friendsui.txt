@@ -17,7 +17,6 @@
  Outdent() without matching Indent().
  Parameter to BackUp() can't be negative.
  ReadToken overflow
- SDL_GetWindowWMInfo returned an unsupported subsystem (we require X11)
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [clone 
@@ -69,8 +68,8 @@
 !\t@, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 !is_large()
 !m_SelectedItems.HasElement( itemID )
-!m_pSharedPaintBuffers->BLockedForRead()
 !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pCmd->has_hwnd_browser()
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 !pszString || pszString[nChars] == '\0'
 " \n\rCMsgSetUIMode
@@ -340,6 +339,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_ECloudStoragePersistStateDeleted
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
+&\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -407,6 +407,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_ECommentThreadTypeModeratorMessage
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
+(\n$k_EContentCheckProvider_GoogleGemini
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -454,6 +455,7 @@ $\n k_SystemAudioPortDirection_Input
 (\t"5\n\fCMsgSetFocus
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
+(\t"8\n\tCMsgMulti
 (\t":\n\rCLogUploadMsg
 (\t"H\n$CClientNotificationDownloadCompleted
 (\t"N\n2CClientNotificationCannotReadControllerGuideButton
@@ -722,6 +724,7 @@ $\n k_SystemAudioPortDirection_Input
 .CMsgIPAddress
 .CMsgJSValue.JSObjectProperty
 .CMsgKeyValuePair"
+.CMsgKubeRPCPacket.Hdr
 .CNegotiatedConfig
 .CRecordedInput"9\n
 .CRemoteHIDMsgH
@@ -750,8 +753,8 @@ $\n k_SystemAudioPortDirection_Input
 .EStreamFrameEvent
 .EStreamFrameResult
 .EStreamHostPlayAudioPreference:
-.EStreamMouseButton"8\n
 .EStreamMouseButton"K\n
+.EStreamMouseButton"\\n
 .EStreamMouseWheelDirection
 .EStreamP2PScope:
 .EStreamQualityPreference:
@@ -944,6 +947,8 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui9ListPanel8column_tEhE10ListElem_tEE
@@ -1017,6 +1022,7 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
 10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN27CSteamUIMessagingController15QueuedMessage_tE10CUtlMemoryIS1_EE
@@ -1075,11 +1081,13 @@ $\n k_SystemAudioPortDirection_Input
 11CSetIconMsg
 11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_ES2_E
+11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE
 11IVGuiModule
 11KeyValuesAD
 11ParentalApp
 12CAudioFormat
 12CAutoReleaseI15CJSCallbackFuncE
+12CAutoReleaseI18CJSCallbackPromiseE
 12CDLLValidate
 12CIntProperty
 12CMsgSetFocus
@@ -1226,7 +1234,6 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
 16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
-16CHTMLProtoBufMsgI27CMsgForcePopupsToDirectHWNDE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
@@ -1262,6 +1269,7 @@ $\n k_SystemAudioPortDirection_Input
 17CMsgBrowserRemove
 17CMsgCloseDevTools
 17CMsgImeCommitText
+17CMsgKubeRPCPacket
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
@@ -1346,7 +1354,6 @@ $\n k_SystemAudioPortDirection_Input
 20CBroadcastController
 20CCDDBAppDetailCommon
 20CControllerConfigMsg
-20CDirWatcherPS3Thread
 20CGetTouchIconDataMsg
 20CHTMLBaseProtoBufMsg
 20CInputLatencyTestMsg
@@ -1437,6 +1444,7 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgImeSetComposition
 21CMsgJSExecuteCallback
 21CMsgJSReleaseCallback
+21CMsgKubeRPCPacket_Hdr
 21CMsgRequestFullScreen
 21CMsgResizeGripChanged
 21CMsgSetVerticalScroll
@@ -1479,6 +1487,7 @@ $\n k_SystemAudioPortDirection_Input
 23CToggleMagnificationMsg
 23IClientParentalSettings
 23ParentalPlaytimeRequest
+24CDirWatcherPollingThread
 24CEnableHighResCaptureMsg
 24CInputTouchFingerDownMsg
 24CMsgClearAllBrowsingData
@@ -1539,6 +1548,7 @@ $\n k_SystemAudioPortDirection_Input
 28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetTouchGesturesToCancel
+28CParentalSettingsInterpreter
 28CTouchActionSetLayerAddedMsg
 28ParentalPlaytimeRestrictions
 29CClientNotificationLowBattery
@@ -1821,6 +1831,7 @@ August
 AuthenticationResult
 AutoResize
 B#C0D?EQFeG|H
+BCSharedConnectionController::OnPostLogonState
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackButton
 BackUp() can only be called after a successful Next().
@@ -1828,7 +1839,6 @@ Backspace
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n
 BaseControls
-Bm_mapConnections
 Boolean default must be true or false.
 Break
 Breaking '%s' in '%s'\n
@@ -1842,7 +1852,6 @@ BrowserBringWindowToFront
 BrowserDisabledKBLink
 BrowserDisabledMessage
 BrowserDraggableRegionsChanged
-BrowserExitFullScreen
 BrowserHideWindow
 BrowserMaximizeRestoreWindow
 BrowserMinimizeWindow
@@ -1857,6 +1866,8 @@ Bx\r9
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
 C-Yn
 CANCELLED
+CAdHocValidation::~CAdHocValidation()
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 CAuthenticationRequestMsg
 CAuthenticationResponseMsg
 CBilling_Address
@@ -2248,6 +2259,7 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgKeyValuePair
 CMsgKeyValueSet
+CMsgKubeRPCPacket
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
 CMsgLoadLocalization
@@ -2392,7 +2404,6 @@ CSetTargetFramerateMsg
 CSetTouchConfigDataMsg
 CSetTouchIconDataMsg
 CSharedConnectionController::OnMessageReady
-CSharedConnectionController::OnPostLogonState
 CSharedConnectionController::OnServersConnected
 CSharedConnectionController::OnServersDisconnected
 CShowCursorMsg
@@ -2722,6 +2733,7 @@ E\nAk_EClientNotificationType_FamilySharingDeviceAuthorizationChanged
 EditablePanel::LayoutCmd_CreateRegion()
 EditablePanel::LayoutCmd_Place()
 EditablePanel::PerformLayout()
+Element( i )
 End-of-file inside block comment.
 EndDrag
 EnsureValidBoolValue
@@ -2736,6 +2748,7 @@ EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
 Enums must contain at least one value.
+Error
 Error State on string being set.
 Error parsing text-format 
 Error reporting not implemented.
@@ -3076,7 +3089,7 @@ Invalid wire type for CPPTYPE_UINT64:
 Invalidate
 Is64BitOS
 Is64BitOS()
-IsARM() || GetCPUInformation().m_bSSE2
+IsARM64() || GetCPUInformation().m_bSSE2
 IsPointInCaptureRegion
 IsResizeBorder
 IsText()
@@ -3504,6 +3517,7 @@ N24CSteamParentalController38CCallback_OnParentalLockChangeCompleteE
 N24CSteamParentalController43CCallbackInternal_OnParentalPlaytimeWarningE
 N24CSteamParentalController45CCallbackInternal_OnParentalPlaytimeExhaustedE
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
+N27CSharedConnectionController22SharedConnectionInfo_tE
 N27CSharedConnectionController24CCallback_OnMessageReadyE
 N27CSharedConnectionController26CCallback_OnPostLogonStateE
 N27CSharedConnectionController28CCallback_OnServersConnectedE
@@ -3971,64 +3985,6 @@ RoamingStorage.SetObject
 RoamingStorage.SetString
 Row has too many bytes to allocate in memory
 RunGameEngine007
-SDL.window.x11.window
-SDL3_0.0.0
-SDL_AddEventWatch
-SDL_AddEventWatch@SDL3_0.0.0
-SDL_CreateWindow
-SDL_CreateWindow failed\n
-SDL_CreateWindow@SDL3_0.0.0
-SDL_DestroyWindow
-SDL_DestroyWindow@SDL3_0.0.0
-SDL_GL_CreateContext
-SDL_GL_CreateContext failed
-SDL_GL_CreateContext@SDL3_0.0.0
-SDL_GL_DestroyContext
-SDL_GL_DestroyContext@SDL3_0.0.0
-SDL_GL_MakeCurrent
-SDL_GL_MakeCurrent@SDL3_0.0.0
-SDL_GL_SetAttribute
-SDL_GL_SetAttribute@SDL3_0.0.0
-SDL_GL_SwapWindow
-SDL_GL_SwapWindow@SDL3_0.0.0
-SDL_GetDisplayBounds
-SDL_GetDisplayBounds@SDL3_0.0.0
-SDL_GetDisplays
-SDL_GetDisplays@SDL3_0.0.0
-SDL_GetNumberProperty
-SDL_GetNumberProperty@SDL3_0.0.0
-SDL_GetPrimaryDisplay
-SDL_GetPrimaryDisplay@SDL3_0.0.0
-SDL_GetWindowFromID
-SDL_GetWindowFromID@SDL3_0.0.0
-SDL_GetWindowProperties
-SDL_GetWindowProperties@SDL3_0.0.0
-SDL_GetWindowSize
-SDL_GetWindowSize@SDL3_0.0.0
-SDL_HideCursor
-SDL_HideCursor@SDL3_0.0.0
-SDL_InitSubSystem
-SDL_InitSubSystem@SDL3_0.0.0
-SDL_PumpEvents
-SDL_PumpEvents@SDL3_0.0.0
-SDL_RaiseWindow
-SDL_RaiseWindow@SDL3_0.0.0
-SDL_RemoveEventWatch
-SDL_RemoveEventWatch@SDL3_0.0.0
-SDL_SetHint
-SDL_SetHint@SDL3_0.0.0
-SDL_SetWindowPosition
-SDL_SetWindowPosition@SDL3_0.0.0
-SDL_ShowCursor
-SDL_ShowCursor@SDL3_0.0.0
-SDL_ShowWindow
-SDL_ShowWindow@SDL3_0.0.0
-SDL_TIMER_RESOLUTION
-SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
-SDL_WasInit
-SDL_WasInit@SDL3_0.0.0
-SDL_free
-SDL_free@SDL3_0.0.0
 SKIN
 SKyu
 SPEED
@@ -4192,7 +4148,6 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 Steam - DirWatcher
-Steam HTML FullScreen
 SteamID
 SteamRealPath
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -4213,9 +4168,6 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamUIGames001
 SteamUIUIInterfaceV001
-SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
-SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
-SteamVProf::CVProfManager::StopProfilingAllThreads()
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
@@ -4525,6 +4477,7 @@ Zjz\v
 \n\fcommentcount
 \n\fcountry_code
 \n\fdebug_source
+\n\fdirect_input
 \n\fdisplay_name
 \n\fdouble_value
 \n\fdpi_vertical
@@ -4551,6 +4504,7 @@ Zjz\v
 \n\fshare_handle
 \n\fstring_value
 \n\fswift_prefix
+\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\fusable_right
@@ -4794,7 +4748,6 @@ ___tls_get_addr
 ___tls_get_addr@GLIBC_2.3
 __assert_fail
 __assert_fail@GLIBC_2.0
-__bss_start
 __ctype_b_loc
 __ctype_b_loc@GLIBC_2.3
 __ctype_get_mb_cur_max
@@ -4930,8 +4883,6 @@ _actionSignalTargetDar
 _associateName
 _blank
 _clickableTextPanels
-_edata
-_end
 _fini
 _imageDar
 _imageDar.IsValidIndex( index )
@@ -5485,6 +5436,7 @@ framesettitlebarvisible
 frametitle
 fread
 fread@GLIBC_2.0
+free
 free@GLIBC_2.0
 freopen@GLIBC_2.0
 frexp
@@ -5509,8 +5461,8 @@ gAMA
 g_AnimationPropertyConverters
 g_ButtonSoundNames
 g_FriendsUIModule
+g_ParentalCache
 g_ScriptSymbols
-g_VProfManager
 g_VProfProfilesRunningCount
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
@@ -5535,24 +5487,6 @@ getenv
 getenv@GLIBC_2.0
 getmntent
 getmntent@GLIBC_2.0
-glBegin
-glBindTexture
-glClear
-glClearColor
-glColor4ub
-glDisable
-glEnable
-glEnd
-glGenTextures
-glGenTextures failed %d\n
-glGetError
-glLoadIdentity
-glMatrixMode
-glOrtho
-glPixelStorei
-glTexCoord2f
-glTexImage2D
-glVertex2f
 global constructors keyed to 
 global destructors keyed to 
 global_achieved_pct
@@ -5841,9 +5775,10 @@ invalid with alpha channel
 inventory
 invite_code
 ip"R\n
-ip_addr"8\n\tCMsgMulti
+ip_addr"
 ip_v6
 is_array
+is_fbs_universe
 is_from_external_source
 is_save
 is_site_license_lock
@@ -6307,6 +6242,7 @@ key_down
 key_up
 keyboard_enabled
 keyboardinputenabled
+keycode
 keymap
 keyword "@1": bad character '0x@2'
 keyword truncated
@@ -6333,8 +6269,6 @@ len >= input_len
 length does not match profile
 length exceeds PNG maximum
 length_ >= n
-libGL.so.1
-libSDL3.so.0
 libaudio.so
 libc.so.6
 libdl.so.2
@@ -6406,6 +6340,7 @@ m_NodeList.IsValidIndex(itemIndex)
 m_PanelAnimationMapPool
 m_PanelKeyBindingMapPool
 m_PanelMessageMapPool
+m_ParentalSettings
 m_PerLineEllipses
 m_PostedMessages
 m_RangeList
@@ -6446,6 +6381,8 @@ m_fnMouseXButtonDownCallback
 m_fnOverlayChatBrowserInfoChanged
 m_fnPostMessage
 m_fnPushToTalkStateChange
+m_fnReject
+m_fnResolve
 m_fnUIModeChangedCallback
 m_iHTMLTextureID
 m_iRefs > 0 && m_iRefs < 0x1000000
@@ -6453,14 +6390,16 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_jumpHandler
 m_list
 m_listChangedFiles
+m_mapAppIdBaseList
+m_mapAppIdCustomList
 m_mapCharToWidth
-m_mapConnections.Element( i )
-m_mapConnections.Element( i )->m_mapWaitingCalls
+m_mapConnections
 m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 m_mapGroupsVisible
 m_mapNotificationCallbacks
+m_mapWaitingCalls
 m_memNodes
 m_nAllocationCount >= 0
 m_nBrowserID
@@ -6480,8 +6419,10 @@ m_pFriendButtons
 m_pImageList
 m_pImagePanel
 m_pKV
+m_pObj
 m_pObj == NULL
 m_pParent == this
+m_pRef->m_pT
 m_pRootNode == NULL
 m_pTextImage
 m_pTooltips
@@ -6491,6 +6432,8 @@ m_pUserData
 m_pVecStringValue
 m_pVecUlValue
 m_pWebChat
+m_pfnOnLogonInfoChanged
+m_pfnOnMessageReceived
 m_pkv
 m_pkvCommand
 m_pkvData
@@ -6521,6 +6464,7 @@ m_sURL
 m_strChatURL
 m_strConvertedDefaultValue
 m_strDirectory
+m_strParentalPasswordPlaintext
 m_strResourceName
 m_strWatchPath
 m_unPID
@@ -6529,7 +6473,6 @@ m_vecActiveSessions
 m_vecCallbacks
 m_vecCallbacks.Count() == 0
 m_vecCallbacks.Count() == 0 || !callback
-m_vecCallbacks[ i ]
 m_vecControllerSlots
 m_vecControllers
 m_vecFuncs
@@ -6733,6 +6676,7 @@ passwordhashtype
 paste
 path
 patterns
+payload
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 persona_state
 personalizationData
@@ -6809,8 +6753,6 @@ print
 priority_score
 profile '
 profile matches sRGB but writing iCCP instead
-profile_off triggered by F2\n
-profile_on triggered by F1\n
 progress
 promise_handle
 propertysheet
@@ -7258,7 +7200,6 @@ typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
 uint32
 uint64
-ulPlatformParentWindow == 0
 unSize < 128 * 1024 * 1024
 unStreamingSessionID
 unable to find control '%s'\n
@@ -7292,6 +7233,7 @@ unknown compression type
 unknown header flags set
 unknown interlace type
 unlink@GLIBC_2.0
+unlisted
 unrecognized ICC profile class
 unrecognized equation type
 unsigned
@@ -7362,6 +7304,7 @@ void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 vr_overlay_key
 vsnprintf
 vsnprintf@GLIBC_2.0
+vtable for CAdHocValidation_SimpleCallback
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

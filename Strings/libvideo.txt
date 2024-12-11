@@ -263,7 +263,7 @@ $\n k_ECodecUsageReasonGameRecording
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $d`D-laM
-$tIContent-Length
+$tIm_iRefs >= 0 && m_iRefs < 0x0ffffff
 %'%1%=%C%K%O%s%
 %*s      %s%s%s%s\n
 %*s    Info Entries:\n
@@ -389,7 +389,6 @@ $tIContent-Length
 %\n k_EMsgClientGetUserStatsResponse
 %\n k_EMsgClientMMSJoinLobbyResponse
 %\n k_EMsgClientP2PIntroducerMessage
-%\n k_EMsgClientRequestedClientStats
 %\n k_EMsgClientUDSP2PSessionStarted
 %\n k_EMsgClientUFSGetSingleFileInfo
 %\n k_EMsgClientUFSShareFileResponse
@@ -516,6 +515,7 @@ $tIContent-Length
 &\n!k_EMsgClientPurchaseWithMachineID
 &\n!k_EMsgClientRequestValidationMail
 &\n!k_EMsgClientResetPasswordResponse
+&\n!k_EMsgClientStat2Int32_Deprecated
 &\n!k_EMsgClientUpdateGuestPassesList
 &\n!k_EMsgClientVoiceCallPreAuthorize
 &\n!k_EMsgDRMSFetchVersionSetResponse
@@ -566,7 +566,6 @@ $tIContent-Length
 '\n"k_EMsgCEGWhackFailureReportRequest
 '\n"k_EMsgClientConcurrentSessionsBase
 '\n"k_EMsgClientDFSAuthenticateRequest
-'\n"k_EMsgClientDownloadRateStatistics
 '\n"k_EMsgClientFileToDownloadResponse
 '\n"k_EMsgClientMMSCreateLobbyResponse
 '\n"k_EMsgClientPICSAccessTokenRequest
@@ -682,7 +681,6 @@ $tIContent-Length
 (\n#k_EMsgClientFSGetFriendsSteamLevels
 (\n#k_EMsgClientFriendRemovedFromSource
 (\n#k_EMsgClientGamesPlayedWithDataBlob
-(\n#k_EMsgClientGetCDNAuthTokenResponse
 (\n#k_EMsgClientGetMicroTxnInfoResponse
 (\n#k_EMsgClientLBSGetLBEntriesResponse
 (\n#k_EMsgClientLaunchClientAppResponse
@@ -715,6 +713,7 @@ $tIContent-Length
 (\n#k_EMsgUCMPublishedFilePreviewRemove
 (\n#k_EMsgWGConnectionValidateUserToken
 (\n\nevent_type
+(\t"8\n\tCMsgMulti
 (\v2 .CCommunity_ClanAnnouncementInfo
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
@@ -898,7 +897,6 @@ $tIContent-Length
 +\n&k_EMsgClientReportOverlayDetourFailure
 +\n&k_EMsgClientRequestAccountDataResponse
 +\n&k_EMsgClientRequestFreeLicenseResponse
-+\n&k_EMsgClientRequestMachineAuthResponse
 +\n&k_EMsgClientUninstallClientAppResponse
 +\n&k_EMsgEconTrading_InitiateTradeRequest
 +\n&k_EMsgGMStatsForwardToAdminConnections
@@ -1036,6 +1034,7 @@ $tIContent-Length
 .CMsgGCRoutingProtoBufHeader
 .CMsgIPAddress
 .CMsgKeyValuePair"
+.CMsgKubeRPCPacket.Hdr
 .EBanContentCheckResult
 .EProtoClanEventType
 .HCK\v
@@ -1104,6 +1103,7 @@ $tIContent-Length
 /\n*k_EMsgDRMWorkerProcessValidateFileResponse
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
+/data/src/common/audio/audio_utils.cpp
 /data/src/common/completionportmanager.cpp
 /data/src/common/completionportmanager_posix.cpp
 /data/src/common/cookiecontainer.cpp
@@ -1225,6 +1225,7 @@ $tIContent-Length
 /index.html
 /proc/%d/status
 /proc/cpuinfo
+/proc/self/exe
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
@@ -1249,6 +1250,7 @@ $tIContent-Length
 0 == m_cubMsgIncomingAlloc
 0 == m_cubMsgIncomingRecv
 0 Umv
+0.15
 0.8.3
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
@@ -1271,6 +1273,7 @@ $tIContent-Length
 0\n+k_EMsgClientDRMDownloadRequestWithCrashData
 0\n+k_EMsgClientFSGetFriendsSteamLevelsResponse
 0\n+k_EMsgClientLogOnWithCredentials_Deprecated
+0\n+k_EMsgClientRequestedClientStats_Deprecated
 0\n+k_EMsgClientSetClientAppUpdateStateResponse
 0\n+k_EMsgClientSiteLicenseSiteInfoNotification
 0\n+k_EMsgDRMWorkerProcessDescribeSecretRequest
@@ -1336,6 +1339,7 @@ $tIContent-Length
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CScheduledItemiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI19NetPacketToDelete_tiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI22NetRecvThrottleGroup_tiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE10ListElem_tEE
@@ -1453,7 +1457,6 @@ $tIContent-Length
 12CHTTPRequest
 12CIPRangeList
 12CRefCounted1I29IHTTPStreamingResponseHandler20CRefCountServiceBaseILb1E6CRefMTEE
-12CRefCounted1I33CHTTPDefaultRedirectEnableHandler20CRefCountServiceBaseILb1E6CRefMTEE
 12CStdMemAlloc
 12CVideoPlayer
 12IVideoPlayer
@@ -1484,6 +1487,7 @@ $tIContent-Length
 14CUtlLinkedListI10CCoroutineiE
 14CUtlLinkedListI14CScheduledItemiE
 14CUtlLinkedListI19NetPacketToDelete_tiE
+14CUtlLinkedListI22NetRecvThrottleGroup_tiE
 14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE
 14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE
 14CUtlLinkedListIN4CNet21NetConnectionWakeUp_tEiE
@@ -1531,6 +1535,7 @@ $tIContent-Length
 17CFileWriterThread
 17CHTTPRequestCache
 17CHTTPRequestParam
+17CMsgKubeRPCPacket
 17CUtlPriorityQueueIP12CVideoPlayerPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CVideoEncoderX264
 17CWorkItemPipeline
@@ -1619,9 +1624,10 @@ $tIContent-Length
 20IHTTPRedirectHandler
 20IUniformRandomStream
 20VideoAdaptationSet_t
-21:25:48
+21:51:44
 21CHTTPClientConnection
 21CHTTPClientWorkThread
+21CMsgKubeRPCPacket_Hdr
 21COpenSSLCachedSession
 21CUtlCStringConversion
 21VideoRepresentation_t
@@ -1931,6 +1937,9 @@ $tIContent-Length
 @net_backlog_bytes_allowed
 @net_backlog_time_allowed_sec
 @net_loopback
+@voice_minabs
+@voice_minavg
+@voice_spew_activity_check
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
 A reservation already exists
@@ -2397,7 +2406,6 @@ B-283
 B-409
 B-571
 B-nocrashdialog
-B/proc/self/exe
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -2407,6 +2415,7 @@ BC (default)
 BConvertYUVtoRGB
 BCreateDirectory
 BDecodeFrame
+BEnableGameRecordingH265
 BEncodeFrame
 BF-CBC
 BF-CFB
@@ -2416,6 +2425,7 @@ BFUa.X
 BF_cbc_encrypt
 BF_decrypt
 BF_encrypt
+BGAMESCOPE_WAYLAND_DISPLAY
 BGRAToARGB
 BGRAToUVRow_C
 BGRAToYRow_C
@@ -2957,9 +2967,10 @@ CH\f1
 CIPAndPort::GetIPv4 called on IPv6 address
 CJob::Heartbeat
 CJobMgr::BResumeSleepingJobs
+CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
-CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
+CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
 CLIENT_EARLY_TRAFFIC_SECRET
 CLIENT_HANDSHAKE_TRAFFIC_SECRET
 CLIENT_RANDOM
@@ -3075,6 +3086,7 @@ CMsgGCRoutingProtoBufHeader
 CMsgIPAddressBucket
 CMsgKeyValuePair
 CMsgKeyValueSet
+CMsgKubeRPCPacket
 CMsgProtoBufHeader
 CMsgProtobufWrapped
 CNet
@@ -3524,6 +3536,7 @@ Content-Disposition: attachment;
 Content-Disposition: form-data; name="%s"; filename="%s"\r\n
 Content-Disposition: form-data; name="%s"\r\n
 Content-Encoding
+Content-Length
 Content-Range
 Content-Transfer-Encoding
 Content-Transfer-Encoding: base64%s
@@ -3770,7 +3783,7 @@ Data transfer deferred
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  2 2024
+Dec 10 2024
 December
 Decipher Only
 Default
@@ -4149,6 +4162,7 @@ Error while parsing option value for "
 Error writing file
 Error=%s ErrorID=%d (0x%x) Line number=%d
 Event Text
+Exception validating current work item
 Excluded
 Existing cancelled license
 Exiting on SPEW_ABORT\n
@@ -5450,6 +5464,7 @@ Needs captcha
 Needs pre-approval
 Net Banking (Nodwin)
 NetCash
+NetPacketGlobals
 Netscape
 Netscape Base Url
 Netscape CA Policy Url
@@ -7440,6 +7455,7 @@ Unsupported
 Unsupported HTTP version in response received by HTTP client from %s (%s): %s\n
 Unsupported Media Type
 Unsupported SPDY version
+Unsupported channel mask count
 Unsupported cookie option
 Unsupported encoding '%s'
 Unsupported extension feature
@@ -7968,6 +7984,7 @@ Zong
 \n\fruby_package
 \n\fstring_value
 \n\fswift_prefix
+\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\nIDEMPOTENT
@@ -11602,7 +11619,7 @@ ios32
 ios64
 ip"R\n
 ipAddressChoice
-ip_addr"8\n\tCMsgMulti
+ip_addr"
 ip_v6
 ipsec Internet Key Exchange
 ipsec3
@@ -11614,6 +11631,7 @@ ipsecUser
 iqmp
 iqmp not inverse of q
 is not a
+is_fbs_universe
 is_from_external_source
 is_visible_in_steam_china
 is_websocket_connect
@@ -11761,7 +11779,6 @@ k_EMsgAIGetAppListResponse
 k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
 k_EMsgAISTestEnableGC
-k_EMsgAISUpdateAppInfo
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
 k_EMsgAMAddFounderToClan
@@ -12205,7 +12222,6 @@ k_EMsgClientDeauthorizeDeviceRequest
 k_EMsgClientDeregisterWithServer
 k_EMsgClientDisableTestLicense
 k_EMsgClientDisableTestLicenseResponse
-k_EMsgClientDownloadRateStatistics
 k_EMsgClientEmailAddrInfo
 k_EMsgClientEmailChange3
 k_EMsgClientEmoticonList
@@ -12247,8 +12263,6 @@ k_EMsgClientGetAppOwnershipTicket
 k_EMsgClientGetAppOwnershipTicketResponse
 k_EMsgClientGetAuthorizedDevices
 k_EMsgClientGetAuthorizedDevicesResponse
-k_EMsgClientGetCDNAuthToken
-k_EMsgClientGetCDNAuthTokenResponse
 k_EMsgClientGetClanActivityCounts
 k_EMsgClientGetClanActivityCountsResponse
 k_EMsgClientGetClientAppList
@@ -12400,13 +12414,10 @@ k_EMsgClientRequestFreeLicense
 k_EMsgClientRequestFreeLicenseResponse
 k_EMsgClientRequestFriendData
 k_EMsgClientRequestItemAnnouncements
-k_EMsgClientRequestMachineAuth
-k_EMsgClientRequestMachineAuthResponse
 k_EMsgClientRequestValidationMail
 k_EMsgClientRequestValidationMailResponse
 k_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
-k_EMsgClientRequestedClientStats
 k_EMsgClientResetForgottenPassword
 k_EMsgClientResetForgottenPassword3
 k_EMsgClientResetForgottenPassword4
@@ -12448,9 +12459,8 @@ k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 k_EMsgClientSiteLicenseSiteInfoNotification
 k_EMsgClientStartPeerContentServer
 k_EMsgClientStartPeerContentServerResponse
-k_EMsgClientStat
-k_EMsgClientStat2
-k_EMsgClientStat2Int32
+k_EMsgClientStat2_Deprecated
+k_EMsgClientStat_Deprecated
 k_EMsgClientStatsUpdated
 k_EMsgClientSteamUsageEvent
 k_EMsgClientStoreUserStats
@@ -12645,7 +12655,6 @@ k_EMsgGMSGameServerReplicate
 k_EMsgGMSchemaConversionResults
 k_EMsgGMWriteConfigToSQL
 k_EMsgGMWriteShellFailureToSQL
-k_EMsgGMWriteStatsToSOS
 k_EMsgGSApprove
 k_EMsgGSAssociateWithClan
 k_EMsgGSAssociateWithClanResponse
@@ -13151,7 +13160,6 @@ m_heap.IsValidIndex(index)
 m_iAudioTrack >= 0
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
-m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
 m_iVideoTrack >= 0
@@ -13204,6 +13212,7 @@ m_pConnectionCallback == NULL
 m_pConnectionRemoteIntraProcess->m_bIntraProcess
 m_pConnectionRemoteIntraProcess->m_pConnectionRemoteIntraProcess == this
 m_pCookieContainer
+m_pCurrentWorkItem
 m_pCustomReadContext
 m_pDecodedAudio
 m_pDecodedAudio->GetWriteAvailable() >= bufAudio.TellPut()
@@ -13346,6 +13355,7 @@ m_vecPostParams
 m_vecPostParams[i]
 m_vecProxyOverrideExcludedHosts
 m_vecQuickRemovePlayer
+m_vecRedirectStack
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 m_vecRepresentations
@@ -13535,6 +13545,7 @@ mmap
 mmap@GLIBC_2.0
 mobile
 mobileTelephoneNumber
+mobilechat
 module initialization error
 module=
 module_add
@@ -14294,6 +14305,7 @@ path length constraint exceeded
 path must be absolute
 path too long
 pathlen
+payload
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
@@ -15291,6 +15303,7 @@ sm_ListHConnectionToPoll.Element( iIndex ) == hConnection
 sm_ListHConnectionToWakeUp
 sm_ListHConnectionToWakeUp.IsEmpty() || sm_ListHConnectionToWakeUp[ sm_ListHConnectionToWakeUp.Tail() ].m_wakeUpTime <= wakeupTime
 sm_ListHConnectionToWakeUp.IsValidIndex( hWakeup )
+sm_ListRecvThrottleGroup
 sm_ListRecvThrottleGroup.IsValidIndex( iGroup )
 sm_SchedulerACK
 sm_SchedulerResend
@@ -16591,6 +16604,7 @@ unknown\n%*s
 unlink@GLIBC_2.0
 unlink_dep
 unlink_sib
+unlisted
 unprotectedAttrs
 unrecognized signature nid
 unregistered scheme

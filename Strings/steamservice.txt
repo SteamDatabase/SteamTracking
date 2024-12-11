@@ -350,7 +350,6 @@ $d`D-laM
 %\n k_EMsgClientGetUserStatsResponse
 %\n k_EMsgClientMMSJoinLobbyResponse
 %\n k_EMsgClientP2PIntroducerMessage
-%\n k_EMsgClientRequestedClientStats
 %\n k_EMsgClientUDSP2PSessionStarted
 %\n k_EMsgClientUFSGetSingleFileInfo
 %\n k_EMsgClientUFSShareFileResponse
@@ -471,6 +470,7 @@ $d`D-laM
 &\n!k_EMsgClientPurchaseWithMachineID
 &\n!k_EMsgClientRequestValidationMail
 &\n!k_EMsgClientResetPasswordResponse
+&\n!k_EMsgClientStat2Int32_Deprecated
 &\n!k_EMsgClientUpdateGuestPassesList
 &\n!k_EMsgClientVoiceCallPreAuthorize
 &\n!k_EMsgDRMSFetchVersionSetResponse
@@ -522,7 +522,6 @@ $d`D-laM
 '\n"k_EMsgCEGWhackFailureReportRequest
 '\n"k_EMsgClientConcurrentSessionsBase
 '\n"k_EMsgClientDFSAuthenticateRequest
-'\n"k_EMsgClientDownloadRateStatistics
 '\n"k_EMsgClientFileToDownloadResponse
 '\n"k_EMsgClientMMSCreateLobbyResponse
 '\n"k_EMsgClientPICSAccessTokenRequest
@@ -600,7 +599,6 @@ $d`D-laM
 (\n#k_EMsgClientFSGetFriendsSteamLevels
 (\n#k_EMsgClientFriendRemovedFromSource
 (\n#k_EMsgClientGamesPlayedWithDataBlob
-(\n#k_EMsgClientGetCDNAuthTokenResponse
 (\n#k_EMsgClientGetMicroTxnInfoResponse
 (\n#k_EMsgClientLBSGetLBEntriesResponse
 (\n#k_EMsgClientLaunchClientAppResponse
@@ -633,6 +631,7 @@ $d`D-laM
 (\n#k_EMsgUCMPublishedFilePreviewRemove
 (\n#k_EMsgWGConnectionValidateUserToken
 (\n\nevent_type
+(\t"8\n\tCMsgMulti
 (\v2 .CCommunity_ClanAnnouncementInfo
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
@@ -804,7 +803,6 @@ $d`D-laM
 +\n&k_EMsgClientReportOverlayDetourFailure
 +\n&k_EMsgClientRequestAccountDataResponse
 +\n&k_EMsgClientRequestFreeLicenseResponse
-+\n&k_EMsgClientRequestMachineAuthResponse
 +\n&k_EMsgClientUninstallClientAppResponse
 +\n&k_EMsgEconTrading_InitiateTradeRequest
 +\n&k_EMsgGMStatsForwardToAdminConnections
@@ -945,6 +943,7 @@ $d`D-laM
 .CMsgGCRoutingProtoBufHeader
 .CMsgIPAddress
 .CMsgKeyValuePair"
+.CMsgKubeRPCPacket.Hdr
 .EBanContentCheckResult
 .EProtoClanEventType
 .HCK\v
@@ -1124,6 +1123,7 @@ $d`D-laM
 0\n+k_EMsgClientDRMDownloadRequestWithCrashData
 0\n+k_EMsgClientFSGetFriendsSteamLevelsResponse
 0\n+k_EMsgClientLogOnWithCredentials_Deprecated
+0\n+k_EMsgClientRequestedClientStats_Deprecated
 0\n+k_EMsgClientSetClientAppUpdateStateResponse
 0\n+k_EMsgClientSiteLicenseSiteInfoNotification
 0\n+k_EMsgDRMWorkerProcessDescribeSecretRequest
@@ -1213,6 +1213,7 @@ $d`D-laM
 16IKeyValuesSystem
 17CCrossProcessPipe
 17CDebugStatsSystem
+17CMsgKubeRPCPacket
 17IDebugStatsSystem
 18000000
 18446744073709551615
@@ -1268,7 +1269,8 @@ $d`D-laM
 20IClientModuleManager
 20IClientSecureDesktop
 20IUniformRandomStream
-21:25:48
+21:51:44
+21CMsgKubeRPCPacket_Hdr
 21CUtlCStringConversion
 21CWorkItemFunctionCall
 21CWorkThreadPoolSignal
@@ -2308,9 +2310,10 @@ CJobMgr::BResumeYieldingJobs
 CJobMgr::BRunNewJobsFromNetMessages
 CJobMgr::TimeoutJob
 CJobMgr::m_WorkThreadPool
+CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
-CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
+CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
 CLIENT_EARLY_TRAFFIC_SECRET
 CLIENT_HANDSHAKE_TRAFFIC_SECRET
 CLIENT_RANDOM
@@ -2422,6 +2425,7 @@ CMsgGCRoutingProtoBufHeader
 CMsgIPAddressBucket
 CMsgKeyValuePair
 CMsgKeyValueSet
+CMsgKubeRPCPacket
 CMsgProtoBufHeader
 CMsgProtobufWrapped
 COMPLEMENTOFALL
@@ -2778,7 +2782,7 @@ DTLSv1_listen
 Data Encipherment
 Data transfer deferred
 DcO/lcK+hSK
-Dec  2 2024
+Dec 10 2024
 December
 Decipher Only
 Default initial allocation size for PB arena
@@ -3074,6 +3078,7 @@ Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error writing file
+Exception validating current work item
 Excluded
 Exiting on SPEW_ABORT\n
 Expanded map entry type 
@@ -5442,6 +5447,7 @@ Zjz\v
 \n\fruby_package
 \n\fstring_value
 \n\fswift_prefix
+\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\nIDEMPOTENT
@@ -8518,7 +8524,7 @@ ioctl@GLIBC_2.0
 ioctlsocket
 ip"R\n
 ipAddressChoice
-ip_addr"8\n\tCMsgMulti
+ip_addr"
 ip_v6
 ipsec Internet Key Exchange
 ipsec3
@@ -8530,6 +8536,7 @@ ipsecUser
 iqmp
 iqmp not inverse of q
 is not a
+is_fbs_universe
 is_from_external_source
 is_visible_in_steam_china
 isalnum
@@ -8643,7 +8650,6 @@ k_EMsgAIGetAppListResponse
 k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
 k_EMsgAISTestEnableGC
-k_EMsgAISUpdateAppInfo
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
 k_EMsgAMAddFounderToClan
@@ -9055,7 +9061,6 @@ k_EMsgClientGameConnectDeny
 k_EMsgClientGameConnectTokens
 k_EMsgClientGameEnded_obsolete
 k_EMsgClientGamesPlayed
-k_EMsgClientGetCDNAuthToken
 k_EMsgClientGetClientAppList
 k_EMsgClientGetClientDetails
 k_EMsgClientGetEmoticonList
@@ -9139,7 +9144,6 @@ k_EMsgClientRequestAccountData
 k_EMsgClientRequestAuthList
 k_EMsgClientRequestFreeLicense
 k_EMsgClientRequestFriendData
-k_EMsgClientRequestMachineAuth
 k_EMsgClientResetPassword
 k_EMsgClientRichPresenceInfo
 k_EMsgClientRichPresenceRequest
@@ -9161,9 +9165,8 @@ k_EMsgClientSetHeartbeatRate
 k_EMsgClientSetIgnoreFriend
 k_EMsgClientSiteLicenseBase
 k_EMsgClientSiteLicenseCheckout
-k_EMsgClientStat
-k_EMsgClientStat2
-k_EMsgClientStat2Int32
+k_EMsgClientStat2_Deprecated
+k_EMsgClientStat_Deprecated
 k_EMsgClientStatsUpdated
 k_EMsgClientSteamUsageEvent
 k_EMsgClientStoreUserStats
@@ -9323,7 +9326,6 @@ k_EMsgGMSGameServerReplicate
 k_EMsgGMSchemaConversionResults
 k_EMsgGMWriteConfigToSQL
 k_EMsgGMWriteShellFailureToSQL
-k_EMsgGMWriteStatsToSOS
 k_EMsgGSApprove
 k_EMsgGSAssociateWithClan
 k_EMsgGSDisconnectNotice
@@ -9722,6 +9724,7 @@ m_nPostFd >= 0
 m_nRecursions > 0
 m_pBudgetGroups
 m_pBudgetGroups == NULL
+m_pCurrentWorkItem
 m_pObj
 m_pObj == NULL
 m_pParent == this
@@ -10526,6 +10529,7 @@ path length constraint exceeded
 path must be absolute
 path too long
 pathlen
+payload
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
@@ -12401,6 +12405,7 @@ unknown\n%*s
 unlink@GLIBC_2.0
 unlink_dep
 unlink_sib
+unlisted
 unprotectedAttrs
 unrecognized signature nid
 unregistered scheme

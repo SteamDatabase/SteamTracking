@@ -12,13 +12,19 @@
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -0123456789
+18CVulkanSharedImage
+?27CVulkanSharedResourceDevice
 @data
+@entryPointOutput
+@entryPointOutput.vPositionPs
+@entryPointOutput.vTexCoord
 AKST
 ASCII
 ASCII//TRANSLIT
 April
 August
 CH\f1
+Constants
 December
 February
 FoCLcx
@@ -65,8 +71,6 @@ SRGBToLinear4(vf4;
 STEAM_OVERLAY_VULKAN_LAYER_FORCE_COMPUTE
 Saturday
 September
-ShaderUVParams
-ShaderYParams
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -142,7 +146,16 @@ TLS wrapper function for
 Thursday
 Tuesday
 UTF-8
+Ucoeff
+Uoffset
+VK_KHR_bind_memory2
+VK_KHR_get_memory_requirements2
+VK_KHR_maintenance1
+VK_KHR_maintenance2
+VK_KHR_sampler_ycbcr_conversion
 VTT for 
+Vcoeff
+Voffset
 VulkanSteamOverlayBeginRendering
 VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDrawTexturedRect
@@ -154,6 +167,8 @@ VulkanSteamOverlayStopRendering
 VulkanSteamOverlayTextureExists
 VulkanSteamOverlayUpdateTexture
 Wednesday
+Ycoeff
+Yoffset
 [abi:
 _Accum
 _Fract
@@ -232,6 +247,7 @@ alnum
 alpha
 auto
 auto:
+bCompositeCursor
 basic_ios::clear
 basic_iostream
 basic_istream
@@ -259,9 +275,6 @@ char16_t
 char32_t
 char8_t
 cntrl
-coefficientsU
-coefficientsV
-coefficientsY
 color
 colorX
 colorY
@@ -289,10 +302,17 @@ dlopen@GLIBC_2.1
 dlsym
 dlsym@GLIBC_2.0
 dynamic_cast
+eInputType
+eOutputType
 false
 fflush
 fflush@GLIBC_2.0
+flCursorOffsetX
+flCursorOffsetY
+flCursorScaleX
+flCursorScaleY
 flSDRAdjust
+flTonemapFactor
 float
 fputc
 fputc@GLIBC_2.0
@@ -312,20 +332,23 @@ g_flPad0
 g_flPad1
 g_flPad2
 g_flSDRWhiteLevelInNits
+g_sSampler
+g_sSamplerBilinear
+g_sSamplerCursor
+g_sSamplerNearest
+g_tCursor
+g_tTexture
 getenv
 getenv@GLIBC_2.0
-gl_ClipDistance
-gl_CullDistance
-gl_PerVertex
-gl_PointSize
 gl_Position
-gl_VertexIndex
 global constructors keyed to 
 global destructors keyed to 
 graph
 guard variable for 
 half
 hidden alias for 
+i.nVertexIndex
+i.vTexCoord
 iconv
 iconv@GLIBC_2.1
 iconv_close
@@ -412,6 +435,8 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
+strcasecmp
+strcasecmp@GLIBC_2.0
 strcmp
 strcmp@GLIBC_2.0
 strdup
@@ -464,10 +489,10 @@ unsigned int
 unsigned long
 unsigned long long
 unsigned short
-unused
 upper
 uvScale
 uv_in
+vOutputResolution
 vector::_M_default_append
 vector::_M_realloc_insert
 vkAcquireDrmDisplayEXT

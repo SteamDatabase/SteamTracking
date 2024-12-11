@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Error fatal"
 "SteamBootstrapper_Warning_Title"			"%appname% - Advertencia"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% ya no es compatible con la versión de tu sistema operativo."
+"SteamCmd_OperatingSystemNoLongerSupported" "«%appname%» ya no es compatible con la versión de tu sistema operativo.\nPuedes sobrescribir esta comprobación con ‑overrideminos,\npero puede que «%appname%» no funcione correctamente y que el soporte de este comando se elimine en el futuro.\nActualiza tu sistema operativo a una versión compatible para seguir usando «%appname%»."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "«%appname%» ya no es compatible con la versión de tu sistema operativo.\n\nHaz clic en «Aceptar» para salir de la beta de «%appname%» seleccionada."
 "SteamBootstrapper_Starting"                  "Iniciando..."
 }

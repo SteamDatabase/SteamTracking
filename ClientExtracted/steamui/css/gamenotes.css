@@ -1,6 +1,3 @@
-.ModalDialogPopup ._3hIt9g_59KauEV2uSNK6Ct.ModalDialogBody .title-area {
-  height: 58px;
-}
 .ProseMirror {
   position: relative;
 }
@@ -51,6 +48,28 @@ img.ProseMirror-separator {
   border: none !important;
   margin: 0 !important;
 }
+.ProseMirror-gapcursor {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+}
+.ProseMirror-gapcursor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  border-top: 1px solid #000;
+  animation: ProseMirror-cursor-blink 1.1s steps(2, start) infinite;
+}
+@keyframes ProseMirror-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+.ProseMirror-focused .ProseMirror-gapcursor {
+  display: block;
+}
 ._1lo3nIamSX1TzzE4TlhFXA {
   position: fixed;
   background: #ccc;
@@ -69,6 +88,50 @@ img.ProseMirror-separator {
 }
 p.pm_paragraph {
   min-height: 8px;
+}
+.ProseMirror table {
+  overflow: hidden;
+}
+.ProseMirror td,
+.ProseMirror th {
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+}
+.ProseMirror .ProseMirror-gapcursor:after {
+  border-top: none;
+  border-left: 1px solid #fff;
+  height: 1em;
+  top: .5em;
+}
+.ProseMirror .selectedCell:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(200, 200, 255, 0.4);
+  pointer-events: none;
+}
+.ProseMirror td:not([data-colwidth]):not(.column-resize-dragging),
+.ProseMirror th:not([data-colwidth]):not(.column-resize-dragging) {
+  min-width: var(--default-cell-min-width);
+}
+.ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  z-index: 20;
+  background-color: #adf;
+  pointer-events: none;
+}
+.ProseMirror.resize-cursor {
+  cursor: ew-resize;
+  cursor: col-resize;
 }
 .LCeIT0gmFTY8fdfaVgk4j {
   display: flex;
@@ -384,5 +447,8 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 ._1Ve4VFO2EEkeNZdel_Asky li > p:first-of-type {
   margin: 0;
+}
+.ModalDialogPopup ._3hIt9g_59KauEV2uSNK6Ct.ModalDialogBody .title-area {
+  height: 58px;
 }
 /*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/css/gamenotes.css.map*/

@@ -35,7 +35,7 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123^@
+ !"#$%&'()*+,-./0123~+
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -274,6 +274,8 @@
 #SteamBootstrapper_NoNetwork
 #SteamBootstrapper_NotWriteable
 #SteamBootstrapper_OK
+#SteamBootstrapper_OperatingSystemNoLongerSupported
+#SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta
 #SteamBootstrapper_PercentComplete
 #SteamBootstrapper_ReadOnlyInstall
 #SteamBootstrapper_UpdateApplyFail
@@ -447,7 +449,6 @@ $d`D-laM
 %\n k_EMsgClientGetUserStatsResponse
 %\n k_EMsgClientMMSJoinLobbyResponse
 %\n k_EMsgClientP2PIntroducerMessage
-%\n k_EMsgClientRequestedClientStats
 %\n k_EMsgClientUDSP2PSessionStarted
 %\n k_EMsgClientUFSGetSingleFileInfo
 %\n k_EMsgClientUFSShareFileResponse
@@ -477,6 +478,8 @@ $d`D-laM
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %appname% can't write to its install dir.
+%appname% is no longer supported on your operating system version.
+%appname% is no longer supported on your operating system version.\n\nClick OK to exit the selected %appname% beta.
 %d MB avail\n
 %d MB free space\n
 %d MB total space\n
@@ -602,6 +605,7 @@ $d`D-laM
 &\n!k_EMsgClientPurchaseWithMachineID
 &\n!k_EMsgClientRequestValidationMail
 &\n!k_EMsgClientResetPasswordResponse
+&\n!k_EMsgClientStat2Int32_Deprecated
 &\n!k_EMsgClientUpdateGuestPassesList
 &\n!k_EMsgClientVoiceCallPreAuthorize
 &\n!k_EMsgDRMSFetchVersionSetResponse
@@ -653,7 +657,6 @@ $d`D-laM
 '\n"k_EMsgCEGWhackFailureReportRequest
 '\n"k_EMsgClientConcurrentSessionsBase
 '\n"k_EMsgClientDFSAuthenticateRequest
-'\n"k_EMsgClientDownloadRateStatistics
 '\n"k_EMsgClientFileToDownloadResponse
 '\n"k_EMsgClientMMSCreateLobbyResponse
 '\n"k_EMsgClientPICSAccessTokenRequest
@@ -769,7 +772,6 @@ $d`D-laM
 (\n#k_EMsgClientFSGetFriendsSteamLevels
 (\n#k_EMsgClientFriendRemovedFromSource
 (\n#k_EMsgClientGamesPlayedWithDataBlob
-(\n#k_EMsgClientGetCDNAuthTokenResponse
 (\n#k_EMsgClientGetMicroTxnInfoResponse
 (\n#k_EMsgClientLBSGetLBEntriesResponse
 (\n#k_EMsgClientLaunchClientAppResponse
@@ -802,6 +804,7 @@ $d`D-laM
 (\n#k_EMsgUCMPublishedFilePreviewRemove
 (\n#k_EMsgWGConnectionValidateUserToken
 (\n\nevent_type
+(\t"8\n\tCMsgMulti
 (\v2 .CCommunity_ClanAnnouncementInfo
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
@@ -906,7 +909,6 @@ $d`D-laM
 *%*/*O*U*_*e*k*m*s*
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
 *0fT
-*23CInternalLambdaWorkItemIZ15BYieldingFileIoPFb10StringViewEPKcS0_EUlvE_bE
 *5KS
 *:JZjz
 *N12_GLOBAL__N_121system_error_categoryE
@@ -990,7 +992,6 @@ $d`D-laM
 +\n&k_EMsgClientReportOverlayDetourFailure
 +\n&k_EMsgClientRequestAccountDataResponse
 +\n&k_EMsgClientRequestFreeLicenseResponse
-+\n&k_EMsgClientRequestMachineAuthResponse
 +\n&k_EMsgClientUninstallClientAppResponse
 +\n&k_EMsgEconTrading_InitiateTradeRequest
 +\n&k_EMsgGMStatsForwardToAdminConnections
@@ -1137,6 +1138,7 @@ $d`D-laM
 -forceosver
 -forcepackagedownload
 -forcesteamupdate
+-forceunsupportedos
 -friendsui
 -fs_log
 -fs_logbins
@@ -1210,6 +1212,7 @@ $d`D-laM
 .CMsgGCRoutingProtoBufHeader
 .CMsgIPAddress
 .CMsgKeyValuePair"
+.CMsgKubeRPCPacket.Hdr
 .EBanContentCheckResult
 .EProtoClanEventType
 .HCK\v
@@ -1347,7 +1350,6 @@ $d`D-laM
 /data/src/common/websocket.cpp
 /data/src/common/websocket.h
 /data/src/common/workthreadpool.cpp
-/data/src/common/workthreadpool.h
 /data/src/common/zip_helpers.cpp
 /data/src/external/picojson/picojson.h
 /data/src/filesystem/BaseFileSystem.cpp
@@ -1476,6 +1478,7 @@ $d`D-laM
 0\n+k_EMsgClientDRMDownloadRequestWithCrashData
 0\n+k_EMsgClientFSGetFriendsSteamLevelsResponse
 0\n+k_EMsgClientLogOnWithCredentials_Deprecated
+0\n+k_EMsgClientRequestedClientStats_Deprecated
 0\n+k_EMsgClientSetClientAppUpdateStateResponse
 0\n+k_EMsgClientSiteLicenseSiteInfoNotification
 0\n+k_EMsgDRMWorkerProcessDescribeSecretRequest
@@ -1620,7 +1623,6 @@ $d`D-laM
 12CGlxUpdateUI
 12CHTTPRequest
 12CIPRangeList
-12CRefCounted1I33CHTTPDefaultRedirectEnableHandler20CRefCountServiceBaseILb1E6CRefMTEE
 12CStdMemAlloc
 13CHTTPResponse
 13CMsgAppRights
@@ -1693,6 +1695,7 @@ $d`D-laM
 17CFileWriterThread
 17CHTTPRequestCache
 17CHTTPRequestParam
+17CMsgKubeRPCPacket
 17CXWindowsUpdateUI
 17IDebugStatsSystem
 17RefCountPvWrapperI16CStructNetPacketE
@@ -1772,11 +1775,12 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:25:48
+21:51:44
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
 21CLocalizedStringTable
+21CMsgKubeRPCPacket_Hdr
 21COpenSSLCachedSession
 21CUtlCStringConversion
 22CBaseScheduledFunction
@@ -1787,6 +1791,7 @@ $d`D-laM
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
 24CRefCountedProtobufArena
+24CWorkItemYieldingFileIO1
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 25CFastTimerCumulativeTimer
 25CHTTPClientNetworkRequest
@@ -2610,7 +2615,7 @@ B-233
 B-283
 B-409
 B-571
-B21:26:11
+B21:52:05
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -2843,12 +2848,13 @@ BVerifyInstalledFiles: bad symlink %s
 BVerifyInstalledFiles: bad symlink ( %s -> %s, expected non-symlink )
 BVerifyInstalledFiles: bad symlink ( %s -> %s, should link to %s )
 BVerifyInstalledFiles: can't read %s\n
+BYieldingFileIo
 BYieldingLoadFileIntoBuffer
 BYieldingWaitTime
 BackUp() can only be called after a successful Next().
 Background update loop checking for update. . .
 Background update loop suppressed by client. . .
-Backing out of beta '%s' due to manifest download error 404
+Backing out of client beta '%s' due to manifest download error 404
 Backing store not supported
 Backup Running
 Bad Gateway
@@ -2878,7 +2884,6 @@ Basis Type: %s\n
 Beeline
 Benchmark
 Beta
-Beta changed from %s to %s\n
 Bh;+j
 Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
@@ -3118,6 +3123,7 @@ CBilling_Address::_InternalParse(char const*, google::protobuf::internal::ParseC
 CBilling_Address::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
 CBilling_Address::~CBilling_Address()
 CBilling_AddressDefaultTypeInternal::~CBilling_AddressDefaultTypeInternal()
+CBitStringT<CVariableBitStringBase>::GetBit(int) const
 CBootstrapLogFile::BInit()
 CBootstrapLogFile::LogLine(char const*)
 CBootstrapLogFile::~CBootstrapLogFile()
@@ -3871,6 +3877,8 @@ CHTTPClientWorkThread::DoPlatformProxyConfigAutodetection()
 CHTTPClientWorkThread::Validate(CValidator&, char const*)
 CHTTPClientWorkThread::~CHTTPClientWorkThread()
 CHTTPDefaultRedirectEnableHandler::BAllowRedirect(CHTTPRequestHandle*, char const*, CUtlString&, KeyValues*)
+CHTTPDefaultRedirectEnableHandler::Validate(CValidator&, char const*)
+CHTTPDefaultRedirectEnableHandler::~CHTTPDefaultRedirectEnableHandler()
 CHTTPDefaultRedirectEnableHandlerInternal::~CHTTPDefaultRedirectEnableHandlerInternal()
 CHTTPRequest
 CHTTPRequest::CHTTPRequest()
@@ -3920,7 +3928,6 @@ CJob::BookkeepRuntime()
 CJob::DescribeWork(CUtlStringBuilder&)
 CJob::Heartbeat
 CJob::MsgTraceReportJobBlocking(char const*)
-CJob::SetYieldInfo(char const*, char const*)
 CJobMgr::BResumeSleepingJobs
 CJobMgr::EnsureJobIsInTimeoutQueue(CJob&, EJobPauseReason)
 CJobMgr::GetPJob(unsigned long long, EJobPauseReason, bool)
@@ -3934,12 +3941,14 @@ CJpegSourceMgr::imp_resync_to_restart(jpeg_decompress_struct*, int)
 CJpegSourceMgr::imp_skip_input_data(jpeg_decompress_struct*, long)
 CJpegSourceMgr::imp_term_source(jpeg_decompress_struct*)
 CKeySymbol::CKeySymbol(char const*)
+CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
 CKeyValuesSystem::AddKeyToLeakTrack(void*, unsigned int)
 CKeyValuesSystem::AddStringToPool(char const*, int)
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
-CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
+CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
 CKeyValuesSystem::CKeyValuesSystem()
+CKeyValuesSystem::DumpLastNKeys(unsigned int)
 CKeyValuesSystem::DumpStats()
 CKeyValuesSystem::GetKeyValuesExpressionSymbol(char const*)
 CKeyValuesSystem::GetStats(CUtlString&)
@@ -4360,6 +4369,39 @@ CMsgKeyValueSet::_InternalParse(char const*, google::protobuf::internal::ParseCo
 CMsgKeyValueSet::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
 CMsgKeyValueSet::~CMsgKeyValueSet()
 CMsgKeyValueSetDefaultTypeInternal::~CMsgKeyValueSetDefaultTypeInternal()
+CMsgKubeRPCPacket
+CMsgKubeRPCPacket* google::protobuf::Arena::CreateMaybeMessage<CMsgKubeRPCPacket>(google::protobuf::Arena*)
+CMsgKubeRPCPacket::ByteSizeLong() const
+CMsgKubeRPCPacket::Clear()
+CMsgKubeRPCPacket::CopyFrom(google::protobuf::Message const&)
+CMsgKubeRPCPacket::GetCachedSize() const
+CMsgKubeRPCPacket::GetMetadata() const
+CMsgKubeRPCPacket::IsInitialized() const
+CMsgKubeRPCPacket::MergeFrom(CMsgKubeRPCPacket const&)
+CMsgKubeRPCPacket::MergeFrom(google::protobuf::Message const&)
+CMsgKubeRPCPacket::New() const
+CMsgKubeRPCPacket::New(google::protobuf::Arena*) const
+CMsgKubeRPCPacket::SetCachedSize(int) const
+CMsgKubeRPCPacket::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
+CMsgKubeRPCPacket::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
+CMsgKubeRPCPacket::~CMsgKubeRPCPacket()
+CMsgKubeRPCPacketDefaultTypeInternal::~CMsgKubeRPCPacketDefaultTypeInternal()
+CMsgKubeRPCPacket_Hdr* google::protobuf::Arena::CreateMaybeMessage<CMsgKubeRPCPacket_Hdr>(google::protobuf::Arena*)
+CMsgKubeRPCPacket_Hdr::ByteSizeLong() const
+CMsgKubeRPCPacket_Hdr::Clear()
+CMsgKubeRPCPacket_Hdr::CopyFrom(google::protobuf::Message const&)
+CMsgKubeRPCPacket_Hdr::GetCachedSize() const
+CMsgKubeRPCPacket_Hdr::GetMetadata() const
+CMsgKubeRPCPacket_Hdr::IsInitialized() const
+CMsgKubeRPCPacket_Hdr::MergeFrom(CMsgKubeRPCPacket_Hdr const&)
+CMsgKubeRPCPacket_Hdr::MergeFrom(google::protobuf::Message const&)
+CMsgKubeRPCPacket_Hdr::New() const
+CMsgKubeRPCPacket_Hdr::New(google::protobuf::Arena*) const
+CMsgKubeRPCPacket_Hdr::SetCachedSize(int) const
+CMsgKubeRPCPacket_Hdr::_InternalParse(char const*, google::protobuf::internal::ParseContext*)
+CMsgKubeRPCPacket_Hdr::_InternalSerialize(unsigned char*, google::protobuf::io::EpsCopyOutputStream*) const
+CMsgKubeRPCPacket_Hdr::~CMsgKubeRPCPacket_Hdr()
+CMsgKubeRPCPacket_HdrDefaultTypeInternal::~CMsgKubeRPCPacket_HdrDefaultTypeInternal()
 CMsgMulti* google::protobuf::Arena::CreateMaybeMessage<CMsgMulti>(google::protobuf::Arena*)
 CMsgMulti::ByteSizeLong() const
 CMsgMulti::Clear()
@@ -4476,6 +4518,7 @@ CNetConnection::OnMessageComplete(unsigned char*, unsigned int)
 CNetConnection::OnNetQOSLevelChanged(ENetQOSLevel, ENetQOSLevel)
 CNetConnection::RecvPlaintext(unsigned char*, unsigned int)
 CNetConnection::SSLHandshakeCompleted()
+CNetConnection::SSLNetConnectionData_t::Validate(CValidator&, char const*)
 CNetConnection::SSLShutdownCompleted()
 CNetConnection::SendEncryptedData(unsigned char*, unsigned int)
 CNetConnection::SetConnectionPostedBufferSize(int)
@@ -4790,8 +4833,6 @@ CRefCountServiceBase<true, CRefMT>::DoAddRef() const
 CRefCountServiceBase<true, CRefMT>::DoRelease() const
 CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
 CRefCountServiceBase<true, CRefST>::OnFinalRelease()
-CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT>>::AddRef() const
-CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT>>::Release() const
 CRefCounted1<IHTTPResponseHandler, CRefCountServiceBase<true, CRefMT>>::AddRef() const
 CRefCounted1<IHTTPResponseHandler, CRefCountServiceBase<true, CRefMT>>::Release() const
 CRefCounted1<IHTTPStreamingResponseHandler, CRefCountServiceBase<true, CRefMT>>::AddRef() const
@@ -5795,6 +5836,11 @@ CWorkItemThreadedWriteResponseToDisk::ThreadProcess
 CWorkItemThreadedWriteResponseToDisk::ThreadProcess(CWorkThread*)
 CWorkItemThreadedWriteResponseToDisk::s_unBytesPendingWrite
 CWorkItemThreadedWriteResponseToDisk::~CWorkItemThreadedWriteResponseToDisk()
+CWorkItemYieldingFileIO1::GetThreadProcessName() const
+CWorkItemYieldingFileIO1::GetWorkItemName() const
+CWorkItemYieldingFileIO1::ThreadProcess(CWorkThread*)
+CWorkItemYieldingFileIO1::Validate(CValidator&, char const*)
+CWorkItemYieldingFileIO1::~CWorkItemYieldingFileIO1()
 CWorkItemZeroAndFreeBuffer
 CWorkItemZeroAndFreeBuffer - SecureZeroMemory+delete
 CWorkItemZeroAndFreeBuffer::DispatchCompletedWorkItem(CJobMgr*)
@@ -5987,6 +6033,7 @@ Ciphersuites
 Cleaning up...
 ClearField
 Click&Buy
+Client beta changed from '%s' to '%s'\n
 Client no longer supported
 ClientCAFile
 ClientCAPath
@@ -6421,7 +6468,7 @@ DbUseIOCP
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  2 2024
+Dec 10 2024
 December
 Decipher Only
 Default
@@ -7030,6 +7077,7 @@ Error: XRRGetCrtcInfo() is not available\n
 Error: XRRGetOutputInfo() is not available\n
 ErrorSerial
 Event Text
+Exception validating current work item
 Excluded
 Execute: %s\n
 Exhausted list of download hosts
@@ -7569,9 +7617,6 @@ IDEA-ECB
 IDEA-OFB
 IDEMPOTENCY_UNKNOWN
 IEEE Security in Storage Working Group
-IHTTPRedirectHandler::AddRef() const
-IHTTPRedirectHandler::Release() const
-IHTTPRedirectHandler::Validate(CValidator&, char const*)
 IHTTPStreamingResponseHandler::OnRequestBytesSent(CHTTPRequestHandle*, unsigned int)
 ILocalize::AddFile() failed to load file "%s".\n
 IMPLICIT
@@ -10545,7 +10590,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Dec  2 2024 21:26:10
+Startup - updater built Dec 10 2024 21:52:05
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -10712,7 +10757,6 @@ Switching Protocols
 Symbol name "
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
-SysID zero not supported for rack boxes
 System
 System OS is not compatible with manifest OS type
 T*8U
@@ -12181,6 +12225,7 @@ Zpm"U
 \n\fruby_package
 \n\fstring_value
 \n\fswift_prefix
+\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\nIDEMPOTENT
@@ -12366,6 +12411,8 @@ _CMsgIPAddressBucket_default_instance_
 _CMsgIPAddress_default_instance_
 _CMsgKeyValuePair_default_instance_
 _CMsgKeyValueSet_default_instance_
+_CMsgKubeRPCPacket_Hdr_default_instance_
+_CMsgKubeRPCPacket_default_instance_
 _CMsgMulti_default_instance_
 _CMsgProtoBufHeader_default_instance_
 _CMsgProtobufWrapped_default_instance_
@@ -17695,7 +17742,6 @@ httpclient
 httponly
 https
 https proxy request
-https:
 https:%s
 https://
 https://%s%s
@@ -18516,7 +18562,7 @@ ios32
 ios64
 ip"R\n
 ipAddressChoice
-ip_addr"8\n\tCMsgMulti
+ip_addr"
 ip_country_code
 ip_v6
 ipsec Internet Key Exchange
@@ -18529,6 +18575,7 @@ ipsecUser
 iqmp
 iqmp not inverse of q
 is not a
+is_fbs_universe
 is_from_external_source
 is_visible_in_steam_china
 is_websocket_connect
@@ -18569,7 +18616,6 @@ java_multiple_files
 java_outer_classname
 java_string_check_utf8
 jjjjjjjjjjjjjjjjaes key setup failed
-jobID != k_GIDNil
 job_metrics
 joined the group
 joint-iso-itu-t
@@ -18714,7 +18760,6 @@ k_EMsgAIGetAppListResponse
 k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
 k_EMsgAISTestEnableGC
-k_EMsgAISUpdateAppInfo
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
 k_EMsgAMAddFounderToClan
@@ -19158,7 +19203,6 @@ k_EMsgClientDeauthorizeDeviceRequest
 k_EMsgClientDeregisterWithServer
 k_EMsgClientDisableTestLicense
 k_EMsgClientDisableTestLicenseResponse
-k_EMsgClientDownloadRateStatistics
 k_EMsgClientEmailAddrInfo
 k_EMsgClientEmailChange3
 k_EMsgClientEmoticonList
@@ -19200,8 +19244,6 @@ k_EMsgClientGetAppOwnershipTicket
 k_EMsgClientGetAppOwnershipTicketResponse
 k_EMsgClientGetAuthorizedDevices
 k_EMsgClientGetAuthorizedDevicesResponse
-k_EMsgClientGetCDNAuthToken
-k_EMsgClientGetCDNAuthTokenResponse
 k_EMsgClientGetClanActivityCounts
 k_EMsgClientGetClanActivityCountsResponse
 k_EMsgClientGetClientAppList
@@ -19353,13 +19395,10 @@ k_EMsgClientRequestFreeLicense
 k_EMsgClientRequestFreeLicenseResponse
 k_EMsgClientRequestFriendData
 k_EMsgClientRequestItemAnnouncements
-k_EMsgClientRequestMachineAuth
-k_EMsgClientRequestMachineAuthResponse
 k_EMsgClientRequestValidationMail
 k_EMsgClientRequestValidationMailResponse
 k_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
-k_EMsgClientRequestedClientStats
 k_EMsgClientResetForgottenPassword
 k_EMsgClientResetForgottenPassword3
 k_EMsgClientResetForgottenPassword4
@@ -19401,9 +19440,8 @@ k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 k_EMsgClientSiteLicenseSiteInfoNotification
 k_EMsgClientStartPeerContentServer
 k_EMsgClientStartPeerContentServerResponse
-k_EMsgClientStat
-k_EMsgClientStat2
-k_EMsgClientStat2Int32
+k_EMsgClientStat2_Deprecated
+k_EMsgClientStat_Deprecated
 k_EMsgClientStatsUpdated
 k_EMsgClientSteamUsageEvent
 k_EMsgClientStoreUserStats
@@ -19598,7 +19636,6 @@ k_EMsgGMSGameServerReplicate
 k_EMsgGMSchemaConversionResults
 k_EMsgGMWriteConfigToSQL
 k_EMsgGMWriteShellFailureToSQL
-k_EMsgGMWriteStatsToSOS
 k_EMsgGSApprove
 k_EMsgGSAssociateWithClan
 k_EMsgGSAssociateWithClanResponse
@@ -19933,6 +19970,7 @@ ld-linux.so.2
 leading_comments
 leading_detached_comments
 left the group
+legacy_
 legacy_renegotiation
 len <= INT_MAX
 len > 0 || HasError()
@@ -20168,6 +20206,7 @@ m_pConnectionCallback == NULL
 m_pConnectionRemoteIntraProcess->m_bIntraProcess
 m_pConnectionRemoteIntraProcess->m_pConnectionRemoteIntraProcess == this
 m_pCookieContainer
+m_pCurrentWorkItem
 m_pHTTP2Session->m_NGHTTP2Session
 m_pHTTPRedirectHandler
 m_pHTTPRequest
@@ -20206,7 +20245,6 @@ m_pValObjects != NULL
 m_pVecStringValue
 m_pVecUlValue
 m_pWaitingOnLock == NULL
-m_pWaitingOnWorkItem == NULL
 m_pWebSocketConnectionCallback
 m_pkvRequestHeaders
 m_pkvResponseHeaders
@@ -20223,6 +20261,7 @@ m_stimeFakeTimeout.LTime() < INT64_MAX
 m_strActualHostName
 m_strActualUrl
 m_strAppProtocol
+m_strArg1
 m_strCacheDirectory
 m_strCertPEMFile
 m_strCmdLine
@@ -20275,6 +20314,7 @@ m_vecParms[i]
 m_vecPostParams
 m_vecPostParams[i]
 m_vecProxyOverrideExcludedHosts
+m_vecRedirectStack
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 m_vecRequestsToSend
@@ -20472,6 +20512,7 @@ mmap
 mmap@GLIBC_2.0
 mobile
 mobileTelephoneNumber
+mobilechat
 modf
 modf@GLIBC_2.0
 module initialization error
@@ -20974,7 +21015,6 @@ non-virtual thunk to CHTTPClientConnection::RecvPlaintext(unsigned char*, unsign
 non-virtual thunk to CHTTPClientConnection::SSLHandshakeCompleted()
 non-virtual thunk to CHTTPClientConnection::SSLShutdownCompleted()
 non-virtual thunk to CHTTPClientConnection::SendEncryptedData(unsigned char*, unsigned int)
-non-virtual thunk to CHTTPDefaultRedirectEnableHandlerInternal::~CHTTPDefaultRedirectEnableHandlerInternal()
 non-virtual thunk to CNetConnection::OnMessageComplete(unsigned char*, unsigned int)
 non-virtual thunk to COpenSSLConnection::BAsyncSend(CUtlBuffer&)
 non-virtual thunk to COpenSSLConnection::BAsyncSend(unsigned char const*, unsigned int)
@@ -21260,7 +21300,6 @@ pHdr->m_nMsgStartSeq == pHdr->m_nSeqThis
 pHdr->m_nPktsInMsg <= k_nMaxPktsPerMsg
 pHdr->m_nSeqThis <= pHdr->m_nMsgStartSeq + pHdr->m_nPktsInMsg - 1
 pHost && *pHost
-pItem->GetJobID() == GetJobID()
 pKeyValuesTextParser
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 pLogInstance == sm_pLogInstance
@@ -21353,6 +21392,7 @@ path must be absolute
 path too long
 pathID
 pathlen
+payload
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
@@ -23524,6 +23564,8 @@ typeinfo for CMsgIPAddress
 typeinfo for CMsgIPAddressBucket
 typeinfo for CMsgKeyValuePair
 typeinfo for CMsgKeyValueSet
+typeinfo for CMsgKubeRPCPacket
+typeinfo for CMsgKubeRPCPacket_Hdr
 typeinfo for CMsgMulti
 typeinfo for CMsgProtoBufHeader
 typeinfo for CMsgProtobufWrapped
@@ -23548,7 +23590,6 @@ typeinfo for CPathString
 typeinfo for CProtoBufNetPacket
 typeinfo for CRefCountServiceBase<true, CRefMT>
 typeinfo for CRefCountServiceBase<true, CRefST>
-typeinfo for CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT>>
 typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT>>
 typeinfo for CRefCounted<CRefCountServiceBase<true, CRefST>>
 typeinfo for CRefCountedProtobufArena
@@ -23590,6 +23631,7 @@ typeinfo for CWorkItemRunSSLConnection
 typeinfo for CWorkItemThreadedDeleteCacheFile
 typeinfo for CWorkItemThreadedGetCachedResponse
 typeinfo for CWorkItemThreadedWriteResponseToDisk
+typeinfo for CWorkItemYieldingFileIO1
 typeinfo for CWorkItemZeroAndFreeBuffer
 typeinfo for CWorkThread
 typeinfo for CWorkThreadPool
@@ -23824,6 +23866,8 @@ typeinfo name for CMsgIPAddress
 typeinfo name for CMsgIPAddressBucket
 typeinfo name for CMsgKeyValuePair
 typeinfo name for CMsgKeyValueSet
+typeinfo name for CMsgKubeRPCPacket
+typeinfo name for CMsgKubeRPCPacket_Hdr
 typeinfo name for CMsgMulti
 typeinfo name for CMsgProtoBufHeader
 typeinfo name for CMsgProtobufWrapped
@@ -23849,7 +23893,6 @@ typeinfo name for CPathString
 typeinfo name for CProtoBufNetPacket
 typeinfo name for CRefCountServiceBase<true, CRefMT>
 typeinfo name for CRefCountServiceBase<true, CRefST>
-typeinfo name for CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT>>
 typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT>>
 typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefST>>
 typeinfo name for CRefCountedProtobufArena
@@ -24018,6 +24061,7 @@ typeinfo name for CWorkItemRunSSLConnection
 typeinfo name for CWorkItemThreadedDeleteCacheFile
 typeinfo name for CWorkItemThreadedGetCachedResponse
 typeinfo name for CWorkItemThreadedWriteResponseToDisk
+typeinfo name for CWorkItemYieldingFileIO1
 typeinfo name for CWorkItemZeroAndFreeBuffer
 typeinfo name for CWorkThread
 typeinfo name for CWorkThreadPool
@@ -24352,6 +24396,7 @@ unlink
 unlink@GLIBC_2.0
 unlink_dep
 unlink_sib
+unlisted
 unprotectedAttrs
 unrecognized ICC profile class
 unrecognized equation type
@@ -24767,6 +24812,8 @@ vtable for CMsgIPAddress
 vtable for CMsgIPAddressBucket
 vtable for CMsgKeyValuePair
 vtable for CMsgKeyValueSet
+vtable for CMsgKubeRPCPacket
+vtable for CMsgKubeRPCPacket_Hdr
 vtable for CMsgMulti
 vtable for CMsgProtoBufHeader
 vtable for CMsgProtobufWrapped
@@ -24824,6 +24871,7 @@ vtable for CWorkItemRunSSLConnection
 vtable for CWorkItemThreadedDeleteCacheFile
 vtable for CWorkItemThreadedGetCachedResponse
 vtable for CWorkItemThreadedWriteResponseToDisk
+vtable for CWorkItemYieldingFileIO1
 vtable for CWorkItemZeroAndFreeBuffer
 vtable for CWorkThread
 vtable for CWorkThreadPool

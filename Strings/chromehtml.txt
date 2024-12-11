@@ -291,6 +291,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_ECloudStoragePersistStateDeleted
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
+&\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -330,6 +331,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_ECommentThreadTypeModeratorMessage
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
+(\n$k_EContentCheckProvider_GoogleGemini
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -361,6 +363,7 @@ $\n k_SystemAudioPortDirection_Input
 (\t"5\n\fCMsgSetFocus
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
+(\t"8\n\tCMsgMulti
 (\t"k\n\vCMsgPostURL
 (\v2 .CCommunity_ClanAnnouncementInfo
 (\v2 .google.protobuf.DescriptorProto
@@ -435,6 +438,7 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_PublishedFileQueryType_RankedByTrend
 *\n\fjobid_source
 *\n\fjobid_target
+*m_pCurrentProtoBufMsg
 *|\n\fECPUGovernor
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
@@ -508,6 +512,7 @@ $\n k_SystemAudioPortDirection_Input
 --remote-debugging-port=%s
 --renderer-cmd-prefix='konsole -title renderer -e gdb --args'
 --single-process
+--use-angle=vulkan
 --valve-enable-site-isolation
 --valve-initial-threadpool-size=%d
 -0123456789
@@ -592,6 +597,7 @@ $\n k_SystemAudioPortDirection_Input
 -no-cef-sandbox
 -no-dwrite
 -no-restart-on-ui-mode-change
+-nocrashdialog
 -pid
 -realm=China
 -realm=Global
@@ -641,6 +647,7 @@ $\n k_SystemAudioPortDirection_Input
 .CMsgIPAddress
 .CMsgJSValue.JSObjectProperty
 .CMsgKeyValuePair"
+.CMsgKubeRPCPacket.Hdr
 .EBanContentCheckResult
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
@@ -868,6 +875,7 @@ $\n k_SystemAudioPortDirection_Input
 17CMsgBrowserRemove
 17CMsgCloseDevTools
 17CMsgImeCommitText
+17CMsgKubeRPCPacket
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
@@ -932,6 +940,7 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgImeSetComposition
 21CMsgJSExecuteCallback
 21CMsgJSReleaseCallback
+21CMsgKubeRPCPacket_Hdr
 21CMsgRequestFullScreen
 21CMsgResizeGripChanged
 21CMsgSetVerticalScroll
@@ -1436,6 +1445,7 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgKeyValuePair
 CMsgKeyValueSet
+CMsgKubeRPCPacket
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
 CMsgLoadLocalization
@@ -2481,7 +2491,6 @@ V_snprintf
 V_strncat_length
 V_strncpy
 V_vsnprintf
-V_vsnprintfRet
 VaapiIgnoreDriverChecks
 VaapiVideoDecodeLinuxGL
 Valencian
@@ -2516,6 +2525,7 @@ Xhosa
 Yoruba
 Z-google.golang.org/protobuf/types/descriptorpb
 Zulu
+Z~WpW
 [Config]\n# Product information.\nProductName=cefwebhelper\nProductVersion=%u\n\n# Required to enable crash dump upload.\nServerURL=%s\n\n# Disable rate limiting so that all crashes are uploaded.\nRateLimitEnabled=true\nMaxUploadsPerDay=5\n\n[CrashKeys]\nVendor=small\nUserID=small\nBuildID=small\nPlatform=small\nSteamUniverse=small\n
 [abi:
 [lazy = true] can only be specified for submessage fields.
@@ -2576,6 +2586,7 @@ Zulu
 \n\fshare_handle
 \n\fstring_value
 \n\fswift_prefix
+\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\fusable_right
@@ -3367,10 +3378,11 @@ initial_height
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
 internal error in map key sorting
 ip"R\n
-ip_addr"8\n\tCMsgMulti
+ip_addr"
 ip_v6
 irish
 is_array
+is_fbs_universe
 is_from_external_source
 is_save
 is_visible_in_steam_china
@@ -3713,6 +3725,7 @@ m_mapBrowserRequests
 m_mapBrowsers
 m_nAllocationCount >= 0
 m_options
+m_pCurrentCmd
 m_pDataWritten
 m_pFromChromeStream
 m_pMapFile
@@ -3727,6 +3740,7 @@ m_sMasterEventName
 m_sMasterSharedMemoryName
 m_sUserAgent
 m_sVROverlayKey
+m_sWideVineDir
 m_sWindowIcon
 m_vecPendingCommands
 macedonian
@@ -3832,6 +3846,7 @@ parse
 parsing
 path
 patterns
+payload
 pchVROverlayKey && pchVROverlayKey[0]
 persian
 phone
@@ -4147,6 +4162,7 @@ unichar
 uninterpreted_option
 unknown
 unlink@GLIBC_2.0
+unlisted
 unsigned
 unsigned __int128
 unsigned char

@@ -227,6 +227,7 @@ message ProfileItem {
 	optional string movie_mp4_small = 14;
 	optional uint32 equipped_flags = 12;
 	repeated .ProfileItem.ProfileColor profile_colors = 15;
+	optional bool tiled = 16;
 }
 
 message CPlayer_GetProfileBackground_Response {

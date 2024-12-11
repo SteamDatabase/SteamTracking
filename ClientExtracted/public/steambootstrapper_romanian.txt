@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Eroare fatală"
 "SteamBootstrapper_Warning_Title"			"%appname% - Atenție"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% nu mai este compatibil cu versiunea sistemului tău de operare."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname% nu mai este compatibil cu versiunea sistemului tău de operare.\nPoți suprascrie această cerință prin utilizarea liniei -overrideminos.\nEste posibil ca %appname% să nu ruleze corespunzător, iar compatibilitatea cu această suprascriere să fie eliminată în viitor.\nTe rugăm să-ți actualizezi sistemul de operare la unul compatibil pentru a continua utilizarea aplicației."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% nu mai este compatibil cu versiunea sistemului tău de operare.\n\nApasă „OK” pentru a părăsi versiunea beta selectată pentru %appname%."
 "SteamBootstrapper_Starting"                  "Începe..."
 }

@@ -882,7 +882,7 @@
     "RemotePlay_Error": "Fehler bei Remote Play",
     "RemotePlay_ErrorInviteFailed_ParentalUnlockFailed": "Die Einladung zu Remote Play Together ist fehlgeschlagen, da dieses Spiel nicht für die Familienansicht bestätigt ist.",
     "RemotePlay_ErrorInviteFailed_ScreenLocked": "Die Einladung zu Remote Play Together ist aufgrund gesperrten Bildschirms fehlgeschlagen.",
-    "RemotePlay_ErrorInviteFailed_Failed": "Die Einladung zu Remote Play Together ist fehlgeschlagen. Streamingsitzung konnte nicht initiiert werden.",
+    "RemotePlay_ErrorInviteFailed_Failed": "Die Einladung zu Remote Play Together ist fehlgeschlagen. Stream konnte nicht initiiert werden.",
     "RemotePlay_ErrorInviteFailed_DriversNotInstalled": "Remote Play Together benötigt die Installation zusätzlicher Treiber. Bitte folgen Sie den Steam-Aufforderungen zur Installation der Treiber.",
     "RemotePlay_ErrorInviteFailed_Disabled": "Die Einladung zu Remote Play Together ist aufgrund Deaktivierung von Remote Play in den Einstellungen fehlgeschlagen.",
     "RemotePlay_ErrorInviteFailed_BroadcastingActive": "Die Einladung zu Remote Play Together ist aufgrund laufender Übertragung fehlgeschlagen.",

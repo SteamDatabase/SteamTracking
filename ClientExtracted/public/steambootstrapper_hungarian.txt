@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Végzetes hiba"
 "SteamBootstrapper_Warning_Title"			"%appname% - Figyelmeztetés"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "A(z) %appname% már nem támogatott operációs rendszered verzióján."
+"SteamCmd_OperatingSystemNoLongerSupported" "A(z) %appname% már nem támogatott operációs rendszered verzióján.\nEzt az ellenőrzést felülírhatod az -overrideminos átadásával.\nLehet, hogy a(z) %appname% nem fog megfelelően futni, és e felülírás támogatása a jövőben el lehet távolítva.\nA további használathoz, kérjük, frissíts támogatott operációs rendszer verzióra."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "A(z) %appname% már nem támogatott operációs rendszered verzióján.\n\nKattints az OK-ra a kiválasztott %appname% bétából kilépéshez."
 "SteamBootstrapper_Starting"                  "Indítás..."
 }

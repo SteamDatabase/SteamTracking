@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Aνεπανόρθωτο σφάλμα"
 "SteamBootstrapper_Warning_Title"			"%appname% - Προειδοποίηση"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "Το %appname% δεν υποστηρίζεται πλέον στην έκδοση του λειτουργικού σας συστήματος."
+"SteamCmd_OperatingSystemNoLongerSupported" "Το %appname% δεν υποστηρίζεται πλέον στην έκδοση του λειτουργικού συστήματός σας.\nΜπορείτε να παρακάμψετε αυτόν τον έλεγχο με την εντολή -overrideminos.\nΤο %appname% μπορεί να μην λειτουργήσει σωστά και η υποστήριξη για αυτήν την παράκαμψη να αφαιρεθεί στο μέλλον.\nΠραγματοποιήστε ενημέρωση σε μια υποστηριζόμενη έκδοση λειτουργικού συστήματος για απρόσκοπτη χρήση."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "Το %appname% δεν υποστηρίζεται πλέον στην έκδοση του λειτουργικού συστήματός σας.\n\nΚάντε κλικ στο «OK» για να τερματίσετε την επιλεγμένη έκδοση βήτα του %appname%."
 "SteamBootstrapper_Starting"                  "Εκκίνηση…"
 }

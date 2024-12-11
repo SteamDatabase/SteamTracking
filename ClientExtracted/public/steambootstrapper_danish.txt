@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% - Fatal fejl"
 "SteamBootstrapper_Warning_Title"			"%appname% - Advarsel"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% understøttes ikke længere i den nuværende version af dit operativsystem."
+"SteamCmd_OperatingSystemNoLongerSupported" "%appname% understøttes ikke længere af den nuværende version af dit operativsystem.\nDu kan tilsidesætte denne kontrol ved at bruge -overrideminos.\n%appname% vil muligvis ikke køre ordentligt, og understøttelse af tilsidesættelsen kan blive fjernet senere.\nOpdater til en understøttet OS-version for fortsat brug."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% understøttes ikke længere af den nuværende version af dit operativsystem.\n\nKlik på OK for at forlade den valgte beta for %appname%."
 "SteamBootstrapper_Starting"                  "Starter..."
 }

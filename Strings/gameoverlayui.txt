@@ -19,7 +19,6 @@
  Outdent() without matching Indent().
  Parameter to BackUp() can't be negative.
  ReadToken overflow
- SDL_GetWindowWMInfo returned an unsupported subsystem (we require X11)
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [clone 
@@ -65,8 +64,8 @@
 !\n\finitial_left
 !is_large()
 !m_SelectedItems.HasElement( itemID )
-!m_pSharedPaintBuffers->BLockedForRead()
 !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pCmd->has_hwnd_browser()
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 !pszString || pszString[nChars] == '\0'
 " \n\rCMsgSetUIMode
@@ -323,6 +322,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_ECloudStoragePersistStateDeleted
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
+&\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -369,6 +369,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_ECommentThreadTypeModeratorMessage
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
+(\n$k_EContentCheckProvider_GoogleGemini
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -400,6 +401,7 @@ $\n k_SystemAudioPortDirection_Input
 (\t"5\n\fCMsgSetFocus
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
+(\t"8\n\tCMsgMulti
 (\t"k\n\vCMsgPostURL
 (\v2 .CCommunity_ClanAnnouncementInfo
 (\v2 .google.protobuf.DescriptorProto
@@ -584,6 +586,7 @@ $\n k_SystemAudioPortDirection_Input
 .CMsgIPAddress
 .CMsgJSValue.JSObjectProperty
 .CMsgKeyValuePair"
+.CMsgKubeRPCPacket.Hdr
 .EBanContentCheckResult
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
@@ -712,7 +715,6 @@ $\n k_SystemAudioPortDirection_Input
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0\n\nrouting_gc
-0q+v
 0x%llx
 1000
 10BlankImage
@@ -963,7 +965,6 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
 16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
-16CHTMLProtoBufMsgI27CMsgForcePopupsToDirectHWNDE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
@@ -994,6 +995,7 @@ $\n k_SystemAudioPortDirection_Input
 17CMsgBrowserRemove
 17CMsgCloseDevTools
 17CMsgImeCommitText
+17CMsgKubeRPCPacket
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
@@ -1047,7 +1049,6 @@ $\n k_SystemAudioPortDirection_Input
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20CCDDBAppDetailCommon
-20CDirWatcherPS3Thread
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -1066,7 +1067,7 @@ $\n k_SystemAudioPortDirection_Input
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
-21:26:33
+21:52:31
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1074,6 +1075,7 @@ $\n k_SystemAudioPortDirection_Input
 21CMsgImeSetComposition
 21CMsgJSExecuteCallback
 21CMsgJSReleaseCallback
+21CMsgKubeRPCPacket_Hdr
 21CMsgRequestFullScreen
 21CMsgResizeGripChanged
 21CMsgSetVerticalScroll
@@ -1100,6 +1102,7 @@ $\n k_SystemAudioPortDirection_Input
 23CMsgSteamAuthCookiesSet
 23CVGUIApplicationOverlay
 23IConCommandBaseAccessor
+24CDirWatcherPollingThread
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
 24CMsgNotifyUserActivation
@@ -1446,7 +1449,6 @@ BrowserBringWindowToFront
 BrowserDisabledKBLink
 BrowserDisabledMessage
 BrowserDraggableRegionsChanged
-BrowserExitFullScreen
 BrowserHideWindow
 BrowserMaximizeRestoreWindow
 BrowserMinimizeWindow
@@ -1794,6 +1796,7 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgKeyValuePair
 CMsgKeyValueSet
+CMsgKubeRPCPacket
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
 CMsgLoadLocalization
@@ -2156,7 +2159,7 @@ Data Exploit
 Deaccel
 Debit Card (Nodwin)
 Debug
-Dec  2 2024
+Dec 10 2024
 December
 Default value for an enum field must be an identifier.
 DefaultFixed
@@ -2333,6 +2336,7 @@ EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
 Enums must contain at least one value.
+Error
 Error %d getting shared memory size
 Error %d growing shared object manager file.
 Error %d locking shared memory file
@@ -2812,7 +2816,7 @@ Invited
 Is Bank
 Is64BitOS
 Is64BitOS()
-IsARM() || GetCPUInformation().m_bSSE2
+IsARM64() || GetCPUInformation().m_bSSE2
 IsPointInCaptureRegion
 IsPowerOfTwo( nNewCapacity )
 IsResizeBorder
@@ -3947,64 +3951,6 @@ RunGameEngine007
 Runic
 Running Script
 Running Update
-SDL.window.x11.window
-SDL3_0.0.0
-SDL_AddEventWatch
-SDL_AddEventWatch@SDL3_0.0.0
-SDL_CreateWindow
-SDL_CreateWindow failed\n
-SDL_CreateWindow@SDL3_0.0.0
-SDL_DestroyWindow
-SDL_DestroyWindow@SDL3_0.0.0
-SDL_GL_CreateContext
-SDL_GL_CreateContext failed
-SDL_GL_CreateContext@SDL3_0.0.0
-SDL_GL_DestroyContext
-SDL_GL_DestroyContext@SDL3_0.0.0
-SDL_GL_MakeCurrent
-SDL_GL_MakeCurrent@SDL3_0.0.0
-SDL_GL_SetAttribute
-SDL_GL_SetAttribute@SDL3_0.0.0
-SDL_GL_SwapWindow
-SDL_GL_SwapWindow@SDL3_0.0.0
-SDL_GetDisplayBounds
-SDL_GetDisplayBounds@SDL3_0.0.0
-SDL_GetDisplays
-SDL_GetDisplays@SDL3_0.0.0
-SDL_GetNumberProperty
-SDL_GetNumberProperty@SDL3_0.0.0
-SDL_GetPrimaryDisplay
-SDL_GetPrimaryDisplay@SDL3_0.0.0
-SDL_GetWindowFromID
-SDL_GetWindowFromID@SDL3_0.0.0
-SDL_GetWindowProperties
-SDL_GetWindowProperties@SDL3_0.0.0
-SDL_GetWindowSize
-SDL_GetWindowSize@SDL3_0.0.0
-SDL_HideCursor
-SDL_HideCursor@SDL3_0.0.0
-SDL_InitSubSystem
-SDL_InitSubSystem@SDL3_0.0.0
-SDL_PumpEvents
-SDL_PumpEvents@SDL3_0.0.0
-SDL_RaiseWindow
-SDL_RaiseWindow@SDL3_0.0.0
-SDL_RemoveEventWatch
-SDL_RemoveEventWatch@SDL3_0.0.0
-SDL_SetHint
-SDL_SetHint@SDL3_0.0.0
-SDL_SetWindowPosition
-SDL_SetWindowPosition@SDL3_0.0.0
-SDL_ShowCursor
-SDL_ShowCursor@SDL3_0.0.0
-SDL_ShowWindow
-SDL_ShowWindow@SDL3_0.0.0
-SDL_TIMER_RESOLUTION
-SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
-SDL_WasInit
-SDL_WasInit@SDL3_0.0.0
-SDL_free
-SDL_free@SDL3_0.0.0
 SHMemStream header is corrupt in GetInternal()\n
 SHMemStream header is corrupt in PutInternal()\n
 SKIN
@@ -4228,7 +4174,6 @@ Staging
 StandardPC
 Startup
 Steam - DirWatcher
-Steam HTML FullScreen
 Steam Path: %s\n
 Steam Video
 Steam client out of date
@@ -4757,6 +4702,7 @@ ZooPropertyPage
 \n\fshare_handle
 \n\fstring_value
 \n\fswift_prefix
+\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\fusable_right
@@ -5747,24 +5693,6 @@ getpwuid
 getpwuid@GLIBC_2.0
 getuid
 getuid@GLIBC_2.0
-glBegin
-glBindTexture
-glClear
-glClearColor
-glColor4ub
-glDisable
-glEnable
-glEnd
-glGenTextures
-glGenTextures failed %d\n
-glGetError
-glLoadIdentity
-glMatrixMode
-glOrtho
-glPixelStorei
-glTexCoord2f
-glTexImage2D
-glVertex2f
 global constructors keyed to 
 global destructors keyed to 
 google
@@ -5986,9 +5914,10 @@ invited user
 ios32
 ios64
 ip"R\n
-ip_addr"8\n\tCMsgMulti
+ip_addr"
 ip_v6
 is_array
+is_fbs_universe
 is_from_external_source
 is_save
 is_visible_in_steam_china
@@ -6317,8 +6246,6 @@ len > 0 || HasError()
 len >= input_len
 length_ >= n
 level3
-libGL.so.1
-libSDL3.so.0
 libaudio.so
 libavif.so.16
 libc.so.6
@@ -6620,6 +6547,7 @@ mkstemp errno %d\n
 mmap
 mmap@GLIBC_2.0
 mobile
+mobilechat
 modal
 modified
 modified64
@@ -6766,6 +6694,7 @@ parsing_failed
 paste
 path
 patterns
+payload
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pcre_callout
 pcre_compile
@@ -6872,8 +6801,6 @@ preserveAspectRatio
 previous
 print
 priority_score
-profile_off triggered by F2\n
-profile_on triggered by F1\n
 progress
 promise_handle
 promoted to moderator
@@ -7331,7 +7258,6 @@ typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
 uint32
 uint64
-ulPlatformParentWindow == 0
 un-banned from chat
 unSize < 128 * 1024 * 1024
 unable to find control '%s'\n
@@ -7350,6 +7276,7 @@ unknown POSIX class name
 unknown option bit(s) set
 unknown property name after \P or \p
 unlink@GLIBC_2.0
+unlisted
 unmatched parentheses
 unrecognized character after (? or (?-
 unrecognized character after (?<

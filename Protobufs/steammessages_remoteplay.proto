@@ -571,11 +571,15 @@ message CInputMouseUpMsg {
 message CInputKeyDownMsg {
 	optional uint32 input_mark = 1;
 	required uint32 scancode = 2;
+	optional uint32 modifiers = 3;
+	optional uint32 keycode = 4;
 }
 
 message CInputKeyUpMsg {
 	optional uint32 input_mark = 1;
 	required uint32 scancode = 2;
+	optional uint32 modifiers = 3;
+	optional uint32 keycode = 4;
 }
 
 message CInputTextMsg {
@@ -826,6 +830,7 @@ message CRemotePlayTogetherGroupUpdateMsg {
 	optional string miniprofile_location = 3;
 	optional string game_name = 4;
 	optional string avatar_location = 5;
+	optional bool direct_input = 6;
 }
 
 message CSetInputTemporarilyDisabledMsg {

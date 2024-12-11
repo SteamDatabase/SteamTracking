@@ -80,7 +80,7 @@
 "vgui_FileCopy_Estimate"	"còn %s1"
 "vgui_FileCopy_Copying_Multiple" "Đang sao chép '%s1' (còn %s2)"
 "vgui_FileCopy_Copying_Single" 	"Đang sao chép '%s1'"
-"vgui_FileCopy_Ovewwrite_Title"	"Ghi đè file tin"
+"vgui_FileCopy_Ovewwrite_Title"	"Ghi đè file"
 "vgui_FileCopy_Ovewwrite_Prompt" "Ghi đè '%filename%'?"
 
 "SMPEvent_AppLaunch"		"Khởi chạy ứng dụng"

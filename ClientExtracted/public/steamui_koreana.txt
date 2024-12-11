@@ -30,7 +30,7 @@
 "WelcomeToSteamEmailLabel2" "(유효해야 함)"
 "WelcomeToSteamEmailRepeat"	"메일 주소를 다시 입력하세요."
 "WelcomeToSteamPrivacyInfo1" "자세한 내용은"
-"WelcomeToSteamPrivacyInfo2" "개인정보 보호정책"
+"WelcomeToSteamPrivacyInfo2" "개인정보 처리방침"
 "WelcomeToSteamPrivacyInfo3" "참조하세요."
 "Underline" "       _______________________"
 "Underline2" "       _______________________"
@@ -371,7 +371,7 @@
 
 "Steam_ChangeUserDialogTitle"			"계정 변경"
 "Steam_ChangeUserDialogMsg"				"계속 진행하면 다른 Steam 계정을 선택할 수 있습니다. 현재 계정은 이 컴퓨터에 저장되어 다음에 다시 로그인할 수 있습니다.\n\n계속 진행할까요?"
-"Steam_ChangeUserDialogMsg_NoCachedCredentials"	"계속 진행하면 다른 Steam 계정을 선택할 수 있습니다. 현재 계정으로 다시 로그인하려면, 비밀번호 입력 또는 모바일 인증이 필요합니다.\n\n계속 진행할까요?"
+"Steam_ChangeUserDialogMsg_NoCachedCredentials"	"계속 진행하면 다른 Steam 계정을 선택할 수 있습니다. 현재 계정으로 다시 로그인하려면, 비밀번호 입력 또는 모바일 승인이 필요합니다.\n\n계속 진행할까요?"
 "Steam_ChangeUserDialogOKButton"			"계정 변경"
 "Steam_ChangeUserDialogLabel"			"계정 이름:"
 
@@ -842,7 +842,7 @@
 "SteamUI_Selection_Turkish"			"Türkçe (튀르키예어)"
 "SteamUI_Selection_Arabic"			"العربية(아랍어)"
 "SteamUI_Selection_Ukrainian"			"Українська (우크라이나어)"
-"SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (스페인어-중남미)"
+"SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica(스페인어 - 중남미)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (베트남어)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia(인도네시아어)"
 
@@ -852,7 +852,7 @@
 "SteamUI_ISDN_112k"		"ISDN - 112kbps"
 "SteamUI_T1"			"T1 - 1Mbps 이상"
 "SteamUI_LAN"			"LAN - 10Mbps 이상"
-"SteamUI_PrivacyButton"		"Valve 개인정보 보호정책 보기"
+"SteamUI_PrivacyButton"		"Valve 개인정보 처리방침 보기"
 
 "Steam_ChangeContactEmail_Working" "연락 메일 주소 변경 중..."
 
@@ -863,7 +863,7 @@
 "SteamUI_ValveSurvey_YesParticipate"						"네, 설문 조사에 참여하겠습니다."
 "SteamUI_ValveSurvey_NoParticipate"							"아니요, 참여하지 않겠습니다."
 
-"SteamUI_ValveSurvey_PrivacyButton"							"Valve 개인정보 보호정책 보기"
+"SteamUI_ValveSurvey_PrivacyButton"							"Valve 개인정보 처리방침 보기"
 
 "SteamUI_ValveSurvey_InternetLabel"							"본 설문 조사에 응해 주셔서 대단히 감사합니다.\n\n가장 먼저 필요한 정보는 귀하의 인터넷 연결 속도입니다. 아래 선택 항목 중에서 귀하의 속도를 선택하세요.\n\n인터넷 연결 속도:"
 "SteamUI_ValveSurvey_InternetDontKnow"						"모름"
@@ -1452,7 +1452,7 @@
 
 "SteamUI_DriverUnknown_Title"		"알 수 없는 동영상 카드"
 "SteamUI_DriverUnknown_Info"		"데이터베이스에 정보가 없는 그래픽 카드입니다.  시스템의 안정성과 성능이 충분하지 못할 경우 게임 플레이가 원활하지 않을 수 있습니다.  앞으로 귀하의 동영상 카드와 드라이버를 지정할 수 있도록 충분한 정보를 제공해 주시면 감사하겠습니다.  정보 업로드 버튼을 클릭하면 현재 데이터베이스에 없는 동영상 카드를 기록하는 데 도움을 주실 수 있습니다."
-"SteamUI_UnknownUrlLabel"		"Valve 개인정보 보호정책 보기"
+"SteamUI_UnknownUrlLabel"		"Valve 개인정보 처리방침 보기"
 "SteamUI_UnknownUpload"			"정보 업로드"
 "SteamUI_ContinueUnknown"		"계속 실행"
 "SteamUI_SuppressUnknown"		"이 경고 메시지를 다시 표시 안 함"
@@ -1560,7 +1560,7 @@
 "Steam_SteamSubscriberAgreement"	    "Steam 이용 약관"
 "Steam_SteamSubscriberAgreement_china"	"Steam China 사용권 계약"
 "Steam_ComplianceRequired_Title"	"Steam - 주의"
-"Steam_ComplianceRequired_Info"		"계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
+"Steam_ComplianceRequired_Info"		"계속 진행하려면 Steam 이용 약관의 모든 조건에 동의해야 합니다."
 
 "Steam_Legal_UnreleasedProduct"	"* 본 제품은 아직 출시가 되지 않았으며, 출시가 되면 제품을 구매한 모든 분들께 제공될 것입니다. 이 제품의 출시일은 아직 확정되지 않았습니다. 따라서, 비공식적인 출처를 통한 출시 예정 날짜에 의존하지 마세요."
 "Steam_Legal_TimeToShipGoods"	"**  Half-Life 2 골드 패키지와 함께 제공되는 사은품에는 6-8주의 배송 기간이 있습니다."
@@ -1683,8 +1683,8 @@
 "SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
-"SteamUI_SSA_Agree"				"이 약관를 처음부터 끝까지 숙독해 주세요. 계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
-"SteamUI_SSA_CybercafeAgree"		"사용 허가를 받은 PC방 운영자이며 모든 조항에 동의합니다."
+"SteamUI_SSA_Agree"				"이 약관를 처음부터 끝까지 숙독해 주세요. 계속 진행하려면 Steam 이용 약관의 모든 조건에 동의해야 합니다."
+"SteamUI_SSA_CybercafeAgree"		"사용 허가를 받은 PC방 운영자이며 모든 이용 약관에 동의합니다."
 "SteamUI_SSA_ActivateProduct"		"Steam에 제품을 등록하고 Steam 라이브러리에 추가하려면 소매점에서 구입한 CD/DVD의 제품 코드 또는 기타 Steam 제품 코드를 여기 입력하세요. 계속하려면 '다음'을 클릭하세요."
 "SteamUI_ActivateProductLockedDown"		"고객님의 계정이 고객님에 의해 잠겼거나 Steam 고객지원에 의해 잠겼습니다. 해당 문제가 해결될 때까지 이 계정에서 새 제품을 활성화할 수 없습니다."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Steam 고객지원의 활성화된 알림 보기"
@@ -1962,7 +1962,7 @@
 
 "Steam_Game_UpdateNewsURL"		"%game% 업데이트 기록 보기"
 
-"steam_menu_PrivacyPolicy"		"개인정보 보호정책"
+"steam_menu_PrivacyPolicy"		"개인정보 처리방침"
 "steam_menu_LegalInformation"		"사용권 정보"
 "steam_menu_SteamSubscriberAgreement"	"Steam 이용 약관"
 
@@ -4073,7 +4073,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_EOLAlert"	"Steam은 %DaysUntilOSEndOfLife%일 후 %OsVer%에서 실행할 수 없게 됩니다."
 
-"Steam_SupportAlert"	"계정 알림이 도착했습니다."
+"Steam_SupportAlert"	"중요 계정 알림"
 "steam_inventory"	"보관함"
 "steam_inbox_item"	"1개의 새로운 보관함 항목"
 "steam_inbox_items"	"%items%개의 새로운 보관함 항목"
@@ -4811,7 +4811,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Browser_Disabled_NoBrowser" "Steam 명령줄에 '-no-browser'가 지정되었기 때문에 Steam 브라우저가 비활성화되었습니다."
 "Steam_Browser_Disabled_KB" "추가 정보가 필요하신 경우 이 고객지원 페이지를 확인하세요."
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
-"Steam_ViewSSAInBrowser" "Steam 이용 약관을 읽고 동의하셔야 합니다.\n<a href=\"%url%\">여기를 클릭</a>하시면 웹 브라우저로 약관이 열립니다. 계속 하시려면 이 창으로 돌아오세요."
+"Steam_ViewSSAInBrowser" "Steam 이용 약관을 읽고 동의해야 합니다.\n<a href=\"%url%\">여기를 클릭</a>하시면 웹 브라우저로 약관이 열립니다. 계속 하시려면 이 창으로 돌아오세요."
 
 "Steam_VR2DGameWarning_Title" "경고"
 "Steam_VR2DGameWarning_Desc" "%launching_app%은(는) VR HMD의 환경과 더불어 데스크톱에서도 실행됩니다.\n이 모드에서는 성능이 뛰어나지 않을 수 있습니다. 데스크톱에서만 게임을 실행하려면 게임을 실행하기 전에 SteamVR을 종료하세요."

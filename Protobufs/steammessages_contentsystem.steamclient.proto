@@ -3,6 +3,12 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EAppContentDetectionType {
+	k_EAppContentDetectionType_None = 0;
+	k_EAppContentDetectionType_AntiCheat = 1;
+	k_EAppContentDetectionType_GameEngine = 2;
+}
+
 message CContentServerDirectory_ConnectedSteamPipeServerInfo {
 	optional string type = 1;
 	optional int32 source_id = 2;
@@ -112,6 +118,20 @@ message CContentServerDirectory_GetPeerContentInfo_Response {
 	optional string ip_public = 2;
 }
 
+message CDepotContentDetection_GetAllDetectedAppContent_Request {
+	optional .EAppContentDetectionType detection_type = 1 [default = k_EAppContentDetectionType_None];
+}
+
+message DetectedAppContent {
+	optional uint32 app_id = 1;
+	optional uint32 depot_id = 2;
+	optional int32 detected_content = 3;
+}
+
+message CDepotContentDetection_GetAllDetectedAppContent_Response {
+	repeated .DetectedAppContent detected_app_content = 1;
+}
+
 service ContentServerDirectory {
 	rpc GetServersForSteamPipe (.CContentServerDirectory_GetServersForSteamPipe_Request) returns (.CContentServerDirectory_GetServersForSteamPipe_Response);
 	rpc GetDepotPatchInfo (.CContentServerDirectory_GetDepotPatchInfo_Request) returns (.CContentServerDirectory_GetDepotPatchInfo_Response);
@@ -120,4 +140,8 @@ service ContentServerDirectory {
 	rpc GetCDNAuthToken (.CContentServerDirectory_GetCDNAuthToken_Request) returns (.CContentServerDirectory_GetCDNAuthToken_Response);
 	rpc RequestPeerContentServer (.CContentServerDirectory_RequestPeerContentServer_Request) returns (.CContentServerDirectory_RequestPeerContentServer_Response);
 	rpc GetPeerContentInfo (.CContentServerDirectory_GetPeerContentInfo_Request) returns (.CContentServerDirectory_GetPeerContentInfo_Response);
+}
+
+service DepotContentDetection {
+	rpc GetAllDetectedAppContent (.CDepotContentDetection_GetAllDetectedAppContent_Request) returns (.CDepotContentDetection_GetAllDetectedAppContent_Response);
 }

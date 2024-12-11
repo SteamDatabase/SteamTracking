@@ -913,7 +913,7 @@ Mohon tunggu sebentar."
 "SteamUI_ValveSurvey_Summary_CPUProcessorType"				"Jenis CPU: %s1"
 
 "SteamUI_ValveSurvey_Summary_RenderModeUnk"					"Tidak diketahui"
-"SteamUI_ValveSurvey_Summary_RenderModeSoftware"			"Perangkat lunak"
+"SteamUI_ValveSurvey_Summary_RenderModeSoftware"			"Software"
 "SteamUI_ValveSurvey_Summary_RenderModeGL"					"OpenGL"
 "SteamUI_ValveSurvey_Summary_RenderModeD3D"					"Direct3D"
 
@@ -2941,7 +2941,7 @@ Ayo tambahkan temanmu dengan mengirimkan hadiah ke mereka."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"Tidak Ada Penerima Nirkabel."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Unit dan Kabel Kontroler Steam:  %s1"
 
-"SteamUI_ValveSurvey_Linux_Runtime_Info" "Tentang Steam Runtime Linux:"
+"SteamUI_ValveSurvey_Linux_Runtime_Info" "Tentang Runtime Linux Steam:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Server Steam tidak tersedia"
 "Steam_SubscriptionFailure_ServiceUnavailable" "Komputermu sedang tidak dapat menjangkau server Steam atau layanan sedang dinonaktifkan untuk sementara waktu. Mohon coba lagi nanti."
@@ -3466,7 +3466,7 @@ Buat Teman baru di Steam dengan mengirimkan hadiah ke kenalanmu."
 "Steam_LibrariesLabel"	"Koleksi Konten"
 "Steam_DownloadRestrictionsLabel"	"Pembatasan Unduhan"
 
-"Steam_ServerBrowserPingRateLabel"	"Peramban Server Ping / Menit"
+"Steam_ServerBrowserPingRateLabel"	"Peramban Server: Ping/Menit"
 "Steam_ServerBrowserPingRateInfo"	"Koneksi bermasalah saat menelusuri server game? Coba turunkan nilai ini."
 "Steam_ServerBrowserPingRateDefault"	"Otomatis (%PingsPerMin%)"
 

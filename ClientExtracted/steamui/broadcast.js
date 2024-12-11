@@ -114,7 +114,7 @@
             className: _.StoreSaleWidgetEmptyContainer,
           });
         const d = 8 != n.GetAppType(),
-          v = (0, m.wJ)(n.GetStorePageURL(), a);
+          v = (0, m.wJ)(n.GetStorePageURL(!0), a);
         return l.createElement(
           "div",
           { className: o },
@@ -185,7 +185,7 @@
         N = a(23024),
         w = a(1079),
         A = a(72261),
-        P = a(22709),
+        P = a(5859),
         T = a(81726),
         G = a(23337),
         D = a(95783),
@@ -281,7 +281,7 @@
         Y = a(6367),
         J = a(99447),
         K = a(73674),
-        Z = a(45972),
+        Z = a(10606),
         Q = a(43397),
         $ = a(95020),
         ee = a(49946),
@@ -1020,9 +1020,10 @@
         }
       }
       const Se = (0, o.PA)((e) => {
-        const { steamIDBroadcast: t } = e,
-          a = N.BroadcastWatchStore.GetOrCreateBroadcastInfo(t).m_nAppID,
-          [r] = (0, p.t7)(a, {});
+        const { steamIDBroadcast: t } = e;
+        let a = N.BroadcastWatchStore.GetOrCreateBroadcastInfo(t).m_nAppID;
+        a = a != N.fO ? a : 0;
+        const [r] = (0, p.t7)(a, {});
         return l.createElement(
           "div",
           { className: [M().PopOutVideoTitleBar, M().NoSeslect].join(" ") },
@@ -1129,17 +1130,17 @@
       }
       function ge(e) {
         const {
-            onStreamSelect: t,
-            bSelected: a,
-            stream: r,
-            bShowCapsuleArt: n,
-          } = e,
-          s = (0, i.q3)(
-            () =>
-              N.BroadcastWatchStore.GetOrCreateBroadcastInfo(r.steamid)
-                .m_nAppID,
-          ),
-          [o] = (0, p.t7)(r.nAppIDVOD ?? s, { include_assets: !0 });
+          onStreamSelect: t,
+          bSelected: a,
+          stream: r,
+          bShowCapsuleArt: n,
+        } = e;
+        let s = (0, i.q3)(
+          () =>
+            N.BroadcastWatchStore.GetOrCreateBroadcastInfo(r.steamid).m_nAppID,
+        );
+        s = s != N.fO ? s : 0;
+        const [o] = (0, p.t7)(r.nAppIDVOD ?? s, { include_assets: !0 });
         if (!(0, w.fn)(r)) return null;
         const c = n && o?.GetAssets().GetHeaderURL(),
           d = Number.parseInt("" + r.viewer_count),

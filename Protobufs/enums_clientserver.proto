@@ -86,7 +86,6 @@ enum EMsg {
 	k_EMsgGMQueueForFBS = 326;
 	k_EMsgGMSchemaConversionResults = 327;
 	k_EMsgGMWriteShellFailureToSQL = 329;
-	k_EMsgGMWriteStatsToSOS = 330;
 	k_EMsgGMGetServiceMethodRouting = 331;
 	k_EMsgGMGetServiceMethodRoutingResponse = 332;
 	k_EMsgGMTestNextBuildSchemaConversion = 334;
@@ -98,7 +97,6 @@ enum EMsg {
 	k_EMsgGMGetModifiedConVarsResponse = 340;
 	k_EMsgBaseAIS = 400;
 	k_EMsgAISRequestContentDescription = 402;
-	k_EMsgAISUpdateAppInfo = 403;
 	k_EMsgAISGetPackageChangeNumber = 405;
 	k_EMsgAISGetPackageChangeNumberResponse = 406;
 	k_EMsgAIGetAppGCFlags = 423;
@@ -936,7 +934,7 @@ enum EMsg {
 	k_EMsgClientIsLimitedAccount = 5430;
 	k_EMsgClientRequestAuthList = 5431;
 	k_EMsgClientAuthList = 5432;
-	k_EMsgClientStat = 5433;
+	k_EMsgClientStat_Deprecated = 5433;
 	k_EMsgClientP2PConnectionInfo = 5434;
 	k_EMsgClientP2PConnectionFailInfo = 5435;
 	k_EMsgClientGetDepotDecryptionKey = 5438;
@@ -962,9 +960,9 @@ enum EMsg {
 	k_EMsgClientLogOnWithHash_Deprecated = 5465;
 	k_EMsgClientStoreUserStats2 = 5466;
 	k_EMsgClientStatsUpdated = 5467;
-	k_EMsgClientRequestedClientStats = 5480;
-	k_EMsgClientStat2Int32 = 5481;
-	k_EMsgClientStat2 = 5482;
+	k_EMsgClientRequestedClientStats_Deprecated = 5480;
+	k_EMsgClientStat2Int32_Deprecated = 5481;
+	k_EMsgClientStat2_Deprecated = 5482;
 	k_EMsgClientDRMDownloadRequest = 5485;
 	k_EMsgClientDRMDownloadResponse = 5486;
 	k_EMsgClientDRMFinalResult = 5487;
@@ -1015,14 +1013,9 @@ enum EMsg {
 	k_EMsgClientUpdateMachineAuthResponse = 5538;
 	k_EMsgClientReadMachineAuth = 5539;
 	k_EMsgClientReadMachineAuthResponse = 5540;
-	k_EMsgClientRequestMachineAuth = 5541;
-	k_EMsgClientRequestMachineAuthResponse = 5542;
 	k_EMsgClientScreenshotsChanged = 5543;
 	k_EMsgClientLaunchClientApp = 5544;
 	k_EMsgClientLaunchClientAppResponse = 5545;
-	k_EMsgClientGetCDNAuthToken = 5546;
-	k_EMsgClientGetCDNAuthTokenResponse = 5547;
-	k_EMsgClientDownloadRateStatistics = 5548;
 	k_EMsgClientRequestAccountData = 5549;
 	k_EMsgClientRequestAccountDataResponse = 5550;
 	k_EMsgClientResetForgottenPassword4 = 5551;

@@ -76,11 +76,11 @@
 "Friends_RemoveUser"				"Gỡ bỏ người bạn này..."
 
 "Friends_RemoveFriend_Title"			"Bạn bè - Xóa người dùng"
-"Friends_RemoveFriend_Info"				"Bạn có chắc là bạn muốn gỡ bỏ %friend% ra khỏi danh sách Bạn bè của bạn?\n\n(Bạn có thể thêm họ sau này với nút 'Thêm bạn...'.)\n"
+"Friends_RemoveFriend_Info"				"Bạn có chắc là bạn muốn gỡ bỏ %friend% ra khỏi danh sách Bạn bè của bạn?\n\n(Bạn có thể thêm họ sau này với nút 'Thêm bạn...').\n"
 "Friends_RemoveFriend_Button"			"Xóa %friend%"
 
 "Friends_HideFriend_Title"				"Bạn bè - Phớt lờ người dùng"
-"Friends_HideFriend_Info"				"Bạn có chắc là bạn muốn phớt lờ và xóa %friend% khỏi danh sách bạn bè được đề nghị?\n\n(Bạn có thể thêm họ sau này với nút 'Thêm bạn...'.)\n"
+"Friends_HideFriend_Info"				"Bạn có chắc là bạn muốn phớt lờ và xóa %friend% khỏi danh sách bạn bè được đề nghị?\n\n(Bạn có thể thêm họ sau này với nút 'Thêm bạn...').\n"
 "Friends_HideFriend_Button"				"Phớt lờ %friend%"
 "Friends_HideFriend_Failed"				"Không thể phớt lờ %friend%"
 
@@ -216,7 +216,7 @@
 "Friends_Chat_MemberDisconnected"						"%member_changed% đã mất kết nối.%ignored%\n"
 "Friends_Chat_MemberWasKicked"						"%member_changed% đã bị đuổi bởi %member_making_change%.\n"
 "Friends_Chat_MemberWasBanned"						"%member_changed% đã bị cấm bởi %member_making_change%.\n"
-"Friends_Chat_MemberIgnored"						"(Đã chặn)"	
+"Friends_Chat_MemberIgnored"						"(Đã chặn)."	
 
 "Friends_Chat_InviteToChatRoom"							"Mời vào phòng trò chuyện"
 "Friends_Chat_InviteToChatRoom_Title"					"Cộng đồng Steam - Lời mời tới phòng trò chuyện"
@@ -450,7 +450,7 @@
 
 "Voice_Settings_NewTabTitle"		"Âm thoại trong trò chơi"
 "Voice_Settings_TabTitle"		"Gọi thoại"
-"Steam_RepairAudioDescription"				"(Khi một thiết bị âm thanh được cắm vào hoặc rút ra, bạn có thể cần phát hiện lại những thiết bị âm thanh đang hoạt động.)"
+"Steam_RepairAudioDescription"				"(Khi một thiết bị âm thanh được cắm vào hoặc rút ra, bạn có thể cần phát hiện lại những thiết bị âm thanh đang hoạt động)."
 "Steam_RepairAudioButton"		"Tìm thiết bị âm thanh"
 "Steam_VoiceMicGain"	"Tăng âm nhận micrô"
 "Steam_TestMicButton"		"Thử micrô"
@@ -793,7 +793,7 @@
 "Steam_Settings_Browser"	"Trình duyệt web"
 "Overlay_SettingsBrowserDesc" "Những tùy chỉnh sau áp dụng cho trình duyệt web có trong ứng dụng Steam và lớp phủ Steam trong trò chơi."
 "Steam_SettingsBrowserDeleteAllData"	"Xóa dữ liệu trình duyệt web"
-"Steam_SettingsBrowserDeleteAllDataMsg"	"Xóa tất cả file cache, cookie và lịch sử của trình duyệt Steam?"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"Xóa tất cả file bộ nhớ tạm, cookie và lịch sử của trình duyệt Steam?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "Mời bất kì ai chơi cùng chỉ với một liên kết lấy từ danh sách bạn bè."

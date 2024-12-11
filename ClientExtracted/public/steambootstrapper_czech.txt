@@ -42,6 +42,8 @@
 "SteamBootstrapper_WindowTitle"			"%appname%"
 "SteamBootstrapper_Error_Title"			"%appname% – fatální chyba"
 "SteamBootstrapper_Warning_Title"			"%appname% – varování"
-"SteamBootstrapper_OperatingSystemNoLongerSupported" "Klient služby %appname% není podporován Vaším operačním systémem."
+"SteamBootstrapper_OperatingSystemNoLongerSupported" "Klient služby %appname% už nepodporuje Váš operační systém."
+"SteamCmd_OperatingSystemNoLongerSupported" "Klient služby %appname% už nepodporuje Váš operační systém.\nTuto kontrolu můžete přepsat přidáním možnosti spuštění „-overrideminos“.\nKlient služby %appname% nicméně nemusí fungovat správně a tato možnost spuštění může být v budoucnu odstraněna.\nPro další používání klienta proto aktualizujte na podporovaný operační systém."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "Klient služby %appname% už nepodporuje Váš operační systém.\n\nKliknutím na „OK“ opustíte vybranou beta verzi klienta."
 "SteamBootstrapper_Starting"                  "Spouštění..."
 }

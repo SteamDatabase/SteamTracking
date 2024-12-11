@@ -559,7 +559,7 @@
 "Limited_OpenChat"	"เปิดแช็ต"
 "Friends_SteamCommunity"	"ชุมชน Steam"
 "Limited_Explanation"	"บัญชีของคุณไม่ผ่านความต้องการขั้นต่ำที่จะใช้คุณสมบัตินี้"
-"Limited_ForDetails"	"เยี่ยมชมฝ่ายสนับสนุน Steam สำหรับข้อมูลเพิ่มเติม"
+"Limited_ForDetails"	"การเยี่ยมชมฝ่ายสนับสนุน Steam สำหรับข้อมูลเพิ่มเติม"
 "Limited_ForDetails_URL"	"https: //help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"ห้องแช็ตได้ถูกกำหนดเป็นการแช็ตแบบเจ้าหน้าที่เท่านั้นโดย %member_making_change% \n"
@@ -769,10 +769,10 @@
 "Broadcast_RecordingError_LowVideo" "Steam ได้เปลี่ยนการเข้ารหัสของการถ่ายทอดสดเป็น \"ประสิทธิภาพดีที่สุด\""
 
 "Broadcast_RecordingError_Title" "ถ่ายทอดสด - ไม่มีการบันทึกเสียง"
-"Broadcast_RecordingError_General" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ โปรดเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่างสำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
+"Broadcast_RecordingError_General" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ โปรดการเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่างสำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
 "Broadcast_RecordingError_URL_Text" "ฝ่ายสนับสนุน Steam - เสียงไม่ถูกบันทึก"
 "Broadcast_RecordingError_URL_General" "https: //support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541"
-"Broadcast_RecordingError_Razer" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ โปรดเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่าง และอ่านหมวด \"ฮาร์ดแวร์ระบบเสียง Razer\" สำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
+"Broadcast_RecordingError_Razer" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ โปรดการเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่าง และอ่านหมวด \"ฮาร์ดแวร์ระบบเสียง Razer\" สำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
 "Broadcast_RecordingError_URL_Razer" "https: //support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541#2"
 
 "Broadcast_UploadError_Notification" "การอัปโหลดสตรีมถูกหยุด (%reason%)"

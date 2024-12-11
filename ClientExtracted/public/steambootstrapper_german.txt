@@ -43,5 +43,7 @@
 "SteamBootstrapper_Error_Title"			"%appname% – Kritischer Fehler"
 "SteamBootstrapper_Warning_Title"			"%appname% – Warnung"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% wird von Ihrem Betriebssystem nicht mehr unterstützt."
+"SteamCmd_OperatingSystemNoLongerSupported" "Die Anwendung %appname% wird von der aktuellen Version Ihres Betriebssystems nicht länger unterstützt.\nSie können diese Überprüfung mithilfe von -overrideminos überschreiben.\nJedoch wird %appname% möglicherweise nicht richtig laufen und die Unterstützung für diese Überschreibung kann jederzeit entfernt werden.\nBitte aktualisieren Sie Ihr Betriebssystem, um uneingeschränkten Zugriff auf die Anwendung zu erhalten."
+"SteamBootstrapper_OperatingSystemNoLongerSupportedOnBeta" "%appname% wird von Ihrem Betriebssystem nicht mehr unterstützt.\n\nKlicken Sie auf „OK“, um die ausgewählte Beta von %appname% zu verlassen."
 "SteamBootstrapper_Starting"                  "Wird gestartet …"
 }

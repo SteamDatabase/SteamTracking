@@ -21,7 +21,6 @@
 #version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
 #version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
 %a %b %d %H:%M:%S %Y UTC
-%dx%d
 %s begin_ctx=%lld
 %s end_ctx=%lld
 %s: no XInputExtension\n
@@ -44,14 +43,16 @@
 10IMemStream
 12CIMENullImpl
 15CSavedMemStream
+15CVulkanRenderer
 16CSharedMemStream
 18COverlayGLRenderer
+1KC_
 20CBaseOverlayRenderer
 24CGameStreamBaseMemStream
 24CGameStreamGameMemStream
 4IIME
 ?SteamGameStream_%u_mem
-@15CVulkanRenderer
+@Deleting movie stream\n
 Applying steamclient.so path workaround.\n
 Asked to unlock memory for write.. but wasn't locked
 AtomID
@@ -92,7 +93,6 @@ Corrupt shared texture stream (header)\n
 Corrupt shared texture stream (texture data)\n
 Couldn't create movie stream %s\n
 Created movie stream %s\n
-Deleting movie stream\n
 Destroy GLX window 0x%lx\n
 Destroy window 0x%lx\n
 Destroying a held mutex\n
@@ -217,6 +217,7 @@ OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
 Opening display '%s', process %d returned %p\n
 Overlay pid %d dpy %p: An X Error occurred\n
 OverlayFrameMark
+P010
 Process %d failed to shm_open %s\n
 PutInternal: Not enough space for put when locked\n
 QkkXa
@@ -260,7 +261,6 @@ SteamOverlayGameId
 SteamOverlayRunning_%llu
 SteamOverlayUseXFilterEvent
 SteamStreamingAllowGameVsync
-SteamStreamingMaximumResolution
 SteamStreamingVideo
 SteamStreamingVideoDisableVSync
 Stopped movie recording\n
