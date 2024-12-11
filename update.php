@@ -51,6 +51,9 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		/** @var array<int, array{URL: string, File: string}> */
 		private array $URLsToFetch = [];
 
+		/** @var array<string, true> */
+		private array $CurrentSSRFiles = [];
+
 		/** @var array<int, mixed> */
 		private array $Options =
 		[
@@ -130,6 +133,26 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			}
 
+			if( !empty( $this->CurrentSSRFiles ) )
+			{
+				$this->URLsToFetch = $this->ProcessSSRFiles();
+
+				do
+				{
+					$URLs = $this->URLsToFetch;
+					$this->URLsToFetch = [];
+
+					$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
+					$this->Fetch( $URLs, 5 );
+				}
+				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
+			}			
+
+			if( !empty( $this->CurrentSSRFiles ) )
+			{
+				$this->DeleteOldSSRFiles();
+			}
+
 			foreach( $this->ETags as &$ETags )
 			{
 				if( is_array( $ETags ) )
@@ -188,7 +211,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			);
 		}
 
-		private function HandleResponse( string $File, string $Data ) : bool
+		private function HandleResponse( string $File, string $Data, string $URL ) : bool
 		{
 			if( $File === 'API/SupportedAPIList.json' )
 			{
@@ -320,6 +343,64 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				$Data = implode( "\n", $ApkLinks ) . "\n";
 			}
+			else if( $File === 'SSR' )
+			{
+				if( preg_match( "/window.SSR.clientAssets=(\{.+?\});/", $Data, $Matches ) !== 1 )
+				{
+					$this->Log( '{lightred}Failed to find SSR on ' . $URL );
+
+					return false;
+				}
+
+				$SSR = json_decode( $Matches[ 1 ], true );
+
+				if( !isset( $SSR[ 'js' ] ) )
+				{
+					$this->Log( '{lightred}Failed to find any SSR JS on ' . $URL );
+
+					return false;
+				}
+
+				$AssetTypes =
+				[
+					'js',
+					'css',
+					'preload',
+				];
+
+				foreach( $AssetTypes as $AssetType )
+				{
+					foreach( ( $SSR[ $AssetType ] ?? [] ) as $Asset )
+					{
+						$File = $this->GetSSRFilepath( $Asset[ 'href' ] );
+
+						if( $File === null )
+						{
+							continue;
+						}
+
+						if( isset( $this->CurrentSSRFiles[ $File ] ) )
+						{
+							continue;
+						}
+
+						if( str_ends_with( $File, '.css' ) )
+						{
+							continue; // TODO: Ignore css for now because biome doesn't format it
+						}
+
+						$this->CurrentSSRFiles[ $File ] = true;
+						
+						$this->URLsToFetch[ ] =
+						[
+							'URL'  => $Asset[ 'href' ],
+							'File' => $File,
+						];
+					}
+				}
+
+				return true;
+			}
 			else if( $File === '.support/archives/steam-android.apk' )
 			{
 				$this->Log( 'Dumping mobile app' );
@@ -446,6 +527,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.counter-strike.net/' ) ||
+				str_starts_with( $OriginalFile, 'store.steampowered.com/ssr' ) ||
 				str_starts_with( $OriginalFile, 'Scripts/WebUI/steammobile' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/legacy_web/' ) ||
@@ -603,7 +685,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 							{
 								$Data = substr( $Data, $HeaderSize );
 
-								if( $this->HandleResponse( $Request, $Data ) === true )
+								if( $this->HandleResponse( $Request, $Data, $URL ) === true )
 								{
 									$this->Log( '{lightblue}Fetched     {normal} - ' . $URL );
 								}
@@ -846,6 +928,106 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			}
 
 			return $URLsToFetch;
+		}
+
+		/**
+		 * @return array<int, array{URL: string, File: string}>
+		 */
+		private function ProcessSSRFiles() : array
+		{
+			system( 'node generate_ssr_urls.mjs' );
+
+			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
+
+			if( !file_exists( $ManifestUrlsPath ) )
+			{
+				throw new Exception( $ManifestUrlsPath . ' does not exist' );
+			}
+
+			$URLsToFetch = [];
+			$ManifestUrls = file( $ManifestUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+
+			foreach( $ManifestUrls as $Url )
+			{
+				if( !str_starts_with( $Url, 'https://' ) )
+				{
+					throw new Exception( $Url . ' does not start with https://' );
+				}
+
+				$File = $this->GetSSRFilepath( $Url );
+
+				if( $File === null || isset( $this->CurrentSSRFiles[ $File ] ) )
+				{
+					continue;
+				}
+
+				$this->CurrentSSRFiles[ $File ] = true;
+
+				$URLsToFetch[] =
+				[
+					'URL'  => $Url,
+					'File' => $File,
+				];
+			}
+
+			return $URLsToFetch;
+		}
+
+		private function DeleteOldSSRFiles() : void
+		{
+			// Find and delete old chunk files
+			$Folders = [];
+
+			foreach( $this->CurrentSSRFiles as $Filepath => $_ )
+			{
+				$Folder = __DIR__ . '/' . dirname( $Filepath ) . '/';
+
+				if( !isset( $Folders[ $Folder ] ) )
+				{
+					$Folders[ $Folder ] = [];
+				}
+
+				$Folders[ $Folder ][ basename( $Filepath ) ] = true;
+			}
+
+			foreach( $Folders as $Folder => $NewChunks )
+			{
+				foreach( new DirectoryIterator( $Folder ) as $FileInfo )
+				{
+					if( $FileInfo->isDot() )
+					{
+						continue;
+					}
+
+					$Filename = $FileInfo->getFilename();
+
+					if( !isset( $NewChunks[ $Filename ] ) )
+					{
+						$FilepathOnDisk = $FileInfo->getRealPath();
+
+						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists' );
+
+						$File = substr( dirname( $FileInfo->getPathname() ), strlen( __DIR__ . '/' ) ) . '/' . $Filename;
+						unset( $this->ETags[ $File ] );
+
+						unlink( $FilepathOnDisk );
+					}
+				}
+			}
+		}
+
+		private function GetSSRFilepath( string $Url ) : ?string
+		{
+			$File = parse_url( $Url, PHP_URL_PATH );
+
+			if( str_starts_with( $File, '/store/ssr/' ) )
+			{
+				return 'store.steampowered.com/ssr/' . basename( $File );
+			}
+
+			$this->Log( '{lightred}Unknown SSR path: ' . $File );
+
+			return null;
 		}
 
 		private function Log( string $String ) : void

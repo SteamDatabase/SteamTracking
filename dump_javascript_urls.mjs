@@ -8,7 +8,11 @@ const allStrings = new Set();
 for await (const file of GetRecursiveFilesToParse()) {
 	try {
 		const code = await readFile(file);
-		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
+		const ast = parse(code, {
+			ecmaVersion: latestEcmaVersion,
+			sourceType: "module",
+			loc: true,
+		});
 
 		traverse(ast, {
 			enter: function (node) {

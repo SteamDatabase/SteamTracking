@@ -538,3 +538,8 @@ Random/People.html                              @ https://www.valvesoftware.com/
 Random/Jobs.json                                @ https://www.valvesoftware.com/en/jobs/job-search
 Random/SteamMobileApks.txt                      @ https://store.steampowered.com/mobile
 
+//
+// Server-side rendered pages
+//
+
+SSR @ https://store.steampowered.com/wishlist/id/steamdb_wolfgang/
