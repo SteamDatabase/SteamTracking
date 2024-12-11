@@ -535,7 +535,6 @@ Random/ControllerFirmware.vdf                   @ https://steamcdn-a.akamaihd.ne
 Random/JobPostings.html                         @ https://www.valvesoftware.com/en/
 Random/Publications.html                        @ https://www.valvesoftware.com/en/publications
 Random/People.html                              @ https://www.valvesoftware.com/en/people
-Random/About.html                               @ https://www.valvesoftware.com/en/about
 Random/Jobs.json                                @ https://www.valvesoftware.com/en/jobs/job-search
 Random/SteamMobileApks.txt                      @ https://store.steampowered.com/mobile
 
