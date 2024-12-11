@@ -12900,12 +12900,12 @@
                   e
                     ? (a.localized_sale_product_mobile_banner_override =
                         _.NT.Set(
-                          a.localized_sale_product_mobile_banner_override,
+                          a.localized_sale_product_mobile_banner_override || [],
                           r,
                           i,
                         ))
                     : (a.localized_sale_product_banner_override = _.NT.Set(
-                        a.localized_sale_product_banner_override,
+                        a.localized_sale_product_banner_override || [],
                         r,
                         i,
                       ));
