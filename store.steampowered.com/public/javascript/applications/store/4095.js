@@ -19459,10 +19459,11 @@
           (0, v.Id)(window, `steam://run/${o?.GetAppIDToRun()}`);
         }, [o]);
         if (!o || 8 == o.GetAppType()) return null;
-        const c =
-          o.BIsFree() ||
-          "0" == o.GetBestPurchasePriceFormatted() ||
-          o.GetBestPurchaseOption().discount_pct >= 100;
+        const c = o.GetBestPurchaseOption(),
+          d =
+            o.BIsFree() ||
+            "0" == o.GetBestPurchasePriceFormatted() ||
+            o.GetBestPurchaseOption().discount_pct >= 100;
         if (1 == o.GetStoreItemType())
           if (10 == o.GetAppType()) {
             if (!l)
@@ -19481,13 +19482,57 @@
                   (0, E.we)("#Sale_ReserveExhausted"),
                 ),
               );
-          } else if (c && o.GetIncludedAppIDs().length > 1) return null;
+          } else if (d && o.GetIncludedAppIDs().length > 1) return null;
         if (0 == o.GetStoreItemType()) {
-          if (o.BIsComingSoon() && !o.GetBestPurchaseOption()?.packageid)
-            return null;
+          if (o.BIsComingSoon() && !c?.packageid) return null;
           const e = n.Fm.Get().BOwnsApp(o.GetAppID());
           if (e && 10 === o.GetAppType()) return null;
-          if ((e || c) && !o.BIsComingSoon()) {
+          if (!e && c?.is_free_to_keep) {
+            if (I.TS.IN_CLIENT || "store" != (0, I.yK)()) {
+              const e = (0, i.wJ)(
+                `${I.TS.IN_CLIENT ? "steam://openurl/" : ""}${o.GetStorePageURL()}`,
+                s,
+              );
+              return a.createElement(
+                "div",
+                {
+                  onClick: (t) => (0, v.Id)(t, e),
+                  className: (0, B.A)(A().Action, r),
+                },
+                a.createElement(
+                  "span",
+                  null,
+                  (0, E.we)("#EventDisplay_CallToAction_VisitStore"),
+                ),
+              );
+            }
+            {
+              const e = (0, i.wJ)(
+                `${I.TS.STORE_BASE_URL}freelicense/addfreelicense`,
+                s,
+              );
+              return a.createElement(
+                "form",
+                { action: e, method: "POST" },
+                a.createElement("input", {
+                  type: "hidden",
+                  name: "subid",
+                  value: c.packageid,
+                }),
+                a.createElement("input", {
+                  type: "hidden",
+                  name: "sessionid",
+                  value: I.TS.SESSIONID,
+                }),
+                a.createElement(
+                  "button",
+                  { className: (0, B.A)(A().Action, r), type: "submit" },
+                  (0, E.we)("#EventDisplay_CallToAction_AddToAccount"),
+                ),
+              );
+            }
+          }
+          if ((e || d) && !o.BIsComingSoon()) {
             let t = (0, E.we)("#EventDisplay_CallToAction_PlayNowForFree");
             return (
               e

@@ -1480,6 +1480,7 @@ ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
+${STORE_BASE_URL}freelicense/addfreelicense
 ${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}fwlink?id=gamerecordingintro
 ${STORE_BASE_URL}gamemixer/appvalues
