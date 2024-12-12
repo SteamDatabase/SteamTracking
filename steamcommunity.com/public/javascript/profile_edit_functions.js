@@ -413,7 +413,7 @@ function OnReplayShowcaseYearChange( elForm, eShowcase, purchaseid, level, iSlot
 	).done( function() {
 		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { replay_year: nYear } );
 	}).fail( function() {
-		ShowAlertDialog( 'Year In Review', 'There was an error choosing your Year In Review. Please try again later.' );
+		ShowAlertDialog( 'Steam Replay', 'There was an error choosing your Steam Replay. Please try again later.' );
 	});
 }
 
