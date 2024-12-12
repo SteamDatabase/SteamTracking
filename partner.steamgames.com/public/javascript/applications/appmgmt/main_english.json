@@ -957,7 +957,7 @@
     "StoreAdmin_AntiCheat_Type_other": "Other",
     "StoreAdmin_EditEditions_GroupEditionsButton": "Group Editions",
     "StoreAdmin_EditEditions_ManageEditionsButton": "Manage Editions",
-    "StoreAdmin_EditEditions_GroupEditionsDescription": "If you have multiple editions (gold, deluxe, etc.) you can group them and add an optional comparison graphic.",
+    "StoreAdmin_EditEditions_GroupEditionsDescription": "Group multiple editions (gold, deluxe, etc.) and add an optional comparison graphic.",
     "StoreAdmin_EditEditions_ManageEditionsDescription": "(%1$s selected as editions)",
     "StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic": "No comparison graphic uploaded",
     "StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic": "Comparison graphic uploaded",

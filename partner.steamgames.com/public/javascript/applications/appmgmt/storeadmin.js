@@ -12075,29 +12075,7 @@
               a.createElement(
                 "div",
                 { className: ho.EditionsEditorRow },
-                !(o?.size > 0) &&
-                  "closed" === t &&
-                  a.createElement(
-                    a.Fragment,
-                    null,
-                    a.createElement(
-                      "button",
-                      {
-                        className: ho.OpenEditorButton,
-                        onClick: () => n("editor"),
-                      },
-                      (0, s.we)("#StoreAdmin_EditEditions_GroupEditionsButton"),
-                    ),
-                    a.createElement(
-                      "span",
-                      null,
-                      (0, s.we)(
-                        "#StoreAdmin_EditEditions_GroupEditionsDescription",
-                      ),
-                    ),
-                  ),
-                o?.size > 0 &&
-                  "closed" === t &&
+                "closed" === t &&
                   a.createElement(
                     a.Fragment,
                     null,
@@ -12111,14 +12089,22 @@
                         "#StoreAdmin_EditEditions_ManageEditionsButton",
                       ),
                     ),
-                    a.createElement(
-                      "span",
-                      null,
-                      (0, s.we)(
-                        "#StoreAdmin_EditEditions_ManageEditionsDescription",
-                        o.size,
-                      ),
-                    ),
+                    o?.size > 0
+                      ? a.createElement(
+                          "span",
+                          null,
+                          (0, s.we)(
+                            "#StoreAdmin_EditEditions_ManageEditionsDescription",
+                            o.size,
+                          ),
+                        )
+                      : a.createElement(
+                          "span",
+                          null,
+                          (0, s.we)(
+                            "#StoreAdmin_EditEditions_GroupEditionsDescription",
+                          ),
+                        ),
                     a.createElement(
                       "span",
                       null,
