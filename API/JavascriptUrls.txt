@@ -2505,10 +2505,7 @@ https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
 https://github.com/ngduc/react-tabulator
-https://grafana.valve.org/shared/d/l66htQGWz/pm2?orgId=1&var-job=All&
 https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
-https://grafana.valve.org/steam/d/a6066f12-141d-4cb5-be00-11f5646c0a10/node-ssr-controller-stats?orgId=2&
-https://grafana.valve.org/steam/d/bb3cf20b-37cd-4da8-a82c-781d472c6cbf/server-detail-by-rack-ip?orgId=2&
 https://grafana.valve.org/steam/d/c2d2436a-7206-47d5-8fca-89bdc91db65d/storemarketing-getitemstofeature-filtering?orgId=2&var-type=marketing_messages
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
@@ -3205,7 +3202,6 @@ https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497
 https://support.steampowered.com/kb_article.php?ref=8571-GLVN-8711
-https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam

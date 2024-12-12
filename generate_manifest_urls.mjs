@@ -28,7 +28,13 @@ const files = [
 ];
 
 const urls = new Set();
-const oldUrls = (await readFile(".support/urls_from_manifests.txt", { encoding: "utf8" })).trim().split("\n");
+let oldUrls = [];
+
+try {
+	oldUrls = (await readFile(".support/urls_from_manifests.txt", { encoding: "utf8" })).trim().split("\n");
+} catch {
+	// file does not exist
+}
 
 for (const url of oldUrls) {
 	const fileName = url.substring(url.lastIndexOf("/") + 1);

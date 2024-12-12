@@ -136,6 +136,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( $this->UpdateSSRUrls && !empty( $this->CurrentSSRFiles ) )
 			{
+/*
 				do
 				{
 					$this->URLsToFetch = $this->ProcessSSRFiles();
@@ -156,6 +157,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 				}
 				while( true );
+*/
 
 				$this->DeleteOldSSRFiles();
 			}
