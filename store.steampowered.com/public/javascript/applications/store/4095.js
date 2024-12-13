@@ -410,6 +410,7 @@
         StoreOriginalPrice: "_3fFFsvII7Y2KXNLDk_krOW",
         PrePurchase: "_2f7BMv_bJMTrHmaOF8B3Ws",
         NewItem: "_2xCT1pUf2c9TICHoMcQE0d",
+        PurchaseOptionDetails: "_17_ynHC8fq9_LghcLrJYmW",
         InGameHover: "axjdi0dhiB17GHjL5FRCr",
         StoreSalePrepurchaseLabel: "_1Fru-E7WQMr8G_aR2sMg5F",
         SingleLineOriginalPrice: "t7Gt8aeopD7JPlhcNTqGV",
@@ -24091,7 +24092,7 @@
     },
     94095: (e, t, r) => {
       "use strict";
-      r.d(t, { cg: () => v, kb: () => I, wD: () => b, wc: () => B });
+      r.d(t, { cg: () => I, kb: () => A, wD: () => B, wc: () => T });
       var a = r(90626),
         i = r(75844),
         n = r(90740),
@@ -24109,8 +24110,11 @@
         f = r(61859),
         S = r(12155),
         y = r(44165),
-        w = r(14771);
-      const b = (0, i.PA)((e) => {
+        w = r(14771),
+        b = r(91675),
+        C = r(26408),
+        v = r(30894);
+      const B = (0, i.PA)((e) => {
         const {
             info: t,
             bShowDemoButton: r,
@@ -24118,41 +24122,63 @@
             fnOnPurchaseOptionsClick: n,
             bHidePrice: u,
             bHideWishlistButton: p,
-            bShowDeckCompatibilityDialog: f,
-            className: S,
+            bShowDeckCompatibilityDialog: S,
+            className: y,
           } = e,
-          y = (0, a.useRef)({ include_release: !0 }),
-          [w] = (0, l.G6)(t.id, (0, o.SW)(t.type), y.current);
-        if (!w) return null;
-        const b = 1 === w.GetAppType() || w.BHasDemo(),
-          v = (0, s.f)(t.type),
-          E = r && v && b;
+          w = (0, a.useRef)({ include_release: !0 }),
+          [B] = (0, l.G6)(t.id, (0, o.SW)(t.type), w.current),
+          I = (0, v.Lg)(B?.GetAppID());
+        if (!B) return null;
+        const D = 1 === B.GetAppType() || B.BHasDemo(),
+          A = (0, s.f)(t.type),
+          M = r && A && D;
+        let G = null;
+        if (
+          !I &&
+          B?.GetBestPurchaseOption().is_free_to_keep &&
+          B?.GetBestPurchaseOption().free_to_keep_ends
+        ) {
+          const e = B.GetBestPurchaseOption().free_to_keep_ends,
+            t = (0, f.we)(
+              "#Sale_default_label_Free_Promo_Description_Short",
+              (0, f.$z)(e) + " @ " + (0, b.KC)(e, { bForce24HourClock: !1 }),
+            );
+          G = a.createElement(
+            "div",
+            { className: _().PurchaseOptionDetails },
+            t,
+            a.createElement(C.o, {
+              tooltip: (0, f.we)("#Sale_default_Tooltip_Free_Promo_Limitation"),
+            }),
+          );
+        }
         return a.createElement(
           "div",
-          { className: (0, g.A)(_().StoreActionWidgetContainer, S) },
+          { className: (0, g.A)(_().StoreActionWidgetContainer, y) },
+          G,
           a.createElement(
             "div",
             { className: _().StoreSalePriceActionWidgetContainer },
             Boolean(!p && (0, s.f)(t.type)) &&
               a.createElement(h._, {
                 appid: t.id,
-                bIsFree: w.BIsFree(),
-                bIsComingSoon: w.BIsComingSoon(),
+                bIsFree: B.BIsFree(),
+                bIsComingSoon: B.BIsComingSoon(),
                 className: "WishlistBtn",
               }),
-            Boolean(E) &&
+            Boolean(M) &&
               a.createElement(d.j, { info: t, className: _().Action }),
             Boolean(!u) &&
-              1 !== w?.GetAppType() &&
-              (Boolean(i && !w.BIsFree())
-                ? a.createElement(C, { fnOnPurchaseOptionsClick: n })
+              1 !== B?.GetAppType() &&
+              (Boolean(i && !B.BIsFree())
+                ? a.createElement(E, { fnOnPurchaseOptionsClick: n })
                 : a.createElement(c.h, { info: t, className: "CartBtn" })),
-            Boolean(!u) && a.createElement(B, { info: t }),
-            Boolean(f) && a.createElement(m.Q8, { storeItem: w }),
+            Boolean(!u) && a.createElement(T, { info: t }),
+            Boolean(S) && a.createElement(m.Q8, { storeItem: B }),
           ),
         );
       });
-      function C(e) {
+      function E(e) {
         return a.createElement(
           "div",
           { className: _().Action, onClick: e.fnOnPurchaseOptionsClick },
@@ -24163,7 +24189,7 @@
           ),
         );
       }
-      function v(e) {
+      function I(e) {
         const {
             storeItem: t,
             bPurchaseOptionsExpanded: r,
@@ -24217,18 +24243,18 @@
           ),
         );
       }
-      function B(e) {
+      function T(e) {
         const { info: t, ...r } = e,
           [i] = (0, l.G6)(t?.id, (0, o.SW)(t?.type), { include_release: !0 });
-        return a.createElement(I, { ...r, storeItem: i });
+        return a.createElement(A, { ...r, storeItem: i });
       }
-      const E = 7;
-      function I(e) {
+      const D = 7;
+      function A(e) {
         const { bSingleLineMode: t, storeItem: r, onlyOneDiscountPct: i } = e,
           n = (0, y.f1)();
         if (!r) return null;
         const s =
-            !r.BIsComingSoon() && r.GetReleaseDateRTime() + E * w.Kp.PerDay > n,
+            !r.BIsComingSoon() && r.GetReleaseDateRTime() + D * w.Kp.PerDay > n,
           o = (0, g.A)(
             _().StoreSalePriceWidgetContainer,
             t && _().SingleLineMode,
@@ -24255,44 +24281,59 @@
               (0, f.we)("#EventDisplay_CallToAction_ComingSoon"),
             ),
           );
-        if (r.BIsFree() && !r.BIsFreeTemporary())
-          return 0 == r.GetStoreItemType() && 1 == r.GetAppType()
-            ? a.createElement(
-                "div",
-                { className: o },
-                s &&
+        if (r.BIsFree()) {
+          if (!r.BIsFreeTemporary())
+            return 0 == r.GetStoreItemType() && 1 == r.GetAppType()
+              ? a.createElement(
+                  "div",
+                  { className: o },
+                  s &&
+                    a.createElement(
+                      "div",
+                      { className: _().StoreSaleNewItem },
+                      (0, f.we)("#Flag_New"),
+                    ),
                   a.createElement(
                     "div",
-                    { className: _().StoreSaleNewItem },
-                    (0, f.we)("#Flag_New"),
+                    { className: _().StoreSalePriceBox },
+                    (0, f.we)("#EventDisplay_CallToAction_FreeDemo"),
                   ),
-                a.createElement(
+                )
+              : a.createElement(
                   "div",
-                  { className: _().StoreSalePriceBox },
-                  (0, f.we)("#EventDisplay_CallToAction_FreeDemo"),
-                ),
-              )
-            : a.createElement(
-                "div",
-                { className: o },
-                s &&
+                  { className: o },
+                  s &&
+                    a.createElement(
+                      "div",
+                      { className: _().StoreSaleNewItem },
+                      (0, f.we)("#Flag_New"),
+                    ),
                   a.createElement(
                     "div",
-                    { className: _().StoreSaleNewItem },
-                    (0, f.we)("#Flag_New"),
+                    { className: _().StoreSalePriceBox },
+                    (0, f.we)("#EventDisplay_CallToAction_FreeToPlay"),
                   ),
-                a.createElement(
-                  "div",
-                  { className: _().StoreSalePriceBox },
-                  (0, f.we)("#EventDisplay_CallToAction_FreeToPlay"),
-                ),
-              );
+                );
+          if (
+            r.GetBestPurchaseOption()?.is_free_to_keep &&
+            !r.GetBestPurchaseOption()?.formatted_original_price
+          )
+            return a.createElement(
+              "div",
+              { className: o },
+              a.createElement(
+                "div",
+                { className: _().StoreSalePriceBox },
+                (0, f.we)("#EventDisplay_CallToAction_Free"),
+              ),
+            );
+        }
         const l = r.GetBestPurchaseOption();
         if (!l || !l.formatted_final_price) return null;
         let m = l.discount_pct,
           c = i || 2 != r.GetStoreItemType() ? void 0 : l.bundle_discount_pct,
           d = l.formatted_final_price;
-        return a.createElement(T, {
+        return a.createElement(M, {
           bSingleLineMode: t,
           nBaseDiscountPercentage: c,
           nDiscountPercentage: m,
@@ -24303,7 +24344,7 @@
           bShowNewFlag: s,
         });
       }
-      function T(e) {
+      function M(e) {
         const {
             bSingleLineMode: t,
             nDiscountPercentage: r,

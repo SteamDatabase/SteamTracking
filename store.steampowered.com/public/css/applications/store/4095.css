@@ -1803,6 +1803,10 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
     position: relative;
   }
 }
+.kW6m4Sjqacp5hykrj5LEo ._17_ynHC8fq9_LghcLrJYmW {
+  padding: 5px;
+  color: #7cb8e4;
+}
 .axjdi0dhiB17GHjL5FRCr {
   container-type: inline-size;
 }
@@ -4454,6 +4458,7 @@ html.responsive.touch ._1FPIVJTLsw1nvAN24BGGKg {
   margin-right: -50vw;
   max-width: 100vw;
   position: relative;
+  z-index: unset;
   right: 50%;
   width: 100vw;
   border-radius: 0px;
@@ -4473,6 +4478,7 @@ html.responsive.touch ._1FPIVJTLsw1nvAN24BGGKg._2utXvAVvZJb3Wlt5jGxCs {
     margin-right: -50vw;
     max-width: 100vw;
     position: relative;
+    z-index: unset;
     right: 50%;
     width: 100vw;
     border-radius: 0px;
@@ -4491,6 +4497,7 @@ html.responsive.touch ._1FPIVJTLsw1nvAN24BGGKg._2utXvAVvZJb3Wlt5jGxCs {
   padding-top: 0px;
   padding-bottom: 0px;
   position: unset;
+  z-index: unset;
   border-radius: 0px;
 }
 .BasicUI ._1FPIVJTLsw1nvAN24BGGKg._2utXvAVvZJb3Wlt5jGxCs {
