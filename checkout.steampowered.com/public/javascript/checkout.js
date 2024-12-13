@@ -3535,7 +3535,7 @@ function UpdatePaymentInfoForm()
 			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
 
-				g_bShowAddressForm = g_bHasBillingStates || g_bRequireBillingInfo;
+				g_bShowAddressForm = g_bRequireBillingInfo;
 
 		if ( BIsStoredCreditCard() )
 		{
