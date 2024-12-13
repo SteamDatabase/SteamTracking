@@ -566,6 +566,7 @@ CLIPBOARD
 CLayoutFile::ValidateStatics
 CLinuxFont
 CLinuxSurface::IsWithin()
+CLinuxSurface::RunFrame() - Sleep
 CLocalizedStringTable
 CNotificationManager
 CONFIG

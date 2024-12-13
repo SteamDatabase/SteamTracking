@@ -35,7 +35,6 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123~+
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -1465,6 +1464,8 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+03:36:49
+03:37:15
 08bX
 0A/8
 0Z@q
@@ -1775,7 +1776,6 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:51:44
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -1892,6 +1892,7 @@ $d`D-laM
 3psC'dcG,
 3|rN>
 4000
+41"U
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CNetConnectionImmediateDisconnectWorkItem
 42CClientMetrics_ClientBootstrap_RequestInfo
@@ -1923,6 +1924,7 @@ $d`D-laM
 52F*
 55Ly
 55j_WW
+5M"U
 5\n0k_EMsgAMIsPackageRestrictedInUserCountryResponse
 5\n0k_EMsgCREGetUserPublishedItemVoteDetailsResponse
 5\n0k_EMsgClientSiteLicenseGetAvailableSeatsResponse
@@ -2615,7 +2617,7 @@ B-233
 B-283
 B-409
 B-571
-B21:52:05
+B03:37:14
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -6468,7 +6470,7 @@ DbUseIOCP
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 10 2024
+Dec 13 2024
 December
 Decipher Only
 Default
@@ -10590,7 +10592,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Dec 10 2024 21:52:05
+Startup - updater built Dec 13 2024 03:37:14
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -23132,6 +23134,7 @@ tIME
 tRNS chunk has out-of-range samples for bit_depth
 tRNS must be after
 t\lHBW
+t_bSupressPathMatch
 tag count too large
 tag=
 tagids_curated

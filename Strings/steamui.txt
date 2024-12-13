@@ -12715,6 +12715,8 @@ BC (default)
 BCallerDeadlineTriggered()
 BCodecSupported( k_EStreamVideoCodecH264 )
 BConnectToPipe - couldn't set TCP_NODELAY
+BConvertAssetByLanguage
+BConvertAssetType
 BConvertYUVtoRGB
 BCreateDirectory
 BCreateDirectory Yielding IO Job
@@ -12807,6 +12809,7 @@ BLAKE2b512
 BLAKE2s256
 BMI1
 BMI2
+BMoveFileAndUpdateCache
 BN lib
 BN_BLINDING_convert_ex
 BN_BLINDING_create_param
@@ -14328,8 +14331,10 @@ CLNT
 CLOUD_
 CLOUD_%s
 CLP$
+CLibraryAssetCache::CheckAndUpdateApp - AppConversion
 CLibraryAssetCache::OnConfigUpdated
 CLibraryAssetCache::OnPostLogonState
+CLibraryAssetCache::RunFrame()
 CLibraryBootstrapData
 CLinuxSupport
 CLinuxSupport::OnAppChangeNotification
@@ -15887,6 +15892,7 @@ CheckForOpenContextMenu
 CheckParentalPlaytime
 CheckShaderDepotManifest
 CheckTimedTrial
+Checked %u, remaining %u\n
 Checked: %d/%d
 Cherokee
 Child
@@ -16545,7 +16551,7 @@ Debit Card (Nodwin)
 Debug Stats View
 DebugStatsChart
 DebugStatsSystem
-Dec 10 2024 21:52:46
+Dec 13 2024 03:38:00
 December
 Decipher Only
 DeclareCurrentThreadIsMainThread
@@ -17070,7 +17076,6 @@ EPurchaseRequestAction
 ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
 ERROR: An existing client is not running.
-ERROR: lsof needed - please install\n
 ERROR: selector [%d] invalid\n
 ERemoteClientBroadcastMsg
 ERemoteClientService
@@ -17448,16 +17453,19 @@ Error: %s: failed to write to %s: %s\n
 Error: %s: failed unmount block device: %s
 Error: %s: failed: %s
 Error: %s: invalid HDR visualization value: %d
+Error: %s: invalid address
 Error: %s: invalid block device: 0x%x
 Error: %s: invalid block object
 Error: %s: invalid device path
 Error: %s: invalid dialog in file dialog resolver
 Error: %s: invalid drive object
 Error: %s: invalid drive: 0x%x
+Error: %s: lsof is required to run steam - please install
 Error: %s: no options provided
 Error: %s: not a valid directory: %s
 Error: %s: only accessible in gamescope session
 Error: %s: operation not supported
+Error: %s: popen failed
 Error: %s: skipping user data reset is currently unsupported
 Error: %s: steamos-priv-write failed %s: %s\n
 Error: %s: timed out
@@ -18505,6 +18513,7 @@ GetGameIDForPID
 GetGames
 GetHardwareItems
 GetHomePageContents
+GetIPCConnectionDetails
 GetInfo
 GetInstallDisk
 GetInstallScriptExitCode
@@ -32446,7 +32455,6 @@ download_source
 download_throttle_rate
 download_throttle_while_streaming
 download_while_app_running
-downloaded_bytes
 dpLX
 dpad_up
 dpi_horizontal
@@ -37847,12 +37855,10 @@ library bug
 libraryAssets
 library_600x900.jpg
 library_600x900_%s.jpg
-library_asset_cache_app_check_interval_sec
 library_asset_cache_asset_file_min_sec
 library_asset_cache_conversion_rtime
 library_asset_cache_full_check_threshold
 library_asset_cache_full_recheck_min_hours
-library_asset_cache_max_app_checks_per_frame
 library_asset_cache_max_notify
 library_asset_cache_max_requests
 library_asset_cache_notify_debounce_sec
@@ -39815,6 +39821,7 @@ netflix
 netmask
 netmsg
 network-server1
+network_bytes_per_second
 networkmgr
 never
 new 
@@ -42218,6 +42225,7 @@ rt_last_time_played
 rt_original_release_date
 rt_purchased_time
 rt_recent_activity_time
+rt_sample_time
 rt_steam_release_date
 rt_store_asset_mtime
 rt_time_acquired
@@ -44621,7 +44629,6 @@ tooltiptext
 topGrip
 total
 total_achievements
-total_bytes
 total_bytes_downloaded
 total_bytes_patched
 total_bytes_restored

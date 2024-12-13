@@ -74,6 +74,7 @@ message CContentBuilder_CommitAppBuild_Request {
 	repeated .CContentBuilder_CommitAppBuild_Request.Depots depot_manifests = 2;
 	optional string build_notes = 4;
 	optional string live_branch = 5;
+	optional bool for_local_cs = 6;
 }
 
 message CContentBuilder_CommitAppBuild_Response {

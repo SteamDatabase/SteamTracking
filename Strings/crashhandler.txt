@@ -111,6 +111,7 @@
 /proc/self/exe
 /tmp/dumps
 0123456789ABCDEFbool google_breakpad::{anonymous}::ElfFileSoName(const google_breakpad::MappingInfo&, char*, size_t)
+03:36:49
 11CPathString
 12CStdMemAlloc
 13CCrashHandler
@@ -121,8 +122,8 @@
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
-21:51:44
 21CUtlCStringConversion
+64 >= identifier_length
 9IMemAlloc
 <empty>
 >NULL == pValObjectPrev->m_pValObjectNext
@@ -173,7 +174,7 @@ CrashTime
 CreateInterface
 DBG_PATHMATCH
 DONT_BREAK_ON_ASSERT
-Dec 10 2024
+Dec 13 2024
 December
 Deleting thread object from the thread, this is bad
 DumpMemTrackingStats %d %d \n
@@ -576,7 +577,7 @@ bool
 bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
 bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
 bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
-bool google_breakpad::LinuxDumper::ElfFileIdentifierForMapping(const google_breakpad::MappingInfo&, bool, unsigned int, uint8_t*)
+bool google_breakpad::LinuxDumper::ElfFileIdentifierForMapping(const google_breakpad::MappingInfo&, bool, unsigned int, uint8_t*, size_t)
 bool google_breakpad::MinidumpFileWriter::Copy(MDRVA, const void*, ssize_t)
 bool google_breakpad::MinidumpFileWriter::Open(const char*)
 bool google_breakpad::MinidumpFileWriter::WriteMemory(const void*, size_t, MDMemoryDescriptor*)
@@ -919,10 +920,12 @@ src/client/linux/minidump_writer/linux_ptrace_dumper.cc
 src/client/linux/minidump_writer/minidump_writer.cc
 src/client/minidump_file_writer.cc
 src/common/linux/elfutils.cc
+src/common/linux/file_id.cc
 sscanf
 sscanf@GLIBC_2.0
 statfs64@GLIBC_2.1
 statfs@GLIBC_2.0
+static void google_breakpad::FileID::ConvertIdentifierToString(const uint8_t*, size_t, char*, int)
 static_cast
 statvfs64@GLIBC_2.1
 statvfs@GLIBC_2.1
