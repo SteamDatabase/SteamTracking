@@ -1679,6 +1679,10 @@ function ShowNavigatorShare()
 	{
 		navigator.share( { url: window.location.href } );
 	}
+	else if ( 'ReactNativeWebView' in window && typeof window.ReactNativeWebView === 'object' && typeof window.ReactNativeWebView.postMessage === 'function' )
+	{
+		window.ReactNativeWebView.postMessage( JSON.stringify( { event_name: 'share', link: window.location.href } ) );
+	}
 }
 
 function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
