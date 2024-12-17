@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1734063340"
+	"version"		"1734395595"
 	"ostype"		"win10"
 	"steamcmd_public_all"
 	{
@@ -10,25 +10,25 @@
 	}
 	"steamcmd_bins_win32"
 	{
-		"file"		"steamcmd_bins_win32.zip.216aee8bca15e9b4ea2efb546742a0698d306710"
+		"file"		"steamcmd_bins_win32.zip.3e49fdd274b5d8783a6a4380f8d954d23352199b"
 		"size"		"10460572"
-		"sha2"		"96b015b93a12b7c16e91a1d01d5a5b06c5b0e90c071d7d4adc45696ec6ef7b83"
-		"zipvz"		"steamcmd_bins_win32.zip.vz.cd971c06213378315494c06285befb67971d4fed_6471341"
-		"sha2vz"		"5fb02d8f93f61671e0789310997b75edd82933abf71ba3b4f01cf1a175a16164"
+		"sha2"		"d1537a23c227b4cba75abfd097f394a6fe9ed674de23fdf3601005a143a5c87d"
+		"zipvz"		"steamcmd_bins_win32.zip.vz.859cc507312dd777f15bb38498608a6caf10c1e1_6469502"
+		"sha2vz"		"11082c3f9b30114008ea0163da9402a2fa65418d9f9b339290389cd08ba20fdd"
 	}
 	"steamcmd_steamservice_win32"
 	{
-		"file"		"steamcmd_steamservice_win32.zip.3a3f82dfe9dfd51a08e428183be6b92be59a4b70"
-		"size"		"3012167"
-		"sha2"		"ba318f582018238265beb913a98051e54c1653341f5152fe234f0ac69377cd5b"
-		"zipvz"		"steamcmd_steamservice_win32.zip.vz.8ef441ee646cf4d1600387ca35203e403b66c80c_1700828"
-		"sha2vz"		"a67675904a1517dbd52f00dd153fc653064fc97eb12330cf285686cd87c170c1"
+		"file"		"steamcmd_steamservice_win32.zip.0a202f48393cc0dcd72bd7aacc7aba40f3f922e7"
+		"size"		"3012156"
+		"sha2"		"6d11efd1dee74960a596220293246155fe208004fc65ec2bb57ac77867962fc5"
+		"zipvz"		"steamcmd_steamservice_win32.zip.vz.b9d1a1f0fd557c14dd5e434fe597d6990e0c967e_1700974"
+		"sha2vz"		"00c1237cc0b7c7b22fe5c0518bad98d21a140c070a4aa1e61e94166c83e2e56a"
 	}
 	"steamcmd_steamerrorreporter_win32"
 	{
-		"file"		"steamcmd_steamerrorreporter_win32.zip.79310b570612fe920583912f2609eab61f8b8ca0"
+		"file"		"steamcmd_steamerrorreporter_win32.zip.c8533a476c00bb40c2bdde938e4ebdc1bf486dc8"
 		"size"		"172077"
-		"sha2"		"bc84bde5da013630dc08e49fcc662f2542fbeb38f592594e5c52df139d21659e"
+		"sha2"		"b72d0b00fc9fa2d9d26afb63316e2e7cba5f877d5ac3c1141c19ce72ea6499f5"
 	}
 	"steamcmd_siteserverui_win32"
 	{
@@ -40,19 +40,19 @@
 	}
 	"steamcmd_win32"
 	{
-		"file"		"steamcmd_win32.zip.28903a3f0d0e0906f1f5491ac49e24dac4d4699f"
-		"size"		"2053639"
-		"sha2"		"c7c625a16d3a00ef24d21d066345a90587a2c5868d8396f851572c875fbcbb88"
-		"zipvz"		"steamcmd_win32.zip.vz.56e6bd0a5528a138fe2cbed4c3277f1fc287d445_1697988"
-		"sha2vz"		"d54a407daaafd4acd6556a6e36bbd8a3da60b33c5dc0df577d5af4a345b225d8"
+		"file"		"steamcmd_win32.zip.915a90fd1f9083bc1ae607de5c10e6217bdfffdb"
+		"size"		"2053641"
+		"sha2"		"0079ff7a5c91e04c64e022962f176beee32d2e41b3b98a0b284f7478e839a6be"
+		"zipvz"		"steamcmd_win32.zip.vz.e8bfccd12216911d881ae2dba478b81b712930ce_1697713"
+		"sha2vz"		"2d3efbf45666503fc6a4c760575e7d32720c034befe38315ad179ce684e6361b"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"win32"		"ada01c9d1cd8697242810c36f89f840c7ac63a868318f3bb08b6e0a4ea2e07f7d13df66a1c96f695f6a3ba85df408b88db567aa04c154f1b2cfca180047ce20c"
+	"win32"		"775f4d81150f13742c090d0ce586ed991ff2c75bb500f666b5b13726eac377755957db8c25923838503a29e2f725e39bd0c95bc3f957e5a4a2ab8aef78bf430b"
 }
 "kvsignatures"
 {
-	"win32"		"8aa1649b432a2888330b0ad81312f6aeb987ae2717840cce498d6fad18da981b4c741a6aca94349be11a8c4b3dcedf20deeb24b09e09ee0ff6e959334062879bb83bb9ed0dc37d366eb827580fa618c25657f8d503ba7f09a3d4655b272b974efa2fd989363832f14c9011b53ab5fcdca8d274a4a43aab4fc02fed01d49d7b2a"
+	"win32"		"7c09acd862053a000624502480b9db78e162c036772b34a7151fc421dc518dd0a947d05d3a20c113a79acdb4c5b97dfa9743582473de115194250988da0ba6a2aa346ee0f3972e7257dc2d69404d557fc9bf753157f65fd24906be53b4038e13569f0b0d8d472be33f0a48ba3b0a91a08d32b247d39e8bbe95dda6b7d347e1ce"
 }

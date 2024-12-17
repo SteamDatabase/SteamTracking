@@ -22363,6 +22363,7 @@ Error: %s: XInput extension version required: 2.X  present: %d.%d\n
 Error: %s: bootstrapper abruptly aborted
 Error: %s: can't apply BIOS update due to insufficient battery
 Error: %s: can't apply BIOS update due to missing charger: %s
+Error: %s: empty address field
 Error: %s: failed clear audio device defaults
 Error: %s: failed enable receiving
 Error: %s: failed start update check
@@ -22860,6 +22861,7 @@ Failed to parse gameserver identity.  %s
 Failed to parse input
 Failed to parse install script %s
 Failed to parse legacy_gameserver_identity_binary in relay ticket for AppID=%d.  %s
+Failed to parse lsof source port: %s
 Failed to parse manifest "%s%s"
 Failed to parse project file "%s"
 Failed to parse provided range request header
@@ -34005,6 +34007,7 @@ Vql4
 Vu?N\t?8Ws?vGr?
 VulkanFromANGLE
 W%0Qv4AV
+W@rs
 WARNING
 WARNING! Adding empty folder for empty depot %u
 WARNING! AppID %u has %u missing manifests for private beta "%s" set, falling back to public
@@ -46865,6 +46868,8 @@ lseek
 lseek64
 lseek64@GLIBC_2.2
 lseek@GLIBC_2.0
+lsof reported an empty address field: %s
+lsof reported an unexpected address: %s
 lstick
 lstick_click
 lstick_down
@@ -53808,7 +53813,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Dec 13 2024 03:37:42
+steam Dec 16 2024 23:00:30
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

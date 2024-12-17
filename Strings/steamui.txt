@@ -3887,6 +3887,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN32CSystemStorageDeviceManagerLinux10InitializeEvE37CWebUIStorageDeviceManagerGetStateJob38CStorageDeviceManager_GetState_Request39CStorageDeviceManager_GetState_ResponseE
 *23CInternalLambdaWorkItemIZ31YieldingResolveHostNameWithPortPKcbEUlvE0_vE
 *23CInternalLambdaWorkItemIZN12CUDisksDrive8YldAdoptEPKcS2_bEUlvE_iE
+*23CInternalLambdaWorkItemIZN18CLibraryAssetCache26BYldMoveFileAndUpdateCacheEj17ELibraryAssetTypePKcS3_EUlvE_bE
 *23CInternalLambdaWorkItemIZN19CFactoryResetHelper16YldResetUserDataEvEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN19CFactoryResetHelper19YldFactoryResetFullEvEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSMandatoryUpdate14YldApplyUpdateEvEUlvE_7EResultE
@@ -8795,6 +8796,7 @@ ${LANGUAGE}
 26CInputTouchFingerMotionMsg
 26CInstallSteamServiceDialog
 26CInventory_AddItem_Request
+26CLibraryAssetConversionJob
 26CMsgClientAddFriendToGroup
 26CMsgClientPeerChunkRequest
 26CMsgControllerInputBinding
@@ -12715,8 +12717,6 @@ BC (default)
 BCallerDeadlineTriggered()
 BCodecSupported( k_EStreamVideoCodecH264 )
 BConnectToPipe - couldn't set TCP_NODELAY
-BConvertAssetByLanguage
-BConvertAssetType
 BConvertYUVtoRGB
 BCreateDirectory
 BCreateDirectory Yielding IO Job
@@ -12799,6 +12799,7 @@ BIsCloudEnabledForApp
 BIsDirectoryWritable Yielding IO Job
 BIsFixedDisk Yielding IO Job
 BIsH264() || BIsHEVC() || BIsAV1()
+BIsJobRunning()
 BIsJobRunning() == ( pSummary != nullptr )
 BIsOpen()
 BIsSameFilesystem Yielding IO Job
@@ -12809,7 +12810,6 @@ BLAKE2b512
 BLAKE2s256
 BMI1
 BMI2
-BMoveFileAndUpdateCache
 BN lib
 BN_BLINDING_convert_ex
 BN_BLINDING_create_param
@@ -12897,6 +12897,9 @@ BYieldingSaveBufferToFile inline failed (%u)
 BYieldingSendResponseData:%d - %s
 BYieldingWaitOneFrame
 BYieldingWaitTime
+BYldConvertAssetByLanguage
+BYldConvertAssetType
+BYldMoveFileAndUpdateCache
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 B\n\nquery_type
 B\n\rgroup_summary
@@ -13625,7 +13628,7 @@ CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
 CDesktopCapturePipeWire: Video stream full!\n
 CDesktopCapturePipeWire: Video stream full.. couldn't get buffer!\n
-CDesktopCapturePipeWire: setting gamescope focus appid: %u\n
+CDesktopCapturePipeWire: setting gamescope focus appid: %llu\n
 CDesktopCapturePipeWire: setting stream node path: gamescope\n
 CDesktopCapturePipeWire: unknown video format 0x%x\n
 CDesktopCapturePipeWire: updating capture appid: %s\n
@@ -14335,6 +14338,7 @@ CLibraryAssetCache::CheckAndUpdateApp - AppConversion
 CLibraryAssetCache::OnConfigUpdated
 CLibraryAssetCache::OnPostLogonState
 CLibraryAssetCache::RunFrame()
+CLibraryAssetConversionJob
 CLibraryBootstrapData
 CLinuxSupport
 CLinuxSupport::OnAppChangeNotification
@@ -16551,7 +16555,7 @@ Debit Card (Nodwin)
 Debug Stats View
 DebugStatsChart
 DebugStatsSystem
-Dec 13 2024 03:38:00
+Dec 16 2024 23:00:42
 December
 Decipher Only
 DeclareCurrentThreadIsMainThread
@@ -17400,6 +17404,7 @@ Error: %s: attempt to add pending library folder without pending data: %s
 Error: %s: attempt to set telemetry plugin state, plugin unavailable: %d
 Error: %s: attempt to update unknown adapter: 0x%x
 Error: %s: block device does not have an associated filesystem: 0x%x
+Error: %s: empty address field
 Error: %s: failed eject drive: %s
 Error: %s: failed to add event listener for gamescope-control: %d
 Error: %s: failed to add pending library folder for mount path: %s
@@ -17721,6 +17726,7 @@ Failed to open file dialog: %s\n
 Failed to open target file.
 Failed to parse %s\n
 Failed to parse input
+Failed to parse lsof source port: %s
 Failed to parse provided range request header
 Failed to pre-process frame
 Failed to provide options
@@ -20079,6 +20085,7 @@ Lender
 Length Required
 Lepcha
 Libpng jmp_buf still allocated
+Library cache conversion completed in %llums for %i apps
 LibraryDisableCommunityContent
 LibraryDisplayIconInGameList
 LibraryDisplaySize
@@ -21577,7 +21584,7 @@ New Configurator Saving Controller Configuration Autosave for %u %s - AppID: %d.
 New Configurator Set Selected Config for controller %d - AppID: %d: %s %d %d.\n
 New OS image
 New OS image: %d%%
-New app %u, skipping conversion process
+New app %u, skipping conversion process...
 NewFolderButton
 NewVoiceHotKeyState
 New_Tai_Lue
@@ -38038,6 +38045,7 @@ lookup returned nothing
 lookup_certs_sk
 lost rgb to gray
 lost/gained channels
+low-pri yield - /data/src/steamUI/libraryassetcache.cpp:1451
 lowRange < highRange
 lower
 lowest_recent_price_in_cents
@@ -38053,6 +38061,8 @@ lseek
 lseek64
 lseek64@GLIBC_2.2
 lseek@GLIBC_2.0
+lsof reported an empty address field: %s
+lsof reported an unexpected address: %s
 lspci -tv
 lsusb -t
 lumen

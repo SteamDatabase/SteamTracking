@@ -1894,6 +1894,7 @@ dlmopen@GLIBC_2.3.4
 dlopen@GLIBC_2.1
 dlsym
 dlsym@GLIBC_2.0
+doW!
 drawY < page.tall
 drawY >= 0
 dropshadow
