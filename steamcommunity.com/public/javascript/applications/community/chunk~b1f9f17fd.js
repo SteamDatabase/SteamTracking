@@ -7608,24 +7608,17 @@
       let v = (n = class extends s.Component {
         constructor() {
           super(...arguments),
-            (this.state = { strCustomTitle: "", bSelectedCustomTitle: !1 });
+            (this.state = { rgLocalizedLabel: [], bSelectedCustomTitle: !1 });
         }
         componentDidMount() {
-          this.setState({
-            strCustomTitle: _.NT.Get(
-              this.props.localized_label,
-              this.props.editLanguage,
-            ),
-          });
+          this.setState({ rgLocalizedLabel: this.props.localized_label });
         }
         componentDidUpdate(e, t) {
-          const a = _.NT.Get(
-            this.props.localized_label,
-            this.props.editLanguage,
-          );
-          a != t.strCustomTitle &&
-            e.editLanguage != this.props.editLanguage &&
-            this.setState({ strCustomTitle: a });
+          this.props.localized_label != e.localized_label &&
+            this.setState({
+              rgLocalizedLabel: this.props.localized_label,
+              bSelectedCustomTitle: t.bSelectedCustomTitle,
+            });
         }
         GetNameType() {
           return this.props.nameType || "label";
@@ -7676,21 +7669,33 @@
             });
         }
         OnCustomTitleChange(e) {
-          this.setState({ strCustomTitle: e.target.value });
+          let t = [...this.state.rgLocalizedLabel];
+          (t[this.props.editModel.GetCurEditLanguage()] = e.target.value),
+            this.setState({
+              rgLocalizedLabel: t,
+              bSelectedCustomTitle: this.state.bSelectedCustomTitle,
+            });
         }
         OnClearCustomTitle() {
-          this.setState({ strCustomTitle: "" }),
+          this.setState({ bSelectedCustomTitle: !1, rgLocalizedLabel: null }),
             this.props.onClearCustomTitle();
+        }
+        OnSaveCustomTitle() {
+          this.props.onSetCustomTitle(
+            this.state.rgLocalizedLabel[
+              this.props.editModel.GetCurEditLanguage()
+            ],
+          );
         }
         render() {
           const e = _.NT.Get(
               this.props.localized_label,
-              this.props.editLanguage,
+              this.props.editModel.GetCurEditLanguage(),
             ),
             t = Boolean(
               _.NT.GetWithFallback(
                 this.props.localized_label,
-                this.props.editLanguage,
+                this.props.editModel.GetCurEditLanguage(),
               ),
             ),
             a = this.GetTitleOptions(t);
@@ -7705,99 +7710,117 @@
             (r = a.find(
               (e) => e.value === n.GetCustomLabelToken(this.GetNameType()),
             ));
-          return s.createElement(
-            s.Fragment,
-            null,
+          const p = this.props.editModel.GetCurEditLanguage();
+          let v = "";
+          return (
+            this.state.rgLocalizedLabel &&
+              null !== this.state.rgLocalizedLabel[p] &&
+              (v = this.state.rgLocalizedLabel[p]),
             s.createElement(
-              "div",
-              { className: h.DefaultTitlePicker },
+              s.Fragment,
+              null,
               s.createElement(
                 "div",
-                { className: g.TitleSelectionContainer },
-                s.createElement(l.Ay, {
-                  className: "react-select-container",
-                  classNamePrefix: "react-select",
-                  styles: { option: (e) => ({ ...e, color: "#444444" }) },
-                  isSearchable: !0,
-                  isMulti: !1,
-                  onChange: this.OnTitleChange,
-                  value: r,
-                  options: a,
-                  defaultMenuIsOpen: !1,
-                }),
-              ),
-            ),
-            o &&
-              s.createElement(
-                s.Fragment,
-                null,
-                s.createElement("div", null, s.createElement(i.$A, null)),
+                { className: h.DefaultTitlePicker },
                 s.createElement(
                   "div",
-                  { className: h.customTitleOptionsCtn },
+                  { className: g.TitleSelectionContainer },
+                  s.createElement(l.Ay, {
+                    className: "react-select-container",
+                    classNamePrefix: "react-select",
+                    styles: { option: (e) => ({ ...e, color: "#444444" }) },
+                    isSearchable: !0,
+                    isMulti: !1,
+                    onChange: this.OnTitleChange,
+                    value: r,
+                    options: a,
+                    defaultMenuIsOpen: !1,
+                  }),
+                ),
+              ),
+              o &&
+                s.createElement(
+                  s.Fragment,
+                  null,
                   s.createElement(
                     "div",
-                    {
-                      className: (0, m.A)(d.FlexRowContainer, h.CustomTitleCtn),
-                    },
+                    null,
+                    s.createElement(i.$A, { editModel: this.props.editModel }),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: h.customTitleOptionsCtn },
                     s.createElement(
                       "div",
-                      { className: h.LanguageInput },
-                      s.createElement(c.pd, {
-                        placeholder: (0, _.we)("#Broadcast_use_custom"),
-                        onChange: this.OnCustomTitleChange,
-                        value: this.state.strCustomTitle,
-                      }),
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: h.AddTitleButton },
+                      {
+                        className: (0, m.A)(
+                          d.FlexRowContainer,
+                          h.CustomTitleCtn,
+                        ),
+                      },
                       s.createElement(
-                        u.he,
-                        {
-                          toolTipContent: (0, _.we)(
-                            "#Broadcast_save_title_ttip",
-                          ),
-                        },
+                        "div",
+                        { className: h.LanguageInput },
+                        s.createElement(c.pd, {
+                          placeholder: (0, _.we)("#Broadcast_use_custom"),
+                          onChange: this.OnCustomTitleChange,
+                          value: v,
+                        }),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: h.AddTitleButton },
                         s.createElement(
-                          c.jn,
+                          u.he,
                           {
-                            onClick: () =>
-                              this.props.onSetCustomTitle(
-                                this.state.strCustomTitle,
-                              ),
-                            disabled: e == this.state.strCustomTitle,
+                            toolTipContent: (0, _.we)(
+                              "#Broadcast_save_title_ttip",
+                            ),
                           },
-                          (0, _.we)("#Broadcast_save_title"),
+                          s.createElement(
+                            c.jn,
+                            {
+                              onClick: this.OnSaveCustomTitle,
+                              disabled:
+                                this.props.localized_label[
+                                  this.props.editModel.GetCurEditLanguage()
+                                ] ==
+                                this.state.rgLocalizedLabel[
+                                  this.props.editModel.GetCurEditLanguage()
+                                ],
+                            },
+                            (0, _.we)("#Broadcast_save_title"),
+                          ),
                         ),
                       ),
-                    ),
-                    s.createElement(
-                      "div",
-                      { className: h.RemoveTitleButton },
                       s.createElement(
-                        u.he,
-                        {
-                          toolTipContent: (0, _.we)(
-                            "#Broadcast_remove_title_ttip",
-                          ),
-                        },
+                        "div",
+                        { className: h.RemoveTitleButton },
                         s.createElement(
-                          c.jn,
-                          { onClick: this.OnClearCustomTitle, disabled: !e },
-                          (0, _.we)("#Broadcast_remove_title"),
+                          u.he,
+                          {
+                            toolTipContent: (0, _.we)(
+                              "#Broadcast_remove_title_ttip",
+                            ),
+                          },
+                          s.createElement(
+                            c.jn,
+                            { onClick: this.OnClearCustomTitle, disabled: !e },
+                            (0, _.we)("#Broadcast_remove_title"),
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
+            )
           );
         }
       });
       (0, r.Cg)([p.oI], v.prototype, "OnTitleChange", null),
         (0, r.Cg)([p.oI], v.prototype, "OnCustomTitleChange", null),
         (0, r.Cg)([p.oI], v.prototype, "OnClearCustomTitle", null),
+        (0, r.Cg)([p.oI], v.prototype, "OnSaveCustomTitle", null),
         (v = n = (0, r.Cg)([o.PA], v));
     },
     40023: (e, t, a) => {
@@ -8972,7 +8995,7 @@
             key: "TabName" + u.unique_id,
             default_label: u.default_label,
             localized_label: u.localized_label,
-            editLanguage: m,
+            editModel: _,
             onClearCustomTitle: () => _.SetSaleSectionTabName(m, u, ""),
             onSetCustomTitle: (e) => _.SetSaleSectionTabName(m, u, e),
             onSetDefaultLabel: (e) => {
@@ -12635,7 +12658,7 @@
             o.createElement(
               "div",
               { className: w().EventOptions },
-              o.createElement(R.$A, null),
+              o.createElement(R.$A, { editModel: e }),
               null != i &&
                 o.createElement(
                   "span",
@@ -13280,13 +13303,9 @@
         x = a(63872),
         z = a.n(x),
         U = a(17098);
-      function H(e) {
-        const {
-            saleSection: t,
-            editModel: a,
-            editLanguage: n,
-            strMinimizeTag: r,
-          } = e,
+      const H = (0, c.PA)((e) => {
+        const { saleSection: t, editModel: a, strMinimizeTag: n } = e,
+          r = a.GetCurEditLanguage(),
           c = (0, L.s0)(t, a.GetEventModel(), 1),
           [p, v] = d.useState(() => Boolean(t.internal_section_title)),
           [S, E, b, f, w, C, I, D, M, N, P] = (0, h.q3)(() => [
@@ -13302,14 +13321,14 @@
             a.GetIncludedRealmList(),
             t.internal_section_title || "",
           ]),
-          R = Boolean(_.NT.GetWithFallback(E, n)),
+          R = Boolean(_.NT.GetWithFallback(E, r)),
           F = R || U.a.IsValidTitleOption(S, "label");
         let z = 0;
         null == f ||
           f.forEach((e) => {
             z += e ? 1 : 0;
           });
-        const H = (0, h.q3)(() => (0, o.Nx)(r, !1));
+        const H = (0, h.q3)(() => (0, o.Nx)(n, !1));
         return null === c
           ? d.createElement(
               "div",
@@ -13331,8 +13350,8 @@
                   }),
                 ),
                 d.createElement(A.pn, {
-                  bIsMinimized: (0, o.Nx)(r, !1),
-                  fnToggleMinimize: () => (0, o.mi)(r, !1),
+                  bIsMinimized: (0, o.Nx)(n, !1),
+                  fnToggleMinimize: () => (0, o.mi)(n, !1),
                 }),
               ),
               !H &&
@@ -13347,11 +13366,11 @@
                   d.createElement(U.a, {
                     default_label: S,
                     localized_label: E,
-                    editLanguage: n,
+                    editModel: e.editModel,
                     onClearCustomTitle: () => {
                       (t.localized_label = _.NT.Set(
                         t.localized_label || [],
-                        n,
+                        r,
                         null,
                       )),
                         a.SetDirty(i.IQ.jsondata_sales);
@@ -13359,7 +13378,7 @@
                     onSetCustomTitle: (e) => {
                       (t.localized_label = _.NT.Set(
                         t.localized_label || [],
-                        n,
+                        r,
                         e,
                       )),
                         a.SetDirty(i.IQ.jsondata_sales);
@@ -13457,11 +13476,11 @@
                       nameType: "subtitle",
                       default_label: w,
                       localized_label: C,
-                      editLanguage: n,
+                      editModel: a,
                       onClearCustomTitle: () => {
                         (t.localized_subtitle = _.NT.Set(
                           t.localized_subtitle || [],
-                          n,
+                          r,
                           null,
                         )),
                           a.SetDirty(i.IQ.jsondata_sales);
@@ -13469,7 +13488,7 @@
                       onSetCustomTitle: (e) => {
                         (t.localized_subtitle = _.NT.Set(
                           t.localized_subtitle || [],
-                          n,
+                          r,
                           e,
                         )),
                           a.SetDirty(i.IQ.jsondata_sales);
@@ -13528,7 +13547,7 @@
                 ),
             )
           : null;
-      }
+      });
       function j(e) {
         const { saleSection: t, editModel: a } = e,
           [n] = (0, h.q3)(() => [t.label_link_style]);
@@ -23305,7 +23324,6 @@
                         d.createElement(H, {
                           saleSection: t,
                           editModel: e,
-                          editLanguage: a,
                           strMinimizeTag: this.GetMinimizedTag("title"),
                         }),
                         c &&
@@ -27502,7 +27520,7 @@
         });
       }
       const w = (0, o.PA)((e) => {
-        const t = i.mh.GetEditModel(),
+        const t = e.editModel,
           a = t.GetCurEditLanguage();
         return l.createElement(_.Ng, {
           selectedLang: a,

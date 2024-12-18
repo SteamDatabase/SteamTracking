@@ -8178,7 +8178,7 @@
                 a();
             },
           },
-          d.createElement(un.$A, null),
+          d.createElement(un.$A, { editModel: n }),
           d.createElement(fa.A, {
             items: s,
             onDelete: (e) => c(1 == s.length ? [] : [...s.splice(e, 1)]),
@@ -11988,7 +11988,7 @@
             d.createElement(
               "div",
               { className: S().EventOptions },
-              d.createElement(un.$A, null),
+              d.createElement(un.$A, { editModel: t }),
             ),
             d.createElement(
               "div",
@@ -12603,7 +12603,7 @@
                   {
                     className: (0, I.A)(S().FlexRowContainer, _i.ToolContainer),
                   },
-                  d.createElement(un.$A, null),
+                  d.createElement(un.$A, { editModel: a }),
                   d.createElement(ke, { editModel: a }),
                 ),
                 o && d.createElement(gi, { editModel: e.editModel }),
