@@ -619,8 +619,8 @@ body.v6.sale_winter2024 .sale_capsule_carousel .carousel_items > * {
 .home_pagecontent_ctn.featured_special_deals .ctn_background {
 	position: relative;
 	border-radius: 3px;
-	background: linear-gradient(161deg, #fed79a 8.84%, #ca8c6b 86.04%);
-	background: linear-gradient(161deg, #fed79a99 8.84%, #ca8c6bc4 86.04%), url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2024/Tile-Bg-Autumn.webp') repeat center top;
+	background: linear-gradient(161deg, #a26bdbbd 8.84%, #3247d4b3 86.04%), url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/tile_bg_winter_2024_b.webp') repeat center top;
+	background: linear-gradient(161deg, #a26bdbbd 8.84%, #3247d4b3 86.04%), url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/tile_bg_winter_2024_b.webp') repeat center top;
 }
 
 @media screen and (max-width: 500px )
@@ -639,24 +639,25 @@ body.v6.sale_winter2024 .sale_capsule_carousel .carousel_items > * {
 }
 
 .featured_special_deals .home_section_title {
-	color: #fdd698;
+	color: #f9e8f9;
 	text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
 	font-family: "Motiva Sans", sans-serif;
 	font-size: 38px;
 	font-style: normal;
 	font-weight: 800;
-	line-height: normal;
+	line-height: 1;
 	text-transform: none;
 }
 
 .featured_special_deals .home_section_subtitle {
-	color: black;
-	font-size: 16px;
-	font-weight: 500;
+	color: #b3b8fe;
+	font-size: 19px;
+	font-weight: 400;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .home_pagecontent_ctn.featured_special_deals .ctn_background .btnv6_white_transparent {
-	background: #fdd698b0;
+	background: #f9e8f9;
 	padding: 6px 12px;
 }
 .home_pagecontent_ctn.featured_special_deals .ctn_background .btnv6_white_transparent span {
@@ -972,11 +973,11 @@ body.v6 .discount_block {}
 }
 
 .content_hub_capsule_ctn .gradient {
-	background: radial-gradient(115% 120% at 0% 0%, transparent, #ca8c6b 80%, #f2844c);
+	background: radial-gradient(115% 120% at 0% 0%, transparent, #d19ae9 80%, #d463be);
 }
 
 .content_hub_capsule_ctn .label {
-	color: #66312a;
+	color: #78478d;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -1245,7 +1246,7 @@ a:hover {
 }
 
 .btnv6_white_transparent {
-    background: #fdd698b0;
+    background: #f9e8f9;
 	border: none;
 }
 
@@ -1874,7 +1875,7 @@ p.home_subtitle_ctn a {
     }
 
 	body.v6.sale_winter2024 .split_banner_ctn .home_sticker_ctn.desktop {
-	display: flex;    
+	display: flex;
     }
 
     body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {

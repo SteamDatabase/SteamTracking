@@ -228,7 +228,7 @@
               ((2 != o.type && 3 != o.type) || o.ConvertMalformedNodeToText(),
               n.push(o));
             return n;
-          })(e, n);
+          })(e || "", n);
           return this.Parse_BuildElements(o, t);
         }
         Parse_BuildElements(e, t) {

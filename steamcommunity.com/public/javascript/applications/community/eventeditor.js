@@ -12923,7 +12923,7 @@
         );
       }
       const yi = d.lazy(() =>
-        Promise.all([a.e(4309), a.e(9029), a.e(1110)]).then(a.bind(a, 60299)),
+        Promise.all([a.e(4309), a.e(9535), a.e(1110)]).then(a.bind(a, 60299)),
       );
       function Ii(e) {
         const { editModel: t, refOnInsertImage: a } = e,
@@ -17993,7 +17993,7 @@
         Dr = a(55963),
         Tr = a(83284),
         Gr = a.n(Tr),
-        Ar = a(29863);
+        Ar = a(41751);
       function Nr(e) {
         const t = (0, Ir.n9)(),
           a = (0, Dr.L3)(t);

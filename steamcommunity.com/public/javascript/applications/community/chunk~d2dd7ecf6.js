@@ -876,7 +876,7 @@
         U = a(22797),
         G = a(33924),
         T = a.n(G),
-        O = a(29863),
+        O = a(41751),
         x = a(18654),
         B = a.n(x),
         M = a(84518);
@@ -2260,7 +2260,7 @@
           null,
           s.createElement(
             "div",
-            { className: G().MajorEvent_Ctn },
+            { className: G().MajorEvent_Ctn, ref: e.containerRef },
             s.createElement(
               L.Z,
               {

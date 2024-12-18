@@ -343,7 +343,7 @@
     },
     73967: (e, t, r) => {
       "use strict";
-      r.d(t, { i: () => T, q: () => z });
+      r.d(t, { i: () => F, q: () => k });
       var a = r(23910),
         n = r(65946),
         i = r(90626),
@@ -936,39 +936,40 @@
       })(B || (B = {}));
       var C = r(96001),
         S = r(20194);
-      var v = r(44165),
-        E = r(62792),
+      var E = r(44165),
+        v = r(62792),
         M = r(55263),
         R = r(52038),
         A = r(71541),
         D = r(56330),
         I = r(22797),
         x = r(61859),
-        N = r(30470);
-      function T(e) {
+        N = r(30470),
+        T = r(26408);
+      function F(e) {
         const { oEditableMessage: t } = e,
           [r] = (0, n.q3)(() => [t.GetStoreItemKey()]);
         return r && "app" == r.item_type
-          ? i.createElement(F, { oEditableMessage: t, idKey: r })
+          ? i.createElement(z, { oEditableMessage: t, idKey: r })
           : i.createElement(
               "div",
               { className: D.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             );
       }
-      function F(e) {
+      function z(e) {
         const { oEditableMessage: t, idKey: r } = e,
           [o, l] = (0, n.q3)(() => [
             t.GetUpdateEventClanAccountID(),
             t.GetUpdateEventGID(),
           ]),
-          [c] = (0, M.G6)(r?.id, (0, E.JK)(r?.item_type), a.rz),
+          [c] = (0, M.G6)(r?.id, (0, v.JK)(r?.item_type), a.rz),
           m = (0, i.useMemo)(() => s.b.InitFromClanID(o), [o]),
           d = 12 != c?.GetAppType() ? c?.GetParentAppID() : void 0;
         return i.createElement(
           "div",
           null,
-          i.createElement(z, {
+          i.createElement(k, {
             appid: d || r.id,
             selectedEventGID: l,
             fnSetUpdateEvent: t.SetUpdateEvent,
@@ -994,7 +995,7 @@
             ),
         );
       }
-      function z(e) {
+      function k(e) {
         const {
             appid: t,
             selectedEventGID: r,
@@ -1004,7 +1005,7 @@
             strUrlLearnMore: c,
             bFilterOutDrafts: d,
           } = e,
-          u = (0, v.f1)(),
+          u = (0, E.f1)(),
           { clanInfo: p, bLoadingClanInfo: h } = (0, o.vF)(t),
           b = (function (e, t) {
             const r = (0, C.a)(),
@@ -1100,14 +1101,25 @@
                   }),
                 )
               : i.createElement(
-                  "div",
-                  { className: (0, R.A)(D.ErrorStylesWithIcon, "ErrorCtn") },
-                  (0, x.oW)(
-                    "#EventDropDown_NoEventFound",
-                    i.createElement("a", {
-                      href: `${N.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
-                      target: "_blank",
-                    }),
+                  i.Fragment,
+                  null,
+                  i.createElement(
+                    A.JU,
+                    null,
+                    n,
+                    " ",
+                    i.createElement(T.o, { tooltip: l }),
+                  ),
+                  i.createElement(
+                    "div",
+                    { className: (0, R.A)(D.ErrorStylesWithIcon, "ErrorCtn") },
+                    (0, x.oW)(
+                      "#EventDropDown_NoEventFound",
+                      i.createElement("a", {
+                        href: `${N.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
+                        target: "_blank",
+                      }),
+                    ),
                   ),
                 )
             : i.createElement(I.t, {
@@ -1148,7 +1160,7 @@
             rgParentAppIDs: B,
           } = e,
           [C, S] = i.useState(""),
-          [v, E] = i.useState(!1),
+          [E, v] = i.useState(!1),
           [M, R] = i.useState(!1),
           [A] = i.useState(new l.LU()),
           [D, I] = i.useState(new Array()),
@@ -1195,7 +1207,7 @@
           ),
           G = (0, i.useCallback)(
             (e) => {
-              E(e), W(z.current?.value, e);
+              v(e), W(z.current?.value, e);
             },
             [W, z],
           ),
@@ -1246,7 +1258,7 @@
             O &&
               i.createElement(o.Yh, {
                 ref: k,
-                checked: v,
+                checked: E,
                 onChange: G,
                 className: u.AppSearchDLCCheckbox,
                 label: (0, m.we)("#StoreAdmin_Search_IncludeDLC"),
@@ -1416,7 +1428,7 @@
               ((2 != n.type && 3 != n.type) || n.ConvertMalformedNodeToText(),
               r.push(n));
             return r;
-          })(e, r);
+          })(e || "", r);
           return this.Parse_BuildElements(n, t);
         }
         Parse_BuildElements(e, t) {
@@ -1674,8 +1686,8 @@
             bAddLinkToMemberList: C,
           } = e,
           S = (0, i.FV)(t.clan_account_id),
-          [v] = (0, s.L2)();
-        if (v || !S)
+          [E] = (0, s.L2)();
+        if (E || !S)
           return a.createElement(
             "div",
             { className: f.DevSummaryWidgetCtn },
@@ -1685,14 +1697,14 @@
               position: "center",
             }),
           );
-        const E = t.type,
+        const v = t.type,
           M =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          R = S.GetCreatorHomeURL(E),
+          R = S.GetCreatorHomeURL(v),
           A = S.GetNumFollowers();
         return a.createElement(
           g.tH,

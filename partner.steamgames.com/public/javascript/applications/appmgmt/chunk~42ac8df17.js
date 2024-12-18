@@ -372,6 +372,7 @@
         StoreOriginalPrice: "_3fFFsvII7Y2KXNLDk_krOW",
         PrePurchase: "_2f7BMv_bJMTrHmaOF8B3Ws",
         NewItem: "_2xCT1pUf2c9TICHoMcQE0d",
+        PurchaseOptionDetails: "_17_ynHC8fq9_LghcLrJYmW",
         InGameHover: "axjdi0dhiB17GHjL5FRCr",
         StoreSalePrepurchaseLabel: "_1Fru-E7WQMr8G_aR2sMg5F",
         SingleLineOriginalPrice: "t7Gt8aeopD7JPlhcNTqGV",
@@ -4357,6 +4358,11 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
+                  privacy_override: {
+                    n: 5,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
                 },
               }),
             K.sm_m
@@ -6178,8 +6184,8 @@
             height: 160,
             rgAcceptableTypes: d,
           },
-          app_header_capsule: { width: 460, height: 215, rgAcceptableTypes: u },
-          app_main_capsule: { width: 616, height: 353, rgAcceptableTypes: u },
+          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: u },
+          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: u },
         };
       function g(e, t, r) {
         const a = h[r];
@@ -12438,7 +12444,7 @@
     },
     30894: (e, t, r) => {
       "use strict";
-      r.d(t, { Fm: () => h, L2: () => g });
+      r.d(t, { Fm: () => h, L2: () => g, Lg: () => y });
       var a,
         n = r(34629),
         i = r(41735),
@@ -12948,6 +12954,10 @@
           [e, h.Get()]
         );
       }
+      function y(e) {
+        const [t, r] = g();
+        return !t && r.BOwnsApp(e);
+      }
       (0, n.Cg)([o.sH], h.prototype, "m_setWishList", void 0),
         (0, n.Cg)([o.sH], h.prototype, "m_setOwnedPackages", void 0),
         (0, n.Cg)([o.sH], h.prototype, "m_setOwnedApps", void 0),
@@ -13342,7 +13352,7 @@
                     );
                   })(c(this.m_webApiAccessToken)) &&
                     ((this.m_refreshAccessTokenPromise =
-                      this.m_fnRequestNewAccessToken()),
+                      this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
                     (this.m_webApiAccessToken =
                       await this.m_refreshAccessTokenPromise),
                     (this.m_refreshAccessTokenPromise = void 0)));
@@ -13374,7 +13384,7 @@
                 e.bSendAuth &&
                 this.m_fnRequestNewAccessToken &&
                 ((this.m_refreshAccessTokenPromise =
-                  this.m_fnRequestNewAccessToken()),
+                  this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
                 (this.m_webApiAccessToken =
                   await this.m_refreshAccessTokenPromise),
                 (this.m_refreshAccessTokenPromise = void 0));
@@ -17094,6 +17104,17 @@
         );
       }
     },
+    10050: (e, t, r) => {
+      "use strict";
+      r.d(t, { M: () => i });
+      var a = r(90626),
+        n = r(80724);
+      function i(e) {
+        const { children: t, ...r } = e,
+          i = a.useRef(null);
+        return a.createElement(n.A, { nodeRef: i, ...r }, e.children(i));
+      }
+    },
     65937: (e, t, r) => {
       "use strict";
       r.d(t, { h: () => M });
@@ -17298,10 +17319,11 @@
           (0, I.Id)(window, `steam://run/${o?.GetAppIDToRun()}`);
         }, [o]);
         if (!o || 8 == o.GetAppType()) return null;
-        const m =
-          o.BIsFree() ||
-          "0" == o.GetBestPurchasePriceFormatted() ||
-          o.GetBestPurchaseOption().discount_pct >= 100;
+        const m = o.GetBestPurchaseOption(),
+          d =
+            o.BIsFree() ||
+            "0" == o.GetBestPurchasePriceFormatted() ||
+            o.GetBestPurchaseOption().discount_pct >= 100;
         if (1 == o.GetStoreItemType())
           if (10 == o.GetAppType()) {
             if (!l)
@@ -17320,13 +17342,57 @@
                   (0, C.we)("#Sale_ReserveExhausted"),
                 ),
               );
-          } else if (m && o.GetIncludedAppIDs().length > 1) return null;
+          } else if (d && o.GetIncludedAppIDs().length > 1) return null;
         if (0 == o.GetStoreItemType()) {
-          if (o.BIsComingSoon() && !o.GetBestPurchaseOption()?.packageid)
-            return null;
+          if (o.BIsComingSoon() && !m?.packageid) return null;
           const e = i.Fm.Get().BOwnsApp(o.GetAppID());
           if (e && 10 === o.GetAppType()) return null;
-          if ((e || m) && !o.BIsComingSoon()) {
+          if (!e && m?.is_free_to_keep) {
+            if (E.TS.IN_CLIENT || "store" != (0, E.yK)()) {
+              const e = (0, n.wJ)(
+                `${E.TS.IN_CLIENT ? "steam://openurl/" : ""}${o.GetStorePageURL()}`,
+                s,
+              );
+              return a.createElement(
+                "div",
+                {
+                  onClick: (t) => (0, I.Id)(t, e),
+                  className: (0, B.A)(G().Action, r),
+                },
+                a.createElement(
+                  "span",
+                  null,
+                  (0, C.we)("#EventDisplay_CallToAction_VisitStore"),
+                ),
+              );
+            }
+            {
+              const e = (0, n.wJ)(
+                `${E.TS.STORE_BASE_URL}freelicense/addfreelicense`,
+                s,
+              );
+              return a.createElement(
+                "form",
+                { action: e, method: "POST" },
+                a.createElement("input", {
+                  type: "hidden",
+                  name: "subid",
+                  value: m.packageid,
+                }),
+                a.createElement("input", {
+                  type: "hidden",
+                  name: "sessionid",
+                  value: E.TS.SESSIONID,
+                }),
+                a.createElement(
+                  "button",
+                  { className: (0, B.A)(G().Action, r), type: "submit" },
+                  (0, C.we)("#EventDisplay_CallToAction_AddToAccount"),
+                ),
+              );
+            }
+          }
+          if ((e || d) && !o.BIsComingSoon()) {
             let t = (0, C.we)("#EventDisplay_CallToAction_PlayNowForFree");
             return (
               e
@@ -20066,45 +20132,45 @@
       var a = r(14947),
         n = r(75844),
         i = r(90626),
-        s = r(72739),
-        o = r(80724);
-      const l =
+        s = r(72739);
+      const o =
         r.p +
         "images/applications/appmgmt/defaultappheader.png?v=valveisgoodatcaching";
-      var c = r(6336),
-        m = r(85044),
-        d = r(55963),
-        u = r(4796),
-        p = r(67165),
-        _ = r(30894),
-        h = r(82097),
-        g = r(62792),
-        y = r(55263),
-        S = r(54906),
-        f = r(84811),
-        b = r(2193),
-        w = r(3661),
-        v = r(72237),
-        I = r(94095),
-        B = r(99956),
-        C = r(90595),
-        E = r(47235),
-        T = r(12155),
-        A = r(32754),
-        G = r(44332),
-        D = r(6144),
-        M = r(52038),
-        R = r(61859),
-        k = r(73745),
-        F = r(78327),
-        U = r(84364),
-        L = r(83284),
-        P = r.n(L),
-        O = r(82477),
-        z = r(18654),
-        N = r.n(z),
-        W = r(4434),
-        H = r(60014);
+      var l = r(6336),
+        c = r(85044),
+        m = r(55963),
+        d = r(4796),
+        u = r(67165),
+        p = r(30894),
+        _ = r(82097),
+        h = r(62792),
+        g = r(55263),
+        y = r(54906),
+        S = r(84811),
+        f = r(2193),
+        b = r(3661),
+        w = r(72237),
+        v = r(94095),
+        I = r(99956),
+        B = r(90595),
+        C = r(47235),
+        E = r(12155),
+        T = r(32754),
+        A = r(44332),
+        G = r(6144),
+        D = r(52038),
+        M = r(61859),
+        R = r(73745),
+        k = r(78327),
+        F = r(84364),
+        U = r(83284),
+        L = r.n(U),
+        P = r(82477),
+        O = r(18654),
+        z = r.n(O),
+        N = r(4434),
+        W = r(60014),
+        H = r(10050);
       const j = "DEBUG_UseNewGameHover";
       function x() {
         return window.sessionStorage?.getItem(j) || "default";
@@ -20118,10 +20184,10 @@
       function K(e, t, r) {
         const n = [];
         if (1 == e.length) {
-          const t = h.A.Get().GetApp(e[0]);
+          const t = _.A.Get().GetApp(e[0]);
           t.GetMicroTrailer() &&
             n.push({
-              rctImage: i.createElement(w.m, {
+              rctImage: i.createElement(b.m, {
                 appInfo: { id: t.GetID(), type: "game" },
               }),
               nDurationMs: V,
@@ -20133,7 +20199,7 @@
                 n.push({
                   rctImage: i.createElement("img", {
                     key: e,
-                    className: P().FullDivImage,
+                    className: L().FullDivImage,
                     loading: "lazy",
                     src: e,
                     alt: "screenshot " + (t + 1),
@@ -20144,13 +20210,13 @@
         }
         if (0 == n.length)
           for (const t of e) {
-            const e = h.A.Get().GetApp(t),
+            const e = _.A.Get().GetApp(t),
               r = e?.GetAssets()?.GetMainCapsuleURL();
             r &&
               n.push({
                 rctImage: i.createElement("img", {
                   key: "fallback",
-                  className: P().FullDivImage,
+                  className: L().FullDivImage,
                   loading: "lazy",
                   src: r,
                   alt: e.GetName(),
@@ -20160,7 +20226,7 @@
           }
         n.length > 0
           ? (t(n), r(!0))
-          : ("dev" != F.TS.WEB_UNIVERSE && "beta" != F.TS.WEB_UNIVERSE) ||
+          : ("dev" != k.TS.WEB_UNIVERSE && "beta" != k.TS.WEB_UNIVERSE) ||
             console.error(
               "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
               (0, a.HO)(e),
@@ -20173,53 +20239,53 @@
             include_trailers: !0,
             include_screenshots: !0,
           }),
-          [a, n] = (0, y.G6)(t.id, (0, g.SW)(t.type), r.current),
+          [a, n] = (0, g.G6)(t.id, (0, h.SW)(t.type), r.current),
           s = (0, i.useRef)(a),
-          [o, c] = (0, i.useState)([]),
+          [l, c] = (0, i.useState)([]),
           m = (0, i.useRef)(0),
-          d = (0, k.CH)(),
-          [u] = i.useState(new D.LU()),
+          d = (0, R.CH)(),
+          [u] = i.useState(new G.LU()),
           p = (0, i.useCallback)(
             (e = !1) => {
-              if ((e && (m.current = 0), o?.length > 0)) {
-                const e = o[m.current].nDurationMs;
+              if ((e && (m.current = 0), l?.length > 0)) {
+                const e = l[m.current].nDurationMs;
                 u.Schedule(e, () => {
                   const e = m.current;
-                  (m.current = (m.current + 1) % o.length),
+                  (m.current = (m.current + 1) % l.length),
                     e != m.current && (p(), d());
                 });
               }
             },
-            [o, u, d],
+            [l, u, d],
           );
         return (
           (0, i.useEffect)(
             () => (
-              !a || (o && 0 != o.length && s.current === a)
-                ? 2 == n && 0 == o.length
+              !a || (l && 0 != l.length && s.current === a)
+                ? 2 == n && 0 == l.length
                   ? c([
                       {
                         rctImage: i.createElement("img", {
                           key: "default",
-                          className: P().FullDivImage,
+                          className: L().FullDivImage,
                           loading: "lazy",
-                          src: l,
+                          src: o,
                           alt: "default",
                         }),
                         nDurationMs: q,
                       },
                     ])
-                  : o?.length && p()
+                  : l?.length && p()
                 : ((s.current = a),
                   2 == a.GetStoreItemType() || 1 == a.GetStoreItemType()
-                    ? ((0, G.w)(
+                    ? ((0, A.w)(
                         a.GetIncludedAppIDs().length > 0,
                         "expected included apps " +
                           a.GetID() +
                           " " +
                           a.GetStoreItemType(),
                       ),
-                      h.A.Get()
+                      _.A.Get()
                         .QueueMultipleAppRequests(a.GetIncludedAppIDs(), {
                           include_assets: !0,
                         })
@@ -20227,27 +20293,27 @@
                     : 1 == a.GetAppType() &&
                         a.GetParentAppID() &&
                         !a.GetAllTrailers().BHasTrailers()
-                      ? h.A.Get()
+                      ? _.A.Get()
                           .QueueAppRequest(a.GetParentAppID(), r.current)
                           .then(() =>
                             (function (e, t, r, a) {
                               const n = [],
-                                s = h.A.Get().GetApp(t);
+                                s = _.A.Get().GetApp(t);
                               s.GetMicroTrailer() &&
                                 n.push({
-                                  rctImage: i.createElement(w.m, {
+                                  rctImage: i.createElement(b.m, {
                                     appInfo: { id: s.GetID(), type: "game" },
                                   }),
                                   nDurationMs: V,
                                 });
-                              const o = h.A.Get()
+                              const o = _.A.Get()
                                 .GetApp(e)
                                 .GetOnlyAllAgesSafeScreenshots();
                               o.slice(0, Y).forEach((e, t) => {
                                 n.push({
                                   rctImage: i.createElement("img", {
                                     key: e,
-                                    className: P().FullDivImage,
+                                    className: L().FullDivImage,
                                     loading: "lazy",
                                     src: e,
                                     alt: "screenshot " + (t + 1),
@@ -20263,7 +20329,7 @@
                                       n.push({
                                         rctImage: i.createElement("img", {
                                           key: e,
-                                          className: P().FullDivImage,
+                                          className: L().FullDivImage,
                                           loading: "lazy",
                                           src: e,
                                           alt: "screenshot " + (t + 1),
@@ -20273,8 +20339,8 @@
                                     }),
                                 n.length > 0
                                   ? (r(n), a(!0))
-                                  : ("dev" != F.TS.WEB_UNIVERSE &&
-                                      "beta" != F.TS.WEB_UNIVERSE) ||
+                                  : ("dev" != k.TS.WEB_UNIVERSE &&
+                                      "beta" != k.TS.WEB_UNIVERSE) ||
                                     console.error(
                                       "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
                                       e,
@@ -20285,19 +20351,19 @@
                       : K([a.GetID()], c, p)),
               () => u.Cancel()
             ),
-            [o, a, n, u, p, s],
+            [l, a, n, u, p, s],
           ),
           i.createElement(
             "div",
-            { className: P().TrailerCtn },
-            o?.map((e, r) =>
+            { className: L().TrailerCtn },
+            l?.map((e, r) =>
               i.createElement(
                 "div",
                 {
                   key: "e-" + r + "-" + t.id + "_" + t.type,
-                  className: (0, M.A)(
-                    P().FullDivImage,
-                    r != m.current && P().Transparent,
+                  className: (0, D.A)(
+                    L().FullDivImage,
+                    r != m.current && L().Transparent,
                   ),
                 },
                 e.rctImage,
@@ -20310,15 +20376,15 @@
         const { rgTagIDs: t } = e;
         return i.createElement(
           "div",
-          { className: P().TagRow },
+          { className: L().TagRow },
           i.createElement(
             "div",
-            { className: P().Tags },
+            { className: L().Tags },
             t.map((e) =>
-              i.createElement(B.p, {
+              i.createElement(I.p, {
                 key: "tag_" + e,
                 tagid: e,
-                className: P().Tag,
+                className: L().Tag,
               }),
             ),
           ),
@@ -20326,39 +20392,39 @@
       }
       function Z(e) {
         const { appInfo: t, bTruncateTotalReviews: r, bShowTooltip: a } = e,
-          [n] = (0, y.G6)(t?.id, (0, g.SW)(t?.type), { include_reviews: !0 });
+          [n] = (0, g.G6)(t?.id, (0, h.SW)(t?.type), { include_reviews: !0 });
         if (!n) return null;
-        const s = _.Fm.Get().BShowFilteredUserReviewScores()
+        const s = p.Fm.Get().BShowFilteredUserReviewScores()
           ? n.GetFilteredReviewSummary()
           : n.GetUnfilteredReviewSummary();
         if (!s || 0 == s.review_score) return null;
-        let o = P().ReviewScoreNone;
+        let o = L().ReviewScoreNone;
         o =
           s.review_score > 0 && s.review_score < 5
-            ? P().ReviewScoreLow
+            ? L().ReviewScoreLow
             : 5 == s.review_score
-              ? P().ReviewScoreMixed
-              : P().ReviewScoreHigh;
-        const l = `${F.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+              ? L().ReviewScoreMixed
+              : L().ReviewScoreHigh;
+        const l = `${k.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           c = i.createElement(
             "div",
-            { className: (0, M.A)(P().ReviewScoreValue, o) },
+            { className: (0, D.A)(L().ReviewScoreValue, o) },
             i.createElement(
               "div",
-              { className: P().ReviewScoreLabel },
+              { className: L().ReviewScoreLabel },
               s.review_score_label,
             ),
             i.createElement(
               "div",
-              { className: P().ReviewScoreDivider },
+              { className: L().ReviewScoreDivider },
               " | ",
             ),
             i.createElement(
               "div",
-              { className: P().ReviewScoreCount },
+              { className: L().ReviewScoreCount },
               r
                 ? "(" + s.review_count.toLocaleString() + ")"
-                : (0, R.we)(
+                : (0, M.we)(
                     "#GameHover_UserReviewCount",
                     s.review_count.toLocaleString(),
                   ),
@@ -20366,9 +20432,9 @@
             !r &&
               i.createElement(
                 "div",
-                { className: P().ReviewScoreHeader },
+                { className: L().ReviewScoreHeader },
                 " ",
-                (0, R.we)("#GameHover_UserReviewsHeader"),
+                (0, M.we)("#GameHover_UserReviewsHeader"),
               ),
           );
         let m = "#ReviewScore_PercentPositive";
@@ -20389,17 +20455,17 @@
               m = "#ReviewScore_PercentPositive_series";
           }
         return i.createElement(
-          C.q,
-          { url: l, className: (0, M.A)(P().ReviewScore, "ReviewScore") },
+          B.q,
+          { url: l, className: (0, D.A)(L().ReviewScore, "ReviewScore") },
           a &&
             null != s.percent_positive &&
             null != s.review_count &&
             Boolean(m)
             ? i.createElement(
-                A.he,
+                T.he,
                 {
                   bTopmost: !0,
-                  toolTipContent: (0, R.we)(
+                  toolTipContent: (0, M.we)(
                     m,
                     s.percent_positive,
                     s.review_count,
@@ -20412,16 +20478,16 @@
       }
       const X = (0, n.PA)((e) => {
           const { appID: t, snr: r, classOverride: a } = e,
-            [n] = (0, y.t7)(t, {}),
+            [n] = (0, g.t7)(t, {}),
             [s, o] = (0, i.useState)(() =>
               !n || (1 != n?.GetAppType() && 12 != n?.GetAppType())
                 ? t
                 : n.GetParentAppID() || t,
             ),
-            l = s && _.Fm.Get().BIsGameWishlisted(s),
-            c = s && _.Fm.Get().BOwnsApp(s),
+            l = s && p.Fm.Get().BIsGameWishlisted(s),
+            c = s && p.Fm.Get().BOwnsApp(s),
             [m, d] = (0, i.useState)(!1),
-            u = (0, W.m)("GameHoverWishlistButton");
+            u = (0, N.m)("GameHoverWishlistButton");
           if (
             ((0, i.useEffect)(() => {
               (1 != n?.GetAppType() && 12 != n?.GetAppType()) ||
@@ -20433,45 +20499,45 @@
           return i.createElement(
             "div",
             {
-              className: (0, M.A)(P().WishlistButton, a),
+              className: (0, D.A)(L().WishlistButton, a),
               onClick: async (e) => {
                 e.preventDefault(),
                   e.stopPropagation(),
-                  F.iA.logged_in
+                  k.iA.logged_in
                     ? (d(!0),
-                      await _.Fm.Get().UpdateGameWishlist(s, !l, r),
+                      await p.Fm.Get().UpdateGameWishlist(s, !l, r),
                       u.token.reason || d(!1))
-                    : (0, O.vg)();
+                    : (0, P.vg)();
               },
             },
-            l ? i.createElement(T.qnF, null) : i.createElement(T.T4m, null),
+            l ? i.createElement(E.qnF, null) : i.createElement(E.T4m, null),
             i.createElement(
               "div",
               {
-                className: (0, M.A)(
-                  P().WishlistButtonText,
-                  m && P().WishlistLoadingText,
+                className: (0, D.A)(
+                  L().WishlistButtonText,
+                  m && L().WishlistLoadingText,
                 ),
               },
-              (0, R.we)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
+              (0, M.we)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
             ),
           );
         }),
         $ = (e) => {
           const { nCreatorAccountID: t } = e,
-            [r, a] = (0, u.TB)(t),
-            n = (0, p.FV)(t);
+            [r, a] = (0, d.TB)(t),
+            n = (0, u.FV)(t);
           return i.createElement(
             "div",
-            { className: P().GameHoverCreatorFollowButtonCtn },
+            { className: L().GameHoverCreatorFollowButtonCtn },
             i.createElement(
               "a",
               { href: n?.GetCreatorHomeURL("developer") },
               i.createElement("img", {
-                src: r ? (0, m.t)(null, "medium") : a.avatar_medium_url,
+                src: r ? (0, c.t)(null, "medium") : a.avatar_medium_url,
               }),
             ),
-            i.createElement(b.of, { clanAccountID: t }),
+            i.createElement(f.of, { clanAccountID: t }),
           );
         },
         ee = (0, n.PA)((e) => {
@@ -20489,104 +20555,104 @@
               nCreatorAccountID: u,
               bPreventNavigation: p,
             } = e,
-            [_, h] = (0, i.useState)(!1),
+            [_, S] = (0, i.useState)(!1),
             [f, b] = (0, i.useState)(""),
-            [w] = (0, y.G6)(t.id, (0, g.SW)(t.type), {
+            [I] = (0, g.G6)(t.id, (0, h.SW)(t.type), {
               include_release: !0,
               include_platforms: !0,
               include_reviews: !0,
               include_tag_count: 20,
             }),
-            [B] = (0, y.G6)(r.id, (0, g.SW)(r.type), { include_assets: !0 }),
-            C = !d && !o && !s,
-            T = 0 == w?.GetStoreItemType();
+            [B] = (0, g.G6)(r.id, (0, h.SW)(r.type), { include_assets: !0 }),
+            E = !d && !o && !s,
+            T = 0 == I?.GetStoreItemType();
           return i.createElement(
             "div",
             {
-              className: P().BottomShelf,
+              className: L().BottomShelf,
               style: { transform: l && _ ? f : "" },
-              onMouseEnter: () => h(!0),
-              onFocus: () => h(!0),
-              onMouseLeave: () => h(!1),
-              onBlur: () => h(!1),
+              onMouseEnter: () => S(!0),
+              onFocus: () => S(!0),
+              onMouseLeave: () => S(!1),
+              onBlur: () => S(!1),
             },
             i.createElement(
               "a",
               {
                 href: p ? null : n,
-                target: F.TS.IN_CLIENT ? void 0 : "_blank",
-                className: P().Midline,
+                target: k.TS.IN_CLIENT ? void 0 : "_blank",
+                className: L().Midline,
               },
               Boolean(B) &&
                 i.createElement(
                   "div",
-                  { className: P().CapsuleImageAnchorPoint },
+                  { className: L().CapsuleImageAnchorPoint },
                   i.createElement(
                     "div",
                     {
-                      className: (0, M.A)(
-                        P().CapsuleImageCtn,
-                        P().WithCornerShine,
+                      className: (0, D.A)(
+                        L().CapsuleImageCtn,
+                        L().WithCornerShine,
                       ),
                     },
                     i.createElement("img", {
                       loading: "lazy",
                       src: B?.GetAssets().GetHeaderURL(),
-                      alt: w?.GetName(),
+                      alt: I?.GetName(),
                     }),
                   ),
                 ),
               Boolean(!c && !d) &&
                 i.createElement(
                   "div",
-                  { className: P().Price },
-                  i.createElement(I.wc, { info: t, onlyOneDiscountPct: !0 }),
+                  { className: L().Price },
+                  i.createElement(v.wc, { info: t, onlyOneDiscountPct: !0 }),
                 ),
             ),
             i.createElement(
               "div",
               {
-                className: P().BottomShelfOffScreen,
+                className: L().BottomShelfOffScreen,
                 ref: (e) => b(`translateY( -${e?.clientHeight || 0}px )`),
               },
               i.createElement(
                 "div",
-                { className: P().TextContent },
+                { className: L().TextContent },
                 i.createElement(
                   "a",
                   {
                     href: p ? null : n,
-                    target: F.TS.IN_CLIENT ? void 0 : "_blank",
+                    target: k.TS.IN_CLIENT ? void 0 : "_blank",
                   },
                   i.createElement(
                     "div",
-                    { className: P().GameTitle },
-                    w?.GetName() || a,
+                    { className: L().GameTitle },
+                    I?.GetName() || a,
                   ),
                 ),
-                Boolean(w) && i.createElement(Q, { rgTagIDs: w.GetTagIDs() }),
-                Boolean(!m && w) && i.createElement(Z, { appInfo: t }),
-                Boolean(!m && C) &&
+                Boolean(I) && i.createElement(Q, { rgTagIDs: I.GetTagIDs() }),
+                Boolean(!m && I) && i.createElement(Z, { appInfo: t }),
+                Boolean(!m && E) &&
                   i.createElement(
                     "div",
-                    { className: P().ReviewsAndRelease },
-                    i.createElement(v.Q, {
+                    { className: L().ReviewsAndRelease },
+                    i.createElement(w.Q, {
                       item: t,
-                      strClassName: P().PlatformDisplay,
+                      strClassName: L().PlatformDisplay,
                     }),
-                    Boolean(w?.GetFormattedSteamReleaseDate()) &&
+                    Boolean(I?.GetFormattedSteamReleaseDate()) &&
                       i.createElement(
                         "div",
-                        { className: P().ReleaseDate },
-                        w?.GetFormattedSteamReleaseDate(),
+                        { className: L().ReleaseDate },
+                        I?.GetFormattedSteamReleaseDate(),
                       ),
                   ),
                 o &&
-                  i.createElement(U.j, { info: t, className: P().DemoButton }),
-                Boolean(m && T) && i.createElement(S.Q8, { storeItem: w }),
+                  i.createElement(F.j, { info: t, className: L().DemoButton }),
+                Boolean(m && T) && i.createElement(y.Q8, { storeItem: I }),
                 Boolean(s) && s,
                 Boolean(d && T) &&
-                  i.createElement(E.E, { appid: t.id, bIsMuted: !1 }),
+                  i.createElement(C.E, { appid: t.id, bIsMuted: !1 }),
                 u && i.createElement($, { nCreatorAccountID: u }),
               ),
             ),
@@ -20594,7 +20660,7 @@
         }),
         te = (0, n.PA)((e) => {
           i.useEffect(() => {
-            _.Fm.Get().HintLoad();
+            p.Fm.Get().HintLoad();
           }, []);
           const {
             info: t,
@@ -20610,10 +20676,10 @@
             i.createElement(
               "div",
               {
-                className: (0, M.A)(
-                  P().GameHoverCapsuleCtn,
-                  N().InGameHover,
-                  n && P().UseHidingBottomHalf,
+                className: (0, D.A)(
+                  L().GameHoverCapsuleCtn,
+                  z().InGameHover,
+                  n && L().UseHidingBottomHalf,
                 ),
                 onClick: l,
               },
@@ -20621,8 +20687,8 @@
                 "a",
                 {
                   href: l ? null : a,
-                  target: F.TS.IN_CLIENT ? void 0 : "_blank",
-                  className: P().TrailerAnchorStoreLink,
+                  target: k.TS.IN_CLIENT ? void 0 : "_blank",
+                  className: L().TrailerAnchorStoreLink,
                 },
                 Boolean(o && !s && !l) &&
                   i.createElement(X, { appID: r.id, snr: e.strSNR }),
@@ -20643,16 +20709,16 @@
             bPreferDemoStorePage: o,
             bHidePrice: l,
             bUseSubscriptionLayout: c,
-            strExtraParams: m,
+            strExtraParams: d,
             nCreatorAccountID: u,
             bShowDeckCompatibilityDialog: p,
             bShowWishlistButton: _ = !0,
-            ...h
+            ...y
           } = e,
-          [S] = (0, y.G6)(t.id, (0, g.SW)(t.type), {}),
-          f = (0, H.n9)(),
-          b = (0, d.L3)(f),
-          w = (0, F.Qn)();
+          [S] = (0, g.G6)(t.id, (0, h.SW)(t.type), {}),
+          f = (0, W.n9)(),
+          b = (0, m.L3)(f),
+          w = (0, k.Qn)();
         if (!S && !r) return null;
         if (w) return i.createElement(i.Fragment, null, e.children);
         let v = { id: t.id, type: t.type };
@@ -20663,7 +20729,7 @@
           B =
             a || !S
               ? null
-              : (0, d.wJ)(`${S?.GetStorePageURL(o)}${m ? `?${m}` : ""}`, f),
+              : (0, m.wJ)(`${S?.GetStorePageURL(o)}${d ? `?${d}` : ""}`, f),
           C = i.createElement(te, {
             info: t,
             displayInfo: v,
@@ -20683,7 +20749,7 @@
           });
         return i.createElement(
           ie,
-          { hoverContent: C, strClickUrl: B, ...h },
+          { hoverContent: C, strClickUrl: B, ...y },
           e.children,
         );
       }
@@ -20691,21 +20757,26 @@
         const { hoverProps: t, children: r } = e,
           a = i.useCallback((e) => e?.focus(), []);
         return i.createElement(
-          c.g,
+          l.g,
           { ...t },
           i.createElement(
-            o.A,
+            H.M,
             {
               timeout: 500,
               in: !0,
               appear: !0,
-              classNames: { appearActive: P().Opening, enterDone: P().Open },
+              classNames: { appearActive: L().Opening, enterDone: L().Open },
             },
-            i.createElement(
-              "div",
-              { ref: a, className: P().HoverContentTransition, tabIndex: -1 },
-              r,
-            ),
+            (e) =>
+              i.createElement(
+                "div",
+                {
+                  ref: (0, R.XB)(e, a),
+                  className: L().HoverContentTransition,
+                  tabIndex: -1,
+                },
+                r,
+              ),
           ),
         );
       }
@@ -20719,7 +20790,7 @@
             className: o,
             ...l
           } = e,
-          c = (0, F.Qn)(),
+          c = (0, k.Qn)(),
           [m, d] = i.useState(!c),
           [u, p] = i.useState(!1),
           [_, h] = i.useState(void 0),
@@ -20727,7 +20798,7 @@
             p(!0), h(e.currentTarget);
           }, []),
           y = i.useCallback(() => p(!1), []),
-          S = i.useCallback((e) => {
+          f = i.useCallback((e) => {
             27 == e.keyCode && (p(!1), e.preventDefault(), e.stopPropagation());
           }, []),
           b = i.useCallback(
@@ -20744,14 +20815,14 @@
           "div",
           {
             "data-key": "hover div",
-            className: (0, M.A)(P().ItemHoverSource, n && P().Selectable, o),
+            className: (0, D.A)(L().ItemHoverSource, n && L().Selectable, o),
             ...l,
             onMouseEnter: g,
             onMouseLeave: y,
             onFocus: g,
             onClick: n ? b : void 0,
             onTouchStart: w,
-            onKeyDown: S,
+            onKeyDown: f,
           },
           m &&
             i.createElement(
@@ -20759,7 +20830,7 @@
               { visible: u, target: _, nDelayShowMs: a, hoverProps: r },
               t,
             ),
-          i.createElement(f.tH, null, s),
+          i.createElement(S.tH, null, s),
         );
       }
       function se(e) {
@@ -20816,7 +20887,7 @@
           i.createElement(
             ne,
             { hoverProps: d },
-            i.createElement(f.tH, null, o),
+            i.createElement(S.tH, null, o),
           ),
           a.ownerDocument.body,
         );
@@ -21971,7 +22042,7 @@
     },
     94095: (e, t, r) => {
       "use strict";
-      r.d(t, { Bq: () => B, wD: () => f, wc: () => w });
+      r.d(t, { Bq: () => T, wD: () => v, wc: () => B });
       var a = r(90626),
         n = r(75844),
         i = r(81886),
@@ -21987,50 +22058,75 @@
         h = r(61859),
         g = r(12155),
         y = r(44165),
-        S = r(14771);
-      const f = (0, n.PA)((e) => {
+        S = r(14771),
+        f = r(91675),
+        b = r(26408),
+        w = r(30894);
+      const v = (0, n.PA)((e) => {
         const {
             info: t,
             bShowDemoButton: r,
             bShowPurchaseOptionsButton: n,
             fnOnPurchaseOptionsClick: d,
-            bHidePrice: h,
-            bHideWishlistButton: g,
-            bShowDeckCompatibilityDialog: y,
-            className: S,
+            bHidePrice: g,
+            bHideWishlistButton: y,
+            bShowDeckCompatibilityDialog: S,
+            className: v,
           } = e,
-          f = (0, a.useRef)({ include_release: !0 }),
-          [v] = (0, o.G6)(t.id, (0, s.SW)(t.type), f.current);
-        if (!v) return null;
-        const I = 1 === v.GetAppType() || v.BHasDemo(),
-          B = (0, i.f)(t.type),
-          C = r && B && I;
+          C = (0, a.useRef)({ include_release: !0 }),
+          [E] = (0, o.G6)(t.id, (0, s.SW)(t.type), C.current),
+          T = (0, w.Lg)(E?.GetAppID());
+        if (!E) return null;
+        const A = 1 === E.GetAppType() || E.BHasDemo(),
+          G = (0, i.f)(t.type),
+          D = r && G && A;
+        let M = null;
+        if (
+          !T &&
+          E?.GetBestPurchaseOption().is_free_to_keep &&
+          E?.GetBestPurchaseOption().free_to_keep_ends
+        ) {
+          const e = E.GetBestPurchaseOption().free_to_keep_ends,
+            t = (0, h.we)(
+              "#Sale_default_label_Free_Promo_Description_Short",
+              (0, h.$z)(e) + " @ " + (0, f.KC)(e, { bForce24HourClock: !1 }),
+            );
+          M = a.createElement(
+            "div",
+            { className: u().PurchaseOptionDetails },
+            t,
+            a.createElement(b.o, {
+              tooltip: (0, h.we)("#Sale_default_Tooltip_Free_Promo_Limitation"),
+            }),
+          );
+        }
         return a.createElement(
           "div",
-          { className: (0, _.A)(u().StoreActionWidgetContainer, S) },
+          { className: (0, _.A)(u().StoreActionWidgetContainer, v) },
+          M,
           a.createElement(
             "div",
             { className: u().StoreSalePriceActionWidgetContainer },
-            Boolean(!g && (0, i.f)(t.type)) &&
+            Boolean(!y && (0, i.f)(t.type)) &&
               a.createElement(p._, {
                 appid: t.id,
-                bIsFree: v.BIsFree(),
-                bIsComingSoon: v.BIsComingSoon(),
+                bIsFree: E.BIsFree(),
+                bIsComingSoon: E.BIsComingSoon(),
                 className: "WishlistBtn",
               }),
-            Boolean(C) &&
+            Boolean(D) &&
               a.createElement(m.j, { info: t, className: u().Action }),
-            Boolean(!h) &&
-              1 !== v?.GetAppType() &&
-              (Boolean(n && !v.BIsFree())
-                ? a.createElement(b, { fnOnPurchaseOptionsClick: d })
+            Boolean(!g) &&
+              1 !== E?.GetAppType() &&
+              (Boolean(n && !E.BIsFree())
+                ? a.createElement(I, { fnOnPurchaseOptionsClick: d })
                 : a.createElement(c.h, { info: t, className: "CartBtn" })),
-            Boolean(!h) && a.createElement(w, { info: t }),
-            Boolean(y) && a.createElement(l.Q8, { storeItem: v }),
+            Boolean(!g) && a.createElement(B, { info: t }),
+            Boolean(S) && a.createElement(l.Q8, { storeItem: E }),
           ),
         );
       });
-      function b(e) {
+      function I(e) {
         return a.createElement(
           "div",
           { className: u().Action, onClick: e.fnOnPurchaseOptionsClick },
@@ -22041,18 +22137,18 @@
           ),
         );
       }
-      function w(e) {
+      function B(e) {
         const { info: t, ...r } = e,
           [n] = (0, o.G6)(t?.id, (0, s.SW)(t?.type), { include_release: !0 });
-        return a.createElement(I, { ...r, storeItem: n });
+        return a.createElement(E, { ...r, storeItem: n });
       }
-      const v = 7;
-      function I(e) {
+      const C = 7;
+      function E(e) {
         const { bSingleLineMode: t, storeItem: r, onlyOneDiscountPct: n } = e,
           i = (0, y.f1)();
         if (!r) return null;
         const s =
-            !r.BIsComingSoon() && r.GetReleaseDateRTime() + v * S.Kp.PerDay > i,
+            !r.BIsComingSoon() && r.GetReleaseDateRTime() + C * S.Kp.PerDay > i,
           o = (0, _.A)(
             u().StoreSalePriceWidgetContainer,
             t && u().SingleLineMode,
@@ -22079,44 +22175,59 @@
               (0, h.we)("#EventDisplay_CallToAction_ComingSoon"),
             ),
           );
-        if (r.BIsFree() && !r.BIsFreeTemporary())
-          return 0 == r.GetStoreItemType() && 1 == r.GetAppType()
-            ? a.createElement(
-                "div",
-                { className: o },
-                s &&
+        if (r.BIsFree()) {
+          if (!r.BIsFreeTemporary())
+            return 0 == r.GetStoreItemType() && 1 == r.GetAppType()
+              ? a.createElement(
+                  "div",
+                  { className: o },
+                  s &&
+                    a.createElement(
+                      "div",
+                      { className: u().StoreSaleNewItem },
+                      (0, h.we)("#Flag_New"),
+                    ),
                   a.createElement(
                     "div",
-                    { className: u().StoreSaleNewItem },
-                    (0, h.we)("#Flag_New"),
+                    { className: u().StoreSalePriceBox },
+                    (0, h.we)("#EventDisplay_CallToAction_FreeDemo"),
                   ),
-                a.createElement(
+                )
+              : a.createElement(
                   "div",
-                  { className: u().StoreSalePriceBox },
-                  (0, h.we)("#EventDisplay_CallToAction_FreeDemo"),
-                ),
-              )
-            : a.createElement(
-                "div",
-                { className: o },
-                s &&
+                  { className: o },
+                  s &&
+                    a.createElement(
+                      "div",
+                      { className: u().StoreSaleNewItem },
+                      (0, h.we)("#Flag_New"),
+                    ),
                   a.createElement(
                     "div",
-                    { className: u().StoreSaleNewItem },
-                    (0, h.we)("#Flag_New"),
+                    { className: u().StoreSalePriceBox },
+                    (0, h.we)("#EventDisplay_CallToAction_FreeToPlay"),
                   ),
-                a.createElement(
-                  "div",
-                  { className: u().StoreSalePriceBox },
-                  (0, h.we)("#EventDisplay_CallToAction_FreeToPlay"),
-                ),
-              );
+                );
+          if (
+            r.GetBestPurchaseOption()?.is_free_to_keep &&
+            !r.GetBestPurchaseOption()?.formatted_original_price
+          )
+            return a.createElement(
+              "div",
+              { className: o },
+              a.createElement(
+                "div",
+                { className: u().StoreSalePriceBox },
+                (0, h.we)("#EventDisplay_CallToAction_Free"),
+              ),
+            );
+        }
         const l = r.GetBestPurchaseOption();
         if (!l || !l.formatted_final_price) return null;
         let c = l.discount_pct,
           m = n || 2 != r.GetStoreItemType() ? void 0 : l.bundle_discount_pct,
           d = l.formatted_final_price;
-        return a.createElement(B, {
+        return a.createElement(T, {
           bSingleLineMode: t,
           nBaseDiscountPercentage: m,
           nDiscountPercentage: c,
@@ -22127,7 +22238,7 @@
           bShowNewFlag: s,
         });
       }
-      function B(e) {
+      function T(e) {
         const {
             bSingleLineMode: t,
             nDiscountPercentage: r,

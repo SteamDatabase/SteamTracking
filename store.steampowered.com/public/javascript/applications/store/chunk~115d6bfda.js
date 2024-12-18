@@ -4287,6 +4287,7 @@
           void 0 !== t && this.SetSelectedIndex(t);
         }
         BindSelectedElement(e) {
+          if (!e) return;
           let t = this.containerRef.current,
             a = e.containerRef.current,
             n = t && t.firstElementChild;

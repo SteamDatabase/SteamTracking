@@ -4919,7 +4919,6 @@ body.v6.rewards .ModalPosition_Content {
   position: relative;
 }
 .Y6hHMH1PrvTkz6wc6Rc-v._2-NxqySOAFFzeprxASfXYc {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -5459,16 +5458,6 @@ body.v6.rewards .ModalPosition_Content {
   ._3fRyETfHFZdT31V6JqnecV
   ._3QCcud4ZlODKbII0eAj56I._36dAwyP1o1H9S5XOukMHS1 {
   min-width: 100px;
-}
-@media screen and (max-width: 500px) {
-  ._3DCmO2fo0_T6oLB94tCk58
-    ._3fRyETfHFZdT31V6JqnecV
-    ._3QCcud4ZlODKbII0eAj56I:first-of-type,
-  ._3DCmO2fo0_T6oLB94tCk58
-    ._3fRyETfHFZdT31V6JqnecV
-    ._3QCcud4ZlODKbII0eAj56I._36dAwyP1o1H9S5XOukMHS1 {
-    display: none;
-  }
 }
 ._3DCmO2fo0_T6oLB94tCk58 ._3fRyETfHFZdT31V6JqnecV ._3QCcud4ZlODKbII0eAj56I {
   max-width: 200px;

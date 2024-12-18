@@ -29,61 +29,62 @@
     },
     60299: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => tt });
-      var o = n(32662),
-        a = n(22145),
+      n.r(t), n.d(t, { default: () => nt });
+      var o = n(90286),
+        a = n(26555),
+        r = n(22145),
         l = n(91986),
-        r = n(52893),
-        s = n(90626),
-        i = n(72739);
-      const c = s.memo(function (e) {
+        s = n(52893),
+        i = n(90626),
+        c = n(72739);
+      const d = i.memo(function (e) {
         const { specs: t } = e,
-          [n, o] = s.useState([]),
-          l = s.useRef(0),
-          i = s.useCallback(
+          [n, o] = i.useState([]),
+          a = i.useRef(0),
+          l = i.useCallback(
             (e) => (
-              o((t) => [...t, { id: l.current++, nodeView: e }]),
+              o((t) => [...t, { id: a.current++, nodeView: e }]),
               () => o((t) => t.filter((t) => t.nodeView != e))
             ),
             [],
           ),
-          c = s.useMemo(() => {
+          c = i.useMemo(() => {
             const e = {};
             return (
               t
                 .filter(Boolean)
                 .forEach(
-                  (t) => (e[t.type.name] = (e, n, o) => new m(t, e, n, o, i)),
+                  (t) => (e[t.type.name] = (e, n, o) => new u(t, e, n, o, l)),
                 ),
-              new r.k_({ props: { nodeViews: e } })
+              new s.k_({ props: { nodeViews: e } })
             );
-          }, [t, i]);
+          }, [t, l]);
         return (
-          (0, a.c$)(c),
+          (0, r.c$)(c),
           n.map(({ id: e, nodeView: t }) =>
-            s.createElement(d, { key: e, nodeView: t }),
+            i.createElement(m, { key: e, nodeView: t }),
           )
         );
       });
-      function d(e) {
+      function m(e) {
         const {
             element: t,
             spec: n,
             getProps: o,
             onPropsChanged: a,
-            actions: l,
-            isSelected: r,
+            actions: r,
+            isSelected: l,
           } = e.nodeView,
-          [c, d] = s.useReducer((e) => e + 1, 0);
+          [s, d] = i.useReducer((e) => e + 1, 0);
         return (
-          s.useEffect(() => a.Register(d).Unregister, [a, d]),
-          i.createPortal(
-            s.createElement(n.component, { ...o(), selected: r(), ...l }),
+          i.useEffect(() => a.Register(d).Unregister, [a, d]),
+          c.createPortal(
+            i.createElement(n.component, { ...o(), selected: l(), ...r }),
             t,
           )
         );
       }
-      class m {
+      class u {
         constructor(e, t, n, o, a) {
           this.node = t;
           const r = n.dom.ownerDocument.createElement(
@@ -127,93 +128,93 @@
           (this.selected = !1), this.onPropsChanged();
         }
       }
-      var u = n(28106),
-        p = n(81393),
-        g = n(64238),
-        E = n.n(g),
-        h = n(81047),
-        _ = n(12611),
-        f = n(28954),
-        v = n(27666),
+      var p = n(28106),
+        g = n(81393),
+        E = n(64238),
+        h = n.n(E),
+        _ = n(81047),
+        f = n(12611),
+        v = n(28954),
+        w = n(27666),
         b = n(71138),
-        w = n(33737),
-        C = n(2805),
-        M = n(4869),
-        S = n(83882),
-        I = n(21869),
+        C = n(33737),
+        M = n(2805),
+        S = n(4869),
+        I = n(83882),
+        D = n(21869),
         k = n(29287);
-      var D = n(78395),
-        P = n(22797),
-        y = n(6144),
-        T = n(61859),
-        G = n(27650),
+      var P = n(78395),
+        y = n(22797),
+        T = n(6144),
+        G = n(61859),
+        A = n(27650),
         U = n(64753),
-        A = n(73309);
-      function B(e) {
+        B = n(73309);
+      function N(e) {
         const {
             children: t,
             ProcessFileUpload: n,
             FetchImageURL: o,
             bAllowImageHotLinking: a = !1,
           } = e,
-          [l] = s.useState(() => ({ manager: new x(n, o, a) })),
-          { manager: r } = l;
+          [r] = i.useState(() => ({ manager: new L(n, o, a) })),
+          { manager: l } = r;
         return (
-          r.SetProps(n, o, a),
-          s.createElement(
-            L.Provider,
-            { value: l },
-            s.createElement(V, { manager: r }),
-            s.createElement($, { manager: r }, t),
+          l.SetProps(n, o, a),
+          i.createElement(
+            F.Provider,
+            { value: r },
+            i.createElement($, { manager: l }),
+            i.createElement(Y, { manager: l }, t),
           )
         );
       }
-      const N = s.memo(function (e) {
+      const R = i.memo(function (e) {
         const { nodeType: t } = e,
-          n = F(),
+          n = V(),
           {
             placeholderElements: o,
-            createPlaceholder: l,
-            replacePlaceholder: i,
+            createPlaceholder: a,
+            replacePlaceholder: l,
           } = (function (e, t = "PlaceholderPlugin") {
-            const [n, o] = s.useState([]),
-              [l] = s.useState(
+            const [n, o] = i.useState([]),
+              [a] = i.useState(
                 () =>
-                  new r.k_({
-                    key: new r.hs(t),
+                  new s.k_({
+                    key: new s.hs(t),
                     state: {
                       init: () => k.zF.empty,
                       apply(t, n) {
                         n = n.map(t.mapping, t.doc);
                         const a = t.getMeta(this) || [];
-                        for (const l of a)
-                          if (null == l ? void 0 : l.add) {
-                            const { id: a, data: r } = l.add,
+                        for (const r of a)
+                          if (null == r ? void 0 : r.add) {
+                            const { id: a, data: l } = r.add,
                               s = (t, n) => {
-                                const l = document.createElement(e);
+                                const r = document.createElement(e);
                                 return (
                                   o((e) => [
                                     ...e,
-                                    { id: a, element: l, data: r },
+                                    { id: a, element: r, data: l },
                                   ]),
-                                  l
+                                  r
                                 );
                               },
                               i = (e) => {
                                 o((t) => t.filter((t) => t.element != e));
                               },
-                              c = k.NZ.widget(l.add.pos, s, {
+                              c = k.NZ.widget(r.add.pos, s, {
                                 id: a,
                                 destroy: i,
                               });
                             n = n.add(t.doc, [c]);
                           } else
-                            (null == l ? void 0 : l.remove) &&
+                            (null == r ? void 0 : r.remove) &&
                               (n = n.remove(
                                 n.find(
                                   void 0,
                                   void 0,
-                                  (e) => e.id == l.remove.id,
+                                  (e) => e.id == r.remove.id,
                                 ),
                               ));
                         return n;
@@ -226,54 +227,54 @@
                     },
                   }),
               );
-            (0, a.c$)(l);
-            const i = (0, a.Hd)(),
-              c = s.useRef(0),
-              d = s.useCallback(
+            (0, r.c$)(a);
+            const l = (0, r.Hd)(),
+              c = i.useRef(0),
+              d = i.useCallback(
                 (e, n, o) => {
-                  const a = `${t}_${c.current++}`;
-                  let r = o || i.state.tr;
+                  const r = `${t}_${c.current++}`;
+                  let s = o || l.state.tr;
                   void 0 === n &&
-                    (r.selection.empty || r.deleteSelection(),
-                    (n = r.selection.from));
-                  const s = (null == o ? void 0 : o.getMeta(l)) || [];
+                    (s.selection.empty || s.deleteSelection(),
+                    (n = s.selection.from));
+                  const i = (null == o ? void 0 : o.getMeta(a)) || [];
                   return (
-                    r.setMeta(l, [...s, { add: { id: a, pos: n, data: e } }]),
-                    o || i.dispatch(r),
-                    a
+                    s.setMeta(a, [...i, { add: { id: r, pos: n, data: e } }]),
+                    o || l.dispatch(s),
+                    r
                   );
                 },
-                [l, t, i],
+                [a, t, l],
               ),
-              m = s.useCallback(
+              m = i.useCallback(
                 (e) => {
-                  const t = l.getState(i.state),
+                  const t = a.getState(l.state),
                     n =
                       null == t
                         ? void 0
                         : t.find(void 0, void 0, (t) => t.id == e);
                   return (null == n ? void 0 : n.length) ? n[0].from : void 0;
                 },
-                [i, l],
+                [l, a],
               ),
-              u = s.useCallback(
+              u = i.useCallback(
                 (e, t) => {
                   const n = m(e);
                   return (
                     !!n &&
                     (t
-                      ? i.dispatch(
-                          i.state.tr
+                      ? l.dispatch(
+                          l.state.tr
                             .replaceWith(n, n, t)
-                            .setMeta(l, [{ remove: { id: e } }]),
+                            .setMeta(a, [{ remove: { id: e } }]),
                         )
-                      : i.dispatch(
-                          i.state.tr.setMeta(l, [{ remove: { id: e } }]),
+                      : l.dispatch(
+                          l.state.tr.setMeta(a, [{ remove: { id: e } }]),
                         ),
                     !0)
                   );
                 },
-                [l, m, i],
+                [a, m, l],
               );
             return {
               placeholderElements: n,
@@ -283,33 +284,33 @@
             };
           })("span", "FileUploadPlaceholder");
         !(function (e, t) {
-          (0, a.c$)(
-            s.useMemo(
+          (0, r.c$)(
+            i.useMemo(
               () =>
-                new r.k_({
+                new s.k_({
                   props: {
                     handlePaste(n, o, a) {
                       if (e.BAllowImageHotLinking()) return !1;
-                      const l = [];
+                      const r = [];
                       if (
                         (a.content.descendants((e, n) => {
-                          e.type == t && l.push({ url: e.attrs.src, pos: n });
+                          e.type == t && r.push({ url: e.attrs.src, pos: n });
                         }),
-                        l.length)
+                        r.length)
                       ) {
                         let t = n.state.tr;
                         t.selection.empty || t.deleteSelection();
                         let o = t.selection.from,
-                          r = 0;
-                        for (const n of l) {
-                          const l = a.content.cut(r, n.pos - 1);
-                          t.insert(o, l),
-                            (o += l.size),
+                          l = 0;
+                        for (const n of r) {
+                          const r = a.content.cut(l, n.pos - 1);
+                          t.insert(o, r),
+                            (o += r.size),
                             e.QueueUploadFileByURL(n.url, o, t),
-                            (r = n.pos + 1);
+                            (l = n.pos + 1);
                         }
                         return (
-                          t.insert(o, a.content.cut(r)),
+                          t.insert(o, a.content.cut(l)),
                           t.scrollIntoView(),
                           n.dispatch(t),
                           !0
@@ -341,45 +342,45 @@
             ),
           );
         })(n, t);
-        const c = (0, a.Hd)();
+        const c = (0, r.Hd)();
         return (
-          s.useEffect(() => n.RegisterEditor(c, l, i), [n, c, l, i]),
-          s.createElement(
-            s.Fragment,
+          i.useEffect(() => n.RegisterEditor(c, a, l), [n, c, a, l]),
+          i.createElement(
+            i.Fragment,
             null,
             o.map(({ id: e, element: t, data: n }) =>
-              s.createElement(O, { key: e, element: t, data: n }),
+              i.createElement(x, { key: e, element: t, data: n }),
             ),
           )
         );
       });
-      class R extends Error {
+      class O extends Error {
         constructor(e) {
           super(e);
         }
       }
-      function O(e) {
+      function x(e) {
         const { element: t, data: n } = e,
           o = "file" in n ? n.file : void 0,
-          a = s.useMemo(() => o && URL.createObjectURL(o), [o]),
-          l = "url" in n ? n.url : a;
-        return i.createPortal(
-          s.createElement(
+          a = i.useMemo(() => o && URL.createObjectURL(o), [o]),
+          r = "url" in n ? n.url : a;
+        return c.createPortal(
+          i.createElement(
             "span",
-            { className: A.FileUploadPlaceholder },
-            s.createElement(
+            { className: B.FileUploadPlaceholder },
+            i.createElement(
               "div",
-              { className: A.Throbber },
-              s.createElement(P.t, { size: "medium", position: "center" }),
+              { className: B.Throbber },
+              i.createElement(y.t, { size: "medium", position: "center" }),
             ),
-            s.createElement("img", { src: l, className: A.PendingImage }),
+            i.createElement("img", { src: r, className: B.PendingImage }),
           ),
           t,
         );
       }
-      class x {
+      class L {
         constructor(e, t, n) {
-          (this.m_errors = (0, y.Jc)([])),
+          (this.m_errors = (0, T.Jc)([])),
             (this.m_fnProcessFileUpload = e),
             (this.m_fnFetchImageURL = t),
             (this.m_bAllowImageHotLinking = n);
@@ -388,14 +389,14 @@
           (this.m_fnProcessFileUpload = e),
             (this.m_fnFetchImageURL = t),
             (this.m_bAllowImageHotLinking = n),
-            (0, p.w)(
+            (0, g.w)(
               !this.m_fnFetchImageURL || !this.m_bAllowImageHotLinking,
               "Not expected to have a URL fetch function and allow hotlinking.  URL fetch function will not be called.",
             );
         }
         RegisterEditor(e, t, n) {
           return (
-            (0, p.w)(!this.m_view, "Duplicate registration"),
+            (0, g.w)(!this.m_view, "Duplicate registration"),
             (this.m_view = e),
             (this.m_fnCreatePlaceholder = t),
             (this.m_fnReplacePlaceholder = n),
@@ -453,7 +454,7 @@
           try {
             const o = new URL(e),
               a = await this.m_fnFetchImageURL(e),
-              l = new File(
+              r = new File(
                 [a],
                 decodeURIComponent(
                   (null === (n = o.pathname) || void 0 === n
@@ -462,7 +463,7 @@
                 ),
                 { type: a.type },
               );
-            await this.ProcessFile(l, t);
+            await this.ProcessFile(r, t);
           } catch (n) {
             this.AddError(`Unable to process URL: ${e}`),
               this.m_fnReplacePlaceholder(t);
@@ -474,7 +475,7 @@
             console.log(`Processing file upload: "${e.name}"`),
               (n = await this.m_fnProcessFileUpload(e));
           } catch (e) {
-            e instanceof R
+            e instanceof O
               ? this.AddError(e.message)
               : this.AddError(`Error proccessing file upload: ${e}`);
           }
@@ -483,210 +484,210 @@
             : this.m_fnReplacePlaceholder(t);
         }
       }
-      const L = s.createContext(void 0);
-      function F() {
-        return s.useContext(L).manager;
+      const F = i.createContext(void 0);
+      function V() {
+        return i.useContext(F).manager;
       }
-      const V = s.memo(function (e) {
+      const $ = i.memo(function (e) {
         const { manager: t } = e,
           n = (0, U.gc)(t.GetErrors());
         return n.length
-          ? s.createElement(
-              I.E,
+          ? i.createElement(
+              D.E,
               { active: !0 },
-              s.createElement(D.o0, {
+              i.createElement(P.o0, {
                 bAlertDialog: !0,
-                strTitle: (0, T.we)("#Error_Generic"),
+                strTitle: (0, G.we)("#Error_Generic"),
                 strDescription: n.map((e, t) =>
-                  s.createElement("div", { key: t }, e),
+                  i.createElement("div", { key: t }, e),
                 ),
-                strOKButtonText: (0, T.we)("#Button_OK"),
+                strOKButtonText: (0, G.we)("#Button_OK"),
                 onOK: () => t.ClearErrors(),
                 onCancel: () => t.ClearErrors(),
               }),
             )
           : null;
       });
-      function $(e) {
+      function Y(e) {
         const { manager: t, children: n } = e,
-          o = s.useCallback(
+          o = i.useCallback(
             (e, n) => {
               for (const o of e)
                 t.UploadFile(o, t.GetViewPosition(n.clientX, n.clientY));
             },
             [t],
           ),
-          [a, l] = (0, G.hk)(o);
-        return s.createElement(
+          [a, r] = (0, A.hk)(o);
+        return i.createElement(
           "div",
-          { ...a, className: A.FileUploadDragDrop },
-          l && !1,
+          { ...a, className: B.FileUploadDragDrop },
+          r && !1,
           n,
         );
       }
-      var Y = n(30175),
-        H = n(73745),
-        Q = n(30470),
-        j = n(21134);
-      function z(e) {
+      var H = n(30175),
+        Q = n(73745),
+        j = n(30470),
+        z = n(21134);
+      function K(e) {
         const {
             src: t,
             clanSteamID: n,
             setAttrs: o,
             focusView: a,
-            removeNode: l,
+            removeNode: r,
           } = e,
-          [r, i, c] = (0, H.uD)(),
-          [d, m] = (0, H.OP)(),
-          [u, p] = s.useMemo(() => [-1 !== t.indexOf(_.lw), (0, v.v6)(t)], [t]),
-          g = s.useCallback(() => {
+          [l, s, c] = (0, Q.uD)(),
+          [d, m] = (0, Q.OP)(),
+          [u, p] = i.useMemo(() => [-1 !== t.indexOf(f.lw), (0, w.v6)(t)], [t]),
+          g = i.useCallback(() => {
             a(), c();
           }, [a, c]);
-        return s.createElement(
-          s.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          r &&
-            s.createElement(K, {
+          l &&
+            i.createElement(q, {
               hideModal: g,
               clanSteamID: u ? n : void 0,
               setAttrs: o,
               src: t,
             }),
-          s.createElement(
+          i.createElement(
             "span",
-            { className: E()(j.ClanImageContainer, d && j.Hovered), ...m },
-            s.createElement("img", { src: p }),
-            s.createElement(
+            { className: h()(z.ClanImageContainer, d && z.Hovered), ...m },
+            i.createElement("img", { src: p }),
+            i.createElement(
               "span",
-              { className: j.ImageControls },
-              s.createElement(
-                Y.ff,
+              { className: z.ImageControls },
+              i.createElement(
+                H.ff,
                 {
-                  onClick: i,
-                  tooltip: (0, T.we)("#EventEditor_ReplaceImage_Title"),
+                  onClick: s,
+                  tooltip: (0, G.we)("#EventEditor_ReplaceImage_Title"),
                 },
-                s.createElement(M.ffu, null),
+                i.createElement(S.ffu, null),
               ),
-              s.createElement(
-                Y.ff,
+              i.createElement(
+                H.ff,
                 {
-                  onClick: l,
-                  tooltip: (0, T.we)("#StoreAdmin_GameDescription_RemoveImage"),
+                  onClick: r,
+                  tooltip: (0, G.we)("#StoreAdmin_GameDescription_RemoveImage"),
                 },
-                s.createElement(M.sED, null),
+                i.createElement(S.sED, null),
               ),
             ),
           ),
         );
       }
-      function K(e) {
+      function q(e) {
         const { hideModal: t, clanSteamID: n, setAttrs: o, src: a } = e,
-          l = s.useCallback(
+          r = i.useCallback(
             (e) => {
               o({ src: e }), t();
             },
             [o, t],
           );
         return n
-          ? s.createElement(X, {
+          ? i.createElement(W, {
               hideModal: t,
-              onImageSelected: l,
+              onImageSelected: r,
               clanSteamID: n,
             })
-          : s.createElement(q, { hideModal: t, onImageSelected: l, src: a });
+          : i.createElement(X, { hideModal: t, onImageSelected: r, src: a });
       }
-      function q(e) {
+      function X(e) {
         const { hideModal: t, onImageSelected: n, src: o } = e,
-          [a, l] = s.useState(o),
-          r = s.useCallback((e) => l(e.currentTarget.value), []);
-        return s.createElement(
-          S.mt,
+          [a, r] = i.useState(o),
+          l = i.useCallback((e) => r(e.currentTarget.value), []);
+        return i.createElement(
+          I.mt,
           { active: !0, onDismiss: t },
-          s.createElement(
-            w.lV,
+          i.createElement(
+            C.lV,
             { onSubmit: () => n(a) },
-            s.createElement(
-              w.Y9,
+            i.createElement(
+              C.Y9,
               null,
-              (0, T.we)("#EventEditor_ReplaceImage_Title"),
+              (0, G.we)("#EventEditor_ReplaceImage_Title"),
             ),
-            s.createElement(
-              w.nB,
+            i.createElement(
+              C.nB,
               null,
-              s.createElement(w.pd, {
+              i.createElement(C.pd, {
                 value: a,
-                onChange: r,
-                label: (0, T.we)("#EventEditor_InsertImage_URL"),
+                onChange: l,
+                label: (0, G.we)("#EventEditor_InsertImage_URL"),
               }),
             ),
-            s.createElement(w.CB, {
+            i.createElement(C.CB, {
               onCancel: t,
-              strOKText: (0, T.we)("#EventEditor_ReplaceImage_Title"),
+              strOKText: (0, G.we)("#EventEditor_ReplaceImage_Title"),
               bOKDisabled: a == o,
             }),
           ),
         );
       }
-      function X(e) {
+      function W(e) {
         const { hideModal: t, onImageSelected: n, clanSteamID: o } = e,
-          a = s.useCallback(
+          a = i.useCallback(
             (e, t) => {
-              n((0, h.fw)(e));
+              n((0, _.fw)(e));
             },
             [n],
           );
-        return s.createElement(
-          I.E,
+        return i.createElement(
+          D.E,
           { active: !0 },
-          s.createElement(C._6, {
+          i.createElement(M._6, {
             closeModal: t,
             clanSteamID: o,
             OnClanImageSelected: a,
           }),
         );
       }
-      function W(e) {
+      function Z(e) {
         const { editModel: t, imageNode: n, children: o } = e,
-          a = s.useCallback(
+          a = i.useCallback(
             async (e) => {
               const o = t.GetClanSteamID(),
-                a = new f.V(o);
+                a = new v.V(o);
               if (!(await a.AddImage(e, t.GetCurEditLanguage(), null)))
                 throw "Error processing image upload";
-              const l = await a.UploadAllImages(
+              const r = await a.UploadAllImages(
                 t.GetIncludedRealmList(),
                 t.GetCurEditLanguage(),
               );
-              if (!l || 1 != Object.values(l).length)
+              if (!r || 1 != Object.values(r).length)
                 throw "Error uploading image";
-              const r = Object.values(l)[0];
-              if (!r.success) throw r.message;
-              const s = b.pU.GetClanImageByImageHash(o, r.image_hash),
-                i = (0, h.fw)(s);
-              return await (0, G.DB)((0, v.v6)(i)), n.create({ src: i });
+              const l = Object.values(r)[0];
+              if (!l.success) throw l.message;
+              const s = b.pU.GetClanImageByImageHash(o, l.image_hash),
+                i = (0, _.fw)(s);
+              return await (0, A.DB)((0, w.v6)(i)), n.create({ src: i });
             },
             [t, n],
           );
         return n
-          ? s.createElement(
-              B,
+          ? i.createElement(
+              N,
               { ProcessFileUpload: a, bAllowImageHotLinking: !0 },
               o,
             )
           : o;
       }
-      var Z = n(33645),
-        J = n.n(Z),
-        ee = n(55608),
-        te = n(79497),
-        ne = n(9024),
-        oe = n(52038);
-      const ae = {
-          ...ee.DQ.nodes,
+      var J = n(33645),
+        ee = n.n(J),
+        te = n(55608),
+        ne = n(79497),
+        oe = n(9024),
+        ae = n(52038);
+      const re = {
+          ...te.DQ.nodes,
           horizontal_rule: {
             group: "block",
             parseDOM: [{ tag: "hr" }],
-            toDOM: (0, ee.BM)("hr", J().HR),
+            toDOM: (0, te.BM)("hr", ee().HR),
             bbCode: { tag: "hr" },
           },
           quote: {
@@ -694,43 +695,43 @@
             content: "block+",
             group: "block",
             defining: !0,
-            toDOM: (0, ee.BM)("blockquote", J().BlockQuote),
+            toDOM: (0, te.BM)("blockquote", ee().BlockQuote),
             bbCode: { tag: "quote" },
           },
           pullquote: {
             content: "block+",
             group: "block",
-            toDOM: (0, ee.BM)("div", J().PullQuote),
+            toDOM: (0, te.BM)("div", ee().PullQuote),
             bbCode: { tag: "pullquote" },
           },
           smalltext: {
             content: "inline*",
             group: "block",
-            toDOM: (0, ee.BM)("div", (0, oe.A)(J().SmallText, "BB_SmallText")),
+            toDOM: (0, te.BM)("div", (0, ae.A)(ee().SmallText, "BB_SmallText")),
             bbCode: { tag: "smalltext" },
           },
-          ...ne.X,
+          ...oe.X,
         },
         le = {
-          ...ee.DQ.marks,
+          ...te.DQ.marks,
           spoiler: {
-            toDOM: (0, ee.BM)(
+            toDOM: (0, te.BM)(
               "span",
-              (0, oe.A)(J().Spoiler, J().Revealed),
-              (0, ee.ce)("span", (0, oe.A)(J().SpoilerText)),
+              (0, ae.A)(ee().Spoiler, ee().Revealed),
+              (0, te.ce)("span", (0, ae.A)(ee().SpoilerText)),
             ),
             bbCode: { tag: "spoiler" },
           },
         };
-      var re = n(6878),
-        se = n.n(re),
-        ie = n(63226),
-        ce = n.n(ie);
-      const de = {
+      var se = n(6878),
+        ie = n.n(se),
+        ce = n(63226),
+        de = n.n(ce);
+      const me = {
         nodes: {
-          ...ae,
+          ...re,
           heading: {
-            ...ee.DQ.nodes.heading,
+            ...te.DQ.nodes.heading,
             parseDOM: [1, 2, 3].map((e) => ({
               tag: `h${e}`,
               attrs: { level: e },
@@ -738,25 +739,25 @@
             toDOM: (e) => [
               "h" + e.attrs.level,
               {
-                class: (0, oe.A)(
+                class: (0, ae.A)(
                   `BB_Header${e.attrs.level}`,
-                  J()[`Header${e.attrs.level}`],
-                  se()[`Header${e.attrs.level}`],
+                  ee()[`Header${e.attrs.level}`],
+                  ie()[`Header${e.attrs.level}`],
                 ),
               },
               0,
             ],
             bbCode: [1, 2, 3].map((e) => ({
               tag: `h${e}`,
-              BBArgsToAttrs: (t) => ({ ...me(t), level: e }),
-              AttrsToBBArgs: (e) => ({ ...ue(e), tag: `h${e.level}` }),
+              BBArgsToAttrs: (t) => ({ ...ue(t), level: e }),
+              AttrsToBBArgs: (e) => ({ ...pe(e), tag: `h${e.level}` }),
             })),
           },
           quote: {
-            ...ae.quote,
+            ...re.quote,
             toDOM: () => [
               "blockquote",
-              { class: (0, oe.A)(J().BlockQuote, se().BlockQuote) },
+              { class: (0, ae.A)(ee().BlockQuote, ie().BlockQuote) },
               0,
             ],
           },
@@ -765,7 +766,7 @@
             group: "block",
             atom: !0,
             draggable: !0,
-            toDOM: () => ["div", { class: ce().EditorYoutubeLoading }],
+            toDOM: () => ["div", { class: de().EditorYoutubeLoading }],
             bbCode: {
               tag: "previewyoutube",
               BBArgsToAttrs: (e) => {
@@ -782,7 +783,7 @@
             group: "block",
             atom: !0,
             draggable: !0,
-            toDOM: () => ["div", { class: ce().EditorYoutubeLoading }],
+            toDOM: () => ["div", { class: de().EditorYoutubeLoading }],
             bbCode: {
               tag: "meetsteamsessiongroup",
               BBArgsToAttrs: (e) => ({ group_id: Number(e.group_id) }),
@@ -792,262 +793,262 @@
         },
         marks: { ...le },
       };
-      function me(e) {
+      function ue(e) {
         return e.id ? { id: e.id.replace(/^#/, "") } : {};
       }
-      function ue(e) {
+      function pe(e) {
         return e.id ? { args: { id: e.id } } : {};
       }
-      var pe = n(79216);
-      var ge = n(70995),
-        Ee = n(74410),
-        he = n(73662),
-        _e = n(9154);
-      function fe(e) {
+      var ge = n(79216);
+      var Ee = n(70995),
+        he = n(74410),
+        _e = n(73662),
+        fe = n(9154);
+      function ve(e) {
         const {
             videoID: t,
             align: n,
             selected: o,
             setAttrs: a,
-            focusView: l,
+            focusView: r,
           } = e,
-          [r, i] = s.useState(!1),
-          [c, d, m] = (0, H.uD)(),
-          u = s.useCallback(() => i(!0), []),
-          p = s.useCallback(() => i(!1), []),
-          g = s.useCallback(() => {
-            m(), l();
-          }, [m, l]),
-          E = s.useCallback(
+          [l, s] = i.useState(!1),
+          [c, d, m] = (0, Q.uD)(),
+          u = i.useCallback(() => s(!0), []),
+          p = i.useCallback(() => s(!1), []),
+          g = i.useCallback(() => {
+            m(), r();
+          }, [m, r]),
+          E = i.useCallback(
             (e, t) => {
               a({ videoID: e, align: t }), g();
             },
             [a, g],
           ),
-          { sizeStr: h, alignStr: _ } = (0, Ee.i1)(n);
-        return s.createElement(
-          s.Fragment,
+          { sizeStr: h, alignStr: _ } = (0, he.i1)(n);
+        return i.createElement(
+          i.Fragment,
           null,
           c &&
-            s.createElement(ve, {
+            i.createElement(we, {
               videoID: t,
               align: n,
               bEditing: !0,
               hideModal: g,
               onSave: E,
             }),
-          s.createElement(
+          i.createElement(
             "div",
             {
-              className: (0, oe.A)(
-                ie.PreviewYoutubeEditor,
+              className: (0, ae.A)(
+                ce.PreviewYoutubeEditor,
                 h,
                 _,
-                he.PreviewYouTubeVideo,
-                o && ie.Selected,
+                _e.PreviewYouTubeVideo,
+                o && ce.Selected,
               ),
               onMouseEnter: u,
               onMouseLeave: p,
             },
-            r &&
-              s.createElement(
+            l &&
+              i.createElement(
                 "div",
-                { className: ie.EditHover, onClick: d },
-                (0, T.we)("#Button_Edit"),
+                { className: ce.EditHover, onClick: d },
+                (0, G.we)("#Button_Edit"),
               ),
-            o && s.createElement("div", { className: ie.SelectionOverlay }),
-            s.createElement("img", {
+            o && i.createElement("div", { className: ce.SelectionOverlay }),
+            i.createElement("img", {
               src: `https://img.youtube.com/vi/${t}/0.jpg`,
             }),
           ),
         );
       }
-      function ve(e) {
+      function we(e) {
         const {
             videoID: t = "",
             align: n = "",
             bEditing: o = !1,
             hideModal: a,
-            onSave: l,
+            onSave: r,
           } = e,
-          [r, i] = s.useState(n || Ee.V2.left),
-          [c, d] = s.useState(t ? `https://www.youtube.com/watch?v=${t}` : ""),
-          [m, u] = s.useState(void 0),
-          p = s.useCallback(() => {
-            const { strVideoID: e } = (0, ge.XU)(c);
+          [l, s] = i.useState(n || he.V2.left),
+          [c, d] = i.useState(t ? `https://www.youtube.com/watch?v=${t}` : ""),
+          [m, u] = i.useState(void 0),
+          p = i.useCallback(() => {
+            const { strVideoID: e } = (0, Ee.XU)(c);
             return (
-              e ? l(e, r) : u((0, T.we)("#EventEditor_InsertYouTube_NoURL")), !1
+              e ? r(e, l) : u((0, G.we)("#EventEditor_InsertYouTube_NoURL")), !1
             );
-          }, [c, r, l]),
-          g = s.useCallback((e) => {
+          }, [c, l, r]),
+          g = i.useCallback((e) => {
             e && (e.element.focus(), e.element.select());
           }, []);
-        return s.createElement(
-          _e.mt,
-          { active: !0, onDismiss: a, className: ie.PreviewYoutubeEditorModal },
-          s.createElement(
+        return i.createElement(
+          fe.mt,
+          { active: !0, onDismiss: a, className: ce.PreviewYoutubeEditorModal },
+          i.createElement(
             "form",
             { onSubmit: p },
-            s.createElement(
-              w.Y9,
+            i.createElement(
+              C.Y9,
               null,
-              (0, T.we)("#EventEditor_InsertYouTube"),
+              (0, G.we)("#EventEditor_InsertYouTube"),
             ),
-            m && s.createElement("div", { className: ie.Error }, m),
-            s.createElement(
-              w.G5,
+            m && i.createElement("div", { className: ce.Error }, m),
+            i.createElement(
+              C.G5,
               null,
-              s.createElement(
-                w.lr,
+              i.createElement(
+                C.lr,
                 null,
-                (0, T.we)("#EventEditor_InsertYouTube_URL"),
+                (0, G.we)("#EventEditor_InsertYouTube_URL"),
               ),
-              s.createElement(w.pd, {
-                placeholder: (0, T.we)("#EventEditor_InsertYouTube_Placholder"),
+              i.createElement(C.pd, {
+                placeholder: (0, G.we)("#EventEditor_InsertYouTube_Placholder"),
                 value: c,
                 ref: g,
                 onChange: (e) => d(e.currentTarget.value),
               }),
             ),
-            s.createElement(
-              w.G5,
+            i.createElement(
+              C.G5,
               null,
-              s.createElement(
-                w.lr,
+              i.createElement(
+                C.lr,
                 null,
-                (0, T.we)("#EventEditor_InsertYouTube_Position"),
+                (0, G.we)("#EventEditor_InsertYouTube_Position"),
               ),
-              s.createElement(w.Od, {
-                checked: r == Ee.V2.left,
-                onChange: (e) => e && i(Ee.V2.left),
-                label: (0, T.we)("#EventEditor_InsertYouTube_Left"),
+              i.createElement(C.Od, {
+                checked: l == he.V2.left,
+                onChange: (e) => e && s(he.V2.left),
+                label: (0, G.we)("#EventEditor_InsertYouTube_Left"),
               }),
-              s.createElement(w.Od, {
-                checked: r == Ee.V2.right,
-                onChange: (e) => e && i(Ee.V2.right),
-                label: (0, T.we)("#EventEditor_InsertYouTube_Right"),
+              i.createElement(C.Od, {
+                checked: l == he.V2.right,
+                onChange: (e) => e && s(he.V2.right),
+                label: (0, G.we)("#EventEditor_InsertYouTube_Right"),
               }),
-              s.createElement(w.Od, {
-                checked: r == Ee.V2.full,
-                onChange: (e) => e && i(Ee.V2.full),
-                label: (0, T.we)("#EventEditor_InsertYouTube_Full"),
+              i.createElement(C.Od, {
+                checked: l == he.V2.full,
+                onChange: (e) => e && s(he.V2.full),
+                label: (0, G.we)("#EventEditor_InsertYouTube_Full"),
               }),
-              s.createElement(w.Od, {
-                checked: r == Ee.V2.summary,
-                onChange: (e) => e && i(Ee.V2.summary),
-                label: (0, T.we)("#EventEditor_InsertYouTube_Summary"),
+              i.createElement(C.Od, {
+                checked: l == he.V2.summary,
+                onChange: (e) => e && s(he.V2.summary),
+                label: (0, G.we)("#EventEditor_InsertYouTube_Summary"),
               }),
             ),
-            s.createElement(
-              w.wi,
+            i.createElement(
+              C.wi,
               null,
-              s.createElement(w.CB, {
+              i.createElement(C.CB, {
                 onCancel: a,
                 strOKText: o
-                  ? (0, T.we)("#Button_Save")
-                  : (0, T.we)("#EventEditor_InsertYouTube"),
+                  ? (0, G.we)("#Button_Save")
+                  : (0, G.we)("#EventEditor_InsertYouTube"),
               }),
             ),
           ),
         );
       }
       var be = n(79570);
-      var we = n(44483),
-        Ce = n(25918),
-        Me = n(19675),
-        Se = n(69001),
-        Ie = n(65946),
+      var Ce = n(44483),
+        Me = n(25918),
+        Se = n(19675),
+        Ie = n(69001),
+        De = n(65946),
         ke = n(63556),
-        De = n(44165),
-        Pe = n(95695),
-        ye = n(99637),
-        Te = n(26408),
-        Ge = n(62490),
+        Pe = n(44165),
+        ye = n(95695),
+        Te = n(99637),
+        Ge = n(26408),
+        Ae = n(62490),
         Ue = n(91675),
-        Ae = n(14771);
-      function Be(e) {
-        const { hideModal: t, fnUpdateSession: n } = e,
-          [o, a] = (0, s.useState)(() => Le(!0, null)),
-          [l, r] = (0, s.useState)(() => Fe(!0, null));
-        return s.createElement(
-          I.E,
-          { active: !0 },
-          s.createElement(
-            D.o0,
-            {
-              strTitle: (0, T.we)("#MeetSteam_create_title"),
-              onOK: () => n(o, l),
-              closeModal: () => {
-                r(Fe(!0, null)), a(Le(!0, null)), t();
-              },
-            },
-            s.createElement(Oe, { group: o, fnSetGroup: a }),
-            s.createElement(xe, { session: l, fnSetSession: r }),
-          ),
-        );
-      }
+        Be = n(14771);
       function Ne(e) {
-        const { hideModal: t, groupInput: n, fnUpdateGroupSession: o } = e,
-          [a, l] = (0, s.useState)(() => Le(!1, n));
-        return s.createElement(
-          I.E,
+        const { hideModal: t, fnUpdateSession: n } = e,
+          [o, a] = (0, i.useState)(() => Fe(!0, null)),
+          [r, l] = (0, i.useState)(() => Ve(!0, null));
+        return i.createElement(
+          D.E,
           { active: !0 },
-          s.createElement(
-            D.o0,
+          i.createElement(
+            P.o0,
             {
-              strTitle: (0, T.we)("#MeetSteam_edit_title"),
-              onOK: () => {
-                o(a), t();
-              },
-              onCancel: () => {
-                l(Le(!1, n)), t();
+              strTitle: (0, G.we)("#MeetSteam_create_title"),
+              onOK: () => n(o, r),
+              closeModal: () => {
+                l(Ve(!0, null)), a(Fe(!0, null)), t();
               },
             },
-            s.createElement(Oe, { group: a, fnSetGroup: l }),
+            i.createElement(xe, { group: o, fnSetGroup: a }),
+            i.createElement(Le, { session: r, fnSetSession: l }),
           ),
         );
       }
       function Re(e) {
+        const { hideModal: t, groupInput: n, fnUpdateGroupSession: o } = e,
+          [a, r] = (0, i.useState)(() => Fe(!1, n));
+        return i.createElement(
+          D.E,
+          { active: !0 },
+          i.createElement(
+            P.o0,
+            {
+              strTitle: (0, G.we)("#MeetSteam_edit_title"),
+              onOK: () => {
+                o(a), t();
+              },
+              onCancel: () => {
+                r(Fe(!1, n)), t();
+              },
+            },
+            i.createElement(xe, { group: a, fnSetGroup: r }),
+          ),
+        );
+      }
+      function Oe(e) {
         const {
             bCreate: t,
             hideModal: n,
             sessionInput: o,
             fnUpdateSession: a,
           } = e,
-          [l, r] = (0, s.useState)(() => Fe(t, o));
-        return s.createElement(
-          I.E,
+          [r, l] = (0, i.useState)(() => Ve(t, o));
+        return i.createElement(
+          D.E,
           { active: !0 },
-          s.createElement(
-            D.o0,
+          i.createElement(
+            P.o0,
             {
-              strTitle: (0, T.we)(
+              strTitle: (0, G.we)(
                 t ? "#MeetSteam_create_title" : "#MeetSteam_edit_title",
               ),
               onOK: () => {
-                a(l), n();
+                a(r), n();
               },
               onCancel: () => {
-                r(Fe(t, o)), n();
+                l(Ve(t, o)), n();
               },
             },
-            s.createElement(xe, { session: l, fnSetSession: r }),
+            i.createElement(Le, { session: r, fnSetSession: l }),
           ),
         );
       }
-      function Oe(e) {
+      function xe(e) {
         const { group: t, fnSetGroup: n } = e,
           o = (0, ke.E)();
-        return s.createElement(
-          s.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          s.createElement(w.pd, {
+          i.createElement(C.pd, {
             type: "text",
-            label: (0, T.we)("#MeetSteam_edit_session_name"),
-            value: T.NT.Get(t.localized_session_title, o),
+            label: (0, G.we)("#MeetSteam_edit_session_name"),
+            value: G.NT.Get(t.localized_session_title, o),
             onChange: (e) => {
               const a = { ...t };
-              (a.localized_session_title = T.NT.Set(
+              (a.localized_session_title = G.NT.Set(
                 a.localized_session_title,
                 o,
                 e.currentTarget.value,
@@ -1055,13 +1056,13 @@
                 n(a);
             },
           }),
-          s.createElement(w.pd, {
+          i.createElement(C.pd, {
             type: "text",
-            label: (0, T.we)("#MeetSteam_edit_session_desc"),
-            value: T.NT.Get(t.localized_session_description, o),
+            label: (0, G.we)("#MeetSteam_edit_session_desc"),
+            value: G.NT.Get(t.localized_session_description, o),
             onChange: (e) => {
               const a = { ...t };
-              (a.localized_session_description = T.NT.Set(
+              (a.localized_session_description = G.NT.Set(
                 a.localized_session_description,
                 o,
                 e.currentTarget.value,
@@ -1071,77 +1072,77 @@
           }),
         );
       }
-      function xe(e) {
+      function Le(e) {
         const { session: t, fnSetSession: n } = e,
-          [o, a, l, r] = (0, Ie.q3)(() => [
+          [o, a, r, l] = (0, De.q3)(() => [
             t.rtime_start,
             t.rtime_end,
             t.max_capacity,
             t.max_per_team,
           ]),
-          i = [];
-        for (let e = 0; e < 4; ++e) i.push({ data: e, label: e });
+          s = [];
+        for (let e = 0; e < 4; ++e) s.push({ data: e, label: e });
         const c = Math.max(0, Math.floor((a - o) / 60));
-        return s.createElement(
-          s.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          s.createElement(
+          i.createElement(
             "div",
-            { className: Pe.EventEditorTextTitle },
-            (0, T.we)("#MeetSteam_edit_date"),
-            s.createElement(Te.o, {
-              tooltip: (0, T.we)("#MeetSteam_edit_date_ttip"),
+            { className: ye.EventEditorTextTitle },
+            (0, G.we)("#MeetSteam_edit_date"),
+            i.createElement(Ge.o, {
+              tooltip: (0, G.we)("#MeetSteam_edit_date_ttip"),
             }),
           ),
-          s.createElement(ye.K, {
-            strDescription: (0, T.we)("#MeetSteam_edit_start"),
+          i.createElement(Te.K, {
+            strDescription: (0, G.we)("#MeetSteam_edit_start"),
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => o,
             fnSetTimeToUpdate: (e) =>
-              n({ ...t, rtime_start: e, rtime_end: e + Ae.Kp.PerMinute * c }),
+              n({ ...t, rtime_start: e, rtime_end: e + Be.Kp.PerMinute * c }),
             fnIsValidDateTime: () => !0,
             bShowTimeZone: !0,
           }),
-          s.createElement(w.pd, {
+          i.createElement(C.pd, {
             type: "number",
             min: 0,
-            label: (0, T.we)("#MeetSteam_edit_duration"),
+            label: (0, G.we)("#MeetSteam_edit_duration"),
             onChange: (e) => {
               const o = Number.parseInt(e.currentTarget.value);
-              n({ ...t, rtime_end: t.rtime_start + Ae.Kp.PerMinute * o });
+              n({ ...t, rtime_end: t.rtime_start + Be.Kp.PerMinute * o });
             },
             value: c,
           }),
-          s.createElement(
+          i.createElement(
             "div",
             null,
-            (0, T.we)("#MeetSteam_edit_end"),
+            (0, G.we)("#MeetSteam_edit_end"),
             ": ",
             (0, Ue.KC)(a),
             " ",
           ),
-          s.createElement("br", null),
-          s.createElement("br", null),
-          s.createElement(w.pd, {
+          i.createElement("br", null),
+          i.createElement("br", null),
+          i.createElement(C.pd, {
             type: "number",
             value: t.max_capacity,
-            label: (0, T.we)("#MeetSteam_edit_max_capacity"),
+            label: (0, G.we)("#MeetSteam_edit_max_capacity"),
             min: 1,
             onChange: (e) =>
               n({ ...t, max_capacity: Number.parseInt(e.currentTarget.value) }),
           }),
-          s.createElement(w.m, {
-            label: (0, T.we)("#MeetSteam_edit_team"),
-            tooltip: (0, T.we)("#MeetSteam_edit_team_ttip"),
-            rgOptions: i,
+          i.createElement(C.m, {
+            label: (0, G.we)("#MeetSteam_edit_team"),
+            tooltip: (0, G.we)("#MeetSteam_edit_team_ttip"),
+            rgOptions: s,
             selectedOption: t.max_per_team,
             onChange: (e) => n({ ...t, max_per_team: e.data }),
           }),
         );
       }
-      function Le(e, t) {
+      function Fe(e, t) {
         if (e) {
-          const e = Ce.mh.GetEditModel().GetEventModel()
+          const e = Me.mh.GetEditModel().GetEventModel()
             .jsondata.meet_steam_groups;
           let t = 0;
           do {
@@ -1149,8 +1150,8 @@
           } while (e && e.findIndex((e) => e.group_id == t) >= 0);
           return {
             group_id: t,
-            localized_session_title: (0, Ge.$Y)([], 31, null),
-            localized_session_description: (0, Ge.$Y)([], 31, null),
+            localized_session_title: (0, Ae.$Y)([], 31, null),
+            localized_session_description: (0, Ae.$Y)([], 31, null),
             sessions: [],
           };
         }
@@ -1162,16 +1163,16 @@
               ],
               localized_session_title: [...t.localized_session_title],
             }
-          : ((0, p.w)(
+          : ((0, g.w)(
               !1,
               "HelperCreateOrCloneGroupSessionModel Expect Create or previous model",
             ),
             null);
       }
-      function Fe(e, t) {
+      function Ve(e, t) {
         if (e) {
-          const e = De.HD.GetTimeNowWithOverride(),
-            t = Ce.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
+          const e = Pe.HD.GetTimeNowWithOverride(),
+            t = Me.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
             n =
               null == t ? void 0 : t.reduce((e, t) => e.concat(t.sessions), []);
           let o = 0;
@@ -1181,24 +1182,24 @@
           const a = 3600 * Math.ceil(e / 3600);
           return {
             id: o,
-            rtime_start: a + Ae.Kp.PerDay,
-            rtime_end: a + Ae.Kp.PerDay + Ae.Kp.PerHour,
+            rtime_start: a + Be.Kp.PerDay,
+            rtime_end: a + Be.Kp.PerDay + Be.Kp.PerHour,
             max_capacity: 100,
             max_per_team: 3,
           };
         }
         return t
           ? { ...t }
-          : ((0, p.w)(
+          : ((0, g.w)(
               !1,
               "HelperCreateOrCloneSessionInstanceModel Expect Create or previous model",
             ),
             null);
       }
-      var Ve = n(1397),
-        $e = n.n(Ve);
-      function Ye(e) {
-        const t = Ce.mh.GetEditModel();
+      var $e = n(1397),
+        Ye = n.n($e);
+      function He(e) {
+        const t = Me.mh.GetEditModel();
         for (
           let n = 0;
           n < t.GetEventModel().jsondata.meet_steam_groups.length;
@@ -1211,8 +1212,8 @@
         }
         return null;
       }
-      function He(e) {
-        const t = Ce.mh.GetEditModel();
+      function Qe(e) {
+        const t = Me.mh.GetEditModel();
         for (
           let n = 0;
           n < t.GetEventModel().jsondata.meet_steam_groups.length;
@@ -1223,186 +1224,186 @@
         }
         return null;
       }
-      function Qe(e) {
+      function je(e) {
         const { focusView: t, removeNode: n, group_id: o } = e,
-          a = Ce.mh.GetEditModel(),
-          l = (0, Ie.q3)(() => {
+          a = Me.mh.GetEditModel(),
+          r = (0, De.q3)(() => {
             var e;
             return null ===
               (e = a.GetEventModel().jsondata.meet_steam_groups) || void 0 === e
               ? void 0
               : e.find((e) => e.group_id == o);
           }),
-          [r, i, c] = (0, H.uD)(),
-          d = s.useCallback(() => {
+          [l, s, c] = (0, Q.uD)(),
+          d = i.useCallback(() => {
             t(), c();
           }, [t, c]),
-          [m, u, p] = (0, H.uD)(),
-          g = s.useCallback(() => {
+          [m, u, p] = (0, Q.uD)(),
+          g = i.useCallback(() => {
             t(), p();
           }, [t, p]);
-        return l && a.GetClanAccountID() == (0, Me.H7)()
-          ? s.createElement(
+        return r && a.GetClanAccountID() == (0, Se.H7)()
+          ? i.createElement(
               "div",
-              { className: $e().EditorCtn },
-              s.createElement(je, { groupData: l, focusView: t }),
-              s.createElement(
+              { className: Ye().EditorCtn },
+              i.createElement(ze, { groupData: r, focusView: t }),
+              i.createElement(
                 "div",
-                { className: $e().controls },
-                s.createElement(
-                  Y.ff,
-                  { onClick: i, tooltip: (0, T.we)("#Button_Edit") },
-                  s.createElement(M.ffu, null),
+                { className: Ye().controls },
+                i.createElement(
+                  H.ff,
+                  { onClick: s, tooltip: (0, G.we)("#Button_Edit") },
+                  i.createElement(S.ffu, null),
                 ),
-                s.createElement(
-                  Y.ff,
-                  { onClick: u, tooltip: (0, T.we)("#Button_Delete") },
-                  s.createElement(M.sED, null),
+                i.createElement(
+                  H.ff,
+                  { onClick: u, tooltip: (0, G.we)("#Button_Delete") },
+                  i.createElement(S.sED, null),
                 ),
               ),
-              r &&
-                s.createElement(Ne, {
+              l &&
+                i.createElement(Re, {
                   hideModal: d,
-                  groupInput: l,
+                  groupInput: r,
                   fnUpdateGroupSession: (e) => {
-                    const { groupIndex: t } = He(e.group_id),
-                      n = Ce.mh.GetEditModel();
+                    const { groupIndex: t } = Qe(e.group_id),
+                      n = Me.mh.GetEditModel();
                     (n.GetEventModel().jsondata.meet_steam_groups[t] = e),
-                      n.SetDirty(Se.IQ.description);
+                      n.SetDirty(Ie.IQ.description);
                   },
                 }),
               m &&
-                s.createElement(
-                  I.E,
+                i.createElement(
+                  D.E,
                   { active: !0 },
-                  s.createElement(D.o0, {
-                    strTitle: (0, T.we)("#Button_Delete"),
-                    strDescription: (0, T.we)("#Dialog_AreYouSure"),
+                  i.createElement(P.o0, {
+                    strTitle: (0, G.we)("#Button_Delete"),
+                    strDescription: (0, G.we)("#Dialog_AreYouSure"),
                     onOK: () => {
-                      const { groupIndex: e } = He(l.group_id),
-                        t = Ce.mh.GetEditModel(),
+                      const { groupIndex: e } = Qe(r.group_id),
+                        t = Me.mh.GetEditModel(),
                         o = [...t.GetEventModel().jsondata.meet_steam_groups];
                       o.splice(e, 1),
                         (t.GetEventModel().jsondata.meet_steam_groups = o),
-                        t.SetDirty(Se.IQ.description),
+                        t.SetDirty(Ie.IQ.description),
                         n();
                     },
                     closeModal: g,
                   }),
                 ),
             )
-          : s.createElement(
+          : i.createElement(
               "div",
               null,
               "Error: Cannot edit meet steam session group",
             );
       }
-      function je(e) {
+      function ze(e) {
         const { groupData: t, focusView: n } = e,
-          o = (0, Ie.q3)(() => t.sessions || []),
-          [a, l, r] = (0, H.uD)(),
-          i = s.useCallback(() => {
-            n(), r();
-          }, [n, r]);
+          o = (0, De.q3)(() => t.sessions || []),
+          [a, r, l] = (0, Q.uD)(),
+          s = i.useCallback(() => {
+            n(), l();
+          }, [n, l]);
         return t
-          ? s.createElement(
-              Me.jr,
+          ? i.createElement(
+              Se.jr,
               { groupData: t },
               o.map((e, a) =>
-                s.createElement(ze, {
+                i.createElement(Ke, {
                   key: "timecol_" + t.group_id + "_" + e.id,
                   focusView: n,
                   sessionID: e.id,
                   bShowOR: a + 1 < o.length,
                 }),
               ),
-              s.createElement(
-                Y.ff,
-                { onClick: l, tooltip: (0, T.we)("#MeetSteam_add") },
-                s.createElement(M.OMN, null),
+              i.createElement(
+                H.ff,
+                { onClick: r, tooltip: (0, G.we)("#MeetSteam_add") },
+                i.createElement(S.OMN, null),
               ),
               a &&
-                s.createElement(Re, {
+                i.createElement(Oe, {
                   bCreate: !0,
-                  hideModal: i,
+                  hideModal: s,
                   fnUpdateSession: (e) => {
-                    const n = Ce.mh.GetEditModel(),
+                    const n = Me.mh.GetEditModel(),
                       o = [...t.sessions, e];
                     o.sort((e, t) => e.rtime_start - t.rtime_start),
                       (t.sessions = o),
-                      n.SetDirty(Se.IQ.description);
+                      n.SetDirty(Ie.IQ.description);
                   },
                 }),
             )
           : null;
       }
-      function ze(e) {
+      function Ke(e) {
         const { sessionID: t, bShowOR: n, focusView: o } = e,
-          [a, l] = (0, H.OP)(),
-          r = (0, Ie.q3)(() => {
-            const { groupIndex: e, sessionIndex: n } = Ye(t);
-            return Ce.mh.GetEditModel().GetEventModel().jsondata
+          [a, r] = (0, Q.OP)(),
+          l = (0, De.q3)(() => {
+            const { groupIndex: e, sessionIndex: n } = He(t);
+            return Me.mh.GetEditModel().GetEventModel().jsondata
               .meet_steam_groups[e].sessions[n];
           }),
-          [i, c, d] = (0, H.uD)(),
-          m = s.useCallback(() => {
+          [s, c, d] = (0, Q.uD)(),
+          m = i.useCallback(() => {
             o(), d();
           }, [o, d]),
-          [u, p, g] = (0, H.uD)(),
-          E = s.useCallback(() => {
+          [u, p, g] = (0, Q.uD)(),
+          E = i.useCallback(() => {
             o(), g();
           }, [o, g]);
-        return s.createElement(
-          s.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          s.createElement(
+          i.createElement(
             "div",
-            { className: $e().Column, ...l },
-            s.createElement(Me.Tn, { sessionData: r }),
+            { className: Ye().Column, ...r },
+            i.createElement(Se.Tn, { sessionData: l }),
             Boolean(a) &&
-              s.createElement(
+              i.createElement(
                 "div",
-                { className: $e().controls },
-                s.createElement(
-                  Y.ff,
-                  { onClick: c, tooltip: (0, T.we)("#Button_Edit") },
-                  s.createElement(M.ffu, null),
+                { className: Ye().controls },
+                i.createElement(
+                  H.ff,
+                  { onClick: c, tooltip: (0, G.we)("#Button_Edit") },
+                  i.createElement(S.ffu, null),
                 ),
-                s.createElement(
-                  Y.ff,
-                  { onClick: p, tooltip: (0, T.we)("#Button_Delete") },
-                  s.createElement(M.sED, null),
+                i.createElement(
+                  H.ff,
+                  { onClick: p, tooltip: (0, G.we)("#Button_Delete") },
+                  i.createElement(S.sED, null),
                 ),
               ),
-            i &&
-              s.createElement(Re, {
+            s &&
+              i.createElement(Oe, {
                 bCreate: !1,
                 hideModal: m,
-                sessionInput: r,
+                sessionInput: l,
                 fnUpdateSession: (e) => {
-                  const n = Ce.mh.GetEditModel(),
-                    { groupIndex: o, sessionIndex: a } = Ye(t),
-                    l = [
+                  const n = Me.mh.GetEditModel(),
+                    { groupIndex: o, sessionIndex: a } = He(t),
+                    r = [
                       ...n.GetEventModel().jsondata.meet_steam_groups[o]
                         .sessions,
                     ];
-                  (l[a] = e),
-                    l.sort((e, t) => e.rtime_start - t.rtime_start),
+                  (r[a] = e),
+                    r.sort((e, t) => e.rtime_start - t.rtime_start),
                     (n.GetEventModel().jsondata.meet_steam_groups[o].sessions =
-                      l),
-                    n.SetDirty(Se.IQ.description);
+                      r),
+                    n.SetDirty(Ie.IQ.description);
                 },
               }),
             u &&
-              s.createElement(
-                I.E,
+              i.createElement(
+                D.E,
                 { active: !0 },
-                s.createElement(D.o0, {
-                  strTitle: (0, T.we)("#Button_Delete"),
-                  strDescription: (0, T.we)("#Dialog_AreYouSure"),
+                i.createElement(P.o0, {
+                  strTitle: (0, G.we)("#Button_Delete"),
+                  strDescription: (0, G.we)("#Dialog_AreYouSure"),
                   onOK: () => {
-                    const e = Ce.mh.GetEditModel(),
-                      { groupIndex: n, sessionIndex: o } = Ye(t),
+                    const e = Me.mh.GetEditModel(),
+                      { groupIndex: n, sessionIndex: o } = He(t),
                       a = [
                         ...e.GetEventModel().jsondata.meet_steam_groups[n]
                           .sessions,
@@ -1412,67 +1413,67 @@
                       (e.GetEventModel().jsondata.meet_steam_groups[
                         n
                       ].sessions = a),
-                      e.SetDirty(Se.IQ.description);
+                      e.SetDirty(Ie.IQ.description);
                   },
                   closeModal: E,
                 }),
               ),
           ),
-          n && s.createElement(Me.w3, null),
+          n && i.createElement(Se.w3, null),
         );
       }
-      const Ke = s.memo(function (e) {
+      const qe = i.memo(function (e) {
         const {
           view: t,
           schema: n,
           refUpdateToolbar: o,
           className: a,
-          bSpellcheckEnabled: l,
-          setSpellcheckEnabled: r,
+          bSpellcheckEnabled: r,
+          setSpellcheckEnabled: l,
         } = e;
-        return s.createElement(
-          Y.bI,
+        return i.createElement(
+          H.bI,
           { refUpdateToolbar: o, view: t },
-          s.createElement(
-            Y.Ez,
+          i.createElement(
+            H.Ez,
             { className: e.className },
-            s.createElement(be.MV, null),
-            s.createElement(Y.XQ, null),
-            s.createElement(be.Km, { schema: n }),
-            s.createElement(Y.XQ, null),
-            n.marks.link && s.createElement(be.z9, { schema: n }),
-            s.createElement(Y.XQ, null),
-            s.createElement(be.Hz, { schema: n }),
-            s.createElement(be.WJ, { schema: n, levels: 3 }),
-            s.createElement(Y.XQ, null),
-            n.nodes.previewyoutube && s.createElement(qe, { schema: n }),
-            s.createElement(Y.XQ, null),
+            i.createElement(be.MV, null),
+            i.createElement(H.XQ, null),
+            i.createElement(be.Km, { schema: n }),
+            i.createElement(H.XQ, null),
+            n.marks.link && i.createElement(be.z9, { schema: n }),
+            i.createElement(H.XQ, null),
+            i.createElement(be.Hz, { schema: n }),
+            i.createElement(be.WJ, { schema: n, levels: 3 }),
+            i.createElement(H.XQ, null),
+            n.nodes.previewyoutube && i.createElement(Xe, { schema: n }),
+            i.createElement(H.XQ, null),
             !1,
-            s.createElement(be.C$, {
+            i.createElement(be.C$, {
               schema: n,
               showIndentButtonsAsNeeded: !0,
             }),
-            s.createElement(Y.hK, null),
-            r &&
-              s.createElement(be.Nt, {
-                bSpellcheckEnabled: l,
-                setSpellcheckEnabled: r,
+            i.createElement(H.hK, null),
+            l &&
+              i.createElement(be.Nt, {
+                bSpellcheckEnabled: r,
+                setSpellcheckEnabled: l,
               }),
-            n.nodes.meetsteamsessiongroup && s.createElement(Xe, { schema: n }),
+            n.nodes.meetsteamsessiongroup && i.createElement(We, { schema: n }),
           ),
           !1,
         );
       });
-      function qe(e) {
+      function Xe(e) {
         const { schema: t } = e,
-          { callbacks: n, view: o } = (0, Y.wU)(),
-          [a, l, r] = (0, U.uD)(),
-          i = s.useCallback(() => {
-            r(), o.focus();
-          }, [r, o]),
-          c = s.useCallback(
+          { callbacks: n, view: o } = (0, H.wU)(),
+          [a, r, l] = (0, U.uD)(),
+          s = i.useCallback(() => {
+            l(), o.focus();
+          }, [l, o]),
+          c = i.useCallback(
             (e, n) => {
-              !(function (e, t, n, o = Ee.V2.left) {
+              !(function (e, t, n, o = he.V2.left) {
                 e.dispatch(
                   e.state.tr.insert(
                     e.state.selection.to,
@@ -1480,30 +1481,30 @@
                   ),
                 );
               })(o, t.nodes.previewyoutube, e, n),
-                i();
+                s();
             },
-            [t, o, i],
+            [t, o, s],
           );
-        return s.createElement(
-          s.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          a && s.createElement(ve, { hideModal: i, onSave: c }),
-          s.createElement(
-            Y.ff,
-            { tooltip: "#EventEditor_InsertYouTube", onClick: l, toggled: a },
-            s.createElement("img", { src: we.A }),
+          a && i.createElement(we, { hideModal: s, onSave: c }),
+          i.createElement(
+            H.ff,
+            { tooltip: "#EventEditor_InsertYouTube", onClick: r, toggled: a },
+            i.createElement("img", { src: Ce.A }),
           ),
         );
       }
-      function Xe(e) {
+      function We(e) {
         const { schema: t } = e,
-          { callbacks: n, view: o } = (0, Y.wU)(),
-          a = Ce.mh.GetEditModel(),
-          [l, r, i] = (0, U.uD)(),
-          c = s.useCallback(() => {
-            i(), o.focus();
-          }, [i, o]),
-          d = s.useCallback(
+          { callbacks: n, view: o } = (0, H.wU)(),
+          a = Me.mh.GetEditModel(),
+          [r, l, s] = (0, U.uD)(),
+          c = i.useCallback(() => {
+            s(), o.focus();
+          }, [s, o]),
+          d = i.useCallback(
             (e, n) => {
               a.GetEventModel().jsondata.meet_steam_groups ||
                 (a.GetEventModel().jsondata.meet_steam_groups = []),
@@ -1522,89 +1523,88 @@
             },
             [t, o, c, a],
           );
-        if ((null == a ? void 0 : a.GetClanAccountID()) == (0, Me.H7)())
-          return s.createElement(
-            s.Fragment,
+        if ((null == a ? void 0 : a.GetClanAccountID()) == (0, Se.H7)())
+          return i.createElement(
+            i.Fragment,
             null,
-            l && s.createElement(Be, { hideModal: c, fnUpdateSession: d }),
-            s.createElement(
-              Y.ff,
-              { tooltip: "#MeetSteam_add_group_ttip", onClick: r, toggled: l },
-              s.createElement("img", { src: we.A }),
+            r && i.createElement(Ne, { hideModal: c, fnUpdateSession: d }),
+            i.createElement(
+              H.ff,
+              { tooltip: "#MeetSteam_add_group_ttip", onClick: l, toggled: r },
+              i.createElement("img", { src: Ce.A }),
             ),
           );
       }
-      var We = n(75844),
-        Ze = n(90316),
-        Je = n.n(Ze),
-        et = n(43775);
-      const tt = (0, We.PA)(function (e) {
+      var Ze = n(75844),
+        Je = n(90316),
+        et = n.n(Je),
+        tt = n(1805);
+      const nt = (0, Ze.PA)(function (e) {
           const { editModel: t } = e,
             n = t.GetEventModel().loadedAllLanguages,
             o = t.GetCurEditLanguage();
           return n
-            ? s.createElement(nt, { ...e, eCurrentEditLanguage: o })
+            ? i.createElement(ot, { ...e, eCurrentEditLanguage: o })
             : null;
         }),
-        nt = s.memo(function (e) {
+        ot = i.memo(function (e) {
           const {
               editModel: t,
               refOnInsertImage: n,
-              limitBBCode: a,
+              limitBBCode: r,
               eCurrentEditLanguage: l,
             } = e,
-            [r, i] = s.useState(),
-            c = s.useMemo(() => {
-              return (e = a), new te.W(de, e);
+            [s, c] = i.useState(),
+            d = i.useMemo(() => {
+              return (e = r), new ne.W(me, e);
               var e;
-            }, [a]),
-            d = s.useMemo(() => t.GetDescription(l) || "", [t, l]),
-            m = s.useRef(void 0),
-            g = s.useCallback((e) => t.SetDescription(l, e), [t, l]),
-            { onUpdate: E, fnCommitPendingSave: f } = (0, o.i)(c, g, {
-              msAutosaveTimeout: 1e3,
-              refOnChangeCallback: m,
-            }),
-            { nodes: v, marks: b } = c.pm_schema,
+            }, [r]),
+            [m, u] = i.useState();
+          i.useEffect(() => {
+            u(new o.n(d, t.GetDescription(l), (e) => t.SetDescription(l, e)));
+          }, [d, t, l]);
+          const E = i.useRef(void 0);
+          (0, a.i)(m, { msAutosaveTimeout: 1e3 });
+          const { nodes: h, marks: v } = d.pm_schema,
             w = (function (e, t) {
-              const n = s.useCallback(
+              const n = i.useCallback(
                 (n) => {
-                  const o = `^https?://${Q.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)$`,
+                  const o = `^https?://${j.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)$`,
                     a = n.match(o);
                   return a && a.groups.clanid == e.GetClanAccountID().toString()
                     ? t.create({
-                        src: `${_.lw}/${e.GetClanAccountID()}/${a.groups.filename}`,
+                        src: `${f.lw}/${e.GetClanAccountID()}/${a.groups.filename}`,
                       })
                     : "default";
                 },
                 [e, t],
               );
               return t ? n : void 0;
-            })(t, v.image);
+            })(t, h.image);
           return (
             (function (e, t, n, o) {
-              s.useEffect(() => {
+              i.useEffect(() => {
                 if (!o || !t) return;
                 const a = (e, a) => {
-                  let l;
+                  let r;
                   switch (a) {
-                    case h._o.k_eInsertFullImage:
-                      l = t.create({ src: (0, h.fw)(e) });
+                    case _._o.k_eInsertFullImage:
+                      r = t.create({ src: (0, _.fw)(e) });
                       break;
-                    case h._o.k_eInsertThumbnail:
-                      l = t.create({ src: (0, h.fw)(e, !0) }, null, [
-                        n.create({ href: (0, h.fw)(e) }),
+                    case _._o.k_eInsertThumbnail:
+                      r = t.create({ src: (0, _.fw)(e, !0) }, null, [
+                        n.create({ href: (0, _.fw)(e) }),
                       ]);
                       break;
-                    case h._o.k_eInsertVideo:
-                    case h._o.k_eShowImageGroup:
+                    case _._o.k_eInsertVideo:
+                    case _._o.k_eShowImageGroup:
                       break;
                     default:
-                      (0, p.z)(a, `Unhandled insert type ${a}`);
+                      (0, g.z)(a, `Unhandled insert type ${a}`);
                   }
-                  if (l) {
+                  if (r) {
                     const e = o.state.tr;
-                    e.selection.replaceWith(e, l), o.dispatch(e);
+                    e.selection.replaceWith(e, r), o.dispatch(e);
                   }
                 };
                 return (
@@ -1614,40 +1614,39 @@
                   }
                 );
               }, [e, t, n, o]);
-            })(n, v.image, b.link, r),
-            s.createElement(
-              W,
-              { editModel: t, imageNode: v.image },
-              s.createElement(
+            })(n, h.image, v.link, s),
+            i.createElement(
+              Z,
+              { editModel: t, imageNode: h.image },
+              i.createElement(
                 "div",
-                { className: Je().EventDetailsBody },
-                s.createElement(Ke, {
-                  view: r,
-                  schema: c.pm_schema,
-                  refUpdateToolbar: m,
-                  className: Je().ToolBar,
+                { className: et().EventDetailsBody },
+                i.createElement(qe, {
+                  view: s,
+                  schema: d.pm_schema,
+                  refUpdateToolbar: E,
+                  className: et().ToolBar,
                 }),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: Je().EventDescriptionArea },
-                  s.createElement(
-                    et.l,
+                  { className: et().EventDescriptionArea },
+                  i.createElement(
+                    tt.l,
                     {
-                      schemaConfig: c,
-                      className: Je().EventDescriptionRichField,
-                      bbcode: d,
-                      onUpdate: E,
-                      refView: i,
-                      panelProps: { onBlur: f },
+                      pmState: m,
+                      className: et().EventDescriptionRichField,
+                      refOnUpdate: E,
+                      refView: c,
+                      panelProps: { onBlur: () => m.CommitChanges() },
                     },
-                    s.createElement(u.W, {
-                      linkMarkType: b.link,
+                    i.createElement(p.W, {
+                      linkMarkType: v.link,
                       onURLPasted: w,
-                      schema: c.pm_schema,
+                      schema: d.pm_schema,
                     }),
-                    v.image && s.createElement(N, { nodeType: v.image }),
-                    s.createElement(ot, {
-                      schema: c.pm_schema,
+                    h.image && i.createElement(R, { nodeType: h.image }),
+                    i.createElement(at, {
+                      schema: d.pm_schema,
                       clanSteamID: t.GetClanSteamID(),
                     }),
                   ),
@@ -1656,21 +1655,21 @@
             )
           );
         });
-      function ot(e) {
+      function at(e) {
         const { schema: t, clanSteamID: n } = e,
-          o = s.useMemo(
+          o = i.useMemo(
             () =>
               (function (e) {
-                return pe.sM({ rules: [pe.tG(/^>$/, e.nodes.quote)] });
+                return ge.sM({ rules: [ge.tG(/^>$/, e.nodes.quote)] });
               })(t),
             [t],
           );
-        (0, a.c$)(o);
-        const l = s.useMemo(
+        (0, r.c$)(o);
+        const a = i.useMemo(
           () => [
             t.nodes.previewyoutube && {
               type: t.nodes.previewyoutube,
-              component: fe,
+              component: ve,
               readProps: (e) => ({
                 videoID: e.attrs.videoID,
                 align: e.attrs.align,
@@ -1678,18 +1677,18 @@
             },
             t.nodes.image && {
               type: t.nodes.image,
-              component: z,
+              component: K,
               readProps: (e) => ({ src: e.attrs.src, clanSteamID: n }),
             },
             t.nodes.meetsteamsessiongroup && {
               type: t.nodes.meetsteamsessiongroup,
-              component: Qe,
+              component: je,
               readProps: (e) => ({ group_id: e.attrs.group_id }),
             },
           ],
           [t, n],
         );
-        return s.createElement(c, { specs: l });
+        return i.createElement(d, { specs: a });
       }
     },
   },

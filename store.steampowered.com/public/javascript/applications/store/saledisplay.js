@@ -2142,7 +2142,7 @@
           null,
           n.createElement(
             "div",
-            { className: It().MajorEvent_Ctn },
+            { className: It().MajorEvent_Ctn, ref: e.containerRef },
             n.createElement(
               d.Z,
               {

@@ -74,7 +74,7 @@
               ((2 != i.type && 3 != i.type) || i.ConvertMalformedNodeToText(),
               o.push(i));
             return o;
-          })(e, o);
+          })(e || "", o);
           return this.Parse_BuildElements(i, t);
         }
         Parse_BuildElements(e, t) {

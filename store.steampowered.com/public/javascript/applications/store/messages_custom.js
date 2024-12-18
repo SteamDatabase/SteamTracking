@@ -238,9 +238,7 @@
         OddGradient: "BdBfXPzFQrAIMxXLgo95x",
         EvenGradient: "mU0ZPKqgrodRiIqDDPRJN",
         TopMostGame: "_2U1A0BOBmU2Tm96VMDbN3y",
-        FirstPlayCtn: "NpBL8pFdh_GoRix0dQr1v",
         GamePlayDetails: "WBgtvXrESMem0KVSCFohg",
-        DemoPlayDetails: "_3uYyceaz7yAPg09RUwssF-",
         PlatformChartsCtn: "p2yOPk8RjNL2sgYPVdUl9",
         gradient: "_3_0UA8g5haRH050dhrXY1c",
         TopHonorsSection: "_3Xt_rws_Lz4-TXJH-R3wXI",
@@ -282,7 +280,7 @@
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => b, KM: () => A, KT: () => h });
+      t.d(a, { B3: () => b, KM: () => f, KT: () => h });
       var r = t(41735),
         n = t.n(r),
         o = t(58632),
@@ -297,7 +295,7 @@
         C = t(37735),
         g = t(23809);
       const u = "nicknames";
-      function A(e) {
+      function f(e) {
         const a = (0, g.KV)(),
           { data: t, isLoading: r } = (0, i.I)({
             queryKey: [u],
@@ -317,7 +315,7 @@
           });
         return t ? t.get(e) : null;
       }
-      const f = new (c())(
+      const A = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -366,7 +364,7 @@
       function h(e) {
         const { data: a, isLoading: t } = (0, i.I)({
           queryKey: [v, e],
-          queryFn: () => f.load(e),
+          queryFn: () => A.load(e),
         });
         return [a, t];
       }
@@ -375,7 +373,7 @@
           { data: t, isLoading: r } = (0, i.I)({
             queryKey: [v, e],
             queryFn: async () => {
-              const t = await f.loadMany(e);
+              const t = await A.loadMany(e);
               return (
                 t.forEach((e) => {
                   const t = [v, new s.b(e.steamid).GetAccountID()];
@@ -423,11 +421,11 @@
           o.createElement(
             "div",
             { className: s.HeaderCtn },
-            o.createElement(A, {
+            o.createElement(f, {
               baseClass: (0, d.A)(s.ReplayLogo, a.ReplayLogo),
               accentClass: (0, d.A)(s.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
-            o.createElement(f, { year: e.year, theme: a }),
+            o.createElement(A, { year: e.year, theme: a }),
           ),
           o.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
           o.createElement(v, { theme: a }),
@@ -510,7 +508,7 @@
           }),
         );
       }
-      function A(e) {
+      function f(e) {
         const { baseClass: a, accentClass: t } = e;
         return o.createElement(
           "svg",
@@ -538,7 +536,7 @@
           }),
         );
       }
-      function f(e) {
+      function A(e) {
         const { year: a, theme: t } = e;
         return o.createElement(
           "div",

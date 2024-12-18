@@ -17651,67 +17651,75 @@
                   enterDone: go().Open,
                 },
               },
-              n.createElement(
-                "div",
-                {
-                  className: (0, f.A)(
-                    go().StoryPage,
-                    go().PageOne,
-                    u && go().OnPageTwo,
-                  ),
-                },
+              (e) =>
                 n.createElement(
                   "div",
-                  { className: go().StoryHeader },
+                  {
+                    ref: e,
+                    className: (0, f.A)(
+                      go().StoryPage,
+                      go().PageOne,
+                      u && go().OnPageTwo,
+                    ),
+                  },
                   n.createElement(
                     "div",
-                    { className: go().PageNumber },
-                    (0, D.we)(s.strPageNumber),
-                  ),
-                  n.createElement(
-                    "div",
-                    { className: go().PageTitle },
-                    (0, D.we)(s.strPageTitle),
-                  ),
-                ),
-                n.createElement(
-                  "div",
-                  { className: go().PageText },
-                  (0, D.we)(s.strPageText),
-                ),
-                n.createElement(
-                  "div",
-                  { className: go().PageFooter },
-                  n.createElement(
-                    "div",
-                    { className: go().NoticeBox },
+                    { className: go().StoryHeader },
                     n.createElement(
-                      "a",
-                      {
-                        className: go().OptionTextNotice,
-                        href: v.TS.STORE_BASE_URL + "forgeyourfate",
-                      },
-                      (0, D.we)("#Summer_21_Story_Decide_Notice"),
+                      "div",
+                      { className: go().PageNumber },
+                      (0, D.we)(s.strPageNumber),
+                    ),
+                    n.createElement(
+                      "div",
+                      { className: go().PageTitle },
+                      (0, D.we)(s.strPageTitle),
                     ),
                   ),
                   n.createElement(
                     "div",
-                    {
-                      className: (0, f.A)(go().OptionText, m && go().Disabled),
-                      onClick: () => _(1),
-                    },
-                    (0, D.we)(s.strOptionA),
+                    { className: go().PageText },
+                    (0, D.we)(s.strPageText),
                   ),
                   n.createElement(
                     "div",
-                    {
-                      className: (0, f.A)(go().OptionText, c && go().Disabled),
-                      onClick: () => _(2),
-                    },
-                    (0, D.we)(s.strOptionB),
+                    { className: go().PageFooter },
+                    n.createElement(
+                      "div",
+                      { className: go().NoticeBox },
+                      n.createElement(
+                        "a",
+                        {
+                          className: go().OptionTextNotice,
+                          href: v.TS.STORE_BASE_URL + "forgeyourfate",
+                        },
+                        (0, D.we)("#Summer_21_Story_Decide_Notice"),
+                      ),
+                    ),
+                    n.createElement(
+                      "div",
+                      {
+                        className: (0, f.A)(
+                          go().OptionText,
+                          m && go().Disabled,
+                        ),
+                        onClick: () => _(1),
+                      },
+                      (0, D.we)(s.strOptionA),
+                    ),
+                    n.createElement(
+                      "div",
+                      {
+                        className: (0, f.A)(
+                          go().OptionText,
+                          c && go().Disabled,
+                        ),
+                        onClick: () => _(2),
+                      },
+                      (0, D.we)(s.strOptionB),
+                    ),
                   ),
                 ),
-              ),
             ),
             u &&
               n.createElement(
@@ -17770,19 +17778,18 @@
             [a] = (0, _o.x4)(t),
             r = (0, _o.PU)(t),
             [s, o] = n.useState(!0);
-          if (
-            (n.useEffect(() => {
-              const e = window.setTimeout(() => o(!1), 600);
-              return () => window.clearTimeout(e);
-            }, []),
-            s)
-          )
-            return null;
-          const i =
+          n.useEffect(() => {
+            const e = window.setTimeout(() => o(!1), 600);
+            return () => window.clearTimeout(e);
+          }, []);
+          const i = n.useRef(null);
+          if (s) return null;
+          const l =
             v.TS.COMMUNITY_BASE_URL + "profiles/" + v.iA.steamid + "/inventory";
           return n.createElement(
             uo.A,
             {
+              nodeRef: i,
               timeout: 500,
               in: !0,
               appear: !0,
@@ -17790,10 +17797,10 @@
             },
             n.createElement(
               "div",
-              { className: go().ResultBadge },
+              { ref: i, className: go().ResultBadge },
               n.createElement(
                 "a",
-                { href: i },
+                { href: l },
                 n.createElement("img", { className: go().BadgeImage, src: r }),
               ),
               n.createElement(
@@ -17808,7 +17815,7 @@
               ),
               n.createElement(
                 "a",
-                { className: go().BadgeFooter, href: i },
+                { className: go().BadgeFooter, href: l },
                 (0, D.we)("#Summer_21_Story_Sticker_Inventory"),
               ),
             ),

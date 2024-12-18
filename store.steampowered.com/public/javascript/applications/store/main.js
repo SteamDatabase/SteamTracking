@@ -7218,6 +7218,11 @@
                     pbr: n.qM.readPackedInt32,
                     bw: n.gp.writeRepeatedInt32,
                   },
+                  admin_request_spoofing_steamid: {
+                    n: 43,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
                 },
               }),
             l.sm_m
@@ -26323,7 +26328,7 @@
                     );
                   })(o(this.m_webApiAccessToken)) &&
                     ((this.m_refreshAccessTokenPromise =
-                      this.m_fnRequestNewAccessToken()),
+                      this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
                     (this.m_webApiAccessToken =
                       await this.m_refreshAccessTokenPromise),
                     (this.m_refreshAccessTokenPromise = void 0)));
@@ -26355,7 +26360,7 @@
                 e.bSendAuth &&
                 this.m_fnRequestNewAccessToken &&
                 ((this.m_refreshAccessTokenPromise =
-                  this.m_fnRequestNewAccessToken()),
+                  this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
                 (this.m_webApiAccessToken =
                   await this.m_refreshAccessTokenPromise),
                 (this.m_refreshAccessTokenPromise = void 0));
@@ -38884,7 +38889,7 @@
     33737: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Cl: () => nt,
+        Cl: () => st,
         pF: () => U,
         nB: () => R,
         f3: () => z,
@@ -38898,12 +38903,12 @@
         Ce: () => p,
         ZU: () => Me,
         m: () => we,
-        D0: () => ut,
+        D0: () => mt,
         wi: () => C,
-        P9: () => rr,
-        Vb: () => Et,
-        Mm: () => Ot,
-        y4: () => er,
+        P9: () => nr,
+        Vb: () => Ot,
+        Mm: () => Dt,
+        y4: () => rr,
         Y9: () => y,
         pd: () => Q,
         MJ: () => ge,
@@ -41072,19 +41077,20 @@
               strActiveClassName: l,
               children: c,
               focusable: m,
-              ...d
+              containerRef: d,
+              ...p
             } = this.props,
-            p = (0, u.A)(
+            g = (0, u.A)(
               o || "DialogDropRegion",
               this.state.bDraggableActive && (l || "Active"),
             );
           return n.createElement(
             s.ml,
             {
-              ref: this.m_divRef,
-              className: p,
-              ...d,
-              focusable: void 0 === m ? !!d.onClick : m,
+              ref: (0, Z.XB)(d, this.m_divRef),
+              className: g,
+              ...p,
+              focusable: void 0 === m ? !!p.onClick : m,
             },
             this.state.dropGhost,
             c,
@@ -41186,27 +41192,26 @@
           ),
         );
       }
-      function et(e) {
-        const t = e.activePage.padding ?? "standard";
+      (0, i.Cg)([Ee.sH], Ye.prototype, "m_setPagedSettingsInstances", void 0);
+      const et = n.forwardRef(function (e, t) {
+        const { activePage: r, style: i, stylesheet: s } = e,
+          a = r?.padding ?? "standard";
         return n.createElement(
           F,
           {
+            style: i,
             className: (0, u.A)(
-              e.stylesheet.PagedSettingsDialog_PageContent,
-              e.activePage.pageClassName,
-              { [e.stylesheet.NoPadding]: "none" == t },
+              s?.PagedSettingsDialog_PageContent,
+              r?.pageClassName,
+              "none" == a && s?.NoPadding,
             ),
-            refElem: e.refForScrollingContainer,
+            refElem: t,
           },
-          e.activePage.header,
-          !e.hideTitle && n.createElement(y, null, e.activePage.title),
-          n.createElement(
-            Ze.tH,
-            { errorKey: e.activePage.title },
-            e.activePage.content,
-          ),
+          r?.header,
+          !r?.hideTitle && n.createElement(y, null, r?.title),
+          n.createElement(Ze.tH, null, r?.content),
         );
-      }
+      });
       function tt(e) {
         return n.createElement("div", {
           className: (0, u.A)($e().PageListSeparator, {
@@ -41214,16 +41219,10 @@
           }),
         });
       }
-      (0, i.Cg)([Ee.sH], Ye.prototype, "m_setPagedSettingsInstances", void 0);
       const rt = n.forwardRef(function (e, t) {
-        const {
-            stylesheet: r = $e(),
-            pages: i,
-            onPageRequested: s,
-            PageAnimationComponent: o = n.Fragment,
-          } = e,
-          l = null == e.page,
-          [c, m] = n.useState(() =>
+        const { stylesheet: r = $e(), pages: i, onPageRequested: s } = e,
+          o = null == e.page,
+          [l, c] = n.useState(() =>
             void 0 === e.startingPage
               ? -1
               : i.findIndex(
@@ -41231,98 +41230,68 @@
                     "object" == typeof t && t.identifier === e.startingPage,
                 ),
           );
-        let d = c;
-        l ||
-          (d = i.findIndex(
+        let m = l;
+        o ||
+          (m = i.findIndex(
             (t) => "object" == typeof t && t.identifier === e.page,
           )),
-          (d < 0 || d >= i.length) && (d = 0);
-        let p = null;
-        "object" == typeof i[d] && (p = i[d]);
-        let g = (function (e) {
-          let t = n.useRef(e),
-            r = n.useRef("none"),
-            i = t.current;
-          if (i == e) return r.current;
-          let s = "none";
-          i < e ? (s = "down") : i > e && (s = "up");
-          return (t.current = e), (r.current = s), s;
-        })(d);
-        const _ = n.useRef(null),
-          h = n.useCallback(() => _.current?.TakeFocus(), [_]),
-          [f, b] = n.useState(!1),
-          w = n.useCallback(
+          (m < 0 || m >= i.length) && (m = 0);
+        let d = null;
+        "object" == typeof i[m] && (d = i[m]);
+        const p = n.useRef(null),
+          g = n.useCallback(() => p.current?.TakeFocus(), [p]),
+          [_, h] = n.useState(!1),
+          f = n.useCallback(
             (e, t) => {
-              b(!0),
+              h(!0),
                 He.eZ.PlayNavSound(He.PN.PagedNavigation),
                 s && s(t.identifier),
-                t.click ? t.click() : l && m(e);
+                t.click ? t.click() : o && c(e);
             },
-            [l, s],
+            [o, s],
           ),
-          B = n.useRef(null),
-          y = p?.hideTitle,
-          M = e.showTitle ?? !0,
-          C = (0, u.A)(
+          b = n.useRef(null),
+          w = e.showTitle ?? !0,
+          B = (0, u.A)(
             "DialogContentTransition",
             r.PagedSettingDialog_ContentColumn,
           );
         n.useEffect(() => {
-          e.bAutoFocusPageContent && B.current?.TakeFocus();
+          e.bAutoFocusPageContent && b.current?.TakeFocus();
         }, []);
-        const { refForPageList: S, refForPage: v } = (function () {
-            const e = n.useMemo(() => new Xe(), []);
-            n.useEffect(
-              () => (
-                Ye.Get().m_setPagedSettingsInstances.add(e),
-                () => {
-                  Ye.Get().m_setPagedSettingsInstances.delete(e);
-                }
-              ),
+        const { refForPageList: y, refForPage: M } = (function () {
+          const e = n.useMemo(() => new Xe(), []);
+          n.useEffect(
+            () => (
+              Ye.Get().m_setPagedSettingsInstances.add(e),
+              () => {
+                Ye.Get().m_setPagedSettingsInstances.delete(e);
+              }
+            ),
+            [e],
+          );
+          const t = n.useCallback(
+              (t) => (e.m_flPageListScrollTop = t.currentTarget.scrollTop),
               [e],
-            );
-            const t = n.useCallback(
-                (t) => (e.m_flPageListScrollTop = t.currentTarget.scrollTop),
-                [e],
-              ),
-              r = n.useCallback(
-                (t) => (e.m_flPageScrollTop = t.currentTarget.scrollTop),
-                [e],
-              ),
-              i = (0, Z.xA)("scroll", t),
-              s = (0, Z.xA)("scroll", r),
-              a = n.useCallback(
-                (t) => (e.m_flPageListScrollTop = t?.scrollTop ?? 0),
-                [e],
-              ),
-              o = n.useCallback(
-                (t) => (e.m_flPageScrollTop = t?.scrollTop ?? 0),
-                [e],
-              ),
-              l = (0, Z.Ue)(i, a),
-              c = (0, Z.Ue)(s, o);
-            return { refForPageList: l, refForPage: c };
-          })(),
-          R = (function (e, t) {
-            const r = n.useMemo(() => new Map(), []),
-              i = n.useRef();
-            i.current = e;
-            const s = n.useRef();
-            s.current = t;
-            const a = n.useCallback(
-              (e) => (t) => {
-                r.set(e, t), e === i.current && (0, Z.cZ)(s.current, t);
-              },
-              [r],
-            );
-            return (
-              n.useEffect(
-                () => ((0, Z.cZ)(t, e && r.get(e)), () => (0, Z.cZ)(t, void 0)),
-                [r, e, t],
-              ),
-              a
-            );
-          })(p?.identifier, v);
+            ),
+            r = n.useCallback(
+              (t) => (e.m_flPageScrollTop = t.currentTarget.scrollTop),
+              [e],
+            ),
+            i = (0, Z.xA)("scroll", t),
+            s = (0, Z.xA)("scroll", r),
+            a = n.useCallback(
+              (t) => (e.m_flPageListScrollTop = t?.scrollTop ?? 0),
+              [e],
+            ),
+            o = n.useCallback(
+              (t) => (e.m_flPageScrollTop = t?.scrollTop ?? 0),
+              [e],
+            ),
+            l = (0, Z.Ue)(i, a),
+            c = (0, Z.Ue)(s, o);
+          return { refForPageList: l, refForPage: c };
+        })();
         return n.createElement(
           a.Z,
           { className: (0, u.A)(r.PagedSettingsDialog, e.className), ref: t },
@@ -41334,16 +41303,16 @@
                 e.hideList && $e().Hidden,
                 "PageListColumn",
               ),
-              navRef: _,
+              navRef: p,
               onButtonDown: (e) => {
                 e.detail.button == Ne.pR.OK &&
-                  B.current?.TakeFocus(e.detail.button);
+                  b.current?.TakeFocus(e.detail.button);
               },
               onFocusWithin: (e) => {
-                e && b(!0);
+                e && h(!0);
               },
             },
-            M &&
+            w &&
               n.createElement(
                 "div",
                 { className: r.PagedSettingsDialog_Title },
@@ -41357,18 +41326,18 @@
                   r.PagedSettingsDialog_PageList,
                   e.disablePageListScrolling &&
                     r.PagedSettingsDialog_PageList_DisableScrolling,
-                  M && r.PagedSettingsDialog_PageList_ShowTitle,
+                  w && r.PagedSettingsDialog_PageList_ShowTitle,
                   e.bNoHeaderPadding &&
                     r.PageSettingsDialog_PageList_NoHeaderPadding,
                 ),
                 navEntryPreferPosition: Ge.iU.PREFERRED_CHILD,
-                ref: S,
+                ref: y,
               },
               n.createElement(Qe, {
                 stylesheet: r,
                 pages: i,
-                iActivePage: d,
-                onPageSelected: w,
+                iActivePage: m,
+                onPageSelected: f,
                 PageListItemComponent: e.PageListItemComponent,
                 PageListSeparatorComponent: e.PageListSeparatorComponent,
               }),
@@ -41377,28 +41346,43 @@
           ),
           n.createElement(
             a.Z,
-            { className: C, onCancelButton: f ? h : void 0, navRef: B },
+            { className: B, onCancelButton: _ ? g : void 0, navRef: b },
             e.toggleHideList &&
-              n.createElement(it, {
+              n.createElement(nt, {
                 hideList: e.hideList,
                 toggleHideList: e.toggleHideList,
               }),
-            n.createElement(
-              o,
-              { activePage: p, direction: g },
-              p &&
-                n.createElement(et, {
-                  refForScrollingContainer: R(p.identifier),
-                  key: p.identifier,
-                  stylesheet: r,
-                  hideTitle: y,
-                  activePage: p,
-                }),
-            ),
+            e.renderPageContent
+              ? e.renderPageContent(d, M, et)
+              : n.createElement(et, { ref: M, activePage: d, stylesheet: r }),
           ),
         );
       });
-      function it(e) {
+      const it = n.createContext(!1);
+      n.memo(function (e) {
+        const {
+            isActive: t,
+            refForPage: r,
+            page: i,
+            PageComponent: s,
+            stylesheet: a,
+          } = e,
+          o = n.useRef(!1);
+        if (!t && !o.current) return null;
+        o.current = !0;
+        const l = t ? void 0 : { display: "none" };
+        return n.createElement(
+          it.Provider,
+          { value: t },
+          n.createElement(s, {
+            ref: r,
+            style: l,
+            activePage: i,
+            stylesheet: a,
+          }),
+        );
+      });
+      function nt(e) {
         const { hideList: t, toggleHideList: r } = e;
         return n.createElement(
           "div",
@@ -41411,7 +41395,7 @@
             : n.createElement(Ve.b8_, { direction: "left" }),
         );
       }
-      class nt extends n.Component {
+      class st extends n.Component {
         m_refTextArea = n.createRef();
         m_nTextAreaPadding;
         m_cEntryLength = Number.MAX_VALUE;
@@ -41503,18 +41487,18 @@
           });
         }
       }
-      (0, i.Cg)([Z.oI], nt.prototype, "InternalOnInput", null),
-        (0, i.Cg)([Z.oI], nt.prototype, "OnKeyUp", null),
-        (0, i.Cg)([Z.oI], nt.prototype, "OnBlur", null),
-        (0, i.Cg)([Z.oI], nt.prototype, "OnClick", null),
-        (0, i.Cg)([Z.oI], nt.prototype, "OnPaste", null),
-        (0, i.Cg)([Z.oI], nt.prototype, "OnCut", null);
-      var st = r(28055),
-        at = r.n(st),
-        ot = r(78327),
-        lt = r(13871),
-        ct = r(78395);
-      const ut = n.forwardRef(function (e, t) {
+      (0, i.Cg)([Z.oI], st.prototype, "InternalOnInput", null),
+        (0, i.Cg)([Z.oI], st.prototype, "OnKeyUp", null),
+        (0, i.Cg)([Z.oI], st.prototype, "OnBlur", null),
+        (0, i.Cg)([Z.oI], st.prototype, "OnClick", null),
+        (0, i.Cg)([Z.oI], st.prototype, "OnPaste", null),
+        (0, i.Cg)([Z.oI], st.prototype, "OnCut", null);
+      var at = r(28055),
+        ot = r.n(at),
+        lt = r(78327),
+        ct = r(13871),
+        ut = r(78395);
+      const mt = n.forwardRef(function (e, t) {
         const {
             label: r,
             description: i,
@@ -41537,7 +41521,7 @@
             explainerTitle: v,
             ...R
           } = e,
-          z = (0, ot.Qn)(),
+          z = (0, lt.Qn)(),
           I = l ?? "inline",
           T = M ?? "front",
           E = "front" == T && !!s,
@@ -41555,9 +41539,9 @@
           q = B ?? 0,
           N = y ?? "center",
           G = (function (e, t) {
-            const r = (0, lt.R7)(),
+            const r = (0, ct.R7)(),
               i = n.useCallback(() => {
-                (0, ct.Zw)(e, t, r.ownerWindow ?? window);
+                (0, ut.Zw)(e, t, r.ownerWindow ?? window);
               }, [r, e, t]);
             if (null == t) return {};
             const s = (0, m.we)("#Field_MoreInfo_Action");
@@ -41585,37 +41569,37 @@
             navRef: V,
             className: (0, u.A)(
               b,
-              at().Field,
-              h && at().Disabled,
-              L && at().WithFirstRow,
-              O && at().WithChildrenInline,
-              W && at().WithChildrenBelow,
-              "center" == N && at().VerticalAlignCenter,
-              "shift-children-below" == D && at().InlineWrapShiftsChildrenBelow,
-              !!i && at().WithDescription,
-              "standard" == A && at().WithBottomSeparatorStandard,
-              "thick" == A && at().WithBottomSeparatorThick,
-              "fixed" == P && at().ChildrenWidthFixed,
-              "max" == P && at().ChildrenWidthGrow,
-              "standard" == x && at().ExtraPaddingOnChildrenBelow,
-              "standard" == j && at().StandardPadding,
-              "compact" == j && at().CompactPadding,
-              k && at().Clickable,
-              U && at().HighlightOnFocus,
+              ot().Field,
+              h && ot().Disabled,
+              L && ot().WithFirstRow,
+              O && ot().WithChildrenInline,
+              W && ot().WithChildrenBelow,
+              "center" == N && ot().VerticalAlignCenter,
+              "shift-children-below" == D && ot().InlineWrapShiftsChildrenBelow,
+              !!i && ot().WithDescription,
+              "standard" == A && ot().WithBottomSeparatorStandard,
+              "thick" == A && ot().WithBottomSeparatorThick,
+              "fixed" == P && ot().ChildrenWidthFixed,
+              "max" == P && ot().ChildrenWidthGrow,
+              "standard" == x && ot().ExtraPaddingOnChildrenBelow,
+              "standard" == j && ot().StandardPadding,
+              "compact" == j && ot().CompactPadding,
+              k && ot().Clickable,
+              U && ot().HighlightOnFocus,
             ),
             style: { "--indent-level": q },
           },
           L &&
             n.createElement(
               "div",
-              { className: at().FieldLabelRow },
+              { className: ot().FieldLabelRow },
               n.createElement(
                 "div",
-                { className: at().FieldLabel },
+                { className: ot().FieldLabel },
                 E &&
                   n.createElement(
                     "div",
-                    { className: (0, u.A)(at().FieldIcon, at().Front) },
+                    { className: (0, u.A)(ot().FieldIcon, ot().Front) },
                     s,
                   ),
                 r,
@@ -41624,21 +41608,21 @@
               O &&
                 n.createElement(
                   "div",
-                  { className: at().FieldChildrenWithIcon },
+                  { className: ot().FieldChildrenWithIcon },
                   F &&
                     n.createElement(
                       "div",
                       {
                         className: (0, u.A)(
-                          at().FieldIcon,
-                          at().BeforeChildren,
+                          ot().FieldIcon,
+                          ot().BeforeChildren,
                         ),
                       },
                       s,
                     ),
                   n.createElement(
                     "div",
-                    { className: at().FieldChildrenInner },
+                    { className: ot().FieldChildrenInner },
                     o,
                   ),
                 ),
@@ -41646,16 +41630,16 @@
           W &&
             n.createElement(
               "div",
-              { className: at().FieldChildrenWithIcon },
+              { className: ot().FieldChildrenWithIcon },
               F &&
                 n.createElement(
                   "div",
-                  { className: (0, u.A)(at().FieldIcon, at().BeforeChildren) },
+                  { className: (0, u.A)(ot().FieldIcon, ot().BeforeChildren) },
                   s,
                 ),
-              n.createElement("div", { className: at().FieldChildrenInner }, o),
+              n.createElement("div", { className: ot().FieldChildrenInner }, o),
             ),
-          i && n.createElement("div", { className: at().FieldDescription }, i),
+          i && n.createElement("div", { className: ot().FieldDescription }, i),
         );
       });
       n.forwardRef(function (e, t) {
@@ -41678,7 +41662,7 @@
           } = e,
           { refWithValue: b, refForElement: w } = (0, Z.RY)(t);
         return n.createElement(
-          ut,
+          mt,
           {
             label: r,
             description: i,
@@ -41701,7 +41685,7 @@
           h,
         );
       });
-      const mt = n.forwardRef(function (e, t) {
+      const dt = n.forwardRef(function (e, t) {
         const {
             label: r,
             description: i,
@@ -41713,7 +41697,7 @@
           } = e,
           { refWithValue: u, refForElement: m } = (0, Z.RY)(t);
         return n.createElement(
-          ut,
+          mt,
           {
             label: r,
             description: i,
@@ -41729,12 +41713,12 @@
           n.createElement(Q, { ...c, ref: m }),
         );
       });
-      var dt,
-        pt = r(3812),
-        gt = r.n(pt),
-        _t = r(16569),
-        ht = r(90740);
-      function ft(e) {
+      var pt,
+        gt = r(3812),
+        _t = r.n(gt),
+        ht = r(16569),
+        ft = r(90740);
+      function bt(e) {
         const {
             childrenKey: t,
             childrenClasses: r,
@@ -41742,14 +41726,14 @@
             directionClass: s,
             animate: a = !0,
           } = e,
-          o = (0, u.A)(gt().TransitionGroup, s);
+          o = (0, u.A)(_t().TransitionGroup, s);
         return n.createElement(
-          _t.A,
+          ht.A,
           { className: o, appear: !1, enter: a, exit: a },
-          n.createElement(bt, { key: t, childrenClasses: r }, i),
+          n.createElement(wt, { key: t, childrenClasses: r }, i),
         );
       }
-      function bt(e) {
+      function wt(e) {
         const { sizeClass: t, children: r, childrenClasses: i, ...s } = e,
           [o, l, c, m] = (function () {
             let e = n.useRef(null),
@@ -41811,7 +41795,7 @@
         return o.current && !o.current.ownerDocument.defaultView
           ? null
           : n.createElement(
-              ht.A,
+              ft.A,
               {
                 nodeRef: o,
                 classNames: f,
@@ -41824,7 +41808,7 @@
               },
               n.createElement(
                 "div",
-                { ref: o, className: (0, u.A)(gt().ContentWrapper, t, h.base) },
+                { ref: o, className: (0, u.A)(_t().ContentWrapper, t, h.base) },
                 n.createElement(
                   a.Z,
                   { className: t, fnCanTakeFocus: p },
@@ -41833,7 +41817,7 @@
               ),
             );
       }
-      function wt(e, t) {
+      function Bt(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -41848,13 +41832,14 @@
           (e[(e.Right = 2)] = "Right"),
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
-      })(dt || (dt = {}));
-      var Bt = r(21717),
-        yt = r.n(Bt);
-      const Mt = n.createContext(null);
-      function Ct(e) {
-        const t = n.useContext(Mt),
-          r = (0, ot.rP)().IN_VR,
+      })(pt || (pt = {}));
+      var yt = r(21717),
+        Mt = r.n(yt),
+        Ct = r(8871);
+      const St = n.createContext(null);
+      function vt(e) {
+        const t = n.useContext(St),
+          r = (0, lt.rP)().IN_VR,
           { title: i, icon: s, active: o, ...l } = e;
         return n.createElement(
           a.Z,
@@ -41866,61 +41851,99 @@
             onFocus: r ? void 0 : l.onClick,
             ...l,
           },
-          s && n.createElement("div", { className: yt().PageListItem_Icon }, s),
-          n.createElement("div", { className: yt().PageListItem_Title }, i),
+          s && n.createElement("div", { className: Mt().PageListItem_Icon }, s),
+          n.createElement("div", { className: Mt().PageListItem_Title }, i),
         );
       }
-      function St(e) {
-        return n.createElement("div", { className: yt().Separator });
+      function Rt(e) {
+        return n.createElement("div", { className: Mt().Separator });
       }
       n.forwardRef(function (e, t) {
         const { page: r, bAutoFocusPageContent: i, showTitle: s = !1 } = e,
           a = n.useRef(null),
           o = n.useRef(!0);
-        return (
-          n.useEffect(() => {
-            (o.current && i) || a.current?.TakeFocus(), (o.current = !1);
-          }, [r, i]),
-          n.createElement(
-            Mt.Provider,
-            { value: a },
-            n.createElement(rt, {
-              ...e,
-              stylesheet: yt(),
-              showTitle: s,
-              PageListItemComponent: Ct,
-              PageListSeparatorComponent: St,
-              PageAnimationComponent: vt,
-            }),
-          )
+        n.useEffect(() => {
+          (o.current && i) || a.current?.TakeFocus(), (o.current = !1);
+        }, [r, i]);
+        return n.createElement(
+          St.Provider,
+          { value: a },
+          n.createElement(rt, {
+            ...e,
+            stylesheet: Mt(),
+            showTitle: s,
+            PageListItemComponent: vt,
+            PageListSeparatorComponent: Rt,
+            renderPageContent: (t, r, i) =>
+              n.createElement(zt, {
+                pages: e.pages,
+                activePage: t,
+                refForPage: r,
+                PageComponent: i,
+              }),
+          }),
         );
       });
-      function vt(e) {
-        let t = dt.None;
-        "up" == e.direction
-          ? (t = dt.Up)
-          : "down" == e.direction && (t = dt.Down);
-        let r =
-          ((i = yt()),
-          (s = t) == dt.Left
-            ? i.Left
-            : s == dt.Right
-              ? i.Right
-              : s == dt.Up
-                ? i.Up
-                : s == dt.Down
-                  ? i.Down
+      function zt(e) {
+        const { pages: t, activePage: r, refForPage: i, PageComponent: s } = e,
+          a = (function (e) {
+            let t = n.useRef(e),
+              r = n.useRef(pt.None),
+              i = t.current;
+            if (i == e) return r.current;
+            let s = pt.None;
+            i < e ? (s = pt.Down) : i > e && (s = pt.Up);
+            return (t.current = e), (r.current = s), s;
+          })(n.useMemo(() => t.findIndex((e) => e == r), [t, r])),
+          o = (function (e, t) {
+            const r = n.useMemo(() => new Map(), []),
+              i = n.useRef();
+            i.current = e;
+            const s = n.useRef();
+            s.current = t;
+            const a = n.useCallback(
+              (e) => (t) => {
+                r.set(e, t), e === i.current && (0, Ct.cZ)(s.current, t);
+              },
+              [r],
+            );
+            return (
+              n.useEffect(
+                () => (
+                  (0, Ct.cZ)(t, e && r.get(e)), () => (0, Ct.cZ)(t, void 0)
+                ),
+                [r, e, t],
+              ),
+              a
+            );
+          })(r?.identifier, i);
+        let l =
+          ((c = Mt()),
+          (u = a) == pt.Left
+            ? c.Left
+            : u == pt.Right
+              ? c.Right
+              : u == pt.Up
+                ? c.Up
+                : u == pt.Down
+                  ? c.Down
                   : "");
-        var i, s;
+        var c, u;
         return n.createElement(
-          ft,
+          bt,
           {
-            childrenKey: e.activePage?.identifier,
-            childrenClasses: wt(yt(), yt().ContentTransition),
-            directionClass: r,
-            animate: t != dt.None,
+            childrenKey: r?.identifier,
+            childrenClasses: Bt(Mt(), Mt().ContentTransition),
+            directionClass: l,
+            animate: a != pt.None,
           },
-          e.children,
+          r &&
+            n.createElement(s, {
+              ref: o(r.identifier),
+              key: r.identifier,
+              stylesheet: Mt(),
+              activePage: r,
+            }),
         );
       }
       n.forwardRef(function (e, t) {
@@ -41928,15 +41951,15 @@
           noFocusRing: !0,
           ...e,
           ref: t,
-          className: (0, u.A)(at().BasicTextInput, e.className),
+          className: (0, u.A)(ot().BasicTextInput, e.className),
           size: e.size ?? 1,
         });
       });
-      var Rt = r(43670),
-        zt = r.n(Rt),
-        It = r(68451),
-        Tt = r(90665);
-      function Et(e) {
+      var It = r(43670),
+        Tt = r.n(It),
+        Et = r(68451),
+        Ft = r(90665);
+      function Ot(e) {
         const {
             label: t,
             tooltip: r,
@@ -41956,9 +41979,9 @@
             onActivate: f,
             ...b
           } = e,
-          { actionDescriptions: w, gamepadEvents: B, props: y } = (0, Tt.C7)(b);
+          { actionDescriptions: w, gamepadEvents: B, props: y } = (0, Ft.C7)(b);
         return n.createElement(
-          ut,
+          mt,
           {
             className: o,
             disabled: a,
@@ -41980,21 +42003,21 @@
           n.createElement(Me, { menuLabel: t, disabled: a, ...y, ref: l }),
         );
       }
-      function Ft(e, t) {
+      function Wt(e, t) {
         for (const r of e.options) {
           if (pe(r) && r.data === t) return !0;
-          if (_e(r) && Ft(r, t)) return !0;
+          if (_e(r) && Wt(r, t)) return !0;
         }
         return !1;
       }
-      function Ot(e) {
+      function Dt(e) {
         const t = (r) =>
           r?.map((r, i) =>
             ge(r)
-              ? n.createElement(It.K5, { key: i })
+              ? n.createElement(Et.K5, { key: i })
               : pe(r)
                 ? n.createElement(
-                    It.kt,
+                    Et.kt,
                     {
                       key: i,
                       onSelected: (t) =>
@@ -42005,23 +42028,23 @@
                   )
                 : _e(r)
                   ? n.createElement(
-                      It.Vs,
+                      Et.Vs,
                       {
                         label: r.label,
                         key: i,
-                        selectedWithin: Ft(r, e.selectedValue),
+                        selectedWithin: Wt(r, e.selectedValue),
                       },
                       t(r.options),
                     )
                   : null,
           );
-        return n.createElement(It.tz, { onCancel: e.onCancel }, t(e.rgOptions));
+        return n.createElement(Et.tz, { onCancel: e.onCancel }, t(e.rgOptions));
       }
       n.forwardRef(function (e, t) {
         return n.createElement(
           P,
           {
-            className: (0, u.A)(zt().DropDownControlButton, e.className),
+            className: (0, u.A)(Tt().DropDownControlButton, e.className),
             focusable: e.focusable,
             disabled: e.disabled,
             onClick: e.onClick,
@@ -42030,16 +42053,16 @@
           },
           n.createElement(
             "div",
-            { className: at().DropDownControlButtonContents },
+            { className: ot().DropDownControlButtonContents },
             e.children,
             n.createElement("div", {
-              className: (0, u.A)(at().Spacer, "Spacer"),
+              className: (0, u.A)(ot().Spacer, "Spacer"),
             }),
             n.createElement(Ve.u49, { direction: "down" }),
           ),
         );
       });
-      var Wt = r(4437);
+      var kt = r(4437);
       n.forwardRef(function (e, t) {
         const { className: r, ...i } = e;
         let s = n.useRef(),
@@ -42063,7 +42086,7 @@
             inlineControls: n.createElement(
               P,
               {
-                className: Wt.TogglePasswordVisibilityBtn,
+                className: kt.TogglePasswordVisibilityBtn,
                 onPointerDown: u,
                 onOKButton: u,
               },
@@ -42077,7 +42100,7 @@
       n.forwardRef(function (e, t) {
         const { className: r, value: i, ...s } = e,
           a = i ?? "";
-        return n.createElement(mt, {
+        return n.createElement(dt, {
           autoComplete: "off",
           value: a,
           ref: t,
@@ -42104,16 +42127,16 @@
           },
         });
       });
-      var Dt,
-        kt,
-        Lt,
+      var Lt,
         Pt,
         xt,
         jt,
-        At = r(10794),
-        Ut = r.n(At),
-        qt = r(69817),
-        Nt = r(37788);
+        At,
+        Ut,
+        qt = r(10794),
+        Nt = r.n(qt),
+        Gt = r(69817),
+        Ht = r(37788);
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.TrackingSystemName_String = 1e3)] =
@@ -42429,7 +42452,7 @@
             "VendorSpecific_Reserved_End"),
           (e[(e.TrackedDeviceProperty_Max = 1e6)] =
             "TrackedDeviceProperty_Max");
-      })(Dt || (Dt = {})),
+      })(Lt || (Lt = {})),
         (function (e) {
           (e[(e.k_EButton_System = 0)] = "k_EButton_System"),
             (e[(e.k_EButton_ApplicationMenu = 1)] =
@@ -42461,7 +42484,7 @@
             (e[(e.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
             (e[(e.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
             (e[(e.k_EButton_Max = 64)] = "k_EButton_Max");
-        })(kt || (kt = {})),
+        })(Pt || (Pt = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.ButtonEnter = 1)] = "ButtonEnter"),
@@ -42469,13 +42492,13 @@
             (e[(e.Snap = 3)] = "Snap"),
             (e[(e.Sliding = 4)] = "Sliding"),
             (e[(e.SlidingEdge = 5)] = "SlidingEdge");
-        })(Lt || (Lt = {})),
+        })(xt || (xt = {})),
         (function (e) {
           (e[(e.Minimal = 1)] = "Minimal"),
             (e[(e.Modal = 2)] = "Modal"),
             (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
             (e[(e.HideDoneKey = 8)] = "HideDoneKey");
-        })(Pt || (Pt = {})),
+        })(jt || (jt = {})),
         (function (e) {
           (e[(e.Unknown = -1)] = "Unknown"),
             (e[(e.Idle = 0)] = "Idle"),
@@ -42483,42 +42506,42 @@
             (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (e[(e.Standby = 3)] = "Standby"),
             (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
-        })(xt || (xt = {})),
+        })(At || (At = {})),
         (function (e) {
           (e[(e.Notification_Shown = 600)] = "Notification_Shown"),
             (e[(e.Notification_Hidden = 601)] = "Notification_Hidden"),
             (e[(e.Notification_BeginInteraction = 602)] =
               "Notification_BeginInteraction"),
             (e[(e.Notification_Destroyed = 603)] = "Notification_Destroyed");
-        })(jt || (jt = {}));
-      const Gt = 1;
-      (0, l.i_)(Ut()["error-shake-duration"]);
-      function Ht(e, t) {
+        })(Ut || (Ut = {}));
+      const Vt = 1;
+      (0, l.i_)(Nt()["error-shake-duration"]);
+      function Zt(e, t) {
         return t < 0 ? 0 : t > 1 ? 1 : 0 == e ? t : Math.round(t / e) * e;
       }
-      function Vt(e, t, r) {
+      function Kt(e, t, r) {
         const i = e + r * (t - e);
         return Number.parseFloat(i.toFixed(10));
       }
-      function Zt(e, t, r) {
+      function $t(e, t, r) {
         return (r - e) / (t - e);
       }
-      var Kt;
+      var Xt;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.MouseDragging = 1)] = "MouseDragging"),
           (e[(e.TouchStart = 2)] = "TouchStart"),
           (e[(e.TouchDragging = 3)] = "TouchDragging");
-      })(Kt || (Kt = {}));
-      class $t extends n.Component {
+      })(Xt || (Xt = {}));
+      class Yt extends n.Component {
         m_refSlider = n.createRef();
         m_refHandle = n.createRef();
         m_navRefSlider = n.createRef();
         m_sliderBounds = void 0;
         m_handleBounds = void 0;
         m_fZoom = 1;
-        m_eDragMode = Kt.None;
-        m_vTouchStartPosition = (0, qt.D0)();
+        m_eDragMode = Xt.None;
+        m_vTouchStartPosition = (0, Gt.D0)();
         m_fStartValue;
         m_fLatestUserValue;
         m_fLatestOnChangeValue;
@@ -42538,7 +42561,7 @@
           return this.validRange ? this.props.max - this.props.min : 0;
         }
         get step() {
-          return Math.abs(this.props.step ?? Gt);
+          return Math.abs(this.props.step ?? Vt);
         }
         get normalizedStep() {
           return this.step / this.range;
@@ -42553,18 +42576,18 @@
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
               : (0, We.OQ)(this.props.value, this.props.min, this.props.max);
-          return Zt(this.props.min, this.props.max, e);
+          return $t(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
           const e = this.props.resetValue;
           if (
             !(null == e || isNaN(e) || e < this.props.min || e > this.props.max)
           )
-            return Zt(this.props.min, this.props.max, e);
+            return $t(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
           const e = (0, We.OQ)(0, this.props.min, this.props.max);
-          return Zt(this.props.min, this.props.max, e);
+          return $t(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
           return (
@@ -42574,12 +42597,12 @@
         }
         get SliderChangeSource() {
           switch (this.m_eDragMode) {
-            case Kt.MouseDragging:
+            case Xt.MouseDragging:
               return 1;
-            case Kt.TouchDragging:
-            case Kt.TouchStart:
+            case Xt.TouchDragging:
+            case Xt.TouchStart:
               return 0;
-            case Kt.None:
+            case Xt.None:
               return;
           }
         }
@@ -42603,16 +42626,16 @@
                 this.props.onChangeStart(this.SliderChangeSource),
               e)
             ) {
-              case Kt.MouseDragging:
-              case Kt.TouchDragging:
-              case Kt.TouchStart:
+              case Xt.MouseDragging:
+              case Xt.TouchDragging:
+              case Xt.TouchStart:
                 this.RecomputeSliderBounds(),
                   (this.m_fStartValue = this.props.value),
                   (this.m_fLatestUserValue = this.props.value);
-              case Kt.None:
+              case Xt.None:
             }
             switch (e) {
-              case Kt.MouseDragging:
+              case Xt.MouseDragging:
                 this.m_refSlider.current?.ownerDocument?.addEventListener(
                   "mousemove",
                   this.OnWindowMouseMove,
@@ -42624,8 +42647,8 @@
                     { passive: !1 },
                   );
                 break;
-              case Kt.TouchStart:
-              case Kt.TouchDragging:
+              case Xt.TouchStart:
+              case Xt.TouchDragging:
                 this.m_refSlider.current?.ownerDocument?.addEventListener(
                   "touchmove",
                   this.OnWindowTouchMove,
@@ -42637,7 +42660,7 @@
                     { passive: !1 },
                   );
                 break;
-              case Kt.None:
+              case Xt.None:
                 this.RemoveDocumentEventListeners();
             }
           }
@@ -42661,8 +42684,8 @@
             n = Math.pow(2, Math.floor(r / i)),
             s = this.normalizedDpadStep * n,
             a = (0, We.OQ)(s, this.normalizedDpadStep, 0.05) * t,
-            o = Ht(this.normalizedStep, this.normalizedClampedValue + a);
-          let l = Vt(this.props.min, this.props.max, o);
+            o = Zt(this.normalizedStep, this.normalizedClampedValue + a);
+          let l = Kt(this.props.min, this.props.max, o);
           if (
             ((l = (0, We.OQ)(
               l,
@@ -42707,18 +42730,18 @@
         UpdateSliderValueForPosition(e) {
           if (this.props.disabled || !this.m_refSlider.current) return;
           const t = this.ComputeNormalizedValueForMousePosition(e),
-            r = Ht(this.normalizedStep, t);
-          let i = Vt(this.props.min, this.props.max, r);
+            r = Zt(this.normalizedStep, t);
+          let i = Kt(this.props.min, this.props.max, r);
           const n = this.props.clampMin ?? this.props.min,
             s = this.props.clampMax ?? this.props.max;
           if (((i = (0, We.OQ)(i, n, s)), i != this.props.value)) {
             const e = i > this.props.value,
               t = 0 == this.step;
             if (
-              ((this.m_eDragMode == Kt.None || !t) &&
+              ((this.m_eDragMode == Xt.None || !t) &&
                 He.eZ.PlayNavSound(e ? He.PN.SliderUp : He.PN.SliderDown),
-              this.m_eDragMode == Kt.MouseDragging ||
-                this.m_eDragMode == Kt.TouchDragging)
+              this.m_eDragMode == Xt.MouseDragging ||
+                this.m_eDragMode == Xt.TouchDragging)
             ) {
               let e = !1;
               if (
@@ -42727,7 +42750,7 @@
                 this.m_fLatestUserValue < s &&
                 !e
               )
-                this.PlayHaptic(Lt.SlidingEdge), (e = !0);
+                this.PlayHaptic(xt.SlidingEdge), (e = !0);
               else if (
                 !this.BShouldTriggerHapticOnSnap() &&
                 this.m_fLatestUserValue >= n &&
@@ -42737,9 +42760,9 @@
                 Math.floor(((this.m_fLatestUserValue - n) / (s - n)) * t) ==
                   Math.floor(((i - n) / (s - n)) * t) ||
                   e ||
-                  (this.PlayHaptic(Lt.Sliding), (e = !0));
+                  (this.PlayHaptic(xt.Sliding), (e = !0));
               }
-              t || e || (this.PlayHaptic(Lt.Snap), (e = !0));
+              t || e || (this.PlayHaptic(xt.Snap), (e = !0));
             }
             (this.m_fLatestUserValue = i),
               this.FireOnChange(i, this.SliderChangeSource);
@@ -42749,13 +42772,13 @@
           this.UpdateSliderValueForPosition(e.clientX);
         }
         OnWindowMouseUp(e) {
-          this.m_eDragMode != Kt.None && this.Complete();
+          this.m_eDragMode != Xt.None && this.Complete();
         }
         OnMouseDown(e) {
           0 == e.button &&
             (this.props.disabled ||
               (e.preventDefault(),
-              this.SetDragMode(Kt.MouseDragging),
+              this.SetDragMode(Xt.MouseDragging),
               this.UpdateSliderValueForPosition(e.clientX)));
         }
         OnTouchStart(e) {
@@ -42766,7 +42789,7 @@
           );
           t < 0 ||
             t > 1 ||
-            (this.SetDragMode(Kt.TouchStart),
+            (this.SetDragMode(Xt.TouchStart),
             (this.m_vTouchStartPosition = {
               x: e.touches[0].clientX,
               y: e.touches[0].clientY,
@@ -42775,34 +42798,34 @@
         OnWindowTouchMove(e) {
           if (1 == e.touches.length) {
             switch (this.m_eDragMode) {
-              case Kt.TouchStart:
+              case Xt.TouchStart:
                 const t = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-                if ((0, qt.LD)(this.m_vTouchStartPosition, t) >= 10) {
-                  const e = (0, qt.Fg)(this.m_vTouchStartPosition, t);
+                if ((0, Gt.LD)(this.m_vTouchStartPosition, t) >= 10) {
+                  const e = (0, Gt.Fg)(this.m_vTouchStartPosition, t);
                   Math.abs(e.x) > Math.abs(e.y)
-                    ? (this.SetDragMode(Kt.TouchDragging),
+                    ? (this.SetDragMode(Xt.TouchDragging),
                       this.m_refSlider.current?.focus())
-                    : this.SetDragMode(Kt.None);
+                    : this.SetDragMode(Xt.None);
                 }
                 break;
-              case Kt.TouchDragging:
+              case Xt.TouchDragging:
                 this.UpdateSliderValueForPosition(e.touches[0].clientX);
             }
             e.preventDefault();
           }
         }
         OnWindowTouchEnd(e) {
-          this.m_eDragMode != Kt.None && this.Complete();
+          this.m_eDragMode != Xt.None && this.Complete();
         }
         Complete() {
-          const e = this.m_eDragMode != Kt.None;
+          const e = this.m_eDragMode != Xt.None;
           this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
             this.props.onChangeComplete &&
               this.props.onChangeComplete(
                 this.m_fLatestUserValue,
                 this.SliderChangeSource,
               ),
-            this.SetDragMode(Kt.None);
+            this.SetDragMode(Xt.None);
           const t = 0 == this.step;
           if (this.m_fLatestUserValue != this.m_fStartValue && t && e) {
             const e = this.m_fLatestUserValue > this.m_fStartValue;
@@ -42845,7 +42868,7 @@
             this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
         }
         ResetToDefault() {
-          if (!this.CanResetToDefault || this.m_eDragMode != Kt.None) return;
+          if (!this.CanResetToDefault || this.m_eDragMode != Xt.None) return;
           let e;
           (this.m_fLatestUserValue = this.props.resetValue),
             this.FireOnChange(this.props.resetValue, 4),
@@ -42859,10 +42882,10 @@
         OnContextMenu(e) {
           if (null != this.props.resetValue) {
             const t = n.createElement(
-              It.tz,
+              Et.tz,
               null,
               n.createElement(
-                It.kt,
+                Et.kt,
                 {
                   disabled: !this.CanResetToDefault,
                   onSelected: this.ResetToDefault,
@@ -42892,30 +42915,30 @@
             h = {};
           this.CanResetToDefault &&
             (h[Ne.pR.SECONDARY] = (0, m.we)("#ResetToDefault"));
-          let f = `${Ut().SliderHandle} SliderHandle`,
-            b = `${Ut().SliderHandleContainer} SliderHandleContainer `;
+          let f = `${Nt().SliderHandle} SliderHandle`,
+            b = `${Nt().SliderHandleContainer} SliderHandleContainer `;
           return (
             "verticalline" == this.props.handleType
-              ? ((f = `${Ut().VerticalLineSliderHandle} SliderHandle`),
-                (b = `${Ut().VerticalLineSliderHandleContainer} SliderHandleContainer `))
+              ? ((f = `${Nt().VerticalLineSliderHandle} SliderHandle`),
+                (b = `${Nt().VerticalLineSliderHandleContainer} SliderHandleContainer `))
               : ("leftparen" != this.props.handleType &&
                   "rightparen" != this.props.handleType) ||
                 ((f = (0, u.A)(
-                  Ut().ParenSliderHandle,
-                  "leftparen" == this.props.handleType ? Ut().Left : Ut().Right,
+                  Nt().ParenSliderHandle,
+                  "leftparen" == this.props.handleType ? Nt().Left : Nt().Right,
                   "SliderHandle",
                 )),
                 (b = (0, u.A)(
-                  Ut().ParenSliderHandleContainer,
-                  "leftparen" == this.props.handleType ? Ut().Left : Ut().Right,
+                  Nt().ParenSliderHandleContainer,
+                  "leftparen" == this.props.handleType ? Nt().Left : Nt().Right,
                   "SliderHandleContainer",
                 ))),
             n.createElement(
-              Nt.YZ,
+              Ht.YZ,
               {
                 noFocusRing: !0,
                 className: (0, u.A)(
-                  Ut().SliderControlPanelGroup,
+                  Nt().SliderControlPanelGroup,
                   "SliderControlPanelGroup",
                   this.props.className,
                 ),
@@ -42943,12 +42966,12 @@
                 s.ml,
                 {
                   className: (0, u.A)(
-                    Ut().SliderControlAndNotches,
-                    this.props.disabled && Ut().Disabled,
-                    d && Ut().WithDefaultValue,
-                    d && _ && Ut().DefaultValueIsColorRange,
-                    d && _ && "left" == p.side && Ut().DefaultValueColorLeft,
-                    d && _ && "left" != p.side && Ut().DefaultValueColorRight,
+                    Nt().SliderControlAndNotches,
+                    this.props.disabled && Nt().Disabled,
+                    d && Nt().WithDefaultValue,
+                    d && _ && Nt().DefaultValueIsColorRange,
+                    d && _ && "left" == p.side && Nt().DefaultValueColorLeft,
+                    d && _ && "left" != p.side && Nt().DefaultValueColorRight,
                   ),
                   focusable: this.isKeyNavTarget,
                   noFocusRing: !0,
@@ -42976,15 +42999,15 @@
                 },
                 n.createElement(
                   "div",
-                  { className: (0, u.A)(Ut().SliderControl, "SliderControl") },
+                  { className: (0, u.A)(Nt().SliderControl, "SliderControl") },
                   n.createElement("div", {
                     className: (0, u.A)(
-                      Ut().SliderTrack,
+                      Nt().SliderTrack,
                       null != this.props.notchCount &&
                         t &&
-                        Ut().SliderHasNotches,
+                        Nt().SliderHasNotches,
                       {
-                        [Ut().SliderTrackDark]: "dark" === this.props.trackTone,
+                        [Nt().SliderTrackDark]: "dark" === this.props.trackTone,
                       },
                       "SliderTrack",
                     ),
@@ -42993,10 +43016,10 @@
                     g &&
                     n.createElement(
                       "div",
-                      { className: Ut().DefaultValueTickContainer },
+                      { className: Nt().DefaultValueTickContainer },
                       n.createElement(
                         "div",
-                        { className: Ut().DefaultValueTick },
+                        { className: Nt().DefaultValueTick },
                         n.createElement(Ve.u49, { direction: "down" }),
                       ),
                     ),
@@ -43017,7 +43040,7 @@
                       ),
                     ),
                 ),
-                n.createElement(Xt, {
+                n.createElement(Qt, {
                   notchCount: r,
                   notchLabels: a,
                   sliderValue: this.normalizedClampedValue,
@@ -43029,7 +43052,7 @@
           );
         }
       }
-      function Xt(e) {
+      function Qt(e) {
         let {
             sliderValue: t,
             notchCount: r,
@@ -43045,7 +43068,7 @@
           let i = l.find((t) => t.notchIndex == e);
           i && (c = !0),
             m.push(
-              n.createElement(Yt, {
+              n.createElement(Jt, {
                 key: e,
                 notchIndex: e,
                 sliderValue: t,
@@ -43058,11 +43081,11 @@
         }
         return n.createElement(
           a.Z,
-          { className: (0, u.A)(Ut().SliderNotchContainer) },
+          { className: (0, u.A)(Nt().SliderNotchContainer) },
           m,
         );
       }
-      function Yt(e) {
+      function Jt(e) {
         const t = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
           r = e.notchCount <= 3 && !e.notchTicksVisible,
           i = r && 0 == e.notchIndex,
@@ -43070,49 +43093,49 @@
           a = { ...e, alignLeftEnd: i, alignRightEnd: s, active: t };
         return n.createElement(
           "div",
-          { className: (0, u.A)(Ut().SliderNotch, r && Ut().AlignToEnds) },
-          e.renderNotch ? e.renderNotch(a) : n.createElement(Qt, { ...a }),
+          { className: (0, u.A)(Nt().SliderNotch, r && Nt().AlignToEnds) },
+          e.renderNotch ? e.renderNotch(a) : n.createElement(er, { ...a }),
         );
       }
-      function Qt(e) {
+      function er(e) {
         const { alignLeftEnd: t, alignRightEnd: r, active: i } = e;
         return n.createElement(
           n.Fragment,
           null,
           e.notchTicksVisible &&
             n.createElement("div", {
-              className: (0, u.A)(Ut().SliderNotchTick, i && Ut().TickActive),
+              className: (0, u.A)(Nt().SliderNotchTick, i && Nt().TickActive),
             }),
           e.notchLabel &&
             n.createElement(
               "div",
               {
                 className: (0, u.A)(
-                  Ut().SliderNotchLabel,
-                  t && Ut().AlignToLeft,
-                  r && Ut().AlignToRight,
+                  Nt().SliderNotchLabel,
+                  t && Nt().AlignToLeft,
+                  r && Nt().AlignToRight,
                 ),
               },
               e.notchLabel?.label,
             ),
         );
       }
-      (0, i.Cg)([Z.oI], $t.prototype, "RecomputeSliderBounds", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "SetDragMode", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnGamepadDirection", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "UpdateSliderValueForPosition", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnWindowMouseMove", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnWindowMouseUp", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnMouseDown", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnTouchStart", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnWindowTouchMove", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnWindowTouchEnd", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "Complete", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "BlurInnerSlider", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnInnerSliderFocus", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnInnerSliderBlur", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "ResetToDefault", null),
-        (0, i.Cg)([Z.oI], $t.prototype, "OnContextMenu", null);
+      (0, i.Cg)([Z.oI], Yt.prototype, "RecomputeSliderBounds", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "SetDragMode", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnGamepadDirection", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "UpdateSliderValueForPosition", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnWindowMouseMove", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnWindowMouseUp", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnMouseDown", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnTouchStart", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnWindowTouchMove", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnWindowTouchEnd", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "Complete", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "BlurInnerSlider", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnInnerSliderFocus", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnInnerSliderBlur", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "ResetToDefault", null),
+        (0, i.Cg)([Z.oI], Yt.prototype, "OnContextMenu", null);
       n.forwardRef(function (e, t) {
         const {
           label: r,
@@ -43136,7 +43159,7 @@
         return n.createElement(
           "div",
           {
-            className: Ut().CompoundSliderSubSliderLabel,
+            className: Nt().CompoundSliderSubSliderLabel,
             ref: m,
             onMouseDown: o,
             onTouchStart: l,
@@ -43144,12 +43167,12 @@
           },
           n.createElement(
             "div",
-            { className: Ut().CompoundSliderSubSliderLabelInternal },
+            { className: Nt().CompoundSliderSubSliderLabelInternal },
             r,
           ),
         );
       });
-      const Jt = n.forwardRef(function (e, t) {
+      const tr = n.forwardRef(function (e, t) {
         const {
           value: r,
           onChange: i,
@@ -43163,9 +43186,9 @@
           s.ml,
           {
             noFocusRing: !0,
-            className: (0, u.A)(o, at().Toggle, {
-              [at().Disabled]: !!a,
-              [at().On]: !!r,
+            className: (0, u.A)(o, ot().Toggle, {
+              [ot().Disabled]: !!a,
+              [ot().On]: !!r,
             }),
             onClick: () => {
               if (!a && i) {
@@ -43177,22 +43200,22 @@
             navRef: m,
             focusable: l,
           },
-          n.createElement("div", { className: at().ToggleRail }),
-          n.createElement("div", { className: at().ToggleSwitch }),
+          n.createElement("div", { className: ot().ToggleRail }),
+          n.createElement("div", { className: ot().ToggleSwitch }),
           c,
         );
       });
-      class er extends U {
+      class rr extends U {
         OnToggleChange(e) {
           this.props.disabled || e === this.checked || this.Toggle();
         }
         render() {
           const e = !!this.props.disabled,
-            { actionDescriptions: t, gamepadEvents: r } = (0, Tt.C7)(
+            { actionDescriptions: t, gamepadEvents: r } = (0, Ft.C7)(
               this.props,
             );
           return n.createElement(
-            ut,
+            mt,
             {
               className: this.props.className,
               disabled: e,
@@ -43211,7 +43234,7 @@
               indentLevel: this.props.indentLevel,
               ...r,
             },
-            n.createElement(Jt, {
+            n.createElement(tr, {
               onChange: this.OnToggleChange,
               value: this.checked,
               disabled: e,
@@ -43220,17 +43243,17 @@
           );
         }
       }
-      (0, i.Cg)([Z.oI], er.prototype, "OnToggleChange", null);
-      var tr = r(63512);
-      function rr(e) {
+      (0, i.Cg)([Z.oI], rr.prototype, "OnToggleChange", null);
+      var ir = r(63512);
+      function nr(e) {
         const { children: t, bCenterVertically: r, refElem: i, ...s } = e,
           o = (0, u.A)(
-            at().GamepadDialogContent,
+            ot().GamepadDialogContent,
             "DialogContent _DialogLayout",
             e.className,
             r && " _DialogCenterVertically",
           ),
-          { ref: l, navRef: c } = (0, tr.tw)(),
+          { ref: l, navRef: c } = (0, ir.tw)(),
           m = (0, Z.Ue)(i, l);
         return n.createElement(
           a.Z,
@@ -43239,7 +43262,7 @@
             a.Z,
             {
               className: (0, u.A)(
-                at().GamepadDialogContent_InnerWidth,
+                ot().GamepadDialogContent_InnerWidth,
                 "DialogContent_InnerWidth",
               ),
             },
@@ -50853,22 +50876,23 @@
         $w: () => c.$w,
         $z: () => c.$z,
         A0: () => u,
+        E3: () => w,
         Hq: () => c.Hq,
-        NT: () => B,
+        NT: () => y,
         Nm: () => c.Nm,
         PP: () => p,
         TG: () => g,
         TW: () => c.TW,
         Yp: () => b,
         _l: () => c._l,
-        bi: () => M,
+        bi: () => C,
         c9: () => m,
         cc: () => c.cc,
-        l4: () => C,
+        l4: () => S,
         lQ: () => c.lQ,
         oW: () => _,
-        pN: () => S,
-        pf: () => v,
+        pN: () => v,
+        pf: () => R,
         um: () => h,
         vl: () => c.vl,
         we: () => d,
@@ -50999,14 +51023,14 @@
         }
       }
       function m(e) {
-        return null != v.LocalizeString(e, !0);
+        return null != R.LocalizeString(e, !0);
       }
       function d(e, ...t) {
-        let r = v.LocalizeString(e);
-        return void 0 === r ? e : w(r, ...t);
+        let r = R.LocalizeString(e);
+        return void 0 === r ? e : B(r, ...t);
       }
       function p(e, ...t) {
-        let r = v.LocalizeString(e);
+        let r = R.LocalizeString(e);
         if (void 0 === r) return e;
         let n,
           s = [],
@@ -51025,7 +51049,7 @@
           : p(e + "_Plural", t.toLocaleString(), ...r);
       }
       function _(e, ...t) {
-        let r = v.LocalizeIfToken(e);
+        let r = R.LocalizeIfToken(e);
         return void 0 === r ? e : f(r, ...t);
       }
       function h(e, t, ...r) {
@@ -51055,7 +51079,10 @@
       function b(e, t, ...r) {
         return 1 === t || "1" === t ? d(e, t, ...r) : d(e + "_Plural", t, ...r);
       }
-      function w(e, ...t) {
+      function w(e, t, ...r) {
+        return 1 === t ? d(e, ...r) : d(e + "_Plural", ...r);
+      }
+      function B(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
@@ -51066,7 +51093,7 @@
               return e;
             }));
       }
-      class B {
+      class y {
         static Set(e, t, r) {
           if (e.length <= t) {
             if (t >= 31) return e;
@@ -51079,12 +51106,12 @@
         }
         static GetWithFallback(e, t) {
           if (e) {
-            return B.Get(e, t) || B.Get(e, u.GetELanguageFallback(t));
+            return y.Get(e, t) || y.Get(e, u.GetELanguageFallback(t));
           }
           return null;
         }
       }
-      const y = {
+      const M = {
           english: "en",
           german: "de",
           french: "fr",
@@ -51118,7 +51145,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        M = {
+        C = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -51150,10 +51177,10 @@
           "vi-VN": 28,
           "id-ID": 30,
         };
-      function C() {
-        return y[a.TS.LANGUAGE] || null;
+      function S() {
+        return M[a.TS.LANGUAGE] || null;
       }
-      function S(e) {
+      function v(e) {
         let t,
           r = new Promise((e) => (t = e)),
           i = Array(e.length),
@@ -51174,8 +51201,8 @@
           r
         );
       }
-      const v = new u();
-      window.LocalizationManager = v;
+      const R = new u();
+      window.LocalizationManager = R;
     },
     91675: (e, t, r) => {
       "use strict";
@@ -54331,7 +54358,7 @@
             r.e(2062),
             r.e(8310),
             r.e(7333),
-          ]).then(r.bind(r, 10050)),
+          ]).then(r.bind(r, 87669)),
         ),
         ct = n.lazy(() =>
           Promise.all([
