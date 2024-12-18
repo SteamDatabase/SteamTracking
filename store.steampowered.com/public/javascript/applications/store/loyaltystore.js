@@ -10610,17 +10610,7 @@
           {
             title: (0, g.we)("#ToolTip_CopyLinkToClipboard"),
             className: (0, x.A)(fe.Button, r),
-            onClick: () =>
-              (() => {
-                const e = document.createElement("input");
-                (e.value = t),
-                  (e.className = fe.HiddenInput),
-                  document.body.appendChild(e),
-                  e.select(),
-                  e.ownerDocument.execCommand("copy"),
-                  document.body.removeChild(e),
-                  a(!0);
-              })(),
+            onClick: () => (a(!0), void navigator.clipboard.writeText(t)),
           },
           s.createElement(ue.qY, {
             ...i,

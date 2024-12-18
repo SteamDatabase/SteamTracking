@@ -5478,7 +5478,7 @@
                   link: t,
                   url: t,
                   subject: (0, g.we)("#YIR_ShareModal_MobileSubject"),
-                  message: (0, g.we)("#YIR_ShareModal_MobileMessage"),
+                  message: t,
                   title: (0, g.we)("#YIR_ShareModal_MobileMessage"),
                 };
                 e.postMessage(JSON.stringify(a));
