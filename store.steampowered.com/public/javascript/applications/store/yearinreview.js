@@ -1753,66 +1753,66 @@
       }
       var C = a(19719);
       function w(e, t, a, n) {
-        return N(e, t, a).map((a) => {
-          if (a.relative_playtime_percentagex100) {
-            let e = 0;
-            return (
-              (e =
-                "demo" == t || "playtest" == t
-                  ? n > 0
-                    ? (100 * a.relative_playtime_percentagex100 * 100) / n
-                    : 0
-                  : a.relative_playtime_percentagex100),
-              {
+        const { rgRankings: r, nTotalResultCount: s } = N(e, t, a),
+          l = r.map((a) => {
+            if (a.relative_playtime_percentagex100) {
+              let e = 0;
+              return (
+                (e =
+                  "demo" == t || "playtest" == t
+                    ? n > 0
+                      ? (100 * a.relative_playtime_percentagex100 * 100) / n
+                      : 0
+                    : a.relative_playtime_percentagex100),
+                {
+                  appid: a.appid,
+                  parent_appid: a.parent_appid,
+                  strPercentage: I(e),
+                }
+              );
+            }
+            const r = e
+              .GetRawStats()
+              .playtime_stats.games.findIndex((e) => e.appid == a.appid);
+            if (r >= 0) {
+              const s = (function (e, t, a) {
+                const n = a.stats.total_playtime_percentagex100,
+                  r = `${e}_playtime_percentagex100`,
+                  s = a.relative_game_stats[r];
+                return (0, C.OQ)((s * n) / t, 0, 1e4);
+              })(t, n, e.GetRawStats().playtime_stats.games[r]);
+              return {
                 appid: a.appid,
                 parent_appid: a.parent_appid,
-                strPercentage: I(e),
-              }
-            );
-          }
-          const r = e
-            .GetRawStats()
-            .playtime_stats.games.findIndex((e) => e.appid == a.appid);
-          if (r >= 0) {
-            const s = (function (e, t, a) {
-              const n = a.stats.total_playtime_percentagex100,
-                r = `${e}_playtime_percentagex100`,
-                s = a.relative_game_stats[r];
-              return (0, C.OQ)((s * n) / t, 0, 1e4);
-            })(t, n, e.GetRawStats().playtime_stats.games[r]);
-            return {
-              appid: a.appid,
-              parent_appid: a.parent_appid,
-              strPercentage: I(s),
-            };
-          }
-          return { appid: a.appid };
-        });
+                strPercentage: I(s),
+              };
+            }
+            return { appid: a.appid };
+          });
+        return { nTotalResultCount: s, rgResults: l };
       }
       function N(e, t, a) {
-        if ("demo" == t)
-          return e
-            .GetDemoByPlaytime()
-            .slice(0, a)
-            .map((e) => ({
-              appid: e.appid,
-              parent_appid: e.parent_appid,
-              relative_playtime_percentagex100: e.total_playtime_percentagex100,
-            }));
-        if ("playtest" == t)
-          return e
-            .GetPlaytestByPlaytime()
-            .slice(0, a)
-            .map((e) => ({
-              appid: e.appid,
-              parent_appie: e.parent_appid,
-              relative_playtime_percentagex100: e.total_playtime_percentagex100,
-            }));
+        if ("demo" == t || "playtest" == t) {
+          const n =
+            "demo" == t ? e.GetDemoByPlaytime() : e.GetPlaytestByPlaytime();
+          return {
+            nTotalResultCount: n.length,
+            rgRankings: n
+              .slice(0, a)
+              .map((e) => ({
+                appid: e.appid,
+                parent_appid: e.parent_appid,
+                relative_playtime_percentagex100:
+                  e.total_playtime_percentagex100,
+              })),
+          };
+        }
         const n = `${t}_ranking`,
-          r = e
-            .GetRawStats()
-            .playtime_stats.game_rankings[n]?.rankings.slice(0, a);
-        return r || [];
+          r = e.GetRawStats().playtime_stats.game_rankings[n]?.rankings;
+        return {
+          nTotalResultCount: r?.length ?? 0,
+          rgRankings: r?.slice(0, a) || [],
+        };
       }
       function f(e, t) {
         switch (t) {
@@ -1992,16 +1992,19 @@
               e.playtime_stats.games.forEach((e) =>
                 this.m_mapGameStats.set(e.appid, e),
               );
-            const t = (function (e, t, a) {
-                const n = N(e, t),
-                  r = new Set(n.map((e) => e.appid).slice(0, a));
-                return e
-                  .GetRawStats()
-                  .playtime_stats.games.filter((e) => r.has(e.appid))
-                  .sort((e, a) => {
-                    const n = `${t}_rank`;
-                    return e.playtime_ranks[n] - a.playtime_ranks[n];
-                  });
+            const { rgResults: t } = (function (e, t, a) {
+                const { rgRankings: n, nTotalResultCount: r } = N(e, t),
+                  s = new Set(n.map((e) => e.appid).slice(0, a));
+                return {
+                  rgResults: e
+                    .GetRawStats()
+                    .playtime_stats.games.filter((e) => s.has(e.appid))
+                    .sort((e, a) => {
+                      const n = `${t}_rank`;
+                      return e.playtime_ranks[n] - a.playtime_ranks[n];
+                    }),
+                  nTotalResultCount: r,
+                };
               })(this, "overall", 8),
               a = t.map((e) => e.appid);
             (this.m_rgTopGameMonthsChartIdsAndRanks = a.map((e, t) => ({
@@ -2563,21 +2566,25 @@
             title: l,
             subTitle: i,
             disclaimer: o,
+            subTitleTokenIfMax: m,
           } = e,
-          m = a.GetRawStats(),
+          c = a.GetRawStats(),
           {
-            nTotalGames: c,
-            nTotalSessions: d,
-            nTotalPercentage: u,
-          } = (0, n.useMemo)(() => G(m, t), [m, t]),
-          _ = (0, n.useMemo)(() => w(a, t, 5, u), [a, t, u]),
-          p = (0, n.useMemo)(
-            () => _.map((e) => e.parent_appid || e.appid),
-            [_],
+            nTotalGames: d,
+            nTotalSessions: u,
+            nTotalPercentage: _,
+          } = (0, n.useMemo)(() => G(c, t), [c, t]),
+          { rgResults: p, nTotalResultCount: h } = (0, n.useMemo)(
+            () => w(a, t, 5, _),
+            [a, t, _, 5],
           ),
-          [h, E] = (0, n.useState)(_[0].parent_appid || _[0].appid);
-        (0, _e.zX)(p, Boolean("vr" == t) ? ye : O);
-        const y =
+          E = (0, n.useMemo)(
+            () => p.map((e) => e.parent_appid || e.appid),
+            [p],
+          ),
+          [y, S] = (0, n.useState)(p[0].parent_appid || p[0].appid);
+        (0, _e.zX)(E, Boolean("vr" == t) ? ye : O);
+        const A =
           "overall" === t ||
           "controller" === t ||
           "demo" == t ||
@@ -2588,14 +2595,14 @@
           n.createElement("div", { className: Ee().SectionTitle }, l),
           Boolean(s) &&
             n.createElement("img", { src: s, className: Ee().BackgroundImage }),
-          Boolean("vr" === t) && n.createElement(Ae, { appid: h }),
+          Boolean("vr" === t) && n.createElement(Ae, { appid: y }),
           n.createElement(
             "div",
             { className: (0, de.A)(v().YearInReviewContent, Ee().StatsRow) },
             n.createElement(
               "div",
               { className: Ee().StatBlock },
-              n.createElement("div", { className: Ee().BigNum }, (0, pe.Dq)(c)),
+              n.createElement("div", { className: Ee().BigNum }, (0, pe.Dq)(d)),
               n.createElement(
                 "div",
                 { className: Ee().StatDescription },
@@ -2605,23 +2612,31 @@
             n.createElement(
               "div",
               { className: Ee().StatBlock },
-              n.createElement("div", { className: Ee().BigNum }, (0, pe.Dq)(d)),
+              n.createElement("div", { className: Ee().BigNum }, (0, pe.Dq)(u)),
               n.createElement(
                 "div",
                 { className: Ee().StatDescription },
                 (0, g.we)("#YIR_NewLine_Session"),
               ),
             ),
-            Boolean(!y) &&
-              n.createElement(Ne, { percentVal: u, subToken: "#YIR_NewLine" }),
+            Boolean(!A) &&
+              n.createElement(Ne, { percentVal: _, subToken: "#YIR_NewLine" }),
           ),
           Boolean(i) &&
             n.createElement("div", { className: Ee().SectionSubTitle }, i),
+          !Boolean(i) &&
+            Boolean(m) &&
+            h > 5 &&
+            n.createElement(
+              "div",
+              { className: Ee().SectionSubTitle },
+              (0, g.we)(m, 5),
+            ),
           n.createElement("div", { className: Ee().Disclaimer }, o),
           n.createElement(Ie, {
-            rgGamePercentages: _,
+            rgGamePercentages: p,
             category: t,
-            fnOnHoverApp: E,
+            fnOnHoverApp: S,
           }),
         );
       }
@@ -4443,7 +4458,7 @@
             nTotalSessions: c,
             nTotalPercentage: d,
           } = (0, n.useMemo)(() => G(s, "deck"), [s]),
-          u = (0, n.useMemo)(() => w(t, "deck", 5, d), [t, d]),
+          { rgResults: u } = (0, n.useMemo)(() => w(t, "deck", 5, d), [t, d]),
           _ = Number(Math.round(d / 100).toFixed(0));
         let p = l("#YIR_TopGames_deck_new");
         _ > 50 && (p = l("#YIR_TopGames_deck_mostly"));
@@ -4688,7 +4703,7 @@
                 category: "demo",
                 userYearInReview: t,
                 title: a("#YIR_TopGames_demo"),
-                subTitle: void 0,
+                subTitleTokenIfMax: "#YIR_TopGames_demoMax",
               }),
             ),
           Boolean(s > Vt) &&
@@ -4699,7 +4714,7 @@
                 category: "playtest",
                 userYearInReview: t,
                 title: a("#YIR_TopGames_playtest"),
-                subTitle: void 0,
+                subTitleTokenIfMax: "#YIR_TopGames_playtestMax",
               }),
             ),
         );
