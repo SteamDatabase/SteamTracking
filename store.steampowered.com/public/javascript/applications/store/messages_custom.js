@@ -249,6 +249,7 @@
         PlayBehaviorContainer: "-giyIxoOslRPNdoAe4UfS",
         ProgressBarFilled: "-A2NwyQKoK0uC_zGHLI1N",
         ProgressBarFilledGradient: "_2l9tBf3n2J5llJPTTog4kT",
+        GameNewnessTitle: "_2R5I8QSZYVS2f-anYNfg-3",
         NewActive: "_2GcnpaqNIZSrMhYtfj_-y0",
         DataBoxArrow: "_1N16zDKyMMVJzQKmHNX50G",
         Background: "XZe2fdvY-JGoNhdNV-l1x",

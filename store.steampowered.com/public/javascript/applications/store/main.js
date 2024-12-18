@@ -49957,7 +49957,9 @@
       function g(e) {
         const { divProps: t, tooltipProps: r } = f({
           ...e,
-          toolTipContent: i.createElement(w, null, b(e.toolTipContent)),
+          toolTipContent: e.toolTipContent
+            ? i.createElement(w, null, b(e.toolTipContent))
+            : null,
         });
         return i.createElement(
           s.ml,
@@ -49989,7 +49991,9 @@
         const { children: t } = e,
           { divProps: r, tooltipProps: n } = f({
             ...e,
-            toolTipContent: i.createElement(w, null, b(e.toolTipContent)),
+            toolTipContent: e.toolTipContent
+              ? i.createElement(w, null, b(e.toolTipContent))
+              : null,
           });
         return i.createElement(
           i.Fragment,
