@@ -1,9 +1,0 @@
-#OfflineError
-{
-	visibility: collapse;
-}
-
-.ZeroFriends #OfflineError
-{
-	visibility: visible;
-}

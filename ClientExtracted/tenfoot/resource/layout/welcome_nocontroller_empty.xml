@@ -1,9 +1,0 @@
-<root>
-	<styles>
-		<include src="file://{resources}/styles/steamstyles.css" />
-
-	</styles>
-
-	<Welcome_NoController class="Welcome_NoController" defaultfocus="DummyInput" tabindex="auto" selectionpos="auto">
-	</Welcome_NoController>
-</root>

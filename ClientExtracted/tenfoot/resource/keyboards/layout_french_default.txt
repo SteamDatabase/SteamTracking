@@ -1,7 +1,0 @@
-#TextInput_CAPS		ABCDEFGHIJKLMNOPQRSTUVWXYZ?!;\\&_
-#TextInput_LETTERS	abcdefghijklmnopqrstuvwxyz,.:/@-
-#TextInput_NUMBERS	1234567890*+€$~⏎'"«»={##}%^<>[]\{}()
-#TextInput_SPECIAL	àÀâÂäÄæÆçÇéÉèÈêÊëËîÎïÏôÔœŒùÙûÛüÜ
-#TextInput_NUMBERSONLY	1234567890.
-#TextInput_PHONENUMBER	1234567890()-
-#TextInput_STEAMCODE	BCDFGHJKMNPQRTVWXY\0\090\0\056781234
