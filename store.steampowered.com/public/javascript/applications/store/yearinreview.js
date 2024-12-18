@@ -5342,7 +5342,11 @@
                   ),
                   o.TS.IN_MOBILE_WEBVIEW
                     ? n.createElement(Ga, { shareUrl: `${p}${u[l].url_path}` })
-                    : n.createElement(fa, { imageUrl: `${p}${u[l].url_path}` }),
+                    : o.TS.IN_CLIENT
+                      ? null
+                      : n.createElement(fa, {
+                          imageUrl: `${p}${u[l].url_path}`,
+                        }),
                   n.createElement(
                     "div",
                     { className: ra.CarouselHintCtn },
