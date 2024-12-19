@@ -61,12 +61,12 @@
                   s.createElement("img", {
                     src: n.GetAssets().GetSmallCapsuleURL(),
                   }),
-                ),
-                s.createElement(
-                  "div",
-                  { className: _().StoreItemDescription },
-                  n.GetShortDescription(),
-                  " ",
+                  s.createElement(
+                    "div",
+                    { className: _().StoreItemDescription },
+                    n.GetShortDescription(),
+                    " ",
+                  ),
                 ),
               ),
             )

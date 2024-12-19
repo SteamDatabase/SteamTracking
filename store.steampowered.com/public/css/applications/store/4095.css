@@ -5115,6 +5115,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 @container text-content-ctn (width < 320px) {
   ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7 {
@@ -5141,6 +5142,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 }
 ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7 ._2nuoOi5kC2aUI12z85PneA {
   position: relative;
+  margin-right: 4px;
 }
 ._1mQuBR72WbbtI6QBCoYcYG {
   display: flex;

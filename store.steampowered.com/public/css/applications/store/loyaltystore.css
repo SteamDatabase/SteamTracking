@@ -4925,6 +4925,10 @@ body.v6.rewards .ModalPosition_Content {
 .Y6hHMH1PrvTkz6wc6Rc-v._2-NxqySOAFFzeprxASfXYc ._2j7g0UlzdfXVgkOz4iydt1 {
   align-self: center;
 }
+.Y6hHMH1PrvTkz6wc6Rc-v._2-NxqySOAFFzeprxASfXYc ._1HzHvBguoy2sNlwLSQPmdU {
+  flex-direction: column;
+  gap: 15px;
+}
 .Y6hHMH1PrvTkz6wc6Rc-v ._2ArAmceinbSgNoxciu3i-2 {
   margin: 10px 0 20px 0;
   padding: 5px;
@@ -5281,7 +5285,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 ._2SDKfrqTPu-6Cyh1KcRqZI .YXQsbt1_RCyeLaIHG47aX {
   width: 100%;
-  max-height: 415px;
+  max-height: 295px;
   height: min(45vw, 35vh);
 }
 ._2SDKfrqTPu-6Cyh1KcRqZI .YytmxxIT6PfZS0iMxOr0W {
@@ -5305,8 +5309,12 @@ body.v6.rewards .ModalPosition_Content {
   background-position: center;
   background-size: contain;
   position: absolute;
-  top: 5%;
+  top: 8%;
   left: 0;
+}
+._2SDKfrqTPu-6Cyh1KcRqZI ._1SE6RzLd2uOIOmpEupLi6W._28UOJQXe7pSCeY7yvqg4Kk {
+  background-repeat: repeat;
+  background-size: 25%;
 }
 ._2SDKfrqTPu-6Cyh1KcRqZI ._3_O3dbYfW327CvfPFPbuqB {
   width: 100%;

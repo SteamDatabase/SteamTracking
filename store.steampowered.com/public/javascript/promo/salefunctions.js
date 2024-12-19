@@ -1398,6 +1398,8 @@ function ToggleAltHeader()
 				$J('.page_background_holder').css('background-image', 'url(' + g_rgAltBackgroundSrc.strPageBackgroundURL + ')');
 				$J('.fullscreen-bg__video').get( 0 ).play();
 			}
+
+			$J( '.page_background_overlay' ).addClass( 'alternate' );
 		}
 		else
 		{

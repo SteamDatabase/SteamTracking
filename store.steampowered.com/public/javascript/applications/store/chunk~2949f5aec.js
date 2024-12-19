@@ -85,15 +85,15 @@
     42780: (e, t, n) => {
       "use strict";
       n.d(t, { K0: () => i, OJ: () => a, R8: () => s });
-      var o = n(81393),
-        r = n(90626);
+      var r = n(81393),
+        o = n(90626);
       class s {
         reactNodes = [];
         AppendText(e, t = !1) {
           e.length &&
             (t
               ? this.reactNodes.push(
-                  r.createElement(
+                  o.createElement(
                     "span",
                     {
                       "data-copytext": "",
@@ -115,7 +115,7 @@
       class i {
         m_decoratedAccumulator;
         constructor(e) {
-          (0, o.w)(e, "decorated accumulator cannot be null"),
+          (0, r.w)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
         }
         AppendText(e, t = !1) {
@@ -142,7 +142,7 @@
             e = t.indexOf("\n")
           )
             n.push(t.substr(0, e)),
-              n.push(r.createElement("br")),
+              n.push(o.createElement("br")),
               (t = t.substr(e + 1));
           t.length && n.push(t),
             n.forEach((e) => {
@@ -154,8 +154,8 @@
     99376: (e, t, n) => {
       "use strict";
       n.d(t, { B: () => l });
-      var o = n(22837),
-        r = n(90626),
+      var r = n(22837),
+        o = n(90626),
         s = n(42780);
       class i {
         type = 0;
@@ -176,86 +176,86 @@
           (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !1) {
-          const o = (function (e, t) {
+          const r = (function (e, t) {
             const n = [];
-            let o = new i(),
-              r = !1,
+            let r = new i(),
+              o = !1,
               s = !1,
               a = !1;
             for (let i = 0; i < e.length; i++) {
               const l = e[i];
-              switch (o.type) {
+              switch (r.type) {
                 case 0:
                   "[" == l
-                    ? ((o.type = 2), (s = !0))
-                    : ((o.type = 1), "\\" == l && t ? (r = !r) : (o.text += l));
+                    ? ((r.type = 2), (s = !0))
+                    : ((r.type = 1), "\\" == l && t ? (o = !o) : (r.text += l));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == l && s) (o.type = 3), (o.text = ""), (s = !1);
-                  else if ("[" != l || r)
-                    if ("]" != l || r)
+                  if ("/" == l && s) (r.type = 3), (r.text = ""), (s = !1);
+                  else if ("[" != l || o)
+                    if ("]" != l || o)
                       "\\" == l && t
-                        ? ((o.text += l), (r = !r), (s = !1))
-                        : ((o.text += l), (r = !1), (s = !1));
+                        ? ((r.text += l), (o = !o), (s = !1))
+                        : ((r.text += l), (o = !1), (s = !1));
                     else {
                       const e =
-                          2 == o.type &&
-                          "noparse" == o.text.toLocaleLowerCase(),
+                          2 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase(),
                         t =
-                          3 == o.type &&
-                          "noparse" == o.text.toLocaleLowerCase();
+                          3 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase();
                       s || (a && !t)
-                        ? (o.ConvertMalformedNodeToText(), (o.text += l))
+                        ? (r.ConvertMalformedNodeToText(), (r.text += l))
                         : e
                           ? (a = !0)
                           : t && (a = !1),
-                        (o = c(n, o)),
+                        (r = c(n, r)),
                         (s = !1);
                     }
                   else
-                    o.ConvertMalformedNodeToText(), (o = c(n, o, 2)), (s = !0);
+                    r.ConvertMalformedNodeToText(), (r = c(n, r, 2)), (s = !0);
                   break;
                 case 1:
-                  "[" != l || r
+                  "[" != l || o
                     ? "\\" == l && t
-                      ? (r && (o.text += l), (r = !r))
-                      : ((o.text += l), (r = !1))
-                    : ((o = c(n, o, 2)), (s = !0));
+                      ? (o && (r.text += l), (o = !o))
+                      : ((r.text += l), (o = !1))
+                    : ((r = c(n, r, 2)), (s = !0));
               }
             }
-            0 != o.type &&
-              ((2 != o.type && 3 != o.type) || o.ConvertMalformedNodeToText(),
-              n.push(o));
+            0 != r.type &&
+              ((2 != r.type && 3 != r.type) || r.ConvertMalformedNodeToText(),
+              n.push(r));
             return n;
           })(e || "", n);
-          return this.Parse_BuildElements(o, t);
+          return this.Parse_BuildElements(r, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0);
-          const o = [],
-            r = () => (o.length < 1 ? void 0 : o[o.length - 1]),
+          const r = [],
+            o = () => (r.length < 1 ? void 0 : r[r.length - 1]),
             s = this.m_dictComponents,
             i = (e) => !(!e.tag || !s.get(e.tag)?.autocloses);
           let a = !1,
             c = !0;
-          const l = (e, r) => {
-            if (e && e.node.tag === r.text && s.get(e.node.tag)) {
-              const r = s.get(e.node.tag),
-                i = o.map((e) => e.node.tag),
+          const l = (e, o) => {
+            if (e && e.node.tag === o.text && s.get(e.node.tag)) {
+              const o = s.get(e.node.tag),
+                i = r.map((e) => e.node.tag),
                 l = { parentTags: i, tagname: e.node.tag, args: e.node.args },
-                m = t(r.Constructor, l, ...n.GetElements());
+                m = t(o.Constructor, l, ...n.GetElements());
               (n = e.accumulator),
                 Array.isArray(m)
                   ? m.forEach((e) => n.AppendNode(e))
                   : n.AppendNode(m),
-                (a = !!r.skipFollowingNewline),
+                (a = !!o.skipFollowingNewline),
                 (c = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 n.GetElements().forEach((e) => t.AppendNode(e)),
-                t.AppendText("[/" + r.text + "]", !1),
+                t.AppendText("[/" + o.text + "]", !1),
                 (n = t),
                 (c = e.bWrapTextForCopying);
             }
@@ -268,33 +268,33 @@
               } else if (2 == e.type) {
                 const t = s.get(e.tag);
                 if (t) {
-                  const i = r();
+                  const i = o();
                   if (void 0 !== i) {
                     const t = s.get(i.node.tag);
                     t &&
                       t.autocloses &&
                       e.tag === i.node.tag &&
-                      l(o.pop(), i.node);
+                      l(r.pop(), i.node);
                   }
-                  o.push({ accumulator: n, node: e, bWrapTextForCopying: c }),
+                  r.push({ accumulator: n, node: e, bWrapTextForCopying: c }),
                     (n = this.m_fnAccumulatorFactory(e)),
                     (a = !!t.skipInternalNewline),
                     (c = t.allowWrapTextForCopying ?? !1);
-                } else n.AppendText("[" + e.text + "]", 0 == o.length);
+                } else n.AppendText("[" + e.text + "]", 0 == r.length);
               } else if (3 == e.type) {
-                for (; r() && r().node.tag !== e.text && i(r().node); ) {
-                  const e = o.pop();
+                for (; o() && o().node.tag !== e.text && i(o().node); ) {
+                  const e = r.pop();
                   l(e, e.node);
                 }
-                if (r()?.node.tag == e.text) {
-                  const t = o.pop();
+                if (o()?.node.tag == e.text) {
+                  const t = r.pop();
                   l(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == o.length);
+                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
               }
             });
-            o.length > 0;
+            r.length > 0;
           ) {
-            const e = o.pop();
+            const e = r.pop();
             l(e, e.node);
           }
           return n.GetElements();
@@ -311,90 +311,90 @@
               if (!e || e.length < 1) return {};
               const t = {};
               let n = "",
-                o = "",
-                r = 0,
+                r = "",
+                o = 0,
                 s = 0;
-              "=" == e[0] && (r = 2);
+              "=" == e[0] && (o = 2);
               let i = !1;
               for (s++; s < e.length; s++) {
                 const a = e[s];
                 let c = !0,
                   l = !1;
-                switch (r) {
+                switch (o) {
                   case 0:
                     if ("=" == a) return {};
                     if (" " == a) continue;
-                    r = 1;
+                    o = 1;
                     break;
                   case 1:
                     ("=" != a && " " != a) ||
                       i ||
-                      (" " == a ? ((r = 0), (l = !0)) : (r = 2), (c = !1));
+                      (" " == a ? ((o = 0), (l = !0)) : (o = 2), (c = !1));
                     break;
                   case 2:
                     " " == a
-                      ? ((r = 0), (c = !1), (l = !0))
+                      ? ((o = 0), (c = !1), (l = !0))
                       : '"' == a
-                        ? ((r = 4), (c = !1))
-                        : (r = 3);
+                        ? ((o = 4), (c = !1))
+                        : (o = 3);
                     break;
                   case 3:
                   case 4:
-                    ((" " == a && 4 != r && !i) ||
-                      ('"' == a && 4 == r && !i)) &&
-                      ((r = 0), (c = !1), (l = !0));
+                    ((" " == a && 4 != o && !i) ||
+                      ('"' == a && 4 == o && !i)) &&
+                      ((o = 0), (c = !1), (l = !0));
                 }
                 if (c)
                   if ("\\" != a || i)
-                    if (((i = !1), 1 == r)) n += a;
+                    if (((i = !1), 1 == o)) n += a;
                     else {
-                      if (3 != r && 4 != r)
+                      if (3 != o && 4 != o)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + r,
+                          "Not expecting to accumulate buffer in state " + o,
                         );
-                      o += a;
+                      r += a;
                     }
                   else i = !0;
-                l && ((t[n] = o), (n = ""), (o = ""));
+                l && ((t[n] = r), (n = ""), (r = ""));
               }
-              0 != r && (t[n] = o);
+              0 != o && (t[n] = r);
               return t;
             })(n);
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        const o = new i();
-        return (o.type = n), o;
+        const r = new i();
+        return (r.type = n), r;
       }
       class l extends a {
         m_renderingLanguage;
         constructor(e, t, n) {
           super(e, t ?? (() => new s.R8())),
             (this.m_renderingLanguage =
-              "string" == typeof n ? (0, o.sf)(n) : n);
+              "string" == typeof n ? (0, r.sf)(n) : n);
         }
         UpdateOverrideLanguage(e) {
           this.m_renderingLanguage = e;
         }
         ParseBBCode(e, t, n = !1) {
-          let o = 0;
+          let r = 0;
           const s = this.Parse(
             e,
             (e, n, ...s) =>
-              r.createElement(
+              o.createElement(
                 e,
                 {
                   ...n,
                   context: t,
                   language: this.m_renderingLanguage,
-                  key: "bbnode_" + o++,
+                  key: "bbnode_" + r++,
                 },
                 ...s,
               ),
             n,
           );
           return s.length > 1
-            ? r.createElement(r.Fragment, null, ...s)
+            ? o.createElement(o.Fragment, null, ...s)
             : 1 == s.length
               ? s[0]
               : null;
@@ -404,12 +404,12 @@
     65739: (e, t, n) => {
       "use strict";
       n.d(t, { s: () => a });
-      var o = n(78327),
-        r = n(14947),
+      var r = n(78327),
+        o = n(14947),
         s = n(41735),
         i = n.n(s);
       const a = new (class {
-        m_mapEmoticonHovers = r.sH.map();
+        m_mapEmoticonHovers = o.sH.map();
         m_inflightRequests = {};
         Get(e) {
           return this.m_mapEmoticonHovers.has(e) || this.m_inflightRequests[e]
@@ -420,7 +420,7 @@
           return !!this.m_mapEmoticonHovers.get(e);
         }
         async Load(e) {
-          const t = `${o.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(o.TS.LANGUAGE)}&origin=${(0, o.xv)()}`;
+          const t = `${r.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(r.TS.LANGUAGE)}&origin=${(0, r.xv)()}`;
           this.m_inflightRequests[e] = !0;
           try {
             const { data: n } = await i().get(t);
@@ -445,9 +445,9 @@
     73022: (e, t, n) => {
       "use strict";
       n.d(t, { Q: () => u, h: () => d });
-      var o = n(34629),
-        r = n(41735),
-        s = n.n(r),
+      var r = n(34629),
+        o = n(41735),
+        s = n.n(o),
         i = n(90626),
         a = n(68797),
         c = n(6144),
@@ -481,21 +481,21 @@
             const n =
                 m.TS.STORE_BASE_URL +
                 "saleaction/ajaxgetusergiveawayregistration",
-              o = { giveaway_name: e, sessionid: m.TS.SESSIONID },
-              r = await s().get(n, { params: o, withCredentials: !0 });
+              r = { giveaway_name: e, sessionid: m.TS.SESSIONID },
+              o = await s().get(n, { params: r, withCredentials: !0 });
             if (
-              200 == r?.status &&
-              1 == r?.data?.success &&
-              r?.data?.registration
+              200 == o?.status &&
+              1 == o?.data?.success &&
+              o?.data?.registration
             )
               return (
-                this.m_mapRegistrations.set(e, r?.data?.registration),
+                this.m_mapRegistrations.set(e, o?.data?.registration),
                 this.GetRegistrationChangeCallback(e).Dispatch(
-                  r?.data?.registration,
+                  o?.data?.registration,
                 ),
-                r?.data?.registration
+                o?.data?.registration
               );
-            t = (0, a.H)(r);
+            t = (0, a.H)(o);
           } catch (e) {
             t = (0, a.H)(e);
           }
@@ -526,21 +526,21 @@
             const n =
                 m.TS.STORE_BASE_URL +
                 "saleaction/ajaxupdateusergiveawayregistration",
-              o = { giveaway_name: e, sessionid: m.TS.SESSIONID },
-              r = await s().get(n, { params: o, withCredentials: !0 });
+              r = { giveaway_name: e, sessionid: m.TS.SESSIONID },
+              o = await s().get(n, { params: r, withCredentials: !0 });
             if (
-              200 == r?.status &&
-              1 == r?.data?.success &&
-              r?.data?.registration
+              200 == o?.status &&
+              1 == o?.data?.success &&
+              o?.data?.registration
             )
               return (
-                this.m_mapRegistrations.set(e, r?.data?.registration),
+                this.m_mapRegistrations.set(e, o?.data?.registration),
                 this.GetRegistrationChangeCallback(e).Dispatch(
-                  r?.data?.registration,
+                  o?.data?.registration,
                 ),
-                r?.data?.registration
+                o?.data?.registration
               );
-            t = (0, a.H)(r);
+            t = (0, a.H)(o);
           } catch (e) {
             t = (0, a.H)(e);
           }
@@ -582,13 +582,13 @@
       function u() {
         return { fnCreateRegistration: p.Get().CreateRegistration };
       }
-      (0, o.Cg)([l.oI], p.prototype, "CreateRegistration", null);
+      (0, r.Cg)([l.oI], p.prototype, "CreateRegistration", null);
     },
     23649: (e, t, n) => {
       "use strict";
       n.d(t, { h: () => c });
-      var o = n(99376),
-        r = n(90626),
+      var r = n(99376),
+        o = n(90626),
         s = n(59952),
         i = n(42780);
       function a(e) {
@@ -596,23 +596,23 @@
       }
       function c(e) {
         const { text: t, languageOverride: n } = e,
-          [i] = (0, r.useState)(
-            new o.B(new Map([...Array.from(s.W4.entries())]), a, n),
+          [i] = (0, o.useState)(
+            new r.B(new Map([...Array.from(s.W4.entries())]), a, n),
           );
-        return r.createElement(r.Fragment, null, i.ParseBBCode(t, {}));
+        return o.createElement(o.Fragment, null, i.ParseBBCode(t, {}));
       }
     },
     31698: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Q4: () => M,
-        nl: () => H,
-        iY: () => J,
+        Q4: () => U,
+        nl: () => R,
+        iY: () => z,
         CE: () => Z,
         iD: () => ne,
       });
-      var o = n(34629),
-        r = n(14947),
+      var r = n(34629),
+        o = n(14947),
         s = n(75844),
         i = n(90626),
         a = n(6336),
@@ -658,12 +658,12 @@
       function E(e, t) {
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
-      var A = n(78327),
-        S = n(33737),
+      var S = n(78327),
+        f = n(33737),
         g = n(76217),
-        f = n(88006),
-        C = n(19418);
-      class _ extends i.Component {
+        C = n(88006),
+        _ = n(19418);
+      class v extends i.Component {
         constructor(e) {
           super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
         }
@@ -671,14 +671,14 @@
           const { config: e } = this.props,
             { activeIndex: t } = this.state,
             n = e[t] && e[t].renderContent ? e[t].renderContent() : null,
-            o = e.length > 1,
-            r = o
+            r = e.length > 1,
+            o = r
               ? ({ detail: { button: t } }) => {
-                  t === f.pR.BUMPER_LEFT
+                  t === C.pR.BUMPER_LEFT
                     ? this.setState({
                         activeIndex: Math.max(0, this.state.activeIndex - 1),
                       })
-                    : t === f.pR.BUMPER_RIGHT &&
+                    : t === C.pR.BUMPER_RIGHT &&
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
@@ -689,8 +689,8 @@
               : void 0;
           return i.createElement(
             g.Z,
-            { className: C.Picker, onButtonDown: r },
-            o && i.createElement(v, null, this.RenderTabs()),
+            { className: _.Picker, onButtonDown: o },
+            r && i.createElement(k, null, this.RenderTabs()),
             n,
           );
         }
@@ -709,28 +709,28 @@
           });
         }
       }
-      function v(e) {
+      function k(e) {
         return i.createElement(
           g.Z,
-          { className: C.Tabs, "flow-children": "row" },
+          { className: _.Tabs, "flow-children": "row" },
           e.children,
         );
       }
-      function k(e) {
-        return i.createElement("div", { className: C.Content }, e.children);
+      function A(e) {
+        return i.createElement("div", { className: _.Content }, e.children);
       }
       function w(e) {
-        const { active: t, children: n, onClick: o } = e;
+        const { active: t, children: n, onClick: r } = e;
         return i.createElement(
           g.Z,
           {
-            className: (0, d.A)(C.Tab, t && C.Active),
-            focusClassName: C.Focus,
-            onActivate: o,
+            className: (0, d.A)(_.Tab, t && _.Active),
+            focusClassName: _.Focus,
+            onActivate: r,
           },
           i.createElement(
             "div",
-            { className: (0, d.A)(C.TabContent, t && C.Active) },
+            { className: (0, d.A)(_.TabContent, t && _.Active) },
             n,
           ),
         );
@@ -739,19 +739,19 @@
         const {
           items: t,
           renderItem: n,
-          onItemSelect: o,
-          keyExtractor: r,
+          onItemSelect: r,
+          keyExtractor: o,
           renderEmpty: s,
         } = e;
         let a = t.map((e, s) =>
           i.createElement(
             g.Z,
             {
-              key: r(e),
-              className: C.Item,
-              onActivate: () => o(t[s]),
+              key: o(e),
+              className: _.Item,
+              onActivate: () => r(t[s]),
               autoFocus: 0 === s,
-              focusClassName: C.Focus,
+              focusClassName: _.Focus,
             },
             n(t[s]),
           ),
@@ -760,78 +760,78 @@
           0 === t.length && s && (a = s()),
           i.createElement(
             g.Z,
-            { "flow-children": "grid", className: C.ItemList },
+            { "flow-children": "grid", className: _.ItemList },
             a,
           )
         );
       }
       function N(e) {
-        const { title: t, onFilterChange: n, filter: o, onSubmit: r, ...s } = e;
+        const { title: t, onFilterChange: n, filter: r, onSubmit: o, ...s } = e;
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            k,
+            A,
             null,
-            i.createElement(y, { title: t }, i.createElement(I, { ...s })),
+            i.createElement(x, { title: t }, i.createElement(I, { ...s })),
           ),
-          i.createElement(L, { value: o, onChange: n, onSubmit: r }),
+          i.createElement(y, { value: r, onChange: n, onSubmit: o }),
         );
       }
       function P(e) {
-        const { onFilterChange: t, filter: n, sections: o, title: r } = e;
+        const { onFilterChange: t, filter: n, sections: r, title: o } = e;
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            k,
+            A,
             null,
-            r && i.createElement("div", { className: C.SectionedPageTitle }, r),
-            o.map(({ title: e, ...t }) =>
+            o && i.createElement("div", { className: _.SectionedPageTitle }, o),
+            r.map(({ title: e, ...t }) =>
               i.createElement(
-                y,
+                x,
                 { title: e, key: e },
                 i.createElement(I, { ...t }),
               ),
             ),
           ),
-          i.createElement(L, { value: n, onChange: t }),
-        );
-      }
-      function y(e) {
-        return i.createElement(
-          "div",
-          { className: C.Section },
-          i.createElement("div", { className: C.SectionTitle }, e.title),
-          i.createElement("div", { className: C.SectionContent }, e.children),
-        );
-      }
-      function L(e) {
-        const { value: t, onChange: n, onSubmit: o } = e;
-        return i.createElement(
-          "div",
-          { className: C.FilterInputContainer },
-          i.createElement(S.pd, {
-            type: "text",
-            placeholder: "Search...",
-            className: C.FilterInput,
-            value: t,
-            onChange: (e) => n(e.target.value),
-            onSubmit: o,
-          }),
+          i.createElement(y, { value: n, onChange: t }),
         );
       }
       function x(e) {
+        return i.createElement(
+          "div",
+          { className: _.Section },
+          i.createElement("div", { className: _.SectionTitle }, e.title),
+          i.createElement("div", { className: _.SectionContent }, e.children),
+        );
+      }
+      function y(e) {
+        const { value: t, onChange: n, onSubmit: r } = e;
+        return i.createElement(
+          "div",
+          { className: _.FilterInputContainer },
+          i.createElement(f.pd, {
+            type: "text",
+            placeholder: "Search...",
+            className: _.FilterInput,
+            value: t,
+            onChange: (e) => n(e.target.value),
+            onSubmit: r,
+          }),
+        );
+      }
+      function L(e) {
         const { className: t, ...n } = e;
         return i.createElement("div", {
-          className: (0, d.A)(t, C.AddonPickerMessage),
+          className: (0, d.A)(t, _.AddonPickerMessage),
           ...n,
         });
       }
       var b = n(70646),
         T = n.n(b),
-        B = n(51272);
-      class H extends i.PureComponent {
+        H = n(51272);
+      class R extends i.PureComponent {
         state = { showHover: !1 };
         m_ref = i.createRef();
         OnMouseEnter(e) {
@@ -842,16 +842,16 @@
         }
         render() {
           const { emoticon: e, large: t, emoticonHoverStore: n } = this.props,
-            o = `:${e}:`,
-            r = t && n.BLoaded(e) ? n.Get(e).url : c.p.GetEmoticonURL(e, t);
+            r = `:${e}:`,
+            o = t && n.BLoaded(e) ? n.Get(e).url : c.p.GetEmoticonURL(e, t);
           return i.createElement(
             i.Fragment,
             null,
             i.createElement(
               m,
-              { text: o, style: "merge-adjacent" },
+              { text: r, style: "merge-adjacent" },
               i.createElement("img", {
-                src: r,
+                src: o,
                 className: (0, d.A)(T().emoticon, t ? T().large : void 0),
                 "data-emoticon": e,
                 onMouseEnter: this.OnMouseEnter,
@@ -860,7 +860,7 @@
               }),
             ),
             this.state.showHover &&
-              i.createElement(R, {
+              i.createElement(G, {
                 target: this.m_ref.current,
                 store: n,
                 emoticon: e,
@@ -868,26 +868,26 @@
           );
         }
       }
-      (0, o.Cg)([h.oI], H.prototype, "OnMouseEnter", null),
-        (0, o.Cg)([h.oI], H.prototype, "OnMouseLeave", null);
-      const R = (0, s.PA)((e) => {
-          const { target: t, store: n, emoticon: o } = e,
-            r = n.Get(o);
+      (0, r.Cg)([h.oI], R.prototype, "OnMouseEnter", null),
+        (0, r.Cg)([h.oI], R.prototype, "OnMouseLeave", null);
+      const G = (0, s.PA)((e) => {
+          const { target: t, store: n, emoticon: r } = e,
+            o = n.Get(r);
           return i.createElement(
             F,
             {
               target: t,
-              title: `:${o}:`,
-              subtitle: r && r.app_name ? r.app_name : void 0,
+              title: `:${r}:`,
+              subtitle: o && o.app_name ? o.app_name : void 0,
             },
-            i.createElement(H, {
-              emoticon: o,
+            i.createElement(R, {
+              emoticon: r,
               emoticonHoverStore: n,
               large: !0,
             }),
           );
         }),
-        F = ({ target: e, title: t, subtitle: n, children: o }) =>
+        F = ({ target: e, title: t, subtitle: n, children: r }) =>
           i.createElement(
             a.g,
             {
@@ -895,7 +895,7 @@
               style: { zIndex: 1700 },
               className: T().EmoticonHover,
             },
-            o,
+            r,
             i.createElement(
               "div",
               { className: T().Info },
@@ -911,20 +911,20 @@
               ),
             ),
           );
-      function G(e) {
+      function M(e) {
         return e.recent_emoticons;
       }
-      function U(e) {
+      function O(e) {
         return e.recent_stickers;
       }
-      function O(e) {
-        return G(e).length + U(e).length > 0;
+      function B(e) {
+        return M(e).length + O(e).length > 0;
       }
-      const M = (0, s.PA)((e) => {
+      const U = (0, s.PA)((e) => {
         const {
           emoticonStore: t,
           emoticonHoverStore: n,
-          roomEffectSettings: o,
+          roomEffectSettings: r,
           strFlairGroupID: s,
           onEmoticonSelected: a,
           onRoomEffectSelected: c,
@@ -935,7 +935,7 @@
           (0, i.useEffect)(() => {
             if (!e.is_initialized) {
               e.UpdateEmoticonList();
-              const t = (0, r.z7)(
+              const t = (0, o.z7)(
                 () => e.is_initialized,
                 () => n(e.is_initialized),
               );
@@ -946,7 +946,7 @@
         })(t);
         const m = [];
         return (
-          O(t) &&
+          B(t) &&
             m.push({
               renderTab: (e) =>
                 i.createElement(
@@ -973,7 +973,7 @@
           i.createElement(
             p.tz,
             null,
-            i.createElement(_, {
+            i.createElement(v, {
               config: [
                 ...m,
                 {
@@ -984,10 +984,10 @@
                         title: (0, u.we)("#AddonPicker_Emoticons"),
                         className: (0, d.A)(T().PickerTab, e && T().ActiveTab),
                       },
-                      i.createElement(re, null),
+                      i.createElement(oe, null),
                     ),
                   renderContent: () =>
-                    i.createElement(z, {
+                    i.createElement(W, {
                       store: t,
                       hoverStore: n,
                       onItemSelect: (e) => a(e.name),
@@ -1002,10 +1002,10 @@
                         title: (0, u.we)("#AddonPicker_Stickers"),
                         className: (0, d.A)(T().PickerTab, e && T().ActiveTab),
                       },
-                      i.createElement(oe, null),
+                      i.createElement(re, null),
                     ),
                   renderContent: () =>
-                    i.createElement(Y, {
+                    i.createElement(q, {
                       store: t,
                       onItemSelect: (e) => l(e.name),
                     }),
@@ -1021,9 +1021,9 @@
                       i.createElement(se, null),
                     ),
                   renderContent: () =>
-                    i.createElement(q, {
+                    i.createElement(Y, {
                       store: t,
-                      effectSettings: o,
+                      effectSettings: r,
                       onItemSelect: (e) => c(e.name),
                     }),
                 },
@@ -1039,7 +1039,7 @@
           let t = this.props.emoticonStore;
           t.is_initialized ||
             (t.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, r.z7)(
+            (this.m_disposeEmoticonStore = (0, o.z7)(
               () => t.is_initialized,
               () => this.forceUpdate(),
             )));
@@ -1052,12 +1052,12 @@
               emoticonStore: e,
               emoticonHoverStore: t,
               onEmoticonSelected: n,
-              onStickerSelected: o,
-              strFlairGroupID: r,
+              onStickerSelected: r,
+              strFlairGroupID: o,
             } = this.props,
             s = [];
           return (
-            O(e) &&
+            B(e) &&
               s.push({
                 renderTab: (e) =>
                   i.createElement(
@@ -1077,14 +1077,14 @@
                     store: e,
                     hoverStore: t,
                     onEmoticonSelect: (e) => n(e.name),
-                    onStickerSelect: (e) => o(e.name),
-                    flairGroupID: r,
+                    onStickerSelect: (e) => r(e.name),
+                    flairGroupID: o,
                   }),
               }),
             i.createElement(
               p.tz,
               null,
-              i.createElement(_, {
+              i.createElement(v, {
                 config: [
                   ...s,
                   {
@@ -1098,14 +1098,14 @@
                             e && T().ActiveTab,
                           ),
                         },
-                        i.createElement(re, null),
+                        i.createElement(oe, null),
                       ),
                     renderContent: () =>
-                      i.createElement(z, {
+                      i.createElement(W, {
                         store: e,
                         hoverStore: t,
                         onItemSelect: (e) => n(e.name),
-                        flairGroupID: r,
+                        flairGroupID: o,
                       }),
                   },
                   {
@@ -1119,12 +1119,12 @@
                             e && T().ActiveTab,
                           ),
                         },
-                        i.createElement(oe, null),
+                        i.createElement(re, null),
                       ),
                     renderContent: () =>
-                      i.createElement(Y, {
+                      i.createElement(q, {
                         store: e,
-                        onItemSelect: (e) => o(e.name),
+                        onItemSelect: (e) => r(e.name),
                       }),
                   },
                 ],
@@ -1133,15 +1133,15 @@
           );
         }
       };
-      D = (0, o.Cg)([s.PA], D);
-      class J extends i.Component {
+      D = (0, r.Cg)([s.PA], D);
+      class z extends i.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
           let t = this.props.emoticonStore;
           t.is_initialized ||
             (t.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, r.z7)(
+            (this.m_disposeEmoticonStore = (0, o.z7)(
               () => t.is_initialized,
               () => this.forceUpdate(),
             )));
@@ -1153,7 +1153,7 @@
           return i.createElement(
             p.tz,
             null,
-            i.createElement(_, {
+            i.createElement(v, {
               config: [
                 {
                   renderTab: () =>
@@ -1163,10 +1163,10 @@
                         title: (0, u.we)("#AddonPicker_Emoticons"),
                         className: T().PickerTab,
                       },
-                      i.createElement(re, null),
+                      i.createElement(oe, null),
                     ),
                   renderContent: () =>
-                    i.createElement(Q, {
+                    i.createElement(X, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -1185,7 +1185,7 @@
           let t = this.props.emoticonStore;
           t.is_initialized ||
             (t.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, r.z7)(
+            (this.m_disposeEmoticonStore = (0, o.z7)(
               () => t.is_initialized,
               () => this.forceUpdate(),
             )));
@@ -1197,7 +1197,7 @@
           return i.createElement(
             p.tz,
             null,
-            i.createElement(_, {
+            i.createElement(v, {
               config: [
                 {
                   renderTab: () =>
@@ -1207,10 +1207,10 @@
                         title: (0, u.we)("#AddonPicker_Emoticons"),
                         className: T().PickerTab,
                       },
-                      i.createElement(re, null),
+                      i.createElement(oe, null),
                     ),
                   renderContent: () =>
-                    i.createElement(X, {
+                    i.createElement(j, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -1229,24 +1229,24 @@
               store: e,
               hoverStore: t,
               onEmoticonSelect: n,
-              onStickerSelect: o,
+              onStickerSelect: r,
             } = this.props,
-            { filter: r } = this.state,
+            { filter: o } = this.state,
             s = [];
           return (
-            G(e) &&
+            M(e) &&
               s.push({
                 title: (0, u.we)("#AddonPicker_RecentEmoticons"),
-                items: c.p.FilterEmoticons(G(e), r),
+                items: c.p.FilterEmoticons(M(e), o),
                 onItemSelect: n,
                 renderItem: (e) =>
                   i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   i.createElement(
-                    x,
+                    L,
                     null,
-                    r
+                    o
                       ? (0, u.we)("#AddonPicker_NoResults")
                       : (0, u.we)(
                           "#AddonPicker_NoRecent",
@@ -1254,18 +1254,18 @@
                         ),
                   ),
               }),
-            U(e).length &&
+            O(e).length &&
               s.push({
                 title: (0, u.we)("#AddonPicker_RecentStickers"),
-                items: c.p.FilterStickers(U(e), r),
-                onItemSelect: o,
-                renderItem: (e) => i.createElement(j, { sticker: e }),
+                items: c.p.FilterStickers(O(e), o),
+                onItemSelect: r,
+                renderItem: (e) => i.createElement(Q, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   i.createElement(
-                    x,
+                    L,
                     null,
-                    r
+                    o
                       ? (0, u.we)("#AddonPicker_NoResults")
                       : (0, u.we)(
                           "#AddonPicker_NoRecent",
@@ -1275,24 +1275,24 @@
               }),
             i.createElement(P, {
               onFilterChange: (e) => this.setState({ filter: e }),
-              filter: r,
+              filter: o,
               sections: s,
             })
           );
         }
       }
-      class z extends i.Component {
+      class W extends i.Component {
         state = { filter: "" };
         render() {
           const {
               store: e,
               hoverStore: t,
               onItemSelect: n,
-              flairGroupID: o,
+              flairGroupID: r,
             } = this.props,
-            { filter: r } = this.state,
-            s = !r && o ? e.GetFlairListByGroupID(o) : e.emoticon_list,
-            a = c.p.FilterEmoticons(s, r).slice(0, 1e3);
+            { filter: o } = this.state,
+            s = !o && r ? e.GetFlairListByGroupID(r) : e.emoticon_list,
+            a = c.p.FilterEmoticons(s, o).slice(0, 1e3);
           return i.createElement(N, {
             title: (0, u.we)("#AddonPicker_Emoticons"),
             items: a,
@@ -1301,21 +1301,21 @@
               i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
             keyExtractor: (e) => e.name,
             onFilterChange: (e) => this.setState({ filter: e }),
-            filter: r,
+            filter: o,
             onSubmit: () => n(a[0]),
             renderEmpty: () =>
-              r
-                ? i.createElement(x, null, (0, u.we)("#AddonPicker_NoResults"))
-                : i.createElement(W, null),
+              o
+                ? i.createElement(L, null, (0, u.we)("#AddonPicker_NoResults"))
+                : i.createElement(J, null),
           });
         }
       }
-      function W() {
+      function J() {
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            x,
+            L,
             null,
             (0, u.we)(
               "#AddonPicker_NoneOwned",
@@ -1323,47 +1323,47 @@
             ),
           ),
           i.createElement(
-            x,
+            L,
             null,
             (0, u.PP)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               i.createElement(
-                B.uU,
-                { href: `${A.TS.STORE_BASE_URL}points/shop/c/emoticons` },
+                H.uU,
+                { href: `${S.TS.STORE_BASE_URL}points/shop/c/emoticons` },
                 (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
               ),
               i.createElement(
-                B.uU,
-                { href: `${A.TS.COMMUNITY_BASE_URL}market` },
+                H.uU,
+                { href: `${S.TS.COMMUNITY_BASE_URL}market` },
                 (0, u.we)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
               ),
             ),
           ),
         );
       }
-      class Y extends i.Component {
+      class q extends i.Component {
         state = { filter: "" };
         render() {
           const { store: e, onItemSelect: t } = this.props,
             { filter: n } = this.state,
-            o = c.p.FilterStickers(e.GetStickerList(), n);
+            r = c.p.FilterStickers(e.GetStickerList(), n);
           return i.createElement(N, {
             title: (0, u.we)("#EmoticonPicker_StickerHeading"),
-            items: o,
+            items: r,
             onItemSelect: t,
-            renderItem: (e) => i.createElement(j, { sticker: e }),
+            renderItem: (e) => i.createElement(Q, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
-            onSubmit: () => t(o[0]),
+            onSubmit: () => t(r[0]),
             renderEmpty: () =>
               n
-                ? i.createElement(x, null, (0, u.we)("#AddonPicker_NoResults"))
+                ? i.createElement(L, null, (0, u.we)("#AddonPicker_NoResults"))
                 : i.createElement(
                     i.Fragment,
                     null,
                     i.createElement(
-                      x,
+                      L,
                       null,
                       (0, u.we)(
                         "#AddonPicker_NoneOwned",
@@ -1371,14 +1371,14 @@
                       ),
                     ),
                     i.createElement(
-                      x,
+                      L,
                       null,
                       (0, u.PP)(
                         "#AddonPicker_AcquireAtPointsShop",
                         i.createElement(
-                          B.uU,
+                          H.uU,
                           {
-                            href: `${A.TS.STORE_BASE_URL}points/shop/c/stickers`,
+                            href: `${S.TS.STORE_BASE_URL}points/shop/c/stickers`,
                           },
                           (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                         ),
@@ -1388,30 +1388,30 @@
           });
         }
       }
-      class q extends i.Component {
+      class Y extends i.Component {
         state = { filter: "" };
         render() {
           const { store: e, effectSettings: t, onItemSelect: n } = this.props,
-            { filter: o } = this.state,
-            r = e.GetEffectList().filter(({ name: e }) => e.indexOf(o) > -1);
+            { filter: r } = this.state,
+            o = e.GetEffectList().filter(({ name: e }) => e.indexOf(r) > -1);
           return i.createElement(N, {
             title: (0, u.we)("#EmoticonPicker_EffectHeading"),
-            items: r,
+            items: o,
             onItemSelect: n,
             renderItem: (e) =>
               i.createElement(ee, { effect: e, roomEffectSettings: t }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
-            filter: o,
-            onSubmit: () => n(r[0]),
+            filter: r,
+            onSubmit: () => n(o[0]),
             renderEmpty: () =>
-              o
-                ? i.createElement(x, null, (0, u.we)("#AddonPicker_NoResults"))
+              r
+                ? i.createElement(L, null, (0, u.we)("#AddonPicker_NoResults"))
                 : i.createElement(
                     i.Fragment,
                     null,
                     i.createElement(
-                      x,
+                      L,
                       null,
                       (0, u.we)(
                         "#AddonPicker_NoneOwned",
@@ -1419,14 +1419,14 @@
                       ),
                     ),
                     i.createElement(
-                      x,
+                      L,
                       null,
                       (0, u.PP)(
                         "#AddonPicker_AcquireAtPointsShop",
                         i.createElement(
-                          B.uU,
+                          H.uU,
                           {
-                            href: `${A.TS.STORE_BASE_URL}points/shop/c/chateffects`,
+                            href: `${S.TS.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
                           (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                         ),
@@ -1436,31 +1436,31 @@
           });
         }
       }
-      let Q = class extends i.Component {
+      let X = class extends i.Component {
         state = { filter: "" };
         render() {
           const {
               store: e,
               hoverStore: t,
               onItemSelect: n,
-              flairGroupID: o,
+              flairGroupID: r,
             } = this.props,
-            { filter: r } = this.state,
+            { filter: o } = this.state,
             s = [];
           return (
-            G(e).length &&
+            M(e).length &&
               s.push({
                 title: (0, u.we)("#AddonPicker_RecentEmoticons"),
-                items: c.p.FilterEmoticons(G(e), r),
+                items: c.p.FilterEmoticons(M(e), o),
                 onItemSelect: n,
                 renderItem: (e) =>
                   i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   i.createElement(
-                    x,
+                    L,
                     null,
-                    r
+                    o
                       ? (0, u.we)("#AddonPicker_NoResults")
                       : (0, u.we)(
                           "#AddonPicker_NoRecent",
@@ -1470,86 +1470,86 @@
               }),
             i.createElement(P, {
               onFilterChange: (e) => this.setState({ filter: e }),
-              filter: r,
+              filter: o,
               sections: [
                 ...s,
                 {
                   title: (0, u.we)("#AddonPicker_AllEmoticons"),
-                  items: c.p.FilterStickers(e.emoticon_list, r).slice(0, 1e3),
+                  items: c.p.FilterStickers(e.emoticon_list, o).slice(0, 1e3),
                   onItemSelect: n,
                   renderItem: (e) =>
                     i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                   keyExtractor: (e) => e.name,
                   renderEmpty: () =>
-                    r
+                    o
                       ? i.createElement(
-                          x,
+                          L,
                           null,
                           (0, u.we)("#AddonPicker_NoResults"),
                         )
-                      : i.createElement(W, null),
+                      : i.createElement(J, null),
                 },
               ],
             })
           );
         }
       };
-      Q = (0, o.Cg)([s.PA], Q);
-      let X = class extends i.Component {
+      X = (0, r.Cg)([s.PA], X);
+      let j = class extends i.Component {
         state = { filter: "" };
         render() {
           const {
               store: e,
               hoverStore: t,
               onItemSelect: n,
-              flairGroupID: o,
+              flairGroupID: r,
             } = this.props,
-            { filter: r } = this.state;
+            { filter: o } = this.state;
           return i.createElement(P, {
             onFilterChange: (e) => this.setState({ filter: e }),
-            filter: r,
+            filter: o,
             sections: [
               {
                 title: (0, u.we)("#ChatEntryButton_Flair"),
-                items: c.p.FilterStickers(e.GetFlairListByGroupID(o), r),
+                items: c.p.FilterStickers(e.GetFlairListByGroupID(r), o),
                 onItemSelect: n,
                 renderItem: (e) =>
                   i.createElement(K, { emoticon: e, emoticonHoverStore: t }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
-                  r
+                  o
                     ? i.createElement(
-                        x,
+                        L,
                         null,
                         (0, u.we)("#AddonPicker_NoResults"),
                       )
-                    : i.createElement(W, null),
+                    : i.createElement(J, null),
               },
             ],
           });
         }
       };
-      X = (0, o.Cg)([s.PA], X);
+      j = (0, r.Cg)([s.PA], j);
       const K = (e) => {
-        const { emoticon: t, emoticonHoverStore: n, large: o } = e,
-          r = !t.last_used && t.time_received;
+        const { emoticon: t, emoticonHoverStore: n, large: r } = e,
+          o = !t.last_used && t.time_received;
         return i.createElement(
           "div",
           { className: T().EmoticonItem },
-          i.createElement(H, {
+          i.createElement(R, {
             emoticon: t.name,
             emoticonHoverStore: n,
-            large: o,
+            large: r,
           }),
-          r && i.createElement(ne, null),
+          o && i.createElement(ne, null),
         );
       };
-      class j extends i.Component {
+      class Q extends i.Component {
         state = { showHover: !1 };
         m_ref = i.createRef();
         render() {
           const { sticker: e, className: t, ...n } = this.props,
-            o = E(A.TS.COMMUNITY_CDN_URL, e.name);
+            r = E(S.TS.COMMUNITY_CDN_URL, e.name);
           return i.createElement(
             "div",
             {
@@ -1561,7 +1561,7 @@
               onBlur: () => this.setState({ showHover: !1 }),
               ...n,
             },
-            i.createElement("img", { style: { width: "100%" }, src: o }),
+            i.createElement("img", { style: { width: "100%" }, src: r }),
             this.state.showHover &&
               i.createElement($, { target: this.m_ref.current, sticker: e }),
           );
@@ -1570,14 +1570,14 @@
       const $ = (0, s.PA)((e) => {
         const {
             target: t,
-            sticker: { name: n, appid: o },
+            sticker: { name: n, appid: r },
           } = e,
-          [r] = (0, l.t7)(o, {});
+          [o] = (0, l.t7)(r, {});
         return i.createElement(
           F,
-          { target: t, title: n, subtitle: r?.GetName() },
+          { target: t, title: n, subtitle: o?.GetName() },
           i.createElement("img", {
-            src: E(A.TS.COMMUNITY_CDN_URL, n),
+            src: E(S.TS.COMMUNITY_CDN_URL, n),
             className: T().StickerHoverSticker,
           }),
         );
@@ -1590,9 +1590,9 @@
               effect: e,
               roomEffectSettings: t,
               className: n,
-              ...o
+              ...r
             } = this.props,
-            r = t[e.name];
+            o = t[e.name];
           return i.createElement(
             "div",
             {
@@ -1602,9 +1602,9 @@
               onMouseLeave: () => this.setState({ showHover: !1 }),
               onBlur: () => this.setState({ showHover: !1 }),
               className: (0, d.A)(n, T().EffectButton),
-              ...o,
+              ...r,
             },
-            r.renderEffectIcon(),
+            o.renderEffectIcon(),
             this.state.showHover &&
               i.createElement(te, {
                 target: this.m_ref.current,
@@ -1617,11 +1617,11 @@
       const te = (0, s.PA)((e) => {
         const {
             target: t,
-            effect: { name: n, appid: o },
-            roomEffectSettings: r,
+            effect: { name: n, appid: r },
+            roomEffectSettings: o,
           } = e,
-          s = r[n],
-          [a] = (0, l.t7)(o, {});
+          s = o[n],
+          [a] = (0, l.t7)(r, {});
         return i.createElement(
           F,
           { target: t, title: n, subtitle: a?.GetName() },
@@ -1639,7 +1639,7 @@
           i.createElement("div", { className: T().NewEmoticonCircle }),
         );
       }
-      function oe(e) {
+      function re(e) {
         return i.createElement(
           "svg",
           {
@@ -1678,7 +1678,7 @@
           }),
         );
       }
-      function re(e) {
+      function oe(e) {
         return i.createElement(
           "svg",
           {
@@ -1748,9 +1748,9 @@
     },
     283: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => f });
-      var o = n(34629),
-        r = n(90626),
+      n.d(t, { A: () => C });
+      var r = n(34629),
+        o = n(90626),
         s = n(75844),
         i = n(73745),
         a = n(45699),
@@ -1762,21 +1762,21 @@
         u = n(90024),
         h = n.n(u),
         E = n(97232),
-        A = n(32754);
-      const S = 1576780700;
-      let g = class extends r.Component {
+        S = n(32754);
+      const f = 1576780700;
+      let g = class extends o.Component {
         OnEmoticonClick(e) {
           const {
             emoticonStore: t,
             strFlairGroupID: n,
-            SetUIDisplayPref: o,
+            SetUIDisplayPref: r,
             contextOptions: s,
             bShowChatAddons: i,
           } = this.props;
           let a = null;
           if (
             ((a = i
-              ? r.createElement(m.Q4, {
+              ? o.createElement(m.Q4, {
                   emoticonStore: this.props.emoticonStore,
                   emoticonHoverStore: this.props.emoticonHoverStore,
                   strFlairGroupID: this.props.strFlairGroupID,
@@ -1787,13 +1787,13 @@
                   onStickerSelected: this.props.onStickerSelected,
                 })
               : n && t.flair_list && t.GetFlairListByGroupID(n)?.length > 0
-                ? r.createElement(m.CE, {
+                ? o.createElement(m.CE, {
                     emoticonStore: this.props.emoticonStore,
                     emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })
-                : r.createElement(m.iY, {
+                : o.createElement(m.iY, {
                     emoticonStore: this.props.emoticonStore,
                     emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
@@ -1808,10 +1808,10 @@
                 bPreferPopTop: !0,
               },
             ),
-            this.BHaveUnseenEmoticons() && o)
+            this.BHaveUnseenEmoticons() && r)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < S) && (e = S), o("rtLastAckedNewEmoticons", e);
+            (!e || e < f) && (e = f), r("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -1819,23 +1819,23 @@
             t = Number.MIN_SAFE_INTEGER,
             n = e.GetTimeReceivedNewestEmoticon();
           n && (t = n);
-          let o = e.GetTimeReceivedForStickerOrEffect();
-          return (t = Math.max(o, t)), t > Number.MIN_SAFE_INTEGER ? t : void 0;
+          let r = e.GetTimeReceivedForStickerOrEffect();
+          return (t = Math.max(r, t)), t > Number.MIN_SAFE_INTEGER ? t : void 0;
         }
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < S || (t && (!e || e < t));
+          return !e || e < f || (t && (!e || e < t));
         }
         render() {
-          const { disabled: e, className: t, ttip: n, useImg: o } = this.props;
+          const { disabled: e, className: t, ttip: n, useImg: r } = this.props;
           let s = [t],
             i = !1;
           return (
             e ? s.push("disabled") : this.BHaveUnseenEmoticons() && (i = !0),
             n && s.push("ttip"),
-            o
-              ? r.createElement(
+            r
+              ? o.createElement(
                   c.Z,
                   {
                     onClick: this.OnEmoticonClick,
@@ -1844,10 +1844,10 @@
                     ),
                     focusable: !0,
                   },
-                  r.createElement(
-                    A.he,
+                  o.createElement(
+                    S.he,
                     { toolTipContent: n },
-                    r.createElement("img", {
+                    o.createElement("img", {
                       src: this.props.useImg,
                       className: (0, d.A)(...s),
                       title:
@@ -1857,7 +1857,7 @@
                   ),
                 )
               : (s.push(h().chatSubmitButton, h().EmoticonPickerButton),
-                r.createElement(
+                o.createElement(
                   a.fu,
                   {
                     className: (0, d.A)(...s),
@@ -1871,25 +1871,25 @@
                       (0, p.we)("#ChatEntryButton_Emoticon"),
                     disabled: e,
                   },
-                  r.createElement(
-                    A.he,
+                  o.createElement(
+                    S.he,
                     { toolTipContent: n },
-                    this.props.buttonIcon || r.createElement(E.nl, null),
-                    i && r.createElement(m.iD, null),
+                    this.props.buttonIcon || o.createElement(E.nl, null),
+                    i && o.createElement(m.iD, null),
                   ),
                 ))
           );
         }
       };
-      (0, o.Cg)([i.oI], g.prototype, "OnEmoticonClick", null),
-        (g = (0, o.Cg)([s.PA], g));
-      const f = g;
+      (0, r.Cg)([i.oI], g.prototype, "OnEmoticonClick", null),
+        (g = (0, r.Cg)([s.PA], g));
+      const C = g;
     },
     48079: (e, t, n) => {
       "use strict";
-      n.d(t, { $k: () => E, S8: () => S, fI: () => A });
-      var o = n(34629),
-        r = n(75844),
+      n.d(t, { $k: () => E, S8: () => f, fI: () => S });
+      var r = n(34629),
+        o = n(75844),
         s = n(90626),
         i = n(59952),
         a = n(22837),
@@ -1900,11 +1900,11 @@
         d = n(23649),
         u = n(3246),
         h = n.n(u);
-      const E = (0, r.PA)((e) => {
+      const E = (0, o.PA)((e) => {
         const t = e.photo ? (0, i._D)(e.photo, (0, a.sf)(p.TS.LANGUAGE)) : null,
           n = e.photo ? ("string" == typeof t ? t : t[1]) : null,
-          o = Boolean(e.title),
-          r = Boolean(e.company);
+          r = Boolean(e.title),
+          o = Boolean(e.company);
         return s.createElement(
           "div",
           { className: h().SpeakerPopup, onMouseLeave: e.fnClose },
@@ -1916,18 +1916,18 @@
               "div",
               { className: h().SpeakerInfoInner },
               s.createElement("div", null, e.name),
-              (o || r) &&
+              (r || o) &&
                 s.createElement(
                   "div",
                   null,
-                  o &&
+                  r &&
                     s.createElement(
                       "span",
                       { className: h().SpeakerTitle },
                       e.title,
                     ),
-                  o && r && s.createElement("span", null, ", "),
-                  r && s.createElement("span", null, e.company),
+                  r && o && s.createElement("span", null, ", "),
+                  o && s.createElement("span", null, e.company),
                 ),
             ),
           ),
@@ -1940,7 +1940,7 @@
             ),
         );
       });
-      class A extends s.Component {
+      class S extends s.Component {
         static sm_embeddedElements = new c.MX(
           "presenter-hover-source-elements",
         );
@@ -1969,12 +1969,12 @@
               style: { maxWidth: 640, minHeight: t.clientHeight },
               target: t,
             },
-            o = "presenter-hover-" + Math.floor(1e8 * Math.random());
+            r = "presenter-hover-" + Math.floor(1e8 * Math.random());
           (this.m_fnHidePopup = () =>
-            A.sm_embeddedElements.HideElement(t.ownerDocument, o)),
+            S.sm_embeddedElements.HideElement(t.ownerDocument, r)),
             window.addEventListener("scroll", this.OnScroll),
             (this.m_nScrollPosAtHoverStart = window.scrollY);
-          A.sm_embeddedElements.ShowElementDelayed(
+          S.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             150,
             s.createElement(
@@ -1982,7 +1982,7 @@
               { ...n },
               s.createElement(E, { ...this.props, fnClose: this.OnLeave }),
             ),
-            o,
+            r,
           );
         }
         OnLeave(e) {
@@ -2003,11 +2003,11 @@
           );
         }
       }
-      (0, o.Cg)([m.oI], A.prototype, "ClosePopup", null),
-        (0, o.Cg)([m.oI], A.prototype, "OnScroll", null),
-        (0, o.Cg)([m.oI], A.prototype, "OnHover", null),
-        (0, o.Cg)([m.oI], A.prototype, "OnLeave", null);
-      class S extends s.Component {
+      (0, r.Cg)([m.oI], S.prototype, "ClosePopup", null),
+        (0, r.Cg)([m.oI], S.prototype, "OnScroll", null),
+        (0, r.Cg)([m.oI], S.prototype, "OnHover", null),
+        (0, r.Cg)([m.oI], S.prototype, "OnLeave", null);
+      class f extends s.Component {
         render() {
           const e = this.props.photo
               ? (0, i._D)(this.props.photo, (0, a.sf)(p.TS.LANGUAGE))
@@ -2019,12 +2019,12 @@
                   : e[1]
                 : null,
             n = Boolean(this.props.title),
-            o = Boolean(this.props.company);
+            r = Boolean(this.props.company);
           return s.createElement(
             "div",
             { className: h().SpeakerOuter },
             s.createElement(
-              A,
+              S,
               { ...this.props },
               s.createElement(
                 "div",
@@ -2037,7 +2037,7 @@
                     "div",
                     { className: h().SpeakerInfoInner },
                     s.createElement("div", null, this.props.name),
-                    (n || o) &&
+                    (n || r) &&
                       s.createElement(
                         "div",
                         null,
@@ -2047,8 +2047,8 @@
                             { className: h().SpeakerTitle },
                             this.props.title,
                           ),
-                        n && o && s.createElement("span", null, ", "),
-                        o && s.createElement("span", null, this.props.company),
+                        n && r && s.createElement("span", null, ", "),
+                        r && s.createElement("span", null, this.props.company),
                       ),
                   ),
                 ),
@@ -2057,25 +2057,6 @@
           );
         }
       }
-    },
-    10886: (e, t, n) => {
-      "use strict";
-      n.d(t, { A: () => o });
-      const o =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
-    },
-    19654: (e, t, n) => {
-      "use strict";
-      n.d(t, { A: () => o });
-      const o =
-        n.p +
-        "images/applications/store/reddit_large.png?v=valveisgoodatcaching";
-    },
-    3209: (e, t, n) => {
-      "use strict";
-      n.d(t, { A: () => o });
-      const o =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
     },
   },
 ]);

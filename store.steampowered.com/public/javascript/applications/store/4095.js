@@ -22544,11 +22544,6 @@
             ),
             n.createElement(
               "div",
-              { className: U().ReviewScoreDivider },
-              " | ",
-            ),
-            n.createElement(
-              "div",
               { className: U().ReviewScoreCount },
               r
                 ? "(" + s.review_count.toLocaleString() + ")"

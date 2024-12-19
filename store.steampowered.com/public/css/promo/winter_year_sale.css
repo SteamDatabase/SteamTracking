@@ -63,8 +63,8 @@ body.v6.sale_winter2024 .home_sticker_ctn.mobile, body.v6.sale_winter2024 .home_
 }
 
 .page_background_overlay {
-	width: 72vw;
-	max-width: 950px;
+	width: 45vw;
+	max-width: 700px;
 	height: 100%;
 	max-height: 683px;
 	margin-left: 50%;
@@ -74,16 +74,33 @@ body.v6.sale_winter2024 .home_sticker_ctn.mobile, body.v6.sale_winter2024 .home_
 	z-index: 1;
 }
 
+.page_background_overlay.alternate {
+	width: 90vw;
+	max-width: 1350px;
+}
+
 .click_for_alt {
-	width: 14vw;
-	height: 14vw;
+	width: 20%;
+	height: 20%;
 	max-height: 150px;
 	max-width: 150px;
 	position: absolute;
-	top: 37%;
+	bottom: 14%;
 	right: 0;
-	cursor: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2024/paw.svg?v=1' ), pointer;
+	cursor: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/Winter24_Paw.svg?v=1' ), pointer;
 	pointer-events: auto;
+}
+
+.page_background_overlay.alternate .click_for_alt {
+	bottom: 28%;
+	right: 0;
+}
+
+@media screen and (max-width: 500px )
+{
+	body.v6 .page_background_overlay.alternate .click_for_alt {
+		right: 10%;
+	}
 }
 
 .home_sticker_ctn video {
@@ -348,7 +365,7 @@ body.v6.sale_winter2024 .home_sticker_ctn.mobile, body.v6.sale_winter2024 .home_
 /* STEAM AWARDS homepage section */
 .home_steamawards_ctn.home_pagecontent_ctn {
     position: relative;
-    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg'), #3A1434;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2024/header_notrophy.webp'), #111111;
     background-blend-mode: color-dodge;
     box-sizing: border-box;
     display: flex;
@@ -363,7 +380,7 @@ body.v6.sale_winter2024 .home_sticker_ctn.mobile, body.v6.sale_winter2024 .home_
 
 		    font-size: 44px;
     letter-spacing: -0.7px;
-    color: #ffffff;
+    color: #EBF000;
     line-height: 47px;
     padding-left: calc(100%/6);
     -webkit-box-sizing: border-box;
@@ -385,22 +402,6 @@ body.v6.sale_winter2024 .home_sticker_ctn.mobile, body.v6.sale_winter2024 .home_
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-.home_steamawards_subtitle .learnmore a {
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    background: rgba(255,255,255,0.8);
-    color: #ca1b8a;
-    padding: 2px 6px;
-    border-radius: 2px;
-    text-wrap: nowrap;
-}
-
-.home_steamawards_subtitle .learnmore:hover a {
-    background: rgba(255, 255, 255, 1);
-    color: black;
 }
 
 .trophy_icon {
@@ -486,7 +487,7 @@ body.v6.sale_winter2024 .home_sticker_ctn.mobile, body.v6.sale_winter2024 .home_
     height: 200px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 8px black;
-    background-color: #3A1434;
+    background-color: #67629c;
     justify-self: center;
 }
 
@@ -973,7 +974,7 @@ body.v6 .discount_block {}
 }
 
 .content_hub_capsule_ctn .gradient {
-	background: radial-gradient(115% 120% at 0% 0%, transparent, #d19ae9 80%, #d463be);
+	background: radial-gradient(115% 120% at 0% 0%, transparent, #6738a3 80%, #6c47bf);
 }
 
 .content_hub_capsule_ctn .label {
@@ -2848,6 +2849,12 @@ body.v6 .sale_capsule .discount_block_inline
 	}
 }
 
+@media screen and (max-width: 500px )
+{
+	html.responsive .carousel_container .carousel_items .hero_capsule {
+		max-width:250px;
+	}
+}
 
 .hero_capsule:first-child
 {

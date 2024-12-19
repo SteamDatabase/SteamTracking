@@ -32914,7 +32914,7 @@
         m_bAllowAppImpressions = !1;
         m_primaryLanguage = -1;
         m_secondaryLanguages = new Set();
-        m_setRecommendedTags = new Set();
+        m_rgRecommendedTags = [];
         m_mapRecommendingCuratorsForApp = new Map();
         m_setPackagesInCart = new Set();
         m_setAppsInCart = new Set();
@@ -33035,7 +33035,7 @@
           );
         }
         GetRecommendedTags() {
-          return this.m_setRecommendedTags;
+          return this.m_rgRecommendedTags;
         }
         BIsAjaxInFlight() {
           return this.m_bAjaxInFlight;
@@ -33147,8 +33147,8 @@
                       e.data.rgSecondaryLanguages,
                     )),
                   e.data.rgRecommendedTags &&
-                    (this.m_setRecommendedTags = new Set(
-                      e.data.rgRecommendedTags.map((e) => e.tagid),
+                    (this.m_rgRecommendedTags = e.data.rgRecommendedTags.map(
+                      (e) => e.tagid,
                     )),
                   e.data.rgAppsInCart &&
                     (this.m_setAppsInCart = new Set(e.data.rgAppsInCart)),
@@ -33408,7 +33408,7 @@
         ),
         (0, n.Cg)([o.sH], _.prototype, "m_primaryLanguage", void 0),
         (0, n.Cg)([o.sH], _.prototype, "m_secondaryLanguages", void 0),
-        (0, n.Cg)([o.sH], _.prototype, "m_setRecommendedTags", void 0),
+        (0, n.Cg)([o.sH], _.prototype, "m_rgRecommendedTags", void 0),
         (0, n.Cg)(
           [o.sH],
           _.prototype,

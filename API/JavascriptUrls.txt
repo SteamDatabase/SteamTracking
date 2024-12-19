@@ -190,6 +190,7 @@ ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
 ${COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}economy/image/${}/512x512
+${COMMUNITY_BASE_URL}economy/profilebackground/items/${appid}/${item_image_large}
 ${COMMUNITY_BASE_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
 ${COMMUNITY_BASE_URL}eventadmin/ajaxgetcapabilities
 ${COMMUNITY_BASE_URL}eventadmin/ajaxupdatepartneremailtarget
@@ -907,7 +908,6 @@ ${IMG_URL}yearinreview/bg_2023.svg
 ${IMG_URL}yearinreview/controllers.png?v=2
 ${IMG_URL}yearinreview/keyboard.png?v=3
 ${IMG_URL}yearinreview/screenshot_placeholder.png
-${IMG_URL}yearinreview/steamControllerGrid_02.png
 ${IMG_URL}yearinreview/streak_bg.jpg
 ${IMG_URL}yearinreview/vr_background6.webp
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
@@ -1609,7 +1609,6 @@ ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest
-${STORE_BASE_URL}share/${}/replay/${}/${}
 ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
 ${STORE_BASE_URL}stats/support?json=1

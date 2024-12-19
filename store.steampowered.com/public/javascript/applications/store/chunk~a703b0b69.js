@@ -1188,11 +1188,11 @@
               ("software" !== e && "video" !== e) || (h = e);
             }
           }
-          const S = [];
+          const S = [],
+            f = new Set(c.Fm.Get().GetRecommendedTags());
           for (const e of g) {
             if (S.length > y.k_nMaxMatchingRecommendedTags) break;
-            ("tags" === t && s === e) ||
-              (c.Fm.Get().GetRecommendedTags().has(e) && S.push(e));
+            ("tags" === t && s === e) || (f.has(e) && S.push(e));
           }
           if (S.length < y.k_nMaxMatchingRecommendedTags) {
             const t = (function (e) {
@@ -1230,23 +1230,23 @@
               tagids: S,
               appType: h,
             });
-          let f = [
+          let E = [
             "top_sellers",
             "popular_new",
             "specials",
             "concurrent",
             "featured",
           ];
-          f = f.filter((e) => this.m_mapMainCarousel.get(o).mapAppLists.has(e));
-          const E = new Map();
-          f.forEach((e) => {
-            E.set(
+          E = E.filter((e) => this.m_mapMainCarousel.get(o).mapAppLists.has(e));
+          const b = new Map();
+          E.forEach((e) => {
+            b.set(
               e,
               this.m_mapMainCarousel.get(o).mapAppLists.get(e).apps || [],
             );
           });
-          for (const t of f)
-            for (const a of E.get(t))
+          for (const t of E)
+            for (const a of b.get(t))
               if (e.item_type === a.item_type && e.id === a.id)
                 return void (e.recommendation = {
                   reason: n.k_EDisplayList,

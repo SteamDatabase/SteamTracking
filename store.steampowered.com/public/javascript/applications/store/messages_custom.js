@@ -81,6 +81,7 @@
         PlayBehaviorContainer: "_1SL9gkjIROp0eotN8Hr5Xk",
         ProgressBarFilled: "_2lEhYA8vvTg168yH1rNQs0",
         ProgressBarFilledGradient: "j_CK0NQKm75mWc5VPFMFc",
+        GameNewnessTitle: "_31cdzkQ4ZCu6E177tUexf4",
         NewActive: "_2WOXA55SDgHgLI62aMu8QW",
         DataBoxArrow: "_2j2hP_Ctg-1k6NFO-11Iev",
         Background: "_1DEzdqjCUNYNmGO-4qZGJy",
@@ -167,6 +168,7 @@
         PlayBehaviorContainer: "_9YqCa_ldtOJ_KRu7KJoIt",
         ProgressBarFilled: "_3wtv1zTckeY6KOlu1lKPc2",
         ProgressBarFilledGradient: "_1bVTXXdcxLMc56aeAwIM-7",
+        GameNewnessTitle: "CuXwyUnaDZpkPXGWaDYqX",
         NewActive: "_18-Ta9kFnxPV3MW8MaHLGk",
         DataBoxArrow: "_1wfGD4gWsszIkGZXm0JDzG",
         Background: "_2UelPoml_TdjiRoElz-jCO",
@@ -282,14 +284,14 @@
     27144: (e, a, t) => {
       "use strict";
       t.d(a, { B3: () => b, KM: () => f, KT: () => h });
-      var r = t(41735),
-        n = t.n(r),
+      var n = t(41735),
+        r = t.n(n),
         o = t(58632),
         c = t.n(o),
         l = t(90626),
         i = t(20194),
-        _ = t(75233),
-        s = t(17720),
+        s = t(75233),
+        _ = t(17720),
         m = t(68797),
         d = t(78327),
         p = t(56545),
@@ -298,16 +300,16 @@
       const u = "nicknames";
       function f(e) {
         const a = (0, g.KV)(),
-          { data: t, isLoading: r } = (0, i.I)({
+          { data: t, isLoading: n } = (0, i.I)({
             queryKey: [u],
             queryFn: async () => {
               const e = new Map();
               if (d.iA.logged_in) {
                 const t = p.w.Init(C.dN),
-                  r = (await C.xt.GetNicknameList(a, t)).Body().toObject();
-                r?.nicknames &&
-                  r.nicknames.length > 0 &&
-                  r.nicknames.forEach((a) => {
+                  n = (await C.xt.GetNicknameList(a, t)).Body().toObject();
+                n?.nicknames &&
+                  n.nicknames.length > 0 &&
+                  n.nicknames.forEach((a) => {
                     e.set(a.accountid, a.nickname);
                   });
               }
@@ -326,34 +328,34 @@
                   : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const t = { accountid: e[0], origin: self.origin },
-                  r = await n().get(`${a}actions/ajaxgetavatarpersona`, {
+                  n = await r().get(`${a}actions/ajaxgetavatarpersona`, {
                     params: t,
                   });
                 if (
-                  !r ||
-                  200 != r.status ||
-                  1 != r.data?.success ||
-                  !r.data?.userinfo
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(r).strErrorMsg}`;
-                return [r.data.userinfo];
+                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
+                return [n.data.userinfo];
               }
               {
                 const t = { accountids: e.join(","), origin: self.origin },
-                  r = await n().get(`${a}actions/ajaxgetmultiavatarpersona`, {
+                  n = await r().get(`${a}actions/ajaxgetmultiavatarpersona`, {
                     params: t,
                   });
                 if (
-                  !r ||
-                  200 != r.status ||
-                  1 != r.data?.success ||
-                  !r.data?.userinfos
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(r).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
                 const o = new Map();
                 return (
-                  r.data.userinfos.forEach((e) =>
-                    o.set(new s.b(e.steamid).GetAccountID(), e),
+                  n.data.userinfos.forEach((e) =>
+                    o.set(new _.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => o.get(e))
                 );
@@ -370,14 +372,14 @@
         return [a, t];
       }
       function b(e) {
-        const a = (0, _.jE)(),
-          { data: t, isLoading: r } = (0, i.I)({
+        const a = (0, s.jE)(),
+          { data: t, isLoading: n } = (0, i.I)({
             queryKey: [v, e],
             queryFn: async () => {
               const t = await A.loadMany(e);
               return (
                 t.forEach((e) => {
-                  const t = [v, new s.b(e.steamid).GetAccountID()];
+                  const t = [v, new _.b(e.steamid).GetAccountID()];
                   a.setQueryData(t, e);
                 }),
                 t
@@ -385,7 +387,7 @@
             },
             enabled: e?.length > 0,
           }),
-          n = (0, l.useMemo)(() => {
+          r = (0, l.useMemo)(() => {
             const e = new Array();
             return (
               t?.forEach((a) => {
@@ -394,20 +396,20 @@
               e
             );
           }, [t]);
-        return r ? null : n;
+        return n ? null : r;
       }
     },
     79194: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => p });
-      var r = t(80620),
-        n = t(67819),
+      var n = t(80620),
+        r = t(67819),
         o = t(90626),
         c = t(76217),
         l = t(27144),
         i = t(61859),
-        _ = t(78327),
-        s = t(32077),
+        s = t(78327),
+        _ = t(32077),
         m = t(37220),
         d = t(52038);
       function p(e) {
@@ -416,27 +418,27 @@
         return o.createElement(
           "div",
           {
-            className: (0, d.A)(s.MMFrame, a.MMFrame, a.MMOverride),
+            className: (0, d.A)(_.MMFrame, a.MMFrame, a.MMOverride),
             onClick: t,
           },
           o.createElement(
             "div",
-            { className: s.HeaderCtn },
+            { className: _.HeaderCtn },
             o.createElement(f, {
-              baseClass: (0, d.A)(s.ReplayLogo, a.ReplayLogo),
-              accentClass: (0, d.A)(s.ReplayLogoAccent, a.ReplayLogoAccent),
+              baseClass: (0, d.A)(_.ReplayLogo, a.ReplayLogo),
+              accentClass: (0, d.A)(_.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
             o.createElement(A, { year: e.year, theme: a }),
           ),
-          o.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
+          o.createElement(u, { className: (0, d.A)(_.SteamLogo, a.SteamLogo) }),
           o.createElement(v, { theme: a }),
           o.createElement(
             "div",
-            { className: (0, d.A)(s.Content, a.Content) },
+            { className: (0, d.A)(_.Content, a.Content) },
             o.createElement(C, { theme: a }),
             o.createElement(
               "div",
-              { className: (0, d.A)(s.Description, a.Description) },
+              { className: (0, d.A)(_.Description, a.Description) },
               (0, i.we)("#YIR_MM_Generic_Desc"),
             ),
             o.createElement(g, { theme: a }),
@@ -445,14 +447,14 @@
       }
       function C(e) {
         const { theme: a } = e,
-          [t] = (0, l.KT)(_.iA.accountid);
+          [t] = (0, l.KT)(s.iA.accountid);
         return t
           ? o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
-                { className: (0, d.A)(s.Avatar, a.Avatar) },
+                { className: (0, d.A)(_.Avatar, a.Avatar) },
                 t &&
                   t.avatar_url &&
                   o.createElement("img", {
@@ -461,10 +463,10 @@
               ),
               o.createElement(
                 "div",
-                { className: (0, d.A)(s.DataBlock, a.DataBlock) },
+                { className: (0, d.A)(_.DataBlock, a.DataBlock) },
                 o.createElement(
                   "div",
-                  { className: (0, d.A)(s.PersonaName, a.PersonaName) },
+                  { className: (0, d.A)(_.PersonaName, a.PersonaName) },
                   t ? t.persona_name : "",
                 ),
               ),
@@ -477,7 +479,7 @@
         return o.createElement(
           c.Z,
           {
-            className: (0, d.A)(s.ViewPageButton, a.ViewPageButton),
+            className: (0, d.A)(_.ViewPageButton, a.ViewPageButton),
             onActivate: t,
           },
           (0, i.we)("#YIR_MM_Generic_Action"),
@@ -541,13 +543,13 @@
         const { year: a, theme: t } = e;
         return o.createElement(
           "div",
-          { className: (0, d.A)(s.Header, t.Header) },
+          { className: (0, d.A)(_.Header, t.Header) },
           (0, i.PP)(
             "#YIR_MM_Header",
             o.createElement("br", null),
             o.createElement(
               "div",
-              { className: (0, d.A)(s.YearSubtitle, t.YearSubtitle) },
+              { className: (0, d.A)(_.YearSubtitle, t.YearSubtitle) },
               (0, i.we)("#date_year", a),
             ),
           ),
@@ -556,28 +558,28 @@
       function v(e) {
         return o.createElement(
           "div",
-          { className: (0, d.A)(s.Hashtag, e.theme.Hashtag) },
+          { className: (0, d.A)(_.Hashtag, e.theme.Hashtag) },
           (0, i.we)("#YIR_MM_HashTag"),
         );
       }
       function h() {
-        const e = (0, n.J)().GetTemplateVars();
-        return (0, r.WN)(e.linkurl);
+        const e = (0, r.J)().GetTemplateVars();
+        return (0, n.WN)(e.linkurl);
       }
     },
     37220: (e, a, t) => {
       "use strict";
       t.d(a, { b: () => l });
-      var r = t(90626);
-      const n = { 2022: t(47277), 2023: t(25150), 2024: t(94595) },
-        o = Object.values(n).reduce((e, a) => ({ ...e, ...a }), {}),
+      var n = t(90626);
+      const r = { 2022: t(47277), 2023: t(25150), 2024: t(94595) },
+        o = Object.values(r).reduce((e, a) => ({ ...e, ...a }), {}),
         c = 2022;
       function l(e) {
-        const [a, t] = (0, r.useState)({});
+        const [a, t] = (0, n.useState)({});
         return (
-          (0, r.useEffect)(() => {
-            let a = n[e];
-            a || (a = n[c]), t({ ...o, ...a });
+          (0, n.useEffect)(() => {
+            let a = r[e];
+            a || (a = r[c]), t({ ...o, ...a });
           }, [e]),
           a
         );
