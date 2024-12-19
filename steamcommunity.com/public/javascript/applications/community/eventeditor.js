@@ -12928,7 +12928,9 @@
       function Ii(e) {
         const { editModel: t, refOnInsertImage: a } = e,
           [n, l, i] = (function (e) {
-            const t = [].includes(e.GetClanAccountID()),
+            const t = [2 == La.TS.EUNIVERSE ? 2581 : 45267781].includes(
+                e.GetClanAccountID(),
+              ),
               a = t,
               n = "partnerEventsRichEditorOptIn",
               l = t ? "1" : "0",
