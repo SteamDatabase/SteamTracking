@@ -11568,10 +11568,12 @@
         m_filesToUpload = s.sH.array();
         m_strUploadPath = null;
         m_fnUploadSuccessCallback = null;
-        constructor(e, t) {
+        m_bSynchronousUpload = !1;
+        constructor(e, t, r) {
           (0, s.Gn)(this),
             (this.m_strUploadPath = e),
-            (this.m_fnUploadSuccessCallback = t);
+            (this.m_fnUploadSuccessCallback = t),
+            (this.m_bSynchronousUpload = r);
         }
         GetFnOnUploadSuccess() {
           return this.m_fnUploadSuccessCallback;
@@ -11675,21 +11677,24 @@
         }
         async UploadAllImages(e, t, r, a, n) {
           const i = {};
+          let s = {};
           for (const e of this.m_filesToUpload)
             if ("pending" === e.status) {
               const t = e.IsValidAssetType(r, a, n);
               if (!t.error && !t.needsCrop) {
                 e.status = "uploading";
-                i[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
+                const r = `${e.uploadTime}/${e.file.name}`;
+                (i[r] = this.UploadFile(
                   e.file,
                   e.file.name,
                   e.language,
                   t.match,
-                );
+                )),
+                  this.m_bSynchronousUpload && (s[r] = await i[r]);
               }
             }
-          const s = await (0, c.RR)(i);
           return (
+            this.m_bSynchronousUpload || (s = await (0, c.RR)(i)),
             Object.keys(s).forEach((r) => {
               const a = s[r],
                 n = this.m_filesToUpload.find(

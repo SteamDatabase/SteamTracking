@@ -50326,6 +50326,7 @@
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${B.TS.PARTNER_BASE_URL}appsupport/ajaxuploadasset/${t.GetID()}`,
               fnOnUploadSuccess: i,
+              bSynchronousUpload: !0,
             }),
             l.createElement(
               d.tH,
@@ -96709,14 +96710,18 @@
       }
       var F = a(56004);
       function L(e) {
-        const { strUploadAjaxURL: t, fnOnUploadSuccess: a } = e,
-          [r] = (0, n.useState)(new F.IK(t, a));
+        const {
+            strUploadAjaxURL: t,
+            fnOnUploadSuccess: a,
+            bSynchronousUpload: r,
+          } = e,
+          [i] = (0, n.useState)(new F.IK(t, a, r ?? !1));
         return (
           (0, n.useEffect)(() => {
-            r.GetFnOnUploadSuccess() != a && r.SetFnOnUploadSuccess(a),
-              r.GetUploadPath() != t && r.SetUploadPath(t);
-          }, [r, a, t]),
-          n.createElement(R, { ...e, imageUploader: r })
+            i.GetFnOnUploadSuccess() != a && i.SetFnOnUploadSuccess(a),
+              i.GetUploadPath() != t && i.SetUploadPath(t);
+          }, [i, a, t]),
+          n.createElement(R, { ...e, imageUploader: i })
         );
       }
     },
