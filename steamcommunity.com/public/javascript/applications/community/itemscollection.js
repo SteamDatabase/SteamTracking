@@ -345,7 +345,13 @@
             const a = new Map();
             return (
               o
-                .filter((e) => e.active && !e.deleted && !t.has(e.item_type))
+                .filter(
+                  (e) =>
+                    e.active &&
+                    !e.deleted &&
+                    !t.has(e.item_type) &&
+                    1 != e.item_class,
+                )
                 .sort((t, a) => {
                   const n = e.has(`${t.appid}_${t.item_type}`),
                     i = e.has(`${a.appid}_${a.item_type}`);
@@ -370,10 +376,8 @@
           k = (0, _.useMemo)(() => {
             if (P.has(3)) {
               const e = P.get(3).filter((e) => {
-                const t = JSON.parse(e.item_key_values);
-                return (
-                  e.item_movie_webm && e.item_movie_mp4 && !t.parent_bundle_type
-                );
+                JSON.parse(e.item_key_values);
+                return e.item_movie_webm && e.item_movie_mp4;
               });
               if (e.length) return (0, w.fW)(e), e[0];
             }
@@ -470,6 +474,7 @@
                       nAppID: g,
                       itemClass: e,
                       rgItems: P.get(e),
+                      bHideItemStore: 2 == e,
                     }),
                   ),
                 ),
