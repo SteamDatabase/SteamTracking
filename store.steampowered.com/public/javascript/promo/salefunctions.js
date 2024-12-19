@@ -273,7 +273,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
 
 	
-	let rgHeros = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 24, Settings );
+	let rgHeros = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 42, Settings );
 	let rgPriorityHeroOptions = rgHeros.slice( 0, Math.min( rgHeros.length, 6 ) );
 	let rgPrioritizedHeros = SortItemListByPriorityList( rgPriorityHeroOptions, 'tier1' );
 

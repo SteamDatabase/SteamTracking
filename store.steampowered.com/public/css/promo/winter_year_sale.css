@@ -631,13 +631,13 @@ body.v6.sale_winter2024 .sale_capsule_carousel .carousel_items > * {
 	}
 }
 
-.home_pagecontent_ctn.featured_special_deals .carousel_thumbs > div {
+/* .home_pagecontent_ctn.featured_special_deals .carousel_thumbs > div {
 	background-color: #cba36c;
 }
 
 .home_pagecontent_ctn.featured_special_deals .carousel_thumbs > div.focus {
 	background-color: #e3535b;
-}
+} */
 
 .featured_special_deals .home_section_title {
 	color: #f9e8f9;
@@ -3537,18 +3537,17 @@ html.tablet body.v6.sale_winter2024 .home_tabs_row_ctn, html.tablet body.v6.sale
 }
 
 html.tablet body.v6.sale_winter2024 .pill_tab_menu_item {
-	background: #9b393f;
+	background-color: #000000;
 	color: #ffffff;
 }
 
 html.tablet body.v6.sale_winter2024 .pill_tab_menu_item.active {
-	background: #e1525c;
-	color: #ffffff;
+	background: #d85cca;
 }
 
 html.tablet body.v6.sale_winter2024 .pill_tab_menu_item.gpfocus {
 	background: #ffffff;
-	color: #df525a;
+	color: #000000;
 }
 
 html.tablet body.v6.sale_winter2024 .carousel_container .carousel_items:not(.no_paging).hero_row {
