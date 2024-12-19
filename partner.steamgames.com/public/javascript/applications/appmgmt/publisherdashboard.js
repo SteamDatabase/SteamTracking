@@ -1819,10 +1819,10 @@
           a = n.useMemo(() => {
             const a = (0, r.Tc)("rgPartnerPromotions", "application_config"),
               n = a?.rgPlans
-                .map((e) => (0, se.ap)(e.partner_readonly_jsondata))
+                ?.map((e) => (0, se.ap)(e.partner_readonly_jsondata))
                 .filter((e) => e && e.id),
               s = a?.rgPlans
-                .map((e) => ({ plan: e, input: (0, se.ap)(e.input_jsondata) }))
+                ?.map((e) => ({ plan: e, input: (0, se.ap)(e.input_jsondata) }))
                 .filter((e) => !!e.input)
                 .reduce(
                   (e, t) => e.set(t.plan.promotion_id, t.input),
