@@ -5192,7 +5192,12 @@
                     }),
                   ),
                 ),
-                n.createElement(wa, { language: _, steamId: r, nYear: l }),
+                n.createElement(wa, {
+                  language: _,
+                  steamId: r,
+                  nYear: l,
+                  shareUrl: E,
+                }),
                 n.createElement(
                   "div",
                   { className: ra.FooterCtn },
@@ -5224,49 +5229,49 @@
             );
       }
       function wa(e) {
-        const { language: t, steamId: a, nYear: r } = e,
-          [l, s] = (0, n.useState)(0),
-          [i, m] = (0, n.useState)(!1),
-          { isLoading: c, data: u } = (function (e, t, a) {
+        const { language: t, steamId: a, nYear: r, shareUrl: l } = e,
+          [s, i] = (0, n.useState)(0),
+          [m, c] = (0, n.useState)(!1),
+          { isLoading: u, data: _ } = (function (e, t, a) {
             return (0, d.I)({
               queryKey: [ha, e, t, a],
               queryFn: () => ga.Get().GetLoadSocialImages(e, t, a),
             });
           })(a.ConvertTo64BitString(), r, t),
-          _ = u?.length - 1,
-          p = `${o.TS.BASE_URL_SHARED_CDN}social_sharing/`,
-          h = (e) => {
-            l > 0 && (s(l - 1), e.stopPropagation());
-          },
+          p = _?.length - 1,
+          h = `${o.TS.BASE_URL_SHARED_CDN}social_sharing/`,
           v = (e) => {
-            l < _ && (s(l + 1), e.stopPropagation());
+            s > 0 && (i(s - 1), e.stopPropagation());
+          },
+          E = (e) => {
+            s < p && (i(s + 1), e.stopPropagation());
           };
         return (
-          (0, Ea.E)("ArrowLeft", h),
-          (0, Ea.E)("Left", h),
-          (0, Ea.E)("ArrowRight", v),
-          (0, Ea.E)("Right", v),
-          c
+          (0, Ea.E)("ArrowLeft", v),
+          (0, Ea.E)("Left", v),
+          (0, Ea.E)("ArrowRight", E),
+          (0, Ea.E)("Right", E),
+          u
             ? n.createElement(
                 "div",
                 { className: (0, me.A)(ra.CarouselCtn, ra.LoadingCtn) },
                 n.createElement(oe.t, { position: "center" }),
               )
-            : u
+            : _
               ? n.createElement(
                   "div",
                   { className: ra.CarouselCtn },
-                  i &&
+                  m &&
                     n.createElement(Na, {
-                      carouselIndex: l,
+                      carouselIndex: s,
                       endPreviewImage: (e) => {
-                        m(!1), e.stopPropagation();
+                        c(!1), e.stopPropagation();
                       },
-                      onMoveLeft: h,
-                      onMoveRight: v,
-                      name: u[l].name,
-                      url: `${p}${u[l].url_path}`,
-                      maxIndex: _,
+                      onMoveLeft: v,
+                      onMoveRight: E,
+                      name: _[s].name,
+                      url: `${h}${_[s].url_path}`,
+                      maxIndex: p,
                     }),
                   n.createElement(
                     "div",
@@ -5277,9 +5282,9 @@
                         className: (0, me.A)(
                           ra.Arrow,
                           ra.Left,
-                          0 === l && ra.ArrowDisabled,
+                          0 === s && ra.ArrowDisabled,
                         ),
-                        onClick: h,
+                        onClick: v,
                       },
                       n.createElement(ie.V5W, { angle: 270 }),
                     ),
@@ -5289,9 +5294,9 @@
                         className: (0, me.A)(
                           ra.Arrow,
                           ra.Right,
-                          l === _ && ra.ArrowDisabled,
+                          s === p && ra.ArrowDisabled,
                         ),
-                        onClick: v,
+                        onClick: E,
                       },
                       n.createElement(ie.V5W, { angle: 90 }),
                     ),
@@ -5301,10 +5306,10 @@
                       n.createElement(
                         "div",
                         { className: (0, me.A)(ra.Peek, ra.LeftPeak) },
-                        0 !== l &&
+                        0 !== s &&
                           n.createElement("img", {
                             className: ra.PeakImg,
-                            src: `${p}${u[l - 1].url_path}`,
+                            src: `${h}${_[s - 1].url_path}`,
                           }),
                       ),
                       n.createElement(
@@ -5317,7 +5322,7 @@
                             "div",
                             {
                               onClick: (e) => {
-                                m(!0), e.stopPropagation();
+                                c(!0), e.stopPropagation();
                               },
                               className: ra.PreviewMask,
                             },
@@ -5325,37 +5330,40 @@
                           ),
                           n.createElement("img", {
                             className: ra.CenterImg,
-                            src: `${p}${u[l].url_path}`,
+                            src: `${h}${_[s].url_path}`,
                           }),
                         ),
                       ),
                       n.createElement(
                         "div",
                         { className: (0, me.A)(ra.Peek, ra.RightPeak) },
-                        l !== _ &&
+                        s !== p &&
                           n.createElement("img", {
                             className: ra.PeakImg,
-                            src: `${p}${u[l + 1].url_path}`,
+                            src: `${h}${_[s + 1].url_path}`,
                           }),
                       ),
                     ),
                   ),
                   o.TS.IN_MOBILE_WEBVIEW
-                    ? n.createElement(Ga, { shareUrl: `${p}${u[l].url_path}` })
+                    ? n.createElement(Ga, {
+                        imageUrl: `${h}${_[s].url_path}`,
+                        shareUrl: l,
+                      })
                     : o.TS.IN_CLIENT
                       ? null
                       : n.createElement(fa, {
-                          imageUrl: `${p}${u[l].url_path}`,
+                          imageUrl: `${h}${_[s].url_path}`,
                         }),
                   n.createElement(
                     "div",
                     { className: ra.CarouselHintCtn },
-                    u.map((e, t) =>
+                    _.map((e, t) =>
                       n.createElement("div", {
                         key: `${t}_hint`,
                         className: (0, me.A)(
                           ra.CarouselHint,
-                          t === l ? ra.ActiveHint : null,
+                          t === s ? ra.ActiveHint : null,
                         ),
                       }),
                     ),
@@ -5363,7 +5371,7 @@
                   n.createElement(
                     "div",
                     { className: ra.FormatHint },
-                    (0, g.we)(`#YIR_ShareModal_ImageCaption_${u[l].name}`),
+                    (0, g.we)(`#YIR_ShareModal_ImageCaption_${_[s].name}`),
                   ),
                 )
               : n.createElement(
@@ -5465,7 +5473,7 @@
         );
       }
       function Ga(e) {
-        const { shareUrl: t } = e;
+        const { imageUrl: t, shareUrl: a } = e;
         return n.createElement(
           "div",
           {
@@ -5473,15 +5481,15 @@
             onClick: () => {
               const e = Reflect.get(window, "ReactNativeWebView");
               if (e?.postMessage) {
-                const a = {
+                const n = {
                   event_name: "shareimage",
                   link: t,
                   url: t,
                   subject: (0, g.we)("#YIR_ShareModal_MobileSubject"),
-                  message: t,
+                  message: a,
                   title: (0, g.we)("#YIR_ShareModal_MobileMessage"),
                 };
-                e.postMessage(JSON.stringify(a));
+                e.postMessage(JSON.stringify(n));
               } else;
             },
           },
