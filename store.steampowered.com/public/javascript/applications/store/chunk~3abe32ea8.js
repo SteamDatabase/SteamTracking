@@ -1960,51 +1960,47 @@
           N = a.useRef(performance.now()),
           [G, k] = (0, a.useState)([]),
           P = (0, p.m)("DiscoveryQueueWidget"),
-          q = (0, f.IH)(t, r);
-        let F = (function (e) {
-          let { data: t } = (0, c.PG)(
-            "DiscoveryQueueWidget",
-            {
-              sort: 11,
-              start: 0,
-              count: 12,
-              filters: { type_filters: { include_games: !0 } },
-            },
-            void 0,
-            { reactQuery: { enabled: e, staleTime: 1 / 0 } },
-          );
-          return t ? t.GetItemIDs().map((e) => e.appid) : void 0;
-        })(!y.iA.logged_in);
-        d.length || y.iA.logged_in || (d = F),
-          a.useEffect(() => {
-            C ||
-              (async () => {
-                let e = !1;
-                if (y.iA.logged_in && !d.length) {
-                  const { appids: n, exhausted: a } = await f.aI
-                    .Get()
-                    .GetDiscoveryQueueAppsOfType(t, !0, r);
-                  P?.token?.reason || b([...n]), (e = a);
-                }
-                if (d.length) {
-                  let e = u.LB;
-                  (e.include_screenshots = !0),
-                    await o.A.Get().QueueMultipleAppRequests(d, e),
-                    s.Fm.Get().HintLoad();
-                  const t = d.map((e) =>
-                    a.createElement(I, { key: "Capsule_" + e, appID: e }),
-                  );
-                  t.push(
-                    a.createElement(I, {
-                      key: "Capsule2_" + d[0],
-                      appID: d[0],
-                    }),
-                  ),
-                    P?.token?.reason || (k(t), E(!0));
-                }
-                e && !P?.token?.reason && E(!0);
-              })();
-          }, [t, d, C, r, P?.token?.reason]),
+          q = (0, f.IH)(t, r),
+          F = (function (e) {
+            let { data: t } = (0, c.PG)(
+              "DiscoveryQueueWidget",
+              {
+                sort: 11,
+                start: 0,
+                count: 12,
+                filters: { type_filters: { include_games: !0 } },
+              },
+              void 0,
+              { reactQuery: { enabled: e, staleTime: 1 / 0 } },
+            );
+            return t ? t.GetItemIDs().map((e) => e.appid) : void 0;
+          })(!y.iA.logged_in);
+        a.useEffect(() => {
+          C ||
+            (async () => {
+              let e = !1;
+              if (y.iA.logged_in) {
+                const { appids: n, exhausted: a } = await f.aI
+                  .Get()
+                  .GetDiscoveryQueueAppsOfType(t, !0, r);
+                P?.token?.reason || b([...n]), (e = a);
+              } else b(F);
+              if (d?.length) {
+                let e = u.LB;
+                (e.include_screenshots = !0),
+                  await o.A.Get().QueueMultipleAppRequests(d, e),
+                  s.Fm.Get().HintLoad();
+                const t = d.map((e) =>
+                  a.createElement(I, { key: "Capsule_" + e, appID: e }),
+                );
+                t.push(
+                  a.createElement(I, { key: "Capsule2_" + d[0], appID: d[0] }),
+                ),
+                  P?.token?.reason || (k(t), E(!0));
+              }
+              e && !P?.token?.reason && E(!0);
+            })();
+        }, [t, d, C, r, P?.token?.reason, F]),
           a.useEffect(() => {
             if (!C || !T || S) return void cancelAnimationFrame(M.current);
             const e = () => {
