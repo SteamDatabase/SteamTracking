@@ -693,6 +693,7 @@
     },
     94595: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         new_games_color: "#34f3fe",
         used_games_color: "#cc6670",
         old_games_color: "#f4d760",

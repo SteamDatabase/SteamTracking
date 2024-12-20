@@ -3349,7 +3349,6 @@
             bAutoplayVideos: u,
             bVideoShouldStart: y,
           }),
-          ";",
         );
       }
       function B(e) {

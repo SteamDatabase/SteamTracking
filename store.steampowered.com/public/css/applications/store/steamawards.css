@@ -847,6 +847,7 @@ html.tablet .carousel__slider-tray-wrapper {
 }
 ._16DzRvjcqFcYr0NYcWmTrg {
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

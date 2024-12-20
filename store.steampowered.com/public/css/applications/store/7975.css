@@ -10,6 +10,7 @@
 }
 ._16DzRvjcqFcYr0NYcWmTrg {
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -768,8 +769,8 @@ html.tablet .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
   }
 }
 html.tablet .ContentHubSalePage .contenthubmaincarousel {
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
   padding: 0px;
   box-sizing: border-box;
   scroll-padding: 0px var(--gpSpace-Gutter);
@@ -784,8 +785,8 @@ html.tablet .ContentHubSalePage .contenthubmaincarousel .SliderBody ul li {
 }
 @media screen and (max-width: 910px) {
   .ContentHubSalePage .contenthubmaincarousel {
-    max-width: 100vw;
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
     padding: 0px;
     box-sizing: border-box;
     scroll-padding: 0px var(--gpSpace-Gutter);

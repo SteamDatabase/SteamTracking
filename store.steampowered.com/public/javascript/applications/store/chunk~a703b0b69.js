@@ -448,6 +448,7 @@
         FadeIn: "_18mfI3yI3wDKOOl9rd315x",
         AppDetailsCtn: "_1_nZSkaKcUeXxQpXV5ulcm",
         AppDetailsCtnTop: "_3UBx0c_4mXJqBclhB-8J-",
+        "gameinfo-trans-in": "_2yZZOxRgUKE9cd0jxir9Oh",
         AppName: "_1mW-U_MsASmVMPP02-3StV",
         AppLink: "_3bosSfx_R7a3a8ZJTdKrum",
         AppCapsule: "_8JfsVa2qql_sG4yZvL31M",
@@ -459,6 +460,7 @@
         AppActionJustButtonsCtn: "_3Q_tm9SkDIAKcbDOTExZnn",
         QueueButton: "_3tZYNXnqaO3px3k5QRFOz-",
         Active: "_1Ko2NGwrR-X4TIRVExBYr0",
+        Demo: "_3BPATv0GbVZJr9MnPSFbwN",
         ButtonsRowWrap: "_1B3sMJ5v2o-sCS9CV-6kA3",
         Disabled: "_1iv01Tc8SCeolVfQ-rJIEP",
         YGlyph: "_2shRa-83wgkVmFYGCFxPqS",
@@ -11018,7 +11020,7 @@
           n.createElement(
             p.K,
             {
-              placeholderHeight: "100vh",
+              placeholderHeight: 450,
               rootMargin: y.$m,
               className: (0, f.A)(
                 u().SaleSection,
@@ -11301,7 +11303,7 @@
                         id: s.GetAppID(),
                         type: (0, I._4)(s.GetStoreItemType(), s.GetAppType()),
                       },
-                      className: (0, f.A)(st().QueueButton),
+                      className: (0, f.A)(st().QueueButton, st().Demo),
                     }),
                   n.createElement(
                     ma.he,
@@ -11579,8 +11581,7 @@
                   )
                 : n.createElement(q.h, {
                     capsules_per_row: [1],
-                    is_maincap: !0,
-                    is_expanded_maincap: u,
+                    is_trailercarousel: !0,
                   }),
             )
           : n.createElement(
