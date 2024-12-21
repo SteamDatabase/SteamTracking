@@ -388,11 +388,24 @@ function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
 		return;
 
 	let rgSpecialDeals = GHomepage.FilterItemsForDisplay(
-		rgSpecialDealItems, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
+		rgSpecialDealItems, 'home', 3, 24, { games_already_in_library: true, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
 	);
 
 	if ( rgSpecialDeals.length >= 3 )
 	{
+		if ( g_AccountID )
+		{
+			rgSpecialDeals.sort( ( app1, app2 ) =>
+			{
+				const bApp1Owned = GDynamicStore.BIsAppOwned( app1.appid );
+				const bApp2Owned = GDynamicStore.BIsAppOwned( app2.appid );
+				if ( ( bApp1Owned && bApp2Owned ) || ( !bApp1Owned && !bApp2Owned ) )
+					return 0;
+
+				return !bApp1Owned && bApp2Owned ? -1 : 1;
+			}  );
+		}
+
 		GHomepage.FillPagedCapsuleCarousel( rgSpecialDeals, $SpecialDealsCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
 			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
 		}, 'sale_deep_discounts', 3 );

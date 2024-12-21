@@ -270,6 +270,7 @@ ${COMMUNITY_BASE_URL}my/edit/background
 ${COMMUNITY_BASE_URL}my/edit/favoritebadge
 ${COMMUNITY_BASE_URL}my/edit/miniprofile
 ${COMMUNITY_BASE_URL}my/friends/add
+${COMMUNITY_BASE_URL}my/gamecards/${}
 ${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}my/itemcollection
