@@ -3407,7 +3407,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "녹화 설정",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Play 설정",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "방송 설정",
-    "GamepadOverlay_GameRecording_GoToRecording": "백그라운드 녹화 영상 보기",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "백그라운드 녹화 영상 보기",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "게임 중 녹화 시작/중지 단축키:",
     "GamepadOverlay_GameRecording_ClipExplainer": "게임 중 클립 만들기 단축키:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "타임라인 마커 추가 단축키 %1$s:",

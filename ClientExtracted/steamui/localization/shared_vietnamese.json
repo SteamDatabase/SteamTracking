@@ -3403,7 +3403,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Thiết lập ghi hình",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Thiết lập Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Thiết lập phát sóng",
-    "GamepadOverlay_GameRecording_GoToRecording": "Xem bản ghi hình trong nền",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Xem bản ghi hình trong nền",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Tổ hợp phím tắt để bắt đầu/dừng ghi hình trong trò chơi:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Tổ hợp phím tắt để cắt clip trong khi chơi:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Tổ hợp phím tắt để thêm đánh dấu dòng thời gian %1$s:",

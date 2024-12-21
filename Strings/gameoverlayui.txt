@@ -1,232 +1,17 @@
-  Actual   : 
-  Comment started here.
-  Expected : 
-  f_bavail: %llu\n
-  f_bfree : %llu\n
-  f_blocks: %llu\n
-  f_bsize : %lu\n
-  f_frsize: %lu\n
-  what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- 2>/dev/null
- = { <proto text format> }". To set fields within it, use syntax like "
- A, int zpos, string image, string border, string fillcolor, bool scaleImage, bool gradientVertical, color gradientStart, color gradientEnd
- BackUp() can only be called after Next().
- Can't back up over more bytes than were returned by the last call to Next().
- Outdent() without matching Indent().
- Parameter to BackUp() can't be negative.
- ReadToken overflow
- Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
- [clone 
- [default = $0
  \n\vinitial_top
- __vector(
- a protocol 
- args were given.  Full format string was: "
- arguments. 
- bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
- cannot be required.
- conflicts with an existing enum type.
- conflicts with an existing field.
- conflicts with an existing nested message type.
- conflicts with an existing oneof type.
- contains invalid 
- definition file imports the proto which defines the option.
- details: 
- exceeded maximum protobuf size of 2GB: 
  google/protobuf/descriptor.proto"1\n\rCMsgIPAddress
- has the same name as 
- if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
- is unused.
- message of type "
- noexcept
- not found
- of the Protocol Buffer runtime library, but the installed version is 
- of the Protocol Buffer runtime library, which is not compatible with the installed version (
- restrict
- stack frames not accounted for stack unwind.
- throw
- transaction_safe
- type does not match\n
- volatile
- was modified concurrently during serialization.
- with type 
-!( m_nFlags & FCVAR_NEVER_AS_STRING )
-!("Invalid number of parameters")
-!("No handler for vgui message function")
-!(cascadeMenu && checkable)
-!= and not NULL
-!IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !\n\finitial_left
-!is_large()
-!m_SelectedItems.HasElement( itemID )
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-!pCmd->has_hwnd_browser()
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-!pszString || pszString[nChars] == '\0'
 " \n\rCMsgSetUIMode
-" because it is missing required fields: 
-" conflicts with field "
-" conflicts with the existing symbol "
-" contains null character.
-" for field "
-" for option "
-" has no field named "
-" has no value named "
-" has not been loaded.
-" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
-" is a message. To set the entire message, use syntax like "
-" is a repeated message. Repeated message options must be initialized using an aggregate value.
-" is already defined (as something other than a package) in file "
-" is already defined in "
-" is already defined in file "
-" is already defined.
-" is an atomic type, not a message.
-" is missing required fields: 
-" is not a field or extension of message "
-" is not a message type.
-" is not a proto3 enum, but is used in "
-" is not a type.
-" is not a valid identifier.
-" is not an enum type.
-" is not defined or is not an extension of "
-" is not defined.
-" is resolved to "
-" is resolved to "(
-" is specified along with field "
-" is specified multiple times.
-" must be unique within 
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
-" seems to be defined in "
-" stored in google.protobuf.Any has missing required fields
-" stored in google.protobuf.Any.
-" unknown. Ensure that your proto
-" uses the same enum value as "
-" was already set.
-" was listed twice.
-" was not found or had errors.
-" which is a proto3 message type.
-" which is not defined or is not an extension of "
-" which is.
-""3333
 "#\n\tCMsgClose
-"$0" does not declare $1 as an extension number.
 "'\n\rCMsgShowPopup
-") is not compatible with this reflection object (which is for type "
-") to start from the outermost scope.
-").  Note that the exact same class is required; not just the same descriptor.
-", another member of oneof "
-", but only 
-", field number 
-", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
-", which is not imported by "
-".  To use it here, please add the necessary import.
-". If this is intended, set 'option allow_alias = true;' to the enum definition.
-". This appears to be a value from a sibling type.
-". This is not 
-". Value: "
-"/*" inside block comment.  Block comments cannot be nested.
-"0x" must be followed by hex digits.
 "????'????????????????????????????????????????????????????\????
 "C\n\rCMsgAddHeader
-"DeleteMapValue"
-"GetMapData"
-"GetRawRepeatedField"
-"InsertOrLookupMapValue"
-"LookupMapValue"
-"MapBegin"
-"MapEnd"
-"MapSize"
-"MutableRawRepeatedField"
 "\n\farray_values
 "^\n\fOneofOptions
-"e" must be followed by exponent.
-#<, string leftText, string rightText
-#FileOpenDialog_Cancel
-#FileOpenDialog_Col_Attributes
-#FileOpenDialog_Col_DateCreated
-#FileOpenDialog_Col_DateModified
-#FileOpenDialog_Col_Name
-#FileOpenDialog_Col_Size
-#FileOpenDialog_Col_Type
-#FileOpenDialog_FileType_Folder
-#FileOpenDialog_File_name
-#FileOpenDialog_File_type
-#FileOpenDialog_Look_in
-#FileOpenDialog_NewFolderPrompt
-#FileOpenDialog_NewFolder_DefaultName
-#FileOpenDialog_NewFolder_InputTitle
-#FileOpenDialog_Open
-#FileOpenDialog_Save
-#FileOpenDialog_ToolTip_NewFolder
-#FileOpenDialog_ToolTip_Up
-#Frame_Untitled
-#MessageBox_OK
-#QueryBox_Cancel
-#Steam_Browser_Disabled
-#Steam_Browser_Disabled_KB
-#Steam_Browser_Disabled_KB_URL
-#SysMenu_Close
-#SysMenu_Maximize
-#SysMenu_Minimize
-#TextEntry_AppendText
-#TextEntry_ConversionMode
-#TextEntry_Copy
-#TextEntry_CopyAllToClipboard
-#TextEntry_Cut
-#TextEntry_Language
-#TextEntry_Paste
-#TextEntry_PrependText
-#TextEntry_ReplaceText
-#TextEntry_SelectAll
-#TextEntry_SentenceMode
-#VGui_Cancel
-#VGui_CreateFolder
-#VGui_OK
-#VGui_Select
-#debug_container
-#debug_containerfile
-#debug_noselection
-#debug_selection
-#include
-#include is NULL 
-#var_%s
-#vgui_CreateDirectoryFail_AlreadyExists
-#vgui_CreateDirectoryFail_Info
-#vgui_CreateDirectoryFail_Title
-#vgui_HTMLBack
-#vgui_HTMLCopyLink
-#vgui_HTMLCopyUrl
-#vgui_HTMLForward
-#vgui_HTMLInspectElement
-#vgui_HTMLOpenDevTools
-#vgui_HTMLReload
-#vgui_HTMLStop
-#vgui_HTMLViewSource
-#vgui_Webkit_badurl
-#vgui_Webkit_cachemiss
-#vgui_Webkit_connectionproblem
-#vgui_Webkit_error_header
-#vgui_Webkit_error_title
-#vgui_Webkit_proxyconnectionproblem
-#vgui_Webkit_unknown
-#vgui_cancel
-#vgui_choosedirectoryname
-#vgui_ok
-$0  extend .$1 {\n
-$0  extensions $1 to $2;\n
-$0  reserved 
-$0 to max, 
-$0$1$2 $3 = $4
-$0enum $1 {\n
-$0message $1
-$0oneof $1 {
-$0option $1;\n
-$0rpc $1($4.$2) returns ($5.$3)
 $\n k_BluetoothDeviceType_Headphones
 $\n k_BluetoothDeviceType_OtherAudio
 $\n k_ColorGamutLabelSet_sRGB_Native
@@ -252,10 +37,6 @@ $\n k_EStorageFormatStage_Formatting
 $\n k_EStorageFormatStage_NotRunning
 $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
-%.18g
-%02d/%02d/%02d
-%02d:%02d:%02d
-%04d%02d%02d%02d%02d%02d
 %\n k_EPersonaStateFlag_ClientTypeVR
 %\n!k_EBanContentCheckResult_Possible
 %\n!k_EBanContentCheckResult_Unlikely
@@ -275,46 +56,6 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
-%a %b %d %H:%M:%S %Y UTC
-%checkout%
-%community%
-%communityhttps%
-%d %d %d %d
-%d MB avail\n
-%d MB free space\n
-%d MB total space\n
-%d:00
-%f %f %f %f
-%help%
-%lld
-%llu
-%s (%d,%d,%d,%d)
-%s call had invalid argument (arg %d): %s
-%s is currently read-only.\nDid you wish to check out file from P4?\n
-%s overflow!\n
-%s requires %d arguments; only %d given
-%s%s %s: %s\n
-%s%s[%d]: -> %s\n
-%s/.steam/%s
-%s/.steam/steam
-%s/chromehtml
-%s/config
-%s/filesystem_%s
-%s/skins/%s
-%s/vgui2_s
-%s: __pos (which is %zu) > this->size() (which is %zu)
-%s:hscroll
-%s:vscroll
-%s_avail
-%s_collapsed
-%s_hidden
-%s_mem
-%s_mutex
-%s_url
-%s_written
-%store%
-%storehttps%
-%u FPS
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_EClanESportTournamentStreamEvent
@@ -350,16 +91,9 @@ $\n k_SystemAudioPortDirection_Input
 '\n#k_EProfileCustomizationTypeMyGuides
 '\n#k_EProvideDeckFeedbackPreference_No
 '\n\tmessageid
-( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
-(%zu) Descend: %s, (%s), %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (*MARK) must have an argument
 (*VERB) not recognized or malformed
-(1 + n) * 3 <= vecsize
 (?R or (?[+-]digits must be followed by )
-(DEPRECATED) Friends-of-friends-only
-(DEPRECATED) Logged-in users only
 (\n$k_EBroadcastPermissionFriendsAllowed
 (\n$k_EBroadcastPermissionFriendsApprove
 (\n$k_EBrowserFeatureStatus_EnabledForce
@@ -433,13 +167,6 @@ $\n k_SystemAudioPortDirection_Input
 (\v2\f.CMsgJSValue"
 (\v2\f.CMsgJSValue"g\n
 (\v2\f.CMsgJSValue"x\n
-(anonymous namespace)
-(cannot determine missing fields for lite message)
-(elem == Count()) || IsValidIndex(elem)
-(merge 
-(unsigned)elem <= (unsigned)m_Size
-)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
-).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )\n$k_EPersonaStateFlag_ClientTypeMobile
 )\n%k_EBanContentCheckResult_VeryUnlikely
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
@@ -496,19 +223,6 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n\rReservedRange
 +\n\vmethod_type
-, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
-, but was 
-, int SubTabPosition
-, int showDownArrow
-, not just within "
-, string URLText
-, string command, int default
-, string image
-, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
-, string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
-, string progress, string variable
-, string text, bool scrollbar
-, string title
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
@@ -526,9 +240,6 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_PublishedFileQueryType_RankedByVotesUp
 ,\n\fvideo_decode
 ,\n\fvideo_encode
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
--0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
@@ -540,43 +251,6 @@ $\n k_SystemAudioPortDirection_Input
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
--dev
--devsites
--devsiteshost
--friendsui
--gameid
--html-enable-tooltips
--html-perf-monitor
--inf
--manuallyclearframes
--nofriendsui
--openalldevtools
--pid
--quicklogin
--steampid
--toggle-overlay-html-mode
--vguimessages
-.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-. Difference of 
-...<truncated>...
-./google/protobuf/arena_impl.h
-./google/protobuf/arenastring.h
-./google/protobuf/descriptor.pb.h
-./google/protobuf/dynamic_message.h
-./google/protobuf/extension_set.h
-./google/protobuf/extension_set_inl.h
-./google/protobuf/generated_message_reflection.h
-./google/protobuf/io/coded_stream.h
-./google/protobuf/map.h
-./google/protobuf/map_field.h
-./google/protobuf/message_lite.h
-./google/protobuf/metadata_lite.h
-./google/protobuf/parse_context.h
-./google/protobuf/reflection.h
-./google/protobuf/reflection_internal.h
-./google/protobuf/repeated_field.h
-./google/protobuf/stubs/stringpiece.h
-./google/protobuf/unknown_field_set.h
 .CClanEventUserNewsTuple"
 .CCookie"
 .CHTMLPageSecurityInfo"n\n
@@ -593,7 +267,6 @@ $\n k_SystemAudioPortDirection_Input
 .EBrowserGPUStatus
 .EJSRegisterMethodType"
 .EProtoClanEventType
-.PLACEHOLDER_VALUE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
@@ -603,10 +276,6 @@ $\n k_SystemAudioPortDirection_Input
 .\n*k_ESteamDeckCompatibilityCategory_Playable
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
-.cpl
-.dummy
-.foo = value".
-.gif
 .google.protobuf.EnumOptions
 .google.protobuf.FieldOptions
 .google.protobuf.FileOptions
@@ -615,15 +284,6 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.OneofOptions"
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
-.jpeg
-.jpg
-.mp4
-.mpeg
-.mpg
-.ogv
-.placeholder.proto
-.png
-.webm
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
 /\n+k_ECommunityItemClass_MiniProfileBackground
@@ -631,80 +291,7 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_PublishedFileQueryType_RankedByTextSearch
-/data/src/common/../common/clientdirectories.h
-/data/src/common/enum_names.cpp
-/data/src/common/filesystem_helpers.cpp
-/data/src/common/friendsuihelpers.cpp
-/data/src/common/html_jstypes.cpp
-/data/src/common/logger.cpp
-/data/src/common/steam/client_api.cpp
-/data/src/overlay/common/shmemstream.cpp
-/data/src/overlay/gameoverlayui/BasePanel.cpp
-/data/src/overlay/gameoverlayui/main.cpp
-/data/src/overlay/gameoverlayui/main_serialized.cpp
-/data/src/overlay/gameoverlayui/screenshotthread.cpp
-/data/src/public/html/htmlpaintbuffer.h
-/data/src/public/html/htmlprotobuf.cpp
-/data/src/public/tier1/bitstring.h
-/data/src/public/tier1/refcount.h
-/data/src/public/tier1/smartptr.h
-/data/src/public/tier1/utldict.h
-/data/src/public/tier1/utlhandletable.h
-/data/src/public/tier1/utllinkedlist.h
-/data/src/public/tier1/utlmemory.h
-/data/src/public/tier1/utlrbtree.h
-/data/src/public/tier1/utlstring.h
-/data/src/public/tier1/utlsymbol.h
-/data/src/public/tier1/utlvector.h
-/data/src/public/vgui_controls/Image.h
-/data/src/public/vgui_controls/MenuItem.h
-/data/src/tier1/KeyValues.cpp
-/data/src/tier1/bitstring.cpp
-/data/src/tier1/convar.cpp
-/data/src/tier1/fileio.cpp
-/data/src/tier1/interface.cpp
-/data/src/tier1/mempool.cpp
-/data/src/tier1/utlbuffer.cpp
-/data/src/tier1/utlmemory.cpp
-/data/src/tier1/utlqueue.cpp
-/data/src/tier1/utlstring.cpp
-/data/src/tier1/utlsymbol.cpp
-/data/src/vgui2/controls/AnimationController.cpp
-/data/src/vgui2/controls/BuildFactoryHelper.cpp
-/data/src/vgui2/controls/BuildGroup.cpp
-/data/src/vgui2/controls/EditablePanel.cpp
-/data/src/vgui2/controls/FileOpenDialog.cpp
-/data/src/vgui2/controls/Frame.cpp
-/data/src/vgui2/controls/GraphPanel.cpp
-/data/src/vgui2/controls/HTML.cpp
-/data/src/vgui2/controls/ImagePanel.cpp
-/data/src/vgui2/controls/Label.cpp
-/data/src/vgui2/controls/ListPanel.cpp
-/data/src/vgui2/controls/ListViewPanel.cpp
-/data/src/vgui2/controls/Menu.cpp
-/data/src/vgui2/controls/MenuItem.cpp
-/data/src/vgui2/controls/Panel.cpp
-/data/src/vgui2/controls/PropertySheet.cpp
-/data/src/vgui2/controls/RichText.cpp
-/data/src/vgui2/controls/TextEntry.cpp
-/data/src/vgui2/controls/TextImage.cpp
-/data/src/vgui2/controls/ToolWindow.cpp
-/data/src/vgui2/controls/TreeView.cpp
-/data/src/vgui2/controls/TreeViewListControl.cpp
-/data/src/vgui2/controls/controls.cpp
-/data/src/vgui2/controls/wrappanel.cpp
-/etc/mtab
-/proc/mounts
-/tmp/disk-free.XXXXXX
-/tmp/gameoverlayui.log
-/tmp/gameoverlayui.log.last
-/u%d-Shm_%x
-/u%d-ValveIPCSharedObj-Steam
-/ubuntu12_64/disk-free 
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
-0123456789ABCDEF
 0123456789abcdef
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -715,8 +302,6 @@ $\n k_SystemAudioPortDirection_Input
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0\n\nrouting_gc
-0x%llx
-1000
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -1091,7 +676,6 @@ $\n k_SystemAudioPortDirection_Input
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:00:19
 23CClanEventUserNewsTuple
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1157,17 +741,14 @@ $\n k_SystemAudioPortDirection_Input
 30CMsgSetNetFakeLocalSystemState
 31CCommunity_ClanAnnouncementInfo
 31CMsgDisableBackgroundThrottling
-32767
 32:B\n
 32UserContentDescriptorPreferences
-333333
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgZoomToElementAtPositionResponse
 384:C\n
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
-3pay
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
 42CMsgDraggableRegionsChanged_DraggableRects
@@ -1180,7 +761,6 @@ $\n k_SystemAudioPortDirection_Input
 4\n0k_PublishedFileQueryType_RankedByBanContentCheck
 4\n0k_PublishedFileQueryType_RankedByLastUpdatedDate
 4\n0k_PublishedFileQueryType_RankedByPublicationDate
-5000
 50UserContentDescriptorPreferences_ContentDescriptor
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
@@ -1232,247 +812,40 @@ $\n k_SystemAudioPortDirection_Input
 9ZooDialog
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
-: Tried to copy from a message with a different type. to: 
-: Tried to merge from a message with a different type.  to: 
-: failed to parse contents
-::g_pFileSystem
-:ListPanelCollapserBase::OnAppearanceChanged()
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\v-2147483648
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
-< no direct container >
-< or is NULL
-<= or is NULL
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
-<no url>
-<unnamed>
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
-> or is NULL
->= or is NULL
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
-?MessageBox
-?PropertyPageControls
-?ScrollBarButton
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
-?string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext, string appearance
-@bEnableLogTearOff
-@bEnableSpewThrottle
-@durationControlInitialNotification
-@import
-@nSpewThrottleNagFrequencyMs
-@nSpewThrottlePeriodMs
-@nSpewThrottleResumeThreshold
-@nSpewThrottleTriggerThreshold
-@nSpewThrottleUnconditionalResumeMs
-@nSpewThrottleUnconditionalTriggerCount
-A file with this name is already in the pool.
-A protocol message was rejected because it was too big (more than 
-A reservation already exists
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
-ABORTED
 ACCEPT
-AKST
-ALREADY_EXISTS
-AMD OpenSource
-AMD RADV
-ANDROID
-ANDROID32
-ANDROID64
-ANY)
-ASCII
-ASCII//TRANSLIT
-AVGRATE
-AVS Failure
 A\n\nannotation
-Abuse reporter's UGC Image
-Accel
-AcceptPanel
-Accepted
-AcceptedForGameRankedByAcceptanceDate
-Access Denied
-Account Disabled
-Account Locked Down
-Account Logon Denied
-Account Logon Denied Verified Email Required
-Account Logon Denied no mail sent
-Account Not Featured
-Account Not Found
-Account Termination
-Account associated with multiple players
-Account has an existing user cancelled license
-Account has been deleted
-Account is blocked
-Account is not allowed
-Account locked
-Account logon denied, need two-factor code
-Account not verified
-Accounts not friends
-AchievementUnlocked
-Activate
-ActivateItem
-ActivateModule
-AddActionSignalTarget
-AddAllocatedMessage
-AddBool
-AddDouble
-AddEnum
-AddFloat
-AddInt32
-AddInt64
-AddMessage
-AddNewTab
-AddString
-AddTabButton
-AddUInt32
-AddUInt64
-AddedGameToWishlist
 AdditionalRoute
-Address is invalid or contains invalid characters
-Administrator OK
-Adult Content
-Advertisement
-Akbank
-Alfa-Click
-AliPay
-AliPayHK
-All files
-AllGuides
-Allowed playtime exceeded
-Already Active
-Already Logged In Elsewhere
-Already Owned
-Already Purchased
-Already Redeemed
-Already have converter for type %s, ignoring...\n
-Already saw decimal point or exponent; can't have another one.
-Always Blocked
-American Express
-Amex (BoaCompra)
-Android
-AnimatingImagePanel
-AnimationController
-Anonymous Game Server
-Anonymous User
-App Running
-AppModalQueryBox
-Application running
-ApplyButtonEnable
-ApplyChanges
-ApplySchemeSettings did not chain back to base class: %s
-April
 Arabic
-ArmItem
 Armenian
-Artwork
-ArtworkPublished
-Asked to unlock memory for write.. but wasn't locked
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-Assertion failed: length > k_cchMaxString
-Attempted to change replicated CVar when you are not the GM\n
-Attempting to purchase same app in different packages
-Audio Behind
-Audio Init Failed
-August
-Aura
-Authorized Device
-Auto Grant
-Auto Moderation
-AutoResize
-Avatar Image
 Avestan
-Away
-BBVA Continental
-BCreateDirectory
-BInvalid image panel position %d %d\n
-BIsOpen()
-BRunFrame()
-BSR_ANYCRLF)
-BSR_UNICODE)
+BWritingFatalMiniDump
+BWritingMiniDump
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
-BackButton
-BackUp() can only be called after a successful Next().
-Backspace
-Backup Running
-Bad Access flag on shared mem create: %s: %u\n
-Bad Gateway
-Bad Request
-Bad activation code
-Bad expression token: %c %c\n
-Bad expression token: %c at %d in %s\n
-Bad response
 Balinese
-Balota
 Bamum
-Banco Credito de Peru
-Banco Nacional de Costa Rica
-Banco Poplar
-Banco do Brasil Online
-Bandwidth Exceeded
-Bank Asya
-Bank Transfer (Degica)
-BaseControls
-BaseGameOverlayUIPanel
-BasePanel()->RunFrame()
 Batak
-Beeline
-Benchmark
 Bengali
-Beta
-Billing agreement cancelled
-Billing name is invalid because it looks like it contains credit card data
-BitCash
-Bitcoin
-Blik
-Blocked because user is not a commercial partner
-Blocked by U.S. government regulations
-BoaCompra Gold
-Boleto Bancario
-Boleto Flash
-Book Voucher
-Boolean default must be true or false.
 Bopomofo
-Borrowed
-Bradesco Online
 Brahmi
 Braille
-Break
-Breaking '%s' in '%s'\n
-Broadcom
-Browser
-BrowserBringWindowToFront
-BrowserDisabledKBLink
-BrowserDisabledMessage
-BrowserDraggableRegionsChanged
-BrowserHideWindow
-BrowserMaximizeRestoreWindow
-BrowserMinimizeWindow
-BrowserResizeGripChanged
-BrowserSetForegroundWindow
-BrowserSetWindowPosition
-BrowserShowWindow
 Buginese
 Buhid
-BuildID: %u\n
-Business account not allowed to purchase
-ButtonClicked
-ButtonToggled
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
-CANCELLED
-CBasePanel
-CBasePanel::OnConfigUpdated
-CBasePanel::OnGameOverlayActivateRequested
-CBasePanel::OnOverlaySettingsChanged
-CBasePanel::OnOverlayStateChanged
-CBasePanel::ShellExecuteHook
 CBilling_Address
-CBitmapImagePanel
-CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 CCDDBAppDetailCommon
 CClanEventData
 CClanEventUserNewsTuple
@@ -1480,260 +853,9 @@ CClanMatchEventByRange
 CCommunity_ClanAnnouncementInfo
 CCookie
 CCuratorPreferences
-CD Key
-CDNAuth
-CEmbeddedHTML
-CFileOpenListPanel
-CFileReader::BOpenFile
-CFileReader::Read
-CFileWriter::BOpenFileInternal
-CHECK failed: !InRealOneof(field): 
-CHECK failed: !IsDefault(default_value): 
-CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1): 
-CHECK failed: !checkpoints_.empty(): 
-CHECK failed: !descriptor_: 
-CHECK failed: !ext->is_repeated: 
-CHECK failed: !extension->is_repeated: 
-CHECK failed: !failed_: 
-CHECK failed: !field->options().weak(): 
-CHECK failed: !fields_.empty(): 
-CHECK failed: !file->finished_building_: 
-CHECK failed: !file_: 
-CHECK failed: !had_error_: 
-CHECK failed: !is_closed_: 
-CHECK failed: !name_: 
-CHECK failed: !once_: 
-CHECK failed: !oneof_descriptor->is_synthetic(): 
-CHECK failed: !out.HadError(): 
-CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field): 
-CHECK failed: !tagged_ptr_.IsTagged(): 
-CHECK failed: !tree->empty(): 
-CHECK failed: !value || options_ != nullptr: 
-CHECK failed: !value || source_code_info_ != nullptr: 
-CHECK failed: (&from) != (this): 
-CHECK failed: (&from) != (to): 
-CHECK failed: (&other) != (this): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD): 
-CHECK failed: (*buffer) == (first_byte): 
-CHECK failed: (0) != (n): 
-CHECK failed: (0) <= (pos): 
-CHECK failed: (0) == (BufferSize()): 
-CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()): 
-CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()): 
-CHECK failed: (backup_bytes_) == (0): 
-CHECK failed: (bucket_index_ & 1) == (0u): 
-CHECK failed: (buffer[0]) >= (128): 
-CHECK failed: (buffer_size) >= (0): 
-CHECK failed: (buffer_used_) == (0): 
-CHECK failed: (buffer_used_) == (buffer_size_): 
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
-CHECK failed: (calc_escaped_size) == (escaped_len): 
-CHECK failed: (count) <= (buffer_used_): 
-CHECK failed: (count) <= (kMaxLength): 
-CHECK failed: (count) <= (last_returned_size_): 
-CHECK failed: (count) == (tree->size()): 
-CHECK failed: (count) >= (0): 
-CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (current_size_) > (0): 
-CHECK failed: (descriptor->field(field_count - 1)) == (end - 1): 
-CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()): 
-CHECK failed: (digits) < (100): 
-CHECK failed: (extension->is_packed) == (other_extension.is_packed): 
-CHECK failed: (extension->is_packed) == (packed): 
-CHECK failed: (extension->type) == (other_extension.type): 
-CHECK failed: (field->message_type()) == (desc): 
-CHECK failed: (field->options().ctype()) == (ctype): 
-CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES): 
-CHECK failed: (field_count()) == (2): 
-CHECK failed: (final_byte_count) < (target_byte_count): 
-CHECK failed: (first_byte & 0x80) == (0x80): 
-CHECK failed: (first_byte_or_zero) != (0): 
-CHECK failed: (first_byte_or_zero) == (buffer_[0]): 
-CHECK failed: (from.GetDescriptor()) == (descriptor): 
-CHECK failed: (has_bit_index) != (~0u): 
-CHECK failed: (index) < (current_size_): 
-CHECK failed: (index) >= (0): 
-CHECK failed: (internal::AlignUpTo8(n)) == (n): 
-CHECK failed: (it.m_) == (this): 
-CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
-CHECK failed: (last_returned_size_) > (0): 
-CHECK failed: (len) <= (dest_len): 
-CHECK failed: (len) >= (0): 
-CHECK failed: (limit_) >= (ptr_): 
-CHECK failed: (message1->GetReflection()) == (this): 
-CHECK failed: (message2->GetReflection()) == (this): 
-CHECK failed: (message_type) == (field->message_type()): 
-CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
-CHECK failed: (n & (n - 1)) == (0): 
-CHECK failed: (n) >= (0): 
-CHECK failed: (new_num_buckets) >= (kMinTableSize): 
-CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit): 
-CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
-CHECK failed: (out) == (begin + result->size()): 
-CHECK failed: (out) == (begin + result.size()): 
-CHECK failed: (overrun) <= (kSlopBytes): 
-CHECK failed: (pos) <= (x.length_): 
-CHECK failed: (recursion_budget_) < (recursion_limit_): 
-CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u): 
-CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)): 
-CHECK failed: (size) <= (6): 
-CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)): 
-CHECK failed: (size) > (0): 
-CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))): 
-CHECK failed: (static_cast<size_t>(count)) <= (target_->size()): 
-CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)): 
-CHECK failed: (table_[b]) == (table_[b ^ 1]): 
-CHECK failed: (target - output->data()) == (output->size()): 
-CHECK failed: (temp[0]) == ('1'): 
-CHECK failed: (temp[size - 1]) == ('5'): 
-CHECK failed: (to->GetDescriptor()) == (descriptor): 
-CHECK failed: (total_size_ - current_size_) >= (n): 
-CHECK failed: (total_size_) > (0): 
-CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
-CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
-CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
-CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
-CHECK failed: *ptr: 
-CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
-CHECK failed: GetArena() == NULL: 
-CHECK failed: GetArena() == nullptr: 
-CHECK failed: GetArena() == other->GetArena(): 
-CHECK failed: HasExtensionSet(): 
-CHECK failed: HasHasbits(): 
-CHECK failed: IsDefault(default_value): 
-CHECK failed: IsInitialized(): 
-CHECK failed: IsMapValid() && other.IsMapValid(): 
-CHECK failed: TableEntryIsNonEmptyList(b): 
-CHECK failed: TableEntryIsTree(b): 
-CHECK failed: a.type() == b.type(): 
-CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field: 
-CHECK failed: arena != nullptr: 
-CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
-CHECK failed: builder_: 
-CHECK failed: checkpoints_.empty(): 
-CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE: 
-CHECK failed: ctx.LastTag() != 1: 
-CHECK failed: cur_: 
-CHECK failed: desc_proto.has_name(): 
-CHECK failed: descriptor: 
-CHECK failed: dest: 
-CHECK failed: dynamic.get() != nullptr: 
-CHECK failed: end >= ptr: 
-CHECK failed: enum_type_->value_count(): 
-CHECK failed: errors == nullptr: 
-CHECK failed: extension != NULL: 
-CHECK failed: extension->is_repeated: 
-CHECK failed: fallback_database_ == nullptr: 
-CHECK failed: field != nullptr: 
-CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32): 
-CHECK failed: field->is_repeated() || (index == -1): 
-CHECK failed: field->is_repeated(): 
-CHECK failed: file != nullptr: 
-CHECK failed: file && file->pool_: 
-CHECK failed: file()->finished_building_ == true: 
-CHECK failed: file->pool_->lazily_build_dependencies_: 
-CHECK failed: file_->finished_building_: 
-CHECK failed: find(node->kv.first) == end(): 
-CHECK failed: finished_building_ == true: 
-CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_: 
-CHECK failed: has_default_value(): 
-CHECK failed: i >= 0: 
-CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr: 
-CHECK failed: is_prototype(): 
-CHECK failed: is_repeated: 
-CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes: 
-CHECK failed: limit_ > 0: 
-CHECK failed: limit_ > kSlopBytes: 
-CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_): 
-CHECK failed: limit_end_ == buffer_end_: 
-CHECK failed: m1->GetArena() != m2_arena: 
-CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr: 
-CHECK failed: message_arena != submessage_arena: 
-CHECK failed: mutex_ == nullptr: 
-CHECK failed: n <= size: 
-CHECK failed: n >= kMinTableSize: 
-CHECK failed: node_ != nullptr && m_ != nullptr: 
-CHECK failed: options_ != nullptr: 
-CHECK failed: options_descriptor: 
-CHECK failed: original_uninterpreted_options_field != nullptr: 
-CHECK failed: other->GetArena() != GetArena(): 
-CHECK failed: out_location != nullptr: 
-CHECK failed: output->message_info.prototype != nullptr: 
-CHECK failed: output: 
-CHECK failed: overrun != limit_: 
-CHECK failed: overrun < limit_: 
-CHECK failed: overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0 && overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0: 
-CHECK failed: owning_arena == nullptr: 
-CHECK failed: prototype != NULL: 
-CHECK failed: ptr < end_: 
-CHECK failed: ptr <= buffer_end_ + kSlopBytes: 
-CHECK failed: ptr <= end_ + kSlopBytes: 
-CHECK failed: reflection: 
-CHECK failed: result != nullptr: 
-CHECK failed: s != nullptr: 
-CHECK failed: s >= 0: 
-CHECK failed: schema_.HasHasbits(): 
-CHECK failed: size > 0: 
-CHECK failed: size > chunk_size: 
-CHECK failed: size_ == 0: 
-CHECK failed: size_ > kSlopBytes: 
-CHECK failed: source_code_info_ != nullptr: 
-CHECK failed: submessage->GetArena() == submessage_arena: 
-CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0: 
-CHECK failed: tagged_ptr_.UnsafeGet() != nullptr: 
-CHECK failed: target + size == res: 
-CHECK failed: target_ != NULL: 
-CHECK failed: this != other: 
-CHECK failed: this == other_mutator: 
-CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
-CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
-CHECK failed: uninterpreted_options_field != nullptr: 
-CHECK failed: value != nullptr: 
-CHECK failed: z.first != NULL: 
-CHROMEOS
-CHTMLFindBar
 CHTMLPageSecurityInfo
 CH\f1
-CIMEPanel
-CIngameFPSBanner
-CLIENTENGINE_INTERFACE_VERSION005
 CLocalizationToken
-CMemoryPool
-CMemoryPool::AddNewBlob: mode == GROW_NONE
-CMemoryPool::Alloc: ran out of memory
 CMsgAckPIDShuttingDown
 CMsgAckScreenDPI
 CMsgAckSharedPaintBuffers
@@ -1869,380 +991,38 @@ CMsgViewSource
 CMsgZoomToElementAtPosition
 CMsgZoomToFocusedElement
 COMMIT
-CONFIG
 CORD
-CPPTYPE_BOOL
-CPPTYPE_DOUBLE
-CPPTYPE_ENUM
-CPPTYPE_FLOAT
-CPPTYPE_INT32
-CPPTYPE_INT64
-CPPTYPE_STRING
-CPPTYPE_UINT32
-CPPTYPE_UINT64
 CPackageReservationStatus
-CPathString
-CSPAuth
-CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining data.\n
-CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
-CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
-CSharedMemStream::Clear()
-CSharedMemStream::Get()
-CSharedMemStream::Put()
-CTreeViewListControl
 CType
-CUIProtoBufMsg::SerializeCrossProc
-CUtlBuffer::GetStringFast: binary buffers only
-CUtlDict
-CUtlHandleTable
-CUtlString::ReplaceInternal
-CUtlString::SetValue
-CUtlString::VAppendFormat
-CUtlString::VFormat
-CUtlStringBuilder::Data::MoveToHeap
-CUtlStringBuilder::InternalPrepareBuffer
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*)
 CValidator::ClaimMemory(void const*)
 CValidator::IsClaimed(void const*) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
-CVariableBitStringBase
 C\n#direct_rendering_display_compositor
-Cabal
-Cached credential is invalid
-Cafe Funded
-Call Mismatch
-Call set methods to initialize MapKey.
-Caller should provide us with *buffer_ when buffer is non-empty
-Can't 
-Can't BackUp() after failed Next().
-Can't add Keybindings Context for unnamed panels\n
-Can't get here.
-Can't get here: failed to get default value as string
-Can't happen
-Can't print proto content: proto type 
-Can't reach
-CanBeDefaultButton
 CanBreakBetween
 Canadian_Aboriginal
-CancelButton
-Canceled by new transaction
-Cancelled by Admin
-Cancelled by Friendly Fraud Lock
-Cancelled by Partner
-Cancelled by User
-Cannot Use Old Password
-Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
-Cannot copy json_name to a proto of a different size.
-Cannot get here
-Cannot gift physical goods
-Cannot ship goods internationally
-Cannot ship to APO/FPO
-Cannot ship to PO Box
-Cannot ship to country because shipping is not defined
-Cannot skip field value, unexpected token: 
-Cant remove item
-Caps Lock
-Caps Lock Toggle
-CaptionGripPanel
-CaptionGripPanel::OnThink()
-CaptivePortal
-CaptivePortal_InPlace
-CaptivePortal_Redirected
 Carian
-Carnet
-Cart is not valid for purchase
-Carte Bleue
-Cash Card (Nodwin)
-Cash Options (Thailand)
-Cash on Delivery
-Cash-In CIS
-CashU
 CatchAndWriteMiniDumpForVoidPtrFn
-Cencosud
 Chakma
 Cham
-Chargedback
-Charger required
-Cheating
-Check out
-CheckAllItems
-CheckButton (disabled)
-CheckButton::OnThink()
-CheckButtonChecked
-CheckButtonList
-CheckButtonList.CheckButton
-CheckButtonListControls
-CheckForLayoutFilesChanges
-Checking for game crash
 Cherokee
-China
-Clan
-Clear
-ClearField
-ClearSchemeSettings
-Click&Buy
-ClickPanel
-Client no longer supported
-ClientAPI_Init()
-ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientAudio returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientConfigStore returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientController returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientDeviceAuth returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientGameCoordinator returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientGameNotifications returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientGameStats returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientHTMLSurface returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientHTTP returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientMusic returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientParentalSettings returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientRemoteClientManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientRemoteStorage returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientScreenshots returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientShortcuts returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientStreamClient returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSystemDisplayManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientTimeline returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientUGC returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientUnifiedMessages returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientUserStats returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientVR returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientVideo returned NULL.
-ClientAPI_Init: Cannot create pipe.  Steam not running?\n
-ClientAPI_Init: InternalAPI_Init_Internal failed.\n
-ClientAPI_RunCallbacks
-ClientAPI_RunCallbacks()
-Clip
-CloseExternal
-CloseFrameButtonPressed
-CloseFrameHotKeyPressed
-CloseImmediately
-CloseMenu
-CloseModal
-CodeSignature
-CollapserChanged
-Collection
-CollectionEligible
-CollectionPublished
-Collections
-ColumnResized
-ComboBox
-ComboBox scrollbar
-ComboBoxButton
-ComboBtn
-ComboMenu
-Comments by user
-Committing
 Common
-Community
-Compat tool failed
-CompatibleLobby
-Complete-the-set bundles cannot be gifted
-Complimentary
-Component In Use
-Computer
-ConCommand '%s' not currently supported in config file\n
-ConVar
-ConVar::InternalSetValue: called with NULL
-Concept
-Concepts
-Config
-Connected
-Connecting
-Connection Failed
-Connection closed
-Connection timeout
-Console
-Console User
-Contact Support
-Content Server
-Content Version
-Content unavailable
 ContentDescriptor
 ContextCommand
-ContextLabel
-Continue
-ControlFactory
-ControlName
-Controller Binding
-ControllerBindings
-Convenient Store Voucher
-ConversionModeMenu
 Coptic
-Copyright Violation
-Corrupt depot cache
-Corrupt disk
-Corrupt download
-Corrupt file signature
-Corrupt game files
-Corrupt update files
-Corrupted or unrecoverable data error
-Could not create an instance of 
-Could not find type "
-Couldn't find script file %s\n
-Couldn't format time value %llu
-Couldn't parse default value "
-Couldn't parse script file: expected 'event', found '%s'\n
-Couldn't parse script file: expected <event name>, found nothing\n
-Couldn't parse script sequence '%s': expected '{', found '%s'\n
-Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
-CounterTextLarge
-CounterTextMedium
-CounterTextSmall
-Coupon has expired
-Create
-Create process failed
-CreateButton
-CreateDirectoryDialog
 CreateInterface
-CreatedByFollowedUsersRankedByPublicationDate
-CreatedByFriendsRankedByPublicationDate
-Credit Card
-Credit Card (Degica)
-Credit Card (Nodwin)
-Credit card number is invalid (does not pass LUHN checksum)
-Credit card number provided does not match the credit card type
-Credit would exceed max allowed wallet balance
-Ctrl
-Culture Voucher
 Cuneiform
-CuratorRecommendedGame
-Currency Conversion
-Currency of purchase does not match currency of wallet
-CursorEntered
-CursorEnteredChild
-CursorEnteredMenuButton
-CursorEnteredMenuItem
-CursorExited
-CursorExitedChild
-CursorExitedMenuItem
-Custom CSS
-CustomStyle
-CustomURL
-Cyber cafe accounts can't purchase
 Cypriot
 Cyrillic
-DATA_LOSS
-DB Lookup CD-Key
-DBG_PATHMATCH
-DBG_STAT
-DCOverlayWebVguiFrame
-DEADLINE_EXCEEDED
-DEFINE
 DEFINE group contains more than one branch
-DO NOT PARSE: fields may be stripped and missing.\n
-DTimeout waiting on input stream for a frame\n
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
-Dana
-Dankort
-Data Exploit
-Deaccel
-Debit Card (Nodwin)
-Debug
-Dec 16 2024
-December
-Default value for an enum field must be an identifier.
-DefaultFixed
-DefaultUnderline
-DefaultVerySmall
-DelayedClose
-Delete
-DeletePanel
-Deleted
-Denied by support
-Denied due to community cooldown
-DenizBank
-Dependency failure
-Deploy
-Deposit is not required to purchase
 DescriptorProto
 DescriptorProtosH
 Deseret
-Destroying a held mutex\n
-Detected file change in %s\n
-Detected possibly crashed/killed game, exiting\n
 Devanagari
-Device Corrupt
-Device Error
-Device Not Found
-DialogConfigOverlay_%dx%d.vdf
-Diner's Card (BoaCompra)
-Diners Club
-DirTree
-DirectorySelectDialog
-DirectorySelectDialogClosed
-DirectorySelected
-DirectoryTreeView
-Disabled/Blocklist
-Disabled/ChildCommandLine
-Disabled/CommandLine
-Disabled/CompositingCommandLine
-Disabled/CrashCount
-Disabled/JSRequest
-Disabled/Off
-Disabled/OffOk
-Disabled/RuntimeDetect
-Disabled/Software
-Disabled/Unknown
-Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
-DisarmItem
-Disconnected By Remote Host
-Discover
-Discussion Posts
-Disk Full
-Disk read failure
-Disk write failure
-DismissJSDialog
-Distance
-Divider
-Divider2
-Division or mod by zero: dividend.hi=
-DoConversionModeChanged
-DoCopyAllText
-DoCopySelected
-DoCutSelected
-DoDeleteThenPaste
-DoLanguageChanged
-DoPaste
-DoSelectAll
-DoSentenceModeChanged
-Does not own required app
-Don't lookup extension types if they aren't present (1). 
-Don't lookup extension types if they aren't present (2). 
-Doom3 CD-Key
-Download disabled
-Downloading
-DragDrop.DragFrame
-DragDrop.DropFrame
-DragDroppedText
-DragPropertySheet
 DraggableRects
-Draws html perf data
-DropContext
-Duplicate Name
-Duplicate activation code
-Duplicate property %s in object
-Duplicated Request
 EACState
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
@@ -2254,7 +1034,6 @@ EBrowserFeatureStatus
 EBrowserGPUStatus
 ECloudGamingPlatform
 ECloudStoragePersistState
-EClub Points
 EColorGamutLabelSet
 ECommentThreadType
 ECommunityItemClass
@@ -2275,8 +1054,6 @@ EProtoClanEventType
 EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
-ERROR
-EResult
 ESDCardFormatStage
 EScalingFilter
 ESessionDisposition
@@ -2301,251 +1078,36 @@ ETW_Steamworks_DispatchCallback_End_
 ETW_Steamworks_DispatchCallback_Start
 ETW_Steamworks_RunCallbacks_End_
 ETW_Steamworks_RunCallbacks_Start
-EUniverse
-EVCert
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
-EXECUTABLE_PATH
-EditablePanel::LayoutCmd_CreateRegion()
-EditablePanel::LayoutCmd_Place()
-EditablePanel::PerformLayout()
-Efecty
 Egyptian_Hieroglyphs
-Ekonomi Bank
-Element( i )
-Email Validated
-Email not validated
-Enabled
-Enabled/Force
-Enabled/ForceOn
-Enabled/On
-Enabled/Readback
-Encryption Failure
-End of File
-End-of-file inside block comment.
-EndDrag
-Ending VR Mode because the game exited\n
-Enum name 
-Enum type "
-Enum value "$0" is reserved multiple times.
-Enum value "$0" is reserved.
-Enum value "$0" uses reserved number $1.
-Enum value in map must define 0 as the first value.
+EnsureValidBoolValue
 EnumDescriptorProto
 EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
-Enums must contain at least one value.
 Error
-Error %d getting shared memory size
-Error %d growing shared object manager file.
-Error %d locking shared memory file
-Error State on string being set.
-Error in the serialized input stream! clearing remaining stream, which may lose events\n
-Error on Release(): Not the lock owner\n
-Error parsing text-format 
-Error reporting not implemented.
-Error text not found (please report)
-Error while parsing option value for "
-Error while parsing text KeyValues for resource %s
-Errors
 Ethiopic
-Event Text
-Execute: %s\n
-Existing cancelled license
-Exito
-Expand
-Expanded map entry type 
-Expect a decimal number, got: 
-Expectation Failed
-Expected "
-Expected %lld but got %lld!
-Expected double, got: 
-Expected eight hex digits up to 10ffff for \U escape sequence
-Expected four hex digits for \u escape sequence.
-Expected hex digits for escape sequence.
-Expected identifier, got: 
-Expected integer or identifier, got: 
-Expected integer, got: 
-Expected string, got: 
-Expired Login Auth Code
-Expired card
-Explicit default values are not allowed in proto3.
-Extension "
-Extension conflicts with extension already in database: extend 
-Extension factory's GetPrototype() returned NULL for extension: 
-Extension not found.
-Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
-Extension number $0 has already been used in "$1" by extension "$2".
-Extension numbers cannot be greater than $0.
-Extension numbers must be positive integers.
-Extension range $0 to $1 includes field "$2" ($3).
-Extension range $0 to $1 overlaps with already-defined range $2 to $3.
-Extension range $0 to $1 overlaps with reserved range $2 to $3.
-Extension range end number must be greater than start number.
-Extension ranges are not allowed in proto3.
 ExtensionRange
 ExtensionRangeOptions
-Extensions in proto3 are only allowed for defining options.
-Extensions of MessageSets must be optional messages.
-Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
-External Account is not linked to a Steam account
-External Account linked to another Steam account
 FAIL
-FAILED_PRECONDITION
-FATAL
-FCVAR_NEVER_AS_STRING
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
-Facebook query returned an error
-Failed creating HTML browser %s: %s
-Failed creating file mapping %s\n
-Failed creating read event %s\n
-Failed creating view of file for %s\n
-Failed creating write event %s\n
-Failed creating/finding in game rendering event: %d\n
-Failed creating/finding serialized work event: %d\n
-Failed creating/finding vgui paint event: %d\n
-Failed during internal/external buffer swapping\n
-Failed finding game exiting event %s\n
-Failed putting data into external buffer during swapping\n
-Failed to add image to avif encoder: %u
-Failed to finish encoder: %u
-Failed to load menu file %s\n
-Failed to load optional module %s\n
-Failed to load platform modules (friends, server browser, etc...)\n
-Failed to parse input
-Failed to provide options
-Failed to take mutex in GetInternal()\n
-Falling back to find steam path: argv[0] == %s, made absolute to: %s\n
-False
-Family Group
-FastHexToBuffer() wants non-negative integers, not 
-Fatal error: %s\n
-FavoritedByFriendsRankedByPublicationDate
-Feature Disabled
-February
-Feel free to add support for more if you need it.
-Field "
-Field "$0" uses reserved number $1.
-Field = 
-Field does not match message type.
-Field is not a map field.
-Field is repeated; the method requires a singular field.
-Field is singular; the method requires a repeated field.
-Field name "$0" is reserved multiple times.
-Field name "$0" is reserved.
-Field number $0 has already been used in "$1" by field "$2".
-Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
-Field numbers cannot be greater than $0.
-Field numbers must be positive integers.
-Field with message or enum type missing type_name.
-Field with primitive type has type_name.
-Field: 
 FieldDescriptorProto
-FieldDescriptorProto.extendee not set for extension field.
-FieldDescriptorProto.extendee set for non-extension field.
-FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
-FieldDescriptorProto.oneof_index should not be set for extensions.
-FieldSize
-Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
-Fields of oneofs must themselves have label LABEL_OPTIONAL.
-Fields with proto3_optional set must be a member of a one-field oneof
-File Locked
-File Not Found
-File already exists in database: 
-File appears to be in generated pool but wasn't registered: 
-File change notification for %s but no file contents changed based on hash\n
-File is already registered: 
-File locked
-File not found in database (unexpected): 
-File recursively imports itself: 
-FileCompletionEdit
 FileDescriptorProto
 FileDescriptorSet
-FileNameEdit
-FileNameLabel
-FileOpenDialog
-FilePublished_Screenshot_Tagged
-FileSelected
-FileSelectionCancelled
-FileTypeCombo
-FileTypeLabel
-Files Corrupt
-Files Missing
-Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
-Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 Filter
-FinalizingRenderStream
-Finansbank
-FindCount
-FindDefaultButton
-FindEntry
-First argument to Swap() (of type "
-First argument to SwapFields() (of type "
-FlashWindow
-Flicker
 FoCLcx
-FolderIcon
-FolderUpButton
-Forbidden
-Force Bounce
-Force Password Change
-Force Run Restriction
-Force canceled while pending
-ForceQuit
-Forced Off
-Forced create but already created for SharedObjectEvent\n
-ForwardButton
-Found invalid proto option data for: 
-Frame (vgui panel zoo)
-Frame Failed
-Frame.AutoSnapRange
-Frame.ClientInsetX
-Frame.ClientInsetY
-Frame.FocusTransitionEffectTime
-Frame.OnDragAlphaDelayTime
-Frame.OnDragAlphaMultiplier
-Frame.TransitionEffectTime
-Frame.UsesAlphaBlending
-Frame::ApplyLayoutTemplate() : couldn't find subpanel '%s' as specified in template '%s'\n
-Frame::SetTitle - vgui::localize not initialized
-FrameBRGripPanel
-FrameButton
-FrameCloseButton
-FrameMaximizeButton
-FrameMinimizeButton
-FrameRestoreButton
-FrameSystemButton
-FrameSystemButton.DisabledIcon
-FrameSystemButton.Icon
-FrameTitle
-FrameTitleBar.Font
-FrameTitleBar.SmallFont
-Fraud Check Failed
-Free
-Free Weekend
-FrenemyFilter
-Friday
-Friend-only
-FriendAdded
-Friends
-FriendsUIInterfaceV001
-FullPathEdit
-Fully Installed
-GAMEOVERLAY
-GAME_
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GCC: (crosstool-NG 1.12.2) 4.5.3
 GCC: (crosstool-NG 1.17.0) 4.6.3
-GCash
-GIF Image (*.gif)
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
+GLIBC_2.11
 GLIBC_2.2
 GLIBC_2.2.3
 GLIBC_2.2.4
@@ -2554,752 +1116,62 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
-GROUPACHIEVEMENTS
-Game Exit Event signaled.\n
-Game Managed Item
-Game Release
-Game Voucher
-GameAppID
-GameManagedItems
-GameOverlay exiting due to missing PID argument\n
-GameOverlay exiting due to missing manuallyclearframes argument\n
-GameOverlay process connecting to: pid: %d\n
-GameOverlay process started: pid: %d\n
-GameOverlayRender_PaintCmdStream_%s
-GameOverlaySettingsChanged
-GameOverlayUI Thread
-GameOverlay_GameExitingEvent_%s
-GameOverlay_InGameRenderingCompleted_%s
-GameOverlay_InputEventStream_%s
-GameOverlay_ScreenshotStream_%s
-GameOverlay_SerializedWorkQueued_%s
-GameOverlay_VGUIPaintingCompleted_%s
-GameServer
-GameStop
-Gamepad
-Games
-Gameserver login token denied
-Gameserver login token expired
-Gameserver login token owner denied
-Garanti
-Gateway Time-out
 GeneratedCodeInfo
 Georgian
-GetBool
-GetBootstrapperVersion
 GetCPUInformation()
-GetCPUInformation().m_bSSE3
-GetCommand
 GetCrashHandlerFactory
-GetDouble
-GetFloat
-GetInt32
-GetInt64
-GetInts()
-GetMessage
 GetOSType
-GetRawRepeatedField
-GetRepeatedBool
-GetRepeatedDouble
-GetRepeatedEnumValue
-GetRepeatedFloat
-GetRepeatedInt32
-GetRepeatedInt64
-GetRepeatedMessage
-GetRepeatedString
-GetRepeatedStringReference
-GetRepeatedUInt32
-GetRepeatedUInt64
-GetState
-GetString
-GetStringReference
-GetText
-GetUInt32
-GetUInt64
-GetVParent()
-Giropay
+GetSpewOutputFunc
 Glagolitic
-Global Collect unknown error
-Global Moderator
-Global\Steam_GameOverlayInjector_%s
-Gone
-Google Swiftshader
 Google.Protobuf.Reflection
-Got gameid on commandline: %llu\n
 Gothic
-GrabPay
-GraphPanel
 Greek
-Greenlight Items
-GreenlightItems
-Grid item #%d
-GroupCreated
-Groups
-Groups are not supported in proto3 syntax.
-Guest Account
-Guest Pass
 Gujarati
 Gurmukhi
-HEAD
-HKEY_CURRENT_USER\Software\Valve\Steam\SkinV5
-HTML.SearchAnimationTime
-HTML.SearchInsetX
-HTML.SearchInsetY
-HTML.SearchTall
-HTML.SearchWide
-HTML::Paint()
-HTMLBackRequested
-HTMLCanGoBackAndForward
-HTMLComboBoxHost
-HTMLForwardRequested
-HTMLFramelessPopup
-HTMLFramelessWrapper
-HTMLPopup
-HTTP Version not supported
-HTTPMirror
-HWID Set
-Halkbank
-Handheld
-Handshake Failed
 Hangul
 Hanunoo
-Happymoney Voucher
-Harassment
-Hardware Promo
-Hardware not capable of IPT
-Has not logged in on PS3 with required app
-HasField
-Headphones
-Headset
 Hebrew
-Hex and octal numbers must be integers.
-HideIMECandidates
-HighContrast
-Hipercard
 Hiragana
-Home
-HorizScrollBar
-Hotkey
-HtmlFramelessPopup
-HtmlPopup
-Hung transaction cancelled
-I/O Operation Failed
 IDEMPOTENCY_UNKNOWN
-IMECandidate
-IMECandidateList
-IMECandidateSelected
-IMECandidatesMenu
-IMEConversionModes
-IMELanguageList
-IMESentenceModes
-INFO
-INTERNAL
-INVALID
-INVALID_ARGUMENT
-INVALID_CPPTYPE
-IP Address Banned
-IP Address Not Found
-IP Login Restriction Failed
-IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
-IPC: recovering abandoned mutex %p\n
-IPT init error
-IVALIDATE001
 IdempotencyLevel
-IgnoreChildProcesses
-IgnoreScheme
-Ignored
-IgnoredFriend
-Ignoring extension "
-Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
-Illegal password
-ImeCancelComposition
-ImeCommitString
-ImeCompositionString
 Imperial_Aramaic
-Import 
-Import "
-In dispute
-InGameOverlayScreenshotEnableAVIF
-InGameOverlayScreenshotHotKey
-InGameOverlayScreenshotSaveUncompressed
-InGameOverlayShortcutKey
-InGameOverlayShowFPSContrast
-InGameOverlayShowFPSCorner
-Inappropriate
-Incompatible
-IncompatibleCheat
-Incorrect Parameter
-Index must be -1 for non-repeated fields
-Index must be -1 for singular fields.
-Index must be in range of repeated field values. 
-Index out-of-bounds (field is empty).
-Individual
 Inherited
-Init
-InitializingRenderStream()
-InputCanceled
-InputCompleted
-InputDialog
 Inscriptional_Pahlavi
 Inscriptional_Parthian
-Install path removed
-InstantClipKey
-Insufficient Funds
-Insufficient Privilege
-Insufficient battery charge
-Insufficient funds
-Integer out of range (
-Integrated Guide
-IntegratedGuides
-Intel
-Intel ANV
-Interac
-Internal Error
-Internal Server Error
-Interpreting non ascii codepoint %d.
-Invalid
-Invalid CD-Key
-Invalid CEG Submission
-Invalid Data
-Invalid Driver
-Invalid Email
-Invalid Handle
-Invalid Login Auth Code
-Invalid Name
-Invalid OS Type
-Invalid Package
-Invalid Parameter
-Invalid Passcode
-Invalid Password
-Invalid Payment Method
-Invalid Platform
-Invalid Protocol
-Invalid State
-Invalid Steam ID
-Invalid account
-Invalid application configuration
-Invalid backup path
-Invalid content configuration
-Invalid control characters encountered in text.
-Invalid coupon
-Invalid descriptor
-Invalid escape sequence in string literal.
-Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
-Invalid file system
-Invalid float number: 
-Invalid image panel size %d %d\n
-Invalid index %u
-Invalid install path
-Invalid item type
-Invalid key for map field.
-Invalid message set extension.
-Invalid package name: 
-Invalid parent region %s specified for region %s in panel %s
-Invalid platform
-Invalid proto descriptor for file "
-Invalid public dependency index.
-Invalid shipping address
-Invalid strings::Substitute() format string: "
-Invalid symbol name: 
-Invalid tax address
-Invalid value for boolean field "
-Invalid weak dependency index.
-Invalid wire type for CPPTYPE_INT32: 
-Invalid wire type for CPPTYPE_INT64: 
-Invalid wire type for CPPTYPE_MESSAGE: 
-Invalid wire type for CPPTYPE_UINT32: 
-Invalid wire type for CPPTYPE_UINT64: 
-Invalidate
-Invisible
-InviteOnly
-Invited
-Is Bank
 Is64BitOS
-Is64BitOS()
-IsARM64() || GetCPUInformation().m_bSSE2
-IsPointInCaptureRegion
-IsPowerOfTwo( nNewCapacity )
-IsResizeBorder
-IsTriplePressAllowed()
-IsValidIndex( elem )
-IsValidIndex(elem)
-IsValidKeyBindingsContext()
-IsVisible()
-Itau Online
-Item or entry has been deleted
-ItemDeselected
-ItemsChecked
-Items_Mtx
-Items_ReadyToUse
-JArray
-JPEG Image (*.jpeg)
-JPEG Image (*.jpg)
 JSObjectProperty
 JSType
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
-January
 Javanese
-JoinedGroup
-Joystick
-July
-June
-KEY_0
-KEY_1
-KEY_2
-KEY_3
-KEY_4
-KEY_5
-KEY_6
-KEY_7
-KEY_8
-KEY_9
-KEY_A
-KEY_AMPERSAND
-KEY_APOSTROPHE
-KEY_APP
-KEY_AT
-KEY_B
-KEY_BACKQUOTE
-KEY_BACKSLASH
-KEY_BACKSPACE
-KEY_BAR
-KEY_BREAK
-KEY_C
-KEY_CAPSLOCK
-KEY_CAPSLOCKTOGGLE
-KEY_CARET
-KEY_CLEAR
-KEY_COLON
-KEY_COMMA
-KEY_D
-KEY_DELETE
-KEY_DOLLAR
-KEY_DOWN
-KEY_DQUOTE
-KEY_E
-KEY_END
-KEY_ENTER
-KEY_EQUAL
-KEY_ESCAPE
-KEY_EXCLAMATION
-KEY_F
-KEY_F1
-KEY_F10
-KEY_F11
-KEY_F12
-KEY_F13
-KEY_F14
-KEY_F15
-KEY_F16
-KEY_F17
-KEY_F18
-KEY_F19
-KEY_F2
-KEY_F20
-KEY_F21
-KEY_F22
-KEY_F23
-KEY_F24
-KEY_F3
-KEY_F4
-KEY_F5
-KEY_F6
-KEY_F7
-KEY_F8
-KEY_F9
-KEY_G
-KEY_GREATER
-KEY_H
-KEY_HASH
-KEY_HOME
-KEY_I
-KEY_INSERT
-KEY_J
-KEY_K
-KEY_L
-KEY_LALT
-KEY_LBRACKET
-KEY_LCONTROL
-KEY_LCURLY
-KEY_LEFT
-KEY_LESS
-KEY_LPAREN
-KEY_LSHIFT
-KEY_LWIN
-KEY_M
-KEY_MINUS
-KEY_MULTIPLY
-KEY_N
-KEY_NONE
-KEY_NUMLOCK
-KEY_NUMLOCKTOGGLE
-KEY_O
-KEY_P
-KEY_PAD_0
-KEY_PAD_1
-KEY_PAD_2
-KEY_PAD_3
-KEY_PAD_4
-KEY_PAD_5
-KEY_PAD_6
-KEY_PAD_7
-KEY_PAD_8
-KEY_PAD_9
-KEY_PAD_DECIMAL
-KEY_PAD_DIVIDE
-KEY_PAD_ENTER
-KEY_PAD_EQUAL
-KEY_PAD_MINUS
-KEY_PAD_MULTIPLY
-KEY_PAD_PLUS
-KEY_PAGEDOWN
-KEY_PAGEUP
-KEY_PERCENT
-KEY_PERIOD
-KEY_PLUS
-KEY_Q
-KEY_QUESTION
-KEY_R
-KEY_RALT
-KEY_RBRACKET
-KEY_RCONTROL
-KEY_RCURLY
-KEY_RIGHT
-KEY_RPAREN
-KEY_RSHIFT
-KEY_RWIN
-KEY_S
-KEY_SCROLLLOCK
-KEY_SCROLLLOCKTOGGLE
-KEY_SEMICOLON
-KEY_SLASH
-KEY_SPACE
-KEY_T
-KEY_TAB
-KEY_TILDE
-KEY_U
-KEY_UNDERSCORE
-KEY_UP
-KEY_V
-KEY_W
-KEY_X
-KEY_Y
-KEY_Z
 Kaithi
-KakaoPay
 Kannada
 Katakana
 Kayah_Li
-Key Pad *
-Key Pad +
-Key Pad -
-Key Pad .
-Key Pad /
-Key Pad 0
-Key Pad 1
-Key Pad 2
-Key Pad 3
-Key Pad 4
-Key Pad 5
-Key Pad 6
-Key Pad 7
-Key Pad 8
-Key Pad 9
-Key Pad =
-Key Pad Enter
-Key in map fields cannot be enum types.
-Key in map fields cannot be float/double, bytes or message types.
-KeyCodePressed
-KeyCodeReleased
-KeyCodeTyped
-KeyCodeUnhandled
-KeyFocusTicked
-KeyModeSet
-KeyTyped
-KeyValues
-KeyValues Error: %s in file %s [offset: %d]\n
-KeyValues don't support #include anymore, file "%s"
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
 KeyValuesSystemSteam
-Keyboard
 Kharoshthi
 Khmer
-Kicked
-KickedAcknowledged
-Kiosk
-Konbini
-Kuveyt Turk Bank
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LANCache
-LANPeer
-LIMIT_MATCH=
-LIMIT_RECURSION=
-LINUX
-LINUX32
-LINUX64
-LLVMPipe Mesa
-LOCK_EX
-LOCK_SH
 Label
-Label::Paint()
-LabelBright
-LabelChanged
-LabelDull
-LanguageMenu
-Laser
-Last %d input commands (most recent first):\n
 Latin
-Layout
-LayoutDebugDialog
-LayoutFileChanged
-LayoutTemplates
-Legacy Free Sub
-Length Required
 Lepcha
-Library
-License Imported From Steam2
-License expired
-Licensed Site
-Lider
 Limbu
-Limit exceeded
-Limited User
-Limited User (forced)
-Limited use, delayed activation
-Limited user account
-LimitedLocal
-LinePay
 Linear_B
-Linkaja
-Linux
-ListImage
-ListItemSelected
-ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time\n
-ListPanel.BgColor
-ListPanel.DisabledSelectedTextColor
-ListPanel.DisabledTextColor
-ListPanel.PostSectionLeading
-ListPanel.SelectedBgColor
-ListPanel.SelectedOutOfFocusBgColor
-ListPanel.SelectedTextColor
-ListPanel.TextBgColor
-ListPanel.TextColor
-ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'\n
-ListPanel::AddItem
-ListPanel::ApplyItemChanges
-ListPanel::CalculateVisibleRowPositions()
-ListPanel::OnCheckButtonChecked sanity
-ListPanel::PaintInterior()
-ListPanel::PerformLayout()
-ListPanel::RemoveItem
-ListPanel::SortList()
-ListPanel::UpdateColumnWidths()
-ListPanelCheckBox
-ListPanelCheckBox::OnThink()
-ListPanelCollapserBase
-ListPanelColumnSelectButton
-ListPanelDragger
-ListPanelInterior
-ListPanelSectionCollapser
-ListPanelSectionHeader
-ListViewItem
-ListViewItemSelected
-ListViewPanel
 Lisu
-Live Broadcast
-LoadDefaultControlSettings
-LoadFileIntoBuffer: NULL parameters
-LoadFileRangeIntoBuffer_Internal
-LoadFromBuffer: missing {   (current key: '%s')
-Localization
-LocalizationFileChanged
 Location
-Locking Failed
-Log stopped.\n
-Logged Off
-Logging Off
-Logging On
-Logic problem? szsrc = 
-Logon Extra Security
-Logon Extra Security Disabled
-LookInLabel
-Looking to Play
-Looking to Trade
-Low FPS
-Low Violence
-LowContrast
-Lowered '%s' -> '%s'\n
 Lycian
 Lydian
 MARK
-MOL Points
-MOUSE_4
-MOUSE_5
-MOUSE_LAST
-MOUSE_LEFT
-MOUSE_MIDDLE
-MOUSE_RIGHT
-MP4 Media File (*.mp4)
-MPEG Media File (*.mpeg)
-MPEG Media File (*.mpg)
-MacOS
-Maestro
-Main Frame Loop
-MainMenu
 Malayalam
 Mandaic
-MangirKart
-Manifest unavailable
-ManifestSignature
-Manually clearing frames for this game\n
-MapKey::GetBoolValue
-MapKey::GetInt32Value
-MapKey::GetInt64Value
-MapKey::GetStringValue
-MapKey::GetUInt32Value
-MapKey::GetUInt64Value
-MapKey::type MapKey is not initialized. 
-MapValueConstRef::GetBoolValue
-MapValueConstRef::GetDoubleValue
-MapValueConstRef::GetEnumValue
-MapValueConstRef::GetFloatValue
-MapValueConstRef::GetInt32Value
-MapValueConstRef::GetInt64Value
-MapValueConstRef::GetMessageValue
-MapValueConstRef::GetStringValue
-MapValueConstRef::GetUInt32Value
-MapValueConstRef::GetUInt64Value
-MapValueConstRef::type MapValueConstRef is not initialized.
-MapValueRef::MutableMessageValue
-MapValueRef::SetBoolValue
-MapValueRef::SetDoubleValue
-MapValueRef::SetEnumValue
-MapValueRef::SetFloatValue
-MapValueRef::SetInt32Value
-MapValueRef::SetInt64Value
-MapValueRef::SetStringValue
-MapValueRef::SetUInt32Value
-MapValueRef::SetUInt64Value
-March
-MarkerKey
-Master App Editor
-Master Subscription
-MasterCard
-Mastercard (BoaCompra)
-Matched '%s' -> '%s'\n
-MaxResults
-Maximum family size exceeded
-MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
-Meeting
-Memory leak: mempool blocks left in memory: %d\n
-Menu.TextInset
-MenuBarLoaded
-MenuButton2
-MenuButton3
-MenuClose
-MenuItem (cascade)
-MenuItem (disabled)
-MenuItem (with check)
-MenuItemHighlight
-MenuItemSelected
-MenuScrollBar
-MenuSeparator
-MerPay
-MercadoPago
-Merch
 Meroitic_Cursive
 Meroitic_Hieroglyphs
-Mesa Dozen
-Mesa HoneyKrisp
-Mesa NVK
-Mesa PanVK
-Mesa Turnip
-Mesa Venus
-Message '%s' not handled by panel '%s'\n
-Message '%s', sent to '%s', has an invalid parameter type\n
-Message '%s', sent to '%s', has invalid parameter types\n
-Message class "
-Message does not support reflection (type 
-Message is too deep, the parser exceeded the configured recursion limit of 
-Message missing required fields: 
-Message of type "
-Message type "
-MessageBox.ButtonHeight
-MessageBoxText
-MessageLite at 0x
 MessageOptions
-MessageSet is not supported in proto3.
-MessageSets cannot have fields, only extensions.
-Messages can't have default values!
-Messages can't have default values.
-Method Not Allowed
-Method Not Found
-Method call failed: %s
 MethodDescriptorProto
 Miao
-Microtransaction
-Migrate
-MinimizeToSysTray
-Missing Audio
-Missing Key Frames
-Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
-Missing configuration
-Missing decryption key
-Missing executable
-Missing field: FileDescriptorProto.name.
-Missing file permissions
-Missing game files
-Missing name.
-Missing update files
-Mobile (Degica)
-Mobile Wallet (Japan)
-ModelNumberID
-Moderators
-MoltenVK
-Monday
-MoneyBookers
 Mongolian
-Mouse
-Mouse 3
-Mouse 4
-Mouse 5
-Mouse Left
-Mouse Right
-MouseCaptureLost
-MouseDoublePressed
-MousePressed
-MouseReleased
-MouseScrolled
-MouseTriplePressed
-Move
-Moved Permanently
-Moving Folder
-MrCash
-Multibanco
-Multicaja
-Multiplayer
-Multiple Choices
-Multiple extension registrations for type "
-Multiseat
-Music And Arts
-Must agree to SSA
-MutableMessage
-MutableRawRepeatedField
-MutableRepeatedMessage
 Myanmar
 N10CBasePanel31CCallback_OnOverlayStateChangedE
 N10CBasePanel33CCallbackInternal_OnConfigUpdatedE
@@ -3517,88 +1389,12 @@ N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NOT_FOUND
-NO_AUTO_POSSESS)
 NO_SIDE_EFFECTS
-NO_START_OPT)
 NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt8ios_base7failureE
-NVIDIA
-NameEntry
 NamePart
-Nanaco
-Naranja
-NaverPay
-NearRank
-NearValue
-Need space between identifier and decimal point.
-Need space between number and identifier.
-Needs SSA Next Logon
-Needs captcha
-Needs pre-approval
-Net Banking (Nodwin)
-NetCash
-Network send exceeded
-NewFolderButton
 New_Tai_Lue
-News
-No -steampid command line param to gameoverlayui
-No Connection
-No Content
-No Detail
-No Error
-No Result
-No account or email was specified to send the gift
-No billing agreement exists for recurring option
-No connection
-No connection to content servers
-No control groups specified
-No default value
-No field named "uninterpreted_option" in the Options proto.
-No launcher specified
-No match
-No matching URL
-No mobile device available
-No payment provider is configured to handle the transaction
-No site licenses found
-No subscription
-No verified phone number
-NoInternet
-NoLAN
-NoSteam
-Nobody
-Non Permanent
-Non-Authoritative Information
-Non-primitive types can't be packed.
-Non-repeated Any specified multiple times.
-Non-repeated field "
-NonMembers
-Normal
-Not Acceptable
-Not Implemented
-Not Logged On
-Not Modified
-Not Supported
-Not activated
-Not allowed to play
-Not enough disk quota
-Not enough disk space
-Not enough free disk space
-Not implemented field number 
-Not installed
-Not released
-Not supported.
-NotYetRated
-Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-November
-Num Lock
-Num Lock Toggle
-Numbers starting with leading zero must be in octal.
-NumericInputOnly
-NumericalCompare
-OEM Ticket
-OKButton
 OOOOOO
 OOOOOOOOO
 OOOOOOOOOOOOOOOOOO
@@ -3611,177 +1407,23 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO____
 OOOOOOOOOOOOOOOOO_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-OPTIONS
-OSX1010
-OUT_OF_RANGE
-OXXO
 O\n\nAnnotation
-October
-Offensive Avatar
-Offensive Persona Name
-Offensive Profile
-Offensive UGC
-Officers
-Offline App Cache invalid
-Ogg Media File (*.ogv)
 Ogham
 Ol_Chiki
 Old_Italic
 Old_Persian
 Old_South_Arabian
 Old_Turkic
-OnAppShutdown
-OnCloseWindow
-OnCursorMoved
-OnFinishRequest
-OnFolderUp
-OnMouseFocusTicked
-OnNewFolder
-OnOpen
-OnRequestFocus
-OnScreenSizeChanged
-OnSetHTMLTitle
-OnSetStatusText
-OnStartRequest
-OnTaskBarChanged
-OnURLChanged
-OneCard
-Oneof must have at least one field.
 OneofDescriptorProto
-Online Banking (Thailand)
-Only one MainOverlay allowed, and this isn't it.\n
-Only one SerializedOverlay allowed, and this isn't it.\n
-OpenButton
-OpenCache
-OpenColumnChoiceMenu
-OpenContextMenu
-OpenFileForEdit
-OpenSteamDialog
-OpenTabPage
-OpenVRSessionDetails
-Operation failed due to parental control restrictions for current user
-Option "
-Option field "
-Option must have a name.
-Option must not use reserved name "uninterpreted_option".
-Option1
-Option2
-Option3
 Oriya
 Osmanya
-Other abortable transaction in progress
-Other session playing
-OtherAudio
-Others In Progress
-Out of Resources
-Out of stock
-Over consumption limit
-Overlay Web Popup Container
-Overlay disable requested by game\n
-Overlay enable requested by game\n
-Overlay.SetWindowAlpha
-Overlay.SetWindowPinned
-OverlayHidden
-OverlayShown
-OverlayWebFrame
-OverlayWebPopup
-PATCH
 PCRE does not support \L, \l, \N{name}, \U, or \u
-PERMISSION_DENIED
-PLATFORM
-PNG Image (*.png)
-POLi
-POSA code is not activated
-POSIX
 POSIX collating elements are not supported
 POSIX named classes are supported only within a class
-POST
 PRUNE
-PSN Ticket is invalid
-Package requires an invitation for a reservation to purchase
-PageChanged
-PageCountChanged
-PageDragFrame
-PageDragPanel
-PageHide
-PageLoadThrobber
-PageShow
-PageTab
-PageTab (empty)
-PageTabActivated
-PageTitleChange
-Pago Facil
-PagoEfectivo
-Pagseguro
-Panel::InternalPerformLayout()
-Panel::IsWithinTraverse
-Panel::LocalToScreen
-Panel::OnThink
-Panel::ParentLocalToScreen
-Panel::ScreenToLocal
-PanelClicked
-PanelGrid
-PanelPtr
-Parent
-Parental Settings
-Parental control blocked
-ParentalSetup
-ParityStripe
-Partial Content
-Partial refund
-Partner Member
-Partner needs VAT ID set to purchase commercial licenses
 PartnerEventNotificationType
-Party
-Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
-Password Set
-Password is not set
-Password reentry required
-Password required to kick session
-PathLabel
-Pay Easy (Degica)
-PayNow
-PayPal
-PayPal internal error
-PayPay
-PaySafeCard
-PayU
-Payco
-Payment Required
-Payment method allows multiple pending transactions, but there is an overlap of packages in both transactions
-Payment method is disabled
-Payment method is not allowed for this purchase
-Payment requires additional authentication step
-PaymentInfo
-Payshop
-Peer Server
-PeerServer
-Pending
-Pending (Invitee)
-Pending (Inviter)
-Pending Gift
-Pending Log Request Active
-Pending Refund
-PendingApproval
-Permanent Redirect
-Persistence Failed
-Persona Set
-PgDn
-PgUp
 Phags_Pa
 Phoenician
-Phone
-Phone number is Voice Over IP
-Physical product limit exceeded
-Pichincha
-Pichincha Cash
-Pid that we should be watching for
-PinCorner
-PinValidda
-Ping
-PinnedCornerOffsetX
-PinnedCornerOffsetY
-Piracy or Cheats
 Plat_CommandLineParamExists
 Plat_CommandLineParamValue
 Plat_FloatTime
@@ -3793,311 +1435,36 @@ Plat_IsInDebugSession
 Plat_MSTime
 Plat_MSTime64
 Plat_OutputDebugString
+Plat_OutputDebugStringRaw
 Plat_RelativeTickFrequency
 Plat_RelativeTicks
+Plat_VirtualAccessFlags
+Plat_ctime
+Plat_daylight
 Plat_gmtime
 Plat_localtime
-Player Name History
-PopulateDriveList
-PopulateFileList
-PopulateFileNameCompletion
-PopupHTML
-PostedAnnouncement
-Preallocating
-Precondition Failed
-Preferred Owner
-Prefetching Info
-PressButton
-Priority Auto Update
-Priority Down
-Priority First
-Priority Manual
-Priority None
-Priority Paused
-Priority Up
-Priority User Initiated
-Process %d failed to shm_open %s\n
-ProcessInputEvents()
-Profile Showcases
-Profile Text
-Profile URL
-ProgressBar
-Prohibited
-PromotedNewAdmin
-Prompt
-PropertySheet.FlashTabColor
-PropertySheet.TabGap
-PropertySheet.TransitionEffectTime
-ProtectedStore
-Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
-Protocol Buffer map usage error:\n
-Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-Provider doesn't support currency
-Proxy Authentication Required
-Przelewy24
-Public
-Pulse
-Purchase not yet settled
-Purchase pending
-PutInternal: Not enough space for put when locked\n
-QIWI
+Plat_timegm
+Plat_timezone
 QkkXa
-Qualcomm
-QuickAccess
-RESOURCE_EXHAUSTED
-RGBA: %.2X %.2X %.2X %.2X
-RackSystem
-RadioButton
-RadioButton::OnThink()
-RadioButtonChecked
-Ran out of IPC SharedObjectManager entries!\n
-RankedByAveragePlaytimeTrend
-RankedByBanContentCheck
-RankedByInappropriateContentRating
-RankedByLastUpdatedDate
-RankedByLifetimeAveragePlaytime
-RankedByLifetimePlaytimeSessions
-RankedByNumTimesReported
-RankedByPlaytimeSessionsTrend
-RankedByPlaytimeTrend
-RankedByPublicationDate
-RankedByTextSearch
-RankedByTotalPlaytime
-RankedByTotalUniqueSubscriptions
-RankedByTotalVotesAsc
-RankedByTrend
-RankedByVote
-RankedByVotesUp
-Rapipago
-Rate Limit Exceeded
-Reached an unintended state: CPPTYPE_MESSAGE
-Reached impossible case in HasBit().
-Read Failed
-ReceivedNewGame
-ReceivesGroupComment
-Reconfiguring
-Recurring
-Recurring Charge
-Recurring option does not allow gifting
-Recurring option does not allow stacking
-Recurring option is not valid for billing agreement
-Recurring option will stack time beyond our maximum limit
-Recurring payment option
-Recursion limit at end of parse should be 
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
-Red Pagos
-RedCompra
-Refunded
-Refunded to wallet
-Region Locked
-Region Restriction Expired
-Region not supported
-Region restricted
 Rejang
-Relay Failed
-Release State Override
-ReleaseLast
-ReleaseLast() called on a RepeatedPtrField that is on an arena, 
-ReleaseMessage
-ReloadButton
-Remote File Conflict
-Remote call failed
-RemoveLast
-Renew failed
-Renew next period
-Repeated fields can't have default values.
-Request Entity Too Large
-Request Not Sent
-Request Timeout
-Request has been canceled
-Request revoked
-Request suspended/paused
-Request-URI Too Large
-RequestDenied
-Requested Force create but SharedObjectMutex already created\n
-Requested range not satisfiable
-Requested size is too large to fit into size_t.
-Required fields are not allowed in proto3.
-Requires 64bit operating system
-Reserved numbers must be positive integers.
-Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
-Reserved range end number must be greater than start number.
-Reset Content
-ResetData
-ResizeColumnToContents
-Resource\warning.wav
-Response Not Received
-Restricted country
-Restricted device
-Retail
-Retired
-Reviews
-Revive
-Revoked
-RichText.InsetX
-RichText.InsetY
-RichText: textfile parameter '%s' not found.\n
-RichText::DrawString
-RichText::OnThink()
-RichText::ParseTextStringForURL
-RichText::RecalculateLineBreaks
-RichTextInterior
-RichTextReceivedUnneededFocus
-RunGameEngine007
 Runic
-Running Script
-Running Update
-SHMemStream header is corrupt in GetInternal()\n
-SHMemStream header is corrupt in PutInternal()\n
-SKIN
 SKIP
-SMS code failed
 SPEED
-SPEI
-STEAM_CLIENT_LOG_FOLDER
 STRING
-SafeMode
-SafetyPay
 Samaritan
-Same as previous value
-Santander Rio
-Saturday
 Saurashtra
-Sberbank
-ScheduledEvent
-Score
-Screenshot
-ScreenshotPublished
-ScreenshotThread
-Screenshots
-Scroll Lock
-Scroll Lock Toggle
-ScrollBar.Horizontal
-ScrollBar.Wide
-ScrollBarButton.Down
-ScrollBarButton.Left
-ScrollBarButton.Right
-ScrollBarButton.Up
-ScrollBarHandle
-ScrollBarSlider
-ScrollBarSlider.Horizontal
-ScrollBarSliderMoved
-ScrollBar_Horizontal
-ScrollBar_Vertical
-ScrollButtonPressed
-Second argument to Swap() (of type "
-Second argument to SwapFields() (of type "
-Second file dialog opened
-SecurityStatus
-See Other
-Seek Failed
-Seeking to a position which is not sector aligned will break unbuffered io
-SelectedImage
-SelectedNewPOTW
-Self updating
-SendHotKeyAndVisibilityState()
-SendPerGameConfiguration()
-Sending of an email failed
-SentenceModeMenu
-September
-SerialNumber
-SerializeAllTextures
-SerializedSurface requires the vgui::IInput system to run!\n
-SerializedSurface requires the vgui::IVGui system to run!\n
-Server Busy
-Server Shutdown
-Service Read Only
-Service Unavailable
 ServiceDescriptorProto
 ServiceOptions
-Session Replaced
-Set the base used to construct quick login URLs
-SetAllocatedMessage
-SetAlpha
-SetBool
-SetCursor
-SetDouble
-SetEnum
-SetEvent failed for paint event\n
-SetFloat
-SetFocus
-SetFont
-SetInt32
-SetInt64
 SetMiniDumpBuildID
 SetMiniDumpSteamID
-SetProgress
-SetRepeatedBool
-SetRepeatedDouble
-SetRepeatedEnum
-SetRepeatedFloat
-SetRepeatedInt32
-SetRepeatedInt64
-SetRepeatedString
-SetRepeatedUInt32
-SetRepeatedUInt64
-SetSortColumn
-SetState
-SetString
-SetText
-SetTexture
-SetTitle
-SetUInt32
-SetUInt64
-SetURL
-Settings Changed
-Setup Error
 Sharada
-Shared Only
-Shared library locked
 Shavian
-ShellCmd
-Shift
-Shipping address failed validation
-ShopeePay
-Shopping Cart Not Found
-Should not reach here.
-Should the overlay be manually clearing frames to black (because the game doesn't clear the entire screen?)
-Show browser tooltips
-Show initial duration control notification.
-ShowContextMenu
-ShowIMECandidates
-ShowPanel
-Shutting down overlay\n
-Signature check failed
-Simple
-Single Purchase
-Single Purchase, Limited Use
 Sinhala
-Site License
-Site License locked
-SiteLicense
-Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-Size() == operand.Size()
-Skipping js method registration, already exists: %s
-Sleep for overlay FPS limiting
-SliderHoriz
-SlotsAvailable
-Snooze
-Sofort
-Solo
-Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
 Sora_Sompeng
 SourceCodeInfo
-Space
-Spamming
-Speakers
-Special Cause
-Spending limit exceeded
+SpewAndLogActivate
+SpewAndLogChangeIfStillDefault
 SpewOutputFunc
-Spline
-Split
-Spoofing
-Sports
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -4170,22 +1537,7 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
-Staging
-StandardPC
-Startup
-Steam - DirWatcher
-Steam Path: %s\n
-Steam Video
-Steam client out of date
-Steam pid that launched us
-Steam/Press Master
-Steam2 Migration Complete
-Steam2010 CD-Key
-SteamBox
-SteamCache
-SteamDeck
 SteamRealPath
-SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
@@ -4198,72 +1550,43 @@ SteamThreadTools::CThread::Join(unsigned int)
 SteamThreadTools::CThread::OnExit()
 SteamThreadTools::CThread::SetName(char const*)
 SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Terminate(int)
 SteamThreadTools::CThread::Yield()
 SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 SteamThreadTools::CThreadLocalBase::Get() const
+SteamThreadTools::CThreadLocalBase::Set(void*)
 SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
 SteamThreadTools::CThreadSemaphore::Release(long)
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamUniverse
 SteamVProf::CVProfManager::CleanupUnusedProfiles()
 SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
 SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 SteamVProf::CVProfManager::StopProfilingAllThreads()
 SteamVProf::CVProfile::MarkFrame(char const*)
-Steam_BGetCallback
-Steam_FreeLastCallback
-Steam_GetAPICallResult
-Steamworks Access Invite
-SteamworksAccessInvites
-Still busy
-StopButton
-StopPanelAnimations
-Stopping
-Store / Billing country code mismatch
-Store / Business country code mismatch
-Store Promotion
-String field
-String literals cannot cross line boundaries.
 StringAfterPrefix
-StringCompare
+StringAfterPrefixCaseSensitive
 StringFindSuffix
-StringPrintfVector currently only supports up to 
-StyleFlagFilter
-Subscribed
-Succeeded
-SuggestedFriend
 Sundanese
-Sunday
-Supervisor
-Supported Types (%s)
-Suspect
-Suspected Hijacker
-Suspended
-Swap
-SwappingStreamBuffers
-Switch
-Switching Protocols
 Syloti_Nagri
-Symbol name "
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-Synthetic oneofs must be after all other oneofs
 Syriac
-System.OpenFileDialog
 THEN
-TLS init function for 
-TLS wrapper function for 
-TabCloseButton
-TabClosed
-TabMenuButton
-TabMenuButtonFlash
-TabMenuItemFlash
-TabPageCloseButton
-TabPressed
+TSListBase_Init
+TSListBase_Pop
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 Tagalog
 Tagbanwa
 Tai_Le
@@ -4272,216 +1595,37 @@ Tai_Viet
 Takri
 Tamil
 Telugu
-Temporary Redirect
-Tenpay
-Terminating
-Tesla
-Test
-Test CD-Key
-TextChanged
-TextClicked
-TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
-TextEntry.IMEBGColor
-TextEntry.IMEFGColor
-TextEntryClearButton
-TextEscape
-TextImage::Paint()
-TextKillFocus
-TextLabel
-TextNewLine
 Thaana
 Thai
-The JSON camel-case name of field "
-The [proto3_optional=true] option may only be set on proto3fields, not 
-The current Steam realm does not match the requested resource
-The data being accessed is not supported by this API
-The extension 
-The first enum value must be zero in proto3.
-The gift is not valid for the recipient's region
-The gift recipient already owns the gift
-The gift's price is significantly higher in the recipient's region, so the purchase is blocked
-The original purchase cannot be replayed
-The purchase is still in progress, but waiting for success status from provider
-The type parameter T in RepeatedFieldRef<T> API doesn't match 
-The value of the cart in local currency is too high
-This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
-This program requires version 
-This program was compiled against version 
-This shouldn't be called if all the sizes are equal.
+ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadInMainThread
-ThreadInMainThread()
+ThreadInterlockedAssignIf
+ThreadInterlockedAssignIf64
 ThreadInterlockedCompareExchange
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadIsProcessIdActive
 ThreadShellExecute
 ThreadSleep
-Thursday
 Tibetan
-Tick
 Tifinagh
-Time is out of sync
-Timed Trial
-Timed out waiting for mutex in GetInternal()\n
-Timed out waiting for mutex in PutInternal()\n
-TimedOut
-Tinkoff
-Todito Cash
-ToggleButton
-ToggleColumnVisible
-ToggleKey
-Too Far behind
-Too Many Requests
-Too many accounts access this resource
-Too many bad activation code attempts in period
-Too many changes to this account
-Too many changes to this phone number
-Too many logon attempts
-Too many pending
-Tooltip.Anchor
-Tooltip.Delay
-TooltipHTML
-TooltipWindow
-Toss
-Touch'n Go
-Trade Fee
-Trade Scam
-Trade Scam Old
-Trading
-Transaction expired
-Transcode Behind
-TreeImage
-TreeNodeText
-TreeViewItemSelected
-TreeViewSubPanel
-Tried to merge messages of different types 
-Tried to register a non-generated type with the generated type registry.
-Trip
-True
-TrueMoney
-Trustly
-Trustpay
-Try another CM
-Tuesday
-Two-factor activation code mismatch
-Two-factor code mismatch
 Type
-Type appears to be in generated pool but wasn't 
-Type is already registered: 
-UCP)
-UNAUTHENTICATED
-UNAVAILABLE
-UNIMPLEMENTED
-UNKNOWN
-UNKNOWN_ENUM_VALUE_%s_%d
-URLBar
-URLBarBrokenSecure
-URLBarSecure
-URLClicked
-URLLabel
-URLStatusImage
-UTF)
-UTF-8
-UTF-8 data when 
-UTF8)
 Ugaritic
-Unable to add OpenVRSessionDetails row: %s
-Unable to get home directory
-Unauthorized
-Unavailable/Off
-Unavailable/OffOk
-Unavailable/Software
-Unbannable
-Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
-Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
-Unexpected end of string.
-Unexpected error
-Unexpected failure while serializing option submessage 
-Unhandled serialized input msg(%d)\n
-Unimplemented type: 
-Uninstalled
-Uninstalling
-Uninterpreted option is missing name or value.
 UninterpretedOption
-UnionPay
-Unknown Driver
-Unknown HDR colorspace %d
-Unknown HDR10 pixel format %d
-Unknown HTTP 4xx
-Unknown HTTP 5xx
-Unknown enumeration value of "
-Unknown method: %s
-Unknown scRGB pixel format %d
-Unknown scaling '%s'; valid values are none, panel, image, fit
-UnlockedGroupAchievement
-Unmatched %s\n
-UnpinnedCornerOffsetX
-UnpinnedCornerOffsetY
-Unrecognized syntax: 
-Unspecified
-Unspecified Error
-Unsupported
-Unsupported Media Type
-Unsupported: type mismatch
-Update Optional
-Update Paused
-Update Queued
-Update Required
-Update Running
-Update Started
-Update required
-UpdateIMECandidates
-Updated Disabled by app
-Upload Disconnected
-Upload Timeout
-UsableInGame
-Use Proxy
-Use local dev websites
-Use other funding source
-Use other payment method
-User already has an existing billing agreement for a package in this transaction
-User cannot complete purchase with provider because the amount is not supported
-User cannot purchase due to owning excluded app
-User cannot redeem this code from the steam client
-User does not have a cached payment method
-User does not have a wallet
-User has already recently changed their country via purchase
-User is associated with multiple cafes
-User is not associated with any cafes
-UserIpd
-UserStatus
-VAC beta
-VFileSystem014
-VGUI_Application_001
-VGUI_Input005
-VGUI_InputInternal001
-VGUI_Localize003
-VGUI_NotificationManager002
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Setup001
-VGUI_Surface039
-VGUI_System011
-VGUI_ivgui007
-VGuiModuleLoader004
-VISTA
-VPanel
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
-VRModeBegin\n
-VRModeEnd after %d seconds\n
-VRModeEnd with no matching begin.\n
-VTC Pay Cards
-VTC Pay Online Banking
-VTC Pay Wallet
-VTT for 
 V_AppendSlash
+V_ComposeFileName
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 V_ExtractFileExtension
 V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
+V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_IsSteamCloseProtocol
@@ -4489,8 +1633,11 @@ V_IsValidURLCharacter
 V_MakeAbsolutePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
-V_RemoveDotSlashes failed for "%s".
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
+V_StrSubstInPlace
+V_StrTrim
+V_StrTrimAsciiSpaceChar
+V_StripExtension
 V_StripFilename
 V_StripLastDir
 V_StripPrecedingAndTrailingWhitespace
@@ -4499,6 +1646,7 @@ V_URLContainsDomain
 V_URLDecodeRaw
 V_UTF16ToUTF32
 V_UTF32CharsToUTF8
+V_UTF32ToUTF16
 V_UTF32ToUTF8
 V_UTF8ToUTF32
 V_UnqualifiedFileName
@@ -4506,7 +1654,11 @@ V_WcsSkipArticles
 V_atof
 V_atoi
 V_atoui64
+V_binarytohex
+V_hextobinary
 V_isbreakablewspace
+V_isvalidhex
+V_memcpy_nocache
 V_pretifymem
 V_snprintf
 V_strcat
@@ -4515,9 +1667,12 @@ V_stristr(char const*, char const*)
 V_strlower_fast
 V_strncat
 V_strncat_length
+V_strnchr
 V_strncmp
 V_strncpy
 V_strnicmp
+V_strnistr
+V_strtoi64
 V_strtoui64
 V_tolower
 V_towlower32
@@ -4526,135 +1681,25 @@ V_vsnprintf
 V_vsnprintfRet
 V_vsnwprintf
 V_wcsncpy
+V_wcstoi64
 V_wcstoui64
-Vakiflar Bank
-Valid
-Validating
-Value is out of range
-Value must be "true" or "false" for boolean option "
-Value must be identifier for boolean option "
-Value must be identifier for enum-valued option "
-Value must be integer for int32 option "
-Value must be integer for int64 option "
-Value must be non-negative integer for uint32 option "
-Value must be non-negative integer for uint64 option "
-Value must be number for double option "
-Value must be number for float option "
-Value must be quoted string for string option "
-Value of type "
-Value out of range for int32 option "
-Value out of range for int64 option "
-Value out of range for uint32 option "
-Valve
-Valve CD-Key
-ValveOfficial
-Verifying
-VertScrollBar
-Video Init Failed
-VideoPublished
-Videos
-Visa
-Visa (BoaCompra)
-Visa Electron (BoaCompra)
-WARNING
-WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WIN32
-WIN64
-WIN7
-WINDOWS
-WM_ACTIVATE received before BasePanel() knows about the game ID
-WON CD-Key
-WORKAROUND_GdbSymbolLoadHook
-WaitMultiple game rendering / exiting: fatal error %d!\n
-Waiting for disk
-Waiting on game
-Wallet (Nodwin)
 Warning
-Warning parsing text-format 
-Warning: Blocking wait on mutex failed in Clear: %d\n
-Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
-Warning: Game claimed to have rendered after extra time, but render stream is not empty.\n
-Warning: Game claims to have rendered, but render stream is not empty.\n
-Warning: Memory was locked for put while destructing!\n
-Warning: The game hasn't rendered a frame from us in over 10 seconds.\n
-Warning: Tried to clear, but game started reading right as we would have done so. Last game frame rendered was %d ms ago\n
-WeChat
 WeakRandomFloat
 WeakRandomInt
-Web API key registration ban
-Web Guide
-Web Link Deprecated
-WebBack
-WebForward
-WebGuidePublished
-WebGuides
-WebM Video File (*.webm)
-WebMoney
-WebMoney (Degica)
-WebMoney Steam Card (Japan)
-WebMoney Steam Card Top Up (Japan)
-WebReload
-WebSteamURL
-WebStop
-Wednesday
-What city were you born in?
-What is the name of your pet?
-What is the name of your school?
-What is your favorite team?
-What is your mother's maiden name?
-Whitelist
-Who was your childhood hero?
-WifiDisabled
+WeakRandomUint32
 WinAppMain
-WindowMaximized
-WindowRestored
-Windows
-Workshop Items
-WorkshopItemPublished
-WorkshopShowcase
-WrapPanel
-WrapPanel::PerformLayout()
-WrapPanel::Repaint
-WrapPanelItem
-WrapPanelItemVisibility
-Write Failed
-Wrong Price
-X360
-Yandex
-Yapi Kredi
-YooMoney
-You must refund this transaction to wallet
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z-google.golang.org/protobuf/types/descriptorpb
-Ziraat Bank
-Zong
-ZooDialog
-ZooPropertyPage
-[%s] applying key '%s', has changed from '%s' to '%s'\n
-[abi:
-[lazy = true] can only be specified for submessage fields.
-[libprotobuf %s %s:%d] %s\n
-[packed = true] can only be specified for repeated primitive fields.
 \ at end of pattern
-\%03o
 \C not allowed in lookbehind assertion
 \N is not supported in a class
 \P{Xan}
 \P{Xps}
 \P{Xsp}
 \P{Xwd}
-\U%08x
 \c at end of pattern
 \c must be followed by an ASCII character
 \g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
 \k is not followed by a braced, angle-bracketed, or quoted name
-\n    Actual    : 
-\n    Field type: 
-\n  Field       : 
-\n  Message type: 
-\n  Problem     : 
-\n  Problem     : Enum value did not match field type:\n    Expected  : 
-\n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n EWindowsUpdateInstallationImpact
 \n UserContentDescriptorPreferences
 \n google/protobuf/descriptor.proto
@@ -4664,8 +1709,6 @@ ZooPropertyPage
 \n#CMsgHorizontalScrollBarSizeResponse
 \n#EPublishedFileInappropriateProvider
 \n(ESteamDeckCompatibilityResultDisplayType
-\nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
-\nParsing attempt:  
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -4875,117 +1918,66 @@ ZooPropertyPage
 \r\n\tJS_STRING
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
-\t(%zu) comparing %s with %s\n
 \venums.proto"^\n\tCMsgKeyUp
-\x%02x
 ] is an invalid data character in JavaScript compatibility mode
-_Accum
 _DMsg
-_Fract
-_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( y, unNodeSize, pMemBase )
-_Sat 
+_SpewMessageType
 ________________________________
 ___tls_get_addr
-___tls_get_addr@GLIBC_2.3
 __assert_fail
-__assert_fail@GLIBC_2.0
-__bss_start
 __ctype_b_loc
-__ctype_b_loc@GLIBC_2.3
 __ctype_get_mb_cur_max
-__ctype_get_mb_cur_max@GLIBC_2.0
 __ctype_tolower_loc
-__ctype_tolower_loc@GLIBC_2.3
 __cxa_atexit
-__cxa_atexit@GLIBC_2.1.3
 __cxa_finalize
-__cxa_finalize@GLIBC_2.1.3
 __duplocale
-__duplocale@GLIBC_2.1
 __errno_location
-__errno_location@GLIBC_2.0
-__float128
 __fprintf_chk
-__fprintf_chk@GLIBC_2.3.4
 __fread_chk
-__fread_chk@GLIBC_2.7
 __freelocale
-__freelocale@GLIBC_2.1
 __fxstat
 __fxstat64
-__fxstat64@GLIBC_2.2
-__fxstat@GLIBC_2.0
 __gmon_start__
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
+__isoc99_sscanf
 __iswctype_l
-__iswctype_l@GLIBC_2.1
-__lxstat64@GLIBC_2.2
-__lxstat@GLIBC_2.0
+__longjmp_chk
+__lxstat
+__lxstat64
 __memcpy_chk
-__memcpy_chk@GLIBC_2.3.4
 __memset_chk
-__memset_chk@GLIBC_2.3.4
 __newlocale
-__newlocale@GLIBC_2.1
 __nl_langinfo_l
-__nl_langinfo_l@GLIBC_2.2
-__null == "Unexpected return value from pcre_config(NEWLINE)"
 __printf_chk
-__printf_chk@GLIBC_2.3.4
 __pthread_key_create
-__pthread_key_create@GLIBC_2.0
 __realpath_chk
-__realpath_chk@GLIBC_2.4
 __snprintf_chk
-__snprintf_chk@GLIBC_2.3.4
 __sprintf_chk
-__sprintf_chk@GLIBC_2.3.4
 __stack_chk_fail
-__stack_chk_fail@GLIBC_2.4
 __strcat_chk
-__strcat_chk@GLIBC_2.3.4
 __strcoll_l
-__strcoll_l@GLIBC_2.1
 __strcpy_chk
-__strcpy_chk@GLIBC_2.3.4
 __strftime_l
-__strftime_l@GLIBC_2.3
 __strtod_l
-__strtod_l@GLIBC_2.1
 __strtof_l
-__strtof_l@GLIBC_2.1
 __strxfrm_l
-__strxfrm_l@GLIBC_2.1
 __swprintf_chk
-__swprintf_chk@GLIBC_2.4
 __towlower_l
-__towlower_l@GLIBC_2.1
 __towupper_l
-__towupper_l@GLIBC_2.1
 __uselocale
-__uselocale@GLIBC_2.3
 __vasprintf_chk
-__vasprintf_chk@GLIBC_2.8
 __vsnprintf_chk
-__vsnprintf_chk@GLIBC_2.3.4
 __wcscoll_l
-__wcscoll_l@GLIBC_2.1
 __wcscpy_chk
-__wcscpy_chk@GLIBC_2.4
 __wcsftime_l
-__wcsftime_l@GLIBC_2.3
 __wcsxfrm_l
-__wcsxfrm_l@GLIBC_2.1
 __wctype_l
-__wctype_l@GLIBC_2.1
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -5025,40 +2017,21 @@ __wrap_unlink
 __wrap_utime
 __wrap_utimes
 __xmknod
-__xmknod@GLIBC_2.0
-__xstat64@GLIBC_2.2
-__xstat@GLIBC_2.0
-_actionMessage
-_actionSignalTargetDar
-_associateName
-_blank
-_clickableTextPanels
-_edata
-_end
+__xstat
+__xstat64
 _fini
-_imageDar
-_imageDar.IsValidIndex( index )
 _init
-_leftCaption
-_new
-_panelDar
-_rightCaption
-_textImage
+_setjmp
+_strlwr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
-_uid
 a numbered reference must not be zero
 abort
-abort@GLIBC_2.0
-about:blank
-absolute_mouse.vdf
-access@GLIBC_2.0
-accessor_ == other.accessor_
-account flags changed
+access
 additional_includes
 address1
 address2
@@ -5066,49 +2039,21 @@ admin_spoofing_user
 adult_content_sex
 adult_content_violence
 aggregate_value
-airtel
-akamai
-albummetadata
-alicloud
-alignof 
-all styles
-allotmswe
 allow_field_named_steam_id
 allowed_extensions
 alnum
 alpha
 alphasort64
-alphasort64@GLIBC_2.2
-amazon
 an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)
-android32
-android6
-android64
-android7
-android8
-android9
-animate
-announcement created
-announcement deleted
-announcement failed content check
-announcement updated
 announcement_body
 announcement_gid
 app_type
-appearance
 appid
-application
 args
 argument
 ascii
 assertion expected after (?(
-associate
-attributes
-au PAY
 auth_account_flags
-auto
-auto:
-autocheck
 avifEncoderAddImage
 avifEncoderCreate
 avifEncoderDestroy
@@ -5118,717 +2063,198 @@ avifImageDestroy
 avifImageRGBToYUV
 avifRGBImageSetDefaults
 avifRWDataFree
-azure
 bAllow
-bChooseDirectory
 bHasMultipleInputs
 bInput
 bNewNavigation
-bPanelFound
-bSaveMode
-bUseAsDefault
-bad_function_call
 bad_url
-baishancloud
 ban_check_result
 banned
-barinset
-base style
-basic_ios::clear
-basic_iostream
-basic_istream
-basic_ostream
-basic_string::_M_replace_aux
-basic_string::_S_construct null not valid
-basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::copy
-basic_string::erase
-basic_string::insert
-basic_string::replace
-basic_string::resize
-basic_string::substr
 begin
-bellcanada
-between
-bgcolor
 bgoback
+bind
 bind_textdomain_codeset
-bind_textdomain_codeset@GLIBC_2.2
-binding
+bindtextdomain
 binput
-bitNum >= 0 && bitNum < this->Size()
-blGrip
 blank
-blobSize <= nMaxBlobSize
 body
-bold
-bool
-bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 bool pcrecpp::RE::DoMatch(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, int*, const pcrecpp::Arg* const*, int) const
 bool pcrecpp::RE::DoMatchImpl(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, int*, const pcrecpp::Arg* const*, int, int*, int) const
 bool pcrecpp::RE::Replace(const pcrecpp::StringPiece&, std::string*) const
-boolean
-bootstrap
-bottom
-bottomGrip
-boundTall >= 0
-boundWide >= 0
-bpcs.com
-brighttext
-broadcast
 broadcast_live
-broadcastchat
 broadcaster_accountid
-broadcastgamedata
-broadcastmanifests
-broadcastorigin
-broadcaststatus
-browser
 browser_handle
-browserview
 bsuccess
 btowc
-btowc@GLIBC_2.0
 bucket
-buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
-buffer. Use the 'bytes' type if you intend to send raw 
-buildGroup != NULL
 build_id
-byte
-bytes
-bytes. 
-cActualReplacements == cReplacements
-cChildren <= SHRT_MAX
-can't convert int64 to uint64 (negative number)
-can't convert uint64 to int32 (data loss)
-can't reach here.
-canceled the join request
-candidate
-cannot create std::vector larger than max_size()
+calloc
 canvas_oop_rasterization
-cap_additonal_buttons
-cap_analog_triggers
-cap_aux_sensor
-cap_back_button
-cap_button_diamond
-cap_cant_read_guidebutton
-cap_capstick
-cap_capture_button
-cap_center_trackpad
-cap_color_led
-cap_dpad
-cap_emulated_rumble
-cap_gen_serial
-cap_grip_buttons
-cap_grips_flipped
-cap_guide_button
-cap_gyro
-cap_haptics
-cap_led
-cap_leftstick
-cap_nintendo_layout
-cap_player_led
-cap_pressure
-cap_rightstick
-cap_rumble
-cap_sdl_bind
-cap_shoulder_buttons
-cap_start_button
-cap_stick_buttons
-cap_trackpad
-cap_uncalibrated_imu
-category_1
-category_10
-category_11
-category_13
-category_14
-category_15
-category_16
-category_17
-category_18
-category_19
-category_2
-category_20
-category_21
-category_22
-category_23
-category_24
-category_25
-category_26
-category_27
-category_28
-category_29
-category_30
-category_31
-category_32
-category_33
-category_34
-category_35
-category_36
-category_37
-category_38
-category_39
-category_40
-category_41
-category_42
-category_43
-category_44
-category_45
-category_46
-category_47
-category_48
-category_49
-category_50
-category_51
-category_52
-category_53
-category_54
-category_55
-category_56
-category_57
-category_58
-category_59
-category_6
-category_60
-category_61
-category_62
-category_7
-category_8
-category_9
-cbActual < (uint32)nBufSizeWithTerminator
-cbToRead <= 1024 * 1024 * 1024
 cc_enable_arenas
 cc_generic_services
-cdkeyrestrictions
-cdninfo
-cellcolor
-cellmap
-center
 certName
-certerror
-certname
-changed the POTW
-char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
-char16_t
-char32_t
-char8_t
 character value in \u.... sequence is too large
 character value in \x{} or \o{} is too large
-chdir@GLIBC_2.0
-checkable
-checked
-checksum_error
-china
-chinacache
-chinatelecom
-chmod@GLIBC_2.0
+chdir
+chmod
 choose_directory
-chown@GLIBC_2.1
+chown
 city
 clamp_range_slot
 clanid
-className
 client_sessionid
 client_streaming
-clientui
-clientui.so
-clientupdatehosts
-close() failed: 
-close/
+clock_gettime
+close
 closedir
-closedir@GLIBC_2.0
-closeonescape
 closing ) for (?C expected
-clping
 cm_sysid
 cntrl
-codeweavers.com
-col < m_CurrentColumns.Count()
 com.google.protobufB
-comcast
-comcastoffnet
-comic
-command
-common
 community_visible_stats
-complex 
-computed
 conditional group contains more than two branches
-configstore
 connection_problem
-console
-const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
-const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
-const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
-const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
-const string& google::protobuf::UnknownField::length_delimited() const
-const_cast
-construction vtable for 
-containerlabel
 content_descriptorid
 content_descriptorids
 content_descriptors_to_exclude
-contenthubs
-contentregionsandsources
-contentserver
-contextmenu
-continuous
-controlKeys
-controller
-controller_android
-controller_apple
-controller_front_panel_board
-controller_generic
-controller_hori_steam
-controller_keyboard_generic
-controller_mobile_touch
-controller_mouse_generic
-controller_native
-controller_neptune
-controller_none
-controller_ps3
-controller_ps4
-controller_ps5
-controller_ps5_edge
-controller_steamcontroller_gordon
-controller_steamcontroller_headcrab
-controller_steamcontroller_unknown
-controller_switch_joycon_left
-controller_switch_joycon_pair
-controller_switch_joycon_right
-controller_switch_pro
-controller_switch_pro_generic
-controller_ui
-controller_unknown
-controller_wii
-controller_xbox360
-controller_xboxelite
-controls
 convar_
 cookies
 coord_x
 coord_y
-copylink
-copyurl
-cos@GLIBC_2.0
-count >= 0
-countrycodes
-covalensolutions.com
-covariant return thunk to 
-crashhandler004
-crc_header_mismatch
-created64
-createflags
 creation_flags
 creator_steamid
-crypto
-csgolauncher
 csharp_namespace
 ctype
-cubBytesToRead < INT32_MAX
-curFilter[0] == '*' && curFilter[1] == '.'
-currencies
 cursor
-custom_
-custom_%d
 custom_commands
-data:image/
-data_ == other.data_
-datacoll
 debug_source_string_index
-decimal128
-decimal32
-decimal64
-decltype (
-decltype(auto)
-decltype(nullptr)
-decompress_failed
 default_local_path
-delete 
-delete[] 
-delta
 deltax
 deltay
 demo
-demoted from moderator
-demoted from officer
-depotdeltapatch
-depotonly
-depots
-derive
-details
-details_tab
-developer
-dfxp
 dgettext
-dgettext@GLIBC_2.0
-different KV data types in a single list column
 different names for subpatterns of the same number are not allowed
 digit
 digit expected after (?+
-direction
 disable
-disabled group
 disallowed Unicode code point (>= 0xd800 && <= 0xdfff)
 discussion_url
-disk-free command failed\n
-divider
 dl_iterate_phdr
-dl_iterate_phdr@GLIBC_2.2.4
 dlclose
-dlclose@GLIBC_2.0
 dlerror
-dlerror@GLIBC_2.0
-dlmopen %s failed: %s\n
-dlmopen@GLIBC_2.3.4
-dlopen@GLIBC_2.1
+dlmopen
+dlopen
 dlsym
-dlsym@GLIBC_2.0
 domain
 domains
-downarrow
 download
 dpi_horizontal
-driver
-drophoverdelay
-droppable
 dst_gc_dir_index
 dst_gcid_queue
-dulltext
 duration
-durationcontrolinit
-dynamic_cast
-eCmd > 0 && eCmd < eHTMLCommands_None
-echar >= schar
 economy_support
 economy_support_supervisor
-edgenext
-edgio
-edit %s
 edit_marketing
 edit_state_flags
 edit_store_display_content
-editable
-elem + num <= Count()
-elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elementtagname
-embedded_unknown
-emphasis
 endmntent
-endmntent@GLIBC_2.0
 entries
-entry
-enum
-enums.proto
 eresult
 erroffset passed as NULL
 error_description
-error_tab
-error_text
 estackingorder
 estate
-eurotransit
-event created
-event deleted
-event updated
 events
 exclude_client_sessionids
+exit
 expired
 expires
-extend .$0 {\n
-extended
 extendee
 extension_range
 faccessat
-faccessat@GLIBC_2.4
 failed to get memory
+fallocate64
 false
-false 
 false"
 false"&\n\fCMsgStopFind
 false"M\n
 false:H\n
 false:J\n
 falseB\tH
-fastly
 fclose
-fclose@GLIBC_2.1
 fcntl
-fcntl@GLIBC_2.0
-feature_LEDColors
-feature_actionset
-feature_activator
-feature_gamepad
-feature_gyro
-feature_keboard
-feature_modeshift
-feature_mouse
-feature_mouseregion
-feature_none
-feature_radialmenu
-feature_touchmenu
+fdatasync
+fdopen
 featured_app_tagid
+feof
+ferror
 fflush
-fflush@GLIBC_2.0
-fgcolor
+fgets
 field
-fieldName
 file
-file_url
 filename
-fileop
+fileno
 files
-filesize
-filesize64
-filesystem
-filetx
-fileurl
-fillcolor
 filler
-filter
-filtered
-filterinfo
 filters
 find
-findactive
-findcount
 flock
-flock %s %s failed. errno = %d
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
-flock@GLIBC_2.0
 floor
-floor@GLIBC_2.0
 fmodf
-fmodf@GLIBC_2.0
 fnmatch
-fnmatch@GLIBC_2.2.3
 focus
 focused
 follower_count
-font
-fopen tmpfile failed\n
-fopen64@GLIBC_2.1
-fopen@GLIBC_2.1
+fopen
+fopen64
 force_direct_hwnd_popups
 force_php_generation
-forever
-format
 forum_topic_id
-forward
 forward_to_sysid
+fprintf
 fputc
-fputc@GLIBC_2.0
 fputs
-fputs@GLIBC_2.0
-frame_brGrip
-frame_captiongrip
-frame_close
-frame_maximize
-frame_menu
-frame_minimize
-frame_mintosystray
-frame_title
-framefocus
-framesettitlebarvisible
-frametitle
-franchise
 fread
-fread@GLIBC_2.0
-free@GLIBC_2.0
-freopen@GLIBC_2.0
-friends/
-friends/trackerui_%language%.txt
-friendslist
+free
+freeaddrinfo
+freopen
+frexp
+fscanf
 fseek
-fseek@GLIBC_2.0
 fseeko64
-fseeko64@GLIBC_2.1
 ftello64
-ftello64@GLIBC_2.1
-ftp:
 ftruncate
-ftruncate@GLIBC_2.0
-fullpath
-func
+ftruncate64
 function_handle
-futex robust_list not initialized by pthreads
-futex robust_list not pthreads-compatible
+futimes
 fwrite
-fwrite@GLIBC_2.0
 g_VProfManager
 g_VProfProfilesRunningCount
 g_VProfile
-g_VecLoadedModules
-g_pFriendsUI
 g_pMemAllocSteam
-g_pVGuiModuleLoader
-g_pVGuiModuleLoader->RunFrame()
 gameid
-gameoverlayrenderer.so
-gameoverlayui
-gamepad+mouse.vdf
-gamepad_flickstick.vdf
-gamepad_fps.vdf
-gamepad_joystick.vdf
-gamepad_platformer.vdf
-gameserver
-gamewebcallback
-gcore
 generate_cdkeys
 gesture
 gestures
+getaddrinfo
+getc
 getcwd
-getcwd@GLIBC_2.0
 getenv
-getenv@GLIBC_2.0
 getmntent
-getmntent@GLIBC_2.0
 getpid
-getpid@GLIBC_2.0
 getpwuid
-getpwuid@GLIBC_2.0
+getsockname
+gettext
 getuid
-getuid@GLIBC_2.0
-global constructors keyed to 
-global destructors keyed to 
-google
+getwc
+gmtime
 google.protobuf"G\n
-google.protobuf.
 google.protobuf.Any
-google.protobuf.BoolValue
-google.protobuf.BytesValue
-google.protobuf.DescriptorProto.name
-google.protobuf.DescriptorProto.reserved_name
-google.protobuf.DoubleValue
-google.protobuf.Duration
-google.protobuf.Empty
-google.protobuf.EnumDescriptorProto.name
-google.protobuf.EnumDescriptorProto.reserved_name
-google.protobuf.EnumOptions
-google.protobuf.EnumValueDescriptorProto.name
-google.protobuf.EnumValueOptions
-google.protobuf.ExtensionRangeOptions
-google.protobuf.FieldDescriptorProto.default_value
-google.protobuf.FieldDescriptorProto.extendee
-google.protobuf.FieldDescriptorProto.json_name
-google.protobuf.FieldDescriptorProto.name
-google.protobuf.FieldDescriptorProto.type_name
-google.protobuf.FieldMask
-google.protobuf.FieldOptions
-google.protobuf.FieldOptions.boxed_type
-google.protobuf.FileDescriptorProto.dependency
-google.protobuf.FileDescriptorProto.name
-google.protobuf.FileDescriptorProto.package
-google.protobuf.FileDescriptorProto.syntax
-google.protobuf.FileOptions
-google.protobuf.FileOptions.additional_includes
-google.protobuf.FileOptions.csharp_namespace
-google.protobuf.FileOptions.go_package
-google.protobuf.FileOptions.java_outer_classname
-google.protobuf.FileOptions.java_package
-google.protobuf.FileOptions.objc_class_prefix
-google.protobuf.FileOptions.php_class_prefix
-google.protobuf.FileOptions.php_metadata_namespace
-google.protobuf.FileOptions.php_namespace
-google.protobuf.FileOptions.ruby_package
-google.protobuf.FileOptions.swift_prefix
-google.protobuf.FloatValue
-google.protobuf.GeneratedCodeInfo.Annotation.source_file
-google.protobuf.Int32Value
-google.protobuf.Int64Value
-google.protobuf.ListValue
-google.protobuf.MessageOptions
-google.protobuf.MethodDescriptorProto.input_type
-google.protobuf.MethodDescriptorProto.name
-google.protobuf.MethodDescriptorProto.output_type
-google.protobuf.MethodOptions
-google.protobuf.OneofDescriptorProto.name
-google.protobuf.OneofOptions
-google.protobuf.ServiceDescriptorProto.name
-google.protobuf.ServiceOptions
-google.protobuf.SourceCodeInfo.Location.leading_comments
-google.protobuf.SourceCodeInfo.Location.leading_detached_comments
-google.protobuf.SourceCodeInfo.Location.trailing_comments
-google.protobuf.StringValue
-google.protobuf.Struct
-google.protobuf.Timestamp
-google.protobuf.UInt32Value
-google.protobuf.UInt64Value
-google.protobuf.UninterpretedOption.NamePart.name_part
-google.protobuf.UninterpretedOption.aggregate_value
-google.protobuf.UninterpretedOption.identifier_value
-google.protobuf.Value
-google.protobuf.bridge.MessageSet
-google/protobuf/arena.cc
-google/protobuf/arenastring.cc
-google/protobuf/descriptor.cc
-google/protobuf/descriptor.pb.cc
-google/protobuf/descriptor.proto
-google/protobuf/descriptor_database.cc
-google/protobuf/dynamic_message.cc
-google/protobuf/extension_set.cc
-google/protobuf/extension_set_heavy.cc
-google/protobuf/generated_message_reflection.cc
-google/protobuf/generated_message_util.cc
-google/protobuf/io/coded_stream.cc
-google/protobuf/io/tokenizer.cc
-google/protobuf/io/zero_copy_stream.cc
-google/protobuf/io/zero_copy_stream_impl.cc
-google/protobuf/io/zero_copy_stream_impl_lite.cc
-google/protobuf/map_field.cc
-google/protobuf/message.cc
-google/protobuf/message_lite.cc
-google/protobuf/parse_context.cc
-google/protobuf/reflection_ops.cc
-google/protobuf/repeated_field.cc
-google/protobuf/stubs/common.cc
-google/protobuf/stubs/int128.cc
-google/protobuf/stubs/stringpiece.cc
-google/protobuf/stubs/stringprintf.cc
-google/protobuf/stubs/strutil.cc
-google/protobuf/stubs/substitute.cc
-google/protobuf/text_format.cc
-google/protobuf/unknown_field_set.cc
-google/protobuf/wire_format.cc
-google/protobuf/wire_format_lite.cc
-google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-google::protobuf::FieldDescriptorProto_Type_IsValid(value)
-google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
-google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
-google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
-google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
-google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
-google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
-google::protobuf::uint64 google::protobuf::UnknownField::varint() const
-google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 gpu_compositing
-gradientEnd
-gradientStart
-gradientVertical
 graph
-graphics/chk_menu_item
-graphics/html_lock
-graphics/html_lock_broken
-graphics/loop_
-graphics/rampDown_
-graphics/rampDown_4
-group details changed
 group name must start with a non-digit
-group was created
-groups_list
-groups_tab
-guard variable for 
-guest
-guestpass
-guide
-half
 handle
-handleValue
-hardware
 has_adult_content
 has_adult_content_sex
 has_adult_content_violence
@@ -5837,82 +2263,35 @@ headers
 headline
 height
 hidden
-hidden alias for 
-highwinds
-hintText
-horizontal-align
 host
-hour
-hover
-href=
-html-findbar
-htmlframelesspopupchild
 htmlmessages.proto
-htmlpopupchild
-http:
-http://
-httpclient
 httponly
-https:
-https://
-httpserver
 hwnd
-i < length_
-iDEAL
-iNewReadIndex != 3
-iPhoneOS
 icon
 iconv
-iconv@GLIBC_2.1
 iconv_close
-iconv_close@GLIBC_2.1
 iconv_open
-iconv_open@GLIBC_2.1
 idempotency_level
 identifier_value
-image-height-only
-image-width-only
-imageAlignment
-imageSelected
-imagecolor
-imaginary 
-import "$0";\n
-import public "$0";\n
-import weak "$0";\n
 inconsistent NEWLINE options
 index
 infind
-infinity
-info.m_pReplacementString == 0
 initial_height
-inputData
-inspectelement
-install
-int google::protobuf::CalculateBase64EscapedLen(int, bool)
 int pcrecpp::NewlineMode(int)
 int pcrecpp::RE::GlobalReplace(const pcrecpp::StringPiece&, std::string*) const
 int pcrecpp::RE::NumberOfCapturingGroups() const
-interaction.ie
-interiorspacing
-internal error in map key sorting
 internal error: code overflow
 internal error: overran compiling workspace
 internal error: previously-checked referenced subpattern not found
 internal error: unexpected repeat
 internal error: unknown opcode in find_fixedlength()
-internode
 invalid UTF-16 string
 invalid UTF-32 string
 invalid UTF-8 string
 invalid condition (?(0)
 invalid escape sequence in character class
 invalid range in character class
-inventory
-inventoryservicepricesheet
-inventoryvalvegcpricesheet
-invited user
-ios32
-ios64
+ioctl
 ip"R\n
 ip_addr"
 ip_v6
@@ -5922,38 +2301,17 @@ is_from_external_source
 is_save
 is_visible_in_steam_china
 isalnum
-isalnum@GLIBC_2.0
-isevcert
-ispageload
-isredirect
+isalpha
 isspace
-isspace@GLIBC_2.0
 iswcntrl
-iswcntrl@GLIBC_2.0
 iswspace
-iswspace@GLIBC_2.0
-item%d
-itemID
-itemIndex
-itemid
-items
-ixaustralia
-jastel
-java Class for 
-java resource 
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
-joined the group
-joinlobby
-json
-json_name = "
 jsondata
 jstype
-jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
-justify
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
 k_BluetoothDeviceType_Headset
@@ -6216,486 +2574,116 @@ k_SystemAudioPortType_Unknown
 k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
-k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 keyCode
-keyboardinputenabled
-keywordsstudios.com
-kicked from chat
-kicked off the group
 kill
-kill@GLIBC_2.0
-kingsoftcloud
 label
-labelText
-labeltext
 language
-languages_tab
-last_directory
 last_update_steamid
-layout_tab
 lazy
-lchown@GLIBC_2.0
+lchown
 ld-linux.so.2
 leading_comments
 leading_detached_comments
-left the group
-leftGrip
-leftPanel
-leftText
-len > 0 || HasError()
-len >= input_len
-length_ >= n
-level3
-libaudio.so
 libavif.so.16
 libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
 librt.so.1
-libsteam.so
 libtier0_s.so
 libvstdlib_s.so
-like
-lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
-lineStartIndex >= _utext
+link
 link_url
-linux
-linux22
-linux24
-linux26
-linux310
-linux316
-linux318
-linux32
-linux35
-linux36
-linux3x
-linux41
-linux414
-linux419
-linux44
-linux49
-linux4x
-linux510
-linux54
-linux5x
-linux64
-linux6x
-linux7x
 list
-llnw
-locale::facet::_S_create_c_locale name not valid
-localization
+localeconv
 localization_path
 localized_string
 location
-log_files_always_flush
-logon
-long double
+longjmp
 lookbehind assertion is not fixed length
-lowRange < highRange
 lower
 lseek
 lseek64
-lseek64@GLIBC_2.2
-lseek@GLIBC_2.0
-lumen
-m_ActiveAnimations
-m_AllChildren
-m_AnimationMaps
-m_AnimationMaps[ iAnimationMap ].map->entries
-m_ColumnsData
-m_ColumnsData[ iColumn ].m_strCustomStyle
-m_Contents
-m_CurrentColumns
-m_CustomURLHandlers
-m_DataItems
-m_DataItems[ iData ]
-m_DirWatcherClient
-m_DragData
-m_DragPanels
-m_Elements
-m_ExpandStateQueue
-m_FormatStream
-m_FormatStream[i].textStreamIndex > cullPos
-m_Frames
-m_GameID.IsSteamApp()
-m_Images
-m_LineBreaks
-m_List
-m_Memory
-m_MenuItems
-m_MenuItems.IsValidIndex( itemID )
-m_MenuItems.IsValidIndex(itemID)
-m_MessageMaps
-m_MessageMaps[ iMessageMap ].map->entries
-m_NodeList
-m_NodeList.IsValidIndex( endItem )
-m_NodeList.IsValidIndex(itemIndex)
-m_Pages
-m_PanelAnimationMapPool
-m_PanelMessageMapPool
-m_PerLineEllipses
-m_PostedMessages
-m_RangeList
-m_Samples
-m_SelectedItems
-m_SeparatorPanels
-m_SeparatorPanels.Count() == 0
-m_Separators
-m_Sequences
-m_Sequences[ iSequence ].cmdList
-m_SortedItems
-m_TextStream
-m_TotalElements != InvalidIndex()
-m_Tree
-m_UndoTextStream
-m_VecURLLabels
-m_VisibleItems
-m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
-m_VisibleItems.IsValidIndex( iItem )
-m_VisibleSortedItems
-m_bCheckable
-m_bSorted
-m_bitsMigratedBuckets
-m_configOverride
-m_dictRegions
-m_dictStyles
-m_dictURLs
-m_dictURLs[i].m_sURL
-m_dwReadAheadBufferBegin <= m_dwReadAheadBufferEnd
-m_errorIndex>=0
-m_fnCompletionCallback
-m_iHTMLTextureID
-m_iRefs > 0 && m_iRefs < 0x1000000
-m_iRefs >= 0 && m_iRefs < 0x0ffffff
-m_jumpHandler
-m_list
-m_listChangedFiles
-m_mapAPICalls
-m_mapCharToWidth
-m_mapFileTimes
-m_mapFileWatchData
-m_mapFileWatchData.Key( i )
-m_mapGroupsVisible
-m_memNodes
-m_nAllocationCount >= 0
-m_nLockedIdx == -1
-m_nLockedIdx >= 0
-m_nSuppressDialogVariablesMessages >= 1
-m_p == NULL
-m_pBuildGroup
-m_pChildren
-m_pDialogVariables
-m_pDragDrop
-m_pDragDrop->m_DragData.Count()
-m_pDragDrop->m_bDragging
-m_pEditMenu
-m_pExpandImage
-m_pFontWidthCache
-m_pFriendButtons
-m_pImageList
-m_pImagePanel
-m_pKV
-m_pMutex->Wait() failed in ShMemStream::PutInternal\n
-m_pObj == NULL
-m_pOverlaySurface
-m_pParent == this
-m_pParent->IsDraggableTab()
-m_pRootNode == NULL
-m_pStream->BWaitForDataToGet()
-m_pTextImage
-m_pTooltips
-m_pTreeView->IsLabelEditingAllowed()
-m_pTreeView->m_pFilter
-m_pUserData
-m_pVecStringValue
-m_pVecUlValue
-m_pkv
-m_pkvCommand
-m_pkvData
-m_pkvDialogVariables
-m_pkvSettings
-m_pkvVars
-m_pthreadWatcher
-m_sColorName
-m_sConfigName
-m_sCurrentURL
-m_sDragURL
-m_sGradientEnd
-m_sGradientStart
-m_sHeadlineText
-m_sImageName
-m_sLastSearchString
-m_sLayoutFile
-m_sMenuFile
-m_sParserWarning
-m_sPendingPostData
-m_sPendingURLLoad
-m_sText
-m_sTextSetting
-m_strConvertedDefaultValue
-m_strDirectory
-m_strResourceName
-m_strWatchPath
-m_unused
-m_vecAllWGAuthedURLs
-m_vecAllWGAuthedURLs[i]
-m_vecCallbacks
-m_vecCallbacks.Count() == 0
-m_vecCallbacks.Count() == 0 || !callback
-m_vecHCursor
-m_vecHashBuckets
-m_vecJumpWChars
-m_vecLayoutCmds
-m_vecLayoutCmds[i].m_vecControls
-m_vecMenuButtons
-m_vecRegisteredWriters
-m_vecSections
-m_vecSections.IsValidIndex(iSection)
-m_vecSections[i].m_sName
-m_vecSortedContents
-m_vecStyleChangedCallbacks
-m_vecVisibleItemsYPos
-machine
-macos
-macos1010
-macos1011
-macos1012
-macos1013
-macos1014
-macos1015
-macos1016
-macos1017
-macos1018
-macos1019
-macos1020
-macos104
-macos105
-macos1058
-macos106
-macos1063
-macos1064_slgu
-macos1067
-macos1067_unused
-macos106_unused1
-macos106_unused2
-macos106_unused3
-macos107
-macos108
-macos109
-macos11
-macos11.1
-macos12
-macos13
-macos14
-macos15
-made clan invite only and private
-made group private
-made group public
-mailto:
-main.cpp::MessagePump()
 malformed \P or \p sequence
 malformed number or name after (?(
-malloc@GLIBC_2.0
+malloc
 manage_pricing
 manage_signing
-map keys are not unique
-map<$0, $1>
-map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
-matchend >= matchstart
-matches >= 0
-matchstart >= start
-maxHeight
-maxWidth
-maxWidth >= width
-maxchars
-maxheight
-maximizebuttonvisible
-maxwidth
 mbrtowc
-mbrtowc@GLIBC_2.0
 mbsnrtowcs
-mbsnrtowcs@GLIBC_2.0
 mbsrtowcs
-mbsrtowcs@GLIBC_2.0
+mbtowc
 media
+memchr
 memcmp
-memcmp@GLIBC_2.0
-menubar
-menuname
+memcpy
+memmove
+memset
 message
 message_set_wire_format
 method
-metrics
-mileweb
-minHeight
-minWidth
-minWidth <= width
-minheight
-minute
-minwidth
 missing )
 missing ) after comment
 missing opening brace after \o
 missing terminating ] for character class
 misspelled_word
-mkdir@GLIBC_2.0
-mkfifo@GLIBC_2.0
-mkstemp errno %d\n
+mkdir
+mkfifo
+mkstemp
+mktime
 mmap
-mmap@GLIBC_2.0
-mobile
-mobilechat
-modal
-modified
-modified64
-modifiers
-moduleIndex
+mmap64
+modf
+mold 1.10.1 (compatible with GNU ld)
 monitor_bottom
-month
-mopay
-mount@GLIBC_2.0
-mouseinputenabled
-mp4-single
+mount
 msgpool_hard_limit
 msgpool_soft_limit
+msync
 multiple_raster_threads
 munmap
-munmap@GLIBC_2.0
-music
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-nGrowSize >= 0
-nIndex < ( unsigned int )m_list.Count()
-nMinCapacity <= k_nMaxStringSize
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nNumChars >= 0
-nPreSplit > 0 && nPreSplit + nPostSplit == nCount
-nSize != 0
-nSize < (128*1024)
-nSize <= buffer.SizeAllocated()
-nSize > 0
-nSize >= 0
 nTargetFrameRate
 name
 name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
 native_dropdowns
 negative_int_value
-network
-networkmgr
-new 
-new[]
-nexon_dota2
-ngaa
-no associated editable control
-no control selected
 no error
-no layout script for this panel
-no selected control
-no style configured
 no_standard_descriptor_accessor
 non-hex character in \x{} (closing brace missing?)
 non-octal character in \o{} (closing brace missing?)
-non-transaction clone for 
-non-virtual thunk to 
-nonsegmentedvideo
-north
-north-east
-north-west
-northeast
-northwest
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-not in
 nothing to repeat
-notificationtoasts
 notificaton_token
-nullptr output boolean given.
-num > 0
 number
 number after (?C is > 255
 number is too big
 number too big in {} quantifier
 numbers out of order in {} quantifier
-oauthclient
 objc_class_prefix
 object_properties
 octal value is greater than \377 in 8-bit non-UTF-8 mode
-offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-offset >= -m_Put && offset <= INT_MAX-m_Put
-offset >= 0
-oldtall
-oldwide
 only_allow_trusted_popups
 open
-open64@GLIBC_2.2
-open_external
-open_external/
-opendir@GLIBC_2.0
-openexternalforpid/
+open64
+opendir
 opengl
-opening file for edit %s\n
-openurl
-openurlforpid
-openvroverlay
-openxr
 operand of unlimited repeat could match the empty string
-operator
-operator 
-operator"" 
-option json_name is not allowed on extension fields.
-optional
 options
-oracle
-original
 original_ip_address
-osvr
-othervr
-output specified is nullptr
-outputData
 override_height
 override_width
 owning_browser_handle
-pBlob
-pBuffer->TellPut() == 0
-pChild
-pConv && pConv->GetDelimiterLength() > 0
-pDefaultValue
-pFmt
-pKeyValuesTextParser
-pLineEnd >= pLineStart
-pName
-pPool->m_SpaceUsed < 0xFFFF
-pScheme
-pWatcher != NULL
 package
-package $0;\n\n
 packed
-page->m_pToolWindow == this
 page_url
-paintbackground
 pairs
-panel != NULL
-panel_list
-param
-parameters
-parent
-parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
-parent_list
 parent_popup_index
-parental
 parentheses are too deeply nested
 parentheses are too deeply nested (stack check)
 parentheses nested too deeply
-parse
-parsing
-parsing_failed
-paste
 path
 patterns
 payload
-pch[cub - 1] != '\0' && pch[cub] == '\0'
+pclose
 pcre_callout
 pcre_compile
 pcre_compile2
@@ -6704,11 +2692,9 @@ pcre_exec
 pcre_free
 pcre_fullinfo
 pcre_malloc
-pcre_retval == 0
 pcre_stack_free
 pcre_stack_guard
 pcre_stack_malloc
-pcrecpp.cc
 pcrecpp::Arg::parse_char(char const*, int, void*)
 pcrecpp::Arg::parse_double(char const*, int, void*)
 pcrecpp::Arg::parse_float(char const*, int, void*)
@@ -6769,162 +2755,76 @@ pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
 pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
 pcrecpp::RE::no_arg
 pcrecpp::RE::~RE()
-perfectworld
-permissions changed
 phone
 php_class_prefix
 php_generic_services
 php_metadata_namespace
 php_output_always_number
-pinned
 platform_linux
 platform_windows
-please implement MergeFrom for your type.
-plugin
-policies
-popconfig
+poll
+popen
 positive_int_value
 posix_fadvise
-posix_fadvise@GLIBC_2.2
 post
 postData
 postcode
-postdata
 posterid
 posttime
 powf
-powf@GLIBC_2.0
-preloadonly
-prepend
-prerelease
-preserveAspectRatio
-previous
+pread64
 print
 priority_score
-progress
 promise_handle
-promoted to moderator
-promoted to officer
-promoted to owner
-propertypage
-propertysheet
-proportional_float
-proportional_int
-proto2
-proto3
 proto3_optional
-ps3os
-pstrNew + nNewLength == pstrDestination + 1
-pszArg0 && *pszArg0
-pt-br
+pthread_create
+pthread_detach
 pthread_mutex_lock
-pthread_mutex_lock@GLIBC_2.0
 pthread_mutex_unlock
-pthread_mutex_unlock@GLIBC_2.0
 pthread_once
-pthread_once@GLIBC_2.0
 pthread_self
-pthread_self@GLIBC_2.0
-public/steamui_%language%.txt
 public_dependency
 publish
 publisher_group_id
 punct
-purchase
-pure virtual method called\n
+putc
 putwc
-putwc@GLIBC_2.2
-pw_csgo
-pw_dota2
-pwrd.com
-pwrd_telecom
-pwrd_unicom
+pwrite64
 py_generic_services
 qsort
-qsort@GLIBC_2.0
-quantil
-queueAsList
-queueAsList[ iData ]
 queue_position
-qwest
-qwilt
-rFilePatterns
-rackspace
 range out of order in character class
 raw_draw
+read
 readdir64
-readdir64@GLIBC_2.2
+readlink
 realloc
-realloc@GLIBC_2.0
 realm
 realpath
-realpath@GLIBC_2.3
 rects
-recursion_budget_ < recursion_limit_
 recursive call could loop indefinitely
-reference temporary #
+recvfrom
+recvmsg
 reference to non-existent subpattern
 referenced_appids
 referrer
-regions
 regular expression is too large
-reinterpret_cast
-reject
-relative
-relative_mouse.vdf
-reliance
-reload
-rename@GLIBC_2.0
-renew
-repeated
+remove
+rename
 repeated subpattern is too long
 repeating a DEFINE group is not allowed
-requested to join a private group
 requesting_url
 reservation_country_code
 reservation_state
 reserved_range
-resizeNumBits >= 0
-resolve
-resource/FileOpenDialog.res
-resource/SteamScheme.res
-resource/csgolauncher_%language%.txt
-resource/icon_clear_field
-resource/icon_file
-resource/icon_folder
-resource/icon_folder_selected
-resource/icon_folderup
-resource/icon_newfolder
-resource/layout/%s.layout
-resource/layout/%s_%s.layout
-resource/layout/htmlfindbar.layout
-resource/layout/htmlpopup.layout
-resource/layout/ingamefpsbanner.layout
-resource/layout/layoutdebugdialog.layout
-resource/layout/layoutdebugdialog_details.layout
-resource/layout/pagedragframe.layout
-resource/overlay_%language%.txt
-resource/platform_%language%.txt
-resource/styles/gameoverlay.styles
-resource/vgui_%language%.txt
-resource/webkit.css
 result
 results
-retn
 reverse
-rgFilters
 rgba
-rightGrip
-rightText
-rightarrow
-rmdir@GLIBC_2.0
-root
+rmdir
 round
-round@GLIBC_2.1
 roundf
-roundf@GLIBC_2.1
 routes
-rowheight
 rtime32_end_time
 rtime32_last_modified
 rtime32_start_time
@@ -6932,438 +2832,170 @@ rtime32_visibility_end
 rtime32_visibility_start
 rtime_estimated_notification
 rtime_mod_reviewed
-runevent
-rungame
-s_bAllowStaticSymbolTable
-s_pFileSystemInterface
 samesite
 scale
-scaleImage
-scaling
-scandir64@GLIBC_2.2
-scandir@GLIBC_2.0
-scheme
-screenx
-screeny
+scandir
+scandir64
+sched_yield
 script
-scriptname
 scroll
 scrollx
 scrolly
-sdk32
 searchbuttontext
-second
-section
 secure
-sel->IsLabelEditingAllowed()
-selection_class
-selection_name
 selection_text
-selectionlabel
+sendfile64
+sendmsg
+sendto
 seq_num
-serialize
-serializing
-series
 server_address
 server_password
 server_streaming
 service
-service $0 {\n
 session_disposition
-set to see debug vgiui2 messages
+setlocale
 setmntent
-setmntent@GLIBC_2.0
 setting UTF is disabled by the application
-sfixed32
-sfixed64
-sha_header_mismatch
-shaderserver
+setvbuf
 shared_memory_handle
 shared_memory_size
-shellcmd
 shm_open
-shm_open@GLIBC_2.2
 shm_unlink
-shm_unlink@GLIBC_2.2
-shortcut
-shortname
 show_broadcast
-showbar
-showhotkey
-showticks
 signal
-signal@GLIBC_2.0
-singleapp
-sint32
-sint64
-size too big: 
-size_t to int conversion
-sizeable
-sizeof 
-sizeof...
-sm_bShuttingDown
-sm_cRef > 0
-smtp
-solrconfig
-sort_column
-sort_column_asc
-sort_column_secondary
-sort_column_secondary_asc
+socket
 source_code_info
-south
-south-east
-south-west
-southeast
-southwest
 space
 span
 spare error
+sprintf
 sqrtf
-sqrtf@GLIBC_2.0
-srvping
 sscanf
-sscanf@GLIBC_2.0
-stackLevel >= 0 && stackLevel < m_errorIndex
-stackpath
 start
-startIndex < m_TextStream.Count()
-startItem >= 0
-startup
 state
-statfs64@GLIBC_2.1
-statfs@GLIBC_2.0
-static_cast
-staticvideo
-statvfs64: ret %d errno %d\n
-statvfs64@GLIBC_2.1
-statvfs@GLIBC_2.1
-std::allocator
-std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
-std::bad_exception
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
-std::iostream
-std::istream
-std::ostream
-std::string
+statfs
+statfs64
+statvfs
+statvfs64
 stddev_sum_frame_ms
 stderr
-stderr@GLIBC_2.0
 stdin
-stdin@GLIBC_2.0
-stdio
 stdout
-stdout@GLIBC_2.0
-steam:
-steam://
 steam_beta_name
-steam_dev.cfg
-steambeta
-steambeta://
-steamchina://
-steamchinabeta://
-steamclient
-steamclient.so
-steamcmd
-steamconsole.so
-steamhdl
 steamid
-steamlink://
-steamloopback.host
 steammessages_base.proto
 steammessages_base.proto*
-steampipe
-steampipepeering
-steamui.so
-steamworks_drm
-stop
-stopanimation
-stopevent
-strFileTypeName
-strInitialFile
-strTitle
 strcasecmp
-strcasecmp@GLIBC_2.0
 strcasestr
-strcasestr@GLIBC_2.1
 strchr
-strchr@GLIBC_2.0
 strcmp
-strcmp@GLIBC_2.0
 strcpy
-strcpy@GLIBC_2.0
 strdup
-strdup@GLIBC_2.0
-stream 
-streaming
-streaming_steamdesktop.vdf
 strerror
-strerror@GLIBC_2.0
 strftime
-strftime@GLIBC_2.0
-string literal
-strings::Substitute format string invalid: asked for "$
 strlen
-strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-strlen@GLIBC_2.0
 strncasecmp
-strncasecmp@GLIBC_2.0
-strncmp@GLIBC_2.0
-strncpy@GLIBC_2.0
+strncmp
+strncpy
 strpbrk
-strpbrk@GLIBC_2.0
+strptime
 strrchr
-strrchr@GLIBC_2.0
 strstr
-strstr@GLIBC_2.0
 strtod
-strtod@GLIBC_2.0
 strtof
-strtof@GLIBC_2.0
 strtol
-strtol@GLIBC_2.0
 strtold_l
-strtold_l@GLIBC_2.3
 strtoll
-strtoll@GLIBC_2.0
 strtoq
-strtoq@GLIBC_2.0
 strtoul
-strtoul@GLIBC_2.0
 strtoull
-strtoull@GLIBC_2.0
 strtouq
-strtouq@GLIBC_2.0
-style_flags
-style_list
-styleflags
-styles_tab
-subFocus
 subpattern name expected
 subpattern name is too long (maximum 32 characters)
-subtabposition
-subtype mismatch
 success
-support changed ownership
-support cleared content
 support for \P, \p, and \X has not been compiled
-support locked group
-support unlocked group
 supported_languages
-svcm
-symlink@GLIBC_2.0
+symlink
 syntax
-syntax = "$0";\n\n
 syntax error in subpattern name (missing terminator)
 syscall
-syscall@GLIBC_2.0
 sysid
-sysreqs
-tabMenuMenu
-tabPosition
-tabname
-tabs
+system
 tagids_curated
 tagids_filtered
 tags
 tall
-tall > 0
 target
 target_job_name
-taskus.com
-teliasonera
-telus
-template parameter object for 
-tencent
-terminate called after throwing an instance of '
-terminate called recursively\n
-terminate called without an active exception\n
-test
 text
-text format contains deprecated field "
-textAlignment
-textHidden
-textalignment
-textfile
-textureid
-the actual field type (for enums T should be the generated enum 
-the global scope
-the join request was approved by a mod
-the join request was denied by a mod
-thirdparty
 this version of PCRE is compiled without UTF support
 this version of PCRE is not compiled with Unicode property support
-threads
-throw 
-thumbwidth
 ticket
+time
 timestamp_added
 timestamp_updated
-tinet
 title
-tlGrip
-toggledevtools
 token_id
-tolower@GLIBC_2.0
+tolower
 too many forward references
 too many named subpatterns (maximum 10000)
 tool
-toolpanelgroup
-tooltip
-tooltip_headline
-tooltip_label
-tooltipanchor
-tooltipdelay
-tooltiptext
-topGrip
 total_queue_size
-towerattack
-trGrip
 trailing_comments
+transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 transport_error
 true
 trusted_creator
-tvos64
 two named subpatterns have the same name
 type
-type or int32).
-type() == TYPE_FIXED32
-type() == TYPE_FIXED64
-type() == TYPE_GROUP
-type() == TYPE_LENGTH_DELIMITED
-type() == TYPE_VARINT
 type.googleapis.com/
 type.googleprod.com/
-typeinfo fn for 
-typeinfo for 
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
-uint32
-uint64
-un-banned from chat
-unSize < 128 * 1024 * 1024
-unable to find control '%s'\n
-unexpected_size
 unfiltered_link_url
 ungetc
-ungetc@GLIBC_2.0
 ungetwc
-ungetwc@GLIBC_2.2
 unichar
-unicode
-unimplemented
 uninterpreted_option
 unknown
 unknown POSIX class name
 unknown option bit(s) set
 unknown property name after \P or \p
-unlink@GLIBC_2.0
+unlink
 unlisted
 unmatched parentheses
 unrecognized character after (? or (?-
 unrecognized character after (?<
 unrecognized character after (?P
 unrecognized character follows \
-unsigned
-unsigned __int128
-unsigned char
-unsigned int
-unsigned long
-unsigned long long
-unsigned short
-unsupported flags 0x%x passed to CFileReader::BOpenFile
-uparrow
 upper
-url 
-url/
 urls
 us_state
 user_css
-utime@GLIBC_2.0
-utimes@GLIBC_2.0
+usleep
+utime
+utimes
 value
-valve
-valvesoftware.com
-variable
-vars
-vec[0] >= 0
-vec[1] >= 0
-vector::_M_default_append
-vector::_M_range_insert
-vector::_M_realloc_insert
-vector::reserve
-vertical-align
-vgui editor - "%s"
-vgui layout debugger
-vgui::
-vgui::AppRootPanel
-vgui::BuildGroup
-vgui::CPanelAnimationDictionary
-vgui::CPanelMessageMapDictionary
-vgui::CheckButton
-vgui::DragDrop_t
-vgui::EditablePanel
-vgui::Frame
-vgui::HFont
-vgui::HTML
-vgui::Label
-vgui::ListPanel
-vgui::ListPanelColumnHeader
-vgui::ListPanelItem
-vgui::Menu
-vgui::MenuBar
-vgui::MenuItem
-vgui::Panel
-vgui::PropertyPage
-vgui::PropertySheet
-vgui::RichText
-vgui::RunFrame()
-vgui::Slider
-vgui::TextEntry
-vgui::TextImage
-vgui::TreeNode
-vgui::TreeView
-vgui::UpdateAnimations()
-vgui::surface()->PaintTraverseEx()
-vgui::surface()->SolveTraverse()
-videomanager
 view_error_data
 view_financials
 view_marketing_traffic
-viewfriendsgame
-viewsource
-virtualmenus
 visible
-vmc.com
-void
-void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
-void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
-void google::protobuf::StringPiece::remove_prefix(google::protobuf::stringpiece_ssize_type)
 void google::protobuf::internal::byteswap<1>(void*)
 void google::protobuf::internal::byteswap<4>(void*)
 void google::protobuf::internal::byteswap<8>(void*)
-void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
-vpanel
 vr_overlay_key
-vsnprintf@GLIBC_2.0
+vsnprintf
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -7373,104 +3005,38 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 vulkan
-wasd.vdf
-wchar_t
 wcrtomb
-wcrtomb@GLIBC_2.0
 wcscasecmp
-wcscasecmp@GLIBC_2.1
 wcschr
-wcschr@GLIBC_2.0
 wcscmp
-wcscmp@GLIBC_2.0
 wcscpy
-wcscpy@GLIBC_2.0
 wcslen
-wcslen@GLIBC_2.0
 wcsncasecmp
-wcsncasecmp@GLIBC_2.1
 wcsnrtombs
-wcsnrtombs@GLIBC_2.0
 wcstol
-wcstol@GLIBC_2.0
 wctob
-wctob@GLIBC_2.0
 weak
 weak_dependency
-web links changed
-web:checkout
-web:community
-web:dev
-web:help
-web:internalstats
-web:ops
-web:partner
-web:stats
-web:steamtv
-web:store
-web:support
 webgl
 webgl2
 webgpu
-webm-segmented
 webnn
 webui_auth_key
-week
 wg_token
-wheelpct
 wide
-wide > 0
 width
-win10
-win11
-win200
-win2003
-win2008
-win2012
-win2012R2
-win2016
-win2019
-win2022
-win311
-win32
-win64
-win7
-win8
-win8.1
-win95
-win98
-winME
-winNT
-winVista
-winXP
-windows
-with a type that does not implement MergeFrom. This is unsafe; 
 wmemchr
-wmemchr@GLIBC_2.0
+wmemcmp
 wmemcpy
-wmemcpy@GLIBC_2.0
 wmemmove
-wmemmove@GLIBC_2.0
 wmemset
-wmemset@GLIBC_2.0
 word
-wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
-wordStartIndex >= _utext
-wrap
-wrong submessage type
-www.
+write
+writev
 x_local
 xdigit
 xhotspot
-xpos
 y_local
-year
 yhotspot
-ypos
 zoom
-zpos
-{default arg#
-{lambda(
-{parm#
-{unnamed type#
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{

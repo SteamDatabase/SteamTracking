@@ -3400,7 +3400,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Налаштування запису",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Налаштування Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Налаштування трансляції",
-    "GamepadOverlay_GameRecording_GoToRecording": "Переглянути фоновий запис",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Переглянути фоновий запис",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Акордне сполучення кнопок для початку/зупинки запису в грі:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Акордне сполучення кнопок для створення кліпу в грі:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Акордне сполучення кнопок для додавання мітки на часовій шкалі %1$s:",

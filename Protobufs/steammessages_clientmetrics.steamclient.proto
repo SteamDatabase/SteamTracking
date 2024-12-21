@@ -200,6 +200,15 @@ message CClientMetrics_ReportClientArgs_Notification {
 	optional int32 gr_mode = 10;
 }
 
+message CClientMetrics_ReportLinuxStats_Notification {
+	optional int32 glibc_version_major = 1;
+	optional int32 glibc_version_minor = 2;
+	optional int32 account_type = 3;
+	optional int32 launcher_type = 4;
+	optional int32 game_server_appid = 5;
+	optional string process_name = 6;
+}
+
 message CClientMetrics_ClipShare_Notification {
 	optional uint32 eresult = 1 [default = 2];
 	optional .EClipShareMethod share_method = 2 [default = k_EClipShareMethod_Chat];
@@ -242,6 +251,7 @@ service ClientMetrics {
 	rpc ClientCloudAppSyncStats (.CClientMetrics_CloudAppSyncStats_Notification) returns (.NoResponse);
 	rpc ClientDownloadResponseCodeCounts (.CClientMetrics_ContentDownloadResponse_Counts_Notification) returns (.NoResponse);
 	rpc ReportClientArgs (.CClientMetrics_ReportClientArgs_Notification) returns (.NoResponse);
+	rpc ReportLinuxStats (.CClientMetrics_ReportLinuxStats_Notification) returns (.NoResponse);
 	rpc ReportClipShare (.CClientMetrics_ClipShare_Notification) returns (.NoResponse);
 	rpc ReportClipRange (.CClientMetrics_ClipRange_Notification) returns (.NoResponse);
 	rpc ReportEndGameRecording (.CClientMetrics_EndGameRecording_Notification) returns (.NoResponse);

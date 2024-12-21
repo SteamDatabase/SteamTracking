@@ -3398,7 +3398,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Inspelningsinställningar",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Play-inställningar",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Sändningsinställningar",
-    "GamepadOverlay_GameRecording_GoToRecording": "Visa bakgrundsinspelning",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Visa bakgrundsinspelning",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Genvägstangent som startar/stoppar inspelningen i spelet:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Genvägstangent som skapar ett klipp när man är inne i spelet:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Genvägstangent som lägger till en tidslinjemarkör %1$s:",

@@ -3400,7 +3400,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "録画設定",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Playの設定",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "ブロードキャスト設定",
-    "GamepadOverlay_GameRecording_GoToRecording": "バックグラウンド録画を表示",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "バックグラウンド録画を表示",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "ゲーム中に録画を開始／停止するショートカットコード：",
     "GamepadOverlay_GameRecording_ClipExplainer": "ゲーム中にクリップを作成するためのショートカットコード：",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "タイムラインマーカー%1$sをドロップするショートカットコード：",

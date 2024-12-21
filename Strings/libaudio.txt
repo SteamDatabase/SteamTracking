@@ -1,48 +1,3 @@
-  what():  
- [clone 
- __vector(
- const
- noexcept
- restrict
- throw
- transaction_safe
- volatile
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-!s_bInRunFrame
-%s/.steam/%s
-%s/.steam/steam
-%s: __pos (which is %zu) > this->size() (which is %zu)
-( CMilesAudioOutputStream * ) m_vecAudioOutputStreams[i]
-( CMilesAudioSound * ) m_vecAudioSounds[i]
-(%zu) Descend: %s, (%s), %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-(anonymous namespace)
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
--0123456789
-.cpl
-.mp3
-/data/src/common/audio/audiocontroller.cpp
-/data/src/common/audio/audiosink_pulse.cpp
-/data/src/common/audio/milesaudiodevice.cpp
-/data/src/common/audio/milesaudiooutputstream.cpp
-/data/src/common/audio/milesaudiosound.cpp
-/data/src/common/audio/mileswrapper.cpp
-/data/src/public/tier0/tslist.h
-/data/src/public/tier1/interface.h
-/data/src/public/tier1/utlmemory.h
-/data/src/public/tier1/utlrbtree.h
-/data/src/public/tier1/utlstring.h
-/data/src/public/tier1/utlsymbol.h
-/data/src/public/tier1/utlvector.h
-/data/src/tier1/fileio.cpp
-/data/src/tier1/interface.cpp
-/data/src/tier1/utlbuffer.cpp
-/data/src/tier1/utlmemory.cpp
-/data/src/tier1/utlstring.cpp
-/data/src/tier1/utlsymbol.cpp
-1.0.0
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPvi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIP11IAudioSoundE
@@ -115,152 +70,35 @@
 23CMilesAudioOutputStream
 7CUtlMapI10CUtlSymbolPvi8CDefLessE
 9IValidate
-?Ramp Time
-@nChannels == 1 || nChannels == 2
-AIL_allocate_sample_handle
-AIL_close_digital_driver
-AIL_digital_latency
-AIL_enumerate_filters
-AIL_file_read_info
-AIL_file_size_info
-AIL_find_filter
-AIL_get_preference
-AIL_get_timer_highest_delay
-AIL_init_sample
-AIL_last_error
-AIL_load_sample_buffer
-AIL_mem_free_lock
-AIL_minimum_sample_buffer_size
-AIL_open_generic_digital_driver
-AIL_output_oal
-AIL_platform_property
-AIL_register_EOS_callback
-AIL_release_sample_handle
-AIL_resume_sample
-AIL_sample_buffer_available
-AIL_sample_buffer_info
-AIL_sample_loop_count
-AIL_sample_mixed_ms
-AIL_sample_ms_position
-AIL_sample_stage_property
-AIL_sample_status
-AIL_sample_user_data
-AIL_sample_volume_pan
-AIL_serve
-AIL_set_file_callbacks
-AIL_set_named_sample_file
-AIL_set_preference
-AIL_set_redist_directory
-AIL_set_sample_address
-AIL_set_sample_buffer_count
-AIL_set_sample_file
-AIL_set_sample_loop_count
-AIL_set_sample_playback_rate
-AIL_set_sample_position
-AIL_set_sample_processor
-AIL_set_sample_user_data
-AIL_set_sample_volume_levels
-AIL_set_sample_volume_pan
-AIL_shutdown
-AIL_start_sample
-AIL_startup
-AIL_stop_sample
-AKST
-ASCII
-ASCII//TRANSLIT
-April
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-Assertion failed: length > k_cchMaxString
-Attempted to set the volume without the service running
 AudioSinkList
-August
-Breaking '%s' in '%s'\n
-CCopyableUtlVector()  - copycons
-CPathString
-CUtlString::SetValue
-CUtlString::VFormat
-CUtlSymbol
-CUtlSymbolTable
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*)
 CValidator::ClaimMemory(void const*)
 CValidator::IsClaimed(void const*) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
-Capture Stream
 CreateInterface
 CreateMilesMusicAudioDevice
 CreateMilesSoundAudioDevice
 CreateMilesVoiceAudioDevice
-DBG_PATHMATCH
-December
-Element( i )
-Failed to load "%s"
-Failed to load optional module %s\n
-Failed to move pulse sink input
-Failed to move pulse source output
-Failed to move pulse source output by index
-Failed to open digital audio driver %s\n
-Failed to parse pulseaudio server version
-Failed to reissue format change: error restoring read formats
-Failed to request client info by index
-Failed to request pulse card info
-Failed to request pulse device read formats\n
-Failed to request pulse device restore save formats
-Failed to request pulse server info
-Failed to request pulse sink info
-Failed to request pulse sink input info
-Failed to request pulse source info
-Failed to request pulse source output info\n
-Failed to request server info by index
-Failed to request sink info by index
-Failed to request sink input info by index
-Failed to request source info by index
-Failed to request source output info by index
-Failed to set pulse card profile by index
-Failed to set pulse default sink
-Failed to set pulse default source
-Failed to set pulse sink mute state
-Failed to set pulse sink port by index
-Failed to set pulse sink port by name\n
-Failed to set pulse sink volume by index
-Failed to set pulse source mute state
-Failed to set pulse source port by index
-Failed to set pulse source volume
-Failed to set sink input by index\n
-Failed to set source output by index\n
-Failed to subscribe pulse context
-Failed to subscribe to pulse device restore ext\n
-February
+Error
 FreeAudioDevice
-Friday
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
+GLIBC_2.11
 GLIBC_2.2
+GLIBC_2.2.3
 GLIBC_2.2.4
 GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
+GLIBC_2.7
 GLIBC_2.8
-HOME
-IVALIDATE001
-IsValidIndex( elem )
-JArray
-January
-July
-June
-LOCK_EX
-LOCK_SH
-Lowered '%s' -> '%s'\n
-MUSIC
-March
-Matched '%s' -> '%s'\n
-MilesLoader
-Monday
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
@@ -270,30 +108,15 @@ N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt6locale5facetE
 NSt8ios_base7failureE
-November
-October
 PULSE_0
+Plat_CommandLineParamExists
 Plat_FloatTime
+Plat_GetExecutablePathUTF8
+Plat_IsChromeOS
 Plat_IsSteamOS3
-PulseCardInfoCallback
-PulseClientCallback
-PulseContextStateCallback
-PulseEventCallback
-PulseExtDeviceRestoreSubscribeCallback
-PulseFormatsCallback
-PulseServerInfoCallback
-PulseSinkCallback
-PulseSinkInputCallback
-PulseSourceCallback
-PulseSourceOutputCallback
-RIB_find_files_provider
-Ramp To
-Received pulse event with bad context: %s\n
-Received pulse event with no info: %s\n
-Received pulse event with no userdata: %s\n
-SOUND
-Saturday
-September
+Plat_OutputDebugString
+Plat_VirtualAccessFlags
+Plat_localtime
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -362,129 +185,124 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
-Steam
 SteamRealPath
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::GetThreadProc()
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::IsAlive() const
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Terminate(int)
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
-Sunday
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-TLS init function for 
-TLS wrapper function for 
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+StringAfterPrefix
+StringAfterPrefixCaseSensitive
 TSListBase_Init
 TSListBase_Pop
+TSListBase_UnsafePeek
 TSQueueBase_Init
 TSQueueBase_Pop
 TSQueueBase_Push
 TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
+ThreadGetCurrentProcessId
 ThreadInterlockedDecrement
+ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
-Thursday
-Tuesday
-UTF-8
-Unhandled pulse event facility:%d\n
-Unmatched %s\n
-VOICE
+ThreadSleep
 VProfInternalEnterScopeCurrentThread
-VTT for 
+V_AppendSlash
+V_ComposeFileName
+V_ExtractFileExtension
+V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
+V_FormatAndAppend
 V_IsAbsolutePath
+V_MakeAbsolutePath
 V_RemoveDotSlashes
-V_RemoveDotSlashes failed for "%s".
+V_StrTrim
+V_StrTrimAsciiSpaceChar
+V_StripExtension
+V_StripFilename
+V_UTF8ToUTF32
 V_UnqualifiedFileName
+V_atoi
+V_atoui64
+V_binarytohex
+V_hextobinary
+V_isvalidhex
 V_snprintf
+V_strcat
 V_stristr(char const*, char const*)
 V_strncat
 V_strncat_length
+V_strnchr
+V_strncmp
 V_strncpy
 V_strnicmp
-Volume Ramp Filter
-WORKAROUND_GdbSymbolLoadHook
-Wednesday
-[abi:
-\t(%zu) comparing %s with %s\n
-_Accum
-_Fract
-_GLOBAL_
+V_strnistr
+V_vsnprintf
+V_vsnprintfRet
+WeakRandomUint32
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( elem, unNodeSize, pMemBase )
-_IsValidIndex( y, unNodeSize, pMemBase )
-_Sat 
 ___tls_get_addr
-___tls_get_addr@GLIBC_2.3
-__bss_start
+__ctype_b_loc
 __ctype_get_mb_cur_max
-__ctype_get_mb_cur_max@GLIBC_2.0
+__ctype_tolower_loc
 __cxa_atexit
-__cxa_atexit@GLIBC_2.1.3
 __cxa_finalize
-__cxa_finalize@GLIBC_2.1.3
 __duplocale
-__duplocale@GLIBC_2.1
 __errno_location
-__errno_location@GLIBC_2.0
-__float128
 __fprintf_chk
-__fprintf_chk@GLIBC_2.3.4
+__fread_chk
 __freelocale
-__freelocale@GLIBC_2.1
 __fxstat64
-__fxstat64@GLIBC_2.2
 __gmon_start__
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
 __iswctype_l
-__iswctype_l@GLIBC_2.1
-__lxstat64@GLIBC_2.2
-__lxstat@GLIBC_2.0
+__lxstat
+__lxstat64
+__memcpy_chk
 __newlocale
-__newlocale@GLIBC_2.1
 __nl_langinfo_l
-__nl_langinfo_l@GLIBC_2.2
+__printf_chk
 __pthread_key_create
-__pthread_key_create@GLIBC_2.0
 __realpath_chk
-__realpath_chk@GLIBC_2.4
 __snprintf_chk
-__snprintf_chk@GLIBC_2.3.4
 __sprintf_chk
-__sprintf_chk@GLIBC_2.3.4
 __stack_chk_fail
-__stack_chk_fail@GLIBC_2.4
 __strcoll_l
-__strcoll_l@GLIBC_2.1
 __strcpy_chk
-__strcpy_chk@GLIBC_2.3.4
 __strftime_l
-__strftime_l@GLIBC_2.3
 __strtod_l
-__strtod_l@GLIBC_2.1
 __strtof_l
-__strtof_l@GLIBC_2.1
 __strxfrm_l
-__strxfrm_l@GLIBC_2.1
 __towlower_l
-__towlower_l@GLIBC_2.1
 __towupper_l
-__towupper_l@GLIBC_2.1
 __uselocale
-__uselocale@GLIBC_2.3
 __vasprintf_chk
-__vasprintf_chk@GLIBC_2.8
+__vsnprintf_chk
 __wcscoll_l
-__wcscoll_l@GLIBC_2.1
 __wcsftime_l
-__wcsftime_l@GLIBC_2.3
 __wcsxfrm_l
-__wcsxfrm_l@GLIBC_2.1
 __wctype_l
-__wctype_l@GLIBC_2.1
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -524,13 +342,11 @@ __wrap_unlink
 __wrap_utime
 __wrap_utimes
 __xmknod
-__xmknod@GLIBC_2.0
-__xstat64@GLIBC_2.2
-__xstat@GLIBC_2.0
-_edata
-_end
+__xstat
+__xstat64
 _fini
 _init
+_strlwr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -538,441 +354,238 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 abort
-abort@GLIBC_2.0
-access@GLIBC_2.0
+access
 alcCloseDevice
 alcCreateContext
 alcDestroyContext
 alcMakeContextCurrent
 alcOpenDevice
 alcSuspendContext
-alignof 
-alnum
-alpha
-application.icon_name
-application.id
-application.name
-application.process.id
-application.version
-auto
-auto:
-basic_ios::clear
-basic_iostream
-basic_istream
-basic_ostream
-basic_string::_M_replace_aux
-basic_string::_S_construct null not valid
-basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::copy
-basic_string::erase
-basic_string::resize
-bin32
+alphasort64
 bind_textdomain_codeset
-bind_textdomain_codeset@GLIBC_2.2
-blank
-bool
-boolean
+bindtextdomain
 btowc
-btowc@GLIBC_2.0
-byte
-char16_t
-char32_t
-char8_t
-chdir@GLIBC_2.0
-chmod@GLIBC_2.0
-chown@GLIBC_2.1
+chdir
+chmod
+chown
+clock_gettime
+close
 closedir
-closedir@GLIBC_2.0
-cntrl
-complex 
-const_cast
-construction vtable for 
-count >= 0
-covariant return thunk to 
-decimal128
-decimal32
-decimal64
-decltype (
-decltype(auto)
-decltype(nullptr)
-delete 
-delete[] 
-device.description
 dgettext
-dgettext@GLIBC_2.0
 dl_iterate_phdr
-dl_iterate_phdr@GLIBC_2.2.4
 dlclose
-dlclose@GLIBC_2.0
 dlerror
-dlerror@GLIBC_2.0
-dlmopen %s failed: %s\n
-dlmopen@GLIBC_2.3.4
-dlopen@GLIBC_2.1
+dlmopen
+dlopen
 dlsym
-dlsym@GLIBC_2.0
-dynamic_cast
+endmntent
 faccessat
-faccessat@GLIBC_2.4
-failed to load miles library
-failed to set sink input mute
-failed to set sink input volume
-false
-false 
+fallocate64
+fclose
+fcntl
+fdatasync
+fdopen
+feof
 fflush
-fflush@GLIBC_2.0
-float
+fgets
+fileno
 flock
-flock %s %s failed. errno = %d
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
-flock@GLIBC_2.0
-fopen64@GLIBC_2.1
-fopen@GLIBC_2.1
+fnmatch
+fopen
+fopen64
 fputc
-fputc@GLIBC_2.0
 fputs
-fputs@GLIBC_2.0
 fread
-fread@GLIBC_2.0
-free@GLIBC_2.0
-freopen@GLIBC_2.0
+free
+freopen
+fscanf
+fseek
 fseeko64
-fseeko64@GLIBC_2.1
 ftello64
-ftello64@GLIBC_2.1
+ftruncate64
+futimes
 fwrite
-fwrite@GLIBC_2.0
 g_VProfProfilesRunningCount
-g_VecLoadedModules
 g_pMemAllocSteam
+getc
 getcwd
-getcwd@GLIBC_2.0
 getenv
-getenv@GLIBC_2.0
-global constructors keyed to 
-global destructors keyed to 
-graph
-guard variable for 
-half
-hdmi
-hidden alias for 
+getmntent
+gettext
+getwc
 iconv
-iconv@GLIBC_2.1
 iconv_close
-iconv_close@GLIBC_2.1
 iconv_open
-iconv_open@GLIBC_2.1
-imaginary 
-info.m_pReplacementString == 0
-java Class for 
-java resource 
-lchown@GLIBC_2.0
+ioctl
+isspace
+lchown
 ld-linux.so.2
 libc.so.6
 libdl.so.2
 libm.so.6
-libmiles.so
 libopenal.so.1
 libpthread.so.0
 libpulse.so.0
 librt.so.1
 libtier0_s.so
 libvstdlib_s.so
-locale::facet::_S_create_c_locale name not valid
-long double
-lower
+link
+localeconv
 lseek64
-lseek64@GLIBC_2.2
-m_Count == 0
-m_Elements
-m_Lookup
-m_Memory
-m_StringPools
-m_Tree
-m_mapSoundImages
-m_nBytesPerSample == 2
-m_nChannels == 1 || m_nChannels == 2
-m_nCount == 0
-m_nCount == 1
-m_nCount >= 0
-m_strFileName
-m_strUniqueName
-m_vecAudioDeviceListeners
-m_vecAudioOutputStreams
-m_vecAudioSounds
-m_vecDevices
 malloc
-malloc@GLIBC_2.0
 mbrtowc
-mbrtowc@GLIBC_2.0
 mbsnrtowcs
-mbsnrtowcs@GLIBC_2.0
 mbsrtowcs
-mbsrtowcs@GLIBC_2.0
+memchr
 memcmp
-memcmp@GLIBC_2.0
-mkdir@GLIBC_2.0
-mkfifo@GLIBC_2.0
-mount@GLIBC_2.0
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-nSuccess >= 0
-new 
-new[]
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-num > 0
-open64@GLIBC_2.2
-opendir@GLIBC_2.0
-operator
-operator 
-operator"" 
-org.valvesoftware.steam
-pNode && pNode->Next == QueueEnd()
-pPool->m_SpaceUsed < 0xFFFF
+memcpy
+memmove
+memset
+mkdir
+mkfifo
+mkstemp
+mmap64
+modf
+mold 1.10.1 (compatible with GNU ld)
+mount
+msync
+munmap
+open
+open64
+opendir
 pa_context_connect
-pa_context_connect@PULSE_0
 pa_context_errno
-pa_context_errno@PULSE_0
 pa_context_get_card_info_by_index
-pa_context_get_card_info_by_index@PULSE_0
 pa_context_get_card_info_list
-pa_context_get_card_info_list@PULSE_0
 pa_context_get_client_info
-pa_context_get_client_info@PULSE_0
 pa_context_get_server_info
-pa_context_get_server_info@PULSE_0
 pa_context_get_sink_info_by_index
-pa_context_get_sink_info_by_index@PULSE_0
 pa_context_get_sink_info_list
-pa_context_get_sink_info_list@PULSE_0
 pa_context_get_sink_input_info
-pa_context_get_sink_input_info@PULSE_0
 pa_context_get_sink_input_info_list
-pa_context_get_sink_input_info_list@PULSE_0
 pa_context_get_source_info_by_index
-pa_context_get_source_info_by_index@PULSE_0
 pa_context_get_source_info_list
-pa_context_get_source_info_list@PULSE_0
 pa_context_get_source_output_info
-pa_context_get_source_output_info@PULSE_0
 pa_context_get_source_output_info_list
-pa_context_get_source_output_info_list@PULSE_0
 pa_context_get_state
-pa_context_get_state@PULSE_0
 pa_context_move_sink_input_by_index
-pa_context_move_sink_input_by_index@PULSE_0
 pa_context_move_source_output_by_index
-pa_context_move_source_output_by_index@PULSE_0
 pa_context_new_with_proplist
-pa_context_new_with_proplist@PULSE_0
 pa_context_set_card_profile_by_index
-pa_context_set_card_profile_by_index@PULSE_0
 pa_context_set_default_sink
-pa_context_set_default_sink@PULSE_0
 pa_context_set_default_source
-pa_context_set_default_source@PULSE_0
 pa_context_set_sink_input_mute
-pa_context_set_sink_input_mute@PULSE_0
 pa_context_set_sink_input_volume
-pa_context_set_sink_input_volume@PULSE_0
 pa_context_set_sink_mute_by_index
-pa_context_set_sink_mute_by_index@PULSE_0
 pa_context_set_sink_port_by_index
-pa_context_set_sink_port_by_index@PULSE_0
 pa_context_set_sink_port_by_name
-pa_context_set_sink_port_by_name@PULSE_0
 pa_context_set_sink_volume_by_index
-pa_context_set_sink_volume_by_index@PULSE_0
 pa_context_set_source_mute_by_index
-pa_context_set_source_mute_by_index@PULSE_0
 pa_context_set_source_port_by_index
-pa_context_set_source_port_by_index@PULSE_0
 pa_context_set_source_volume_by_index
-pa_context_set_source_volume_by_index@PULSE_0
 pa_context_set_state_callback
-pa_context_set_state_callback@PULSE_0
 pa_context_set_subscribe_callback
-pa_context_set_subscribe_callback@PULSE_0
 pa_context_subscribe
-pa_context_subscribe@PULSE_0
 pa_context_unref
-pa_context_unref@PULSE_0
 pa_cvolume_equal
-pa_cvolume_equal@PULSE_0
 pa_cvolume_init
-pa_cvolume_init@PULSE_0
 pa_cvolume_set
-pa_cvolume_set@PULSE_0
 pa_ext_device_restore_read_formats
-pa_ext_device_restore_read_formats@PULSE_0
 pa_ext_device_restore_read_formats_all
-pa_ext_device_restore_read_formats_all@PULSE_0
 pa_ext_device_restore_save_formats
-pa_ext_device_restore_save_formats@PULSE_0
 pa_ext_device_restore_set_subscribe_cb
-pa_ext_device_restore_set_subscribe_cb@PULSE_0
 pa_ext_device_restore_subscribe
-pa_ext_device_restore_subscribe@PULSE_0
 pa_format_info_new
-pa_format_info_new@PULSE_0
 pa_operation_unref
-pa_operation_unref@PULSE_0
 pa_proplist_free
-pa_proplist_free@PULSE_0
 pa_proplist_gets
-pa_proplist_gets@PULSE_0
 pa_proplist_new
-pa_proplist_new@PULSE_0
 pa_proplist_sets
-pa_proplist_sets@PULSE_0
 pa_threaded_mainloop_free
-pa_threaded_mainloop_free@PULSE_0
 pa_threaded_mainloop_get_api
-pa_threaded_mainloop_get_api@PULSE_0
 pa_threaded_mainloop_in_thread
-pa_threaded_mainloop_in_thread@PULSE_0
 pa_threaded_mainloop_lock
-pa_threaded_mainloop_lock@PULSE_0
 pa_threaded_mainloop_new
-pa_threaded_mainloop_new@PULSE_0
 pa_threaded_mainloop_start
-pa_threaded_mainloop_start@PULSE_0
 pa_threaded_mainloop_stop
-pa_threaded_mainloop_stop@PULSE_0
 pa_threaded_mainloop_unlock
-pa_threaded_mainloop_unlock@PULSE_0
+pclose
+poll
+popen
 posix_fadvise
-posix_fadvise@GLIBC_2.2
-print
+pread64
 pthread_mutex_lock
-pthread_mutex_lock@GLIBC_2.0
 pthread_mutex_unlock
-pthread_mutex_unlock@GLIBC_2.0
 pthread_once
-pthread_once@GLIBC_2.0
-punct
-pure virtual method called\n
+putc
 putwc
-putwc@GLIBC_2.2
+pwrite64
+read
 readdir64
-readdir64@GLIBC_2.2
+readlink
 realloc
-realloc@GLIBC_2.0
 realpath
-realpath@GLIBC_2.3
-reference temporary #
-reinterpret_cast
-rename@GLIBC_2.0
-rmdir@GLIBC_2.0
-s_bAllowStaticSymbolTable
-s_pAudioController
-s_pSymbolTable
-scandir64@GLIBC_2.2
-scandir@GLIBC_2.0
-sizeof 
-sizeof...
-space
+rename
+rmdir
+scandir
+scandir64
+sched_yield
+sendfile64
+setlocale
+setmntent
+setvbuf
 sscanf
-sscanf@GLIBC_2.0
-statfs64@GLIBC_2.1
-statfs@GLIBC_2.0
-static_cast
-statvfs64@GLIBC_2.1
-statvfs@GLIBC_2.1
-std::allocator
-std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
-std::bad_exception
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
-std::iostream
-std::istream
-std::ostream
-std::string
+statfs
+statfs64
+statvfs
+statvfs64
 stderr
-stderr@GLIBC_2.0
 stdin
-stdin@GLIBC_2.0
 stdout
-stdout@GLIBC_2.0
 strcasecmp
-strcasecmp@GLIBC_2.0
 strcasestr
-strcasestr@GLIBC_2.1
+strchr
 strcmp
-strcmp@GLIBC_2.0
 strdup
-strdup@GLIBC_2.0
-string literal
+strerror
+strftime
 strlen
-strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-strlen@GLIBC_2.0
 strncasecmp
-strncasecmp@GLIBC_2.0
 strncmp
-strncmp@GLIBC_2.0
-strncpy@GLIBC_2.0
+strncpy
 strpbrk
-strpbrk@GLIBC_2.0
+strrchr
 strstr
-strstr@GLIBC_2.0
+strtod
 strtol
-strtol@GLIBC_2.0
 strtold_l
-strtold_l@GLIBC_2.3
-symlink@GLIBC_2.0
+strtoll
+strtoul
+symlink
 syscall
-syscall@GLIBC_2.0
-template parameter object for 
-terminate called after throwing an instance of '
-terminate called recursively\n
-terminate called without an active exception\n
-this
-throw 
+system
+time
 tolower
-tolower@GLIBC_2.0
+transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
-true
-typeinfo fn for 
-typeinfo for 
+typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
 ungetc
-ungetc@GLIBC_2.0
 ungetwc
-ungetwc@GLIBC_2.2
-unlink@GLIBC_2.0
-unsigned
-unsigned __int128
-unsigned char
-unsigned int
-unsigned long
-unsigned long long
-unsigned short
-upper
-utime@GLIBC_2.0
-utimes@GLIBC_2.0
-vector::_M_realloc_insert
-void
+unlink
+usleep
+utime
+utimes
 vsnprintf
-vsnprintf@GLIBC_2.0
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -981,28 +594,15 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
-wchar_t
 wcrtomb
-wcrtomb@GLIBC_2.0
 wcscmp
-wcscmp@GLIBC_2.0
 wcslen
-wcslen@GLIBC_2.0
 wcsnrtombs
-wcsnrtombs@GLIBC_2.0
 wctob
-wctob@GLIBC_2.0
 wmemchr
-wmemchr@GLIBC_2.0
+wmemcmp
 wmemcpy
-wmemcpy@GLIBC_2.0
 wmemmove
-wmemmove@GLIBC_2.0
 wmemset
-wmemset@GLIBC_2.0
-xdigit
-zD333333
-{default arg#
-{lambda(
-{parm#
-{unnamed type#
+write
+writev

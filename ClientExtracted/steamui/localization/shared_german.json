@@ -3399,7 +3399,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Aufnahmeeinstellungen",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote-Play-Einstellungen",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Übertragungseinstellungen",
-    "GamepadOverlay_GameRecording_GoToRecording": "Hintergrundaufnahme anzeigen",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Hintergrundaufnahme anzeigen",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Tastenkombination, um die Aufnahme während des Spiels zu starten/beenden:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Tastenkombination zur Erstellung eines Clips während des Spielens:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Tastenkombination, um eine Zeitleistenmarkierung hinzuzufügen: %1$s",

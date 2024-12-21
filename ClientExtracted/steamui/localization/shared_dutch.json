@@ -3400,7 +3400,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Opname-instellingen",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Play-instellingen",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Uitzendingsinstellingen",
-    "GamepadOverlay_GameRecording_GoToRecording": "Achtergrondopname weergeven",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Achtergrondopname weergeven",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Sneltoets om het opnemen te starten/stoppen tijdens het spelen:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Sneltoets om een clip te maken tijdens het spelen:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Sneltoets om een tijdlijnmarkering %1$s toe te voegen:",

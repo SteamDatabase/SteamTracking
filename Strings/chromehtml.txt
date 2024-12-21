@@ -1,234 +1,14 @@
-  Actual   : 
-  Comment started here.
-  Expected : 
-  what():  
  !"#$%&'()*+,-./0123
- = { <proto text format> }". To set fields within it, use syntax like "
- BackUp() can only be called after Next().
- Can't back up over more bytes than were returned by the last call to Next().
- Outdent() without matching Indent().
- Parameter to BackUp() can't be negative.
- Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
- [clone 
- [default = $0
  \n\vinitial_top
- __vector(
- a protocol 
- args were given.  Full format string was: "
- arguments. 
- bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
- cannot be required.
- conflicts with an existing enum type.
- conflicts with an existing field.
- conflicts with an existing nested message type.
- conflicts with an existing oneof type.
- contains invalid 
- definition file imports the proto which defines the option.
- details: 
- exceeded maximum protobuf size of 2GB: 
  google/protobuf/descriptor.proto"1\n\rCMsgIPAddress
- has the same name as 
- if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
- is unused.
- message of type "
- noexcept
- not found
- of the Protocol Buffer runtime library, but the installed version is 
- of the Protocol Buffer runtime library, which is not compatible with the installed version (
- restrict
- stack frames not accounted for stack unwind.
- throw
- transaction_safe
- type does not match\n
- volatile
- was modified concurrently during serialization.
- with type 
-!"Collided with existing master response stream"
-!"Failed to connect to master html process"
-!"Failed to kill existing helper process"
-!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !\n\finitial_left
-!is_large()
-!m_ChromeIPCClient.BInitialized()
-!pszString || pszString[nChars] == '\0'
 " \n\rCMsgSetUIMode
-" because it is missing required fields: 
-" conflicts with field "
-" conflicts with the existing symbol "
-" contains null character.
-" for field "
-" for option "
-" has no field named "
-" has no value named "
-" has not been loaded.
-" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
-" is a message. To set the entire message, use syntax like "
-" is a repeated message. Repeated message options must be initialized using an aggregate value.
-" is already defined (as something other than a package) in file "
-" is already defined in "
-" is already defined in file "
-" is already defined.
-" is an atomic type, not a message.
-" is missing required fields: 
-" is not a field or extension of message "
-" is not a message type.
-" is not a proto3 enum, but is used in "
-" is not a type.
-" is not a valid identifier.
-" is not an enum type.
-" is not defined or is not an extension of "
-" is not defined.
-" is resolved to "
-" is resolved to "(
-" is specified along with field "
-" is specified multiple times.
-" must be unique within 
-" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
-" seems to be defined in "
-" stored in google.protobuf.Any has missing required fields
-" stored in google.protobuf.Any.
-" unknown. Ensure that your proto
-" uses the same enum value as "
-" was already set.
-" was listed twice.
-" was not found or had errors.
-" which is a proto3 message type.
-" which is not defined or is not an extension of "
-" which is.
-""3333
 "#\n\tCMsgClose
-"$0" does not declare $1 as an extension number.
 "'\n\rCMsgShowPopup
-") is not compatible with this reflection object (which is for type "
-") to start from the outermost scope.
-").  Note that the exact same class is required; not just the same descriptor.
-", another member of oneof "
-", but only 
-", field number 
-", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
-", which is not imported by "
-".  To use it here, please add the necessary import.
-". If this is intended, set 'option allow_alias = true;' to the enum definition.
-". This appears to be a value from a sibling type.
-". This is not 
-". Value: "
-"/*" inside block comment.  Block comments cannot be nested.
-"0x" must be followed by hex digits.
 "????'????????????????????????????????????????????????????\????
 "C\n\rCMsgAddHeader
-"DeleteMapValue"
-"GetMapData"
-"GetRawRepeatedField"
-"InsertOrLookupMapValue"
-"LookupMapValue"
-"MapBegin"
-"MapEnd"
-"MapSize"
-"MutableRawRepeatedField"
 "\n\farray_values
 "^\n\fOneofOptions
-"e" must be followed by exponent.
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
-$0  extend .$1 {\n
-$0  extensions $1 to $2;\n
-$0  reserved 
-$0 to max, 
-$0$1$2 $3 = $4
-$0enum $1 {\n
-$0message $1
-$0oneof $1 {
-$0option $1;\n
-$0rpc $1($4.$2) returns ($5.$3)
 $\n k_BluetoothDeviceType_Headphones
 $\n k_BluetoothDeviceType_OtherAudio
 $\n k_ColorGamutLabelSet_sRGB_Native
@@ -273,17 +53,6 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
-%lld
-%s.previous.txt
-%s/.steam/%s
-%s/.steam/steam
-%s: __pos (which is %zu) > this->size() (which is %zu)
-%s_avail
-%s_client
-%s_mem
-%s_mutex
-%s_server
-%s_written
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_EClanESportTournamentStreamEvent
@@ -319,9 +88,6 @@ $\n k_SystemAudioPortDirection_Input
 '\n#k_EProfileCustomizationTypeMyGuides
 '\n#k_EProvideDeckFeedbackPreference_No
 '\n\tmessageid
-(%zu) Descend: %s, (%s), %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (\n$k_EBroadcastPermissionFriendsAllowed
 (\n$k_EBroadcastPermissionFriendsApprove
 (\n$k_EBrowserFeatureStatus_EnabledForce
@@ -395,11 +161,6 @@ $\n k_SystemAudioPortDirection_Input
 (\v2\f.CMsgJSValue"
 (\v2\f.CMsgJSValue"g\n
 (\v2\f.CMsgJSValue"x\n
-(anonymous namespace)
-(cannot determine missing fields for lite message)
-(merge 
-)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
-).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )\n$k_EPersonaStateFlag_ClientTypeMobile
 )\n%k_EBanContentCheckResult_VeryUnlikely
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
@@ -438,7 +199,6 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_PublishedFileQueryType_RankedByTrend
 *\n\fjobid_source
 *\n\fjobid_target
-*m_pCurrentProtoBufMsg
 *|\n\fECPUGovernor
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
@@ -455,8 +215,6 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n\rReservedRange
 +\n\vmethod_type
-, but was 
-, not just within "
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
@@ -474,48 +232,6 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_PublishedFileQueryType_RankedByVotesUp
 ,\n\fvideo_decode
 ,\n\fvideo_encode
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
---device-scale-factor=1
---disable-accelerated-video-decode
---disable-backgrounding-occluded-windows
---disable-breakpad
---disable-ffmpeg-hevc
---disable-gpu
---disable-gpu-compositing
---disable-gpu-sandbox
---disable-gpu-watchdog
---disable-hang-monitor
---disable-quick-menu
---disable-seccomp-filter-sandbox
---disable-smooth-scrolling
---disable-winh264
---disablehighdpi
---enable-gpu-debugging
---enable-logging
---enable-sandbox-logging
---enable-smooth-scrolling
---force-device-scale-factor=1
---force-renderer-accessibility
---full-memory-crash-report
---gpu-launcher='%s'
---ignore-gpu-blocklist
---in-process-gpu
---log-file=%s
---no-sandbox
---password-store=basic
---proxy-bypass-list="localhost;127.0.0.1"
---proxy-server
---proxy-server="%s"
---remote-allow-origins=*
---remote-debugging-address=127.0.0.1
---remote-debugging-port=%s
---renderer-cmd-prefix='konsole -title renderer -e gdb --args'
---single-process
---use-angle=vulkan
---valve-enable-site-isolation
---valve-initial-threadpool-size=%d
--0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
@@ -527,117 +243,7 @@ $\n k_SystemAudioPortDirection_Input
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
--allowbrowserviewunderlay
--browser-offline
--buildid=%u
--cachedir=%s
--cef-allow-browser-underlay
--cef-delaypageload
--cef-disable-breakpad
--cef-disable-delaypageload
--cef-disable-gpu
--cef-disable-gpu-compositing
--cef-disable-gpu-sandbox
--cef-disable-hang-timeouts
--cef-disable-hevc
--cef-disable-js-logging
--cef-disable-occlusion
--cef-disable-renderer-restart
--cef-disable-safe-shutdown-workaround
--cef-disable-sandbox
--cef-disable-seccomp-sandbox
--cef-disable-site-isolation
--cef-disable-touch-focus-workaround
--cef-disable-xcomposite-workaround
--cef-enable-debugging
--cef-enable-fatal-dcheck
--cef-enable-gpu-debugging
--cef-enable-low-delay-live-stream
--cef-enable-vaapi
--cef-force-32bit
--cef-force-accessibility
--cef-force-browser-underlay
--cef-force-gpu
--cef-force-gpu-blocklist
--cef-force-hw-video-decode
--cef-force-occlusion
--cef-force-opaque-backgrounds
--cef-force-sandbox
--cef-full-memory-crash-report
--cef-in-process-gpu
--cef-log-sandbox
--cef-no-restart-on-ui-mode-change
--cef-single-process
--cef-use-execv
--cef-use-shell-exec
--cef-use-vulkan
--cef-verbose-js-logging
--cef-verbose-logging
--cef-verbose-modules
--chromeos
--clientui
--clientui=%s
--composer-mode=%d
--dev
--devtools-port
--disable_safe_shutdown_workaround
--disablejslogging
--disablerendererrestart
--disabletouchfocusworkaround
--enable-keyring
--fakeoffline
--force-opaque-background
--forcebrowserviewunderlay
--gamepadui
--html-perf-monitor
--inf
--lang=%s
--launcher=%d
--logdir=%s
--no-cef-sandbox
--no-dwrite
--no-restart-on-ui-mode-change
--nocrashdialog
--pid
--realm=China
--realm=Global
--startcount=%d
--steamdeck
--steamdeckdisplaynosizescale
--steamid=%llu
--steamos3
--steampath=%s
--steampid=%u
--steamuniverse=Beta
--steamuniverse=Dev
--steamuniverse=Internal
--steamuniverse=Public
--toggle-overlay-html-mode
--uimode=%d
--use_xcomposite_workaround
--verbosejslogging
-.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-. Difference of 
-...<truncated>...
 ../ubuntu12_64/steamwebhelper.sh
-./google/protobuf/arena_impl.h
-./google/protobuf/arenastring.h
-./google/protobuf/descriptor.pb.h
-./google/protobuf/dynamic_message.h
-./google/protobuf/extension_set.h
-./google/protobuf/extension_set_inl.h
-./google/protobuf/generated_message_reflection.h
-./google/protobuf/io/coded_stream.h
-./google/protobuf/map.h
-./google/protobuf/map_field.h
-./google/protobuf/message_lite.h
-./google/protobuf/metadata_lite.h
-./google/protobuf/parse_context.h
-./google/protobuf/reflection.h
-./google/protobuf/reflection_internal.h
-./google/protobuf/repeated_field.h
-./google/protobuf/stubs/stringpiece.h
-./google/protobuf/unknown_field_set.h
 .CClanEventUserNewsTuple"
 .CCookie"
 .CHTMLPageSecurityInfo"n\n
@@ -654,7 +260,6 @@ $\n k_SystemAudioPortDirection_Input
 .EBrowserGPUStatus
 .EJSRegisterMethodType"
 .EProtoClanEventType
-.PLACEHOLDER_VALUE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
@@ -664,9 +269,6 @@ $\n k_SystemAudioPortDirection_Input
 .\n*k_ESteamDeckCompatibilityCategory_Playable
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
-.cef-enable-remote-debugging
-.dummy
-.foo = value".
 .google.protobuf.EnumOptions
 .google.protobuf.FieldOptions
 .google.protobuf.FileOptions
@@ -675,7 +277,6 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.OneofOptions"
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
-.placeholder.proto
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
 /\n+k_ECommunityItemClass_MiniProfileBackground
@@ -683,29 +284,6 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_PublishedFileQueryType_RankedByTextSearch
-/data/src/common/callbacklist.h
-/data/src/common/clientdirectories.h
-/data/src/common/enum_names.cpp
-/data/src/common/environmentmanager.cpp
-/data/src/common/html/chrome_ipc_client.cpp
-/data/src/common/html/chrome_ipc_shared.cpp
-/data/src/common/html/chromewrapper.cpp
-/data/src/common/language.cpp
-/data/src/overlay/common/shmemstream.cpp
-/data/src/public/html/htmlprotobuf.cpp
-/data/src/public/tier0/tslist.h
-/data/src/public/tier1/utlmemory.h
-/data/src/public/tier1/utlrbtree.h
-/data/src/public/tier1/utlstring.h
-/data/src/public/tier1/utlvector.h
-/data/src/tier1/fileio.cpp
-/data/src/tier1/utlbuffer.cpp
-/data/src/tier1/utlmemory.cpp
-/data/src/tier1/utlstring.cpp
-/dev/null
-/tmp/steam_chrome_shmem_uid%d_spid%u
-/u%d-Shm_%x
-/u%d-ValveIPCSharedObj-Steam
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789abcdef
 0\n#k_EAsyncGameSessionUserStateUnknown
@@ -1046,7 +624,6 @@ $\n k_SystemAudioPortDirection_Input
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n\tenum_type
-8080
 8CMsgCopy
 8CMsgFind
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
@@ -1059,9 +636,6 @@ $\n k_SystemAudioPortDirection_Input
 9CMsgPaste
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
-: Tried to copy from a message with a different type. to: 
-: Tried to merge from a message with a different type.  to: 
-: failed to parse contents
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\v-2147483648
@@ -1073,313 +647,21 @@ $\n k_SystemAudioPortDirection_Input
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
-?basic_ios::clear
-A file with this name is already in the pool.
-A protocol message was rejected because it was too big (more than 
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
-ABORTED
-AKST
-ALREADY_EXISTS
-ASCII
-ASCII//TRANSLIT
 A\n\nannotation
-AddAllocatedMessage
-AddBool
-AddDouble
-AddEnum
-AddFloat
-AddInt32
-AddInt64
-AddMessage
-AddString
-AddUInt32
-AddUInt64
 AdditionalRoute
-Afrikaans
-Albanian
-Allow webhelper to create BrowserView underlays
-Already saw decimal point or exponent; can't have another one.
-Amharic
-April
-Armenian
-Asked to unlock memory for write.. but wasn't locked
-Assamese
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-Assertion failed: length > k_cchMaxString
-August
-AunHostPid != 0
-Azerbaijani
-BDirectRendererBrowser( eBrowserType )
-BOffScreenRendererBrowser( eBrowserType )
-BREAKPAD_DUMP_LOCATION
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
-BackUp() can only be called after a successful Next().
-Bad Access flag on shared mem create: %s: %u\n
-Bangla
-Basque
-Belarusian
-Boolean default must be true or false.
-Bosnian
-Breaking '%s' in '%s'\n
-BrowserReady: handle:%u
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
-CANCELLED
 CBilling_Address
 CCDDBAppDetailCommon
-CChromeIPCClient::PushCommand
-CChromeIPCClient::RunFrame
 CClanEventData
 CClanEventUserNewsTuple
 CClanMatchEventByRange
 CCommunity_ClanAnnouncementInfo
 CCookie
 CCuratorPreferences
-CHECK failed: !InRealOneof(field): 
-CHECK failed: !IsDefault(default_value): 
-CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1): 
-CHECK failed: !checkpoints_.empty(): 
-CHECK failed: !descriptor_: 
-CHECK failed: !ext->is_repeated: 
-CHECK failed: !extension->is_repeated: 
-CHECK failed: !failed_: 
-CHECK failed: !field->options().weak(): 
-CHECK failed: !fields_.empty(): 
-CHECK failed: !file->finished_building_: 
-CHECK failed: !file_: 
-CHECK failed: !had_error_: 
-CHECK failed: !is_closed_: 
-CHECK failed: !name_: 
-CHECK failed: !once_: 
-CHECK failed: !oneof_descriptor->is_synthetic(): 
-CHECK failed: !out.HadError(): 
-CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field): 
-CHECK failed: !tagged_ptr_.IsTagged(): 
-CHECK failed: !tree->empty(): 
-CHECK failed: !value || options_ != nullptr: 
-CHECK failed: !value || source_code_info_ != nullptr: 
-CHECK failed: (&from) != (this): 
-CHECK failed: (&from) != (to): 
-CHECK failed: (&other) != (this): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD): 
-CHECK failed: (*buffer) == (first_byte): 
-CHECK failed: (0) != (n): 
-CHECK failed: (0) <= (pos): 
-CHECK failed: (0) == (BufferSize()): 
-CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()): 
-CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()): 
-CHECK failed: (backup_bytes_) == (0): 
-CHECK failed: (bucket_index_ & 1) == (0u): 
-CHECK failed: (buffer[0]) >= (128): 
-CHECK failed: (buffer_size) >= (0): 
-CHECK failed: (buffer_used_) == (0): 
-CHECK failed: (buffer_used_) == (buffer_size_): 
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
-CHECK failed: (calc_escaped_size) == (escaped_len): 
-CHECK failed: (count) <= (buffer_used_): 
-CHECK failed: (count) <= (kMaxLength): 
-CHECK failed: (count) <= (last_returned_size_): 
-CHECK failed: (count) == (tree->size()): 
-CHECK failed: (count) >= (0): 
-CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (current_size_) > (0): 
-CHECK failed: (descriptor->field(field_count - 1)) == (end - 1): 
-CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()): 
-CHECK failed: (digits) < (100): 
-CHECK failed: (extension->is_packed) == (other_extension.is_packed): 
-CHECK failed: (extension->is_packed) == (packed): 
-CHECK failed: (extension->type) == (other_extension.type): 
-CHECK failed: (field->message_type()) == (desc): 
-CHECK failed: (field->options().ctype()) == (ctype): 
-CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES): 
-CHECK failed: (field_count()) == (2): 
-CHECK failed: (final_byte_count) < (target_byte_count): 
-CHECK failed: (first_byte & 0x80) == (0x80): 
-CHECK failed: (first_byte_or_zero) != (0): 
-CHECK failed: (first_byte_or_zero) == (buffer_[0]): 
-CHECK failed: (from.GetDescriptor()) == (descriptor): 
-CHECK failed: (has_bit_index) != (~0u): 
-CHECK failed: (index) < (current_size_): 
-CHECK failed: (index) >= (0): 
-CHECK failed: (internal::AlignUpTo8(n)) == (n): 
-CHECK failed: (it.m_) == (this): 
-CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
-CHECK failed: (last_returned_size_) > (0): 
-CHECK failed: (len) <= (dest_len): 
-CHECK failed: (len) >= (0): 
-CHECK failed: (limit_) >= (ptr_): 
-CHECK failed: (message1->GetReflection()) == (this): 
-CHECK failed: (message2->GetReflection()) == (this): 
-CHECK failed: (message_type) == (field->message_type()): 
-CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
-CHECK failed: (n & (n - 1)) == (0): 
-CHECK failed: (n) >= (0): 
-CHECK failed: (new_num_buckets) >= (kMinTableSize): 
-CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit): 
-CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
-CHECK failed: (out) == (begin + result->size()): 
-CHECK failed: (out) == (begin + result.size()): 
-CHECK failed: (overrun) <= (kSlopBytes): 
-CHECK failed: (pos) <= (x.length_): 
-CHECK failed: (recursion_budget_) < (recursion_limit_): 
-CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u): 
-CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)): 
-CHECK failed: (size) <= (6): 
-CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)): 
-CHECK failed: (size) > (0): 
-CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))): 
-CHECK failed: (static_cast<size_t>(count)) <= (target_->size()): 
-CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)): 
-CHECK failed: (table_[b]) == (table_[b ^ 1]): 
-CHECK failed: (target - output->data()) == (output->size()): 
-CHECK failed: (temp[0]) == ('1'): 
-CHECK failed: (temp[size - 1]) == ('5'): 
-CHECK failed: (to->GetDescriptor()) == (descriptor): 
-CHECK failed: (total_size_ - current_size_) >= (n): 
-CHECK failed: (total_size_) > (0): 
-CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
-CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
-CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
-CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
-CHECK failed: *ptr: 
-CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
-CHECK failed: GetArena() == NULL: 
-CHECK failed: GetArena() == nullptr: 
-CHECK failed: GetArena() == other->GetArena(): 
-CHECK failed: HasExtensionSet(): 
-CHECK failed: HasHasbits(): 
-CHECK failed: IsDefault(default_value): 
-CHECK failed: IsInitialized(): 
-CHECK failed: IsMapValid() && other.IsMapValid(): 
-CHECK failed: TableEntryIsNonEmptyList(b): 
-CHECK failed: TableEntryIsTree(b): 
-CHECK failed: a.type() == b.type(): 
-CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field: 
-CHECK failed: arena != nullptr: 
-CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
-CHECK failed: builder_: 
-CHECK failed: checkpoints_.empty(): 
-CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE: 
-CHECK failed: ctx.LastTag() != 1: 
-CHECK failed: cur_: 
-CHECK failed: desc_proto.has_name(): 
-CHECK failed: descriptor: 
-CHECK failed: dest: 
-CHECK failed: dynamic.get() != nullptr: 
-CHECK failed: end >= ptr: 
-CHECK failed: enum_type_->value_count(): 
-CHECK failed: errors == nullptr: 
-CHECK failed: extension != NULL: 
-CHECK failed: extension->is_repeated: 
-CHECK failed: fallback_database_ == nullptr: 
-CHECK failed: field != nullptr: 
-CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32): 
-CHECK failed: field->is_repeated() || (index == -1): 
-CHECK failed: field->is_repeated(): 
-CHECK failed: file != nullptr: 
-CHECK failed: file && file->pool_: 
-CHECK failed: file()->finished_building_ == true: 
-CHECK failed: file->pool_->lazily_build_dependencies_: 
-CHECK failed: file_->finished_building_: 
-CHECK failed: find(node->kv.first) == end(): 
-CHECK failed: finished_building_ == true: 
-CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_: 
-CHECK failed: has_default_value(): 
-CHECK failed: i >= 0: 
-CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr: 
-CHECK failed: is_prototype(): 
-CHECK failed: is_repeated: 
-CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes: 
-CHECK failed: limit_ > 0: 
-CHECK failed: limit_ > kSlopBytes: 
-CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_): 
-CHECK failed: limit_end_ == buffer_end_: 
-CHECK failed: m1->GetArena() != m2_arena: 
-CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr: 
-CHECK failed: message_arena != submessage_arena: 
-CHECK failed: mutex_ == nullptr: 
-CHECK failed: n <= size: 
-CHECK failed: n >= kMinTableSize: 
-CHECK failed: node_ != nullptr && m_ != nullptr: 
-CHECK failed: options_ != nullptr: 
-CHECK failed: options_descriptor: 
-CHECK failed: original_uninterpreted_options_field != nullptr: 
-CHECK failed: other->GetArena() != GetArena(): 
-CHECK failed: out_location != nullptr: 
-CHECK failed: output->message_info.prototype != nullptr: 
-CHECK failed: output: 
-CHECK failed: overrun != limit_: 
-CHECK failed: overrun < limit_: 
-CHECK failed: overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0 && overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0: 
-CHECK failed: owning_arena == nullptr: 
-CHECK failed: prototype != NULL: 
-CHECK failed: ptr < end_: 
-CHECK failed: ptr <= buffer_end_ + kSlopBytes: 
-CHECK failed: ptr <= end_ + kSlopBytes: 
-CHECK failed: reflection: 
-CHECK failed: result != nullptr: 
-CHECK failed: s != nullptr: 
-CHECK failed: s >= 0: 
-CHECK failed: schema_.HasHasbits(): 
-CHECK failed: size > 0: 
-CHECK failed: size > chunk_size: 
-CHECK failed: size_ == 0: 
-CHECK failed: size_ > kSlopBytes: 
-CHECK failed: source_code_info_ != nullptr: 
-CHECK failed: submessage->GetArena() == submessage_arena: 
-CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0: 
-CHECK failed: tagged_ptr_.UnsafeGet() != nullptr: 
-CHECK failed: target + size == res: 
-CHECK failed: target_ != NULL: 
-CHECK failed: this != other: 
-CHECK failed: this == other_mutator: 
-CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
-CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
-CHECK failed: uninterpreted_options_field != nullptr: 
-CHECK failed: value != nullptr: 
-CHECK failed: z.first != NULL: 
-CHTMLController::CIPCTaskPost Thread
-CHTMLController::CIPCTaskPost::Run
-CHTMLController::CIPCTaskPost::Run - Sleep 
-CHTMLController::HandleDeferredPaints - paint buffers handoff
-CHTMLController::RunFrame
-CHTMLController::RunFrame - Deferred paint
-CHTMLController::RunFrame - Dispatch commands
-CHTMLController::RunFrame - IPC Client
 CHTMLPageSecurityInfo
 CH\f1
 CLocalizationToken
@@ -1518,41 +800,8 @@ CMsgViewSource
 CMsgZoomToElementAtPosition
 CMsgZoomToFocusedElement
 CORD
-CPPTYPE_BOOL
-CPPTYPE_DOUBLE
-CPPTYPE_ENUM
-CPPTYPE_FLOAT
-CPPTYPE_INT32
-CPPTYPE_INT64
-CPPTYPE_STRING
-CPPTYPE_UINT32
-CPPTYPE_UINT64
 CPackageReservationStatus
-CPathString
-CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
-CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
-CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
-CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
-CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
-CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
-CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
-CProcessEnvironmentManager::InitFromDll trying to initialize twice
-CProcessEnvironmentManager::InitFromMain trying to initialize twice
-CProcessEnvironmentManager::setenv invalid index %d\n
-CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
-CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
-CSharedMemStream::Clear()
-CSharedMemStream::Get()
-CSharedMemStream::Put()
 CType
-CUIProtoBufMsg::BDeserialize
-CUIProtoBufMsg::SerializeCrossProc
-CUtlBuffer
-CUtlString::ReplaceInternal
-CUtlString::SetValue
-CUtlString::VFormat
-CUtlStringBuilder::Data::MoveToHeap
-CUtlStringBuilder::InternalPrepareBuffer
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*)
 CValidator::ClaimMemory(void const*)
@@ -1560,63 +809,14 @@ CValidator::IsClaimed(void const*) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 C\n#direct_rendering_display_compositor
-Call set methods to initialize MapKey.
-Caller should provide us with *buffer_ when buffer is non-empty
-Can't 
-Can't BackUp() after failed Next().
-Can't get here.
-Can't get here: failed to get default value as string
-Can't happen
-Can't print proto content: proto type 
-Can't reach
-Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
-Cannot copy json_name to a proto of a different size.
-Cannot get here
-Cannot skip field value, unexpected token: 
-Catalan
-Cherokee
-ChromeHTML_Controller_003
-ClearField
-Command stream from chrome is corrupt
-Command stream from chrome is corrupt, got larger than 128M individaul cmd!
 ContentDescriptor
 ContextCommand
-Could not create an instance of 
-Could not find type "
-Couldn't parse default value "
-CreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
 CreateInterface
-CreateResponse: id:%u handle:%u
 CreateSimpleProcess
-Croatian
-DATA_LOSS
-DBG_PATHMATCH
-DEADLINE_EXCEEDED
-DO NOT PARSE: fields may be stripped and missing.\n
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
-Dari
-DcheckIsFatal
-December
-Default value for an enum field must be an identifier.
-DefaultANGLEVulkan
 DescriptorProto
 DescriptorProtosH
-Destroying a held mutex\n
-Disable GPU accelerated compositing in browsers
-Disable GPU usage in CEF (force software rendering/compositing)
-Disable auto-restart of renderer process for existing browsers
-Disable early-out for known page loads
-Disable the glcomposer workaround applied to some video drivers
-Disable the usage of the safe browser shutdown workaround for Linux+NV
-Disable touch input browser focus workaround
-Disables hevc support
-Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
-Division or mod by zero: dividend.hi=
-Don't lookup extension types if they aren't present (1). 
-Don't lookup extension types if they aren't present (2). 
-Don't restart the renderer on UI mode changes
 DraggableRects
-Draws html perf data
 EACState
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
@@ -1641,8 +841,6 @@ EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
 EJSRegisterMethodType
-ELegacyEnvironmentVariable
-ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENewSteamAnnouncementState
 EPersonaStateFlag
 EProfileCustomizationType
@@ -1650,8 +848,6 @@ EProtoClanEventType
 EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
-ERROR
-EResult
 ESDCardFormatStage
 EScalingFilter
 ESessionDisposition
@@ -1672,374 +868,56 @@ ESystemAudioPortType
 ESystemDisplayCompatibilityMode
 ESystemFanControlMode
 ESystemServiceState
-EUniverse
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
-Element( i )
-Enable GPU debugging in Chromium, costs a glGetError() call after every command
-Enable VA-API video decoding on Linux
-Enable early-out for known page loads
-Enable sandbox logging in CEF
-End-of-file inside block comment.
-Entry
-Enum name 
-Enum type "
-Enum value "$0" is reserved multiple times.
-Enum value "$0" is reserved.
-Enum value "$0" uses reserved number $1.
-Enum value in map must define 0 as the first value.
 EnumDescriptorProto
 EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
-Enums must contain at least one value.
-Error %d getting shared memory size
-Error %d growing shared object manager file.
-Error %d locking shared memory file
-Error State on string being set.
-Error on Release(): Not the lock owner\n
-Error parsing text-format 
-Error reporting not implemented.
-Error while parsing option value for "
-Estonian
-Expanded map entry type 
-Expect a decimal number, got: 
-Expected "
-Expected %lld but got %lld!
-Expected double, got: 
-Expected eight hex digits up to 10ffff for \U escape sequence
-Expected four hex digits for \u escape sequence.
-Expected hex digits for escape sequence.
-Expected identifier, got: 
-Expected integer or identifier, got: 
-Expected integer, got: 
-Expected string, got: 
-Explicit default values are not allowed in proto3.
-Extension "
-Extension conflicts with extension already in database: extend 
-Extension factory's GetPrototype() returned NULL for extension: 
-Extension not found.
-Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
-Extension number $0 has already been used in "$1" by extension "$2".
-Extension numbers cannot be greater than $0.
-Extension numbers must be positive integers.
-Extension range $0 to $1 includes field "$2" ($3).
-Extension range $0 to $1 overlaps with already-defined range $2 to $3.
-Extension range $0 to $1 overlaps with reserved range $2 to $3.
-Extension range end number must be greater than start number.
-Extension ranges are not allowed in proto3.
+Error
 ExtensionRange
 ExtensionRangeOptions
-Extensions in proto3 are only allowed for defining options.
-Extensions of MessageSets must be optional messages.
-Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
-FAILED_PRECONDITION
-FATAL
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
-Failed creating file mapping %s\n
-Failed creating read event %s\n
-Failed creating view of file for %s\n
-Failed creating write event %s\n
-Failed to connect to master html process, created shared memory (spawn time %0.2f)
-Failed to take mutex in GetInternal()\n
-Failure pushing command to steamwebhelper.exe
-False
-FastHexToBuffer() wants non-negative integers, not 
-Fatal error: %s\n
-February
-Feel free to add support for more if you need it.
-Field "
-Field "$0" uses reserved number $1.
-Field = 
-Field does not match message type.
-Field is not a map field.
-Field is repeated; the method requires a singular field.
-Field is singular; the method requires a repeated field.
-Field name "$0" is reserved multiple times.
-Field name "$0" is reserved.
-Field number $0 has already been used in "$1" by field "$2".
-Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
-Field numbers cannot be greater than $0.
-Field numbers must be positive integers.
-Field with message or enum type missing type_name.
-Field with primitive type has type_name.
-Field: 
 FieldDescriptorProto
-FieldDescriptorProto.extendee not set for extension field.
-FieldDescriptorProto.extendee set for non-extension field.
-FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
-FieldDescriptorProto.oneof_index should not be set for extensions.
-FieldSize
-Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
-Fields of oneofs must themselves have label LABEL_OPTIONAL.
-Fields with proto3_optional set must be a member of a one-field oneof
-File already exists in database: 
-File appears to be in generated pool but wasn't registered: 
-File is already registered: 
-File not found in database (unexpected): 
-File recursively imports itself: 
 FileDescriptorProto
 FileDescriptorSet
-Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
-Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
-Filipino
 Filter
-First argument to Swap() (of type "
-First argument to SwapFields() (of type "
 FoCLcx
-Force enable CEF accessibility features
-Force enable GPU acceleration
-Force enable GPU blocklist
-Force enable HW accelerated video decoding
-Force support for BrowserView underlays
-Force the usage of opaque backgrounds for CEF
-Forced create but already created for SharedObjectEvent\n
-Forcing secure cookie flag as samesite=none
-Found invalid proto option data for: 
-Friday
 GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
+GLIBC_2.11
 GLIBC_2.2
+GLIBC_2.2.3
 GLIBC_2.2.4
 GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
+GLIBC_2.7
 GLIBC_2.8
-Galician
-GenerateCEFLogDir in unknown process
 GeneratedCodeInfo
-Georgian
-GetBool
 GetCPUInformation()
-GetCPUInformation().m_bSSE2 || IsARM()
-GetCPUInformation().m_bSSE3
-GetClientActualLauncherType
-GetDouble
-GetFloat
-GetInt32
-GetInt64
-GetMessage
 GetMiniDumpBuildID
 GetMiniDumpDirectory
 GetMiniDumpSteamID
-GetRawRepeatedField
-GetRepeatedBool
-GetRepeatedDouble
-GetRepeatedEnumValue
-GetRepeatedFloat
-GetRepeatedInt32
-GetRepeatedInt64
-GetRepeatedMessage
-GetRepeatedString
-GetRepeatedStringReference
-GetRepeatedUInt32
-GetRepeatedUInt64
-GetString
-GetStringReference
-GetUInt32
-GetUInt64
 Google.Protobuf.Reflection
-Groups are not supported in proto3 syntax.
-Gujarati
-HOME
-HTMLController Commands
-HTML_MSG_FUNC eHTMLCommands_AckPIDShuttingDown
-HTML_MSG_FUNC eHTMLCommands_AckScreenDPI
-HTML_MSG_FUNC eHTMLCommands_BringWindowToFront
-HTML_MSG_FUNC eHTMLCommands_BrowserResized
-HTML_MSG_FUNC eHTMLCommands_CanGoBackandForward
-HTML_MSG_FUNC eHTMLCommands_Close
-HTML_MSG_FUNC eHTMLCommands_DraggableRegionsChanged
-HTML_MSG_FUNC eHTMLCommands_ExitFullScreen
-HTML_MSG_FUNC eHTMLCommands_FileLoadDialog
-HTML_MSG_FUNC eHTMLCommands_FinishedRequest
-HTML_MSG_FUNC eHTMLCommands_GetCookiesForURLResponse
-HTML_MSG_FUNC eHTMLCommands_GetFocusedNodeValueResponse
-HTML_MSG_FUNC eHTMLCommands_GetZoomResponse
-HTML_MSG_FUNC eHTMLCommands_HidePopup
-HTML_MSG_FUNC eHTMLCommands_HideToolTip
-HTML_MSG_FUNC eHTMLCommands_HideWindow
-HTML_MSG_FUNC eHTMLCommands_HorizontalScrollBarSizeResponse
-HTML_MSG_FUNC eHTMLCommands_IME_CompositionRangeChanged
-HTML_MSG_FUNC eHTMLCommands_JSAlert
-HTML_MSG_FUNC eHTMLCommands_JSConfirm
-HTML_MSG_FUNC eHTMLCommands_JSMethodCall
-HTML_MSG_FUNC eHTMLCommands_JSReleaseCallback
-HTML_MSG_FUNC eHTMLCommands_LinkAtPositionResponse
-HTML_MSG_FUNC eHTMLCommands_LoadedRequest
-HTML_MSG_FUNC eHTMLCommands_LoadingResource
-HTML_MSG_FUNC eHTMLCommands_MaximizeRestoreWindow
-HTML_MSG_FUNC eHTMLCommands_MinimizeWindow
-HTML_MSG_FUNC eHTMLCommands_NodeGotFocus
-HTML_MSG_FUNC eHTMLCommands_OpenNewTab
-HTML_MSG_FUNC eHTMLCommands_OpenSteamURL
-HTML_MSG_FUNC eHTMLCommands_PageSecurity
-HTML_MSG_FUNC eHTMLCommands_RequestFullScreen
-HTML_MSG_FUNC eHTMLCommands_ResizeGripChanged
-HTML_MSG_FUNC eHTMLCommands_SavePageToJPEGResponse
-HTML_MSG_FUNC eHTMLCommands_ScaleToValueResponse
-HTML_MSG_FUNC eHTMLCommands_SearchResults
-HTML_MSG_FUNC eHTMLCommands_SetCursor
-HTML_MSG_FUNC eHTMLCommands_SetForegroundWindow
-HTML_MSG_FUNC eHTMLCommands_SetHTMLTitle
-HTML_MSG_FUNC eHTMLCommands_SetWindowPosition
-HTML_MSG_FUNC eHTMLCommands_ShowBrowserContextMenu
-HTML_MSG_FUNC eHTMLCommands_ShowPopup
-HTML_MSG_FUNC eHTMLCommands_ShowToolTip
-HTML_MSG_FUNC eHTMLCommands_ShowWindow
-HTML_MSG_FUNC eHTMLCommands_SizePopup
-HTML_MSG_FUNC eHTMLCommands_StartRequest
-HTML_MSG_FUNC eHTMLCommands_StatusText
-HTML_MSG_FUNC eHTMLCommands_ToggleFindInPageDialog
-HTML_MSG_FUNC eHTMLCommands_TouchGesture
-HTML_MSG_FUNC eHTMLCommands_URLChanged
-HTML_MSG_FUNC eHTMLCommands_UpdateToolTip
-HTML_MSG_FUNC eHTMLCommands_VerticalScrollBarSizeResponse
-HTML_MSG_FUNC eHTMLCommands_ZoomToElementAtPositionResponse
-HasField
-Hausa
-Hebrew
-Hex and octal numbers must be integers.
-Hindi
 IDEMPOTENCY_UNKNOWN
-INFO
-INTERNAL
-INVALID_ARGUMENT
-INVALID_CPPTYPE
-IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
-IPC: recovering abandoned mutex %p\n
-Icelandic
 IdempotencyLevel
-Igbo
-Ignoring extension "
-Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
-Import 
-Import "
-Index must be -1 for non-repeated fields
-Index must be -1 for singular fields.
-Index must be in range of repeated field values. 
-Index out-of-bounds (field is empty).
-Integer out of range (
-Interpreting non ascii codepoint %d.
-Invalid
-Invalid control characters encountered in text.
-Invalid descriptor
-Invalid escape sequence in string literal.
-Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
-Invalid float number: 
-Invalid key for map field.
-Invalid message set extension.
-Invalid package name: 
-Invalid proto descriptor for file "
-Invalid public dependency index.
-Invalid strings::Substitute() format string: "
-Invalid symbol name: 
-Invalid value for boolean field "
-Invalid weak dependency index.
-Invalid wire type for CPPTYPE_INT32: 
-Invalid wire type for CPPTYPE_INT64: 
-Invalid wire type for CPPTYPE_MESSAGE: 
-Invalid wire type for CPPTYPE_UINT32: 
-Invalid wire type for CPPTYPE_UINT64: 
-Irish
 Is64BitOS
-Is64BitOS()
-IsValidIndex( elem )
-IsValidIndex(elem)
-JArray
 JSObjectProperty
 JSType
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
-January
-July
-June
-K'iche'
-Kannada
-Kazakh
-Key in map fields cannot be enum types.
-Key in map fields cannot be float/double, bytes or message types.
-Khmer
-Kinyarwanda
-Konkani
-Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LOCK_EX
-LOCK_SH
 Label
-Latvian
-Launch CEF process via execv
-Launch CEF process via sub-shell
-Lithuanian
 Location
-Logic problem? szsrc = 
-Lowered '%s' -> '%s'\n
-Luxembourgish
-Macedonian
-Malay
-Malayalam
-Maltese
-Maori
-MapKey::GetBoolValue
-MapKey::GetInt32Value
-MapKey::GetInt64Value
-MapKey::GetStringValue
-MapKey::GetUInt32Value
-MapKey::GetUInt64Value
-MapKey::type MapKey is not initialized. 
-MapValueConstRef::GetBoolValue
-MapValueConstRef::GetDoubleValue
-MapValueConstRef::GetEnumValue
-MapValueConstRef::GetFloatValue
-MapValueConstRef::GetInt32Value
-MapValueConstRef::GetInt64Value
-MapValueConstRef::GetMessageValue
-MapValueConstRef::GetStringValue
-MapValueConstRef::GetUInt32Value
-MapValueConstRef::GetUInt64Value
-MapValueConstRef::type MapValueConstRef is not initialized.
-MapValueRef::MutableMessageValue
-MapValueRef::SetBoolValue
-MapValueRef::SetDoubleValue
-MapValueRef::SetEnumValue
-MapValueRef::SetFloatValue
-MapValueRef::SetInt32Value
-MapValueRef::SetInt64Value
-MapValueRef::SetStringValue
-MapValueRef::SetUInt32Value
-MapValueRef::SetUInt64Value
-Marathi
-March
-Matched '%s' -> '%s'\n
-MaybeAllocateAligned cannot fail here.
-Message class "
-Message does not support reflection (type 
-Message is too deep, the parser exceeded the configured recursion limit of 
-Message missing required fields: 
-Message of type "
-Message type "
-MessageLite at 0x
 MessageOptions
-MessageSet is not supported in proto3.
-MessageSets cannot have fields, only extensions.
-Messages can't have default values!
-Messages can't have default values.
 MethodDescriptorProto
-Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
-Missing field: FileDescriptorProto.name.
-Missing name.
-Monday
-Mongolian
-Multiple extension registrations for type "
-MutableMessage
-MutableRawRepeatedField
-MutableRepeatedMessage
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N15CHTMLController12CIPCTaskPostE
@@ -2156,42 +1034,16 @@ N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NOT_FOUND
 NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt8ios_base7failureE
 NamePart
-Need space between identifier and decimal point.
-Need space between number and identifier.
-Nepali
-No default value
-No field named "uninterpreted_option" in the Options proto.
-Non-primitive types can't be packed.
-Non-repeated Any specified multiple times.
-Non-repeated field "
-None
-Not implemented field number 
-Not supported.
-Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-November
-Numbers starting with leading zero must be in octal.
-OUT_OF_RANGE
 O\n\nAnnotation
-October
-Odia
-OnProcessInfo: invalid request id
-Oneof must have at least one field.
 OneofDescriptorProto
-Option "
-Option field "
-Option must have a name.
-Option must not use reserved name "uninterpreted_option".
-PERMISSION_DENIED
 PartnerEventNotificationType
-Persian
-Pid that we should be watching for
 Plat_AbsoluteTime
+Plat_CommandLineParamExists
 Plat_CommandLineParamValue
 Plat_FloatTime
 Plat_GetExecutablePath
@@ -2200,87 +1052,17 @@ Plat_IsChromeOS
 Plat_IsInDebugSession
 Plat_IsSteamDeck
 Plat_IsSteamOS3
+Plat_MSTime
+Plat_OutputDebugString
 Plat_RelativeTicks
-PlatformHEVCDecoderSupport
-PopupHTMLWindow: idx:%u handle:%u
-Process %d failed to shm_open %s\n
-Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
-Protocol Buffer map usage error:\n
-Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-Punjabi (Gurmukhi)
-Punjabi (Shahmukhi)
-PushCommand: Failed to send browser:%u cmd:%d %u/%u
-PushCommand: Restarting CEF master process due to IPC timeout
-PushCommand: Trying to push too large command: browser:%u cmd:%d size:%d
-PushCommand: Trying to push too small command: browser:%u cmd:%d size:%d
-PutInternal: Not enough space for put when locked\n
+Plat_VirtualAccessFlags
+Plat_localtime
 QkkXa
-Quechua
-RESOURCE_EXHAUSTED
-Ran out of IPC SharedObjectManager entries!\n
-Reached an unintended state: CPPTYPE_MESSAGE
-Reached impossible case in HasBit().
-Recursion limit at end of parse should be 
-Reduce buffering requirements for live video playback
-ReleaseLast
-ReleaseLast() called on a RepeatedPtrField that is on an arena, 
-ReleaseMessage
-RemoveLast
-Repeated fields can't have default values.
-Requested Force create but SharedObjectMutex already created\n
-Requested size is too large to fit into size_t.
-Required fields are not allowed in proto3.
-Reserved numbers must be positive integers.
-Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
-Reserved range end number must be greater than start number.
-RetryCreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
-SHMemStream header is corrupt in GetInternal()\n
-SHMemStream header is corrupt in PutInternal()\n
 SPEED
-STEAMVIDEOTOKEN
-STEAM_BASE_FOLDER
-STEAM_CEF_GPU_CMD_PREFIX
-STEAM_DEBUGCEF
 STRING
-Saturday
-Scots
-Second argument to Swap() (of type "
-Second argument to SwapFields() (of type "
-September
-Serbian
 ServiceDescriptorProto
 ServiceOptions
-SetAllocatedMessage
-SetBool
-SetDouble
-SetEnum
-SetFloat
-SetInt32
-SetInt64
-SetRepeatedBool
-SetRepeatedDouble
-SetRepeatedEnum
-SetRepeatedFloat
-SetRepeatedInt32
-SetRepeatedInt64
-SetRepeatedString
-SetRepeatedUInt32
-SetRepeatedUInt64
-SetString
-SetUInt32
-SetUInt64
-Should not reach here.
-Simplified_Chinese
-Sindhi
-Sinhala
-Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-Slovak
-Slovenian
-Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
-Sorani
-Sotho
 SourceCodeInfo
-SpareRendererForSitePerProcess
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -2353,15 +1135,7 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
-Steam3Master
-SteamBootstrapper_GetInstallDir
-SteamBootstrapper_GetLoggingDir
-SteamChina_SChinese
-SteamChrome_MasterStream
-SteamChrome_MasterStream_Event_uid%d_spid%u
-SteamChrome_MasterStream_uid%d_spid%u
 SteamRealPath
-SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
@@ -2374,6 +1148,7 @@ SteamThreadTools::CThread::Join(unsigned int)
 SteamThreadTools::CThread::OnExit()
 SteamThreadTools::CThread::SetName(char const*)
 SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Terminate(int)
 SteamThreadTools::CThread::Yield()
 SteamThreadTools::CThread::~CThread()
 SteamThreadTools::CThreadEvent::CThreadEvent(bool)
@@ -2384,20 +1159,9 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamUniverse
-SteamUser
 SteamVProf::CVProfile::MarkFrame(char const*)
-String field
-String literals cannot cross line boundaries.
+StringAfterPrefix
 StringAfterPrefixCaseSensitive
-StringPrintfVector currently only supports up to 
-Sunday
-Swahili
-Swap
-Symbol name "
-Synthetic oneofs must be after all other oneofs
-TLS init function for 
-TLS wrapper function for 
 TSListBase_Init
 TSListBase_Pop
 TSListBase_UnsafePeek
@@ -2407,19 +1171,6 @@ TSQueueBase_Push
 TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
-Tajik
-Tamil
-Tatar
-Telugu
-The JSON camel-case name of field "
-The [proto3_optional=true] option may only be set on proto3fields, not 
-The extension 
-The first enum value must be zero in proto3.
-The type parameter T in RepeatedFieldRef<T> API doesn't match 
-This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
-This program requires version 
-This program was compiled against version 
-This shouldn't be called if all the sizes are equal.
 ThreadCloseProcess
 ThreadFindProcessByName
 ThreadGetCurrentProcessId
@@ -2427,118 +1178,58 @@ ThreadGetProcessId
 ThreadInterlockedCompareExchange
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadIsProcessActive
 ThreadIsProcessIdActive
 ThreadSleep
 ThreadTerminateProcessCode
 ThreadWaitForProcessExit
-Thursday
-Tigrinya
-Timed out waiting for mutex in GetInternal()\n
-Timed out waiting for mutex in PutInternal()\n
-Traditional_Chinese
-Tried to merge messages of different types 
-Tried to register a non-generated type with the generated type registry.
-True
-Trying to push insane command size to steamwebhelper.exe (> 32MB)
-Trying to push too small command size to steamwebhelper.exe (< sizeof(uint32))
-Tswana
-Tuesday
-Turkmen
 Type
-Type appears to be in generated pool but wasn't 
-Type is already registered: 
-UNAUTHENTICATED
-UNAVAILABLE
-UNIMPLEMENTED
-UNKNOWN
-UNKNOWN_ENUM_VALUE_%s_%d
-UTF-8
-UTF-8 data when 
-Unable to get home directory
-Unexpected end of string.
-Unexpected failure while serializing option submessage 
-Unimplemented type: 
-Uninterpreted option is missing name or value.
 UninterpretedOption
-Unknown
-Unknown enumeration value of "
-Unmatched %s\n
-Unrecognized syntax: 
-Unsupported
-Unsupported: type mismatch
-Urdu
-Use vulkan ANGLE backend
-Uyghur
-Uzbek
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
-VTT for 
 V_AppendSlash
+V_ComposeFileName
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
+V_ExtractFileExtension
+V_ExtractFilePath
 V_FixDoubleSlashes
+V_FixSlashes
+V_FormatAndAppend
 V_IsAbsolutePath
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
+V_MakeAbsolutePath
 V_RemoveDotSlashes
-V_RemoveDotSlashes failed for "%s".
+V_StrTrim
+V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
 V_StripLastDir
+V_UTF8ToUTF32
 V_UnqualifiedFileName
 V_atoi
+V_atoui64
+V_binarytohex
+V_hextobinary
+V_isvalidhex
 V_snprintf
+V_strcat
+V_stristr(char const*, char const*)
+V_strncat
 V_strncat_length
+V_strnchr
+V_strncmp
 V_strncpy
+V_strnicmp
+V_strnistr
 V_vsnprintf
-VaapiIgnoreDriverChecks
-VaapiVideoDecodeLinuxGL
-Valencian
-Value must be "true" or "false" for boolean option "
-Value must be identifier for boolean option "
-Value must be identifier for enum-valued option "
-Value must be integer for int32 option "
-Value must be integer for int64 option "
-Value must be non-negative integer for uint32 option "
-Value must be non-negative integer for uint64 option "
-Value must be number for double option "
-Value must be number for float option "
-Value must be quoted string for string option "
-Value of type "
-Value out of range for int32 option "
-Value out of range for int64 option "
-Value out of range for uint32 option "
-ValveFFmpegAllowLowDelayHEVC
-VulkanFromANGLE
-WARNING
+V_vsnprintfRet
 Warning
-Warning parsing text-format 
-Warning: Blocking wait on mutex failed in Clear: %d\n
-Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
-Warning: Memory was locked for put while destructing!\n
 WeakRandomInt
-Webhelper crashing too often, stopping restart
-Wednesday
-Welsh
-Wolof
-Xhosa
-Yoruba
+WeakRandomUint32
 Z-google.golang.org/protobuf/types/descriptorpb
-Zulu
-[Config]\n# Product information.\nProductName=cefwebhelper\nProductVersion=%u\n\n# Required to enable crash dump upload.\nServerURL=%s\n\n# Disable rate limiting so that all crashes are uploaded.\nRateLimitEnabled=true\nMaxUploadsPerDay=5\n\n[CrashKeys]\nVendor=small\nUserID=small\nBuildID=small\nPlatform=small\nSteamUniverse=small\n
-[abi:
-[lazy = true] can only be specified for submessage fields.
-[libprotobuf %s %s:%d] %s\n
-[packed = true] can only be specified for repeated primitive fields.
-\%03o
-\U%08x
-\n    Actual    : 
-\n    Field type: 
-\n  Field       : 
-\n  Message type: 
-\n  Problem     : 
-\n  Problem     : Enum value did not match field type:\n    Expected  : 
-\n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n EWindowsUpdateInstallationImpact
 \n UserContentDescriptorPreferences
 \n google/protobuf/descriptor.proto
@@ -2548,7 +1239,6 @@ Zulu
 \n#CMsgHorizontalScrollBarSizeResponse
 \n#EPublishedFileInappropriateProvider
 \n(ESteamDeckCompatibilityResultDisplayType
-\nParsing attempt:  
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -2754,99 +1444,56 @@ Zulu
 \r\n\tJS_STRING
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
-\t(%zu) comparing %s with %s\n
 \venums.proto"^\n\tCMsgKeyUp
-\x%02x
-_Accum
-_Fract
-_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( y, unNodeSize, pMemBase )
-_STEAM_SETENV_MANAGER
-_Sat 
 ___tls_get_addr
-___tls_get_addr@GLIBC_2.3
 __assert_fail
-__assert_fail@GLIBC_2.0
 __ctype_b_loc
-__ctype_b_loc@GLIBC_2.3
 __ctype_get_mb_cur_max
-__ctype_get_mb_cur_max@GLIBC_2.0
+__ctype_tolower_loc
 __cxa_atexit
-__cxa_atexit@GLIBC_2.1.3
 __cxa_finalize
-__cxa_finalize@GLIBC_2.1.3
 __duplocale
-__duplocale@GLIBC_2.1
 __errno_location
-__errno_location@GLIBC_2.0
-__float128
 __fprintf_chk
-__fprintf_chk@GLIBC_2.3.4
+__fread_chk
 __freelocale
-__freelocale@GLIBC_2.1
 __fxstat
-__fxstat@GLIBC_2.0
+__fxstat64
 __gmon_start__
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
 __iswctype_l
-__iswctype_l@GLIBC_2.1
-__lxstat64@GLIBC_2.2
-__lxstat@GLIBC_2.0
+__lxstat
+__lxstat64
 __memcpy_chk
-__memcpy_chk@GLIBC_2.3.4
 __newlocale
-__newlocale@GLIBC_2.1
 __nl_langinfo_l
-__nl_langinfo_l@GLIBC_2.2
 __printf_chk
-__printf_chk@GLIBC_2.3.4
 __pthread_key_create
-__pthread_key_create@GLIBC_2.0
 __realpath_chk
-__realpath_chk@GLIBC_2.4
 __snprintf_chk
-__snprintf_chk@GLIBC_2.3.4
 __sprintf_chk
-__sprintf_chk@GLIBC_2.3.4
 __stack_chk_fail
-__stack_chk_fail@GLIBC_2.4
 __strcoll_l
-__strcoll_l@GLIBC_2.1
 __strcpy_chk
-__strcpy_chk@GLIBC_2.3.4
 __strftime_l
-__strftime_l@GLIBC_2.3
 __strtod_l
-__strtod_l@GLIBC_2.1
 __strtof_l
-__strtof_l@GLIBC_2.1
 __strxfrm_l
-__strxfrm_l@GLIBC_2.1
 __towlower_l
-__towlower_l@GLIBC_2.1
 __towupper_l
-__towupper_l@GLIBC_2.1
 __uselocale
-__uselocale@GLIBC_2.3
 __vasprintf_chk
-__vasprintf_chk@GLIBC_2.8
 __vsnprintf_chk
-__vsnprintf_chk@GLIBC_2.3.4
 __wcscoll_l
-__wcscoll_l@GLIBC_2.1
 __wcsftime_l
-__wcsftime_l@GLIBC_2.3
 __wcsxfrm_l
-__wcsxfrm_l@GLIBC_2.1
 __wctype_l
-__wctype_l@GLIBC_2.1
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -2886,11 +1533,9 @@ __wrap_unlink
 __wrap_utime
 __wrap_utimes
 __xmknod
-__xmknod@GLIBC_2.0
-__xstat64@GLIBC_2.2
-__xstat@GLIBC_2.0
+__xstat
+__xstat64
 _fini
-_google/protobuf/descriptor_database.cc
 _init
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -2899,188 +1544,92 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 abort
-abort@GLIBC_2.0
-access@GLIBC_2.0
-accessor_ == other.accessor_
+access
 additional_includes
 address1
 address2
 admin_spoofing_user
 adult_content_sex
 adult_content_violence
-afrikaans
 aggregate_value
-albanian
-alignof 
 allow_field_named_steam_id
 allowed_extensions
-alnum
-alpha
-amharic
+alphasort64
 announcement_body
 announcement_gid
 app_type
 appid
-ar_AE
-arabic
 args
 argument
-armenian
-assamese
 auth_account_flags
-auto
-auto:
-azerbaijani
 bAllow
 bHasMultipleInputs
 bInput
 bNewNavigation
-bValidHandle == true
-bad_function_call
 bad_url
 ban_check_result
-bangla
 banned
-basic_iostream
-basic_istream
-basic_ostream
-basic_string::_M_replace_aux
-basic_string::_S_construct null not valid
-basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::copy
-basic_string::erase
-basic_string::insert
-basic_string::replace
-basic_string::resize
-basic_string::substr
-basque
 begin
-belarusian
-bg_BG
 bgoback
+bind
 bind_textdomain_codeset
-bind_textdomain_codeset@GLIBC_2.2
+bindtextdomain
 binput
-blank
 body
-bool
-bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
-boolean
-bosnian
-brazilian
 broadcast_live
 broadcaster_accountid
 browser_handle
 bsuccess
 btowc
-btowc@GLIBC_2.0
 bucket
-buffer. Use the 'bytes' type if you intend to send raw 
 build_id
-bulgarian
-byte
-bytes
-bytes. 
-can't reach here.
-cannot create std::vector larger than max_size()
 canvas_oop_rasterization
-catalan
-cbData == sizeof(newConnection)
 cc_enable_arenas
 cc_generic_services
-cef_log.txt
 certName
-char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
-char16_t
-char32_t
-char8_t
-chdir@GLIBC_2.0
-cherokee
-chmod@GLIBC_2.0
+chdir
+chmod
 choose_directory
-chown@GLIBC_2.1
+chown
 city
 clamp_range_slot
 clanid
 client_sessionid
 client_streaming
-close() failed: 
-close@GLIBC_2.0
+clock_gettime
+close
 closedir
-closedir@GLIBC_2.0
 cm_sysid
-cntrl
 com.google.protobufB
 community_visible_stats
-complex 
 connect
-connect@GLIBC_2.0
 connection_problem
-const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
-const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
-const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
-const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
-const string& google::protobuf::UnknownField::length_delimited() const
-const_cast
-construction vtable for 
 content_descriptorid
 content_descriptorids
 content_descriptors_to_exclude
 cookies
 coord_x
 coord_y
-covariant return thunk to 
 creation_flags
 creator_steamid
-croatian
-cs_CZ
 csharp_namespace
 ctype
 cursor
 custom_commands
-czech
-da_DK
-danish
-dari
-data_ == other.data_
-de_DE
 debug_source_string_index
-decimal128
-decimal32
-decimal64
-decltype (
-decltype(auto)
-decltype(nullptr)
 default_local_path
-delete 
-delete[] 
 deltax
 deltay
 demo
 dgettext
-dgettext@GLIBC_2.0
 disable
-disables CEF gpu-process sandbox
-disables CEF seccomp-bpf sandbox on Linux
-disables Chromium window occlusion testing
-disables GPU and renderer hang timeouts
-disables breakpad in crash dumps
-disables console and log file logging of JS console events
-disables high-DPI support in CEF
-disables loading winh264.dll
-disables per-process site-isolation
-disables sandboxing in CEF
 discussion_url
 dl_iterate_phdr
-dl_iterate_phdr@GLIBC_2.2.4
-dlmopen@GLIBC_2.3.4
-dlopen@GLIBC_2.1
+dlclose
+dlerror
+dlmopen
+dlopen
 dlsym
-dlsym@GLIBC_2.0
 domain
 domains
 download
@@ -3088,47 +1637,27 @@ dpi_horizontal
 dst_gc_dir_index
 dst_gcid_queue
 duration
-dutch
-dynamic_cast
-eCmd > 0 && eCmd < eHTMLCommands_None
 economy_support
 economy_support_supervisor
 edit_marketing
 edit_state_flags
 edit_store_display_content
-el_GR
 elementtagname
-en_US
-enables CEF usage of the Chromium keyring
-enables Chromium remote debugging, defaulting to localhost:8080
-enables full crash dumps
-enables verbose logging for specific CEF modules
-enables verbose logging from CEF
-enables verbose logging of JS console events
-english
+endmntent
 entries
-enum
-enums.proto
 eresult
 error_description
-es-419
-es_419
-es_ES
 estackingorder
 estate
-estonian
 events
 exclude_client_sessionids
 expired
 expires
-extend .$0 {\n
 extendee
 extension_range
 faccessat
-faccessat@GLIBC_2.4
-failed to generate a valid callback handler key
+fallocate64
 false
-false 
 false"
 false"&\n\fCMsgStopFind
 false"M\n
@@ -3136,270 +1665,105 @@ false:H\n
 false:J\n
 falseB\tH
 fclose
-fclose@GLIBC_2.1
+fcntl
+fdatasync
+fdopen
 featured_app_tagid
+feof
 fflush
-fflush@GLIBC_2.0
-fi_FI
+fgets
 field
 file
 filename
+fileno
 files
-filipino
 filler
 filters
 find
-finnish
-float
 flock
-flock %s %s failed. errno = %d
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
-flock@GLIBC_2.0
+fnmatch
 focus
 focused
 follower_count
-fopen64@GLIBC_2.1
-fopen@GLIBC_2.1
-force enable Chromium window occlusion testing
-force sandboxing in CEF
+fopen
+fopen64
 force_direct_hwnd_popups
 force_php_generation
-forces CEF to use GDI text even if DWrite support is available
-forces usage of 32-bit steamwebhelper when available
 forum_topic_id
 forward_to_sysid
 fputc
-fputc@GLIBC_2.0
 fputs
-fputs@GLIBC_2.0
-fr_FR
 fread
-fread@GLIBC_2.0
 free
-free@GLIBC_2.0
-french
-freopen@GLIBC_2.0
+freopen
+fscanf
+fseek
 fseeko64
-fseeko64@GLIBC_2.1
 ftello64
-ftello64@GLIBC_2.1
 ftruncate
-ftruncate@GLIBC_2.0
+ftruncate64
 function_handle
-futex robust_list not initialized by pthreads
-futex robust_list not pthreads-compatible
+futimes
 fwrite
-fwrite@GLIBC_2.0
 g_ClockSpeed
 g_VProfProfilesRunningCount
 g_VProfile
 g_pMemAllocSteam
-galician
 gameid
 generate_cdkeys
-generic
-georgian
-german
 gesture
 gestures
+getc
 getcwd
-getcwd@GLIBC_2.0
 getenv
-getenv@GLIBC_2.0
+getmntent
 getpid
-getpid@GLIBC_2.0
 getpwuid
-getpwuid@GLIBC_2.0
+gettext
 getuid
-getuid@GLIBC_2.0
-global constructors keyed to 
-global destructors keyed to 
+getwc
 google.protobuf"G\n
-google.protobuf.
 google.protobuf.Any
-google.protobuf.BoolValue
-google.protobuf.BytesValue
-google.protobuf.DescriptorProto.name
-google.protobuf.DescriptorProto.reserved_name
-google.protobuf.DoubleValue
-google.protobuf.Duration
-google.protobuf.Empty
-google.protobuf.EnumDescriptorProto.name
-google.protobuf.EnumDescriptorProto.reserved_name
-google.protobuf.EnumOptions
-google.protobuf.EnumValueDescriptorProto.name
-google.protobuf.EnumValueOptions
-google.protobuf.ExtensionRangeOptions
-google.protobuf.FieldDescriptorProto.default_value
-google.protobuf.FieldDescriptorProto.extendee
-google.protobuf.FieldDescriptorProto.json_name
-google.protobuf.FieldDescriptorProto.name
-google.protobuf.FieldDescriptorProto.type_name
-google.protobuf.FieldMask
-google.protobuf.FieldOptions
-google.protobuf.FieldOptions.boxed_type
-google.protobuf.FileDescriptorProto.dependency
-google.protobuf.FileDescriptorProto.name
-google.protobuf.FileDescriptorProto.package
-google.protobuf.FileDescriptorProto.syntax
-google.protobuf.FileOptions
-google.protobuf.FileOptions.additional_includes
-google.protobuf.FileOptions.csharp_namespace
-google.protobuf.FileOptions.go_package
-google.protobuf.FileOptions.java_outer_classname
-google.protobuf.FileOptions.java_package
-google.protobuf.FileOptions.objc_class_prefix
-google.protobuf.FileOptions.php_class_prefix
-google.protobuf.FileOptions.php_metadata_namespace
-google.protobuf.FileOptions.php_namespace
-google.protobuf.FileOptions.ruby_package
-google.protobuf.FileOptions.swift_prefix
-google.protobuf.FloatValue
-google.protobuf.GeneratedCodeInfo.Annotation.source_file
-google.protobuf.Int32Value
-google.protobuf.Int64Value
-google.protobuf.ListValue
-google.protobuf.MessageOptions
-google.protobuf.MethodDescriptorProto.input_type
-google.protobuf.MethodDescriptorProto.name
-google.protobuf.MethodDescriptorProto.output_type
-google.protobuf.MethodOptions
-google.protobuf.OneofDescriptorProto.name
-google.protobuf.OneofOptions
-google.protobuf.ServiceDescriptorProto.name
-google.protobuf.ServiceOptions
-google.protobuf.SourceCodeInfo.Location.leading_comments
-google.protobuf.SourceCodeInfo.Location.leading_detached_comments
-google.protobuf.SourceCodeInfo.Location.trailing_comments
-google.protobuf.StringValue
-google.protobuf.Struct
-google.protobuf.Timestamp
-google.protobuf.UInt32Value
-google.protobuf.UInt64Value
-google.protobuf.UninterpretedOption.NamePart.name_part
-google.protobuf.UninterpretedOption.aggregate_value
-google.protobuf.UninterpretedOption.identifier_value
-google.protobuf.Value
-google.protobuf.bridge.MessageSet
-google/protobuf/arena.cc
-google/protobuf/arenastring.cc
-google/protobuf/descriptor.cc
-google/protobuf/descriptor.pb.cc
-google/protobuf/descriptor.proto
-google/protobuf/dynamic_message.cc
-google/protobuf/extension_set.cc
-google/protobuf/extension_set_heavy.cc
-google/protobuf/generated_message_reflection.cc
-google/protobuf/generated_message_util.cc
-google/protobuf/io/coded_stream.cc
-google/protobuf/io/tokenizer.cc
-google/protobuf/io/zero_copy_stream.cc
-google/protobuf/io/zero_copy_stream_impl.cc
-google/protobuf/io/zero_copy_stream_impl_lite.cc
-google/protobuf/map_field.cc
-google/protobuf/message.cc
-google/protobuf/message_lite.cc
-google/protobuf/parse_context.cc
-google/protobuf/reflection_ops.cc
-google/protobuf/repeated_field.cc
-google/protobuf/stubs/common.cc
-google/protobuf/stubs/int128.cc
-google/protobuf/stubs/stringpiece.cc
-google/protobuf/stubs/stringprintf.cc
-google/protobuf/stubs/strutil.cc
-google/protobuf/stubs/substitute.cc
-google/protobuf/text_format.cc
-google/protobuf/unknown_field_set.cc
-google/protobuf/wire_format.cc
-google/protobuf/wire_format_lite.cc
-google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-google::protobuf::FieldDescriptorProto_Type_IsValid(value)
-google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
-google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
-google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
-google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
-google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
-google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
-google::protobuf::uint64 google::protobuf::UnknownField::varint() const
-google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 gpu_compositing
-graph
-greek
-group
-guard variable for 
-gujarati
-gurmukhi
-half
 handle
 has_adult_content
 has_adult_content_sex
 has_adult_content_violence
-hausa
 header
 headers
 headline
-hebrew
 height
 hidden
-hidden alias for 
-hindi
 host
 htmlmessages.proto
 httponly
-https://crash.steampowered.com/submit
-hu_HU
-hungarian
 hwnd
-i < length_
-iRet == 0
-icelandic
 icon
 iconv
-iconv@GLIBC_2.1
 iconv_close
-iconv_close@GLIBC_2.1
 iconv_open
-iconv_open@GLIBC_2.1
-id_ID
 idempotency_level
 identifier_value
-igbo
-imaginary 
-import "$0";\n
-import public "$0";\n
-import weak "$0";\n
 index
-indonesian
 infind
-infinity
-info.m_pReplacementString == 0
 initial_height
-int google::protobuf::CalculateBase64EscapedLen(int, bool)
-internal error in map key sorting
+ioctl
 ip"R\n
 ip_addr"
 ip_v6
-irish
 is_array
 is_fbs_universe
 is_from_external_source
 is_save
 is_visible_in_steam_china
-it_IT
-italian
-ja_JP
-japanese
-java Class for 
-java resource 
+isspace
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
-json_name = "
 jsondata
 jstype
-jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
 k_BluetoothDeviceType_Headset
@@ -3662,31 +2026,16 @@ k_SystemAudioPortType_Unknown
 k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
-kannada
-kazakh
 keyCode
-khmer
-kiche
 kill
-kill@GLIBC_2.0
-kinyarwanda
-ko_KR
-konkani
-koreana
-kyrgyz
 label
 language
 last_update_steamid
-latam
-latvian
 lazy
-lchown@GLIBC_2.0
+lchown
 ld-linux.so.2
 leading_comments
 leading_detached_comments
-len > 0 || HasError()
-len >= input_len
-length_ >= n
 libc.so.6
 libdl.so.2
 libm.so.6
@@ -3694,225 +2043,121 @@ libpthread.so.0
 librt.so.1
 libtier0_s.so
 libvstdlib_s.so
+link
 link_url
 list
-lithuanian
-locale::facet::_S_create_c_locale name not valid
+localeconv
 localization_path
 localized_string
 location
-logs
-long double
-lower
 lseek
 lseek64
-lseek64@GLIBC_2.2
-lseek@GLIBC_2.0
-luxembourgish
-m_Buffer
-m_ChromeConnection
-m_ChromeIPCClient
-m_Count == 0
-m_Elements
-m_Memory
-m_Tree
-m_bExit
-m_dwReadAheadBufferBegin <= m_dwReadAheadBufferEnd
-m_fdShMem > 0
-m_hCEFHandle == INVALID_PROCESS_HANDLE
-m_mapBrowserRequests
-m_mapBrowsers
-m_nAllocationCount >= 0
-m_options
-m_pCurrentCmd
-m_pDataWritten
-m_pFromChromeStream
-m_pMapFile
-m_pMasterCommandEvent
-m_pMutex
-m_pMutex->Wait() failed in ShMemStream::PutInternal\n
-m_pSpaceAvail
-m_pToChromeStream
-m_sCustomCSS
-m_sInitialURL
-m_sMasterEventName
-m_sMasterSharedMemoryName
-m_sUserAgent
-m_sVROverlayKey
-m_sWideVineDir
-m_sWindowIcon
-m_vecPendingCommands
-macedonian
-malay
-malayalam
 malloc
-malloc@GLIBC_2.0
-maltese
 manage_pricing
 manage_signing
-maori
-map keys are not unique
-map<$0, $1>
-map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
-marathi
 mbrtowc
-mbrtowc@GLIBC_2.0
 mbsnrtowcs
-mbsnrtowcs@GLIBC_2.0
 mbsrtowcs
-mbsrtowcs@GLIBC_2.0
 media
+memchr
 memcmp
-memcmp@GLIBC_2.0
+memcpy
+memmove
+memset
 message
 message_set_wire_format
 method
 misspelled_word
-mkdir@GLIBC_2.0
-mkfifo@GLIBC_2.0
+mkdir
+mkfifo
+mkstemp
 mmap
-mmap@GLIBC_2.0
-mongolian
+mmap64
+modf
+mold 1.10.1 (compatible with GNU ld)
 monitor_bottom
-mount@GLIBC_2.0
+mount
 msgpool_hard_limit
 msgpool_soft_limit
+msync
 multiple_raster_threads
 munmap
-munmap@GLIBC_2.0
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-nGrowSize >= 0
-nMinCapacity <= k_nMaxStringSize
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nSize != 0
-nSize >= 0
 nTargetFrameRate
 name
 native_dropdowns
 negative_int_value
-nepali
-new 
-newConnection.m_eCmd != 0
-new[]
-nl_NL
-no_NO
 no_standard_descriptor_accessor
-non-transaction clone for 
-non-virtual thunk to 
-none
-norwegian
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
 notificaton_token
-nullptr output boolean given.
-num > 0
 number
 objc_class_prefix
 object_properties
-odia
-offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-offset >= -m_Put && offset <= INT_MAX-m_Put
-offset >= 0
 only_allow_trusted_popups
-open64@GLIBC_2.2
-opendir@GLIBC_2.0
+open
+open64
+opendir
 opengl
-operator
-operator 
-operator"" 
-option json_name is not allowed on extension fields.
-optional
 options
 original_ip_address
-output specified is nullptr
 override_height
 override_width
 owning_browser_handle
-pBuffer->TellPut() == 0
-pCmd->m_eCmd == eHTMLCommands_NeedsPaint || pCmd->m_eCmd == eHTMLCommands_NeedsSharedTexturePaint
-pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
-pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
-pFmt
-pNode && pNode->Next == QueueEnd()
-pOptions
 package
-package $0;\n\n
 packed
 page_url
 pairs
 parent_popup_index
-parse
-parsing
 path
 patterns
 payload
-pchVROverlayKey && pchVROverlayKey[0]
-persian
+pclose
 phone
 php_class_prefix
 php_generic_services
 php_metadata_namespace
 php_output_always_number
-pl_PL
 platform_linux
 platform_windows
-please implement MergeFrom for your type.
-polish
-portuguese
+poll
+popen
 positive_int_value
+posix_fadvise
 post
 postData
 postcode
 posterid
 posttime
-print
+pread64
 priority_score
 promise_handle
-proto2
-proto3
 proto3_optional
-pt-br
-pt_BR
-pt_PT
+pthread_create
+pthread_detach
 pthread_mutex_lock
-pthread_mutex_lock@GLIBC_2.0
 pthread_mutex_unlock
-pthread_mutex_unlock@GLIBC_2.0
 pthread_once
-pthread_once@GLIBC_2.0
 pthread_self
-pthread_self@GLIBC_2.0
 public_dependency
 publish
 publisher_group_id
-punct
-pure virtual method called\n
+putc
 putwc
-putwc@GLIBC_2.2
+pwrite64
 py_generic_services
-quechua
 queue_position
 raw_draw
+read
 readdir64
-readdir64@GLIBC_2.2
+readlink
 realloc
-realloc@GLIBC_2.0
 realm
 realpath
-realpath@GLIBC_2.3
 rects
-recursion_budget_ < recursion_limit_
+recvfrom
 recvmsg
-recvmsg@GLIBC_2.0
-reference temporary #
 referenced_appids
 referrer
-reinterpret_cast
-rename@GLIBC_2.0
-repeated
+rename
 requesting_url
-required
-res > 0
 reservation_country_code
 reservation_state
 reserved_range
@@ -3920,9 +2165,7 @@ result
 results
 reverse
 rgba
-rmdir@GLIBC_2.0
-ro_RO
-romanian
+rmdir
 routes
 rtime32_end_time
 rtime32_last_modified
@@ -3931,16 +2174,11 @@ rtime32_visibility_end
 rtime32_visibility_start
 rtime_estimated_notification
 rtime_mod_reviewed
-ru_RU
-runs CEF GPU processing as thread of browser process
-runs CEF processes in single process
-russian
 samesite
-sc_schinese
 scale
-scandir64@GLIBC_2.2
-scandir@GLIBC_2.0
-scots
+scandir
+scandir64
+sched_yield
 script
 scroll
 scrollx
@@ -3948,258 +2186,132 @@ scrolly
 searchbuttontext
 secure
 selection_text
+sendfile64
 sendmsg
-sendmsg@GLIBC_2.0
+sendto
 seq_num
-serbian
-serializing
 server_address
 server_password
 server_streaming
 service
-service $0 {\n
 session_disposition
 setenv
-setenv@GLIBC_2.0
-sfixed32
-sfixed64
-shahmukhi
+setlocale
+setmntent
+setvbuf
 shared_memory_handle
 shared_memory_size
 shm_open
-shm_open@GLIBC_2.2
 shm_unlink
-shm_unlink@GLIBC_2.2
 show_broadcast
-sindhi
-sinhala
-sint32
-sint64
-size too big: 
-size_t to int conversion
-sizeof 
-sizeof...
-slovak
-slovenian
 socket
-socket@GLIBC_2.0
-sorani
-sotho
 source_code_info
 span
-spanish
+sscanf
 start
 state
-statfs64@GLIBC_2.1
-statfs@GLIBC_2.0
-static_cast
-static_cast<Node_t*>(pNode)->elem
-statvfs64@GLIBC_2.1
-statvfs@GLIBC_2.1
-std::allocator
-std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
-std::bad_exception
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
-std::iostream
-std::istream
-std::ostream
-std::string
+statfs
+statfs64
+statvfs
+statvfs64
 stddev_sum_frame_ms
 stderr
-stderr@GLIBC_2.0
 stdin
-stdin@GLIBC_2.0
 stdout
-stdout@GLIBC_2.0
 steam_beta_name
-steambeta
 steamid
 steammessages_base.proto
 steammessages_base.proto*
-strHTMLCacheDir
-strProxy
 strcasecmp
-strcasecmp@GLIBC_2.0
 strcasestr
-strcasestr@GLIBC_2.1
 strchr
-strchr@GLIBC_2.0
 strcmp
-strcmp@GLIBC_2.0
 strcpy
-strcpy@GLIBC_2.0
 strdup
-strdup@GLIBC_2.0
-stream 
 strerror
-strerror@GLIBC_2.0
-string literal
-strings::Substitute format string invalid: asked for "$
+strftime
 strlen
-strlen@GLIBC_2.0
 strncasecmp
-strncasecmp@GLIBC_2.0
 strncmp
-strncmp@GLIBC_2.0
-strncpy@GLIBC_2.0
+strncpy
 strpbrk
-strpbrk@GLIBC_2.0
+strrchr
 strstr
-strstr@GLIBC_2.0
 strtod
-strtod@GLIBC_2.0
 strtof
-strtof@GLIBC_2.0
 strtol
-strtol@GLIBC_2.0
 strtold_l
-strtold_l@GLIBC_2.3
 strtoll
-strtoll@GLIBC_2.0
 strtoul
-strtoul@GLIBC_2.0
 strtoull
-strtoull@GLIBC_2.0
-subtype mismatch
 success
 supported_languages
-sv_SE
-swahili
-swedish
-symlink@GLIBC_2.0
+symlink
 syntax
-syntax = "$0";\n\n
 syscall
-syscall@GLIBC_2.0
 sysid
 system
 tagids_curated
 tagids_filtered
 tags
-tajik
 tall
-tamil
 target
 target_job_name
-tatar
-tchinese
-telugu
-template parameter object for 
-terminate called after throwing an instance of '
-terminate called recursively\n
-terminate called without an active exception\n
 text
-text format contains deprecated field "
-th_TH
-thai
-the actual field type (for enums T should be the generated enum 
-the global scope
-this
-throw 
 ticket
-tigrinya
+time
 timestamp_added
 timestamp_updated
 title
 token_id
 tolower
-tolower@GLIBC_2.0
 tool
 total_queue_size
-tr_TR
 trailing_comments
+transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 transport_error
 true
 trusted_creator
-tswana
-turkish
-turkmen
 type
-type or int32).
-type() == TYPE_FIXED32
-type() == TYPE_FIXED64
-type() == TYPE_GROUP
-type() == TYPE_LENGTH_DELIMITED
-type() == TYPE_VARINT
 type.googleapis.com/
 type.googleprod.com/
-typeinfo fn for 
-typeinfo for 
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
-uint32
-uint64
-uk_UA
-ukrainian
-unSize < 128 * 1024 * 1024
-unexpected BrowserCreateResponse for unknown browser 0x%x
 unfiltered_link_url
 ungetc
-ungetc@GLIBC_2.0
 ungetwc
-ungetwc@GLIBC_2.2
 unichar
 uninterpreted_option
 unknown
-unlink@GLIBC_2.0
+unlink
 unlisted
-unsigned
-unsigned __int128
-unsigned char
-unsigned int
-unsigned long
-unsigned long long
-unsigned short
-upper
-urdu
 urls
 us_state
 user_css
-utime@GLIBC_2.0
-utimes@GLIBC_2.0
-uyghur
-uzbek
-valencian
+usleep
+utime
+utimes
 value
-vector::_M_default_append
-vector::_M_range_insert
-vector::_M_realloc_insert
-vector::reserve
-vi_VN
-vietnamese
 view_error_data
 view_financials
 view_marketing_traffic
 visible
-void
-void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
-void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
-void google::protobuf::StringPiece::remove_prefix(google::protobuf::stringpiece_ssize_type)
 void google::protobuf::internal::byteswap<1>(void*)
 void google::protobuf::internal::byteswap<4>(void*)
 void google::protobuf::internal::byteswap<8>(void*)
-void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 vr_overlay_key
-vsnprintf@GLIBC_2.0
+vsnprintf
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -4209,17 +2321,11 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 vulkan
-wchar_t
 wcrtomb
-wcrtomb@GLIBC_2.0
 wcscmp
-wcscmp@GLIBC_2.0
 wcslen
-wcslen@GLIBC_2.0
 wcsnrtombs
-wcsnrtombs@GLIBC_2.0
 wctob
-wctob@GLIBC_2.0
 weak
 weak_dependency
 webgl
@@ -4227,37 +2333,18 @@ webgl2
 webgpu
 webnn
 webui_auth_key
-welsh
 wg_token
 wide
 width
-with a type that does not implement MergeFrom. This is unsafe; 
 wmemchr
-wmemchr@GLIBC_2.0
+wmemcmp
 wmemcpy
-wmemcpy@GLIBC_2.0
 wmemmove
-wmemmove@GLIBC_2.0
 wmemset
-wmemset@GLIBC_2.0
-wolof
-wrong submessage type
+write
+writev
 x_local
-xdigit
-xhosa
 xhotspot
 y_local
 yhotspot
-yoruba
-zh-cn
-zh-tw
-zh-xc
-zh_CN
-zh_TW
-zh_XC
 zoom
-zulu
-{default arg#
-{lambda(
-{parm#
-{unnamed type#

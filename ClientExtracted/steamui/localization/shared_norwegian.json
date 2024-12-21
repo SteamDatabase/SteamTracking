@@ -3401,7 +3401,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Opptaksinnstillinger",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Play-innstillinger",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Kringkastingsinnstillinger",
-    "GamepadOverlay_GameRecording_GoToRecording": "Vis bakgrunnsopptak",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Vis bakgrunnsopptak",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Hurtigtast for å starte/stoppe opptak i et spill:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Hurtigtast for å lage et klipp i et spill:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Hurtigtast for å sette en markør på tidslinjen %1$s:",

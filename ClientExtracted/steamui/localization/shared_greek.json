@@ -3403,7 +3403,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Ρυθμίσεις καταγραφής",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Ρυθμίσεις Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Ρυθμίσεις μετάδοσης",
-    "GamepadOverlay_GameRecording_GoToRecording": "Προβολή καταγραφής παρασκηνίου",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Προβολή καταγραφής παρασκηνίου",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Συνδυασμός πλήκτρων συντόμευσης για έναρξη/διακοπή καταγραφής εντός παιχνιδιού:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Συνδυασμός πλήκτρων συντόμευσης για τη δημιουργία αποσπάσματος εντός παιχνιδιού:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Συνδυασμός πλήκτρων συντόμευσης για δείκτη χρονογραμμής %1$s:",

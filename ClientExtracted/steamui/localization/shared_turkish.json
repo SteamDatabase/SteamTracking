@@ -3400,7 +3400,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Kayıt Ayarları",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Play Ayarları",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Yayın Ayarları",
-    "GamepadOverlay_GameRecording_GoToRecording": "Arka Plan Kaydını Görüntüle",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Arka Plan Kaydını Görüntüle",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Oyun sırasında kaydı başlatmak/durdurmak için kısayol kombinasyonu:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Oyundayken klip oluşturmak için kısayol kombinasyonu:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "%1$s zaman çizelgesi işaretini eklemek için kısayol kombinasyonu:",

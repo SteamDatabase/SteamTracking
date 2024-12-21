@@ -3400,7 +3400,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Optagelsesindstillinger",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Indstillinger for Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Broadcastindstillinger",
-    "GamepadOverlay_GameRecording_GoToRecording": "Vis baggrundsoptagelse",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Vis baggrundsoptagelse",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Genvejstast til at start/stop af optagelse, mens man er i spil:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Genvejsknap til at lave et klip, mens du spiller:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Genvejstast til at tilføje en markør %1$s på tidslinjen:",

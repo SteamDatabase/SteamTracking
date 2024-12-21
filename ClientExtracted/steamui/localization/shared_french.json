@@ -3398,7 +3398,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Paramètres d'enregistrement",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Paramètres de Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Paramètres de diffusion",
-    "GamepadOverlay_GameRecording_GoToRecording": "Voir l'enregistrement en arrière-plan",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Voir l'enregistrement en arrière-plan",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Raccourci pour démarrer/arrêter l'enregistrement en jeu",
     "GamepadOverlay_GameRecording_ClipExplainer": "Raccourci pour faire un extrait en jeu :",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Touche de raccourci pour ajouter un repère %1$s",

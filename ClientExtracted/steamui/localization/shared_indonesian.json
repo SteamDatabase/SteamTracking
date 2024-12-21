@@ -3407,7 +3407,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Pengaturan Perekaman",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Pengaturan Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Pengaturan Siaran",
-    "GamepadOverlay_GameRecording_GoToRecording": "Lihat Rekaman Latar",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Lihat Rekaman Latar",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Tombol Pintasan untuk mulai/berhenti merekam saat dalam game:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Pintasan kombinasi tombol untuk membuat klip saat sedang bermain:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Tombol Pintasan untuk menaruh penanda garis waktu %1$s:",

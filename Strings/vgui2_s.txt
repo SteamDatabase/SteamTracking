@@ -1,276 +1,21 @@
-  KEY_SPACE
-  what():  
- +0000
- ReadToken overflow
- [clone 
- __vector(
- but running with 
- const
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
- libpng version 1.6.37 - April 14, 2019\n\n
- noexcept
- restrict
- throw
- transaction_safe
- using zstream
- volatile
-!"Attempting to upload sub texture without making texture first"
-!"CSystem::CreateShortcut"
-!"CSystem::GetShortcutTarget"
-!"CSystem::ModifyShortcutTarget"
-!"Current texture not set"
-!"FontMatch unhandled type"
-!"Impl me"
-!"Implement me!"
-!"Implement me"
-!"Invalid scheme requested."
-!"Invalid window handle"
-!"Unable to get home directory"
-!"Unexpect KB message"
-!"Warning: VPanel with no drawing context"
-!("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
 !1AQaq
 !AxU
-!m_InDispatcher
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-!pszString || pszString[nChars] == '\0'
-!style->IsDirty()
-!texture->m_id2X
-!vecTraversalCache.Count() == !nInternalDepth
 "2BRbr
-"lang"\r\n{\r\n"Language" "English"\r\n"Tokens"\r\n{\r\n
 #3CScs
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 #bML"
-#include
-#include is NULL 
-#vgui_
-#vgui_TimeLeft
 $4DTdt
-$HOME/
-%.18g
-%02d/%02d/%02d
-%02d:%02d:%02d
 %5EUeu
-%d %d %d %d
-%language%
-%lld
-%llu
-%s Queue dispatching command( %s, %s -- %i )\n
-%s Queue dispatching( %s -- %i )\n
-%s overflow!\n
-%s*.txt
-%s.%u.tmp
-%s.old
-%s.png
-%s.tga
-%s/.local/share/applications
-%s/.steam/%s
-%s/.steam/steam
-%s/Downloads
-%s/Steam/registry.vdf
-%s/steam_msg.sh
-%s: __pos (which is %zu) > this->size() (which is %zu)
-%s: display was not open yet, good\n
-%s: restoring previous glx context\n
-%s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
-%s: system() failed, errno %d\n
-%sToday
-%sTomorrow
-%sYesterday
-%x:%x.%x "%x" "%x" "%x"
 &6FVfv
-&context == &m_DefaultInputContext
-'"KEY_APOSTROPHE
 '7GWgw
-(%zu) Descend: %s, (%s), %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (8HXhx
-(anonymous namespace)
-(context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
-(context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
-(no name)
-(unsigned)elem <= (unsigned)m_Size
 )9IYiy
-**KEY_PAD_MULTIPLY
 *5KS
 *:JZjz
-++KEY_PAD_PLUS
-,<KEY_COMMA
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
---KEY_PAD_MINUS
---error
---title
---warning
--0123456789
--_KEY_MINUS
--all_languages
--ccsyntax
--compat
--display-scale=
--language
--nodpiscale
--pid
--vguifocus
--vguimessages
-..Too many IDATs found
-.>KEY_PERIOD
-.cpl
-.layout
-.res
-//KEY_PAD_DIVIDE
-/?KEY_SLASH
 /P8i
-/Steam3PosixRegistryManager
-/data/src/common/filesystem_helpers.cpp
-/data/src/common/language.cpp
-/data/src/common/platformhelpers.cpp
-/data/src/common/registry.cpp
-/data/src/common/timeutils.cpp
-/data/src/public/tier1/bitstring.h
-/data/src/public/tier1/interface.h
-/data/src/public/tier1/utlbuffer.h
-/data/src/public/tier1/utldict.h
-/data/src/public/tier1/utlhashmap.h
-/data/src/public/tier1/utllinkedlist.h
-/data/src/public/tier1/utlmemory.h
-/data/src/public/tier1/utlrbtree.h
-/data/src/public/tier1/utlstring.h
-/data/src/public/tier1/utlsymbol.h
-/data/src/public/tier1/utlvector.h
-/data/src/public/vector2d.h
-/data/src/public/vgui/ISurface.h
-/data/src/tier1/KeyValues.cpp
-/data/src/tier1/bitstring.cpp
-/data/src/tier1/fileio.cpp
-/data/src/tier1/interface.cpp
-/data/src/tier1/utlbuffer.cpp
-/data/src/tier1/utlmemory.cpp
-/data/src/tier1/utlstring.cpp
-/data/src/tier1/utlsymbol.cpp
-/data/src/vgui2/src/LocalizedStringTable.cpp
-/data/src/vgui2/src/NotificationManager.cpp
-/data/src/vgui2/src/Scheme.cpp
-/data/src/vgui2/src/SerializedSurface.cpp
-/data/src/vgui2/src/fonttexturecache.cpp
-/data/src/vgui2/src/inputbase.cpp
-/data/src/vgui2/src/inputlinux.cpp
-/data/src/vgui2/src/layoutfile.cpp
-/data/src/vgui2/src/surface_base.cpp
-/data/src/vgui2/src/surface_base.h
-/data/src/vgui2/src/surface_linux.cpp
-/data/src/vgui2/src/surface_opengl.cpp
-/data/src/vgui2/src/system_posix.cpp
-/data/src/vgui2/src/timeutils.cpp
-/data/src/vgui2/src/vgui.cpp
-/data/src/vgui2/src/vgui_key_translation.cpp
-/data/src/vgui2/src/vguisystemmoduleloader.cpp
-/data/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
-/data/src/vgui2/vgui_surfacelib/FontManager.cpp
-/data/src/vgui2/vgui_surfacelib/linuxfont.cpp
-/tmp/steam_chrome_overlay_uid%d_spid%s
-/usr/bin/xdg-open
 /yQA
-0)KEY_0
 00003333
-00:00:00
-01/01/00
 0123456789ABCDEF
-1!KEY_1
-1.2.11
-1.6.37
 10CInputBase
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI10CUtlSymbolE
@@ -427,20 +172,12 @@ $HOME/
 21CUtlCStringConversion
 23CVGuiSystemModuleLoader
 24CDirWatcherPollingThread
-2@KEY_2
-3#KEY_3
 3333
-333333
 3333UUUU
-333?333?333?333?Size() == operand.Size()
-4$KEY_4
 4IIME
 4i5U6B738%9
-5%KEY_5
 52F*
 5CVGui
-6^KEY_6
-7&KEY_7
 7CScheme
 7CSystem
 7CUtlMapI10CUtlStringxi8CDefLessE
@@ -459,209 +196,27 @@ $HOME/
 7CUtlPtrI16CStyleAppearanceE
 7style_t
 7~8A
-8*KEY_8
 8CUtlDictI5Color22CDefCaselessStringLessiE
-9(KEY_9
 9CStyleSet
 9IValidate
 9a&g
-:active
-:disabled
-:empty
-:focus
-:framefocus
-:hover
-:scrollbar
-:selected
-;:KEY_SEMICOLON
-< unknown >
-<333?B`
-=+KEY_EQUAL, L
-><Unknown font>
->pContext->m_pModalSubTree
-?/data/src/vgui2/src/surface_linux.h
-?ChromeHTML_Controller_003
-?No valid page for string texture of %dx%d size
-?Out of memory
-AKST
-ANDROID
-ANDROID32
-ANDROID64
-ASCII
-ASCII conversion buffer too small
-ASCII//TRANSLIT
-Adding custom font file: %s\n
-Afrikaans
-Albanian
-Amharic
-Application built with libpng-
-Application jmp_buf size changed
-Application must supply a known background gamma
-April
-Armenian
-Assamese
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-Assertion failed: length > k_cchMaxString
-AtomID
-AtomID 0x%x
-AudioSinkList
-August
-Azerbaijani
 B#C0D?EQFeG|H
-BCreateDirectory
-BIsOpen()
-BSaveBufferToFileWithTemporary() failed to find unused file temp name
-BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
-Bad expression token: %c %c\n
-Bad expression token: %c at %d in %s\n
-Bad format string in CLocalizeStringTable::ConstructString\n
-Bangla
-BaseSettings
-Basque
-Belarusian
-Bosnian
-BottomLeft
-BottomRight
-Breaking '%s' in '%s'\n
-BringToFront
 Bx\r9
 C-Yn
-CAudioController::ServiceMiles
-CAudioController::SetMilesMixFragmentMilliseconds
-CBaseSurface
-CBaseSurface::AreAnyPopupsViewable
-CBaseSurface::GetKernedCharSize
-CBaseSurface::GetTextSize
-CBaseSurface::InternalSchemeSettingsTraverse
-CBaseSurface::InternalSolveTraverse()
-CBaseSurface::InternalThinkTraverse()
-CBaseSurface::InternalThinkTraverse() dispatch
-CBaseSurface::PaintTraverse
-CBaseSurface::PaintTraverse Paint()
-CBaseSurface::PaintTraverse PaintBackground()
-CBaseSurface::PaintTraverse PostChildPaint()
-CBaseSurface::PaintTraverse appearance Paint()
-CBaseSurface::PaintTraverse appearance PaintBackground()
-CBaseSurface::PaintTraverse blocker subdivision
-CBaseSurface::PaintTraverse find opaque blocker
-CBaseSurface::PaintTraverse recursion
-CBaseSurface::PaintTraverse root appearance Paint()
-CBaseSurface::PaintTraverse root appearance PaintBackground()
-CBaseSurface::PushMakeCurrent
-CBaseSurface::RecomputeTraversalOrder
-CCopyableUtlVector()  - copycons
-CFileReader::BOpenFile
-CFileReader::Read
-CFileWriter::BOpenFileInternal
-CFontAmalgam
-CFontDataFile
-CFontInfo
-CFontManager
-CHROMEOS
-CInputBase
-CInputBase::InputContext_t
-CInputBase::IsChildOfModalPanel
-CLIPBOARD
-CLayoutFile::ValidateStatics
-CLinuxFont
-CLinuxSurface::IsWithin()
-CLinuxSurface::RunFrame() - Sleep
-CLocalizedStringTable
-CNotificationManager
-CONFIG
-COpenGLSurface::DrawGradientFilledRect
-COpenGLSurface::DrawSubTexturedRect
-COpenGLSurface::PushMakeCurrent
-CPathString
-CRC error
-CScheme
-CSchemeManager
-CSerializedSurface::DrawSetTextureRGBA
-CUtlDict
-CUtlHashMap::RemoveAt - Invalid index
-CUtlHashMap::RemoveAt - couldn't find bucket for item
-CUtlString::SetValue
-CUtlString::VFormat
-CUtlStringBuilder::Data::MoveToHeap
-CUtlStringBuilder::InternalPrepareBuffer
-CUtlSymbol::ValidateGlobals
-CUtlSymbolTable
-CVGui
-CVGui::DispatchMessages
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*)
 CValidator::ClaimMemory(void const*)
 CValidator::IsClaimed(void const*) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
-CVariableBitStringBase
-Call to NULL read function
-Call to NULL write function
-Can't discard critical data on CRC error
-Can't set both read_data_fn and write_data_fn in the same structure
-Can't write sCAL (buffer too small)
-Can't write tRNS with an alpha channel
-CanBeDefaultButton
-Catalan
-Changing resolution from (%d, %d) to (%d, %d)\n
-Cherokee
-ChromeController
-ClearSchemeSettings
-CloseExternal
-Closing socket.\n
-Command
-Compression buffer size cannot be changed because it is in use
-Compression buffer size cannot be reduced below 6
-Convars
-Could not connect to X session manager: %s\n
-Could not read existing registry file.
-Could not set CLIPBOARD selection.\n
-Couldn't find color '%s' referenced in render fill comand '%s'\n
-Couldn't find custom font file '%s'\n
-Couldn't find scheme color '%s'\n
 CreateInterface
-CreateMilesMusicAudioDevice
-CreateMilesSoundAudioDevice
-CreateMilesVoiceAudioDevice
-Croatian
-CursorEntered
-CursorEnteredChild
-CursorExited
-CursorExitedChild
-CursorMoved
-CustomFontFiles
-DBG_PATHMATCH
 DDDDUUUU
-DISPLAY
-DOCUMENTS
-DOWNLOAD
-Dari
-Days
-December
-DejaVu Sans
-Delayed
-DialogConfigOverlay_%dx%d.vdf
-DrawRenderCharFromInfo is not implemented and should not be needed in overlay\n
-DrawSetSubTextureRGBA called on invalid texture\n
-DrawSetSubTextureRGBA called on unallocated texture\n
-DrawSetSubTextureRGBA out of bounds (height)\n
-DrawSetSubTextureRGBA out of bounds (width)\n
 E=FZGrH
-EXECUTABLE_PATH
-Element( i )
 Error
-Error Serial #%d
-Error State on string being set.
-Error in FL_Load_Glyph: %x\n
-Error while parsing text KeyValues for resource %s
-Error: texture file '%s' does not exist or is invalid\n
-ErrorSerial
-Errors in %s:\n%s
-Estonian
-Expected %lld but got %lld!
-Extra compressed data
 FT_Done_Face
+FT_Done_FreeType
 FT_Get_Char_Index
 FT_Get_Kerning
 FT_Init_FreeType
@@ -670,11 +225,6 @@ FT_Load_Glyph
 FT_New_Face
 FT_New_Memory_Face
 FT_Set_Pixel_Sizes
-Failed loading registry KV.
-Failed to load "%s"
-Failed to load custom font file '%s'\n
-Failed to load optional module %s\n
-Fatal IO error %d (%s) on X server %s.\n
 FcCharSetCopy
 FcCharSetDestroy
 FcCharSetFirstPage
@@ -694,19 +244,10 @@ FcPatternCreate
 FcPatternDestroy
 FcPatternGetCharSet
 FcPatternGetString
-February
-Filipino
-FontManager()
-ForceQuit
-FreeAudioDevice
-Friday
-G/usr/share/applications
-GAME
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GCC: (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
 GCC: (crosstool-NG 1.17.0) 4.6.3
-GDK_SCALE
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
@@ -719,127 +260,16 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
-GL_ATI_meminfo
-GL_EXT_texture_filter_anisotropic
-GL_EXT_texture_lod_bias
-GL_NVX_gpu_memory_info
-Galician
-Georgian
-GetAbsoluteWindowBounds
-GetClientLauncherType
-GetInts()
+GetCPUInformation()
+GetNameFromOSType
 GetOSType
-GetTextureForString failed\n
-GetWin32Stats
-Gray color space not permitted on RGB PNG
-Gujarati
+GetSpewOutputFunc
 H$6t
 H*0"ZOW
-HKCR
-HKCU
-HKEY_CLASSES_ROOT
-HKEY_CURRENT_USER
-HKEY_CURRENT_USER\Software\Valve\Steam\DPIScaling
-HKEY_CURRENT_USER\Software\Valve\Steam\Language
-HKEY_LOCAL_MACHINE
-HKEY_LOCAL_MACHINE_WOW64_32
-HKEY_LOCAL_MACHINE_WOW64_64
-HKLM
-HKLM32
-HKLM64
-Hausa
-Hebrew
-Hindi
-Horizontal
-HotKeyPressed
-Hour
-Hours
-ICC profile length invalid (not a multiple of 4)
-ICC profile tag outside profile
-ICC profile tag start not a multiple of 4
-ICC profile too short
-ILocalize::AddFile() failed to load file "%s".\n
-INotificationManager()->RunFrame()
-IVALIDATE001
 IceConnectionNumber
 IceProcessMessages
-Icelandic
-Igbo
-Ignoring attempt to write 16-bit bKGD chunk when bit_depth is 8
-Ignoring attempt to write 16-bit tRNS chunk when bit_depth is 8
-Ignoring attempt to write bKGD chunk out-of-range for bit_depth
-Ignoring attempt to write tRNS chunk out-of-range for bit_depth
-Ignoring invalid time value
-Ignoring request to write a PLTE chunk in grayscale PNG
 IiGM>nw
-Image height exceeds user limit in IHDR
-Image height is zero in IHDR
-Image is too high to process with png_read_png()
-Image width exceeds user limit in IHDR
-Image width is too large for this architecture
-Image width is zero in IHDR
-Impl COpenGLSurface::DrawPolyLine()\n
-Insufficient memory for eXIf chunk data
-Insufficient memory for hIST chunk data
-Insufficient memory for pCAL parameter
-Insufficient memory for pCAL params
-Insufficient memory for pCAL purpose
-Insufficient memory for pCAL units
-Insufficient memory to process iCCP chunk
-Insufficient memory to process iCCP profile
-Insufficient memory to process text chunk
-Insufficient memory to store text
-Interlace handling should be turned on when using png_read_image
-Invalid IHDR data
-Invalid attempt to read row data
-Invalid background palette index
-Invalid bit depth for RGB image
-Invalid bit depth for RGBA image
-Invalid bit depth for grayscale image
-Invalid bit depth for grayscale+alpha image
-Invalid bit depth for paletted image
-Invalid bit depth in IHDR
-Invalid color type in IHDR
-Invalid color type/bit depth combination in IHDR
-Invalid compression type specified
-Invalid filter method in IHDR
-Invalid filter type specified
-Invalid format for pCAL parameter
-Invalid iCCP compression method
-Invalid image color type specified
-Invalid image height in IHDR
-Invalid image width in IHDR
-Invalid index %u
-Invalid interlace type specified
-Invalid m_Position for NotificationManager!\n
-Invalid number of colors in palette
-Invalid number of histogram entries specified
-Invalid number of transparent colors specified
-Invalid pCAL equation type
-Invalid pCAL parameter count
-Invalid palette
-Invalid palette length
-Invalid palette size, hIST allocation skipped
-Invalid sBIT depth specified
-Invalid sCAL height
-Invalid sCAL height ignored
-Invalid sCAL unit
-Invalid sCAL width
-Invalid sCAL width ignored
-Invalid sRGB rendering intent specified
-Invalid system directory %d
-Invalid time specified for tIME chunk
-Invalid width or height to AllocatePageForString()
-Irish
-IsInList(after)
-IsInList(before)
-IsValidIndex( elem )
-IsValidIndex(elem)
-JArray
-January
-July
-June
-K'iche'
+Is64BitOS
 KEY_APP
 KEY_BACKSPACE
 KEY_BREAK
@@ -898,74 +328,9 @@ KEY_UP
 KEY_VOLUME_DOWN
 KEY_VOLUME_MUTE
 KEY_VOLUME_UP
-KWM_WIN_DECORATION
-Kannada
-Kazakh
-KeyCodePressed
-KeyCodeReleased
-KeyCodeTyped
-KeyCodeUnhandled
-KeyFocusTicked
-KeyTyped
-KeyValues
-KeyValues Error: %s in file %s [offset: %d]\n
-KeyValues don't support #include anymore, file "%s"
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValuesSystemSteam
-Khmer
-KillFocus
-Kinyarwanda
-Konkani
-Kyrgyz
-LANG
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lspci -mm -n
-LINUX
-LINUX32
-LINUX64
-LOCK_EX
-LOCK_SH
-Label
-Latvian
-LayoutFileChanged
-Libpng jmp_buf still allocated
-Lithuanian
-LoadFileIntoBuffer: NULL parameters
-LoadFileRangeIntoBuffer_Internal
-LoadFromBuffer: missing {   (current key: '%s')
-LoadTGA: Only type 2 and 10 targa RGB images supported\n
-Loading raw RGBA texture with invalid height/width\n
-LocalizationFileChanged
-Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
-Lowered '%s' -> '%s'\n
-Luxembourgish
 M8MF
 MGiI
-MNG features are not allowed in a PNG datastream
-Macedonian
-MajorCode
-Malay
-Malayalam
-Maltese
-Maori
-Marathi
-March
-Marlett
-Matched '%s' -> '%s'\n
-Memory allocation failed while processing sCAL
-Menu
-MenuName
-Minute
-Minutes
-Missing IHDR before IDAT
-Missing PLTE before IDAT
-Monday
-Mongolian
-MouseCaptureLost
-MouseDoublePressed
-MouseFocusTicked
-MousePressed
-MouseReleased
-MouseScrolled
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N4vgui10IVGuiSetupE
@@ -996,156 +361,40 @@ N9__gnu_cxx26__concurrence_unlock_errorE
 NJ2"v
 NSt6locale5facetE
 NSt8ios_base7failureE
-NULL row buffer
 NV-CONTROL
-Nepali
-No IDATs written into file
-No font for char %u
-No profile for iCCP chunk
-No space in chunk cache for sPLT
-None
-Not a PNG file
-Not enough image data
-Not recognizing known sRGB profile that has been edited
-Notifications.DisplayTime
-Notifications.FadeInTime
-Notifications.FadeOutTime
-Notifications.PanelPosition
-Notifications.ScreenEdgePaddingHorizontal
-Notifications.ScreenEdgePaddingVertical
-Notifications.SlideDirection
-Notifications.StackSize
-November
-Num %5u, Size %4u, Total Kb %2u, Class %s\n
 O*9y]
-OSX1010
 OZw3(?
-October
-Odia
-On-disk registry has changed and is marked dirty - we're about to lose data.
-OnAppShutdown
-OnChromePaintBufferClientDisconnect m_mapChromePaintBufferHandleToData ulHandle %llu, texture ID %d\n
-OnChromePaintBufferClientDisconnect m_mapShMemFD has %d entries, m_mapChromePaintBufferHandleToData %d entries.\n
-OnChromePaintBufferClientDisconnect m_mapShMemFD pid %u, ShMemFD %d\n
-OnScreenSizeChanged
-OnTaskBarChanged
-Only compression method 8 is supported by PNG
-Only compression windows <= 32k supported by PNG
-Only compression windows >= 256 supported by PNG
-OpenGL GLX context is not using direct rendering
-OpenGL GLX context is not using direct rendering, which may cause performance problems.\n\nFor more information visit https://support.steampowered.com/kb_article.php?ref=9938-EYZB-7457
-OpenGL GLX extension not supported by display
-Out of Memory
-Overwriting on-disk registry with newly created registry.
-PCS illuminant is not D50
-PICTURES
-PLATFORM
-PNG file corrupted by ASCII conversion
-PNG load error %s\n
-PNG load warning %s\n
-PNG unsigned integer out of range
-PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
-POSIX
-Palette is NULL in indexed image
 Pe6^
-Persian
-Pid that we should be watching for
+Plat_AbsoluteTime
+Plat_AbsoluteTimeToFloat
 Plat_CommandLineParamExists
 Plat_CommandLineParamValue
 Plat_FloatTime
+Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
+Plat_IsSteamDeck
+Plat_IsSteamOS
+Plat_IsSteamOS3
+Plat_IsWSL
 Plat_MSTime
+Plat_OutputDebugString
+Plat_OutputDebugStringRaw
 Plat_RelativeTicks
+Plat_VirtualAccessFlags
+Plat_ctime
+Plat_daylight
+Plat_gmtime
 Plat_localtime
-Platform
-Platform Error: bad module '%s', not loading\n
-Platform Error: module '%s' failed to initialize\n
-Platform Error: module version ('%s, %s) invalid, not loading\n
-Potential overflow in png_zalloc()
-Primary
-Print out details of which panel has keyboard focus
-Punjabi (Gurmukhi)
-Punjabi (Shahmukhi)
+Plat_timegm
+Plat_timezone
 Qkkbal
-Quechua
 QyReSOT5U
 R1h58
-RGB color space not permitted on grayscale PNG
-RGBA: %.2X %.2X %.2X %.2X
-Read Error
-Read failure in png_handle_zTXt
-Read palette index exceeding num_palette
-Really too many panels, crashing
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
-Registry
-Remaining
-Render command has left edge > right edge: '%s'\n
-Render command has top edge > bottom edge: '%s'\n
-Render command has x0 and x1 reversed: '%s'\n
-Render command has y0 and y1 reversed: '%s'\n
-Request Major code %d
-ResourceID
-ResourceID 0x%x
-Row has too many bytes to allocate in memory
-SDL_GetDisplayName
-SDL_GetJoystickNameForID
-SDL_GetJoysticks
-SDL_GetPowerInfo
-SDL_GetPrimaryDisplay
-SDL_InitSubSystem
-SDL_QuitSubSystem
-SDL_free
-SESSION_MANAGER
-SKIN
 SKyu
-SOFTWARE\Valve\Steam
-STEAM_IGNORE_INDIRECT_RENDERING
-STEAM_INPUT_FOCUS
-STEAM_OVERLAY
-Saturday
-SaveBufferToFile: couldn't open file "%s" in path "%s".\n
-Saving unknown chunk:
-Scots
-Second
-Secondary
-Seconds
-Seeking to a position which is not sector aligned will break unbuffered io
-SendSHMemFDToClient pid %d failed: %d %s\n
-September
-Serbian
-SerializedSurface::DrawLine() not yet implemented\n
-SerializedSurface::DrawOutlinedCircle() not yet implemented\n
-SerializedSurface::DrawPolyLine() not yet implemented\n
-SerializedSurface::DrawTexturedLine() not yet implemented\n
-SerializedSurface::DrawTexturedPolyLine() not yet implemented\n
-SerializedSurface::DrawTexturedPolygon() not yet implemented\n
-SerializedSurface::DrawTexturedSubRect() not yet implemented\n
-SerializedSurface::RestrictPaintToSinglePanel() not yet implemented\n
-Set Steam client UI language
-SetAlpha
-SetFocus
-SetForegroundWindow
-SetMouseFocus()
-SetScreenSize from (%d, %d) to ( %d, %d )\n
-SetTopLevelFocus
-ShellExecute
-Simplified_Chinese
-Sindhi
-Sinhala
-Slovak
-Slovenian
 SmcCloseConnection
 SmcGetIceConnection
 SmcOpenConnection
 SmcSaveYourselfDone
-SolveTraverse
-Sorani
-Sotho
-Spew details about the localized strings we load
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -1214,10 +463,6 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
-Steam - DirWatcher
-Steam: An X Error occurred\n
-SteamApp
-SteamChina_SChinese
 SteamRealPath
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
@@ -1225,113 +470,73 @@ SteamStdLib::CommandLine()
 SteamThreadTools::CThread::CThread()
 SteamThreadTools::CThread::GetThreadProc()
 SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::IsAlive() const
 SteamThreadTools::CThread::IsThreadRunning() const
 SteamThreadTools::CThread::Join(unsigned int)
 SteamThreadTools::CThread::OnExit()
 SteamThreadTools::CThread::SetName(char const*)
 SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Terminate(int)
 SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 SteamThreadTools::CThreadFullMutex::Release()
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+SteamThreadTools::CThreadLocalBase::Get() const
+SteamThreadTools::CThreadLocalBase::Set(void*)
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-Sunday
-SurfaceSetCursorPos needs to be implemented!\n
-Swahili
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-TARGETS
-TEXT
-TLS init function for 
-TLS wrapper function for 
-Table %s Key %d\n
-Tajik
-Tamil
-Tatar
-Telugu
-Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)\n
+StringAfterPrefix
+StringAfterPrefixCaseSensitive
+TSListBase_Init
+TSListBase_Pop
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
+ThreadGetCurrentProcessId
 ThreadImplOneTimeInit
+ThreadInMainThread
+ThreadInterlockedDecrement
+ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
+ThreadInterlockedIncrement
 ThreadSleep
-Thursday
-Tick
-Tigrinya
-Tokens
-Too many bytes for PNG signature
-Too many vgui panels, NULL busiest parent\n
-Too many vgui panels, busiest parent %s/%s\n
-Too much image data
-TopLeft
-TopRight
-Traditional_Chinese
-Tswana
-Tuesday
-Turkmen
-UTF-8
-UTF8_STRING
 UUUU
-Unable to find font named %s\n
-Unable to initalize freetype library, is it installed?
-Unable to open display
-Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
-Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
-Unhandled eRegKeyRoot passed into HKeyGet
-UnhandledMouseClick
-Uninitialized row
-Unknown compression method in IHDR
-Unknown custom filter method
-Unknown filter method in IHDR
-Unknown freer parameter in png_data_freer
-Unknown interlace method in IHDR
-Unknown key '%s' set in style '%s' in file '%s'\n
-Unknown row filter for method 0
-Unmatched %s\n
-Unrecognized equation type for pCAL chunk
-Unrecognized unit type for oFFs chunk
-Unrecognized unit type for pHYs chunk
-UpdateMouseFocus()
-Urdu
-Uyghur
-Uzbek
-VALVE_BRING_TO_TOP
-VALVE_SET_VISIBLE
-VFileSystem014
-VGUI
-VGUI Globals
-VGUI trying to serialize out of bounds of texture\n
-VGUISetup
-VGUI_Application_001
-VGUI_Input005
-VGUI_InputInternal001
-VGUI_Localize003
-VGUI_NotificationManager002
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Setup001
-VGUI_Surface039
-VGUI_System011
-VGUI_ivgui007
-VGuiModuleLoader004
-VIDEOS
-VISTA
 VProfInternalEnterScopeCurrentThread
-VTT for 
+V_AggressiveStripPrecedingAndTrailingWhitespace
+V_AppendSlash
+V_ComposeFileName
 V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
+V_ExtractFileExtension
+V_ExtractFilePath
 V_FixDoubleSlashes
 V_FixSlashes
+V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_MakeAbsolutePath
 V_RemoveDotSlashes
-V_RemoveDotSlashes failed for "%s".
+V_SplitNumbers
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
+V_StrTrim
+V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
 V_UTF16ToUTF32
 V_UTF16ToUTF8
 V_UTF32ToUTF16
 V_UTF32ToUTF8
+V_UTF8ToUChar32
 V_UTF8ToUTF16
 V_UTF8ToUTF32
 V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t>>&, int, EStringConvertErrorPolicy)
@@ -1340,6 +545,9 @@ V_atof
 V_atoi
 V_atoui64
 V_binarytohex
+V_hextobinary
+V_isnumeric
+V_isvalidhex
 V_snprintf
 V_strcat
 V_stricmp_filename
@@ -1351,6 +559,8 @@ V_strnchr
 V_strncmp
 V_strncpy
 V_strnicmp
+V_strnistr
+V_strtoi64
 V_strtoui64
 V_tolower
 V_towlower32
@@ -1358,40 +568,17 @@ V_towupper32
 V_vsnprintf
 V_vsnprintfRet
 V_wcsncpy
+V_wcstoi64
 V_wcstoui64
-Valencian
-Valid palette required for paletted images
-Value 0x%x
-Valve Steam Client
-Valve Steam Client/%s
-Valve Steam GameOverlay
 Vc0a
-Vertical
-WIN32
-WIN64
-WIN7
-WINDOWS
-WM_DELETE_WINDOW
-WM_PROTOCOLS
-WORKAROUND_GdbSymbolLoadHook
 Warning
 WeakRandomUint32
-Wednesday
-Welsh
-WindowMaximized
-WindowRestored
-WindowsEndSession
-Wolof
-Write Error
-Writing zero-length unknown chunk
-Wrote palette index exceeding num_palette
-X Error
-X360
 XAllocClassHint
 XAllocNamedColor
 XAllocSizeHints
 XAllocWMHints
 XAutoRepeatOn
+XChangeKeyboardMapping
 XChangeProperty
 XCheckIfEvent
 XCheckMaskEvent
@@ -1404,36 +591,43 @@ XCreateFontCursor
 XCreateIC
 XCreatePixmapCursor
 XCreateWindow
-XDG_
-XDG_CONFIG_HOME
+XDefaultRootWindow
 XDefaultScreen
+XDefaultVisual
 XDefineCursor
 XDeleteProperty
 XDestroyWindow
 XDisplayHeight
 XDisplayHeightMM
+XDisplayKeycodes
 XDisplayWidth
 XDisplayWidthMM
-XError
 XEventsQueued
 XFilterEvent
 XFlush
 XFree
 XFreeColormap
 XFreeCursor
+XFreeEventData
 XFreePixmap
 XGetErrorDatabaseText
 XGetErrorText
+XGetEventData
 XGetICValues
 XGetInputFocus
+XGetKeyboardMapping
 XGetSelectionOwner
+XGetTextProperty
+XGetWMProtocols
 XGetWindowAttributes
 XGetWindowProperty
 XGrabPointer
+XIQueryVersion
+XISelectEvents
 XIconifyWindow
 XInitThreads
-XInitThreads failed!
 XInternAtom
+XKeysymToKeycode
 XLookupKeysym
 XMapRaised
 XMapWindow
@@ -1471,13 +665,12 @@ XNVCtrlSelectTargetNotify
 XNextEvent
 XOpenDisplay
 XOpenIM
-XOpenIM() failed, LANG = %s
 XPeekEvent
 XPeekIfEvent
 XPending
 XPutBackEvent
+XQueryExtension
 XQueryPointer
-XQueryTree
 XRRFreeScreenResources
 XRRGetCrtcInfo
 XRRGetOutputInfo
@@ -1485,8 +678,9 @@ XRRGetOutputPrimary
 XRRGetScreenResources
 XRRQueryExtension
 XRRQueryVersion
+XRRSelectInput
 XRaiseWindow
-XRequest
+XRenderFindVisualFormat
 XSelectInput
 XSendEvent
 XSetClassHint
@@ -1500,6 +694,7 @@ XSetWMName
 XSetWMNormalHints
 XSetWMProtocols
 XSync
+XTestFakeKeyEvent
 XTranslateCoordinates
 XUngrabPointer
 XUnmapWindow
@@ -1508,71 +703,32 @@ XextAddDisplay
 XextCreateExtension
 XextFindDisplay
 XextRemoveDisplay
-Xhosa
 XineramaIsActive
 XineramaQueryExtension
 XineramaQueryScreens
 XineramaQueryVersion
-XlibMessage
+XkbGetNamedIndicator
+XkbKeycodeToKeysym
 XsBI
 XwcLookupString
 XwcTextListToTextProperty
 YbZ6[
-YearOrMore
-Yoruba
-You need to name the scheme!
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
-Z_OK on Z_FINISH with output space
 Zjz\v
-Zulu
-[%s] unexpected parameter for height="%s" - must be either a number, or "max"\n
-[%s] unexpected parameter for width="%s" - must be either a number, or "max"\n
-[%s] unknown layout command '%s' (valid values 'region', 'place')\n
-[abi:
-[english]
 [h1R
-[{KEY_LBRACKET
-\n Total Panels %u, total size in Kb %u \n
-\nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \rmj>zjZ
-\t(%zu) comparing %s with %s\n
 \t\t\n\n\v\v\f\f\f\f\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\tpanel '%s' of type '%s' leaked\n
-\|KEY_BACKSLASH
-]}KEY_RBRACKET
 ^oEZ_
-_Accum
-_DIR
-_Fract
-_GLOBAL_
+_DMsg
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( elem, unNodeSize, pMemBase )
-_IsValidIndex( y, unNodeSize, pMemBase )
-_KDE_NET_WM_WINDOW_TYPE_OVERRIDE
-_MOTIF_WM_HINTS
-_NET_ACTIVE_WINDOW
-_NET_CURRENT_DESKTOP
-_NET_WM_ACTION_RESIZE
-_NET_WM_ALLOWED_ACTIONS
-_NET_WM_ICON
-_NET_WM_MOVERESIZE
-_NET_WM_STATE
-_NET_WM_STATE_HIDDEN
-_NET_WM_STATE_MAXIMIZED_HORZ
-_NET_WM_STATE_MAXIMIZED_VERT
-_NET_WM_WINDOW_OPACITY
-_NET_WM_WINDOW_TYPE
-_NET_WM_WINDOW_TYPE_MENU
-_NET_WORKAREA
-_Sat 
-_WIN_HINTS
+_SpewMessageType
 _XEatData
 _XGetRequest
 _XRead
@@ -1580,82 +736,49 @@ _XReply
 _XSend
 _XSetLastRequestRead
 ___tls_get_addr
-___tls_get_addr@GLIBC_2.3
-__bss_start
 __ctype_b_loc
-__ctype_b_loc@GLIBC_2.3
 __ctype_get_mb_cur_max
-__ctype_get_mb_cur_max@GLIBC_2.0
+__ctype_tolower_loc
 __cxa_atexit
-__cxa_atexit@GLIBC_2.1.3
 __cxa_finalize
-__cxa_finalize@GLIBC_2.1.3
+__dprintf_chk
 __duplocale
-__duplocale@GLIBC_2.1
 __errno_location
-__errno_location@GLIBC_2.0
-__float128
 __fprintf_chk
-__fprintf_chk@GLIBC_2.3.4
+__fread_chk
 __freelocale
-__freelocale@GLIBC_2.1
 __fxstat64
-__fxstat64@GLIBC_2.2
 __gmon_start__
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
+__isoc99_sscanf
 __iswctype_l
-__iswctype_l@GLIBC_2.1
 __longjmp_chk
-__longjmp_chk@GLIBC_2.11
-__lxstat64@GLIBC_2.2
-__lxstat@GLIBC_2.0
+__lxstat
+__lxstat64
 __memcpy_chk
-__memcpy_chk@GLIBC_2.3.4
 __newlocale
-__newlocale@GLIBC_2.1
 __nl_langinfo_l
-__nl_langinfo_l@GLIBC_2.2
+__printf_chk
 __pthread_key_create
-__pthread_key_create@GLIBC_2.0
 __realpath_chk
-__realpath_chk@GLIBC_2.4
 __snprintf_chk
-__snprintf_chk@GLIBC_2.3.4
 __sprintf_chk
-__sprintf_chk@GLIBC_2.3.4
 __stack_chk_fail
-__stack_chk_fail@GLIBC_2.4
 __strcoll_l
-__strcoll_l@GLIBC_2.1
 __strcpy_chk
-__strcpy_chk@GLIBC_2.3.4
 __strftime_l
-__strftime_l@GLIBC_2.3
 __strtod_l
-__strtod_l@GLIBC_2.1
 __strtof_l
-__strtof_l@GLIBC_2.1
 __strxfrm_l
-__strxfrm_l@GLIBC_2.1
 __swprintf_chk
-__swprintf_chk@GLIBC_2.4
 __towlower_l
-__towlower_l@GLIBC_2.1
 __towupper_l
-__towupper_l@GLIBC_2.1
 __uselocale
-__uselocale@GLIBC_2.3
 __vasprintf_chk
-__vasprintf_chk@GLIBC_2.8
+__vsnprintf_chk
 __wcscoll_l
-__wcscoll_l@GLIBC_2.1
 __wcsftime_l
-__wcsftime_l@GLIBC_2.3
 __wcsxfrm_l
-__wcsxfrm_l@GLIBC_2.1
 __wctype_l
-__wctype_l@GLIBC_2.1
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -1695,349 +818,100 @@ __wrap_unlink
 __wrap_utime
 __wrap_utimes
 __xmknod
-__xmknod@GLIBC_2.0
-__xstat64@GLIBC_2.2
-__xstat@GLIBC_2.0
-_childDar
-_edata
-_end
-_english.txt
+__xstat
+__xstat64
 _exit
-_exit@GLIBC_2.0
 _fini
-_popupList
+_init
 _setjmp
-_setjmp@GLIBC_2.0
+_strlwr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
-`~KEY_BACKQUOTE
-aAKEY_A
 abort
-abort@GLIBC_2.0
 accept
-accept@GLIBC_2.0
-access@GLIBC_2.0
-additive
-afrikaans
-alCaptureDevice
-albanian
+access
 alcGetString
-align
-alignof 
-allow-both
-allow-horizontal
-allow-vertical
-alnum
-alpha
 alphasort64
-alphasort64@GLIBC_2.2
-amharic
-antialias
-ar_AE
-arabic
-armenian
-assamese
-auto
-auto:
-azerbaijani
-bBKEY_B
-bHasReachedStart
 bKGD
-bKGD must be after
-background color must be supplied to remove alpha/transparency
-bad 2x texture: %s is %dx%d, expected %dx%d\n
-bad adaptive filter value
-bad background index (internal error)
-bad color-map processing (internal error)
-bad compression info
-bad compression method
-bad data option (internal error)
-bad encoding (internal error)
-bad height format
-bad keyword
-bad longjmp: 
-bad parameters to zlib
-bad width format
-bangla
-basic_ios::clear
-basic_iostream
-basic_istream
-basic_ostream
-basic_string::_M_replace_aux
-basic_string::_S_construct null not valid
-basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::copy
-basic_string::erase
-basic_string::resize
-basque
-belarusian
-bg_BG
 bind
-bind@GLIBC_2.0
 bind_textdomain_codeset
-bind_textdomain_codeset@GLIBC_2.2
-bitNum >= 0 && bitNum < this->Size()
-black
-blank
-blur
-bool
-boolean
-bosnian
-bottom-right
-brazilian
+bindtextdomain
 btowc
-btowc@GLIBC_2.0
-buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
-buffer error
-bulgarian
-byte
-cCKEY_C
 cHRM
-cHRM Blue X
-cHRM Blue Y
-cHRM Blue Z
-cHRM Green X
-cHRM Green Y
-cHRM Green Z
-cHRM Red X
-cHRM Red Y
-cHRM Red Z
-cHRM White X
-cHRM White Y
-cHRM chunk does not match sRGB
-can't convert int64 to uint64 (negative number)
-can't convert uint64 to int32 (data loss)
-catalan
-cbActual < (uint32)nBufSizeWithTerminator
-cbToRead <= 1024 * 1024 * 1024
-changing kb focus from %s (%p) to %s (%p)\n
-changing mouse focus from %s to %s\n
-char16_t
-char32_t
-char8_t
-charset
-chdir@GLIBC_2.0
-cherokee
-chmod@GLIBC_2.0
-chown@GLIBC_2.1
-chunk data is too large
-clientWindow
-clientui.so
+calloc
+chdir
+chmod
+chown
+clock_gettime
+close
 closedir
-closedir@GLIBC_2.0
-cntrl
-color map overflow (BAD internal error)
-color-map index out of range
-colors
-command
-complex 
-compressed data too long
-conflicting calls to set alpha mode and background
-const_cast
-construction vtable for 
-context != DEFAULT_INPUT_CONTEXT
-context != DEFAULT_VGUI_CONTEXT
-control
-controls
-copypos == vecTraversalCache.Count()
-corner
-corner_rounding
-count >= 0
-covariant return thunk to 
-croatian
-cs_CZ
-cubBytesToRead < INT32_MAX
-custom
-czech
-dDKEY_D
 dQy/
-da_DK
-damaged LZ stream
-danish
-dari
-dashedrect
-data error
-days
-de_DE
-decimal128
-decimal32
-decimal64
-decltype (
-decltype(auto)
-decltype(nullptr)
-default
-deferredFontName
-deflateEnd failed (ignored)
-delete 
-delete[] 
-delta
-desc.maxCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.maxCodePoint) && (desc.maxCodePoint == curChar + 0xff || !FcCharSetHasChar(diffSet, desc.maxCodePoint + 1))
-desc.minCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.minCodePoint) && (desc.minCodePoint == curChar || !FcCharSetHasChar(diffSet, desc.minCodePoint - 1))
-descs.Count() >= 1
 dgettext
-dgettext@GLIBC_2.0
-dialogName && *dialogName
 dl_iterate_phdr
-dl_iterate_phdr@GLIBC_2.2.4
 dlclose
-dlclose@GLIBC_2.0
 dlerror
-dlerror@GLIBC_2.0
-dlmopen %s failed: %s\n
-dlmopen@GLIBC_2.3.4
-dlopen@GLIBC_2.1
+dlmopen
+dlopen
 dlsym
-dlsym@GLIBC_2.0
-doW!
-drawY < page.tall
-drawY >= 0
-dropshadow
-dupKeyMap
-duplicate
-duplicate sRGB information ignored
-dutch
-dynamic_cast
-eEKEY_E
 eXIf
-el_GR
-elem + num <= Count()
-elem >= 0 && num >= 0 && INT_MAX - elem >= num
-en_US
-end-down
-end-right
+endmntent
 english
-error in user chunk
-error loading file '%s', %s\n
-error writing ancillary chunked compressed data
-es-419
-es_419
-es_ES
-estonian
 eventfd
-eventfd@GLIBC_2.7
 ewh/?y
-exceeds application limits
 execl
-execl failed, errno %d\n
-execl@GLIBC_2.0
-extra compressed data
-fFKEY_F
 fP~V
 faccessat
-faccessat@GLIBC_2.4
-false
-false 
+fallocate64
 fclose
-fclose@GLIBC_2.1
 fcntl
-fcntl@GLIBC_2.0
 fdatasync
-fdatasync@GLIBC_2.0
+fdopen
+feof
 ferror
-ferror@GLIBC_2.0
 fflush
-fflush@GLIBC_2.0
+fgetc
 fgets
-fgets@GLIBC_2.0
-fi_FI
-file error
-filesystem
-filipino
-fill
-fill4
-filterEvents
-finnish
-fixed point overflow ignored
-flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
-flags
-float
+fileno
 flock
-flock %s %s failed. errno = %d
-flock LOCK_EX %s failed, errno = %d\n
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
-flock@GLIBC_2.0
 floor
-floor@GLIBC_2.0
 fnmatch
-fnmatch@GLIBC_2.2.3
-focusWindow
-font != INVALID_FONT
-font != vgui::INVALID_FONT
-font-family
-font-outerglow-color
-font-outerglow-filter
-font-outerglow-filtersize
-font-outerglow-offset
-font-size
-font-style
-font-weight
-fopen64@GLIBC_2.1
-fopen@GLIBC_2.1
-forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
+fopen
+fopen64
 fork
-fork@GLIBC_2.0
 fprintf
-fprintf@GLIBC_2.0
 fputc
-fputc@GLIBC_2.0
 fputs
-fputs@GLIBC_2.0
-fr_FR
 fread
-fread@GLIBC_2.0
 free
-free@GLIBC_2.0
-french
-freopen@GLIBC_2.0
+freeaddrinfo
+freopen
 frexp
-frexp@GLIBC_2.0
+fscanf
+fseek
 fseeko64
-fseeko64@GLIBC_2.1
-fsync %s failed, errno = %d\n
 ftello64
-ftello64@GLIBC_2.1
+ftruncate64
 fu`z
+futimes
 fwrite
-fwrite@GLIBC_2.0
 gAMA
-gGKEY_G
 g_ClockSpeed
-g_NotificationManager
-g_Scheme
-g_StringTable
-g_System
-g_VGui
-g_VGuiSetup
 g_VProfProfilesRunningCount
-g_VecLoadedModules
-g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 g_main_context_iteration
-g_pInputBase
-g_pInternalSurface
 g_pMemAllocSteam
-g_treeValidStyleKeySymbols
-ga-alpha color-map: too few entries
-galician
-gameoverlayrenderer.so
-gamma table being rebuilt
-gamma value
-gamma value does not match libpng estimate
-gamma value does not match sRGB
-gamma value out of range
-georgian
-german
+getaddrinfo
+getc
 getcwd
-getcwd@GLIBC_2.0
 getenv
-getenv@GLIBC_2.0
+getmntent
+getsockname
+gettext
 getuid
-getuid@GLIBC_2.0
+getwc
 glBegin
 glBindTexture
 glBlendFunc
@@ -2053,10 +927,6 @@ glGenTextures
 glGetIntegerv
 glGetString
 glIsTexture
-glIsTexture( id )
-glIsTexture( id ) == GL_TRUE
-glIsTexture( nTextureID ) == GL_TRUE
-glIsTexture( textureID ) == GL_TRUE
 glLineWidth
 glLoadIdentity
 glMatrixMode
@@ -2072,207 +942,45 @@ glTexSubImage2D
 glTranslatef
 glVertex2f
 glViewport
+glXChooseFBConfig
 glXChooseVisual
-glXChooseVisual failed
 glXCreateContext
-glXCreateContext failed
 glXDestroyContext
 glXGetCurrentContext
 glXGetCurrentDisplay
 glXGetCurrentDrawable
+glXGetVisualFromFBConfig
 glXIsDirect
 glXMakeCurrent
 glXQueryExtension
 glXSwapBuffers
-global constructors keyed to 
-global destructors keyed to 
 gmtime
-gmtime@GLIBC_2.0
+gnu_get_libc_version
 gqr<
-gradient
-gradient_horizontal
-graph
-gray+alpha color-map: too few entries
-gray-alpha color-map: too few entries
-gray[16] color-map: too few entries
-gray[8] color-map: too few entries
-greek
-grow-horizontal
-grow-vertical
 gtk_disable_setlocale
 gtk_init
-guard variable for 
-gujarati
-gurmukhi
-hHKEY_H
 hIST
-hIST must be after
 hPU3
-half
-handleValue
-hausa
-header crc mismatch
-hebrew
-hidden alias for 
-hindi
-hours
-hu_HU
-hungarian
 hxi(j
 i91k
 iCCP
-iCCP: invalid keyword
-iIKEY_I
-iRet > 0
 iTXt
-iTXt: invalid compression
-iTXt: invalid keyword
-iTXt: uncompressed text too long
 i]Wb
-icelandic
 iconv
-iconv@GLIBC_2.1
 iconv_close
-iconv_close@GLIBC_2.1
 iconv_open
-iconv_open@GLIBC_2.1
-id_ID
-igbo
-ignored in grayscale PNG
-ignoring out of range rgb_to_gray coefficients
-image
-image row stride too large
-image_proportional
-image_scale
-image_tiled
-imaginary 
-in use by IDAT
-incompatible version
-inconsistent chromaticities
-inconsistent rendering intents
-incorrect byte-order specifier
-incorrect data check
-incorrect header check
-incorrect length check
-index != m_mapFontTextureCache.InvalidIndex()
-indonesian
-info change after png_start_read_image or png_read_update_info
-info.m_pReplacementString == 0
-input()->RunFrame()
-inputContext.m_KeyCodeUnhandledListeners
-inputContext.m_VecPotentialDefaultButtons
-inputContext.m_mapKeyCodeHooks
-inputStyle
-inset
-inset-bottom
-inset-left
-inset-right
-inset-top
-insufficient memory
-insufficient memory to read chunk
-intent outside defined range
-interface
-internal error checking chromaticities
-internal error handling cHRM coefficients
-internal error handling cHRM->XYZ
-internal error: array alloc
-internal error: array realloc
-internal row logic error
-internal row size calculation error
-internal row width error
-internal sequential row size calculation error
-internal write transform logic error
-invalid
-invalid ICC profile color space
-invalid PNG color type
-invalid after png_start_read_image or png_read_update_info
-invalid alpha mode
-invalid background gamma type
-invalid before the PNG header has been read
-invalid bit length repeat
-invalid block type
-invalid chromaticities
-invalid chunk type
-invalid code -- missing end-of-block
-invalid code lengths set
-invalid color
-invalid compression buffer size
-invalid data
-invalid distance code
-invalid distance too far back
-invalid distances set
-invalid embedded Abstract ICC profile
-invalid end points
-invalid error action to rgb_to_gray
-invalid file gamma in png_set_gamma
-invalid gray level
-invalid index
-invalid length
-invalid literal/length code
-invalid literal/lengths set
-invalid location in png_set_unknown_chunks
-invalid memory read
-invalid parameter count
-invalid rendering intent
-invalid sRGB rendering intent
-invalid screen gamma in png_set_gamma
-invalid signature
-invalid stored block lengths
-invalid unit
-invalid unknown chunk location
-invalid user transform pixel depth
-invalid values
-invalid window size
-invalid window size (libpng)
-invalid with alpha channel
 ioctl
-ioctl@GLIBC_2.0
-irish
 isalnum
-isalnum@GLIBC_2.0
 isspace
-isspace@GLIBC_2.0
 iswcntrl
-iswcntrl@GLIBC_2.0
 iswspace
-iswspace@GLIBC_2.0
-it_IT
-italian
-italic
-jJKEY_J
-ja_JP
-japanese
-java Class for 
-java resource 
-kKKEY_K
-k\fC0123456789ABCDEF
-kannada
-kazakh
-keyMap
-keyword "@1": bad character '0x@2'
-keyword truncated
-khmer
-kiche
-kinyarwanda
-known incorrect sRGB profile
-ko_KR
-konkani
-koreana
-kyrgyz
+kill
 l6qnk
 lDa>
-lLKEY_L, L
-lastProgressUpdateTime <= currentTime
-latam
-latvian
-lchown@GLIBC_2.0
+lchown
 ld-linux.so.2
-left-center
-length does not match profile
-length exceeds PNG maximum
 libGL.so.1
 libICE.so.6
-libSDL3.so.0
 libSM.so.6
 libX11.so.6
 libXext.so.6
@@ -2281,7 +989,6 @@ libXinerama.so.1
 libXrandr.so.2
 libXrender.so.1
 libXtst.so.6
-libaudio.so
 libc.so.6
 libdl.so.2
 libfontconfig.so.1
@@ -2290,662 +997,142 @@ libglib-2.0.so.0
 libgtk-x11-2.0.so.0
 libm.so.6
 libopenal.so.1
-libpng does not support gamma+background+rgb_to_gray
-libpng error: %s
-libpng warning: %s
 libpthread.so.0
 librt.so.1
-libsteam.so
 libtier0_s.so
-libunity.so.9
 libvstdlib_s.so
+link
 listen
-listen@GLIBC_2.0
-lithuanian
-locale::facet::_S_create_c_locale name not valid
-localtime@GLIBC_2.0
-long double
+localeconv
+localtime
 longjmp
-longjmp@GLIBC_2.0
-lost rgb to gray
-lost/gained channels
-lower
-lowercase
+lseek
 lseek64
-lseek64@GLIBC_2.2
-luxembourgish
-mMKEY_M
-m_Colors
-m_Contexts
-m_Contexts[i]
-m_CustomFontFileNames
-m_DefaultInputContext
-m_DelayedMessageQueue
-m_DelayedMessageQueue.Element(i)._params
-m_DirWatcher
-m_Elements
-m_ExtendedABCWidthsCache
-m_Factories
-m_FastValueLookup
-m_FileTypeImages
-m_FontAliases
-m_FontAmalgams
-m_FontAmalgams.IsValidIndex( font )
-m_FontAmalgams[iFont]
-m_FontDataFileNames
-m_FontDataFiles
-m_FontDataFiles[ i ]
-m_Fonts
-m_Fonts[i].font->IsValid()
-m_GraphicsOptions
-m_LocalizationFiles
-m_Lookup
-m_Memory
-m_Menus
-m_MessageQueue
-m_MessageQueue[i]._params
-m_Modules
-m_Names
-m_PaintStateStack[top].m_pPanel == pPanel
-m_PaintStateStack[top].m_pPanel == panel
-m_PanelList
-m_PanelList.IsValidIndex(index)
-m_PanelList[ iPanel ].m_pPanel
-m_PlatformFonts
-m_PlatformFonts[ i ]
-m_Schemes
-m_Schemes[ iScheme ]
-m_SecondaryQueue
-m_SecondaryQueue[i]._params
-m_StringPools
-m_StyleSet
-m_TickSignalVec
-m_TotalElements != InvalidIndex()
-m_Tree
-m_VGuiSurfaceTextures
-m_VPanelScreenSizes
-m_Values
-m_VecDrawOps
-m_VecDrawOpsBackground
-m_bInResizeMove
-m_bitsMigratedBuckets
-m_descs
-m_dictBitmaps
-m_dictBitmaps[ iBitmap ]
-m_dictColors
-m_dictLayoutFiles
-m_dictLayoutFiles[i]
-m_dictMenuFiles
-m_errorIndex>=0
-m_fdShMemFDSender >= 0
-m_font
-m_hashUniqueStyles
-m_heap
-m_iStart <= m_iEnd
-m_kvFile
-m_kvSettings
-m_listChangedFiles
-m_mapFileTimes
-m_mapFonts
-m_mapFonts.Key( i ).m_sFontFamily
-m_mapHTMLPanels
-m_mapStyleAppearances
-m_mapStyleLists
-m_memNodes
-m_nAllocationCount >= 0
-m_pData
-m_pMemory
-m_pPlatformModuleData
-m_pRef->m_pT
-m_pUserConfigData
-m_pkv
-m_pkvCurrentParams
-m_pthreadWatcher
-m_rgPageLists[pagetype].IsValidIndex( pageIndex )
-m_sBaseLayoutFile
-m_sDirToWatchForChanges
-m_sEndDown
-m_sEndRight
-m_sErrors
-m_sFileName
-m_sFontOverride
-m_sLanguage
-m_sName
-m_sRegionName
-m_sStart
-m_strDirectory
-m_strLanguage
-m_strName
-m_treeIKeySymbolLists
-m_vecBaseStyleSets
-m_vecControlNames
-m_vecHashBuckets
-m_vecKeySymbolLists
-m_vecLayoutCmds
-m_vecPanelList
-m_vecPanelsToDelete
-m_vecParentNames
-m_vecRegisteredWriters
-m_vecTextColorRangeValues
-m_vecTextColorRangeValues.Count()
-m_vecTraversalCache
-macedonian
-malay
-malayalam
-malformed sPLT chunk
 malloc
-malloc@GLIBC_2.0
-maltese
-maori
-marathi
-margin
-margin-bottom
-margin-left
-margin-right
-margin-top
 mbrtowc
-mbrtowc@GLIBC_2.0
 mbsnrtowcs
-mbsnrtowcs@GLIBC_2.0
 mbsrtowcs
-mbsrtowcs@GLIBC_2.0
+memchr
 memcmp
-memcmp@GLIBC_2.0
-memory image too large
-menuname
-minimum-height
-minimum-width
-minutes
-missing IHDR
-missing LZ dictionary
-mkdir@GLIBC_2.0
-mkfifo@GLIBC_2.0
+memcpy
+memmove
+memset
+mkdir
+mkfifo
+mkstemp
+mktime
+mmap64
 modf
-modf@GLIBC_2.0
-modifiers
-mongolian
-mount@GLIBC_2.0
-nBytes
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-nGrowSize >= 0
-nMinCapacity <= k_nMaxStringSize
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nNKEY_N
-nSize != 0
-nSize >= 0
-need dictionary
-nepali
-new 
-new[]
-nl_NL
-no color-map for color-mapped image
-no rows for png_write_image to write
-no space in chunk cache
-no_NO
-non-positive height
-non-positive width
-non-transaction clone for 
-non-virtual thunk to 
-none
-norwegian
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-num > 0
-numElements <= m_nAllocationCount
-numElements >= 0
+mold 1.10.1 (compatible with GNU ld)
+mount
+msync
+munmap
 oFFs
-oOKEY_O
-odia
-offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-offset >= -m_Put && offset <= INT_MAX-m_Put
-offset >= 0
-oldtall
-oldwide
-open64@GLIBC_2.2
-opendir@GLIBC_2.0
-operator
-operator 
-operator"" 
-out of place
-out-of-date sRGB profile with no signature
-outerglow
-outline
-output gamma out of expected range
+open
+open64
+opendir
 pCAL
-pCAL: invalid keyword
-pContext
-pConv && pConv->GetDelimiterLength() > 0
 pHYs
-pKeyValuesTextParser
-pPKEY_P
-pPlat->m_hWindow
-pPool->m_SpaceUsed < 0xFFFF
-pRoot->Client()
-pVPanel->IsVisible()
-pWatcher != NULL
-padding
-padding-bottom
-padding-left
-padding-right
-padding-top
-palette color-map: too few entries
-panel != 0
-params->GetName()
-parse render key : Couldn't load image '%s' in '%s'\n
-parse render key : Expected '(', found '%s' in '%s'\n
-parse render key : Expected ')', found '%s' in '%s'\n
-parse render key : Expected [+ - ,], found '%s' in '%s'\n
-parse render key : Expected [x0 y0 x1 y1], found '%s' in '%s'\n
-parse render key : Expected command token, found '%s' in '%s'\n
-parsing of file '%s' failed\n
-parsing render key : Expected [, )], found '%s' in '%s'\n
-pchRegPath
 pclose
-pclose@GLIBC_2.1
-persian
-pl_PL
-plat
-png_do_encode_alpha: unexpected call
-png_do_quantize returned rowbytes=0
-png_do_rgb_to_gray found nongray pixel
-png_get_eXIf does not work; use png_get_eXIf_1
-png_image_begin_read_from_file: incorrect PNG_IMAGE_VERSION
-png_image_begin_read_from_file: invalid argument
-png_image_begin_read_from_memory: incorrect PNG_IMAGE_VERSION
-png_image_begin_read_from_memory: invalid argument
-png_image_begin_read_from_stdio: incorrect PNG_IMAGE_VERSION
-png_image_begin_read_from_stdio: invalid argument
-png_image_finish_read: damaged PNG_IMAGE_VERSION
-png_image_finish_read: image too large
-png_image_finish_read: invalid argument
-png_image_finish_read: row_stride too large
-png_image_finish_read[color-map]: no color-map
-png_image_read: alpha channel lost
-png_image_read: opaque pointer not NULL
-png_image_read: out of memory
-png_image_write_: out of memory
-png_image_write_to_file: incorrect PNG_IMAGE_VERSION
-png_image_write_to_file: invalid argument
-png_image_write_to_memory: PNG too big
-png_image_write_to_memory: incorrect PNG_IMAGE_VERSION
-png_image_write_to_memory: invalid argument
-png_image_write_to_stdio: incorrect PNG_IMAGE_VERSION
-png_image_write_to_stdio: invalid argument
-png_read_image: invalid transformations
-png_read_image: unsupported transformation
-png_read_update_info/png_start_read_image: duplicate call
-png_set_background
-png_set_eXIf does not work; use png_set_eXIf_1
-png_set_filler is invalid for low bit depth gray output
-png_set_filler: inappropriate color type
-png_set_filter: UP/AVG/PAETH cannot be added after start
-png_set_gAMA
-png_set_keep_unknown_chunks: invalid keep
-png_set_keep_unknown_chunks: no chunk list
-png_set_keep_unknown_chunks: too many chunks
-png_set_sPLT: invalid sPLT
-png_set_unknown_chunks now expects a valid location
-png_start_read_image/png_read_update_info: duplicate call
-png_write_image: internal call error
-png_write_image: unsupported transformation
-png_write_info was never called before png_write_row
-polish
 poll
-poll@GLIBC_2.0
 popen
-popen@GLIBC_2.1
-portuguese
 posix_fadvise
-posix_fadvise@GLIBC_2.2
-pow@GLIBC_2.0
-print
-profile '
-profile matches sRGB but writing iCCP instead
-pt-br
-pt_BR
-pt_PT
+powf
+pread64
 pthread_mutex_lock
-pthread_mutex_lock@GLIBC_2.0
 pthread_mutex_unlock
-pthread_mutex_unlock@GLIBC_2.0
 pthread_once
-pthread_once@GLIBC_2.0
-public/steam_tray_48
-punct
-pure virtual method called\n
+putc
+puts
 putwc
-putwc@GLIBC_2.2
-pwString
-qQKEY_Q
+pwrite64
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 qsort
-qsort@GLIBC_2.0
-quechua
-rRKEY_R
-read beyond end of data
-read failed, errno %d\n
+read
 readdir64
-readdir64@GLIBC_2.2
+readlink
 realloc
-realloc@GLIBC_2.0
 realpath
-realpath@GLIBC_2.3
 recvmsg
-recvmsg@GLIBC_2.0
-reference temporary #
-region
-registry
-reinterpret_cast
-reloading layout file %s\n
-reloading localization file %s\n
-reloading menu file %s\n
 remove
-remove@GLIBC_2.0
-removing kb focus %s\n
-rename@GLIBC_2.0
-render
-render_bg
-res > 0
-resizeNumBits >= 0
-resourceClass
-resourceName
-resource\warning.wav
-result
-rgb color-map: too few entries
-rgb to gray green coefficient
-rgb to gray red coefficient
-rgb+alpha color-map: too few entries
-rgb-alpha color-map: too few entries
-rgb[ga] color-map: too few entries
-rgb[gray] color-map: too few entries
-right-wrap
-rmdir@GLIBC_2.0
-ro_RO
-romanian
-root
-rotary
+rename
+rmdir
 ru&o
-ru_RU
-russian
 sBIT
 sCAL
 sPLT
-sPLT chunk has bad length
-sPLT chunk requires too much memory
-sPLT chunk too long
-sPLT out of memory
-sPLT: invalid keyword
 sRGB
-sSKEY_S
 sTER
-s_bAllowStaticSymbolTable
-s_pCharToVGUI[ (size_t)charForLayoutResolution ] == 0
-s_pSymbolTable
-s_pTable
-s_pVGUIToScanCode[ keyMap[i].vguiKeyCode ] == 0
-s_pVGUIToVirtualKey[ keyMap[i].vguiKeyCode ] == 0
-sc_schinese
-scandir64@GLIBC_2.2
-scandir@GLIBC_2.0
-scanlines
-scots
-scroll-both
-scroll-horizontal
-scroll-vertical
-seconds
-secondsInterval >= 0
-selectedbgcolor
-selectedtextcolor
+scandir
+scandir64
+sched_yield
+sendfile64
 sendmsg
-sendmsg@GLIBC_2.0
-sequential row overflow
-serbian
-set to see debug vgiui2 messages
-settings
-shadowtextcolor
-shahmukhi
-shortname
-showhotkey
-sindhi
-sinhala
-sizeof 
-sizeof...
-slant
-slovak
-slovenian
+setlocale
+setmntent
+setvbuf
 socket
-socket@GLIBC_2.0
-sorani
-sotho
-space
-spacing
-spanish
 sqrt
-sqrt@GLIBC_2.0
 sqrtf
-sqrtf@GLIBC_2.0
 sscanf
-sscanf@GLIBC_2.0
-stackLevel >= 0 && stackLevel < m_errorIndex
-start
-state
-statfs64@GLIBC_2.1
-statfs@GLIBC_2.0
-static_cast
-statvfs64@GLIBC_2.1
-statvfs@GLIBC_2.1
-std::allocator
-std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
-std::bad_exception
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
-std::iostream
-std::istream
-std::ostream
-std::string
+statfs
+statfs64
+statvfs
+statvfs64
 stderr
-stderr@GLIBC_2.0
 stdin
-stdin@GLIBC_2.0
 stdout
-stdout@GLIBC_2.0
-steam.desktop
-steam/games/PlatformMenu.vdf
-steamclient.so
-steamconsole.so
-steamui.so
 stpcpy
-stpcpy@GLIBC_2.0
 strcasecmp
-strcasecmp@GLIBC_2.0
 strcasestr
-strcasestr@GLIBC_2.1
 strchr
-strchr@GLIBC_2.0
 strcmp
-strcmp@GLIBC_2.0
 strdup
-strdup@GLIBC_2.0
-stream end
-stream error
 strerror
-strerror@GLIBC_2.0
 strftime
-strftime@GLIBC_2.0
-strikeout
-string literal
 strlen
-strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-strlen@GLIBC_2.0
 strncasecmp
-strncasecmp@GLIBC_2.0
-strncmp@GLIBC_2.0
-strncpy@GLIBC_2.0
+strncmp
+strncpy
 strpbrk
-strpbrk@GLIBC_2.0
+strptime
 strrchr
-strrchr@GLIBC_2.0
 strstr
-strstr@GLIBC_2.0
 strtod
-strtod@GLIBC_2.0
 strtol
-strtol@GLIBC_2.0
 strtold_l
-strtold_l@GLIBC_2.3
-styles
-successfullyAdded
-supplied row stride too small
-surface()->RunFrame()
-sv_SE
-swahili
-swedish
-symbol
-symlink@GLIBC_2.0
+strtoll
+strtoul
+symlink
 syscall
-syscall@GLIBC_2.0
 system
-system()->RunFrame()
-system@GLIBC_2.0
 tEXt
-tEXt: invalid keyword
-tEXt: text too long
 tIME
-tRNS chunk has out-of-range samples for bit_depth
-tRNS must be after
-tTKEY_T
-tag count too large
-tajik
-tall > 0
-tamil
-tatar
-tchinese
-telugu
-template parameter object for 
-terminate called after throwing an instance of '
-terminate called recursively\n
-terminate called without an active exception\n
-texCoords
-text chunk: out of memory
-text compression mode is out of range
-texture->m_eTextureFormat == ISurface::eTextureFormat_RGBA
-texture->m_eTextureFormat == eTextureFomat
-th_TH
-thai
-this
-throw 
-tigrinya
-tolower@GLIBC_2.0
-too many length or distance symbols
-too many profiles
-too many sPLT chunks
-too many text chunks
-too many unknown chunks
-top-center
+time
+tolower
 toupper
-toupper@GLIBC_2.0
-tr_TR
+transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
-true
-tswana
-turkish
-turkmen
-typeinfo fn for 
-typeinfo for 
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
-uUKEY_U
-uk_UA
-ukrainian
-undefined
-underline
-unexpected 8-bit transformation
-unexpected DeviceLink ICC profile class
-unexpected ICC PCS encoding
-unexpected NamedColor ICC profile class
-unexpected alpha swap transformation
-unexpected bit depth
-unexpected compose
-unexpected encoding (internal error)
-unexpected end of LZ stream
-unexpected zlib return
-unexpected zlib return code
+uname
 ungetc
-ungetc@GLIBC_2.0
 ungetwc
-ungetwc@GLIBC_2.2
-unhandled critical chunk
-unichar
-unity_launcher_entry_get_for_app_uri
-unity_launcher_entry_get_for_desktop_file
-unity_launcher_entry_get_for_desktop_id
-unity_launcher_entry_get_urgent
-unity_launcher_entry_set_count
-unity_launcher_entry_set_count_visible
-unity_launcher_entry_set_progress
-unity_launcher_entry_set_progress_visible
-unity_launcher_entry_set_urgent
-unknown chunk exceeds memory limits
-unknown chunk: out of memory
-unknown color '%s' referenced by style key '%s'\n
-unknown color '%s' referenced in font-outerglow-color\n
-unknown compression method
-unknown compression type
-unknown header flags set
-unknown interlace type
-unknown pseudoclass on style %s in file %s\n
-unlink@GLIBC_2.0
-unrecognized ICC profile class
-unrecognized equation type
-unsigned
-unsigned __int128
-unsigned char
-unsigned int
-unsigned long
-unsigned long long
-unsigned short
-unsupported flags 0x%x passed to CFileReader::BOpenFile
-unsupported zlib version
-update cursor positions
-upper
-uppercase
-urdu
+unlink
 usleep
-usleep@GLIBC_2.0
-utime@GLIBC_2.0
-utimes@GLIBC_2.0
-uyghur
-uzbek
-vOther.IsValid()
+utime
+utimes
 vQO+t
-vVKEY_V
-valencian
-vecTraversalCache.Count() > 0 && vecTraversalCache[0].vpanel == panel
-vector::_M_realloc_insert
-vgui/
-vgui2::WM_PAINT
-vgui::Bitmap
-vgui::VPanel
-vi_VN
-vietnamese
-void
-vsnprintf@GLIBC_2.0
+vsnprintf
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -2957,68 +1144,25 @@ vtable for __gnu_cxx::recursive_init_error
 vtw\nx
 w+OQvr
 w3Xc
-wWKEY_W
 wXR\r
-wchar_t
 wcrtomb
-wcrtomb@GLIBC_2.0
+wcscasecmp
 wcschr
-wcschr@GLIBC_2.0
 wcscmp
-wcscmp@GLIBC_2.0
 wcscpy
-wcscpy@GLIBC_2.0
 wcslen
-wcslen@GLIBC_2.0
-wcsncpy@GLIBC_2.0
+wcsncpy
 wcsnrtombs
-wcsnrtombs@GLIBC_2.0
 wcstol
-wcstol@GLIBC_2.0
 wctob
-wctob@GLIBC_2.0
-welsh
-wide && tall
-wide > 0
-winFont
 wmemchr
-wmemchr@GLIBC_2.0
+wmemcmp
 wmemcpy
-wmemcpy@GLIBC_2.0
 wmemmove
-wmemmove@GLIBC_2.0
 wmemset
-wmemset@GLIBC_2.0
 wn>Jj
-wolof
-write %s failed, errno = %d\n
-write() failed, errno %d\n
-xXKEY_X
-xdigit
-xerror_handler: X failed, continuing\n
-xhosa
-xpos
+write
+writev
 y9*O
-yYKEY_Y
-yoruba
-ypos
-yres
-zDmaxUnitCount == 1 || maxUnitCount == 2
 zTXt
-zTXt: invalid compression type
-zTXt: invalid keyword
-zZKEY_Z
-zh-cn
-zh-tw
-zh-xc
-zh_CN
-zh_TW
-zh_XC
-zlib IO error
-zstream unclaimed
-zulu
-{default arg#
 {kHw
-{lambda(
-{parm#
-{unnamed type#

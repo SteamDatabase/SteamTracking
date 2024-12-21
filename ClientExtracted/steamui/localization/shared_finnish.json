@@ -3405,7 +3405,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Tallennusasetukset",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Remote Play -asetukset",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Suoratoiston asetukset",
-    "GamepadOverlay_GameRecording_GoToRecording": "Näytä taustatallenne",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Näytä taustatallenne",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Pikanäppäinyhdistelmä tallennuksen aloittamiseen ja lopettamiseen pelin aikana",
     "GamepadOverlay_GameRecording_ClipExplainer": "Pikanäppäinyhdistelmä leikkeen luomiseen pelin aikana:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Pikanäppäinyhdistelmä aikajanamerkinnän %1$s lisäämiseen",

@@ -1,192 +1,6 @@
-  what():  
- Gbps
- Kbps
- Mbps
- [clone 
- __vector(
- bps
- bytes
- const
- noexcept
- restrict
- throw
- transaction_safe
- volatile
-!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!m_fnGlobalChangeCallback || !callback
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-!pszString || pszString[nChars] == '\0'
 %$%a%b%V%U%c%Q%W%]%\%[%
-%0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
-%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
-%8X%4X%4X%2X%2X%2X%2X%2X%2X%2X%2X
-%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
-%lld
-%llu
-%s %s %s %s
-%s not implemented
-%s overflow!\n
-%s/.steam/steam
-%s: __pos (which is %zu) > this->size() (which is %zu)
-&AElig;
-&Aacute;
-&Acirc;
-&Agrave;
-&Aring;
-&Atilde;
-&Auml;
-&Ccedil;
-&ETH;
-&Eacute;
-&Ecirc;
-&Egrave;
-&Euml;
-&Iacute;
-&Icirc;
-&Igrave;
-&Iuml;
-&Ntilde;
-&Oacute;
-&Ocirc;
-&Ograve;
-&Oslash;
-&Otilde;
-&Ouml;
-&THORN;
-&Uacute;
-&Ucirc;
-&Ugrave;
-&Uuml;
-&Yacute;
-&aacute;
-&acirc;
-&acute;
-&aelig;
-&agrave;
-&amp;
-&apos;
-&aring;
-&atilde;
-&auml;
-&brvbar;
-&ccedil;
-&cedil;
-&cent;
-&copy;
-&curren;
-&deg;
-&divide;
-&eacute;
-&ecirc;
-&egrave;
-&eth;
-&euml;
-&euro;
-&frac12;
-&frac14;
-&frac34;
-&hellip;
-&iacute;
-&icirc;
-&iexcl;
-&igrave;
-&iquest;
-&iuml;
-&laquo;
-&lsquo;
-&macr;
-&mdash;
-&micro;
-&middot;
-&nbsp;
-&ndash;
-&not;
-&ntilde;
-&oacute;
-&ocirc;
-&ograve;
-&ordf;
-&ordm;
-&oslash;
-&otilde;
-&ouml;
-&para;
-&plusmn;
-&pound;
-&quot;
-&raquo;
-&reg;
-&rsquo;
-&sect;
-&shy;
-&sup1;
-&sup2;
-&sup3;
-&szlig;
-&thorn;
-&times;
-&trade;
-&uacute;
-&ucirc;
-&ugrave;
-&uml;
-&uuml;
-&yacute;
-&yen;
-&yuml;
-(%zu) Descend: %s, (%s), %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-(anonymous namespace)
-(int)(intp)m_hParam != -1
-(main)
-(no name set)
-(none)
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
-----------------------------------------\n
--0123456789
-/data/src/public/tier0/vprof.h
-/data/src/public/tier1/bitstring.h
-/data/src/public/tier1/utldict.h
-/data/src/public/tier1/utllinkedlist.h
-/data/src/public/tier1/utlmemory.h
-/data/src/public/tier1/utlrbtree.h
-/data/src/public/tier1/utlstring.h
-/data/src/public/tier1/utlvector.h
-/data/src/public/vstdlib/../tier1/utlstring.h
-/data/src/tier1/bitstring.cpp
-/data/src/tier1/fileio.cpp
-/data/src/tier1/mempool.cpp
-/data/src/tier1/utlbuffer.cpp
-/data/src/tier1/utlmemory.cpp
-/data/src/tier1/utlstring.cpp
-/data/src/vstdlib/commandline.cpp
-/data/src/vstdlib/coroutine.cpp
-/data/src/vstdlib/cvar.cpp
-/data/src/vstdlib/debugstatssystem.cpp
-/data/src/vstdlib/keyvaluessystem.cpp
-/data/src/vstdlib/parseurl.cpp
-/data/src/vstdlib/stringnormalize.cpp
-/data/src/vstdlib/strtools.cpp
-/data/src/vstdlib/strtools_unicode.cpp
-/etc/SUSE-release
-/etc/arch-release
-/etc/centos-release
-/etc/debian_release
-/etc/fedora-release
-/etc/gentoo-release
-/etc/lsb-release
-/etc/mandrake-release
-/etc/os-release
-/etc/redhat-release
-/etc/slackware-release
-/etc/yellowdog-release
-/proc/version
-0123456789ABCDEF
 0123456789abcdef
-0x%4.4X is both the source and destination of a normalization mapping
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -225,121 +39,18 @@
 7CUtlMapIjbi8CDefLessE
 7CUtlMapIwPKwi8CDefLessE
 9IValidate
-</script>
-ACADEMY
-ACCOUNTANTS
-ACTIVE
-ACTOR
-AERO
-AGENCY
-AIRFORCE
-AKST
-ARCHI
-ARMY
-ARPA
-ASCII
-ASCII//TRANSLIT
-ASIA
-ASSOCIATES
-ATTORNEY
-AUCTION
-AUDIO
-AUTOS
-Android
-Android 6.x
-Android 7.x
-Android 8.x
-Android 9.x
-April
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-Assertion failed: length > k_cchMaxString
-August
-BARGAINS
-BAYERN
-BEER
-BERLIN
-BEST
 BHanIdeograph
-BIKE
-BIsOpen()
-BLACK
-BLACKFRIDAY
-BLUE
-BOUTIQUE
-BRUSSELS
-BUILD
-BUILDERS
-BUZZ
-Breaking '%s' in '%s'\n
-Bucket size : count\n
-CAMERA
-CAMP
-CANCERRESEARCH
-CAPETOWN
-CAPITAL
-CARDS
-CARE
-CAREER
-CAREERS
-CASH
-CATERING
-CCoroutine
-CCoroutineMgr
-CDefaultCvar cvar
-CENTER
-CFileReader::BOpenFile
-CFileReader::Read
 CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 CGaussianRandomStream::RandomFloat(float, float)
-CHEAP
-CHRISTMAS
-CHURCH
-CITIC
-CITY
-CKeyValuesSystem
-CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
-CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
-CKeyValuesSystem::AddStringToPool: out of memory
-CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
-CLAIMS
-CLEANING
-CLINIC
-CLOTHING
-CLUB
-CMemoryPool
-CMemoryPool::AddNewBlob: mode == GROW_NONE
-CMemoryPool::Alloc: ran out of memory
-CODES
-COFFEE
-COLLEGE
-COLOGNE
-COMMUNITY
-COMPANY
-COMPUTER
-CONDOS
-CONSTRUCTION
-CONSULTING
-CONTRACTORS
-COOKING
-COOL
-COOP
-COUNTRY
-CPathString
-CREDIT
-CREDITCARD
-CRUISES
-CStringNormalization statics
 CStringNormalization::Fold(wchar_t const*, wchar_t*, int)
 CStringNormalization::Initialize()
 CStringNormalization::Normalize(bool, char const*, char*, int)
 CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)
 CStringNormalization::Test_BValidateStructures()
 CStringNormalization::ValidateStatics(CValidator&, char const*)
-CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
-CStringNormalize is full of quirks that need fixing. You just hit one. Error return due to string truncation.
-CUISINELLA
 CURLUtils::FixupSeparatorScheme(CUtlString&)
 CURLUtils::IsTLD(char const*)
 CURLUtils::ValidateStatics(CValidator&, char const*)
@@ -350,24 +61,16 @@ CUniformRandomStream::RandomFillMemory(void*, unsigned int)
 CUniformRandomStream::RandomFloat(float, float)
 CUniformRandomStream::RandomInt(int, int)
 CUniformRandomStream::SetSeed(int)
-CUtlString::SetValue
-CUtlString::VAppendFormat
-CUtlString::VFormat
-CUtlStringBuilder::Data::MoveToHeap
-CUtlStringBuilder::InternalPrepareBuffer
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*)
 CValidator::ClaimMemory(void const*)
+CValidator::IsClaimed(void const*) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
-CVariableBitStringBase
 CanBeginLine
 CanBreakBetween
 CanBreakRepeated
 CanEndLine
-Command line options:\n
-CommandLine
-Coroutine '%s' stack save size is %d bytes
 Coroutine_Cancel
 Coroutine_Continue
 Coroutine_Create
@@ -375,91 +78,27 @@ Coroutine_DebugBreak
 Coroutine_GetCurrentlyActive
 Coroutine_GetStackDepth
 Coroutine_IsActive
-Coroutine_IsActive()
 Coroutine_IsAddressInOurStack
 Coroutine_ReleaseThreadMemory
 Coroutine_Test
 Coroutine_ValidateGlobals
 Coroutine_YieldToMain
 CreateInterface
-D(knN
-DANCE
-DATING
-DBG_PATHMATCH
-DEALS
-DEGREE
-DEMOCRAT
-DENTAL
-DENTIST
-DESI
-DIAMONDS
-DIGITAL
-DIRECT
-DIRECTORY
-DISCOUNT
-DOMAINS
-DURBAN
 DebugStatsSystem
-December
-EDUCATION
-EMAIL
-ENGINEER
-ENGINEERING
-ENTERPRISES
-EQUIPMENT
-ESTATE
-EVENTS
-EXCHANGE
-EXPERT
-EXPOSED
 Error
-Error State on string being set.
-Error decoding string1: %s
-Error decoding string2: %s
-FAIL
-FARM
-FEEDBACK
-FINANCE
-FINANCIAL
-FISH
-FISHING
-FITNESS
-FLIGHTS
-FLORIST
-FOUNDATION
-FROGANS
-FUND
-FURNITURE
-FUTBOL
-February
-Friday
-GALLERY
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
-GCoroutineMgr().IsAnyCoroutineActive()
-GCoroutineMgr().IsValidCoroutine(hCoroutine)
-GENT
-GIFT
-GIVES
-GLASS
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
+GLIBC_2.11
 GLIBC_2.2
+GLIBC_2.2.3
 GLIBC_2.2.4
 GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
-GLOBAL
-GLOBO
-GRAPHICS
-GRATIS
-GREEN
-GRIPE
-GUIDE
-GUITARS
-GURU
-GetInts()
+GLIBC_2.7
 GetNameFromOSType
 GetOSDetailString
 GetOSType
@@ -467,137 +106,10 @@ GetPlatformFromOS
 GetPlatformName
 GetPlatformNameFromEPlatformType
 GetPortableOsVersionInformation
-HAMBURG
-HAUS
-HIPHOP
-HOLDINGS
-HOLIDAY
-HOME
-HOMES
-HORSE
-HOST
-HOUSE
-IMMOBILIEN
-INDUSTRIES
-INFO
-INSTITUTE
-INSURE
-INTERNATIONAL
-INVESTMENTS
-IVALIDATE001
+GetSpewOutputFunc
 InstallUniformRandomStream
-Invalid flags in %s
-Invalid index %u
 Is64BitOS
-IsInList(before)
-IsValidIndex( elem )
-IsValidIndex(elem)
-JArray
-JETZT
-JOBS
-JOBURG
-JUEGOS
-January
-July
-June
-KAUFEN
-KITCHEN
-KIWI
-KOELN
-KRED
-KeyValuesSystem()
 KeyValuesSystemSteam
-LACAIXA
-LAWYER
-LEASE
-LGBT
-LIFE
-LIGHTING
-LIMITED
-LIMO
-LINK
-LOANS
-LOCK_EX
-LOCK_SH
-LONDON
-LOTTO
-LUXE
-LUXURY
-Leaked KeyValues (%u):\n
-Linux
-Linux 2.2
-Linux 2.4
-Linux 2.6
-Linux 3.10
-Linux 3.16
-Linux 3.18
-Linux 3.2
-Linux 3.5
-Linux 3.6
-Linux 3.x
-Linux 4.1
-Linux 4.14
-Linux 4.19
-Linux 4.4
-Linux 4.9
-Linux 4.x
-Linux 5.10
-Linux 5.4
-Linux 5.x
-Linux 6.x
-Linux 7.x
-LoadFileRangeIntoBuffer_Internal
-Lowered '%s' -> '%s'\n
-MAISON
-MANAGEMENT
-MANGO
-MARKET
-MARKETING
-MEDIA
-MEET
-MELBOURNE
-MENU
-MIAMI
-MINI
-MOBI
-MODA
-MONASH
-MORTGAGE
-MOSCOW
-MOTORCYCLES
-MUSEUM
-Mac OS
-MacOS 10.10
-MacOS 10.11
-MacOS 10.12
-MacOS 10.13
-MacOS 10.14
-MacOS 10.15
-MacOS 10.4
-MacOS 10.5
-MacOS 10.5.8
-MacOS 10.6
-MacOS 10.6.3
-MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
-MacOS 10.6.7
-MacOS 10.7
-MacOS 10.8
-MacOS 10.9
-MacOS 11
-MacOS 11 (as 10.16)
-MacOS 11.1
-MacOS 12
-MacOS 12 (as 10.17)
-MacOS 13
-MacOS 13 (as 10.18)
-MacOS 14
-MacOS 14 (as 10.19)
-MacOS 15
-MacOS 15 (as 10.20)
-March
-Matched '%s' -> '%s'\n
-Memory leak: mempool blocks left in memory: %d\n
-Monday
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
@@ -609,87 +121,19 @@ N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NAGOYA
-NAME
-NAVY
-NEUSTAR
-NINJA
 NSt6locale5facetE
 NSt8ios_base7failureE
-NULL buffer passed to V_atof()
-NULL buffer passed to V_atoi()
-Not continuing coroutine due to g_bPreventCoroutineContinue, %s
-November
-OKINAWA
-ORGANIC
 OSIsCompatible
 OSTypesAreCompatible
-October
-PARIS
-PARTNERS
-PARTS
-PHOTO
-PHOTOGRAPHY
-PHOTOS
-PHYSIO
-PICS
-PICTURES
-PINK
-PLACE
-PLUMBING
-POST
-PRAXI
-PRESS
-PRODUCTIONS
-PROPERTIES
-Parameter file '%s' not found, skipping...\n
+Plat_CommandLineParamExists
+Plat_GetExecutablePathUTF8
 Plat_GetProcessArgv
+Plat_IsChromeOS
 Plat_OutputDebugString
+Plat_OutputDebugStringRaw
 Plat_RelativeTicks
-QPON
-QUEBEC
-RECIPES
-REHAB
-REISE
-REISEN
-RENTALS
-REPAIR
-REPORT
-REPUBLICAN
-REST
-REVIEWS
-RICH
-ROCKS
-RODEO
-RUHR
-RYUKYU
-SAARLAND
-SCHMIDT
-SCHULE
-SCOT
-SERVICES
-SEXY
-SHIKSHA
-SHOES
-SINGLES
-SOCIAL
-SOFTWARE
-SOHU
-SOLAR
-SOLUTIONS
-SPACE
-SPIEGEL
-SUPPLIES
-SUPPLY
-SUPPORT
-SURF
-SURGERY
-SUZUKI
-SYSTEMS
-Saturday
-Seeking to a position which is not sector aligned will break unbuffered io
-September
-Size() == operand.Size()
+Plat_VirtualAccessFlags
+Plat_localtime
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -763,6 +207,17 @@ SteamRealPath
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::GetThreadProc()
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::IsAlive() const
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Terminate(int)
+SteamThreadTools::CThread::~CThread()
 SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 SteamThreadTools::CThreadEvent::Set()
 SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
@@ -775,80 +230,47 @@ SteamThreadTools::CThreadRWLock::LockForWrite()
 SteamThreadTools::CThreadRWLock::UnlockWrite()
 SteamThreadTools::CThreadRWLock::WaitForRead()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 SteamVProf::CVProfile::ExitScope()
-String pool bytes used %u, max %u, %u pools\n
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
-Sunday
-TATTOO
-TECHNOLOGY
-TIENDA
-TIPS
-TIROL
-TLS init function for 
-TLS wrapper function for 
-TODAY
-TOKYO
-TOOLS
-TOYS
-TRADE
-TRAINING
-TRAVEL
-Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
-Target buffer too short to terminate\n
-Target buffer too short\n
+TSListBase_Init
+TSListBase_Pop
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadImplOneTimeInit
+ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
-Thursday
-Total number of strings %u, longest string size %u, avg size %u\n
-Total of %u buckets with %u hash collisions\n
-Tuesday
-UNIVERSITY
-UTF-8
-Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
-Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
-Unknown
-Unmatched %s\n
-VACATIONS
-VEGAS
-VENTURES
-VERSICHERUNG
-VEngineCvar002
-VIAJES
-VILLAS
-VISION
-VLAANDEREN
-VODKA
-VOTE
-VOTING
-VOTO
-VOYAGE
+ThreadSleep
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VStdLib_GetICVarFactory
-VTT for 
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespaceW
 V_AppendParamToURL
 V_AppendSlash
-V_AppendSlash: ran out of space on %s.
 V_BasicHtmlEntityEncode
 V_BasicHtmlEntityEncodeBuffer
 V_BuildSortTitle
 V_CP437CharsToUTF8
 V_ComposeFileName
-V_ConvertStringToUUID
 V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_ConvertStringToUUID(wchar_t const*, EUUIDStringFlags, V_UUID*)
-V_ConvertUUIDToString
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, wchar_t*, int)
 V_CopyAndFixSlashes
@@ -873,7 +295,6 @@ V_GetCurrentDirectory
 V_GetFileExtension
 V_HtmlEntityDecodeToUTF8
 V_IsAbsolutePath
-V_IsAbsolutePath( pPath )
 V_IsDeprecatedW
 V_IsInCommaDelimitedList
 V_IsMeanSpaceW
@@ -891,7 +312,6 @@ V_JoinNumbersUint64(char, CUtlVector<unsigned long long, CUtlMemory<unsigned lon
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_LevenshteinDistance
 V_MakeAbsolutePath
-V_MakeAbsolutePath: _getcwd failed.
 V_MakeFileSafeName
 V_MakeRelativePath
 V_MatchWildcardDNSName
@@ -905,7 +325,6 @@ V_ParseSteamOpenURLExternalProtocol
 V_ParseURLQueryString
 V_RemoveChar
 V_RemoveDotSlashes
-V_RemoveDotSlashes failed for "%s".
 V_ReplaceBadFilenameCharacters
 V_ReplaceBadFilenameCharactersInPlace
 V_SetCurrentDirectory
@@ -945,7 +364,6 @@ V_UChar32ToUTF8Len
 V_URLContainsDomain
 V_URLCracker
 V_URLDecode
-V_URLDecode needs a dest buffer at least as large as the source
 V_URLDecodeRaw
 V_URLEncode
 V_URLEncodeRaw
@@ -1032,16 +450,6 @@ V_wcsncpy
 V_wcstoi64
 V_wcstoui64
 V_whextobinary
-WANG
-WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WATCH
-WEBCAM
-WEBSITE
-WHOSWHO
-WIEN
-WIKI
-WILLIAMHILL
-WORKS
 Warning
 WeakRandomChar
 WeakRandomFillMemory
@@ -1050,176 +458,48 @@ WeakRandomGaussianFloat
 WeakRandomInt
 WeakRandomSeed
 WeakRandomUint32
-Web Client
-Wednesday
-Windows
-Windows 10
-Windows 11
-Windows 2000
-Windows 2003
-Windows 2008
-Windows 2012
-Windows 2012 R2
-Windows 2016
-Windows 2019
-Windows 2022
-Windows 3.11
-Windows 7
-Windows 8
-Windows 8.1
-Windows 95
-Windows 98
-Windows ME
-Windows NT
-Windows Vista
-Windows XP
-XN--3BST00M
-XN--3DS443G
-XN--3E0B707E
-XN--45BRJ9C
-XN--4GBRIM
-XN--55QW42G
-XN--55QX5D
-XN--6FRZ82G
-XN--6QQ986B3XL
-XN--80ADXHKS
-XN--80AO21A
-XN--80ASEHDB
-XN--80ASWG
-XN--90A3AC
-XN--C1AVG
-XN--CG4BKI
-XN--CLCHC0EA0B2G2A9GCD
-XN--CZR694B
-XN--CZRU2D
-XN--D1ACJ3B
-XN--FIQ228C5HS
-XN--FIQ64B
-XN--FIQS8S
-XN--FIQZ9S
-XN--FPCRJ9C3D
-XN--FZC2C9E2C
-XN--GECRJ9C
-XN--H2BRJ9C
-XN--I1B6B1A6A2E
-XN--IO0A7I
-XN--J1AMH
-XN--J6W193G
-XN--KPRW13D
-XN--KPRY57D
-XN--KPUT3I
-XN--L1ACC
-XN--LGBBAT1AD8J
-XN--MGB9AWBF
-XN--MGBA3A4F16A
-XN--MGBAAM7A8H
-XN--MGBAB2BD
-XN--MGBAYH7GPA
-XN--MGBBH1A71E
-XN--MGBC0A9AZCG
-XN--MGBERP4A5D4AR
-XN--MGBX4CD0AB
-XN--NGBC5AZD
-XN--NQV7F
-XN--NQV7FS00EMA
-XN--O3CW4H
-XN--OGBPF8FL
-XN--P1AI
-XN--PGBS0DH
-XN--Q9JYB4C
-XN--RHQV96G
-XN--S9BRJ9C
-XN--SES554G
-XN--UNUP4Y
-XN--WGBH1C
-XN--WGBL6A
-XN--XKC2AL3HYE2A
-XN--XKC2DL3A5EE0H
-XN--YFRO4I67O
-XN--YGBI2AMMX
-XN--ZFR164B
-YACHTS
-YANDEX
-YOKOHAMA
-ZONE
-[abi:
-\t(%zu) comparing %s with %s\n
-_Accum
 _DMsg
-_Fract
-_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( y, unNodeSize, pMemBase )
-_Sat 
+_SpewMessageType
 ___tls_get_addr
-___tls_get_addr@GLIBC_2.3
 __ctype_b_loc
-__ctype_b_loc@GLIBC_2.3
 __ctype_get_mb_cur_max
-__ctype_get_mb_cur_max@GLIBC_2.0
 __ctype_tolower_loc
-__ctype_tolower_loc@GLIBC_2.3
 __ctype_toupper_loc
-__ctype_toupper_loc@GLIBC_2.3
 __cxa_atexit
-__cxa_atexit@GLIBC_2.1.3
 __cxa_finalize
-__cxa_finalize@GLIBC_2.1.3
 __duplocale
-__duplocale@GLIBC_2.1
 __errno_location
-__errno_location@GLIBC_2.0
-__float128
 __freelocale
-__freelocale@GLIBC_2.1
 __fxstat64
-__fxstat64@GLIBC_2.2
 __gmon_start__
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
+__isoc99_sscanf
 __iswctype_l
-__iswctype_l@GLIBC_2.1
-__lxstat64@GLIBC_2.2
-__lxstat@GLIBC_2.0
+__lxstat
+__lxstat64
 __newlocale
-__newlocale@GLIBC_2.1
 __nl_langinfo_l
-__nl_langinfo_l@GLIBC_2.2
 __pthread_key_create
-__pthread_key_create@GLIBC_2.0
 __sprintf_chk
-__sprintf_chk@GLIBC_2.3.4
 __stack_chk_fail
-__stack_chk_fail@GLIBC_2.4
 __strcoll_l
-__strcoll_l@GLIBC_2.1
 __strftime_l
-__strftime_l@GLIBC_2.3
 __strtod_l
-__strtod_l@GLIBC_2.1
 __strtof_l
-__strtof_l@GLIBC_2.1
 __strxfrm_l
-__strxfrm_l@GLIBC_2.1
 __towlower_l
-__towlower_l@GLIBC_2.1
 __towupper_l
-__towupper_l@GLIBC_2.1
 __uselocale
-__uselocale@GLIBC_2.3
 __wcscoll_l
-__wcscoll_l@GLIBC_2.1
 __wcsftime_l
-__wcsftime_l@GLIBC_2.3
 __wcsxfrm_l
-__wcsxfrm_l@GLIBC_2.1
 __wctype_l
-__wctype_l@GLIBC_2.1
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -1259,13 +539,11 @@ __wrap_unlink
 __wrap_utime
 __wrap_utimes
 __xmknod
-__xmknod@GLIBC_2.0
-__xstat64@GLIBC_2.2
-__xstat@GLIBC_2.0
+__xstat
+__xstat64
 _fini
 _init
 _setjmp
-_setjmp@GLIBC_2.0
 _strlwr
 _strupr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
@@ -1275,425 +553,186 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 abort
-abort@GLIBC_2.0
-access@GLIBC_2.0
-alignof 
-alnum
-alpha
-android
-argLen < 0x10000000u
-auto
-auto:
-basic_ios::clear
-basic_iostream
-basic_istream
-basic_ostream
-basic_string::_M_replace_aux
-basic_string::_S_construct null not valid
-basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::copy
-basic_string::erase
-basic_string::resize
+access
+alphasort64
 bind_textdomain_codeset
-bind_textdomain_codeset@GLIBC_2.2
-bitNum >= 0 && bitNum < this->Size()
-blank
-blobSize <= nMaxBlobSize
-bool
-boolean
+bindtextdomain
 btowc
-btowc@GLIBC_2.0
-bufferLen == 0 || pDest != NULL
-bufferLen > 0 && bufferLen <= INT_MAX
-byte
-cbActual < (uint32)nBufSizeWithTerminator
-cbToRead <= 1024 * 1024 * 1024
-ccMax >= 1
-char16_t
-char32_t
-char8_t
-chdir@GLIBC_2.0
-checkLen >= 0
-chmod@GLIBC_2.0
-chown@GLIBC_2.1
-close@GLIBC_2.0
+calloc
+chdir
+chmod
+chown
+clock_gettime
+close
 closedir
-closedir@GLIBC_2.0
-cntrl
-complex 
-components.Count() == 0
-console
-const_cast
-construction vtable for 
-count == 0 || s1 != NULL
-count == 0 || s2 != NULL
-count >= 0
-covariant return thunk to 
-cubBytesToRead < INT32_MAX
-decimal128
-decimal32
-decimal64
-decltype (
-decltype(auto)
-decltype(nullptr)
-delete 
-delete[] 
-dest != NULL
-destCapacity != 0
-destSize >= 1
 dgettext
-dgettext@GLIBC_2.0
-dirName
 dl_iterate_phdr
-dl_iterate_phdr@GLIBC_2.2.4
-dlmopen@GLIBC_2.3.4
-dlopen@GLIBC_2.1
-dynamic_cast
-extension
-extension[0] == '.'
+dlclose
+dlerror
+dlmopen
+dlopen
+dlsym
+endmntent
 faccessat
-faccessat@GLIBC_2.4
-false
-false 
+fallocate64
 fclose
-fclose@GLIBC_2.1
 fcntl
-fcntl@GLIBC_2.0
+fdatasync
+fdopen
+feof
 fflush
-fflush@GLIBC_2.0
 fgets
-fgets@GLIBC_2.0
-float
+fileno
 flock
-flock %s %s failed. errno = %d
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
-flock@GLIBC_2.0
-fopen64@GLIBC_2.1
-fopen@GLIBC_2.1
+fnmatch
+fopen
+fopen64
 fprintf
-fprintf@GLIBC_2.0
 fputc
-fputc@GLIBC_2.0
 fputs
-fputs@GLIBC_2.0
 fread
-fread@GLIBC_2.0
 free
-free@GLIBC_2.0
-freopen@GLIBC_2.0
+freeaddrinfo
+freopen
+fscanf
+fseek
 fseeko64
-fseeko64@GLIBC_2.1
 ftello64
-ftello64@GLIBC_2.1
+ftruncate
+ftruncate64
+futimes
 fwrite
-fwrite@GLIBC_2.0
-gCURLUtils_hashTLDs
 g_VProfProfilesRunningCount
 g_VProfile
-g_VecPCoroutineMgr
-g_VecPCoroutineMgr[i]
-g_mapPairs
 g_pMemAllocSteam
+getaddrinfo
+getc
 getcwd
-getcwd@GLIBC_2.0
 getenv
-getenv@GLIBC_2.0
-global constructors keyed to 
-global destructors keyed to 
-graph
-guard variable for 
-half
-hidden alias for 
-iOS 1
-iOS 10
-iOS 10.1
-iOS 10.2
-iOS 10.3
-iOS 11
-iOS 11.1
-iOS 11.2
-iOS 11.3
-iOS 11.4
-iOS 12
-iOS 12.1
-iOS 2
-iOS 3
-iOS 4
-iOS 5
-iOS 6
-iOS 6.1
-iOS 7
-iOS 7.1
-iOS 8
-iOS 8.1
-iOS 8.2
-iOS 8.3
-iOS 8.4
-iOS 9
-iOS 9.1
-iOS 9.2
-iOS 9_.3
-iOption != m_listCommandLineOption.InvalidIndex()
+getmntent
+getsockname
+gettext
+getuid
+getwc
 iconv
-iconv@GLIBC_2.1
 iconv_close
-iconv_close@GLIBC_2.1
 iconv_open
-iconv_open@GLIBC_2.1
-imaginary 
-in != out
-info.m_pReplacementString == 0
-invalid input pointer
+ioctl
+isalnum
+isspace
 iswalnum
-iswalnum@GLIBC_2.0
 iswalpha
-iswalpha@GLIBC_2.0
 iswspace
-iswspace@GLIBC_2.0
-java Class for 
-java resource 
-k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
-lchown@GLIBC_2.0
+lchown
 ld-linux.so.2
-len < maxlen
-len > 0 || HasError()
 libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
 librt.so.1
 libtier0_s.so
-linux
-locale::facet::_S_create_c_locale name not valid
+link
 localeconv
-localeconv@GLIBC_2.2
 logf
-logf@GLIBC_2.0
-long double
 longjmp
-longjmp@GLIBC_2.0
-lower
 lseek64
-lseek64@GLIBC_2.2
-m_Elements
-m_HashItemMemPool
-m_LeakTrack
-m_ListCoroutines
-m_ListCoroutines[iRoutine]
-m_Memory
-m_TotalElements != InvalidIndex()
-m_Tree
-m_VecCoroutineStack
-m_VecCoroutineStack.Count() > 1
-m_bInitialized
-m_bitsMigratedBuckets
-m_listCommandLineOption
-m_mapConditionalSymbolTable
-m_memNodes
-m_nAllocationCount >= 0
-m_pSavedStack
-m_pStackHigh
-m_pszName
-m_strCmdLine
-m_vecHashBuckets
-m_vecParms
-m_vecParms.IsValidIndex( nIndex )
-m_vecParms[i]
-macos
 malloc
-malloc@GLIBC_2.0
-maxLen <= INT_MAX
-maxLen == 0 || pDest != NULL
-maxLen > 0
-maxLen > 0 && maxLen <= INT_MAX
-maxLenInBytes == 0 || pDest != NULL
-maxLenInBytes >= 0
-maxlen >= 1
 mbrtowc
-mbrtowc@GLIBC_2.0
 mbsnrtowcs
-mbsnrtowcs@GLIBC_2.0
 mbsrtowcs
-mbsrtowcs@GLIBC_2.0
+memchr
 memcmp
-memcmp@GLIBC_2.0
-mkdir@GLIBC_2.0
-mkfifo@GLIBC_2.0
-mount@GLIBC_2.0
-n == 0 || s1 != NULL
-n == 0 || s2 != NULL
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-nDestSize == 0 || pDest != NULL
-nGrowSize >= 0
-nMinCapacity <= k_nMaxStringSize
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nSize != 0
-nSize >= 0
-nTotal number of strings %u, longest string size %u, avg size %u\n
-nValue >= 0 && nValue <= 15
-new 
-new[]
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-num > 0
-offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-offset >= -m_Put && offset <= INT_MAX-m_Put
-offset >= 0
-open64@GLIBC_2.2
-opendir@GLIBC_2.0
-operator
-operator 
-operator"" 
-out of order normalization entry
-outsize >= ( inputbytes * 2 ) + 1
-outsize >= 1
-pBlob
-pDest
-pDest >= pBuffer && pDest <= pBuffer + destBufferSize
-pFormat != NULL
-pSearch != NULL
-pSrc != NULL
-pStr != NULL
-pStr1 != NULL
-pStr2 != NULL
-parms.Count() == 0
-pathStringLength >= 1
-pchEnd
-pchFileName
-pchHaystack != NULL
-pchNeedle != NULL
-pchOut
-pchStart
-pchURL != NULL
+memcpy
+memmove
+memset
+mkdir
+mkfifo
+mkstemp
+mmap
+mmap64
+modf
+mold 1.10.1 (compatible with GNU ld)
+mount
+msync
+munmap
+open
+open64
+opendir
+pclose
+poll
+popen
 posix_fadvise
-posix_fadvise@GLIBC_2.2
-ppath
-prefix != NULL
-print
+pread64
+printf
 pthread_mutex_lock
-pthread_mutex_lock@GLIBC_2.0
 pthread_mutex_unlock
-pthread_mutex_unlock@GLIBC_2.0
 pthread_once
-pthread_once@GLIBC_2.0
-punct
-pure virtual method called\n
+putc
 putwc
-putwc@GLIBC_2.2
-pwchDest != NULL
-pwchSrc != NULL
+pwrite64
+read
+readdir
 readdir64
-readdir64@GLIBC_2.2
+readlink
 realloc
-realloc@GLIBC_2.0
 realpath
-realpath@GLIBC_2.3
-reference temporary #
-reinterpret_cast
-rename@GLIBC_2.0
-resizeNumBits >= 0
-rmdir@GLIBC_2.0
-scandir64@GLIBC_2.2
-scandir@GLIBC_2.0
-script
-size < INT_MAX
-sizeof 
-sizeof...
-space
+rename
+rmdir
+scandir
+scandir64
+sched_yield
+sendfile64
+setlocale
+setmntent
+setvbuf
+shm_open
+shm_unlink
+snprintf
+sprintf
 sqrtf
-sqrtf@GLIBC_2.0
-src != NULL
 sscanf
-sscanf@GLIBC_2.0
-statfs64@GLIBC_2.1
-statfs@GLIBC_2.0
-static_cast
-statvfs64@GLIBC_2.1
-statvfs@GLIBC_2.1
-std::allocator
-std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
-std::bad_exception
-std::basic_iostream<char, std::char_traits<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
-std::iostream
-std::istream
-std::ostream
-std::string
+statfs
+statfs64
+statvfs
+statvfs64
 stderr
-stderr@GLIBC_2.0
 stdin
-stdin@GLIBC_2.0
 stdout
-stdout@GLIBC_2.0
-steam://close
-steam://close/
-steam://openurl/
-steam://openurl_external/
-str != NULL
 strcasecmp
-strcasecmp@GLIBC_2.0
 strcasestr
-strcasestr@GLIBC_2.1
 strchr
-strchr@GLIBC_2.0
 strcmp
-strcmp@GLIBC_2.0
+strcpy
 strdup
-strdup@GLIBC_2.0
-string literal
+strerror
+strftime
 strlen
-strlen@GLIBC_2.0
 strncasecmp
-strncasecmp@GLIBC_2.0
-strncat@GLIBC_2.0
-strncmp@GLIBC_2.0
-strncpy@GLIBC_2.0
+strncat
+strncmp
+strncpy
 strpbrk
-strpbrk@GLIBC_2.0
 strrchr
-strrchr@GLIBC_2.0
 strstr
-strstr@GLIBC_2.0
+strtod
+strtol
 strtold_l
-strtold_l@GLIBC_2.3
 strtoll
-strtoll@GLIBC_2.0
+strtoul
 strtoull
-strtoull@GLIBC_2.0
+swprintf
 swscanf
-swscanf@GLIBC_2.2
-symlink@GLIBC_2.0
+symlink
 syscall
-syscall@GLIBC_2.0
-szDomainName != nullptr
-template parameter object for 
-terminate called after throwing an instance of '
-terminate called recursively\n
-terminate called without an active exception\n
-test string
-the 
-this
-throw 
-tolower@GLIBC_2.0
+system
+time
+tolower
 towlower
-towlower@GLIBC_2.0
 towupper
-towupper@GLIBC_2.0
+transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
-true
-typeinfo fn for 
-typeinfo for 
 typeinfo for CUniformRandomStream
+typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -1701,7 +740,6 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
 typeinfo name for CUniformRandomStream
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
@@ -1711,36 +749,19 @@ typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
 uname
-uname@GLIBC_2.0
 ungetc
-ungetc@GLIBC_2.0
 ungetwc
-ungetwc@GLIBC_2.2
-unknown
-unlink@GLIBC_2.0
-unsigned
-unsigned __int128
-unsigned char
-unsigned int
-unsigned long
-unsigned long long
-unsigned short
-unsupported flags 0x%x passed to CFileReader::BOpenFile
-upper
-utime@GLIBC_2.0
-utimes@GLIBC_2.0
+unlink
+usleep
+utime
+utimes
 vasprintf
-vasprintf@GLIBC_2.0
-vector::_M_realloc_insert
-void
-vsnprintf@GLIBC_2.0
-vstdlib_s.dll
+vsnprintf
 vstdlib_wcsicmp
 vstdlib_wcsnicmp
 vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
-vswprintf@GLIBC_2.2
 vtable for CUniformRandomStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
@@ -1750,38 +771,22 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
-wchar_t
 wcrtomb
-wcrtomb@GLIBC_2.0
+wcscasecmp
 wcscmp
-wcscmp@GLIBC_2.0
 wcslen
-wcslen@GLIBC_2.0
 wcsncasecmp
-wcsncasecmp@GLIBC_2.1
-wcsncat@GLIBC_2.0
-wcsncpy@GLIBC_2.0
+wcsncat
+wcsncpy
 wcsnrtombs
-wcsnrtombs@GLIBC_2.0
+wcstol
 wcstoll
-wcstoll@GLIBC_2.1
 wcstoull
-wcstoull@GLIBC_2.1
 wctob
-wctob@GLIBC_2.0
-windows
 wmemchr
-wmemchr@GLIBC_2.0
+wmemcmp
 wmemcpy
-wmemcpy@GLIBC_2.0
 wmemmove
-wmemmove@GLIBC_2.0
 wmemset
-wmemset@GLIBC_2.0
-xdigit
-{%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
-{%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
-{default arg#
-{lambda(
-{parm#
-{unnamed type#
+write
+writev

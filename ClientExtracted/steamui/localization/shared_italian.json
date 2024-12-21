@@ -3400,7 +3400,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Impostazioni di registrazione",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Impostazioni di Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Impostazioni delle trasmissioni",
-    "GamepadOverlay_GameRecording_GoToRecording": "Visualizza registrazione in background",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Visualizza registrazione in background",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Combinazione scorciatoia per avviare/interrompere la registrazione mentre sei in gioco:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Combinazione scorciatoia per creare un filmato mentre sei in gioco:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Combinazione scorciatoia per inserire un contrassegno alla timeline %1$s:",

@@ -3408,7 +3408,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Definições de gravações",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Definições de Remote Play",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Definições de transmissões",
-    "GamepadOverlay_GameRecording_GoToRecording": "Ver gravação em segundo plano",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Ver gravação em segundo plano",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Atalho para iniciar/parar gravação durante um jogo:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Atalho para criar um clipe durante um jogo:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Atalho para inserir marcador na linha cronológica %1$s:",

@@ -3403,7 +3403,7 @@
     "GamepadOverlay_GameRecording_GoToSettings_GR": "Настройки за запис",
     "GamepadOverlay_GameRecording_GoToSettings_RemotePlay": "Steam Remote Play настройки",
     "GamepadOverlay_GameRecording_GoToSettings_Broadcast": "Настройки за предаване",
-    "GamepadOverlay_GameRecording_GoToRecording": "Преглед на фонов запис",
+    "GamepadOverlay_GameRecording_GoToSettings_GameRecording": "Преглед на фонов запис",
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Акорд за бърз достъп за стартиране/спиране на запис, докато сте в игра:",
     "GamepadOverlay_GameRecording_ClipExplainer": "Акорд за бърз достъп за направа на клип, докато сте в игра:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Акорд за бърз достъп за добавяне на маркер за хронологията %1$s:",

@@ -48,6 +48,16 @@ enum EUserReviewScore {
 	k_EUserReviewScore_OverwhelminglyPositive = 9;
 }
 
+enum ETrailerCategory {
+	k_ETrailerCategory_Invalid = 0;
+	k_ETrailerCategory_Gameplay = 1;
+	k_ETrailerCategory_Teaser = 2;
+	k_ETrailerCategory_Cinematic = 3;
+	k_ETrailerCategory_Update = 4;
+	k_ETrailerCategory_Accolades = 5;
+	k_ETrailerCategory_Interview = 6;
+}
+
 enum EStoreBrowseFilterFailure {
 	k_EStoreBrowseFilterFailure_None = 0;
 	k_EStoreBrowseFilterFailure_Redundant = 10;
@@ -290,6 +300,7 @@ message StoreItem {
 		message Trailer {
 			optional string trailer_name = 1;
 			optional string trailer_url_format = 2;
+			optional .ETrailerCategory trailer_category = 13 [default = k_ETrailerCategory_Invalid];
 			repeated .StoreItem.Trailers.VideoSource trailer_480p = 3;
 			repeated .StoreItem.Trailers.VideoSource trailer_max = 4;
 			repeated .StoreItem.Trailers.VideoSource microtrailer = 5;
