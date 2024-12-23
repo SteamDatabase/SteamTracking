@@ -1836,12 +1836,8 @@
             if (!e || !t.isSuccess || !t.data?.sale_name) return null;
             const n = new Set();
             let r = 0;
-            for (const t of e.cart_items) {
-              t.store_item.release?.is_coming_soon &&
-              t.store_item.best_purchase_option?.packageid
-                ? n.add(t.store_item.name)
-                : (r += parseInt(t.subtotal.amount_in_cents));
-            }
+            for (const t of e.cart_items)
+              r += parseInt(t.subtotal.amount_in_cents);
             const {
                 sale_name: a,
                 spend_earned_for_next_drop: s,
