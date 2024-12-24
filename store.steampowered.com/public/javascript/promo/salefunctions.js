@@ -280,24 +280,13 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 
 	
 	let rgHeros = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 42, Settings );
-	let rgPriorityHeroOptions = rgHeros.slice( 0, Math.min( rgHeros.length, 6 ) );
-	let rgPrioritizedHeros = SortItemListByPriorityList( rgPriorityHeroOptions, 'tier1' );
+	let rgPrioritizedHeros = SortItemListByPriorityList( rgHeros, 'tier1' );
 
 	
-	rgHeros.filter( ( appid ) => { return appid === rgPrioritizedHeros.shift(); } );
-	let rgFilteredHeroes = GHomepage.MergeLists( rgPrioritizedHeros.shift(), false, rgHeros, false );
-	let rgFirstRowHeros = rgFilteredHeroes.splice( 0, Math.min( rgHeros.length, 3 ) );
+	GDynamicStore.MarkItemsAsDisplayed( rgPrioritizedHeros.slice( 0, 3 ) );
 
-	
-	v_shuffle( rgFirstRowHeros );
-
-	rgFilteredHeroes = GHomepage.MergeLists( rgFirstRowHeros, false, rgFilteredHeroes, false );
-
-	GDynamicStore.MarkItemsAsDisplayed( rgFilteredHeroes );
-
-	
 	// generate carousel based on sorted and filtered hero capsules
-	GHomepage.FillPagedCapsuleCarousel( rgFilteredHeroes, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return fnRenderHeroCapsule( oItem ); }, 'sale-hero', 3 );
+	GHomepage.FillPagedCapsuleCarousel( rgPrioritizedHeros, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return fnRenderHeroCapsule( oItem ); }, 'sale-hero', 3 );
 
 	$HeroItemCtn.find('.hero_capsule:not(.hidden)').children('a').each( function() {
 		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
