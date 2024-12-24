@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9431461";
+var CLSTAMP = "9433597";
 (() => {
   var e,
     t,
@@ -100,9 +100,9 @@ var CLSTAMP = "9431461";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      49416: (e, t, n) => {
+      39993: (e, t, n) => {
         "use strict";
-        n(16416);
+        n(64951);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -1684,7 +1684,7 @@ var CLSTAMP = "9431461";
               })();
           });
       },
-      16416: (e, t, n) => {
+      64951: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1714,7 +1714,7 @@ var CLSTAMP = "9431461";
           "./shared_koreana.json": [13578, 7539],
           "./shared_latam.json": [85570, 2435],
           "./shared_norwegian.json": [48237, 2320],
-          "./shared_polish.json": [57149, 8967],
+          "./shared_polish.json": [79530, 8967],
           "./shared_portuguese.json": [76682, 6239],
           "./shared_romanian.json": [50692, 2749],
           "./shared_russian.json": [60868, 8025],
@@ -1760,7 +1760,7 @@ var CLSTAMP = "9431461";
           "./shared_koreana.json": [13578, 7539],
           "./shared_latam.json": [85570, 2435],
           "./shared_norwegian.json": [48237, 2320],
-          "./shared_polish.json": [57149, 8967],
+          "./shared_polish.json": [79530, 8967],
           "./shared_portuguese.json": [76682, 6239],
           "./shared_romanian.json": [50692, 2749],
           "./shared_russian.json": [60868, 8025],
@@ -1971,7 +1971,7 @@ var CLSTAMP = "9431461";
         8306: "0378506c13b6b209d156",
         8759: "dfc12156f52d20440b1d",
         8766: "b9b7b35f7df91bb55b83",
-        8967: "bdc27743b4a982364a97",
+        8967: "9aab128c616f974db159",
         9027: "21042ef6e2471913428d",
         9152: "e2d516abdbf99277766e",
         9712: "7c86ee7728f6ba8d2ca5",
@@ -2113,6 +2113,6 @@ var CLSTAMP = "9431461";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(49416));
+  var c = o.O(void 0, [1068], () => o(39993));
   c = o.O(c);
 })();
