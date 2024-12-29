@@ -2562,6 +2562,39 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	color: #B0AEAC;
 }
 
+.approvetxn_license_box
+{
+	background-color: red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;
+	background: radial-gradient(45% 45% at 50% 28%, #67c1f549 0%, rgba(0, 0, 0, 0.10) 100%);
+}
+
+.approvetxn_license_box img
+{
+
+	width: 80%;
+	margin-bottom: 8px;
+}
+
+.approvetxn_license_box_title
+{
+	font-size: 15px;
+	line-height: 18px;
+	color: #C6D4DF;
+	font-weight: 300;
+	margin-bottom: 8px;
+}
+
+.approvetxn_license_box_link
+{
+	color: #CCD5E0;
+	font-size: 12px;
+	font-weight: 300;
+}
+
 .cancel_txn_ctn {
 	margin-top: 8px;
 }
