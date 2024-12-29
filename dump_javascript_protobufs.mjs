@@ -107,7 +107,7 @@ for (const file of files) {
 							return;
 						}
 
-						const result = TraverseModule(node.value);
+						const result = TraverseModule(node.value, file);
 						let currentModule;
 
 						if (node.key.type === Syntax.Identifier) {
@@ -733,7 +733,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 	}
 }
 
-function TraverseModule(ast) {
+function TraverseModule(ast, fileName) {
 	const services = [];
 	const messages = [];
 	const enums = [];
@@ -773,9 +773,8 @@ function TraverseModule(ast) {
 								continue;
 							}
 
-							console.error("Unexpected webpack function");
+							console.error("Unexpected webpack function", fileName);
 							return;
-							//throw new Error("Unexpected webpack function");
 						}
 
 						const exportedId = property.key.name;
@@ -792,9 +791,12 @@ function TraverseModule(ast) {
 					node.arguments[2].body.type !== Syntax.BlockStatement ||
 					node.arguments[2].body.body[0].type !== Syntax.ReturnStatement
 				) {
-					console.error("Unexpected webpack function");
+					if (node.arguments[2].type === Syntax.CallExpression || node.arguments[2].type === Syntax.Identifier) {
+						return; // dynamic import?
+					}
+
+					console.error("Unexpected webpack function ", node.arguments[2].type, fileName);
 					return;
-					//throw new Error("Unexpected webpack function");
 				}
 
 				const exportedId = node.arguments[1].value;
@@ -1539,8 +1541,11 @@ function GetSendNotification(node) {
 
 	let { serviceName, methodName } = SplitRpcString(name);
 
+	const names = [`C${serviceName}_${methodName}_Notification`];
+
 	if (methodName.startsWith("Notify")) {
-		methodName = methodName.substring("Notify".length);
+		const methodNameWithoutNotify = methodName.substring("Notify".length);
+		names.push(`C${serviceName}_${methodNameWithoutNotify}_Notification`);
 	}
 
 	return {
@@ -1549,7 +1554,7 @@ function GetSendNotification(node) {
 		response: NoResponse,
 		requestToLookup: {
 			//module: null, // all modules
-			names: [`C${serviceName}_${methodName}_Notification`],
+			names: names,
 		},
 	};
 }

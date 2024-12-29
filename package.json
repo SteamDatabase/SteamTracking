@@ -3,7 +3,7 @@
   "name": "steamtracking",
   "scripts": {
     "lint": "biome lint --config-path=biome_steamdb.json",
-    "format": "biome format --config-path=biome_steamdb.json",
+    "format": "biome format --write --config-path=biome_steamdb.json",
     "prettier": "biome format --max-diagnostics=0 --log-kind=compact --diagnostic-level=error --write"
   },
   "dependencies": {
