@@ -34,7 +34,11 @@ console.log("Found", files.length, "files to parse");
 for (const file of files) {
 	try {
 		const code = await readFile(file);
-		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
+		const ast = parse(code, {
+			ecmaVersion: latestEcmaVersion,
+			sourceType: "module",
+			loc: true,
+		});
 		const crossModuleExportedMessages = new Map();
 		const services = [];
 		const messages = [];
@@ -1457,12 +1461,12 @@ function GetMsgResponse(node, messages) {
 }
 
 function GetSendMsg(node, messages, importedIds) {
-	if (
-		node.type !== Syntax.CallExpression ||
-		node.arguments.length !== 4 ||
-		node.arguments[0].type !== Syntax.Literal ||
-		node.arguments[3].type !== Syntax.ObjectExpression
-	) {
+	if (node.type !== Syntax.CallExpression || node.arguments.length !== 4 || node.arguments[0].type !== Syntax.Literal) {
+		return null;
+	}
+
+	if (node.arguments[3].type !== Syntax.ObjectExpression) {
+		console.error("Rejected SendMsg", node.arguments[0].value);
 		return null;
 	}
 
@@ -1522,13 +1526,12 @@ function GenerateRequestNames(rpc, className) {
 }
 
 function GetSendNotification(node) {
-	if (
-		node.type !== Syntax.CallExpression ||
-		node.arguments.length !== 3 ||
-		node.arguments[0].type !== Syntax.Literal ||
-		node.arguments[1].type !== Syntax.Identifier ||
-		node.arguments[2].type !== Syntax.ObjectExpression
-	) {
+	if (node.type !== Syntax.CallExpression || node.arguments.length !== 3 || node.arguments[0].type !== Syntax.Literal) {
+		return null;
+	}
+
+	if (node.arguments[2].type !== Syntax.ObjectExpression) {
+		console.error("Rejected SendNotification", node.arguments[0].value);
 		return null;
 	}
 
