@@ -5792,29 +5792,30 @@
                   },
                 ],
               };
-            const o = [];
-            r &&
-              r.GetReleaseDateRTime(!0) <
-                new Date().getTime() / 1e3 + 14 * Ve.Kp.PerDay &&
+            const o = [],
+              l = r && r.GetReleaseDateRTime(!0);
+            l &&
+              l > new Date().getTime() / 1e3 &&
+              l < new Date().getTime() / 1e3 + 14 * Ve.Kp.PerDay &&
               o.push({
                 sText: (0, s.we)(
                   "#App_Landing_DemoWishlist_ParentAppWarning",
                   r.GetFormattedSteamReleaseDate(),
                 ),
               });
-            const l = n.data.allowed_countries,
-              i = n.data.restricted_countries.filter((e) => "XC" != e),
-              c = a.data.allowed_countries,
-              d = a.data.restricted_countries.filter((e) => "XC" != e),
-              u = (e, t) =>
+            const i = n.data.allowed_countries,
+              c = n.data.restricted_countries.filter((e) => "XC" != e),
+              d = a.data.allowed_countries,
+              u = a.data.restricted_countries.filter((e) => "XC" != e),
+              m = (e, t) =>
                 0 == e.length && 0 == t.length
                   ? "unrestricted"
                   : e.length > 0
                     ? "allow"
                     : "deny",
-              m = u(l, i),
-              p = u(c, d),
-              _ = (e, t) =>
+              p = m(i, c),
+              _ = m(d, u),
+              E = (e, t) =>
                 0 == e.length && 0 == t.length
                   ? (0, s.we)(
                       "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Unrestricted",
@@ -5828,25 +5829,25 @@
                         "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Deny",
                         t.join(", "),
                       ),
-              E = _(l, i),
-              g = _(c, d);
-            "unrestricted" != m &&
+              g = E(i, c),
+              C = E(d, u);
             "unrestricted" != p &&
-            l.length > 0 != c.length > 0
+            "unrestricted" != _ &&
+            i.length > 0 != d.length > 0
               ? o.push({
                   sText: (0, s.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictionTypes_Mismatch",
-                    E,
                     g,
+                    C,
                   ),
                   bCritical: !0,
                 })
-              : E != g &&
+              : g != C &&
                 o.push({
                   sText: (0, s.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch",
-                    E,
                     g,
+                    C,
                   ),
                 });
             return { bLoading: !1, rgWarnings: o };
