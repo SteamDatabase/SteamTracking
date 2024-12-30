@@ -2541,7 +2541,7 @@ HardwareRMA = {
 HelpRequestPage = {
 
 	m_strSystemReport: "",
-	m_abLogsAndDumps : undefined,
+	m_rgLogsAndDumps : undefined,
 
 	ShowCreateHelpRequestFormOnPageLoad: function( bScrollIntoView )
 	{
@@ -2560,7 +2560,22 @@ HelpRequestPage = {
 		if ( typeof systemReport  === 'object' )
 		{
 			HelpRequestPage.m_strSystemReport = systemReport.vdf;
-			HelpRequestPage.m_abLogsAndDumps = Base64Binary.decodeArrayBuffer( systemReport.zipped_content_base64 );
+
+			try
+			{
+				const encoded = systemReport.zipped_content_base64.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+				const decoded = window.atob( encoded );
+
+				HelpRequestPage.m_rgLogsAndDumps = new Uint8Array( decoded.length );
+				for ( var i = 0; i < decoded.length; ++i )
+				{
+					HelpRequestPage.m_rgLogsAndDumps[i] = decoded.charCodeAt( i );
+				}
+			}
+			catch( e )
+			{
+				HelpRequestPage.m_rgLogsAndDumps = undefined;
+			}
 		}
 		else if ( typeof systemReport === 'string' )
 		{
@@ -2694,9 +2709,9 @@ HelpRequestPage = {
 				fd.append('system_report', new Blob([HelpRequestPage.m_strSystemReport], {type: "text/plain"}));
 			}
 
-			if ( HelpRequestPage.m_abLogsAndDumps != undefined )
+			if ( HelpRequestPage.m_rgLogsAndDumps != undefined )
 			{
-				fd.append( 'dumps_and_logs_zip', new Blob([HelpRequestPage.m_abLogsAndDumps], {type: "application/zip"}));
+				fd.append( 'dumps_and_logs_zip', new Blob([HelpRequestPage.m_rgLogsAndDumps], {type: "application/zip"}));
 			}
 
 			// Add logs/dumps zip as well if present
