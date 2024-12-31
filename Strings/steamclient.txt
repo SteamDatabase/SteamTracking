@@ -26285,6 +26285,7 @@ signed_installscript
 significant_events
 sigprocmask
 since_change_number
+sincos
 sincosf
 sinf
 single_response
