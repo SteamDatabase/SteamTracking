@@ -1433,13 +1433,13 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_playtime" ).hide();
 	}
 
-	if ( $J( "#review_playtime_type_all" ).attr( "checked" ) )
+	if ( $J( "#review_playtime_type_deck" ).attr( "checked" ) )
 	{
-		$J( "#reviews_filter_deck_playtime" ).hide();
+		$J( "#reviews_filter_deck_playtime" ).show();
 	}
 	else
 	{
-		$J( "#reviews_filter_deck_playtime" ).show();
+		$J( "#reviews_filter_deck_playtime" ).hide();
 	}
 
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
