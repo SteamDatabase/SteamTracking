@@ -941,6 +941,7 @@ $system\InGameOverlayScreenshotHotKey
 %\n!k_ERemoteClientBroadcastMsgStatus
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
+%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_ESteamDeckKeyboardLayout_Danish
 %\n!k_ESteamDeckKeyboardLayout_Dvorak
 %\n!k_ESteamDeckKeyboardLayout_French
@@ -19955,9 +19956,9 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_Default
+k_EStartupMovieVariant_DeckBlue
+k_EStartupMovieVariant_Generic
 k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Orange
 k_ESteamDeckKeyboardLayout_Thai
 k_ESteamNotificationType_Gift
 k_ESteamNotificationType_Item

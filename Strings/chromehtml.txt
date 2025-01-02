@@ -49,6 +49,7 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
+%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
@@ -916,6 +917,7 @@ LABEL_REPEATED
 LABEL_REQUIRED
 Label
 Location
+LuUGb\fLd
 MessageOptions
 MethodDescriptorProto
 N10__cxxabiv115__forced_unwindE
@@ -1964,9 +1966,9 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_Default
+k_EStartupMovieVariant_DeckBlue
+k_EStartupMovieVariant_Generic
 k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Orange
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD

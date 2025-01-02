@@ -135,8 +135,9 @@ enum ESystemFanControlMode {
 
 enum EStartupMovieVariant {
 	k_EStartupMovieVariant_Invalid = 0;
-	k_EStartupMovieVariant_Default = 1;
-	k_EStartupMovieVariant_Orange = 2;
+	k_EStartupMovieVariant_Generic = 1;
+	k_EStartupMovieVariant_DeckBlue = 2;
+	k_EStartupMovieVariant_DeckOrange = 3;
 }
 
 enum EColorGamutLabelSet {

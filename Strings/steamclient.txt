@@ -903,6 +903,7 @@ $steammessages_parental_objects.proto"
 %\n!k_ERemoteClientBroadcastMsgStatus
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
+%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_ESteamDatagramMsg_P2PStatsRelay
 %\n!k_ESteamDeckKeyboardLayout_Danish
 %\n!k_ESteamDeckKeyboardLayout_Dvorak
@@ -23975,9 +23976,9 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_Default
+k_EStartupMovieVariant_DeckBlue
+k_EStartupMovieVariant_Generic
 k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Orange
 k_ESteamDatagramMsg_ConnectOK
 k_ESteamDatagramMsg_Diagnostic
 k_ESteamDatagramMsg_Invalid
