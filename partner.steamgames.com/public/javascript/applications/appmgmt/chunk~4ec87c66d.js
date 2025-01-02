@@ -4671,44 +4671,112 @@
         m = a(78327),
         d = a(75493);
       function u(e, t) {
-        const a = g,
-          n = (0, d.V)(),
-          r = l.useMemo(
+        const a = (0, d.V)(),
+          n = l.useMemo(
             () => ({
               bExcludeExpired: t?.bExcludeExpired ?? !0,
               bExcludeCommercial: t?.bExcludeCommercial ?? !0,
-              nPartnerID: t?.nPartnerID ?? n,
+              nPartnerID: t?.nPartnerID ?? a,
             }),
-            [n, t?.bExcludeExpired, t?.bExcludeCommercial, t?.nPartnerID],
+            [a, t?.bExcludeExpired, t?.bExcludeCommercial, t?.nPartnerID],
           ),
-          i = Array.from(new Set(e)).filter((e) => e > 0),
-          s = (0, o.E)({
-            queries: i.map((e) =>
-              (function (e, t, a) {
-                return {
-                  queryKey: ["useAppWithDiscounts", t, a],
-                  queryFn: () => e.loadAppWithDiscounts(a, t),
-                  enabled: !!t,
-                };
-              })(a, r, e),
-            ),
+          i = (0, l.useMemo)(() => {
+            const t = Array.from(new Set(e)).filter((e) => e > 0),
+              a = [];
+            for (let e = 0; e < t.length; e += 100) a.push(t.slice(e, e + 100));
+            return a;
+          }, [e]),
+          c = (0, o.E)({
+            queries: i.map((e) => ({
+              queryKey: ["useAppWithDiscounts", n, e],
+              queryFn: () =>
+                (function (e) {
+                  const t = JSON.stringify(e);
+                  E.get(t) ||
+                    E.set(
+                      t,
+                      new (s())(
+                        async (t) => {
+                          const a =
+                              m.TS.PARTNER_BASE_URL +
+                              "discounts/ajaxgetdiscountbyapp",
+                            n = new Map();
+                          if (!t || 0 == t.length) return [];
+                          const i = [...t],
+                            s = [];
+                          for (; i.length > 0; ) {
+                            const t = new FormData(),
+                              n = i.splice(0, 250);
+                            t.append("sessionid", m.TS.SESSIONID),
+                              t.append("rgAppIDs", n.join(",")),
+                              t.append(
+                                "bExcludeExpired",
+                                e.bExcludeExpired ? "1" : "0",
+                              ),
+                              t.append(
+                                "bExcludeCommercial",
+                                e.bExcludeCommercial ? "1" : "0",
+                              ),
+                              e.nPartnerID &&
+                                t.append(
+                                  "publisherid",
+                                  e.nPartnerID.toString(),
+                                ),
+                              s.push(r().post(a, t, { withCredentials: !0 }));
+                          }
+                          return (
+                            (await Promise.all(s)).forEach((e) => {
+                              if (
+                                200 == e?.status &&
+                                1 == e?.data?.success &&
+                                e?.data?.map
+                              )
+                                for (let t in e.data.map) {
+                                  const a = Number.parseInt(t);
+                                  a &&
+                                    n.set(a, {
+                                      storeItem: a,
+                                      discountSetting: e.data.map[a],
+                                    });
+                                }
+                              else
+                                console.log(
+                                  "Error: Failed on FetchDiscountByApp request " +
+                                    e?.status +
+                                    " " +
+                                    e?.statusText +
+                                    " " +
+                                    e?.data?.success,
+                                );
+                            }),
+                            t.map((e) => n.get(e) ?? null)
+                          );
+                        },
+                        { maxBatchSize: 100 },
+                      ),
+                    );
+                  return E.get(t);
+                })(n).loadMany(e),
+            })),
           }),
-          c = s.some((e) => e.isLoading);
+          u = c.some((e) => e.isLoading);
         return l.useMemo(() => {
           let e = new Map();
           return (
-            c ||
-              s.forEach((t) => {
+            u ||
+              c.forEach((t) => {
                 t.isSuccess &&
                   t.data &&
-                  e.set(t.data.storeItem, t.data.discountSetting);
+                  t.data.forEach((t) => {
+                    t instanceof Error || e.set(t.storeItem, t.discountSetting);
+                  });
               }),
             e
           );
-        }, [e, r, c]);
+        }, [e, n, u]);
       }
       function p(e, t) {
-        const a = h,
+        const a = g,
           n = (0, d.V)(),
           r = {
             bExcludeExpired: t?.bExcludeExpired ?? !0,
@@ -4761,78 +4829,11 @@
         return "";
       }
       const g = {
-        loadAppWithDiscounts: async (e, t) =>
-          await (function (e) {
-            const t = JSON.stringify(e);
-            S.get(t) ||
-              S.set(
-                t,
-                new (s())(
-                  async (t) => {
-                    const a =
-                        m.TS.PARTNER_BASE_URL +
-                        "discounts/ajaxgetdiscountbyapp",
-                      n = new Map();
-                    if (!t || 0 == t.length) return [];
-                    const i = [...t],
-                      s = [];
-                    for (; i.length > 0; ) {
-                      const t = new FormData(),
-                        n = i.splice(0, 250);
-                      t.append("sessionid", m.TS.SESSIONID),
-                        t.append("rgAppIDs", n.join(",")),
-                        t.append(
-                          "bExcludeExpired",
-                          e.bExcludeExpired ? "1" : "0",
-                        ),
-                        t.append(
-                          "bExcludeCommercial",
-                          e.bExcludeCommercial ? "1" : "0",
-                        ),
-                        e.nPartnerID &&
-                          t.append("publisherid", e.nPartnerID.toString()),
-                        s.push(r().post(a, t, { withCredentials: !0 }));
-                    }
-                    return (
-                      (await Promise.all(s)).forEach((e) => {
-                        if (
-                          200 == e?.status &&
-                          1 == e?.data?.success &&
-                          e?.data?.map
-                        )
-                          for (let t in e.data.map) {
-                            const a = Number.parseInt(t);
-                            a &&
-                              n.set(a, {
-                                storeItem: a,
-                                discountSetting: e.data.map[a],
-                              });
-                          }
-                        else
-                          console.log(
-                            "Error: Failed on FetchDiscountByApp request " +
-                              e?.status +
-                              " " +
-                              e?.statusText +
-                              " " +
-                              e?.data?.success,
-                          );
-                      }),
-                      t.map((e) => n.get(e) ?? null)
-                    );
-                  },
-                  { maxBatchSize: 100 },
-                ),
-              );
-            return S.get(t);
-          })(t).load(e),
-      };
-      const h = {
         loadBundleWithDiscounts: async (e, t) =>
           await (function (e) {
             const t = JSON.stringify(e);
-            E.get(t) ||
-              E.set(
+            h.get(t) ||
+              h.set(
                 t,
                 new (s())(
                   async (t) => {
@@ -4887,11 +4888,11 @@
                   { maxBatchSize: 100 },
                 ),
               );
-            return E.get(t);
+            return h.get(t);
           })(t).load(e),
       };
-      const E = new Map(),
-        S = new Map();
+      const h = new Map(),
+        E = new Map();
     },
     73179: (e, t, a) => {
       "use strict";
