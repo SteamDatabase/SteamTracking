@@ -320,7 +320,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 
 function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDefs )
 {
-	const rgSteamAwardWinnerFiltered = GHomepage.FilterItemsForDisplay( rgSteamAwardWinners, 'home', 0, 11, { games_already_in_library: true, localized: true, displayed_elsewhere: false, only_current_platform: false, virtual_reality: true } );
+	const rgSteamAwardWinnerFiltered = GHomepage.FilterItemsForDisplay( rgSteamAwardWinners, 'home', 0, 11, { displayed_elsewhere: false, only_current_platform: false, virtual_reality: true } );
 	GDynamicStore.MarkAppDisplayed( rgSteamAwardWinnerFiltered );
 
 	if ( !rgSteamAwardWinnerFiltered.length )
