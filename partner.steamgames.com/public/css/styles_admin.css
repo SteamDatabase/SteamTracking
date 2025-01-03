@@ -3398,6 +3398,17 @@ div.image_all_ages_appropriate
 	padding: 4px 0;
 }
 
+.eula_edit_field {
+	padding: 10px;
+	background: #23262E;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	font-weight: 300;
+	color: #a9b2b7;
+}
+
 .eula_edit_controls .BBCodeTemplateBlock {
 	float: left;
 	margin-right: 12px;

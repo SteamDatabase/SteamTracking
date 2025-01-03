@@ -1776,8 +1776,9 @@ html.tablet .game_area_purchase_game p.package_contents, .game_area_offsite_purc
 }
 
 html.tablet .game_area_purchase_game p.package_contents {
-	display: flex;
-	flex-direction: column;
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*This was breaking on deck*/
 }
 
 html.tablet .bundle_contents_preview {

@@ -1030,6 +1030,20 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	white-space: nowrap;
 }
 
+div.package_contents_capsule:hover {
+	z-index: 100 !important;
+	box-shadow: -5px 0 10px 1px black, 5px 0 10px 1px black !important;
+	overflow: show;
+}
+
+div.package_contents_capsule a {
+	display: inline-block;
+	height: 45px;
+	width: 120px;
+	overflow: hidden;
+	background: black;
+}
+
 .game_area_purchase_game div.package_contents_capsule {
 	position: relative;
 	display: inline-block;
@@ -1048,7 +1062,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 }
 
 .game_area_purchase_game div.package_contents_collapsed.package_contents_capsules div.package_contents_capsule:not(:first-child) {
-	margin-left: -38px;
+	margin-left: -34px;
 }
 
 .game_area_purchase_game div.package_contents_collapsed.package_contents_capsules div.package_contents_capsule {

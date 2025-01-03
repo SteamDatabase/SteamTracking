@@ -284,7 +284,7 @@ function ShowEULA( elLink )
 	}
 	else
 	{
-		var win = window.open( elLink.href,'eula','height=584,width=475,resize=yes,scrollbars=yes');
+		var win = window.open( elLink.href,'eula','height=584,width=648,resize=yes,scrollbars=yes');
 		win && win.focus();
 	}
 }
