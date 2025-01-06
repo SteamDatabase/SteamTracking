@@ -128,8 +128,8 @@
   .tabulator-arrow {
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
+  border-left: 6px solid rgba(0, 0, 0, 0);
+  border-right: 6px solid rgba(0, 0, 0, 0);
   border-bottom: 6px solid #bbb;
 }
 .tabulator
@@ -580,7 +580,7 @@
 .tabulator-row .tabulator-cell.tabulator-editing input,
 .tabulator-row .tabulator-cell.tabulator-editing select {
   border: 1px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .tabulator-row .tabulator-cell.tabulator-validation-fail {
   border: 1px solid #d00;
@@ -588,7 +588,7 @@
 .tabulator-row .tabulator-cell.tabulator-validation-fail input,
 .tabulator-row .tabulator-cell.tabulator-validation-fail select {
   border: 1px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   color: #d00;
 }
 .tabulator-row .tabulator-cell:first-child .tabulator-col-resize-handle.prev {
@@ -655,7 +655,7 @@
   position: relative;
   height: 7px;
   width: 1px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .tabulator-row
   .tabulator-cell
@@ -753,8 +753,8 @@
 }
 .tabulator-row.tabulator-group.tabulator-group-visible .tabulator-arrow {
   margin-right: 10px;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
+  border-left: 6px solid rgba(0, 0, 0, 0);
+  border-right: 6px solid rgba(0, 0, 0, 0);
   border-top: 6px solid #666;
   border-bottom: 0;
 }
@@ -781,8 +781,8 @@
   width: 0;
   height: 0;
   margin-right: 16px;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0);
+  border-bottom: 6px solid rgba(0, 0, 0, 0);
   border-right: 0;
   border-left: 6px solid #666;
   vertical-align: middle;
@@ -961,8 +961,8 @@ body.tabulator-print-fullscreen-hide > :not(.tabulator-print-fullscreen) {
   .tabulator-print-table-group.tabulator-group-visible
   .tabulator-arrow {
   margin-right: 10px;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
+  border-left: 6px solid rgba(0, 0, 0, 0);
+  border-right: 6px solid rgba(0, 0, 0, 0);
   border-top: 6px solid #666;
   border-bottom: 0;
 }
@@ -989,8 +989,8 @@ body.tabulator-print-fullscreen-hide > :not(.tabulator-print-fullscreen) {
   width: 0;
   height: 0;
   margin-right: 16px;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0);
+  border-bottom: 6px solid rgba(0, 0, 0, 0);
   border-right: 0;
   border-left: 6px solid #666;
   vertical-align: middle;
@@ -1037,7 +1037,7 @@ body.tabulator-print-fullscreen-hide > :not(.tabulator-print-fullscreen) {
   position: relative;
   height: 7px;
   width: 1px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .tabulator-print-table
   .tabulator-data-tree-control

@@ -29,7 +29,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   padding: 2px 2px;
   cursor: pointer;
 }
@@ -372,18 +372,18 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   box-shadow: inset 0px 0px 4px #000;
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   padding-right: 2px;
 }
 ._113iuw_HlE_qSgt9cGWCSv {
   resize: none;
   margin-right: 4px;
   height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -660,7 +660,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   transition: background .3s ease;
 }
 ._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy) {
-  background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
+  background: linear-gradient(136deg, rgb(0, 86, 214) 1%, rgb(26, 159, 255) 60%);
 }
 ._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc.GamepadMode,
 .GamepadMode ._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc {
@@ -669,8 +669,8 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   margin: 0;
   width: 100%;
   height: 100%;
-  border: 0px solid transparent;
-  background-color: transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   max-width: 44px;
   min-width: 0;
 }
@@ -720,7 +720,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   transition-duration: .3s, .3s, .3s, .6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
-    #1da834 0%,
+    rgb(29, 168, 52) 0%,
     rgba(27, 28, 32, 0) 100%
   );
   background-position: -190px 0px;
@@ -742,7 +742,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
 .ChatMessageEntryVoice.Disabled {
   opacity: 0.2;
   border: 1px dashed #000;
-  outline: 2px solid #0007;
+  outline: 2px solid rgba(0, 0, 0, 0.4666666667);
 }
 .ChatMessageEntryVoice.Active {
   min-width: 136px;
@@ -760,7 +760,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   width: 87px;
   text-align: center;
   color: #74c069;
-  background-color: #0005;
+  background-color: rgba(0, 0, 0, 0.3333333333);
   font-size: 10px;
   margin-top: 0px;
 }
@@ -781,8 +781,8 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
 }
 .ChatMessageEntryVoice .activeVoiceControls {
   min-width: 0px;
-  border-top: 0px solid transparent;
-  border-bottom: 0px solid transparent;
+  border-top: 0px solid rgba(0, 0, 0, 0);
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
   background: none;
 }
 .ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
@@ -961,7 +961,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
   width: 66px;
   text-align: center;
   color: #74c069;
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
 }
 ._3rRqPJdGrYx9YMtQMciIFY {
   display: block;
@@ -975,7 +975,7 @@ img.AB86vEzEKPL0y5fK_m4pT._4xBaTT5razIZJ5CecJ7s9 {
 ._3y7kVhhGmtbSgbZdte0EuV {
   font-size: 14px;
   background-color: #383e47;
-  box-shadow: 0 0 12px #00000066;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border: 1px solid #404754;
   border-radius: 2px;
   padding: 8px;

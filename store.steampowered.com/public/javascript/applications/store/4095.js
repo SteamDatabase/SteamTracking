@@ -13221,7 +13221,8 @@
       ];
       class E {
         constructor() {
-          (0, o.Gn)(this);
+          (0, o.Gn)(this),
+            "dev" == y.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
         }
         m_mapClanToImages = new Map();
         m_mapClanImageLoadPromises = new Map();
@@ -13717,10 +13718,12 @@
         m_filesToUpload = o.sH.array();
         m_strUploadPath = null;
         m_fnUploadSuccessCallback = null;
-        constructor(e, t) {
+        m_bSynchronousUpload = !1;
+        constructor(e, t, r) {
           (0, o.Gn)(this),
             (this.m_strUploadPath = e),
-            (this.m_fnUploadSuccessCallback = t);
+            (this.m_fnUploadSuccessCallback = t),
+            (this.m_bSynchronousUpload = r);
         }
         GetFnOnUploadSuccess() {
           return this.m_fnUploadSuccessCallback;
@@ -13824,21 +13827,24 @@
         }
         async UploadAllImages(e, t, r, a, i) {
           const n = {};
+          let s = {};
           for (const e of this.m_filesToUpload)
             if ("pending" === e.status) {
               const t = e.IsValidAssetType(r, a, i);
               if (!t.error && !t.needsCrop) {
                 e.status = "uploading";
-                n[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
+                const r = `${e.uploadTime}/${e.file.name}`;
+                (n[r] = this.UploadFile(
                   e.file,
                   e.file.name,
                   e.language,
                   t.match,
-                );
+                )),
+                  this.m_bSynchronousUpload && (s[r] = await n[r]);
               }
             }
-          const s = await (0, d.RR)(n);
           return (
+            this.m_bSynchronousUpload || (s = await (0, d.RR)(n)),
             Object.keys(s).forEach((r) => {
               const a = s[r],
                 i = this.m_filesToUpload.find(
@@ -27537,16 +27543,17 @@
       r.d(t, { E: () => i });
       var a = r(90626);
       r(13871);
-      function i(e, t) {
+      function i(e, t, r, i) {
         a.useEffect(() => {
-          const r = (r) => {
-            r.key === e && t(r);
+          const a = (a) => {
+            a.key === e &&
+              (t(a), r && a.preventDefault(), i && a.stopPropagation());
           };
           return (
-            document.addEventListener("keydown", r),
-            () => document.removeEventListener("keydown", r)
+            document.addEventListener("keydown", a),
+            () => document.removeEventListener("keydown", a)
           );
-        }, [e, t]);
+        }, [e, t, r, i]);
       }
     },
     92909: (e, t, r) => {

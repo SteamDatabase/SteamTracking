@@ -343,7 +343,7 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 32px #000;
   pointer-events: initial;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   font-weight: 300;
 }
 .BasicUI ._1KsYSVzmvIfRivBTcx-_GE {
@@ -1399,7 +1399,7 @@ html.tablet ._20f2sKS2M7PlPSnPCinT26 {
 .qGf3RTqBFpZQof8ldGRln ._2H7gH2Loz3mnTS1oeeP3Ut:after {
   right: 100%;
   top: 50%;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: "";
   height: 0;
   width: 0;
@@ -1724,7 +1724,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   padding: 5px 20px;
   border-radius: 3px;
   background: #dd3e3e;
-  color: #eeeeeeaa;
+  color: rgba(238, 238, 238, 0.6666666667);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 ._1g4Yfobmkb5CVI2gzly8Bg
@@ -2100,7 +2100,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 ._3n6v2rFCMX3yWMfZrlCn6g
   .khWz0kU5EooSG60KYdU1K
@@ -2141,7 +2141,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   padding: 0px;
   cursor: default;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 ._3n6v2rFCMX3yWMfZrlCn6g
   .khWz0kU5EooSG60KYdU1K
@@ -2214,7 +2214,7 @@ html.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   ._1SKPLx2FBvP9iC-lJHTkKQ
   ._1V-8WYatw7PvjVj9hsAptM {
   margin-left: 0px;
-  background: #ffffff1a;
+  background: rgba(255, 255, 255, 0.1019607843);
   color: #fff;
   padding: 8px;
   font-size: 14px;

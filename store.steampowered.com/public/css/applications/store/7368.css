@@ -240,12 +240,12 @@
 .nOdcT-MoOaXGePXLyPe0H {
   -webkit-mask: linear-gradient(
     to right,
-    black calc(100% - 6px),
+    rgb(0, 0, 0) calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    black calc(100% - 6px),
+    rgb(0, 0, 0) calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
@@ -292,12 +292,12 @@
   margin-top: -1px;
   -webkit-mask: linear-gradient(
     to right,
-    black calc(100% - 8px),
+    rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    black calc(100% - 8px),
+    rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   padding-right: 24px;

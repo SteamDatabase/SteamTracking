@@ -565,7 +565,7 @@
       }
       function h() {
         const e = (0, r.J)().GetTemplateVars();
-        return (0, n.WN)(e.linkurl);
+        return (0, n.WN)(e.linkurl, 1);
       }
     },
     37220: (e, a, t) => {

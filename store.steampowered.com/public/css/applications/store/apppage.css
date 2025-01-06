@@ -58,7 +58,7 @@
   margin-top: -5px;
 }
 ._3n8swQFM3I_ARVM_5bPhAs {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
   color: #fff;
@@ -101,7 +101,7 @@
 }
 ._1TRFtE8IfXpDQ_loHnB_bU {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
   color: #fff;
@@ -330,13 +330,13 @@
   -webkit-mask-image: -webkit-gradient(
     radial-gradient(
       69% 91% at 82% 100%,
-      white 0%,
+      rgb(255, 255, 255) 0%,
       rgba(116, 133, 140, 0.1) 100%
     )
   );
   mask-image: radial-gradient(
     69% 91% at 82% 100%,
-    white 0%,
+    rgb(255, 255, 255) 0%,
     rgba(116, 133, 140, 0.1) 100%
   );
 }
@@ -421,7 +421,7 @@
   align-items: center;
   margin: 10px 8px;
   padding: 0 20px 0 40px;
-  background-color: #00000033;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   backdrop-filter: blur(16px);
 }
@@ -457,13 +457,13 @@
   -webkit-mask-image: -webkit-gradient(
     radial-gradient(
       69% 91% at 82% 100%,
-      white 0%,
+      rgb(255, 255, 255) 0%,
       rgba(116, 133, 140, 0.1) 100%
     )
   );
   mask-image: radial-gradient(
     69% 91% at 82% 100%,
-    white 0%,
+    rgb(255, 255, 255) 0%,
     rgba(116, 133, 140, 0.1) 100%
   );
 }
@@ -843,7 +843,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu {
   padding: 8px;
   border-radius: 2px;
-  border: 3px solid transparent;
+  border: 3px solid rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -852,7 +852,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 910px) {
   ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu {
-    border: 2px solid transparent;
+    border: 2px solid rgba(0, 0, 0, 0);
     padding: 4px 12px;
     flex-direction: row;
     column-gap: 20px;
@@ -1371,7 +1371,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   padding: 0px 10px;
   font-weight: 500;
   line-height: 18px;
-  text-shadow: 1px 1px 2px #00000033;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 .OXgVBMVdP9Ecu6IgqZ3_n span {
   font-weight: 800;
@@ -1821,7 +1821,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   padding-left: 5px;
 }
 ._292IWiCTro5jiTmIxiDfyc._1tX6f_kWb07D_qLWgL7-Ah {
-  background-color: #80808040;
+  background-color: rgba(128, 128, 128, 0.2509803922);
 }
 ._1SnxJyZ5foWgNRCNLmKm6H {
   white-space: nowrap;

@@ -2587,12 +2587,12 @@
           G = (0, N.ru)(X),
           [k, P] = n.useState(0),
           q = (0, d.b)();
-        (0, w.E)("ArrowLeft", () => W(!1)),
-          (0, w.E)("Left", () => W(!1)),
-          (0, w.E)("ArrowRight", () => W(!0)),
-          (0, w.E)("Right", () => W(!0)),
-          (0, w.E)("Escape", () => o?.()),
-          (0, w.E)("Esc", () => o?.());
+        (0, w.E)("ArrowLeft", () => W(!1), !0, !0),
+          (0, w.E)("Left", () => W(!1), !0, !0),
+          (0, w.E)("ArrowRight", () => W(!0), !0, !0),
+          (0, w.E)("Right", () => W(!0), !0, !0),
+          (0, w.E)("Escape", () => o?.(), !0, !0),
+          (0, w.E)("Esc", () => o?.(), !0, !0);
         const L = n.useMemo(() => Boolean(M.innerWidth < J), [M]),
           { fnGetDiscoveryQueue: U, rgAppIDs: Q } = (function (e, t, r) {
             const [a, i] = n.useState([]),

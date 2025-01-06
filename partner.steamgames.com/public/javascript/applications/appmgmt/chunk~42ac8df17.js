@@ -10780,7 +10780,8 @@
       ];
       class C {
         constructor() {
-          (0, o.Gn)(this);
+          (0, o.Gn)(this),
+            "dev" == S.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
         }
         m_mapClanToImages = new Map();
         m_mapClanImageLoadPromises = new Map();
@@ -12502,7 +12503,7 @@
         m_bAllowAppImpressions = !1;
         m_primaryLanguage = -1;
         m_secondaryLanguages = new Set();
-        m_setRecommendedTags = new Set();
+        m_rgRecommendedTags = [];
         m_mapRecommendingCuratorsForApp = new Map();
         m_setPackagesInCart = new Set();
         m_setAppsInCart = new Set();
@@ -12623,7 +12624,7 @@
           );
         }
         GetRecommendedTags() {
-          return this.m_setRecommendedTags;
+          return this.m_rgRecommendedTags;
         }
         BIsAjaxInFlight() {
           return this.m_bAjaxInFlight;
@@ -12735,8 +12736,8 @@
                       e.data.rgSecondaryLanguages,
                     )),
                   e.data.rgRecommendedTags &&
-                    (this.m_setRecommendedTags = new Set(
-                      e.data.rgRecommendedTags.map((e) => e.tagid),
+                    (this.m_rgRecommendedTags = e.data.rgRecommendedTags.map(
+                      (e) => e.tagid,
                     )),
                   e.data.rgAppsInCart &&
                     (this.m_setAppsInCart = new Set(e.data.rgAppsInCart)),
@@ -12987,7 +12988,7 @@
         ),
         (0, n.Cg)([o.sH], h.prototype, "m_primaryLanguage", void 0),
         (0, n.Cg)([o.sH], h.prototype, "m_secondaryLanguages", void 0),
-        (0, n.Cg)([o.sH], h.prototype, "m_setRecommendedTags", void 0),
+        (0, n.Cg)([o.sH], h.prototype, "m_rgRecommendedTags", void 0),
         (0, n.Cg)(
           [o.sH],
           h.prototype,
@@ -20421,11 +20422,6 @@
             ),
             i.createElement(
               "div",
-              { className: L().ReviewScoreDivider },
-              " | ",
-            ),
-            i.createElement(
-              "div",
               { className: L().ReviewScoreCount },
               r
                 ? "(" + s.review_count.toLocaleString() + ")"
@@ -23670,16 +23666,17 @@
       r.d(t, { E: () => n });
       var a = r(90626);
       r(13871);
-      function n(e, t) {
+      function n(e, t, r, n) {
         a.useEffect(() => {
-          const r = (r) => {
-            r.key === e && t(r);
+          const a = (a) => {
+            a.key === e &&
+              (t(a), r && a.preventDefault(), n && a.stopPropagation());
           };
           return (
-            document.addEventListener("keydown", r),
-            () => document.removeEventListener("keydown", r)
+            document.addEventListener("keydown", a),
+            () => document.removeEventListener("keydown", a)
           );
-        }, [e, t]);
+        }, [e, t, r, n]);
       }
     },
   },

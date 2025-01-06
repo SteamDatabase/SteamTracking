@@ -634,7 +634,7 @@ button.DialogButton {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 2px;
   padding: 4px;
 }
@@ -1259,7 +1259,7 @@ button.DialogButton {
   background: radial-gradient(
       circle at top left,
       rgba(40, 122, 245, 0.4) 0%,
-      #0e2247 60%
+      rgb(14, 34, 71) 60%
     ), #2c2f34;
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc._8VekS4xaLWJVFcgGdyfiV .meAbe3Sy_IJ4PngdGme2- {
@@ -2828,7 +2828,11 @@ button.DialogButton {
   ._2pWB9S_OTuIXwI6N5Z6ImM
   ._21dEpKSW0oKLbNj6b9ejcR
   button.ojjJ9SRkE-ckl-_-CcEOU {
-  background: linear-gradient(to right, #c32929 0%, #7a1616 60%);
+  background: linear-gradient(
+    to right,
+    rgb(195, 41, 41) 0%,
+    rgb(122, 22, 22) 60%
+  );
 }
 ._3CKEA9dhMF30PAHKRq0iW4 {
   font-size: 14px;
@@ -2961,7 +2965,7 @@ button.DialogButton {
   padding: 4px 0;
 }
 .json-diff-viewer tr.expand-line:hover td:before {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .json-diff-viewer tr.expand-line .has-lines-before {
   border-bottom: 1px solid;
@@ -2976,7 +2980,7 @@ button.DialogButton {
   font-family: sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 12px;
   border: none;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   user-select: none;
   cursor: pointer;
 }

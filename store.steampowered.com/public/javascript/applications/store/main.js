@@ -33425,7 +33425,7 @@
     },
     81511: (e, t, r) => {
       "use strict";
-      r.d(t, { aj: () => re, sx: () => ne });
+      r.d(t, { aj: () => ie, sx: () => se });
       var i = r(56545),
         n = r(80613),
         s = r(89068);
@@ -35552,7 +35552,92 @@
           return "CClientMetrics_ReportClientArgs_Notification";
         }
       }
-      var P;
+      class P extends d {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            P.prototype.glibc_version_major || s.Sg(P.M()),
+            d.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            P.sm_m ||
+              (P.sm_m = {
+                proto: P,
+                fields: {
+                  glibc_version_major: {
+                    n: 1,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
+                  glibc_version_minor: {
+                    n: 2,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
+                  account_type: {
+                    n: 3,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
+                  launcher_type: {
+                    n: 4,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
+                  game_server_appid: {
+                    n: 5,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
+                  process_name: {
+                    n: 6,
+                    br: s.qM.readString,
+                    bw: s.gp.writeString,
+                  },
+                },
+              }),
+            P.sm_m
+          );
+        }
+        static MBF() {
+          return P.sm_mbf || (P.sm_mbf = s.w0(P.M())), P.sm_mbf;
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.BT(P.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.Uq(P.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new P();
+          return P.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.zj(P.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.i0(P.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ReportLinuxStats_Notification";
+        }
+      }
+      var x;
       !(function (e) {
         (e.ClientAppInterfaceStatsReport = function (e, t) {
           return e.SendNotification(
@@ -35631,6 +35716,13 @@
               { ePrivilege: 1 },
             );
           }),
+          (e.ReportLinuxStats = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ReportLinuxStats#1",
+              (0, i.I8)(P, t),
+              { ePrivilege: 1 },
+            );
+          }),
           (e.ReportClipShare = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportClipShare#1",
@@ -35652,38 +35744,38 @@
               { ePrivilege: 1 },
             );
           });
-      })(P || (P = {}));
-      var x = r(84811),
-        j = r(61859),
-        A = r(42865);
-      const U =
+      })(x || (x = {}));
+      var j = r(84811),
+        A = r(61859),
+        U = r(42865);
+      const q =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
-      let q,
-        N = [],
-        G = (e, t) => N.push({ error: e, cCallsitesToIgnore: t });
-      const H = !0;
+      let N,
+        G = [],
+        H = (e, t) => G.push({ error: e, cCallsitesToIgnore: t });
+      const V = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...i) => {
-          t || G(new Error($(r, ...i)), 2), e.apply(console, [t, r, ...i]);
+          t || H(new Error(X(r, ...i)), 2), e.apply(console, [t, r, ...i]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          G(new Error($(e, ...r)), 1), t.apply(console, [e, ...r]);
+          H(new Error(X(e, ...r)), 1), t.apply(console, [e, ...r]);
         }),
           (console.clogerror = (e, r, ...i) => {
-            G(new Error($(r, ...i)), e + 1), t.apply(console, [r, ...i]);
+            H(new Error(X(r, ...i)), e + 1), t.apply(console, [r, ...i]);
           }),
-          U("error", (e) => {
-            G(e.error, 0);
+          q("error", (e) => {
+            H(e.error, 0);
           }),
-          (q = window.setTimeout(() => {
-            (N = []), (G = () => {});
+          (N = window.setTimeout(() => {
+            (G = []), (H = () => {});
           }, 3e4));
       }
-      const V = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        Z = ["/(localhost|127.0.0.1):1337/", "chrome-extension://"];
-      class K {
+      const Z = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        K = ["/(localhost|127.0.0.1):1337/", "chrome-extension://"];
+      class $ {
         m_strProduct;
         m_strVersion;
         m_transport = null;
@@ -35691,18 +35783,18 @@
         m_sendTimer = null;
         m_bReportingPaused = !1;
         m_pauseTimer = void 0;
-        m_fnGetReportingInterval = se;
+        m_fnGetReportingInterval = ae;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(e = !0) {
           e
-            ? (N.forEach(({ error: e, cCallsitesToIgnore: t }) =>
+            ? (G.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                 this.ReportError(e, { cCallsitesToIgnore: t }),
               ),
-              (G = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-            : (G = () => {}),
-            (N = []),
-            clearTimeout(q),
+              (H = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+            : (H = () => {}),
+            (G = []),
+            clearTimeout(N),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -35733,19 +35825,19 @@
               null
             );
           try {
-            const r = { ...V, ...t };
+            const r = { ...Z, ...t };
             if (!this.m_bEnabled) return null;
             0;
             const i = await (function (e, t) {
               try {
-                return e.stack && e.stack.match(X)
+                return e.stack && e.stack.match(Y)
                   ? (async function (e, t) {
                       const {
                           cCallsitesToIgnore: r,
                           bIncludeMessageInIdentifier: i,
                         } = t,
                         n = e.stack?.split("\n") ?? [];
-                      let s = te(n.filter((e) => !!e.match(X))[r]);
+                      let s = re(n.filter((e) => !!e.match(Y))[r]);
                       i && (s = `${s} ${e.message}`);
                       const a = n
                         .map((e) => {
@@ -35762,18 +35854,18 @@
                         .filter((e) => !!e);
                       return {
                         identifier: s,
-                        identifierHash: await ne(s),
+                        identifierHash: await se(s),
                         message: a,
                       };
                     })(e, t)
-                  : e.stack && e.stack.match(Y)
+                  : e.stack && e.stack.match(Q)
                     ? (async function (e, t) {
                         const {
                             cCallsitesToIgnore: r,
                             bIncludeMessageInIdentifier: i,
                           } = t,
                           n = e.stack?.split("\n") ?? [];
-                        let s = te(n.filter((e) => !!e.match(Y))[r]);
+                        let s = re(n.filter((e) => !!e.match(Q))[r]);
                         i && (s = `${s} ${e.message}`);
                         const a = n
                           .map((e) => {
@@ -35790,11 +35882,11 @@
                           .filter((e) => !!e);
                         return {
                           identifier: s,
-                          identifierHash: await ne(s),
+                          identifierHash: await se(s),
                           message: [e.message, ...a],
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(Q)
+                    : e.stack && e.stack.match(J)
                       ? (async function (e, t) {
                           const {
                               bIncludeMessageInIdentifier: r,
@@ -35822,16 +35914,16 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: await ne(o),
+                            identifierHash: await se(o),
                             message: [e.message, ...l],
                           };
                         })(e, t)
-                      : (ee ||
+                      : (te ||
                           (console.warn(
                             "Error reporter does not know how to parse generated stack:",
                           ),
                           console.warn(e.stack),
-                          (ee = !0)),
+                          (te = !0)),
                         null);
               } catch (e) {
                 return (
@@ -35863,7 +35955,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let r = JSON.stringify(t);
-            for (let t of Z) {
+            for (let t of K) {
               const i = new RegExp(t);
               if (r.match(i))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -35914,7 +36006,7 @@
           t.Body().set_product(this.m_strProduct),
             t.Body().set_version(this.m_strVersion),
             t.Body().set_errors(n),
-            P.ReportClientError(this.m_transport, t);
+            x.ReportClientError(this.m_transport, t);
         }
         get version() {
           return this.m_strVersion;
@@ -35923,10 +36015,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return H;
+          return V;
         }
       }
-      function $(e, ...t) {
+      function X(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -35938,12 +36030,12 @@
           })
           .join(", ");
       }
-      const X = /^\s*at .*(\S+:\d+|\(native\))/m,
-        Y = /(^|@)\S+:\d+/,
-        Q = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let J,
-        ee = !1;
-      function te(e) {
+      const Y = /^\s*at .*(\S+:\d+|\(native\))/m,
+        Q = /(^|@)\S+:\d+/,
+        J = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let ee,
+        te = !1;
+      function re(e) {
         return (function (e) {
           const t = "https://",
             r = e.indexOf(t);
@@ -35959,15 +36051,15 @@
           })(e),
         );
       }
-      const re = () => (J || ie(new K()), J),
-        ie = (e) => {
-          (J = e),
-            x.tH.InstallErrorReportingStore(J),
-            i.lI.InstallErrorReportingStore(J),
-            j.A0.InstallErrorReportingStore(J),
-            A.U.InstallErrorReportingStore(J);
+      const ie = () => (ee || ne(new $()), ee),
+        ne = (e) => {
+          (ee = e),
+            j.tH.InstallErrorReportingStore(ee),
+            i.lI.InstallErrorReportingStore(ee),
+            A.A0.InstallErrorReportingStore(ee),
+            U.U.InstallErrorReportingStore(ee);
         };
-      async function ne(e) {
+      async function se(e) {
         try {
           const r = await window.crypto.subtle.digest(
             "SHA-256",
@@ -35987,7 +36079,7 @@
         }
         var t;
       }
-      function se() {
+      function ae() {
         return 1e4;
       }
     },
@@ -41874,13 +41966,15 @@
             showTitle: s,
             PageListItemComponent: vt,
             PageListSeparatorComponent: Rt,
-            renderPageContent: (t, r, i) =>
-              n.createElement(zt, {
-                pages: e.pages,
-                activePage: t,
-                refForPage: r,
-                PageComponent: i,
-              }),
+            renderPageContent:
+              e.renderPageContent ||
+              ((t, r, i) =>
+                n.createElement(zt, {
+                  pages: e.pages,
+                  activePage: t,
+                  refForPage: r,
+                  PageComponent: i,
+                })),
           }),
         );
       });
@@ -43824,7 +43918,7 @@
                           xmlns: "http://www.w3.org/2000/svg",
                           viewBox: "0 0 279 190",
                           fill: "none",
-                          ...e,
+                          ...n,
                         },
                         i.createElement("path", {
                           fill: "currentColor",
@@ -54175,7 +54269,7 @@
             r.e(4095),
             r.e(432),
             r.e(5871),
-          ]).then(r.bind(r, 30269)),
+          ]).then(r.bind(r, 11417)),
         ),
         tt = n.lazy(() =>
           Promise.all([

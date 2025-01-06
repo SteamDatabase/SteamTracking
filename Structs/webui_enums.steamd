@@ -1662,6 +1662,15 @@ enum UnnamedEnum258d6841bf5f8ea0
 	Prompt = 1;
 }
 
+enum UnnamedEnum25bb92eddba41afe
+{
+	Invalid = 0;
+	Input = 1;
+	Preprocessing = 2;
+	Keras = 3;
+	Train = 4;
+}
+
 enum UnnamedEnum2603c05e3f1b8c52
 {
 	NOT_TRACKING = undefined;

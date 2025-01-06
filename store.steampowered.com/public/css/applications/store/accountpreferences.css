@@ -45,7 +45,7 @@
 ._24o8cEsvGK0bE4hHyUGhfh {
   margin-bottom: 22px;
   background: rgba(59, 63, 72, 0.5);
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
   padding: 6px 6px 6px 12px;
 }
@@ -153,13 +153,13 @@
 ._173r5KvavKBUk01FwZftvC {
   margin: 1px 0px;
   padding: 6px 10px;
-  background-color: #00000033;
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
 ._173r5KvavKBUk01FwZftvC._2eItHkwsCAtMw7E-EF_YG_ {
-  background-color: #3898ff55;
+  background-color: rgba(56, 152, 255, 0.3333333333);
 }
 ._173r5KvavKBUk01FwZftvC._2eItHkwsCAtMw7E-EF_YG_ ._3o3paJd8GOTYKXh7Rd3Br8 {
   background-color: #1a9fff;
@@ -290,19 +290,19 @@
   gap: 20px;
   display: flex;
   flex-direction: row;
-  background-color: #00000033;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 ._3EYcq6Ow2WM7bGuzWyQRMN button.DialogButton {
   height: 40px;
   padding: 0px 10px;
-  background-color: #d9412688;
+  background-color: rgba(217, 65, 38, 0.5333333333);
   border: 1px solid red;
   color: #fff;
   align-self: center;
   text-wrap: nowrap;
 }
 ._3EYcq6Ow2WM7bGuzWyQRMN button.DialogButton:hover {
-  background-color: #d9412699 !important;
+  background-color: rgba(217, 65, 38, 0.6) !important;
 }
 ._3XPWJM0EKr-dJ0B0NJtmjq {
   display: flex;
@@ -446,10 +446,10 @@
 .ingame ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
   );
 }
 .ingame ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
@@ -466,19 +466,19 @@
 .watchingbroadcast ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
   );
 }
 .online ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
   );
 }
 .online ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
@@ -541,7 +541,7 @@
 }
 ._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }

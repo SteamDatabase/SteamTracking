@@ -86,7 +86,7 @@
   fill: #fff;
   padding: 10px;
   justify-content: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: #fff;
   height: 24px;
   width: 24px;

@@ -3,9 +3,9 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5979],
   {
-    11838: function (i, e, t) {
-      var s;
-      !(function (r, o) {
+    11838: function (i, e, r) {
+      var o;
+      !(function (s, t) {
         "use strict";
         var a = "function",
           n = "undefined",
@@ -47,8 +47,8 @@
           I = "Mac OS",
           V = " Browser",
           $ = function (i) {
-            for (var e = {}, t = 0; t < i.length; t++)
-              e[i[t].toUpperCase()] = i[t];
+            for (var e = {}, r = 0; r < i.length; r++)
+              e[i[r].toUpperCase()] = i[r];
             return e;
           },
           G = function (i, e) {
@@ -65,36 +65,36 @@
               );
           },
           W = function (i, e) {
-            for (var t, s, r, n, u, l, w = 0; w < e.length && !u; ) {
+            for (var r, o, s, n, u, l, w = 0; w < e.length && !u; ) {
               var c = e[w],
                 d = e[w + 1];
-              for (t = s = 0; t < c.length && !u && c[t]; )
-                if ((u = c[t++].exec(i)))
-                  for (r = 0; r < d.length; r++)
-                    (l = u[++s]),
-                      typeof (n = d[r]) === b && n.length > 0
+              for (r = o = 0; r < c.length && !u && c[r]; )
+                if ((u = c[r++].exec(i)))
+                  for (s = 0; s < d.length; s++)
+                    (l = u[++o]),
+                      typeof (n = d[s]) === b && n.length > 0
                         ? 2 === n.length
                           ? typeof n[1] == a
                             ? (this[n[0]] = n[1].call(this, l))
                             : (this[n[0]] = n[1])
                           : 3 === n.length
                             ? typeof n[1] !== a || (n[1].exec && n[1].test)
-                              ? (this[n[0]] = l ? l.replace(n[1], n[2]) : o)
-                              : (this[n[0]] = l ? n[1].call(this, l, n[2]) : o)
+                              ? (this[n[0]] = l ? l.replace(n[1], n[2]) : t)
+                              : (this[n[0]] = l ? n[1].call(this, l, n[2]) : t)
                             : 4 === n.length &&
                               (this[n[0]] = l
                                 ? n[3].call(this, l.replace(n[1], n[2]))
-                                : o)
-                        : (this[n] = l || o);
+                                : t)
+                        : (this[n] = l || t);
               w += 2;
             }
           },
           X = function (i, e) {
-            for (var t in e)
-              if (typeof e[t] === b && e[t].length > 0) {
-                for (var s = 0; s < e[t].length; s++)
-                  if (G(e[t][s], i)) return "?" === t ? o : t;
-              } else if (G(e[t], i)) return "?" === t ? o : t;
+            for (var r in e)
+              if (typeof e[r] === b && e[r].length > 0) {
+                for (var o = 0; o < e[r].length; o++)
+                  if (G(e[r][o], i)) return "?" === r ? t : r;
+              } else if (G(e[r], i)) return "?" === r ? t : r;
             return e.hasOwnProperty("*") ? e["*"] : i;
           },
           K = {
@@ -130,13 +130,15 @@
               [p, [c, M]],
               [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
               [p, [c, "Baidu"]],
+              [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
+              [p, [c, "Maxthon"]],
               [
                 /(kindle)\/([\w\.]+)/i,
                 /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i,
-                /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,
+                /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i,
                 /(?:ms|\()(ie) ([\w\.]+)/i,
-                /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio)\/([-\w\.]+)/i,
-                /(heytap|ovi)browser\/([\d\.]+)/i,
+                /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i,
+                /(heytap|ovi|115)browser\/([\d\.]+)/i,
                 /(weibo)__([\d\.]+)/i,
               ],
               [c, p],
@@ -173,19 +175,17 @@
               [/coast\/([\w\.]+)/i],
               [p, [c, M + " Coast"]],
               [/miuibrowser\/([\w\.]+)/i],
-              [p, [c, "MIUI " + E]],
-              [/fxios\/([-\w\.]+)/i],
+              [p, [c, "MIUI" + V]],
+              [/fxios\/([\w\.-]+)/i],
               [p, [c, C]],
-              [/\bqihu|(qi?ho?o?|360)browser/i],
-              [[c, "360" + V]],
+              [/\bqihoobrowser\/?([\w\.]*)/i],
+              [p, [c, "360"]],
               [/\b(qq)\/([\w\.]+)/i],
               [[c, /(.+)/, "$1Browser"], p],
               [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
               [[c, /(.+)/, "$1" + V], p],
               [/samsungbrowser\/([\w\.]+)/i],
               [p, [c, j + " Internet"]],
-              [/(comodo_dragon)\/([\w\.]+)/i],
-              [[c, /_/g, " "], p],
               [/metasr[\/ ]?([\d\.]+)/i],
               [p, [c, "Sogou Explorer"]],
               [/(sogou)mo\w+\/([\d\.]+)/i],
@@ -193,11 +193,16 @@
               [
                 /(electron)\/([\w\.]+) safari/i,
                 /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,
-                /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i,
+                /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i,
               ],
               [c, p],
               [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
               [c],
+              [
+                /ome\/([\w\.]+) \w* ?(iron) saf/i,
+                /ome\/([\w\.]+).+qihu (360)[es]e/i,
+              ],
+              [p, c],
               [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
               [[c, L], p],
               [
@@ -249,7 +254,7 @@
               [c, p],
               [/(navigator|netscape\d?)\/([-\w\.]+)/i],
               [[c, "Netscape"], p],
-              [/(wolvic)\/([\w\.]+)/i],
+              [/(wolvic|librewolf)\/([\w\.]+)/i],
               [c, p],
               [/mobile vr; rv:([\w\.]+)\).+firefox/i],
               [p, [c, C + " Reality"]],
@@ -312,10 +317,12 @@
               [w, [h, O]],
               [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
               [w, [h, P], [d, v]],
+              [/(?:honor)([-\w ]+)[;\)]/i],
+              [w, [h, "Honor"], [d, v]],
               [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
               [w, [h, z], [d, g]],
               [
-                /(?:huawei|honor)([-\w ]+)[;\)]/i,
+                /(?:huawei)([-\w ]+)[;\)]/i,
                 /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i,
               ],
               [w, [h, z], [d, v]],
@@ -384,7 +391,7 @@
               [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
               [w, [h, T], [d, v]],
               [
-                /droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i,
+                /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i,
               ],
               [w, [h, Q], [d, v]],
               [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
@@ -444,10 +451,20 @@
               [w, [h, "Meizu"], [d, v]],
               [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
               [w, [h, "Ulefone"], [d, v]],
+              [
+                /; (energy ?\w+)(?: bui|\))/i,
+                /; energizer ([\w ]+)(?: bui|\))/i,
+              ],
+              [w, [h, "Energizer"], [d, v]],
+              [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
+              [w, [h, "Cat"], [d, v]],
+              [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
+              [w, [h, "Smartfren"], [d, v]],
               [/droid.+; (a(?:015|06[35]|142p?))/i],
               [w, [h, "Nothing"], [d, v]],
               [
-                /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,
+                /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
+                /; (imo) ((?!tab)[\w ]+?)(?: bui|\))/i,
                 /(hp) ([\w ]+\w)/i,
                 /(asus)-?(\w+)/i,
                 /(microsoft); (lumia[\w ]+)/i,
@@ -457,6 +474,7 @@
               ],
               [h, w, [d, v]],
               [
+                /(imo) (tab \w+)/i,
                 /(kobo)\s(ereader|touch)/i,
                 /(archos) (gamepad2?)/i,
                 /(hp).+(touchpad(?!.+tablet)|tablet)/i,
@@ -589,7 +607,11 @@
               [w, [h, T], [d, x]],
               [/droid.+; (wt63?0{2,3})\)/i],
               [w, [h, H], [d, x]],
-              [/(quest( \d| pro)?)/i],
+              [/droid.+; (glass) \d/i],
+              [w, [h, T], [d, x]],
+              [/(pico) (4|neo3(?: link|pro)?)/i],
+              [h, w, [d, x]],
+              [/; (quest( \d| pro)?)/i],
               [w, [h, L], [d, x]],
               [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
               [h, [d, y]],
@@ -613,11 +635,13 @@
             engine: [
               [/windows.+ edge\/([\w\.]+)/i],
               [p, [c, "EdgeHTML"]],
+              [/(arkweb)\/([\w\.]+)/i],
+              [c, p],
               [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
               [p, [c, "Blink"]],
               [
                 /(presto)\/([\w\.]+)/i,
-                /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
+                /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i,
                 /ekioh(flow)\/([\w\.]+)/i,
                 /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,
                 /(icab)[\/ ]([23]\.[\d\.]+)/i,
@@ -661,7 +685,7 @@
               [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
               [p, c],
               [
-                /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
+                /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish|openharmony)[-\/ ]?([\w\.]*)/i,
                 /(blackberry)\w*\/([\w\.]*)/i,
                 /(tizen|kaios)[\/ ]([\w\.]+)/i,
                 /\((series40);/i,
@@ -711,74 +735,74 @@
             ],
           },
           Y = function (i, e) {
-            if ((typeof i === b && ((e = i), (i = o)), !(this instanceof Y)))
+            if ((typeof i === b && ((e = i), (i = t)), !(this instanceof Y)))
               return new Y(i, e).getResult();
-            var t = typeof r !== n && r.navigator ? r.navigator : o,
-              s = i || (t && t.userAgent ? t.userAgent : ""),
-              f = t && t.userAgentData ? t.userAgentData : o,
+            var r = typeof s !== n && s.navigator ? s.navigator : t,
+              o = i || (r && r.userAgent ? r.userAgent : ""),
+              f = r && r.userAgentData ? r.userAgentData : t,
               k = e
                 ? (function (i, e) {
-                    var t = {};
-                    for (var s in i)
-                      e[s] && e[s].length % 2 == 0
-                        ? (t[s] = e[s].concat(i[s]))
-                        : (t[s] = i[s]);
-                    return t;
+                    var r = {};
+                    for (var o in i)
+                      e[o] && e[o].length % 2 == 0
+                        ? (r[o] = e[o].concat(i[o]))
+                        : (r[o] = i[o]);
+                    return r;
                   })(J, e)
                 : J,
-              x = t && t.userAgent == s;
+              x = r && r.userAgent == o;
             return (
               (this.getBrowser = function () {
                 var i,
                   e = {};
                 return (
-                  (e[c] = o),
-                  (e[p] = o),
-                  W.call(e, s, k.browser),
+                  (e[c] = t),
+                  (e[p] = t),
+                  W.call(e, o, k.browser),
                   (e[l] =
                     typeof (i = e[p]) === u
                       ? i.replace(/[^\d\.]/g, "").split(".")[0]
-                      : o),
+                      : t),
                   x &&
-                    t &&
-                    t.brave &&
-                    typeof t.brave.isBrave == a &&
+                    r &&
+                    r.brave &&
+                    typeof r.brave.isBrave == a &&
                     (e[c] = "Brave"),
                   e
                 );
               }),
               (this.getCPU = function () {
                 var i = {};
-                return (i[m] = o), W.call(i, s, k.cpu), i;
+                return (i[m] = t), W.call(i, o, k.cpu), i;
               }),
               (this.getDevice = function () {
                 var i = {};
                 return (
-                  (i[h] = o),
-                  (i[w] = o),
-                  (i[d] = o),
-                  W.call(i, s, k.device),
+                  (i[h] = t),
+                  (i[w] = t),
+                  (i[d] = t),
+                  W.call(i, o, k.device),
                   x && !i[d] && f && f.mobile && (i[d] = v),
                   x &&
                     "Macintosh" == i[w] &&
-                    t &&
-                    typeof t.standalone !== n &&
-                    t.maxTouchPoints &&
-                    t.maxTouchPoints > 2 &&
+                    r &&
+                    typeof r.standalone !== n &&
+                    r.maxTouchPoints &&
+                    r.maxTouchPoints > 2 &&
                     ((i[w] = "iPad"), (i[d] = g)),
                   i
                 );
               }),
               (this.getEngine = function () {
                 var i = {};
-                return (i[c] = o), (i[p] = o), W.call(i, s, k.engine), i;
+                return (i[c] = t), (i[p] = t), W.call(i, o, k.engine), i;
               }),
               (this.getOS = function () {
                 var i = {};
                 return (
-                  (i[c] = o),
-                  (i[p] = o),
-                  W.call(i, s, k.os),
+                  (i[c] = t),
+                  (i[p] = t),
+                  W.call(i, o, k.os),
                   x &&
                     !i[c] &&
                     f &&
@@ -801,30 +825,30 @@
                 };
               }),
               (this.getUA = function () {
-                return s;
+                return o;
               }),
               (this.setUA = function (i) {
                 return (
-                  (s = typeof i === u && i.length > 500 ? F(i, 500) : i), this
+                  (o = typeof i === u && i.length > 500 ? F(i, 500) : i), this
                 );
               }),
-              this.setUA(s),
+              this.setUA(o),
               this
             );
           };
-        (Y.VERSION = "1.0.39"),
+        (Y.VERSION = "1.0.40"),
           (Y.BROWSER = $([c, p, l])),
           (Y.CPU = $([m])),
           (Y.DEVICE = $([w, h, d, f, v, k, g, x, y])),
           (Y.ENGINE = Y.OS = $([c, p])),
           typeof e !== n
             ? (i.exports && (e = i.exports = Y), (e.UAParser = Y))
-            : t.amdO
-              ? (s = function () {
+            : r.amdO
+              ? (o = function () {
                   return Y;
-                }.call(e, t, e, i)) === o || (i.exports = s)
-              : typeof r !== n && (r.UAParser = Y);
-        var ii = typeof r !== n && (r.jQuery || r.Zepto);
+                }.call(e, r, e, i)) === t || (i.exports = o)
+              : typeof s !== n && (s.UAParser = Y);
+        var ii = typeof s !== n && (s.jQuery || s.Zepto);
         if (ii && !ii.ua) {
           var ei = new Y();
           (ii.ua = ei.getResult()),
@@ -834,43 +858,43 @@
             (ii.ua.set = function (i) {
               ei.setUA(i);
               var e = ei.getResult();
-              for (var t in e) ii.ua[t] = e[t];
+              for (var r in e) ii.ua[r] = e[r];
             });
         }
       })("object" == typeof window ? window : this);
     },
-    54806: (i, e, t) => {
+    54806: (i, e, r) => {
       "use strict";
-      t.d(e, { E: () => m });
-      var s = t(90626),
-        r = t(86709),
-        o = t(45747),
-        a = t(74500),
-        n = t(57168);
+      r.d(e, { E: () => m });
+      var o = r(90626),
+        s = r(86709),
+        t = r(45747),
+        a = r(74500),
+        n = r(57168);
       function b(i, e) {
         return i.filter((i) => !e.includes(i));
       }
       var u = class extends a.Q {
           #i;
           #e;
-          #t;
-          #s;
           #r;
           #o;
+          #s;
+          #t;
           #a;
           #n;
-          constructor(i, e, t) {
+          constructor(i, e, r) {
             super(),
               (this.#i = i),
-              (this.#s = t),
-              (this.#t = []),
+              (this.#o = r),
               (this.#r = []),
+              (this.#s = []),
               (this.#e = []),
               this.setQueries(e);
           }
           onSubscribe() {
             1 === this.listeners.size &&
-              this.#r.forEach((i) => {
+              this.#s.forEach((i) => {
                 i.subscribe((e) => {
                   this.#b(i, e);
                 });
@@ -881,30 +905,30 @@
           }
           destroy() {
             (this.listeners = new Set()),
-              this.#r.forEach((i) => {
+              this.#s.forEach((i) => {
                 i.destroy();
               });
           }
-          setQueries(i, e, t) {
-            (this.#t = i),
-              (this.#s = e),
-              r.j.batch(() => {
-                const i = this.#r,
-                  e = this.#u(this.#t);
+          setQueries(i, e, r) {
+            (this.#r = i),
+              (this.#o = e),
+              s.j.batch(() => {
+                const i = this.#s,
+                  e = this.#u(this.#r);
                 e.forEach((i) =>
-                  i.observer.setOptions(i.defaultedQueryOptions, t),
+                  i.observer.setOptions(i.defaultedQueryOptions, r),
                 );
-                const s = e.map((i) => i.observer),
-                  r = s.map((i) => i.getCurrentResult()),
-                  o = s.some((e, t) => e !== i[t]);
-                (i.length !== s.length || o) &&
-                  ((this.#r = s),
-                  (this.#e = r),
+                const o = e.map((i) => i.observer),
+                  s = o.map((i) => i.getCurrentResult()),
+                  t = o.some((e, r) => e !== i[r]);
+                (i.length !== o.length || t) &&
+                  ((this.#s = o),
+                  (this.#e = s),
                   this.hasListeners() &&
-                    (b(i, s).forEach((i) => {
+                    (b(i, o).forEach((i) => {
                       i.destroy();
                     }),
-                    b(s, i).forEach((i) => {
+                    b(o, i).forEach((i) => {
                       i.subscribe((e) => {
                         this.#b(i, e);
                       });
@@ -916,25 +940,25 @@
             return this.#e;
           }
           getQueries() {
-            return this.#r.map((i) => i.getCurrentQuery());
+            return this.#s.map((i) => i.getCurrentQuery());
           }
           getObservers() {
-            return this.#r;
+            return this.#s;
           }
           getOptimisticResult(i, e) {
-            const t = this.#u(i).map((i) =>
+            const r = this.#u(i).map((i) =>
               i.observer.getOptimisticResult(i.defaultedQueryOptions),
             );
-            return [t, (i) => this.#w(i ?? t, e), () => this.#c(t, i)];
+            return [r, (i) => this.#w(i ?? r, e), () => this.#c(r, i)];
           }
           #c(i, e) {
-            const t = this.#u(e);
-            return t.map((e, s) => {
-              const r = i[s];
+            const r = this.#u(e);
+            return r.map((e, o) => {
+              const s = i[o];
               return e.defaultedQueryOptions.notifyOnChangeProps
-                ? r
-                : e.observer.trackResult(r, (i) => {
-                    t.forEach((e) => {
+                ? s
+                : e.observer.trackResult(s, (i) => {
+                    r.forEach((e) => {
                       e.observer.trackProp(i);
                     });
                   });
@@ -942,56 +966,56 @@
           }
           #w(i, e) {
             return e
-              ? ((this.#o && this.#e === this.#n && e === this.#a) ||
+              ? ((this.#t && this.#e === this.#n && e === this.#a) ||
                   ((this.#a = e),
                   (this.#n = this.#e),
-                  (this.#o = (0, n.BH)(this.#o, e(i)))),
-                this.#o)
+                  (this.#t = (0, n.BH)(this.#t, e(i)))),
+                this.#t)
               : i;
           }
           #u(i) {
-            const e = new Map(this.#r.map((i) => [i.options.queryHash, i])),
-              t = [];
+            const e = new Map(this.#s.map((i) => [i.options.queryHash, i])),
+              r = [];
             return (
               i.forEach((i) => {
-                const s = this.#i.defaultQueryOptions(i),
-                  r = e.get(s.queryHash);
-                if (r) t.push({ defaultedQueryOptions: s, observer: r });
+                const o = this.#i.defaultQueryOptions(i),
+                  s = e.get(o.queryHash);
+                if (s) r.push({ defaultedQueryOptions: o, observer: s });
                 else {
-                  const i = this.#r.find(
-                    (i) => i.options.queryHash === s.queryHash,
+                  const i = this.#s.find(
+                    (i) => i.options.queryHash === o.queryHash,
                   );
-                  t.push({
-                    defaultedQueryOptions: s,
-                    observer: i ?? new o.$(this.#i, s),
+                  r.push({
+                    defaultedQueryOptions: o,
+                    observer: i ?? new t.$(this.#i, o),
                   });
                 }
               }),
-              t.sort(
-                (e, t) =>
+              r.sort(
+                (e, r) =>
                   i.findIndex(
                     (i) => i.queryHash === e.defaultedQueryOptions.queryHash,
                   ) -
                   i.findIndex(
-                    (i) => i.queryHash === t.defaultedQueryOptions.queryHash,
+                    (i) => i.queryHash === r.defaultedQueryOptions.queryHash,
                   ),
               )
             );
           }
           #b(i, e) {
-            const t = this.#r.indexOf(i);
-            -1 !== t &&
-              ((this.#e = (function (i, e, t) {
-                const s = i.slice(0);
-                return (s[e] = t), s;
-              })(this.#e, t, e)),
+            const r = this.#s.indexOf(i);
+            -1 !== r &&
+              ((this.#e = (function (i, e, r) {
+                const o = i.slice(0);
+                return (o[e] = r), o;
+              })(this.#e, r, e)),
               this.#l());
           }
           #l() {
             if (this.hasListeners()) {
-              this.#o !==
-                this.#w(this.#c(this.#e, this.#t), this.#s?.combine) &&
-                r.j.batch(() => {
+              this.#t !==
+                this.#w(this.#c(this.#e, this.#r), this.#o?.combine) &&
+                s.j.batch(() => {
                   this.listeners.forEach((i) => {
                     i(this.#e);
                   });
@@ -999,17 +1023,17 @@
             }
           }
         },
-        l = t(75233),
-        w = t(22730),
-        c = t(43424),
-        d = t(19086),
-        h = t(44407),
-        p = t(19866);
-      function m({ queries: i, ...e }, t) {
-        const a = (0, l.jE)(t),
+        l = r(75233),
+        w = r(22730),
+        c = r(43424),
+        d = r(19086),
+        h = r(44407),
+        p = r(19866);
+      function m({ queries: i, ...e }, r) {
+        const a = (0, l.jE)(r),
           n = (0, w.w)(),
           b = (0, c.h)(),
-          m = s.useMemo(
+          m = o.useMemo(
             () =>
               i.map((i) => {
                 const e = a.defaultQueryOptions(i);
@@ -1023,40 +1047,40 @@
           (0, h.jv)(i), (0, d.LJ)(i, b);
         }),
           (0, d.wZ)(b);
-        const [f] = s.useState(() => new u(a, m, e)),
+        const [f] = o.useState(() => new u(a, m, e)),
           [v, g, k] = f.getOptimisticResult(m, e.combine);
-        s.useSyncExternalStore(
-          s.useCallback(
-            (i) => (n ? p.l : f.subscribe(r.j.batchCalls(i))),
+        o.useSyncExternalStore(
+          o.useCallback(
+            (i) => (n ? p.l : f.subscribe(s.j.batchCalls(i))),
             [f, n],
           ),
           () => f.getCurrentResult(),
           () => f.getCurrentResult(),
         ),
-          s.useEffect(() => {
+          o.useEffect(() => {
             f.setQueries(m, e, { listeners: !1 });
           }, [m, e, f]);
         const x = v.some((i, e) => (0, h.EU)(m[e], i))
           ? v.flatMap((i, e) => {
-              const t = m[e];
-              if (t) {
-                const e = new o.$(a, t);
-                if ((0, h.EU)(t, i)) return (0, h.iL)(t, e, b);
-                (0, h.nE)(i, n) && (0, h.iL)(t, e, b);
+              const r = m[e];
+              if (r) {
+                const e = new t.$(a, r);
+                if ((0, h.EU)(r, i)) return (0, h.iL)(r, e, b);
+                (0, h.nE)(i, n) && (0, h.iL)(r, e, b);
               }
               return [];
             })
           : [];
         if (x.length > 0) throw Promise.all(x);
         const y = v.find((i, e) => {
-          const t = m[e];
+          const r = m[e];
           return (
-            t &&
+            r &&
             (0, d.$1)({
               result: i,
               errorResetBoundary: b,
-              throwOnError: t.throwOnError,
-              query: a.getQueryCache().get(t.queryHash),
+              throwOnError: r.throwOnError,
+              query: a.getQueryCache().get(r.queryHash),
             })
           );
         });

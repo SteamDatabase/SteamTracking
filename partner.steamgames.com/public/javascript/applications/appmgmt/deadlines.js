@@ -9,6 +9,7 @@
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
+        TaskCompleted: "_3h_ArCyEssKna4ulmgRnLu",
         DocumentProcessingNotice: "_1g1PXMANzYwlWDNpKVMpgk",
         NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         MessageHeader: "_1HU84kVIdNVKbbByTWyyBG",
@@ -1963,7 +1964,7 @@
       }
       function T(e) {
         const [t, a, o, l, d] = C(),
-          h = n.useMemo(() => {
+          [h, f] = n.useMemo(() => {
             const e = [...t];
             return (
               e.sort((e, t) => {
@@ -1975,10 +1976,10 @@
                   );
                 return a.getTime() > n.getTime() ? -1 : 1;
               }),
-              e
+              [e, 1 == e[0]?.data.status]
             );
           }, [t]),
-          [f, y] = (function () {
+          [y, v] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
               ),
@@ -1987,14 +1988,14 @@
               );
             return [e, t];
           })();
-        let v = "mailto:taxsupport-valve@taxidentity.com";
+        let E = "mailto:taxsupport-valve@taxidentity.com";
         if (h.length > 0) {
           const e = JSON.parse(h[0]?.data.description_jsondata)?.Subject,
             t =
               "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
                 ? "TEST:"
                 : "";
-          v += "?subject=" + t + e;
+          E += "?subject=" + t + e;
         }
         return n.createElement(
           r.tH,
@@ -2014,11 +2015,18 @@
                   "Steamworks Document Communication",
                   n.createElement("div", { className: s().PartnerName }, a),
                 ),
+                f &&
+                  n.createElement(
+                    "div",
+                    { className: s().TaskCompleted },
+                    "This tax requirement is closed",
+                  ),
                 n.createElement(
                   n.Fragment,
                   null,
-                  f && n.createElement(I, { strTemplate: y }),
-                  h.length > 0 &&
+                  y && n.createElement(I, { strTemplate: v }),
+                  !f &&
+                    h.length > 0 &&
                     h.map((e, t) =>
                       n.createElement(x, {
                         key: "update_" + t,
@@ -2080,7 +2088,7 @@
                     n.createElement(
                       u.jn,
                       {
-                        onClick: () => window.location.assign(v),
+                        onClick: () => window.location.assign(E),
                         className: s().NotificationButton,
                       },
                       "Contact TaxIdentity",

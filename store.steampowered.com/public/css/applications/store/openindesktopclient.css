@@ -49,7 +49,7 @@
   cursor: pointer;
   align-content: center;
   padding: 10px 20px;
-  background-color: #fefefed1;
+  background-color: rgba(254, 254, 254, 0.8196078431);
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   color: #3d7291;
   font-weight: 600;

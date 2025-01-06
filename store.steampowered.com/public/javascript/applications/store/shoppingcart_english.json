@@ -172,7 +172,7 @@
     "Cart_SaleCardDrops_Explanation_Gifts": "You will recieve the cards earned even if this is purchased as a gift.",
     "Cart_SaleCardDrops_ProgressLabel": "Progress to next card",
     "Cart_SaleCardDrops_CardCost": "approximately %1$s per card",
-    "Cart_SaleCardDrops_PrepurchaseIneligible": "Note: Pre-purchase items are not eligible for %s Trading Card rewards. The following items will not earn trading card rewards:",
+    "Cart_SaleCardDrops_PrepurchaseIneligible": "Note: Pre-purchase items are not eligible for %1$s Trading Card rewards. The following items will not earn trading card rewards:",
     "Cart_PurchaseRequestTitle": "Purchase request from %1$s",
     "Cart_PurchaseFor_Label": "A purchase for:",
     "Cart_GiftForNotice": "Purchase as a gift: %1$s",

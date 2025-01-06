@@ -97,7 +97,7 @@
   ._3VNsED3Ez-vqDraw_8QWsp {
   position: absolute;
   z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0), #0b1621 72%);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(11, 22, 33) 72%);
   width: 100%;
   height: 100%;
 }
@@ -328,7 +328,7 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   padding: 1px;
   left: 10px;
   margin-bottom: 14px;
-  border-top: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0);
 }
 ._15NFxbc1Jv0dEJJpjDrtri:hover {
   background-color: #000;
@@ -626,7 +626,7 @@ p a:hover {
 }
 ._352Z7ynHHExwu7pbLG0mi3 {
   width: calc(100% - 20px);
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -702,6 +702,10 @@ p a:hover {
 ._1GqYxNpFolOmvCXZZ5SqS9:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+._1GqYxNpFolOmvCXZZ5SqS9 ._1OF4inXEccSHpEi-94BNyB {
+  display: flex;
+  flex-direction: row;
+}
 ._1GqYxNpFolOmvCXZZ5SqS9 ._1OF4inXEccSHpEi-94BNyB svg {
   width: 16px;
   height: 16px;
@@ -731,7 +735,7 @@ p a:hover {
 ._35iac6gVYl3NbfLM5oGhAp:after {
   right: calc(100% + 1px);
   top: 10px;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: " ";
   height: 0;
   width: 0;
@@ -889,7 +893,7 @@ p a:hover {
   padding: 16px;
 }
 .X_wtWeV0nNEF-9Rz0wZRL._2jAkKq9D5KKOH2cgMu59yN {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -927,7 +931,7 @@ p a:hover {
     #399aec 10%,
     #225dce 80%
   );
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding: 4px 20px;
   border-radius: 2px;
   border: none;
@@ -1033,12 +1037,12 @@ p a:hover {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-image-source: url(../../../images/applications/store/glassborder_02.png?v=valveisgoodatcaching);
   border-image-width: 1px;
   border-image-repeat: stretch;
   border-image-slice: 7;
-  box-shadow: 0 0 12px #00000025;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1450980392);
 }
 ._1PkTBeZJVs3WI8US0zffEx {
   width: fit-content;
@@ -1049,15 +1053,15 @@ p a:hover {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    black 44px,
-    black calc(100% - 44px),
+    rgb(0, 0, 0) 44px,
+    rgb(0, 0, 0) calc(100% - 44px),
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    black 44px,
-    black calc(100% - 44px),
+    rgb(0, 0, 0) 44px,
+    rgb(0, 0, 0) calc(100% - 44px),
     transparent 100%
   );
   -webkit-mask-repeat: no-repeat;
@@ -1202,7 +1206,7 @@ p a:hover {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    black 80%,
+    rgb(0, 0, 0) 80%,
     rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
@@ -1210,7 +1214,7 @@ p a:hover {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    black 80%,
+    rgb(0, 0, 0) 80%,
     rgba(0, 0, 0, 0) 100%
   );
   filter: blur(30px);
@@ -1269,7 +1273,7 @@ p a:hover {
   flex-direction: column;
 }
 ._1zDJ1bfFg-UkuAluUAoGKj {
-  box-shadow: 1px 2px 12px 1px #00000055;
+  box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.3333333333);
 }
 ._1zDJ1bfFg-UkuAluUAoGKj ._1ueE9cjv0hzERo311Gr6qL {
   display: none;

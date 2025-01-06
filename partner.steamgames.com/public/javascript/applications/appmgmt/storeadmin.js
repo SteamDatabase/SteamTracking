@@ -10535,12 +10535,12 @@
                   a.createElement("img", {
                     src: n.GetAssets().GetSmallCapsuleURL(),
                   }),
-                ),
-                a.createElement(
-                  "div",
-                  { className: Fr().StoreItemDescription },
-                  n.GetShortDescription(),
-                  " ",
+                  a.createElement(
+                    "div",
+                    { className: Fr().StoreItemDescription },
+                    n.GetShortDescription(),
+                    " ",
+                  ),
                 ),
               ),
             )

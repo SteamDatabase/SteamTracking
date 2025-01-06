@@ -491,9 +491,10 @@
             ];
           }),
           [f, A] = (0, c.useState)(void 0),
-          _ = f
-            ? { src: f }
-            : { src: d, onLoad: () => A(d), onError: () => A(I) };
+          _ =
+            !f || (d !== f && I !== f)
+              ? { src: d, onLoad: () => A(d), onError: () => A(I) }
+              : { src: f };
         if (!t)
           return c.createElement("div", {
             className: M().OtherEvents_EventCtn,
