@@ -5,7 +5,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123d
+ !"#$%&'()*+,-./0123|
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -1460,7 +1460,7 @@ $system\InGameOverlayScreenshotHotKey
 (.CTwoFactor_RemoveAuthenticator_Response"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
-(1rf
+(1Jp
 (8GXgw
 (8HXhx
 (<PDxl
@@ -9506,7 +9506,7 @@ $system\InGameOverlayScreenshotHotKey
 9ConParams
 9F&Y
 9GmlF8
-9H`B
+9HxD
 9IGv
 9Q`V,
 9R>U
@@ -13391,9 +13391,12 @@ SDL_GetRevision
 SDL_IOFromConstMem
 SDL_InitSubSystem
 SDL_IsGamepad
+SDL_LoadFunction
+SDL_LoadObject
 SDL_LockJoysticks
 SDL_OpenAudioDeviceStream
 SDL_OpenJoystick
+SDL_PremultiplyAlpha
 SDL_PumpEvents
 SDL_QuitSubSystem
 SDL_ReadIO
@@ -13413,6 +13416,7 @@ SDL_SetLogPriority
 SDL_ShowSimpleMessageBox
 SDL_StringToGUID
 SDL_TellIO
+SDL_UnloadObject
 SDL_UnlockJoysticks
 SDL_WarpMouseGlobal
 SDL_abs
@@ -16674,11 +16678,18 @@ autosave
 av_buffer_create
 av_buffer_ref
 av_buffer_unref
+av_codec_is_decoder
+av_codec_iterate
 av_frame_alloc
 av_frame_copy_props
 av_frame_free
+av_frame_get_side_data
+av_frame_unref
 av_free
+av_get_pix_fmt_name
+av_hwdevice_ctx_alloc
 av_hwdevice_ctx_create
+av_hwdevice_ctx_init
 av_hwframe_ctx_alloc
 av_hwframe_ctx_init
 av_hwframe_get_buffer
@@ -16686,9 +16697,13 @@ av_hwframe_map
 av_hwframe_transfer_data
 av_log_set_callback
 av_mallocz_tracked
+av_new_packet
 av_packet_alloc
 av_packet_free
 av_packet_unref
+av_parser_close
+av_parser_init
+av_parser_parse2
 av_strerror
 available_revisions
 available_seats
@@ -16700,11 +16715,15 @@ avatar_pending_review
 avatar_ugc_url
 avatars
 avcodec_alloc_context3
+avcodec_find_decoder
 avcodec_find_encoder_by_name
 avcodec_free_context
+avcodec_get_hw_config
 avcodec_open2
+avcodec_receive_frame
 avcodec_receive_packet
 avcodec_send_frame
+avcodec_send_packet
 average
 average_network_time_ms
 aybSr

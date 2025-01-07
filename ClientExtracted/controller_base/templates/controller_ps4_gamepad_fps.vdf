@@ -629,7 +629,7 @@
 	}
 	"group"
 	{
-		"id"		"10"
+		"id"		"14"
 		"mode"		"flickstick"
 		"inputs"
 		{
@@ -653,7 +653,7 @@
 	}
 	"group"
 	{
-		"id"		"11"
+		"id"		"15"
 		"mode"		"flickstick"
 		"inputs"
 		{
@@ -741,8 +741,8 @@
 			"5"		"right_trigger active"
 			"8"		"right_joystick active"
 			"9"		"dpad active"
-			"10"		"right_joystick inactive" 
-			"11"		"joystick inactive" 
+			"14"		"right_joystick inactive" 
+			"15"		"joystick inactive" 
 			"12"		"right_trackpad inactive" 
 			"13"		"left_trackpad inactive" 
 		}
