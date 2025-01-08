@@ -12506,76 +12506,78 @@
               ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
               : null,
           h = (0, ui.IW)(c.ConvertTo64BitString(), m, l);
-        return _.isLoading
-          ? null
-          : d.createElement(
-              Je.E,
-              { clanSteamID: e.editModel.GetClanSteamID() },
-              d.createElement(hi.mt, { active: o }, d.createElement(f.t, null)),
-              d.createElement(
-                "div",
-                { className: Ei().ValveCrowdInSyncCtn },
-                d.createElement(P.J0, {
-                  value: n.BPushUpdatesToCrowdInAutomatically(),
-                  onChange: (e) => {
-                    n.SetPushSourceToCrowdInAutomatically(e), p();
-                  },
-                }),
-                d.createElement(
-                  "div",
-                  { className: Ei().ValveCrowdInSyncLabel },
-                  (0, D.we)(
-                    "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
-                  ),
-                  " (",
-                  E
-                    ? d.createElement("a", { href: E }, E)
-                    : (0, D.we)("#EventEditor_Localization_NotMappedToCrowdIn"),
-                  ")",
-                  d.createElement($e.o, {
-                    tooltip: (0, D.we)("#EventEditor_Localization_Tooltip"),
-                    className: v.tooltip_Ctn,
-                  }),
-                  d.createElement("br", null),
-                  d.createElement(
-                    "span",
-                    null,
-                    (0, D.we)("#EventEditor_Localization_RememberToSave"),
-                  ),
-                ),
-                d.createElement(
-                  "select",
-                  {
-                    onChange: (e) => {
-                      const t = e.target.value,
-                        a = (0, u.sf)(t);
-                      i(a);
-                    },
-                  },
-                  (0, D.vR)(s, (e, t) =>
-                    "english" !== t
-                      ? d.createElement("option", { key: t, value: t }, e)
-                      : "",
-                  ),
-                ),
-                d.createElement(
-                  "div",
-                  {
-                    className: S().EditPreviewButton,
-                    onClick: () => {
-                      r(!0),
-                        h
-                          .mutateAsync()
-                          .then(() => window.location.reload())
-                          .catch((e) => {
-                            r(!1);
-                          });
-                    },
-                  },
-                  (0, D.we)("#EventEditor_Localization_FetchLocalization"),
-                ),
+        if (_.isLoading) return null;
+        let g = Array.from(s.entries());
+        g.sort((e, t) => e[1].localeCompare(t[1]));
+        const b = g.map(([e, t]) =>
+          "english" !== e
+            ? d.createElement("option", { key: e, value: e }, t)
+            : "",
+        );
+        return d.createElement(
+          Je.E,
+          { clanSteamID: e.editModel.GetClanSteamID() },
+          d.createElement(hi.mt, { active: o }, d.createElement(f.t, null)),
+          d.createElement(
+            "div",
+            { className: Ei().ValveCrowdInSyncCtn },
+            d.createElement(P.J0, {
+              value: n.BPushUpdatesToCrowdInAutomatically(),
+              onChange: (e) => {
+                n.SetPushSourceToCrowdInAutomatically(e), p();
+              },
+            }),
+            d.createElement(
+              "div",
+              { className: Ei().ValveCrowdInSyncLabel },
+              (0, D.we)(
+                "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
               ),
-            );
+              " (",
+              E
+                ? d.createElement("a", { href: E }, E)
+                : (0, D.we)("#EventEditor_Localization_NotMappedToCrowdIn"),
+              ")",
+              d.createElement($e.o, {
+                tooltip: (0, D.we)("#EventEditor_Localization_Tooltip"),
+                className: v.tooltip_Ctn,
+              }),
+              d.createElement("br", null),
+              d.createElement(
+                "span",
+                null,
+                (0, D.we)("#EventEditor_Localization_RememberToSave"),
+              ),
+            ),
+            d.createElement(
+              "select",
+              {
+                onChange: (e) => {
+                  const t = e.target.value,
+                    a = (0, u.sf)(t);
+                  i(a);
+                },
+              },
+              b,
+            ),
+            d.createElement(
+              "div",
+              {
+                className: S().EditPreviewButton,
+                onClick: () => {
+                  r(!0),
+                    h
+                      .mutateAsync()
+                      .then(() => window.location.reload())
+                      .catch((e) => {
+                        r(!1);
+                      });
+                },
+              },
+              (0, D.we)("#EventEditor_Localization_FetchLocalization"),
+            ),
+          ),
+        );
       }
       function vi(e) {
         const t = d.useRef(void 0),

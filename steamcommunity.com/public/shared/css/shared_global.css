@@ -556,7 +556,7 @@
 	position: absolute;
 	left: -60px;
 	top: -60px;
-	opacity: 0.4;
+	opacity: 0.6;
 	-webkit-mask: radial-gradient( ellipse farthest-corner at 150px 150px, rgba( 0, 0, 0, 1 ) 0%, rgba( 0, 0, 0, 0.6 ) 20%, rgba( 0, 0, 0, 0.3 ) 34%, rgba( 0, 0, 0, 0 ) 64% );
 	mask: radial-gradient( ellipse farthest-corner at 150px 150px, rgba( 0, 0, 0, 1 ) 0%, rgba( 0, 0, 0, 0.6 ) 20%, rgba( 0, 0, 0, 0.3 ) 34%, rgba( 0, 0, 0, 0 ) 64% );
 	mix-blend-mode: screen;
@@ -568,7 +568,7 @@
 }
 
 .miniprofile_backdrop {
-	background: linear-gradient( to bottom, rgba( 24, 26, 30, .7 ) 5%, rgba( 24, 26, 30, .4 ) 95% );
+	background: linear-gradient( to bottom, rgba( 24, 26, 30, .85 ) 5%, rgba( 24, 26, 30, .65 ) 95% );
 }
 
 .miniprofile_content {

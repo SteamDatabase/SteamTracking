@@ -116,7 +116,7 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 }
 ._2ODaX8lO7DKLKke76c2Wya,
 ._1I3OP84ayrCIMuBrCrkosi {
-  font-size: 11px;
+  font-size: 13px;
   font-family: Consolas, monospace;
   white-space: pre;
   white-space: pre-wrap;
@@ -511,10 +511,14 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   width: 100%;
   box-sizing: border-box;
   margin: auto;
-  background: #41454e;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 44, 50, 0.7019607843),
+    rgba(35, 37, 42, 0.7019607843)
+  );
   border-radius: 7px;
   padding: 20px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 6px;
 }
 ._3PeTrgTLLyRMIUb_pRn4rO {
   background-color: #fff;
@@ -537,9 +541,10 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
 }
 ._3vGq3WcmmGaYbbqYkD9Ysp {
   color: #fff;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 6px;
 }
 ._24r8E1kKzw_9iIVhmvEZ3T {
   color: #fff;
@@ -548,6 +553,8 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
 ._3KAHxFNUEscoxtvBzwWKvs {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
 }
 .iUmtJvs3v_bmv-tu43tpL {
   width: 30%;
@@ -557,6 +564,8 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background: #40444d;
+  border-radius: 4px;
 }
 ._1igTM-TlnNkIhWxl95pTyB ._2qgSQSN_hv-UncznBRb42v {
   position: relative;
@@ -564,7 +573,7 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   flex-direction: column;
   background: linear-gradient(to bottom, #707787, #555b67);
   border: none;
-  margin: 10px 0;
+  margin: 0;
   padding: 12px 16px;
   border-radius: 4px;
   color: #fff;
@@ -587,11 +596,19 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
+._1igTM-TlnNkIhWxl95pTyB ._3REuR3WLDb6JDzZpI2VkUz {
+  padding: 8px 0;
+}
+._1igTM-TlnNkIhWxl95pTyB .dndEdZn2hpJTIu4zpYoYG {
+  padding: 8px 0;
+  color: orange;
+}
 ._1-LTOHwZqSK67eUyq4qscx {
   font-size: 13px;
 }
 ._2IUfDPL02-oni7NXCV_ipu {
   margin: auto 8px;
+  padding-bottom: 16px;
 }
 ._2Zkbwdhs4WPVI1ZyUHtHUG {
   font-size: 24px;

@@ -1001,6 +1001,7 @@ ${PARTNER_BASE_URL}admin/store/contenthub/ajaxgetstoretagsandcategories
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxpublishcontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxsavecontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/categories
+${PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${}
 ${PARTNER_BASE_URL}admin/store/dailydeal/${gid}
 ${PARTNER_BASE_URL}admin/store/dailydeal/${id}
 ${PARTNER_BASE_URL}admin/store/packagepublish/${}
@@ -2614,6 +2615,7 @@ https://help.steampowered.com/wizard/AjaxVerifyAccountRecoveryCode/
 https://help.steampowered.com/wizard/AjaxVerifySerialNumber
 https://help.steampowered.com/wizard/AjaxVerifyShippingAddress
 https://help.steampowered.com/wizard/HelpDeleteAccount
+https://help.steampowered.com/wizard/HelpWithCommunityContactSupport
 https://help.steampowered.com/wizard/HelpWithLogin
 https://help.steampowered.com/wizard/HelpWithLogin/
 https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=${strSessionID}&account=${accountid}&reset=${eReset}&lost=${nLost}

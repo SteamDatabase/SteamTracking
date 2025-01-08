@@ -38,13 +38,13 @@
   position: relative;
 }
 .ProseMirror-hideselection *::selection {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .ProseMirror-hideselection *::-moz-selection {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .ProseMirror-hideselection {
-  caret-color: transparent;
+  caret-color: rgba(0, 0, 0, 0);
 }
 .ProseMirror [draggable][contenteditable="false"] {
   user-select: text;
@@ -310,4 +310,19 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 ._2tY4qnv8tygCT7s94cB4vX {
   position: relative;
+}
+button.DialogButton.JBYdBhACB7UzXP4l_tpF2 {
+  margin-left: 10px;
+  margin-bottom: 16px;
+}
+.Hd3q3Z7if0Z5H7rKMfqGN {
+  min-width: 500px;
+}
+._3wHfIq4f1KlUL4-fKL0jLv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+._3wHfIq4f1KlUL4-fKL0jLv > div {
+  margin-right: 8px;
 }

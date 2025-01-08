@@ -3840,7 +3840,7 @@
     },
     87349: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Qo });
+      n.r(t), n.d(t, { default: () => Zo });
       var a = n(90626),
         r = n(64046),
         o = n(88997);
@@ -8676,7 +8676,7 @@
               {
                 onClick: (e) =>
                   (0, Cn.pg)(
-                    a.createElement(Pa, {
+                    a.createElement(ya, {
                       nAccountIDProposer: t,
                       packageID: n,
                       partnerID: o[0],
@@ -8692,7 +8692,8 @@
               "Warning: Package isn't associated with a partner... Cannot create ticket",
             );
       }
-      function Pa(e) {
+      const Pa = {};
+      function ya(e) {
         const {
             partnerID: t,
             packageID: n,
@@ -8700,16 +8701,20 @@
             nAccountIDProposer: o,
           } = e,
           [l] = (0, ta.UA)(t),
-          [s] = (0, $e.Gg)(n, {}),
+          [s] = (0, $e.Gg)(n, Pa),
           i = (0, a.useMemo)(
             () => rt.b.InitFromAccountID(o).ConvertTo64BitString(),
             [o],
           ),
           [c, d] = (0, a.useState)(() => s?.GetAppID() || 0),
-          [u, m] = (0, a.useState)(`Question about pricing for package ${n}`),
-          [p, _] = (0, a.useState)(""),
-          E = (0, ra.vs)(),
-          g = (function (e, t, n, a, r) {
+          [u] = (0, $e.t7)(c, Pa),
+          [m, p] = (0, a.useState)(`Question about pricing for package ${n}`),
+          [_, E] = (0, a.useState)("");
+        (0, a.useEffect)(() => {
+          s && 0 == c && d(s.GetAppID());
+        }, [s, c]);
+        const g = (0, ra.vs)(),
+          C = (function (e, t, n, a, r) {
             const o = (0, ga.jE)();
             return (0, Ca.n)({
               mutationFn: async (o) => {
@@ -8743,10 +8748,10 @@
                 o.invalidateQueries({ queryKey: ["PartnerTickets", t, n, a] });
               },
             });
-          })(i, t, 920, 55, E);
-        return E.bLoading
+          })(i, t, 920, 55, g);
+        return g.bLoading
           ? a.createElement(ra.Hh, {
-              state: E,
+              state: g,
               strDialogTitle: "Create Ticket for Partner",
               closeModal: r,
             })
@@ -8754,25 +8759,25 @@
               w.o0,
               {
                 strTitle: "Create Ticket for Partner",
-                strDescription: `Create a pricing ticket for partner ${l?.name} (${t}) for Package ${n}. Please update ticket title and body`,
-                bOKDisabled: !c || 0 == u.trim().length || 0 == p.trim().length,
+                strDescription: `Create a pricing ticket for partner ${l?.name} (${t}) for Package ${n}. App ${u?.GetName() || ""} with ${c}. Please update ticket title and body`,
+                bOKDisabled: !c || 0 == m.trim().length || 0 == _.trim().length,
                 onOK: () =>
-                  g.mutate({ appid: c, strRequestTitle: u, strRequestBody: p }),
+                  C.mutate({ appid: c, strRequestTitle: m, strRequestBody: _ }),
                 bAllowFullSize: !0,
                 onCancel: r,
-                bDisableBackgroundDismiss: p.trim().length > 0,
+                bDisableBackgroundDismiss: _.trim().length > 0,
               },
               a.createElement(v.pd, {
                 type: "text",
                 label: "Ticket Title",
                 placeholder: "Enter Ticket Title",
-                value: u,
-                onChange: (e) => m(e.currentTarget.value || ""),
+                value: m,
+                onChange: (e) => p(e.currentTarget.value || ""),
               }),
               a.createElement(v.JU, null, "Enter Ticket Body"),
               a.createElement("textarea", {
-                value: p,
-                onChange: (e) => _(e.currentTarget.value),
+                value: _,
+                onChange: (e) => E(e.currentTarget.value),
                 cols: 80,
                 rows: 20,
               }),
@@ -8784,7 +8789,7 @@
               }),
             );
       }
-      function ya(e) {
+      function Da(e) {
         const { proposal: t, mapPartnerPaidByPackage: n } = e,
           [r] = (0, $e.Gg)(t.packageid, aa),
           [o] = (0, $e.Gg)(r?.GetIncludedAppIDsOrSelf()?.[0], aa),
@@ -8839,13 +8844,13 @@
             packageID: t.packageid,
             mapPartnerPaidByPackage: n,
           }),
-          a.createElement(Da, {
+          a.createElement(Na, {
             packageID: t.packageid,
             mapPartnerPaidByPackage: n,
           }),
         );
       }
-      function Da(e) {
+      function Na(e) {
         const { packageID: t, mapPartnerPaidByPackage: n } = e,
           r = n.get(t);
         return r
@@ -8853,12 +8858,12 @@
               "div",
               null,
               r.map((e) =>
-                a.createElement(Na, { key: "partner" + e, partnerID: e }),
+                a.createElement(Ta, { key: "partner" + e, partnerID: e }),
               ),
             )
           : null;
       }
-      function Na(e) {
+      function Ta(e) {
         const { partnerID: t } = e,
           [n] = (0, ta.UA)(t);
         return n
@@ -8874,13 +8879,13 @@
             )
           : null;
       }
-      function Ta(e) {
+      function Ia(e) {
         const { amountInCents: t, className: n } = e;
         return t
-          ? a.createElement("div", { className: n }, Ia(t))
+          ? a.createElement("div", { className: n }, Ra(t))
           : a.createElement("div", { className: n });
       }
-      function Ia(e) {
+      function Ra(e) {
         return e
           ? (e / 100).toLocaleString(void 0, {
               minimumFractionDigits: 2,
@@ -8888,7 +8893,7 @@
             })
           : "";
       }
-      function Ra(e) {
+      function La(e) {
         return a.createElement(
           "thead",
           null,
@@ -8912,7 +8917,7 @@
           ),
         );
       }
-      function La(e) {
+      function Ba(e) {
         const { proposal: t, oGuideline: n, mapCurrentPrices: r } = e,
           o = r.get(t.packageid),
           l = t.proposed_prices.base_amounts.find(
@@ -8924,7 +8929,7 @@
           Kn.map((e) => {
             const r =
               n.GetRecommendPrice(l, e) || n.GetScaledRecommendedPrice(l, e);
-            return a.createElement(Ba, {
+            return a.createElement(Ma, {
               key: t.packageid + "-" + e,
               eCurrencyCode: e,
               proposal: t,
@@ -8937,7 +8942,7 @@
               s =
                 n.GetRecommendPrice(l, r, e) ||
                 n.GetScaledRecommendedPrice(l, r, e);
-            return a.createElement(Ma, {
+            return a.createElement(xa, {
               key: t.packageid + "-" + e,
               eCurrencyCode: r,
               eRegionCode: e,
@@ -8948,39 +8953,39 @@
           }),
         );
       }
-      function Ba(e) {
+      function Ma(e) {
         const { eCurrencyCode: t, curPrice: n, proposal: r, guidePrice: o } = e,
           l = r.proposed_prices.base_amounts.find(
             (e) => e.amount.currency_code == t,
           ),
           s = n?.current_costs?.base_amounts.find((e) => e.currency_code == t);
-        return a.createElement(xa, {
+        return a.createElement(Oa, {
           proposed: l,
           originalAmount: s,
           guidePrice: o,
         });
       }
-      function Ma(e) {
+      function xa(e) {
         const { eRegionCode: t, curPrice: n, proposal: r, guidePrice: o } = e,
           l = qn(t),
           s = r.proposed_prices.region_amounts.find((e) => e.name == l),
           i = n?.current_costs?.region_amounts.find((e) => e.region == l);
-        return a.createElement(xa, {
+        return a.createElement(Oa, {
           proposed: s,
           originalAmount: i?.amount,
           guidePrice: o,
         });
       }
-      function xa(e) {
+      function Oa(e) {
         const { proposed: t, originalAmount: n, guidePrice: r } = e;
         let o, l;
         if (t)
           if (r && r.price > t.amount.amount) {
             o = ea.outofmatrixlower;
-            l = `Suggested price ${Ia(r.price)} - ${Math.floor(100 - (t.amount.amount / r.price) * 100)}% ▼`;
+            l = `Suggested price ${Ra(r.price)} - ${Math.floor(100 - (t.amount.amount / r.price) * 100)}% ▼`;
           } else if (r && r.price < t.amount.amount) {
             o = ea.outofmatrix;
-            l = `Suggested price ${Ia(r.price)} - ${Math.floor((t.amount.amount / r.price) * 100 - 100)}% ▲`;
+            l = `Suggested price ${Ra(r.price)} - ${Math.floor((t.amount.amount / r.price) * 100 - 100)}% ▲`;
           } else
             n
               ? n.amount > t.amount.amount
@@ -8993,17 +8998,17 @@
           a.createElement(
             p.he,
             { toolTipContent: l },
-            a.createElement(Ta, {
+            a.createElement(Ia, {
               className: o,
               amountInCents: t?.amount.amount,
             }),
           ),
           Boolean(n?.amount != t?.amount.amount) &&
-            a.createElement(Ta, { amountInCents: n?.amount }),
+            a.createElement(Ia, { amountInCents: n?.amount }),
           Boolean(!n) && a.createElement("div", null, "--"),
         );
       }
-      function Oa(e) {
+      function Fa(e) {
         const {
           rgProposals: t,
           oGuideline: n,
@@ -9013,8 +9018,8 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(Ha, null),
-          a.createElement(Fa, { oGuideline: n }),
+          a.createElement(Wa, null),
+          a.createElement(Ua, { oGuideline: n }),
           a.createElement("hr", null),
           a.createElement("hr", null),
           t.map((e) =>
@@ -9022,7 +9027,7 @@
               "div",
               { key: e.packageid },
               a.createElement("hr", null),
-              a.createElement(Ua, {
+              a.createElement(Ga, {
                 oGuideline: n,
                 proposal: e,
                 mapCurrentPrices: r,
@@ -9032,7 +9037,7 @@
           ),
         );
       }
-      function Fa(e) {
+      function Ua(e) {
         return a.createElement(
           "div",
           { className: (0, u.A)(ea.RowCtn, ea.CurrencyHeaderRow) },
@@ -9041,23 +9046,23 @@
             { className: ea.PackageInfoColumn },
             "Package Info",
           ),
-          a.createElement(Ra, null),
+          a.createElement(La, null),
         );
       }
-      function Ua(e) {
+      function Ga(e) {
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
             "div",
             { className: ea.RowCtn },
-            a.createElement(ya, { ...e }),
-            a.createElement(La, { ...e }),
+            a.createElement(Da, { ...e }),
+            a.createElement(Ba, { ...e }),
           ),
-          a.createElement(Ga, { ...e }),
+          a.createElement(Ha, { ...e }),
         );
       }
-      function Ga(e) {
+      function Ha(e) {
         const { proposal: t } = e,
           n = t.proposed_prices.country_amounts;
         return n?.length > 0
@@ -9073,13 +9078,13 @@
                   "/",
                   Gn(e.amount.currency_code),
                   " @ ",
-                  Ia(e.account),
+                  Ra(e.account),
                 ),
               ),
             )
           : null;
       }
-      function Ha(e) {
+      function Wa(e) {
         return a.createElement(
           Jn.qx,
           {
@@ -9118,8 +9123,8 @@
           ),
         );
       }
-      var Wa = n(95034);
-      function Ka(e) {
+      var Ka = n(95034);
+      function Va(e) {
         const {
             rgProposals: t,
             oGuideline: n,
@@ -9219,7 +9224,7 @@
             a.createElement(
               "div",
               { key: "delta_" + e.packageid },
-              a.createElement(Va, {
+              a.createElement($a, {
                 oGuideline: n,
                 proposal: e,
                 mapCurrentPrices: r,
@@ -9231,7 +9236,7 @@
           ),
         );
       }
-      function Va(e) {
+      function $a(e) {
         const { bShowWithOpenTickets: t } = e,
           [n, r] = (0, a.useState)(0);
         return n > 0 && !t
@@ -9242,28 +9247,28 @@
               a.createElement(
                 "div",
                 { className: Ea.RowCtn },
-                a.createElement(ya, { ...e }),
-                a.createElement($a, { ...e, setOpenTicketCount: r }),
-                a.createElement(Ja, { ...e }),
+                a.createElement(Da, { ...e }),
+                a.createElement(za, { ...e, setOpenTicketCount: r }),
+                a.createElement(er, { ...e }),
               ),
-              a.createElement(tr, { ...e }),
+              a.createElement(nr, { ...e }),
             );
       }
-      function $a(e) {
+      function za(e) {
         const { proposal: t, setOpenTicketCount: n } = e,
           r = e.mapPartnerPaidByPackage.get(t.packageid)?.[0] || 0;
         return a.createElement(
           "div",
           { className: Ea.FailuresCtn },
-          a.createElement(Ya, { ...e }),
           a.createElement(Xa, { ...e }),
-          a.createElement(er, { ...e }),
           a.createElement(qa, { ...e }),
-          a.createElement(za, { ...e }),
+          a.createElement(tr, { ...e }),
+          a.createElement(ja, { ...e }),
+          a.createElement(Ya, { ...e }),
           a.createElement(Aa, { partnerID: r, setTicketCount: n }),
         );
       }
-      function za(e) {
+      function Ya(e) {
         const { proposal: t, mapCurrentPrices: n } = e,
           r = t.proposed_prices.base_amounts.find(
             (e) => e.amount.currency_code == In.k_ECurrencyCodeUSD,
@@ -9281,7 +9286,7 @@
               "div",
               { className: Ea.AboveAutoPublish },
               "USD Price $",
-              Ia(r),
+              Ra(r),
               " is above $80 USD Threshold",
             ),
           Boolean(o && r > 2 * o) &&
@@ -9289,13 +9294,13 @@
               "div",
               { className: Ea.AboveAutoPublish },
               "USD price $",
-              Ia(r),
+              Ra(r),
               " is more than twice existing USD Price $",
-              Ia(o),
+              Ra(o),
             ),
         );
       }
-      function Ya(e) {
+      function Xa(e) {
         const { proposal: t } = e,
           n = (0, a.useMemo)(() => la(t), [t]);
         return n?.length > 0
@@ -9313,7 +9318,7 @@
             )
           : null;
       }
-      function Xa(e) {
+      function qa(e) {
         const { proposal: t } = e,
           n = (0, a.useMemo)(
             () =>
@@ -9357,7 +9362,7 @@
             )
           : null;
       }
-      function qa(e) {
+      function ja(e) {
         const { proposal: t, oGuideline: n } = e,
           r = t.proposed_prices.base_amounts.find(
             (e) => e.amount.currency_code == In.k_ECurrencyCodeUSD,
@@ -9371,13 +9376,13 @@
               "div",
               { className: Ea.MatrixGap },
               "$",
-              Ia(r),
+              Ra(r),
               " USD Price doesn't align with any matrix price point. Will compare proposal to scaled guideline.",
             ),
-          a.createElement(Za, { ...e, USDPriceCents: r }),
+          a.createElement(Ja, { ...e, USDPriceCents: r }),
         );
       }
-      function ja(e) {
+      function Qa(e) {
         const { thresholdData: t, strDirection: n } = e;
         let r = null;
         return (
@@ -9393,17 +9398,17 @@
             a.createElement(
               "td",
               { className: (0, u.A)(Ea.OriginalPrice, r) },
-              t.nOriginalPrice ? `${Ia(t.nOriginalPrice)}` : "--",
+              t.nOriginalPrice ? `${Ra(t.nOriginalPrice)}` : "--",
             ),
             a.createElement(
               "td",
               { className: (0, u.A)(Ea.ProposedPrice, r) },
-              `${Ia(t.nProposedPrice)}`,
+              `${Ra(t.nProposedPrice)}`,
             ),
             a.createElement(
               "td",
               { className: Ea.RecommendedPrice },
-              `${Ia(t.nGuidancePrice)}`,
+              `${Ra(t.nGuidancePrice)}`,
             ),
             a.createElement(
               "td",
@@ -9413,7 +9418,7 @@
           )
         );
       }
-      function Qa(e) {
+      function Za(e) {
         const { strGuidanceMessage: t, strDirection: n } = e;
         return a.createElement(
           "thead",
@@ -9450,7 +9455,7 @@
           ),
         );
       }
-      function Za(e) {
+      function Ja(e) {
         const {
             proposal: t,
             oGuideline: n,
@@ -9462,7 +9467,7 @@
             [r, o, n, t],
           );
         if (l.length > 0 || s.length > 0) {
-          const e = Ia(r);
+          const e = Ra(r);
           return a.createElement(
             a.Fragment,
             null,
@@ -9471,7 +9476,7 @@
                 "div",
                 { className: Ea.AutoPublishCeiling },
                 "USD price $",
-                Ia(r),
+                Ra(r),
                 " is above the auto-publish threshold of $80 USD",
               ),
             a.createElement(
@@ -9481,7 +9486,7 @@
                 a.createElement(
                   "table",
                   { className: Ea.ThresholdMiniTable },
-                  a.createElement(Qa, {
+                  a.createElement(Za, {
                     strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${e}`,
                     strDirection: "above",
                   }),
@@ -9489,7 +9494,7 @@
                     "tbody",
                     null,
                     l.map((e) =>
-                      a.createElement(ja, {
+                      a.createElement(Qa, {
                         key: t.packageid + "_" + e.strCurrency,
                         thresholdData: e,
                         strDirection: "▲",
@@ -9501,7 +9506,7 @@
                 a.createElement(
                   "table",
                   { className: Ea.ThresholdMiniTable },
-                  a.createElement(Qa, {
+                  a.createElement(Za, {
                     strGuidanceMessage: `${s.length} currencies below guidance threshold for USD $ ${e}`,
                     strDirection: "below",
                   }),
@@ -9509,7 +9514,7 @@
                     "tbody",
                     null,
                     s.map((e) =>
-                      a.createElement(ja, {
+                      a.createElement(Qa, {
                         key: t.packageid + "_" + e.strCurrency,
                         thresholdData: e,
                         strDirection: "▼",
@@ -9522,7 +9527,7 @@
         }
         return null;
       }
-      function Ja(e) {
+      function er(e) {
         const { proposal: t } = e;
         return t.proposed_prices.country_amounts?.length > 0
           ? a.createElement(
@@ -9535,7 +9540,7 @@
             )
           : null;
       }
-      function er(e) {
+      function tr(e) {
         const { proposal: t } = e,
           [n] = (0, $e.Gg)(t.packageid, aa);
         return n && da(n)
@@ -9547,24 +9552,24 @@
             )
           : null;
       }
-      function tr(e) {
+      function nr(e) {
         const { bForceShowComparisonRows: t } = e,
           [n, r] = (0, a.useState)(!1);
         return n || t
           ? a.createElement(
               "div",
               { className: (0, u.A)(ea.FullCurrencyTable) },
-              a.createElement(Ra, null),
-              a.createElement(La, { ...e }),
+              a.createElement(La, null),
+              a.createElement(Ba, { ...e }),
             )
           : a.createElement(v.Yh, {
               label: "Show Price Comparison Row",
               onChange: () => r(!0),
             });
       }
-      var nr = n(45737),
-        ar = n.n(nr);
-      class rr {
+      var ar = n(45737),
+        rr = n.n(ar);
+      class or {
         m_mapPackageToPartners = new Map();
         GetMap() {
           return this.m_mapPackageToPartners;
@@ -9572,9 +9577,9 @@
         static s_Singleton;
         static Get() {
           return (
-            rr.s_Singleton ||
-              ((rr.s_Singleton = new rr()), rr.s_Singleton.Init()),
-            rr.s_Singleton
+            or.s_Singleton ||
+              ((or.s_Singleton = new or()), or.s_Singleton.Init()),
+            or.s_Singleton
           );
         }
         constructor() {}
@@ -9588,11 +9593,11 @@
           );
         }
       }
-      function or() {
-        const [e, t] = (0, a.useState)(() => rr.Get().GetMap());
+      function lr() {
+        const [e, t] = (0, a.useState)(() => or.Get().GetMap());
         return e;
       }
-      function lr(e) {
+      function sr(e) {
         const [t] = (0, a.useState)(
             () => (0, on.Tc)("filter_name", "application_config") || "",
           ),
@@ -9608,8 +9613,8 @@
             return e;
           })(),
           o = Tn(),
-          l = or(),
-          [s, i] = (0, Wa.QD)("tab", "delta"),
+          l = lr(),
+          [s, i] = (0, Ka.QD)("tab", "delta"),
           c = (e) => i(e.key),
           d = [
             {
@@ -9618,7 +9623,7 @@
               contents: a.createElement(
                 ct.tH,
                 null,
-                a.createElement(Ka, {
+                a.createElement(Va, {
                   rgProposals: n,
                   oGuideline: r,
                   mapCurrentPrices: o,
@@ -9633,7 +9638,7 @@
               contents: a.createElement(
                 ct.tH,
                 null,
-                a.createElement(Oa, {
+                a.createElement(Fa, {
                   rgProposals: n,
                   oGuideline: r,
                   mapCurrentPrices: o,
@@ -9651,7 +9656,7 @@
             null,
             a.createElement(
               "div",
-              { className: (0, u.A)(ar().AdminPageCtn, ar().WidePageCtn) },
+              { className: (0, u.A)(rr().AdminPageCtn, rr().WidePageCtn) },
               a.createElement("h1", null, "Package Prices Submissions Reviews"),
               a.createElement("p", null, t),
               a.createElement("hr", null),
@@ -9660,42 +9665,42 @@
           ),
         );
       }
-      var sr = n(26673),
-        ir = n(67293);
-      const cr = "0",
-        dr = "1",
-        ur = "2",
-        mr = "3",
-        pr = "4";
-      function _r(e) {
+      var ir = n(26673),
+        cr = n(67293);
+      const dr = "0",
+        ur = "1",
+        mr = "2",
+        pr = "3",
+        _r = "4";
+      function Er(e) {
         return !!e && Object.values(e).some((e) => e && 0 !== e.trim().length);
       }
-      function Er(e) {
+      function gr(e) {
         switch (e.kind) {
-          case cr:
+          case dr:
             return (0, s.we)(
               "#StoreAdmin_PurchaseOptionsOrder_InvalidKindError",
             );
-          case mr:
-            return _r(e.header)
+          case pr:
+            return Er(e.header)
               ? null
               : (0, s.we)(
                   "#StoreAdmin_PurchaseOptionsOrder_MissingHeaderError",
                 );
-          case dr:
+          case ur:
             return e.package_id
               ? null
               : (0, s.we)(
                   "#StoreAdmin_PurchaseOptionsOrder_MissingPackageError",
                 );
-          case ur:
+          case mr:
             return e.bundle_id
               ? null
               : (0, s.we)(
                   "#StoreAdmin_PurchaseOptionsOrder_MissingBundleError",
                 );
-          case pr:
-            return _r(e.dropdown_title)
+          case _r:
+            return Er(e.dropdown_title)
               ? !e.dropdown_items || e.dropdown_items.length < 2
                 ? (0, s.we)(
                     "#StoreAdmin_PurchaseOptionsOrder_MissingDropdownItemsError",
@@ -9706,8 +9711,8 @@
                 );
         }
       }
-      const gr = (0, a.createContext)(null);
-      function Cr(e) {
+      const Cr = (0, a.createContext)(null);
+      function hr(e) {
         const {
             appid: t,
             rgBaseGamePackageIds: n,
@@ -9722,13 +9727,13 @@
               t = new Set();
             for (const n of d)
               switch (n.kind) {
-                case dr:
+                case ur:
                   t.add(n.package_id);
                   break;
-                case ur:
+                case mr:
                   e.add(n.bundle_id && n.bundle_id);
                   break;
-                case pr:
+                case _r:
                   for (const e of n.dropdown_items ?? []) t.add(e.package_id);
               }
             return [
@@ -9765,15 +9770,15 @@
               if (0 === e.length) return !1;
               for (const n of e)
                 switch (n.kind) {
-                  case ur:
-                    return !1;
                   case mr:
-                    continue;
-                  case cr:
                     return !1;
-                  case dr:
-                    return t.includes(n.package_id);
                   case pr:
+                    continue;
+                  case dr:
+                    return !1;
+                  case ur:
+                    return t.includes(n.package_id);
+                  case _r:
                     return (
                       n.dropdown_items &&
                       n.dropdown_items.length > 0 &&
@@ -9788,13 +9793,13 @@
             rgUnusedBundles: _,
             rgUnusedPackages: p,
             rgValidLanguages: E,
-            bHasErrors: d.some((e) => null !== Er(e)) || !g,
+            bHasErrors: d.some((e) => null !== gr(e)) || !g,
             rgAllPackages: o,
             rgAllBundles: r,
           };
         return a.createElement(
           "div",
-          { className: sr.PurchaseOptionsOrderEditor },
+          { className: ir.PurchaseOptionsOrderEditor },
           a.createElement(
             "h2",
             null,
@@ -9807,11 +9812,11 @@
           ),
           a.createElement(
             "div",
-            { className: sr.PurchaseOptionsManualToggleCtn },
-            a.createElement(ir._H, { value: i, onChange: (e) => c(e) }),
+            { className: ir.PurchaseOptionsManualToggleCtn },
+            a.createElement(cr._H, { value: i, onChange: (e) => c(e) }),
             a.createElement(
               "div",
-              { className: sr.Label },
+              { className: ir.Label },
               (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_ToggleLabel"),
             ),
             a.createElement("input", {
@@ -9821,7 +9826,7 @@
             }),
           ),
           a.createElement(
-            gr.Provider,
+            Cr.Provider,
             { value: C },
             i &&
               a.createElement(
@@ -9830,40 +9835,40 @@
                 !g &&
                   a.createElement(
                     "div",
-                    { className: sr.PurchaseOptionError },
-                    a.createElement(m.Q9b, { className: sr.Exclamation }),
+                    { className: ir.PurchaseOptionError },
+                    a.createElement(m.Q9b, { className: ir.Exclamation }),
                     (0, s.we)(
                       "#StoreAdmin_PurchaseOptionsOrder_FirstItemMustBeBaseGame",
                     ),
                     "  ",
                     n.join(", "),
                   ),
-                a.createElement(yr, {
+                a.createElement(Dr, {
                   appid: e.appid,
                   items: d,
                   setItems: u,
-                  component: fr,
+                  component: br,
                   noItemsPlaceholder: a.createElement(
                     "p",
-                    { className: sr.NoPurchaseOptions },
+                    { className: ir.NoPurchaseOptions },
                     (0, s.we)(
                       "#StoreAdmin_PurchaseOptionsOrder_NoPurchaseOptionsPlaceholder",
                     ),
                   ),
-                  emptyItem: () => ({ kind: cr }),
+                  emptyItem: () => ({ kind: dr }),
                   addText: (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_Add"),
                 }),
               ),
-            a.createElement(hr, {
+            a.createElement(Sr, {
               rgOptions: d,
               rgOriginalOptions: e.rgPurchaseOptionsOrder,
             }),
           ),
         );
       }
-      function hr(e) {
+      function Sr(e) {
         const { rgOptions: t, rgOriginalOptions: n } = e;
-        if ((0, a.useContext)(gr).bHasErrors) return null;
+        if ((0, a.useContext)(Cr).bHasErrors) return null;
         const r = [];
         for (let e = 0; e < Math.max(t.length, n.length); e++)
           e < t.length
@@ -9871,7 +9876,7 @@
                 a.createElement(
                   "div",
                   { key: e },
-                  a.createElement(Sr, {
+                  a.createElement(fr, {
                     option: t[e],
                     originalOption: n[e] ?? null,
                     index: e,
@@ -9888,13 +9893,13 @@
               );
         return a.createElement(a.Fragment, null, r);
       }
-      function Sr(e) {
+      function fr(e) {
         const { option: t, originalOption: n, index: r } = e,
           o = `app[purchase_options_order][order][${r}]`;
-        if ((0, a.useContext)(gr).bHasErrors) return null;
+        if ((0, a.useContext)(Cr).bHasErrors) return null;
         if (!n) return null;
-        if (t.kind === n.kind && t.kind !== pr && t.kind !== mr) return null;
-        if (t.kind === pr && n.kind === pr) {
+        if (t.kind === n.kind && t.kind !== _r && t.kind !== pr) return null;
+        if (t.kind === _r && n.kind === _r) {
           let e = [];
           if (t.dropdown_items.length < n.dropdown_items.length)
             for (
@@ -9931,7 +9936,7 @@
                 ));
           return a.createElement(a.Fragment, null, e);
         }
-        if (t.kind === mr && n.kind === mr) {
+        if (t.kind === pr && n.kind === pr) {
           let e = [];
           for (const [r, l] of Object.entries(n.header ?? {}))
             0 !== l.trim().length &&
@@ -9946,25 +9951,25 @@
           return a.createElement(a.Fragment, null, e);
         }
         switch (n.kind) {
-          case dr:
+          case ur:
             return a.createElement("input", {
               type: "hidden",
               name: `${o}[package_id]`,
               value: "",
             });
-          case ur:
+          case mr:
             return a.createElement("input", {
               type: "hidden",
               name: `${o}[bundle_id]`,
               value: "",
             });
-          case mr:
+          case pr:
             return a.createElement("input", {
               type: "hidden",
               name: `${o}[header]`,
               value: "",
             });
-          case pr:
+          case _r:
             return a.createElement(
               a.Fragment,
               null,
@@ -9987,38 +9992,35 @@
                 }),
               ),
             );
-          case cr:
+          case dr:
             return null;
         }
       }
-      function fr(e) {
+      function br(e) {
         const { index: t, item: n, setItem: r, removeItem: o } = e,
-          l = (0, a.useContext)(gr),
+          l = (0, a.useContext)(Cr),
           i = [
             {
-              value: dr,
+              value: ur,
               label: (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_Package"),
             },
             {
-              value: ur,
+              value: mr,
               label: (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_Bundle"),
             },
             {
-              value: mr,
+              value: pr,
               label: (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_Header"),
             },
             {
-              value: pr,
+              value: _r,
               label: (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_Dropdown"),
             },
           ];
         let c;
         switch (n.kind) {
-          case cr:
-            c = a.createElement(kr, { item: n, index: t });
-            break;
           case dr:
-            c = a.createElement(Ar, { item: n, setItem: r, index: t });
+            c = a.createElement(Ar, { item: n, index: t });
             break;
           case ur:
             c = a.createElement(vr, { item: n, setItem: r, index: t });
@@ -10028,10 +10030,13 @@
             break;
           case pr:
             c = a.createElement(Pr, { item: n, setItem: r, index: t });
+            break;
+          case _r:
+            c = a.createElement(yr, { item: n, setItem: r, index: t });
         }
         return a.createElement(
           "div",
-          { className: sr.PurchaseOption },
+          { className: ir.PurchaseOption },
           !l.bHasErrors &&
             a.createElement("input", {
               type: "hidden",
@@ -10040,7 +10045,7 @@
             }),
           a.createElement(
             "div",
-            { className: sr.PurchaseOptionFirstLine },
+            { className: ir.PurchaseOptionFirstLine },
             a.createElement(
               "select",
               {
@@ -10050,41 +10055,41 @@
                 },
                 value: n.kind,
               },
-              a.createElement("option", { hidden: !0, value: cr }),
+              a.createElement("option", { hidden: !0, value: dr }),
               i.map((e, t) =>
                 a.createElement("option", { key: t, value: e.value }, e.label),
               ),
             ),
             a.createElement(
               "a",
-              { className: sr.RemovePurchaseOption, onClick: o },
+              { className: ir.RemovePurchaseOption, onClick: o },
               (0, s.we)("#StoreAdmin_PurchaseOptionsOrder_Remove"),
             ),
           ),
-          a.createElement("div", { className: sr.PurchaseOptionDetails }, c),
+          a.createElement("div", { className: ir.PurchaseOptionDetails }, c),
         );
       }
-      function br(e) {
+      function kr(e) {
         return null === e.message
           ? null
           : a.createElement(
               "div",
-              { className: sr.PurchaseOptionError },
-              a.createElement(m.Q9b, { className: sr.Exclamation }),
+              { className: ir.PurchaseOptionError },
+              a.createElement(m.Q9b, { className: ir.Exclamation }),
               e.message,
             );
       }
-      function kr(e) {
-        const t = Er(e.item);
+      function Ar(e) {
+        const t = gr(e.item);
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(br, { message: t }),
+          a.createElement(kr, { message: t }),
         );
       }
-      function Ar(e) {
+      function vr(e) {
         const { item: t, index: n, setItem: r } = e,
-          o = (0, a.useContext)(gr),
+          o = (0, a.useContext)(Cr),
           l = o.rgAllPackages.find((e) => e.packageid === t.package_id),
           i = {
             value: t.package_id,
@@ -10094,8 +10099,8 @@
           };
         return a.createElement(
           "div",
-          { className: sr.PackageOption },
-          a.createElement(br, { message: Er(t) }),
+          { className: ir.PackageOption },
+          a.createElement(kr, { message: gr(t) }),
           a.createElement(at.Ay, {
             className: "react-select-container",
             classNamePrefix: "react-select",
@@ -10116,8 +10121,8 @@
           }),
         );
       }
-      function vr(e) {
-        const t = (0, a.useContext)(gr),
+      function wr(e) {
+        const t = (0, a.useContext)(Cr),
           { item: n, setItem: r, index: o } = e;
         let l;
         if (n.bundle_id) {
@@ -10133,8 +10138,8 @@
         }
         return a.createElement(
           "div",
-          { className: sr.BundleOption },
-          a.createElement(br, { message: Er(n) }),
+          { className: ir.BundleOption },
+          a.createElement(kr, { message: gr(n) }),
           a.createElement(at.Ay, {
             className: "react-select-container",
             classNamePrefix: "react-select",
@@ -10155,21 +10160,21 @@
           }),
         );
       }
-      function wr(e) {
-        const t = (0, a.useContext)(gr),
+      function Pr(e) {
+        const t = (0, a.useContext)(Cr),
           { index: n, item: r, setItem: o } = e,
           [l, s] = (0, a.useState)("english"),
           i = (r.header && r.header[l]) || "";
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(br, { message: Er(r) }),
+          a.createElement(kr, { message: gr(r) }),
           a.createElement(
             "div",
-            { className: sr.PurchaseOptionHeader },
+            { className: ir.PurchaseOptionHeader },
             a.createElement("input", {
               type: "hidden",
-              value: mr,
+              value: pr,
               name: `app[purchase_options_order][order][${n}][kind]`,
             }),
             a.createElement("input", {
@@ -10181,7 +10186,7 @@
               },
               value: i,
               name: `app[purchase_options_order][order][${n}][header][${l}]`,
-              className: sr.HeaderText,
+              className: ir.HeaderText,
               placeholder: "Header text",
             }),
             t.rgValidLanguages.map((e, t) =>
@@ -10204,7 +10209,7 @@
                   const t = e.target.value;
                   s(t);
                 },
-                className: sr.HeaderLanguage,
+                className: ir.HeaderLanguage,
               },
               t.rgValidLanguages.map((e, t) =>
                 a.createElement("option", { key: t, value: e.value }, e.label),
@@ -10213,8 +10218,8 @@
           ),
         );
       }
-      function Pr(e) {
-        const t = (0, a.useContext)(gr),
+      function yr(e) {
+        const t = (0, a.useContext)(Cr),
           { item: n, setItem: r, index: o } = e,
           [l, i] = (0, a.useState)("english"),
           [c, d] = (0, a.useState)("english"),
@@ -10224,11 +10229,11 @@
           }));
         return a.createElement(
           "div",
-          { className: sr.DropdownOption },
-          a.createElement(br, { message: Er(n) }),
+          { className: ir.DropdownOption },
+          a.createElement(kr, { message: gr(n) }),
           a.createElement(
             "div",
-            { className: sr.TitleLine },
+            { className: ir.TitleLine },
             a.createElement(
               "label",
               null,
@@ -10236,7 +10241,7 @@
             ),
             a.createElement("input", {
               type: "text",
-              className: sr.TitleInput,
+              className: ir.TitleInput,
               name: `app[purchase_options_order][order][${o}][dropdown_title][${l}]`,
               value: (n.dropdown_title && n.dropdown_title[l]) || "",
               placeholder: (0, s.we)(
@@ -10268,7 +10273,7 @@
               {
                 value: l,
                 onChange: (e) => i(e.target.value),
-                className: sr.HeaderLanguage,
+                className: ir.HeaderLanguage,
               },
               t.rgValidLanguages.map((e, t) =>
                 a.createElement("option", { key: t, value: e.value }, e.label),
@@ -10277,7 +10282,7 @@
           ),
           a.createElement(
             "div",
-            { className: sr.DescriptionLine },
+            { className: ir.DescriptionLine },
             a.createElement(
               "label",
               null,
@@ -10290,7 +10295,7 @@
               {
                 value: c,
                 onChange: (e) => d(e.target.value),
-                className: sr.HeaderLanguage,
+                className: ir.HeaderLanguage,
               },
               t.rgValidLanguages.map((e, t) =>
                 a.createElement("option", { key: t, value: e.value }, e.label),
@@ -10299,7 +10304,7 @@
           ),
           a.createElement("input", {
             type: "text",
-            className: sr.DescriptionInput,
+            className: ir.DescriptionInput,
             name: `app[purchase_options_order][order][${o}][description][${c}]`,
             value: (n.description && n.description[c]) || "",
             onChange: (e) => {
@@ -10328,7 +10333,7 @@
           ),
           a.createElement(
             "div",
-            { className: sr.DropdownItemsCtn },
+            { className: ir.DropdownItemsCtn },
             a.createElement(
               "label",
               null,
@@ -10359,7 +10364,7 @@
                   );
                   return a.createElement(
                     "div",
-                    { className: sr.DropdownOptionRow },
+                    { className: ir.DropdownOptionRow },
                     a.createElement(
                       "a",
                       {
@@ -10379,7 +10384,7 @@
                   );
                   return a.createElement(
                     "div",
-                    { className: sr.DropdownOptionRow },
+                    { className: ir.DropdownOptionRow },
                     a.createElement(
                       "a",
                       {
@@ -10428,7 +10433,7 @@
           ),
         );
       }
-      function yr(e) {
+      function Dr(e) {
         const {
             items: t,
             setItems: n,
@@ -10459,10 +10464,10 @@
           };
         return a.createElement(
           "div",
-          { className: sr.ReorderableListWithArrows },
+          { className: ir.ReorderableListWithArrows },
           t.length > 0 &&
             t.map((e, t) =>
-              a.createElement(Dr, {
+              a.createElement(Nr, {
                 key: "reorderable-" + t,
                 index: t,
                 item: e,
@@ -10477,7 +10482,7 @@
           a.createElement("a", { onClick: () => (n(t.concat([o()])), !1) }, s),
         );
       }
-      function Dr(e) {
+      function Nr(e) {
         const {
           index: t,
           item: n,
@@ -10488,16 +10493,16 @@
         } = e;
         return a.createElement(
           "div",
-          { className: sr.ReorderableListElement },
+          { className: ir.ReorderableListElement },
           a.createElement(
             "div",
-            { className: sr.ReorderableListUpAndDownCtn },
+            { className: ir.ReorderableListUpAndDownCtn },
             a.createElement("div", { onClick: () => o() }, "▲"),
             a.createElement("div", { onClick: () => l() }, "▼"),
           ),
           a.createElement(
             "div",
-            { className: sr.ReorderableListElementContents },
+            { className: ir.ReorderableListElementContents },
             a.createElement(e.component, {
               index: t,
               item: n,
@@ -10507,28 +10512,28 @@
           ),
         );
       }
-      var Nr = n(4544),
-        Tr = n(44165),
-        Ir = n(1909),
-        Rr = n(78395),
-        Lr = n(22837),
-        Br = n(2160),
-        Mr = n(63556),
-        xr = n(21869),
-        Or = n(1431),
-        Fr = n.n(Or);
-      const Ur = { include_assets: !0, include_basic_info: !0 };
-      function Gr(e) {
+      var Tr = n(4544),
+        Ir = n(44165),
+        Rr = n(1909),
+        Lr = n(78395),
+        Br = n(22837),
+        Mr = n(2160),
+        xr = n(63556),
+        Or = n(21869),
+        Fr = n(1431),
+        Ur = n.n(Fr);
+      const Gr = { include_assets: !0, include_basic_info: !0 };
+      function Hr(e) {
         const { appid: t } = e,
-          [n] = (0, $e.t7)(t, Ur),
+          [n] = (0, $e.t7)(t, Gr),
           r = (0, Rt.n9)();
         return n && t
           ? a.createElement(
               "div",
-              { className: Fr().StoreItemCtn },
+              { className: Ur().StoreItemCtn },
               a.createElement(
                 "div",
-                { className: Fr().StoreItemRow },
+                { className: Ur().StoreItemRow },
                 a.createElement(
                   "a",
                   { href: (0, Ct.wJ)(n.GetStorePageURL(), r) },
@@ -10537,7 +10542,7 @@
                   }),
                   a.createElement(
                     "div",
-                    { className: Fr().StoreItemDescription },
+                    { className: Ur().StoreItemDescription },
                     n.GetShortDescription(),
                     " ",
                   ),
@@ -10546,7 +10551,7 @@
             )
           : null;
       }
-      function Hr(e) {
+      function Wr(e) {
         const {
             text: t,
             placeholderToken: n,
@@ -10556,7 +10561,7 @@
             rgRealms: i,
             className: c,
           } = e,
-          d = (0, Mr.E)(),
+          d = (0, xr.E)(),
           u = s.A0.GetLanguageListForRealms(i),
           m = new Array();
         r &&
@@ -10565,12 +10570,12 @@
               a.createElement("input", {
                 key: r + "_" + e,
                 type: "hidden",
-                name: `${r}[${(0, Lr.Lg)(e, "english")}]`,
-                value: (0, Nr.VX)(t, e),
+                name: `${r}[${(0, Br.Lg)(e, "english")}]`,
+                value: (0, Tr.VX)(t, e),
               }),
             );
           });
-        const p = (0, Nr.VX)(t, d) || "";
+        const p = (0, Tr.VX)(t, d) || "";
         return a.createElement(
           "div",
           { className: c },
@@ -10585,13 +10590,13 @@
           m,
         );
       }
-      var Wr = n(26408),
-        Kr = n(36500),
-        Vr = n.n(Kr),
-        $r = n(64442),
-        zr = n.n($r),
-        Yr = n(14947);
-      class Xr {
+      var Kr = n(26408),
+        Vr = n(36500),
+        $r = n.n(Vr),
+        zr = n(64442),
+        Yr = n.n(zr),
+        Xr = n(14947);
+      class qr {
         m_mapAppIDToDLCs = new Map();
         m_mapPromise = new Map();
         GetDLCForAppID(e) {
@@ -10642,25 +10647,26 @@
         static s_Singleton;
         static Get() {
           return (
-            Xr.s_Singleton ||
-              ((Xr.s_Singleton = new Xr()),
+            qr.s_Singleton ||
+              ((qr.s_Singleton = new qr()),
               "dev" == _.TS.WEB_UNIVERSE &&
-                (window.g_StoreTagCache = Xr.s_Singleton)),
-            Xr.s_Singleton
+                (window.g_StoreTagCache = qr.s_Singleton)),
+            qr.s_Singleton
           );
         }
         constructor() {
-          (0, Yr.Gn)(this);
+          (0, Xr.Gn)(this);
         }
       }
-      function qr(e) {
+      function jr(e) {
         const [t, n] = (0, a.useState)(e),
-          [r, o] = (0, a.useState)(Xr.Get().GetDLCForAppID(t));
+          [r, o] = (0, a.useState)(qr.Get().GetDLCForAppID(t));
         return (
           (0, a.useEffect)(() => {
             !e ||
               (e == t && r) ||
-              Xr.Get()
+              qr
+                .Get()
                 .LoadDLCForAppID(t, null)
                 .then((t) => {
                   o(t), n(e);
@@ -10669,7 +10675,7 @@
           r
         );
       }
-      function jr(e) {
+      function Qr(e) {
         const {
             appid: t,
             setAppID: n,
@@ -10679,7 +10685,7 @@
             strLocalizedLabel: i,
             strLocalizedTooltip: c,
           } = e,
-          d = qr(o.parentAppID),
+          d = jr(o.parentAppID),
           m = (0, a.useMemo)(
             () => d?.filter((e) => !l || Boolean(e.is_released_somewhere)),
             [d, l],
@@ -10692,7 +10698,7 @@
             () =>
               p
                 ? p.map((e) => ({
-                    label: a.createElement(Zr, { appInfo: e }),
+                    label: a.createElement(Jr, { appInfo: e }),
                     data: e.appid,
                   }))
                 : [],
@@ -10718,10 +10724,10 @@
               string: (0, s.we)("#Loading"),
             });
       }
-      const Qr = { include_release: !0 };
-      function Zr(e) {
+      const Zr = { include_release: !0 };
+      function Jr(e) {
         const { appInfo: t } = e,
-          [n] = (0, $e.t7)(t.appid, Qr);
+          [n] = (0, $e.t7)(t.appid, Zr);
         return n
           ? a.createElement(
               "span",
@@ -10735,7 +10741,7 @@
             )
           : a.createElement("span", null, t.name);
       }
-      function Jr(e) {
+      function eo(e) {
         const {
             mileStone: t,
             index: n,
@@ -10746,7 +10752,7 @@
           [i, c, d] = (0, K.uD)(),
           m = a.useMemo(() => (0, s.O9)(o), [o]),
           p = a.useMemo(
-            () => (0, Nr.mn)(t?.milestone_desc || { english: "" }),
+            () => (0, Tr.mn)(t?.milestone_desc || { english: "" }),
             [t?.milestone_desc],
           ),
           _ = a.useMemo(
@@ -10757,31 +10763,31 @@
         return (
           (0, a.useEffect)(() => {
             if (i) {
-              const e = (0, Lr.sf)(E.strActiveLanguage, 0);
-              Mr.O.Get().SetCurEditLanguage(e);
+              const e = (0, Br.sf)(E.strActiveLanguage, 0);
+              xr.O.Get().SetCurEditLanguage(e);
             }
           }, [E.strActiveLanguage, i]),
-          (0, K.hL)(Mr.O.Get().GetCallback(), (e) => {
-            E.setActiveLanguage((0, Lr.Lg)(e));
+          (0, K.hL)(xr.O.Get().GetCallback(), (e) => {
+            E.setActiveLanguage((0, Br.Lg)(e));
           }),
           a.createElement(
             "div",
-            { className: (0, u.A)(zr().EditBtn, Vr().BtnCtn) },
-            i && a.createElement(eo, { hideModal: d, bCreate: r, ...e, ...E }),
+            { className: (0, u.A)(Yr().EditBtn, $r().BtnCtn) },
+            i && a.createElement(to, { hideModal: d, bCreate: r, ...e, ...E }),
             !r && E.rctHiddenInputs,
             a.createElement(
               v.$n,
               { onClick: c },
               (0, s.we)(r ? "#SeasonPass_ItemNew" : "#Button_Edit"),
               r &&
-                a.createElement(Wr.o, {
+                a.createElement(Kr.o, {
                   tooltip: (0, s.we)("#SeasonPass_ItemNew_desc"),
                 }),
             ),
           )
         );
       }
-      function eo(e) {
+      function to(e) {
         const {
             hideModal: t,
             seasonPassID: n,
@@ -10795,7 +10801,7 @@
             bCreate: m,
             rgShippedMilestoneIDs: p,
           } = e,
-          _ = (0, Tr.f1)(),
+          _ = (0, Ir.f1)(),
           [E, g] = (0, a.useState)(r?.internal_desc || ""),
           [C, h] = (0, a.useState)(r?.expected_delivery || _ + 86400),
           [S, f] = (0, a.useState)(r?.display_format || "date_quarter"),
@@ -10808,17 +10814,17 @@
           R = (0, a.useMemo)(
             () =>
               u
-                ? [Br.TU.k_ESteamRealmGlobal, Br.TU.k_ESteamRealmChina]
-                : [Br.TU.k_ESteamRealmGlobal],
+                ? [Mr.TU.k_ESteamRealmGlobal, Mr.TU.k_ESteamRealmChina]
+                : [Mr.TU.k_ESteamRealmGlobal],
             [u],
           ),
           L = (0, s.we)(r ? "#SeasonPass_Update" : "#SeasonPass_Create"),
           B = p?.includes(o);
         return a.createElement(
-          xr.E,
+          Or.E,
           { active: !0 },
           a.createElement(
-            Rr.o0,
+            Lr.o0,
             {
               strTitle: L,
               strDescription: (0, s.we)("#SeasonPass_Create_desc"),
@@ -10858,7 +10864,7 @@
             },
             a.createElement(
               "div",
-              { className: zr().EditMilestoneDialog },
+              { className: Yr().EditMilestoneDialog },
               a.createElement(
                 "h3",
                 null,
@@ -10874,11 +10880,11 @@
                 null,
                 (0, s.we)("#SeasonPass_CustomerSubtitle"),
               ),
-              a.createElement(Hr, {
+              a.createElement(Wr, {
                 text: b,
-                className: zr().MilestoneTitleField,
+                className: Yr().MilestoneTitleField,
                 onChangeText: (e, t) => {
-                  (0, Nr.pV)(b, t, e), k({ ...b });
+                  (0, Tr.pV)(b, t, e), k({ ...b });
                 },
                 kvName: void 0,
                 rgRealms: R,
@@ -10908,12 +10914,12 @@
                 editorType: "milestone",
                 rctToolbarControls: c,
                 value: d.get(i),
-                rctAboveEditor: a.createElement(Gr, {
+                rctAboveEditor: a.createElement(Hr, {
                   appid: r?.completed_appid || w,
                 }),
               }),
               !B &&
-                a.createElement(jr, {
+                a.createElement(Qr, {
                   appid: w,
                   setAppID: P,
                   rgExcludeAppIDs: null,
@@ -10931,7 +10937,7 @@
                   null,
                   a.createElement(
                     "div",
-                    { className: zr().DatePickerRow },
+                    { className: Yr().DatePickerRow },
                     a.createElement(
                       "div",
                       null,
@@ -11008,18 +11014,18 @@
           ),
         );
       }
-      function to(e) {
+      function no(e) {
         const { milestoneID: t, rgPublishedMilestoneIDs: n, onDelete: r } = e,
           [o, l, i] = (0, K.uD)();
         return !n || n?.includes(t)
           ? null
           : a.createElement(
               "div",
-              { className: (0, u.A)(zr().EditBtn, Vr().BtnCtn) },
+              { className: (0, u.A)(Yr().EditBtn, $r().BtnCtn) },
               a.createElement(
-                xr.E,
+                Or.E,
                 { active: o },
-                a.createElement(Rr.o0, {
+                a.createElement(Lr.o0, {
                   strTitle: (0, s.we)("#Button_Delete"),
                   strDescription: (0, s.we)("#Dialog_AreYouSure"),
                   onOK: r,
@@ -11035,9 +11041,9 @@
               ),
             );
       }
-      var no = n(73967);
-      const ao = { include_release: !0, include_included_items: !0 };
-      function ro(e) {
+      var ao = n(73967);
+      const ro = { include_release: !0, include_included_items: !0 };
+      function oo(e) {
         const {
             inputMilestone: t,
             setCurrentMilestone: n,
@@ -11046,17 +11052,17 @@
             index: l,
             rgShippedMilestoneIDs: i,
           } = e,
-          [c] = (0, $e.t7)(t.completed_appid, ao),
+          [c] = (0, $e.t7)(t.completed_appid, ro),
           [d, u, m] = (0, K.uD)(),
           p = Boolean(i.includes(t.milestone_id));
         return a.createElement(
           "div",
-          { className: zr().StatusRow },
+          { className: Yr().StatusRow },
           Boolean(p) &&
             a.createElement(
               a.Fragment,
               null,
-              a.createElement("div", { className: zr().CheckMark }, "✓"),
+              a.createElement("div", { className: Yr().CheckMark }, "✓"),
             ),
           Boolean(t.completed_appid) &&
             a.createElement(
@@ -11102,7 +11108,7 @@
               a.Fragment,
               null,
               d &&
-                a.createElement(oo, {
+                a.createElement(lo, {
                   inputMilestone: t,
                   setCurrentMilestone: n,
                   rgAllMilestones: o,
@@ -11123,7 +11129,7 @@
             ),
         );
       }
-      function oo(e) {
+      function lo(e) {
         const {
             hideModal: t,
             inputMilestone: n,
@@ -11148,10 +11154,10 @@
             );
           }, [n.milestone_id, l, o.dlcAppID]);
         return a.createElement(
-          xr.E,
+          Or.E,
           { active: !0 },
           a.createElement(
-            Rr.o0,
+            Lr.o0,
             {
               bAllowFullSize: !0,
               bDisableBackgroundDismiss: !0,
@@ -11173,10 +11179,10 @@
             },
             a.createElement(
               "div",
-              { className: (0, u.A)(zr().ShippingTheMilestone) },
+              { className: (0, u.A)(Yr().ShippingTheMilestone) },
               a.createElement(
                 "div",
-                { className: (0, u.A)(zr().ShippingType) },
+                { className: (0, u.A)(Yr().ShippingType) },
                 a.createElement(
                   v.G5,
                   null,
@@ -11205,16 +11211,16 @@
               Boolean(!p || E) &&
                 a.createElement(
                   "div",
-                  { className: zr().OptionDetails },
+                  { className: Yr().OptionDetails },
                   a.createElement(
                     v.JU,
                     null,
                     (0, s.we)("#SeasonPass_UpdateLaunch_update"),
-                    a.createElement(Wr.o, {
+                    a.createElement(Kr.o, {
                       tooltip: (0, s.we)("#SeasonPass_AddLaunchEvent"),
                     }),
                   ),
-                  a.createElement(no.q, {
+                  a.createElement(ao.q, {
                     appid: o.parentAppID,
                     selectedEventGID: d,
                     fnSetUpdateEvent: (e, t) => m(t),
@@ -11230,13 +11236,13 @@
               p &&
                 a.createElement(
                   "div",
-                  { className: zr().OptionDetails },
+                  { className: Yr().OptionDetails },
                   a.createElement(
                     v.JU,
                     null,
                     (0, s.we)("#SeasonPass_UpdateLaunch_dlc"),
                   ),
-                  a.createElement(jr, {
+                  a.createElement(Qr, {
                     appid: i,
                     setAppID: c,
                     rgExcludeAppIDs: C,
@@ -11248,7 +11254,7 @@
                 !E &&
                 a.createElement(
                   "div",
-                  { className: zr().OptionDetails },
+                  { className: Yr().OptionDetails },
                   a.createElement(v.Yh, {
                     label: (0, s.we)("#SeaosnPass_OptionalEvents"),
                     checked: E,
@@ -11259,7 +11265,7 @@
           ),
         );
       }
-      function lo(e) {
+      function so(e) {
         const {
           seasonPassData: t,
           seasonPassID: n,
@@ -11270,7 +11276,7 @@
         } = e;
         return a.createElement(
           "div",
-          { className: zr().MilestoneTable },
+          { className: Yr().MilestoneTable },
           a.createElement(v.JU, null, (0, s.we)("#SeasonPass_Milestone_table")),
           a.createElement(
             "table",
@@ -11295,7 +11301,7 @@
               t?.commitments
                 ?.sort((e, t) => e.expected_delivery - t.expected_delivery)
                 .map((e, s) =>
-                  a.createElement(io, {
+                  a.createElement(co, {
                     key: "row" + e.milestone_id,
                     inputMilestone: e,
                     index: s,
@@ -11311,7 +11317,7 @@
           ),
         );
       }
-      function so(e) {
+      function io(e) {
         const { milestone: t, index: n } = e;
         return a.createElement(
           a.Fragment,
@@ -11373,7 +11379,7 @@
             ),
         );
       }
-      function io(e) {
+      function co(e) {
         const {
             inputMilestone: t,
             index: n,
@@ -11385,17 +11391,17 @@
             rgShippedMilestoneIDs: d,
           } = e,
           [m, _] = (0, a.useState)(t),
-          E = (0, Tr.sB)(),
+          E = (0, Ir.sB)(),
           g = Boolean(d.includes(m.milestone_id)),
           C = !g && m.expected_delivery < E,
           h = (0, a.useMemo)(
             () =>
               l
-                ? [Br.TU.k_ESteamRealmGlobal, Br.TU.k_ESteamRealmChina]
-                : [Br.TU.k_ESteamRealmGlobal],
+                ? [Mr.TU.k_ESteamRealmGlobal, Mr.TU.k_ESteamRealmChina]
+                : [Mr.TU.k_ESteamRealmGlobal],
             [l],
           ),
-          S = (0, Mr.E)(),
+          S = (0, xr.E)(),
           f = s.A0.GetELanguageFallback(S);
         return a.createElement(
           "tr",
@@ -11407,28 +11413,28 @@
               "div",
               {
                 className: (0, u.A)({
-                  [zr().TitlePreviewRow]: !0,
-                  [zr().Shipped]: g,
+                  [Yr().TitlePreviewRow]: !0,
+                  [Yr().Shipped]: g,
                 }),
               },
-              a.createElement(so, { milestone: m, index: n }),
-              a.createElement(Hr, {
+              a.createElement(io, { milestone: m, index: n }),
+              a.createElement(Wr, {
                 text: m.localized_title,
-                className: zr().Title,
+                className: Yr().Title,
                 onChangeText: null,
                 kvName: `app[seasonpass][commitments][${n}][localized_title]`,
                 bOnlyDisplay: !0,
                 placeholderToken: (0, s.we)(
                   "#SeasonPass_NoLang_Fallback",
-                  (0, s.we)("#Language_" + (0, Lr.Lg)(S)),
-                  (0, s.we)("#Language_" + (0, Lr.Lg)(f)),
+                  (0, s.we)("#Language_" + (0, Br.Lg)(S)),
+                  (0, s.we)("#Language_" + (0, Br.Lg)(f)),
                 ),
                 rgRealms: h,
               }),
               g
                 ? a.createElement(
                     "div",
-                    { className: (0, u.A)(zr().Date, zr().Released) },
+                    { className: (0, u.A)(Yr().Date, Yr().Released) },
                     (0, s.we)("#SeasonPass_Released"),
                   )
                 : a.createElement(
@@ -11437,12 +11443,12 @@
                     Boolean(m?.backfilled_release)
                       ? a.createElement(
                           "div",
-                          { className: zr().PublishReminder },
+                          { className: Yr().PublishReminder },
                           (0, s.we)("#SeasonPass_Backfill_require_publish"),
                         )
                       : a.createElement(
                           "div",
-                          { className: (0, u.A)(zr().Date) },
+                          { className: (0, u.A)(Yr().Date) },
                           a.createElement(
                             p.he,
                             {
@@ -11481,8 +11487,8 @@
             null,
             a.createElement(
               "div",
-              { className: zr().BtnCtn },
-              a.createElement(ro, {
+              { className: Yr().BtnCtn },
+              a.createElement(oo, {
                 inputMilestone: m,
                 setCurrentMilestone: _,
                 seasonPassID: r,
@@ -11490,7 +11496,7 @@
                 index: n,
                 rgShippedMilestoneIDs: d,
               }),
-              a.createElement(Jr, {
+              a.createElement(eo, {
                 milestoneID: m.milestone_id,
                 mileStone: m,
                 onSave: _,
@@ -11499,7 +11505,7 @@
                 rgShippedMilestoneIDs: d,
                 seasonPassID: r,
               }),
-              a.createElement(to, {
+              a.createElement(no, {
                 milestoneID: m.milestone_id,
                 onDelete: c,
                 rgPublishedMilestoneIDs: i,
@@ -11508,7 +11514,7 @@
           ),
         );
       }
-      function co(e) {
+      function uo(e) {
         const {
             seasonPassID: t,
             seasonPassData: n,
@@ -11532,8 +11538,8 @@
               Boolean(
                 s.commitments?.some(
                   (t) =>
-                    (0, Nr.nU)(t.localized_title, e) ||
-                    (0, Nr.nU)(t.milestone_desc, e),
+                    (0, Tr.nU)(t.localized_title, e) ||
+                    (0, Tr.nU)(t.milestone_desc, e),
                 ),
               ),
             [s.commitments],
@@ -11541,12 +11547,12 @@
           p = [];
         if (c > s.commitments?.length)
           for (let e = s.commitments?.length; e < c; e++)
-            p.push(a.createElement(so, { key: e, index: e, milestone: null }));
+            p.push(a.createElement(io, { key: e, index: e, milestone: null }));
         return a.createElement(
           "div",
-          { className: Vr().EditorCtn },
-          a.createElement(Ir.yk, { fnLangHasData: m }),
-          a.createElement(uo, {
+          { className: $r().EditorCtn },
+          a.createElement(Rr.yk, { fnLangHasData: m }),
+          a.createElement(mo, {
             seasonPassID: t,
             nNextMilestoneID: u,
             index: s?.commitments?.length || 0,
@@ -11557,8 +11563,8 @@
             bAppHasSteamChinaToolsEnabled: r,
             rgShippedMilestoneIDs: l,
           }),
-          a.createElement(mo, { seasonPassData: s, rgShippedMilestoneIDs: l }),
-          a.createElement(lo, {
+          a.createElement(po, { seasonPassData: s, rgShippedMilestoneIDs: l }),
+          a.createElement(so, {
             seasonPassID: t,
             seasonPassData: s,
             bAppHasSteamChinaToolsEnabled: r,
@@ -11581,7 +11587,7 @@
                 {
                   onClick: (e) =>
                     (0, Cn.pg)(
-                      a.createElement(Rr.o0, {
+                      a.createElement(Lr.o0, {
                         strTitle: "Clear?",
                         strDescription: "Are you sure?",
                         onOK: () => i({ commitments: [] }),
@@ -11596,7 +11602,7 @@
           a.createElement("br", null),
         );
       }
-      function uo(e) {
+      function mo(e) {
         const {
           seasonPassID: t,
           fnAppendSeasonPass: n,
@@ -11687,16 +11693,16 @@
           ),
           a.createElement(
             "div",
-            { className: Vr().CreationButtonRow },
+            { className: $r().CreationButtonRow },
             a.createElement(
               "span",
-              { className: Vr().LangBox },
-              a.createElement(Ir.iN, null),
+              { className: $r().LangBox },
+              a.createElement(Rr.iN, null),
             ),
             a.createElement(
               "div",
-              { className: Vr().MilestoneButton },
-              a.createElement(Jr, {
+              { className: $r().MilestoneButton },
+              a.createElement(eo, {
                 onSave: n,
                 milestoneID: r,
                 index: o,
@@ -11709,9 +11715,9 @@
           ),
         );
       }
-      function mo(e) {
+      function po(e) {
         const { seasonPassData: t, rgShippedMilestoneIDs: n } = e,
-          r = (0, Tr.sB)(),
+          r = (0, Ir.sB)(),
           [o, l, i] = (0, a.useMemo)(() => {
             const e =
                 t?.commitments?.filter(
@@ -11739,8 +11745,8 @@
             )
           : null;
       }
-      var po = n(29602);
-      function _o(e) {
+      var _o = n(29602);
+      function Eo(e) {
         const {
             rgSocialMedia: t,
             rgSupportedSocialMediaTypes: n,
@@ -11770,7 +11776,7 @@
         return a.createElement(
           "div",
           null,
-          a.createElement(Eo, {
+          a.createElement(go, {
             options: d,
             onAddLink: (e) => {
               let t = o.slice();
@@ -11788,7 +11794,7 @@
               (0, Kt.yY)(n, e, t), u(n);
             },
             render: (e, t) =>
-              a.createElement(go, {
+              a.createElement(Co, {
                 key: e.type,
                 item: e,
                 onUpdateLink: (e) =>
@@ -11801,14 +11807,14 @@
                 validationData: r[e.type],
               }),
           }),
-          a.createElement(Co, { items: o, maxSeen: i }),
+          a.createElement(ho, { items: o, maxSeen: i }),
         );
       }
-      function Eo(e) {
+      function go(e) {
         const { options: t, onAddLink: n } = e;
         return a.createElement(
           "div",
-          { className: po.AddLinkDropDown },
+          { className: _o.AddLinkDropDown },
           a.createElement(v.ZU, {
             controlled: !0,
             rgOptions: t,
@@ -11820,7 +11826,7 @@
           }),
         );
       }
-      function go(e) {
+      function Co(e) {
         const { item: t, onUpdateLink: n, validationData: r } = e;
         let o, l;
         o = r.number
@@ -11850,14 +11856,14 @@
                   (l = (0, s.we)("#StoreAdmin_SocialMedia_ValidationTumblr")),
           a.createElement(
             "div",
-            { className: po.SocialMediaRow },
+            { className: _o.SocialMediaRow },
             a.createElement(
               "div",
-              { className: po.SocialMediaType },
+              { className: _o.SocialMediaType },
               (0, s.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
             ),
             a.createElement(_t.BA, {
-              className: po.SocialMediaLink,
+              className: _o.SocialMediaLink,
               type: "text",
               value: t.link,
               placeholder: o,
@@ -11866,14 +11872,14 @@
             l &&
               a.createElement(
                 p.he,
-                { className: po.SocialMediaTooltip, toolTipContent: l },
+                { className: _o.SocialMediaTooltip, toolTipContent: l },
                 "(?)",
               ),
-            !i && a.createElement("div", { className: po.ValidationError }, l),
+            !i && a.createElement("div", { className: _o.ValidationError }, l),
           )
         );
       }
-      function Co(e) {
+      function ho(e) {
         const { items: t, maxSeen: n } = e,
           r = a.useMemo(
             () =>
@@ -11932,11 +11938,11 @@
           );
         return a.createElement(a.Fragment, null, ...r);
       }
-      var ho = n(93542),
-        So = n(10411);
-      const fo = 748,
-        bo = 896;
-      function ko(e) {
+      var So = n(93542),
+        fo = n(10411);
+      const bo = 748,
+        ko = 896;
+      function Ao(e) {
         const [t, n] = (0, a.useState)("closed"),
           r = e.rgEditions.map((e) => e.packageid),
           [o, l] = (0, a.useState)(new Set(r)),
@@ -11990,10 +11996,10 @@
           a.Fragment,
           null,
           a.createElement(
-            xr.E,
+            Or.E,
             { active: "editor" === t || "alert" === t },
             a.createElement(
-              So.e,
+              fo.e,
               { closeModal: () => n("closed") },
               "editor" === t &&
                 a.createElement(
@@ -12001,7 +12007,7 @@
                   null,
                   a.createElement(
                     "div",
-                    { className: ho.EditionsEditorContents },
+                    { className: So.EditionsEditorContents },
                     a.createElement(
                       "h2",
                       null,
@@ -12015,19 +12021,19 @@
                         null !== g &&
                           a.createElement(
                             "div",
-                            { className: ho.ErrorBox },
+                            { className: So.ErrorBox },
                             a.createElement(c.X, null),
                             a.createElement("div", null, g),
                           ),
-                        a.createElement(Ao, {
+                        a.createElement(vo, {
                           rgEditions: o,
                           rgCandidates: e.rgCandidates,
                           setEditions: l,
                         }),
                         a.createElement("div", {
-                          className: ho.EditionPickerHr,
+                          className: So.EditionPickerHr,
                         }),
-                        a.createElement(vo, {
+                        a.createElement(wo, {
                           mapOriginalImages: i,
                           mapImages: d,
                           setImages: u,
@@ -12038,7 +12044,7 @@
                   ),
                   a.createElement(
                     "div",
-                    { className: ho.EditionsEditorDialogButtons },
+                    { className: So.EditionsEditorDialogButtons },
                     a.createElement(
                       "button",
                       {
@@ -12075,7 +12081,7 @@
                   ),
                   a.createElement(
                     "p",
-                    { className: ho.NeedToPublishNotification },
+                    { className: So.NeedToPublishNotification },
                     (0, s.oW)(
                       "#StoreAdmin_EditEditions_NeedToPublishNotice",
                       a.createElement("a", {
@@ -12091,7 +12097,7 @@
                   null,
                   a.createElement(
                     "div",
-                    { className: ho.EditionEditorContents },
+                    { className: So.EditionEditorContents },
                     a.createElement(
                       "h2",
                       null,
@@ -12099,7 +12105,7 @@
                     ),
                     a.createElement(
                       "div",
-                      { className: ho.EditionsEditorSaveStatus },
+                      { className: So.EditionsEditorSaveStatus },
                       p.isPending &&
                         a.createElement(
                           a.Fragment,
@@ -12117,7 +12123,7 @@
                     ),
                     a.createElement(
                       "span",
-                      { className: ho.PublishReminder },
+                      { className: So.PublishReminder },
                       (0, s.oW)(
                         "#StoreAdmin_EditEditions_NeedToPublishAlert",
                         a.createElement("a", {
@@ -12128,7 +12134,7 @@
                     ),
                     a.createElement(
                       "div",
-                      { className: ho.EditionsEditorDialogButtons },
+                      { className: So.EditionsEditorDialogButtons },
                       a.createElement(
                         "button",
                         {
@@ -12149,7 +12155,7 @@
               null,
               a.createElement(
                 "div",
-                { className: ho.EditionsEditorRow },
+                { className: So.EditionsEditorRow },
                 "closed" === t &&
                   a.createElement(
                     a.Fragment,
@@ -12157,7 +12163,7 @@
                     a.createElement(
                       "button",
                       {
-                        className: ho.OpenEditorButton,
+                        className: So.OpenEditorButton,
                         onClick: () => n("editor"),
                       },
                       (0, s.we)(
@@ -12200,7 +12206,7 @@
             ),
         );
       }
-      function Ao(e) {
+      function vo(e) {
         const { rgEditions: t, rgCandidates: n, setEditions: r } = e,
           o = new Map();
         for (const t of e.rgCandidates) o.set(t.nPackageId, t);
@@ -12211,7 +12217,7 @@
           );
         return a.createElement(
           "div",
-          { className: ho.EditionPicker },
+          { className: So.EditionPicker },
           a.createElement(
             "p",
             null,
@@ -12219,7 +12225,7 @@
           ),
           a.createElement(
             "div",
-            { className: ho.EditionPickerFilterBox },
+            { className: So.EditionPickerFilterBox },
             a.createElement("input", {
               type: "text",
               placeholder: (0, s.we)(
@@ -12268,18 +12274,18 @@
               null,
               c.map((e) => {
                 const n = t.has(e.nPackageId);
-                let o = ho.HiddenColor;
+                let o = So.HiddenColor;
                 return (
                   "Released" === e.strReleaseState
-                    ? (o = ho.ReleasedColor)
+                    ? (o = So.ReleasedColor)
                     : "Prepurchase" === e.strReleaseState
-                      ? (o = ho.PrepurchaseColor)
-                      : "Beta" === e.strReleaseState && (o = ho.BetaColor),
+                      ? (o = So.PrepurchaseColor)
+                      : "Beta" === e.strReleaseState && (o = So.BetaColor),
                   a.createElement(
                     "tr",
                     {
                       key: e.nPackageId,
-                      className: (0, u.A)(o, ho.EditionPickerRow),
+                      className: (0, u.A)(o, So.EditionPickerRow),
                     },
                     a.createElement(
                       "td",
@@ -12308,7 +12314,7 @@
           ),
         );
       }
-      function vo(e) {
+      function wo(e) {
         const {
             mapOriginalImages: t,
             mapImages: n,
@@ -12329,25 +12335,25 @@
         }
         const g = (e) =>
           n.has(e) && n.get(e) instanceof File
-            ? ho.UploadedImageOption
+            ? So.UploadedImageOption
             : n.has(e)
-              ? ho.ExistsImageOption
-              : ho.MissingImageOption;
+              ? So.ExistsImageOption
+              : So.MissingImageOption;
         return a.createElement(
           "div",
-          { className: ho.LocalizedImageSelector },
+          { className: So.LocalizedImageSelector },
           a.createElement(
             "p",
             null,
             (0, s.we)(
               "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
-              fo,
               bo,
+              ko,
             ),
           ),
           a.createElement(
             "div",
-            { className: ho.Header },
+            { className: So.Header },
             a.createElement("input", {
               type: "file",
               ref: p,
@@ -12355,12 +12361,12 @@
                 if (e.target.files && e.target.files[0]) {
                   const t = e.target.files[0],
                     a = await createImageBitmap(t);
-                  if (a.width !== fo || a.height !== bo)
+                  if (a.width !== bo || a.height !== ko)
                     return void i(
                       (0, s.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        fo,
                         bo,
+                        ko,
                         a.width,
                         a.height,
                       ),
@@ -12390,14 +12396,14 @@
           ),
           a.createElement(
             "p",
-            { className: ho.ErrorBox },
+            { className: So.ErrorBox },
             null !== l &&
               a.createElement(a.Fragment, null, a.createElement(c.X, null), l),
           ),
           a.createElement(
             "div",
             {
-              className: ho.ImageDropPane,
+              className: So.ImageDropPane,
               onClick: () => p.current?.click(),
               onDragOver: (e) => e.preventDefault(),
               onDrop: async (e) => {
@@ -12407,12 +12413,12 @@
                 ) {
                   const t = e.dataTransfer.files[0],
                     a = await createImageBitmap(t);
-                  if (a.width !== fo || a.height !== bo)
+                  if (a.width !== bo || a.height !== ko)
                     return void i(
                       (0, s.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        fo,
                         bo,
+                        ko,
                         a.width,
                         a.height,
                       ),
@@ -12428,13 +12434,13 @@
                   null,
                   a.createElement(
                     "div",
-                    { className: ho.DragAndDropDescriptionWithImage },
+                    { className: So.DragAndDropDescriptionWithImage },
                     (0, s.we)("#StoreAdmin_EditEditions_DragAndDropToReplace"),
                   ),
                   a.createElement("img", { src: _ }),
                   a.createElement(
                     "div",
-                    { className: ho.DeleteLink },
+                    { className: So.DeleteLink },
                     a.createElement(
                       "a",
                       {
@@ -12451,14 +12457,14 @@
                 )
               : a.createElement(
                   "div",
-                  { className: ho.DragAndDropDescriptionWithoutImage },
+                  { className: So.DragAndDropDescriptionWithoutImage },
                   (0, s.we)("#StoreAdmin_EditEditions_DragAndDropHere"),
                 ),
           ),
         );
       }
-      var wo = n(23256);
-      function Po(e) {
+      var Po = n(23256);
+      function yo(e) {
         const {
             rgAntiCheatData: t,
             rgSupportedAntiCheatOptions: n,
@@ -12497,9 +12503,9 @@
             (0, s.we)("#StoreAdmin_AntiCheat_Description2"),
           ),
           a.createElement(
-            yo,
+            Do,
             { label: (0, s.we)("#StoreAdmin_AntiCheat_ServiceLabel") },
-            a.createElement(Do, {
+            a.createElement(No, {
               options: l,
               selectedOption: i,
               onSelectionChanged: (e) => {
@@ -12513,17 +12519,17 @@
             }),
           ),
           "other" === i &&
-            a.createElement(No, { values: t.otherNameLoc, mapLanguages: o }),
-          _ && a.createElement(To, { checked: d, onChange: u }),
-          _ && d && a.createElement(Io, { checked: m, onChange: p }),
-          a.createElement(Ro, {
+            a.createElement(To, { values: t.otherNameLoc, mapLanguages: o }),
+          _ && a.createElement(Io, { checked: d, onChange: u }),
+          _ && d && a.createElement(Ro, { checked: m, onChange: p }),
+          a.createElement(Lo, {
             selectedOption: "unspecified" !== i ? i : "",
             kernelMode: !!_ && d,
             uninstallsCompletely: !(!_ || !d) && m,
           }),
         );
       }
-      function yo(e) {
+      function Do(e) {
         const { label: t, children: n } = e;
         return a.createElement(
           "div",
@@ -12538,11 +12544,11 @@
           ),
         );
       }
-      function Do(e) {
+      function No(e) {
         const { options: t, selectedOption: n, onSelectionChanged: r } = e;
         return a.createElement(
           "div",
-          { className: wo.AntiCheatDropDown },
+          { className: Po.AntiCheatDropDown },
           a.createElement(v.ZU, {
             controlled: !0,
             rgOptions: t,
@@ -12551,7 +12557,7 @@
           }),
         );
       }
-      function No(e) {
+      function To(e) {
         const { values: t, mapLanguages: n } = e,
           {
             strActiveLanguage: r,
@@ -12562,11 +12568,11 @@
           i = o.get(r),
           c = (0, K.gc)(i);
         return a.createElement(
-          yo,
+          Do,
           null,
-          a.createElement("div", { className: wo.LanguageSelector }, l),
+          a.createElement("div", { className: Po.LanguageSelector }, l),
           a.createElement(v.pd, {
-            className: wo.OtherSerivceName,
+            className: Po.OtherSerivceName,
             type: "text",
             value: c,
             placeholder: "Enter the service name",
@@ -12576,43 +12582,43 @@
           s,
         );
       }
-      function To(e) {
+      function Io(e) {
         const { checked: t, onChange: n } = e;
         return a.createElement(
-          yo,
+          Do,
           null,
           a.createElement(v.Yh, {
-            className: (0, u.A)(wo.KernelMode, wo.CheckboxLabel),
+            className: (0, u.A)(Po.KernelMode, Po.CheckboxLabel),
             label: (0, s.we)("#StoreAdmin_AntiCheat_KernelModeLabel"),
             checked: t,
             onChange: n,
           }),
           a.createElement(
             "div",
-            { className: wo.CheckboxDescription },
+            { className: Po.CheckboxDescription },
             (0, s.we)("#StoreAdmin_AntiCheat_KernelModelDescription_Other"),
           ),
         );
       }
-      function Io(e) {
+      function Ro(e) {
         const { checked: t, onChange: n } = e;
         return a.createElement(
-          yo,
+          Do,
           null,
           a.createElement(v.Yh, {
-            className: wo.CheckboxLabel,
+            className: Po.CheckboxLabel,
             label: (0, s.we)("#StoreAdmin_AntiCheat_UninstallCompletelyLabel"),
             checked: t,
             onChange: n,
           }),
           a.createElement(
             "div",
-            { className: wo.CheckboxDescription },
+            { className: Po.CheckboxDescription },
             (0, s.we)("#StoreAdmin_AntiCheat_UninstallCompletelyDescription"),
           ),
         );
       }
-      function Ro(e) {
+      function Lo(e) {
         const { selectedOption: t, kernelMode: n, uninstallsCompletely: r } = e,
           o = a.useMemo(
             () =>
@@ -12654,17 +12660,17 @@
           );
         return a.createElement(a.Fragment, null, ...o);
       }
-      var Lo = n(30041),
-        Bo = n(83882);
-      function Mo(e) {
+      var Bo = n(30041),
+        Mo = n(83882);
+      function xo(e) {
         const [t, n] = a.useState(!1);
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
-            Bo.mt,
+            Mo.mt,
             { active: t, onDismiss: () => n(!1) },
-            a.createElement(Oo, {
+            a.createElement(Fo, {
               originalItems: e.rgItems,
               onDismiss: () => n(!1),
               packageid: e.packageid,
@@ -12706,7 +12712,7 @@
                 ),
               e.rgItems.length > 0 &&
                 e.rgItems.map((t, n) =>
-                  a.createElement(xo, {
+                  a.createElement(Oo, {
                     key: n,
                     item: t,
                     language: e.language,
@@ -12732,7 +12738,7 @@
           ),
         );
       }
-      function xo(e) {
+      function Oo(e) {
         const { item: t, language: n } = e;
         let r = (0, s.we)("#StoreAdmin_NonAppContent_MissingLanguage");
         t.localized_title &&
@@ -12763,7 +12769,7 @@
           )
         );
       }
-      function Oo(e) {
+      function Fo(e) {
         const { originalItems: t, packageid: n, onDismiss: r } = e,
           o = [];
         for (const e of t)
@@ -12849,7 +12855,7 @@
         return "editor" === i
           ? a.createElement(
               "div",
-              { className: Lo.NonAppContentsEditor },
+              { className: Bo.NonAppContentsEditor },
               a.createElement(
                 "h1",
                 null,
@@ -12857,14 +12863,14 @@
               ),
               a.createElement(
                 "div",
-                { className: Lo.NonAppContentsEditorScrollArea },
+                { className: Bo.NonAppContentsEditorScrollArea },
                 l.items.length > 0 &&
                   a.createElement(Ht.A, {
                     onMove: l.moveItem,
-                    rowClassName: Lo.ItemEditorRow,
+                    rowClassName: Bo.ItemEditorRow,
                     items: l.items,
                     render: (e, t) =>
-                      a.createElement(Fo, { state: l.getState(t) }),
+                      a.createElement(Uo, { state: l.getState(t) }),
                     onDelete: l.deleteItem,
                   }),
                 0 === l.items.length &&
@@ -12883,7 +12889,7 @@
                   {
                     className: (0, u.A)(
                       "btn_green_white_innerfade",
-                      Lo.AddItemButton,
+                      Bo.AddItemButton,
                     ),
                     onClick: () => {
                       l.appendItem({
@@ -12898,7 +12904,7 @@
               ),
               a.createElement(
                 "div",
-                { className: Lo.EditorButtons },
+                { className: Bo.EditorButtons },
                 a.createElement(
                   "button",
                   {
@@ -12982,7 +12988,7 @@
                   ),
                 );
       }
-      function Fo(e) {
+      function Uo(e) {
         const { state: t } = e,
           { item: n, setItem: r, deleteItem: o } = t,
           [l, i] = a.useState("english"),
@@ -12996,12 +13002,12 @@
             (u = n.localized_description[l]),
           a.createElement(
             "div",
-            { className: Lo.ItemEditorRowContents },
+            { className: Bo.ItemEditorRowContents },
             a.createElement(
               "div",
-              { className: Lo.ItemEditorRowNameAndLanguageEditor },
+              { className: Bo.ItemEditorRowNameAndLanguageEditor },
               a.createElement("input", {
-                className: Lo.InputTitle,
+                className: Bo.InputTitle,
                 type: "text",
                 placeholder: (0, s.we)(
                   "#StoreAdmin_NonAppContent_Editor_TitlePlaceholder",
@@ -13026,8 +13032,8 @@
             ),
             a.createElement(
               "div",
-              { className: Lo.ItemEditorRowVisibleToggle },
-              a.createElement(ir._H, {
+              { className: Bo.ItemEditorRowVisibleToggle },
+              a.createElement(cr._H, {
                 value: "1" === n.visible,
                 onChange: (e) => {
                   (n.visible = e ? "1" : "0"), r(n);
@@ -13042,7 +13048,7 @@
             ),
             a.createElement(
               "div",
-              { className: Lo.ItemEditorRowDescriptionEditor },
+              { className: Bo.ItemEditorRowDescriptionEditor },
               a.createElement(
                 "p",
                 null,
@@ -13063,9 +13069,9 @@
           )
         );
       }
-      var Uo = n(94937),
-        Go = n.n(Uo);
-      function Ho(e) {
+      var Go = n(94937),
+        Ho = n.n(Go);
+      function Wo(e) {
         const { packageid: t } = e,
           [n, r] = a.useState(e.bShowCapsuleArt),
           [o, l] = a.useState(null),
@@ -13107,9 +13113,9 @@
           };
         return a.createElement(
           "div",
-          { className: Go().ToggleCapsuleArtContainer },
+          { className: Ho().ToggleCapsuleArtContainer },
           a.createElement(
-            Bo.mt,
+            Mo.mt,
             { active: null !== o, onDismiss: u },
             "edit" === o &&
               a.createElement(
@@ -13137,13 +13143,13 @@
                   }),
                   a.createElement(
                     "span",
-                    { className: Go().checkbox_label },
+                    { className: Ho().checkbox_label },
                     (0, s.we)("#StoreAdmin_ShowCapsuleArt_Label"),
                   ),
                 ),
                 a.createElement(
                   "div",
-                  { className: Go().ShowCapsuleArtButtonBar },
+                  { className: Ho().ShowCapsuleArtButtonBar },
                   a.createElement(
                     "button",
                     {
@@ -13241,10 +13247,10 @@
           ),
           a.createElement(
             "div",
-            { className: Go().ShowCapsuleArtCheckOption },
+            { className: Ho().ShowCapsuleArtCheckOption },
             a.createElement("input", {
               type: "checkbox",
-              className: Go().ShowCapsuleArtCheckbox,
+              className: Ho().ShowCapsuleArtCheckbox,
               checked: n,
               onChange: (e) => {
                 l("edit");
@@ -13259,7 +13265,7 @@
               },
               a.createElement(
                 "div",
-                { className: Go().ShowCapsuleArtLabel },
+                { className: Ho().ShowCapsuleArtLabel },
                 a.createElement(
                   "span",
                   null,
@@ -13276,10 +13282,10 @@
           ),
         );
       }
-      var Wo = n(65038),
-        Ko = n(64238),
-        Vo = n.n(Ko);
-      function $o(e, t, n) {
+      var Ko = n(65038),
+        Vo = n(64238),
+        $o = n.n(Vo);
+      function zo(e, t, n) {
         let a = !1;
         t.forEach((t) => {
           e.get(t) && (a = !0);
@@ -13292,7 +13298,7 @@
           a && r
         );
       }
-      function zo(e) {
+      function Yo(e) {
         const {
             rgCommonRedistAllPlatforms: t,
             rgCommonRedistWindows: n,
@@ -13340,10 +13346,10 @@
               [e, t]
             );
           }, [i]),
-          [p, _] = (0, a.useState)($o(c, u, m)),
+          [p, _] = (0, a.useState)(zo(c, u, m)),
           E = (e, t) => {
             const n = new Map(c);
-            n.set(e, t), d(n), _($o(n, u, m));
+            n.set(e, t), d(n), _(zo(n, u, m));
             const a = {};
             n.forEach((e, t) => {
               a[t] = e ? 1 : 0;
@@ -13356,14 +13362,14 @@
           "div",
           null,
           g &&
-            a.createElement(Xo, {
+            a.createElement(qo, {
               name: (0, s.we)("#StoreAdmin_Platform_AllPlatforms"),
               categories: l,
               checkedState: c,
               setChecked: E,
             }),
-          C && a.createElement(Yo, { checked: p }),
-          a.createElement(Xo, {
+          C && a.createElement(Xo, { checked: p }),
+          a.createElement(qo, {
             name: (0, s.we)("#StoreAdmin_Platform_Windows"),
             categories: i,
             checkedState: c,
@@ -13371,43 +13377,43 @@
           }),
         );
       }
-      function Yo(e) {
+      function Xo(e) {
         const { checked: t } = e;
         return a.createElement(
           "div",
-          { className: Wo.DXVCNotice },
+          { className: Ko.DXVCNotice },
           !t &&
             a.createElement(
               "div",
-              { className: Wo.DXVCNoticeIconUnchecked },
+              { className: Ko.DXVCNoticeIconUnchecked },
               a.createElement(c.Aj0, null),
             ),
           t &&
             a.createElement(
               "div",
-              { className: Wo.DXVCNoticeIconChecked },
+              { className: Ko.DXVCNoticeIconChecked },
               a.createElement(c.Jlk, null),
             ),
           a.createElement(
             "div",
             {
-              className: Vo()(
-                Wo.DXVCNoticeText,
-                t ? Wo.DXVCNoticeTextChecked : Wo.DXVCNoticeTextUnchecked,
+              className: $o()(
+                Ko.DXVCNoticeText,
+                t ? Ko.DXVCNoticeTextChecked : Ko.DXVCNoticeTextUnchecked,
               ),
             },
             (0, s.we)("#StoreAdmin_GameEngine_Requires_DirectX_VC"),
           ),
         );
       }
-      function Xo(e) {
+      function qo(e) {
         const { name: t, categories: n, checkedState: r, setChecked: o } = e,
           l = (0, a.useMemo)(() => {
             let e = [];
             return (
               n.forEach((t, n) =>
                 e.push(
-                  a.createElement(qo, {
+                  a.createElement(jo, {
                     name: n,
                     category: t,
                     checkedState: r,
@@ -13427,13 +13433,13 @@
           ...l,
         );
       }
-      function qo(e) {
+      function jo(e) {
         const { name: t, category: n, checkedState: r, setChecked: o } = e,
           l = Object.entries(n.components).map(([e, t]) =>
             a.createElement(
               "li",
               { key: t },
-              a.createElement(jo, {
+              a.createElement(Qo, {
                 name: e,
                 depotID: t,
                 checked: r.get(t),
@@ -13448,7 +13454,7 @@
           a.createElement("ul", null, ...l),
         );
       }
-      function jo(e) {
+      function Qo(e) {
         const { name: t, depotID: n, checked: r, setChecked: o } = e,
           l = (228987 == n || 228986 == n) && !r;
         return a.createElement(
@@ -13464,7 +13470,7 @@
           a.createElement("label", { htmlFor: n.toString() }, t),
         );
       }
-      function Qo(e) {
+      function Zo(e) {
         return a.createElement(
           Oe.dO,
           null,
@@ -13485,20 +13491,20 @@
                   "storeadmin-app-extraassetslist": (e) =>
                     a.createElement(ae.c$, { ...e }),
                   "storeadmin-season-pass-survey": (e) =>
-                    a.createElement(co, { ...e }),
+                    a.createElement(uo, { ...e }),
                   "storeadmin-creator-home-display-edit": (e) =>
                     a.createElement(zt, { ...e }),
                   "storeadmin-dlc-edit": (e) => a.createElement(fn, { ...e }),
                   "storeadmin-dlc-dependancy-edit": (e) =>
                     a.createElement(sn, { ...e }),
                   "storeadmin-social-media-edit": (e) =>
-                    a.createElement(_o, { ...e }),
+                    a.createElement(Eo, { ...e }),
                   "storeadmin-anticheat-edit": (e) =>
-                    a.createElement(Po, { ...e }),
+                    a.createElement(yo, { ...e }),
                   "storeadmin-pinnedbundles-edit": (e) =>
                     a.createElement(vn, { ...e }),
                   "storeadmin-purchaseoptionsorder-edit": (e) =>
-                    a.createElement(Cr, { ...e }),
+                    a.createElement(hr, { ...e }),
                 },
               }),
             ),
@@ -13512,7 +13518,7 @@
                     a.createElement(Le, { ...e }),
                   "storeadmin-applanding": (e) => a.createElement(et, { ...e }),
                   "storeadmin-editions-editor": (e) =>
-                    a.createElement(ko, { ...e }),
+                    a.createElement(Ao, { ...e }),
                 },
               }),
           }),
@@ -13522,7 +13528,7 @@
               a.createElement(Fe.X, {
                 config: {
                   "storeadmin-steamworksredist-edit": (e) =>
-                    a.createElement(zo, { ...e }),
+                    a.createElement(Yo, { ...e }),
                 },
               }),
           }),
@@ -13538,7 +13544,7 @@
           }),
           a.createElement(Oe.qh, {
             path: Ie.ReviewPriceProposals(),
-            component: lr,
+            component: sr,
           }),
           a.createElement(
             Oe.qh,
@@ -13546,9 +13552,9 @@
             a.createElement(Fe.X, {
               config: {
                 "packagelanding-nonappcontents-edit": (e) =>
-                  a.createElement(Mo, { ...e }),
+                  a.createElement(xo, { ...e }),
                 "packagelanding-showcapsuleart": (e) =>
-                  a.createElement(Ho, { ...e }),
+                  a.createElement(Wo, { ...e }),
               },
             }),
           ),
@@ -14254,6 +14260,7 @@
           tooltip: a,
           disabled: r,
           children: l,
+          className: i,
         } = e;
         return o.createElement(
           m.Gq,
@@ -14261,7 +14268,7 @@
           o.createElement(
             s.$n,
             {
-              className: (0, c.A)(u.CommandButton, n && u.Toggled),
+              className: (0, c.A)(u.CommandButton, n && u.Toggled, i),
               onMouseDown: (e) => {
                 e.preventDefault(), t();
               },

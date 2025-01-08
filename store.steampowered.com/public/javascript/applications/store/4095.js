@@ -141,6 +141,8 @@
         Button: "_2qgSQSN_hv-UncznBRb42v",
         Title: "_3iF42Uos8JELw32j386Kco",
         TimeFrame: "_3HLk01gOqM10DYThBCLuUx",
+        MaxSize: "_3REuR3WLDb6JDzZpI2VkUz",
+        SoldOut: "dndEdZn2hpJTIu4zpYoYG",
         Max: "_1-LTOHwZqSK67eUyq4qscx",
         InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         Day: "_2Zkbwdhs4WPVI1ZyUHtHUG",
@@ -20997,11 +20999,17 @@
                 (0, H.Vx)(s, o),
               ),
             ),
-            m.createElement(
-              "div",
-              { className: a.max },
-              (0, V.Yp)("#MeetSteam_Spot", d.toLocaleString()),
-            ),
+            d < 1
+              ? m.createElement(
+                  "div",
+                  { className: a.SoldOut },
+                  (0, V.we)("#MeetSteam_SoldOut"),
+                )
+              : m.createElement(
+                  "div",
+                  { className: a.MaxSize },
+                  (0, V.Yp)("#MeetSteam_Spot", d.toLocaleString()),
+                ),
           ),
         );
       }

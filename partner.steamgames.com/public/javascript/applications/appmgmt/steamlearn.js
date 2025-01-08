@@ -1074,6 +1074,16 @@
                     br: S.qM.readFloat,
                     bw: S.gp.writeFloat,
                   },
+                  other_project_id: {
+                    n: 18,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
+                  other_fetch_id: {
+                    n: 19,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
                 },
               }),
             M.sm_m
@@ -1931,6 +1941,16 @@
                   },
                   train_learning_rate: {
                     n: 8,
+                    br: S.qM.readFloat,
+                    bw: S.gp.writeFloat,
+                  },
+                  train_weight_decay: {
+                    n: 13,
+                    br: S.qM.readFloat,
+                    bw: S.gp.writeFloat,
+                  },
+                  train_clip_norm: {
+                    n: 14,
                     br: S.qM.readFloat,
                     bw: S.gp.writeFloat,
                   },

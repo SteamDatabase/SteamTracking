@@ -359,13 +359,13 @@
   position: relative;
 }
 .ProseMirror-hideselection *::selection {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .ProseMirror-hideselection *::-moz-selection {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .ProseMirror-hideselection {
-  caret-color: transparent;
+  caret-color: rgba(0, 0, 0, 0);
 }
 .ProseMirror [draggable][contenteditable="false"] {
   user-select: text;
@@ -522,7 +522,7 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 }
 ._2ODaX8lO7DKLKke76c2Wya,
 ._1I3OP84ayrCIMuBrCrkosi {
-  font-size: 11px;
+  font-size: 13px;
   font-family: Consolas, monospace;
   white-space: pre;
   white-space: pre-wrap;

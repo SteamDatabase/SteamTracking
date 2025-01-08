@@ -533,7 +533,7 @@
             i && !r && i.focus();
           }, [i, r]),
           n.useEffect(() => {
-            r && M.CommitChanges();
+            r && M && M.CommitChanges();
           }, [r, M]);
         const v = _(),
           C = g(t, v),

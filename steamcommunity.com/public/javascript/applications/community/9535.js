@@ -1670,6 +1670,7 @@
           tooltip: o,
           disabled: r,
           children: s,
+          className: c,
         } = e;
         return a.createElement(
           u.Gq,
@@ -1677,7 +1678,7 @@
           a.createElement(
             l.$n,
             {
-              className: (0, i.A)(m.CommandButton, n && m.Toggled),
+              className: (0, i.A)(m.CommandButton, n && m.Toggled, c),
               onMouseDown: (e) => {
                 e.preventDefault(), t();
               },

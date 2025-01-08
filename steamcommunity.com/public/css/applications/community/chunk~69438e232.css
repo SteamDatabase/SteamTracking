@@ -263,7 +263,7 @@
   right: 0;
   background: #2c3036;
   padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px #000000ab;
+  box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.6705882353);
   overflow-y: auto;
   overflow-x: hidden;
   white-space: nowrap;
@@ -425,7 +425,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   filter: blur(5px);
 }
 ._3DQEBNkYGY3hyLFAjhtq7V {
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   margin: -2px;
 }
 ._3DQEBNkYGY3hyLFAjhtq7V._2sUvh2ZpsDAw1xNqgRBELg {
@@ -442,12 +442,12 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
 ._25nbuIEmk-BBWxsSvWGG1n input:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
   outline: none;
 }
@@ -530,12 +530,12 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
 ._3WXTC22teDkm8BMc01ZTLA input[type="text"]:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
   outline: none;
 }
@@ -960,7 +960,7 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 32px #000;
   pointer-events: initial;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   font-weight: 300;
 }
 .BasicUI ._1KsYSVzmvIfRivBTcx-_GE {
@@ -1684,7 +1684,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 ._3n6v2rFCMX3yWMfZrlCn6g
   .khWz0kU5EooSG60KYdU1K
@@ -1725,7 +1725,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   padding: 0px;
   cursor: default;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 ._3n6v2rFCMX3yWMfZrlCn6g
   .khWz0kU5EooSG60KYdU1K
@@ -1798,7 +1798,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   ._1SKPLx2FBvP9iC-lJHTkKQ
   ._1V-8WYatw7PvjVj9hsAptM {
   margin-left: 0px;
-  background: #ffffff1a;
+  background: rgba(255, 255, 255, 0.1019607843);
   color: #fff;
   padding: 8px;
   font-size: 14px;

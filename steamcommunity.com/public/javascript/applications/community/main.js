@@ -7642,7 +7642,7 @@
         Ys: () => y,
         Zd: () => B,
         N4: () => w,
-        _5: () => W,
+        _5: () => L,
       });
       var i = r(80613),
         n = r(89068),
@@ -9712,7 +9712,90 @@
           return "CClientMetrics_ReportClientArgs_Notification";
         }
       }
-      var W;
+      class W extends d {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            W.prototype.glibc_version_major || n.Sg(W.M()),
+            d.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  glibc_version_major: {
+                    n: 1,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  glibc_version_minor: {
+                    n: 2,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  account_type: {
+                    n: 3,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  launcher_type: {
+                    n: 4,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  game_server_appid: {
+                    n: 5,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  process_name: {
+                    n: 6,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = n.w0(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ReportLinuxStats_Notification";
+        }
+      }
+      var L;
       !(function (e) {
         (e.ClientAppInterfaceStatsReport = function (e, t) {
           return e.SendNotification(
@@ -9791,6 +9874,13 @@
               { ePrivilege: 1 },
             );
           }),
+          (e.ReportLinuxStats = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ReportLinuxStats#1",
+              (0, s.I8)(W, t),
+              { ePrivilege: 1 },
+            );
+          }),
           (e.ReportClipShare = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportClipShare#1",
@@ -9812,7 +9902,7 @@
               { ePrivilege: 1 },
             );
           });
-      })(W || (W = {}));
+      })(L || (L = {}));
     },
     59411: (e, t, r) => {
       "use strict";
@@ -38240,13 +38330,15 @@
             showTitle: s,
             PageListItemComponent: Tt,
             PageListSeparatorComponent: Ft,
-            renderPageContent: (t, r, i) =>
-              n.createElement(Dt, {
-                pages: e.pages,
-                activePage: t,
-                refForPage: r,
-                PageComponent: i,
-              }),
+            renderPageContent:
+              e.renderPageContent ||
+              ((t, r, i) =>
+                n.createElement(Dt, {
+                  pages: e.pages,
+                  activePage: t,
+                  refForPage: r,
+                  PageComponent: i,
+                })),
           }),
         );
       });
@@ -40801,7 +40893,7 @@
                           xmlns: "http://www.w3.org/2000/svg",
                           viewBox: "0 0 279 190",
                           fill: "none",
-                          ...e,
+                          ...n,
                         },
                         i.createElement("path", {
                           fill: "currentColor",
@@ -48415,9 +48507,8 @@
         l4: () => y,
         lQ: () => c.lQ,
         oW: () => p,
-        pf: () => S,
+        pf: () => M,
         um: () => h,
-        vR: () => M,
         we: () => m,
       });
       var i = r(90626),
@@ -48550,11 +48641,11 @@
         }
       }
       function m(e, ...t) {
-        let r = S.LocalizeString(e);
+        let r = M.LocalizeString(e);
         return void 0 === r ? e : f(r, ...t);
       }
       function d(e, ...t) {
-        let r = S.LocalizeString(e);
+        let r = M.LocalizeString(e);
         if (void 0 === r) return e;
         let n,
           s = [],
@@ -48568,7 +48659,7 @@
         return s.push(r.substr(o)), i.createElement(i.Fragment, null, ...s);
       }
       function p(e, ...t) {
-        let r = S.LocalizeIfToken(e);
+        let r = M.LocalizeIfToken(e);
         return void 0 === r ? e : g(r, ...t);
       }
       function h(e, t, ...r) {
@@ -48706,18 +48797,8 @@
         }
         return t;
       }
-      function M(e, t) {
-        const r = [];
-        return (
-          e.forEach((e, i, n) => {
-            const s = t(e, i, n);
-            r.push(s);
-          }),
-          r
-        );
-      }
-      const S = new u();
-      window.LocalizationManager = S;
+      const M = new u();
+      window.LocalizationManager = M;
     },
     91675: (e, t, r) => {
       "use strict";

@@ -973,7 +973,7 @@
     },
     65213: (e, t, a) => {
       "use strict";
-      a.d(t, { A: () => f });
+      a.d(t, { A: () => A });
       var s = a(562),
         n = a(31376),
         r = a(90626),
@@ -986,15 +986,16 @@
         p = a(56654),
         d = a(12155),
         g = a(22797),
-        h = a(61859),
-        _ = a(73745),
-        S = a(30470),
-        y = a(74810),
-        E = a(4940),
-        C = a.n(E),
-        T = a(92237),
-        b = a(9161);
-      function f() {
+        h = a(9161),
+        _ = a(61859),
+        S = a(73745),
+        y = a(30470),
+        E = a(74810),
+        C = a(92237),
+        T = a(4940),
+        b = a.n(T),
+        f = a(95034);
+      function A() {
         const [e, t] = r.useState(),
           [a, n] = r.useState(!1),
           o = (0, s.XL)(),
@@ -1016,7 +1017,7 @@
                   { className: m().PageTitle },
                   "Content Hub Categories",
                 ),
-                r.createElement("hr", { className: C().TitleHR }),
+                r.createElement("hr", { className: b().TitleHR }),
                 r.createElement(
                   "p",
                   null,
@@ -1024,7 +1025,7 @@
                   r.createElement(
                     "a",
                     {
-                      href: `${S.TS.PARTNER_BASE_URL}promotion/planning/themes`,
+                      href: `${y.TS.PARTNER_BASE_URL}promotion/planning/themes`,
                     },
                     "here.",
                   ),
@@ -1045,19 +1046,19 @@
                 h &&
                   r.createElement(
                     "div",
-                    { className: C().UnpublishedChangesNotice },
+                    { className: b().UnpublishedChangesNotice },
                     "You have unpublished changes. Click Publish below to publish and make them available to users.",
                   ),
-                r.createElement(A, { categories: e, onUpdate: l }),
+                r.createElement(v, { categories: e, onUpdate: l }),
                 r.createElement(
                   "div",
-                  { className: C().ActionButtonCtn },
+                  { className: b().ActionButtonCtn },
                   r.createElement(
                     i.$n,
                     {
                       onClick: () =>
                         (0, c.pg)(
-                          r.createElement(H, {
+                          r.createElement(R, {
                             onImport: (e) => {
                               t(e), p(!0);
                             },
@@ -1072,7 +1073,7 @@
                     {
                       onClick: () =>
                         (0, c.pg)(
-                          r.createElement(D, {
+                          r.createElement(B, {
                             categories: e,
                             onSave: () => {
                               p(!1), _(!0);
@@ -1095,7 +1096,7 @@
                     {
                       onClick: () =>
                         (0, c.pg)(
-                          r.createElement(L, { onPublish: () => _(!1) }),
+                          r.createElement(I, { onPublish: () => _(!1) }),
                           window,
                         ),
                     },
@@ -1106,13 +1107,14 @@
             : r.createElement(g.t, { size: "medium", position: "center" })
         );
       }
-      function A(e) {
+      function v(e) {
         const { categories: t, onUpdate: a } = e,
-          { rgTags: n, rgCategories: o } = (0, s.DT)();
+          { rgTags: n, rgCategories: o } = (0, s.DT)(),
+          [l] = (0, f.QD)("edit");
         if (!t) return r.createElement("div", null, "No categories defined.");
         return r.createElement(
           "div",
-          { className: C().CategoriesList },
+          { className: b().CategoriesList },
           r.createElement(p.A, {
             bDisabled: !0,
             items: t,
@@ -1120,70 +1122,13 @@
               t.splice(e, 1), a();
             },
             render: (e) =>
-              r.createElement(
-                "div",
-                { className: C().CategoryCtn },
-                r.createElement(
-                  "div",
-                  { className: C().Category },
-                  r.createElement(
-                    "a",
-                    {
-                      onClick: (t) =>
-                        ((e, t) => {
-                          e.preventDefault(),
-                            e.stopPropagation(),
-                            (0, c.pg)(
-                              r.createElement(v, { category: t, onUpdate: a }),
-                              window,
-                            );
-                        })(t, e),
-                    },
-                    r.createElement(
-                      "b",
-                      null,
-                      e.loc_token ? (0, h.we)(e.loc_token) : "",
-                    ),
-                    e.loc_token ? " (" + e.handle + ")" : e.handle,
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: C().CategoryType },
-                    "tagids" === e.type
-                      ? "Tags"
-                      : "category" === e.type
-                        ? "Category"
-                        : "contenthub" === e.type
-                          ? "Hardcoded Filter"
-                          : "Special",
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: C().ExcludedFromSearch },
-                    !0 === e.exclude_from_search ? "Excluded from search" : "",
-                  ),
-                  r.createElement(
-                    "div",
-                    { className: C().ReplacesTags },
-                    ((e, t) => {
-                      const a = t
-                        ?.map((t) => {
-                          const a = e?.find((e) => e.tagid === t.id);
-                          return (
-                            (a?.name || "Unknown tag") +
-                            " (" +
-                            String(t.id) +
-                            ")"
-                          );
-                        })
-                        .join(", ");
-                      return a
-                        ? r.createElement("span", null, "Replaces tags: " + a)
-                        : r.createElement("span", null);
-                    })(n, e.replaces_tags),
-                  ),
-                ),
-              ),
+              r.createElement(w, {
+                key: e.id,
+                item: e,
+                rgTags: n,
+                onUpdate: a,
+                bOpenEditor: l?.toLowerCase() == e.handle,
+              }),
           }),
           r.createElement(
             i.$n,
@@ -1199,9 +1144,78 @@
           ),
         );
       }
-      function v(e) {
+      function G(e) {
+        const { rgTags: t, replacesTags: a } = e,
+          s = (0, r.useMemo)(
+            () =>
+              a
+                ?.map((e) => {
+                  const a = t?.find((t) => t.tagid === e.id);
+                  return (a?.name || "Unknown tag") + " (" + String(e.id) + ")";
+                })
+                .join(", "),
+            [a, t],
+          );
+        return s
+          ? r.createElement("span", null, "Replaces tags: " + s)
+          : r.createElement("span", null);
+      }
+      function w(e) {
+        const { item: t, rgTags: a, onUpdate: s, bOpenEditor: n } = e,
+          [o, l, m] = (0, S.uD)(n);
+        return r.createElement(
+          "div",
+          { className: b().CategoryCtn },
+          r.createElement(
+            "div",
+            { className: b().Category },
+            r.createElement(
+              "a",
+              {
+                onClick: (e) =>
+                  ((e, t) => {
+                    e.preventDefault(), e.stopPropagation(), l();
+                  })(e),
+              },
+              r.createElement(
+                "b",
+                null,
+                t.loc_token ? (0, _.we)(t.loc_token) : "",
+              ),
+              t.loc_token ? " (" + t.handle + ")" : t.handle,
+            ),
+            r.createElement(
+              "div",
+              { className: b().CategoryType },
+              "tagids" === t.type
+                ? "Tags"
+                : "category" === t.type
+                  ? "Category"
+                  : "contenthub" === t.type
+                    ? "Hardcoded Filter"
+                    : "Special",
+            ),
+            r.createElement(
+              "div",
+              { className: b().ExcludedFromSearch },
+              !0 === t.exclude_from_search ? "Excluded from search" : "",
+            ),
+            r.createElement(
+              "div",
+              { className: b().ReplacesTags },
+              r.createElement(G, { rgTags: a, replacesTags: t.replaces_tags }),
+            ),
+            r.createElement(
+              u.EN,
+              { active: o },
+              r.createElement(N, { category: t, onUpdate: s, closeModal: m }),
+            ),
+          ),
+        );
+      }
+      function N(e) {
         const { category: t, onUpdate: a, closeModal: s } = e,
-          n = (0, _.CH)();
+          n = (0, S.CH)();
         return r.createElement(
           u.eV,
           { bAllowFullSize: !0, onCancel: s, closeModal: s },
@@ -1211,7 +1225,7 @@
             null,
             r.createElement(
               "div",
-              { className: C().CategoryEditor },
+              { className: b().CategoryEditor },
               r.createElement(i.pd, {
                 label: "Handle",
                 tooltip: "This forms the end of the URL. It must be unique",
@@ -1222,7 +1236,7 @@
               }),
               r.createElement(
                 "div",
-                { className: C().CategoryCtn },
+                { className: b().CategoryCtn },
                 r.createElement(i.pd, {
                   label: "Loc Token",
                   tooltip:
@@ -1232,7 +1246,7 @@
                     (t.loc_token = e.target.value), n();
                   },
                 }),
-                t.loc_token ? (0, h.we)(t.loc_token) : "",
+                t.loc_token ? (0, _.we)(t.loc_token) : "",
               ),
               r.createElement(i.Yh, {
                 label: "Use As A Heading ",
@@ -1274,7 +1288,7 @@
               ("tagids" === t.type ||
                 "category" === t.type ||
                 "contenthub" == t.type) &&
-                r.createElement(G, { category: t }),
+                r.createElement(k, { category: t }),
             ),
           ),
           r.createElement(
@@ -1292,7 +1306,7 @@
           ),
         );
       }
-      function G(e) {
+      function k(e) {
         const { category: t } = e,
           [a, s] = (0, r.useState)(!1),
           [n, o] = (0, r.useState)(0);
@@ -1302,21 +1316,21 @@
           ("tagids" == t.type || "category" == t.type) &&
             r.createElement(
               "div",
-              { className: C().CategoryCtn },
+              { className: b().CategoryCtn },
               r.createElement(
                 "div",
-                { className: C().Category },
-                r.createElement(k, {
+                { className: b().Category },
+                r.createElement(L, {
                   category: t,
                   list: "must",
                   title: "Must have all of these tags",
                 }),
-                r.createElement(k, {
+                r.createElement(L, {
                   category: t,
                   list: "any",
                   title: "Must have one of these tags",
                 }),
-                r.createElement(k, {
+                r.createElement(L, {
                   category: t,
                   list: "mustnot",
                   title: "Must not have any of these tags",
@@ -1328,8 +1342,8 @@
             "contenthub" == t.type) &&
             r.createElement(
               "div",
-              { className: C().CategoryCtn },
-              r.createElement(k, {
+              { className: b().CategoryCtn },
+              r.createElement(L, {
                 category: t,
                 list: "replaces_tags",
                 title:
@@ -1350,7 +1364,7 @@
                   { onClick: () => o(n + 1) },
                   "Refresh Stats",
                 ),
-                r.createElement(w, { category: t }),
+                r.createElement(H, { category: t }),
               )
             : r.createElement(i.Yh, {
                 checked: a,
@@ -1360,16 +1374,16 @@
               }),
         );
       }
-      function w(e) {
+      function H(e) {
         const { category: t } = e,
           a = (0, n.p$)(t.must, t.any, t.mustnot);
         if (!a)
           return r.createElement(g.t, {
-            string: (0, h.we)("#Loading"),
+            string: (0, _.we)("#Loading"),
             position: "center",
             size: "medium",
           });
-        const s = a.total_games > y.iT && a.total_games <= y.hp;
+        const s = a.total_games > E.iT && a.total_games <= E.hp;
         return r.createElement(
           r.Fragment,
           null,
@@ -1383,7 +1397,7 @@
                     e.push(["" + t.appid, "" + t.long_term_sale_rank]);
                   });
                 const s = (t.handle || "top100").replace(" ", "_") + ".csv";
-                b.g.WriteCSVToFile(e, s);
+                h.g.WriteCSVToFile(e, s);
               },
             },
             "Download Top 100 Games",
@@ -1398,32 +1412,32 @@
                     e.push(["" + t]);
                   });
                 const s = (t.handle || "allgames").replace(" ", "_") + ".csv";
-                b.g.WriteCSVToFile(e, s);
+                h.g.WriteCSVToFile(e, s);
               },
             },
             "Download All Games",
           ),
           r.createElement(
             "div",
-            { className: T.ThemeRow },
+            { className: C.ThemeRow },
             r.createElement(
               "div",
-              { className: T.ThemeDefinitionCtn },
+              { className: C.ThemeDefinitionCtn },
               "Summary: ",
-              r.createElement(y.KU, { nTotalGames: a.total_games }),
-              Boolean(s) && r.createElement(N, { category: t }),
+              r.createElement(E.KU, { nTotalGames: a.total_games }),
+              Boolean(s) && r.createElement(D, { category: t }),
             ),
             r.createElement(
               "div",
-              { className: T.TopGamesCtn },
+              { className: C.TopGamesCtn },
               r.createElement("div", null, "Top 10 Games non-F2P:"),
               r.createElement(
                 "div",
-                { className: T.GamesColumn },
+                { className: C.GamesColumn },
                 a.top_games
                   ?.slice(0, 10)
                   .map((e) =>
-                    r.createElement(y.W7, {
+                    r.createElement(E.W7, {
                       key: e.appid,
                       info: e,
                       category: t,
@@ -1435,16 +1449,16 @@
           ),
         );
       }
-      function N(e) {
+      function D(e) {
         const { category: t } = e,
           a = (0, n.eX)(t.must, t.any, t.mustnot),
           s = (0, n.mg)(t.must, t.any, t.mustnot);
-        return r.createElement(y.ny, { saleSummary: a, topAppSummary: s });
+        return r.createElement(E.ny, { saleSummary: a, topAppSummary: s });
       }
-      function k(e) {
+      function L(e) {
         const { category: t, list: a, title: n } = e,
           { rgTags: l, rgCategories: m } = (0, s.DT)(),
-          u = (0, _.CH)(),
+          u = (0, S.CH)(),
           c =
             l?.map((e) => ({
               value: e.tagid,
@@ -1457,7 +1471,7 @@
             })) || [];
         return r.createElement(
           "div",
-          { className: C().TagOrCategoryList },
+          { className: b().TagOrCategoryList },
           r.createElement(i.JU, null, n),
           r.createElement(p.A, {
             bDisabled: !0,
@@ -1469,7 +1483,7 @@
               "tagids" === t.type || "replaces_tags" === a
                 ? r.createElement(
                     "div",
-                    { className: C().IDSelector },
+                    { className: b().IDSelector },
                     r.createElement(i.pd, {
                       value: e.id,
                       onChange: (t) => {
@@ -1490,7 +1504,7 @@
                 : "category" === t.type
                   ? r.createElement(
                       "div",
-                      { className: C().IDSelector },
+                      { className: b().IDSelector },
                       r.createElement(o.Ay, {
                         className: "react-select-container",
                         classNamePrefix: "react-select",
@@ -1515,7 +1529,7 @@
           ),
         );
       }
-      function H(e) {
+      function R(e) {
         const { onImport: t, closeModal: a } = e;
         return (
           r.useEffect(() => {
@@ -1538,7 +1552,7 @@
           )
         );
       }
-      function D(e) {
+      function B(e) {
         const { categories: t, onSave: a, closeModal: n } = e,
           [o, l] = r.useState();
         return (
@@ -1562,7 +1576,7 @@
           )
         );
       }
-      function L(e) {
+      function I(e) {
         const { onPublish: t, closeModal: a } = e,
           [n, o] = r.useState(!1),
           [l, m] = r.useState();

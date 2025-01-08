@@ -141,6 +141,8 @@
         Button: "_2qgSQSN_hv-UncznBRb42v",
         Title: "_3iF42Uos8JELw32j386Kco",
         TimeFrame: "_3HLk01gOqM10DYThBCLuUx",
+        MaxSize: "_3REuR3WLDb6JDzZpI2VkUz",
+        SoldOut: "dndEdZn2hpJTIu4zpYoYG",
         Max: "_1-LTOHwZqSK67eUyq4qscx",
         InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         Day: "_2Zkbwdhs4WPVI1ZyUHtHUG",
@@ -11784,13 +11786,15 @@
         return t;
       }
       class h {
-        constructor(e, t) {
+        constructor(e, t, r) {
           (this.m_filesToUpload = o.sH.array()),
             (this.m_strUploadPath = null),
             (this.m_fnUploadSuccessCallback = null),
+            (this.m_bSynchronousUpload = !1),
             (0, o.Gn)(this),
             (this.m_strUploadPath = e),
-            (this.m_fnUploadSuccessCallback = t);
+            (this.m_fnUploadSuccessCallback = t),
+            (this.m_bSynchronousUpload = r);
         }
         GetFnOnUploadSuccess() {
           return this.m_fnUploadSuccessCallback;
@@ -11894,21 +11898,24 @@
         }
         async UploadAllImages(e, t, r, i, a) {
           const n = {};
+          let s = {};
           for (const e of this.m_filesToUpload)
             if ("pending" === e.status) {
               const t = e.IsValidAssetType(r, i, a);
               if (!t.error && !t.needsCrop) {
                 e.status = "uploading";
-                n[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
+                const r = `${e.uploadTime}/${e.file.name}`;
+                (n[r] = this.UploadFile(
                   e.file,
                   e.file.name,
                   e.language,
                   t.match,
-                );
+                )),
+                  this.m_bSynchronousUpload && (s[r] = await n[r]);
               }
             }
-          const s = await (0, m.RR)(n);
           return (
+            this.m_bSynchronousUpload || (s = await (0, m.RR)(n)),
             Object.keys(s).forEach((r) => {
               const i = s[r],
                 a = this.m_filesToUpload.find(
@@ -12224,7 +12231,7 @@
           );
         }
         GetRecommendedTags() {
-          return this.m_setRecommendedTags;
+          return this.m_rgRecommendedTags;
         }
         BIsAjaxInFlight() {
           return this.m_bAjaxInFlight;
@@ -12336,8 +12343,8 @@
                       e.data.rgSecondaryLanguages,
                     )),
                   e.data.rgRecommendedTags &&
-                    (this.m_setRecommendedTags = new Set(
-                      e.data.rgRecommendedTags.map((e) => e.tagid),
+                    (this.m_rgRecommendedTags = e.data.rgRecommendedTags.map(
+                      (e) => e.tagid,
                     )),
                   e.data.rgAppsInCart &&
                     (this.m_setAppsInCart = new Set(e.data.rgAppsInCart)),
@@ -12563,7 +12570,7 @@
             (this.m_bAllowAppImpressions = !1),
             (this.m_primaryLanguage = -1),
             (this.m_secondaryLanguages = new Set()),
-            (this.m_setRecommendedTags = new Set()),
+            (this.m_rgRecommendedTags = []),
             (this.m_mapRecommendingCuratorsForApp = new Map()),
             (this.m_setPackagesInCart = new Set()),
             (this.m_setAppsInCart = new Set()),
@@ -12615,7 +12622,7 @@
         ),
         (0, a.Cg)([o.sH], g.prototype, "m_primaryLanguage", void 0),
         (0, a.Cg)([o.sH], g.prototype, "m_secondaryLanguages", void 0),
-        (0, a.Cg)([o.sH], g.prototype, "m_setRecommendedTags", void 0),
+        (0, a.Cg)([o.sH], g.prototype, "m_rgRecommendedTags", void 0),
         (0, a.Cg)(
           [o.sH],
           g.prototype,
@@ -22910,11 +22917,17 @@
                 (0, Fe.Vx)(s, o),
               ),
             ),
-            c.createElement(
-              "div",
-              { className: i.max },
-              (0, ze.Yp)("#MeetSteam_Spot", m.toLocaleString()),
-            ),
+            m < 1
+              ? c.createElement(
+                  "div",
+                  { className: i.SoldOut },
+                  (0, ze.we)("#MeetSteam_SoldOut"),
+                )
+              : c.createElement(
+                  "div",
+                  { className: i.MaxSize },
+                  (0, ze.Yp)("#MeetSteam_Spot", m.toLocaleString()),
+                ),
           ),
         );
       }
@@ -24456,11 +24469,6 @@
               "div",
               { className: U().ReviewScoreLabel },
               s.review_score_label,
-            ),
-            n.createElement(
-              "div",
-              { className: U().ReviewScoreDivider },
-              " | ",
             ),
             n.createElement(
               "div",
@@ -29065,16 +29073,17 @@
       r.d(t, { E: () => a });
       var i = r(90626);
       r(13871);
-      function a(e, t) {
+      function a(e, t, r, a) {
         i.useEffect(() => {
-          const r = (r) => {
-            r.key === e && t(r);
+          const i = (i) => {
+            i.key === e &&
+              (t(i), r && i.preventDefault(), a && i.stopPropagation());
           };
           return (
-            document.addEventListener("keydown", r),
-            () => document.removeEventListener("keydown", r)
+            document.addEventListener("keydown", i),
+            () => document.removeEventListener("keydown", i)
           );
-        }, [e, t]);
+        }, [e, t, r, a]);
       }
     },
     10472: (e, t, r) => {
