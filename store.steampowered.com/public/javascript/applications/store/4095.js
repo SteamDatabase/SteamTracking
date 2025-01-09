@@ -19621,7 +19621,7 @@
     },
     99163: (e, t, r) => {
       "use strict";
-      r.d(t, { ac: () => te, H7: () => ee });
+      r.d(t, { ac: () => re, H7: () => te });
       var a = r(34542),
         i = r(22837),
         n = r(81393),
@@ -20441,7 +20441,7 @@
                   .map((e) => e.toObject())
               : [];
           },
-          enabled: ee() == t,
+          enabled: te() == t,
           staleTime: 10 * R.Kp.PerMinute,
         });
       }
@@ -20492,7 +20492,7 @@
                   ? JSON.parse(r.Body().jsondata())
                   : {};
               },
-              enabled: ee() == S,
+              enabled: te() == S,
             }));
         var S, y, w;
         const {
@@ -20720,7 +20720,7 @@
         }
         async Load() {
           if (this.m_isLoading) return;
-          if (this.m_clanAccountID != ee()) return;
+          if (this.m_clanAccountID != te()) return;
           const e = u.w.Init(b),
             t = W.b.InitFromAccountID(this.m_userAccountID);
           e.Body().set_clan_event_gid(this.m_gidClanEvent),
@@ -20829,24 +20829,25 @@
         (0, K.Cg)([Z.XI.bound], Y.prototype, "SetSelection", null);
       var Q = r(60746),
         J = r(82477),
-        X = r(738);
-      const ee = () => (2 === O.TS.EUNIVERSE ? 2581 : 45267781);
-      function te(e) {
+        X = r(738),
+        ee = r(87937);
+      const te = () => (2 === O.TS.EUNIVERSE ? 2581 : 45267781);
+      function re(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           a = (0, c.j$)(e.args, "group_id"),
           i = Number.parseInt(a),
-          n = (0, l.q3)(() => le(t, i));
+          n = (0, l.q3)(() => me(t, i));
         return n
-          ? t.clanSteamID.GetAccountID() != ee()
+          ? t.clanSteamID.GetAccountID() != te()
             ? r
               ? m.createElement("div", null, "Only support on special group")
               : null
             : m.createElement(
                 m.Fragment,
                 null,
-                m.createElement(ae, { groupData: n, eventModel: t }),
-                m.createElement(oe, { eventModel: t }),
+                m.createElement(ie, { groupData: n, eventModel: t }),
+                m.createElement(le, { eventModel: t }),
               )
           : r
             ? m.createElement(
@@ -20857,7 +20858,7 @@
               )
             : null;
       }
-      function re() {
+      function ae() {
         const e = (0, z.Tc)("promotion_operation_token", "application_config");
         (0, n.w)(Boolean(e), "require promotion_operation_token");
         const [t] = m.useState(() =>
@@ -20865,13 +20866,13 @@
         );
         return t;
       }
-      function ae(e) {
+      function ie(e) {
         const { groupData: t, eventModel: r } = e,
-          i = re(),
+          i = ae(),
           n = $(),
           s = k(i, r.clanSteamID.GetAccountID(), r.GID),
           c = t?.sessions,
-          d = me(),
+          d = ce(),
           u = (0, l.q3)(() =>
             c?.reduce(
               (e, r) =>
@@ -20886,7 +20887,7 @@
             string: (0, V.we)("#Loading"),
           });
         return m.createElement(
-          ie,
+          ne,
           { groupData: t },
           c?.map((e, r) => {
             const i = s.data.find(
@@ -20900,7 +20901,7 @@
               m.createElement(
                 "div",
                 { className: a.SessionColumnCtn },
-                m.createElement(ne, {
+                m.createElement(se, {
                   sessionData: e,
                   onClick: () =>
                     d(() =>
@@ -20913,12 +20914,12 @@
                   eRegistrationStatus: n,
                 }),
               ),
-              o && m.createElement(se, null),
+              o && m.createElement(oe, null),
             );
           }),
         );
       }
-      function ie(e) {
+      function ne(e) {
         const { groupData: t, children: r } = e,
           n = (0, i.sf)(O.TS.LANGUAGE),
           s = V.NT.GetWithFallback(t?.localized_session_title, n),
@@ -20935,7 +20936,7 @@
             )
           : null;
       }
-      function ne(e) {
+      function se(e) {
         const {
             sessionData: t,
             onClick: r,
@@ -20947,8 +20948,18 @@
             t.rtime_end,
             t.max_capacity,
           ]),
-          d = Math.max(0, c - (i || 0)),
-          u = (0 === n && d > 0) || 1 === n || 2 === n || 3 === n;
+          d = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          u =
+            "in_person" === t.location_type
+              ? (t.in_person_time_zone ?? "US/Pacific")
+              : d,
+          p = ee.unix(s),
+          _ = ee.unix(s).tz(u).utcOffset() - p.utcOffset(),
+          h = ee.unix(o),
+          g = ee.unix(o).tz(u),
+          f = g.utcOffset() - h.utcOffset(),
+          S = Math.max(0, c - (i || 0)),
+          y = (0 === n && S > 0) || 1 === n || 2 === n || 3 === n;
         return m.createElement(
           m.Fragment,
           null,
@@ -20987,19 +20998,21 @@
               ),
             m.createElement(
               "button",
-              { className: a.Button, disabled: !u, onClick: r },
+              { className: a.Button, disabled: !y, onClick: r },
               m.createElement(
                 "div",
                 { className: a.Title },
-                (0, H.$w)(new Date(1e3 * s)),
+                (0, H.$w)(new Date(1e3 * (s + 60 * _))),
               ),
               m.createElement(
                 "div",
                 { className: a.TimeFrame },
-                (0, H.Vx)(s, o),
+                (0, H.Vx)(s + 60 * _, o + 60 * f, !0),
+                " ",
+                g.format("z"),
               ),
             ),
-            d < 1
+            S < 1
               ? m.createElement(
                   "div",
                   { className: a.SoldOut },
@@ -21008,19 +21021,19 @@
               : m.createElement(
                   "div",
                   { className: a.MaxSize },
-                  (0, V.Yp)("#MeetSteam_Spot", d.toLocaleString()),
+                  (0, V.Yp)("#MeetSteam_Spot", S.toLocaleString()),
                 ),
           ),
         );
       }
-      function se() {
+      function oe() {
         return m.createElement(
           "div",
           { className: a.InstanceDivider },
           (0, V.we)("#MeetSteam_Or"),
         );
       }
-      function oe(e) {
+      function le(e) {
         const { eventModel: t } = e,
           r = "complete-registration-marker",
           { refIsLast: i, bIsLast: n } = (function (e) {
@@ -21034,7 +21047,7 @@
               { refIsLast: a, bIsLast: t }
             );
           })(r),
-          c = re(),
+          c = ae(),
           [d, u] = m.useState(!1),
           [p, _] = m.useState(!1);
         !(function (e, t, r, a) {
@@ -21046,7 +21059,7 @@
         })(c, o.iA.accountid, t.clanSteamID.GetAccountID(), t.GID);
         const h = k(c, t.clanSteamID.GetAccountID(), t.GID),
           [g, f, S] = (0, s.uD)(),
-          y = me(),
+          y = ce(),
           w = $(),
           b = d || w,
           C = (0, l.q3)(() => Y.Get().BHaveSelectionsChanged()),
@@ -21055,7 +21068,7 @@
             Y.Get()
               .GetSelectedGroups()
               .reduce((e, r) => {
-                const a = le(t, r),
+                const a = me(t, r),
                   i = Y.Get().GetSelection(a.group_id),
                   n = a.sessions?.find((e) => e.id == i)?.max_per_team ?? 1;
                 return Math.max(e, n);
@@ -21132,11 +21145,11 @@
           )
         );
       }
-      function le(e, t) {
+      function me(e, t) {
         const r = e?.jsondata?.meet_steam_groups || [];
         return r?.find((e) => e.group_id == t);
       }
-      function me() {
+      function ce() {
         return Q.KN.Get().BIsUserLoggedIn()
           ? (e) => e()
           : () =>

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9444210";
+var CLSTAMP = "9447321";
 (() => {
   var e,
     t,
@@ -34,7 +34,7 @@ var CLSTAMP = "9444210";
           "./friendsui_russian.json": [30757, 2945],
           "./friendsui_sc_schinese.json": [69423, 43],
           "./friendsui_schinese.json": [5184, 9746],
-          "./friendsui_spanish.json": [64319, 9808],
+          "./friendsui_spanish.json": [86700, 9808],
           "./friendsui_swedish.json": [41005, 6609],
           "./friendsui_tchinese.json": [50195, 8766],
           "./friendsui_thai.json": [47194, 6888],
@@ -80,7 +80,7 @@ var CLSTAMP = "9444210";
           "./friendsui_russian.json": [30757, 2945],
           "./friendsui_sc_schinese.json": [69423, 43],
           "./friendsui_schinese.json": [5184, 9746],
-          "./friendsui_spanish.json": [64319, 9808],
+          "./friendsui_spanish.json": [86700, 9808],
           "./friendsui_swedish.json": [41005, 6609],
           "./friendsui_tchinese.json": [50195, 8766],
           "./friendsui_thai.json": [47194, 6888],
@@ -100,9 +100,9 @@ var CLSTAMP = "9444210";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      90424: (e, t, n) => {
+      17315: (e, t, n) => {
         "use strict";
-        n(9916);
+        n(75905);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -1684,7 +1684,7 @@ var CLSTAMP = "9444210";
               })();
           });
       },
-      9916: (e, t, n) => {
+      75905: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1976,7 +1976,7 @@ var CLSTAMP = "9444210";
         9152: "14046509864f365e35e2",
         9712: "fad536d794afa850c420",
         9746: "e05951d8b37cd69db872",
-        9808: "72457ea310f8930a39f1",
+        9808: "47d563fed12f1789dffb",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2113,6 +2113,6 @@ var CLSTAMP = "9444210";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(90424));
+  var c = o.O(void 0, [1068], () => o(17315));
   c = o.O(c);
 })();

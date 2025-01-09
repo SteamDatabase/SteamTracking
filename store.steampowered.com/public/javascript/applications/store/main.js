@@ -51422,14 +51422,15 @@
         };
         return n.toLocaleDateString(s.pf.GetPreferredLocales(), a);
       }
-      function u(e, t) {
-        let r = new Date(1e3 * e),
-          i = new Date(1e3 * t);
-        return r.getFullYear() != i.getFullYear() ||
-          r.getMonth() != i.getMonth() ||
-          r.getDate() != i.getDate()
-          ? m(e, t)
-          : h(e) + " - " + h(t);
+      function u(e, t, r = !1) {
+        let i = new Date(1e3 * e),
+          n = new Date(1e3 * t);
+        return r ||
+          (i.getFullYear() == n.getFullYear() &&
+            i.getMonth() == n.getMonth() &&
+            i.getDate() == n.getDate())
+          ? h(e) + " - " + h(t)
+          : m(e, t);
       }
       function m(e, t) {
         let r = new Date(1e3 * e),
