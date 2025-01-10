@@ -2840,7 +2840,7 @@
           l =
             t.m_plan.start_date &&
             s.format(1e3 * (t.m_plan.start_date - _e.lF)),
-          o = !!t.m_assetInput.submitting_accountid;
+          o = t.m_assetInput.submitting_rtime > 0;
         return n.createElement(
           ie.FV,
           null,
@@ -3833,41 +3833,43 @@
             ? _e.Hm.GetMarketingMesssageEditURL(t.gid)
             : void 0,
           E = Ft();
-        let D,
-          h,
-          y = (0, i.we)(
-            "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady",
-          );
+        let D, h, y, f;
         s && t.start_date > E.getTime() / 1e3
-          ? ((y = (0, i.we)(
+          ? ((h = (0, i.we)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusVisibleOn",
               (0, i.$z)(t.start_date),
             )),
-            (h = (0, i.we)(
+            (f = (0, i.we)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
             )))
           : s
-            ? ((y = (0, i.we)(
+            ? ((h = (0, i.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusPublic",
               )),
-              (h = (0, i.we)(
+              (f = (0, i.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
               )))
             : l
               ? ((D = (0, i.we)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusReadyToPublish",
                 )),
-                (y = (0, i.we)(
+                (h = (0, i.we)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusApproved",
                 )),
-                (h = (0, i.we)(
+                (f = (0, i.we)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_PreviewPublishButton",
                 )))
-              : (u || g) &&
-                (y = (0, i.we)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview",
-                ));
-        const f = (function (e) {
+              : u || g
+                ? (h = (0, i.we)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview",
+                  ))
+                : ((h = (0, i.we)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady",
+                  )),
+                  (y = (0, i.we)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady_ttip",
+                  )));
+        const T = (function (e) {
           const t =
               e.template_vars_json?.length > 0
                 ? JSON.parse(e.template_vars_json)
@@ -3933,11 +3935,12 @@
               label: (0, i.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_Status",
               ),
-              status: y,
-              actionStatus: h,
+              status: h,
+              tooltip: y,
+              actionStatus: f,
               actionUrl: _,
             }),
-            f,
+            T,
           ),
           v &&
             n.createElement(

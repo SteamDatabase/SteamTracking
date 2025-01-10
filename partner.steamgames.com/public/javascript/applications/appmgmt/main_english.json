@@ -790,6 +790,7 @@
     "Dashboard_UpcomingEvents_Events_MarketingMessage_Status": "Status:",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusReadyToPublish": "Ready to Publish",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady": "In preparation",
+    "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady_ttip": "Valve is still preparing this. If you have been waiting a long time and you believe this should be complete by now, please open a ticket.",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusApproved": "Approved",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusPublic": "Public",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview": "Pending Valve review",

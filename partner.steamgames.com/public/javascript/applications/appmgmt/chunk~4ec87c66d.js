@@ -14535,18 +14535,18 @@
     38964: (e, t, a) => {
       "use strict";
       a.d(t, {
-        FV: () => v,
-        Hg: () => p,
-        Pj: () => b,
-        Pz: () => _,
-        Q1: () => u,
-        aV: () => h,
-        b1: () => d,
-        ek: () => E,
-        hq: () => f,
-        m2: () => S,
-        z9: () => y,
-        zS: () => g,
+        FV: () => f,
+        Hg: () => _,
+        Pj: () => w,
+        Pz: () => g,
+        Q1: () => p,
+        aV: () => E,
+        b1: () => u,
+        ek: () => S,
+        hq: () => b,
+        m2: () => y,
+        z9: () => v,
+        zS: () => h,
       });
       var n = a(90626),
         r = a(3311),
@@ -14555,8 +14555,9 @@
         l = a(61859),
         o = a(3088),
         c = a(32754),
-        m = a(72843);
-      function d(e) {
+        m = a(72843),
+        d = a(26408);
+      function u(e) {
         const {
           children: t,
           hasImage: a,
@@ -14587,7 +14588,7 @@
           t,
         );
       }
-      function u(e) {
+      function p(e) {
         const { children: t, hasImage: a } = e;
         return n.createElement(
           "div",
@@ -14595,7 +14596,7 @@
           t,
         );
       }
-      function p(e) {
+      function _(e) {
         const { children: t, inlineDate: a } = e;
         return n.createElement(
           "div",
@@ -14603,7 +14604,7 @@
           t,
         );
       }
-      function _(e) {
+      function g(e) {
         const { text: t, url: a, light: l, large: o } = e;
         return n.createElement(
           "span",
@@ -14611,7 +14612,7 @@
           n.createElement(s.iN, { href: a, target: "_blank" }, t),
         );
       }
-      function g(e) {
+      function h(e) {
         const { imageUrl: t, url: a, tooltip: i } = e;
         return (
           t &&
@@ -14626,7 +14627,7 @@
           )
         );
       }
-      function h(e) {
+      function E(e) {
         const { linkUrl: t } = e,
           a = "imageUrl" in e ? [e.imageUrl] : e.imageUrls;
         return a?.length > 0
@@ -14641,7 +14642,7 @@
             )
           : void 0;
       }
-      function E(e) {
+      function S(e) {
         const {
             startTimestamp: t,
             endTimestamp: a,
@@ -14676,11 +14677,11 @@
           p,
         );
       }
-      function S(e) {
+      function y(e) {
         const { children: t } = e;
         return n.createElement("div", { className: r.LinkButtonContainer }, t);
       }
-      function y(e) {
+      function v(e) {
         const { url: t, children: a } = e;
         return (
           t?.length > 0 &&
@@ -14694,7 +14695,7 @@
           )
         );
       }
-      function v(e) {
+      function f(e) {
         const { children: t } = e;
         return n.createElement(
           "div",
@@ -14702,7 +14703,7 @@
           t,
         );
       }
-      function f(e) {
+      function b(e) {
         const { complete: t, urgent: a, overrideLabel: s, overrideText: o } = e;
         let c = o;
         return (
@@ -14732,14 +14733,15 @@
           )
         );
       }
-      function b(e) {
+      function w(e) {
         const {
           complete: t,
           urgent: a,
           label: s,
           status: o,
-          actionStatus: c,
-          actionUrl: m,
+          tooltip: c,
+          actionStatus: m,
+          actionUrl: u,
         } = e;
         return n.createElement(
           "div",
@@ -14770,9 +14772,14 @@
                 ),
               n.createElement("span", { className: r.StatusTodoLabel }, s),
             ),
-            n.createElement("div", { className: r.StatusTodoText }, o),
+            n.createElement(
+              "div",
+              { className: r.StatusTodoText },
+              o,
+              c && n.createElement(d.o, { tooltip: c }),
+            ),
           ),
-          c && m && n.createElement(y, { url: m }, c),
+          m && u && n.createElement(v, { url: u }, m),
         );
       }
     },
@@ -52327,7 +52334,7 @@
                 s.createElement(U, { bDone: E, name: "Update Event Linked" }),
                 s.createElement(U, { bDone: S, name: "Update Event Visible" }),
               ),
-            D &&
+            Boolean(D) &&
               s.createElement(
                 "div",
                 { className: o().HalfWidthBtnCtn },
