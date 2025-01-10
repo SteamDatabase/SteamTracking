@@ -40182,6 +40182,7 @@
                   "This will send an assets and discount event request to the partner",
                 onCancel: a,
                 onOK: m,
+                bSavePlanFirst: !0,
               })
         );
       }
@@ -63860,13 +63861,14 @@
         l = a(71298),
         o = a(9154);
       function c(e) {
-        const { fnUpdatePlan: t } = (0, i.lK)(),
-          a = (0, r.ok)(),
-          c = (0, n.bE)(),
-          m = (0, l.vs)();
-        return m.bLoading
+        const { bSavePlanFirst: t } = e,
+          { fnUpdatePlan: a } = (0, i.lK)(),
+          c = (0, r.ok)(),
+          m = (0, n.bE)(),
+          d = (0, l.vs)();
+        return d.bLoading
           ? s.createElement(l.Hh, {
-              state: m,
+              state: d,
               strDialogTitle: "Saving Plan",
               closeModal: e.closeModal,
             })
@@ -63876,30 +63878,33 @@
                 ...e,
                 closeModal: void 0,
                 onOK: async () => {
-                  if (!m.bLoading) {
-                    m.fnSetLoading(!0);
-                    let n = !a.BIsDirty() && !c.BIsDirty();
-                    if (!n)
+                  if (!d.bLoading) {
+                    d.fnSetLoading(!0);
+                    const n = !t || c.BIsDirty() || m.BIsDirty();
+                    !t && e.onOK && (await e.onOK());
+                    let r = !n;
+                    if (n)
                       try {
-                        (n = await t(
-                          a.GetPartnerID(),
-                          a.GetModel(),
-                          void 0,
+                        (r = await a(
+                          c.GetPartnerID(),
                           c.GetModel(),
+                          void 0,
+                          m.GetModel(),
                         )),
-                          n
-                            ? (m.fnSetStrSuccess(
+                          d.fnSetSuccess(r),
+                          r
+                            ? (d.fnSetStrSuccess(
                                 "Status update and Save successful",
                               ),
-                              a.SaveSuccessClearDirty(),
-                              c.SaveSuccessClearDirty())
-                            : m.fnSetStrError(
+                              c.SaveSuccessClearDirty(),
+                              m.SaveSuccessClearDirty())
+                            : d.fnSetStrError(
                                 "Save failed. Please try again later (check consoles for details)",
                               );
                       } catch (e) {
-                        m.fnSetSuccess(!1);
+                        d.fnSetSuccess(!1);
                       }
-                    n && e.onOK && e.onOK();
+                    t && r && e.onOK && (await e.onOK());
                   }
                 },
                 onCancel: () => {
