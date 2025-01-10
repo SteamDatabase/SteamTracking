@@ -39979,7 +39979,7 @@
     },
     34585: (e, t, a) => {
       "use strict";
-      a.d(t, { dR: () => G, BO: () => x, Av: () => U });
+      a.d(t, { dR: () => O, BO: () => q, Av: () => z });
       var n = a(92298),
         r = a.n(n),
         i = a(67239),
@@ -40006,8 +40006,9 @@
         I = a(62792),
         B = a(71298),
         T = a(30470),
-        M = a(64399);
-      function A(e) {
+        M = a(64399),
+        A = a(70065);
+      function k(e) {
         const { oEditablePlan: t } = e,
           a = t.GetFeaturedItemType(),
           n = t.GetFeaturedItemID(),
@@ -40042,7 +40043,7 @@
                     disabled: d,
                     onClick: (e) =>
                       (0, f.pg)(
-                        u.createElement(k, { oEditablePlan: t }),
+                        u.createElement(R, { oEditablePlan: t }),
                         (0, w.uX)(e),
                       ),
                   },
@@ -40093,91 +40094,91 @@
               }),
             ),
           ),
-          u.createElement(R, { oEditablePlan: t }),
-          u.createElement(N, null),
+          u.createElement(P, { oEditablePlan: t }),
+          u.createElement(G, null),
         );
       }
-      function k(e) {
+      function R(e) {
         const { oEditablePlan: t, closeModal: a } = e,
           { fnCreatePromoInvite: n } = (0, y.kw)(),
           r = (0, B.vs)(),
           s = (0, l.bE)(),
           o = s?.GetDueDate() ?? t.GetStartDate() - i.lF,
-          c = (0, C.te)(t.GetPartnerID());
+          c = (0, C.te)(t.GetPartnerID()),
+          m = (0, u.useCallback)(async () => {
+            r.fnSetLoading(!0);
+            const e = {
+              type: 4,
+              oInviteItem: (0, I.Di)(t.GetStoreItemKey()),
+              rtExpireTime: o,
+              nPartnerID: t.GetPartnerID(),
+              strPromotionPlanID: t.GetID(),
+              bRequireMarketingBanner: s.BIsMarketingMessageArtRequest(),
+              bRequireSpotlightBanner: s.BIsSpotlightArtRequest(),
+            };
+            n(e)
+              .then((e) => {
+                1 == e
+                  ? (r.fnSetStrSuccess(
+                      "Asset request sent! We sent an email to the users with communication permissions and publish app permission for the selected game. You can close this dialog.",
+                    ),
+                    r.fnSetSuccess(!0))
+                  : 13 == e
+                    ? (r.fnSetError(!0),
+                      r.fnSetStrError(
+                        "Unable to send asset request. The partner does not have a user set to receive communications.",
+                      ))
+                    : 8 == e
+                      ? (r.fnSetError(!0),
+                        r.fnSetStrError(
+                          "Unable to send asset request. A parameter is invalid.",
+                        ))
+                      : (r.fnSetError(!0),
+                        r.fnSetStrError(
+                          "Failed to send asset request - eResult: " + e,
+                        ));
+              })
+              .catch((e) => {
+                r.fnSetError(!0),
+                  r.fnSetStrError(
+                    "Failed to create invitation - check console/network logs",
+                  );
+              });
+          }, [r, n, s, t, o]);
         if (r.bLoading || c.bLoading)
           return u.createElement(B.Hh, {
             state: r,
             strDialogTitle: "Send Email To Partner",
             closeModal: a,
           });
-        let m;
+        let d;
         return (
           t.GetStoreItemKey()
             ? t.GetPartnerID() > 0 &&
               t.GetFeaturedItemID() > 0 &&
               -1 == c.rgAppIDs?.findIndex((e) => e == t.GetFeaturedItemID()) &&
-              (m =
+              (d =
                 "Promotion has a partner ID set and a featured store item but the partner doesn't have access to the store item.")
-            : (m =
+            : (d =
                 "You must set a featured store item or advertiser app in order to send an email."),
-          m
+          d
             ? u.createElement(v.o0, {
                 strTitle: "Can't Send Email",
-                strDescription: m,
+                strDescription: d,
                 onCancel: a,
                 onOK: a,
                 bAlertDialog: !0,
               })
-            : u.createElement(v.o0, {
+            : u.createElement(A.Q, {
                 strTitle: "Send Email To Partner",
                 strDescription:
                   "This will send an assets and discount event request to the partner",
                 onCancel: a,
-                onOK: function () {
-                  const e = {
-                    type: 4,
-                    oInviteItem: (0, I.Di)(t.GetStoreItemKey()),
-                    rtExpireTime: o,
-                    nPartnerID: t.GetPartnerID(),
-                    strPromotionPlanID: t.GetID(),
-                    bRequireMarketingBanner: s.BIsMarketingMessageArtRequest(),
-                    bRequireSpotlightBanner: s.BIsSpotlightArtRequest(),
-                  };
-                  r.fnSetLoading(!0),
-                    n(e)
-                      .then((e) => {
-                        1 == e
-                          ? (r.fnSetStrSuccess(
-                              "Asset request sent! We sent an email to the users with communication permissions and publish app permission for the selected game. You can close this dialog.",
-                            ),
-                            r.fnSetSuccess(!0))
-                          : 13 == e
-                            ? (r.fnSetError(!0),
-                              r.fnSetStrError(
-                                "Unable to send asset request. The partner does not have a user set to receive communications.",
-                              ))
-                            : 8 == e
-                              ? (r.fnSetError(!0),
-                                r.fnSetStrError(
-                                  "Unable to send asset request. A parameter is invalid.",
-                                ))
-                              : (r.fnSetError(!0),
-                                r.fnSetStrError(
-                                  "Failed to send asset request - eResult: " +
-                                    e,
-                                ));
-                      })
-                      .catch((e) => {
-                        r.fnSetError(!0),
-                          r.fnSetStrError(
-                            "Failed to create invitation - check console/network logs",
-                          );
-                      });
-                },
+                onOK: m,
               })
         );
       }
-      function R(e) {
+      function P(e) {
         const { oEditablePlan: t } = e,
           a = (0, y.tU)(t.GetID());
         return u.createElement(
@@ -40191,16 +40192,16 @@
             Boolean(null != a && 0 == a.length) &&
               u.createElement("div", null, "No previous emails sent"),
             a?.map((e) =>
-              u.createElement(P, { key: "eh_" + e.inviteid, email: e }),
+              u.createElement(N, { key: "eh_" + e.inviteid, email: e }),
             ),
           ),
         );
       }
-      function P(e) {
+      function N(e) {
         const { email: t } = e;
         return u.createElement("div", null, (0, g.TW)(t.rtinvitetime));
       }
-      function N(e) {
+      function G(e) {
         const t = (0, l.bE)();
         return u.createElement(
           "div",
@@ -40222,7 +40223,7 @@
           }),
         );
       }
-      function G(e) {
+      function O(e) {
         const t = (0, o.ok)(),
           [a, n, r, i, s] = (0, c.q3)(() => [
             t.GetID(),
@@ -40257,19 +40258,19 @@
           u.createElement(
             "div",
             { className: E().SetupRow },
-            u.createElement(O, null),
+            u.createElement(F, null),
             u.createElement(
               "div",
               null,
-              u.createElement(L, null),
-              u.createElement(z, null),
+              u.createElement(U, null),
+              u.createElement(x, null),
             ),
           ),
           u.createElement("br", null),
-          u.createElement(A, { oEditablePlan: t }),
+          u.createElement(k, { oEditablePlan: t }),
         );
       }
-      function O(e) {
+      function F(e) {
         const { bReviewApprovals: t } = e;
         return u.createElement(
           "div",
@@ -40281,13 +40282,13 @@
               u.createElement(
                 "div",
                 { key: e, className: E().AssetTypeRow },
-                u.createElement(U, { bReviewApprovals: t, type: e }),
+                u.createElement(z, { bReviewApprovals: t, type: e }),
               ),
             ),
-          u.createElement(F, null),
+          u.createElement(L, null),
         );
       }
-      function F(e) {
+      function L(e) {
         const { bReviewApprovals: t } = e,
           a = (0, o.ok)(),
           n = (0, s.dr)(a.GetMarketingMessageID(0)),
@@ -40295,7 +40296,7 @@
         return u.createElement(
           u.Fragment,
           null,
-          u.createElement(U, {
+          u.createElement(z, {
             bReviewApprovals: t,
             type:
               10 == n?.type
@@ -40303,7 +40304,7 @@
                 : "marketingmessage_art",
             index: 0,
           }),
-          u.createElement(U, {
+          u.createElement(z, {
             bReviewApprovals: t,
             type:
               10 == r?.type
@@ -40313,7 +40314,7 @@
           }),
         );
       }
-      function L(e) {
+      function U(e) {
         const t = (0, o.ok)(),
           a = (0, l.bE)(),
           [n, s] = (0, u.useState)(null != a.GetDueDate()),
@@ -40371,7 +40372,7 @@
               u.createElement(
                 "h2",
                 null,
-                x(p, m),
+                q(p, m),
                 u.createElement(
                   "div",
                   { className: E().DateCustomizeCtn },
@@ -40388,7 +40389,7 @@
               ),
             );
       }
-      function U(e) {
+      function z(e) {
         const {
             type: t,
             index: a,
@@ -40434,7 +40435,7 @@
               u.createElement("b", null, (0, i.Pq)(t)),
             );
       }
-      function z(e) {
+      function x(e) {
         const t = (0, l.bE)();
         return u.createElement(
           "div",
@@ -40452,7 +40453,7 @@
           ),
         );
       }
-      function x(e, t) {
+      function q(e, t) {
         return null != e
           ? e == i.db
             ? (0, g.we)("#AssetRequest_DueDate_ASAP")
@@ -42130,6 +42131,8 @@
             N,
             G,
             O,
+            F,
+            L,
           ] = (0, r.q3)(() => [
             a.BIsSpotlightArtRequest(),
             a.BIsMarketingMessageArtRequest() ||
@@ -42166,15 +42169,20 @@
             a.GetUpdateEventGID(),
             a.GetStoreItemType(),
             a.GetStoreItemID(),
+            a.BIsAppMainCapsuleRequest() || a.BIsAppHeaderCapsuleRequest(),
+            a.BHasPreviewArtOfType("app_header_capsule") ||
+              a.BHasPreviewArtOfType("app_header_capsule"),
           ]),
-          F = f?.trim().length > 0,
-          L =
-            F &&
-            w.trim().length > 0 &&
-            (!s || u) &&
-            (!o || E) &&
-            (!d || S) &&
-            (!k || R);
+          U = f?.trim().length > 0,
+          z =
+            (U &&
+              w.trim().length > 0 &&
+              (!s || u) &&
+              (!o || E) &&
+              (!d || S) &&
+              (!k || R)) ||
+            !F ||
+            L;
         return i.createElement(
           "div",
           { className: l().SectionCtn },
@@ -42238,6 +42246,16 @@
                 bRequired: !0,
               },
               (0, h.we)("#AssetRequest_Check_desc"),
+            ),
+          Boolean(F) &&
+            i.createElement(
+              ge,
+              {
+                bCompleted: L,
+                title: (0, h.we)("#AssetRequest_Check_PromoApp"),
+                bRequired: !0,
+              },
+              (0, h.we)("#AssetRequest_Check_PromoApp_desc"),
             ),
           i.createElement(Ee, null),
           Boolean(P) &&
@@ -42321,14 +42339,14 @@
           i.createElement(
             _.he,
             {
-              toolTipContent: F
+              toolTipContent: U
                 ? void 0
                 : (0, h.we)("#AssetRequest_InvalidLink"),
             },
             i.createElement(
               m.jn,
               {
-                disabled: !L,
+                disabled: !z,
                 className: c().SubmitButton,
                 onClick: (e) =>
                   (0, p.pg)(
@@ -50316,9 +50334,9 @@
         );
       }
       function ut(e) {
-        const { rgArtworkToDisplay: t, id: a } = e,
-          n = mt(a);
-        return n
+        const { bShowInternalControls: t, rgArtworkToDisplay: a, id: n } = e,
+          r = mt(n);
+        return r
           ? l.createElement(
               "div",
               { className: se.EditCtn },
@@ -50335,13 +50353,14 @@
                   "div",
                   { className: c().LeftCol },
                   l.createElement(pt, {
-                    oEditableAppAssets: n,
-                    rgArtworkToDisplay: t,
+                    bShowInternalControls: t,
+                    oEditableAppAssets: r,
+                    rgArtworkToDisplay: a,
                   }),
                 ),
                 l.createElement(gt, {
-                  oEditableAppAssets: n,
-                  rgArtworkToDisplay: t,
+                  oEditableAppAssets: r,
+                  rgArtworkToDisplay: a,
                 }),
               ),
             )
@@ -50352,20 +50371,24 @@
             });
       }
       function pt(e) {
-        const { oEditableAppAssets: t, rgArtworkToDisplay: a } = e,
-          n = (0, l.useMemo)(() => {
+        const {
+            bShowInternalControls: t,
+            oEditableAppAssets: a,
+            rgArtworkToDisplay: n,
+          } = e,
+          r = (0, l.useMemo)(() => {
             const e = ["app_header_capsule", "app_main_capsule"];
-            return a ? a.filter((t) => e.includes(t)) : e;
-          }, [a]),
-          r = (0, l.useMemo)(
+            return n ? n.filter((t) => e.includes(t)) : e;
+          }, [n]),
+          i = (0, l.useMemo)(
             () => [W.TU.k_ESteamRealmGlobal, W.TU.k_ESteamRealmChina],
             [],
           ),
-          i = (0, l.useCallback)(
-            (e, a, n, r, i, s, l) => {
-              t.SetAsset(lt(i), (0, _e.Lg)(n), a);
+          s = (0, l.useCallback)(
+            (e, t, n, r, i, s, l) => {
+              a.SetAsset(lt(i), (0, _e.Lg)(n), t);
             },
-            [t],
+            [a],
           );
         return l.createElement(
           l.Fragment,
@@ -50386,19 +50409,19 @@
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
             l.createElement(te.U, {
-              rgSupportArtwork: n,
-              rgRealmList: r,
+              rgSupportArtwork: r,
+              rgRealmList: i,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
-              strUploadAjaxURL: `${B.TS.PARTNER_BASE_URL}appsupport/ajaxuploadasset/${t.GetID()}`,
-              fnOnUploadSuccess: i,
+              strUploadAjaxURL: `${B.TS.PARTNER_BASE_URL}appsupport/ajaxuploadasset/${a.GetID()}`,
+              fnOnUploadSuccess: s,
               bSynchronousUpload: !0,
             }),
             l.createElement(
               d.tH,
               null,
               l.createElement("br", null),
-              n.includes("app_header_capsule") &&
+              r.includes("app_header_capsule") &&
                 l.createElement(
                   "div",
                   null,
@@ -50410,11 +50433,11 @@
                     " (.jpg,.png)",
                   ),
                   l.createElement(_t, {
-                    oEditableAppAssets: t,
+                    oEditableAppAssets: a,
                     assetType: "header_image",
                   }),
                 ),
-              n.includes("app_main_capsule") &&
+              r.includes("app_main_capsule") &&
                 l.createElement(
                   "div",
                   null,
@@ -50426,13 +50449,13 @@
                     " (.jpg,.png)",
                   ),
                   l.createElement(_t, {
-                    oEditableAppAssets: t,
+                    oEditableAppAssets: a,
                     assetType: "main_capsule",
                   }),
                 ),
             ),
           ),
-          l.createElement(ht, { oEditableAppAssets: t }),
+          t && l.createElement(ht, { oEditableAppAssets: a }),
         );
       }
       function _t(e) {
@@ -50816,6 +50839,7 @@
             E.push({
               artworkType: "app_header_capsule",
               id: g.GetAdvertisingAppID().toString(),
+              bShowInternalControls: t,
               promotionPlanID: g.GetID(),
             }),
           E.forEach((e) => {
@@ -50953,6 +50977,7 @@
               rgType: Q.Yw,
               component: () =>
                 l.createElement(ut, {
+                  bShowInternalControls: n,
                   rgArtworkToDisplay: r,
                   promotionPlanID: i,
                   id: parseInt(s),
@@ -54380,21 +54405,22 @@
             s.forEach((e) => {
               const t = r.Qo.get(e);
               h?.get(e)?.forEach((n) => {
-                const i = n.rgPlans.length < t.nMaxSlots,
-                  s = { week: n };
+                const i = n.rgPlans.filter(
+                    (e) => "takeover" != e.intention && !e.takeover_ids,
+                  ),
+                  s = i.length < t.nMaxSlots,
+                  l = { week: n };
                 a.push({
                   allDay: !1,
                   title:
                     r.W7.get(e) +
                     " " +
-                    (i
-                      ? t.nMaxSlots - n.rgPlans.length + " Available"
-                      : " No slots"),
+                    (s ? t.nMaxSlots - i.length + " Available" : " No slots"),
                   start: new Date(1e3 * (n.rtWeekStart + t.rtStartModifier)),
                   end: new Date(
                     1e3 * (n.rtWeekStart + t.rtEndModifier - 39600 - 1),
                   ),
-                  resource: s,
+                  resource: l,
                 });
               });
             }),
@@ -63269,8 +63295,11 @@
                   const n = new Date(1e3 * (t.rtWeekStart + e.rtStartModifier));
                   return n.setHours(10), Math.floor(n.getTime() / 1e3) == a;
                 }),
-                i = e.nMaxSlots - n?.rgPlans?.length;
-              s(i <= 0);
+                i = n?.rgPlans.filter(
+                  (e) => "takeover" != e.intention && !e.takeover_ids,
+                ),
+                l = e.nMaxSlots - i?.length;
+              s(l <= 0);
             }
           }, [c, a, t, s]),
           m.createElement(
@@ -63840,23 +63869,31 @@
                 ...e,
                 closeModal: void 0,
                 onOK: async () => {
-                  m.bLoading ||
-                    (m.fnSetLoading(!0),
-                    e.onOK && (await e.onOK()),
-                    t(a.GetPartnerID(), a.GetModel(), void 0, c.GetModel())
-                      .then((e) => {
-                        m.fnSetSuccess(e),
-                          e
-                            ? m.fnSetStrSuccess(
+                  if (!m.bLoading) {
+                    m.fnSetLoading(!0);
+                    let n = !a.BIsDirty() && !c.BIsDirty();
+                    if (!n)
+                      try {
+                        (n = await t(
+                          a.GetPartnerID(),
+                          a.GetModel(),
+                          void 0,
+                          c.GetModel(),
+                        )),
+                          n
+                            ? (m.fnSetStrSuccess(
                                 "Status update and Save successful",
-                              )
+                              ),
+                              a.SaveSuccessClearDirty(),
+                              c.SaveSuccessClearDirty())
                             : m.fnSetStrError(
                                 "Save failed. Please try again later (check consoles for details)",
-                              ),
-                          a.SaveSuccessClearDirty(),
-                          c.SaveSuccessClearDirty();
-                      })
-                      .catch((e) => m.fnSetSuccess(!1)));
+                              );
+                      } catch (e) {
+                        m.fnSetSuccess(!1);
+                      }
+                    n && e.onOK && e.onOK();
+                  }
                 },
                 onCancel: () => {
                   e.onCancel && e.onCancel(), e.closeModal && e.closeModal();
@@ -63868,7 +63905,7 @@
     },
     60341: (e, t, a) => {
       "use strict";
-      a.d(t, { kd: () => Ze, S4: () => Je, rr: () => $e });
+      a.d(t, { kd: () => et, S4: () => Xe, rr: () => Je });
       var n = a(73523),
         r = a(67239),
         i = a(33428),
@@ -65275,7 +65312,8 @@
             : u.createElement(D.t, { string: "Loading" }),
         );
       }
-      function $e(e) {
+      var $e = a(82097);
+      function Je(e) {
         const { planid: t, children: a, bCanBeMissing: n, bForceReload: r } = e,
           [i, s] = u.useState(!1),
           m = r ? !i : r,
@@ -65314,7 +65352,7 @@
                 })
         );
       }
-      function Je(e) {
+      function Xe(e) {
         const { planid: t } = e,
           a = (0, l.bE)(),
           n = (e) =>
@@ -65323,7 +65361,7 @@
             {
               name: "Editor Tab",
               key: "editor",
-              contents: u.createElement(S.tH, null, u.createElement(Qe, null)),
+              contents: u.createElement(S.tH, null, u.createElement(Ze, null)),
               onClick: n,
             },
             {
@@ -65374,20 +65412,20 @@
             onClick: n,
           }),
           u.createElement(
-            $e,
+            Je,
             { planid: t, bForceReload: !0 },
             u.createElement(
               "div",
               { className: h().AdminPageCtn },
               u.createElement(ue, null),
-              u.createElement(Xe, null),
+              u.createElement(Qe, null),
               u.createElement(w.V, { tabs: r }),
               u.createElement("div", { className: v().ClearThings }),
             ),
           )
         );
       }
-      function Xe(e) {
+      function Qe(e) {
         const t = (0, o.ok)(),
           a = new Date(),
           n = (0, d.q3)(() => new Date(1e3 * t.GetStartDate())),
@@ -65407,7 +65445,7 @@
           u.createElement("div", null, "Return to Dashboard"),
         );
       }
-      function Qe(e) {
+      function Ze(e) {
         const t = (0, o.ok)();
         return u.createElement(
           "div",
@@ -65518,7 +65556,7 @@
                   u.createElement(
                     "div",
                     { className: h().SectionCtn },
-                    u.createElement(Ze, { oEditablePlan: t }),
+                    u.createElement(et, { oEditablePlan: t }),
                     u.createElement(Pe, { oEditablePlan: t }),
                   ),
                 ),
@@ -65540,7 +65578,7 @@
                   u.createElement(
                     "div",
                     { className: h().SectionCtn },
-                    u.createElement(et, { oEditablePlan: t }),
+                    u.createElement(tt, { oEditablePlan: t }),
                   ),
                 ),
                 u.createElement(
@@ -65567,7 +65605,7 @@
           ),
         );
       }
-      function Ze(e) {
+      function et(e) {
         const { oEditablePlan: t } = e,
           [a, o, c, p, g, h, y, v, b] = (0, d.q3)(() => [
             t.GetSpotlightIDs(0),
@@ -65608,7 +65646,13 @@
                       u.createElement(V, {
                         storeItemID: h,
                         storeItemType: y,
-                        fnSetStoreItemFeature: t.SetFeaturedStoreItem,
+                        fnSetStoreItemFeature: (e, a) => {
+                          if (e && 0 == a) {
+                            const a = $e.A.Get().GetApp(e);
+                            14 == a?.GetAppType() && t.SetAdvertisingAppID(e);
+                          }
+                          t.SetFeaturedStoreItem(e, a);
+                        },
                       }),
                       (0, B.uX)(e),
                     ),
@@ -65828,7 +65872,7 @@
           }),
         );
       }
-      function et(e) {
+      function tt(e) {
         const { oEditablePlan: t } = e,
           a = (0, d.q3)(() => t.GetPartnerID()),
           i = (0, u.useMemo)(() => [a], [a]);

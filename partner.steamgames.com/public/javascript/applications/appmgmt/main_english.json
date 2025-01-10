@@ -1536,6 +1536,8 @@
     "AssetRequest_Check_Spotlight": "Upload Spotlight preview",
     "AssetRequest_Check_desc": "Use the uploader below to submit a preview and to ensure your image adheres to our sizing and clipping templates.",
     "AssetRequest_Check_MM": "Upload Marketing Message preview",
+    "AssetRequest_Check_PromoApp": "Upload Promotion App Assets preview",
+    "AssetRequest_Check_PromoApp_desc": "Use the uploader below to submit a preview and to ensure your image adheres to our sizing and clipping templates.",
     "AssetRequest_Check_Takeover": "Upload Takeover preview",
     "AssetRequest_Check_Takeover_desc": "Use the uploader below to submit a preview both the takeover and takeover mobile to ensure your image adheres to our sizing and clipping templates.",
     "AssetRequest_Check_Takeunder": "Upload Takeunder Banner preview",
