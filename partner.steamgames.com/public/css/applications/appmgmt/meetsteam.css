@@ -65,7 +65,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 }
 ._12wSR9wtG84Yh4obIARUAy {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 15px;
   margin-bottom: 8px;
 }
@@ -73,6 +73,16 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   color: #fff;
   font-size: 21px;
   margin-right: 4px;
+}
+._12wSR9wtG84Yh4obIARUAy ._6accgtG1qR7tHFL1wnO58 {
+  margin-left: 10px;
+}
+._12wSR9wtG84Yh4obIARUAy ._3VdcJeFNzpiS6C6nzlzZfv {
+  display: flex;
+  align-items: baseline;
+}
+._12wSR9wtG84Yh4obIARUAy ._2T7-EVSiD7wt3kh-UtbFwJ {
+  display: flex;
 }
 ._1QCMW1MwEkiLeTlmhMvSs_ {
   display: block;

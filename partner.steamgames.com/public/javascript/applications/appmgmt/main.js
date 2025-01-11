@@ -32493,6 +32493,7 @@
         $w: () => M,
         $z: () => m,
         Hq: () => o,
+        IH: () => O,
         KC: () => p,
         R2: () => I,
         TW: () => l,
@@ -32931,6 +32932,26 @@
         return (
           n && (u = r ? (0, s.we)("#Duration_WrittenNegation", u) : "-" + u), u
         );
+      }
+      function O(e) {
+        const t = D(e),
+          r = 60 * t.hours + t.minutes,
+          n = t.hours,
+          i = Math.floor(t.hours / 24),
+          a = Math.floor(i / 30);
+        return a > 1
+          ? (0, s.we)("#ReadableDuration_Months", a)
+          : 1 === a
+            ? (0, s.we)("#ReadableDuration_OneMonth", i)
+            : i > 1
+              ? (0, s.we)("#ReadableDuration_Days", i)
+              : n > 2
+                ? (0, s.we)("#ReadableDuration_Hours", n)
+                : r > 2
+                  ? (0, s.we)("#ReadableDuration_Minutes", r)
+                  : r > 1
+                    ? (0, s.we)("#ReadableDuration_OneMinute")
+                    : (0, s.we)("#ReadableDuration_LessThanOneMinute");
       }
     },
     60778: (e, t, r) => {

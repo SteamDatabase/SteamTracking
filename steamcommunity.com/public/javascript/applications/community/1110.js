@@ -18,6 +18,7 @@
         AddNew: "JBYdBhACB7UzXP4l_tpF2",
         DialogCtn: "Hd3q3Z7if0Z5H7rKMfqGN",
         ParticipantRow: "_3wHfIq4f1KlUL4-fKL0jLv",
+        EventDescriptionField: "_3WxO3z6DufUbRu-axJjjqp",
       };
     },
     63226: (e) => {
@@ -138,8 +139,8 @@
         h = n(81047),
         f = n(12611),
         v = n(28954),
-        b = n(27666),
-        w = n(71138),
+        w = n(27666),
+        b = n(71138),
         C = n(33737),
         M = n(2805),
         S = n(4869),
@@ -530,8 +531,8 @@
       }
       var Y = n(30175),
         $ = n(73745),
-        Q = n(30470),
-        j = n(21134);
+        j = n(30470),
+        Q = n(21134);
       function K(e) {
         const {
             src: t,
@@ -542,7 +543,7 @@
           } = e,
           [r, s, c] = (0, $.uD)(),
           [d, m] = (0, $.OP)(),
-          [u, p] = i.useMemo(() => [-1 !== t.indexOf(f.lw), (0, b.v6)(t)], [t]),
+          [u, p] = i.useMemo(() => [-1 !== t.indexOf(f.lw), (0, w.v6)(t)], [t]),
           E = i.useCallback(() => {
             o(), c();
           }, [o, c]);
@@ -558,11 +559,11 @@
             }),
           i.createElement(
             "span",
-            { className: _()(j.ClanImageContainer, d && j.Hovered), ...m },
+            { className: _()(Q.ClanImageContainer, d && Q.Hovered), ...m },
             i.createElement("img", { src: p }),
             i.createElement(
               "span",
-              { className: j.ImageControls },
+              { className: Q.ImageControls },
               i.createElement(
                 Y.ff,
                 {
@@ -665,9 +666,9 @@
                 throw "Error uploading image";
               const r = Object.values(l)[0];
               if (!r.success) throw r.message;
-              const s = w.pU.GetClanImageByImageHash(a, r.image_hash),
+              const s = b.pU.GetClanImageByImageHash(a, r.image_hash),
                 i = (0, h.fw)(s);
-              return await (0, A.DB)((0, b.v6)(i)), n.create({ src: i });
+              return await (0, A.DB)((0, w.v6)(i)), n.create({ src: i });
             },
             [t, n],
           );
@@ -833,7 +834,7 @@
           i.Fragment,
           null,
           c &&
-            i.createElement(be, {
+            i.createElement(we, {
               videoID: t,
               align: n,
               bEditing: !0,
@@ -866,7 +867,7 @@
           ),
         );
       }
-      function be(e) {
+      function we(e) {
         const {
             videoID: t = "",
             align: n = "",
@@ -955,7 +956,7 @@
           ),
         );
       }
-      var we = n(79570);
+      var be = n(79570);
       var Ce = n(44483),
         Me = n(25918),
         Se = n(19675),
@@ -1078,10 +1079,18 @@
                 n(o);
             },
           }),
-          i.createElement(C.pd, {
-            type: "text",
-            label: (0, G.we)("#MeetSteam_edit_session_desc"),
+          i.createElement(
+            C.JU,
+            null,
+            (0, G.we)("#MeetSteam_edit_session_desc"),
+          ),
+          i.createElement("textarea", {
+            className: (0, oe.A)(
+              "DialogTextInputBase",
+              ye().EventDescriptionField,
+            ),
             value: G.NT.Get(t.localized_session_description, a),
+            rows: 5,
             onChange: (e) => {
               const o = { ...t };
               (o.localized_session_description = G.NT.Set(
@@ -1115,7 +1124,7 @@
           h = _.utcOffset() - g.utcOffset(),
           f = Oe.unix(t.rtime_end).tz(u),
           v = Oe.unix(t.rtime_end).tz(E),
-          b = v.utcOffset() - f.utcOffset();
+          w = v.utcOffset() - f.utcOffset();
         return i.createElement(
           i.Fragment,
           null,
@@ -1192,7 +1201,7 @@
             null,
             (0, G.we)("#MeetSteam_edit_displayed_end"),
             ": ",
-            (0, Ne.P0)(v.unix() + 60 * b, !1, v.format("z")),
+            (0, Ne.P0)(v.unix() + 60 * w, !1, v.format("z")),
             " ",
           ),
           i.createElement("br", null),
@@ -1292,7 +1301,7 @@
         }
         return null;
       }
-      function Qe(e) {
+      function je(e) {
         const t = Me.mh.GetEditModel();
         for (
           let n = 0;
@@ -1304,7 +1313,7 @@
         }
         return null;
       }
-      function je(e) {
+      function Qe(e) {
         const { focusView: t, removeNode: n, group_id: a } = e,
           o = Me.mh.GetEditModel(),
           l = (0, De.q3)(() => {
@@ -1346,7 +1355,7 @@
                   hideModal: d,
                   groupInput: l,
                   fnUpdateGroupSession: (e) => {
-                    const { groupIndex: t } = Qe(e.group_id),
+                    const { groupIndex: t } = je(e.group_id),
                       n = Me.mh.GetEditModel();
                     (n.GetEventModel().jsondata.meet_steam_groups[t] = e),
                       n.SetDirty(Ie.IQ.description);
@@ -1360,7 +1369,7 @@
                     strTitle: (0, G.we)("#Button_Delete"),
                     strDescription: (0, G.we)("#Dialog_AreYouSure"),
                     onOK: () => {
-                      const { groupIndex: e } = Qe(l.group_id),
+                      const { groupIndex: e } = je(l.group_id),
                         t = Me.mh.GetEditModel(),
                         a = [...t.GetEventModel().jsondata.meet_steam_groups];
                       a.splice(e, 1),
@@ -1521,25 +1530,25 @@
           i.createElement(
             Y.Ez,
             { className: e.className },
-            i.createElement(we.MV, null),
+            i.createElement(be.MV, null),
             i.createElement(Y.XQ, null),
-            i.createElement(we.Km, { schema: n }),
+            i.createElement(be.Km, { schema: n }),
             i.createElement(Y.XQ, null),
-            n.marks.link && i.createElement(we.z9, { schema: n }),
+            n.marks.link && i.createElement(be.z9, { schema: n }),
             i.createElement(Y.XQ, null),
-            i.createElement(we.Hz, { schema: n }),
-            i.createElement(we.WJ, { schema: n, levels: 3 }),
+            i.createElement(be.Hz, { schema: n }),
+            i.createElement(be.WJ, { schema: n, levels: 3 }),
             i.createElement(Y.XQ, null),
             n.nodes.previewyoutube && i.createElement(Ze, { schema: n }),
             i.createElement(Y.XQ, null),
             !1,
-            i.createElement(we.C$, {
+            i.createElement(be.C$, {
               schema: n,
               showIndentButtonsAsNeeded: !0,
             }),
             i.createElement(Y.hK, null),
             r &&
-              i.createElement(we.Nt, {
+              i.createElement(be.Nt, {
                 bSpellcheckEnabled: l,
                 setSpellcheckEnabled: r,
               }),
@@ -1572,7 +1581,7 @@
         return i.createElement(
           i.Fragment,
           null,
-          o && i.createElement(be, { hideModal: s, onSave: c }),
+          o && i.createElement(we, { hideModal: s, onSave: c }),
           i.createElement(
             Y.ff,
             { tooltip: "#EventEditor_InsertYouTube", onClick: l, toggled: o },
@@ -1650,10 +1659,10 @@
           const g = i.useRef(void 0);
           (0, o.i)(m, { msAutosaveTimeout: 1e3 });
           const { nodes: _, marks: v } = d.pm_schema,
-            b = (function (e, t) {
+            w = (function (e, t) {
               const n = i.useCallback(
                 (n) => {
-                  const a = `^https?://${Q.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)$`,
+                  const a = `^https?://${j.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)$`,
                     o = n.match(a);
                   return o && o.groups.clanid == e.GetClanAccountID().toString()
                     ? t.create({
@@ -1725,7 +1734,7 @@
                     },
                     i.createElement(p.W, {
                       linkMarkType: v.link,
-                      onURLPasted: b,
+                      onURLPasted: w,
                       schema: d.pm_schema,
                     }),
                     _.image && i.createElement(O, { nodeType: _.image }),
@@ -1766,7 +1775,7 @@
             },
             t.nodes.meetsteamsessiongroup && {
               type: t.nodes.meetsteamsessiongroup,
-              component: je,
+              component: Qe,
               readProps: (e) => ({ group_id: e.attrs.group_id }),
             },
           ],

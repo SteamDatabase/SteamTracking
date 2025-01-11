@@ -492,7 +492,7 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   margin-top: 16px;
 }
 .iUmtJvs3v_bmv-tu43tpL {
-  width: 30%;
+  flex-grow: 1;
 }
 ._1igTM-TlnNkIhWxl95pTyB {
   position: relative;
@@ -501,11 +501,13 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   text-align: center;
   background: #40444d;
   border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 ._1igTM-TlnNkIhWxl95pTyB ._2qgSQSN_hv-UncznBRb42v {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: linear-gradient(to bottom, #707787, #555b67);
   border: none;
   margin: 0;
@@ -555,28 +557,46 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
 .td3x9QaINc75mi2ppkGoF,
 ._1D1F4nOnNKanKGRqRk3pWr,
 .twKyIz0VYgtl76vlWI0Xn {
+  border: 1px dashed #47bfff;
+}
+.td3x9QaINc75mi2ppkGoF ._33Gk1SfpMTUWDOWksSxEtX,
+._1D1F4nOnNKanKGRqRk3pWr ._33Gk1SfpMTUWDOWksSxEtX,
+.twKyIz0VYgtl76vlWI0Xn ._33Gk1SfpMTUWDOWksSxEtX {
   width: 100%;
   position: absolute;
+  top: -12px;
   z-index: 1;
   pointer-events: none;
 }
-.td3x9QaINc75mi2ppkGoF span,
-._1D1F4nOnNKanKGRqRk3pWr span,
-.twKyIz0VYgtl76vlWI0Xn span {
+.td3x9QaINc75mi2ppkGoF ._33Gk1SfpMTUWDOWksSxEtX span,
+._1D1F4nOnNKanKGRqRk3pWr ._33Gk1SfpMTUWDOWksSxEtX span,
+.twKyIz0VYgtl76vlWI0Xn ._33Gk1SfpMTUWDOWksSxEtX span {
   width: fit-content;
-  display: block;
+  display: none;
   margin: 0 auto;
-  background-color: #47ffc8;
+  background-color: #47bfff;
   font-size: 12px;
   color: #000;
   padding: 2px 8px;
   border-radius: 2px;
 }
-._1D1F4nOnNKanKGRqRk3pWr span {
-  background-color: #47bfff;
+._1D1F4nOnNKanKGRqRk3pWr {
+  border: 1px solid #8fd52c;
 }
-.twKyIz0VYgtl76vlWI0Xn span {
-  background-color: #9c9c21;
+._1D1F4nOnNKanKGRqRk3pWr ._33Gk1SfpMTUWDOWksSxEtX span {
+  background-color: #8fd52c;
+  display: block;
+}
+.twKyIz0VYgtl76vlWI0Xn {
+  border: 1px dashed #cfcf21;
+}
+.twKyIz0VYgtl76vlWI0Xn button,
+.twKyIz0VYgtl76vlWI0Xn div {
+  opacity: 0.5;
+}
+.twKyIz0VYgtl76vlWI0Xn ._33Gk1SfpMTUWDOWksSxEtX span {
+  background-color: #cfcf21;
+  display: none;
 }
 @keyframes _1zMMdC3loRunAeI72QvaDX {
   0% {
@@ -603,6 +623,9 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   position: sticky;
   bottom: 0;
   animation: _1zMMdC3loRunAeI72QvaDX .2s;
+}
+._6ykmNnOs_SfkGOYurJogH button.DialogButton.Primary {
+  line-height: 45px;
 }
 div.SPYFj8pCLpNmnuQJEDobC,
 div.QuKtTJ4LCPUlQeWYfLNyX,

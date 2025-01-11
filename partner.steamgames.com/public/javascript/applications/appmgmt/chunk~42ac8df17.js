@@ -112,6 +112,7 @@
         Registering: "td3x9QaINc75mi2ppkGoF",
         Registered: "_1D1F4nOnNKanKGRqRk3pWr",
         Unregistering: "twKyIz0VYgtl76vlWI0Xn",
+        StatusText: "_33Gk1SfpMTUWDOWksSxEtX",
         CompleteRegistrationCtn: "_6ykmNnOs_SfkGOYurJogH",
         Visible: "_3WTs5L7ce_Du4_KNac_sXd",
         "confirm-panel-intro": "_1zMMdC3loRunAeI72QvaDX",
@@ -17812,6 +17813,9 @@
                 },
               },
               l &&
+                c.createElement("div", null, (0, g.we)("#MeetSteam_Reg_Intro")),
+              c.createElement("br", null),
+              l &&
                 c.createElement(
                   c.Fragment,
                   null,
@@ -17986,6 +17990,9 @@
               this.m_existingRegistrations.get(e[0]).session_id != e[1],
           );
         }
+        BHasAlreadyRegistered() {
+          return this.m_existingRegistrations.size > 0;
+        }
         async Save(e) {
           let t = !0;
           for (const [r, a] of this.m_selections) {
@@ -18084,7 +18091,14 @@
                 e.set(r.id, A.Get().GetRegistrationStatus(t.group_id, r.id)),
               new Map(),
             ),
-          );
+          ),
+          h = (0, u.V)(
+            n,
+            r.clanSteamID.GetAccountID(),
+            r.GID,
+            new w.b(o.iA.steamid),
+          ),
+          y = h.isSuccess && !!h.data.allow_registration_if_full;
         if (!s.isSuccess || (i && o.iA.accountid))
           return c.createElement(_.t, {
             size: "medium",
@@ -18117,6 +18131,7 @@
                     ),
                   nGuestReservations: n?.guest_count || 0,
                   eRegistrationStatus: i,
+                  bAllowedToRegisterIfFull: y,
                 }),
               ),
               o && c.createElement(z, null),
@@ -18147,76 +18162,70 @@
             onClick: r,
             nGuestReservations: n,
             eRegistrationStatus: i = 0,
+            bAllowedToRegisterIfFull: s,
           } = e,
-          [s, o, m] = (0, l.q3)(() => [
+          [o, m, d] = (0, l.q3)(() => [
             t.rtime_start,
             t.rtime_end,
             t.max_capacity,
           ]),
-          d = Math.max(0, m - (n || 0)),
-          u = (0 === i && d > 0) || 1 === i || 2 === i || 3 === i;
-        return c.createElement(
-          c.Fragment,
-          null,
+          u = Math.max(0, d - (n || 0)),
+          p = s || (0 === i && u > 0) || 1 === i || 2 === i || 3 === i;
+        let _ = null,
+          S = null;
+        return (
+          1 == i
+            ? ((_ = (0, g.we)("#MeetSteam_Registered")), (S = a.Registered))
+            : 2 == i
+              ? ((_ = (0, g.we)("#MeetSteam_Registering")), (S = a.Registering))
+              : 3 == i &&
+                ((_ = (0, g.we)("#MeetSteam_Unegistering")),
+                (S = a.Unregistering)),
           c.createElement(
-            "div",
-            { className: a.SessionInstance },
-            1 == i &&
-              c.createElement(
-                "div",
-                { className: a.Registered },
-                c.createElement(
-                  "span",
-                  null,
-                  (0, g.we)("#MeetSteam_Registered"),
-                ),
-              ),
-            2 == i &&
-              c.createElement(
-                "div",
-                { className: a.Registering },
-                c.createElement(
-                  "span",
-                  null,
-                  (0, g.we)("#MeetSteam_Registering"),
-                ),
-              ),
-            3 == i &&
-              c.createElement(
-                "div",
-                { className: a.Unregistering },
-                c.createElement(
-                  "span",
-                  null,
-                  (0, g.we)("#MeetSteam_Unegistering"),
-                ),
-              ),
+            c.Fragment,
+            null,
             c.createElement(
-              "button",
-              { className: a.Button, disabled: !u, onClick: r },
+              "div",
+              { className: (0, h.A)(a.SessionInstance, S) },
               c.createElement(
                 "div",
-                { className: a.Title },
-                (0, y.$w)(new Date(1e3 * s)),
+                { className: a.StatusText },
+                c.createElement("span", null, _),
               ),
               c.createElement(
-                "div",
-                { className: a.TimeFrame },
-                (0, y.Vx)(s, o),
-              ),
-            ),
-            d < 1
-              ? c.createElement(
+                "button",
+                { className: a.Button, disabled: !p, onClick: r },
+                c.createElement(
                   "div",
-                  { className: a.SoldOut },
-                  (0, g.we)("#MeetSteam_SoldOut"),
-                )
-              : c.createElement(
-                  "div",
-                  { className: a.MaxSize },
-                  (0, g.Yp)("#MeetSteam_Spot", d.toLocaleString()),
+                  { className: a.Title },
+                  (0, y.$w)(new Date(1e3 * o)),
                 ),
-          ),
+                c.createElement(
+                  "div",
+                  { className: a.TimeFrame },
+                  (0, y.Vx)(o, m),
+                ),
+              ),
+              s ||
+                c.createElement(
+                  c.Fragment,
+                  null,
+                  " ",
+                  u < 1
+                    ? c.createElement(
+                        "div",
+                        { className: a.SoldOut },
+                        (0, g.we)("#MeetSteam_SoldOut"),
+                      )
+                    : c.createElement(
+                        "div",
+                        { className: a.MaxSize },
+                        (0, g.Yp)("#MeetSteam_Spot", u.toLocaleString()),
+                      ),
+                  " ",
+                ),
+            ),
+          )
         );
       }
       function z() {
@@ -18257,7 +18266,8 @@
           D = d || T,
           M = (0, l.q3)(() => A.Get().BHaveSelectionsChanged()),
           R = (0, l.q3)(() => A.Get().BIsAddingOrChangingSelections()),
-          k = (0, l.q3)(() =>
+          k = (0, l.q3)(() => A.Get().BHasAlreadyRegistered()),
+          F = (0, l.q3)(() =>
             A.Get()
               .GetSelectedGroups()
               .reduce((e, r) => {
@@ -18293,7 +18303,9 @@
             c.createElement(
               "p",
               null,
-              (0, g.we)("#MeetSteam_CompleteRegistration_Desc"),
+              k
+                ? (0, g.we)("#MeetSteam_UpdateRegistration_Desc")
+                : (0, g.we)("#MeetSteam_CompleteRegistration_Desc"),
             ),
             i &&
               c.createElement(
@@ -18303,7 +18315,9 @@
                   c.createElement(
                     v.jn,
                     { disabled: !M, onClick: () => E(() => f(!0)) },
-                    (0, g.we)("#MeetSteam_CompleteRegistration"),
+                    k
+                      ? (0, g.we)("#MeetSteam_UpdateRegistration")
+                      : (0, g.we)("#MeetSteam_CompleteRegistration"),
                   ),
                 D &&
                   c.createElement(_.t, {
@@ -18319,7 +18333,7 @@
                       y(!0), (await A.Get().Save(e)) || I(), b.refetch(), y(!1);
                     },
                     fnHideModal: () => f(!1),
-                    nMaxPerTeam: k,
+                    nMaxPerTeam: F,
                     bAddingOrChangingSessions: R,
                   }),
                 w &&

@@ -296,7 +296,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 ._3l7NrcIIw_fedlHdVwJMVE {
   position: relative;
-  width: 30%;
+  flex-grow: 1;
 }
 ._3PGiW8qQcZDfnK9rOz7sjY {
   position: absolute;
@@ -325,4 +325,11 @@ button.DialogButton.JBYdBhACB7UzXP4l_tpF2 {
 }
 ._3wHfIq4f1KlUL4-fKL0jLv > div {
   margin-right: 8px;
+}
+._3WxO3z6DufUbRu-axJjjqp.DialogTextInputBase {
+  width: 100%;
+  padding: 11px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
 }
