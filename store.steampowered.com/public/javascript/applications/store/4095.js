@@ -20885,8 +20885,9 @@
               new Map(),
             ),
           ),
-          p = F(0, r.clanSteamID.GetAccountID(), r.GID, new j.b(o.iA.steamid)),
-          _ = p.isSuccess && !!p.data.allow_registration_if_full;
+          p = new j.b(o.iA.steamid ? o.iA.steamid : null),
+          _ = F(0, r.clanSteamID.GetAccountID(), r.GID, p),
+          h = _.isSuccess && !!_.data.allow_registration_if_full;
         if (!s.isSuccess || (n && o.iA.accountid))
           return m.createElement(P.t, {
             size: "medium",
@@ -20919,7 +20920,7 @@
                     ),
                   nGuestReservations: i?.guest_count || 0,
                   eRegistrationStatus: n,
-                  bAllowedToRegisterIfFull: _,
+                  bAllowedToRegisterIfFull: h,
                 }),
               ),
               o && m.createElement(le, null),
