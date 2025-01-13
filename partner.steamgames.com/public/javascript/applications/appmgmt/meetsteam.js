@@ -48,9 +48,9 @@
         g = n(45737),
         p = n.n(g),
         h = n(24484),
-        v = n(56545),
-        _ = n(85737),
-        S = n(64753),
+        S = n(56545),
+        v = n(85737),
+        _ = n(64753),
         f = n(41735),
         y = n.n(f),
         I = n(20194),
@@ -84,9 +84,9 @@
         return (0, I.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
-            const n = v.w.Init(_.q3);
+            const n = S.w.Init(v.q3);
             n.Body().set_clan_event_gid(t);
-            const a = await _.ZK.GetRegistrations(e, n);
+            const a = await v.ZK.GetRegistrations(e, n);
             return a.BSuccess()
               ? a
                   .Body()
@@ -148,8 +148,8 @@
           [u, d] = r.useState(""),
           [E, g] = r.useState(""),
           [p, h] = r.useState(!1),
-          v = X(),
-          _ = (0, I.I)({
+          S = X(),
+          v = (0, I.I)({
             queryKey: ["MeetSteamInviteDirectDialog", n, o],
             queryFn: async () => {
               const e = {
@@ -157,7 +157,7 @@
                   gid: n,
                   type: 6,
                 },
-                t = await V.Nl.GetUserActionData(v, e);
+                t = await V.Nl.GetUserActionData(S, e);
               return t.BSuccess() && t.Body().jsondata()
                 ? JSON.parse(t.Body().jsondata())
                 : {};
@@ -165,17 +165,17 @@
             enabled: Boolean(n) && o > 0,
           });
         r.useEffect(() => {
-          _.isLoading ||
-            (_.isSuccess &&
-              (d(_.data.partner_id ? _.data.partner_id.toString() : ""),
-              g(_.data.email_override ?? ""),
-              h(_.data.allow_registration_if_full ?? !1)));
-        }, [_.isLoading, _.isSuccess, _.data]);
+          v.isLoading ||
+            (v.isSuccess &&
+              (d(v.data.partner_id ? v.data.partner_id.toString() : ""),
+              g(v.data.email_override ?? ""),
+              h(v.data.allow_registration_if_full ?? !1)));
+        }, [v.isLoading, v.isSuccess, v.data]);
         return r.createElement(
           F.o0,
           {
             strTitle: "Invite User",
-            bOKDisabled: !o || a || _.isLoading,
+            bOKDisabled: !o || a || v.isLoading,
             onOK: async () => {
               l(!0);
               const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
@@ -194,7 +194,7 @@
                 r = a && 1 == a.success;
               r || i("We hit error during invite, check console: " + a?.msg),
                 l(!1),
-                _.refetch(),
+                v.refetch(),
                 r && t();
             },
             onCancel: t,
@@ -212,7 +212,7 @@
                 value: o,
               }),
               0 != o &&
-                !_.isLoading &&
+                !v.isLoading &&
                 r.createElement(
                   r.Fragment,
                   null,
@@ -242,7 +242,7 @@
               position: "center",
               string: (0, U.we)("#Saving"),
             }),
-          _.isLoading &&
+          v.isLoading &&
             r.createElement(k.t, {
               size: "small",
               position: "center",
@@ -587,7 +587,7 @@
             queryKey: ["useMeetSteamAllRegistrationStatus", e],
             queryFn: () =>
               (async function (e, t) {
-                const n = v.w.Init(V.j3);
+                const n = S.w.Init(V.j3);
                 n.Body().set_gids([t]), n.Body().set_type(6);
                 const a = await V.Nl.GetMultipleUserActionData(e, n);
                 if (!a.BSuccess())
@@ -820,9 +820,7 @@
             return (
               i.jsondata.meet_steam_groups?.forEach((t) => {
                 t.sessions.forEach((n, a) => {
-                  0 == a
-                    ? e.push({ group: t, session: n })
-                    : e.push({ session: n });
+                  e.push({ group: t, session: n, firstSession: 0 == a });
                 });
               }),
               e
@@ -876,9 +874,9 @@
                   r.Fragment,
                   null,
                   r.createElement(fe, { gid: t }),
-                  r.createElement(_e, { gid: t }),
                   r.createElement(ve, { gid: t }),
                   r.createElement(Se, { gid: t }),
+                  r.createElement(_e, { gid: t }),
                 ),
             ),
           ),
@@ -952,6 +950,7 @@
                         gid: t,
                         session: e.session,
                         rgAvailability: s,
+                        firstSession: e.firstSession,
                       }),
                     ),
                   ),
@@ -960,9 +959,9 @@
           ),
         );
       }
-      function ve(e) {
+      function Se(e) {
         const { gid: t } = e,
-          [n, a, l] = (0, S.uD)();
+          [n, a, l] = (0, _.uD)();
         return r.createElement(
           "div",
           null,
@@ -992,9 +991,9 @@
           ),
         );
       }
-      function _e(e) {
+      function ve(e) {
         const { gid: t } = e,
-          [n, a, l] = (0, S.uD)();
+          [n, a, l] = (0, _.uD)();
         return r.createElement(
           "div",
           null,
@@ -1020,9 +1019,9 @@
           ),
         );
       }
-      function Se(e) {
+      function _e(e) {
         const { gid: t } = e,
-          [n, a, l] = (0, S.uD)();
+          [n, a, l] = (0, _.uD)();
         return r.createElement(
           "div",
           null,
@@ -1064,11 +1063,11 @@
               onClick: async (e) => {
                 e.preventDefault(), e.stopPropagation(), l(!0);
                 const a = await (async function (e, t) {
-                  const n = v.w.Init(_.VI),
+                  const n = S.w.Init(v.VI),
                     a = B.b.InitFromClanID((0, P.H7)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(a.ConvertTo64BitString());
-                  const r = await _.ZK.TestFireEmails(e, n);
+                  const r = await v.ZK.TestFireEmails(e, n);
                   return console.log("test fire", r), r.GetEResult();
                 })(n, t);
                 i(a);
@@ -1109,21 +1108,27 @@
         );
       }
       function ye(e) {
-        const { gid: t, group: n, rgAvailability: a, session: l } = e,
-          s = U.NT.GetWithFallback(n?.localized_session_title, 0),
-          i = U.NT.GetWithFallback(n?.localized_session_description, 0),
-          o = a?.find((e) => e.session_id == l.id),
-          [c, m, d] = (0, S.uD)(),
-          E = C((0, R.a)(), t, n?.group_id);
+        const {
+            gid: t,
+            group: n,
+            rgAvailability: a,
+            session: l,
+            firstSession: s = !0,
+          } = e,
+          i = U.NT.GetWithFallback(n?.localized_session_title, 0),
+          o = U.NT.GetWithFallback(n?.localized_session_description, 0),
+          c = a?.find((e) => e.session_id == l.id),
+          [m, d, E] = (0, _.uD)(),
+          g = C((0, R.a)(), t, n?.group_id);
         return r.createElement(
           r.Fragment,
           null,
-          Boolean(n)
+          s && Boolean(n)
             ? r.createElement(
                 "td",
                 null,
-                s,
-                r.createElement(O.o, { tooltip: i }),
+                i,
+                r.createElement(O.o, { tooltip: o }),
               )
             : r.createElement("td", null),
           r.createElement(
@@ -1140,28 +1145,28 @@
           r.createElement(
             "td",
             null,
-            o?.guest_count || 0,
+            c?.guest_count || 0,
             " / ",
             l.max_capacity,
           ),
           r.createElement(
             "td",
             null,
-            E.isSuccess &&
+            g.isSuccess &&
               r.createElement(
                 r.Fragment,
                 null,
-                E.data?.filter((e) => e.session_id == l.id).length,
+                g.data?.filter((e) => e.session_id == l.id).length,
               ),
           ),
           r.createElement(
             "td",
             null,
-            E.isSuccess &&
+            g.isSuccess &&
               r.createElement(
                 r.Fragment,
                 null,
-                E.data
+                g.data
                   ?.filter((e) => e.session_id == l.id)
                   .reduce((e, t) => e + t.guests_registered - 1, 0),
               ),
@@ -1169,19 +1174,19 @@
           r.createElement(
             "td",
             null,
-            r.createElement(q.$n, { onClick: m }, "Details"),
+            r.createElement(q.$n, { onClick: d }, "Details"),
             r.createElement(
               u.tH,
               null,
               r.createElement(
                 L.E,
-                { active: c },
+                { active: m },
                 r.createElement(de, {
                   gid: t,
-                  title: s,
+                  title: i,
                   group: n,
                   session: l,
-                  hideModal: d,
+                  hideModal: E,
                 }),
               ),
             ),
