@@ -109,6 +109,7 @@
         MY: () => d,
         UA: () => h,
         Yd: () => f,
+        qG: () => y,
         rN: () => p,
         vh: () => u,
       });
@@ -259,6 +260,9 @@
       }
       function f(e) {
         return m.Get().GetPartnerInfo(e);
+      }
+      function y(e) {
+        return m.Get().LoadPartnerInfo(e);
       }
       (0, n.Cg)([c.o], m.prototype, "FindPartnerByName", null);
     },

@@ -13949,6 +13949,13 @@
         (0, n.Cg)([p.oI], E.prototype, "DeletePlanFromMemory", null),
         (0, n.Cg)([p.oI], E.prototype, "RefreshPlans", null);
     },
+    22385: (e, t, a) => {
+      "use strict";
+      function n(e) {
+        return "takeover" == e.intention || e.takeover_ids?.[0]?.length > 0;
+      }
+      a.d(t, { o: () => n });
+    },
     75186: (e, t, a) => {
       "use strict";
       a.d(t, { l: () => d });
@@ -54268,7 +54275,7 @@
     },
     20499: (e, t, a) => {
       "use strict";
-      a.d(t, { w: () => J, _: () => X });
+      a.d(t, { w: () => X, _: () => Q });
       var n = a(98019),
         r = a(67239),
         i = a(16811),
@@ -54314,22 +54321,23 @@
       }
       var M = a(48996),
         A = a(52625),
-        k = a(19367),
-        R = a.n(k),
-        P = a(21228),
-        N = a(92757),
-        G = a(44165),
-        O = a(30470),
-        F = a(2317),
-        L = a(98459),
-        U = a(32754);
-      const z = (0, P.ye)(R());
-      function x(e) {
+        k = a(22385),
+        R = a(19367),
+        P = a.n(R),
+        N = a(21228),
+        G = a(92757),
+        O = a(44165),
+        F = a(32754),
+        L = a(30470),
+        U = a(2317),
+        z = a(98459);
+      const x = (0, N.ye)(P());
+      function q(e) {
         const t = Math.floor(e.getTime() / 1e3) + 86400;
-        if (G.HD.GetTimeNowWithOverride() > t)
+        if (O.HD.GetTimeNowWithOverride() > t)
           return { className: "DayInThePast" };
       }
-      function q(e) {
+      function W(e) {
         const {
             viewDate: t,
             fnSetMonthDelta: a,
@@ -54337,7 +54345,7 @@
             fnSkipLoadingDailyDealPages: i,
           } = e,
           [s, c] = o.useState(() => T(r.wv, r.lt)),
-          m = (0, N.W6)(),
+          m = (0, G.W6)(),
           d = (0, l.jo)(),
           u = (0, o.useMemo)(
             () =>
@@ -54361,7 +54369,7 @@
         }, [s, i]);
         const [_, g] = o.useState(12),
           h = (0, l.PZ)(_, r.vm);
-        _ < 6 * H(new Date(), t) && g(6 * H(new Date(), t));
+        _ < 6 * V(new Date(), t) && g(6 * V(new Date(), t));
         const S = (0, o.useMemo)(() => {
           const e = u
             .filter((e) => s.size == r.QP.length || s.has(e.type))
@@ -54413,9 +54421,7 @@
             s.forEach((e) => {
               const t = r.Qo.get(e);
               h?.get(e)?.forEach((n) => {
-                const i = n.rgPlans.filter(
-                    (e) => "takeover" != e.intention && !e.takeover_ids,
-                  ),
+                const i = n.rgPlans.filter((e) => !(0, k.o)(e)),
                   s = i.length < t.nMaxSlots,
                   l = { week: n };
                 a.push({
@@ -54438,23 +54444,23 @@
         return o.createElement(
           "div",
           { className: C().CalendarCtn },
-          o.createElement(j, {
+          o.createElement(H, {
             rgVisiblePromotionTypes: s,
             fnSetVisiblePromotionTypes: c,
             rgAvailableTypes: r.QP,
           }),
-          o.createElement(P.Vv, {
+          o.createElement(N.Vv, {
             views: ["month"],
             popup: !0,
             defaultView: "month",
-            localizer: z,
+            localizer: x,
             date: t,
             onNavigate: (e) => {
-              const t = H(new Date(), e);
-              _ < 5 * t && g(5 * t), a(H(new Date(), e));
+              const t = V(new Date(), e);
+              _ < 5 * t && g(5 * t), a(V(new Date(), e));
             },
             events: S,
-            dayPropGetter: x,
+            dayPropGetter: q,
             style: { height: 2400 },
             showMultiDayTimes: !0,
             onSelectEvent: (e, t) => {
@@ -54462,18 +54468,18 @@
               if (a.dailyDealGid)
                 t.ctrlKey || t.metaKey
                   ? window.open(
-                      `${O.TS.PARTNER_BASE_URL}/promotion/${F.PromotionRoutes.DailyDealEditor(a.dailyDealGid)}`,
+                      `${L.TS.PARTNER_BASE_URL}/promotion/${U.PromotionRoutes.DailyDealEditor(a.dailyDealGid)}`,
                       "_blank",
                     )
-                  : m.push(F.PromotionRoutes.DailyDealEditor(a.dailyDealGid));
+                  : m.push(U.PromotionRoutes.DailyDealEditor(a.dailyDealGid));
               else if (a.promotionPlan) {
                 const a = e.resource.promotionPlan;
                 t.ctrlKey || t.metaKey
                   ? window.open(
-                      `${O.TS.PARTNER_BASE_URL}/promotion/${F.PromotionRoutes.PromotionPlanEditor(a.id)}`,
+                      `${L.TS.PARTNER_BASE_URL}/promotion/${U.PromotionRoutes.PromotionPlanEditor(a.id)}`,
                       "_blank",
                     )
-                  : m.push(F.PromotionRoutes.PromotionPlanEditor(a.id));
+                  : m.push(U.PromotionRoutes.PromotionPlanEditor(a.id));
               } else
                 a.week &&
                   (0, E.pg)(
@@ -54486,12 +54492,12 @@
                     window,
                   );
             },
-            eventPropGetter: (e) => (0, L.LK)(e.resource),
-            components: { event: W },
+            eventPropGetter: (e) => (0, z.LK)(e.resource),
+            components: { event: j },
           }),
         );
       }
-      const W = (e) => {
+      const j = (e) => {
         const t = e.event.resource;
         return o.createElement(
           "span",
@@ -54504,7 +54510,7 @@
           void 0 !== t.bIsChecked && (t.bIsChecked ? "🗹 " : "☐ "),
           t.sTooltip &&
             o.createElement(
-              U.he,
+              F.he,
               {
                 className: C().EventNotesTooltipIndicator,
                 toolTipContent: t.sTooltip,
@@ -54514,7 +54520,7 @@
           e.title,
         );
       };
-      function j(e) {
+      function H(e) {
         const {
           rgVisiblePromotionTypes: t,
           fnSetVisiblePromotionTypes: a,
@@ -54546,20 +54552,20 @@
             ),
         );
       }
-      function H(e, t) {
+      function V(e, t) {
         return (
           t.getMonth() - e.getMonth() + 12 * (t.getFullYear() - e.getFullYear())
         );
       }
-      var V = a(98362),
-        K = a(28268),
-        Y = a(22797),
-        $ = a(61859);
-      function J(e) {
+      var K = a(98362),
+        Y = a(28268),
+        $ = a(22797),
+        J = a(61859);
+      function X(e) {
         const t = (0, c.z0)(e);
         return t?.m_strPlayerName || t?.m_strAccountName || "" + e;
       }
-      function X(e) {
+      function Q(e) {
         const { fnResetDirtyPlan: t } = (0, s.Gr)(),
           { fnResetDirtyPlanInputPipeline: a } = (0, i.RX)(),
           [m, g] = (0, _.QD)("tab", "current"),
@@ -54593,7 +54599,7 @@
                 : G,
             [G, B],
           ),
-          [F, L, U, z, x, W, j, H, V] = (0, o.useMemo)(() => {
+          [F, L, U, z, x, q, j, H, V] = (0, o.useMemo)(() => {
             const e = new Array(),
               t = new Array(),
               a = new Array(),
@@ -54611,13 +54617,13 @@
                   (d =
                     m.admin_notes?.toLocaleLowerCase().indexOf(e) >= 0 ||
                     m.name?.toLocaleLowerCase().indexOf(e) >= 0 ||
-                    J(m.owner_account_id || m.creator_account_id)
+                    X(m.owner_account_id || m.creator_account_id)
                       .toLocaleLowerCase()
                       .indexOf(e) >= 0 ||
-                    J(m.artwork_owner_account_id)
+                    X(m.artwork_owner_account_id)
                       .toLocaleLowerCase()
                       .indexOf(e) >= 0 ||
-                    J(m.operator_account_id).toLocaleLowerCase().indexOf(e) >=
+                    X(m.operator_account_id).toLocaleLowerCase().indexOf(e) >=
                       0 ||
                     ("" + m.store_item_id).indexOf(e) >= 0),
                     d && o.push(m.id);
@@ -54656,7 +54662,7 @@
               [e, t, a, n, r, i, s, c, o]
             );
           }, [O, b]),
-          Y = (e) => g(e.key),
+          K = (e) => g(e.key),
           $ = [
             {
               name: "Calendar",
@@ -54667,7 +54673,7 @@
                 o.createElement(
                   w.u,
                   { bSkipLoadingPackages: A },
-                  o.createElement(q, {
+                  o.createElement(W, {
                     viewDate: N,
                     fnSetMonthDelta: P,
                     nOwnerAccountToFilter: B,
@@ -54675,7 +54681,7 @@
                   }),
                 ),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Tentative (${F?.length || 0})`,
@@ -54684,12 +54690,12 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
+                o.createElement(Y.U, {
                   planIDs: F,
                   nUrgentWindowInSeconds: 6 * f.Kp.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Awaiting Partner (${L?.length || 0})`,
@@ -54699,12 +54705,12 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
+                o.createElement(Y.U, {
                   planIDs: L,
                   nUrgentWindowInSeconds: 6 * f.Kp.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Delivery Ops Review (${U?.length || 0})`,
@@ -54714,13 +54720,13 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
+                o.createElement(Y.U, {
                   planIDs: U,
                   bAllowAutoRefresh: !0,
                   sortByUnclaimedField: "operator_account_id",
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Awaiting Design (${z?.length || 0})`,
@@ -54728,14 +54734,14 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
+                o.createElement(Y.U, {
                   planIDs: z,
                   sortByUnclaimedField: "artwork_owner_account_id",
                   bAllowAutoRefresh: !0,
                   nUrgentWindowInSeconds: 1 * f.Kp.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Awaiting Partner Approvals (${x?.length || 0})`,
@@ -54745,22 +54751,22 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, { planIDs: x }),
+                o.createElement(Y.U, { planIDs: x }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
-              name: `Waiting on Loc (${W?.length || 0})`,
+              name: `Waiting on Loc (${q?.length || 0})`,
               key: "await_locteam",
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
-                  planIDs: W,
+                o.createElement(Y.U, {
+                  planIDs: q,
                   nUrgentWindowInSeconds: 1 * f.Kp.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Awaiting Ops Review (${j?.length || 0})`,
@@ -54768,13 +54774,13 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
+                o.createElement(Y.U, {
                   planIDs: j,
                   bAllowAutoRefresh: !0,
                   sortByUnclaimedField: "operator_account_id",
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
             {
               name: `Awaiting Live Decision (${H?.length || 0})`,
@@ -54782,13 +54788,13 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, {
+                o.createElement(Y.U, {
                   planIDs: H,
                   bAllowAutoRefresh: !1,
                   sortByUnclaimedField: "operator_account_id",
                 }),
               ),
-              onClick: Y,
+              onClick: K,
             },
           ];
         return (
@@ -54799,9 +54805,9 @@
               contents: o.createElement(
                 p.tH,
                 null,
-                o.createElement(K.U, { planIDs: V }),
+                o.createElement(Y.U, { planIDs: V }),
               ),
-              onClick: Y,
+              onClick: K,
             }),
           o.createElement(
             "div",
@@ -54844,19 +54850,19 @@
                   },
                   "Create New Promotion",
                 ),
-                o.createElement(Z, { nAccountID: B, fnSetAccountFilter: M }),
+                o.createElement(ee, { nAccountID: B, fnSetAccountFilter: M }),
               ),
             ),
             o.createElement("hr", { className: "VO" }),
             o.createElement(S.V, { tabs: $ }),
             o.createElement("div", { className: h().ClearThings }),
             o.createElement("hr", { className: "VO" }),
-            o.createElement(Q, null),
-            o.createElement(ee, null),
+            o.createElement(Z, null),
+            o.createElement(te, null),
           )
         );
       }
-      function Q(e) {
+      function Z(e) {
         const [t, a] = (0, o.useState)((0, l.Sf)()),
           [n, r] = (0, o.useState)(!1);
         return o.createElement(
@@ -54872,16 +54878,16 @@
             },
             "Load 6 More Previous Months",
           ),
-          n && o.createElement(Y.t, { string: (0, $.we)("#Loading") }),
+          n && o.createElement($.t, { string: (0, J.we)("#Loading") }),
         );
       }
-      function Z(e) {
-        return o.createElement(V.zT, {
+      function ee(e) {
+        return o.createElement(K.zT, {
           ...e,
           rgAdditional: [{ data: null, label: "Show All Users Plan" }],
         });
       }
-      function ee(e) {
+      function te(e) {
         return o.createElement(
           "div",
           { className: C().OtherLinks },
@@ -62669,11 +62675,11 @@
     23247: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Op: () => G,
-        T2: () => L,
-        h1: () => U,
-        pJ: () => O,
-        qO: () => F,
+        Op: () => O,
+        T2: () => U,
+        h1: () => z,
+        pJ: () => F,
+        qO: () => L,
       });
       var n = a(73523),
         r = a(67239),
@@ -62706,8 +62712,9 @@
         k = a(83854),
         R = a(18345),
         P = a(46861),
-        N = a(87937);
-      function G(e) {
+        N = a(87937),
+        G = a(22385);
+      function O(e) {
         const {
             rtInitialDate: t,
             initialType: a,
@@ -62715,7 +62722,7 @@
             rtInitialEndDate: h,
           } = e,
           [E, G] = m.useState(a || "saleevent"),
-          [F, U] = m.useState(""),
+          [O, L] = m.useState(""),
           [z, x] = m.useState((0, C.D6)(t)),
           [q, W] = m.useState((0, C.E2)(t, h)),
           [j, H] = m.useState(!1),
@@ -62793,7 +62800,7 @@
               bAllowFullSize: !0,
               onCancel: g,
               bOKDisabled:
-                0 == F.trim().length ||
+                0 == O.trim().length ||
                 ee ||
                 !(0, C.tm)(E, z, q) ||
                 (J && !we && !j),
@@ -62832,7 +62839,7 @@
                 }
                 if (ce && (we || j) && !Q && !Ce) {
                   const e = (0, P.s)(
-                    F,
+                    O,
                     "Weekend Deal",
                     z,
                     q,
@@ -62859,7 +62866,7 @@
                     );
                 }
                 if (de && (we || j) && !Q && !Ce) {
-                  const e = (0, M.D)(F, 2, z, q, "#msg_action_details", we);
+                  const e = (0, M.D)(O, 2, z, q, "#msg_action_details", we);
                   await $(e, !0)
                     .then((e) => {
                       e
@@ -62879,7 +62886,7 @@
                 !pe ||
                   Q ||
                   Ce ||
-                  (await Y(n.ii.k_ConfigPage_Takeover, F, z, q)
+                  (await Y(n.ii.k_ConfigPage_Takeover, O, z, q)
                     .then((e) => {
                       e
                         ? (i = e)
@@ -62896,7 +62903,7 @@
                   !ge ||
                     Q ||
                     Ce ||
-                    (await Y(n.ii.k_ConfigPage_Takeunder, F, z, q)
+                    (await Y(n.ii.k_ConfigPage_Takeunder, O, z, q)
                       .then((e) => {
                         e
                           ? (s = e)
@@ -62912,7 +62919,7 @@
                       )),
                   De(
                     E,
-                    F,
+                    O,
                     z,
                     q,
                     e,
@@ -62961,7 +62968,7 @@
                   ),
                 ),
               m.createElement(p.JU, null, "Choose Promotion Type:"),
-              m.createElement(O, {
+              m.createElement(F, {
                 type: E,
                 setType: (e) => {
                   "assetrequest" == e && oe(!1), G(e);
@@ -62972,10 +62979,10 @@
                 label: "Promotion Name",
                 tooltip:
                   "Internal name used for us to identify the promotion, not visible outside of this tool",
-                value: F,
-                onChange: (e) => U(e?.currentTarget?.value || ""),
+                value: O,
+                onChange: (e) => L(e?.currentTarget?.value || ""),
               }),
-              m.createElement(L, {
+              m.createElement(U, {
                 type: E,
                 rtStartTime: z,
                 setStartTime: x,
@@ -63098,7 +63105,7 @@
           )
         );
       }
-      function O(e) {
+      function F(e) {
         const { type: t, setType: a } = e,
           n = (0, m.useMemo)(
             () =>
@@ -63161,7 +63168,7 @@
           onChange: (e) => a(e.data),
         });
       }
-      function F(e) {
+      function L(e) {
         const { intention: t, setIntention: a } = e,
           n = (0, m.useMemo)(() => {
             const e = new Array();
@@ -63223,7 +63230,7 @@
           onChange: (e) => a(e.data),
         });
       }
-      function L(e) {
+      function U(e) {
         const {
           type: t,
           rtStartTime: a,
@@ -63237,7 +63244,7 @@
             return m.createElement(
               "div",
               { className: (0, f.A)(k.DateCtn, "DateCtn") },
-              m.createElement(U, { ...e }),
+              m.createElement(z, { ...e }),
               " ",
             );
         }
@@ -63262,7 +63269,7 @@
           }),
         );
       }
-      function U(e) {
+      function z(e) {
         const {
             type: t,
             rtStartTime: a,
@@ -63303,9 +63310,7 @@
                   const n = new Date(1e3 * (t.rtWeekStart + e.rtStartModifier));
                   return n.setHours(10), Math.floor(n.getTime() / 1e3) == a;
                 }),
-                i = n?.rgPlans.filter(
-                  (e) => "takeover" != e.intention && !e.takeover_ids,
-                ),
+                i = n?.rgPlans.filter((e) => !(0, G.o)(e)),
                 l = e.nMaxSlots - i?.length;
               s(l <= 0);
             }
