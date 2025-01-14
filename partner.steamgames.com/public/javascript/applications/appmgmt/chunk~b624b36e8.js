@@ -3015,8 +3015,12 @@
           }),
         );
       }
-      function r(e) {
-        return e ? e.toLocaleString(n.pf.GetPreferredLocales()) : "" + e;
+      function r(e, t = 0) {
+        let i;
+        return (
+          t && (i = { maximumFractionDigits: t }),
+          e ? e.toLocaleString(n.pf.GetPreferredLocales(), i) : "" + e
+        );
       }
       function a(e) {
         return e > 1e9
