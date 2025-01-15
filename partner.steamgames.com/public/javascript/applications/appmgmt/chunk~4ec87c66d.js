@@ -13228,7 +13228,8 @@
         ic: () => w,
         jo: () => S,
         lK: () => y,
-        no: () => A,
+        no: () => k,
+        ru: () => A,
         vv: () => v,
       });
       var n = a(34629),
@@ -13551,9 +13552,7 @@
           const C = {
             admin_jsondata: JSON.stringify(D),
             partner_jsondata: JSON.stringify({}),
-            partner_readonly_jsondata: JSON.stringify(
-              this.GeneratePartnerReadonlyFromAdminJson(D),
-            ),
+            partner_readonly_jsondata: JSON.stringify(A(D)),
             partner_writable_jsondata: JSON.stringify({}),
             input_jsondata: JSON.stringify(S || {}),
             assets_readonly_jsondata: JSON.stringify({}),
@@ -13593,23 +13592,6 @@
             null
           );
         }
-        GeneratePartnerReadonlyFromAdminJson(e) {
-          return {
-            id: e.id,
-            name: e.name,
-            start_date: e.start_date,
-            end_date: e.end_date,
-            type: e.type,
-            store_item_type: e.store_item_type,
-            store_item_id: e.store_item_id,
-            discount_event_id: e.discount_event_id,
-            opt_in_id: e.opt_in_id,
-            advertising_appid: e.advertising_appid,
-            asset_kit_url: e.asset_kit_url,
-            sale_clan_event_gid: e.sale_clan_event_gid,
-            sale_clan_account: e.sale_clan_account,
-          };
-        }
         async UpdateAdminPlan(e, t, a, n) {
           const s = r.w.Init(i.DY),
             l = this.m_mapPlans.get(t.id);
@@ -13636,9 +13618,7 @@
                 ? t.admin_accounts.push(g.iA.accountid)
                 : (t.admin_accounts = [g.iA.accountid])),
             (l.admin_jsondata = JSON.stringify(t)),
-            (l.partner_readonly_jsondata = JSON.stringify(
-              this.GeneratePartnerReadonlyFromAdminJson(t),
-            )),
+            (l.partner_readonly_jsondata = JSON.stringify(A(t))),
             a && (l.partner_jsondata = JSON.stringify(a)),
             n &&
               (t.discount_event_id != n.asset_request_discount_event_id_clone &&
@@ -13893,7 +13873,28 @@
       function M() {
         return E.Get().GetLargestPastMonthLoaded();
       }
-      function A() {
+      function A(e) {
+        return {
+          id: e.id,
+          name: e.name,
+          start_date: e.start_date,
+          end_date: e.end_date,
+          type: e.type,
+          store_item_type: e.store_item_type,
+          store_item_id: e.store_item_id,
+          discount_event_id: e.discount_event_id,
+          opt_in_id: e.opt_in_id,
+          advertising_appid: e.advertising_appid,
+          asset_kit_url: e.asset_kit_url,
+          sale_clan_event_gid: e.sale_clan_event_gid,
+          sale_clan_account: e.sale_clan_account,
+          artwork_completed_time: e.artwork_completed_time,
+          artwork_localization_task_id: e.artwork_localization_task_id,
+          delivery_review_time: e.delivery_review_time,
+          associated_asset_url: e.associated_asset_url,
+        };
+      }
+      function k() {
         const [e, t] = (0, s.useState)(() => E.Get().CreateMapByStoreItem());
         return (
           (0, p.hL)(E.Get().GetListChangeCallback(), () =>
@@ -47189,7 +47190,7 @@
         $ = a(80675),
         J = a(89582),
         X = a(2317),
-        Q = a(5046),
+        Q = a(15755),
         Z = a(41720),
         ee = a(62792),
         te = a(45325);
@@ -54586,7 +54587,7 @@
           t.getMonth() - e.getMonth() + 12 * (t.getFullYear() - e.getFullYear())
         );
       }
-      var K = a(5046),
+      var K = a(15755),
         Y = a(28268),
         $ = a(22797),
         J = a(61859);
@@ -62746,6 +62747,189 @@
         );
       }
     },
+    12070: (e, t, a) => {
+      "use strict";
+      a.d(t, { D: () => _, I: () => h });
+      var n = a(90626),
+        r = a(71541),
+        i = a(8905),
+        s = a(738),
+        l = a(56011),
+        o = a(78327),
+        c = a(70065),
+        m = a(60341),
+        d = a(32754),
+        u = a(98076),
+        p = a(15755);
+      function _(e) {
+        const { oEditablePlan: t } = e;
+        return t.BHasArtworkOwner()
+          ? t.BIsArtworkCompleted()
+            ? n.createElement(
+                n.Fragment,
+                null,
+                n.createElement(
+                  "div",
+                  { className: u.OwnerColCtn },
+                  n.createElement(r.JU, null, "Designer"),
+                  n.createElement(
+                    "div",
+                    { className: u.OwnerCtn },
+                    n.createElement(
+                      "div",
+                      null,
+                      n.createElement(i.p, { accountID: t.GetArtworkOwner() }),
+                    ),
+                  ),
+                  n.createElement("br", null),
+                  n.createElement(r.JU, null, "Completed:"),
+                  n.createElement(p.P8, { rtime: t.GetArtworkCompleteTime() }),
+                ),
+              )
+            : n.createElement(
+                n.Fragment,
+                null,
+                n.createElement(
+                  "div",
+                  { className: u.OwnerColCtn },
+                  n.createElement(
+                    r.JU,
+                    null,
+                    "Designer ",
+                    n.createElement(
+                      d.he,
+                      {
+                        toolTipContent:
+                          "This person will be downloading assets, creating necessary banners, and routing assets for localization.",
+                      },
+                      "(?)",
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: u.OwnerCtn },
+                    n.createElement(
+                      "div",
+                      null,
+                      n.createElement(i.p, { accountID: t.GetArtworkOwner() }),
+                    ),
+                  ),
+                  n.createElement(
+                    r.wl,
+                    {
+                      onClick: (e) =>
+                        (0, s.pg)(
+                          n.createElement(g, {
+                            oEditablePlan: t,
+                            bTakeOwnership: !1,
+                          }),
+                          (0, l.uX)(e),
+                        ),
+                    },
+                    "Clear Ownership",
+                  ),
+                  n.createElement(
+                    r.wl,
+                    {
+                      onClick: (e) =>
+                        (0, s.pg)(
+                          n.createElement(E, { oEditablePlan: t }),
+                          (0, l.uX)(e),
+                        ),
+                    },
+                    "Mark As Completed",
+                  ),
+                ),
+              )
+          : n.createElement(
+              n.Fragment,
+              null,
+              n.createElement(
+                "div",
+                { className: u.OwnerColCtn },
+                n.createElement(
+                  r.JU,
+                  null,
+                  "Designer ",
+                  n.createElement(
+                    d.he,
+                    {
+                      toolTipContent:
+                        "This person will be downloading assets, creating necessary banners, and routing assets for localization.",
+                    },
+                    "(?)",
+                  ),
+                ),
+                n.createElement(
+                  r.wl,
+                  {
+                    onClick: (e) =>
+                      (0, s.pg)(
+                        n.createElement(g, {
+                          oEditablePlan: t,
+                          bTakeOwnership: !0,
+                        }),
+                        (0, l.uX)(e),
+                      ),
+                  },
+                  "Claim",
+                ),
+              ),
+            );
+      }
+      function g(e) {
+        const { oEditablePlan: t, closeModal: a, bTakeOwnership: r } = e;
+        return n.createElement(c.Q, {
+          strTitle: r
+            ? "Claim Ownership of Production Design?"
+            : "Remove ownership of production design",
+          strDescription: r
+            ? "Do you want to cliam ownership of the artwork and localizations required for this plans promotion?"
+            : "Remove the current owner of the production design on this event?",
+          closeModal: a,
+          onOK: () => {
+            r
+              ? t.SetArtworkOwnerAccountID(o.iA.accountid)
+              : t.SetArtworkOwnerAccountID(null);
+          },
+          onCancel: a,
+        });
+      }
+      function h(e) {
+        const { oEditablePlan: t, closeModal: a, bTakeOwnership: r } = e;
+        return n.createElement(c.Q, {
+          strTitle: r
+            ? "Claim Operations Ownership?"
+            : "Remove operator ownership",
+          strDescription: r
+            ? "Do you want to cliam ownership of the operations for this plans promotion? This means reviewing and verifying all of require items are provided before the promotion needs to go live."
+            : "Remove the current owner of the operations owner this promotion plan?",
+          closeModal: a,
+          onOK: () => {
+            r
+              ? t.SetOperatorOwnerAccountID(o.iA.accountid)
+              : t.SetOperatorOwnerAccountID(null);
+          },
+          onCancel: a,
+        });
+      }
+      function E(e) {
+        const { oEditablePlan: t, closeModal: a } = e;
+        return n.createElement(
+          c.Q,
+          {
+            strTitle: "Complete the production Design",
+            strDescription:
+              "Please verify the production design aspect is completed. All of the localized artwork is uploading into each of the appropriate featuring for this plan.",
+            closeModal: a,
+            onOK: () =>
+              t.SetArtworkCompleted(Math.floor(new Date().getTime() / 1e3)),
+          },
+          n.createElement("br", null),
+          n.createElement(m.kd, { oEditablePlan: t }),
+        );
+      }
+    },
     23247: (e, t, a) => {
       "use strict";
       a.d(t, {
@@ -63930,6 +64114,357 @@
         return r(e) ? null : "Link must point to store or community";
       }
     },
+    77155: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        In: () => D,
+        VB: () => f,
+        mM: () => n,
+        oz: () => v,
+        uK: () => w,
+      });
+      var n,
+        r = a(90626),
+        i = a(71541),
+        s = a(8905),
+        l = a(738),
+        o = a(32754),
+        c = a(56011),
+        m = a(12070),
+        d = a(98076),
+        u = a(64399),
+        p = a(65946),
+        _ = a(44165),
+        g = a(52038),
+        h = a(70065),
+        E = a(30470),
+        S = a(61859),
+        y = a(91675);
+      function v(e) {
+        const { oEditablePlan: t } = e;
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.createElement(
+            "div",
+            { className: d.OwnerColCtn },
+            r.createElement(
+              i.JU,
+              null,
+              "Operations ",
+              r.createElement(
+                o.he,
+                {
+                  toolTipContent:
+                    "This person is making sure the plan is coming together and everything is reviewed and ready to run.",
+                },
+                "(?)",
+              ),
+            ),
+            Boolean(t.BHasOperatorOwner())
+              ? r.createElement(
+                  r.Fragment,
+                  null,
+                  r.createElement(
+                    "div",
+                    { className: d.OwnerCtn },
+                    r.createElement(
+                      "div",
+                      null,
+                      r.createElement(s.p, {
+                        accountID: t.GetOperatorAccountID(),
+                      }),
+                    ),
+                  ),
+                  r.createElement(
+                    i.wl,
+                    {
+                      onClick: (e) =>
+                        (0, l.pg)(
+                          r.createElement(m.I, {
+                            oEditablePlan: t,
+                            bTakeOwnership: !1,
+                          }),
+                          (0, c.uX)(e),
+                        ),
+                    },
+                    "Clear Ownership",
+                  ),
+                )
+              : r.createElement(
+                  i.wl,
+                  {
+                    onClick: (e) =>
+                      (0, l.pg)(
+                        r.createElement(m.I, {
+                          oEditablePlan: t,
+                          bTakeOwnership: !0,
+                        }),
+                        (0, c.uX)(e),
+                      ),
+                  },
+                  "Claim",
+                ),
+          ),
+        );
+      }
+      function f(e) {
+        const { oEditablePlan: t } = e,
+          a = (0, u.R5)(t.GetID()),
+          [n, s] = (0, p.q3)(() => [
+            t.GetDeliveryReviewNotes(),
+            t.GetAssociatedAssetURL(),
+          ]);
+        return (a && a.submitting_accountid && a.input_artwork_url) || s
+          ? r.createElement(
+              "div",
+              null,
+              r.createElement(b, { oEditablePlan: t }),
+              Boolean(n?.trim().length > 0) &&
+                r.createElement(
+                  "div",
+                  null,
+                  r.createElement(i.JU, null, "Operation Notes on Assets"),
+                  r.createElement("textarea", {
+                    value: n,
+                    disabled: !0,
+                    className: d.AssetNotes,
+                  }),
+                ),
+              r.createElement(i.pd, {
+                type: "text",
+                label: "Partner Provided Assets",
+                tooltip:
+                  "Asset URL submitted by the partner; the same as the one found in the asset request tab",
+                value: a.input_artwork_url || s,
+                mustBeURL: !0,
+                onChange: () => {},
+                bShowCopyAction: !0,
+              }),
+            )
+          : null;
+      }
+      function b(e) {
+        const { oEditablePlan: t } = e,
+          [a, n] = (0, p.q3)(() => [
+            t.BIsDeliveryReviewed(),
+            t.GetEndDate() < _.HD.GetTimeNowWithOverride(),
+          ]);
+        return n
+          ? null
+          : r.createElement(
+              r.Fragment,
+              null,
+              Boolean(a)
+                ? r.createElement(I, { oEditablePlan: t })
+                : r.createElement(C, { oEditablePlan: t }),
+            );
+      }
+      function w(e, t) {
+        return (0, r.useMemo)(
+          () =>
+            e.artwork_completed_time
+              ? n.k_LocalizationDone
+              : e.artwork_localization_task_id
+                ? n.k_DesignComplete
+                : e.delivery_review_time
+                  ? n.k_DeliveryReviewed
+                  : t?.submitting_rtime || e.associated_asset_url
+                    ? n.k_AssetSubmitted
+                    : n.k_AwaitingPartner,
+          [e, t],
+        );
+      }
+      function D(e) {
+        const { oEditablePlan: t } = e,
+          a = (0, u.R5)(t.GetPlan().id),
+          i = w((0, u.ru)(t.GetPlan()), a);
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.createElement("h2", null, "Asset Process"),
+          r.createElement(
+            "div",
+            { className: d.AssetTimelineCtn },
+            r.createElement(
+              "div",
+              { className: (0, g.A)(i == n.k_AssetSubmitted && d.ActiveState) },
+              "Partner Submitted",
+            ),
+            r.createElement(
+              "div",
+              {
+                className: (0, g.A)(i == n.k_DeliveryReviewed && d.ActiveState),
+              },
+              "Delivery Approved",
+            ),
+            r.createElement(
+              "div",
+              { className: (0, g.A)(i == n.k_DesignComplete && d.ActiveState) },
+              "Design Complete",
+            ),
+            r.createElement(
+              "div",
+              {
+                className: (0, g.A)(i == n.k_LocalizationDone && d.ActiveState),
+              },
+              "Localization Complete",
+            ),
+          ),
+        );
+      }
+      function C(e) {
+        const { oEditablePlan: t } = e;
+        return r.createElement(
+          "div",
+          { className: (0, g.A)(d.StatusCtn, d.Incomplete) },
+          r.createElement(
+            i.$n,
+            {
+              className: d.StatusBtn,
+              onClick: (e) =>
+                (0, l.pg)(
+                  r.createElement(B, { oEditablePlan: t, bReviewVerify: !0 }),
+                  (0, c.uX)(e),
+                ),
+            },
+            "Review Asset Delivery",
+          ),
+        );
+      }
+      function I(e) {
+        const { oEditablePlan: t } = e,
+          [a, n] = (0, p.q3)(() => [
+            t.GetDeliveryReviewTime(),
+            t.GetDeliveryReviewAccount(),
+          ]);
+        return r.createElement(
+          "div",
+          { className: (0, g.A)(d.StatusCtn, d.Complete) },
+          r.createElement(
+            "div",
+            { className: d.ReviewedCtn },
+            r.createElement(
+              "div",
+              { className: d.OwnerCtn },
+              r.createElement(
+                "div",
+                null,
+                r.createElement(s.p, { accountID: n }),
+              ),
+              r.createElement(
+                i.$n,
+                {
+                  className: d.StatusBtn,
+                  onClick: (e) =>
+                    (0, l.pg)(
+                      r.createElement(B, {
+                        oEditablePlan: t,
+                        bReviewVerify: !1,
+                      }),
+                      (0, c.uX)(e),
+                    ),
+                },
+                "Clear Asset Status",
+              ),
+            ),
+            r.createElement(
+              "div",
+              null,
+              "Reviewed: ",
+              (0, S.TW)(a),
+              "@ ",
+              (0, y.KC)(a, { bForce24HourClock: !1 }),
+            ),
+          ),
+        );
+      }
+      function B(e) {
+        const { oEditablePlan: t, closeModal: a, bReviewVerify: n } = e,
+          s = (0, u.R5)(t.GetID()),
+          [l, o] = (0, r.useState)(t.GetDeliveryReviewNotes());
+        return r.createElement(
+          h.Q,
+          {
+            strTitle: n
+              ? "Asset Delivery Review?"
+              : "Clear Assert Delivery Review Status",
+            strDescription: n
+              ? "Is the Asset Delivery Reviewed?"
+              : "Remove the asset delivery review status from this plan?",
+            closeModal: a,
+            bAllowFullSize: !0,
+            bDisableBackgroundDismiss: !0,
+            onOK: () => {
+              n
+                ? t.SetDeliveryReviewedAccountAndTime(
+                    E.iA.accountid,
+                    Math.floor(new Date().getTime() / 1e3),
+                    l,
+                  )
+                : t.ClearDeliveryReviewedStatus();
+            },
+          },
+          Boolean(n) &&
+            r.createElement(
+              r.Fragment,
+              null,
+              r.createElement(
+                "p",
+                null,
+                "Have you verified the following in their URL folder?",
+                r.createElement(
+                  "ol",
+                  null,
+                  r.createElement(
+                    "li",
+                    null,
+                    "Does it include layered PSD file",
+                  ),
+                  r.createElement("li", null, "Are assets high quality"),
+                  r.createElement("li", null, "No burned in dates"),
+                  r.createElement(
+                    "li",
+                    null,
+                    "No burned in discounts (unless publisher/franchie sales)",
+                  ),
+                  r.createElement("li", null, "Font file recommended?"),
+                  r.createElement("li", null, "No logo or trademark parade"),
+                ),
+              ),
+              r.createElement(
+                "div",
+                null,
+                "Optional: Notes for Art Team about Assets",
+              ),
+              r.createElement("textarea", {
+                cols: 120,
+                rows: 10,
+                onChange: (e) => o(e.currentTarget.value),
+                value: l,
+                autoFocus: !0,
+              }),
+              r.createElement(i.pd, {
+                type: "text",
+                label: "Partner Provided Assets",
+                tooltip:
+                  "Asset URL submitted by the partner; the same as the one found in the asset request tab",
+                value: s.input_artwork_url,
+                mustBeURL: !0,
+                onChange: () => {},
+                bShowCopyAction: !0,
+              }),
+            ),
+        );
+      }
+      !(function (e) {
+        (e[(e.k_AwaitingPartner = 0)] = "k_AwaitingPartner"),
+          (e[(e.k_AssetSubmitted = 1)] = "k_AssetSubmitted"),
+          (e[(e.k_DeliveryReviewed = 2)] = "k_DeliveryReviewed"),
+          (e[(e.k_DesignComplete = 3)] = "k_DesignComplete"),
+          (e[(e.k_LocalizationDone = 4)] = "k_LocalizationDone");
+      })(n || (n = {}));
+    },
     70065: (e, t, a) => {
       "use strict";
       a.d(t, { Q: () => c });
@@ -64556,7 +65091,7 @@
             (0, T.we)("#DailyDeals_UnsavedChanges"),
         });
       }
-      var pe = a(5046),
+      var pe = a(15755),
         _e = a(92391),
         ge = a(1305),
         he = a(32703),
@@ -66064,9 +66599,9 @@
         );
       }
     },
-    5046: (e, t, a) => {
+    15755: (e, t, a) => {
       "use strict";
-      a.d(t, { P8: () => pe, DA: () => _e, zT: () => Ee });
+      a.d(t, { P8: () => te, DA: () => ae, zT: () => ie });
       var n = a(98019),
         r = a(65946),
         i = a(90626),
@@ -66219,514 +66754,24 @@
         );
       }
       var N = a(63544),
-        G = a(70065),
-        O = a(60341),
-        F = a(98076);
-      function L(e) {
-        const { oEditablePlan: t } = e;
-        return t.BHasArtworkOwner()
-          ? t.BIsArtworkCompleted()
-            ? i.createElement(
-                i.Fragment,
-                null,
-                i.createElement(
-                  "div",
-                  { className: F.OwnerColCtn },
-                  i.createElement(m.JU, null, "Designer"),
-                  i.createElement(
-                    "div",
-                    { className: F.OwnerCtn },
-                    i.createElement(
-                      "div",
-                      null,
-                      i.createElement(_.p, { accountID: t.GetArtworkOwner() }),
-                    ),
-                  ),
-                  i.createElement("br", null),
-                  i.createElement(m.JU, null, "Completed:"),
-                  i.createElement(pe, { rtime: t.GetArtworkCompleteTime() }),
-                ),
-              )
-            : i.createElement(
-                i.Fragment,
-                null,
-                i.createElement(
-                  "div",
-                  { className: F.OwnerColCtn },
-                  i.createElement(
-                    m.JU,
-                    null,
-                    "Designer ",
-                    i.createElement(
-                      S.he,
-                      {
-                        toolTipContent:
-                          "This person will be downloading assets, creating necessary banners, and routing assets for localization.",
-                      },
-                      "(?)",
-                    ),
-                  ),
-                  i.createElement(
-                    "div",
-                    { className: F.OwnerCtn },
-                    i.createElement(
-                      "div",
-                      null,
-                      i.createElement(_.p, { accountID: t.GetArtworkOwner() }),
-                    ),
-                  ),
-                  i.createElement(
-                    m.wl,
-                    {
-                      onClick: (e) =>
-                        (0, E.pg)(
-                          i.createElement(U, {
-                            oEditablePlan: t,
-                            bTakeOwnership: !1,
-                          }),
-                          (0, v.uX)(e),
-                        ),
-                    },
-                    "Clear Ownership",
-                  ),
-                  i.createElement(
-                    m.wl,
-                    {
-                      onClick: (e) =>
-                        (0, E.pg)(
-                          i.createElement(x, { oEditablePlan: t }),
-                          (0, v.uX)(e),
-                        ),
-                    },
-                    "Mark As Completed",
-                  ),
-                ),
-              )
-          : i.createElement(
-              i.Fragment,
-              null,
-              i.createElement(
-                "div",
-                { className: F.OwnerColCtn },
-                i.createElement(
-                  m.JU,
-                  null,
-                  "Designer ",
-                  i.createElement(
-                    S.he,
-                    {
-                      toolTipContent:
-                        "This person will be downloading assets, creating necessary banners, and routing assets for localization.",
-                    },
-                    "(?)",
-                  ),
-                ),
-                i.createElement(
-                  m.wl,
-                  {
-                    onClick: (e) =>
-                      (0, E.pg)(
-                        i.createElement(U, {
-                          oEditablePlan: t,
-                          bTakeOwnership: !0,
-                        }),
-                        (0, v.uX)(e),
-                      ),
-                  },
-                  "Claim",
-                ),
-              ),
-            );
-      }
-      function U(e) {
-        const { oEditablePlan: t, closeModal: a, bTakeOwnership: n } = e;
-        return i.createElement(G.Q, {
-          strTitle: n
-            ? "Claim Ownership of Production Design?"
-            : "Remove ownership of production design",
-          strDescription: n
-            ? "Do you want to cliam ownership of the artwork and localizations required for this plans promotion?"
-            : "Remove the current owner of the production design on this event?",
-          closeModal: a,
-          onOK: () => {
-            n
-              ? t.SetArtworkOwnerAccountID(w.iA.accountid)
-              : t.SetArtworkOwnerAccountID(null);
-          },
-          onCancel: a,
-        });
-      }
-      function z(e) {
-        const { oEditablePlan: t, closeModal: a, bTakeOwnership: n } = e;
-        return i.createElement(G.Q, {
-          strTitle: n
-            ? "Claim Operations Ownership?"
-            : "Remove operator ownership",
-          strDescription: n
-            ? "Do you want to cliam ownership of the operations for this plans promotion? This means reviewing and verifying all of require items are provided before the promotion needs to go live."
-            : "Remove the current owner of the operations owner this promotion plan?",
-          closeModal: a,
-          onOK: () => {
-            n
-              ? t.SetOperatorOwnerAccountID(w.iA.accountid)
-              : t.SetOperatorOwnerAccountID(null);
-          },
-          onCancel: a,
-        });
-      }
-      function x(e) {
-        const { oEditablePlan: t, closeModal: a } = e;
-        return i.createElement(
-          G.Q,
-          {
-            strTitle: "Complete the production Design",
-            strDescription:
-              "Please verify the production design aspect is completed. All of the localized artwork is uploading into each of the appropriate featuring for this plan.",
-            closeModal: a,
-            onOK: () =>
-              t.SetArtworkCompleted(Math.floor(new Date().getTime() / 1e3)),
-          },
-          i.createElement("br", null),
-          i.createElement(O.kd, { oEditablePlan: t }),
-        );
-      }
-      var q,
-        W = a(64399),
-        j = a(30470);
-      function H(e) {
-        const { oEditablePlan: t } = e;
-        return i.createElement(
-          i.Fragment,
-          null,
-          i.createElement(
-            "div",
-            { className: F.OwnerColCtn },
-            i.createElement(
-              m.JU,
-              null,
-              "Operations ",
-              i.createElement(
-                S.he,
-                {
-                  toolTipContent:
-                    "This person is making sure the plan is coming together and everything is reviewed and ready to run.",
-                },
-                "(?)",
-              ),
-            ),
-            Boolean(t.BHasOperatorOwner())
-              ? i.createElement(
-                  i.Fragment,
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: F.OwnerCtn },
-                    i.createElement(
-                      "div",
-                      null,
-                      i.createElement(_.p, {
-                        accountID: t.GetOperatorAccountID(),
-                      }),
-                    ),
-                  ),
-                  i.createElement(
-                    m.wl,
-                    {
-                      onClick: (e) =>
-                        (0, E.pg)(
-                          i.createElement(z, {
-                            oEditablePlan: t,
-                            bTakeOwnership: !1,
-                          }),
-                          (0, v.uX)(e),
-                        ),
-                    },
-                    "Clear Ownership",
-                  ),
-                )
-              : i.createElement(
-                  m.wl,
-                  {
-                    onClick: (e) =>
-                      (0, E.pg)(
-                        i.createElement(z, {
-                          oEditablePlan: t,
-                          bTakeOwnership: !0,
-                        }),
-                        (0, v.uX)(e),
-                      ),
-                  },
-                  "Claim",
-                ),
-          ),
-        );
-      }
-      function V(e) {
-        const { oEditablePlan: t } = e,
-          a = (0, W.R5)(t.GetID()),
-          [n, s] = (0, r.q3)(() => [
-            t.GetDeliveryReviewNotes(),
-            t.GetAssociatedAssetURL(),
-          ]);
-        return (a && a.submitting_accountid && a.input_artwork_url) || s
-          ? i.createElement(
-              "div",
-              null,
-              i.createElement(K, { oEditablePlan: t }),
-              Boolean(n?.trim().length > 0) &&
-                i.createElement(
-                  "div",
-                  null,
-                  i.createElement(m.JU, null, "Operation Notes on Assets"),
-                  i.createElement("textarea", {
-                    value: n,
-                    disabled: !0,
-                    className: F.AssetNotes,
-                  }),
-                ),
-              i.createElement(m.pd, {
-                type: "text",
-                label: "Partner Provided Assets",
-                tooltip:
-                  "Asset URL submitted by the partner; the same as the one found in the asset request tab",
-                value: a.input_artwork_url || s,
-                mustBeURL: !0,
-                onChange: () => {},
-                bShowCopyAction: !0,
-              }),
-            )
-          : null;
-      }
-      function K(e) {
-        const { oEditablePlan: t } = e,
-          [a, n] = (0, r.q3)(() => [
-            t.BIsDeliveryReviewed(),
-            t.GetEndDate() < s.HD.GetTimeNowWithOverride(),
-          ]);
-        return n
-          ? null
-          : i.createElement(
-              i.Fragment,
-              null,
-              Boolean(a)
-                ? i.createElement(J, { oEditablePlan: t })
-                : i.createElement($, { oEditablePlan: t }),
-            );
-      }
-      function Y(e) {
-        const { oEditablePlan: t } = e,
-          a = (0, W.R5)(t.GetID()),
-          n = (0, i.useMemo)(
-            () =>
-              t.GetArtworkCompleteTime()
-                ? q.k_LocalizationDone
-                : t.GetArtworkLocalizationTaskID()
-                  ? q.k_DesignComplete
-                  : t.GetDeliveryReviewTime()
-                    ? q.k_DeliveryReviewed
-                    : a?.submitting_rtime || t.GetAssociatedAssetURL()
-                      ? q.k_AssetSubmitted
-                      : q.k_AwaitingPartner,
-            [t, a],
-          );
-        return i.createElement(
-          i.Fragment,
-          null,
-          i.createElement("h2", null, "Asset Process"),
-          i.createElement(
-            "div",
-            { className: F.AssetTimelineCtn },
-            i.createElement(
-              "div",
-              { className: (0, y.A)(n == q.k_AssetSubmitted && F.ActiveState) },
-              "Partner Submitted",
-            ),
-            i.createElement(
-              "div",
-              {
-                className: (0, y.A)(n == q.k_DeliveryReviewed && F.ActiveState),
-              },
-              "Delivery Approved",
-            ),
-            i.createElement(
-              "div",
-              { className: (0, y.A)(n == q.k_DesignComplete && F.ActiveState) },
-              "Design Complete",
-            ),
-            i.createElement(
-              "div",
-              {
-                className: (0, y.A)(n == q.k_LocalizationDone && F.ActiveState),
-              },
-              "Localization Complete",
-            ),
-          ),
-        );
-      }
-      function $(e) {
-        const { oEditablePlan: t } = e;
-        return i.createElement(
-          "div",
-          { className: (0, y.A)(F.StatusCtn, F.Incomplete) },
-          i.createElement(
-            m.$n,
-            {
-              className: F.StatusBtn,
-              onClick: (e) =>
-                (0, E.pg)(
-                  i.createElement(X, { oEditablePlan: t, bReviewVerify: !0 }),
-                  (0, v.uX)(e),
-                ),
-            },
-            "Review Asset Delivery",
-          ),
-        );
-      }
-      function J(e) {
-        const { oEditablePlan: t } = e,
-          [a, n] = (0, r.q3)(() => [
-            t.GetDeliveryReviewTime(),
-            t.GetDeliveryReviewAccount(),
-          ]);
-        return i.createElement(
-          "div",
-          { className: (0, y.A)(F.StatusCtn, F.Complete) },
-          i.createElement(
-            "div",
-            { className: F.ReviewedCtn },
-            i.createElement(
-              "div",
-              { className: F.OwnerCtn },
-              i.createElement(
-                "div",
-                null,
-                i.createElement(_.p, { accountID: n }),
-              ),
-              i.createElement(
-                m.$n,
-                {
-                  className: F.StatusBtn,
-                  onClick: (e) =>
-                    (0, E.pg)(
-                      i.createElement(X, {
-                        oEditablePlan: t,
-                        bReviewVerify: !1,
-                      }),
-                      (0, v.uX)(e),
-                    ),
-                },
-                "Clear Asset Status",
-              ),
-            ),
-            i.createElement(
-              "div",
-              null,
-              "Reviewed: ",
-              (0, f.TW)(a),
-              "@ ",
-              (0, b.KC)(a, { bForce24HourClock: !1 }),
-            ),
-          ),
-        );
-      }
-      function X(e) {
-        const { oEditablePlan: t, closeModal: a, bReviewVerify: n } = e,
-          r = (0, W.R5)(t.GetID()),
-          [s, l] = (0, i.useState)(t.GetDeliveryReviewNotes());
-        return i.createElement(
-          G.Q,
-          {
-            strTitle: n
-              ? "Asset Delivery Review?"
-              : "Clear Assert Delivery Review Status",
-            strDescription: n
-              ? "Is the Asset Delivery Reviewed?"
-              : "Remove the asset delivery review status from this plan?",
-            closeModal: a,
-            bAllowFullSize: !0,
-            bDisableBackgroundDismiss: !0,
-            onOK: () => {
-              n
-                ? t.SetDeliveryReviewedAccountAndTime(
-                    j.iA.accountid,
-                    Math.floor(new Date().getTime() / 1e3),
-                    s,
-                  )
-                : t.ClearDeliveryReviewedStatus();
-            },
-          },
-          Boolean(n) &&
-            i.createElement(
-              i.Fragment,
-              null,
-              i.createElement(
-                "p",
-                null,
-                "Have you verified the following in their URL folder?",
-                i.createElement(
-                  "ol",
-                  null,
-                  i.createElement(
-                    "li",
-                    null,
-                    "Does it include layered PSD file",
-                  ),
-                  i.createElement("li", null, "Are assets high quality"),
-                  i.createElement("li", null, "No burned in dates"),
-                  i.createElement(
-                    "li",
-                    null,
-                    "No burned in discounts (unless publisher/franchie sales)",
-                  ),
-                  i.createElement("li", null, "Font file recommended?"),
-                  i.createElement("li", null, "No logo or trademark parade"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                null,
-                "Optional: Notes for Art Team about Assets",
-              ),
-              i.createElement("textarea", {
-                cols: 120,
-                rows: 10,
-                onChange: (e) => l(e.currentTarget.value),
-                value: s,
-                autoFocus: !0,
-              }),
-              i.createElement(m.pd, {
-                type: "text",
-                label: "Partner Provided Assets",
-                tooltip:
-                  "Asset URL submitted by the partner; the same as the one found in the asset request tab",
-                value: r.input_artwork_url,
-                mustBeURL: !0,
-                onChange: () => {},
-                bShowCopyAction: !0,
-              }),
-            ),
-        );
-      }
-      !(function (e) {
-        (e[(e.k_AwaitingPartner = 0)] = "k_AwaitingPartner"),
-          (e[(e.k_AssetSubmitted = 1)] = "k_AssetSubmitted"),
-          (e[(e.k_DeliveryReviewed = 2)] = "k_DeliveryReviewed"),
-          (e[(e.k_DesignComplete = 3)] = "k_DesignComplete"),
-          (e[(e.k_LocalizationDone = 4)] = "k_LocalizationDone");
-      })(q || (q = {}));
-      var Q = a(49188),
-        Z = a(69235),
-        ee = a(11314),
-        te = a(49953),
-        ae = a(36058),
-        ne = a(55241),
-        re = a(85010),
-        ie = a(62059),
-        se = a(15708),
-        le = a(82227),
-        oe = a(19976);
-      function ce({ promotionID: e, displayType: t }) {
-        const a = (0, Q.J)([e], 0),
+        G = a(12070),
+        O = a(77155),
+        F = a(70065),
+        L = a(60341),
+        U = a(98076),
+        z = a(49188),
+        x = a(69235),
+        q = a(11314),
+        W = a(49953),
+        j = a(36058),
+        H = a(55241),
+        V = a(85010),
+        K = a(62059),
+        Y = a(15708),
+        $ = a(82227),
+        J = a(19976);
+      function X({ promotionID: e, displayType: t }) {
+        const a = (0, z.J)([e], 0),
           [n, r, s] = (0, i.useMemo)(() => {
             if (!a || !a.sales || 0 === a.sales.length) return [[], 0, 0];
             const e = new Map();
@@ -66769,18 +66814,18 @@
           o = "sales" === t ? "Peak Gross Sales" : "Peak Gross Units";
         return i.createElement(
           "div",
-          { className: oe.DashStatsContainer },
+          { className: J.DashStatsContainer },
           i.createElement(
             "div",
-            { className: oe.Chart },
+            { className: J.Chart },
             i.createElement(
               d.tH,
               null,
               i.createElement(
-                Z.u,
+                x.u,
                 { width: "100%", height: "100%" },
                 i.createElement(
-                  ee.E,
+                  q.E,
                   {
                     data: n,
                     margin: { top: 25, left: 0, right: 0, bottom: 40 },
@@ -66800,8 +66845,8 @@
                       }),
                     ),
                   ),
-                  i.createElement(te.d, { vertical: !1, stroke: "#a0aab6" }),
-                  i.createElement(ae.W, {
+                  i.createElement(W.d, { vertical: !1, stroke: "#a0aab6" }),
+                  i.createElement(j.W, {
                     dataKey: "date",
                     tick: { fill: "white" },
                     axisLine: !1,
@@ -66813,21 +66858,21 @@
                         weekday: "short",
                       }),
                   }),
-                  i.createElement(ne.h, {
+                  i.createElement(H.h, {
                     tickFormatter: (e) =>
-                      "sales" === t ? `$${(0, le.NO)(e)}` : (0, le.NO)(e),
+                      "sales" === t ? `$${(0, $.NO)(e)}` : (0, $.NO)(e),
                     tick: { fill: "white" },
                     axisLine: !1,
                   }),
-                  i.createElement(re.m, {
-                    content: i.createElement(me, { displayType: t }),
+                  i.createElement(V.m, {
+                    content: i.createElement(Q, { displayType: t }),
                   }),
-                  i.createElement(ie.y, {
+                  i.createElement(K.y, {
                     dataKey: "value",
                     barSize: 40,
                     fill: "url(#bar_linear)",
                   }),
-                  i.createElement(se.e, {
+                  i.createElement(Y.e, {
                     y: s,
                     stroke: "#82FF01",
                     strokeDasharray: "6",
@@ -66838,42 +66883,42 @@
           ),
           i.createElement(
             "div",
-            { className: oe.Stats },
+            { className: J.Stats },
             i.createElement(
               "div",
-              { className: oe.CurrentStats },
+              { className: J.CurrentStats },
               i.createElement(
                 "div",
-                { className: oe.StatsTitle },
-                "sales" === t ? `$${(0, le.Dq)(r)}` : (0, le.Dq)(r),
+                { className: J.StatsTitle },
+                "sales" === t ? `$${(0, $.Dq)(r)}` : (0, $.Dq)(r),
               ),
               i.createElement(
                 "div",
-                { className: oe.StatSubtitle },
-                i.createElement("span", { className: oe.Now }, l),
+                { className: J.StatSubtitle },
+                i.createElement("span", { className: J.Now }, l),
               ),
             ),
             i.createElement(
               "div",
-              { className: oe.PeakStats },
+              { className: J.PeakStats },
               i.createElement(
                 "div",
-                { className: oe.StatsTitle },
-                "sales" === t ? `$${(0, le.Dq)(s)}` : (0, le.Dq)(s),
+                { className: J.StatsTitle },
+                "sales" === t ? `$${(0, $.Dq)(s)}` : (0, $.Dq)(s),
               ),
               i.createElement(
                 "div",
-                { className: oe.StatSubtitle },
-                i.createElement("span", { className: oe.Concurrent }, o),
+                { className: J.StatSubtitle },
+                i.createElement("span", { className: J.Concurrent }, o),
               ),
             ),
           ),
         );
       }
-      function me({ active: e, payload: t, displayType: a }) {
+      function Q({ active: e, payload: t, displayType: a }) {
         if (e && t && t.length) {
           const e = t[0].payload,
-            n = "sales" === a ? `$${(0, le.Dq)(e.value)}` : (0, le.Dq)(e.value);
+            n = "sales" === a ? `$${(0, $.Dq)(e.value)}` : (0, $.Dq)(e.value);
           return i.createElement(
             S.t1,
             null,
@@ -66884,10 +66929,10 @@
         }
         return null;
       }
-      function de(e) {
+      function Z(e) {
         const { oEditablePlan: t } = e,
           [a] = (0, r.q3)(() => [t.GetID()]),
-          n = (0, Q.J)([a], 0);
+          n = (0, z.J)([a], 0);
         console.log(n);
         const [s, l] = (0, i.useMemo)(() => {
           if (!n || !n.sales || n.sales.length < 1) return [0, 0];
@@ -66918,14 +66963,14 @@
           }),
           i.createElement("br", null),
           i.createElement("h3", null, "Daily Featuring Sales"),
-          i.createElement(ce, { promotionID: a, displayType: "sales" }),
+          i.createElement(X, { promotionID: a, displayType: "sales" }),
           i.createElement("br", null),
           i.createElement("h3", null, "Daily Featuring Units"),
-          i.createElement(ce, { promotionID: a, displayType: "units" }),
+          i.createElement(X, { promotionID: a, displayType: "units" }),
         );
       }
-      var ue = a(48479);
-      function pe(e) {
+      var ee = a(48479);
+      function te(e) {
         return i.createElement(
           i.Fragment,
           null,
@@ -66934,7 +66979,7 @@
           (0, b.KC)(e.rtime, { bForce24HourClock: !1 }),
         );
       }
-      function _e(e) {
+      function ae(e) {
         const { oEditablePlan: t } = e,
           [a] = (0, r.q3)(() => [
             t.GetEndDate() < s.HD.GetTimeNowWithOverride(),
@@ -66945,19 +66990,19 @@
           i.createElement(
             "div",
             { className: c().SectionCtn },
-            i.createElement(ye, { oEditablePlan: t }),
-            i.createElement(ve, { oEditablePlan: t }),
+            i.createElement(le, { oEditablePlan: t }),
+            i.createElement(oe, { oEditablePlan: t }),
           ),
           Boolean(a)
             ? i.createElement(
-                ue.qx,
+                ee.qx,
                 { title: "Shipping Status", bStartMinimized: a },
-                i.createElement(ge, { oEditablePlan: t }),
+                i.createElement(ne, { oEditablePlan: t }),
               )
-            : i.createElement(ge, { oEditablePlan: t }),
+            : i.createElement(ne, { oEditablePlan: t }),
         );
       }
-      function ge(e) {
+      function ne(e) {
         const { oEditablePlan: t } = e,
           [a] = (0, r.q3)(() => [t.BOnWatchList(w.iA.accountid)]);
         return i.createElement(
@@ -66968,12 +67013,12 @@
             { className: c().SectionCtn },
             i.createElement(
               "div",
-              { className: F.OwnersRowCtn },
-              i.createElement(H, { oEditablePlan: t }),
-              i.createElement(L, { oEditablePlan: t }),
+              { className: U.OwnersRowCtn },
+              i.createElement(O.oz, { oEditablePlan: t }),
+              i.createElement(G.D, { oEditablePlan: t }),
               i.createElement(
                 "div",
-                { className: F.OwnerColCtn },
+                { className: U.OwnerColCtn },
                 i.createElement(
                   m.JU,
                   null,
@@ -66989,7 +67034,7 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: F.OwnerCtn },
+                  { className: U.OwnerCtn },
                   i.createElement(
                     "div",
                     null,
@@ -67001,7 +67046,7 @@
                   {
                     onClick: (e) =>
                       (0, E.pg)(
-                        i.createElement(he, { oEditablePlan: t }),
+                        i.createElement(re, { oEditablePlan: t }),
                         (0, v.uX)(e),
                       ),
                   },
@@ -67013,10 +67058,10 @@
           i.createElement(
             "div",
             { className: c().SectionCtn },
-            i.createElement(Y, { oEditablePlan: t }),
+            i.createElement(O.In, { oEditablePlan: t }),
             i.createElement(
               "div",
-              { className: (0, y.A)(F.LinkCtn, F.AssetField) },
+              { className: (0, y.A)(U.LinkCtn, U.AssetField) },
               i.createElement(m.pd, {
                 type: "text",
                 label: "Internal Asset Location",
@@ -67028,7 +67073,7 @@
                 bShowCopyAction: !0,
               }),
             ),
-            i.createElement(V, { oEditablePlan: t }),
+            i.createElement(O.VB, { oEditablePlan: t }),
           ),
           Boolean(t.GetPlan().create_time) &&
             i.createElement(
@@ -67037,10 +67082,10 @@
               i.createElement(m.JU, null, "Plan initially created By:"),
               i.createElement(
                 "div",
-                { className: F.UserCtn },
+                { className: U.UserCtn },
                 i.createElement(
                   "div",
-                  { className: F.OwnerCtn },
+                  { className: U.OwnerCtn },
                   i.createElement(
                     "div",
                     null,
@@ -67051,7 +67096,7 @@
                 ),
               ),
               "Created at ",
-              i.createElement(pe, { rtime: t.GetPlan().create_time }),
+              i.createElement(te, { rtime: t.GetPlan().create_time }),
             ),
           Boolean(t.GetPlan().last_modified_account) &&
             i.createElement(
@@ -67060,10 +67105,10 @@
               i.createElement(m.JU, null, "Last Updated By:"),
               i.createElement(
                 "div",
-                { className: F.UserCtn },
+                { className: U.UserCtn },
                 i.createElement(
                   "div",
-                  { className: F.OwnerCtn },
+                  { className: U.OwnerCtn },
                   i.createElement(
                     "div",
                     null,
@@ -67074,7 +67119,7 @@
                 ),
               ),
               "Updated at ",
-              i.createElement(pe, { rtime: t.GetPlan().last_modified_time }),
+              i.createElement(te, { rtime: t.GetPlan().last_modified_time }),
             ),
           i.createElement(
             "div",
@@ -67091,10 +67136,10 @@
               a ? "Remove from my watch list" : "Add to my watch list",
             ),
           ),
-          i.createElement(Ie, { oEditablePlan: t }),
+          i.createElement(_e, { oEditablePlan: t }),
         );
       }
-      function he(e) {
+      function re(e) {
         const { oEditablePlan: t, closeModal: a } = e,
           [n, r] = (0, i.useState)(t.GetOwnerAccountID());
         return i.createElement(
@@ -67107,10 +67152,10 @@
             bOKDisabled: !n,
             onOK: () => t.SetPlanOwnerAccountID(n),
           },
-          i.createElement(Ee, { nAccountID: n, fnSetAccountFilter: r }),
+          i.createElement(ie, { nAccountID: n, fnSetAccountFilter: r }),
         );
       }
-      function Ee(e) {
+      function ie(e) {
         const {
             nAccountID: t,
             fnSetAccountFilter: a,
@@ -67119,7 +67164,7 @@
             className: l,
           } = e,
           o = n.b.map((e) => ({
-            label: i.createElement(Se, {
+            label: i.createElement(se, {
               key: e.id,
               accountID: e.id,
               displayName: e.displayName,
@@ -67148,7 +67193,7 @@
           )
         );
       }
-      function Se(e) {
+      function se(e) {
         const { accountID: t, displayName: a } = e,
           { data: n } = (0, l.js)(t);
         return i.createElement(
@@ -67160,7 +67205,7 @@
           ")",
         );
       }
-      function ye(e) {
+      function le(e) {
         const t = new URLSearchParams(),
           { oEditablePlan: a } = e;
         return (
@@ -67174,13 +67219,13 @@
                 w.TS.PARTNER_BASE_URL +
                 "public/downloadics.php?" +
                 t.toString(),
-              className: F.CalDownload,
+              className: U.CalDownload,
             },
             i.createElement(g.lrM, null),
           )
         );
       }
-      function ve(e) {
+      function oe(e) {
         const { oEditablePlan: t } = e,
           [a, n] = (0, r.q3)(() => [
             t.BIsReviewed(),
@@ -67189,33 +67234,33 @@
         return i.createElement(
           i.Fragment,
           null,
-          Boolean(n) && i.createElement(we, { oEditablePlan: t }),
+          Boolean(n) && i.createElement(de, { oEditablePlan: t }),
           Boolean(!n && a) &&
             i.createElement(
               i.Fragment,
               null,
-              i.createElement(be, { oEditablePlan: t }),
+              i.createElement(me, { oEditablePlan: t }),
             ),
-          Boolean(!n && !a) && i.createElement(fe, { oEditablePlan: t }),
+          Boolean(!n && !a) && i.createElement(ce, { oEditablePlan: t }),
         );
       }
-      function fe(e) {
+      function ce(e) {
         const { oEditablePlan: t } = e;
         return i.createElement(
           "div",
-          { className: (0, y.A)(F.StatusCtn, F.Incomplete) },
+          { className: (0, y.A)(U.StatusCtn, U.Incomplete) },
           i.createElement(
             "div",
-            { className: F.ReviewState },
+            { className: U.ReviewState },
             i.createElement("span", null, "Incomplete"),
           ),
           i.createElement(
             m.$n,
             {
-              className: F.StatusBtn,
+              className: U.StatusBtn,
               onClick: (e) =>
                 (0, E.pg)(
-                  i.createElement(De, { oEditablePlan: t, bReviewVerify: !0 }),
+                  i.createElement(ue, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, v.uX)(e),
                 ),
             },
@@ -67223,7 +67268,7 @@
           ),
         );
       }
-      function be(e) {
+      function me(e) {
         const { oEditablePlan: t } = e,
           [a, n, s] = (0, r.q3)(() => [
             t.BIsMarkedCompleted(),
@@ -67232,19 +67277,19 @@
           ]);
         return i.createElement(
           "div",
-          { className: (0, y.A)(F.StatusCtn, F.Complete) },
+          { className: (0, y.A)(U.StatusCtn, U.Complete) },
           i.createElement(
             "div",
-            { className: F.ReviewedCtn },
+            { className: U.ReviewedCtn },
             i.createElement(
               "div",
-              { className: F.ReviewState },
+              { className: U.ReviewState },
               i.createElement(g.MGO, null),
               i.createElement("span", null, " Reviewed and ready to go! "),
             ),
             i.createElement(
               "div",
-              { className: F.OwnerCtn },
+              { className: U.OwnerCtn },
               i.createElement(
                 "div",
                 null,
@@ -67253,10 +67298,10 @@
               i.createElement(
                 m.$n,
                 {
-                  className: F.StatusBtn,
+                  className: U.StatusBtn,
                   onClick: (e) =>
                     (0, E.pg)(
-                      i.createElement(De, {
+                      i.createElement(ue, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -67276,7 +67321,7 @@
             ),
             i.createElement(
               "div",
-              { className: F.OwnerCtn },
+              { className: U.OwnerCtn },
               Boolean(a) &&
                 i.createElement(
                   "div",
@@ -67286,10 +67331,10 @@
               i.createElement(
                 m.$n,
                 {
-                  className: F.StatusBtn,
+                  className: U.StatusBtn,
                   onClick: (e) =>
                     (0, E.pg)(
-                      i.createElement(Ce, {
+                      i.createElement(pe, {
                         oEditablePlan: t,
                         bMarkedCompleted: !a,
                       }),
@@ -67313,7 +67358,7 @@
           ),
         );
       }
-      function we(e) {
+      function de(e) {
         const { oEditablePlan: t } = e,
           [a, n, s, l, o, c, m, u, p] = (0, r.q3)(() => [
             t.GetSaleClanAccountID(),
@@ -67333,20 +67378,20 @@
           h = `?dateStart=${_.getFullYear()}-${(_.getMonth() + 1).toString().padStart(2, "0")}-${_.getDate().toString().padStart(2, "0")}&dateEnd=${g.getFullYear()}-${(g.getMonth() + 1).toString().padStart(2, "0")}-${g.getDate().toString().padStart(2, "0")}`;
         return i.createElement(
           "div",
-          { className: (0, y.A)(F.StatusCtn, F.Past) },
+          { className: (0, y.A)(U.StatusCtn, U.Past) },
           i.createElement(
             "div",
-            { className: F.ReviewedCtn },
+            { className: U.ReviewedCtn },
             i.createElement(
               "div",
-              { className: F.ReviewState },
+              { className: U.ReviewState },
               i.createElement("span", null, " This promo is over "),
             ),
             Boolean(a || s || u) &&
               i.createElement(
                 "div",
                 null,
-                i.createElement(de, { oEditablePlan: t }),
+                i.createElement(Z, { oEditablePlan: t }),
                 Boolean(u) &&
                   i.createElement(
                     i.Fragment,
@@ -67439,10 +67484,10 @@
           ),
         );
       }
-      function De(e) {
+      function ue(e) {
         const { oEditablePlan: t, closeModal: a, bReviewVerify: n } = e;
         return i.createElement(
-          G.Q,
+          F.Q,
           {
             strTitle: n ? "Plan Review?" : "Clear Plan Review Status",
             strDescription: n
@@ -67467,14 +67512,14 @@
                 null,
                 "Have you verified the dates, settings, discounts, and assets are ready for all of the links below?",
               ),
-              i.createElement(O.kd, { oEditablePlan: t }),
+              i.createElement(L.kd, { oEditablePlan: t }),
             ),
         );
       }
-      function Ce(e) {
+      function pe(e) {
         const { oEditablePlan: t, closeModal: a, bMarkedCompleted: n } = e;
         return i.createElement(
-          G.Q,
+          F.Q,
           {
             strTitle: n ? "Plan Competed?" : "Clear Plan Complete Status",
             strDescription: n
@@ -67498,7 +67543,7 @@
             ),
         );
       }
-      function Ie(e) {
+      function _e(e) {
         const { oEditablePlan: t } = e,
           [a, n, s] = (0, r.q3)(() => [
             t.BRequireBroadcastModeration(),
@@ -67525,7 +67570,7 @@
               { className: c().Indent },
               i.createElement(
                 "div",
-                { className: F.BroadcastNotes },
+                { className: U.BroadcastNotes },
                 i.createElement(m.JU, null, "Broadcast Schedule Notes:"),
                 i.createElement("textarea", {
                   className: "DialogTextInputBase",
