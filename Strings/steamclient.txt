@@ -4,6 +4,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123L
  $8O[lv
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -2714,7 +2715,6 @@ $steammessages_parental_objects.proto"
 *Z20LocalizeSteamDisplayP10CUtlStringPK9KeyValuesRK7CUtlMapIS_S_i22CDefCaselessStringLessEEUlPKcE0_
 *Z20LocalizeSteamDisplayP10CUtlStringPK9KeyValuesRK7CUtlMapIS_S_i22CDefCaselessStringLessEEUlPKcE_
 *ZL10patch_dumpPvR9ConParamsR10ConCommandEUlvE_
-*ZL14app_info_printPvR9ConParamsR10ConCommandEUlvE_
 *ZL14app_set_configPvR9ConParamsR10ConCommandEUlvE_
 *ZL14net_fake_statePvR9ConParamsR10ConCommandEUlvE_
 *ZL15app_info_updatePvR9ConParamsR10ConCommandEUlvE_
@@ -9318,6 +9318,7 @@ $steammessages_parental_objects.proto"
 32CClientJobGetEmbeddedClientToken
 32CClientJobReportParentalPlaytime
 32CClientJobStartPeerContentServer
+32CClientJobWriteScreenshotInfoVDF
 32CCloudGamingNVIDIAUpdateGameList
 32CCloudGaming_CreateNonce_Request
 32CCloud_AppSessionResume_Response
@@ -16548,6 +16549,7 @@ PreferencesUpdated
 PrepareForSystemSuspend
 PrepopulatePrecompiledCache
 Preview
+PrintAppInfo
 PrioritizeHTTPRequest
 Proc-Type:
 ProcessActivateGameOverlayInMainUI
@@ -22171,7 +22173,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggenr;r
 ghjkl
 gidlist
 gidparentcomment

@@ -1460,7 +1460,6 @@ $system\InGameOverlayScreenshotHotKey
 (.CTwoFactor_RemoveAuthenticator_Response"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
-(1Jp
 (8GXgw
 (8HXhx
 (<PDxl

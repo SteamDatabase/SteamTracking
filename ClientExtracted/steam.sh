@@ -829,6 +829,49 @@ if [ -n "$log_opened" ]; then
 	set -- -srt-logger-opened "$@"
 fi
 
+# Expand and check the sniper runtime early if present
+supervisor="${STEAM_RUNTIME_SCOUT}/amd64/usr/bin/steam-runtime-supervisor"
+if [ -x "$supervisor" ]; then
+    log "Using supervisor $supervisor"
+    common_lock_options=( \
+        --exit-with-parent \
+        --subreaper \
+        --terminate-idle-timeout=1 \
+        --terminate-timeout=5 \
+        --lock-create \
+        --lock-verbose \
+        --lock-file "$STEAMROOT/$PLATFORM64/steam-runtime-sniper.lock" \
+    )
+
+	# Because options are parsed in order, --lock-exclusive needs to be
+	# specified before --lock-file
+	exclusive_lock=( "$supervisor" --lock-exclusive "${common_lock_options[@]}" -- )
+else
+	# Unexpected - we unpack scout unconditionally
+	log "Unable to find $supervisor"
+	exit 255
+fi
+
+if [ -f "$STEAMROOT/$PLATFORM64/steam-runtime-sniper.sh" ]; then
+	status=0
+	"${exclusive_lock[@]}" \
+	"$STEAMROOT/$PLATFORM64/steam-runtime-sniper.sh" \
+	--unpack-dir="$STEAMROOT/$PLATFORM64" \
+	--runtime=steam-runtime-sniper > /dev/null || status="$?"
+	case "$status" in
+		(0)
+			# Unpacked successfully
+			;;
+		(125)
+			log "Could not acquire lock - steam may be running already, continue."
+			;;
+		(*)
+			log "Encountered a problem expanding the sniper runtime, forcing extended file verification."
+			set -- "$@" "-verifyfiles"
+			;;
+	esac
+fi
+
 # prepend our lib path to LD_LIBRARY_PATH
 export LD_LIBRARY_PATH="$STEAMROOT/$PLATFORM:$STEAMROOT/$PLATFORM/panorama:${LD_LIBRARY_PATH-}"
 

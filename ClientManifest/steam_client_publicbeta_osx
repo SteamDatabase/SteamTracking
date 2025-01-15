@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1736213535"
+	"version"		"1736906505"
 	"ostype"		"macos1015"
 	"tenfoot_images_all"
 	{
@@ -12,11 +12,11 @@
 	}
 	"steamui_websrc_all"
 	{
-		"file"		"steamui_websrc_all.zip.6e898a11845e3d38f7c3c1a37e361b52f610baf8"
-		"size"		"30132448"
-		"sha2"		"f47cc6fe43e29fa8884dd8d5647aea9992d268c161f378920ac32a97364ba7de"
-		"zipvz"		"steamui_websrc_all.zip.vz.0c771962f90ee9611a03bd2c8f66f2a05d600033_24945994"
-		"sha2vz"		"2547bd2869d23c63f9d148ee7ef2bcc08d65f88fdfcddb555533eca74707535e"
+		"file"		"steamui_websrc_all.zip.208595bbb6b2801872f813d59d01eb2a773cf245"
+		"size"		"30133038"
+		"sha2"		"df17acbadcd1a099f0d63db07a43cf53ad0dc9b4ec2cec2e903110bc7671c88c"
+		"zipvz"		"steamui_websrc_all.zip.vz.af141e68a09868b70a8989d6040a22ee46ef7ab3_24945769"
+		"sha2vz"		"89ad3bf7df5d40c127d495cc14016046b0a4e25d5aa5db0ec437eb732098ceca"
 	}
 	"resources_misc_all"
 	{
@@ -80,45 +80,45 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.a873baf8aeb35653ef5225433012fdbab7dd5d09"
-		"size"		"36549630"
-		"sha2"		"8c9baa15d5b6ea86b3c6a3fac1bd9acc832f369e771a9a93e4682beb51b6c7db"
-		"zipvz"		"bins_osx.zip.vz.e48356b229143dfb5b914fd178d3db20e9872695_18037563"
-		"sha2vz"		"8ba2d63c4232084de5f2cc4ab8a3d44cc4bc132c7ab197fe6230b707c13f88f9"
+		"file"		"bins_osx.zip.1d164117118b9d6ed18ad4c52b3bffbc4a5fbecd"
+		"size"		"36549912"
+		"sha2"		"9bff68bd2d018c4dda11f285f4c1a366cf0f9de81d62123bb66cf76b8ef0eb62"
+		"zipvz"		"bins_osx.zip.vz.37e16264aedf0f7d368f74ab898c035561059761_18037041"
+		"sha2vz"		"f8280db12bd0cbbd6e4f2abd0a0f2841b8fe3f94a3db45aff997b2ed2c0b1df9"
 	}
 	"steam_osx"
 	{
 		"steamchina"
 		{
-			"file"		"steam_osx_steamchina.zip.123fe8530730083e71523deec154df30f3945f95"
-			"size"		"3991095"
-			"sha2"		"7ef0a3e6fb756237c8b2435bf00f944417e8ae23cd2d716ff5a7065d67ae2124"
-			"zipvz"		"steam_osx_steamchina.zip.vz.edb105869d2699791546089db8ebc256905822b9_2941214"
-			"sha2vz"		"b2cc319e1dee1cda61959c1d785fd4a05491f456e63f65df4c94053d0136fe0b"
+			"file"		"steam_osx_steamchina.zip.a35627a637cdd06c33bcf28e4e82cfd8e6b33249"
+			"size"		"3991080"
+			"sha2"		"2aa0fc950885e21697ca40e781e9dbe7f3ad03f076791a77dffcafd7eb66ee98"
+			"zipvz"		"steam_osx_steamchina.zip.vz.a4ac3876370fcc9dc5ab9b0042214785ffa3c85a_2941972"
+			"sha2vz"		"cb5b735d983057f17196da10ccb1a353f20a740597b6528c8350402eb535ddc1"
 			"IsBootstrapperPackage"		"1"
 		}
 		"macos-signed"
 		{
-			"file"		"steam_osx_macos-signed.zip.4be4b6bbba3685537cd17f93a6efa72d8269244e"
-			"size"		"2129961"
-			"sha2"		"ca76f324d4e14ab836f582f3f8c4848c6c02e546c2e7100169a787d910149fdd"
-			"zipvz"		"steam_osx_macos-signed.zip.vz.2c4fdabd81c0b59e7e3b78c8422905ba3102739d_1741177"
-			"sha2vz"		"c68d11f040a803a408d4e5bd53c727b97f52857532a25afbeede7d482750b8e7"
+			"file"		"steam_osx_macos-signed.zip.fb21bf40647c9492323c457c93530b3c4e0d66cf"
+			"size"		"2129948"
+			"sha2"		"25e0272f24fdb9897885b271bda6a89c0cbf844398e0c0e30022ef97b679aef0"
+			"zipvz"		"steam_osx_macos-signed.zip.vz.83464d048e3db31343865ff362eef69c30114cf3_1741633"
+			"sha2vz"		"1102bfb2f25896e471e50fd17bd01ee8ca76cfacdc1561656fd92389cfa9264e"
 		}
-		"file"		"steam_osx.zip.32f85ae4f11709f7988d9e3247acc2b627e2dfa2"
-		"size"		"2129526"
-		"sha2"		"9d5801d9529b6a50a44555fada7eab28522e61211f9739b6474bb8a0785f0a46"
-		"zipvz"		"steam_osx.zip.vz.12c10c8dd36f5f8e9fcaf5ed95eeee6987bdf7b2_1741451"
-		"sha2vz"		"687ce817cb6ea47f45e2f69705718a2c519764971a384974540e07a1a7035bcc"
+		"file"		"steam_osx.zip.5e24d52547354e564bbaaae844fff93293ec411a"
+		"size"		"2129520"
+		"sha2"		"b593e5afdf58e3d54197415be42aff8a6d7da6de8f0a66baadde61726b018634"
+		"zipvz"		"steam_osx.zip.vz.a413b6d3b48bafdf9cb62cc2feaa46c237b5ed22_1739537"
+		"sha2vz"		"2f0beaf8ea83c950f413ca4f6052bec51cf5cdb1e8ffc9def219f4d7da1ad4e6"
 		"IsBootstrapperPackage"		"1"
 	}
 	"bins_client_osx"
 	{
-		"file"		"bins_client_osx.zip.e51383d1f0e726db2f7002e17d5e94bf81af9bdd"
-		"size"		"17920185"
-		"sha2"		"2cc5239d70240fdc38ed80cf85ba71583906705d7a20a31b05c8dca90d75d198"
-		"zipvz"		"bins_client_osx.zip.vz.0fbf63f88c75d8f88044ee307a8febe278e31d39_11691746"
-		"sha2vz"		"ba6ce0c9be774b13d59f5a4c51c329ce6b76f3bd8fca25f185b14bb47d0bfbb6"
+		"file"		"bins_client_osx.zip.299ebded68cf0b78cb92b13a9a20055f58751960"
+		"size"		"17921754"
+		"sha2"		"b8771d9a9bbcc1e4d0697a517befc68204a62792805a7f5445320354fa1f4f59"
+		"zipvz"		"bins_client_osx.zip.vz.bd8b272d92d87c3b19637b747d2020d32f8ff570_11687589"
+		"sha2vz"		"c3b90cb3d3423b3577f8fd828974b3fe6d291718980167d21baebc8199f9d9af"
 	}
 	"bins_codecs_osx"
 	{
@@ -146,11 +146,11 @@
 	}
 	"webhelpers_osx"
 	{
-		"file"		"webhelpers_osx.zip.7cf947701619b8393a4056e7dc79d0e1b2e1311d"
-		"size"		"2118034"
-		"sha2"		"3aba838da5cdd400248fbf785142cd0388f6894baea552663ca7a617f2d1d98d"
-		"zipvz"		"webhelpers_osx.zip.vz.4543ee06c41a83f7b3e28600b5a438f7a17e6cf0_1563523"
-		"sha2vz"		"3b12dc51274e8928994cacf0d8637a1f93af4894853e6db92acd41d09b786fb2"
+		"file"		"webhelpers_osx.zip.f835d7d703e5976058dfa46673cd1bec65e8e767"
+		"size"		"2118046"
+		"sha2"		"953e136e80e493f974b4e718d542ac487de2c25f69ea14dca3aacafbc02bb2c6"
+		"zipvz"		"webhelpers_osx.zip.vz.f25e9f08d2c0b8cc8c6a0a466217c0237417b381_1564611"
+		"sha2vz"		"66fad0ba9348defc807205d9f514178157d0cecd8bc5602025d407b2b9c6bb38"
 	}
 	"webkit_osx"
 	{
@@ -191,9 +191,9 @@
 }
 "kvsign2"
 {
-	"osx"		"cc707b0bc9fa4535286d5f3bc4a36e6be06f6ebcbda66b4095b8fc0a8b384f2b3331cec47bb30bf79e610e9c04b1074df07905d243c8a0caba3802c09a216b04"
+	"osx"		"3e25cbaed9fbe82ce163dcee9d35d40e36a06eddab36b9379dcf7ee6e9cd806e628c690e9e83e103c6e2fda48a6456d6b0fcc9416cbcf7bb06af62b42cc00102"
 }
 "kvsignatures"
 {
-	"osx"		"24d4c5c34e5c421dbaec9749802ce1849a1551b838c486d33f82100cc1bb7606a32cad3dd26b0d584d8ac547c7baad244affe7c0723d44c7efaa42e21da66eeec775bd6dd236127cff2a907199e0e9133879aee0535c293391fb0ffc79d39d56dc189e03d1c0292770e5d42907a2ba5675a73c62b1eca462b31c03f36935aaae"
+	"osx"		"77252434e5a71f69127e58e6df4a577e1d5ffdaf054fa686f568b8726a1d289a04805a9bdd0f79534afcaa2c425ce1be030bd468f4bda461e66b48895e10c938552e19c7d5e5310c8b4ddf73b81a3033ac60f8bda9fcfbebaecf385ef39171407db0f06480dc7312c77dd7ed8af81eb2f40c0d1c8c93cb5c7cd6e03b0ed860d4"
 }

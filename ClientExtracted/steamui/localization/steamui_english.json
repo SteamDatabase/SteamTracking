@@ -1079,6 +1079,7 @@
     "controller_neptune": "Steam Deck Controller",
     "controller_unspecified": "Controller",
     "controller_ps5_edge": "DualSense Edge Controller",
+    "controller_hori_steam": "Wireless HORIPAD for Steam",
     "DLCStatus_installed": "Installed",
     "DLCStatus_notinstalled": "Not Installed",
     "DLCStatus_downloading": "Downloading",
