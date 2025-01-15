@@ -576,6 +576,7 @@ html.responsive
   margin-right: 20px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   flex-shrink: 0;
+  cursor: pointer;
 }
 .BasicUI .D3UK8pLuHz5_91gJG1yxn ._1-6EylKQ97BKv1z09OCHl8 {
   width: 40px;
@@ -619,6 +620,7 @@ html.responsive
   color: #fff;
   font-weight: 600;
   text-align: left;
+  cursor: pointer;
 }
 .BasicUI
   .D3UK8pLuHz5_91gJG1yxn
@@ -650,6 +652,7 @@ html.responsive
   display: block;
   margin-top: 2px;
   font-size: 13px;
+  cursor: pointer;
 }
 .D3UK8pLuHz5_91gJG1yxn
   ._25xSfqWlAs91IY22h7uOSp
