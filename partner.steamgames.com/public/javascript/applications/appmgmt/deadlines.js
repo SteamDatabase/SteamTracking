@@ -270,7 +270,7 @@
     },
     37789: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => C });
+      a.r(t), a.d(t, { default: () => T });
       var n = a(90626),
         i = a(24484),
         r = a(18573),
@@ -445,7 +445,7 @@
           n.createElement("td", null, "TODO"),
         );
       }
-      function C(e) {
+      function T(e) {
         const t = (function () {
           const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
@@ -641,9 +641,9 @@
       }
       var _ = a(738),
         w = a(56011),
-        C = a(78395),
-        T = a(41735),
-        I = a.n(T);
+        T = a(78395),
+        C = a(41735),
+        I = a.n(C);
       const x = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
@@ -1982,11 +1982,12 @@
           [r, o] = n.useState(""),
           [l, c] = n.useState("");
         return n.createElement(
-          C.o0,
+          T.o0,
           {
             strTitle: "Contact TaxIdentity",
-            strDescription:
-              "Clicking Ok will send your message to TaxIdentity regarding this tax requirement.  Responses will be sent to your Steam account's email address.",
+            strDescription: l
+              ? ""
+              : "Enter a message to send to TaxIdentity regarding this tax requirement.  Responses will be sent to your Steam account's email address.",
             onOK: l
               ? t
               : async () => {
@@ -2274,8 +2275,8 @@
             include_basic_info: b,
             include_supported_languages: _,
             include_full_description: w,
-            include_included_items: C,
-            include_assets_without_overrides: T,
+            include_included_items: T,
+            include_assets_without_overrides: C,
             apply_user_filters: I,
             include_links: x,
           } = a;
@@ -2294,8 +2295,8 @@
               include_basic_info: b,
               include_supported_languages: _,
               include_full_description: w,
-              include_included_items: C,
-              include_assets_without_overrides: T,
+              include_included_items: T,
+              include_assets_without_overrides: C,
               apply_user_filters: I,
               include_links: x,
             };
@@ -2314,7 +2315,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, p, h, f, y, v, E, g, S, N, b, _, w, C, T, I, x, d]),
+          }, [e, t, n, m, p, h, f, y, v, E, g, S, N, b, _, w, T, C, I, x, d]),
           !e)
         )
           return [null, 2];

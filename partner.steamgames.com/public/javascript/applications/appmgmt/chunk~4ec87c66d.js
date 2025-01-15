@@ -44958,9 +44958,10 @@
               );
             }, [t, a, r]);
           })(parseInt(n), r && a?.gid ? [a.gid] : []),
-          [o, c] = (0, u.useState)(ce.Summary),
-          m = l?.get(a.gid),
-          d = !a || !m || 1 == s;
+          [o, m] = (0, u.useState)(ce.Summary),
+          d = l?.get(a.gid),
+          p = !a || !d || 1 == s,
+          { dtDiscountStart: g } = (0, c.Y4)(a);
         return a.cancelled || a.deleted
           ? null
           : u.createElement(
@@ -44972,16 +44973,26 @@
                 u.createElement(
                   "div",
                   { className: Y.PromoTitle },
+                  u.createElement(
+                    "span",
+                    { className: Y.FeaturedDate },
+                    (0, M.TW)(g),
+                  ),
                   i?.GetName() || a?.store_item_name,
-                  m?.marketing?.length > 1
-                    ? (0, M.we)("#DailyDeals_GamesHeader", m.marketing.length)
+                  d?.marketing?.length > 1
+                    ? (0, M.we)("#DailyDeals_GamesHeader", d.marketing.length)
                     : null,
                 ),
-                u.createElement(Ee, { tab: o, setTab: c }),
+                u.createElement(Ee, { tab: o, setTab: m }),
               ),
-              d
+              p
                 ? u.createElement(fe, null)
-                : u.createElement(he, { tab: o, deal: a, reportData: m }),
+                : u.createElement(he, {
+                    key: a.gid,
+                    tab: o,
+                    deal: a,
+                    reportData: d,
+                  }),
             );
       });
       function he(e) {
@@ -45096,43 +45107,45 @@
                 ),
               ),
           ),
-          m?.map((e) =>
-            u.createElement(
-              u.Fragment,
-              null,
+          m
+            ?.filter((e) => e.units > 0)
+            .map((e) =>
               u.createElement(
-                "div",
-                { className: (0, B.A)(Y.Cell, Y.SalesPackageTitleCell) },
-                (ee.A.Get().GetPackage(e.packageid)?.GetName() ?? "") +
-                  " (#" +
-                  e.packageid +
-                  ")",
-                u.createElement(be, {
-                  percentage:
-                    r.find((t) => t.packageID == e.packageid)?.nDiscountPct ??
-                    0,
-                }),
-              ),
-              u.createElement(
-                "div",
-                { className: Y.SalesBarChartContainer },
-                u.createElement("div", {
-                  className: Y.SalesBarChart,
-                  style: { width: (100 * e.gross_sales) / d + "%" },
-                }),
-              ),
-              u.createElement(
-                "div",
-                { className: (0, B.A)(Y.Cell, Y.SalesCell, Y.BlueHighlight) },
-                (0, ae.xE)(e.gross_sales),
-              ),
-              u.createElement(
-                "div",
-                { className: (0, B.A)(Y.Cell, Y.SalesCell) },
-                (0, ne.Dq)(parseInt("" + e.units)),
+                u.Fragment,
+                null,
+                u.createElement(
+                  "div",
+                  { className: (0, B.A)(Y.Cell, Y.SalesPackageTitleCell) },
+                  (ee.A.Get().GetPackage(e.packageid)?.GetName() ?? "") +
+                    " (#" +
+                    e.packageid +
+                    ")",
+                  u.createElement(be, {
+                    percentage:
+                      r.find((t) => t.packageID == e.packageid)?.nDiscountPct ??
+                      0,
+                  }),
+                ),
+                u.createElement(
+                  "div",
+                  { className: Y.SalesBarChartContainer },
+                  u.createElement("div", {
+                    className: Y.SalesBarChart,
+                    style: { width: (100 * e.gross_sales) / d + "%" },
+                  }),
+                ),
+                u.createElement(
+                  "div",
+                  { className: (0, B.A)(Y.Cell, Y.SalesCell, Y.BlueHighlight) },
+                  (0, ae.xE)(e.gross_sales),
+                ),
+                u.createElement(
+                  "div",
+                  { className: (0, B.A)(Y.Cell, Y.SalesCell) },
+                  (0, ne.Dq)(parseInt("" + e.units)),
+                ),
               ),
             ),
-          ),
         );
       }
       function ye(e) {
@@ -45277,11 +45290,10 @@
         );
       }
       function ve(e) {
-        const { reportData: t, deal: a, storeItem: n } = e,
-          { dtDiscountStart: r, dtDiscountEnd: i } = (0, c.Y4)(a);
-        let s;
+        const { reportData: t, deal: a, storeItem: n } = e;
+        let r;
         return (
-          (s = n?.GetAssets().GetHeaderURL()
+          (r = n?.GetAssets().GetHeaderURL()
             ? u.createElement("img", { src: n.GetAssets().GetHeaderURL() })
             : n
               ? (0, M.we)("#DailyDeals_HeaderArtMissing")
@@ -45289,21 +45301,8 @@
           u.createElement(
             "div",
             { className: Y.DailyDeal_HistoryTable },
-            u.createElement("div", { className: Y.CapsuleContainer }, s),
-            u.createElement(
-              "div",
-              { className: Y.Cell },
-              u.createElement(
-                "div",
-                { className: Y.HighlightHeader },
-                (0, M.we)("#DailyDeals_Report_Feature"),
-              ),
-              u.createElement(
-                "div",
-                { className: Y.HighlightText },
-                (0, M.TW)(r),
-              ),
-            ),
+            u.createElement("div", { className: Y.CapsuleContainer }, r),
+            u.createElement("div", { className: Y.Cell }),
             u.createElement(
               "div",
               { className: Y.Cell },
