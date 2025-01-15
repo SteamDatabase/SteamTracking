@@ -1166,7 +1166,6 @@ ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/analysis/ajaxgetpromotionplanpackagediscountsummary
-${PARTNER_BASE_URL}promotion/analysis/ajaxgetpromotionplanpackagesales
 ${PARTNER_BASE_URL}promotion/analysis/curated
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inputaccesskey=${}
