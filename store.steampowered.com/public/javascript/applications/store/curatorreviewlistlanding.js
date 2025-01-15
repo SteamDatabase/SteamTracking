@@ -1152,8 +1152,8 @@
         F = a(99032),
         H = a(45359),
         x = a(46416),
-        M = a(22797),
-        O = a(10224),
+        O = a(22797),
+        M = a(10224),
         Y = a(94743),
         W = a(61859),
         j = a(61336),
@@ -1327,7 +1327,7 @@
           }, [a, u]),
           null == l)
         )
-          return r.createElement(M.t, {
+          return r.createElement(O.t, {
             string: (0, W.we)("#Loading"),
             position: "center",
             size: "medium",
@@ -1385,7 +1385,7 @@
           f =
             a &&
             a.GetImageURL(
-              (0, O.c)() ? "product_mobile_banner" : "product_banner",
+              (0, M.c)() ? "product_mobile_banner" : "product_banner",
               m,
             );
         return r.createElement(
@@ -1602,7 +1602,7 @@
         }
       }
       function re(e) {
-        let t = (0, p.VZ)(e.url);
+        let t = (0, p.OZ)(e.url);
         (0, o.p)(t) &&
           (t =
             (g.TS.IN_CLIENT ? "steam://openurl_external/" : "") +

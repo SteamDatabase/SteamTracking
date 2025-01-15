@@ -4208,22 +4208,42 @@
       }
       function $t(e) {
         const {
-          className: t,
-          enabled: a,
-          locked: l,
-          slotIndex: r,
-          onToggle: s,
-          ...i
-        } = e;
+            className: t,
+            enabled: a,
+            locked: l,
+            slotIndex: r,
+            onToggle: s,
+            dragState: i,
+            setDragState: o,
+            ...c
+          } = e,
+          [m, u] = (0, n.useState)(!1),
+          p = (0, n.useRef)();
         return n.createElement(x.Z, {
-          ...i,
+          ref: p,
+          ...c,
           className: (0, d.A)(
             t,
             be.ParentalPlaytimeWindowSelector,
             a && be.Enabled,
             l && be.Locked,
           ),
-          onActivate: () => !l && s(r),
+          onActivate: () => {
+            l || m || s(r), o(null), u(!1);
+          },
+          onPointerDown: (e) => {
+            o(!a), u(!0), s(r), e.target.releasePointerCapture(e.pointerId);
+          },
+          onPointerEnter: (e) => {
+            null === i || l || a === i || s(r),
+              e.target.releasePointerCapture(e.pointerId);
+          },
+          onPointerLeave: (e) => {
+            e.target.releasePointerCapture(e.pointerId);
+          },
+          onPointerUp: () => {
+            o(null);
+          },
         });
       }
       function ea(e) {
@@ -4232,7 +4252,8 @@
           i = Intl.DateTimeFormat(p.pf.GetPreferredLocales(), {
             hour: "numeric",
             minute: "numeric",
-          });
+          }),
+          [o, c] = (0, n.useState)(null);
         for (let e = 0; e < 48; e++) {
           const t = a & (BigInt(1) << BigInt(e)),
             i = l && l & (BigInt(1) << BigInt(e));
@@ -4243,6 +4264,8 @@
               locked: !!i,
               slotIndex: e,
               onToggle: r,
+              dragState: o,
+              setDragState: c,
             }),
           );
         }
@@ -4280,7 +4303,10 @@
         }
         return n.createElement(
           x.Z,
-          { className: (0, d.A)(be.ParentalPlaytimeGrid, t) },
+          {
+            className: (0, d.A)(be.ParentalPlaytimeGrid, t),
+            onMouseLeave: () => c(null),
+          },
           s,
         );
       }

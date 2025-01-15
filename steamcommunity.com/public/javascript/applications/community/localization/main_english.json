@@ -370,7 +370,6 @@
     "EventEditor_Days": "Days",
     "EventEditor_Week": "Week",
     "EventEditor_Weeks": "Weeks",
-    "EventEditor_SetToNow": "Set to Now",
     "EventEditor_Date_OptInBefore": "Date/Time is before %1$s permitted start time.",
     "EventEditor_Date_OptInAfter": "Date/Time is after %1$s permitted end time.",
     "EventEditor_Date_Blocked_Generic": "Time is blocked out by %1$s. You cannot schedule an event that starts or ends within the blocked-out time. Nor can you schedule an event that starts before and ends after the blocked-out time.",

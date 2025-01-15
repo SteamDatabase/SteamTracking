@@ -128,6 +128,7 @@ function GetMarketPriceOverview( container, params )
 	$J.get(
 		'https://steamcommunity.com/market/priceoverview/',
 		{
+			origin: 'https://store.steampowered.com/',
 			appid: appid,
 			country: params['country'],
 			currency: params['currency'],

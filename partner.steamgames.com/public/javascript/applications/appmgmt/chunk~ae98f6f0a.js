@@ -1745,55 +1745,55 @@
           return "CStore_ReportApp_Request";
         }
       }
-      class I extends o {
+      class U extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return I.toObject(e, this);
+          return U.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new I();
+          return new U();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
+            r = new U();
+          return U.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_ReportApp_Response";
         }
       }
-      class U extends o {
+      class I extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            U.prototype.primary_language || a.Sg(U.M()),
+            I.prototype.primary_language || a.Sg(I.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            U.sm_m ||
-              (U.sm_m = {
-                proto: U,
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
                 fields: {
                   primary_language: {
                     n: 1,
@@ -1848,39 +1848,39 @@
                   },
                 },
               }),
-            U.sm_m
+            I.sm_m
           );
         }
         static MBF() {
-          return U.sm_mbf || (U.sm_mbf = a.w0(U.M())), U.sm_mbf;
+          return I.sm_mbf || (I.sm_mbf = a.w0(I.M())), I.sm_mbf;
         }
         toObject(e = !1) {
-          return U.toObject(e, this);
+          return I.toObject(e, this);
         }
         static toObject(e, t) {
-          return a.BT(U.M(), e, t);
+          return a.BT(I.M(), e, t);
         }
         static fromObject(e) {
-          return a.Uq(U.M(), e);
+          return a.Uq(I.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new U();
-          return U.deserializeBinaryFromReader(r, t);
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return a.zj(U.MBF(), e, t);
+          return a.zj(I.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          a.i0(U.M(), e, t);
+          a.i0(I.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_UserPreferences";
@@ -2052,7 +2052,7 @@
               (N.sm_m = {
                 proto: N,
                 fields: {
-                  preferences: { n: 1, c: U },
+                  preferences: { n: 1, c: I },
                   tag_preferences: { n: 2, c: C },
                   content_descriptor_preferences: { n: 3, c: l.u2 },
                 },
@@ -3479,7 +3479,7 @@
               (ce.sm_m = {
                 proto: ce,
                 fields: {
-                  preferences: { n: 1, c: U },
+                  preferences: { n: 1, c: I },
                   tag_preferences: { n: 2, c: C },
                   content_descriptor_preferences: { n: 3, c: l.u2 },
                 },
@@ -3958,16 +3958,35 @@
       class ye extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            ye.prototype.appid || a.Sg(ye.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            ye.sm_m ||
+              (ye.sm_m = {
+                proto: ye,
+                fields: {
+                  appid: { n: 1, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                },
+              }),
+            ye.sm_m
+          );
+        }
+        static MBF() {
+          return ye.sm_mbf || (ye.sm_mbf = a.w0(ye.M())), ye.sm_mbf;
         }
         toObject(e = !1) {
           return ye.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return a.BT(ye.M(), e, t);
         }
         static fromObject(e) {
-          return new ye();
+          return a.Uq(ye.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -3975,13 +3994,15 @@
           return ye.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return a.zj(ye.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return ye.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          a.i0(ye.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
@@ -4298,7 +4319,7 @@
             );
           }),
           (e.ReportApp = function (e, t) {
-            return e.SendMsg("Store.ReportApp#1", (0, s.I8)(O, t), I, {
+            return e.SendMsg("Store.ReportApp#1", (0, s.I8)(O, t), U, {
               ePrivilege: 3,
             });
           }),

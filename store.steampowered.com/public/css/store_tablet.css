@@ -49,6 +49,12 @@ html.tablet .spotlight_col .store_capsule .discount_block {
     padding: 2px;
 }
 
+@media screen and (min-width:  1280px) {
+	html.tablet .spotlight_col .store_capsule .discount_block {
+		padding: 1px;
+	}
+}
+
 html.tablet .specials_target .store_capsule .discount_block .discount_prices,
 html.tablet .spotlight_col .store_capsule .discount_block .discount_prices {
     gap: 0;
@@ -73,6 +79,7 @@ html.tablet .home_area_spotlight {
 	html.tablet .tab_item {
 		width: var(--gpWidth-4colcap);
 		min-width: var(--gpWidth-4colcap);
+		height: auto;
 	}
 }
 
@@ -502,7 +509,8 @@ html.tablet .community_recommendation_capsule .discount_block_large .discount_pc
 html.tablet #spotlight_carousel .discount_block_large .discount_pct {
 	font: var(--gpText-BodyMedium);
 	padding: 0px 4px;
-	border-radius: 1px;
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
 }
 
 html.tablet .community_recommendation_capsule .discount_block_large .discount_prices {

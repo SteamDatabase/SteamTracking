@@ -885,6 +885,7 @@
                     { className: Se().ShareLink },
                     r.createElement(Ee.f, {
                       text: n,
+                      event: null,
                       partnerEventStore: e.partnerEventStore,
                     }),
                   ),
@@ -2462,7 +2463,7 @@
         return r.createElement(
           "div",
           { className: it().ReferencedApps },
-          r.createElement(Ee.f, { text: i }),
+          r.createElement(Ee.f, { text: i, event: t }),
         );
       }
       var ct = n(75204);

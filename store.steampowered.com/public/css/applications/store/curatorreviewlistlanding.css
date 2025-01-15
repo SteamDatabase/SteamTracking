@@ -67,7 +67,7 @@
   opacity: 1;
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover .YoutubePreviewPlay svg {
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+  filter: drop-shadow(0 0 5px black);
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover .YoutubePreviewImage {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);

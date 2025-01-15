@@ -2641,6 +2641,8 @@ div#appAutoHeader_list
 div#appHeaderFindSuggestions
 {
 	width: 455px !important;
+	max-height: 500px;
+	overflow-y: auto;
 }
 
 #global_action_menu {

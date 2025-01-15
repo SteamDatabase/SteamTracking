@@ -51,7 +51,7 @@
   color: orange;
 }
 ._1LlRFhVuQF26o2UG7Vg5s3._2A2-p9rNzm72Zu74g7dQCs {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 0px;
   border: none;
 }
@@ -1558,7 +1558,7 @@ html.responsive.touch
   width: 100vw;
   height: 100vh;
   z-index: 50;
-  background-color: rgba(0, 0, 0, 0.3333333333);
+  background-color: #00000055;
 }
 ._20PrZ-yvcNH561NUmAH7_Y ._2i8gkeopkt1mSdGiNXYmd- {
   position: fixed;
@@ -1628,7 +1628,7 @@ html.responsive.touch
     );
 }
 ._20PrZ-yvcNH561NUmAH7_Y .yps0ywc-By1zfTHujot5E::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 ._20PrZ-yvcNH561NUmAH7_Y ._3xi45UCnCWYdn3vwsjNkYD {
   display: flex;
@@ -2145,7 +2145,7 @@ html:not(.touch)
   ._3HF9tOy_soo1B_odf1XArk
   .u8z1m_ainssHj7AbLKOZs._9rv9PL7ZWe4vZofYqYl3M._17Iog8CXlR0s8DuWS0rD0n {
   background-size: contain;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-position: top right;
 }
 ._1E3Anhs34BXsWWWqH4RNPL._2X_hMZpqI8fyqbeFPi4JPj
@@ -2349,7 +2349,7 @@ html:not(.touch)
   ._3HF9tOy_soo1B_odf1XArk
   .d8bPiEt0DUII_mRqek_ht._9rv9PL7ZWe4vZofYqYl3M._17Iog8CXlR0s8DuWS0rD0n {
   background-size: contain;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-position: top right;
 }
 ._1E3Anhs34BXsWWWqH4RNPL
@@ -2610,7 +2610,7 @@ html:not(.touch)
     z-index: 2;
   }
   ._1E3Anhs34BXsWWWqH4RNPL ._3_86JJo-1O_KkOZwRl2uZ6:hover {
-    background: rgba(0, 0, 0, 0);
+    background: transparent;
   }
 }
 ._1E3Anhs34BXsWWWqH4RNPL ._3_86JJo-1O_KkOZwRl2uZ6 span {
@@ -3266,7 +3266,7 @@ html:not(.touch)
   opacity: 1;
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover .YoutubePreviewPlay svg {
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+  filter: drop-shadow(0 0 5px black);
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover .YoutubePreviewImage {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);

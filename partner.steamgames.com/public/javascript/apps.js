@@ -3483,6 +3483,19 @@ function VerifyReleaseGame( appid, data )
 		"Release Now"	);
 }
 
+function VerifyReleaseGameChina( appid, data )
+{
+	VerifyReleaseCommonChina(
+		appid,
+		data,
+		ReleaseGameChina,
+		"Confirm App Release",
+		"If you are ready to release your app and make it available to customers immediately, please type the phrase \"%1$s\" into the box below.",
+		"Release my app",
+		"Release Now"	);
+}
+
+
 function VerifyReleaseCommon( appid, data, fnRelease, strConfirmTitle, strConfirmText, strAcceptString, strButtonText )
 {
 	var dialog = ShowPromptDialog( strConfirmTitle, strConfirmText.replace('%1$s', strAcceptString), strButtonText, null );
@@ -3513,6 +3526,36 @@ function VerifyReleaseCommon( appid, data, fnRelease, strConfirmTitle, strConfir
 	})
 }
 
+function VerifyReleaseCommonChina( appid, data, fnRelease, strConfirmTitle, strConfirmText, strAcceptString, strButtonText )
+{
+	var dialog = ShowPromptDialog( strConfirmTitle, strConfirmText.replace('%1$s', strAcceptString), strButtonText, null );
+
+	var input = $J( dialog.m_$Content ).find( "input" );
+	var releasebtn = $J( dialog.m_$Content ).find( "button" );
+	releasebtn.prop('disabled', true);
+
+
+	input.on('keyup', function(event){
+		if( input.val().toLowerCase() == strAcceptString.toLowerCase() )
+			releasebtn.prop('disabled', false);
+		else if( input.val().localeCompare( strAcceptString, "standard", { sensitivity: 'base' } ) === 0 )
+			releasebtn.prop('disabled', false);
+		else
+			releasebtn.prop('disabled', true);
+	})
+
+	dialog.done( function( )
+	{
+		fnRelease( appid, data );
+	} );
+
+	dialog.fail( function() {
+		$J("#publish_button_china").show();
+		$J("#publish_button_china").show();
+		$J('#publish_status_china').hide();
+	})
+}
+
 function ReleaseGamePrepurchase( appid, data )
 {
 	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseappprepurchase/' + appid, data );
@@ -3521,6 +3564,11 @@ function ReleaseGamePrepurchase( appid, data )
 function ReleaseGame( appid, data )
 {
 	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseapp/' + appid, data );
+}
+
+function ReleaseGameChina( appid, data )
+{
+	ReleaseGameCommonChina( 'https://partner.steamgames.com/apps/ajaxreleaseappsteamchina/' + appid, data );
 }
 
 function ReleaseGameCommon( url, data )
@@ -3556,6 +3604,44 @@ function ReleaseGameCommon( url, data )
 			$J('#publish_status_log').show();
 			$J('#publish_status').hide();
 			$J('#publish_button').show();
+		}
+	});
+}
+
+function ReleaseGameCommonChina( url, data ) //TODO: PIETERW - had to create this because the publish_status_china things are unique to the Steam China DIVS
+{
+	jQuery.ajax({
+		dataType: "json",
+		url: url,
+		type: 'POST',
+		data: data,
+		success: function(data)
+		{
+			if( data.message )
+				$J('#publish_status_log_china').append(  $J( '<span>' + data.message + '</span><br>' ) );
+
+			if( data['success'] != 1 )
+			{
+				$J('#publish_status_log_china').append( $J('<p><b>ERROR '+data['success']+'</b><br>Please refresh and try again. If problems persist, <a href="https://partner.steamgames.com/home/contact_steam">contact Steam Publishing</a></p>') );
+				$J('#publish_status_log_china').show();
+				$J('#publish_status_china').hide();
+				$J('#publish_button-china').show();
+			} else {
+				$J('#publish_status_china').hide();
+				$J('#release_details_container_china').hide();
+				$J('#publish_success_china').show();
+			}
+
+			// refresh the send demo wishlist emails button
+			window?.AppLandingRefreshCallbacks?.Dispatch();
+		},
+		error: function( response )
+		{
+			console.log('error', arguments);
+			$J('#publish_status_log_china').append( $J('<p><b>Request failed with an unknown error.</b></p><p>Please refresh and try again. If problems persist, <a href="https://partner.steamgames.com/home/contact_steam">contact Steam Publishing</a></p>') );
+			$J('#publish_status_log_china').show();
+			$J('#publish_status_china').hide();
+			$J('#publish_button_china').show();
 		}
 	});
 }

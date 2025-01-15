@@ -7,7 +7,7 @@ function ImportAndSaveSurvey( appid )
 
 var gValidURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
-function SaveSurvey( appid )
+function SaveSurvey( appid, bIsSupport )
 {
 	if ( $J("#categoryid_38" ).is(":checked") &&
 		 $J("#categoryid_40" ).is(":checked") &&
@@ -28,7 +28,7 @@ function SaveSurvey( appid )
 
 	var checkboxAIYes = $J( '#categoryid_38' );
 	var checkboxAINo = $J( '#categoryid_50' );
-	if ( !checkboxAIYes.prop( 'checked' ) && !checkboxAINo.prop( 'checked' ) )
+	if ( !checkboxAIYes.prop( 'checked' ) && !checkboxAINo.prop( 'checked' ) && !bIsSupport )
 	{
 		ShowAlertDialog( 'Error Saving Survey', 'Please specify whether your game uses generative artificial intelligence to generate content for the game, either pre-rendered or live-generated.' );
 		return;

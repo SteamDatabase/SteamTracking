@@ -4742,7 +4742,7 @@
         return i.createElement(
           "div",
           { className: c().ReferencedApps },
-          i.createElement(s.f, { text: u }),
+          i.createElement(s.f, { text: u, event: t }),
         );
       }
     },

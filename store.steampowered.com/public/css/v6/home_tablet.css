@@ -402,6 +402,7 @@
 
 	html.tablet #spotlight_carousel .home_special_offers_group {
 		margin-right: 0px;
+		height: 370px;
 	}
 
 	html.tablet #spotlight_carousel .dailydeal_countdown.ttip {

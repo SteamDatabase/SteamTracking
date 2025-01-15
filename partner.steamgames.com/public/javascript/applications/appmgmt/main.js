@@ -1687,7 +1687,7 @@
             r.e(7352),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 2317)),
+          ]).then(r.bind(r, 50367)),
         ),
         me = u.lazy(() =>
           Promise.all([
@@ -1779,7 +1779,7 @@
             r.e(6060),
             r.e(8758),
             r.e(2455),
-          ]).then(r.bind(r, 87349)),
+          ]).then(r.bind(r, 8568)),
         ),
         ge = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         _e = u.lazy(() =>
@@ -3589,7 +3589,7 @@
         s = r.n(i),
         a = r(90626),
         o = r(66707),
-        l = r(89350),
+        l = r(97907),
         c = r(7745),
         u = r(21109),
         m = r(74882);
@@ -3647,7 +3647,7 @@
         a = r.n(s),
         o = r(90626),
         l = r(76011),
-        c = r(89350),
+        c = r(97907),
         u = r(63512),
         m = r(7445),
         d = r(76217),
@@ -4000,7 +4000,7 @@
           );
         }
       }
-      var c = r(89350);
+      var c = r(97907);
       class u {
         m_node;
         m_History;
@@ -4144,9 +4144,9 @@
         }
       }
     },
-    89350: (e, t, r) => {
+    97907: (e, t, r) => {
       "use strict";
-      r.d(t, { $C: () => V, xj: () => U, iU: () => H, Yo: () => j });
+      r.d(t, { $C: () => U, xj: () => z, iU: () => P, Yo: () => W });
       var n = r(34629),
         i = r(88006),
         s = r(69817),
@@ -4266,47 +4266,8 @@
       function f(e, t, r) {
         return null == e || isNaN(e) ? e : Math.max(t, Math.min(r, e));
       }
-      function b(e) {
-        return null != e && void 0 !== e.focus;
-      }
-      function w(e) {
-        let t;
-        return e && (t = e.ownerDocument.defaultView), t;
-      }
-      function C(e, t) {
-        let r = e?.parentElement;
-        for (; r; ) {
-          if (b(r)) {
-            if (!t || "x" == t) {
-              const e = window.getComputedStyle(r);
-              if (
-                "scroll" == e.overflowX ||
-                "auto" == e.overflowX ||
-                "fixed" == e.position
-              )
-                break;
-            }
-            if (!t || "y" == t) {
-              const e = window.getComputedStyle(r);
-              if (
-                "scroll" == e.overflowY ||
-                "auto" == e.overflowY ||
-                "fixed" == e.position
-              )
-                break;
-            }
-          }
-          r = r.parentElement;
-        }
-        return b(r) ? r : null;
-      }
-      function S(e, t) {
-        if (!("ownerDocument" in e)) return !0;
-        const r = e.ownerDocument.defaultView.getComputedStyle(e),
-          n = "x" === t ? r.overflowX : r.overflowY;
-        return "auto" === n || "scroll" === n;
-      }
-      class M {
+      var b = r(94104);
+      class w {
         m_options;
         m_msStart;
         m_msEnd;
@@ -4375,7 +4336,7 @@
           this.m_bActive = !1;
         }
       }
-      class v extends M {
+      class C extends w {
         m_fnCallback;
         constructor(e, t, r) {
           super(e, t), (this.m_fnCallback = r);
@@ -4384,12 +4345,12 @@
           this.m_fnCallback(e);
         }
       }
-      class y extends M {
+      class S extends w {
         m_object;
         m_propTargets;
         m_props = {};
         constructor(e, t, r) {
-          super("ownerDocument" in e ? w(e) : e, r),
+          super("ownerDocument" in e ? b.qf(e) : e, r),
             (this.m_object = e),
             (this.m_propTargets = t);
         }
@@ -4410,10 +4371,10 @@
           }
         }
       }
-      const B = new c.wd("ScrollSnap").Debug;
-      let E = !1;
-      let R;
-      function I(e) {
+      const M = new c.wd("ScrollSnap").Debug;
+      let v = !1;
+      let y;
+      function B(e) {
         if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
         if (!("ownerDocument" in e))
           return {
@@ -4432,7 +4393,7 @@
           n = n.offsetParent;
         }
         for (n = e?.parentElement; n; ) {
-          const { scrollTop: e, scrollLeft: i } = P(n);
+          const { scrollTop: e, scrollLeft: i } = A(n);
           if (((t -= e), (r -= i), "ownerDocument" in n)) {
             if ("fixed" === window.getComputedStyle(n).position) break;
           }
@@ -4445,15 +4406,15 @@
           bottom: t + e.offsetHeight,
         };
       }
-      function T(e, t) {
+      function E(e, t) {
         return "x" == t
           ? [e.left, e.right, e.right - e.left]
           : [e.top, e.bottom, e.bottom - e.top];
       }
-      function D(e, t, r, n) {
-        let [i, s, a] = T(e, n),
-          [o, l, c] = T(t, n),
-          [u, m] = T(r, n);
+      function R(e, t, r, n) {
+        let [i, s, a] = E(e, n),
+          [o, l, c] = E(t, n),
+          [u, m] = E(r, n);
         return i < o && s > l
           ? 0
           : (i < o && a <= c) || (s > l && a > c)
@@ -4462,25 +4423,25 @@
               ? s - l + m
               : 0;
       }
-      function k(e) {
+      function I(e) {
         return "auto" == e
           ? 0
           : e.endsWith("px")
             ? parseInt(e)
             : (console.log("Unsupported length", e), 0);
       }
-      function O(e) {
+      function T(e) {
         if (!("ownerDocument" in e))
           return { left: 0, right: 0, top: 0, bottom: 0 };
         const t = e.ownerDocument.defaultView.getComputedStyle(e);
         return {
-          left: k(t.scrollMarginLeft),
-          right: k(t.scrollMarginRight),
-          top: k(t.scrollMarginTop),
-          bottom: k(t.scrollMarginBottom),
+          left: I(t.scrollMarginLeft),
+          right: I(t.scrollMarginRight),
+          top: I(t.scrollMarginTop),
+          bottom: I(t.scrollMarginBottom),
         };
       }
-      function L(e, t) {
+      function D(e, t) {
         let r = (function (e) {
           let t;
           return (
@@ -4491,10 +4452,10 @@
                     window.document.documentElement,
                   )),
             {
-              left: k(t.scrollPaddingLeft),
-              right: k(t.scrollPaddingRight),
-              top: k(t.scrollPaddingTop),
-              bottom: k(t.scrollPaddingBottom),
+              left: I(t.scrollPaddingLeft),
+              right: I(t.scrollPaddingRight),
+              top: I(t.scrollPaddingTop),
+              bottom: I(t.scrollPaddingBottom),
             }
           );
         })(e);
@@ -4505,27 +4466,27 @@
           bottom: Math.max(0, t.bottom - r.bottom),
         };
       }
-      function F(e) {
+      function k(e) {
         return e > -1 && e < 1;
       }
-      function x(e, t, r, n, i) {
-        B(
+      function O(e, t, r, n, i) {
+        M(
           "----------------------------------------------------------------------------------",
         ),
-          B("Scrolling Into View:", t);
+          M("Scrolling Into View:", t);
         let s = [],
           a = t,
-          o = I(t),
+          o = B(t),
           l = i ?? Number.MAX_VALUE;
         for (; a; ) {
-          let e = C(a);
-          e || (e = w(a));
-          let t = O(a),
-            r = L(e, I(e)),
-            c = z(e),
+          let e = (0, b._f)(a);
+          e || (e = (0, b.qf)(a));
+          let t = T(a),
+            r = D(e, B(e)),
+            c = x(e),
             u = { element: e, left: 0, top: 0 };
           if (
-            (B(
+            (M(
               "Checking scroll div",
               e,
               `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
@@ -4534,16 +4495,16 @@
               o,
             ),
             (n && "y" != n) ||
-              !S(e, "y") ||
-              ((u.top = D(o, r, t, "y")),
+              !(0, b.aF)(e, "y") ||
+              ((u.top = R(o, r, t, "y")),
               (u.top = f(u.top, -c.scrollTop, c.MaxScrollTop() - c.scrollTop)),
               i &&
                 ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
                 (l -= Math.abs(u.top))),
-              B(`- checked y: ${u.top}`)),
+              M(`- checked y: ${u.top}`)),
             (n && "x" != n) ||
-              !S(e, "x") ||
-              ((u.left = D(o, r, t, "x")),
+              !(0, b.aF)(e, "x") ||
+              ((u.left = R(o, r, t, "x")),
               (u.left = f(
                 u.left,
                 -c.scrollLeft,
@@ -4553,7 +4514,7 @@
                 ((u.left =
                   Math.min(l, Math.abs(u.left)) * (u.left < 0 ? -1 : 1)),
                 (l -= Math.abs(u.left))),
-              B(`- checked x: ${u.left}`)),
+              M(`- checked x: ${u.left}`)),
             s.push(u),
             i && !l)
           )
@@ -4571,22 +4532,22 @@
         }
         let c = !1;
         for (let e of s) {
-          if (F(e.left) && F(e.top)) continue;
-          let t = z(e.element),
+          if (k(e.left) && k(e.top)) continue;
+          let t = x(e.element),
             n = t.scrollTop + e.top,
             i = t.scrollLeft + e.left;
           (i = f(i, 0, t.MaxScrollLeft())),
             (n = f(n, 0, t.MaxScrollTop())),
-            (F(t.scrollLeft - i) && F(t.scrollTop - n)) ||
+            (k(t.scrollLeft - i) && k(t.scrollTop - n)) ||
               (t.scrollTo({ left: i, top: n, behavior: r }),
-              c || (B("Scrolling:"), (c = !0)),
-              B(
+              c || (M("Scrolling:"), (c = !0)),
+              M(
                 `- ${e.top},${e.left} => ${n}, ${i}, behavior: ${r}`,
                 e.element,
               ));
         }
       }
-      class A {
+      class L {
         m_element;
         m_fnOriginalScrollTo;
         m_window;
@@ -4637,7 +4598,7 @@
               if (this.m_window) {
                 const n = this.currentScrollLeft,
                   i = this.currentScrollTop;
-                this.m_animation = new v(this.m_window, e, (e) => {
+                this.m_animation = new C(this.m_window, e, (e) => {
                   this.m_window?.scrollTo({
                     left: n + (t - n) * e,
                     top: i + (r - i) * e,
@@ -4646,7 +4607,7 @@
                 });
               } else
                 (this.m_element.style.scrollSnapType = "initial"),
-                  (this.m_animation = new y(
+                  (this.m_animation = new S(
                     this.m_element,
                     { scrollTop: r, scrollLeft: t },
                     e,
@@ -4696,20 +4657,20 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, n.Cg)([o.o], A.prototype, "ResetScrollState", null);
-      const N = new WeakMap();
-      function z(e) {
-        let t = N.get(e);
-        return t || ((t = new A(e)), N.set(e, t)), t;
+      (0, n.Cg)([o.o], L.prototype, "ResetScrollState", null);
+      const F = new WeakMap();
+      function x(e) {
+        let t = F.get(e);
+        return t || ((t = new L(e)), F.set(e, t)), t;
       }
-      function P(e) {
-        const t = N.get(e);
+      function A(e) {
+        const t = F.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const W = new c.wd("FocusNavigationMovement").Debug;
-      var U, H, j, V;
+      const N = new c.wd("FocusNavigationMovement").Debug;
+      var z, P, W, U;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -4718,25 +4679,25 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(U || (U = {})),
+      })(z || (z = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
             (e[(e.MAINTAIN_X = 2)] = "MAINTAIN_X"),
             (e[(e.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
             (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
-        })(H || (H = {})),
+        })(P || (P = {})),
         (function (e) {
           (e[(e.Standard = 0)] = "Standard"),
             (e[(e.NoTransform = 1)] = "NoTransform"),
             (e[(e.NoTransformSparseContent = 2)] = "NoTransformSparseContent");
-        })(j || (j = {})),
+        })(W || (W = {})),
         (function (e) {
           (e[(e.INVALID = 0)] = "INVALID"),
             (e[(e.FORWARD = 1)] = "FORWARD"),
             (e[(e.BACKWARD = 2)] = "BACKWARD");
-        })(V || (V = {}));
-      class q {
+        })(U || (U = {}));
+      class H {
         m_Tree;
         m_Parent;
         m_rgChildren = [];
@@ -4935,7 +4896,7 @@
             (this.m_bMounted = !1);
           const e = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || e) &&
-            (W(
+            (N(
               `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
             ),
             e && this.Tree.DeferredFocus.RequestFocus(null),
@@ -4955,7 +4916,7 @@
           !this.m_rgNavigationHandlers.length &&
             this.m_element &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties?.layout != U.NONE ||
+              this.m_Properties?.layout != z.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -5046,7 +5007,7 @@
               const e = this.FindFocusableDescendant();
               if (e && e !== this)
                 return (
-                  W(
+                  N(
                     "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
                     this.m_element,
                     e.m_element,
@@ -5105,7 +5066,7 @@
         BFocusFirstChild(e) {
           const t = this.FindNextFocusableChildInDirection(
             -1,
-            V.FORWARD,
+            U.FORWARD,
             i.pR.INVALID,
           );
           return this.InternalFocusDescendant(t, e);
@@ -5113,7 +5074,7 @@
         BFocusLastChild(e) {
           const t = this.FindNextFocusableChildInDirection(
             this.m_rgChildren.length,
-            V.BACKWARD,
+            U.BACKWARD,
             i.pR.INVALID,
           );
           return this.InternalFocusDescendant(t, e);
@@ -5133,26 +5094,26 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == U.ROW_REVERSE ||
-                e == U.COLUMN_REVERSE ||
-                i == H.LAST
+                e == z.ROW_REVERSE ||
+                e == z.COLUMN_REVERSE ||
+                i == P.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
             }
-            if ((i == H.MAINTAIN_X || i == H.MAINTAIN_Y || t) && r) {
+            if ((i == P.MAINTAIN_X || i == P.MAINTAIN_Y || t) && r) {
               let n, a;
-              i == H.MAINTAIN_X ? (n = "x") : i == H.MAINTAIN_Y && (n = "y"),
+              i == P.MAINTAIN_X ? (n = "x") : i == P.MAINTAIN_Y && (n = "y"),
                 n == s.xr[r] &&
                   (a =
                     this.m_Tree.GetLastFocusedMovementRect(s.xr[r]) ??
                     this.m_Tree.GetLastFocusedNode()?.GetBoundingRect()),
-                W(
-                  `Taking focus while preserving ${i && H[i]} preserved: ${n} movement: ${r}, node:`,
+                N(
+                  `Taking focus while preserving ${i && P[i]} preserved: ${n} movement: ${r}, node:`,
                   a || t,
                 );
-              const l = this.ComputeRelativeDirection(e, U.GRID);
+              const l = this.ComputeRelativeDirection(e, z.GRID);
               if (a || t) {
-                const i = l == V.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+                const i = l == U.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 o = this.FindClosestChildInNextAxiallyAlignedSet(
                   n || s.xr[r],
                   l,
@@ -5162,10 +5123,10 @@
                   this.m_rgChildren[i].GetBoundingRect(),
                 );
               } else if (n != s.xr[r]) {
-                const t = l == V.BACKWARD ? this.m_rgChildren.length : -1;
+                const t = l == U.BACKWARD ? this.m_rgChildren.length : -1;
                 o = this.FindNextFocusableChildInDirection(t, l, e);
               }
-            } else if (i == H.PREFERRED_CHILD) {
+            } else if (i == P.PREFERRED_CHILD) {
               for (const t of this.m_rgChildren)
                 if (
                   ((o = t.BWantsPreferredFocus()
@@ -5175,21 +5136,21 @@
                 )
                   return o;
             } else
-              i == H.LAST &&
+              i == P.LAST &&
                 (o = this.FindNextFocusableChildInDirection(
                   l + 1,
-                  V.BACKWARD,
+                  U.BACKWARD,
                   e,
                 ));
             return (
               o ||
                 (o = this.FindNextFocusableChildInDirection(
                   l - 1,
-                  V.FORWARD,
+                  U.FORWARD,
                   e,
                 )),
               o ||
-                (o = this.FindNextFocusableChildInDirection(l, V.BACKWARD, e)),
+                (o = this.FindNextFocusableChildInDirection(l, U.BACKWARD, e)),
               o || (n ? this : null)
             );
           }
@@ -5204,7 +5165,7 @@
               bottom: t.innerHeight,
             });
           return (
-            W(
+            N(
               `Focusing visible child, best child match is ${r?.child?.Element?.className} - ${JSON.stringify(r?.visibility)}`,
             ),
             !!r && r.child.BTakeFocus(e)
@@ -5212,7 +5173,7 @@
         }
         GetLayout() {
           if (this.m_Properties?.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return U.NONE;
+          if (this.m_rgChildren.length < 2) return z.NONE;
           return (0, m.ko)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -5249,16 +5210,16 @@
           let n,
             s = this.ComputeRelativeDirection(e, r);
           if (
-            (W(
-              `Handling navigation event ${i.pR[e]} - ${U[r]} - ${V[s]}`,
+            (N(
+              `Handling navigation event ${i.pR[e]} - ${z[r]} - ${U[s]}`,
               this.m_element,
             ),
-            s == V.INVALID)
+            s == U.INVALID)
           )
             return !1;
           if (this.m_Properties?.focusable && this.m_bFocused)
-            return W("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), r == U.GRID))
+            return N("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), r == z.GRID))
             n = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               s,
@@ -5267,18 +5228,18 @@
           else {
             let t = this.GetActiveChildIndex();
             this.IsValidChildIndex(t) ||
-              (t = s == V.FORWARD ? -1 : this.m_rgChildren.length),
+              (t = s == U.FORWARD ? -1 : this.m_rgChildren.length),
               (n = this.FindNextFocusableChildInDirection(t, s, e));
           }
           if (n) {
             const r = (0, m.G4)(e);
-            if (this.GetScrollIntoViewType() == j.NoTransformSparseContent) {
+            if (this.GetScrollIntoViewType() == W.NoTransformSparseContent) {
               const e = n.Element?.ownerDocument.defaultView;
               if (e) {
                 const i =
                     ("y" == r ? e.innerHeight : e.innerWidth) /
                     (t ? 4.5 : 3.33),
-                  s = I(n.Element);
+                  s = B(n.Element);
                 if (
                   (s.top > e.innerHeight && s.bottom > e.innerHeight + i) ||
                   (s.bottom < 0 && s.top < -i) ||
@@ -5286,8 +5247,8 @@
                   (s.right < 0 && s.left < -i)
                 )
                   return (
-                    W(`Element too far away, scrolling ${i} on ${r} axis `),
-                    x(n.Element, n.Element, "smooth", r, i),
+                    N(`Element too far away, scrolling ${i} on ${r} axis `),
+                    O(n.Element, n.Element, "smooth", r, i),
                     !0
                   );
               }
@@ -5301,54 +5262,54 @@
             ? this.m_Properties.scrollIntoViewType
             : this.m_Parent
               ? this.m_Parent.GetScrollIntoViewType()
-              : j.Standard;
+              : W.Standard;
         }
         GetRelativeDirection(e) {
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let r = t == U.ROW_REVERSE || t == U.COLUMN_REVERSE;
+          let r = t == z.ROW_REVERSE || t == z.COLUMN_REVERSE;
           switch (t) {
-            case U.ROW:
-            case U.ROW_REVERSE:
+            case z.ROW:
+            case z.ROW_REVERSE:
               switch (e) {
                 case i.pR.DIR_LEFT:
-                  return r ? V.FORWARD : V.BACKWARD;
+                  return r ? U.FORWARD : U.BACKWARD;
                 case i.pR.DIR_RIGHT:
-                  return r ? V.BACKWARD : V.FORWARD;
+                  return r ? U.BACKWARD : U.FORWARD;
                 default:
-                  return V.INVALID;
+                  return U.INVALID;
               }
-            case U.COLUMN:
-            case U.COLUMN_REVERSE:
+            case z.COLUMN:
+            case z.COLUMN_REVERSE:
               switch (e) {
                 case i.pR.DIR_UP:
-                  return r ? V.FORWARD : V.BACKWARD;
+                  return r ? U.FORWARD : U.BACKWARD;
                 case i.pR.DIR_DOWN:
-                  return r ? V.BACKWARD : V.FORWARD;
+                  return r ? U.BACKWARD : U.FORWARD;
                 default:
-                  return V.INVALID;
+                  return U.INVALID;
               }
-            case U.GRID:
+            case z.GRID:
               switch (e) {
                 case i.pR.DIR_LEFT:
                 case i.pR.DIR_UP:
-                  return r ? V.FORWARD : V.BACKWARD;
+                  return r ? U.FORWARD : U.BACKWARD;
                 case i.pR.DIR_RIGHT:
                 case i.pR.DIR_DOWN:
-                  return r ? V.BACKWARD : V.FORWARD;
+                  return r ? U.BACKWARD : U.FORWARD;
                 default:
-                  return V.INVALID;
+                  return U.INVALID;
               }
             default:
-              return V.INVALID;
+              return U.INVALID;
           }
         }
         AdvanceIndex(e, t) {
-          return e + (t == V.FORWARD ? 1 : -1);
+          return e + (t == U.FORWARD ? 1 : -1);
         }
         FindNextFocusableChildInDirection(e, t, r) {
-          let n = t == V.FORWARD ? 1 : -1;
+          let n = t == U.FORWARD ? 1 : -1;
           for (let t = e + n; t >= 0 && t < this.m_rgChildren.length; t += n) {
             const e = this.m_rgChildren[t].FindFocusableNode(r);
             if (e) return e;
@@ -5356,7 +5317,7 @@
           return null;
         }
         ScanChildren(e, t, r) {
-          let n = t == V.FORWARD ? 1 : -1;
+          let n = t == U.FORWARD ? 1 : -1;
           for (let t = e; t >= 0 && t < this.m_rgChildren.length; t += n)
             if (r(this.m_rgChildren[t], t)) return t;
           return -1;
@@ -5405,7 +5366,7 @@
               n = e;
             }
           } else {
-            let n = t == V.FORWARD ? 1 : -1;
+            let n = t == U.FORWARD ? 1 : -1;
             for (
               let i = this.AdvanceIndex(e, t);
               i >= 0 && i < this.m_rgChildren.length;
@@ -5437,7 +5398,7 @@
                 !1))
             );
           }),
-            t == V.BACKWARD && o.reverse(),
+            t == U.BACKWARD && o.reverse(),
             o.sort((e, t) => {
               const r = t.overlap - e.overlap;
               return 0 != r ? r : e.dist - t.dist;
@@ -5455,7 +5416,7 @@
           );
         }
         SetActiveChild(e) {
-          e instanceof q
+          e instanceof H
             ? (this.EnsureChildrenSorted(),
               (this.m_ActiveChild = e),
               (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
@@ -5489,7 +5450,7 @@
                 ),
                 this.m_element?.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                W(
+                N(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             (function (e, t) {
@@ -5505,31 +5466,31 @@
                   i = 0 == n.length,
                   s = r?.m_Properties?.scrollIntoViewType;
                 if (
-                  (void 0 === s && (s = E ? j.NoTransform : j.Standard),
+                  (void 0 === s && (s = v ? W.NoTransform : W.Standard),
                   r?.m_Properties?.fnScrollIntoViewHandler &&
                     !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
                 )
                   continue;
                 const a = r.m_element,
                   o =
-                    s == j.NoTransform || s == j.NoTransformSparseContent || !i;
+                    s == W.NoTransform || s == W.NoTransformSparseContent || !i;
                 if (t) {
-                  const t = o ? I(a) : a.getBoundingClientRect();
+                  const t = o ? B(a) : a.getBoundingClientRect();
                   let r = !1;
                   const n = Math.max(1.4 * (t.bottom - t.top), 40);
-                  ((R && performance.now() - R < 500) ||
+                  ((y && performance.now() - y < 500) ||
                     t.bottom < -n ||
                     t.top > window.innerHeight + n) &&
                     (r = !0);
                   let i = r ? "auto" : "smooth";
-                  r && (R = performance.now()),
+                  r && (y = performance.now()),
                     e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
                     o
-                      ? x(0, a, i)
+                      ? O(0, a, i)
                       : a.scrollIntoView({ behavior: i, block: "nearest" });
                 } else
                   o
-                    ? x(0, a, "auto")
+                    ? O(0, a, "auto")
                     : a?.scrollIntoView({
                         behavior: "auto",
                         block: "nearest",
@@ -5540,14 +5501,14 @@
             this.m_Tree.OnChildActivated(e);
         }
       }
-      (0, n.Cg)([o.o], q.prototype, "OnDOMFocus", null),
-        (0, n.Cg)([o.o], q.prototype, "OnDOMBlur", null),
-        (0, n.Cg)([o.o], q.prototype, "OnNavigationEvent", null);
+      (0, n.Cg)([o.o], H.prototype, "OnDOMFocus", null),
+        (0, n.Cg)([o.o], H.prototype, "OnDOMBlur", null),
+        (0, n.Cg)([o.o], H.prototype, "OnNavigationEvent", null);
     },
     7745: (e, t, r) => {
       "use strict";
       r.d(t, { O: () => i });
-      var n = r(89350);
+      var n = r(97907);
       function i(e) {
         switch (e) {
           case "column":
@@ -8479,6 +8440,7 @@
                   },
                   message: { n: 2, br: i.qM.readString, bw: i.gp.writeString },
                   count: { n: 3, br: i.qM.readUint32, bw: i.gp.writeUint32 },
+                  context: { n: 4, br: i.qM.readString, bw: i.gp.writeString },
                 },
               }),
             v.sm_m
@@ -15057,6 +15019,50 @@
         return n;
       }
     },
+    94104: (e, t, r) => {
+      "use strict";
+      function n(e) {
+        return null != e && void 0 !== e.focus;
+      }
+      function i(e) {
+        let t;
+        return e && (t = e.ownerDocument.defaultView), t;
+      }
+      r.d(t, { _f: () => s, aF: () => a, qf: () => i });
+      function s(e, t) {
+        let r = e?.parentElement;
+        for (; r; ) {
+          if (n(r)) {
+            if (!t || "x" == t) {
+              const e = window.getComputedStyle(r);
+              if (
+                "scroll" == e.overflowX ||
+                "auto" == e.overflowX ||
+                "fixed" == e.position
+              )
+                break;
+            }
+            if (!t || "y" == t) {
+              const e = window.getComputedStyle(r);
+              if (
+                "scroll" == e.overflowY ||
+                "auto" == e.overflowY ||
+                "fixed" == e.position
+              )
+                break;
+            }
+          }
+          r = r.parentElement;
+        }
+        return n(r) ? r : null;
+      }
+      function a(e, t) {
+        if (!("ownerDocument" in e)) return !0;
+        const r = e.ownerDocument.defaultView.getComputedStyle(e),
+          n = "x" === t ? r.overflowX : r.overflowY;
+        return "auto" === n || "scroll" === n;
+      }
+    },
     64753: (e, t, r) => {
       "use strict";
       r.d(t, {
@@ -19067,40 +19073,71 @@
     },
     17204: (e, t, r) => {
       "use strict";
-      r.d(t, { aj: () => v });
-      var n = r(56545),
-        i = r(59134),
-        s = r(84811),
-        a = r(61859),
-        o = r(42865);
-      const l =
+      r.d(t, { aj: () => B });
+      var n = r(90626),
+        i = r(56545),
+        s = r(59134),
+        a = r(84811),
+        o = r(61859),
+        l = r(42865);
+      const c =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
-      let c,
-        u = [],
-        m = (e, t) => u.push({ error: e, cCallsitesToIgnore: t });
-      const d = !0;
+      let u,
+        m = [],
+        d = (e, t, r) =>
+          m.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
+      const p = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...n) => {
-          t || m(new Error(_(r, ...n)), 2), e.apply(console, [t, r, ...n]);
+          if (!t) {
+            const e = _();
+            d(new Error(b(r, ...n)), 2, e);
+          }
+          e.apply(console, [t, r, ...n]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          m(new Error(_(e, ...r)), 1), t.apply(console, [e, ...r]);
+          const n = _();
+          d(new Error(b(e, ...r)), 1, n), t.apply(console, [e, ...r]);
         }),
           (console.clogerror = (e, r, ...n) => {
-            m(new Error(_(r, ...n)), e + 1), t.apply(console, [r, ...n]);
+            const i = _();
+            d(new Error(b(r, ...n)), e + 1, i), t.apply(console, [r, ...n]);
           }),
-          l("error", (e) => {
-            m(e.error, 0);
+          c("error", (e) => {
+            d(e.error, 0);
           }),
-          (c = window.setTimeout(() => {
-            (u = []), (m = () => {});
+          (u = window.setTimeout(() => {
+            (m = []), (d = () => {});
           }, 3e4));
       }
-      const p = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        h = ["/(localhost|127.0.0.1):1337/", "chrome-extension://"];
-      class g {
+      const h = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        g = ["/(localhost|127.0.0.1):1337/", "chrome-extension://"];
+      function _() {
+        try {
+          const e = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
+            t =
+              n.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+          if (
+            e &&
+            "object" == typeof e &&
+            "object" == typeof e.ReactDebugCurrentFrame &&
+            "function" == typeof e.ReactDebugCurrentFrame.getCurrentStack
+          ) {
+            const t = e.ReactDebugCurrentFrame.getCurrentStack();
+            if ("string" == typeof t) return t;
+          } else if (
+            t &&
+            "object" == typeof t &&
+            "function" == typeof t.getCurrentStack
+          ) {
+            const e = t.getCurrentStack();
+            if ("string" == typeof e) return e;
+          }
+        } catch (e) {}
+      }
+      class f {
         m_strProduct;
         m_strVersion;
         m_transport = null;
@@ -19108,18 +19145,26 @@
         m_sendTimer = null;
         m_bReportingPaused = !1;
         m_pauseTimer = void 0;
-        m_fnGetReportingInterval = E;
+        m_fnGetReportingInterval = I;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(e = !0) {
           e
-            ? (u.forEach(({ error: e, cCallsitesToIgnore: t }) =>
-                this.ReportError(e, { cCallsitesToIgnore: t }),
+            ? (m.forEach(
+                ({ error: e, cCallsitesToIgnore: t, strComponentStack: r }) =>
+                  this.ReportError(e, {
+                    cCallsitesToIgnore: t,
+                    strComponentStack: r,
+                  }),
               ),
-              (m = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-            : (m = () => {}),
-            (u = []),
-            clearTimeout(c),
+              (d = (e, t, r) =>
+                this.ReportError(e, {
+                  cCallsitesToIgnore: t,
+                  strComponentStack: r,
+                })))
+            : (d = () => {}),
+            (m = []),
+            clearTimeout(u),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -19150,19 +19195,19 @@
               null
             );
           try {
-            const r = { ...p, ...t };
+            const r = { ...h, ...t };
             if (!this.m_bEnabled) return null;
             0;
             const n = await (function (e, t) {
               try {
-                return e.stack && e.stack.match(f)
+                return e.stack && e.stack.match(w)
                   ? (async function (e, t) {
                       const {
                           cCallsitesToIgnore: r,
                           bIncludeMessageInIdentifier: n,
                         } = t,
                         i = e.stack?.split("\n") ?? [];
-                      let s = M(i.filter((e) => !!e.match(f))[r]);
+                      let s = y(i.filter((e) => !!e.match(w))[r]);
                       n && (s = `${s} ${e.message}`);
                       const a = i
                         .map((e) => {
@@ -19179,18 +19224,18 @@
                         .filter((e) => !!e);
                       return {
                         identifier: s,
-                        identifierHash: await B(s),
+                        identifierHash: await R(s),
                         message: a,
                       };
                     })(e, t)
-                  : e.stack && e.stack.match(b)
+                  : e.stack && e.stack.match(C)
                     ? (async function (e, t) {
                         const {
                             cCallsitesToIgnore: r,
                             bIncludeMessageInIdentifier: n,
                           } = t,
                           i = e.stack?.split("\n") ?? [];
-                        let s = M(i.filter((e) => !!e.match(b))[r]);
+                        let s = y(i.filter((e) => !!e.match(C))[r]);
                         n && (s = `${s} ${e.message}`);
                         const a = i
                           .map((e) => {
@@ -19207,11 +19252,11 @@
                           .filter((e) => !!e);
                         return {
                           identifier: s,
-                          identifierHash: await B(s),
+                          identifierHash: await R(s),
                           message: [e.message, ...a],
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(w)
+                    : e.stack && e.stack.match(S)
                       ? (async function (e, t) {
                           const {
                               bIncludeMessageInIdentifier: r,
@@ -19239,16 +19284,16 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: await B(o),
+                            identifierHash: await R(o),
                             message: [e.message, ...l],
                           };
                         })(e, t)
-                      : (S ||
+                      : (v ||
                           (console.warn(
                             "Error reporter does not know how to parse generated stack:",
                           ),
                           console.warn(e.stack),
-                          (S = !0)),
+                          (v = !0)),
                         null);
               } catch (e) {
                 return (
@@ -19256,7 +19301,12 @@
                 );
               }
             })(e, r);
-            return n ? (this.SendErrorReport(n), n) : null;
+            return n
+              ? (r.strComponentStack &&
+                  (n.strComponentStack = r.strComponentStack),
+                this.SendErrorReport(n),
+                n)
+              : null;
           } catch (e) {
             return console.log(`Failed to report error: ${e}`), null;
           }
@@ -19280,7 +19330,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let r = JSON.stringify(t);
-            for (let t of h) {
+            for (let t of g) {
               const n = new RegExp(t);
               if (r.match(n))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -19308,7 +19358,7 @@
         }
         SendErrorReports(e) {
           if (!e || !e.length) return;
-          const t = n.w.Init(i.Gf),
+          const t = i.w.Init(s.Gf),
             r = e.reduce(
               (e, t) => (
                 e[t.identifier]
@@ -19318,20 +19368,24 @@
               ),
               {},
             ),
-            s = Object.keys(r).map((e) => {
+            n = Object.keys(r).map((e) => {
               const { report: t, count: n } = r[e],
-                s = new i.tF();
+                i = new s.tF();
               return (
-                s.set_count(n),
-                s.set_identifier(t.identifier + " " + t.identifierHash),
-                s.set_message(JSON.stringify(t.message)),
-                s
+                i.set_count(n),
+                i.set_identifier(t.identifier + " " + t.identifierHash),
+                i.set_message(JSON.stringify(t.message)),
+                t.strComponentStack &&
+                  i.set_context(
+                    JSON.stringify({ componentStack: t.strComponentStack }),
+                  ),
+                i
               );
             });
           t.Body().set_product(this.m_strProduct),
             t.Body().set_version(this.m_strVersion),
-            t.Body().set_errors(s),
-            i._5.ReportClientError(this.m_transport, t);
+            t.Body().set_errors(n),
+            s._5.ReportClientError(this.m_transport, t);
         }
         get version() {
           return this.m_strVersion;
@@ -19340,10 +19394,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return d;
+          return p;
         }
       }
-      function _(e, ...t) {
+      function b(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -19355,12 +19409,12 @@
           })
           .join(", ");
       }
-      const f = /^\s*at .*(\S+:\d+|\(native\))/m,
-        b = /(^|@)\S+:\d+/,
-        w = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let C,
-        S = !1;
-      function M(e) {
+      const w = /^\s*at .*(\S+:\d+|\(native\))/m,
+        C = /(^|@)\S+:\d+/,
+        S = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let M,
+        v = !1;
+      function y(e) {
         return (function (e) {
           const t = "https://",
             r = e.indexOf(t);
@@ -19376,15 +19430,15 @@
           })(e),
         );
       }
-      const v = () => (C || y(new g()), C),
-        y = (e) => {
-          (C = e),
-            s.tH.InstallErrorReportingStore(C),
-            n.lI.InstallErrorReportingStore(C),
-            a.A0.InstallErrorReportingStore(C),
-            o.U.InstallErrorReportingStore(C);
+      const B = () => (M || E(new f()), M),
+        E = (e) => {
+          (M = e),
+            a.tH.InstallErrorReportingStore(M),
+            i.lI.InstallErrorReportingStore(M),
+            o.A0.InstallErrorReportingStore(M),
+            l.U.InstallErrorReportingStore(M);
         };
-      async function B(e) {
+      async function R(e) {
         try {
           const r = await window.crypto.subtle.digest(
             "SHA-256",
@@ -19404,7 +19458,7 @@
         }
         var t;
       }
-      function E() {
+      function I() {
         return 1e4;
       }
     },
@@ -19768,7 +19822,7 @@
       var n = r(34629),
         i = r(45699),
         s = r(76217),
-        a = r(89350),
+        a = r(97907),
         o = r(45730);
       const l = Object.seal({ onMoveUp: c, onMoveDown: c });
       Object.seal({ onMoveRight: c, onMoveLeft: c });
@@ -22809,7 +22863,7 @@
         }
       }
       var Ue = r(88006),
-        He = r(89350),
+        He = r(97907),
         je = r(11002),
         Ve = r(4869),
         qe = r(84811),
@@ -32599,14 +32653,15 @@
         };
         return i.toLocaleDateString(s.pf.GetPreferredLocales(), a);
       }
-      function c(e, t) {
-        let r = new Date(1e3 * e),
-          n = new Date(1e3 * t);
-        return r.getFullYear() != n.getFullYear() ||
-          r.getMonth() != n.getMonth() ||
-          r.getDate() != n.getDate()
-          ? u(e, t)
-          : p(e) + " - " + p(t);
+      function c(e, t, r = !1) {
+        let n = new Date(1e3 * e),
+          i = new Date(1e3 * t);
+        return r ||
+          (n.getFullYear() == i.getFullYear() &&
+            n.getMonth() == i.getMonth() &&
+            n.getDate() == i.getDate())
+          ? p(e) + " - " + p(t)
+          : u(e, t);
       }
       function u(e, t) {
         let r = new Date(1e3 * e),
@@ -33503,29 +33558,28 @@
       }
       function l(e) {
         return e
-          ? 1 != n.TS.EUNIVERSE
-            ? e
-            : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
+          ? (1 == n.TS.EUNIVERSE &&
+              ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
-                (e = (e = (e = (e = (e = e.replace(
+                (e = e.replace(
                   /https:\/\/media.steampowered.com\//g,
                   n.TS.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.akamai.steamstatic.com\//g,
                   n.TS.MEDIA_CDN_URL,
                 )).replace(
-                  /https:\/\/cdn.cloudflare.steamstatic.com\//g,
-                  n.TS.MEDIA_CDN_URL,
-                )).replace(
-                  /https:\/\/cdn.edgecast.steamstatic.com\//g,
-                  n.TS.MEDIA_CDN_URL,
-                )).replace(
-                  /https:\/\/cdn.fastly.steamstatic.com\//g,
-                  n.TS.MEDIA_CDN_URL,
-                )).replace(
-                  /https:\/\/cdn.dota2.com\//g,
-                  n.TS.MEDIA_CDN_URL,
-                )).replace(
+                /https:\/\/cdn.cloudflare.steamstatic.com\//g,
+                n.TS.MEDIA_CDN_URL,
+              )).replace(
+                /https:\/\/cdn.edgecast.steamstatic.com\//g,
+                n.TS.MEDIA_CDN_URL,
+              )).replace(
+                /https:\/\/cdn.fastly.steamstatic.com\//g,
+                n.TS.MEDIA_CDN_URL,
+              )).replace(
+                /https:\/\/cdn.dota2.com\//g,
+                n.TS.MEDIA_CDN_URL,
+              )).replace(
                 /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
                 n.TS.MEDIA_CDN_URL + "steam/",
               )).replace(
@@ -33549,14 +33603,15 @@
               )).replace(
                 /https:\/\/community.edgecast.steamstatic.com\//g,
                 n.TS.COMMUNITY_CDN_URL,
-              )).replace(/{IMG_URL}/g, n.TS.IMG_URL)).replace(
-                /{MEDIA_CDN_URL}/g,
-                n.TS.MEDIA_CDN_URL,
-              )).replace(
-                /{MEDIA_CDN_COMMUNITY_URL}/g,
-                n.TS.MEDIA_CDN_COMMUNITY_URL,
-              )).replace(/{COMMUNITY_CDN_URL}/g, n.TS.COMMUNITY_CDN_URL)),
-              (e = (0, s.TL)(e)))
+              ))),
+            (e = (e = (e = (e = e.replace(/{IMG_URL}/g, n.TS.IMG_URL)).replace(
+              /{MEDIA_CDN_URL}/g,
+              n.TS.MEDIA_CDN_URL,
+            )).replace(
+              /{MEDIA_CDN_COMMUNITY_URL}/g,
+              n.TS.MEDIA_CDN_COMMUNITY_URL,
+            )).replace(/{COMMUNITY_CDN_URL}/g, n.TS.COMMUNITY_CDN_URL)),
+            (e = (0, s.TL)(e)))
           : e;
       }
       function c(e) {

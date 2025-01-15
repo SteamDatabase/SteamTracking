@@ -80,6 +80,11 @@
         Delete: "_1X87fLS_CT0g2Vu5-fClUZ",
         FloatingThrobber: "_2EHZ15YQSAK_T5SCxVobtG",
         Localized: "_3FFrtt5Of4jP9unTFjYiHs",
+        ClanImageGrid: "_3J5Yc20Wkz7gjSxxWcHst",
+        ClanImageGridItem: "_1vXdD6QZTKcjYoRTOAuOeX",
+        Selected: "_3JVN2Ta1MlQnuMnqPo0XR8",
+        ImgCtn: "_248ADrw9QzPyhcxjqlaykT",
+        Name: "TzsVI0_4scOG258SCeyqz",
       };
     },
     96866: (e) => {
@@ -239,8 +244,8 @@
         N = a(9709),
         y = a(9449),
         R = a(2472),
-        U = a(26408);
-      let G = class extends s.Component {
+        G = a(26408);
+      let U = class extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = { bPrefetchingLanguages: !0 }),
@@ -332,7 +337,7 @@
                       "div",
                       null,
                       (0, f.we)("#ImagePickerLoc_Default"),
-                      s.createElement(U.o, {
+                      s.createElement(G.o, {
                         tooltip: (0, f.we)("#ImagePickerLoc_Default_Hint"),
                       }),
                     ),
@@ -380,8 +385,8 @@
           );
         }
       };
-      (0, n.Cg)([k.oI], G.prototype, "OnCommitGroup", null),
-        (G = (0, n.Cg)([o.PA], G));
+      (0, n.Cg)([k.oI], U.prototype, "OnCommitGroup", null),
+        (U = (0, n.Cg)([o.PA], U));
       var T,
         x = a(46742),
         O = a.n(x);
@@ -614,7 +619,7 @@
         InternalOpenLocalizeImageGroup(e) {
           const { clanSteamID: t, partnerEventStore: a } = this.props;
           (0, w.pg)(
-            s.createElement(G, {
+            s.createElement(U, {
               primaryLocalizedImage: e,
               appid: this.props.appid,
               eventModel: void 0,
@@ -873,9 +878,9 @@
         N = a(61859),
         y = a(78327),
         R = a(84811),
-        U = a(22797),
-        G = a(33924),
-        T = a.n(G),
+        G = a(22797),
+        U = a(33924),
+        T = a.n(U),
         x = a(41751),
         O = a(18654),
         B = a.n(O),
@@ -959,7 +964,7 @@
             ),
             I)
           )
-            return s.createElement(U.t, { position: "center", size: "medium" });
+            return s.createElement(G.t, { position: "center", size: "medium" });
           if (0 == p.length) return s.createElement("div", null);
           const D = E.ac.GetClanInfoByClanAccountID(t);
           return s.createElement(
@@ -1375,7 +1380,7 @@
               "div",
               { className: b().UploadPreviewCtn },
               p.map((e) =>
-                r.createElement(U, {
+                r.createElement(G, {
                   key: "arttabupload_" + e.file + "_" + e.uploadTime,
                   asset: e,
                   supported: a,
@@ -1423,7 +1428,7 @@
         return (
           e.GetUploadImages().map((s) => {
             i.push(
-              r.createElement(U, {
+              r.createElement(G, {
                 key: t + s.file + "_" + s.uploadTime,
                 asset: s,
                 supported: a,
@@ -1437,7 +1442,7 @@
           i
         );
       }
-      const U = (0, l.PA)((e) => {
+      const G = (0, l.PA)((e) => {
         const { asset: t, fnOnRemove: a, supported: n, languageRealms: l } = e,
           m = n.map((e) => {
             let a = (0, k.we)("#EventEditor_ArtworkType_" + e);
@@ -1485,7 +1490,7 @@
             { className: b().UploadPreviewDelete, onClick: () => a(t) },
             r.createElement(C.sED, null),
           ),
-          r.createElement(G, { asset: t }),
+          r.createElement(U, { asset: t }),
           r.createElement(p.m, {
             strDropDownClassName: E().DropDownScroll,
             rgOptions: I,
@@ -1554,7 +1559,7 @@
             ),
         );
       });
-      function G(e) {
+      function U(e) {
         const { asset: t } = e;
         return s.Ho.includes(t.fileType)
           ? r.createElement(
@@ -1702,7 +1707,7 @@
     },
     2805: (e, t, a) => {
       "use strict";
-      a.d(t, { GF: () => k, Hd: () => N, _6: () => b });
+      a.d(t, { GF: () => k, Hd: () => U, ge: () => b });
       var n = a(34629),
         l = a(90626),
         r = a(81047),
@@ -1728,35 +1733,61 @@
         f = a(36509);
       const k = l.memo(function (e) {
         const {
-            fileNameSearch: t,
-            clanAccountID: a,
-            imageInsertCallBack: n,
-            fnOnExpandImage: s,
-            insertActions: c,
-            InternalOpenLocalizeImageGroup: m,
-          } = e,
-          g = (0, i.n9)(a),
-          p = (null == t ? void 0 : t.trim().toLowerCase()) || "",
-          d = i.pU.GetFilteredClanImagesList(g, p);
-        if (0 == d.length) {
-          const e = o.b.InitFromClanID(a);
-          let t = i.pU.GetLoadState(e);
-          return t && t.loaded
+          fileNameSearch: t,
+          clanAccountID: a,
+          imageInsertCallBack: n,
+          fnOnExpandImage: o,
+          insertActions: i,
+          InternalOpenLocalizeImageGroup: s,
+        } = e;
+        return l.createElement(
+          L,
+          { clanAccountID: a, fileNameSearch: t },
+          (e, t) =>
+            e.map((e) =>
+              l.createElement(N, {
+                key: e.imageid,
+                clanImage: e,
+                searchStringHilight: t,
+                imageInsertCallBack: n,
+                fnOnOpenLocalizedImageGroup: s,
+                insertActions:
+                  null == i
+                    ? void 0
+                    : i.filter(
+                        (t) =>
+                          (5 != e.file_type && 4 != e.file_type) ||
+                          t == r._o.k_eInsertFullImage,
+                      ),
+                OnImageClick: o,
+              }),
+            ),
+        );
+      });
+      function L(e) {
+        const { clanAccountID: t, fileNameSearch: a, children: n } = e,
+          r = (0, i.n9)(t),
+          s = (null == a ? void 0 : a.trim().toLowerCase()) || "",
+          c = i.pU.GetFilteredClanImagesList(r, s);
+        if (0 == c.length) {
+          const e = o.b.InitFromClanID(t);
+          let a = i.pU.GetLoadState(e);
+          return a && a.loaded
             ? l.createElement(
                 "div",
                 {
                   key: "ImagePicker_Result",
                   className: A().ResultNotification,
                 },
-                p.length > 0
+                s.length > 0
                   ? (0, v.we)("#ImagePicker_EmptySearch")
                   : (0, v.we)("#ImagePicker_Empty"),
               )
-            : t && t.errMsg
+            : a && a.errMsg
               ? l.createElement(
                   "div",
                   { key: "ImagePicker_Result", className: A().ErrorCode },
-                  (0, v.we)("#ImagePicker_Error", t.errMsg),
+                  (0, v.we)("#ImagePicker_Error", a.errMsg),
                 )
               : l.createElement(
                   "div",
@@ -1767,26 +1798,34 @@
                   (0, v.we)("#Loading"),
                 );
         }
-        return d.map((e) =>
-          l.createElement(L, {
-            key: e.imageid,
-            clanImage: e,
-            searchStringHilight: p,
-            imageInsertCallBack: n,
-            fnOnOpenLocalizedImageGroup: m,
-            insertActions:
-              null == c
-                ? void 0
-                : c.filter(
-                    (t) =>
-                      (5 != e.file_type && 4 != e.file_type) ||
-                      t == r._o.k_eInsertFullImage,
-                  ),
-            OnImageClick: s,
-          }),
+        return n(c, s);
+      }
+      function b(e) {
+        const {
+          clanAccountID: t,
+          fileNameSearch: a,
+          onImageSelected: n,
+          selectedItem: r,
+        } = e;
+        return l.createElement(
+          L,
+          { clanAccountID: t, fileNameSearch: a },
+          (e) =>
+            l.createElement(
+              "div",
+              { className: A().ClanImageGrid },
+              e.map((e) =>
+                l.createElement(R, {
+                  key: e.imageid,
+                  clanImage: e,
+                  selected: e == r,
+                  onImageSelected: n,
+                }),
+              ),
+            ),
         );
-      });
-      class L extends l.Component {
+      }
+      class N extends l.Component {
         constructor() {
           super(...arguments),
             (this.m_linkPopupRef = l.createRef()),
@@ -1914,15 +1953,15 @@
               A().Hilight,
             ),
             n = o.b.InitFromClanID(e.clanAccountID);
-          const i = s.KN.Get().GetPartnerEventPermissions(n);
-          let m = this.state.bDeleting;
-          const d = 4 == e.file_type || 5 == e.file_type;
-          let u = !m && !d && this.ShowInsertAction(r._o.k_eInsertFullImage),
-            I = !m && !d && this.ShowInsertAction(r._o.k_eInsertThumbnail),
-            h = !m && d && this.ShowInsertAction(r._o.k_eInsertVideo),
-            C = Boolean(
-              !m &&
-                i.valve_admin &&
+          const m = s.KN.Get().GetPartnerEventPermissions(n);
+          let d = this.state.bDeleting;
+          const u = (0, i.r3)(e);
+          let I = !d && !u && this.ShowInsertAction(r._o.k_eInsertFullImage),
+            h = !d && !u && this.ShowInsertAction(r._o.k_eInsertThumbnail),
+            C = !d && u && this.ShowInsertAction(r._o.k_eInsertVideo),
+            w = Boolean(
+              !d &&
+                m.valve_admin &&
                 this.ShowInsertAction(r._o.k_eShowImageGroup),
             );
           return l.createElement(
@@ -1940,7 +1979,7 @@
                 {
                   className: A().ImageWrapper,
                   style: {
-                    backgroundImage: d
+                    backgroundImage: u
                       ? ""
                       : `url( '${this.props.clanImage.thumb_url}' )`,
                   },
@@ -1950,39 +1989,29 @@
                   onDoubleClick: this.onHandleFullSize,
                   onClick: this.OnImageClick,
                 },
-                Boolean(d) &&
-                  l.createElement(
-                    "video",
-                    {
-                      autoPlay: !0,
-                      loop: !0,
-                      muted: !0,
-                      className: A().VideoBackground,
-                    },
-                    l.createElement("source", {
-                      src: this.props.clanImage.url,
-                      type: "video/" + (4 == e.file_type ? "mp4" : "webm"),
-                    }),
-                  ),
+                l.createElement(y, {
+                  clanImage: e,
+                  className: A().VideoBackground,
+                }),
               ),
-              u &&
+              I &&
                 l.createElement(
                   "span",
                   { className: A().Full, onClick: this.onHandleFullSize },
                   (0, v.we)("#ImagePicker_FullSize"),
                 ),
-              m &&
+              d &&
                 l.createElement(E.t, {
                   size: "medium",
                   className: A().FloatingThrobber,
                 }),
-              I &&
+              h &&
                 l.createElement(
                   "span",
                   { className: A().Thumb, onClick: this.onHandleThumbnail },
                   (0, v.we)("#ImagePicker_Thumbnail"),
                 ),
-              C &&
+              w &&
                 l.createElement(
                   "span",
                   {
@@ -1991,13 +2020,13 @@
                   },
                   "(VO) " + (0, v.we)("#ImagePicker_Localized"),
                 ),
-              h &&
+              C &&
                 l.createElement(
                   "span",
                   { className: A().Full, onClick: this.onHandleVideo },
                   (0, v.we)("#ImagePicker_Video"),
                 ),
-              !m &&
+              !d &&
                 l.createElement(
                   "span",
                   { className: A().Delete, onClick: this.OnDeleteClick },
@@ -2012,7 +2041,40 @@
           );
         }
       }
-      function b(e) {
+      function y(e) {
+        const { clanImage: t, className: a } = e;
+        return (0, i.r3)(t)
+          ? l.createElement(
+              "video",
+              { autoPlay: !0, loop: !0, muted: !0, className: a },
+              l.createElement("source", {
+                src: t.url,
+                type: "video/" + (4 == t.file_type ? "mp4" : "webm"),
+              }),
+            )
+          : null;
+      }
+      function R(e) {
+        const { clanImage: t, onImageSelected: a, selected: n } = e;
+        return l.createElement(
+          "div",
+          {
+            className: (0, _.A)(A().ClanImageGridItem, n && A().Selected),
+            onClick: () => a(t, !1),
+            onDoubleClick: () => a(t, !0),
+            title: t.file_name,
+          },
+          l.createElement(
+            "div",
+            { className: A().ImgCtn },
+            (0, i.r3)(t)
+              ? l.createElement(y, { clanImage: t })
+              : l.createElement("img", { src: t.url, loading: "lazy" }),
+          ),
+          l.createElement("div", { className: A().Name }, t.file_name),
+        );
+      }
+      function G(e) {
         const { clanSteamID: t, closeModal: a, OnClanImageSelected: n } = e,
           r = (0, l.useCallback)(
             (e, t) => {
@@ -2041,7 +2103,7 @@
           }),
         );
       }
-      function N(e) {
+      function U(e) {
         const {
           clanSteamID: t,
           fnSetImageURL: a,
@@ -2072,23 +2134,23 @@
             type: "button",
             onClick: (e) => {
               (0, u.pg)(
-                l.createElement(b, { clanSteamID: t, OnClanImageSelected: n }),
+                l.createElement(G, { clanSteamID: t, OnClanImageSelected: n }),
                 (0, h.uX)(e),
               );
             },
           }),
         );
       }
-      (0, n.Cg)([C.oI], L.prototype, "onHandleFullSize", null),
-        (0, n.Cg)([C.oI], L.prototype, "onHandleVideo", null),
-        (0, n.Cg)([C.oI], L.prototype, "onHandleThumbnail", null),
-        (0, n.Cg)([C.oI], L.prototype, "onHandleLocalizedImageGroup", null),
-        (0, n.Cg)([C.oI], L.prototype, "OnDragStartSource", null),
-        (0, n.Cg)([C.oI], L.prototype, "OnDragEndSource", null),
-        (0, n.Cg)([C.oI], L.prototype, "OnDeleteClick", null),
-        (0, n.Cg)([C.oI], L.prototype, "onDelete", null),
-        (0, n.Cg)([C.oI], L.prototype, "OnCloseDialog", null),
-        (0, n.Cg)([C.oI], L.prototype, "OnImageClick", null);
+      (0, n.Cg)([C.oI], N.prototype, "onHandleFullSize", null),
+        (0, n.Cg)([C.oI], N.prototype, "onHandleVideo", null),
+        (0, n.Cg)([C.oI], N.prototype, "onHandleThumbnail", null),
+        (0, n.Cg)([C.oI], N.prototype, "onHandleLocalizedImageGroup", null),
+        (0, n.Cg)([C.oI], N.prototype, "OnDragStartSource", null),
+        (0, n.Cg)([C.oI], N.prototype, "OnDragEndSource", null),
+        (0, n.Cg)([C.oI], N.prototype, "OnDeleteClick", null),
+        (0, n.Cg)([C.oI], N.prototype, "onDelete", null),
+        (0, n.Cg)([C.oI], N.prototype, "OnCloseDialog", null),
+        (0, n.Cg)([C.oI], N.prototype, "OnImageClick", null);
     },
     61924: (e, t, a) => {
       "use strict";
@@ -2208,8 +2270,8 @@
         N = a(78327),
         y = a(3088),
         R = a(10224),
-        U = a(15496),
-        G = a.n(U);
+        G = a(15496),
+        U = a.n(G);
       function T(e) {
         const {
             event: t,
@@ -2261,67 +2323,67 @@
           null,
           s.createElement(
             "div",
-            { className: G().MajorEvent_Ctn, ref: e.containerRef },
+            { className: U().MajorEvent_Ctn, ref: e.containerRef },
             s.createElement(
               L.Z,
               {
                 className: (0, b.A)(
-                  G().AppDetailsSpotlightContainer,
-                  G().MajorEventContainer,
+                  U().AppDetailsSpotlightContainer,
+                  U().MajorEventContainer,
                 ),
                 onActivate: p,
                 focusable: !0,
               },
               s.createElement(
                 "div",
-                { className: G().MajorEventBackground },
+                { className: U().MajorEventBackground },
                 s.createElement(y.c, {
-                  className: G().MajorEventImageBackgroundBlur,
+                  className: U().MajorEventImageBackgroundBlur,
                   rgSources: h,
                   onIncrementalError: (e, t, a) => r && r(t),
                 }),
               ),
               s.createElement(
                 "div",
-                { className: G().MajorEventImageContainer },
+                { className: U().MajorEventImageContainer },
                 s.createElement(y.c, {
-                  className: G().MajorEventImage,
+                  className: U().MajorEventImage,
                   rgSources: h,
                   onIncrementalError: (e, t, a) => r && r(t),
                 }),
                 s.createElement("div", {
-                  className: G().MajorEventImageTemplate,
+                  className: U().MajorEventImageTemplate,
                 }),
                 s.createElement(
                   "div",
-                  { className: G().MajoreEventImageContentContainer },
+                  { className: U().MajoreEventImageContentContainer },
                   _ &&
                     s.createElement(
                       "div",
-                      { className: G().MajorEventContent },
+                      { className: U().MajorEventContent },
                       s.createElement(y.c, {
-                        className: G().MajorEventSpotlightBackground,
+                        className: U().MajorEventSpotlightBackground,
                         rgSources: h,
                         onIncrementalError: (e, t, a) => r && r(t),
                       }),
                       s.createElement(
                         "div",
-                        { className: G().MajorEventTextCtn },
+                        { className: U().MajorEventTextCtn },
                         s.createElement(
                           "div",
-                          { className: G().MajorEventTitle },
+                          { className: U().MajorEventTitle },
                           E,
                         ),
                         s.createElement(
                           "div",
-                          { className: G().MajorEventSummary },
+                          { className: U().MajorEventSummary },
                           v,
                         ),
                       ),
                     ),
                 ),
               ),
-              s.createElement("div", { className: G().BottomShadow }),
+              s.createElement("div", { className: U().BottomShadow }),
             ),
           ),
         );

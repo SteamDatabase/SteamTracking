@@ -499,12 +499,6 @@
           return e && e.length > 0;
         }
         render() {
-          (0, p.w)(
-            !this.props.rgBlurImages ||
-              this.props.rgBlurImages.length ==
-                this.props.rgHeaderImages.length,
-            "Blur image count doesn't match header image count",
-          );
           let e = null;
           return (
             (e = n.createElement(

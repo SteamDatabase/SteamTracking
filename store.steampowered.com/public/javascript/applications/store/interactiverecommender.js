@@ -1100,76 +1100,72 @@
         (0, i.Cg)([u.oI], x.prototype, "onRemoveSelectedTag", null),
         (x = (0, i.Cg)([n.PA], x));
       const M = (0, n.PA)(() => {
-        const e = f.getTags();
-        let t = [];
+        const e = f.getTags(),
+          t = [];
         if (e)
           for (const a of e) t.push({ id: parseInt(a.tagid), name: a.name });
         const a = [
-          (0, p.we)("#FilterAge_240"),
-          (0, p.we)("#FilterAge_60"),
-          (0, p.we)("#FilterAge_36"),
-          (0, p.we)("#FilterAge_24"),
-          (0, p.we)("#FilterAge_12"),
-          (0, p.we)("#FilterAge_6"),
-        ];
-        let s = f.m_rgExcludeTags,
+            (0, p.we)("#FilterAge_240"),
+            (0, p.we)("#FilterAge_60"),
+            (0, p.we)("#FilterAge_36"),
+            (0, p.we)("#FilterAge_24"),
+            (0, p.we)("#FilterAge_12"),
+            (0, p.we)("#FilterAge_6"),
+          ],
+          s = f.m_rgExcludeTags,
           i = f.m_rgFilterTags;
-        return (
-          console.log(`exclude_tags: ${s}`),
-          console.log(`filter_tags: ${i}`),
+        return r.createElement(
+          "div",
+          { className: g.RecommendationOptions },
           r.createElement(
             "div",
-            { className: g.RecommendationOptions },
-            r.createElement(
-              "div",
-              { className: (0, m.A)(g.Row, g.FirstRow) },
-              r.createElement(P, {
-                minLabel: (0, p.we)("#Popularity_Popular"),
-                titleLabel: (0, p.we)("#Popularity_Title"),
-                maxLabel: (0, p.we)("#Popularity_Niche"),
-                minValue: 0,
-                maxValue: 1,
-                value: f.m_fQueuedPopularityValue,
-                onChange: f.onPopularityChanged,
-              }),
-              r.createElement(P, {
-                minLabel: (0, p.we)("#Recency_Older"),
-                titleLabel: (0, p.we)("#Recency_Title"),
-                maxLabel: (0, p.we)("#Recency_Newer"),
-                minValue: 0,
-                maxValue: 1,
-                value: f.m_fQueuedRecencyValue,
-                onChange: f.onRecencyChanged,
-                sliderLabels: a,
-              }),
-            ),
-            r.createElement(
-              "div",
-              { className: (0, m.A)(g.Row, g.SecondRow) },
-              r.createElement(x, {
-                title: (0, p.we)("#TagFilterMultiple_Title"),
-                tagoptions: t,
-                selectedtags: i,
-                key: "Filter" + i.toString(),
-                onAddTag: f.onTagFilterAdd,
-                onRemoveTag: f.onTagFilterRemove,
-              }),
-              r.createElement(x, {
-                title: (0, p.we)("#TagExcludeMultiple_Title"),
-                tagoptions: t,
-                selectedtags: s,
-                key: "Exclude" + s.toString(),
-                onAddTag: f.onTagExcludeAdd,
-                onRemoveTag: f.onTagExcludeRemove,
-              }),
-              r.createElement(L, {
-                className: g.WishlistCheckbox,
-                titleLabel: (0, p.we)("#ExcludeWishlisted"),
-                checked: f.m_bExcludeWishlisted,
-                onChange: f.onExcludeWishlistedToggled,
-              }),
-            ),
-          )
+            { className: (0, m.A)(g.Row, g.FirstRow) },
+            r.createElement(P, {
+              minLabel: (0, p.we)("#Popularity_Popular"),
+              titleLabel: (0, p.we)("#Popularity_Title"),
+              maxLabel: (0, p.we)("#Popularity_Niche"),
+              minValue: 0,
+              maxValue: 1,
+              value: f.m_fQueuedPopularityValue,
+              onChange: f.onPopularityChanged,
+            }),
+            r.createElement(P, {
+              minLabel: (0, p.we)("#Recency_Older"),
+              titleLabel: (0, p.we)("#Recency_Title"),
+              maxLabel: (0, p.we)("#Recency_Newer"),
+              minValue: 0,
+              maxValue: 1,
+              value: f.m_fQueuedRecencyValue,
+              onChange: f.onRecencyChanged,
+              sliderLabels: a,
+            }),
+          ),
+          r.createElement(
+            "div",
+            { className: (0, m.A)(g.Row, g.SecondRow) },
+            r.createElement(x, {
+              title: (0, p.we)("#TagFilterMultiple_Title"),
+              tagoptions: t,
+              selectedtags: i,
+              key: "Filter" + i.toString(),
+              onAddTag: f.onTagFilterAdd,
+              onRemoveTag: f.onTagFilterRemove,
+            }),
+            r.createElement(x, {
+              title: (0, p.we)("#TagExcludeMultiple_Title"),
+              tagoptions: t,
+              selectedtags: s,
+              key: "Exclude" + s.toString(),
+              onAddTag: f.onTagExcludeAdd,
+              onRemoveTag: f.onTagExcludeRemove,
+            }),
+            r.createElement(L, {
+              className: g.WishlistCheckbox,
+              titleLabel: (0, p.we)("#ExcludeWishlisted"),
+              checked: f.m_bExcludeWishlisted,
+              onChange: f.onExcludeWishlistedToggled,
+            }),
+          ),
         );
       });
       let b = class extends r.Component {

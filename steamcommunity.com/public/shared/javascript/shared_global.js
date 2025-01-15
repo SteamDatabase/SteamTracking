@@ -4581,54 +4581,54 @@ CAppTypeInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
 		var _this = this;
 		for ( var i = 0; i < rgSuggestions.length; i++ )
 		{
-			var $class = 'suggestion_item popup_menu_item';
-			var $suggestionText = rgSuggestions[i][0];
+			var resultClass = 'suggestion_item popup_menu_item';
+			var suggestionText = rgSuggestions[i][0];
 
 			if ( typeof rgSuggestions[i][1] !== 'undefined' )
 			{
 				switch ( parseInt( rgSuggestions[i][1] ) )
 				{
 					case 1:
-						$class += ' app_Game';
-						$suggestionText = '[Game] ' + $suggestionText;
+						resultClass += ' app_Game';
+						suggestionText = '[Game] ' + suggestionText;
 						break;
 					case 2:
-						$suggestionText = '[App] ' + $suggestionText;
+						suggestionText = '[Application] ' + suggestionText;
 						break;
 					case 4:
-						$suggestionText = '[Tool] ' + $suggestionText;
+						suggestionText = '[Tool] ' + suggestionText;
 						break;
 					case 8:
-						$class += ' app_Demo';
-						$suggestionText = '[Demo] ' + $suggestionText;
+						resultClass += ' app_Demo';
+						suggestionText = '[Demo] ' + suggestionText;
 						break;
 					case 16:
-						$suggestionText = '[Media] ' + $suggestionText;
+						suggestionText = '[Media] ' + suggestionText;
 						break;
 					case 32:
-						$class += ' app_DLC';
-						$suggestionText = '[DLC] ' + $suggestionText;
+						resultClass += ' app_DLC';
+						suggestionText = '[DLC] ' + suggestionText;
 						break;
 					case 256:
-						$suggestionText = '[Config] ' + $suggestionText;
+						suggestionText = '[Config] ' + suggestionText;
 						break;
 					case 2048:
-						$class += ' app_Movie';
-						$suggestionText = '[Video] ' + $suggestionText;
+						resultClass += ' app_Movie';
+						suggestionText = '[Video] ' + suggestionText;
 						break;
 					case 8192:
-						$class += ' app_Music';
-						$suggestionText = '[Music] ' + $suggestionText;
+						resultClass += ' app_Music';
+						suggestionText = '[Music] ' + suggestionText;
 						break;
 					case 65536:
-						$class += ' app_Beta';
-						$suggestionText = '[Beta] ' + $suggestionText;
+						resultClass += ' app_Beta';
+						suggestionText = '[Beta] ' + suggestionText;
 						break;
 				}
 			}
 
-			var $Suggestion = $J('<div/>', {'class': $class } );
-			$Suggestion.text( $suggestionText );
+			var $Suggestion = $J('<div/>', {'class': resultClass } );
+			$Suggestion.text( suggestionText );
 
 			$Suggestion.click( $J.proxy( this.OnSuggestionSelected, this, $Suggestion ) );
 			$Suggestion.mouseenter( $J.proxy( this.SetFocus, this, $Suggestion ) );

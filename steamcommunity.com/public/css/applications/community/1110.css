@@ -38,13 +38,13 @@
   position: relative;
 }
 .ProseMirror-hideselection *::selection {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .ProseMirror-hideselection *::-moz-selection {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .ProseMirror-hideselection {
-  caret-color: rgba(0, 0, 0, 0);
+  caret-color: transparent;
 }
 .ProseMirror [draggable][contenteditable="false"] {
   user-select: text;
@@ -265,6 +265,15 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   ._1O2yIhwy4xQA69icI2lXEH {
   opacity: 0;
   pointer-events: none;
+}
+.SsgHukHcE1jf7p3W6Ta8g {
+  width: 600px;
+}
+._1RAzAQViGO8A_wCFzSUStH {
+  margin-top: 12px;
+}
+._1RAzAQViGO8A_wCFzSUStH:not(._1qsUls0lc9uJ_RarLA3dcG) {
+  display: none;
 }
 .f2X3toOiE6SBBj8gkgwsN {
   position: relative;

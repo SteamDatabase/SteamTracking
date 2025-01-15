@@ -511,11 +511,7 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   width: 100%;
   box-sizing: border-box;
   margin: auto;
-  background: linear-gradient(
-    90deg,
-    rgba(42, 44, 50, 0.7019607843),
-    rgba(35, 37, 42, 0.7019607843)
-  );
+  background: linear-gradient(90deg, #2a2c32b3, #23252ab3);
   border-radius: 7px;
   padding: 20px;
   margin-bottom: 6px;
@@ -566,7 +562,7 @@ iframe.rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
   text-align: center;
   background: #40444d;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
 }
 ._1igTM-TlnNkIhWxl95pTyB ._2qgSQSN_hv-UncznBRb42v {
   position: relative;
@@ -889,7 +885,7 @@ iframe._1j2vixiqbbe8GqxA-cmlhA {
 ._3YUEYUcuh0PTxYsV6Fecqq._1Tp8K4gynWBOBpC9tS_xXV {
   width: 300px;
   padding: 0px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border-left: none;
 }
 .TNf9_B9OYDQXSleTS1gAS {
@@ -1224,14 +1220,10 @@ html:not(.touch)
   background-size: cover;
   -webkit-mask-image: radial-gradient(
     circle at top left,
-    rgb(0, 0, 0),
+    black,
     rgba(0, 0, 0, 0) 60%
   );
-  mask-image: radial-gradient(
-    circle at top left,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0) 60%
-  );
+  mask-image: radial-gradient(circle at top left, black, rgba(0, 0, 0, 0) 60%);
   filter: blur(30px);
   opacity: 0.3;
 }
@@ -1475,7 +1467,7 @@ div._1o1Ds-OdAZcjo18bw9QiEH {
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: rgba(59, 90, 114, 0.5019607843);
+  background-color: #3b5a7280;
   align-items: center;
   transition: background-color .2s ease;
   flex-wrap: wrap;
@@ -1489,7 +1481,7 @@ div._1o1Ds-OdAZcjo18bw9QiEH {
 }
 .Cek1s5Ixk2xYmkqjjESD0:focus-within,
 ._2dGPTYWTKq3CirJwPXKw2b:focus-within {
-  background-color: rgba(103, 139, 166, 0.4392156863);
+  background-color: #678ba670;
 }
 .Cek1s5Ixk2xYmkqjjESD0 {
   background: linear-gradient(
@@ -2537,7 +2529,7 @@ div._1o1Ds-OdAZcjo18bw9QiEH {
 }
 .axjdi0dhiB17GHjL5FRCr ._2s-O5T3qJJYR2AUq4b9jIN,
 .axjdi0dhiB17GHjL5FRCr ._3j4dI1yA7cRfCvK8h406OB {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .axjdi0dhiB17GHjL5FRCr .cnkoFkzVCby40gJ0jGGS4 {
   font-size: 1.8em;
@@ -2741,16 +2733,8 @@ div._1o1Ds-OdAZcjo18bw9QiEH {
   text-decoration: none !important;
   color: #d2e885 !important;
   background: #799905;
-  background: -webkit-linear-gradient(
-    top,
-    rgb(121, 153, 5) 5%,
-    rgb(83, 105, 4) 95%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgb(121, 153, 5) 5%,
-    rgb(83, 105, 4) 95%
-  );
+  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
   padding: 0 15px;
   font-size: 15px;
   line-height: 30px;
@@ -2759,16 +2743,8 @@ div._1o1Ds-OdAZcjo18bw9QiEH {
   text-decoration: none !important;
   color: #fff !important;
   background: #a4d007;
-  background: -webkit-linear-gradient(
-    top,
-    rgb(164, 208, 7) 5%,
-    rgb(107, 135, 5) 95%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgb(164, 208, 7) 5%,
-    rgb(107, 135, 5) 95%
-  );
+  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
+  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
 }
 ._1dKR2IPNQSHs1MAIXBvt_R {
   position: relative;
@@ -3389,16 +3365,8 @@ html.touch
 .gASJ2lL_xmVNuZkWGvrWg ._1_P15GG6AKyF_NMX2j4-Mu ._2hhNOdcC6yLwL_rugP3YLf {
   grid-template-areas: "left right right right";
   border-radius: 3px;
-  background: -webkit-radial-gradient(
-    ellipse at top left,
-    rgba(66, 69, 76, 0.6),
-    rgba(37, 40, 46, 0.4)
-  );
-  background: radial-gradient(
-    ellipse at top left,
-    rgba(66, 69, 76, 0.6),
-    rgba(37, 40, 46, 0.4)
-  );
+  background: -webkit-radial-gradient(ellipse at top left, #42454c99, #25282e66);
+  background: radial-gradient(ellipse at top left, #42454c99, #25282e66);
   backdrop-filter: blur(15px);
   height: 110px;
   position: absolute;
@@ -3594,8 +3562,8 @@ html.touch
   min-height: unset;
 }
 .gASJ2lL_xmVNuZkWGvrWg ._1_P15GG6AKyF_NMX2j4-Mu ._2hhNOdcC6yLwL_rugP3YLf:hover {
-  background: -webkit-radial-gradient(ellipse at top left, #42454c, #25282e);
-  background: radial-gradient(ellipse at top left, #42454c, #25282e);
+  background: -webkit-radial-gradient(ellipse at top left, #42454cff, #25282eff);
+  background: radial-gradient(ellipse at top left, #42454cff, #25282eff);
 }
 .BasicUI
   .gASJ2lL_xmVNuZkWGvrWg
@@ -4725,7 +4693,7 @@ html.touch
   left: 4px;
   backdrop-filter: blur(24px);
   border-radius: 2px;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1215686275);
+  text-shadow: 0px 1px 1px #0000001f;
 }
 ._3bCSmg_cQ3aTa3waFLT6o7 {
   white-space: pre-wrap;
@@ -4868,11 +4836,7 @@ html.touch
 ._2Qusm1gosCAtAqLKo5hioQ
   ._2_Obm3_emYUZKMgT1bdKgG
   ._2nVaF4foORFEq78yZ3A7yA:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(102, 192, 244) 5%,
-    rgb(47, 137, 188) 95%
-  );
+  background: linear-gradient(to bottom, #66c0f4 5%, #2f89bc 95%);
 }
 ._2Qusm1gosCAtAqLKo5hioQ
   ._2_Obm3_emYUZKMgT1bdKgG
@@ -5076,7 +5040,7 @@ html.touch
   display: block;
 }
 ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   width: 0;
   height: 0;
   padding: 7px 0;
@@ -5101,7 +5065,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 .oAqlZTgPU37Nb8gBT5eAM {
   background: linear-gradient(
     359.91deg,
-    rgb(43, 51, 58) 30%,
+    #2b333a 30%,
     rgba(103, 113, 122, 0.3) 85%
   );
   mix-blend-mode: normal;
@@ -5675,7 +5639,7 @@ span._1P__hyqsgd049GH0Bn007_ {
   font-size: 14px;
   font-weight: 800;
   border-radius: 50px;
-  border-top: rgba(255, 255, 255, 0.1882352941) 2px solid;
+  border-top: #ffffff30 2px solid;
   height: fit-content;
   height: -moz-fit-content;
   backdrop-filter: blur(4px);
@@ -5902,7 +5866,7 @@ html.tablet
 }
 ._2fm5TVukvQanOpOSUahWeX ._1t4-3uyyq_jmSjRl6tRVef .DialogDropDown {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   font-weight: 700;
 }
 ._2fm5TVukvQanOpOSUahWeX ._1t4-3uyyq_jmSjRl6tRVef .DialogDropDown_Arrow {
@@ -5968,7 +5932,7 @@ html.tablet
 }
 ._21-6tYOa1oCDYC9YCj1Vur ._1Gz4sRWceGeI3Si8NI3ZNk {
   display: flex;
-  background: linear-gradient(0deg, rgb(34, 31, 42) 0%, rgb(40, 56, 75) 100%);
+  background: linear-gradient(0deg, #221f2a 0%, #28384b 100%);
   border-radius: 3px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   padding: 20px 40px;
@@ -6583,7 +6547,7 @@ html.tablet
 ._2yY3XT7VPyYBZS3FCEGgRS:after {
   bottom: 100%;
   left: 80%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;

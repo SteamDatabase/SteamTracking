@@ -4388,7 +4388,8 @@ a.cluster_capsule:hover {
 
 .store_capsule .discount_block > .discount_prices {
 	background-color: rgba(20,31,44,0.4);
-	border-radius: 1px;
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
 }
 
 .store_capsule .discount_block.daily_deal_discount  > .discount_prices {

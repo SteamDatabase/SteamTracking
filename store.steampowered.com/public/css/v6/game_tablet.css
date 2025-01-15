@@ -1220,6 +1220,16 @@ html.tablet .responsive_store_nav_ctn_spacer {
 }
 
 
+html.tablet body.v6 .related_items_ctn {
+	padding-top: 0;
+	background: transparent;
+}
+
+html.tablet body.v6 .related_items_ctn .page_content {
+	padding: 0;
+	background: transparent;
+}
+
 
 /* Discovery queue */
 html.tablet .queue_ctn .queue_reason_description {

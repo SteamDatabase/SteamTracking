@@ -134,18 +134,26 @@
           let t = e.Body().notification_type(),
             i = e.Body().timeline_id(),
             r = e.Body().game_id();
-          if (1 == t) {
-            let t = this.GetTimelineLoaderForGame(r);
-            this.m_mapActiveTimelines.set(i, t),
-              t.loader.AddRunningTimeline(i, r, e.Body().start_time());
-          } else if (2 == t) {
-            let t = this.m_mapActiveTimelines.get(i);
-            t &&
-              (t.loader.RunningTimelineStopped(i, e.Body().duration_ms()),
-              t.release());
-          } else if (3 == t) {
-            let e = this.m_mapTimelineLoaders.get(r);
-            e && e.loader.TimelineDeleted(i);
+          switch (t) {
+            case 1:
+            case 4: {
+              let t = this.GetTimelineLoaderForGame(r);
+              this.m_mapActiveTimelines.set(i, t),
+                t.loader.AddRunningTimeline(i, r, e.Body().start_time());
+              break;
+            }
+            case 2: {
+              let t = this.m_mapActiveTimelines.get(i);
+              t &&
+                (t.loader.RunningTimelineStopped(i, e.Body().duration_ms()),
+                t.release());
+              break;
+            }
+            case 3: {
+              let e = this.m_mapTimelineLoaders.get(r);
+              e && e.loader.TimelineDeleted(i);
+              break;
+            }
           }
           return 1;
         }

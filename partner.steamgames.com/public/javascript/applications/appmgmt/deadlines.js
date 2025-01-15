@@ -8,6 +8,8 @@
       e.exports = {
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
+        ContactTaxIdentityDialog: "LTwcmHx1UIevNTkOF3lqS",
+        ContactTaxIdentityBody: "_2voSrDaE8HNs1oOZdGnAnw",
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
         TaskCompleted: "_3h_ArCyEssKna4ulmgRnLu",
         DocumentProcessingNotice: "_1g1PXMANzYwlWDNpKVMpgk",
@@ -107,10 +109,10 @@
       "use strict";
       a.d(t, {
         MY: () => d,
-        UA: () => h,
+        UA: () => p,
         Yd: () => f,
         qG: () => y,
-        rN: () => p,
+        rN: () => h,
         vh: () => u,
       });
       var n = a(34629),
@@ -239,7 +241,7 @@
           t
         );
       }
-      function h(e) {
+      function p(e) {
         const [t, a] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
           o.useEffect(() => {
@@ -255,7 +257,7 @@
           [t]
         );
       }
-      function p() {
+      function h() {
         return { fnFindPartnerByName: m.Get().FindPartnerByName };
       }
       function f(e) {
@@ -279,8 +281,8 @@
         d = a(51272),
         m = a(84811),
         u = a(71541),
-        h = a(95034),
-        p = a(55263),
+        p = a(95034),
+        h = a(55263),
         f = a(82097),
         y = a(32179),
         v = a(8527),
@@ -291,7 +293,7 @@
       const b = { include_assets: !0, include_release: !0 };
       function _(e) {
         const { rgDeadlines: t } = e,
-          [a, i] = (0, h.QD)("query", ""),
+          [a, i] = (0, p.QD)("query", ""),
           r = (0, n.useMemo)(
             () =>
               Array.from(
@@ -306,7 +308,7 @@
               ),
             [t],
           ),
-          s = (0, p.zX)(r, b),
+          s = (0, h.zX)(r, b),
           l = (0, y.vh)(o),
           c = (0, n.useMemo)(() => {
             const e = a.trim().toLocaleLowerCase();
@@ -378,7 +380,7 @@
       }
       function w(e) {
         const { deadline: t } = e,
-          [a] = (0, p.t7)(t.data.store_item_id, b),
+          [a] = (0, h.t7)(t.data.store_item_id, b),
           [i] = (0, y.UA)(t.data.partnerid),
           r = (0, N.u)(t.data.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
@@ -488,7 +490,11 @@
     2203: (e, t, a) => {
       "use strict";
       a.r(t),
-        a.d(t, { default: () => T, k_rgTemplateNameOptionsList: () => _ });
+        a.d(t, {
+          ContactTaxIdentityDialog: () => P,
+          default: () => A,
+          k_rgTemplateNameOptionsList: () => x,
+        });
       var n = a(90626),
         i = a(24484),
         r = a(84811),
@@ -499,8 +505,8 @@
         d = a(61859),
         m = a(52038),
         u = a(71541),
-        h = a(14771),
-        p = a(78327);
+        p = a(14771),
+        h = a(78327);
       function f(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
@@ -532,7 +538,7 @@
         else if (v != t.index) return null;
         const a = JSON.parse(t.deadline.data.description_jsondata);
         let i =
-          "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
+          "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
             ? "https://valvesoftware-dev.taxidentity.com"
             : "https://valvesoftware.taxidentity.com";
         return (
@@ -633,7 +639,12 @@
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      const _ = [
+      var _ = a(738),
+        w = a(56011),
+        C = a(78395),
+        T = a(41735),
+        I = a.n(T);
+      const x = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
           "DocReq-KYC-Entity-FR",
@@ -659,7 +670,7 @@
           "Notify-NoTINTreaty-Partner",
           "Renewal-W8-Initial",
         ],
-        w = {
+        R = {
           AddressCorrection: {
             component: function (e) {
               return n.createElement(
@@ -1609,7 +1620,7 @@
                         {
                           onClick: () =>
                             window.open(
-                              p.TS.HELP_BASE_URL +
+                              h.TS.HELP_BASE_URL +
                                 "en/wizard/HelpWithPublishing?issueid=904",
                               "_blank",
                             ),
@@ -1641,7 +1652,7 @@
                         {
                           onClick: () =>
                             window.open(
-                              p.TS.PARTNER_BASE_URL + "newpartner",
+                              h.TS.PARTNER_BASE_URL + "newpartner",
                               "_blank",
                             ),
                           className: s().NotificationButton,
@@ -1948,7 +1959,7 @@
             },
           },
         };
-      function C() {
+      function B() {
         const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
           ),
@@ -1966,9 +1977,70 @@
           );
         return [e, r, t, a, o];
       }
-      function T(e) {
-        const [t, a, o, l, d] = C(),
-          [h, f] = n.useMemo(() => {
+      function P(e) {
+        const { closeModal: t, subject: a, publisherid: i } = e,
+          [r, o] = n.useState(""),
+          [l, c] = n.useState("");
+        return n.createElement(
+          C.o0,
+          {
+            strTitle: "Contact TaxIdentity",
+            strDescription:
+              "Clicking Ok will send your message to TaxIdentity regarding this tax requirement.  Responses will be sent to your Steam account's email address.",
+            onOK: l
+              ? t
+              : async () => {
+                  const e = new FormData();
+                  e.append("sessionid", h.TS.SESSIONID),
+                    e.append("publisherid", "" + i),
+                    e.append("subject", a),
+                    e.append("message", r);
+                  const t = `${h.TS.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
+                    n = await I().post(t, e);
+                  200 == n?.status && 1 == n.data?.success
+                    ? c(
+                        `Your message has been sent.  You should receive an email acknowledgement from TaxIdentity to your Steam account's email address: ${n.data.msg}.`,
+                      )
+                    : c(
+                        "There was an error sending your message.  Please try again later or create a support ticket.",
+                      );
+                },
+            strOKButtonText: l ? "Close" : "Send Message",
+            bOKDisabled: 0 == r.trim().length,
+            onCancel: t,
+            className: s().ContactTaxIdentityDialog,
+          },
+          n.createElement(
+            "div",
+            { className: s().ContactTaxIdentityBody },
+            !l &&
+              n.createElement("textarea", {
+                cols: 80,
+                rows: 10,
+                onChange: (e) => o(e.currentTarget.value),
+                value: r,
+                autoFocus: !0,
+              }),
+            n.createElement(
+              "div",
+              { className: s().ContactTaxIdentityResult },
+              l,
+            ),
+          ),
+        );
+      }
+      function A(e) {
+        const [t, a, o, l, d] = B(),
+          [p, f] = (function () {
+            const [e] = (0, n.useState)(
+                (0, i.Tc)("testpage", "application_config"),
+              ),
+              [t] = (0, n.useState)(
+                (0, i.Tc)("testtemplate", "application_config"),
+              );
+            return [e, t];
+          })(),
+          [y, v] = n.useMemo(() => {
             const e = [...t];
             return (
               e.sort((e, t) => {
@@ -1983,24 +2055,10 @@
               [e, 1 == e[0]?.data.status]
             );
           }, [t]),
-          [y, v] = (function () {
-            const [e] = (0, n.useState)(
-                (0, i.Tc)("testpage", "application_config"),
-              ),
-              [t] = (0, n.useState)(
-                (0, i.Tc)("testtemplate", "application_config"),
-              );
-            return [e, t];
-          })();
-        let E = "mailto:taxsupport-valve@taxidentity.com";
-        if (h.length > 0) {
-          const e = JSON.parse(h[0]?.data.description_jsondata)?.Subject,
-            t =
-              "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
-                ? "TEST:"
-                : "";
-          E += "?subject=" + t + e;
-        }
+          E =
+            ("dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
+              ? "TEST:"
+              : "") + JSON.parse(y[0]?.data.description_jsondata)?.Subject;
         return n.createElement(
           r.tH,
           null,
@@ -2019,7 +2077,7 @@
                   "Steamworks Document Communication",
                   n.createElement("div", { className: s().PartnerName }, a),
                 ),
-                f &&
+                v &&
                   n.createElement(
                     "div",
                     { className: s().TaskCompleted },
@@ -2028,11 +2086,11 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  y && n.createElement(I, { strTemplate: v }),
-                  !f &&
-                    h.length > 0 &&
-                    h.map((e, t) =>
-                      n.createElement(x, {
+                  p && n.createElement(k, { strTemplate: f }),
+                  !v &&
+                    y.length > 0 &&
+                    y.map((e, t) =>
+                      n.createElement(q, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2092,7 +2150,11 @@
                     n.createElement(
                       u.jn,
                       {
-                        onClick: () => window.location.assign(E),
+                        onClick: (e) =>
+                          (0, _.pg)(
+                            n.createElement(P, { subject: E, publisherid: l }),
+                            (0, w.uX)(e),
+                          ),
                         className: s().NotificationButton,
                       },
                       "Contact TaxIdentity",
@@ -2104,17 +2166,17 @@
           ),
         );
       }
-      function I(e) {
+      function k(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
-          s = _.map((e) => ({ label: e, data: e })),
+          s = x.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           d = new Intl.DateTimeFormat(navigator.language).format(l);
         return (
           (c.data = {}),
-          (c.data.due_date = l / 1e3 + 14 * h.Kp.PerDay),
+          (c.data.due_date = l / 1e3 + 14 * p.Kp.PerDay),
           (c.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${d}" }`),
           n.createElement(
             "div",
@@ -2141,18 +2203,18 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(x, {
+            n.createElement(q, {
               requirement: { deadline: c, index: 0, onboarded: r },
             }),
           )
         );
       }
-      function x(e) {
+      function q(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, i] = C(),
+          [, i] = B(),
           r = new Date(a?.CreatedOn);
-        if (!w[a.TemplateName])
+        if (!R[a.TemplateName])
           return n.createElement(
             "div",
             { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
@@ -2163,7 +2225,7 @@
             ),
             n.createElement("div", null, "Message Not Available"),
           );
-        const o = w[a.TemplateName].component;
+        const o = R[a.TemplateName].component;
         return n.createElement(
           n.Fragment,
           null,
@@ -2186,7 +2248,7 @@
         gF: () => y,
         mZ: () => u,
         t7: () => c,
-        zX: () => p,
+        zX: () => h,
       });
       var n = a(41735),
         i = a.n(n),
@@ -2200,8 +2262,8 @@
         l.current = e;
         const [m, u] = (0, r.useState)(void 0),
           {
-            include_assets: h,
-            include_release: p,
+            include_assets: p,
+            include_release: h,
             include_platforms: f,
             include_all_purchase_options: y,
             include_screenshots: v,
@@ -2220,8 +2282,8 @@
         if (
           ((0, r.useEffect)(() => {
             const a = {
-              include_assets: h,
-              include_release: p,
+              include_assets: p,
+              include_release: h,
               include_platforms: f,
               include_all_purchase_options: y,
               include_screenshots: v,
@@ -2252,7 +2314,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, _, w, C, T, I, x, d]),
+          }, [e, t, n, m, p, h, f, y, v, E, g, S, N, b, _, w, C, T, I, x, d]),
           !e)
         )
           return [null, 2];
@@ -2281,15 +2343,15 @@
         const [o, s] = c(r, a);
         return r && o?.BIsVisible() ? [o, s] : [n, i];
       }
-      function h(e, t, a, n) {
+      function p(e, t, a, n) {
         const l = (0, o.CH)(),
           {
             include_assets: c,
             include_release: d,
             include_platforms: m,
             include_all_purchase_options: u,
-            include_screenshots: h,
-            include_trailers: p,
+            include_screenshots: p,
+            include_trailers: h,
             include_ratings: f,
             include_tag_count: y,
             include_reviews: v,
@@ -2309,8 +2371,8 @@
                 include_release: d,
                 include_platforms: m,
                 include_all_purchase_options: u,
-                include_screenshots: h,
-                include_trailers: p,
+                include_screenshots: p,
+                include_trailers: h,
                 include_ratings: f,
                 include_tag_count: y,
                 include_reviews: v,
@@ -2338,7 +2400,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, c, d, m, u, h, p, f, y, v, E, g, S, N, b, _, w]),
+          }, [e, t, n, l, c, d, m, u, p, h, f, y, v, E, g, S, N, b, _, w]),
           !e)
         )
           return 2;
@@ -2356,14 +2418,14 @@
           ? 3
           : 2;
       }
-      function p(e, t, a) {
-        return h(e, 0, t, a);
+      function h(e, t, a) {
+        return p(e, 0, t, a);
       }
       function f(e, t, a) {
-        return h(e, 2, t, a);
+        return p(e, 2, t, a);
       }
       function y(e, t, a) {
-        return h(e, 1, t, a);
+        return p(e, 1, t, a);
       }
     },
     68797: (e, t, a) => {

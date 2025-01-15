@@ -13,6 +13,12 @@ ul li {
 ._1sufRvqysxjE-xyRrrKL5U ._36r9iRM8nCGkZBkqJOFd7G {
   padding-left: 20px;
 }
+.LTwcmHx1UIevNTkOF3lqS textarea {
+  outline: none;
+}
+.LTwcmHx1UIevNTkOF3lqS ._2voSrDaE8HNs1oOZdGnAnw {
+  padding: 20px 0px;
+}
 ._3o-Tl2KWzVGK4YHEgfwWLP {
   text-transform: uppercase;
   margin-top: 16px;
@@ -581,7 +587,7 @@ ul li {
 ._2yY3XT7VPyYBZS3FCEGgRS:after {
   bottom: 100%;
   left: 80%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;

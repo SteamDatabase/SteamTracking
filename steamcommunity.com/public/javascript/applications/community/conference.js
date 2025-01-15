@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8521],
+  [8521, 8396],
   {
     88619: (e) => {
       e.exports = { BroadcastChatCtn: "_28b1vPJH7sip9Uh_p3OJvD" };

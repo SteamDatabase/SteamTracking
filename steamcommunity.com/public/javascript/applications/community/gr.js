@@ -18926,5 +18926,64 @@
               );
       }
     },
+    82227: (e, t, r) => {
+      "use strict";
+      r.d(t, { Dq: () => a, dm: () => n });
+      var i = r(61859);
+      function n(e, t, r, n) {
+        let a = t;
+        a =
+          "number" == typeof a
+            ? {
+                nDigitsAfterDecimal: t,
+                bUseBinary1K: r || void 0 === r,
+                bValueIsInBytes: !n,
+                bValueIsRate: n,
+                nMinimumDigitsAfterDecimal: 0,
+              }
+            : {
+                nDigitsAfterDecimal: 2,
+                bUseBinary1K: !0,
+                bValueIsInBytes: !0,
+                bValueIsRate: !1,
+                nMinimumDigitsAfterDecimal: 0,
+                ...a,
+              };
+        const s = a.bUseBinary1K ? 1024 : 1e3,
+          l = s * s,
+          o = l * s,
+          m = o * s;
+        let c,
+          u = "";
+        e > m
+          ? ((c = e / m), (u = "Tera"))
+          : e > o
+            ? ((c = e / o), (u = "Giga"))
+            : e > l
+              ? ((c = e / l), (u = "Mega"))
+              : e > s
+                ? ((c = e / s), (u = "Kilo"))
+                : (c = e);
+        const d =
+          "#" +
+          u +
+          (a.bValueIsInBytes ? "bytes" : "bits") +
+          (a.bValueIsRate ? "_PerSecond" : "");
+        return (0, i.we)(
+          d,
+          c.toLocaleString(i.pf.GetPreferredLocales(), {
+            minimumFractionDigits: a.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: a.nDigitsAfterDecimal,
+          }),
+        );
+      }
+      function a(e, t = 0) {
+        let r;
+        return (
+          t && (r = { maximumFractionDigits: t }),
+          e ? e.toLocaleString(i.pf.GetPreferredLocales(), r) : "" + e
+        );
+      }
+    },
   },
 ]);

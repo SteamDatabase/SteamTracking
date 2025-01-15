@@ -10,7 +10,7 @@
 ._3lJb_YN8uykqLcm4eG1jRF {
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
   transition-duration: .25s;
   font-size: 14px;
@@ -262,7 +262,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   fill: #fff;
   padding: 10px;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #fff;
   height: 24px;
   width: 24px;
@@ -330,7 +330,7 @@ a:hover {
   justify-content: center;
   padding: 10px;
   border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   transition: background-color 80ms ease-in;
   width: 24px;
 }
@@ -740,7 +740,7 @@ a:hover {
   ._21tUbooOHqAFZy0hfNkcnb {
   padding: 4px 10px;
   border-radius: 2px;
-  background-color: rgba(240, 248, 255, 0.0705882353);
+  background-color: #f0f8ff12;
   display: flex;
   align-items: center;
 }
@@ -1173,7 +1173,7 @@ a:hover {
   gap: 8px;
 }
 ._2oJ9Bxj4Co72Go5Mq42_8J ._257siDy9PId0Lc6msYf5YS button {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 3px;
   height: 18px;
   width: 18px;
@@ -1418,6 +1418,7 @@ a:hover {
 }
 ._1xAKt33YaSfi9TbbgpIb5T {
   cursor: pointer;
+  touch-action: none;
   background-color: rgba(61, 68, 80, 0.5);
 }
 ._1xAKt33YaSfi9TbbgpIb5T:nth-child(odd) {
@@ -1838,7 +1839,7 @@ a:hover {
 }
 ._1tVCPhzTgmUpMpErm-4mHX {
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1910,7 +1911,7 @@ a:hover {
 .rdtPicker td.rdtToday:before {
   content: "";
   display: inline-block;
-  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-left: 7px solid transparent;
   border-bottom: 7px solid #428bca;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -2367,7 +2368,7 @@ td.rdtYear:hover {
   flex-direction: row;
   font-size: 12px;
   align-items: center;
-  background-color: rgba(14, 20, 27, 0.6666666667);
+  background-color: #0e141baa;
   cursor: pointer;
   padding-top: 4px;
 }

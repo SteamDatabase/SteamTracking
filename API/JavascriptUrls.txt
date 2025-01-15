@@ -1265,13 +1265,14 @@ ${PARTNER_BASE_URL}steamml/get_problem_details?problemid=${}&sessionid=${SESSION
 ${PARTNER_BASE_URL}steamml/get_problems?sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${SESSIONID}
-${PARTNER_BASE_URL}store/ajaxpackagepublish
 ${PARTNER_BASE_URL}store/ajaxpackagesave/${}
+${PARTNER_BASE_URL}store/ajaxpublishpackages
 ${PARTNER_BASE_URL}store/packagelanding/${package_id}
 ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
-${PARTNER_BASE_URL}taxrequirement/${partnerid}/${gid}
+${PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity
+${PARTNER_BASE_URL}taxrequirement/view/${partnerid}/${gid}
 ${PARTNER_BASE_URL}timelinemarkers/ajaxcreatemarker
 ${PARTNER_BASE_URL}timelinemarkers/ajaxdeletemarker
 ${PARTNER_BASE_URL}timelinemarkers/ajaxpublishmarkers
@@ -1653,6 +1654,7 @@ ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
+${STORE_CDN_URL}/public/images/${image_path}
 ${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
@@ -2617,10 +2619,10 @@ https://help.steampowered.com/wizard/AjaxVerifyAccountRecoveryCode/
 https://help.steampowered.com/wizard/AjaxVerifySerialNumber
 https://help.steampowered.com/wizard/AjaxVerifyShippingAddress
 https://help.steampowered.com/wizard/HelpDeleteAccount
-https://help.steampowered.com/wizard/HelpWithCommunityContactSupport
 https://help.steampowered.com/wizard/HelpWithLogin
 https://help.steampowered.com/wizard/HelpWithLogin/
 https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=${strSessionID}&account=${accountid}&reset=${eReset}&lost=${nLost}
+https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415
 https://help.steampowered.com/wizard/RefreshCaptcha
 https://help.steampowered.com/wizard/ScamUserSearch/
 https://img.youtube.com/vi/${video}/${}.jpg
@@ -2666,6 +2668,7 @@ https://partner.steamgames.com/apps/addworkshopcreatorapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/ajaxaddtag/${nAppId}
 https://partner.steamgames.com/apps/ajaxcreatenewapp/
 https://partner.steamgames.com/apps/ajaxcreatevideoseries
+https://partner.steamgames.com/apps/ajaxreleaseappsteamchina/${appid}
 https://partner.steamgames.com/apps/ajaxsetadmintagsvisibility/${appid}
 https://partner.steamgames.com/apps/ajaxsetappfield/${appid}
 https://partner.steamgames.com/apps/ajaxsetcouponstate

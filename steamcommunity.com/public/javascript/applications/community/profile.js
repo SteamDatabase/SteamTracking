@@ -2428,7 +2428,7 @@
         (ce.k_strAvatarCooldownSupportURL =
           "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
         (ce.k_strNameFilteredSupportURL =
-          "https://help.steampowered.com/wizard/HelpWithCommunityContactSupport"),
+          "https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415"),
         (0, i.Cg)([o.sH], ce.prototype, "m_strPersonaName", void 0),
         (0, i.Cg)([o.sH], ce.prototype, "m_strCommittedPersonaName", void 0),
         (0, i.Cg)([o.sH], ce.prototype, "m_strCustomURL", void 0),
@@ -3618,8 +3618,8 @@
           )
         );
       });
-      var at = a(27456),
-        rt = a(53418),
+      var at = a(23649),
+        rt = a(27456),
         it = a(61819),
         st = a(26408);
       function nt(e) {
@@ -4014,7 +4014,7 @@
           return d.createElement(
             "div",
             { style: { display: "block" } },
-            d.createElement(rt.f, {
+            d.createElement(at.h, {
               text: (0, p.we)(
                 (0, he.nA)(A.TS.EREALM)
                   ? "#Profile_Edit_About_Instructions_SteamChina"
@@ -4089,7 +4089,7 @@
           return e.HasFilteredPersonaName()
             ? d.createElement(
                 "div",
-                { className: at.FilteredNameWarning },
+                { className: rt.FilteredNameWarning },
                 (0, p.oW)(
                   "#Profile_PersonaNameFiltered",
                   d.createElement("a", {
@@ -4121,7 +4121,7 @@
           return e.HasFilteredRealName()
             ? d.createElement(
                 "div",
-                { className: at.FilteredNameWarning },
+                { className: rt.FilteredNameWarning },
                 (0, p.oW)(
                   "#Profile_RealNameFiltered",
                   d.createElement("a", {

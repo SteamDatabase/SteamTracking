@@ -111,6 +111,52 @@
 ._2MUWDtjaZWaMDdJaQr4o5a:hover ._3FFrtt5Of4jP9unTFjYiHs:hover {
   opacity: 0.7;
 }
+._3J5Yc20Wkz7gjSxxWcHst {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.15);
+}
+._1vXdD6QZTKcjYoRTOAuOeX {
+  border: 4px solid transparent;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  min-height: 60px;
+  flex-direction: column;
+  min-width: 0;
+}
+._1vXdD6QZTKcjYoRTOAuOeX._3JVN2Ta1MlQnuMnqPo0XR8 {
+  border-color: #1a44c2;
+}
+._1vXdD6QZTKcjYoRTOAuOeX:not(._3JVN2Ta1MlQnuMnqPo0XR8):hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+}
+._1vXdD6QZTKcjYoRTOAuOeX ._248ADrw9QzPyhcxjqlaykT {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+._1vXdD6QZTKcjYoRTOAuOeX ._248ADrw9QzPyhcxjqlaykT img,
+._1vXdD6QZTKcjYoRTOAuOeX ._248ADrw9QzPyhcxjqlaykT video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+._1vXdD6QZTKcjYoRTOAuOeX .TzsVI0_4scOG258SCeyqz {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90%;
+  flex-shrink: 0;
+}
 ._2RL1a79W53-tCW7090DcUp,
 .wn604fTvW5SH1o852jAnI {
   border: 1px dashed #06beff;
@@ -324,7 +370,7 @@ input.Y12tprgNrNvnZ-eZvch6X {
   padding: 1px;
   left: 10px;
   margin-bottom: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-top: 1px solid transparent;
 }
 ._15NFxbc1Jv0dEJJpjDrtri:hover {
   background-color: #000;
@@ -763,7 +809,7 @@ p a:hover {
 }
 ._352Z7ynHHExwu7pbLG0mi3 {
   width: calc(100% - 20px);
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -872,7 +918,7 @@ p a:hover {
 ._35iac6gVYl3NbfLM5oGhAp:after {
   right: calc(100% + 1px);
   top: 10px;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: " ";
   height: 0;
   width: 0;
@@ -1030,7 +1076,7 @@ p a:hover {
   padding: 16px;
 }
 .X_wtWeV0nNEF-9Rz0wZRL._2jAkKq9D5KKOH2cgMu59yN {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -1068,7 +1114,7 @@ p a:hover {
     #399aec 10%,
     #225dce 80%
   );
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 4px 20px;
   border-radius: 2px;
   border: none;
@@ -1174,12 +1220,12 @@ p a:hover {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   border-image-source: url(../../../images/applications/community/glassborder_02.png?v=valveisgoodatcaching);
   border-image-width: 1px;
   border-image-repeat: stretch;
   border-image-slice: 7;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1450980392);
+  box-shadow: 0 0 12px #00000025;
 }
 ._1PkTBeZJVs3WI8US0zffEx {
   width: fit-content;
@@ -1190,15 +1236,15 @@ p a:hover {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    rgb(0, 0, 0) 44px,
-    rgb(0, 0, 0) calc(100% - 44px),
+    black 44px,
+    black calc(100% - 44px),
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    rgb(0, 0, 0) 44px,
-    rgb(0, 0, 0) calc(100% - 44px),
+    black 44px,
+    black calc(100% - 44px),
     transparent 100%
   );
   -webkit-mask-repeat: no-repeat;
@@ -1343,7 +1389,7 @@ p a:hover {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    rgb(0, 0, 0) 80%,
+    black 80%,
     rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
@@ -1351,7 +1397,7 @@ p a:hover {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    rgb(0, 0, 0) 80%,
+    black 80%,
     rgba(0, 0, 0, 0) 100%
   );
   filter: blur(30px);
@@ -1410,7 +1456,7 @@ p a:hover {
   flex-direction: column;
 }
 ._1zDJ1bfFg-UkuAluUAoGKj {
-  box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.3333333333);
+  box-shadow: 1px 2px 12px 1px #00000055;
 }
 ._1zDJ1bfFg-UkuAluUAoGKj ._1ueE9cjv0hzERo311Gr6qL {
   display: none;
