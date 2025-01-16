@@ -26331,7 +26331,7 @@
             l.createElement(ka.k, {
               ref: t,
               className: Pa().DefaultFancyTable,
-              headerClassname: Pa().OptinFancyTableHeader,
+              headerClassname: Pa().DefaultFancyTableHeader,
               columns: I,
               data: w,
               nItemHeight: 32,
@@ -26410,7 +26410,7 @@
             l.createElement(ka.k, {
               ref: t,
               className: Pa().DefaultFancyTable,
-              headerClassname: Pa().OptinFancyTableHeader,
+              headerClassname: Pa().DefaultFancyTableHeader,
               columns: p,
               data: u,
               nItemHeight: 32,
@@ -26663,7 +26663,7 @@
             ref: t,
             initialSorting: [{ id: "sales", desc: !0 }],
             height: 500,
-            headerClassname: Pa().OptinFancyTableHeader,
+            headerClassname: Pa().DefaultFancyTableHeader,
             ...e,
           }),
         ),
@@ -74812,7 +74812,7 @@
                   i.createElement(Rt.k, {
                     ref: o,
                     className: Nt().DefaultFancyTable,
-                    headerClassname: Nt().OptinFancyTableHeader,
+                    headerClassname: Nt().DefaultFancyTableHeader,
                     columns: c,
                     data: d,
                     nItemHeight: 32,
@@ -75996,9 +75996,9 @@
               defaultColumn: { minSize: 60, maxSize: 800 },
               initialState: {
                 sorting: u,
-                grouping: _,
+                grouping: _ ?? [],
                 expanded: g,
-                columnPinning: h,
+                columnPinning: h ?? {},
               },
               getCoreRowModel: (0, r.HT)(),
               getSortedRowModel: (0, r.h5)(),
