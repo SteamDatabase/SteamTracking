@@ -13579,7 +13579,7 @@
                   });
                 }),
                 n.forEach((e, t) => {
-                  a.set(t, e);
+                  a.has(t) && a.set(t, e);
                 }),
                 a
               );

@@ -6424,13 +6424,19 @@ a.open_in_steam_body:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: bottom;
+	align-items: flex-end;
 	margin-bottom: 4px;
 }
 
 .game_purchase_options_editions_header_title {
 	text-transform: uppercase;
 	font-size: 18px;
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+.game_purchase_options_editions_header_compare_button_ctn {
+	flex-grow: 0;
 }
 
 .game_purchase_options_editions_header_compare_button {
