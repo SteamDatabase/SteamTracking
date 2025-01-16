@@ -12120,7 +12120,11 @@
           E = new Map();
         for (const t of e.rgCandidates) E.set(t.nId, t);
         let g = null;
-        if (o.size > 0 && !o.has({ packageid: e.nBasePackageId })) {
+        if (
+          o.size > 0 &&
+          -1 !== e.nBasePackageId &&
+          !o.has({ packageid: e.nBasePackageId })
+        ) {
           const t = e.rgCandidates.find((t) => t.nId === e.nBasePackageId);
           g = (0, s.we)(
             "#StoreAdmin_EditEditions_MustIncludeCheapestBasePageError",
