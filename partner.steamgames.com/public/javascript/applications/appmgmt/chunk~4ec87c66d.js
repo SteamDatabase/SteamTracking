@@ -7327,7 +7327,7 @@
     },
     89269: (e, t, a) => {
       "use strict";
-      a.d(t, { Mb: () => h, UQ: () => _ });
+      a.d(t, { Mb: () => E, UQ: () => _, wC: () => h });
       var n = a(34629),
         r = a(41735),
         i = a.n(r),
@@ -7422,9 +7422,8 @@
         Init() {
           const e = (0, u.Fd)("app_to_package_lists", "application_config");
           e &&
-            Object.keys(e).forEach((t) => {
-              const a = Number.parseInt(t);
-              this.m_mapAppToPackages.set(a, e[a]);
+            e.forEach((e) => {
+              this.m_mapAppToPackages.set(e.appid, e.packageid);
             });
           const t = (0, u.Fd)("package_with_usd_cents", "application_config");
           t &&
@@ -7444,25 +7443,30 @@
         );
       }
       function g(e) {
-        const t = p.Get().GetAllPackagesForApp(e);
-        if (t?.length > 0) {
-          let e = null;
-          return (
-            t.forEach((t) => {
-              let a = (function (e) {
-                return p.Get().GetPackageUSCentPrice(e);
-              })(t);
-              a && (!e || e > a) && (e = a);
-            }),
-            e
-          );
-        }
-        return null;
+        return p.Get().GetPackageUSCentPrice(e);
       }
       function h(e) {
+        const t = p.Get().GetAllPackagesForApp(e);
+        return null != t?.find((e) => g(e) > 0);
+      }
+      function E(e) {
         const t = (0, m.CH)();
         return (
-          (0, m.hL)(p.Get().GetPackageListUpdateCallback(e), () => t()), g(e)
+          (0, m.hL)(p.Get().GetPackageListUpdateCallback(e), () => t()),
+          (function (e) {
+            const t = p.Get().GetAllPackagesForApp(e);
+            if (t?.length > 0) {
+              let e = null;
+              return (
+                t.forEach((t) => {
+                  let a = g(t);
+                  a && (!e || e > a) && (e = a);
+                }),
+                e
+              );
+            }
+            return null;
+          })(e)
         );
       }
       (0, n.Cg)([o.o], p.prototype, "LoadAppPackages", null),
@@ -60009,6 +60013,7 @@
                   if (a.freetoplay) return !1;
                   if (null != a.tagids.split(",").find((e) => "113" == e))
                     return !1;
+                  if (!(0, bn.wC)(a.appid)) return !1;
                 }
                 if (!g && a.earlyaccess) return !1;
                 if (
