@@ -18,6 +18,7 @@ Breakpad/1.0 (Linux)
 Breakpad_SetSteamID
 CH\f1
 CreateInterface
+D\LU
 ExceptionHandler::GenerateDump sys_pipe failed:
 ExceptionHandler::GenerateDump waitpid failed:
 ExceptionHandler::SendContinueSignalToChild sys_write failed:

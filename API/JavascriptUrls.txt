@@ -1572,7 +1572,7 @@ ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
-${STORE_BASE_URL}remoteplay#anywhere_how
+${STORE_BASE_URL}remoteplay#anywhere
 ${STORE_BASE_URL}replay/${steamid}/${}?src=9
 ${STORE_BASE_URL}replay/${}/${}
 ${STORE_BASE_URL}replay/${}/${}?src=8
@@ -1662,6 +1662,8 @@ ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
+${STORE_CDN_URL}public/images/mobile/localizedimages/appleappstore/apple_store_${LANGUAGE}.png
+${STORE_CDN_URL}public/images/mobile/localizedimages/googleplaystore/google_play_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_CHECKOUT_BASE_URL}checkout/
@@ -2628,6 +2630,7 @@ https://img.youtube.com/vi/${video}/${}.jpg
 https://img.youtube.com/vi/${}/0.jpg
 https://imgur.com
 https://instagram.com/dota2
+https://itunes.apple.com/app/steam-link/id1246969117
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://login.steampowered.com/jwt/ajaxrefresh
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
@@ -2781,6 +2784,7 @@ https://partner.steamgames.com/tagdata/forcetagranking
 https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations
 https://partner.steamgames.com/walletfunding/approval/
+https://play.google.com/store/apps/details?id=com.valvesoftware.steamlink
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
 https://policies.google.com/privacy
