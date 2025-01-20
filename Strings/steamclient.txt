@@ -22173,7 +22173,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenr;r
+ggen
 ghjkl
 gidlist
 gidparentcomment
