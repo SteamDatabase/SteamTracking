@@ -563,6 +563,18 @@ button._22iwdea7XXbiuZrrLZUU11._22iwdea7XXbiuZrrLZUU11:disabled:hover {
   top: 0px;
   z-index: 2;
 }
+._1noS58WsfHN3KuGVDzlv9r {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+._1noS58WsfHN3KuGVDzlv9r a,
+._1noS58WsfHN3KuGVDzlv9r button {
+  white-space: nowrap;
+}
 ._1Afx7wzva3-ghxcAy6EQhs._3zTXCKuKmaCdEoxSBTzPAa {
   background-color: #b6c874;
 }
@@ -574,6 +586,9 @@ button._22iwdea7XXbiuZrrLZUU11._22iwdea7XXbiuZrrLZUU11:disabled:hover {
 }
 ._3zTXCKuKmaCdEoxSBTzPAa {
   color: #a3cf06;
+}
+._2fUl5vCnrlT9P7kskRIiWx {
+  flex-grow: 1;
 }
 .erZyIOjQA9q0Wv28vQPiN {
   color: #c44848;

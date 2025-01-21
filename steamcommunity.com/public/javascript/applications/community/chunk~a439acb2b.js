@@ -7,8 +7,10 @@
       e.exports = {
         DisplayAdminPanel_Spacer: "_3TzVFi3VdHXUk1AerBpZc-",
         EventEditorTopBarContainer: "_1Afx7wzva3-ghxcAy6EQhs",
+        EventEditorBottomBar: "_1noS58WsfHN3KuGVDzlv9r",
         EventPublished: "_3zTXCKuKmaCdEoxSBTzPAa",
         EventUnPublished: "pjxnm0P9LLWFXCwsaDKUa",
+        AdditionalContent: "_2fUl5vCnrlT9P7kskRIiWx",
       };
     },
     96471: (e) => {
@@ -35,8 +37,8 @@
         L = a(22797),
         d = a(68797),
         E = a(52038),
-        p = a(61859),
-        A = a(87669),
+        A = a(61859),
+        p = a(87669),
         h = a(32754),
         w = a(96471);
       const _ = (e) => {
@@ -49,7 +51,7 @@
                 lang: r,
               } = e,
               s = n(),
-              c = new A.s();
+              c = new p.s();
             let g = i ? i + "_localization" : "localization";
             switch (a) {
               case "csv_row":
@@ -83,24 +85,24 @@
                 i.createElement(
                   c.jn,
                   { onClick: (e) => t(e, "csv_row") },
-                  (0, p.we)("#Localization_Export_Btn_RowLanguages"),
+                  (0, A.we)("#Localization_Export_Btn_RowLanguages"),
                 ),
                 i.createElement(
                   c.jn,
                   { onClick: (e) => t(e, "csv_column") },
-                  (0, p.we)("#Localization_Export_Btn_ColumnLanguages"),
+                  (0, A.we)("#Localization_Export_Btn_ColumnLanguages"),
                 ),
                 i.createElement(
                   c.jn,
                   { onClick: (e) => t(e, "csv_token") },
-                  (0, p.we)("#Localization_Export_Btn_TokenLanguages"),
+                  (0, A.we)("#Localization_Export_Btn_TokenLanguages"),
                 ),
               ),
             Boolean(e.bShowXML) &&
               i.createElement(
                 c.jn,
                 { onClick: (e) => t(e, "xml") },
-                (0, p.we)("#Localization_Export_Btn_XML"),
+                (0, A.we)("#Localization_Export_Btn_XML"),
               ),
           );
         },
@@ -123,7 +125,7 @@
                       i.createElement(
                         "p",
                         null,
-                        (0, p.we)("#Localization_Error_Input"),
+                        (0, A.we)("#Localization_Error_Input"),
                       ),
                       i.createElement("p", null, e.message),
                     ),
@@ -136,23 +138,23 @@
               let t = "";
               e.forEach((e) => {
                 t.length > 0 && (t += ", "),
-                  (t += (0, p.we)("#Language_" + (0, l.Lg)(e)));
+                  (t += (0, A.we)("#Language_" + (0, l.Lg)(e)));
               }),
                 (0, u.pg)(
                   i.createElement(
                     m.o0,
                     {
-                      strTitle: (0, p.we)("#EventDisplay_Share_Success"),
+                      strTitle: (0, A.we)("#EventDisplay_Share_Success"),
                       bAlertDialog: !0,
                     },
                     i.createElement(
                       "div",
                       null,
                       0 == t.length
-                        ? (0, p.we)(
+                        ? (0, A.we)(
                             "#Localization_Success_ImportComplete_NoChange",
                           )
-                        : (0, p.we)("#Localization_Success_ImportComplete", t),
+                        : (0, A.we)("#Localization_Success_ImportComplete", t),
                     ),
                   ),
                   window,
@@ -163,14 +165,14 @@
               if (i && i.length > 0) {
                 a(!0);
                 let t = new Array(),
-                  l = new A.s();
+                  l = new p.s();
                 for (let a = 0; a < i.length; ++a)
                   if (i[a]) {
                     if (i[a].name.toLocaleLowerCase().endsWith(".csv"))
                       return void o().parse(i[0], {
                         header: !0,
                         complete: (t) => {
-                          let a = new A.s().DetectAndFormatCSV(t);
+                          let a = new p.s().DetectAndFormatCSV(t);
                           if (!a)
                             return void n({
                               code: "",
@@ -178,7 +180,7 @@
                               row: 0,
                               type: "filenameerror",
                             });
-                          const o = p.A0.GetLanguageListForRealms([
+                          const o = A.A0.GetLanguageListForRealms([
                               r.TU.k_ESteamRealmGlobal,
                             ]),
                             i = e.fnOnImportLocData(a, o);
@@ -191,7 +193,7 @@
                       if (null == o || -1 == o)
                         return void n({
                           code: "",
-                          message: (0, p.we)(
+                          message: (0, A.we)(
                             "#Localization_Error_FileLangauage",
                             i[a].name,
                           ),
@@ -211,7 +213,7 @@
                         let t = (0, d.H)(e);
                         return void n({
                           code: "",
-                          message: (0, p.we)(
+                          message: (0, A.we)(
                             "#Localization_Error_XMLParseError",
                             t.strErrorMsg,
                           ),
@@ -222,7 +224,7 @@
                     } else
                       n({
                         code: "",
-                        message: (0, p.we)(
+                        message: (0, A.we)(
                           "#Localization_Error_FileExtention",
                           i[a].name,
                         ),
@@ -248,7 +250,7 @@
               i.createElement(
                 "div",
                 { className: w.Label },
-                (0, p.we)(e.strLabel ? e.strLabel : "#Localization_Import_Btn"),
+                (0, A.we)(e.strLabel ? e.strLabel : "#Localization_Import_Btn"),
               ),
               i.createElement("input", {
                 id: "importlocalization",

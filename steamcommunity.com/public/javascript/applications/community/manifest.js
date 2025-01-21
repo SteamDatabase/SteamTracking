@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9459121";
+var CLSTAMP = "9472721";
 (() => {
   "use strict";
   var a,
@@ -312,7 +312,7 @@ var CLSTAMP = "9459121";
         6528: "ce7ca7c400d616c6a7d1",
         6577: "77d7f6e215c8f04cfae6",
         6635: "fb95b8b77ada9e194b8f",
-        6662: "9498b5af61e1ecf01f79",
+        6662: "ffa9d3b3d76cefb8163f",
         6752: "97c7bc4221c996a9bc81",
         6888: "54f48f378b360c1f8d4c",
         6893: "26b912ca198e0a9f916b",
@@ -347,7 +347,7 @@ var CLSTAMP = "9459121";
         8724: "b4284653e15921fd11b1",
         8732: "99003f997e547ec8c1c8",
         8749: "d18e8e17c77e937d6e8e",
-        8780: "e87946c1f17eef40c898",
+        8780: "13fd5d3f8e0221af6edb",
         8872: "269ff4bc4565865cfa57",
         9053: "7366a7674fbfd962ed0e",
         9118: "99d1128410b9a64adec4",
@@ -366,7 +366,7 @@ var CLSTAMP = "9459121";
         9743: "b2d9587e4009a994b616",
         9774: "afae86938f96e08277da",
         9783: "15accfeb29660bdd76e0",
-        9855: "7dffdaf6eca1c653971c",
+        9855: "1d40e5bbb3d30a5a877c",
         9857: "2b22ef07a1850a1eb29c",
         9869: "98bd6cca15fe8c17d72c",
         9870: "96e0386472ad49235baa",
@@ -420,14 +420,14 @@ var CLSTAMP = "9459121";
         2694: "816c6c29940416f316c6",
         3156: "a76dc33b5e94d2acd794",
         3256: "1a8e226864678862c504",
-        3781: "cd46b1022a2318a8a868",
+        3781: "264ebfaa8dacbacc0500",
         4268: "558bc776601a931c1489",
         4558: "b756430a600fa06242b4",
         5278: "7ad41ee51bad4c4189d1",
         5836: "012b734f1a7ae3ee2447",
         5876: "367602499c6292db44d6",
         6635: "0d3d69f2f2bf2c25a2c8",
-        6662: "f837adafea849db35eeb",
+        6662: "d64106d550fedee1dd28",
         6893: "8d682a3ae9e9f5bfaa84",
         6966: "a66289e969ece5d1faad",
         7561: "789dd1fbdb6c6b5c773d",
@@ -435,7 +435,7 @@ var CLSTAMP = "9459121";
         8138: "f13e0aca0599c6553ab2",
         8396: "e53dd7f5e3feba02531b",
         8521: "e5371bed29326965f77a",
-        8780: "3f646b0110357cd51da7",
+        8780: "85c440963e9dfd396686",
         9118: "627d75d6e3df54960a26",
         9129: "e0ae5f099a75f693e3de",
         9505: "012f8def4956c99a3e49",

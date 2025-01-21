@@ -189,8 +189,6 @@
         ShowOnTabsLabel: "IMegHY3h6HLL6INm4q9rn",
         ShowOnTabsButton: "_3bfm0A9fM9nCI53fqSrFKn",
         BottomBarControls: "_3sisA_QpfXg8cy6JtzyFq4",
-        ReorderSections: "_1hqnmqZwMwIDZcVp_r7NVN",
-        MinimizeAll: "kQpetmlEhNXm_gYEpTBAV",
         ItemBrowseInactiveTab: "_1-3nDj35T6BvR1s_zV64OQ",
         ItemBrowseInactiveTabAdd: "_3K8G5F5vNtaHFMCuChGp7S",
         ItemBrowseActiveTab: "_23DBRAxa8fkCqhTRvXH1xi",
