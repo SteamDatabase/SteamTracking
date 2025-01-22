@@ -1447,6 +1447,7 @@ Plat_localtime
 Plat_timegm
 Plat_timezone
 QkkXa
+R+G0
 Rejang
 Runic
 SKIP
@@ -2577,7 +2578,6 @@ k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 keyCode
 kill
-lEl-
 label
 language
 last_update_steamid

@@ -438,5 +438,21 @@
     "ShareSheet_ShareOnSteam_PartialUploaded": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "ShareSheet_ShareOnSteam_PartialUploaded_Plural": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "Overlay_ClipHint_1": "您的剪辑已保存至您的“蒸汽平台录像及截图”中",
-    "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。"
+    "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。",
+    "StreamingClient_LinkDesc_Generic": "用蒸汽平台流式应用远程玩此游戏…",
+    "StreamingClient_LinkDesc_Specific_Phone": "在您的手机上用蒸汽平台流式应用玩此游戏…",
+    "StreamingClient_LinkDesc_Specific_Tablet": "在您的平板上用蒸汽平台流式应用玩此游戏…",
+    "StreamingClient_LinkDesc_Specific_Mobile": "在您的手机或平板上用蒸汽平台流式应用玩此游戏…",
+    "StreamingClient_LinkDesc_Specific_TV": "在您的电视机上用蒸汽平台流式应用玩此游戏…",
+    "RemotePlay_Explainer_HowWorks_1": "<1>1</1> - 在您想玩的设备上安装 <2>蒸汽平台流式应用</2>。",
+    "RemotePlay_Explainer_HowWorks_2": "<1>2</1> - 打开 <2>蒸汽平台流式应用</2>并安全地连接到您的计算机。",
+    "RemotePlay_Explainer_GetApp_Desc": "扫描此二维码以在 %1$s 查看蒸汽平台手机应用的所有选项。",
+    "AppProperties_AutoUpdateAlways": "由蒸汽平台决定何时更新",
+    "AppProperties_GameRecording_Enabled_Description": "蒸汽平台将自动录制此游戏。",
+    "AppProperties_GameRecording_Disabled_Description": "蒸汽平台不会录制此游戏的游戏视频。",
+    "AppProperties_GameRecording_GlobalStatus_Background": "蒸汽平台游戏录制当前已为所有游戏启用。",
+    "AppProperties_GameRecording_GlobalStatus_Manual": "蒸汽平台只会在您按下 %1$s 后录制视频。\n\n查看游戏录制设置，了解更多关于录制和自定义的信息。",
+    "AppProperties_GameRecording_GlobalStatus_Never": "蒸汽平台游戏录制当前已为所有游戏禁用。\n\n查看游戏录制设置，了解更多关于录制和自定义的信息。",
+    "DownloadSettings_DefaultAppUpdateBehavior_Description": "设置下载蒸汽平台库中已安装游戏更新的默认行为。",
+    "DownloadSettings_DefaultAppUpdateBehavior_KeepUpToDate": "由蒸汽平台决定何时更新"
 }
