@@ -172,7 +172,7 @@ var categoryWeights = {};
 
 /**
  * A map of category names to (a map of tagids to weight values)
- */ 
+ */
 var categorySubWeights = {};
 
 /**
@@ -182,7 +182,7 @@ var tagNames = {};
 
 /**
  * A map of tagids to localized tag names (lowercase, stripped)
- */ 
+ */
 var simpleTagNames = {};
 
 /**
@@ -263,18 +263,18 @@ function initSurvey(data)
 	communityTags = data.communityTags;
 	manageBansLink = data.manageBansLink;
 	genreHierarchy = data.genreHierarchy;
-	
+
 	tagsFromMetaGenres = data.tagsFromMetaGenres;
 	tagsFromStoreCategories = data.tagsFromStoreCategories;
-	
+
 	simpleTagNames = {};
 	for(key in tagNames)
 	{
 		simpleTagNames[key] = simplify(tagNames[key]);
 	}
-	
+
 	window.onbeforeunload = checkDirtyWarning;
-	
+
 	startSurvey();
 }
 
@@ -295,9 +295,9 @@ function checkDirtyWarning()
 function loadAppThen(callback)
 {
 	//TODO:
-	//The variables fetched here need to be moved to the appmgmt php backend so 
+	//The variables fetched here need to be moved to the appmgmt php backend so
 	//that they're already available by the time this JS loads
-	
+
 	/*
 	getTaxonomySurveyBasics(appid, function(data)
 	{
@@ -308,29 +308,29 @@ function loadAppThen(callback)
 		}
 	});
 	*/
-	
+
 	//TODO: Need to handle the case where these calls fail
 }
 
 /**
- * Load & display the survey questions 
+ * Load & display the survey questions
  */
 function startSurvey()
 {
 	checkTest();
-	
+
 	//Load the survey questions from the included file:
 	questions = survey_json.questions;
 	var numInitialResponses = getInitialResponses();
-	
+
 	var profile = getTagProfile();
 	var deltas = getDevVsCommunityTagDeltas();
-	
+
 	if(deltas.length <= 0)
 	{
 		hasDevTagsOnly = true;
 	}
-	
+
 	/*
 	if(doTest || numInitialResponses > 0)
 	{
@@ -341,7 +341,7 @@ function startSurvey()
 	*/
 	setCurrentQuestion(-1);
 	displayStartPage();
-	
+
 	//nextQuestion();
 }
 
@@ -460,7 +460,7 @@ function getInitialResponses()
  * Question/Choice/Response functions
  *
  *************************************/
- 
+
 function onScroll()
 {
 	var choices = document.getElementById("choices");
@@ -473,7 +473,7 @@ function onScroll()
 		nScroll = 0;
 	}
 }
- 
+
 /**
  * Save responses whenever the user clicks
  */
@@ -488,7 +488,7 @@ function onChange()
 		choices.scrollTop = nScroll;
 	}
 }
- 
+
 function addTagManuallySearched(tagid, bAdd=true)
 {
 	var found = false;
@@ -503,7 +503,7 @@ function addTagManuallySearched(tagid, bAdd=true)
 			break;
 		}
 	}
-	
+
 	if(bAdd)
 	{
 		if(!found)
@@ -531,14 +531,14 @@ function onClickChoice(i, isRadio)
 {
 	var choices = document.getElementsByClassName("input_choice");
 	var theChoice = null;
-	
+
 	for(var j = 0; j < choices.length; j++)
 	{
 		if(choices[j].id == "input_choice_"+i)
 		{
 			theChoice = choices[j];
 		}
-		
+
 		if(isRadio && choices[j].id != "input_choice_"+i)
 		{
 			choices[j].checked = false;
@@ -553,7 +553,7 @@ function onClickChoice(i, isRadio)
 		}
 	}
 	hilightAssociations();
-	
+
 	var changedSearchThing = false;
 	if(theChoice != null)
 	{
@@ -566,7 +566,7 @@ function onClickChoice(i, isRadio)
 			changedSearchThing = true;
 		}
 	}
-	
+
 	if(changedSearchThing)
 	{
 		displayCurrentQuestion();
@@ -672,12 +672,12 @@ function onClickCancelSurvey()
 		window.location.href = url;
 		return;
 	}
-	
+
 	var strTitle = 'Leave the Survey?';
 	var strBody  = 'You have unapplied changes which will be lost if you leave now.';
 	var strYes   = 'Leave Survey';
 	var strNo    = 'Don\'t Leave';
-	
+
 	ShowConfirmDialog(strTitle,strBody,strYes,strNo).done( function( strButton ) {
 		if(strButton == "OK")
 		{
@@ -767,7 +767,7 @@ var lastProfile = "";
 function updateSortButtons()
 {
 	var tagProfile = getManuallySortedTagListFromHTML();
-	
+
 	var optDiv = document.getElementsByClassName("nav_button_optimize")[0];
 	var optBtn = optDiv.childNodes[0];
 	var revDiv = document.getElementsByClassName("nav_button_revert")[0];
@@ -776,10 +776,10 @@ function updateSortButtons()
 	var pubBtn = pubDiv.childNodes[0];
 	var canDiv = document.getElementsByClassName("nav_button_cancel")[0];
 	var canBtn = canDiv.childNodes[0];
-	
+
 	removeClass(pubDiv,"disabled");
 	pubBtn.setAttribute("onclick",'onClickConfirmApplyTags()');
-	
+
 	if(areTagProfilesEqual(tagProfile, getOptimizedTagProfile()))
 	{
 		//Tags are already in optimized order, so disable optimize:
@@ -792,7 +792,7 @@ function updateSortButtons()
 		removeClass(optDiv,"disabled");
 		optBtn.setAttribute("onclick",'onClickOptimizeTags()');
 	}
-	
+
 	if(areTagProfilesEqual(tagProfile, getNaturalTagProfile()))
 	{
 		//Tags are already in their natural order, so disable revert:
@@ -805,7 +805,7 @@ function updateSortButtons()
 		removeClass(revDiv,"disabled");
 		revBtn.setAttribute("onclick",'onClickRevertTags()');
 	}
-	
+
 	if(JSON.stringify(tagProfile) != lastProfile)
 	{
 		getSimilarGames(function(data){
@@ -823,7 +823,7 @@ function onClickConfirmApplyTags()
 	var strBody  = 'Your title\'s tag profile will look like this:';
 	var strYes   = 'Publish';
 	var strNo    = 'Cancel';
-	
+
 	//Get all the elements in the drag and drop list
 	var tags = getManuallySortedTagListFromHTML();
 	var tagStr = "<ol>";
@@ -834,7 +834,7 @@ function onClickConfirmApplyTags()
 	}
 	tagStr += "</ol>";
 	strBody += "<br><br>"+tagStr;
-	
+
 	var commTagsToRemove = [];
 	for(var i = 0; i < communityTags.length; i++)
 	{
@@ -854,7 +854,7 @@ function onClickConfirmApplyTags()
 			commTagsToRemove.push(commTag);
 		}
 	}
-	
+
 	if(commTagsToRemove.length > 0)
 	{
 		strBody += 'These community-applied tags will be removed:';
@@ -866,9 +866,9 @@ function onClickConfirmApplyTags()
 		tagStr += "</ol>";
 		strBody += tagStr;
 	}
-	
+
 	strBody += 'If this is what you want, click \'Publish.\'';
-	
+
 	ShowConfirmDialog(strTitle,strBody,strYes,strNo).done( function( strButton ) {
 		if(strButton == "OK")
 		{
@@ -886,10 +886,10 @@ function ApplyTags(tagsToRemove=[])
 {
 	//Get all the elements in the drag and drop list
 	var tags = getManuallySortedTagListFromHTML();
-	
+
 	//Apply a nice gradient of weights to the list
 	tags = finalizeTagProfileCounts(tags);
-	
+
 	//Split the list into tagids and corresponding weights
 	var rgRankedTagids = [];
 	for(var i = 0; i < tags.length; i++)
@@ -897,7 +897,7 @@ function ApplyTags(tagsToRemove=[])
 		var tag = tags[i];
 		rgRankedTagids.push(tag.tagid);
 	}
-	
+
 	//Formulate the tag application POST request
 	var rgParams = {
 		appid: appid,
@@ -905,16 +905,16 @@ function ApplyTags(tagsToRemove=[])
 		rankedtagids: rgRankedTagids,
 		negatedtagids: tagsToRemove,
 	};
-	
+
 	if(bDiagnostics)
 	{
 		rgParams.bDiagnostics = true;
 	}
-	
+
 	var strTitle = 'Applying Tags';
 	var strBody = 'Please wait. We\'re applying tags, flushing app information, and updating the search index. This might take a minute...';
 	var Modal = ShowBlockingWaitDialog(strTitle, strBody);
-	
+
 	//Send the request
 	$J.post( 'https://partner.steamgames.com/tagdata/forcetagranking', rgParams ).done(function ( response )
 		{
@@ -1023,7 +1023,7 @@ function nextQuestion(direction)
 	{
 		currentQuestion += direction;
 	}
-	
+
 	if(direction != 0)
 	{
 		if(needToSkipNextQuestion(direction))
@@ -1060,7 +1060,7 @@ function needToSkipNextQuestion()
 }
 
 /**
- * Attempt to display the current question, and if it fails, keep going in the 
+ * Attempt to display the current question, and if it fails, keep going in the
  * given direction
  * @param {number} direction -1 for "back", 1 for "forward", 0 for "stay here"
  */
@@ -1110,7 +1110,7 @@ function storeResponse(index,name,value,bAdd=true)
 }
 
 /**
- * Gather info from all the choice inputs and save them to the responses, then 
+ * Gather info from all the choice inputs and save them to the responses, then
  * call the callback
  * @param {VoidCallback} callback
  */
@@ -1132,7 +1132,7 @@ function saveResponse(callback)
 	}
 	rgResponses[currentQuestion] = currResponses;
 	displayCurrentQuestionSummary();
-	
+
 	//Update tag associations based on current tag choices
 	getTagAssociations(callback);
 }
@@ -1198,9 +1198,9 @@ function validateMultiSelect(min, max, e)
 {
 	if(min === null || min === undefined) min = 0;
 	if(max === null || max === undefined) max = -1;
-	
+
 	if(min == 0 && max == -1) return e;
-	
+
 	var choices = document.getElementsByClassName("input_choice");
 	var numSelected = 0;
 	for(var i = 0; i < choices.length; i++)
@@ -1211,10 +1211,10 @@ function validateMultiSelect(min, max, e)
 			numSelected++;
 		}
 	}
-	
+
 	if(numSelected < min) e.push("Select at least " + min);
 	if(numSelected > max) e.push("Select no more than " + max);
-	
+
 	return e;
 }
 
@@ -1311,7 +1311,7 @@ function resolveFillChoices(fill)
 			return getCategory(fillThing);
 			break;
 	}
-	
+
 	return [{label:"ERROR",value:"error"}];
 }
 
@@ -1376,10 +1376,10 @@ function getQText(id)
 			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select up to 20 Steam tags to associate with your title. Then you will prioritize this list. These 20 tags will help Steam determine where to surface your game to customers across browse views, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
 			break;
 		case "end_text":
-			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 20 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.' 
+			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 20 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.'
 			break;
 		case "end_text_devtags":
-			return 
+			return
 			break;
 		case "q_software_genre":    return 'Looks like this is a software application. Choose one or two software genres to categorize your title.';    break;
 		case "q_super_genre":    return 'To begin, choose one or two top-level genres to categorize your title.';    break;
@@ -1395,8 +1395,8 @@ function getQText(id)
 			return 'These additional tags have been applied to your title by the Steam community of users.<br><br>We suggest keeping these in place unless any are explicitly inaccurate.<br><br>' + getBanTagsText();
 		break;
 		case "q_summary":        return '#App_Taxonomy_Survey_QSummaryText';
-		case "none_defined"    : return 'None defined';       
-		case "define_your_own" : return 'None defined, search to add here';       
+		case "none_defined"    : return 'None defined';
+		case "define_your_own" : return 'None defined, search to add here';
 		case "top_tags"        : return 'Top 20 Tags, by weight—Drag & Drop to reorder';
 		case "search_for_tags" : return 'Search to add others:';
 		break;
@@ -1567,7 +1567,7 @@ function getTagNames(ids)
 /**
  * Returns a list of tagids from the ones you've selected so far and filters the
  * genres for the most specific information. If you have genres it will suppress
- * supergenres, and if you have subgenres it will suppress genres and 
+ * supergenres, and if you have subgenres it will suppress genres and
  * supergenres. This is particularly useful if you want good information out of
  * tag association.
  * @return {Array.<number>} list of tagids
@@ -1587,11 +1587,13 @@ function getRelevantTagIdList()
 		}
 		if(tagMatchesCategory(tag, ["genre"]))
 		{
-			hasGenre = true;
+						if ( !(tagMatchesCategory(tag, ["supergenre"])) )
+				hasGenre = true;
 		}
 		if(tagMatchesCategory(tag, ["subgenre"]))
 		{
-			hasSubGenre = true;
+						if ( !(tagMatchesCategory(tag, ["supergenre"])) && !(tagMatchesCategory(tag, ["genre"])) )
+				hasSubGenre = true;
 		}
 	}
 	if(hasSuperGenre)
@@ -1612,7 +1614,7 @@ function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=nul
 {
 	var topTags = getTagIdListRanked(includeCategories, excludeCategories, true);
 	var bottomTags = [];
-	
+
 	if(!enforceCutoff)
 	{
 		bottomTags = getTagIdListRanked(includeCategories, excludeCategories, false);
@@ -1620,12 +1622,12 @@ function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=nul
 
 	var topNames = getTagNames(topTags);
 	var bottomNames = getTagNames(bottomTags);
-	
+
 	if((topNames == null || topNames.length == 0) && (bottomNames == null || bottomNames.length == 0))
 	{
 		return "";
 	}
-	
+
 	var topNameStr = topNames.join(", ");
 	var bottomNameStr = bottomNames.join(", ");
 	if(topNameStr != "")
@@ -1635,13 +1637,13 @@ function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=nul
 			topNameStr += ", ";
 		}
 	}
-	
-	var result = 
+
+	var result =
 		"<span class='top_tags_sidebar'>"+topNameStr+"</span>" +
 		"<span class='bottom_tags_sidebar'>"+bottomNameStr+"</span>";
-		
+
 	return result;
-	
+
 }
 
 
@@ -1653,7 +1655,7 @@ function getTopAndBottomTagIdNames(includeCategories=null, excludeCategories=nul
 function getTagIdListRanked(includeCategories=null, excludeCategories=null, bTopTags=true)
 {
 	var tagids = getTagIdList(includeCategories, excludeCategories);
-	
+
 	var theRankedTagids = [];
 	if(rgManualTagidRanking != null && rgManualTagidRanking.length > 0)
 	{
@@ -1666,13 +1668,13 @@ function getTagIdListRanked(includeCategories=null, excludeCategories=null, bTop
 			theRankedTagids[i] = rgRankedTagProfile[i].tagid;
 		}
 	}
-	
+
 	if(theRankedTagids != null)
 	{
 		//If we have a ranked tag profile we compare against it
 		var rgTopTags = [];
 		var rgBottomTags = [];
-		
+
 		for(var i = 0; i < theRankedTagids.length; i++)
 		{
 			if(i < maxTags)
@@ -1753,10 +1755,10 @@ function getTagIdList(includeCategories=null,excludeCategories=null)
 function getCombinedTagProfile()
 {
 	var normalTags = getResponseTags();
-	
+
 	var simpleTags = simpleTagProfile;
 	var combinedTags = [];
-	
+
 	if(queryExpansionExists)
 	{
 		combinedTags = simpleTags.slice();
@@ -1773,13 +1775,13 @@ function getCombinedTagProfile()
 			combinedTags.push(normalTag);
 		}
 	}
-	
+
 	if(combinedTags.length > maxTags)
 	{
 		var otherTags = getUniqueResponseTagsFromQuestion("q_tags_from_desc", ["q_tags_from_users"]);
 		var devTags  = getUniqueResponseTagsFromQuestion("q_tags_from_users",["q_tags_from_desc"]);
 	}
-	
+
 	return combinedTags;
 }
 
@@ -1813,7 +1815,7 @@ function getManuallyRankedTagProfile()
 }
 
 /**
- * Get a condensed list of scored tags for the summary page that obeys 
+ * Get a condensed list of scored tags for the summary page that obeys
  * @return Array.<ScoredTag>
  */
 function getNaturalTagProfile()
@@ -1887,7 +1889,7 @@ function getUniqueResponseTagsFromQuestion(question_id, rgIgnoreQuestionIds)
 			}
 		}
 	}
-	
+
 	for(var i = 0; i < rgTagids.length; i++)
 	{
 		var tagid = rgTagids[i];
@@ -1896,7 +1898,7 @@ function getUniqueResponseTagsFromQuestion(question_id, rgIgnoreQuestionIds)
 			rgUniqueTagids.push(tagid);
 		}
 	}
-	
+
 	return rgUniqueTagids;
 }
 
@@ -1920,7 +1922,7 @@ function getResponseTagsFromQuestion(question_id)
 
 /**
  * Given an array of tags, apply a sensible weight gradient that properly
- * differentiates #1 from #'s 2-5, the top 5 from the "peloton", and a 
+ * differentiates #1 from #'s 2-5, the top 5 from the "peloton", and a
  * difference between each descending tag of at least 1 so it presevers order.
  * @param {Array.<Tag>} tagProfile
  * @return Array.<Tag> weighted version of your tag profile
@@ -1929,22 +1931,22 @@ function finalizeTagProfileCounts(tagProfile)
 {
 	//Start with a minimum weight score of 25
 	var score = 25;
-	
+
 	for(var i = 0; i < tagProfile.length; i++)
 	{
 		//Go in reverse order, starting with the LAST tag
 		var j = tagProfile.length - i - 1;
 		var entry = tagProfile[j];
-		
+
 		//This loop will apply the score as the weight and slowly count up
-		
+
 		if(j > 24)
 		{
 			//If you have more than 25 tags we're not even really counting them
 			entry.count = 1;
 			continue;
 		}
-		
+
 		if(j == 4)
 		{
 			//We're crossing into the top 5, we want a 5 point gap between the
@@ -1966,7 +1968,7 @@ function finalizeTagProfileCounts(tagProfile)
 			//In the peloton, we want a gap of 1 point between each tag
 			score++;
 		}
-		
+
 		entry.count = score;
 	}
 	return tagProfile;
@@ -1997,7 +1999,7 @@ function manualScoreTagProfile(allTags)
 	}
 	results.sort(sortCount);
 	return results;
-	
+
 }
 
 function communityScoreTagProfile(allTags)
@@ -2028,12 +2030,12 @@ function communityScoreTagProfile(allTags)
 	}
 	results.sort(sortCount);
 	return results;
-	
+
 }
 
 
 /**
- * Take a list of tags and output a sensible automatic ranking based on which 
+ * Take a list of tags and output a sensible automatic ranking based on which
  * tags carry the most valuable information
  * @param {Array.<string>} allTags list of tagids
  */
@@ -2053,14 +2055,14 @@ function scoreTagProfile(allTags)
 		var name = tagNames[tag];
 		var weights = [];
 		var subWeights = [];
-		
+
 		//We look up all the categories each tag belongs to and collect weights
 		for(var j = 0; j < cats.length; j++)
 		{
 			var cat = cats[j];
 			var weight = categoryWeights[cat];
 			var subWeight = 0.0;
-			
+
 			if (categorySubWeights[cat] != null)
 			{
 				var strTagid = ""+tag;
@@ -2070,22 +2072,22 @@ function scoreTagProfile(allTags)
 			{
 				//subgenre is the most important signal
 				case "subgenre":   weights.push(weight); subWeights.push(subWeight); break;
-				
+
 				//(regular) genre is an okay signal
 				case "genre":      weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				//sports are kindof like a genre and are an okay signal
 				case "sport":      weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				//supergenre is a consistently weak differentiating signal
 				//like half the steam catalog is "action", "adventure", etc
 				case "supergenre": weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				case "software_genre": weights.push(weight); subWeights.push(subWeight); break;
-				
+
 				//turn-based vs real-time (just those two tags)
 				case "basic_timeflow": weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				//simgredient can be a decent signal or a low-value one
 				//depending on whether you've got a simulation game
 				case "simgredient":
@@ -2094,7 +2096,7 @@ function scoreTagProfile(allTags)
 					  //599 = "Simulation"
 					  //count simgredients for more if this
 					  //is a simulation game
-					  weights.push(weight); subWeights.push(subWeight); 
+					  weights.push(weight); subWeights.push(subWeight);
 				   }
 				   else
 				   {
@@ -2102,31 +2104,31 @@ function scoreTagProfile(allTags)
 					  subWeights.push(0.5);
 				   }
 				   break;
-				
+
 				//2D vs 3D, this is pretty important to know
 				case "xd":         weights.push(weight); subWeights.push(subWeight); break;
-				
+
 				//first-person vs. third-person, etc, good differentiator
 				case "viewpoint":  weights.push(weight); subWeights.push(subWeight); break;
-				
+
 				//anything relating to challenge/difficulty, good differentiator
 				case "challenge":    weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				//visual style, mood, theme - about the same
 				case "visuals":    weights.push(weight); subWeights.push(subWeight);  break;
 				case "mood":       weights.push(weight); subWeights.push(subWeight);  break;
 				case "theme":      weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				//some mechanical stuff -- decent signals
 				case "feature":      weights.push(weight); subWeights.push(subWeight);  break;
 				case "level_design": weights.push(weight); subWeights.push(subWeight);  break;
 				case "combat":       weights.push(weight); subWeights.push(subWeight);  break;
 				case "story":        weights.push(weight); subWeights.push(subWeight);  break;
 				case "character":    weights.push(weight); subWeights.push(subWeight);  break;
-				
+
 				//callouts for especially weak tags ("indie")
 				case "weak_not_genre":   isWeak = true; break;
-				case "weak_genre":       
+				case "weak_genre":
 				      if(queryExpansionExists)
 				      {
 				          //only demote weak genres if we
@@ -2134,43 +2136,43 @@ function scoreTagProfile(allTags)
 				          isWeak = true;
 				      }
 				      break;
-				
+
 				//none of these -- low value
 				default:           weights.push(0.5); subWeights.push(0.0);  break;
 			}
 		}
-		
-		//We sort the list, get the best weight the tag has to offer, 
+
+		//We sort the list, get the best weight the tag has to offer,
 		//and multiply by 10
 		weights.sort();
 		subWeights.sort();
 		var count = weights[weights.length-1] * 10;
-		
-		//Add the sub weight. This is a tiny weight that differentiates 
+
+		//Add the sub weight. This is a tiny weight that differentiates
 		//tags WITHIN the same category if you have a lot of the same kind,
 		//and bubbles up the ones we think carry slightly more information
 		var subCount = subWeights[subWeights.length-1];
 		count += subCount;
-		
+
 		//If the tag is flagged as "weak" we punish it
 		if(isWeak)
 		{
 			count /= 4;
 		}
-		
+
 		if(queryExpansionExists)
 		{
 			//ONLY perform this block if query expansion exists!
-			
+
 			//We've created a condensed version of the user's selected tags called
 			//the "simpleTagProfile" -- this "boils down" the tag profile using tag
 			//hydration to include as few redundant tags as possible (so it will
 			//throw away "2D" and "Platformer" in favor or "2D Platformer")
-			
+
 			//We check to see if this tag is in the "simpleTagProfile" -- if it
 			//isn't, that means it's redundant to a more high value tag, and should
 			//appear lower in our list by default
-			
+
 			var inSimpleArray = valueIsInArray(tag, simpleTagProfile);
 			if(!inSimpleArray)
 			{
@@ -2180,23 +2182,23 @@ function scoreTagProfile(allTags)
 		}
 		profile.push({tagid:tag,name:name,count:count});
 	}
-	
+
 	//Sort what we've got of the profile right now
 	profile.sort(sortCount);
-	
+
 	//If we don't have Query expansion yet, we have to avoid nixing genre tags
 	if(!queryExpansionExists && profile.length > maxTags)
 	{
 		//Keep genre tags above the minimum threshold:
 		profile = keepTagsAboveMinimum(profile,["genre","subgenre","supergenre"]);
 	}
-	
+
 	if(profile.length > maxTags)
 	{
 		//Slice out the top tags and re-score them as if they were the whole profile:
 		var subProfile = tagsToTagids(profile.slice(0, maxTags));
 		subProfile = scoreTagProfile(subProfile);
-		
+
 		//Reorder the top tags
 		var lastCount = 0;
 		for(var i = 0; i < subProfile.length; i++)
@@ -2210,10 +2212,10 @@ function scoreTagProfile(allTags)
 			profile[i].count -= lastCount * 1000;
 		}
 	}
-	
+
 	//Sort the profile according to the new weights
 	profile.sort(sortCount);
-	
+
 	return profile;
 }
 
@@ -2223,7 +2225,7 @@ function keepTagsAboveMinimum(profile,rgCategories)
 	var notMatchingTags = [];
 	var tagsBelowWater = [];
 	var tagids = tagsToTagids(profile);
-	
+
 	for(var i = 0; i < tagids.length; i++)
 	{
 		var tagid = tagids[i];
@@ -2243,27 +2245,27 @@ function keepTagsAboveMinimum(profile,rgCategories)
 			notMatchingTags.push(tagid);
 		}
 	}
-	
+
 	var failsafe = 0;
 	while(tagsBelowWater.length > 0 && notMatchingTags.length > 0 && failsafe < 99)
 	{
 		var belowWaterTag = tagsBelowWater[0];
 		var notMatchingTag = notMatchingTags[0];
-		
+
 		var notMatchingIndex = indexOfInArray(tagids, notMatchingTag);
 		var belowWaterIndex = indexOfInArray(tagids, belowWaterTag);
-		
+
 		//swap a below water tag with a not matching tag
 		tagids[notMatchingIndex] = belowWaterTag;
 		tagids[belowWaterIndex] = notMatchingTag;
-		
+
 		//shorten both lists
 		tagsBelowWater.splice(0,1);
 		notMatchingTags.splice(0,1);
-		
+
 		failsafe++;
 	}
-	
+
 	var newProfile = [];
 	for(var i = 0; i < profile.length; i++)
 	{
@@ -2304,7 +2306,7 @@ function calculateTagLikelihoodGivenCurrentResponses(candidateTagid)
 			break;
 		}
 	}
-	
+
 	return totalScore;
 }
 
@@ -2313,12 +2315,12 @@ function calculateTagGenreParentsGivenCurrentResponses(candidateTagid)
 	var totalScore = 0;
 	var tagids = getTagIdList();
 	if(tagids.length == 0) return 0;
-	
+
 	var score = 0;
 	for(var i = 0; i < 3; i++)
 	{
 		var genresToParents = genreHierarchy[i].m_rgGenresToParents;
-		
+
 		if(genresToParents != null)
 		{
 			var parents = genresToParents[candidateTagid];
@@ -2337,7 +2339,7 @@ function calculateTagGenreParentsGivenCurrentResponses(candidateTagid)
 			}
 		}
 	}
-	
+
 	return score;
 }
 
@@ -2397,7 +2399,7 @@ function sortMarked(bits, marked)
 function hilightAssociations(bits, response)
 {
 	var els = document.getElementsByClassName("choice");
-	
+
 	var bits = [];
 	var allZero = true;
 	for(var i = 0; i < els.length; i++)
@@ -2415,9 +2417,9 @@ function hilightAssociations(bits, response)
 			}
 		}
 	}
-	
+
 	bits.sort(sortCount);
-	
+
 	var numHilights = allZero ? 0 : Math.floor(els.length*0.25);
 	for(var i = 0; i < els.length; i++)
 	{
@@ -2425,7 +2427,7 @@ function hilightAssociations(bits, response)
 		var id = bit.id;
 		var tagid = bit.tagid;
 		var el = document.getElementById(id);
-		
+
 		if(el != null)
 		{
 			if(i < numHilights || calculateTagGenreParentsGivenCurrentResponses(tagid) > 0)
@@ -2461,7 +2463,7 @@ function sortHtmlBits(bits, response)
 		{
 			maxScore = score;
 		}
-		
+
 		if(response != null)
 		{
 			for(var j = 0; j < response.length; j++)
@@ -2507,7 +2509,7 @@ function sortHtmlBits(bits, response)
  ******************************************/
 
 /**
- * Return if a value is in an array without having to worry about JS equality 
+ * Return if a value is in an array without having to worry about JS equality
  * shenanigans that make indexOf() not work reliably
  * @param value
  * @return {Array}
@@ -2631,13 +2633,13 @@ function displayStartPage()
 	//Calculate the simplified tag profile
 	getSimpleTagProfile(function(data){
 		simpleTagProfile = data != null && data.rgTagids != null ? data.rgTagids : [];
-		
+
 		var content = document.getElementById("survey_content_section");
-		
+
 		//Draw the actual end page
 		var html = renderStartPage();
 		content.innerHTML = html;
-		
+
 	});
 }
 
@@ -2663,13 +2665,13 @@ function displayEndPage(bForceOptimized)
 			//list
 			removeEnumeratedClass(summaryItems[i], "summary_item_", i, 0, summaryItems.length+1);
 			removeClass(summaryItems[i], "summary_item_disabled");
-			
+
 			var classInfo = summaryItems[i].getAttribute("class");
 			if(classInfo.indexOf("ui-sortable-helper") == -1)
 			{
 				j++;
 			}
-			
+
 			suffix = j;
 			if(suffix > maxTags)
 			{
@@ -2678,17 +2680,17 @@ function displayEndPage(bForceOptimized)
 			var className = "summary_item_"+suffix;
 			addClass(summaryItems[i], className);
 			updateSortButtons();
-			
+
 			var oldRanking = rgManualTagidRanking.join(",");
 			recordManualTagRanking();
-			
+
 			if(oldRanking != rgManualTagidRanking.join(","))
 			{
 				displayCurrentQuestionSummary(true);
 			}
 		}
 	});
-	
+
 	//Calculate the simplified tag profile
 	getSimpleTagProfile(function(data){
 		simpleTagProfile = data != null && data.rgTagids != null ? data.rgTagids : [];
@@ -2696,12 +2698,12 @@ function displayEndPage(bForceOptimized)
 		//for when we draw the drag and drop list
 		var content = document.getElementById("survey_content_section");
 		endPageObserver = new MutationObserver(function(){
-			
+
 			//When the drag and drop list has been drawn, invoke the jquery
 			//to make it drag and droppable
 			$J("#sortable").sortable({axis:'y'});
 			endPageObserver.disconnect();
-			
+
 			//Start observing the sortable element:
 			var sortable = document.getElementsByClassName("ui-sortable")[0];
 			if(sortObserver != null)
@@ -2709,15 +2711,15 @@ function displayEndPage(bForceOptimized)
 				sortObserver.disconnect();
 			}
 			updateSortButtons();
-			
+
 			sortObserver.observe(sortable, { attributes: false, childList: true, subtree: true });
 		});
 		endPageObserver.observe(content, { attributes: true, childList: true, subtree: true });
-		
+
 		//Draw the actual end page with the drag and drop list
 		var html = renderEndpage(bForceOptimized);
 		content.innerHTML = html;
-		
+
 	});
 }
 
@@ -2738,17 +2740,17 @@ function displayCurrentQuestionSummary(bEnforceCutoff=false)
 function displayCurrentQuestion()
 {
 	nScroll = 0;
-	
+
 	//Get the current question and render it to the DOM
 	var question = questions[currentQuestion];
 	var html = renderQuestion(question);
 	var content = document.getElementById("survey_content_section");
 	content.innerHTML = html;
-	
+
 	//Try to update checked status for any choices
 	var inputs = document.getElementsByClassName("input_choice");
 	var choices = document.getElementsByClassName("choice");
-	
+
 	var updateNumChoicesPreselected = false;
 	if(numChoicesPreselected == -1)
 	{
@@ -2782,7 +2784,7 @@ function displayCurrentQuestion()
 			}
 		}
 	}
-	
+
 	var preselect = (question.preselect == true);
 	if(preselect)
 	{
@@ -2791,9 +2793,9 @@ function displayCurrentQuestion()
 			inputs[i].checked = true;
 		}
 	}
-	
+
 	hilightAssociations();
-	
+
 	if(inputs.length == 0)
 	{
 		return false;
@@ -2858,13 +2860,13 @@ function renderSummary(enforceCutoff=false)
 	var themeMoodStuff = getTopAndBottomTagIdNames(["theme","mood"], [], enforceCutoff);
 	var playerStuff = getTopAndBottomTagIdNames(["players"], [], enforceCutoff);
 	var otherStuff = getTopAndBottomTagIdNames([],["supergenre","genre","subgenre","visuals","feature","theme","mood","players"], enforceCutoff);
-	
+
 	var otherTagids = getTagIdListRanked([],["supergenre","genre","subgenre","visuals","feature","theme","mood","players"],enforceCutoff);
-	
+
 	var other = getTagNames(otherTagids);
-	
+
 	tagProfile = getFinalTagProfile();
-	
+
 	var profileHTML = "";
 	for(var i = 0; i < tagProfile.length; i++)
 	{
@@ -2877,12 +2879,12 @@ function renderSummary(enforceCutoff=false)
 			profileHTML += '<hr>';
 		}
 	}
-	
+
 	var sectionLine = function(qid, stuff)
 	{
 		return "<span class='section_header' onclick='onClickSection(\""+qid+"\")'>" + getQTitle(qid) + "</span><br>"+stuff+"<br><br>";
 	};
-	
+
 	var stuff = [
 		{id:"q_super_genre", html:superGenreStuff},
 		{id:"q_genre"      , html:genreStuff},
@@ -2892,10 +2894,10 @@ function renderSummary(enforceCutoff=false)
 		{id:"q_features"   , html:featureStuff},
 		{id:"q_players"    , html:playerStuff}
 	];
-	
+
 	stuff.push({id:"q_other"      , html:otherStuff});
 	stuff.push({id:"q_summary"    , html:""});
-	
+
 	var html = "";
 	for(var i = 0; i < stuff.length; i++)
 	{
@@ -2951,22 +2953,22 @@ function renderEndpage(bForceOptimized=false)
 	var strOptimize = 'Suggest Prioritization';
 	var strRevert =   'Revert Prioritization';
 	var strPrevious = 'Previous';
-	
+
 	var onClickPrevious = 'onclick="onClickPrevious()"';
 	var onClickOptimize = 'onclick="onClickOptimizeTags()"';
 	var onClickRevert   = 'onclick="onClickRevertTags()"';
 	var onClickFinish   = 'onclick="onClickConfirmApplyTags()"';
 	var onClickCancel   = 'onclick="onClickCancelSurvey()"';
-	
+
 	var stepMax = questions.length+1;
 	var step = stepMax;
 	var endStrText = "end_text";
 	var text = getQText(endStrText);
 	var title = getQTitle("end_title");
 	var topTagsText = getQText("top_tags");
-	
+
 	var opTagProfile = null;
-	
+
 	if(rgManualTagidRanking.length > 0)
 	{
 		opTagProfile = getManuallyRankedTagProfile();
@@ -2983,33 +2985,33 @@ function renderEndpage(bForceOptimized=false)
 			opTagProfile = getNaturalTagProfile();
 		}
 	}
-	
+
 	rgRankedTagProfile = opTagProfile;
-	
+
 	var disabledOptimize = "";
 	var disabledRevert = "";
-	
+
 	if(areTagProfilesEqual(rgRankedTagProfile, getOptimizedTagProfile()))
 	{
 		disabledOptimize = "disabled";
 	}
-	
+
 	if(areTagProfilesEqual(rgRankedTagProfile, getNaturalTagProfile()))
 	{
 		disabledRevert = "disabled";
 	}
-	
+
 	var choiceHTML = renderSummaryItems(rgRankedTagProfile);
 	var summaryHTML = renderSummary(true);
-	
+
 	rgRankedTagProfile = finalizeTagProfileCounts(rgRankedTagProfile);
-	
+
 	var stepText = "";
-	
+
 	var disabledBegin = "";
 	var disabledFinish = "";
 	var disabledCancel = "";
-	
+
 	var buttons = '<div id="buttons" class="nav_buttons">';
 	buttons += '<div class="nav_button nav_button_optimize '+disabledOptimize+'"><button '+onClickOptimize+'>'+strOptimize+'</button></div>';
 	buttons += '<div class="nav_button nav_button_revert '+disabledRevert+'"><button '+onClickRevert+'>'+strRevert+'</button></div>';
@@ -3018,7 +3020,7 @@ function renderEndpage(bForceOptimized=false)
 	buttons += '<div class="nav_button nav_button_cancel '+disabledCancel+'"><button '+onClickCancel+'>'+strCancel+'</button></div>';
 	buttons += '<div id="error" class="error"></div>';
 	buttons += '</div>';
-	
+
 	return '\
 	<div id="bookend_page" class="bookend_page">\
 		<div id="steps" class="steps">'+stepText+'</div>\
@@ -3064,26 +3066,26 @@ function renderStartPage()
 {
 	var strBegin =    'Begin';
 	var strCancel =   'Cancel';
-	
+
 	var onClickBegin = 'onclick="backToSurvey()"';
 	var onClickCancel   = 'onclick="onClickCancelSurvey()"';
-	
+
 	var text = getQText("start_text");
 	var title = getQTitle("start_title");
-	
+
 	var opTagProfile = getNaturalTagProfile();
 	rgRankedTagProfile = opTagProfile;
-	
+
 	var choiceHTML = renderSummaryItems(rgRankedTagProfile);
 	var summaryHTML = renderSummary();
-	
+
 	rgRankedTagProfile = finalizeTagProfileCounts(rgRankedTagProfile);
-	
+
 	var buttons = '<div id="buttons" class="nav_buttons">';
 	buttons += '<div class="nav_button nav_button_begin"><button '+onClickBegin+'>'+strBegin+'</button></div>';
 	buttons += '<div class="nav_button nav_button_cancel"><button '+onClickCancel+'>'+strCancel+'</button></div>';
 	buttons += '</div>';
-	
+
 	return '\
 	<div id="bookend_page" class="bookend_page">\
 		<h3 id="question_title" class="question_title">'+title+'</h3>\
@@ -3097,9 +3099,9 @@ function renderStartPage()
 		</div>\
 		<br>\
 	</div>'+buttons;
-	
-	
-				
+
+
+
 }
 
 /**
@@ -3112,15 +3114,15 @@ function renderQuestion(q)
 	var strNext     = 'Next';
 	var strPrevious = 'Previous';
 	var strCancel   = 'Cancel';
-	
+
 	var buttons = '<div id="buttons" class="nav_buttons">';
 	if(currentQuestion > 0)
 	{
 		buttons += '<div class="nav_button nav_button_previous"><button onclick="onClickPrevious()">'+strPrevious+'</button></div>';
 	}
-	
+
 	buttons += '<div class="nav_button nav_button_cancel"><button onclick="onClickCancel()">'+strCancel+'</button></div>';
-	
+
 	if(currentQuestion < questions.length-1)
 	{
 		buttons += '<div class="nav_button nav_button_next"><button onclick="onClickNext()">'+strNext+'</button></div>';
@@ -3131,37 +3133,37 @@ function renderQuestion(q)
 	}
 	buttons += '<div id="error" class="error"></div>';
 	buttons += '</div>';
-	
+
 	var step = currentQuestion+1;
 	var stepMax = questions.length;
-	
+
 	var stepText = getStepText(step,stepMax);
-	
+
 	var qText = getQText(q.id);
 	var qTitle = getQTitle(q.id);
-	
+
 	var title = replaceVariables(qTitle);
 	var text = replaceVariables(qText);
-	
+
 	var choices = renderChoices(q);
 	var choiceHTML = choices.html;
 	var choiceCount = choices.length;
 	var summaryHTML = renderSummary();
 	var searchHTML = "";
-	
+
 	var choicesClass = "choices";
-	
+
 	if(q.id == "q_tags_from_desc")
 	{
 		var inputTitle = getQText("search_for_tags");
-		searchHTML = 
+		searchHTML =
 		'<div id="choices_2" class="choices short_choices input_choices">\
 			<span id="input_title" class="input_title">'+inputTitle+'</span>'+
 			renderSearch(choiceCount) +
 		'</div>';
 		choicesClass = "choices short_choices";
 	}
-	
+
 	return '\
 	<div id="'+q.id+'" class="question">\
 		<div id="steps" class="steps">'+stepText+'</div>\
@@ -3295,7 +3297,7 @@ function renderChoices(q, startIndex=0, extraClass="")
 			}
 		}
 	}
-	
+
 	var el = document.getElementById("choice_search_results");
 	if(el != null)
 	{
@@ -3312,9 +3314,9 @@ function renderChoices(q, startIndex=0, extraClass="")
 			}
 		}
 	}
-	
+
 	markedIds = getMarkedInputs(ids);
-	
+
 	switch(sort)
 	{
 		case "association":
@@ -3325,9 +3327,9 @@ function renderChoices(q, startIndex=0, extraClass="")
 			htmlBits.sort(sortLabel);
 			break;
 	}
-	
+
 	htmlBits = sortMarked(htmlBits, markedIds);
-	
+
 	for(var i = 0; i < htmlBits.length; i++)
 	{
 		html += htmlBits[i].html;
@@ -3358,7 +3360,7 @@ function renderSummaryItems(choices)
 			j++;
 		}
 	}
-	
+
 	for(var i = 0; i < htmlBits.length; i++)
 	{
 		var theHtml = htmlBits[i].html;
@@ -3426,7 +3428,7 @@ function onSearchInput(txt)
 {
 	txt = simplify(txt);
 	var rgTags = [];
-	
+
 	if(txt.length > 1)
 	{
 		for(key in simpleTagNames)
@@ -3438,7 +3440,7 @@ function onSearchInput(txt)
 			}
 		}
 	}
-	
+
 	rgTags.sort(function(aTag,bTag){
 		var a = aTag.simpleName;
 		var b = bTag.simpleName;
@@ -3450,9 +3452,9 @@ function onSearchInput(txt)
 		if(ai.length > bi.length) return  1;
 		return 0;
 	});
-	
+
 	var el = document.getElementById("choice_search_results");
-	
+
 	var rgChoices = [];
 	for(var i = 0; i < rgTags.length; i++)
 	{
@@ -3464,9 +3466,9 @@ function onSearchInput(txt)
 		multi_select:true,
 		choices:rgChoices
 	};
-	
+
 	var startIndex = parseInt(el.dataset.startindex);
-	
+
 	var choices = renderChoices(q, startIndex, "search_choice");
 	el.innerHTML = choices.html;
 }
@@ -3547,12 +3549,12 @@ function getSimilarGames(callback)
 {
 	//Get all the elements in the drag and drop list
 	var tags = getManuallySortedTagListFromHTML();
-	
+
 	//Apply a nice gradient of weights to the list
 	tags = finalizeTagProfileCounts(tags);
-	
+
 	var method = "tags";
-	
+
 	//Formulate the tag application POST request
 	var rgParams = {
 		tags: JSON.stringify(tags),
@@ -3560,11 +3562,11 @@ function getSimilarGames(callback)
 		method: method,
 		ignore_appid: appid
 	};
-	
+
 	showElement("neighborhood_hourglass",true);
-	
+
 	//Send the request
-	
+
 	$J.post( 'https://store.steampowered.com/labs/mlttagwizard', rgParams ).done(function ( response )
 		{
 			if ( response.success == 1 )
@@ -3606,13 +3608,13 @@ function getSimpleTagProfile(callback)
 		var tag = profile[i];
 		rgTagids.push(tag.tagid);
 	}
-	
+
 	//Formulate the tag application POST request
 	var rgParams = {
 		tagids: rgTagids.join(","),
 		sessionid: g_sessionID
 	};
-	
+
 	//Send the request
 	$J.post( 'https://partner.steamgames.com/tagdata/simpletagprofile', rgParams ).done(function ( response )
 		{
@@ -3639,7 +3641,7 @@ function getTagAssociations(callback)
 	//like "action" or "adventure" will severely degrade our results
 	var tagids = getRelevantTagIdList();
 	var t = getTagIdList();
-	
+
 	if(tagids == null)
 	{
 		tagAssociations = [];
@@ -3649,7 +3651,7 @@ function getTagAssociations(callback)
 		}
 		return;
 	}
-	
+
 	//Formulate the tag application POST request
 	var rgParams = {
 		sessionid: g_sessionID,
