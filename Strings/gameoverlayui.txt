@@ -2577,6 +2577,7 @@ k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 keyCode
 kill
+lEl-
 label
 language
 last_update_steamid

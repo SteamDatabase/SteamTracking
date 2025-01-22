@@ -1091,7 +1091,7 @@
     "ChatRoom_GenericEmpty": "(пустой чат)",
     "ChatRoom_NoMessages": "В этом канале нет сообщений.",
     "FriendChat_NoMessages": "Нет недавней переписки с этим другом.",
-    "ChatRoom_New_Messages": "Новые сообщения (с %1$s)",
+    "ChatRoom_New_Messages": "Новые сообщения (%1$s)",
     "ChatRoom_ReplayRoomEffect": "Повторить эффект",
     "ChatRoom_RoomEffectSnow": "%1$s пускает снежок!",
     "ChatRoom_RoomEffectConfetti": "%1$s запускает конфетти!",
