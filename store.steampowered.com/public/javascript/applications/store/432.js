@@ -4332,6 +4332,11 @@
                     br: s.qM.readUint32,
                     bw: s.gp.writeUint32,
                   },
+                  packageid: {
+                    n: 5,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
                 },
               }),
             Me.sm_m

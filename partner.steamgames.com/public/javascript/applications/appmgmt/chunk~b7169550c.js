@@ -24,65 +24,46 @@
     },
     98019: (t, e, a) => {
       "use strict";
-      a.d(e, { b: () => n });
-      const n = [
-        { id: 303520413, displayName: "Adam" },
-        { id: 388445686, displayName: "Adil" },
-        { id: 85411739, displayName: "Alden" },
-        { id: 1685193861, displayName: "Anna" },
-        { id: 1153232713, displayName: "Augusta" },
-        { id: 1016413309, displayName: "Brock" },
-        { id: 55551709, displayName: "Connor" },
-        { id: 1153054355, displayName: "DJ" },
-        { id: 328711801, displayName: "Erik" },
-        { id: 72848153, displayName: "Izumi" },
-        { id: 76493708, displayName: "Jason" },
-        { id: 1620810191, displayName: "Javier" },
-        { id: 100402330, displayName: "Kassidy" },
-        { id: 1561376890, displayName: "Kevin" },
-        { id: 1553660262, displayName: "Lyria" },
-        { id: 1297385845, displayName: "Marc" },
-        { id: 1184183308, displayName: "Miranda" },
-        { id: 1152779073, displayName: "Nathaniel" },
-        { id: 1258631037, displayName: "Odin" },
-        { id: 1211448543, displayName: "Ria" },
-        { id: 1538854785, displayName: "Sam" },
-        { id: 1289103430, displayName: "Steve" },
-        { id: 122962881, displayName: "TomG" },
-        { id: 1791131761, displayName: "Katie" },
-        { id: 1154697588, displayName: "Lawrence" },
-        { id: 1714390508, displayName: "Karen" },
-        { id: 279305676, displayName: "Daria" },
-        { id: 1152866291, displayName: "Jay" },
-        { id: 19992847, displayName: "Jacob" },
-        { id: 1062028143, displayName: "Yosef" },
-        { id: 913236548, displayName: "Dennis" },
-        { id: 1597518683, displayName: "Fred" },
-        { id: 1349490052, displayName: "Lukasz" },
-        { id: 1513239904, displayName: "Aaron" },
-      ];
+      a.d(e, { q: () => i });
+      var n = a(20194),
+        s = a(41735),
+        r = a.n(s),
+        o = a(78327);
+      function i() {
+        const t = (0, n.I)({
+          queryKey: ["useValveAccounts"],
+          queryFn: async () => {
+            const t = `${o.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
+              e = await r().get(t);
+            return 200 == e?.status && 1 == e.data?.success
+              ? e.data.admins
+              : (console.error("ValveAccounts:", e?.status), []);
+          },
+        });
+        return t.isLoading ? null : t.data;
+      }
     },
     32179: (t, e, a) => {
       "use strict";
       a.d(e, {
-        MY: () => c,
+        MY: () => u,
         UA: () => m,
         Yd: () => h,
-        qG: () => S,
-        rN: () => g,
-        vh: () => d,
+        qG: () => _,
+        rN: () => d,
+        vh: () => g,
       });
       var n = a(34629),
         s = a(41735),
-        i = a.n(s),
-        r = a(90626),
-        o = a(68797),
+        r = a.n(s),
+        o = a(90626),
+        i = a(68797),
         l = a(78327),
-        p = a(6419);
-      function c() {
+        c = a(6419);
+      function u() {
         return 2 == l.TS.EUNIVERSE ? 12 : 1;
       }
-      class u {
+      class p {
         m_mapOptInToPartners = new Map();
         m_mapPromises = new Map();
         GetPartnerInfo(t) {
@@ -107,7 +88,7 @@
                 searchtext: t,
                 origin: self.origin,
               },
-              s = await i().get(a, { params: n });
+              s = await r().get(a, { params: n });
             200 == s?.status && 1 == s?.data?.success
               ? s.data.publishers.forEach((t) => {
                   const a = {
@@ -123,7 +104,7 @@
                   `CPartnerInfoStore.FindPartnerByName failed with status ${s?.status} eresult ${s?.data?.success} and msg ${s?.data?.msg}`,
                 );
           } catch (t) {
-            const e = (0, o.H)(t);
+            const e = (0, i.H)(t);
             console.error(
               "CPartnerInfoStore.FindPartnerByName failed add: " +
                 e.strErrorMsg,
@@ -154,11 +135,11 @@
         static s_Singleton;
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
+            p.s_Singleton ||
+              ((p.s_Singleton = new p()),
               ("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_PartnerInfoStore = p.s_Singleton)),
+            p.s_Singleton
           );
         }
         constructor() {
@@ -184,13 +165,13 @@
           );
         }
       }
-      function d(t) {
-        const [e, a] = (0, r.useState)(!1);
+      function g(t) {
+        const [e, a] = (0, o.useState)(!1);
         return (
-          (0, r.useEffect)(() => {
+          (0, o.useEffect)(() => {
             !e &&
               t?.length > 0 &&
-              u
+              p
                 .Get()
                 .LoadMultiplePartnerInfo(t)
                 .then(() => a(!0));
@@ -199,48 +180,48 @@
         );
       }
       function m(t) {
-        const [e, a] = r.useState(() => u.Get().GetPartnerInfo(t));
+        const [e, a] = o.useState(() => p.Get().GetPartnerInfo(t));
         return (
-          r.useEffect(() => {
-            !u.Get().BHasPartnerInfoLoad(t) && t > 0
-              ? u
+          o.useEffect(() => {
+            !p.Get().BHasPartnerInfoLoad(t) && t > 0
+              ? p
                   .Get()
                   .LoadPartnerInfo(t)
                   .then((t) => a(t))
-              : u.Get().BHasPartnerInfoLoad(t) &&
+              : p.Get().BHasPartnerInfoLoad(t) &&
                 e?.partnerid != t &&
-                a(u.Get().GetPartnerInfo(t));
+                a(p.Get().GetPartnerInfo(t));
           }, [t, e]),
           [e]
         );
       }
-      function g() {
-        return { fnFindPartnerByName: u.Get().FindPartnerByName };
+      function d() {
+        return { fnFindPartnerByName: p.Get().FindPartnerByName };
       }
       function h(t) {
-        return u.Get().GetPartnerInfo(t);
+        return p.Get().GetPartnerInfo(t);
       }
-      function S(t) {
-        return u.Get().LoadPartnerInfo(t);
+      function _(t) {
+        return p.Get().LoadPartnerInfo(t);
       }
-      (0, n.Cg)([p.o], u.prototype, "FindPartnerByName", null);
+      (0, n.Cg)([c.o], p.prototype, "FindPartnerByName", null);
     },
     63556: (t, e, a) => {
       "use strict";
-      a.d(e, { E: () => d, O: () => u });
+      a.d(e, { E: () => g, O: () => p });
       var n = a(34629),
         s = a(14947),
-        i = a(65946),
-        r = a(22837),
-        o = a(62490),
+        r = a(65946),
+        o = a(22837),
+        i = a(62490),
         l = a(6419),
-        p = a(78327),
-        c = a(91986);
-      class u {
-        m_eCurLang = (0, r.sf)(p.TS.LANGUAGE);
-        m_rgHasData = (0, o.$Y)([], 31, !1);
+        c = a(78327),
+        u = a(91986);
+      class p {
+        m_eCurLang = (0, o.sf)(c.TS.LANGUAGE);
+        m_rgHasData = (0, i.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
-        m_callback = new c.l();
+        m_callback = new u.l();
         GetCallback() {
           return this.m_callback;
         }
@@ -271,36 +252,36 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            u.s_globalSingletonStore ||
-              ((u.s_globalSingletonStore = new u()),
-              "dev" == p.TS.WEB_UNIVERSE &&
-                (window.DUS = u.s_globalSingletonStore)),
-            u.s_globalSingletonStore
+            p.s_globalSingletonStore ||
+              ((p.s_globalSingletonStore = new p()),
+              "dev" == c.TS.WEB_UNIVERSE &&
+                (window.DUS = p.s_globalSingletonStore)),
+            p.s_globalSingletonStore
           );
         }
         constructor() {
           (0, s.Gn)(this);
         }
       }
-      function d() {
-        return (0, i.q3)(() => u.Get().GetCurEditLanguage());
+      function g() {
+        return (0, r.q3)(() => p.Get().GetCurEditLanguage());
       }
-      (0, n.Cg)([s.sH], u.prototype, "m_eCurLang", void 0),
-        (0, n.Cg)([s.sH], u.prototype, "m_rgHasData", void 0),
-        (0, n.Cg)([s.sH], u.prototype, "m_bHasLocalizationContext", void 0),
-        (0, n.Cg)([l.o], u.prototype, "GetCurEditLanguage", null),
-        (0, n.Cg)([l.o], u.prototype, "SetCurEditLanguage", null),
-        (0, n.Cg)([s.XI.bound], u.prototype, "SetHasLanguage", null),
-        (0, n.Cg)([l.o], u.prototype, "BHasLanguageData", null);
+      (0, n.Cg)([s.sH], p.prototype, "m_eCurLang", void 0),
+        (0, n.Cg)([s.sH], p.prototype, "m_rgHasData", void 0),
+        (0, n.Cg)([s.sH], p.prototype, "m_bHasLocalizationContext", void 0),
+        (0, n.Cg)([l.o], p.prototype, "GetCurEditLanguage", null),
+        (0, n.Cg)([l.o], p.prototype, "SetCurEditLanguage", null),
+        (0, n.Cg)([s.XI.bound], p.prototype, "SetHasLanguage", null),
+        (0, n.Cg)([l.o], p.prototype, "BHasLanguageData", null);
     },
     96001: (t, e, a) => {
       "use strict";
-      a.d(e, { a: () => l, z: () => o });
+      a.d(e, { a: () => l, z: () => i });
       var n = a(81393),
         s = a(96059),
-        i = a(30470),
-        r = a(24484);
-      class o {
+        r = a(30470),
+        o = a(24484);
+      class i {
         m_steamInterface;
         GetPromotionTransport() {
           return this.m_steamInterface;
@@ -308,41 +289,41 @@
         static s_Singleton;
         static Get() {
           return (
-            o.s_Singleton || ((o.s_Singleton = new o()), o.s_Singleton.Init()),
-            o.s_Singleton
+            i.s_Singleton || ((i.s_Singleton = new i()), i.s_Singleton.Init()),
+            i.s_Singleton
           );
         }
         Init() {
-          const t = (0, r.Tc)(
+          const t = (0, o.Tc)(
             "promotion_operation_token",
             "application_config",
           );
           (0, n.w)(Boolean(t), "require promotion_operation_token"),
-            (this.m_steamInterface = new s.D(i.TS.WEBAPI_BASE_URL, t));
+            (this.m_steamInterface = new s.D(r.TS.WEBAPI_BASE_URL, t));
         }
       }
       function l() {
-        return o.Get().GetPromotionTransport().GetServiceTransport();
+        return i.Get().GetPromotionTransport().GetServiceTransport();
       }
     },
     1909: (t, e, a) => {
       "use strict";
-      a.d(e, { Ng: () => _, iN: () => b, yk: () => y });
+      a.d(e, { Ng: () => S, iN: () => b, yk: () => f });
       var n = a(34629),
         s = a(75844),
-        i = a(65946),
-        r = a(90626),
-        o = a(22837),
+        r = a(65946),
+        o = a(90626),
+        i = a(22837),
         l = a(2160),
-        p = a(63556),
-        c = a(95695),
-        u = a.n(c),
-        d = a(52038),
+        c = a(63556),
+        u = a(95695),
+        p = a.n(u),
+        g = a(52038),
         m = a(61859),
-        g = a(91675),
+        d = a(91675),
         h = a(73745),
-        S = a(32754);
-      let _ = class extends r.Component {
+        _ = a(32754);
+      let S = class extends o.Component {
         GenerateLanguageOptions() {
           let t = [];
           const {
@@ -353,37 +334,37 @@
           } = this.props;
           this.props.bAllowUnsetOption &&
             t.push(
-              r.createElement(
+              o.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
                 (0, m.we)("#language_selection_none"),
               ),
             );
-          let i = new Array();
-          const p = this.props.realms || [l.TU.k_ESteamRealmGlobal];
-          for (const t of m.A0.GetLanguageListForRealms(p)) {
+          let r = new Array();
+          const c = this.props.realms || [l.TU.k_ESteamRealmGlobal];
+          for (const t of m.A0.GetLanguageListForRealms(c)) {
             if (e && !e(t)) continue;
-            const a = (0, o.Lg)(t),
+            const a = (0, i.Lg)(t),
               n = (0, m.we)("#Language_" + a),
-              r = Boolean(s) && s(t);
-            i.push({ eLang: t, sLocName: n, bSupported: r });
+              o = Boolean(s) && s(t);
+            r.push({ eLang: t, sLocName: n, bSupported: o });
           }
-          i.sort((t, e) =>
+          r.sort((t, e) =>
             t.bSupported != e.bSupported
               ? t.bSupported
                 ? -1
                 : 1
               : t.sLocName.localeCompare(e.sLocName),
           );
-          let c = !1;
-          for (const e of i) {
-            e.bSupported != c &&
+          let u = !1;
+          for (const e of r) {
+            e.bSupported != u &&
               (t.push(
-                r.createElement(
+                o.createElement(
                   "option",
                   {
                     key: e.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                    className: u().SupportedGroupLabel,
+                    className: p().SupportedGroupLabel,
                     disabled: !0,
                   },
                   (0, m.we)(
@@ -393,31 +374,31 @@
                   ),
                 ),
               ),
-              (c = e.bSupported));
+              (u = e.bSupported));
             const s = a && a(e.eLang),
-              i = n && n(e.eLang);
-            let o = e.sLocName;
-            i &&
-              0 !== i &&
-              ((o += " "),
-              (o += (0, m.we)(
+              r = n && n(e.eLang);
+            let i = e.sLocName;
+            r &&
+              0 !== r &&
+              ((i += " "),
+              (i += (0, m.we)(
                 "#Language_Last_Update",
-                (0, m.$z)(i) + " @ " + (0, g.KC)(i, { bForce24HourClock: !1 }),
+                (0, m.$z)(r) + " @ " + (0, d.KC)(r, { bForce24HourClock: !1 }),
               ))),
               t.push(
-                r.createElement(
+                o.createElement(
                   "option",
                   {
                     key: "langpicker" + e.eLang + (s ? "_hasdata" : ""),
                     value: e.eLang,
-                    className: (0, d.A)(
-                      { [u().LanguageWithContent]: s },
+                    className: (0, g.A)(
+                      { [p().LanguageWithContent]: s },
                       e.bSupported
-                        ? u().SupportedLanguage
-                        : u().UnsupportedLanguage,
+                        ? p().SupportedLanguage
+                        : p().UnsupportedLanguage,
                     ),
                   },
-                  o,
+                  i,
                 ),
               );
           }
@@ -431,10 +412,10 @@
         render() {
           const { selectedLang: t, bDisabled: e, strTooltip: a } = this.props;
           let n = this.GenerateLanguageOptions();
-          return r.createElement(
-            S.he,
+          return o.createElement(
+            _.he,
             { toolTipContent: a },
-            r.createElement(
+            o.createElement(
               "select",
               { value: t, onChange: this.OnLanguageChange, disabled: e },
               n,
@@ -443,57 +424,57 @@
         }
       };
       function b(t) {
-        const [e, a] = (0, i.q3)(() => [
-          p.O.Get().GetHasLocalizationContext(),
-          p.O.Get().GetCurEditLanguage(),
+        const [e, a] = (0, r.q3)(() => [
+          c.O.Get().GetHasLocalizationContext(),
+          c.O.Get().GetCurEditLanguage(),
         ]);
-        return r.createElement(_, {
+        return o.createElement(S, {
           selectedLang: a,
-          fnLangHasData: p.O.Get().BHasLanguageData,
-          fnOnLanguageChanged: p.O.Get().SetCurEditLanguage,
+          fnLangHasData: c.O.Get().BHasLanguageData,
+          fnOnLanguageChanged: c.O.Get().SetCurEditLanguage,
           bDisabled: !e,
           strTooltip: e ? void 0 : (0, m.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function y(t) {
+      function f(t) {
         const { fnLangHasData: e } = t;
-        r.useEffect(
+        o.useEffect(
           () => (
-            p.O.Get().SetHasLocalizationContext(!0),
-            () => p.O.Get().SetHasLocalizationContext(!1)
+            c.O.Get().SetHasLocalizationContext(!0),
+            () => c.O.Get().SetHasLocalizationContext(!1)
           ),
           [],
         );
-        const a = (0, i.q3)(() => {
+        const a = (0, r.q3)(() => {
           const t = [];
           for (let a = 0; a < 31; ++a) t[a] = e && e(a);
           return t;
         });
         return (
-          r.useEffect(() => p.O.Get().SetHasLanguage(a), [a]),
-          r.createElement(r.Fragment, null)
+          o.useEffect(() => c.O.Get().SetHasLanguage(a), [a]),
+          o.createElement(o.Fragment, null)
         );
       }
-      (0, n.Cg)([h.oI], _.prototype, "OnLanguageChange", null),
-        (_ = (0, n.Cg)([s.PA], _));
+      (0, n.Cg)([h.oI], S.prototype, "OnLanguageChange", null),
+        (S = (0, n.Cg)([s.PA], S));
     },
     38135: (t, e, a) => {
       "use strict";
-      a.d(e, { V: () => y, a: () => _ });
+      a.d(e, { V: () => f, a: () => S });
       var n = a(34629),
         s = a(90626),
-        i = a(75844),
-        r = a(92757),
-        o = a(52038),
+        r = a(75844),
+        o = a(92757),
+        i = a(52038),
         l = a(61859),
-        p = a(95034),
-        c = a(1990),
-        u = a.n(c),
-        d = a(32754),
+        c = a(95034),
+        u = a(1990),
+        p = a.n(u),
+        g = a(32754),
         m = a(51272),
-        g = a(76217),
+        d = a(76217),
         h = a(6419);
-      class S extends s.Component {
+      class _ extends s.Component {
         state = { activeTab: "" };
         componentDidMount() {
           this.props.startingTab
@@ -501,20 +482,20 @@
             : !this.props.bDisableRouting &&
               this.props.location &&
               this.setState({
-                activeTab: (0, p.f3)(this.props.location, "tab"),
+                activeTab: (0, c.f3)(this.props.location, "tab"),
               });
         }
         componentDidUpdate(t) {
           !this.props.bDisableRouting &&
             this.props.location &&
             this.props.location.key !== t.location.key &&
-            this.setState({ activeTab: (0, p.f3)(this.props.location, "tab") });
+            this.setState({ activeTab: (0, c.f3)(this.props.location, "tab") });
         }
         OnTabClick(t) {
           this.setState({ activeTab: t.key }),
             !this.props.bDisableRouting &&
               this.props.history &&
-              (0, p.Bm)(this.props.history, "tab", t.key),
+              (0, c.Bm)(this.props.history, "tab", t.key),
             t.onClick && t.onClick(t);
         }
         render() {
@@ -525,10 +506,10 @@
             s.Fragment,
             null,
             s.createElement(
-              g.Z,
+              d.Z,
               {
-                className: (0, o.A)(
-                  u().GraphicalAssetsTabs,
+                className: (0, i.A)(
+                  p().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
               },
@@ -543,32 +524,32 @@
               ),
             ),
             s.createElement(
-              g.Z,
+              d.Z,
               null,
-              t && s.createElement(g.Z, null, t.contents),
+              t && s.createElement(d.Z, null, t.contents),
             ),
           );
         }
       }
-      function _(t) {
+      function S(t) {
         const { statusType: e = "success", children: a } = t;
         let n = "";
         return (
           "success" === e
-            ? (n = u().StatusSuccess)
+            ? (n = p().StatusSuccess)
             : "danger" === e
-              ? (n = u().StatusDanger)
-              : "caution" === e && (n = u().StatusCaution),
+              ? (n = p().StatusDanger)
+              : "caution" === e && (n = p().StatusCaution),
           s.createElement(
             "div",
-            { className: (0, o.A)(u().GraphicalAssetStatus, n) },
+            { className: (0, i.A)(p().GraphicalAssetStatus, n) },
             a,
           )
         );
       }
-      (0, n.Cg)([h.o], S.prototype, "OnTabClick", null);
-      const b = (0, i.PA)(function (t) {
-          const { tab: e, OnTabClick: a, classNameTab: n, active: i } = t;
+      (0, n.Cg)([h.o], _.prototype, "OnTabClick", null);
+      const b = (0, r.PA)(function (t) {
+          const { tab: e, OnTabClick: a, classNameTab: n, active: r } = t;
           return e.hidden
             ? null
             : s.createElement(
@@ -577,29 +558,29 @@
                   condition: Boolean(e.statusToolTip || e.tooltip),
                   wrap: (t) =>
                     s.createElement(
-                      d.he,
+                      g.he,
                       { toolTipContent: e.statusToolTip || e.tooltip },
                       t,
                     ),
                 },
                 s.createElement(
-                  g.Z,
+                  d.Z,
                   {
-                    className: (0, o.A)(
-                      u().GraphicalAssetsTab,
-                      i && u().Active,
-                      i && "ActiveTab",
+                    className: (0, i.A)(
+                      p().GraphicalAssetsTab,
+                      r && p().Active,
+                      r && "ActiveTab",
                       n,
                     ),
                     onActivate: () => a(e),
                   },
                   Boolean(e.vo_warning) &&
                     s.createElement(
-                      d.he,
+                      g.he,
                       { toolTipContent: e.vo_warning },
                       s.createElement(
                         "div",
-                        { className: u().VOWarning },
+                        { className: p().VOWarning },
                         (0, l.we)("#EventEditor_VOWarning"),
                       ),
                     ),
@@ -608,63 +589,63 @@
                 ),
               );
         }),
-        y = (0, r.y)(S);
+        f = (0, o.y)(_);
     },
     48479: (t, e, a) => {
       "use strict";
-      a.d(e, { AQ: () => m, qx: () => g });
+      a.d(e, { AQ: () => m, qx: () => d });
       var n = a(71541),
         s = a(61859),
-        i = a(12155),
-        r = a(90626),
-        o = a(52038),
+        r = a(12155),
+        o = a(90626),
+        i = a(52038),
         l = a(95695),
-        p = a(84811),
-        c = a(64734),
-        u = a(65946),
-        d = a(26408);
+        c = a(84811),
+        u = a(64734),
+        p = a(65946),
+        g = a(26408);
       function m(t) {
         const {
             title: e,
             tooltip: a,
             getMinimized: n,
             toggleMinimized: s,
-            className: i,
+            className: r,
             children: m,
           } = t,
-          g = (0, u.q3)(() => n());
-        return r.createElement(
-          r.Fragment,
+          d = (0, p.q3)(() => n());
+        return o.createElement(
+          o.Fragment,
           null,
-          r.createElement(
+          o.createElement(
             "div",
             {
-              className: (0, o.A)(
-                i,
-                c.SectionTitleHeader,
-                c.required_title,
+              className: (0, i.A)(
+                r,
+                u.SectionTitleHeader,
+                u.required_title,
                 "SectionTitleHeader",
               ),
             },
-            r.createElement(
+            o.createElement(
               "div",
               {
-                className: (0, o.A)(
+                className: (0, i.A)(
                   l.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
               e,
-              Boolean(a) && r.createElement(d.o, { tooltip: a }),
+              Boolean(a) && o.createElement(g.o, { tooltip: a }),
             ),
-            r.createElement(h, { bIsMinimized: g, fnToggleMinimize: s }),
+            o.createElement(h, { bIsMinimized: d, fnToggleMinimize: s }),
           ),
-          !g && r.createElement(p.tH, null, m),
+          !d && o.createElement(c.tH, null, m),
         );
       }
-      function g(t) {
-        const [e, a] = r.useState(Boolean(t.bStartMinimized));
-        return r.createElement(
+      function d(t) {
+        const [e, a] = o.useState(Boolean(t.bStartMinimized));
+        return o.createElement(
           m,
           { ...t, getMinimized: () => e, toggleMinimized: () => a(!e) },
           t.children,
@@ -672,13 +653,13 @@
       }
       function h(t) {
         const { bIsMinimized: e, fnToggleMinimize: a } = t,
-          o = e ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return r.createElement(
+          i = e ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return o.createElement(
           n.$n,
-          { "data-tooltip-text": (0, s.we)(o), onClick: a },
+          { "data-tooltip-text": (0, s.we)(i), onClick: a },
           t.bIsMinimized
-            ? r.createElement(i.hz4, null)
-            : r.createElement(i.Xjb, null),
+            ? o.createElement(r.hz4, null)
+            : o.createElement(r.Xjb, null),
         );
       }
     },

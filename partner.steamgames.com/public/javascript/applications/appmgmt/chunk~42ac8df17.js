@@ -270,8 +270,8 @@
         SaleBroadcastCtn: "_1SFMhugeWIHJIHrHl6ZQvD",
         SaleOuterContainer: "_150kddWk8JgylTvh_eC20b",
         CustomStyle_together: "_1lAygDKkL4NolLsYyh0b_x",
-        SalePageLogoSet: "JxIGHUxdTjFyWl1KO_tkn",
         SaleNewSizing: "_1v-BVc2xZoBmJV2CPwNpq0",
+        SalePageLogoSet: "JxIGHUxdTjFyWl1KO_tkn",
         SaleBackground: "_2N8SepiLeBUusG1vbHCgiY",
         SaleSectionTitleCtn: "bE2EA4JB9SDa1PZ7HSFL-",
         SaleSectionSubtext: "_17Fnl-wNZIrLjca5rOwwlT",
@@ -358,10 +358,14 @@
         StoreSaleWidgetTags: "_2bkP-3b7dvr0a_qPdZEfHY",
         AppTag: "_3FJnZuxmPA_MjxsF8BQQ5L",
         StoreSaleWidgetShortDesc: "_3AsE5JhqLAiICKUYvZLpap",
+        LargeText: "_3FqDALHzNLR5fMMZTeBw8Z",
         TagTitle: "v1i4WK3tk4FpXSJ5wC60U",
         TagBox: "_1lqaDGTzuprpWRYk4_2JrN",
-        SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Tag: "_33yqka47vWurNqhnhLJb_m",
+        Categories: "_2hr4JZMbG9l2GKALFD0dO7",
+        SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
+        Category: "_2lQNYB6g6C7aiw0GDPe9fq",
+        CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
         BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
         StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
@@ -613,6 +617,7 @@
         VI: () => y,
         Vj: () => c,
         ZK: () => C,
+        g9: () => v,
         q3: () => u,
       });
       var a = r(80613),
@@ -13236,29 +13241,38 @@
           const n = new FormData();
           n.append("appid", "" + e),
             n.append("sessionid", c.TS.SESSIONID),
-            r && n.append("snr", r),
-            (this.m_bAjaxInFlight = !0);
-          let o = await s().post(i, n, {
+            r && n.append("snr", r);
+          const o = this.m_setWishList.has(e)
+            ? this.m_wishlistInOrder.findIndex((t) => t == e)
+            : -1;
+          this.ApplyWishlistUpdate(e, t), (this.m_bAjaxInFlight = !0);
+          let l = await s().post(i, n, {
             withCredentials: !0,
             cancelToken: a ? a.token : void 0,
           });
-          if (((this.m_bAjaxInFlight = !1), a && a.token.reason))
-            return { success: 52 };
-          if (
-            ((o.data.success = 1 == o.data.success ? 1 : 2),
-            1 == o.data.success)
-          )
-            if ((this.InvalidateCache(), (e = Number(e)), t))
-              this.m_setWishList.has(e) || this.m_wishlistInOrder.push(e),
-                this.m_setWishList.add(e);
-            else {
-              if (this.m_setWishList.has(e)) {
-                const t = this.m_wishlistInOrder.findIndex((t) => t == e);
-                -1 != t && this.m_wishlistInOrder.splice(t, 1);
-              }
-              this.m_setWishList.delete(e);
+          return (
+            (this.m_bAjaxInFlight = !1),
+            a && a.token.reason
+              ? { success: 52 }
+              : ((l.data.success = 1 == l.data.success ? 1 : 2),
+                1 != l.data.success && this.ApplyWishlistUpdate(e, -1 != o, o),
+                l.data)
+          );
+        }
+        ApplyWishlistUpdate(e, t, r = -1) {
+          if ((this.InvalidateCache(), (e = Number(e)), t))
+            this.m_setWishList.has(e) ||
+              (-1 == r
+                ? this.m_wishlistInOrder.push(e)
+                : this.m_wishlistInOrder.splice(r, 0, e)),
+              this.m_setWishList.add(e);
+          else {
+            if (this.m_setWishList.has(e)) {
+              const t = this.m_wishlistInOrder.findIndex((t) => t == e);
+              -1 != t && this.m_wishlistInOrder.splice(t, 1);
             }
-          return o.data;
+            this.m_setWishList.delete(e);
+          }
         }
         async AddToCart(e, t, r, a, i, n, o) {
           if (
@@ -22827,26 +22841,35 @@
             instanceNum: r,
             bShowEvenIfNoTags: i,
             bHideTitle: s,
+            bLargeText: l,
+            bNoStoreLinks: d,
           } = e,
-          l = (0, n.LG)(t);
-        return l?.length > 0 || i
+          u = (0, n.LG)(t);
+        return u?.length > 0 || i
           ? a.createElement(
               "div",
-              { className: (0, c.A)(o().SaleTagBlockCtn, "SaleTagBlockCtn") },
+              {
+                className: (0, c.A)(
+                  o().SaleTagBlockCtn,
+                  l ? o().LargeText : "",
+                  "SaleTagBlockCtn",
+                ),
+              },
               Boolean(!s) &&
                 a.createElement(
                   "div",
                   { className: (0, c.A)(o().TagTitle, "WidgetTagTitle") },
                   (0, m.we)("#GameHover_Tags"),
                 ),
-              Boolean(l?.length > 0)
+              Boolean(u?.length > 0)
                 ? a.createElement(
                     "div",
                     { className: (0, c.A)(o().TagBox, "TagBox") },
-                    l.map((e) =>
+                    u.map((e) =>
                       a.createElement(_, {
                         key: "tag_" + r + "_" + e.tagid,
                         tag: e,
+                        bNoStoreLinks: d,
                       }),
                     ),
                   )
@@ -22867,14 +22890,20 @@
         );
       }
       function _(e) {
-        const { tag: t, className: r } = e,
-          n = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
-          s = `${d.TS.STORE_BASE_URL}tags/${n}/${t.name}`;
-        return a.createElement(
-          l.q,
-          { url: s, className: (0, c.A)(o().Tag, "WidgetTag", r) },
-          t.name,
-        );
+        const { tag: t, className: r, bNoStoreLinks: n } = e,
+          s = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
+          m = `${d.TS.STORE_BASE_URL}tags/${s}/${t.name}`;
+        return n
+          ? a.createElement(
+              "div",
+              { className: (0, c.A)(o().Tag, "WidgetTag", r) },
+              t.name,
+            )
+          : a.createElement(
+              l.q,
+              { url: m, className: (0, c.A)(o().Tag, "WidgetTag", r) },
+              t.name,
+            );
       }
     },
     92532: (e, t, r) => {

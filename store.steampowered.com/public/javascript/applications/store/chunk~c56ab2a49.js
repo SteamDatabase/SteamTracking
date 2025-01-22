@@ -2570,6 +2570,11 @@
                   },
                   summary_sales: { n: 4, c: J },
                   daily_promo_sales: { n: 5, c: te, r: !0, q: !0 },
+                  package_billing_type: {
+                    n: 6,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
                 },
               }),
             re.sm_m

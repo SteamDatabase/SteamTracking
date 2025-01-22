@@ -3392,9 +3392,9 @@
               element: n.createElement(et, { deadline: e, json: t }),
             };
           case 4: {
-            const a = he.Get().GetInfo(t?.opt_in_name).description.definition
-              .event_title[r.TS.LANGUAGE];
-            return a
+            const a = he.Get().GetInfo(t?.opt_in_name),
+              s = a?.description.definition.event_title[r.TS.LANGUAGE];
+            return s
               ? {
                   sHeader: (0, i.we)(
                     "#PartnerDeadline_NextFest_PressPreview_Title",
@@ -3402,16 +3402,16 @@
                   sTitle: (0, i.we)(
                     "#Deadlines_CombinedTitle",
                     (0, i.we)("#PartnerDeadline_NextFest_PressPreview_Title"),
-                    a,
+                    s,
                   ),
                   element: n.createElement(at, { deadline: e, json: t }),
                 }
               : void 0;
           }
           case 5: {
-            const a = he.Get().GetInfo(t?.opt_in_name).description.definition
-              .event_title[r.TS.LANGUAGE];
-            return a
+            const a = he.Get().GetInfo(t?.opt_in_name),
+              s = a?.description.definition.event_title[r.TS.LANGUAGE];
+            return s
               ? {
                   sHeader: (0, i.we)(
                     "#PartnerDeadline_NextFest_DemoBuildReview_Title",
@@ -3421,7 +3421,7 @@
                     (0, i.we)(
                       "#PartnerDeadline_NextFest_DemoBuildReview_Title",
                     ),
-                    a,
+                    s,
                   ),
                   bUrgent: !0,
                   element: n.createElement(nt, { deadline: e, json: t }),
@@ -3820,7 +3820,7 @@
         );
       }
       var _t = a(4130),
-        ut = a(80886),
+        ut = a(92419),
         gt = a(20587);
       function vt(e) {
         const { saleDesc: t } = e;

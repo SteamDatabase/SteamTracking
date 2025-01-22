@@ -1459,7 +1459,8 @@
           S = p != b.F6 && p,
           I = i.BHasDemo(),
           A = E?.img_url,
-          D = `curator_clanid=${l.clanAccountID}&curator_listid=${a.listid}`;
+          D = `curator_clanid=${l.clanAccountID}&curator_listid=${a.listid}`,
+          T = i.GetStorePageURL() + "/?curator_clanid=" + l.clanAccountID;
         return r.createElement(
           c.Z,
           { className: z().CuratorReview, autoFocus: n },
@@ -1486,7 +1487,11 @@
           r.createElement(
             "div",
             { className: z().ReviewTextSection },
-            r.createElement("div", { className: z().GameTitle }, i.GetName()),
+            r.createElement(
+              "a",
+              { className: z().GameTitle, href: T },
+              i.GetName(),
+            ),
             r.createElement(
               "div",
               { className: z().RecommendationTypeAndDate },

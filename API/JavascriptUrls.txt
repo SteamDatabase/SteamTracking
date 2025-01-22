@@ -973,12 +973,12 @@ ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
-${PARTNER_BASE_URL}/meetsteam/ajaxgetuseremailforpartnerid
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
+${PARTNER_BASE_URL}actions/ajaxgetadminusers
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
 ${PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo
@@ -1653,7 +1653,6 @@ ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
-${STORE_CDN_URL}/public/images/${image_path}
 ${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
@@ -3623,6 +3622,7 @@ url( ${IMG_URL}units/${name}.png )
 url( ${STORE_ICON_BASE_URL}${appid}/capsule_231x87.jpg )
 url( ${STORE_ICON_BASE_URL}${nAppID}/header.jpg )
 url( '${thumb_url}' )
+url(${STORE_CDN_URL}/public/images/${image_path}) no-repeat center center/cover
 url(${avatar_full_url})
 url(${creator_page_bg_url})
 url(${dataUrl})

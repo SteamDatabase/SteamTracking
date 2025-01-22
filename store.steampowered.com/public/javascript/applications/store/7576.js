@@ -879,10 +879,10 @@
         n = r(12155),
         s = r(4869),
         a = r(78327);
-      function c() {
+      function c(e) {
         return (0, a.Qn)()
-          ? i.createElement(s.MGO, null)
-          : i.createElement(n.Jlk, null);
+          ? i.createElement(s.MGO, { ...e })
+          : i.createElement(n.Jlk, { ...e });
       }
       function l() {
         return i.createElement(n.rfv, null);

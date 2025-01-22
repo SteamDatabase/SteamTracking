@@ -2314,7 +2314,7 @@
     },
     7445: (e, t, r) => {
       "use strict";
-      r.d(t, { q: () => _ });
+      r.d(t, { q: () => h });
       var i = r(90626),
         n = r(64238),
         s = r.n(n),
@@ -2325,9 +2325,10 @@
         u = r(90665),
         m = r(10196),
         d = r.n(m),
-        p = r(8871);
-      const g = new a.wd("FocusNavigation").Debug;
-      function _(e) {
+        p = r(8871),
+        g = r(85585);
+      const _ = new a.wd("FocusNavigation").Debug;
+      function h(e) {
         const { children: t, ...r } = e,
           [n, s] = i.useState({
             bFocusWithin: !1,
@@ -2355,11 +2356,11 @@
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(h, { ...r, ...n, refMeasure: a }),
+          i.createElement(f, { ...r, ...n, refMeasure: a }),
           i.createElement(u.sQ.Provider, { value: o }, t),
         );
       }
-      function h(e) {
+      function f(e) {
         const {
             rootClassName: t,
             className: r,
@@ -2375,7 +2376,7 @@
           ? i.createElement(
               "div",
               { className: s()(d().FocusRingRoot, t), ref: p },
-              i.createElement(f, {
+              i.createElement(b, {
                 refMeasure: u,
                 className: s()(r, g && d().DebugFocusRing),
                 bFocusWithin: n && (h || g),
@@ -2386,7 +2387,7 @@
             )
           : null;
       }
-      function f(e) {
+      function b(e) {
         const {
             className: t,
             bFocusWithin: r,
@@ -2396,13 +2397,15 @@
             refMeasure: l,
           } = e,
           [c, u] = i.useState(null),
-          [m, _] = i.useReducer((e) => e + 1, 0),
-          [h, f] = i.useReducer((e) => e + 1, 0);
+          [m, h] = i.useReducer((e) => e + 1, 0),
+          [f, b] = i.useReducer((e) => e + 1, 0);
         (0, p.D5)(
           l,
-          i.useMemo(() => ({ MeasureElementAndUpdate: f }), []),
+          i.useMemo(() => ({ MeasureElementAndUpdate: b }), []),
         );
-        const w = (function (e, t) {
+        const { bActiveTree: B, bDisableFocusClasses: y } = (0, g.qR)(),
+          M = B && !y,
+          C = (function (e, t) {
             const [r, n] = i.useState(!1);
             return (
               (0, i.useEffect)(() => {
@@ -2420,7 +2423,7 @@
                     (e) => (
                       a &&
                         a != e &&
-                        g(
+                        _(
                           "Focused on hidden item: ",
                           t.Element,
                           ". Closest visible ancestor: ",
@@ -2434,8 +2437,8 @@
               r
             );
           })(o, n),
-          B = i.useCallback(() => {
-            if (!n || !n.BWantsFocusRing() || !a) return void u(null);
+          S = i.useCallback(() => {
+            if (!(n && n.BWantsFocusRing() && a && M)) return void u(null);
             let e = n.GetBoundingRect();
             const t = a.getBoundingClientRect(),
               r = {
@@ -2453,35 +2456,35 @@
                 ? e
                 : r,
             );
-          }, [n, a]);
-        i.useLayoutEffect(() => B(), [B]),
+          }, [n, a, M]);
+        i.useLayoutEffect(() => S(), [S]),
           i.useLayoutEffect(() => {
-            _();
+            h();
           }, [n]);
-        let y = r;
+        let v = r;
         return (
-          n && a && (n.BWantsFocusRing() || (y = !1)),
+          n && a && (n.BWantsFocusRing() || (v = !1)),
           i.useEffect(() => {
-            if (!y) return;
+            if (!v) return;
             const e = performance.now();
             let t;
             const r = () => {
-              B(),
+              S(),
                 performance.now() - e <= 500 && (t = requestAnimationFrame(r));
             };
             return r(), () => cancelAnimationFrame(t);
-          }, [y, B, c, h]),
-          y && c
-            ? i.createElement(b, {
+          }, [v, S, c, f]),
+          v && c
+            ? i.createElement(w, {
                 ...c,
                 key: m,
-                className: s()(t, w && d().FocusRingOnHiddenItem),
+                className: s()(t, C && d().FocusRingOnHiddenItem),
                 target: n,
               })
             : null
         );
       }
-      function b(e) {
+      function w(e) {
         const {
             className: t,
             left: r,
@@ -24472,12 +24475,12 @@
     94601: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Fs: () => R,
+        Fs: () => z,
         M$: () => c,
-        iU: () => h,
-        nu: () => p,
-        pI: () => b,
-        um: () => B,
+        iU: () => f,
+        nu: () => g,
+        pI: () => w,
+        um: () => y,
       });
       var i = r(80613),
         n = r(89068),
@@ -24519,7 +24522,8 @@
                     pbr: n.qM.readPackedEnum,
                     bw: n.gp.writeRepeatedEnum,
                   },
-                  tagids_must_match: { n: 10, c: m, r: !0, q: !0 },
+                  predefined_filter: { n: 5, c: m },
+                  tagids_must_match: { n: 10, c: d, r: !0, q: !0 },
                   tagids_exclude: {
                     n: 11,
                     r: !0,
@@ -24528,7 +24532,7 @@
                     pbr: n.qM.readPackedInt32,
                     bw: n.gp.writeRepeatedInt32,
                   },
-                  price_filters: { n: 12, c: d },
+                  price_filters: { n: 12, c: p },
                   content_descriptors_must_match: {
                     n: 15,
                     r: !0,
@@ -24725,8 +24729,8 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            m.prototype.tagids || n.Sg(m.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            m.prototype.filter_type || n.Sg(m.M()),
+            l.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -24736,8 +24740,9 @@
               (m.sm_m = {
                 proto: m,
                 fields: {
-                  tagids: {
-                    n: 1,
+                  filter_type: { n: 1, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  language_preferences: {
+                    n: 2,
                     r: !0,
                     q: !0,
                     br: n.qM.readInt32,
@@ -24781,15 +24786,15 @@
           return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQueryFilters_TagFilter";
+          return "CStoreQueryFilters_PredefinedFilter";
         }
       }
       class d extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            d.prototype.only_free_items || n.Sg(d.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            d.prototype.tagids || n.Sg(d.M()),
+            l.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -24799,20 +24804,13 @@
               (d.sm_m = {
                 proto: d,
                 fields: {
-                  only_free_items: {
+                  tagids: {
                     n: 1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  exclude_free_items: {
-                    n: 2,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  min_discount_percent: {
-                    n: 3,
+                    r: !0,
+                    q: !0,
                     br: n.qM.readInt32,
-                    bw: n.gp.writeInt32,
+                    pbr: n.qM.readPackedInt32,
+                    bw: n.gp.writeRepeatedInt32,
                   },
                 },
               }),
@@ -24851,14 +24849,14 @@
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQueryFilters_PriceFilters";
+          return "CStoreQueryFilters_TagFilter";
         }
       }
       class p extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            p.prototype.start || n.Sg(p.M()),
+            p.prototype.only_free_items || n.Sg(p.M()),
             l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -24869,20 +24867,21 @@
               (p.sm_m = {
                 proto: p,
                 fields: {
-                  start: {
+                  only_free_items: {
                     n: 1,
-                    d: 0,
-                    br: n.qM.readInt32,
-                    bw: n.gp.writeInt32,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
                   },
-                  count: {
+                  exclude_free_items: {
                     n: 2,
-                    d: 10,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  min_discount_percent: {
+                    n: 3,
                     br: n.qM.readInt32,
                     bw: n.gp.writeInt32,
                   },
-                  sort: { n: 10, d: 0, br: n.qM.readEnum, bw: n.gp.writeEnum },
-                  filters: { n: 20, c },
                 },
               }),
             p.sm_m
@@ -24920,14 +24919,14 @@
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQueryParams";
+          return "CStoreQueryFilters_PriceFilters";
         }
       }
       class g extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            g.prototype.id || n.Sg(g.M()),
+            g.prototype.start || n.Sg(g.M()),
             l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -24938,13 +24937,20 @@
               (g.sm_m = {
                 proto: g,
                 fields: {
-                  id: { n: 1, c: o.O4 },
-                  score: { n: 2, br: n.qM.readDouble, bw: n.gp.writeDouble },
-                  spellcheck_generated_result: {
-                    n: 3,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
+                  start: {
+                    n: 1,
+                    d: 0,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
                   },
+                  count: {
+                    n: 2,
+                    d: 10,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  sort: { n: 10, d: 0, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  filters: { n: 20, c },
                 },
               }),
             g.sm_m
@@ -24982,15 +24988,15 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQueryPerResultMetadata";
+          return "CStoreQueryParams";
         }
       }
       class _ extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _.prototype.total_matching_records || n.Sg(_.M()),
-            l.initialize(this, e, 0, -1, [4, 5], null);
+            _.prototype.id || n.Sg(_.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -25000,20 +25006,12 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  total_matching_records: {
-                    n: 1,
-                    br: n.qM.readInt32,
-                    bw: n.gp.writeInt32,
-                  },
-                  start: { n: 2, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                  count: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                  per_result_metadata: { n: 4, c: g, r: !0, q: !0 },
-                  spellcheck_suggestions: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: n.qM.readString,
-                    bw: n.gp.writeRepeatedString,
+                  id: { n: 1, c: o.O4 },
+                  score: { n: 2, br: n.qM.readDouble, bw: n.gp.writeDouble },
+                  spellcheck_generated_result: {
+                    n: 3,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
                   },
                 },
               }),
@@ -25052,15 +25050,15 @@
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQueryResultMetadata";
+          return "CStoreQueryPerResultMetadata";
         }
       }
       class h extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.query_name || n.Sg(h.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            h.prototype.total_matching_records || n.Sg(h.M()),
+            l.initialize(this, e, 0, -1, [4, 5], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25070,18 +25068,20 @@
               (h.sm_m = {
                 proto: h,
                 fields: {
-                  query_name: {
+                  total_matching_records: {
                     n: 1,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
                   },
-                  query: { n: 2, c: p },
-                  context: { n: 3, c: o.TS },
-                  data_request: { n: 4, c: o.gn },
-                  override_country_code: {
+                  start: { n: 2, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  count: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  per_result_metadata: { n: 4, c: _, r: !0, q: !0 },
+                  spellcheck_suggestions: {
                     n: 5,
+                    r: !0,
+                    q: !0,
                     br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    bw: n.gp.writeRepeatedString,
                   },
                 },
               }),
@@ -25120,15 +25120,15 @@
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_Query_Request";
+          return "CStoreQueryResultMetadata";
         }
       }
       class f extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.metadata || n.Sg(f.M()),
-            l.initialize(this, e, 0, -1, [2, 3], null);
+            f.prototype.query_name || n.Sg(f.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -25138,9 +25138,19 @@
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  metadata: { n: 1, c: _ },
-                  ids: { n: 2, c: o.O4, r: !0, q: !0 },
-                  store_items: { n: 3, c: o.vB, r: !0, q: !0 },
+                  query_name: {
+                    n: 1,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  query: { n: 2, c: g },
+                  context: { n: 3, c: o.TS },
+                  data_request: { n: 4, c: o.gn },
+                  override_country_code: {
+                    n: 5,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
                 },
               }),
             f.sm_m
@@ -25178,15 +25188,15 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_Query_Response";
+          return "CStoreQuery_Query_Request";
         }
       }
       class b extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            b.prototype.query_name || n.Sg(b.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            b.prototype.metadata || n.Sg(b.M()),
+            l.initialize(this, e, 0, -1, [2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25196,40 +25206,9 @@
               (b.sm_m = {
                 proto: b,
                 fields: {
-                  query_name: {
-                    n: 1,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  context: { n: 2, c: o.TS },
-                  search_term: {
-                    n: 3,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  max_results: {
-                    n: 4,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  filters: { n: 5, c },
-                  data_request: { n: 6, c: o.gn },
-                  use_spellcheck: {
-                    n: 7,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  search_tags: { n: 8, br: n.qM.readBool, bw: n.gp.writeBool },
-                  search_creators: {
-                    n: 9,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  prefilter_creators: {
-                    n: 10,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
+                  metadata: { n: 1, c: h },
+                  ids: { n: 2, c: o.O4, r: !0, q: !0 },
+                  store_items: { n: 3, c: o.vB, r: !0, q: !0 },
                 },
               }),
             b.sm_m
@@ -25267,15 +25246,15 @@
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_SearchSuggestions_Request";
+          return "CStoreQuery_Query_Response";
         }
       }
       class w extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            w.prototype.metadata || n.Sg(w.M()),
-            l.initialize(this, e, 0, -1, [2, 3], null);
+            w.prototype.query_name || n.Sg(w.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -25285,9 +25264,40 @@
               (w.sm_m = {
                 proto: w,
                 fields: {
-                  metadata: { n: 1, c: _ },
-                  ids: { n: 2, c: o.O4, r: !0, q: !0 },
-                  store_items: { n: 3, c: o.vB, r: !0, q: !0 },
+                  query_name: {
+                    n: 1,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  context: { n: 2, c: o.TS },
+                  search_term: {
+                    n: 3,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  max_results: {
+                    n: 4,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  filters: { n: 5, c },
+                  data_request: { n: 6, c: o.gn },
+                  use_spellcheck: {
+                    n: 7,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  search_tags: { n: 8, br: n.qM.readBool, bw: n.gp.writeBool },
+                  search_creators: {
+                    n: 9,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  prefilter_creators: {
+                    n: 10,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
                 },
               }),
             w.sm_m
@@ -25325,15 +25335,15 @@
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_SearchSuggestions_Response";
+          return "CStoreQuery_SearchSuggestions_Request";
         }
       }
       class B extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            B.prototype.filters || n.Sg(B.M()),
-            l.initialize(this, e, 0, -1, [6], null);
+            B.prototype.metadata || n.Sg(B.M()),
+            l.initialize(this, e, 0, -1, [2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25343,9 +25353,9 @@
               (B.sm_m = {
                 proto: B,
                 fields: {
-                  filters: { n: 2, c: a.S7 },
-                  sections: { n: 6, c: y, r: !0, q: !0 },
-                  context: { n: 5, c: o.TS },
+                  metadata: { n: 1, c: h },
+                  ids: { n: 2, c: o.O4, r: !0, q: !0 },
+                  store_items: { n: 3, c: o.vB, r: !0, q: !0 },
                 },
               }),
             B.sm_m
@@ -25383,15 +25393,15 @@
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_GetItemsByUserRecommendedTags_Request";
+          return "CStoreQuery_SearchSuggestions_Response";
         }
       }
       class y extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.sort || n.Sg(y.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            y.prototype.filters || n.Sg(y.M()),
+            l.initialize(this, e, 0, -1, [6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25401,25 +25411,9 @@
               (y.sm_m = {
                 proto: y,
                 fields: {
-                  sort: { n: 1, d: 0, br: n.qM.readEnum, bw: n.gp.writeEnum },
-                  min_items: {
-                    n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  randomize: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
-                  include_packages: {
-                    n: 4,
-                    d: !1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  include_bundles: {
-                    n: 5,
-                    d: !1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
+                  filters: { n: 2, c: a.S7 },
+                  sections: { n: 6, c: M, r: !0, q: !0 },
+                  context: { n: 5, c: o.TS },
                 },
               }),
             y.sm_m
@@ -25457,15 +25451,15 @@
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_GetItemsByUserRecommendedTags_Request_Section";
+          return "CStoreQuery_GetItemsByUserRecommendedTags_Request";
         }
       }
       class M extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            M.prototype.sections || n.Sg(M.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            M.prototype.sort || n.Sg(M.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -25474,7 +25468,27 @@
             M.sm_m ||
               (M.sm_m = {
                 proto: M,
-                fields: { sections: { n: 1, c: C, r: !0, q: !0 } },
+                fields: {
+                  sort: { n: 1, d: 0, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  min_items: {
+                    n: 2,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  randomize: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
+                  include_packages: {
+                    n: 4,
+                    d: !1,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  include_bundles: {
+                    n: 5,
+                    d: !1,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                },
               }),
             M.sm_m
           );
@@ -25511,15 +25525,15 @@
           return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_GetItemsByUserRecommendedTags_Response";
+          return "CStoreQuery_GetItemsByUserRecommendedTags_Request_Section";
         }
       }
       class C extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            C.prototype.tagid || n.Sg(C.M()),
-            l.initialize(this, e, 0, -1, [2], null);
+            C.prototype.sections || n.Sg(C.M()),
+            l.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25528,11 +25542,7 @@
             C.sm_m ||
               (C.sm_m = {
                 proto: C,
-                fields: {
-                  tagid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  store_item_ids: { n: 2, c: o.O4, r: !0, q: !0 },
-                  tag_name: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                },
+                fields: { sections: { n: 1, c: S, r: !0, q: !0 } },
               }),
             C.sm_m
           );
@@ -25569,15 +25579,15 @@
           return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_GetItemsByUserRecommendedTags_Response_Section";
+          return "CStoreQuery_GetItemsByUserRecommendedTags_Response";
         }
       }
       class S extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            S.prototype.sort || n.Sg(S.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
+            S.prototype.tagid || n.Sg(S.M()),
+            l.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -25587,27 +25597,9 @@
               (S.sm_m = {
                 proto: S,
                 fields: {
-                  sort: { n: 1, d: 0, br: n.qM.readEnum, bw: n.gp.writeEnum },
-                  max_items: {
-                    n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  randomize: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
-                  include_packages: {
-                    n: 4,
-                    d: !1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  include_bundles: {
-                    n: 5,
-                    d: !1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  filters: { n: 6, c: a.S7 },
-                  context: { n: 7, c: o.TS },
+                  tagid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  store_item_ids: { n: 2, c: o.O4, r: !0, q: !0 },
+                  tag_name: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             S.sm_m
@@ -25645,15 +25637,15 @@
           return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_GetItemByUserCombinedTagsPriority_Request";
+          return "CStoreQuery_GetItemsByUserRecommendedTags_Response_Section";
         }
       }
       class v extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            v.prototype.tagid || n.Sg(v.M()),
-            l.initialize(this, e, 0, -1, [1, 2, 3], null);
+            v.prototype.sort || n.Sg(v.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -25663,22 +25655,27 @@
               (v.sm_m = {
                 proto: v,
                 fields: {
-                  tagid: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
+                  sort: { n: 1, d: 0, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  max_items: {
+                    n: 2,
                     br: n.qM.readUint32,
-                    pbr: n.qM.readPackedUint32,
-                    bw: n.gp.writeRepeatedUint32,
+                    bw: n.gp.writeUint32,
                   },
-                  store_item_ids: { n: 2, c: o.O4, r: !0, q: !0 },
-                  tag_name: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: n.qM.readString,
-                    bw: n.gp.writeRepeatedString,
+                  randomize: { n: 3, br: n.qM.readBool, bw: n.gp.writeBool },
+                  include_packages: {
+                    n: 4,
+                    d: !1,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
                   },
+                  include_bundles: {
+                    n: 5,
+                    d: !1,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  filters: { n: 6, c: a.S7 },
+                  context: { n: 7, c: o.TS },
                 },
               }),
             v.sm_m
@@ -25716,13 +25713,84 @@
           return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreQuery_GetItemByUserCombinedTagsPriority_Request";
+        }
+      }
+      class R extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            R.prototype.tagid || n.Sg(R.M()),
+            l.initialize(this, e, 0, -1, [1, 2, 3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
+                fields: {
+                  tagid: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readUint32,
+                    pbr: n.qM.readPackedUint32,
+                    bw: n.gp.writeRepeatedUint32,
+                  },
+                  store_item_ids: { n: 2, c: o.O4, r: !0, q: !0 },
+                  tag_name: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readString,
+                    bw: n.gp.writeRepeatedString,
+                  },
+                },
+              }),
+            R.sm_m
+          );
+        }
+        static MBF() {
+          return R.sm_mbf || (R.sm_mbf = n.w0(R.M())), R.sm_mbf;
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(R.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(R.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(R.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(R.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreQuery_GetItemByUserCombinedTagsPriority_Response";
         }
       }
-      var R;
+      var z;
       !(function (e) {
         (e.Query = function (e, t) {
-          return e.SendMsg("StoreQuery.Query#1", (0, s.I8)(h, t), f, {
+          return e.SendMsg("StoreQuery.Query#1", (0, s.I8)(f, t), b, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -25731,28 +25799,28 @@
           (e.SearchSuggestions = function (e, t) {
             return e.SendMsg(
               "StoreQuery.SearchSuggestions#1",
-              (0, s.I8)(b, t),
-              w,
+              (0, s.I8)(w, t),
+              B,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetItemsByUserRecommendedTags = function (e, t) {
             return e.SendMsg(
               "StoreQuery.GetItemsByUserRecommendedTags#1",
-              (0, s.I8)(B, t),
-              M,
+              (0, s.I8)(y, t),
+              C,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetItemByUserCombinedTagsPriority = function (e, t) {
             return e.SendMsg(
               "StoreQuery.GetItemByUserCombinedTagsPriority#1",
-              (0, s.I8)(S, t),
-              v,
+              (0, s.I8)(v, t),
+              R,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(R || (R = {}));
+      })(z || (z = {}));
     },
     44654: (e, t, r) => {
       "use strict";
@@ -26795,6 +26863,10 @@
           r.include_platforms &&
             (function (e, t, r) {
               m(e, t, r, "include_platforms", "platforms");
+            })(e, i, t),
+          r.apply_user_filters &&
+            (function (e, t, r) {
+              m(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, i, t),
           r.include_included_items &&
             r.included_item_data_request &&
@@ -33255,29 +33327,38 @@
           const s = new FormData();
           s.append("appid", "" + e),
             s.append("sessionid", c.TS.SESSIONID),
-            r && s.append("snr", r),
-            (this.m_bAjaxInFlight = !0);
-          let o = await a().post(n, s, {
+            r && s.append("snr", r);
+          const o = this.m_setWishList.has(e)
+            ? this.m_wishlistInOrder.findIndex((t) => t == e)
+            : -1;
+          this.ApplyWishlistUpdate(e, t), (this.m_bAjaxInFlight = !0);
+          let l = await a().post(n, s, {
             withCredentials: !0,
             cancelToken: i ? i.token : void 0,
           });
-          if (((this.m_bAjaxInFlight = !1), i && i.token.reason))
-            return { success: 52 };
-          if (
-            ((o.data.success = 1 == o.data.success ? 1 : 2),
-            1 == o.data.success)
-          )
-            if ((this.InvalidateCache(), (e = Number(e)), t))
-              this.m_setWishList.has(e) || this.m_wishlistInOrder.push(e),
-                this.m_setWishList.add(e);
-            else {
-              if (this.m_setWishList.has(e)) {
-                const t = this.m_wishlistInOrder.findIndex((t) => t == e);
-                -1 != t && this.m_wishlistInOrder.splice(t, 1);
-              }
-              this.m_setWishList.delete(e);
+          return (
+            (this.m_bAjaxInFlight = !1),
+            i && i.token.reason
+              ? { success: 52 }
+              : ((l.data.success = 1 == l.data.success ? 1 : 2),
+                1 != l.data.success && this.ApplyWishlistUpdate(e, -1 != o, o),
+                l.data)
+          );
+        }
+        ApplyWishlistUpdate(e, t, r = -1) {
+          if ((this.InvalidateCache(), (e = Number(e)), t))
+            this.m_setWishList.has(e) ||
+              (-1 == r
+                ? this.m_wishlistInOrder.push(e)
+                : this.m_wishlistInOrder.splice(r, 0, e)),
+              this.m_setWishList.add(e);
+          else {
+            if (this.m_setWishList.has(e)) {
+              const t = this.m_wishlistInOrder.findIndex((t) => t == e);
+              -1 != t && this.m_wishlistInOrder.splice(t, 1);
             }
-          return o.data;
+            this.m_setWishList.delete(e);
+          }
         }
         async AddToCart(e, t, r, i, n, s, o) {
           if (
@@ -35802,7 +35883,7 @@
           }, 3e4));
       }
       const K = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        $ = ["/(localhost|127.0.0.1):1337/", "chrome-extension://"];
+        $ = ["(localhost|127.0.0.1):(?!(80|443))", "chrome-extension://"];
       function X() {
         try {
           const e = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
@@ -44044,17 +44125,18 @@
         );
       }
       function _(e) {
+        const { color: t = "currentColor", ...r } = e;
         return i.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
             fill: "none",
-            ...e,
+            ...r,
           },
           i.createElement("path", {
             d: "M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z",
-            fill: "currentColor",
+            fill: t,
           }),
         );
       }
@@ -46847,6 +46929,7 @@
         );
       }
       function D(e) {
+        const { color: t = "#fff", ...r } = e;
         return i.createElement(
           "svg",
           {
@@ -46860,11 +46943,11 @@
             height: "256px",
             viewBox: "0 0 256 256",
             strokeWidth: "24",
-            stroke: e.color ?? "#fff",
+            stroke: t,
             strokeLinecap: "round",
             strokeLinejoin: "round",
             strokeMiterlimit: "10",
-            ...e,
+            ...r,
           },
           i.createElement("polyline", {
             fill: "none",

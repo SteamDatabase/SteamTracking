@@ -308,8 +308,8 @@
         SaleBroadcastCtn: "_1SFMhugeWIHJIHrHl6ZQvD",
         SaleOuterContainer: "_150kddWk8JgylTvh_eC20b",
         CustomStyle_together: "_1lAygDKkL4NolLsYyh0b_x",
-        SalePageLogoSet: "JxIGHUxdTjFyWl1KO_tkn",
         SaleNewSizing: "_1v-BVc2xZoBmJV2CPwNpq0",
+        SalePageLogoSet: "JxIGHUxdTjFyWl1KO_tkn",
         SaleBackground: "_2N8SepiLeBUusG1vbHCgiY",
         SaleSectionTitleCtn: "bE2EA4JB9SDa1PZ7HSFL-",
         SaleSectionSubtext: "_17Fnl-wNZIrLjca5rOwwlT",
@@ -396,10 +396,14 @@
         StoreSaleWidgetTags: "_2bkP-3b7dvr0a_qPdZEfHY",
         AppTag: "_3FJnZuxmPA_MjxsF8BQQ5L",
         StoreSaleWidgetShortDesc: "_3AsE5JhqLAiICKUYvZLpap",
+        LargeText: "_3FqDALHzNLR5fMMZTeBw8Z",
         TagTitle: "v1i4WK3tk4FpXSJ5wC60U",
         TagBox: "_1lqaDGTzuprpWRYk4_2JrN",
-        SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Tag: "_33yqka47vWurNqhnhLJb_m",
+        Categories: "_2hr4JZMbG9l2GKALFD0dO7",
+        SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
+        Category: "_2lQNYB6g6C7aiw0GDPe9fq",
+        CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
         BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
         StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
@@ -24941,26 +24945,35 @@
             instanceNum: r,
             bShowEvenIfNoTags: i,
             bHideTitle: s,
+            bLargeText: l,
+            bNoStoreLinks: d,
           } = e,
-          l = (0, n.LG)(t);
-        return l?.length > 0 || i
+          u = (0, n.LG)(t);
+        return u?.length > 0 || i
           ? a.createElement(
               "div",
-              { className: (0, m.A)(o().SaleTagBlockCtn, "SaleTagBlockCtn") },
+              {
+                className: (0, m.A)(
+                  o().SaleTagBlockCtn,
+                  l ? o().LargeText : "",
+                  "SaleTagBlockCtn",
+                ),
+              },
               Boolean(!s) &&
                 a.createElement(
                   "div",
                   { className: (0, m.A)(o().TagTitle, "WidgetTagTitle") },
                   (0, c.we)("#GameHover_Tags"),
                 ),
-              Boolean(l?.length > 0)
+              Boolean(u?.length > 0)
                 ? a.createElement(
                     "div",
                     { className: (0, m.A)(o().TagBox, "TagBox") },
-                    l.map((e) =>
+                    u.map((e) =>
                       a.createElement(_, {
                         key: "tag_" + r + "_" + e.tagid,
                         tag: e,
+                        bNoStoreLinks: d,
                       }),
                     ),
                   )
@@ -24981,14 +24994,20 @@
         );
       }
       function _(e) {
-        const { tag: t, className: r } = e,
-          n = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
-          s = `${d.TS.STORE_BASE_URL}tags/${n}/${t.name}`;
-        return a.createElement(
-          l.q,
-          { url: s, className: (0, m.A)(o().Tag, "WidgetTag", r) },
-          t.name,
-        );
+        const { tag: t, className: r, bNoStoreLinks: n } = e,
+          s = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
+          c = `${d.TS.STORE_BASE_URL}tags/${s}/${t.name}`;
+        return n
+          ? a.createElement(
+              "div",
+              { className: (0, m.A)(o().Tag, "WidgetTag", r) },
+              t.name,
+            )
+          : a.createElement(
+              l.q,
+              { url: c, className: (0, m.A)(o().Tag, "WidgetTag", r) },
+              t.name,
+            );
       }
     },
     70300: (e, t, r) => {

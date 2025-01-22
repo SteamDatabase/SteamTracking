@@ -9902,7 +9902,8 @@
         };
       function sl(e) {
         const t = l.mh.GetEditModel(),
-          a = (0, da.yD)();
+          a = (0, da.yD)(),
+          [n, i, o] = (0, G.uD)();
         return d.createElement(
           "div",
           { className: Kn.BottomBarControls },
@@ -9942,20 +9943,20 @@
             "div",
             { className: Kn.ReorderSections },
             d.createElement(
+              w.EN,
+              { active: n },
+              d.createElement(cl, {
+                editModel: t,
+                partnerEventEditorContext: a,
+                closeModal: o,
+              }),
+            ),
+            d.createElement(
               F.Gq,
               { toolTipContent: (0, I.we)("#Sale_ReorderSections_ttip") },
               d.createElement(
                 P.$n,
-                {
-                  onClick: (e) =>
-                    (0, C.pg)(
-                      d.createElement(cl, {
-                        editModel: t,
-                        partnerEventEditorContext: a,
-                      }),
-                      (0, U.uX)(e),
-                    ),
-                },
+                { onClick: () => i() },
                 (0, I.we)("#Sale_ReorderSections"),
               ),
             ),

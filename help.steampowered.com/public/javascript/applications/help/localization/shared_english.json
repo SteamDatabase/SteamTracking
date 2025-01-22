@@ -3327,6 +3327,8 @@
     "Settings_GameRecording_AudioSelection_GameOnly": "Game Audio Only",
     "Settings_GameRecording_AudioSelection_AllSystem": "All System Audio",
     "Settings_GameRecording_AudioSelection_SelectProcesses": "Game and Selected Programs",
+    "Settings_GameRecording_AudioSelection_Explainer_SystemOnly_Windows": "Recording of game audio is supported on Windows build 19044 and newer. On older versions of Windows, only system audio recording is supported.",
+    "Settings_GameRecording_AudioSelection_Explainer_SystemOnly": "Recording of game audio is not supported on this platform. Only system audio recording is supported.",
     "Settings_GameRecording_LowDiskSpace_Header": "Low disk space - Unable to record or create clips",
     "Settings_GameRecording_LowDiskSpace_Description": "To free space on your hard drive you can delete files, modify your background recording settings, or change the location of your recording folder to another drive.",
     "Settings_GameRecording_NotEnoughDiskSpace": "Not enough hard drive space for your selection (%1$s available)",

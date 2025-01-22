@@ -46,7 +46,6 @@
   display: block;
   position: relative;
   width: var(--gpWidth-4colcap);
-  height: var(--gpWidth-3colcap);
   overflow: hidden;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
   flex-shrink: 0;
@@ -74,7 +73,6 @@
   ._2MUQ8QBrMaSxsdhqhiN6tG
   ._3yuPyNw3DpZ_ICakOPcu4u
   ._1uwcZwdwT2vRgumGDlZbtk
-  ._3Q4XMqaQk6OcDiI6shf28J
   ._3anY0OeVUh2enLVFNx50N1 {
   position: relative;
   width: 100%;
@@ -84,11 +82,62 @@
   ._2MUQ8QBrMaSxsdhqhiN6tG
   ._3yuPyNw3DpZ_ICakOPcu4u
   ._1uwcZwdwT2vRgumGDlZbtk
-  ._3Q4XMqaQk6OcDiI6shf28J
   ._3anY0OeVUh2enLVFNx50N1
   img {
   width: 100%;
   height: auto;
+  transition: transform .2s ease-in-out, filter .2s ease-in-out;
+}
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk
+  ._27LrTrejiaFAMHuA0df3qP {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), #0b1621 72%);
+  transition: opacity .2s ease-in-out;
+}
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk:focus
+  ._3anY0OeVUh2enLVFNx50N1
+  img,
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk:hover
+  ._3anY0OeVUh2enLVFNx50N1
+  img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk:focus
+  ._27LrTrejiaFAMHuA0df3qP,
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk:hover
+  ._27LrTrejiaFAMHuA0df3qP {
+  opacity: 0.8;
+}
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk:focus
+  ._3VNsED3Ez-vqDraw_8QWsp,
+.YuXdszLjIFoat_EbTkm8U
+  ._2MUQ8QBrMaSxsdhqhiN6tG
+  ._3yuPyNw3DpZ_ICakOPcu4u
+  ._1uwcZwdwT2vRgumGDlZbtk:hover
+  ._3VNsED3Ez-vqDraw_8QWsp {
+  color: #fff;
 }
 .YuXdszLjIFoat_EbTkm8U
   ._2MUQ8QBrMaSxsdhqhiN6tG
@@ -96,8 +145,8 @@
   ._1uwcZwdwT2vRgumGDlZbtk
   ._3VNsED3Ez-vqDraw_8QWsp {
   position: absolute;
+  bottom: 0;
   z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0), #0b1621 72%);
   width: 100%;
   height: 100%;
 }
@@ -182,12 +231,16 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   background-color: #53585f;
   margin: 6px;
   padding: 6px;
-  max-width: 250px;
+  width: 250px;
   color: #fff;
   position: absolute;
   right: 0;
   top: 120px;
   box-shadow: 2px 2px 10px #000;
+}
+._2n77ZzDS9tVkdreDY75XWS button.DialogButton {
+  width: 50%;
+  margin: 0 auto;
 }
 ._1_IJ41Ffm67VU1UXLllw1C {
   top: 0px;

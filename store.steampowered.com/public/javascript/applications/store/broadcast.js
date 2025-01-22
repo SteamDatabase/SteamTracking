@@ -14173,10 +14173,10 @@
         a = r(12155),
         s = r(4869),
         n = r(78327);
-      function o() {
+      function o(e) {
         return (0, n.Qn)()
-          ? i.createElement(s.MGO, null)
-          : i.createElement(a.Jlk, null);
+          ? i.createElement(s.MGO, { ...e })
+          : i.createElement(a.Jlk, { ...e });
       }
       function l() {
         return i.createElement(a.rfv, null);

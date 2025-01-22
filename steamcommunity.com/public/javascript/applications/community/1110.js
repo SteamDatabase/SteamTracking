@@ -108,7 +108,7 @@
                 n.dispatch(n.state.tr.delete(a(), a() + 1));
               },
               focusView: () => {
-                n.focus();
+                window.setTimeout(() => n.focus(), 1);
               },
             },
             c = new r.l();

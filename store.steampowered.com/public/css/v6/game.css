@@ -4945,38 +4945,12 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 	background: none;
 	border-top: 2px solid #1b2838;
 }
-.game_pt_info {
 
-	padding: 15px;
-	color: #c7d5e0;
-}
-.game_pt_info a {
-	text-decoration: underline;
-}
-
-.game_pt_info h1 {
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 200; /* thin */
-
-			font-size: 30px;
-	color: #ffe8a3;
-}
-
-.game_pt_info p {
+.game_pt_note {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-		
-	color: #c6d4df;
-	font-size: 15px;
-}
-
-.game_pt_info .game_pt_note {
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			color: #e8d59b;
-	margin: 2px 0 12px 0;
+			margin: 2px 0 12px 0;
 }
 
 #pt_block, #pt_active, #pt_join {
