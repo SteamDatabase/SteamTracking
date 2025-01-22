@@ -188,28 +188,24 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Capsule', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, supports2x: true },
-		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, supports2x: true },
-		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, supports2x: true },
-		{ name: 'Promo Capsule', width: 220, height: 180, path: 'promo_capsule|capsule_220x180|assets|promo_capsule|image', localized: true },
-		{ name: 'Hi Res Capsule', width: 940, height: 400, path: 'hi_res_capsule|capsule_940x400|assets|hi_res_capsule|image', localized: true },
-		{ name: 'Hi Res Alt Capsule', width: 799, height: 340, path: 'hi_res_alt_capsule|capsule_799x340|assets|hi_res_alt_capsule|image', localized: true },
-		{ name: 'Package Header', width: 707, height: 232, path: 'header_image|header|assets|header_image|image', localized: true, supports2x: true },
-		{ name: '(deprecated) Broadcast Left Side Panel', width: 160, height: 350, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
-		{ name: '(deprecated) Broadcast Right Side Panel', width: 160, height: 350, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
+		{ name: 'Header Capsule', width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true },
+		{ name: 'Small Capsule', width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true },
+		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true },
+		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true },
+		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true },
+		{ name: 'Page Background', width: 1438, height: 810, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
+
 		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
 		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
 
-		{ name: 'Page Background', width: 1438, height: 0, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
-		{ name: 'Screenshot', width: 0, height: 0, path: 'screenshot|assets|screenshots|', localized: false },
-		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true },
+		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false },
+		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false },
+		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false },
+		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false },
 
-		{ name: 'Library Hero', width: 1920, height: 620, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, supports2x: true },
-		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, supports2x: true },
-		{ name: 'Library Logo', width: 0, height: 0, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, supports2x: true },
-		{ name: 'Library Header', width: 460, height: 215, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, supports2x: true },
-
-		{ name: 'Vertical Capsule', width: 374, height: 448, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, supports2x: true },
+		// Keep last for list priority ordering
+		{ name: 'Screenshot', width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true },
+		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true, enforce_min: true },
 	];
 }
 
@@ -429,8 +425,7 @@ function DetermineImageType( image )
 		return ImageType.name;
 	}
 
-	// default to screenshot if not found
-	return 'Screenshot';
+	return '';
 }
 
 
@@ -438,16 +433,26 @@ function IsImageTypeValid( image, ImageType )
 {
 	var bSupports2X = ImageType.supports2x;
 
-	if ( ImageType.width != 0 &&
-		ImageType.width != image.width &&
-		( !bSupports2X || ImageType.width * 2 != image.width ) )
-		return false;
+	// Some image types like screenshots just have a min
+	if ( ImageType.enforce_min )
+	{
+		if ( ImageType.width !== 0 && image.width < ImageType.width )
+			return false;
 
-	// some image types don't have a set height (background)
-	if ( ImageType.height != 0 &&
-		ImageType.height != image.height &&
-		( !bSupports2X || ImageType.height * 2 != image.height ) )
-		return false;
+		if ( ImageType.height !== 0 && image.height < ImageType.height )
+			return false;
+	}
+	else
+	{
+		if ( ImageType.width != 0 && ImageType.width != image.width &&
+			( !bSupports2X || ImageType.width * 2 != image.width ) )
+			return false;
+
+		// some image types don't have a set height (background)
+		if ( ImageType.height != 0 && ImageType.height != image.height &&
+			( !bSupports2X || ImageType.height * 2 != image.height ) )
+			return false;
+	}
 
 	return true
 }
@@ -500,7 +505,6 @@ function OnImagesLoadComplete( images )
 		var screenshotDiv = $J('<div class="actual_screenshot" style="background-image: url( ' + image.src + ')"></div>');
 		screenshotDiv.data( 'filename', filename );
 		screenshotDiv.data( 'image', image );
-		targetDiv.append( '<br>' );
 		screenshotDiv.appendTo( targetDiv );
 
 		// add type select
@@ -523,15 +527,15 @@ function OnImagesLoadComplete( images )
 			}
 		}
 
-		if( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
+		if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
 		{
-			selectType.addClass( 'override_invalid_image' );
-			$J( '<option value="invalid">' + "Invalid artwork override image size. This will not be saved." + '</option>' ).appendTo( selectType );
+			targetDiv.append( $J( '<div/>', { style: 'color:orange'  } ).text( "Dimensions provided do not match any known assets. This image will not be saved." ) );
 		}
-
-		selectType.appendTo( targetDiv );
-
-		targetDiv.append( '<br>' );
+		else
+		{
+			selectType.appendTo( targetDiv );
+			targetDiv.append( '<br>' );
+		}
 
 		// add all-ages appropriate radio buttons
 		var divAllAgesAppropriate = $J( '<div class="image_all_ages_appropriate" id="screenshot_appropriate_section"></div>' );
@@ -664,6 +668,11 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		    var strSelectedType = $J( preview.find( 'select.image_type_select :selected' )[0] ).val();
 		    if( !strSelectedType )
 		        strSelectedType = $J( preview.find( 'input.image_type_select' )[0] ).val();
+
+			// Skip if no valid type
+			if ( !strSelectedType )
+				continue;
+
 		    var nParentID = $J( preview.find( 'input.image_parent_input' )[0] ).val();
 		    var strSelectedLanguage = $J( preview.find( 'select.image_language_select :selected' )[0] ).val();
 
