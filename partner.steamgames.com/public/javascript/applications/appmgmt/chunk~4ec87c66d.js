@@ -25096,12 +25096,7 @@
             t.GetName(),
             t.GetFullName(),
             t.BIsOptInEnabled(),
-          ]),
-          s =
-            f.TS.PARTNER_BASE_URL +
-            "admin/store/page/" +
-            n +
-            "?activetab=tab_publish";
+          ]);
         return l.createElement(
           "div",
           { className: ut().AdminPageCtn },
@@ -25140,30 +25135,14 @@
                 l.createElement(
                   "div",
                   { className: Xe().SectionDesc },
-                  "When you are ready to start accepting opt-ins from eligible games that meet the criteria you've defined, check the box below. You will then need to follow the path to publish this event in order to make it public.",
+                  "When you are ready to start accepting opt-ins from eligible games that meet the criteria you've defined, check the box below and save the OptIn.",
                 ),
                 l.createElement("br", null),
-                Boolean(r) &&
-                  l.createElement(
-                    l.Fragment,
-                    null,
-                    l.createElement(
-                      "div",
-                      { className: Xe().SectionDesc },
-                      "Note: Since this OptIn is enabled for partner, after each text or localization update, please remember to Publish.  Publishing is required for the updated text to appear to partners.",
-                    ),
-                    l.createElement("br", null),
-                  ),
                 l.createElement(m.Yh, {
                   label: "Enable Partners to opt-in",
                   checked: r,
                   onChange: t.SetOptInEnabled,
                 }),
-                l.createElement(
-                  "a",
-                  { href: s, className: (0, y.A)(_().Button, _().Primary) },
-                  "Go Publish",
-                ),
               ),
             ),
           ),
