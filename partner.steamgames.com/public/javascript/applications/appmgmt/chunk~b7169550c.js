@@ -24,7 +24,7 @@
     },
     98019: (t, e, a) => {
       "use strict";
-      a.d(e, { q: () => i });
+      a.d(e, { p: () => l, q: () => i });
       var n = a(20194),
         s = a(41735),
         r = a.n(s),
@@ -41,6 +41,10 @@
           },
         });
         return t.isLoading ? null : t.data;
+      }
+      function l(t) {
+        const e = i();
+        return e?.find((e) => e.id == t);
       }
     },
     32179: (t, e, a) => {
