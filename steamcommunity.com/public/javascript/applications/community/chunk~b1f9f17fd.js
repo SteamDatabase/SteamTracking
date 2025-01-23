@@ -25317,7 +25317,7 @@
               await w.y.EnsureLoaded();
               const t = [];
               w.y.GetTagNameForTagID().forEach((e, a) => {
-                t.push({ tagid: a, name: e });
+                113 != a && t.push({ tagid: a, name: e });
               });
               const a = t.map((e) => (0, s.rm)(e.name, "Store")),
                 n = [
