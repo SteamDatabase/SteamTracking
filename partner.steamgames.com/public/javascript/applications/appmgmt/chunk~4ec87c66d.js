@@ -33261,14 +33261,15 @@
         const r = e.subject && e.subject[n] && e.subject[n].length > 0;
         (r || 0 == a) &&
           t.SetLocalization(Jr + e.unique_id, a, r ? e.subject[n] : "");
-        ((e.localized_generic_button_text &&
+        const i =
+          e.localized_generic_button_text &&
           e.localized_generic_button_text[n] &&
-          e.localized_generic_button_text[n].length > 0) ||
-          0 == a) &&
+          e.localized_generic_button_text[n].length > 0;
+        (i || 0 == a) &&
           t.SetLocalization(
             Zr + e.unique_id,
             a,
-            r ? e.localized_generic_button_text[n] : "",
+            i ? e.localized_generic_button_text[n] : "",
           ),
           e.sections?.forEach((r) => {
             if (r.type == F.Dj.k_Custom) {

@@ -3050,6 +3050,7 @@ https://steamloopback.host/${}
 https://steamsupport.valvesoftware.com/account/overview/${}
 https://steamsupport.valvesoftware.com/account_support.php?steamID=${strSteamID}
 https://steamsupport.valvesoftware.com/clan/overview/${}
+https://store.cloudflare.steamstatic.com/categories/homepageimage/${strImageURL}?cc=${}&l=${}
 https://store.cloudflare.steamstatic.com/public/images/blank.gif
 https://store.cloudflare.steamstatic.com/public/images/loyalty/reactions/still/${award}.png
 https://store.cloudflare.steamstatic.com/public/images/recommended_thumb.png
@@ -3105,7 +3106,6 @@ https://store.steampowered.com/bundle/${unBundleID}/
 https://store.steampowered.com/cart/
 https://store.steampowered.com/cart/addtocart
 https://store.steampowered.com/cart/forgetcart
-https://store.steampowered.com/categories/homepageimage/${strImageURL}?cc=${}&l=${}
 https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=${agreementid}&agreementpackageid=${packageid}
 https://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type=${type}
 https://store.steampowered.com/checkout/emailvalidationstatus
