@@ -1186,6 +1186,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
+${PARTNER_BASE_URL}promotion/dailydeals/edit/${dealID}
 ${PARTNER_BASE_URL}promotion/dailydeals/edit/${gid}
 ${PARTNER_BASE_URL}promotion/dailydeals/invite/${gid}
 ${PARTNER_BASE_URL}promotion/dailydeals/invite/${}
