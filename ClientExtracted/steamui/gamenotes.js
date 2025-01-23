@@ -1873,7 +1873,7 @@
             o && !n && o.focus();
           }, [o, n]),
           k.useEffect(() => {
-            n && h.CommitChanges();
+            n && h && h.CommitChanges();
           }, [n, h]);
         const f = (0, te.qq)(),
           b = (0, ee.Bc)(t, f),
