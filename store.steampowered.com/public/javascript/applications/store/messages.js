@@ -3698,8 +3698,9 @@
         const { storeItem: t, bShowModal: r, hideModal: a } = e,
           i = (0, m.z)(),
           n = t?.GetAllTrailers().GetHighlightTrailers(),
-          l = n?.length > 0 && n[0],
-          o = (
+          l = n?.length > 0 && n[0];
+        if (!l) return null;
+        const o = (
             i ? l.GetTrailer480p().strWebMURL : l.GetTrailerMax().strWebMURL
           ).replace("http://", "https://"),
           c = (
