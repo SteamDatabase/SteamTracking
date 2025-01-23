@@ -10828,9 +10828,10 @@
         };
       }
       var pa = a(70535),
-        ga = a.n(pa);
-      const ha = new mt.wd("TrailerAppVideo"),
-        Sa = {
+        ga = a.n(pa),
+        ha = a(60884);
+      const Sa = new mt.wd("TrailerAppVideo"),
+        fa = {
           include_assets: !0,
           include_trailers: !0,
           include_basic_info: !0,
@@ -10838,9 +10839,9 @@
           include_release: !0,
           include_platforms: !0,
         },
-        fa = "trailercarousel",
-        va = "trailercarousel_seen_intro_video";
-      function ya(e) {
+        va = "trailercarousel",
+        ya = "trailercarousel_seen_intro_video";
+      function ba(e) {
         const {
             event: t,
             appVisibilityTracker: a,
@@ -10859,12 +10860,12 @@
             Number(r.trailer_carousel_intro_video_appid)
               ? Number(r.trailer_carousel_intro_video_appid)
               : void 0;
-        (0, o.t7)(b, Sa);
+        (0, o.t7)(b, fa);
         const E = n.useMemo(
             () => (b > 0 ? [{ type: "game", id: b }] : []),
             [b],
           ),
-          C = ((I = b), n.useMemo(() => Ia().includes(I), [I]));
+          C = ((I = b), n.useMemo(() => Aa().includes(I), [I]));
         var I;
         const [A, D] = n.useState(b && C ? 1 : 0),
           [G, T] = n.useState(!0),
@@ -10896,7 +10897,7 @@
               })(e, t, "trailercarousel"),
               h = n.useMemo(() => new Map(), []),
               S = n.useMemo(() => new Map(), []);
-            Aa(g, h), Aa(g, S);
+            Da(g, h), Da(g, S);
             const f = n.useRef();
             n.useEffect(() => {
               if (t.enable_faceted_browsing) return;
@@ -10933,7 +10934,7 @@
                     g,
                   ),
                   v = S.filter((e) => w.A.Get().GetApp(e.id)?.BHasTrailers());
-                ha.Debug(
+                Sa.Debug(
                   v.length != S.length
                     ? `Loaded ${v.length} items, ${S.length - v.length} items filtered out`
                     : `Loaded ${v.length} items`,
@@ -10959,7 +10960,7 @@
             ]);
             const y = dt.OQ(c, 0, d.length - 1),
               b = d[y]?.id;
-            ha.Debug("Displaying appid", b),
+            Sa.Debug("Displaying appid", b),
               n.useEffect(() => {
                 b &&
                   !u.find((e) => e.id == b) &&
@@ -10971,7 +10972,7 @@
                   })(g, S));
               }, [S, b, u, g]);
             const [E, C] = n.useState();
-            if (ha.IsDebugEnabled()) {
+            if (Sa.IsDebugEnabled()) {
               const e = Array.from(
                 { length: Math.min(d.length, 10) },
                 (e, t) => {
@@ -10987,7 +10988,7 @@
               )
                 .filter((e) => !!e)
                 .join(", ");
-              ha.Debug(
+              Sa.Debug(
                 `useLoadItems: index ${y}, count ${d.length}, items: ${e}`,
               );
             }
@@ -10997,16 +10998,18 @@
           P = n.useCallback(
             (e) => {
               if (L) {
-                const e = Ia();
+                const e = Aa();
                 e.includes(k) ||
-                  (e.push(k), localStorage.setItem(va, JSON.stringify(e)));
+                  (e.push(k), localStorage.setItem(ya, JSON.stringify(e)));
               }
-              D((((A + (e ? 1 : -1)) % B) + B) % B), T(!1);
+              D(((e % B) + B) % B), T(!1);
             },
-            [L, k, A, B],
-          );
+            [L, k, B],
+          ),
+          N = n.useCallback((e) => P(A + (e ? 1 : -1)), [P, A]);
         if (r.enable_faceted_browsing) return;
-        const N = dt.OQ(A, 0, B - 1);
+        const F = dt.OQ(A, 0, B - 1),
+          R = B <= 30;
         return n.createElement(
           h.A,
           { feature: "trailercarousel" },
@@ -11023,66 +11026,74 @@
               style: (0, c.V)(r, t, S),
             },
             n.createElement(W.jR, { section: r, event: t, language: _ }),
-            n.createElement(ba, {
+            n.createElement(Ea, {
               appID: k,
               autoAdvanceMsec: r.trailer_carousel_auto_advance_msec,
               bPreferDemoStorePage: r.prefer_demo_store_page,
               bStartVideoWhenHidden: !G,
-              fnNavigate: P,
+              fnNavigate: N,
               introVideo: L,
-              bCanGoForward: N < B - 1,
-              bCanGoBackward: N > 0,
+              appIndex: F,
+              appCount: B,
+              wrapAround: R,
               arrowFill: t.jsondata?.sale_carousel_arrow_color,
             }),
+            (S || (0, gt.$W)() || R) &&
+              n.createElement(ha.A, {
+                count: B,
+                selectedIndex: A,
+                fnNavigate: P,
+              }),
           ),
         );
       }
-      function ba(e) {
+      function Ea(e) {
         const {
             appID: t,
             autoAdvanceMsec: a,
             bPreferDemoStorePage: r,
             fnNavigate: s,
             introVideo: i,
-            bCanGoForward: l,
-            bCanGoBackward: c,
-            bStartVideoWhenHidden: u,
-            arrows: m = !0,
-            arrowFill: d = "white",
+            bStartVideoWhenHidden: l,
+            appIndex: c,
+            appCount: u,
+            wrapAround: m,
+            arrows: d = !0,
+            arrowFill: _ = "white",
           } = e,
-          _ = (0, v.Qn)(),
-          [p, S] = n.useState(!1),
-          [y, b] = n.useState(!1),
-          [E, C] = n.useState(!1),
-          [w, I] = n.useState(!!u),
-          A = n.useRef(),
-          [G] = (0, o.t7)(t, Sa),
-          T =
-            r && G?.HasDemoStandaloneStorePage()
-              ? G.GetDemoStandaloneStorePageAppIDs()[0]
+          p = (0, v.Qn)(),
+          [S, y] = n.useState(!1),
+          [b, E] = n.useState(!1),
+          [C, w] = n.useState(!1),
+          [I, A] = n.useState(!!l),
+          G = n.useRef(),
+          [T] = (0, o.t7)(t, fa),
+          k =
+            r && T?.HasDemoStandaloneStorePage()
+              ? T.GetDemoStandaloneStorePageAppIDs()[0]
               : 0,
-          [k] = (0, o.t7)(T, Sa),
-          B = (0, lt.R7)(),
-          L = B?.ownerWindow || window,
-          P = Ca(G, r),
-          [N, F] = n.useState(0),
-          [R, M] = n.useState(),
-          O = n.useRef(),
-          x = (0, z.ru)(fa),
-          H = (0, ot.b)();
+          [B] = (0, o.t7)(k, fa),
+          L = (0, lt.R7)(),
+          P = L?.ownerWindow || window,
+          N = wa(T, r),
+          [F, R] = n.useState(0),
+          [M, O] = n.useState(),
+          x = n.useRef(),
+          H = (0, z.ru)(va),
+          U = (0, ot.b)();
         n.useEffect(() => {
-          t && H.AddImpression(t, x);
-        }, [t, H, x]);
-        const { bIsWishlisted: U, fnUpdateWishlist: V } = (0, ct.u4)(t);
+          t && U.AddImpression(t, H);
+        }, [t, U, H]);
+        const { bIsWishlisted: V, fnUpdateWishlist: W } = (0, ct.u4)(t);
         n.useEffect(() => {
-          void 0 !== O.current &&
-            O.current !== t &&
-            ((O.current = void 0), F(0));
+          void 0 !== x.current &&
+            x.current !== t &&
+            ((x.current = void 0), R(0));
         }, [t]);
         const {
-            bTabHidden: W,
-            bOffscreen: q,
-            refIntersection: j,
+            bTabHidden: q,
+            bOffscreen: j,
+            refIntersection: Q,
           } = (function () {
             const [e, t] = n.useState(!1),
               [a, r] = n.useState(!1);
@@ -11098,84 +11109,86 @@
               i = (0, _t.BL)(s, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: i };
           })(),
-          Q = n.useCallback(async () => {
-            if (W || q) return void C(!0);
-            (O.current = t), F(1);
+          $ = n.useCallback(async () => {
+            if (q || j) return void w(!0);
+            (x.current = t), R(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
                 const t = 1 - (new Date().getTime() - e) / 500;
-                M(Math.max(t, 0));
+                O(Math.max(t, 0));
               }, 30);
             await new Promise((e) => setTimeout(e, 500)),
               window.clearTimeout(a),
-              M(void 0),
-              O.current == t &&
-                ((O.current = void 0),
+              O(void 0),
+              x.current == t &&
+                ((x.current = void 0),
                 s(!0),
-                F(2),
+                R(2),
                 await new Promise((e) => setTimeout(e, 500))),
-              F(0);
-          }, [t, W, q, s]);
+              R(0);
+          }, [t, q, j, s]);
         n.useEffect(() => {
-          W || q || !E || (C(!1), Q());
-        }, [E, W, q, Q]);
-        const $ = !i;
-        let Y;
-        y
-          ? (Y = 4)
-          : p && !(0, gt.$W)()
-            ? (Y = 3)
-            : 0 != N
-              ? (Y = 0)
-              : W
-                ? (Y = 1)
-                : q && (Y = 2),
+          q || j || !C || (w(!1), $());
+        }, [C, q, j, $]);
+        const Y = !i;
+        let X;
+        b
+          ? (X = 4)
+          : S && !(0, gt.$W)()
+            ? (X = 3)
+            : 0 != F
+              ? (X = 0)
+              : q
+                ? (X = 1)
+                : j && (X = 2),
           n.useEffect(() => {
-            1 != Y && 2 != Y && I(!0);
-          }, [Y]);
-        const X = k?.GetAllTrailers().BHasTrailers() ? k.GetAppID() : t;
+            1 != X && 2 != X && A(!0);
+          }, [X]);
+        const Z = B?.GetAllTrailers().BHasTrailers() ? B.GetAppID() : t,
+          J = m ? u > 1 : c > 0,
+          ee = m ? u > 1 : c < u - 1;
         return n.createElement(
           h.A,
-          { feature: fa },
+          { feature: va },
           n.createElement(
             K.Z,
             {
               focusable: !0,
               className: (0, f.A)(ga().TrailerCarouselApp),
-              ref: j,
-              onOptionsActionDescription: U
+              ref: Q,
+              onOptionsActionDescription: V
                 ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
                 : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
-              onOptionsButton: V,
+              onOptionsButton: W,
               onOKActionDescription: (0, D.we)(
                 "#SaleTrailerCarousel_ViewStorePage",
               ),
               onOKButton: () => {
-                L.location.href = P;
+                P.location.href = N;
               },
               onSecondaryActionDescription: (0, D.we)(
                 "#SaleTrailerCarousel_PlayPause",
               ),
-              onSecondaryButton: () => A.current?.(),
+              onSecondaryButton: () => G.current?.(),
               onGamepadDirection: (e) =>
                 (e.detail.button == st.pR.DIR_LEFT ||
                   e.detail.button == st.pR.DIR_RIGHT) &&
                 (s(e.detail.button == st.pR.DIR_RIGHT), !0),
-              onMouseEnter: () => S(!0),
-              onMouseLeave: () => S(!1),
+              onMouseEnter: () => y(!0),
+              onMouseLeave: () => y(!1),
             },
             n.createElement(
               "div",
               { className: (0, f.A)(ga().VideoRow, "VideoRow") },
-              m &&
-                c &&
+              d &&
+                J &&
                 n.createElement(
                   "button",
                   {
                     className: (0, f.A)(ga().NavButton, ga().Left),
                     onClick: () => s(!1),
                   },
-                  n.createElement(g.uMb, { fill: d }),
+                  n.createElement(g.uMb, { fill: _ }),
                 ),
               n.createElement(
                 "div",
@@ -11183,8 +11196,8 @@
                 n.createElement("div", {
                   className: (0, f.A)(
                     ga().Fade,
-                    1 === N && ga().FadeOut,
-                    2 === N && ga().FadeIn,
+                    1 === F && ga().FadeOut,
+                    2 === F && ga().FadeIn,
                   ),
                   style: {
                     "--fade-out-time": "0.5s",
@@ -11192,57 +11205,57 @@
                   },
                 }),
                 n.createElement(ct.y3, {
-                  appID: X,
-                  focused: w,
+                  appID: Z,
+                  focused: I,
                   skipMicroTrailer: i,
                   playWithBroadcastPlayer: i,
                   autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                   showScreenshotInsteadOfMainCap: !i,
-                  fadeRatio: R,
-                  fnPlayPause: b,
-                  refTogglePlayPause: A,
-                  bRequestPause: W || q,
-                  fnComplete: Q,
+                  fadeRatio: M,
+                  fnPlayPause: E,
+                  refTogglePlayPause: G,
+                  bRequestPause: q || j,
+                  fnComplete: $,
                   loopVideo: !1,
                   defaultVolume: 0,
                 }),
-                n.createElement(Ea, {
+                n.createElement(Ca, {
                   key: t,
                   appID: t,
                   preferDemoStorePage: e.bPreferDemoStorePage,
                   introVideo: i,
                 }),
               ),
-              m &&
-                l &&
+              d &&
+                ee &&
                 n.createElement(
                   "button",
                   {
                     className: (0, f.A)(ga().NavButton, ga().Right),
                     onClick: () => s(!0),
                   },
-                  n.createElement(g.uMb, { fill: d }),
+                  n.createElement(g.uMb, { fill: _ }),
                 ),
             ),
-            !_ &&
+            !p &&
               !(0, gt.$W)() &&
               n.createElement(Ct, {
-                className: (0, f.A)(ga().AutoAdvanceRow, $ && ga().Enabled),
-                enabled: $,
+                className: (0, f.A)(ga().AutoAdvanceRow, Y && ga().Enabled),
+                enabled: Y,
                 currentItemKey: t,
                 autoAdvanceMsec: a,
-                fnAdvance: Q,
-                pauseReason: Y,
+                fnAdvance: $,
+                pauseReason: X,
               }),
           ),
         );
       }
-      function Ea(e) {
+      function Ca(e) {
         const { appID: t, preferDemoStorePage: a, introVideo: r } = e,
-          [s] = (0, o.t7)(t, Sa),
+          [s] = (0, o.t7)(t, fa),
           { bIsIgnored: i, fnUpdateIgnored: l } = (0, ct.TK)(t),
           { bIsWishlisted: c, fnUpdateWishlist: u } = (0, ct.u4)(t),
-          m = Ca(s, a),
+          m = wa(s, a),
           d = (0, v.Qn)(),
           _ = (0, Ee.LG)(s?.GetTagIDs());
         if (!s)
@@ -11273,7 +11286,7 @@
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(wa, { rgTagNames: _ }),
+                n.createElement(Ia, { rgTagNames: _ }),
               ),
             n.createElement(
               "div",
@@ -11354,10 +11367,10 @@
             ),
         );
       }
-      function Ca(e, t) {
+      function wa(e, t) {
         return (0, z.aL)(e?.GetStorePageURL(t));
       }
-      function wa(e) {
+      function Ia(e) {
         const { rgTagNames: t } = e,
           a = (0, ct.W3)(t);
         return n.createElement(
@@ -11372,14 +11385,14 @@
           ),
         );
       }
-      function Ia() {
+      function Aa() {
         try {
-          return JSON.parse(localStorage.getItem(va)) ?? [];
+          return JSON.parse(localStorage.getItem(ya)) ?? [];
         } catch (e) {
           return [];
         }
       }
-      function Aa(e, t) {
+      function Da(e, t) {
         n.useEffect(() => {
           let a;
           try {
@@ -11392,7 +11405,6 @@
             });
         }, [t, e]);
       }
-      var Da = a(60884);
       function Ga(e) {
         return e.recommendation &&
           e.recommendation.reason === b.Xe.k_EStatusString
@@ -11449,24 +11461,26 @@
           ),
           m = n.useCallback((e) => u(s + (e ? 1 : -1)), [u, s]),
           d = dt.OQ(s, 0, c - 1),
-          _ = t[d];
+          _ = t[d],
+          p = c <= 30;
         return (
           Pa(_?.id, (0, I.JK)(_?.item_type)),
           n.createElement(
             "div",
             null,
-            n.createElement(ba, {
+            n.createElement(Ea, {
               appID: _?.id,
               autoAdvanceMsec: 1e4,
               bStartVideoWhenHidden: !i,
               fnNavigate: m,
-              bCanGoForward: d < c - 1,
-              bCanGoBackward: d > 0,
+              appIndex: d,
+              appCount: c,
+              wrapAround: p,
               arrows: !r,
               arrowFill: a,
             }),
-            (r || (0, gt.$W)()) &&
-              n.createElement(Da.A, {
+            (r || (0, gt.$W)() || p) &&
+              n.createElement(ha.A, {
                 count: c,
                 selectedIndex: s,
                 fnNavigate: u,
@@ -19762,7 +19776,7 @@
           case "discoveryqueue":
             return n.createElement(An.kv, { ...e });
           case "trailercarousel":
-            return n.createElement(ya, { ...e });
+            return n.createElement(ba, { ...e });
           case "badge_progress":
             return n.createElement(Dn, { ...e });
           case "rewards":

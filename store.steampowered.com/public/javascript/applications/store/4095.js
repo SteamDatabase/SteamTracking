@@ -24588,7 +24588,7 @@
           [B] = (0, l.G6)(t.id, (0, o.SW)(t.type), b.current),
           I = (0, v.Lg)(B?.GetAppID());
         if (!B) return null;
-        const D = 1 === B.GetAppType() || B.BHasDemo(),
+        const D = (1 === B.GetAppType() && B.BIsReleased()) || B.BHasDemo(),
           M = (0, s.f)(t.type),
           A = r && M && D;
         let G = null;
