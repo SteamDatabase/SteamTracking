@@ -5152,6 +5152,32 @@ a.readmore_link
     resize: none;
 }
 
+.taxDocumentTable {
+	display: table;
+	width: 100%;
+	color: #b2b2b2;
+	border-spacing: 0 1px;
+}
+
+.taxDocumentTable .tr {
+	display: table-row;
+	text-decoration: none;
+}
+
+.taxDocumentTable .td a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.taxDocumentTable th, .taxDocumentTable .th {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #93979a;
+	display: table-cell;
+	font-weight: normal;
+	background-color: #434953;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive #profileBlock {

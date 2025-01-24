@@ -1243,6 +1243,7 @@ ${PARTNER_BASE_URL}promotion/themesales/dashboard
 ${PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
 ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
+${PARTNER_BASE_URL}pub/companydetails/${partnerid}
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
 ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
 ${PARTNER_BASE_URL}pub/publisher/${}

@@ -109,10 +109,10 @@
       "use strict";
       a.d(t, {
         MY: () => d,
-        UA: () => p,
+        UA: () => h,
         Yd: () => f,
         qG: () => y,
-        rN: () => h,
+        rN: () => p,
         vh: () => u,
       });
       var n = a(34629),
@@ -241,7 +241,7 @@
           t
         );
       }
-      function p(e) {
+      function h(e) {
         const [t, a] = o.useState(() => m.Get().GetPartnerInfo(e));
         return (
           o.useEffect(() => {
@@ -257,7 +257,7 @@
           [t]
         );
       }
-      function h() {
+      function p() {
         return { fnFindPartnerByName: m.Get().FindPartnerByName };
       }
       function f(e) {
@@ -281,8 +281,8 @@
         d = a(51272),
         m = a(84811),
         u = a(71541),
-        p = a(95034),
-        h = a(55263),
+        h = a(95034),
+        p = a(55263),
         f = a(82097),
         y = a(32179),
         v = a(8527),
@@ -291,9 +291,9 @@
         S = a(26408),
         N = a(54330);
       const b = { include_assets: !0, include_release: !0 };
-      function _(e) {
+      function w(e) {
         const { rgDeadlines: t } = e,
-          [a, i] = (0, p.QD)("query", ""),
+          [a, i] = (0, h.QD)("query", ""),
           r = (0, n.useMemo)(
             () =>
               Array.from(
@@ -308,7 +308,7 @@
               ),
             [t],
           ),
-          s = (0, h.zX)(r, b),
+          s = (0, p.zX)(r, b),
           l = (0, y.vh)(o),
           c = (0, n.useMemo)(() => {
             const e = a.trim().toLocaleLowerCase();
@@ -372,15 +372,15 @@
               "tbody",
               null,
               c.map((e) =>
-                n.createElement(w, { key: "" + e.deadlineid, deadline: e }),
+                n.createElement(_, { key: "" + e.deadlineid, deadline: e }),
               ),
             ),
           ),
         );
       }
-      function w(e) {
+      function _(e) {
         const { deadline: t } = e,
-          [a] = (0, h.t7)(t.data.store_item_id, b),
+          [a] = (0, p.t7)(t.data.store_item_id, b),
           [i] = (0, y.UA)(t.data.partnerid),
           r = (0, N.u)(t.data.store_item_id),
           o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
@@ -483,7 +483,7 @@
               "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
             ),
           ),
-          n.createElement(_, { rgDeadlines: t }),
+          n.createElement(w, { rgDeadlines: t }),
         );
       }
     },
@@ -505,8 +505,8 @@
         d = a(61859),
         m = a(52038),
         u = a(71541),
-        p = a(14771),
-        h = a(78327);
+        h = a(14771),
+        p = a(78327);
       function f(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
@@ -538,7 +538,7 @@
         else if (v != t.index) return null;
         const a = JSON.parse(t.deadline.data.description_jsondata);
         let i =
-          "dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
+          "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
             ? "https://valvesoftware-dev.taxidentity.com"
             : "https://valvesoftware.taxidentity.com";
         return (
@@ -639,8 +639,8 @@
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      var _ = a(738),
-        w = a(56011),
+      var w = a(738),
+        _ = a(56011),
         T = a(78395),
         C = a(41735),
         I = a.n(C);
@@ -655,6 +655,7 @@
           "DocReq-TreatyClaimUSAddress-FR",
           "DocReq-W8USAddress-FR",
           "DocReq-W8USParent-FR",
+          "F1099MISC-ConsentYes",
           "FailureToComply",
           "FailureToComply-KYC",
           "Freeform",
@@ -1283,6 +1284,55 @@
               );
             },
           },
+          "F1099MISC-ConsentYes": {
+            component: function (e) {
+              const { requirement: t } = e,
+                a = `${p.TS.PARTNER_BASE_URL}pub/companydetails/${t.deadline.data.partnerid}`,
+                i = JSON.parse(t.deadline.data.description_jsondata),
+                r = t.bTestDisplay
+                  ? new Date().getFullYear() - 1
+                  : i?.Parameters?.TaxYear,
+                o = r
+                  ? `Our records show that you consented to electronic delivery of your tax documents. You can find your 1099Misc tax statement for ${r} available\n\t\tfor download underneath your tax information in Steamworks. The form reflects the amount of Steam revenue payments we paid to you in ${r}.\n\t\tThis form is prepared on a cash-basis for each calendar year.`
+                  : "Our records show that you consented to electronic delivery of your tax documents. You can find a new 1099Misc tax statement available for download\n\t\tunderneath your tax information in Steamworks. This form is prepared on a cash-basis for each calendar year";
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "New tax form available for download",
+                  ),
+                ),
+                n.createElement("div", { className: s().SectionBody }, o),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "We plan to file this form with the taxing authorities by January 31 of this year. Please review this form carefully. There is no need to send anything back to us but if you have any questions, please let us know as soon as possible.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  n.createElement(
+                    u.jn,
+                    {
+                      onClick: () => window.open(a, "_blank"),
+                      className: s().NotificationButton,
+                    },
+                    "View Tax Documents",
+                  ),
+                ),
+              );
+            },
+          },
           FailureToComply: {
             component: function (e) {
               return n.createElement(
@@ -1620,7 +1670,7 @@
                         {
                           onClick: () =>
                             window.open(
-                              h.TS.HELP_BASE_URL +
+                              p.TS.HELP_BASE_URL +
                                 "en/wizard/HelpWithPublishing?issueid=904",
                               "_blank",
                             ),
@@ -1652,7 +1702,7 @@
                         {
                           onClick: () =>
                             window.open(
-                              h.TS.PARTNER_BASE_URL + "newpartner",
+                              p.TS.PARTNER_BASE_URL + "newpartner",
                               "_blank",
                             ),
                           className: s().NotificationButton,
@@ -1992,11 +2042,11 @@
               ? t
               : async () => {
                   const e = new FormData();
-                  e.append("sessionid", h.TS.SESSIONID),
+                  e.append("sessionid", p.TS.SESSIONID),
                     e.append("publisherid", "" + i),
                     e.append("subject", a),
                     e.append("message", r);
-                  const t = `${h.TS.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
+                  const t = `${p.TS.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
                     n = await I().post(t, e);
                   200 == n?.status && 1 == n.data?.success
                     ? c(
@@ -2032,7 +2082,7 @@
       }
       function A(e) {
         const [t, a, o, l, d] = B(),
-          [p, f] = (function () {
+          [h, f] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
               ),
@@ -2057,7 +2107,7 @@
             );
           }, [t]),
           E =
-            ("dev" == h.TS.WEB_UNIVERSE || "beta" == h.TS.WEB_UNIVERSE
+            ("dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
               ? "TEST:"
               : "") + JSON.parse(y[0]?.data.description_jsondata)?.Subject;
         return n.createElement(
@@ -2087,11 +2137,11 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  p && n.createElement(k, { strTemplate: f }),
+                  h && n.createElement(k, { strTemplate: f }),
                   !v &&
                     y.length > 0 &&
                     y.map((e, t) =>
-                      n.createElement(q, {
+                      n.createElement(D, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2152,9 +2202,9 @@
                       u.jn,
                       {
                         onClick: (e) =>
-                          (0, _.pg)(
+                          (0, w.pg)(
                             n.createElement(P, { subject: E, publisherid: l }),
-                            (0, w.uX)(e),
+                            (0, _.uX)(e),
                           ),
                         className: s().NotificationButton,
                       },
@@ -2177,7 +2227,7 @@
           d = new Intl.DateTimeFormat(navigator.language).format(l);
         return (
           (c.data = {}),
-          (c.data.due_date = l / 1e3 + 14 * p.Kp.PerDay),
+          (c.data.due_date = l / 1e3 + 14 * h.Kp.PerDay),
           (c.data.description_jsondata = `{ "TemplateName": "${a}", "CreatedOn": "${d}" }`),
           n.createElement(
             "div",
@@ -2204,13 +2254,18 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(q, {
-              requirement: { deadline: c, index: 0, onboarded: r },
+            n.createElement(D, {
+              requirement: {
+                deadline: c,
+                index: 0,
+                onboarded: r,
+                bTestDisplay: !0,
+              },
             }),
           )
         );
       }
-      function q(e) {
+      function D(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           [, i] = B(),
@@ -2249,7 +2304,7 @@
         gF: () => y,
         mZ: () => u,
         t7: () => c,
-        zX: () => h,
+        zX: () => p,
       });
       var n = a(41735),
         i = a.n(n),
@@ -2263,8 +2318,8 @@
         l.current = e;
         const [m, u] = (0, r.useState)(void 0),
           {
-            include_assets: p,
-            include_release: h,
+            include_assets: h,
+            include_release: p,
             include_platforms: f,
             include_all_purchase_options: y,
             include_screenshots: v,
@@ -2273,8 +2328,8 @@
             include_tag_count: S,
             include_reviews: N,
             include_basic_info: b,
-            include_supported_languages: _,
-            include_full_description: w,
+            include_supported_languages: w,
+            include_full_description: _,
             include_included_items: T,
             include_assets_without_overrides: C,
             apply_user_filters: I,
@@ -2283,8 +2338,8 @@
         if (
           ((0, r.useEffect)(() => {
             const a = {
-              include_assets: p,
-              include_release: h,
+              include_assets: h,
+              include_release: p,
               include_platforms: f,
               include_all_purchase_options: y,
               include_screenshots: v,
@@ -2293,8 +2348,8 @@
               include_tag_count: S,
               include_reviews: N,
               include_basic_info: b,
-              include_supported_languages: _,
-              include_full_description: w,
+              include_supported_languages: w,
+              include_full_description: _,
               include_included_items: T,
               include_assets_without_overrides: C,
               apply_user_filters: I,
@@ -2315,7 +2370,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, p, h, f, y, v, E, g, S, N, b, _, w, T, C, I, x, d]),
+          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, w, _, T, C, I, x, d]),
           !e)
         )
           return [null, 2];
@@ -2344,15 +2399,15 @@
         const [o, s] = c(r, a);
         return r && o?.BIsVisible() ? [o, s] : [n, i];
       }
-      function p(e, t, a, n) {
+      function h(e, t, a, n) {
         const l = (0, o.CH)(),
           {
             include_assets: c,
             include_release: d,
             include_platforms: m,
             include_all_purchase_options: u,
-            include_screenshots: p,
-            include_trailers: h,
+            include_screenshots: h,
+            include_trailers: p,
             include_ratings: f,
             include_tag_count: y,
             include_reviews: v,
@@ -2361,8 +2416,8 @@
             include_full_description: S,
             include_included_items: N,
             include_assets_without_overrides: b,
-            apply_user_filters: _,
-            include_links: w,
+            apply_user_filters: w,
+            include_links: _,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -2372,8 +2427,8 @@
                 include_release: d,
                 include_platforms: m,
                 include_all_purchase_options: u,
-                include_screenshots: p,
-                include_trailers: h,
+                include_screenshots: h,
+                include_trailers: p,
                 include_ratings: f,
                 include_tag_count: y,
                 include_reviews: v,
@@ -2382,8 +2437,8 @@
                 include_full_description: S,
                 include_included_items: N,
                 include_assets_without_overrides: b,
-                apply_user_filters: _,
-                include_links: w,
+                apply_user_filters: w,
+                include_links: _,
               },
               n = e.filter(
                 (e) =>
@@ -2401,7 +2456,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, c, d, m, u, p, h, f, y, v, E, g, S, N, b, _, w]),
+          }, [e, t, n, l, c, d, m, u, h, p, f, y, v, E, g, S, N, b, w, _]),
           !e)
         )
           return 2;
@@ -2419,14 +2474,14 @@
           ? 3
           : 2;
       }
-      function h(e, t, a) {
-        return p(e, 0, t, a);
+      function p(e, t, a) {
+        return h(e, 0, t, a);
       }
       function f(e, t, a) {
-        return p(e, 2, t, a);
+        return h(e, 2, t, a);
       }
       function y(e, t, a) {
-        return p(e, 1, t, a);
+        return h(e, 1, t, a);
       }
     },
     68797: (e, t, a) => {
