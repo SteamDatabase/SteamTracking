@@ -1447,7 +1447,6 @@ Plat_localtime
 Plat_timegm
 Plat_timezone
 QkkXa
-R+G0
 Rejang
 Runic
 SKIP

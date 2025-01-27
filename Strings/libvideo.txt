@@ -2418,7 +2418,6 @@ WINDOW_UPDATE: window_size_increment == 0
 Wcr"
 When a local endpoint expects to receive SETTINGS frame, it receives an other type of frame
 Wza]lw\t
-X57\
 XG[r
 XRJ2
 XhHp
