@@ -4054,23 +4054,24 @@
     67239: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Hm: () => D,
-        I8: () => b,
-        Pq: () => w,
+        Hm: () => C,
+        I8: () => w,
+        Pq: () => D,
         QP: () => c,
-        Qo: () => C,
-        Ue: () => f,
-        W7: () => _,
-        Yh: () => y,
-        Z7: () => E,
-        ZK: () => g,
-        ZL: () => S,
-        db: () => p,
+        Qo: () => I,
+        Ue: () => b,
+        W7: () => g,
+        Yh: () => v,
+        Z7: () => S,
+        ZK: () => h,
+        ZL: () => y,
+        db: () => _,
         lF: () => u,
         lt: () => d,
-        qt: () => v,
-        re: () => h,
-        vm: () => I,
+        n5: () => p,
+        qt: () => f,
+        re: () => E,
+        vm: () => B,
         wv: () => m,
       });
       var n = a(17720),
@@ -4109,76 +4110,77 @@
           ])),
         d = new Set(["dailydeal", "assetrequest"]),
         u = 604800,
-        p = 0,
-        _ = new Map();
-      _.set("midweek", "Midweek Deal"),
-        _.set("weekenddeal", "Weekend Deal"),
-        _.set("saleevent", "Sale Event"),
-        _.set("themesale", "Theme Sale"),
-        _.set("nextfest", "Next Fests"),
-        _.set("seasonalsale", "Seasonal Sale"),
-        _.set("informational", "Informational"),
-        _.set("dailydeal", "Daily Deal"),
-        _.set("vacation", "Vacation/PTO"),
-        _.set("important", "Takeover / Takeunder"),
-        _.set("preload", "Pre-load"),
-        _.set("assetrequest", "Asset Request Only");
-      const g = new Set();
-      g.add("seasonalsale"), g.add("themesale"), g.add("nextfest");
-      new Set().add("vacation");
+        p = 172800,
+        _ = 0,
+        g = new Map();
+      g.set("midweek", "Midweek Deal"),
+        g.set("weekenddeal", "Weekend Deal"),
+        g.set("saleevent", "Sale Event"),
+        g.set("themesale", "Theme Sale"),
+        g.set("nextfest", "Next Fests"),
+        g.set("seasonalsale", "Seasonal Sale"),
+        g.set("informational", "Informational"),
+        g.set("dailydeal", "Daily Deal"),
+        g.set("vacation", "Vacation/PTO"),
+        g.set("important", "Takeover / Takeunder"),
+        g.set("preload", "Pre-load"),
+        g.set("assetrequest", "Asset Request Only");
       const h = new Set();
-      h.add("important");
-      const E = new Map();
-      E.set("midweek", "#254069"),
-        E.set("weekenddeal", "#254069"),
-        E.set("saleevent", "#819c8a"),
-        E.set("themesale", "#819c8a"),
-        E.set("nextfest", "#819c8a"),
-        E.set("seasonalsale", "#819c8a"),
-        E.set("informational", "#474747"),
-        E.set("dailydeal", "#80275D"),
-        E.set("vacation", "#6f7485"),
-        E.set("important", "#40ccfd"),
-        E.set("preload", "#A47332"),
-        E.set("assetrequest", "#80875D");
+      h.add("seasonalsale"), h.add("themesale"), h.add("nextfest");
+      new Set().add("vacation");
+      const E = new Set();
+      E.add("important");
       const S = new Map();
-      S.set("midweek", "#discount_desc_preset_midweek"),
-        S.set("weekenddeal", "#discount_desc_preset_weekend"),
-        S.set("saleevent", "#discount_desc_preset_special"),
-        S.set("themesale", "#discount_desc_preset_special"),
-        S.set("nextfest", "#discount_desc_preset_special"),
-        S.set("seasonalsale", "#discount_desc_preset_special"),
-        S.set("informational", "#discount_desc_limited_time_date"),
-        S.set("dailydeal", "#discount_desc_preset_daily"),
-        S.set("vacation", "#discount_desc_limited_time_date"),
-        S.set("important", "#discount_desc_limited_time_date"),
-        S.set("preload", "#discount_desc_limited_time_date");
+      S.set("midweek", "#254069"),
+        S.set("weekenddeal", "#254069"),
+        S.set("saleevent", "#819c8a"),
+        S.set("themesale", "#819c8a"),
+        S.set("nextfest", "#819c8a"),
+        S.set("seasonalsale", "#819c8a"),
+        S.set("informational", "#474747"),
+        S.set("dailydeal", "#80275D"),
+        S.set("vacation", "#6f7485"),
+        S.set("important", "#40ccfd"),
+        S.set("preload", "#A47332"),
+        S.set("assetrequest", "#80875D");
       const y = new Map();
-      y.set("midweek", ["Midweek", "Midweek Deal"]),
-        y.set("weekenddeal", ["Weekend", "Weekend Deal"]);
+      y.set("midweek", "#discount_desc_preset_midweek"),
+        y.set("weekenddeal", "#discount_desc_preset_weekend"),
+        y.set("saleevent", "#discount_desc_preset_special"),
+        y.set("themesale", "#discount_desc_preset_special"),
+        y.set("nextfest", "#discount_desc_preset_special"),
+        y.set("seasonalsale", "#discount_desc_preset_special"),
+        y.set("informational", "#discount_desc_limited_time_date"),
+        y.set("dailydeal", "#discount_desc_preset_daily"),
+        y.set("vacation", "#discount_desc_limited_time_date"),
+        y.set("important", "#discount_desc_limited_time_date"),
+        y.set("preload", "#discount_desc_limited_time_date");
       const v = new Map();
-      v.set("none", ""),
-        v.set("takeover", "Takeover"),
-        v.set("takeunder", "Takeunder"),
-        v.set("hub_takeover", "Hub"),
-        v.set("regional_takeunder", "Regional Takeunder"),
-        v.set("f2p", "F2P"),
-        v.set("ea", "EA"),
-        v.set("steamchina_takeover", "SC Takeover"),
-        v.set("steamchina_only", "SC");
-      const f = [
+      v.set("midweek", ["Midweek", "Midweek Deal"]),
+        v.set("weekenddeal", ["Weekend", "Weekend Deal"]);
+      const f = new Map();
+      f.set("none", ""),
+        f.set("takeover", "Takeover"),
+        f.set("takeunder", "Takeunder"),
+        f.set("hub_takeover", "Hub"),
+        f.set("regional_takeunder", "Regional Takeunder"),
+        f.set("f2p", "F2P"),
+        f.set("ea", "EA"),
+        f.set("steamchina_takeover", "SC Takeover"),
+        f.set("steamchina_only", "SC");
+      const b = [
           "marketingmessage_art",
           "marketingmessage_art_2",
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
         ],
-        b = [
+        w = [
           "takeover_webm_art",
           "takeover_mp4_art",
           "takeover_webm_mobile_art",
           "takeover_mp4_mobile_art",
         ];
-      function w(e) {
+      function D(e) {
         switch (e) {
           case "marketingmessage_art":
             return "Marketing Message Banner";
@@ -4226,7 +4228,7 @@
             return "Unknown Promo Art Request";
         }
       }
-      class D {
+      class C {
         static GetSpotlightEditURL(e) {
           return l.TS.PARTNER_BASE_URL + "admin/store/spotlight/" + e;
         }
@@ -4238,13 +4240,13 @@
         static GetClusterEditURL(e, t) {
           switch (e) {
             case o.ii.k_ConfigPage_Takeover:
-              return D.GetTakeoverEditURL(t);
+              return C.GetTakeoverEditURL(t);
             case o.ii.k_ConfigPage_Takeunder:
-              return D.GetTakeunderEditURL(t);
+              return C.GetTakeunderEditURL(t);
             case o.ii.k_ConfigPage_TakeoverSteamChina:
-              return D.GetSteamChinaTakeoverEditURL(t);
+              return C.GetSteamChinaTakeoverEditURL(t);
             default:
-              return D.GetContentHubTakeoverEditURL(e, t);
+              return C.GetContentHubTakeoverEditURL(e, t);
           }
         }
         static GetTakeoverEditURL(e) {
@@ -4301,8 +4303,8 @@
           return l.TS.PARTNER_BASE_URL + "apps/landing/" + e;
         }
       }
-      const C = new Map();
-      C.set("midweek", {
+      const I = new Map();
+      I.set("midweek", {
         nMaxSlots: 6,
         rtStartModifier: 10 * s.Kp.PerHour,
         rtEndModifier: 3 * s.Kp.PerDay + 10 * s.Kp.PerHour,
@@ -4317,7 +4319,7 @@
         nDaysDiscountEvent: 7,
         rtDays: 3,
       }),
-        C.set("weekenddeal", {
+        I.set("weekenddeal", {
           nMaxSlots: 6,
           rtStartModifier: 3 * s.Kp.PerDay + 10 * s.Kp.PerHour,
           rtEndModifier: 7 * s.Kp.PerDay + 10 * s.Kp.PerHour,
@@ -4332,8 +4334,8 @@
           nDaysDiscountEvent: 7,
           rtDays: 4,
         });
-      const I = ["midweek", "weekenddeal"];
-      new Set(I);
+      const B = ["midweek", "weekenddeal"];
+      new Set(B);
     },
     92135: (e, t, a) => {
       "use strict";
@@ -12518,6 +12520,9 @@
             e
           );
         }
+        GetArtTeamDueDate() {
+          return this.m_oPromotionPlan.artwork_production_team_due_date;
+        }
         GetSlackChannel() {
           return this.m_oPromotionPlan.slack_channel;
         }
@@ -13006,6 +13011,11 @@
             ((this.m_oPromotionPlan.artwork_localization_steam_china_only = e),
             this.Dispatch());
         }
+        SetArtworkProductionTeamDueDate(e) {
+          this.m_oPromotionPlan.artwork_production_team_due_date != e &&
+            ((this.m_oPromotionPlan.artwork_production_team_due_date = e),
+            this.Dispatch());
+        }
         ToggleArtworkLocalizationRequest(e, t) {
           if (t && !this.BHasArtworkLocalizationRequest(e))
             this.m_oPromotionPlan.artwork_localization_request_items ||
@@ -13159,6 +13169,7 @@
           "SetArtworkLocalizationSteamChinaOnly",
           null,
         ),
+        (0, n.Cg)([i.oI], u.prototype, "SetArtworkProductionTeamDueDate", null),
         (0, n.Cg)(
           [i.oI],
           u.prototype,
@@ -40249,12 +40260,15 @@
       }
       function O(e) {
         const t = (0, o.ok)(),
-          [a, n, r, i, s] = (0, c.q3)(() => [
+          a = (0, l.bE)(),
+          [n, r, i, s, m, d, p] = (0, c.q3)(() => [
             t.GetID(),
             t.GetPartnerRequireArtworkReview(),
             t.GetStoreItemKey(),
             t.GetPartnerID(),
             t.GetOriginalPartnerID(),
+            a.GetDueDate(),
+            t.GetArtTeamDueDate(),
           ]);
         return u.createElement(
           "div",
@@ -40263,9 +40277,9 @@
             "div",
             { className: E().PartnerSettingCtn },
             u.createElement(S.G, {
-              storeItemKey: r,
-              nPartnerID: i,
-              nOriginalPartnerID: s,
+              storeItemKey: i,
+              nPartnerID: s,
+              nOriginalPartnerID: m,
               fnUpdatePartnerID: t.SetPartnerID,
               showPartnerInitialSetWarning: !0,
               autoSelectPartnerFromStoreItem: !1,
@@ -40275,7 +40289,7 @@
                 "Requires partner approval of final art assets we created (uncommon)",
               tooltip:
                 "Only tick this if absolutely necessary. Limit this setting this to only those partners that are required to get external review by IP holders.",
-              checked: n,
+              checked: r,
               onChange: (e) => t.SetPartnerRequireArtworkReview(e),
             }),
           ),
@@ -40286,8 +40300,20 @@
             u.createElement(
               "div",
               null,
-              u.createElement(U, null),
+              u.createElement(U, {
+                strTitle: "Partner Due Date:",
+                rtDueDate: d,
+                fnSetDueDate: a.SetDueDate,
+                bPartnerDueDate: !0,
+              }),
               u.createElement(x, null),
+              u.createElement("br", null),
+              u.createElement(U, {
+                strTitle: "Art Production Team Due Date:",
+                rtDueDate: p,
+                fnSetDueDate: t.SetArtworkProductionTeamDueDate,
+                bPartnerDueDate: !1,
+              }),
             ),
           ),
           u.createElement("br", null),
@@ -40339,15 +40365,21 @@
         );
       }
       function U(e) {
-        const t = (0, o.ok)(),
-          a = (0, l.bE)(),
-          [n, s] = (0, u.useState)(null != a.GetDueDate()),
-          [m, p] = (0, c.q3)(() => [t.GetStartDate(), a.GetDueDate()]);
-        return n
+        const {
+            strTitle: t,
+            rtDueDate: a,
+            fnSetDueDate: n,
+            bPartnerDueDate: s,
+          } = e,
+          l = (0, o.ok)(),
+          [m, p] = (0, u.useState)(null != a),
+          [h] = (0, c.q3)(() => [l.GetStartDate()]),
+          S = s ? i.lF : i.n5;
+        return m
           ? u.createElement(
               u.Fragment,
               null,
-              u.createElement("h3", null, "DUE DATE"),
+              u.createElement("h3", null, t),
               u.createElement(
                 "div",
                 { style: { paddingBottom: "10px" } },
@@ -40356,47 +40388,46 @@
               u.createElement(
                 "div",
                 { className: E().EditDueDateContainer },
-                p != i.db &&
+                a != i.db &&
                   u.createElement(r(), {
                     timeFormat: !1,
                     onChange: (e) => {
-                      e.unix && a.SetDueDate(e.unix());
+                      e.unix && n(e.unix());
                     },
                     isValidDate: (e) =>
                       e.unix() <
-                      d().unix(m).hour(0).seconds(0).minute(0).unix(),
-                    value: p ? new Date(1e3 * p) : void 0,
+                      d().unix(h).hour(0).seconds(0).minute(0).unix(),
+                    value: a ? new Date(1e3 * a) : void 0,
                   }),
-                u.createElement(
-                  "span",
-                  { className: E().ButtonDueDateASAP },
-                  u.createElement(_.Yh, {
-                    label: (0, g.we)("#AssetRequest_DueDate_ASAP"),
-                    onClick: () => {
-                      a.GetDueDate() != i.db
-                        ? a.SetDueDate(i.db)
-                        : a.SetDueDate(m - i.lF);
-                    },
-                    checked: p == i.db,
-                  }),
-                ),
+                s &&
+                  u.createElement(
+                    "span",
+                    { className: E().ButtonDueDateASAP },
+                    u.createElement(_.Yh, {
+                      label: (0, g.we)("#AssetRequest_DueDate_ASAP"),
+                      onClick: () => {
+                        a != i.db ? n(i.db) : n(h - S);
+                      },
+                      checked: a == i.db,
+                    }),
+                  ),
               ),
               u.createElement(
                 "p",
                 null,
                 "( Promotion Starts: ",
-                (0, g.TW)(m),
+                (0, g.TW)(h),
                 " )",
               ),
             )
           : u.createElement(
               u.Fragment,
               null,
-              u.createElement("h3", null, "Due Date: "),
+              u.createElement("h3", null, t),
               u.createElement(
                 "h2",
                 null,
-                q(p, m),
+                q(a, h, S),
                 u.createElement(
                   "div",
                   { className: E().DateCustomizeCtn },
@@ -40405,7 +40436,7 @@
                     null,
                     u.createElement(_.Yh, {
                       label: "Customize",
-                      onClick: () => s(!0),
+                      onClick: () => p(!0),
                       checked: !1,
                     }),
                   ),
@@ -40477,12 +40508,12 @@
           ),
         );
       }
-      function q(e, t) {
+      function q(e, t, a) {
         return null != e
           ? e == i.db
             ? (0, g.we)("#AssetRequest_DueDate_ASAP")
             : (0, g.TW)(e)
-          : (0, g.TW)(t - i.lF);
+          : (0, g.TW)(t - a);
       }
     },
     21257: (e, t, a) => {
@@ -40988,7 +41019,7 @@
             { className: c().Deadline },
             (0, h.we)("#AssetRequest_Deadline"),
             " ",
-            i.createElement("span", null, (0, z.BO)(n, r)),
+            i.createElement("span", null, (0, z.BO)(n, r, M.lF)),
           ),
         );
       }
@@ -64275,11 +64306,11 @@
     77155: (e, t, a) => {
       "use strict";
       a.d(t, {
-        In: () => D,
-        VB: () => f,
+        In: () => B,
+        VB: () => w,
         mM: () => n,
-        oz: () => v,
-        uK: () => w,
+        oz: () => b,
+        uK: () => C,
       });
       var n,
         r = a(90626),
@@ -64297,8 +64328,10 @@
         h = a(70065),
         E = a(30470),
         S = a(61859),
-        y = a(91675);
-      function v(e) {
+        y = a(91675),
+        v = a(67239),
+        f = a(34585);
+      function b(e) {
         const { oEditablePlan: t } = e;
         return r.createElement(
           r.Fragment,
@@ -64366,7 +64399,7 @@
           ),
         );
       }
-      function f(e) {
+      function w(e) {
         const { oEditablePlan: t } = e,
           a = (0, u.R5)(t.GetID()),
           [n, s] = (0, p.q3)(() => [
@@ -64377,7 +64410,7 @@
           ? r.createElement(
               "div",
               null,
-              r.createElement(b, { oEditablePlan: t }),
+              r.createElement(D, { oEditablePlan: t }),
               Boolean(n?.trim().length > 0) &&
                 r.createElement(
                   "div",
@@ -64402,7 +64435,7 @@
             )
           : null;
       }
-      function b(e) {
+      function D(e) {
         const { oEditablePlan: t } = e,
           [a, n] = (0, p.q3)(() => [
             t.BIsDeliveryReviewed(),
@@ -64414,11 +64447,11 @@
               r.Fragment,
               null,
               Boolean(a)
-                ? r.createElement(I, { oEditablePlan: t })
-                : r.createElement(C, { oEditablePlan: t }),
+                ? r.createElement(M, { oEditablePlan: t })
+                : r.createElement(T, { oEditablePlan: t }),
             );
       }
-      function w(e, t) {
+      function C(e, t) {
         return (0, r.useMemo)(
           () =>
             e.artwork_completed_time
@@ -64433,14 +64466,84 @@
           [e, t],
         );
       }
-      function D(e) {
+      function I(e) {
+        const { input: t } = e,
+          [a] = (0, p.q3)(() => [t?.art_requests]),
+          n = (0, r.useMemo)(() => {
+            if (!a?.length) return null;
+            const e = new Set();
+            return (
+              a.forEach((t) =>
+                e.add(
+                  (function (e) {
+                    switch (e) {
+                      case "app_header_capsule":
+                      case "app_main_capsule":
+                        return "Adverting App";
+                      case "takeunder_art":
+                      case "takeunder_mobile_art":
+                        return "Takeunder";
+                      case "product_banner":
+                      case "product_mobile_banner":
+                        return "Store Page Banner";
+                      case "sale_header":
+                      case "sale_logo":
+                      case "capsule":
+                      case "localized_title_image":
+                        return "Sale Page Assets";
+                      case "takeover_art":
+                      case "takeover_mobile_art":
+                      case "takeover_webm_art":
+                      case "takeover_mp4_art":
+                      case "takeover_webm_mobile_art":
+                      case "takeover_mp4_mobile_art":
+                        return "Takeover";
+                      case "marketingmessage_art":
+                      case "marketingmessage_art_2":
+                        return "MM";
+                      case "marketingmessage_art_eventcapsule":
+                      case "marketingmessage_art_2_eventcapsule":
+                        return "MM Event";
+                      case "spotlight_art":
+                        return "Spotlight";
+                    }
+                    return "uknown";
+                  })(t),
+                ),
+              ),
+              Array.from(e)
+            );
+          }, [a]);
+        return n?.length
+          ? r.createElement(
+              "div",
+              null,
+              "Assets:\t",
+              n.map((e, t) =>
+                r.createElement(
+                  "span",
+                  { key: e },
+                  e,
+                  t + 1 < n.length ? ", " : "",
+                ),
+              ),
+            )
+          : null;
+      }
+      function B(e) {
         const { oEditablePlan: t } = e,
           a = (0, u.R5)(t.GetPlan().id),
-          i = w((0, u.ru)(t.GetPlan()), a);
+          i = C((0, u.ru)(t.GetPlan()), a),
+          [s, l] = (0, p.q3)(() => [t.GetArtTeamDueDate(), t.GetStartDate()]);
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement("h2", null, "Asset Process"),
+          r.createElement(
+            "h2",
+            null,
+            "Asset Process: Due ",
+            (0, f.BO)(s, l, v.n5),
+          ),
           r.createElement(
             "div",
             { className: d.AssetTimelineCtn },
@@ -64469,9 +64572,10 @@
               "Localization Complete",
             ),
           ),
+          r.createElement(I, { input: a }),
         );
       }
-      function C(e) {
+      function T(e) {
         const { oEditablePlan: t } = e;
         return r.createElement(
           "div",
@@ -64482,7 +64586,7 @@
               className: d.StatusBtn,
               onClick: (e) =>
                 (0, l.pg)(
-                  r.createElement(B, { oEditablePlan: t, bReviewVerify: !0 }),
+                  r.createElement(A, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, c.uX)(e),
                 ),
             },
@@ -64490,7 +64594,7 @@
           ),
         );
       }
-      function I(e) {
+      function M(e) {
         const { oEditablePlan: t } = e,
           [a, n] = (0, p.q3)(() => [
             t.GetDeliveryReviewTime(),
@@ -64516,7 +64620,7 @@
                   className: d.StatusBtn,
                   onClick: (e) =>
                     (0, l.pg)(
-                      r.createElement(B, {
+                      r.createElement(A, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -64537,7 +64641,7 @@
           ),
         );
       }
-      function B(e) {
+      function A(e) {
         const { oEditablePlan: t, closeModal: a, bReviewVerify: n } = e,
           s = (0, u.R5)(t.GetID()),
           [l, o] = (0, r.useState)(t.GetDeliveryReviewNotes());
@@ -65749,109 +65853,118 @@
             });
             return e;
           })(),
-          [n, r, i, s, l, o, c, m, p, _, g, h, S, y, v, f, b] = (0, d.q3)(
-            () => [
-              t.GetType(),
-              t.BRequiresSalePage(),
-              t.GetSaleClanAccountID(),
-              t.GetSpotlightIDs(0),
-              t.GetMarketingMessageID(0),
-              t.GetTakeoverID(0),
-              t.GetTakeunderID(0),
-              t.GetAdvertisingAppID(),
-              t.GetOptInID(),
-              t.GetSlackChannel(),
-              t.GetDiscountEventID(),
-              t.GetFeaturingIntention(),
-              t.GetAssetKitURL(),
-              t.GetSteamChinaTakeoverID(0),
-              t.GetContentHubTakeoverCount(),
-              t.GetPartnerID(),
-              t.GetFeaturedItemID(),
-            ],
-          ),
-          w = a.get(n),
-          D = [],
-          C = (0, k.te)(f);
+          [n, i, s, l, o, c, m, p, _, g, h, S, y, v, f, b, w, D, C, B] = (0,
+          d.q3)(() => [
+            t.GetType(),
+            t.BRequiresSalePage(),
+            t.GetSaleClanAccountID(),
+            t.GetSpotlightIDs(0),
+            t.GetMarketingMessageID(0),
+            t.GetTakeoverID(0),
+            t.GetTakeunderID(0),
+            t.GetAdvertisingAppID(),
+            t.GetOptInID(),
+            t.GetSlackChannel(),
+            t.GetDiscountEventID(),
+            t.GetFeaturingIntention(),
+            t.GetAssetKitURL(),
+            t.GetSteamChinaTakeoverID(0),
+            t.GetContentHubTakeoverCount(),
+            t.GetPartnerID(),
+            t.GetFeaturedItemID(),
+            t.GetSaleClanEventGID(),
+            t.GetStartDate(),
+            t.GetArtTeamDueDate() || t.GetStartDate() - r.n5,
+          ]),
+          T = (0, ye.dB)(s, D),
+          M = a.get(n),
+          A = [],
+          R = (0, k.te)(b);
         return (
-          w.includes(Te.k_TakeOver) &&
-            !o &&
-            D.push(
+          M.includes(Te.k_TakeOver) &&
+            !c &&
+            A.push(
               "Promotion requires a Takeover which hasn't been linked yet.",
             ),
-          w.includes(Te.k_TakeUnder) &&
-            !c &&
-            D.push(
+          M.includes(Te.k_TakeUnder) &&
+            !m &&
+            A.push(
               "Promotion requires a Takeunder which hasn't been linked yet.",
             ),
-          w.includes(Te.k_Spotlight) &&
-            !s &&
-            D.push(
+          M.includes(Te.k_Spotlight) &&
+            !l &&
+            A.push(
               "Promotion requires a Spotlight which hasn't been linked yet.",
             ),
-          w.includes(Te.k_MarketingMessage) &&
-            !l &&
-            D.push(
+          M.includes(Te.k_MarketingMessage) &&
+            !o &&
+            A.push(
               "Promotion requires a Marketing Message which hasn't been linked yet.",
             ),
-          w.includes(Te.k_DiscountEvent) &&
-            !g &&
-            D.push(
+          M.includes(Te.k_DiscountEvent) &&
+            !h &&
+            A.push(
               "Promotion requires a Discount Event which hasn't been linked yet.",
             ),
-          w.includes(Te.k_OptIn) &&
-            !p &&
-            D.push(
+          M.includes(Te.k_OptIn) &&
+            !_ &&
+            A.push(
               "Promotion requires an OptIn Admin which hasn't been linked yet.",
             ),
-          w.includes(Te.k_SlackChannel) &&
-            !_ &&
-            D.push(
+          M.includes(Te.k_SlackChannel) &&
+            !g &&
+            A.push(
               "Promotion requires a Slack Channel for coordination, which hasn't been linked yet.",
             ),
-          w.includes(Te.k_AdvertisingApp) &&
-            !m &&
-            D.push(
+          M.includes(Te.k_AdvertisingApp) &&
+            !p &&
+            A.push(
               "Promotion requires an Advertising App or Config App which hasn't been linked yet.",
             ),
-          (!r && !w.includes(Te.k_SalePage)) ||
-            i ||
-            D.push(
+          (!i && !M.includes(Te.k_SalePage)) ||
+            s ||
+            A.push(
               "Promotion requires a Sale page which hasn't been linked yet.",
             ),
-          w.includes(Te.k_AssetKit) &&
-            !S &&
-            D.push(
+          M.includes(Te.k_AssetKit) &&
+            !y &&
+            A.push(
               "Promotion requires an Asset Kit which hasn't been linked yet.",
             ),
-          "takeover" != h ||
-            o ||
-            D.push(
+          "takeover" != S ||
+            c ||
+            A.push(
               "Promotion's highest featuring requires a Takeover which isn't linked.",
             ),
-          "takeunder" != h ||
-            c ||
-            D.push(
+          "takeunder" != S ||
+            m ||
+            A.push(
               "Promotion's highest featuring requires a Takeunder which isn't linked.",
             ),
-          "hub_takeover" == h &&
-            0 == v &&
-            D.push(
+          "hub_takeover" == S &&
+            0 == f &&
+            A.push(
               "Promotion's highest featuring requires a Content Hub Takeover which isn't linked.",
             ),
-          "steamchina_takeover" != h ||
-            y ||
-            D.push(
+          "steamchina_takeover" != S ||
+            v ||
+            A.push(
               "Promotion requires a Steam China Takeover which isn't linked.",
             ),
-          f > 0 &&
-            b > 0 &&
-            !C.bLoading &&
-            -1 == C.rgAppIDs?.findIndex((e) => e == b) &&
-            D.push(
+          b > 0 &&
+            w > 0 &&
+            !R.bLoading &&
+            -1 == R.rgAppIDs?.findIndex((e) => e == w) &&
+            A.push(
               "Promotion has a partner ID set and a featured store item but the partner doesn't have access to the store item.",
             ),
-          D.length > 0 &&
+          T?.startTime &&
+            T.startTime < C &&
+            B > T.startTime &&
+            A.push(
+              "Sale Page start is before Promotion start. May want to adjust asset due dates.",
+            ),
+          A.length > 0 &&
             u.createElement(
               "div",
               { className: ke.WarningsContainer },
@@ -65859,7 +65972,7 @@
               u.createElement(
                 "div",
                 null,
-                D.map((e) =>
+                A.map((e) =>
                   u.createElement(
                     "div",
                     {
