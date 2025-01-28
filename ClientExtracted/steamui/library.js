@@ -1,4 +1,4 @@
-var CLSTAMP = "9487723";
+var CLSTAMP = "9489738";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -10535,7 +10535,7 @@ var CLSTAMP = "9487723";
                     ...this.m_rgParams,
                     title: this.m_strTitle,
                   })),
-                  (s = new b.Q(n.document, i))),
+                  (s = new b.Q(n?.document, i))),
               n &&
                 i &&
                 ((n.document.title = this.m_strTitle),
@@ -10812,9 +10812,9 @@ var CLSTAMP = "9487723";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jan 27 2025 : 11:34:58",
-                BUILD_TIME_UTC: "Jan 27 2025 : 19:34:58",
-                BUILD_RTIME_UTC: 1738006498,
+                BUILD_TIME_LOCAL: "Jan 27 2025 : 16:44:19",
+                BUILD_TIME_UTC: "Jan 28 2025 : 00:44:19",
+                BUILD_RTIME_UTC: 1738025059,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -10873,8 +10873,8 @@ var CLSTAMP = "9487723";
             this.m_rgPopupCreatedCallbacks.push(e);
           }
           AddTrackedPopup(e) {
-            this.m_mapPopups.set(e.GetName(), e);
-            for (let t of this.m_rgPopupCreatedCallbacks) t(e);
+            if ((this.m_mapPopups.set(e.GetName(), e), e.BIsValid()))
+              for (let t of this.m_rgPopupCreatedCallbacks) t(e);
           }
           RemoveTrackedPopup(e) {
             this.m_mapPopups.delete(e.GetName());
@@ -11278,7 +11278,7 @@ var CLSTAMP = "9487723";
           constructor(e, t, n) {
             if (((this.m_rgLoadingLinks = []), n))
               for (let e = 0; e < n.length; e++) this.AddLink(n[e], !0);
-            else {
+            else if (e) {
               let t = e.getElementsByTagName("link");
               for (let e = 0; e < t.length; e++) {
                 let n = t[e];
@@ -24211,9 +24211,9 @@ var CLSTAMP = "9487723";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jan 27 2025 : 11:34:58",
-                    BUILD_TIME_UTC: "Jan 27 2025 : 19:34:58",
-                    BUILD_RTIME_UTC: 1738006498,
+                    BUILD_TIME_LOCAL: "Jan 27 2025 : 16:44:19",
+                    BUILD_TIME_UTC: "Jan 28 2025 : 00:44:19",
+                    BUILD_RTIME_UTC: 1738025059,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24905,7 +24905,7 @@ var CLSTAMP = "9487723";
         9418: "d87466c7da4e9beb94f1",
         9462: "89227ab1a3d278d803ec",
         9711: "d624e58058255e3baff3",
-        9858: "1dd788ccd3ac6e4d436d",
+        9858: "dc4df3567838eab88e4c",
         9869: "4e01ec6f861ede24970d",
         9887: "dbbe313771144bf85fe1",
       }[e]),

@@ -1134,6 +1134,7 @@ Hanunoo
 Hebrew
 Hiragana
 IDEMPOTENCY_UNKNOWN
+I`bl
 IdempotencyLevel
 Imperial_Aramaic
 Inherited
