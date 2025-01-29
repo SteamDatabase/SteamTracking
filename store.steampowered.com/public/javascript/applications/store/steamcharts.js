@@ -3800,10 +3800,10 @@
               }
             return { topPlayedPeriod: e, dateRangeString: l };
           }, [a]),
-          s = (0, ia.Tg)(1, 11),
+          s = (0, ia.Tg)(1, 13),
           l =
             D.TS.BASE_URL_STORE_CDN_ASSETS +
-            `steamdeck/steamdeck_promo_0${s}.png?v=3`;
+            `steamdeck/steamdeck_promo_0${s}.png?v=4`;
         return g.createElement(
           Re.m,
           { title: (0, x.we)("#SteamCharts_MostPlayedDeck_Title") },

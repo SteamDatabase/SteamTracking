@@ -16,7 +16,7 @@ ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_04.png
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${internal_name}.jpg?v=1
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/level_0${}.png
-${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=3
+${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=4
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
