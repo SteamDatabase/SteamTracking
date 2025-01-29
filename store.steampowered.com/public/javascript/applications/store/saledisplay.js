@@ -3809,7 +3809,7 @@
                   "li",
                   { key: "li_" + e },
                   (0, me.h_)(
-                    2,
+                    3,
                     l.GetSaleSectionByID(e),
                     g,
                     i,
@@ -4075,7 +4075,7 @@
       }
       var oa = a(84603),
         ia = a(40353),
-        sa = a(101),
+        sa = a(47005),
         ca = a(59313),
         ma = a.n(ca),
         ga = a(51272);

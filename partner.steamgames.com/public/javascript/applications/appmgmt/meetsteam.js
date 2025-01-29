@@ -1322,7 +1322,10 @@
         const { conf: t, nInterestCount: n, rgSurveyInterest: a } = e;
         return r.createElement(
           Pe.qx,
-          { title: `${t.name}: ${n.toLocaleString()}`, bStartMinimized: !0 },
+          {
+            title: `${t.name} in ${t.place} around ${t.time}: Interest: ${n.toLocaleString()}`,
+            bStartMinimized: !0,
+          },
           r.createElement(xe, { conf: t, rgSurveyInterest: a }),
         );
       }

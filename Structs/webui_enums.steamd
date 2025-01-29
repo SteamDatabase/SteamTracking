@@ -189,6 +189,18 @@ enum EAppUpdateContentType
 	k_EAppUpdateContentType_Max = 3;
 }
 
+enum EAppUpdateProgress
+{
+	k_EAppUpdateProgress_VerifyingInstalledFiles = 0;
+	k_EAppUpdateProgress_Preallocating = 1;
+	k_EAppUpdateProgress_Download = 2;
+	k_EAppUpdateProgress_Staging = 3;
+	k_EAppUpdateProgress_VerifyingStagedFiles = 4;
+	k_EAppUpdateProgress_Copying = 5;
+	k_EAppUpdateProgress_Committing = 6;
+	k_EAppUpdateProgress_Max = 7;
+}
+
 enum EAudioStreamType
 {
 	k_EAudioStreamType_Microphone = 1;
@@ -1208,6 +1220,12 @@ enum SystemKey
 {
 	SystemKey0 = 0;
 	SystemKey1 = 1;
+}
+
+enum TemplateFAQDisplay
+{
+	TemplateFAQDisplayColumn = 1;
+	TemplateFAQDisplaySimpleRow = 2;
 }
 
 enum UnnamedEnum0088a21d353911da

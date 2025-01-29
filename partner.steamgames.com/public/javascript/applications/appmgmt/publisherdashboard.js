@@ -3835,7 +3835,7 @@
         );
       }
       var gt = a(4130),
-        vt = a(92419),
+        vt = a(10835),
         Et = a(20587);
       function Dt(e) {
         const { saleDesc: t } = e;
@@ -3893,7 +3893,7 @@
                 "promotion/marketingmessages/partnerpreview/" +
                 t.gid
               : void 0,
-          { bReady: u, bReadyExceptLiveEvent: g } = (0, wt.w2)(t.gid),
+          { bReady: u, bReadyExceptLiveEvent: g } = (0, wt._p)(t.gid),
           v = a.bShowWarnings
             ? _e.Hm.GetMarketingMesssageEditURL(t.gid)
             : void 0,

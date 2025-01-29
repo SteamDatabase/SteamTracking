@@ -2109,7 +2109,10 @@
           E =
             ("dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
               ? "TEST:"
-              : "") + JSON.parse(y[0]?.data.description_jsondata)?.Subject;
+              : "") +
+            (y.length > 0
+              ? JSON.parse(y[0]?.data.description_jsondata)?.Subject
+              : "");
         return n.createElement(
           r.tH,
           null,

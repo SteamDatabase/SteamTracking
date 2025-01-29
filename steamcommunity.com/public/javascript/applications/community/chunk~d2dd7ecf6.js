@@ -245,7 +245,7 @@
         y = a(9449),
         R = a(2472),
         G = a(26408);
-      let U = class extends s.Component {
+      let T = class extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = { bPrefetchingLanguages: !0 }),
@@ -385,9 +385,9 @@
           );
         }
       };
-      (0, n.Cg)([k.oI], U.prototype, "OnCommitGroup", null),
-        (U = (0, n.Cg)([o.PA], U));
-      var T,
+      (0, n.Cg)([k.oI], T.prototype, "OnCommitGroup", null),
+        (T = (0, n.Cg)([o.PA], T));
+      var U,
         x = a(46742),
         O = a.n(x);
       function B(e) {
@@ -485,11 +485,12 @@
           )
         );
       }
-      let F = (T = class extends s.Component {
+      let F = (U = class extends s.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = r().CancelToken.source()),
             (this.m_searchInput = null),
+            (this.m_mapClanFailedToLoad = new Map()),
             (this.m_clanImageUploader = null),
             (this.state = {
               filenameSearch: "",
@@ -511,23 +512,30 @@
           this.m_cancelSignal.cancel("ClanImagePicker component unmounted");
         }
         HandleLoadClanImages() {
-          g.pU
-            .LoadClanImages(this.props.clanSteamID, !1, this.m_cancelSignal)
-            .then(() => {
-              this.m_cancelSignal.token.reason ||
-                this.setState({ bLoading: !1 });
-            })
-            .catch((e) => {
-              let t = (0, S.H)(e);
-              console.error(
-                "ClanImagePicker Failed: " +
-                  t.strErrorMsg +
-                  " errCode: " +
-                  t.strErrorMsg,
-              ),
+          this.m_mapClanFailedToLoad.has(
+            this.props.clanSteamID.GetAccountID(),
+          ) ||
+            g.pU
+              .LoadClanImages(this.props.clanSteamID, !1, this.m_cancelSignal)
+              .then(() => {
                 this.m_cancelSignal.token.reason ||
-                  this.setState({ bLoading: !1, strErrMsg: t.strErrorMsg });
-            });
+                  this.setState({ bLoading: !1 });
+              })
+              .catch((e) => {
+                let t = (0, S.H)(e);
+                console.error(
+                  "ClanImagePicker Failed: " +
+                    t.strErrorMsg +
+                    " errCode: " +
+                    t.strErrorMsg,
+                ),
+                  this.m_mapClanFailedToLoad.set(
+                    this.props.clanSteamID.GetAccountID(),
+                    t.strErrorMsg,
+                  ),
+                  this.m_cancelSignal.token.reason ||
+                    this.setState({ bLoading: !1, strErrMsg: t.strErrorMsg });
+              });
         }
         onUploaderDismiss() {
           this.setState({
@@ -560,7 +568,7 @@
               t &&
                 (this.setState({
                   filenameSearch: "",
-                  uploadToken: ++T.m_uploaderCounter,
+                  uploadToken: ++U.m_uploaderCounter,
                 }),
                 this.m_clanImageUploader.UploadAllImages(
                   this.props.rgRealmList,
@@ -619,7 +627,7 @@
         InternalOpenLocalizeImageGroup(e) {
           const { clanSteamID: t, partnerEventStore: a } = this.props;
           (0, w.pg)(
-            s.createElement(U, {
+            s.createElement(T, {
               primaryLocalizedImage: e,
               appid: this.props.appid,
               eventModel: void 0,
@@ -811,7 +819,7 @@
         (0, n.Cg)([k.oI], F.prototype, "OnHandleOpenLocalizedImageGroup", null),
         (0, n.Cg)([k.oI], F.prototype, "InternalHandleExpandedAction", null),
         (0, n.Cg)([k.oI], F.prototype, "InternalOpenLocalizeImageGroup", null),
-        (F = T = (0, n.Cg)([o.PA], F));
+        (F = U = (0, n.Cg)([o.PA], F));
     },
     81047: (e, t, a) => {
       "use strict";
@@ -879,8 +887,8 @@
         y = a(78327),
         R = a(84811),
         G = a(22797),
-        U = a(33924),
-        T = a.n(U),
+        T = a(33924),
+        U = a.n(T),
         x = a(41751),
         O = a(18654),
         B = a.n(O),
@@ -972,7 +980,7 @@
             null,
             s.createElement(
               "div",
-              { className: (0, b.A)(T().OtherEventsCtn, "OtherEventsCtn") },
+              { className: (0, b.A)(U().OtherEventsCtn, "OtherEventsCtn") },
               s.createElement(
                 "div",
                 { className: A().EventSectionTitleCtn },
@@ -1014,7 +1022,7 @@
               s.createElement(
                 m.Z,
                 {
-                  className: T().OtherEvents,
+                  className: U().OtherEvents,
                   "flow-children": "column",
                   navEntryPreferPosition: g.iU.PREFERRED_CHILD,
                 },
@@ -1068,7 +1076,7 @@
               : { src: w };
         if (!t)
           return s.createElement("div", {
-            className: T().OtherEvents_EventCtn,
+            className: U().OtherEvents_EventCtn,
           });
         const f = (0, I.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
           k = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
@@ -1082,9 +1090,9 @@
               C.tj,
               {
                 className: (0, b.A)(
-                  T().OtherEvents_EventCtn,
+                  U().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  T().HoversEnabled,
+                  U().HoversEnabled,
                 ),
                 eventModel: t,
                 route: c || C.PH.k_eView,
@@ -1093,12 +1101,12 @@
               },
               s.createElement(
                 "div",
-                { className: T().EventSummaryContainer },
-                s.createElement("div", { className: T().EventSummaryType }, E),
-                s.createElement("div", { className: T().EventSummaryText }, _),
+                { className: U().EventSummaryContainer },
+                s.createElement("div", { className: U().EventSummaryType }, E),
+                s.createElement("div", { className: U().EventSummaryText }, _),
               ),
               s.createElement("div", {
-                className: T().OtherEvents_BGImage,
+                className: U().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
                   backgroundImage: w ? `url(${(0, p.j3)(w)})` : "none",
@@ -1106,33 +1114,33 @@
               }),
               s.createElement(
                 "div",
-                { className: T().OtherEvents_ContentCtn },
+                { className: U().OtherEvents_ContentCtn },
                 s.createElement(
                   "div",
-                  { className: T().OtherEvents_MainImageCtn },
+                  { className: U().OtherEvents_MainImageCtn },
                   s.createElement("img", {
                     ...S,
-                    className: T().OtherEvents_MainImage,
+                    className: U().OtherEvents_MainImage,
                   }),
                 ),
                 s.createElement(
                   "div",
-                  { className: T().OtherEvents_TextCtn },
+                  { className: U().OtherEvents_TextCtn },
                   s.createElement(
                     "div",
-                    { className: T().OtherEvents_TextTitle },
+                    { className: U().OtherEvents_TextTitle },
                     d,
                   ),
                   Boolean(L) &&
                     s.createElement(
                       "div",
-                      { className: T().OtherEvents_SubTitle },
+                      { className: U().OtherEvents_SubTitle },
                       L,
                     ),
                   Boolean(k > f)
                     ? s.createElement(
                         "div",
-                        { className: (0, b.A)(T().UpcomingCtn, "UpcomingCtn") },
+                        { className: (0, b.A)(U().UpcomingCtn, "UpcomingCtn") },
                         s.createElement(D.K4, {
                           bSingleLine: !0,
                           dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
@@ -1165,7 +1173,7 @@
           s.createElement(
             m.Z,
             {
-              className: (0, b.A)(T().AppCapsuleCtn, "AppCapsuleCtn"),
+              className: (0, b.A)(U().AppCapsuleCtn, "AppCapsuleCtn"),
               ...(0, S.S)(n, l, r, !1),
             },
             s.createElement(
@@ -1178,7 +1186,7 @@
                 },
               },
               s.createElement("img", {
-                className: T().AppCapsuleImage,
+                className: U().AppCapsuleImage,
                 src: n.GetAssets().GetSmallCapsuleURL(),
               }),
             ),
@@ -1187,7 +1195,7 @@
                 "span",
                 {
                   className: (0, b.A)(
-                    T().AppCapsulePrice,
+                    U().AppCapsulePrice,
                     Boolean(null == o ? void 0 : o.discount_pct)
                       ? B().Discounted
                       : "",
@@ -1237,32 +1245,32 @@
           ? s.createElement(
               C.tj,
               {
-                className: T().OtherEvents_EventCtn + " " + T().HorizontalEvent,
+                className: U().OtherEvents_EventCtn + " " + U().HorizontalEvent,
                 eventModel: t,
                 route: C.PH.k_eView,
                 onClick: l,
               },
               s.createElement(
                 "div",
-                { className: T().OtherEvents_ContentCtn },
+                { className: U().OtherEvents_ContentCtn },
                 s.createElement(
                   "div",
-                  { className: T().OtherEvents_MainImageCtn },
+                  { className: U().OtherEvents_MainImageCtn },
                   s.createElement("img", {
                     src: o,
-                    className: T().OtherEvents_MainImage,
+                    className: U().OtherEvents_MainImage,
                   }),
                 ),
               ),
               s.createElement(
                 "div",
-                { className: T().OtherEvents_TextCtn },
+                { className: U().OtherEvents_TextCtn },
                 s.createElement(
                   "div",
-                  { className: T().HorizontalDescriptionCtn },
+                  { className: U().HorizontalDescriptionCtn },
                   s.createElement(
                     "div",
-                    { className: T().HorizontalDescription },
+                    { className: U().HorizontalDescription },
                     m,
                   ),
                   s.createElement(D.K4, {
@@ -1270,10 +1278,10 @@
                     dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
                   }),
                 ),
-                s.createElement("div", { className: T().HorizontalTitle }, c),
+                s.createElement("div", { className: U().HorizontalTitle }, c),
               ),
             )
-          : s.createElement("div", { className: T().OtherEvents_EventCtn });
+          : s.createElement("div", { className: U().OtherEvents_EventCtn });
       }
     },
     29108: (e, t, a) => {
@@ -1490,7 +1498,7 @@
             { className: b().UploadPreviewDelete, onClick: () => a(t) },
             r.createElement(C.sED, null),
           ),
-          r.createElement(U, { asset: t }),
+          r.createElement(T, { asset: t }),
           r.createElement(p.m, {
             strDropDownClassName: E().DropDownScroll,
             rgOptions: I,
@@ -1559,7 +1567,7 @@
             ),
         );
       });
-      function U(e) {
+      function T(e) {
         const { asset: t } = e;
         return s.Ho.includes(t.fileType)
           ? r.createElement(
@@ -1567,7 +1575,7 @@
               {
                 className: b().PreviewImgCtn,
                 onClick: (e) =>
-                  (0, _.pg)(r.createElement(T, { asset: t }), (0, D.uX)(e)),
+                  (0, _.pg)(r.createElement(U, { asset: t }), (0, D.uX)(e)),
               },
               r.createElement(
                 "span",
@@ -1603,7 +1611,7 @@
               ),
             );
       }
-      function T(e) {
+      function U(e) {
         const { asset: t, closeModal: a } = e;
         return r.createElement(
           I.o0,
@@ -1707,7 +1715,7 @@
     },
     2805: (e, t, a) => {
       "use strict";
-      a.d(t, { GF: () => k, Hd: () => U, ge: () => b });
+      a.d(t, { GF: () => k, Hd: () => T, ge: () => b });
       var n = a(34629),
         l = a(90626),
         r = a(81047),
@@ -2103,7 +2111,7 @@
           }),
         );
       }
-      function U(e) {
+      function T(e) {
         const {
           clanSteamID: t,
           fnSetImageURL: a,
@@ -2271,8 +2279,8 @@
         y = a(3088),
         R = a(10224),
         G = a(15496),
-        U = a.n(G);
-      function T(e) {
+        T = a.n(G);
+      function U(e) {
         const {
             event: t,
             spotlightURLOverride: a,
@@ -2323,67 +2331,67 @@
           null,
           s.createElement(
             "div",
-            { className: U().MajorEvent_Ctn, ref: e.containerRef },
+            { className: T().MajorEvent_Ctn, ref: e.containerRef },
             s.createElement(
               L.Z,
               {
                 className: (0, b.A)(
-                  U().AppDetailsSpotlightContainer,
-                  U().MajorEventContainer,
+                  T().AppDetailsSpotlightContainer,
+                  T().MajorEventContainer,
                 ),
                 onActivate: p,
                 focusable: !0,
               },
               s.createElement(
                 "div",
-                { className: U().MajorEventBackground },
+                { className: T().MajorEventBackground },
                 s.createElement(y.c, {
-                  className: U().MajorEventImageBackgroundBlur,
+                  className: T().MajorEventImageBackgroundBlur,
                   rgSources: h,
                   onIncrementalError: (e, t, a) => r && r(t),
                 }),
               ),
               s.createElement(
                 "div",
-                { className: U().MajorEventImageContainer },
+                { className: T().MajorEventImageContainer },
                 s.createElement(y.c, {
-                  className: U().MajorEventImage,
+                  className: T().MajorEventImage,
                   rgSources: h,
                   onIncrementalError: (e, t, a) => r && r(t),
                 }),
                 s.createElement("div", {
-                  className: U().MajorEventImageTemplate,
+                  className: T().MajorEventImageTemplate,
                 }),
                 s.createElement(
                   "div",
-                  { className: U().MajoreEventImageContentContainer },
+                  { className: T().MajoreEventImageContentContainer },
                   _ &&
                     s.createElement(
                       "div",
-                      { className: U().MajorEventContent },
+                      { className: T().MajorEventContent },
                       s.createElement(y.c, {
-                        className: U().MajorEventSpotlightBackground,
+                        className: T().MajorEventSpotlightBackground,
                         rgSources: h,
                         onIncrementalError: (e, t, a) => r && r(t),
                       }),
                       s.createElement(
                         "div",
-                        { className: U().MajorEventTextCtn },
+                        { className: T().MajorEventTextCtn },
                         s.createElement(
                           "div",
-                          { className: U().MajorEventTitle },
+                          { className: T().MajorEventTitle },
                           E,
                         ),
                         s.createElement(
                           "div",
-                          { className: U().MajorEventSummary },
+                          { className: T().MajorEventSummary },
                           v,
                         ),
                       ),
                     ),
                 ),
               ),
-              s.createElement("div", { className: U().BottomShadow }),
+              s.createElement("div", { className: T().BottomShadow }),
             ),
           ),
         );
@@ -3160,7 +3168,7 @@
           return s.createElement(
             "div",
             { className: w().SpotlightExample },
-            s.createElement(T, {
+            s.createElement(U, {
               event: e.event,
               strDisplayName: a,
               gameIconUrl: n,

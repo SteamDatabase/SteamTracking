@@ -16,7 +16,7 @@ ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2023/level_04.png
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${internal_name}.jpg?v=1
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/level_0${}.png
-${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=2
+${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=3
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
@@ -1067,6 +1067,7 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/groups
 ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/livestream
 ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/sections#cross
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
+${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/assets/promos
@@ -2111,7 +2112,6 @@ http://store-tc.k.steam.net/graph
 http://store.steampowered.com/about/
 http://store.steampowered.com/notifications
 http://store.steampowered.com/steam_refunds/
-http://tabulator.info/examples/4.0
 http://twitter.com/steam
 http://weixin.qq.com/r/LC-K0i3EunDFrWmx93o_
 http://www.dota2.com
@@ -2516,7 +2516,6 @@ https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
-https://github.com/ngduc/react-tabulator
 https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
 https://grafana.valve.org/steam/d/c2d2436a-7206-47d5-8fca-89bdc91db65d/storemarketing-getitemstofeature-filtering?orgId=2&var-type=marketing_messages
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization
@@ -2792,7 +2791,6 @@ https://policies.google.com/privacy
 https://rd.playstation.com/controller/fwupdater/
 https://reactflow.dev
 https://reactjs.org/docs/error-decoder.html?invariant=${}
-https://reqres.in/api/users
 https://s.team/chat/${}
 https://s.team/deck/setup
 https://s.team/join

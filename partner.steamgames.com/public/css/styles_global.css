@@ -539,7 +539,7 @@ input[type="radio"] {
 
 input[type=submit]:not(.btn_green_white_innerfade),
 input[type=reset]:not(.btn_green_white_innerfade),
-button,
+button:where(:not(.noGlobalButtonStyle button)),
 button[type=submit].btn_darkblue_white_innerfade,
 button[type=button].btn_darkblue_white_innerfade,
 label.btn_darkblue_white_innerfade {

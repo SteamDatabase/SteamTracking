@@ -5,8 +5,14 @@
   [5424],
   {
     56055: (e, t, n) => {
-      n.d(t, { b: () => a });
+      n.d(t, { b2: () => a, nx: () => r });
       const a = "terminal";
+      var r;
+      !(function (e) {
+        (e[(e.TemplateFAQDisplayColumn = 1)] = "TemplateFAQDisplayColumn"),
+          (e[(e.TemplateFAQDisplaySimpleRow = 2)] =
+            "TemplateFAQDisplaySimpleRow");
+      })(r || (r = {}));
     },
     39733: (e, t, n) => {
       n.d(t, { Du: () => h, fy: () => d, pt: () => _ });
@@ -192,7 +198,9 @@
             (this.m_rgAnswerChosen = Array());
         }
         BHasTerminalAnswerChosen() {
-          return this.m_rgAnswerChosen.some((e) => e.reveal_question_id == o.b);
+          return this.m_rgAnswerChosen.some(
+            (e) => e.reveal_question_id == o.b2,
+          );
         }
         static s_Singleton;
         static Get() {
@@ -852,14 +860,14 @@
               position: "center",
             }),
           );
-        const G = t.type,
-          w =
+        const w = t.type,
+          G =
             "developer" == t.type
               ? (0, m.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, m.we)("#CreatorHome_PublishedBy")
                 : (0, m.we)("#CreatorHome_InFranchise"),
-          E = A.GetCreatorHomeURL(G),
+          E = A.GetCreatorHomeURL(w),
           B = A.GetNumFollowers();
         return a.createElement(
           _.tH,
@@ -876,7 +884,7 @@
                 ),
                 "flow-children": "row",
               },
-              !i && a.createElement("span", { className: I.Title }, w),
+              !i && a.createElement("span", { className: I.Title }, G),
               a.createElement(
                 "div",
                 { className: I.DevSummaryWidgetCtn },

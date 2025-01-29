@@ -4337,6 +4337,11 @@
                     br: s.qM.readUint32,
                     bw: s.gp.writeUint32,
                   },
+                  invites_sent: {
+                    n: 6,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
                 },
               }),
             Me.sm_m

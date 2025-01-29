@@ -1076,78 +1076,75 @@
         b = n(96434),
         k = n.n(b);
       function y(e) {
-        const { cell: t } = e,
-          n = t.getRow().getData().packageID,
-          s = t.getValue(),
+        const { cell: t, row: n } = e,
+          s = n.original.packageID,
+          c = t.getValue(),
           {
-            nPriceInCents: c,
-            nPublishedPriceInCents: d,
-            nProposedPriceInCents: u,
-            fnSetPrice: m,
-          } = (0, a.xQ)(n, s),
-          [p, _, E] = (0, a.Wx)(c, s),
-          g = (0, a.Gs)(s),
-          C = o.useRef(void 0),
-          S = n + s,
-          { strClassName: b } = v(n, s),
-          y = "USD" == s,
-          P = u ?? d,
-          D = c != P;
+            nPriceInCents: d,
+            nPublishedPriceInCents: u,
+            nProposedPriceInCents: m,
+            fnSetPrice: p,
+          } = (0, a.xQ)(s, c),
+          [_, E, g] = (0, a.Wx)(d, c),
+          C = (0, a.Gs)(c),
+          S = o.useRef(void 0),
+          b = s + c,
+          { strClassName: y } = v(s, c),
+          P = "USD" == c,
+          D = m ?? u,
+          T = d != D;
         return o.createElement(
           "div",
-          {
-            ref: C,
-            onKeyDown: (e) => (0, r.nm)(e, t.getTable()),
-            className: b,
-          },
-          D && o.createElement(w, { nPriceInCents: c, nSavedPriceInCents: P }),
-          p && o.createElement("div", { className: k().PricePrefix }, p),
+          { ref: S, onKeyDown: r.nm, className: y },
+          T && o.createElement(w, { nPriceInCents: d, nSavedPriceInCents: D }),
+          _ && o.createElement("div", { className: k().PricePrefix }, _),
           o.createElement(
             "div",
             { className: k().EditablePrice },
             o.createElement(i.pd, {
-              value: _,
+              value: E,
               className: k().PriceInput,
               onChange: (e) => {
                 const t = e.target.value.replace(/[^0-9]/g, "");
                 let n = Number(t || 0);
                 if (Number.isNaN(n)) return;
-                g.bWholeUnitsOnly && (n *= 100);
+                C.bWholeUnitsOnly && (n *= 100);
                 const a = 2147483647;
-                n > a && (n = a), m(n);
+                n > a && (n = a), p(n);
               },
               onFocus: (e) => {
                 e.target.select(),
                   f.L.ShowElement(
-                    C.current.ownerDocument,
+                    S.current.ownerDocument,
                     o.createElement(
                       l.g,
                       {
-                        target: C.current,
+                        target: S.current,
                         direction: "top",
                         bEnablePointerEvents: !0,
                         nBodyDistance: 0,
                       },
                       o.createElement(N, {
-                        key: S,
-                        packageID: n,
-                        strPriceKey: s,
+                        key: b,
+                        packageID: s,
+                        strPriceKey: c,
                       }),
                     ),
-                    S,
+                    b,
                   );
               },
               onBlur: () => {
                 window.setTimeout(
-                  () => f.L.HideElement(C.current.ownerDocument, S),
+                  () =>
+                    S.current && f.L.HideElement(S.current.ownerDocument, b),
                   500,
                 );
               },
             }),
           ),
-          E && o.createElement("div", { className: k().PriceSuffix }, E),
-          y && o.createElement(h, { packageID: n }),
-          o.createElement(A, { packageID: n, strPriceKey: s }),
+          g && o.createElement("div", { className: k().PriceSuffix }, g),
+          P && o.createElement(h, { packageID: s }),
+          o.createElement(A, { packageID: s, strPriceKey: c }),
         );
       }
       function A(e) {

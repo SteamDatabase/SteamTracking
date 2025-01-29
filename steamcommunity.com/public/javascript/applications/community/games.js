@@ -10627,12 +10627,14 @@
         )
           return null;
         if (!r.data || 0 === r.data.size || !i) return null;
-        const a = r.data.get(n).app;
-        return a.BIsDownloading() || a.BIsPaused()
+        const a = r.data.get(n);
+        if (!a) return null;
+        const s = a.app;
+        return s.BIsDownloading() || s.BIsPaused()
           ? ft.createElement(
               "div",
               { className: fi.DownloadBarContainer },
-              ft.createElement(Ci, { key: "downloading", app: a, clientid: n }),
+              ft.createElement(Ci, { key: "downloading", app: s, clientid: n }),
             )
           : null;
       }

@@ -73,7 +73,7 @@
         s8: () => m,
         uu: () => n,
       });
-      const n = [1, 2, 11, 3, 4, 10, 5, 6],
+      const n = [1, 2, 11, 3, 4, 10, 5, 6, 13, 14, 15, 16],
         a = [
           "#msg_action_details",
           "#msg_preload_now",
@@ -112,6 +112,14 @@
             return "Midweek Deal";
           case 12:
             return "Daily Deal";
+          case 13:
+            return "New DLC";
+          case 14:
+            return "Free Weekend";
+          case 15:
+            return "Sale Page";
+          case 16:
+            return "Play Test";
           default:
             return "--------------------";
         }
@@ -1175,13 +1183,13 @@
             },
             [s, n, f, w, B],
           ),
-          G = (0, i.useCallback)(
+          L = (0, i.useCallback)(
             (e) => {
               v(e), W(k.current?.value, e);
             },
             [W, k],
           ),
-          L = (0, i.useCallback)(
+          G = (0, i.useCallback)(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
               S(t);
@@ -1220,7 +1228,7 @@
               label: r,
               tooltip: g,
               placeholder: U,
-              onChange: L,
+              onChange: G,
               value: C,
               bAlwaysShowClearAction: C.length > 0,
               focusOnMount: b,
@@ -1229,7 +1237,7 @@
               i.createElement(o.Yh, {
                 ref: N,
                 checked: E,
-                onChange: G,
+                onChange: L,
                 className: d.AppSearchDLCCheckbox,
                 label: (0, m.we)("#StoreAdmin_Search_IncludeDLC"),
               }),

@@ -1634,8 +1634,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -1665,8 +1665,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -1686,7 +1686,7 @@
             r.e(7352),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 19415)),
+          ]).then(r.bind(r, 16856)),
         ),
         me = u.lazy(() =>
           Promise.all([
@@ -1696,8 +1696,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -1727,8 +1727,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -1789,8 +1789,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -1829,8 +1829,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -1888,8 +1888,8 @@
             r.e(1134),
             r.e(6542),
             r.e(2946),
-            r.e(2785),
             r.e(8932),
+            r.e(2785),
             r.e(1084),
             r.e(9017),
             r.e(9001),
@@ -2341,18 +2341,18 @@
         DO: () => h,
         ID: () => p,
         Lg: () => u,
-        Rh: () => I,
+        Rh: () => T,
         S$: () => n,
         Zi: () => d,
         aP: () => i,
-        iE: () => D,
+        iE: () => k,
         im: () => a,
         kF: () => o,
         ke: () => s,
         sf: () => m,
         ww: () => l,
         x6: () => c,
-        zm: () => M,
+        zm: () => v,
       });
       const s = 1,
         a = 4;
@@ -2590,7 +2590,7 @@
         }
         return !1;
       }
-      var g, _, f, b, w, C, S, M, v, y, B, E, R, I, T, D;
+      var g, _, f, b, w, C, S, M, v, y, B, E, R, I, T, D, k;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -2656,19 +2656,36 @@
               "k_EAppUpdateContentType_Max");
         })(w || (w = {})),
         (function (e) {
+          (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
+            "k_EAppUpdateProgress_VerifyingInstalledFiles"),
+            (e[(e.k_EAppUpdateProgress_Preallocating = 1)] =
+              "k_EAppUpdateProgress_Preallocating"),
+            (e[(e.k_EAppUpdateProgress_Download = 2)] =
+              "k_EAppUpdateProgress_Download"),
+            (e[(e.k_EAppUpdateProgress_Staging = 3)] =
+              "k_EAppUpdateProgress_Staging"),
+            (e[(e.k_EAppUpdateProgress_VerifyingStagedFiles = 4)] =
+              "k_EAppUpdateProgress_VerifyingStagedFiles"),
+            (e[(e.k_EAppUpdateProgress_Copying = 5)] =
+              "k_EAppUpdateProgress_Copying"),
+            (e[(e.k_EAppUpdateProgress_Committing = 6)] =
+              "k_EAppUpdateProgress_Committing"),
+            (e[(e.k_EAppUpdateProgress_Max = 7)] = "k_EAppUpdateProgress_Max");
+        })(C || (C = {})),
+        (function (e) {
           (e[(e.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
             (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
               "k_EOverlayToStoreFlag_AddToCart"),
             (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
               "k_EOverlayToStoreFlag_AddToCartAndShow");
-        })(C || (C = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(S || (S = {})),
+        })(M || (M = {})),
         (function (e) {
           (e[(e.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
@@ -2687,13 +2704,13 @@
               "k_EGamingDeviceType_Phone"),
             (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
               "k_EGamingDeviceType_SteamDeck");
-        })(M || (M = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(v || (v = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -2719,7 +2736,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(y || (y = {})),
+        })(B || (B = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -2727,14 +2744,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(B || (B = {})),
+        })(E || (E = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(E || (E = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -2748,13 +2765,13 @@
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(R || (R = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(I || (I = {})),
+        })(T || (T = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -2787,7 +2804,7 @@
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
               "k_EInstallMgrStateCanceled");
-        })(T || (T = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
@@ -2795,7 +2812,7 @@
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(D || (D = {}));
+        })(k || (k = {}));
     },
     45699: (e, t, r) => {
       "use strict";
@@ -15377,7 +15394,7 @@
       const s = window.Config ?? n.TS,
         a = window.UserConfig ?? n.iA;
       window.Config && Object.assign(n.TS, window.Config),
-        window.UserConfig && Object.assign(a, window.UserConfig);
+        window.UserConfig && Object.assign(n.iA, window.UserConfig);
     },
     23809: (e, t, r) => {
       "use strict";
@@ -17570,7 +17587,7 @@
         constructor(e, t, r) {
           if (((this.m_rgLoadingLinks = []), r))
             for (let e = 0; e < r.length; e++) this.AddLink(r[e], !0);
-          else {
+          else if (e) {
             let t = e.getElementsByTagName("link");
             for (let e = 0; e < t.length; e++) {
               let r = t[e];
@@ -17791,7 +17808,7 @@
                   ...this.m_rgParams,
                   title: this.m_strTitle,
                 })),
-                (s = new M(r.document, n))),
+                (s = new M(r?.document, n))),
             r &&
               n &&
               ((r.document.title = this.m_strTitle),
@@ -18131,8 +18148,8 @@
           this.m_rgPopupCreatedCallbacks.push(e);
         }
         AddTrackedPopup(e) {
-          this.m_mapPopups.set(e.GetName(), e);
-          for (let t of this.m_rgPopupCreatedCallbacks) t(e);
+          if ((this.m_mapPopups.set(e.GetName(), e), e.BIsValid()))
+            for (let t of this.m_rgPopupCreatedCallbacks) t(e);
         }
         RemoveTrackedPopup(e) {
           this.m_mapPopups.delete(e.GetName());
@@ -33434,10 +33451,10 @@
         i = r(92757);
       function s(e) {
         const t = (0, i.W6)(),
-          [r, s] = n.useState(() => !!(0, i.B6)(t.location.pathname, e));
+          [r, s] = n.useState(() => !!(0, i.B6)(t?.location.pathname, e));
         return (
           n.useEffect(
-            () => t.listen((t) => s(!!(0, i.B6)(t.pathname, e))),
+            () => t?.listen((t) => s(!!(0, i.B6)(t.pathname, e))),
             [t, e],
           ),
           r

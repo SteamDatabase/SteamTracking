@@ -1527,13 +1527,13 @@
         AppendText(e, t = !1) {
           let r = e;
           if (
-            t &&
+            (t || "*" == this.m_parentNode.tag) &&
             (null == this.m_parentNode || "img" != this.m_parentNode.tag)
           ) {
             let e = this.m_LinkFilter.exec(r);
             for (; e; ) {
               if (e.index > 0) {
-                let r = e.input.substr(0, e.index);
+                let r = e.input.substring(0, e.index);
                 super.AppendText(r, t);
               }
               let n = e[0],
@@ -1551,7 +1551,7 @@
                     break;
                   }
               i || super.AppendNode((0, l.Pm)(n)),
-                (r = e.input.substr(e.index + n.length)),
+                (r = e.input.substring(e.index + n.length)),
                 (e = this.m_LinkFilter.exec(r));
             }
           }
@@ -1569,7 +1569,7 @@
             let e = this.m_EmoteRegex.exec(r);
             for (; e; ) {
               if (e.index > 0) {
-                let r = e.input.substr(0, e.index);
+                let r = e.input.substring(0, e.index);
                 super.AppendText(r, t);
               }
               let s = e[1];
@@ -1580,7 +1580,7 @@
                   [],
                 ),
               ),
-                (r = e.input.substr(e.index + s.length + 2)),
+                (r = e.input.substring(e.index + s.length + 2)),
                 (e = this.m_EmoteRegex.exec(r));
             }
           }
