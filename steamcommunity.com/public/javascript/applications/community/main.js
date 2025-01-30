@@ -5995,14 +5995,14 @@
     },
     62490: (e, t, r) => {
       "use strict";
-      function i(e, t = 0) {
+      function i(e, t = 0, r = Math.random) {
         if ((null == e ? void 0 : e.length) > 1) {
-          let r = t > 0 ? Math.min(t, e.length) : e.length;
-          for (; 0 !== r; ) {
-            const t = Math.floor(Math.random() * r);
-            r -= 1;
-            const i = e[r];
-            (e[r] = e[t]), (e[t] = i);
+          let i = t > 0 ? Math.min(t, e.length) : e.length;
+          for (; 0 !== i; ) {
+            const t = Math.floor(r() * i);
+            i -= 1;
+            const n = e[i];
+            (e[i] = e[t]), (e[t] = n);
           }
         }
       }

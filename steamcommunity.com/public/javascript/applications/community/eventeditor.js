@@ -17972,7 +17972,7 @@
         vr = a(99487),
         Sr = a(24986),
         br = a(39199),
-        wr = a(96441),
+        wr = a(54249),
         Cr = a(40353);
       function fr(e) {
         const { eventModel: t, nEventBadgeID: a } = e,

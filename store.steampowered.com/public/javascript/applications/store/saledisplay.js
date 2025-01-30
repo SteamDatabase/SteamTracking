@@ -4075,7 +4075,7 @@
       }
       var oa = a(84603),
         ia = a(40353),
-        sa = a(47005),
+        sa = a(16919),
         ca = a(59313),
         ma = a.n(ca),
         ga = a(51272);
@@ -4351,6 +4351,7 @@
         let C = !1;
         const A = [{ elements: [], activeTab: new V.y(null, l) }];
         let G = null;
+        const y = (0, M.Qn)();
         w.forEach((l, c) => {
           const m = A[A.length - 1].activeTab;
           if (m && !m.ShouldShowSection(l)) return;
@@ -4362,7 +4363,7 @@
                 t.GetContentHubTag(),
               ),
             u = s && !g && !Boolean(t.jsondata.content_hub_restricted_width);
-          let d = (0, ia.I)(l, r, t, a);
+          let d = (0, ia.I)(l, r, t, a, y);
           if (void 0 === d) return;
           if (d);
           else if ((0, F.su)(l) && !M.iA.logged_in)
@@ -4424,7 +4425,7 @@
           G &&
             (A[A.length - 1].elements.push(D(t, G, o?.GetActiveTabUniqueID())),
             (G = null));
-        const y = A.map((e, t) =>
+        const N = A.map((e, t) =>
           n.createElement(
             "div",
             {
@@ -4440,7 +4441,7 @@
         return n.createElement(
           u.Z,
           { className: T().SaleSectionListContainer },
-          y,
+          N,
         );
       });
       function Ea(e) {
