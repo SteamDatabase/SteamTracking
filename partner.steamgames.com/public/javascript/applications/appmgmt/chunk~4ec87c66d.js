@@ -49231,6 +49231,7 @@
         }
         SetImage(e, t, a) {
           this.m_oTakeover[e] || (this.m_oTakeover[e] = {}),
+            Array.isArray(this.m_oTakeover[e]) && (this.m_oTakeover[e] = {}),
             this.SetKVLang(this.m_oTakeover[e], t, a),
             this.Dispatch();
         }
@@ -49543,13 +49544,13 @@
                   o =
                     s == Q.Fj.takeover_mp4_art.width
                       ? "mp4_page_bg"
-                      : "webm_page_bg_mobile";
+                      : "mp4_page_bg_mobile";
                   break;
                 case "video/webm":
                   o =
                     s == Q.Fj.takeover_webm_art.width
                       ? "webm_page_bg"
-                      : "mp4_page_bg_mobile";
+                      : "webm_page_bg_mobile";
                   break;
                 default:
                   console.log(
