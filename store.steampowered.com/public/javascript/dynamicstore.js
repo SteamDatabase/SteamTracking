@@ -1136,7 +1136,15 @@ GDynamicStore = {
 			else
 			{
 				$DiscountBlocks.removeClass('no_discount');
-				var nDiscountPct = Math.round( ( Bundle.m_nPackageBasePriceInCents - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / Bundle.m_nPackageBasePriceInCents * 100 );
+				var price = Bundle.m_nPackageBasePriceInCents;
+
+				// Apply bundle discount if any before computing total discount percentage
+				if( Bundle.m_nDiscountPct > 0)
+				{
+					price = Math.round( price * ( 100 - Bundle.m_nDiscountPct ) / 100 );
+				}
+
+				var nDiscountPct = Math.round( ( price - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / price * 100 );
 				nDiscountPct = Math.min( nDiscountPct, 99 );
 				$DiscountBlocks.find('.discount_pct' ).text( '-' + nDiscountPct + '%' );
 				$DiscountBlocks.find('.discount_final_price' ).removeClass('your_price').text( strFormattedFinalPrice );

@@ -22455,7 +22455,7 @@
           } = e;
           return d.HD.bIsFollowingEnabled
             ? n.createElement(
-                E.he,
+                E.Gq,
                 {
                   toolTipContent:
                     r || i ? void 0 : (0, _.we)("#CreatorHome_Follow_tooltip"),
