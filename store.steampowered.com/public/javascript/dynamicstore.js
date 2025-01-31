@@ -1126,8 +1126,15 @@ GDynamicStore = {
 		{
 			var strFormattedFinalPrice = GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount );
 			$DiscountBlocks.show();
+			var price = Bundle.m_nPackageBasePriceInCents;
 
-			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( Bundle.m_nPackageBasePriceInCents ) );
+			// Apply bundle discount if any before showing original price and computing total discount percentage
+			if( Bundle.m_nDiscountPct > 0)
+			{
+				price = Math.round( price * ( 100 - Bundle.m_nDiscountPct ) / 100 );
+			}
+
+			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( price ) );
 			if ( !Bundle.m_bContainsDiscountedPackage )
 			{
 				$DiscountBlocks.addClass('no_discount');
@@ -1136,13 +1143,6 @@ GDynamicStore = {
 			else
 			{
 				$DiscountBlocks.removeClass('no_discount');
-				var price = Bundle.m_nPackageBasePriceInCents;
-
-				// Apply bundle discount if any before computing total discount percentage
-				if( Bundle.m_nDiscountPct > 0)
-				{
-					price = Math.round( price * ( 100 - Bundle.m_nDiscountPct ) / 100 );
-				}
 
 				var nDiscountPct = Math.round( ( price - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / price * 100 );
 				nDiscountPct = Math.min( nDiscountPct, 99 );
