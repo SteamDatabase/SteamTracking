@@ -31538,7 +31538,11 @@
           }, 3e4));
       }
       const h = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        g = ["(localhost|127.0.0.1):(?!(80|443))", "chrome-extension://"];
+        g = [
+          "(localhost|127.0.0.1):(?!(80|443))",
+          "chrome-extension://",
+          "HTMLDivElement.onreset (/market",
+        ];
       function _() {
         try {
           const e = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
