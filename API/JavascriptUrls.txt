@@ -1635,8 +1635,8 @@ ${STORE_BASE_URL}steamawards/nominations
 ${STORE_BASE_URL}steamawards/nominations/
 ${STORE_BASE_URL}steamawards/nominations/${steamid}?k=${code}
 ${STORE_BASE_URL}sub/${id}
+${STORE_BASE_URL}sub/${packageid}
 ${STORE_BASE_URL}sub/${}
-${STORE_BASE_URL}subs/${packageid}
 ${STORE_BASE_URL}subscriber_agreement
 ${STORE_BASE_URL}subscriber_agreement/
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}

@@ -57451,7 +57451,7 @@
                   Nt(t, e))
                 : e.packageid
                   ? (t.SetAssociation(2, e.packageid),
-                    t.SetLinkURL(`${it.TS.STORE_BASE_URL}subs/${e.packageid}`),
+                    t.SetLinkURL(`${it.TS.STORE_BASE_URL}sub/${e.packageid}`),
                     Nt(t, e))
                   : e.bundleid
                     ? (t.SetAssociation(5, e.bundleid),
