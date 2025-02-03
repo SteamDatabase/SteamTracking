@@ -6430,3 +6430,10 @@ a.open_in_steam_body:hover {
 	width: auto;
 	height: 80vh;
 }
+
+.download_demo_buttons_ctn {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 4px;
+}
