@@ -1497,6 +1497,8 @@
     "Sale_Debug_Not_LinkedSection": "Item does NOT appear in Linked App List.",
     "Sale_Debug_LivePreview": "Live Preview",
     "Sale_Debug_LivePreview_ttip": "Opens up a window that shows the sale and updates as you make changes.",
+    "Sale_Debug_LivePreview_GoTo": "Reveal",
+    "Sale_Debug_LivePreview_GoTo_ttip": "Reveals and highlights this section in the sale.",
     "Sale_GameExport_Title": "Export Game Locations",
     "Sale_GameExport_Desc": "Download a CSV file mapping each item for sale to the sections and tabs in which it appears.",
     "Sale_GameExport_ContentSummary": "Found %1$s tabs, %2$s sections, and %3$s total items.",

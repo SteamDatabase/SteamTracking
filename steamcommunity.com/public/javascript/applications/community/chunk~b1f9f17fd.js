@@ -24308,13 +24308,18 @@
             }),
             F &&
               S &&
+              !t.hide_section &&
               c.createElement(
                 _e.Gq,
-                { toolTipContent: (0, m.we)("#Sale_LivePreview_GoTo_ttip") },
+                {
+                  toolTipContent: (0, m.we)(
+                    "#Sale_Debug_LivePreview_GoTo_ttip",
+                  ),
+                },
                 c.createElement(
                   "button",
                   { className: C.JumpToButton, onClick: L },
-                  (0, m.we)("#Sale_LivePreview_GoTo"),
+                  (0, m.we)("#Sale_Debug_LivePreview_GoTo"),
                 ),
               ),
             c.createElement(
