@@ -752,8 +752,8 @@ A:active {
   padding-bottom: 24px;
   background: radial-gradient(
     50.51% 50.51% at 50% 87.88%,
-    rgba(193, 193, 193, 0.1) 0%,
-    rgba(193, 193, 193, 0) 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 .BasicUI ._6Tfttc004NhLDjbTDS9PC {
@@ -806,7 +806,7 @@ A:active {
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 32px;
-  line-height: 35px;
+  line-height: 1.1;
   color: #fff;
   font-weight: 300;
   text-align: left;
@@ -1437,10 +1437,6 @@ A:active {
 }
 ._3H7i0ChQjoGWieNRcKmYea ._1s9-9e_1KjO0xTTJNj-KuT .CapsuleImageCtn {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6666666667);
-  transition: transform .2s ease-in-out;
-}
-._3H7i0ChQjoGWieNRcKmYea ._1s9-9e_1KjO0xTTJNj-KuT .CapsuleImageCtn:hover {
-  transform: scale(1.1);
 }
 ._3H7i0ChQjoGWieNRcKmYea ._1s9-9e_1KjO0xTTJNj-KuT ._3H7i0ChQjoGWieNRcKmYea {
   width: calc(50% - 6px);

@@ -3913,7 +3913,7 @@
                   },
                   h,
                 ),
-            Boolean(s) && a.createElement("div", null, s),
+            Boolean(s) && a.createElement(a.Fragment, null, s),
           ),
           S &&
             a.createElement(G, {
@@ -3972,47 +3972,48 @@
             bHasParentAppToDisplay: g,
             bIsHovered: d,
             strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: M,
+            bPreferDemoStorePage: b,
           } = e,
-          [b] = (0, u.G6)(t.id, (0, m.SW)(t.type), i.Xh),
-          f = (0, v.n9)(),
-          w = (0, a.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
-        if (!b) return null;
-        const S = (0, z.NT)(
-          (0, o.wJ)(`${b.GetStorePageURL(M)}${n ? `?${n}` : ""}`, f),
+          [f] = (0, u.G6)(t.id, (0, m.SW)(t.type), i.Xh),
+          w = (0, v.n9)(),
+          S = (0, a.useMemo)(() => f?.GetIncludedAppIDsOrSelf(), [f]);
+        if (!f) return null;
+        const E = (0, z.NT)(
+          (0, o.wJ)(`${f.GetStorePageURL(b)}${n ? `?${n}` : ""}`, w),
         );
-        let E;
+        let R;
         "overrideNavigation" in t &&
-          (E = (e) => (
+          (R = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const R = Boolean(_);
+        const C = Boolean(_);
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
             s.Ii,
             {
-              href: E ? null : S,
+              href: R ? null : E,
               style: { display: "block", cursor: "pointer" },
+              className: M().CapsuleFocusCtn,
               preferredFocus: g,
-              onClick: E,
+              onClick: R,
             },
             a.createElement(
               "div",
-              { className: (0, T.A)({ [I().TwoWidthCtn]: R }) },
+              { className: (0, T.A)({ [I().TwoWidthCtn]: C }) },
               a.createElement(
                 "div",
-                { className: (0, T.A)({ [I().TwoWidthCapsule]: R }) },
-                a.createElement(y.V, { appids: w, hide_status_banners: r }),
+                { className: (0, T.A)({ [I().TwoWidthCapsule]: C }) },
+                a.createElement(y.V, { appids: S, hide_status_banners: r }),
                 a.createElement(p.aU, { imageType: c, info: t }),
                 a.createElement(h.S, {
                   eDeckCompatibilityCategory:
-                    b?.GetPlatforms()?.steam_deck_compat_category,
+                    f?.GetPlatforms()?.steam_deck_compat_category,
                 }),
                 Boolean(d) && a.createElement(B.m, { appInfo: t }),
               ),
-              R &&
+              C &&
                 a.createElement(
                   "div",
                   { className: I().TwoWidthSideInfo },
@@ -4023,12 +4024,12 @@
                     a.createElement(
                       "span",
                       null,
-                      b.GetFormattedSteamReleaseDate(),
+                      f.GetFormattedSteamReleaseDate(),
                     ),
                   ),
                   a.createElement(k.n, {
                     bHideTitle: !0,
-                    rgTagIDs: b.GetTagIDs(),
+                    rgTagIDs: f.GetTagIDs(),
                     instanceNum: l,
                   }),
                 ),
@@ -5073,7 +5074,7 @@
           );
         return i.createElement(
           f.A,
-          { submethod: "mm_auto_render" },
+          { submethod: "mm-auto-render" },
           i.createElement(
             F,
             null,

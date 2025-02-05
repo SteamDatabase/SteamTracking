@@ -1476,6 +1476,15 @@ enum UnnamedEnum15675cb60f1450a5
 	RateLimitExceeded = 4;
 }
 
+enum UnnamedEnum17dd37ca155cd6aa
+{
+	k_MediaTitleDesc = 1;
+	k_TitleMediaDesc = 2;
+	k_TitleDescMedia = 3;
+	k_HorizontalMediaFirst = 4;
+	k_HorizontalTextFirst = 5;
+}
+
 enum UnnamedEnum183417f294ffc34a
 {
 	None = 0;

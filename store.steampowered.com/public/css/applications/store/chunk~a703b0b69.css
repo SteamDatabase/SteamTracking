@@ -1706,7 +1706,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
   font-size: 16px;
   line-height: 16px;
 }

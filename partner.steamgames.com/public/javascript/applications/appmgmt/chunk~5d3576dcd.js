@@ -6,7 +6,7 @@
   [8129],
   {
     88241: (e, t, a) => {
-      a.d(t, { Z: () => u, dV: () => m.d, rO: () => c });
+      a.d(t, { Z: () => c, dV: () => m.d, rO: () => u });
       var r = a(34629),
         n = a(14947),
         s = a(31561),
@@ -14,7 +14,7 @@
         o = a(61859),
         _ = a(78327),
         m = a(85044);
-      function c(e) {
+      function u(e) {
         let t = "offline";
         return (
           e &&
@@ -27,7 +27,7 @@
           t
         );
       }
-      class u {
+      class c {
         m_steamid;
         m_bInitialized = !1;
         m_ePersonaState = 0;
@@ -168,6 +168,13 @@
             return (0, o.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
+        GetCurrentGameStatus() {
+          return (
+            this.GetCurrentGameRichPresence() ||
+            this.m_mapRichPresence.get("status") ||
+            ""
+          );
+        }
         GetOfflineStatusUpdateRate() {
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;
@@ -270,28 +277,28 @@
             : `${_.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, r.Cg)([n.sH], u.prototype, "m_bInitialized", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_ePersonaState", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_gameid", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_strPlayerName", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_strAvatarHash", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_strAccountName", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_unGameServerIP", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_unGameServerPort", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_game_lobby_id", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_bAvatarPending", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_broadcastId", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_broadcastAccountId", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_broadcastAppId", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([n.sH], u.prototype, "m_bOnSteamDeck", void 0);
+      (0, r.Cg)([n.sH], c.prototype, "m_bInitialized", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_ePersonaState", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_unGamePlayedAppID", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_gameid", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_unPersonaStateFlags", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_strPlayerName", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_strAvatarHash", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_strAccountName", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_rtLastSeenOnline", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_strGameExtraInfo", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_unGameServerIP", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_unGameServerPort", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_game_lobby_id", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_bPlayerNamePending", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_bAvatarPending", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_broadcastId", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_broadcastAccountId", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_broadcastAppId", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_broadcastViewerCount", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_strBroadcastTitle", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_bCommunityBanned", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_bOnSteamDeck", void 0);
     },
     14336: (e, t, a) => {
       a.d(t, { z0: () => y, DW: () => S, js: () => h, hW: () => g });
@@ -302,15 +309,15 @@
         o = a(44654),
         _ = a(88241),
         m = a(17720),
-        c = a(72963),
-        u = a(37735),
+        u = a(72963),
+        c = a(37735),
         l = a(58632),
         p = a.n(l);
       function d(e, t) {
         return new (p())(
           async (t) => {
             const a = [...t],
-              r = await u.xt.GetPlayerLinkDetails(e, { steamids: a }),
+              r = await c.xt.GetPlayerLinkDetails(e, { steamids: a }),
               n = new Map();
             return (
               r
@@ -328,8 +335,8 @@
       }
       function h(e) {
         const t = (0, i.KV)(),
-          a = r.useContext(f);
-        return (0, n.I)(P(a, t, e));
+          a = r.useContext(P);
+        return (0, n.I)(f(a, t, e));
       }
       function g(e) {
         const t = r.useRef(),
@@ -344,13 +351,13 @@
       }
       function S(e) {
         const t = (0, i.KV)(),
-          a = r.useContext(f);
-        return (0, s.E)({ queries: e.map((e) => P(a, t, e)) });
+          a = r.useContext(P);
+        return (0, s.E)({ queries: e.map((e) => f(a, t, e)) });
       }
       function y(e) {
-        return c.L.getQueryData(["PlayerSummary", e]);
+        return u.L.getQueryData(["PlayerSummary", e]);
       }
-      const f = r.createContext({
+      const P = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
@@ -379,7 +386,7 @@
           })(m.b.InitFromAccountID(e), a);
         },
       });
-      function P(e, t, a) {
+      function f(e, t, a) {
         const r = "string" == typeof a ? new m.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", r],
@@ -415,7 +422,7 @@
               return t;
             })(),
           ),
-          c = (0, r.useMemo)(
+          u = (0, r.useMemo)(
             () => ({
               country: o.TS.COUNTRY,
               language: o.TS.LANGUAGE,
@@ -439,7 +446,7 @@
           ),
           t
             ? (0, r.createElement)(_.V3, {
-                context: c,
+                context: u,
                 serviceTransportOverride: m.GetServiceTransport(),
                 children: e.children,
               })

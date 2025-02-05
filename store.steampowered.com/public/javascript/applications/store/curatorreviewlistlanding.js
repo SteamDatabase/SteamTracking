@@ -734,7 +734,7 @@
                   },
                   I,
                 ),
-            Boolean(o) && n.createElement("div", null, o),
+            Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
           S &&
             n.createElement(k, {
@@ -793,47 +793,48 @@
             bHasParentAppToDisplay: d,
             bIsHovered: p,
             strDoubleCapsuleMessage: f,
-            bPreferDemoStorePage: v,
+            bPreferDemoStorePage: h,
           } = e,
-          [h] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          b = (0, y.n9)(),
-          C = (0, n.useMemo)(() => h?.GetIncludedAppIDsOrSelf(), [h]);
-        if (!h) return null;
-        const S = (0, D.NT)(
-          (0, s.wJ)(`${h.GetStorePageURL(v)}${l ? `?${l}` : ""}`, b),
+          [b] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
+          C = (0, y.n9)(),
+          S = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
+        if (!b) return null;
+        const A = (0, D.NT)(
+          (0, s.wJ)(`${b.GetStorePageURL(h)}${l ? `?${l}` : ""}`, C),
         );
-        let A;
+        let T;
         "overrideNavigation" in t &&
-          (A = (e) => (
+          (T = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const T = Boolean(f);
+        const N = Boolean(f);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             o.Ii,
             {
-              href: A ? null : S,
+              href: T ? null : A,
               style: { display: "block", cursor: "pointer" },
+              className: v().CapsuleFocusCtn,
               preferredFocus: d,
-              onClick: A,
+              onClick: T,
             },
             n.createElement(
               "div",
-              { className: (0, w.A)({ [L().TwoWidthCtn]: T }) },
+              { className: (0, w.A)({ [L().TwoWidthCtn]: N }) },
               n.createElement(
                 "div",
-                { className: (0, w.A)({ [L().TwoWidthCapsule]: T }) },
-                n.createElement(E.V, { appids: C, hide_status_banners: a }),
+                { className: (0, w.A)({ [L().TwoWidthCapsule]: N }) },
+                n.createElement(E.V, { appids: S, hide_status_banners: a }),
                 n.createElement(_.aU, { imageType: c, info: t }),
                 n.createElement(I.S, {
                   eDeckCompatibilityCategory:
-                    h?.GetPlatforms()?.steam_deck_compat_category,
+                    b?.GetPlatforms()?.steam_deck_compat_category,
                 }),
                 Boolean(p) && n.createElement(g.m, { appInfo: t }),
               ),
-              T &&
+              N &&
                 n.createElement(
                   "div",
                   { className: L().TwoWidthSideInfo },
@@ -844,12 +845,12 @@
                     n.createElement(
                       "span",
                       null,
-                      h.GetFormattedSteamReleaseDate(),
+                      b.GetFormattedSteamReleaseDate(),
                     ),
                   ),
                   n.createElement(R.n, {
                     bHideTitle: !0,
-                    rgTagIDs: h.GetTagIDs(),
+                    rgTagIDs: b.GetTagIDs(),
                     instanceNum: i,
                   }),
                 ),

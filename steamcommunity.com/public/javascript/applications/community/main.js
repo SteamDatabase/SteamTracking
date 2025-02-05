@@ -596,6 +596,7 @@
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
+        JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
         SaleSectionContainer: "_3gb3JeV_1IMaIeODzBSrP3",
         AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
@@ -1470,8 +1471,8 @@
       };
       var D = r(6813),
         P = r(32630),
-        k = r(97058),
-        x = r(65233),
+        x = r(97058),
+        k = r(65233),
         W = r(73170),
         L = r(91336);
       function A(e) {
@@ -1481,7 +1482,7 @@
           s = window.__virtual_keyboard_client;
         return i && r
           ? n.createElement(
-              x.VQ,
+              k.VQ,
               { controller: r },
               n.createElement(W.F6, { factory: s }, t),
             )
@@ -1512,6 +1513,7 @@
             r.e(9617),
             r.e(7872),
             r.e(7055),
+            r.e(8026),
             r.e(5082),
             r.e(9402),
             r.e(466),
@@ -1529,6 +1531,7 @@
             r.e(9774),
             r.e(2694),
             r.e(9505),
+            r.e(8104),
             r.e(9870),
             r.e(8780),
             r.e(4268),
@@ -1539,6 +1542,7 @@
             r.e(9617),
             r.e(7872),
             r.e(7055),
+            r.e(8026),
             r.e(5082),
             r.e(9402),
             r.e(466),
@@ -1556,6 +1560,7 @@
             r.e(9774),
             r.e(2694),
             r.e(9505),
+            r.e(8104),
             r.e(9870),
             r.e(8780),
             r.e(9855),
@@ -1567,6 +1572,7 @@
             r.e(9617),
             r.e(7872),
             r.e(7055),
+            r.e(8026),
             r.e(5082),
             r.e(9402),
             r.e(466),
@@ -1584,6 +1590,7 @@
             r.e(9774),
             r.e(2694),
             r.e(9505),
+            r.e(8104),
             r.e(9870),
             r.e(8780),
             r.e(258),
@@ -1624,11 +1631,11 @@
         ),
         K = n.lazy(() =>
           Promise.all([
-            r.e(4309),
+            r.e(8026),
             r.e(466),
             r.e(1023),
             r.e(3853),
-            r.e(3123),
+            r.e(8104),
             r.e(1220),
           ]).then(r.bind(r, 15351)),
         ),
@@ -1994,7 +2001,7 @@
                         },
                       }),
                   }),
-                  n.createElement(a.qh, null, n.createElement(k.a, null)),
+                  n.createElement(a.qh, null, n.createElement(x.a, null)),
                 ),
               ),
             ),
@@ -3553,7 +3560,7 @@
         s = r.n(n),
         a = r(90626),
         o = r(90665),
-        l = r(89350),
+        l = r(84143),
         c = r(7745),
         u = r(21109),
         m = r(74882);
@@ -3709,7 +3716,7 @@
         a = r.n(s),
         o = r(90626),
         l = r(76011),
-        c = r(89350),
+        c = r(84143),
         u = r(63512),
         m = r(7445),
         d = r(76217),
@@ -4069,7 +4076,7 @@
           );
         }
       }
-      var c = r(89350);
+      var c = r(84143);
       class u {
         constructor(e) {
           this.m_node = e;
@@ -4210,7 +4217,7 @@
         }
       }
     },
-    89350: (e, t, r) => {
+    84143: (e, t, r) => {
       "use strict";
       r.d(t, { $C: () => G, xj: () => N, iU: () => U, Yo: () => q });
       var i = r(34629),
@@ -4339,9 +4346,7 @@
           distance: a,
         };
       }
-      function f(e, t, r) {
-        return null == e || isNaN(e) ? e : Math.max(t, Math.min(r, e));
-      }
+      var f = r(61732);
       function b(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -4578,7 +4583,7 @@
       function P(e) {
         return e > -1 && e < 1;
       }
-      function k(e, t, r, i, n) {
+      function x(e, t, r, i, n) {
         C(
           "----------------------------------------------------------------------------------",
         ),
@@ -4606,7 +4611,11 @@
             (i && "y" != i) ||
               !y(e, "y") ||
               ((u.top = T(o, r, t, "y")),
-              (u.top = f(u.top, -c.scrollTop, c.MaxScrollTop() - c.scrollTop)),
+              (u.top = f.OQ(
+                u.top,
+                -c.scrollTop,
+                c.MaxScrollTop() - c.scrollTop,
+              )),
               n &&
                 ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
                 (l -= Math.abs(u.top))),
@@ -4614,7 +4623,7 @@
             (i && "x" != i) ||
               !y(e, "x") ||
               ((u.left = T(o, r, t, "x")),
-              (u.left = f(
+              (u.left = f.OQ(
                 u.left,
                 -c.scrollLeft,
                 c.MaxScrollLeft() - c.scrollLeft,
@@ -4645,8 +4654,8 @@
           let t = L(e.element),
             i = t.scrollTop + e.top,
             n = t.scrollLeft + e.left;
-          (n = f(n, 0, t.MaxScrollLeft())),
-            (i = f(i, 0, t.MaxScrollTop())),
+          (n = f.OQ(n, 0, t.MaxScrollLeft())),
+            (i = f.OQ(i, 0, t.MaxScrollTop())),
             (P(t.scrollLeft - n) && P(t.scrollTop - i)) ||
               (t.scrollTo({ left: n, top: i, behavior: r }),
               c || (C("Scrolling:"), (c = !0)),
@@ -4656,7 +4665,7 @@
               ));
         }
       }
-      class x {
+      class k {
         constructor(e) {
           (this.m_scrollTopTarget = void 0),
             (this.m_scrollLeftTarget = void 0),
@@ -4776,11 +4785,11 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, i.Cg)([o.o], x.prototype, "ResetScrollState", null);
+      (0, i.Cg)([o.o], k.prototype, "ResetScrollState", null);
       const W = new WeakMap();
       function L(e) {
         let t = W.get(e);
-        return t || ((t = new x(e)), W.set(e, t)), t;
+        return t || ((t = new k(e)), W.set(e, t)), t;
       }
       function A(e) {
         const t = W.get(e);
@@ -5473,7 +5482,7 @@
                 )
                   return (
                     j(`Element too far away, scrolling ${i} on ${r} axis `),
-                    k(a.Element, a.Element, "smooth", r, i),
+                    x(a.Element, a.Element, "smooth", r, i),
                     !0
                   );
               }
@@ -5738,11 +5747,11 @@
                   r && (I = performance.now()),
                     e.Tree.Controller.BIsRestoringHistory() && (n = "auto"),
                     c
-                      ? k(0, l, n)
+                      ? x(0, l, n)
                       : l.scrollIntoView({ behavior: n, block: "nearest" });
                 } else
                   c
-                    ? k(0, l, "auto")
+                    ? x(0, l, "auto")
                     : null == l ||
                       l.scrollIntoView({
                         behavior: "auto",
@@ -5761,7 +5770,7 @@
     7745: (e, t, r) => {
       "use strict";
       r.d(t, { O: () => n });
-      var i = r(89350);
+      var i = r(84143);
       function n(e) {
         switch (e) {
           case "column":
@@ -6136,6 +6145,13 @@
           return this.m_vecCallbacks.length;
         }
       }
+    },
+    61732: (e, t, r) => {
+      "use strict";
+      function i(e, t, r) {
+        return null == e || isNaN(e) ? e : Math.max(t, Math.min(r, e));
+      }
+      r.d(t, { OQ: () => i });
     },
     26205: (e, t, r) => {
       "use strict";
@@ -9558,18 +9574,18 @@
           return "CClientMetrics_ClipRange_Notification_RelativeRangeEdge";
         }
       }
-      class k extends d {
+      class x extends d {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            k.prototype.recording_type || n.Sg(k.M()),
+            x.prototype.recording_type || n.Sg(x.M()),
             d.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            k.sm_m ||
-              (k.sm_m = {
-                proto: k,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   recording_type: {
                     n: 1,
@@ -9590,56 +9606,56 @@
                   instant_clip: { n: 5, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
-            k.sm_m
+            x.sm_m
           );
         }
         static MBF() {
-          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
+          return x.sm_mbf || (x.sm_mbf = n.w0(x.M())), x.sm_mbf;
         }
         toObject(e = !1) {
-          return k.toObject(e, this);
+          return x.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(k.M(), e, t);
+          return n.BT(x.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(k.M(), e);
+          return n.Uq(x.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(k.MBF(), e, t);
+          return n.zj(x.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(k.M(), e, t);
+          n.i0(x.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_EndGameRecording_Notification";
         }
       }
-      class x extends d {
+      class k extends d {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.client_args || n.Sg(x.M()),
+            k.prototype.client_args || n.Sg(k.M()),
             d.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
                 fields: {
                   client_args: {
                     n: 1,
@@ -9691,39 +9707,39 @@
                   gr_mode: { n: 10, br: n.qM.readInt32, bw: n.gp.writeInt32 },
                 },
               }),
-            x.sm_m
+            k.sm_m
           );
         }
         static MBF() {
-          return x.sm_mbf || (x.sm_mbf = n.w0(x.M())), x.sm_mbf;
+          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return k.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(x.M(), e, t);
+          return n.BT(k.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(x.M(), e);
+          return n.Uq(k.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(x.MBF(), e, t);
+          return n.zj(k.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(x.M(), e, t);
+          n.i0(k.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ReportClientArgs_Notification";
@@ -9887,7 +9903,7 @@
           (e.ReportClientArgs = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportClientArgs#1",
-              (0, s.I8)(x, t),
+              (0, s.I8)(k, t),
               { ePrivilege: 1 },
             );
           }),
@@ -9915,7 +9931,7 @@
           (e.ReportEndGameRecording = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportEndGameRecording#1",
-              (0, s.I8)(k, t),
+              (0, s.I8)(x, t),
               { ePrivilege: 1 },
             );
           });
@@ -12150,18 +12166,18 @@
           return "ProfileItem_ProfileColor";
         }
       }
-      class k extends o {
+      class x extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            k.prototype.steamid || n.Sg(k.M()),
+            x.prototype.steamid || n.Sg(x.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            k.sm_m ||
-              (k.sm_m = {
-                proto: k,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   steamid: {
                     n: 1,
@@ -12170,58 +12186,6 @@
                   },
                   language: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
                 },
-              }),
-            k.sm_m
-          );
-        }
-        static MBF() {
-          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
-        }
-        toObject(e = !1) {
-          return k.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(k.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(k.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(k.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(k.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlayer_GetProfileBackground_Request";
-        }
-      }
-      class x extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            x.prototype.profile_background || n.Sg(x.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
-                fields: { profile_background: { n: 1, c: D } },
               }),
             x.sm_m
           );
@@ -12256,6 +12220,58 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetProfileBackground_Request";
+        }
+      }
+      class k extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            k.prototype.profile_background || n.Sg(k.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
+                fields: { profile_background: { n: 1, c: D } },
+              }),
+            k.sm_m
+          );
+        }
+        static MBF() {
+          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
+        }
+        toObject(e = !1) {
+          return k.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(k.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(k.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(k.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(k.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPlayer_GetProfileBackground_Response";
@@ -15173,66 +15189,11 @@
           return "ProfileCustomization";
         }
       }
-      class ke extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            ke.prototype.theme_id || n.Sg(ke.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ke.sm_m ||
-              (ke.sm_m = {
-                proto: ke,
-                fields: {
-                  theme_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            ke.sm_m
-          );
-        }
-        static MBF() {
-          return ke.sm_mbf || (ke.sm_mbf = n.w0(ke.M())), ke.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ke.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(ke.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(ke.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new ke();
-          return ke.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(ke.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(ke.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "ProfileTheme";
-        }
-      }
       class xe extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xe.prototype.hide_profile_awards || n.Sg(xe.M()),
+            xe.prototype.theme_id || n.Sg(xe.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15241,11 +15202,8 @@
               (xe.sm_m = {
                 proto: xe,
                 fields: {
-                  hide_profile_awards: {
-                    n: 1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
+                  theme_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             xe.sm_m
@@ -15281,6 +15239,64 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "ProfileTheme";
+        }
+      }
+      class ke extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ke.prototype.hide_profile_awards || n.Sg(ke.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            ke.sm_m ||
+              (ke.sm_m = {
+                proto: ke,
+                fields: {
+                  hide_profile_awards: {
+                    n: 1,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                },
+              }),
+            ke.sm_m
+          );
+        }
+        static MBF() {
+          return ke.sm_mbf || (ke.sm_mbf = n.w0(ke.M())), ke.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ke.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(ke.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(ke.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new ke();
+          return ke.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(ke.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(ke.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "ProfilePreferences";
@@ -15373,9 +15389,9 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
-                  profile_theme: { n: 3, c: ke },
+                  profile_theme: { n: 3, c: xe },
                   purchased_customizations: { n: 4, c: Ae, r: !0, q: !0 },
-                  profile_preferences: { n: 5, c: xe },
+                  profile_preferences: { n: 5, c: ke },
                 },
               }),
             Le.sm_m
@@ -15933,7 +15949,7 @@
             Ke.sm_m ||
               (Ke.sm_m = {
                 proto: Ke,
-                fields: { profile_themes: { n: 1, c: ke, r: !0, q: !0 } },
+                fields: { profile_themes: { n: 1, c: xe, r: !0, q: !0 } },
               }),
             Ke.sm_m
           );
@@ -16074,7 +16090,7 @@
             Qe.sm_m ||
               (Qe.sm_m = {
                 proto: Qe,
-                fields: { profile_preferences: { n: 1, c: xe } },
+                fields: { profile_preferences: { n: 1, c: ke } },
               }),
             Qe.sm_m
           );
@@ -18123,63 +18139,11 @@
           return "CPlayer_GetPrivacySettings_Request";
         }
       }
-      class kt extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            kt.prototype.privacy_settings || n.Sg(kt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            kt.sm_m ||
-              (kt.sm_m = {
-                proto: kt,
-                fields: { privacy_settings: { n: 1, c: Dt } },
-              }),
-            kt.sm_m
-          );
-        }
-        static MBF() {
-          return kt.sm_mbf || (kt.sm_mbf = n.w0(kt.M())), kt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return kt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(kt.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(kt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new kt();
-          return kt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(kt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return kt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(kt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return kt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlayer_GetPrivacySettings_Response";
-        }
-      }
       class xt extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xt.prototype.appid || n.Sg(xt.M()),
+            xt.prototype.privacy_settings || n.Sg(xt.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -18187,9 +18151,7 @@
             xt.sm_m ||
               (xt.sm_m = {
                 proto: xt,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                },
+                fields: { privacy_settings: { n: 1, c: Dt } },
               }),
             xt.sm_m
           );
@@ -18224,6 +18186,60 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return xt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetPrivacySettings_Response";
+        }
+      }
+      class kt extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            kt.prototype.appid || n.Sg(kt.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            kt.sm_m ||
+              (kt.sm_m = {
+                proto: kt,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                },
+              }),
+            kt.sm_m
+          );
+        }
+        static MBF() {
+          return kt.sm_mbf || (kt.sm_mbf = n.w0(kt.M())), kt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return kt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(kt.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(kt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new kt();
+          return kt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(kt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return kt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(kt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return kt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPlayer_GetDurationControl_Request";
@@ -18831,8 +18847,8 @@
           (e.GetProfileBackground = function (e, t) {
             return e.SendMsg(
               "Player.GetProfileBackground#1",
-              (0, s.I8)(k, t),
-              x,
+              (0, s.I8)(x, t),
+              k,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -19147,14 +19163,14 @@
             return e.SendMsg(
               "Player.GetPrivacySettings#1",
               (0, s.I8)(Pt, t),
-              kt,
+              xt,
               { ePrivilege: 1 },
             );
           }),
           (e.GetDurationControl = function (e, t) {
             return e.SendMsg(
               "Player.GetDurationControl#1",
-              (0, s.I8)(xt, t),
+              (0, s.I8)(kt, t),
               Wt,
               { ePrivilege: 1 },
             );
@@ -19207,9 +19223,9 @@
       "use strict";
       r.d(t, {
         $4: () => re,
-        O4: () => x,
+        O4: () => k,
         Qv: () => Y,
-        TS: () => k,
+        TS: () => x,
         eE: () => W,
         eW: () => X,
         gn: () => P,
@@ -21257,18 +21273,18 @@
           return "StoreBrowseItemDataRequest";
         }
       }
-      class k extends o {
+      class x extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            k.prototype.language || n.Sg(k.M()),
+            x.prototype.language || n.Sg(x.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            k.sm_m ||
-              (k.sm_m = {
-                proto: k,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   language: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
                   elanguage: { n: 2, br: n.qM.readInt32, bw: n.gp.writeInt32 },
@@ -21281,77 +21297,6 @@
                     n: 4,
                     br: n.qM.readInt32,
                     bw: n.gp.writeInt32,
-                  },
-                },
-              }),
-            k.sm_m
-          );
-        }
-        static MBF() {
-          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
-        }
-        toObject(e = !1) {
-          return k.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(k.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(k.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(k.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(k.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreBrowseContext";
-        }
-      }
-      class x extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            x.prototype.appid || n.Sg(x.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  packageid: {
-                    n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  bundleid: { n: 3, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  tagid: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  creatorid: {
-                    n: 5,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  hubcategoryid: {
-                    n: 6,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
                   },
                 },
               }),
@@ -21390,6 +21335,77 @@
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "StoreBrowseContext";
+        }
+      }
+      class k extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            k.prototype.appid || n.Sg(k.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  packageid: {
+                    n: 2,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  bundleid: { n: 3, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  tagid: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  creatorid: {
+                    n: 5,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  hubcategoryid: {
+                    n: 6,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                },
+              }),
+            k.sm_m
+          );
+        }
+        static MBF() {
+          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
+        }
+        toObject(e = !1) {
+          return k.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(k.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(k.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(k.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(k.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "StoreItemID";
         }
       }
@@ -21406,8 +21422,8 @@
               (W.sm_m = {
                 proto: W,
                 fields: {
-                  ids: { n: 1, c: x, r: !0, q: !0 },
-                  context: { n: 2, c: k },
+                  ids: { n: 1, c: k, r: !0, q: !0 },
+                  context: { n: 2, c: x },
                   data_request: { n: 3, c: P },
                 },
               }),
@@ -21897,9 +21913,9 @@
               (H.sm_m = {
                 proto: H,
                 fields: {
-                  context: { n: 1, c: k },
+                  context: { n: 1, c: x },
                   store_page_filter: { n: 2, c: a.S7 },
-                  appids: { n: 3, c: x, r: !0, q: !0 },
+                  appids: { n: 3, c: k, r: !0, q: !0 },
                   steamid: {
                     n: 4,
                     br: n.qM.readUint64String,
@@ -22145,7 +22161,7 @@
               (Y.sm_m = {
                 proto: Y,
                 fields: {
-                  context: { n: 1, c: k },
+                  context: { n: 1, c: x },
                   appids: {
                     n: 2,
                     r: !0,
@@ -22336,7 +22352,7 @@
                     pbr: n.qM.readPackedUint32,
                     bw: n.gp.writeRepeatedUint32,
                   },
-                  context: { n: 2, c: k },
+                  context: { n: 2, c: x },
                 },
               }),
             X.sm_m
@@ -25319,7 +25335,7 @@
       r.d(t, { A: () => s });
       var i = r(26205);
       const n = JSON.parse(
-        '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm_auto_render":100745}',
+        '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749}',
       );
       class s {
         static InstrumentLink(e, t, r = null) {
@@ -26891,53 +26907,53 @@
           return "CParental_RequestRecoveryCode_Request";
         }
       }
-      class k extends f {
+      class x extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return k.toObject(e, this);
+          return x.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new k();
+          return new x();
         }
         static deserializeBinary(e) {
           let t = new o.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new o.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new o.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CParental_RequestRecoveryCode_Response";
         }
       }
-      class x extends f {
+      class k extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.recovery_code || l.Sg(x.M()),
+            k.prototype.recovery_code || l.Sg(k.M()),
             f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
                 fields: {
                   recovery_code: {
                     n: 1,
@@ -26951,39 +26967,39 @@
                   },
                 },
               }),
-            x.sm_m
+            k.sm_m
           );
         }
         static MBF() {
-          return x.sm_mbf || (x.sm_mbf = l.w0(x.M())), x.sm_mbf;
+          return k.sm_mbf || (k.sm_mbf = l.w0(k.M())), k.sm_mbf;
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return k.toObject(e, this);
         }
         static toObject(e, t) {
-          return l.BT(x.M(), e, t);
+          return l.BT(k.M(), e, t);
         }
         static fromObject(e) {
-          return l.Uq(x.M(), e);
+          return l.Uq(k.M(), e);
         }
         static deserializeBinary(e) {
           let t = new o.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return l.zj(x.MBF(), e, t);
+          return l.zj(k.MBF(), e, t);
         }
         serializeBinary() {
           var e = new o.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          l.i0(x.M(), e, t);
+          l.i0(k.M(), e, t);
         }
         serializeBase64String() {
           var e = new o.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CParental_DisableWithRecoveryCode_Request";
@@ -27994,14 +28010,14 @@
             return e.SendMsg(
               "Parental.RequestRecoveryCode#1",
               (0, s.I8)(P, t),
-              k,
+              x,
               { ePrivilege: 1 },
             );
           }),
           (e.DisableWithRecoveryCode = function (e, t) {
             return e.SendMsg(
               "Parental.DisableWithRecoveryCode#1",
-              (0, s.I8)(x, t),
+              (0, s.I8)(k, t),
               W,
               { ePrivilege: 0 },
             );
@@ -30855,36 +30871,25 @@
     },
     6336: (e, t, r) => {
       "use strict";
-      r.d(t, { g: () => m });
+      r.d(t, { g: () => u });
       var i = r(34629),
         n = r(75844),
         s = r(90626),
-        a = r(6144),
-        o = r(52038),
-        l = r(73745),
-        c = r(37739),
-        u = r.n(c);
-      let m = class extends s.Component {
+        a = r(52038),
+        o = r(73745),
+        l = r(37739),
+        c = r.n(l);
+      let u = class extends s.Component {
         constructor() {
           super(...arguments),
-            (this.m_listeners = new a.Ji()),
             (this.m_bNoSpace = !1),
             (this.state = { x: void 0, y: void 0, hoverPositionReady: !1 });
         }
         bindHover(e) {
           (this.m_elHover = e || void 0), this.positionHover();
         }
-        componentDidMount() {
-          this.m_listeners.AddEventListener(window, "blur", this.OnWindowBlur);
-        }
         componentDidUpdate() {
           this.positionHover();
-        }
-        componentWillUnmount() {
-          this.m_listeners.Unregister();
-        }
-        OnWindowBlur(e) {
-          this.props.onWindowBlur && this.props.onWindowBlur(e);
         }
         render() {
           const {
@@ -30893,39 +30898,38 @@
             className: r,
             style: i,
             bEnablePointerEvents: n,
-            direction: a,
+            direction: o,
             nBodyAlignment: l,
-            nBodyDistance: c,
+            nBodyDistance: u,
             nAllowOffscreenPx: m,
             nMaxLateralMoveOnScreen: d,
             children: p,
             onNoSpace: h,
-            onWindowBlur: g,
-            bTopmost: _,
-            ...f
+            bTopmost: g,
+            ..._
           } = this.props;
-          let b = Object.assign({ left: this.state.x, top: this.state.y }, i),
-            w = !t || t.visible;
+          let f = Object.assign({ left: this.state.x, top: this.state.y }, i),
+            b = !t || t.visible;
           return s.createElement(
             "div",
             {
-              className: (0, o.A)(
-                u().HoverPositionOuter,
-                _ && u().HoverAboveModal,
+              className: (0, a.A)(
+                c().HoverPositionOuter,
+                g && c().HoverAboveModal,
               ),
             },
             s.createElement(
               "div",
               {
-                ...f,
-                className: (0, o.A)(
-                  u().HoverPosition,
-                  w && this.state.hoverPositionReady && u().Ready,
-                  this.m_bNoSpace && u().NoSpace,
-                  n && u().EnablePointerEvents,
+                ..._,
+                className: (0, a.A)(
+                  c().HoverPosition,
+                  b && this.state.hoverPositionReady && c().Ready,
+                  this.m_bNoSpace && c().NoSpace,
+                  n && c().EnablePointerEvents,
                   r,
                 ),
-                style: b,
+                style: f,
                 ref: this.bindHover,
               },
               p,
@@ -30950,7 +30954,7 @@
             l = i.querySelector(".hover_arrow.top"),
             c = i.querySelector(".hover_arrow.bottom"),
             u = n.getBoundingClientRect(),
-            m = i.getBoundingClientRect(),
+            d = i.getBoundingClientRect(),
             p =
               "overlay" == this.props.direction ||
               "overlay-center" == this.props.direction;
@@ -30968,7 +30972,7 @@
               nTop: b,
               nOverflow: w,
               nLateralOverflow: B,
-            } = d(g, _, h, u, m, s.innerWidth, s.innerHeight);
+            } = m(g, _, h, u, d, s.innerWidth, s.innerHeight);
           if (
             w >
               (null !== (e = this.props.nAllowOffscreenPx) && void 0 !== e
@@ -31001,7 +31005,7 @@
                 nTop: a,
                 nOverflow: o,
                 nLateralOverflow: l,
-              } = d(e, _, h, u, m, s.innerWidth, s.innerHeight);
+              } = m(e, _, h, u, d, s.innerWidth, s.innerHeight);
             if (
               (o < w && ((g = e), (f = n), (b = a), (w = o), (B = l)),
               w >
@@ -31055,59 +31059,58 @@
               this.setState({ hoverPositionReady: !0 });
         }
       };
-      function d(e, t, r, i, n, s, a) {
+      function m(e, t, r, i, n, s, a) {
         const o = s,
           l = a;
-        let c, u, m, d;
+        let c, u, m, p;
         switch (e) {
           case "right":
             (c = i.right + r),
-              (u = p(i.top, i.height, n.height, t)),
+              (u = d(i.top, i.height, n.height, t)),
               (m = Math.max(0, c + n.width - o)),
-              (d = [Math.max(0, 0 - u), Math.max(0, u + n.height - l)]);
+              (p = [Math.max(0, 0 - u), Math.max(0, u + n.height - l)]);
             break;
           case "left":
             (c = i.left - r - n.width),
-              (u = p(i.top, i.height, n.height, t)),
+              (u = d(i.top, i.height, n.height, t)),
               (m = Math.max(0, 0 - c)),
-              (d = [Math.max(0, 0 - u), Math.max(0, u + n.height - l)]);
+              (p = [Math.max(0, 0 - u), Math.max(0, u + n.height - l)]);
             break;
           case "bottom":
-            (c = p(i.left, i.width, n.width, t)),
+            (c = d(i.left, i.width, n.width, t)),
               (u = i.bottom + r),
               (m = Math.max(0, u + n.height - l)),
-              (d = [Math.max(0, 0 - c), Math.max(0, c + n.width - o)]);
+              (p = [Math.max(0, 0 - c), Math.max(0, c + n.width - o)]);
             break;
           case "top":
-            (c = p(i.left, i.width, n.width, t)),
+            (c = d(i.left, i.width, n.width, t)),
               (u = i.top - r - n.height),
               (m = Math.max(0, 0 - u)),
-              (d = [Math.max(0, 0 - c), Math.max(0, c + n.width - o)]);
+              (p = [Math.max(0, 0 - c), Math.max(0, c + n.width - o)]);
             break;
           case "overlay":
-            (c = i.left), (u = i.top), (m = 0), (d = [0, 0]);
+            (c = i.left), (u = i.top), (m = 0), (p = [0, 0]);
             break;
           case "overlay-center":
             (c = i.left + 0.5 * i.width - 0.5 * n.width),
               (u = i.top + 0.5 * i.height - 0.5 * n.height),
               (m = 0),
-              (d = [0, 0]);
+              (p = [0, 0]);
         }
-        return { nLeft: c, nTop: u, nOverflow: m, nLateralOverflow: d };
+        return { nLeft: c, nTop: u, nOverflow: m, nLateralOverflow: p };
       }
-      function p(e, t, r, i) {
+      function d(e, t, r, i) {
         return Math.max(0, Math.min(1, i)) * (t - r) + e;
       }
-      (m.defaultProps = {
+      (u.defaultProps = {
         direction: "right",
         nBodyAlignment: 0.5,
         nAllowOffscreenPx: 10,
         nBodyDistance: 8,
         nMaxLateralMoveOnScreen: void 0,
       }),
-        (0, i.Cg)([l.oI], m.prototype, "bindHover", null),
-        (0, i.Cg)([l.oI], m.prototype, "OnWindowBlur", null),
-        (m = (0, i.Cg)([n.PA], m));
+        (0, i.Cg)([o.oI], u.prototype, "bindHover", null),
+        (u = (0, i.Cg)([n.PA], u));
     },
     15759: (e, t, r) => {
       "use strict";
@@ -34388,7 +34391,7 @@
       var i = r(34629),
         n = r(45699),
         s = r(76217),
-        a = r(89350),
+        a = r(84143),
         o = r(45730);
       const l = Object.seal({ onMoveUp: c, onMoveDown: c });
       Object.seal({ onMoveRight: c, onMoveLeft: c });
@@ -34817,7 +34820,7 @@
             this.state.ready &&
             this.props.instance.visible
           ) {
-            const e = k() ? 150 : 0;
+            const e = x() ? 150 : 0;
             this.props.instance.OnCancel(e);
           }
         }
@@ -35260,7 +35263,7 @@
         (0, i.Cg)([B.oI], F.prototype, "OnKeyDown", null),
         (F = (0, i.Cg)([u.PA], F));
       const P = "EnableContextMenuBlurDelay3";
-      function k() {
+      function x() {
         return (
           "true" === (window.localStorage && window.localStorage.getItem(P))
         );
@@ -35307,19 +35310,18 @@
         a3: () => C,
         $n: () => L,
         Yh: () => q,
-        UC: () => O,
-        U9: () => k,
-        G5: () => z,
-        lr: () => E,
+        UC: () => T,
+        U9: () => D,
+        mq: () => x,
         Mw: () => nt,
         Ce: () => p,
         ZU: () => Me,
         m: () => Be,
         D0: () => _t,
         wi: () => M,
-        lV: () => P,
+        lV: () => O,
         P9: () => fr,
-        J1: () => xt,
+        J1: () => kt,
         OB: () => Gt,
         Vb: () => Nt,
         Mm: () => qt,
@@ -35332,6 +35334,7 @@
         OV: () => _e,
         m1: () => he,
         JU: () => S,
+        o1: () => P,
         CB: () => j,
         VQ: () => N,
         O7: () => st,
@@ -35343,7 +35346,7 @@
         wl: () => A,
         iK: () => v,
         RF: () => H,
-        dR: () => T,
+        dR: () => z,
         Zy: () => te,
         v$: () => ot,
       });
@@ -35406,17 +35409,19 @@
         C = (0, l.Ri)("DialogBodyText"),
         R = (0, l.Ri)("DialogBody"),
         I = B("DialogBody"),
-        z = ((0, l.Ri)("DialogInnerBody"), (0, l.Ri)("DialogControlsSection")),
-        E = (0, l.Ri)("DialogControlsSectionHeader"),
-        T = B("DialogTwoColLayout _DialogColLayout"),
-        F = B("DialogThreeColLayout _DialogColLayout");
+        z =
+          ((0, l.Ri)("DialogInnerBody"),
+          (0, l.Ri)("DialogControlsSection"),
+          (0, l.Ri)("DialogControlsSectionHeader"),
+          B("DialogTwoColLayout _DialogColLayout")),
+        E = B("DialogThreeColLayout _DialogColLayout");
       B("DialogTwoThirdColLayout _DialogColLayout"),
         (0, l.Ri)("DialogColumn _DialogLayout");
-      function O(e) {
-        const t = g("Content", D);
+      function T(e) {
+        const t = g("Content", F);
         return n.createElement(t, { ...e });
       }
-      function D(e) {
+      function F(e) {
         let { children: t, bCenterVertically: r, refElem: i, ...s } = e,
           a =
             "DialogContent _DialogLayout" +
@@ -35434,7 +35439,7 @@
           )
         );
       }
-      class P extends n.Component {
+      class O extends n.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }
@@ -35445,16 +35450,50 @@
           });
         }
       }
-      function k(e) {
+      function D(e) {
         const { classNameContent: t, bCenterVertically: r, ...i } = e;
         return n.createElement(
-          O,
+          T,
           { className: t, bCenterVertically: r },
-          n.createElement(P, { ...i }),
+          n.createElement(O, { ...i }),
         );
       }
-      (0, i.Cg)([c.o], P.prototype, "OnSubmit", null);
-      const x = n.forwardRef(function (e, t) {
+      function P(e) {
+        const { label: t, tooltip: r, className: i, children: s } = e;
+        return n.createElement(
+          "div",
+          { className: (0, u.A)("DialogInputLabelGroup", "_DialogLayout", i) },
+          t &&
+            n.createElement(
+              S,
+              null,
+              t,
+              " ",
+              r && n.createElement(d.o, { tooltip: r }),
+              " ",
+            ),
+          s,
+        );
+      }
+      function x(e) {
+        const { label: t, tooltip: r, className: i, children: s } = e;
+        return n.createElement(
+          "label",
+          { className: (0, u.A)("DialogInputLabelGroup", "_DialogLayout", i) },
+          t &&
+            n.createElement(
+              S,
+              null,
+              t,
+              " ",
+              r && n.createElement(d.o, { tooltip: r }),
+              " ",
+            ),
+          s,
+        );
+      }
+      (0, i.Cg)([c.o], O.prototype, "OnSubmit", null);
+      const k = n.forwardRef(function (e, t) {
           const r = h(),
             { svgicon: i, ...a } = e,
             o = (0, u.A)(
@@ -35494,7 +35533,7 @@
           );
         }),
         W = n.forwardRef(function (e, t) {
-          return n.createElement(x, {
+          return n.createElement(k, {
             preferredFocus: !0,
             type: e.onClick ? "button" : "submit",
             ...e,
@@ -35508,7 +35547,7 @@
           });
         }),
         L = n.forwardRef(function (e, t) {
-          return n.createElement(x, {
+          return n.createElement(k, {
             type: "button",
             ...e,
             ref: t,
@@ -35522,7 +35561,7 @@
         }),
         A =
           (n.forwardRef(function (e, t) {
-            return n.createElement(x, {
+            return n.createElement(k, {
               type: "button",
               ...e,
               ref: t,
@@ -35535,7 +35574,7 @@
             });
           }),
           n.forwardRef(function (e, t) {
-            return n.createElement(x, {
+            return n.createElement(k, {
               type: "button",
               ...e,
               ref: t,
@@ -35546,7 +35585,7 @@
             });
           }));
       n.forwardRef(function (e, t) {
-        return n.createElement(x, {
+        return n.createElement(k, {
           type: "button",
           ...e,
           ref: t,
@@ -35555,7 +35594,7 @@
       });
       function j(e) {
         return n.createElement(
-          T,
+          z,
           { className: e.className },
           n.createElement(
             W,
@@ -35582,7 +35621,7 @@
         const t = e.bOKDisabled ? L : W,
           r = e.bOKDisabled ? W : L;
         return n.createElement(
-          F,
+          E,
           null,
           n.createElement(
             t,
@@ -36616,15 +36655,8 @@
           ...a
         } = e;
         return n.createElement(
-          "div",
-          { className: (0, u.A)("DialogInputLabelGroup", "_DialogLayout", i) },
-          t &&
-            n.createElement(
-              "div",
-              { className: "DialogLabel" },
-              t,
-              r && n.createElement(d.o, { tooltip: r }),
-            ),
+          x,
+          { label: t, tooltip: r, className: i },
           n.createElement(Me, { menuLabel: t, ...a, ref: s }),
         );
       }
@@ -36989,8 +37021,8 @@
         Oe = r(49771),
         De = r(62490),
         Pe = r(19719);
-      const ke = new (r(60778).wd)("DragDrop").Debug;
-      class xe extends n.Component {
+      const xe = new (r(60778).wd)("DragDrop").Debug;
+      class ke extends n.Component {
         constructor() {
           super(...arguments), (this.m_coordinator = new Le());
         }
@@ -37036,7 +37068,7 @@
           ? r && e > r.left && e < r.right && t > r.top && t < r.bottom
           : r && e >= r.left && e <= r.right && t >= r.top && t <= r.bottom;
       }
-      (0, i.Cg)([K.oI], xe.prototype, "OnDrop", null);
+      (0, i.Cg)([K.oI], ke.prototype, "OnDrop", null);
       class Le {
         constructor() {
           (this.m_embeddedElement = new Oe.MX("DragGhosts")),
@@ -37260,7 +37292,7 @@
         }
         ProcessDragMove(e) {
           var t, r;
-          ke("ProcessDragMove", e, this.props.data);
+          xe("ProcessDragMove", e, this.props.data);
           const [i, n] = (function (e) {
             if ("touches" in e) {
               let t = e;
@@ -37341,7 +37373,7 @@
             this.ResetDragState();
         }
         ResetDragState() {
-          ke("ResetDragState", this.props.data),
+          xe("ResetDragState", this.props.data),
             this.m_DragInfo.bStarted &&
               (this.props.coordinator.EndDrag(),
               this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
@@ -37355,7 +37387,7 @@
         }
         OnHTMLDragStart(e) {
           var t, r;
-          ke("HTMLDragStart", e, this.props.data, this.props.strHTMLDragData),
+          xe("HTMLDragStart", e, this.props.data, this.props.strHTMLDragData),
             (e.dataTransfer.effectAllowed = "copyMove"),
             this.props.strHTMLDragData &&
               this.props.strHTMLDragData.forEach((t, r) =>
@@ -37375,7 +37407,7 @@
         }
         OnHTMLDrag(e) {
           var t;
-          ke(
+          xe(
             "HTMLDrag",
             e,
             null === (t = e.dataTransfer) || void 0 === t
@@ -37386,7 +37418,7 @@
         }
         OnHTMLDragEnd(e) {
           var t, r, i;
-          ke(
+          xe(
             "HTMLDragEnd",
             e,
             (null === (t = e.dataTransfer) || void 0 === t
@@ -37627,7 +37659,7 @@
         }
       }
       var Ge = r(88006),
-        He = r(89350),
+        He = r(84143),
         Ve = r(11002),
         Ze = r(4869),
         Ke = r(84811),
@@ -37718,7 +37750,7 @@
               ? r
               : "standard";
         return n.createElement(
-          O,
+          T,
           {
             style: s,
             className: (0, u.A)(
@@ -38112,8 +38144,8 @@
           O = "inline" == z && !!o,
           D = "below" == z && !!o,
           P = null != c ? c : I ? "shift-children-below" : "keep-inline",
-          k = !!(R.onClick || R.onActivate || R.focusable),
-          x = (null != s && T) || null != r || (O && null != o),
+          x = !!(R.onClick || R.onActivate || R.focusable),
+          k = (null != s && T) || null != r || (O && null != o),
           W = null != p ? p : "min",
           L = null != h ? h : "standard",
           A = null != g ? g : "standard",
@@ -38148,7 +38180,7 @@
         return n.createElement(
           a.Z,
           {
-            focusable: k,
+            focusable: x,
             noFocusRing: !0,
             scrollIntoViewWhenChildFocused: !0,
             onActivate: (e) => {
@@ -38158,7 +38190,7 @@
                 : t.call(R, e);
             },
             ref: t,
-            onMouseDown: k ? void 0 : Z,
+            onMouseDown: x ? void 0 : Z,
             ...R,
             ...G,
             navRef: V,
@@ -38166,7 +38198,7 @@
               b,
               dt().Field,
               _ && dt().Disabled,
-              x && dt().WithFirstRow,
+              k && dt().WithFirstRow,
               O && dt().WithChildrenInline,
               D && dt().WithChildrenBelow,
               "center" == q && dt().VerticalAlignCenter,
@@ -38179,12 +38211,12 @@
               "standard" == L && dt().ExtraPaddingOnChildrenBelow,
               "standard" == A && dt().StandardPadding,
               "compact" == A && dt().CompactPadding,
-              k && dt().Clickable,
+              x && dt().Clickable,
               N && dt().HighlightOnFocus,
             ),
             style: { "--indent-level": U },
           },
-          x &&
+          k &&
             n.createElement(
               "div",
               { className: dt().FieldLabelRow },
@@ -38568,8 +38600,8 @@
             size: null !== (r = e.size) && void 0 !== r ? r : 1,
           });
         }),
-        kt = (e) => n.createElement(Nt, { layout: "below", ...e });
-      function xt(e) {
+        xt = (e) => n.createElement(Nt, { layout: "below", ...e });
+      function kt(e) {
         return n.createElement(
           p.Provider,
           {
@@ -38577,7 +38609,7 @@
               PagedSettings: Ot,
               Content: fr,
               DropDownControlButton: Gt,
-              DropDownField: kt,
+              DropDownField: xt,
               DropDownMenu: qt,
               ToggleField: gr,
               ToggleControl: hr,
@@ -39912,24 +39944,24 @@
                 return m;
             }
           })(e),
-          [k, x] = n.useState(!1),
+          [x, k] = n.useState(!1),
           W = () => {
-            e.onChangeStart && e.onChangeStart(3), x(!0);
+            e.onChangeStart && e.onChangeStart(3), k(!0);
           },
           L = (t) => {
             P(t) &&
               (e.onChange && e.onChange(t, 3),
               e.onChangeComplete && e.onChangeComplete(t, 3)),
-              x(!1);
+              k(!1);
           };
         n.useEffect(() => {
           var e, t;
-          !k &&
+          !x &&
             (null === (e = O.current) || void 0 === e
               ? void 0
               : e.BHasFocus()) &&
             (null === (t = F.current) || void 0 === t || t.TakeFocus());
-        }, [O, F, k]);
+        }, [O, F, x]);
         let A = t;
         _
           ? (A = n.createElement(
@@ -39938,7 +39970,7 @@
               n.createElement("div", { className: Jt().LabelText }, e.label),
               n.createElement(pr, {
                 navRef: O,
-                editing: k,
+                editing: x,
                 renderedValue: D,
                 valueSuffix: e.valueSuffix,
                 onClick: W,
@@ -40007,7 +40039,7 @@
             ref: q,
             disabled: R,
             notchCount: h,
-            focusable: !k,
+            focusable: !x,
             navRef: F,
             ...E,
           }),
@@ -40096,7 +40128,7 @@
           }, [b]);
         n.useLayoutEffect(D, [D]);
         const P = (0, K.wY)(D),
-          k = (0, K.Ue)(O, P);
+          x = (0, K.Ue)(O, P);
         n.useEffect(() => {
           var e, t;
           (null === (e = h.current) || void 0 === e ? void 0 : e.BHasFocus()) &&
@@ -40104,15 +40136,15 @@
               void 0 === t ||
               t.Node().ForceMeasureFocusRing());
         }, [T]);
-        const x = b ? w : r,
+        const k = b ? w : r,
           W = b ? Math.max(z, T) : z;
         return n.createElement(
           "div",
           { className: I },
           n.createElement(
             "div",
-            { className: Jt().FakeEditableValue, ref: k },
-            x,
+            { className: Jt().FakeEditableValue, ref: x },
+            k,
           ),
           n.createElement(s.BA, {
             refKeyboardHandle: p,
@@ -40126,7 +40158,7 @@
             onClick: a,
             onFocus: () => (v.current = !1),
             onBlur: () => M(!0),
-            value: x,
+            value: k,
             placeholder: r,
             onChange: (e) => B(e.target.value.trim()),
             onCancelButton: () => M(!0),
@@ -40660,7 +40692,7 @@
         ZyV: () => z,
         _V3: () => S,
         b8_: () => g,
-        bmT: () => k,
+        bmT: () => x,
         cLJ: () => l,
         ffu: () => f,
         hJ4: () => M,
@@ -40668,7 +40700,7 @@
         jRw: () => W,
         jXA: () => N,
         jvG: () => T,
-        kNE: () => x,
+        kNE: () => k,
         l4n: () => D,
         lMJ: () => B,
         nl: () => y,
@@ -41651,7 +41683,7 @@
           ),
         );
       }
-      function k() {
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -41670,7 +41702,7 @@
           ),
         );
       }
-      function x() {
+      function k() {
         const [e, t] = (0, a.l)();
         return i.createElement(
           "svg",
@@ -44006,116 +44038,118 @@
     12155: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $$j: () => be,
-        $4X: () => We,
-        $vK: () => it,
+        $$j: () => we,
+        $4X: () => Le,
+        $vK: () => nt,
         Aj0: () => Q,
-        BQz: () => rt,
-        Bki: () => Je,
-        CeX: () => k,
+        BQz: () => it,
+        Bki: () => et,
+        CeX: () => x,
         Cv4: () => u,
         DK4: () => f,
-        DQe: () => Qe,
+        DQe: () => Xe,
         Dp6: () => ne,
         F2T: () => j,
         GB9: () => _,
         GSe: () => $,
-        Gkr: () => Ae,
-        GrD: () => Se,
+        Gkr: () => je,
+        GrD: () => Ce,
         Gv$: () => C,
         IOc: () => z,
-        IrQ: () => x,
+        IrQ: () => k,
         Jlk: () => O,
         KKS: () => ue,
         L0X: () => L,
         LPs: () => F,
         MUh: () => ce,
-        MbF: () => ft,
+        MbF: () => bt,
         MvQ: () => H,
-        MwB: () => Re,
+        MwB: () => Ie,
         N8C: () => pe,
-        NCC: () => Le,
-        NtH: () => xe,
-        OSJ: () => mt,
-        OiG: () => ge,
+        NCC: () => Ae,
+        NtH: () => We,
+        OSJ: () => dt,
+        OiG: () => _e,
         P7r: () => de,
         Q38: () => p,
         QQ4: () => se,
         Qte: () => J,
         ROZ: () => te,
-        SYj: () => Ue,
+        SYj: () => qe,
         T4m: () => ke,
-        UTF: () => Te,
+        UTF: () => Fe,
         V5W: () => Y,
         VR: () => le,
-        VSd: () => lt,
-        Vgk: () => tt,
-        Vt2: () => nt,
+        VSd: () => ct,
+        Vgk: () => rt,
+        Vt2: () => st,
         VvS: () => D,
-        WX$: () => Ke,
+        WX$: () => Ye,
         X: () => v,
         X4B: () => P,
-        XH_: () => $e,
+        XH_: () => Qe,
         XTb: () => B,
         Xjb: () => q,
-        Xz0: () => ve,
+        Xz0: () => Me,
         YNO: () => y,
-        ZPc: () => De,
+        ZPc: () => Pe,
         ZWw: () => G,
-        ZnA: () => et,
-        Zo0: () => qe,
-        _VW: () => Ce,
-        _h6: () => ze,
-        aVR: () => Ve,
-        agV: () => ht,
+        ZnA: () => tt,
+        Zo0: () => Ge,
+        _EF: () => yt,
+        _VW: () => Re,
+        _h6: () => Ee,
+        aVR: () => Ze,
+        agV: () => gt,
         apU: () => ie,
-        bKN: () => gt,
+        bKN: () => _t,
         bPr: () => ae,
-        bfp: () => Ee,
-        ccb: () => at,
-        dJT: () => _e,
+        bfp: () => Te,
+        ccb: () => ot,
+        dJT: () => fe,
         eSy: () => b,
-        emH: () => bt,
+        emH: () => wt,
+        f5X: () => ge,
         fSs: () => I,
-        faJ: () => Me,
-        ffu: () => fe,
-        g$j: () => st,
+        faJ: () => Se,
+        ffu: () => be,
+        g$j: () => at,
         h20: () => V,
         hz4: () => U,
         i3G: () => W,
         i6V: () => re,
-        ilR: () => Ie,
+        ilR: () => ze,
         jGG: () => E,
-        jIP: () => Ze,
-        jZW: () => Fe,
+        jIP: () => Ke,
+        jZW: () => Oe,
         jZl: () => he,
-        jdP: () => dt,
-        jlt: () => Ye,
-        kPc: () => ye,
+        jdP: () => pt,
+        jlt: () => $e,
+        kPc: () => ve,
         l8x: () => N,
         lMJ: () => Z,
-        lNU: () => we,
-        lRD: () => Ge,
-        mb7: () => wt,
-        nm_: () => Xe,
-        o5Q: () => He,
-        ofN: () => ct,
-        oy: () => ut,
+        lNU: () => Be,
+        lRD: () => He,
+        mb7: () => Bt,
+        nm_: () => Je,
+        o5Q: () => Ve,
+        ofN: () => ut,
+        oy: () => mt,
         pD: () => d,
         qcc: () => me,
-        qnF: () => Pe,
+        qnF: () => xe,
         rI_: () => h,
-        rNt: () => ot,
+        rNt: () => lt,
         rfv: () => oe,
-        sDU: () => _t,
+        sDU: () => ft,
         sED: () => M,
         sdo: () => S,
         tID: () => X,
-        tIO: () => pt,
+        tIO: () => ht,
         uMb: () => A,
         vRz: () => T,
-        vjL: () => Be,
-        vrn: () => Oe,
+        vjL: () => ye,
+        vrn: () => De,
         wB_: () => g,
         wC1: () => m,
         xv8: () => R,
@@ -44857,7 +44891,7 @@
           }),
         );
       }
-      function k() {
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -44880,7 +44914,7 @@
           }),
         );
       }
-      function x(e) {
+      function k(e) {
         return (0, o.Qn)()
           ? i.createElement(
               "svg",
@@ -46070,7 +46104,33 @@
           }),
         );
       }
-      function ge(e) {
+      function ge() {
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Download",
+            viewBox: "0 0 36 36",
+            fill: "none",
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M29 23V27H7V23H2V32H34V23H29Z",
+            fill: "currentColor",
+          }),
+          i.createElement(
+            "svg",
+            { x: "0", y: "0", width: "32", height: "25" },
+            i.createElement("path", {
+              className: "DownloadArrow",
+              d: "M20 14.1716L24.5858 9.58578L27.4142 12.4142L18 21.8284L8.58582 12.4142L11.4142 9.58578L16 14.1715V2H20V14.1716Z",
+              fill: "currentColor",
+            }),
+          ),
+        );
+      }
+      function _e(e) {
         const { fullcolor: t, ...r } = e,
           [n, s] = (0, l.l)(),
           [a, o] = (0, l.l)();
@@ -46157,7 +46217,7 @@
               }),
             );
       }
-      function _e() {
+      function fe() {
         return i.createElement(
           "svg",
           {
@@ -46176,7 +46236,7 @@
           }),
         );
       }
-      function fe() {
+      function be() {
         return i.createElement(
           "svg",
           {
@@ -46214,7 +46274,7 @@
           }),
         );
       }
-      function be() {
+      function we() {
         return i.createElement(
           "svg",
           {
@@ -46250,7 +46310,7 @@
           }),
         );
       }
-      function we() {
+      function Be() {
         return i.createElement(
           "svg",
           {
@@ -46269,7 +46329,7 @@
           }),
         );
       }
-      function Be() {
+      function ye() {
         return i.createElement(
           "svg",
           {
@@ -46294,7 +46354,7 @@
           }),
         );
       }
-      function ye(e) {
+      function ve(e) {
         return i.createElement(
           "svg",
           {
@@ -46317,7 +46377,7 @@
           }),
         );
       }
-      function ve() {
+      function Me() {
         return i.createElement(
           "svg",
           {
@@ -46357,7 +46417,7 @@
           }),
         );
       }
-      function Me() {
+      function Se() {
         return i.createElement(
           "svg",
           {
@@ -46373,7 +46433,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
         );
       }
-      function Se() {
+      function Ce() {
         return i.createElement(
           "svg",
           {
@@ -46392,7 +46452,7 @@
           }),
         );
       }
-      function Ce() {
+      function Re() {
         return i.createElement(
           "svg",
           {
@@ -46415,7 +46475,7 @@
           }),
         );
       }
-      function Re(e) {
+      function Ie(e) {
         return i.createElement(
           "svg",
           {
@@ -46432,7 +46492,7 @@
           }),
         );
       }
-      function Ie(e) {
+      function ze(e) {
         return i.createElement(
           "svg",
           {
@@ -46449,7 +46509,7 @@
           }),
         );
       }
-      function ze(e, t) {
+      function Ee(e, t) {
         return (0, o.Qn)()
           ? i.createElement(
               "svg",
@@ -46484,7 +46544,7 @@
               }),
             );
       }
-      function Ee(e) {
+      function Te(e) {
         return i.createElement(
           "svg",
           {
@@ -46503,7 +46563,7 @@
           }),
         );
       }
-      function Te(e) {
+      function Fe(e) {
         return i.createElement(
           "svg",
           {
@@ -46540,7 +46600,7 @@
           ),
         );
       }
-      function Fe(e) {
+      function Oe(e) {
         return i.createElement(
           "svg",
           {
@@ -46557,7 +46617,7 @@
           }),
         );
       }
-      function Oe(e) {
+      function De(e) {
         const { className: t, ...r } = e,
           [n, s] = (0, l.l)(),
           [a, o] = (0, l.l)(),
@@ -46734,7 +46794,7 @@
           ),
         );
       }
-      function De() {
+      function Pe() {
         return i.createElement(
           "svg",
           {
@@ -46765,7 +46825,7 @@
           ),
         );
       }
-      function Pe(e) {
+      function xe(e) {
         return i.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -46793,7 +46853,7 @@
           }),
         );
       }
-      function xe(e) {
+      function We(e) {
         return i.createElement(
           "svg",
           {
@@ -46808,7 +46868,7 @@
           }),
         );
       }
-      function We() {
+      function Le() {
         return i.createElement(
           "svg",
           {
@@ -46826,7 +46886,7 @@
           }),
         );
       }
-      function Le() {
+      function Ae() {
         return i.createElement(
           "svg",
           {
@@ -46848,7 +46908,7 @@
           ),
         );
       }
-      function Ae() {
+      function je() {
         return i.createElement(
           "svg",
           {
@@ -46886,7 +46946,7 @@
           ),
         );
       }
-      function je(e) {
+      function Ne(e) {
         return i.createElement(
           "svg",
           {
@@ -46905,7 +46965,7 @@
           }),
         );
       }
-      function Ne(e) {
+      function Ue(e) {
         return i.createElement(
           "svg",
           {
@@ -46925,12 +46985,12 @@
           }),
         );
       }
-      function Ue(e) {
+      function qe(e) {
         return (0, c.Ae)()
-          ? i.createElement(Ne, { ...e })
-          : i.createElement(je, { ...e });
+          ? i.createElement(Ue, { ...e })
+          : i.createElement(Ne, { ...e });
       }
-      function qe() {
+      function Ge() {
         return i.createElement(
           "svg",
           {
@@ -46964,7 +47024,7 @@
           ),
         );
       }
-      function Ge(e) {
+      function He(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -46984,7 +47044,7 @@
           }),
         );
       }
-      function He(e) {
+      function Ve(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -47007,7 +47067,7 @@
           }),
         );
       }
-      function Ve(e) {
+      function Ze(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -47030,7 +47090,7 @@
           }),
         );
       }
-      function Ze(e) {
+      function Ke(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -47053,7 +47113,7 @@
           }),
         );
       }
-      function Ke(e) {
+      function Ye(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -47076,7 +47136,7 @@
           }),
         );
       }
-      function Ye(e) {
+      function $e(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -47097,7 +47157,7 @@
           }),
         );
       }
-      function $e(e) {
+      function Qe(e) {
         return i.createElement(
           "svg",
           {
@@ -47116,7 +47176,7 @@
           }),
         );
       }
-      function Qe(e) {
+      function Xe(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -47134,7 +47194,7 @@
           }),
         );
       }
-      function Xe(e) {
+      function Je(e) {
         return i.createElement(
           "svg",
           {
@@ -47148,7 +47208,7 @@
           }),
         );
       }
-      function Je(e) {
+      function et(e) {
         return i.createElement(
           "svg",
           {
@@ -47162,7 +47222,7 @@
           }),
         );
       }
-      function et(e) {
+      function tt(e) {
         return i.createElement(
           "svg",
           {
@@ -47176,7 +47236,7 @@
           }),
         );
       }
-      function tt(e) {
+      function rt(e) {
         return i.createElement(
           "svg",
           {
@@ -47190,7 +47250,7 @@
           }),
         );
       }
-      function rt(e) {
+      function it(e) {
         return i.createElement(
           "svg",
           {
@@ -47204,7 +47264,7 @@
           }),
         );
       }
-      function it(e) {
+      function nt(e) {
         return i.createElement(
           "svg",
           {
@@ -47218,7 +47278,7 @@
           }),
         );
       }
-      function nt(e) {
+      function st(e) {
         return i.createElement(
           "svg",
           {
@@ -47232,7 +47292,7 @@
           }),
         );
       }
-      function st(e) {
+      function at(e) {
         return i.createElement(
           "svg",
           {
@@ -47246,7 +47306,7 @@
           }),
         );
       }
-      function at(e) {
+      function ot(e) {
         return i.createElement(
           "svg",
           {
@@ -47266,7 +47326,7 @@
           }),
         );
       }
-      function ot(e) {
+      function lt(e) {
         return i.createElement(
           "svg",
           {
@@ -47280,7 +47340,7 @@
           }),
         );
       }
-      function lt(e) {
+      function ct(e) {
         return i.createElement(
           "svg",
           {
@@ -47294,7 +47354,7 @@
           }),
         );
       }
-      function ct(e) {
+      function ut(e) {
         return i.createElement(
           "svg",
           {
@@ -47320,7 +47380,7 @@
           }),
         );
       }
-      function ut(e) {
+      function mt(e) {
         return i.createElement(
           "svg",
           {
@@ -47334,7 +47394,7 @@
           }),
         );
       }
-      function mt(e) {
+      function dt(e) {
         return i.createElement(
           "svg",
           {
@@ -47348,7 +47408,7 @@
           }),
         );
       }
-      function dt(e) {
+      function pt(e) {
         return i.createElement(
           "svg",
           {
@@ -47365,7 +47425,7 @@
           }),
         );
       }
-      function pt(e) {
+      function ht(e) {
         return i.createElement(
           "svg",
           {
@@ -47379,7 +47439,7 @@
           }),
         );
       }
-      function ht(e) {
+      function gt(e) {
         return i.createElement(
           "svg",
           {
@@ -47393,7 +47453,7 @@
           }),
         );
       }
-      function gt(e) {
+      function _t(e) {
         return i.createElement(
           "svg",
           {
@@ -47407,7 +47467,7 @@
           }),
         );
       }
-      function _t(e) {
+      function ft(e) {
         return i.createElement(
           "svg",
           {
@@ -47421,7 +47481,7 @@
           }),
         );
       }
-      function ft(e) {
+      function bt(e) {
         return i.createElement(
           "svg",
           {
@@ -47435,7 +47495,7 @@
           }),
         );
       }
-      function bt(e) {
+      function wt(e) {
         return i.createElement(
           "svg",
           {
@@ -47449,7 +47509,7 @@
           }),
         );
       }
-      function wt(e) {
+      function Bt(e) {
         return i.createElement(
           "svg",
           {
@@ -47522,6 +47582,44 @@
           i.createElement("path", {
             d: "M130.11 211.84V187.6H138.59C144.75 187.6 150.11 191.8 150.11 199.77C150.11 207.74 144.67 211.84 138.52 211.84H130.11ZM138.42 208.87C142.9 208.87 146.66 205.86 146.66 199.77C146.66 193.68 142.97 190.57 138.48 190.57H133.46V208.87H138.42Z",
             fill: "currentColor",
+          }),
+        );
+      }
+      function yt(e) {
+        const [t, r] = (0, l.l)();
+        return i.createElement(
+          "svg",
+          {
+            className: (0, n.A)("SVGIcon_Button"),
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            width: "256",
+            height: "256",
+            viewBox: "0 0 1200 1200",
+            overflow: "visible",
+            ...e,
+          },
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M558,290.4h513.4c36,0,63.6-28.8,63.6-63.6s-28.8-63.6-63.6-63.6H558c-36,0-63.6,28.8-63.6,63.6  S522,290.4,558,290.4L558,290.4z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M1071.4,912H558c-36,0-63.6,28.8-63.6,63.6s28.8,63.6,63.6,63.6h513.4c36,0,63.6-28.8,63.6-63.6  S1106.2,912,1071.4,912z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M558,790.8h513.4c36,0,63.6-28.8,63.6-63.6s-27.6-64.8-63.6-64.8H558c-36,0-63.6,28.8-63.6,63.6  S522,790.8,558,790.8L558,790.8z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M558,540h513.4c36,0,63.6-28.8,63.6-63.6s-28.8-63.6-63.6-63.6H558c-36,0-63.6,28.8-63.6,63.6  S522,540,558,540L558,540z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M367.2,739.2h-82.8V460.8h83.8c34.8,0,55.2-38.4,34.8-67.2L255.4,181.2c-16.8-24-52.8-24-70.8,0L37,393.6  c-18,28.8,2.4,67.2,37.2,67.2H157v278.4H73.2c-34.8,0-55.2,38.4-34.8,67.2L186,1018.8c16.8,24,52.8,24,70.8,0l147.6-212.4  C422.4,777.6,402,739.2,367.2,739.2z",
           }),
         );
       }
@@ -48744,17 +48842,18 @@
         A0: () => u,
         Hq: () => c.Hq,
         NT: () => b,
-        O9: () => v,
+        O9: () => M,
         PP: () => d,
         TW: () => c.TW,
         Yp: () => _,
         _l: () => c._l,
         bi: () => B,
         cc: () => c.cc,
+        d$: () => v,
         l4: () => y,
         lQ: () => c.lQ,
         oW: () => p,
-        pf: () => M,
+        pf: () => S,
         um: () => h,
         we: () => m,
       });
@@ -48888,11 +48987,11 @@
         }
       }
       function m(e, ...t) {
-        let r = M.LocalizeString(e);
+        let r = S.LocalizeString(e);
         return void 0 === r ? e : f(r, ...t);
       }
       function d(e, ...t) {
-        let r = M.LocalizeString(e);
+        let r = S.LocalizeString(e);
         if (void 0 === r) return e;
         let n,
           s = [],
@@ -48906,7 +49005,7 @@
         return s.push(r.substr(o)), i.createElement(i.Fragment, null, ...s);
       }
       function p(e, ...t) {
-        let r = M.LocalizeIfToken(e);
+        let r = S.LocalizeIfToken(e);
         return void 0 === r ? e : g(r, ...t);
       }
       function h(e, t, ...r) {
@@ -49034,7 +49133,10 @@
       function y() {
         return w[a.TS.LANGUAGE] || null;
       }
-      function v(e = !1) {
+      function v(e) {
+        return w[e];
+      }
+      function M(e = !1) {
         const t = new Map();
         for (let r = 0; r < 31; ++r) {
           if (25 == r) continue;
@@ -49044,8 +49146,8 @@
         }
         return t;
       }
-      const M = new u();
-      window.LocalizationManager = M;
+      const S = new u();
+      window.LocalizationManager = S;
     },
     91675: (e, t, r) => {
       "use strict";

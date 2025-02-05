@@ -1043,7 +1043,6 @@
                 { className: w.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc2"),
               ),
-              !1,
               n.createElement(
                 "div",
                 { className: "notification_settings_container" },

@@ -1097,6 +1097,13 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   padding-left: 4px;
   padding-right: 4px;
 }
+.OdrYEhT1tSscLcZEKjDvW::before {
+  content: attr(data-placeholder);
+  color: gray;
+  position: absolute;
+  pointer-events: none;
+  font-style: italic;
+}
 ._2mHXbGuTlraXe_Q1JYKmJZ {
   display: flex;
   flex-direction: row;

@@ -1623,7 +1623,7 @@
       "use strict";
       r.d(t, {
         Q4: () => W,
-        nl: () => x,
+        nl: () => F,
         iY: () => j,
         CE: () => G,
         iD: () => re,
@@ -1635,39 +1635,30 @@
         a = r(6336),
         c = r(30193),
         l = r(55263);
-      class m extends o.Component {
-        constructor(e) {
-          super(e);
+      function m(e) {
+        const { text: t = "", style: r, children: n } = e;
+        if (null == t) return o.createElement(o.Fragment, null, n);
+        let i;
+        if (
+          ((i =
+            t instanceof Array
+              ? t
+                  .map((e) => (e ? e.toString() : ""))
+                  .filter((e) => e.length > 0)
+                  .join("\n")
+              : t.toString()),
+          1 == o.Children.count(n))
+        ) {
+          let e = o.Children.only(n);
+          return o.cloneElement(e, { "data-copystyle": r, "data-copytext": i });
         }
-        render() {
-          if (null == this.props.text)
-            return o.createElement(o.Fragment, null, this.props.children);
-          let e;
-          if (
-            ((e =
-              this.props.text instanceof Array
-                ? this.props.text
-                    .map((e) => (e ? e.toString() : ""))
-                    .filter((e) => e.length > 0)
-                    .join("\n")
-                : this.props.text.toString()),
-            1 == o.Children.count(this.props.children))
-          ) {
-            let t = o.Children.only(this.props.children);
-            return o.cloneElement(t, {
-              "data-copystyle": this.props.style,
-              "data-copytext": e,
-            });
-          }
-          return (
-            console.log(
-              `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${this.props.style} copytext=${e}`,
-            ),
-            o.createElement(o.Fragment, null, this.props.children)
-          );
-        }
+        return (
+          console.log(
+            `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${r} copytext=${i}`,
+          ),
+          o.createElement(o.Fragment, null, n)
+        );
       }
-      m.defaultProps = { text: "" };
       var u = r(68451),
         d = r(52038),
         p = r(61859),
@@ -1848,7 +1839,7 @@
       var T = r(70646),
         k = r.n(T),
         N = r(51272);
-      class x extends o.PureComponent {
+      class F extends o.PureComponent {
         constructor() {
           super(...arguments),
             (this.state = { showHover: !1 }),
@@ -1880,7 +1871,7 @@
               }),
             ),
             this.state.showHover &&
-              o.createElement(F, {
+              o.createElement(x, {
                 target: this.m_ref.current,
                 store: r,
                 emoticon: e,
@@ -1888,9 +1879,9 @@
           );
         }
       }
-      (0, n.Cg)([g.oI], x.prototype, "OnMouseEnter", null),
-        (0, n.Cg)([g.oI], x.prototype, "OnMouseLeave", null);
-      const F = (0, s.PA)((e) => {
+      (0, n.Cg)([g.oI], F.prototype, "OnMouseEnter", null),
+        (0, n.Cg)([g.oI], F.prototype, "OnMouseLeave", null);
+      const x = (0, s.PA)((e) => {
           const { target: t, store: r, emoticon: n } = e,
             i = r.Get(n);
           return o.createElement(
@@ -1900,7 +1891,7 @@
               title: `:${n}:`,
               subtitle: i && i.app_name ? i.app_name : void 0,
             },
-            o.createElement(x, {
+            o.createElement(F, {
               emoticon: n,
               emoticonHoverStore: r,
               large: !0,
@@ -2565,7 +2556,7 @@
         return o.createElement(
           "div",
           { className: k().EmoticonItem },
-          o.createElement(x, {
+          o.createElement(F, {
             emoticon: t.name,
             emoticonHoverStore: r,
             large: n,

@@ -777,6 +777,11 @@
 		display: none;
 	}
 
+	/* Hide the "compare editions" button in purchase options */
+	html.responsive div[class*='game_purchase_options_editions_header_compare_button'] {
+		display: none;
+	}
+
 	/* reduce font sizes in Early Access Game section */
 	html.responsive .early_access_header h1 {
 		font-size: 18px;

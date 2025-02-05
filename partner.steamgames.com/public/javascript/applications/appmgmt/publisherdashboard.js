@@ -4599,9 +4599,9 @@
           s = n.useMemo(
             () =>
               new Set(
-                Object.values(
-                  (0, b.Tc)("rgManageDiscountsAppIDs", "application_config"),
-                )?.map((e) => Number(e)) ?? [],
+                (0, b.Tc)("rgManageDiscountsAppIDs", "application_config")?.map(
+                  (e) => Number(e),
+                ) ?? [],
               ),
             [],
           ),
@@ -4913,9 +4913,9 @@
           l = n.useMemo(
             () =>
               new Set(
-                Object.values(
-                  (0, b.Tc)("rgManageDiscountsAppIDs", "application_config"),
-                )?.map((e) => Number(e)) ?? [],
+                (0, b.Tc)("rgManageDiscountsAppIDs", "application_config")?.map(
+                  (e) => Number(e),
+                ) ?? [],
               ),
             [],
           ),

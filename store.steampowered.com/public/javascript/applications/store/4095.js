@@ -299,6 +299,11 @@
         SaleViewAll: "_1bsBzvGKJui5_QaWVRBFDo",
         SaleSectionLoginPrompt: "_2-dSBTJ6PQzCGvK48gjCCf",
         LoginButton: "_3h6sHYHa8EFm2_xoGiVAnh",
+        SaleSectionLivePreview: "_2dBAh0VOfhvgWv2ck8hp7n",
+        Hover: "_15FfaTmQGzroKql83EUpaR",
+        JumpedTo: "d-8MOKpyXkBvtl8y9qw8C",
+        JumpToSection: "tlI9rzg19pPTqlI5UfDP",
+        JumpToButton: "eOemW7abP9ncGnYuKqjCO",
         SaleOverlayCtn: "_3GTIcdmGdFdIHRLd5vgEDq",
         SaleOverlay: "_1sZo8rydBtEGprct3pN_1a",
         CarouselCapsuleBordered: "_31OAy5ksRg6RGhCGnDqRr3",
@@ -24166,43 +24171,47 @@
     },
     3661: (e, t, r) => {
       "use strict";
-      r.d(t, { m: () => m });
+      r.d(t, { m: () => c });
       var a = r(90626),
-        i = r(62792),
-        n = r(55263),
-        s = r(18654),
-        o = r.n(s),
-        l = r(78327);
-      function m(e) {
+        i = r(52038),
+        n = r(62792),
+        s = r(55263),
+        o = r(18654),
+        l = r.n(o),
+        m = r(78327);
+      function c(e) {
         const { appInfo: t } = e,
           r = (0, a.useRef)({ include_trailers: !0 }),
-          [s] = (0, n.G6)(t?.id, (0, i.SW)(t?.type), r.current);
-        if (!s) return null;
-        const c = s.GetMicroTrailer();
-        return c
+          [o] = (0, s.G6)(t?.id, (0, n.SW)(t?.type), r.current);
+        if (!o) return null;
+        const d = o.GetMicroTrailer();
+        return d
           ? a.createElement(
               "video",
               {
-                className: o().CapsuleMicroTrailer,
+                className: (0, i.A)(
+                  l().CapsuleMicroTrailer,
+                  "CapsuleMicroTrailer",
+                ),
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
-                key: "mtv-" + c.strMP4URL,
+                key: "mtv-" + d.strMP4URL,
               },
               a.createElement("source", {
-                src: c.strWebMURL,
+                src: d.strWebMURL,
                 type: "video/webm",
               }),
-              !l.TS.IN_CLIENT &&
+              !m.TS.IN_CLIENT &&
                 a.createElement("source", {
-                  src: c.strMP4URL,
+                  src: d.strMP4URL,
                   type: "video/mp4",
                 }),
             )
-          : !s.GetParentAppID() || (1 != s.GetAppType() && 12 != s.GetAppType())
+          : !o.GetParentAppID() || (1 != o.GetAppType() && 12 != o.GetAppType())
             ? null
-            : a.createElement(m, {
-                appInfo: { id: s.GetParentAppID(), type: "game" },
+            : a.createElement(c, {
+                appInfo: { id: o.GetParentAppID(), type: "game" },
               });
       }
     },

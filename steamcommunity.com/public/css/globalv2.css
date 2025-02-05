@@ -809,6 +809,18 @@ a.commentthread_allcommentslink:hover {
 	margin-left: 4px;
 }
 
+.commentthread_comment_reportprob {
+	font-size: 14px;
+	color: #e16262;
+	margin-left: 4px;
+}
+
+.commentthread_comment_reportprob.small {
+	font-size: 11px;
+	color: #e16262;
+	margin-left: 4px;
+}
+
 .commentthread_comment_text {
 	font-size: 13px;
 	color: #acb2b8;

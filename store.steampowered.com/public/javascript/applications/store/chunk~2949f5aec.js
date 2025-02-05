@@ -618,38 +618,29 @@
         a = n(6336),
         c = n(30193),
         l = n(55263);
-      class m extends i.Component {
-        constructor(e) {
-          super(e);
+      function m(e) {
+        const { text: t = "", style: n, children: r } = e;
+        if (null == t) return i.createElement(i.Fragment, null, r);
+        let o;
+        if (
+          ((o =
+            t instanceof Array
+              ? t
+                  .map((e) => (e ? e.toString() : ""))
+                  .filter((e) => e.length > 0)
+                  .join("\n")
+              : t.toString()),
+          1 == i.Children.count(r))
+        ) {
+          let e = i.Children.only(r);
+          return i.cloneElement(e, { "data-copystyle": n, "data-copytext": o });
         }
-        static defaultProps = { text: "" };
-        render() {
-          if (null == this.props.text)
-            return i.createElement(i.Fragment, null, this.props.children);
-          let e;
-          if (
-            ((e =
-              this.props.text instanceof Array
-                ? this.props.text
-                    .map((e) => (e ? e.toString() : ""))
-                    .filter((e) => e.length > 0)
-                    .join("\n")
-                : this.props.text.toString()),
-            1 == i.Children.count(this.props.children))
-          ) {
-            let t = i.Children.only(this.props.children);
-            return i.cloneElement(t, {
-              "data-copystyle": this.props.style,
-              "data-copytext": e,
-            });
-          }
-          return (
-            console.log(
-              `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${this.props.style} copytext=${e}`,
-            ),
-            i.createElement(i.Fragment, null, this.props.children)
-          );
-        }
+        return (
+          console.log(
+            `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${n} copytext=${o}`,
+          ),
+          i.createElement(i.Fragment, null, r)
+        );
       }
       var p = n(68451),
         d = n(52038),
@@ -773,9 +764,9 @@
           i.createElement(
             A,
             null,
-            i.createElement(x, { title: t }, i.createElement(I, { ...s })),
+            i.createElement(y, { title: t }, i.createElement(I, { ...s })),
           ),
-          i.createElement(y, { value: r, onChange: n, onSubmit: o }),
+          i.createElement(x, { value: r, onChange: n, onSubmit: o }),
         );
       }
       function P(e) {
@@ -789,16 +780,16 @@
             o && i.createElement("div", { className: _.SectionedPageTitle }, o),
             r.map(({ title: e, ...t }) =>
               i.createElement(
-                x,
+                y,
                 { title: e, key: e },
                 i.createElement(I, { ...t }),
               ),
             ),
           ),
-          i.createElement(y, { value: n, onChange: t }),
+          i.createElement(x, { value: n, onChange: t }),
         );
       }
-      function x(e) {
+      function y(e) {
         return i.createElement(
           "div",
           { className: _.Section },
@@ -806,7 +797,7 @@
           i.createElement("div", { className: _.SectionContent }, e.children),
         );
       }
-      function y(e) {
+      function x(e) {
         const { value: t, onChange: n, onSubmit: r } = e;
         return i.createElement(
           "div",

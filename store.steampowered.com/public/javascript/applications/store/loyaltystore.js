@@ -2064,6 +2064,13 @@
             return (0, o.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
+        GetCurrentGameStatus() {
+          return (
+            this.GetCurrentGameRichPresence() ||
+            this.m_mapRichPresence.get("status") ||
+            ""
+          );
+        }
         GetOfflineStatusUpdateRate() {
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;
@@ -4379,71 +4386,19 @@
           return "CUserAccount_CreateFriendInviteToken_Response";
         }
       }
-      class L extends y {
+      class P extends y {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), y.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return L.toObject(e, this);
+          return P.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new L();
-        }
-        static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
-            r = new L();
-          return L.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new f.BinaryWriter();
-          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new f.BinaryWriter();
-          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserAccount_GetFriendInviteTokens_Request";
-        }
-      }
-      class P extends y {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            P.prototype.tokens || w.Sg(P.M()),
-            y.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
-                fields: { tokens: { n: 1, c: T, r: !0, q: !0 } },
-              }),
-            P.sm_m
-          );
-        }
-        static MBF() {
-          return P.sm_mbf || (P.sm_mbf = w.w0(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return w.BT(P.M(), e, t);
-        }
-        static fromObject(e) {
-          return w.Uq(P.M(), e);
+          return new P();
         }
         static deserializeBinary(e) {
           let t = new f.BinaryReader(e),
@@ -4451,18 +4406,70 @@
           return P.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return w.zj(P.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new f.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          w.i0(P.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new f.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_GetFriendInviteTokens_Request";
+        }
+      }
+      class L extends y {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            L.prototype.tokens || w.Sg(L.M()),
+            y.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
+                fields: { tokens: { n: 1, c: T, r: !0, q: !0 } },
+              }),
+            L.sm_m
+          );
+        }
+        static MBF() {
+          return L.sm_mbf || (L.sm_mbf = w.w0(L.M())), L.sm_mbf;
+        }
+        toObject(e = !1) {
+          return L.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return w.BT(L.M(), e, t);
+        }
+        static fromObject(e) {
+          return w.Uq(L.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            r = new L();
+          return L.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return w.zj(L.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          w.i0(L.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserAccount_GetFriendInviteTokens_Response";
@@ -5133,8 +5140,8 @@
           (e.GetFriendInviteTokens = function (e, t) {
             return e.SendMsg(
               "UserAccount.GetFriendInviteTokens#1",
-              (0, u.I8)(L, t),
-              P,
+              (0, u.I8)(P, t),
+              L,
               { ePrivilege: 1 },
             );
           }),
@@ -7881,7 +7888,7 @@
               style: R,
               ...T
             } = e,
-            L = (0, a.A)(
+            P = (0, a.A)(
               y("padding-left", m || o || n),
               y("padding-top", d || l || n),
               y("padding-right", c || o || n),
@@ -7892,7 +7899,7 @@
               y("margin-bottom", C || g || p),
               D,
             ),
-            P = {
+            L = {
               display: I,
               flexDirection: M,
               flexWrap: S,
@@ -7904,12 +7911,12 @@
               flex: B,
               ...R,
             },
-            x = { className: L, style: P, ref: t, ...T };
+            x = { className: P, style: L, ref: t, ...T };
           if (r) {
             const e = r;
             return i.createElement(e, { ...x });
           }
-          return i.createElement(s.Z, { className: L, style: P, ref: t, ...T });
+          return i.createElement(s.Z, { className: P, style: L, ref: t, ...T });
         }),
         m = (0, i.forwardRef)(function (e, t) {
           const {
@@ -8100,7 +8107,7 @@
     },
     43860: (e, t, r) => {
       "use strict";
-      r.d(t, { k: () => k, x: () => P });
+      r.d(t, { k: () => k, x: () => L });
       var i = r(90626),
         n = r(92757),
         a = r(85903);
@@ -8264,7 +8271,7 @@
           if (!t) return !1;
           return (r.hash === R) === e;
         },
-        L = () => {
+        P = () => {
           const e = [
               {
                 label: (0, y.we)("#FeaturedLabel"),
@@ -8434,8 +8441,8 @@
             e
           );
         },
-        P = () => {
-          const e = L();
+        L = () => {
+          const e = P();
           return i.createElement(
             C.az,
             { className: f.PrimaryNav, "flow-children": "column" },
@@ -8511,7 +8518,7 @@
         );
       }
       const k = () => {
-        const e = L(),
+        const e = P(),
           t = [];
         return (
           e.forEach((e) => {
@@ -9744,9 +9751,9 @@
       "use strict";
       r.d(t, {
         gs: () => mt,
-        iZ: () => Pe,
+        iZ: () => Le,
         rE: () => Te,
-        Xw: () => Le,
+        Xw: () => Pe,
         U$: () => Re,
         d7: () => De,
       });
@@ -9912,8 +9919,8 @@
       var D = r(44332),
         R = r(96259),
         T = r(12906),
-        L = r(43527),
-        P = r(12155),
+        P = r(43527),
+        L = r(12155),
         x = r(52038),
         z = r(62381);
       const j =
@@ -10677,7 +10684,7 @@
           e ? (0, w.uX)(e) : window,
         );
       }
-      function Le(e, t, r, i) {
+      function Pe(e, t, r, i) {
         const n = {
           type: 2,
           profileCustomizationType: t,
@@ -10689,7 +10696,7 @@
           e ? (0, w.uX)(e) : window,
         );
       }
-      function Pe(e, t) {
+      function Le(e, t) {
         const r = { type: 1, rewardDefinition: t };
         (0, f.mK)(
           s.createElement(Ge, { definition: r }),
@@ -11229,7 +11236,7 @@
                 i &&
                   s.createElement(
                     u.N_,
-                    { to: `${L.B.LoyaltyStore()}/app/` + i.appid, onClick: n },
+                    { to: `${P.B.LoyaltyStore()}/app/` + i.appid, onClick: n },
                     s.createElement(
                       "div",
                       { className: p.SubHeaderAppContainer },
@@ -11251,7 +11258,7 @@
                 s.createElement(
                   "div",
                   { className: p.PointsContainer },
-                  s.createElement(P.vrn, { className: p.Icon }),
+                  s.createElement(L.vrn, { className: p.Icon }),
                   s.createElement(
                     "div",
                     { className: p.BalanceColumn },
@@ -12826,7 +12833,7 @@
           return s.createElement(
             "div",
             { className: (0, x.A)(p.WarningTextContainer, e.className), ...r },
-            s.createElement(P.ENo, { className: p.TimeWarning }),
+            s.createElement(L.ENo, { className: p.TimeWarning }),
             e.children,
           );
         },
@@ -13002,7 +13009,7 @@
               { onClick: t },
               s.createElement(
                 u.N_,
-                { to: L.B.LoyaltyHowItWorks() },
+                { to: P.B.LoyaltyHowItWorks() },
                 (0, g.we)("#Redeem_NeedToOwnApp"),
               ),
             ),
@@ -13019,7 +13026,7 @@
               { onClick: t },
               s.createElement(
                 u.N_,
-                { to: L.B.LoyaltyHowItWorks() },
+                { to: P.B.LoyaltyHowItWorks() },
                 (0, g.we)("#Redeem_HowToGetPoints"),
               ),
             ),
@@ -13510,7 +13517,7 @@
             ),
           ),
         ),
-        L = (0, n.PA)((e) =>
+        P = (0, n.PA)((e) =>
           i.createElement(G, { ...S(e), iconComponent: p.XR }, (t) => {
             const {
                 definition: {
@@ -13526,7 +13533,7 @@
             return i.createElement("img", { className: o.ImageFrames, src: l });
           }),
         ),
-        P = (0, n.PA)((e) =>
+        L = (0, n.PA)((e) =>
           i.createElement(G, { ...S(e), iconComponent: p.Js }, (t) => {
             const {
                 definition: {
@@ -13830,8 +13837,8 @@
           3: A,
           13: T,
           8: x,
-          14: L,
-          15: P,
+          14: P,
+          15: L,
           16: z,
           17: j,
         },
@@ -14300,8 +14307,8 @@
           ),
         );
       }
-      var L = r(87873),
-        P = r(12711),
+      var P = r(87873),
+        L = r(12711),
         x = r(32150),
         z = r(63888),
         j = r(11774);
@@ -14379,7 +14386,7 @@
         },
         G = (e) => {
           const { theme: t, style: r, ...n } = e;
-          return i.createElement(L.rA, { ...n, style: { ...r } });
+          return i.createElement(P.rA, { ...n, style: { ...r } });
         };
       var O = r(59707),
         F = r(30869),
@@ -14400,7 +14407,7 @@
         return 0 === t
           ? null
           : i.createElement(
-              L.wF,
+              P.wF,
               {
                 key: "HiddenCallout",
                 title: (0, g.Yp)(
@@ -14481,7 +14488,7 @@
           if (0 === h) return null;
           const w = !o && !a && q(u);
           return i.createElement(
-            L.Gq,
+            P.Gq,
             {
               title: t,
               subtitle: w || void 0,
@@ -14490,7 +14497,7 @@
                     m.N_,
                     { to: a },
                     i.createElement(
-                      L.rA,
+                      P.rA,
                       { onClick: () => l.push(a) },
                       (0, g.we)("#SeeAllButton"),
                     ),
@@ -14525,7 +14532,7 @@
               (e) => i.createElement(te, { definition: e, key: e.defid }),
               {
                 itemClassName: F.ItemHover,
-                fnRenderItemSkeleton: () => i.createElement(P.sc, null),
+                fnRenderItemSkeleton: () => i.createElement(L.sc, null),
               },
             ),
             c = l.bAllowNext || l.bAllowPrev;
@@ -14553,13 +14560,13 @@
                 i.createElement(
                   m.N_,
                   { to: n, key: "SeeAll" },
-                  i.createElement(L.rA, null, d),
+                  i.createElement(P.rA, null, d),
                 ),
               ),
             c && h.push(i.createElement(N, { key: "CarouselControls", ...l })),
             p && (0 == h.length ? h.push(p) : 0 == _.length && _.push(p)),
             i.createElement(
-              L.Gq,
+              P.Gq,
               { title: t, subtitle: r, leftActions: _, rightActions: h },
               i.createElement(v, {
                 style: { width: "100%", flexWrap: "wrap" },
@@ -14580,7 +14587,7 @@
           let c = (e, t) => o(e, t, l);
           const m = V(c(0, 0));
           return i.createElement(
-            L.Gq,
+            P.Gq,
             { title: t || a, subtitle: r || s, rightActions: m || void 0 },
             i.createElement(x.n, {
               style: { width: "100%" },
@@ -14588,7 +14595,7 @@
               getItems: c,
               renderItem: (e) =>
                 i.createElement(te, { definition: e, key: e.defid }),
-              renderItemSkeleton: () => i.createElement(P.sc, null),
+              renderItemSkeleton: () => i.createElement(L.sc, null),
               key: `${n}||${JSON.stringify(l)}`,
             }),
           );
@@ -14616,9 +14623,9 @@
             y =
               w.bLoadingMore && 0 === w.rewards.length
                 ? [
-                    i.createElement(P.sc, { key: "0" }),
-                    i.createElement(P.sc, { key: "1" }),
-                    i.createElement(P.sc, { key: "2" }),
+                    i.createElement(L.sc, { key: "0" }),
+                    i.createElement(L.sc, { key: "1" }),
+                    i.createElement(L.sc, { key: "2" }),
                   ]
                 : w.rewards.map((e) =>
                     i.createElement(te, {
@@ -14628,7 +14635,7 @@
                     }),
                   );
           return i.createElement(
-            L.Gq,
+            P.Gq,
             null,
             i.createElement(
               k,
@@ -14669,7 +14676,7 @@
             } = t,
             w = a ? (0, p.bp)(a) : void 0;
           return i.createElement(
-            L.Gq,
+            P.Gq,
             null,
             i.createElement(
               k,
@@ -14710,7 +14717,7 @@
         te = (e) => {
           const { definition: t, theme: r } = e,
             s = (0, n.W6)();
-          return i.createElement(P.Fo, {
+          return i.createElement(L.Fo, {
             definition: t,
             onClick: (e) => {
               5 === t.type || 6 === t.type
@@ -14734,7 +14741,7 @@
           l = a,
           c = "string" == typeof s ? s : (0, p.bp)(s);
         return i.createElement(
-          L.Gq,
+          P.Gq,
           null,
           i.createElement(
             "div",
@@ -14952,8 +14959,8 @@
         "images/applications/store/MysterySticker.png?v=valveisgoodatcaching";
       var Re = r(74077),
         Te = r(31561),
-        Le = r(14771);
-      const Pe = (0, l.PA)((e) => {
+        Pe = r(14771);
+      const Le = (0, l.PA)((e) => {
           const t = {
               item_name: "Free Item",
               item_title: (0, g.we)("#SummerSale_ItemTitle"),
@@ -15039,7 +15046,7 @@
                 "div",
                 { className: Be.FreeItemContainer },
                 i.createElement(
-                  P.kn,
+                  L.kn,
                   {
                     name: d,
                     cost: 0,
@@ -15079,9 +15086,9 @@
         ze = (0, l.PA)((e) => {
           const { time: t, ...r } = e,
             n = Math.floor(Math.max(0, t - Te.tB()) / 1e3),
-            a = Math.floor(n / Le.Kp.PerHour),
-            s = Math.floor((n - a * Le.Kp.PerHour) / Le.Kp.PerMinute),
-            o = Math.floor(n - (a * Le.Kp.PerHour + s * Le.Kp.PerMinute));
+            a = Math.floor(n / Pe.Kp.PerHour),
+            s = Math.floor((n - a * Pe.Kp.PerHour) / Pe.Kp.PerMinute),
+            o = Math.floor(n - (a * Pe.Kp.PerHour + s * Pe.Kp.PerMinute));
           return i.createElement(
             "span",
             { style: { fontFamily: "monospace" }, ...r },
@@ -15236,7 +15243,7 @@
                 $e,
                 { header: r, descriptor: t },
                 p.DZ.Get().BIsSaleActive() &&
-                  i.createElement(L.Gq, null, i.createElement(Pe, null)),
+                  i.createElement(P.Gq, null, i.createElement(Le, null)),
               ),
           );
         }
@@ -16391,13 +16398,13 @@
               paddingBottom: "medium",
               focusable: !0,
             },
-            n.map((e) => i.createElement(Lt, { key: e }, (0, g.we)(e))),
-            a.map((e) => i.createElement(Pt, { key: e }, (0, g.we)(e))),
+            n.map((e) => i.createElement(Pt, { key: e }, (0, g.we)(e))),
+            a.map((e) => i.createElement(Lt, { key: e }, (0, g.we)(e))),
           );
         },
-        Lt = ({ children: e }) =>
-          i.createElement("div", { className: Et.FaqQuestion }, e),
         Pt = ({ children: e }) =>
+          i.createElement("div", { className: Et.FaqQuestion }, e),
+        Lt = ({ children: e }) =>
           i.createElement("div", { className: Et.FaqAnswer }, e),
         xt = () => {
           let e = p.DZ.Get().GetConfig().points_conversion.unit_spend,
@@ -16906,7 +16913,7 @@
             c && i.createElement("div", { className: Ft.ErrorCtn }, c),
             n.data.active_definitions?.length > 0 &&
               i.createElement(
-                L.Gq,
+                P.Gq,
                 { title: (0, g.we)("#EquippedProfile_AvailableForPurchase") },
                 i.createElement(x.n, {
                   style: { width: "100%" },
@@ -16923,7 +16930,7 @@
               ),
             n.data.inactive_definitions?.length > 0 &&
               i.createElement(
-                L.Gq,
+                P.Gq,
                 {
                   title: (0, g.we)("#EquippedProfile_NotAvailable"),
                   subtitle: (0, g.Yp)(
@@ -16941,7 +16948,7 @@
                   }),
                   itemClassName: ue.ItemHoverZIndex,
                   renderItem: (e) =>
-                    i.createElement(P.Fo, {
+                    i.createElement(L.Fo, {
                       definition: e,
                       purchaseable: !1,
                       key: e.defid,

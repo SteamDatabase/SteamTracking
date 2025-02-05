@@ -89,12 +89,14 @@
   flex-direction: row;
   margin: 0px 40px 8px 40px;
   justify-content: space-between;
+  width: fit-content;
 }
 ._2j-z9aXG_KoPSY-SYZ0fkF ._1Z7LLb7cP6pLH8XwOgDkP .DialogDropDown {
   padding-right: 40px;
 }
 ._2j-z9aXG_KoPSY-SYZ0fkF ._1Z7LLb7cP6pLH8XwOgDkP ._1PrsCGcbjJ61fDm8stNJd2 {
   margin-left: 8px;
+  min-width: 200px;
 }
 ._2j-z9aXG_KoPSY-SYZ0fkF
   ._1Z7LLb7cP6pLH8XwOgDkP

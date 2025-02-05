@@ -3632,6 +3632,17 @@ div.early_access_header .devnotes > .devs_say {
 	font-style: normal;
 }
 
+div.early_access_header .devnotes > .likely_stale {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	color: #F4D4A0;
+	margin: 10px 0 0 0;
+	font-style: normal;
+}
+
+
 div.early_access_header .devnotes > div {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -6400,11 +6411,17 @@ a.open_in_steam_body:hover {
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-bottom: 4px;
+	background-image: url(/public/images/v6/maincol_gradient_rule.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+	padding-bottom: 4px;
 }
 
 .game_purchase_options_editions_header_title {
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 14px;
+	color: #fff;
+    letter-spacing: 0.03em;
 	flex-basis: 0;
 	flex-grow: 1;
 }
@@ -6414,12 +6431,14 @@ a.open_in_steam_body:hover {
 }
 
 .game_purchase_options_editions_header_compare_button {
-	background: rgba(0,0,0,0);
-	color: rgb(172, 178, 184);
-	padding: 2px 24px;
-	border: 1px solid rgb(172, 178, 184);
-	font-size: 12px;
+	background: transparent;
+	color: #ffffff;
+	padding: 2px 15px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 2px;
+	font-size: 11px;
 	cursor: pointer;
+	width: fit-content;
 }
 
 .game_purchase_options_editions_image_ctn {

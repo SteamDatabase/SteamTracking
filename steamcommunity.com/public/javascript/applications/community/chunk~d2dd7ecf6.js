@@ -865,7 +865,7 @@
         s = a(90626),
         c = a(57876),
         m = a(76217),
-        g = a(89350),
+        g = a(84143),
         p = a(70078),
         d = a(17720),
         u = a(71138),
@@ -3620,7 +3620,8 @@
         const a = n.useRef(),
           r = n.useCallback(
             (t) => {
-              t.currentTarget.files.length > 0 && e(t.currentTarget.files);
+              t.currentTarget.files.length > 0 &&
+                (e(t.currentTarget.files), (t.currentTarget.value = ""));
             },
             [e],
           ),

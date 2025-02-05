@@ -84,15 +84,15 @@
         d = a(26101),
         E = a(45359),
         b = a(18654),
-        v = a.n(b),
-        S = a(3661),
+        S = a.n(b),
+        v = a(3661),
         P = a(89274),
         h = a(72860),
         _ = a(70300),
         f = a(47235),
-        D = a(37076),
-        I = a(54492),
-        C = a(60014),
+        C = a(37076),
+        D = a(54492),
+        I = a(60014),
         g = a(52038),
         A = a(61859),
         T = a(61336),
@@ -112,23 +112,23 @@
             onlyOneDiscountPct: E,
             bPreferDemoStorePage: b,
           } = e,
-          [S, P] = n.useState(!1),
+          [v, P] = n.useState(!1),
           [h] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
           [f] = (0, p.t7)(a && h?.GetParentAppID(), r.Xh);
         if (!h) return null;
-        const D = Boolean(f),
-          I = n.createElement(W, {
+        const C = Boolean(f),
+          D = n.createElement(W, {
             ...e,
             info: t,
-            bIsHovered: S,
-            bHasParentAppToDisplay: D,
+            bIsHovered: v,
+            bHasParentAppToDisplay: C,
             onlyOneDiscountPct: E,
           });
         return n.createElement(
           s.Z,
           {
             className: (0, g.A)({
-              [v().OuterCapsuleContainer]: !0,
+              [S().OuterCapsuleContainer]: !0,
               [N + i]: 0 == i,
             }),
             navEntryPreferPosition: l.iU.PREFERRED_CHILD,
@@ -141,12 +141,12 @@
               ? n.createElement(
                   "div",
                   { onMouseEnter: () => P(!0), onMouseLeave: () => P(!1) },
-                  I,
+                  D,
                 )
               : n.createElement(
                   d.Qf,
                   {
-                    className: v().CapsuleContainer,
+                    className: S().CapsuleContainer,
                     item: t,
                     elElementToAppend: e.elElementToAppendToHover,
                     bShowDemoButton: e.bShowDemoButton,
@@ -158,11 +158,11 @@
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
                   },
-                  I,
+                  D,
                 ),
-            Boolean(o) && n.createElement("div", null, o),
+            Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
-          D &&
+          C &&
             n.createElement(k, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: f,
@@ -178,17 +178,17 @@
             childAppType: s,
             bPreferDemoStorePage: l,
           } = e,
-          i = (0, C.n9)(),
+          i = (0, I.n9)(),
           c = (0, y.Qn)();
         return n.createElement(
           o.ml,
-          { className: v().CapsuleParentInfo, ...(0, h.S)(a, i, c, l, t) },
+          { className: S().CapsuleParentInfo, ...(0, h.S)(a, i, c, l, t) },
           n.createElement(
             _.oj,
             { appid: a.GetAppID() },
             n.createElement(
               "div",
-              { className: v().ParentType },
+              { className: S().ParentType },
               (0, A.we)(
                 11 == s
                   ? "#SalePage_ParentApp_SoundTrack"
@@ -196,7 +196,7 @@
               ),
             ),
             n.createElement(
-              D.u,
+              C.u,
               { type: "app", id: a.GetAppID(), strExtraParams: t },
               n.createElement("img", {
                 loading: "lazy",
@@ -219,47 +219,48 @@
             bHasParentAppToDisplay: u,
             bIsHovered: d,
             strDoubleCapsuleMessage: b,
-            bPreferDemoStorePage: v,
+            bPreferDemoStorePage: h,
           } = e,
-          [h] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          _ = (0, C.n9)(),
-          f = (0, n.useMemo)(() => h?.GetIncludedAppIDsOrSelf(), [h]);
-        if (!h) return null;
-        const D = (0, T.NT)(
-          (0, i.wJ)(`${h.GetStorePageURL(v)}${s ? `?${s}` : ""}`, _),
+          [_] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          f = (0, I.n9)(),
+          C = (0, n.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
+        if (!_) return null;
+        const A = (0, T.NT)(
+          (0, i.wJ)(`${_.GetStorePageURL(h)}${s ? `?${s}` : ""}`, f),
         );
-        let A;
+        let y;
         "overrideNavigation" in t &&
-          (A = (e) => (
+          (y = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const y = Boolean(b);
+        const w = Boolean(b);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             o.Ii,
             {
-              href: A ? null : D,
+              href: y ? null : A,
               style: { display: "block", cursor: "pointer" },
+              className: S().CapsuleFocusCtn,
               preferredFocus: u,
-              onClick: A,
+              onClick: y,
             },
             n.createElement(
               "div",
-              { className: (0, g.A)({ [H().TwoWidthCtn]: y }) },
+              { className: (0, g.A)({ [H().TwoWidthCtn]: w }) },
               n.createElement(
                 "div",
-                { className: (0, g.A)({ [H().TwoWidthCapsule]: y }) },
-                n.createElement(P.V, { appids: f, hide_status_banners: a }),
+                { className: (0, g.A)({ [H().TwoWidthCapsule]: w }) },
+                n.createElement(P.V, { appids: C, hide_status_banners: a }),
                 n.createElement(E.aU, { imageType: c, info: t }),
-                n.createElement(I.S, {
+                n.createElement(D.S, {
                   eDeckCompatibilityCategory:
-                    h?.GetPlatforms()?.steam_deck_compat_category,
+                    _?.GetPlatforms()?.steam_deck_compat_category,
                 }),
-                Boolean(d) && n.createElement(S.m, { appInfo: t }),
+                Boolean(d) && n.createElement(v.m, { appInfo: t }),
               ),
-              y &&
+              w &&
                 n.createElement(
                   "div",
                   { className: H().TwoWidthSideInfo },
@@ -270,12 +271,12 @@
                     n.createElement(
                       "span",
                       null,
-                      h.GetFormattedSteamReleaseDate(),
+                      _.GetFormattedSteamReleaseDate(),
                     ),
                   ),
                   n.createElement(G.n, {
                     bHideTitle: !0,
-                    rgTagIDs: h.GetTagIDs(),
+                    rgTagIDs: _.GetTagIDs(),
                     instanceNum: l,
                   }),
                 ),
@@ -295,8 +296,8 @@
             bHidePlatforms: u,
             creatorAccountID: d,
             bIsHovered: b,
-            onlyOneDiscountPct: v,
-            strDoubleCapsuleMessage: S,
+            onlyOneDiscountPct: S,
+            strDoubleCapsuleMessage: v,
           } = e,
           [P] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
           h =
@@ -306,24 +307,24 @@
         if (s && 0 == P?.GetStoreItemType())
           return n.createElement(f.E, { appid: P.GetAppID(), bIsMuted: b });
         if (l) return null;
-        const D = h && a,
-          I = _;
+        const C = h && a,
+          D = _;
         return n.createElement(E.qn, {
           info: t,
-          bShowAsMuted: I,
+          bShowAsMuted: D,
           bHidePrice: i,
-          bShowInLibraryInsteadOfPrice: D,
+          bShowInLibraryInsteadOfPrice: C,
           bHidePlatforms: u,
           creatorAccountID: d,
           bShowName: e.bShowName,
-          onlyOneDiscountPct: v,
-          bShowWishlistButton: Boolean(S),
+          onlyOneDiscountPct: S,
+          bShowWishlistButton: Boolean(v),
         });
       }
     },
     51219: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => v });
+      a.r(t), a.d(t, { default: () => S });
       var n = a(82715),
         r = a(22837),
         o = a(2160),
@@ -337,13 +338,13 @@
         d = a(22797),
         E = a(61859),
         b = a(43068);
-      function v(e) {
+      function S(e) {
         const { gid: t } = (0, i.g)(),
-          [a, v] = (0, l.useState)(!0);
+          [a, S] = (0, l.useState)(!0);
         if (
           (l.useEffect(() => {
             a &&
-              (m.O3.Init(), Promise.all([c.KN.InitGlobal()]).then(() => v(!1)));
+              (m.O3.Init(), Promise.all([c.KN.InitGlobal()]).then(() => S(!1)));
           }, [a]),
           a)
         )
@@ -351,11 +352,11 @@
             string: (0, E.we)("#Loading"),
             position: "center",
           });
-        const S = m.O3.GetClanEventModel(t);
+        const v = m.O3.GetClanEventModel(t);
         return l.createElement(
           n.tH,
           null,
-          !S.BIsUnlistedEvent() &&
+          !v.BIsUnlistedEvent() &&
             l.createElement(
               "div",
               null,
@@ -363,11 +364,11 @@
             ),
           l.createElement(u.jA, {
             lang: (0, r.sf)(s.TS.LANGUAGE),
-            event: S,
+            event: v,
             adminPanel:
               s.TS.EREALM === o.TU.k_ESteamRealmChina
-                ? l.createElement(b.P, { eventModel: S })
-                : l.createElement(p.g, { eventModel: S }),
+                ? l.createElement(b.P, { eventModel: v })
+                : l.createElement(p.g, { eventModel: v }),
           }),
         );
       }

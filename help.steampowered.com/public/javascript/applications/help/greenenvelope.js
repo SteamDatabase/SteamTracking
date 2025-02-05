@@ -12210,6 +12210,13 @@
             return (0, br.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
+        GetCurrentGameStatus() {
+          return (
+            this.GetCurrentGameRichPresence() ||
+            this.m_mapRichPresence.get("status") ||
+            ""
+          );
+        }
         GetOfflineStatusUpdateRate() {
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;

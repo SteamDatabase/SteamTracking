@@ -904,6 +904,12 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   max-width: none;
   min-height: 0;
 }
+.BasicUI
+  ._3Sf_ShCtdfWp5P04k2cIgp
+  .t6CDOdcwTIZM8UA8NN41V
+  > .DialogContent_InnerWidth {
+  overflow: hidden;
+}
 ._3Sf_ShCtdfWp5P04k2cIgp._1JfX5TwbiYNVMRiU6Gthga .DialogContentTransition {
   background: none;
 }
@@ -931,8 +937,8 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 .BasicUI ._3Sf_ShCtdfWp5P04k2cIgp ._3Sjbkvk647UKKVLX6J7gsW {
   padding: 0px;
   min-width: unset;
+  width: 100%;
   box-sizing: unset;
-  position: absolute !important;
 }
 .BasicUI ._3Sf_ShCtdfWp5P04k2cIgp ._3Sjbkvk647UKKVLX6J7gsW.gpfocus {
   color: #0e141b;
@@ -1079,4 +1085,11 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 ._1Ve4VFO2EEkeNZdel_Asky li > p:first-of-type {
   margin: 0;
+}
+.OdrYEhT1tSscLcZEKjDvW::before {
+  content: attr(data-placeholder);
+  color: gray;
+  position: absolute;
+  pointer-events: none;
+  font-style: italic;
 }

@@ -2059,7 +2059,8 @@
         const r = n.useRef(),
           i = n.useCallback(
             (t) => {
-              t.currentTarget.files.length > 0 && e(t.currentTarget.files);
+              t.currentTarget.files.length > 0 &&
+                (e(t.currentTarget.files), (t.currentTarget.value = ""));
             },
             [e],
           ),
