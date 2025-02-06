@@ -1331,24 +1331,24 @@
             async (e) => {
               let n = Array.from(e),
                 l = !0;
-              for (let o = 0; o < n.length; o++) {
-                const n = e.item(o),
-                  s = (0, m.j)(n.name, u);
+              for (let e = 0; e < n.length; e++) {
+                const o = n[e],
+                  s = (0, m.j)(null == o ? void 0 : o.name, u);
                 try {
-                  const e = (0, m.P)(s, u, c);
-                  (l = await t.AddImageForLanguage(n, e, a, i)),
+                  const n = (0, m.P)(s, u, c);
+                  (l = await t.AddImageForLanguage(o, n, a, i)),
                     l ||
                       (console.error(
                         "ArtworkUploader.OnDropFiles: failed on i=" +
-                          o +
+                          e +
                           " file=" +
-                          n.name,
+                          o.name,
                       ),
                       (0, _.pg)(
                         r.createElement(I.KG, {
                           strDescription: (0, k.we)(
                             "#ImagePicker_Error",
-                            n.name,
+                            o.name,
                           ),
                         }),
                         window,
@@ -1474,6 +1474,7 @@
           d = new Array(),
           u = k.A0.GetLanguageListForRealms(l || [i.TU.k_ESteamRealmGlobal]);
         for (const e of u) {
+          if (25 == e) continue;
           const t = (0, k.we)("#Language_" + (0, o.Lg)(e));
           d.push({ label: t, data: e });
         }

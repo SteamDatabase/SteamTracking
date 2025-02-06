@@ -3572,27 +3572,30 @@
     69343: (e, t, r) => {
       "use strict";
       r.d(t, { P: () => s, j: () => o });
-      var i = r(22837),
-        n = r(2160),
+      var i = r(2160),
+        n = r(22837),
         a = r(61859);
       function s(e, t, r) {
         if (((null != e && null != e) || (e = t), !r || 0 === r.length))
           return e;
         for (const t of r) if (a.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of r) if (a.A0.IsELanguageValidInRealm(t, e)) return t;
-        return r.includes(n.TU.k_ESteamRealmGlobal) ? 0 : 29;
+        return r.includes(i.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
       function o(e, t = 0) {
         let r = e.lastIndexOf(".");
         -1 != r && (e = e.slice(0, r).toLowerCase());
-        let n = null,
+        let i = null,
           a = 0;
-        e.endsWith("korean") && ((n = 4), (a = 6));
+        e.endsWith("korean") && ((i = 4), (a = 6));
         for (let t = 0; t < 31; ++t) {
-          const r = (0, i.Lg)(t);
-          r.length <= a || (e.endsWith(r) && ((n = t), (a = r.length)));
+          const r = (0, n.ww)(t);
+          if (r.length <= a) continue;
+          e.endsWith(r) && ((i = t), (a = r.length));
+          const s = (0, n.Lg)(t);
+          s.length <= a || (e.endsWith(s) && ((i = t), (a = s.length)));
         }
-        return n || t;
+        return i || t;
       }
     },
     71138: (e, t, r) => {
