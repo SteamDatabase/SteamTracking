@@ -503,7 +503,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 
 	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
 				'use_review_quality': $J('input[name="use_review_quality"]').is( ":checked" ) ? 1 : 0,
-						'cursor' : cursor,
+				'cursor' : cursor,
 		'day_range' : dayRange,
 		'start_date' : startDate,
 		'end_date' : endDate,
@@ -691,7 +691,6 @@ function ClearReviewLanguageFilter()
 	ShowFilteredReviews();
 }
 
-
 function ClearReviewDateRangeFilter()
 {
 	$J('#review_date_range_all').attr( 'checked', true );
@@ -873,21 +872,26 @@ function BuildReviewHistogram()
 			data.results.rollup_type = 'day';
 		}
 
+		var maxPositive = 0;
 		var chartDataPositive = [];
 		var chartDataNegative = [];
+		var chartDataAll = [];
 
 		var chartDataPositiveEvent = [];
 		var chartDataNegativeEvent = [];
+		var chartDataAllEvent = [];
 		var rgPastEventsRollup = [];
 		var rgPastEventsRecent = [];
 
 		for ( var i = 0; i < data.results.rollups.length; ++i )
 		{
 			var rollup = data.results.rollups[i];
+			maxPositive = Math.max( rollup.recommendations_up, maxPositive );
 			var barDataUp = [ rollup.date * 1000, rollup.recommendations_up ];
 			var barDataDown = [ rollup.date * 1000, -rollup.recommendations_down ];
 			chartDataPositive.push( barDataUp );
 			chartDataNegative.push( barDataDown );
+			chartDataAll.push( [ rollup.recommendations_up, rollup.recommendations_down ] );
 
 			if ( data.past_events && data.past_events.length != 0 )
 			{
@@ -907,6 +911,7 @@ function BuildReviewHistogram()
 					{
 						chartDataPositiveEvent.push( barDataUp );
 						chartDataNegativeEvent.push( barDataDown );
+						chartDataAllEvent.push( [ rollup.recommendations_up, rollup.recommendations_down ] );
 
 						AddOrUpdatePastEvent( rgPastEventsRollup, { start_date: event.start_date, end_date : event.end_date, recommendations_up: rollup.recommendations_up } );
 						break;
@@ -915,10 +920,10 @@ function BuildReviewHistogram()
 			}
 		}
 		var seriesRollup = [
-			{ label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive },
-			{ label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative },
-			{ label: "Positive", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataPositiveEvent },
-			{ label: "Negative", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataNegativeEvent },
+			{ label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive, dataAll: chartDataAll },
+			{ label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative, dataAll: chartDataAll },
+			{ label: "Positive", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataPositiveEvent, dataAll: chartDataAllEvent },
+			{ label: "Negative", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataNegativeEvent, dataAll: chartDataAllEvent },
 		];
 
 		var seriesRecent = null;
@@ -926,8 +931,10 @@ function BuildReviewHistogram()
 		{
 			chartDataPositive = [];
 			chartDataNegative = [];
+			chartDataAll = []
 			chartDataPositiveEvent = [];
 			chartDataNegativeEvent = [];
+			chartDataAllEvent = []
 			for ( var i = 0; i < data.results.recent.length; ++i )
 			{
 				var recentDay = data.results.recent[i];
@@ -935,6 +942,7 @@ function BuildReviewHistogram()
 				var barDataDown = [ recentDay.date * 1000, -recentDay.recommendations_down ];
 				chartDataPositive.push( barDataUp );
 				chartDataNegative.push( barDataDown );
+				chartDataAll.push( [ rollup.recommendations_up, rollup.recommendations_down ] );
 				if ( data.past_events && data.past_events.length != 0 )
 				{
 					for ( var j = 0; j < data.past_events.length; ++j )
@@ -944,6 +952,7 @@ function BuildReviewHistogram()
 						{
 							chartDataPositiveEvent.push( barDataUp );
 							chartDataNegativeEvent.push( barDataDown );
+							chartDataAllEvent.push( [ rollup.recommendations_up, rollup.recommendations_down ] );
 
 							AddOrUpdatePastEvent( rgPastEventsRecent, { start_date: event.start_date, end_date : event.end_date, recommendations_up: recentDay.recommendations_up } );
 							break;
@@ -952,10 +961,10 @@ function BuildReviewHistogram()
 				}
 			}
 			seriesRecent = [
-				{ color: "#66c0f4", label: "Positive", data: chartDataPositive },
-				{ color: "#A34C25", label: "Negative", data: chartDataNegative },
-				{ label: "Positive", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataPositiveEvent },
-				{ label: "Negative", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataNegativeEvent },
+				{ color: "#66c0f4", label: "Positive", data: chartDataPositive, dataAll: chartDataAll },
+				{ color: "#A34C25", label: "Negative", data: chartDataNegative, dataAll: chartDataAll },
+				{ label: "Positive", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataPositiveEvent, dataAll: chartDataAllEvent },
+				{ label: "Negative", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataNegativeEvent, dataAll: chartDataAllEvent },
 			];
 		}
 
@@ -987,7 +996,8 @@ function BuildReviewHistogram()
 					return ( val < 0 ) ? -val : val;
 				},
 				tickLength: 0,
-				tickDecimals: 0
+				tickDecimals: 0,
+				autoscaleMargin: 0,
 			},
 			grid: {
 				hoverable: true,
@@ -1024,7 +1034,11 @@ function BuildReviewHistogram()
 			rollupOptions.series.bars.barWidth = 86400*1000 * 30 * 0.5;
 		}
 
-		rollupOptions.yaxis.autoscaleMargin = rgPastEventsRollup.length != 0 ? 0.2 : null;
+		// leave room for the asterisk
+		if ( rgPastEventsRollup.length != 0 )
+		{
+			rollupOptions.yaxis.max = maxPositive * 1.1;
+		}
 
 		var graphRollup =  $J( "#review_histogram_rollup" );
 		var flotRollup = $J.plot( graphRollup, seriesRollup, rollupOptions );
@@ -1115,28 +1129,38 @@ function BuildReviewHistogram()
 		}
 
 		// tooltip
-		$J("<div id='review_histogram_tooltip'></div>").appendTo("body");
+		$J(
+			`<div id='review_histogram_tooltip'>
+				<div class='date'></div>
+				<div class='positive'><span></span>&nbsp;Positive&nbsp;(<span class='percentage'></span>%)</div>
+				<div class='negative'><span></span>&nbsp;Negative</div>
+			</div>`
+		).appendTo("body");
 		var funcTooltip = function (event, pos, item) {
 			var tooltip = $J("#review_histogram_tooltip");
 			if ( item )
 			{
+				var idx = item.dataIndex;
+				var reviewData = item.series.dataAll[idx];
+				var numPositiveReviews = reviewData[0];
+				var numNegativeReviews = reviewData[1];
+				var percentage = ( 100.0 * numPositiveReviews ) / Math.max( 1, numPositiveReviews + numNegativeReviews );
 				var x = item.datapoint[0].toFixed(2);
 				var y = item.datapoint[1].toFixed(2);
-				var numReviews = parseInt( y );
-				var bNegativeReviews = numReviews < 0;
+				var bNegativeReviews = y < 0;
 				var yDelta = bNegativeReviews ? 10 : ( -20 - tooltip.height() );
 				var xDelta = 5;
-				numReviews = Math.abs( numReviews );
 
 				var date = new Date( parseInt(x) );
 
 				var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: "UTC" };
 				var strDate = date.toLocaleDateString( undefined, dateOptions );
-				tooltip.html( v_numberformat( numReviews, 0 ) + " " + item.series.label + " (" + strDate + ")" );
+				tooltip.find( ".positive span:first-child" ).html( v_numberformat( numPositiveReviews ) );
+				tooltip.find( ".negative span:first-child" ).html( v_numberformat( numNegativeReviews ) );
+				tooltip.find( ".percentage" ).html( percentage.toFixed( 0 ) );
+				tooltip.find( ".date" ).html( strDate );
 				tooltip.css( {top: item.pageY+yDelta, left: item.pageX+xDelta} );
 				tooltip.fadeIn( 10 );
-
-				tooltip.toggleClass( "negative", bNegativeReviews );
 			}
 			else
 			{
@@ -1372,8 +1396,6 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_language" ).hide();
 	}
 
-	// region
-	
 	// graph
 	if ( $J( "#review_date_range_histogram" ).attr( "checked" ) )
 	{

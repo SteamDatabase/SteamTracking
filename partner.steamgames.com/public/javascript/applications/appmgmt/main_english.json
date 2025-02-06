@@ -721,6 +721,7 @@
     "Dashboard_UpcomingEvents_EventType_Deadline": "Action Required",
     "Dashboard_UpcomingEvents_EventType_SeasonPass": "Season Pass Release Commitment",
     "Dashboard_UpcomingEvents_EventType_DailyDeal": "Daily Deal",
+    "Dashboard_UpcomingEvents_EventType_DailyDealRecap": "Daily Deal Recap",
     "Dashboard_UpcomingEvents_EventType_Release": "Game Release",
     "Dashboard_UpcomingEvents_EventType_Release_DLC": "DLC Release",
     "Dashboard_UpcomingEvents_EventType_Event_Unknown": "Steam Event",

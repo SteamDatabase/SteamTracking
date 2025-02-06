@@ -2827,10 +2827,13 @@ body.recommendgame #review_create h1  {
 	box-shadow: 0 0 5px #000;
 	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
-	color: #4191bf;
+	color: #61686D;
 	font-weight: bold;
 }
-#review_histogram_tooltip.negative {
+#review_histogram_tooltip .positive {
+	color: #4191bf;
+}
+#review_histogram_tooltip .negative {
 	color: #A34C25;
 }
 
