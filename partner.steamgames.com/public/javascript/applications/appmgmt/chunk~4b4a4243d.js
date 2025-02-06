@@ -1150,7 +1150,7 @@
             async (e, t) => {
               R(!0);
               let r = { json: 1, term: e, bexcluderetired: !f },
-                i = `${u.TS.PARTNER_BASE_URL}apps/suggestapps`;
+                i = `${u.TS.PARTNER_BASE_URL}appsearch/suggestapps`;
               switch (n) {
                 case 1:
                   i = `${u.TS.PARTNER_BASE_URL}admin/store/suggestpackage`;

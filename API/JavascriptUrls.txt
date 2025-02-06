@@ -1032,6 +1032,7 @@ ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
+${PARTNER_BASE_URL}appsearch/suggestapps
 ${PARTNER_BASE_URL}appsupport/ajaxgetassets/${}
 ${PARTNER_BASE_URL}appsupport/ajaxpublishassets
 ${PARTNER_BASE_URL}appsupport/ajaxuploadasset/${}
