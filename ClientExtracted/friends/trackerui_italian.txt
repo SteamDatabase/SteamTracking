@@ -100,7 +100,7 @@
 "Friends_CannotAddSelfToList"				"Non puoi aggiungere te stesso alla tua lista amici!"
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% è già presente nella tua lista amici con il nome \"%friend%\"."
 
-"Friends_ConnectedButOffline"					"I tuoi amici ti vedono Offline."
+"Friends_ConnectedButOffline"					"I tuoi amici ti vedono offline."
 "Friends_NoFriendsInList"						"Perché non inviare una richiesta di amicizia a qualcuno?"
 "Friends_GoOnline"							"Torna Online"
 "Friends_SignIn_RefreshPassword"				"Accedi..."
@@ -286,7 +286,7 @@
 "Friends_Chat_Closed_Info"            "La chat %chat% è stata chiusa."
 "Friends_Chat_Closed_Entry"           "La chat è stata chiusa.\n"
 
-"Friends_Chat_Offline_Entry"           "Il tuo stato è impostato su Offline.\n"
+"Friends_Chat_Offline_Entry"           "Il tuo stato è impostato su offline.\n"
 "Friends_Chat_Offline_Rejoin_Entry"    "Ora sei Online e ti sei unito nuovamente alla chat.\n"
 
 "Friends_Chat_FailedRejoin_Entry"			"Impossibile entrare nuovamente in chat.\n"

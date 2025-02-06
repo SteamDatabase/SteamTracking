@@ -1,3 +1,4 @@
+$ORIGIN
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
@@ -62,6 +63,7 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+J"65*
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
@@ -256,6 +258,7 @@ __stack_chk_fail
 __strcoll_l
 __strcpy_chk
 __strftime_l
+__strncat_chk
 __strtod_l
 __strtof_l
 __strxfrm_l

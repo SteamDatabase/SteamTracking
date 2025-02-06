@@ -24,6 +24,7 @@ message CContentBuilder_InitDepotBuild_Response {
 	optional uint32 offset_detection_blast_radius_post = 9;
 	optional uint32 offset_detection_max_distance_pre = 10;
 	optional uint32 offset_detection_max_distance_post = 11;
+	optional uint32 compression_method = 12;
 }
 
 message CContentBuilder_StartDepotUpload_Request {

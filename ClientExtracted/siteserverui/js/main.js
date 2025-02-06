@@ -402,7 +402,7 @@
             return t;
         }
       }
-      var C, f, w, B, k, v, T, M, N, P, I, R, L, F, A, z;
+      var C, f, w, B, k, v, T, M, N, P, I, R, L, F, A, z, x;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -468,19 +468,36 @@
               "k_EAppUpdateContentType_Max");
         })(k || (k = {})),
         (function (e) {
+          (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
+            "k_EAppUpdateProgress_VerifyingInstalledFiles"),
+            (e[(e.k_EAppUpdateProgress_Preallocating = 1)] =
+              "k_EAppUpdateProgress_Preallocating"),
+            (e[(e.k_EAppUpdateProgress_Download = 2)] =
+              "k_EAppUpdateProgress_Download"),
+            (e[(e.k_EAppUpdateProgress_Staging = 3)] =
+              "k_EAppUpdateProgress_Staging"),
+            (e[(e.k_EAppUpdateProgress_VerifyingStagedFiles = 4)] =
+              "k_EAppUpdateProgress_VerifyingStagedFiles"),
+            (e[(e.k_EAppUpdateProgress_Copying = 5)] =
+              "k_EAppUpdateProgress_Copying"),
+            (e[(e.k_EAppUpdateProgress_Committing = 6)] =
+              "k_EAppUpdateProgress_Committing"),
+            (e[(e.k_EAppUpdateProgress_Max = 7)] = "k_EAppUpdateProgress_Max");
+        })(v || (v = {})),
+        (function (e) {
           (e[(e.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
             (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
               "k_EOverlayToStoreFlag_AddToCart"),
             (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
               "k_EOverlayToStoreFlag_AddToCartAndShow");
-        })(v || (v = {})),
+        })(T || (T = {})),
         (function (e) {
           (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(T || (T = {})),
+        })(M || (M = {})),
         (function (e) {
           (e[(e.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
@@ -499,13 +516,13 @@
               "k_EGamingDeviceType_Phone"),
             (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
               "k_EGamingDeviceType_SteamDeck");
-        })(M || (M = {})),
+        })(N || (N = {})),
         (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(N || (N = {})),
+        })(P || (P = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -531,7 +548,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(P || (P = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -539,14 +556,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(I || (I = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(R || (R = {})),
+        })(L || (L = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -560,13 +577,13 @@
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(L || (L = {})),
+        })(F || (F = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(F || (F = {})),
+        })(A || (A = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -599,7 +616,7 @@
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
               "k_EInstallMgrStateCanceled");
-        })(A || (A = {})),
+        })(z || (z = {})),
         (function (e) {
           (e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
@@ -607,12 +624,11 @@
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(z || (z = {}));
-      window.Config;
-      const O = window.UserConfig ?? S;
+        })(x || (x = {}));
+      window.Config, window.UserConfig;
       window.Config && Object.assign(b, window.Config),
-        window.UserConfig && Object.assign(O, window.UserConfig);
-      const x = a.memo(function (e) {
+        window.UserConfig && Object.assign(S, window.UserConfig);
+      const O = a.memo(function (e) {
         const {
           className: t,
           size: r,
@@ -1327,6 +1343,11 @@
                     br: H.readInt32,
                     pbr: H.readPackedInt32,
                     bw: V.writeRepeatedInt32,
+                  },
+                  admin_request_spoofing_steamid: {
+                    n: 43,
+                    br: H.readFixed64String,
+                    bw: V.writeFixed64String,
                   },
                 },
               }),
@@ -2867,7 +2888,7 @@
       var Fe = r(1944),
         Ae = r(1735),
         ze = r.n(Ae);
-      class Oe {
+      class xe {
         m_eView = 0;
         m_bShutDown = !1;
         m_bConnected = !1;
@@ -2946,35 +2967,35 @@
             (t.handle = this.m_vecModals[this.m_vecModals.length - 1]);
         }
       }
-      (0, i.Cg)([U.sH], Oe.prototype, "m_eView", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_bShutDown", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_bConnected", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_strLanguage", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_bCacheState", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_eAcctStatus", void 0),
-        (0, i.Cg)([U.sH.shallow], Oe.prototype, "m_vecModals", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_bClientsConnected", void 0),
-        (0, i.Cg)([U.sH], Oe.prototype, "m_bSteamCmd", void 0),
-        (0, i.Cg)([U.EW], Oe.prototype, "view", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetView", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "shutdown", null),
-        (0, i.Cg)([j], Oe.prototype, "SetShutdown", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "connected", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetConnection", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "language", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetLanguage", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "cacheEnabled", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetCacheState", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "acctStatus", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetAcctStatus", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "clientsHaveConnected", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetClientsConnected", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "steamcmdConnected", null),
-        (0, i.Cg)([U.XI.bound], Oe.prototype, "SetSteamcmdConnected", null),
-        (0, i.Cg)([U.EW], Oe.prototype, "activeModal", null),
-        (0, i.Cg)([U.XI], Oe.prototype, "ShowModal", null);
-      const xe = new Oe();
-      window.uiStore = xe;
+      (0, i.Cg)([U.sH], xe.prototype, "m_eView", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_bShutDown", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_bConnected", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_strLanguage", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_bCacheState", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_eAcctStatus", void 0),
+        (0, i.Cg)([U.sH.shallow], xe.prototype, "m_vecModals", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_bClientsConnected", void 0),
+        (0, i.Cg)([U.sH], xe.prototype, "m_bSteamCmd", void 0),
+        (0, i.Cg)([U.EW], xe.prototype, "view", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetView", null),
+        (0, i.Cg)([U.EW], xe.prototype, "shutdown", null),
+        (0, i.Cg)([j], xe.prototype, "SetShutdown", null),
+        (0, i.Cg)([U.EW], xe.prototype, "connected", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetConnection", null),
+        (0, i.Cg)([U.EW], xe.prototype, "language", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetLanguage", null),
+        (0, i.Cg)([U.EW], xe.prototype, "cacheEnabled", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetCacheState", null),
+        (0, i.Cg)([U.EW], xe.prototype, "acctStatus", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetAcctStatus", null),
+        (0, i.Cg)([U.EW], xe.prototype, "clientsHaveConnected", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetClientsConnected", null),
+        (0, i.Cg)([U.EW], xe.prototype, "steamcmdConnected", null),
+        (0, i.Cg)([U.XI.bound], xe.prototype, "SetSteamcmdConnected", null),
+        (0, i.Cg)([U.EW], xe.prototype, "activeModal", null),
+        (0, i.Cg)([U.XI], xe.prototype, "ShowModal", null);
+      const Oe = new xe();
+      window.uiStore = Oe;
       class We {
         m_ServiceTransport;
         m_strBaseURL;
@@ -3033,7 +3054,7 @@
               i.GetCountBytesRemaining(),
             );
             t.deserializeBinaryFromReader(n.Body(), o),
-              xe.SetSteamcmdConnected(!0);
+              Oe.SetSteamcmdConnected(!0);
           } catch (e) {
             n = this.CreateFailedMsgProtobuf(t, 3, null);
           }
@@ -3435,120 +3456,124 @@
         Je = r(3741);
       let et = class extends a.Component {
         render() {
-          return xe.activeModal;
+          return Oe.activeModal;
         }
       };
       function tt(e) {
         let t = Ke("#Button_OK");
         e.strOkButtonText && (t = e.strOkButtonText);
         let r = Ke("#Button_Cancel");
-        return (
-          e.strCancelButtonText && (r = e.strCancelButtonText),
+        e.strCancelButtonText && (r = e.strCancelButtonText);
+        const n = a.useRef(null);
+        return a.createElement(
+          Ze.A,
+          null,
           a.createElement(
-            Ze.A,
-            null,
+            Je.A,
+            {
+              nodeRef: n,
+              key: 0,
+              classNames: "modal-anim",
+              timeout: 500,
+              appear: !0,
+            },
             a.createElement(
-              Je.A,
-              { key: 0, classNames: "modal-anim", timeout: 500, appear: !0 },
+              "div",
+              {
+                ref: n,
+                className: "modal_background",
+                onClick: (t) => {
+                  t.target === t.currentTarget &&
+                    (e.onCancel && e.onCancel(),
+                    e.closeModal && e.closeModal());
+                },
+              },
               a.createElement(
                 "div",
                 {
-                  className: "modal_background",
-                  onClick: (t) => {
-                    t.target === t.currentTarget &&
-                      (e.onCancel && e.onCancel(),
-                      e.closeModal && e.closeModal());
-                  },
+                  className:
+                    "PopupGeneric PopupVisible" +
+                    (null != e.className ? " " + e.className : ""),
                 },
+                a.createElement("div", { className: "PopupGenericBackground" }),
                 a.createElement(
                   "div",
-                  {
-                    className:
-                      "PopupGeneric PopupVisible" +
-                      (null != e.className ? " " + e.className : ""),
-                  },
-                  a.createElement("div", {
-                    className: "PopupGenericBackground",
-                  }),
-                  a.createElement(
-                    "div",
-                    { className: "PopupGenericContainer" },
-                    e.strTitle &&
+                  { className: "PopupGenericContainer" },
+                  e.strTitle &&
+                    a.createElement(
+                      "div",
+                      { className: "modal_title" },
                       a.createElement(
                         "div",
-                        { className: "modal_title" },
-                        a.createElement(
-                          "div",
-                          { className: "PopupGenericTitle" },
-                          e.strTitle,
-                        ),
+                        { className: "PopupGenericTitle" },
+                        e.strTitle,
+                      ),
+                    ),
+                  a.createElement(
+                    "div",
+                    { className: "model_content" },
+                    e.strMessage &&
+                      a.createElement(
+                        "div",
+                        { className: "PopupGenericBodyText" },
+                        (function (e, ...t) {
+                          return Ke(e, ...t)
+                            .split("<br>")
+                            .map((e, t) =>
+                              a.createElement(
+                                "span",
+                                { key: t },
+                                e,
+                                a.createElement("br", null),
+                              ),
+                            );
+                        })(e.strMessage),
                       ),
                     a.createElement(
                       "div",
-                      { className: "model_content" },
-                      e.strMessage &&
+                      { className: "PopupGenericChildren" },
+                      e.children,
+                    ),
+                    a.createElement(
+                      "div",
+                      { className: "GenericButtonGroup" },
+                      (e.bShowOK || null == e.bShowOK) &&
                         a.createElement(
-                          "div",
-                          { className: "PopupGenericBodyText" },
-                          (function (e, ...t) {
-                            return Ke(e, ...t)
-                              .split("<br>")
-                              .map((e, t) =>
-                                a.createElement(
-                                  "span",
-                                  { key: t },
-                                  e,
-                                  a.createElement("br", null),
-                                ),
-                              );
-                          })(e.strMessage),
+                          "button",
+                          {
+                            className: "GenericButton",
+                            onClick: () => {
+                              ((e) => {
+                                let t = !0;
+                                e.onOk && (t = e.onOk()),
+                                  t && e.closeModal && e.closeModal();
+                              })(e);
+                            },
+                          },
+                          t,
                         ),
-                      a.createElement(
-                        "div",
-                        { className: "PopupGenericChildren" },
-                        e.children,
-                      ),
-                      a.createElement(
-                        "div",
-                        { className: "GenericButtonGroup" },
-                        (e.bShowOK || null == e.bShowOK) &&
-                          a.createElement(
-                            "button",
-                            {
-                              className: "GenericButton",
-                              onClick: () => {
-                                ((e) => {
-                                  let t = !0;
-                                  e.onOk && (t = e.onOk()),
-                                    t && e.closeModal && e.closeModal();
-                                })(e);
-                              },
+                      e.optionalButtons,
+                      (e.bShowCancel || null == e.bShowCancel) &&
+                        a.createElement(
+                          "button",
+                          {
+                            className: "GenericButton",
+                            onClick: () => {
+                              ((e) => {
+                                let t = !0;
+                                e.onCancel && (t = e.onCancel()),
+                                  t && e.closeModal && e.closeModal();
+                              })(e);
                             },
-                            t,
-                          ),
-                        e.optionalButtons,
-                        (e.bShowCancel || null == e.bShowCancel) &&
-                          a.createElement(
-                            "button",
-                            {
-                              className: "GenericButton",
-                              onClick: () => {
-                                ((e) => {
-                                  let t = !0;
-                                  e.onCancel && (t = e.onCancel()),
-                                    t && e.closeModal && e.closeModal();
-                                })(e);
-                              },
-                            },
-                            r,
-                          ),
-                      ),
+                          },
+                          r,
+                        ),
                     ),
                   ),
                 ),
               ),
             ),
-          )
+          ),
         );
       }
       et = (0, i.Cg)([o.PA], et);
@@ -3608,7 +3633,7 @@
       }
       function nt(e = !1) {
         ({ NODE_ENV: "production", STEAM_BUILD: "buildbot" }).ELECTRON_BUILD &&
-          xe.SetShutdown();
+          Oe.SetShutdown();
         const t = le.Init(Se);
         return t.Body().set_restart(e), Ge.Quit(t);
       }
@@ -3618,7 +3643,7 @@
           strBodyText: e,
           bShowCancel: !1,
         });
-        xe.ShowModal(t);
+        Oe.ShowModal(t);
       }
       class it extends a.Component {
         constructor(e) {
@@ -3695,10 +3720,10 @@
       lt = (0, i.Cg)([o.PA], lt);
       class ct extends a.Component {
         async Language() {
-          xe.SetView(2);
+          Oe.SetView(2);
         }
         async Cache() {
-          xe.SetView(4);
+          Oe.SetView(4);
         }
         OnChangeAccount() {
           let e = a.createElement(
@@ -3710,7 +3735,7 @@
             },
             null,
           );
-          xe.ShowModal(e);
+          Oe.ShowModal(e);
         }
         Logout() {
           return je.StartLogout(), !0;
@@ -3769,10 +3794,10 @@
           super(e);
         }
         render() {
-          let e = xe.connected
+          let e = Oe.connected
               ? Ke("#Status_Connected")
               : Ke("#Status_NotConnected"),
-            t = xe.cacheEnabled
+            t = Oe.cacheEnabled
               ? Ke("#Status_Enabled")
               : Ke("#Status_Disabled");
           return a.createElement(
@@ -3808,7 +3833,7 @@
           super(e);
         }
         render() {
-          xe.connected ? Ke("#Status_Connected") : Ke("#Status_NotConnected");
+          Oe.connected ? Ke("#Status_Connected") : Ke("#Status_NotConnected");
           return a.createElement("div", { className: "Footer" });
         }
       };
@@ -3828,7 +3853,7 @@
             this.setState({ bToggle: !this.state.bToggle });
         }
         render() {
-          let e = xe.acctStatus,
+          let e = Oe.acctStatus,
             t = !1;
           0 != e
             ? e != this.m_eAcctStatusLast
@@ -3850,7 +3875,7 @@
             ),
             s = "",
             i = !0;
-          switch (xe.acctStatus) {
+          switch (Oe.acctStatus) {
             case 0:
               (s = Qe("#ForAdditionalInfo", r)), (i = !1);
               break;
@@ -4189,7 +4214,7 @@
         }
         tick() {
           this.m_bRequestInFlight ||
-            xe.shutdown ||
+            Oe.shutdown ||
             ((this.m_bRequestInFlight = !0),
             je.UpdateLoginStatus(),
             (this.m_bRequestInFlight = !1));
@@ -4215,7 +4240,7 @@
             case 6:
               (e = Ke("#Status_NoSteamCmd")),
                 (n =
-                  !xe.steamcmdConnected &&
+                  !Oe.steamcmdConnected &&
                   a.createElement(
                     "div",
                     { className: "HelpText" },
@@ -4232,7 +4257,7 @@
               a.createElement(
                 "div",
                 { style: { width: "100%", height: "100%" } },
-                a.createElement(x, { size: "medium", position: "center" }),
+                a.createElement(O, { size: "medium", position: "center" }),
               ),
               a.createElement(
                 "div",
@@ -4331,7 +4356,7 @@
       Et = (0, i.Cg)([o.PA], Et);
       class yt extends a.Component {
         constructor(e) {
-          super(e), (this.state = { strLanguage: xe.language });
+          super(e), (this.state = { strLanguage: Oe.language });
         }
         async Save() {
           let e = this.state.strLanguage;
@@ -4340,11 +4365,11 @@
           t.Body().set_language(e),
             await Ge.SetLanguage(t),
             await at(e),
-            xe.SetLanguage(e),
-            xe.SetView(3);
+            Oe.SetLanguage(e),
+            Oe.SetView(3);
         }
         Cancel() {
-          xe.SetView(3);
+          Oe.SetView(3);
         }
         onSelect(e) {
           this.setState({ strLanguage: e.target.value });
@@ -4617,7 +4642,7 @@
           let e = this.props.columns,
             t = this.props.data;
           if (0 == t.length) {
-            if (xe.clientsHaveConnected)
+            if (Oe.clientsHaveConnected)
               return a.createElement(
                 "div",
                 null,
@@ -4691,7 +4716,7 @@
               ),
             );
           }
-          xe.SetClientsConnected(!0);
+          Oe.SetClientsConnected(!0);
           let r = a.createElement(
               "tr",
               null,
@@ -4940,10 +4965,10 @@
             },
             null,
           );
-          (this.m_bEditDialogVisible = !0), xe.ShowModal(e);
+          (this.m_bEditDialogVisible = !0), Oe.ShowModal(e);
         }
         Cancel() {
-          xe.SetView(3);
+          Oe.SetView(3);
         }
         CloseModal() {
           this.m_bEditDialogVisible = !1;
@@ -4959,7 +4984,7 @@
             o.Body().set_external_process(s);
           1 != (await Ge.UpdateCacheConfig(o)).Hdr().eresult()
             ? await st(Ke("#Cache_UpdateFailed"))
-            : (nt(!0), xe.SetView(3));
+            : (nt(!0), Oe.SetView(3));
         }
         async componentWillMount() {
           const e = le.Init(Pe),
@@ -4985,7 +5010,7 @@
           clearInterval(this.m_TimerID), (this.m_TimerID = 0);
         }
         async tick() {
-          if (this.m_bRequestInFlight || xe.shutdown) return;
+          if (this.m_bRequestInFlight || Oe.shutdown) return;
           this.m_bRequestInFlight = !0;
           const e = le.Init(Pe),
             t = await Ge.GetContentCacheStatus(e);
@@ -5417,40 +5442,40 @@
           ]).then((e) => {
             t = e[0];
             const r = e[1];
-            xe.SetCacheState(r.Body().enabled());
+            Oe.SetCacheState(r.Body().enabled());
           });
           let a = "None" === t.Body().language(),
             n = E(y(t.Body().language()));
-          "None" !== t.Body().language() && xe.SetLanguage(n),
+          "None" !== t.Body().language() && Oe.SetLanguage(n),
             await at(n),
             this.setState({ bLocalizationComplete: !0 }),
-            xe.SetView(a ? 2 : 1),
+            Oe.SetView(a ? 2 : 1),
             (this.m_TimerID = window.setInterval(() => this.tick(), 1e3));
         }
         componentWillUnmount() {
           clearInterval(this.m_TimerID), (this.m_TimerID = 0);
         }
         async tick() {
-          if (this.m_bRequestInFlight || xe.shutdown) return;
+          if (this.m_bRequestInFlight || Oe.shutdown) return;
           this.m_bRequestInFlight = !0;
           const e = le.Init(ye),
             t = await Ge.GetStatus(e);
           1 != t.Hdr().eresult()
-            ? (je.SetSteamCmdNotConnected(), xe.SetView(1))
+            ? (je.SetSteamCmdNotConnected(), Oe.SetView(1))
             : (je.SetLoginStatus(
                 t.Body().logon_state(),
                 t.Body().logon_eresult(),
               ),
-              xe.SetConnection(t.Body().connected()),
-              xe.SetCacheState(t.Body().cache_enabled()),
-              xe.SetAcctStatus(t.Body().acct_status())),
-            4 == je.loginState && 1 == xe.view
-              ? xe.SetView(3)
-              : 4 != je.loginState && 3 == xe.view && xe.SetView(1),
+              Oe.SetConnection(t.Body().connected()),
+              Oe.SetCacheState(t.Body().cache_enabled()),
+              Oe.SetAcctStatus(t.Body().acct_status())),
+            4 == je.loginState && 1 == Oe.view
+              ? Oe.SetView(3)
+              : 4 != je.loginState && 3 == Oe.view && Oe.SetView(1),
             (this.m_bRequestInFlight = !1);
         }
         render() {
-          let e = xe.view;
+          let e = Oe.view;
           return (
             3 == e && 4 != je.loginState && (e = 1),
             a.createElement(
@@ -5509,10 +5534,10 @@
         }
       };
       zt = (0, i.Cg)([o.PA], zt);
-      const Ot = Ft;
+      const xt = Ft;
       (0, U.jK)({ enforceActions: "never" }),
         (window.AssertMsg = s),
-        n.H(document.getElementById("root")).render(a.createElement(Ot, null));
+        n.H(document.getElementById("root")).render(a.createElement(xt, null));
     },
     2857: (e, t, r) => {
       var a = {

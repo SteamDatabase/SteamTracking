@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # verbose
+#export PS4='${LINENO}: '
 #set -x
 
 set -o pipefail
@@ -23,12 +24,6 @@ export TEXTDOMAIN=steam
 export TEXTDOMAINDIR=/usr/share/locale
 
 log_opened=
-
-# figure out the absolute path to the script being run a bit
-# non-obvious, the ${0%/*} pulls the path out of $0, cd's into the
-# specified directory, then uses $PWD to figure out where that
-# directory lives - and all this in a subshell, so we don't affect
-# $PWD
 
 STEAMROOT="$(cd "$(dirname "$0")" && echo $PWD)"
 if [ -z "${STEAMROOT}" ]; then
@@ -687,7 +682,7 @@ if [ "$INITIAL_LAUNCH" ]; then
 	fi
 
 	# Install any additional dependencies
-	if [ -z "$STEAMOS" ]; then
+	if [ -z "$STEAMOS" ] && [ -z "${WSL_DISTRO_NAME:-}" ]; then
 		STEAMDEPS="`dirname $STEAMSCRIPT`/`detect_package`deps"
 		if [ -f "$STEAMDEPS" -a -f "$STEAMROOT/steamdeps.txt" ]; then
 			"$STEAMDEPS" $STEAMROOT/steamdeps.txt
@@ -898,7 +893,9 @@ SEGV_EXITCODE=139
 STEAM_DEBUGGER=${DEBUGGER-}
 : "${DEBUGGER_ARGS:=}"
 unset DEBUGGER # Don't use debugger if Steam launches itself recursively
-if [ "$STEAM_DEBUGGER" == "gdb" ] || [ "$STEAM_DEBUGGER" == "cgdb" ]; then
+debugger_path="${STEAM_DEBUGGER%% *}"
+debugger_executable="${debugger_path##*/}"
+if [ "$debugger_executable" == "gdb" ] || [ "$debugger_executable" == "cgdb" ]; then
 	ARGSFILE=$(mktemp $USER.steam.gdb.XXXX)
 
 	# Set the LD_PRELOAD varname in the debugger, and unset the global version.

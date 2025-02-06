@@ -188,7 +188,7 @@
 "Friends_Friendlist_Chat"				"CHAT"
 "Friends_ViewSteamIDPage"				"Vezi profilul Steam"
 "Friends_ViewFacebookIDPage"			"Deschide pagina de Facebook"
-"Friends_Tooltip_GroupOfficer"		"Ofițer grup"
+"Friends_Tooltip_GroupOfficer"		"Responsabil de grup"
 "Friends_Tooltip_GroupModerator"		"Moderator Grup"
 
 "Friends_InviteFriendToGroup"			"Invită în grup"
@@ -562,12 +562,12 @@
 "Limited_ForDetails"	"Vizitează Asistența Steam pentru mai multe informații."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
-"Friends_Chat_RoomModerated_Entry"		"%member_making_change% a stabilit că doar ofițerii pot comunica.\n"
+"Friends_Chat_RoomModerated_Entry"		"%member_making_change% a stabilit că doar responsabilii pot comunica.\n"
 "Friends_Chat_RoomUnmoderated_Entry"		"%member_making_change% a stabilit că toți utilizatorii pot comunica.\n"
-"Friends_Chat_RoomUnmoderated_Info"			"Doar ofițerii grupului pot trimite mesaje momentan"
-"Friends_Chat_ModerateRoom"				"Setează comunicarea numai pentru ofițeri"
-"Friends_Chat_UnmoderateRoom"			"Dezactivează comunicarea pentru ofițeri (oricine poate comunica)"
-"Friends_Chat_ModerateRoom_Status"			"Doar ofițerii grupului pot comunica"
+"Friends_Chat_RoomUnmoderated_Info"			"Doar responsabilii grupului pot trimite mesaje momentan"
+"Friends_Chat_ModerateRoom"				"Permite-le doar responsabililor să folosească chatul"
+"Friends_Chat_UnmoderateRoom"			"Permite-le tuturor să folosească chatul"
+"Friends_Chat_ModerateRoom_Status"			"Doar responsabilii grupului pot comunica"
 
 "Friends_InviteToGame_Title"	"Alege Prietenii pentru invitații"
 "Friends_InviteToGame_Close"	"Întoarce-te în joc"

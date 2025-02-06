@@ -197,7 +197,7 @@
     "ClientStatus_Approve": "승인",
     "ClientStatus_FundingRequests": "지갑 자금 충전 요청",
     "ClientStatus_FundingInstr": "결제를 수락한 후 사용자에게 지갑 자금 추가를 승인합니다",
-    "AcctStatus_NoLicenses": "이 계정은 상용 라이선스를 보유하지 않으므로 공유할 수 있는 게임이 없습니다. 상용 라이선스는 마스터 사업장 라이선스 계정을 사용하여 %1$s에서 구매할 수 있습니다.",
+    "AcctStatus_NoLicenses": "이 계정은 상업용 라이선스를 보유하지 않으므로 공유할 수 있는 게임이 없습니다. 상업용 라이선스는 마스터 사업장 라이선스 계정을 사용하여 %1$s에서 구매할 수 있습니다.",
     "AcctStatus_NotAssociated": "이 계정에 연결된 사업장이 없습니다. 사업장을 구성하려면, 마스터 사업장 라이선스 계정으로 %1$s에 로그인하세요.",
     "AcctStatus_LoggedInElsewhere": "이 계정은 현재 다른 위치에서 로그인되어 있습니다. 여기에서 로그인하기 전에 먼저 다른 위치의 서버에서 로그아웃해야 합니다.",
     "ForAdditionalInfo": "추가 정보를 확인하거나 계정 구성을 변경하려면, 마스터 사업장 라이선스 계정으로 %1$s에 로그인하세요."

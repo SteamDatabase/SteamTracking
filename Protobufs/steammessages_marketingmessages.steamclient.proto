@@ -46,7 +46,17 @@ enum EMarketingMessageTemplateType {
 	k_EMarketingMessageTemplate_Featured_Video = 3;
 	k_EMarketingMessageTemplate_DLC_Override = 4;
 	k_EMarketingMessageTemplate_Replay = 5;
-	k_EMarketingMessageTemplate_MAX = 6;
+	k_EMarketingMessageTemplate_Event = 6;
+	k_EMarketingMessageTemplate_AutoRender = 7;
+	k_EMarketingMessageTemplate_MAX = 8;
+}
+
+enum EMarketingMessageClickLocation {
+	k_EMarketingMessageClickLocation_Unknown = 0;
+	k_EMarketingMessageClickLocation_Image = 1;
+	k_EMarketingMessageClickLocation_Button = 2;
+	k_EMarketingMessageClickLocation_DlcCapsule = 3;
+	k_EMarketingMessageClickLocation_HeaderArea = 4;
 }
 
 enum EMarketingMessageLookupType {
@@ -162,6 +172,13 @@ message CMarketingMessages_MarkMessageSeen_Notification {
 	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown];
 }
 
+message CMarketingMessages_MarkMessageClicked_Notification {
+	optional fixed64 gid = 1;
+	optional uint32 display_index = 2 [default = 0];
+	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown];
+	optional .EMarketingMessageClickLocation click_location = 4 [default = k_EMarketingMessageClickLocation_Unknown];
+}
+
 message CMarketingMessages_GetMarketingMessage_Request {
 	optional fixed64 gid = 1;
 }
@@ -231,6 +248,22 @@ message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response {
 	repeated .CMarketingMessageHourlyStats stats = 1;
 }
 
+message CMarketingMessages_GetMarketingMessageClickedStats_Request {
+	optional fixed64 gid = 1;
+}
+
+message CMarketingMessageClickedHourlyStats {
+	optional uint32 rt_time_hour = 1;
+	optional uint32 clicked_count = 2;
+	optional uint32 display_index = 3;
+	optional .EMarketingMessageTemplateType template_type = 4 [default = k_EMarketingMessageTemplate_Unknown];
+	optional .EMarketingMessageClickLocation click_location = 5 [default = k_EMarketingMessageClickLocation_Unknown];
+}
+
+message CMarketingMessages_GetMarketingMessageClickedStats_Response {
+	repeated .CMarketingMessageClickedHourlyStats stats = 1;
+}
+
 message CMarketingMessages_GetPartnerReadyToPublishMessages_Request {
 	optional uint32 partnerid = 1;
 }
@@ -281,6 +314,7 @@ service MarketingMessages {
 	rpc GetDisplayMarketingMessageForUser (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
 	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
 	rpc MarkMessageSeen (.CMarketingMessages_MarkMessageSeen_Notification) returns (.NoResponse);
+	rpc MarkMessageClicked (.CMarketingMessages_MarkMessageClicked_Notification) returns (.NoResponse);
 	rpc GetMarketingMessage (.CMarketingMessages_GetMarketingMessage_Request) returns (.CMarketingMessages_GetMarketingMessage_Response);
 	rpc CreateMarketingMessage (.CMarketingMessages_CreateMarketingMessage_Request) returns (.CMarketingMessages_CreateMarketingMessage_Response);
 	rpc UpdateMarketingMessage (.CMarketingMessages_UpdateMarketingMessage_Request) returns (.CMarketingMessages_UpdateMarketingMessage_Response);
@@ -288,6 +322,7 @@ service MarketingMessages {
 	rpc FindMarketingMessages (.CMarketingMessages_FindMarketingMessages_Request) returns (.CMarketingMessages_FindMarketingMessages_Response);
 	rpc GetMarketingMessageViewerStats (.CMarketingMessages_GetMarketingMessageViewerStats_Request) returns (.CMarketingMessages_GetMarketingMessageViewerStats_Response);
 	rpc GetMarketingMessagesViewerRangeStats (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request) returns (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response);
+	rpc GetMarketingMessageClickedStats (.CMarketingMessages_GetMarketingMessageClickedStats_Request) returns (.CMarketingMessages_GetMarketingMessageClickedStats_Response);
 	rpc GetPartnerReadyToPublishMessages (.CMarketingMessages_GetPartnerReadyToPublishMessages_Request) returns (.CMarketingMessages_GetPartnerReadyToPublishMessages_Response);
 	rpc PublishPartnerMessage (.CMarketingMessages_PartnerPublishMessage_Request) returns (.CMarketingMessages_PartnerPublishMessage_Response);
 	rpc GetPartnerMessagePreview (.CMarketingMessages_GetPartnerMessagePreview_Request) returns (.CMarketingMessages_GetPartnerMessagePreview_Response);

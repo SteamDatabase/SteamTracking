@@ -1,3 +1,4 @@
+$ORIGIN
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPvi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIP11IAudioSoundE
@@ -291,6 +292,7 @@ __stack_chk_fail
 __strcoll_l
 __strcpy_chk
 __strftime_l
+__strncat_chk
 __strtod_l
 __strtof_l
 __strxfrm_l

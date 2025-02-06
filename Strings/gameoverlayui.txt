@@ -12,6 +12,7 @@
 "C\n\rCMsgAddHeader
 "\n\farray_values
 "^\n\fOneofOptions
+$ORIGIN
 $\n k_BluetoothDeviceType_Headphones
 $\n k_BluetoothDeviceType_OtherAudio
 $\n k_ColorGamutLabelSet_sRGB_Native
@@ -86,6 +87,7 @@ $\n k_SystemAudioPortDirection_Input
 '\n#k_EBanContentCheckResult_VeryLikely
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
+'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
 '\n#k_EHDRVisualization_HeatmapExtended
 '\n#k_EPersonaStateFlag_HasRichPresence
@@ -98,6 +100,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_EBroadcastPermissionFriendsAllowed
 (\n$k_EBroadcastPermissionFriendsApprove
 (\n$k_EBrowserFeatureStatus_EnabledForce
+(\n$k_EChildProcessQueryExitCode_Success
 (\n$k_ECloudStoragePersistStateForgotten
 (\n$k_ECloudStoragePersistStatePersisted
 (\n$k_ECommentThreadTypeClanAnnouncement
@@ -211,6 +214,7 @@ $\n k_SystemAudioPortDirection_Input
 *|\n\fECPUGovernor
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
++\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
@@ -755,6 +759,7 @@ $\n k_SystemAudioPortDirection_Input
 42CMsgDraggableRegionsChanged_DraggableRects
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
+4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
@@ -787,6 +792,7 @@ $\n k_SystemAudioPortDirection_Input
 7CUtlMapIjbs8CDefLessE
 7CUtlMapIybi8CDefLessE
 7IHTMLJS
+7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
@@ -813,10 +819,12 @@ $\n k_SystemAudioPortDirection_Input
 9ZooDialog
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
+:\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\v-2147483648
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
+<\n/k_EChildProcessQueryExitCode_ErrorUnimplemented
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
@@ -1033,6 +1041,8 @@ EBroadcastEncoderSetting
 EBroadcastPermission
 EBrowserFeatureStatus
 EBrowserGPUStatus
+EChildProcessQueryCommand
+EChildProcessQueryExitCode
 ECloudGamingPlatform
 ECloudStoragePersistState
 EColorGamutLabelSet
@@ -1081,6 +1091,7 @@ ETW_Steamworks_RunCallbacks_End_
 ETW_Steamworks_RunCallbacks_Start
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
+E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 Egyptian_Hieroglyphs
 EnsureValidBoolValue
 EnumDescriptorProto
@@ -1134,7 +1145,6 @@ Hanunoo
 Hebrew
 Hiragana
 IDEMPOTENCY_UNKNOWN
-I`bl
 IdempotencyLevel
 Imperial_Aramaic
 Inherited
@@ -1747,7 +1757,6 @@ Z-google.golang.org/protobuf/types/descriptorpb
 \n\fshare_handle
 \n\fstring_value
 \n\fswift_prefix
-\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\fusable_right
@@ -1823,6 +1832,7 @@ Z-google.golang.org/protobuf/types/descriptorpb
 \n\rproxy_problem
 \n\rreject_reason
 \n\rreplace_entry
+\n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
 \n\rserver_secret
@@ -1966,6 +1976,7 @@ __strcat_chk
 __strcoll_l
 __strcpy_chk
 __strftime_l
+__strncat_chk
 __strtod_l
 __strtof_l
 __strxfrm_l
@@ -2037,6 +2048,7 @@ access
 additional_includes
 address1
 address2
+admin_request_spoofing_steamid
 admin_spoofing_user
 adult_content_sex
 adult_content_violence
@@ -2298,7 +2310,6 @@ ip"R\n
 ip_addr"
 ip_v6
 is_array
-is_fbs_universe
 is_from_external_source
 is_save
 is_visible_in_steam_china
@@ -2366,6 +2377,7 @@ k_ECPUGovernor_Invalid
 k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
+k_EChildProcessQueryCommand_Max
 k_EClanBetaReleaseEvent
 k_EClanBroadcastEvent
 k_EClanChatEvent

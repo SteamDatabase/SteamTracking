@@ -1,3 +1,4 @@
+$ORIGIN
 %$%a%b%V%U%c%Q%W%]%\%[%
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
 0123456789abcdef

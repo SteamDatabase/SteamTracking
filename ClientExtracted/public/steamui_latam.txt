@@ -2,12 +2,12 @@
 "Tokens"
 {
 "WelcomeToSteamTitle" "BIENVENIDO A STEAM"
-"WelcomeToSteamInfo" "» Disfruta de los juegos más recientes
-» Encuentra a tus amigos
-» Encuentra los mejores servidores
-» Obtén actualizaciones automáticas
-» Chatea con amigos, incluso dentro de una partida
-» Recibe ofertas especiales exclusivas para Steam"
+"WelcomeToSteamInfo" "\" Disfruta de los juegos más recientes
+\" Encuentra a tus amigos
+\" Encuentra los mejores servidores
+\" Obtén actualizaciones automáticas
+\" Chatea con amigos, incluso dentro de una partida
+\" Recibe ofertas especiales exclusivas para Steam"
 "SteamUI_Answer" "Respuesta"
 "SteamUI_YourAnswer" "Tu respuesta"
 "WelcomeToSteamCreateAccount" "Crear una nueva cuenta"
@@ -644,7 +644,7 @@
 "Steam_WeMaySMSYou" "Steam puede confirmar este cambio con un mensaje de texto enviado por SMS a tu número de teléfono."
 "Steam_ChangeEmail_MissingSMSCode" "Se ha enviado un mensaje por SMS al teléfono que se encuentra asociado a tu cuenta. Necesitarás introducir el código de cambio de email que encontrarás en dicho mensaje."
 
-"Steam_ChangeCred_ClickNext"		"Haz clic en «Siguiente» para comenzar el proceso de actualización de tu contraseña."
+"Steam_ChangeCred_ClickNext"		"Haz clic en \"Siguiente\" para comenzar el proceso de actualización de tu contraseña."
 "Steam_ChangeCred_EmailCodeForPassword"		"Haz clic en Siguiente para comenzar el proceso de actualización de la contraseña. Se enviará un email con un código de confirmación a"
 "Steam_ChangeCred_EmailCodeForEmail"		"Haz clic en 'Siguiente' para comenzar el proceso de actualización del correo electrónico de contacto. Se enviará un mensaje por email con un código de confirmación a: %s1."
 "Steam_ChangeCred_EmailProgress"	"Contactando con los servidores de Steam para enviar un mensaje de confirmación a:"
@@ -1393,12 +1393,12 @@
 "SteamUI_Enable_Proprietary_Drivers_Info" "Steam requiere los controladores propietarios proporcionados por los vendedores para conseguir el mejor rendimiento. Por favor, activa los paquetes de controladores propietarios en la configuración del sistema."
 "SteamUI_Enable_Proprietary_Drivers_Button" "Activar"
 
-"SteamUI_Upgrade_Installed_VideoDriver_Package" "Tu paquete de controladores de video actual, %installed_package_name%, dispone de una nueva versión: %installed_package_version%.\nTe recomendamos actualizar tu sistema a este nuevo paquete de controladores."
+"SteamUI_Upgrade_Installed_VideoDriver_Package" "Tu paquete de controladores de video actual, %installed_loteage_name%, dispone de una nueva versión: %installed_loteage_version%.\nTe recomendamos actualizar tu sistema a este nuevo paquete de controladores."
 "SteamUI_Upgrade_VideoDriver_Button" "Actualizar"
 
 "SteamUI_Candidate_VideoDriver_Package_Available_Title" "Nuevo paquete de controladores disponible"
-"SteamUI_SwitchTo_Candidate_VideoDriver_Package_Info" "Tu paquete de controladores de video actual es %installed_package_name% (versión %installed_package_version%).\nEl paquete de controladores de video %candidate_package_name% (versión %candidate_package_version%) dispone de una versión más reciente del controlador.\nTe recomendamos actualizar a este paquete."
-"SteamUI_Install_Candidate_VideoDriver_Package_Info" "Te recomendamos que instales el paquete de controladores de video %candidate_package_name% para conseguir un mejor rendimiento."
+"SteamUI_SwitchTo_Candidate_VideoDriver_Package_Info" "Tu paquete de controladores de video actual es %installed_loteage_name% (versión %installed_loteage_version%).\nEl paquete de controladores de video %candidate_loteage_name% (versión %candidate_loteage_version%) dispone de una versión más reciente del controlador.\nTe recomendamos actualizar a este paquete."
+"SteamUI_Install_Candidate_VideoDriver_Package_Info" "Te recomendamos que instales el paquete de controladores de video %candidate_loteage_name% para conseguir un mejor rendimiento."
 "SteamUI_Install_Candidate_VideoDriver_Button" "Instalar"
 
 "SteamUI_VideoDriver_Recommendation_None_Title" "Comprobación de los controladores de video"
@@ -2827,14 +2827,14 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_SendGuestPass_Title$type=guestpass"		"Enviar un pase de invitado"
 
 "Steam_SendGuestPass_InvitationSentHeadline$type=guestpass" "¡Pase de invitado enviado correctamente!"
-"Steam_SendGuestPass_InvitationSent$type=guestpass"	"Has enviado a %search% una invitación por email para que active el pase de invitado de %package% que le has regalado.\n\nNo pierdas de vista tu lista de amigos, pues pronto lo verás jugando en línea."
+"Steam_SendGuestPass_InvitationSent$type=guestpass"	"Has enviado a %search% una invitación por email para que active el pase de invitado de %loteage% que le has regalado.\n\nNo pierdas de vista tu lista de amigos, pues pronto lo verás jugando en línea."
 
 "Steam_SendGuestPass_DefaultInviteErrorHeadline$type=guestpass"	"El pase de invitado no se ha enviado correctamente."
 "Steam_SendGuestPass_DefaultInviteError$type=guestpass"	"Ha habido un problema al enviar un pase de invitado a %search%."
 "Steam_SendGuestPass_AccountLockedError$type=guestpass"	"Tu cuenta está bloqueada y no puedes enviar ni recibir pases de invitado."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"¡No puedes mandarte un pase de invitado a ti mismo!"
-"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Parece que quieres mandarte un pase de invitado a ti mismo. Los pases de invitado sirven para compartir tus juegos con tus amigos. Mejor invita a alguien que conozcas para que pruebe gratis %package%."
+"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Parece que quieres mandarte un pase de invitado a ti mismo. Los pases de invitado sirven para compartir tus juegos con tus amigos. Mejor invita a alguien que conozcas para que pruebe gratis %loteage%."
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "El pase de invitado ya se ha enviado"
 "Steam_SendGuestPass_PendingError$type=guestpass"	"Ya has enviado un pase de invitado a %search% en las últimas 24 horas. No puedes mandar más a esta dirección hasta 24 horas después de la última vez.\n\nHaz clic en 'atrás', más abajo, para especificar un destinatario distinto."
@@ -2851,7 +2851,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_GuestPassAccept_TextFailed$type=guestpass"	"El pase de invitado que intentabas aceptar ya no es válido. Puede que ya lo haya usado otra persona, que haya caducado o que el remitente lo haya anulado."
 
 "Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"Ya has activado este pase de invitado"
-"Steam_GuestPassAccept_TextAlreadyRedeemed"	"Si ha caducado el pase y quieres seguir jugando %package%, podrías probar a comprarlo."
+"Steam_GuestPassAccept_TextAlreadyRedeemed"	"Si ha caducado el pase y quieres seguir jugando %loteage%, podrías probar a comprarlo."
 "Steam_GuestPassAccept_LinkTextAlreadyRedeemed"	"Haz clic aquí para visitar la tienda de Steam."
 "Steam_GuestPassAccept_LinkURLAlreadyRedeemed"	"steam://store"
 
@@ -2880,15 +2880,15 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=spanish"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Ya has usado un pase de invitado para este producto."
-"Steam_GuestPassRedeemed_TextLimitExceeded"	"Como ya has aceptado un pase de invitado para %package%, no puedes aceptar otro. Si quieres seguir jugando, podrías probar a comprarlo."
+"Steam_GuestPassRedeemed_TextLimitExceeded"	"Como ya has aceptado un pase de invitado para %loteage%, no puedes aceptar otro. Si quieres seguir jugando, podrías probar a comprarlo."
 "Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Haz clic aquí para visitar la tienda de Steam."
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"Ya tienes este juego"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"¡No puedes aceptar un pase de invitado para %package%, porque ya tienes la versión completa!. Para jugar, instálalo e inícialo desde tu biblioteca de productos."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"¡No puedes aceptar un pase de invitado para %loteage%, porque ya tienes la versión completa!. Para jugar, instálalo e inícialo desde tu biblioteca de productos."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"Este pase de invitado tiene requisitos adicionales"
-"Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Antes de activar un pase de invitado para %package%, debes adquirir primero %appname%. Una vez que lo tengas, por favor, intenta activar este pase de invitado de nuevo."
+"Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Antes de activar un pase de invitado para %loteage%, debes adquirir primero %appname%. Una vez que lo tengas, por favor, intenta activar este pase de invitado de nuevo."
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=guestpass"	"Este pase de invitado está anulado"
 "Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"El amigo que te envió el pase de invitado lo ha cancelado y ha enviado un nuevo código de activación. Si este nuevo código te lo ha enviado a ti, recibirás otro email con el mismo."
@@ -3027,7 +3027,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_InOfflineModeButNeedToLogIn_Link"			"Haz clic aquí para comprobar el estado de la red de Steam"
 
 "Skin_By_Random_n"			"Apariencia para Steam basada en un diseño de random_n"
-"Steam_PackageVersion"			"Versiones del paquete Steam: %package_version%"
+"Steam_PackageVersion"			"Versiones del paquete Steam: %loteage_version%"
 
 "Steam_UpdateNewsMultiple_Title"	"Steam - Noticias (%item% de %total%)"
 
@@ -3232,7 +3232,7 @@ La beta ya ha acabado: reinicia Steam para volver a la versión actual."
 "Steam_SendGuestPass_Title$type=gift"		"Enviar un regalo"
 
 "Steam_SendGuestPass_InvitationSentHeadline$type=gift" "El regalo se ha enviado correctamente."
-"Steam_SendGuestPass_InvitationSent$type=gift"	"Has enviado a %search% una invitación por email para que active el regalo de %package%.\n\nNo pierdas de vista tu lista de amigos, pues pronto lo verás jugando en línea."
+"Steam_SendGuestPass_InvitationSent$type=gift"	"Has enviado a %search% una invitación por email para que active el regalo de %loteage%.\n\nNo pierdas de vista tu lista de amigos, pues pronto lo verás jugando en línea."
 
 "Steam_SendGuestPass_DefaultInviteErrorHeadline$type=gift"	"El regalo no se ha enviado correctamente."
 "Steam_SendGuestPass_DefaultInviteError$type=gift"	"Lo sentimos, ha habido un problema al enviar el regalo a %search%."
@@ -3240,7 +3240,7 @@ La beta ya ha acabado: reinicia Steam para volver a la versión actual."
 "Steam_SendGuestPass_AccountLockedError$type=gift"	"Tu cuenta está bloqueada y no puedes enviar o recibir regalos."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=gift"	"¡No puedes enviarte un regalo a ti mismo!"
-"Steam_SendGuestPass_DuplicateNameError$type=gift"	"Parece que quieres mandarte un regalo a ti mismo. Los regalos sirven para compartir tus juegos con tus amigos. Mejor invita a alguien que conozcas para que pruebe gratis %package%."
+"Steam_SendGuestPass_DuplicateNameError$type=gift"	"Parece que quieres mandarte un regalo a ti mismo. Los regalos sirven para compartir tus juegos con tus amigos. Mejor invita a alguien que conozcas para que pruebe gratis %loteage%."
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=gift" "El regalo ya se ha enviado"
 "Steam_SendGuestPass_PendingError$type=gift"	"Ya has enviado un regalo a %search% en estas últimas 24 horas. Podrás enviar más regalos a esta dirección cuando hayan pasado 24 horas.\n\nHaz clic en 'atrás', más abajo, para especificar un destinatario distinto."
@@ -3270,10 +3270,10 @@ La beta ya ha acabado: reinicia Steam para volver a la versión actual."
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=gift"	"Error de activación del regalo"
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=gift"	"Ya tienes este juego"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"¡No puedes aceptar un regalo de %package%, porque ya tienes el juego! Para jugar, instálalo e inícialo desde tu biblioteca de productos."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"¡No puedes aceptar un regalo de %loteage%, porque ya tienes el juego! Para jugar, instálalo e inícialo desde tu biblioteca de productos."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=gift"	"Este pase de regalo tiene requisitos adicionales"
-"Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"Antes de aceptar un regalo de %package%, debes adquirir primero %appname%. Una vez que lo tengas, por favor, intenta aceptar este regalo de nuevo."
+"Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"Antes de aceptar un regalo de %loteage%, debes adquirir primero %appname%. Una vez que lo tengas, por favor, intenta aceptar este regalo de nuevo."
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=gift"	"Este regalo está anulado"
 "Steam_GuestPassRedeemed_TextRevoked$type=gift"	"El amigo que te envió el regalo lo ha cancelado y ha enviado un nuevo código de activación. Si este nuevo código te lo ha enviado a ti, recibirás otro email con el mismo."
@@ -3316,9 +3316,9 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_Gift_Sentiment_YourTurn"		"Te toca"
 "Steam_Gift_Sentiment_XOXOXO"		"Besos"
 "Steam_Purchase_Gift_AlreadyOwn"	"Este elemento ya se encuentra disponible en tu cuenta de Steam. Puedes acceder a tus juegos desde tu biblioteca de productos de Steam."
-"Steam_SendGuestPass_RecipientQuestion$type=gift" "¿A quién te gustaría regalar '%package%'?"
+"Steam_SendGuestPass_RecipientQuestion$type=gift" "¿A quién te gustaría regalar '%loteage%'?"
 
-"Steam_SendGuestPass_RecipientQuestion$type=guestpass" "¿A quién te gustaría regalar un pase de invitado de '%package%'?"
+"Steam_SendGuestPass_RecipientQuestion$type=guestpass" "¿A quién te gustaría regalar un pase de invitado de '%loteage%'?"
 "SteamUI_Gift_RecipientName"		"Nombre del destinatario"
 "SteamUI_Gift_Message"				"Mensaje del regalo (máximo 160 caracteres)"
 "Steam_SendGuestPass_GiftRecipientName" 	"Nombre del destinatario"
@@ -3335,7 +3335,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_SendGuestPass_AlreadyOwnsGame"		"%s1 ya tiene este juego"
 
 "Steam_GiftRevoked_Title"			"Steam - Regalo anulado"
-"Steam_GiftRevoked"					"Tu reciente regalo de %package% de parte de %gifter% ha sido anulado a causa de un problema de procesamiento del pago de este artículo.\n\nComo resultado, no podrás jugar a los juegos incluidos en este regalo. Si deseas comprar este artículo, visita la tienda de Steam. De lo contrario, puedes eliminar los contenidos relacionados con este juego de tu unidad local."
+"Steam_GiftRevoked"					"Tu reciente regalo de %loteage% de parte de %gifter% ha sido anulado a causa de un problema de procesamiento del pago de este artículo.\n\nComo resultado, no podrás jugar a los juegos incluidos en este regalo. Si deseas comprar este artículo, visita la tienda de Steam. De lo contrario, puedes eliminar los contenidos relacionados con este juego de tu unidad local."
 "Steam_GiftRevoked_SupportLink"		"Visita el sitio web del Soporte de Steam para más información"
 
 "Steam_ExternalSignupButton" "Ir al sitio web de %s1"
@@ -3414,14 +3414,14 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_GuestPasses_Status_Redeemed"	"Activado"
 "Steam_GuestPasses_Status_Incoming"	"Por aceptar"
 
-"Steam_SendGuestPass_SendInfo$type=gift"		"¿Cómo quieres que se envíe tu regalo de %package%?"
-"Steam_SendGuestPass_SendInfo$type=guestpass"	"¿Cómo quieres que se envíe tu pase de invitado de %package%?"
+"Steam_SendGuestPass_SendInfo$type=gift"		"¿Cómo quieres que se envíe tu regalo de %loteage%?"
+"Steam_SendGuestPass_SendInfo$type=guestpass"	"¿Cómo quieres que se envíe tu pase de invitado de %loteage%?"
 
 "Steam_SendGuestPass_ResendTitle$type=gift"			"Anular y reenviar un regalo"
 "Steam_SendGuestPass_ResendTitle$type=guestpass"	"Anular y reenviar un pase de invitado"
 
-"Steam_SendGuestPass_ResendInfo$type=gift"		"Si reenvías este regalo, el anterior destinatario no podrá aceptarlo. Si quieres continuar, introduce el correo electrónico del nuevo destinatario del regalo de %package%."
-"Steam_SendGuestPass_ResendInfo$type=guestpass" "Si reenvías este pase de invitado, el anterior destinatario no podrá activarlo. Si quieres continuar, introduce el correo electrónico del nuevo destinatario del pase de invitado de %package%."
+"Steam_SendGuestPass_ResendInfo$type=gift"		"Si reenvías este regalo, el anterior destinatario no podrá aceptarlo. Si quieres continuar, introduce el correo electrónico del nuevo destinatario del regalo de %loteage%."
+"Steam_SendGuestPass_ResendInfo$type=guestpass" "Si reenvías este pase de invitado, el anterior destinatario no podrá activarlo. Si quieres continuar, introduce el correo electrónico del nuevo destinatario del pase de invitado de %loteage%."
 
 "Steam_SendGuestPass_EmailRadio$type=gift"		"Enviar regalo por email"
 "Steam_SendGuestPass_EmailRadio$type=guestpass"	"Enviar pase de invitado por email"

@@ -55,7 +55,7 @@
 "Friends_InApp"			"В программе"
 "Friends_InMod"			"В моде"
 "Friends_InShortcut"		"В сторонней игре"
-"Friends_Blocked"		"Заблокирован(-а)"
+"Friends_Blocked"		"Заблокирован(а)"
 
 "Friends_AddFriend"		"Добавить друга…"
 "Friends_Edit_Profile"	"Редактировать профиль…"
@@ -216,7 +216,7 @@
 "Friends_Chat_MemberDisconnected"						"%member_changed% отключился.%ignored%\n"
 "Friends_Chat_MemberWasKicked"						"%member_changed% был изгнан участником %member_making_change%.\n"
 "Friends_Chat_MemberWasBanned"						"%member_making_change% блокирует %member_changed%.\n"
-"Friends_Chat_MemberIgnored"						"(Заблокирован(-а))"	
+"Friends_Chat_MemberIgnored"						"(Заблокирован(а))"	
 
 "Friends_Chat_InviteToChatRoom"							"Пригласить в чат"
 "Friends_Chat_InviteToChatRoom_Title"					"Сообщество Steam — Приглашение в комнату чата"

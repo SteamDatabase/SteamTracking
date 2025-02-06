@@ -1361,6 +1361,8 @@ enum EMsg {
 	k_EMsgDRMWorkerProcessUnpackBlobResponse = 9131;
 	k_EMsgDRMWorkerProcessInstallAllRequest = 9132;
 	k_EMsgDRMWorkerProcessInstallAllResponse = 9133;
+	k_EMsgDRMWorkerProcessSignFile = 9134;
+	k_EMsgDRMWorkerProcessSignFileResponse = 9135;
 	k_EMsgTestWorkerProcess = 9200;
 	k_EMsgTestWorkerProcessLoadUnloadModuleRequest = 9200;
 	k_EMsgTestWorkerProcessLoadUnloadModuleResponse = 9201;

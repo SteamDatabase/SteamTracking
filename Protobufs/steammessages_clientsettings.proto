@@ -248,6 +248,7 @@ message CMsgClientSettings {
 	optional string gamescope_game_resolution_global = 21012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GameResolutionGlobal", (setting_default_string) = "Default"];
 	optional .CMsgHotkey gamescope_guide_hotkey = 21013 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GuideKeyboardHotkey"];
 	optional .CMsgHotkey gamescope_qam_hotkey = 21014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/QAMKeyboardHotkey"];
+	optional bool gamescope_hdr_enabled = 21015 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/HDREnabled", (setting_default_bool) = true, (setting_profile_mode) = k_ESettingProfileMode_PerDisplay];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
 	optional bool steamos_tdp_limit_enabled = 22001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimitEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_tdp_limit = 22002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimit", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGame];

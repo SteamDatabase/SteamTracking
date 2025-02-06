@@ -37,7 +37,7 @@
 "Steam_NeverConnectedNoConnection"				"Contul '%account%' nu a fost accesat niciodată pe acest dispozitiv până acum și conexiunea la serverele Steam nu a putut fi realizată.\nUnele servicii nu vor fi disponibile. Steam va continua să încerce conectarea, iar serviciile respective vor fi disponibile în cazul unei conexiuni reușite."
 "Steam_RefreshEnterTwoFactorCode"				"Te rugăm să introduci codul actual Steam Guard de autentificare"
 "Steam_RefreshLogin_RateLimited"		"Au fost prea multe eșuări de autentificare din rețeaua ta într-o perioadă scurtă de timp. Te rugăm să aștepți și să încerci din nou mai târziu."
-"Steam_RefreshLogin_Title"			"Steam - Actualizează autentificarea"
+"Steam_RefreshLogin_Title"			"Steam - Actualizează conectarea"
 "Steam_RefreshLogin_InfoTicketExpired"	"Sesiunea Steam a expirat.\nTe rugăm să introduci din nou parola pentru a continua."
 "Steam_RefreshLogin_InvalidPassword"	"Datele de autentificare ale contului tău s-au schimbat.\nTe rugăm să introduci din nou parola pentru a continua."
 

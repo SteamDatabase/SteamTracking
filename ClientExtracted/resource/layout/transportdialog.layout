@@ -1,0 +1,67 @@
+"resource/layout/transportdialog.layout"
+{
+	controls
+	{
+		TransportDialog { controlname="Frame" title="#TransportDialog_Title" style="TransportDialog" }
+
+		ExplanationText { controlname="RichText" labeltext="#TransportDialog_Explanation" wrap=1 style=ExplanationText scrollbar=0 textalignment=center }
+
+		RadioHeader { controlname="Label" labeltext="#TransportDialog_RadioHeader" style=ExplanationText }
+
+		Restart { controlname="RadioButton" labeltext="#TransportDialog_RestartSteam" style=RadioOption }
+		RestartWebhelper { controlname="RadioButton" labeltext="#TransportDialog_RestartSteamWebHelper" style=RadioOption }
+		Exit { controlname="RadioButton" labeltext="#TransportDialog_ExitSteam" style=RadioOption }
+		ContinueAnyway { controlname="RadioButton" labeltext="#TransportDialog_ContinueAnyway" style=RadioOption }
+
+		OK { controlname="Button" tabposition=1 labeltext="#MessageBox_OK" textalignment=left command="OK" }
+		Cancel { controlname="Button" tabposition=2 labeltext="#vgui_Cancel" textalignment=left command="Close" }
+	}
+
+	styles
+	{
+		TransportDialog
+		{
+			minimum-width = 700
+			minimum-height = 350
+
+			render_bg
+			{
+				// background gradient
+				0="gradient( x0+1, y0, x1-1, y1-45, dialogbg, almostblack )"
+			}
+		}
+
+		ConfirmTextHeader
+		{
+			textcolor="Text"
+		}
+
+		ExplanationText
+		{
+			textcolor="label"
+			font-size=17
+			selectedtextcolor="label2"
+			render_bg {}
+		}
+		
+		"ExplanationText url"
+		{
+			textcolor="label"
+			font-size=17
+			font-style=underline
+			render_bg {}
+		}
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=45 margin=10 }
+
+		place { control="ExplanationText" width=max height=80 y=20 margin=20 margin-left=30 spacing=15 dir=down }
+
+		place { control="RadioHeader" start="ExplanationText" control="RadioHeader" width=max margin-left=30 dir=down margin-top=0 }
+		place { control="Restart,RestartWebhelper,ContinueAnyway,Exit" start="RadioHeader" width=max margin-left=40 margin-top=10 dir=down }
+
+		place { control="OK,Cancel" region="bottom" align=right spacing=20 width=120 height=25 }
+	}
+}

@@ -111,6 +111,7 @@ message CClientMetrics_ReportClientError_Notification {
 		optional string identifier = 1;
 		optional string message = 2;
 		optional uint32 count = 3;
+		optional string context = 4;
 	}
 
 	optional string product = 1;

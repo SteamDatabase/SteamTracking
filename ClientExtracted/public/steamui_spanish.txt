@@ -512,7 +512,7 @@
 "Steam_SetJumplistOptions"		"Preferencias de barra de tareas"
 "Steam_ShowOnlineStatusOptions"	"Seleccionar opciones de estado a mostrar"
 "Steam_ShowDestinationOptions"	"Seleccionar destinos a mostrar"
-"Steam_MustRestartToTakeEffect"			"Esta configuración no será efectiva hasta\nque reinicies Steam."
+"Steam_MustRestartToTakeEffect"			"Este ajuste no tendrá efecto hasta\nque reinicies Steam."
 "Steam_LanguageSelect"				"Selecciona el idioma de Steam (requiere reiniciar Steam)"
 "Steam_SteamChinaLanguageSelect"	"Steam solo se puede utilizar en chino simplificado"
 "Steam_SelectSkinToUse"				"Selecciona la apariencia de Steam (requiere reiniciar Steam)"

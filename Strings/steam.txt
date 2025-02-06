@@ -2,7 +2,6 @@
   ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123:
  %lld
  ' ) - 3 G M Q _ c e i w } 
  \vjpF
@@ -39,6 +38,7 @@ $%&'()*+,-./0123456789:;<=
 $)$=$A$C$M$_$g$k$y$}$
 $4DTdt
 $Cw!R
+$ORIGIN
 $O\tdwR\rox\\r*
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
@@ -492,6 +492,7 @@ $d`D-laM
 +\n&k_EMsgClientRequestAccountDataResponse
 +\n&k_EMsgClientRequestFreeLicenseResponse
 +\n&k_EMsgClientUninstallClientAppResponse
++\n&k_EMsgDRMWorkerProcessSignFileResponse
 +\n&k_EMsgEconTrading_InitiateTradeRequest
 +\n&k_EMsgGMStatsForwardToAdminConnections
 +\n&k_EMsgMDSGetDepotDecryptionKeyResponse
@@ -1791,58 +1792,14 @@ WORKAROUND_GdbSymbolLoadHook
 Wcr"
 When a local endpoint expects to receive SETTINGS frame, it receives an other type of frame
 Wza]lw\t
-XAllocSizeHints
-XChangeProperty
-XCloseDisplay
-XCreateColormap
-XCreateGC
-XCreateWindow
-XDestroyWindow
-XDrawRectangle
-XDrawString16
-XFillRectangle
-XFilterEvent
-XFree
-XFreeExtensionList
-XFreeFontInfo
-XFreeFontNames
-XFreeGC
 XG[r
-XGetErrorDatabaseText
-XGetErrorText
-XInitThreads
-XInternAtom
-XListExtensions
-XListFonts
-XLoadFont
-XLookupKeysym
-XMapWindow
-XMatchVisualInfo
-XMoveResizeWindow
-XMoveWindow
-XNextEvent
-XOpenDisplay
-XPeekEvent
-XPending
-XQueryExtension
-XQueryFont
 XRJ2
 XRRFreeCrtcInfo
 XRRFreeOutputInfo
 XRRGetCrtcInfo
 XRRGetOutputInfo
-XSetErrorHandler
-XSetForeground
-XSetInputFocus
-XSetWMName
-XSetWMProtocols
-XSetWMSizeHints
-XTextWidth16
-XUnloadFont
-XUnmapWindow
 XhHp
 XsBI
-Xutf8TextListToTextProperty
 Y77n
 Yb6N4
 YbZ6[
@@ -1850,6 +1807,10 @@ YnFpW
 YpU_Z
 Z-google.golang.org/protobuf/types/descriptorpb
 Z@&LHA'\r:C(
+ZSTD_trace_compress_begin
+ZSTD_trace_compress_end
+ZSTD_trace_decompress_begin
+ZSTD_trace_decompress_end
 Z\fL+i
 Ze2Zh@
 ZiKw
@@ -1910,7 +1871,6 @@ Zpm"U
 \n\fruby_package
 \n\fstring_value
 \n\fswift_prefix
-\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\nIDEMPOTENT
@@ -1967,6 +1927,7 @@ Zpm"U
 \n\rmanage_cdkeys
 \n\rnews_post_gid
 \n\rphp_namespace
+\n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
 \n\rserver_secret
@@ -2116,6 +2077,7 @@ __strcoll_l
 __strcpy_chk
 __strdup
 __strftime_l
+__strncat_chk
 __strncpy_chk
 __strtod_l
 __strtof_l
@@ -2136,9 +2098,7 @@ __xpg_strerror_r
 __xstat
 __xstat64
 _exit
-_fini
 _g@Cg
-_init
 _jbF~T
 _longjmp
 _setjmp
@@ -2179,6 +2139,7 @@ additional_includes
 address1
 address2
 address_of_request_url
+admin_request_spoofing_steamid
 admin_spoofing_user
 adult_content_sex
 adult_content_violence
@@ -2508,7 +2469,6 @@ ioctl
 ip"R\n
 ip_addr"
 ip_v6
-is_fbs_universe
 is_from_external_source
 is_visible_in_steam_china
 isalnum
@@ -3174,6 +3134,7 @@ k_EMsgDRMStabilityReport
 k_EMsgDRMSyncResponse
 k_EMsgDRMVariabilityReport
 k_EMsgDRMWorkerProcess
+k_EMsgDRMWorkerProcessSignFile
 k_EMsgDestJobFailed
 k_EMsgDeviceAuthorizationBase
 k_EMsgDirRequest
@@ -3503,7 +3464,6 @@ lchown
 ld-linux.so.2
 leading_comments
 leading_detached_comments
-libX11.so.6
 libc.so.6
 libdl.so.2
 libm.so.6

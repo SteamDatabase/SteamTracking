@@ -1,4 +1,5 @@
                     
+  !!""##$$$$%%%%&&&&&&&&''''''''(((((((((((((((())))))))))))))))********************************
   ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -32,6 +33,7 @@
 $%&'()*+,-./0123456789:;<=
 $)$=$A$C$M$_$g$k$y$}$
 $Cw!R
+$ORIGIN
 $O\tdwR\rox\\r*
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
@@ -39,6 +41,7 @@ $\n k_ECodecUsageReasonGameRecording
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $d`D-laM
+$ffn
 %'%1%=%C%K%O%s%
 %-18s
 %0nV4
@@ -404,6 +407,7 @@ $d`D-laM
 )\n$k_EMsgUFSUpdateRecordBatchedResponse
 )\n%k_EBanContentCheckResult_VeryUnlikely
 )haI
+)n/h%fPn
 *%*/*O*U*_*e*k*m*s*
 *0fT
 *N12_GLOBAL__N_121system_error_categoryE
@@ -479,6 +483,7 @@ $d`D-laM
 +\n&k_EMsgClientRequestAccountDataResponse
 +\n&k_EMsgClientRequestFreeLicenseResponse
 +\n&k_EMsgClientUninstallClientAppResponse
++\n&k_EMsgDRMWorkerProcessSignFileResponse
 +\n&k_EMsgEconTrading_InitiateTradeRequest
 +\n&k_EMsgGMStatsForwardToAdminConnections
 +\n&k_EMsgMDSGetDepotDecryptionKeyResponse
@@ -491,6 +496,7 @@ $d`D-laM
 +\n&k_EMsgWebAPIInvalidateOAuthClientCache
 +\n\rReservedRange
 +en+eo+
+,!MbDg[
 ,#,/,5,9,A,W,Y,i,w,
 ,\n'k_EMsgAISGetPackageChangeNumberResponse
 ,\n'k_EMsgAMClientSetPlayerNicknameResponse
@@ -621,6 +627,7 @@ $d`D-laM
 /\n*k_EMsgDRMWorkerProcessValidateFileResponse
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
+/fxLf
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale.cc
@@ -665,6 +672,7 @@ $d`D-laM
 0`P0
 0pp@5tqE?|sO541
 1!1'1-191C1E1K1]1a1g1m1s1
+1.5.6
 10CNetFilter
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI12CUtlDelegateIFvvEEE
@@ -973,6 +981,7 @@ $d`D-laM
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2+ss
+2,THh
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
@@ -1036,6 +1045,7 @@ $d`D-laM
 2\n-k_EMsgPSAddWalletCreditToShoppingCartResponse
 2\n-k_EMsgRemoteClientGetControllerConfigResponse
 2\n-k_EMsgSMTestNextBuildSchemaConversionResponse
+2aNuE
 2bT~
 2dV2:tN:\n
 2prB
@@ -1095,6 +1105,7 @@ $d`D-laM
 5\tuy
 5mF\tfE
 5mmQ
+5nsfZ
 5q\teH
 6#6165676;6M6O6S6Y6a6k6m6
 6-nn
@@ -1198,6 +1209,7 @@ $d`D-laM
 =j&&LZ66lA??~
 =trF6,#
 >#>)>/>3>A>W>c>e>w>
+>ZF9
 >\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
 >\n9k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
 >\v?\r?7?;?=?A?Y?_?e?g?y?}?
@@ -1341,6 +1353,8 @@ A\n\nannotation
 AcG\nt
 Ag*g*
 AllocImageYUV
+Allocation error : not enough memory
+An I/O error occurred when reading/seeking
 Android420ToABGR
 Android420ToARGB
 Android420ToARGBMatrix
@@ -1361,9 +1375,11 @@ BGRAToYRow_C
 BParseISO8601Duration
 BScaleImageNV12
 BScaleImageYUV
+BTcq
 Bh;+j
 BlendPlane
 BlendPlaneRow_C
+Block-level external sequence producer returned an error code
 ByteToFloat
 ByteToFloatRow_C
 C q'O
@@ -1414,6 +1430,7 @@ Camellia_decrypt
 Camellia_encrypt
 Camellia_set_key
 Cancel
+Cannot create Dictionary from provided samples
 ChaCha20_ctr32
 ChaCha20_ssse3
 ChaCha20_xop
@@ -1421,6 +1438,7 @@ ClearVideoSpewCallback
 ComputeCumulativeSumRow_C
 Content-Type: application/ocsp-request\r\nContent-Length: %d\r\n\r\n
 ContentDescriptor
+Context should be init first
 Convert16To8Plane
 Convert16To8Row_C
 Convert8To16Plane
@@ -1465,6 +1483,7 @@ DES_encrypt2
 DES_encrypt3
 DES_ncbc_encrypt
 DOWNGRD
+Data corruption detected
 Data transfer deferred
 DcO/lcK+hSK
 DeleteAudioEncoder
@@ -1477,6 +1496,10 @@ DeleteVideoPlayer
 DeleteVideoRecordingSegmentWriter
 DescriptorProto
 DescriptorProtosH
+Destination buffer is too small
+Destination buffer is wrong
+Dictionary is corrupted
+Dictionary mismatch
 DivideRow_16_C
 E+E1EAEIESEUEaEwE}E
 E,v\nX
@@ -1498,6 +1521,7 @@ ENCRYPTED
 ENHANCE_YOUR_CALM
 EPreviewMPDToMP4
 EProtoClanEventType
+ERR_getErrorString
 ESessionDisposition
 ESteamReviewScore
 ETLL
@@ -1509,14 +1533,62 @@ EnumDescriptorProto
 EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
+Error (generic)
 ExtensionRange
 ExtensionRangeOptions
+External sequences are not valid
 F6tr
 FDA~i
 FF!w
 FLOW_CONTROL_ERROR
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
+FSE_NCountWriteBound
+FSE_buildCTable_rle
+FSE_buildCTable_wksp
+FSE_buildDTable_wksp
+FSE_compressBound
+FSE_compress_usingCTable
+FSE_decompress_wksp_bmi2
+FSE_getErrorName
+FSE_isError
+FSE_normalizeCount
+FSE_optimalTableLog
+FSE_optimalTableLog_internal
+FSE_readNCount
+FSE_readNCount_bmi2
+FSE_versionNumber
+FSE_writeNCount
+FSEv05_buildDTable
+FSEv05_buildDTable_raw
+FSEv05_buildDTable_rle
+FSEv05_createDTable
+FSEv05_decompress
+FSEv05_decompress_usingDTable
+FSEv05_freeDTable
+FSEv05_getErrorName
+FSEv05_isError
+FSEv05_readNCount
+FSEv06_buildDTable
+FSEv06_buildDTable_raw
+FSEv06_buildDTable_rle
+FSEv06_createDTable
+FSEv06_decompress
+FSEv06_decompress_usingDTable
+FSEv06_freeDTable
+FSEv06_getErrorName
+FSEv06_isError
+FSEv06_readNCount
+FSEv07_buildDTable
+FSEv07_buildDTable_raw
+FSEv07_buildDTable_rle
+FSEv07_createDTable
+FSEv07_decompress
+FSEv07_decompress_usingDTable
+FSEv07_freeDTable
+FSEv07_getErrorName
+FSEv07_isError
+FSEv07_readNCount
 FV|FgUV
 F\nAk_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated
 F\n\foptimize_for
@@ -1529,6 +1601,8 @@ FixedDiv_C
 Flooding was detected in this HTTP/2 session, and it must be closed
 Flow control error
 FoCLcx
+Frame index is too large
+Frame requires too much memory for decoding
 FreeImageYUV
 F~Tb
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
@@ -1601,7 +1675,89 @@ HEADERS: invalid padding
 HEADERS: no HEADERS allowed from client in reserved state
 HEADERS: stream closed
 HEADERS: stream_id == 0
+HIST_count
+HIST_countFast
+HIST_countFast_wksp
+HIST_count_simple
+HIST_count_wksp
+HIST_isError
 HTTP_1_1_REQUIRED
+HUF_buildCTable_wksp
+HUF_cardinality
+HUF_compress1X_repeat
+HUF_compress1X_usingCTable
+HUF_compress4X_repeat
+HUF_compress4X_usingCTable
+HUF_compressBound
+HUF_decompress1X1_DCtx_wksp
+HUF_decompress1X2_DCtx_wksp
+HUF_decompress1X_DCtx_wksp
+HUF_decompress1X_usingDTable
+HUF_decompress4X_hufOnly_wksp
+HUF_decompress4X_usingDTable
+HUF_estimateCompressedSize
+HUF_getErrorName
+HUF_getNbBitsFromCTable
+HUF_isError
+HUF_minTableLog
+HUF_optimalTableLog
+HUF_readCTable
+HUF_readCTableHeader
+HUF_readDTableX1_wksp
+HUF_readDTableX2_wksp
+HUF_readStats
+HUF_readStats_wksp
+HUF_selectDecoder
+HUF_validateCTable
+HUF_writeCTable_wksp
+HUFv05_decompress
+HUFv05_decompress1X2
+HUFv05_decompress1X2_usingDTable
+HUFv05_decompress1X4
+HUFv05_decompress1X4_usingDTable
+HUFv05_decompress4X2
+HUFv05_decompress4X2_usingDTable
+HUFv05_decompress4X4
+HUFv05_decompress4X4_usingDTable
+HUFv05_getErrorName
+HUFv05_isError
+HUFv05_readDTableX2
+HUFv05_readDTableX4
+HUFv06_decompress
+HUFv06_decompress1X2
+HUFv06_decompress1X2_usingDTable
+HUFv06_decompress1X4
+HUFv06_decompress1X4_usingDTable
+HUFv06_decompress4X2
+HUFv06_decompress4X2_usingDTable
+HUFv06_decompress4X4
+HUFv06_decompress4X4_usingDTable
+HUFv06_readDTableX2
+HUFv06_readDTableX4
+HUFv07_decompress
+HUFv07_decompress1X2
+HUFv07_decompress1X2_DCtx
+HUFv07_decompress1X2_usingDTable
+HUFv07_decompress1X4
+HUFv07_decompress1X4_DCtx
+HUFv07_decompress1X4_usingDTable
+HUFv07_decompress1X_DCtx
+HUFv07_decompress1X_usingDTable
+HUFv07_decompress4X2
+HUFv07_decompress4X2_DCtx
+HUFv07_decompress4X2_usingDTable
+HUFv07_decompress4X4
+HUFv07_decompress4X4_DCtx
+HUFv07_decompress4X4_usingDTable
+HUFv07_decompress4X_DCtx
+HUFv07_decompress4X_hufOnly
+HUFv07_decompress4X_usingDTable
+HUFv07_getErrorName
+HUFv07_isError
+HUFv07_readDTableX2
+HUFv07_readDTableX4
+HUFv07_readStats
+HUFv07_selectDecoder
 HWyn
 H\fJxE\v
 Ha4\n
@@ -1610,6 +1766,7 @@ HalfFloatRow_C
 HalfMergeUVPlane
 HalfMergeUVRow_C
 Header compression/decompression error
+Header of Literals' block doesn't respect format specification
 Hp!v
 HqI9x
 H{1S
@@ -1987,6 +2144,8 @@ NV21ToYUV24
 NV21ToYUV24Row_C
 N\r\nyd
 NamePart
+Nl9\
+No error detected
 No more Stream ID available
 NrZl
 Nwh\v
@@ -2010,6 +2169,10 @@ O\r\nP2
 OneofDescriptorProto
 OpenSSL 1.1.1i  8 Dec 2020
 OpenSSL NIST SP 800-90A DRBG
+Operation made no progress over multiple calls, due to input being empty
+Operation made no progress over multiple calls, due to output buffer being full
+Operation not authorized at current processing stage
+Operation on NULL destination buffer
 Operation would block
 Out of buffer space
 Out of memory
@@ -2051,6 +2214,7 @@ PUSH_PROMISE: push disabled
 PUSH_PROMISE: stream closed
 PUSH_PROMISE: stream in idle
 PUSH_PROMISE: stream_id == 0
+Parameter is out of bound
 ParseAttributes
 ParseChildren
 ParseCp
@@ -2123,6 +2287,7 @@ ReadCh_Opt
 Received bad client magic byte string
 Remote peer returned unexpected data while we expected SETTINGS frame.  Perhaps, peer does not support HTTP/2 properly.
 RescaleBase
+Restored data doesn't match checksum
 S#FI
 S11b?
 S2zw
@@ -2253,7 +2418,9 @@ SobelToPlaneRow_C
 SobelXRow_C
 SobelXYRow_C
 SobelYRow_C
+Source buffer is wrong
 SourceCodeInfo
+Specified maxSymbolValue is too small
 SplitARGBPlane
 SplitARGBPlaneAlpha
 SplitARGBPlaneOpaque
@@ -2265,6 +2432,7 @@ SplitUVPlane_16
 SplitUVRow_16_C
 SplitUVRow_C
 SplitXRGBRow_C
+Src size is incorrect
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -2397,13 +2565,21 @@ UYVYToYRow_C
 UninterpretedOption
 Unknown
 Unknown error code
+Unknown frame descriptor
+Unspecified error code
 Unsupported SPDY version
+Unsupported combination of parameters
+Unsupported frame parameter
+Unsupported max Symbol Value : too large
+Unsupported parameter
 Ut]<E
 V22dN::t
 ValidateImageYUV
 Vc0a
+Version not supported
 Vg3LE
 VggjeK uO5n
+Vgh$
 VideoPauseForValidation
 VideoPlaybackInitialize
 VideoPlaybackRunFrame
@@ -2430,9 +2606,388 @@ YUY2ToUV422Row_C
 YUY2ToUVRow_C
 YUY2ToY
 YUY2ToYRow_C
+Y\trH5
 Yb6N4
 YnFpW
 Z-google.golang.org/protobuf/types/descriptorpb
+ZBUFFv05_createDCtx
+ZBUFFv05_decompressContinue
+ZBUFFv05_decompressInit
+ZBUFFv05_decompressInitDictionary
+ZBUFFv05_freeDCtx
+ZBUFFv05_getErrorName
+ZBUFFv05_isError
+ZBUFFv05_recommendedDInSize
+ZBUFFv05_recommendedDOutSize
+ZBUFFv06_createDCtx
+ZBUFFv06_decompressContinue
+ZBUFFv06_decompressInit
+ZBUFFv06_decompressInitDictionary
+ZBUFFv06_freeDCtx
+ZBUFFv06_getErrorName
+ZBUFFv06_isError
+ZBUFFv06_recommendedDInSize
+ZBUFFv06_recommendedDOutSize
+ZBUFFv07_createDCtx
+ZBUFFv07_createDCtx_advanced
+ZBUFFv07_decompressContinue
+ZBUFFv07_decompressInit
+ZBUFFv07_decompressInitDictionary
+ZBUFFv07_freeDCtx
+ZBUFFv07_getErrorName
+ZBUFFv07_isError
+ZBUFFv07_recommendedDInSize
+ZBUFFv07_recommendedDOutSize
+ZSTD_CCtxParams_getParameter
+ZSTD_CCtxParams_init
+ZSTD_CCtxParams_init_advanced
+ZSTD_CCtxParams_registerSequenceProducer
+ZSTD_CCtxParams_reset
+ZSTD_CCtxParams_setParameter
+ZSTD_CCtx_getParameter
+ZSTD_CCtx_loadDictionary
+ZSTD_CCtx_loadDictionary_advanced
+ZSTD_CCtx_loadDictionary_byReference
+ZSTD_CCtx_refCDict
+ZSTD_CCtx_refPrefix
+ZSTD_CCtx_refPrefix_advanced
+ZSTD_CCtx_refThreadPool
+ZSTD_CCtx_reset
+ZSTD_CCtx_setCParams
+ZSTD_CCtx_setFParams
+ZSTD_CCtx_setParameter
+ZSTD_CCtx_setParametersUsingCCtxParams
+ZSTD_CCtx_setParams
+ZSTD_CCtx_setPledgedSrcSize
+ZSTD_CCtx_trace
+ZSTD_CStreamInSize
+ZSTD_CStreamOutSize
+ZSTD_DCtx_getParameter
+ZSTD_DCtx_loadDictionary
+ZSTD_DCtx_loadDictionary_advanced
+ZSTD_DCtx_loadDictionary_byReference
+ZSTD_DCtx_refDDict
+ZSTD_DCtx_refPrefix
+ZSTD_DCtx_refPrefix_advanced
+ZSTD_DCtx_reset
+ZSTD_DCtx_setFormat
+ZSTD_DCtx_setMaxWindowSize
+ZSTD_DCtx_setParameter
+ZSTD_DDict_dictContent
+ZSTD_DDict_dictSize
+ZSTD_DStreamInSize
+ZSTD_DStreamOutSize
+ZSTD_XXH32
+ZSTD_XXH32_canonicalFromHash
+ZSTD_XXH32_copyState
+ZSTD_XXH32_createState
+ZSTD_XXH32_digest
+ZSTD_XXH32_freeState
+ZSTD_XXH32_hashFromCanonical
+ZSTD_XXH32_reset
+ZSTD_XXH32_update
+ZSTD_XXH64
+ZSTD_XXH64_canonicalFromHash
+ZSTD_XXH64_copyState
+ZSTD_XXH64_createState
+ZSTD_XXH64_digest
+ZSTD_XXH64_freeState
+ZSTD_XXH64_hashFromCanonical
+ZSTD_XXH64_reset
+ZSTD_XXH64_update
+ZSTD_XXH_versionNumber
+ZSTD_adjustCParams
+ZSTD_buildBlockEntropyStats
+ZSTD_buildCTable
+ZSTD_buildFSETable
+ZSTD_cParam_getBounds
+ZSTD_checkCParams
+ZSTD_checkContinuity
+ZSTD_compress
+ZSTD_compress2
+ZSTD_compressBegin
+ZSTD_compressBegin_advanced
+ZSTD_compressBegin_advanced_internal
+ZSTD_compressBegin_usingCDict
+ZSTD_compressBegin_usingCDict_advanced
+ZSTD_compressBegin_usingCDict_deprecated
+ZSTD_compressBegin_usingDict
+ZSTD_compressBlock
+ZSTD_compressBlock_btlazy2
+ZSTD_compressBlock_btlazy2_dictMatchState
+ZSTD_compressBlock_btlazy2_extDict
+ZSTD_compressBlock_btopt
+ZSTD_compressBlock_btopt_dictMatchState
+ZSTD_compressBlock_btopt_extDict
+ZSTD_compressBlock_btultra
+ZSTD_compressBlock_btultra2
+ZSTD_compressBlock_btultra_dictMatchState
+ZSTD_compressBlock_btultra_extDict
+ZSTD_compressBlock_deprecated
+ZSTD_compressBlock_doubleFast
+ZSTD_compressBlock_doubleFast_dictMatchState
+ZSTD_compressBlock_doubleFast_extDict
+ZSTD_compressBlock_fast
+ZSTD_compressBlock_fast_dictMatchState
+ZSTD_compressBlock_fast_extDict
+ZSTD_compressBlock_greedy
+ZSTD_compressBlock_greedy_dedicatedDictSearch
+ZSTD_compressBlock_greedy_dedicatedDictSearch_row
+ZSTD_compressBlock_greedy_dictMatchState
+ZSTD_compressBlock_greedy_dictMatchState_row
+ZSTD_compressBlock_greedy_extDict
+ZSTD_compressBlock_greedy_extDict_row
+ZSTD_compressBlock_greedy_row
+ZSTD_compressBlock_lazy
+ZSTD_compressBlock_lazy2
+ZSTD_compressBlock_lazy2_dedicatedDictSearch
+ZSTD_compressBlock_lazy2_dedicatedDictSearch_row
+ZSTD_compressBlock_lazy2_dictMatchState
+ZSTD_compressBlock_lazy2_dictMatchState_row
+ZSTD_compressBlock_lazy2_extDict
+ZSTD_compressBlock_lazy2_extDict_row
+ZSTD_compressBlock_lazy2_row
+ZSTD_compressBlock_lazy_dedicatedDictSearch
+ZSTD_compressBlock_lazy_dedicatedDictSearch_row
+ZSTD_compressBlock_lazy_dictMatchState
+ZSTD_compressBlock_lazy_dictMatchState_row
+ZSTD_compressBlock_lazy_extDict
+ZSTD_compressBlock_lazy_extDict_row
+ZSTD_compressBlock_lazy_row
+ZSTD_compressBound
+ZSTD_compressCCtx
+ZSTD_compressContinue
+ZSTD_compressContinue_public
+ZSTD_compressEnd
+ZSTD_compressEnd_public
+ZSTD_compressLiterals
+ZSTD_compressRleLiteralsBlock
+ZSTD_compressSequences
+ZSTD_compressStream
+ZSTD_compressStream2
+ZSTD_compressStream2_simpleArgs
+ZSTD_compressSuperBlock
+ZSTD_compress_advanced
+ZSTD_compress_advanced_internal
+ZSTD_compress_usingCDict
+ZSTD_compress_usingCDict_advanced
+ZSTD_compress_usingDict
+ZSTD_copyCCtx
+ZSTD_copyDCtx
+ZSTD_copyDDictParameters
+ZSTD_copySequencesToSeqStoreExplicitBlockDelim
+ZSTD_copySequencesToSeqStoreNoBlockDelim
+ZSTD_createCCtx
+ZSTD_createCCtxParams
+ZSTD_createCCtx_advanced
+ZSTD_createCDict
+ZSTD_createCDict_advanced
+ZSTD_createCDict_advanced2
+ZSTD_createCDict_byReference
+ZSTD_createCStream
+ZSTD_createCStream_advanced
+ZSTD_createDCtx
+ZSTD_createDCtx_advanced
+ZSTD_createDDict
+ZSTD_createDDict_advanced
+ZSTD_createDDict_byReference
+ZSTD_createDStream
+ZSTD_createDStream_advanced
+ZSTD_crossEntropyCost
+ZSTD_cycleLog
+ZSTD_dParam_getBounds
+ZSTD_decodeLiteralsBlock_wrapper
+ZSTD_decodeSeqHeaders
+ZSTD_decodingBufferSize_min
+ZSTD_decompress
+ZSTD_decompressBegin
+ZSTD_decompressBegin_usingDDict
+ZSTD_decompressBegin_usingDict
+ZSTD_decompressBlock
+ZSTD_decompressBlock_deprecated
+ZSTD_decompressBlock_internal
+ZSTD_decompressBound
+ZSTD_decompressContinue
+ZSTD_decompressDCtx
+ZSTD_decompressStream
+ZSTD_decompressStream_simpleArgs
+ZSTD_decompress_usingDDict
+ZSTD_decompress_usingDict
+ZSTD_decompressionMargin
+ZSTD_dedicatedDictSearch_lazy_loadDictionary
+ZSTD_defaultCLevel
+ZSTD_encodeSequences
+ZSTD_endStream
+ZSTD_estimateCCtxSize
+ZSTD_estimateCCtxSize_usingCCtxParams
+ZSTD_estimateCCtxSize_usingCParams
+ZSTD_estimateCDictSize
+ZSTD_estimateCDictSize_advanced
+ZSTD_estimateCStreamSize
+ZSTD_estimateCStreamSize_usingCCtxParams
+ZSTD_estimateCStreamSize_usingCParams
+ZSTD_estimateDCtxSize
+ZSTD_estimateDDictSize
+ZSTD_estimateDStreamSize
+ZSTD_estimateDStreamSize_fromFrame
+ZSTD_fillDoubleHashTable
+ZSTD_fillHashTable
+ZSTD_findDecompressedSize
+ZSTD_findFrameCompressedSize
+ZSTD_flushStream
+ZSTD_frameHeaderSize
+ZSTD_freeCCtx
+ZSTD_freeCCtxParams
+ZSTD_freeCDict
+ZSTD_freeCStream
+ZSTD_freeDCtx
+ZSTD_freeDDict
+ZSTD_freeDStream
+ZSTD_fseBitCost
+ZSTD_generateSequences
+ZSTD_getBlockSize
+ZSTD_getCParams
+ZSTD_getCParamsFromCCtxParams
+ZSTD_getCParamsFromCDict
+ZSTD_getDecompressedSize
+ZSTD_getDictID_fromCDict
+ZSTD_getDictID_fromDDict
+ZSTD_getDictID_fromDict
+ZSTD_getDictID_fromFrame
+ZSTD_getErrorCode
+ZSTD_getErrorName
+ZSTD_getErrorString
+ZSTD_getFrameContentSize
+ZSTD_getFrameHeader
+ZSTD_getFrameHeader_advanced
+ZSTD_getFrameProgression
+ZSTD_getParams
+ZSTD_getSeqStore
+ZSTD_getcBlockSize
+ZSTD_initCStream
+ZSTD_initCStream_advanced
+ZSTD_initCStream_internal
+ZSTD_initCStream_srcSize
+ZSTD_initCStream_usingCDict
+ZSTD_initCStream_usingCDict_advanced
+ZSTD_initCStream_usingDict
+ZSTD_initDStream
+ZSTD_initDStream_usingDDict
+ZSTD_initDStream_usingDict
+ZSTD_initStaticCCtx
+ZSTD_initStaticCDict
+ZSTD_initStaticCStream
+ZSTD_initStaticDCtx
+ZSTD_initStaticDDict
+ZSTD_initStaticDStream
+ZSTD_insertAndFindFirstIndex
+ZSTD_insertBlock
+ZSTD_invalidateRepCodes
+ZSTD_isError
+ZSTD_isFrame
+ZSTD_isSkippableFrame
+ZSTD_ldm_adjustParameters
+ZSTD_ldm_blockCompress
+ZSTD_ldm_fillHashTable
+ZSTD_ldm_generateSequences
+ZSTD_ldm_getMaxNbSeq
+ZSTD_ldm_getTableSize
+ZSTD_ldm_skipRawSeqStoreBytes
+ZSTD_ldm_skipSequences
+ZSTD_loadCEntropy
+ZSTD_loadDEntropy
+ZSTD_maxCLevel
+ZSTD_mergeBlockDelimiters
+ZSTD_minCLevel
+ZSTD_nextInputType
+ZSTD_nextSrcSizeToDecompress
+ZSTD_noCompressLiterals
+ZSTD_readSkippableFrame
+ZSTD_referenceExternalSequences
+ZSTD_registerSequenceProducer
+ZSTD_resetCStream
+ZSTD_resetDStream
+ZSTD_resetSeqStore
+ZSTD_reset_compressedBlockState
+ZSTD_row_update
+ZSTD_selectBlockCompressor
+ZSTD_selectEncodingType
+ZSTD_seqToCodes
+ZSTD_sequenceBound
+ZSTD_sizeof_CCtx
+ZSTD_sizeof_CDict
+ZSTD_sizeof_CStream
+ZSTD_sizeof_DCtx
+ZSTD_sizeof_DDict
+ZSTD_sizeof_DStream
+ZSTD_toFlushNow
+ZSTD_trace_compress_begin
+ZSTD_trace_compress_end
+ZSTD_trace_decompress_begin
+ZSTD_trace_decompress_end
+ZSTD_updateTree
+ZSTD_versionNumber
+ZSTD_versionString
+ZSTD_writeLastEmptyBlock
+ZSTD_writeSkippableFrame
+ZSTDv05_copyDCtx
+ZSTDv05_createDCtx
+ZSTDv05_decompress
+ZSTDv05_decompressBegin
+ZSTDv05_decompressBegin_usingDict
+ZSTDv05_decompressBlock
+ZSTDv05_decompressContinue
+ZSTDv05_decompressDCtx
+ZSTDv05_decompress_usingDict
+ZSTDv05_decompress_usingPreparedDCtx
+ZSTDv05_findFrameSizeInfoLegacy
+ZSTDv05_freeDCtx
+ZSTDv05_getErrorName
+ZSTDv05_getFrameParams
+ZSTDv05_isError
+ZSTDv05_nextSrcSizeToDecompress
+ZSTDv05_sizeofDCtx
+ZSTDv06_copyDCtx
+ZSTDv06_createDCtx
+ZSTDv06_decompress
+ZSTDv06_decompressBegin
+ZSTDv06_decompressBegin_usingDict
+ZSTDv06_decompressBlock
+ZSTDv06_decompressContinue
+ZSTDv06_decompressDCtx
+ZSTDv06_decompress_usingDict
+ZSTDv06_decompress_usingPreparedDCtx
+ZSTDv06_findFrameSizeInfoLegacy
+ZSTDv06_freeDCtx
+ZSTDv06_getErrorName
+ZSTDv06_getFrameParams
+ZSTDv06_isError
+ZSTDv06_nextSrcSizeToDecompress
+ZSTDv06_sizeofDCtx
+ZSTDv07_copyDCtx
+ZSTDv07_createDCtx
+ZSTDv07_createDCtx_advanced
+ZSTDv07_createDDict
+ZSTDv07_decompress
+ZSTDv07_decompressBegin
+ZSTDv07_decompressBegin_usingDict
+ZSTDv07_decompressBlock
+ZSTDv07_decompressContinue
+ZSTDv07_decompressDCtx
+ZSTDv07_decompress_usingDDict
+ZSTDv07_decompress_usingDict
+ZSTDv07_estimateDCtxSize
+ZSTDv07_findFrameSizeInfoLegacy
+ZSTDv07_freeDCtx
+ZSTDv07_freeDDict
+ZSTDv07_getDecompressedSize
+ZSTDv07_getErrorName
+ZSTDv07_getFrameParams
+ZSTDv07_insertBlock
+ZSTDv07_isError
+ZSTDv07_isSkipFrame
+ZSTDv07_nextSrcSizeToDecompress
+ZSTDv07_sizeofDCtx
 Z\fL+i
 Ze2Zh@
 ZiKw
@@ -2488,7 +3043,6 @@ Zjz\v
 \n\fruby_package
 \n\fstring_value
 \n\fswift_prefix
-\n\fsysid_source
 \n\ftime_expires
 \n\ftoken_source
 \n\nIDEMPOTENT
@@ -2544,6 +3098,7 @@ Zjz\v
 \n\rmanage_cdkeys
 \n\rnews_post_gid
 \n\rphp_namespace
+\n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
 \n\rserver_secret
@@ -2624,6 +3179,7 @@ Zjz\v
 ^4MZ
 ^J_spY
 _55j
+_H^zvd
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -2670,6 +3226,7 @@ __strcoll_l
 __strcpy_chk
 __strdup
 __strftime_l
+__strncat_chk
 __strncpy_chk
 __strtod_l
 __strtof_l
@@ -2775,6 +3332,7 @@ access-control-allow-origin
 additional_includes
 address1
 address2
+admin_request_spoofing_steamid
 admin_spoofing_user
 adult_content_sex
 adult_content_violence
@@ -3175,7 +3733,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenb
+ggen
 gmtime_r
 gnu_get_libc_version
 google.protobuf"G\n
@@ -3198,6 +3756,7 @@ headline
 height > 0
 hidden
 hl\tJ3o
+hm~iD
 host
 htonl
 htons
@@ -3238,7 +3797,6 @@ ioctl
 ip"R\n
 ip_addr"
 ip_v6
-is_fbs_universe
 is_from_external_source
 is_visible_in_steam_china
 isalnum
@@ -3248,6 +3806,7 @@ iswalnum
 iswalpha
 iswspace
 it->i < it->blk->n
+izc}
 i~wKVA\
 java_generate_equals_and_hash
 java_generic_services
@@ -3257,6 +3816,7 @@ java_string_check_utf8
 jrml[Q
 jsondata
 jstype
+jwK\v\n
 k;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 kBgrF709Constants
 kBgrH709Constants
@@ -3924,6 +4484,7 @@ k_EMsgDRMStabilityReport
 k_EMsgDRMSyncResponse
 k_EMsgDRMVariabilityReport
 k_EMsgDRMWorkerProcess
+k_EMsgDRMWorkerProcessSignFile
 k_EMsgDestJobFailed
 k_EMsgDeviceAuthorizationBase
 k_EMsgDirRequest
@@ -4541,6 +5102,7 @@ p5Z3
 p@0pqE5tsO?|1
 pD4t
 pH88
+pKp\nZ
 pU>\AL
 pXhH
 pZlNr
@@ -4560,6 +5122,7 @@ php_metadata_namespace
 php_output_always_number
 platform_linux
 platform_windows
+pledged buffer stability condition is not respected
 poll
 poly1305_blocks
 poly1305_emit
@@ -4643,6 +5206,7 @@ r3A~
 rB2pBB
 rF6t
 rK99
+rT+6ZNw
 rUUT
 rZlN
 r\tU[B
@@ -4689,6 +5253,7 @@ rm\niAB
 rmdir
 rnode->blk->n < (2 * 16 - 1)
 rnode->blk->n > (16 - 1)
+rq7x;P
 rtime32_end_time
 rtime32_last_modified
 rtime32_start_time
@@ -4852,6 +5417,7 @@ sysconf
 sysid
 system
 t\lHBW
+tableLog requires too much memory : unsupported
 tagids_curated
 tagids_filtered
 tags
@@ -5461,6 +6027,7 @@ wmemcpy
 wmemmove
 wmemset
 wn>Jj
+workSpace buffer is not large enough
 wpp >= 1 && wpp <= 2
 write
 writev
@@ -5468,7 +6035,9 @@ www-authenticat
 www-authenticate
 x != __null
 x((Pz
+x=9v
 xUN'
+x`tm6
 xpH8
 xqI9
 xrJ:DCG
@@ -5485,5 +6054,6 @@ zy:HO
 {kHw
 |<C!FReQ
 |sG2
+~NX4
 ~SeA
 ~TbF

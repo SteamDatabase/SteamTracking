@@ -152,7 +152,7 @@
     "Status_Disabled": "Desactivado",
     "Status_Connected": "En línea",
     "Status_NotConnected": "No conectado",
-    "Status_NoConnection": "El servidor se está reconectando a los servicios de backend de Steam. Por favor, espera.",
+    "Status_NoConnection": "El servidor se está reconectando a los servicios de backend de Steam. Espera.",
     "Status_Retrying": "Reintentando...",
     "Status_NoSteamCmd": "No se ha podido conectar al proceso SteamCmd.",
     "Status_NoSteamCmd_Help": "Intenta reiniciar SteamCmd o asegúrate de que el puerto %1$s está abierto y disponible en este equipo.",

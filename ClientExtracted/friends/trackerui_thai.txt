@@ -55,7 +55,7 @@
 "Friends_InApp"			"อยู่ในแอป"
 "Friends_InMod"			"อยู่ในม็อด"
 "Friends_InShortcut"		"อยู่ในเกมนอก Steam"
-"Friends_Blocked"		"ถูกบล็อค"
+"Friends_Blocked"		"ถูกบล็อก"
 
 "Friends_AddFriend"		"เพิ่มเพื่อน..."
 "Friends_Edit_Profile"	"แก้ไขโปรไฟล์..."
@@ -66,8 +66,8 @@
 "Friends_FriendList_Offline"		"ออฟไลน์"
 
 "Friends_SendInstantMessage"		"ส่งข้อความ..."
-"Friends_Ignore"			"บล็อคการติดต่อทั้งหมด..."
-"Friends_UnIgnore"			"เลิกบล็อค"
+"Friends_Ignore"			"บล็อกการติดต่อทั้งหมด..."
+"Friends_UnIgnore"			"เลิกบล็อก"
 "Friends_InviteFriendToGame"		"เชิญเข้าร่วมเกม"
 "Friends_JoinGame"				"เข้าร่วมเกม"
 "Friends_LaunchGame"				"เริ่มเกม"
@@ -167,7 +167,7 @@
 "Friends_InvitationSent"				"%search% ได้รับคำเชิญทางอีเมลแล้ว และจะมีการเพิ่มในรายชื่อเพื่อนของคุณเมื่อมีการตอบรับ\n"
 "Friends_DefaultInviteError"			"ตรวจพบปัญหาในการส่งคำเชิญไปยัง %search%" 
 "Friends_TooManyPendingInvitations"   "คุณส่งคำเชิญมากเกินไปในขณะนี้  ลองเชิญ %search% อีกครั้งในอีกหนึ่งหรือสองวัน"
-"Friends_InvitationBlocking"		"คุณกำลังบล็อคการติดต่อทั้งหมดกับผู้ใช้นี้ ก่อนที่จะติดต่อสื่อสารกัน คุณต้องเลิกบล็อคก่อนโดยเข้าไปที่หน้าโปรไฟล์ชุมชน Steam ของผู้ใช้นี้"
+"Friends_InvitationBlocking"		"คุณกำลังบล็อกการติดต่อทั้งหมดกับผู้ใช้นี้ ก่อนที่จะติดต่อสื่อสารกัน คุณต้องเลิกบล็อกก่อนโดยเข้าไปที่หน้าโปรไฟล์ชุมชน Steam ของผู้ใช้นี้"
 
 "Friends_DontGiveOutPassword"			"อย่าบอกรหัสผ่านของคุณให้ผู้อื่นทราบ\n"
 "Friends_DontGiveOutPassword_URL"		"https: //support.steampowered.com/kb/1266-OAFV-8478&l=thai/"
@@ -216,7 +216,7 @@
 "Friends_Chat_MemberDisconnected"						"%member_changed% เลิกเชื่อมต่อ%ignored%\n"
 "Friends_Chat_MemberWasKicked"						"%member_changed% ถูกไล่ออกโดย %member_making_change%\n"
 "Friends_Chat_MemberWasBanned"						"%member_changed% ถูกแบนโดย %member_making_change%\n"
-"Friends_Chat_MemberIgnored"						"(ถูกบล็อค)"	
+"Friends_Chat_MemberIgnored"						"(ถูกบล็อก)"	
 
 "Friends_Chat_InviteToChatRoom"							"เชิญเข้าร่วมห้องแช็ต"
 "Friends_Chat_InviteToChatRoom_Title"					"ชุมชน Steam - คำเชิญเข้าร่วมห้องแช็ต"
@@ -232,8 +232,8 @@
 "Friends_Chat_ToggleTimestamp"        "แสดงเวลาในแต่ละข้อความ"
 
 "Friends_Chat_ManageBanList"			"จัดการรายการแบน"
-"Friends_Chat_LockRoom"				"ล็อคห้องนี้ (ทำให้เป็นส่วนตัว)"
-"Friends_Chat_OpenRoom"               "ปลดล็อคห้องนี้ (ทำให้เป็นแบบเปิด)"
+"Friends_Chat_LockRoom"				"ล็อกห้องนี้ (ทำให้เป็นส่วนตัว)"
+"Friends_Chat_OpenRoom"               "ปลดล็อกห้องนี้ (ทำให้เป็นแบบเปิด)"
 
 "Friends_Chat_DeniedChat_Title"		"Steam - ไม่สามารถเข้าห้องแช็ตได้"
 "Friends_Chat_DeniedChat_DoesntExist" "แช็ต %chat% ได้ถูกปิดแล้ว"
@@ -250,15 +250,15 @@
 "Friends_Chat_ActionResultBanSuccess"     "%user_name% ถูกแบน\n"
 "Friends_Chat_ActionResultUnBanSuccess"   "%user_name% ได้ถูกปลดจากการระงับแล้ว\n"
 
-"Friends_Chat_ActionResultLockChatSuccess"	"ห้องแช็ตได้ล็อคแล้วในขณะนี้ (เฉพาะสมาชิกกลุ่มหรือผู้ใช้ที่ได้รับเชิญเท่านั้นที่สามารถเข้าร่วมได้) \n"
-"Friends_Chat_ActionResultUnlockChatSuccess"	"ห้องแช็ตได้ปลดล็อคแล้วในขณะนี้ (เปิดสำหรับผู้ใช้ทุกคน) \n"
+"Friends_Chat_ActionResultLockChatSuccess"	"ห้องแช็ตได้ล็อกแล้วในขณะนี้ (เฉพาะสมาชิกกลุ่มหรือผู้ใช้ที่ได้รับเชิญเท่านั้นที่สามารถเข้าร่วมได้) \n"
+"Friends_Chat_ActionResultUnlockChatSuccess"	"ห้องแช็ตได้ปลดล็อกแล้วในขณะนี้ (เปิดสำหรับผู้ใช้ทุกคน) \n"
 
 "Friends_Chat_ActionResultTitleFailed"    "การดำเนินการล้มเหลว"
 "Friends_Chat_ActionResultInviteFailed"   "ล้มเหลวในการพยายามเชิญผู้ใช้ %user_name% เข้าร่วมแช็ต %chat% \n%action_result%"
 "Friends_Chat_ActionResultKickFailed"     "ล้มเหลวในการพยายามเตะผู้ใช้ %user_name% ออกจากแช็ต %chat% \n%action_result%"
 "Friends_Chat_ActionResultUnBanFailed"    "ล้มเหลวในการพยายามเลิกแบนผู้ใช้ %user_name% จากแช็ต %chat% \n%action_result%"
-"Friends_Chat_ActionResultLockChatFailed"	"ล้มเหลวในการพยายามล็อคแช็ต %chat% \n%action_result%"
-"Friends_Chat_ActionResultUnlockChatFailed"	"ล้มเหลวในการพยายามปลดล็อค (เปิด) แช็ต %chat% \n%action_result%"
+"Friends_Chat_ActionResultLockChatFailed"	"ล้มเหลวในการพยายามล็อกแช็ต %chat% \n%action_result%"
+"Friends_Chat_ActionResultUnlockChatFailed"	"ล้มเหลวในการพยายามปลดล็อก (เปิด) แช็ต %chat% \n%action_result%"
 "Friends_Chat_ActionResultCloseFailed"	"ล้มเหลวในการพยายามปิดแช็ต %chat% \n%action_result%"
 
 
@@ -297,8 +297,8 @@
 
 "Friends_Chat_DisconnectedNoRetry_Entry"     "ไม่มีการเชื่อมต่อกับ Steam\n"
 
-"Friends_Chat_RoomLocked_Entry"		"ห้องแช็ตได้ถูกล็อคโดย %member_making_change% \n"
-"Friends_Chat_RoomUnlocked_Entry"		"ห้องแช็ตได้ถูกปลดล็อค (เปิดสำหรับทุกคน) โดย %member_making_change% \n"
+"Friends_Chat_RoomLocked_Entry"		"ห้องแช็ตได้ถูกล็อกโดย %member_making_change% \n"
+"Friends_Chat_RoomUnlocked_Entry"		"ห้องแช็ตได้ถูกปลดล็อก (เปิดสำหรับทุกคน) โดย %member_making_change% \n"
 
 "Friends_Chat_RackBouncing_Entry"		"เซิร์ฟเวอร์ Steam กำลังจะรีบูตในเร็ว ๆ นี้ การเชื่อมต่อไปยังห้องแช็ตนี้จะถูกเรียกคืนหลังการรีบูต \n"
 
@@ -463,7 +463,7 @@
 
 "Friends_ControlPanelLink"		"หน้าหลักชุมชน"
 
-"Friends_AchievementUnlocked_Headline"		"ปลดล็อครางวัลความสำเร็จแล้ว!"
+"Friends_AchievementUnlocked_Headline"		"ปลดล็อกรางวัลความสำเร็จแล้ว!"
 "Friends_AchievementUnlocked_Body"			"%achievement%"
 
 "Friends_AchievementProgress_Headline"		"ความคืบหน้ารางวัลความสำเร็จ"
@@ -481,22 +481,22 @@
 "Friends_ChatPasswordWarning_Continue"		"ใช่ ส่งข้อความสนทนา"
 "Friends_ChatPasswordWarning_DontSend"		"ไม่ อย่าส่ง"
 
-"Friends_BlockCommunicationWarning_Title"	"บล็อคปฏิสัมพันธ์ทั้งหมดกับ %username%"
-"Friends_BlockCommunicationWarning_Info"	"คุณกำลังจะทำการบล็อคการติดต่อทั้งหมดจาก %username%\n\nการกระทำเช่นนี้จะป้องกันไม่ให้คุณทั้งสองเข้าร่วมเกมในรอบเดียวกัน ที่จัดโดยระบบค้นหาคู่ต่อสู้ของ Steamworks ได้"
-"Friends_BlockCommunicationWarning_Info2"	"คุณกำลังจะบล็อคการติดต่อทั้งหมดกับ %username% \n\nคุณจะไม่สามารถส่งหรือรับข้อความหรือเชิญผู้เล่นนี้ได้อีกต่อไป \n\nคุณสามารถยกเลิกการดำเนินการนี้ได้โดยไปยังหน้าโปรไฟล์ Steam ของเขา หรือเลิกบล็อคผ่านรายชื่อเพื่อนของคุณ"
+"Friends_BlockCommunicationWarning_Title"	"บล็อกปฏิสัมพันธ์ทั้งหมดกับ %username%"
+"Friends_BlockCommunicationWarning_Info"	"คุณกำลังจะทำการบล็อกการติดต่อทั้งหมดจาก %username%\n\nการกระทำเช่นนี้จะป้องกันไม่ให้คุณทั้งสองเข้าร่วมเกมในรอบเดียวกัน ที่จัดโดยระบบค้นหาคู่ต่อสู้ของ Steamworks ได้"
+"Friends_BlockCommunicationWarning_Info2"	"คุณกำลังจะบล็อกการติดต่อทั้งหมดกับ %username% \n\nคุณจะไม่สามารถส่งหรือรับข้อความหรือเชิญผู้เล่นนี้ได้อีกต่อไป \n\nคุณสามารถยกเลิกการดำเนินการนี้ได้โดยไปยังหน้าโปรไฟล์ Steam ของเขา หรือเลิกบล็อกผ่านรายชื่อเพื่อนของคุณ"
 "Friends_BlockCommunicationWarning_LinkInfo"	"ข้อมูลเพิ่มเติมเกี่ยวกับระบบจัดหาคู่ต่อสู้ของ Steamworks"
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"อย่าแสดงสิ่งนี้ให้ฉันดูอีก"
-"Friends_BlockCommunicationWarning_Block"	"บล็อคผู้เล่น"
+"Friends_BlockCommunicationWarning_Block"	"บล็อกผู้เล่น"
 "Friends_BlockCommunicationWArning_Cancel"	"ยกเลิก"
-"Friends_BlockCommunicationResult"	"%username% ได้ถูกบล็อคแล้ว!\n\nเพื่อเลิกบล็อคผู้เล่นนี้ เข้าชมรายชื่อผู้ที่ถูกบล็อคในชุมชน Steam"
-"Friends_BlockCommunicationResultUnblock"	"%username% ได้ถูกยกเลิกบล็อคแล้ว! \n\nคุณสามารถดูรายการบล็อคได้ในชุมชน Steam"
-"Friends_BlockCommunicationResult_YourBlockedList"	"ดูรายชื่อผู้ที่ถูกบล็อค"
-"Friends_DefaultBlockCommunicationError" 			"ตรวจพบปัญหาในการบล็อค %username%"
+"Friends_BlockCommunicationResult"	"%username% ได้ถูกบล็อกแล้ว!\n\nเพื่อเลิกบล็อกผู้เล่นนี้ เข้าชมรายชื่อผู้ที่ถูกบล็อกในชุมชน Steam"
+"Friends_BlockCommunicationResultUnblock"	"%username% ได้ถูกยกเลิกบล็อกแล้ว! \n\nคุณสามารถดูรายการบล็อกได้ในชุมชน Steam"
+"Friends_BlockCommunicationResult_YourBlockedList"	"ดูรายชื่อผู้ที่ถูกบล็อก"
+"Friends_DefaultBlockCommunicationError" 			"ตรวจพบปัญหาในการบล็อก %username%"
 
 "Friends_ChatIntro_Title"		"มีคำขอเพื่อสนทนาเข้ามา"
 "Friends_ChatIntro_Accept"	"ยอมรับ"
 "Friends_ChatIntro_Decline"	"ปฏิเสธ"
-"Friends_ChatIntro_Ignore"	"บล็อค"
+"Friends_ChatIntro_Ignore"	"บล็อก"
 
 "Friends_ChatIntro_Info"		"คุณได้รับคำขอเพื่อสนทนาจากผู้ใช้ต่อไปนี้: "
 "Friends_ChatIntro_Info2"		"คุณทั้งสองมีกลุ่มต่อไปนี้เหมือนกัน: "
@@ -588,7 +588,7 @@
 "friends_inviteallsuggestedfriends"	"เชิญเพื่อนที่คุณอาจรู้จักทั้งหมด"
 "friends_acceptrequest"	"ยอมรับ"
 "friends_ignorerequest"	"ละเว้น"
-"friends_blockrequest"	"บล็อค"
+"friends_blockrequest"	"บล็อก"
 "friends_inviterequest" "เชิญ"
 "friends_acceptgrouprequest" "ยอมรับ"
 "friends_ignoregrouprequest" "ละเว้น"
@@ -616,7 +616,7 @@
 "friends_trade_they_are_cafe"	"คุณไม่สามารถแลกเปลี่ยนกับ %friend% ได้ เพราะเขากำลังใช้บัญชีร้านเน็ตคาเฟ่อยู่"
 "friends_trade_you_are_school"	"คุณไม่สามารถทำการแลกเปลี่ยนกับ %friend% ได้เนื่องจากคุณใช้บัญชีของแล็บโรงเรียนอยู่"
 "friends_trade_they_are_school"	"คุณไม่สามารถแลกเปลี่ยนกับ %friend% ได้เพราะเขากำลังใช้บัญชี School Lab"
-"friends_trade_they_are_blocked"	"คุณไม่สามารถแลกเปลี่ยนกับ %friend% เพราะคุณได้บล็อคเขา"
+"friends_trade_they_are_blocked"	"คุณไม่สามารถแลกเปลี่ยนกับ %friend% เพราะคุณได้บล็อกเขา"
 "friends_trade_you_need_verified_email"		"คุณต้องยืนยันที่อยู่อีเมลก่อนจะสามารถทำการแลกเปลี่ยนได้ ยืนยันอีเมลได้ที่หน้าต่างการตั้งค่า"
 "friends_trade_you_have_steam_guard_disabled"	"คุณต้องเปิดใช้ Steam Guard ก่อนที่คุณจะสามารถมีส่วนร่วมในการแลกเปลี่ยน เปิดใช้ Steam Guard จากหน้าต่างการตั้งค่า"
 "friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"คุณต้องเปิดใช้ Steam Guard เป็นเวลาอย่างน้อย %days% วัน ก่อนที่คุณจะเข้าร่วมในการแลกเปลี่ยนได้"

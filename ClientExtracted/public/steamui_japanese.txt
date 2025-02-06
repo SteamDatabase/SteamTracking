@@ -68,8 +68,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SubscribeUserInfo" "クレジットカードに登録されているフルネームを正確に入力してください。"
 "Steam_EmailAddress" "メールアドレス"
 "Steam_EmailAddressVerification" "（購入確認および領収書発送のため）"
-"Steam_FirstName" "名前"
-"Steam_LastName" "名字"
+"Steam_FirstName" "名"
+"Steam_LastName" "姓"
 "Steam_SubscribeCardInfo" "カード番号と有効期限を入力してください。"
 "Steam_CreditCardType" "カードの種類"
 "Steam_CreditCardNumber" "%cardtype%クレジットカード番号"
@@ -137,12 +137,12 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Login_ForgotPassword"	"サインインでヘルプが必要ですか？"
 "Steam_Login_CapsLockWarning"	"Caps Lock がオンになっています"
 
-"SteamUI_CreateAccount_Title"	"Steam アカウントの作成"
+"SteamUI_CreateAccount_Title"	"Steamアカウントの作成"
 "SteamUI_CreateAccount_Nickname"	"プロフィール名"
-"SteamUI_CreateAccount_FirstName" "名前"
-"SteamUI_CreateAccount_LastName"	"名字"
-"SteamUI_CreateAccount_Error"	"Steam - アカウント作成エラー"
-"SteamUI_CreateAccount_CacheDir"	"Steam をインストールする場所を決めてください。\n1GB以上の空き容量のあるドライブを推奨します。"
+"SteamUI_CreateAccount_FirstName" "名"
+"SteamUI_CreateAccount_LastName"	"姓"
+"SteamUI_CreateAccount_Error"	"Steam－アカウント作成エラー"
+"SteamUI_CreateAccount_CacheDir"	"Steamをインストールする場所を決めてください。\n1GB以上の空き容量のあるドライブを推奨します。"
 
 "SteamUI_CreateAccount_ContactEmail"	"連絡用メールアドレス"
 "SteamUI_CreateAccount_ContactEmailConfirm"	"メールアドレス確認"
@@ -210,7 +210,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_JoinDialog_OverrideThrottle"	"現在の帯域幅制限を変更する"
 "SteamUI_JoinDialog_SkipUpdateInfo" "アップデートをスキップして今すぐプレイする"
 
-"SteamUI_JoinDialog_ProcessingShaderCache" "Vulkanシェーダーの処理中．．．"
+"SteamUI_JoinDialog_ProcessingShaderCache" "Vulkanシェーダーの処理中..."
 "SteamUI_JoinDialog_SkipShaderProcessing" "スキップ"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"アップデートがあります"
@@ -1356,7 +1356,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_App_LegacyKey_Failed_Text"  "プロダクトキーのリクエストに失敗しました。数分後に、もう一度お試しください。"
 "Steam_App_LegacyKey_NoResponse_Text" "Steam プロダクトキーサーバーへの接続に失敗しました。インターネットへの接続を確認し、もう一度お試しください。"
 "Steam_App_LegacyKey_Denied_Text"  "Steam は製品キーのリクエストに必要な所有権の確認ができませんでした。Steam サポートにお問い合わせください。"
-"Steam_App_LegacyKey_Denied_Borrowed_Text" "%game% の一部またはすべてのコンテンツを利用するには Uplay や Origin などサードパーティーのサービスに接続しなければなりません。\nこのコンテンツにアクセスするにはオリジナルの所有者がこのサービスに登録している必要があります。"
+"Steam_App_LegacyKey_Denied_Borrowed_Text" "%game%の一部またはすべてのコンテンツを利用するにはUplayやOriginなどサードパーティーのサービスに接続しなければなりません。\nこのコンテンツにアクセスするにはオリジナルの所有者がこのサービスに登録している必要があります。"
 "Steam_App_LegacyKey_Pending_Text" "プロダクトキーのリクエストは Steam サポートの承認待ちです。数時間後に、もう一度お試しください。"
 "Steam_App_LegacyKey_OutOfKeys_Text" "%game% に必要な未使用の製品キーが一時的に在庫切れになっています。\n\n製品キーは Steam がパブリッシャーから受け取り次第、発行されます。\n後ほど再試行してださい。今すぐ返金リクエストも可能です。"
 
@@ -1423,11 +1423,11 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_Update_Package_Index_Button" "アップデート"
 "SteamUI_Learn_More" "詳細"
 
-"SteamUI_Upgrade_Nvidia_Driver_Title" "ビデオドライバ問題"
+"SteamUI_Upgrade_Nvidia_Driver_Title" "ビデオドライバーの問題"
 "SteamUI_Upgrade_Nvidia_Driver_Info" "あなたのシステムは古いnVidia® プロプライエタリ ビデオドライバを使用しています。 Steamはバージョン304.22以上のドライバが必要です。"
 "SteamUI_Upgrade_Nvidia_Driver_URL" "https://support.steampowered.com/kb_article.php?ref=8509-RFXM-1964"
 
-"SteamUI_AMD_BigPicture_Problem_Title" "ビデオ ドライバー の問題"
+"SteamUI_AMD_BigPicture_Problem_Title" "ビデオドライバーの問題"
 "SteamUI_AMD_BigPicture_Problem_Info" "あなたのシステムにはAMDビデオ ドライバー バージョン13.1がインストールされています。Steam Big Pictureをご使用になる前に、バージョン 13.2またはそれ以降のバージョンにアップグレードしてください。"
 "SteamUI_AMD_BigPicture_Problem_Url_Label" "AMD ビデオ ドライバーをダウンロード"
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/us/gpudownload/linux/Pages/radeon_linux.aspx"
@@ -1892,7 +1892,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_About_Build"				"ビルド：%build_date%、%build_time%"
 "Steam_About_InterfaceVer"			"Steam API：v%build_interface%"
 
-"Steam_DeveloperUnknownThirdParty"		"サードパーティ"
+"Steam_DeveloperUnknownThirdParty"		"サードパーティー"
 
 "Steam_SteamSubscriberAgreement_Title"		"Steam利用規約"
 "Steam_CybercafeSubscriberAgreement_Title"	"Steam - インターネットカフェ用アカウントの作成"
@@ -1971,7 +1971,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"%subscription%の登録は完了していません。 口座残高が不足しているため、お使いのクレジットカードのご利用は、クレジットカード会社により拒否されました。\n\nクレジットカード会社によっては、お使いのカード口座を一時的に「利用停止」として処理する場合がありますが、請求は行われません。"
 "Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"%subscription%の登録は完了していません。 入力された住所に間違いがあるため、お使いのクレジットカードのご利用は、クレジットカード会社により拒否されました。\n\nクレジットカード会社によっては、お使いのカード口座を一時的に「利用停止」として処理する場合がありますが、請求は行われません。 下記の情報を確認した後、情報の内容に誤りがある場合は、もう一度やり直してください。"
 
-"ServerBrowser_ModNotInstalled" "サードパーティのMODがインストールされていません。"
+"ServerBrowser_ModNotInstalled" "サードパーティーのMODがインストールされていません。"
 "ServerBrowser_AppNotFound" "サーバーに接続できません。\nサーバー指定の App ID が無効です。"
 "ServerBrowser_NotInitialized" "Steamが初期化されていません。 もう一度お試しください。"
 
@@ -4801,9 +4801,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_InstallSteamVR" "SteamVR をインストール"
 "SteamUI_LaunchSteamVR" "SteamVRを起動"
 
-"Steam_BLEControllerFirmware_Title" "ブルートゥースファームウェア更新"
+"Steam_BLEControllerFirmware_Title" "Bluetoothファームウェア更新"
 "Steam_BLEControllerFirmware_Header" "Steam リンクアプリ"
-"Steam_BLEControllerFirmware_Body" "ローカルネットワーク経由で、スマホやタブレット、テレビへと Steam ゲーム体験が広がります。\n\nSteam コントローラを Steam リンクアプリで使用するには、新しいブルートゥースファームウェアへの更新が必要です。"
+"Steam_BLEControllerFirmware_Body" "ローカルネットワーク経由で、スマホやタブレット、テレビへとSteamゲーム体験が広がります。\n\nSteamコントローラをSteamリンクアプリで使用するには、新しいBluetoothファームウェアへの更新が必要です。"
 "Steam_BLEControllerFirmware_LearnMore" "詳細を見る"
 "Steam_BLEControllerFirmware_UpdateNow" "今すぐファームウェアを更新"
 

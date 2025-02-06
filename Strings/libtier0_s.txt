@@ -1,3 +1,4 @@
+$ORIGIN
 /data/src/tier0/typechecks.cpp
 12CStdMemAlloc
 16CAdHocValidation

@@ -617,6 +617,21 @@ enum EProtoAppType {
 	k_EAppTypeDepotOnly = -2147483648;
 }
 
+enum EChildProcessQueryCommand {
+	k_EChildProcessQueryCommand_Invalid = 0;
+	k_EChildProcessQueryCommand_GpuTopology = 1;
+	k_EChildProcessQueryCommand_Max = 2;
+}
+
+enum EChildProcessQueryExitCode {
+	k_EChildProcessQueryExitCode_Success = 0;
+	k_EChildProcessQueryExitCode_ErrorCommandline = -1;
+	k_EChildProcessQueryExitCode_ErrorOther = -2;
+	k_EChildProcessQueryExitCode_ErrorUnimplemented = -3;
+	k_EChildProcessQueryExitCode_ErrorFileSave = -4;
+	k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform = -5;
+}
+
 enum EWindowsUpdateInstallationImpact {
 	k_EWindowsUpdateInstallationImpact_Unknown = -1;
 	k_EWindowsUpdateInstallationImpact_Normal = 0;

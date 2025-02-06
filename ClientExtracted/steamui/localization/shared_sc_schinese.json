@@ -106,6 +106,7 @@
     "BroadcastWatch_UserRestricted": "此主播目前被禁止在蒸汽平台上进行实况直播",
     "BroadcastWatch_PoorUploadQuality": "此主播目前无法与蒸汽平台进行稳定的连接",
     "BroadcastWatch_TooManyViewers": "蒸汽平台目前直播载入量过高，无法预留观众席位。请过几分钟后再试。",
+    "Sale_default_Tooltip_Free_Promo_Limitation": "送完即止。免费保留促销期间发放的游戏不会掉落蒸汽平台集换式卡牌。",
     "Sale_Reservation_Komodo": "Steam Deck 现可通过 Komodo 在日本、韩国、台湾和香港购买：<1>https://steamdeck.komodo.jp/product/蒸汽平台-deck/?lang=zh-hans</1>",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_TrendingWishlisted_ttip": "按热门程度或最近加入愿望单次数排序的的即将推出的游戏。仅包括尚未在蒸汽平台上发行的游戏。",

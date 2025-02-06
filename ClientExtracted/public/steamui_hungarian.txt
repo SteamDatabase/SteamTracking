@@ -1207,7 +1207,7 @@
 "Steam_Subscription_Rejected_Cdkey" "Az általad megadott termékkódot már aktiválták egy másik Steam fiókkal. Ezt a kódot nem lehet újra felhasználni. Kérjük, segítségnyújtásért lépj kapcsolatba a viszonteladóval vagy online értékesítővel, akitől a kódot vásároltad."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Túl sok aktiválási kísérlet"
-"Steam_Subscription_RateLimitedCDKey" "Túl sok aktiválási kísérlet történt a közelmúltban erről a felhasználói fiókról vagy IP-címről. Kérjük várj, és majd később próbáld újra a termékkódod."
+"Steam_Subscription_RateLimitedCDKey" "Túl sok aktiválási kísérlet történt a közelmúltban erről a felhasználói fiókról vagy IP-címről. Kérjük, várj, és majd később próbáld újra a termékkódod."
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Érvénytelen termékkód"
 "Steam_SubscriptionCancelled_InvalidCDKey" "A megadott termékkód érvénytelen.\n\nKérjük, győződj meg róla, nem gépelted-e el a kódodat. Az I, L, és 1 hasonlónak tűnhet, csakúgy, mint a V és Y, illetve a 0 és O."

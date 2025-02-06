@@ -62,6 +62,7 @@ message CMsgBluetoothManagerDeviceDetails {
 	optional bool wake_allowed_supported = 10;
 	optional int32 battery_percent = 11;
 	optional bool operation_in_progress = 12;
+	optional bool is_trusted = 13;
 }
 
 message CBluetoothManager_GetDeviceDetails_Response {
@@ -121,6 +122,14 @@ message CBluetoothManager_SetWakeAllowed_Request {
 message CBluetoothManager_SetWakeAllowed_Response {
 }
 
+message CBluetoothManager_SetTrusted_Request {
+	optional uint32 device = 1;
+	optional bool trusted = 2;
+}
+
+message CBluetoothManager_SetTrusted_Response {
+}
+
 service BluetoothManager {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
@@ -135,4 +144,5 @@ service BluetoothManager {
 	rpc Connect (.CBluetoothManager_Connect_Request) returns (.CBluetoothManager_Connect_Response);
 	rpc Disconnect (.CBluetoothManager_Disconnect_Request) returns (.CBluetoothManager_Disconnect_Response);
 	rpc SetWakeAllowed (.CBluetoothManager_SetWakeAllowed_Request) returns (.CBluetoothManager_SetWakeAllowed_Response);
+	rpc SetTrusted (.CBluetoothManager_SetTrusted_Request) returns (.CBluetoothManager_SetTrusted_Response);
 }

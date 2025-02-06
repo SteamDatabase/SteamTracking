@@ -1516,6 +1516,7 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_PeerContentTitle"			"Przesyłanie plików gry poprzez sieć lokalną"
 "Steam_PeerContentInfo"			"Ta funkcja umożliwia przesyłanie plików gier z innych komputerów w twojej sieci lokalnej, zmniejszając tym samym obciążenie połączenia internetowego przy pobieraniu gry. Możesz także zezwolić innym użytkownikom na przesyłanie gier z tego komputera."
 "Steam_PeerContentOff"			"Wyłączone – nie zezwalaj na przesyłanie"
+"Steam_PeerContentSameUser"		"Zezwalaj na przesyłanie tylko na moje urządzenia"
 "Steam_PeerContentFriends"		"Zezwól na przesyłanie do moich znajomych na Steam"
 "Steam_PeerContentAnyUser"		"Zezwalaj na przesyłanie do dowolnego użytkownika"
 

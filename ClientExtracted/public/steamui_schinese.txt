@@ -2968,7 +2968,7 @@
 "Steam_LaunchEULA_Info"			"%game% 最终用户许可协议 (EULA)"
 "Steam_LaunchEULA_Agree"			"我同意"
 "Steam_LaunchEULA_Decline"		"取消"
-"Steam_LaunchEULA_Text"			"请完整阅读此协议。您必须同意 EULA 中的条款才能开始 %game% 游戏。"
+"Steam_LaunchEULA_Text"			"请完整阅读此协议。您必须同意最终用户许可协议中的条款才能开始 %game% 游戏。"
 
 "Steam_GuestPasses_LinkText"		"有关礼物和玩家通行证的更多信息"
 "Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"

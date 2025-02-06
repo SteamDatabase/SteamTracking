@@ -47,7 +47,7 @@
 "Steam_Login_TwoFactorErrorTitle"	"Steam - Rossz hitelesítő kód"
 "Steam_ErrorLoginFailed" "A Steames bejelentkezés sikertelen.\nNem létezik a megadott fiók, vagy hibás a jelszó.\nEllenőrizd a fióknevet és a jelszót, és próbáld újra."
 "Steam_Login_IncorrectPassword" "Helytelenül adtad meg jelszavadat vagy fióknevedet. Kérjük, ellenőrizd őket, majd próbáld újra."
-"Steam_Login_RateLimited"	"Rövid idő alatt túl sok sikertelen belépés történt a hálózatodból. Kérjük várj, és próbáld újra később."
+"Steam_Login_RateLimited"	"Rövid idő alatt túl sok sikertelen belépés történt a hálózatodból. Kérjük, várj, és próbáld újra később."
 "Steam_Login_RememberPassword"  "Jelszó megjegyzése"
 "Steam_Login_Btn"		"Bejelentkezés"
 "Steam_Login_Password"		"Jelszó"

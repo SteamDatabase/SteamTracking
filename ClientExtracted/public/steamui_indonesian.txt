@@ -4192,7 +4192,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_AppUpdateError_25"		"aplikasi belum dirilis"
 "Steam_AppUpdateError_26"		"wilayah dibatasi"
 "Steam_AppUpdateError_27"		"konten cache rusak"
-"Steam_AppUpdateError_28"		"tidak dapat dieksekusi"
+"Steam_AppUpdateError_28"		"executable tidak ditemukan"
 "Steam_AppUpdateError_29"		"platform tidak valid"
 "Steam_AppUpdateError_30"		"sistem file tidak didukung"
 "Steam_AppUpdateError_31"		"file pembaruan rusak"

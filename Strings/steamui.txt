@@ -5,7 +5,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123|
+ !"#$%&'()*+,-./0123<
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -56,6 +56,7 @@
  7Me}
  GameRecording\ExportLimitBitrate
  Gamescope/MuraCorrectionDisabled
+ \n\tdriver_id
  \n\vinitial_top
  \vjpF
  google/protobuf/descriptor.proto
@@ -165,6 +166,7 @@
 "&\n$CRemoteClient_CancelPairing_Response"i\n/CRemoteClient_RegisterStatusUpdate_Notification
 "&\n$CShader_ReportExternalBuild_Response2
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
+"'\n%CBluetoothManager_SetTrusted_Response2
 "'\n%CChatRoom_DeleteRoleFromUser_Response"b\n#CChatRoom_JoinChatRoomGroup_Request
 "'\n%CChatRoom_GetMyChatRoomGroups_Request"
 "'\n%CChatRoom_LeaveChatRoomGroup_Response"\\n CChatRoom_CreateChatRoom_Request
@@ -190,7 +192,7 @@
 "*\n(CSteamTV_SetSteamTVUserSettings_Response")\n'CSteamTV_GetMyBroadcastChannels_Request"V\n(CSteamTV_GetMyBroadcastChannels_Response
 "*\n(CTransportValidation_DataRequest_Request"9\n)CTransportValidation_DataRequest_Response
 "+\n)CBluetoothManager_SetDiscovering_Response"0\n
-"+\n)CBluetoothManager_SetWakeAllowed_Response2
+"+\n)CBluetoothManager_SetWakeAllowed_Response"G\n$CBluetoothManager_SetTrusted_Request
 "+\n)CBroadcast_MuteBroadcastChatUser_Response"N\n%CBroadcast_RemoveUserChatText_Request
 "+\n)CCredentials_GetAccountAuthSecret_Request"O\n*CCredentials_GetAccountAuthSecret_Response
 "+\n)CFamilyGroups_SetPreferredLender_Response"C\n)CFamilyGroups_GetPreferredLenders_Request
@@ -678,6 +680,7 @@ $Customization/StartupMovie/LocalPath
 $Cw!R
 $Developer/ShowAdvancedUpdateChannels
 $Music\PlaylistNowPlayingNotification
+$ORIGIN
 $O\tdwR\rox\\r*
 $UI/Display/Current/IsExternalDisplay
 $V7E
@@ -782,6 +785,7 @@ $system\InGameOverlayScreenshotHotKey
 %.CAuthentication_Token_Revoke_Request
 %.CBluetoothManager_CancelPair_Request
 %.CBluetoothManager_Disconnect_Request
+%.CBluetoothManager_SetTrusted_Request
 %.CBroadcast_InviteToBroadcast_Request
 %.CBroadcast_WebRTCStartResult_Request
 %.CChatRoom_DeleteChatMessages_Request
@@ -932,6 +936,7 @@ $system\InGameOverlayScreenshotHotKey
 %\n!k_EGetChannelsAlgorithm_Following
 %\n!k_EGraphicsPerfOverlayLevel_Basic
 %\n!k_EMarketingMessageAppAssociation
+%\n!k_EMarketingMessageTemplate_Event
 %\n!k_EMarketingMessageTemplate_Image
 %\n!k_EOverlayToggleBarLocation_Right
 %\n!k_EProfileCustomizationTypeBadges
@@ -978,6 +983,7 @@ $system\InGameOverlayScreenshotHotKey
 &.CAuthentication_Token_Revoke_Response"
 &.CBluetoothManager_CancelPair_Response
 &.CBluetoothManager_Disconnect_Response
+&.CBluetoothManager_SetTrusted_Response
 &.CBroadcast_GetBroadcastStatus_Request
 &.CBroadcast_GetBuildClipStatus_Request
 &.CBroadcast_InviteToBroadcast_Response"
@@ -1118,6 +1124,7 @@ $system\InGameOverlayScreenshotHotKey
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n!k_EStreamControlEnableNeptuneData
 &\n!k_EStreamControlVRConnectionReady
+&\n"k_EAppAntiCheatTypeAntiCheatExpert
 &\n"k_EAuthSessionGuardType_DeviceCode
 &\n"k_EAuthTokenAppType_Mobile_ChatApp
 &\n"k_EAuthTokenPlatformType_MobileApp
@@ -1326,6 +1333,7 @@ $system\InGameOverlayScreenshotHotKey
 '\n#k_EChatRoomMemberStateChange_Kicked
 '\n#k_EChatRoomMemberStateChange_Parted
 '\n#k_EChatRoomServerMsg_RenameChatRoom
+'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EClientNotificationType_AsyncGame
 '\n#k_EClientNotificationType_MajorSale
 '\n#k_EClientPersonaStateFlagPlayerName
@@ -1491,7 +1499,6 @@ $system\InGameOverlayScreenshotHotKey
 (\f"[\n&CMsgRemoteDeviceAuthorizationConfirmed
 (\n can_create_rename_delete_channel
 (\n disable_nvidia_hardware_encoding
-(\n display_refresh_manual_hz_oc_max
 (\n include_assets_without_overrides
 (\n include_purchased_customizations
 (\n input_activate_stick_or_trackpad
@@ -1567,6 +1574,7 @@ $system\InGameOverlayScreenshotHotKey
 (\n$k_EChatRoomMemberStateChange_Invited
 (\n$k_EChatRoomServerMsg_InviteDismissed
 (\n$k_EChatroomNotificationLevel_Invalid
+(\n$k_EChildProcessQueryExitCode_Success
 (\n$k_EClientNotificationType_LowBattery
 (\n$k_EClientNotificationType_Screenshot
 (\n$k_EClientNotificationType_TradeOffer
@@ -1791,7 +1799,6 @@ $system\InGameOverlayScreenshotHotKey
 (\r"f\n(CPartnerApps_RequestUploadToken_Response
 (\r"f\n3CMarketingMessages_GetPastMarketingMessages_Request
 (\r"f\n9CMarketingMessage_GetMarketingMessagesForPartner_Response
-(\r"g\n+CClientMetrics_ClientBootstrap_Notification
 (\r"g\n2CSteamNotification_PreferencesUpdated_Notification
 (\r"h\n\rServerMessage
 (\r"i\n(CFamilyGroups_SetPreferredLender_Request
@@ -1934,6 +1941,7 @@ $system\InGameOverlayScreenshotHotKey
 (\t"f\n&CSteamTV_HomePageTemplate_ConveyorBelt
 (\t"f\n&CSteamTV_HomePageTemplate_QuickExplore
 (\t"f\n+CUserAccount_ViewFriendInviteToken_Response
+(\t"g\n+CClientMetrics_ClientBootstrap_Notification
 (\t"g\n1CBroadcast_NotifyBroadcastUploadStop_Notification
 (\t"i\n&CInventoryClient_NewItems_Notification
 (\t"i\n)CPublishedFile_AddAppRelationship_Request
@@ -1977,6 +1985,7 @@ $system\InGameOverlayScreenshotHotKey
 (\v2!.CGameNotifications_LocalizedText"
 (\v2!.CMsgBluetoothDevicesData.Adapter
 (\v2!.CMsgBluetoothDevicesData.Manager
+(\v2!.CMsgChildProcessQueryGpuTopologyH
 (\v2!.CMsgClientPersonaState.Friend.KV
 (\v2!.CMsgNetworkDeviceConnect.KnownAPH
 (\v2!.CMsgSystemPerfLegacySettingEntry"
@@ -2014,6 +2023,7 @@ $system\InGameOverlayScreenshotHotKey
 (\v2$.CAuthentication_AllowedConfirmation
 (\v2$.CClientMetrics_AppInterfaceCreation
 (\v2$.CCommunity_PartnerEventsAppPriority"G\n6CCommunity_ClearSinglePartnerEventsAppPriority_Request
+(\v2$.CMarketingMessageClickedHourlyStats"P\n;CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 (\v2$.CMsgNetworkDevicesData.Device.Wired
 (\v2$.CMsgRemoteClientAppStatus.AppStatus
 (\v2$.CPlayer_GetOwnedGames_Response.Game
@@ -2082,6 +2092,7 @@ $system\InGameOverlayScreenshotHotKey
 (\v2).CGameRecording_SaveClip_Request.Position
 (\v2).CHIDMessageFromRemote.DeviceInputReportsH
 (\v2).CInventory_PurchaseInit_Request.LineItem
+(\v2).CMsgChildProcessQueryGpuTopology.GpuInfo
 (\v2).CPlayer_GetLastPlayedTimes_Response.Game
 (\v2).CPlayer_GetLastPlayedTimes_Response.Game"j\n*CPlayer_FriendNicknameChanged_Notification
 (\v2).CPublishedFile_GetUserFiles_Response.App
@@ -2646,6 +2657,7 @@ $system\InGameOverlayScreenshotHotKey
 *18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE33CWebUIBluetoothManagerGetStateJob34CBluetoothManager_GetState_Request35CBluetoothManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE35CWebUIBluetoothManagerCancelPairJob36CBluetoothManager_CancelPair_Request37CBluetoothManager_CancelPair_ResponseE
 *18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE35CWebUIBluetoothManagerDisconnectJob36CBluetoothManager_Disconnect_Request37CBluetoothManager_Disconnect_ResponseE
+*18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE35CWebUIBluetoothManagerSetTrustedJob36CBluetoothManager_SetTrusted_Request37CBluetoothManager_SetTrusted_ResponseE
 *18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE39CWebUIBluetoothManagerSetDiscoveringJob40CBluetoothManager_SetDiscovering_Request41CBluetoothManager_SetDiscovering_ResponseE
 *18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE39CWebUIBluetoothManagerSetWakeAllowedJob40CBluetoothManager_SetWakeAllowed_Request41CBluetoothManager_SetWakeAllowed_ResponseE
 *18CWebUIMsgLambdaJobIZN31CSystemBluetoothControllerLinux10InitializeEvE41CWebUIBluetoothManagerGetDeviceDetailsJob42CBluetoothManager_GetDeviceDetails_Request43CBluetoothManager_GetDeviceDetails_ResponseE
@@ -2706,6 +2718,7 @@ $system\InGameOverlayScreenshotHotKey
 *Z16InitializeChromeP21IHTMLChromeController7EUIModeEUlRK10StringViewE_
 *Z25GetUserAchievementsForApp7CGameID8CSteamID9CSmartPtrI18CJSCallbackPromiseEEUlP19UserStatsReceived_tbS3_E_
 *ZL24YldGetBrowserProcessInfovEUlPK27CMsgProcessInfoNotificationE_
+*ZL7profilePvR9ConParamsR10ConCommandEUlvE_
 *ZN11CHTMLWindow21BrowserFileLoadDialogEPK18CMsgFileLoadDialogEUlRKN11IHTMLWindow24OpenFileDialogResponse_tEE_
 *ZN11CLoginUsers10SaveAvatarE8CSteamIDEUlvE_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
@@ -2778,7 +2791,6 @@ $system\InGameOverlayScreenshotHotKey
 *ZN23CSystemReportController20JSSubmitSystemReportEPKc9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN23CSystemReportController21YldSubmitSystemReportERK10CUtlString9CSmartPtrI18CJSCallbackPromiseEEUlP29UploadLocalClientLogsResult_tbS5_E_
 *ZN23CSystemReportController22JSGenerateSystemReportE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
-*ZN24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZN24CFamilySharingController18SetPreferredLenderEjj9CSmartPtrI18CJSCallbackPromiseEEUlP26SetPreferredLenderResult_tbS2_E_
 *ZN24CFamilySharingController20AuthorizeLocalDeviceE9CSmartPtrI18CJSCallbackPromiseEEUlP23AuthorizeDeviceResult_tbS2_E_
 *ZN24CFamilySharingController22DeauthorizeLocalDeviceE9CSmartPtrI18CJSCallbackPromiseEEUlP25DeauthorizeDeviceResult_tbS2_E_
@@ -2864,18 +2876,19 @@ $system\InGameOverlayScreenshotHotKey
 *ZN25CGamescopeControllerLinux10InitializeEvE26CWebUIGamescopeGetStateJob
 *ZN25CGamescopeControllerLinux10InitializeEvE31CWebUIGamescopeSetBlurParamsJob
 *ZN25CGamescopeControllerLinux10InitializeEvE38CWebUIGamescopeReArmMuraCalibrationJob
-*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE11_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE12_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK10CUtlStringE9_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK27CGamescope_GetState_RequestR28CGamescope_GetState_ResponseE_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK32CGamescope_SetBlurParams_RequestR33CGamescope_SetBlurParams_ResponseE0_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK39CGamescope_ReArmMuraCalibration_RequestR40CGamescope_ReArmMuraCalibration_ResponseE1_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlbE10_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE3_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE4_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE5_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE7_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE8_
 *ZN25CGamescopeControllerLinux10InitializeEvEUliE2_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlvE10_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlvE11_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlvE6_
 *ZN25CGamescopeControllerLinux20SetQAMKeyboardHotkeyEPK10CMsgHotkeyEUljE_
 *ZN25CGamescopeControllerLinux21OnScreenshotTriggeredEP21ScreenshotTriggered_tEUlvE_
@@ -2927,6 +2940,7 @@ $system\InGameOverlayScreenshotHotKey
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE33CWebUIBluetoothManagerGetStateJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE35CWebUIBluetoothManagerCancelPairJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE35CWebUIBluetoothManagerDisconnectJob
+*ZN31CSystemBluetoothControllerLinux10InitializeEvE35CWebUIBluetoothManagerSetTrustedJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE39CWebUIBluetoothManagerSetDiscoveringJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE39CWebUIBluetoothManagerSetWakeAllowedJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE41CWebUIBluetoothManagerGetDeviceDetailsJob
@@ -2937,6 +2951,7 @@ $system\InGameOverlayScreenshotHotKey
 *ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK34CBluetoothManager_GetState_RequestR35CBluetoothManager_GetState_ResponseE0_
 *ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK36CBluetoothManager_CancelPair_RequestR37CBluetoothManager_CancelPair_ResponseE5_
 *ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK36CBluetoothManager_Disconnect_RequestR37CBluetoothManager_Disconnect_ResponseE8_
+*ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK36CBluetoothManager_SetTrusted_RequestR37CBluetoothManager_SetTrusted_ResponseE10_
 *ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK40CBluetoothManager_SetDiscovering_RequestR41CBluetoothManager_SetDiscovering_ResponseE3_
 *ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK40CBluetoothManager_SetWakeAllowed_RequestR41CBluetoothManager_SetWakeAllowed_ResponseE9_
 *ZN31CSystemBluetoothControllerLinux10InitializeEvEUlRK42CBluetoothManager_GetDeviceDetails_RequestR43CBluetoothManager_GetDeviceDetails_ResponseE2_
@@ -2957,6 +2972,7 @@ $system\InGameOverlayScreenshotHotKey
 *ZN32CSystemStorageDeviceManagerLinux10InitializeEvEUlRK37CStorageDeviceManager_Unmount_RequestR38CStorageDeviceManager_Unmount_ResponseE6_
 *ZN32CSystemStorageDeviceManagerLinux10InitializeEvEUlRK38CStorageDeviceManager_GetState_RequestR39CStorageDeviceManager_GetState_ResponseE2_
 *ZN32CSystemStorageDeviceManagerLinux19RunScheduledTrimAllEvEUlvE_
+*ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZZN12CUDisksDrive8YldAdoptEPKcS1_bENKUlvE_clEvEUl10StringViewE_
 *ZZN19CFactoryResetHelper19YldFactoryResetFullEvENKUlvE_clEvEUl10StringViewE_
 *ZZN23CPulseAudioRecorderBase26CreateProcessRecordingSinkEvENKUlvE0_clEvEUlvE0_
@@ -3047,6 +3063,8 @@ $system\InGameOverlayScreenshotHotKey
 *\n&k_EContentCheckProvider_GoogleVertexAI
 *\n&k_EControllerElementTypeTrackpadCenter
 *\n&k_EDeviceDisconnectMethodFeatureReport
+*\n&k_EMarketingMessageClickLocation_Image
+*\n&k_EMarketingMessageTemplate_AutoRender
 *\n&k_ENotificationSettingNotifyUseDefault
 *\n&k_EPartnerEventDisplayLocation_Invalid
 *\n&k_EPartnerEventDisplayLocation_NewsHub
@@ -3193,6 +3211,7 @@ $system\InGameOverlayScreenshotHotKey
 +\n&k_EMsgClientRequestAccountDataResponse
 +\n&k_EMsgClientRequestFreeLicenseResponse
 +\n&k_EMsgClientUninstallClientAppResponse
++\n&k_EMsgDRMWorkerProcessSignFileResponse
 +\n&k_EMsgEconTrading_InitiateTradeRequest
 +\n&k_EMsgGMStatsForwardToAdminConnections
 +\n&k_EMsgMDSGetDepotDecryptionKeyResponse
@@ -3210,6 +3229,7 @@ $system\InGameOverlayScreenshotHotKey
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
 +\n'k_EChatRoomMessageReactionType_Emoticon
 +\n'k_EChatroomNotificationLevel_MentionAll
++\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_EClientNotificationType_FriendMessage
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
@@ -3217,6 +3237,7 @@ $system\InGameOverlayScreenshotHotKey
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EControllerElementTypeMagnifyingGlass
 +\n'k_EGameSearchResult_SearchFailedNoHosts
++\n'k_EMarketingMessageClickLocation_Button
 +\n'k_EMarketingMessagePublisherAssociation
 +\n'k_EPartnerEventDisplayLocation_StoreHub
 +\n'k_EProfileCustomizationTypeAchievements
@@ -3367,6 +3388,7 @@ $system\InGameOverlayScreenshotHotKey
 ,\n(k_ECommentThreadTypePublishedFile_Public
 ,\n(k_EControllerElementTypeButtonBumperLeft
 ,\n(k_EGameRecordingType_BackgroundRecording
+,\n(k_EMarketingMessageClickLocation_Unknown
 ,\n(k_EMarketingMessageLookupByTitleWithType
 ,\n(k_EMarketingMessageTemplate_DLC_Override
 ,\n(k_EPartnerLinkTrackingBackfillSource_Web
@@ -3784,7 +3806,7 @@ $system\InGameOverlayScreenshotHotKey
 .CKeyEscrow_Request
 .CKeyEscrow_Response"
 .CKeyEscrow_Ticket*7\n
-.CMarketingMessageHourlyStats"P\n;CMarketingMessages_GetPartnerReadyToPublishMessages_Request
+.CMarketingMessageHourlyStats"I\n:CMarketingMessages_GetMarketingMessageClickedStats_Request
 .CMarketingMessageHourlyStats"m\n?CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 .CMarketingMessageProto
 .CMarketingMessageProto"
@@ -3989,10 +4011,12 @@ $system\InGameOverlayScreenshotHotKey
 .ControllerVector2
 .ControllerVector3
 .ControllerVector3"
-.DetectedAppContent*
+.DetectedAppContent"K\n:CDepotContentDetection_GetDetectedContentSingleApp_Request
 .EAgreementType
+.EAppAntiCheatType
 .EAppContentDetectionType"P\n
 .EAppControllerSupportLevel
+.EAppGameEngineType*
 .EAppReportType
 .EAuthSessionGuardType
 .EAuthSessionGuardType"]\n<CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -4066,9 +4090,12 @@ $system\InGameOverlayScreenshotHotKey
 .EHIDDeviceLocation
 .EJSRegisterMethodType"
 .EKeyEscrowUsage
+.EMarketingMessageClickLocation"r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
+.EMarketingMessageClickLocation:(k_EMarketingMessageClickLocation_Unknown"=\n.CMarketingMessages_GetMarketingMessage_Request
 .EMarketingMessageLookupType
 .EMarketingMessageTemplateType
-.EMarketingMessageTemplateType:#k_EMarketingMessageTemplate_Unknown"=\n.CMarketingMessages_GetMarketingMessage_Request
+.EMarketingMessageTemplateType:#k_EMarketingMessageTemplate_Unknown
+.EMarketingMessageTemplateType:#k_EMarketingMessageTemplate_Unknown"
 .EMarketingMessageType
 .EMarketingMessageVisibility
 .EMessageReactionType
@@ -4428,6 +4455,8 @@ $system\InGameOverlayScreenshotHotKey
 /\n+k_EContentDescriptor_AdultOnlySexualContent
 /\n+k_EContentDescriptor_FrequentViolenceOrGore
 /\n+k_EControllerElementTypeButtonJoystickRight
+/\n+k_EMarketingMessageClickLocation_DlcCapsule
+/\n+k_EMarketingMessageClickLocation_HeaderArea
 /\n+k_EPartnerEventDisplayLocation_CommunityHub
 /\n+k_EPartnerEventDisplayLocation_StoreAppPage
 /\n+k_EPartnerLinkTrackingBackfillSource_Mobile
@@ -5521,12 +5550,11 @@ $system\InGameOverlayScreenshotHotKey
 13CCallbackImplILi4EE
 13CCallbackImplILi5120EE
 13CCallbackImplILi520EE
-13CCallbackImplILi524EE
 13CCallbackImplILi52EE
 13CCallbackImplILi564EE
 13CCallbackImplILi60EE
 13CCallbackImplILi628EE
-13CCallbackImplILi640EE
+13CCallbackImplILi700EE
 13CCallbackImplILi75EE
 13CCallbackImplILi76EE
 13CCallbackImplILi784EE
@@ -5603,6 +5631,7 @@ $system\InGameOverlayScreenshotHotKey
 14CMsgMouseWheel
 14CMsgNeedsPaint
 14CMsgOpenNewTab
+14CMsgPowerCurve
 14CMsgShowWindow
 14CMsgStatusText
 14CMsgURLChanged
@@ -5681,11 +5710,13 @@ $system\InGameOverlayScreenshotHotKey
 15CMemberFunctor0IP24CGameRecordingControllerMS0_FvvE18CFuncMemPolicyNoneE
 15CMemberFunctor1IP24CGameRecordingControllerMS0_F7EResultNS0_13PendingClip_tEES3_18CFuncMemPolicyNoneE
 15CMetricsPayload
+15CMsgBezierCurve
 15CMsgBrowserSize
 15CMsgDisplayInfo
 15CMsgFullRepaint
 15CMsgHideToolTip
 15CMsgKeyValueSet
+15CMsgLinearCurve
 15CMsgMonitorInfo
 15CMsgShowToolTip
 15COpenSSLContext
@@ -5810,6 +5841,7 @@ $system\InGameOverlayScreenshotHotKey
 16CStreamingKeymap
 16CStructNetPacket
 16CTrackedCallback
+16CTransportDialog
 16CVR2DGameOverlay
 16HTMLComboBoxHost
 16IDynamicFunction
@@ -5844,6 +5876,7 @@ $system\InGameOverlayScreenshotHotKey
 17CMsgKubeRPCPacket
 17CMsgLoadedRequest
 17CMsgMouseDblClick
+17CMsgResponseCurve
 17CMsgSearchResults
 17CMsgStartDownload
 17CMsgSystemDisplay
@@ -5916,6 +5949,7 @@ $system\InGameOverlayScreenshotHotKey
 18CMsgSavePageToJPEG
 18CMsgSettingVariant
 18CMsgShortcutAppIds
+18CMsgSigmoidalCurve
 18CNetFilterWorkItem
 18COpenSSLConnection
 18COverlayController
@@ -5997,8 +6031,10 @@ $system\InGameOverlayScreenshotHotKey
 19CMsgControllerInput
 19CMsgFinishedRequest
 19CMsgFocusedNodeText
+19CMsgFunctionalCurve
 19CMsgGetZoomResponse
 19CMsgIPAddressBucket
+19CMsgLinearListCurve
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
 19CMsgProtobufWrapped
@@ -6432,7 +6468,7 @@ $system\InGameOverlayScreenshotHotKey
 20CJSMethodCallHandlerI24CServerBrowserControllerJPK9CJSObject9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI24CServerBrowserControllerJPK9CJSObjectEE
 20CJSMethodCallHandlerI24CServerBrowserControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI24CServerBrowserControllerJPKcjj9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI24CServerBrowserControllerJPKcjjj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI24CServerBrowserControllerJj9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI24CServerBrowserControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI24CServerBrowserControllerJjEE
@@ -6525,6 +6561,7 @@ $system\InGameOverlayScreenshotHotKey
 20CMultipleCallResultsI18CLibraryAssetCache22HTTPRequestCompleted_tE
 20CMultipleCallResultsI18CLibraryAssetCache33SaveHTTPResponseToDiskCompleted_tE
 20CMultipleCallResultsI19CCustomImageManager22HTTPRequestCompleted_tE
+20CMultipleCallResultsI20CGameActionLaunchApp17LaunchAppResult_tE
 20CMultipleCallResultsI20CGameActionLaunchApp25VerifySignedFilesResult_tE
 20CMultipleCallResultsI20CGameActionLaunchApp34CheckShaderDepotManifestIDResult_tE
 20CMultipleCallResultsI20CMarketingController34PendingMarketingMessagesResponse_tE
@@ -6738,6 +6775,7 @@ $system\InGameOverlayScreenshotHotKey
 23CGameStreamVideoEncoder
 23CGetPotentialFoldersJob
 23CHardwarePackageDetails
+23CLibraryAssetCleanupJob
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -7123,6 +7161,7 @@ $system\InGameOverlayScreenshotHotKey
 29CGameRecordingPostGameSummary
 29CHIDDevicePipeSharedMemStream
 29CHTTPServerSend100ContinueJob
+29CMsgChildProcessQueryResponse
 29CMsgClientEmoticonList_Effect
 29CMsgClientLANP2PRequestChunks
 29CMsgClientPersonaState_Friend
@@ -7218,6 +7257,7 @@ $system\InGameOverlayScreenshotHotKey
 2\r.ECPUGovernor
 2\r.EExportCodec"
 2\r.EExportCodecB!
+2\r.EGpuDriverId
 2\r.ELobbyStatus*
 2\r.ELogFileType
 2\r.EUpdaterType
@@ -7262,6 +7302,7 @@ $system\InGameOverlayScreenshotHotKey
 3.CGameRecording_OpenOverlayToGamePhase_Notification
 3.CMarketingMessages_CreateMarketingMessage_Response"
 3.CMarketingMessages_DeleteMarketingMessage_Response"
+3.CMarketingMessages_MarkMessageClicked_Notification
 3.CMarketingMessages_UpdateMarketingMessage_Response"
 3.CPlayer_GetMutualFriendsForIncomingInvites_Request
 3.CPlayer_GetPurchasedProfileCustomizations_Response"
@@ -7434,6 +7475,7 @@ $system\InGameOverlayScreenshotHotKey
 32CInventory_PurchaseInit_Response
 32CMsgBluetoothDevicesData_Adapter
 32CMsgBluetoothDevicesData_Manager
+32CMsgChildProcessQueryGpuTopology
 32CMsgClientPersonaState_Friend_KV
 32CMsgCloudPendingRemoteOperations
 32CMsgNetworkDeviceConnect_KnownAP
@@ -7658,6 +7700,7 @@ $system\InGameOverlayScreenshotHotKey
 35CGameRecording_QueryPhases_Response
 35CGameServers_GetServerList_Response
 35CInventory_PurchaseFinalize_Request
+35CMarketingMessageClickedHourlyStats
 35CMsgClientFriendProfileInfoResponse
 35CMsgClientSetPlayerNicknameResponse
 35CMsgControllerActionSetMiscSettings
@@ -7715,6 +7758,7 @@ $system\InGameOverlayScreenshotHotKey
 36CAuthentication_Token_Revoke_Request
 36CBluetoothManager_CancelPair_Request
 36CBluetoothManager_Disconnect_Request
+36CBluetoothManager_SetTrusted_Request
 36CBroadcast_InviteToBroadcast_Request
 36CBroadcast_WebRTCStartResult_Request
 36CChatRoom_DeleteChatMessages_Request
@@ -7791,6 +7835,7 @@ $system\InGameOverlayScreenshotHotKey
 37CAuthentication_Token_Revoke_Response
 37CBluetoothManager_CancelPair_Response
 37CBluetoothManager_Disconnect_Response
+37CBluetoothManager_SetTrusted_Response
 37CBroadcast_GetBroadcastStatus_Request
 37CBroadcast_GetBuildClipStatus_Request
 37CBroadcast_InviteToBroadcast_Response
@@ -8115,6 +8160,7 @@ $system\InGameOverlayScreenshotHotKey
 40CGamescope_ReArmMuraCalibration_Response
 40CHIDMessageFromRemote_DeviceInputReports
 40CInventory_PurchaseInit_Request_LineItem
+40CMsgChildProcessQueryGpuTopology_GpuInfo
 40CMsgClientSiteLicenseGetContentCacheInfo
 40CMsgSwapModeInputBindings_CModeInputSwap
 40CParental_EnableParentalSettings_Request
@@ -8761,6 +8807,7 @@ $system\InGameOverlayScreenshotHotKey
 4K+T
 4T9\n
 4\fZQ
+4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
 4\n/k_EMsgClientChatGetFriendMessageHistoryResponse
 4\n/k_EMsgClientGetNumberOfCurrentPlayersDPResponse
@@ -8837,6 +8884,7 @@ $system\InGameOverlayScreenshotHotKey
 50CGameRecording_OpenOverlayToGamePhase_Notification
 50CMarketingMessages_CreateMarketingMessage_Response
 50CMarketingMessages_DeleteMarketingMessage_Response
+50CMarketingMessages_MarkMessageClicked_Notification
 50CMarketingMessages_UpdateMarketingMessage_Response
 50CMsgClientFriendsGroupsList_FriendGroupsMembership
 50CMsgControllerInputControllerActionLEDColorBinding
@@ -9015,7 +9063,9 @@ $system\InGameOverlayScreenshotHotKey
 58CClientMetrics_ReportReactUsage_Notification_ComponentData
 58CClientNotificationFamilySharingDeviceAuthorizationChanged
 58CDataPublisher_SetVRDeviceInfoAggregationReference_Request
+58CDepotContentDetection_GetDetectedContentSingleApp_Request
 58CHIDMessageFromRemote_DeviceInputReports_DeviceInputReport
+58CMarketingMessages_GetMarketingMessageClickedStats_Request
 58CMarketingMessages_GetMarketingMessageViewerStats_Response
 58CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response
 58CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
@@ -9025,7 +9075,9 @@ $system\InGameOverlayScreenshotHotKey
 59CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 59CChatUsability_ClientUsabilityMetrics_Notification_Settings
 59CDataPublisher_SetVRDeviceInfoAggregationReference_Response
+59CDepotContentDetection_GetDetectedContentSingleApp_Response
 59CDeviceAuth_GetExcludedGamesInLibrary_Response_ExcludedGame
+59CMarketingMessages_GetMarketingMessageClickedStats_Response
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 59CPlayer_GetFriendsGameplayInfo_Response_FriendsGameplayInfo
 59CPublishedFile_GetAppRelationships_Response_AppRelationship
@@ -9271,8 +9323,10 @@ $system\InGameOverlayScreenshotHotKey
 7KM1
 7K[iu
 7M6L
+7Vector2
 7Wj\n
 7XRJ
+7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
 7\n/deprecated_timestamp_machine_steamguard_enabled
 7\n2k_EMsgAMGameServerPlayerCompatibilityCheckResponse
@@ -9433,7 +9487,6 @@ $system\InGameOverlayScreenshotHotKey
 9CCallbackI19CSteamURLController23LaunchGameMsgReceived_tLb0EE
 9CCallbackI20CFriendsUIController35MultiplayerSessionShareURLChanged_tLb0EE
 9CCallbackI20CGameActionLaunchApp15VRProcessQuit_tLb0EE
-9CCallbackI20CGameActionLaunchApp17AppLaunchResult_tLb0EE
 9CCallbackI20CGameActionLaunchApp17DRMDataResponse_tLb0EE
 9CCallbackI20CGameActionLaunchApp18AppUpdateStopped_tLb0EE
 9CCallbackI20CGameActionLaunchApp18TimedTrialStatus_tLb0EE
@@ -9505,7 +9558,6 @@ $system\InGameOverlayScreenshotHotKey
 9ConParams
 9F&Y
 9GmlF8
-9HxD
 9IGv
 9Q`V,
 9R>U
@@ -9519,6 +9571,7 @@ $system\InGameOverlayScreenshotHotKey
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\fCountryStats
 9\n\fFamilyMember
+9\n\fgpu_topology
 9\n\noneof_decl
 9^W0
 9a&g
@@ -9546,6 +9599,7 @@ $system\InGameOverlayScreenshotHotKey
 :AhHa
 :LBN
 :L\n\rsetting_store
+:\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamDeckKeyboardLayout_Chinese_Traditional_Cangjie
@@ -9583,6 +9637,8 @@ $system\InGameOverlayScreenshotHotKey
 ;.CChatRoom_NotifyShouldRejoinChatRoomVoiceChat_Notification
 ;.CClientMetrics_ContentDownloadResponse_Counts_Notification
 ;.CDataPublisher_SetVRDeviceInfoAggregationReference_Request
+;.CDepotContentDetection_GetDetectedContentSingleApp_Request
+;.CMarketingMessages_GetMarketingMessageClickedStats_Request
 ;.CMarketingMessages_GetMarketingMessageViewerStats_Response"
 ;.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
 ;.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
@@ -9610,6 +9666,8 @@ $system\InGameOverlayScreenshotHotKey
 <.CAuthenticationSupport_QueryRefreshTokensByAccount_Response"
 <.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 <.CDataPublisher_SetVRDeviceInfoAggregationReference_Response"
+<.CDepotContentDetection_GetDetectedContentSingleApp_Response"
+<.CMarketingMessages_GetMarketingMessageClickedStats_Response"
 <.CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 <.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response"
 <.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response"
@@ -9619,6 +9677,7 @@ $system\InGameOverlayScreenshotHotKey
 <4E87
 <>|~$`"'\!&*?%#\n\r;
 <HKEY_CURRENT_USER\Software\Valve\Steam\OverlayScaleInterface
+<\n/k_EChildProcessQueryExitCode_ErrorUnimplemented
 <\n8k_ESharedLibrary_LicenseExcluded_PaymentAuthorizedDevice
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_EStreamControlInputControllerWirelessPresence_OBSOLETE
@@ -10209,6 +10268,7 @@ CMsgBrowserSetMinSize
 CMsgBrowserSetName
 CMsgBrowserSize
 CMsgCanGoBackAndForward
+CMsgChildProcessQueryResponse
 CMsgClearAllBrowsingData
 CMsgClearAllCookies
 CMsgClearHistory
@@ -10785,6 +10845,7 @@ CreateInterface
 CreateInviteLink
 CreateMarketingMessage
 CreateShareClip
+CreateSimpleProcess
 CreateVideoRecordingSegmentWriter
 CreatorHomeLink
 CumulativeSumToAverageRow_C
@@ -10901,9 +10962,11 @@ E=FZGrH
 E>70aZSL}voh
 EACState
 EAgreementType
+EAppAntiCheatType
 EAppCloudStatus
 EAppContentDetectionType
 EAppControllerSupportLevel
+EAppGameEngineType
 EAppHDRSupport
 EAppReportType
 EAsyncGameSessionUserState
@@ -10931,6 +10994,8 @@ EChatRoomMemberStateChange
 EChatRoomMessageReactionType
 EChatRoomNotificationLevel
 EChatRoomServerMessage
+EChildProcessQueryCommand
+EChildProcessQueryExitCode
 EClientExecutionSite
 EClientNotificationType
 EClientPersonaStateFlag
@@ -10979,6 +11044,7 @@ EHIDDeviceDisconnectMethod
 EHIDDeviceLocation
 EJSRegisterMethodType
 EKeyEscrowUsage
+EMarketingMessageClickLocation
 EMarketingMessageLookupType
 EMarketingMessageTemplateType
 EMarketingMessageType
@@ -11098,6 +11164,7 @@ EWindowsUpdateRebootBehavior
 EXTRACTOR-dtls_srtp
 E[3M
 E\foD
+E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
 E\nAk_EClientNotificationType_FamilySharingDeviceAuthorizationChanged
 E\n\nAckMessage
 E\r\f52
@@ -11315,6 +11382,7 @@ Gamescope/DisableFrameLimit
 Gamescope/ForceComposite
 Gamescope/GameResolutionGlobal
 Gamescope/GuideKeyboardHotkey
+Gamescope/HDREnabled
 Gamescope/HDRVisualization2
 Gamescope/QAMKeyboardHotkey
 Gamescope/RefreshRate
@@ -11397,6 +11465,7 @@ GetDLCForAppsSolr
 GetDepotBuildResult
 GetDepotPatchInfo
 GetDesiredSteamUIWindows
+GetDetectedContentSingleApp
 GetDeviceDetails
 GetDiscoveryQueue
 GetDiscoveryQueueSettings
@@ -11441,12 +11510,15 @@ GetLocalHostname
 GetLocalizedNameForTags
 GetManifestRequestCode
 GetMarketingMessage
+GetMarketingMessageClickedStats
 GetMarketingMessageViewerStats
 GetMarketingMessagesForApps
 GetMarketingMessagesForPartner
 GetMarketingMessagesForUser
 GetMessageHistory
 GetMessageReactionReactors
+GetMiniDumpBuildID
+GetMiniDumpSteamID
 GetMiniProfileBackground
 GetMissingDepotChunks
 GetMostPopularTags
@@ -11535,6 +11607,7 @@ Glagolitic
 Google.Protobuf.Reflection
 Google.Protobuf.WellKnownTypesb
 Gothic
+GpuInfo
 Greek
 Gujarati
 Gurmukhi
@@ -11891,6 +11964,7 @@ Malayalam
 Manager
 Mandaic
 ManuallyDeleteRecordingsForApps
+MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
 MarkTaskComplete
@@ -12114,7 +12188,6 @@ N20CFriendsUIController45CCallback_OnMultiplayerSessionShareURLChangedE
 N20CGameActionLaunchApp22CCallback_OnUnlockH264E
 N20CGameActionLaunchApp25CCallback_OnVRProcessQuitE
 N20CGameActionLaunchApp27CCallback_OnAppInfoReceivedE
-N20CGameActionLaunchApp27CCallback_OnAppLaunchResultE
 N20CGameActionLaunchApp27CCallback_OnDRMDataResponseE
 N20CGameActionLaunchApp28CCallback_OnAppUpdateStoppedE
 N20CGameActionLaunchApp28CCallback_OnTimedTrialStatusE
@@ -13963,6 +14036,7 @@ ThreadShellExecute
 ThreadShellExecuteNoWindow
 ThreadSleep
 ThreadTerminateProcessCode
+ThreadWaitForProcessExit
 Tibetan
 Tifinagh
 Timeline
@@ -14399,6 +14473,20 @@ ZN19CSettingHandlerImplIbE22SetDefaultValueHandlerEOSt8functionIFbvEEEUlP18CMsgS
 ZN19CSettingHandlerImplIiE16SetChangeHandlerEOSt8functionIFvRKiEEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIiE22SetDefaultValueHandlerEOSt8functionIFivEEEUlP18CMsgSettingVariantE_
 ZPKE?81("
+ZSTD_CCtx_setParameter
+ZSTD_compress
+ZSTD_compressBound
+ZSTD_compress_usingCDict
+ZSTD_createCCtx
+ZSTD_createCDict
+ZSTD_createDCtx
+ZSTD_decompress
+ZSTD_decompress_usingDict
+ZSTD_freeCCtx
+ZSTD_freeCDict
+ZSTD_freeDCtx
+ZSTD_getErrorCode
+ZSTD_isError
 ZW][Rbmxv\fqsuwc;Wo?opP~|}|
 Z\fL+i
 Z\n"gamerecording_export_limit_bitrate
@@ -14420,6 +14508,7 @@ Zpm"U
 [\n\fGetChangeLog
 [\n\nCancelPair
 [\n\nDisconnect
+[\n\nSetTrusted
 [\n\voverlay_key
 [h1R
 \ at end of pattern
@@ -14457,6 +14546,7 @@ Zpm"U
 \n CChatRoom_GetInviteInfo_Response
 \n CChatRoom_SearchMembers_Response
 \n CClientNotificationFriendMessage
+\n CMsgChildProcessQueryGpuTopology
 \n CMsgRemoteDeviceStreamingRequest
 \n CPlayer_GetEmoticonList_Response
 \n CPlayer_GetNicknameList_Response
@@ -14542,6 +14632,7 @@ Zpm"U
 \n#CFriendMessages_SendMessage_Request
 \n#CGameRecording_QueryPhases_Response
 \n#CGameServers_GetServerList_Response
+\n#CMarketingMessageClickedHourlyStats
 \n#CMsgClientFriendProfileInfoResponse
 \n#CMsgHorizontalScrollBarSizeResponse
 \n#CMsgRemoteClientStartStreamResponse
@@ -14613,6 +14704,7 @@ Zpm"U
 \n%CTimedTrial_GetTimeRemaining_Response
 \n%CVideo_GameRecordingSegmentUploadInfo
 \n%gamescope_enable_app_target_framerate
+\n%steammessages_childprocessquery.proto
 \n%steammessages_cloud.steamclient.proto
 \n%steammessages_sitelicenseclient.proto
 \n%steammessages_store.steamclient.proto
@@ -14874,6 +14966,7 @@ Zpm"U
 \n2CFamilyGroupsClient_NotifyRunningApps_Notification
 \n2CFriendsMessages_GetActiveMessageSessions_Response
 \n2CGameRecording_GetAppsWithBackgroundVideo_Response
+\n2CMarketingMessages_MarkMessageClicked_Notification
 \n2CPlayer_GetPurchasedProfileCustomizations_Response
 \n2CPlayer_GetRecentPlaytimeSessionsForChild_Response
 \n2CPublishedFile_AreFilesInSubscriptionList_Response
@@ -14917,6 +15010,7 @@ Zpm"U
 \n:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
 \n;CAuthenticationSupport_QueryRefreshTokensByAccount_Response
 \n;CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
+\n;CDepotContentDetection_GetDetectedContentSingleApp_Response
 \n;CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response
 \n;ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
 \n<CSteamInputService_ControllerButtonStateChanged_Notification
@@ -15157,7 +15251,6 @@ Zpm"U
 \n\fstring_value
 \n\fswift_prefix
 \n\fsync_timeout
-\n\fsysid_source
 \n\ftemplatename
 \n\ftime_created
 \n\ftime_expires
@@ -15305,6 +15398,7 @@ Zpm"U
 \n\nis_preload
 \n\nis_primary
 \n\nis_running
+\n\nis_trusted
 \n\nissuerName
 \n\nitem_class
 \n\nitem_title
@@ -15450,6 +15544,7 @@ Zpm"U
 \n\rchallenge_url
 \n\rchat_group_id
 \n\rclass_unknown
+\n\rclicked_count
 \n\rclient_cellid
 \n\rcloud_enabled
 \n\rcloudfilename
@@ -15566,6 +15661,7 @@ Zpm"U
 \n\rordered_bytes
 \n\rother_regions
 \n\rowner_steamid
+\n\rpacket_number
 \n\rpath_prefixes
 \n\rpct_remaining
 \n\rpersona_state
@@ -15589,6 +15685,7 @@ Zpm"U
 \n\rremoved_appid
 \n\rrendered_text
 \n\rreplace_entry
+\n\rreply_address
 \n\rreport_number
 \n\rreserved_name
 \n\rresult_detail
@@ -16278,6 +16375,7 @@ Zpm"U
 \venums.proto"H\n'CFamilyGroups_CreateFamilyGroup_Request
 \venums.proto"\\n#CClientMetrics_AppInterfaceCreation
 \venums.proto"^\n\tCMsgKeyUp
+\venums.proto"f\n
 \venums.proto"r\n
 \venums.proto"|\n\nCMsgHotkey
 \vhvTJ
@@ -16373,6 +16471,7 @@ __strcoll_l
 __strcpy_chk
 __strdup
 __strftime_l
+__strncat_chk
 __strtod_l
 __strtof_l
 __strxfrm_l
@@ -16539,6 +16638,7 @@ addr
 address1
 address2
 address_of_request_url
+admin_request_spoofing_steamid
 admin_spoofing_user
 adult_content_sex
 adult_content_violence
@@ -16571,7 +16671,6 @@ allo
 allow
 allow_cached_credentials
 allow_desktop_config
-allow_experimental_hdr
 allow_external_authenticator
 allow_field_named_steam_id
 allow_late_firing
@@ -16996,6 +17095,7 @@ clanid
 classes
 classid
 classified_agent
+click_location
 client_account_id
 client_bitrate
 client_changenumber
@@ -17047,6 +17147,7 @@ compatibility_mode
 component_code
 component_name
 component_type
+compression_method
 computed
 conditional group contains more than two branches
 config
@@ -17182,12 +17283,12 @@ date_downloaded
 date_range_created
 date_range_updated
 days
-debug_force_hdr_support
 debug_get_solr_query
 debug_solr_query
 debug_source_string_index
 default_app_update_behavior
 default_chat_id
+default_gpu_id
 default_local_path
 default_mouse_mode
 default_ping_rate
@@ -17239,8 +17340,10 @@ desktop_portal_file_chooser_proxy_get_property
 desktop_portal_file_chooser_proxy_set_property
 details
 detect_self_dependency
+detected_anticheat
 detected_app_content
 detected_content
+detected_gameengine
 detection_type
 developer_mode_enabled
 device
@@ -17344,6 +17447,9 @@ dpi_horizontal
 dqN[0%
 drive_id
 driver
+driver_version_major
+driver_version_minor
+driver_version_patch
 drives
 droptime
 dst_gc_dir_index
@@ -17647,7 +17753,6 @@ force_direct_hwnd_popups
 force_emit_message
 force_emit_service
 force_fake_mandatory_update
-force_hdr_10pq_output_debug
 force_hdr_wide_gammut_for_sdr
 force_php_generation
 force_thumbnail
@@ -18024,6 +18129,7 @@ gamescope_disable_framelimit
 gamescope_display_refresh_rate
 gamescope_force_composite
 gamescope_guide_hotkey
+gamescope_hdr_enabled
 gamescope_hdr_visualization
 gamescope_qam_hotkey
 gamesearchresult
@@ -18073,7 +18179,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenv
+ggenF[
 gidlist
 gidparentcomment
 gidshoppingcart
@@ -18139,6 +18245,7 @@ gpu_performance_manual_max_mhz
 gpu_performance_manual_mhz
 gpu_performance_manual_min_mhz
 gpu_webview_regkey_disabled
+gpus
 gqr<
 gr_mode
 graph
@@ -18465,7 +18572,6 @@ is_dhcp_enabled
 is_discovering
 is_display_brightness_available
 is_display_colortemp_available
-is_display_oc_enabled
 is_dynamic_refresh_rate_enabled
 is_dynamic_vrs_available
 is_early_access
@@ -18473,7 +18579,6 @@ is_echo_to_self
 is_explicit_delete
 is_external_display
 is_fan_control_available
-is_fbs_universe
 is_formattable
 is_fps_limit_enabled
 is_free
@@ -18487,15 +18592,13 @@ is_generic_gamepad
 is_generic_joystick
 is_hdr_capable
 is_hdr_debug_heatmap_enabled
-is_hdr_enabled
-is_hdr_supported
+is_hdr_output_active
 is_hdr_visualization_supported
 is_invalid_os_type
 is_live
 is_low_latency_mode_enabled
 is_mandatory_update_available
 is_media_available
-is_mode_switching_supported
 is_mura_correction_supported
 is_muted
 is_nis_supported
@@ -18533,6 +18636,7 @@ is_variable_resolution_enabled
 is_visible_in_steam_china
 is_vrr_capable
 is_vrr_enabled
+is_vrr_output_active
 is_vrr_supported
 is_wifi_debug_force_disabled
 is_wifi_debug_supported
@@ -18632,6 +18736,16 @@ k_EACState_Unknown
 k_EAgreementType_ChinaSSA
 k_EAgreementType_GlobalSSA
 k_EAgreementType_Invalid
+k_EAppAntiCheatTypeBattlEye
+k_EAppAntiCheatTypeDenuvo
+k_EAppAntiCheatTypeEasyAC
+k_EAppAntiCheatTypeGameGuard
+k_EAppAntiCheatTypeHackShield
+k_EAppAntiCheatTypeNone
+k_EAppAntiCheatTypeOther
+k_EAppAntiCheatTypePunkBuster
+k_EAppAntiCheatTypeVAC
+k_EAppAntiCheatTypeXignCode
 k_EAppCloudStatusChecking
 k_EAppCloudStatusConflict
 k_EAppCloudStatusDisabled
@@ -18643,6 +18757,8 @@ k_EAppCloudStatusSynchronized
 k_EAppCloudStatusUnknown
 k_EAppCloudStatusUploading
 k_EAppContentDetectionType_None
+k_EAppGameEngineTypeNone
+k_EAppGameEngineTypeUnreal
 k_EAppReportType_Broken
 k_EAppReportType_HateSpeech
 k_EAppReportType_Invalid
@@ -18720,7 +18836,7 @@ k_ECPUGovernor_Invalid
 k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
-k_ECceResult_Failk_ECceResult_InvalidArgumentk_ECceResult_InvalidPathk_ECceResult_InvalidPathActionSetKeyk_ECceResult_InvalidPathActivatorIndexk_ECceResult_InvalidPathBaseActionSetKeyk_ECceResult_InvalidPathBindingIndexk_ECceResult_InvalidPathInputKeyk_ECceResult_InvalidPathLayerActionSetKeyk_ECceResult_InvalidPathSourceKeyk_ECceResult_InvalidValueActionSetNamek_ECceResult_InvalidValueActivatork_ECceResult_InvalidValueActivatorActivationk_ECceResult_InvalidValueActivatorSettingKeyk_ECceResult_InvalidValueActivatorSettingValuek_ECceResult_InvalidValueBindingk_ECceResult_InvalidValueBindingControllerActionk_ECceResult_InvalidValueBindingGameActionk_ECceResult_InvalidValueBindingGameActionKeyk_ECceResult_InvalidValueBindingGameActionSetKeyk_ECceResult_InvalidValueBindingGamepadButtonk_ECceResult_InvalidValueBindingKeyboardKeyk_ECceResult_InvalidValueBindingModeShiftk_ECceResult_InvalidValueBindingMouseButtonk_ECceResult_InvalidValueBindingMouseWheelk_ECceResult_InvalidValueSourceModek_ECceResult_InvalidValueSourceModeSettingKeyk_ECceResult_InvalidValueSourceModeSettingValuek_ECceResult_NoEditingConfigurationk_ECceResult_NotImplementedk_ECceResult_Ok
+k_ECceResult_Failk_ECceResult_InvalidArgumentk_ECceResult_InvalidPathk_ECceResult_InvalidPathActionSetKeyk_ECceResult_InvalidPathActivatorIndexk_ECceResult_InvalidPathBaseActionSetKeyk_ECceResult_InvalidPathBindingIndexk_ECceResult_InvalidPathInputKeyk_ECceResult_InvalidPathLayerActionSetKeyk_ECceResult_InvalidPathSourceKeyk_ECceResult_InvalidPathSourceModeKeyk_ECceResult_InvalidValueActionSetNamek_ECceResult_InvalidValueActivatork_ECceResult_InvalidValueActivatorActivationk_ECceResult_InvalidValueActivatorSettingKeyk_ECceResult_InvalidValueActivatorSettingValuek_ECceResult_InvalidValueBindingk_ECceResult_InvalidValueBindingControllerActionk_ECceResult_InvalidValueBindingGameActionk_ECceResult_InvalidValueBindingGameActionKeyk_ECceResult_InvalidValueBindingGameActionSetKeyk_ECceResult_InvalidValueBindingGamepadButtonk_ECceResult_InvalidValueBindingKeyboardKeyk_ECceResult_InvalidValueBindingModeShiftk_ECceResult_InvalidValueBindingMouseButtonk_ECceResult_InvalidValueBindingMouseWheelk_ECceResult_InvalidValueSourceModek_ECceResult_InvalidValueSourceModeSettingKeyk_ECceResult_InvalidValueSourceModeSettingValuek_ECceResult_NoEditingConfigurationk_ECceResult_NotImplementedk_ECceResult_Ok
 k_EChatRoomGroupRank_Default
 k_EChatRoomGroupRank_Guest
 k_EChatRoomGroupRank_Member
@@ -18737,6 +18853,7 @@ k_EChatRoomServerMsg_Invited
 k_EChatRoomServerMsg_Joined
 k_EChatRoomServerMsg_Kicked
 k_EChatRoomServerMsg_Parted
+k_EChildProcessQueryCommand_Max
 k_EClanBetaReleaseEvent
 k_EClanBroadcastEvent
 k_EClanChatEvent
@@ -18916,6 +19033,7 @@ k_EFrameStatPingTimeMS
 k_EFrameStatRoundTripLatencyMS
 k_EFrameStatServerDurationMS
 k_EFrameStatSteamDurationMS
+k_EFunctionCurveType_BezierCurvek_EFunctionCurveType_Countk_EFunctionCurveType_Lineark_EFunctionCurveType_LinearListk_EFunctionCurveType_Nonek_EFunctionCurveType_Powerk_EFunctionCurveType_Sigmoidalish
 k_EGPUPerformanceLevel_Auto
 k_EGPUPerformanceLevel_High
 k_EGPUPerformanceLevel_Invalid
@@ -19614,6 +19732,7 @@ k_EMsgDRMStabilityReport
 k_EMsgDRMSyncResponse
 k_EMsgDRMVariabilityReport
 k_EMsgDRMWorkerProcess
+k_EMsgDRMWorkerProcessSignFile
 k_EMsgDestJobFailed
 k_EMsgDeviceAuthorizationBase
 k_EMsgDirRequest
@@ -20323,7 +20442,6 @@ k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 k_TestingAbortedk_TestingBindAButtonk_TestingBindBButtonk_TestingBindDPadDownk_TestingBindDPadLeftk_TestingBindDPadRightk_TestingBindDPadUpk_TestingBindGuidek_TestingBindLeftShoulderk_TestingBindLeftStickButtonk_TestingBindLeftStickDownk_TestingBindLeftStickLeftk_TestingBindLeftStickRightk_TestingBindLeftStickUpk_TestingBindLeftTriggerk_TestingBindRightShoulderk_TestingBindRightStickButtonk_TestingBindRightStickDownk_TestingBindRightStickLeftk_TestingBindRightStickRightk_TestingBindRightStickUpk_TestingBindRightTriggerk_TestingBindSelectk_TestingBindSharek_TestingBindStartk_TestingBindTouchpadk_TestingBindXButtonk_TestingBindYButtonk_TestingBindingCompletek_TestingButtonsk_TestingCompletek_TestingFreeModek_TestingLeftHapticsk_TestingLeftJoystickk_TestingLeftTrackpadk_TestingLeftTrackpadPressurek_TestingLeftTriggerk_TestingRightHapticsk_TestingRightJoystickk_TestingRightTrackpadk_TestingRightTrackpadPressurek_TestingRightTriggerk_TestingStarted
-k_eBezierk_eCountk_eFlattenedk_eStraight
 k_eDiskSpaceType_Clip
 k_eDiskSpaceType_Recording
 k_eJPEG
@@ -21678,6 +21796,7 @@ reset_user_data
 responder_steamid
 response
 response HEADERS: stream_id == 0
+response"
 response_action
 response_steamurl
 response_time_ms
@@ -22647,6 +22766,7 @@ transport_error
 true
 true"
 true"v\n+CClanChatRooms_GetClanChatRoomInfo_Response
+trusted
 trusted_creator
 trusted_gravity_1g
 trusted_votes_down
@@ -22967,6 +23087,7 @@ vr_not_required
 vr_only
 vr_overlay_key
 vr_show_perf_graph_in_hmd
+vram_size_bytes
 vrhmd
 vsAd
 vsnprintf

@@ -1,4 +1,5 @@
 !a9X
+$ORIGIN
 %4xY
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE

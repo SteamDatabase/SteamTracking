@@ -1,0 +1,25 @@
+import "enums.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = false;
+
+message CMsgChildProcessQueryResponse {
+	oneof response {
+		.CMsgChildProcessQueryGpuTopology gpu_topology = 1;
+	}
+}
+
+message CMsgChildProcessQueryGpuTopology {
+	message GpuInfo {
+		optional uint32 id = 1;
+		optional string name = 2;
+		optional uint64 vram_size_bytes = 3;
+		optional .EGpuDriverId driver_id = 4 [default = k_EGpuDriverId_Invalid];
+		optional int32 driver_version_major = 5;
+		optional int32 driver_version_minor = 6;
+		optional int32 driver_version_patch = 7;
+	}
+
+	repeated .CMsgChildProcessQueryGpuTopology.GpuInfo gpus = 1;
+	optional uint32 default_gpu_id = 2;
+}

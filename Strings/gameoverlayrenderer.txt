@@ -1,3 +1,4 @@
+$ORIGIN
 10IMemStream
 12CIMENullImpl
 15CSavedMemStream

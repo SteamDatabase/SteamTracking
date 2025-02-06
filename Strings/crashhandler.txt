@@ -1,4 +1,5 @@
  (deleted)
+$ORIGIN
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 /dev/
 0123456789ABCDEF

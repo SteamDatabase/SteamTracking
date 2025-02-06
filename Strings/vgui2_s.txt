@@ -5,6 +5,7 @@
 #3CScs
 #bML"
 $4DTdt
+$ORIGIN
 %5EUeu
 &6FVfv
 '7GWgw
@@ -766,6 +767,7 @@ __stack_chk_fail
 __strcoll_l
 __strcpy_chk
 __strftime_l
+__strncat_chk
 __strtod_l
 __strtof_l
 __strxfrm_l
@@ -1043,7 +1045,6 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 putc
-puts
 putwc
 pwrite64
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
