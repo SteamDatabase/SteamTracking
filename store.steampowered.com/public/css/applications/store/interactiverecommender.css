@@ -161,7 +161,7 @@ a:link {
 .sNb81BS2VJGadBRs2O1xt {
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
   margin-right: 20px;
   margin-bottom: 4px;
   transition-property: filter;
@@ -804,7 +804,7 @@ a:link {
   .mjTZMxg7qSvnX4pDxJ6m-
   ._2UHKwc-ZjEsOg2utEQWBQJ {
   padding: 0px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border-radius: 0px;
 }
 ._3opuXcswH86T3In6Whwlow._3b9wGZ4YjBSqVbVI0Ux8Qe
@@ -895,9 +895,9 @@ input[type="range"]::-ms-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0);
-  color: rgba(0, 0, 0, 0);
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
 }
 input[type="range"]::-ms-fill-lower {
   background: #4fb7f3;

@@ -26,14 +26,14 @@
 }
 .NZMJ6g2iVnFsOOp-lDmIP ._253kKVMtNEOuJ2sC467VSH._193Yt09oJHb2WZtls8raUe {
   opacity: 1 !important;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .NZMJ6g2iVnFsOOp-lDmIP ._253kKVMtNEOuJ2sC467VSH._193Yt09oJHb2WZtls8raUe:hover {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .NZMJ6g2iVnFsOOp-lDmIP .AddLinkRegion {
   margin-top: 24px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .NZMJ6g2iVnFsOOp-lDmIP ._2aPcBP45fdgOK22RN0jbhm {
   height: 100%;
@@ -47,7 +47,7 @@
   display: flex;
   justify-content: center;
   transform-style: preserve-3d;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .BasicUI .NZMJ6g2iVnFsOOp-lDmIP.NZMJ6g2iVnFsOOp-lDmIP {
   max-height: unset;
@@ -215,10 +215,10 @@ div.HighPerfMode ._1IX7FPSY9Jb82KhBVBSkZa {
   max-width: none;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 80%,
+    black 80%,
     rgba(0, 0, 0, 0) 100%
   );
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
 }
 .BasicUI .HNbe3eZf6H7dtJ042x1vM._3_IUVzR9tpG_JKEjhwXEAb,
 .BasicUI .HNbe3eZf6H7dtJ042x1vM.HSQWw9HUAP6jtA2OZjS-u {
@@ -230,12 +230,8 @@ div.HighPerfMode ._1IX7FPSY9Jb82KhBVBSkZa {
   position: relative;
   transform: scaleY(-1);
   filter: saturate(2);
-  -webkit-mask-image: linear-gradient(
-    to top,
-    rgb(0, 0, 0) 80%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  mask-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to top, black 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
 }
 .BasicUI .HNbe3eZf6H7dtJ042x1vM._3_IUVzR9tpG_JKEjhwXEAb {
   width: 200%;
@@ -465,7 +461,7 @@ div.HighPerfMode ._1IX7FPSY9Jb82KhBVBSkZa {
   right: 8px;
   top: 8px;
   padding: 8px;
-  background: rgba(0, 0, 0, 0.6666666667);
+  background: #000a;
   border: 1px solid rgba(59, 127, 238, 0.541);
   color: #3b7fee;
   z-index: 51;
@@ -585,7 +581,7 @@ div.HighPerfMode ._1IX7FPSY9Jb82KhBVBSkZa {
   overflow: visible;
 }
 ._121fln1p_mlV8b9CUxpCDS text {
-  text-shadow: 1px 1px 10px #000, 0px 0px 22px rgba(0, 0, 0, 0.5333333333);
+  text-shadow: 1px 1px 10px #000, 0px 0px 22px #0008;
   letter-spacing: 1px;
 }
 .BasicUI ._121fln1p_mlV8b9CUxpCDS text {
@@ -816,7 +812,7 @@ html {
   background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%),
     rgba(29, 34, 39, 0.75);
   transition: border-bottom .3s;
-  border-bottom: 0px solid rgba(106, 106, 106, 0);
+  border-bottom: 0px solid #6a6a6a00;
   position: relative;
   top: 0;
   z-index: 10;
@@ -1095,12 +1091,8 @@ html {
   background: linear-gradient(to right, #70d61d, #01a75b);
 }
 ._3MzeFk7QqBUU3-eahz5UWy.o6V6tnMncxMeACPbqGtaV {
-  background: linear-gradient(
-    to right,
-    rgba(6, 191, 255, 0.5019607843),
-    rgba(45, 115, 255, 0.5019607843)
-  );
-  color: rgba(255, 255, 255, 0.5019607843);
+  background: linear-gradient(to right, #06bfff80, #2d73ff80);
+  color: #ffffff80;
   border: 1px solid #06c1ff;
   padding: 7px;
   padding-top: 3px;
@@ -1131,7 +1123,7 @@ html {
   margin: auto;
 }
 ._3MzeFk7QqBUU3-eahz5UWy.o6V6tnMncxMeACPbqGtaV ._3PV-5LTASyzLs3qOdUAQBy {
-  color: rgba(255, 255, 255, 0.5019607843);
+  color: #ffffff80;
 }
 ._2Ke99VagjO6dSjAa2PNqxC {
   padding: 0px;
@@ -1159,20 +1151,19 @@ html {
   box-sizing: border-box;
   background: linear-gradient(
     to right,
-    rgb(66, 68, 77) 0%,
-    rgb(53, 55, 63) 90%,
+    #42444d 0%,
+    #35373f 90%,
     rgba(53, 55, 63, 0) 110%
   );
   border-right: 0px solid #202127;
-  box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3333333333), 0 0px 16px 0px
-    rgba(0, 0, 0, 0.2666666667);
+  box-shadow: 0 0px 2px 0px #0005, 0 0px 16px 0px #0004;
 }
 ._14lr0njLPbO3nOvfNr1AzG._3QI8hmWvFHwAfrradTNDas.yTNHkI0JwNFkQUrUwQqN7 {
   color: #74d1ff;
   background: linear-gradient(
     to right,
-    rgb(79, 83, 100) 0%,
-    rgb(68, 71, 87) 90%,
+    #4f5364 0%,
+    #444757 90%,
     rgba(69, 73, 88, 0) 110%
   );
 }

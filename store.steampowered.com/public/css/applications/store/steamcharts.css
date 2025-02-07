@@ -432,7 +432,7 @@
   margin-left: 19px;
 }
 ._5XCIfYrMrb9F-9RyAd5HC {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   text-align: right;
   padding-right: 16px;
   width: 7%;
@@ -698,7 +698,7 @@ div#global_header .content {
   padding-top: 94px;
   overflow: hidden;
   background: #0e1014;
-  background: linear-gradient(180deg, #0e1014 50%, rgba(14, 16, 20, 0) 100%);
+  background: linear-gradient(180deg, #0e1014 50%, #0e101400 100%);
   transition: padding-top .2s;
 }
 .KSZ9hmL_XbHI_tlSUQylO svg._3qWYYrOe1bQhTJwm0zc4E3 {
@@ -739,7 +739,7 @@ div#global_header .content {
   }
   .KSZ9hmL_XbHI_tlSUQylO::-webkit-scrollbar {
     height: 0;
-    background: rgba(0, 0, 0, 0);
+    background: transparent;
   }
 }
 @media all and (max-width: 910px) {
@@ -876,7 +876,7 @@ div#global_header .content {
   height: 0;
   border-style: solid;
   border-width: 7px 9px 7px 0;
-  border-color: rgba(0, 0, 0, 0) #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: transparent #fff transparent transparent;
 }
 .wLFBOAfa7yijnxFGxj9xs ._27ASBphHd61RCZhLfsKIZ5 {
   display: inline-block;
@@ -884,7 +884,7 @@ div#global_header .content {
   height: 0;
   border-style: solid;
   border-width: 7px 0 7px 9px;
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff;
+  border-color: transparent transparent transparent #fff;
 }
 .wLFBOAfa7yijnxFGxj9xs
   ._1tUsAmcZXj8lDhFYLPtWSX._2VVBwS-S1js1QLzT90jv1S
@@ -892,7 +892,7 @@ div#global_header .content {
 .wLFBOAfa7yijnxFGxj9xs
   ._1tUsAmcZXj8lDhFYLPtWSX._2VVBwS-S1js1QLzT90jv1S
   .PFs4U4cBAxm-GI1zMSV7q {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #545c67;
+  border-color: transparent transparent transparent #545c67;
 }
 .ACgX0o9I42_zqWZHyiIhX {
   max-width: 940px;
@@ -1489,7 +1489,7 @@ div#global_header .content {
   margin-left: 19px;
 }
 ._1ZdIh_OWh9DUr5O4OCypQn {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   text-align: right;
   padding-right: 16px;
   width: 7%;
@@ -1630,7 +1630,7 @@ div#global_header .content {
   width: calc(100vw - 200px);
   max-width: 1900px;
   transform-origin: top;
-  -webkit-mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,

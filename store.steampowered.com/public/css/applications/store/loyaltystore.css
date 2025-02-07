@@ -250,8 +250,8 @@ body.v6.rewards .ModalPosition_Content {
   background: -webkit-linear-gradient(130deg, #d7e9f1, #78a9e2);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 ._1JlZbyLaXUjEM6_BR1pcN_ {
   margin-top: 10px;
@@ -313,12 +313,8 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   align-items: center;
   margin: 25px auto 0px auto;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0.2) 70%
-  );
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.2) 70%);
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
 }
 .NiGcLDhQ5ltKEgevn6Ctk {
   display: flex;
@@ -2252,7 +2248,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 13px;
   height: 13px;
   z-index: 4;
-  fill: rgba(235, 235, 235, 0.5960784314);
+  fill: #ebebeb98;
 }
 .skI5tVFxF4zkY8z56LALc
   .CcuoOiSs23_Y___I-1Myh
@@ -2480,7 +2476,7 @@ body.v6.rewards .ModalPosition_Content {
   background-image: linear-gradient(90deg, #c5cbd8 70%, rgba(0, 0, 0, 0));
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   transition-duration: .4s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   transition-property: transform;
@@ -2501,8 +2497,8 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(
     to bottom,
     rgba(242, 246, 248, 0.459) 0%,
-    rgb(216, 225, 231) 50%,
-    rgb(181, 198, 208) 52%,
+    #d8e1e7 50%,
+    #b5c6d0 52%,
     rgba(224, 239, 249, 0) 100%
   );
   position: absolute;
@@ -2627,7 +2623,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 13px;
   height: 13px;
   z-index: 4;
-  fill: rgba(235, 235, 235, 0.5960784314);
+  fill: #ebebeb98;
 }
 ._26i5MCASOy4tR-w-B4zwNH .CcuoOiSs23_Y___I-1Myh ._2_RnvOULQZCa2zLP-wkKt0 {
   flex: none;
@@ -2861,7 +2857,7 @@ body.v6.rewards .ModalPosition_Content {
   background-image: linear-gradient(90deg, #c5cbd8 70%, #c5cbd8);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   transition-duration: .4s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   transition-property: transform;
@@ -2882,8 +2878,8 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(
     to bottom,
     rgba(242, 246, 248, 0.459) 0%,
-    rgb(216, 225, 231) 50%,
-    rgb(181, 198, 208) 52%,
+    #d8e1e7 50%,
+    #b5c6d0 52%,
     rgba(224, 239, 249, 0) 100%
   );
   position: absolute;
@@ -4058,7 +4054,7 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(
     to bottom,
     rgba(6, 25, 51, 0.86) 0%,
-    rgba(0, 0, 0, 0) 60%
+    #00000000 60%
   );
 }
 ._3YNnWUgHCZcVvmfX9qpOQ {
@@ -6137,34 +6133,22 @@ body.v6.rewards .ModalPosition_Content {
 }
 ._1zw0IYqnKh-6iLonZf9P-G,
 ._1vgF7y8x0h-yXyDW_zLgnG {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0) 70%
-  );
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 70%);
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 70%);
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 70%);
   transform: translateZ(-1px) translateY(-5%) scale(2) rotateY(0deg);
 }
 @media (max-width: 2000px) {
   ._1zw0IYqnKh-6iLonZf9P-G,
   ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 55%
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 55%);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 55%);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 55%);
   }
 }
 @media (max-width: 1600px) {
   ._1zw0IYqnKh-6iLonZf9P-G,
   ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 50vw
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 50vw);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
   }
 }
 @media (max-width: 1280px) {
@@ -6216,7 +6200,7 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(130deg, #d7e9f1, #78a9e2);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   padding-top: 60px;
 }
 ._1j9rPjdq4_IWNkY49opKvj {
@@ -6510,7 +6494,7 @@ body.v6.rewards .ModalPosition_Content {
   white-space: nowrap;
 }
 .tLuQZ_E7xObnKtviYPVxt {
-  background-color: rgba(119, 119, 119, 0.3333333333);
+  background-color: #77777755;
 }
 ._25fHecg508tfG-Uw7t5okH {
   display: flex;
@@ -6541,7 +6525,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 ._25fHecg508tfG-Uw7t5okH::-webkit-scrollbar {
   height: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 ._3ZR8Qn150VYnSyo91AqpCS {
   animation-fill-mode: none;
@@ -10220,10 +10204,10 @@ body.v6.rewards .ModalPosition_Content {
 .ingame ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    rgb(140, 214, 29) 0%,
-    rgb(161, 244, 16) 30%,
-    rgb(161, 244, 16) 70%,
-    rgb(140, 214, 29) 100%
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
   );
 }
 .ingame ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
@@ -10240,19 +10224,19 @@ body.v6.rewards .ModalPosition_Content {
 .watchingbroadcast ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    rgb(156, 143, 212) 0%,
-    rgb(156, 143, 212) 30%,
-    rgb(156, 143, 212) 70%,
-    rgb(156, 143, 212) 100%
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
   );
 }
 .online ._3xUpb5DWXPFNcHHIcv-9pe {
   background: linear-gradient(
     to bottom,
-    rgb(109, 207, 246) 0%,
-    rgb(109, 207, 246) 30%,
-    rgb(109, 207, 246) 70%,
-    rgb(109, 207, 246) 100%
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
   );
 }
 .online ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
@@ -10315,7 +10299,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 ._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   height: 100%;
   width: 100%;
 }
@@ -10360,11 +10344,7 @@ body.v6.rewards .ModalPosition_Content {
   text-align: center;
   color: #efeaea;
   display: block;
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 25%;
   background-size: 330% 100%;
   border-radius: 2px;
@@ -11511,7 +11491,7 @@ svg._10ulSv2Q-y1OfDwpIF1vg8 {
 }
 ._3wLdEZt-JTVWIurhD-4CtJ {
   border-radius: 20px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6196078431);
+  box-shadow: 0px 4px 16px #0000009e;
 }
 ._1YAI6JFnmIQ_AK2MB8QTFo {
   position: absolute;

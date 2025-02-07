@@ -570,7 +570,7 @@
 .rdtPicker td.rdtToday:before {
   content: "";
   display: inline-block;
-  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-left: 7px solid transparent;
   border-bottom: 7px solid #428bca;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -737,7 +737,7 @@ td.rdtYear:hover {
   border-radius: 4px;
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 4px transparent;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   resize: none;
   padding: 8px;
@@ -944,7 +944,7 @@ td.rdtYear:hover {
 ._1_LYYN59DADLVYtqwZYjSm {
   width: 80px;
   height: 40px;
-  background-color: rgba(26, 160, 255, 0.3254901961);
+  background-color: #1aa0ff53;
 }
 ._3L1DF5dTgbrn6BlQIgv8c- {
   font-weight: bold;
@@ -963,7 +963,7 @@ td.rdtYear:hover {
   padding: 12px;
   gap: 12px;
   min-width: 400px;
-  background-color: rgba(61, 68, 80, 0.5019607843);
+  background-color: #3d445080;
 }
 ._3pw4q_MAfhjbHBkGJVrYyz._1GFD8zuMK_JuYQUQhOo4zz {
   opacity: 0.5;
@@ -1087,7 +1087,7 @@ body.ShoppingCart {
   padding: 21px;
   background: radial-gradient(
     45% 45% at 50% 28%,
-    rgba(103, 193, 245, 0.2862745098) 0%,
+    #67c1f549 0%,
     rgba(0, 0, 0, 0.1) 100%
   );
 }
@@ -1382,8 +1382,8 @@ body.ShoppingCart {
   display: flex;
 }
 ._3_q-F_MXXBH_JQPJvWznnc div {
-  background: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  background-color: transparent;
   padding-right: 0px;
 }
 ._1_vNtL4JTtFLtSgY25zz_5 {

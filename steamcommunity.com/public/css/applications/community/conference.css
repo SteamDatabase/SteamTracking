@@ -10,7 +10,7 @@
 ._3lJb_YN8uykqLcm4eG1jRF {
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
   transition-duration: .25s;
   font-size: 14px;
@@ -427,13 +427,13 @@ body.qanda {
   font-size: 14px;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: rgba(109, 207, 246, 0.2392156863);
+  text-decoration-color: #6dcff63d;
   width: fit-content;
 }
 ._3CaA53te3MV1l4rP0TmdB9:active,
 ._3CaA53te3MV1l4rP0TmdB9:hover {
   color: #9edff8;
-  text-decoration-color: rgba(109, 207, 246, 0.7058823529);
+  text-decoration-color: #6dcff6b4;
 }
 ._2NuCE315-vCtCSzxcT1qEm {
   display: flex;
@@ -1033,7 +1033,7 @@ body.qanda {
   ._3HF9tOy_soo1B_odf1XArk
   .u8z1m_ainssHj7AbLKOZs._9rv9PL7ZWe4vZofYqYl3M._17Iog8CXlR0s8DuWS0rD0n {
   background-size: contain;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-position: top right;
 }
 ._1E3Anhs34BXsWWWqH4RNPL._2X_hMZpqI8fyqbeFPi4JPj
@@ -1237,7 +1237,7 @@ body.qanda {
   ._3HF9tOy_soo1B_odf1XArk
   .d8bPiEt0DUII_mRqek_ht._9rv9PL7ZWe4vZofYqYl3M._17Iog8CXlR0s8DuWS0rD0n {
   background-size: contain;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-position: top right;
 }
 ._1E3Anhs34BXsWWWqH4RNPL
@@ -1498,7 +1498,7 @@ body.qanda {
     z-index: 2;
   }
   ._1E3Anhs34BXsWWWqH4RNPL ._3_86JJo-1O_KkOZwRl2uZ6:hover {
-    background: rgba(0, 0, 0, 0);
+    background: transparent;
   }
 }
 ._1E3Anhs34BXsWWWqH4RNPL ._3_86JJo-1O_KkOZwRl2uZ6 span {
@@ -2154,7 +2154,7 @@ body.qanda {
   opacity: 1;
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover .YoutubePreviewPlay svg {
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+  filter: drop-shadow(0 0 5px black);
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover .YoutubePreviewImage {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -2249,7 +2249,7 @@ body.qanda {
 ._2lP0CenzIHyncnSquDOYX2:after {
   left: calc(100% - 16px);
   top: 50px;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -2516,6 +2516,8 @@ html.responsive.touch
     ._22bby_AsedipJlq0-5qtmY {
     display: none;
   }
+}
+@media screen and (max-width: 910px) {
   ._3tSqDwD1rkt0nwIB8025VK ._19xFd3vdYEozXiTDzOEto9 ._1rjE02_5_HPWGT3UJXQKL2 {
     display: block;
     position: absolute;

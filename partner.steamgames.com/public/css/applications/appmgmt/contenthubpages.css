@@ -69,7 +69,7 @@ img {
 ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   z-index: 12;
   overflow: visible;
 }
@@ -93,7 +93,7 @@ img {
 }
 ::selection {
   background: #54a5d4;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6666666667);
+  text-shadow: 1px 1px 2px #000000aa;
   color: #fff;
 }
 .vg0EOhKTLB3tLvshHMr7l {
@@ -191,14 +191,14 @@ img {
   padding: 4px;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
   transition-property: background, box-shadow, padding-left;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
 }
 .cNMZ-dcMVhaQJFes_Ivwo:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 8px #000a;
   padding-left: 6px;
   outline: none;
 }
@@ -211,13 +211,13 @@ img {
   cursor: default;
 }
 .react-select-container .react-select__control {
-  background: rgba(220, 232, 251, 0.0784313725);
-  border-color: rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  background: #dce8fb14;
+  border-color: transparent;
+  box-shadow: 0 0 0 transparent;
 }
 .react-select-container .react-select__control:hover {
   background: #464d58;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: transparent;
 }
 .react-select-container .react-select__control .react-select__single-value {
   color: #d9dde1;

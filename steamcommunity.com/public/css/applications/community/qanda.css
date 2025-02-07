@@ -310,13 +310,13 @@ body.qanda {
   font-size: 14px;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: rgba(109, 207, 246, 0.2392156863);
+  text-decoration-color: #6dcff63d;
   width: fit-content;
 }
 ._3CaA53te3MV1l4rP0TmdB9:active,
 ._3CaA53te3MV1l4rP0TmdB9:hover {
   color: #9edff8;
-  text-decoration-color: rgba(109, 207, 246, 0.7058823529);
+  text-decoration-color: #6dcff6b4;
 }
 ._2NuCE315-vCtCSzxcT1qEm {
   display: flex;

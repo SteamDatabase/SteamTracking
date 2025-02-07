@@ -15,7 +15,7 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: rgba(59, 90, 114, 0.5019607843);
+  background-color: #3b5a7280;
   align-items: center;
   transition: background-color .2s ease;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .Cek1s5Ixk2xYmkqjjESD0:focus-within,
 ._2dGPTYWTKq3CirJwPXKw2b:focus-within {
-  background-color: rgba(103, 139, 166, 0.4392156863);
+  background-color: #678ba670;
 }
 .Cek1s5Ixk2xYmkqjjESD0 {
   background: linear-gradient(
