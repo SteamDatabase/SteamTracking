@@ -1,4 +1,4 @@
-var CLSTAMP = "9515385";
+var CLSTAMP = "9518898";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -10842,9 +10842,9 @@ var CLSTAMP = "9515385";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Feb 5 2025 : 17:22:21",
-                BUILD_TIME_UTC: "Feb 6 2025 : 01:22:21",
-                BUILD_RTIME_UTC: 1738804941,
+                BUILD_TIME_LOCAL: "Feb 6 2025 : 16:40:55",
+                BUILD_TIME_UTC: "Feb 7 2025 : 00:40:55",
+                BUILD_RTIME_UTC: 1738888855,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -23467,6 +23467,7 @@ var CLSTAMP = "9515385";
           Z3: () => r.Z3,
           L$: () => r.L$,
           eV: () => r.eV,
+          uH: () => r.uH,
           DF: () => r.DF,
           hd: () => a,
         });
@@ -24230,9 +24231,9 @@ var CLSTAMP = "9515385";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Feb 5 2025 : 17:22:21",
-                    BUILD_TIME_UTC: "Feb 6 2025 : 01:22:21",
-                    BUILD_RTIME_UTC: 1738804941,
+                    BUILD_TIME_LOCAL: "Feb 6 2025 : 16:40:55",
+                    BUILD_TIME_UTC: "Feb 7 2025 : 00:40:55",
+                    BUILD_RTIME_UTC: 1738888855,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24671,7 +24672,6 @@ var CLSTAMP = "9515385";
         1005: "localization/steamui_norwegian-json",
         1012: "localization/steampops_romanian-json",
         1093: "localization/friendsui_hungarian-json",
-        1219: "libraries/libraries~4f371177a",
         1220: "gamenotes",
         1275: "localization/steampops_greek-json",
         1389: "localization/shared_japanese-json",
@@ -24807,8 +24807,7 @@ var CLSTAMP = "9515385";
         1005: "69d69f65ce44fd2473d0",
         1012: "7b7c9cab21bab90db439",
         1093: "36287bfecee147581080",
-        1219: "957b0f42cbfe83b9faef",
-        1220: "580f06b21a21a4c2e290",
+        1220: "de296032ecaa75421549",
         1275: "61d5826734b291f86592",
         1389: "364ba8f217b3334c3c2e",
         1423: "a721f1f0e36a26046c7f",
@@ -24911,7 +24910,7 @@ var CLSTAMP = "9515385";
         8545: "57c9a29b2712384096b0",
         8674: "2531a1065aec5510adc2",
         8699: "ef4ce5a4d1521e2331a9",
-        8732: "0b97225dfbd1499baa6f",
+        8732: "fa0aa2a37075230f61aa",
         8830: "12dbbf232c065e2fd71d",
         8872: "e28654e9c3084d99d474",
         9053: "5929f832849bf33ee003",
@@ -24924,7 +24923,7 @@ var CLSTAMP = "9515385";
         9418: "39490498558a79cc1671",
         9462: "89227ab1a3d278d803ec",
         9711: "9fd6c2d0a37adebfb635",
-        9858: "883126663496e4d43e20",
+        9858: "758f4291e495df554d6f",
         9869: "0079f8b718e235809a41",
         9887: "af7dde93474c31239535",
       }[e]),

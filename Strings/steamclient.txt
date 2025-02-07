@@ -5,6 +5,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123P~
  $8O[lv
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -3696,6 +3697,7 @@ $steammessages_parental_objects.proto"
 .CMsgClientMMSLobbyData.Member
 .CMsgClientPersonaState.Friend
 .CMsgClientPersonaState.Friend"
+.CMsgClientRichPresenceInfo.KV".\n
 .CMsgClientSecret
 .CMsgClientShaderHitCacheEntry*
 .CMsgClientStat2.StatDetail
@@ -8948,6 +8950,7 @@ $steammessages_parental_objects.proto"
 29CMsgClientNewLoginKeyAccepted
 29CMsgClientPersonaState_Friend
 29CMsgClientPlayingSessionState
+29CMsgClientRichPresenceInfo_KV
 29CMsgClientRichPresenceRequest
 29CMsgClientServiceCallResponse
 29CMsgClientServiceMethodLegacy
@@ -11455,6 +11458,7 @@ $steammessages_parental_objects.proto"
 5\n\fmicrotrailer
 5\n\fplayers_data
 5\n\ftrailer_480p
+5\n\rrich_presense
 5\n\rtemplate_type
 5\n\vFriendGroup
 5\n\vStoreFilter
@@ -12188,7 +12192,6 @@ $steammessages_parental_objects.proto"
 >\n graphics_profiling_service_state
 >\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
 >\n9k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
->\n\fRichPresence
 >\n\ffriendGroups
 >\n\fplayer_slots
 >\n\rPlayingMember
@@ -22824,7 +22827,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggen&G_
 ghjkl
 gidlist
 gidparentcomment
@@ -27714,6 +27717,7 @@ uT_Rm#
 uV<c
 uWAl4\
 u\fcc
+u\n\fRichPresence
 u\n\tChunkData
 ub?L
 udev_device_get_action

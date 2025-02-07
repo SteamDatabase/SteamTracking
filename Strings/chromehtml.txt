@@ -1238,7 +1238,6 @@ V_strnicmp
 V_strnistr
 V_vsnprintf
 V_vsnprintfRet
-W53v
 Warning
 WeakRandomInt
 WeakRandomUint32

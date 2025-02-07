@@ -21,9 +21,15 @@ message CMsgClientRichPresenceRequest {
 }
 
 message CMsgClientRichPresenceInfo {
+	message KV {
+		optional string key = 1;
+		optional string value = 2;
+	}
+
 	message RichPresence {
 		optional fixed64 steamid_user = 1;
 		optional bytes rich_presence_kv = 2;
+		repeated .CMsgClientRichPresenceInfo.KV rich_presense = 3;
 	}
 
 	repeated .CMsgClientRichPresenceInfo.RichPresence rich_presence = 1;
