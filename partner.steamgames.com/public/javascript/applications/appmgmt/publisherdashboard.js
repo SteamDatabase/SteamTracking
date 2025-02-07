@@ -1794,8 +1794,12 @@
           const e = await fetch(
             `${r.TS.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard`,
           );
-          (this.m_rgOptIns = await e.json()),
-            this.m_rgOptIns && ye.ExtractOptInDefinitions(this.m_rgOptIns);
+          try {
+            (this.m_rgOptIns = await e.json()),
+              this.m_rgOptIns && ye.ExtractOptInDefinitions(this.m_rgOptIns);
+          } catch (e) {
+            this.m_rgOptIns = {};
+          }
         }
         static ExtractOptInDefinitions(e) {
           for (const t of Object.keys(e)) {
