@@ -44805,7 +44805,8 @@
                       className: (0, l.A)(m.Cell, m.SalesPackageTitleCell),
                       href: `${f.TS.PARTNER_BASE_URL}store/packagelanding/${e.packageid}`,
                     },
-                    h.A.Get().GetPackage(e.packageid)?.GetName() ?? "",
+                    h.A.Get().GetPackage(e.packageid)?.GetName() ??
+                      `${(0, o.we)("#Sale_Stats_PackageId")}: ${e.packageid}`,
                     i.createElement(G, {
                       percentage:
                         s.find((t) => t.packageID == e.packageid)
@@ -44825,34 +44826,18 @@
                     {
                       className: (0, l.A)(m.Cell, m.SalesCell, m.BlueHighlight),
                     },
-                    (0, d.xE)(e.gross_sales ?? 0),
+                    e.gross_sales ? (0, d.xE)(e.gross_sales) : "",
                   ),
                   i.createElement(
                     "div",
                     { className: (0, l.A)(m.Cell, m.SalesCell) },
-                    (0, u.Dq)(e.units ?? 0),
+                    e.units ? (0, u.Dq)(e.units) : "",
                   ),
                   i.createElement(
                     "div",
                     { className: (0, l.A)(m.Cell, m.SalesCell) },
                     e.gross_activations > 0
-                      ? (0, u.Dq)(e.gross_activations) +
-                          " (" +
-                          (function (e) {
-                            switch (e) {
-                              case 0:
-                                return "0: No Cost";
-                              case 1:
-                                return "1: Store Package";
-                              case 10:
-                                return "10: Store or CD Key";
-                              case 12:
-                                return "12: Free on Demand";
-                              default:
-                                return "Billing type " + e;
-                            }
-                          })(e.package_billing_type) +
-                          ")"
+                      ? (0, u.Dq)(e.gross_activations)
                       : "",
                   ),
                 ),
@@ -45390,63 +45375,62 @@
     29341: (e, t, a) => {
       "use strict";
       a.d(t, {
-        C7: () => ce,
-        mf: () => ge,
-        ue: () => me,
-        kT: () => ie,
-        rX: () => de,
-        cm: () => se,
-        Do: () => he,
-        Z2: () => ye,
+        C7: () => oe,
+        mf: () => _e,
+        ue: () => ce,
+        kT: () => re,
+        rX: () => me,
+        cm: () => ie,
+        Do: () => ge,
+        Z2: () => Se,
       });
       var n = a(86318),
-        r = a(33428),
-        i = a(32179),
-        s = a(75493),
-        l = a(11542),
-        o = a(9907),
-        c = a(52625),
-        m = a(90031),
-        d = a(96001),
-        u = a(90626),
-        p = a(75233),
-        _ = a(55263),
-        g = a(45737),
-        h = a.n(g),
-        E = a(71541),
-        S = a(84811),
-        y = a(95695),
-        v = a.n(y),
-        f = a(80675),
-        b = a.n(f),
-        w = a(99637),
-        D = a(9154),
-        C = a(738),
-        I = a(22797),
-        B = a(52038),
-        T = a(56011),
-        A = a(61859),
-        M = a(14771),
-        k = a(78327),
-        R = a(94238),
-        P = a(10698),
-        N = a(95034),
-        G = a(38135),
-        O = a(41735),
-        F = a.n(O),
-        L = a(6144),
-        U = a(94511),
-        z = a(41547);
-      function x(e) {
-        const [t, a] = u.useState(""),
-          [n] = u.useState(new L.LU()),
-          [r, i] = u.useState(new Array()),
-          [s, l] = u.useState(!1),
-          o = u.useCallback(async (e) => {
+        r = a(32179),
+        i = a(75493),
+        s = a(11542),
+        l = a(9907),
+        o = a(52625),
+        c = a(90031),
+        m = a(96001),
+        d = a(90626),
+        u = a(75233),
+        p = a(55263),
+        _ = a(45737),
+        g = a.n(_),
+        h = a(71541),
+        E = a(84811),
+        S = a(95695),
+        y = a.n(S),
+        v = a(80675),
+        f = a.n(v),
+        b = a(99637),
+        w = a(9154),
+        D = a(738),
+        C = a(22797),
+        I = a(52038),
+        B = a(56011),
+        T = a(61859),
+        A = a(14771),
+        M = a(78327),
+        k = a(94238),
+        R = a(10698),
+        P = a(95034),
+        N = a(38135),
+        G = a(41735),
+        O = a.n(G),
+        F = a(6144),
+        L = a(94511),
+        U = a(41547);
+      function z(e) {
+        const [t, a] = d.useState(""),
+          [n] = d.useState(new F.LU()),
+          [r, i] = d.useState(new Array()),
+          [s, l] = d.useState(!1),
+          o = d.useCallback(async (e) => {
             l(!0);
             const t = { json: 1, search: e },
-              a = `${k.TS.PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives`,
-              n = await F().get(a, { params: t, withCredentials: !0 });
+              a = `${M.TS.PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives`,
+              n = await O().get(a, { params: t, withCredentials: !0 });
             200 == n?.status &&
               1 == n.data?.success &&
               i(
@@ -45456,7 +45440,7 @@
               ),
               l(!1);
           }, []),
-          c = u.useCallback(
+          c = d.useCallback(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase();
               if (t)
@@ -45467,16 +45451,16 @@
             },
             [n, o],
           );
-        return u.createElement(
+        return d.createElement(
           "div",
-          { className: U.SearchCtn },
-          u.createElement(
+          { className: L.SearchCtn },
+          d.createElement(
             "div",
             null,
             "Search Upcoming, Active, and Archived Daily Deals",
           ),
-          u.createElement("hr", null),
-          u.createElement(E.pd, {
+          d.createElement("hr", null),
+          d.createElement(h.pd, {
             type: "text",
             label: "Search",
             placeholder: "Enter Name or App ID (3 characters at least)",
@@ -45484,58 +45468,58 @@
             disabled: s,
           }),
           Boolean(s) &&
-            u.createElement(I.t, { size: "small", position: "center" }),
+            d.createElement(C.t, { size: "small", position: "center" }),
           Boolean(t && r.length > 0)
-            ? u.createElement(
-                u.Fragment,
+            ? d.createElement(
+                d.Fragment,
                 null,
-                u.createElement(
+                d.createElement(
                   "div",
                   { className: "DialogLabel" },
                   "Matching Results:",
                 ),
-                r.map((e) => u.createElement(q, { deal: e, key: e.gid })),
+                r.map((e) => d.createElement(x, { deal: e, key: e.gid })),
               )
-            : u.createElement(
+            : d.createElement(
                 "div",
                 { className: "DialogLabel" },
                 "No matching results",
               ),
         );
       }
-      function q(e) {
+      function x(e) {
         const { deal: t } = e,
           {
             nDiscountPercentHigh: a,
             dtDiscountStart: n,
             dtDiscountEnd: r,
-          } = (0, c.Y4)(t);
-        let i = u.useMemo(() => (0, c.Dt)(t, a), [t, a]),
+          } = (0, o.Y4)(t);
+        let i = d.useMemo(() => (0, o.Dt)(t, a), [t, a]),
           s = null;
         return (
-          i == c.of.DealFailed &&
-            (s = u.createElement(ge, {
-              strMessage: (0, A.we)("#DailyDeals_DealFailed"),
+          i == o.of.DealFailed &&
+            (s = d.createElement(_e, {
+              strMessage: (0, T.we)("#DailyDeals_DealFailed"),
             })),
-          i == c.of.DealCompleted &&
-            (s = u.createElement(
-              ge,
+          i == o.of.DealCompleted &&
+            (s = d.createElement(
+              _e,
               null,
-              u.createElement(he, {
+              d.createElement(ge, {
                 deal: t,
                 eDealState: i,
                 dtDiscountStart: n,
                 dtDiscountEnd: r,
               }),
             )),
-          i == c.of.Cancelled &&
-            (s = u.createElement(ge, {
-              strMessage: (0, A.we)("#DailyDeals_DealCancelled"),
+          i == o.of.Cancelled &&
+            (s = d.createElement(_e, {
+              strMessage: (0, T.we)("#DailyDeals_DealCancelled"),
             })),
-          u.createElement(
+          d.createElement(
             "div",
-            { className: U.ResultRow },
-            u.createElement(
+            { className: L.ResultRow },
+            d.createElement(
               "div",
               {
                 style: {
@@ -45544,36 +45528,36 @@
                   maxWidth: "400px",
                 },
               },
-              u.createElement(z.yz, { oDailyDeal: t, bShowName: !0 }),
+              d.createElement(U.yz, { oDailyDeal: t, bShowName: !0 }),
             ),
-            u.createElement(
+            d.createElement(
               "span",
               {
                 style: { width: "200px", paddingLeft: 10, alignSelf: "center" },
               },
-              (0, A.TW)(t.rtime32_start_time, !1),
+              (0, T.TW)(t.rtime32_start_time, !1),
             ),
             s,
           )
         );
       }
-      var W = a(92360),
-        j = a(43733),
-        H = a(30470);
-      function V(e) {
-        const t = (0, c.zy)(),
-          a = Math.floor(Date.now() / 1e3) - M.Kp.PerDay,
+      var q = a(92360),
+        W = a(43733),
+        j = a(30470);
+      function H(e) {
+        const t = (0, o.zy)(),
+          a = Math.floor(Date.now() / 1e3) - A.Kp.PerDay,
           n = t?.filter((e) => e.rtime32_start_time < a);
-        return H.iA.is_support
-          ? u.createElement(
+        return j.iA.is_support
+          ? d.createElement(
               "div",
               null,
-              u.createElement(
+              d.createElement(
                 "div",
                 { style: { fontSize: 15, paddingTop: 10, paddingBottom: 10 } },
                 "Below are reports for Daily Deals during the past week",
               ),
-              u.createElement(ce, {
+              d.createElement(oe, {
                 rgDeals: n,
                 strPublisherID: "0",
                 bHideHeader: !0,
@@ -45581,287 +45565,284 @@
             )
           : null;
       }
-      function K() {
-        const [e, t] = (0, N.QD)("tab", "calendar"),
+      function V() {
+        const [e, t] = (0, P.QD)("tab", "calendar"),
           a = (e) => t(e.key),
           n = [
             {
               name: "Calendar",
               key: "calendar",
-              contents: u.createElement(
-                S.tH,
+              contents: d.createElement(
+                E.tH,
                 null,
-                u.createElement(z.rE, null),
+                d.createElement(U.rE, null),
               ),
               onClick: a,
             },
             {
               name: "Invitation",
               key: "invites",
-              contents: u.createElement(
-                S.tH,
+              contents: d.createElement(
+                E.tH,
                 null,
-                u.createElement(W.Ak, null),
+                d.createElement(q.Ak, null),
               ),
               onClick: a,
             },
             {
               name: "Search",
               key: "search",
-              contents: u.createElement(S.tH, null, u.createElement(x, null)),
+              contents: d.createElement(E.tH, null, d.createElement(z, null)),
               onClick: a,
             },
             {
               name: "History",
               key: "history",
-              contents: u.createElement(S.tH, null, u.createElement(V, null)),
+              contents: d.createElement(E.tH, null, d.createElement(H, null)),
               onClick: a,
             },
           ];
-        return u.createElement(
+        return d.createElement(
           "div",
-          { className: h().AdminPageCtn },
-          u.createElement(
+          { className: g().AdminPageCtn },
+          d.createElement(
             "div",
-            { className: h().PageTitle },
+            { className: g().PageTitle },
             "Daily Deal Scheduler (VO)",
           ),
-          u.createElement(
+          d.createElement(
             "div",
             { style: { display: "flex", justifyContent: "space-between" } },
-            u.createElement(
+            d.createElement(
               "div",
               null,
               "This view is Valve-only. To see the view as a partner, simply append a partnerID to the end of the URL",
             ),
-            u.createElement(j._, null),
+            d.createElement(W._, null),
           ),
-          u.createElement("hr", { className: "VO" }),
-          u.createElement(G.V, { tabs: n, startingTab: e }),
+          d.createElement("hr", { className: "VO" }),
+          d.createElement(N.V, { tabs: n, startingTab: e }),
         );
       }
-      var Y = a(18509),
-        $ = a(96743),
-        J = a(8955),
-        X = a(16856),
-        Q = a(23275),
-        Z = a(17720),
-        ee = a(64399),
-        te = a(19719),
-        ae = a(82097),
-        ne = a(45325),
-        re = a(40357);
-      function ie(e) {
-        const [t, a] = (0, l.hn)(),
-          n = (0, s.V)(),
-          r = !n && k.iA.is_support;
+      var K = a(18509),
+        Y = a(96743),
+        $ = a(8955),
+        J = a(16856),
+        X = a(23275),
+        Q = a(17720),
+        Z = a(64399),
+        ee = a(19719),
+        te = a(82097),
+        ae = a(45325),
+        ne = a(40357);
+      function re(e) {
+        const [t, a] = (0, s.hn)(),
+          n = (0, i.V)(),
+          r = !n && M.iA.is_support;
         return (
-          u.useEffect(() => a(), [a]),
-          u.createElement(
-            S.tH,
+          d.useEffect(() => a(), [a]),
+          d.createElement(
+            E.tH,
             null,
             Boolean(r)
-              ? u.createElement(K, null)
-              : u.createElement(se, { strPublisherID: n.toString() }),
+              ? d.createElement(V, null)
+              : d.createElement(ie, { strPublisherID: n.toString() }),
           )
         );
       }
-      function se(e) {
+      function ie(e) {
         const { strPublisherID: t } = e,
-          a = (0, m.ho)(1),
+          a = (0, c.ho)(1),
           n = Number.parseInt(t),
-          [s] = (0, i.UA)(n),
-          l = (0, c.zy)(),
-          [o, d] = u.useState(""),
-          p = u.useRef(0);
-        u.useEffect(() => () => window.clearTimeout(p.current), []);
-        const [_, g] = (0, u.useMemo)(() => {
+          [i] = (0, r.UA)(n),
+          s = (0, o.zy)(),
+          [l, m] = d.useState(""),
+          u = d.useRef(0);
+        d.useEffect(() => () => window.clearTimeout(u.current), []);
+        const [p, _] = (0, d.useMemo)(() => {
             let e = new Array(),
               t = new Array();
             return (
               a.forEach((a) => {
-                (0, ne.IA)(a) ? e.push(a) : t.push(a);
+                (0, ae.IA)(a) ? e.push(a) : t.push(a);
               }),
               [e, t]
             );
           }, [a]),
-          S = (0, c.we)(l),
-          [y, v, f] = (0, u.useMemo)(() => {
+          E = (0, o.we)(s),
+          [S, y, v] = (0, d.useMemo)(() => {
             let e = new Array(),
               t = new Array(),
               a = new Array();
             const n = Date.now() / 1e3;
             return (
-              l.forEach((i, s) => {
-                if (i.store_item_id) {
-                  const { nDiscountPercentHigh: l } = S[s],
-                    o = (0, r.E7)(i.discount_event_id.toString());
-                  !i.cancelled && 0 == l && i.rtime32_start_time > n
-                    ? t.push(i)
-                    : i.cancelled ||
-                        o?.end_date < n ||
-                        (!o && i.rtime32_start_time + M.Kp.PerDay < n)
-                      ? a.push(i)
-                      : e.push(i);
+              s.forEach((r, i) => {
+                if (r.store_item_id) {
+                  const { nDiscountPercentHigh: s } = E[i];
+                  !r.cancelled && 0 == s && r.rtime32_start_time > n
+                    ? t.push(r)
+                    : r.cancelled || r.rtime32_start_time + A.Kp.PerDay < n
+                      ? a.push(r)
+                      : e.push(r);
                 }
               }),
               [t, e, a]
             );
-          }, [l, S]),
-          [b, w, D, C, B] = (0, u.useMemo)(() => {
-            if (!o) return [y, v, f, _, g];
+          }, [s, E]),
+          [f, b, w, D, I] = (0, d.useMemo)(() => {
+            if (!l) return [S, y, v, p, _];
             const e = (e) => {
-              const t = (0, te.kf)(o);
+              const t = (0, ee.kf)(l);
               if (e.hasOwnProperty("rtexpiretime")) {
                 const a = e;
                 if (a.appid) {
-                  const e = ae.A.Get().GetApp(a.appid);
+                  const e = te.A.Get().GetApp(a.appid);
                   return (
-                    (t && parseInt(o) == e?.GetAppID()) ||
-                    e?.GetName().toLowerCase().includes(o)
+                    (t && parseInt(l) == e?.GetAppID()) ||
+                    e?.GetName().toLowerCase().includes(l)
                   );
                 }
                 if (a.packageid) {
-                  const e = ae.A.Get().GetPackage(a.packageid);
+                  const e = te.A.Get().GetPackage(a.packageid);
                   return (
-                    (t && parseInt(o) == e?.GetAppID()) ||
-                    e?.GetName().toLowerCase().includes(o)
+                    (t && parseInt(l) == e?.GetAppID()) ||
+                    e?.GetName().toLowerCase().includes(l)
                   );
                 }
                 {
-                  const e = ae.A.Get().GetBundle(a.bundleid);
+                  const e = te.A.Get().GetBundle(a.bundleid);
                   return (
-                    (t && e?.GetIncludedAppIDs().includes(parseInt(o))) ||
-                    e?.GetName().toLowerCase().includes(o)
+                    (t && e?.GetIncludedAppIDs().includes(parseInt(l))) ||
+                    e?.GetName().toLowerCase().includes(l)
                   );
                 }
               }
               {
                 const a = e;
                 return (
-                  a.store_item_name?.toLowerCase().includes(o) ||
-                  (t && a.store_item_id == parseInt(o))
+                  a.store_item_name?.toLowerCase().includes(l) ||
+                  (t && a.store_item_id == parseInt(l))
                 );
               }
             };
             return [
+              S.filter(e),
               y.filter(e),
               v.filter(e),
-              f.filter(e),
+              p.filter(e),
               _.filter(e),
-              g.filter(e),
             ];
-          }, [y, v, f, _, g, o]);
+          }, [S, y, v, p, _, l]);
         return n
-          ? !S && l?.length > 0
-            ? u.createElement(I.t, {
-                string: (0, A.we)("#DailyDeals_LoadingDiscountInfo"),
+          ? !E && s?.length > 0
+            ? d.createElement(C.t, {
+                string: (0, T.we)("#DailyDeals_LoadingDiscountInfo"),
                 size: "medium",
                 position: "center",
               })
-            : u.createElement(
+            : d.createElement(
                 "div",
-                { className: h().AdminPageCtn },
-                u.createElement(
+                { className: g().AdminPageCtn },
+                d.createElement(
                   "div",
-                  { className: h().PageTitle },
-                  s?.name
-                    ? (0, A.PP)(
+                  { className: g().PageTitle },
+                  i?.name
+                    ? (0, T.PP)(
                         "#DailyDeals_Dashboard_Partner_Title",
-                        u.createElement("span", null, s.name),
+                        d.createElement("span", null, i.name),
                       )
-                    : (0, A.we)("#DailyDeals_Dashboard"),
-                  u.createElement(
+                    : (0, T.we)("#DailyDeals_Dashboard"),
+                  d.createElement(
                     "div",
-                    { className: h().Beta },
-                    (0, A.we)("#NewToolTitleSuffix_Beta"),
+                    { className: g().Beta },
+                    (0, T.we)("#NewToolTitleSuffix_Beta"),
                   ),
-                  u.createElement(
+                  d.createElement(
                     "div",
-                    { className: J.SearchContainer },
-                    u.createElement(E.pd, {
+                    { className: $.SearchContainer },
+                    d.createElement(h.pd, {
                       type: "text",
-                      placeholder: (0, A.we)(
+                      placeholder: (0, T.we)(
                         "#DailyDeals_PartnerDashboard_ArchiveSearch",
                       ),
                       onChange: (e) => {
-                        window.clearTimeout(p.current),
-                          (p.current = window.setTimeout(
-                            () => d(e?.target?.value?.toLocaleLowerCase()),
+                        window.clearTimeout(u.current),
+                          (u.current = window.setTimeout(
+                            () => m(e?.target?.value?.toLocaleLowerCase()),
                             500,
                           ));
                       },
                     }),
                   ),
                 ),
-                u.createElement("hr", null),
-                u.createElement(le, {
-                  rgInvites: C,
-                  rgIncompleteDeals: b,
+                d.createElement("hr", null),
+                d.createElement(se, {
+                  rgInvites: D,
+                  rgIncompleteDeals: f,
                   strPublisherID: t,
                 }),
-                u.createElement(oe, { rgDeals: w, strPublisherID: t }),
-                u.createElement(ce, {
-                  rgInvites: B,
-                  rgDeals: D,
+                d.createElement(le, { rgDeals: b, strPublisherID: t }),
+                d.createElement(oe, {
+                  rgInvites: I,
+                  rgDeals: w,
                   strPublisherID: t,
                 }),
-                u.createElement($.Es, null),
+                d.createElement(Y.Es, null),
               )
-          : u.createElement(
+          : d.createElement(
               "div",
               null,
-              (0, A.we)("#DailyDeals_InvalidPartner"),
+              (0, T.we)("#DailyDeals_InvalidPartner"),
             );
       }
-      function le(e) {
+      function se(e) {
         const { rgInvites: t, rgIncompleteDeals: a, strPublisherID: n } = e;
         return 0 == t.length && 0 == a.length
-          ? u.createElement(
+          ? d.createElement(
               "div",
               null,
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: J.PartnerDashboard_InvitationHeader },
-                (0, A.we)("#DailyDeals_PartnerDashboard_Invitations"),
+                { className: $.PartnerDashboard_InvitationHeader },
+                (0, T.we)("#DailyDeals_PartnerDashboard_Invitations"),
               ),
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: J.PartnerDashboard_NoInvites },
-                (0, A.oW)(
+                { className: $.PartnerDashboard_NoInvites },
+                (0, T.oW)(
                   "#DailyDeals_PartnerDashboard_NoInvites",
-                  u.createElement("a", {
-                    href: `${k.TS.PARTNER_BASE_URL}doc/marketing/discounts/dailydeal`,
+                  d.createElement("a", {
+                    href: `${M.TS.PARTNER_BASE_URL}doc/marketing/discounts/dailydeal`,
                     target: "_blank",
                   }),
                 ),
               ),
             )
-          : u.createElement(
+          : d.createElement(
               "div",
               null,
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: J.PartnerDashboard_InvitationHeader },
-                (0, A.we)("#DailyDeals_PartnerDashboard_Incomplete"),
-                u.createElement(
+                { className: $.PartnerDashboard_InvitationHeader },
+                (0, T.we)("#DailyDeals_PartnerDashboard_Incomplete"),
+                d.createElement(
                   "span",
-                  { className: J.PartnerDashboard_Incomplete_Description },
-                  (0, A.we)(
+                  { className: $.PartnerDashboard_Incomplete_Description },
+                  (0, T.we)(
                     "#DailyDeals_PartnerDashboard_Incomplete_Description",
                   ),
                 ),
               ),
               t.map((e) =>
-                u.createElement(de, {
+                d.createElement(me, {
                   key: "invite_" + e.inviteid,
                   strPublisherID: n,
                   invite: e,
-                  containerClass: J.PartnerDashboard_Invite,
+                  containerClass: $.PartnerDashboard_Invite,
                 }),
               ),
               a.map((e) =>
-                u.createElement(me, {
+                d.createElement(ce, {
                   key: "inc_" + e.gid,
                   deal: e,
                   strPublisherID: n,
@@ -45869,27 +45850,27 @@
               ),
             );
       }
-      function oe(e) {
+      function le(e) {
         const { rgDeals: t, strPublisherID: a } = e;
-        return u.createElement(
+        return d.createElement(
           "div",
           null,
-          u.createElement(
+          d.createElement(
             "div",
-            { className: J.PartnerDashboard_ScheduledHeader },
-            (0, A.we)("#DailyDeals_PartnerDashboard_Scheduled"),
+            { className: $.PartnerDashboard_ScheduledHeader },
+            (0, T.we)("#DailyDeals_PartnerDashboard_Scheduled"),
           ),
           0 == t.length
-            ? u.createElement(
+            ? d.createElement(
                 "div",
-                { className: J.PartnerDashboard_NoInvites },
-                (0, A.we)("#DailyDeals_PartnerDashboard_NoScheduled"),
+                { className: $.PartnerDashboard_NoInvites },
+                (0, T.we)("#DailyDeals_PartnerDashboard_NoScheduled"),
               )
-            : u.createElement(
-                u.Fragment,
+            : d.createElement(
+                d.Fragment,
                 null,
                 t.map((e) =>
-                  u.createElement(me, {
+                  d.createElement(ce, {
                     key: "ud_" + e.gid,
                     deal: e,
                     strPublisherID: a,
@@ -45898,22 +45879,22 @@
               ),
         );
       }
-      function ce(e) {
+      function oe(e) {
         const {
             rgInvites: t,
             rgDeals: a,
             strPublisherID: n,
             bHideHeader: r,
           } = e,
-          i = (0, u.useMemo)(() => t ?? [], [t]),
+          i = (0, d.useMemo)(() => t ?? [], [t]),
           s = i.filter((e) => !!e.appid).map((e) => e.appid),
           l = i.filter((e) => !!e.packageid).map((e) => e.packageid),
           o = i.filter((e) => !!e.bundleid).map((e) => e.bundleid),
-          c = (0, _.zX)(s, { include_assets: !0 }),
-          m = (0, _.gF)(l, { include_assets: !0 }),
-          d = (0, _.MS)(o, { include_assets: !0 }),
-          [p, g] = u.useState(!1),
-          h = u.useMemo(() => {
+          c = (0, p.zX)(s, { include_assets: !0 }),
+          m = (0, p.gF)(l, { include_assets: !0 }),
+          u = (0, p.MS)(o, { include_assets: !0 }),
+          [_, g] = d.useState(!1),
+          E = d.useMemo(() => {
             let e = [...a, ...i];
             return (
               e.sort((e, t) =>
@@ -45930,38 +45911,38 @@
             );
           }, [a, i]);
         if (0 == i.length && 0 == a.length) return null;
-        if (1 == c || 1 == m || 1 == d)
-          return u.createElement(I.t, {
+        if (1 == c || 1 == m || 1 == u)
+          return d.createElement(C.t, {
             position: "center",
-            className: J.Throbber,
+            className: $.Throbber,
           });
-        const S = !p && h.length > 3,
-          y = S ? J.BottomFade : "";
-        return u.createElement(
+        const S = !_ && E.length > 3,
+          y = S ? $.BottomFade : "";
+        return d.createElement(
           "div",
           null,
           !r &&
-            u.createElement(
+            d.createElement(
               "div",
-              { className: J.PartnerDashboard_HistoryHeader },
-              (0, A.we)(
+              { className: $.PartnerDashboard_HistoryHeader },
+              (0, T.we)(
                 "#DailyDeals_PartnerDashboard_Archive",
                 i.length + a.length,
               ),
             ),
-          u.createElement(
+          d.createElement(
             "div",
             { className: y },
-            h.map((e, t) =>
-              !p && t >= 3
+            E.map((e, t) =>
+              !_ && t >= 3
                 ? null
                 : e.hasOwnProperty("rtinvitetime")
-                  ? u.createElement(de, {
+                  ? d.createElement(me, {
                       key: "invite_" + e.inviteid,
                       invite: e,
                       strPublisherID: n,
                     })
-                  : u.createElement(re.A, {
+                  : d.createElement(ne.A, {
                       key: "rpt_" + e.gid,
                       deal: e,
                       strPublisherID: n,
@@ -45969,238 +45950,238 @@
             ),
           ),
           S &&
-            u.createElement(
+            d.createElement(
               "div",
-              { className: J.ViewAllButton },
-              u.createElement(
-                E.$n,
+              { className: $.ViewAllButton },
+              d.createElement(
+                h.$n,
                 { onClick: () => g(!0) },
-                (0, A.we)("#DailyDeals_ViewAll"),
+                (0, T.we)("#DailyDeals_ViewAll"),
               ),
             ),
           !S &&
-            h.length > 3 &&
-            u.createElement(
+            E.length > 3 &&
+            d.createElement(
               "div",
-              { className: J.ViewAllButton },
-              u.createElement(
-                E.$n,
+              { className: $.ViewAllButton },
+              d.createElement(
+                h.$n,
                 { onClick: () => g(!1) },
-                (0, A.we)("#DailyDeals_Collapse"),
+                (0, T.we)("#DailyDeals_Collapse"),
               ),
             ),
         );
       }
-      function me(e) {
+      function ce(e) {
         const { deal: t, strPublisherID: a } = e,
-          { nDiscountPercentHigh: n } = (0, c.Y4)(t),
-          r = u.useMemo(() => (0, c.Dt)(t, n), [t, n]),
-          [i, s] = (0, _.G6)(t.store_item_id, (0, R.Dw)(t.store_item_type), {
+          { nDiscountPercentHigh: n } = (0, o.Y4)(t),
+          r = d.useMemo(() => (0, o.Dt)(t, n), [t, n]),
+          [i, s] = (0, p.G6)(t.store_item_id, (0, k.Dw)(t.store_item_type), {
             include_assets: !0,
           });
         if (!i && 1 == s)
-          return u.createElement(I.t, {
-            string: (0, A.we)("#Loading"),
+          return d.createElement(C.t, {
+            string: (0, T.we)("#Loading"),
             size: "small",
             position: "center",
           });
         let l;
         return (
           (l = i?.GetAssets().GetHeaderURL()
-            ? u.createElement("img", { src: i.GetAssets().GetHeaderURL() })
+            ? d.createElement("img", { src: i.GetAssets().GetHeaderURL() })
             : i
-              ? (0, A.we)("#DailyDeals_HeaderArtMissing")
-              : (0, A.we)("#DailyDeals_StoreItem_Hidden")),
-          u.createElement(
+              ? (0, T.we)("#DailyDeals_HeaderArtMissing")
+              : (0, T.we)("#DailyDeals_StoreItem_Hidden")),
+          d.createElement(
             "div",
             {
-              className: (0, B.A)(
-                J.DailyDeal_Container,
-                r == c.of.Cancelled ? J.Cancelled : "",
+              className: (0, I.A)(
+                $.DailyDeal_Container,
+                r == o.of.Cancelled ? $.Cancelled : "",
               ),
             },
-            u.createElement(
+            d.createElement(
               "div",
-              { className: J.PromoTitle },
+              { className: $.PromoTitle },
               i?.GetName() || t.store_item_name,
             ),
-            u.createElement(
+            d.createElement(
               "div",
-              { className: (0, B.A)(J.CapsuleContainer, b().CapsuleContainer) },
+              { className: (0, I.A)($.CapsuleContainer, f().CapsuleContainer) },
               l,
             ),
-            u.createElement(pe, { deal: t, strPublisherID: a }),
+            d.createElement(ue, { deal: t, strPublisherID: a }),
           )
         );
       }
-      function de(e) {
+      function me(e) {
         const {
             strPublisherID: t,
             invite: a,
             containerClass: n,
             children: r,
           } = e,
-          [i] = (0, o.MH)(a),
-          s = u.useMemo(() => (0, m.kF)(a), [a]);
-        return u.createElement(
+          [i] = (0, l.MH)(a),
+          s = d.useMemo(() => (0, c.kF)(a), [a]);
+        return d.createElement(
           "div",
           {
-            className: (0, B.A)(
-              J.DailyDeal_Container,
+            className: (0, I.A)(
+              $.DailyDeal_Container,
               n,
-              s == c.of.Cancelled || s == c.of.InviteExpired ? J.Cancelled : "",
+              s == o.of.Cancelled || s == o.of.InviteExpired ? $.Cancelled : "",
             ),
           },
-          u.createElement("div", { className: J.PromoTitle }, i?.GetName()),
-          u.createElement(Q.t, { invite: a }),
-          u.createElement(ue, { invite: a, strPublisherID: t }, r),
+          d.createElement("div", { className: $.PromoTitle }, i?.GetName()),
+          d.createElement(X.t, { invite: a }),
+          d.createElement(de, { invite: a, strPublisherID: t }, r),
         );
       }
-      function ue(e) {
+      function de(e) {
         const { invite: t, strPublisherID: a, children: n } = e,
-          r = u.useMemo(() => (0, m.kF)(t), [t]);
-        if (r == c.of.Unknown) return null;
-        if (r == c.of.InviteExpired)
-          return u.createElement(ge, {
-            strMessage: (0, A.we)(
+          r = d.useMemo(() => (0, c.kF)(t), [t]);
+        if (r == o.of.Unknown) return null;
+        if (r == o.of.InviteExpired)
+          return d.createElement(_e, {
+            strMessage: (0, T.we)(
               "#DailyDeals_InviteExpired",
-              (0, P.FN)(t?.rtexpiretime),
+              (0, R.FN)(t?.rtexpiretime),
             ),
           });
-        if (r == c.of.Cancelled)
-          return u.createElement(ge, {
-            strMessage: (0, A.we)("#DailyDeals_InviteCancelled"),
+        if (r == o.of.Cancelled)
+          return d.createElement(_e, {
+            strMessage: (0, T.we)("#DailyDeals_InviteCancelled"),
           });
         let i = null,
           s = null;
         const l = () => {
           window.location.assign(
-            `${k.TS.PARTNER_BASE_URL}promotion${X.PromotionRoutes.DailyDealInviteDashboard(t?.inviteid.toString())}`,
+            `${M.TS.PARTNER_BASE_URL}promotion${J.PromotionRoutes.DailyDealInviteDashboard(t?.inviteid.toString())}`,
           );
         };
         return (
-          r == c.of.InviteActive
-            ? ((i = u.createElement(
-                E.$n,
-                { className: J.DailyDealButton, onClick: l },
-                (0, A.we)("#DailyDeals_PickDate"),
+          r == o.of.InviteActive
+            ? ((i = d.createElement(
+                h.$n,
+                { className: $.DailyDealButton, onClick: l },
+                (0, T.we)("#DailyDeals_PickDate"),
               )),
-              (s = u.createElement(
-                E.$n,
+              (s = d.createElement(
+                h.$n,
                 {
-                  className: (0, B.A)(J.DailyDealButton, J.Disabled),
+                  className: (0, I.A)($.DailyDealButton, $.Disabled),
                   disabled: !0,
                 },
-                (0, A.we)("#DailyDeals_Button_MustFirstPickDate"),
+                (0, T.we)("#DailyDeals_Button_MustFirstPickDate"),
               )))
-            : r == c.of.InviteAccepted &&
-              (i = u.createElement(
+            : r == o.of.InviteAccepted &&
+              (i = d.createElement(
                 "div",
                 null,
-                (0, A.we)("#DailyDeals_Invite_Accepted"),
+                (0, T.we)("#DailyDeals_Invite_Accepted"),
               )),
-          u.createElement(
-            _e,
+          d.createElement(
+            pe,
             { inviteBody: i, discountBody: s, invite: t, displayState: r },
             n,
           )
         );
       }
-      function pe(e) {
+      function ue(e) {
         const { deal: t, strPublisherID: a, children: n } = e,
           {
             nDiscountPercentHigh: r,
             dtDiscountStart: i,
             dtDiscountEnd: s,
-          } = (0, c.Y4)(t);
-        let l = u.useMemo(() => (0, c.Dt)(t, r), [t, r]);
+          } = (0, o.Y4)(t);
+        let l = d.useMemo(() => (0, o.Dt)(t, r), [t, r]);
         if (!t) return null;
-        if (l == c.of.DealFailed)
-          return u.createElement(ge, {
-            strMessage: (0, A.we)("#DailyDeals_DealFailed"),
+        if (l == o.of.DealFailed)
+          return d.createElement(_e, {
+            strMessage: (0, T.we)("#DailyDeals_DealFailed"),
           });
-        if (l == c.of.DealCompleted)
-          return u.createElement(
-            ge,
+        if (l == o.of.DealCompleted)
+          return d.createElement(
+            _e,
             null,
-            u.createElement(he, {
+            d.createElement(ge, {
               deal: t,
               eDealState: l,
               dtDiscountStart: i,
               dtDiscountEnd: s,
             }),
           );
-        if (l == c.of.Cancelled)
-          return u.createElement(ge, {
-            strMessage: (0, A.we)("#DailyDeals_DealCancelled"),
+        if (l == o.of.Cancelled)
+          return d.createElement(_e, {
+            strMessage: (0, T.we)("#DailyDeals_DealCancelled"),
           });
-        let o = null,
+        let c = null,
           m = null;
-        const d = (0, R.ls)(a, t.discount_event_id?.toString());
+        const u = (0, k.ls)(a, t.discount_event_id?.toString());
         switch (l) {
-          case c.of.InviteAccepted:
-            (o = u.createElement(
+          case o.of.InviteAccepted:
+            (c = d.createElement(
               "div",
-              { className: J.FeaturedDate },
-              u.createElement(P.H9, { rtime: t.rtime32_start_time }),
+              { className: $.FeaturedDate },
+              d.createElement(R.H9, { rtime: t.rtime32_start_time }),
             )),
-              (m = u.createElement(
-                E.$n,
+              (m = d.createElement(
+                h.$n,
                 {
-                  className: J.DailyDealButton,
-                  onClick: () => window.location.assign(d),
+                  className: $.DailyDealButton,
+                  onClick: () => window.location.assign(u),
                 },
-                (0, A.we)("#DailyDeals_Button_EnterDiscounts"),
+                (0, T.we)("#DailyDeals_Button_EnterDiscounts"),
               ));
             break;
-          case c.of.DealReady:
-            (o = u.createElement(he, {
+          case o.of.DealReady:
+            (c = d.createElement(ge, {
               deal: t,
               eDealState: l,
               dtDiscountStart: i,
               dtDiscountEnd: s,
             })),
-              (m = u.createElement(
+              (m = d.createElement(
                 "div",
-                { className: J.DiscountButtonRow },
-                u.createElement(
+                { className: $.DiscountButtonRow },
+                d.createElement(
                   "div",
-                  { className: (0, B.A)(J.DiscountPercentage) },
-                  u.createElement(Y.b4, { oDailyDeal: t }),
+                  { className: (0, I.A)($.DiscountPercentage) },
+                  d.createElement(K.b4, { oDailyDeal: t }),
                 ),
-                u.createElement(
-                  E.$n,
+                d.createElement(
+                  h.$n,
                   {
-                    className: (0, B.A)(J.DailyDealButton, J.EditDiscounts),
-                    onClick: () => window.location.assign(d),
+                    className: (0, I.A)($.DailyDealButton, $.EditDiscounts),
+                    onClick: () => window.location.assign(u),
                   },
-                  (0, A.we)("#DailyDeals_Button_EditDiscounts"),
+                  (0, T.we)("#DailyDeals_Button_EditDiscounts"),
                 ),
               ));
             break;
-          case c.of.DealLive:
-            (o = u.createElement(he, {
+          case o.of.DealLive:
+            (c = d.createElement(ge, {
               deal: t,
               eDealState: l,
               dtDiscountStart: i,
               dtDiscountEnd: s,
             })),
-              (m = u.createElement(
-                E.$n,
+              (m = d.createElement(
+                h.$n,
                 {
-                  className: (0, B.A)(J.DailyDealButton, J.DiscountPercentage),
+                  className: (0, I.A)($.DailyDealButton, $.DiscountPercentage),
                   disabled: !0,
                 },
-                u.createElement(Y.b4, { oDailyDeal: t }),
+                d.createElement(K.b4, { oDailyDeal: t }),
               ));
         }
-        return u.createElement(
-          _e,
-          { inviteBody: o, discountBody: m, displayState: l, deal: t },
+        return d.createElement(
+          pe,
+          { inviteBody: c, discountBody: m, displayState: l, deal: t },
           n,
         );
       }
-      function _e(e) {
+      function pe(e) {
         const {
             inviteBody: t,
             discountBody: a,
@@ -46210,41 +46191,41 @@
             deal: s,
           } = e,
           l = n?.rtexpiretime
-            ? (0, A.we)(
+            ? (0, T.we)(
                 "#DailyDeals_Checkbox_PickDate_By",
-                (0, P.FN)(n.rtexpiretime),
+                (0, R.FN)(n.rtexpiretime),
               )
-            : (0, A.we)("#DailyDeals_PickDate"),
-          o =
-            r >= c.of.InviteAccepted
-              ? u.createElement(E.Yh, {
-                  className: (0, B.A)(J.DailyDealCheckbox),
+            : (0, T.we)("#DailyDeals_PickDate"),
+          c =
+            r >= o.of.InviteAccepted
+              ? d.createElement(h.Yh, {
+                  className: (0, I.A)($.DailyDealCheckbox),
                   label: l,
                   checked: !0,
                   disabled: !0,
                 })
-              : u.createElement(
+              : d.createElement(
                   "div",
-                  { className: (0, B.A)(J.DailyDealTitle, J.Orange) },
+                  { className: (0, I.A)($.DailyDealTitle, $.Orange) },
                   l,
                 ),
-          m = (0, A.we)("#DailyDeals_Checkbox_EnterDiscount"),
-          d =
-            r >= c.of.DealReady
-              ? u.createElement(E.Yh, {
-                  className: (0, B.A)(J.DailyDealCheckbox),
+          m = (0, T.we)("#DailyDeals_Checkbox_EnterDiscount"),
+          u =
+            r >= o.of.DealReady
+              ? d.createElement(h.Yh, {
+                  className: (0, I.A)($.DailyDealCheckbox),
                   label: m,
                   checked: !0,
                   disabled: !0,
                 })
-              : u.createElement(
+              : d.createElement(
                   "div",
-                  { className: (0, B.A)(J.DailyDealTitle, J.Orange) },
+                  { className: (0, I.A)($.DailyDealTitle, $.Orange) },
                   m,
                 ),
           p = s?.partner_jsondata ? JSON.parse(s.partner_jsondata) : void 0,
-          _ = (0, ee.vv)(p?.sale_clan_event_gid),
-          g = (0, u.useMemo)(() => {
+          _ = (0, Z.vv)(p?.sale_clan_event_gid),
+          g = (0, d.useMemo)(() => {
             if (_) {
               const e = JSON.parse(
                 _.oPlanContainer ? _.oPlanContainer.admin_jsondata : "{}",
@@ -46253,84 +46234,84 @@
             }
             return !1;
           }, [_]);
-        let h = null,
+        let E = null,
           S = null;
         if (p) {
           if (p.require_sale_page) {
             const e = p.require_sale_page_type || 1;
             (S = g
-              ? u.createElement(E.Yh, {
-                  className: (0, B.A)(J.DailyDealCheckbox),
-                  label: ve(e),
+              ? d.createElement(h.Yh, {
+                  className: (0, I.A)($.DailyDealCheckbox),
+                  label: ye(e),
                   checked: !0,
                   disabled: !0,
                 })
-              : u.createElement(
+              : d.createElement(
                   "div",
-                  { className: (0, B.A)(J.DailyDealTitle, J.Orange) },
-                  ve(e),
+                  { className: (0, I.A)($.DailyDealTitle, $.Orange) },
+                  ye(e),
                 )),
-              (h = p.sale_clan_event_gid
-                ? u.createElement(Se, { deal: s, eRequireSalePageType: e })
-                : u.createElement(ye, { deal: s, eRequireSalePageType: e }));
+              (E = p.sale_clan_event_gid
+                ? d.createElement(Ee, { deal: s, eRequireSalePageType: e })
+                : d.createElement(Se, { deal: s, eRequireSalePageType: e }));
           }
         } else if (n?.require_sale_page) {
           const e = n.require_sale_page_type || 1;
-          (h = u.createElement(ye, { eRequireSalePageType: e })),
-            (S = u.createElement(
+          (E = d.createElement(Se, { eRequireSalePageType: e })),
+            (S = d.createElement(
               "div",
-              { className: (0, B.A)(J.DailyDealTitle, J.Orange) },
-              ve(e),
+              { className: (0, I.A)($.DailyDealTitle, $.Orange) },
+              ye(e),
             ));
         }
-        return u.createElement(
+        return d.createElement(
           "div",
-          { className: J.DailyDealStatusContainer },
-          u.createElement(
+          { className: $.DailyDealStatusContainer },
+          d.createElement(
             "div",
-            { className: (0, B.A)(J.Column) },
-            o,
-            u.createElement("div", { className: J.InviteBody }, t),
+            { className: (0, I.A)($.Column) },
+            c,
+            d.createElement("div", { className: $.InviteBody }, t),
           ),
-          !!h &&
-            u.createElement(
+          !!E &&
+            d.createElement(
               "div",
-              { className: (0, B.A)(J.Column) },
+              { className: (0, I.A)($.Column) },
               S,
-              u.createElement("div", { className: J.SalePageBody }, h),
+              d.createElement("div", { className: $.SalePageBody }, E),
             ),
-          u.createElement(
+          d.createElement(
             "div",
-            { className: (0, B.A)(J.Column) },
-            d,
-            u.createElement("div", { className: J.DiscountBody }, a),
+            { className: (0, I.A)($.Column) },
+            u,
+            d.createElement("div", { className: $.DiscountBody }, a),
           ),
           i,
-          Boolean(k.iA.is_support && s) &&
-            u.createElement(
+          Boolean(M.iA.is_support && s) &&
+            d.createElement(
               "a",
               {
-                className: v().ValveOnlyAdminBackground,
-                href: `${k.TS.PARTNER_BASE_URL}promotion/dailydeals/edit/${s.gid}`,
+                className: y().ValveOnlyAdminBackground,
+                href: `${M.TS.PARTNER_BASE_URL}promotion/dailydeals/edit/${s.gid}`,
               },
               "Edit Deal (VO)",
             ),
         );
       }
-      function ge(e) {
+      function _e(e) {
         const { strMessage: t, children: a } = e;
-        return u.createElement(
+        return d.createElement(
           "div",
-          { className: J.DailyDealStatusContainer },
-          u.createElement(
+          { className: $.DailyDealStatusContainer },
+          d.createElement(
             "div",
-            { className: (0, B.A)(J.Column, J.BasicResult) },
-            !!t && u.createElement("div", null, t),
+            { className: (0, I.A)($.Column, $.BasicResult) },
+            !!t && d.createElement("div", null, t),
             a,
           ),
         );
       }
-      function he(e) {
+      function ge(e) {
         const {
           deal: t,
           eDealState: a,
@@ -46340,207 +46321,207 @@
         let i = null;
         return (
           (i =
-            a == c.of.DealLive
-              ? u.createElement(
+            a == o.of.DealLive
+              ? d.createElement(
                   "div",
-                  { className: J.Orange },
-                  (0, A.we)("#DailyDeals_ActiveDeal"),
+                  { className: $.Orange },
+                  (0, T.we)("#DailyDeals_ActiveDeal"),
                 )
-              : u.createElement(P.H9, {
+              : d.createElement(R.H9, {
                   rtime: t.rtime32_start_time,
                   locTokenLocalTime: "#DailyDeals_Feature_Date",
                 })),
-          u.createElement(
+          d.createElement(
             "div",
             null,
-            u.createElement("div", { className: J.FeaturedDate }, i),
-            u.createElement(
+            d.createElement("div", { className: $.FeaturedDate }, i),
+            d.createElement(
               "div",
               null,
-              (0, A.we)(
+              (0, T.we)(
                 "#DailyDeals_Discount_Dates",
-                (0, A.TW)(n),
-                (0, A.TW)(r),
+                (0, T.TW)(n),
+                (0, T.TW)(r),
               ),
             ),
           )
         );
       }
-      function Ee(e) {
+      function he(e) {
         const {
             closeModal: t,
             deal: a,
             clanID: n,
             clanName: r,
-            eRequireSalePageType: i,
+            eRequireSalePageType: s,
           } = e,
-          l = (0, p.jE)(),
-          [m, d] = (0, u.useState)(a.rtime32_start_time),
-          [_, g] = (0, u.useState)(a.rtime32_start_time + M.Kp.PerWeek),
-          h = Math.floor(Date.now() / 1e3),
-          [S, y] = (0, u.useState)(""),
-          { fnSetDailyDealSalePage: v } = (0, c.Yg)(),
-          f = (0, s.V)(),
-          [b, C] = u.useState(!1);
-        return u.createElement(
-          D.eV,
+          c = (0, u.jE)(),
+          [m, p] = (0, d.useState)(a.rtime32_start_time),
+          [_, g] = (0, d.useState)(a.rtime32_start_time + A.Kp.PerWeek),
+          E = Math.floor(Date.now() / 1e3),
+          [S, y] = (0, d.useState)(""),
+          { fnSetDailyDealSalePage: v } = (0, o.Yg)(),
+          f = (0, i.V)(),
+          [D, I] = d.useState(!1);
+        return d.createElement(
+          w.eV,
           { onCancel: t },
-          u.createElement(E.Y9, null, fe(i)),
-          u.createElement(
-            E.nB,
+          d.createElement(h.Y9, null, ve(s)),
+          d.createElement(
+            h.nB,
             null,
-            u.createElement(
+            d.createElement(
               "div",
-              { className: J.CreateSalePageBody },
-              u.createElement(
+              { className: $.CreateSalePageBody },
+              d.createElement(
                 "div",
                 null,
-                (0, A.we)("#DailyDeals_SalePage_CreatorHome_Label"),
+                (0, T.we)("#DailyDeals_SalePage_CreatorHome_Label"),
                 ": ",
                 r,
               ),
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: J.CreateSalePageStartDate },
-                u.createElement(w.K, {
+                { className: $.CreateSalePageStartDate },
+                d.createElement(b.K, {
                   bShowTimeZone: !0,
                   fnIsValidDateTime: () => m <= a.rtime32_start_time,
-                  strDescription: (0, A.we)("#DailyDeals_SalePage_SaleStart"),
-                  nEarliestTime: h,
+                  strDescription: (0, T.we)("#DailyDeals_SalePage_SaleStart"),
+                  nEarliestTime: E,
                   fnGetTimeToUpdate: () => m,
-                  fnSetTimeToUpdate: d,
+                  fnSetTimeToUpdate: p,
                 }),
               ),
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: J.CreateSalePageEndDate },
-                u.createElement(w.K, {
+                { className: $.CreateSalePageEndDate },
+                d.createElement(b.K, {
                   bShowTimeZone: !0,
                   fnIsValidDateTime: () =>
-                    _ >= a.rtime32_start_time + M.Kp.PerDay,
-                  strDescription: (0, A.we)("#DailyDeals_SalePage_SaleEnd"),
-                  nEarliestTime: h,
+                    _ >= a.rtime32_start_time + A.Kp.PerDay,
+                  strDescription: (0, T.we)("#DailyDeals_SalePage_SaleEnd"),
+                  nEarliestTime: E,
                   fnGetTimeToUpdate: () => _,
                   fnSetTimeToUpdate: g,
                 }),
               ),
               !!S &&
-                u.createElement("div", { className: J.CreateSalePageError }, S),
-              b &&
-                u.createElement(I.t, {
-                  className: J.InProgressThrobber,
+                d.createElement("div", { className: $.CreateSalePageError }, S),
+              D &&
+                d.createElement(C.t, {
+                  className: $.InProgressThrobber,
                   size: "small",
                 }),
             ),
           ),
-          u.createElement(
-            E.wi,
+          d.createElement(
+            h.wi,
             null,
-            u.createElement(E.CB, {
+            d.createElement(h.CB, {
               onCancel: t,
               onOK: async () => {
-                C(!0);
+                I(!0);
                 const e = await v(a.gid, f, n, m, _, a.store_item_id);
-                C(!1),
+                I(!1),
                   e
-                    ? (l.invalidateQueries({
-                        queryKey: (0, o.QU)(k.iA.accountid),
+                    ? (c.invalidateQueries({
+                        queryKey: (0, l.QU)(M.iA.accountid),
                       }),
                       t())
                     : y(
-                        (0, A.we)("#DailyDeals_SalePage_ErrorCreatingSalePage"),
+                        (0, T.we)("#DailyDeals_SalePage_ErrorCreatingSalePage"),
                       );
               },
-              strOKText: (0, A.we)("#Button_Continue"),
+              strOKText: (0, T.we)("#Button_Continue"),
             }),
           ),
         );
       }
-      function Se(e) {
+      function Ee(e) {
         const { deal: t, eRequireSalePageType: a } = e,
           n = JSON.parse(t.partner_jsondata),
-          r = Z.b.InitFromClanID(n?.sale_clan_account);
-        return u.createElement(
+          r = Q.b.InitFromClanID(n?.sale_clan_account);
+        return d.createElement(
           "div",
-          { className: J.SalePageContainer },
+          { className: $.SalePageContainer },
           !!n.sale_clan_event_gid &&
-            u.createElement(
-              u.Fragment,
+            d.createElement(
+              d.Fragment,
               null,
-              u.createElement(
+              d.createElement(
                 "a",
                 {
-                  className: (0, B.A)(v().Button, J.EditSaleButton),
+                  className: (0, I.A)(y().Button, $.EditSaleButton),
                   href:
-                    k.TS.COMMUNITY_BASE_URL +
+                    M.TS.COMMUNITY_BASE_URL +
                     "gid/" +
                     r.ConvertTo64BitString() +
                     "/partnerevents/edit/" +
                     n.sale_clan_event_gid +
                     "?tab=sale",
                 },
-                (0, A.we)("#DailyDeals_Button_EditSalePage"),
+                (0, T.we)("#DailyDeals_Button_EditSalePage"),
               ),
               t.asset_request_id &&
-                u.createElement(
+                d.createElement(
                   "a",
                   {
-                    className: (0, B.A)(v().Button, J.EditSaleButton),
+                    className: (0, I.A)(y().Button, $.EditSaleButton),
                     href:
-                      k.TS.PARTNER_BASE_URL +
+                      M.TS.PARTNER_BASE_URL +
                       "promotion/assetportal/request/" +
                       t.asset_request_id,
                   },
-                  (0, A.we)("#DailyDeals_Button_SubmitAssets"),
+                  (0, T.we)("#DailyDeals_Button_SubmitAssets"),
                 ),
-              k.iA.is_support &&
-                u.createElement(
-                  E.$n,
+              M.iA.is_support &&
+                d.createElement(
+                  h.$n,
                   {
                     onClick: (e) => {
-                      (0, C.pg)(
-                        u.createElement(
-                          D.eV,
+                      (0, D.pg)(
+                        d.createElement(
+                          w.eV,
                           null,
-                          u.createElement(E.Y9, null, ve(a)),
-                          u.createElement(
-                            E.nB,
+                          d.createElement(h.Y9, null, ye(a)),
+                          d.createElement(
+                            h.nB,
                             null,
-                            u.createElement(ye, {
+                            d.createElement(Se, {
                               deal: t,
                               eRequireSalePageType: a,
                             }),
                           ),
                         ),
-                        (0, T.uX)(e),
+                        (0, B.uX)(e),
                       );
                     },
                   },
-                  (0, A.we)("#DailyDeals_Button_ChangeSalePage"),
+                  (0, T.we)("#DailyDeals_Button_ChangeSalePage"),
                   " (VO)",
                 ),
             ),
         );
       }
-      function ye(e) {
+      function Se(e) {
         const { deal: t, eRequireSalePageType: a, fnOnSalePageSelected: r } = e,
-          i = (0, p.jE)(),
-          { fnSetDailyDealSalePage: l } = (0, c.Yg)(),
-          m = (0, d.a)(),
-          _ = (0, s.V)(),
-          g = (0, o.Kt)(k.iA.accountid, m),
-          [h, S] = (0, u.useState)(
+          s = (0, u.jE)(),
+          { fnSetDailyDealSalePage: c } = (0, o.Yg)(),
+          p = (0, m.a)(),
+          _ = (0, i.V)(),
+          g = (0, l.Kt)(M.iA.accountid, p),
+          [E, S] = (0, d.useState)(
             JSON.parse(t?.partner_jsondata ?? "{}").sale_clan_account ?? 0,
           ),
-          y = (0, u.useMemo)(
-            () => g?.find((e) => e.clan_account_id == h),
-            [g, h],
+          y = (0, d.useMemo)(
+            () => g?.find((e) => e.clan_account_id == E),
+            [g, E],
           ),
-          [v, f] = (0, u.useState)(
+          [v, f] = (0, d.useState)(
             JSON.parse(t?.partner_jsondata ?? "{}").sale_clan_event_gid ?? "",
           ),
-          b = k.TS.PARTNER_BASE_URL + "doc/store/creator_homepage",
-          w = (0, u.useMemo)(
+          b = M.TS.PARTNER_BASE_URL + "doc/store/creator_homepage",
+          w = (0, d.useMemo)(
             () =>
               g
                 ? g.map((e) => ({
@@ -46550,21 +46531,21 @@
                 : [],
             [g],
           ),
-          D = (0, u.useMemo)(() => {
-            const e = g?.find((e) => e.clan_account_id == h);
+          C = (0, d.useMemo)(() => {
+            const e = g?.find((e) => e.clan_account_id == E);
             if (e) {
               let n = e.sale_pages
                 .filter(
                   (e) =>
                     e.start_time <= t?.rtime32_start_time &&
-                    e.end_time > t?.rtime32_start_time + M.Kp.PerDay &&
+                    e.end_time > t?.rtime32_start_time + A.Kp.PerDay &&
                     (!a || e.external_sale_event_type == a),
                 )
                 .map((e) => ({ label: e.name, data: e.gid_clan_event }));
               return (
                 n.length &&
                   n.push({
-                    label: (0, A.we)("#DailyDeals_SalePage_CreateNew"),
+                    label: (0, T.we)("#DailyDeals_SalePage_CreateNew"),
                     data: "",
                   }),
                 v &&
@@ -46574,66 +46555,66 @@
               );
             }
             return [];
-          }, [t?.rtime32_start_time, g, h, v, a]);
+          }, [t?.rtime32_start_time, g, E, v, a]);
         return t
-          ? !h || !v || (g?.length && g?.find((e) => e.clan_account_id == h))
+          ? !E || !v || (g?.length && g?.find((e) => e.clan_account_id == E))
             ? g?.length
-              ? u.createElement(
+              ? d.createElement(
                   "div",
-                  { className: J.SalePageContainer },
-                  u.createElement(
+                  { className: $.SalePageContainer },
+                  d.createElement(
                     "div",
-                    { className: J.SalePageLabel },
-                    (0, A.we)("#DailyDeals_SalePage_CreatorHome_Label"),
+                    { className: $.SalePageLabel },
+                    (0, T.we)("#DailyDeals_SalePage_CreatorHome_Label"),
                   ),
-                  u.createElement(
+                  d.createElement(
                     "div",
-                    { className: J.GroupDropdown },
-                    u.createElement(E.ZU, {
-                      selectedOption: h.toString(),
+                    { className: $.GroupDropdown },
+                    d.createElement(h.ZU, {
+                      selectedOption: E.toString(),
                       menuLabel: "clan",
                       rgOptions: w,
                       onChange: (e) => S(parseInt(e.data)),
                     }),
                   ),
-                  !!h &&
-                    !!D.length &&
-                    u.createElement(
-                      u.Fragment,
+                  !!E &&
+                    !!C.length &&
+                    d.createElement(
+                      d.Fragment,
                       null,
-                      u.createElement(
+                      d.createElement(
                         "div",
-                        { className: J.SalePageLabel },
-                        (0, A.we)("#DailyDeals_SalePage_SalePage_Label"),
+                        { className: $.SalePageLabel },
+                        (0, T.we)("#DailyDeals_SalePage_SalePage_Label"),
                       ),
-                      u.createElement(
+                      d.createElement(
                         "div",
-                        { className: J.SalePageDropdown },
-                        u.createElement(E.ZU, {
+                        { className: $.SalePageDropdown },
+                        d.createElement(h.ZU, {
                           selectedOption: v.toString(),
                           menuLabel: "salepage",
-                          rgOptions: D,
+                          rgOptions: C,
                           onChange: (e) =>
                             ((e) => {
                               if (e == v) return;
                               f(e);
                               const a = g
-                                .find((e) => e.clan_account_id == h)
+                                .find((e) => e.clan_account_id == E)
                                 ?.sale_pages?.find(
                                   (t) => t.gid_clan_event == e,
                                 );
                               a
-                                ? (l(
+                                ? (c(
                                     t.gid,
                                     _,
-                                    h,
+                                    E,
                                     a.start_time,
                                     a.end_time,
                                     t.store_item_id,
                                     a.gid_clan_event,
                                   ),
-                                  i.invalidateQueries({
-                                    queryKey: (0, o.QU)(k.iA.accountid),
+                                  s.invalidateQueries({
+                                    queryKey: (0, l.QU)(M.iA.accountid),
                                   }),
                                   r && r())
                                 : (0, n.ZI)(
@@ -46644,94 +46625,94 @@
                         }),
                       ),
                     ),
-                  !!h &&
+                  !!E &&
                     !v &&
-                    u.createElement(
-                      E.$n,
+                    d.createElement(
+                      h.$n,
                       {
                         onClick: (e) => {
-                          (0, C.pg)(
-                            u.createElement(Ee, {
+                          (0, D.pg)(
+                            d.createElement(he, {
                               deal: t,
-                              clanID: h,
+                              clanID: E,
                               clanName: y.clan_name,
                               eRequireSalePageType: a,
                               closeModal: r,
                             }),
-                            (0, T.uX)(e),
+                            (0, B.uX)(e),
                           );
                         },
                       },
-                      fe(a),
+                      ve(a),
                     ),
                 )
-              : u.createElement(
+              : d.createElement(
                   "div",
                   {
-                    className: (0, B.A)(
-                      J.SalePageContainer,
-                      J.MissingCreatorHome,
+                    className: (0, I.A)(
+                      $.SalePageContainer,
+                      $.MissingCreatorHome,
                     ),
                   },
-                  (0, A.PP)(
+                  (0, T.PP)(
                     "#DailyDeals_SalePage_MissingCreatorHome",
-                    u.createElement(
+                    d.createElement(
                       "a",
                       { href: b },
-                      (0, A.we)("#DailyDeals_SalePage_CreateCreatorHomeLink"),
+                      (0, T.we)("#DailyDeals_SalePage_CreateCreatorHomeLink"),
                     ),
                   ),
                 )
-            : u.createElement(
+            : d.createElement(
                 "div",
-                { className: J.SalePageContainer },
-                u.createElement(
+                { className: $.SalePageContainer },
+                d.createElement(
                   "div",
                   null,
-                  (0, A.we)("#DailyDeals_SalePage_SalePageCreated"),
+                  (0, T.we)("#DailyDeals_SalePage_SalePageCreated"),
                 ),
               )
-          : u.createElement(
+          : d.createElement(
               "div",
-              { className: J.SalePageContainer },
-              u.createElement(
-                E.$n,
+              { className: $.SalePageContainer },
+              d.createElement(
+                h.$n,
                 {
-                  className: (0, B.A)(J.DailyDealButton, J.Disabled),
+                  className: (0, I.A)($.DailyDealButton, $.Disabled),
                   disabled: !0,
                 },
-                (0, A.we)("#DailyDeals_Button_MustFirstPickDate"),
+                (0, T.we)("#DailyDeals_Button_MustFirstPickDate"),
               ),
             );
       }
-      function ve(e) {
+      function ye(e) {
         switch (e) {
           case 1:
-            return (0, A.we)("#DailyDeals_SelectSalePage_Title_Publisher");
+            return (0, T.we)("#DailyDeals_SelectSalePage_Title_Publisher");
           case 2:
-            return (0, A.we)("#DailyDeals_SelectSalePage_Title_Showcase");
+            return (0, T.we)("#DailyDeals_SelectSalePage_Title_Showcase");
           case 4:
-            return (0, A.we)("#DailyDeals_SelectSalePage_Title_Theme");
+            return (0, T.we)("#DailyDeals_SelectSalePage_Title_Theme");
           case 3:
-            return (0, A.we)("#DailyDeals_SelectSalePage_Title_Region");
+            return (0, T.we)("#DailyDeals_SelectSalePage_Title_Region");
           case 5:
-            return (0, A.we)("#DailyDeals_SelectSalePage_Title_Franchise");
+            return (0, T.we)("#DailyDeals_SelectSalePage_Title_Franchise");
           case 0:
             return "";
         }
       }
-      function fe(e) {
+      function ve(e) {
         switch (e) {
           case 1:
-            return (0, A.we)("#DailyDeals_CreateSalePage_Title_Publisher");
+            return (0, T.we)("#DailyDeals_CreateSalePage_Title_Publisher");
           case 2:
-            return (0, A.we)("#DailyDeals_CreateSalePage_Title_Showcase");
+            return (0, T.we)("#DailyDeals_CreateSalePage_Title_Showcase");
           case 4:
-            return (0, A.we)("#DailyDeals_CreateSalePage_Title_Theme");
+            return (0, T.we)("#DailyDeals_CreateSalePage_Title_Theme");
           case 3:
-            return (0, A.we)("#DailyDeals_CreateSalePage_Title_Region");
+            return (0, T.we)("#DailyDeals_CreateSalePage_Title_Region");
           case 5:
-            return (0, A.we)("#DailyDeals_CreateSalePage_Title_Franchise");
+            return (0, T.we)("#DailyDeals_CreateSalePage_Title_Franchise");
           case 0:
             return "";
         }
