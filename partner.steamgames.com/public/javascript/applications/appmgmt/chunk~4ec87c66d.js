@@ -44718,13 +44718,12 @@
       function I(e) {
         const { reportData: t, deal: a, storeItem: n } = e,
           { rgDiscounts: s } = (0, r.Y4)(a),
-          c = (0, S.CH)(),
-          [p, _] = (0, i.useState)("gross_sales"),
-          [g, y] = (0, i.useState)(!1),
-          v = (e) => {
-            y(p == e && !g), _(e);
+          [c, p] = (0, i.useState)("gross_sales"),
+          [_, g] = (0, i.useState)(!1),
+          h = (e) => {
+            g(c == e && !_), p(e);
           },
-          [b, w] = i.useMemo(() => {
+          [E, S] = i.useMemo(() => {
             let e = [];
             t.products?.forEach((t) => e.push(t.packageid));
             let a = 0;
@@ -44734,16 +44733,10 @@
               }),
               [e, a]
             );
-          }, [t.products]),
-          D = (0, E.m)("DealyDealHistorySales");
-        let C;
+          }, [t.products]);
+        let y;
         return (
-          i.useEffect(() => {
-            h.A.Get()
-              .HintLoadStorePackages(b, { include_basic_info: !0 })
-              .then(() => c());
-          }, [b, D, c]),
-          (C = n?.GetAssets().GetHeaderURL()
+          (y = n?.GetAssets().GetHeaderURL()
             ? i.createElement("img", { src: n.GetAssets().GetHeaderURL() })
             : n
               ? (0, o.we)("#DailyDeals_HeaderArtMissing")
@@ -44751,7 +44744,7 @@
           i.createElement(
             "div",
             { className: m.DailyDeal_HistoryTable },
-            i.createElement(A, { dealID: a.gid }, C),
+            i.createElement(A, { dealID: a.gid }, y),
             i.createElement(
               "div",
               { className: m.Cell },
@@ -44765,25 +44758,25 @@
               strHeaderToken: "#DailyDeals_Report_Revenue",
               value: t?.gross_sales,
               valueFormat: "dollars",
-              OnClick: v,
-              sortColumn: p,
-              sortAscending: g,
+              OnClick: h,
+              sortColumn: c,
+              sortAscending: _,
             }),
             i.createElement(R, {
               columnSortID: "units",
               strHeaderToken: "#DailyDeals_Report_Units",
               value: t?.units,
-              OnClick: v,
-              sortColumn: p,
-              sortAscending: g,
+              OnClick: h,
+              sortColumn: c,
+              sortAscending: _,
             }),
             i.createElement(R, {
               columnSortID: "gross_activations",
               strHeaderToken: "#DailyDeals_Report_Activations",
               value: t?.gross_activations,
-              OnClick: v,
-              sortColumn: p,
-              sortAscending: g,
+              OnClick: h,
+              sortColumn: c,
+              sortAscending: _,
             }),
             t.products
               ?.filter((e) => e.units > 0 || e.gross_activations > 0)
@@ -44793,7 +44786,7 @@
                     i = t[a] ?? 0;
                   if (r != i) return n ? (r > i ? 1 : -1) : r > i ? -1 : 1;
                   return 0;
-                })(e, t, p, g),
+                })(e, t, c, _),
               )
               .map((e) =>
                 i.createElement(
@@ -44805,7 +44798,7 @@
                       className: (0, l.A)(m.Cell, m.SalesPackageTitleCell),
                       href: `${f.TS.PARTNER_BASE_URL}store/packagelanding/${e.packageid}`,
                     },
-                    h.A.Get().GetPackage(e.packageid)?.GetName() ??
+                    e.package_name ??
                       `${(0, o.we)("#Sale_Stats_PackageId")}: ${e.packageid}`,
                     i.createElement(G, {
                       percentage:
@@ -44818,7 +44811,7 @@
                     { className: m.SalesBarChartContainer },
                     i.createElement("div", {
                       className: m.SalesBarChart,
-                      style: { width: (100 * e.gross_sales) / w + "%" },
+                      style: { width: (100 * e.gross_sales) / S + "%" },
                     }),
                   ),
                   i.createElement(
