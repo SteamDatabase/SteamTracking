@@ -1197,14 +1197,14 @@ GDynamicStore = {
 		{
 			// own some but not all.
 			$Description.html( '<div>%1$s of %2$s items from this bundle are already in your library.</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle - Bundle.m_cUserItemsInBundle ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ) );
-			$Description.append( '<div>Buy this bundle to save %1$s%% off the %2$s items you don\'t yet have!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cUserItemsInBundle ).replace( '%%', '%' ) );
+			$Description.append( '<div>Buy this bundle to save %1$s%% off the %2$s items you don\'t yet have!</div>'.replace( '%1$s', Math.round( Bundle.m_nDiscountPct ) ).replace( '%2$s', Bundle.m_cUserItemsInBundle ).replace( '%%', '%' ) );
 
 			// add "complete the set" flag
 			$Description.parents('.dynamic_bundle_description' ).append( $J('<div/>', {'class': 'ds_flag ds_completetheset'} ).text('COMPLETE YOUR COLLECTION!') );
 		}
 		else
 		{
-			$Description.html( '<div>Buy this bundle to save %1$s%% off all %2$s items!</div>'.replace( '%1$s', Bundle.m_nDiscountPct ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
+			$Description.html( '<div>Buy this bundle to save %1$s%% off all %2$s items!</div>'.replace( '%1$s', Math.round( Bundle.m_nDiscountPct ) ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
 		}
 
 		var rgItemsWithCaps = [];

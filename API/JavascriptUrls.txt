@@ -977,7 +977,6 @@ ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
 ${PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
-${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
 ${PARTNER_BASE_URL}actions/ajaxgetadminusers
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
