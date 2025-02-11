@@ -9912,7 +9912,8 @@
         const u = Boolean(1 != t),
           p = Boolean(0 != t);
         let g = 0;
-        for (let t = 0; t < 31; ++t) e && e[(0, n.Lg)(t)] && (g += 1);
+        if ("mm_auto_render" != s)
+          for (let t = 0; t < 31; ++t) e && e[(0, n.Lg)(t)] && (g += 1);
         let E,
           S = h.G;
         if ((1 == t ? (S = 1) : 2 == t && (S += 1), a)) {
@@ -9946,7 +9947,8 @@
         const f = d?.GetAssets().GetHeroCapsuleURL()?.length > 0;
         return {
           bMinimumAssetsSetup: Boolean(
-            e && (!u || e.english) && (!p || e.sc_schinese),
+            "mm_auto_render" == s ||
+              (e && (!u || e.english) && (!p || e.sc_schinese)),
           ),
           nAssetSetup: g,
           nCompleteAssetRequired: S,
