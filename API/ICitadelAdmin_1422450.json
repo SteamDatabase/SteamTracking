@@ -1,0 +1,18 @@
+{
+    "name": "ICitadelAdmin_1422450",
+    "methods": [
+        {
+            "name": "GetReplayURL",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "MatchID",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The ID of the match to load"
+                }
+            ]
+        }
+    ]
+}
