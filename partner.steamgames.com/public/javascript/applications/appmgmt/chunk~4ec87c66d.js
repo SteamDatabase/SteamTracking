@@ -54296,20 +54296,20 @@
               ));
         const n = (0, o.c2)(e.template_vars_json);
         if ("mm_auto_render" == n?.custom_display) {
-          const e = t.GetAssets();
-          e.GetMainCapsuleURL() ||
+          const e = t?.GetAssets();
+          e?.GetMainCapsuleURL() ||
             a.push(
               "Marketing Message: Store item missing main capsule, required asset for auto-render.",
             ),
-            e.GetHeroCapsuleURL() ||
+            e?.GetHeroCapsuleURL() ||
               a.push(
                 "Marketing Message: Store item missing here capsule (aka store vertical capsule), required asset for auto-render for Steam Deck.",
               ),
-            t.GetOnlyAllAgesSafeScreenshots().length < 3 &&
+            t?.GetOnlyAllAgesSafeScreenshots().length < 3 &&
               a.push(
                 "Marketing Message: Store item missing at least 3 screenshots safe for all ages, required asset for auto-render.",
               ),
-            0 == t.GetAllTrailers().GetHighlightTrailers().length &&
+            0 == t?.GetAllTrailers().GetHighlightTrailers().length &&
               a.push(
                 "Marketing Message: Store item missing highlight trailers, required asset for auto-render.",
               );
@@ -54319,8 +54319,8 @@
       function d(e) {
         const { oEditableMessage: t } = e,
           [a, o, d] = (0, n.q3)(() => [
-            t.GetStoreItemKey().id,
-            (0, i.JK)(t.GetStoreItemKey().item_type),
+            t.GetStoreItemKey()?.id,
+            (0, i.JK)(t.GetStoreItemKey()?.item_type),
             t.GetModel(),
           ]),
           [u] = (0, s.G6)(a, o, c),
@@ -56405,6 +56405,7 @@
             setStartTime: p,
             rtEndTime: _,
             setEndTime: h,
+            bNewMessage: !0,
           }),
           c.createElement(
             I.JU,
@@ -56513,9 +56514,10 @@
             setStartTime: n,
             rtEndTime: r,
             setEndTime: i,
+            bNewMessage: s,
           } = e,
-          s = (0, Ie.f1)();
-        if (!a || a > s)
+          l = (0, Ie.f1)();
+        if (!a || a > l)
           switch (t) {
             case 2:
             case 14:
@@ -56539,7 +56541,7 @@
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => a,
             fnSetTimeToUpdate: n,
-            fnIsValidDateTime: () => a > s,
+            fnIsValidDateTime: () => !s || a > l,
             bShowTimeZone: !0,
           }),
           c.createElement(Re.K, {

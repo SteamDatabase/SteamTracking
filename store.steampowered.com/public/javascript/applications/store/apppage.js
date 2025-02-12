@@ -3305,11 +3305,11 @@
             "deck-topplayed-banner": (e) => n.createElement(Tt, { ...e }),
             "steamawardsvote-embed": () =>
               n.createElement(Pt, { key: `steamawardsvote_${t}`, appID: t }),
-            "broadcast-embed": () =>
+            "broadcast-embed": (a) =>
               n.createElement(Rt, {
                 key: `appbroadcastcast_${t}`,
                 ...e,
-                appid: t,
+                appid: a.appid,
               }),
             "demo-and-quick-pitch": () =>
               n.createElement(
