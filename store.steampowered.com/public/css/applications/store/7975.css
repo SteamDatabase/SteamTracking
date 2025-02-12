@@ -860,7 +860,6 @@ html.tablet .ContentHubSalePage .contenthubmaincarousel.expanded {
 }
 .ContentHubSalePage .SaleSectionTabListContainer {
   position: unset;
-  overflow-x: hidden;
 }
 .ContentHubSalePage
   .SaleSectionTabListContainer

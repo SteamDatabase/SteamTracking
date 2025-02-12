@@ -8861,8 +8861,11 @@
         F = a(64969),
         O = a(58326);
       const L = (0, l.PA)((e) => {
-        const { saleSection: t, editModel: a } = e,
-          [n, i] = c.useState(null),
+        const { saleSection: t, editModel: a } = e;
+        c.useEffect(() => {
+          t.tabs || ((t.tabs = []), (t.disable_background = !0));
+        });
+        const [n, i] = c.useState(null),
           r = Boolean(t.tabs && t.tabs.length > 0 && !n);
         return a
           .GetSaleSections()
@@ -9211,12 +9214,23 @@
                   );
                 })(e, t, a, "tab_highlight_label_color"),
               className: E.EventEditorTextTitle,
-              style: { color: n || "#000000" },
+              style: { color: n || "#1a9fff" },
             },
             (0, M.we)("#Sale_Tabs_Highlight_Color"),
             c.createElement(D.o, {
               tooltip: (0, M.we)("#Sale_Tabs_Highlight_Color_ttip"),
             }),
+          ),
+          c.createElement(
+            g.$n,
+            {
+              onClick: () => {
+                void 0 !== t.tab_highlight_label_color &&
+                  ((t.tab_highlight_label_color = void 0),
+                  a.SetDirty(i.IQ.jsondata_sales));
+              },
+            },
+            (0, M.we)("#Button_Clear"),
           ),
         );
       }
@@ -60154,7 +60168,7 @@
               pe.Z,
               {
                 focusable: !0,
-                className: (0, S.A)(u().SaleTab, r, "SaleTab", l && "Selected"),
+                className: (0, S.A)(u().SaleTab, l && u().SelectedTab, r),
                 onClick: () => i(t),
                 onOKButton: () => i(t),
                 id: "Tab_" + t.unique_id,
@@ -60336,27 +60350,19 @@
               [u().SaleSection]: !0,
               [u().SaleSectionTabs]: !0,
               [u().DesktopTabs]: "dev" === E.TS.WEB_UNIVERSE,
-              SaleSectionTabs: !0,
             }),
             style: b,
             id: y.mj + a.unique_id,
           },
           n.createElement(
             nr,
-            {
-              className: (0, S.A)({
-                [u().SaleSectionTabContainer]: !0,
-                SaleSectionTabContainer: !0,
-              }),
-            },
+            { className: (0, S.A)({ [u().SaleSectionTabContainer]: !0 }) },
             n.createElement(
               "div",
               {
                 className: (0, S.A)({
                   [Ci().SaleSectionContainer]: !0,
                   [u().SaleSectionTabsRow]: !0,
-                  SaleSectionCtn_Trgt: !0,
-                  SaleTabCtn: !0,
                 }),
                 ref: h,
               },

@@ -332,6 +332,8 @@
         SaleSectionTabsTab: "_3BgHmwox82MCNAE15H28dc",
         SaleSectionTabContainer: "_1Svj0QB6CvcmNGjDP2woOu",
         SaleSectionTabsRow: "_30oGTu0O4sTp8P_fq0usKF",
+        SelectedTab: "_1OLH1-7ogagOD1nTPJ0bE1",
+        slide: "PL6r4VNhuKNICesRLLGa9",
         SaleTab: "gc-rqvG6ITYgP26WGwJZz",
         SaleTabLabel: "_2mYMQE06Py3h0CfEokpNiM",
         SaleSectionTabListContainer: "_2VZtqrDRVSIicZZHPUY9SY",
