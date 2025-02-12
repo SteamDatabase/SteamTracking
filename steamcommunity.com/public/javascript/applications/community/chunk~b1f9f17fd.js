@@ -82,6 +82,7 @@
         ColorButtonsCtn: "pxbho4ej9vrUknlcN1iac",
         EventEditorTextTitle: "_2QrzBcd0E6mvxBIHCUvBq7",
         SelectedTabDetailsCtn: "_3FCo--SN2RKvHIdaPpnU5p",
+        TabEditorButtons: "rJGYL9KtL2_oxMfjOUUuq",
       };
     },
     35654: (e) => {
@@ -9196,7 +9197,7 @@
           [n] = (0, s.q3)(() => [t.tab_highlight_label_color]);
         return c.createElement(
           "div",
-          { style: { display: "flex" } },
+          { className: N.TabEditorButtons },
           c.createElement(
             g.$n,
             {
