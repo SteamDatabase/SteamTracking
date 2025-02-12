@@ -7928,6 +7928,14 @@
         BIsValidForRealm(e) {
           return this.GetIncludedRealmList().includes(e);
         }
+        BIsNextFest() {
+          const e = this.jsondata.sale_vanity_id;
+          return (
+            new l.b(this.clanSteamID).GetAccountID() == B &&
+            e &&
+            e.toLowerCase().startsWith("nextfest")
+          );
+        }
       }
       (0, a.Cg)([s.sH], H.prototype, "GID", void 0),
         (0, a.Cg)([s.sH], H.prototype, "AnnouncementGID", void 0),
@@ -11011,27 +11019,30 @@
     69343: (e, t, r) => {
       "use strict";
       r.d(t, { P: () => s, j: () => o });
-      var a = r(22837),
-        i = r(2160),
+      var a = r(2160),
+        i = r(22837),
         n = r(61859);
       function s(e, t, r) {
         if (((null != e && null != e) || (e = t), !r || 0 === r.length))
           return e;
         for (const t of r) if (n.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of r) if (n.A0.IsELanguageValidInRealm(t, e)) return t;
-        return r.includes(i.TU.k_ESteamRealmGlobal) ? 0 : 29;
+        return r.includes(a.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
       function o(e, t = 0) {
         let r = e.lastIndexOf(".");
         -1 != r && (e = e.slice(0, r).toLowerCase());
-        let i = null,
+        let a = null,
           n = 0;
-        e.endsWith("korean") && ((i = 4), (n = 6));
+        e.endsWith("korean") && ((a = 4), (n = 6));
         for (let t = 0; t < 31; ++t) {
-          const r = (0, a.Lg)(t);
-          r.length <= n || (e.endsWith(r) && ((i = t), (n = r.length)));
+          const r = (0, i.ww)(t);
+          if (r.length <= n) continue;
+          e.endsWith(r) && ((a = t), (n = r.length));
+          const s = (0, i.Lg)(t);
+          s.length <= n || (e.endsWith(s) && ((a = t), (n = s.length)));
         }
-        return i || t;
+        return a || t;
       }
     },
     86355: (e, t, r) => {

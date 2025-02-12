@@ -373,7 +373,12 @@
 ._3vUSX_qfXEDziculwGUb7v ._1sI79xb8sFynt5h92mFTK7 {
   display: flex;
   flex-direction: column;
-  min-width: 80%;
+  min-width: 60%;
+}
+._1gwxVfI4c1Y-gqzcjvYujs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 ._3oSHTIvUhbK90D9Uvj438V {
   display: flex;

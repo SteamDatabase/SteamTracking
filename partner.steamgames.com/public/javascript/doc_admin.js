@@ -11,6 +11,11 @@ function updateArticleSummary( articleSummary ) {
 	$J( '#articleSummaryHideFromToc' ).prop( 'checked', articleSummary.hide_from_toc );
 	$J( '#articleSummaryHideFromSearch' ).prop( 'checked', articleSummary.hide_from_search );
 	$J( '#articleSummaryLocalizeDraft' ).prop( 'checked', articleSummary.localize_draft );
+	$J( '#articleSummaryPushToCrowdIn' ).prop( 'checked', articleSummary.sync_for_localization );
+	$J( '#articleSummaryPushToCrowdInLabel' ).text( articleSummary.localize_draft ? 'Push to CrowdIn on save' : 'Push to CrowdIn on publish' );
+	$J( '#articleSummaryLocalizationUrl' ).text( articleSummary.localization_url );
+	$J( '#articleSummaryLocalizationUrl' ).attr( 'href', articleSummary.localization_url );
+
 	$J( '#articleSummaryPriority' ).val( articleSummary.priority );
 	if ( !Array.isArray( articleSummary.required_partner_capabilities ) || articleSummary.required_partner_capabilities.length == 0 )
 	{
@@ -150,6 +155,7 @@ function updateVisibility( bChangeVisibility ) {
 		hideFromToc: $J( '#articleSummaryHideFromToc' ).is( ':checked' ),
 		hideFromSearch: $J( '#articleSummaryHideFromSearch' ).is( ':checked' ),
 		localizeDraft: $J( '#articleSummaryLocalizeDraft' ).is( ':checked' ),
+		pushToCrowdIn: $J( '#articleSummaryPushToCrowdIn' ).is( ':checked' ),
 	} );
 }
 
@@ -158,7 +164,7 @@ $J( document ).ready( function(){
 		if ( $J( this ).data( 'currentVisibility' ) == 0 || confirm( 'Are you sure you want to hide this visible article?' ) )
 			updateVisibility( true );
 	} );
-	$J( '#articleSummaryHideFromToc, #articleSummaryHideFromSearch, #articleSummaryLocalizeDraft' ).change( function() { updateVisibility( false ); } );
+	$J( '#articleSummaryHideFromToc, #articleSummaryHideFromSearch, #articleSummaryLocalizeDraft, #articleSummaryPushToCrowdIn' ).change( function() { updateVisibility( false ); } );
 
 	$J( '#articleSummaryAccess input[name=required]' ).change( function() {
 		if ( this.value == 0 )

@@ -3915,6 +3915,13 @@
                 strTitle: (0, d.we)("#RecommenderDemos_NewReleases"),
                 strSubtitle: (0, d.we)("#RecommenderDemos_NewReleases_Desc"),
               }),
+              i.createElement(f, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "NextFest",
+                strTitle: (0, d.we)("#RecommenderDemos_NextFest"),
+                strSubtitle: (0, d.we)("#RecommenderDemos_NextFestDesc"),
+              }),
               i.createElement(E, { nAccountID: a, bExclude: l }),
               i.createElement(f, {
                 nAccountID: a,

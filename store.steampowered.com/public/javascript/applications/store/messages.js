@@ -1867,20 +1867,20 @@
           return "CMarketingMessages_GetMarketingMessageViewerStats_Request";
         }
       }
-      class j extends u {
+      class A extends u {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.rt_time_hour || c.Sg(j.M()),
+            A.prototype.rt_time_hour || c.Sg(A.M()),
             u.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   rt_time_hour: {
                     n: 1,
@@ -1903,60 +1903,6 @@
                     bw: c.gp.writeUint32,
                   },
                 },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = c.w0(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return c.BT(j.M(), e, t);
-        }
-        static fromObject(e) {
-          return c.Uq(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new o.BinaryReader(e),
-            r = new j();
-          return j.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return c.zj(j.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new o.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          c.i0(j.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new o.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessageHourlyStats";
-        }
-      }
-      class A extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            A.prototype.stats || c.Sg(A.M()),
-            u.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: { stats: { n: 1, c: j, r: !0, q: !0 } },
               }),
             A.sm_m
           );
@@ -1991,6 +1937,60 @@
         serializeBase64String() {
           var e = new o.BinaryWriter();
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessageHourlyStats";
+        }
+      }
+      class j extends u {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.stats || c.Sg(j.M()),
+            u.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
+                fields: { stats: { n: 1, c: A, r: !0, q: !0 } },
+              }),
+            j.sm_m
+          );
+        }
+        static MBF() {
+          return j.sm_mbf || (j.sm_mbf = c.w0(j.M())), j.sm_mbf;
+        }
+        toObject(e = !1) {
+          return j.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return c.BT(j.M(), e, t);
+        }
+        static fromObject(e) {
+          return c.Uq(j.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new o.BinaryReader(e),
+            r = new j();
+          return j.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return c.zj(j.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new o.BinaryWriter();
+          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          c.i0(j.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new o.BinaryWriter();
+          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMarketingMessages_GetMarketingMessageViewerStats_Response";
@@ -2075,7 +2075,7 @@
             U.sm_m ||
               (U.sm_m = {
                 proto: U,
-                fields: { stats: { n: 1, c: j, r: !0, q: !0 } },
+                fields: { stats: { n: 1, c: A, r: !0, q: !0 } },
               }),
             U.sm_m
           );
@@ -2986,7 +2986,7 @@
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
               (0, l.I8)(N, t),
-              A,
+              j,
               { ePrivilege: 4 },
             );
           }),
@@ -3282,6 +3282,11 @@
             .filter((e) => Boolean(e.appid))
             .map((e) => e.appid);
         }
+        GetAutoRenderWithoutAssetOverrides() {
+          return Boolean(
+            this.m_templateVars.autorender_assets_without_overrides,
+          );
+        }
         GetGID() {
           return this.m_message.gid();
         }
@@ -3390,7 +3395,7 @@
     },
     2921: (e, t, r) => {
       "use strict";
-      r.d(t, { q: () => k, Y: () => I });
+      r.d(t, { q: () => F, Y: () => k });
       var a = r(76217),
         i = r(64753),
         s = r(90626),
@@ -3483,8 +3488,15 @@
           include_screenshots: !0,
           include_basic_info: !0,
           include_tag_count: 10,
+        },
+        I = {
+          include_trailers: !0,
+          include_screenshots: !0,
+          include_basic_info: !0,
+          include_tag_count: 10,
+          include_assets_without_overrides: !0,
         };
-      function I(e) {
+      function k(e) {
         const { info: t, bPopOutTrailerPlayback: r } = e,
           [a] = (0, l.G6)(t.id, (0, n.SW)(t.type), R),
           [i, o] = (0, s.useState)(!1),
@@ -3495,7 +3507,7 @@
             _ && (r ? m(!0) : o((e) => !e));
           }, [_, r]),
           y = _
-            ? s.createElement(P, {
+            ? s.createElement(N, {
                 trailer: _,
                 bPlayVideo: i,
                 fnTogglePlayTrailer: B,
@@ -3506,14 +3518,14 @@
             ? s.createElement(
                 "div",
                 { className: (0, u.A)(M().HilightGrid, M().MediaContainer) },
-                s.createElement(F, { elFeaturedInCenter: y, storeItem: a }),
+                s.createElement(W, { elFeaturedInCenter: y, storeItem: a }),
                 Boolean(r)
-                  ? s.createElement(O, {
+                  ? s.createElement(P, {
                       storeItem: a,
                       bShowModal: c,
                       hideModal: () => m(!1),
                     })
-                  : s.createElement(W, {
+                  : s.createElement(G, {
                       name: a.GetName(),
                       trailer: _,
                       bPlayVideo: i,
@@ -3532,19 +3544,25 @@
               s.createElement(p.t, { size: "medium" }),
             );
       }
-      function k(e) {
-        const { info: t, fnOnClickButton: r, bLowBandwidthMode: a } = e,
-          [i] = (0, l.G6)(t.id, (0, n.SW)(t.type), C);
-        return i
+      function F(e) {
+        const {
+            info: t,
+            fnOnClickButton: r,
+            bLowBandwidthMode: a,
+            bUseAssetWithoutOverride: i,
+          } = e,
+          [o] = (0, l.G6)(t.id, (0, n.SW)(t.type), i ? I : C);
+        return o
           ? s.createElement(
               "div",
               { className: (0, u.A)(M().HilightGrid, M().MediaContainerMM) },
-              s.createElement(F, {
-                elFeaturedInCenter: s.createElement(N, {
-                  storeItem: i,
+              s.createElement(W, {
+                elFeaturedInCenter: s.createElement(A, {
+                  storeItem: o,
+                  bUseAssetWithoutOverride: i,
                   fnOnClickButton: r,
                 }),
-                storeItem: i,
+                storeItem: o,
                 featureElementclassName: M().MainImage,
                 bUseTrailerAsFirstThumb: !a,
                 bNoScreenShotModals: !0,
@@ -3556,7 +3574,7 @@
               s.createElement(p.t, { size: "medium" }),
             );
       }
-      function F(e) {
+      function W(e) {
         const {
             elFeaturedInCenter: t,
             storeItem: r,
@@ -3574,7 +3592,7 @@
             t = e?.length > 0 && e[0];
           t &&
             (p.push(
-              s.createElement(P, {
+              s.createElement(N, {
                 key: "trail_thumb_",
                 trailer: t,
                 bPlayVideo: !1,
@@ -3583,7 +3601,7 @@
               }),
             ),
             _.push(
-              s.createElement(W, {
+              s.createElement(G, {
                 key: "trail_inline",
                 name: r.GetName(),
                 trailer: t,
@@ -3597,8 +3615,8 @@
         return (
           B.forEach((e, r) => {
             if ((t || r > 0) && p.length < 3) {
-              const t = G(e, ".600x338").replace("http://", "https://"),
-                a = G(e, ".800x600").replace("http://", "https://"),
+              const t = O(e, ".600x338").replace("http://", "https://"),
+                a = O(e, ".800x600").replace("http://", "https://"),
                 i = p.length;
               p.push(
                 s.createElement(
@@ -3658,7 +3676,7 @@
           )
         );
       }
-      function W(e) {
+      function G(e) {
         const {
             name: t,
             trailer: r,
@@ -3713,11 +3731,11 @@
           )
         );
       }
-      function G(e, t) {
+      function O(e, t) {
         const r = e.replace(/\.[^\.]+$/g, "");
         return r + t + e.slice(r.length);
       }
-      function O(e) {
+      function P(e) {
         const { storeItem: t, bShowModal: r, hideModal: a } = e,
           i = (0, m.z)(),
           n = t?.GetAllTrailers().GetHighlightTrailers(),
@@ -3754,7 +3772,7 @@
           ),
         );
       }
-      function P(e) {
+      function N(e) {
         const {
           trailer: t,
           fnTogglePlayTrailer: r,
@@ -3780,16 +3798,20 @@
           ),
         );
       }
-      function N(e) {
-        const { storeItem: t, fnOnClickButton: r } = e,
-          [n, l] = (0, i.OP)();
+      function A(e) {
+        const {
+            storeItem: t,
+            fnOnClickButton: r,
+            bUseAssetWithoutOverride: n,
+          } = e,
+          [l, o] = (0, i.OP)(),
+          c = n
+            ? t.GetAssetsWithoutOverrides().GetMainCapsuleURL()
+            : t.GetAssets().GetMainCapsuleURL();
         return s.createElement(
           "div",
-          { className: M().MainCapsuleWithHover, ...l },
-          s.createElement("img", {
-            className: M().MainCapsule,
-            src: t.GetAssets().GetMainCapsuleURL(),
-          }),
+          { className: M().MainCapsuleWithHover, ...o },
+          s.createElement("img", { className: M().MainCapsule, src: c }),
           s.createElement(
             "div",
             { className: M().AppDetails },
@@ -4585,15 +4607,15 @@
           ),
         );
       }
-      function j(e) {
+      function A(e) {
         const t = Ee(),
           r = (0, m.WN)(t.GetTemplateVars().linkurl, 2);
-        return i.createElement(A, {
+        return i.createElement(j, {
           bHidePrice: e.bHidePrice,
           fnOnClickButton: r,
         });
       }
-      function A(e) {
+      function j(e) {
         const { bHidePrice: t, fnOnClickButton: r } = e,
           a = Ee(),
           [s, n] = (0, T.q3)(() => [
@@ -4680,7 +4702,7 @@
                 bUseAnimated: r,
               }),
             ),
-            i.createElement(A, { bHidePrice: !0, fnOnClickButton: o }),
+            i.createElement(j, { bHidePrice: !0, fnOnClickButton: o }),
           ),
         );
       }
@@ -4808,7 +4830,7 @@
                   messageType: r.GetType(),
                 }),
               ),
-              i.createElement(j, { bHidePrice: !0 }),
+              i.createElement(A, { bHidePrice: !0 }),
             ),
           )
         );
@@ -5036,7 +5058,7 @@
               i.createElement(G, { bOverrideUseBackgroundImage: a }),
               Boolean(a) && i.createElement(de, null),
             ),
-            i.createElement(j, null),
+            i.createElement(A, null),
           ),
         );
       }
@@ -5051,7 +5073,7 @@
             null,
             i.createElement(G, { isBackgroundBlur: !0 }),
             i.createElement(W, null, i.createElement(O, { fnOnClick: r })),
-            i.createElement(j, null),
+            i.createElement(A, null),
           ),
         );
       }
@@ -5102,11 +5124,13 @@
                     info: o,
                     fnOnClickButton: n,
                     bLowBandwidthMode: r,
+                    bUseAssetWithoutOverride:
+                      a.GetAutoRenderWithoutAssetOverrides(),
                   }),
                 ),
               ),
             ),
-            i.createElement(A, {
+            i.createElement(j, {
               bHidePrice: a.GetTemplateVars().hide_price,
               fnOnClickButton: n,
             }),

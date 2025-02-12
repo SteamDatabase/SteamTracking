@@ -546,14 +546,15 @@
         async OnDropFiles(e) {
           if (e && e.length > 0) {
             this.m_clanImageUploader = new m.V(this.props.clanSteamID);
-            let t = !0;
-            for (let a = 0; t && a < Array.from(e).length; a++) {
-              let n = e.item(a);
+            let t = !0,
+              a = Array.from(e);
+            for (let e = 0; t && e < a.length; e++) {
+              let n = a[e];
               (t = await this.m_clanImageUploader.AddImage(n, 0, null)),
                 t ||
                   (console.error(
                     "ClanImagePicker.OnDropFiles: failed on i=" +
-                      a +
+                      e +
                       " file=" +
                       n.name,
                   ),

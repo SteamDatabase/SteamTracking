@@ -129,12 +129,11 @@
         }
         async LoadMultiplePartnerInfo(t) {
           if (!t || 0 == t.length) return [];
-          const e = t.map((t) => !this.m_mapOptInToPartners.has(t));
-          if (e.length > 0) {
-            const t = e.map((t) => this.FindPartnerByName("" + t));
-            await Promise.all(t);
-          }
-          return t.map((t) => this.m_mapOptInToPartners.get(t)).filter(Boolean);
+          const e = t.filter((t) => !this.m_mapOptInToPartners.has(t));
+          return (
+            e.length > 0 && (await this.FindPartnerByName("" + e.join(","))),
+            t.map((t) => this.m_mapOptInToPartners.get(t)).filter(Boolean)
+          );
         }
         static s_Singleton;
         static Get() {

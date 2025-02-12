@@ -73,7 +73,7 @@
     },
     15351: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => je });
+      r.r(t), r.d(t, { default: () => Pe });
       var n = r(90626),
         i = r(92757);
       const a = {
@@ -136,7 +136,7 @@
           enabled: !!t,
         };
       }
-      function w(e, t) {
+      function b(e, t) {
         const r = (0, c.jE)(),
           n = f(),
           i = e.id;
@@ -144,11 +144,11 @@
           mutationFn: async () =>
             e.not_persisted ? i : await n.DeleteGameNote(d(e), i),
           onSuccess: () => {
-            b(r, d(e), (e) => e.filter((e) => e.id != i)), t && t();
+            w(r, d(e), (e) => e.filter((e) => e.id != i)), t && t();
           },
         });
       }
-      function b(e, t, r) {
+      function w(e, t, r) {
         e.setQueryData(_(t), (e) => e && r(e));
       }
       function B(e, t) {
@@ -263,11 +263,11 @@
       }
       var I = r(7071),
         F = r(26555),
-        j = r(28106),
-        q = r(55608),
-        P = r(79497);
-      const L = { nodes: { ...q.DQ.nodes }, marks: { ...q.DQ.marks } },
-        A = new P.W(L);
+        P = r(28106),
+        j = r(55608),
+        q = r(79497);
+      const L = { nodes: { ...j.DQ.nodes }, marks: { ...j.DQ.marks } },
+        A = new q.W(L);
       var D = r(61788),
         K = r(33737),
         $ = r(4869),
@@ -457,10 +457,10 @@
               mutationFn: (t) => r.SaveGameNote(e, t.title, t.bbcode),
               onMutate(r) {
                 const i = { ...e, title: r.title, content: r.bbcode };
-                return b(t, n, (e) => e.map((e) => (e.id == i.id ? i : e))), i;
+                return w(t, n, (e) => e.map((e) => (e.id == i.id ? i : e))), i;
               },
               onSuccess(e, r, i) {
-                b(t, n, (t) =>
+                w(t, n, (t) =>
                   t.map((t) =>
                     t.id === i.id ? { ...t, id: e, not_persisted: !1 } : t,
                   ),
@@ -471,7 +471,7 @@
           [M, v] = n.useState();
         n.useEffect(() => {
           o.current ||
-            v(new I.n(A, t.content, (e, t) => N({ title: we(t), bbcode: e })));
+            v(new I.n(A, t.content, (e, t) => N({ title: be(t), bbcode: e })));
         }, [N, t.content]);
         const { bDirty: E } = (0, F.i)(M, { msAutosaveTimeout: 1e3 * he });
         n.useEffect(() => {
@@ -487,7 +487,7 @@
             r && M && M.CommitChanges();
           }, [r, M]);
         const C = h(),
-          z = w(t, C),
+          z = b(t, C),
           T = {
             onSecondaryButton: () => z.mutate(),
             onSecondaryActionDescription: (0, g.we)(
@@ -520,7 +520,7 @@
               uploadImage: B,
               nodeType: A.pm_schema.nodes.image,
             }),
-            n.createElement(j.W, {
+            n.createElement(P.W, {
               linkMarkType: A.pm_schema.marks.link,
               schema: A.pm_schema,
               onClickURL: u,
@@ -534,7 +534,7 @@
           [i, a, s] = (0, ie.uD)(!1),
           o = "single" == n.useContext(m).mode,
           c = h(),
-          { mutate: l, isPending: u } = w(t, c),
+          { mutate: l, isPending: u } = b(t, c),
           d = n.useCallback(() => {
             !r && t.not_persisted ? l() : a();
           }, [r, t, l, a]);
@@ -586,47 +586,48 @@
           }),
         );
       }
-      function we(e) {
+      function be(e) {
         let t = "";
         for (let r = 0; r < e.content.childCount; r++) {
           const n = e.content.child(r);
           if (n.isText) t += n.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = we(n)), t.length > 4)) return t;
+            if (((t = be(n)), t.length > 4)) return t;
           }
         }
         return t.trim();
       }
-      function be() {
-        const e = (0, i.W5)(),
-          t = B(
-            "appid" in e.params && Number(e.params.appid),
-            "shortcut_name" in e.params && e.params.shortcut_name,
+      function we(e) {
+        const { bStandalonePage: t } = e,
+          r = (0, i.W5)(),
+          a = B(
+            "appid" in r.params && Number(r.params.appid),
+            "shortcut_name" in r.params && r.params.shortcut_name,
           );
-        let r = e.params.noteid;
-        const a = (0, i.W6)(),
-          s = (function (e) {
+        let s = r.params.noteid;
+        const l = (0, i.W6)(),
+          u = (function (e) {
             const t = (0, c.jE)(),
               r = f();
             return n.useCallback(() => {
               const n = (0, g.we)("#UserGameNotes_UntitledNote_Title"),
                 i = r.NewNote(e, n);
-              return b(t, e, (e) => [...e, i]), i.id;
+              return w(t, e, (e) => [...e, i]), i.id;
             }, [t, r, e]);
-          })(t),
-          { data: l, isLoading: u } = (function (e) {
+          })(a),
+          { data: d, isLoading: m } = (function (e) {
             const t = f();
             return (0, o.I)(y(t, e));
-          })(t);
-        let d;
-        l && r && (d = l.find((e) => e.id === r)),
+          })(a);
+        let p;
+        d && s && (p = d.find((e) => e.id === s)),
           n.useEffect(() => {
-            !l ||
-              (r && l.find((e) => e.id === r)) ||
-              (l.length > 0 && l[0].id ? Ne(a, t, l[0].id) : Ne(a, t, s()));
-          }, [a, t, r, l, s]);
-        const m = n.createElement(
+            !d ||
+              (s && d.find((e) => e.id === s)) ||
+              (d.length > 0 && d[0].id ? Ne(l, a, d[0].id) : Ne(l, a, u()));
+          }, [l, a, s, d, u]);
+        const h = n.createElement(
           ne.he,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           n.createElement(
@@ -634,28 +635,35 @@
             {
               className: pe.NewNoteButton,
               onClick: () => {
-                const e = s();
-                Ne(a, t, e);
+                const e = u();
+                Ne(l, a, e);
               },
             },
             n.createElement($.qY3, null),
           ),
         );
-        return l
+        return d
           ? n.createElement(Be, {
-              noteParent: t,
-              notes: l,
-              activeNoteID: null == d ? void 0 : d.id,
-              actions: m,
+              noteParent: a,
+              notes: d,
+              activeNoteID: null == p ? void 0 : p.id,
+              actions: h,
+              bStandalonePage: t,
             })
           : null;
       }
       function Be(e) {
-        const { noteParent: t, notes: r, activeNoteID: a, actions: s } = e,
-          [o, c] = (0, de.SP)("NotesListCollapsed", !1),
-          l = n.useContext(m).bPinnedView,
-          u = (0, ae.Qn)(),
-          d = r.map((e) => {
+        const {
+            noteParent: t,
+            notes: r,
+            activeNoteID: a,
+            actions: s,
+            bStandalonePage: o,
+          } = e,
+          [c, l] = (0, de.SP)("NotesListCollapsed", !1),
+          u = n.useContext(m).bPinnedView,
+          d = (0, ae.Qn)(),
+          p = r.map((e) => {
             var t;
             return {
               title:
@@ -668,18 +676,29 @@
               hideTitle: !0,
             };
           }),
-          p = (0, i.W6)(),
-          h = n.useCallback((e) => Ne(p, t, e), [p, t]);
-        return n.createElement(K.O7, {
-          title: (0, g.we)("#UserGameNotes_NotesList"),
-          pages: d,
-          className: (0, ue.A)(pe.NotesPagedSettings, l && pe.PinnedView),
-          page: a,
-          onPageRequested: h,
-          bottomControls: s,
-          hideList: o,
-          toggleHideList: l || u ? void 0 : () => c(!o),
-        });
+          h = (0, i.W6)(),
+          f = n.useCallback((e) => Ne(h, t, e), [h, t]);
+        return d && o
+          ? n.createElement(K.Bv, {
+              title: (0, g.we)("#UserGameNotes_NotesList"),
+              pages: p,
+              className: (0, ue.A)(pe.NotesPagedSettings, u && pe.PinnedView),
+              page: a,
+              onPageRequested: f,
+              bottomControls: s,
+              hideList: c,
+              toggleHideList: u || d ? void 0 : () => l(!c),
+            })
+          : n.createElement(K.O7, {
+              title: (0, g.we)("#UserGameNotes_NotesList"),
+              pages: p,
+              className: (0, ue.A)(pe.NotesPagedSettings, u && pe.PinnedView),
+              page: a,
+              onPageRequested: f,
+              bottomControls: s,
+              hideList: c,
+              toggleHideList: u || d ? void 0 : () => l(!c),
+            });
       }
       function Se(e) {
         const { note: t } = e,
@@ -1414,7 +1433,7 @@
           return Promise.reject("NYI");
         }
       }
-      function je(e) {
+      function Pe(e) {
         const t = (0, E.TR)(),
           [r] = n.useState(() => new Fe(t));
         return n.createElement(
@@ -1427,7 +1446,7 @@
             n.createElement(
               i.qh,
               { path: a.AppNotes(":appid", ":noteid?") },
-              n.createElement(be, null),
+              n.createElement(we, null),
             ),
             n.createElement(
               i.qh,
@@ -1704,8 +1723,8 @@
         d.current = u;
         const [h, f] = s.useState(),
           [g, _] = s.useState(),
-          [y, w] = s.useState(),
-          [b, B] = (0, c.E)(o),
+          [y, b] = s.useState(),
+          [w, B] = (0, c.E)(o),
           S = s.useMemo(
             () =>
               new a.k_({
@@ -1731,7 +1750,7 @@
                       (!t.metaKey && !t.ctrlKey) ||
                       t.shiftKey ||
                       t.altKey
-                    ) && (b(e), !0),
+                    ) && (w(e), !0),
                   clipboardTextParser(e, a, s, c) {
                     let l,
                       u = [];
@@ -1758,15 +1777,15 @@
                         "A" == r.nodeName
                       ) {
                         const e = r.getBoundingClientRect();
-                        f(e.left + e.width / 2), _(e.bottom + 2), w(r);
-                      } else w(void 0);
+                        f(e.left + e.width / 2), _(e.bottom + 2), b(r);
+                      } else b(void 0);
                       return !1;
                     },
-                    mouseleave: (e, t) => (w(void 0), !1),
+                    mouseleave: (e, t) => (b(void 0), !1),
                   },
                 },
               }),
-            [t, b, r, o],
+            [t, w, r, o],
           );
         (0, l.c$)(S);
         let N = null;

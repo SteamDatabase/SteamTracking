@@ -5071,11 +5071,6 @@ body.v6 .spacer {
     content: ' ';
 }
 
-.popup_menu_subheader{
-	padding: 0;
-	margin: 0;
-}
-
 body.v6 .store_nav #genre_flyout .popup_menu_subheader,
 body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader {
 	padding: 5px 5px 10px 2px;
@@ -5098,6 +5093,7 @@ body.v6 .store_nav .popup_menu_subheader {
 	font-size: 11px;
 	color: #2EBFFF;
 	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+	padding: 0;
 }
 
 body.v6 .store_nav .popup_menu_subheader a {

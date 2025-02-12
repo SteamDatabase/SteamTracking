@@ -162,7 +162,6 @@
     89524: (e) => {
       e.exports = {
         Carousel: "jGiY7rrZh0o9qrh7XNnZU",
-        ItemCount2: "NlDqgHhkFH7edyQC2l6Hf",
         Capsule: "_292IWiCTro5jiTmIxiDfyc",
         Small: "_1mQ-hKJYGkL9gG76spf6uy",
         TwoWide: "_25IMXSN3XeXOPiu-sYHV1U",

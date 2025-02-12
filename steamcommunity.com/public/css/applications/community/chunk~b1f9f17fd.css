@@ -7582,6 +7582,33 @@ html.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
   box-sizing: border-box;
   cursor: default;
 }
+._1_nZSkaKcUeXxQpXV5ulcm ._1GN_4KsEZYAvBhiqCh0lW5 {
+  display: flex;
+}
+._1_nZSkaKcUeXxQpXV5ulcm ._3BPATv0GbVZJr9MnPSFbwN {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
+  ._1_nZSkaKcUeXxQpXV5ulcm ._3BPATv0GbVZJr9MnPSFbwN {
+    display: none;
+  }
+}
+._1_nZSkaKcUeXxQpXV5ulcm ._3J9AHXY9kmEcygkLkOaPIl {
+  display: none;
+}
+@media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
+  ._1_nZSkaKcUeXxQpXV5ulcm ._3J9AHXY9kmEcygkLkOaPIl {
+    position: unset;
+    align-items: center;
+    display: flex;
+  }
+}
+@media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
+  ._1_nZSkaKcUeXxQpXV5ulcm ._2_PkPl2sDPIEmoJDONm0r- {
+    display: none;
+  }
+}
 ._1_nZSkaKcUeXxQpXV5ulcm ._3UBx0c_4mXJqBclhB-8J- {
   position: relative;
   padding: 0 20px;
@@ -7618,11 +7645,12 @@ html.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
     grid-template-areas: "arrow capsule info right-arrow" "arrow capsule actions right-arrow";
     overflow: hidden;
   }
-  ._1_nZSkaKcUeXxQpXV5ulcm ._3bosSfx_R7a3a8ZJTdKrum {
+  ._1_nZSkaKcUeXxQpXV5ulcm ._3bosSfx_R7a3a8ZJTdKrum,
+  ._1_nZSkaKcUeXxQpXV5ulcm ._1GN_4KsEZYAvBhiqCh0lW5 {
     grid-area: capsule;
-    padding: calc(8px + .6vw) 0;
   }
-  ._1_nZSkaKcUeXxQpXV5ulcm ._3bosSfx_R7a3a8ZJTdKrum img {
+  ._1_nZSkaKcUeXxQpXV5ulcm ._3bosSfx_R7a3a8ZJTdKrum img,
+  ._1_nZSkaKcUeXxQpXV5ulcm ._1GN_4KsEZYAvBhiqCh0lW5 img {
     transform: unset;
   }
   ._1_nZSkaKcUeXxQpXV5ulcm ._3UBx0c_4mXJqBclhB-8J- {
@@ -7671,8 +7699,15 @@ html.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
 ._3bosSfx_R7a3a8ZJTdKrum {
   width: 100%;
   position: relative;
-  padding: 20px 0 8px 0;
+  padding: 14px 0 14px 0;
   box-sizing: border-box;
+}
+@media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
+  ._3bosSfx_R7a3a8ZJTdKrum {
+    height: fit-content;
+    margin: auto;
+    padding: unset;
+  }
 }
 ._3bosSfx_R7a3a8ZJTdKrum ._8JfsVa2qql_sG4yZvL31M {
   width: 100%;
@@ -7764,44 +7799,15 @@ html.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
   flex-direction: column;
   gap: 10px;
 }
-._3Fbv05BMyyoEG6zimEgcem ._3Q_tm9SkDIAKcbDOTExZnn ._3tZYNXnqaO3px3k5QRFOz- {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 16px;
-}
-._3Fbv05BMyyoEG6zimEgcem ._3Q_tm9SkDIAKcbDOTExZnn ._3tZYNXnqaO3px3k5QRFOz- svg {
-  fill: #fff;
-}
-._3Fbv05BMyyoEG6zimEgcem
-  ._3Q_tm9SkDIAKcbDOTExZnn
-  ._3tZYNXnqaO3px3k5QRFOz-._1Ko2NGwrR-X4TIRVExBYr0,
-._3Fbv05BMyyoEG6zimEgcem
-  ._3Q_tm9SkDIAKcbDOTExZnn
-  ._3tZYNXnqaO3px3k5QRFOz-._1Ko2NGwrR-X4TIRVExBYr0:hover {
-  background-color: #54a5d4;
-}
-@media screen and (max-width: 1000px) {
-  ._3Fbv05BMyyoEG6zimEgcem ._3Q_tm9SkDIAKcbDOTExZnn ._3tZYNXnqaO3px3k5QRFOz- {
-    display: none;
-  }
-}
-@media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
-  ._3Fbv05BMyyoEG6zimEgcem ._3Q_tm9SkDIAKcbDOTExZnn ._3tZYNXnqaO3px3k5QRFOz- {
-    display: block;
-  }
-  ._3Fbv05BMyyoEG6zimEgcem
-    ._3Q_tm9SkDIAKcbDOTExZnn
-    ._3tZYNXnqaO3px3k5QRFOz-._3BPATv0GbVZJr9MnPSFbwN {
-    display: none;
-  }
-}
 ._3Fbv05BMyyoEG6zimEgcem ._1B3sMJ5v2o-sCS9CV-6kA3 {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1200px) {
+  ._3Fbv05BMyyoEG6zimEgcem ._1B3sMJ5v2o-sCS9CV-6kA3 {
+    flex-wrap: wrap-reverse;
+  }
 }
 ._3Fbv05BMyyoEG6zimEgcem ._3tZYNXnqaO3px3k5QRFOz- {
   min-width: 10px;
@@ -8032,6 +8038,7 @@ html.responsive.touch .saHqNV-7xE9caBAreUZiX {
   opacity: 75%;
   margin-left: 8px;
   margin-top: -5px;
+  text-align: center;
 }
 .BasicUI ._11kuPitw8BlhG1xCp5bvj6 {
   font: var(--gpText-HeadingSmall);
@@ -10768,4 +10775,122 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 ._3hqZRkENvRJDeK2mYsTJGa {
   margin-top: 12px;
+}
+._1T21rDXKcolUe7tHkC54OL {
+  width: 1000px;
+  max-height: 700px;
+  overflow-y: scroll;
+  margin: 8px 0px;
+  border: 1px solid #000;
+  background-color: #222;
+  padding: 4px;
+}
+._3KPMmnZcO_XZ44Mxw1lqtg {
+  max-width: 100px;
+}
+.json-diff-viewer {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+.json-diff-viewer tr {
+  vertical-align: top;
+}
+.json-diff-viewer tr .line-add {
+  background: #a5d6a7;
+}
+.json-diff-viewer tr .line-remove {
+  background: #ef9a9a;
+}
+.json-diff-viewer tr .line-modify {
+  background: #ffe082;
+}
+.json-diff-viewer tr:hover td {
+  position: relative;
+}
+.json-diff-viewer tr:hover td:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  content: "";
+  pointer-events: none;
+}
+.json-diff-viewer tr.message-line {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+.json-diff-viewer tr.message-line td {
+  padding: 4px 0;
+  font-size: 12px;
+}
+.json-diff-viewer tr.expand-line {
+  text-align: center;
+}
+.json-diff-viewer tr.expand-line td {
+  padding: 4px 0;
+}
+.json-diff-viewer tr.expand-line:hover td:before {
+  background: transparent;
+}
+.json-diff-viewer tr.expand-line .has-lines-before {
+  border-bottom: 1px solid;
+}
+.json-diff-viewer tr.expand-line .has-lines-after {
+  border-top: 1px solid;
+}
+.json-diff-viewer tr.expand-line button {
+  padding: 0;
+  border: none;
+  margin: 0 .5em;
+  background: transparent;
+  color: #2196f3;
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+}
+.json-diff-viewer tr.expand-line button:hover {
+  text-decoration: underline;
+}
+.json-diff-viewer td {
+  padding: 1px;
+  font-size: 0;
+}
+.json-diff-viewer td.line-number {
+  box-sizing: content-box;
+  padding: 0 8px;
+  border-right: 1px solid;
+  font-family: monospace;
+  font-size: 14px;
+  text-align: right;
+  user-select: none;
+}
+.json-diff-viewer pre {
+  overflow: hidden;
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.json-diff-viewer pre .inline-diff-add {
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: underline;
+  word-break: break-all;
+}
+.json-diff-viewer pre .inline-diff-remove {
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: line-through;
+  word-break: break-all;
+}
+.json-diff-viewer-virtual pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+.json-diff-viewer-virtual pre::-webkit-scrollbar {
+  display: none;
 }

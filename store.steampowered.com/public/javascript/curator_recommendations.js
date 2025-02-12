@@ -575,7 +575,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 				var elListSelect = $J( '<select name="list_sel_option"><option></option></select>');
 		for( var listindex = 0; listindex < g_rgListDetails.length; ++listindex )
 		{
-			var title = g_rgListDetails[listindex]['title'];
+			var title = encodeURI( g_rgListDetails[listindex]['title'] );
 			var listid = g_rgListDetails[listindex]['listid'];
 			var list_state = g_rgListDetails[listindex]['list_state'];
 

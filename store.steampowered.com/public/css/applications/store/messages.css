@@ -500,7 +500,7 @@ html.responsive
   color: #fff;
   font-weight: 600;
   margin-bottom: 6px;
-  line-height: 1.3;
+  line-height: 1.2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -748,8 +748,8 @@ A:active {
   display: flex;
   flex-direction: row;
   width: 570px;
-  margin: 24px auto;
-  padding-bottom: 24px;
+  margin: 21px auto;
+  padding-bottom: 21px;
   background: radial-gradient(
     50.51% 50.51% at 50% 87.88%,
     rgba(0, 0, 0, 0.4) 0%,
@@ -1814,7 +1814,6 @@ div.StoreSaleWidgetTitle {
   padding: 5px 0;
 }
 .klzItvORTtJ0Eeg8ArDrN {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1834,5 +1833,5 @@ div.StoreSaleWidgetTitle {
 }
 .QPZq6bu7lf50YpRKZgPCc {
   font-size: 16px;
-  color: #fff;
+  color: #dee1e8;
 }

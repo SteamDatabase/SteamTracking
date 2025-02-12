@@ -8,13 +8,13 @@ var g_recaptchaInstance = null;
 function CaptchaText()
 {
 	var legacy = $J('#captcha_text').val();
-	if( legacy ) 
+	if( legacy )
 		return legacy;
-	
+
 	if ( typeof hcaptcha !== 'undefined' )
 	{
-		return hcaptcha.getResponse() 
-	}	
+		return hcaptcha.getResponse()
+	}
 	else if ( typeof grecaptcha !== 'undefined' )
 		return grecaptcha.enterprise.getResponse(g_recaptchaInstance);
 
@@ -234,7 +234,7 @@ function EmailConfirmedVerified( rgResults )
 				xhrFields: { withCredentials: true },
 			} )
 				.fail( function() {
-					ShowError( 'Your account creation request failed, please try again later.' );
+					ShowError( 'Your account was created successfully, but an error occurred signing you in automatically. Please try signing in again with your new account.' );
 				})
 				.done( function( data )
 				{
@@ -681,7 +681,7 @@ function ReallyCreateAccount()
 					xhrFields: { withCredentials: true },
 				} )
 				.fail( function() {
-					ShowError( 'Your account creation request failed, please try again later.' );
+					ShowError( 'Your account was created successfully, but an error occurred signing you in automatically. Please try signing in again with your new account.' );
 					$waitDialog.Dismiss();
 				})
 				.done( function( data )

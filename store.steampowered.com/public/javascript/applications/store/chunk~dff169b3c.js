@@ -2054,8 +2054,8 @@
         I = i(14771),
         j = i(60778),
         F = i(30470),
-        W = i(78327),
-        O = i(14860),
+        O = i(78327),
+        W = i(14860),
         U = i(44332),
         C = i(15419);
       const k = {
@@ -2072,12 +2072,12 @@
           displayNameLoc: "#SteamNotifications_MajorSale",
           titleLoc: (e) => ({ locString: e.title }),
           bodyLoc: (e) =>
-            (0, W.Y2)() && e.link.includes("https://store.steampowered.com")
+            (0, O.Y2)() && e.link.includes("https://store.steampowered.com")
               ? "#SteamNotifications_MajorSale_SteamChina_Title"
               : e.body,
           image: (e) => e.image,
           link: (e) =>
-            (0, W.Y2)() && e.link.includes("https://store.steampowered.com")
+            (0, O.Y2)() && e.link.includes("https://store.steampowered.com")
               ? e.link.replace(
                   "https://store.steampowered.com",
                   F.TS.STORE_BASE_URL,
@@ -2122,7 +2122,7 @@
           steamidAttribute: "requestor_steamid",
           titleLoc: "#SteamNotifications_FamilyPurchaseRequestTitle",
           bodyLoc: "#SteamNotifications_FamilyPurchaseRequestBody",
-          url: (e) => (0, O.w1)(e.familyid, e.request_id),
+          url: (e) => (0, W.w1)(e.familyid, e.request_id),
         },
         19: {
           steamidAttribute: "responder_steamid",
@@ -2196,11 +2196,11 @@
           (e[(e.Remove = 2)] = "Remove");
       })($ || ($ = {}));
       const X = 172800,
-        V = 600,
-        J = new j.wd("SteamNotificationStore"),
-        Q = J.Debug,
-        K = J.Error,
-        Y = J.Warning;
+        J = 600,
+        V = new j.wd("SteamNotificationStore"),
+        Q = V.Debug,
+        K = V.Error,
+        Y = V.Warning;
       class Z {
         constructor() {
           (0, v.Gn)(this);
@@ -2491,17 +2491,23 @@
           ) {
             for (const t of e)
               if (t.bSendToCallbackAsNew)
-                this.m_rgNewRollupIDs.set(t.key, t),
+                this.m_rgNewRollupIDs.set(
+                  t.rollup_key,
+                  JSON.parse(JSON.stringify(t)),
+                ),
                   this.m_fnOnNotificationCallback(t, $.New);
-              else if (this.m_rgNewRollupIDs.has(t.key)) {
-                let e = this.m_rgNewRollupIDs.get(t.key);
+              else if (this.m_rgNewRollupIDs.has(t.rollup_key)) {
+                let e = this.m_rgNewRollupIDs.get(t.rollup_key);
                 (e.item.read == t.item.read &&
                   e.item.viewed == t.item.viewed) ||
-                  (this.m_rgNewRollupIDs.set(t.key, t),
+                  (this.m_rgNewRollupIDs.set(
+                    t.rollup_key,
+                    JSON.parse(JSON.stringify(t)),
+                  ),
                   this.m_fnOnNotificationCallback(t, $.Update));
               }
             for (const [t, i] of this.m_rgNewRollupIDs)
-              -1 == e.findIndex((e) => e.key == t) &&
+              -1 == e.findIndex((e) => e.rollup_key == t) &&
                 (this.m_fnOnNotificationCallback(i, $.Remove),
                 this.m_rgNewRollupIDs.delete(t));
           }
@@ -2556,11 +2562,11 @@
                   n.forum_id +
                   "_" +
                   n.topic_id;
-                let s = e.findIndex((e) => e.key == a);
+                let s = e.findIndex((e) => e.rollup_key == a);
                 if (-1 == s)
                   e.push({
                     type: r,
-                    key: a,
+                    rollup_key: a,
                     item: t,
                     rollup_count: 1,
                     timestamp: t.timestamp,
@@ -2607,7 +2613,7 @@
             default:
               e.push({
                 type: r,
-                key: t.notification_id,
+                rollup_key: t.notification_id,
                 item: t,
                 timestamp: t.timestamp,
                 rgunread: t.read ? [] : [t.notification_id],
@@ -2617,11 +2623,11 @@
           }
         }
         AddNotificationToRollupByAppID(e, t, i, r, n, a) {
-          let s = e.findIndex((e) => e.key == i);
+          let s = e.findIndex((e) => e.rollup_key == i);
           if (-1 == s)
             e.push({
               type: r,
-              key: i,
+              rollup_key: i,
               item: t,
               rollup_count: 1,
               timestamp: t.timestamp,
@@ -2902,7 +2908,7 @@
         });
       }
       function Be(e) {
-        return !e.viewed || e.viewed + V > (0, I._2)();
+        return !e.viewed || e.viewed + J > (0, I._2)();
       }
       function we(e) {
         return e.viewed && e.viewed + X < (0, I._2)();

@@ -537,8 +537,7 @@ body.login .page_content_flex {
 }
 
 body.login .page_content {
-	padding: 0px 8px;
-	width: 100%;
+		width: auto;
 }
 
 body.login.china .page_content {

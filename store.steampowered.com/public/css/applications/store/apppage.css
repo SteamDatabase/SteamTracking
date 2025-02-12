@@ -318,7 +318,7 @@
 }
 .XIDYByW4BEOm-YiOiwGmO.Md5hrkaRH5SlzG0VFNLCQ {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: max-content;
   grid-template-rows: auto;
   grid-template-areas: "header header" "carousel info";
 }
@@ -330,6 +330,9 @@
 }
 .XIDYByW4BEOm-YiOiwGmO.Md5hrkaRH5SlzG0VFNLCQ ._3-Zh-Ypvsn0buzyWGzuOQf {
   grid-area: info;
+}
+.XIDYByW4BEOm-YiOiwGmO.Md5hrkaRH5SlzG0VFNLCQ .carousel__slider-tray {
+  gap: 8px;
 }
 .XIDYByW4BEOm-YiOiwGmO ._2Tqj7EzRCeIvjCq0R1MZiy {
   position: absolute;
@@ -1797,9 +1800,6 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 @media (min-width: 1024px) {
   .jGiY7rrZh0o9qrh7XNnZU {
     width: 100%;
-  }
-  .jGiY7rrZh0o9qrh7XNnZU.NlDqgHhkFH7edyQC2l6Hf {
-    width: 50%;
   }
 }
 ._292IWiCTro5jiTmIxiDfyc {

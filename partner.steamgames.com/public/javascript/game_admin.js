@@ -961,19 +961,13 @@ function AddMovieForUpload( target, file )
 function MovieUploadComplete( itemid, movieContainer )
 {
 	var group = $J( movieContainer );
-	var uploadName = movieContainer.data( 'upload_name' );
-	var cloud_upload_id = movieContainer.data( 'cloud_upload_id' );
+	var cloud_upload_id = movieContainer.data( 'cloud_upload_id' ) || 0;
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	$J( status ).text( 'Processing' );
 
 	// make begin upload call
 	var fd = new FormData();
-	fd.append( 'file', uploadName );
 	fd.append( 'sessionid', g_sessionID );
-
-	if ( cloud_upload_id === undefined )
-		cloud_upload_id = 0;
-
 	fd.append( 'cloud_upload_id', cloud_upload_id );
 
 	jQuery.ajax( {
@@ -984,7 +978,8 @@ function MovieUploadComplete( itemid, movieContainer )
 		contentType: false,
 		processData: false
 	} )
-	.done( function( data ) {
+	.done( function( data )
+	{
 		if ( data.success )
 		{
 			// check progress
@@ -996,7 +991,8 @@ function MovieUploadComplete( itemid, movieContainer )
 			SetMovieError( group, 'An error occurred while uploading this movie', true );
 		}
 	} )
-	.fail( function( jqXHR, textStatus ) {
+	.fail( function( jqXHR, textStatus )
+	{
 		$J( status ).text( 'Failed Upload' );
 		SetMovieError( group, 'An error occurred while uploading this movie', true );
 	} );

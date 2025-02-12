@@ -4278,20 +4278,24 @@ FixedElementOnScrollWrapper.prototype.handleScroll = function( bForceRecalc )
 // fnSuggestForTerm will be called with two values, the current string to get suggestions for,
 //	and the callback to invoke with the new values.  You should always invoke the callback per call
 //	to fnSuggestForTerm, but can delay due to ajax if needed.
-function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
+
+// supported options:
+//	bDoEmptySearchOnFirstFocus - run a search for "" (or whatever is in the box) when the text input is first interacted with
+function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass, opts )
 {
-	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass );
+	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass, opts );
 }
 
-CTextInputSuggest.prototype.Init = function( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
+CTextInputSuggest.prototype.Init = function( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass, opts )
 {
+	opts = opts ? opts : {};
 	if( !strCssClass )
 		strCssClass = 'popup_block_new';
 	this.m_bHaveSuggestions = false;
 	this.m_$Input = $InputElement;
 	this.m_fnSuggestForTerm = fnSuggestForTerm;
 	this.m_fnOnSuggest = fnOnSuggest || function( term ) {};
-	this.m_strLastVal = '';
+	this.m_strLastVal = opts.bDoEmptySearchOnFirstFocus ? undefined : '';	// '' is the value in the input when it's empty
 	this.m_align = 'left';
 	this.m_valign = 'bottom';
 
@@ -4340,10 +4344,19 @@ CTextInputSuggest.prototype.SetSuggestionsContainerId = function( strSuggestions
 
 CTextInputSuggest.prototype.ShowSuggestions = function()
 {
-	if ( !this.m_$SuggestionsCtn.find(':visible').length && this.m_bHaveSuggestions )
+	if ( !this.m_$SuggestionsCtn.find(':visible').length )
 	{
-		AlignMenu( this.m_$Input[0], this.m_$SuggestionsCtn[0], this.m_align, this.m_valign, true );
-		this.m_$SuggestionsCtn.fadeIn( 'fast' );
+		if ( this.m_bHaveSuggestions )
+		{
+			AlignMenu(this.m_$Input[0], this.m_$SuggestionsCtn[0], this.m_align, this.m_valign, true);
+			this.m_$SuggestionsCtn.fadeIn('fast');
+		}
+		else if ( this.m_strLastVal === undefined )
+		{
+			// run an initial query.  This will set m_strLastVal to empty string (or whatever else is in the box,
+			//  if something came from browser history)
+			this.OnTextChanged( undefined );
+		}
 	}
 };
 
@@ -4405,8 +4418,8 @@ CTextInputSuggest.prototype.OnTextChanged = function( event )
 	if ( event && ( event.which == 13 || event.which == 27 ) )
 		return;
 
-	var value = this.m_$Input.val();
-	if ( value != this.m_strLastVal )
+	var value = this.m_$Input.val().trim();
+	if ( value !== this.m_strLastVal )
 	{
 		var _this = this;
 		var nRequestID = this.m_nNextRequestID++;
@@ -4562,7 +4575,7 @@ CIndexedInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
  */
 function CAppTypeInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
 {
-	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass );
+	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass, { bDoEmptySearchOnFirstFocus: true } );
 }
 
 CAppTypeInputSuggest.prototype = Object.create( CTextInputSuggest.prototype );

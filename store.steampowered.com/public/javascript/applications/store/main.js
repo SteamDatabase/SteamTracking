@@ -4874,6 +4874,7 @@
             (e[i] = e[t]), (e[t] = n);
           }
         }
+        return e;
       }
       function n(e, t) {
         if (!e && !t) return !0;

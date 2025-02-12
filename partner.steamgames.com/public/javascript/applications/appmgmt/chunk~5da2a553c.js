@@ -60,35 +60,19 @@
         RowItemCount: "_1r2Rcks7aQ0Yf7SLUPQrGn",
       };
     },
-    31718: (t) => {
-      t.exports = {
-        FancyTableRow: "_36QJs1BZ3so19Xl2es3ihH",
-        ExpandableRow: "g86xV6xEGOZ54uRvK3oQ4",
-        FancyTableHeader: "_2mHaS291U0AFO1q99AVdLy",
-        StickyHeader: "_4y4yrbyr89wNqTGLp049k",
-        FancyTableCell: "_3m5AH2HSnsvjImS7uUpvxv",
-        SortButton: "_2xr81ssapVQO5aalcANmCk",
-        ColumnHeader: "_2XdcqH-eLWVp_qatDebc6J",
-        ResizeHandle: "USh_UNRX22s8Wml0mCY3M",
-        PrevResizeHandle: "_3wzyEuMO8BdQHAkXnneNRR",
-        SortIndicator: "_6z0ftV9RCqbZFmC4EOzYZ",
-        GroupExpandIndicator: "_3I86V1lT4xbDJ6FDjMIaMq",
-        RowGroup: "_uckWydn-lyPGWjFKZ4Tm",
-      };
-    },
     33428: (t, e, n) => {
       "use strict";
       n.d(e, {
-        cR: () => C,
-        E7: () => S,
-        yB: () => f,
+        cR: () => G,
+        E7: () => k,
+        yB: () => E,
         tW: () => _,
-        vV: () => I,
-        p6: () => k,
-        sU: () => v,
-        BG: () => P,
-        ur: () => G,
-        wn: () => E,
+        vV: () => S,
+        p6: () => v,
+        sU: () => I,
+        BG: () => C,
+        ur: () => P,
+        wn: () => f,
       });
       var a = n(34629),
         s = n(41735),
@@ -98,8 +82,8 @@
         c = n(68797),
         l = n(6419),
         u = n(6144),
-        d = n(73745),
-        p = n(78327);
+        p = n(73745),
+        d = n(78327);
       const g = "1",
         m = "SaleEvent_DurationDiscount_Tooltip",
         D = "discount";
@@ -151,7 +135,7 @@
         async LoadAllDiscountEvents(t, e) {
           if (this.m_bLoadEventsRequestInFlight) return 29;
           const n =
-              p.TS.PARTNER_BASE_URL +
+              d.TS.PARTNER_BASE_URL +
               "promotion/discounts/ajaxgetalldiscountevents/" +
               t,
             a = {};
@@ -185,17 +169,17 @@
         }
         async CreateDiscountEvent(t, e, n, a, s, o, r, l) {
           const u =
-              p.TS.PARTNER_BASE_URL +
+              d.TS.PARTNER_BASE_URL +
               "promotion/discounts/ajaxupdatediscountevent",
-            d = new FormData();
-          d.append("sessionid", p.TS.SESSIONID),
-            d.append("name", n),
-            d.append("start_time", t.toString()),
-            d.append("end_time", e.toString()),
-            d.append("strJSONDiscountInfo", C(n, a, s, o, r));
+            p = new FormData();
+          p.append("sessionid", d.TS.SESSIONID),
+            p.append("name", n),
+            p.append("start_time", t.toString()),
+            p.append("end_time", e.toString()),
+            p.append("strJSONDiscountInfo", G(n, a, s, o, r));
           let h = null;
           try {
-            const c = await i().post(u, d, {
+            const c = await i().post(u, p, {
               withCredentials: !0,
               cancelToken: l?.token,
             });
@@ -248,10 +232,10 @@
               null
             );
           const o =
-              p.TS.PARTNER_BASE_URL +
+              d.TS.PARTNER_BASE_URL +
               "promotion/discounts/ajaxupdatediscountevent",
             r = new FormData();
-          r.append("sessionid", p.TS.SESSIONID),
+          r.append("sessionid", d.TS.SESSIONID),
             r.append("start_time", s.start_date.toString()),
             r.append("end_time", s.end_date.toString()),
             r.append(
@@ -319,9 +303,9 @@
           if (!t || 0 == t.length || "0" == t) return null;
           try {
             const n =
-                p.TS.PARTNER_BASE_URL +
+                d.TS.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetdiscounteventbyid",
-              a = { sessionid: p.TS.SESSIONID, discountid: t },
+              a = { sessionid: d.TS.SESSIONID, discountid: t },
               s = await i().get(n, { params: a, withCredentials: !0 });
             if (
               200 == s?.status &&
@@ -366,9 +350,9 @@
           if (!t || 0 == t.length) return null;
           try {
             const n =
-                p.TS.PARTNER_BASE_URL +
+                d.TS.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetdiscounteventapplist",
-              a = { sessionid: p.TS.SESSIONID, discountid: t },
+              a = { sessionid: d.TS.SESSIONID, discountid: t },
               s = await i().get(n, { params: a, withCredentials: !0 });
             if (
               200 == s?.status &&
@@ -408,12 +392,12 @@
           );
         }
         constructor() {
-          "dev" == p.TS.WEB_UNIVERSE && (window.g_DiscountEventStore = this);
+          "dev" == d.TS.WEB_UNIVERSE && (window.g_DiscountEventStore = this);
         }
         Init() {
-          const t = (0, p.Tc)("discount_events", "application_config");
+          const t = (0, d.Tc)("discount_events", "application_config");
           if (
-            (("dev" != p.TS.WEB_UNIVERSE && "beta" != p.TS.WEB_UNIVERSE) ||
+            (("dev" != d.TS.WEB_UNIVERSE && "beta" != d.TS.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CDiscountEventStore loading payload: ",
                 t,
@@ -423,7 +407,7 @@
             for (const e of t) this.m_mapDiscountEvents.set(e.id, e);
             this.m_bLoadedViaInitOrFullLoad = !0;
           } else
-            "dev" == p.TS.WEB_UNIVERSE &&
+            "dev" == d.TS.WEB_UNIVERSE &&
               t &&
               console.error("CDiscountEventStore Invalid payload");
         }
@@ -435,11 +419,11 @@
       function _() {
         return h.Get().GetFutureDiscountEvents();
       }
-      function f() {
+      function E() {
         return h.Get().GetDiscountEventListCallback();
       }
-      function E(t) {
-        const { rgDiscountEvents: e, eResult: n } = v(0, t);
+      function f(t) {
+        const { rgDiscountEvents: e, eResult: n } = I(0, t);
         let a = [];
         return (
           e?.forEach((t) => {
@@ -448,14 +432,14 @@
           { rgMajorSaleDiscountEvents: a, eResult: n }
         );
       }
-      function v(t, e) {
+      function I(t, e) {
         const n = h.Get().BLoadedViaInitOrFullLoad(),
           [a, s] = o.useState(n ? h.Get().GetAllDiscountEvents() : null),
           [i, r] = o.useState(null),
           c =
             t ||
-            Number.parseInt((0, p.Tc)("publisherid", "application_config"));
-        (0, d.hL)(h.Get().GetDiscountEventListCallback(), s),
+            Number.parseInt((0, d.Tc)("publisherid", "application_config"));
+        (0, p.hL)(h.Get().GetDiscountEventListCallback(), s),
           o.useEffect(() => {
             h.Get().BLoadedViaInitOrFullLoad() ||
               h.Get().LoadAllDiscountEvents(c).then(r);
@@ -469,10 +453,10 @@
           [a, l, e],
         );
       }
-      function S(t) {
+      function k(t) {
         return h.Get().GetDiscountEvent(t);
       }
-      function I(t) {
+      function S(t) {
         const { data: e } = (function (t) {
           const [e, n] = (0, o.useState)(h.Get().GetDiscountEvent(t)),
             [a, s] = o.useState(!!t);
@@ -489,13 +473,13 @@
                 })();
               } else s(!1);
             }, [t, e]),
-            (0, d.hL)(h.Get().GetDiscountEventCallback(t), n),
+            (0, p.hL)(h.Get().GetDiscountEventCallback(t), n),
             { data: e, isLoading: a }
           );
         })(t);
         return e;
       }
-      function k(t) {
+      function v(t) {
         const [e, n] = (0, o.useState)(h.Get().GetDiscountEvent(t)),
           [a, s] = (0, o.useState)(h.Get().GetAppList(t));
         return (
@@ -508,12 +492,12 @@
                   t && (n(t.oDiscountEvent), s(t.rgAppList));
                 });
           }, [e?.id, a, t]),
-          (0, d.hL)(h.Get().GetDiscountEventCallback(t), n),
-          (0, d.hL)(h.Get().GetAppListCallback(t), s),
+          (0, p.hL)(h.Get().GetDiscountEventCallback(t), n),
+          (0, p.hL)(h.Get().GetAppListCallback(t), s),
           a ? { oDiscountEvent: e, rgAppList: a } : null
         );
       }
-      function C(t, e, n, a, s) {
+      function G(t, e, n, a, s) {
         return JSON.stringify({
           discount_event: {
             name: t,
@@ -528,10 +512,10 @@
           },
         });
       }
-      function G() {
+      function P() {
         return { fnCreateDiscountEvent: h.Get().CreateDiscountEvent };
       }
-      function P() {
+      function C() {
         return {
           fnUpdateDiscountEventAppAndPublisherList:
             h.Get().UpdateDiscountEventPublisherAndAppList,
@@ -550,19 +534,19 @@
     6319: (t, e, n) => {
       "use strict";
       n.d(e, {
-        D6: () => I,
-        DC: () => P,
-        EF: () => E,
-        G7: () => f,
-        Iy: () => v,
-        O4: () => G,
-        _q: () => b,
-        dN: () => C,
-        es: () => w,
-        fw: () => R,
-        k: () => S,
-        kJ: () => k,
-        ms: () => L,
+        D6: () => S,
+        DC: () => C,
+        EF: () => f,
+        G7: () => E,
+        Iy: () => I,
+        O4: () => P,
+        _q: () => L,
+        dN: () => G,
+        es: () => A,
+        fw: () => b,
+        k: () => k,
+        kJ: () => v,
+        ms: () => R,
         uL: () => _,
       });
       var a = n(34629),
@@ -573,8 +557,8 @@
         c = n(20194),
         l = n(62490),
         u = n(44332),
-        d = n(68797),
-        p = n(6419),
+        p = n(68797),
+        d = n(6419),
         g = n(6144),
         m = n(73745),
         D = n(78327),
@@ -820,7 +804,7 @@
               return !0;
             }
             {
-              const t = (0, d.H)(o);
+              const t = (0, p.H)(o);
               console.error(
                 "LoadOptInRegistration : failed with a response and: " +
                   t.strErrorMsg,
@@ -828,7 +812,7 @@
               );
             }
           } catch (t) {
-            const e = (0, d.H)(t);
+            const e = (0, p.H)(t);
             console.error(
               "LoadOptInRegistration : failed with " + e.strErrorMsg,
               e,
@@ -904,7 +888,7 @@
           }
           if (null == u) s(!0);
           else {
-            const n = (0, d.H)(u);
+            const n = (0, p.H)(u);
             console.error(
               "Could not load OptIn for Apps",
               e,
@@ -935,9 +919,9 @@
                 t,
               o = await i().post(s, a, { withCredentials: !0 });
             if (200 == o?.status && 1 == o.data?.success) return null;
-            n = (0, d.H)(o);
+            n = (0, p.H)(o);
           } catch (t) {
-            n = (0, d.H)(t);
+            n = (0, p.H)(t);
           }
           return (
             console.error(
@@ -977,9 +961,9 @@
                 null
               );
             }
-            a = (0, d.H)(r);
+            a = (0, p.H)(r);
           } catch (t) {
-            a = (0, d.H)(t);
+            a = (0, p.H)(t);
           }
           return (
             console.error(
@@ -1012,9 +996,9 @@
                 !0
               );
             }
-            a = (0, d.H)(c);
+            a = (0, p.H)(c);
           } catch (t) {
-            a = (0, d.H)(t);
+            a = (0, p.H)(t);
           }
           return (
             console.error(
@@ -1082,7 +1066,7 @@
           );
         }
       }
-      function f(t, e) {
+      function E(t, e) {
         const n = t.jsondata?.dynamic_selection;
         try {
           if (n) {
@@ -1101,7 +1085,7 @@
         }
         return [];
       }
-      function E() {
+      function f() {
         return r.useMemo(
           () => ({
             fnLoadMultiOptInRegistration: _.Get().LoadMultiOptInRegistration,
@@ -1109,7 +1093,7 @@
           [],
         );
       }
-      function v(t, e, n) {
+      function I(t, e, n) {
         const [a, s] = r.useState(null),
           i = (0, h.m)("useMultiLoadOptInAppReg");
         return (
@@ -1136,14 +1120,14 @@
           a
         );
       }
-      function S(t) {
+      function k(t) {
         const [e, n] = r.useState(_.Get().GetAllOptInRegistrations(t));
         return (
           (0, m.hL)(_.Get().GetOptInNameRegistrationsCallbackList(t), n), e
         );
       }
-      function I(t) {
-        const e = S(t),
+      function S(t) {
+        const e = k(t),
           [n, a] = r.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
@@ -1174,7 +1158,7 @@
           n
         );
       }
-      function k(t, e) {
+      function v(t, e) {
         const n = (0, c.I)({
           queryKey: ["useAllOptInRegistrationByName", t, Boolean(e)],
           queryFn: () => _.Get().FetchOptInRegistrationForOptIn(t, e),
@@ -1182,7 +1166,7 @@
         });
         return n.isLoading ? null : n.data;
       }
-      function C(t) {
+      function G(t) {
         const e = (0, c.I)({
           queryKey: ["useAllPendingReviewOptInRegistrationByName", t],
           queryFn: () => _.Get().FetchPendingReviewOptInRegistrationn(t),
@@ -1195,78 +1179,78 @@
           bIsInError: e.isError,
         };
       }
-      function G(t, e) {
-        const n = k(t, !1),
+      function P(t, e) {
+        const n = v(t, !1),
           [a, s] = (0, r.useState)(n?.find((t) => t.appid == e));
         return (0, m.hL)(_.Get().GetSingleAppRegistrationChange(e, t), s), a;
       }
-      function P(t, e) {
+      function C(t, e) {
         const [n, a] = (0, r.useState)(
           _.Get().GetOptInRegistrationAndEligibilityForAppOrCreate(t, e),
         );
         return (0, m.hL)(_.Get().GetSingleAppRegistrationChange(t, e), a), n;
       }
-      function b(t, e) {
+      function L(t, e) {
         const [n, a] = (0, r.useState)(
           _.Get().GetExistingOptInRegistartion(t, e),
         );
         return (0, m.hL)(_.Get().GetSingleAppRegistrationChange(t, e), a), n;
       }
-      function w() {
+      function A() {
         return {
           fnUpdateOptInRegistrationJson: _.Get().UpdateOptInRegistrationJson,
         };
       }
-      function R() {
+      function b() {
         return { fnUpdateAppealState: _.Get().UpdateAppealState };
       }
-      function L() {
+      function R() {
         const [t, e] = (0, r.useState)(_.Get().GetLoadCount());
         return (
           (0, m.hL)(_.Get().GetLoadCountChange(), e), _.Get().GetLoadCount()
         );
       }
       (0, a.Cg)(
-        [p.o],
+        [d.o],
         _.prototype,
         "GetOptInRegistrationAndEligibilityForApp",
         null,
       ),
         (0, a.Cg)(
-          [p.o],
+          [d.o],
           _.prototype,
           "GetOptInRegistrationAndEligibilityForApps",
           null,
         ),
-        (0, a.Cg)([p.o], _.prototype, "LoadMultiOptInRegistration", null),
-        (0, a.Cg)([p.o], _.prototype, "UpdateOptInRegistrationJson", null),
-        (0, a.Cg)([p.o], _.prototype, "UpdateAppealState", null),
+        (0, a.Cg)([d.o], _.prototype, "LoadMultiOptInRegistration", null),
+        (0, a.Cg)([d.o], _.prototype, "UpdateOptInRegistrationJson", null),
+        (0, a.Cg)([d.o], _.prototype, "UpdateAppealState", null),
         (0, a.Cg)([o.XI], _.prototype, "Init", null);
     },
     48996: (t, e, n) => {
       "use strict";
       n.d(e, {
-        $U: () => v,
-        $p: () => O,
-        CW: () => T,
-        Fk: () => L,
-        Ko: () => f,
-        Lj: () => E,
-        Mh: () => k,
-        XA: () => y,
-        XL: () => B,
-        a8: () => b,
-        aU: () => R,
-        gr: () => P,
-        hC: () => w,
-        iI: () => I,
-        qN: () => S,
+        $U: () => I,
+        $p: () => B,
+        CW: () => O,
+        Fk: () => R,
+        Ko: () => E,
+        Lj: () => f,
+        Mh: () => v,
+        XA: () => w,
+        XL: () => T,
+        a8: () => L,
+        aU: () => b,
+        gr: () => C,
+        hC: () => A,
+        iI: () => S,
+        qN: () => k,
         qT: () => m,
         sZ: () => D,
-        sk: () => A,
-        w8: () => C,
-        zq: () => G,
-        zy: () => F,
+        sk: () => y,
+        w8: () => G,
+        zq: () => P,
+        zy: () => N,
       });
       var a = n(41735),
         s = n.n(a),
@@ -1276,8 +1260,8 @@
         c = n(6144),
         l = n(73745),
         u = n(41338),
-        d = n(78327),
-        p = n(62490),
+        p = n(78327),
+        d = n(62490),
         g = n(14771);
       const m = 95,
         D = 10;
@@ -1299,23 +1283,23 @@
           );
         }
         constructor() {
-          "dev" == d.TS.WEB_UNIVERSE && (window.g_PackageDiscountStore = this);
+          "dev" == p.TS.WEB_UNIVERSE && (window.g_PackageDiscountStore = this);
         }
         Init() {
-          const t = (0, d.Tc)("package_discounts", "application_config");
-          ("dev" != d.TS.WEB_UNIVERSE && "beta" != d.TS.WEB_UNIVERSE) ||
+          const t = (0, p.Tc)("package_discounts", "application_config");
+          ("dev" != p.TS.WEB_UNIVERSE && "beta" != p.TS.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CPackageDiscountStore loading discount payload: ",
               t,
             ),
             this.BIsDiscountPayloadValid(t)
               ? this.InternalAddDiscounts(t)
-              : "dev" == d.TS.WEB_UNIVERSE &&
+              : "dev" == p.TS.WEB_UNIVERSE &&
                 t &&
                 console.error("Invalid discount payload");
-          const e = (0, d.Tc)("max_discount_percentages", "application_config");
+          const e = (0, p.Tc)("max_discount_percentages", "application_config");
           if (
-            (("dev" != d.TS.WEB_UNIVERSE && "beta" != d.TS.WEB_UNIVERSE) ||
+            (("dev" != p.TS.WEB_UNIVERSE && "beta" != p.TS.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CDiscountGridStore loading max-discount-% payload: ",
                 e,
@@ -1325,7 +1309,7 @@
             for (let t in e)
               this.m_mapMaxDiscountPercentageByPackageId.set(Number(t), e[t]);
           else
-            "dev" == d.TS.WEB_UNIVERSE &&
+            "dev" == p.TS.WEB_UNIVERSE &&
               e &&
               console.error("Invalid max-discount-% payload");
         }
@@ -1418,7 +1402,7 @@
           return !1;
         }
         async LoadPackageDiscounts(t, e, n = 0) {
-          const a = p.Ew(t).sort().join(",");
+          const a = d.Ew(t).sort().join(",");
           return (
             this.m_mapExistingPackageRequests.has(a) ||
               this.m_mapExistingPackageRequests.set(
@@ -1438,12 +1422,12 @@
           const c = new Promise((t, e) => {
               o = t;
             }),
-            l = (0, d.Tc)("publisherid", "application_config"),
+            l = (0, p.Tc)("publisherid", "application_config"),
             u =
-              d.TS.PARTNER_BASE_URL +
+              p.TS.PARTNER_BASE_URL +
               "promotion/discounts/ajaxgetpackagediscounts/" +
               l;
-          let p = null,
+          let d = null,
             g = null;
           try {
             const t = [],
@@ -1468,40 +1452,40 @@
                 ((g = o.unshift()),
                 200 != t?.status || 1 != t.data?.success || !t.data.discounts)
               ) {
-                p = { response: t };
+                d = { response: t };
                 break;
               }
               t.data.discounts.forEach((t) => c.push(t));
             }
-            null == p && this.InternalAddDiscounts(c, Array.from(a));
+            null == d && this.InternalAddDiscounts(c, Array.from(a));
           } catch (t) {
-            p = t;
+            d = t;
           }
-          if (null == p) o(1);
+          if (null == d) o(1);
           else {
-            const t = (0, r.H)(p);
+            const t = (0, r.H)(d);
             console.error(
               "Could not load Discounts for packages",
               g,
               t.strErrorMsg,
               t,
             ),
-              o(p?.response?.data?.success ?? 2);
+              o(d?.response?.data?.success ?? 2);
           }
           return c;
         }
         async SaveDiscountToServer(t, e) {
           const n =
-              d.TS.PARTNER_BASE_URL +
+              p.TS.PARTNER_BASE_URL +
               "packages/createoreditdiscount/" +
               t.packageID,
             a = new FormData();
-          a.append("sessionid", d.TS.SESSIONID),
+          a.append("sessionid", p.TS.SESSIONID),
             t.nDiscountID && a.append("id", t.nDiscountID.toString()),
             a.append("name", t.strDiscountName),
             a.append("description", t.strDiscountDescription),
             t.discountEventID &&
-              !f(t.discountEventID) &&
+              !E(t.discountEventID) &&
               a.append("type", t.discountEventID),
             a.append("percent", t.nDiscountPct.toString()),
             a.append("start_date", new Date(1e3 * t.rtStartDate).toISOString()),
@@ -1539,9 +1523,9 @@
         }
         async DeleteDiscountOnServer(t, e, n, a) {
           const i =
-              d.TS.PARTNER_BASE_URL + "packages/removepackagediscount/" + e,
+              p.TS.PARTNER_BASE_URL + "packages/removepackagediscount/" + e,
             o = new FormData();
-          o.append("sessionid", d.TS.SESSIONID),
+          o.append("sessionid", p.TS.SESSIONID),
             o.append("discountid", t.toString());
           let c = null;
           try {
@@ -1619,34 +1603,34 @@
       function _(t) {
         return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, u.Yz)(t.strDiscountName)}`;
       }
-      function f(t) {
+      function E(t) {
         return t.startsWith("custom-event-");
       }
-      function E(t) {
+      function f(t) {
         return h.Get().GetDiscountByID(t);
       }
-      function v(t) {
+      function I(t) {
         return h.Get().GetAllDiscountsForDiscountEvent(t);
       }
-      function S(t) {
+      function k(t) {
         return h.Get().GetAllDiscountsForPackage(t);
       }
-      function I(t) {
+      function S(t) {
         return h.Get().GetCallbackListForPackage(t);
       }
-      function k() {
+      function v() {
         return h.Get().GetAllDiscountsForAllPackages();
       }
-      function C() {
+      function G() {
         return h.Get().GetGlobalCallbackList();
       }
-      function G() {
+      function P() {
         return i.useCallback(
           (t, e, n) => h.Get().LoadPackageDiscounts(t, e, n),
           [],
         );
       }
-      function P() {
+      function C() {
         const t = (t) => h.Get().SaveDiscountToServer(t),
           e = (t, e, n) => h.Get().DeleteDiscountOnServer(t, e, n);
         return i.useMemo(
@@ -1654,12 +1638,12 @@
           [],
         );
       }
-      function b(t) {
+      function L(t) {
         return new Map(
           Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function w(t) {
+      function A(t) {
         const e = (0, o.f1)(),
           [n, a] = i.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1680,7 +1664,7 @@
           }, [t, e, n])
         );
       }
-      function R(t) {
+      function b(t) {
         const e = (0, o.f1)();
         if (!t) return null;
         let n = null;
@@ -1700,7 +1684,7 @@
           n
         );
       }
-      function L(t, e, n) {
+      function R(t, e, n) {
         const [a, s] = (0, i.useState)(),
           [o, r] = (0, i.useState)([]);
         return (
@@ -1730,7 +1714,7 @@
           { nDaysInDiscount: a, rgDiscountWithOverlap: o }
         );
       }
-      function y(t) {
+      function w(t) {
         const e = (0, o.f1)(),
           [n, a] = i.useState(h.Get().GetAllDiscountsForAllPackages());
         return (
@@ -1752,15 +1736,15 @@
           }, [e, t, n])
         );
       }
-      function A(t) {
+      function y(t) {
         const [e, n] = i.useState(h.Get().GetAllDiscountsForDiscountEvent(t));
         return (0, l.hL)(h.Get().GetCallbackListForDiscountEvent(t), n), e;
       }
-      function T(t) {
+      function O(t) {
         const [e, n] = i.useState(h.Get().GetAllDiscountsForPackage(t));
         (0, l.hL)(h.Get().GetCallbackListForPackage(t), n);
         const [a, o] = i.useState(!1),
-          r = G();
+          r = P();
         return (
           i.useEffect(() => {
             if (!e && t) {
@@ -1775,38 +1759,38 @@
           e
         );
       }
-      function O(t) {
+      function B(t) {
         return h.Get().GetMaxDiscountPercentage(t);
       }
-      function B(t) {
+      function T(t) {
         return t.some(
           (t) => t.nDiscountPct > h.Get().GetMaxDiscountPercentage(t.packageID),
         );
       }
-      function F(t) {
+      function N(t) {
         return h.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
     87924: (t, e, n) => {
       "use strict";
       n.d(e, {
-        C5: () => H,
-        Gq: () => U,
-        QD: () => y,
-        T1: () => E,
-        WV: () => w,
-        ZM: () => R,
-        _9: () => x,
-        bA: () => b,
-        ew: () => A,
-        gr: () => F,
-        i3: () => T,
-        l4: () => L,
-        nu: () => v,
-        ve: () => B,
-        wF: () => N,
+        C5: () => x,
+        Gq: () => j,
+        QD: () => w,
+        T1: () => f,
+        WV: () => A,
+        ZM: () => b,
+        _9: () => U,
+        bA: () => L,
+        ew: () => y,
+        gr: () => N,
+        i3: () => O,
+        l4: () => R,
+        nu: () => I,
+        ve: () => T,
+        wF: () => F,
         wk: () => V,
-        zP: () => O,
+        zP: () => B,
       });
       var a = n(33428),
         s = n(6319),
@@ -1816,56 +1800,56 @@
         c = n(70986),
         l = n(90626),
         u = n(44165),
-        d = n(82097),
-        p = n(6144),
+        p = n(82097),
+        d = n(6144),
         g = n(73745),
         m = n(41338),
         D = n(14771),
         h = n(78327),
         _ = n(43552);
-      function f(t, e) {
+      function E(t, e) {
         return (
           (!e && 0 == (t?.nDiscountPct ?? 0)) ||
           (!!e && e.nDiscountPct == t?.nDiscountPct)
         );
       }
-      const E = 30,
-        v = E * D.Kp.PerDay - 1.5 * D.Kp.PerHour,
-        S = 10 * D.Kp.PerMinute;
-      class I {
+      const f = 30,
+        I = f * D.Kp.PerDay - 1.5 * D.Kp.PerHour,
+        k = 10 * D.Kp.PerMinute;
+      class S {
         m_mapPackageStateForDiscountEvents = new Map();
         m_mapLocalPackageDiscountOverrides = new Map();
         m_mapDiscountPackageCallbackList = new Map();
         m_mapDiscountGridCellCallbackList = new Map();
         m_mapDiscountEventColumnCallbackList = new Map();
-        m_localPackageDiscountOverrideCallbackList = new p.lu();
+        m_localPackageDiscountOverrideCallbackList = new d.lu();
         static s_Singleton;
-        static s_initializationCallbackList = new p.lu();
+        static s_initializationCallbackList = new d.lu();
         static Get() {
           return (
-            I.s_Singleton || ((I.s_Singleton = new I()), I.s_Singleton.Init()),
-            I.s_Singleton
+            S.s_Singleton || ((S.s_Singleton = new S()), S.s_Singleton.Init()),
+            S.s_Singleton
           );
         }
         static IsInitialized() {
-          return !!I.s_Singleton;
+          return !!S.s_Singleton;
         }
         constructor() {
           "dev" == h.TS.WEB_UNIVERSE && (window.g_DiscountGridEditStore = this);
         }
         Init() {
           for (const t of (0, o.OM)())
-            I.Get().ComputePackageState(t),
+            S.Get().ComputePackageState(t),
               (0, i.iI)(t).Register(() => {
-                I.Get().ComputePackageState(t);
+                S.Get().ComputePackageState(t);
               });
           (0, _.ou)().Register(() => {
-            for (const t of (0, o.OM)()) I.Get().ComputePackageState(t, !0);
+            for (const t of (0, o.OM)()) S.Get().ComputePackageState(t, !0);
           }),
-            I.s_initializationCallbackList.Dispatch(!0);
+            S.s_initializationCallbackList.Dispatch(!0);
         }
         OverridePackageDiscountPct(t, e, n) {
-          const a = I.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
+          const a = S.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
           if (1 != a?.eState)
             return (
               console.error(
@@ -1887,7 +1871,7 @@
               discountEventID: i.id,
               bChangedLocally: !0,
             };
-          return f(o, s)
+          return E(o, s)
             ? null
             : (this.m_mapLocalPackageDiscountOverrides.has(t) ||
                 this.m_mapLocalPackageDiscountOverrides.set(t, new Map()),
@@ -1914,10 +1898,10 @@
           return (
             this.m_mapLocalPackageDiscountOverrides.forEach((e) =>
               e.forEach((e) => {
-                f(e, e.nDiscountID && (0, i.Lj)(e.nDiscountID)) || t.push(e);
+                E(e, e.nDiscountID && (0, i.Lj)(e.nDiscountID)) || t.push(e);
               }),
             ),
-            t.sort(P),
+            t.sort(C),
             t
           );
         }
@@ -1941,7 +1925,7 @@
           n?.forEach((t) => this.ComputePackageState(t));
         }
         GetPackageDiscountsIncludingOverrides(t) {
-          const e = (0, u.sB)() - v,
+          const e = (0, u.sB)() - I,
             n = (0, i.qN)(t);
           if (!n) return null;
           const a = new Map(
@@ -1949,7 +1933,7 @@
           );
           return (
             this.m_mapLocalPackageDiscountOverrides.get(t)?.forEach((t, e) => {
-              f(t, a.get(e)) || a.set(e, t);
+              E(t, a.get(e)) || a.set(e, t);
             }),
             a
           );
@@ -1959,14 +1943,14 @@
           this.m_mapDiscountGridCellCallbackList.has(t) ||
             this.m_mapDiscountGridCellCallbackList.set(t, new Map());
           const n = this.m_mapDiscountGridCellCallbackList.get(t);
-          return n.has(e) || n.set(e, new p.lu()), n.get(e);
+          return n.has(e) || n.set(e, new d.lu()), n.get(e);
         }
         GetDiscountPackageCallbackList(t) {
           if (!t) return null;
           let e = this.m_mapDiscountPackageCallbackList.get(t);
           return (
             e ||
-              ((e = new p.lu()),
+              ((e = new d.lu()),
               this.m_mapDiscountPackageCallbackList.set(t, e)),
             e
           );
@@ -1974,7 +1958,7 @@
         GetDiscountEventColumnCallbackList(t) {
           return t
             ? (this.m_mapDiscountEventColumnCallbackList.has(t) ||
-                this.m_mapDiscountEventColumnCallbackList.set(t, new p.lu()),
+                this.m_mapDiscountEventColumnCallbackList.set(t, new d.lu()),
               this.m_mapDiscountEventColumnCallbackList.get(t))
             : null;
         }
@@ -1984,14 +1968,14 @@
         GetAllPackageStatesForDiscountEvent(t) {
           const e = [];
           return (
-            I.Get().m_mapPackageStateForDiscountEvents.forEach((n, a) =>
+            S.Get().m_mapPackageStateForDiscountEvents.forEach((n, a) =>
               e.push(n.get(t)),
             ),
             e
           );
         }
         ComputePackageState(t, e) {
-          const n = d.A.Get().GetPackage(t);
+          const n = p.A.Get().GetPackage(t);
           if (!n) return;
           const i = (0, _.E1)(),
             o = (0, r.i$)(n),
@@ -2005,8 +1989,8 @@
                 n.GetIncludedAppIDs(),
               ));
           const u = this.GetPackageDiscountsIncludingOverrides(t),
-            p = !u,
-            g = p
+            d = !u,
+            g = d
               ? null
               : Array.from(u.values()).sort(
                   (t, e) => t.rtStartDate - e.rtStartDate,
@@ -2020,7 +2004,7 @@
             if (
               ((i.discount = u?.get(s.id)),
               (i.bChangedLocally = !!i.discount?.bChangedLocally),
-              p)
+              d)
             )
               i.eState = 0;
             else if (i.discount?.nDiscountPct > 0) {
@@ -2028,9 +2012,9 @@
               const t = s.opt_in_name && l?.get(s.opt_in_name);
               t && (i.optInReg = t);
             } else {
-              if (((i.eState = 1), G(s, n))) i.eState = 10;
+              if (((i.eState = 1), P(s, n))) i.eState = 10;
               else if (s.opt_in_name) {
-                const { ePackageDiscountState: t, optInRegistration: e } = C(
+                const { ePackageDiscountState: t, optInRegistration: e } = G(
                   s.opt_in_name,
                   l,
                   n,
@@ -2040,7 +2024,7 @@
                 (i.eState = t), (i.optInReg = e);
               }
               if (10 != i.eState && 4 != i.eState && 5 != i.eState) {
-                const e = k(t, s, g);
+                const e = v(t, s, g);
                 1 != e.ePackageDiscountState &&
                   ((i.eState = e.ePackageDiscountState),
                   (i.rgConflictDetails = e.rgConflictingDiscounts.map(
@@ -2057,7 +2041,7 @@
                 D?.eState == h?.eState &&
                 D?.rgConflictDetails?.length == h?.rgConflictDetails?.length &&
                 D?.optInReg == h?.optInReg &&
-                f(D?.discount, h?.discount) &&
+                E(D?.discount, h?.discount) &&
                 D?.nBaseAppID == h?.nBaseAppID &&
                 D?.bChangedLocally == h?.bChangedLocally) ||
                 (m.set(s.id, i),
@@ -2092,13 +2076,13 @@
                 return "unique" != e?.collision_type;
               })
               .forEach((t) => {
-                t.rtEndDate + v < n && (n = t.rtEndDate + v);
+                t.rtEndDate + I < n && (n = t.rtEndDate + I);
               }),
             n
           );
         }
         GetFutureDiscountRanges(t) {
-          const e = d.A.Get().GetPackage(t),
+          const e = p.A.Get().GetPackage(t),
             n = this.GetPackageDiscountsIncludingOverrides(t);
           if (!e || !n) return [];
           const s = Array.from(n.values()).sort(
@@ -2107,34 +2091,34 @@
             i = (0, u.sB)(),
             o = Math.max(
               i,
-              e.GetReleaseDateRTime() + v,
-              (0, _.zL)(t) + v,
+              e.GetReleaseDateRTime() + I,
+              (0, _.zL)(t) + I,
               this.GetFurthestCooldownFromPastDiscounts(s),
             ),
             r = [],
             l = new Set();
-          let p = o;
+          let d = o;
           for (let e = 0; e < s.length; e++) {
             const n = s[e];
             if (0 == n.nDiscountPct) continue;
             if (n.rtStartDate < o) continue;
             const i = (0, a.E7)(n.discountEventID);
-            let u = n.rtStartDate - v;
-            const d = "unique" == i?.collision_type;
-            if (d && ((u = n.rtStartDate + S), e + 1 < s.length)) {
+            let u = n.rtStartDate - I;
+            const p = "unique" == i?.collision_type;
+            if (p && ((u = n.rtStartDate + k), e + 1 < s.length)) {
               const t = s[e + 1],
                 n = (0, _.Z6)(t.discountEventID);
               "unique" != n?.collision_type &&
-                (u = Math.min(u, t.rtStartDate - v));
+                (u = Math.min(u, t.rtStartDate - I));
             }
-            if (p + D.Kp.PerDay < u) {
+            if (d + D.Kp.PerDay < u) {
               const e = {
                 bIsAvailable: !0,
-                rtStartDate: p,
+                rtStartDate: d,
                 rtEndDate: u,
                 rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
                   t,
-                  p,
+                  d,
                   u,
                 ),
               };
@@ -2150,26 +2134,26 @@
             if (
               (r.push(g),
               l.add(n.discountEventID),
-              (p = n.rtEndDate + v),
-              d && ((p = n.rtEndDate - S), e - 1 >= 0))
+              (d = n.rtEndDate + I),
+              p && ((d = n.rtEndDate - k), e - 1 >= 0))
             ) {
               const t = s[e - 1],
                 n = (0, _.Z6)(t.discountEventID);
               "unique" != n?.collision_type &&
-                (p = Math.max(p, t.rtEndDate + v));
+                (d = Math.max(d, t.rtEndDate + I));
             }
-            const m = (0, c.M)(p);
-            m - p <= 2 * D.Kp.PerHour && (p = m);
+            const m = (0, c.M)(d);
+            m - d <= 2 * D.Kp.PerHour && (d = m);
           }
           const g = (0, c.M)(i + D.Kp.PerYear / 2);
-          if (p + D.Kp.PerDay < g) {
+          if (d + D.Kp.PerDay < g) {
             const e = {
               bIsAvailable: !0,
-              rtStartDate: p,
+              rtStartDate: d,
               rtEndDate: g,
               rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
                 t,
-                p,
+                d,
                 g,
               ),
             };
@@ -2201,12 +2185,12 @@
           return r;
         }
       }
-      function k(t, e, n) {
+      function v(t, e, n) {
         let s = 1;
         const i = [];
         let o = !1;
-        const r = d.A.Get().GetPackage(t);
-        if (r?.GetReleaseDateRTime() > e.start_date - v)
+        const r = p.A.Get().GetPackage(t);
+        if (r?.GetReleaseDateRTime() > e.start_date - I)
           return (
             (s = 6),
             {
@@ -2215,7 +2199,7 @@
               bChangedLocally: o,
             }
           );
-        if ((0, _.zL)(t) > e.start_date - v)
+        if ((0, _.zL)(t) > e.start_date - I)
           return (
             (s = 7),
             {
@@ -2228,8 +2212,8 @@
           if (e.id == t.discountEventID) continue;
           const n = (0, a.E7)(t.discountEventID),
             r = "unique" == e.collision_type || "unique" == n?.collision_type,
-            c = r ? e.start_date + S : e.start_date - v,
-            l = r ? e.end_date - S : e.end_date + v;
+            c = r ? e.start_date + k : e.start_date - I,
+            l = r ? e.end_date - k : e.end_date + I;
           if (t.rtEndDate > c && l > t.rtStartDate) {
             if (((o = o || t.bChangedLocally), 0 == t.nDiscountPct)) continue;
             i.push(t), (s = r ? 9 : 8);
@@ -2241,7 +2225,7 @@
           bChangedLocally: o,
         };
       }
-      function C(t, e, n, a, i) {
+      function G(t, e, n, a, i) {
         let o,
           r = 5;
         if (e)
@@ -2265,13 +2249,13 @@
         }
         return { ePackageDiscountState: r, optInRegistration: o };
       }
-      function G(t, e) {
+      function P(t, e) {
         if (t.appids?.length > 0) {
           if (e?.GetIncludedAppIDs()?.length) {
             const n = new Set(t.appids);
             for (const t of e.GetIncludedAppIDs()) {
               if (n.has(t)) return !1;
-              const e = d.A.Get().GetApp(t)?.GetParentAppID();
+              const e = p.A.Get().GetApp(t)?.GetParentAppID();
               if (e && n.has(e)) return !1;
             }
           }
@@ -2279,10 +2263,10 @@
         }
         return !1;
       }
-      function P(t, e) {
+      function C(t, e) {
         if (t.packageID != e.packageID) {
-          const n = d.A.Get().GetPackage(t.packageID)?.GetName(),
-            a = d.A.Get().GetPackage(e.packageID)?.GetName();
+          const n = p.A.Get().GetPackage(t.packageID)?.GetName(),
+            a = p.A.Get().GetPackage(e.packageID)?.GetName();
           return (0, m.kd)(n, a);
         }
         {
@@ -2294,72 +2278,72 @@
             : t.rtStartDate - e.rtStartDate;
         }
       }
-      function b() {
+      function L() {
         return l.useCallback(() => {
-          I.Get();
+          S.Get();
         }, []);
       }
-      function w() {
-        const [t, e] = l.useState(I.Get().GetLocalPackageDiscountOverrides());
+      function A() {
+        const [t, e] = l.useState(S.Get().GetLocalPackageDiscountOverrides());
         return (
-          (0, g.hL)(I.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
+          (0, g.hL)(S.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
+        );
+      }
+      function b() {
+        return l.useCallback(
+          () => S.Get().GetLocalPackageDiscountOverrides()?.length > 0,
+          [],
         );
       }
       function R() {
         return l.useCallback(
-          () => I.Get().GetLocalPackageDiscountOverrides()?.length > 0,
+          (t) => S.Get().DiscardAllLocalPackageDiscountOverrides(t),
           [],
         );
       }
-      function L() {
+      function w() {
         return l.useCallback(
-          (t) => I.Get().DiscardAllLocalPackageDiscountOverrides(t),
+          (t, e) => S.Get().OptInRegistrationUpdatedForApp(t, e),
           [],
         );
       }
       function y() {
         return l.useCallback(
-          (t, e) => I.Get().OptInRegistrationUpdatedForApp(t, e),
+          (t, e) => S.Get().DiscardLocalPackageDiscountOverride(t, e),
           [],
         );
-      }
-      function A() {
-        return l.useCallback(
-          (t, e) => I.Get().DiscardLocalPackageDiscountOverride(t, e),
-          [],
-        );
-      }
-      function T(t, e) {
-        const n = I.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
-        return 1 == n?.eState ? (n?.discount?.nDiscountPct ?? 0) : null;
       }
       function O(t, e) {
+        const n = S.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
+        return 1 == n?.eState ? (n?.discount?.nDiscountPct ?? 0) : null;
+      }
+      function B(t, e) {
         const [n, a] = l.useState(() =>
-          I.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e),
+          S.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e),
         );
-        (0, g.hL)(I.Get().GetDiscountGridCellCallbackList(t, e), a);
+        (0, g.hL)(S.Get().GetDiscountGridCellCallbackList(t, e), a);
         return {
           packageState: n,
           fnSetDiscountPct: l.useCallback(
             (n) => {
-              I.Get().OverridePackageDiscountPct(t, e, n);
+              S.Get().OverridePackageDiscountPct(t, e, n);
             },
             [t, e],
           ),
         };
       }
-      function B() {
+      function T() {
         return l.useCallback((t, e, n) => {
           const a = [];
           for (const s of n) {
-            const n = I.Get().OverridePackageDiscountPct(s, e, t);
+            const n = S.Get().OverridePackageDiscountPct(s, e, t);
             n && a.push(n);
           }
           return a;
         }, []);
       }
-      function F(t) {
-        const e = N(t);
+      function N(t) {
+        const e = F(t);
         return l.useMemo(
           () => ({
             nAlreadySet: e.alreadySet.size,
@@ -2371,19 +2355,19 @@
           [e],
         );
       }
-      function N(t) {
+      function F(t) {
         const [e, n] = l.useState(() => M(t)),
           a = l.useCallback(() => {
             n(M(t));
           }, [t]);
         return (
           l.useEffect(a, [t, a]),
-          (0, g.hL)(I.Get().GetDiscountEventColumnCallbackList(t), a),
+          (0, g.hL)(S.Get().GetDiscountEventColumnCallbackList(t), a),
           e
         );
       }
       function M(t) {
-        const e = I.Get().GetAllPackageStatesForDiscountEvent(t),
+        const e = S.Get().GetAllPackageStatesForDiscountEvent(t),
           n = {
             alreadySet: new Set(),
             available: new Set(),
@@ -2417,12 +2401,12 @@
           }
         return n;
       }
-      function x(t) {
+      function U(t) {
         return (
           !!(0, i.$U)(t).some((t) => t.nDiscountPct > 0) ||
           !(
-            !I.IsInitialized() ||
-            !I.Get()
+            !S.IsInitialized() ||
+            !S.Get()
               .GetAllPackageStatesForDiscountEvent(t)
               .some((t) => (t.discount?.nDiscountPct ?? 0) > 0)
           )
@@ -2436,19 +2420,19 @@
         const o = s.uL.Get().GetAllOptInRegistrations(n.opt_in_name);
         return !!o?.length && o.some((t) => !t.restricted && !t.pruned);
       }
-      function U(t) {
+      function j(t) {
         const e = (function () {
-            const [t, e] = l.useState(I.IsInitialized());
-            return (0, g.hL)(I.s_initializationCallbackList, e), t;
+            const [t, e] = l.useState(S.IsInitialized());
+            return (0, g.hL)(S.s_initializationCallbackList, e), t;
           })(),
-          [n, a] = l.useState(e ? I.Get().GetFutureDiscountRanges(t) : []),
+          [n, a] = l.useState(e ? S.Get().GetFutureDiscountRanges(t) : []),
           s = l.useCallback(
-            () => a(e ? I.Get().GetFutureDiscountRanges(t) : []),
+            () => a(e ? S.Get().GetFutureDiscountRanges(t) : []),
             [t, e],
           );
         return (
           (0, g.hL)(
-            e && I.Get().GetLocalPackageDiscountOverrideCallbackList(),
+            e && S.Get().GetLocalPackageDiscountOverrideCallbackList(),
             s,
           ),
           (0, g.hL)(e && (0, i.iI)(t), s),
@@ -2456,26 +2440,26 @@
           n
         );
       }
-      function H(t) {
-        let [e, n] = l.useState(() => I.Get().GetHighestPackageDiscount(t)),
+      function x(t) {
+        let [e, n] = l.useState(() => S.Get().GetHighestPackageDiscount(t)),
           a = l.useCallback(() => {
-            n(I.Get().GetHighestPackageDiscount(t));
+            n(S.Get().GetHighestPackageDiscount(t));
           }, [t, n]);
-        return (0, g.hL)(I.Get().GetDiscountPackageCallbackList(t), a), e;
+        return (0, g.hL)(S.Get().GetDiscountPackageCallbackList(t), a), e;
       }
     },
     43552: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Ad: () => E,
+        Ad: () => f,
         E1: () => m,
-        Fs: () => S,
+        Fs: () => k,
         Ix: () => _,
-        Jn: () => I,
+        Jn: () => S,
         Z6: () => D,
-        dp: () => f,
+        dp: () => E,
         ou: () => h,
-        u7: () => v,
+        u7: () => I,
         zL: () => g,
       });
       var a = n(90626),
@@ -2486,8 +2470,8 @@
         c = n(33428),
         l = n(48996),
         u = n(87924);
-      const d = "related-discount-view";
-      class p {
+      const p = "related-discount-view";
+      class d {
         m_rgDiscountEvents;
         m_mapDiscountEventsByID = new Map();
         m_discountEventsCallbackList = new i.lu();
@@ -2506,8 +2490,8 @@
         static s_Singleton;
         static Get() {
           return (
-            p.s_Singleton || ((p.s_Singleton = new p()), p.s_Singleton.Init()),
-            p.s_Singleton
+            d.s_Singleton || ((d.s_Singleton = new d()), d.s_Singleton.Init()),
+            d.s_Singleton
           );
         }
         constructor() {
@@ -2526,7 +2510,7 @@
             "dev" == r.TS.WEB_UNIVERSE &&
               console.error("CDiscountGridStore Invalid payload");
           (this.m_eRelatedDiscountView =
-            window.localStorage.getItem(d) ?? "deepest-past"),
+            window.localStorage.getItem(p) ?? "deepest-past"),
             this.UpdateDiscountEventsForGrid(),
             (0, c.yB)().Register(() => this.UpdateDiscountEventsForGrid()),
             (0, l.w8)().Register(() => this.UpdateDiscountEventsForGrid()),
@@ -2677,72 +2661,72 @@
         }
       }
       function g(t) {
-        return p.Get().m_mapLastTimeRaisedPrices.get(t) ?? 0;
+        return d.Get().m_mapLastTimeRaisedPrices.get(t) ?? 0;
       }
       function m() {
-        return p.Get().m_rgDiscountEvents;
+        return d.Get().m_rgDiscountEvents;
       }
       function D(t) {
-        return p.Get().m_mapDiscountEventsByID.get(t);
+        return d.Get().m_mapDiscountEventsByID.get(t);
       }
       function h() {
-        return p.Get().m_discountEventsCallbackList;
+        return d.Get().m_discountEventsCallbackList;
       }
       function _() {
-        const [t, e] = a.useState(p.Get().m_rgDiscountEvents);
-        return (0, o.hL)(p.Get().m_discountEventsCallbackList, e), t;
+        const [t, e] = a.useState(d.Get().m_rgDiscountEvents);
+        return (0, o.hL)(d.Get().m_discountEventsCallbackList, e), t;
       }
-      function f() {
-        const [t, e] = a.useState(p.Get().m_setVisibleDiscountEventIDs);
-        return (0, o.hL)(p.Get().m_visibleDiscountEventIDsCallbackList, e), t;
+      function E() {
+        const [t, e] = a.useState(d.Get().m_setVisibleDiscountEventIDs);
+        return (0, o.hL)(d.Get().m_visibleDiscountEventIDsCallbackList, e), t;
       }
-      function E(t) {
-        const [e, n] = a.useState(p.Get().m_mapDiscountEventsByID.get(t)),
+      function f(t) {
+        const [e, n] = a.useState(d.Get().m_mapDiscountEventsByID.get(t)),
           s = a.useCallback(
-            () => n(p.Get().m_mapDiscountEventsByID.get(t)),
+            () => n(d.Get().m_mapDiscountEventsByID.get(t)),
             [t],
           );
         return (
-          (0, o.hL)(p.Get().m_discountEventsCallbackList, s),
+          (0, o.hL)(d.Get().m_discountEventsCallbackList, s),
           a.useEffect(s, [t, s]),
           e
         );
       }
-      function v(t = !0) {
-        const [e, n] = a.useState(p.Get().GetEventSelectionParameters()),
-          s = t ? p.Get().m_gridEventSelectionParametersCallbackList : null;
+      function I(t = !0) {
+        const [e, n] = a.useState(d.Get().GetEventSelectionParameters()),
+          s = t ? d.Get().m_gridEventSelectionParametersCallbackList : null;
         return (0, o.hL)(s, n), e;
       }
-      function S() {
-        const [t, e] = a.useState(p.Get().m_eRelatedDiscountView);
-        (0, o.hL)(p.Get().m_RelatedDiscountViewCallbackList, e);
+      function k() {
+        const [t, e] = a.useState(d.Get().m_eRelatedDiscountView);
+        (0, o.hL)(d.Get().m_RelatedDiscountViewCallbackList, e);
         return [
           t,
           a.useCallback((t) => {
-            (p.Get().m_eRelatedDiscountView = t),
-              window.localStorage.setItem(d, t),
-              p.Get().m_RelatedDiscountViewCallbackList.Dispatch(t);
+            (d.Get().m_eRelatedDiscountView = t),
+              window.localStorage.setItem(p, t),
+              d.Get().m_RelatedDiscountViewCallbackList.Dispatch(t);
           }, []),
         ];
       }
-      function I() {
+      function S() {
         return a.useCallback(() => {
-          p.Get().UpdateVisibleDiscountEventIDs();
+          d.Get().UpdateVisibleDiscountEventIDs();
         }, []);
       }
     },
     33299: (t, e, n) => {
       "use strict";
       n.d(e, {
-        HA: () => f,
-        IR: () => y,
-        NP: () => w,
-        Xr: () => A,
-        ZN: () => L,
-        mE: () => P,
-        rK: () => E,
-        sF: () => b,
-        uv: () => C,
+        HA: () => E,
+        IR: () => w,
+        NP: () => A,
+        Xr: () => y,
+        ZN: () => R,
+        mE: () => C,
+        rK: () => f,
+        sF: () => L,
+        uv: () => G,
       });
       var a = n(90626),
         s = n(32754),
@@ -2752,19 +2736,19 @@
         c = n.n(r),
         l = n(75233),
         u = n(69423),
-        d = n(64238),
-        p = n.n(d),
+        p = n(64238),
+        d = n.n(p),
         g = n(48996),
         m = n(87924),
         D = n(4869),
         h = n(9554);
       const _ = (0, a.createContext)(void 0);
-      function f() {
+      function E() {
         const t = (0, a.useContext)(_);
         if (!t) throw new Error("Missing GridRowContextProvider");
         return t;
       }
-      function E(t) {
+      function f(t) {
         const { children: e, fnBLocalChangesExist: n, fnWarnUser: s } = t,
           i = (0, l.jE)(),
           o = a.useMemo(
@@ -2773,12 +2757,12 @@
           );
         return a.createElement(_.Provider, { value: o }, e);
       }
-      function v(t) {
+      function I(t) {
         const { row: e } = t,
           n = e.original.packageID || 0,
           s = (0, m.C5)(n);
         let i = (0, g.$p)(n) < s,
-          r = p()(
+          r = d()(
             c().PackageNameColumn,
             i && c().PackagePricesBelowMin,
             e.original.packageType,
@@ -2786,13 +2770,13 @@
           l = i
             ? (0, o.we)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(k, { className: r, toolTip: l, ...t });
+        return a.createElement(v, { className: r, toolTip: l, ...t });
       }
-      function S(t) {
+      function k(t) {
         const { row: e } = t,
           n = e.original.packageID || 0,
           s = (0, u.nT)(n);
-        let i = p()(
+        let i = d()(
             c().PackageNameColumn,
             s && c().PackagePricesBelowMin,
             e.original.packageType,
@@ -2800,14 +2784,14 @@
           r = s
             ? (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(k, {
+        return a.createElement(v, {
           className: i,
           toolTip: r,
           showUnreleased: !0,
           ...t,
         });
       }
-      function I(t) {
+      function S(t) {
         const { column: e } = t,
           [n, s] = (0, a.useState)(e.getFilterValue() ?? "");
         return a.createElement(
@@ -2826,25 +2810,25 @@
           }),
         );
       }
-      function k(t) {
-        const { fnBLocalChangesExist: e, fnWarnUser: n } = f(),
-          { cell: r, row: l, className: u, toolTip: d } = t,
-          p = l.original.packageID,
+      function v(t) {
+        const { fnBLocalChangesExist: e, fnWarnUser: n } = E(),
+          { cell: r, row: l, className: u, toolTip: p } = t,
+          d = l.original.packageID,
           g =
             r.getValue() ??
             a.createElement(
               "span",
               { className: c().UnknownValue },
               " ",
-              (0, o.we)("#PackageGrid_PackageID", p),
+              (0, o.we)("#PackageGrid_PackageID", d),
             );
         return a.createElement(
-          A,
+          y,
           {
             fnBLocalChangesExist: e,
             fnWarnUser: n,
-            href: `${i.TS.PARTNER_BASE_URL}store/packagelanding/${p}`,
-            strToolTip: d,
+            href: `${i.TS.PARTNER_BASE_URL}store/packagelanding/${d}`,
+            strToolTip: p,
             strClassName: u,
           },
           t.showUnreleased &&
@@ -2867,7 +2851,7 @@
           g,
         );
       }
-      function C() {
+      function G() {
         return a.useMemo(
           () => ({
             accessorKey: "packageID",
@@ -2875,7 +2859,7 @@
             enableSorting: !1,
             size: 90,
             cell: (t) =>
-              a.createElement(k, {
+              a.createElement(v, {
                 ...t,
                 toolTip: (0, o.we)("#PackageGrid_Column_PackageID_ttip"),
               }),
@@ -2884,7 +2868,7 @@
           [],
         );
       }
-      function G(t, e, n) {
+      function P(t, e, n) {
         let a = /^\d+$/.test(n);
         const s = t.original.packageID;
         return (
@@ -2892,11 +2876,11 @@
           t.getValue(e).toLowerCase().includes(n.toLowerCase())
         );
       }
-      function P(t) {
+      function C(t) {
         return a.useMemo(
           () => ({
             accessorKey: "packageName",
-            header: I,
+            header: S,
             enableSorting: !1,
             meta: {
               strHeaderTooltip: (0, o.we)(
@@ -2904,17 +2888,17 @@
               ),
               cellClassname: c().PackageName,
             },
-            filterFn: G,
-            cell: t ? v : S,
+            filterFn: P,
+            cell: t ? I : k,
             size: 300,
           }),
           [t],
         );
       }
-      function b() {
+      function L() {
         return a.useMemo(() => ({ accessorKey: "appids" }), []);
       }
-      function w() {
+      function A() {
         return a.useMemo(
           () => ({
             accessorKey: "packageType",
@@ -2930,14 +2914,14 @@
           [],
         );
       }
-      function R(t) {
+      function b(t) {
         const { row: e } = t,
-          { fnBLocalChangesExist: n, fnWarnUser: s } = f(),
+          { fnBLocalChangesExist: n, fnWarnUser: s } = E(),
           r = e.original.appids,
           c = r?.length ?? 0,
           l = e.original.packageID;
         return a.createElement(
-          A,
+          y,
           {
             fnBLocalChangesExist: n,
             fnWarnUser: s,
@@ -2947,12 +2931,12 @@
           1 == c ? "1 appid" : c + " appids",
         );
       }
-      function L() {
+      function R() {
         return a.useMemo(
           () => ({
             accessorKey: "appName",
             header: (0, o.we)("#PackageGrid_Column_AppName"),
-            cell: R,
+            cell: b,
             size: 80,
             sortingFn: h.es,
             meta: {
@@ -2964,7 +2948,7 @@
           [],
         );
       }
-      function y(t) {
+      function w(t) {
         const e = t.groupingValue,
           n = (0, o.we)("#PackageGrid_NoBaseGameFoundForPackage");
         return a.createElement(
@@ -2987,7 +2971,7 @@
           ),
         );
       }
-      function A(t) {
+      function y(t) {
         const {
           fnBLocalChangesExist: e,
           fnWarnUser: n,
@@ -3097,661 +3081,6 @@
         return Array.from(new Set(s.concat(o)));
       }
     },
-    66051: (t, e, n) => {
-      "use strict";
-      n.d(e, { k: () => C });
-      var a = n(67796),
-        s = n(16666),
-        i = n(92148),
-        o = n(59366),
-        r = n(64238),
-        c = n.n(r),
-        l = n(90626),
-        u = n(31718),
-        d = n.n(u),
-        p = n(76217),
-        g = n(97907),
-        m = n(8871),
-        D = n(94104);
-      const h = l.memo(function (t) {
-        const {
-            virtualizer: e,
-            bDynamic: n,
-            idx: a,
-            rowGap: s,
-            renderItem: i,
-          } = t,
-          o = l.useCallback(
-            (t, n, s) => (e.scrollToIndex(a, { align: "center" }), !0),
-            [e, a],
-          );
-        return l.createElement(
-          p.Z,
-          {
-            ref: n ? e.measureElement : void 0,
-            "data-index": a,
-            fnScrollIntoViewHandler: o,
-            scrollIntoViewWhenChildFocused: "force",
-            style: { width: "100%", paddingBottom: s },
-          },
-          i(a),
-        );
-      });
-      l.forwardRef(function (t, e) {
-        const {
-            nRows: n,
-            nItemHeight: a,
-            nRowGap: s,
-            overscan: i,
-            renderItem: o,
-            bDynamic: r,
-            className: c,
-            forceVirtualizeType: u,
-            initialOffset: d,
-            onOffsetChange: g,
-            ...h
-          } = t,
-          [E, v] = (0, l.useState)(u),
-          [S, I] = l.useState(),
-          [k, C] = l.useState(),
-          G = l.useCallback(
-            (t) => {
-              if (!t || "window" == u) return;
-              const e = (0, D._f)(t, "y");
-              (0, l.startTransition)(() => {
-                I(e || void 0),
-                  C(t.offsetTop),
-                  u || v(e ? "element" : "window");
-              });
-            },
-            [u],
-          ),
-          P = (0, m.Ue)(G, e),
-          b = {
-            nRows: n,
-            nItemHeight: a,
-            nRowGap: s,
-            overscan: i,
-            renderItem: o,
-            bDynamic: r,
-            forceVirtualizeType: u,
-            initialOffset: d,
-            onOffsetChange: g,
-          };
-        return l.createElement(
-          p.Z,
-          { className: c, ref: P, ...h },
-          l.createElement(
-            l.Suspense,
-            null,
-            "element" === E &&
-              l.createElement(f, {
-                ...b,
-                nScrollMargin: k || 0,
-                elScrollable: S,
-              }),
-            "window" === E && l.createElement(_, { ...b, nScrollMargin: k }),
-          ),
-        );
-      });
-      function _(t) {
-        const {
-            nScrollMargin: e,
-            nRows: n,
-            nItemHeight: a,
-            nRowGap: s = 10,
-            overscan: o = 6,
-            initialOffset: r,
-            onOffsetChange: c,
-          } = t,
-          u = a + s,
-          d = (0, i.XW)({
-            count: n,
-            scrollMargin: e,
-            estimateSize: l.useCallback(() => u, [u]),
-            overscan: o,
-            initialOffset: r,
-            initialRect: void 0,
-            observeElementOffset: S,
-            observeElementRect: I,
-            onChange(t, e) {
-              c?.(t.scrollOffset);
-            },
-          });
-        return (
-          l.useEffect(() => {
-            (0, l.startTransition)(() => {
-              d.measure();
-            });
-          }, [d, u]),
-          l.createElement(E, { ...t, virtualizer: d })
-        );
-      }
-      function f(t) {
-        const {
-            nRows: e,
-            nScrollMargin: n,
-            elScrollable: a,
-            nItemHeight: s,
-            nRowGap: o = 10,
-            overscan: r = 6,
-            initialOffset: c,
-            onOffsetChange: u,
-          } = t,
-          d = s + o,
-          p = (0, i.Te)({
-            count: e,
-            scrollMargin: n - (a?.offsetTop || 0),
-            getScrollElement: () => a,
-            estimateSize: l.useCallback(() => d, [d]),
-            overscan: r,
-            initialRect: a ? void 0 : { height: 1e3, width: 1e3 },
-            initialOffset: c,
-            observeElementOffset: S,
-            observeElementRect: k,
-            onChange(t, e) {
-              u?.(t.scrollOffset);
-            },
-          });
-        return (
-          l.useEffect(() => {
-            (0, l.startTransition)(() => {
-              p.measure();
-            });
-          }, [p, d]),
-          l.createElement(E, { ...t, virtualizer: p })
-        );
-      }
-      function E(t) {
-        const { virtualizer: e, nRowGap: n, renderItem: a, bDynamic: s } = t,
-          i = e.getVirtualItems(),
-          o = i.length ? i[0].start - e.options.scrollMargin : 0,
-          r = Math.max(0, e.getTotalSize());
-        return l.createElement(
-          p.Z,
-          {
-            "flow-children": "column",
-            navEntryPreferPosition: g.iU.MAINTAIN_Y,
-            style: { height: `${r}px`, width: "100%", position: "relative" },
-          },
-          l.createElement(
-            "div",
-            {
-              style: {
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                transform: `translateY( ${o}px )`,
-              },
-            },
-            i.map((t) =>
-              l.createElement(h, {
-                key: t.key,
-                virtualizer: e,
-                bDynamic: s,
-                idx: t.index,
-                rowGap: n,
-                renderItem: a,
-              }),
-            ),
-          ),
-        );
-      }
-      function v(t) {
-        return (...e) => {
-          queueMicrotask(() => {
-            (0, l.startTransition)(() => {
-              t(...e);
-            });
-          });
-        };
-      }
-      function S(t, e) {
-        const n = t.scrollElement;
-        if (!n) return;
-        let a;
-        a = v(
-          "scrollX" in n
-            ? (a) => e(n[t.options.horizontal ? "scrollX" : "scrollY"], a)
-            : (a) => e(n[t.options.horizontal ? "scrollLeft" : "scrollTop"], a),
-        );
-        const s = () => a(!0),
-          i = () => a(!1);
-        return (
-          i(),
-          n.addEventListener("scroll", s, { passive: !0 }),
-          n.addEventListener("scrollend", i, { passive: !0 }),
-          () => {
-            n.removeEventListener("scroll", s),
-              n.removeEventListener("scrollend", i);
-          }
-        );
-      }
-      function I(t, e) {
-        const n = t.scrollElement;
-        if (!n) return;
-        const a = v(() => e({ width: n.innerWidth, height: n.innerHeight }));
-        return (
-          a(),
-          n.addEventListener("resize", a, { passive: !0 }),
-          () => {
-            n.removeEventListener("resize", a);
-          }
-        );
-      }
-      function k(t, e) {
-        const n = t.scrollElement;
-        if (!n) return;
-        const a = v((t) =>
-          e({ width: Math.round(t.width), height: Math.round(t.height) }),
-        );
-        a(n.getBoundingClientRect());
-        const s = n.ownerDocument.defaultView;
-        if (!s?.ResizeObserver) return () => {};
-        const i = new s.ResizeObserver((t) => {
-          t[0]?.borderBoxSize[0]
-            ? a({
-                width: t[0].borderBoxSize[0].inlineSize,
-                height: t[0].borderBoxSize[0].blockSize,
-              })
-            : a(n.getBoundingClientRect());
-        });
-        return (
-          i.observe(n, { box: "border-box" }),
-          () => {
-            i.unobserve(n);
-          }
-        );
-      }
-      const C = l.forwardRef(function (t, e) {
-        const {
-            data: n,
-            columns: r,
-            className: c,
-            width: u,
-            height: d,
-            nScrollMargin: p,
-            nItemHeight: g,
-            nHeaderHeight: m,
-            overscan: D = 6,
-            stickyHeader: h,
-            initialSorting: _,
-            initialColumnFilters: f,
-            initialGrouping: E,
-            initialExpanded: v,
-            initialColumnPinning: I,
-            initialColumnVisibility: C,
-            onGroupingChange: G,
-            onVisibleRowsChange: w,
-            renderGroup: R,
-          } = t,
-          L = (0, l.useRef)(null),
-          [y, A] = (0, l.useState)({}),
-          T = r.map((t) =>
-            "accessorKey" in t
-              ? { ...t, filterFn: y[t.accessorKey] ?? t.filterFn }
-              : t,
-          ),
-          O = (0, a.N4)({
-            data: n,
-            columns: T,
-            defaultColumn: { minSize: 60, maxSize: 800 },
-            initialState: {
-              sorting: _,
-              grouping: E ?? [],
-              expanded: v,
-              columnPinning: I ?? {},
-              columnFilters: f,
-              columnVisibility: C,
-            },
-            getCoreRowModel: (0, s.HT)(),
-            getSortedRowModel: (0, s.h5)(),
-            getFilteredRowModel: (0, s.hM)(),
-            getGroupedRowModel: (0, s.cU)(),
-            columnResizeMode: "onChange",
-          }),
-          { rows: B, flatRows: F } = O.getRowModel(),
-          N = B.flatMap((t) => (t.getIsExpanded() ? [t, ...t.subRows] : t)),
-          M = O.getState().grouping;
-        (0, l.useEffect)(() => {
-          G?.(M);
-        }, [G, M]),
-          (0, l.useEffect)(() => {
-            w?.(N);
-          }, [w, N.length]);
-        const x = (0, i.Te)({
-            count: N.length,
-            scrollMargin: p,
-            getScrollElement: l.useCallback(() => q.current, []),
-            estimateSize: l.useCallback(() => g, [g]),
-            overscan: D,
-            initialRect: void 0,
-            observeElementOffset: S,
-            observeElementRect: k,
-          }),
-          V = (0, l.useRef)(0),
-          U = l.useMemo(() => {
-            const t = O.getFlatHeaders(),
-              e = {};
-            for (let n = 0; n < t.length; n++) {
-              const a = t[n];
-              (e[`--header-${a.id}-size`] = `${a.getSize()}px`),
-                (e[`--col-${a.column.id}-size`] = `${a.column.getSize()}px`);
-            }
-            return (V.current += 1), e;
-          }, [O.getState().columnSizingInfo, O.getState().columnSizing, r]);
-        l.useEffect(() => {
-          (0, l.startTransition)(() => {
-            x.measure();
-          });
-        }, [x, g]);
-        const H = x.getVirtualItems(),
-          z = H[0]?.start ?? 0,
-          j = x.getTotalSize(),
-          W = (0, i.Te)({
-            estimateSize: (t) =>
-              N[0]?.getVisibleCells()[t].column.getSize() ?? 0,
-            count: N[0]?.getVisibleCells().length ?? 0,
-            overscan: 6,
-            horizontal: !0,
-            getScrollElement: () => q.current,
-            rangeExtractor(t) {
-              const e = N[0]?.getVisibleCells() ?? [],
-                n = new Set((0, o.vp)(t));
-              return (
-                e.forEach((t, e) => {
-                  t.column.getIsPinned() && n.add(e);
-                }),
-                Array.from(n).sort((t, e) => t - e)
-              );
-            },
-            observeElementOffset: S,
-            observeElementRect: k,
-          });
-        (0, l.useEffect)(() => {
-          W.measure();
-        }, [V.current]),
-          (0, l.useImperativeHandle)(
-            e,
-            () => ({
-              getData: () => F.map((t) => t.original),
-              getVisibleRows: () => N,
-              getState: O.getState,
-              getColumns: O.getAllColumns,
-              getColumnDefs: () => T,
-              setColumnFilters: O.setColumnFilters,
-              resetColumnFilters: O.resetColumnFilters,
-              setColumnFilterFnOverride: A,
-              getColumnFilterFnOverride: () => y,
-              getContainerElement: () => q.current,
-              getTableElement: () => L.current,
-              scrollToColumn(t, e) {
-                W.scrollToIndex(t.getIndex(), e);
-              },
-            }),
-            [
-              F,
-              N,
-              O.setColumnFilters,
-              O.resetColumnFilters,
-              O.getState,
-              O.getAllColumns,
-              y,
-              T,
-              W,
-            ],
-          );
-        const q = (0, l.useRef)(null),
-          K = h ? m : 0;
-        let J = 0;
-        const $ = N[0]?.getVisibleCells(),
-          Z = W.getVirtualItems(),
-          X = Z[Z.length - 1]?.end;
-        for (const t of Z) {
-          const e = $[t.index];
-          e?.column.getIsPinned() && (J += t.size);
-        }
-        return l.createElement(
-          "div",
-          {
-            className: c,
-            ref: q,
-            style: {
-              width: u,
-              height: d,
-              overflow: "auto",
-              maxWidth: "fit-content",
-              scrollPadding: `${K}px 0 0 ${J}px`,
-            },
-          },
-          l.createElement(
-            "div",
-            {
-              role: "table",
-              ref: L,
-              "aria-rowcount": n.length,
-              style: {
-                minHeight: j,
-                width: O.getTotalSize(),
-                "--virtualPos": `${z}px`,
-                ...U,
-              },
-            },
-            O.getHeaderGroups().map((t) =>
-              l.createElement(P, {
-                key: t.id,
-                group: t,
-                sticky: h,
-                nHeaderHeight: m,
-              }),
-            ),
-            H.map((t) =>
-              l.createElement(b, {
-                key: t.key,
-                row: N[t.index],
-                size: t.size,
-                rowVirtualizer: W,
-                index: t.index,
-                measureRef: x.measureElement,
-                scrollContainerRef: q,
-                nItemHeight: g,
-                renderGroup: R,
-                rowEnd: X,
-              }),
-            ),
-          ),
-        );
-      });
-      function G(t) {
-        const e = t.getIsPinned();
-        return {
-          borderRight:
-            "left" === e && t.getIsLastColumn("left")
-              ? "var(--fancy-table-last-pinned-border, var(--fancy-table-cell-border, 1px solid #aaa))"
-              : void 0,
-          borderLeft:
-            "right" === e && t.getIsFirstColumn("right")
-              ? "var(--fancy-table-last-pinned-border,var(--fancy-table-cell-border, 1px solid #aaa))"
-              : void 0,
-          left: "left" === e ? `${t.getStart("left")}px` : void 0,
-          right: "right" === e ? `${t.getAfter("right")}px` : void 0,
-          position: e ? "sticky" : "relative",
-          width: t.getSize(),
-          zIndex: e ? 1 : 0,
-        };
-      }
-      function P(t) {
-        const { group: e, sticky: n, nHeaderHeight: s } = t;
-        return l.createElement(
-          "div",
-          {
-            role: "row",
-            className: c()(
-              d().FancyTableRow,
-              d().FancyTableHeader,
-              n && d().StickyHeader,
-            ),
-          },
-          e.headers.map((t, n) => {
-            const i = e.headers[n - 1],
-              o = {},
-              r = t.column.getIsSorted();
-            r &&
-              !t.column.columnDef.meta?.bDisableSortButton &&
-              (o["aria-sort"] = "asc" === r ? "ascending" : "descending");
-            let u = "div";
-            return (
-              t.column.getCanSort() &&
-                !t.column.columnDef.meta?.bDisableSortButton &&
-                ((u = "button"),
-                (o.onClick = t.column.getToggleSortingHandler())),
-              t.column.columnDef.meta?.strHeaderTooltip &&
-                (o.title = t.column.columnDef.meta?.strHeaderTooltip),
-              l.createElement(
-                u,
-                {
-                  role: "columnheader",
-                  key: t.id,
-                  "data-pinned": !!t.column.getIsPinned(),
-                  className: c()(
-                    d().ColumnHeader,
-                    "button" === u && d().SortButton,
-                    t.column.columnDef.meta?.headerClassname,
-                  ),
-                  style: {
-                    width: `var(--header-${t.id}-size)`,
-                    height: void 0 !== s ? `${s}px` : void 0,
-                    ...G(t.column),
-                  },
-                  ...o,
-                },
-                i?.column.getCanResize() &&
-                  l.createElement("div", {
-                    role: "presentation",
-                    onDoubleClick: () => i.column.resetSize(),
-                    onMouseDown: i.getResizeHandler(),
-                    onTouchStart: i.getResizeHandler(),
-                    onClick: (t) => t.stopPropagation(),
-                    className: c()(d().ResizeHandle, d().PrevResizeHandle),
-                  }),
-                t.isPlaceholder
-                  ? null
-                  : (0, a.Kv)(t.column.columnDef.header, t.getContext()),
-                r &&
-                  !t.column.columnDef.meta?.bDisableSortButton &&
-                  l.createElement("div", { className: d().SortIndicator }),
-                t.column.getCanResize() &&
-                  l.createElement("div", {
-                    role: "presentation",
-                    onDoubleClick: () => t.column.resetSize(),
-                    onMouseDown: t.getResizeHandler(),
-                    onTouchStart: t.getResizeHandler(),
-                    onClick: (t) => t.stopPropagation(),
-                    className: c()(
-                      d().ResizeHandle,
-                      t.column.getIsResizing() && d().IsResizing,
-                    ),
-                  }),
-              )
-            );
-          }),
-        );
-      }
-      const b = l.memo(function (t) {
-        const {
-          row: e,
-          size: n,
-          rowVirtualizer: a,
-          measureRef: s,
-          index: i,
-          nItemHeight: o,
-          renderGroup: r,
-        } = t;
-        return l.createElement(
-          "div",
-          {
-            role: "row",
-            className: c()(
-              d().FancyTableRow,
-              e.getCanExpand() && d().ExpandableRow,
-            ),
-            style: {
-              minHeight: e.getCanExpand() ? void 0 : `${n}px`,
-              transform: "translateY(var(--virtualPos))",
-            },
-            "data-even": i % 2 == 0,
-            "data-index": i,
-            ref: s,
-          },
-          l.createElement(w, {
-            row: e,
-            rowVirtualizer: a,
-            nItemHeight: o,
-            renderGroup: r,
-          }),
-        );
-      });
-      function w(t) {
-        const { row: e, rowVirtualizer: n, renderGroup: a } = t;
-        if (e.getCanExpand()) {
-          const t = a ?? (() => e.groupingValue);
-          return l.createElement(
-            "button",
-            {
-              className: d().RowGroup,
-              "aria-expanded": e.getIsExpanded(),
-              onClick: e.getToggleExpandedHandler(),
-            },
-            l.createElement("div", { className: d().GroupExpandIndicator }),
-            t(e),
-          );
-        }
-        const s = n.getVirtualItems(),
-          i = e.getVisibleCells();
-        let o,
-          r = 0;
-        return l.createElement(
-          l.Fragment,
-          null,
-          s.map((t) => {
-            const e = i[t.index],
-              a = e.column.getIsPinned();
-            return (
-              a ? (r += t.size) : void 0 === o && (o = t.start),
-              l.createElement(
-                "div",
-                {
-                  className: c()(
-                    d().FancyTableCell,
-                    e.column.columnDef.meta?.cellClassname,
-                  ),
-                  key: e.id,
-                  "data-index": t.index,
-                  "data-table-column-id": e.column.id,
-                  ref: n.measureElement,
-                  style: {
-                    width: `var(--col-${e.column.id}-size)`,
-                    transform: a ? void 0 : `translateX(${o - r}px)`,
-                    ...G(e.column),
-                  },
-                },
-                l.createElement(R, {
-                  CellComponent: e.column.columnDef.cell,
-                  context: e.getContext(),
-                }),
-              )
-            );
-          }),
-        );
-      }
-      const R = l.memo(
-        function (t) {
-          return (0, a.Kv)(t.CellComponent, t.context);
-        },
-        (t, e) => t.context.getValue() === e.context.getValue(),
-      );
-    },
     41103: (t, e, n) => {
       "use strict";
       n.d(e, { Hl: () => D, dQ: () => m });
@@ -3763,8 +3092,8 @@
         c = n(85044),
         l = n(17720),
         u = n(44332),
-        d = n(68797),
-        p = n(78327);
+        p = n(68797),
+        d = n(78327);
       class g {
         constructor() {
           (0, o.Gn)(this);
@@ -3781,7 +3110,7 @@
               !this.m_mapProfiles.has(t) && !this.m_mapProfilesLoading.has(t),
           );
           if (0 == n.length) return this.m_mapProfilesLoading.get(t[0]);
-          let a = p.TS.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+          let a = d.TS.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
             s = i().get(a, {
               params: { steamids: n.join(",") },
               withCredentials: !0,
@@ -3828,8 +3157,8 @@
         GetProfileURLBySteamID(t) {
           const e = this.GetProfileBySteamID(t);
           return e && e.profile_url
-            ? p.TS.COMMUNITY_BASE_URL + "id/" + e.profile_url
-            : p.TS.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
+            ? d.TS.COMMUNITY_BASE_URL + "id/" + e.profile_url
+            : d.TS.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(t) {
           const e = this.GetProfileBySteamID(t);
@@ -3854,7 +3183,7 @@
                   m
                     .LoadProfiles([e.ConvertTo64BitString()])
                     .catch((t) => {
-                      const n = (0, d.H)(t);
+                      const n = (0, p.H)(t);
                       console.error(
                         "useUserProfile failed to load profile for " +
                           e.ConvertTo64BitString() +
@@ -3872,59 +3201,6 @@
             [n, !!e && m.GetProfileBySteamID(e)]
           );
         })(r.useMemo(() => (t ? l.b.InitFromAccountID(t) : null), [t]));
-      }
-    },
-    9161: (t, e, n) => {
-      "use strict";
-      n.d(e, { g: () => i });
-      var a = n(40323),
-        s = n.n(a);
-      class i {
-        static ParseCSVFile(t) {
-          return new Promise((e, n) => {
-            const a = {
-              header: !0,
-              skipEmptyLines: "greedy",
-              complete: e,
-              error: (t) => n({ errors: [t] }),
-            };
-            s().parse(t, a);
-          });
-        }
-        static ReadFile(t) {
-          return new Promise((e, n) => {
-            const a = new FileReader();
-            (a.onload = (t) => e(a.result)), a.readAsText(t);
-          });
-        }
-        static WriteFile(t, e) {
-          let n = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(t, e);
-          else {
-            const e = window.URL.createObjectURL(t);
-            n.href = e;
-          }
-          n.setAttribute("download", e), n.click();
-          try {
-            document.removeChild(n);
-          } catch (t) {}
-        }
-        static WriteCSVToFile(t, e) {
-          const n = s().unparse(t, { header: !0 });
-          i.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), e);
-        }
-        static m_DummyValueForQuestionHack = 0;
-        static WriteXMLToFile(t, e) {
-          const n = () =>
-            this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let a =
-            "<" + n() + 'xml version="1.0" encoding="UTF-8" ' + n() + ">\n";
-          (a += new XMLSerializer().serializeToString(t)),
-            i.WriteFile(
-              new Blob([a], { type: "application/xml:charset=utf-8;" }),
-              e,
-            );
-        }
       }
     },
   },

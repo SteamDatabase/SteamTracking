@@ -1130,24 +1130,24 @@
             async (e) => {
               let l = Array.from(e),
                 r = !0;
-              for (let i = 0; i < l.length; i++) {
-                const l = e.item(i),
-                  c = (0, he.j)(l.name, g);
+              for (let e = 0; e < l.length; e++) {
+                const i = l[e],
+                  c = (0, he.j)(i?.name, g);
                 try {
-                  const e = (0, he.P)(c, g, s);
-                  (r = await t.AddImageForLanguage(l, e, n, o)),
+                  const l = (0, he.P)(c, g, s);
+                  (r = await t.AddImageForLanguage(i, l, n, o)),
                     r ||
                       (console.error(
                         "ArtworkUploader.OnDropFiles: failed on i=" +
-                          i +
+                          e +
                           " file=" +
-                          l.name,
+                          i.name,
                       ),
                       (0, ne.pg)(
                         a.createElement(te.KG, {
                           strDescription: (0, h.we)(
                             "#ImagePicker_Error",
-                            l.name,
+                            i.name,
                           ),
                         }),
                         window,
@@ -1255,6 +1255,7 @@
           s = new Array(),
           c = h.A0.GetLanguageListForRealms(r || [fe.TU.k_ESteamRealmGlobal]);
         for (const e of c) {
+          if (25 == e) continue;
           const t = (0, h.we)("#Language_" + (0, v.Lg)(e));
           s.push({ label: t, data: e });
         }
@@ -4628,7 +4629,11 @@
               if (!n || n == l) return;
               r(n);
               const a = e.clone();
-              (a.jsondata = JSON.parse(n)), t(a);
+              (a.jsondata = JSON.parse(n)),
+                (a.rtime32_last_modified = Math.floor(
+                  new Date().getTime() / 1e3,
+                )),
+                t(a);
             }, [e, t, l, n]);
           })(g, u),
           !g)
