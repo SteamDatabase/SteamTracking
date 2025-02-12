@@ -340,7 +340,6 @@
 ._32UTRO0ud-qo-tcbUAeBHU._3KRs0z932_3ZsQ0jIBksHD {
   background: #461f28;
   border: 1px solid #761f28;
-  padding: 4px;
 }
 ._3afetaH5wxJCD2YLqQqGh8 {
   margin-bottom: 60px;
@@ -5717,9 +5716,6 @@ td.rdtYear:hover {
 .u_cLtpeDRLhuCIb1YZzZD {
   width: 500px;
 }
-._2kFhNSS_ljPFFh8GXnC0to {
-  cursor: grabbing !important;
-}
 ._24eKifx9xcytLLQcgPbDxI {
   border-top: 1px solid #464b58;
   padding-top: 0px;
@@ -8887,6 +8883,9 @@ html.responsive.touch
   display: flex;
   align-items: center;
   justify-content: center;
+}
+._2kFhNSS_ljPFFh8GXnC0to {
+  cursor: grabbing !important;
 }
 ._18byEIHFiivSklOwKqIx2b {
   display: flex;

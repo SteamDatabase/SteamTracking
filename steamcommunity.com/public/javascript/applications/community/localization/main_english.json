@@ -1472,6 +1472,8 @@
     "Sale_Tabs_Colors_Active": "Active Tab Colors",
     "Sale_Tabs_Colors_Active_ttip": "Adjust the selected tab colors",
     "Sale_Tabs_Colors_ttip": "Adjust the default and selected tab colors",
+    "Sale_Tabs_Highlight_Color": "Selected / Highlight Color",
+    "Sale_Tabs_Highlight_Color_ttip": "Override the default highlight and selection color for the tabs. Unset to return to default.",
     "Sale_Tabs_ItemTitle": "Tab Filtered Item List",
     "Sale_Tabs_ItemTitle_ttip": "The following items are used as a filter, and for sections that follow, only items that are found within this list can be displayed when this tab is selected",
     "Sale_Tabs_TitleItemCount": "%1$s - Items: %2$s",
