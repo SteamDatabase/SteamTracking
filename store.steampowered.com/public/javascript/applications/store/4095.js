@@ -8105,52 +8105,53 @@
         }
       }
       const d = 4;
-      function u(e, t, r, a, i) {
-        const o = new Array(),
-          l = new Array(),
+      function u(e, t, r, a, i, o) {
+        const l = new Array(),
           m = new Array(),
-          c = new Array();
-        if (!e || 0 == e.length) return o;
-        const u = [
+          c = new Array(),
+          u = new Array();
+        if (!e || 0 == e.length) return l;
+        const _ = [
           s.by.k_RejectSupportedLanguage,
           s.by.k_RejectAlreadyDisplayed,
+          s.by.k_RejectNoTrailer,
         ];
-        for (let i of e) {
-          let e = i.id,
+        for (let o of e) {
+          let e = o.id,
             d = s.by.k_NotRejected;
-          switch (i.item_type) {
+          switch (o.item_type) {
             case "sub":
-              const a = n.A.Get().GetPackage(e);
-              if (1 !== a?.GetIncludedAppIDs()?.length) {
-                d = S(e, t, r, !0);
+              const i = n.A.Get().GetPackage(e);
+              if (1 !== i?.GetIncludedAppIDs()?.length) {
+                d = S(e, t, a, !0);
                 break;
               }
-              e = a.GetIncludedAppIDs()[0];
+              e = i.GetIncludedAppIDs()[0];
             case "app":
-              d = g(e, t, r, !0);
+              d = g(e, t, r, a, !0);
               break;
             case "bundle":
-              d = y(e, t, r, !0);
+              d = y(e, t, a, !0);
           }
           if (
             (d == s.by.k_NotRejected
-              ? ((i.rejected = s.by.k_NotRejected),
-                o.push({ ...i, priority: 1 }))
-              : u.includes(d)
-                ? ((i.rejected = s.by.k_NotRejected), l.push(i))
-                : ((i.rejected = d),
-                  d == s.by.k_RejectIgnoredGame ? m.push(i) : c.push(i)),
-            o.length > a)
+              ? ((o.rejected = s.by.k_NotRejected),
+                l.push({ ...o, priority: 1 }))
+              : _.includes(d)
+                ? ((o.rejected = s.by.k_NotRejected), m.push(o))
+                : ((o.rejected = d),
+                  d == s.by.k_RejectIgnoredGame ? c.push(o) : u.push(o)),
+            l.length > i)
           )
             break;
         }
         return (
-          o.length < a &&
-            (p(o, l, i, 2),
-            o.length < i &&
+          l.length < i &&
+            (p(l, m, o, 2),
+            l.length < o &&
               t.enforce_minimum &&
-              (p(o, m, i, 3), p(o, c, i, d))),
-          o
+              (p(l, c, o, 3), p(l, u, o, d))),
+          l
         );
       }
       function p(e, t, r, a) {
@@ -8186,38 +8187,45 @@
         }
         return s.by.k_NotRejected;
       }
-      function g(e, t, r, a) {
-        const o = n.A.Get().GetApp(e);
-        if (!o) return s.by.k_RejectNotLoaded;
-        const l = _(o, t);
-        if (l != s.by.k_NotRejected) return l;
-        const m = i.Fm.Get();
-        if (m.BIsGameIgnored(e)) return s.by.k_RejectIgnoredGame;
-        if (m.BExcludeTagIDs(o.GetTagIDs())) return s.by.k_RejectIgnoreGameTags;
-        if (m.BExcludesContentDescriptor(o.GetContentDescriptorIDs()))
+      function g(e, t, r, a, o) {
+        const l = n.A.Get().GetApp(e);
+        if (!l) return s.by.k_RejectNotLoaded;
+        const m = _(l, t);
+        if (m != s.by.k_NotRejected) return m;
+        const c = i.Fm.Get();
+        if (c.BIsGameIgnored(e)) return s.by.k_RejectIgnoredGame;
+        if (c.BExcludeTagIDs(l.GetTagIDs())) return s.by.k_RejectIgnoreGameTags;
+        if (c.BExcludesContentDescriptor(l.GetContentDescriptorIDs()))
           return s.by.k_RejectIgnoreContentDescriptors;
-        if (!t.early_access && o.BIsEarlyAccess())
+        if (!t.early_access && l.BIsEarlyAccess())
           return s.by.k_RejectEarlyAccess;
-        const c = o.GetAppType();
-        return t.software || 6 != c
-          ? t.games_already_in_library && m.BIsGameOwned(e)
+        const d = l.GetAppType();
+        return t.software || 6 != d
+          ? t.games_already_in_library && c.BIsGameOwned(e)
             ? s.by.k_RejectInLibrary
-            : t.games_not_in_library && !m.BIsGameOwned(e)
+            : t.games_not_in_library && !c.BIsGameOwned(e)
               ? s.by.k_RejectNotInLibrary
-              : !t.video && [7, 8, 9].includes(c)
+              : !t.video && [7, 8, 9].includes(d)
                 ? s.by.k_RejectVideo
-                : t.has_discount && !o.GetBestPurchaseOption().discount_pct
+                : t.has_discount && !l.GetBestPurchaseOption().discount_pct
                   ? s.by.k_RejectNoDiscount
-                  : 1 == c &&
-                      t.games_already_in_library &&
-                      m.BIsGameOwned(o.GetParentAppID())
-                    ? s.by.k_RejectInLibrary
-                    : a
-                      ? (1 == c && r.BHasAppID(o.GetParentAppID())) ||
-                        r.BHasAppID(e)
-                        ? s.by.k_RejectAlreadyDisplayed
-                        : h(o, t)
-                      : s.by.k_NotRejected
+                  : "adultonly" != r &&
+                      t.no_ao_content &&
+                      (l.HasContentDescriptorID(3) ||
+                        l.HasContentDescriptorID(4))
+                    ? s.by.k_RejectAO
+                    : 1 == d &&
+                        t.games_already_in_library &&
+                        c.BIsGameOwned(l.GetParentAppID())
+                      ? s.by.k_RejectInLibrary
+                      : o
+                        ? (1 == d && a.BHasAppID(l.GetParentAppID())) ||
+                          a.BHasAppID(e)
+                          ? s.by.k_RejectAlreadyDisplayed
+                          : t.has_trailer && !l.BHasTrailers()
+                            ? s.by.k_RejectNoTrailer
+                            : h(l, t)
+                        : s.by.k_NotRejected
           : s.by.k_RejectSoftware;
       }
       function f(e, t) {

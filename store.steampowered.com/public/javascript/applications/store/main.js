@@ -38197,7 +38197,9 @@
             (e[(e.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
             (e[(e.k_RejectVideo = 15)] = "k_RejectVideo"),
             (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-            (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
+            (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
+            (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
+            (e[(e.k_RejectAO = 19)] = "k_RejectAO");
         })(i || (i = {}));
     },
     63369: (e, t, r) => {

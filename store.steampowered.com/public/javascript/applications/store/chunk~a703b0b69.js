@@ -1028,7 +1028,7 @@
               v.push(S.SaleCapsuleFromContentHubCapsule(t));
           await (0, u.H2)(v, i.Xh),
             this.ReplaceSingleAppPackagesWithApps(_, f),
-            await this.ApplyUserAndHomeViewFilters(_, f, n),
+            await this.ApplyUserAndHomeViewFilters(_, e, n),
             await this.UpdateRecommendationReasons(_);
         }
         async ApplyUserAndHomeViewFilters(e, t, a) {
@@ -1039,7 +1039,7 @@
               games_already_in_library: this.m_searchPreferences.hide_owned,
               enforce_minimum: !1,
             };
-          await this.BuildFeaturedCarouselContent(e, n, r, a);
+          await this.BuildFeaturedCarouselContent(e, t, n, r, a);
         }
         ReplaceSingleAppPackagesWithApps(e, t) {
           this.m_mapMainCarousel.get(e).mapAppLists.forEach((t, a) => {
@@ -1097,48 +1097,55 @@
           }
           return n;
         }
-        async BuildFeaturedCarouselContent(e, t, a, n) {
-          const r = { ...a, games_already_in_library: !0 };
-          let s = (0, i.tf)(
+        async BuildFeaturedCarouselContent(e, t, a, n, r) {
+          const s = {
+            ...n,
+            games_already_in_library: !0,
+            has_trailer: !0,
+            no_ao_content: !0,
+          };
+          let o = (0, i.tf)(
             this.m_mapMainCarousel.get(e).mapAppLists.get("featured")?.apps,
-            r,
+            s,
             t,
+            a,
             12,
             4,
           );
-          (s = s?.filter(
+          (o = o?.filter(
             (e) => "bundle" !== e.item_type && "sub" !== e.item_type,
           )),
             (this.m_mapMainCarousel.get(e).rgMainCapsule = S.ZipperMerge(
-              [s],
-              t,
+              [o],
+              a,
             ));
-          let o = [
+          let l = [
             "featured_recommended",
             "top_sellers",
             "specials",
             "concurrent",
           ];
-          o = o.filter((t) => this.m_mapMainCarousel.get(e).mapAppLists.has(t));
-          const l = o.map((t) =>
+          l = l.filter((t) => this.m_mapMainCarousel.get(e).mapAppLists.has(t));
+          const c = l.map((t) =>
             this.m_mapMainCarousel.get(e).mapAppLists.get(t),
           );
-          for (const e of l)
+          for (const e of c)
             e &&
               ((e.apps = e.apps?.filter(
                 (e) => "bundle" !== e.item_type && "sub" !== e.item_type,
               )),
-              (e.apps = (0, i.tf)(e.apps || [], r, t, 12, 4)));
+              (e.apps = (0, i.tf)(e.apps || [], s, t, a, 12, 4)));
           if (
             ((this.m_mapMainCarousel.get(e).rgMainCapsule =
               this.m_mapMainCarousel.get(e).rgMainCapsule.concat(
                 S.ZipperMerge(
-                  l.map((e) => e.apps),
-                  t,
+                  c.map((e) => e.apps),
+                  a,
                 ),
               )),
             (0, d.fW)(this.m_mapMainCarousel.get(e).rgMainCapsule),
-            n)
+            this.m_mapMainCarousel.get(e).rgMainCapsule.splice(12),
+            r)
           ) {
             const t = [],
               a = [];

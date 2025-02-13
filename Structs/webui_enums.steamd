@@ -4560,6 +4560,31 @@ enum UnnamedEnumfa53d9b50a8fadb1
 	Trigger = 1;
 }
 
+enum UnnamedEnumfafcd37e42e1afea
+{
+	k_NotRejected = undefined;
+	k_RejectNoMainCap = 0;
+	k_RejectWrongPlatform = 1;
+	k_RejectNoComingSoon = 2;
+	k_RejectNoVR = 3;
+	k_RejectCreatorClan = 4;
+	k_RejectIgnoredGame = 5;
+	k_RejectSupportedLanguage = 6;
+	k_RejectNotLoaded = 7;
+	k_RejectIgnoreGameTags = 8;
+	k_RejectIgnoreContentDescriptors = 9;
+	k_RejectEarlyAccess = 10;
+	k_RejectSoftware = 11;
+	k_RejectDLC = 12;
+	k_RejectInLibrary = 13;
+	k_RejectNotInLibrary = 14;
+	k_RejectVideo = 15;
+	k_RejectNoDiscount = 16;
+	k_RejectAlreadyDisplayed = 17;
+	k_RejectNoTrailer = 18;
+	k_RejectAO = 19;
+}
+
 enum UnnamedEnumfdf9542cbb4256c3
 {
 	None = 0;
