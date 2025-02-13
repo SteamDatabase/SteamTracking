@@ -1623,7 +1623,7 @@
         AppendText(e, t = !1) {
           let a = e;
           if (
-            (t || "*" == this.m_parentNode.tag) &&
+            (t || "*" == this.m_parentNode?.tag) &&
             (null == this.m_parentNode || "img" != this.m_parentNode.tag)
           ) {
             let e = this.m_LinkFilter.exec(a);
