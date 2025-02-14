@@ -497,6 +497,7 @@ message CMsgSystemDisplay {
 
 message CMsgSystemDisplayManagerState {
 	repeated .CMsgSystemDisplay displays = 1;
+	optional bool is_mode_switching_supported = 2;
 	optional .ESystemDisplayCompatibilityMode compatibility_mode = 3 [default = k_ESystemDisplayCompatibilityMode_Invalid];
 }
 

@@ -3952,7 +3952,6 @@ write
 writev
 x_local
 xhotspot
-y7eqh
 y9*O
 y_local
 yhotspot

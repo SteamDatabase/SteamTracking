@@ -63,7 +63,6 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
-J"65*
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE

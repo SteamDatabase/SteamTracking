@@ -5,7 +5,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123P~
  $8O[lv
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -22827,7 +22826,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen&G_
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -23224,6 +23223,7 @@ is_live
 is_low_latency_mode_enabled
 is_mandatory_update_available
 is_media_available
+is_mode_switching_supported
 is_mura_correction_supported
 is_muted
 is_nis_supported
