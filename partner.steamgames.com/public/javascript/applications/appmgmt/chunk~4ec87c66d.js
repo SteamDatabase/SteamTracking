@@ -58352,6 +58352,22 @@
             label: (0, z.we)("#api_category_top_sellers"),
             data: "#api_category_top_sellers",
           },
+          {
+            label: (0, z.we)("#msg_early_access_now_available"),
+            data: "#msg_early_access_now_available",
+          },
+          {
+            label: (0, z.we)("#msg_available_now_free_to_play"),
+            data: "#msg_available_now_free_to_play",
+          },
+          {
+            label: (0, z.we)("#msg_free_to_play_just_updated"),
+            data: "#msg_free_to_play_just_updated",
+          },
+          {
+            label: (0, z.we)("#msg_play_demo_now"),
+            data: "#msg_play_demo_now",
+          },
           { label: "", data: null },
         ];
         return c.createElement(
