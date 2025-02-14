@@ -628,11 +628,13 @@
 		height: unset;
 		padding: 5px 0px;
 	}
-	html.responsive .game_area_already_owned .already_in_library {
+	html.responsive .game_area_already_owned.already_in_library {
 		font-size: 14px;
 		white-space: normal;
 		flex: 1;
 		padding: 0px 5px;
+		top: 0px;
+		left: 0px;
 	}
 	html.responsive .game_area_already_owned .ds_owned_flag.ds_flag {
 		top: unset;

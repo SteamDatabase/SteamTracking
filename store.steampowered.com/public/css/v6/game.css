@@ -6411,6 +6411,7 @@ a.open_in_steam_body:hover {
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-bottom: 4px;
+	margin-top: 8px;
 	background-image: url(/public/images/v6/maincol_gradient_rule.png);
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -6455,4 +6456,56 @@ a.open_in_steam_body:hover {
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 4px;
+}
+
+.package_in_library_flag {
+	font-size: 8px;
+	box-shadow: 0 0 8px rgba(0,0,0,0.6);
+	display: inline-block;
+	position: absolute;
+	top: -8px;
+	left: 6px;
+	height: 14px;
+	line-height: 15px;
+	padding: 0 8px 0 6px;
+	white-space: nowrap;
+	z-index: 5;
+
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3px;
+}
+
+.package_in_library_flag.in_own_library {
+    font-size: 10px;
+    color: #111111;
+    box-shadow: 1px 1px 2px #000000;
+    height: 18px;
+    line-height: 19px;
+    top: -8px;
+    left: -6px;
+    padding: 0 6px 0 4px;
+    white-space: nowrap;
+    z-index: 5;
+	background: #a3cf06;
+}
+
+@media screen and ( max-width: 470px ) {
+    .package_in_library_flag.in_own_library {
+        left:0px;
+    }
+}
+
+.package_in_library_flag.in_family_library {
+    background: linear-gradient(to bottom, #8ed629 5%, #6aa621 95%);
+    background: linear-gradient(to right, #47bfff 5%, #1a44c2 60%);
+    color: #eeeeee;
+}
+
+.package_in_library_flag > img.icon {
+    height: 10px;
 }

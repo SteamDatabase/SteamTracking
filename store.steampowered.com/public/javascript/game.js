@@ -942,7 +942,7 @@ function BuildReviewHistogram()
 				var barDataDown = [ recentDay.date * 1000, -recentDay.recommendations_down ];
 				chartDataPositive.push( barDataUp );
 				chartDataNegative.push( barDataDown );
-				chartDataAll.push( [ rollup.recommendations_up, rollup.recommendations_down ] );
+				chartDataAll.push( [ recentDay.recommendations_up, recentDay.recommendations_down ] );
 				if ( data.past_events && data.past_events.length != 0 )
 				{
 					for ( var j = 0; j < data.past_events.length; ++j )
@@ -952,7 +952,7 @@ function BuildReviewHistogram()
 						{
 							chartDataPositiveEvent.push( barDataUp );
 							chartDataNegativeEvent.push( barDataDown );
-							chartDataAllEvent.push( [ rollup.recommendations_up, rollup.recommendations_down ] );
+							chartDataAllEvent.push( [ recentDay.recommendations_up, recentDay.recommendations_down ] );
 
 							AddOrUpdatePastEvent( rgPastEventsRecent, { start_date: event.start_date, end_date : event.end_date, recommendations_up: recentDay.recommendations_up } );
 							break;
