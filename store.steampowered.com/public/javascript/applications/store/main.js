@@ -26234,13 +26234,15 @@
     },
     8527: (e, t, r) => {
       "use strict";
-      r.d(t, { YJ: () => n, TS: () => s, iA: () => a });
-      var i = r(30470);
-      function n(e) {
+      r.d(t, { YJ: () => s, TS: () => a, iA: () => o, Ki: () => l });
+      var i = r(30470),
+        n = r(24484);
+      function s(e) {
         return e;
       }
-      const s = window.Config ?? i.TS,
-        a = window.UserConfig ?? i.iA;
+      const a = window.Config ?? i.TS,
+        o = window.UserConfig ?? i.iA,
+        l = window.Config ? () => Promise.resolve() : n.bd;
       window.Config && Object.assign(i.TS, window.Config),
         window.UserConfig && Object.assign(i.iA, window.UserConfig);
     },
@@ -53145,11 +53147,12 @@
     24484: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Bu: () => _,
-        Fd: () => d,
+        Bu: () => b,
+        Fd: () => _,
         KC: () => l,
-        Tc: () => m,
+        Tc: () => g,
         XJ: () => u,
+        bd: () => p,
       });
       var i = r(19719),
         n = r(2627),
@@ -53171,27 +53174,41 @@
       }
       function u(e = a) {
         const t = {},
-          r = m("config", e);
+          r = g("config", e);
         r && (delete r.SESSIONID, Object.assign(s.TS, r), (t.config = !0));
-        const i = m("userinfo", e);
+        const i = g("userinfo", e);
         i &&
           (Object.assign(s.iA, i),
           (t.userConfig = !0),
-          s.iA.is_support && _() && (s.iA.is_support = !1));
-        const n = m("broadcast", e);
+          s.iA.is_support && b() && (s.iA.is_support = !1));
+        const n = g("broadcast", e);
         n && (Object.assign(s.GP, n), (t.broadcastConfig = !0));
-        const o = m("community", e);
+        const o = g("community", e);
         o && (Object.assign(s.UF, o), (t.communityConfig = !0));
-        const l = m("event", e);
-        return l && (Object.assign(s.P9, l), (t.eventConfig = !0)), t;
+        const l = g("event", e);
+        return (
+          l && (Object.assign(s.P9, l), (t.eventConfig = !0)),
+          (d = !0),
+          m.forEach((e) => e()),
+          t
+        );
       }
-      function m(e, t = a) {
-        return p(e, t, !0);
+      let m = new Set(),
+        d = !1;
+      function p() {
+        return d
+          ? Promise.resolve()
+          : new Promise((e) => {
+              m.add(e);
+            });
       }
-      function d(e, t = a) {
-        return p(e, t, !1);
+      function g(e, t = a) {
+        return h(e, t, !0);
       }
-      function p(e, t = a, r) {
+      function _(e, t = a) {
+        return h(e, t, !1);
+      }
+      function h(e, t = a, r) {
         let i;
         if (
           ((i =
@@ -53219,11 +53236,11 @@
           }
         else r && console.error("Missing config element #", t);
       }
-      const g = "presentation_mode";
-      function _() {
+      const f = "presentation_mode";
+      function b() {
         let e = null;
         return (
-          (0, n.kI)() && (e = (0, n.VY)(g)),
+          (0, n.kI)() && (e = (0, n.VY)(f)),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
@@ -55537,7 +55554,8 @@
       ]);
       const c = new Map();
       for (const [e, t] of l.entries()) c.set(t, e);
-      c.set("sc_schinese", c.get("schinese"));
+      c.set("sc_schinese", c.get("schinese")),
+        c.set("korean", c.get("koreana"));
       function u(e, ...t) {
         return 0 == t.length
           ? e
@@ -55597,40 +55615,43 @@
         (p.ukrainian = () => r.e(209).then(r.t.bind(r, 19209, 19))),
         (p.vietnamese = () => r.e(5552).then(r.t.bind(r, 11350, 19)));
       const g = (function (e) {
-        const t = d(),
-          r = new Map(),
-          i = new Set(["english"]);
-        for (const e of t.languages)
-          i.add(e.strLanguage), e.strFallback && i.add(e.strFallback);
-        const n = Promise.all(
-          Array.from(i).map((t) =>
-            e(t).then((e) => {
-              if (!e) return;
-              const i = new Map();
-              for (const [t, r] of Object.entries(e)) i.set("#" + t, r);
-              r.set(t, i);
-            }),
-          ),
-        );
-        var s;
-        function o(e, t) {
-          const [i, ...n] = t,
-            s =
-              r.get(i.strLanguage)?.get(e) ??
-              r.get(i.strFallback ?? "english")?.get(e);
+        const t = new Map(),
+          r = (async function () {
+            await (0, s.Ki)();
+            const r = d(),
+              i = new Set(["english"]);
+            for (const e of r.languages)
+              i.add(e.strLanguage), e.strFallback && i.add(e.strFallback);
+            return Promise.all(
+              Array.from(i).map((r) =>
+                e(r).then((e) => {
+                  if (!e) return;
+                  const i = new Map();
+                  for (const [t, r] of Object.entries(e)) i.set("#" + t, r);
+                  t.set(r, i);
+                }),
+              ),
+            );
+          })();
+        var i;
+        function n(e, r) {
+          const [i, ...s] = r,
+            a =
+              t.get(i.strLanguage)?.get(e) ??
+              t.get(i.strFallback ?? "english")?.get(e);
           return (
-            s ||
-            (0 === n.length
+            a ||
+            (0 === s.length
               ? (console.error("Couldn't find localization key", e), e)
-              : o(e, n))
+              : n(e, s))
           );
         }
         return (
-          (s = n),
+          (i = r),
           (m ??= new Set()),
-          m.add(s),
+          m.add(i),
           {
-            Localize: (e, ...t) => u(o(e, d().languages), ...t),
+            Localize: (e, ...t) => u(n(e, d().languages), ...t),
             LocalizeReact(e, ...t) {
               const r = this.Localize(e);
               if (r === e) return r;
@@ -55647,8 +55668,8 @@
                 i.push(r.slice(o)), a.createElement(a.Fragment, null, ...i)
               );
             },
-            LocalizeInSpecificLang: (e, t, ...r) => u(o(t, [e]), ...r),
-            Ready: () => n,
+            LocalizeInSpecificLang: (e, t, ...r) => u(n(t, [e]), ...r),
+            Ready: () => r,
           }
         );
       })(async function (e) {
