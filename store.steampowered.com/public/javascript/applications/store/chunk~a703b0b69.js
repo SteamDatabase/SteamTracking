@@ -11606,7 +11606,11 @@
           n.createElement(
             "div",
             { className: Ea().AppDetailsCtnTop },
-            n.createElement("div", { className: Ea().AppName }, c.GetName()),
+            n.createElement(
+              K.Ii,
+              { href: p, className: (0, f.A)(Ea().AppName) },
+              c.GetName(),
+            ),
             !r &&
               n.createElement(
                 n.Fragment,
