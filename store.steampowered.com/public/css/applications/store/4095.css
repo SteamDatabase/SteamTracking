@@ -4897,7 +4897,8 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   cursor: pointer;
 }
 @media screen and (max-width: 700px) {
-  ._3notzMjxQtogi11XHZMYXI html.touch .VI5mZtnq0CL7fw_2mxhfm {
+  html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
+  ._3notzMjxQtogi11XHZMYXI:hover .VI5mZtnq0CL7fw_2mxhfm {
     display: none;
   }
 }
