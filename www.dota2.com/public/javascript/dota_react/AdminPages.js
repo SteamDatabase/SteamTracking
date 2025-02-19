@@ -15,28 +15,27 @@
         ToolTip: "_3fIQnpYc0eNl9uXKBoSJam",
         PlayerReportTooltip: "_13XzPZYgyQ52l8UHzh0EmH",
         Facet: "_2479It67QW-Bm9uy6i44cg",
-        FacetColorRed1: "_1VQ6_XxRXOarkHNtIZR9Bw",
-        IconBackground: "_1TCapxSkSTXMjsDbZYrPuo",
-        FacetColorRed2: "_2npcwVYfERdNcBWrDZoEz0",
         FacetColorRed0: "_2jAmS6ZJIahLUzOlKrjWpM",
         BackgroundTexture: "Kt1MTBk5kBd4aK5CFW2BS",
+        FacetColorRed1: "_1VQ6_XxRXOarkHNtIZR9Bw",
+        FacetColorRed2: "_2npcwVYfERdNcBWrDZoEz0",
         Background: "_3MfMXew7MDkO4ZAyjocp4l",
+        FacetColorYellow0: "_2dBam2Tl57qfOfNvHZ6ChQ",
         FacetColorYellow1: "_28IIDyezxLgxIAUErmcPAh",
         FacetColorYellow2: "_3jB4IMyM4FBN4ivpEPzbJd",
         FacetColorYellow3: "_1Gjyr8DdaSBz6_43VEAz0d",
-        FacetColorYellow0: "_2dBam2Tl57qfOfNvHZ6ChQ",
+        FacetColorGreen0: "_1c3NTvD5wY1eRXjzD8RPIe",
         FacetColorGreen1: "_1-qGJ84BFxu0lBHUhb5BAi",
         FacetColorGreen2: "_3sEfw4qhYeKQzhX1UOb60Z",
         FacetColorGreen3: "_21o76udrdevLEWmI0ZuSCT",
         FacetColorGreen4: "_3833UsaWsxduGGxeTuMWAC",
-        FacetColorGreen0: "_1c3NTvD5wY1eRXjzD8RPIe",
+        FacetColorBlue0: "_3gfEwvDy5HqyL6VGHoMRVO",
         FacetColorBlue1: "_3O35_r4wm4_s7r6H_YdPCz",
         FacetColorBlue2: "_3ejomd-TsjxlHuJOx2FYyf",
         FacetColorBlue3: "_2HyBDMaS-B2ekmE3PItFMK",
-        FacetColorBlue0: "_3gfEwvDy5HqyL6VGHoMRVO",
+        FacetColorPurple0: "YXBKkoBCp4eQx9gFE-4GS",
         FacetColorPurple1: "_1EmAB8GlcjfA1QEcuCJi6K",
         FacetColorPurple2: "GNCP-xxNt9O4-ierkeGcM",
-        FacetColorPurple0: "YXBKkoBCp4eQx9gFE-4GS",
         FacetColorGray0: "_2TRWZ2SI7jmu1RmANk84kq",
         FacetColorGray1: "_2Z0PK6Dt5jIErUliJ1Nmcb",
         FacetColorGray2: "_3wy1a1XvwtnmSkyJ_Uog4B",
@@ -192,7 +191,7 @@
     },
     77671: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => P });
+      a.r(t), a.d(t, { default: () => H });
       var n = a(7552),
         r = a(89506),
         l = a(21384),
@@ -206,9 +205,9 @@
         p = a(55651),
         E = a(40349),
         y = a(91077),
-        f = a(28485),
-        g = a(72674);
-      const _ = (e) => {
+        _ = a(28485),
+        f = a(72674);
+      const g = (e) => {
           const [t, a] = (0, n.useState)(""),
             l = (0, i.wB)();
           if (l.isLoading)
@@ -272,42 +271,42 @@
               e.fnSetSelectedHero(o.data.heroes[t].id);
             }
           }, [e.nHeroID, o, e]);
-          const g = c.data,
+          const f = c.data,
             S = s.data,
-            h = S ? S.facets[p] : void 0;
-          let N = "";
-          switch (h?.color) {
+            N = S ? S.facets[p] : void 0;
+          let I = "";
+          switch (N?.color) {
             case 0:
-              N = "Red";
+              I = "Red";
               break;
             case 1:
-              N = "Yellow";
+              I = "Yellow";
               break;
             case 2:
-              N = "Green";
+              I = "Green";
               break;
             case 3:
-              N = "Blue";
+              I = "Blue";
               break;
             case 4:
-              N = "Purple";
+              I = "Purple";
               break;
             case 5:
-              N = "Gray";
+              I = "Gray";
           }
-          const k = u.document?.body;
+          const A = u.document?.body;
           return n.createElement(
             "div",
             { className: m().HeroOption },
             n.createElement(
               "div",
               { className: m().Name },
-              e.bShowName ? (0, d.Wn)(g?.name_loc) : e.strLabel,
+              e.bShowName ? (0, d.Wn)(f?.name_loc) : e.strLabel,
             ),
             n.createElement("div", {
               className: m().Portrait,
               style: {
-                backgroundImage: `url( ${r.r.IMG_URL}heroes/${g?.name.replace("npc_dota_hero_", "")}.png`,
+                backgroundImage: `url( ${r.r.IMG_URL}heroes/${f?.name.replace("npc_dota_hero_", "")}.png`,
               },
               onClick: () => a(!0),
             }),
@@ -316,7 +315,7 @@
               {
                 className: (0, l.A)(
                   m().Facet,
-                  m()[`FacetColor${N}${h?.gradient_id}`],
+                  m()[`FacetColor${I}${N?.gradient_id}`],
                 ),
                 onClick: () =>
                   S
@@ -330,17 +329,17 @@
               ),
             ),
             t &&
-              f.createPortal(
-                n.createElement(_, {
+              _.createPortal(
+                n.createElement(g, {
                   fnSetSelectedHero: (t) => {
                     a(!1), -1 != t && e.fnSetSelectedHero(t);
                   },
                 }),
-                k,
+                A,
               ),
           );
         },
-        h = (e) => {
+        N = (e) => {
           const t = (0, i.mU)(e.nItemID).data;
           return n.createElement(
             c.he,
@@ -357,7 +356,7 @@
             }),
           );
         },
-        N = (e) => {
+        I = (e) => {
           const [t, a] = (0, n.useState)(""),
             l = (0, i.HJ)();
           if (l.isLoading)
@@ -407,7 +406,20 @@
                     n.createElement("div", { className: m().Name }, "Clear"),
                   ),
                 o
-                  .filter((t) => !e.bFilterLategame || t.is_lategame_suggested)
+                  .filter(
+                    (t) =>
+                      e.eItemFilter == A.ITEM_OPTIONS_ALL ||
+                      !!(
+                        (t.is_lategame_suggested &&
+                          e.eItemFilter == A.ITEM_OPTIONS_LATE) ||
+                        A.ITEM_OPTIONS_EARLY_LATE
+                      ) ||
+                      !!(
+                        (t.is_earlygame_suggested &&
+                          e.eItemFilter == A.ITEM_OPTIONS_EARLY) ||
+                        A.ITEM_OPTIONS_EARLY_LATE
+                      ),
+                  )
                   .map((t) =>
                     n.createElement(
                       "div",
@@ -434,8 +446,15 @@
               ),
             ),
           );
-        },
-        k = (e) => {
+        };
+      var A;
+      !(function (e) {
+        (e[(e.ITEM_OPTIONS_ALL = 1)] = "ITEM_OPTIONS_ALL"),
+          (e[(e.ITEM_OPTIONS_EARLY = 2)] = "ITEM_OPTIONS_EARLY"),
+          (e[(e.ITEM_OPTIONS_LATE = 3)] = "ITEM_OPTIONS_LATE"),
+          (e[(e.ITEM_OPTIONS_EARLY_LATE = 4)] = "ITEM_OPTIONS_EARLY_LATE");
+      })(A || (A = {}));
+      const h = (e) => {
           const [t, a] = n.useState(!1),
             l = (0, i.mU)(e.nItemID),
             o = (0, y.R7)().ownerWindow,
@@ -457,19 +476,19 @@
               onClick: () => a(!0),
             }),
             t &&
-              f.createPortal(
-                n.createElement(N, {
+              _.createPortal(
+                n.createElement(I, {
                   fnSetSelectedItem: (t) => {
                     a(!1), -1 != t && e.fnSetSelectedItem(t);
                   },
                   bAllowEmpty: e.bAllowEmpty,
-                  bFilterLategame: e.bFilterLategame,
+                  eItemFilter: e.eItemFilter,
                 }),
                 s,
               ),
           );
         },
-        A = (e) =>
+        k = (e) =>
           n.createElement(
             "div",
             { className: m().Option },
@@ -488,7 +507,7 @@
               n.createElement("option", { value: 16 }, "Hard Support"),
             ),
           ),
-        I = (e) =>
+        T = (e) =>
           n.createElement(
             "div",
             { className: m().Option },
@@ -526,7 +545,7 @@
               n.createElement("option", { value: 13 }, "Hero Pool"),
             ),
           ),
-        T = (e) => {
+        R = (e) => {
           const [t, a] = n.useState(e.strMMR);
           return (
             n.useEffect(() => {
@@ -557,9 +576,9 @@
           t.toString()
         );
       }
-      const R = "pregameitems",
-        D = "earlygameitems",
-        b = "lategameitems",
+      const D = "pregameitems",
+        b = "earlygameitems",
+        O = "lategameitems",
         C = "maingameitems",
         M = (e) => {
           const t = new URLSearchParams(e.strConfig),
@@ -577,9 +596,9 @@
             y = (t.get("arrEnemyHeroFacets") || "1,1,1,1,1")
               .split(",")
               .map(Number),
-            f = t.get("nAverageMMR") || "2000",
-            g = parseInt(t.get("nGameMode") || "22");
-          const _ = () => {
+            _ = t.get("nAverageMMR") || "2000",
+            f = parseInt(t.get("nGameMode") || "22");
+          const g = () => {
               const t = {
                 nHeroID: r,
                 nFacet: l,
@@ -588,85 +607,85 @@
                 arrAlliedHeroFacets: d,
                 arrEnemyHeroIDs: E,
                 arrEnemyHeroFacets: y,
-                nAverageMMR: parseInt(f),
-                nGameMode: g,
+                nAverageMMR: parseInt(_),
+                nGameMode: f,
               };
               a.push(p.J.dotaplustester(e.strFeature, F(t)));
             },
-            N = (0, i.MT)(r, l, o, s, d, E, y, parseInt(f), g, !0).data,
-            k = (0, i.MT)(r, l, o, s, d, E, y, parseInt(f), g, !1).data;
-          let A = [];
+            I = (0, i.MT)(r, l, o, s, d, E, y, parseInt(_), f, !0).data,
+            A = (0, i.MT)(r, l, o, s, d, E, y, parseInt(_), f, !1).data;
+          let h = [];
           if (
-            N &&
-            k &&
-            N.backend_response.outputs.length > 0 &&
-            k.backend_response.outputs.length > 0
+            I &&
+            A &&
+            I.backend_response.outputs.length > 0 &&
+            A.backend_response.outputs.length > 0
           )
             for (
               let e = 0;
               e <
-              N.backend_response.outputs[0].categorical_crossentropy
+              I.backend_response.outputs[0].categorical_crossentropy
                 .value_sequence.length;
               e++
             ) {
               let t = {
                 arrItemSequence:
-                  N.backend_response.outputs[0].categorical_crossentropy
+                  I.backend_response.outputs[0].categorical_crossentropy
                     .value_sequence[e].value,
                 fScore:
-                  N.backend_response.outputs[0].categorical_crossentropy.weight[
+                  I.backend_response.outputs[0].categorical_crossentropy.weight[
                     e
                   ],
                 fWinLossAdjust: 0,
                 nSequenceID:
-                  N.backend_response.outputs[0].categorical_crossentropy.value[
+                  I.backend_response.outputs[0].categorical_crossentropy.value[
                     e
                   ],
               };
               for (
                 let a = 0;
                 a <
-                k.backend_response.outputs[0].categorical_crossentropy.value
+                A.backend_response.outputs[0].categorical_crossentropy.value
                   .length;
                 a++
               )
                 if (
-                  k.backend_response.outputs[0].categorical_crossentropy.value[
+                  A.backend_response.outputs[0].categorical_crossentropy.value[
                     a
                   ] ==
-                  N.backend_response.outputs[0].categorical_crossentropy.value[
+                  I.backend_response.outputs[0].categorical_crossentropy.value[
                     e
                   ]
                 ) {
                   const n =
                     10 *
-                    (N.backend_response.outputs[0].categorical_crossentropy
+                    (I.backend_response.outputs[0].categorical_crossentropy
                       .weight[e] -
-                      k.backend_response.outputs[0].categorical_crossentropy
+                      A.backend_response.outputs[0].categorical_crossentropy
                         .weight[a]);
                   (t.fScore += n), (t.fWinLossAdjust += n);
                 }
-              A.push(t);
+              h.push(t);
             }
-          A.sort((e, t) => t.fScore - e.fScore);
-          const R = (e) => {
-              (l = e), _();
+          h.sort((e, t) => t.fScore - e.fScore);
+          const k = (e) => {
+              (l = e), g();
             },
             D = (e, t) => {
-              (s[e] = t), _();
+              (s[e] = t), g();
             },
             b = (e, t) => {
-              (d[e] = t), _();
+              (d[e] = t), g();
+            },
+            O = (e, t) => {
+              (E[e] = t), g();
             },
             C = (e, t) => {
-              (E[e] = t), _();
+              (y[e] = t), g();
             },
-            M = (e, t) => {
-              (y[e] = t), _();
-            },
-            O = (0, i.HJ)(),
+            M = (0, i.HJ)(),
             L = (0, i.wB)();
-          if (!O.data || !L.data)
+          if (!M.data || !L.data)
             return n.createElement(
               "div",
               { className: m().Loading },
@@ -688,8 +707,8 @@
                     strLabel: "Your Hero",
                     nHeroID: r,
                     nFacet: l,
-                    fnSetSelectedHero: (e) => ((r = e), void _()),
-                    fnSetSelectedFacet: (e) => R(e),
+                    fnSetSelectedHero: (e) => ((r = e), void g()),
+                    fnSetSelectedFacet: (e) => k(e),
                   }),
                 ),
                 n.createElement(
@@ -731,36 +750,36 @@
                     strLabel: "Enemy #1",
                     nHeroID: E[0],
                     nFacet: y[0],
-                    fnSetSelectedHero: (e) => C(0, e),
-                    fnSetSelectedFacet: (e) => M(0, e),
+                    fnSetSelectedHero: (e) => O(0, e),
+                    fnSetSelectedFacet: (e) => C(0, e),
                   }),
                   n.createElement(S, {
                     strLabel: "Enemy #2",
                     nHeroID: E[1],
                     nFacet: y[1],
-                    fnSetSelectedHero: (e) => C(1, e),
-                    fnSetSelectedFacet: (e) => M(1, e),
+                    fnSetSelectedHero: (e) => O(1, e),
+                    fnSetSelectedFacet: (e) => C(1, e),
                   }),
                   n.createElement(S, {
                     strLabel: "Enemy #3",
                     nHeroID: E[2],
                     nFacet: y[2],
-                    fnSetSelectedHero: (e) => C(2, e),
-                    fnSetSelectedFacet: (e) => M(2, e),
+                    fnSetSelectedHero: (e) => O(2, e),
+                    fnSetSelectedFacet: (e) => C(2, e),
                   }),
                   n.createElement(S, {
                     strLabel: "Enemy #4",
                     nHeroID: E[3],
                     nFacet: y[3],
-                    fnSetSelectedHero: (e) => C(3, e),
-                    fnSetSelectedFacet: (e) => M(3, e),
+                    fnSetSelectedHero: (e) => O(3, e),
+                    fnSetSelectedFacet: (e) => C(3, e),
                   }),
                   n.createElement(S, {
                     strLabel: "Enemy #5",
                     nHeroID: E[4],
                     nFacet: y[4],
-                    fnSetSelectedHero: (e) => C(4, e),
-                    fnSetSelectedFacet: (e) => M(4, e),
+                    fnSetSelectedHero: (e) => O(4, e),
+                    fnSetSelectedFacet: (e) => C(4, e),
                   }),
                 ),
               ),
@@ -768,31 +787,31 @@
               n.createElement(
                 "div",
                 { className: m().MiscInfo },
-                n.createElement(I, {
+                n.createElement(T, {
                   nLane: o,
                   fnSetLane: (e) => {
-                    (o = e), _();
+                    (o = e), g();
                   },
                 }),
                 n.createElement(v, {
-                  nGameMode: g,
+                  nGameMode: f,
                   fnSetGameMode: (e) => {
-                    (g = e), _();
+                    (f = e), g();
                   },
                 }),
-                n.createElement(T, {
-                  strMMR: f,
+                n.createElement(R, {
+                  strMMR: _,
                   fnSetMMR: (e) => {
-                    (f = e), _();
+                    (_ = e), g();
                   },
                 }),
               ),
               n.createElement("div", { className: m().Separator }),
-              A.length > 0 &&
+              h.length > 0 &&
                 n.createElement(
                   "div",
                   { className: m().Results },
-                  A.map((e, t) =>
+                  h.map((e, t) =>
                     t >= 5
                       ? null
                       : n.createElement(
@@ -828,284 +847,7 @@
                             "div",
                             { className: m().ItemList },
                             e.arrItemSequence.map((e, a) =>
-                              n.createElement(h, {
-                                nItemID: e,
-                                key: `InferenceReuslt_${t}_Item_${a}`,
-                              }),
-                            ),
-                          ),
-                        ),
-                  ),
-                ),
-            ),
-          );
-        },
-        O = (e) => {
-          const t = new URLSearchParams(e.strConfig),
-            a = (0, u.W6)();
-          let r = parseInt(t.get("nHeroID") || "0"),
-            l = parseInt(t.get("nFacet") || "0"),
-            o = parseInt(t.get("nPosition") || "0"),
-            s = (t.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            d = (t.get("arrAlliedHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            E = (t.get("arrEnemyHeroIDs") || "0,0,0,0").split(",").map(Number),
-            y = (t.get("arrEnemyHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            f = t.get("nAverageMMR") || "2000",
-            g = parseInt(t.get("nGameMode") || "22");
-          const _ = () => {
-              const t = {
-                nHeroID: r,
-                nFacet: l,
-                nPosition: o,
-                arrAlliedHeroIDs: s,
-                arrAlliedHeroFacets: d,
-                arrEnemyHeroIDs: E,
-                arrEnemyHeroFacets: y,
-                nAverageMMR: parseInt(f),
-                nGameMode: g,
-              };
-              a.push(p.J.dotaplustester(e.strFeature, F(t)));
-            },
-            N = (0, i.Iu)(r, l, o, s, d, E, y, parseInt(f), g, !0).data,
-            k = (0, i.Iu)(r, l, o, s, d, E, y, parseInt(f), g, !1).data;
-          let I = [];
-          if (
-            N &&
-            k &&
-            N.backend_response.outputs.length > 0 &&
-            k.backend_response.outputs.length > 0
-          )
-            for (
-              let e = 0;
-              e <
-              N.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence.length;
-              e++
-            ) {
-              let t = {
-                arrItemSequence:
-                  N.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[e].value,
-                fScore:
-                  N.backend_response.outputs[0].categorical_crossentropy.weight[
-                    e
-                  ],
-                fWinLossAdjust: 0,
-                nSequenceID:
-                  N.backend_response.outputs[0].categorical_crossentropy.value[
-                    e
-                  ],
-              };
-              for (
-                let a = 0;
-                a <
-                k.backend_response.outputs[0].categorical_crossentropy.value
-                  .length;
-                a++
-              )
-                if (
-                  k.backend_response.outputs[0].categorical_crossentropy.value[
-                    a
-                  ] ==
-                  N.backend_response.outputs[0].categorical_crossentropy.value[
-                    e
-                  ]
-                ) {
-                  const n =
-                    10 *
-                    (N.backend_response.outputs[0].categorical_crossentropy
-                      .weight[e] -
-                      k.backend_response.outputs[0].categorical_crossentropy
-                        .weight[a]);
-                  (t.fScore += n), (t.fWinLossAdjust += n);
-                }
-              I.push(t);
-            }
-          I.sort((e, t) => t.fScore - e.fScore);
-          const R = (e) => {
-              (l = e), _();
-            },
-            D = (e, t) => {
-              (s[e] = t), _();
-            },
-            b = (e, t) => {
-              (d[e] = t), _();
-            },
-            C = (e, t) => {
-              (E[e] = t), _();
-            },
-            M = (e, t) => {
-              (y[e] = t), _();
-            },
-            O = (0, i.HJ)(),
-            L = (0, i.wB)();
-          if (!O.data || !L.data)
-            return n.createElement(
-              "div",
-              { className: m().Loading },
-              "Loading hero and item data...",
-            );
-          return n.createElement(
-            "div",
-            { className: m().DotaPlusTesterSubPage },
-            n.createElement(
-              "div",
-              { className: m().Content },
-              n.createElement(
-                "div",
-                { className: m().HeroList },
-                n.createElement(
-                  "div",
-                  { className: m().YourHero },
-                  n.createElement(S, {
-                    strLabel: "Your Hero",
-                    nHeroID: r,
-                    nFacet: l,
-                    fnSetSelectedHero: (e) => ((r = e), void _()),
-                    fnSetSelectedFacet: (e) => R(e),
-                  }),
-                ),
-                n.createElement(
-                  "div",
-                  { className: m().Allies },
-                  n.createElement(S, {
-                    strLabel: "Ally #1",
-                    nHeroID: s[0],
-                    nFacet: d[0],
-                    fnSetSelectedHero: (e) => D(0, e),
-                    fnSetSelectedFacet: (e) => b(0, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Ally #2",
-                    nHeroID: s[1],
-                    nFacet: d[1],
-                    fnSetSelectedHero: (e) => D(1, e),
-                    fnSetSelectedFacet: (e) => b(1, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Ally #3",
-                    nHeroID: s[2],
-                    nFacet: d[2],
-                    fnSetSelectedHero: (e) => D(2, e),
-                    fnSetSelectedFacet: (e) => b(2, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Ally #4",
-                    nHeroID: s[3],
-                    nFacet: d[3],
-                    fnSetSelectedHero: (e) => D(3, e),
-                    fnSetSelectedFacet: (e) => b(3, e),
-                  }),
-                ),
-                n.createElement(
-                  "div",
-                  { className: m().Enemies },
-                  n.createElement(S, {
-                    strLabel: "Enemy #1",
-                    nHeroID: E[0],
-                    nFacet: y[0],
-                    fnSetSelectedHero: (e) => C(0, e),
-                    fnSetSelectedFacet: (e) => M(0, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Enemy #2",
-                    nHeroID: E[1],
-                    nFacet: y[1],
-                    fnSetSelectedHero: (e) => C(1, e),
-                    fnSetSelectedFacet: (e) => M(1, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Enemy #3",
-                    nHeroID: E[2],
-                    nFacet: y[2],
-                    fnSetSelectedHero: (e) => C(2, e),
-                    fnSetSelectedFacet: (e) => M(2, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Enemy #4",
-                    nHeroID: E[3],
-                    nFacet: y[3],
-                    fnSetSelectedHero: (e) => C(3, e),
-                    fnSetSelectedFacet: (e) => M(3, e),
-                  }),
-                  n.createElement(S, {
-                    strLabel: "Enemy #5",
-                    nHeroID: E[4],
-                    nFacet: y[4],
-                    fnSetSelectedHero: (e) => C(4, e),
-                    fnSetSelectedFacet: (e) => M(4, e),
-                  }),
-                ),
-              ),
-              n.createElement("div", { className: m().Separator }),
-              n.createElement(
-                "div",
-                { className: m().MiscInfo },
-                n.createElement(A, {
-                  nPosition: o,
-                  fnSetPosition: (e) => {
-                    (o = e), _();
-                  },
-                }),
-                n.createElement(v, {
-                  nGameMode: g,
-                  fnSetGameMode: (e) => {
-                    (g = e), _();
-                  },
-                }),
-                n.createElement(T, {
-                  strMMR: f,
-                  fnSetMMR: (e) => {
-                    (f = e), _();
-                  },
-                }),
-              ),
-              n.createElement("div", { className: m().Separator }),
-              I.length > 0 &&
-                n.createElement(
-                  "div",
-                  { className: m().Results },
-                  I.map((e, t) =>
-                    t >= 5
-                      ? null
-                      : n.createElement(
-                          "div",
-                          {
-                            className: m().Result,
-                            key: `InferenceResult_${t}`,
-                          },
-                          n.createElement(
-                            "div",
-                            { className: m().Weight },
-                            n.createElement(
-                              "div",
-                              { className: m().Score },
-                              `${(100 * e.fScore).toFixed(2)}%`,
-                            ),
-                            n.createElement(
-                              c.he,
-                              {
-                                toolTipContent:
-                                  "Amount score was adjusted by comparing winning and losing teams",
-                                direction: "top",
-                                strTooltipClassname: m().ToolTip,
-                              },
-                              n.createElement(
-                                "div",
-                                { className: m().ScoreAdjust },
-                                `${e.fWinLossAdjust > 0 ? "+" : ""}${(100 * e.fWinLossAdjust).toFixed(2)}%`,
-                              ),
-                            ),
-                          ),
-                          n.createElement(
-                            "div",
-                            { className: m().ItemList },
-                            e.arrItemSequence.map((e, a) =>
-                              n.createElement(h, {
+                              n.createElement(N, {
                                 nItemID: e,
                                 key: `InferenceReuslt_${t}_Item_${a}`,
                               }),
@@ -1121,6 +863,283 @@
           const t = new URLSearchParams(e.strConfig),
             a = (0, u.W6)();
           let r = parseInt(t.get("nHeroID") || "0"),
+            l = parseInt(t.get("nFacet") || "0"),
+            o = parseInt(t.get("nPosition") || "0"),
+            s = (t.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
+            d = (t.get("arrAlliedHeroFacets") || "0,0,0,0")
+              .split(",")
+              .map(Number),
+            E = (t.get("arrEnemyHeroIDs") || "0,0,0,0").split(",").map(Number),
+            y = (t.get("arrEnemyHeroFacets") || "0,0,0,0")
+              .split(",")
+              .map(Number),
+            _ = t.get("nAverageMMR") || "2000",
+            f = parseInt(t.get("nGameMode") || "22");
+          const g = () => {
+              const t = {
+                nHeroID: r,
+                nFacet: l,
+                nPosition: o,
+                arrAlliedHeroIDs: s,
+                arrAlliedHeroFacets: d,
+                arrEnemyHeroIDs: E,
+                arrEnemyHeroFacets: y,
+                nAverageMMR: parseInt(_),
+                nGameMode: f,
+              };
+              a.push(p.J.dotaplustester(e.strFeature, F(t)));
+            },
+            I = (0, i.Iu)(r, l, o, s, d, E, y, parseInt(_), f, !0).data,
+            A = (0, i.Iu)(r, l, o, s, d, E, y, parseInt(_), f, !1).data;
+          let h = [];
+          if (
+            I &&
+            A &&
+            I.backend_response.outputs.length > 0 &&
+            A.backend_response.outputs.length > 0
+          )
+            for (
+              let e = 0;
+              e <
+              I.backend_response.outputs[0].categorical_crossentropy
+                .value_sequence.length;
+              e++
+            ) {
+              let t = {
+                arrItemSequence:
+                  I.backend_response.outputs[0].categorical_crossentropy
+                    .value_sequence[e].value,
+                fScore:
+                  I.backend_response.outputs[0].categorical_crossentropy.weight[
+                    e
+                  ],
+                fWinLossAdjust: 0,
+                nSequenceID:
+                  I.backend_response.outputs[0].categorical_crossentropy.value[
+                    e
+                  ],
+              };
+              for (
+                let a = 0;
+                a <
+                A.backend_response.outputs[0].categorical_crossentropy.value
+                  .length;
+                a++
+              )
+                if (
+                  A.backend_response.outputs[0].categorical_crossentropy.value[
+                    a
+                  ] ==
+                  I.backend_response.outputs[0].categorical_crossentropy.value[
+                    e
+                  ]
+                ) {
+                  const n =
+                    10 *
+                    (I.backend_response.outputs[0].categorical_crossentropy
+                      .weight[e] -
+                      A.backend_response.outputs[0].categorical_crossentropy
+                        .weight[a]);
+                  (t.fScore += n), (t.fWinLossAdjust += n);
+                }
+              h.push(t);
+            }
+          h.sort((e, t) => t.fScore - e.fScore);
+          const T = (e) => {
+              (l = e), g();
+            },
+            D = (e, t) => {
+              (s[e] = t), g();
+            },
+            b = (e, t) => {
+              (d[e] = t), g();
+            },
+            O = (e, t) => {
+              (E[e] = t), g();
+            },
+            C = (e, t) => {
+              (y[e] = t), g();
+            },
+            M = (0, i.HJ)(),
+            L = (0, i.wB)();
+          if (!M.data || !L.data)
+            return n.createElement(
+              "div",
+              { className: m().Loading },
+              "Loading hero and item data...",
+            );
+          return n.createElement(
+            "div",
+            { className: m().DotaPlusTesterSubPage },
+            n.createElement(
+              "div",
+              { className: m().Content },
+              n.createElement(
+                "div",
+                { className: m().HeroList },
+                n.createElement(
+                  "div",
+                  { className: m().YourHero },
+                  n.createElement(S, {
+                    strLabel: "Your Hero",
+                    nHeroID: r,
+                    nFacet: l,
+                    fnSetSelectedHero: (e) => ((r = e), void g()),
+                    fnSetSelectedFacet: (e) => T(e),
+                  }),
+                ),
+                n.createElement(
+                  "div",
+                  { className: m().Allies },
+                  n.createElement(S, {
+                    strLabel: "Ally #1",
+                    nHeroID: s[0],
+                    nFacet: d[0],
+                    fnSetSelectedHero: (e) => D(0, e),
+                    fnSetSelectedFacet: (e) => b(0, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Ally #2",
+                    nHeroID: s[1],
+                    nFacet: d[1],
+                    fnSetSelectedHero: (e) => D(1, e),
+                    fnSetSelectedFacet: (e) => b(1, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Ally #3",
+                    nHeroID: s[2],
+                    nFacet: d[2],
+                    fnSetSelectedHero: (e) => D(2, e),
+                    fnSetSelectedFacet: (e) => b(2, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Ally #4",
+                    nHeroID: s[3],
+                    nFacet: d[3],
+                    fnSetSelectedHero: (e) => D(3, e),
+                    fnSetSelectedFacet: (e) => b(3, e),
+                  }),
+                ),
+                n.createElement(
+                  "div",
+                  { className: m().Enemies },
+                  n.createElement(S, {
+                    strLabel: "Enemy #1",
+                    nHeroID: E[0],
+                    nFacet: y[0],
+                    fnSetSelectedHero: (e) => O(0, e),
+                    fnSetSelectedFacet: (e) => C(0, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Enemy #2",
+                    nHeroID: E[1],
+                    nFacet: y[1],
+                    fnSetSelectedHero: (e) => O(1, e),
+                    fnSetSelectedFacet: (e) => C(1, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Enemy #3",
+                    nHeroID: E[2],
+                    nFacet: y[2],
+                    fnSetSelectedHero: (e) => O(2, e),
+                    fnSetSelectedFacet: (e) => C(2, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Enemy #4",
+                    nHeroID: E[3],
+                    nFacet: y[3],
+                    fnSetSelectedHero: (e) => O(3, e),
+                    fnSetSelectedFacet: (e) => C(3, e),
+                  }),
+                  n.createElement(S, {
+                    strLabel: "Enemy #5",
+                    nHeroID: E[4],
+                    nFacet: y[4],
+                    fnSetSelectedHero: (e) => O(4, e),
+                    fnSetSelectedFacet: (e) => C(4, e),
+                  }),
+                ),
+              ),
+              n.createElement("div", { className: m().Separator }),
+              n.createElement(
+                "div",
+                { className: m().MiscInfo },
+                n.createElement(k, {
+                  nPosition: o,
+                  fnSetPosition: (e) => {
+                    (o = e), g();
+                  },
+                }),
+                n.createElement(v, {
+                  nGameMode: f,
+                  fnSetGameMode: (e) => {
+                    (f = e), g();
+                  },
+                }),
+                n.createElement(R, {
+                  strMMR: _,
+                  fnSetMMR: (e) => {
+                    (_ = e), g();
+                  },
+                }),
+              ),
+              n.createElement("div", { className: m().Separator }),
+              h.length > 0 &&
+                n.createElement(
+                  "div",
+                  { className: m().Results },
+                  h.map((e, t) =>
+                    t >= 5
+                      ? null
+                      : n.createElement(
+                          "div",
+                          {
+                            className: m().Result,
+                            key: `InferenceResult_${t}`,
+                          },
+                          n.createElement(
+                            "div",
+                            { className: m().Weight },
+                            n.createElement(
+                              "div",
+                              { className: m().Score },
+                              `${(100 * e.fScore).toFixed(2)}%`,
+                            ),
+                            n.createElement(
+                              c.he,
+                              {
+                                toolTipContent:
+                                  "Amount score was adjusted by comparing winning and losing teams",
+                                direction: "top",
+                                strTooltipClassname: m().ToolTip,
+                              },
+                              n.createElement(
+                                "div",
+                                { className: m().ScoreAdjust },
+                                `${e.fWinLossAdjust > 0 ? "+" : ""}${(100 * e.fWinLossAdjust).toFixed(2)}%`,
+                              ),
+                            ),
+                          ),
+                          n.createElement(
+                            "div",
+                            { className: m().ItemList },
+                            e.arrItemSequence.map((e, a) =>
+                              n.createElement(N, {
+                                nItemID: e,
+                                key: `InferenceReuslt_${t}_Item_${a}`,
+                              }),
+                            ),
+                          ),
+                        ),
+                  ),
+                ),
+            ),
+          );
+        },
+        w = (e) => {
+          const t = new URLSearchParams(e.strConfig),
+            a = (0, u.W6)();
+          let r = parseInt(t.get("nHeroID") || "0"),
             o = parseInt(t.get("nFacet") || "0"),
             s = parseInt(t.get("nPosition") || "0"),
             d = (t.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
@@ -1128,21 +1147,21 @@
               .split(",")
               .map(Number),
             y = (t.get("arrEnemyHeroIDs") || "0,0,0,0").split(",").map(Number),
-            f = (t.get("arrEnemyHeroFacets") || "0,0,0,0")
+            _ = (t.get("arrEnemyHeroFacets") || "0,0,0,0")
               .split(",")
               .map(Number),
-            _ = t.get("nAverageMMR") || "2000",
-            N = parseInt(t.get("nGameMode") || "22"),
-            I = (t.get("arrPurchasedItems") || "0,0,0,0,0,0,0,0,0,0")
+            g = t.get("nAverageMMR") || "2000",
+            I = parseInt(t.get("nGameMode") || "22"),
+            T = (t.get("arrPurchasedItems") || "0,0,0,0,0,0,0,0,0,0")
               .split(",")
               .map(Number),
-            R = (t.get("arrLikedItems") || "0,0").split(",").map(Number),
-            D = (t.get("arrDislikedItems") || "0,0").split(",").map(Number);
-          const [b, C] = n.useState(10),
-            [M, O] = n.useState(3),
-            [L, w] = n.useState(!1),
-            [P, H] = n.useState(50),
-            G = () => {
+            D = (t.get("arrLikedItems") || "0,0").split(",").map(Number),
+            b = (t.get("arrDislikedItems") || "0,0").split(",").map(Number);
+          const [O, C] = n.useState(10),
+            [M, L] = n.useState(3),
+            [w, P] = n.useState(!1),
+            [H, G] = n.useState(50),
+            $ = () => {
               const t = F({
                 nHeroID: r,
                 nFacet: o,
@@ -1150,89 +1169,89 @@
                 arrAlliedHeroIDs: d,
                 arrAlliedHeroFacets: E,
                 arrEnemyHeroIDs: y,
-                arrEnemyHeroFacets: f,
-                nAverageMMR: parseInt(_),
-                nGameMode: N,
-                arrLikedItems: R,
-                arrDislikedItems: D,
-                arrPurchasedItems: I,
+                arrEnemyHeroFacets: _,
+                nAverageMMR: parseInt(g),
+                nGameMode: I,
+                arrLikedItems: D,
+                arrDislikedItems: b,
+                arrPurchasedItems: T,
               });
               e.strConfig != t && a.push(p.J.dotaplustester(e.strFeature, t));
             },
-            $ = (0, i.PO)(r, o, s, d, E, y, f, parseInt(_), N, !0, I).data,
-            U = (0, i.PO)(r, o, s, d, E, y, f, parseInt(_), N, !1, I).data;
-          let B = [];
+            U = (0, i.PO)(r, o, s, d, E, y, _, parseInt(g), I, !0, T).data,
+            B = (0, i.PO)(r, o, s, d, E, y, _, parseInt(g), I, !1, T).data;
+          let x = [];
           if (
-            $ &&
             U &&
-            $.backend_response.outputs.length > 0 &&
-            U.backend_response.outputs.length > 0
+            B &&
+            U.backend_response.outputs.length > 0 &&
+            B.backend_response.outputs.length > 0
           )
             for (
               let e = 0;
               e <
-              $.backend_response.outputs[0].categorical_crossentropy
+              U.backend_response.outputs[0].categorical_crossentropy
                 .value_sequence.length;
               e++
             ) {
               let t = {
                 arrItemSequence:
-                  $.backend_response.outputs[0].categorical_crossentropy
+                  U.backend_response.outputs[0].categorical_crossentropy
                     .value_sequence[e].value,
                 fScore:
-                  $.backend_response.outputs[0].categorical_crossentropy.weight[
+                  U.backend_response.outputs[0].categorical_crossentropy.weight[
                     e
                   ],
                 fWinLossAdjust: 0,
                 nSequenceID:
-                  $.backend_response.outputs[0].categorical_crossentropy.value[
+                  U.backend_response.outputs[0].categorical_crossentropy.value[
                     e
                   ],
               };
               for (
                 let a = 0;
                 a <
-                U.backend_response.outputs[0].categorical_crossentropy.value
+                B.backend_response.outputs[0].categorical_crossentropy.value
                   .length;
                 a++
               )
                 if (
-                  U.backend_response.outputs[0].categorical_crossentropy.value[
+                  B.backend_response.outputs[0].categorical_crossentropy.value[
                     a
                   ] ==
-                  $.backend_response.outputs[0].categorical_crossentropy.value[
+                  U.backend_response.outputs[0].categorical_crossentropy.value[
                     e
                   ]
                 ) {
                   const n =
                     10 *
-                    ($.backend_response.outputs[0].categorical_crossentropy
+                    (U.backend_response.outputs[0].categorical_crossentropy
                       .weight[e] -
-                      U.backend_response.outputs[0].categorical_crossentropy
+                      B.backend_response.outputs[0].categorical_crossentropy
                         .weight[a]);
                   (t.fScore = Math.max(0, t.fScore + n + 0.01)),
                     (t.fWinLossAdjust += n);
                 }
-              B.push(t);
+              x.push(t);
             }
-          for (let e of B)
+          for (let e of x)
+            0 != b[0] &&
+              e.arrItemSequence.includes(b[0]) &&
+              (e.fScore = Math.pow(e.fScore, 3)),
+              0 != b[1] &&
+                e.arrItemSequence.includes(b[1]) &&
+                (e.fScore = Math.pow(e.fScore, 3));
+          for (let e of x)
             0 != D[0] &&
               e.arrItemSequence.includes(D[0]) &&
-              (e.fScore = Math.pow(e.fScore, 3)),
+              (e.fScore = Math.pow(e.fScore, 1 / 3)),
               0 != D[1] &&
                 e.arrItemSequence.includes(D[1]) &&
-                (e.fScore = Math.pow(e.fScore, 3));
-          for (let e of B)
-            0 != R[0] &&
-              e.arrItemSequence.includes(R[0]) &&
-              (e.fScore = Math.pow(e.fScore, 1 / 3)),
-              0 != R[1] &&
-                e.arrItemSequence.includes(R[1]) &&
                 (e.fScore = Math.pow(e.fScore, 1 / 3));
-          B.sort((e, t) => t.fScore - e.fScore);
-          let x = structuredClone(B);
-          if (B.length > 0)
-            if (L) {
+          x.sort((e, t) => t.fScore - e.fScore);
+          let K = structuredClone(x);
+          if (x.length > 0)
+            if (w) {
               let e = [],
                 t = [];
               for (; e.length < M; ) {
@@ -1243,7 +1262,7 @@
                     const n = t.arrItemSequence[e];
                     0 != n && a[e].set(n, (a[e].get(n) || 0) + 1);
                   }
-                let n = structuredClone(B);
+                let n = structuredClone(x);
                 for (let e of n) {
                   if (t.includes(e.nSequenceID)) {
                     e.fScore = 0;
@@ -1253,9 +1272,9 @@
                   for (let t = 0; t < e.arrItemSequence.length; t++) {
                     const r = e.arrItemSequence[t];
                     0 != r &&
-                      r != R[0] &&
-                      r != R[1] &&
-                      (n *= Math.pow(P / 100, a[t].get(r) || 0));
+                      r != D[0] &&
+                      r != D[1] &&
+                      (n *= Math.pow(H / 100, a[t].get(r) || 0));
                   }
                   (e.fScore *= n), (e.fWinLossAdjust = n);
                 }
@@ -1263,7 +1282,7 @@
                   e.push(structuredClone(n[0])),
                   t.push(n[0].nSequenceID);
               }
-              x = e;
+              K = e;
             } else {
               let e = [],
                 t = [];
@@ -1272,7 +1291,7 @@
                 for (const t of e)
                   for (const e of t.arrItemSequence)
                     0 != e && a.set(e, (a.get(e) || 0) + 1);
-                let n = structuredClone(B);
+                let n = structuredClone(x);
                 for (let e of n) {
                   if (t.includes(e.nSequenceID)) {
                     e.fScore = 0;
@@ -1281,42 +1300,42 @@
                   let n = 1;
                   for (const t of e.arrItemSequence)
                     0 != t &&
-                      t != R[0] &&
-                      t != R[1] &&
-                      (n *= Math.pow(P / 100, a.get(t) || 0));
+                      t != D[0] &&
+                      t != D[1] &&
+                      (n *= Math.pow(H / 100, a.get(t) || 0));
                   (e.fScore *= n), (e.fWinLossAdjust = n);
                 }
                 n.sort((e, t) => t.fScore - e.fScore),
                   e.push(structuredClone(n[0])),
                   t.push(n[0].nSequenceID);
               }
-              x = e;
+              K = e;
             }
-          x.sort((e, t) => t.fScore - e.fScore);
-          const K = (e) => {
-              (o = e), G();
+          K.sort((e, t) => t.fScore - e.fScore);
+          const Y = (e) => {
+              (o = e), $();
             },
             W = (e, t) => {
-              (d[e] = t), G();
-            },
-            Y = (e, t) => {
-              (E[e] = t), G();
+              (d[e] = t), $();
             },
             j = (e, t) => {
-              (y[e] = t), G();
+              (E[e] = t), $();
             },
             V = (e, t) => {
-              (f[e] = t), G();
+              (y[e] = t), $();
             },
             q = (e, t) => {
-              (D[e] = t), G();
+              (_[e] = t), $();
             },
             J = (e, t) => {
-              (R[e] = t), G();
+              (b[e] = t), $();
             },
-            X = (0, i.HJ)(),
-            z = (0, i.wB)();
-          return X.data && z.data
+            X = (e, t) => {
+              (D[e] = t), $();
+            },
+            z = (0, i.HJ)(),
+            Q = (0, i.wB)();
+          return z.data && Q.data
             ? n.createElement(
                 "div",
                 { className: m().DotaPlusTesterSubPage },
@@ -1333,8 +1352,8 @@
                         strLabel: "Your Hero",
                         nHeroID: r,
                         nFacet: o,
-                        fnSetSelectedHero: (e) => ((r = e), void G()),
-                        fnSetSelectedFacet: (e) => K(e),
+                        fnSetSelectedHero: (e) => ((r = e), void $()),
+                        fnSetSelectedFacet: (e) => Y(e),
                       }),
                     ),
                     n.createElement(
@@ -1345,28 +1364,28 @@
                         nHeroID: d[0],
                         nFacet: E[0],
                         fnSetSelectedHero: (e) => W(0, e),
-                        fnSetSelectedFacet: (e) => Y(0, e),
+                        fnSetSelectedFacet: (e) => j(0, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Ally #2",
                         nHeroID: d[1],
                         nFacet: E[1],
                         fnSetSelectedHero: (e) => W(1, e),
-                        fnSetSelectedFacet: (e) => Y(1, e),
+                        fnSetSelectedFacet: (e) => j(1, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Ally #3",
                         nHeroID: d[2],
                         nFacet: E[2],
                         fnSetSelectedHero: (e) => W(2, e),
-                        fnSetSelectedFacet: (e) => Y(2, e),
+                        fnSetSelectedFacet: (e) => j(2, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Ally #4",
                         nHeroID: d[3],
                         nFacet: E[3],
                         fnSetSelectedHero: (e) => W(3, e),
-                        fnSetSelectedFacet: (e) => Y(3, e),
+                        fnSetSelectedFacet: (e) => j(3, e),
                       }),
                     ),
                     n.createElement(
@@ -1375,37 +1394,37 @@
                       n.createElement(S, {
                         strLabel: "Enemy #1",
                         nHeroID: y[0],
-                        nFacet: f[0],
-                        fnSetSelectedHero: (e) => j(0, e),
-                        fnSetSelectedFacet: (e) => V(0, e),
+                        nFacet: _[0],
+                        fnSetSelectedHero: (e) => V(0, e),
+                        fnSetSelectedFacet: (e) => q(0, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #2",
                         nHeroID: y[1],
-                        nFacet: f[1],
-                        fnSetSelectedHero: (e) => j(1, e),
-                        fnSetSelectedFacet: (e) => V(1, e),
+                        nFacet: _[1],
+                        fnSetSelectedHero: (e) => V(1, e),
+                        fnSetSelectedFacet: (e) => q(1, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #3",
                         nHeroID: y[2],
-                        nFacet: f[2],
-                        fnSetSelectedHero: (e) => j(2, e),
-                        fnSetSelectedFacet: (e) => V(2, e),
+                        nFacet: _[2],
+                        fnSetSelectedHero: (e) => V(2, e),
+                        fnSetSelectedFacet: (e) => q(2, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #4",
                         nHeroID: y[3],
-                        nFacet: f[3],
-                        fnSetSelectedHero: (e) => j(3, e),
-                        fnSetSelectedFacet: (e) => V(3, e),
+                        nFacet: _[3],
+                        fnSetSelectedHero: (e) => V(3, e),
+                        fnSetSelectedFacet: (e) => q(3, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #5",
                         nHeroID: y[4],
-                        nFacet: f[4],
-                        fnSetSelectedHero: (e) => j(4, e),
-                        fnSetSelectedFacet: (e) => V(4, e),
+                        nFacet: _[4],
+                        fnSetSelectedHero: (e) => V(4, e),
+                        fnSetSelectedFacet: (e) => q(4, e),
                       }),
                     ),
                   ),
@@ -1413,22 +1432,22 @@
                   n.createElement(
                     "div",
                     { className: m().MiscInfo },
-                    n.createElement(A, {
+                    n.createElement(k, {
                       nPosition: s,
                       fnSetPosition: (e) => {
-                        (s = e), G();
+                        (s = e), $();
                       },
                     }),
                     n.createElement(v, {
-                      nGameMode: N,
+                      nGameMode: I,
                       fnSetGameMode: (e) => {
-                        (N = e), G();
+                        (I = e), $();
                       },
                     }),
-                    n.createElement(T, {
-                      strMMR: _,
+                    n.createElement(R, {
+                      strMMR: g,
                       fnSetMMR: (e) => {
-                        (_ = e), G();
+                        (g = e), $();
                       },
                     }),
                   ),
@@ -1441,19 +1460,19 @@
                       { className: m().ItemOptionTitle },
                       "Disliked Items",
                     ),
-                    n.createElement(k, {
-                      nItemID: D[0],
-                      fnSetSelectedItem: (e) => q(0, e),
+                    n.createElement(h, {
+                      nItemID: b[0],
+                      fnSetSelectedItem: (e) => J(0, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
-                    n.createElement(k, {
-                      nItemID: D[1],
-                      fnSetSelectedItem: (e) => q(1, e),
+                    n.createElement(h, {
+                      nItemID: b[1],
+                      fnSetSelectedItem: (e) => J(1, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
                   ),
                   n.createElement(
@@ -1464,19 +1483,19 @@
                       { className: m().ItemOptionTitle },
                       "Liked Items",
                     ),
-                    n.createElement(k, {
-                      nItemID: R[0],
-                      fnSetSelectedItem: (e) => J(0, e),
+                    n.createElement(h, {
+                      nItemID: D[0],
+                      fnSetSelectedItem: (e) => X(0, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
-                    n.createElement(k, {
-                      nItemID: R[1],
-                      fnSetSelectedItem: (e) => J(1, e),
+                    n.createElement(h, {
+                      nItemID: D[1],
+                      fnSetSelectedItem: (e) => X(1, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
                   ),
                   n.createElement(
@@ -1487,17 +1506,17 @@
                       { className: m().ItemOptionTitle },
                       "Purchased Items",
                     ),
-                    (0, g.bu)(0, 9).map((e) =>
-                      n.createElement(k, {
+                    (0, f.bu)(0, 9).map((e) =>
+                      n.createElement(h, {
                         key: `PurchasedItem_${e}`,
-                        nItemID: I[e],
+                        nItemID: T[e],
                         fnSetSelectedItem: (t) => {
-                          return (a = t), (I[e] = a), void G();
+                          return (a = t), (T[e] = a), void $();
                           var a;
                         },
                         bShowName: !1,
                         bAllowEmpty: !0,
-                        bFilterLategame: !1,
+                        eItemFilter: A.ITEM_OPTIONS_LATE,
                       }),
                     ),
                   ),
@@ -1507,7 +1526,7 @@
                     { className: m().ResultHeader },
                     "Top Variants",
                   ),
-                  B.length > 0 &&
+                  x.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().VariantTypes },
@@ -1523,9 +1542,9 @@
                           {
                             className: (0, l.A)(
                               m().VariantType,
-                              !L && m().Selected,
+                              !w && m().Selected,
                             ),
-                            onClick: () => w(!1),
+                            onClick: () => P(!1),
                           },
                           "More Item Variety",
                         ),
@@ -1543,15 +1562,15 @@
                           {
                             className: (0, l.A)(
                               m().VariantType,
-                              L && m().Selected,
+                              w && m().Selected,
                             ),
-                            onClick: () => w(!0),
+                            onClick: () => P(!0),
                           },
                           "More Order Variety",
                         ),
                       ),
                     ),
-                  B.length > 0 &&
+                  x.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().PenaltySelector },
@@ -1569,8 +1588,8 @@
                         "select",
                         {
                           className: m().PenaltyDropdown,
-                          value: P,
-                          onChange: (e) => H(parseInt(e.target.value)),
+                          value: H,
+                          onChange: (e) => G(parseInt(e.target.value)),
                         },
                         n.createElement(
                           "option",
@@ -1609,11 +1628,11 @@
                         ),
                       ),
                     ),
-                  x.length > 0 &&
+                  K.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().Results },
-                      x.map((e, t) =>
+                      K.map((e, t) =>
                         t >= M
                           ? null
                           : n.createElement(
@@ -1663,7 +1682,7 @@
                                 "div",
                                 { className: m().ItemList },
                                 e.arrItemSequence.map((e, a) =>
-                                  n.createElement(h, {
+                                  n.createElement(N, {
                                     nItemID: e,
                                     key: `InferenceReuslt_${t}_Item_${a}`,
                                   }),
@@ -1672,10 +1691,10 @@
                             ),
                       ),
                     ),
-                  x.length > 0 &&
+                  K.length > 0 &&
                     n.createElement(
                       "div",
-                      { className: m().ShowMore, onClick: () => O(M + 3) },
+                      { className: m().ShowMore, onClick: () => L(M + 3) },
                       "Show More",
                     ),
                   n.createElement("div", { className: m().Separator }),
@@ -1684,12 +1703,12 @@
                     { className: m().ResultHeader },
                     "Raw Results",
                   ),
-                  B.length > 0 &&
+                  x.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().Results },
-                      B.map((e, t) =>
-                        t >= b
+                      x.map((e, t) =>
+                        t >= O
                           ? null
                           : n.createElement(
                               "div",
@@ -1738,7 +1757,7 @@
                                 "div",
                                 { className: m().ItemList },
                                 e.arrItemSequence.map((e, a) =>
-                                  n.createElement(h, {
+                                  n.createElement(N, {
                                     nItemID: e,
                                     key: `InferenceReuslt_${t}_Item_${a}`,
                                   }),
@@ -1747,10 +1766,10 @@
                             ),
                       ),
                     ),
-                  B.length > 0 &&
+                  x.length > 0 &&
                     n.createElement(
                       "div",
-                      { className: m().ShowMore, onClick: () => C(b + 10) },
+                      { className: m().ShowMore, onClick: () => C(O + 10) },
                       "Show More",
                     ),
                 ),
@@ -1761,7 +1780,7 @@
                 "Loading hero and item data...",
               );
         },
-        w = (e) => {
+        P = (e) => {
           const t = new URLSearchParams(e.strConfig),
             a = (0, u.W6)();
           let r = parseInt(t.get("nHeroID") || "0"),
@@ -1775,17 +1794,17 @@
             y = (t.get("arrEnemyHeroFacets") || "0,0,0,0")
               .split(",")
               .map(Number),
-            f = t.get("nAverageMMR") || "2000",
-            _ = parseInt(t.get("nGameMode") || "22"),
-            N = (t.get("arrPurchasedItems") || "0,0,0,0,0,0,0,0,0,0")
+            _ = t.get("nAverageMMR") || "2000",
+            g = parseInt(t.get("nGameMode") || "22"),
+            I = (t.get("arrPurchasedItems") || "0,0,0,0,0,0,0,0,0,0")
               .split(",")
               .map(Number),
-            I = (t.get("arrLikedItems") || "0,0").split(",").map(Number),
-            R = (t.get("arrDislikedItems") || "0,0").split(",").map(Number);
-          const [D, b] = n.useState(10),
+            T = (t.get("arrLikedItems") || "0,0").split(",").map(Number),
+            D = (t.get("arrDislikedItems") || "0,0").split(",").map(Number);
+          const [b, O] = n.useState(10),
             [C, M] = n.useState(3),
-            [O, L] = n.useState(3),
-            w = () => {
+            [L, w] = n.useState(3),
+            P = () => {
               const t = F({
                 nHeroID: r,
                 nFacet: l,
@@ -1794,129 +1813,129 @@
                 arrAlliedHeroFacets: d,
                 arrEnemyHeroIDs: E,
                 arrEnemyHeroFacets: y,
-                nAverageMMR: parseInt(f),
-                nGameMode: _,
-                arrLikedItems: I,
-                arrDislikedItems: R,
-                arrPurchasedItems: N,
+                nAverageMMR: parseInt(_),
+                nGameMode: g,
+                arrLikedItems: T,
+                arrDislikedItems: D,
+                arrPurchasedItems: I,
               });
               e.strConfig != t && a.push(p.J.dotaplustester(e.strFeature, t));
             },
-            P = (0, i.oF)(r, l, o, s, d, E, y, parseInt(f), _, !0, N).data,
-            H = (0, i.oF)(r, l, o, s, d, E, y, parseInt(f), _, !1, N).data;
-          let G = [];
+            H = (0, i.oF)(r, l, o, s, d, E, y, parseInt(_), g, !0, I).data,
+            G = (0, i.oF)(r, l, o, s, d, E, y, parseInt(_), g, !1, I).data;
+          let $ = [];
           if (
-            P &&
             H &&
-            P.backend_response.outputs.length > 0 &&
-            H.backend_response.outputs.length > 0
+            G &&
+            H.backend_response.outputs.length > 0 &&
+            G.backend_response.outputs.length > 0
           )
             for (
               let e = 0;
               e <
-              P.backend_response.outputs[0].categorical_crossentropy
+              H.backend_response.outputs[0].categorical_crossentropy
                 .value_sequence.length;
               e++
             ) {
               let t = {
                 arrItemSequence:
-                  P.backend_response.outputs[0].categorical_crossentropy
+                  H.backend_response.outputs[0].categorical_crossentropy
                     .value_sequence[e].value,
                 fScore:
-                  P.backend_response.outputs[0].categorical_crossentropy.weight[
+                  H.backend_response.outputs[0].categorical_crossentropy.weight[
                     e
                   ],
                 fWinLossAdjust: 0,
                 nSequenceID:
-                  P.backend_response.outputs[0].categorical_crossentropy.value[
+                  H.backend_response.outputs[0].categorical_crossentropy.value[
                     e
                   ],
               };
               for (
                 let a = 0;
                 a <
-                H.backend_response.outputs[0].categorical_crossentropy.value
+                G.backend_response.outputs[0].categorical_crossentropy.value
                   .length;
                 a++
               )
                 if (
-                  H.backend_response.outputs[0].categorical_crossentropy.value[
+                  G.backend_response.outputs[0].categorical_crossentropy.value[
                     a
                   ] ==
-                  P.backend_response.outputs[0].categorical_crossentropy.value[
+                  H.backend_response.outputs[0].categorical_crossentropy.value[
                     e
                   ]
                 ) {
                   const n =
                     10 *
-                    (P.backend_response.outputs[0].categorical_crossentropy
+                    (H.backend_response.outputs[0].categorical_crossentropy
                       .weight[e] -
-                      H.backend_response.outputs[0].categorical_crossentropy
+                      G.backend_response.outputs[0].categorical_crossentropy
                         .weight[a]);
                   (t.fScore = Math.max(0, t.fScore + n + 0.01)),
                     (t.fWinLossAdjust += n);
                 }
-              G.push(t);
+              $.push(t);
             }
-          for (let e of G)
-            0 != R[0] &&
-              e.arrItemSequence.includes(R[0]) &&
+          for (let e of $)
+            0 != D[0] &&
+              e.arrItemSequence.includes(D[0]) &&
               (e.fScore = Math.pow(e.fScore, 3)),
-              0 != R[1] &&
-                e.arrItemSequence.includes(R[1]) &&
+              0 != D[1] &&
+                e.arrItemSequence.includes(D[1]) &&
                 (e.fScore = Math.pow(e.fScore, 3));
-          for (let e of G)
-            0 != I[0] &&
-              e.arrItemSequence.includes(I[0]) &&
+          for (let e of $)
+            0 != T[0] &&
+              e.arrItemSequence.includes(T[0]) &&
               (e.fScore = Math.pow(e.fScore, 1 / 3)),
-              0 != I[1] &&
-                e.arrItemSequence.includes(I[1]) &&
+              0 != T[1] &&
+                e.arrItemSequence.includes(T[1]) &&
                 (e.fScore = Math.pow(e.fScore, 1 / 3));
-          G.sort((e, t) => t.fScore - e.fScore);
-          for (let e of G)
+          $.sort((e, t) => t.fScore - e.fScore);
+          for (let e of $)
             e.arrItemSequence = e.arrItemSequence.filter((e) => 0 != e);
-          const $ = (0, i.HJ)(),
-            U = (0, i.wB)();
-          let B = [];
-          if (G.length > 0 && (B.push(G[0]), $.data)) {
+          const U = (0, i.HJ)(),
+            B = (0, i.wB)();
+          let x = [];
+          if ($.length > 0 && (x.push($[0]), U.data)) {
             let e = new Map();
-            for (const t of B[0].arrItemSequence) e.set(t, 1);
-            for (let t = 1; t < G.length; t++) {
+            for (const t of x[0].arrItemSequence) e.set(t, 1);
+            for (let t = 1; t < $.length; t++) {
               let a = 0;
-              for (const n of G[t].arrItemSequence)
-                $.data.itemabilities.find((e) => e.id == n)
+              for (const n of $[t].arrItemSequence)
+                U.data.itemabilities.find((e) => e.id == n)
                   ?.is_lategame_suggested &&
                   (e.has(n) || a++);
-              if (a >= O) {
-                B.push(G[t]);
-                for (const a of G[t].arrItemSequence)
+              if (a >= L) {
+                x.push($[t]);
+                for (const a of $[t].arrItemSequence)
                   e.set(a, (e.get(a) || 0) + 1);
-                if (B.length >= C) break;
+                if (x.length >= C) break;
               }
             }
           }
-          const x = (e) => {
-              (l = e), w();
-            },
-            K = (e, t) => {
-              (s[e] = t), w();
-            },
-            W = (e, t) => {
-              (d[e] = t), w();
+          const K = (e) => {
+              (l = e), P();
             },
             Y = (e, t) => {
-              (E[e] = t), w();
+              (s[e] = t), P();
+            },
+            W = (e, t) => {
+              (d[e] = t), P();
             },
             j = (e, t) => {
-              (y[e] = t), w();
+              (E[e] = t), P();
             },
             V = (e, t) => {
-              (R[e] = t), w();
+              (y[e] = t), P();
             },
             q = (e, t) => {
-              (I[e] = t), w();
+              (D[e] = t), P();
+            },
+            J = (e, t) => {
+              (T[e] = t), P();
             };
-          return $.data && U.data
+          return U.data && B.data
             ? n.createElement(
                 "div",
                 { className: m().DotaPlusTesterSubPage },
@@ -1933,8 +1952,8 @@
                         strLabel: "Your Hero",
                         nHeroID: r,
                         nFacet: l,
-                        fnSetSelectedHero: (e) => ((r = e), void w()),
-                        fnSetSelectedFacet: (e) => x(e),
+                        fnSetSelectedHero: (e) => ((r = e), void P()),
+                        fnSetSelectedFacet: (e) => K(e),
                       }),
                     ),
                     n.createElement(
@@ -1944,28 +1963,28 @@
                         strLabel: "Ally #1",
                         nHeroID: s[0],
                         nFacet: d[0],
-                        fnSetSelectedHero: (e) => K(0, e),
+                        fnSetSelectedHero: (e) => Y(0, e),
                         fnSetSelectedFacet: (e) => W(0, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Ally #2",
                         nHeroID: s[1],
                         nFacet: d[1],
-                        fnSetSelectedHero: (e) => K(1, e),
+                        fnSetSelectedHero: (e) => Y(1, e),
                         fnSetSelectedFacet: (e) => W(1, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Ally #3",
                         nHeroID: s[2],
                         nFacet: d[2],
-                        fnSetSelectedHero: (e) => K(2, e),
+                        fnSetSelectedHero: (e) => Y(2, e),
                         fnSetSelectedFacet: (e) => W(2, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Ally #4",
                         nHeroID: s[3],
                         nFacet: d[3],
-                        fnSetSelectedHero: (e) => K(3, e),
+                        fnSetSelectedHero: (e) => Y(3, e),
                         fnSetSelectedFacet: (e) => W(3, e),
                       }),
                     ),
@@ -1976,36 +1995,36 @@
                         strLabel: "Enemy #1",
                         nHeroID: E[0],
                         nFacet: y[0],
-                        fnSetSelectedHero: (e) => Y(0, e),
-                        fnSetSelectedFacet: (e) => j(0, e),
+                        fnSetSelectedHero: (e) => j(0, e),
+                        fnSetSelectedFacet: (e) => V(0, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #2",
                         nHeroID: E[1],
                         nFacet: y[1],
-                        fnSetSelectedHero: (e) => Y(1, e),
-                        fnSetSelectedFacet: (e) => j(1, e),
+                        fnSetSelectedHero: (e) => j(1, e),
+                        fnSetSelectedFacet: (e) => V(1, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #3",
                         nHeroID: E[2],
                         nFacet: y[2],
-                        fnSetSelectedHero: (e) => Y(2, e),
-                        fnSetSelectedFacet: (e) => j(2, e),
+                        fnSetSelectedHero: (e) => j(2, e),
+                        fnSetSelectedFacet: (e) => V(2, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #4",
                         nHeroID: E[3],
                         nFacet: y[3],
-                        fnSetSelectedHero: (e) => Y(3, e),
-                        fnSetSelectedFacet: (e) => j(3, e),
+                        fnSetSelectedHero: (e) => j(3, e),
+                        fnSetSelectedFacet: (e) => V(3, e),
                       }),
                       n.createElement(S, {
                         strLabel: "Enemy #5",
                         nHeroID: E[4],
                         nFacet: y[4],
-                        fnSetSelectedHero: (e) => Y(4, e),
-                        fnSetSelectedFacet: (e) => j(4, e),
+                        fnSetSelectedHero: (e) => j(4, e),
+                        fnSetSelectedFacet: (e) => V(4, e),
                       }),
                     ),
                   ),
@@ -2013,22 +2032,22 @@
                   n.createElement(
                     "div",
                     { className: m().MiscInfo },
-                    n.createElement(A, {
+                    n.createElement(k, {
                       nPosition: o,
                       fnSetPosition: (e) => {
-                        (o = e), w();
+                        (o = e), P();
                       },
                     }),
                     n.createElement(v, {
-                      nGameMode: _,
+                      nGameMode: g,
                       fnSetGameMode: (e) => {
-                        (_ = e), w();
+                        (g = e), P();
                       },
                     }),
-                    n.createElement(T, {
-                      strMMR: f,
+                    n.createElement(R, {
+                      strMMR: _,
                       fnSetMMR: (e) => {
-                        (f = e), w();
+                        (_ = e), P();
                       },
                     }),
                   ),
@@ -2041,19 +2060,19 @@
                       { className: m().ItemOptionTitle },
                       "Disliked Items",
                     ),
-                    n.createElement(k, {
-                      nItemID: R[0],
-                      fnSetSelectedItem: (e) => V(0, e),
+                    n.createElement(h, {
+                      nItemID: D[0],
+                      fnSetSelectedItem: (e) => q(0, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
-                    n.createElement(k, {
-                      nItemID: R[1],
-                      fnSetSelectedItem: (e) => V(1, e),
+                    n.createElement(h, {
+                      nItemID: D[1],
+                      fnSetSelectedItem: (e) => q(1, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
                   ),
                   n.createElement(
@@ -2064,19 +2083,19 @@
                       { className: m().ItemOptionTitle },
                       "Liked Items",
                     ),
-                    n.createElement(k, {
-                      nItemID: I[0],
-                      fnSetSelectedItem: (e) => q(0, e),
+                    n.createElement(h, {
+                      nItemID: T[0],
+                      fnSetSelectedItem: (e) => J(0, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
-                    n.createElement(k, {
-                      nItemID: I[1],
-                      fnSetSelectedItem: (e) => q(1, e),
+                    n.createElement(h, {
+                      nItemID: T[1],
+                      fnSetSelectedItem: (e) => J(1, e),
                       bShowName: !1,
                       bAllowEmpty: !0,
-                      bFilterLategame: !0,
+                      eItemFilter: A.ITEM_OPTIONS_LATE,
                     }),
                   ),
                   n.createElement(
@@ -2087,17 +2106,17 @@
                       { className: m().ItemOptionTitle },
                       "Purchased Items",
                     ),
-                    (0, g.bu)(0, 9).map((e) =>
-                      n.createElement(k, {
+                    (0, f.bu)(0, 9).map((e) =>
+                      n.createElement(h, {
                         key: `PurchasedItem_${e}`,
-                        nItemID: N[e],
+                        nItemID: I[e],
                         fnSetSelectedItem: (t) => {
-                          return (a = t), (N[e] = a), void w();
+                          return (a = t), (I[e] = a), void P();
                           var a;
                         },
                         bShowName: !1,
                         bAllowEmpty: !0,
-                        bFilterLategame: !1,
+                        eItemFilter: A.ITEM_OPTIONS_EARLY_LATE,
                       }),
                     ),
                   ),
@@ -2107,7 +2126,7 @@
                     { className: m().ResultHeader },
                     "Top Variants",
                   ),
-                  G.length > 0 &&
+                  $.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().PenaltySelector },
@@ -2125,8 +2144,8 @@
                         "select",
                         {
                           className: m().PenaltyDropdown,
-                          value: O,
-                          onChange: (e) => L(parseInt(e.target.value)),
+                          value: L,
+                          onChange: (e) => w(parseInt(e.target.value)),
                         },
                         n.createElement("option", { key: 1, value: 1 }, "1"),
                         n.createElement("option", { key: 2, value: 2 }, "2"),
@@ -2134,11 +2153,11 @@
                         n.createElement("option", { key: 4, value: 4 }, "4"),
                       ),
                     ),
-                  B.length > 0 &&
+                  x.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().Results },
-                      B.map((e, t) =>
+                      x.map((e, t) =>
                         t >= C
                           ? null
                           : n.createElement(
@@ -2188,7 +2207,7 @@
                                 "div",
                                 { className: m().ItemList },
                                 e.arrItemSequence.map((e, a) =>
-                                  n.createElement(h, {
+                                  n.createElement(N, {
                                     nItemID: e,
                                     key: `InferenceReuslt_${t}_Item_${a}`,
                                   }),
@@ -2197,7 +2216,7 @@
                             ),
                       ),
                     ),
-                  B.length > 0 &&
+                  x.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().ShowMore, onClick: () => M(C + 3) },
@@ -2209,12 +2228,12 @@
                     { className: m().ResultHeader },
                     "Raw Results",
                   ),
-                  G.length > 0 &&
+                  $.length > 0 &&
                     n.createElement(
                       "div",
                       { className: m().Results },
-                      G.map((e, t) =>
-                        t >= D
+                      $.map((e, t) =>
+                        t >= b
                           ? null
                           : n.createElement(
                               "div",
@@ -2263,7 +2282,7 @@
                                 "div",
                                 { className: m().ItemList },
                                 e.arrItemSequence.map((e, a) =>
-                                  n.createElement(h, {
+                                  n.createElement(N, {
                                     nItemID: e,
                                     key: `InferenceReuslt_${t}_Item_${a}`,
                                   }),
@@ -2272,10 +2291,10 @@
                             ),
                       ),
                     ),
-                  G.length > 0 &&
+                  $.length > 0 &&
                     n.createElement(
                       "div",
-                      { className: m().ShowMore, onClick: () => b(D + 10) },
+                      { className: m().ShowMore, onClick: () => O(b + 10) },
                       "Show More",
                     ),
                 ),
@@ -2286,19 +2305,13 @@
                 "Loading hero and item data...",
               );
         },
-        P = () => {
+        H = () => {
           const e = (0, u.W6)(),
             t = (0, u.g)();
           let a;
           switch (t.strFeature) {
-            case R:
-              a = n.createElement(M, {
-                strFeature: t.strFeature,
-                strConfig: t.strConfig,
-              });
-              break;
             case D:
-              a = n.createElement(O, {
+              a = n.createElement(M, {
                 strFeature: t.strFeature,
                 strConfig: t.strConfig,
               });
@@ -2309,14 +2322,20 @@
                 strConfig: t.strConfig,
               });
               break;
-            case C:
+            case O:
               a = n.createElement(w, {
+                strFeature: t.strFeature,
+                strConfig: t.strConfig,
+              });
+              break;
+            case C:
+              a = n.createElement(P, {
                 strFeature: t.strFeature,
                 strConfig: t.strConfig,
               });
           }
           if (null == a)
-            return n.createElement(u.rd, { to: p.J.dotaplustester(R) });
+            return n.createElement(u.rd, { to: p.J.dotaplustester(D) });
           const r = (a) => {
             e.push(p.J.dotaplustester(a, t.strConfig));
           };
@@ -2332,22 +2351,11 @@
                 {
                   className: (0, l.A)(
                     m().Option,
-                    t.strFeature == R && m().Selected,
-                  ),
-                  onClick: () => r(R),
-                },
-                "Pregame Items",
-              ),
-              n.createElement(
-                "div",
-                {
-                  className: (0, l.A)(
-                    m().Option,
                     t.strFeature == D && m().Selected,
                   ),
                   onClick: () => r(D),
                 },
-                "Early Game Items",
+                "Pregame Items",
               ),
               n.createElement(
                 "div",
@@ -2357,6 +2365,17 @@
                     t.strFeature == b && m().Selected,
                   ),
                   onClick: () => r(b),
+                },
+                "Early Game Items",
+              ),
+              n.createElement(
+                "div",
+                {
+                  className: (0, l.A)(
+                    m().Option,
+                    t.strFeature == O && m().Selected,
+                  ),
+                  onClick: () => r(O),
                 },
                 "Late Game Items",
               ),
@@ -2378,7 +2397,7 @@
     },
     54302: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => fe });
+      a.r(t), a.d(t, { default: () => _e });
       var n = a(75749),
         r = a.n(n),
         l = a(88351),
@@ -2392,73 +2411,73 @@
         p = a(81404),
         E = a(26195),
         y = a(20196),
-        f = a(56529),
-        g = a(42643),
-        _ = a(92513),
+        _ = a(56529),
+        f = a(42643),
+        g = a(92513),
         S = a(89506),
-        h = a(21384),
-        N = a(47202),
-        k = a(36305),
-        A = a(55651),
-        I = a(33706),
-        v = a(89145),
-        T = a(94610);
-      function F(e) {
+        N = a(21384),
+        I = a(47202),
+        A = a(36305),
+        h = a(55651),
+        k = a(33706),
+        T = a(89145),
+        v = a(94610);
+      function R(e) {
         return 570 === e ? "public" : "beta";
       }
-      function R(e) {
+      function F(e) {
         switch (e) {
-          case v.Fk.DOTA_GAMEMODE_NONE:
+          case T.Fk.DOTA_GAMEMODE_NONE:
             return "-";
-          case v.Fk.DOTA_GAMEMODE_AP:
+          case T.Fk.DOTA_GAMEMODE_AP:
             return "AP";
-          case v.Fk.DOTA_GAMEMODE_CM:
+          case T.Fk.DOTA_GAMEMODE_CM:
             return "CM";
-          case v.Fk.DOTA_GAMEMODE_RD:
+          case T.Fk.DOTA_GAMEMODE_RD:
             return "RD";
-          case v.Fk.DOTA_GAMEMODE_SD:
+          case T.Fk.DOTA_GAMEMODE_SD:
             return "SD";
-          case v.Fk.DOTA_GAMEMODE_AR:
+          case T.Fk.DOTA_GAMEMODE_AR:
             return "AR";
-          case v.Fk.DOTA_GAMEMODE_INTRO:
+          case T.Fk.DOTA_GAMEMODE_INTRO:
             return "INTRO";
-          case v.Fk.DOTA_GAMEMODE_HW:
+          case T.Fk.DOTA_GAMEMODE_HW:
             return "OCT31";
-          case v.Fk.DOTA_GAMEMODE_REVERSE_CM:
+          case T.Fk.DOTA_GAMEMODE_REVERSE_CM:
             return "Rev CM";
-          case v.Fk.DOTA_GAMEMODE_XMAS:
+          case T.Fk.DOTA_GAMEMODE_XMAS:
             return "XMAS";
-          case v.Fk.DOTA_GAMEMODE_TUTORIAL:
+          case T.Fk.DOTA_GAMEMODE_TUTORIAL:
             return "Tutorial";
-          case v.Fk.DOTA_GAMEMODE_MO:
+          case T.Fk.DOTA_GAMEMODE_MO:
             return "MID";
-          case v.Fk.DOTA_GAMEMODE_LP:
+          case T.Fk.DOTA_GAMEMODE_LP:
             return "LP";
-          case v.Fk.DOTA_GAMEMODE_POOL1:
+          case T.Fk.DOTA_GAMEMODE_POOL1:
             return "Pool1";
-          case v.Fk.DOTA_GAMEMODE_FH:
+          case T.Fk.DOTA_GAMEMODE_FH:
             return "FH";
-          case v.Fk.DOTA_GAMEMODE_CUSTOM:
+          case T.Fk.DOTA_GAMEMODE_CUSTOM:
             return "CUSTOM";
-          case v.Fk.DOTA_GAMEMODE_CD:
+          case T.Fk.DOTA_GAMEMODE_CD:
             return "CD";
-          case v.Fk.DOTA_GAMEMODE_BD:
+          case T.Fk.DOTA_GAMEMODE_BD:
             return "BD";
-          case v.Fk.DOTA_GAMEMODE_ABILITY_DRAFT:
+          case T.Fk.DOTA_GAMEMODE_ABILITY_DRAFT:
             return "AD";
-          case v.Fk.DOTA_GAMEMODE_EVENT:
+          case T.Fk.DOTA_GAMEMODE_EVENT:
             return "EVENT";
-          case v.Fk.DOTA_GAMEMODE_ARDM:
+          case T.Fk.DOTA_GAMEMODE_ARDM:
             return "ARDM";
-          case v.Fk.DOTA_GAMEMODE_1V1MID:
+          case T.Fk.DOTA_GAMEMODE_1V1MID:
             return "1v1";
-          case v.Fk.DOTA_GAMEMODE_ALL_DRAFT:
+          case T.Fk.DOTA_GAMEMODE_ALL_DRAFT:
             return "AP";
-          case v.Fk.DOTA_GAMEMODE_TURBO:
+          case T.Fk.DOTA_GAMEMODE_TURBO:
             return "TURBO";
-          case v.Fk.DOTA_GAMEMODE_MUTATION:
+          case T.Fk.DOTA_GAMEMODE_MUTATION:
             return "MUT";
-          case v.Fk.DOTA_GAMEMODE_COACHES_CHALLENGE:
+          case T.Fk.DOTA_GAMEMODE_COACHES_CHALLENGE:
             return "COACH";
           default:
             return "Unknown";
@@ -2466,25 +2485,25 @@
       }
       function D(e) {
         switch (e) {
-          case v.AP.CASUAL_MATCH:
+          case T.AP.CASUAL_MATCH:
             return "Unranked";
-          case v.AP.PRACTICE:
+          case T.AP.PRACTICE:
             return "Practice";
-          case v.AP.COOP_BOT_MATCH:
+          case T.AP.COOP_BOT_MATCH:
             return "Co-op Bot";
-          case v.AP.COMPETITIVE_MATCH:
+          case T.AP.COMPETITIVE_MATCH:
             return "Ranked";
-          case v.AP.WEEKEND_TOURNEY:
+          case T.AP.WEEKEND_TOURNEY:
             return "Battle Cup";
-          case v.AP.LOCAL_BOT_MATCH:
+          case T.AP.LOCAL_BOT_MATCH:
             return "Local Bot";
-          case v.AP.SPECTATOR:
+          case T.AP.SPECTATOR:
             return "Spectator";
-          case v.AP.EVENT_MATCH:
+          case T.AP.EVENT_MATCH:
             return "Event";
-          case v.AP.NEW_PLAYER_POOL:
+          case T.AP.NEW_PLAYER_POOL:
             return "New Player Pool";
-          case v.AP.FEATURED_GAMEMODE:
+          case T.AP.FEATURED_GAMEMODE:
             return "Featured Gamemode";
           default:
             return "";
@@ -2492,63 +2511,63 @@
       }
       function b(e) {
         switch (e) {
-          case v.rM.RADIANT_VICTORY:
+          case T.rM.RADIANT_VICTORY:
             return "Radiant Victory";
-          case v.rM.DIRE_VICTORY:
+          case T.rM.DIRE_VICTORY:
             return "Dire Victory";
-          case v.rM.NOTSCORED_POOR_NETWORK:
+          case T.rM.NOTSCORED_POOR_NETWORK:
             return "Net";
-          case v.rM.NOTSCORED_LEAVER:
+          case T.rM.NOTSCORED_LEAVER:
             return "Lvr";
-          case v.rM.NOTSCORED_SERVER_CRASH:
+          case T.rM.NOTSCORED_SERVER_CRASH:
             return "Crsh";
-          case v.rM.NOTSCORED_NEVER_STARTED:
+          case T.rM.NOTSCORED_NEVER_STARTED:
             return "No start";
-          case v.rM.NOTSCORED_CANCELED:
+          case T.rM.NOTSCORED_CANCELED:
             return "Cancel";
-          case v.rM.NOTSCORED_SUSPICIOUS:
+          case T.rM.NOTSCORED_SUSPICIOUS:
             return "Suspicious";
           default:
             return "-";
         }
       }
+      function O(e) {
+        switch (e) {
+          case T.GR.RANK_ELIGIBLE:
+            return "Rank Eligible";
+          case T.GR.BATTLECUP:
+            return "Battlecup";
+          case T.GR.BAN_WARNING:
+            return "Ban Warning";
+          case T.GR.RETURNING_PLAYER:
+            return "Returning Player";
+          case T.GR.COMMS_DISRUPTIVE:
+            return "Comms Disruptive";
+          default:
+            return "Unknown";
+        }
+      }
       function C(e) {
         switch (e) {
-          case v.GR.RANK_ELIGIBLE:
-            return "Rank Eligible";
-          case v.GR.BATTLECUP:
-            return "Battlecup";
-          case v.GR.BAN_WARNING:
-            return "Ban Warning";
-          case v.GR.RETURNING_PLAYER:
-            return "Returning Player";
-          case v.GR.COMMS_DISRUPTIVE:
-            return "Comms Disruptive";
+          case T.V7.VERY_LIKELY:
+            return "Very Likely";
+          case T.V7.SOMEWHAT_LIKELY:
+            return "Somewhat Likely";
+          case T.V7.UNCLEAR:
+            return "Unclear";
+          case T.V7.SOMEWHAT_UNLIKELY:
+            return "Somewhat Unlikely";
+          case T.V7.VERY_UNLIKELY:
+            return "Very Unlikely";
           default:
             return "Unknown";
         }
       }
       function M(e) {
         switch (e) {
-          case v.V7.VERY_LIKELY:
-            return "Very Likely";
-          case v.V7.SOMEWHAT_LIKELY:
-            return "Somewhat Likely";
-          case v.V7.UNCLEAR:
-            return "Unclear";
-          case v.V7.SOMEWHAT_UNLIKELY:
-            return "Somewhat Unlikely";
-          case v.V7.VERY_UNLIKELY:
-            return "Very Unlikely";
-          default:
-            return "Unknown";
-        }
-      }
-      function O(e) {
-        switch (e) {
-          case v.TK.DOTA_ACCESS_TOURNAMENT_ADMIN:
+          case T.TK.DOTA_ACCESS_TOURNAMENT_ADMIN:
             return "Tournament Admin";
-          case v.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
+          case T.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
             return "Tournament Broadcaster";
           default:
             return "Unknown";
@@ -2556,13 +2575,13 @@
       }
       function L(e) {
         switch (e) {
-          case v.Ov.CORE:
+          case T.Ov.CORE:
             return "Core";
-          case v.Ov.SUPPORT:
+          case T.Ov.SUPPORT:
             return "Support";
-          case v.Ov.OFFLANE:
+          case T.Ov.OFFLANE:
             return "Offlane";
-          case v.Ov.MID:
+          case T.Ov.MID:
             return "Mid";
           default:
             return "Unknown";
@@ -2577,8 +2596,8 @@
         B = "#adff2f",
         x = "darkgray",
         K = "forestgreen",
-        W = "crimson",
-        Y = "#fa002e",
+        Y = "crimson",
+        W = "#fa002e",
         j = "#82ca9d",
         V = "#888fd8",
         q = "#3389ae",
@@ -2677,31 +2696,31 @@
               let a = [];
               return (
                 0 == e && a.push("None"),
-                (e & v.GR.RANK_ELIGIBLE) > 0 &&
-                  a.push(`${C(v.GR.RANK_ELIGIBLE)}${t}`),
-                (e & v.GR.BATTLECUP) > 0 && a.push(`${C(v.GR.BATTLECUP)}${t}`),
-                (e & v.GR.BAN_WARNING) > 0 &&
+                (e & T.GR.RANK_ELIGIBLE) > 0 &&
+                  a.push(`${O(T.GR.RANK_ELIGIBLE)}${t}`),
+                (e & T.GR.BATTLECUP) > 0 && a.push(`${O(T.GR.BATTLECUP)}${t}`),
+                (e & T.GR.BAN_WARNING) > 0 &&
                   a.push(
                     o.createElement(
                       "span",
                       { style: { color: G } },
-                      `${C(v.GR.BAN_WARNING)}${t}`,
+                      `${O(T.GR.BAN_WARNING)}${t}`,
                     ),
                   ),
-                (e & v.GR.RETURNING_PLAYER) > 0 &&
+                (e & T.GR.RETURNING_PLAYER) > 0 &&
                   a.push(
                     o.createElement(
                       "span",
                       { style: { color: U } },
-                      `${C(v.GR.RETURNING_PLAYER)}${t}`,
+                      `${O(T.GR.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
-                (e & v.GR.COMMS_DISRUPTIVE) > 0 &&
+                (e & T.GR.COMMS_DISRUPTIVE) > 0 &&
                   a.push(
                     o.createElement(
                       "span",
                       { style: { color: G } },
-                      `${C(v.GR.COMMS_DISRUPTIVE)}${t}`,
+                      `${O(T.GR.COMMS_DISRUPTIVE)}${t}`,
                     ),
                   ),
                 o.createElement("div", null, a)
@@ -2810,38 +2829,38 @@
             displayName: "Smurf Category",
             formatFunction: (e) => {
               switch (e) {
-                case v.V7.VERY_LIKELY:
+                case T.V7.VERY_LIKELY:
                   return o.createElement(
                     "span",
                     { style: { color: G } },
-                    M(v.V7.VERY_LIKELY),
+                    C(T.V7.VERY_LIKELY),
                   );
-                case v.V7.SOMEWHAT_LIKELY:
+                case T.V7.SOMEWHAT_LIKELY:
                   return o.createElement(
                     "span",
                     { style: { color: $ } },
-                    M(v.V7.SOMEWHAT_LIKELY),
+                    C(T.V7.SOMEWHAT_LIKELY),
                   );
-                case v.V7.UNCLEAR:
+                case T.V7.UNCLEAR:
                   return o.createElement(
                     "span",
                     { style: { color: U } },
-                    M(v.V7.UNCLEAR),
+                    C(T.V7.UNCLEAR),
                   );
-                case v.V7.SOMEWHAT_UNLIKELY:
+                case T.V7.SOMEWHAT_UNLIKELY:
                   return o.createElement(
                     "span",
                     { style: {} },
-                    M(v.V7.SOMEWHAT_UNLIKELY),
+                    C(T.V7.SOMEWHAT_UNLIKELY),
                   );
-                case v.V7.VERY_UNLIKELY:
+                case T.V7.VERY_UNLIKELY:
                   return o.createElement(
                     "span",
                     { style: {} },
-                    M(v.V7.VERY_UNLIKELY),
+                    C(T.V7.VERY_UNLIKELY),
                   );
                 default:
-                  return o.createElement("span", null, M(v.V7.INVALID));
+                  return o.createElement("span", null, C(T.V7.INVALID));
               }
             },
           },
@@ -2876,7 +2895,7 @@
                     { className: H().MarginRightSmall },
                     o.createElement("span", { style: { color: K } }, `${e}`),
                     o.createElement("span", null, " - "),
-                    o.createElement("span", { style: { color: W } }, `${t}`),
+                    o.createElement("span", { style: { color: Y } }, `${t}`),
                   ),
                   o.createElement("span", { style: { color: r } }, `(${n}%)`),
                 )
@@ -2902,7 +2921,7 @@
                     { className: H().MarginRightSmall },
                     o.createElement("span", { style: { color: K } }, `${e}`),
                     o.createElement("span", null, " - "),
-                    o.createElement("span", { style: { color: W } }, `${t}`),
+                    o.createElement("span", { style: { color: Y } }, `${t}`),
                   ),
                   o.createElement("span", { style: { color: r } }, `(${n}%)`),
                 )
@@ -3026,17 +3045,17 @@
         le = [
           {
             key: "beta_access_flags",
-            displayName: O(v.TK.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: M(T.TK.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
-              e & v.TK.DOTA_ACCESS_TOURNAMENT_ADMIN
+              e & T.TK.DOTA_ACCESS_TOURNAMENT_ADMIN
                 ? o.createElement("div", { style: { color: B } }, "YES")
                 : "NO",
           },
           {
             key: "beta_access_flags",
-            displayName: O(v.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: M(T.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
-              e & v.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER
+              e & T.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER
                 ? o.createElement("div", { style: { color: B } }, "YES")
                 : "NO",
           },
@@ -3074,14 +3093,14 @@
             displayName: "Role",
             formatFunction: (e = 0) => {
               switch (e) {
-                case v.Ov.CORE:
-                  return L(v.Ov.CORE);
-                case v.Ov.SUPPORT:
-                  return L(v.Ov.SUPPORT);
-                case v.Ov.OFFLANE:
-                  return L(v.Ov.OFFLANE);
-                case v.Ov.MID:
-                  return L(v.Ov.MID);
+                case T.Ov.CORE:
+                  return L(T.Ov.CORE);
+                case T.Ov.SUPPORT:
+                  return L(T.Ov.SUPPORT);
+                case T.Ov.OFFLANE:
+                  return L(T.Ov.OFFLANE);
+                case T.Ov.MID:
+                  return L(T.Ov.MID);
                 default:
                   return "Unknown";
               }
@@ -3308,29 +3327,29 @@
           const t = (0, l.g)(),
             a = t?.id,
             [n, s] = (0, o.useState)(null),
-            [C, M] = (0, o.useState)(null),
-            [O, L] = (0, o.useState)(null),
+            [O, C] = (0, o.useState)(null),
+            [M, L] = (0, o.useState)(null),
             [P, B] = (0, o.useState)(null),
             [ie, ue] = (0, o.useState)(!1),
-            [ye, fe] = (0, o.useState)(!1),
-            [ge, _e] = (0, o.useState)(!1),
-            [Se, he] = (0, o.useState)(!1),
-            [Ne, ke] = (0, o.useState)(!0),
-            [Ae, Ie] = (0, o.useState)(!0),
-            [ve, Te] = (0, o.useState)(!1),
-            [Fe, Re] = (0, o.useState)(!0),
+            [ye, _e] = (0, o.useState)(!1),
+            [fe, ge] = (0, o.useState)(!1),
+            [Se, Ne] = (0, o.useState)(!1),
+            [Ie, Ae] = (0, o.useState)(!0),
+            [he, ke] = (0, o.useState)(!0),
+            [Te, ve] = (0, o.useState)(!1),
+            [Re, Fe] = (0, o.useState)(!0),
             [De, be] = (0, o.useState)(!0),
-            [Ce, Me] = (0, o.useState)(!1),
-            Oe = I.B5.Get().getHeroList(),
-            Le = I.B5.Get().getItemList();
+            [Oe, Ce] = (0, o.useState)(!1),
+            Me = k.B5.Get().getHeroList(),
+            Le = k.B5.Get().getItemList();
           (0, o.useEffect)(() => {
             try {
               !(async function () {
                 if (!S.r.DOTA_APP_ID || !a) return;
-                he(!1), _e(!1), ue(!1), fe(!1);
+                Ne(!1), ge(!1), ue(!1), _e(!1);
                 const e = {
                   appid: S.r.DOTA_APP_ID,
-                  u: F(S.r.DOTA_APP_ID),
+                  u: R(S.r.DOTA_APP_ID),
                   account_id: a,
                 };
                 try {
@@ -3347,7 +3366,7 @@
                     a &&
                       a.persona &&
                       a.persona.elodatajson &&
-                      M(JSON.parse(a.persona.elodatajson).aggregate);
+                      C(JSON.parse(a.persona.elodatajson).aggregate);
                   } catch (e) {}
                   try {
                     if (
@@ -3363,45 +3382,45 @@
                       L(e), B(e);
                     }
                   } catch (e) {
-                    fe(!0);
+                    _e(!0);
                   }
                   t && t.data && s(a);
                 } catch (e) {
                   console.log("Error fetching individual persona info."),
-                    he(!0);
+                    Ne(!0);
                 }
-                _e(!0), ue(!0);
+                ge(!0), ue(!0);
               })();
             } catch (e) {
               console.log("Could not fetch persona info.");
             }
           }, [a]),
             (0, o.useEffect)(() => {
-              if (!O) return;
-              let e = O.slice();
+              if (!M) return;
+              let e = M.slice();
               (e = e.filter(
                 (e) =>
-                  !(!Ae && e.lobbytype == v.AP.CASUAL_MATCH) &&
-                  !(!Ne && e.lobbytype == v.AP.COMPETITIVE_MATCH) &&
+                  !(!he && e.lobbytype == T.AP.CASUAL_MATCH) &&
+                  !(!Ie && e.lobbytype == T.AP.COMPETITIVE_MATCH) &&
                     !(
-                      !ve &&
+                      !Te &&
                       ![
-                        v.AP.CASUAL_MATCH,
-                        v.AP.COMPETITIVE_MATCH,
-                        v.AP.WEEKEND_TOURNEY,
-                        v.AP.FEATURED_GAMEMODE,
+                        T.AP.CASUAL_MATCH,
+                        T.AP.COMPETITIVE_MATCH,
+                        T.AP.WEEKEND_TOURNEY,
+                        T.AP.FEATURED_GAMEMODE,
                       ].includes(e.lobbytype)
                     ) &&
-                      !(!Fe && e.rankwassolo) &&
+                      !(!Re && e.rankwassolo) &&
                   !(!De && !e.rankwassolo),
               )),
                 B(e);
-            }, [O, Ne, Ae, ve, Fe, De]);
+            }, [M, Ie, he, Te, Re, De]);
           let we = null;
           if (
             (a
-              ? ge && ie
-                ? ge && Se
+              ? fe && ie
+                ? fe && Se
                   ? (we = `Error loading persona information for account ID ${a}. Double check universe & account ID (or try refreshing).`)
                   : ie &&
                     ye &&
@@ -3413,19 +3432,19 @@
             return o.createElement(
               "div",
               { className: H().PersonaDetails },
-              o.createElement(N.A, { bOverlapping: !1 }),
+              o.createElement(I.A, { bOverlapping: !1 }),
               o.createElement(
                 c.mg,
                 null,
                 o.createElement("title", null, "Dota 2 - Persona Details"),
               ),
-              o.createElement(T.A, null),
+              o.createElement(v.A, null),
               o.createElement(
                 "div",
                 { className: H().ContentFrame },
                 o.createElement("h2", { className: H().Header }, we),
               ),
-              o.createElement(k.K, null),
+              o.createElement(A.K, null),
             );
           const Pe = [
             {
@@ -3445,7 +3464,7 @@
                     "a",
                     {
                       key: e,
-                      href: `${S.r.BASE_URL}matches/match/${e}?u=${F(S.r.DOTA_APP_ID)}&appid=${S.r.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${S.r.BASE_URL}matches/match/${e}?u=${R(S.r.DOTA_APP_ID)}&appid=${S.r.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -3455,7 +3474,7 @@
               label: "Hero",
               widthRelative: 5,
               cellRenderer: (e) => {
-                const t = Oe?.heroes.find((t) => t.id == e.cellData),
+                const t = Me?.heroes.find((t) => t.id == e.cellData),
                   a = t?.name?.replace("npc_dota_hero_", "");
                 return a
                   ? o.createElement("img", {
@@ -3474,27 +3493,27 @@
               label: "Outcome",
               widthRelative: 7,
               cellRenderer: (e) => {
-                if (e.rowData?.lobbytype == v.AP.PRACTICE)
+                if (e.rowData?.lobbytype == T.AP.PRACTICE)
                   return o.createElement(
                     "span",
                     { style: { color: q } },
-                    D(v.AP.PRACTICE),
+                    D(T.AP.PRACTICE),
                   );
                 let t = e.cellData;
-                if ((t in v.rM || (t = 0), t <= 0)) return b(v.rM.UNKNOWN);
+                if ((t in T.rM || (t = 0), t <= 0)) return b(T.rM.UNKNOWN);
                 const a = e?.rowData?.teamnumber + 2;
-                if (a < 2 || a > 3) return b(v.rM.UNKNOWN);
+                if (a < 2 || a > 3) return b(T.rM.UNKNOWN);
                 if (t < 2 || t > 3) {
                   const t = e.cellData;
-                  return t in v.rM
+                  return t in T.rM
                     ? o.createElement("span", { style: { color: $ } }, b(t))
-                    : b(v.rM.UNKNOWN);
+                    : b(T.rM.UNKNOWN);
                 }
                 {
                   const n = a == t,
                     r = [],
                     l = e?.rowData?.rankchange;
-                  let c = n ? (l >= 35 ? "#68c529" : K) : l <= -35 ? Y : W;
+                  let c = n ? (l >= 35 ? "#68c529" : K) : l <= -35 ? W : Y;
                   return (
                     r.push(
                       o.createElement(
@@ -3578,12 +3597,12 @@
               widthRelative: 8,
               cellRenderer: (e) => {
                 let t = isNaN(e.cellData) ? e.rowData.lobbytype : e.cellData;
-                t in v.AP || (t = -1);
+                t in T.AP || (t = -1);
                 let a = q;
                 return (
-                  t == v.AP.CASUAL_MATCH
+                  t == T.AP.CASUAL_MATCH
                     ? (a = j)
-                    : t == v.AP.COMPETITIVE_MATCH && (a = V),
+                    : t == T.AP.COMPETITIVE_MATCH && (a = V),
                   o.createElement("span", { style: { color: a } }, D(t))
                 );
               },
@@ -3598,8 +3617,8 @@
                       type: "checkbox",
                       name: "ranked",
                       id: "ranked",
-                      onChange: () => ke(!Ne),
-                      checked: Ne,
+                      onChange: () => Ae(!Ie),
+                      checked: Ie,
                     }),
                     o.createElement(
                       "label",
@@ -3618,8 +3637,8 @@
                       type: "checkbox",
                       name: "unranked",
                       id: "unranked",
-                      onChange: () => Ie(!Ae),
-                      checked: Ae,
+                      onChange: () => ke(!he),
+                      checked: he,
                     }),
                     o.createElement(
                       "label",
@@ -3638,7 +3657,7 @@
               label: "Solo/Party (this label isn't used, check headerRenderer)",
               widthRelative: 6,
               cellRenderer: (e) =>
-                e.cellData && e?.rowData?.lobbytype != v.AP.WEEKEND_TOURNEY
+                e.cellData && e?.rowData?.lobbytype != T.AP.WEEKEND_TOURNEY
                   ? o.createElement("span", { style: { color: X } }, "Solo")
                   : o.createElement("span", { style: { color: J } }, "Party"),
               headerRenderer: (e) =>
@@ -3652,8 +3671,8 @@
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
-                      onChange: () => Re(!Fe),
-                      checked: Fe,
+                      onChange: () => Fe(!Re),
+                      checked: Re,
                     }),
                     o.createElement(
                       "label",
@@ -3687,11 +3706,11 @@
                 if (e?.rowData?.searchdata?.partylowpri)
                   return o.createElement(
                     "span",
-                    { style: { color: Y } },
+                    { style: { color: W } },
                     "SD (LP)",
                   );
                 const t = `DOTA_GAMEMODE_${e.cellData}`;
-                return t in v.Fk ? R(v.Fk[t]) : R(v.Fk.DOTA_GAMEMODE_NONE);
+                return t in T.Fk ? F(T.Fk[t]) : F(T.Fk.DOTA_GAMEMODE_NONE);
               },
             },
             {
@@ -3886,7 +3905,7 @@
                         },
                         o.createElement(
                           "span",
-                          { style: { color: Y } },
+                          { style: { color: W } },
                           "[Lvr] ",
                         ),
                       ),
@@ -4297,7 +4316,7 @@
           return o.createElement(
             "div",
             { className: H().PersonaDetails },
-            o.createElement(N.A, { bOverlapping: !1 }),
+            o.createElement(I.A, { bOverlapping: !1 }),
             o.createElement(
               c.mg,
               null,
@@ -4307,7 +4326,7 @@
                 "Dota 2 Player" + (Be ? " - " + Be : ""),
               ),
             ),
-            o.createElement(T.A, null),
+            o.createElement(v.A, null),
             o.createElement("br", null),
             o.createElement(
               "div",
@@ -4320,7 +4339,7 @@
                   { className: H().TopContentLeft },
                   o.createElement(
                     "h1",
-                    { className: (0, h.A)(H().Header, H().HeaderFixedHeight) },
+                    { className: (0, N.A)(H().Header, H().HeaderFixedHeight) },
                     `${Be}`,
                   ),
                   o.createElement(
@@ -4467,11 +4486,11 @@
                   o.createElement(
                     "div",
                     { className: H().ChartContainer },
-                    C &&
+                    O &&
                       o.createElement(
                         "div",
                         { className: H().ChartTitle },
-                        `Last ${C.length} games`,
+                        `Last ${O.length} games`,
                       ),
                     o.createElement(
                       i.u,
@@ -4479,7 +4498,7 @@
                       o.createElement(
                         d.b,
                         {
-                          data: C,
+                          data: O,
                           margin: { top: 5, right: 30, left: 20, bottom: 5 },
                         },
                         o.createElement(u.d, {
@@ -4504,13 +4523,13 @@
                             m()(1e3 * Number(e)).format("MM/DD/YY HH:mm:ss"),
                           contentStyle: { backgroundColor: "#0c1414" },
                         }),
-                        o.createElement(f.s, {
+                        o.createElement(_.s, {
                           layout: "vertical",
                           verticalAlign: "middle",
                           align: "right",
                           wrapperStyle: { paddingLeft: "10px" },
                         }),
-                        o.createElement(g.N, {
+                        o.createElement(f.N, {
                           type: "monotone",
                           dataKey: "ranked",
                           name: "Ranked",
@@ -4519,7 +4538,7 @@
                           strokeWidth: 2,
                           connectNulls: !0,
                         }),
-                        o.createElement(g.N, {
+                        o.createElement(f.N, {
                           type: "monotone",
                           dataKey: "casual",
                           name: "Unranked",
@@ -4538,25 +4557,25 @@
               o.createElement(
                 "div",
                 {
-                  className: (0, h.A)(
+                  className: (0, N.A)(
                     H().SupportGrid,
-                    Ce && H().SupportGridHidden,
+                    Oe && H().SupportGridHidden,
                   ),
                 },
                 o.createElement(
                   "div",
-                  { className: H().SupportColumn, onClick: () => Me(!0) },
+                  { className: H().SupportColumn, onClick: () => Ce(!0) },
                   o.createElement(
                     "h2",
                     {
-                      className: (0, h.A)(
+                      className: (0, N.A)(
                         H().HeaderNoMargin,
                         H().HeaderClickable,
                       ),
                     },
                     "Support, Bans, & Other Info",
                     o.createElement("img", {
-                      className: (0, h.A)(H().ArrowIcon, H().ArrowIconRight),
+                      className: (0, N.A)(H().ArrowIcon, H().ArrowIconRight),
                       src: `${S.r.IMG_URL}arrow_solid_right.png`,
                     }),
                   ),
@@ -4565,9 +4584,9 @@
               o.createElement(
                 "div",
                 {
-                  className: (0, h.A)(
+                  className: (0, N.A)(
                     H().SupportGrid,
-                    !Ce && H().SupportGridHidden,
+                    !Oe && H().SupportGridHidden,
                   ),
                 },
                 o.createElement(
@@ -4576,12 +4595,12 @@
                   o.createElement(
                     "h2",
                     {
-                      className: (0, h.A)(H().Header, H().HeaderClickable),
-                      onClick: () => Me(!1),
+                      className: (0, N.A)(H().Header, H().HeaderClickable),
+                      onClick: () => Ce(!1),
                     },
                     "Support, Bans, & Other Info",
                     o.createElement("img", {
-                      className: (0, h.A)(H().ArrowIcon, H().ArrowIconDown),
+                      className: (0, N.A)(H().ArrowIcon, H().ArrowIconDown),
                       src: `${S.r.IMG_URL}arrow_over.png`,
                     }),
                   ),
@@ -4713,7 +4732,7 @@
                             {
                               target: "_blank",
                               rel: "noopener noreferrer",
-                              href: `${S.r.BASE_URL}${A.J.personadetails($e).substr(1)}`,
+                              href: `${S.r.BASE_URL}${h.J.personadetails($e).substr(1)}`,
                             },
                             $e,
                           ),
@@ -4866,7 +4885,7 @@
               ),
               o.createElement(
                 "div",
-                { className: (0, h.A)(!Ce && H().SupportGridHidden) },
+                { className: (0, N.A)(!Oe && H().SupportGridHidden) },
                 o.createElement("div", { className: H().SmoothLine }),
                 o.createElement(
                   "table",
@@ -4942,8 +4961,8 @@
                 ),
               ),
               o.createElement("div", { className: H().SmoothLine }),
-              O &&
-                O.length &&
+              M &&
+                M.length &&
                 o.createElement(
                   "div",
                   { className: H().OtherModesCheckBox },
@@ -4951,8 +4970,8 @@
                     type: "checkbox",
                     name: "othermode",
                     id: "othermode",
-                    onChange: () => Te(!ve),
-                    checked: ve,
+                    onChange: () => ve(!Te),
+                    checked: Te,
                   }),
                   o.createElement(
                     "label",
@@ -4970,11 +4989,11 @@
                 o.createElement(
                   "div",
                   { className: H().MatchHistoryInnerContainer },
-                  O &&
-                    O.length &&
-                    o.createElement(_.t$, null, ({ width: e, height: t }) =>
+                  M &&
+                    M.length &&
+                    o.createElement(g.t$, null, ({ width: e, height: t }) =>
                       o.createElement(
-                        _.XI,
+                        g.XI,
                         {
                           headerHeight: 70,
                           height: t,
@@ -4997,7 +5016,7 @@
                             ),
                         },
                         Pe.map((t) =>
-                          o.createElement(_.VP, {
+                          o.createElement(g.VP, {
                             key: t.dataKey,
                             label: t.label,
                             dataKey: t.dataKey,
@@ -5009,15 +5028,15 @@
                         ),
                       ),
                     ),
-                  (!O || !O.length) &&
+                  (!M || !M.length) &&
                     o.createElement("div", null, "No matches"),
                 ),
               ),
             ),
-            o.createElement(k.K, null),
+            o.createElement(A.K, null),
           );
         };
-      class fe extends o.Component {
+      class _e extends o.Component {
         render() {
           return o.createElement(ye, null);
         }
@@ -5025,7 +5044,7 @@
     },
     4533: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => C });
+      a.r(t), a.d(t, { default: () => O });
       var n = a(75749),
         r = a.n(n),
         l = a(89506),
@@ -5039,13 +5058,13 @@
         p = a(94610),
         E = a(9784),
         y = a.n(E);
-      const f = "public",
-        g = 5e3,
-        _ = (e) =>
+      const _ = "public",
+        f = 5e3,
+        g = (e) =>
           c.createElement(
             "a",
             {
-              href: `${l.r.BASE_URL}personadetails/${e}?u=${f}&appid=${l.r.DOTA_APP_ID}`,
+              href: `${l.r.BASE_URL}personadetails/${e}?u=${_}&appid=${l.r.DOTA_APP_ID}`,
             },
             e,
           );
@@ -5070,7 +5089,7 @@
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
       })(S || (S = {}));
-      const h = {
+      const N = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -5090,7 +5109,7 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        N = [
+        I = [
           {
             enum: S.kTRAA_RegisterTeam,
             formatFunction: () =>
@@ -5249,7 +5268,7 @@
             formatFunction: () => "20% point penalty.",
           },
         ],
-        k = [
+        A = [
           {
             key: "pro",
             displayName: "Pro?",
@@ -5286,11 +5305,11 @@
             formatFunction: (e = "") => e.toUpperCase(),
           },
         ],
-        A = [
+        h = [
           {
             key: "account_id",
             displayName: "Account ID",
-            formatFunction: (e) => _(e),
+            formatFunction: (e) => g(e),
           },
           { key: "name", displayName: "Name" },
           { key: "persona_name", displayName: "Persona Name" },
@@ -5336,15 +5355,15 @@
               ),
           },
         ],
-        I = [
+        k = [
           {
             key: "manager_account_id",
             displayName: "Manager Account ID",
-            formatFunction: (e) => _(e),
+            formatFunction: (e) => g(e),
           },
           { key: "manager_email", displayName: "Manager Email" },
         ],
-        v = [
+        T = [
           {
             key: "color_primary",
             displayName: "Color (Primary)",
@@ -5408,7 +5427,7 @@
               ),
           },
         ],
-        T = [
+        v = [
           {
             key: "ugc_logo_url",
             displayName: "Logo",
@@ -5466,11 +5485,11 @@
               ),
           },
         ],
-        F = [
+        R = [
           {
             key: "account_id",
             displayName: "Account ID",
-            formatFunction: (e) => _(e),
+            formatFunction: (e) => g(e),
           },
           {
             key: "timestamp",
@@ -5481,16 +5500,16 @@
           {
             key: "action",
             displayName: "Action Enum",
-            formatFunction: (e) => `${h[e]} (${e})`,
+            formatFunction: (e) => `${N[e]} (${e})`,
           },
           {
             key: "action",
             displayName: "Audit Action",
             formatFunction: (e, t = "", a = "") =>
-              N.find((t) => t.enum === e).formatFunction.call(null, t, a),
+              I.find((t) => t.enum === e).formatFunction.call(null, t, a),
           },
         ],
-        R = [
+        F = [
           { key: "workshop_account_id", displayName: "Workshop Account ID" },
           {
             key: "comment",
@@ -5578,7 +5597,7 @@
                         "a",
                         {
                           key: t,
-                          href: `${l.r.BASE_URL}matches/match/${t}?u=${f}&appid=${l.r.DOTA_APP_ID}`,
+                          href: `${l.r.BASE_URL}matches/match/${t}?u=${_}&appid=${l.r.DOTA_APP_ID}`,
                         },
                         t,
                       )),
@@ -5600,10 +5619,10 @@
           const t = (0, o.g)().id,
             [a, n] = (0, c.useState)([]),
             [u, E] = (0, c.useState)(!1),
-            [_, h] = (0, c.useState)(!1),
-            [N, b] = (0, c.useState)({}),
-            [C, M] = (0, c.useState)(!1),
-            [O, L] = (0, c.useState)(!1),
+            [g, N] = (0, c.useState)(!1),
+            [I, b] = (0, c.useState)({}),
+            [O, C] = (0, c.useState)(!1),
+            [M, L] = (0, c.useState)(!1),
             [w, P] = (0, c.useState)({}),
             [H, G] = (0, c.useState)([]),
             [$, U] = (0, c.useState)(!0),
@@ -5626,14 +5645,14 @@
               a = t?.data?.result?.teams || [];
             a.length && n(a), E(!0);
           }
-          async function W() {
+          async function Y() {
             if (
               !l.r.DOTA_APP_ID ||
               !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
               !t
             )
               return;
-            const e = { appid: l.r.DOTA_APP_ID, u: f, team_id: t },
+            const e = { appid: l.r.DOTA_APP_ID, u: _, team_id: t },
               a = await r().get(
                 l.r.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
                 { params: e },
@@ -5677,7 +5696,7 @@
             } catch (e) {
               console.log("Error fetching individual player info.");
             }
-            a && a.data && b(n), M(!0);
+            a && a.data && b(n), C(!0);
           }
           (0, c.useEffect)(() => {
             try {
@@ -5703,12 +5722,12 @@
               try {
                 K();
               } catch (e) {
-                console.log("Could not fetch registered teams."), h(!0);
+                console.log("Could not fetch registered teams."), N(!0);
               }
             }, []),
             (0, c.useEffect)(() => {
               try {
-                W();
+                Y();
               } catch (e) {
                 console.log("Could not fetch single team info."), L(!0);
               }
@@ -5835,19 +5854,19 @@
                 console.log("Could not fetch leagues data.");
               }
             }, [t]);
-          const Y = a.find((e) => e.team_id == t) || {};
+          const W = a.find((e) => e.team_id == t) || {};
           let j;
           if (
-            ((u && C) || (j = c.createElement("div", null, "Loading...")),
+            ((u && O) || (j = c.createElement("div", null, "Loading...")),
             u &&
-              (0 == a.length || _) &&
+              (0 == a.length || g) &&
               (j = c.createElement(
                 "div",
                 null,
                 "Error loading registered teams...",
               )),
-            C &&
-              (0 == Object.keys(N).length || O) &&
+            O &&
+              (0 == Object.keys(I).length || M) &&
               (j = c.createElement(
                 "div",
                 null,
@@ -5868,12 +5887,12 @@
               c.createElement("div", { className: y().ContentFrame }, j),
               c.createElement(d.K, null),
             );
-          const V = N.members || [];
+          const V = I.members || [];
           V.forEach((e) => {
-            (e.kick_link = `${l.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${f}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
+            (e.kick_link = `${l.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${_}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
                 ? ""
-                : `${l.r.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${f}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`);
+                : `${l.r.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${_}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`);
           });
           const q = (e) => {
             const t = a.find((t) => t.team_id == e);
@@ -5895,12 +5914,12 @@
               c.createElement(
                 "h1",
                 { className: y().Header },
-                `Team Details for ${N?.name} (${N.team_id})`,
+                `Team Details for ${I?.name} (${I.team_id})`,
               ),
               c.createElement(
                 "div",
                 { className: y().MiscInfoGrid },
-                k.map((e) =>
+                A.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-misc-row` },
@@ -5909,8 +5928,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, N[e.key])
-                        : JSON.stringify(N[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, I[e.key])
+                        : JSON.stringify(I[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -5956,7 +5975,7 @@
                               `${l.r.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
                               { params: o },
                             );
-                            W(), setTimeout(() => d(!1), g);
+                            Y(), setTimeout(() => d(!1), f);
                           },
                         },
                         c.createElement(
@@ -6021,7 +6040,7 @@
                               `${l.r.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
                               { params: n },
                             );
-                            W(), setTimeout(() => o(!1), g);
+                            Y(), setTimeout(() => o(!1), f);
                           },
                         },
                         c.createElement(
@@ -6062,13 +6081,13 @@
                 {
                   className: y().MembersGrid,
                   style: {
-                    gridTemplateColumns: `250px repeat(${A.length - 1}, auto)`,
+                    gridTemplateColumns: `250px repeat(${h.length - 1}, auto)`,
                   },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  A.map((e) =>
+                  h.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-members-grid-header}` },
@@ -6081,12 +6100,12 @@
                   null,
                   !!V.length &&
                     V.map((e) =>
-                      A.map((t) =>
+                      h.map((t) =>
                         c.createElement(
                           "div",
                           { key: `${t.key}-member-row-${e.account_id}` },
                           t.formatFunction
-                            ? t.formatFunction.call(null, e[t.key], W)
+                            ? t.formatFunction.call(null, e[t.key], Y)
                             : JSON.stringify(e[t.key] || "", null, 2).replace(
                                 /['"]+/g,
                                 "",
@@ -6103,13 +6122,13 @@
                 {
                   className: y().ManagerGrid,
                   style: {
-                    gridTemplateColumns: `250px repeat(${I.length - 1}, auto)`,
+                    gridTemplateColumns: `250px repeat(${k.length - 1}, auto)`,
                   },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  I.map((e) =>
+                  k.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-manager-grid-header}` },
@@ -6120,7 +6139,7 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  I.map((e) =>
+                  k.map((e) =>
                     c.createElement(
                       c.Fragment,
                       { key: `${e.key}-manager-row` },
@@ -6128,15 +6147,15 @@
                         "div",
                         null,
                         e.formatFunction
-                          ? e.formatFunction.call(null, Y[e.key])
-                          : JSON.stringify(Y[e.key] || "", null, 2).replace(
+                          ? e.formatFunction.call(null, W[e.key])
+                          : JSON.stringify(W[e.key] || "", null, 2).replace(
                               /['"]+/g,
                               "",
                             ),
                       ),
                     ),
                   ),
-                  !I.length && c.createElement("div", null, "No manager."),
+                  !k.length && c.createElement("div", null, "No manager."),
                 ),
               ),
               $ &&
@@ -6162,10 +6181,10 @@
                                 l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
                             };
                             await r().post(
-                              `${l.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${f}&appid=${l.r.DOTA_APP_ID}`,
+                              `${l.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${_}&appid=${l.r.DOTA_APP_ID}`,
                               { params: a },
                             );
-                            K(), setTimeout(() => m(!1), g);
+                            K(), setTimeout(() => m(!1), f);
                           },
                         },
                         c.createElement(
@@ -6216,7 +6235,7 @@
               c.createElement(
                 "div",
                 { className: y().LogoAndColorsGrid },
-                v.map((e) =>
+                T.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-logo-colors-row` },
@@ -6225,8 +6244,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, N[e.key], N.team_id)
-                        : JSON.stringify(N[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, I[e.key], I.team_id)
+                        : JSON.stringify(I[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -6239,12 +6258,12 @@
                 "div",
                 {
                   className: y().UGCLogosGrid,
-                  style: { gridTemplateColumns: `repeat(${T.length}, auto)` },
+                  style: { gridTemplateColumns: `repeat(${v.length}, auto)` },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  T.map((e) =>
+                  v.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-ugc-grid-header}` },
@@ -6255,13 +6274,13 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  T.map((e) =>
+                  v.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-ugc-logo` },
                       e.formatFunction
-                        ? e.formatFunction.call(null, N[e.key])
-                        : JSON.stringify(N[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, I[e.key])
+                        : JSON.stringify(I[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -6279,12 +6298,12 @@
                 "div",
                 {
                   className: y().AuditActionsGrid,
-                  style: { gridTemplateColumns: `repeat(${F.length}, auto)` },
+                  style: { gridTemplateColumns: `repeat(${R.length}, auto)` },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  F.map((e) =>
+                  R.map((e) =>
                     c.createElement(
                       "div",
                       {
@@ -6299,7 +6318,7 @@
                   null,
                   !!B.length &&
                     B.map((e) =>
-                      F.map((t) =>
+                      R.map((t) =>
                         c.createElement(
                           "div",
                           { key: `${t.key}-${t.displayName}-${e.timestamp}` },
@@ -6330,7 +6349,7 @@
               c.createElement(
                 "div",
                 { className: y().WorkshopStatusGrid },
-                R.map((e) =>
+                F.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-workshop-status-row` },
@@ -6432,7 +6451,7 @@
             c.createElement(d.K, null),
           );
         };
-      class C extends c.Component {
+      class O extends c.Component {
         render() {
           return c.createElement(b, null);
         }
