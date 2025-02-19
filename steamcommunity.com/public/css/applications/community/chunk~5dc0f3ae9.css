@@ -532,6 +532,12 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+  html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
+  ._3notzMjxQtogi11XHZMYXI:hover .VI5mZtnq0CL7fw_2mxhfm {
+    display: none;
+  }
+}
 ._3VcyYP_egkOaX_rJ1e_SQk {
   top: unset;
 }
@@ -4512,18 +4518,16 @@ html.responsive.touch ._1FPIVJTLsw1nvAN24BGGKg ._3BgHmwox82MCNAE15H28dc {
 }
 html.responsive.touch ._1FPIVJTLsw1nvAN24BGGKg ._1Svj0QB6CvcmNGjDP2woOu {
   width: 100vw;
-  margin-left: -10px;
-  margin-right: -18px;
   padding: 0px 10px;
   overflow-x: scroll;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 910px) {
   html:not(.force_desktop) ._1FPIVJTLsw1nvAN24BGGKg ._1Svj0QB6CvcmNGjDP2woOu {
     width: 100vw;
-    margin-left: -10px;
-    margin-right: -18px;
     padding: 0px 10px;
     overflow-x: scroll;
+    box-sizing: border-box;
   }
 }
 html.tablet ._1FPIVJTLsw1nvAN24BGGKg ._1Svj0QB6CvcmNGjDP2woOu {

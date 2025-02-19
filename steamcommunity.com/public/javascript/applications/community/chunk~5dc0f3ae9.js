@@ -5130,59 +5130,60 @@
         }
       }
       const d = 4;
-      function u(e, t, r, i, a) {
-        var o;
-        const l = new Array(),
-          c = new Array(),
+      function u(e, t, r, i, a, o) {
+        var l;
+        const c = new Array(),
           m = new Array(),
-          u = new Array();
-        if (!e || 0 == e.length) return l;
-        const g = [
+          u = new Array(),
+          g = new Array();
+        if (!e || 0 == e.length) return c;
+        const _ = [
           s.by.k_RejectSupportedLanguage,
           s.by.k_RejectAlreadyDisplayed,
+          s.by.k_RejectNoTrailer,
         ];
-        for (let a of e) {
-          let e = a.id,
+        for (let o of e) {
+          let e = o.id,
             d = s.by.k_NotRejected;
-          switch (a.item_type) {
+          switch (o.item_type) {
             case "sub":
-              const i = n.A.Get().GetPackage(e);
+              const a = n.A.Get().GetPackage(e);
               if (
                 1 !==
-                (null === (o = null == i ? void 0 : i.GetIncludedAppIDs()) ||
-                void 0 === o
+                (null === (l = null == a ? void 0 : a.GetIncludedAppIDs()) ||
+                void 0 === l
                   ? void 0
-                  : o.length)
+                  : l.length)
               ) {
-                d = C(e, t, r, !0);
+                d = C(e, t, i, !0);
                 break;
               }
-              e = i.GetIncludedAppIDs()[0];
+              e = a.GetIncludedAppIDs()[0];
             case "app":
-              d = h(e, t, r, !0);
+              d = h(e, t, r, i, !0);
               break;
             case "bundle":
-              d = y(e, t, r, !0);
+              d = y(e, t, i, !0);
           }
           if (
             (d == s.by.k_NotRejected
-              ? ((a.rejected = s.by.k_NotRejected),
-                l.push({ ...a, priority: 1 }))
-              : g.includes(d)
-                ? ((a.rejected = s.by.k_NotRejected), c.push(a))
-                : ((a.rejected = d),
-                  d == s.by.k_RejectIgnoredGame ? m.push(a) : u.push(a)),
-            l.length > i)
+              ? ((o.rejected = s.by.k_NotRejected),
+                c.push({ ...o, priority: 1 }))
+              : _.includes(d)
+                ? ((o.rejected = s.by.k_NotRejected), m.push(o))
+                : ((o.rejected = d),
+                  d == s.by.k_RejectIgnoredGame ? u.push(o) : g.push(o)),
+            c.length > a)
           )
             break;
         }
         return (
-          l.length < i &&
-            (p(l, c, a, 2),
-            l.length < a &&
+          c.length < a &&
+            (p(c, m, o, 2),
+            c.length < o &&
               t.enforce_minimum &&
-              (p(l, m, a, 3), p(l, u, a, d))),
-          l
+              (p(c, u, o, 3), p(c, g, o, d))),
+          c
         );
       }
       function p(e, t, r, i) {
@@ -5239,38 +5240,45 @@
         }
         return s.by.k_NotRejected;
       }
-      function h(e, t, r, i) {
-        const o = n.A.Get().GetApp(e);
-        if (!o) return s.by.k_RejectNotLoaded;
-        const l = g(o, t);
-        if (l != s.by.k_NotRejected) return l;
-        const c = a.Fm.Get();
-        if (c.BIsGameIgnored(e)) return s.by.k_RejectIgnoredGame;
-        if (c.BExcludeTagIDs(o.GetTagIDs())) return s.by.k_RejectIgnoreGameTags;
-        if (c.BExcludesContentDescriptor(o.GetContentDescriptorIDs()))
+      function h(e, t, r, i, o) {
+        const l = n.A.Get().GetApp(e);
+        if (!l) return s.by.k_RejectNotLoaded;
+        const c = g(l, t);
+        if (c != s.by.k_NotRejected) return c;
+        const m = a.Fm.Get();
+        if (m.BIsGameIgnored(e)) return s.by.k_RejectIgnoredGame;
+        if (m.BExcludeTagIDs(l.GetTagIDs())) return s.by.k_RejectIgnoreGameTags;
+        if (m.BExcludesContentDescriptor(l.GetContentDescriptorIDs()))
           return s.by.k_RejectIgnoreContentDescriptors;
-        if (!t.early_access && o.BIsEarlyAccess())
+        if (!t.early_access && l.BIsEarlyAccess())
           return s.by.k_RejectEarlyAccess;
-        const m = o.GetAppType();
-        return t.software || 6 != m
-          ? t.games_already_in_library && c.BIsGameOwned(e)
+        const d = l.GetAppType();
+        return t.software || 6 != d
+          ? t.games_already_in_library && m.BIsGameOwned(e)
             ? s.by.k_RejectInLibrary
-            : t.games_not_in_library && !c.BIsGameOwned(e)
+            : t.games_not_in_library && !m.BIsGameOwned(e)
               ? s.by.k_RejectNotInLibrary
-              : !t.video && [7, 8, 9].includes(m)
+              : !t.video && [7, 8, 9].includes(d)
                 ? s.by.k_RejectVideo
-                : t.has_discount && !o.GetBestPurchaseOption().discount_pct
+                : t.has_discount && !l.GetBestPurchaseOption().discount_pct
                   ? s.by.k_RejectNoDiscount
-                  : 1 == m &&
-                      t.games_already_in_library &&
-                      c.BIsGameOwned(o.GetParentAppID())
-                    ? s.by.k_RejectInLibrary
-                    : i
-                      ? (1 == m && r.BHasAppID(o.GetParentAppID())) ||
-                        r.BHasAppID(e)
-                        ? s.by.k_RejectAlreadyDisplayed
-                        : _(o, t)
-                      : s.by.k_NotRejected
+                  : "adultonly" != r &&
+                      t.no_ao_content &&
+                      (l.HasContentDescriptorID(3) ||
+                        l.HasContentDescriptorID(4))
+                    ? s.by.k_RejectAO
+                    : 1 == d &&
+                        t.games_already_in_library &&
+                        m.BIsGameOwned(l.GetParentAppID())
+                      ? s.by.k_RejectInLibrary
+                      : o
+                        ? (1 == d && i.BHasAppID(l.GetParentAppID())) ||
+                          i.BHasAppID(e)
+                          ? s.by.k_RejectAlreadyDisplayed
+                          : t.has_trailer && !l.BHasTrailers()
+                            ? s.by.k_RejectNoTrailer
+                            : _(l, t)
+                        : s.by.k_NotRejected
           : s.by.k_RejectSoftware;
       }
       function B(e, t) {
@@ -9242,7 +9250,7 @@
       r.d(t, { Fv: () => c, LG: () => p, MB: () => u, YI: () => d });
       var i = r(56545),
         a = r(75487),
-        n = r(37674),
+        n = r(88942),
         s = r(23809),
         o = r(72963),
         l = r(78327);
@@ -10813,7 +10821,7 @@
         n = r(30894);
       const s = (0, i.createContext)({}),
         o = () => (0, i.useContext)(s);
-      var l = r(37674),
+      var l = r(88942),
         c = r(56545),
         m = r(23809),
         d = r(17690),
@@ -12130,44 +12138,37 @@
             className: o,
             ...l
           } = e,
-          c = (0, G.Qn)(),
-          [m, d] = n.useState(!c),
-          [u, p] = n.useState(!1),
-          [g, _] = n.useState(void 0),
-          h = n.useCallback((e) => {
-            p(!0), _(e.currentTarget);
-          }, []),
-          B = n.useCallback(() => p(!1), []),
-          y = n.useCallback((e) => {
-            27 == e.keyCode && (p(!1), e.preventDefault(), e.stopPropagation());
-          }, []),
-          w = n.useCallback(
-            (e) => {
-              d(!1),
-                (window.location.href = a),
-                e.preventDefault(),
-                e.stopPropagation();
-            },
-            [a],
-          ),
-          S = n.useCallback(() => d(!1), []);
+          c = !(0, G.Qn)(),
+          [m, d] = n.useState(!1),
+          [u, p] = n.useState(void 0);
         return n.createElement(
           "div",
           {
             "data-key": "hover div",
             className: (0, A.A)(H().ItemHoverSource, a && H().Selectable, o),
             ...l,
-            onMouseEnter: h,
-            onMouseLeave: B,
-            onFocus: h,
-            onClick: a ? w : void 0,
-            onTouchStart: S,
-            onKeyDown: y,
+            onMouseEnter: (e) => {
+              d(!0), p(e.currentTarget);
+            },
+            onMouseLeave: () => d(!1),
+            onClick: a
+              ? (e) => {
+                  d(!1),
+                    (window.location.href = a),
+                    e.preventDefault(),
+                    e.stopPropagation();
+                }
+              : void 0,
+            onTouchStart: () => d(!1),
+            onKeyDown: (e) => {
+              27 == e.keyCode &&
+                (d(!1), e.preventDefault(), e.stopPropagation());
+            },
           },
-          m &&
+          c &&
             n.createElement(
               oe,
-              { visible: u, target: g, nDelayShowMs: i, hoverProps: r },
+              { visible: m, target: u, nDelayShowMs: i, hoverProps: r },
               t,
             ),
           n.createElement(C.tH, null, s),

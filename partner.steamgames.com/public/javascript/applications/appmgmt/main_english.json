@@ -1519,7 +1519,7 @@
     "AssetRequest_SalePage_Cover_Design": "Design: This image should include your event logo and dates",
     "AssetRequest_SalePage_Header_Title": "Event Header",
     "AssetRequest_SalePage_Header_Usage": "Usage: This artwork is displayed at the top of the announcement that is associated with your sale page.",
-    "AssetRequest_SalePage_Header_Design": "Design: This image is not critial, and simply intended to add some context and color for your written announcement.",
+    "AssetRequest_SalePage_Header_Design": "Design: This image is not critical; it's simply intended to add some context and color for your written announcement.",
     "AssetRequest_SalePage_Cover_Hint": "This image should be static and below 5MB, .jpg, .png",
     "AssetRequest_SalePage_StoreBanner_Title": "Store Page Banner",
     "AssetRequest_SalePage_StoreBanner_Usage": "Usage: This banner appears on the top of each game that is included in your event. For that reason, you need to have permission from the creators of every included game or you cannot use this feature.",

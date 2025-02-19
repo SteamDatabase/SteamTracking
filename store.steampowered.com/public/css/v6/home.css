@@ -1753,7 +1753,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	color: #67c1f5;
 	text-align: center;
 }
-.home_page_content .more_content_title {
+#content_callout .more_content_title {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -1762,11 +1762,11 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	color: #67c1f5;
 	text-align: center;
 }
-.home_page_content .more_content_title span {
+#content_callout .more_content_title span {
 
 	padding: 0px 10px;
 }
-.home_page_content .more_content_desc {
+#content_callout .more_content_desc {
 	font-size: 13px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */

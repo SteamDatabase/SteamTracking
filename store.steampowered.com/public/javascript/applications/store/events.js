@@ -619,7 +619,7 @@
         J = n(44165),
         X = n(60746),
         Q = n(1059),
-        Z = n(91254),
+        Z = n(6379),
         $ = n(17083),
         ee = n(81886),
         te = n(33737),
@@ -3114,6 +3114,7 @@
                       ),
                     Promise.all(a).then(() => {
                       const a = t.GetClanEventModel(e.unique_id);
+                      a &&
                       a.appid &&
                       a.appid != e.appid &&
                       !D.A.Get().BHasApp(a.appid, Mt)

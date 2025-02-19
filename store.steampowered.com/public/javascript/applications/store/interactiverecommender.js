@@ -94,92 +94,284 @@
       a.d(t, { A: () => r });
       var s = a(60014),
         i = a(90626),
-        o = a(62093),
-        n = a(30600),
+        n = a(62093),
+        o = a(30600),
         l = a(8871);
       function r(e) {
         const { appID: t, feature: a, depth: r, children: c } = e,
           d = (0, s.ru)(a, r),
-          m = (0, o.b)(),
-          [p, u] = i.useState(void 0),
+          u = (0, n.b)(),
+          [m, p] = i.useState(void 0),
           g = i.useCallback(
             (e) => {
               e.isIntersecting &&
-                u((e) =>
+                p((e) =>
                   e?.appID == t && e.snr == d ? e : { appID: t, snr: d },
                 );
             },
             [t, d],
           );
         (0, i.useEffect)(() => {
-          p && m.AddImpression(p.appID, p.snr);
-        }, [m, p]);
-        const h = (0, n.BL)(g),
-          _ = t && (!p || (p.appID != t && p.snr != d)),
-          E = (0, l.Ue)(c.ref, _ ? h : void 0);
+          m && u.AddImpression(m.appID, m.snr);
+        }, [u, m]);
+        const _ = (0, o.BL)(g),
+          h = t && (!m || (m.appID != t && m.snr != d)),
+          E = (0, l.Ue)(c.ref, h ? _ : void 0);
         return i.cloneElement(c, { ref: E });
+      }
+    },
+    55263: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        G6: () => r,
+        Gg: () => u,
+        Ow: () => d,
+        YM: () => _,
+        mZ: () => m,
+        t7: () => c,
+        zX: () => g,
+      });
+      var s = a(41735),
+        i = a.n(s),
+        n = a(90626),
+        o = a(73745),
+        l = a(82097);
+      function r(e, t, a, s) {
+        const r = (0, n.useRef)(),
+          c = (0, n.useRef)(void 0),
+          d = (0, o.CH)();
+        r.current = e;
+        const [u, m] = (0, n.useState)(void 0),
+          {
+            include_assets: p,
+            include_release: g,
+            include_platforms: _,
+            include_all_purchase_options: h,
+            include_screenshots: E,
+            include_trailers: f,
+            include_ratings: I,
+            include_tag_count: v,
+            include_reviews: y,
+            include_basic_info: S,
+            include_supported_languages: T,
+            include_full_description: R,
+            include_included_items: C,
+            include_assets_without_overrides: w,
+            apply_user_filters: A,
+            include_links: N,
+          } = a;
+        if (
+          ((0, n.useEffect)(() => {
+            const a = {
+              include_assets: p,
+              include_release: g,
+              include_platforms: _,
+              include_all_purchase_options: h,
+              include_screenshots: E,
+              include_trailers: f,
+              include_ratings: I,
+              include_tag_count: v,
+              include_reviews: y,
+              include_basic_info: S,
+              include_supported_languages: T,
+              include_full_description: R,
+              include_included_items: C,
+              include_assets_without_overrides: w,
+              apply_user_filters: A,
+              include_links: N,
+            };
+            let n = null;
+            return (
+              !e ||
+                e < 0 ||
+                l.A.Get().BHasStoreItem(e, t, a) ||
+                (void 0 !== u && s && s == c.current) ||
+                (s !== c.current && (m(void 0), (c.current = s)),
+                (n = i().CancelToken.source()),
+                l.A.Get()
+                  .QueueStoreItemRequest(e, t, a)
+                  .then((t) => {
+                    n?.token.reason || r.current !== e || m(1 == t), d();
+                  })),
+              () => n?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [e, t, s, u, p, g, _, h, E, f, I, v, y, S, T, R, C, w, A, N, d]),
+          !e)
+        )
+          return [null, 2];
+        if (!1 === u) return [void 0, 2];
+        if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!l.A.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
+        const D = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return D ? [D, 3] : [null, 2];
+      }
+      function c(e, t, a) {
+        return r(e, 0, t, a);
+      }
+      function d(e, t, a) {
+        return r(e, 2, t, a);
+      }
+      function u(e, t, a) {
+        return r(e, 1, t, a);
+      }
+      function m(e, t, a) {
+        const [s, i] = r(e, t, a);
+        let n;
+        1 != s?.GetStoreItemType() ||
+          s.GetAssets()?.GetHeaderURL() ||
+          1 != s?.GetIncludedAppIDs().length ||
+          (n = s.GetIncludedAppIDs()[0]);
+        const [o, l] = c(n, a);
+        return n && o?.BIsVisible() ? [o, l] : [s, i];
+      }
+      function p(e, t, a, s) {
+        const r = (0, o.CH)(),
+          {
+            include_assets: c,
+            include_release: d,
+            include_platforms: u,
+            include_all_purchase_options: m,
+            include_screenshots: p,
+            include_trailers: g,
+            include_ratings: _,
+            include_tag_count: h,
+            include_reviews: E,
+            include_basic_info: f,
+            include_supported_languages: I,
+            include_full_description: v,
+            include_included_items: y,
+            include_assets_without_overrides: S,
+            apply_user_filters: T,
+            include_links: R,
+          } = a;
+        if (
+          ((0, n.useEffect)(() => {
+            if (!e || 0 == e.length) return;
+            const a = {
+                include_assets: c,
+                include_release: d,
+                include_platforms: u,
+                include_all_purchase_options: m,
+                include_screenshots: p,
+                include_trailers: g,
+                include_ratings: _,
+                include_tag_count: h,
+                include_reviews: E,
+                include_basic_info: f,
+                include_supported_languages: I,
+                include_full_description: v,
+                include_included_items: y,
+                include_assets_without_overrides: S,
+                apply_user_filters: T,
+                include_links: R,
+              },
+              s = e.filter(
+                (e) =>
+                  !(
+                    l.A.Get().BHasStoreItem(e, t, a) ||
+                    l.A.Get().BIsStoreItemMissing(e, t)
+                  ),
+              );
+            if (0 == s.length) return;
+            const n = i().CancelToken.source(),
+              o = s.map((e) => l.A.Get().QueueStoreItemRequest(e, t, a));
+            return (
+              Promise.all(o).then(() => {
+                n.token.reason || r();
+              }),
+              () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [e, t, s, r, c, d, u, m, p, g, _, h, E, f, I, v, y, S, T, R]),
+          !e)
+        )
+          return 2;
+        if (
+          !e.every(
+            (e) =>
+              l.A.Get().BHasStoreItem(e, t, a) ||
+              l.A.Get().BIsStoreItemMissing(e, t),
+          )
+        )
+          return 1;
+        return e.every((e) =>
+          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+        )
+          ? 3
+          : 2;
+      }
+      function g(e, t, a) {
+        return p(e, 0, t, a);
+      }
+      function _() {
+        n.useEffect(
+          () => (
+            l.A.Get().SetReturnUnavailableItems(!0),
+            () => l.A.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
       }
     },
     82477: (e, t, a) => {
       "use strict";
-      a.d(t, { Cg: () => p, pZ: () => g, vg: () => u });
+      a.d(t, { Cg: () => m, pZ: () => g, vg: () => p });
       var s = a(90626),
         i = a(738),
-        o = a(61859),
-        n = a(78327),
+        n = a(61859),
+        o = a(78327),
         l = a(97436),
         r = a(72034),
         c = a(28240),
         d = a(51706);
-      function m(e) {
+      function u(e) {
         return s.createElement(
           i.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          s.createElement(h, {
+          s.createElement(_, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         );
       }
-      function p(e) {
+      function m(e) {
         const { redirectURL: t = window.location.href } = e;
         return s.createElement(
           d.EN,
           { active: !0 },
-          s.createElement(m, { redirectURL: t }),
+          s.createElement(u, { redirectURL: t }),
         );
       }
-      function u() {
+      function p() {
         (0, i.pg)(
-          s.createElement(m, {
+          s.createElement(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.we)("#Login_SignInTitle") },
+          { strTitle: (0, n.we)("#Login_SignInTitle") },
         );
       }
       function g(e, t) {
         (0, i.pg)(
-          s.createElement(m, {
+          s.createElement(u, {
             ownerWin: window,
             redirectURL: e,
             guestOption: t,
           }),
           window,
-          { strTitle: (0, o.we)("#Login_SignInTitle") },
+          { strTitle: (0, n.we)("#Login_SignInTitle") },
         );
       }
-      function h(e) {
+      function _(e) {
         const { redirectURL: t, guestOption: a } = e,
           [i] = (0, s.useState)(
-            new r.D(n.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new r.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [o, d] = (0, s.useState)(!1);
+          [n, d] = (0, s.useState)(!1);
         return s.createElement(
           "div",
           null,
-          o
+          n
             ? s.createElement(l.Fn, null)
             : s.createElement(
                 l.YN,
@@ -205,19 +397,19 @@
       a.d(t, {
         mt: () => r,
         Qs: () => g,
-        o0: () => h.o0,
-        eV: () => _.e,
-        KG: () => h.KG,
-        Ee: () => h.Ee,
-        x_: () => n.x_,
+        o0: () => _.o0,
+        eV: () => h.e,
+        KG: () => _.KG,
+        Ee: () => _.Ee,
+        x_: () => o.x_,
         of: () => c,
-        pY: () => h.pY,
-        EN: () => o.E,
+        pY: () => _.pY,
+        EN: () => n.E,
       });
       var s = a(90626),
         i = a(33737),
-        o = a(21869),
-        n = a(2654),
+        n = a(21869),
+        o = a(2654),
         l =
           (a(72739),
           a(48902),
@@ -236,10 +428,10 @@
         children: r,
       }) =>
         s.createElement(
-          o.E,
+          n.E,
           { active: e },
           s.createElement(
-            n.x_,
+            o.x_,
             { onEscKeypress: t, className: l },
             s.createElement(i.UC, { className: a }, r),
           ),
@@ -247,37 +439,37 @@
       function c(e) {
         const { className: t, children: a } = e;
         return s.createElement(
-          o.E,
+          n.E,
           { active: !0 },
           s.createElement("div", { className: t }, a),
         );
       }
       a(81194);
       var d = a(85585),
-        m = a(7445),
-        p = a(76217),
-        u = a(88843);
+        u = a(7445),
+        m = a(76217),
+        p = a(88843);
       function g(e) {
         const { children: t, navID: a, closeModal: i } = e,
-          o = s.createRef(),
-          n = (e) => (e.stopPropagation(), e.preventDefault(), !0);
+          n = s.createRef(),
+          o = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, l.Qn)() && !l.TS.IN_STEAMUI
           ? s.createElement(
               d.B2,
               {
                 navID: a,
-                navTreeRef: o,
+                navTreeRef: n,
                 onCancelButton: i,
-                className: u.GamepadOnlyModalWrapper,
+                className: p.GamepadOnlyModalWrapper,
               },
               s.createElement(
-                m.q,
+                u.q,
                 null,
                 s.createElement(
-                  p.Z,
+                  m.Z,
                   {
-                    className: u.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: n,
+                    className: p.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: o,
                     focusableIfNoChildren: !0,
                   },
                   t,
@@ -286,29 +478,29 @@
             )
           : s.createElement(s.Fragment, null, t);
       }
-      var h = a(78395),
-        _ = a(10411);
+      var _ = a(78395),
+        h = a(10411);
       a(76222);
     },
     52069: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => W });
+      a.r(t), a.d(t, { default: () => G });
       var s,
         i = a(34629),
-        o = a(78327),
-        n = a(75844),
+        n = a(78327),
+        o = a(75844),
         l = a(14947),
         r = a(90626),
         c = a(84518),
         d = a(12155),
-        m = a(52038),
-        p = a(61859),
-        u = a(73745),
+        u = a(52038),
+        m = a(61859),
+        p = a(73745),
         g = a(522),
-        h = a(26649),
-        _ = a.n(h),
+        _ = a(26649),
+        h = a.n(_),
         E = a(41735),
-        T = a.n(E);
+        f = a.n(E);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
@@ -316,7 +508,7 @@
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
       })(s || (s = {}));
-      class v {
+      class I {
         constructor() {
           (0, l.Gn)(this);
         }
@@ -379,8 +571,8 @@
         eState = s.Unrequested;
         nExpirationTime = 0;
       }
-      (0, i.Cg)([l.sH], v.prototype, "data", void 0),
-        (0, i.Cg)([l.sH], v.prototype, "nExpirationTime", void 0);
+      (0, i.Cg)([l.sH], I.prototype, "data", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "nExpirationTime", void 0);
       (0, i.Cg)(
         [l.sH],
         class {
@@ -392,7 +584,7 @@
             return (
               this.m_mapKeyToDataWrapper.has(e)
                 ? (t = this.m_mapKeyToDataWrapper.get(e))
-                : ((t = new v()), this.m_mapKeyToDataWrapper.set(e, t)),
+                : ((t = new I()), this.m_mapKeyToDataWrapper.set(e, t)),
               t
             );
           }
@@ -420,7 +612,7 @@
         "m_mapKeyToDataWrapper",
         void 0,
       );
-      let y = {
+      let v = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -451,12 +643,12 @@
         PERSISTENT_IGNORE: !1,
         USE_MICROTRAILERS: !1,
       };
-      var I;
+      var y;
       !(function (e) {
         (e[(e.ClickThrough = 1)] = "ClickThrough"),
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
-      })(I || (I = {}));
+      })(y || (y = {}));
       class S {
         m_fPopularityValue = void 0;
         m_fRecencyValue = void 0;
@@ -469,9 +661,9 @@
         m_bUseMicrotrailers = void 0;
         m_bIgnoredEdited = void 0;
         m_mapAppDetailsCache = new Map();
-        m_ResultDataCache = new v();
-        m_InputAppsCache = new v();
-        m_TagsCache = new v();
+        m_ResultDataCache = new I();
+        m_InputAppsCache = new I();
+        m_TagsCache = new I();
         m_TagNameMap = new Map();
         m_bStateUpdated;
         constructor() {
@@ -532,7 +724,7 @@
             (this.m_bStateUpdated = !0),
             (this.m_bExcludeWishlisted =
               "1" == localStorage.getItem("IRExcludeWishlisted")),
-            (this.m_bUseMicrotrailers = y.USE_MICROTRAILERS);
+            (this.m_bUseMicrotrailers = v.USE_MICROTRAILERS);
           const e = localStorage.getItem("IRExcludeTags");
           if (e) {
             const t = e.split(",");
@@ -547,12 +739,12 @@
         getDetails(e) {
           return (
             this.m_mapAppDetailsCache.has(e) ||
-              this.m_mapAppDetailsCache.set(e, new v()),
+              this.m_mapAppDetailsCache.set(e, new I()),
             this.m_mapAppDetailsCache.get(e).getData(
               60,
               async () =>
-                await T().get(
-                  `${y.BASE_URL}recommender/${y.STEAM_ID}/details?appid=${e}&sessionid=${y.SESSION_ID}`,
+                await f().get(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/details?appid=${e}&sessionid=${v.SESSION_ID}`,
                 ),
               (e) => e.data,
             )
@@ -560,8 +752,8 @@
         }
         getResults(e, t, a, s) {
           const i = e ? "1" : "0",
-            o = t ? `${t}` : "0",
-            n = a ? "1" : "0",
+            n = t ? `${t}` : "0",
+            o = a ? "1" : "0",
             l = s ? `${s}` : "0";
           let r = "";
           const c = this.getInputApps();
@@ -575,8 +767,8 @@
             this.m_ResultDataCache.getData(
               9999999,
               async () =>
-                await T().get(
-                  `${y.BASE_URL}recommender/${y.STEAM_ID}/results?sessionid=${y.SESSION_ID}&steamid=${y.STEAM_ID}&include_played=${i}&algorithm=${o}&reinference=${n}&model_version=${l}${r}`,
+                await f().get(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/results?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}&include_played=${i}&algorithm=${n}&reinference=${o}&model_version=${l}${r}`,
                 ),
               (e) => (
                 e.data.recommendations.request_results.sort((e, t) =>
@@ -598,11 +790,11 @@
           return this.m_ResultDataCache.isExpired();
         }
         getRecommendations() {
-          const e = f.getResults(
-            y.INCLUDE_PLAYED,
-            y.ALGORITHM,
-            y.REINFERENCE,
-            y.MODEL_VERSION,
+          const e = T.getResults(
+            v.INCLUDE_PLAYED,
+            v.ALGORITHM,
+            v.REINFERENCE,
+            v.MODEL_VERSION,
           );
           return e ? e.recommendations : void 0;
         }
@@ -610,18 +802,18 @@
           return this.m_InputAppsCache.getData(
             9999999,
             async () =>
-              await T().get(
-                `${y.BASE_URL}recommender/${y.STEAM_ID}/inputs?sessionid=${y.SESSION_ID}&steamid=${y.STEAM_ID}`,
+              await f().get(
+                `${v.BASE_URL}recommender/${v.STEAM_ID}/inputs?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}`,
               ),
             (e) => e.data,
           );
         }
         getAppInfo() {
-          const e = f.getResults(
-            y.INCLUDE_PLAYED,
-            y.ALGORITHM,
-            y.REINFERENCE,
-            y.MODEL_VERSION,
+          const e = T.getResults(
+            v.INCLUDE_PLAYED,
+            v.ALGORITHM,
+            v.REINFERENCE,
+            v.MODEL_VERSION,
           );
           return e ? e.app_info : void 0;
         }
@@ -629,8 +821,8 @@
           return this.m_TagsCache.getData(
             9999999,
             async () =>
-              await T().get(
-                `${y.BASE_URL}recommender/${y.STEAM_ID}/tags?sessionid=${y.SESSION_ID}`,
+              await f().get(
+                `${v.BASE_URL}recommender/${v.STEAM_ID}/tags?sessionid=${v.SESSION_ID}`,
               ),
             (e) => {
               this.m_TagNameMap.clear();
@@ -716,42 +908,42 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }
         async onAddToWishlist(e, t) {
-          f.getAppInfo()[e].w = !0;
-          let a = { sessionid: y.SESSION_ID, appid: e };
-          const s = await T().post(
-            `${y.BASE_URL}recommender/${y.STEAM_ID}/wishlist?snr=${y.LINK_PARAM}`,
+          T.getAppInfo()[e].w = !0;
+          let a = { sessionid: v.SESSION_ID, appid: e };
+          const s = await f().post(
+            `${v.BASE_URL}recommender/${v.STEAM_ID}/wishlist?snr=${v.LINK_PARAM}`,
             a,
           );
           let i = {
-            account_id: y.ACCOUNT_ID,
-            session_id: y.SESSION_ID,
+            account_id: v.ACCOUNT_ID,
+            session_id: v.SESSION_ID,
             app_id: e,
             app_rank: t,
-            action: I.AddToWishlist,
+            action: y.AddToWishlist,
             algorithm: 1,
             setting_1: 100 * this.m_fPopularityValue,
             setting_2: 100 * this.m_fRecencyValue,
           };
           return (
-            await T().post(`${y.BASE_URL}recommender/${y.STEAM_ID}/stats`, i), s
+            await f().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, i), s
           );
         }
         onGoToWishlist() {
-          window.location.href = `${y.COMMUNITY_BASE_URL}profiles/${y.STEAM_ID}/wishlist`;
+          window.location.href = `${v.COMMUNITY_BASE_URL}profiles/${v.STEAM_ID}/wishlist`;
         }
         onAddToCart(e, t, a) {
           window.AddItemToCart(t);
           let s = {
-            account_id: y.ACCOUNT_ID,
-            session_id: y.SESSION_ID,
+            account_id: v.ACCOUNT_ID,
+            session_id: v.SESSION_ID,
             app_id: e,
             app_rank: a,
-            action: I.AddToCart,
+            action: y.AddToCart,
             algorithm: 1,
             setting_1: 100 * this.m_fPopularityValue,
             setting_2: 100 * this.m_fRecencyValue,
           };
-          return T().post(`${y.BASE_URL}recommender/${y.STEAM_ID}/stats`, s);
+          return f().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, s);
         }
         onMuteClicked() {
           this.m_bShouldMute = !0;
@@ -776,36 +968,37 @@
         (0, i.Cg)([l.sH], S.prototype, "m_bShouldMute", void 0),
         (0, i.Cg)([l.sH], S.prototype, "m_bUseMicrotrailers", void 0),
         (0, i.Cg)([l.sH], S.prototype, "m_bIgnoredEdited", void 0),
-        (0, i.Cg)([u.oI], S.prototype, "getTagHeight", null),
-        (0, i.Cg)([u.oI], S.prototype, "onPopularityChanged", null),
-        (0, i.Cg)([u.oI], S.prototype, "onRecencyChanged", null),
-        (0, i.Cg)([u.oI], S.prototype, "onTagFilterAdd", null),
-        (0, i.Cg)([u.oI], S.prototype, "onTagFilterRemove", null),
-        (0, i.Cg)([u.oI], S.prototype, "onTagExcludeAdd", null),
-        (0, i.Cg)([u.oI], S.prototype, "onTagExcludeRemove", null),
-        (0, i.Cg)([u.oI], S.prototype, "doTagsPassFilter", null),
-        (0, i.Cg)([u.oI], S.prototype, "doTagsFailExclusion", null),
-        (0, i.Cg)([u.oI], S.prototype, "onExcludeWishlistedToggled", null),
-        (0, i.Cg)([u.oI], S.prototype, "onToggleIgnore", null),
-        (0, i.Cg)([u.oI], S.prototype, "onUpdateWithIgnored", null),
-        (0, i.Cg)([u.oI], S.prototype, "onAddToWishlist", null),
-        (0, i.Cg)([u.oI], S.prototype, "onGoToWishlist", null),
-        (0, i.Cg)([u.oI], S.prototype, "onAddToCart", null),
-        (0, i.Cg)([u.oI], S.prototype, "onMuteClicked", null),
-        (0, i.Cg)([u.oI], S.prototype, "onUnMuteClicked", null),
-        (0, i.Cg)([u.oI], S.prototype, "shouldMute", null),
-        (0, i.Cg)([u.oI], S.prototype, "shouldUseMicrotrailers", null);
-      const f = new S();
-      window.g_InteractiveRecommender = f;
+        (0, i.Cg)([p.oI], S.prototype, "getTagHeight", null),
+        (0, i.Cg)([p.oI], S.prototype, "onPopularityChanged", null),
+        (0, i.Cg)([p.oI], S.prototype, "onRecencyChanged", null),
+        (0, i.Cg)([p.oI], S.prototype, "onTagFilterAdd", null),
+        (0, i.Cg)([p.oI], S.prototype, "onTagFilterRemove", null),
+        (0, i.Cg)([p.oI], S.prototype, "onTagExcludeAdd", null),
+        (0, i.Cg)([p.oI], S.prototype, "onTagExcludeRemove", null),
+        (0, i.Cg)([p.oI], S.prototype, "doTagsPassFilter", null),
+        (0, i.Cg)([p.oI], S.prototype, "doTagsFailExclusion", null),
+        (0, i.Cg)([p.oI], S.prototype, "onExcludeWishlistedToggled", null),
+        (0, i.Cg)([p.oI], S.prototype, "onToggleIgnore", null),
+        (0, i.Cg)([p.oI], S.prototype, "onUpdateWithIgnored", null),
+        (0, i.Cg)([p.oI], S.prototype, "onAddToWishlist", null),
+        (0, i.Cg)([p.oI], S.prototype, "onGoToWishlist", null),
+        (0, i.Cg)([p.oI], S.prototype, "onAddToCart", null),
+        (0, i.Cg)([p.oI], S.prototype, "onMuteClicked", null),
+        (0, i.Cg)([p.oI], S.prototype, "onUnMuteClicked", null),
+        (0, i.Cg)([p.oI], S.prototype, "shouldMute", null),
+        (0, i.Cg)([p.oI], S.prototype, "shouldUseMicrotrailers", null);
+      const T = new S();
+      window.g_InteractiveRecommender = T;
       var R = a(82477),
         C = a(32630),
-        w = a(60014);
+        w = a(60014),
+        A = a(55263);
       !(function () {
-        let e = (0, o.Tc)("ir_config", "application_config");
-        e && (Object.assign(y, e), f.Init());
+        let e = (0, n.Tc)("ir_config", "application_config");
+        e && (Object.assign(v, e), T.Init());
       })();
       const N = ({ accountID: e }) => {
-          const t = f.getInputApps(),
+          const t = T.getInputApps(),
             a = Object.keys(t).length;
           let s = 0;
           return (
@@ -817,7 +1010,7 @@
               { className: g.IdentityBlock },
               r.createElement("img", {
                 className: g.Avatar,
-                src: y.AVATAR_URL,
+                src: v.AVATAR_URL,
               }),
               r.createElement(
                 "div",
@@ -825,42 +1018,46 @@
                 r.createElement(
                   "div",
                   { className: g.Persona },
-                  y.PERSONA_NAME,
+                  v.PERSONA_NAME,
                 ),
                 r.createElement(
                   "div",
                   { className: g.GameCount },
-                  (0, p.we)("#PlaytimeList_RecentGames", a),
+                  (0, m.we)("#PlaytimeList_RecentGames", a),
                 ),
                 r.createElement(
                   "div",
                   { className: g.TotalTime },
-                  (0, p.we)("#PlaytimeList_HoursTotal", s),
+                  (0, m.we)("#PlaytimeList_HoursTotal", s),
                 ),
               ),
             )
           );
         },
-        A = ({ appID: e, name: t, hours: a, lastPlayed: s, ignored: i }) => {
-          const o = `${y.CDN_URL}apps/${e}/header.jpg`,
-            n = Date.now() / 1e3 - s;
+        D = ({ appID: e, name: t, hours: a, lastPlayed: s, ignored: i }) => {
+          const [n] = (0, A.t7)(e, { include_assets: !0 });
+          if (!n) return null;
+          const o = Date.now() / 1e3 - s;
           let l = "",
             c = "";
           return (
             s <= 86400
-              ? (c = (0, p.we)("#PlaytimeList_LastPlayedMax"))
-              : n > 31449600
-                ? ((l = (0, p.$z)(s)),
-                  (c = (0, p.we)("#PlaytimeList_LastPlayed", l)))
-                : ((l = (0, p.Hq)(n)),
-                  (c = (0, p.we)("#PlaytimeList_LastPlayed", l))),
+              ? (c = (0, m.we)("#PlaytimeList_LastPlayedMax"))
+              : o > 31449600
+                ? ((l = (0, m.$z)(s)),
+                  (c = (0, m.we)("#PlaytimeList_LastPlayed", l)))
+                : ((l = (0, m.Hq)(o)),
+                  (c = (0, m.we)("#PlaytimeList_LastPlayed", l))),
             r.createElement(
               "div",
-              { className: (0, m.A)(g.PlayedGame, i && g.Ignored) },
+              { className: (0, u.A)(g.PlayedGame, i && g.Ignored) },
               r.createElement(
                 "a",
-                { href: `${y.BASE_URL}app/${e}?snr=${y.LINK_PARAM}` },
-                r.createElement("img", { className: g.Logo, src: o }),
+                { href: `${v.BASE_URL}app/${e}?snr=${v.LINK_PARAM}` },
+                r.createElement("img", {
+                  className: g.Logo,
+                  src: n.GetAssets().GetHeaderURL(),
+                }),
               ),
               r.createElement(
                 "div",
@@ -868,7 +1065,7 @@
                 r.createElement(
                   "div",
                   { className: g.HoursPlayed },
-                  (0, p.we)("#PlaytimeList_Hours", a),
+                  (0, m.we)("#PlaytimeList_Hours", a),
                 ),
                 r.createElement("div", { className: g.Title }, t),
                 r.createElement("div", { className: g.LastPlayed }, c),
@@ -876,9 +1073,9 @@
                   "div",
                   {
                     className: g.IgnoreToggle,
-                    onClick: () => f.onToggleIgnore(e),
+                    onClick: () => T.onToggleIgnore(e),
                   },
-                  (0, p.we)(
+                  (0, m.we)(
                     i ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore",
                   ),
                 ),
@@ -886,12 +1083,12 @@
             )
           );
         };
-      let D = class extends r.Component {
+      let L = class extends r.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
         render() {
-          const e = f.getInputApps();
+          const e = T.getInputApps();
           let t = [];
           if (!e)
             return r.createElement(
@@ -900,17 +1097,17 @@
               r.createElement(
                 "div",
                 { className: g.Header },
-                (0, p.we)("#PlaytimeList_Header"),
+                (0, m.we)("#PlaytimeList_Header"),
               ),
               r.createElement("div", { className: g.Loading }),
             );
-          f.getAppInfo();
+          T.getAppInfo();
           const a = e.slice().sort((e, t) => t.l - e.l);
           return (
             Object.keys(a).map((e) => {
               const s = a[e];
               t.push(
-                r.createElement(A, {
+                r.createElement(D, {
                   key: "PlayedGame_" + s.a,
                   appID: s.a,
                   name: s.t,
@@ -926,7 +1123,7 @@
               r.createElement(
                 "div",
                 { className: g.Header },
-                (0, p.we)("#PlaytimeList_Header"),
+                (0, m.we)("#PlaytimeList_Header"),
               ),
               r.createElement(N, { accountID: this.props.accountID }),
               r.createElement("div", { className: g.List }, t),
@@ -934,19 +1131,19 @@
           );
         }
       };
-      D = (0, i.Cg)([n.PA], D);
+      L = (0, i.Cg)([o.PA], L);
       const P = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: a,
           minValue: s,
           maxValue: i,
-          value: o,
-          onChange: n,
+          value: n,
+          onChange: o,
           sliderLabels: l,
         }) => {
           const c = l
-              ? Math.round((l.length - 1) * ((o - s) / (i - s)))
+              ? Math.round((l.length - 1) * ((n - s) / (i - s)))
               : void 0,
             d = l ? l[c] : "";
           return r.createElement(
@@ -964,16 +1161,16 @@
               min: s,
               max: i,
               step: (i - s) / 100,
-              value: o,
-              onChange: n,
+              value: n,
+              onChange: o,
             }),
             r.createElement("div", { className: g.OptionalLabel }, d),
           );
         },
-        L = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
+        b = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
           r.createElement(
             "label",
-            { className: (0, m.A)(g.OptionCheckbox, e && e) },
+            { className: (0, u.A)(g.OptionCheckbox, e && e) },
             r.createElement("input", {
               type: "checkbox",
               className: g.Checkbox,
@@ -982,7 +1179,7 @@
             }),
             t,
           );
-      let x = class extends r.Component {
+      let M = class extends r.Component {
         selectedtags = [];
         constructor(e) {
           super(e),
@@ -992,7 +1189,7 @@
         }
         rgTags = [];
         componentDidMount() {
-          const e = f.getTags();
+          const e = T.getTags();
           if (e)
             for (const t of e)
               this.rgTags.push({ id: parseInt(t.tagid), name: t.name });
@@ -1045,14 +1242,14 @@
         }
         render() {
           const e = {
-            placeholder: (0, p.we)("#TagSelect"),
+            placeholder: (0, m.we)("#TagSelect"),
             value: this.state.value,
             onChange: this.onChange,
             onKeyDown: this.onKeyDown,
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let a = f.m_TagNameMap.get(e);
+            let a = T.m_TagNameMap.get(e);
             t.push(
               r.createElement(
                 "div",
@@ -1070,7 +1267,7 @@
             "div",
             { className: g.OptionTagList },
             r.createElement("div", { className: g.Label }, this.props.title),
-            r.createElement(_(), {
+            r.createElement(h(), {
               suggestions: this.state.suggestions,
               onSuggestionsFetchRequested: this.onFetchRequested,
               onSuggestionsClearRequested: this.onClearRequested,
@@ -1090,95 +1287,96 @@
           );
         }
       };
-      (0, i.Cg)([l.sH], x.prototype, "selectedtags", void 0),
-        (0, i.Cg)([u.oI], x.prototype, "onFetchRequested", null),
-        (0, i.Cg)([u.oI], x.prototype, "onClearRequested", null),
-        (0, i.Cg)([u.oI], x.prototype, "onChange", null),
-        (0, i.Cg)([u.oI], x.prototype, "onKeyDown", null),
-        (0, i.Cg)([u.oI], x.prototype, "shouldRenderSuggestions", null),
-        (0, i.Cg)([u.oI], x.prototype, "onSuggestionSelected", null),
-        (0, i.Cg)([u.oI], x.prototype, "onRemoveSelectedTag", null),
-        (x = (0, i.Cg)([n.PA], x));
-      const M = (0, n.PA)(() => {
-        const e = f.getTags(),
+      (0, i.Cg)([l.sH], M.prototype, "selectedtags", void 0),
+        (0, i.Cg)([p.oI], M.prototype, "onFetchRequested", null),
+        (0, i.Cg)([p.oI], M.prototype, "onClearRequested", null),
+        (0, i.Cg)([p.oI], M.prototype, "onChange", null),
+        (0, i.Cg)([p.oI], M.prototype, "onKeyDown", null),
+        (0, i.Cg)([p.oI], M.prototype, "shouldRenderSuggestions", null),
+        (0, i.Cg)([p.oI], M.prototype, "onSuggestionSelected", null),
+        (0, i.Cg)([p.oI], M.prototype, "onRemoveSelectedTag", null),
+        (M = (0, i.Cg)([o.PA], M));
+      const x = (0, o.PA)(() => {
+        const e = T.getTags(),
           t = [];
         if (e)
           for (const a of e) t.push({ id: parseInt(a.tagid), name: a.name });
         const a = [
-            (0, p.we)("#FilterAge_240"),
-            (0, p.we)("#FilterAge_60"),
-            (0, p.we)("#FilterAge_36"),
-            (0, p.we)("#FilterAge_24"),
-            (0, p.we)("#FilterAge_12"),
-            (0, p.we)("#FilterAge_6"),
+            (0, m.we)("#FilterAge_240"),
+            (0, m.we)("#FilterAge_60"),
+            (0, m.we)("#FilterAge_36"),
+            (0, m.we)("#FilterAge_24"),
+            (0, m.we)("#FilterAge_12"),
+            (0, m.we)("#FilterAge_6"),
           ],
-          s = f.m_rgExcludeTags,
-          i = f.m_rgFilterTags;
+          s = T.m_rgExcludeTags,
+          i = T.m_rgFilterTags;
         return r.createElement(
           "div",
           { className: g.RecommendationOptions },
           r.createElement(
             "div",
-            { className: (0, m.A)(g.Row, g.FirstRow) },
+            { className: (0, u.A)(g.Row, g.FirstRow) },
             r.createElement(P, {
-              minLabel: (0, p.we)("#Popularity_Popular"),
-              titleLabel: (0, p.we)("#Popularity_Title"),
-              maxLabel: (0, p.we)("#Popularity_Niche"),
+              minLabel: (0, m.we)("#Popularity_Popular"),
+              titleLabel: (0, m.we)("#Popularity_Title"),
+              maxLabel: (0, m.we)("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
-              value: f.m_fQueuedPopularityValue,
-              onChange: f.onPopularityChanged,
+              value: T.m_fQueuedPopularityValue,
+              onChange: T.onPopularityChanged,
             }),
             r.createElement(P, {
-              minLabel: (0, p.we)("#Recency_Older"),
-              titleLabel: (0, p.we)("#Recency_Title"),
-              maxLabel: (0, p.we)("#Recency_Newer"),
+              minLabel: (0, m.we)("#Recency_Older"),
+              titleLabel: (0, m.we)("#Recency_Title"),
+              maxLabel: (0, m.we)("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
-              value: f.m_fQueuedRecencyValue,
-              onChange: f.onRecencyChanged,
+              value: T.m_fQueuedRecencyValue,
+              onChange: T.onRecencyChanged,
               sliderLabels: a,
             }),
           ),
           r.createElement(
             "div",
-            { className: (0, m.A)(g.Row, g.SecondRow) },
-            r.createElement(x, {
-              title: (0, p.we)("#TagFilterMultiple_Title"),
+            { className: (0, u.A)(g.Row, g.SecondRow) },
+            r.createElement(M, {
+              title: (0, m.we)("#TagFilterMultiple_Title"),
               tagoptions: t,
               selectedtags: i,
               key: "Filter" + i.toString(),
-              onAddTag: f.onTagFilterAdd,
-              onRemoveTag: f.onTagFilterRemove,
+              onAddTag: T.onTagFilterAdd,
+              onRemoveTag: T.onTagFilterRemove,
             }),
-            r.createElement(x, {
-              title: (0, p.we)("#TagExcludeMultiple_Title"),
+            r.createElement(M, {
+              title: (0, m.we)("#TagExcludeMultiple_Title"),
               tagoptions: t,
               selectedtags: s,
               key: "Exclude" + s.toString(),
-              onAddTag: f.onTagExcludeAdd,
-              onRemoveTag: f.onTagExcludeRemove,
+              onAddTag: T.onTagExcludeAdd,
+              onRemoveTag: T.onTagExcludeRemove,
             }),
-            r.createElement(L, {
+            r.createElement(b, {
               className: g.WishlistCheckbox,
-              titleLabel: (0, p.we)("#ExcludeWishlisted"),
-              checked: f.m_bExcludeWishlisted,
-              onChange: f.onExcludeWishlistedToggled,
+              titleLabel: (0, m.we)("#ExcludeWishlisted"),
+              checked: T.m_bExcludeWishlisted,
+              onChange: T.onExcludeWishlistedToggled,
             }),
           ),
         );
       });
-      let b = class extends r.Component {
+      let U = class extends r.Component {
         m_videoRef = r.createRef();
         constructor(e) {
           super(e),
             (this.state = {
               hovered: !1,
-              wishlisted: f.getAppInfo()[e.appID].w,
+              wishlisted: T.getAppInfo()[e.appID].w,
             });
         }
         componentDidMount() {
-          this.m_videoRef.current.defaultMuted = !0;
+          this.m_videoRef.current &&
+            (this.m_videoRef.current.defaultMuted = !0);
         }
         componentDidUpdate() {
           if (
@@ -1208,12 +1406,12 @@
         onMuteToggle(e) {
           e.preventDefault(),
             e.stopPropagation(),
-            f.shouldMute()
-              ? (f.onUnMuteClicked(),
+            T.shouldMute()
+              ? (T.onUnMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !1))
-              : (f.onMuteClicked(),
+              : (T.onMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !0));
@@ -1221,38 +1419,36 @@
         onAddToWishlist(e) {
           e.preventDefault(),
             e.stopPropagation(),
-            f.onAddToWishlist(this.props.appID, this.props.rank),
+            T.onAddToWishlist(this.props.appID, this.props.rank),
             this.setState({ wishlisted: !0 });
         }
         onGoToWishlist(e) {
-          e.preventDefault(), e.stopPropagation(), f.onGoToWishlist();
+          e.preventDefault(), e.stopPropagation(), T.onGoToWishlist();
         }
         onAddToCart(e, t) {
           e.preventDefault(),
             e.stopPropagation(),
-            f.onAddToCart(this.props.appID, t, this.props.rank);
+            T.onAddToCart(this.props.appID, t, this.props.rank);
         }
         render() {
           const { appID: e, score: t, rank: a, width: s } = this.props,
-            i =
-              "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            o = f.getAppInfo()[e];
-          if (!o) return r.createElement("div", null);
-          const n = o.n,
-            l =
-              o.r > 0
-                ? (0, p.we)("#Recommendation_ReleasedOn", (0, p.$z)(o.r))
+            i = T.getAppInfo()[e];
+          if (!i) return r.createElement("div", null);
+          const n = i.n,
+            o =
+              i.r > 0
+                ? (0, m.we)("#Recommendation_ReleasedOn", (0, m.$z)(i.r))
                 : "";
-          let u = [];
-          if (o.t) {
+          let l = [];
+          if (i.t) {
             let t = 0;
-            for (const a of o.t)
+            for (const a of i.t)
               if (
-                (u.push(
+                (l.push(
                   r.createElement(
                     "div",
                     { key: `${e}_${a}`, className: g.Tag },
-                    f.getTagName(a),
+                    T.getTagName(a),
                   ),
                 ),
                 t++,
@@ -1260,62 +1456,62 @@
               )
                 break;
           }
-          const h = parseInt(g.smallentrywidth),
+          const p = parseInt(g.smallentrywidth),
             _ = parseInt(g.optionswrapwidth);
-          let E = 112,
-            T = !0;
-          s < h ? ((E = 66), (T = !1)) : s < _ && ((E = 87), (T = !1));
-          const v = T && this.state.hovered,
+          let h = 112,
+            E = !0;
+          s < p ? ((h = 66), (E = !1)) : s < _ && ((h = 87), (E = !1));
+          const f = E && this.state.hovered,
             I = Math.min(Number(t) / 100, 1e3);
-          let S = !1,
-            R = !1,
-            C = !0,
+          let y = !1,
+            S = !1,
+            R = !0,
+            C = "",
             w = "",
-            N = "",
             A = "",
-            D = "",
-            P = 0,
+            N = "",
+            D = 0,
             L = "",
-            x = !1,
-            M = !0;
-          if (v) {
-            const e = f.getDetails(this.props.appID);
+            P = !1,
+            b = !0;
+          if (f) {
+            const e = T.getDetails(this.props.appID);
             e &&
-              ((S = !0),
-              (R = e.discount_pct > 0),
-              (C = "0" == e.discount_price),
-              (P = e.packageid),
+              ((y = !0),
+              (S = e.discount_pct > 0),
+              (R = "0" == e.discount_price),
+              (D = e.packageid),
               "probably" ==
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? f.shouldUseMicrotrailers() && e.microtrailer_webm
-                  ? ((L = e.microtrailer_webm), (x = !0), (M = !1))
+                ? T.shouldUseMicrotrailers() && e.microtrailer_webm
+                  ? ((L = e.microtrailer_webm), (P = !0), (b = !1))
                   : (L = e.video_webm)
-                : f.shouldUseMicrotrailers() && e.microtrailer_mp4
-                  ? ((L = e.microtrailer_mp4), (x = !0), (M = !1))
+                : T.shouldUseMicrotrailers() && e.microtrailer_mp4
+                  ? ((L = e.microtrailer_mp4), (P = !0), (b = !1))
                   : (L = e.video_mp4),
-              (w = `-${e.discount_pct}%`),
-              (N = e.base_price),
-              (A = C ? (0, p.we)("#FreeToPlay") : e.discount_price),
-              (D = e.description));
+              (C = `-${e.discount_pct}%`),
+              (w = e.base_price),
+              (A = R ? (0, m.we)("#FreeToPlay") : e.discount_price),
+              (N = e.description));
           }
-          const b = L && L.length > 0;
+          const M = L && L.length > 0;
           return r.createElement(
             c.A,
             { appID: e },
             r.createElement(
-              U,
+              k,
               {
-                href: `${y.BASE_URL}app/${e}`,
-                className: (0, m.A)(
+                href: `${v.BASE_URL}app/${e}`,
+                className: (0, u.A)(
                   g.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
                   a > 32 && g.Hidden,
-                  v && g.Hovered,
+                  f && g.Hovered,
                 ),
-                style: { top: Math.min(33, a) * E },
+                style: { top: Math.min(33, a) * h },
                 onMouseEnter: this.OnHover,
                 onMouseLeave: this.OnUnHover,
               },
@@ -1326,43 +1522,43 @@
                   "div",
                   { className: g.LeftSection },
                   r.createElement("img", {
-                    className: (0, m.A)(g.Logo, (!b || !v) && g.Revealed),
-                    src: i,
+                    className: (0, u.A)(g.Logo, (!M || !f) && g.Revealed),
+                    src: this.props.header,
                   }),
                   r.createElement("video", {
                     ref: this.m_videoRef,
-                    className: (0, m.A)(
+                    className: (0, u.A)(
                       "highlight_player_item",
                       "highlight_movie",
                       g.Video,
-                      b && v && g.Revealed,
+                      M && f && g.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: M && f.shouldMute(),
+                    muted: b && T.shouldMute(),
                     src: L,
-                    loop: x,
+                    loop: P,
                   }),
-                  M &&
+                  b &&
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.A)(g.UnMute, b && g.Revealed),
+                        className: (0, u.A)(g.UnMute, M && g.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      r.createElement(d.fSs, { muted: f.shouldMute() }),
+                      r.createElement(d.fSs, { muted: T.shouldMute() }),
                     ),
                   this.state.wishlisted &&
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.A)(
+                        className: (0, u.A)(
                           "ds_flag",
                           "ds_wishlist_flag",
                           g.WishlistFlag,
                         ),
                       },
-                      (0, p.we)("#Recommendation_OnWishlist") + "  ",
+                      (0, m.we)("#Recommendation_OnWishlist") + "  ",
                     ),
                 ),
                 r.createElement(
@@ -1375,13 +1571,13 @@
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.A)(
+                        className: (0, u.A)(
                           g.CenterOption,
                           g.CenterDefault,
-                          v && g.Hidden,
+                          f && g.Hidden,
                         ),
                       },
-                      r.createElement("div", { className: g.Released }, l),
+                      r.createElement("div", { className: g.Released }, o),
                       r.createElement(
                         "div",
                         { className: g.BarContainer },
@@ -1390,28 +1586,28 @@
                           style: { width: `${I}%` },
                         }),
                       ),
-                      r.createElement("div", { className: g.Tags }, u),
+                      r.createElement("div", { className: g.Tags }, l),
                     ),
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.A)(
+                        className: (0, u.A)(
                           g.CenterOption,
                           g.CenterHovered,
-                          !v && g.Hidden,
+                          !f && g.Hidden,
                         ),
                       },
-                      D,
+                      N,
                     ),
                   ),
-                  S &&
+                  y &&
                     r.createElement(
                       "div",
                       { className: g.BottomEntrySection },
                       r.createElement(
                         "div",
                         {
-                          className: (0, m.A)(
+                          className: (0, u.A)(
                             "game_purchase_action",
                             g.PurchaseSection,
                           ),
@@ -1419,12 +1615,12 @@
                         r.createElement(
                           "div",
                           {
-                            className: (0, m.A)(
+                            className: (0, u.A)(
                               "game_purchase_action_bg",
                               g.PurchaseBG,
                             ),
                           },
-                          R &&
+                          S &&
                             r.createElement(
                               "div",
                               {
@@ -1434,7 +1630,7 @@
                               r.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                w,
+                                C,
                               ),
                               r.createElement(
                                 "div",
@@ -1442,7 +1638,7 @@
                                 r.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  N,
+                                  w,
                                 ),
                                 r.createElement(
                                   "div",
@@ -1451,11 +1647,11 @@
                                 ),
                               ),
                             ),
-                          !R &&
+                          !S &&
                             r.createElement(
                               "div",
                               {
-                                className: (0, m.A)(
+                                className: (0, u.A)(
                                   "game_purchase_price",
                                   "price",
                                   g.Price,
@@ -1463,12 +1659,12 @@
                               },
                               A,
                             ),
-                          !C &&
+                          !R &&
                             r.createElement(
                               "div",
                               {
                                 className: "btn_addtocart",
-                                onClick: (e) => this.onAddToCart(e, P),
+                                onClick: (e) => this.onAddToCart(e, D),
                               },
                               r.createElement(
                                 "span",
@@ -1479,14 +1675,14 @@
                                 r.createElement(
                                   "span",
                                   null,
-                                  (0, p.we)("#btn_add_to_cart"),
+                                  (0, m.we)("#btn_add_to_cart"),
                                 ),
                               ),
                             ),
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !C &&
+                        !R &&
                         r.createElement(
                           "div",
                           {
@@ -1500,22 +1696,22 @@
                             r.createElement(
                               "span",
                               null,
-                              (0, p.we)("#wishlist_add_to_wishlist"),
+                              (0, m.we)("#wishlist_add_to_wishlist"),
                             ),
                           ),
                         ),
                       this.state.wishlisted &&
-                        !C &&
+                        !R &&
                         r.createElement(
                           "div",
                           {
-                            className: (0, m.A)(
+                            className: (0, u.A)(
                               "btnv6_blue_hoverfade btn_medium",
                               "queue_btn_active",
                               g.Wishlisted,
                               g.WishlistSection,
                             ),
-                            "data-tooltip-text": (0, p.we)(
+                            "data-tooltip-text": (0, m.we)(
                               "#OnWishlistTooltip",
                             ),
                             onClick: (e) => this.onGoToWishlist(e),
@@ -1524,9 +1720,9 @@
                             "span",
                             null,
                             r.createElement("img", {
-                              src: `${y.IMG_URL_BASE}/v6/ico/ico_selected.png`,
+                              src: `${v.IMG_URL_BASE}/v6/ico/ico_selected.png`,
                             }),
-                            "  " + (0, p.we)("#OnWishlist"),
+                            "  " + (0, m.we)("#OnWishlist"),
                           ),
                         ),
                     ),
@@ -1536,14 +1732,14 @@
           );
         }
       };
-      (0, i.Cg)([u.oI], b.prototype, "OnHover", null),
-        (0, i.Cg)([u.oI], b.prototype, "OnUnHover", null),
-        (0, i.Cg)([u.oI], b.prototype, "onMuteToggle", null),
-        (0, i.Cg)([u.oI], b.prototype, "onAddToWishlist", null),
-        (0, i.Cg)([u.oI], b.prototype, "onGoToWishlist", null),
-        (0, i.Cg)([u.oI], b.prototype, "onAddToCart", null),
-        (b = (0, i.Cg)([n.PA], b));
-      const U = r.forwardRef(function (e, t) {
+      (0, i.Cg)([p.oI], U.prototype, "OnHover", null),
+        (0, i.Cg)([p.oI], U.prototype, "OnUnHover", null),
+        (0, i.Cg)([p.oI], U.prototype, "onMuteToggle", null),
+        (0, i.Cg)([p.oI], U.prototype, "onAddToWishlist", null),
+        (0, i.Cg)([p.oI], U.prototype, "onGoToWishlist", null),
+        (0, i.Cg)([p.oI], U.prototype, "onAddToCart", null),
+        (U = (0, i.Cg)([o.PA], U));
+      const k = r.forwardRef(function (e, t) {
         const { href: a, ...s } = e,
           i = (0, w.aL)(a);
         return r.createElement("a", { ...s, ref: t, href: i });
@@ -1554,39 +1750,43 @@
         }
         render() {
           let e = [];
-          const t = f.m_fRecencyValue * (y.NUM_RECENCY_STEPS - 1 - 0.001),
+          const t = T.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
             a = Math.floor(t),
             s = a + 1,
             i = t - a,
-            o = f.m_fPopularityValue * (y.NUM_POPULARITY_STEPS - 1 - 0.001),
-            n = Math.floor(o),
-            l = n + 1,
-            c = o - n;
+            n = T.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
+            o = Math.floor(n),
+            l = o + 1,
+            c = n - o;
           e.push({
-            index: a * y.NUM_RECENCY_STEPS + n,
+            index: a * v.NUM_RECENCY_STEPS + o,
             weight: (1 - i) * (1 - c),
           }),
-            e.push({ index: s * y.NUM_RECENCY_STEPS + n, weight: i * (1 - c) }),
-            e.push({ index: a * y.NUM_RECENCY_STEPS + l, weight: (1 - i) * c }),
-            e.push({ index: s * y.NUM_RECENCY_STEPS + l, weight: i * c });
+            e.push({ index: s * v.NUM_RECENCY_STEPS + o, weight: i * (1 - c) }),
+            e.push({ index: a * v.NUM_RECENCY_STEPS + l, weight: (1 - i) * c }),
+            e.push({ index: s * v.NUM_RECENCY_STEPS + l, weight: i * c });
           let d = new Map(),
-            u = 0;
-          const h = f.getRecommendations(),
-            _ = f.getAppInfo();
-          let E = [];
-          if (h) {
+            p = 0;
+          const _ = T.getRecommendations(),
+            h = T.getAppInfo();
+          let E = [],
+            f = r.createElement("div", {
+              key: "recommendations_loading",
+              className: g.RecommendationsLoading,
+            });
+          if (_) {
             for (const t of e) {
-              const e = h.request_results[t.index];
+              const e = _.request_results[t.index];
               if (e) {
-                u = Math.max(u, e.max_weight);
+                p = Math.max(p, e.max_weight);
                 for (const a of e.app_recommendations) {
                   const e = a.app_id;
                   if (
-                    !_[e] ||
-                    _[e].o ||
-                    _[e].i ||
-                    _[e].ti ||
-                    (_[e].w && f.m_bExcludeWishlisted)
+                    !h[e] ||
+                    h[e].o ||
+                    h[e].i ||
+                    h[e].ti ||
+                    (h[e].w && T.m_bExcludeWishlisted)
                   )
                     continue;
                   const s = (d.get(e) || 0) + a.weight * t.weight;
@@ -1597,10 +1797,10 @@
             let t = [];
             d.forEach((e, a) => t.push({ appid: a, score: e })),
               (t = t.filter(
-                (e) => _[e.appid].t && f.doTagsPassFilter(_[e.appid].t),
+                (e) => h[e.appid].t && T.doTagsPassFilter(h[e.appid].t),
               )),
               (t = t.filter(
-                (e) => _[e.appid].t && !f.doTagsFailExclusion(_[e.appid].t),
+                (e) => h[e.appid].t && !T.doTagsFailExclusion(h[e.appid].t),
               )),
               (t = t.filter((e) => e.score > 0));
             let a = t.sort((e, t) => t.score - e.score);
@@ -1608,58 +1808,80 @@
               a = a.slice(0, 32);
               let e = 0;
               for (let t of a) (t.rank = e), e++;
-              for (const e of a)
-                E.push(
-                  r.createElement(b, {
-                    key: e.appid,
-                    appID: e.appid,
-                    score: e.score,
-                    rank: e.rank,
-                    width: this.props.width,
-                  }),
-                );
+              E = a;
             } else
-              E.push(
-                r.createElement(
-                  "div",
-                  {
-                    key: "no_recommedations_due_to_filter",
-                    className: g.NoRecommendationsMessage,
-                  },
-                  (0, p.we)("#NoRecommendationsDueToFilter"),
-                ),
+              f = r.createElement(
+                "div",
+                {
+                  key: "no_recommedations_due_to_filter",
+                  className: g.NoRecommendationsMessage,
+                },
+                (0, m.we)("#NoRecommendationsDueToFilter"),
               );
-          } else
-            E.push(
-              r.createElement("div", {
-                key: "recommendations_loading",
-                className: g.RecommendationsLoading,
-              }),
-            );
+          }
           return r.createElement(
             "div",
             { className: g.RecommendationList },
             r.createElement(
               "div",
               { className: g.Header },
-              (0, p.we)("#Recommendations_Header"),
+              (0, m.we)("#Recommendations_Header"),
             ),
-            r.createElement(M, null),
+            r.createElement(x, null),
             r.createElement(
               "div",
               {
-                className: (0, m.A)(
+                className: (0, u.A)(
                   g.List,
-                  f.areResultsExpired() && g.Updating,
+                  T.areResultsExpired() && g.Updating,
                 ),
               },
-              E,
+              E.length
+                ? r.createElement(V, {
+                    rgRecommendations: E,
+                    width: this.props.width,
+                  })
+                : f,
             ),
           );
         }
       };
-      O = (0, i.Cg)([n.PA], O);
-      let V = class extends r.Component {
+      function V(e) {
+        const { rgRecommendations: t, width: a } = e,
+          s = r.useMemo(() => t.map((e) => e.appID), [t]);
+        (0, A.zX)(s, { include_assets: !0 });
+        const i = r.useMemo(
+          () =>
+            t.map((e) =>
+              r.createElement(W, {
+                key: e.appid,
+                recommendation: {
+                  appID: e.appid,
+                  score: e.score,
+                  rank: e.rank,
+                  width: a,
+                },
+              }),
+            ),
+          [t, a],
+        );
+        return r.createElement(r.Fragment, null, " ", i, " ");
+      }
+      function W(e) {
+        const { recommendation: t } = e,
+          [a] = (0, A.t7)(t.appID, { include_assets: !0 });
+        return a
+          ? r.createElement(U, {
+              appID: t.appID,
+              score: t.score,
+              rank: t.rank,
+              width: t.width,
+              header: a?.GetAssets()?.GetHeaderURL(),
+            })
+          : null;
+      }
+      O = (0, i.Cg)([o.PA], O);
+      let F = class extends r.Component {
         state = { width: window.innerWidth };
         updateDimensions() {
           this.setState({ width: window.innerWidth });
@@ -1671,7 +1893,7 @@
           (0, R.vg)();
         }
         render() {
-          return o.iA.logged_in
+          return n.iA.logged_in
             ? r.createElement(
                 C.A,
                 {
@@ -1683,7 +1905,7 @@
                   "div",
                   {
                     className: g.App,
-                    style: { height: 3840 + 26 * f.getTagHeight() },
+                    style: { height: 3840 + 26 * T.getTagHeight() },
                   },
                   r.createElement(
                     "div",
@@ -1694,18 +1916,18 @@
                       r.createElement(
                         "div",
                         { className: g.Header },
-                        (0, p.we)("#HeaderTitle"),
+                        (0, m.we)("#HeaderTitle"),
                       ),
                       r.createElement(
                         "div",
                         { className: g.Body },
-                        (0, p.we)("#HeaderBody1"),
+                        (0, m.we)("#HeaderBody1"),
                       ),
                     ),
                     r.createElement(
                       "div",
                       { className: g.BottomSection },
-                      r.createElement(D, { accountID: o.iA.accountid }),
+                      r.createElement(L, { accountID: n.iA.accountid }),
                       r.createElement("div", { className: g.VerticalBar }),
                       r.createElement(O, { width: this.state.width }),
                     ),
@@ -1721,27 +1943,27 @@
                   r.createElement(
                     "div",
                     { className: g.Text },
-                    (0, p.we)("#LoginText"),
+                    (0, m.we)("#LoginText"),
                   ),
                   r.createElement(
                     "div",
                     {
-                      className: (0, m.A)(
+                      className: (0, u.A)(
                         "btn_green_white_innerfade",
                         " btn_medium",
                       ),
                       onClick: this.ShowLoginDialog,
                     },
-                    r.createElement("span", null, (0, p.we)("#LoginButton")),
+                    r.createElement("span", null, (0, m.we)("#LoginButton")),
                   ),
                 ),
               );
         }
       };
-      (0, i.Cg)([u.oI], V.prototype, "updateDimensions", null),
-        (0, i.Cg)([u.oI], V.prototype, "ShowLoginDialog", null),
-        (V = (0, i.Cg)([n.PA], V));
-      const W = V;
+      (0, i.Cg)([p.oI], F.prototype, "updateDimensions", null),
+        (0, i.Cg)([p.oI], F.prototype, "ShowLoginDialog", null),
+        (F = (0, i.Cg)([o.PA], F));
+      const G = F;
     },
   },
 ]);

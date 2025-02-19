@@ -20,6 +20,11 @@
         Light: "_1TMfa019CaA4qxnR2zVK5A",
         Large: "_3RWhTDfFof9_Jj4b7oYD09",
         ItemImage: "_3vWrL53WYwNeXyPrbnViQT",
+        CapsuleTitle: "_3B_PS2u5Y911Ui1wE03GMa",
+        Deadline: "_2j2hVvEQSKTMqfZ6DLsuyW",
+        Urgent: "_2pgzVrBemEcmU369lE2qfM",
+        ReleaseGame: "_2-rM8_8Dv67mW6payePQwy",
+        ReleaseDLC: "_3hWVPHAwTHF3XQT-Fr69jG",
         CapsuleImage: "_1cDWqLckZCvIIygSvUyUUV",
         DateText: "_35y5dxjV7pt_nRddPGolhN",
         LinkButtonContainer: "_2v_h3baxh4W0DWGv-qlfWc",
@@ -14568,7 +14573,7 @@
         s = a(41735),
         l = a.n(s),
         o = a(68797),
-        c = a(20587),
+        c = a(86921),
         m = a(17720);
       class d {
         constructor() {
@@ -14769,19 +14774,38 @@
         );
       }
       function E(e) {
-        const { linkUrl: t } = e,
-          a = "imageUrl" in e ? [e.imageUrl] : e.imageUrls;
-        return a?.length > 0
-          ? n.createElement(
+        const { linkUrl: t, title: a, eventType: l } = e,
+          c = "imageUrl" in e ? [e.imageUrl] : e.imageUrls;
+        if (!c?.length) return;
+        let m;
+        switch (l) {
+          case "deadline":
+            m = r.Deadline;
+            break;
+          case "deadline-urgent":
+            m = r.Urgent;
+            break;
+          case "release-game":
+            m = r.ReleaseGame;
+            break;
+          case "release-dlc":
+            m = r.ReleaseDLC;
+        }
+        return n.createElement(
+          "div",
+          { className: r.CapsuleImage },
+          n.createElement(
+            s.iN,
+            { href: t, target: "_blank" },
+            n.createElement(o.c, { rgSources: c }),
+          ),
+          !!a &&
+            n.createElement(
               "div",
-              { className: r.CapsuleImage },
-              n.createElement(
-                s.iN,
-                { href: t, target: "_blank" },
-                n.createElement(o.c, { rgSources: a }),
-              ),
-            )
-          : void 0;
+              { className: (0, i.A)(r.CapsuleTitle, m) },
+              a,
+            ),
+        );
       }
       function S(e) {
         const {
@@ -27521,6 +27545,7 @@
                     .QueueMultipleAppRequests(n, {
                       include_trailers: !0,
                       include_screenshots: !0,
+                      include_assets: !0,
                     })
                     .then(() => {
                       t.token.reason || a(!1);
@@ -27613,33 +27638,36 @@
                             await ln(s, c, o, n, r);
                         }
                       } else {
-                        let e = "header.jpg";
+                        let e = l.GetAssets().GetHeaderURL(),
+                          i = "Header";
                         switch (a) {
                           default:
                           case rn.k_EDownloadHeader:
                             break;
                           case rn.k_EDownloadSmallCapsule:
-                            e = "capsule_231x87.jpg";
+                            (e = l.GetAssets().GetSmallCapsuleURL()),
+                              (i = "SmallCapsule");
                             break;
                           case rn.k_EDownloadMainCapsule:
-                            e = "capsule_616x353.jpg";
+                            (e = l.GetAssets().GetMainCapsuleURL()),
+                              (i = "MainCapsule");
                             break;
                           case rn.k_EDownloadVerticalCapsule:
-                            e = "hero_capsule.jpg";
+                            (e = l.GetAssets().GetHeroCapsuleURL()),
+                              (i = "VerticalCapsule");
                             break;
                           case rn.k_EDownloadPageBackground:
-                            e = "page_bg_raw.jpg";
+                            (e = l.GetAssets().GetRawPageBackgroundURL()),
+                              (i = "PageBackground");
                         }
                         (o =
                           l.GetName().replace(/[^\w\s!?]/g, "") +
                           "_" +
                           t +
                           "_" +
-                          e),
-                          (e += `?t=${Math.floor(Date.now() / 1e3)}&exclude_beta=1`),
-                          (c = `${f.TS.PARTNER_BASE_URL}gfxproxy/gfx/apps/${t}/${e}`),
-                          console.log("fetching indirectly ", c),
-                          await ln(s, c, o, n, r);
+                          i),
+                          console.log("fetching indirectly ", e),
+                          await ln(s, e, o, n, r);
                       }
                       console.log(`Finished processing appid ${l.GetName()}`);
                     }
@@ -48343,7 +48371,7 @@
         W = a(2160),
         j = a(92135),
         H = a(10592),
-        V = a(20587),
+        V = a(86921),
         K = a(6144),
         Y = a(73745);
       class $ {
@@ -65705,7 +65733,7 @@
         he = a(32703),
         Ee = a(10592),
         Se = a(49821),
-        ye = a(20587),
+        ye = a(86921),
         ve = a(92135),
         fe = a(14514);
       function be(e) {
@@ -68470,7 +68498,7 @@
         c = a(65946),
         m = a(67239),
         d = a(98459),
-        u = a(20587),
+        u = a(86921),
         p = a(55263),
         _ = a(96468),
         g = a(68612),
@@ -68830,7 +68858,7 @@
       (0, _.Cg)([g.sH], E.prototype, "m_mapEventGIDToSolrData", void 0),
         (0, _.Cg)([g.sH], E.prototype, "m_listEvents", void 0),
         (0, _.Cg)([g.XI], E.prototype, "ClearAllSolrEvents", null);
-      var S = a(20587),
+      var S = a(86921),
         y = a(68451),
         v = a(61859),
         f = a(27543),
@@ -70261,6 +70289,14 @@
             (a) =>
               n({ ...i.GetPrivateData(e, t).jsonData, strExternalSaleType: a }),
             [e, n, t, i],
+          ),
+          d = (0, c.useCallback)(
+            (a) =>
+              n({
+                ...i.GetPrivateData(e, t).jsonData,
+                nUserWhoEnabledSaleTechOnPage: a,
+              }),
+            [e, n, t, i],
           );
         return {
           bLoading: r,
@@ -70280,6 +70316,7 @@
           strExternalSaleEventType:
             a?.jsonData?.strExternalSaleType || "publisher",
           fnSetExternalSaleEventType: m,
+          fnSetUserWhoEnabledSalePage: d,
         };
       }
       (0, u.Cg)([g.o], v.prototype, "BIsEventDirty", null),
@@ -70834,7 +70871,7 @@
         l = a.n(s),
         o = a(92757),
         c = a(60746),
-        m = a(20587),
+        m = a(86921),
         d = a(71541),
         u = a(84811),
         p = a(738),
@@ -71308,7 +71345,7 @@
         (0, d.Cg)([g.sH], S.prototype, "m_mapSummaryStats", void 0),
         (0, d.Cg)([g.XI], S.prototype, "LazyInit", null);
       const y = new S();
-      var v = a(20587),
+      var v = a(86921),
         f = a(82097),
         b = a(55263),
         w = a(71541),
@@ -75790,7 +75827,7 @@
     },
     4610: (e, t, a) => {
       "use strict";
-      a.d(t, { B4: () => G, JS: () => D, K0: () => I });
+      a.d(t, { B4: () => O, JS: () => C, K0: () => B });
       var n = a(75844),
         r = a(90626),
         i = a(71541),
@@ -75811,12 +75848,13 @@
         v = a.n(y),
         f = a(16666),
         b = a(66051),
-        w = a(9161);
-      const D = (0, n.PA)((e) => {
+        w = a(9161),
+        D = a(55263);
+      const C = (0, n.PA)((e) => {
           const { saleDesc: t, bDetailsAreVisible: a, fnToggleDetails: n } = e,
-            [i, s] = (0, r.useState)(G(t));
+            [i, s] = (0, r.useState)(O(t));
           (0, r.useEffect)(() => {
-            G(t) &&
+            O(t) &&
               _.d
                 .Get()
                 .FetchSalePageDetails(t.clanAccountID, t.clanEventGID)
@@ -75826,7 +75864,7 @@
           if (!(t.bVisible && t.rtStartTime < o && !i)) return null;
           const u = _.d.Get().GetSaleDetails(t.clanAccountID, t.clanEventGID),
             p = u && Number(u.grossSalesUSD),
-            g = Number.isNaN(p) ? (0, d.we)("#Sale_Stats_NoData") : z(p);
+            g = Number.isNaN(p) ? (0, d.we)("#Sale_Stats_NoData") : x(p);
           return r.createElement(
             "div",
             { className: (0, m.A)(S().SaleDetails) },
@@ -75851,60 +75889,65 @@
               ),
           );
         }),
-        C = (0, f.FB)(),
-        I = (0, n.PA)((e) => {
+        I = (0, f.FB)(),
+        B = (0, n.PA)((e) => {
           const t = (0, _.z)(e.saleDesc.clanAccountID, e.saleDesc.clanEventGID);
           if (!t) return null;
           const a = [
-            C.accessor("appid", { header: "App ID", cell: k, size: 100 }),
-            C.accessor("name", { header: "Name", cell: R, size: 300 }),
-            C.accessor("gross_sales_usd", {
+            I.accessor("appid", { header: "App ID", cell: R, size: 100 }),
+            I.accessor("appid", {
+              header: "Name",
+              cell: P,
+              size: 300,
+              id: "appname",
+            }),
+            I.accessor("gross_sales_usd", {
               header: "Total US$",
-              cell: x,
+              cell: q,
               size: 120,
             }),
-            C.accessor("gross_units_sold", {
+            I.accessor("gross_units_sold", {
               header: "Total Units",
-              cell: U,
+              cell: z,
               size: 120,
             }),
-            C.accessor("discounts", { header: "Discounts", size: 120 }),
-            C.accessor("impressions", {
+            I.accessor("discounts", { header: "Discounts", size: 120 }),
+            I.accessor("impressions", {
               header: "Impressions",
-              cell: U,
+              cell: z,
               size: 120,
             }),
-            C.accessor("no_impressions", {
+            I.accessor("no_impressions", {
               header: "Non-owners",
-              cell: U,
+              cell: z,
               size: 120,
             }),
-            C.accessor("views", { header: "Page Visits", cell: U, size: 120 }),
-            C.accessor("no_views", {
+            I.accessor("views", { header: "Page Visits", cell: z, size: 120 }),
+            I.accessor("no_views", {
               header: "Non-owners",
-              cell: U,
+              cell: z,
               size: 120,
             }),
           ];
           let n,
             l = [];
           for (const e in t.rgApps) {
-            const a =
-                Number(t.rgNavMetrics[e].total_impressions) -
-                Number(t.rgNavMetrics[e].owner_total_impressions),
+            const a = t.rgNavMetrics[e],
               r =
-                Number(t.rgNavMetrics[e].total_views) -
-                Number(t.rgNavMetrics[e].owner_total_views);
+                Number(a?.total_impressions || 0) -
+                Number(a?.owner_total_impressions || 0),
+              i =
+                Number(t.rgNavMetrics[e]?.total_views || 0) -
+                Number(a?.owner_total_views || 0);
             (n = {
-              appid: t.rgApps[e].id,
-              name: t.rgApps[e].name,
-              gross_sales_usd: t.rgAppSaleSummaries[e].gross_sales_usd,
-              gross_units_sold: t.rgAppSaleSummaries[e].gross_units_sold,
-              discounts: P(t.rgApps[e].subs, t),
-              impressions: t.rgNavMetrics[e].total_impressions,
-              no_impressions: a,
-              views: t.rgNavMetrics[e].total_views,
-              no_views: r,
+              appid: e,
+              gross_sales_usd: t.rgAppSaleSummaries[e]?.gross_sales_usd || 0,
+              gross_units_sold: t.rgAppSaleSummaries[e]?.gross_units_sold || 0,
+              discounts: N(t.rgApps[e], t),
+              impressions: a?.total_impressions || "0",
+              no_impressions: r,
+              views: a?.total_views || "0",
+              no_views: i,
             }),
               l.push(n);
           }
@@ -75929,51 +75972,51 @@
               "div",
               { className: v().DetailedStatsTopBar },
               r.createElement(
-                B,
+                T,
                 { name: (0, d.we)("#Sale_Stats_GrossSales") },
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_SalesUSD"),
-                  value: z(t.grossSalesUSD),
+                  value: x(t.grossSalesUSD),
                 }),
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_SalesUnits"),
-                  value: L(t.grossUnitsSold),
+                  value: U(t.grossUnitsSold),
                 }),
               ),
               r.createElement(
-                B,
+                T,
                 { name: (0, d.we)("#Sale_Stats_DiscountedGrossSales") },
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_SalesUSD"),
-                  value: z(t.discountedGrossSalesUSD),
+                  value: x(t.discountedGrossSalesUSD),
                 }),
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_SalesUnits"),
-                  value: L(t.discountedGrossUnitsSold),
+                  value: U(t.discountedGrossUnitsSold),
                 }),
               ),
               r.createElement(
-                B,
+                T,
                 { name: (0, d.we)("#Sale_Stats_ImpressionCount") },
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_TotalProductCount"),
-                  value: L(t.totalImpressions),
+                  value: U(t.totalImpressions),
                 }),
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_NonOwnerProductCount"),
-                  value: L(g),
+                  value: U(g),
                 }),
               ),
               r.createElement(
-                B,
+                T,
                 { name: (0, d.we)("#Sale_Stats_ViewCount") },
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_TotalProductCount"),
-                  value: L(t.totalViews),
+                  value: U(t.totalViews),
                 }),
-                r.createElement(T, {
+                r.createElement(M, {
                   name: (0, d.we)("#Sale_Stats_NonOwnerProductCount"),
-                  value: L(E),
+                  value: U(E),
                 }),
               ),
               r.createElement(
@@ -76095,7 +76138,7 @@
                 ),
               ),
               S.map((e) =>
-                r.createElement(M, {
+                r.createElement(A, {
                   key: `package-${e}`,
                   packageid: e,
                   saleDetails: t,
@@ -76145,7 +76188,7 @@
                 ),
               ),
               y.map((e) =>
-                r.createElement(A, {
+                r.createElement(k, {
                   key: `app-${e}`,
                   bundleid: e,
                   saleDetails: t,
@@ -76154,7 +76197,7 @@
             ),
           );
         }),
-        B = (e) =>
+        T = (e) =>
           r.createElement(
             "div",
             { className: v().TopBarSection },
@@ -76169,14 +76212,14 @@
               e.children,
             ),
           ),
-        T = (e) =>
+        M = (e) =>
           r.createElement(
             "div",
             { className: v().TopBarSubSection },
             r.createElement("div", { className: v().SubSectionName }, e.name),
             r.createElement("div", { className: v().SubSectionValue }, e.value),
           ),
-        M = (e) => {
+        A = (e) => {
           const { packageid: t, saleDetails: a } = e;
           return r.createElement(
             "div",
@@ -76195,21 +76238,21 @@
             r.createElement(
               "div",
               { className: v().DetailedStatShort },
-              z(a.rgPackageSaleSummaries[t].gross_sales_usd),
+              x(a.rgPackageSaleSummaries[t]?.gross_sales_usd),
             ),
             r.createElement(
               "div",
               { className: v().DetailedStatShort },
-              L(a.rgPackageSaleSummaries[t].gross_units_sold),
+              U(a.rgPackageSaleSummaries[t]?.gross_units_sold),
             ),
             r.createElement(
               "div",
               { className: v().DetailedStatShort },
-              r.createElement(N, { rgPackageIds: [t], saleDetails: a }),
+              r.createElement(G, { rgPackageIds: [t], saleDetails: a }),
             ),
           );
         },
-        A = (e) => {
+        k = (e) => {
           const { bundleid: t, saleDetails: a } = e;
           return r.createElement(
             "div",
@@ -76232,7 +76275,7 @@
             ),
           );
         };
-      function k(e) {
+      function R(e) {
         const t = p.TS.PARTNER_BASE_URL + "apps/landing/" + e.getValue();
         return r.createElement(
           "a",
@@ -76240,15 +76283,13 @@
           e.getValue(),
         );
       }
-      function R(e) {
-        const t = p.TS.STORE_BASE_URL + "app/" + e.row.original.appid;
-        return r.createElement(
-          "a",
-          { style: { fontWeight: "bold" }, target: "_blank", href: t },
-          e.getValue(),
-        );
+      function P(e) {
+        const t = Number.parseInt(e.getValue()),
+          [a] = (0, D.t7)(t, {});
+        return a?.GetName() || "";
       }
-      function P(e, t) {
+      function N(e, t) {
+        if (!e) return "unknown";
         let a, n;
         for (const r of e) {
           const e = t.rgPackageDiscounts[Number(r)];
@@ -76263,11 +76304,11 @@
             ? `${a}%`
             : `${a}%-${n}%`;
       }
-      const N = (e) => {
+      const G = (e) => {
         const { rgPackageIds: t, saleDetails: a } = e;
-        return r.createElement("div", null, P(t, a));
+        return r.createElement("div", null, N(t, a));
       };
-      function G(e) {
+      function O(e) {
         const t = Date.now() / 1e3;
         return (
           e.bVisible &&
@@ -76275,25 +76316,25 @@
           !_.d.Get().BHasSaleDetails(e.clanAccountID, e.clanEventGID)
         );
       }
-      let O, F;
-      function L(e) {
-        return O || (O = new Intl.NumberFormat("en-US")), O.format(Number(e));
-      }
+      let F, L;
       function U(e) {
-        return L(e.getValue());
+        return F || (F = new Intl.NumberFormat("en-US")), F.format(Number(e));
       }
       function z(e) {
+        return U(e.getValue());
+      }
+      function x(e) {
         return (
-          F ||
-            (F = new Intl.NumberFormat("en-US", {
+          L ||
+            (L = new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "USD",
             })),
-          F.format(Math.round(Number(e) / 100)).slice(0, -3)
+          L.format(Math.round(Number(e) / 100)).slice(0, -3)
         );
       }
-      function x(e) {
-        return z(e.getValue());
+      function q(e) {
+        return x(e.getValue());
       }
     },
     94238: (e, t, a) => {
@@ -100070,7 +100111,7 @@
         AppendText(e, t = !1) {
           let a = e;
           if (
-            (t || "*" == this.m_parentNode.tag) &&
+            (t || "*" == this.m_parentNode?.tag) &&
             (null == this.m_parentNode || "img" != this.m_parentNode.tag)
           ) {
             let e = this.m_LinkFilter.exec(a);
@@ -101928,7 +101969,7 @@
         st = a(22837),
         lt = a(86355),
         ot = a(4796),
-        ct = a(20587),
+        ct = a(86921),
         mt = a(3919);
       let dt = class extends s.Component {
         state = {
@@ -104637,7 +104678,7 @@
         }
       }
       (0, l.Cg)([m.sH], oe.prototype, "m_mapLoadedData", void 0);
-      var ce = a(20587),
+      var ce = a(86921),
         me = a(27666);
       function de(e, t) {
         const a = t

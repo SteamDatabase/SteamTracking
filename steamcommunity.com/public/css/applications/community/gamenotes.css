@@ -1087,10 +1087,3 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 ._1Ve4VFO2EEkeNZdel_Asky li > p:first-of-type {
   margin: 0;
 }
-.OdrYEhT1tSscLcZEKjDvW::before {
-  content: attr(data-placeholder);
-  color: gray;
-  position: absolute;
-  pointer-events: none;
-  font-style: italic;
-}

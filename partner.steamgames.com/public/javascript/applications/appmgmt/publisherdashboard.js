@@ -108,6 +108,7 @@
       e.exports = {
         DeadlineWarning: "_3BQrnzyxSMAp9_XcJ5QXDi",
         DeadlineWarningUrgent: "_2imXbqSxgLF07RmC5yVqF1",
+        CapsuleTax: "_3HedtZyM0AdhJpVYJd2Q0d",
       };
     },
     46406: (e) => {
@@ -3387,6 +3388,7 @@
                     id: e,
                     eventTypeName: t.sHeader,
                     getElement: () => t.element,
+                    getCapsuleElement: () => t.capsuleElement,
                     passesFilter: (e) => 1 == e,
                   }))
               );
@@ -3482,6 +3484,11 @@
               sTitle: _t(a?.TemplateName),
               bUrgent: t.due_date < Xe.HD.GetTimeNowWithOverride() + 2678400,
               element: n.createElement(mt, { deadline: t, json: a }),
+              capsuleElement: n.createElement(
+                "div",
+                { className: Qe.CapsuleTax },
+                _t(a?.TemplateName),
+              ),
             };
           default:
             "dev" == r.TS.WEB_UNIVERSE &&
@@ -3897,20 +3904,10 @@
                 s &&
                 (o =
                   r.TS.PARTNER_BASE_URL + "store/packagelanding/" + s.GetID()),
-          n.createElement(
-            "div",
-            { className: ut.RecapCapsuleContainer },
-            n.createElement(
-              "div",
-              { className: ut.DailyDealTitle },
-              (0, i.we)("#Dashboard_UpcomingEvents_EventType_DailyDeal"),
-            ),
-            n.createElement(ie.zS, {
-              imageUrl: l,
-              url: o,
-              tooltip: t.store_item_name,
-            }),
-          )
+          n.createElement(ie.aV, {
+            imageUrl: l,
+            title: (0, i.we)("#Dashboard_UpcomingEvents_EventType_DailyDeal"),
+          })
         );
       }
       function Nt(e) {
@@ -3968,46 +3965,54 @@
                       n.createElement(
                         "div",
                         { className: ut.SalesRow },
-                        c?.gross_sales &&
-                          n.createElement(
-                            "div",
-                            { className: ut.VerticalCell },
+                        n.createElement(
+                          "div",
+                          { className: ut.VerticalCell },
+                          c?.gross_sales &&
                             n.createElement(
-                              "div",
-                              { className: ut.HighlightHeader },
-                              (0, i.we)("#DailyDeals_Report_Revenue"),
+                              n.Fragment,
+                              null,
+                              n.createElement(
+                                "div",
+                                { className: ut.HighlightHeader },
+                                (0, i.we)("#DailyDeals_Report_Revenue"),
+                              ),
+                              n.createElement(
+                                "div",
+                                {
+                                  className: (0, _.A)(
+                                    ut.HighlightValue,
+                                    ut.Revenue,
+                                  ),
+                                },
+                                c.gross_sales ? (0, yt.xE)(c.gross_sales) : "?",
+                              ),
                             ),
+                        ),
+                        n.createElement(
+                          "div",
+                          { className: ut.VerticalCell },
+                          c?.impressions &&
                             n.createElement(
-                              "div",
-                              {
-                                className: (0, _.A)(
-                                  ut.HighlightValue,
-                                  ut.Revenue,
-                                ),
-                              },
-                              c.gross_sales ? (0, yt.xE)(c.gross_sales) : "?",
+                              n.Fragment,
+                              null,
+                              n.createElement(
+                                "div",
+                                { className: ut.HighlightHeader },
+                                (0, i.we)("#DailyDeals_Report_Impressions"),
+                              ),
+                              n.createElement(
+                                "div",
+                                {
+                                  className: (0, _.A)(
+                                    ut.HighlightValue,
+                                    ut.Revenue,
+                                  ),
+                                },
+                                (0, Tt.Dq)(c.impressions),
+                              ),
                             ),
-                          ),
-                        c?.impressions &&
-                          n.createElement(
-                            "div",
-                            { className: ut.VerticalCell },
-                            n.createElement(
-                              "div",
-                              { className: ut.HighlightHeader },
-                              (0, i.we)("#DailyDeals_Report_Impressions"),
-                            ),
-                            n.createElement(
-                              "div",
-                              {
-                                className: (0, _.A)(
-                                  ut.HighlightValue,
-                                  ut.Revenue,
-                                ),
-                              },
-                              (0, Tt.Dq)(c.impressions),
-                            ),
-                          ),
+                        ),
                       ),
                     ),
                     n.createElement(
@@ -4043,7 +4048,7 @@
       }
       var Bt = a(4130),
         At = a(10835),
-        It = a(20587);
+        It = a(86921);
       function Ut(e) {
         const { saleDesc: t } = e;
         return It.O3.GetClanEventModel(t.clanEventGID)

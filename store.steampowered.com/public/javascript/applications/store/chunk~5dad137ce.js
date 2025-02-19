@@ -12,7 +12,7 @@
       var a = n(41735),
         r = n.n(a),
         s = n(78327),
-        o = n(91254),
+        o = n(6379),
         l = n(77516);
       class c extends o.ZQ {
         async DeleteOldAnnouncement(e, t) {
@@ -44,7 +44,7 @@
         r = n(75844),
         s = n(90626),
         o = n(73964),
-        l = n(91254),
+        l = n(6379),
         c = n(68033),
         i = n(41550),
         m = n(738),

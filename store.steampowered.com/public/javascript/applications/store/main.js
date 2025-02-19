@@ -21771,6 +21771,16 @@
                     br: n.qM.readString,
                     bw: n.gp.writeString,
                   },
+                  page_background_path: {
+                    n: 15,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  raw_page_background: {
+                    n: 16,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
                 },
               }),
             w.sm_m
@@ -33532,9 +33542,9 @@
         (0, n.Cg)([o.EW], _.prototype, "ExcludedContentDescriptor", null),
         (0, n.Cg)([o.XI], _.prototype, "UpdateAppIgnore", null);
     },
-    81511: (e, t, r) => {
+    8812: (e, t, r) => {
       "use strict";
-      r.d(t, { aj: () => se, sx: () => oe });
+      r.d(t, { aj: () => ae, sx: () => le });
       var i = r(90626),
         n = r(56545),
         s = r(80613),
@@ -35858,45 +35868,60 @@
       var A = r(84811),
         U = r(61859),
         q = r(42865);
-      const N =
+      async function N(e, t = "SHA-256") {
+        let r;
+        var i;
+        "string" == typeof e
+          ? ((i = e), (r = new TextEncoder().encode(i).buffer))
+          : (r = e);
+        const n = await window.crypto.subtle.digest(t, r);
+        return (
+          (s = n),
+          Array.prototype.map
+            .call(new Uint8Array(s), (e) => ("00" + e.toString(16)).slice(-2))
+            .join("")
+        );
+        var s;
+      }
+      const H =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
-      let H,
-        G = [],
-        V = (e, t, r) =>
-          G.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
-      const Z = !0;
+      let G,
+        V = [],
+        Z = (e, t, r) =>
+          V.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
+      const K = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...i) => {
           if (!t) {
-            const e = X();
-            V(new Error(Q(r, ...i)), 2, e);
+            const e = Y();
+            Z(new Error(J(r, ...i)), 2, e);
           }
           e.apply(console, [t, r, ...i]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          const i = X();
-          V(new Error(Q(e, ...r)), 1, i), t.apply(console, [e, ...r]);
+          const i = Y();
+          Z(new Error(J(e, ...r)), 1, i), t.apply(console, [e, ...r]);
         }),
           (console.clogerror = (e, r, ...i) => {
-            const n = X();
-            V(new Error(Q(r, ...i)), e + 1, n), t.apply(console, [r, ...i]);
+            const n = Y();
+            Z(new Error(J(r, ...i)), e + 1, n), t.apply(console, [r, ...i]);
           }),
-          N("error", (e) => {
-            V(e.error, 0);
+          H("error", (e) => {
+            Z(e.error, 0);
           }),
-          (H = window.setTimeout(() => {
-            (G = []), (V = () => {});
+          (G = window.setTimeout(() => {
+            (V = []), (Z = () => {});
           }, 3e4));
       }
-      const K = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        $ = [
+      const $ = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        X = [
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset (/market",
         ];
-      function X() {
+      function Y() {
         try {
           const e = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
             t =
@@ -35919,7 +35944,7 @@
           }
         } catch (e) {}
       }
-      class Y {
+      class Q {
         m_strProduct;
         m_strVersion;
         m_transport = null;
@@ -35927,26 +35952,26 @@
         m_sendTimer = null;
         m_bReportingPaused = !1;
         m_pauseTimer = void 0;
-        m_fnGetReportingInterval = le;
+        m_fnGetReportingInterval = ce;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(e = !0) {
           e
-            ? (G.forEach(
+            ? (V.forEach(
                 ({ error: e, cCallsitesToIgnore: t, strComponentStack: r }) =>
                   this.ReportError(e, {
                     cCallsitesToIgnore: t,
                     strComponentStack: r,
                   }),
               ),
-              (V = (e, t, r) =>
+              (Z = (e, t, r) =>
                 this.ReportError(e, {
                   cCallsitesToIgnore: t,
                   strComponentStack: r,
                 })))
-            : (V = () => {}),
-            (G = []),
-            clearTimeout(H),
+            : (Z = () => {}),
+            (V = []),
+            clearTimeout(G),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -35977,19 +36002,19 @@
               null
             );
           try {
-            const r = { ...K, ...t };
+            const r = { ...$, ...t };
             if (!this.m_bEnabled) return null;
             0;
             const i = await (function (e, t) {
               try {
-                return e.stack && e.stack.match(J)
+                return e.stack && e.stack.match(ee)
                   ? (async function (e, t) {
                       const {
                           cCallsitesToIgnore: r,
                           bIncludeMessageInIdentifier: i,
                         } = t,
                         n = e.stack?.split("\n") ?? [];
-                      let s = ne(n.filter((e) => !!e.match(J))[r]);
+                      let s = se(n.filter((e) => !!e.match(ee))[r]);
                       i && (s = `${s} ${e.message}`);
                       const a = n
                         .map((e) => {
@@ -36006,18 +36031,18 @@
                         .filter((e) => !!e);
                       return {
                         identifier: s,
-                        identifierHash: await oe(s),
+                        identifierHash: await le(s),
                         message: a,
                       };
                     })(e, t)
-                  : e.stack && e.stack.match(ee)
+                  : e.stack && e.stack.match(te)
                     ? (async function (e, t) {
                         const {
                             cCallsitesToIgnore: r,
                             bIncludeMessageInIdentifier: i,
                           } = t,
                           n = e.stack?.split("\n") ?? [];
-                        let s = ne(n.filter((e) => !!e.match(ee))[r]);
+                        let s = se(n.filter((e) => !!e.match(te))[r]);
                         i && (s = `${s} ${e.message}`);
                         const a = n
                           .map((e) => {
@@ -36034,11 +36059,11 @@
                           .filter((e) => !!e);
                         return {
                           identifier: s,
-                          identifierHash: await oe(s),
+                          identifierHash: await le(s),
                           message: [e.message, ...a],
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(te)
+                    : e.stack && e.stack.match(re)
                       ? (async function (e, t) {
                           const {
                               bIncludeMessageInIdentifier: r,
@@ -36066,16 +36091,16 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: await oe(o),
+                            identifierHash: await le(o),
                             message: [e.message, ...l],
                           };
                         })(e, t)
-                      : (ie ||
+                      : (ne ||
                           (console.warn(
                             "Error reporter does not know how to parse generated stack:",
                           ),
                           console.warn(e.stack),
-                          (ie = !0)),
+                          (ne = !0)),
                         null);
               } catch (e) {
                 return (
@@ -36112,7 +36137,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let r = JSON.stringify(t);
-            for (let t of $) {
+            for (let t of X) {
               const i = new RegExp(t);
               if (r.match(i))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -36176,10 +36201,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return Z;
+          return K;
         }
       }
-      function Q(e, ...t) {
+      function J(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -36191,12 +36216,12 @@
           })
           .join(", ");
       }
-      const J = /^\s*at .*(\S+:\d+|\(native\))/m,
-        ee = /(^|@)\S+:\d+/,
-        te = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let re,
-        ie = !1;
-      function ne(e) {
+      const ee = /^\s*at .*(\S+:\d+|\(native\))/m,
+        te = /(^|@)\S+:\d+/,
+        re = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let ie,
+        ne = !1;
+      function se(e) {
         return (function (e) {
           const t = "https://",
             r = e.indexOf(t);
@@ -36212,35 +36237,22 @@
           })(e),
         );
       }
-      const se = () => (re || ae(new Y()), re),
-        ae = (e) => {
-          (re = e),
-            A.tH.InstallErrorReportingStore(re),
-            n.lI.InstallErrorReportingStore(re),
-            U.A0.InstallErrorReportingStore(re),
-            q.U.InstallErrorReportingStore(re);
+      const ae = () => (ie || oe(new Q()), ie),
+        oe = (e) => {
+          (ie = e),
+            A.tH.InstallErrorReportingStore(ie),
+            n.lI.InstallErrorReportingStore(ie),
+            U.A0.InstallErrorReportingStore(ie),
+            q.U.InstallErrorReportingStore(ie);
         };
-      async function oe(e) {
+      async function le(e) {
         try {
-          const r = await window.crypto.subtle.digest(
-            "SHA-256",
-            (function (e) {
-              const t = new ArrayBuffer(2 * e.length),
-                r = new Uint16Array(t);
-              for (let t = 0, i = e.length; t < i; t++) r[t] = e.charCodeAt(t);
-              return t;
-            })(e),
-          );
-          return ((t = r),
-          Array.prototype.map
-            .call(new Uint8Array(t), (e) => ("00" + e.toString(16)).slice(-2))
-            .join("")).slice(0, 16);
+          return (await N(e)).slice(0, 16);
         } catch (e) {
           return "";
         }
-        var t;
       }
-      function le() {
+      function ce() {
         return 1e4;
       }
     },
@@ -36897,6 +36909,7 @@
         m_strHeaderURL;
         m_strPackageHeaderURL;
         m_strPageBackgroundURL;
+        m_strRawPageBackgroundURL;
         m_strHeroCapsuleURL;
         m_strHeroCapsuleURL_2x;
         m_strLibraryCapsuleURL;
@@ -36925,10 +36938,10 @@
                 r,
                 e.package_header(),
               )),
-            e.page_background() &&
-              (this.m_strPageBackgroundURL = this.ConstructAssetURL(
+            e.raw_page_background() &&
+              (this.m_strRawPageBackgroundURL = this.ConstructAssetURL(
                 r,
-                e.page_background(),
+                e.raw_page_background(),
               )),
             e.hero_capsule() &&
               (this.m_strHeroCapsuleURL = this.ConstructAssetURL(
@@ -36962,7 +36975,9 @@
               ))),
             e.community_icon() &&
               ((this.m_strCommunityIcon = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`),
-              (this.m_strCommunityIcon_Full = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`));
+              (this.m_strCommunityIcon_Full = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`)),
+            e.page_background_path() &&
+              (this.m_strPageBackgroundURL = `${m.TS.STORE_CDN_URL}images/storepagebackground/${e.page_background_path()}`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -36978,6 +36993,9 @@
         }
         GetPageBackgroundURL() {
           return this.m_strPageBackgroundURL;
+        }
+        GetRawPageBackgroundURL() {
+          return this.m_strRawPageBackgroundURL;
         }
         GetHeroCapsuleURL() {
           return this.m_strHeroCapsuleURL;
@@ -52701,14 +52719,12 @@
     61336: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ku: () => m,
         L$: () => o,
-        NT: () => g,
-        Ps: () => p,
+        NT: () => m,
+        Ps: () => u,
         Qz: () => a,
         ZF: () => l,
-        k2: () => d,
-        qk: () => u,
+        k2: () => c,
         wm: () => s,
       });
       var i = r(78327),
@@ -52805,16 +52821,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function c(e, t) {
-        return `${i.TS.STORE_ICON_BASE_URL}${e}/${t}`;
-      }
-      function u(e) {
-        return c(e, "page_bg_generated.jpg");
-      }
-      function m(e) {
-        return c(e, "page_bg_generated_v6b.jpg");
-      }
-      function d(e) {
+      function c(e) {
         return i.TS.SNR &&
           i.TS.SNR.length > 0 &&
           e &&
@@ -52822,7 +52829,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + i.TS.SNR
           : e;
       }
-      function p(e, t) {
+      function u(e, t) {
         try {
           const r = new URL(t),
             i = new URL(e);
@@ -52831,7 +52838,7 @@
           return "";
         }
       }
-      function g(e) {
+      function m(e) {
         return (
           i.TS.IN_STEAMUI &&
             !e.startsWith("steam://") &&
@@ -53337,7 +53344,7 @@
         SteamDeckDock: () => "/steamdeckdock/",
         GameRecording: () => "/gamerecording/",
         CreatorSaleLandingPage: () =>
-          "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
+          "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/(sale|unlisted)/:salePageName?",
         SubscriptionPlanLandingPage: () => "/subscriptions/:salePageName",
         CuratorHomePage: () => [
           "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
@@ -54522,6 +54529,7 @@
             r.e(7436),
             r.e(2797),
             r.e(7403),
+            r.e(9214),
             r.e(1006),
             r.e(9970),
             r.e(6814),
@@ -55435,7 +55443,7 @@
         );
       });
       var Ct = r(72034),
-        St = r(81511),
+        St = r(8812),
         vt = r(56011);
       r(52244);
       new Map();

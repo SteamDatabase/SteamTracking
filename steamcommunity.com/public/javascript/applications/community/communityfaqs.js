@@ -152,12 +152,9 @@
         CenterButtonCtn: "_3sZ58WE85Tqs8Bv8g-quYc",
       };
     },
-    15736: (e) => {
-      e.exports = { SmallAvatar: "_2cuu0nLVc4medg6FpU6PQl" };
-    },
-    30436: (e, t, a) => {
+    93935: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { FAQRoutes: () => Mt, default: () => zt });
+      a.r(t), a.d(t, { FAQRoutes: () => vt, default: () => St });
       var o,
         i = a(75844),
         s = a(90626),
@@ -8365,11 +8362,11 @@
                     ? void 0
                     : t.length) > 0,
                 ) ||
-                (e.pathname != Mt.DashboardFAQ(c.UF.VANITY_ID) &&
+                (e.pathname != vt.DashboardFAQ(c.UF.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        Mt.ViewFAQ(c.UF.VANITY_ID, "").slice(0, -1),
+                        vt.ViewFAQ(c.UF.VANITY_ID, "").slice(0, -1),
                       ))) ||
                 (0, q.we)("#EventEditor_UnsavedChanges")
               );
@@ -9461,148 +9458,28 @@
         },
         st = (e) =>
           s.createElement("div", { className: ot.FAQViewPage }, e.children);
-      var nt = a(41735),
-        rt = a.n(nt),
-        lt = a(58632),
-        pt = a.n(lt),
-        dt = a(37674),
-        ht = a(56545),
-        ct = a(37735),
-        ut = a(23809);
-      const mt = "nicknames";
-      const ft = new (pt())(
-          (e) =>
-            (async function (e) {
-              var t, a, o, i;
-              if (!e || 0 == e.length) return [];
-              const s =
-                "community" == (0, c.yK)()
-                  ? c.TS.COMMUNITY_BASE_URL
-                  : c.TS.STORE_BASE_URL;
-              if (1 == e.length) {
-                const o = { accountid: e[0], origin: self.origin },
-                  i = await rt().get(`${s}actions/ajaxgetavatarpersona`, {
-                    params: o,
-                  });
-                if (
-                  !i ||
-                  200 != i.status ||
-                  1 !=
-                    (null === (t = i.data) || void 0 === t
-                      ? void 0
-                      : t.success) ||
-                  !(null === (a = i.data) || void 0 === a ? void 0 : a.userinfo)
-                )
-                  throw `Load single avatar/persona failed ${((0, g.H))(i).strErrorMsg}`;
-                return [i.data.userinfo];
-              }
-              {
-                const t = { accountids: e.join(","), origin: self.origin },
-                  a = await rt().get(`${s}actions/ajaxgetmultiavatarpersona`, {
-                    params: t,
-                  });
-                if (
-                  !a ||
-                  200 != a.status ||
-                  1 !=
-                    (null === (o = a.data) || void 0 === o
-                      ? void 0
-                      : o.success) ||
-                  !(null === (i = a.data) || void 0 === i
-                    ? void 0
-                    : i.userinfos)
-                )
-                  throw `Load single avatar/persona failed ${((0, g.H))(a).strErrorMsg}`;
-                const n = new Map();
-                return (
-                  a.data.userinfos.forEach((e) =>
-                    n.set(new N.b(e.steamid).GetAccountID(), e),
-                  ),
-                  e.map((e) => n.get(e))
-                );
-              }
-            })(e),
-          { cache: !1 },
-        ),
-        gt = "avatarandpersonas";
-      var yt = a(15736);
-      function bt(e) {
-        const { accountID: t, bHideWhenNotAvailable: a, bHideName: o } = e,
-          [i] = (function (e) {
-            const { data: t, isLoading: a } = (0, dt.I)({
-              queryKey: [gt, e],
-              queryFn: () => ft.load(e),
-            });
-            return [t, a];
-          })(t),
-          n = (function (e) {
-            const t = (0, ut.KV)(),
-              { data: a, isLoading: o } = (0, dt.I)({
-                queryKey: [mt],
-                queryFn: async () => {
-                  const e = new Map();
-                  if (c.iA.logged_in) {
-                    const a = ht.w.Init(ct.dN),
-                      o = (await ct.xt.GetNicknameList(t, a)).Body().toObject();
-                    (null == o ? void 0 : o.nicknames) &&
-                      o.nicknames.length > 0 &&
-                      o.nicknames.forEach((t) => {
-                        e.set(t.accountid, t.nickname);
-                      });
-                  }
-                  return e;
-                },
-              });
-            return a ? a.get(e) : null;
-          })(t),
-          r = s.useMemo(() => N.b.InitFromAccountID(t), [t]);
-        return s.createElement(
-          s.Fragment,
-          null,
-          Boolean(!i)
-            ? s.createElement(
-                s.Fragment,
-                null,
-                Boolean(!a) && s.createElement("span", null, t),
-              )
-            : s.createElement(
-                s.Fragment,
-                null,
-                s.createElement("img", {
-                  className: yt.SmallAvatar,
-                  src: i.avatar_url,
-                  "data-miniprofile": "s" + r.ConvertTo64BitString(),
-                }),
-                Boolean(!o) &&
-                  s.createElement(
-                    "span",
-                    null,
-                    n ? `${n} (${i.persona_name})` : i.persona_name,
-                  ),
-              ),
-        );
-      }
-      var wt = a(20572),
-        vt = a(66891);
-      const St = (e) => {
+      var nt = a(85890),
+        rt = a(20572),
+        lt = a(66891);
+      const pt = (e) => {
           const { faqContent: t } = e,
             [a, i] = (0, p.W)(t.faq_id, t.version, t.language);
           return p.pN.Get().BHasFAQEdit()
             ? s.createElement(
                 "div",
-                { className: (0, f.A)(vt.Section, R.ValveOnlyBackground) },
+                { className: (0, f.A)(lt.Section, R.ValveOnlyBackground) },
                 s.createElement(
                   "div",
-                  { className: vt.TopicHeader },
+                  { className: lt.TopicHeader },
                   (0, q.we)("#FAQViewer_AdminLinks"),
                 ),
                 s.createElement(
                   "div",
-                  { className: wt.InfoRow },
+                  { className: rt.InfoRow },
                   (0, q.PP)(
                     "#FAQViewer_Admin_LastUpdate",
                     (null == a ? void 0 : a.author_account_id)
-                      ? s.createElement(bt, {
+                      ? s.createElement(nt.p, {
                           accountID: Number.parseInt(a.author_account_id),
                         })
                       : (0, q.we)("#FAQViewer_UnknownUser"),
@@ -9615,7 +9492,7 @@
                     ),
                   ),
                 ),
-                s.createElement(kt, { faqContent: t }),
+                s.createElement(dt, { faqContent: t }),
                 s.createElement(
                   u,
                   {
@@ -9628,7 +9505,7 @@
               )
             : null;
         },
-        kt = (e) => {
+        dt = (e) => {
           const { faqContent: t } = e,
             [a, o] = (0, p.z5)(t.faq_id);
           if (
@@ -9640,10 +9517,10 @@
           const i = a.GetLastSavedDraftVersion(t.language);
           return s.createElement(
             "div",
-            { className: wt.InfoRow },
+            { className: rt.InfoRow },
             (0, q.PP)(
               "#FAQViewer_DraftNewer",
-              s.createElement(bt, {
+              s.createElement(nt.p, {
                 accountID: Number.parseInt(i.author_account_id),
               }),
               s.createElement(
@@ -9656,24 +9533,24 @@
             ),
           );
         },
-        xt = (e) =>
+        ht = (e) =>
           s.createElement(
             s.Fragment,
             null,
             s.createElement(
               "div",
-              { className: (0, f.A)(vt.Section, vt.NeedHelp) },
+              { className: (0, f.A)(lt.Section, lt.NeedHelp) },
               s.createElement(
                 "div",
-                { className: vt.LeftCol },
+                { className: lt.LeftCol },
                 s.createElement(T._VW, null),
               ),
               s.createElement(
                 "div",
-                { className: vt.RightCol },
+                { className: lt.RightCol },
                 s.createElement(
                   "div",
-                  { className: vt.TopicHeader },
+                  { className: lt.TopicHeader },
                   (0, q.we)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 s.createElement(
@@ -9683,7 +9560,7 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: vt.CenterButtonCtn },
+                  { className: lt.CenterButtonCtn },
                   s.createElement(
                     "a",
                     {
@@ -9698,18 +9575,18 @@
             !(0, c.Y2)() &&
               s.createElement(
                 "div",
-                { className: (0, f.A)(vt.Section, vt.CommunityHelp) },
+                { className: (0, f.A)(lt.Section, lt.CommunityHelp) },
                 s.createElement(
                   "div",
-                  { className: vt.LeftCol },
+                  { className: lt.LeftCol },
                   s.createElement(T.ROZ, null),
                 ),
                 s.createElement(
                   "div",
-                  { className: vt.RightCol },
+                  { className: lt.RightCol },
                   s.createElement(
                     "div",
-                    { className: vt.TopicHeader },
+                    { className: lt.TopicHeader },
                     (0, q.we)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   s.createElement(
@@ -9719,7 +9596,7 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vt.CenterButtonCtn },
+                    { className: lt.CenterButtonCtn },
                     s.createElement(
                       "a",
                       {
@@ -9732,9 +9609,9 @@
                 ),
               ),
           );
-      var It = a(25651),
-        _t = a.n(It);
-      const At = (e) => {
+      var ct = a(25651),
+        ut = a.n(ct);
+      const mt = (e) => {
           const { faqid: t } = e,
             [a, o] = (0, p.Kv)(t, (0, l.sf)(c.TS.LANGUAGE));
           return o
@@ -9743,14 +9620,14 @@
                   title: a.title,
                   content: a.content,
                   elSideBars: [
-                    s.createElement(xt, { key: "sidebar", faqContent: a }),
-                    s.createElement(St, { key: "adminbar", faqContent: a }),
+                    s.createElement(ht, { key: "sidebar", faqContent: a }),
+                    s.createElement(pt, { key: "adminbar", faqContent: a }),
                   ],
                 })
               : s.createElement(
                   st,
                   null,
-                  s.createElement(Ct, {
+                  s.createElement(ft, {
                     strError: (0, q.we)("#FAQViewer_NoFAQFound"),
                   }),
                 )
@@ -9764,7 +9641,7 @@
                 }),
               );
         },
-        Ct = (e) => {
+        ft = (e) => {
           var t;
           const a =
             c.TS.COMMUNITY_BASE_URL +
@@ -9774,16 +9651,16 @@
               : "gid/" + c.UF.CLANSTEAMID);
           return s.createElement(
             "div",
-            { className: _t().ErrorCtn },
-            s.createElement("div", { className: _t().ErrorMsg }, e.strError),
+            { className: ut().ErrorCtn },
+            s.createElement("div", { className: ut().ErrorMsg }, e.strError),
             s.createElement(
               "a",
-              { className: _t().EscapeLink, href: a },
+              { className: ut().EscapeLink, href: a },
               (0, q.we)("#FAQViewer_GoToHomepage"),
             ),
           );
         },
-        Tt = (0, i.PA)((e) => {
+        gt = (0, i.PA)((e) => {
           const { faqid: t } = e,
             [a, o] = (0, p.z5)(t),
             i = xe.O.Get().GetCurEditLanguage();
@@ -9802,7 +9679,7 @@
               : s.createElement(
                   st,
                   null,
-                  s.createElement(Ct, {
+                  s.createElement(ft, {
                     strError: (0, q.we)("#FAQViewer_NoFAQFound"),
                   }),
                 )
@@ -9816,22 +9693,22 @@
                 }),
               );
         });
-      var Pt = a(60746),
-        Dt = a(6813),
-        qt = a(97058);
-      const Mt = {
+      var yt = a(60746),
+        bt = a(6813),
+        wt = a(97058);
+      const vt = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
           ImportTool: (e) => `/faqs/${e}/import`,
         },
-        zt = (0, i.PA)((e) => {
+        St = (0, i.PA)((e) => {
           const [t, a] = s.useState(!0);
           return (
             s.useEffect(() => {
               (async () => {
-                await Pt.KN.InitGlobal(), a(!1);
+                await yt.KN.InitGlobal(), a(!1);
               })();
             }, []),
             t
@@ -9848,22 +9725,22 @@
                     d.dO,
                     null,
                     s.createElement(d.qh, {
-                      path: Mt.ViewFAQ(":vanity_str", ":faqid"),
+                      path: vt.ViewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        s.createElement(Dt.X, {
+                        s.createElement(bt.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params,
                                 a = (0, p.CJ)(t);
-                              return s.createElement(At, { faqid: a });
+                              return s.createElement(mt, { faqid: a });
                             },
                           },
                         }),
                     }),
                     s.createElement(d.qh, {
-                      path: Mt.EditFAQ(":vanity_str", ":faqid"),
+                      path: vt.EditFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        s.createElement(Dt.X, {
+                        s.createElement(bt.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params;
@@ -9882,32 +9759,32 @@
                         }),
                     }),
                     s.createElement(d.qh, {
-                      path: Mt.DashboardFAQ(":vanity_str"),
+                      path: vt.DashboardFAQ(":vanity_str"),
                       render: (e) =>
-                        s.createElement(Dt.X, {
+                        s.createElement(bt.X, {
                           config: {
                             "faqs-root": () => s.createElement(ue, null),
                           },
                         }),
                     }),
                     s.createElement(d.qh, {
-                      path: Mt.PreviewFAQ(":vanity_str", ":faqid"),
+                      path: vt.PreviewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        s.createElement(Dt.X, {
+                        s.createElement(bt.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params,
                                 a = (0, p.CJ)(t);
-                              return s.createElement(Tt, { faqid: a });
+                              return s.createElement(gt, { faqid: a });
                             },
                           },
                         }),
                     }),
                     s.createElement(d.qh, {
-                      path: Mt.ImportTool(":vanity_str"),
+                      path: vt.ImportTool(":vanity_str"),
                       component: v,
                     }),
-                    s.createElement(d.qh, { component: qt.a }),
+                    s.createElement(d.qh, { component: wt.a }),
                   ),
                 )
           );

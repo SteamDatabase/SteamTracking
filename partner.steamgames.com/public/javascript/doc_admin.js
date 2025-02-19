@@ -13,8 +13,16 @@ function updateArticleSummary( articleSummary ) {
 	$J( '#articleSummaryLocalizeDraft' ).prop( 'checked', articleSummary.localize_draft );
 	$J( '#articleSummaryPushToCrowdIn' ).prop( 'checked', articleSummary.sync_for_localization );
 	$J( '#articleSummaryPushToCrowdInLabel' ).text( articleSummary.localize_draft ? 'Push to CrowdIn on save' : 'Push to CrowdIn on publish' );
-	$J( '#articleSummaryLocalizationUrl' ).text( articleSummary.localization_url );
-	$J( '#articleSummaryLocalizationUrl' ).attr( 'href', articleSummary.localization_url );
+	if ( articleSummary.localization_url )
+	{
+		$J( '#articleSummaryLocalizationUrl' ).text( articleSummary.localization_url );
+		$J( '#articleSummaryLocalizationUrl' ).attr( 'href', articleSummary.localization_url );
+	}
+	else
+	{
+		$J( '#articleSummaryLocalizationUrl' ).text( '' );
+		$J( '#articleSummaryLocalizationUrl' ).attr( 'href', '' );
+	}
 
 	$J( '#articleSummaryPriority' ).val( articleSummary.priority );
 	if ( !Array.isArray( articleSummary.required_partner_capabilities ) || articleSummary.required_partner_capabilities.length == 0 )
@@ -202,5 +210,25 @@ $J( document ).ready( function(){
 		if ( required == 0 || ( numChecked > 0 || this.type == 'checkbox' ) )
 			articleSummaryAjax( 'access', $J( '#articleSummaryAccess' ).serialize() )
 	});
-});
+} );
+
+function PullLocalizationFromCrowdIn()
+{
+	const eLanguageToPull = parseInt( $J( '#articleSummarySelectLanguageToPull' ).val() );
+	const nArticleId = parseInt( $J( '#articleSummaryArticleId' ).text() );
+	data = {
+		'sessionid': g_sessionID,
+		'language': eLanguageToPull,
+		'articleid': nArticleId,
+	};
+	$J.ajax({
+		'type': 'POST',
+		'url': 'https://partner.steamgames.com/docadmin/fetchlocalization/' + $J('#articleSummaryUrlSlug').text(),
+		'data': data,
+		'success': function( resp )
+		{
+			window.reload();
+		}
+	});
+}
 

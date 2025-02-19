@@ -3,9 +3,6 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8104],
   {
-    70412: (e) => {
-      e.exports = { EmptyTextPlaceholder: "OdrYEhT1tSscLcZEKjDvW" };
-    },
     73309: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -544,19 +541,17 @@
         },
       };
     },
-    7071: (e, t, o) => {
+    90286: (e, t, o) => {
       "use strict";
-      o.d(t, { n: () => C, u: () => k });
+      o.d(t, { n: () => b, u: () => _ });
       var r = o(91986),
         n = o(64753),
         a = o(98724),
         s = o(52893),
-        l = o(29287),
-        c = o(70412);
-      var i = o(49693),
-        d = o(57053),
-        u = o(81393);
-      class m {
+        l = o(49693),
+        c = o(57053),
+        i = o(81393);
+      class d {
         constructor(e) {
           (this.m_nodes = []), (this.m_schema = e);
         }
@@ -575,9 +570,9 @@
           return this.m_nodes;
         }
       }
-      class h extends i.Al {
+      class u extends l.Al {
         constructor(e) {
-          super(e.bbcode_dictionary, () => new m(e.pm_schema)),
+          super(e.bbcode_dictionary, () => new d(e.pm_schema)),
             (this.m_mapPMBBNodes = new Map()),
             (this.m_schemaConfig = e),
             this.m_schemaConfig.bbcode_dictionary.forEach((e) => {
@@ -592,11 +587,11 @@
           const t = this.Parse(e, this.BBNodeToPMNode.bind(this), !0);
           return this.m_schemaConfig.pm_schema.topNodeType.createChecked(
             {},
-            this.ConvertLineBreaksToParagraphs(d.FK.fromArray(t)),
+            this.ConvertLineBreaksToParagraphs(c.FK.fromArray(t)),
           );
         }
         TryCreateNode(e, t, o) {
-          let r = d.FK.from(t);
+          let r = c.FK.from(t);
           if (!e.node.validContent(r) && e.acceptNode) {
             let o = t.filter((t) => t.type == e.acceptNode);
             if (!o.length) {
@@ -606,7 +601,7 @@
                 r[r.length - 1].type == this.schema.nodes.hard_break &&
                 (r = r.slice(0, -1));
               const n = this.m_mapPMBBNodes.get(e.acceptNode.name);
-              (0, u.w)(
+              (0, i.w)(
                 n,
                 `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
               ),
@@ -614,7 +609,7 @@
                   ? [this.TryCreateNode(n, r, void 0)]
                   : [e.acceptNode.create(void 0, r)]);
             }
-            r = d.FK.from(o);
+            r = c.FK.from(o);
           }
           return e.node.createAndFill(o, r) || e.node.create(o, r);
         }
@@ -675,7 +670,7 @@
           return (
             e.forEach((e) => {
               const a = e.type == o.nodes.hard_break,
-                s = d.FK.from(e);
+                s = c.FK.from(e);
               if (a || o.topNodeType.validContent(s)) {
                 const t = a && n.nodes.length > 0;
                 n.emit(),
@@ -689,7 +684,7 @@
                   : t.get(e.type.name)),
                   r
                     ? n.accumulate(r, e)
-                    : ((0, u.w)(
+                    : ((0, i.w)(
                         !1,
                         `Couldn't accept ${e.type.name} at root of document, converting to paragraph`,
                       ),
@@ -711,18 +706,18 @@
               }
             }),
             (!n.nodes.length && r.length) || n.emit(!0),
-            d.FK.from(r)
+            c.FK.from(r)
           );
         }
       }
-      function p(e, t) {
-        return g(t.pm_schema, t.pm_to_bbcode_config, e, []);
+      function m(e, t) {
+        return h(t.pm_schema, t.pm_to_bbcode_config, e, []);
       }
-      function g(e, t, o, r) {
+      function h(e, t, o, r) {
         let n = o.marks,
           a = "";
         const s = t.mapNodes.get(o.type),
-          { tag: l, args: c } = (function (e, t) {
+          { tag: c, args: d } = (function (e, t) {
             if (e && e.AttrsToBBArgs) {
               const { tag: o = e.tag, args: r = {} } = e.AttrsToBBArgs(
                 t.attrs,
@@ -733,74 +728,74 @@
             return { tag: null == e ? void 0 : e.tag, args: {} };
           })(s, o);
         return (
-          l && (a += (0, i.CS)(l, c)),
+          c && (a += (0, l.CS)(c, d)),
           o.content.forEach((o) => {
-            ([a, n] = f(t, n, o.marks, a)),
+            ([a, n] = p(t, n, o.marks, a)),
               ([a, n] = (function (e, t, o, r) {
                 let n;
                 for (const a of o)
                   if (-1 === t.indexOf(a)) {
                     n || (n = t.slice());
                     const o = e.mapMarks.get(a.type);
-                    if (((0, u.w)(o, "mark missing bbtag"), o)) {
+                    if (((0, i.w)(o, "mark missing bbtag"), o)) {
                       n.push(a);
-                      const { args: e, tag: t } = b(o, a);
-                      r += (0, i.CS)(t, e);
+                      const { args: e, tag: t } = g(o, a);
+                      r += (0, l.CS)(t, e);
                     }
                   }
                 return [r, null != n ? n : t];
               })(t, n, o.marks, a)),
               o.type.isText
-                ? (a += (0, i.vE)(o.text || ""))
+                ? (a += (0, l.vE)(o.text || ""))
                 : o.type == e.nodes.hard_break
                   ? (a += "\n")
-                  : (a += g(e, t, o, n));
+                  : (a += h(e, t, o, n));
           }),
-          ([a] = f(t, n, r, a)),
-          l && (a += (0, i.op)(l)),
+          ([a] = p(t, n, r, a)),
+          c && (a += (0, l.op)(c)),
           a
         );
       }
-      function f(e, t, o, r) {
+      function p(e, t, o, r) {
         const n = [];
         for (const e of t) -1 === o.indexOf(e) && n.push(e);
         if (!n.length) return [r, t];
         const a = t.slice();
         for (
           ;
-          n.length && ((0, u.w)(a.length, "no marks left to close"), a.length);
+          n.length && ((0, i.w)(a.length, "no marks left to close"), a.length);
         ) {
           const t = a.pop(),
             o = e.mapMarks.get(t.type),
-            { tag: s } = b(o, t);
-          r += (0, i.op)(s);
-          const l = n.indexOf(t);
-          -1 != l && n.splice(l, 1);
+            { tag: s } = g(o, t);
+          r += (0, l.op)(s);
+          const c = n.indexOf(t);
+          -1 != c && n.splice(c, 1);
         }
         return [r, a];
       }
-      function b(e, t) {
+      function g(e, t) {
         if (e && e.AttrsToBBArgs) {
           const { tag: o = e.tag, args: r = {} } = e.AttrsToBBArgs(t.attrs, t);
           return { tag: o, args: r };
         }
         return { tag: null == e ? void 0 : e.tag, args: {} };
       }
-      const _ = new s.hs("CProseMirrorState - OnChange");
-      class C {
-        constructor(e, t, o, n) {
+      const f = new s.hs("CProseMirrorState - OnChange");
+      class b {
+        constructor(e, t, o) {
           (this.m_bHasUncomittedChanges = !1),
             (this.m_onStateChangedCallbacks = new r.l()),
             (this.m_schemaConfig = e),
-            (this.m_bbcodeParser = new h(e)),
+            (this.m_bbcodeParser = new u(e)),
             (this.m_bbcode = t),
             (this.m_fnCommitChanges = o),
-            (this.m_state = this.ConstructState(n));
+            (this.m_state = this.ConstructState());
         }
         CommitChanges() {
           this.m_currentDoc &&
             this.m_bHasUncomittedChanges &&
-            ((this.m_bbcode = p(this.m_currentDoc, this.m_schemaConfig)),
+            ((this.m_bbcode = m(this.m_currentDoc, this.m_schemaConfig)),
             this.m_fnCommitChanges(this.m_bbcode, this.m_currentDoc),
             (this.m_bHasUncomittedChanges = !1));
         }
@@ -819,9 +814,9 @@
         get OnStateChangedCallbacks() {
           return this.m_onStateChangedCallbacks;
         }
-        ConstructState(e) {
-          const t = new s.k_({
-              key: _,
+        ConstructState() {
+          const e = new s.k_({
+              key: f,
               view: (e) => (
                 console.assert(!this.m_view),
                 (this.m_view = e),
@@ -831,41 +826,12 @@
                 }
               ),
             }),
-            o = [(0, a.b6)(), t];
-          return (
-            e &&
-              o.push(
-                (function (e) {
-                  return new s.k_({
-                    props: {
-                      decorations(t) {
-                        var o;
-                        const r = t.doc;
-                        if (
-                          1 === r.childCount &&
-                          (null === (o = r.firstChild) || void 0 === o
-                            ? void 0
-                            : o.isTextblock) &&
-                          0 === r.firstChild.content.size
-                        ) {
-                          const t = l.NZ.node(0, r.content.size, {
-                            "data-placeholder": e,
-                            class: c.EmptyTextPlaceholder,
-                          });
-                          return l.zF.create(r, [t]);
-                        }
-                        return l.zF.empty;
-                      },
-                    },
-                  });
-                })(e),
-              ),
-            s.$t.create({
-              schema: this.m_schemaConfig.pm_schema,
-              doc: this.m_bbcodeParser.ParseBBCode(this.m_bbcode),
-              plugins: o,
-            })
-          );
+            t = [(0, a.b6)(), e];
+          return s.$t.create({
+            schema: this.m_schemaConfig.pm_schema,
+            doc: this.m_bbcodeParser.ParseBBCode(this.m_bbcode),
+            plugins: t,
+          });
         }
         InstallPlugin(e) {
           var t;
@@ -898,7 +864,7 @@
               ));
         }
       }
-      function k(e, t) {
+      function _(e, t) {
         (0, n.hL)(null == e ? void 0 : e.OnStateChangedCallbacks, t);
       }
     },
@@ -1202,8 +1168,8 @@
           [b, _] = a.useState(o),
           [C, k] = a.useState(r),
           v = a.useRef(null),
-          T = a.useRef(null),
-          [B, S] = a.useState(u);
+          B = a.useRef(null),
+          [T, S] = a.useState(u);
         a.useLayoutEffect(() => {
           var e, t, o, r, n;
           (
@@ -1217,20 +1183,20 @@
             ? (
                 null ===
                   (r =
-                    null === (o = T.current) || void 0 === o
+                    null === (o = B.current) || void 0 === o
                       ? void 0
                       : o.value) || void 0 === r
                   ? void 0
                   : r.length
               )
               ? (v.current.Focus(), v.current.element.select())
-              : T.current.Focus()
+              : B.current.Focus()
             : null === (n = v.current) || void 0 === n || n.Focus();
         }, []);
         const w = l
             ? (0, i.we)("#FormattingToolbar_EditLink")
             : (0, i.we)("#FormattingToolbar_InsertLink"),
-          E = l
+          A = l
             ? (0, i.we)("#Button_Save")
             : (0, i.we)("#FormattingToolbar_InsertLink");
         return a.createElement(
@@ -1239,7 +1205,7 @@
             onOK: () => {
               let e = p.state.tr;
               const o = { href: C };
-              for (const e in B) o[e] = B[e];
+              for (const e in T) o[e] = T[e];
               const r = t.text(b || C, [t.marks.link.create(o)]);
               (e = e.replaceRangeWith(g, f, r)),
                 (e = e.setSelection(
@@ -1250,7 +1216,7 @@
             },
             closeModal: h,
             strTitle: w,
-            strOKText: E,
+            strOKText: A,
             bOKDisabled: 0 == C.length,
           },
           a.createElement(s.pd, {
@@ -1260,12 +1226,12 @@
             label: (0, i.we)("#FormattingToolbar_LinkText"),
           }),
           a.createElement(s.pd, {
-            ref: T,
+            ref: B,
             value: C,
             onChange: (e) => k(e.currentTarget.value),
             label: (0, i.we)("#FormattingToolbar_LinkAddress"),
           }),
-          d && a.createElement(m, { addtlAttrs: d, values: B, setValues: S }),
+          d && a.createElement(m, { addtlAttrs: d, values: T, setValues: S }),
         );
       });
       function m(e) {
@@ -1294,7 +1260,7 @@
     },
     1805: (e, t, o) => {
       "use strict";
-      o.d(t, { l: () => B });
+      o.d(t, { l: () => T });
       var r = o(76217),
         n = o(63512),
         a = o(73170),
@@ -1336,8 +1302,8 @@
       }
       var k = o(61859),
         v = o(73745),
-        T = o(73309);
-      const B = (0, m.Nr)(function (e) {
+        B = o(73309);
+      const T = (0, m.Nr)(function (e) {
         const {
             pmState: t,
             className: o,
@@ -1348,15 +1314,15 @@
             children: p,
           } = e,
           [g, f] = u.useState(),
-          [C, B] = u.useState();
+          [C, T] = u.useState();
         u.useEffect(() => {
-          t && g && B(new s.Lz(g, { state: t.state }));
+          t && g && T(new s.Lz(g, { state: t.state }));
         }, [t, g]),
           u.useEffect(() => () => (null == C ? void 0 : C.destroy()), [C]),
           (0, v.D5)(d, C);
         const {
             refDiv: w,
-            onActivate: E,
+            onActivate: A,
             onGamepadDirection: y,
           } = (function (e) {
             const t = u.useRef(),
@@ -1383,7 +1349,7 @@
               l = (0, n.ak)(t, null, null, s);
             return { refDiv: t, onActivate: r, onGamepadDirection: l };
           })(C),
-          A = (0, v.Ue)(w, f);
+          E = (0, v.Ue)(w, f);
         if (!t) return null;
         const { schemaConfig: M, bbcodeParser: O } = t;
         return u.createElement(
@@ -1391,11 +1357,11 @@
           { view: C, pmState: t },
           u.createElement(r.Z, {
             key: `editordiv_${m}`,
-            className: (0, b.A)(o, T.Container),
-            ref: A,
+            className: (0, b.A)(o, B.Container),
+            ref: E,
             spellCheck: m,
             focusable: !0,
-            onActivate: E,
+            onActivate: A,
             onOKActionDescription: (0, k.we)("#UserGameNotes_Edit"),
             onGamepadDirection: y,
             ...h,
@@ -1741,10 +1707,10 @@
       "use strict";
       o.d(t, {
         Ez: () => k,
-        GY: () => T,
+        GY: () => B,
         XQ: () => _,
         bI: () => f,
-        cQ: () => B,
+        cQ: () => T,
         ff: () => S,
         hK: () => C,
         u3: () => v,
@@ -1801,28 +1767,28 @@
           h = s.useCallback((e) => u((0, n.gj)(e.state, t, o)), [t, o]);
         (0, m.hL)(c, h);
         const p = s.useMemo(() => a.y_(t, o), [o, t]);
-        return s.createElement(B, {
+        return s.createElement(T, {
           ...l,
           command: p,
           toggled: d,
           children: r,
         });
       }
-      function T(e) {
+      function B(e) {
         const { mark: t, children: o, ...r } = e,
           { callbacks: l, view: c } = g(),
           [i, d] = s.useState(() => (0, n.Cd)(c.state, t)),
           u = s.useCallback((e) => d((0, n.Cd)(e.state, t)), [t]);
         (0, m.hL)(l, u);
         const h = s.useMemo(() => a.wh(t), [t]);
-        return s.createElement(B, {
+        return s.createElement(T, {
           ...r,
           command: h,
           toggled: i,
           children: o,
         });
       }
-      function B(e) {
+      function T(e) {
         const { command: t, toggled: o, children: r, ...n } = e,
           { view: a, callbacks: c } = g(),
           [i, u] = s.useState(() => t(a.state));
@@ -1878,7 +1844,7 @@
         const { tooltip: t, keyboardShortcut: o, children: r } = e;
         if (!t) return r;
         const n = o
-          ? s.createElement(E, { tooltip: t, keyboardShortcut: o })
+          ? s.createElement(A, { tooltip: t, keyboardShortcut: o })
           : t;
         return s.createElement(
           c.Gq,
@@ -1886,7 +1852,7 @@
           r,
         );
       }
-      function E(e) {
+      function A(e) {
         const { tooltip: t, keyboardShortcut: o } = e;
         return s.createElement(
           "div",
@@ -1910,14 +1876,14 @@
             s.createElement(
               s.Fragment,
               { key: t },
-              s.createElement(A, null, s.createElement(M, { modifier: e })),
+              s.createElement(E, null, s.createElement(M, { modifier: e })),
               " + ",
             ),
           ),
-          s.createElement(A, null, r.toUpperCase()),
+          s.createElement(E, null, r.toUpperCase()),
         );
       }
-      function A(e) {
+      function E(e) {
         return s.createElement("span", { className: p.KeyCap }, e.children);
       }
       function M(e) {

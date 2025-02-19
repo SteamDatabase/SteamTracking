@@ -296,7 +296,7 @@
         E = n(34629),
         g = n(75844),
         S = n(78327),
-        h = n(20587);
+        h = n(86921);
       class _ extends h.ZQ {
         async DeleteOldAnnouncement(e, t) {
           let n = new URLSearchParams();

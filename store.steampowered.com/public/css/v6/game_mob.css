@@ -424,7 +424,9 @@
 		margin: 15px 0px 0px 0px;
 	}
 
-		html.responsive #demoGameBtn,
+	/* hide button that will initiate install and playing the game.  in the future
+	   we may want to enable adding to account without playing, or play via steam link */
+	html.responsive #demoGameBtn,
 	html.responsive #freeGameBtn {
 		display: none;
 	}

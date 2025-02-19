@@ -34,9 +34,9 @@
     30603: (e) => {
       e.exports = { ExportToCSV: "_2QfZu5-7jOdld1h2nYbca8" };
     },
-    72113: (e, t, n) => {
+    16853: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => Tt, default: () => Bt });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => kt, default: () => Lt });
       var a = n(43527),
         r = n(90626),
         l = n(17083),
@@ -53,15 +53,15 @@
         h = n(24484),
         _ = n(56545),
         v = n(85737),
-        S = n(64753),
-        f = n(20194),
+        f = n(64753),
+        S = n(20194),
         y = n(75233),
         I = n(41735),
         w = n.n(I),
         D = n(17720),
         b = n(78327),
-        C = n(32179);
-      function A() {
+        A = n(32179);
+      function C() {
         const [e] = r.useState(() =>
           (0, b.Tc)("events_list", "application_config"),
         );
@@ -76,11 +76,11 @@
           a = await w().get(t, { params: n });
         return a?.data?.data;
       }
-      function B(e, t) {
+      function M(e, t) {
         return e.getQueryData(["usePartnerRevAndBestAppSlow", t]);
       }
-      function M(e, t, n) {
-        return (0, f.I)({
+      function B(e, t, n) {
+        return (0, S.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
             const n = _.w.Init(v.q3);
@@ -97,8 +97,8 @@
         });
       }
       var R = n(38390),
-        L = n(90362),
-        k = n(96001),
+        k = n(90362),
+        L = n(96001),
         P = n(71541),
         F = n(44736),
         G = n(78395),
@@ -106,13 +106,13 @@
         x = n(22797),
         U = n(26408),
         $ = n(52038),
-        j = n(61859),
-        Y = n(91675),
-        q = n(30470),
-        z = n(30565),
-        W = n.n(z),
-        K = n(34283),
-        H = n.n(K),
+        z = n(61859),
+        j = n(91675),
+        Y = n(30470),
+        q = n(30565),
+        W = n.n(q),
+        H = n(34283),
+        K = n.n(H),
         V = n(68797),
         J = n(9161),
         Q = n(65689),
@@ -134,7 +134,7 @@
         Init() {
           const e = (0, h.Tc)("store_feature_token", "application_config");
           (0, Z.w)(Boolean(e), "require store_feature_token"),
-            (this.m_steamInterface = new X.D(q.TS.WEBAPI_BASE_URL, e));
+            (this.m_steamInterface = new X.D(Y.TS.WEBAPI_BASE_URL, e));
         }
       }
       function te() {
@@ -149,7 +149,7 @@
           [E, g] = r.useState(""),
           [p, h] = r.useState(!1),
           _ = te(),
-          v = (0, f.I)({
+          v = (0, S.I)({
             queryKey: ["MeetSteamInviteDirectDialog", n, c],
             queryFn: async () => {
               const e = {
@@ -240,13 +240,13 @@
             r.createElement(x.t, {
               size: "small",
               position: "center",
-              string: (0, j.we)("#Saving"),
+              string: (0, z.we)("#Saving"),
             }),
           v.isLoading &&
             r.createElement(x.t, {
               size: "small",
               position: "center",
-              string: (0, j.we)("#Loading"),
+              string: (0, z.we)("#Loading"),
             }),
         );
       }
@@ -290,7 +290,7 @@
             r.createElement(x.t, {
               size: "small",
               position: "center",
-              string: (0, j.we)("#Saving"),
+              string: (0, z.we)("#Saving"),
             }),
           null == a
             ? r.createElement(le, { setInvites: l })
@@ -388,7 +388,7 @@
             r.createElement(
               "label",
               {
-                className: H().ImportButtonLabel,
+                className: K().ImportButtonLabel,
                 htmlFor: "import-discount-input",
               },
               "Choose CSV File",
@@ -429,14 +429,14 @@
           l = t.map((e) => e.strEmailOverride).join(","),
           s = t.map((e) => (e.bAllowRegistrationIfFull ? "1" : "0")).join(",");
         let i = new FormData();
-        i.append("sessionid", q.TS.SESSIONID),
+        i.append("sessionid", Y.TS.SESSIONID),
           i.append("gid", e),
           i.append("accounts", a),
           i.append("partnerids", r),
           i.append("emailoverride", l),
           i.append("allowregistrationiffull", s),
           i.append("forceupdate", n ? "1" : "0");
-        const c = `${q.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
+        const c = `${Y.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
         try {
           const e = await w().post(c, i, { withCredentials: !0 });
           if (1 != e?.data?.success) {
@@ -458,15 +458,20 @@
         de = n(72963);
       function Ee(e) {
         const t = te(),
-          n = r.useContext(ge),
-          a = (0, f.I)(pe(n, t, e));
+          n = r.useContext(pe),
+          a = (0, S.I)(he(n, t, e));
         return a.isLoading ? null : a.data;
       }
-      const ge = r.createContext({
+      function ge(e) {
+        const t = te(),
+          n = r.useContext(pe);
+        return (0, oe.E)({ queries: e.map((e) => he(n, t, e)) });
+      }
+      const pe = r.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
-            he ||
-              (he = new (me())(
+            _e ||
+              (_e = new (me())(
                 async (t) => {
                   const n = _.w.Init(Q.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(6);
@@ -499,31 +504,31 @@
                 },
                 { maxBatchSize: 5 },
               ));
-            return he;
+            return _e;
           })(e).load(t),
       });
-      function pe(e, t, n) {
+      function he(e, t, n) {
         return {
           queryKey: ["MeetSteamAllRegistrationStatus", n],
           queryFn: () => e.loadMeetSteamAllRegistration(t, n),
           enabled: !!n,
         };
       }
-      let he;
-      function _e(e, t) {
-        const n = (0, k.a)(),
+      let _e;
+      function ve(e, t) {
+        const n = (0, L.a)(),
           a = r.useContext(Se),
-          l = (0, f.I)(fe(a, n, e, t));
+          l = (0, S.I)(ye(a, n, e, t));
         return l.isLoading ? null : l.data;
       }
-      function ve(e, t) {
+      function fe(e, t) {
         return de.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
       const Se = r.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
           await (function (e) {
-            ye ||
-              (ye = new (me())(
+            Ie ||
+              (Ie = new (me())(
                 async (t) => {
                   const n = _.w.Init(v.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
@@ -547,20 +552,20 @@
                 },
                 { maxBatchSize: 100 },
               ));
-            return ye;
+            return Ie;
           })(e).load({ accountID: t, partnerID: n }),
       });
-      function fe(e, t, n, a) {
+      function ye(e, t, n, a) {
         return {
           queryKey: ["PartnerEmailAndName", n, a],
           queryFn: () => e.loadPartnerEmailAndName(t, n, a),
           enabled: !!n || !!a,
         };
       }
-      let ye;
-      function Ie(e) {
+      let Ie;
+      function we(e) {
         const { rgEventGIDs: t } = e,
-          [n, a, l] = (0, S.uD)(),
+          [n, a, l] = (0, f.uD)(),
           [s, i] = (0, r.useState)(null);
         return r.createElement(
           r.Fragment,
@@ -590,11 +595,11 @@
                   bDisableBackgroundDismiss: !0,
                 },
                 Boolean(null == s)
-                  ? r.createElement(Ne, { rgEventGIDs: t, fnSelectedEvents: i })
+                  ? r.createElement(Te, { rgEventGIDs: t, fnSelectedEvents: i })
                   : r.createElement(
                       r.Fragment,
                       null,
-                      r.createElement(Ae, { rgGidMeetSteamEvents: s }),
+                      r.createElement(Ne, { rgGidMeetSteamEvents: s }),
                       r.createElement(
                         P.$n,
                         { onClick: () => i(null) },
@@ -606,8 +611,8 @@
           ),
         );
       }
-      const we = (0, ie.FB)();
-      function De(e) {
+      const De = (0, ie.FB)();
+      function be(e) {
         return (
           (e = e?.filter(
             (t, n) =>
@@ -617,21 +622,17 @@
             ?.map(
               (e) =>
                 e.name ||
-                ve(e.accountid, e.partner_id)?.realname ||
+                fe(e.accountid, e.partner_id)?.realname ||
                 e.accountid,
             )
             .join(",") || ""
         );
       }
-      function be(e) {
-        return De(e.cell.getValue());
+      function Ae(e) {
+        return be(e.cell.getValue());
       }
       function Ce(e, t) {
-        const n = (function (e) {
-            const t = te(),
-              n = r.useContext(ge);
-            return (0, oe.E)({ queries: e.map((e) => pe(n, t, e)) });
-          })(t),
+        const n = ge(t),
           [a, l, s] = (0, r.useMemo)(() => {
             if (n.filter((e) => !e.isLoading).length != n.length)
               return [null, [], []];
@@ -659,13 +660,13 @@
             return [r, l.map((e) => e.accountID), l.map((e) => e.partnerID)];
           }, [n, e]),
           i = (function (e, t) {
-            const n = (0, k.a)(),
+            const n = (0, L.a)(),
               a = r.useContext(Se);
-            return (0, oe.E)({ queries: e.map((e, r) => fe(a, n, e, t[r])) });
+            return (0, oe.E)({ queries: e.map((e, r) => ye(a, n, e, t[r])) });
           })(l, s);
         return i.filter((e) => !e.isLoading).length == i.length ? a : null;
       }
-      function Ae(e) {
+      function Ne(e) {
         const { rgGidMeetSteamEvents: t } = e,
           n = (function () {
             const [e] = (0, r.useState)(() =>
@@ -673,7 +674,7 @@
             );
             return e;
           })(),
-          a = (0, C.vh)(n),
+          a = (0, A.vh)(n),
           l = Ce(n, t),
           s = (0, r.useMemo)(() => {
             if (!a || !l) return null;
@@ -683,7 +684,7 @@
                 const n = l.get(t);
                 e.push({
                   partner_id: t,
-                  partner_name: (0, C.Yd)(t)?.name || "Unknown",
+                  partner_name: (0, A.Yd)(t)?.name || "Unknown",
                   invitations:
                     n?.filter(
                       (e) =>
@@ -705,19 +706,19 @@
           }, [a, l, n]),
           i = (0, r.useMemo)(
             () => [
-              we.accessor("partner_id", { header: "Partner ID", size: 100 }),
-              we.accessor("partner_name", {
+              De.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              De.accessor("partner_name", {
                 header: "Partner Name",
                 size: 300,
               }),
-              we.accessor("invitations", {
+              De.accessor("invitations", {
                 header: "Invitations",
-                cell: be,
+                cell: Ae,
                 size: 300,
               }),
-              we.accessor("registrations", {
+              De.accessor("registrations", {
                 header: "Registered to Attend",
-                cell: be,
+                cell: Ae,
                 size: 300,
               }),
             ],
@@ -755,7 +756,7 @@
                           n.push(
                             "invitations" == e.accessorKey ||
                               "registrations" == e.accessorKey
-                              ? De(a)
+                              ? be(a)
                               : a.toString(),
                           );
                         }
@@ -769,12 +770,12 @@
                 ),
               )
             : r.createElement(x.t, {
-                string: (0, j.we)("#Loading"),
+                string: (0, z.we)("#Loading"),
                 position: "center",
               }),
         );
       }
-      function Ne(e) {
+      function Te(e) {
         const { rgEventGIDs: t, fnSelectedEvents: n } = e,
           [a, l] = (0, r.useState)([]);
         return r.createElement(
@@ -782,7 +783,7 @@
           null,
           r.createElement(P.JU, null, "Choose Events"),
           t.map((e) =>
-            r.createElement(Te, {
+            r.createElement(Me, {
               key: e,
               gidClanEvent: e,
               rgSelected: a,
@@ -796,7 +797,7 @@
           ),
         );
       }
-      function Te(e) {
+      function Me(e) {
         const { gidClanEvent: t, rgSelected: n, fnSetSelected: a } = e,
           l = (0, R.RR)(t).GetNameWithFallback(0);
         return r.createElement(P.Yh, {
@@ -812,8 +813,8 @@
         });
       }
       var Be = n(30603),
-        Me = n.n(Be),
-        Re = n(29233);
+        Re = n.n(Be),
+        ke = n(29233);
       function Le(e) {
         const { hideModal: t, gid: n } = e,
           a = Ee(n),
@@ -840,7 +841,7 @@
             r.createElement(x.t, {
               size: "medium",
               position: "center",
-              string: (0, j.we)("#Loading"),
+              string: (0, z.we)("#Loading"),
             }),
           a &&
             r.createElement(
@@ -854,9 +855,9 @@
                     onClick: async () => {
                       await (async function (e, t) {
                         let n = new FormData();
-                        n.append("sessionid", q.TS.SESSIONID),
+                        n.append("sessionid", Y.TS.SESSIONID),
                           n.append("gid", t);
-                        const a = `${q.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
+                        const a = `${Y.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
                         try {
                           const r = await w().post(a, n, {
                             withCredentials: !0,
@@ -912,7 +913,7 @@
                   "tbody",
                   null,
                   a?.map((e) =>
-                    r.createElement(ke, {
+                    r.createElement(Pe, {
                       key: "regentry_" + e.steamid,
                       reg: e,
                     }),
@@ -922,9 +923,9 @@
             ),
         );
       }
-      function ke(e) {
+      function Pe(e) {
         const { reg: t } = e,
-          [n] = (0, C.UA)(t.partner_id);
+          [n] = (0, A.UA)(t.partner_id);
         return r.createElement(
           "tr",
           null,
@@ -940,22 +941,22 @@
           r.createElement("td", null, t.email_override),
         );
       }
-      function Pe(e) {
+      function Fe(e) {
         const { hideModal: t, gid: n, title: a, group: l, session: s } = e,
-          i = (0, k.a)(),
+          i = (0, L.a)(),
           c = Ee(n),
-          o = M(i, n, l?.group_id),
+          o = B(i, n, l?.group_id),
           u = (0, r.useMemo)(() => {
             const e = o?.data?.filter((e) => e.session_id == s.id),
               t = new Map();
             return (
               e?.forEach((e) => {
-                t.set(new Re.b2(e.steamid).GetAccountID(), e);
+                t.set(new ke.b2(e.steamid).GetAccountID(), e);
               }),
               t
             );
           }, [s, o]),
-          m = c?.filter((e) => u.has(new Re.b2(e.steamid).GetAccountID()));
+          m = c?.filter((e) => u.has(new ke.b2(e.steamid).GetAccountID()));
         return r.createElement(
           G.o0,
           {
@@ -968,7 +969,7 @@
           },
           r.createElement(
             "div",
-            { className: Me().ExportToCSV },
+            { className: Re().ExportToCSV },
             r.createElement(
               "a",
               {
@@ -985,7 +986,7 @@
                     ]),
                       t.forEach((e) => {
                         const t = [],
-                          a = e.partner_id ? (0, C.Yd)(e.partner_id) : void 0;
+                          a = e.partner_id ? (0, A.Yd)(e.partner_id) : void 0;
                         t.push("" + e.steamid),
                           t.push(e.name),
                           t.push(e.invited ? "YES" : ""),
@@ -1045,15 +1046,15 @@
               null,
               m?.flatMap((e) => {
                 const t = [
-                  r.createElement(Fe, {
+                  r.createElement(Ge, {
                     key: "regrow" + e.steamid,
-                    regInfo: u.get(new Re.b2(e.steamid).GetAccountID()),
+                    regInfo: u.get(new ke.b2(e.steamid).GetAccountID()),
                     inviteInfo: e,
                   }),
                 ];
                 for (let n = 0; n < e.guest_names?.length; n++)
                   t.push(
-                    r.createElement(Ge, {
+                    r.createElement(Oe, {
                       key: "regguestrow" + e.steamid + "_" + n,
                       guestName: e.guest_names[n],
                     }),
@@ -1064,9 +1065,9 @@
           ),
         );
       }
-      function Fe(e) {
+      function Ge(e) {
         const { inviteInfo: t, regInfo: n } = e,
-          [a] = (0, C.UA)(t.partner_id);
+          [a] = (0, A.UA)(t.partner_id);
         return r.createElement(
           "tr",
           null,
@@ -1088,7 +1089,7 @@
           ),
         );
       }
-      function Ge(e) {
+      function Oe(e) {
         const { guestName: t } = e;
         return r.createElement(
           "tr",
@@ -1097,7 +1098,165 @@
           r.createElement("td", null, t),
         );
       }
-      function Oe(e) {
+      function xe(e) {
+        const { rgEventGIDs: t } = e,
+          [n, a, l] = (0, f.uD)(),
+          [s, i] = (0, r.useState)(null);
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.createElement("span", null, " | "),
+          r.createElement(
+            "a",
+            {
+              href: "#",
+              onClick: (e) => {
+                e.preventDefault(), e.stopPropagation(), a();
+              },
+            },
+            "Show Registration Across Events",
+          ),
+          r.createElement(
+            O.E,
+            { active: n },
+            r.createElement(
+              u.tH,
+              null,
+              r.createElement(
+                G.o0,
+                {
+                  closeModal: l,
+                  bAllowFullSize: !0,
+                  bDisableBackgroundDismiss: !0,
+                },
+                Boolean(null == s)
+                  ? r.createElement(Te, { rgEventGIDs: t, fnSelectedEvents: i })
+                  : r.createElement(
+                      r.Fragment,
+                      null,
+                      r.createElement($e, { rgGidMeetSteamEvents: s }),
+                      r.createElement(
+                        P.$n,
+                        { onClick: () => i(null) },
+                        "Reset Selection",
+                      ),
+                    ),
+              ),
+            ),
+          ),
+        );
+      }
+      const Ue = (0, ie.FB)();
+      function $e(e) {
+        const { rgGidMeetSteamEvents: t } = e,
+          { rgAllRegistrations: n, rgPartnerIDs: a } = (function (e) {
+            const t = ge(e),
+              [n, a] = (0, r.useMemo)(() => {
+                if (t.filter((e) => !e.isLoading).length != t.length)
+                  return [null, null];
+                const e = new Array(),
+                  n = new Set();
+                return (
+                  t.forEach((t) => {
+                    t.data.forEach((t) => {
+                      t.guests_registered > 0 &&
+                        (e.push(t), t.partner_id && n.add(t.partner_id));
+                    });
+                  }),
+                  [Array.from(n), e]
+                );
+              }, [t]);
+            return { rgAllRegistrations: a, rgPartnerIDs: n };
+          })(t),
+          l = (0, A.vh)(a),
+          s = (0, r.useMemo)(() => {
+            if (!l || !n) return null;
+            const e = [];
+            return (
+              n.forEach((t) => {
+                (0, A.Yd)(t.partner_id);
+                e.push({
+                  partner_id: t.partner_id ? "" + t.partner_id : "",
+                  partner_name: (0, A.Yd)(t.partner_id)?.name || "Unknown",
+                  name: t.name,
+                  accountid: t.accountid,
+                  guest_registrated: t.guests_registered - 1,
+                  guest_names:
+                    t.guest_names?.length > 0 ? t.guest_names.join(",") : "",
+                });
+              }),
+              e
+            );
+          }, [l, n]),
+          i = (0, r.useMemo)(
+            () => [
+              Ue.accessor("name", { header: "Name", size: 200 }),
+              Ue.accessor("accountid", { header: "Account ID", size: 150 }),
+              Ue.accessor("guest_registrated", {
+                header: "Guest Count",
+                size: 100,
+              }),
+              Ue.accessor("guest_names", {
+                header: "Guest's Names",
+                size: 100,
+              }),
+              Ue.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              Ue.accessor("partner_name", {
+                header: "Partner Name",
+                size: 300,
+              }),
+            ],
+            [],
+          );
+        if (!l || !a || !s)
+          return r.createElement(x.t, { string: (0, z.we)("#Loading") });
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.createElement(P.JU, null, "Registations"),
+          Boolean(s)
+            ? r.createElement(
+                u.tH,
+                null,
+                r.createElement(ce.k, {
+                  columns: i,
+                  data: s,
+                  stickyHeader: !0,
+                  nItemHeight: 28,
+                  overscan: a.length,
+                }),
+                r.createElement("br", null),
+                r.createElement(
+                  P.$n,
+                  {
+                    id: "download-csv",
+                    onClick: function () {
+                      const e = [],
+                        t = [];
+                      for (const e of i) t.push(e.header);
+                      e.push(t);
+                      for (const t of s) {
+                        const n = [];
+                        for (const e of i) {
+                          const a = t[e.accessorKey];
+                          n.push(a.toString());
+                        }
+                        e.push(n);
+                      }
+                      J.g.WriteCSVToFile(e, "registrationdump.csv");
+                    },
+                    style: { width: "120px" },
+                  },
+                  "Download CSV",
+                ),
+              )
+            : r.createElement(x.t, {
+                string: (0, z.we)("#Loading"),
+                position: "center",
+              }),
+        );
+      }
+      function ze(e) {
         const t = D.b.InitFromClanID((0, F.H7)()),
           n = (function () {
             const [e] = (0, r.useState)(() =>
@@ -1114,21 +1273,22 @@
             r.createElement(
               "a",
               {
-                href: `${q.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
+                href: `${Y.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
               },
               "Open Meet Steam Event Dashboard",
             ),
-            r.createElement(Ie, { rgEventGIDs: n }),
+            r.createElement(we, { rgEventGIDs: n }),
+            r.createElement(xe, { rgEventGIDs: n }),
           ),
           r.createElement("hr", null),
-          n.map((e) => r.createElement(xe, { gid: e, key: e })),
+          n.map((e) => r.createElement(je, { gid: e, key: e })),
         );
       }
-      function xe(e) {
+      function je(e) {
         const { gid: t } = e,
           n = D.b.InitFromClanID((0, F.H7)()),
-          a = (0, k.a)(),
-          l = (0, L.m)(a, (0, F.H7)(), t),
+          a = (0, L.a)(),
+          l = (0, k.m)(a, (0, F.H7)(), t),
           s = l.isSuccess ? l.data : null,
           i = (0, R.RR)(t),
           c = i.GetNameWithFallback(0),
@@ -1156,7 +1316,7 @@
               r.createElement(
                 "div",
                 { className: W().StartDate },
-                (0, j.TW)(i?.startTime),
+                (0, z.TW)(i?.startTime),
               ),
             ),
             r.createElement(
@@ -1168,7 +1328,7 @@
                 r.createElement(
                   "a",
                   {
-                    href: `${q.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/edit/${t}`,
+                    href: `${Y.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/edit/${t}`,
                   },
                   "Edit",
                 ),
@@ -1179,7 +1339,7 @@
                 " | ",
                 r.createElement(
                   "a",
-                  { href: `${q.TS.STORE_BASE_URL}meetsteam/${t}` },
+                  { href: `${Y.TS.STORE_BASE_URL}meetsteam/${t}` },
                   "View",
                 ),
               ),
@@ -1190,10 +1350,10 @@
                 r.createElement(
                   r.Fragment,
                   null,
+                  r.createElement(He, { gid: t }),
+                  r.createElement(qe, { gid: t }),
                   r.createElement(Ye, { gid: t }),
-                  r.createElement($e, { gid: t }),
-                  r.createElement(Ue, { gid: t }),
-                  r.createElement(je, { gid: t }),
+                  r.createElement(We, { gid: t }),
                 ),
             ),
           ),
@@ -1233,7 +1393,7 @@
                   "tr",
                   null,
                   Boolean(o.length > 0)
-                    ? r.createElement(qe, {
+                    ? r.createElement(Ke, {
                         key: o[0].session.id,
                         gid: t,
                         group: o[0].group,
@@ -1270,7 +1430,7 @@
                     r.createElement(
                       "tr",
                       { key: e.session.id },
-                      r.createElement(qe, {
+                      r.createElement(Ke, {
                         group: e.group,
                         gid: t,
                         session: e.session,
@@ -1284,9 +1444,9 @@
           ),
         );
       }
-      function Ue(e) {
+      function Ye(e) {
         const { gid: t } = e,
-          [n, a, l] = (0, S.uD)();
+          [n, a, l] = (0, f.uD)();
         return r.createElement(
           "div",
           null,
@@ -1316,9 +1476,9 @@
           ),
         );
       }
-      function $e(e) {
+      function qe(e) {
         const { gid: t } = e,
-          [n, a, l] = (0, S.uD)();
+          [n, a, l] = (0, f.uD)();
         return r.createElement(
           "div",
           null,
@@ -1344,9 +1504,9 @@
           ),
         );
       }
-      function je(e) {
+      function We(e) {
         const { gid: t } = e,
-          [n, a, l] = (0, S.uD)();
+          [n, a, l] = (0, f.uD)();
         return r.createElement(
           "div",
           null,
@@ -1372,9 +1532,9 @@
           ),
         );
       }
-      function Ye(e) {
+      function He(e) {
         const { gid: t } = e,
-          n = (0, k.a)(),
+          n = (0, L.a)(),
           [a, l] = (0, r.useState)(!1),
           [s, i] = (0, r.useState)(null);
         return r.createElement(
@@ -1419,7 +1579,7 @@
                 "This will temporarily register and then de-register you from the event as a way to test the email sending code.",
               ),
               Boolean(null == s) &&
-                r.createElement(x.t, { string: (0, j.we)("#Loading") }),
+                r.createElement(x.t, { string: (0, z.we)("#Loading") }),
               Boolean(1 == s) &&
                 r.createElement("div", null, "Test Emails Sent"),
               Boolean(s && 1 != s) &&
@@ -1432,7 +1592,7 @@
           ),
         );
       }
-      function qe(e) {
+      function Ke(e) {
         const {
             gid: t,
             group: n,
@@ -1440,11 +1600,11 @@
             session: l,
             firstSession: s = !0,
           } = e,
-          i = j.NT.GetWithFallback(n?.localized_session_title, 0),
-          c = j.NT.GetWithFallback(n?.localized_session_description, 0),
+          i = z.NT.GetWithFallback(n?.localized_session_title, 0),
+          c = z.NT.GetWithFallback(n?.localized_session_description, 0),
           o = a?.find((e) => e.session_id == l.id),
-          [m, d, E] = (0, S.uD)(),
-          g = M((0, k.a)(), t, n?.group_id);
+          [m, d, E] = (0, f.uD)(),
+          g = B((0, L.a)(), t, n?.group_id);
         let p = Math.min((o?.guest_count / l.max_capacity) * 100, 100),
           h = o?.guest_count > 0 ? `${p}%` : "0%",
           _ = o?.guest_count >= l.max_capacity;
@@ -1465,11 +1625,11 @@
             r.createElement(
               "span",
               null,
-              (0, j.TW)(l.rtime_start) + "@" + (0, Y.KC)(l.rtime_start),
+              (0, z.TW)(l.rtime_start) + "@" + (0, j.KC)(l.rtime_start),
               " (local time)",
             ),
           ),
-          r.createElement("td", null, (0, Y.IH)(l.rtime_end - l.rtime_start)),
+          r.createElement("td", null, (0, j.IH)(l.rtime_end - l.rtime_start)),
           r.createElement(
             "td",
             null,
@@ -1518,7 +1678,7 @@
               r.createElement(
                 O.E,
                 { active: m },
-                r.createElement(Pe, {
+                r.createElement(Fe, {
                   gid: t,
                   title: i,
                   group: n,
@@ -1530,13 +1690,13 @@
           ),
         );
       }
-      var ze = n(22837),
-        We = n(14336),
-        Ke = n(55263),
-        He = n(29863),
-        Ve = n(48479);
-      function Je(e) {
-        const t = A(),
+      var Ve = n(22837),
+        Je = n(14336),
+        Qe = n(55263),
+        Ze = n(29863),
+        Xe = n(48479);
+      function et(e) {
+        const t = C(),
           n = (function () {
             const [e] = (0, r.useState)(() =>
               (0, h.Tc)("interest_results", "application_config"),
@@ -1585,28 +1745,28 @@
               (e) => 0 == a.length || e.name.includes(a) || e.id.includes(a),
             )
             .map((e) =>
-              r.createElement(Qe, {
+              r.createElement(tt, {
                 key: e.id,
                 conf: e,
                 nInterestCount: i.get(e.id) ?? 0,
                 rgSurveyInterest: n,
               }),
             ),
-          r.createElement(st, { rgSurveyInterest: n }),
+          r.createElement(ut, { rgSurveyInterest: n }),
         );
       }
-      function Qe(e) {
+      function tt(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: a } = e;
         return r.createElement(
-          Ve.qx,
+          Xe.qx,
           {
             title: `${t.name} in ${t.place} around ${t.time}: Interest: ${n.toLocaleString()}`,
             bStartMinimized: !0,
           },
-          r.createElement(Xe, { conf: t, rgSurveyInterest: a }),
+          r.createElement(at, { conf: t, rgSurveyInterest: a }),
         );
       }
-      function Ze(e) {
+      function nt(e) {
         if ("number" == typeof e) return e;
         const t = e.slice(-1).toUpperCase(),
           n = parseFloat(e.slice(0, -1));
@@ -1621,7 +1781,7 @@
             return parseFloat(e);
         }
       }
-      function Xe(e) {
+      function at(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           a = (0, r.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
@@ -1639,7 +1799,7 @@
                     const e = n.results.partner_id;
                     new D.b(n.steamid).GetAccountID(),
                       await Promise.all([
-                        (0, C.qG)(e),
+                        (0, A.qG)(e),
                         s.prefetchQuery({
                           queryKey: N(e),
                           queryFn: async () => T(e),
@@ -1656,14 +1816,14 @@
           })(a);
         return l
           ? a && 0 != a.length
-            ? r.createElement(et, { conf: t, rgSurveyInterest: a })
+            ? r.createElement(rt, { conf: t, rgSurveyInterest: a })
             : r.createElement("div", null, "No users with interest")
           : r.createElement(x.t, {
               position: "center",
               string: `Loading ${s} of ${a.length}`,
             });
       }
-      function et(e) {
+      function rt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           a = (0, y.jE)();
         return r.createElement(
@@ -1691,29 +1851,29 @@
                 ]),
                   n.forEach((t) => {
                     const n = [],
-                      r = new Re.b2(t.steamid);
+                      r = new ke.b2(t.steamid);
                     n.push("" + r.GetAccountID());
-                    const l = (0, We.z0)(r.GetAccountID()),
+                    const l = (0, Je.z0)(r.GetAccountID()),
                       s = t.results.partner_id;
                     n.push("" + s);
                     const i = t.results.email_override || "";
                     n.push("" + i),
                       n.push(l?.m_strPlayerName ? l.m_strPlayerName : "");
-                    const c = ve(r.GetAccountID(), s);
+                    const c = fe(r.GetAccountID(), s);
                     n.push(c ? c.realname : ""),
                       n.push(t.results.have_you_met_steam ? "yes" : "no"),
                       n.push("" + t.results.attending?.length),
                       n.push(t.results.country_code),
                       n.push(
                         t.results.preferred_language
-                          ? (0, ze.Lg)(t.results.preferred_language)
+                          ? (0, Ve.Lg)(t.results.preferred_language)
                           : "",
                       );
-                    const o = (0, C.Yd)(s);
+                    const o = (0, A.Yd)(s);
                     n.push(o ? o.name : "");
-                    const u = B(a, s);
+                    const u = M(a, s);
                     u
-                      ? (n.push("" + Ze(u.strGrossUSD)),
+                      ? (n.push("" + nt(u.strGrossUSD)),
                         n.push("" + u.nBestAppID),
                         n.push("" + u.nBestAppLongTermSalesRank))
                       : (n.push(""), n.push(""), n.push("")),
@@ -1750,7 +1910,7 @@
               "tbody",
               null,
               n.map((e) =>
-                r.createElement(tt, {
+                r.createElement(lt, {
                   key: t.id + "_" + e.steamid,
                   strsteamid: e.steamid,
                   partnerID: e.results.partner_id,
@@ -1761,30 +1921,30 @@
           ),
         );
       }
-      function tt(e) {
+      function lt(e) {
         const { partnerID: t, registration: n } = e;
         return r.createElement(
           "tr",
           null,
-          r.createElement("td", null, r.createElement(nt, { ...e })),
+          r.createElement("td", null, r.createElement(st, { ...e })),
           r.createElement("td", null, n.have_you_met_steam ? "" : "NO"),
-          r.createElement(at, { nPartnerID: t }),
+          r.createElement(it, { nPartnerID: t }),
           r.createElement("td", null, n.attending.length),
           r.createElement(
             "td",
             null,
             n.english_not_good && n.preferred_language
-              ? (0, ze.Lg)(n.preferred_language)
+              ? (0, Ve.Lg)(n.preferred_language)
               : "",
           ),
           r.createElement("td", null, n.country_code),
-          r.createElement("td", null, (0, j.TW)(n.submit_time)),
+          r.createElement("td", null, (0, z.TW)(n.submit_time)),
         );
       }
-      function nt(e) {
+      function st(e) {
         const { strsteamid: t, partnerID: n, registration: a } = e,
-          l = (0, We.hW)(t),
-          s = _e(new Re.b2(t).GetAccountID(), n),
+          l = (0, Je.hW)(t),
+          s = ve(new ke.b2(t).GetAccountID(), n),
           i = s?.realname || l.data?.m_strPlayerName;
         return r.createElement(
           r.Fragment,
@@ -1794,11 +1954,11 @@
           r.createElement("span", null, a.email_override || s?.email),
         );
       }
-      function at(e) {
+      function it(e) {
         const { nPartnerID: t } = e,
-          [n] = (0, C.UA)(t),
+          [n] = (0, A.UA)(t),
           a = (function (e) {
-            const t = (0, f.I)({
+            const t = (0, S.I)({
               queryKey: N(e),
               queryFn: async () => T(e),
               enabled: Boolean(e),
@@ -1814,24 +1974,24 @@
             "td",
             null,
             a?.nBestAppID > 0
-              ? r.createElement(lt, { appid: a?.nBestAppID })
+              ? r.createElement(ot, { appid: a?.nBestAppID })
               : "N/A",
           ),
           r.createElement("td", null, a?.nBestAppLongTermSalesRank),
         );
       }
-      const rt = {};
-      function lt(e) {
+      const ct = {};
+      function ot(e) {
         const { appid: t } = e,
-          [n] = (0, Ke.t7)(t, rt),
+          [n] = (0, Qe.t7)(t, ct),
           a = (0, r.useMemo)(() => ({ id: t, type: "game" }), [t]);
         return r.createElement(
-          He.Qf,
+          Ze.Qf,
           { item: a },
           r.createElement("span", null, n?.GetName() || t),
         );
       }
-      function st(e) {
+      function ut(e) {
         const { rgSurveyInterest: t } = e,
           n = (0, y.jE)(),
           a = (0, r.useMemo)(
@@ -1842,7 +2002,7 @@
             [t],
           );
         return r.createElement(
-          Ve.qx,
+          Xe.qx,
           {
             title: `Alternative Suggestions (${a.length})`,
             bStartMinimized: !0,
@@ -1869,28 +2029,28 @@
                 ]),
                   a.forEach((t) => {
                     const a = [],
-                      r = new Re.b2(t.steamid);
+                      r = new ke.b2(t.steamid);
                     a.push("" + r.GetAccountID());
-                    const l = (0, We.z0)(r.GetAccountID()),
+                    const l = (0, Je.z0)(r.GetAccountID()),
                       s = t.results.partner_id;
                     a.push("" + s);
                     const i = t.results.email_override || "";
                     a.push("" + i),
                       a.push(l?.m_strPlayerName ? l.m_strPlayerName : "");
-                    const c = ve(r.GetAccountID(), s);
+                    const c = fe(r.GetAccountID(), s);
                     a.push(c ? c.realname : ""),
                       a.push("" + t.results.attending?.length),
                       a.push(t.results.country_code),
                       a.push(
                         t.results.preferred_language
-                          ? (0, ze.Lg)(t.results.preferred_language)
+                          ? (0, Ve.Lg)(t.results.preferred_language)
                           : "",
                       );
-                    const o = (0, C.Yd)(s);
+                    const o = (0, A.Yd)(s);
                     a.push(o ? o.name : "");
-                    const u = B(n, s);
+                    const u = M(n, s);
                     u
-                      ? (a.push("" + Ze(u.strGrossUSD)),
+                      ? (a.push("" + nt(u.strGrossUSD)),
                         a.push("" + u.nBestAppID),
                         a.push("" + u.nBestAppLongTermSalesRank))
                       : (a.push(""), a.push(""), a.push("")),
@@ -1923,7 +2083,7 @@
               "tbody",
               null,
               a.map((e) =>
-                r.createElement(it, {
+                r.createElement(mt, {
                   key: "suggested" + e.steamid,
                   survey: e,
                 }),
@@ -1932,31 +2092,31 @@
           ),
         );
       }
-      function it(e) {
+      function mt(e) {
         const { survey: t } = e;
-        new Re.b2(t.steamid);
+        new ke.b2(t.steamid);
         return r.createElement(
           "tr",
           null,
           r.createElement(
             "td",
             null,
-            r.createElement(nt, {
+            r.createElement(st, {
               strsteamid: t.steamid,
               partnerID: t.results.partner_id,
               registration: t.results,
             }),
           ),
-          r.createElement(at, { nPartnerID: t.results.partner_id }),
+          r.createElement(it, { nPartnerID: t.results.partner_id }),
           r.createElement("td", null, t.results.suggestion.trim()),
         );
       }
-      var ct = n(98019);
-      const ot = r.createContext({
+      var dt = n(98019);
+      const Et = r.createContext({
         loadUserEmailAndLangs: async (e) =>
           await (function () {
-            mt ||
-              (mt = new (me())(
+            pt ||
+              (pt = new (me())(
                 async (e) => {
                   const t = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     n = {
@@ -1977,23 +2137,23 @@
                 },
                 { maxBatchSize: 100 },
               ));
-            return mt;
+            return pt;
           })().load(e),
       });
-      function ut(e, t) {
+      function gt(e, t) {
         return {
           queryKey: ["UserEmailAndLangs", t],
           queryFn: () => e.loadUserEmailAndLangs(t),
           enabled: !!t,
         };
       }
-      let mt;
-      var dt = n(73745);
-      function Et(e) {
-        const t = (0, k.a)(),
-          n = (0, ct.q)(),
+      let pt;
+      var ht = n(73745);
+      function _t(e) {
+        const t = (0, L.a)(),
+          n = (0, dt.q)(),
           a = (function (e) {
-            const t = (0, f.I)({
+            const t = (0, S.I)({
               queryKey: ["useMeetSteamSaleOperators"],
               queryFn: async () => {
                 const t = _.w.Init(v.Rl),
@@ -2031,7 +2191,7 @@
                     const e = [];
                     e.push(["User Name", "account id", "Email", "Event Count"]),
                       l.forEach((t) => {
-                        const n = (0, We.z0)(t.accountid),
+                        const n = (0, Je.z0)(t.accountid),
                           a =
                             ((r = t.accountid),
                             de.L.getQueryData(["UserEmailAndLangs", r]));
@@ -2069,26 +2229,26 @@
                   "tbody",
                   null,
                   l.map((e) =>
-                    r.createElement(gt, { key: e.accountid, organizer: e }),
+                    r.createElement(vt, { key: e.accountid, organizer: e }),
                   ),
                 ),
               ),
             )
           : r.createElement(x.t, {
-              string: (0, j.we)("#Loading"),
+              string: (0, z.we)("#Loading"),
               size: "medium",
             });
       }
-      function gt(e) {
+      function vt(e) {
         const { organizer: t } = e,
           n = (0, r.useMemo)(
             () => D.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
             [t],
           ),
-          a = (0, We.hW)(n),
+          a = (0, Je.hW)(n),
           l = (function (e) {
-            const t = r.useContext(ot);
-            return (0, f.I)(ut(t, e));
+            const t = r.useContext(Et);
+            return (0, S.I)(gt(t, e));
           })(t.accountid),
           s = a.data?.m_strPlayerName || "";
         return r.createElement(
@@ -2099,16 +2259,16 @@
           r.createElement(
             "td",
             null,
-            r.createElement(pt, {
+            r.createElement(ft, {
               name: s,
               rgClanEventGIDs: t.clan_event_gids,
             }),
           ),
         );
       }
-      function pt(e) {
+      function ft(e) {
         const { name: t, rgClanEventGIDs: n } = e,
-          [a, l, s] = (0, dt.uD)();
+          [a, l, s] = (0, ht.uD)();
         return r.createElement(
           r.Fragment,
           null,
@@ -2125,19 +2285,19 @@
             r.createElement(
               G.o0,
               { bAlertDialog: !0, closeModal: s, strTitle: `${t}'s Events` },
-              n.map((e) => r.createElement(ht, { gid: e, key: e })),
+              n.map((e) => r.createElement(St, { gid: e, key: e })),
             ),
           ),
         );
       }
-      function ht(e) {
+      function St(e) {
         const { gid: t } = e,
           n = (0, R.RR)(t);
         return n
           ? r.createElement(
               "a",
               {
-                href: `${q.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
+                href: `${Y.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
                 target: "_blank",
               },
               r.createElement("div", null, n.GetNameWithFallback(0)),
@@ -2145,26 +2305,26 @@
             )
           : r.createElement("div", null, "Loading ", t);
       }
-      function _t(e) {
+      function yt(e) {
         const t = (e) =>
             window.sessionStorage.setItem("meetsteamadmin", `?tab=${e.key}`),
           n = [
             {
               name: "Survey Results",
               key: "survey",
-              contents: r.createElement(u.tH, null, r.createElement(Je, null)),
+              contents: r.createElement(u.tH, null, r.createElement(et, null)),
               onClick: t,
             },
             {
               name: "Event Management",
               key: "event",
-              contents: r.createElement(u.tH, null, r.createElement(Oe, null)),
+              contents: r.createElement(u.tH, null, r.createElement(ze, null)),
               onClick: t,
             },
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: r.createElement(u.tH, null, r.createElement(Et, null)),
+              contents: r.createElement(u.tH, null, r.createElement(_t, null)),
               onClick: t,
             },
           ];
@@ -2183,13 +2343,13 @@
           r.createElement("br", null),
         );
       }
-      var vt = n(65946),
-        St = n(79645),
-        ft = n(1909),
-        yt = n(56330),
-        It = n(85761),
-        wt = n.n(It);
-      function Dt(e) {
+      var It = n(65946),
+        wt = n(79645),
+        Dt = n(1909),
+        bt = n(56330),
+        At = n(85761),
+        Ct = n.n(At);
+      function Nt(e) {
         const t = (function () {
             const [e] = (0, r.useState)(() =>
               (0, b.Tc)("registration_open", "application_config"),
@@ -2202,7 +2362,7 @@
             );
             return e;
           })(),
-          { data: a } = (0, We.js)(b.iA.accountid),
+          { data: a } = (0, Je.js)(b.iA.accountid),
           [l, s] = (0, r.useState)(!1),
           [i, c] = (0, r.useState)(!1),
           [o, u] = (0, r.useState)(!1),
@@ -2212,15 +2372,15 @@
             ? r.createElement(x.t, {
                 size: "medium",
                 position: "center",
-                string: (0, j.we)("#Loading"),
+                string: (0, z.we)("#Loading"),
               })
             : r.createElement(
                 "div",
-                { className: (0, $.A)(p().AdminPageCtn, wt().Ctn) },
+                { className: (0, $.A)(p().AdminPageCtn, Ct().Ctn) },
                 r.createElement(
                   "div",
                   { className: p().PageTitle },
-                  (0, j.we)("#MeetSteam_MainTitle"),
+                  (0, z.we)("#MeetSteam_MainTitle"),
                 ),
                 r.createElement("hr", null),
                 r.createElement(
@@ -2236,7 +2396,7 @@
                         "h1",
                         null,
                         " ",
-                        (0, j.PP)(
+                        (0, z.PP)(
                           "#MeetSteam_Intro",
                           a.m_strPlayerName,
                           r.createElement("br", null),
@@ -2245,13 +2405,13 @@
                       r.createElement(
                         "p",
                         { className: p().IntroText },
-                        (0, j.we)("#MeetSteam_Desc1"),
+                        (0, z.we)("#MeetSteam_Desc1"),
                       ),
                     ),
                     r.createElement(
                       "div",
                       { className: p().SectionCtn },
-                      r.createElement(Ct, {
+                      r.createElement(Mt, {
                         oRegistration: m,
                         fnSetRegistration: d,
                       }),
@@ -2259,7 +2419,7 @@
                     r.createElement(
                       "div",
                       { className: p().SectionCtn },
-                      r.createElement(bt, {
+                      r.createElement(Tt, {
                         oRegistration: m,
                         fnSetRegistration: d,
                       }),
@@ -2295,25 +2455,25 @@
                             c(!1);
                           },
                         },
-                        (0, j.we)("#Button_Submit"),
+                        (0, z.we)("#Button_Submit"),
                       ),
                       i &&
                         r.createElement(x.t, {
                           size: "medium",
                           position: "center",
-                          string: (0, j.we)("#Saving"),
+                          string: (0, z.we)("#Saving"),
                         }),
                       o &&
                         r.createElement(
                           "div",
                           null,
-                          (0, j.we)("#Button_Saved"),
+                          (0, z.we)("#Button_Saved"),
                         ),
                       l &&
                         r.createElement(
                           "div",
-                          { className: yt.ErrorStylesWithIcon },
-                          (0, j.we)("#Error_ErrorCommunicatingWithNetwork"),
+                          { className: bt.ErrorStylesWithIcon },
+                          (0, z.we)("#Error_ErrorCommunicatingWithNetwork"),
                         ),
                     ),
                   ),
@@ -2321,28 +2481,28 @@
               )
           : r.createElement(
               "div",
-              { className: wt().Ctn },
-              (0, j.we)("#MeetSteam_closed"),
+              { className: Ct().Ctn },
+              (0, z.we)("#MeetSteam_closed"),
             );
       }
-      function bt(e) {
+      function Tt(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          a = A();
+          a = C();
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement("h1", null, (0, j.we)("#MeetSteam_Events_Interest")),
+          r.createElement("h1", null, (0, z.we)("#MeetSteam_Events_Interest")),
           r.createElement(
             "p",
             null,
-            (0, j.PP)("#MeetSteam_Events_title", "2025"),
+            (0, z.PP)("#MeetSteam_Events_title", "2025"),
           ),
           r.createElement(
             "p",
             null,
-            r.createElement("span", { className: wt().Indicator }, "*"),
+            r.createElement("span", { className: Ct().Indicator }, "*"),
             " ",
-            (0, j.PP)("#MeetSteam_Events_desc"),
+            (0, z.PP)("#MeetSteam_Events_desc"),
           ),
           r.createElement(
             "table",
@@ -2372,7 +2532,7 @@
                     e.attending
                       ? r.createElement(
                           "span",
-                          { className: wt().Indicator },
+                          { className: Ct().Indicator },
                           "*",
                         )
                       : "",
@@ -2402,7 +2562,7 @@
                             (r.splice(r.indexOf(e.id), 1),
                             n({ ...t, attending: r }));
                       },
-                      tooltip: (0, j.we)("#MeetSteam_attend_ttip"),
+                      tooltip: (0, z.we)("#MeetSteam_attend_ttip"),
                     }),
                   ),
                 ),
@@ -2414,13 +2574,13 @@
             type: "text",
             value: t.suggestion || "",
             onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
-            label: (0, j.we)("#MeetSteam_others"),
+            label: (0, z.we)("#MeetSteam_others"),
           }),
         );
       }
-      function Ct(e) {
+      function Mt(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          a = (0, We.js)(b.iA.accountid),
+          a = (0, Je.js)(b.iA.accountid),
           l = (function (e) {
             const t = (function () {
                 const [e] = (0, r.useState)(
@@ -2435,13 +2595,13 @@
                 );
                 return e;
               })(),
-              a = _e(b.iA.accountid, e != n ? e : null);
+              a = ve(b.iA.accountid, e != n ? e : null);
             return e == n ? t : a?.email;
           })(t?.partner_id),
           [s, i] = (0, r.useState)(() =>
             Boolean((t.email_override && t.email_override != l) || !l),
           ),
-          [c, o, u] = (0, vt.q3)(() => [
+          [c, o, u] = (0, It.q3)(() => [
             !Boolean(t.have_you_met_steam),
             Boolean(t.english_not_good),
             t.preferred_language,
@@ -2450,25 +2610,25 @@
           ? r.createElement(
               "div",
               null,
-              r.createElement("h1", null, (0, j.we)("#MeetSteam_You")),
-              r.createElement("p", null, (0, j.we)("#MeetSteam_You_Desc")),
-              r.createElement(At, {
+              r.createElement("h1", null, (0, z.we)("#MeetSteam_You")),
+              r.createElement("p", null, (0, z.we)("#MeetSteam_You_Desc")),
+              r.createElement(Bt, {
                 nPartnerID: t.partner_id,
-                label: (0, j.we)("#MeetSteam_You_Company"),
+                label: (0, z.we)("#MeetSteam_You_Company"),
                 setPartnerID: (e) => n({ ...t, partner_id: e }),
               }),
               r.createElement(
                 "div",
-                { className: wt().EmailInfoRow },
+                { className: Ct().EmailInfoRow },
                 r.createElement(
                   "div",
-                  { className: wt().EmailField },
+                  { className: Ct().EmailField },
                   r.createElement(P.pd, {
                     type: "string",
-                    label: (0, j.we)("#MeetSteam_You_Email"),
+                    label: (0, z.we)("#MeetSteam_You_Email"),
                     disabled: !s,
                     value: t.email_override || l || "",
-                    placeholder: (0, j.we)("#MeetSteam_You_EmailMissing"),
+                    placeholder: (0, z.we)("#MeetSteam_You_EmailMissing"),
                     mustBeEmail: !0,
                     onChange: (e) =>
                       n({ ...t, email_override: e.currentTarget.value }),
@@ -2478,26 +2638,26 @@
                   r.createElement(P.Yh, {
                     checked: s,
                     onChange: i,
-                    label: (0, j.we)("#MeetSteam_You_Update"),
-                    tooltip: (0, j.we)("#MeetSteam_You_Update_ttip"),
+                    label: (0, z.we)("#MeetSteam_You_Update"),
+                    tooltip: (0, z.we)("#MeetSteam_You_Update_ttip"),
                   }),
               ),
-              r.createElement(P.JU, null, (0, j.we)("#MeetSteam_NeverMet")),
+              r.createElement(P.JU, null, (0, z.we)("#MeetSteam_NeverMet")),
               r.createElement(P.Yh, {
-                label: (0, j.we)("#MeetSteam_NeverMetNo"),
+                label: (0, z.we)("#MeetSteam_NeverMetNo"),
                 checked: c,
                 onChange: (e) => n({ ...t, have_you_met_steam: !e }),
               }),
               r.createElement(
                 P.JU,
                 null,
-                (0, j.we)("#MeetSteam_CapabableEnglish"),
+                (0, z.we)("#MeetSteam_CapabableEnglish"),
               ),
               r.createElement(
                 "div",
-                { className: wt().RadioButtonCtn },
+                { className: Ct().RadioButtonCtn },
                 r.createElement(P.Od, {
-                  className: wt().RadioButtons,
+                  className: Ct().RadioButtons,
                   checked: !o,
                   onChange: (e) =>
                     e &&
@@ -2506,19 +2666,19 @@
                       english_not_good: void 0,
                       preferred_language: void 0,
                     }),
-                  label: (0, j.we)("#MeetSteam_CapabableEnglish_Yes"),
+                  label: (0, z.we)("#MeetSteam_CapabableEnglish_Yes"),
                 }),
                 r.createElement(P.Od, {
-                  className: wt().RadioButtons,
+                  className: Ct().RadioButtons,
                   checked: o,
                   onChange: (e) =>
                     e &&
                     n({
                       ...t,
                       english_not_good: !0,
-                      preferred_language: (0, ze.sf)(b.TS.LANGUAGE),
+                      preferred_language: (0, Ve.sf)(b.TS.LANGUAGE),
                     }),
-                  label: (0, j.we)("#MeetSteam_CapabableEnglish_No"),
+                  label: (0, z.we)("#MeetSteam_CapabableEnglish_No"),
                 }),
               ),
               o &&
@@ -2529,12 +2689,12 @@
                   r.createElement(
                     P.JU,
                     null,
-                    (0, j.we)("#MeetSteam_LanguagePref"),
+                    (0, z.we)("#MeetSteam_LanguagePref"),
                   ),
-                  r.createElement(ft.Ng, {
+                  r.createElement(Dt.Ng, {
                     selectedLang: u,
                     bAllowUnsetOption: !1,
-                    strTooltip: (0, j.we)("#MeetSteam_LanguagePref_ttip"),
+                    strTooltip: (0, z.we)("#MeetSteam_LanguagePref_ttip"),
                     fnOnLanguageChanged: (e) =>
                       n({ ...t, preferred_language: e }),
                   }),
@@ -2543,17 +2703,17 @@
           : r.createElement(x.t, {
               size: "medium",
               position: "center",
-              string: (0, j.we)("#Loading"),
+              string: (0, z.we)("#Loading"),
             });
       }
-      function At(e) {
+      function Bt(e) {
         const { nPartnerID: t, setPartnerID: n, label: a } = e,
-          l = (0, St.c)(b.iA.accountid);
+          l = (0, wt.c)(b.iA.accountid);
         if (!l)
           return r.createElement(x.t, {
             size: "small",
             position: "center",
-            string: (0, j.we)("#Loading"),
+            string: (0, z.we)("#Loading"),
           });
         if (1 == l.length) return null;
         const s = [];
@@ -2572,15 +2732,15 @@
           })
         );
       }
-      var Nt = n(20587);
-      const Tt = {
+      var Rt = n(86921);
+      const kt = {
         YearlySurvery: (e = ":year") => `/${e}`,
         AdminDashboard: () => "/admin",
       };
-      function Bt(e) {
+      function Lt(e) {
         return (
           (0, r.useEffect)(() => {
-            Nt.O3.Init();
+            Rt.O3.Init();
           }, []),
           r.createElement(
             i.m,
@@ -2602,13 +2762,13 @@
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Tt.AdminDashboard(),
-                  component: _t,
+                  path: kt.AdminDashboard(),
+                  component: yt,
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Tt.YearlySurvery(":year(\\d+)"),
-                  component: Dt,
+                  path: kt.YearlySurvery(":year(\\d+)"),
+                  component: Nt,
                 }),
                 r.createElement(s.qh, { component: o.a }),
               ),

@@ -653,6 +653,7 @@
         m_strHeaderURL;
         m_strPackageHeaderURL;
         m_strPageBackgroundURL;
+        m_strRawPageBackgroundURL;
         m_strHeroCapsuleURL;
         m_strHeroCapsuleURL_2x;
         m_strLibraryCapsuleURL;
@@ -681,10 +682,10 @@
                 s,
                 e.package_header(),
               )),
-            e.page_background() &&
-              (this.m_strPageBackgroundURL = this.ConstructAssetURL(
+            e.raw_page_background() &&
+              (this.m_strRawPageBackgroundURL = this.ConstructAssetURL(
                 s,
-                e.page_background(),
+                e.raw_page_background(),
               )),
             e.hero_capsule() &&
               (this.m_strHeroCapsuleURL = this.ConstructAssetURL(
@@ -718,7 +719,9 @@
               ))),
             e.community_icon() &&
               ((this.m_strCommunityIcon = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`),
-              (this.m_strCommunityIcon_Full = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`));
+              (this.m_strCommunityIcon_Full = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}_full.jpg`)),
+            e.page_background_path() &&
+              (this.m_strPageBackgroundURL = `${c.TS.STORE_CDN_URL}images/storepagebackground/${e.page_background_path()}`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -734,6 +737,9 @@
         }
         GetPageBackgroundURL() {
           return this.m_strPageBackgroundURL;
+        }
+        GetRawPageBackgroundURL() {
+          return this.m_strRawPageBackgroundURL;
         }
         GetHeroCapsuleURL() {
           return this.m_strHeroCapsuleURL;
@@ -2067,7 +2073,9 @@
             (e[(e.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
             (e[(e.k_RejectVideo = 15)] = "k_RejectVideo"),
             (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-            (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
+            (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
+            (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
+            (e[(e.k_RejectAO = 19)] = "k_RejectAO");
         })(r || (r = {}));
     },
     63369: (e, t, s) => {

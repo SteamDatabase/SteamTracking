@@ -1945,7 +1945,7 @@
             r.e(4440),
             r.e(6700),
             r.e(6762),
-          ]).then(r.bind(r, 72113)),
+          ]).then(r.bind(r, 16853)),
         );
       function Be(e) {
         const t = (0, g.Tc)("publisherid", "application_config"),
@@ -2248,7 +2248,7 @@
       }
       var De = r(14947),
         ke = r(44844),
-        Oe = r(17204),
+        Oe = r(26317),
         Fe = r(44332);
       r(5977);
       async function Le(e) {
@@ -10932,6 +10932,16 @@
                     br: i.qM.readString,
                     bw: i.gp.writeString,
                   },
+                  page_background_path: {
+                    n: 15,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
+                  raw_page_background: {
+                    n: 16,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
+                  },
                 },
               }),
             w.sm_m
@@ -15396,13 +15406,15 @@
     },
     8527: (e, t, r) => {
       "use strict";
-      r.d(t, { YJ: () => i, TS: () => s, iA: () => a });
-      var n = r(30470);
-      function i(e) {
+      r.d(t, { YJ: () => s, TS: () => a, iA: () => o });
+      var n = r(30470),
+        i = r(24484);
+      function s(e) {
         return e;
       }
-      const s = window.Config ?? n.TS,
-        a = window.UserConfig ?? n.iA;
+      const a = window.Config ?? n.TS,
+        o = window.UserConfig ?? n.iA;
+      window.Config || i.bd;
       window.Config && Object.assign(n.TS, window.Config),
         window.UserConfig && Object.assign(n.iA, window.UserConfig);
     },
@@ -19171,54 +19183,69 @@
         return e.replace(/{STEAM_CLAN_IMAGE}/g, s());
       }
     },
-    17204: (e, t, r) => {
+    26317: (e, t, r) => {
       "use strict";
-      r.d(t, { aj: () => B });
+      r.d(t, { aj: () => E });
       var n = r(90626),
         i = r(56545),
         s = r(59134),
         a = r(84811),
         o = r(61859),
         l = r(42865);
-      const c =
+      async function c(e, t = "SHA-256") {
+        let r;
+        var n;
+        "string" == typeof e
+          ? ((n = e), (r = new TextEncoder().encode(n).buffer))
+          : (r = e);
+        const i = await window.crypto.subtle.digest(t, r);
+        return (
+          (s = i),
+          Array.prototype.map
+            .call(new Uint8Array(s), (e) => ("00" + e.toString(16)).slice(-2))
+            .join("")
+        );
+        var s;
+      }
+      const u =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
-      let u,
-        m = [],
-        d = (e, t, r) =>
-          m.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
-      const p = !0;
+      let m,
+        d = [],
+        p = (e, t, r) =>
+          d.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
+      const h = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...n) => {
           if (!t) {
-            const e = _();
-            d(new Error(b(r, ...n)), 2, e);
+            const e = f();
+            p(new Error(w(r, ...n)), 2, e);
           }
           e.apply(console, [t, r, ...n]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          const n = _();
-          d(new Error(b(e, ...r)), 1, n), t.apply(console, [e, ...r]);
+          const n = f();
+          p(new Error(w(e, ...r)), 1, n), t.apply(console, [e, ...r]);
         }),
           (console.clogerror = (e, r, ...n) => {
-            const i = _();
-            d(new Error(b(r, ...n)), e + 1, i), t.apply(console, [r, ...n]);
+            const i = f();
+            p(new Error(w(r, ...n)), e + 1, i), t.apply(console, [r, ...n]);
           }),
-          c("error", (e) => {
-            d(e.error, 0);
+          u("error", (e) => {
+            p(e.error, 0);
           }),
-          (u = window.setTimeout(() => {
-            (m = []), (d = () => {});
+          (m = window.setTimeout(() => {
+            (d = []), (p = () => {});
           }, 3e4));
       }
-      const h = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        g = [
+      const g = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        _ = [
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset (/market",
         ];
-      function _() {
+      function f() {
         try {
           const e = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
             t =
@@ -19241,7 +19268,7 @@
           }
         } catch (e) {}
       }
-      class f {
+      class b {
         m_strProduct;
         m_strVersion;
         m_transport = null;
@@ -19249,26 +19276,26 @@
         m_sendTimer = null;
         m_bReportingPaused = !1;
         m_pauseTimer = void 0;
-        m_fnGetReportingInterval = I;
+        m_fnGetReportingInterval = T;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(e = !0) {
           e
-            ? (m.forEach(
+            ? (d.forEach(
                 ({ error: e, cCallsitesToIgnore: t, strComponentStack: r }) =>
                   this.ReportError(e, {
                     cCallsitesToIgnore: t,
                     strComponentStack: r,
                   }),
               ),
-              (d = (e, t, r) =>
+              (p = (e, t, r) =>
                 this.ReportError(e, {
                   cCallsitesToIgnore: t,
                   strComponentStack: r,
                 })))
-            : (d = () => {}),
-            (m = []),
-            clearTimeout(u),
+            : (p = () => {}),
+            (d = []),
+            clearTimeout(m),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -19299,19 +19326,19 @@
               null
             );
           try {
-            const r = { ...h, ...t };
+            const r = { ...g, ...t };
             if (!this.m_bEnabled) return null;
             0;
             const n = await (function (e, t) {
               try {
-                return e.stack && e.stack.match(w)
+                return e.stack && e.stack.match(C)
                   ? (async function (e, t) {
                       const {
                           cCallsitesToIgnore: r,
                           bIncludeMessageInIdentifier: n,
                         } = t,
                         i = e.stack?.split("\n") ?? [];
-                      let s = y(i.filter((e) => !!e.match(w))[r]);
+                      let s = B(i.filter((e) => !!e.match(C))[r]);
                       n && (s = `${s} ${e.message}`);
                       const a = i
                         .map((e) => {
@@ -19328,18 +19355,18 @@
                         .filter((e) => !!e);
                       return {
                         identifier: s,
-                        identifierHash: await R(s),
+                        identifierHash: await I(s),
                         message: a,
                       };
                     })(e, t)
-                  : e.stack && e.stack.match(C)
+                  : e.stack && e.stack.match(S)
                     ? (async function (e, t) {
                         const {
                             cCallsitesToIgnore: r,
                             bIncludeMessageInIdentifier: n,
                           } = t,
                           i = e.stack?.split("\n") ?? [];
-                        let s = y(i.filter((e) => !!e.match(C))[r]);
+                        let s = B(i.filter((e) => !!e.match(S))[r]);
                         n && (s = `${s} ${e.message}`);
                         const a = i
                           .map((e) => {
@@ -19356,11 +19383,11 @@
                           .filter((e) => !!e);
                         return {
                           identifier: s,
-                          identifierHash: await R(s),
+                          identifierHash: await I(s),
                           message: [e.message, ...a],
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(S)
+                    : e.stack && e.stack.match(M)
                       ? (async function (e, t) {
                           const {
                               bIncludeMessageInIdentifier: r,
@@ -19388,16 +19415,16 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: await R(o),
+                            identifierHash: await I(o),
                             message: [e.message, ...l],
                           };
                         })(e, t)
-                      : (v ||
+                      : (y ||
                           (console.warn(
                             "Error reporter does not know how to parse generated stack:",
                           ),
                           console.warn(e.stack),
-                          (v = !0)),
+                          (y = !0)),
                         null);
               } catch (e) {
                 return (
@@ -19434,7 +19461,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let r = JSON.stringify(t);
-            for (let t of g) {
+            for (let t of _) {
               const n = new RegExp(t);
               if (r.match(n))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -19498,10 +19525,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return p;
+          return h;
         }
       }
-      function b(e, ...t) {
+      function w(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -19513,12 +19540,12 @@
           })
           .join(", ");
       }
-      const w = /^\s*at .*(\S+:\d+|\(native\))/m,
-        C = /(^|@)\S+:\d+/,
-        S = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let M,
-        v = !1;
-      function y(e) {
+      const C = /^\s*at .*(\S+:\d+|\(native\))/m,
+        S = /(^|@)\S+:\d+/,
+        M = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let v,
+        y = !1;
+      function B(e) {
         return (function (e) {
           const t = "https://",
             r = e.indexOf(t);
@@ -19534,35 +19561,22 @@
           })(e),
         );
       }
-      const B = () => (M || E(new f()), M),
-        E = (e) => {
-          (M = e),
-            a.tH.InstallErrorReportingStore(M),
-            i.lI.InstallErrorReportingStore(M),
-            o.A0.InstallErrorReportingStore(M),
-            l.U.InstallErrorReportingStore(M);
+      const E = () => (v || R(new b()), v),
+        R = (e) => {
+          (v = e),
+            a.tH.InstallErrorReportingStore(v),
+            i.lI.InstallErrorReportingStore(v),
+            o.A0.InstallErrorReportingStore(v),
+            l.U.InstallErrorReportingStore(v);
         };
-      async function R(e) {
+      async function I(e) {
         try {
-          const r = await window.crypto.subtle.digest(
-            "SHA-256",
-            (function (e) {
-              const t = new ArrayBuffer(2 * e.length),
-                r = new Uint16Array(t);
-              for (let t = 0, n = e.length; t < n; t++) r[t] = e.charCodeAt(t);
-              return t;
-            })(e),
-          );
-          return ((t = r),
-          Array.prototype.map
-            .call(new Uint8Array(t), (e) => ("00" + e.toString(16)).slice(-2))
-            .join("")).slice(0, 16);
+          return (await c(e)).slice(0, 16);
         } catch (e) {
           return "";
         }
-        var t;
       }
-      function I() {
+      function T() {
         return 1e4;
       }
     },
@@ -34063,11 +34077,12 @@
     24484: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Bu: () => g,
-        Fd: () => d,
+        Bu: () => b,
+        Fd: () => g,
         KC: () => l,
-        Tc: () => m,
+        Tc: () => h,
         XJ: () => u,
+        bd: () => p,
       });
       var n = r(19719),
         i = r(2627),
@@ -34089,27 +34104,41 @@
       }
       function u(e = a) {
         const t = {},
-          r = m("config", e);
+          r = h("config", e);
         r && (delete r.SESSIONID, Object.assign(s.TS, r), (t.config = !0));
-        const n = m("userinfo", e);
+        const n = h("userinfo", e);
         n &&
           (Object.assign(s.iA, n),
           (t.userConfig = !0),
-          s.iA.is_support && g() && (s.iA.is_support = !1));
-        const i = m("broadcast", e);
+          s.iA.is_support && b() && (s.iA.is_support = !1));
+        const i = h("broadcast", e);
         i && (Object.assign(s.GP, i), (t.broadcastConfig = !0));
-        const o = m("community", e);
+        const o = h("community", e);
         o && (Object.assign(s.UF, o), (t.communityConfig = !0));
-        const l = m("event", e);
-        return l && (Object.assign(s.P9, l), (t.eventConfig = !0)), t;
+        const l = h("event", e);
+        return (
+          l && (Object.assign(s.P9, l), (t.eventConfig = !0)),
+          (d = !0),
+          m.forEach((e) => e()),
+          t
+        );
       }
-      function m(e, t = a) {
-        return p(e, t, !0);
+      let m = new Set(),
+        d = !1;
+      function p() {
+        return d
+          ? Promise.resolve()
+          : new Promise((e) => {
+              m.add(e);
+            });
       }
-      function d(e, t = a) {
-        return p(e, t, !1);
+      function h(e, t = a) {
+        return _(e, t, !0);
       }
-      function p(e, t = a, r) {
+      function g(e, t = a) {
+        return _(e, t, !1);
+      }
+      function _(e, t = a, r) {
         let n;
         if (
           ((n =
@@ -34137,11 +34166,11 @@
           }
         else r && console.error("Missing config element #", t);
       }
-      const h = "presentation_mode";
-      function g() {
+      const f = "presentation_mode";
+      function b() {
         let e = null;
         return (
-          (0, i.kI)() && (e = (0, i.VY)(h)),
+          (0, i.kI)() && (e = (0, i.VY)(f)),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }

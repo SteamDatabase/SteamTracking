@@ -3019,6 +3019,10 @@ function IsValidEmailAddress( email )
         if ( keys_last ) {
           for (; i <= keys_last; i++) {
             key = keys[i] === '' ? cur.length : keys[i];
+
+						if ( typeof cur != 'object' )
+				break;
+
             cur = cur[key] = i < keys_last
               ? cur[key] || (keys[i+1] && isNaN(keys[i+1]) ? {} : [])
               : val;

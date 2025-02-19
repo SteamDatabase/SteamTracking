@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9530945";
+var CLSTAMP = "9547296";
 (() => {
   "use strict";
   function e(e) {
@@ -150,30 +150,37 @@ var CLSTAMP = "9530945";
   }
   function u(_ = r) {
     const a = {},
-      u = l("config", _);
+      u = S("config", _);
     u && (delete u.SESSIONID, Object.assign(n, u), (a.config = !0));
-    const E = l("userinfo", _);
-    E &&
-      (Object.assign(i, E),
+    const m = S("userinfo", _);
+    m &&
+      (Object.assign(i, m),
       (a.userConfig = !0),
       i.is_support &&
         (function () {
           let n = null;
-          t() && (n = e(S));
+          t() && (n = e(d));
           return Boolean(n && 1 === Number.parseInt(n));
         })() &&
         (i.is_support = !1));
-    const m = l("broadcast", _);
-    m && (Object.assign(s, m), (a.broadcastConfig = !0));
-    const d = l("community", _);
-    d && (Object.assign(o, d), (a.communityConfig = !0));
-    const C = l("event", _);
-    return C && (Object.assign(c, C), (a.eventConfig = !0)), a;
+    const C = S("broadcast", _);
+    C && (Object.assign(s, C), (a.broadcastConfig = !0));
+    const h = S("community", _);
+    h && (Object.assign(o, h), (a.communityConfig = !0));
+    const A = S("event", _);
+    return (
+      A && (Object.assign(c, A), (a.eventConfig = !0)),
+      (E = !0),
+      l.forEach((e) => e()),
+      a
+    );
   }
-  function l(e, t = r) {
-    return E(e, t, !0);
+  let l = new Set(),
+    E = !1;
+  function S(e, t = r) {
+    return m(e, t, !0);
   }
-  function E(e, t = r, n) {
+  function m(e, t = r, n) {
     let s;
     if (
       ((s =
@@ -205,9 +212,9 @@ var CLSTAMP = "9530945";
       }
     else n && console.error("Missing config element #", t);
   }
-  const S = "presentation_mode";
-  let m = { success: !0, result: 1 };
-  class d {
+  const d = "presentation_mode";
+  let C = { success: !0, result: 1 };
+  class h {
     m_mapWaitingCallbacks = new Map();
     m_socket;
     m_iCallSeq = 1;
@@ -319,8 +326,8 @@ var CLSTAMP = "9530945";
       );
     }
   }
-  let C = new (class {
-    m_connection = new d();
+  let A = new (class {
+    m_connection = new h();
     FailureResult(e = 2) {
       let t = { success: !1, result: e };
       return (
@@ -336,7 +343,7 @@ var CLSTAMP = "9530945";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => m,
+        () => C,
         () => this.FailureResult(),
       );
     }
@@ -396,14 +403,14 @@ var CLSTAMP = "9530945";
             : this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? m : this.FailureResult(e.success),
+                  1 === e.success ? C : this.FailureResult(e.success),
                 ),
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = C),
+  (window.ClientConnectionAPI = A),
     document.addEventListener("DOMContentLoaded", function () {
-      u(), (window.ClientConnectionAPI = C);
+      u(), (window.ClientConnectionAPI = A);
     });
 })();

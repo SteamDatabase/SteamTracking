@@ -144,6 +144,7 @@ ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/${statecode}
 ${COMMUNITY_BASE_URL}/app/${m_unGamePlayedAppID}
+${COMMUNITY_BASE_URL}/gid/${_ ? _ : _}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}
 ${COMMUNITY_BASE_URL}/gid/${}${}
 ${COMMUNITY_BASE_URL}/gid/${}/ajaxcreateupdatedeletepartnerevents/
@@ -973,7 +974,7 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
-${PARTNER_BASE_URL}/mediaconvert/ajaxconvertvideo
+${PARTNER_BASE_URL}/mediaconvert/ajaxconvertmedia
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
@@ -1665,6 +1666,7 @@ ${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
+${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
@@ -1677,7 +1679,6 @@ ${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}${}/
-${STORE_ICON_BASE_URL}${}/${}
 ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ICON_BASE_URL}/${appid}/${}
 ${STORE_ITEM_BASE_URL}${filename}
@@ -2728,6 +2729,7 @@ https://partner.steamgames.com/doc/store/pricing
 https://partner.steamgames.com/doc/store/promo/midweek
 https://partner.steamgames.com/doc/store/promo/weekend
 https://partner.steamgames.com/docadmin/${method}/${}
+https://partner.steamgames.com/docadmin/fetchlocalization/${}
 https://partner.steamgames.com/externalapptesting/${bPass ? 'forcepassapp/' : 'forcefailapp/'}
 https://partner.steamgames.com/externalapptesting/ajaxclosetestingrequest/${appid}
 https://partner.steamgames.com/externalapptesting/forcepassapp
