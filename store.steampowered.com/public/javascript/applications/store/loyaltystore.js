@@ -9203,11 +9203,11 @@
     48474: (e, t, r) => {
       "use strict";
       r.d(t, {
-        dR: () => B,
-        ZI: () => N,
-        Qs: () => C,
-        jy: () => S,
-        Ch: () => T,
+        dR: () => D,
+        ZI: () => b,
+        Qs: () => I,
+        jy: () => v,
+        Ch: () => P,
       });
       var i = r(90626),
         n = r(75844),
@@ -9254,8 +9254,9 @@
           r.p +
           "images/applications/store/halloween_2020_pointspage_bg.png?v=valveisgoodatcaching";
       var w = r(30470),
-        y = r(55263);
-      const C = ({ className: e, ...t }) => {
+        y = r(55263),
+        C = r(22580);
+      const I = ({ className: e, ...t }) => {
           const r = i.useRef(void 0);
           return i.createElement(
             i.Fragment,
@@ -9268,13 +9269,13 @@
             i.createElement(m, { scrollElement: r.current }),
           );
         },
-        I = ({ children: e }) =>
+        M = ({ children: e }) =>
           i.createElement(
-            C,
+            I,
             { className: (0, d.A)(a.ParallaxRoot, s.ParallaxRoot) },
             e,
           ),
-        M = ({ children: e, src: t, className: r }) =>
+        E = ({ children: e, src: t, className: r }) =>
           i.createElement(
             i.Fragment,
             null,
@@ -9288,7 +9289,7 @@
               style: { backgroundImage: `url(${t})` },
             }),
           );
-      function E(e) {
+      function S(e) {
         const t = (0, o.tv)(["xxsmall", "small", "xxlarge"]),
           r = (0, _.h)("(max-width: 965px)") || w.TS.IN_GAMEPADUI,
           n = (0, o.WH)(t);
@@ -9312,50 +9313,56 @@
           ),
         );
       }
-      const S = ({ background: e, children: t }) => {
+      const v = ({ background: e, children: t }) => {
           let r = g;
           return (
             e && (r = e),
             i.createElement(
-              I,
+              M,
               null,
-              i.createElement(M, { src: r }, i.createElement(E, null, t)),
+              i.createElement(E, { src: r }, i.createElement(S, null, t)),
             )
           );
         },
-        v = ({ children: e }) =>
-          i.createElement(M, { src: h, className: a.HomeBackground }, e),
         N = ({ children: e }) =>
+          i.createElement(E, { src: h, className: a.HomeBackground }, e),
+        b = ({ children: e }) =>
           i.createElement(
-            I,
-            null,
-            i.createElement(v, null, i.createElement(E, null, e)),
-          ),
-        b = (0, n.PA)(({ children: e, appid: t }) => {
-          const [r] = (0, y.t7)(t, { include_assets: !0 });
-          if (!r) return null;
-          const n = r.GetAssets().GetRawPageBackgroundURL()
-            ? r.GetAssets().GetRawPageBackgroundURL()
-            : r.GetAssets().GetPageBackgroundURL();
-          return i.createElement(
             M,
-            { src: n, className: a.ParallaxAppBackground },
-            e,
+            null,
+            i.createElement(N, null, i.createElement(S, null, e)),
+          ),
+        A = (0, n.PA)(({ children: e, appid: t }) => {
+          const [r] = (0, y.t7)(t, { include_assets: !0 });
+          let n = g;
+          const s = C.DZ.Get().GetAppHeroImage(t);
+          return (
+            s.is_custom
+              ? (n = s.img_url)
+              : r &&
+                (n =
+                  r.GetAssets().GetRawPageBackgroundURL() ??
+                  r.GetAssets().GetPageBackgroundURL()),
+            i.createElement(
+              E,
+              { src: n, className: a.ParallaxAppBackground },
+              e,
+            )
           );
         }),
-        A = { 1461450: f };
-      function B(e) {
-        return e.appid in A
-          ? i.createElement(D, { ...e })
-          : i.createElement(R, { ...e });
-      }
+        B = { 1461450: f };
       function D(e) {
+        return e.appid in B
+          ? i.createElement(R, { ...e })
+          : i.createElement(T, { ...e });
+      }
+      function R(e) {
         const { children: t, appid: r } = e,
           n = (function (e) {
-            return A[e];
+            return B[e];
           })(r);
         return i.createElement(
-          C,
+          I,
           null,
           i.createElement(
             "div",
@@ -9363,19 +9370,19 @@
               style: { backgroundImage: `url("${n}")` },
               className: a.CustomAppBackground,
             },
-            i.createElement(E, null, t),
+            i.createElement(S, null, t),
           ),
         );
       }
-      function R(e) {
+      function T(e) {
         const { children: t, appid: r } = e;
         return i.createElement(
-          I,
+          M,
           null,
-          i.createElement(b, { appid: r }, i.createElement(E, null, t)),
+          i.createElement(A, { appid: r }, i.createElement(S, null, t)),
         );
       }
-      const T = ({ title: e, subtitle: t, headerImage: r }) =>
+      const P = ({ title: e, subtitle: t, headerImage: r }) =>
         i.createElement(
           i.Fragment,
           null,
