@@ -17049,6 +17049,7 @@ ResetConnectionPriority
 ResetControllerEnableCache
 ResetEmbeddedClient
 ResetFileRequestState
+ResetGamepadIndexes
 ResetInstallScript
 ResetPlaylistEntries
 ResetQueueEntries
@@ -22826,7 +22827,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggenFF_
 ghjkl
 gidlist
 gidparentcomment
