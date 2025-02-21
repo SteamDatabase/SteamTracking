@@ -7184,10 +7184,10 @@
           return this.m_optin_stats;
         }
         GetDefinition(e) {
-          return this.m_optInDef.get(e);
+          return this.m_optInDef.get(e.toLowerCase());
         }
         SetOptInDefinition(e) {
-          this.m_optInDef.set(e.pageid, e);
+          this.m_optInDef.set(e.pageid.toLowerCase(), e);
           let t = this.m_activeOptInDef.findIndex((t) => t.pageid == e.pageid);
           -1 != t &&
             (this.m_activeOptInDef.splice(t, 1),
@@ -7294,7 +7294,7 @@
           );
         }
         InternalAddOptInDef(e) {
-          this.m_optInDef.set(e.pageid, e);
+          this.m_optInDef.set(e.pageid.toLowerCase(), e);
           const t = Math.floor(Date.now() / 1e3);
           e.event_end_date < t
             ? this.m_archivedOptInDef.push(e)
@@ -28126,7 +28126,13 @@
               l.createElement("br", null),
               l.createElement(
                 "a",
-                { href: f.TS.PARTNER_BASE_URL + "optin/sale/" + n + "/220" },
+                {
+                  href:
+                    f.TS.PARTNER_BASE_URL +
+                    "optin/sale/" +
+                    t.GetName() +
+                    "/220",
+                },
                 f.TS.PARTNER_BASE_URL,
                 "optin/sale/",
                 t.GetName(),

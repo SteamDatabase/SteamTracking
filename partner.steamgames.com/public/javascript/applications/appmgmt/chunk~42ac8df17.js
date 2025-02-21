@@ -15212,7 +15212,8 @@
                 31,
                 null,
               )),
-              void 0 !== r.jsondata.sale_num_headers)
+              void 0 !== r.jsondata.sale_num_headers &&
+                r.jsondata.localized_per_day_sales_header)
             )
               for (let e = 0; e < r.jsondata.sale_num_headers; ++e)
                 r.jsondata.localized_per_day_sales_header[e] = (0, d.$Y)(
