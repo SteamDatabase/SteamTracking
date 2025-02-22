@@ -138,7 +138,6 @@ St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
 SteamRealPath
-^slM
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction

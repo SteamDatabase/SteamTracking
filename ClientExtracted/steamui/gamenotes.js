@@ -15,7 +15,7 @@
         s = n(67808),
         u = n(73259),
         c = n(45264),
-        i = n(40756),
+        i = n(21618),
         m = n(64608),
         d = n(10606),
         E = n(46108),
@@ -31,7 +31,7 @@
               );
           }, [t, n]),
           void 0 === t.noteid
-            ? p.createElement(g, { popup: t, refPopup: o })
+            ? p.createElement(N, { popup: t, refPopup: o })
             : p.createElement(P, { popup: t, refPopup: o })
         );
       }
@@ -57,7 +57,7 @@
             p.createElement(
               o.A,
               { mode: "single", closePopup: () => t.close() },
-              p.createElement(N, {
+              p.createElement(_, {
                 noteParent: t.noteParent,
                 noteid: t.noteid,
               }),
@@ -65,12 +65,12 @@
           ),
         );
       }
-      function N(e) {
+      function _(e) {
         const { noteParent: t, noteid: n } = e,
           { data: a } = (0, c.P6)(t, n);
         return a ? p.createElement(i.U, { note: a }) : null;
       }
-      function g(e) {
+      function N(e) {
         const { popup: t, refPopup: n } = e,
           a = t.noteParent,
           s = p.useMemo(() => [(0, u.o)(a)], [a]);
@@ -100,7 +100,7 @@
     },
     1528: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => b });
+      n.r(t), n.d(t, { default: () => S });
       var a = n(63696),
         o = n(49519),
         r = n(73259),
@@ -116,12 +116,12 @@
         f = n(43691),
         h = n(44846);
       let P;
-      const N = 864e5;
-      function g(e) {
+      const _ = 864e5;
+      function N(e) {
         return `appinfo_${e}_${f.TS.LANGUAGE}`;
       }
-      function _(e) {
-        return Boolean(e && Date.now() - e.timeCached < N);
+      function g(e) {
+        return Boolean(e && Date.now() - e.timeCached < _);
       }
       function w(e) {
         const t = (0, E.KV)(),
@@ -135,8 +135,8 @@
                   (P = new (c())(
                     async (n) => {
                       const a = new Map();
-                      (await Promise.all(n.map((e) => t.GetObject(g(e)))))
-                        .filter(_)
+                      (await Promise.all(n.map((e) => t.GetObject(N(e)))))
+                        .filter(g)
                         .forEach(({ value: e }) => a.set(e.appid, e));
                       const o = n.slice().filter((e) => !a.has(e));
                       if (o.length) {
@@ -148,7 +148,7 @@
                         r.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            t.StoreObject(g(e.appid), {
+                            t.StoreObject(N(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
@@ -162,14 +162,18 @@
                 P
               );
             })(t, n).load(e),
-          staleTime: N,
+          staleTime: _,
           enabled: !!e,
         }).data;
       }
       var y = n(26853),
         G = n(46108);
       function O() {
-        const { data: e, isLoading: t } = (0, s.Yh)();
+        const { data: e, isLoading: t } = (0, s.Yh)(),
+          n = a.useMemo(
+            () => e?.slice().sort((e, t) => t.last_modified - e.last_modified),
+            [e],
+          );
         return t
           ? a.createElement(y.t, { msDelayAppear: 300 })
           : a.createElement(
@@ -183,20 +187,37 @@
               a.createElement(
                 "ul",
                 null,
-                e.map((e) => a.createElement(A, { key: e.appid, game: e })),
+                n.map((e) =>
+                  a.createElement(b, {
+                    key: e.appid || e.shortcut_name,
+                    game: e,
+                  }),
+                ),
               ),
             );
       }
-      function A(e) {
-        const { game: t } = e,
-          n = w(t.appid);
+      function b(e) {
+        const { game: t } = e;
         return a.createElement(
           "li",
           null,
-          a.createElement(l.N_, { to: r.O.AppNotes(t.appid) }, n?.name),
+          a.createElement(
+            l.N_,
+            {
+              to: (0, r.o)(
+                t.appid ? { appid: t.appid } : { shortcut: t.shortcut_name },
+              ),
+            },
+            t.appid ? a.createElement(A, { appid: t.appid }) : t.shortcut_name,
+          ),
         );
       }
-      function b(e) {
+      function A(e) {
+        const { appid: t } = e,
+          n = w(t);
+        return n?.name;
+      }
+      function S(e) {
         return a.createElement(
           o.dO,
           null,
