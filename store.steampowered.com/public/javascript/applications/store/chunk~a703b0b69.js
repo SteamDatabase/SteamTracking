@@ -11149,16 +11149,9 @@
       var ha = a(70535),
         Sa = a.n(ha);
       const fa = new ot.wd("TrailerAppVideo"),
-        va = {
-          include_assets: !0,
-          include_trailers: !0,
-          include_basic_info: !0,
-          include_tag_count: 20,
-          include_release: !0,
-          include_platforms: !0,
-        },
-        ya = "trailercarousel",
-        Ea = "trailercarousel_seen_intro_video";
+        va = "trailercarousel",
+        ya = "trailercarousel_seen_intro_video",
+        Ea = 3;
       function ba(e) {
         const {
             event: t,
@@ -11178,7 +11171,7 @@
             Number(r.trailer_carousel_intro_video_appid)
               ? Number(r.trailer_carousel_intro_video_appid)
               : void 0;
-        (0, o.t7)(E, va);
+        (0, o.t7)(E, st.Gy);
         const b = n.useMemo(
             () => (E > 0 ? [{ type: "game", id: E }] : []),
             [E],
@@ -11234,7 +11227,7 @@
                       })(e, h),
                     { rgCapsules: d } = await ga(
                       e,
-                      await Ot(e, t, p),
+                      Ot(e, t, p),
                       p,
                       a,
                       r,
@@ -11252,8 +11245,17 @@
                     g.length != d.length
                       ? `Loaded ${g.length} items, ${d.length - g.length} items filtered out`
                       : `Loaded ${g.length} items`,
-                  ),
-                    _((m ?? []).concat(g));
+                  );
+                  const S = d.slice(c, c + Ea).map((e) => e.id);
+                  if (
+                    1 == (await w.A.Get().QueueMultipleAppRequests(S, st.Gy))
+                  ) {
+                    const e = S.flatMap((e) =>
+                      w.A.Get().GetApp(e).GetDemoStandaloneStorePageAppIDs(),
+                    );
+                    await w.A.Get().QueueMultipleAppRequests(e, st.Gy);
+                  }
+                  _((m ?? []).concat(g));
                 };
                 n();
               }, [
@@ -11274,7 +11276,8 @@
               ]);
             const f = it.OQ(c, 0, d.length - 1),
               y = d[f]?.id;
-            fa.Debug("Displaying appid", y),
+            if (
+              (fa.Debug("Displaying appid", y),
               n.useEffect(() => {
                 y &&
                   !m.find((e) => e.id == y) &&
@@ -11284,20 +11287,17 @@
                     t.forEach((e, t) => a.push({ appid: t, count: e })),
                       window.localStorage.setItem(e, JSON.stringify(a));
                   })(g, S));
-              }, [S, y, m, g]);
-            const [E, b] = n.useState();
-            if (fa.IsDebugEnabled()) {
+              }, [S, y, m, g]),
+              fa.IsDebugEnabled())
+            ) {
               const e = Array.from(
                 { length: Math.min(d.length, 10) },
                 (e, t) => {
                   const a = f - 2 + t;
                   if (a < 0 || a >= d.length) return;
-                  const n = d[a]?.id;
-                  let r = (m.find((e) => e.id == n) ? "*" : "") + String(n);
-                  const s = E?.findIndex((e) => e == n);
-                  return (
-                    (r = -1 != s ? `${r}(w=${s})` : r), n == y ? `[${r}]` : r
-                  );
+                  const n = d[a]?.id,
+                    r = (m.find((e) => e.id == n) ? "*" : "") + String(n);
+                  return n == y ? `[${r}]` : r;
                 },
               )
                 .filter((e) => !!e)
@@ -11314,7 +11314,7 @@
               if (P) {
                 const e = Da();
                 e.includes(k) ||
-                  (e.push(k), localStorage.setItem(Ea, JSON.stringify(e)));
+                  (e.push(k), localStorage.setItem(ya, JSON.stringify(e)));
               }
               D(((e % B) + B) % B), G(!1);
             },
@@ -11373,33 +11373,33 @@
           [C, w] = n.useState(!1),
           [I, A] = n.useState(!!l),
           T = n.useRef(),
-          [G] = (0, o.t7)(t, va),
-          k =
+          [G, k] = (0, o.t7)(t, st.Gy),
+          B =
             r && G?.HasDemoStandaloneStorePage()
               ? G.GetDemoStandaloneStorePageAppIDs()[0]
               : 0,
-          [B] = (0, o.t7)(k, va),
-          P = (0, rt.R7)(),
-          N = P?.ownerWindow || window,
-          L = Ia(G, r),
-          [F, R] = n.useState(0),
-          [M, O] = n.useState(),
-          x = n.useRef(),
-          H = (0, z.ru)(ya),
-          U = (0, at.b)();
+          [P, N] = (0, o.t7)(B, st.Gy),
+          L = (0, rt.R7)(),
+          F = L?.ownerWindow || window,
+          R = Ia(G, r),
+          [M, O] = n.useState(0),
+          [x, H] = n.useState(),
+          U = n.useRef(),
+          V = (0, z.ru)(va),
+          q = (0, at.b)();
         n.useEffect(() => {
-          t && U.AddImpression(t, H);
-        }, [t, U, H]);
-        const { bIsWishlisted: V, fnUpdateWishlist: q } = (0, st.u4)(t);
+          t && q.AddImpression(t, V);
+        }, [t, q, V]);
+        const { bIsWishlisted: j, fnUpdateWishlist: Q } = (0, st.u4)(t);
         n.useEffect(() => {
-          void 0 !== x.current &&
-            x.current !== t &&
-            ((x.current = void 0), R(0));
+          void 0 !== U.current &&
+            U.current !== t &&
+            ((U.current = void 0), O(0));
         }, [t]);
         const {
-            bTabHidden: j,
-            bOffscreen: Q,
-            refIntersection: $,
+            bTabHidden: $,
+            bOffscreen: Y,
+            refIntersection: X,
           } = (function () {
             const [e, t] = n.useState(!1),
               [a, r] = n.useState(!1);
@@ -11415,63 +11415,63 @@
               i = (0, lt.BL)(s, o);
             return { bTabHidden: e, bOffscreen: a, refIntersection: i };
           })(),
-          Y = n.useCallback(async () => {
-            if (j || Q) return void w(!0);
-            (x.current = t), R(1);
+          J = n.useCallback(async () => {
+            if ($ || Y) return void w(!0);
+            (U.current = t), O(1);
             const e = new Date().getTime(),
               a = window.setInterval(() => {
                 const t = 1 - (new Date().getTime() - e) / 500;
-                O(Math.max(t, 0));
+                H(Math.max(t, 0));
               }, 30);
             await new Promise((e) => setTimeout(e, 500)),
               window.clearTimeout(a),
-              O(void 0),
-              x.current == t &&
-                ((x.current = void 0),
+              H(void 0),
+              U.current == t &&
+                ((U.current = void 0),
                 s(!0),
-                R(2),
+                O(2),
                 await new Promise((e) => setTimeout(e, 500))),
-              R(0);
-          }, [t, j, Q, s]);
+              O(0);
+          }, [t, $, Y, s]);
         n.useEffect(() => {
-          j || Q || !C || (w(!1), Y());
-        }, [C, j, Q, Y]);
-        const X = !i;
-        let J;
+          $ || Y || !C || (w(!1), J());
+        }, [C, $, Y, J]);
+        const Z = !i;
+        let ee;
         E
-          ? (J = 4)
+          ? (ee = 4)
           : S && !(0, mt.$W)()
-            ? (J = 3)
-            : 0 != F
-              ? (J = 0)
-              : j
-                ? (J = 1)
-                : Q && (J = 2),
+            ? (ee = 3)
+            : 0 != M
+              ? (ee = 0)
+              : $
+                ? (ee = 1)
+                : Y && (ee = 2),
           n.useEffect(() => {
-            1 != J && 2 != J && A(!0);
-          }, [J]);
-        const Z = B?.GetAllTrailers().BHasTrailers() ? B.GetAppID() : t,
-          ee = u ? m > 1 : c > 0,
-          te = u ? m > 1 : c < m - 1;
-        return G
+            1 != ee && 2 != ee && A(!0);
+          }, [ee]);
+        const te = P?.GetAllTrailers().BHasTrailers() ? P.GetAppID() : t,
+          ae = u ? m > 1 : c > 0,
+          ne = u ? m > 1 : c < m - 1;
+        return G && 1 != k && 1 != N
           ? n.createElement(
               h.A,
-              { feature: ya },
+              { feature: va },
               n.createElement(
                 K.Z,
                 {
                   focusable: !0,
                   className: (0, f.A)(),
-                  ref: $,
-                  onOptionsActionDescription: V
+                  ref: X,
+                  onOptionsActionDescription: j
                     ? (0, D.we)("#SaleTrailerCarousel_RemoveFromWishlist")
                     : (0, D.we)("#SaleTrailerCarousel_AddToWishlist"),
-                  onOptionsButton: q,
+                  onOptionsButton: Q,
                   onOKActionDescription: (0, D.we)(
                     "#SaleTrailerCarousel_ViewStorePage",
                   ),
                   onOKButton: () => {
-                    N.location.href = L;
+                    F.location.href = R;
                   },
                   onSecondaryActionDescription: (0, D.we)(
                     "#SaleTrailerCarousel_PlayPause",
@@ -11488,7 +11488,7 @@
                   "div",
                   { className: (0, f.A)(Sa().VideoRow, "VideoRow") },
                   d &&
-                    ee &&
+                    ae &&
                     n.createElement(
                       "button",
                       {
@@ -11503,8 +11503,8 @@
                     n.createElement("div", {
                       className: (0, f.A)(
                         Sa().Fade,
-                        1 === F && Sa().FadeOut,
-                        2 === F && Sa().FadeIn,
+                        1 === M && Sa().FadeOut,
+                        2 === M && Sa().FadeIn,
                       ),
                       style: {
                         "--fade-out-time": "0.5s",
@@ -11512,17 +11512,17 @@
                       },
                     }),
                     n.createElement(st.y3, {
-                      appID: Z,
+                      appID: te,
                       focused: I,
                       skipMicroTrailer: i,
                       playWithBroadcastPlayer: i,
                       autoPlayCookieName: "bTrailerCarouselAutoplayDisabled",
                       showScreenshotInsteadOfMainCap: !i,
-                      fadeRatio: M,
+                      fadeRatio: x,
                       fnPlayPause: b,
                       refTogglePlayPause: T,
-                      bRequestPause: j || Q,
-                      fnComplete: Y,
+                      bRequestPause: $ || Y,
+                      fnComplete: J,
                       loopVideo: !1,
                       defaultVolume: 0,
                     }),
@@ -11534,7 +11534,7 @@
                     }),
                   ),
                   d &&
-                    te &&
+                    ne &&
                     n.createElement(
                       "button",
                       {
@@ -11547,12 +11547,12 @@
                 !p &&
                   !(0, mt.$W)() &&
                   n.createElement(ft, {
-                    className: (0, f.A)(Sa().AutoAdvanceRow, X && Sa().Enabled),
-                    enabled: X,
+                    className: (0, f.A)(Sa().AutoAdvanceRow, Z && Sa().Enabled),
+                    enabled: Z,
                     currentItemKey: t,
                     autoAdvanceMsec: a,
-                    fnAdvance: Y,
-                    pauseReason: J,
+                    fnAdvance: J,
+                    pauseReason: ee,
                   }),
               ),
             )
@@ -11565,28 +11565,26 @@
         const { appID: t, preferDemoStorePage: a, introVideo: r } = e,
           i = (0, z.n9)(),
           l = (0, s.L3)(i),
-          [c] = (0, o.t7)(t, va),
-          { bIsIgnored: m, fnUpdateIgnored: u } = (0, st.TK)(t),
-          { bIsWishlisted: d, fnUpdateWishlist: _ } = (0, st.u4)(t),
-          p = Ia(c, a),
-          g = (0, v.Qn)(),
-          h = (0, be.LG)(c?.GetTagIDs()),
-          S = c.GetAssets().GetMainCapsuleURL(),
-          y = c.GetAssets().GetLibraryCapsuleURL();
+          [c] = (0, o.t7)(t, st.Gy),
+          m = Ia(c, a),
+          u = (0, v.Qn)(),
+          d = (0, be.LG)(c?.GetTagIDs()),
+          _ = c.GetAssets().GetMainCapsuleURL(),
+          p = c.GetAssets().GetLibraryCapsuleURL();
         return n.createElement(
           K.Z,
           { className: Sa().AppDetailsCtn },
           n.createElement(
             "div",
             { className: (0, f.A)(Sa().AppCapsuleCtn) },
-            S &&
+            _ &&
               n.createElement(
                 $.Ii,
-                { href: p, className: Sa().AppLink },
-                n.createElement("img", { className: Sa().AppCapsule, src: S }),
+                { href: m, className: Sa().AppLink },
+                n.createElement("img", { className: Sa().AppCapsule, src: _ }),
                 n.createElement("img", {
                   className: Sa().AppCapsuleLibrary,
-                  src: y,
+                  src: p,
                 }),
               ),
             n.createElement(He.EP, {
@@ -11600,16 +11598,16 @@
             { className: Sa().AppDetailsCtnTop },
             n.createElement(
               $.Ii,
-              { href: p, className: (0, f.A)(Sa().AppName) },
+              { href: m, className: (0, f.A)(Sa().AppName) },
               c.GetName(),
             ),
             !r &&
               n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(Aa, { rgTagNames: h }),
+                n.createElement(Aa, { rgTagNames: d }),
               ),
-            !g &&
+            !u &&
               n.createElement(
                 "div",
                 { className: (0, f.A)(Sa().AppDescriptionCtn) },
@@ -11629,7 +11627,7 @@
               n.createElement(
                 "div",
                 { className: Sa().ButtonsRowWrap },
-                !g &&
+                !u &&
                   !r &&
                   n.createElement(
                     n.Fragment,
@@ -11682,7 +11680,7 @@
       }
       function Da() {
         try {
-          return JSON.parse(localStorage.getItem(Ea)) ?? [];
+          return JSON.parse(localStorage.getItem(ya)) ?? [];
         } catch (e) {
           return [];
         }
