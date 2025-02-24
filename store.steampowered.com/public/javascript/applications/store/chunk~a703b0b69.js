@@ -9891,22 +9891,22 @@
             : n.length;
         if (r)
           for (const e of r.data.groups) {
-            const t = n.splice(0, e.nCount);
-            n.splice(0, e.nCount);
-            const a = Lt(e.nSeed);
+            const t = n.splice(0, e.nCount),
+              a = Lt(e.nSeed);
             (0, vt.fW)(t, Math.min(i, t.length), a),
               (i -= Math.min(i, t.length)),
               s.push(...t),
               o.push(e);
           }
-        if (n.length > 0) {
-          const t = { nCount: i, nSeed: Ft() },
-            r = Lt(t.nSeed);
-          (0, vt.fW)(n, i, r),
-            s.push(...n),
-            o.push(t),
-            Ht(a, e.rtime32_last_modified, { groups: o });
-        }
+        if (n.length > 0)
+          if (i > 0) {
+            const t = { nCount: i, nSeed: Ft() },
+              r = Lt(t.nSeed);
+            (0, vt.fW)(n, i, r),
+              s.push(...n),
+              o.push(t),
+              Ht(a, e.rtime32_last_modified, { groups: o });
+          } else s.push(...n);
         return s;
       }
       function Ot(e, t, a) {
