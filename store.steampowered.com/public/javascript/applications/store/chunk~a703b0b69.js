@@ -11580,18 +11580,19 @@
             _ &&
               n.createElement(
                 $.Ii,
-                { href: m, className: Sa().AppLink },
+                { href: !r && m, className: Sa().AppLink },
                 n.createElement("img", { className: Sa().AppCapsule, src: _ }),
                 n.createElement("img", {
                   className: Sa().AppCapsuleLibrary,
                   src: p,
                 }),
               ),
-            n.createElement(He.EP, {
-              classOverride: (0, f.A)(Sa().AppCapsuleWishListBtn),
-              appID: t,
-              snr: l,
-            }),
+            !r &&
+              n.createElement(He.EP, {
+                classOverride: (0, f.A)(Sa().AppCapsuleWishListBtn),
+                appID: t,
+                snr: l,
+              }),
           ),
           n.createElement(
             "div",
@@ -11650,11 +11651,12 @@
                       info: { id: t, type: (0, et.U)(c.GetAppType()) },
                     }),
                 ),
-                n.createElement(He.EP, {
-                  classOverride: (0, f.A)(Sa().AppCapsuleWishListBtnMobile),
-                  appID: t,
-                  snr: l,
-                }),
+                !r &&
+                  n.createElement(He.EP, {
+                    classOverride: (0, f.A)(Sa().AppCapsuleWishListBtnMobile),
+                    appID: t,
+                    snr: l,
+                  }),
               ),
             ),
           ),
