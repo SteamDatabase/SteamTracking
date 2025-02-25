@@ -11597,17 +11597,13 @@
           n.createElement(
             "div",
             { className: ha().AppDetailsCtnTop },
-            n.createElement(
-              $.Ii,
-              { href: m, className: (0, f.A)(ha().AppName) },
-              c.GetName(),
-            ),
             !r &&
               n.createElement(
-                n.Fragment,
-                null,
-                n.createElement(Ia, { rgTagNames: d }),
+                $.Ii,
+                { href: m, className: (0, f.A)(ha().AppName) },
+                c.GetName(),
               ),
+            !r && n.createElement(Ia, { rgTagNames: d }),
             !u &&
               n.createElement(
                 "div",
@@ -11630,18 +11626,14 @@
                 { className: ha().ButtonsRowWrap },
                 !u &&
                   !r &&
-                  n.createElement(
-                    n.Fragment,
-                    null,
-                    c.BHasDemo() &&
-                      n.createElement(ut.j, {
-                        info: {
-                          id: c.GetAppID(),
-                          type: (0, I._4)(c.GetStoreItemType(), c.GetAppType()),
-                        },
-                        className: (0, f.A)(ha().QueueButton, ha().Demo),
-                      }),
-                  ),
+                  c.BHasDemo() &&
+                  n.createElement(ut.j, {
+                    info: {
+                      id: c.GetAppID(),
+                      type: (0, I._4)(c.GetStoreItemType(), c.GetAppType()),
+                    },
+                    className: (0, f.A)(ha().QueueButton, ha().Demo),
+                  }),
                 n.createElement(
                   "div",
                   { className: ha().PriceDisplayCtn },
