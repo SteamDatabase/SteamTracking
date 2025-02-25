@@ -71,21 +71,3 @@ export async function* GetRecursiveFilesToParse() {
 		yield* GetRecursiveJavascriptFiles(path);
 	}
 }
-
-async function* GetRecursiveCssFiles(dir) {
-	const dirents = await readDir(dir, { withFileTypes: true });
-	for (const dirent of dirents) {
-		const res = pathResolve(dir, dirent.name);
-		if (dirent.isDirectory()) {
-			yield* GetRecursiveCssFiles(res);
-		} else if (dirent.isFile() && dirent.name.endsWith(".css")) {
-			yield res;
-		}
-	}
-}
-
-export async function* GetRecursiveFilesToFix() {
-	for (const path of pathsToRecurse) {
-		yield* GetRecursiveCssFiles(path);
-	}
-}
