@@ -23772,7 +23772,7 @@
             ce =
               a.GetFormattedSteamReleaseDate()?.length > 0
                 ? a.GetFormattedSteamReleaseDate()
-                : p.GetFormattedSteamReleaseDate();
+                : p?.GetFormattedSteamReleaseDate();
           let de = a.GetShortDescription();
           (2 == a.GetStoreItemType() || (1 == a.GetStoreItemType() && !ie)) &&
             (de = Q

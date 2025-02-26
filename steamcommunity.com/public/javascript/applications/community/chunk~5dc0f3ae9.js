@@ -12569,7 +12569,9 @@
                 ? void 0
                 : r.length) > 0
                 ? p.GetFormattedSteamReleaseDate()
-                : h.GetFormattedSteamReleaseDate();
+                : null == h
+                  ? void 0
+                  : h.GetFormattedSteamReleaseDate();
           let ge = p.GetShortDescription();
           (2 == p.GetStoreItemType() || (1 == p.GetStoreItemType() && !oe)) &&
             (ge = te
