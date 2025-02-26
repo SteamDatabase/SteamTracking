@@ -1563,7 +1563,7 @@
             r.e(8780),
             r.e(9855),
             r.e(6662),
-          ]).then(r.bind(r, 54040)),
+          ]).then(r.bind(r, 72001)),
         ),
         H = n.lazy(() =>
           Promise.all([
