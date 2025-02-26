@@ -2669,6 +2669,26 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   flex-direction: row;
   height: 720px;
 }
+@media screen and (max-width: 500px) {
+  ._2sssIwe0duyIrFvat2oXzH {
+    position: relative;
+  }
+  ._2sssIwe0duyIrFvat2oXzH .OX7USkJ5dDP_icD00Gal6,
+  ._2sssIwe0duyIrFvat2oXzH ._2kwFFHckg8jvnwJfg9-la8 {
+    position: relative;
+    z-index: 0;
+    min-width: 0;
+  }
+  ._2sssIwe0duyIrFvat2oXzH._3EyafdwyTAhyVmQ2hEoV6w .OX7USkJ5dDP_icD00Gal6,
+  ._2sssIwe0duyIrFvat2oXzH.Wsp7yZOS_QZMBTFxK-_E1 ._2kwFFHckg8jvnwJfg9-la8 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .25s ease-in-out;
+    pointer-events: none;
+  }
+}
 .CFTLX2wIKOK3hNV-fS7_V {
   flex: 3;
   background: radial-gradient(
@@ -2703,6 +2723,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   + .DialogControlsSection:not(:first-child) {
   margin-top: 5px;
 }
+@media screen and (max-width: 500px) {
+  .CFTLX2wIKOK3hNV-fS7_V {
+    min-width: 0;
+  }
+}
 .CFTLX2wIKOK3hNV-fS7_V .DialogHeader {
   margin-right: 0;
 }
@@ -2724,6 +2749,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+@media screen and (max-width: 500px) {
+  ._2kwFFHckg8jvnwJfg9-la8 {
+    max-width: none;
+  }
 }
 ._2kwFFHckg8jvnwJfg9-la8._1v7JdHYjstVsVJbHZ3TsVw {
   display: none;
@@ -2772,7 +2802,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._1-vlriAtKYDViAEunue4VO {
   display: flex;
   align-items: center;
-  max-width: 220px;
+  min-width: 0;
   text-overflow: ellipsis;
   white-space: normal;
   padding: 10px 8px 10px 24px;
@@ -2808,11 +2838,16 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   ):hover {
   background-color: #23262e;
 }
-._1-vlriAtKYDViAEunue4VO:not(._2DpXjzK3WWsOtUWUrcuOG7):hover {
+._1-vlriAtKYDViAEunue4VO:not(._2DpXjzK3WWsOtUWUrcuOG7):hover,
+._3EyafdwyTAhyVmQ2hEoV6w
+  ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7:hover {
   background-color: #dcdedf;
   color: #3d4450;
 }
 ._1-vlriAtKYDViAEunue4VO:not(._2DpXjzK3WWsOtUWUrcuOG7):hover
+  ._1rD8X96FdnksZLvRRlEiCR,
+._3EyafdwyTAhyVmQ2hEoV6w
+  ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7:hover
   ._1rD8X96FdnksZLvRRlEiCR {
   color: #3d4450;
 }
@@ -2822,6 +2857,12 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 }
 ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 ._1rD8X96FdnksZLvRRlEiCR {
   color: #fff;
+}
+@media screen and (max-width: 500px) {
+  ._3EyafdwyTAhyVmQ2hEoV6w ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 {
+    color: #b8bcbf;
+    background-color: transparent;
+  }
 }
 ._3HW2USxwRYjjmh6QiQtDq8 {
   flex-grow: 1;
@@ -2841,7 +2882,8 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 .DesktopUI ._1Hye7o1wYIfc9TE9QKRW4T._1ahzMoQaAT-POqYjqcQSCt {
   background: transparent;
 }
-._3LLH_F43MTu6UtG4Z3kudv {
+._3LLH_F43MTu6UtG4Z3kudv,
+._1cWmu5TUWFAVHlv1EVaF8e {
   position: absolute;
   left: 24px;
   top: 8px;
@@ -2857,16 +2899,28 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   font-weight: bold;
   cursor: pointer;
 }
-._3LLH_F43MTu6UtG4Z3kudv svg {
+._3LLH_F43MTu6UtG4Z3kudv svg,
+._1cWmu5TUWFAVHlv1EVaF8e svg {
   width: 16px;
   height: 16px;
   margin-top: 4px;
   margin-left: 8px;
 }
-._3LLH_F43MTu6UtG4Z3kudv:hover {
+._3LLH_F43MTu6UtG4Z3kudv:hover,
+._1cWmu5TUWFAVHlv1EVaF8e:hover {
   color: #fff;
   background: #464d58;
   border-radius: 2px;
+}
+@media screen and (max-width: 500px) {
+  ._3LLH_F43MTu6UtG4Z3kudv {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  ._1cWmu5TUWFAVHlv1EVaF8e {
+    display: none;
+  }
 }
 @keyframes _3PwEEPVt8AFlTzaPsr2aMs {
   from {

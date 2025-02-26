@@ -7,6 +7,7 @@
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "_30v-6zb_axOypIUr5VRHE1",
+        ToolbarRowOverflowContainer: "nXEH21nf47u2OH7BjQKei",
         ToolbarRow: "LCeIT0gmFTY8fdfaVgk4j",
         Gap: "_19z0fjj7o0n9vAjVjvYZNU",
         Spacer: "_2m1BBIp5Ewr1TI-BkqFGLM",
@@ -1211,7 +1212,7 @@
         const S = l
             ? (0, i.we)("#FormattingToolbar_EditLink")
             : (0, i.we)("#FormattingToolbar_InsertLink"),
-          y = l
+          E = l
             ? (0, i.we)("#Button_Save")
             : (0, i.we)("#FormattingToolbar_InsertLink");
         return a.createElement(
@@ -1231,7 +1232,7 @@
             },
             closeModal: h,
             strTitle: S,
-            strOKText: y,
+            strOKText: E,
             bOKDisabled: 0 == C.length,
           },
           a.createElement(s.pd, {
@@ -1337,8 +1338,8 @@
           (0, v.D5)(d, C);
         const {
             refDiv: S,
-            onActivate: y,
-            onGamepadDirection: A,
+            onActivate: E,
+            onGamepadDirection: y,
           } = (function (e) {
             const t = m.useRef(),
               o = (0, a.FN)(),
@@ -1364,7 +1365,7 @@
               l = (0, n.ak)(t, null, null, s);
             return { refDiv: t, onActivate: r, onGamepadDirection: l };
           })(C),
-          E = (0, v.Ue)(S, f);
+          A = (0, v.Ue)(S, f);
         if (!t) return null;
         const { schemaConfig: M, bbcodeParser: O } = t;
         return m.createElement(
@@ -1373,12 +1374,12 @@
           m.createElement(r.Z, {
             key: `editordiv_${u}`,
             className: (0, b.A)(o, T.Container),
-            ref: E,
+            ref: A,
             spellCheck: u,
             focusable: !0,
-            onActivate: y,
+            onActivate: E,
             onOKActionDescription: (0, k.we)("#UserGameNotes_Edit"),
-            onGamepadDirection: A,
+            onGamepadDirection: y,
             ...h,
           }),
           m.createElement(l.KF, { refOnUpdate: i, schema: M.pm_schema }),
@@ -1767,12 +1768,13 @@
       }
       function k(e) {
         return s.createElement(
-          r.Z,
-          {
-            className: (0, d.A)(e.className, p.ToolbarRow),
-            "flow-children": "row",
-          },
-          e.children,
+          "div",
+          { className: (0, d.A)(e.className, p.ToolbarRowOverflowContainer) },
+          s.createElement(
+            r.Z,
+            { className: p.ToolbarRow, "flow-children": "row" },
+            e.children,
+          ),
         );
       }
       function v(e) {
@@ -1859,7 +1861,7 @@
         const { tooltip: t, keyboardShortcut: o, children: r } = e;
         if (!t) return r;
         const n = o
-          ? s.createElement(y, { tooltip: t, keyboardShortcut: o })
+          ? s.createElement(E, { tooltip: t, keyboardShortcut: o })
           : t;
         return s.createElement(
           c.Gq,
@@ -1867,7 +1869,7 @@
           r,
         );
       }
-      function y(e) {
+      function E(e) {
         const { tooltip: t, keyboardShortcut: o } = e;
         return s.createElement(
           "div",
@@ -1876,11 +1878,11 @@
           s.createElement(
             "div",
             null,
-            s.createElement(A, { keyboardShortcut: o }),
+            s.createElement(y, { keyboardShortcut: o }),
           ),
         );
       }
-      function A(e) {
+      function y(e) {
         const { keyboardShortcut: t } = e,
           o = t.split("-"),
           r = o.pop();
@@ -1891,14 +1893,14 @@
             s.createElement(
               s.Fragment,
               { key: t },
-              s.createElement(E, null, s.createElement(M, { modifier: e })),
+              s.createElement(A, null, s.createElement(M, { modifier: e })),
               " + ",
             ),
           ),
-          s.createElement(E, null, r.toUpperCase()),
+          s.createElement(A, null, r.toUpperCase()),
         );
       }
-      function E(e) {
+      function A(e) {
         return s.createElement("span", { className: p.KeyCap }, e.children);
       }
       function M(e) {

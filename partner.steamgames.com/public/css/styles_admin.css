@@ -2743,6 +2743,10 @@ div.image_all_ages_appropriate
 	background-position: center;
 }
 
+.screenshot_upload_preview  > select {
+	margin: 5px 0 5px 0;
+}
+
 .preview_in_store_link
 {
 	float: right;

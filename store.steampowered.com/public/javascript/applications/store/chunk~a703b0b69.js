@@ -6297,6 +6297,7 @@
                   info: a,
                   className: L.PurchaseOnlyActionCtn,
                   bShowDemoButton: r,
+                  bShowCartButton: !0,
                   bHidePrice: s,
                   bHideWishlistButton: !0,
                   bShowDeckCompatibilityDialog: i,

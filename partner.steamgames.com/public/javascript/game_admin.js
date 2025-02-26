@@ -200,8 +200,8 @@ function InitImageTypes( type )
 
 		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false },
 		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false },
-		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false },
 		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false },
+		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true },
 
 		// Keep last for list priority ordering
 		{ name: 'Screenshot', width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true },
@@ -440,6 +440,11 @@ function IsImageTypeValid( image, ImageType )
 			return false;
 
 		if ( ImageType.height !== 0 && image.height < ImageType.height )
+			return false;
+	}
+	else if ( ImageType.contained )
+	{
+		if ( image.width !== ImageType.width && image.height !== ImageType.height )
 			return false;
 	}
 	else

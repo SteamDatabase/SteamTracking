@@ -5911,17 +5911,28 @@ p.pm_paragraph {
   cursor: ew-resize;
   cursor: col-resize;
 }
+.nXEH21nf47u2OH7BjQKei {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 4px;
+}
 .LCeIT0gmFTY8fdfaVgk4j {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 4px;
+}
+@media screen and (max-width: 500px) {
+  .LCeIT0gmFTY8fdfaVgk4j {
+    flex-wrap: nowrap;
+    width: fit-content;
+  }
 }
 .LCeIT0gmFTY8fdfaVgk4j ._19z0fjj7o0n9vAjVjvYZNU {
   width: 12px;
 }
 .LCeIT0gmFTY8fdfaVgk4j ._2m1BBIp5Ewr1TI-BkqFGLM {
   flex: 1;
+  min-width: 12px;
 }
 .LCeIT0gmFTY8fdfaVgk4j ._DialogInputContainer {
   padding-top: 8px;

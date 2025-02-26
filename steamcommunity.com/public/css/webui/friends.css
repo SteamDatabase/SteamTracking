@@ -2760,6 +2760,30 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   flex-direction: row;
   height: 720px;
 }
+@media screen and (max-width: 500px) {
+  .pagedsettings_PagedSettingsDialog_2sssI {
+    position: relative;
+  }
+  .pagedsettings_PagedSettingsDialog_2sssI
+    .pagedsettings_PagedSettingDialog_ContentColumn_OX7US,
+  .pagedsettings_PagedSettingsDialog_2sssI
+    .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
+    position: relative;
+    z-index: 0;
+    min-width: 0;
+  }
+  .pagedsettings_PagedSettingsDialog_2sssI.pagedsettings_ResponsivePageList_3Eyaf
+    .pagedsettings_PagedSettingDialog_ContentColumn_OX7US,
+  .pagedsettings_PagedSettingsDialog_2sssI.pagedsettings_ResponsiveActivePage_Wsp7y
+    .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .25s ease-in-out;
+    pointer-events: none;
+  }
+}
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
   flex: 3;
   background: radial-gradient(
@@ -2798,6 +2822,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   + .DialogControlsSection:not(:first-child) {
   margin-top: 5px;
 }
+@media screen and (max-width: 500px) {
+  .pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
+    min-width: 0;
+  }
+}
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
   margin-right: 0;
 }
@@ -2819,6 +2848,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+@media screen and (max-width: 500px) {
+  .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
+    max-width: none;
+  }
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF.pagedsettings_Hidden_1v7Jd {
   display: none;
@@ -2867,7 +2901,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
   display: flex;
   align-items: center;
-  max-width: 220px;
+  min-width: 0;
   text-overflow: ellipsis;
   white-space: normal;
   padding: 10px 8px 10px 24px;
@@ -2910,13 +2944,18 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(
     .pagedsettings_Active_2DpXj
-  ):hover {
+  ):hover,
+.pagedsettings_ResponsivePageList_3Eyaf
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj:hover {
   background-color: #dcdedf;
   color: #3d4450;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(
     .pagedsettings_Active_2DpXj
   ):hover
+  .pagedsettings_PageListItem_Icon_1rD8X,
+.pagedsettings_ResponsivePageList_3Eyaf
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj:hover
   .pagedsettings_PageListItem_Icon_1rD8X {
   color: #3d4450;
 }
@@ -2927,6 +2966,13 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj
   .pagedsettings_PageListItem_Icon_1rD8X {
   color: #fff;
+}
+@media screen and (max-width: 500px) {
+  .pagedsettings_ResponsivePageList_3Eyaf
+    .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
+    color: #b8bcbf;
+    background-color: transparent;
+  }
 }
 .pagedsettings_PageListSpacer_3HW2U {
   flex-grow: 1;
@@ -2947,7 +2993,8 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   .pagedsettings_PageListSeparator_1Hye7.pagedsettings_Transparent_1ahzM {
   background: transparent;
 }
-.pagedsettings_HidePageListButton_3LLH_ {
+.pagedsettings_HidePageListButton_3LLH_,
+.pagedsettings_ReturnToPageListButton_1cWmu {
   position: absolute;
   left: 24px;
   top: 8px;
@@ -2963,16 +3010,28 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-weight: bold;
   cursor: pointer;
 }
-.pagedsettings_HidePageListButton_3LLH_ svg {
+.pagedsettings_HidePageListButton_3LLH_ svg,
+.pagedsettings_ReturnToPageListButton_1cWmu svg {
   width: 16px;
   height: 16px;
   margin-top: 4px;
   margin-left: 8px;
 }
-.pagedsettings_HidePageListButton_3LLH_:hover {
+.pagedsettings_HidePageListButton_3LLH_:hover,
+.pagedsettings_ReturnToPageListButton_1cWmu:hover {
   color: #fff;
   background: #464d58;
   border-radius: 2px;
+}
+@media screen and (max-width: 500px) {
+  .pagedsettings_HidePageListButton_3LLH_ {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  .pagedsettings_ReturnToPageListButton_1cWmu {
+    display: none;
+  }
 }
 @keyframes gamepaddialog_BackgroundAnimation_3PwEE {
   from {
