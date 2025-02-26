@@ -13,6 +13,8 @@
         CommandButton: "_1dEi5qzSDdPOzoOQXYbNLN",
         Toggled: "_1Iw5xoXQXfmRjgjWTKbm_G",
         FileUploadPlaceholder: "_2P-FBc3tZWGeeBFplDSb9g",
+        ThrobberCtn: "_3QpIkO3kkVZmnulwmiZRHH",
+        ThrobberRow: "VIY8ZV4g4NpEMnF-_pHOh",
         Throbber: "_12t6JmDCFT6MqtNVrSi5NJ",
         PendingImage: "_2HezQYTfmFfdRmuB8l9QPI",
         FileUploadDragDrop: "_1WRaNQqBKcUp67ntgoyEeQ",
@@ -146,13 +148,13 @@
         c = o(98724),
         i = o(79216),
         d = o(4188),
-        u = o(37834);
+        m = o(37834);
       o(45772), o(74763);
-      const m = l.createContext(void 0);
+      const u = l.createContext(void 0);
       function h(e) {
         const { view: t, pmState: o, children: r } = e,
           n = l.useMemo(() => ({ view: t, pmState: o }), [t, o]);
-        return l.createElement(m.Provider, { value: n }, r);
+        return l.createElement(u.Provider, { value: n }, r);
       }
       const p = l.memo(function (e) {
         const { schema: t, refOnUpdate: o } = e;
@@ -250,10 +252,10 @@
                           t.childCount + t.attrs.order == parseInt(e[1]),
                       ),
                       (0, i.tG)(/^\s*([-+*])\s$/, t.bullet_list),
-                      (0, u.OX)(/\*([^*]+)\*/, o.strong),
-                      (0, u.OX)(/_([^_]+)_/, o.italic),
-                      (0, u.OX)(/~([^~]+)~/, o.strike),
-                      (0, u.OX)(/`([^`]+)`/, o.code),
+                      (0, m.OX)(/\*([^*]+)\*/, o.strong),
+                      (0, m.OX)(/_([^_]+)_/, o.italic),
+                      (0, m.OX)(/~([^~]+)~/, o.strike),
+                      (0, m.OX)(/`([^`]+)`/, o.code),
                       (0, i.JJ)(/^```$/, t.code_block),
                       (0, i.JJ)(/^(#{1,5})\s$/, t.heading, (e) => ({
                         level: e[1].length,
@@ -275,14 +277,14 @@
         );
       });
       function g(e) {
-        const { pmState: t } = l.useContext(m);
+        const { pmState: t } = l.useContext(u);
         l.useEffect(() => {
           if (t && e) return t.InstallPlugin(e);
         }, [e, t]);
       }
       function f() {
         var e;
-        return null === (e = l.useContext(m)) || void 0 === e ? void 0 : e.view;
+        return null === (e = l.useContext(u)) || void 0 === e ? void 0 : e.view;
       }
     },
     55608: (e, t, o) => {
@@ -570,7 +572,7 @@
           return this.m_nodes;
         }
       }
-      class u extends l.Al {
+      class m extends l.Al {
         constructor(e) {
           super(e.bbcode_dictionary, () => new d(e.pm_schema)),
             (this.m_mapPMBBNodes = new Map()),
@@ -710,7 +712,7 @@
           );
         }
       }
-      function m(e, t) {
+      function u(e, t) {
         return h(t.pm_schema, t.pm_to_bbcode_config, e, []);
       }
       function h(e, t, o, r) {
@@ -787,7 +789,7 @@
           (this.m_bHasUncomittedChanges = !1),
             (this.m_onStateChangedCallbacks = new r.l()),
             (this.m_schemaConfig = e),
-            (this.m_bbcodeParser = new u(e)),
+            (this.m_bbcodeParser = new m(e)),
             (this.m_bbcode = t),
             (this.m_fnCommitChanges = o),
             (this.m_state = this.ConstructState());
@@ -795,12 +797,25 @@
         CommitChanges() {
           this.m_currentDoc &&
             this.m_bHasUncomittedChanges &&
-            ((this.m_bbcode = m(this.m_currentDoc, this.m_schemaConfig)),
+            ((this.m_bbcode = u(this.m_currentDoc, this.m_schemaConfig)),
             this.m_fnCommitChanges(this.m_bbcode, this.m_currentDoc),
             (this.m_bHasUncomittedChanges = !1));
         }
         BHasUncomittedChanges() {
           return this.m_bHasUncomittedChanges;
+        }
+        UpdateState(e) {
+          var t;
+          const o = e(
+            (null === (t = this.m_view) || void 0 === t
+              ? void 0
+              : t.state.tr) || this.m_state.tr,
+          );
+          o &&
+            o.docChanged &&
+            (this.m_view
+              ? this.m_view.dispatch(o)
+              : (this.m_state = this.m_state.apply(o)));
         }
         get state() {
           return this.m_state;
@@ -942,7 +957,7 @@
     },
     9024: (e, t, o) => {
       "use strict";
-      o.d(t, { X: () => u, w: () => c });
+      o.d(t, { X: () => m, w: () => c });
       var r = o(33645),
         n = o.n(r),
         a = o(38539),
@@ -982,7 +997,7 @@
             );
           },
         },
-        u = {
+        m = {
           table: {
             ...i.table,
             toDOM: (e) =>
@@ -1046,20 +1061,20 @@
             onCancel: c,
             strCancelText: i,
             bOKDisabled: d,
-            bCancelDisabled: u,
-            strClassNameContent: m = "GenericFormDialog",
+            bCancelDisabled: m,
+            strClassNameContent: u = "GenericFormDialog",
             children: h,
           } = e,
           p = r.useCallback(() => {
             c && c(), t();
           }, [c, t]),
-          g = u ? void 0 : p;
+          g = m ? void 0 : p;
         return r.createElement(
           a.x_,
           { onEscKeypress: g },
           r.createElement(
             n.U9,
-            { onSubmit: s, classNameContent: m },
+            { onSubmit: s, classNameContent: u },
             r.createElement(n.Y9, null, o),
             h,
             r.createElement(
@@ -1070,7 +1085,7 @@
                 bOKDisabled: d,
                 onCancel: g,
                 strCancelText: i,
-                bCancelDisabled: u,
+                bCancelDisabled: m,
               }),
             ),
           ),
@@ -1096,7 +1111,7 @@
                 l = "",
                 { from: c, to: i } = a;
               const d = (0, r.vn)(o.state, e.marks.link, a.$from),
-                u = !!d;
+                m = !!d;
               d
                 ? ((l = d.mark.attrs.href),
                   a.empty
@@ -1118,20 +1133,20 @@
                     o.state.selection.to,
                   ).textContent),
                   s.match(/^https?:\/\//) && (l = s));
-              let m = {};
+              let u = {};
               if (t)
                 for (const e in t) {
                   const o = t[e],
                     r = d ? o.fnReadValue(d.mark) : o.defaultValue;
-                  m[e] = r;
+                  u[e] = r;
                 }
               n({
                 view: o,
                 strLinkText: s,
                 strLinkHref: l,
-                bIsUpdate: u,
+                bIsUpdate: m,
                 addtlAttrs: t,
-                addtlAttrsValues: m,
+                addtlAttrsValues: u,
                 from: c,
                 to: i,
               });
@@ -1148,18 +1163,18 @@
             a.createElement(
               l.EN,
               { active: !0 },
-              a.createElement(u, { schema: e, closeModal: i, ...o }),
+              a.createElement(m, { schema: e, closeModal: i, ...o }),
             ),
         ];
       }
-      const u = a.memo(function (e) {
+      const m = a.memo(function (e) {
         const {
             schema: t,
             strLinkText: o,
             strLinkHref: r,
             bIsUpdate: l,
             addtlAttrs: d,
-            addtlAttrsValues: u,
+            addtlAttrsValues: m,
             closeModal: h,
             view: p,
             from: g,
@@ -1168,8 +1183,8 @@
           [b, _] = a.useState(o),
           [C, k] = a.useState(r),
           v = a.useRef(null),
-          B = a.useRef(null),
-          [T, S] = a.useState(u);
+          T = a.useRef(null),
+          [B, w] = a.useState(m);
         a.useLayoutEffect(() => {
           var e, t, o, r, n;
           (
@@ -1183,20 +1198,20 @@
             ? (
                 null ===
                   (r =
-                    null === (o = B.current) || void 0 === o
+                    null === (o = T.current) || void 0 === o
                       ? void 0
                       : o.value) || void 0 === r
                   ? void 0
                   : r.length
               )
               ? (v.current.Focus(), v.current.element.select())
-              : B.current.Focus()
+              : T.current.Focus()
             : null === (n = v.current) || void 0 === n || n.Focus();
         }, []);
-        const w = l
+        const S = l
             ? (0, i.we)("#FormattingToolbar_EditLink")
             : (0, i.we)("#FormattingToolbar_InsertLink"),
-          A = l
+          y = l
             ? (0, i.we)("#Button_Save")
             : (0, i.we)("#FormattingToolbar_InsertLink");
         return a.createElement(
@@ -1205,7 +1220,7 @@
             onOK: () => {
               let e = p.state.tr;
               const o = { href: C };
-              for (const e in T) o[e] = T[e];
+              for (const e in B) o[e] = B[e];
               const r = t.text(b || C, [t.marks.link.create(o)]);
               (e = e.replaceRangeWith(g, f, r)),
                 (e = e.setSelection(
@@ -1215,8 +1230,8 @@
                 h();
             },
             closeModal: h,
-            strTitle: w,
-            strOKText: A,
+            strTitle: S,
+            strOKText: y,
             bOKDisabled: 0 == C.length,
           },
           a.createElement(s.pd, {
@@ -1226,15 +1241,15 @@
             label: (0, i.we)("#FormattingToolbar_LinkText"),
           }),
           a.createElement(s.pd, {
-            ref: B,
+            ref: T,
             value: C,
             onChange: (e) => k(e.currentTarget.value),
             label: (0, i.we)("#FormattingToolbar_LinkAddress"),
           }),
-          d && a.createElement(m, { addtlAttrs: d, values: T, setValues: S }),
+          d && a.createElement(u, { addtlAttrs: d, values: B, setValues: w }),
         );
       });
-      function m(e) {
+      function u(e) {
         const { addtlAttrs: t, values: o, setValues: r } = e;
         return a.createElement(
           a.Fragment,
@@ -1260,7 +1275,7 @@
     },
     1805: (e, t, o) => {
       "use strict";
-      o.d(t, { l: () => T });
+      o.d(t, { l: () => B });
       var r = o(76217),
         n = o(63512),
         a = o(73170),
@@ -1269,19 +1284,19 @@
         c = o(37834),
         i = o(52893),
         d = o(57053),
-        u = o(90626),
-        m = o(84811),
+        m = o(90626),
+        u = o(84811),
         h = o(33645),
         p = o.n(h),
         g = o(38539),
         f = o(9024),
         b = o(52038);
-      const _ = u.memo(function (e) {
+      const _ = m.memo(function (e) {
         const { schema: t } = e,
           o = !(!("table" in t.nodes) || !t.nodes.table.spec.tableRole);
         return (
-          (0, l.c$)(u.useMemo(() => o && g.AL({ View: C }), [o])),
-          (0, l.c$)(u.useMemo(() => o && g.LF(), [o])),
+          (0, l.c$)(m.useMemo(() => o && g.AL({ View: C }), [o])),
+          (0, l.c$)(m.useMemo(() => o && g.LF(), [o])),
           null
         );
       });
@@ -1302,32 +1317,32 @@
       }
       var k = o(61859),
         v = o(73745),
-        B = o(73309);
-      const T = (0, m.Nr)(function (e) {
+        T = o(73309);
+      const B = (0, u.Nr)(function (e) {
         const {
             pmState: t,
             className: o,
             refOnUpdate: i,
             refView: d,
-            bSpellcheckEnabled: m = !0,
+            bSpellcheckEnabled: u = !0,
             panelProps: h,
             children: p,
           } = e,
-          [g, f] = u.useState(),
-          [C, T] = u.useState();
-        u.useEffect(() => {
-          t && g && T(new s.Lz(g, { state: t.state }));
+          [g, f] = m.useState(),
+          [C, B] = m.useState();
+        m.useEffect(() => {
+          t && g && B(new s.Lz(g, { state: t.state }));
         }, [t, g]),
-          u.useEffect(() => () => (null == C ? void 0 : C.destroy()), [C]),
+          m.useEffect(() => () => (null == C ? void 0 : C.destroy()), [C]),
           (0, v.D5)(d, C);
         const {
-            refDiv: w,
-            onActivate: A,
-            onGamepadDirection: y,
+            refDiv: S,
+            onActivate: y,
+            onGamepadDirection: A,
           } = (function (e) {
-            const t = u.useRef(),
+            const t = m.useRef(),
               o = (0, a.FN)(),
-              r = u.useCallback(() => {
+              r = m.useCallback(() => {
                 if (
                   (o.ShowVirtualKeyboard(),
                   !(null == e ? void 0 : e.hasFocus()))
@@ -1345,38 +1360,38 @@
                   }
                 }
               }, [o, e]),
-              s = u.useCallback((e) => e.currentTarget == e.target, []),
+              s = m.useCallback((e) => e.currentTarget == e.target, []),
               l = (0, n.ak)(t, null, null, s);
             return { refDiv: t, onActivate: r, onGamepadDirection: l };
           })(C),
-          E = (0, v.Ue)(w, f);
+          E = (0, v.Ue)(S, f);
         if (!t) return null;
         const { schemaConfig: M, bbcodeParser: O } = t;
-        return u.createElement(
+        return m.createElement(
           l.Ot,
           { view: C, pmState: t },
-          u.createElement(r.Z, {
-            key: `editordiv_${m}`,
-            className: (0, b.A)(o, B.Container),
+          m.createElement(r.Z, {
+            key: `editordiv_${u}`,
+            className: (0, b.A)(o, T.Container),
             ref: E,
-            spellCheck: m,
+            spellCheck: u,
             focusable: !0,
-            onActivate: A,
+            onActivate: y,
             onOKActionDescription: (0, k.we)("#UserGameNotes_Edit"),
-            onGamepadDirection: y,
+            onGamepadDirection: A,
             ...h,
           }),
-          u.createElement(l.KF, { refOnUpdate: i, schema: M.pm_schema }),
-          u.createElement(S, { parser: O, schema: M.pm_schema }),
-          u.createElement(_, { schema: M.pm_schema }),
+          m.createElement(l.KF, { refOnUpdate: i, schema: M.pm_schema }),
+          m.createElement(w, { parser: O, schema: M.pm_schema }),
+          m.createElement(_, { schema: M.pm_schema }),
           p,
         );
       });
-      const S = u.memo(function (e) {
+      const w = m.memo(function (e) {
         const { parser: t, schema: o } = e;
         return (
           (0, l.c$)(
-            u.useMemo(
+            m.useMemo(
               () =>
                 new i.k_({
                   props: {
@@ -1421,11 +1436,11 @@
         c = o(17558),
         i = o(30175),
         d = o(73745);
-      function u(e) {
+      function m(e) {
         const { schema: t, addtlAttrs: o, children: r } = e,
           { callbacks: n, view: l } = (0, i.wU)(),
-          [u, m] = s.useState(() => (0, a.Cd)(l.state, t.marks.link)),
-          h = s.useCallback((e) => m((0, a.Cd)(e.state, t.marks.link)), [t]);
+          [m, u] = s.useState(() => (0, a.Cd)(l.state, t.marks.link)),
+          h = s.useCallback((e) => u((0, a.Cd)(e.state, t.marks.link)), [t]);
         (0, d.hL)(n, h);
         const [p, g] = (0, c.E)(t, o);
         return s.createElement(
@@ -1436,7 +1451,7 @@
             i.ff,
             {
               onClick: () => p(l),
-              toggled: u,
+              toggled: m,
               tooltip: "#FormattingToolbar_InsertLink",
               keyboardShortcut: "Mod-k",
             },
@@ -1444,7 +1459,7 @@
           ),
         );
       }
-      var m = o(30470);
+      var u = o(30470);
       function h() {
         return s.createElement(
           s.Fragment,
@@ -1463,7 +1478,7 @@
             {
               tooltip: "#FormattingToolbar_Redo",
               keyboardShortcut:
-                "macos" == m.TS.PLATFORM ? "Mod-Shift-z" : "Mod-y",
+                "macos" == u.TS.PLATFORM ? "Mod-Shift-z" : "Mod-y",
               command: r.ZS,
             },
             s.createElement(l.Bal, null),
@@ -1606,9 +1621,9 @@
       function b(e) {
         const { schema: t, showIndentButtonsAsNeeded: o = !1 } = e,
           { callbacks: r, view: a } = (0, i.wU)(),
-          { bullet_list: c, ordered_list: u, list_item: m } = t.nodes,
-          h = s.useMemo(() => n.T2(m), [m]),
-          p = s.useMemo(() => n.$B(m), [m]),
+          { bullet_list: c, ordered_list: m, list_item: u } = t.nodes,
+          h = s.useMemo(() => n.T2(u), [u]),
+          p = s.useMemo(() => n.$B(u), [u]),
           [g, f] = s.useState(() => h(a.state) || p(a.state));
         return (
           (0, d.hL)(
@@ -1629,11 +1644,11 @@
                 tooltip: "#FormattingToolbar_BulletedList",
                 keyboardShortcut: "Ctrl-Shift-8",
                 list_type: c,
-                list_item: m,
+                list_item: u,
               },
               s.createElement(l.JPq, null),
             ),
-            u && !1,
+            m && !1,
             (!o || g) &&
               s.createElement(
                 s.Fragment,
@@ -1662,9 +1677,9 @@
       }
       function _(e) {
         const { list_type: t, list_item: o, children: r, ...l } = e,
-          { callbacks: c, view: u } = (0, i.wU)(),
-          m = s.useCallback((e) => void 0 !== (0, a.wt)(e.state, t), [t]),
-          [h, p] = s.useState(() => m(u)),
+          { callbacks: c, view: m } = (0, i.wU)(),
+          u = s.useCallback((e) => void 0 !== (0, a.wt)(e.state, t), [t]),
+          [h, p] = s.useState(() => u(m)),
           g = s.useMemo(() => n.Sd(t), [t]),
           f = s.useMemo(() => n.T2(o), [o]);
         return (
@@ -1672,9 +1687,9 @@
             c,
             s.useCallback(
               (e) => {
-                p(m(e));
+                p(u(e));
               },
-              [m],
+              [u],
             ),
           ),
           s.createElement(i.cQ, { ...l, toggled: h, command: h ? f : g }, r)
@@ -1683,7 +1698,7 @@
       function C(e) {
         const { schema: t, addtlAttrs: o } = e;
         return s.createElement(
-          u,
+          m,
           { schema: t, addtlAttrs: o },
           s.createElement(l.YqK, null),
         );
@@ -1707,11 +1722,11 @@
       "use strict";
       o.d(t, {
         Ez: () => k,
-        GY: () => B,
+        GY: () => T,
         XQ: () => _,
         bI: () => f,
-        cQ: () => T,
-        ff: () => S,
+        cQ: () => B,
+        ff: () => w,
         hK: () => C,
         u3: () => v,
         wU: () => g,
@@ -1724,8 +1739,8 @@
         c = o(32754),
         i = o(6144),
         d = o(52038),
-        u = o(61859),
-        m = o(73745),
+        m = o(61859),
+        u = o(73745),
         h = o(30470),
         p = o(73309);
       const g = () => s.useContext(b);
@@ -1735,8 +1750,8 @@
         n.current || (n.current = new i.lu()),
           s.useEffect(
             () => (
-              (0, m.cZ)(o, () => n.current.Dispatch(t)),
-              () => (0, m.cZ)(o, void 0)
+              (0, u.cZ)(o, () => n.current.Dispatch(t)),
+              () => (0, u.cZ)(o, void 0)
             ),
             [t, o],
           );
@@ -1763,43 +1778,43 @@
       function v(e) {
         const { nodeType: t, attrs: o, children: r, ...l } = e,
           { callbacks: c, view: i } = g(),
-          [d, u] = s.useState(() => (0, n.gj)(i.state, t, o)),
-          h = s.useCallback((e) => u((0, n.gj)(e.state, t, o)), [t, o]);
-        (0, m.hL)(c, h);
+          [d, m] = s.useState(() => (0, n.gj)(i.state, t, o)),
+          h = s.useCallback((e) => m((0, n.gj)(e.state, t, o)), [t, o]);
+        (0, u.hL)(c, h);
         const p = s.useMemo(() => a.y_(t, o), [o, t]);
-        return s.createElement(T, {
+        return s.createElement(B, {
           ...l,
           command: p,
           toggled: d,
           children: r,
         });
       }
-      function B(e) {
+      function T(e) {
         const { mark: t, children: o, ...r } = e,
           { callbacks: l, view: c } = g(),
           [i, d] = s.useState(() => (0, n.Cd)(c.state, t)),
-          u = s.useCallback((e) => d((0, n.Cd)(e.state, t)), [t]);
-        (0, m.hL)(l, u);
+          m = s.useCallback((e) => d((0, n.Cd)(e.state, t)), [t]);
+        (0, u.hL)(l, m);
         const h = s.useMemo(() => a.wh(t), [t]);
-        return s.createElement(T, {
+        return s.createElement(B, {
           ...r,
           command: h,
           toggled: i,
           children: o,
         });
       }
-      function T(e) {
+      function B(e) {
         const { command: t, toggled: o, children: r, ...n } = e,
           { view: a, callbacks: c } = g(),
-          [i, u] = s.useState(() => t(a.state));
-        (0, m.hL)(
+          [i, m] = s.useState(() => t(a.state));
+        (0, u.hL)(
           c,
-          s.useCallback((e) => u(t(e.state)), [t]),
+          s.useCallback((e) => m(t(e.state)), [t]),
         ),
-          s.useEffect(() => u(t(a.state)), [t, a]);
+          s.useEffect(() => m(t(a.state)), [t, a]);
         const h = !i && !o;
         return s.createElement(
-          w,
+          S,
           { ...n },
           s.createElement(
             l.$n,
@@ -1815,7 +1830,7 @@
           ),
         );
       }
-      function S(e) {
+      function w(e) {
         const {
           onClick: t,
           toggled: o,
@@ -1825,7 +1840,7 @@
           ...c
         } = e;
         return s.createElement(
-          w,
+          S,
           { ...c },
           s.createElement(
             l.$n,
@@ -1840,11 +1855,11 @@
           ),
         );
       }
-      function w(e) {
+      function S(e) {
         const { tooltip: t, keyboardShortcut: o, children: r } = e;
         if (!t) return r;
         const n = o
-          ? s.createElement(A, { tooltip: t, keyboardShortcut: o })
+          ? s.createElement(y, { tooltip: t, keyboardShortcut: o })
           : t;
         return s.createElement(
           c.Gq,
@@ -1852,20 +1867,20 @@
           r,
         );
       }
-      function A(e) {
+      function y(e) {
         const { tooltip: t, keyboardShortcut: o } = e;
         return s.createElement(
           "div",
           { className: p.TooltipWithShortcut },
-          s.createElement("div", null, (0, u.we)(t)),
+          s.createElement("div", null, (0, m.we)(t)),
           s.createElement(
             "div",
             null,
-            s.createElement(y, { keyboardShortcut: o }),
+            s.createElement(A, { keyboardShortcut: o }),
           ),
         );
       }
-      function y(e) {
+      function A(e) {
         const { keyboardShortcut: t } = e,
           o = t.split("-"),
           r = o.pop();

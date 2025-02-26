@@ -4,7 +4,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5422],
   {
-    54643: (e, t, n) => {
+    47237: (e, t, n) => {
       function r(e) {
         return (
           (r =
@@ -1622,8 +1622,8 @@
           }
         );
       }
-      const St = f.useLayoutEffect;
-      var Et = [
+      var St = f.useLayoutEffect,
+        Et = [
           "className",
           "clearValue",
           "cx",
@@ -2993,7 +2993,7 @@
           height: "100%",
         };
       function Yn(e) {
-        e.preventDefault();
+        e.cancelable && e.preventDefault();
       }
       function qn(e) {
         e.stopPropagation();
@@ -3980,7 +3980,7 @@
                   n = t[t.length - 1],
                   o = t.slice(0, t.length - 1),
                   i = _t(e, o, o[0] || null);
-                r.onChange(i, { action: "pop-value", removedValue: n });
+                n && r.onChange(i, { action: "pop-value", removedValue: n });
               }),
               (r.getFocusedOptionId = function (e) {
                 return gr(r.state.focusableOptionsWithIds, e);

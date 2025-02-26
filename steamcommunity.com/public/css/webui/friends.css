@@ -2318,11 +2318,19 @@ b {
   float: right;
 }
 .partnereventshared_CloseSectionTools_1d0D9 .DialogButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 4px;
-  width: 40px;
+  width: 24px;
+  height: 24px;
 }
-.partnereventshared_CloseSectionTools_1d0D9 .SVGIcon_Button rect,
-.partnereventshared_CloseSectionTools_1d0D9 .SVGIcon_Button line {
+.partnereventshared_CloseSectionTools_1d0D9 .DialogButton .SVGIcon_Button {
+  height: 16px;
+  width: 16px;
+}
+.partnereventshared_CloseSectionTools_1d0D9 .DialogButton .SVGIcon_Button rect,
+.partnereventshared_CloseSectionTools_1d0D9 .DialogButton .SVGIcon_Button line {
   stroke: #fff;
 }
 .partnereventshared_HalfColumn_3Xmp4 {
@@ -2351,6 +2359,10 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   margin-bottom: 8px;
 }
 .partnereventshared_SaleSectionHeader_2WMiQ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
   font-weight: 400;
   letter-spacing: .05em;
   font-size: 18px;
@@ -2408,7 +2420,9 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   opacity: 1;
 }
 .partnereventshared_SaleSectionHeader_2WMiQ span {
-  color: #fff;
+  color: #ffffff61;
+  flex-grow: 1;
+  margin-left: 4px;
 }
 .partnereventshared_JumpToButton_c4K67 {
   font-size: 12px;
@@ -3338,6 +3352,12 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:active.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary {
   background: rgba(255, 255, 255, 0.15);
+}
+button.gamepaddialog_Button_cXzBZ.DialogButton.Stacked,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.Stacked,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.Stacked,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Stacked {
+  margin-bottom: 10px;
 }
 button.gamepaddialog_Button_cXzBZ.DialogButton.EmptyButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.EmptyButton,
@@ -8868,8 +8888,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   justify-content: center;
   align-items: center;
 }
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe SVG,
-.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw SVG {
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe svg,
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw svg {
   width: 24px;
   height: 24px;
   color: #898989;
@@ -49044,6 +49064,7 @@ html.web_chat_frame .perf_timing_area {
 }
 .HorizontalMiniSliderScroll {
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .voiceDebugHeader {
   background-color: #22252b;

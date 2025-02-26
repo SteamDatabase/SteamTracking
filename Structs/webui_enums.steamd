@@ -1236,6 +1236,12 @@ enum TemplateFAQDisplay
 	TemplateFAQDisplaySimpleRow = 2;
 }
 
+enum UnnamedEnum001b037885a2ecde
+{
+	Above = 0;
+	Below = 1;
+}
+
 enum UnnamedEnum0088a21d353911da
 {
 	Achievements = 0;
@@ -2158,6 +2164,18 @@ enum UnnamedEnum47122ffa63e68b01
 	Spacer25 = 11;
 }
 
+enum UnnamedEnum471e3e64aa2bef23
+{
+	Normal = 1;
+	Underlined = 2;
+}
+
+enum UnnamedEnum47b7ac73961f4d6d
+{
+	Automatic = 0;
+	PasteAs = 1;
+}
+
 enum UnnamedEnum48a0b37c58c83454
 {
 	INVALID = undefined;
@@ -2746,6 +2764,18 @@ enum UnnamedEnum6010fbb978b95cf2
 	Enabled = 2;
 }
 
+enum UnnamedEnum6645bbd3618ce340
+{
+	Title = 1;
+	Inline = 2;
+}
+
+enum UnnamedEnum67c7e176cced8c1b
+{
+	Increase = 0;
+	Decrease = 1;
+}
+
 enum UnnamedEnum67e7921661046ee2
 {
 	New = 1;
@@ -3158,6 +3188,13 @@ enum UnnamedEnum7282757b17cca874
 	Error = 3;
 }
 
+enum UnnamedEnum7396c7f5b0045fc8
+{
+	Left = 1;
+	Center = 2;
+	Right = 3;
+}
+
 enum UnnamedEnum73fab2eb67048082
 {
 	Error = undefined;
@@ -3242,6 +3279,161 @@ enum UnnamedEnum80fde622b7ffb8a2
 	Minimap = 2;
 }
 
+enum UnnamedEnum832449b80e67603d
+{
+	acceptSuggestionOnCommitCharacter = 0;
+	acceptSuggestionOnEnter = 1;
+	accessibilitySupport = 2;
+	accessibilityPageSize = 3;
+	ariaLabel = 4;
+	ariaRequired = 5;
+	autoClosingBrackets = 6;
+	autoClosingComments = 7;
+	screenReaderAnnounceInlineSuggestion = 8;
+	autoClosingDelete = 9;
+	autoClosingOvertype = 10;
+	autoClosingQuotes = 11;
+	autoIndent = 12;
+	automaticLayout = 13;
+	autoSurround = 14;
+	bracketPairColorization = 15;
+	guides = 16;
+	codeLens = 17;
+	codeLensFontFamily = 18;
+	codeLensFontSize = 19;
+	colorDecorators = 20;
+	colorDecoratorsLimit = 21;
+	columnSelection = 22;
+	comments = 23;
+	contextmenu = 24;
+	copyWithSyntaxHighlighting = 25;
+	cursorBlinking = 26;
+	cursorSmoothCaretAnimation = 27;
+	cursorStyle = 28;
+	cursorSurroundingLines = 29;
+	cursorSurroundingLinesStyle = 30;
+	cursorWidth = 31;
+	disableLayerHinting = 32;
+	disableMonospaceOptimizations = 33;
+	domReadOnly = 34;
+	dragAndDrop = 35;
+	dropIntoEditor = 36;
+	emptySelectionClipboard = 37;
+	experimentalWhitespaceRendering = 38;
+	extraEditorClassName = 39;
+	fastScrollSensitivity = 40;
+	find = 41;
+	fixedOverflowWidgets = 42;
+	folding = 43;
+	foldingStrategy = 44;
+	foldingHighlight = 45;
+	foldingImportsByDefault = 46;
+	foldingMaximumRegions = 47;
+	unfoldOnClickAfterEndOfLine = 48;
+	fontFamily = 49;
+	fontInfo = 50;
+	fontLigatures = 51;
+	fontSize = 52;
+	fontWeight = 53;
+	fontVariations = 54;
+	formatOnPaste = 55;
+	formatOnType = 56;
+	glyphMargin = 57;
+	gotoLocation = 58;
+	hideCursorInOverviewRuler = 59;
+	hover = 60;
+	inDiffEditor = 61;
+	inlineSuggest = 62;
+	inlineEdit = 63;
+	letterSpacing = 64;
+	lightbulb = 65;
+	lineDecorationsWidth = 66;
+	lineHeight = 67;
+	lineNumbers = 68;
+	lineNumbersMinChars = 69;
+	linkedEditing = 70;
+	links = 71;
+	matchBrackets = 72;
+	minimap = 73;
+	mouseStyle = 74;
+	mouseWheelScrollSensitivity = 75;
+	mouseWheelZoom = 76;
+	multiCursorMergeOverlapping = 77;
+	multiCursorModifier = 78;
+	multiCursorPaste = 79;
+	multiCursorLimit = 80;
+	occurrencesHighlight = 81;
+	overviewRulerBorder = 82;
+	overviewRulerLanes = 83;
+	padding = 84;
+	pasteAs = 85;
+	parameterHints = 86;
+	peekWidgetDefaultFocus = 87;
+	placeholder = 88;
+	definitionLinkOpensInPeek = 89;
+	quickSuggestions = 90;
+	quickSuggestionsDelay = 91;
+	readOnly = 92;
+	readOnlyMessage = 93;
+	renameOnType = 94;
+	renderControlCharacters = 95;
+	renderFinalNewline = 96;
+	renderLineHighlight = 97;
+	renderLineHighlightOnlyWhenFocus = 98;
+	renderValidationDecorations = 99;
+	renderWhitespace = 100;
+	revealHorizontalRightPadding = 101;
+	roundedSelection = 102;
+	rulers = 103;
+	scrollbar = 104;
+	scrollBeyondLastColumn = 105;
+	scrollBeyondLastLine = 106;
+	scrollPredominantAxis = 107;
+	selectionClipboard = 108;
+	selectionHighlight = 109;
+	selectOnLineNumbers = 110;
+	showFoldingControls = 111;
+	showUnused = 112;
+	snippetSuggestions = 113;
+	smartSelect = 114;
+	smoothScrolling = 115;
+	stickyScroll = 116;
+	stickyTabStops = 117;
+	stopRenderingLineAfter = 118;
+	suggest = 119;
+	suggestFontSize = 120;
+	suggestLineHeight = 121;
+	suggestOnTriggerCharacters = 122;
+	suggestSelection = 123;
+	tabCompletion = 124;
+	tabIndex = 125;
+	unicodeHighlighting = 126;
+	unusualLineTerminators = 127;
+	useShadowDOM = 128;
+	useTabStops = 129;
+	wordBreak = 130;
+	wordSegmenterLocales = 131;
+	wordSeparators = 132;
+	wordWrap = 133;
+	wordWrapBreakAfterCharacters = 134;
+	wordWrapBreakBeforeCharacters = 135;
+	wordWrapColumn = 136;
+	wordWrapOverride1 = 137;
+	wordWrapOverride2 = 138;
+	wrappingIndent = 139;
+	wrappingStrategy = 140;
+	showDeprecated = 141;
+	inlayHints = 142;
+	editorClassName = 143;
+	pixelRatio = 144;
+	tabFocusMode = 145;
+	layoutInfo = 146;
+	wrappingInfo = 147;
+	defaultColorDecorators = 148;
+	colorDecoratorsActivatedOn = 149;
+	inlineCompletionsAccessibilityVerbose = 150;
+}
+
 enum UnnamedEnum8344648dd138f1b0
 {
 	k_eInsertThumbnail = 1;
@@ -3275,6 +3467,19 @@ enum UnnamedEnum84f925970b2abf75
 {
 	Up = undefined;
 	Down = 1;
+}
+
+enum UnnamedEnum8668c3344a2974ee
+{
+	First = 1;
+	Second = 2;
+	Last = 3;
+	Next = 4;
+	Previous = 5;
+	NextPage = 6;
+	PreviousPage = 7;
+	NextSeparator = 8;
+	PreviousSeparator = 9;
 }
 
 enum UnnamedEnum866d82e66e6a644d
@@ -3335,6 +3540,13 @@ enum UnnamedEnum8ef72a4728e00658
 	Invoke = 1;
 	TriggerCharacter = 2;
 	ContentChange = 3;
+}
+
+enum UnnamedEnum8ff352285a57e444
+{
+	Word = 0;
+	Line = 1;
+	Suggest = 2;
 }
 
 enum UnnamedEnum940ff890eb1bf26e
@@ -3965,6 +4177,12 @@ enum UnnamedEnumbeac8bc198152282
 	LOADING_ERROR = 6;
 }
 
+enum UnnamedEnumbed52b1352908d10
+{
+	Invoke = 0;
+	Automatic = 1;
+}
+
 enum UnnamedEnumbf94e43b6037649d
 {
 	Close = undefined;
@@ -4475,6 +4693,13 @@ enum UnnamedEnumee13fc02f2c6851d
 	SlidingEdge = 5;
 }
 
+enum UnnamedEnumf0865f3c163d92e3
+{
+	Single = 0;
+	MultiPrimary = 1;
+	MultiSecondary = 2;
+}
+
 enum UnnamedEnumf126cd872c06e76e
 {
 	None = 0;
@@ -4660,6 +4885,13 @@ enum UnnamedEnumffd68c07d15832e4
 	CLOSE_PICKER = 1;
 	REFRESH_PICKER = 2;
 	REMOVE_ITEM = 3;
+}
+
+enum UnnamedEnumfffa6d846ba9b8ac
+{
+	NONE = 0;
+	MOUSE_HOVER = 1;
+	ACTIVE_ITEM = 2;
 }
 
 enum VRInitError

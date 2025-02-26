@@ -2264,7 +2264,7 @@
         d = a(55263),
         u = a(33737),
         E = a(27658),
-        I = a(53418),
+        I = a(95606),
         _ = a(35685),
         h = a(9709),
         v = a(96866),
@@ -3614,7 +3614,7 @@
     },
     27650: (e, t, a) => {
       "use strict";
-      a.d(t, { DB: () => s, Ss: () => o, hk: () => i });
+      a.d(t, { DB: () => s, PW: () => m, Ss: () => o, hk: () => i });
       var n = a(90626),
         l = a(72739),
         r = a(56011);
@@ -3685,6 +3685,19 @@
       }
       function c(e) {
         e.preventDefault();
+      }
+      function m(e) {
+        switch (e.type) {
+          case "image/jpeg":
+            return "jpg";
+          case "image/png":
+            return "png";
+          case "image/gif":
+            return "gif";
+          default:
+            const t = e.name.match(/(?<=\.)[^.]+$/);
+            return t ? t[0] : void 0;
+        }
       }
     },
     59461: (e, t, a) => {

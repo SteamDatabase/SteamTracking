@@ -6,8 +6,8 @@
   [1134],
   {
     38877: (e, t) => {
-      var o,
-        n = Symbol.for("react.element"),
+      var n,
+        o = Symbol.for("react.element"),
         r = Symbol.for("react.portal"),
         i = Symbol.for("react.fragment"),
         s = Symbol.for("react.strict_mode"),
@@ -25,7 +25,7 @@
         if ("object" == typeof e && null !== e) {
           var t = e.$$typeof;
           switch (t) {
-            case n:
+            case o:
               switch ((e = e.type)) {
                 case i:
                 case a:
@@ -51,17 +51,20 @@
           }
         }
       }
-      (o = Symbol.for("react.module.reference")),
+      (n = Symbol.for("react.module.reference")),
         (t.isForwardRef = function (e) {
           return m(e) === f;
+        }),
+        (t.isFragment = function (e) {
+          return m(e) === i;
         });
     },
-    98193: (e, t, o) => {
-      e.exports = o(38877);
+    98193: (e, t, n) => {
+      e.exports = n(38877);
     },
-    94607: (e, t, o) => {
-      o.d(t, { Y: () => _ });
-      var n = o(42891),
+    94607: (e, t, n) => {
+      n.d(t, { Y: () => _ });
+      var o = n(42891),
         r = !(
           "undefined" == typeof window ||
           !window.document ||
@@ -86,9 +89,9 @@
                       e = !0;
                     },
                   }),
-                  o = function () {};
-                window.addEventListener("testPassiveEventSupport", o, t),
-                  window.removeEventListener("testPassiveEventSupport", o, t);
+                  n = function () {};
+                window.addEventListener("testPassiveEventSupport", n, t),
+                  window.removeEventListener("testPassiveEventSupport", n, t);
               } catch (e) {}
               return e;
             })()),
@@ -102,38 +105,38 @@
         (this.target = e), (this.events = {});
       }
       (l.prototype.getEventHandlers = function (e, t) {
-        var o,
-          n =
+        var n,
+          o =
             String(e) +
             " " +
             String(
-              (o = t)
-                ? !0 === o
+              (n = t)
+                ? !0 === n
                   ? 100
-                  : (o.capture << 0) + (o.passive << 1) + (o.once << 2)
+                  : (n.capture << 0) + (n.passive << 1) + (n.once << 2)
                 : 0,
             );
         return (
-          this.events[n] ||
-            ((this.events[n] = { handlers: [], handleEvent: void 0 }),
-            (this.events[n].nextHandlers = this.events[n].handlers)),
-          this.events[n]
+          this.events[o] ||
+            ((this.events[o] = { handlers: [], handleEvent: void 0 }),
+            (this.events[o].nextHandlers = this.events[o].handlers)),
+          this.events[o]
         );
       }),
-        (l.prototype.handleEvent = function (e, t, o) {
-          var n = this.getEventHandlers(e, t);
-          (n.handlers = n.nextHandlers),
-            n.handlers.forEach(function (e) {
-              e && e(o);
+        (l.prototype.handleEvent = function (e, t, n) {
+          var o = this.getEventHandlers(e, t);
+          (o.handlers = o.nextHandlers),
+            o.handlers.forEach(function (e) {
+              e && e(n);
             });
         }),
-        (l.prototype.add = function (e, t, o) {
-          var n = this,
-            r = this.getEventHandlers(e, o);
+        (l.prototype.add = function (e, t, n) {
+          var o = this,
+            r = this.getEventHandlers(e, n);
           a(r),
             0 === r.nextHandlers.length &&
-              ((r.handleEvent = this.handleEvent.bind(this, e, o)),
-              this.target.addEventListener(e, r.handleEvent, o)),
+              ((r.handleEvent = this.handleEvent.bind(this, e, n)),
+              this.target.addEventListener(e, r.handleEvent, n)),
             r.nextHandlers.push(t);
           var i = !0;
           return function () {
@@ -142,32 +145,32 @@
               var s = r.nextHandlers.indexOf(t);
               r.nextHandlers.splice(s, 1),
                 0 === r.nextHandlers.length &&
-                  (n.target &&
-                    n.target.removeEventListener(e, r.handleEvent, o),
+                  (o.target &&
+                    o.target.removeEventListener(e, r.handleEvent, n),
                   (r.handleEvent = void 0));
             }
           };
         });
       var c = "__consolidated_events_handlers__";
-      function p(e, t, o, n) {
+      function p(e, t, n, o) {
         e[c] || (e[c] = new l(e));
         var r = (function (e) {
           if (e) return s() ? e : !!e.capture;
-        })(n);
-        return e[c].add(t, o, r);
+        })(o);
+        return e[c].add(t, n, r);
       }
-      var f = o(90626),
-        u = o(98193);
+      var f = n(90626),
+        u = n(98193);
       function d(e, t) {
-        var o,
-          n =
-            ((o = e),
-            !isNaN(parseFloat(o)) && isFinite(o)
-              ? parseFloat(o)
-              : "px" === o.slice(-2)
-                ? parseFloat(o.slice(0, -2))
+        var n,
+          o =
+            ((n = e),
+            !isNaN(parseFloat(n)) && isFinite(n)
+              ? parseFloat(n)
+              : "px" === n.slice(-2)
+                ? parseFloat(n.slice(0, -2))
                 : void 0);
-        if ("number" == typeof n) return n;
+        if ("number" == typeof o) return o;
         var r = (function (e) {
           if ("%" === e.slice(-1)) return parseFloat(e.slice(0, -1)) / 100;
         })(e);
@@ -193,9 +196,9 @@
         return function () {
           if (t) {
             t = !1;
-            var o = g.indexOf(e);
-            -1 !== o &&
-              (g.splice(o, 1), !g.length && b && (clearTimeout(b), (b = null)));
+            var n = g.indexOf(e);
+            -1 !== n &&
+              (g.splice(n, 1), !g.length && b && (clearTimeout(b), (b = null)));
           }
         };
       }
@@ -214,15 +217,15 @@
         },
         _ = (function (e) {
           function t(t) {
-            var o;
+            var n;
             return (
-              ((o = e.call(this, t) || this).refElement = function (e) {
-                o._ref = e;
+              ((n = e.call(this, t) || this).refElement = function (e) {
+                n._ref = e;
               }),
-              o
+              n
             );
           }
-          (0, n.A)(t, e);
+          (0, o.A)(t, e);
           var r = t.prototype;
           return (
             (r.componentDidMount = function () {
@@ -231,14 +234,14 @@
                 (this.cancelOnNextTick = E(function () {
                   e.cancelOnNextTick = null;
                   var t = e.props,
-                    o = t.children;
+                    n = t.children;
                   t.debug;
                   !(function (e, t) {
                     if (e && !y(e) && !t)
                       throw new Error(
                         "<Waypoint> needs a DOM element to compute boundaries. The child you passed is neither a DOM element (e.g. <div>) nor does it use the innerRef prop.\n\nSee https://goo.gl/LrBNgw for more info.",
                       );
-                  })(o, e._ref),
+                  })(n, e._ref),
                     (e._handleScroll = e._handleScroll.bind(e)),
                     (e.scrollableAncestor = e._findScrollableAncestor()),
                     (e.scrollEventListenerUnsubscribe = p(
@@ -276,11 +279,11 @@
             (r._findScrollableAncestor = function () {
               var e = this.props,
                 t = e.horizontal,
-                n = e.scrollableAncestor;
-              if (n)
+                o = e.scrollableAncestor;
+              if (o)
                 return (function (e) {
-                  return "window" === e ? o.g.window : e;
-                })(n);
+                  return "window" === e ? n.g.window : e;
+                })(o);
               for (var r = this._ref; r.parentNode; ) {
                 if ((r = r.parentNode) === document.body) return window;
                 var i = window.getComputedStyle(r),
@@ -296,7 +299,7 @@
             (r._handleScroll = function (e) {
               if (this._ref) {
                 var t = this._getBounds(),
-                  o = (function (e) {
+                  n = (function (e) {
                     return e.viewportBottom - e.viewportTop == 0
                       ? m
                       : (e.viewportTop <= e.waypointTop &&
@@ -312,16 +315,16 @@
                             ? v
                             : m;
                   })(t),
-                  n = this._previousPosition,
+                  o = this._previousPosition,
                   r = this.props,
                   i = (r.debug, r.onPositionChange),
                   s = r.onEnter,
                   a = r.onLeave,
                   l = r.fireOnRapidScroll;
-                if (((this._previousPosition = o), n !== o)) {
+                if (((this._previousPosition = n), o !== n)) {
                   var c = {
-                    currentPosition: o,
-                    previousPosition: n,
+                    currentPosition: n,
+                    previousPosition: o,
                     event: e,
                     waypointTop: t.waypointTop,
                     waypointBottom: t.waypointBottom,
@@ -329,12 +332,12 @@
                     viewportBottom: t.viewportBottom,
                   };
                   i.call(this, c),
-                    o === h ? s.call(this, c) : n === h && a.call(this, c),
+                    n === h ? s.call(this, c) : o === h && a.call(this, c),
                     l &&
-                      ((n === w && o === v) || (n === v && o === w)) &&
+                      ((o === w && n === v) || (o === v && n === w)) &&
                       (s.call(this, {
                         currentPosition: h,
-                        previousPosition: n,
+                        previousPosition: o,
                         event: e,
                         waypointTop: t.waypointTop,
                         waypointBottom: t.waypointBottom,
@@ -342,7 +345,7 @@
                         viewportBottom: t.viewportBottom,
                       }),
                       a.call(this, {
-                        currentPosition: o,
+                        currentPosition: n,
                         previousPosition: h,
                         event: e,
                         waypointTop: t.waypointTop,
@@ -356,21 +359,21 @@
             (r._getBounds = function () {
               var e,
                 t,
-                o = this.props,
-                n = o.horizontal,
-                r = (o.debug, this._ref.getBoundingClientRect()),
+                n = this.props,
+                o = n.horizontal,
+                r = (n.debug, this._ref.getBoundingClientRect()),
                 i = r.left,
                 s = r.top,
                 a = r.right,
                 l = r.bottom,
-                c = n ? i : s,
-                p = n ? a : l;
+                c = o ? i : s,
+                p = o ? a : l;
               this.scrollableAncestor === window
-                ? ((e = n ? window.innerWidth : window.innerHeight), (t = 0))
-                : ((e = n
+                ? ((e = o ? window.innerWidth : window.innerHeight), (t = 0))
+                : ((e = o
                     ? this.scrollableAncestor.offsetWidth
                     : this.scrollableAncestor.offsetHeight),
-                  (t = n
+                  (t = o
                     ? this.scrollableAncestor.getBoundingClientRect().left
                     : this.scrollableAncestor.getBoundingClientRect().top));
               var f = this.props,
@@ -392,12 +395,12 @@
                 });
               if (y(t) || (0, u.isForwardRef)(t)) {
                 return f.cloneElement(t, {
-                  ref: function (o) {
-                    e.refElement(o),
+                  ref: function (n) {
+                    e.refElement(n),
                       t.ref &&
                         ("function" == typeof t.ref
-                          ? t.ref(o)
-                          : (t.ref.current = o));
+                          ? t.ref(n)
+                          : (t.ref.current = n));
                   },
                 });
               }

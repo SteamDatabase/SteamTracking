@@ -13,26 +13,26 @@
     },
     42529: (e, t, r) => {
       var n = r(16869),
-        i = r(31517),
-        o = r(12507);
+        o = r(31517),
+        i = r(12507);
       e.exports = function (e, t) {
-        return e && e.length ? n(e, o(t, 2), i) : void 0;
+        return e && e.length ? n(e, i(t, 2), o) : void 0;
       };
     },
     11027: (e, t, r) => {
       var n = r(16869),
-        i = r(12507),
-        o = r(40106);
+        o = r(12507),
+        i = r(40106);
       e.exports = function (e, t) {
-        return e && e.length ? n(e, i(t, 2), o) : void 0;
+        return e && e.length ? n(e, o(t, 2), i) : void 0;
       };
     },
     91843: (e, t, r) => {
       "use strict";
       r.d(t, { r: () => s });
-      var n = r(58920),
-        i = r(79191),
-        o = r(66490),
+      var n = r(1839),
+        o = r(79191),
+        i = r(66490),
         a = r(50322),
         c = r(9495),
         s = (0, n.gu)({
@@ -42,8 +42,8 @@
           defaultTooltipEventType: "item",
           legendContent: "children",
           axisComponents: [
-            { axisType: "angleAxis", AxisComp: i.r },
-            { axisType: "radiusAxis", AxisComp: o.E },
+            { axisType: "angleAxis", AxisComp: o.r },
+            { axisType: "radiusAxis", AxisComp: i.E },
           ],
           formatAxisMap: a.pr,
           defaultProps: {
@@ -60,16 +60,16 @@
     55709: (e, t, r) => {
       "use strict";
       r.d(t, { V: () => s });
-      var n = r(58920),
-        i = r(70365),
-        o = r(79191),
+      var n = r(1839),
+        o = r(70365),
+        i = r(79191),
         a = r(66490),
         c = r(50322),
         s = (0, n.gu)({
           chartName: "RadarChart",
-          GraphicalChild: i.V,
+          GraphicalChild: o.V,
           axisComponents: [
-            { axisType: "angleAxis", AxisComp: o.r },
+            { axisType: "angleAxis", AxisComp: i.r },
             { axisType: "radiusAxis", AxisComp: a.E },
           ],
           formatAxisMap: c.pr,
@@ -88,8 +88,8 @@
       "use strict";
       r.d(t, { F: () => Z });
       var n,
-        i = r(90626),
-        o = r(85882),
+        o = r(90626),
+        i = r(57487),
         a = r(52686),
         c = r.n(a),
         s = r(58782),
@@ -101,8 +101,8 @@
         d = r(90018),
         m = r(49891),
         v = r(68428),
-        h = r(9675),
-        b = r(39864),
+        b = r(9675),
+        h = r(39864),
         g = r(94816),
         O = r(49404),
         A = r(50247),
@@ -110,8 +110,8 @@
         j = r(50322),
         P = r(91038),
         k = r(89998),
-        E = r(97380),
-        w = r(62426),
+        w = r(97380),
+        E = r(62426),
         S = r(17798);
       function R(e) {
         return (
@@ -158,7 +158,7 @@
         }
         return r;
       }
-      function D(e) {
+      function N(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -177,7 +177,7 @@
         }
         return e;
       }
-      function N(e, t) {
+      function D(e, t) {
         for (var r = 0; r < t.length; r++) {
           var n = t[r];
           (n.enumerable = n.enumerable || !1),
@@ -186,64 +186,58 @@
             Object.defineProperty(e, M(n.key), n);
         }
       }
-      function L(e, t) {
+      function L(e, t, r) {
         return (
-          (L = Object.setPrototypeOf
-            ? Object.setPrototypeOf.bind()
-            : function (e, t) {
-                return (e.__proto__ = t), e;
-              }),
-          L(e, t)
-        );
-      }
-      function C(e) {
-        var t = (function () {
-          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-          if (Reflect.construct.sham) return !1;
-          if ("function" == typeof Proxy) return !0;
-          try {
-            return (
-              Boolean.prototype.valueOf.call(
-                Reflect.construct(Boolean, [], function () {}),
-              ),
-              !0
-            );
-          } catch (e) {
-            return !1;
-          }
-        })();
-        return function () {
-          var r,
-            n = _(e);
-          if (t) {
-            var i = _(this).constructor;
-            r = Reflect.construct(n, arguments, i);
-          } else r = n.apply(this, arguments);
-          return (function (e, t) {
+          (t = F(t)),
+          (function (e, t) {
             if (t && ("object" === R(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return F(e);
-          })(this, r);
-        };
+            return (function (e) {
+              if (void 0 === e)
+                throw new ReferenceError(
+                  "this hasn't been initialised - super() hasn't been called",
+                );
+              return e;
+            })(e);
+          })(
+            e,
+            C()
+              ? Reflect.construct(t, r || [], F(e).constructor)
+              : t.apply(e, r),
+          )
+        );
+      }
+      function C() {
+        try {
+          var e = !Boolean.prototype.valueOf.call(
+            Reflect.construct(Boolean, [], function () {}),
+          );
+        } catch (e) {}
+        return (C = function () {
+          return !!e;
+        })();
       }
       function F(e) {
-        if (void 0 === e)
-          throw new ReferenceError(
-            "this hasn't been initialised - super() hasn't been called",
-          );
-        return e;
-      }
-      function _(e) {
         return (
-          (_ = Object.setPrototypeOf
+          (F = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          _(e)
+          F(e)
+        );
+      }
+      function _(e, t) {
+        return (
+          (_ = Object.setPrototypeOf
+            ? Object.setPrototypeOf.bind()
+            : function (e, t) {
+                return (e.__proto__ = t), e;
+              }),
+          _(e, t)
         );
       }
       function J(e, t, r) {
@@ -261,63 +255,59 @@
       }
       function M(e) {
         var t = (function (e, t) {
-          if ("object" !== R(e) || null === e) return e;
+          if ("object" != R(e) || !e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(e, t || "default");
-            if ("object" !== R(n)) return n;
+            if ("object" != R(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === R(t) ? t : String(t);
+        return "symbol" == R(t) ? t : t + "";
       }
       var Z = (function (e) {
-        !(function (e, t) {
-          if ("function" != typeof t && null !== t)
-            throw new TypeError(
-              "Super expression must either be null or a function",
-            );
-          (e.prototype = Object.create(t && t.prototype, {
-            constructor: { value: e, writable: !0, configurable: !0 },
-          })),
-            Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && L(e, t);
-        })(s, e);
-        var t,
-          r,
-          n,
-          a = C(s);
-        function s(e) {
-          var t;
+        function t(e) {
+          var r;
           return (
             (function (e, t) {
               if (!(e instanceof t))
                 throw new TypeError("Cannot call a class as a function");
-            })(this, s),
-            J(F((t = a.call(this, e))), "pieRef", null),
-            J(F(t), "sectorRefs", []),
-            J(F(t), "id", (0, P.NF)("recharts-pie-")),
-            J(F(t), "handleAnimationEnd", function () {
-              var e = t.props.onAnimationEnd;
-              t.setState({ isAnimationFinished: !0 }), y()(e) && e();
+            })(this, t),
+            J((r = L(this, t, [e])), "pieRef", null),
+            J(r, "sectorRefs", []),
+            J(r, "id", (0, P.NF)("recharts-pie-")),
+            J(r, "handleAnimationEnd", function () {
+              var e = r.props.onAnimationEnd;
+              r.setState({ isAnimationFinished: !0 }), y()(e) && e();
             }),
-            J(F(t), "handleAnimationStart", function () {
-              var e = t.props.onAnimationStart;
-              t.setState({ isAnimationFinished: !1 }), y()(e) && e();
+            J(r, "handleAnimationStart", function () {
+              var e = r.props.onAnimationStart;
+              r.setState({ isAnimationFinished: !1 }), y()(e) && e();
             }),
-            (t.state = {
+            (r.state = {
               isAnimationFinished: !e.isAnimationActive,
               prevIsAnimationActive: e.isAnimationActive,
               prevAnimationId: e.animationId,
               sectorToFocus: 0,
             }),
-            t
+            r
           );
         }
         return (
-          (t = s),
-          (n = [
+          (function (e, t) {
+            if ("function" != typeof t && null !== t)
+              throw new TypeError(
+                "Super expression must either be null or a function",
+              );
+            (e.prototype = Object.create(t && t.prototype, {
+              constructor: { value: e, writable: !0, configurable: !0 },
+            })),
+              Object.defineProperty(e, "prototype", { writable: !1 }),
+              t && _(e, t);
+          })(t, e),
+          (r = t),
+          (a = [
             {
               key: "getDerivedStateFromProps",
               value: function (e, t) {
@@ -349,39 +339,38 @@
             },
             {
               key: "renderLabelLineItem",
-              value: function (e, t) {
-                return i.isValidElement(e)
-                  ? i.cloneElement(e, t)
-                  : y()(e)
-                    ? e(t)
-                    : i.createElement(
-                        v.I,
-                        T({}, t, {
-                          type: "linear",
-                          className: "recharts-pie-label-line",
-                        }),
-                      );
+              value: function (e, t, r) {
+                if (o.isValidElement(e)) return o.cloneElement(e, t);
+                if (y()(e)) return e(t);
+                var n = (0, d.A)(
+                  "recharts-pie-label-line",
+                  "boolean" != typeof e ? e.className : "",
+                );
+                return o.createElement(
+                  v.I,
+                  T({}, t, { key: r, type: "linear", className: n }),
+                );
               },
             },
             {
               key: "renderLabelItem",
               value: function (e, t, r) {
-                if (i.isValidElement(e)) return i.cloneElement(e, t);
+                if (o.isValidElement(e)) return o.cloneElement(e, t);
                 var n = r;
-                return y()(e) && ((n = e(t)), i.isValidElement(n))
-                  ? n
-                  : i.createElement(
-                      h.E,
-                      T({}, t, {
-                        alignmentBaseline: "middle",
-                        className: "recharts-pie-label-text",
-                      }),
-                      n,
-                    );
+                if (y()(e) && ((n = e(t)), o.isValidElement(n))) return n;
+                var i = (0, d.A)(
+                  "recharts-pie-label-text",
+                  "boolean" == typeof e || y()(e) ? "" : e.className,
+                );
+                return o.createElement(
+                  b.E,
+                  T({}, t, { alignmentBaseline: "middle", className: i }),
+                  n,
+                );
               },
             },
           ]),
-          (r = [
+          (n = [
             {
               key: "isActiveIndex",
               value: function (e) {
@@ -404,54 +393,55 @@
                   !this.state.isAnimationFinished
                 )
                   return null;
-                var t = this.props,
-                  r = t.label,
-                  n = t.labelLine,
-                  o = t.dataKey,
-                  a = t.valueKey,
-                  c = (0, A.J9)(this.props),
-                  l = (0, A.J9)(r),
-                  u = (0, A.J9)(n),
-                  f = (r && r.offsetRadius) || 20,
-                  y = e.map(function (e, t) {
+                var r = this.props,
+                  n = r.label,
+                  i = r.labelLine,
+                  a = r.dataKey,
+                  c = r.valueKey,
+                  s = (0, A.J9)(this.props, !1),
+                  l = (0, A.J9)(n, !1),
+                  u = (0, A.J9)(i, !1),
+                  f = (n && n.offsetRadius) || 20,
+                  y = e.map(function (e, r) {
                     var y = (e.startAngle + e.endAngle) / 2,
                       d = (0, j.IZ)(e.cx, e.cy, e.outerRadius + f, y),
-                      v = D(
-                        D(D(D({}, c), e), {}, { stroke: "none" }, l),
+                      v = N(
+                        N(N(N({}, s), e), {}, { stroke: "none" }, l),
                         {},
-                        { index: t, textAnchor: s.getTextAnchor(d.x, e.cx) },
+                        { index: r, textAnchor: t.getTextAnchor(d.x, e.cx) },
                         d,
                       ),
-                      h = D(
-                        D(
-                          D(D({}, c), e),
+                      b = N(
+                        N(
+                          N(N({}, s), e),
                           {},
                           { fill: "none", stroke: e.fill },
                           u,
                         ),
                         {},
                         {
-                          index: t,
+                          index: r,
                           points: [(0, j.IZ)(e.cx, e.cy, e.outerRadius, y), d],
-                          key: "line",
                         },
                       ),
-                      b = o;
+                      h = a;
                     return (
-                      p()(o) && p()(a) ? (b = "value") : p()(o) && (b = a),
-                      i.createElement(
+                      p()(a) && p()(c) ? (h = "value") : p()(a) && (h = c),
+                      o.createElement(
                         m.W,
                         {
                           key: "label-"
                             .concat(e.startAngle, "-")
-                            .concat(e.endAngle),
+                            .concat(e.endAngle, "-")
+                            .concat(e.midAngle, "-")
+                            .concat(r),
                         },
-                        n && s.renderLabelLineItem(n, h),
-                        s.renderLabelItem(r, v, (0, k.kr)(e, b)),
+                        i && t.renderLabelLineItem(i, b, "line"),
+                        t.renderLabelItem(n, v, (0, k.kr)(e, h)),
                       )
                     );
                   });
-                return i.createElement(
+                return o.createElement(
                   m.W,
                   { className: "recharts-pie-labels" },
                   y,
@@ -464,7 +454,7 @@
                 var t = this,
                   r = this.props,
                   n = r.activeShape,
-                  o = r.blendStroke,
+                  i = r.blendStroke,
                   a = r.inactiveShape;
                 return e.map(function (r, c) {
                   if (
@@ -476,12 +466,12 @@
                   var s = t.isActiveIndex(c),
                     l = a && t.hasActiveIndex() ? a : null,
                     u = s ? n : l,
-                    p = D(
-                      D({}, r),
+                    p = N(
+                      N({}, r),
                       {},
-                      { stroke: o ? r.fill : r.stroke, tabIndex: -1 },
+                      { stroke: i ? r.fill : r.stroke, tabIndex: -1 },
                     );
-                  return i.createElement(
+                  return o.createElement(
                     m.W,
                     T(
                       {
@@ -493,15 +483,16 @@
                         tabIndex: -1,
                         className: "recharts-pie-sector",
                       },
-                      (0, w.XC)(t.props, r, c),
+                      (0, E.XC)(t.props, r, c),
                       {
                         key: "sector-"
                           .concat(null == r ? void 0 : r.startAngle, "-")
                           .concat(null == r ? void 0 : r.endAngle, "-")
-                          .concat(r.midAngle),
+                          .concat(r.midAngle, "-")
+                          .concat(c),
                       },
                     ),
-                    i.createElement(
+                    o.createElement(
                       S.yp,
                       T({ option: u, isActive: s, shapeType: "sector" }, p),
                     ),
@@ -523,8 +514,8 @@
                   p = this.state,
                   f = p.prevSectors,
                   y = p.prevIsAnimationActive;
-                return i.createElement(
-                  o.Ay,
+                return o.createElement(
+                  i.Ay,
                   {
                     begin: a,
                     duration: s,
@@ -538,36 +529,36 @@
                   },
                   function (t) {
                     var n = t.t,
-                      o = [],
+                      i = [],
                       a = (r && r[0]).startAngle;
                     return (
                       r.forEach(function (e, t) {
                         var r = f && f[t],
-                          i = t > 0 ? c()(e, "paddingAngle", 0) : 0;
+                          o = t > 0 ? c()(e, "paddingAngle", 0) : 0;
                         if (r) {
                           var s = (0, P.Dj)(
                               r.endAngle - r.startAngle,
                               e.endAngle - e.startAngle,
                             ),
-                            l = D(
-                              D({}, e),
+                            l = N(
+                              N({}, e),
                               {},
-                              { startAngle: a + i, endAngle: a + s(n) + i },
+                              { startAngle: a + o, endAngle: a + s(n) + o },
                             );
-                          o.push(l), (a = l.endAngle);
+                          i.push(l), (a = l.endAngle);
                         } else {
                           var u = e.endAngle,
                             p = e.startAngle,
                             y = (0, P.Dj)(0, u - p)(n),
-                            d = D(
-                              D({}, e),
+                            d = N(
+                              N({}, e),
                               {},
-                              { startAngle: a + i, endAngle: a + y + i },
+                              { startAngle: a + o, endAngle: a + y + o },
                             );
-                          o.push(d), (a = d.endAngle);
+                          i.push(d), (a = d.endAngle);
                         }
                       }),
-                      i.createElement(m.W, null, e.renderSectorsStatically(o))
+                      o.createElement(m.W, null, e.renderSectorsStatically(i))
                     );
                   },
                 );
@@ -625,7 +616,7 @@
                   t = this.props,
                   r = t.hide,
                   n = t.sectors,
-                  o = t.className,
+                  i = t.className,
                   a = t.label,
                   c = t.cx,
                   s = t.cy,
@@ -643,8 +634,8 @@
                   !(0, P.Et)(u)
                 )
                   return null;
-                var y = (0, d.A)("recharts-pie", o);
-                return i.createElement(
+                var y = (0, d.A)("recharts-pie", i);
+                return o.createElement(
                   m.W,
                   {
                     tabIndex: this.props.rootTabIndex,
@@ -655,17 +646,18 @@
                   },
                   this.renderSectors(),
                   a && this.renderLabels(n),
-                  b.J.renderCallByParent(this.props, null, !1),
+                  h.J.renderCallByParent(this.props, null, !1),
                   (!p || f) && g.Z.renderCallByParent(this.props, n, !1),
                 );
               },
             },
-          ]) && N(t.prototype, r),
-          n && N(t, n),
-          Object.defineProperty(t, "prototype", { writable: !1 }),
-          s
+          ]) && D(r.prototype, n),
+          a && D(r, a),
+          Object.defineProperty(r, "prototype", { writable: !1 }),
+          r
         );
-      })(i.PureComponent);
+        var r, n, a;
+      })(o.PureComponent);
       (n = Z),
         J(Z, "displayName", "Pie"),
         J(Z, "defaultProps", {
@@ -694,42 +686,44 @@
           return (0, P.sA)(t - e) * Math.min(Math.abs(t - e), 360);
         }),
         J(Z, "getRealPieData", function (e) {
-          var t = e.props,
-            r = t.data,
-            n = t.children,
-            i = (0, A.J9)(e.props),
-            o = (0, A.aS)(n, O.f);
-          return r && r.length
-            ? r.map(function (e, t) {
-                return D(D(D({ payload: e }, i), e), o && o[t] && o[t].props);
+          var t = e.data,
+            r = e.children,
+            n = (0, A.J9)(e, !1),
+            o = (0, A.aS)(r, O.f);
+          return t && t.length
+            ? t.map(function (e, t) {
+                return N(N(N({ payload: e }, n), e), o && o[t] && o[t].props);
               })
             : o && o.length
               ? o.map(function (e) {
-                  return D(D({}, i), e.props);
+                  return N(N({}, n), e.props);
                 })
               : [];
         }),
         J(Z, "parseCoordinateOfPie", function (e, t) {
           var r = t.top,
             n = t.left,
-            i = t.width,
-            o = t.height,
-            a = (0, j.lY)(i, o);
+            o = t.width,
+            i = t.height,
+            a = (0, j.lY)(o, i);
           return {
-            cx: n + (0, P.F4)(e.props.cx, i, i / 2),
-            cy: r + (0, P.F4)(e.props.cy, o, o / 2),
-            innerRadius: (0, P.F4)(e.props.innerRadius, a, 0),
-            outerRadius: (0, P.F4)(e.props.outerRadius, a, 0.8 * a),
-            maxRadius: e.props.maxRadius || Math.sqrt(i * i + o * o) / 2,
+            cx: n + (0, P.F4)(e.cx, o, o / 2),
+            cy: r + (0, P.F4)(e.cy, i, i / 2),
+            innerRadius: (0, P.F4)(e.innerRadius, a, 0),
+            outerRadius: (0, P.F4)(e.outerRadius, a, 0.8 * a),
+            maxRadius: e.maxRadius || Math.sqrt(o * o + i * i) / 2,
           };
         }),
         J(Z, "getComposedData", function (e) {
           var t = e.item,
             r = e.offset,
-            i = n.getRealPieData(t);
+            o =
+              void 0 !== t.type.defaultProps
+                ? N(N({}, t.type.defaultProps), t.props)
+                : t.props,
+            i = n.getRealPieData(o);
           if (!i || !i.length) return null;
-          var o = t.props,
-            a = o.cornerRadius,
+          var a = o.cornerRadius,
             c = o.startAngle,
             s = o.endAngle,
             l = o.paddingAngle,
@@ -737,19 +731,19 @@
             f = o.nameKey,
             y = o.valueKey,
             d = o.tooltipType,
-            m = Math.abs(t.props.minAngle),
-            v = n.parseCoordinateOfPie(t, r),
-            h = n.parseDeltaAngle(c, s),
-            b = Math.abs(h),
+            m = Math.abs(o.minAngle),
+            v = n.parseCoordinateOfPie(o, r),
+            b = n.parseDeltaAngle(c, s),
+            h = Math.abs(b),
             g = u;
           p()(u) && p()(y)
-            ? ((0, E.R)(
+            ? ((0, w.R)(
                 !1,
                 'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0',
               ),
               (g = "value"))
             : p()(u) &&
-              ((0, E.R)(
+              ((0, w.R)(
                 !1,
                 'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0',
               ),
@@ -759,7 +753,7 @@
             x = i.filter(function (e) {
               return 0 !== (0, k.kr)(e, g, 0);
             }).length,
-            w = b - x * m - (b >= 360 ? x : x - 1) * l,
+            E = h - x * m - (h >= 360 ? x : x - 1) * l,
             S = i.reduce(function (e, t) {
               var r = (0, k.kr)(t, g, 0);
               return e + ((0, P.Et)(r) ? r : 0);
@@ -768,28 +762,28 @@
             (O = i.map(function (e, t) {
               var r,
                 n = (0, k.kr)(e, g, 0),
-                i = (0, k.kr)(e, f, t),
-                o = ((0, P.Et)(n) ? n : 0) / S,
+                o = (0, k.kr)(e, f, t),
+                i = ((0, P.Et)(n) ? n : 0) / S,
                 s =
                   (r = t
-                    ? A.endAngle + (0, P.sA)(h) * l * (0 !== n ? 1 : 0)
+                    ? A.endAngle + (0, P.sA)(b) * l * (0 !== n ? 1 : 0)
                     : c) +
-                  (0, P.sA)(h) * ((0 !== n ? m : 0) + o * w),
+                  (0, P.sA)(b) * ((0 !== n ? m : 0) + i * E),
                 u = (r + s) / 2,
                 p = (v.innerRadius + v.outerRadius) / 2,
-                y = [{ name: i, value: n, payload: e, dataKey: g, type: d }],
-                b = (0, j.IZ)(v.cx, v.cy, p, u);
-              return (A = D(
-                D(
-                  D(
+                y = [{ name: o, value: n, payload: e, dataKey: g, type: d }],
+                h = (0, j.IZ)(v.cx, v.cy, p, u);
+              return (A = N(
+                N(
+                  N(
                     {
-                      percent: o,
+                      percent: i,
                       cornerRadius: a,
-                      name: i,
+                      name: o,
                       tooltipPayload: y,
                       midAngle: u,
                       middleRadius: p,
-                      tooltipPosition: b,
+                      tooltipPosition: h,
                     },
                     e,
                   ),
@@ -801,29 +795,30 @@
                   startAngle: r,
                   endAngle: s,
                   payload: e,
-                  paddingAngle: (0, P.sA)(h) * l,
+                  paddingAngle: (0, P.sA)(b) * l,
                 },
               ));
             }));
-          return D(D({}, v), {}, { sectors: O, data: i });
+          return N(N({}, v), {}, { sectors: O, data: i });
         });
     },
     79191: (e, t, r) => {
       "use strict";
-      r.d(t, { r: () => k });
+      r.d(t, { r: () => E });
       var n = r(90626),
-        i = r(3316),
-        o = r.n(i),
-        a = r(49891),
-        c = r(17891),
-        s = r(82422),
-        l = r(9675),
-        u = r(62426),
-        p = r(50247),
-        f = r(50322);
-      function y(e) {
+        o = r(3316),
+        i = r.n(o),
+        a = r(90018),
+        c = r(49891),
+        s = r(17891),
+        l = r(82422),
+        u = r(9675),
+        p = r(62426),
+        f = r(50247),
+        y = r(50322);
+      function d(e) {
         return (
-          (y =
+          (d =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -836,12 +831,12 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          y(e)
+          d(e)
         );
       }
-      function d() {
+      function m() {
         return (
-          (d = Object.assign
+          (m = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -851,10 +846,10 @@
                 }
                 return e;
               }),
-          d.apply(this, arguments)
+          m.apply(this, arguments)
         );
       }
-      function m(e, t) {
+      function v(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -866,16 +861,16 @@
         }
         return r;
       }
-      function v(e) {
+      function b(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? m(Object(r), !0).forEach(function (t) {
-                A(e, t, r[t]);
+            ? v(Object(r), !0).forEach(function (t) {
+                j(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : m(Object(r)).forEach(function (t) {
+              : v(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -891,44 +886,14 @@
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(e, x(n.key), n);
+            Object.defineProperty(e, P(n.key), n);
         }
       }
-      function b(e, t) {
+      function g(e, t, r) {
         return (
-          (b = Object.setPrototypeOf
-            ? Object.setPrototypeOf.bind()
-            : function (e, t) {
-                return (e.__proto__ = t), e;
-              }),
-          b(e, t)
-        );
-      }
-      function g(e) {
-        var t = (function () {
-          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-          if (Reflect.construct.sham) return !1;
-          if ("function" == typeof Proxy) return !0;
-          try {
-            return (
-              Boolean.prototype.valueOf.call(
-                Reflect.construct(Boolean, [], function () {}),
-              ),
-              !0
-            );
-          } catch (e) {
-            return !1;
-          }
-        })();
-        return function () {
-          var r,
-            n = O(e);
-          if (t) {
-            var i = O(this).constructor;
-            r = Reflect.construct(n, arguments, i);
-          } else r = n.apply(this, arguments);
-          return (function (e, t) {
-            if (t && ("object" === y(t) || "function" == typeof t)) return t;
+          (t = A(t)),
+          (function (e, t) {
+            if (t && ("object" === d(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
@@ -940,22 +905,47 @@
                 );
               return e;
             })(e);
-          })(this, r);
-        };
+          })(
+            e,
+            O()
+              ? Reflect.construct(t, r || [], A(e).constructor)
+              : t.apply(e, r),
+          )
+        );
       }
-      function O(e) {
+      function O() {
+        try {
+          var e = !Boolean.prototype.valueOf.call(
+            Reflect.construct(Boolean, [], function () {}),
+          );
+        } catch (e) {}
+        return (O = function () {
+          return !!e;
+        })();
+      }
+      function A(e) {
         return (
-          (O = Object.setPrototypeOf
+          (A = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          O(e)
+          A(e)
         );
       }
-      function A(e, t, r) {
+      function x(e, t) {
         return (
-          (t = x(t)) in e
+          (x = Object.setPrototypeOf
+            ? Object.setPrototypeOf.bind()
+            : function (e, t) {
+                return (e.__proto__ = t), e;
+              }),
+          x(e, t)
+        );
+      }
+      function j(e, t, r) {
+        return (
+          (t = P(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -966,59 +956,55 @@
           e
         );
       }
-      function x(e) {
+      function P(e) {
         var t = (function (e, t) {
-          if ("object" !== y(e) || null === e) return e;
+          if ("object" != d(e) || !e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(e, t || "default");
-            if ("object" !== y(n)) return n;
+            if ("object" != d(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === y(t) ? t : String(t);
+        return "symbol" == d(t) ? t : t + "";
       }
-      var j = Math.PI / 180,
-        P = 1e-5,
-        k = (function (e) {
-          !(function (e, t) {
-            if ("function" != typeof t && null !== t)
-              throw new TypeError(
-                "Super expression must either be null or a function",
-              );
-            (e.prototype = Object.create(t && t.prototype, {
-              constructor: { value: e, writable: !0, configurable: !0 },
-            })),
-              Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && b(e, t);
-          })(m, e);
-          var t,
-            r,
-            i,
-            y = g(m);
-          function m() {
+      var k = Math.PI / 180,
+        w = 1e-5,
+        E = (function (e) {
+          function t() {
             return (
               (function (e, t) {
                 if (!(e instanceof t))
                   throw new TypeError("Cannot call a class as a function");
-              })(this, m),
-              y.apply(this, arguments)
+              })(this, t),
+              g(this, t, arguments)
             );
           }
           return (
-            (t = m),
-            (i = [
+            (function (e, t) {
+              if ("function" != typeof t && null !== t)
+                throw new TypeError(
+                  "Super expression must either be null or a function",
+                );
+              (e.prototype = Object.create(t && t.prototype, {
+                constructor: { value: e, writable: !0, configurable: !0 },
+              })),
+                Object.defineProperty(e, "prototype", { writable: !1 }),
+                t && x(e, t);
+            })(t, e),
+            (r = t),
+            (d = [
               {
                 key: "renderTickItem",
                 value: function (e, t, r) {
                   return n.isValidElement(e)
                     ? n.cloneElement(e, t)
-                    : o()(e)
+                    : i()(e)
                       ? e(t)
                       : n.createElement(
-                          l.E,
-                          d({}, t, {
+                          u.E,
+                          m({}, t, {
                             className: "recharts-polar-angle-axis-tick-value",
                           }),
                           r,
@@ -1026,21 +1012,21 @@
                 },
               },
             ]),
-            (r = [
+            (o = [
               {
                 key: "getTickLineCoord",
                 value: function (e) {
                   var t = this.props,
                     r = t.cx,
                     n = t.cy,
-                    i = t.radius,
-                    o = t.orientation,
+                    o = t.radius,
+                    i = t.orientation,
                     a = t.tickSize || 8,
-                    c = (0, f.IZ)(r, n, i, e.coordinate),
-                    s = (0, f.IZ)(
+                    c = (0, y.IZ)(r, n, o, e.coordinate),
+                    s = (0, y.IZ)(
                       r,
                       n,
-                      i + ("inner" === o ? -1 : 1) * a,
+                      o + ("inner" === i ? -1 : 1) * a,
                       e.coordinate,
                     );
                   return { x1: c.x, y1: c.y, x2: s.x, y2: s.y };
@@ -1050,12 +1036,12 @@
                 key: "getTickTextAnchor",
                 value: function (e) {
                   var t = this.props.orientation,
-                    r = Math.cos(-e.coordinate * j);
-                  return r > P
+                    r = Math.cos(-e.coordinate * k);
+                  return r > w
                     ? "outer" === t
                       ? "start"
                       : "end"
-                    : r < -P
+                    : r < -w
                       ? "outer" === t
                         ? "end"
                         : "start"
@@ -1068,30 +1054,30 @@
                   var e = this.props,
                     t = e.cx,
                     r = e.cy,
-                    i = e.radius,
-                    o = e.axisLine,
+                    o = e.radius,
+                    i = e.axisLine,
                     a = e.axisLineType,
-                    l = v(
-                      v({}, (0, p.J9)(this.props)),
+                    c = b(
+                      b({}, (0, f.J9)(this.props, !1)),
                       {},
                       { fill: "none" },
-                      (0, p.J9)(o),
+                      (0, f.J9)(i, !1),
                     );
                   if ("circle" === a)
                     return n.createElement(
-                      c.c,
-                      d({ className: "recharts-polar-angle-axis-line" }, l, {
+                      s.c,
+                      m({ className: "recharts-polar-angle-axis-line" }, c, {
                         cx: t,
                         cy: r,
-                        r: i,
+                        r: o,
                       }),
                     );
                   var u = this.props.ticks.map(function (e) {
-                    return (0, f.IZ)(t, r, i, e.coordinate);
+                    return (0, y.IZ)(t, r, o, e.coordinate);
                   });
                   return n.createElement(
-                    s.t,
-                    d({ className: "recharts-polar-angle-axis-line" }, l, {
+                    l.t,
+                    m({ className: "recharts-polar-angle-axis-line" }, c, {
                       points: u,
                     }),
                   );
@@ -1101,56 +1087,59 @@
                 key: "renderTicks",
                 value: function () {
                   var e = this,
-                    t = this.props,
-                    r = t.ticks,
-                    i = t.tick,
-                    o = t.tickLine,
-                    c = t.tickFormatter,
-                    s = t.stroke,
-                    l = (0, p.J9)(this.props),
-                    f = (0, p.J9)(i),
-                    y = v(v({}, l), {}, { fill: "none" }, (0, p.J9)(o)),
-                    h = r.map(function (t, r) {
-                      var p = e.getTickLineCoord(t),
-                        h = v(
-                          v(
-                            v({ textAnchor: e.getTickTextAnchor(t) }, l),
+                    r = this.props,
+                    o = r.ticks,
+                    i = r.tick,
+                    s = r.tickLine,
+                    l = r.tickFormatter,
+                    u = r.stroke,
+                    d = (0, f.J9)(this.props, !1),
+                    v = (0, f.J9)(i, !1),
+                    h = b(b({}, d), {}, { fill: "none" }, (0, f.J9)(s, !1)),
+                    g = o.map(function (r, o) {
+                      var f = e.getTickLineCoord(r),
+                        g = b(
+                          b(
+                            b({ textAnchor: e.getTickTextAnchor(r) }, d),
                             {},
-                            { stroke: "none", fill: s },
-                            f,
+                            { stroke: "none", fill: u },
+                            v,
                           ),
                           {},
-                          { index: r, payload: t, x: p.x2, y: p.y2 },
+                          { index: o, payload: r, x: f.x2, y: f.y2 },
                         );
                       return n.createElement(
-                        a.W,
-                        d(
+                        c.W,
+                        m(
                           {
-                            className: "recharts-polar-angle-axis-tick",
-                            key: "tick-".concat(t.coordinate),
+                            className: (0, a.A)(
+                              "recharts-polar-angle-axis-tick",
+                              (0, y.Zk)(i),
+                            ),
+                            key: "tick-".concat(r.coordinate),
                           },
-                          (0, u.XC)(e.props, t, r),
+                          (0, p.XC)(e.props, r, o),
                         ),
-                        o &&
+                        s &&
                           n.createElement(
                             "line",
-                            d(
+                            m(
                               {
                                 className:
                                   "recharts-polar-angle-axis-tick-line",
                               },
-                              y,
-                              p,
+                              h,
+                              f,
                             ),
                           ),
                         i &&
-                          m.renderTickItem(i, h, c ? c(t.value, r) : t.value),
+                          t.renderTickItem(i, g, l ? l(r.value, o) : r.value),
                       );
                     });
                   return n.createElement(
-                    a.W,
+                    c.W,
                     { className: "recharts-polar-angle-axis-ticks" },
-                    h,
+                    g,
                   );
                 },
               },
@@ -1160,26 +1149,32 @@
                   var e = this.props,
                     t = e.ticks,
                     r = e.radius,
-                    i = e.axisLine;
+                    o = e.axisLine;
                   return r <= 0 || !t || !t.length
                     ? null
                     : n.createElement(
-                        a.W,
-                        { className: "recharts-polar-angle-axis" },
-                        i && this.renderAxisLine(),
+                        c.W,
+                        {
+                          className: (0, a.A)(
+                            "recharts-polar-angle-axis",
+                            this.props.className,
+                          ),
+                        },
+                        o && this.renderAxisLine(),
                         this.renderTicks(),
                       );
                 },
               },
-            ]) && h(t.prototype, r),
-            i && h(t, i),
-            Object.defineProperty(t, "prototype", { writable: !1 }),
-            m
+            ]) && h(r.prototype, o),
+            d && h(r, d),
+            Object.defineProperty(r, "prototype", { writable: !1 }),
+            r
           );
+          var r, o, d;
         })(n.PureComponent);
-      A(k, "displayName", "PolarAngleAxis"),
-        A(k, "axisType", "angleAxis"),
-        A(k, "defaultProps", {
+      j(E, "displayName", "PolarAngleAxis"),
+        j(E, "axisType", "angleAxis"),
+        j(E, "defaultProps", {
           type: "category",
           angleAxisId: 0,
           scale: "auto",
@@ -1196,11 +1191,12 @@
     },
     19693: (e, t, r) => {
       "use strict";
-      r.d(t, { z: () => b });
+      r.d(t, { z: () => g });
       var n = r(90626),
+        o = r(90018),
         i = r(50322),
-        o = r(50247),
-        a = [
+        a = r(50247),
+        c = [
           "cx",
           "cy",
           "innerRadius",
@@ -1208,9 +1204,9 @@
           "gridType",
           "radialLines",
         ];
-      function c(e) {
+      function s(e) {
         return (
-          (c =
+          (s =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -1223,36 +1219,36 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          c(e)
+          s(e)
         );
       }
-      function s(e, t) {
+      function l(e, t) {
         if (null == e) return {};
         var r,
           n,
-          i = (function (e, t) {
+          o = (function (e, t) {
             if (null == e) return {};
-            var r,
-              n,
-              i = {},
-              o = Object.keys(e);
-            for (n = 0; n < o.length; n++)
-              (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
-            return i;
+            var r = {};
+            for (var n in e)
+              if (Object.prototype.hasOwnProperty.call(e, n)) {
+                if (t.indexOf(n) >= 0) continue;
+                r[n] = e[n];
+              }
+            return r;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
-          var o = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < o.length; n++)
-            (r = o[n]),
+          var i = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < i.length; n++)
+            (r = i[n]),
               t.indexOf(r) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(e, r) &&
-                  (i[r] = e[r]));
+                  (o[r] = e[r]));
         }
-        return i;
+        return o;
       }
-      function l() {
+      function u() {
         return (
-          (l = Object.assign
+          (u = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -1262,10 +1258,10 @@
                 }
                 return e;
               }),
-          l.apply(this, arguments)
+          u.apply(this, arguments)
         );
       }
-      function u(e, t) {
+      function p(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -1277,16 +1273,16 @@
         }
         return r;
       }
-      function p(e) {
+      function f(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? u(Object(r), !0).forEach(function (t) {
-                f(e, t, r[t]);
+            ? p(Object(r), !0).forEach(function (t) {
+                y(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : u(Object(r)).forEach(function (t) {
+              : p(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1296,23 +1292,22 @@
         }
         return e;
       }
-      function f(e, t, r) {
+      function y(e, t, r) {
+        var n;
         return (
-          (t = (function (e) {
-            var t = (function (e, t) {
-              if ("object" !== c(e) || null === e) return e;
-              var r = e[Symbol.toPrimitive];
-              if (void 0 !== r) {
-                var n = r.call(e, t || "default");
-                if ("object" !== c(n)) return n;
-                throw new TypeError(
-                  "@@toPrimitive must return a primitive value.",
-                );
-              }
-              return ("string" === t ? String : Number)(e);
-            })(e, "string");
-            return "symbol" === c(t) ? t : String(t);
-          })(t)) in e
+          (n = (function (e, t) {
+            if ("object" != s(e) || !e) return e;
+            var r = e[Symbol.toPrimitive];
+            if (void 0 !== r) {
+              var n = r.call(e, t || "default");
+              if ("object" != s(n)) return n;
+              throw new TypeError(
+                "@@toPrimitive must return a primitive value.",
+              );
+            }
+            return ("string" === t ? String : Number)(e);
+          })(t, "string")),
+          (t = "symbol" == s(n) ? n : n + "") in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -1323,7 +1318,7 @@
           e
         );
       }
-      var y = function (e, t, r, n) {
+      var d = function (e, t, r, n) {
           var o = "";
           return (
             n.forEach(function (n, a) {
@@ -1335,27 +1330,27 @@
             (o += "Z")
           );
         },
-        d = function (e) {
+        m = function (e) {
           var t = e.cx,
             r = e.cy,
-            a = e.innerRadius,
+            o = e.innerRadius,
             c = e.outerRadius,
             s = e.polarAngles,
-            u = e.radialLines;
-          if (!s || !s.length || !u) return null;
-          var f = p({ stroke: "#ccc" }, (0, o.J9)(e));
+            l = e.radialLines;
+          if (!s || !s.length || !l) return null;
+          var p = f({ stroke: "#ccc" }, (0, a.J9)(e, !1));
           return n.createElement(
             "g",
             { className: "recharts-polar-grid-angle" },
             s.map(function (e) {
-              var o = (0, i.IZ)(t, r, a, e),
+              var a = (0, i.IZ)(t, r, o, e),
                 s = (0, i.IZ)(t, r, c, e);
               return n.createElement(
                 "line",
-                l({}, f, {
+                u({}, p, {
                   key: "line-".concat(e),
-                  x1: o.x,
-                  y1: o.y,
+                  x1: a.x,
+                  y1: a.y,
                   x2: s.x,
                   y2: s.y,
                 }),
@@ -1363,33 +1358,47 @@
             }),
           );
         },
-        m = function (e) {
+        v = function (e) {
           var t = e.cx,
             r = e.cy,
             i = e.radius,
-            a = e.index,
-            c = p(p({ stroke: "#ccc" }, (0, o.J9)(e)), {}, { fill: "none" });
+            c = e.index,
+            s = f(
+              f({ stroke: "#ccc" }, (0, a.J9)(e, !1)),
+              {},
+              { fill: "none" },
+            );
           return n.createElement(
             "circle",
-            l({}, c, {
-              className: "recharts-polar-grid-concentric-circle",
-              key: "circle-".concat(a),
+            u({}, s, {
+              className: (0, o.A)(
+                "recharts-polar-grid-concentric-circle",
+                e.className,
+              ),
+              key: "circle-".concat(c),
               cx: t,
               cy: r,
               r: i,
             }),
           );
         },
-        v = function (e) {
+        b = function (e) {
           var t = e.radius,
             r = e.index,
-            i = p(p({ stroke: "#ccc" }, (0, o.J9)(e)), {}, { fill: "none" });
+            i = f(
+              f({ stroke: "#ccc" }, (0, a.J9)(e, !1)),
+              {},
+              { fill: "none" },
+            );
           return n.createElement(
             "path",
-            l({}, i, {
-              className: "recharts-polar-grid-concentric-polygon",
+            u({}, i, {
+              className: (0, o.A)(
+                "recharts-polar-grid-concentric-polygon",
+                e.className,
+              ),
               key: "path-".concat(r),
-              d: y(t, e.cx, e.cy, e.polarAngles),
+              d: d(t, e.cx, e.cy, e.polarAngles),
             }),
           );
         },
@@ -1400,49 +1409,49 @@
             ? n.createElement(
                 "g",
                 { className: "recharts-polar-grid-concentric" },
-                t.map(function (t, i) {
-                  var o = i;
+                t.map(function (t, o) {
+                  var i = o;
                   return "circle" === r
                     ? n.createElement(
-                        m,
-                        l({ key: o }, e, { radius: t, index: i }),
+                        v,
+                        u({ key: i }, e, { radius: t, index: o }),
                       )
                     : n.createElement(
-                        v,
-                        l({ key: o }, e, { radius: t, index: i }),
+                        b,
+                        u({ key: i }, e, { radius: t, index: o }),
                       );
                 }),
               )
             : null;
         },
-        b = function (e) {
+        g = function (e) {
           var t = e.cx,
             r = void 0 === t ? 0 : t,
-            i = e.cy,
-            o = void 0 === i ? 0 : i,
-            c = e.innerRadius,
-            u = void 0 === c ? 0 : c,
+            o = e.cy,
+            i = void 0 === o ? 0 : o,
+            a = e.innerRadius,
+            s = void 0 === a ? 0 : a,
             p = e.outerRadius,
             f = void 0 === p ? 0 : p,
             y = e.gridType,
-            m = void 0 === y ? "polygon" : y,
+            d = void 0 === y ? "polygon" : y,
             v = e.radialLines,
             b = void 0 === v || v,
-            g = s(e, a);
+            g = l(e, c);
           return f <= 0
             ? null
             : n.createElement(
                 "g",
                 { className: "recharts-polar-grid" },
                 n.createElement(
-                  d,
-                  l(
+                  m,
+                  u(
                     {
                       cx: r,
-                      cy: o,
-                      innerRadius: u,
+                      cy: i,
+                      innerRadius: s,
                       outerRadius: f,
-                      gridType: m,
+                      gridType: d,
                       radialLines: b,
                     },
                     g,
@@ -1450,13 +1459,13 @@
                 ),
                 n.createElement(
                   h,
-                  l(
+                  u(
                     {
                       cx: r,
-                      cy: o,
-                      innerRadius: u,
+                      cy: i,
+                      innerRadius: s,
                       outerRadius: f,
-                      gridType: m,
+                      gridType: d,
                       radialLines: b,
                     },
                     g,
@@ -1464,29 +1473,30 @@
                 ),
               );
         };
-      b.displayName = "PolarGrid";
+      g.displayName = "PolarGrid";
     },
     66490: (e, t, r) => {
       "use strict";
-      r.d(t, { E: () => R });
+      r.d(t, { E: () => I });
       var n = r(90626),
-        i = r(42529),
-        o = r.n(i),
+        o = r(42529),
+        i = r.n(o),
         a = r(11027),
         c = r.n(a),
         s = r(3316),
         l = r.n(s),
-        u = r(9675),
-        p = r(39864),
-        f = r(49891),
-        y = r(50322),
-        d = r(62426),
-        m = r(50247),
-        v = ["cx", "cy", "angle", "ticks", "axisLine"],
+        u = r(90018),
+        p = r(9675),
+        f = r(39864),
+        y = r(49891),
+        d = r(50322),
+        m = r(62426),
+        v = r(50247),
+        b = ["cx", "cy", "angle", "ticks", "axisLine"],
         h = ["ticks", "tick", "angle", "tickFormatter", "stroke"];
-      function b(e) {
+      function g(e) {
         return (
-          (b =
+          (g =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -1499,12 +1509,12 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          b(e)
+          g(e)
         );
       }
-      function g() {
+      function O() {
         return (
-          (g = Object.assign
+          (O = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -1514,10 +1524,10 @@
                 }
                 return e;
               }),
-          g.apply(this, arguments)
+          O.apply(this, arguments)
         );
       }
-      function O(e, t) {
+      function A(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -1529,16 +1539,16 @@
         }
         return r;
       }
-      function A(e) {
+      function x(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? O(Object(r), !0).forEach(function (t) {
-                w(e, t, r[t]);
+            ? A(Object(r), !0).forEach(function (t) {
+                R(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : O(Object(r)).forEach(function (t) {
+              : A(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1548,74 +1558,44 @@
         }
         return e;
       }
-      function x(e, t) {
+      function j(e, t) {
         if (null == e) return {};
         var r,
           n,
-          i = (function (e, t) {
+          o = (function (e, t) {
             if (null == e) return {};
-            var r,
-              n,
-              i = {},
-              o = Object.keys(e);
-            for (n = 0; n < o.length; n++)
-              (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
-            return i;
+            var r = {};
+            for (var n in e)
+              if (Object.prototype.hasOwnProperty.call(e, n)) {
+                if (t.indexOf(n) >= 0) continue;
+                r[n] = e[n];
+              }
+            return r;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
-          var o = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < o.length; n++)
-            (r = o[n]),
+          var i = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < i.length; n++)
+            (r = i[n]),
               t.indexOf(r) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(e, r) &&
-                  (i[r] = e[r]));
+                  (o[r] = e[r]));
         }
-        return i;
+        return o;
       }
-      function j(e, t) {
+      function P(e, t) {
         for (var r = 0; r < t.length; r++) {
           var n = t[r];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(e, S(n.key), n);
+            Object.defineProperty(e, T(n.key), n);
         }
       }
-      function P(e, t) {
+      function k(e, t, r) {
         return (
-          (P = Object.setPrototypeOf
-            ? Object.setPrototypeOf.bind()
-            : function (e, t) {
-                return (e.__proto__ = t), e;
-              }),
-          P(e, t)
-        );
-      }
-      function k(e) {
-        var t = (function () {
-          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-          if (Reflect.construct.sham) return !1;
-          if ("function" == typeof Proxy) return !0;
-          try {
-            return (
-              Boolean.prototype.valueOf.call(
-                Reflect.construct(Boolean, [], function () {}),
-              ),
-              !0
-            );
-          } catch (e) {
-            return !1;
-          }
-        })();
-        return function () {
-          var r,
-            n = E(e);
-          if (t) {
-            var i = E(this).constructor;
-            r = Reflect.construct(n, arguments, i);
-          } else r = n.apply(this, arguments);
-          return (function (e, t) {
-            if (t && ("object" === b(t) || "function" == typeof t)) return t;
+          (t = E(t)),
+          (function (e, t) {
+            if (t && ("object" === g(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
@@ -1627,8 +1607,23 @@
                 );
               return e;
             })(e);
-          })(this, r);
-        };
+          })(
+            e,
+            w()
+              ? Reflect.construct(t, r || [], E(e).constructor)
+              : t.apply(e, r),
+          )
+        );
+      }
+      function w() {
+        try {
+          var e = !Boolean.prototype.valueOf.call(
+            Reflect.construct(Boolean, [], function () {}),
+          );
+        } catch (e) {}
+        return (w = function () {
+          return !!e;
+        })();
       }
       function E(e) {
         return (
@@ -1640,9 +1635,19 @@
           E(e)
         );
       }
-      function w(e, t, r) {
+      function S(e, t) {
         return (
-          (t = S(t)) in e
+          (S = Object.setPrototypeOf
+            ? Object.setPrototypeOf.bind()
+            : function (e, t) {
+                return (e.__proto__ = t), e;
+              }),
+          S(e, t)
+        );
+      }
+      function R(e, t, r) {
+        return (
+          (t = T(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -1653,47 +1658,43 @@
           e
         );
       }
-      function S(e) {
+      function T(e) {
         var t = (function (e, t) {
-          if ("object" !== b(e) || null === e) return e;
+          if ("object" != g(e) || !e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(e, t || "default");
-            if ("object" !== b(n)) return n;
+            if ("object" != g(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === b(t) ? t : String(t);
+        return "symbol" == g(t) ? t : t + "";
       }
-      var R = (function (e) {
-        !(function (e, t) {
-          if ("function" != typeof t && null !== t)
-            throw new TypeError(
-              "Super expression must either be null or a function",
-            );
-          (e.prototype = Object.create(t && t.prototype, {
-            constructor: { value: e, writable: !0, configurable: !0 },
-          })),
-            Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && P(e, t);
-        })(s, e);
-        var t,
-          r,
-          i,
-          a = k(s);
-        function s() {
+      var I = (function (e) {
+        function t() {
           return (
             (function (e, t) {
               if (!(e instanceof t))
                 throw new TypeError("Cannot call a class as a function");
-            })(this, s),
-            a.apply(this, arguments)
+            })(this, t),
+            k(this, t, arguments)
           );
         }
         return (
-          (t = s),
-          (i = [
+          (function (e, t) {
+            if ("function" != typeof t && null !== t)
+              throw new TypeError(
+                "Super expression must either be null or a function",
+              );
+            (e.prototype = Object.create(t && t.prototype, {
+              constructor: { value: e, writable: !0, configurable: !0 },
+            })),
+              Object.defineProperty(e, "prototype", { writable: !1 }),
+              t && S(e, t);
+          })(t, e),
+          (r = t),
+          (a = [
             {
               key: "renderTickItem",
               value: function (e, t, r) {
@@ -1702,8 +1703,8 @@
                   : l()(e)
                     ? e(t)
                     : n.createElement(
-                        u.E,
-                        g({}, t, {
+                        p.E,
+                        O({}, t, {
                           className: "recharts-polar-radius-axis-tick-value",
                         }),
                         r,
@@ -1711,16 +1712,16 @@
               },
             },
           ]),
-          (r = [
+          (o = [
             {
               key: "getTickValueCoord",
               value: function (e) {
                 var t = e.coordinate,
                   r = this.props,
                   n = r.angle,
-                  i = r.cx,
-                  o = r.cy;
-                return (0, y.IZ)(i, o, t, n);
+                  o = r.cx,
+                  i = r.cy;
+                return (0, d.IZ)(o, i, t, n);
               },
             },
             {
@@ -1747,8 +1748,8 @@
                   t = e.cx,
                   r = e.cy,
                   n = e.angle,
-                  i = e.ticks,
-                  a = o()(i, function (e) {
+                  o = e.ticks,
+                  a = i()(o, function (e) {
                     return e.coordinate || 0;
                   });
                 return {
@@ -1757,7 +1758,7 @@
                   startAngle: n,
                   endAngle: n,
                   innerRadius:
-                    c()(i, function (e) {
+                    c()(o, function (e) {
                       return e.coordinate || 0;
                     }).coordinate || 0,
                   outerRadius: a.coordinate || 0,
@@ -1770,11 +1771,11 @@
                 var e = this.props,
                   t = e.cx,
                   r = e.cy,
-                  i = e.angle,
-                  o = e.ticks,
+                  o = e.angle,
+                  i = e.ticks,
                   a = e.axisLine,
-                  c = x(e, v),
-                  s = o.reduce(
+                  c = j(e, b),
+                  s = i.reduce(
                     function (e, t) {
                       return [
                         Math.min(e[0], t.coordinate),
@@ -1783,16 +1784,21 @@
                     },
                     [1 / 0, -1 / 0],
                   ),
-                  l = (0, y.IZ)(t, r, s[0], i),
-                  u = (0, y.IZ)(t, r, s[1], i),
-                  p = A(
-                    A(A({}, (0, m.J9)(c)), {}, { fill: "none" }, (0, m.J9)(a)),
+                  l = (0, d.IZ)(t, r, s[0], o),
+                  u = (0, d.IZ)(t, r, s[1], o),
+                  p = x(
+                    x(
+                      x({}, (0, v.J9)(c, !1)),
+                      {},
+                      { fill: "none" },
+                      (0, v.J9)(a, !1),
+                    ),
                     {},
                     { x1: l.x, y1: l.y, x2: u.x, y2: u.y },
                   );
                 return n.createElement(
                   "line",
-                  g({ className: "recharts-polar-radius-axis-line" }, p),
+                  O({ className: "recharts-polar-radius-axis-line" }, p),
                 );
               },
             },
@@ -1800,58 +1806,61 @@
               key: "renderTicks",
               value: function () {
                 var e = this,
-                  t = this.props,
-                  r = t.ticks,
-                  i = t.tick,
-                  o = t.angle,
-                  a = t.tickFormatter,
-                  c = t.stroke,
-                  l = x(t, h),
-                  u = this.getTickTextAnchor(),
-                  p = (0, m.J9)(l),
-                  y = (0, m.J9)(i),
-                  v = r.map(function (t, r) {
-                    var l = e.getTickValueCoord(t),
-                      m = A(
-                        A(
-                          A(
-                            A(
+                  r = this.props,
+                  o = r.ticks,
+                  i = r.tick,
+                  a = r.angle,
+                  c = r.tickFormatter,
+                  s = r.stroke,
+                  l = j(r, h),
+                  p = this.getTickTextAnchor(),
+                  f = (0, v.J9)(l, !1),
+                  b = (0, v.J9)(i, !1),
+                  g = o.map(function (r, o) {
+                    var l = e.getTickValueCoord(r),
+                      v = x(
+                        x(
+                          x(
+                            x(
                               {
-                                textAnchor: u,
+                                textAnchor: p,
                                 transform: "rotate("
-                                  .concat(90 - o, ", ")
+                                  .concat(90 - a, ", ")
                                   .concat(l.x, ", ")
                                   .concat(l.y, ")"),
                               },
-                              p,
+                              f,
                             ),
                             {},
-                            { stroke: "none", fill: c },
-                            y,
+                            { stroke: "none", fill: s },
+                            b,
                           ),
                           {},
-                          { index: r },
+                          { index: o },
                           l,
                         ),
                         {},
-                        { payload: t },
+                        { payload: r },
                       );
                     return n.createElement(
-                      f.W,
-                      g(
+                      y.W,
+                      O(
                         {
-                          className: "recharts-polar-radius-axis-tick",
-                          key: "tick-".concat(t.coordinate),
+                          className: (0, u.A)(
+                            "recharts-polar-radius-axis-tick",
+                            (0, d.Zk)(i),
+                          ),
+                          key: "tick-".concat(r.coordinate),
                         },
-                        (0, d.XC)(e.props, t, r),
+                        (0, m.XC)(e.props, r, o),
                       ),
-                      s.renderTickItem(i, m, a ? a(t.value, r) : t.value),
+                      t.renderTickItem(i, v, c ? c(r.value, o) : r.value),
                     );
                   });
                 return n.createElement(
-                  f.W,
+                  y.W,
                   { className: "recharts-polar-radius-axis-ticks" },
-                  v,
+                  g,
                 );
               },
             },
@@ -1861,27 +1870,33 @@
                 var e = this.props,
                   t = e.ticks,
                   r = e.axisLine,
-                  i = e.tick;
+                  o = e.tick;
                 return t && t.length
                   ? n.createElement(
-                      f.W,
-                      { className: "recharts-polar-radius-axis" },
+                      y.W,
+                      {
+                        className: (0, u.A)(
+                          "recharts-polar-radius-axis",
+                          this.props.className,
+                        ),
+                      },
                       r && this.renderAxisLine(),
-                      i && this.renderTicks(),
-                      p.J.renderCallByParent(this.props, this.getViewBox()),
+                      o && this.renderTicks(),
+                      f.J.renderCallByParent(this.props, this.getViewBox()),
                     )
                   : null;
               },
             },
-          ]) && j(t.prototype, r),
-          i && j(t, i),
-          Object.defineProperty(t, "prototype", { writable: !1 }),
-          s
+          ]) && P(r.prototype, o),
+          a && P(r, a),
+          Object.defineProperty(r, "prototype", { writable: !1 }),
+          r
         );
+        var r, o, a;
       })(n.PureComponent);
-      w(R, "displayName", "PolarRadiusAxis"),
-        w(R, "axisType", "radiusAxis"),
-        w(R, "defaultProps", {
+      R(I, "displayName", "PolarRadiusAxis"),
+        R(I, "axisType", "radiusAxis"),
+        R(I, "defaultProps", {
           type: "number",
           radiusAxisId: 0,
           cx: 0,
@@ -1899,11 +1914,11 @@
     },
     70365: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => F });
+      r.d(t, { V: () => J });
       var n = r(90626),
-        i = r(85882),
-        o = r(64609),
-        a = r.n(o),
+        o = r(57487),
+        i = r(64609),
+        a = r.n(i),
         c = r(73912),
         s = r.n(c),
         l = r(90540),
@@ -1914,17 +1929,18 @@
         d = r.n(y),
         m = r(90018),
         v = r(91038),
-        h = r(1036),
-        b = r(50322),
+        b = r(1036),
+        h = r(50322),
         g = r(89998),
         O = r(82422),
         A = r(17891),
         x = r(49891),
         j = r(94816),
-        P = r(50247);
-      function k(e) {
+        P = r(50247),
+        k = ["key"];
+      function w(e) {
         return (
-          (k =
+          (w =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -1937,12 +1953,36 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          k(e)
+          w(e)
         );
       }
-      function E() {
+      function E(e, t) {
+        if (null == e) return {};
+        var r,
+          n,
+          o = (function (e, t) {
+            if (null == e) return {};
+            var r = {};
+            for (var n in e)
+              if (Object.prototype.hasOwnProperty.call(e, n)) {
+                if (t.indexOf(n) >= 0) continue;
+                r[n] = e[n];
+              }
+            return r;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var i = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < i.length; n++)
+            (r = i[n]),
+              t.indexOf(r) >= 0 ||
+                (Object.prototype.propertyIsEnumerable.call(e, r) &&
+                  (o[r] = e[r]));
+        }
+        return o;
+      }
+      function S() {
         return (
-          (E = Object.assign
+          (S = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -1952,10 +1992,10 @@
                 }
                 return e;
               }),
-          E.apply(this, arguments)
+          S.apply(this, arguments)
         );
       }
-      function w(e, t) {
+      function R(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -1967,16 +2007,16 @@
         }
         return r;
       }
-      function S(e) {
+      function T(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? w(Object(r), !0).forEach(function (t) {
-                L(e, t, r[t]);
+            ? R(Object(r), !0).forEach(function (t) {
+                F(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : w(Object(r)).forEach(function (t) {
+              : R(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1986,78 +2026,72 @@
         }
         return e;
       }
-      function R(e, t) {
+      function I(e, t) {
         for (var r = 0; r < t.length; r++) {
           var n = t[r];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(e, C(n.key), n);
+            Object.defineProperty(e, _(n.key), n);
         }
       }
-      function T(e, t) {
+      function N(e, t, r) {
         return (
-          (T = Object.setPrototypeOf
-            ? Object.setPrototypeOf.bind()
-            : function (e, t) {
-                return (e.__proto__ = t), e;
-              }),
-          T(e, t)
-        );
-      }
-      function I(e) {
-        var t = (function () {
-          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-          if (Reflect.construct.sham) return !1;
-          if ("function" == typeof Proxy) return !0;
-          try {
-            return (
-              Boolean.prototype.valueOf.call(
-                Reflect.construct(Boolean, [], function () {}),
-              ),
-              !0
-            );
-          } catch (e) {
-            return !1;
-          }
-        })();
-        return function () {
-          var r,
-            n = N(e);
-          if (t) {
-            var i = N(this).constructor;
-            r = Reflect.construct(n, arguments, i);
-          } else r = n.apply(this, arguments);
-          return (function (e, t) {
-            if (t && ("object" === k(t) || "function" == typeof t)) return t;
+          (t = L(t)),
+          (function (e, t) {
+            if (t && ("object" === w(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return D(e);
-          })(this, r);
-        };
+            return (function (e) {
+              if (void 0 === e)
+                throw new ReferenceError(
+                  "this hasn't been initialised - super() hasn't been called",
+                );
+              return e;
+            })(e);
+          })(
+            e,
+            D()
+              ? Reflect.construct(t, r || [], L(e).constructor)
+              : t.apply(e, r),
+          )
+        );
       }
-      function D(e) {
-        if (void 0 === e)
-          throw new ReferenceError(
-            "this hasn't been initialised - super() hasn't been called",
+      function D() {
+        try {
+          var e = !Boolean.prototype.valueOf.call(
+            Reflect.construct(Boolean, [], function () {}),
           );
-        return e;
+        } catch (e) {}
+        return (D = function () {
+          return !!e;
+        })();
       }
-      function N(e) {
+      function L(e) {
         return (
-          (N = Object.setPrototypeOf
+          (L = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          N(e)
+          L(e)
         );
       }
-      function L(e, t, r) {
+      function C(e, t) {
         return (
-          (t = C(t)) in e
+          (C = Object.setPrototypeOf
+            ? Object.setPrototypeOf.bind()
+            : function (e, t) {
+                return (e.__proto__ = t), e;
+              }),
+          C(e, t)
+        );
+      }
+      function F(e, t, r) {
+        return (
+          (t = _(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -2068,60 +2102,45 @@
           e
         );
       }
-      function C(e) {
+      function _(e) {
         var t = (function (e, t) {
-          if ("object" !== k(e) || null === e) return e;
+          if ("object" != w(e) || !e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(e, t || "default");
-            if ("object" !== k(n)) return n;
+            if ("object" != w(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === k(t) ? t : String(t);
+        return "symbol" == w(t) ? t : t + "";
       }
-      var F = (function (e) {
-        !(function (e, t) {
-          if ("function" != typeof t && null !== t)
-            throw new TypeError(
-              "Super expression must either be null or a function",
-            );
-          (e.prototype = Object.create(t && t.prototype, {
-            constructor: { value: e, writable: !0, configurable: !0 },
-          })),
-            Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && T(e, t);
-        })(c, e);
-        var t,
-          r,
-          o,
-          a = I(c);
-        function c() {
+      var J = (function (e) {
+        function t() {
           var e;
           !(function (e, t) {
             if (!(e instanceof t))
               throw new TypeError("Cannot call a class as a function");
-          })(this, c);
-          for (var t = arguments.length, r = new Array(t), n = 0; n < t; n++)
-            r[n] = arguments[n];
+          })(this, t);
+          for (var r = arguments.length, n = new Array(r), o = 0; o < r; o++)
+            n[o] = arguments[o];
           return (
-            L(D((e = a.call.apply(a, [this].concat(r)))), "state", {
+            F((e = N(this, t, [].concat(n))), "state", {
               isAnimationFinished: !1,
             }),
-            L(D(e), "handleAnimationEnd", function () {
+            F(e, "handleAnimationEnd", function () {
               var t = e.props.onAnimationEnd;
               e.setState({ isAnimationFinished: !0 }), d()(t) && t();
             }),
-            L(D(e), "handleAnimationStart", function () {
+            F(e, "handleAnimationStart", function () {
               var t = e.props.onAnimationStart;
               e.setState({ isAnimationFinished: !1 }), d()(t) && t();
             }),
-            L(D(e), "handleMouseEnter", function (t) {
+            F(e, "handleMouseEnter", function (t) {
               var r = e.props.onMouseEnter;
               r && r(e.props, t);
             }),
-            L(D(e), "handleMouseLeave", function (t) {
+            F(e, "handleMouseLeave", function (t) {
               var r = e.props.onMouseLeave;
               r && r(e.props, t);
             }),
@@ -2129,8 +2148,19 @@
           );
         }
         return (
-          (t = c),
-          (o = [
+          (function (e, t) {
+            if ("function" != typeof t && null !== t)
+              throw new TypeError(
+                "Super expression must either be null or a function",
+              );
+            (e.prototype = Object.create(t && t.prototype, {
+              constructor: { value: e, writable: !0, configurable: !0 },
+            })),
+              Object.defineProperty(e, "prototype", { writable: !1 }),
+              t && C(e, t);
+          })(t, e),
+          (r = t),
+          (a = [
             {
               key: "getDerivedStateFromProps",
               value: function (e, t) {
@@ -2148,33 +2178,43 @@
             {
               key: "renderDotItem",
               value: function (e, t) {
-                return n.isValidElement(e)
-                  ? n.cloneElement(e, t)
-                  : d()(e)
-                    ? e(t)
-                    : n.createElement(
-                        A.c,
-                        E({}, t, { className: "recharts-radar-dot" }),
-                      );
+                var r;
+                if (n.isValidElement(e)) r = n.cloneElement(e, t);
+                else if (d()(e)) r = e(t);
+                else {
+                  var o = t.key,
+                    i = E(t, k);
+                  r = n.createElement(
+                    A.c,
+                    S({}, i, {
+                      key: o,
+                      className: (0, m.A)(
+                        "recharts-radar-dot",
+                        "boolean" != typeof e ? e.className : "",
+                      ),
+                    }),
+                  );
+                }
+                return r;
               },
             },
           ]),
-          (r = [
+          (i = [
             {
               key: "renderDots",
               value: function (e) {
-                var t = this.props,
-                  r = t.dot,
-                  i = t.dataKey,
-                  o = (0, P.J9)(this.props),
-                  a = (0, P.J9)(r),
-                  s = e.map(function (e, t) {
-                    var n = S(
-                      S(S({ key: "dot-".concat(t), r: 3 }, o), a),
+                var r = this.props,
+                  o = r.dot,
+                  i = r.dataKey,
+                  a = (0, P.J9)(this.props, !1),
+                  c = (0, P.J9)(o, !0),
+                  s = e.map(function (e, r) {
+                    var n = T(
+                      T(T({ key: "dot-".concat(r), r: 3 }, a), c),
                       {},
-                      { dataKey: i, cx: e.x, cy: e.y, index: t, payload: e },
+                      { dataKey: i, cx: e.x, cy: e.y, index: r, payload: e },
                     );
-                    return c.renderDotItem(r, n);
+                    return t.renderDotItem(o, n);
                   });
                 return n.createElement(
                   x.W,
@@ -2188,19 +2228,19 @@
               value: function (e) {
                 var t,
                   r = this.props,
-                  i = r.shape,
-                  o = r.dot,
+                  o = r.shape,
+                  i = r.dot,
                   a = r.isRange,
                   c = r.baseLinePoints,
                   s = r.connectNulls;
                 return (
-                  (t = n.isValidElement(i)
-                    ? n.cloneElement(i, S(S({}, this.props), {}, { points: e }))
-                    : d()(i)
-                      ? i(S(S({}, this.props), {}, { points: e }))
+                  (t = n.isValidElement(o)
+                    ? n.cloneElement(o, T(T({}, this.props), {}, { points: e }))
+                    : d()(o)
+                      ? o(T(T({}, this.props), {}, { points: e }))
                       : n.createElement(
                           O.t,
-                          E({}, (0, P.J9)(this.props, !0), {
+                          S({}, (0, P.J9)(this.props, !0), {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave,
                             points: e,
@@ -2212,7 +2252,7 @@
                     x.W,
                     { className: "recharts-radar-polygon" },
                     t,
-                    o ? this.renderDots(e) : null,
+                    i ? this.renderDots(e) : null,
                   )
                 );
               },
@@ -2223,18 +2263,18 @@
                 var e = this,
                   t = this.props,
                   r = t.points,
-                  o = t.isAnimationActive,
+                  i = t.isAnimationActive,
                   a = t.animationBegin,
                   c = t.animationDuration,
                   s = t.animationEasing,
                   l = t.animationId,
                   u = this.state.prevPoints;
                 return n.createElement(
-                  i.Ay,
+                  o.Ay,
                   {
                     begin: a,
                     duration: c,
-                    isActive: o,
+                    isActive: i,
                     easing: s,
                     from: { t: 0 },
                     to: { t: 1 },
@@ -2244,19 +2284,19 @@
                   },
                   function (t) {
                     var n = t.t,
-                      i = u && u.length / r.length,
-                      o = r.map(function (e, t) {
-                        var r = u && u[Math.floor(t * i)];
+                      o = u && u.length / r.length,
+                      i = r.map(function (e, t) {
+                        var r = u && u[Math.floor(t * o)];
                         if (r) {
-                          var o = (0, v.Dj)(r.x, e.x),
+                          var i = (0, v.Dj)(r.x, e.x),
                             a = (0, v.Dj)(r.y, e.y);
-                          return S(S({}, e), {}, { x: o(n), y: a(n) });
+                          return T(T({}, e), {}, { x: i(n), y: a(n) });
                         }
                         var c = (0, v.Dj)(e.cx, e.x),
                           s = (0, v.Dj)(e.cy, e.y);
-                        return S(S({}, e), {}, { x: c(n), y: s(n) });
+                        return T(T({}, e), {}, { x: c(n), y: s(n) });
                       });
-                    return e.renderPolygonStatically(o);
+                    return e.renderPolygonStatically(i);
                   },
                 );
               },
@@ -2268,8 +2308,8 @@
                   t = e.points,
                   r = e.isAnimationActive,
                   n = e.isRange,
-                  i = this.state.prevPoints;
-                return !(r && t && t.length) || n || (i && f()(i, t))
+                  o = this.state.prevPoints;
+                return !(r && t && t.length) || n || (o && f()(o, t))
                   ? this.renderPolygonStatically(t)
                   : this.renderPolygonWithAnimation();
               },
@@ -2280,62 +2320,63 @@
                 var e = this.props,
                   t = e.hide,
                   r = e.className,
-                  i = e.points,
-                  o = e.isAnimationActive;
-                if (t || !i || !i.length) return null;
+                  o = e.points,
+                  i = e.isAnimationActive;
+                if (t || !o || !o.length) return null;
                 var a = this.state.isAnimationFinished,
                   c = (0, m.A)("recharts-radar", r);
                 return n.createElement(
                   x.W,
                   { className: c },
                   this.renderPolygon(),
-                  (!o || a) && j.Z.renderCallByParent(this.props, i),
+                  (!i || a) && j.Z.renderCallByParent(this.props, o),
                 );
               },
             },
-          ]) && R(t.prototype, r),
-          o && R(t, o),
-          Object.defineProperty(t, "prototype", { writable: !1 }),
-          c
+          ]) && I(r.prototype, i),
+          a && I(r, a),
+          Object.defineProperty(r, "prototype", { writable: !1 }),
+          r
         );
+        var r, i, a;
       })(n.PureComponent);
-      L(F, "displayName", "Radar"),
-        L(F, "defaultProps", {
+      F(J, "displayName", "Radar"),
+        F(J, "defaultProps", {
           angleAxisId: 0,
           radiusAxisId: 0,
           hide: !1,
           activeDot: !0,
           dot: !1,
           legendType: "rect",
-          isAnimationActive: !h.m.isSsr,
+          isAnimationActive: !b.m.isSsr,
           animationBegin: 0,
           animationDuration: 1500,
           animationEasing: "ease",
         }),
-        L(F, "getComposedData", function (e) {
+        F(J, "getComposedData", function (e) {
           var t = e.radiusAxis,
             r = e.angleAxis,
             n = e.displayedData,
-            i = e.dataKey,
-            o = e.bandSize,
+            o = e.dataKey,
+            i = e.bandSize,
             c = r.cx,
             l = r.cy,
             p = !1,
             f = [],
-            y = "number" !== r.type && null != o ? o : 0;
+            y = "number" !== r.type && null != i ? i : 0;
           n.forEach(function (e, n) {
-            var o = (0, g.kr)(e, r.dataKey, n),
-              u = (0, g.kr)(e, i),
-              d = r.scale(o) + y,
+            var i = (0, g.kr)(e, r.dataKey, n),
+              u = (0, g.kr)(e, o),
+              d = r.scale(i) + y,
               m = Array.isArray(u) ? s()(u) : u,
               v = a()(m) ? void 0 : t.scale(m);
             Array.isArray(u) && u.length >= 2 && (p = !0),
               f.push(
-                S(
-                  S({}, (0, b.IZ)(c, l, v, d)),
+                T(
+                  T({}, (0, h.IZ)(c, l, v, d)),
                   {},
                   {
-                    name: o,
+                    name: i,
                     value: u,
                     cx: c,
                     cy: l,
@@ -2354,7 +2395,7 @@
                   var r = u()(e.value),
                     n = a()(r) ? void 0 : t.scale(r);
                   d.push(
-                    S(S({}, e), {}, { radius: n }, (0, b.IZ)(c, l, n, e.angle)),
+                    T(T({}, e), {}, { radius: n }, (0, h.IZ)(c, l, n, e.angle)),
                   );
                 } else d.push(e);
               }),
@@ -2366,8 +2407,8 @@
       "use strict";
       r.d(t, { t: () => y });
       var n = r(90626),
-        i = r(90018),
-        o = r(50247),
+        o = r(90018),
+        i = r(50247),
         a = ["points", "className", "baseLinePoints", "connectNulls"];
       function c() {
         return (
@@ -2388,25 +2429,25 @@
         if (null == e) return {};
         var r,
           n,
-          i = (function (e, t) {
+          o = (function (e, t) {
             if (null == e) return {};
-            var r,
-              n,
-              i = {},
-              o = Object.keys(e);
-            for (n = 0; n < o.length; n++)
-              (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
-            return i;
+            var r = {};
+            for (var n in e)
+              if (Object.prototype.hasOwnProperty.call(e, n)) {
+                if (t.indexOf(n) >= 0) continue;
+                r[n] = e[n];
+              }
+            return r;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
-          var o = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < o.length; n++)
-            (r = o[n]),
+          var i = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < i.length; n++)
+            (r = i[n]),
               t.indexOf(r) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(e, r) &&
-                  (i[r] = e[r]));
+                  (o[r] = e[r]));
         }
-        return i;
+        return o;
       }
       function l(e) {
         return (
@@ -2491,7 +2532,7 @@
             u = e.connectNulls,
             p = s(e, a);
           if (!t || !t.length) return null;
-          var y = (0, i.A)("recharts-polygon", r);
+          var y = (0, o.A)("recharts-polygon", r);
           if (l && l.length) {
             var d = p.stroke && "none" !== p.stroke,
               m = (function (e, t, r) {
@@ -2505,7 +2546,7 @@
               { className: y },
               n.createElement(
                 "path",
-                c({}, (0, o.J9)(p, !0), {
+                c({}, (0, i.J9)(p, !0), {
                   fill: "Z" === m.slice(-1) ? p.fill : "none",
                   stroke: "none",
                   d: m,
@@ -2514,13 +2555,13 @@
               d
                 ? n.createElement(
                     "path",
-                    c({}, (0, o.J9)(p, !0), { fill: "none", d: f(t, u) }),
+                    c({}, (0, i.J9)(p, !0), { fill: "none", d: f(t, u) }),
                   )
                 : null,
               d
                 ? n.createElement(
                     "path",
-                    c({}, (0, o.J9)(p, !0), { fill: "none", d: f(l, u) }),
+                    c({}, (0, i.J9)(p, !0), { fill: "none", d: f(l, u) }),
                   )
                 : null,
             );
@@ -2528,7 +2569,7 @@
           var v = f(t, u);
           return n.createElement(
             "path",
-            c({}, (0, o.J9)(p, !0), {
+            c({}, (0, i.J9)(p, !0), {
               fill: "Z" === v.slice(-1) ? p.fill : "none",
               className: y,
               d: v,

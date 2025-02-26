@@ -30,7 +30,7 @@
         });
       var r,
         i,
-        o = n(40058),
+        o = n(98840),
         a = Object.defineProperty,
         s = Object.getOwnPropertyDescriptor,
         u = Object.getOwnPropertyNames,

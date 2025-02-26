@@ -2698,6 +2698,7 @@
     "FormattingToolbar_Tables_MergeCells": "Merge Into a Single Cell",
     "FormattingToolbar_Tables_SplitCells": "Split Merged Cells",
     "Prosemirror_FileUpload_DropFile": "Drop an image file to upload",
+    "Prosemirror_FileUpload_Uploading": "Uploading and Processing",
     "selectimage_select_file": "Select file",
     "ServerBrowser_Password": "Password",
     "ServerBrowser_Bots": "Bots",

@@ -1729,22 +1729,25 @@
     },
     84746: (e, t, r) => {
       "use strict";
-      r.d(t, { N: () => c });
+      r.d(t, { N: () => d });
       var i = r(90626),
         n = r(92757),
         a = (r(73745), r(39575)),
         s = r(76217),
-        o = r(79613);
-      const l = "FocusNavHistoryID";
-      function c(e) {
-        const { children: t, timeoutMS: r, ...c } = e,
-          m = (function (e = 2) {
+        o = r(79613),
+        l = r(60778);
+      const c = "FocusNavHistoryID",
+        m = new l.wd("FocusNavigation").Debug;
+      function d(e) {
+        const { children: t, timeoutMS: r, ...l } = e,
+          d = (function (e = 2) {
             const t = (0, n.W6)(),
               r = i.useRef(),
               s = (0, n.zy)(),
-              c = (0, o.ho)(),
-              m = s.state && s.state[l],
-              d = i.useRef();
+              l = (0, o.ho)(),
+              d = s.state && s.state[c],
+              u = i.useRef(),
+              [p, _] = i.useState(d);
             return (
               i.useLayoutEffect(() => {
                 if (!r.current) return;
@@ -1754,18 +1757,18 @@
                   .Tree.WindowContext.FocusChangedCallbacks.Register(
                     (r, i, n) => {
                       const s = t.location;
-                      let o = s.state && s.state[l];
+                      let o = s.state && s.state[c];
                       o ||
-                        ((o = c
+                        ((o = l
                           ? `State_${s.key}`
                           : `State_${e.Node().Tree.id}`),
-                        (d.current = o),
+                        (u.current = o),
                         t.replace({
                           ...t.location,
-                          state: { ...s.state, [l]: o },
+                          state: { ...s.state, [c]: o },
                         })),
-                        d.current == o &&
-                          (c
+                        u.current == o &&
+                          (l
                             ? e.SaveState(o)
                             : window.history.replaceState(
                                 {
@@ -1776,29 +1779,39 @@
                               ));
                     },
                   ).Unregister;
-              }, [t, c]),
+              }, [t, l]),
               i.useLayoutEffect(() => {
-                if (r.current && d.current != m) {
+                if (r.current && u.current != d) {
+                  if (!d) return void _(void 0);
                   const t = r.current.NavTree().DeferredFocus;
-                  t.SuppressFocus();
-                  const i = c ? null : window.history.state?.[m],
-                    n = window.setTimeout(() => {
-                      let e = !1;
-                      c
-                        ? (e = r.current.RestoreState(m, 1))
-                        : i && ((0, a.LU)(r.current.Node(), i, 0), (e = !0)),
-                        e ? t.Reset() : t.ExecuteQueuedFocus(),
-                        (d.current = m);
-                    }, e);
+                  t.SuppressFocus(),
+                    m(`Start restoring history for ${d}, suppressing focus`);
+                  const i = window.setTimeout(() => {
+                    _(d);
+                  }, e);
                   return () => {
-                    window.clearTimeout(n), t.ExecuteQueuedFocus();
+                    window.clearTimeout(i), t.ExecuteQueuedFocus();
                   };
                 }
-              }, [m, t, c, e]),
+              }, [d, e]),
+              i.useEffect(() => {
+                if (!p) return;
+                const e = l ? null : window.history.state?.[p],
+                  t = r.current.NavTree().DeferredFocus;
+                let i = !1;
+                l
+                  ? (i = r.current.RestoreState(p, 1))
+                  : e && ((0, a.LU)(r.current.Node(), e, 0), (i = !0)),
+                  m(
+                    `Completed restoring history for state ${p} - ${i ? "had history." : "no history for this state."}`,
+                  ),
+                  i ? t.Reset() : t.ExecuteQueuedFocus(),
+                  (u.current = p);
+              }, [p, t, l]),
               r
             );
           })(r);
-        return i.createElement(s.Z, { ...c, navRef: m }, t);
+        return i.createElement(s.Z, { ...l, navRef: d }, t);
       }
     },
     10622: (e, t, r) => {

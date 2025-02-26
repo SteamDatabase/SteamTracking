@@ -1527,7 +1527,6 @@
             r.e(4317),
             r.e(4558),
             r.e(9118),
-            r.e(3853),
             r.e(9774),
             r.e(2694),
             r.e(9505),
@@ -1556,7 +1555,6 @@
             r.e(4317),
             r.e(4558),
             r.e(9118),
-            r.e(3853),
             r.e(9774),
             r.e(2694),
             r.e(9505),
@@ -1586,7 +1584,6 @@
             r.e(4317),
             r.e(4558),
             r.e(9118),
-            r.e(3853),
             r.e(9774),
             r.e(2694),
             r.e(9505),
@@ -1621,7 +1618,6 @@
             r.e(4317),
             r.e(4558),
             r.e(9118),
-            r.e(3853),
             r.e(9774),
             r.e(2694),
             r.e(1063),
@@ -1634,10 +1630,10 @@
             r.e(8026),
             r.e(466),
             r.e(1023),
-            r.e(3853),
             r.e(8104),
+            r.e(4292),
             r.e(1220),
-          ]).then(r.bind(r, 73129)),
+          ]).then(r.bind(r, 47004)),
         ),
         Y = n.lazy(() => r.e(9129).then(r.bind(r, 50463))),
         Q = n.lazy(() =>
@@ -1657,7 +1653,6 @@
             r.e(4317),
             r.e(4558),
             r.e(9118),
-            r.e(3853),
             r.e(9774),
             r.e(9505),
             r.e(8453),
@@ -1681,7 +1676,6 @@
             r.e(4317),
             r.e(4558),
             r.e(9118),
-            r.e(3853),
             r.e(9774),
             r.e(2694),
             r.e(1063),
@@ -3816,7 +3810,7 @@
           },
           [m, p, s],
         );
-        o.useEffect(() => {
+        o.useLayoutEffect(() => {
           const e = function () {
             _.current &&
               ((0, i.w)(
@@ -31589,7 +31583,7 @@
         _ = [
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
-          "HTMLDivElement.onreset (/market",
+          "HTMLDivElement.onreset \\(/market",
         ];
       function f() {
         try {
@@ -38411,8 +38405,14 @@
         );
       }
       function St(e) {
-        const { sizeClass: t, children: r, childrenClasses: i, ...s } = e,
-          [o, l, c, m] = (function () {
+        const {
+            sizeClass: t,
+            children: r,
+            childrenClasses: i,
+            navKey: s,
+            ...o
+          } = e,
+          [l, c, m, d] = (function () {
             let e = n.useRef(null),
               t = n.useRef();
             n.useLayoutEffect(() => {
@@ -38454,41 +38454,41 @@
               }, [t]);
             return [e, r, i, s];
           })(),
-          d = n.useRef(!0),
-          p = n.useCallback(() => d.current, [d]),
-          h = n.useCallback(() => {
-            (d.current = !0), c();
-          }, [c]),
+          p = n.useRef(!0),
+          h = n.useCallback(() => p.current, [p]),
           g = n.useCallback(() => {
-            (d.current = !1), m();
+            (p.current = !0), m();
           }, [m]),
-          _ = e.childrenClasses,
-          f = {
-            enter: _.enterStart,
-            enterActive: _.enterEnd,
-            exit: _.exitStart,
-            exitActive: _.exitEnd,
+          _ = n.useCallback(() => {
+            (p.current = !1), d();
+          }, [d]),
+          f = e.childrenClasses,
+          b = {
+            enter: f.enterStart,
+            enterActive: f.enterEnd,
+            exit: f.exitStart,
+            exitActive: f.exitEnd,
           };
-        return o.current && !o.current.ownerDocument.defaultView
+        return l.current && !l.current.ownerDocument.defaultView
           ? null
           : n.createElement(
               vt.A,
               {
-                nodeRef: o,
-                classNames: f,
+                nodeRef: l,
+                classNames: b,
                 in: !0,
                 timeout: 1e4,
-                addEndListener: l,
-                onEntering: h,
-                onExiting: g,
-                ...s,
+                addEndListener: c,
+                onEntering: g,
+                onExiting: _,
+                ...o,
               },
               n.createElement(
                 "div",
-                { ref: o, className: (0, u.A)(Bt().ContentWrapper, t, _.base) },
+                { ref: l, className: (0, u.A)(Bt().ContentWrapper, t, f.base) },
                 n.createElement(
                   a.Z,
-                  { className: t, fnCanTakeFocus: p },
+                  { className: t, fnCanTakeFocus: h, navKey: s },
                   e.children,
                 ),
               ),

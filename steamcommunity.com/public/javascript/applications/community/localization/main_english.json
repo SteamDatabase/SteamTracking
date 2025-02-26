@@ -852,7 +852,7 @@
     "EventPublishing_Replace_Selected": "Replace Selected Event",
     "EventEdit_Replacing_Title": "Replacing Event",
     "EventEdit_Replacing_Success_Title": "Replacing Event Successful",
-    "EventEdit_Replacing_Warning_Title": "Pre-Replacing Event And Save",
+    "EventEdit_Replacing_Warning_Title": "Replace Event Warning",
     "EventEdit_Replacing_Error_Title": "Replacing Event Error",
     "EventEdit_Replacing_Open": "Open Replaced Event",
     "EventError_Desc": "Loading the event information encountered the following error. ",

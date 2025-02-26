@@ -5151,7 +5151,7 @@
               "PromotionPlanning.GetPromotionPlanSalesDaily#1",
               (0, u.I8)(Z, t),
               ee,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 8 },
             );
           }),
           (e.GetPromotionPlanForSalePages = function (e, t) {

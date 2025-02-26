@@ -1296,7 +1296,7 @@
     88336: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        strWidescreenWidth: "1600px",
+        strWidescreenWidth: "1400px",
         strMidscreenWidth: "1100px",
         strPhoneWidth: "768px",
         FacetedBrowseInnerCtn: "_3vjDu6zylspBzUE7FmM6Yl",
@@ -1443,6 +1443,12 @@
         Caps4: "_3xqTH8e1tUBIai3kdvgahn",
         SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
         DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
+        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
+        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
+        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
+        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
+        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
+        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
@@ -1450,9 +1456,6 @@
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
         MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
-        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
-        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
-        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
         PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
         PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
         PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
@@ -2485,10 +2488,12 @@
           return this.m_oTemplateVars.button_text;
         }
         GetLegalTextPartnerName() {
-          return this.m_oTemplateVars.partner;
+          return this.m_oTemplateVars.partner?.toString();
         }
         BHasLegalLinePartner() {
-          return Boolean(this.m_oTemplateVars.partner?.trim().length);
+          return Boolean(
+            this.m_oTemplateVars.partner?.toString().trim().length,
+          );
         }
         BHidePriceOnMessage() {
           return this.m_oTemplateVars.hide_price;
@@ -7901,28 +7906,31 @@
     52625: (e, t, a) => {
       "use strict";
       a.d(t, {
-        JX: () => j,
-        N0: () => $,
-        dl: () => H,
-        of: () => V,
-        Sq: () => K,
-        Dt: () => Y,
-        o9: () => J,
+        JX: () => K,
+        N0: () => Q,
+        dl: () => Y,
+        of: () => $,
+        Sq: () => J,
+        Dt: () => X,
+        o9: () => Z,
         UU: () => q,
         a4: () => x,
-        zy: () => Z,
-        tR: () => ee,
-        uW: () => ne,
-        Uv: () => oe,
-        z2: () => le,
-        Y4: () => me,
-        UJ: () => X,
-        W6: () => ie,
-        ZG: () => te,
-        Yg: () => re,
-        PI: () => se,
-        D4: () => ae,
-        we: () => ce,
+        Jw: () => H,
+        aU: () => W,
+        $_: () => j,
+        zy: () => ae,
+        tR: () => ne,
+        uW: () => se,
+        Uv: () => de,
+        z2: () => me,
+        Y4: () => pe,
+        UJ: () => ee,
+        W6: () => oe,
+        ZG: () => re,
+        Yg: () => le,
+        PI: () => ce,
+        D4: () => ie,
+        we: () => ue,
       });
       var n = a(34629),
         r = a(90626),
@@ -8865,46 +8873,49 @@
       const z = new A.wd("DailyDealAdmin"),
         x = 7,
         q = 14,
-        W = "#DailyDeals_Blackout";
-      function j(e) {
-        return e.store_item_name == W;
+        W = 4,
+        j = 3,
+        H = 6,
+        V = "#DailyDeals_Blackout";
+      function K(e) {
+        return e.store_item_name == V;
       }
-      var H, V, K;
-      function Y(e, t) {
-        let a = V.Unknown;
+      var Y, $, J;
+      function X(e, t) {
+        let a = $.Unknown;
         const n = Date.now() / 1e3;
         return e.rtime32_start_time
           ? e.cancelled
-            ? V.Cancelled
+            ? $.Cancelled
             : ((a =
                 e.rtime32_start_time > n
-                  ? J(e) == K.NotSetUp
-                    ? V.InviteAccepted
+                  ? Z(e) == J.NotSetUp
+                    ? $.InviteAccepted
                     : t > 0
-                      ? V.DealReady
-                      : V.InviteAccepted
+                      ? $.DealReady
+                      : $.InviteAccepted
                   : t > 0
                     ? e.rtime32_start_time + P.Kp.PerDay < n
-                      ? V.DealCompleted
-                      : V.DealLive
-                    : V.DealFailed),
+                      ? $.DealCompleted
+                      : $.DealLive
+                    : $.DealFailed),
               a)
-          : V.Unknown;
+          : $.Unknown;
       }
-      function $(e) {
-        return J(e) != K.NotRequired;
+      function Q(e) {
+        return Z(e) != J.NotRequired;
       }
-      function J(e) {
+      function Z(e) {
         if (e && e.partner_jsondata) {
           const t = JSON.parse(e.partner_jsondata);
           if (t && t.require_sale_page)
             return t.sale_clan_account && t.sale_clan_event_gid
-              ? K.SetUp
-              : K.NotSetUp;
+              ? J.SetUp
+              : J.NotSetUp;
         }
-        return K.NotRequired;
+        return J.NotRequired;
       }
-      function X(e) {
+      function ee(e) {
         let t, a;
         if (e && e.partner_jsondata) {
           const n = JSON.parse(e.partner_jsondata);
@@ -8916,7 +8927,7 @@
       !(function (e) {
         (e[(e.k_BlockDate = 1)] = "k_BlockDate"),
           (e[(e.k_ScheduleSlot = 2)] = "k_ScheduleSlot");
-      })(H || (H = {})),
+      })(Y || (Y = {})),
         (function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Cancelled = 1)] = "Cancelled"),
@@ -8927,13 +8938,13 @@
             (e[(e.DealLive = 6)] = "DealLive"),
             (e[(e.DealCompleted = 7)] = "DealCompleted"),
             (e[(e.DealFailed = 8)] = "DealFailed");
-        })(V || (V = {})),
+        })($ || ($ = {})),
         (function (e) {
           (e[(e.NotRequired = 0)] = "NotRequired"),
             (e[(e.NotSetUp = 1)] = "NotSetUp"),
             (e[(e.SetUp = 2)] = "SetUp");
-        })(K || (K = {}));
-      class Q {
+        })(J || (J = {}));
+      class te {
         m_mapCDailyDeals = new Map();
         m_mapCDailyDealsByDay = new Map();
         m_mapCalendarMarkupByDay = new Map();
@@ -9294,7 +9305,7 @@
             let r = new p();
             if (t) {
               r.set_rtime32_start_time(e),
-                r.set_store_item_name(W),
+                r.set_store_item_name(V),
                 r.set_template_json("{}"),
                 r.set_store_item_type(-1),
                 r.set_store_item_id(0),
@@ -9323,7 +9334,7 @@
             } else if (this.m_mapCDailyDealsByDay.has(e)) {
               const t = this.m_mapCDailyDealsByDay.get(e).find((e) => {
                 const t = this.m_mapCDailyDeals.get(e);
-                return t.store_item_name == W && !t.deleted;
+                return t.store_item_name == V && !t.deleted;
               });
               if (null != t) {
                 const a = this.m_mapCDailyDeals.get(t),
@@ -9369,12 +9380,12 @@
         static s_Singleton;
         static Get() {
           return (
-            Q.s_Singleton ||
-              ((Q.s_Singleton = new Q()),
-              Q.s_Singleton.Init(),
+            te.s_Singleton ||
+              ((te.s_Singleton = new te()),
+              te.s_Singleton.Init(),
               "dev" == o.TS.WEB_UNIVERSE &&
-                (window.g_DailyDealStore = Q.s_Singleton)),
-            Q.s_Singleton
+                (window.g_DailyDealStore = te.s_Singleton)),
+            te.s_Singleton
           );
         }
         constructor() {}
@@ -9417,13 +9428,13 @@
           n.length > 0 &&
             n.forEach((e) =>
               this.HelperAddEDailyDealDisplayInfo(e, {
-                eType: H.k_ScheduleSlot,
+                eType: Y.k_ScheduleSlot,
               }),
             ),
             a.length > 0 &&
               a.forEach((e) =>
                 this.HelperAddEDailyDealDisplayInfo(e.date, {
-                  eType: H.k_BlockDate,
+                  eType: Y.k_BlockDate,
                   name: e.name,
                 }),
               ),
@@ -9441,12 +9452,12 @@
             ]);
         }
       }
-      function Z() {
-        const [e, t] = r.useState(Q.Get().GetAllDailyDeals());
-        return (0, l.hL)(Q.Get().GetCallbackForDailyDealList(), t), e;
+      function ae() {
+        const [e, t] = r.useState(te.Get().GetAllDailyDeals());
+        return (0, l.hL)(te.Get().GetCallbackForDailyDealList(), t), e;
       }
-      function ee(e, t) {
-        const a = Q.Get(),
+      function ne(e, t) {
+        const a = te.Get(),
           [n, i] = r.useState(a.GetDailyDealByID(e));
         return (
           r.useEffect(() => {
@@ -9456,8 +9467,8 @@
           n
         );
       }
-      function te(e) {
-        const t = Q.Get(),
+      function re(e) {
+        const t = te.Get(),
           [a, n] = r.useState(t.GetDailyDealStartTime(e));
         return (
           (0, l.hL)(t.GetCallbackForDailyDealID(e), () =>
@@ -9466,40 +9477,40 @@
           a
         );
       }
-      function ae(e) {
-        const [t, a] = r.useState(() => Q.Get().GetDailyDealByDay(e));
-        return (0, l.hL)(Q.Get().GetCallbackForDailyDealByDayList(e), a), t;
+      function ie(e) {
+        const [t, a] = r.useState(() => te.Get().GetDailyDealByDay(e));
+        return (0, l.hL)(te.Get().GetCallbackForDailyDealByDayList(e), a), t;
       }
-      function ne() {
-        return { fnAddDailyDeal: Q.Get().AddDailyDeal };
+      function se() {
+        return { fnAddDailyDeal: te.Get().AddDailyDeal };
       }
-      function re() {
+      function le() {
         return {
-          fnSaveDailyDeal: Q.Get().SaveDailyDeal,
-          fnRemoveDailyDeal: Q.Get().RemoveDailyDeal,
-          fnCancelDailyDeal: Q.Get().CancelDailyDeal,
-          fnSetDailyDealSalePage: Q.Get().SetDailyDealSalePage,
+          fnSaveDailyDeal: te.Get().SaveDailyDeal,
+          fnRemoveDailyDeal: te.Get().RemoveDailyDeal,
+          fnCancelDailyDeal: te.Get().CancelDailyDeal,
+          fnSetDailyDealSalePage: te.Get().SetDailyDealSalePage,
         };
       }
-      function ie() {
-        return Q.Get().SetBlackoutDate;
-      }
-      function se(e) {
-        return Q.Get().GetDailyDealsBySalePageVanity(e);
-      }
-      function le(e) {
-        return Q.Get().GetDailyDealDisplayOverridesByDay(e);
-      }
       function oe() {
-        const [e, t] = (0, r.useState)(() => Q.Get().CreateMapByStoreItem());
+        return te.Get().SetBlackoutDate;
+      }
+      function ce(e) {
+        return te.Get().GetDailyDealsBySalePageVanity(e);
+      }
+      function me(e) {
+        return te.Get().GetDailyDealDisplayOverridesByDay(e);
+      }
+      function de() {
+        const [e, t] = (0, r.useState)(() => te.Get().CreateMapByStoreItem());
         return (
-          (0, l.hL)(Q.Get().GetCallbackForDailyDealList(), () =>
-            t(Q.Get().CreateMapByStoreItem()),
+          (0, l.hL)(te.Get().GetCallbackForDailyDealList(), () =>
+            t(te.Get().CreateMapByStoreItem()),
           ),
           e
         );
       }
-      function ce(e) {
+      function ue(e) {
         const t = (0, F.F_)(
             e.filter((e) => 0 == e.store_item_type).map((e) => e.store_item_id),
           ),
@@ -9520,13 +9531,13 @@
                   ? (l = s)
                   : 2 == e.store_item_type &&
                     (l = a?.get(e.store_item_id)?.discounts ?? []),
-                n.push(de(e, l, i));
+                n.push(_e(e, l, i));
             }),
             n
           );
         }, [e, t, a]);
       }
-      function me(e) {
+      function pe(e) {
         const t = (0, O.qc)(e),
           a = (0, G.CW)(t.packageid),
           n = e.rtime32_start_time > Date.now() / 1e3,
@@ -9546,11 +9557,11 @@
                 ? (t = a)
                 : 2 == e.store_item_type &&
                   (t = s?.get(e.store_item_id)?.discounts),
-            de(e, t, l)
+            _e(e, t, l)
           );
         }, [e, l, i, a, s]);
       }
-      function de(e, t, a) {
+      function _e(e, t, a) {
         if (e) {
           const n = e.rtime32_start_time,
             r = e.rtime32_start_time + 82800;
@@ -9592,15 +9603,15 @@
           rgDiscounts: [],
         };
       }
-      (0, n.Cg)([l.oI], Q.prototype, "LoadDailyDealByID", null),
-        (0, n.Cg)([l.oI], Q.prototype, "GetDailyDealsBySalePageVanity", null),
-        (0, n.Cg)([l.oI], Q.prototype, "AddDailyDeal", null),
-        (0, n.Cg)([l.oI], Q.prototype, "SaveDailyDeal", null),
-        (0, n.Cg)([l.oI], Q.prototype, "RemoveDailyDeal", null),
-        (0, n.Cg)([l.oI], Q.prototype, "CancelDailyDeal", null),
-        (0, n.Cg)([l.oI], Q.prototype, "SetDailyDealSalePage", null),
-        (0, n.Cg)([l.oI], Q.prototype, "SetBlackoutDate", null),
-        (0, n.Cg)([l.oI], Q.prototype, "InternalAddCDailyDeal", null);
+      (0, n.Cg)([l.oI], te.prototype, "LoadDailyDealByID", null),
+        (0, n.Cg)([l.oI], te.prototype, "GetDailyDealsBySalePageVanity", null),
+        (0, n.Cg)([l.oI], te.prototype, "AddDailyDeal", null),
+        (0, n.Cg)([l.oI], te.prototype, "SaveDailyDeal", null),
+        (0, n.Cg)([l.oI], te.prototype, "RemoveDailyDeal", null),
+        (0, n.Cg)([l.oI], te.prototype, "CancelDailyDeal", null),
+        (0, n.Cg)([l.oI], te.prototype, "SetDailyDealSalePage", null),
+        (0, n.Cg)([l.oI], te.prototype, "SetBlackoutDate", null),
+        (0, n.Cg)([l.oI], te.prototype, "InternalAddCDailyDeal", null);
     },
     92082: (e, t, a) => {
       "use strict";
@@ -23431,7 +23442,7 @@
           )
         );
       };
-      var mt = a(33793),
+      var mt = a(82359),
         dt = a(45737),
         ut = a.n(dt),
         pt = a(99637),
@@ -38146,7 +38157,7 @@
               closeModal: r,
             })
           : l.createElement(T.o0, {
-              strTitle: i ? "Reject Appear" : "Clear Appeal data?",
+              strTitle: i ? "Reject Appeal" : "Clear Appeal data?",
               strDescription: "Are you sure?",
               bDisableBackgroundDismiss: !0,
               onCancel: r,
@@ -38517,7 +38528,7 @@
         Boolean(n.jsondata?.rtime_appeal_created);
         let r = "#OptIn_Appeals_ReviewLine";
         (!n.pending_review && n.pruned) ||
-          (r = "#OptIn_Appears_NotReviewed_ReviewLine");
+          (r = "#OptIn_Appeals_NotReviewed_ReviewLine");
         const i = (0, ze.Ym)(t.event_title, (0, xe.sf)(St.TS.LANGUAGE)),
           s = (0, ze.Ym)(t.appeals_text, (0, xe.sf)(St.TS.LANGUAGE), null);
         return l.createElement(
@@ -43732,13 +43743,7 @@
     },
     41547: (e, t, a) => {
       "use strict";
-      a.d(t, {
-        aU: () => I,
-        gX: () => R,
-        lx: () => M,
-        rE: () => B,
-        yz: () => P,
-      });
+      a.d(t, { gX: () => k, lx: () => T, rE: () => I, yz: () => R });
       var n = a(52625),
         r = a(94238),
         i = a(90626),
@@ -43762,17 +43767,16 @@
         w = a(18509),
         D = a(16856),
         C = a(33428);
-      const I = 4;
-      function B(e) {
+      function I(e) {
         return y.iA.is_support
           ? i.createElement(b.j, {
               nMaxWeeksToDisplay: 1e3,
               fnCreateCalendarEntries: (e) => {
                 const t = new Array();
-                for (let a = 0; a < I; ++a) {
+                for (let a = 0; a < n.$_; ++a) {
                   const n = e + a * S.Kp.PerWeek;
                   t.push(
-                    i.createElement(T, { key: "calrow" + a, rtFirstDay: n }),
+                    i.createElement(B, { key: "calrow" + a, rtFirstDay: n }),
                   );
                 }
                 return t;
@@ -43780,12 +43784,12 @@
             })
           : null;
       }
-      function T(e) {
+      function B(e) {
         const { rtFirstDay: t } = e,
           a = new Array();
         for (let e = 0; e < 7; ++e) {
           const n = (0, r.TQ)(t + e * S.Kp.PerDay);
-          a.push(i.createElement(A, { key: "calday" + n, rtDay: n }));
+          a.push(i.createElement(M, { key: "calday" + n, rtDay: n }));
         }
         return i.createElement(
           "div",
@@ -43799,7 +43803,7 @@
           ),
         );
       }
-      function M(e) {
+      function T(e) {
         const { rtDay: t, children: a } = e,
           n = l.HD.GetTimeNowWithOverride(),
           s = t < n,
@@ -43819,7 +43823,7 @@
           a,
         );
       }
-      function A(e) {
+      function M(e) {
         const { rtDay: t } = e,
           a = (0, n.D4)(t),
           s = l.HD.GetTimeNowWithOverride(),
@@ -43829,10 +43833,10 @@
         if (!m || (u && y.iA.is_support))
           if (1 == a?.length && (0, n.JX)(a[0]))
             o.push(
-              i.createElement(G, { key: "block_" + t, rtDay: t, bAdd: !1 }),
+              i.createElement(N, { key: "block_" + t, rtDay: t, bAdd: !1 }),
             );
           else {
-            for (let e = a ? a.length : 0; e < 4; ++e)
+            for (let e = a ? a.length : 0; e < n.Jw; ++e)
               o.push(
                 i.createElement(
                   "div",
@@ -43856,7 +43860,7 @@
               );
             (a && 0 != a?.length) ||
               o.push(
-                i.createElement(G, { key: "block_" + t, rtDay: t, bAdd: !0 }),
+                i.createElement(N, { key: "block_" + t, rtDay: t, bAdd: !0 }),
               );
           }
         else
@@ -43864,16 +43868,16 @@
             1 == a?.length &&
             (0, n.JX)(a[0]) &&
             o.push(
-              i.createElement(G, { key: "block_" + t, rtDay: t, bAdd: !1 }),
+              i.createElement(N, { key: "block_" + t, rtDay: t, bAdd: !1 }),
             );
         return i.createElement(
-          M,
+          T,
           { rtDay: t },
-          a?.map((e) => i.createElement(k, { key: e.gid, oDailyDeal: e })),
+          a?.map((e) => i.createElement(A, { key: e.gid, oDailyDeal: e })),
           o,
         );
       }
-      function k(e) {
+      function A(e) {
         const { oDailyDeal: t } = e,
           a = (0, C.vV)(t.discount_event_id?.toString());
         if ((0, n.JX)(t)) {
@@ -43895,9 +43899,9 @@
               { className: (0, g.A)(f.DailyDealCtn, f.Reserved) },
               t.store_item_name,
             )
-          : i.createElement(P, { oDailyDeal: t });
+          : i.createElement(R, { oDailyDeal: t });
       }
-      function R(e) {
+      function k(e) {
         const { oDailyDeal: t, bShowName: a } = e,
           [s, l] = (0, r.Zd)(t),
           [c, m] = (0, o.G6)(s, l, {
@@ -43962,7 +43966,7 @@
               }),
             );
       }
-      function P(e) {
+      function R(e) {
         const { oDailyDeal: t } = e;
         return i.createElement(
           s.N_,
@@ -43970,10 +43974,10 @@
             to: D.PromotionRoutes.DailyDealEditor(t.gid),
             className: (0, g.A)({ [f.DailyDealCtn]: !0, [f.Taken]: !0 }),
           },
-          i.createElement(R, { ...e }),
+          i.createElement(k, { ...e }),
         );
       }
-      function N(e) {
+      function P(e) {
         const { rtDay: t, bAdd: a } = e,
           r = i.createRef(),
           s = (0, n.W6)(),
@@ -44014,14 +44018,14 @@
             ),
         );
       }
-      function G(e) {
+      function N(e) {
         const { rtDay: t, bAdd: a } = e;
         return i.createElement(
           c.$n,
           {
             onClick: (e) => {
               (0, d.pg)(
-                i.createElement(N, { rtDay: t, bAdd: a }),
+                i.createElement(P, { rtDay: t, bAdd: a }),
                 (0, h.uX)(e),
               );
             },
@@ -44047,52 +44051,52 @@
         l = a(4869),
         o = a(61859),
         c = a(14771),
-        m = a(41547),
-        d = a(32570),
-        u = a(90626);
+        m = a(32570),
+        d = a(90626),
+        u = a(52625);
       function p(e) {
         const { fnCreateCalendarEntries: t, nMaxWeeksToDisplay: a } = e,
-          o = Math.ceil(a / m.aU) - 1,
+          o = Math.ceil(a / u.aU) - 1,
           [p, g] = (0, s.QD)("page", 0),
           h = p < 0 ? 0 : p >= o ? o : p,
           E = (0, n.oU)(r.HD.GetTimeNowWithOverride()),
-          [S, y] = u.useState(E + h * c.Kp.PerWeek * m.aU),
+          [S, y] = d.useState(E + h * c.Kp.PerWeek * u.aU),
           v = (e) => {
             window.sessionStorage.setItem("dailyDealPageIndex", `?page=${e}`),
               g(e),
-              y(E + e * c.Kp.PerWeek * m.aU);
+              y(E + e * c.Kp.PerWeek * u.aU);
           };
-        return u.createElement(
+        return d.createElement(
           "div",
-          { className: d.CalendarGridCtn },
-          u.createElement(
+          { className: m.CalendarGridCtn },
+          d.createElement(
             "div",
-            { className: d.NavBar },
-            u.createElement(
+            { className: m.NavBar },
+            d.createElement(
               "div",
-              { className: d.NavButtonLeftCtn },
+              { className: m.NavButtonLeftCtn },
               h > 0 &&
-                u.createElement(
+                d.createElement(
                   i.$n,
-                  { className: d.NavButton, onClick: () => v(h - 1) },
-                  u.createElement(l.i3G, { direction: "left" }),
+                  { className: m.NavButton, onClick: () => v(h - 1) },
+                  d.createElement(l.i3G, { direction: "left" }),
                 ),
             ),
-            u.createElement(
+            d.createElement(
               "div",
-              { className: d.NavButtonRightCtn },
+              { className: m.NavButtonRightCtn },
               h < o &&
-                u.createElement(
+                d.createElement(
                   i.$n,
-                  { className: d.NavButton, onClick: () => v(h + 1) },
-                  u.createElement(l.i3G, { direction: "right" }),
+                  { className: m.NavButton, onClick: () => v(h + 1) },
+                  d.createElement(l.i3G, { direction: "right" }),
                 ),
             ),
           ),
-          u.createElement(
+          d.createElement(
             "div",
-            { className: d.CalendarGrid },
-            u.createElement(_, null),
+            { className: m.CalendarGrid },
+            d.createElement(_, null),
             t(S),
           ),
         );
@@ -44101,17 +44105,17 @@
         const e = new Array();
         for (let t = 0; t < 7; ++t)
           e.push(
-            u.createElement(
+            d.createElement(
               "div",
-              { className: d.CalendarDate, key: "calheader_" + t },
-              u.createElement(
+              { className: m.CalendarDate, key: "calheader_" + t },
+              d.createElement(
                 "div",
-                { className: d.DayOfTheWeek },
+                { className: m.DayOfTheWeek },
                 (0, o.we)("#DailyDeals_Day_" + t),
               ),
             ),
           );
-        return u.createElement("div", { className: d.CalendarRow }, e);
+        return d.createElement("div", { className: m.CalendarRow }, e);
       }
     },
     28351: (e, t, a) => {
@@ -44677,7 +44681,7 @@
     },
     40357: (e, t, a) => {
       "use strict";
-      a.d(t, { A: () => b, K: () => A });
+      a.d(t, { A: () => v, K: () => T });
       var n,
         r = a(52625),
         i = a(90626),
@@ -44689,32 +44693,28 @@
         d = a(51134),
         u = a(82227),
         p = a(54965),
-        _ = a(29341),
-        g = a(8527),
-        h = a(82097),
-        E = a(4434),
-        S = a(64753),
-        y = a(30600),
-        v = a(22797),
-        f = a(78327);
-      function b(e) {
+        _ = a(82097),
+        g = a(4434),
+        h = a(64753),
+        E = a(30600),
+        S = a(22797),
+        y = a(78327);
+      function v(e) {
         const [t, a] = (0, i.useState)(!1),
-          n = (0, y.BL)(
+          n = (0, E.BL)(
             (0, i.useCallback)((e) => {
               e.isIntersecting && a(!0);
             }, []),
             { rootMargin: "200px" },
           );
-        return g.iA.is_support
-          ? i.createElement(w, { ...e, bLoadReportData: t, ref: n })
-          : i.createElement(_.ue, { ...e });
+        return i.createElement(f, { ...e, bLoadReportData: t, ref: n });
       }
       !(function (e) {
         (e[(e.Summary = 0)] = "Summary"),
           (e[(e.Sales = 1)] = "Sales"),
           (e[(e.Marketing = 2)] = "Marketing");
       })(n || (n = {}));
-      const w = i.forwardRef((e, t) => {
+      const f = i.forwardRef((e, t) => {
         const { deal: a, strPublisherID: r, bLoadReportData: d } = e,
           [u, _] = (0, s.G6)(a?.store_item_id, (0, c.Dw)(a?.store_item_type), {
             include_assets: !0,
@@ -44741,11 +44741,11 @@
                   ),
                   u?.GetName() || a?.store_item_name,
                 ),
-                i.createElement(C, { tab: h, setTab: E }),
+                i.createElement(w, { tab: h, setTab: E }),
               ),
               y
-                ? i.createElement(N, null)
-                : i.createElement(D, {
+                ? i.createElement(R, null)
+                : i.createElement(b, {
                     key: a.gid,
                     tab: h,
                     deal: a,
@@ -44753,27 +44753,27 @@
                   }),
             );
       });
-      function D(e) {
+      function b(e) {
         const { tab: t, deal: a, reportData: r } = e,
           [l, o] = (0, s.G6)(a?.store_item_id, (0, c.Dw)(a?.store_item_type), {
             include_assets: !0,
           });
         let d = null;
-        if (1 == o) d = i.createElement(N, null);
+        if (1 == o) d = i.createElement(R, null);
         else
           switch (t) {
             case n.Summary:
-              d = i.createElement(T, { reportData: r, deal: a, storeItem: l });
-              break;
-            case n.Sales:
               d = i.createElement(I, { reportData: r, deal: a, storeItem: l });
               break;
+            case n.Sales:
+              d = i.createElement(D, { reportData: r, deal: a, storeItem: l });
+              break;
             case n.Marketing:
-              d = i.createElement(B, { reportData: r, deal: a, storeItem: l });
+              d = i.createElement(C, { reportData: r, deal: a, storeItem: l });
           }
         return i.createElement("div", { className: m.PromotionReportBody }, d);
       }
-      function C(e) {
+      function w(e) {
         const { tab: t, setTab: a } = e,
           r = i.useMemo(
             () => [
@@ -44799,7 +44799,7 @@
           ),
         );
       }
-      function I(e) {
+      function D(e) {
         const { reportData: t, deal: a, storeItem: n } = e,
           { rgDiscounts: s } = (0, r.Y4)(a),
           [c, p] = (0, i.useState)("gross_sales"),
@@ -44818,9 +44818,9 @@
               [e, a]
             );
           }, [t.products]);
-        let y;
+        let v;
         return (
-          (y = n?.GetAssets().GetHeaderURL()
+          (v = n?.GetAssets().GetHeaderURL()
             ? i.createElement("img", { src: n.GetAssets().GetHeaderURL() })
             : n
               ? (0, o.we)("#DailyDeals_HeaderArtMissing")
@@ -44828,15 +44828,15 @@
           i.createElement(
             "div",
             { className: m.DailyDeal_HistoryTable },
-            i.createElement(M, { dealID: a.gid }, y),
+            i.createElement(B, { dealID: a.gid }, v),
             i.createElement(
               "div",
               { className: m.Cell },
               t?.marketing?.length > 1 &&
-                i.createElement(A, { nGames: t.marketing.length }),
+                i.createElement(T, { nGames: t.marketing.length }),
             ),
             i.createElement("div", { className: m.Cell }),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "gross_sales",
               valueClassName: m.BlueHighlight,
               strHeaderToken: "#DailyDeals_Report_Revenue",
@@ -44846,7 +44846,7 @@
               sortColumn: c,
               sortAscending: _,
             }),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "units",
               strHeaderToken: "#DailyDeals_Report_Units",
               value: t?.units,
@@ -44854,7 +44854,7 @@
               sortColumn: c,
               sortAscending: _,
             }),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "gross_activations",
               strHeaderToken: "#DailyDeals_Report_Activations",
               value: t?.gross_activations,
@@ -44880,11 +44880,11 @@
                     "a",
                     {
                       className: (0, l.A)(m.Cell, m.SalesPackageTitleCell),
-                      href: `${f.TS.PARTNER_BASE_URL}store/packagelanding/${e.packageid}`,
+                      href: `${y.TS.PARTNER_BASE_URL}store/packagelanding/${e.packageid}`,
                     },
                     e.package_name ??
                       `${(0, o.we)("#Sale_Stats_PackageId")}: ${e.packageid}`,
-                    i.createElement(G, {
+                    i.createElement(P, {
                       percentage:
                         s.find((t) => t.packageID == e.packageid)
                           ?.nDiscountPct ?? 0,
@@ -44922,26 +44922,26 @@
           )
         );
       }
-      function B(e) {
+      function C(e) {
         const { reportData: t, deal: a, storeItem: n } = e,
-          r = (0, S.CH)(),
+          r = (0, h.CH)(),
           [s, c] = (0, i.useState)("visits"),
           [d, p] = (0, i.useState)(!1),
-          _ = (e) => {
+          E = (e) => {
             p(s == e && !d), c(e);
           },
-          g = i.useMemo(() => {
+          S = i.useMemo(() => {
             let e = [];
             return t.marketing?.forEach((t) => e.push(t.appid)), e;
           }, [t]),
-          y = (0, E.m)("DealyDealHistorySales");
+          y = (0, g.m)("DealyDealHistorySales");
         let v;
         return (
           i.useEffect(() => {
-            h.A.Get()
-              .HintLoadStoreApps(g, { include_basic_info: !0 })
+            _.A.Get()
+              .HintLoadStoreApps(S, { include_basic_info: !0 })
               .then(() => r());
-          }, [g, y, r]),
+          }, [S, y, r]),
           (v = n?.GetAssets().GetHeaderURL()
             ? i.createElement("img", { src: n.GetAssets().GetHeaderURL() })
             : n
@@ -44950,42 +44950,42 @@
           i.createElement(
             "div",
             { className: m.DailyDeal_HistoryTable },
-            i.createElement(M, { dealID: a.gid }, v),
+            i.createElement(B, { dealID: a.gid }, v),
             i.createElement(
               "div",
               { className: m.Cell },
               t?.marketing?.length > 1 &&
-                i.createElement(A, { nGames: t.marketing.length }),
+                i.createElement(T, { nGames: t.marketing.length }),
             ),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "visits",
               strHeaderToken: "#DailyDeals_Report_Visits",
               value: t?.visits,
-              OnClick: _,
+              OnClick: E,
               sortColumn: s,
               sortAscending: d,
             }),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "impressions",
               strHeaderToken: "#DailyDeals_Report_Impressions",
               value: t?.impressions,
-              OnClick: _,
+              OnClick: E,
               sortColumn: s,
               sortAscending: d,
             }),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "wishlist_additions",
               strHeaderToken: "#DailyDeals_Report_Wishlists",
               value: t?.wishlist_additions,
-              OnClick: _,
+              OnClick: E,
               sortColumn: s,
               sortAscending: d,
             }),
-            i.createElement(R, {
+            i.createElement(A, {
               columnSortID: "wishlist_purchases",
               strHeaderToken: "#DailyDeals_Report_WishlistPurchases",
               value: t?.wishlist_purchases,
-              OnClick: _,
+              OnClick: E,
               sortColumn: s,
               sortAscending: d,
             }),
@@ -45005,7 +45005,7 @@
                   i.createElement(
                     "div",
                     { className: (0, l.A)(m.Cell, m.MarketingAppTitleCell) },
-                    (h.A.Get().GetApp(e.appid)?.GetName() ?? "") +
+                    (_.A.Get().GetApp(e.appid)?.GetName() ?? "") +
                       " (#" +
                       e.appid +
                       ")",
@@ -45038,7 +45038,7 @@
           )
         );
       }
-      function T(e) {
+      function I(e) {
         const { reportData: t, deal: a, storeItem: n } = e;
         let r;
         return (
@@ -45050,12 +45050,12 @@
           i.createElement(
             "div",
             { className: m.DailyDeal_HistoryTable },
-            i.createElement(M, { dealID: a.gid }, r),
+            i.createElement(B, { dealID: a.gid }, r),
             i.createElement(
               "div",
               { className: m.Cell },
               t?.marketing?.length > 1 &&
-                i.createElement(A, { nGames: t.marketing.length }),
+                i.createElement(T, { nGames: t.marketing.length }),
             ),
             i.createElement("div", { className: m.Cell }),
             i.createElement(
@@ -45164,24 +45164,24 @@
           )
         );
       }
-      function M(e) {
+      function B(e) {
         return i.createElement(
           "a",
           {
             className: m.CapsuleContainer,
-            href: `${f.TS.PARTNER_BASE_URL}promotion/dailydeals/edit/${e.dealID}`,
+            href: `${y.TS.PARTNER_BASE_URL}promotion/dailydeals/edit/${e.dealID}`,
           },
           e.children,
         );
       }
-      function A(e) {
+      function T(e) {
         const { nGames: t } = e;
         return t <= 0
           ? null
           : i.createElement(
               "div",
               { className: m.GameCountInfo },
-              i.createElement(k, { className: m.GameCountBadge }),
+              i.createElement(M, { className: m.GameCountBadge }),
               i.createElement(
                 "div",
                 { className: m.GameCountContent },
@@ -45194,7 +45194,7 @@
               ),
             );
       }
-      function k(e) {
+      function M(e) {
         return i.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", ...e },
@@ -45206,7 +45206,7 @@
           }),
         );
       }
-      function R(e) {
+      function A(e) {
         const {
             OnClick: t,
             columnSortID: a,
@@ -45233,7 +45233,7 @@
                 "div",
                 { className: h },
                 (0, o.we)(p),
-                s == a && i.createElement(P, { bAscending: c }),
+                s == a && i.createElement(k, { bAscending: c }),
               ),
               i.createElement(
                 "div",
@@ -45243,7 +45243,7 @@
             ),
         );
       }
-      function P(e) {
+      function k(e) {
         return i.createElement(
           "span",
           {
@@ -45268,18 +45268,18 @@
           ),
         );
       }
-      function N() {
+      function R() {
         return i.createElement(
           "div",
           { className: m.ReportThrobberContainer },
-          i.createElement(v.t, {
+          i.createElement(S.t, {
             size: "medium",
             position: "center",
             className: m.ReportThrobber,
           }),
         );
       }
-      function G(e) {
+      function P(e) {
         const { percentage: t } = e;
         return t
           ? i.createElement(
@@ -45454,7 +45454,6 @@
       a.d(t, {
         C7: () => oe,
         mf: () => _e,
-        ue: () => ce,
         kT: () => re,
         rX: () => me,
         cm: () => ie,
@@ -46802,7 +46801,7 @@
         r = a(33428),
         i = a(65946),
         s = a(90626),
-        l = a(33793),
+        l = a(82359),
         o = a(82097),
         c = a(62792),
         m = a(55263),
@@ -47128,7 +47127,7 @@
     },
     92360: (e, t, a) => {
       "use strict";
-      a.d(t, { Ak: () => ne, fU: () => ie, Xm: () => ae });
+      a.d(t, { Ak: () => ae, fU: () => re, Xm: () => te });
       var n = a(64238),
         r = a.n(n),
         i = a(98019),
@@ -47164,8 +47163,7 @@
         G = a(56330),
         O = a(21432),
         F = a(39102);
-      const L = 4;
-      function U(e) {
+      function L(e) {
         const { strInviteID: t } = e,
           a = (0, l.u6)(t),
           { rgDiscountConflict: n, bLoading: r } = (0, D.B)(a);
@@ -47179,10 +47177,10 @@
               nMaxWeeksToDisplay: 26,
               fnCreateCalendarEntries: (e) => {
                 const a = new Array();
-                for (let r = 0; r < P.aU; ++r) {
+                for (let r = 0; r < w.aU; ++r) {
                   const i = e + r * k.Kp.PerWeek;
                   a.push(
-                    o.createElement(z, {
+                    o.createElement(U, {
                       key: "calrow" + r,
                       rtFirstDay: i,
                       strInviteID: t,
@@ -47194,7 +47192,7 @@
               },
             });
       }
-      function z(e) {
+      function U(e) {
         const { rtFirstDay: t, strInviteID: a, rgDiscountConflict: n } = e,
           r = (0, l.u6)(a),
           i = new Array();
@@ -47209,7 +47207,7 @@
               discountEventID: p,
             } = (0, D.E)(n, r, s, 1);
           i.push(
-            o.createElement(x, {
+            o.createElement(z, {
               key: "calday" + s,
               rtDay: s,
               nDiscount: l,
@@ -47234,7 +47232,7 @@
           ),
         );
       }
-      function x(e) {
+      function z(e) {
         const {
             rtDay: t,
             strInviteID: a,
@@ -47264,22 +47262,22 @@
         }
         const S = I.HD.GetTimeNowWithOverride(),
           v = t > S,
-          f = L - (g + u),
+          f = w.Jw - (g + u),
           b = !n && v && !_ && f > 0 && !l;
         return o.createElement(
           P.lx,
           { rtDay: t },
-          o.createElement(W, { rgDailyDeals: m }),
+          o.createElement(q, { rgDailyDeals: m }),
           Boolean(b) &&
             o.createElement(
               o.Fragment,
               null,
-              o.createElement(j, {
+              o.createElement(W, {
                 nAvailableSlots: f,
                 onClick: (e) => {
                   (0, E.pg)(
                     i
-                      ? o.createElement(q, {
+                      ? o.createElement(x, {
                           rtDay: t,
                           strInviteID: a,
                           strDiscountName: s,
@@ -47302,10 +47300,10 @@
             o.createElement(F.D, { strDiscountName: s, nDiscount: i }),
           Boolean(!b && v && n) && o.createElement(F.W, { strConflict: n }),
           Boolean(!b && v && !n) &&
-            o.createElement(H, { strReason: _ ? p?.name : void 0 }),
+            o.createElement(j, { strReason: _ ? p?.name : void 0 }),
         );
       }
-      function q(e) {
+      function x(e) {
         const {
             rtDay: t,
             strInviteID: a,
@@ -47401,7 +47399,7 @@
           ),
         );
       }
-      function W(e) {
+      function q(e) {
         const { rgDailyDeals: t } = e;
         return o.createElement(
           o.Fragment,
@@ -47422,7 +47420,7 @@
           ),
         );
       }
-      function j(e) {
+      function W(e) {
         const { nAvailableSlots: t, onClick: a } = e;
         return o.createElement(
           "div",
@@ -47439,7 +47437,7 @@
           ),
         );
       }
-      function H(e) {
+      function j(e) {
         const { strReason: t } = e;
         return o.createElement(
           "div",
@@ -47448,18 +47446,18 @@
           (0, v.we)("#DailyDeals_UnavailableDate"),
         );
       }
-      var V = a(96743),
-        K = a(29341),
-        Y = a(23275),
-        $ = a(80675),
-        J = a(89582),
-        X = a(16856),
-        Q = a(41720),
-        Z = a(62792),
-        ee = a(45325),
-        te = a(80754);
-      const ae = 6;
-      function ne(e) {
+      var H = a(96743),
+        V = a(29341),
+        K = a(23275),
+        Y = a(80675),
+        $ = a(89582),
+        J = a(16856),
+        X = a(41720),
+        Q = a(62792),
+        Z = a(45325),
+        ee = a(80754);
+      const te = 6;
+      function ae(e) {
         const t = (0, l.ho)(1),
           a = (0, i.q)(),
           [n, c] = (0, o.useState)(""),
@@ -47474,7 +47472,7 @@
             let e = [];
             return (
               t.map((t) => {
-                if (!(u > 0 && t.invite_account != u) && (0, ee.IA)(t)) {
+                if (!(u > 0 && t.invite_account != u) && (0, Z.IA)(t)) {
                   if (n?.trim().length > 0) {
                     const e = Number.parseInt(n);
                     let a = null;
@@ -47500,18 +47498,18 @@
         return f.iA.is_support
           ? o.createElement(
               "div",
-              { className: $.InvitedAppsCtn },
+              { className: Y.InvitedAppsCtn },
               o.createElement(
                 "div",
-                { className: $.InviteTitleCtn },
+                { className: Y.InviteTitleCtn },
                 o.createElement(
                   "div",
-                  { className: $.InviteBtnCtn },
+                  { className: Y.InviteBtnCtn },
                   o.createElement(
                     _.jn,
                     {
                       onClick: (e) =>
-                        (0, E.pg)(o.createElement(J.V, null), (0, y.uX)(e)),
+                        (0, E.pg)(o.createElement($.V, null), (0, y.uX)(e)),
                     },
                     "Create New Invite...",
                   ),
@@ -47530,19 +47528,19 @@
               ),
               o.createElement(
                 "div",
-                { className: $.SearchCtn },
+                { className: Y.SearchCtn },
                 o.createElement(_.pd, {
-                  className: $.SearchInput,
+                  className: Y.SearchInput,
                   type: "string",
                   value: n,
                   placeholder: "Search name or id",
                   onChange: (e) => c(e.currentTarget.value),
                 }),
-                o.createElement(te.z, {
+                o.createElement(ee.z, {
                   nAccountID: u,
                   rgAccountListFilter: v,
                   fnSetAccountFilter: p,
-                  className: r()($.ValveAccountDropdown),
+                  className: r()(Y.ValveAccountDropdown),
                   rgAdditional: [{ data: null, label: "Sent by anyone" }],
                 }),
               ),
@@ -47553,12 +47551,12 @@
                   "div",
                   { key: "promo_" + e.inviteid },
                   o.createElement(
-                    K.rX,
-                    { invite: e, containerClass: $.InviteItemAdminList },
-                    o.createElement(oe, { promo: e }),
+                    V.rX,
+                    { invite: e, containerClass: Y.InviteItemAdminList },
+                    o.createElement(le, { promo: e }),
                   ),
                   o.createElement(
-                    re,
+                    ne,
                     { inviteid: e.inviteid },
                     o.createElement(
                       "div",
@@ -47573,18 +47571,18 @@
             )
           : null;
       }
-      function re(e) {
+      function ne(e) {
         const { inviteid: t, children: a } = e,
           n = (0, l.u6)(t),
           [r] = (0, s.MH)(n),
           i = o.useMemo(
             () =>
               r
-                ? (0, Z.hh)((0, Z.Je)(r.GetID(), r.GetStoreItemType()))
+                ? (0, Q.hh)((0, Q.Je)(r.GetID(), r.GetStoreItemType()))
                 : void 0,
             [r],
           ),
-          { rgContacts: c, description: m } = (0, Q.yb)(
+          { rgContacts: c, description: m } = (0, X.yb)(
             n?.primary_partnerid,
             i,
           );
@@ -47592,11 +47590,11 @@
           ? o.createElement(
               "a",
               {
-                className: $.ViewPartnerContacts,
+                className: Y.ViewPartnerContacts,
                 href: "#",
                 onClick: (e) =>
                   (0, E.pg)(
-                    o.createElement(Q.Kx, { rgAccountIDs: c, description: m }),
+                    o.createElement(X.Kx, { rgAccountIDs: c, description: m }),
                     window,
                   ),
               },
@@ -47604,16 +47602,16 @@
             )
           : a;
       }
-      function ie(e) {
+      function re(e) {
         const { strInviteID: t } = e,
           a = (0, l.u6)(t);
         return a
           ? 0 != a.rtdatechosen
-            ? o.createElement(se, {
+            ? o.createElement(ie, {
                 strMessage: (0, v.we)("#DailyDeals_InviteAlreadyAccepted"),
               })
             : a.rtexpiretime < Date.now() / 1e3
-              ? o.createElement(se, {
+              ? o.createElement(ie, {
                   strMessage: (0, v.we)(
                     "#DailyDeals_InviteExpired",
                     (0, v.TW)(a.rtexpiretime),
@@ -47625,30 +47623,30 @@
                   o.createElement(
                     "div",
                     { style: { paddingBottom: 20 } },
-                    o.createElement(le, { promo: a }),
+                    o.createElement(se, { promo: a }),
                   ),
-                  o.createElement(U, { strInviteID: t }),
-                  o.createElement(V.Es, null),
+                  o.createElement(L, { strInviteID: t }),
+                  o.createElement(H.Es, null),
                 )
-          : o.createElement(se, {
+          : o.createElement(ie, {
               strMessage: (0, v.we)("#DailyDeals_InvalidInvite"),
             });
       }
-      function se(e) {
+      function ie(e) {
         const { strMessage: t } = e;
         return o.createElement(
           "div",
-          { className: $.InviteNotAvailableContainer },
-          o.createElement("div", { className: $.WhyUnavailable }, t),
+          { className: Y.InviteNotAvailableContainer },
+          o.createElement("div", { className: Y.WhyUnavailable }, t),
           o.createElement(
             "div",
-            { className: $.ReturnToDashboard },
+            { className: Y.ReturnToDashboard },
             (0, v.PP)(
               "#DailyDeals_ReturnLink",
               o.createElement(
                 "a",
                 {
-                  href: `${f.TS.PARTNER_BASE_URL}promotion${X.PromotionRoutes.DailyDealDashboard()}`,
+                  href: `${f.TS.PARTNER_BASE_URL}promotion${J.PromotionRoutes.DailyDealDashboard()}`,
                 },
                 (0, v.we)("#DailyDeals_Dashboard"),
               ),
@@ -47656,16 +47654,16 @@
           ),
         );
       }
-      function le(e) {
+      function se(e) {
         const { promo: t } = e,
           [a] = (0, s.MH)(t);
         return o.createElement(
           "div",
-          { className: $.InvitePageHeader },
+          { className: Y.InvitePageHeader },
           o.createElement(
             c.N_,
             {
-              to: X.PromotionRoutes.DailyDealPartnerDashboard(
+              to: J.PromotionRoutes.DailyDealPartnerDashboard(
                 "" + t.primary_partnerid,
               ),
             },
@@ -47673,11 +47671,11 @@
           ),
           o.createElement(
             "div",
-            { className: $.InviteTitle },
+            { className: Y.InviteTitle },
             (0, v.we)("#DailyDeals_Invite_Dashboard_Header"),
             o.createElement(
               "span",
-              { className: $.InviteTitle_AppName },
+              { className: Y.InviteTitle_AppName },
               a?.GetName(),
             ),
           ),
@@ -47686,18 +47684,18 @@
             "div",
             {
               className: r()(
-                $.InvitedAppCtn,
-                t.require_sale_page ? $.SalePageInvite : null,
+                Y.InvitedAppCtn,
+                t.require_sale_page ? Y.SalePageInvite : null,
               ),
             },
-            o.createElement(Y.t, { invite: t }),
+            o.createElement(K.t, { invite: t }),
             o.createElement(
               "div",
-              { className: $.InvitedAppInfo },
+              { className: Y.InvitedAppInfo },
               o.createElement(
                 "div",
                 null,
-                (0, v.we)("#DailyDeals_Partner_InviteDesc_row1", ae),
+                (0, v.we)("#DailyDeals_Partner_InviteDesc_row1", te),
               ),
               o.createElement(
                 "div",
@@ -47716,16 +47714,16 @@
           ),
         );
       }
-      function oe(e) {
+      function le(e) {
         const { promo: t } = e;
         return o.createElement(
           "div",
-          { className: $.InviteAdminButtons },
+          { className: Y.InviteAdminButtons },
           o.createElement(
             _.$n,
             {
               onClick: (e) =>
-                (0, E.pg)(o.createElement(ce, { promo: t }), (0, y.uX)(e)),
+                (0, E.pg)(o.createElement(oe, { promo: t }), (0, y.uX)(e)),
             },
             "Cancel Invitation",
           ),
@@ -47733,13 +47731,13 @@
             _.$n,
             {
               onClick: (e) =>
-                (0, E.pg)(o.createElement(me, { promo: t }), (0, y.uX)(e)),
+                (0, E.pg)(o.createElement(ce, { promo: t }), (0, y.uX)(e)),
             },
             "Resend Invitation Email",
           ),
         );
       }
-      function ce(e) {
+      function oe(e) {
         const { promo: t, closeModal: a } = e,
           { fnCancelInvite: n } = (0, l.yc)(),
           r = (0, g.vs)();
@@ -47777,7 +47775,7 @@
               },
             });
       }
-      function me(e) {
+      function ce(e) {
         const { promo: t, closeModal: a } = e,
           { fnResendInvitationEmail: n } = (0, l.Ee)(),
           r = (0, g.vs)();
@@ -53607,7 +53605,7 @@
         i = a(68612),
         s = a(13810),
         l = a(90626),
-        o = a(33793),
+        o = a(82359),
         c = a(82097),
         m = a(62792),
         d = a(55263),
@@ -54735,7 +54733,7 @@
         P = a(22385),
         N = a(19367),
         G = a.n(N),
-        O = a(21228),
+        O = a(41653),
         F = a(92757),
         L = a(44165),
         U = a(32754),
@@ -56305,7 +56303,7 @@
         ye = a(14947),
         ve = a(19367),
         fe = a.n(ve),
-        be = a(21228),
+        be = a(41653),
         we = a(95034),
         De = a(21869),
         Ce = a(98019),
@@ -57819,7 +57817,7 @@
         Wt = a(22837),
         jt = a(58995),
         Ht = a.n(jt),
-        Vt = a(33793);
+        Vt = a(82359);
       function Kt(e) {
         const { oEditableMessage: t } = e,
           a = (0, c.useMemo)(
@@ -65201,7 +65199,7 @@
         R = a(98076),
         P = a(71298),
         N = a(35700),
-        G = a(33793),
+        G = a(82359),
         O = a(65744);
       function F(e) {
         const { oEditablePlan: t, clusterType: a, index: i } = e,
@@ -69454,7 +69452,7 @@
       var i = a(13810),
         s = a(97843),
         l = a(90626),
-        o = a(33793),
+        o = a(82359),
         c = a(82097),
         m = a(62792),
         d = a(55263),
@@ -71983,12 +71981,13 @@
           capsules_per_row: t,
           is_generic: a,
           is_generic_trailer: n,
-          is_trailer_carousel: r,
-          is_spotlights: s,
-          is_item_browser: l,
-          is_maincap: o,
-          is_expanded_maincap: c,
-          is_expanded_display: m,
+          is_event_dash_row: r,
+          is_trailer_carousel: s,
+          is_spotlights: l,
+          is_item_browser: o,
+          is_maincap: c,
+          is_expanded_maincap: m,
+          is_expanded_display: d,
         } = e;
         if (!t) return null;
         if (a)
@@ -72011,7 +72010,7 @@
               i.createElement("div", { className: Z().ShineCtn }),
             ),
           );
-        if (r)
+        if (s)
           return i.createElement(
             "div",
             { className: Z().GhostCtn },
@@ -72030,7 +72029,41 @@
               ),
             ),
           );
-        if (s)
+        if (r)
+          return i.createElement(
+            "div",
+            { className: Z().GhostCtn },
+            i.createElement(
+              "div",
+              { className: Z().EventRow },
+              i.createElement("div", {
+                className: (0, X.A)(
+                  Z().PlaceholderGroupImage,
+                  Z().PlaceholderCap,
+                ),
+              }),
+              i.createElement(
+                "div",
+                { className: (0, X.A)(Z().DetailsPlaceholder) },
+                i.createElement("div", {
+                  className: (0, X.A)(Z().PlaceholderTitle, Z().PlaceholderCap),
+                }),
+                i.createElement("div", {
+                  className: (0, X.A)(
+                    Z().PlaceholderSubtitle,
+                    Z().PlaceholderCap,
+                  ),
+                }),
+                i.createElement("div", {
+                  className: (0, X.A)(
+                    Z().PlaceholderButtons,
+                    Z().PlaceholderCap,
+                  ),
+                }),
+              ),
+            ),
+          );
+        if (l)
           return i.createElement(
             "div",
             { className: Z().GhostCtn },
@@ -72047,7 +72080,7 @@
               ),
             ),
           );
-        if (o)
+        if (c)
           return i.createElement(
             "div",
             { className: Z().GhostCtn },
@@ -72056,7 +72089,7 @@
               {
                 className: (0, X.A)({
                   [Z().MainCapRow]: !0,
-                  [Z().MainCapRowExpanded]: c,
+                  [Z().MainCapRowExpanded]: m,
                 }),
               },
               i.createElement("div", { className: Z().PlaceholderCap }),
@@ -72090,7 +72123,7 @@
               ),
             ),
           );
-        if (m)
+        if (d)
           return i.createElement(
             "div",
             { className: Z().GhostCtn },
@@ -72105,7 +72138,7 @@
               }),
             ),
           );
-        if (l) {
+        if (o) {
           const e = [];
           for (let a = 0; a < t[0]; a++)
             e.push(
@@ -87567,7 +87600,7 @@
               "PromotionPlanning.GetPromotionPlanSalesDaily#1",
               (0, i.I8)(H, t),
               V,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 8 },
             );
           }),
           (e.GetPromotionPlanForSalePages = function (e, t) {

@@ -370,22 +370,25 @@
     },
     84746: (e, t, n) => {
       "use strict";
-      n.d(t, { N: () => c });
+      n.d(t, { N: () => u });
       var r = n(90626),
         a = n(92757),
         i = (n(73745), n(39575)),
         s = n(76217),
-        o = n(79613);
-      const l = "FocusNavHistoryID";
-      function c(e) {
-        const { children: t, timeoutMS: n, ...c } = e,
-          m = (function (e = 2) {
+        o = n(79613),
+        l = n(60778);
+      const c = "FocusNavHistoryID",
+        m = new l.wd("FocusNavigation").Debug;
+      function u(e) {
+        const { children: t, timeoutMS: n, ...l } = e,
+          u = (function (e = 2) {
             const t = (0, a.W6)(),
               n = r.useRef(),
               s = (0, a.zy)(),
-              c = (0, o.ho)(),
-              m = s.state && s.state[l],
-              u = r.useRef();
+              l = (0, o.ho)(),
+              u = s.state && s.state[c],
+              d = r.useRef(),
+              [p, _] = r.useState(u);
             return (
               r.useLayoutEffect(() => {
                 if (!n.current) return;
@@ -395,18 +398,18 @@
                   .Tree.WindowContext.FocusChangedCallbacks.Register(
                     (n, r, a) => {
                       const s = t.location;
-                      let o = s.state && s.state[l];
+                      let o = s.state && s.state[c];
                       o ||
-                        ((o = c
+                        ((o = l
                           ? `State_${s.key}`
                           : `State_${e.Node().Tree.id}`),
-                        (u.current = o),
+                        (d.current = o),
                         t.replace({
                           ...t.location,
-                          state: { ...s.state, [l]: o },
+                          state: { ...s.state, [c]: o },
                         })),
-                        u.current == o &&
-                          (c
+                        d.current == o &&
+                          (l
                             ? e.SaveState(o)
                             : window.history.replaceState(
                                 {
@@ -417,29 +420,39 @@
                               ));
                     },
                   ).Unregister;
-              }, [t, c]),
+              }, [t, l]),
               r.useLayoutEffect(() => {
-                if (n.current && u.current != m) {
+                if (n.current && d.current != u) {
+                  if (!u) return void _(void 0);
                   const t = n.current.NavTree().DeferredFocus;
-                  t.SuppressFocus();
-                  const r = c ? null : window.history.state?.[m],
-                    a = window.setTimeout(() => {
-                      let e = !1;
-                      c
-                        ? (e = n.current.RestoreState(m, 1))
-                        : r && ((0, i.LU)(n.current.Node(), r, 0), (e = !0)),
-                        e ? t.Reset() : t.ExecuteQueuedFocus(),
-                        (u.current = m);
-                    }, e);
+                  t.SuppressFocus(),
+                    m(`Start restoring history for ${u}, suppressing focus`);
+                  const r = window.setTimeout(() => {
+                    _(u);
+                  }, e);
                   return () => {
-                    window.clearTimeout(a), t.ExecuteQueuedFocus();
+                    window.clearTimeout(r), t.ExecuteQueuedFocus();
                   };
                 }
-              }, [m, t, c, e]),
+              }, [u, e]),
+              r.useEffect(() => {
+                if (!p) return;
+                const e = l ? null : window.history.state?.[p],
+                  t = n.current.NavTree().DeferredFocus;
+                let r = !1;
+                l
+                  ? (r = n.current.RestoreState(p, 1))
+                  : e && ((0, i.LU)(n.current.Node(), e, 0), (r = !0)),
+                  m(
+                    `Completed restoring history for state ${p} - ${r ? "had history." : "no history for this state."}`,
+                  ),
+                  r ? t.Reset() : t.ExecuteQueuedFocus(),
+                  (d.current = p);
+              }, [p, t, l]),
               n
             );
           })(n);
-        return r.createElement(s.Z, { ...c, navRef: m }, t);
+        return r.createElement(s.Z, { ...l, navRef: u }, t);
       }
     },
     3088: (e, t, n) => {
@@ -550,8 +563,8 @@
       n.d(t, {
         Mn: () => G,
         Vh: () => v,
-        lP: () => L,
-        xz: () => N,
+        lP: () => N,
+        xz: () => L,
         ZB: () => b,
         S0: () => O,
         uQ: () => M,
@@ -670,16 +683,16 @@
           },
         });
       }
-      const L = {
+      const N = {
           include_basic_info: !0,
           include_assets: !0,
           include_platforms: !0,
           include_release: !0,
         },
-        N = { ...L, include_included_items: !0, included_item_data_request: L };
+        L = { ...N, include_included_items: !0, included_item_data_request: N };
       function T() {
         const [e] = (0, C.fg)();
-        return _(e, N);
+        return _(e, L);
       }
       function M(e) {
         return (
@@ -812,8 +825,8 @@
         b = n(62792),
         S = n(55263),
         B = n(33737),
-        L = n(84811),
-        N = n(26101),
+        N = n(84811),
+        L = n(26101),
         T = n(10962),
         M = n(72237),
         R = n(70809),
@@ -898,7 +911,7 @@
           a = n ? g.vF : P[t.type];
         return a
           ? C.createElement(
-              L.tH,
+              N.tH,
               { fallback: (t) => C.createElement(x, { ...e, error: t }) },
               C.createElement(a, { item: t, ...r }),
             )
@@ -1511,7 +1524,7 @@
       function ce(e) {
         const { appid: t, children: n } = e;
         return C.createElement(
-          N.Qf,
+          L.Qf,
           {
             item: { type: "game", id: t },
             hoverProps: le,
@@ -1819,11 +1832,11 @@
         b = n(61859),
         S = n(30470),
         B = n(52038),
-        L = n(34633);
-      function N(e) {
+        N = n(34633);
+      function L(e) {
         return i.createElement(
           "div",
-          { className: (0, B.A)(L.CartCard, e.className) },
+          { className: (0, B.A)(N.CartCard, e.className) },
           e.children,
         );
       }
@@ -1877,7 +1890,7 @@
             (0, b.we)("#Cart_SaleCardDrops_Explanation", c),
           );
         return i.createElement(
-          N,
+          L,
           { className: M.TradingCardContainer },
           m &&
             i.createElement(
@@ -2891,9 +2904,9 @@
           [C, y] = i.useState(E > 0 ? ve()(1e3 * E) : null),
           [I, w] = i.useState(),
           [v, S] = i.useState(),
-          L = (function (e, t, n, r, a) {
+          N = (function (e, t, n, r, a) {
             const s = r && r(),
-              o = t && !Ne(t).isValid(),
+              o = t && !Le(t).isValid(),
               l = e && !Te(e).isValid();
             let c = null;
             (l || o || "string" == typeof s || !1 === s) &&
@@ -2912,7 +2925,7 @@
               c
             );
           })(I, v, p, _, a),
-          N = !a && L;
+          L = !a && N;
         let T, M;
         if (t && n && t == n && n > ge.HD.GetTimeNowWithOverride()) {
           const e = ve().unix(n);
@@ -2932,8 +2945,8 @@
             fnOnInput: F,
             fnOnInputBlur: G,
             fnOnChange: O,
-          } = Le(
-            Ne,
+          } = Ne(
+            Le,
             (e) => {
               if (o) return;
               S(null);
@@ -2951,7 +2964,7 @@
             fnOnInput: k,
             fnOnInputBlur: P,
             fnOnChange: z,
-          } = Le(
+          } = Ne(
             Te,
             (e) => {
               if (o) return;
@@ -2985,12 +2998,12 @@
               { toolTipContent: m, direction: "top" },
               Boolean(u) && i.createElement("span", null, u),
             ),
-            N &&
+            L &&
               i.createElement(
                 "span",
                 { className: Ie().DateErrorCtn },
                 i.createElement("img", { src: fe.A }),
-                N,
+                L,
               ),
           ),
           i.createElement(
@@ -3090,7 +3103,7 @@
             ),
         );
       }
-      function Le(e, t, n) {
+      function Ne(e, t, n) {
         const [r, a] = i.useState(!1);
         return {
           fnOnInput: (e) => {
@@ -3112,7 +3125,7 @@
           },
         };
       }
-      function Ne(e) {
+      function Le(e) {
         return ve()(
           e,
           (function () {
@@ -3912,8 +3925,8 @@
         bt = n(22837),
         St = n(81393),
         Bt = n(43527),
-        Lt = n(50829),
-        Nt = n(97232);
+        Nt = n(50829),
+        Lt = n(97232);
       function Tt(e) {
         const {
             lineItem: t,
@@ -3964,15 +3977,15 @@
           );
         return i.createElement(
           "div",
-          { className: Lt.CouponPickerRowGlow },
+          { className: Nt.CouponPickerRowGlow },
           i.createElement(
             "div",
-            { className: Lt.CouponPickerRow },
+            { className: Nt.CouponPickerRow },
             t ? i.createElement(Rt, { ...t }) : null,
             i.createElement(Gt, null, (0, b.Yp)("#Cart_CouponAvailability", n)),
             i.createElement(
               "div",
-              { className: Lt.ModifyLink },
+              { className: Nt.ModifyLink },
               i.createElement(yt, { onClick: r }, a),
             ),
           ),
@@ -3981,7 +3994,7 @@
       function Rt(e) {
         const { large_icon_url: t, title: n } = e;
         return i.createElement("img", {
-          className: Lt.CouponRepresentation,
+          className: Nt.CouponRepresentation,
           src: t,
           title: n,
         });
@@ -4006,7 +4019,7 @@
             null,
             (0, b.PP)(
               "#Cart_SelectCouponToApply",
-              i.createElement("span", { className: Lt.PackageName }, r),
+              i.createElement("span", { className: Nt.PackageName }, r),
             ),
           ),
           i.createElement(Dt, {
@@ -4035,7 +4048,7 @@
           l = (o?.cart_items || []).map((e) => e.coupon_applied?.gidcoupon);
         return i.createElement(
           "div",
-          { className: Lt.CouponListContainer },
+          { className: Nt.CouponListContainer },
           t.map((e) =>
             i.createElement(Ft, {
               key: e.gidcoupon,
@@ -4063,24 +4076,24 @@
         return i.createElement(
           "div",
           {
-            className: (0, B.A)(Lt.CouponListItem, c && Lt.Disabled),
+            className: (0, B.A)(Nt.CouponListItem, c && Nt.Disabled),
             onClick: m,
           },
           i.createElement(Ot, { checked: r, hidden: c }),
-          i.createElement("img", { src: a, title: s, className: Lt.Image }),
+          i.createElement("img", { src: a, title: s, className: Nt.Image }),
           i.createElement(
             "div",
-            { className: Lt.Info },
+            { className: Nt.Info },
             t && i.createElement(Gt, null, (0, b.we)("#Cart_Coupons_Applied")),
             c && i.createElement(Gt, null, (0, b.we)("#Cart_Coupons_InUse")),
           ),
-          i.createElement("div", { className: Lt.Discount }, "-", o, "%"),
+          i.createElement("div", { className: Nt.Discount }, "-", o, "%"),
         );
       }
       function Gt(e) {
         return i.createElement(
           "div",
-          { className: Lt.CouponInfoText },
+          { className: Nt.CouponInfoText },
           e.children,
         );
       }
@@ -4088,8 +4101,8 @@
         const { checked: t, hidden: n } = e;
         return i.createElement(
           "div",
-          { className: (0, B.A)(Lt.Checkbox, n && Lt.Hidden) },
-          t && i.createElement(Nt.Jl, null),
+          { className: (0, B.A)(Nt.Checkbox, n && Nt.Hidden) },
+          t && i.createElement(Lt.Jl, null),
         );
       }
       var kt = n(98362),
@@ -4202,7 +4215,7 @@
                   C.tH,
                   null,
                   i.createElement(
-                    N,
+                    L,
                     null,
                     i.createElement(ot, { giftInfo: l, onChange: c }),
                   ),
@@ -4570,7 +4583,7 @@
               },
               () =>
                 i.createElement(
-                  N,
+                  L,
                   null,
                   (0, b.we)("#Cart_Replay_Instructions", 72),
                 ),
@@ -4725,7 +4738,7 @@
       function dn() {
         return S.TS.IN_MOBILE_WEBVIEW
           ? i.createElement(
-              N,
+              L,
               { className: Wt().BetaNotice },
               i.createElement(
                 "div",

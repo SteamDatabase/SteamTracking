@@ -346,6 +346,7 @@
 }
 ._3Kh2xkNOxK9yAzjUL6Ivgx {
   width: 100%;
+  height: 100%;
 }
 ._3Kh2xkNOxK9yAzjUL6Ivgx .w8Jvjch8aFrIUAv0SH561 {
   background: linear-gradient(
@@ -623,6 +624,49 @@
   ._1Rudow4oFWhnDbqnzJ0nuM
   .w8Jvjch8aFrIUAv0SH561:nth-child(2) {
   animation-delay: .5s;
+}
+._3Kh2xkNOxK9yAzjUL6Ivgx ._1jEY56Mb_K-eNOlOZ2ayy0 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+._3Kh2xkNOxK9yAzjUL6Ivgx ._1jEY56Mb_K-eNOlOZ2ayy0 ._1RRbToD4zek6vvdq8pajSX {
+  display: block;
+  width: 20%;
+  height: 100%;
+  margin-right: 12px;
+}
+._3Kh2xkNOxK9yAzjUL6Ivgx ._1jEY56Mb_K-eNOlOZ2ayy0 ._2SrANXbyCGZNaPRuc1diKT {
+  flex-grow: 1;
+  height: 100%;
+}
+._3Kh2xkNOxK9yAzjUL6Ivgx
+  ._1jEY56Mb_K-eNOlOZ2ayy0
+  ._2SrANXbyCGZNaPRuc1diKT
+  .BryzNsBYLnALstxxAzdwn {
+  height: 26px;
+  width: 50%;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  animation-delay: .2s;
+}
+._3Kh2xkNOxK9yAzjUL6Ivgx
+  ._1jEY56Mb_K-eNOlOZ2ayy0
+  ._2SrANXbyCGZNaPRuc1diKT
+  ._1rI86EQqPtdjPy7CDjcWE3 {
+  height: 16px;
+  width: 80%;
+  animation-delay: .21s;
+}
+._3Kh2xkNOxK9yAzjUL6Ivgx
+  ._1jEY56Mb_K-eNOlOZ2ayy0
+  ._2SrANXbyCGZNaPRuc1diKT
+  .aHFZOytk7I6xyF53cX0Iz {
+  height: 32px;
+  width: 30%;
+  margin-top: 16px;
+  animation-delay: .22s;
 }
 ._3Kh2xkNOxK9yAzjUL6Ivgx ._2riTESHkYgpUJmljZgTq8l {
   position: relative;
@@ -1026,6 +1070,7 @@
     z-index: 10;
     opacity: 95%;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
+    background: #000 !important;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1036,7 +1081,7 @@
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1400px) {
   ._1JM3A81UO1KoAFlVTA3a8O {
     padding: 10px;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
@@ -1175,12 +1220,12 @@
     grid-column-start: 1;
   }
 }
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1400px) {
   ._3EdZTDIisUpowxwm6uJ7Iq {
     flex-basis: 100%;
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1400px) {
   ._3EdZTDIisUpowxwm6uJ7Iq {
     flex-shrink: 0;
     flex-basis: 100%;

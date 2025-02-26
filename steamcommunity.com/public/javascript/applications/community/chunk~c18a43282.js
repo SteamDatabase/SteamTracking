@@ -1659,9 +1659,7 @@
         );
       }
       function ne(e, t) {
-        return (
-          !t.enable_faceted_browsing && (!!t.use_random_order || !!ie(e, t))
-        );
+        return !!t.use_random_order || !!ie(e, t);
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),

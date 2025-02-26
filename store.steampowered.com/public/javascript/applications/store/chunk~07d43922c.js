@@ -919,6 +919,11 @@
                     bw: a.gp.writeUint32,
                   },
                   include_dlc: { n: 2, br: a.qM.readBool, bw: a.gp.writeBool },
+                  top_results_limit: {
+                    n: 3,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
                 },
               }),
             R.sm_m

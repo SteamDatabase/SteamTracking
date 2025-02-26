@@ -1105,7 +1105,7 @@
         };
       };
     },
-    96260: (e, t, n) => {
+    6592: (e, t, n) => {
       n.d(t, { S: () => ye, b: () => ee, g: () => te });
       var r = n(58584),
         o = n(54883);
@@ -1164,7 +1164,7 @@
       }
       var f = n(2223),
         h = n(90626),
-        v = n(59020),
+        v = n(18079),
         m = n(74252),
         g =
           Number.isNaN ||
@@ -1585,7 +1585,7 @@
           height: "100%",
         };
       function N(e) {
-        e.preventDefault();
+        e.cancelable && e.preventDefault();
       }
       function j(e) {
         e.stopPropagation();
@@ -2246,7 +2246,7 @@
                   r = n[n.length - 1],
                   o = n.slice(0, n.length - 1),
                   i = (0, v.D)(e, o, o[0] || null);
-                t.onChange(i, { action: "pop-value", removedValue: r });
+                r && t.onChange(i, { action: "pop-value", removedValue: r });
               }),
               (t.getFocusedOptionId = function (e) {
                 return de(t.state.focusableOptionsWithIds, e);
@@ -3577,7 +3577,7 @@
         })(h.Component);
       ye.defaultProps = ie;
     },
-    59020: (e, t, n) => {
+    18079: (e, t, n) => {
       n.d(t, {
         A: () => Q,
         B: () => se,
@@ -5232,7 +5232,7 @@
       var r = n(39586),
         o = n(58584),
         i = n(90626),
-        a = n(96260),
+        a = n(6592),
         s =
           (n(39621),
           n(72739),
@@ -5332,7 +5332,7 @@
     },
     41317: (e, t, n) => {
       n.d(t, { A: () => r });
-      const r = n(90626).useLayoutEffect;
+      var r = n(90626).useLayoutEffect;
     },
     10409: (e, t, n) => {
       function r(e, t) {

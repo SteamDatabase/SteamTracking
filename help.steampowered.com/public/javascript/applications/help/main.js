@@ -11411,8 +11411,14 @@
         );
       }
       function Qn(e) {
-        const { sizeClass: t, children: r, childrenClasses: n, ...a } = e,
-          [s, o, l, c] = (function () {
+        const {
+            sizeClass: t,
+            children: r,
+            childrenClasses: n,
+            navKey: a,
+            ...s
+          } = e,
+          [o, l, c, m] = (function () {
             let e = i.useRef(null),
               t = i.useRef();
             i.useLayoutEffect(() => {
@@ -11454,44 +11460,44 @@
               }, [t]);
             return [e, r, n, a];
           })(),
-          m = i.useRef(!0),
-          u = i.useCallback(() => m.current, [m]),
-          d = i.useCallback(() => {
-            (m.current = !0), l();
-          }, [l]),
+          u = i.useRef(!0),
+          d = i.useCallback(() => u.current, [u]),
           p = i.useCallback(() => {
-            (m.current = !1), c();
+            (u.current = !0), c();
           }, [c]),
-          _ = e.childrenClasses,
-          g = {
-            enter: _.enterStart,
-            enterActive: _.enterEnd,
-            exit: _.exitStart,
-            exitActive: _.exitEnd,
+          _ = i.useCallback(() => {
+            (u.current = !1), m();
+          }, [m]),
+          g = e.childrenClasses,
+          h = {
+            enter: g.enterStart,
+            enterActive: g.enterEnd,
+            exit: g.exitStart,
+            exitActive: g.exitEnd,
           };
-        return s.current && !s.current.ownerDocument.defaultView
+        return o.current && !o.current.ownerDocument.defaultView
           ? null
           : i.createElement(
               Hn.A,
               {
-                nodeRef: s,
-                classNames: g,
+                nodeRef: o,
+                classNames: h,
                 in: !0,
                 timeout: 1e4,
-                addEndListener: o,
-                onEntering: d,
-                onExiting: p,
-                ...a,
+                addEndListener: l,
+                onEntering: p,
+                onExiting: _,
+                ...s,
               },
               i.createElement(
                 "div",
                 {
-                  ref: s,
-                  className: (0, ft.A)(xn().ContentWrapper, t, _.base),
+                  ref: o,
+                  className: (0, ft.A)(xn().ContentWrapper, t, g.base),
                 },
                 i.createElement(
                   Ur.Z,
-                  { className: t, fnCanTakeFocus: u },
+                  { className: t, fnCanTakeFocus: d, navKey: a },
                   e.children,
                 ),
               ),
@@ -12148,7 +12154,7 @@
           },
           [l, m, n],
         );
-        i.useEffect(() => {
+        i.useLayoutEffect(() => {
           const e = function () {
             p.current &&
               ((0, fe.w)(
@@ -17926,7 +17932,8 @@
                 31,
                 null,
               )),
-              void 0 !== r.jsondata.sale_num_headers)
+              void 0 !== r.jsondata.sale_num_headers &&
+                r.jsondata.localized_per_day_sales_header)
             )
               for (let e = 0; e < r.jsondata.sale_num_headers; ++e)
                 r.jsondata.localized_per_day_sales_header[e] = (0, it.$Y)(
@@ -64718,7 +64725,7 @@
         Z = [
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
-          "HTMLDivElement.onreset (/market",
+          "HTMLDivElement.onreset \\(/market",
         ];
       function $() {
         try {

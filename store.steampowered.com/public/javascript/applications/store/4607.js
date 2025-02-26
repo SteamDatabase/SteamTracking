@@ -53,6 +53,9 @@
       (o = Symbol.for("react.module.reference")),
         (t.isForwardRef = function (e) {
           return m(e) === f;
+        }),
+        (t.isFragment = function (e) {
+          return m(e) === i;
         });
     },
     98193: (e, t, o) => {

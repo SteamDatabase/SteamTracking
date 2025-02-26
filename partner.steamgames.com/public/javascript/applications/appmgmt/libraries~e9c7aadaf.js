@@ -5,7 +5,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [5841],
   {
-    33793: (e, t, n) => {
+    82359: (e, t, n) => {
       n.d(t, { Ay: () => Or });
       var r = n(54883),
         o = n(15596),
@@ -1398,8 +1398,8 @@
           }
         );
       }
-      const bt = a.useLayoutEffect;
-      var yt = [
+      var bt = a.useLayoutEffect,
+        yt = [
           "className",
           "clearValue",
           "cx",
@@ -2779,7 +2779,7 @@
           height: "100%",
         };
       function jn(e) {
-        e.preventDefault();
+        e.cancelable && e.preventDefault();
       }
       function zn(e) {
         e.stopPropagation();
@@ -3759,7 +3759,7 @@
                   n = t[t.length - 1],
                   r = t.slice(0, t.length - 1),
                   i = Ht(e, r, r[0] || null);
-                o.onChange(i, { action: "pop-value", removedValue: n });
+                n && o.onChange(i, { action: "pop-value", removedValue: n });
               }),
               (o.getFocusedOptionId = function (e) {
                 return cr(o.state.focusableOptionsWithIds, e);
