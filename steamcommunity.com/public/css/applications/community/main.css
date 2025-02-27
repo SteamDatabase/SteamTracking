@@ -2691,6 +2691,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 }
 .CFTLX2wIKOK3hNV-fS7_V {
   flex: 3;
+  min-width: 0;
   background: radial-gradient(
     201.11% 137.71% at 0.9% -3.76%,
     #343941 0%,
@@ -2775,6 +2776,8 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   font-weight: 700;
   font-size: 17px;
   user-select: none;
+  min-width: 0;
+  word-wrap: break-word;
 }
 ._2rjVTGz8aLvqOdz5v2gq5C.DesktopUI,
 .DesktopUI ._2rjVTGz8aLvqOdz5v2gq5C {

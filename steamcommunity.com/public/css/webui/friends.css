@@ -2786,6 +2786,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
   flex: 3;
+  min-width: 0;
   background: radial-gradient(
     201.11% 137.71% at 0.9% -3.76%,
     #343941 0%,
@@ -2874,6 +2875,8 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-weight: 700;
   font-size: 17px;
   user-select: none;
+  min-width: 0;
+  word-wrap: break-word;
 }
 .pagedsettings_PagedSettingsDialog_Title_2rjVT.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_Title_2rjVT {

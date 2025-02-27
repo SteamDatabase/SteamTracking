@@ -5919,13 +5919,8 @@ p.pm_paragraph {
 .LCeIT0gmFTY8fdfaVgk4j {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-}
-@media screen and (max-width: 500px) {
-  .LCeIT0gmFTY8fdfaVgk4j {
-    flex-wrap: nowrap;
-    width: fit-content;
-  }
+  flex-wrap: nowrap;
+  width: fit-content;
 }
 .LCeIT0gmFTY8fdfaVgk4j ._19z0fjj7o0n9vAjVjvYZNU {
   width: 12px;
