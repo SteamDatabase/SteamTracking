@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9564014";
+var CLSTAMP = "9569069";
 (() => {
   "use strict";
   var e,
@@ -21,22 +21,22 @@ var CLSTAMP = "9564014";
     (b.O = (a, n, s, d) => {
       if (!n) {
         var c = 1 / 0;
-        for (f = 0; f < e.length; f++) {
-          for (var [n, s, d] = e[f], r = !0, i = 0; i < n.length; i++)
+        for (o = 0; o < e.length; o++) {
+          for (var [n, s, d] = e[o], r = !0, i = 0; i < n.length; i++)
             (!1 & d || c >= d) && Object.keys(b.O).every((e) => b.O[e](n[i]))
               ? n.splice(i--, 1)
               : ((r = !1), d < c && (c = d));
           if (r) {
-            e.splice(f--, 1);
-            var o = s();
-            void 0 !== o && (a = o);
+            e.splice(o--, 1);
+            var f = s();
+            void 0 !== f && (a = f);
           }
         }
         return a;
       }
       d = d || 0;
-      for (var f = e.length; f > 0 && e[f - 1][2] > d; f--) e[f] = e[f - 1];
-      e[f] = [n, s, d];
+      for (var o = e.length; o > 0 && e[o - 1][2] > d; o--) e[o] = e[o - 1];
+      e[o] = [n, s, d];
     }),
     (b.n = (e) => {
       var a = e && e.__esModule ? () => e.default : () => e;
@@ -382,9 +382,9 @@ var CLSTAMP = "9564014";
         8025: "b2cc38bf3709dd3960cf",
         8129: "9fac25a6533c2d8a81b0",
         8306: "3fe5c550fa6e8d988350",
-        8350: "09e01dbaeac0dcf87723",
+        8350: "931cc11cbd143391a08b",
         8396: "af6367d3519059c81866",
-        8523: "02b261168380566a64b5",
+        8523: "767da02418d28a73c9f8",
         8585: "1caa291fc8f363590cfa",
         8713: "004643994f8fe22b3ee7",
         8718: "669d41fe7c57a28f2fd2",
@@ -474,11 +474,11 @@ var CLSTAMP = "9564014";
         var r, i;
         if (void 0 !== n)
           for (
-            var o = document.getElementsByTagName("script"), f = 0;
-            f < o.length;
-            f++
+            var f = document.getElementsByTagName("script"), o = 0;
+            o < f.length;
+            o++
           ) {
-            var t = o[f];
+            var t = f[o];
             if (
               t.getAttribute("src") == e ||
               t.getAttribute("data-webpack") == d + n
@@ -662,14 +662,14 @@ var CLSTAMP = "9564014";
           var s,
             d,
             [c, r, i] = n,
-            o = 0;
+            f = 0;
           if (c.some((a) => 0 !== e[a])) {
             for (s in r) b.o(r, s) && (b.m[s] = r[s]);
-            if (i) var f = i(b);
+            if (i) var o = i(b);
           }
-          for (a && a(n); o < c.length; o++)
-            (d = c[o]), b.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
-          return b.O(f);
+          for (a && a(n); f < c.length; f++)
+            (d = c[f]), b.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
+          return b.O(o);
         },
         n = (self.webpackChunkappmgmt_storeadmin =
           self.webpackChunkappmgmt_storeadmin || []);

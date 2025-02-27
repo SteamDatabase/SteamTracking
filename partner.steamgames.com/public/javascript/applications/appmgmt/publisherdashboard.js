@@ -4105,7 +4105,7 @@
                 "promotion/marketingmessages/partnerpreview/" +
                 t.gid
               : void 0,
-          { bReady: u, bReadyExceptLiveEvent: g } = (0, Ft._p)(t.gid),
+          { bReady: u, bReadyExceptLiveEvent: g } = (0, Ft._p)(null, t, !0),
           v = a.bShowWarnings
             ? _e.Hm.GetMarketingMesssageEditURL(t.gid)
             : void 0,

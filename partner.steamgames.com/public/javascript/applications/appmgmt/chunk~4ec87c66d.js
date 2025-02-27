@@ -10015,36 +10015,37 @@
               bHasStoreVerticalCapsule: !1,
             };
       }
-      function v(e) {
-        const t = (0, g.dr)(e),
-          [a, n] = (0, o.useState)(t ? e : null),
-          [r, s] = (0, o.useState)(() => (0, m.c2)(t?.template_vars_json)),
-          [c, d] = (0, o.useState)(() =>
-            (0, i.AK)(e, t?.additional_restrictions_json),
+      function v(e, t) {
+        const a = (0, g.dr)(t?.gid ?? e),
+          n = t || a,
+          [r, s] = (0, o.useState)(n ? e : null),
+          [c, d] = (0, o.useState)(() => (0, m.c2)(n?.template_vars_json)),
+          [p, _] = (0, o.useState)(() =>
+            (0, i.AK)(e, n?.additional_restrictions_json),
           );
         (0, o.useEffect)(() => {
-          a != e &&
-            t &&
-            (n(e),
-            s((0, m.c2)(t.template_vars_json)),
-            d((0, i.AK)(e, t.additional_restrictions_json)));
-        }, [a, e, t]);
-        const [p, _, h, y, v, f, b, w, D, C, I] = (0, l.q3)(() => [
-            r?.ll_image,
-            c?.valid_realms || 0,
-            r?.has_animated_assets,
-            r?.mp4,
-            r?.webm,
-            r?.custom_display,
-            r?.subtitles,
-            r?.poster,
-            r?.featured_video_mp4,
-            r?.featured_video_webm,
-            1 == t?.association_type ? t?.associated_id : void 0,
+          r != e &&
+            n &&
+            (s(e),
+            d((0, m.c2)(n.template_vars_json)),
+            _((0, i.AK)(e, n.additional_restrictions_json)));
+        }, [r, e, n]);
+        const [h, y, v, f, b, w, D, C, I, B, T] = (0, l.q3)(() => [
+            c?.ll_image,
+            p?.valid_realms || 0,
+            c?.has_animated_assets,
+            c?.mp4,
+            c?.webm,
+            c?.custom_display,
+            c?.subtitles,
+            c?.poster,
+            c?.featured_video_mp4,
+            c?.featured_video_webm,
+            1 == n?.association_type ? n?.associated_id : void 0,
           ]),
-          [B] = (0, u.t7)(I, S);
-        return t
-          ? E(p, _, h, y, v, f, b, w, D, C, B)
+          [M] = (0, u.t7)(T, S);
+        return n
+          ? E(h, y, v, f, b, w, D, C, I, B, M)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -10148,93 +10149,71 @@
           ? w(a, n, r, i, C, I, s, o, m, p, g, h, E, S, f)
           : D();
       }
-      function I(e) {
-        const t = (0, g.dr)(e),
-          [a, n] = (0, o.useState)(t ? e : null),
-          [r, s] = (0, o.useState)((0, m.c2)(t?.template_vars_json)),
-          [p, _] = (0, o.useState)(
-            (0, i.AK)(e, t?.additional_restrictions_json),
+      function I(e, t) {
+        const a = (0, g.dr)(t?.gid ?? e),
+          n = t || a,
+          [r, s] = (0, o.useState)(n ? e : null),
+          [p, _] = (0, o.useState)((0, m.c2)(n?.template_vars_json)),
+          [h, E] = (0, o.useState)(
+            (0, i.AK)(e, n?.additional_restrictions_json),
           );
         (0, o.useEffect)(() => {
-          a != e &&
-            t &&
-            (n(e),
-            s((0, m.c2)(t.template_vars_json)),
-            _((0, i.AK)(e, t.additional_restrictions_json)));
-        }, [a, e, t]);
-        const [h, E, S, y, v, f, C, I, B, T, M, A, k, R] = (0, l.q3)(() => [
-            t?.visibility,
-            t?.start_date,
-            t?.end_date,
-            (0, d.Di)((0, i.Z8)(t?.association_type, t?.associated_id)),
-            (0, i.mH)(p),
-            p?.no_filters_required,
-            r?.linkurl,
-            p?.valid_realms || 0,
-            r?.button_text,
-            p?.explicit_no_associated_item,
-            r?.partner?.trim().length > 0 || p?.explicit_no_partner_name_needed,
-            t?.type,
-            r?.update_event_clan_accountid,
-            r?.update_event_gid,
+          r != e &&
+            n &&
+            (s(e),
+            _((0, m.c2)(n.template_vars_json)),
+            E((0, i.AK)(e, n.additional_restrictions_json)));
+        }, [r, e, n]);
+        const [S, y, v, f, C, I, B, T, M, A, k, R, P, N] = (0, l.q3)(() => [
+            n?.visibility,
+            n?.start_date,
+            n?.end_date,
+            (0, d.Di)((0, i.Z8)(n?.association_type, n?.associated_id)),
+            (0, i.mH)(h),
+            h?.no_filters_required,
+            p?.linkurl,
+            h?.valid_realms || 0,
+            p?.button_text,
+            h?.explicit_no_associated_item,
+            p?.partner?.trim().length > 0 || h?.explicit_no_partner_name_needed,
+            n?.type,
+            p?.update_event_clan_accountid,
+            p?.update_event_gid,
           ]),
-          [P, N] = (0, u.G6)((0, d.M9)(y), (0, d.pk)(y), b),
-          { eventModel: G } = (0, c.B9)(k, R);
-        return origin ? w(h, E, S, y, P, N, v, f, C, I, B, T, M, A, G) : D();
+          [G, O] = (0, u.G6)((0, d.M9)(f), (0, d.pk)(f), b),
+          { eventModel: F } = (0, c.B9)(P, N);
+        return origin ? w(S, y, v, f, G, O, C, I, B, T, M, A, k, R, F) : D();
       }
       function B(e) {
-        const {
-            bDateSet: t,
-            bItemAssociated: a,
-            bFiltersSetup: n,
-            bValidLink: r,
-            bButtonTokenEntered: i,
-            bLegalLineHandled: s,
-            bAdvertisingAppWithoutURL: l,
-            eStoreItemMarketingMessageState: o,
-            bExplicitNoItemAssociation: c,
-            bRequiresPartnerEvent: m,
-            bUpdateEventLive: d,
-          } = C(e),
-          { bMinimumAssetsSetup: u } = y(e),
-          p =
-            t &&
-            a &&
-            n &&
-            u &&
-            r &&
-            i &&
-            s &&
-            !l &&
-            (c || (o != f.k_StoreInvalidState && o != f.k_StoreUnavailable));
-        return { bReady: p && (!m || d), bReadyExceptLiveEvent: p };
+        return M(C(e), y(e), !1);
       }
-      function T(e) {
+      function T(e, t, a = !1) {
+        return M(I(e, t), v(e, t), a);
+      }
+      function M(e, t, a) {
         const {
-            bDateSet: t,
-            bItemAssociated: a,
-            bFiltersSetup: n,
-            bValidLink: r,
-            bButtonTokenEntered: i,
-            bLegalLineHandled: s,
-            bAdvertisingAppWithoutURL: l,
-            eStoreItemMarketingMessageState: o,
-            bExplicitNoItemAssociation: c,
-            bRequiresPartnerEvent: m,
-            bUpdateEventLive: d,
-          } = I(e),
-          { bMinimumAssetsSetup: u } = v(e),
-          p =
-            t &&
-            a &&
-            n &&
-            u &&
+            bDateSet: n,
+            bItemAssociated: r,
+            bFiltersSetup: i,
+            bValidLink: s,
+            bButtonTokenEntered: l,
+            bLegalLineHandled: o,
+            bAdvertisingAppWithoutURL: c,
+            eStoreItemMarketingMessageState: m,
+            bExplicitNoItemAssociation: d,
+            bRequiresPartnerEvent: u,
+            bUpdateEventLive: p,
+          } = e,
+          { bMinimumAssetsSetup: _ } = t;
+        let g = n && _ && l && o && !c;
+        a ||
+          (g =
+            g &&
             r &&
             i &&
             s &&
-            !l &&
-            (c || (o != f.k_StoreInvalidState && o != f.k_StoreUnavailable));
-        return { bReady: p && (!m || d), bReadyExceptLiveEvent: p };
+            (d || (m != f.k_StoreInvalidState && m != f.k_StoreUnavailable)));
+        return { bReady: g && (!u || p), bReadyExceptLiveEvent: g };
       }
     },
     68612: (e, t, a) => {
@@ -56984,7 +56963,7 @@
         const { marketingMessageID: t } = e,
           a = (0, d.W6)(),
           n = (0, q.dr)(t),
-          { bReady: r } = (0, lt._p)(t);
+          { bReady: r } = (0, lt._p)(t, null);
         if (!n) return c.createElement(F.t, { string: t, size: "small" });
         const i = Ie.HD.GetTimeNowWithOverride(),
           s = n.start_date > i,
@@ -65742,8 +65721,8 @@
         fe = a(14514);
       function be(e) {
         const { gid: t } = e,
-          a = (0, he.w9)(t),
-          n = (0, he.gA)(t);
+          a = (0, he.w9)(t, null),
+          n = (0, he.gA)(t, null);
         if (!a && !n) return null;
         const {
             eVisibility: r,
