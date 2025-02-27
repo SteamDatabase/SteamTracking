@@ -156,6 +156,7 @@
     },
     57245: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         DropDownLabelContainer: "uujQHHS-7y4IW6qfxHpe2",
         DropDownLabelIconContainer: "_3H05CHzkfz75-vnlsMa-p5",
         DropDownLabelTextColumn: "_3WTX45MQeZkasb71AEqo7P",
@@ -167,6 +168,7 @@
     28055: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         GamepadDialogContent: "_16sYNwqxz6giarbVaRUl7R",
         GamepadDialogContent_InnerWidth: "_2ywySGDASDCC43aPuicxHt",
         Field: "eKmEXJCm_lgme24Fp_HWt",
@@ -357,6 +359,7 @@
     },
     75060: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "_2sssIwe0duyIrFvat2oXzH",
         PagedSettingDialog_ContentColumn: "OX7USkJ5dDP_icD00Gal6",
@@ -405,6 +408,7 @@
     },
     90316: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
@@ -38007,7 +38011,7 @@
             onActivate: t,
             fnCanTakeFocus: $e.Nw,
           },
-          n.createElement(Ze.b8_, { direction: "right" }),
+          n.createElement(Ze.u49, { direction: "left" }),
         );
       }
       function lt(e) {

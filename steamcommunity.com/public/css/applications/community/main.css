@@ -2799,6 +2799,12 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._18QCu-7MTzd51UpVbYysDy.yTqIu5oXmYa9Em9FCpO3c {
   overflow-y: hidden;
 }
+@media screen and (max-width: 500px) {
+  ._18QCu-7MTzd51UpVbYysDy {
+    flex-grow: initial;
+    padding-bottom: 8px;
+  }
+}
 ._1-vlriAtKYDViAEunue4VO {
   display: flex;
   align-items: center;

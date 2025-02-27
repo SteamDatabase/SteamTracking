@@ -2898,6 +2898,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .pagedsettings_PagedSettingsDialog_PageList_18QCu.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_yTqIu {
   overflow-y: hidden;
 }
+@media screen and (max-width: 500px) {
+  .pagedsettings_PagedSettingsDialog_PageList_18QCu {
+    flex-grow: initial;
+    padding-bottom: 8px;
+  }
+}
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
   display: flex;
   align-items: center;

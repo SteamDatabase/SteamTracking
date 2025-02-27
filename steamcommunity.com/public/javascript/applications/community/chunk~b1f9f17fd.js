@@ -494,6 +494,7 @@
     },
     18714: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         MainCarousel: "_3SWsMT4_EVVsmPbanjlEy4",
         FeatureCtn: "_10K5p_DOyGW-WttCA1UwuC",
@@ -553,6 +554,7 @@
     71415: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         ContentHubTitleCtn: "_2cFtCV85TXR2hWfKk_kTIR",
         ContentHubTitle: "saHqNV-7xE9caBAreUZiX",
         ContentHubSubtitle: "_11kuPitw8BlhG1xCp5bvj6",
@@ -761,6 +763,7 @@
     87736: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         SaleItemBrowserContainer: "_18byEIHFiivSklOwKqIx2b",
         SaleItemBrowserHeaderContainer: "_1edLKYpcJyTYC7ku9fYI1_",
         SaleItemBrowserHeader: "Eh-ow8RpArn1HQyPR8RFY",
@@ -839,6 +842,7 @@
     },
     81057: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         QuadLayout: "SMD9qk22F96DVpvDXP-mQ",
         VideoPlayerContainer: "_28IrQlNugT300MZ5kfI5Xv",
         Focused: "_27BgMawG26a5WuzkrlgUeF",
@@ -849,6 +853,7 @@
     },
     9658: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         SaleBackgroundOverlay: "_3ftcCC9ublF9tDz6nPW_Vb",
       };
@@ -889,6 +894,7 @@
     69183: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         SalePageLogoCtn: "_1Un6hCqh2IuOm0WLmrrA7w",
       };
     },
@@ -959,6 +965,7 @@
     62307: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         Name: "_1e4No10_bpJEyqWGdzhAs9",
         PurchaseOnlyShelf: "_3586BiTSYwaANmF1iHSK0f",
         PurchaseOnlyCtn: "VvwZmAlF0uXfe__ZO0uX0",

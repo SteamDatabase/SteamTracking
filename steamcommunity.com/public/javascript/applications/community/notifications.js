@@ -5,6 +5,7 @@
   {
     68e3: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         notificationRowHeight: "72px",
         NotificationPageCtn: "_2DCeN21MQJGwVpPCXcT2QJ",
         NotificationsBody: "_35hlMprL--UdgfHJGuGnJR",
@@ -215,10 +216,10 @@
           { numActive: e, filters: b.rgFilterState }
         );
       }
-      function k() {
+      function w() {
         return (0, _.q3)(() => b.commentFilter);
       }
-      function w() {
+      function k() {
         return s.useMemo(() => {
           const e = new Map();
           for (const t of v.m_rgNotificationRollups.filter(
@@ -232,7 +233,7 @@
       }
       function S() {
         const { numActive: e, filters: t } = C(),
-          i = k(),
+          i = w(),
           s = (0, N.LH)(),
           { settings: o } = (0, g.S0)(s).data,
           r = (0, g.BM)();
@@ -267,8 +268,8 @@
         T = i(73745),
         L = i(52038),
         A = i(16264),
-        R = i(32630);
-      function x(e) {
+        x = i(32630);
+      function R(e) {
         const { hash: t } = e;
         (0, s.useEffect)(() => {
           b.ProcessHash(t);
@@ -448,7 +449,7 @@
       }
       function U(e) {
         const { threadType: t } = e,
-          i = k();
+          i = w();
         return s.createElement(d.Yh, {
           className: u().AdvancedCommentFilterCheckbox,
           label: (0, p.we)("#CommentThreadType_" + t),
@@ -470,7 +471,7 @@
       }
       function q(e) {
         const { className: t } = e,
-          i = w();
+          i = k();
         return s.createElement(
           "div",
           { className: (0, L.A)(u().AdvancedCommentFilters, t) },
@@ -511,7 +512,7 @@
               return t;
             }, [e]);
           })(),
-          o = w(),
+          o = k(),
           r = n.size > 2,
           l = o.size > 1,
           c = r || l;
@@ -570,7 +571,7 @@
         const l = (0, A.Rd)(t.type);
         return l
           ? s.createElement(
-              R.A,
+              x.A,
               {
                 controller: "notification",
                 method: (0, c.fL)(3),
@@ -602,7 +603,7 @@
         let t = e.location.hash;
         return (
           t && t.startsWith("#") && (t = t.slice(1)),
-          s.createElement(x, { hash: t })
+          s.createElement(R, { hash: t })
         );
       }
     },

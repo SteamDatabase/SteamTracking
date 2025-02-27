@@ -64,9 +64,12 @@
         CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
       };
     },
+    5310: (e) => {
+      e.exports = { narrowWidth: "500px" };
+    },
     47004: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Yt });
+      r.r(t), r.d(t, { default: () => Zt });
       var i = r(22837),
         n = r(90626),
         a = r(92757),
@@ -358,18 +361,18 @@
           return "CCloud_GetUploadServerInfo_Response";
         }
       }
-      class _ extends B {
+      class w extends B {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _.prototype.appid || d.Sg(_.M()),
+            w.prototype.appid || d.Sg(w.M()),
             B.initialize(this, e, 0, -1, [6, 7, 8], null);
         }
         static M() {
           return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
                 fields: {
                   appid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
                   file_size: {
@@ -408,73 +411,6 @@
                   },
                 },
               }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = d.w0(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new u.BinaryReader(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new u.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new u.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_BeginHTTPUpload_Request";
-        }
-      }
-      class w extends B {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            w.prototype.ugcid || d.Sg(w.M()),
-            B.initialize(this, e, 0, -1, [6], null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  ugcid: {
-                    n: 1,
-                    br: d.qM.readFixed64String,
-                    bw: d.gp.writeFixed64String,
-                  },
-                  timestamp: {
-                    n: 2,
-                    br: d.qM.readFixed32,
-                    bw: d.gp.writeFixed32,
-                  },
-                  url_host: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
-                  url_path: { n: 4, br: d.qM.readString, bw: d.gp.writeString },
-                  use_https: { n: 5, br: d.qM.readBool, bw: d.gp.writeBool },
-                  request_headers: { n: 6, c: f, r: !0, q: !0 },
-                },
-              }),
             w.sm_m
           );
         }
@@ -508,6 +444,73 @@
         serializeBase64String() {
           var e = new u.BinaryWriter();
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCloud_BeginHTTPUpload_Request";
+        }
+      }
+      class _ extends B {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _.prototype.ugcid || d.Sg(_.M()),
+            B.initialize(this, e, 0, -1, [6], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  ugcid: {
+                    n: 1,
+                    br: d.qM.readFixed64String,
+                    bw: d.gp.writeFixed64String,
+                  },
+                  timestamp: {
+                    n: 2,
+                    br: d.qM.readFixed32,
+                    bw: d.gp.writeFixed32,
+                  },
+                  url_host: { n: 3, br: d.qM.readString, bw: d.gp.writeString },
+                  url_path: { n: 4, br: d.qM.readString, bw: d.gp.writeString },
+                  use_https: { n: 5, br: d.qM.readBool, bw: d.gp.writeBool },
+                  request_headers: { n: 6, c: f, r: !0, q: !0 },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = d.w0(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(_.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new u.BinaryReader(e),
+            r = new _();
+          return _.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(_.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new u.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(_.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new u.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_BeginHTTPUpload_Response";
@@ -3679,69 +3682,11 @@
           return "CCloud_ClientLogUploadCheck_Notification";
         }
       }
-      class _e extends B {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _e.prototype.request_id || d.Sg(_e.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _e.sm_m ||
-              (_e.sm_m = {
-                proto: _e,
-                fields: {
-                  request_id: {
-                    n: 1,
-                    br: d.qM.readUint64String,
-                    bw: d.gp.writeUint64String,
-                  },
-                },
-              }),
-            _e.sm_m
-          );
-        }
-        static MBF() {
-          return _e.sm_mbf || (_e.sm_mbf = d.w0(_e.M())), _e.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _e.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(_e.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(_e.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new u.BinaryReader(e),
-            r = new _e();
-          return _e.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(_e.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new u.BinaryWriter();
-          return _e.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(_e.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new u.BinaryWriter();
-          return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_ClientLogUploadRequest_Notification";
-        }
-      }
       class we extends B {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            we.prototype.client_id || d.Sg(we.M()),
+            we.prototype.request_id || d.Sg(we.M()),
             B.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -3750,13 +3695,8 @@
               (we.sm_m = {
                 proto: we,
                 fields: {
-                  client_id: {
-                    n: 1,
-                    br: d.qM.readUint64String,
-                    bw: d.gp.writeUint64String,
-                  },
                   request_id: {
-                    n: 2,
+                    n: 1,
                     br: d.qM.readUint64String,
                     bw: d.gp.writeUint64String,
                   },
@@ -3797,6 +3737,69 @@
           return we.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CCloud_ClientLogUploadRequest_Notification";
+        }
+      }
+      class _e extends B {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _e.prototype.client_id || d.Sg(_e.M()),
+            B.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _e.sm_m ||
+              (_e.sm_m = {
+                proto: _e,
+                fields: {
+                  client_id: {
+                    n: 1,
+                    br: d.qM.readUint64String,
+                    bw: d.gp.writeUint64String,
+                  },
+                  request_id: {
+                    n: 2,
+                    br: d.qM.readUint64String,
+                    bw: d.gp.writeUint64String,
+                  },
+                },
+              }),
+            _e.sm_m
+          );
+        }
+        static MBF() {
+          return _e.sm_mbf || (_e.sm_mbf = d.w0(_e.M())), _e.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _e.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(_e.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(_e.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new u.BinaryReader(e),
+            r = new _e();
+          return _e.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(_e.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new u.BinaryWriter();
+          return _e.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(_e.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new u.BinaryWriter();
+          return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CCloud_ClientLogUploadComplete_Notification";
         }
       }
@@ -3812,7 +3815,7 @@
           (e.ClientLogUploadComplete = function (e, t) {
             return e.SendNotification(
               "Cloud.ClientLogUploadComplete#1",
-              (0, c.I8)(we, t),
+              (0, c.I8)(_e, t),
               { ePrivilege: 1 },
             );
           }),
@@ -3825,7 +3828,7 @@
             );
           }),
           (e.BeginHTTPUpload = function (e, t) {
-            return e.SendMsg("Cloud.BeginHTTPUpload#1", (0, c.I8)(_, t), w, {
+            return e.SendMsg("Cloud.BeginHTTPUpload#1", (0, c.I8)(w, t), _, {
               ePrivilege: 1,
             });
           }),
@@ -4001,7 +4004,7 @@
           }),
             (e.ClientLogUploadRequestHandler = {
               name: "CloudClient.ClientLogUploadRequest#1",
-              request: _e,
+              request: we,
             });
         })(Me || (Me = {}));
       var he = r(62490);
@@ -4391,8 +4394,10 @@
           ),
         );
       }
-      var gt = r(27491);
-      function bt(e) {
+      var gt = r(27491),
+        bt = r(8527),
+        yt = r(5310);
+      function wt(e) {
         const { deleteNote: t, hidden: r, pmState: i } = e,
           [a, s] = n.useState(),
           o = n.useRef(),
@@ -4412,7 +4417,11 @@
           };
         return (
           n.useEffect(() => {
-            a && !r && a.focus();
+            a &&
+              !r &&
+              ((!bt.TS.IN_CLIENT &&
+                window.matchMedia(`(max-width: ${yt.narrowWidth})`).matches) ||
+                a.focus());
           }, [a, r]),
           n.createElement(
             n.Fragment,
@@ -4436,19 +4445,19 @@
                 bSpellcheckEnabled: l,
                 panelProps: m,
               },
-              n.createElement(yt, { schema: Xe.pm_schema }),
+              n.createElement(_t, { schema: Xe.pm_schema }),
             ),
           )
         );
       }
-      const yt = n.memo(function (e) {
+      const _t = n.memo(function (e) {
         const { schema: t } = e,
           r = n.useContext(Ie).onClickURL,
           i = n.useMemo(
             () => [
               {
                 type: t.nodes.cloudimage,
-                component: _t,
+                component: ft,
                 readProps: (e) => ({ src: e.attrs.src }),
               },
             ],
@@ -4466,7 +4475,7 @@
           n.createElement(et.U, { specs: i }),
         );
       });
-      function _t(e) {
+      function ft(e) {
         const { src: t, selected: r } = e,
           [i, a] = n.useState(),
           s = xe();
@@ -4490,13 +4499,13 @@
             : null
         );
       }
-      var wt = r(61788),
-        ft = r(33737),
-        Mt = r(9154),
-        ht = r(32754),
-        zt = r(73745);
-      const St = 15;
-      function Ct(e) {
+      var Mt = r(61788),
+        ht = r(33737),
+        zt = r(9154),
+        St = r(32754),
+        Ct = r(73745);
+      const Rt = 15;
+      function Ut(e) {
         const { note: t, hidden: r = !1 } = e,
           [i, a] = n.useState(void 0),
           s = n.useRef(!1),
@@ -4530,7 +4539,7 @@
         n.useEffect(() => {
           if (!s.current) {
             const e = new $e.n(Xe, t.content, (e, t) =>
-              l({ title: Wt(t), bbcode: e }),
+              l({ title: qt(t), bbcode: e }),
             );
             !(function (e, t) {
               e.UpdateState((e) => {
@@ -4560,12 +4569,12 @@
               u(e);
           }
         }, [l, t.content]);
-        const { bDirty: d } = (0, He.i)(c, { msAutosaveTimeout: 1e3 * St });
+        const { bDirty: d } = (0, He.i)(c, { msAutosaveTimeout: 1e3 * Rt });
         n.useEffect(() => {
           d &&
             !s.current &&
             ((s.current = !0),
-            wt.y.ReportTrackedAction("/GameNotes/NoteModified"));
+            Mt.y.ReportTrackedAction("/GameNotes/NoteModified"));
         }, [d]),
           n.useEffect(() => {
             r && c && c.CommitChanges();
@@ -4588,23 +4597,23 @@
           n.createElement(
             "div",
             { className: gt.NoteEditorArea },
-            n.createElement(Rt, { error: i, dismissError: () => a(void 0) }),
-            n.createElement(bt, {
+            n.createElement(Tt, { error: i, dismissError: () => a(void 0) }),
+            n.createElement(wt, {
               deleteNote: B.mutate,
               hidden: r,
               pmState: c,
             }),
-            !o && n.createElement(Ut, { note: t, bDirty: d }),
+            !o && n.createElement(Ft, { note: t, bDirty: d }),
           ),
         );
       }
-      function Rt(e) {
+      function Tt(e) {
         const { error: t, dismissError: r } = e;
         return t
           ? n.createElement(
-              Mt.EN,
+              zt.EN,
               { active: !0 },
-              n.createElement(Mt.o0, {
+              n.createElement(zt.o0, {
                 bAlertDialog: !0,
                 strTitle: (0, Pe.we)("#Error_Generic"),
                 strDescription: (0, Pe.we)(
@@ -4616,9 +4625,9 @@
             )
           : null;
       }
-      function Ut(e) {
+      function Ft(e) {
         const { note: t, bDirty: r } = e,
-          [i, a, s] = (0, zt.uD)(!1),
+          [i, a, s] = (0, Ct.uD)(!1),
           o = "single" == n.useContext(Ie).mode,
           l = Ee(),
           { mutate: c, isPending: u } = ke(t, l),
@@ -4629,45 +4638,45 @@
           "div",
           { className: gt.NoteActions },
           i &&
-            n.createElement(Ft, {
+            n.createElement(vt, {
               note: t,
               closeModal: s,
               deleteNote: c,
               deletePending: u,
             }),
           n.createElement(
-            ht.he,
+            St.he,
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             n.createElement(
-              ft.$n,
+              ht.$n,
               { onClick: d },
               n.createElement(lt.lMJ, null),
             ),
           ),
-          o && n.createElement(Tt, { bDirty: r }),
+          o && n.createElement(Wt, { bDirty: r }),
         );
       }
-      function Tt(e) {
+      function Wt(e) {
         const { bDirty: t } = e,
           r = Ee();
         return t
           ? n.createElement(
-              ft.jn,
+              ht.jn,
               { onClick: () => r(), className: gt.CloseWindowButton },
               (0, Pe.we)("#Button_SaveAndClose"),
             )
           : n.createElement(
-              ft.$n,
+              ht.$n,
               { onClick: () => r(), className: gt.CloseWindowButton },
               (0, Pe.we)("#Button_Close"),
             );
       }
-      function Ft(e) {
+      function vt(e) {
         const { note: t, closeModal: r, deleteNote: i, deletePending: a } = e;
         return n.createElement(
-          Mt.EN,
+          zt.EN,
           { active: !0 },
-          n.createElement(Mt.o0, {
+          n.createElement(zt.o0, {
             strTitle: (0, Pe.we)("#UserGameNotes_DeleteNote"),
             strDescription: (0, Pe.we)("#UserGameNotes_PromptDelete"),
             onOK: () => i(),
@@ -4677,19 +4686,19 @@
           }),
         );
       }
-      function Wt(e) {
+      function qt(e) {
         let t = "";
         for (let r = 0; r < e.content.childCount; r++) {
           const i = e.content.child(r);
           if (i.isText) t += i.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = Wt(i)), t.length > 4)) return t;
+            if (((t = qt(i)), t.length > 4)) return t;
           }
         }
         return t.trim();
       }
-      function vt(e) {
+      function jt(e) {
         const { bStandalonePage: t } = e,
           r = (0, a.W5)(),
           i = Le(
@@ -4722,28 +4731,28 @@
         }
         u && (l.current = u.id),
           n.useEffect(() => {
-            c && 0 == c.length && o();
-          }, [c, o]),
+            c && 0 == c.length && Nt(s, i, o(), !0);
+          }, [s, i, c, o]),
           n.useEffect(() => {
-            d && Ot(s, i, void 0, !0);
+            d && Nt(s, i, void 0, !0);
           }, [s, i, d]);
         const m = n.createElement(
-          ht.he,
+          St.he,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           n.createElement(
-            ft.$n,
+            ht.$n,
             {
               className: gt.NewNoteButton,
               onClick: () => {
                 const e = o();
-                Ot(s, i, e);
+                Nt(s, i, e);
               },
             },
             n.createElement(lt.qY3, null),
           ),
         );
         return c
-          ? n.createElement(qt, {
+          ? n.createElement(Ot, {
               noteParent: i,
               notes: c,
               activeNoteID: null == u ? void 0 : u.id,
@@ -4752,7 +4761,7 @@
             })
           : null;
       }
-      function qt(e) {
+      function Ot(e) {
         const {
             noteParent: t,
             notes: r,
@@ -4764,7 +4773,7 @@
           u = n.useContext(Ie).bPinnedView,
           d = (0, st.Qn)(),
           m = (0, a.W5)(),
-          p = (0, ft.vn)(m.params.noteid ? "ActivePage" : "PageList"),
+          p = (0, ht.vn)(m.params.noteid ? "ActivePage" : "PageList"),
           B = r.map((e) => {
             var r;
             return {
@@ -4773,15 +4782,15 @@
                   ? e.title
                   : (0, Pe.we)("#UserGameNotes_Untitled"),
               identifier: e.id,
-              content: n.createElement(jt, { noteParent: t, note: e }),
+              content: n.createElement(It, { noteParent: t, note: e }),
               pageClassName: gt.NotePage,
               hideTitle: !0,
             };
           }),
           g = (0, a.W6)(),
-          b = n.useCallback((e) => Ot(g, t, e), [g, t]);
+          b = n.useCallback((e) => Nt(g, t, e), [g, t]);
         return d && o
-          ? n.createElement(ft.Bv, {
+          ? n.createElement(ht.Bv, {
               title: (0, Pe.we)("#UserGameNotes_NotesList"),
               pages: B,
               className: (0, mt.A)(
@@ -4795,7 +4804,7 @@
               hideList: l,
               toggleHideList: u || d ? void 0 : () => c(!l),
             })
-          : n.createElement(ft.O7, {
+          : n.createElement(ht.O7, {
               title: (0, Pe.we)("#UserGameNotes_NotesList"),
               pages: B,
               className: (0, mt.A)(
@@ -4810,19 +4819,19 @@
               toggleHideList: u || d ? void 0 : () => c(!l),
             });
       }
-      function jt(e) {
+      function It(e) {
         const { noteParent: t, note: r } = e,
-          i = ft.v$(),
+          i = ht.v$(),
           s = (0, a.W6)(),
-          o = n.useCallback(() => Ot(s, t), [s, t]);
+          o = n.useCallback(() => Nt(s, t), [s, t]);
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(ft._Z, { onActivate: o }),
-          n.createElement(Ct, { note: r, hidden: !i }),
+          n.createElement(ht._Z, { onActivate: o }),
+          n.createElement(Ut, { note: r, hidden: !i }),
         );
       }
-      function Ot(e, t, r, i = !1) {
+      function Nt(e, t, r, i = !1) {
         let n;
         (n =
           "appid" in t
@@ -4830,20 +4839,20 @@
             : o.ShortcutNotes(t.shortcut, r)),
           i ? e.replace(n, e.location.state) : e.push(n, e.location.state);
       }
-      var It = r(17083),
-        Nt = r(58632),
-        Et = r.n(Nt),
-        xt = r(37403),
-        Pt = r(30470);
-      let At;
-      const Gt = 864e5;
-      function kt(e) {
-        return `appinfo_${e}_${Pt.TS.LANGUAGE}`;
-      }
-      function Dt(e) {
-        return Boolean(e && Date.now() - e.timeCached < Gt);
-      }
+      var Et = r(17083),
+        xt = r(58632),
+        Pt = r.n(xt),
+        At = r(37403),
+        Gt = r(30470);
+      let kt;
+      const Dt = 864e5;
       function Lt(e) {
+        return `appinfo_${e}_${Gt.TS.LANGUAGE}`;
+      }
+      function $t(e) {
+        return Boolean(e && Date.now() - e.timeCached < Dt);
+      }
+      function Ht(e) {
         const t = (0, s.KV)(),
           r = (0, s.rX)();
         return (0, qe.I)({
@@ -4851,24 +4860,24 @@
           queryFn: async () =>
             (function (e, t) {
               return (
-                At ||
-                  (At = new (Et())(
+                kt ||
+                  (kt = new (Pt())(
                     async (r) => {
                       const n = new Map();
-                      (await Promise.all(r.map((e) => t.GetObject(kt(e)))))
-                        .filter(Dt)
+                      (await Promise.all(r.map((e) => t.GetObject(Lt(e)))))
+                        .filter($t)
                         .forEach(({ value: e }) => n.set(e.appid, e));
                       const a = r.slice().filter((e) => !n.has(e));
                       if (a.length) {
-                        const r = c.w.Init(xt._z);
-                        r.Body().set_language((0, i.sf)(Pt.TS.LANGUAGE)),
+                        const r = c.w.Init(At._z);
+                        r.Body().set_language((0, i.sf)(Gt.TS.LANGUAGE)),
                           r.Body().set_appids(a);
-                        const s = await xt.BE.GetApps(e, r);
+                        const s = await At.BE.GetApps(e, r);
                         if (1 != s.GetEResult()) throw s.GetErrorMessage();
                         s.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            t.StoreObject(kt(e.appid), {
+                            t.StoreObject(Lt(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
@@ -4879,15 +4888,15 @@
                     },
                     { cache: !1 },
                   )),
-                At
+                kt
               );
             })(t, r).load(e),
-          staleTime: Gt,
+          staleTime: Dt,
           enabled: !!e,
         }).data;
       }
-      var $t = r(22797);
-      function Ht() {
+      var Kt = r(22797);
+      function Vt() {
         const { data: e, isLoading: t } = (function () {
             const e = xe();
             return (0, qe.I)({
@@ -4903,7 +4912,7 @@
             [e],
           );
         return t
-          ? n.createElement($t.t, { msDelayAppear: 300 })
+          ? n.createElement(Kt.t, { msDelayAppear: 300 })
           : n.createElement(
               "div",
               null,
@@ -4916,7 +4925,7 @@
                 "ul",
                 null,
                 r.map((e) =>
-                  n.createElement(Kt, {
+                  n.createElement(Qt, {
                     key: e.appid || e.shortcut_name,
                     game: e,
                   }),
@@ -4924,13 +4933,13 @@
               ),
             );
       }
-      function Kt(e) {
+      function Qt(e) {
         const { game: t } = e;
         return n.createElement(
           "li",
           null,
           n.createElement(
-            It.N_,
+            Et.N_,
             {
               to:
                 ((r = t.appid
@@ -4940,17 +4949,17 @@
                   ? o.AppNotes(r.appid, i)
                   : o.ShortcutNotes(r.shortcut, i)),
             },
-            t.appid ? n.createElement(Vt, { appid: t.appid }) : t.shortcut_name,
+            t.appid ? n.createElement(Yt, { appid: t.appid }) : t.shortcut_name,
           ),
         );
         var r, i;
       }
-      function Vt(e) {
+      function Yt(e) {
         const { appid: t } = e,
-          r = Lt(t);
+          r = Ht(t);
         return null == r ? void 0 : r.name;
       }
-      function Qt(e, t, r = {}) {
+      function Xt(e, t, r = {}) {
         const { bIsPublic: i = !0 } = r,
           n = { unAppID: e, strMachineName: t, bIsPublic: i },
           a = (0, s.KV)();
@@ -4996,7 +5005,7 @@
                           : new TextEncoder().encode(i.content).buffer;
                       a = await l.C(n, "SHA-1");
                       const s = await (async function (e, t, r, i, n, a) {
-                          const s = c.w.Init(_);
+                          const s = c.w.Init(w);
                           s.Body().set_appid(t.unAppID),
                             s.Body().add_platforms_to_sync("All"),
                             s.Body().set_upload_batch_id(r),
@@ -5045,10 +5054,10 @@
           },
         });
       }
-      function Yt(e) {
+      function Zt(e) {
         const t = (function () {
           const e = (0, s.TR)(),
-            { mutateAsync: t } = Qt(i.oe, "Steam Community Web Interface", {
+            { mutateAsync: t } = Xt(i.oe, "Steam Community Web Interface", {
               bIsPublic: !0,
             }),
             r = n.useCallback(
@@ -5069,12 +5078,12 @@
             n.createElement(
               a.qh,
               { path: o.List() },
-              n.createElement(Ht, null),
+              n.createElement(Vt, null),
             ),
             n.createElement(
               a.qh,
               { path: o.AppNotes(":appid", ":noteid?") },
-              n.createElement(vt, null),
+              n.createElement(jt, null),
             ),
             n.createElement(
               a.qh,

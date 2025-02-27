@@ -24,6 +24,7 @@
     33924: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
@@ -188,6 +189,7 @@
     },
     15496: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         ReadMoreLink: "_2mvgc6dpEDHRJlTWhGDz7h",
         MajorEventContainer: "dVJB2r43CGIAgr-Xtt4P3",
