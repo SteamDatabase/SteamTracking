@@ -2840,6 +2840,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media screen and (max-width: 500px) {
+  ._3EyafdwyTAhyVmQ2hEoV6w ._1-vlriAtKYDViAEunue4VO ._2PPbMrzl8PKBwpkjYs9b0i {
+    text-decoration: underline;
+  }
+}
 ._1-vlriAtKYDViAEunue4VO.oUzYn48NLkHPRjiT8W86M,
 ._1-vlriAtKYDViAEunue4VO.oUzYn48NLkHPRjiT8W86M:hover,
 ._1-vlriAtKYDViAEunue4VO.oUzYn48NLkHPRjiT8W86M:not(
@@ -2847,18 +2852,24 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   ):hover {
   background-color: #23262e;
 }
-._1-vlriAtKYDViAEunue4VO:not(._2DpXjzK3WWsOtUWUrcuOG7):hover,
-._3EyafdwyTAhyVmQ2hEoV6w
-  ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7:hover {
+._1-vlriAtKYDViAEunue4VO:hover:not(._2DpXjzK3WWsOtUWUrcuOG7) {
   background-color: #dcdedf;
   color: #3d4450;
 }
-._1-vlriAtKYDViAEunue4VO:not(._2DpXjzK3WWsOtUWUrcuOG7):hover
-  ._1rD8X96FdnksZLvRRlEiCR,
-._3EyafdwyTAhyVmQ2hEoV6w
-  ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7:hover
+._1-vlriAtKYDViAEunue4VO:hover:not(._2DpXjzK3WWsOtUWUrcuOG7)
   ._1rD8X96FdnksZLvRRlEiCR {
   color: #3d4450;
+}
+@media screen and (max-width: 500px) {
+  ._3EyafdwyTAhyVmQ2hEoV6w ._1-vlriAtKYDViAEunue4VO:hover {
+    background-color: #dcdedf;
+    color: #3d4450;
+  }
+  ._3EyafdwyTAhyVmQ2hEoV6w
+    ._1-vlriAtKYDViAEunue4VO:hover
+    ._1rD8X96FdnksZLvRRlEiCR {
+    color: #3d4450;
+  }
 }
 ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 {
   color: #fff;

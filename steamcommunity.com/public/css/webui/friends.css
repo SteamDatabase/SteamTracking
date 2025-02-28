@@ -2944,6 +2944,13 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media screen and (max-width: 500px) {
+  .pagedsettings_ResponsivePageList_3Eyaf
+    .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr
+    .pagedsettings_PageListItem_Title_2PPbM {
+    text-decoration: underline;
+  }
+}
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn,
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:hover,
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:not(
@@ -2951,22 +2958,29 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   ):hover {
   background-color: #23262e;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:hover:not(
     .pagedsettings_Active_2DpXj
-  ):hover,
-.pagedsettings_ResponsivePageList_3Eyaf
-  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj:hover {
+  ) {
   background-color: #dcdedf;
   color: #3d4450;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:hover:not(
     .pagedsettings_Active_2DpXj
-  ):hover
-  .pagedsettings_PageListItem_Icon_1rD8X,
-.pagedsettings_ResponsivePageList_3Eyaf
-  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj:hover
+  )
   .pagedsettings_PageListItem_Icon_1rD8X {
   color: #3d4450;
+}
+@media screen and (max-width: 500px) {
+  .pagedsettings_ResponsivePageList_3Eyaf
+    .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:hover {
+    background-color: #dcdedf;
+    color: #3d4450;
+  }
+  .pagedsettings_ResponsivePageList_3Eyaf
+    .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:hover
+    .pagedsettings_PageListItem_Icon_1rD8X {
+    color: #3d4450;
+  }
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
   color: #fff;

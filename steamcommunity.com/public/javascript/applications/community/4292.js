@@ -139,26 +139,36 @@
       var o = n(90626),
         r = n(90286);
       function s(e, t) {
-        const { msAutosaveTimeout: n = 1e3 } = t || {},
-          [s, i] = o.useState(!1);
+        const { msAutosaveTimeout: n = 1e3, msMaxInterval: s = 10 * n } =
+            t || {},
+          [i, a] = o.useState(!1),
+          l = o.useRef(0);
         return (
           (0, r.u)(
             e,
             o.useCallback(() => {
-              i(!0);
+              (l.current = performance.now()), a(!0);
             }, []),
           ),
           o.useEffect(() => {
-            if (!s || !e) return;
-            const t = () => {
-                e.CommitChanges(), i(!1);
-              },
-              o = window.setTimeout(t, n);
+            if (!i || !e) return;
+            const t = performance.now(),
+              o = (i = !1) => {
+                r = void 0;
+                const c = performance.now(),
+                  d = c - l.current;
+                i || d >= n || c - t >= s
+                  ? (console.log("Committing changes"),
+                    e.CommitChanges(),
+                    a(!1))
+                  : (r = window.setTimeout(o, n - d));
+              };
+            let r = window.setTimeout(o, n);
             return () => {
-              window.clearTimeout(o), t();
+              r && (window.clearTimeout(r), o(!0));
             };
-          }, [s, e, n]),
-          { bDirty: s }
+          }, [i, e, n, s]),
+          { bDirty: i }
         );
       }
     },
