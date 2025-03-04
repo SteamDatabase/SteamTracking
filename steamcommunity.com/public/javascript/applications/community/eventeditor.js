@@ -7762,13 +7762,6 @@
                     ),
                   }),
                 ),
-                c.createElement(x.Yh, {
-                  className: bn.RequireText,
-                  label: (0, D.we)("#SalePresented_By_Admin"),
-                  tooltip: (0, D.we)("#SalePresneted_By_Admin_ttip"),
-                  onChange: (e) => p(e),
-                  checked: _,
-                }),
                 Boolean((null == i ? void 0 : i.length) > 0) &&
                   c.createElement(
                     x.$n,
@@ -8392,7 +8385,7 @@
                 ? o(Boolean(n))
                 : i != Boolean(n) && t.SetDirty(q.IQ.jsondata_sales));
           }, [t, a, i, n]),
-          !t.BHidden() || t.BPublished() || i
+          !t.BHidden() || t.BPublished()
             ? null
             : c.createElement(yn, {
                 gidClanEvent: t.GetGID(),

@@ -11047,6 +11047,11 @@
               ),
               key: "friendswhoplay",
             }),
+            n.push({
+              href: `${lt.TS.COMMUNITY_BASE_URL}notes/app/${e.appid}/`,
+              label: (0, Ct.we)("#Community_GameNotesFirstPerson"),
+              key: "notes",
+            }),
             i.data &&
               n.push({
                 href: `${ot.s.ProfileURL}gamecards/${e.appid}`,
