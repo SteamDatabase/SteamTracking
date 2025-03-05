@@ -43749,6 +43749,7 @@
         return y.iA.is_support
           ? i.createElement(b.j, {
               nMaxWeeksToDisplay: 1e3,
+              nWeeksPerPage: n.$_,
               fnCreateCalendarEntries: (e) => {
                 const t = new Array();
                 for (let a = 0; a < n.$_; ++a) {
@@ -44033,16 +44034,21 @@
         d = a(90626),
         u = a(52625);
       function p(e) {
-        const { fnCreateCalendarEntries: t, nMaxWeeksToDisplay: a } = e,
-          o = Math.ceil(a / u.aU) - 1,
-          [p, g] = (0, s.QD)("page", 0),
-          h = p < 0 ? 0 : p >= o ? o : p,
-          E = (0, n.oU)(r.HD.GetTimeNowWithOverride()),
-          [S, y] = d.useState(E + h * c.Kp.PerWeek * u.aU),
-          v = (e) => {
+        const {
+            fnCreateCalendarEntries: t,
+            nMaxWeeksToDisplay: a,
+            nWeeksPerPage: o,
+          } = e,
+          p = o ?? u.aU,
+          g = Math.ceil(a / p) - 1,
+          [h, E] = (0, s.QD)("page", 0),
+          S = h < 0 ? 0 : h >= g ? g : h,
+          y = (0, n.oU)(r.HD.GetTimeNowWithOverride()),
+          [v, f] = d.useState(y + S * c.Kp.PerWeek * p),
+          b = (e) => {
             window.sessionStorage.setItem("dailyDealPageIndex", `?page=${e}`),
-              g(e),
-              y(E + e * c.Kp.PerWeek * u.aU);
+              E(e),
+              f(y + e * c.Kp.PerWeek * p);
           };
         return d.createElement(
           "div",
@@ -44053,20 +44059,20 @@
             d.createElement(
               "div",
               { className: m.NavButtonLeftCtn },
-              h > 0 &&
+              S > 0 &&
                 d.createElement(
                   i.$n,
-                  { className: m.NavButton, onClick: () => v(h - 1) },
+                  { className: m.NavButton, onClick: () => b(S - 1) },
                   d.createElement(l.i3G, { direction: "left" }),
                 ),
             ),
             d.createElement(
               "div",
               { className: m.NavButtonRightCtn },
-              h < o &&
+              S < g &&
                 d.createElement(
                   i.$n,
-                  { className: m.NavButton, onClick: () => v(h + 1) },
+                  { className: m.NavButton, onClick: () => b(S + 1) },
                   d.createElement(l.i3G, { direction: "right" }),
                 ),
             ),
@@ -44075,7 +44081,7 @@
             "div",
             { className: m.CalendarGrid },
             d.createElement(_, null),
-            t(S),
+            t(v),
           ),
         );
       }
