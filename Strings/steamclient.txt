@@ -12520,7 +12520,6 @@ $steammessages_parental_objects.proto"
 4\n\rstore_filters
 4\n\vtrailer_max
 4\n\vuser_counts
-4bMTfy
 4f$H
 4h\4
 4i5U6B738%9
@@ -19609,8 +19608,8 @@ H7_Ya
 H8xp
 H@H9xqI
 HB15CFlickStickMode
+HB@F|
 HBJ\nTRF
-HB`E|
 HEAD
 HEADERS: could not unpack
 HEADERS: insufficient padding space
@@ -35342,6 +35341,7 @@ m_pNetworkDeviceManager
 m_pObj
 m_pObj == NULL
 m_pPatchResponseHandler
+m_pPendingSuspend
 m_pPlaybackController
 m_pPlayerResponseTarget
 m_pRateLimitServerQueryRefresh
