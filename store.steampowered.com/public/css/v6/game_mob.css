@@ -630,7 +630,7 @@
 		height: unset;
 		padding: 5px 0px;
 	}
-	html.responsive .game_area_already_owned.already_in_library {
+	html.responsive .game_area_already_owned .already_in_library {
 		font-size: 14px;
 		white-space: normal;
 		flex: 1;

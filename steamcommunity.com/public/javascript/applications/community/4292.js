@@ -79,16 +79,18 @@
                   },
                   handleDOMEvents: {
                     mouseover: (e, t) => {
-                      const n = t.target;
-                      if (
-                        n &&
-                        "getBoundingClientRect" in n &&
-                        "A" == n.nodeName
-                      ) {
-                        const e = n.getBoundingClientRect();
-                        f(e.left + e.width / 2), v(e.bottom + 2), E(n);
-                      } else E(void 0);
-                      return !1;
+                      for (
+                        let e = t.target;
+                        e && e != t.currentTarget;
+                        e = e.parentElement
+                      )
+                        if ("A" == e.nodeName && "getBoundingClientRect" in e) {
+                          const t = e.getBoundingClientRect();
+                          return (
+                            f(t.left + t.width / 2), v(t.bottom + 2), void E(e)
+                          );
+                        }
+                      E(void 0);
                     },
                     mouseleave: (e, t) => (E(void 0), !1),
                   },

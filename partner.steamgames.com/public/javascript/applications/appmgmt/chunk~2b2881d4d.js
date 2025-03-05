@@ -511,6 +511,9 @@
                 : !!this.m_ReleaseInfo?.custom_release_date_message)
           );
         }
+        BLimitedLaunchActive() {
+          return this.m_ReleaseInfo?.limited_launch_active;
+        }
         BIsPrePurchase() {
           return (
             this.BIsComingSoon() &&

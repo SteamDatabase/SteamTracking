@@ -1154,59 +1154,59 @@
           b =
             v?.accountid_giftee || (w ? t.gift_info?.accountid_giftee : void 0),
           S = (0, h.ZB)() && !_?.restrict_add_additional_to_cart,
-          B = (function (e, t, n) {
-            const r = (0, d.j4)(),
-              _ = (0, a.KV)(),
-              f = (0, l.jE)(),
-              { storeBrowseContext: g, dataLoader: h } = (0, i.yn)(),
-              { country: E } = g,
-              C = (0, o.Gd)();
+          B = (function (e, t, n, r) {
+            const _ = (0, d.j4)(),
+              f = (0, a.KV)(),
+              g = (0, l.jE)(),
+              { storeBrowseContext: h, dataLoader: E } = (0, i.yn)(),
+              { country: C } = h,
+              y = (0, o.Gd)(r);
             return (0, c.n)({
               mutationFn: async () => {
                 if (!e && !t) throw "nPackageID or nBundleID must be passed.";
-                let a;
-                if ((0, m.c2)(r)) {
-                  const [i, s] = await (0, u.Jn)(_, E, e, t, n, C);
-                  if (1 != i) throw `AddToAccountCart failed with ${i}`;
-                  (a = s.line_item_ids), (0, p.LN)(f, r, s.cart);
+                let r;
+                if ((0, m.c2)(_)) {
+                  const [a, i] = await (0, u.Jn)(f, C, e, t, n, y);
+                  if (1 != a) throw `AddToAccountCart failed with ${a}`;
+                  (r = i.line_item_ids), (0, p.LN)(g, _, i.cart);
                 } else {
-                  if (!(0, m.kx)(r)) throw "Invalid cart type";
+                  if (!(0, m.kx)(_)) throw "Invalid cart type";
                   {
-                    const [i, s] = await (0, u.SI)(_, e ? [e] : void 0, t, n);
-                    if (1 != i || !s)
-                      throw `AddItemsToAnonymousCart failed with ${i}`;
+                    const [a, i] = await (0, u.SI)(f, e ? [e] : void 0, t, n);
+                    if (1 != a || !i)
+                      throw `AddItemsToAnonymousCart failed with ${a}`;
                     {
                       const n = e
-                        ? s.lineitems?.filter(
+                        ? i.lineitems?.filter(
                             (t) =>
                               t.package_item &&
                               t.package_item.packageid == e &&
                               !t.package_item.gidbundle,
                           )
-                        : s.lineitems?.filter(
+                        : i.lineitems?.filter(
                             (e) => e.bundle_item && e.bundle_item.bundleid == t,
                           );
-                      (a = n?.map((e) => e.gidlineitem) || []),
-                        (0, p.LN)(f, r, (0, u.qS)(s));
+                      (r = n?.map((e) => e.gidlineitem) || []),
+                        (0, p.LN)(g, _, (0, u.qS)(i));
                     }
                   }
                 }
-                return a;
+                return r;
               },
               onMutate: () => {
                 const n = e ? { packageid: e } : { bundleid: t };
                 (async () => {
-                  const e = await f.fetchQuery((0, s.us)(h, n)),
+                  const e = await g.fetchQuery((0, s.us)(E, n)),
                     t =
                       1 == e?.included_appids?.length
                         ? { appid: e.included_appids[0] }
                         : n;
-                  f.prefetchQuery((0, s.AQ)(h, t)),
-                    f.prefetchQuery((0, s.rK)(h, t));
+                  g.prefetchQuery((0, s.AQ)(E, t)),
+                    g.prefetchQuery((0, s.rK)(E, t));
                 })();
               },
             });
-          })(t.packageid, t.bundleid, oe(r));
+          })(t.packageid, t.bundleid, oe(r), "cart-add-additional");
         return C.createElement(
           g.UW,
           { className: f().LineItemSpaceBetween },

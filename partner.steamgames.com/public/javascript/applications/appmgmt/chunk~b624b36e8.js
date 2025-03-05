@@ -135,17 +135,17 @@
           ),
         ));
       }
-      function G(e) {
+      function v(e) {
         return e.startsWith("http://") || e.startsWith("https://");
       }
-      function v(e, t) {
+      function G(e, t) {
         let i = e;
         i.endsWith("/") || (i += "/");
         let n = t.startsWith("/") ? 1 : 0;
         return i + t.substring(n);
       }
       function M(e, t) {
-        return G(e) || !G(t) ? e : v(t, e);
+        return v(e) || !v(t) ? e : G(t, e);
       }
       function R(e) {
         return (
@@ -347,13 +347,13 @@
           this.m_strBaseURL = r
             ? r.textContent
             : (function (e) {
-                if (!G(e)) return "";
+                if (!v(e)) return "";
                 let t = new URL(e),
                   i = t.pathname;
                 return (
                   (i.indexOf(".mpd") >= 0 || i.endsWith("/")) &&
                     (i = i.substring(0, i.lastIndexOf("/"))),
-                  v(t.origin, i) + "/"
+                  G(t.origin, i) + "/"
                 );
               })(t);
           let a = c(n, "Analytics");
@@ -1508,16 +1508,13 @@
           (0, g.q_)("OnMediaSourceClose", e), this.HandleMediaSourceError(e);
         }
         OnVideoWaiting(e) {
-          if (
-            !this.IsLiveContent() &&
-            this.m_mpd &&
-            this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
-          )
+          if (this.IsAtEnd())
             return (
               (0, g.q_)(
                 `pausing playback due to OnVideoWaiting (endTime=${this.m_mpd.GetEndTime()}, currentPlaytime=${this.GetCurrentPlayTime()} )`,
               ),
-              void this.Pause()
+              this.Pause(),
+              void this.DispatchEvent("valve-ended")
             );
           if (
             !this.BIsPlayerBufferedBetween(
@@ -1733,6 +1730,14 @@
         }
         IsPaused() {
           return !this.m_bUserPlayChoice;
+        }
+        IsAtEnd() {
+          return (
+            !this.IsLiveContent() &&
+            this.m_mpd &&
+            this.m_mpd.GetEndTime() > 0 &&
+            this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
+          );
         }
         SetUserPlayChoice(e) {
           (this.m_bUserPlayChoice = e),

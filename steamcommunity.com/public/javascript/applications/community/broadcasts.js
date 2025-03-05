@@ -1982,7 +1982,7 @@
           l = (0, G.Qn)();
         if (!n) return null;
         const o = n.GetBestPurchaseOption(),
-          s = (null == o ? void 0 : o.hide_discount_pct_for_compliance) && !0;
+          s = null == o ? void 0 : o.hide_discount_pct_for_compliance;
         return i.createElement(
           M.A,
           { appID: t },

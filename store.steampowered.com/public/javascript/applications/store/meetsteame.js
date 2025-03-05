@@ -6,6 +6,7 @@
     33924: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
@@ -86,8 +87,8 @@
         b = a(18654),
         S = a.n(b),
         v = a(3661),
-        P = a(89274),
-        h = a(72860),
+        h = a(89274),
+        P = a(72860),
         _ = a(70300),
         f = a(47235),
         C = a(37076),
@@ -96,9 +97,9 @@
         g = a(52038),
         A = a(61859),
         T = a(61336),
-        y = a(78327),
-        w = a(91291),
-        H = a.n(w),
+        w = a(78327),
+        y = a(91291),
+        H = a.n(y),
         G = a(99956);
       const N = "capsule_index_";
       function O(e) {
@@ -112,12 +113,12 @@
             onlyOneDiscountPct: E,
             bPreferDemoStorePage: b,
           } = e,
-          [v, P] = n.useState(!1),
-          [h] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          [f] = (0, p.t7)(a && h?.GetParentAppID(), r.Xh);
-        if (!h) return null;
+          [v, h] = n.useState(!1),
+          [P] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          [f] = (0, p.t7)(a && P?.GetParentAppID(), r.Xh);
+        if (!P) return null;
         const C = Boolean(f),
-          D = n.createElement(W, {
+          D = n.createElement(k, {
             ...e,
             info: t,
             bIsHovered: v,
@@ -136,11 +137,11 @@
           },
           n.createElement(
             _.oj,
-            { appid: h.GetAppID() },
+            { appid: P.GetAppID() },
             Boolean(u)
               ? n.createElement(
                   "div",
-                  { onMouseEnter: () => P(!0), onMouseLeave: () => P(!1) },
+                  { onMouseEnter: () => h(!0), onMouseLeave: () => h(!1) },
                   D,
                 )
               : n.createElement(
@@ -163,15 +164,15 @@
             Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
           C &&
-            n.createElement(k, {
+            n.createElement(W, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: f,
-              childAppType: h.GetAppType(),
+              childAppType: P.GetAppType(),
               bPreferDemoStorePage: b,
             }),
         );
       }
-      function k(e) {
+      function W(e) {
         const {
             strExtraParams: t,
             parentStoreItem: a,
@@ -179,10 +180,10 @@
             bPreferDemoStorePage: l,
           } = e,
           i = (0, I.n9)(),
-          c = (0, y.Qn)();
+          c = (0, w.Qn)();
         return n.createElement(
           o.ml,
-          { className: S().CapsuleParentInfo, ...(0, h.S)(a, i, c, l, t) },
+          { className: S().CapsuleParentInfo, ...(0, P.S)(a, i, c, l, t) },
           n.createElement(
             _.oj,
             { appid: a.GetAppID() },
@@ -209,7 +210,7 @@
           ),
         );
       }
-      function W(e) {
+      function k(e) {
         const {
             info: t,
             bHideStatusBanners: a,
@@ -219,40 +220,40 @@
             bHasParentAppToDisplay: u,
             bIsHovered: d,
             strDoubleCapsuleMessage: b,
-            bPreferDemoStorePage: h,
+            bPreferDemoStorePage: P,
           } = e,
           [_] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
           f = (0, I.n9)(),
           C = (0, n.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
         if (!_) return null;
         const A = (0, T.NT)(
-          (0, i.wJ)(`${_.GetStorePageURL(h)}${s ? `?${s}` : ""}`, f),
+          (0, i.wJ)(`${_.GetStorePageURL(P)}${s ? `?${s}` : ""}`, f),
         );
-        let y;
+        let w;
         "overrideNavigation" in t &&
-          (y = (e) => (
+          (w = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const w = Boolean(b);
+        const y = Boolean(b);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             o.Ii,
             {
-              href: y ? null : A,
+              href: w ? null : A,
               style: { display: "block", cursor: "pointer" },
               className: S().CapsuleFocusCtn,
               preferredFocus: u,
-              onClick: y,
+              onClick: w,
             },
             n.createElement(
               "div",
-              { className: (0, g.A)({ [H().TwoWidthCtn]: w }) },
+              { className: (0, g.A)({ [H().TwoWidthCtn]: y }) },
               n.createElement(
                 "div",
-                { className: (0, g.A)({ [H().TwoWidthCapsule]: w }) },
-                n.createElement(P.V, { appids: C, hide_status_banners: a }),
+                { className: (0, g.A)({ [H().TwoWidthCapsule]: y }) },
+                n.createElement(h.V, { appids: C, hide_status_banners: a }),
                 n.createElement(E.aU, { imageType: c, info: t }),
                 n.createElement(D.S, {
                   eDeckCompatibilityCategory:
@@ -260,7 +261,7 @@
                 }),
                 Boolean(d) && n.createElement(v.m, { appInfo: t }),
               ),
-              w &&
+              y &&
                 n.createElement(
                   "div",
                   { className: H().TwoWidthSideInfo },
@@ -299,15 +300,15 @@
             onlyOneDiscountPct: S,
             strDoubleCapsuleMessage: v,
           } = e,
-          [P] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          h =
-            P &&
-            P?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
-          _ = h && !o;
-        if (s && 0 == P?.GetStoreItemType())
-          return n.createElement(f.E, { appid: P.GetAppID(), bIsMuted: b });
+          [h] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          P =
+            h &&
+            h?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
+          _ = P && !o;
+        if (s && 0 == h?.GetStoreItemType())
+          return n.createElement(f.E, { appid: h.GetAppID(), bIsMuted: b });
         if (l) return null;
-        const C = h && a,
+        const C = P && a,
           D = _;
         return n.createElement(E.qn, {
           info: t,

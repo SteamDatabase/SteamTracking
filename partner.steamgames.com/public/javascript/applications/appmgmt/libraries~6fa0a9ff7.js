@@ -182,10 +182,10 @@
                       c = "" === f.join("").trim();
                     }
                     if (!c) {
-                      for (var b = 0; b < g; b++) {
-                        0 < b && !h && (r += i);
-                        var w = s && a ? e[b] : b;
-                        r += p(t[d][w], b);
+                      for (var w = 0; w < g; w++) {
+                        0 < w && !h && (r += i);
+                        var b = s && a ? e[w] : w;
+                        r += p(t[d][b], w);
                       }
                       d < t.length - 1 && (!n || (0 < g && !h)) && (r += l);
                     }
@@ -314,7 +314,7 @@
               (this.isFirstChunk = !0),
               (this._completeResults = { data: [], errors: [], meta: {} }),
               function (e) {
-                var t = w(e);
+                var t = b(e);
                 (t.chunkSize = parseInt(t.chunkSize)),
                   e.step || e.chunk || (t.chunkSize = null),
                   (this._handle = new h(t)),
@@ -593,7 +593,7 @@
               m = [],
               v = { data: [], errors: [], meta: {} };
             if (C(e.step)) {
-              var b = e.step;
+              var w = e.step;
               e.step = function (t) {
                 if (((v = t), _())) R();
                 else {
@@ -601,7 +601,7 @@
                   (d += t.data.length),
                     e.preview && d > e.preview
                       ? n.abort()
-                      : ((v.data = v.data[0]), b(v, u));
+                      : ((v.data = v.data[0]), w(v, u));
                 }
               };
             }
@@ -765,17 +765,17 @@
                           newline: n,
                           preview: 10,
                         }).parse(t),
-                        b = 0;
-                      b < v.data.length;
-                      b++
+                        w = 0;
+                      w < v.data.length;
+                      w++
                     )
-                      if (o && S(v.data[b])) m++;
+                      if (o && S(v.data[w])) m++;
                       else {
-                        var w = v.data[b].length;
-                        (f += w),
+                        var b = v.data[w].length;
+                        (f += b),
                           void 0 !== u
-                            ? 0 < w && ((h += Math.abs(w - u)), (u = w))
-                            : (u = w);
+                            ? 0 < b && ((h += Math.abs(b - u)), (u = b))
+                            : (u = b);
                       }
                     0 < v.data.length && (f /= v.data.length - m),
                       (void 0 === a || h <= a) &&
@@ -796,7 +796,7 @@
                   : ((o = !0), (e.delimiter = r.DefaultDelimiter)),
                   (v.meta.delimiter = e.delimiter);
               }
-              var d = w(e);
+              var d = b(e);
               return (
                 e.preview && e.header && d.preview++,
                 (t = i),
@@ -865,73 +865,73 @@
               var p = r.length,
                 m = n.length,
                 v = o.length,
-                b = i.length,
-                w = C(l),
+                w = i.length,
+                b = C(l),
                 S = [],
                 R = [],
                 _ = [],
                 y = (d = 0);
-              if (!r) return $();
+              if (!r) return W();
               if (e.header && !c) {
                 var F = r.split(o)[0].split(n),
-                  x = [],
-                  I = {},
-                  E = !1;
-                for (var M in F) {
-                  var O = F[M];
-                  C(e.transformHeader) && (O = e.transformHeader(O, M));
-                  var P = O,
-                    V = I[O] || 0;
+                  I = [],
+                  x = {},
+                  M = !1;
+                for (var E in F) {
+                  var P = F[E];
+                  C(e.transformHeader) && (P = e.transformHeader(P, E));
+                  var O = P,
+                    V = x[P] || 0;
                   for (
-                    0 < V && ((E = !0), (P = O + "_" + V)), I[O] = V + 1;
-                    x.includes(P);
+                    0 < V && ((M = !0), (O = P + "_" + V)), x[P] = V + 1;
+                    I.includes(O);
                   )
-                    P = P + "_" + V;
-                  x.push(P);
+                    O = O + "_" + V;
+                  I.push(O);
                 }
-                if (E) {
+                if (M) {
                   var z = r.split(o);
-                  (z[0] = x.join(n)), (r = z.join(o));
+                  (z[0] = I.join(n)), (r = z.join(o));
                 }
               }
               if (a || (!1 !== a && -1 === r.indexOf(t))) {
                 for (var k = r.split(o), A = 0; A < k.length; A++) {
                   if (((_ = k[A]), (d += _.length), A !== k.length - 1))
                     d += o.length;
-                  else if (h) return $();
-                  if (!i || _.substring(0, b) !== i) {
-                    if (w) {
-                      if (((S = []), B(_.split(n)), W(), g)) return $();
-                    } else B(_.split(n));
-                    if (s && s <= A) return (S = S.slice(0, s)), $(!0);
+                  else if (h) return W();
+                  if (!i || _.substring(0, w) !== i) {
+                    if (b) {
+                      if (((S = []), j(_.split(n)), $(), g)) return W();
+                    } else j(_.split(n));
+                    if (s && s <= A) return (S = S.slice(0, s)), W(!0);
                   }
                 }
-                return $();
+                return W();
               }
               for (
                 var D = r.indexOf(n, d),
-                  L = r.indexOf(o, d),
-                  T = new RegExp(f(u) + f(t), "g"),
-                  H = r.indexOf(t, d);
+                  T = r.indexOf(o, d),
+                  L = new RegExp(f(u) + f(t), "g"),
+                  G = r.indexOf(t, d);
                 ;
               )
                 if (r[d] !== t)
-                  if (i && 0 === _.length && r.substring(d, d + b) === i) {
-                    if (-1 === L) return $();
-                    (d = L + v), (L = r.indexOf(o, d)), (D = r.indexOf(n, d));
-                  } else if (-1 !== D && (D < L || -1 === L))
+                  if (i && 0 === _.length && r.substring(d, d + w) === i) {
+                    if (-1 === T) return W();
+                    (d = T + v), (T = r.indexOf(o, d)), (D = r.indexOf(n, d));
+                  } else if (-1 !== D && (D < T || -1 === T))
                     _.push(r.substring(d, D)),
                       (d = D + m),
                       (D = r.indexOf(n, d));
                   else {
-                    if (-1 === L) break;
-                    if ((_.push(r.substring(d, L)), N(L + v), w && (W(), g)))
-                      return $();
-                    if (s && S.length >= s) return $(!0);
+                    if (-1 === T) break;
+                    if ((_.push(r.substring(d, T)), U(T + v), b && ($(), g)))
+                      return W();
+                    if (s && S.length >= s) return W(!0);
                   }
                 else
-                  for (H = d, d++; ; ) {
-                    if (-1 === (H = r.indexOf(t, H + 1)))
+                  for (G = d, d++; ; ) {
+                    if (-1 === (G = r.indexOf(t, G + 1)))
                       return (
                         h ||
                           R.push({
@@ -941,33 +941,33 @@
                             row: S.length,
                             index: d,
                           }),
-                        U()
+                        N()
                       );
-                    if (H === p - 1) return U(r.substring(d, H).replace(T, t));
-                    if (t !== u || r[H + 1] !== u) {
-                      if (t === u || 0 === H || r[H - 1] !== u) {
-                        -1 !== D && D < H + 1 && (D = r.indexOf(n, H + 1)),
-                          -1 !== L && L < H + 1 && (L = r.indexOf(o, H + 1));
-                        var G = q(-1 === L ? D : Math.min(D, L));
-                        if (r.substr(H + 1 + G, m) === n) {
-                          _.push(r.substring(d, H).replace(T, t)),
-                            r[(d = H + 1 + G + m)] !== t &&
-                              (H = r.indexOf(t, d)),
+                    if (G === p - 1) return N(r.substring(d, G).replace(L, t));
+                    if (t !== u || r[G + 1] !== u) {
+                      if (t === u || 0 === G || r[G - 1] !== u) {
+                        -1 !== D && D < G + 1 && (D = r.indexOf(n, G + 1)),
+                          -1 !== T && T < G + 1 && (T = r.indexOf(o, G + 1));
+                        var H = q(-1 === T ? D : Math.min(D, T));
+                        if (r.substr(G + 1 + H, m) === n) {
+                          _.push(r.substring(d, G).replace(L, t)),
+                            r[(d = G + 1 + H + m)] !== t &&
+                              (G = r.indexOf(t, d)),
                             (D = r.indexOf(n, d)),
-                            (L = r.indexOf(o, d));
+                            (T = r.indexOf(o, d));
                           break;
                         }
-                        var j = q(L);
-                        if (r.substring(H + 1 + j, H + 1 + j + v) === o) {
+                        var B = q(T);
+                        if (r.substring(G + 1 + B, G + 1 + B + v) === o) {
                           if (
-                            (_.push(r.substring(d, H).replace(T, t)),
-                            N(H + 1 + j + v),
+                            (_.push(r.substring(d, G).replace(L, t)),
+                            U(G + 1 + B + v),
                             (D = r.indexOf(n, d)),
-                            (H = r.indexOf(t, d)),
-                            w && (W(), g))
+                            (G = r.indexOf(t, d)),
+                            b && ($(), g))
                           )
-                            return $();
-                          if (s && S.length >= s) return $(!0);
+                            return W();
+                          if (s && S.length >= s) return W(!0);
                           break;
                         }
                         R.push({
@@ -978,37 +978,37 @@
                           row: S.length,
                           index: d,
                         }),
-                          H++;
+                          G++;
                       }
-                    } else H++;
+                    } else G++;
                   }
-              return U();
-              function B(e) {
+              return N();
+              function j(e) {
                 S.push(e), (y = d);
               }
               function q(e) {
                 var t = 0;
                 if (-1 !== e) {
-                  var n = r.substring(H + 1, e);
+                  var n = r.substring(G + 1, e);
                   n && "" === n.trim() && (t = n.length);
                 }
                 return t;
               }
-              function U(e) {
+              function N(e) {
                 return (
                   h ||
                     (void 0 === e && (e = r.substring(d)),
                     _.push(e),
                     (d = p),
-                    B(_),
-                    w && W()),
-                  $()
+                    j(_),
+                    b && $()),
+                  W()
                 );
               }
-              function N(e) {
-                (d = e), B(_), (_ = []), (L = r.indexOf(o, d));
+              function U(e) {
+                (d = e), j(_), (_ = []), (T = r.indexOf(o, d));
               }
-              function $(e) {
+              function W(e) {
                 return {
                   data: S,
                   errors: R,
@@ -1021,8 +1021,8 @@
                   },
                 };
               }
-              function W() {
-                l($()), (S = []), (R = []);
+              function $() {
+                l(W()), (S = []), (R = []);
               }
             }),
               (this.abort = function () {
@@ -1047,8 +1047,8 @@
                       meta: { aborted: !0 },
                     });
                 },
-                pause: b,
-                resume: b,
+                pause: w,
+                resume: w,
               };
               if (C(n.userStep)) {
                 for (
@@ -1076,13 +1076,13 @@
             var n = i[e];
             C(n.userComplete) && n.userComplete(t), n.terminate(), delete i[e];
           }
-          function b() {
+          function w() {
             throw new Error("Not implemented.");
           }
-          function w(e) {
+          function b(e) {
             if ("object" != typeof e || null === e) return e;
             var t = Array.isArray(e) ? [] : {};
-            for (var n in e) t[n] = w(e[n]);
+            for (var n in e) t[n] = b(e[n]);
             return t;
           }
           function S(e, t) {
@@ -1261,11 +1261,11 @@
       }
       n.d(t, {
         FB: () => o,
-        HT: () => X,
-        ZR: () => Q,
+        HT: () => Q,
+        ZR: () => X,
         cU: () => Z,
         h5: () => ee,
-        hM: () => Y,
+        hM: () => J,
       });
       const d = "debugHeaders";
       function g(e, t, n) {
@@ -1727,7 +1727,7 @@
               : i.includes(l),
           );
         };
-      m.autoRemove = (e) => x(e);
+      m.autoRemove = (e) => I(e);
       const v = (e, t, n) => {
         var o;
         return Boolean(
@@ -1736,8 +1736,8 @@
             : o.includes(n),
         );
       };
-      v.autoRemove = (e) => x(e);
-      const b = (e, t, n) => {
+      v.autoRemove = (e) => I(e);
+      const w = (e, t, n) => {
         var o;
         return (
           (null == (o = e.getValue(t)) || null == (o = o.toString())
@@ -1745,28 +1745,28 @@
             : o.toLowerCase()) === (null == n ? void 0 : n.toLowerCase())
         );
       };
-      b.autoRemove = (e) => x(e);
-      const w = (e, t, n) => {
+      w.autoRemove = (e) => I(e);
+      const b = (e, t, n) => {
         var o;
         return null == (o = e.getValue(t)) ? void 0 : o.includes(n);
       };
-      w.autoRemove = (e) => x(e) || !(null != e && e.length);
+      b.autoRemove = (e) => I(e) || !(null != e && e.length);
       const S = (e, t, n) =>
         !n.some((n) => {
           var o;
           return !(null != (o = e.getValue(t)) && o.includes(n));
         });
-      S.autoRemove = (e) => x(e) || !(null != e && e.length);
+      S.autoRemove = (e) => I(e) || !(null != e && e.length);
       const C = (e, t, n) =>
         n.some((n) => {
           var o;
           return null == (o = e.getValue(t)) ? void 0 : o.includes(n);
         });
-      C.autoRemove = (e) => x(e) || !(null != e && e.length);
+      C.autoRemove = (e) => I(e) || !(null != e && e.length);
       const R = (e, t, n) => e.getValue(t) === n;
-      R.autoRemove = (e) => x(e);
+      R.autoRemove = (e) => I(e);
       const _ = (e, t, n) => e.getValue(t) == n;
-      _.autoRemove = (e) => x(e);
+      _.autoRemove = (e) => I(e);
       const y = (e, t, n) => {
         let [o, i] = n;
         const l = e.getValue(t);
@@ -1784,22 +1784,22 @@
         }
         return [l, r];
       }),
-        (y.autoRemove = (e) => x(e) || (x(e[0]) && x(e[1])));
+        (y.autoRemove = (e) => I(e) || (I(e[0]) && I(e[1])));
       const F = {
         includesString: m,
         includesStringSensitive: v,
-        equalsString: b,
-        arrIncludes: w,
+        equalsString: w,
+        arrIncludes: b,
         arrIncludesAll: S,
         arrIncludesSome: C,
         equals: R,
         weakEquals: _,
         inNumberRange: y,
       };
-      function x(e) {
+      function I(e) {
         return null == e || "" === e;
       }
-      const I = {
+      const x = {
         getDefaultColumnDef: () => ({ filterFn: "auto" }),
         getInitialState: (e) => ({ columnFilters: [], ...e }),
         getDefaultOptions: (e) => ({
@@ -1868,7 +1868,7 @@
                   l = null == t ? void 0 : t.find((t) => t.id === e.id),
                   r = i(n, l ? l.value : void 0);
                 var s;
-                if (E(o, r, e))
+                if (M(o, r, e))
                   return null !=
                     (s = null == t ? void 0 : t.filter((t) => t.id !== e.id))
                     ? s
@@ -1903,7 +1903,7 @@
                   : o.filter((e) => {
                       const t = n.find((t) => t.id === e.id);
                       if (t) {
-                        if (E(t.getFilterFn(), e.value, t)) return !1;
+                        if (M(t.getFilterFn(), e.value, t)) return !1;
                       }
                       return !0;
                     });
@@ -1932,14 +1932,14 @@
             ));
         },
       };
-      function E(e, t, n) {
+      function M(e, t, n) {
         return (
           (!(!e || !e.autoRemove) && e.autoRemove(t, n)) ||
           void 0 === t ||
           ("string" == typeof t && !t)
         );
       }
-      const M = {
+      const E = {
           sum: (e, t, n) =>
             n.reduce((t, n) => {
               const o = n.getValue(e);
@@ -2009,7 +2009,7 @@
           uniqueCount: (e, t) => new Set(t.map((t) => t.getValue(e))).size,
           count: (e, t) => t.length,
         },
-        O = {
+        P = {
           getDefaultColumnDef: () => ({
             aggregatedCell: (e) => {
               var t, n;
@@ -2066,9 +2066,9 @@
                 const n = t.getCoreRowModel().flatRows[0],
                   o = null == n ? void 0 : n.getValue(e.id);
                 return "number" == typeof o
-                  ? M.sum
+                  ? E.sum
                   : "[object Date]" === Object.prototype.toString.call(o)
-                    ? M.extent
+                    ? E.extent
                     : void 0;
               }),
               (e.getAggregationFn = () => {
@@ -2084,7 +2084,7 @@
                             ? void 0
                             : o[e.columnDef.aggregationFn])
                       ? n
-                      : M[e.columnDef.aggregationFn];
+                      : E[e.columnDef.aggregationFn];
               });
           },
           createTable: (e) => {
@@ -2143,24 +2143,24 @@
               });
           },
         };
-      const P = {
+      const O = {
           getInitialState: (e) => ({ columnOrder: [], ...e }),
           getDefaultOptions: (e) => ({
             onColumnOrderChange: l("columnOrder", e),
           }),
           createColumn: (e, t) => {
             (e.getIndex = a(
-              (e) => [L(t, e)],
+              (e) => [T(t, e)],
               (t) => t.findIndex((t) => t.id === e.id),
               u(t.options, "debugColumns"),
             )),
               (e.getIsFirstColumn = (n) => {
                 var o;
-                return (null == (o = L(t, n)[0]) ? void 0 : o.id) === e.id;
+                return (null == (o = T(t, n)[0]) ? void 0 : o.id) === e.id;
               }),
               (e.getIsLastColumn = (n) => {
                 var o;
-                const i = L(t, n);
+                const i = T(t, n);
                 return (null == (o = i[i.length - 1]) ? void 0 : o.id) === e.id;
               });
           },
@@ -2433,7 +2433,7 @@
               );
             }),
               (e.getStart = a(
-                (e) => [e, L(t, e), t.getState().columnSizing],
+                (e) => [e, T(t, e), t.getState().columnSizing],
                 (t, n) =>
                   n
                     .slice(0, e.getIndex(t))
@@ -2441,7 +2441,7 @@
                 u(t.options, "debugColumns"),
               )),
               (e.getAfter = a(
-                (e) => [e, L(t, e), t.getState().columnSizing],
+                (e) => [e, T(t, e), t.getState().columnSizing],
                 (t, n) =>
                   n
                     .slice(e.getIndex(t) + 1)
@@ -2700,7 +2700,7 @@
       function D(e) {
         return "touchstart" === e.type;
       }
-      function L(e, t) {
+      function T(e, t) {
         return t
           ? "center" === t
             ? e.getCenterVisibleLeafColumns()
@@ -2709,7 +2709,7 @@
               : e.getRightVisibleLeafColumns()
           : e.getVisibleLeafColumns();
       }
-      const T = {
+      const L = {
           getInitialState: (e) => ({ rowSelection: {}, ...e }),
           getDefaultOptions: (e) => ({
             onRowSelectionChange: l("rowSelection", e),
@@ -2751,7 +2751,7 @@
                     i = { ...n };
                   return (
                     e.getRowModel().rows.forEach((t) => {
-                      H(i, t.id, o, !0, e);
+                      G(i, t.id, o, !0, e);
                     }),
                     i
                   );
@@ -2761,7 +2761,7 @@
                 () => [e.getState().rowSelection, e.getCoreRowModel()],
                 (t, n) =>
                   Object.keys(t).length
-                    ? G(e, n)
+                    ? H(e, n)
                     : { rows: [], flatRows: [], rowsById: {} },
                 u(e.options, "debugTable"),
               )),
@@ -2769,7 +2769,7 @@
                 () => [e.getState().rowSelection, e.getFilteredRowModel()],
                 (t, n) =>
                   Object.keys(t).length
-                    ? G(e, n)
+                    ? H(e, n)
                     : { rows: [], flatRows: [], rowsById: {} },
                 u(e.options, "debugTable"),
               )),
@@ -2777,7 +2777,7 @@
                 () => [e.getState().rowSelection, e.getSortedRowModel()],
                 (t, n) =>
                   Object.keys(t).length
-                    ? G(e, n)
+                    ? H(e, n)
                     : { rows: [], flatRows: [], rowsById: {} },
                 u(e.options, "debugTable"),
               )),
@@ -2830,7 +2830,7 @@
                   return l;
                 const s = { ...l };
                 return (
-                  H(
+                  G(
                     s,
                     e.id,
                     n,
@@ -2843,15 +2843,15 @@
             }),
               (e.getIsSelected = () => {
                 const { rowSelection: n } = t.getState();
-                return j(e, n);
+                return B(e, n);
               }),
               (e.getIsSomeSelected = () => {
                 const { rowSelection: n } = t.getState();
-                return "some" === B(e, n);
+                return "some" === j(e, n);
               }),
               (e.getIsAllSubRowsSelected = () => {
                 const { rowSelection: n } = t.getState();
-                return "all" === B(e, n);
+                return "all" === j(e, n);
               }),
               (e.getCanSelect = () => {
                 var n;
@@ -2883,7 +2883,7 @@
               });
           },
         },
-        H = (e, t, n, o, i) => {
+        G = (e, t, n, o, i) => {
           var l;
           const r = i.getRow(t, !0);
           n
@@ -2895,9 +2895,9 @@
               null != (l = r.subRows) &&
               l.length &&
               r.getCanSelectSubRows() &&
-              r.subRows.forEach((t) => H(e, t.id, n, o, i));
+              r.subRows.forEach((t) => G(e, t.id, n, o, i));
         };
-      function G(e, t) {
+      function H(e, t) {
         const n = e.getState().rowSelection,
           o = [],
           i = {},
@@ -2905,7 +2905,7 @@
             return e
               .map((e) => {
                 var t;
-                const r = j(e, n);
+                const r = B(e, n);
                 if (
                   (r && (o.push(e), (i[e.id] = e)),
                   null != (t = e.subRows) &&
@@ -2919,11 +2919,11 @@
           };
         return { rows: l(t.rows), flatRows: o, rowsById: i };
       }
-      function j(e, t) {
+      function B(e, t) {
         var n;
         return null != (n = t[e.id]) && n;
       }
-      function B(e, t, n) {
+      function j(e, t, n) {
         var o;
         if (null == (o = e.subRows) || !o.length) return !1;
         let i = !0,
@@ -2932,10 +2932,10 @@
           e.subRows.forEach((e) => {
             if (
               (!l || i) &&
-              (e.getCanSelect() && (j(e, t) ? (l = !0) : (i = !1)),
+              (e.getCanSelect() && (B(e, t) ? (l = !0) : (i = !1)),
               e.subRows && e.subRows.length)
             ) {
-              const n = B(e, t);
+              const n = j(e, t);
               "all" === n
                 ? (l = !0)
                 : "some" === n
@@ -2947,10 +2947,10 @@
         );
       }
       const q = /([0-9]+)/gm;
-      function U(e, t) {
+      function N(e, t) {
         return e === t ? 0 : e > t ? 1 : -1;
       }
-      function N(e) {
+      function U(e) {
         return "number" == typeof e
           ? isNaN(e) || e === 1 / 0 || e === -1 / 0
             ? ""
@@ -2959,7 +2959,7 @@
             ? e
             : "";
       }
-      function $(e, t) {
+      function W(e, t) {
         const n = e.split(q).filter(Boolean),
           o = t.split(q).filter(Boolean);
         for (; n.length && o.length; ) {
@@ -2979,20 +2979,20 @@
         }
         return n.length - o.length;
       }
-      const W = {
+      const $ = {
           alphanumeric: (e, t, n) =>
-            $(N(e.getValue(n)).toLowerCase(), N(t.getValue(n)).toLowerCase()),
+            W(U(e.getValue(n)).toLowerCase(), U(t.getValue(n)).toLowerCase()),
           alphanumericCaseSensitive: (e, t, n) =>
-            $(N(e.getValue(n)), N(t.getValue(n))),
+            W(U(e.getValue(n)), U(t.getValue(n))),
           text: (e, t, n) =>
-            U(N(e.getValue(n)).toLowerCase(), N(t.getValue(n)).toLowerCase()),
-          textCaseSensitive: (e, t, n) => U(N(e.getValue(n)), N(t.getValue(n))),
+            N(U(e.getValue(n)).toLowerCase(), U(t.getValue(n)).toLowerCase()),
+          textCaseSensitive: (e, t, n) => N(U(e.getValue(n)), U(t.getValue(n))),
           datetime: (e, t, n) => {
             const o = e.getValue(n),
               i = t.getValue(n);
             return o > i ? 1 : o < i ? -1 : 0;
           },
-          basic: (e, t, n) => U(e.getValue(n), t.getValue(n)),
+          basic: (e, t, n) => N(e.getValue(n), t.getValue(n)),
         },
         K = [
           c,
@@ -3126,10 +3126,10 @@
                 });
             },
           },
-          P,
+          O,
           V,
           p,
-          I,
+          x,
           {
             createTable: (e) => {
               (e._getGlobalFacetedRowModel =
@@ -3228,11 +3228,11 @@
                 for (const t of n) {
                   const n = null == t ? void 0 : t.getValue(e.id);
                   if ("[object Date]" === Object.prototype.toString.call(n))
-                    return W.datetime;
+                    return $.datetime;
                   if ("string" == typeof n && ((o = !0), n.split(q).length > 1))
-                    return W.alphanumeric;
+                    return $.alphanumeric;
                 }
-                return o ? W.text : W.basic;
+                return o ? $.text : $.basic;
               }),
                 (e.getAutoSortDir = () => {
                   const n = t.getFilteredRowModel().flatRows[0];
@@ -3254,7 +3254,7 @@
                               ? void 0
                               : o[e.columnDef.sortingFn])
                         ? n
-                        : W[e.columnDef.sortingFn];
+                        : $[e.columnDef.sortingFn];
                 }),
                 (e.toggleSorting = (n, o) => {
                   const i = e.getNextSortingOrder(),
@@ -3409,7 +3409,7 @@
                 ));
             },
           },
-          O,
+          P,
           {
             getInitialState: (e) => ({ expanded: {}, ...e }),
             getDefaultOptions: (e) => ({
@@ -3896,10 +3896,10 @@
                 ));
             },
           },
-          T,
+          L,
           k,
         ];
-      function Q(e) {
+      function X(e) {
         var t, n;
         const o = [...K, ...(null != (t = e._features) ? t : [])];
         let l = { _features: o };
@@ -4138,7 +4138,7 @@
         }
         return l;
       }
-      function X() {
+      function Q() {
         return (e) =>
           a(
             () => [e.options.data],
@@ -4176,7 +4176,7 @@
             u(e.options, "debugTable", 0, () => e._autoResetPageIndex()),
           );
       }
-      function J(e, t, n) {
+      function Y(e, t, n) {
         return n.options.filterFromLeafRows
           ? (function (e, t, n) {
               var o;
@@ -4253,7 +4253,7 @@
               return { rows: s(e), flatRows: i, rowsById: l };
             })(e, t, n);
       }
-      function Y() {
+      function J() {
         return (e) =>
           a(
             () => [
@@ -4344,7 +4344,7 @@
                     (n.columnFilters.__global__ = !1);
                 }
               }
-              return J(
+              return Y(
                 t.rows,
                 (e) => {
                   for (let t = 0; t < r.length; t++)
@@ -4514,231 +4514,6 @@
             },
             u(e.options, "debugTable", 0, () => e._autoResetPageIndex()),
           );
-      }
-    },
-    54806: (e, t, n) => {
-      "use strict";
-      n.d(t, { E: () => m });
-      var o = n(90626),
-        i = n(86709),
-        l = n(45747),
-        r = n(74500),
-        s = n(57168);
-      function a(e, t) {
-        return e.filter((e) => !t.includes(e));
-      }
-      var u = class extends r.Q {
-          #e;
-          #t;
-          #n;
-          #o;
-          #i;
-          #l;
-          #r;
-          #s;
-          constructor(e, t, n) {
-            super(),
-              (this.#e = e),
-              (this.#o = n),
-              (this.#n = []),
-              (this.#i = []),
-              (this.#t = []),
-              this.setQueries(t);
-          }
-          onSubscribe() {
-            1 === this.listeners.size &&
-              this.#i.forEach((e) => {
-                e.subscribe((t) => {
-                  this.#a(e, t);
-                });
-              });
-          }
-          onUnsubscribe() {
-            this.listeners.size || this.destroy();
-          }
-          destroy() {
-            (this.listeners = new Set()),
-              this.#i.forEach((e) => {
-                e.destroy();
-              });
-          }
-          setQueries(e, t, n) {
-            (this.#n = e),
-              (this.#o = t),
-              i.j.batch(() => {
-                const e = this.#i,
-                  t = this.#u(this.#n);
-                t.forEach((e) =>
-                  e.observer.setOptions(e.defaultedQueryOptions, n),
-                );
-                const o = t.map((e) => e.observer),
-                  i = o.map((e) => e.getCurrentResult()),
-                  l = o.some((t, n) => t !== e[n]);
-                (e.length !== o.length || l) &&
-                  ((this.#i = o),
-                  (this.#t = i),
-                  this.hasListeners() &&
-                    (a(e, o).forEach((e) => {
-                      e.destroy();
-                    }),
-                    a(o, e).forEach((e) => {
-                      e.subscribe((t) => {
-                        this.#a(e, t);
-                      });
-                    }),
-                    this.#d()));
-              });
-          }
-          getCurrentResult() {
-            return this.#t;
-          }
-          getQueries() {
-            return this.#i.map((e) => e.getCurrentQuery());
-          }
-          getObservers() {
-            return this.#i;
-          }
-          getOptimisticResult(e, t) {
-            const n = this.#u(e).map((e) =>
-              e.observer.getOptimisticResult(e.defaultedQueryOptions),
-            );
-            return [n, (e) => this.#g(e ?? n, t), () => this.#c(n, e)];
-          }
-          #c(e, t) {
-            const n = this.#u(t);
-            return n.map((t, o) => {
-              const i = e[o];
-              return t.defaultedQueryOptions.notifyOnChangeProps
-                ? i
-                : t.observer.trackResult(i, (e) => {
-                    n.forEach((t) => {
-                      t.observer.trackProp(e);
-                    });
-                  });
-            });
-          }
-          #g(e, t) {
-            return t
-              ? ((this.#l && this.#t === this.#s && t === this.#r) ||
-                  ((this.#r = t),
-                  (this.#s = this.#t),
-                  (this.#l = (0, s.BH)(this.#l, t(e)))),
-                this.#l)
-              : e;
-          }
-          #u(e) {
-            const t = new Map(this.#i.map((e) => [e.options.queryHash, e])),
-              n = [];
-            return (
-              e.forEach((e) => {
-                const o = this.#e.defaultQueryOptions(e),
-                  i = t.get(o.queryHash);
-                if (i) n.push({ defaultedQueryOptions: o, observer: i });
-                else {
-                  const e = this.#i.find(
-                    (e) => e.options.queryHash === o.queryHash,
-                  );
-                  n.push({
-                    defaultedQueryOptions: o,
-                    observer: e ?? new l.$(this.#e, o),
-                  });
-                }
-              }),
-              n.sort(
-                (t, n) =>
-                  e.findIndex(
-                    (e) => e.queryHash === t.defaultedQueryOptions.queryHash,
-                  ) -
-                  e.findIndex(
-                    (e) => e.queryHash === n.defaultedQueryOptions.queryHash,
-                  ),
-              )
-            );
-          }
-          #a(e, t) {
-            const n = this.#i.indexOf(e);
-            -1 !== n &&
-              ((this.#t = (function (e, t, n) {
-                const o = e.slice(0);
-                return (o[t] = n), o;
-              })(this.#t, n, t)),
-              this.#d());
-          }
-          #d() {
-            if (this.hasListeners()) {
-              this.#l !==
-                this.#g(this.#c(this.#t, this.#n), this.#o?.combine) &&
-                i.j.batch(() => {
-                  this.listeners.forEach((e) => {
-                    e(this.#t);
-                  });
-                });
-            }
-          }
-        },
-        d = n(75233),
-        g = n(22730),
-        c = n(43424),
-        h = n(19086),
-        f = n(44407),
-        p = n(19866);
-      function m({ queries: e, ...t }, n) {
-        const r = (0, d.jE)(n),
-          s = (0, g.w)(),
-          a = (0, c.h)(),
-          m = o.useMemo(
-            () =>
-              e.map((e) => {
-                const t = r.defaultQueryOptions(e);
-                return (
-                  (t._optimisticResults = s ? "isRestoring" : "optimistic"), t
-                );
-              }),
-            [e, r, s],
-          );
-        m.forEach((e) => {
-          (0, f.jv)(e), (0, h.LJ)(e, a);
-        }),
-          (0, h.wZ)(a);
-        const [v] = o.useState(() => new u(r, m, t)),
-          [b, w, S] = v.getOptimisticResult(m, t.combine);
-        o.useSyncExternalStore(
-          o.useCallback(
-            (e) => (s ? p.l : v.subscribe(i.j.batchCalls(e))),
-            [v, s],
-          ),
-          () => v.getCurrentResult(),
-          () => v.getCurrentResult(),
-        ),
-          o.useEffect(() => {
-            v.setQueries(m, t, { listeners: !1 });
-          }, [m, t, v]);
-        const C = b.some((e, t) => (0, f.EU)(m[t], e))
-          ? b.flatMap((e, t) => {
-              const n = m[t];
-              if (n) {
-                const t = new l.$(r, n);
-                if ((0, f.EU)(n, e)) return (0, f.iL)(n, t, a);
-                (0, f.nE)(e, s) && (0, f.iL)(n, t, a);
-              }
-              return [];
-            })
-          : [];
-        if (C.length > 0) throw Promise.all(C);
-        const R = b.find((e, t) => {
-          const n = m[t];
-          return (
-            n &&
-            (0, h.$1)({
-              result: e,
-              errorResetBoundary: a,
-              throwOnError: n.throwOnError,
-              query: r.getQueryCache().get(n.queryHash),
-            })
-          );
-        });
-        if (R?.error) throw R.error;
-        return w(S());
       }
     },
     92148: (e, t, n) => {
@@ -5272,7 +5047,7 @@
                       }) {
                         const o = e.length - 1,
                           i = (t) => e[t].start,
-                          l = b(0, o, i, n);
+                          l = w(0, o, i, n);
                         let r = l;
                         for (; r < o && e[r].end < n + t; ) r++;
                         return { startIndex: l, endIndex: r };
@@ -5364,7 +5139,7 @@
             (this.getVirtualItemForOffset = (e) => {
               const t = this.getMeasurements();
               if (0 !== t.length)
-                return i(t[b(0, t.length - 1, (e) => i(t[e]).start, e)]);
+                return i(t[w(0, t.length - 1, (e) => i(t[e]).start, e)]);
             }),
             (this.getOffsetForAlignment = (e, t) => {
               const n = this.getSize(),
@@ -5494,7 +5269,7 @@
             this.setOptions(e);
         }
       }
-      const b = (e, t, n, o) => {
+      const w = (e, t, n, o) => {
         for (; e <= t; ) {
           const i = ((e + t) / 2) | 0,
             l = n(i);

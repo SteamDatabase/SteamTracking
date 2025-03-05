@@ -180,6 +180,7 @@
     },
     72978: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         GameTitleContainer: "WHJ_WMTSDKqO4yn_MLrau",
         AppIcon: "_3gwk6hFh7bUc2K174mzjyQ",
         TileTextAppName: "_71phFKOzg8aQlBU1rCA2T",
@@ -605,8 +606,8 @@
                 }),
               );
         }),
-        O = (0, l.y)(M);
-      var x = n(34629),
+        x = (0, l.y)(M);
+      var O = n(34629),
         P = n(14947),
         U = n(65946),
         V = n(31561),
@@ -693,11 +694,11 @@
             }
         }
       }
-      (0, x.Cg)([P.sH], me.prototype, "m_mapNewsCurators", void 0),
-        (0, x.Cg)([P.sH], me.prototype, "m_bIsLoadComplete", void 0),
-        (0, x.Cg)([P.sH], me.prototype, "m_mapLangToNewsCurators", void 0),
-        (0, x.Cg)([P.EW], me.prototype, "allNewsCurators", null),
-        (0, x.Cg)([P.XI], me.prototype, "HandleCuratorResponse", null);
+      (0, O.Cg)([P.sH], me.prototype, "m_mapNewsCurators", void 0),
+        (0, O.Cg)([P.sH], me.prototype, "m_bIsLoadComplete", void 0),
+        (0, O.Cg)([P.sH], me.prototype, "m_mapLangToNewsCurators", void 0),
+        (0, O.Cg)([P.EW], me.prototype, "allNewsCurators", null),
+        (0, O.Cg)([P.XI], me.prototype, "HandleCuratorResponse", null);
       var ue = n(6144),
         de = n(41338),
         pe = n(16345),
@@ -943,7 +944,7 @@
           );
         }
       }
-      (0, x.Cg)([se.oI], Ee.prototype, "UpdateSuggestions", null);
+      (0, O.Cg)([se.oI], Ee.prototype, "UpdateSuggestions", null);
       const ve = (e) =>
         r.createElement(
           "div",
@@ -1287,8 +1288,8 @@
         }
       }
       var Me = n(91941),
-        Oe = n(12088),
-        xe = n.n(Oe);
+        xe = n(12088),
+        Oe = n.n(xe);
       function Pe() {
         return (0, N.vl)(new Date());
       }
@@ -1296,10 +1297,10 @@
           const t = A.TS.PUBLIC_SHARED_URL + "images/";
           return r.createElement(
             "div",
-            { className: xe().LegalFooter },
+            { className: Oe().LegalFooter },
             r.createElement(
               "div",
-              { className: xe().mainmenu_links_china },
+              { className: Oe().mainmenu_links_china },
               r.createElement(
                 "a",
                 { href: A.TS.STORE_BASE_URL + "about" },
@@ -1355,10 +1356,10 @@
                 "家长监护",
               ),
             ),
-            r.createElement("div", { className: xe().mainmenu_line }),
+            r.createElement("div", { className: Oe().mainmenu_line }),
             r.createElement(
               "div",
-              { className: xe().mainmenu_logos_china },
+              { className: Oe().mainmenu_logos_china },
               r.createElement(
                 "a",
                 {
@@ -1367,7 +1368,7 @@
                   rel: "noreferrer",
                 },
                 r.createElement("img", {
-                  className: xe().mainmenu_china_pw_logo,
+                  className: Oe().mainmenu_china_pw_logo,
                   src: t + "footer/pw_logo_gy.svg?v=1",
                 }),
               ),
@@ -1379,24 +1380,24 @@
                   rel: "noreferrer",
                 },
                 r.createElement("img", {
-                  className: xe().mainmenu_china_valve_logo,
+                  className: Oe().mainmenu_china_valve_logo,
                   src: t + "footer/valve_logo_gy.svg?v=1",
                 }),
               ),
             ),
             r.createElement(
               "div",
-              { className: xe().mainmenu_legal_china },
+              { className: Oe().mainmenu_legal_china },
               r.createElement(
                 "div",
-                { className: xe().mainmenu_legal_valvelegal },
+                { className: Oe().mainmenu_legal_valvelegal },
                 `© ${Pe()} Valve Corporation 版权所有，完美世界已获授权`,
                 r.createElement("br", null),
                 "所有商标均属于其在美国或其他国家的拥有者。",
               ),
               r.createElement(
                 "div",
-                { className: xe().mainmenu_legal_pwlegal },
+                { className: Oe().mainmenu_legal_pwlegal },
                 "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                 r.createElement("br", null),
                 "增值电信业务经营许可证沪B2-20180406",
@@ -1407,14 +1408,14 @@
         Ve = (e) =>
           r.createElement(
             "div",
-            { className: xe().LegalFooter },
+            { className: Oe().LegalFooter },
             r.createElement("img", {
               src:
                 A.TS.STORE_CDN_URL + "public/images/footerLogo_valve_new.png",
             }),
             r.createElement(
               "div",
-              { className: xe().FooterLegal },
+              { className: Oe().FooterLegal },
               (0, N.we)("#Legal_Footer_WithYear", Pe()),
             ),
           ),
@@ -1467,7 +1468,7 @@
             : (0, ie.pg)(r.createElement(Ie, null), (0, oe.uX)(e));
         }
       }
-      (0, x.Cg)([P.sH], qe.prototype, "m_curDisplay", void 0);
+      (0, O.Cg)([P.sH], qe.prototype, "m_curDisplay", void 0);
       let Ye = class extends r.Component {
         GetVisibilityStore() {
           return (0, K.v0)().m_visibilityStore;
@@ -1671,7 +1672,7 @@
           );
         }
       };
-      Ye = (0, x.Cg)([m.PA], Ye);
+      Ye = (0, O.Cg)([m.PA], Ye);
       const Ke = (0, re.Ri)(ke().FilterSubSection),
         ze = (0, re.Ri)(ke().FilterSubSectionTitle),
         je = (0, re.Ri)(ke().FilterLink);
@@ -1865,8 +1866,8 @@
           );
         }
       };
-      (0, x.Cg)([se.oI], et.prototype, "OpenFilterSettings", null),
-        (et = (0, x.Cg)([m.PA], et));
+      (0, O.Cg)([se.oI], et.prototype, "OpenFilterSettings", null),
+        (et = (0, O.Cg)([m.PA], et));
       const tt = (0, m.PA)((e) => {
         const { bShouldIncludeLegalFooter: t, bShowUpcoming: n } = e,
           a =
@@ -1952,7 +1953,7 @@
           });
         }
       };
-      nt = (0, x.Cg)([m.PA], nt);
+      nt = (0, O.Cg)([m.PA], nt);
       function at(e, t) {
         const n = (0, j.d)(e);
         if (((0, le.w)(!!n, "Must define collection " + e), !n)) return null;
@@ -2119,8 +2120,8 @@
           );
         }
       };
-      (0, x.Cg)([se.oI], it.prototype, "onExpandSearch", null),
-        (it = (0, x.Cg)([m.PA], it));
+      (0, O.Cg)([se.oI], it.prototype, "onExpandSearch", null),
+        (it = (0, O.Cg)([m.PA], it));
       const ct = (e) => {
         const {
           key: t,
@@ -2206,7 +2207,7 @@
           );
         }
       };
-      mt = (0, x.Cg)([m.PA], mt);
+      mt = (0, O.Cg)([m.PA], mt);
       class ut extends r.Component {
         render() {
           const e = ot(this.props.bIsUpcoming, !1);
@@ -2495,14 +2496,14 @@
           );
         }
       };
-      (0, x.Cg)([se.oI], St.prototype, "OnMuteButton", null),
-        (0, x.Cg)([se.oI], St.prototype, "OnUnMuteButton", null),
-        (0, x.Cg)([se.oI], St.prototype, "HideAllEventsOfMyType", null),
-        (0, x.Cg)([se.oI], St.prototype, "AddContextMenuForSource", null),
-        (0, x.Cg)([se.oI], St.prototype, "GotoGameOrClanHub", null),
-        (0, x.Cg)([se.oI], St.prototype, "ToggleFollowCurator", null),
-        (0, x.Cg)([se.oI], St.prototype, "CreateContextMenu", null),
-        (St = (0, x.Cg)([m.PA], St));
+      (0, O.Cg)([se.oI], St.prototype, "OnMuteButton", null),
+        (0, O.Cg)([se.oI], St.prototype, "OnUnMuteButton", null),
+        (0, O.Cg)([se.oI], St.prototype, "HideAllEventsOfMyType", null),
+        (0, O.Cg)([se.oI], St.prototype, "AddContextMenuForSource", null),
+        (0, O.Cg)([se.oI], St.prototype, "GotoGameOrClanHub", null),
+        (0, O.Cg)([se.oI], St.prototype, "ToggleFollowCurator", null),
+        (0, O.Cg)([se.oI], St.prototype, "CreateContextMenu", null),
+        (St = (0, O.Cg)([m.PA], St));
       const bt = (0, l.y)(St);
       var ft = n(74976),
         It = n(43667),
@@ -2602,16 +2603,16 @@
             ...F,
           );
         let M = N,
-          O = G;
-        M === O && (O = void 0), M === b && (M = void 0);
-        const x = (0, q.j3)(L),
+          x = G;
+        M === x && (x = void 0), M === b && (M = void 0);
+        const O = (0, q.j3)(L),
           P = r.createElement(kt, {
             videoPreview: D,
             calendarEvent: n,
             eventModel: t,
             mode: l,
             artworkType: h,
-            strCapsuleImgURLForBackground: x,
+            strCapsuleImgURLForBackground: O,
             fnSetCoverSize: B,
           }),
           V = a && 14 != v && !(D && "carousel" !== l),
@@ -2635,7 +2636,7 @@
                 bExpandLeft: z,
               }),
             ),
-          Q = Boolean(12 !== v && O),
+          Q = Boolean(12 !== v && x),
           Z = Boolean(
             M &&
               (!Q ||
@@ -2643,7 +2644,7 @@
                   const n = (e) => e.replace(/\W+/g, "").toLocaleLowerCase(),
                     a = n(e);
                   return n(t).startsWith(a);
-                })(M, O)),
+                })(M, x)),
           );
         return r.createElement(
           "div",
@@ -2669,7 +2670,7 @@
                     Ct().TileBackgroundImage,
                     f && Ct().FallbackImage,
                   ),
-                  style: { backgroundImage: `url(${x})` },
+                  style: { backgroundImage: `url(${O})` },
                 }),
               r.createElement(
                 "div",
@@ -2724,7 +2725,7 @@
                             M ? Ct().SubTitleShown : "",
                           ),
                         },
-                        O,
+                        x,
                       ),
                   ),
                   !z && j,
@@ -2879,8 +2880,8 @@
           );
         }
       };
-      (0, x.Cg)([se.oI], Bt.prototype, "OnTitleClick", null),
-        (Bt = (0, x.Cg)([m.PA], Bt));
+      (0, O.Cg)([se.oI], Bt.prototype, "OnTitleClick", null),
+        (Bt = (0, O.Cg)([m.PA], Bt));
       const Lt = (0, l.y)(Bt),
         Dt = (0, m.PA)((e) => {
           const { eventModel: t, calendarEvent: n, className: a } = e,
@@ -3081,15 +3082,15 @@
           );
         }
       };
-      (0, x.Cg)([se.oI], Rt.prototype, "OnPerformVoteUp", null),
-        (0, x.Cg)([se.oI], Rt.prototype, "OnDiscussionClicked", null),
-        (Rt = (0, x.Cg)([m.PA], Rt));
+      (0, O.Cg)([se.oI], Rt.prototype, "OnPerformVoteUp", null),
+        (0, O.Cg)([se.oI], Rt.prototype, "OnDiscussionClicked", null),
+        (Rt = (0, O.Cg)([m.PA], Rt));
       const Mt = {
         include_assets: !0,
         include_release: !0,
         include_screenshots: !0,
       };
-      const Ot = (0, m.PA)((e) => {
+      const xt = (0, m.PA)((e) => {
           const {
               calendarEvent: t,
               partnerEventStore: n,
@@ -3138,7 +3139,7 @@
             ),
           );
         }),
-        xt = (0, m.PA)((e) => {
+        Ot = (0, m.PA)((e) => {
           const { partnerEventStore: t, calendarEvent: n, ...a } = e,
             l = t.GetClanEventModel(n.unique_id),
             o = (function (e, t) {
@@ -3155,7 +3156,7 @@
             s = (0, se.CH)();
           return o
             ? r.createElement(At, { eventModel: l, calendarEvent: n, ...a })
-            : r.createElement(Ot, {
+            : r.createElement(xt, {
                 calendarEvent: n,
                 partnerEventStore: t,
                 ...a,
@@ -3430,7 +3431,7 @@
           );
         }
       };
-      sn = (0, x.Cg)([m.PA], sn);
+      sn = (0, O.Cg)([m.PA], sn);
       let cn = (an = class extends r.Component {
         state = {
           bScreenIsWide: an.IsWideScreen(),
@@ -3464,7 +3465,7 @@
           } = this.props;
           if (!e || 0 == e.length) return null;
           const o = e.map((l) =>
-            r.createElement(xt, {
+            r.createElement(Ot, {
               key: "ht-" + l.unique_id,
               calendarEvent: l,
               partnerEventStore: Z.O3,
@@ -3510,8 +3511,8 @@
           );
         }
       });
-      (0, x.Cg)([se.oI], cn.prototype, "OnResize", null),
-        (cn = an = (0, x.Cg)([m.PA], cn));
+      (0, O.Cg)([se.oI], cn.prototype, "OnResize", null),
+        (cn = an = (0, O.Cg)([m.PA], cn));
       var mn = n(29342),
         un = n.n(mn);
       const dn = (e) => {
@@ -4178,16 +4179,16 @@
           );
         }
       };
-      (0, x.Cg)([se.oI], bn.prototype, "OnResize", null),
-        (0, x.Cg)([se.oI], bn.prototype, "OnScroll", null),
-        (0, x.Cg)([se.oI], bn.prototype, "MobileNavOpenSettings", null),
-        (0, x.Cg)([se.oI], bn.prototype, "ToggleControlBarCollapsed", null),
-        (0, x.Cg)([se.oI], bn.prototype, "OnControlBarChange", null),
-        (0, x.Cg)([se.oI], bn.prototype, "CloseEventModal", null),
-        (0, x.Cg)([se.oI], bn.prototype, "OnEventClicked", null),
-        (0, x.Cg)([se.oI], bn.prototype, "ToggleFutureView", null),
-        (0, x.Cg)([se.oI], bn.prototype, "ResetAllFilters", null),
-        (bn = gn = (0, x.Cg)([m.PA], bn));
+      (0, O.Cg)([se.oI], bn.prototype, "OnResize", null),
+        (0, O.Cg)([se.oI], bn.prototype, "OnScroll", null),
+        (0, O.Cg)([se.oI], bn.prototype, "MobileNavOpenSettings", null),
+        (0, O.Cg)([se.oI], bn.prototype, "ToggleControlBarCollapsed", null),
+        (0, O.Cg)([se.oI], bn.prototype, "OnControlBarChange", null),
+        (0, O.Cg)([se.oI], bn.prototype, "CloseEventModal", null),
+        (0, O.Cg)([se.oI], bn.prototype, "OnEventClicked", null),
+        (0, O.Cg)([se.oI], bn.prototype, "ToggleFutureView", null),
+        (0, O.Cg)([se.oI], bn.prototype, "ResetAllFilters", null),
+        (bn = gn = (0, O.Cg)([m.PA], bn));
       const fn = (0, l.y)(bn);
       function In(e) {
         const t = (0, U.q3)(() => (0, K.v0)()),
@@ -4508,7 +4509,7 @@
           );
         }
       };
-      wn = (0, x.Cg)([m.PA], wn);
+      wn = (0, O.Cg)([m.PA], wn);
       let yn = class extends r.Component {
         render() {
           const e = this.props.rgCalendarItems[0].start_time,
@@ -4531,7 +4532,7 @@
               );
         }
       };
-      yn = (0, x.Cg)([m.PA], yn);
+      yn = (0, O.Cg)([m.PA], yn);
       let Tn = class extends r.Component {
         render() {
           const {
@@ -4556,7 +4557,7 @@
                     "div",
                     { className: ke().HorizontalTiles },
                     e.map((n) =>
-                      r.createElement(xt, {
+                      r.createElement(Ot, {
                         key: "ht-" + n.unique_id,
                         calendarEvent: n,
                         partnerEventStore: Z.O3,
@@ -4578,7 +4579,7 @@
             : null;
         }
       };
-      Tn = (0, x.Cg)([m.PA], Tn);
+      Tn = (0, O.Cg)([m.PA], Tn);
       const Nn = (0, m.PA)((e) => {
         const { calendarItem: t, bSuppressHoverEffects: n } = e,
           a = Z.O3.GetClanEventModel(t.unique_id);
@@ -4734,7 +4735,7 @@
                 r.createElement(
                   "div",
                   { key: i.unique_id, className: ke().CalendarRow },
-                  r.createElement(xt, {
+                  r.createElement(Ot, {
                     calendarEvent: i,
                     partnerEventStore: Z.O3,
                     mode: "wide",
@@ -4837,10 +4838,10 @@
           );
         }
       });
-      (0, x.Cg)([P.sH], An.prototype, "rtSectionStart", void 0),
-        (0, x.Cg)([P.sH], An.prototype, "rtSectionEnd", void 0),
-        (0, x.Cg)([P.EW], An.prototype, "cachedCalendarItems", null),
-        (An = hn = (0, x.Cg)([m.PA], An));
+      (0, O.Cg)([P.sH], An.prototype, "rtSectionStart", void 0),
+        (0, O.Cg)([P.sH], An.prototype, "rtSectionEnd", void 0),
+        (0, O.Cg)([P.EW], An.prototype, "cachedCalendarItems", null),
+        (An = hn = (0, O.Cg)([m.PA], An));
       const kn = (e) => {
           const t = (0, K.v0)().GetTimeEdgeForDirection(
             e.bShowEarliestFirst ? "forward" : "backward",
@@ -4927,7 +4928,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(O, {
+                    r.createElement(x, {
                       key: "detailview_" + e.match.params.event_gid,
                       ...e,
                       appid:
@@ -4945,7 +4946,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(O, {
+                    r.createElement(x, {
                       key: "detailview_" + e.match.params.event_gid,
                       ...e,
                       clansteamid: new o.b(e.match.params.groupid),
@@ -4961,7 +4962,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(O, {
+                    r.createElement(x, {
                       key: "detailoldview_" + e.match.params.announcement_gid,
                       ...e,
                       appid:
@@ -4979,7 +4980,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(O, {
+                    r.createElement(x, {
                       key: "detailoldview_" + e.match.params.announcement_gid,
                       ...e,
                       clansteamid: new o.b(e.match.params.groupid),

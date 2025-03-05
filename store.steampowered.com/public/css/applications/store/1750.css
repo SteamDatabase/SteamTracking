@@ -1056,7 +1056,7 @@ body.ShoppingCart {
   display: flex;
   flex-direction: column;
   position: sticky;
-  top: 10px;
+  top: calc(var(--store-menu-floating-height, 0) + 10px);
   max-width: 280px;
 }
 ._1bCdGv5zX6cYDovFfcBfdg ._2bIzQo07mxubFvscA8RIA8 {

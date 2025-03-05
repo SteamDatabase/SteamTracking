@@ -190,6 +190,7 @@
     47444: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
         left: "S8IHdovT5T2iEVg_97xve",
         carouselBtnCtn: "_3zfZ9tkIrSDZdSTv8mvZ3-",
@@ -246,6 +247,7 @@
     },
     57245: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         DropDownLabelContainer: "uujQHHS-7y4IW6qfxHpe2",
         DropDownLabelIconContainer: "_3H05CHzkfz75-vnlsMa-p5",
         DropDownLabelTextColumn: "_3WTX45MQeZkasb71AEqo7P",
@@ -257,6 +259,7 @@
     28055: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         GamepadDialogContent: "_16sYNwqxz6giarbVaRUl7R",
         GamepadDialogContent_InnerWidth: "_2ywySGDASDCC43aPuicxHt",
         Field: "eKmEXJCm_lgme24Fp_HWt",
@@ -447,11 +450,15 @@
     },
     75060: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "_2sssIwe0duyIrFvat2oXzH",
+        PagedSettingDialog_ContentColumn: "OX7USkJ5dDP_icD00Gal6",
+        PagedSettingsDialog_PageListColumn: "_2kwFFHckg8jvnwJfg9-la8",
+        ResponsivePageList: "_3EyafdwyTAhyVmQ2hEoV6w",
+        ResponsiveActivePage: "Wsp7yZOS_QZMBTFxK-_E1",
         PagedSettingsDialog_PageContent: "CFTLX2wIKOK3hNV-fS7_V",
         NoPadding: "qvR0K8KWLMDelFmwQJ7tr",
-        PagedSettingsDialog_PageListColumn: "_2kwFFHckg8jvnwJfg9-la8",
         Hidden: "_1v7JdHYjstVsVJbHZ3TsVw",
         NewNoteButton: "g8SKUhjLrRLKHWy3wEAzK",
         PagedSettingsDialog_Title: "_2rjVTGz8aLvqOdz5v2gq5C",
@@ -466,6 +473,7 @@
         PageListSeparator: "_1Hye7o1wYIfc9TE9QKRW4T",
         Transparent: "_1ahzMoQaAT-POqYjqcQSCt",
         HidePageListButton: "_3LLH_F43MTu6UtG4Z3kudv",
+        ReturnToPageListButton: "_1cWmu5TUWFAVHlv1EVaF8e",
       };
     },
     27007: (e) => {
@@ -1654,8 +1662,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 91796)),
@@ -1686,8 +1694,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 16856)),
@@ -1718,8 +1726,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 90197)),
@@ -1750,8 +1758,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 65024)),
@@ -1813,8 +1821,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(8523),
           ]).then(r.bind(r, 79)),
@@ -1854,8 +1862,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(7383),
           ]).then(r.bind(r, 38603)),
@@ -1914,8 +1922,8 @@
             r.e(6700),
             r.e(6060),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(5136),
           ]).then(r.bind(r, 16340)),
@@ -6902,6 +6910,7 @@
                     br: i.qM.readFixed64String,
                     bw: i.gp.writeFixed64String,
                   },
+                  is_valveds: { n: 44, br: i.qM.readBool, bw: i.gp.writeBool },
                 },
               }),
             l.sm_m
@@ -11047,6 +11056,11 @@
                     n: 21,
                     br: i.qM.readUint32,
                     bw: i.gp.writeUint32,
+                  },
+                  limited_launch_active: {
+                    n: 22,
+                    br: i.qM.readBool,
+                    bw: i.gp.writeBool,
                   },
                 },
               }),
@@ -23123,9 +23137,13 @@
         let d = null;
         "object" == typeof n[m] && (d = n[m]);
         const p = i.useRef(null),
-          h = i.useCallback(() => p.current?.TakeFocus(), [p]),
+          h = i.useCallback(() => p.current?.TakeFocus() || !1, [p]),
           [g, _] = i.useState(!1),
-          f = i.useCallback(
+          f = g ? h : void 0,
+          b = i.useCallback((e) => {
+            e && _(!0);
+          }, []),
+          w = i.useCallback(
             (e, t) => {
               _(!0),
                 Ve.eZ.PlayNavSound(Ve.PN.PagedNavigation),
@@ -23134,16 +23152,16 @@
             },
             [o, s],
           ),
-          b = i.useRef(null),
-          w = e.showTitle ?? !0,
-          C = (0, u.A)(
+          C = i.useRef(null),
+          S = e.showTitle ?? !0,
+          M = (0, u.A)(
             "DialogContentTransition",
             r.PagedSettingDialog_ContentColumn,
           );
         i.useEffect(() => {
-          e.bAutoFocusPageContent && b.current?.TakeFocus();
+          e.bAutoFocusPageContent && C.current?.TakeFocus();
         }, []);
-        const { refForPageList: S, refForPage: M } = (function () {
+        const { refForPageList: v, refForPage: y } = (function () {
           const e = i.useMemo(() => new Ye(), []);
           i.useEffect(
             () => (
@@ -23190,13 +23208,11 @@
               navRef: p,
               onButtonDown: (e) => {
                 e.detail.button == He.pR.OK &&
-                  b.current?.TakeFocus(e.detail.button);
+                  C.current?.TakeFocus(e.detail.button);
               },
-              onFocusWithin: (e) => {
-                e && _(!0);
-              },
+              onFocusWithin: b,
             },
-            w &&
+            S &&
               i.createElement(
                 "div",
                 { className: r.PagedSettingsDialog_Title },
@@ -23210,18 +23226,18 @@
                   r.PagedSettingsDialog_PageList,
                   e.disablePageListScrolling &&
                     r.PagedSettingsDialog_PageList_DisableScrolling,
-                  w && r.PagedSettingsDialog_PageList_ShowTitle,
+                  S && r.PagedSettingsDialog_PageList_ShowTitle,
                   e.bNoHeaderPadding &&
                     r.PageSettingsDialog_PageList_NoHeaderPadding,
                 ),
                 navEntryPreferPosition: je.iU.PREFERRED_CHILD,
-                ref: S,
+                ref: v,
               },
               i.createElement(Qe, {
                 stylesheet: r,
                 pages: n,
                 iActivePage: m,
-                onPageSelected: f,
+                onPageSelected: w,
                 PageListItemComponent: e.PageListItemComponent,
                 PageListSeparatorComponent: e.PageListSeparatorComponent,
               }),
@@ -23230,15 +23246,15 @@
           ),
           i.createElement(
             a.Z,
-            { className: C, onCancelButton: g ? h : void 0, navRef: b },
+            { className: M, onCancelButton: f, navRef: C },
             e.toggleHideList &&
               i.createElement(nt, {
                 hideList: e.hideList,
                 toggleHideList: e.toggleHideList,
               }),
             e.renderPageContent
-              ? e.renderPageContent(d, M, $e)
-              : i.createElement($e, { ref: M, activePage: d, stylesheet: r }),
+              ? e.renderPageContent(d, y, $e)
+              : i.createElement($e, { ref: y, activePage: d, stylesheet: r }),
           ),
         );
       });
@@ -28409,97 +28425,98 @@
     12155: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $$j: () => ne,
-        $4X: () => ge,
-        $vK: () => xe,
+        $$j: () => ie,
+        $4X: () => _e,
+        $vK: () => Ae,
         Aj0: () => N,
-        BQz: () => Le,
-        Bki: () => ke,
+        BQz: () => xe,
+        Bki: () => Oe,
         CeX: () => R,
         DK4: () => p,
-        DQe: () => Te,
+        DQe: () => De,
         Dp6: () => V,
         FEq: () => ee,
         GB9: () => d,
-        Gkr: () => fe,
-        GrD: () => oe,
+        Gkr: () => be,
+        GrD: () => le,
         IrQ: () => I,
         Jlk: () => y,
         KKS: () => Y,
-        KQV: () => Re,
+        KQV: () => Ie,
         MUh: () => K,
-        MbF: () => Ye,
+        MbF: () => Xe,
         MvQ: () => x,
         N8C: () => J,
-        NCC: () => _e,
-        OSJ: () => je,
+        NCC: () => fe,
+        OSJ: () => Ve,
         P7r: () => Q,
         Q38: () => u,
         Qte: () => P,
         ROZ: () => U,
-        SYj: () => Ce,
-        T4m: () => he,
+        SYj: () => Se,
+        T4m: () => ge,
         V5W: () => A,
         VR: () => Z,
-        VSd: () => We,
-        Vgk: () => Fe,
+        VSd: () => Ue,
+        Vgk: () => Le,
         VnB: () => L,
-        Vt2: () => Ae,
-        WX$: () => Be,
+        Vt2: () => Ne,
+        WX$: () => Ee,
         X: () => b,
         X4B: () => B,
-        XH_: () => Ie,
+        XH_: () => Te,
         XTb: () => _,
         Xjb: () => O,
-        Xz0: () => se,
+        Xz0: () => ae,
         YNO: () => f,
-        ZPc: () => de,
+        ZPc: () => pe,
         ZWw: () => F,
-        ZnA: () => Oe,
-        _VW: () => le,
-        aVR: () => ve,
-        agV: () => Ge,
+        ZnA: () => Fe,
+        _VW: () => ce,
+        aVR: () => ye,
+        agV: () => Ze,
         apU: () => j,
-        bKN: () => Ze,
+        bKN: () => Ke,
         bPr: () => q,
-        bfp: () => ce,
-        ccb: () => ze,
-        dJT: () => te,
+        bfp: () => ue,
+        ccb: () => Pe,
+        dJT: () => re,
         eSy: () => h,
         eTF: () => E,
-        emH: () => Xe,
+        emH: () => Qe,
+        f5X: () => te,
         fSs: () => S,
-        faJ: () => ae,
-        ffu: () => re,
-        g$j: () => Ne,
+        faJ: () => oe,
+        ffu: () => ne,
+        g$j: () => ze,
         hz4: () => k,
         i3G: () => T,
         i6V: () => H,
         jGG: () => M,
-        jIP: () => ye,
-        jZW: () => me,
+        jIP: () => Be,
+        jZW: () => de,
         jZl: () => $,
-        jdP: () => Ve,
-        kPc: () => ie,
-        lRD: () => Se,
-        nm_: () => De,
-        o5Q: () => Me,
-        ofN: () => Ue,
-        oy: () => He,
+        jdP: () => qe,
+        kPc: () => se,
+        lRD: () => Me,
+        nm_: () => ke,
+        o5Q: () => ve,
+        ofN: () => He,
+        oy: () => je,
         qcc: () => X,
-        qnF: () => pe,
-        rNt: () => Pe,
+        qnF: () => he,
+        rNt: () => We,
         rfv: () => G,
-        sDU: () => Ke,
+        sDU: () => Ye,
         sED: () => w,
         tID: () => z,
-        tIO: () => qe,
+        tIO: () => Ge,
         uMb: () => D,
         vRz: () => v,
         wB_: () => m,
-        wVV: () => ue,
+        wVV: () => me,
         xv8: () => C,
-        yCC: () => Ee,
+        yCC: () => Re,
         y_e: () => W,
         zD7: () => g,
       });
@@ -29848,6 +29865,32 @@
         return n.createElement(
           "svg",
           {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Download",
+            viewBox: "0 0 36 36",
+            fill: "none",
+          },
+          n.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M29 23V27H7V23H2V32H34V23H29Z",
+            fill: "currentColor",
+          }),
+          n.createElement(
+            "svg",
+            { x: "0", y: "0", width: "32", height: "25" },
+            n.createElement("path", {
+              className: "DownloadArrow",
+              d: "M20 14.1716L24.5858 9.58578L27.4142 12.4142L18 21.8284L8.58582 12.4142L11.4142 9.58578L16 14.1715V2H20V14.1716Z",
+              fill: "currentColor",
+            }),
+          ),
+        );
+      }
+      function re() {
+        return n.createElement(
+          "svg",
+          {
             version: "1.1",
             id: "Layer_3",
             xmlns: "http://www.w3.org/2000/svg",
@@ -29863,7 +29906,7 @@
           }),
         );
       }
-      function re() {
+      function ne() {
         return n.createElement(
           "svg",
           {
@@ -29901,7 +29944,7 @@
           }),
         );
       }
-      function ne() {
+      function ie() {
         return n.createElement(
           "svg",
           {
@@ -29937,7 +29980,7 @@
           }),
         );
       }
-      function ie(e) {
+      function se(e) {
         return n.createElement(
           "svg",
           {
@@ -29960,7 +30003,7 @@
           }),
         );
       }
-      function se() {
+      function ae() {
         return n.createElement(
           "svg",
           {
@@ -30000,7 +30043,7 @@
           }),
         );
       }
-      function ae() {
+      function oe() {
         return n.createElement(
           "svg",
           {
@@ -30016,7 +30059,7 @@
           n.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
         );
       }
-      function oe() {
+      function le() {
         return n.createElement(
           "svg",
           {
@@ -30035,7 +30078,7 @@
           }),
         );
       }
-      function le() {
+      function ce() {
         return n.createElement(
           "svg",
           {
@@ -30058,7 +30101,7 @@
           }),
         );
       }
-      function ce(e) {
+      function ue(e) {
         return n.createElement(
           "svg",
           {
@@ -30077,7 +30120,7 @@
           }),
         );
       }
-      function ue(e) {
+      function me(e) {
         return n.createElement(
           "svg",
           { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -30104,7 +30147,7 @@
           }),
         );
       }
-      function me(e) {
+      function de(e) {
         return n.createElement(
           "svg",
           {
@@ -30121,7 +30164,7 @@
           }),
         );
       }
-      function de() {
+      function pe() {
         return n.createElement(
           "svg",
           {
@@ -30152,7 +30195,7 @@
           ),
         );
       }
-      function pe(e) {
+      function he(e) {
         return n.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -30166,7 +30209,7 @@
           }),
         );
       }
-      function he(e) {
+      function ge(e) {
         return n.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -30180,7 +30223,7 @@
           }),
         );
       }
-      function ge() {
+      function _e() {
         return n.createElement(
           "svg",
           {
@@ -30198,7 +30241,7 @@
           }),
         );
       }
-      function _e() {
+      function fe() {
         return n.createElement(
           "svg",
           {
@@ -30220,7 +30263,7 @@
           ),
         );
       }
-      function fe() {
+      function be() {
         return n.createElement(
           "svg",
           {
@@ -30258,7 +30301,7 @@
           ),
         );
       }
-      function be(e) {
+      function we(e) {
         return n.createElement(
           "svg",
           {
@@ -30277,7 +30320,7 @@
           }),
         );
       }
-      function we(e) {
+      function Ce(e) {
         return n.createElement(
           "svg",
           {
@@ -30297,12 +30340,12 @@
           }),
         );
       }
-      function Ce(e) {
-        return (0, c.Ae)()
-          ? n.createElement(we, { ...e })
-          : n.createElement(be, { ...e });
-      }
       function Se(e) {
+        return (0, c.Ae)()
+          ? n.createElement(Ce, { ...e })
+          : n.createElement(we, { ...e });
+      }
+      function Me(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30322,7 +30365,7 @@
           }),
         );
       }
-      function Me(e) {
+      function ve(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30345,7 +30388,7 @@
           }),
         );
       }
-      function ve(e) {
+      function ye(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30368,7 +30411,7 @@
           }),
         );
       }
-      function ye(e) {
+      function Be(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30391,7 +30434,7 @@
           }),
         );
       }
-      function Be(e) {
+      function Ee(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30414,7 +30457,7 @@
           }),
         );
       }
-      function Ee(e) {
+      function Re(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30443,7 +30486,7 @@
           }),
         );
       }
-      function Re(e) {
+      function Ie(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30476,7 +30519,7 @@
           }),
         );
       }
-      function Ie(e) {
+      function Te(e) {
         return n.createElement(
           "svg",
           {
@@ -30495,7 +30538,7 @@
           }),
         );
       }
-      function Te(e) {
+      function De(e) {
         const { className: t } = e;
         return n.createElement(
           "svg",
@@ -30513,7 +30556,7 @@
           }),
         );
       }
-      function De(e) {
+      function ke(e) {
         return n.createElement(
           "svg",
           {
@@ -30527,7 +30570,7 @@
           }),
         );
       }
-      function ke(e) {
+      function Oe(e) {
         return n.createElement(
           "svg",
           {
@@ -30541,7 +30584,7 @@
           }),
         );
       }
-      function Oe(e) {
+      function Fe(e) {
         return n.createElement(
           "svg",
           {
@@ -30555,7 +30598,7 @@
           }),
         );
       }
-      function Fe(e) {
+      function Le(e) {
         return n.createElement(
           "svg",
           {
@@ -30569,7 +30612,7 @@
           }),
         );
       }
-      function Le(e) {
+      function xe(e) {
         return n.createElement(
           "svg",
           {
@@ -30583,7 +30626,7 @@
           }),
         );
       }
-      function xe(e) {
+      function Ae(e) {
         return n.createElement(
           "svg",
           {
@@ -30597,7 +30640,7 @@
           }),
         );
       }
-      function Ae(e) {
+      function Ne(e) {
         return n.createElement(
           "svg",
           {
@@ -30611,7 +30654,7 @@
           }),
         );
       }
-      function Ne(e) {
+      function ze(e) {
         return n.createElement(
           "svg",
           {
@@ -30625,7 +30668,7 @@
           }),
         );
       }
-      function ze(e) {
+      function Pe(e) {
         return n.createElement(
           "svg",
           {
@@ -30645,7 +30688,7 @@
           }),
         );
       }
-      function Pe(e) {
+      function We(e) {
         return n.createElement(
           "svg",
           {
@@ -30659,7 +30702,7 @@
           }),
         );
       }
-      function We(e) {
+      function Ue(e) {
         return n.createElement(
           "svg",
           {
@@ -30673,7 +30716,7 @@
           }),
         );
       }
-      function Ue(e) {
+      function He(e) {
         return n.createElement(
           "svg",
           {
@@ -30699,7 +30742,7 @@
           }),
         );
       }
-      function He(e) {
+      function je(e) {
         return n.createElement(
           "svg",
           {
@@ -30713,7 +30756,7 @@
           }),
         );
       }
-      function je(e) {
+      function Ve(e) {
         return n.createElement(
           "svg",
           {
@@ -30727,7 +30770,7 @@
           }),
         );
       }
-      function Ve(e) {
+      function qe(e) {
         return n.createElement(
           "svg",
           {
@@ -30744,7 +30787,7 @@
           }),
         );
       }
-      function qe(e) {
+      function Ge(e) {
         return n.createElement(
           "svg",
           {
@@ -30758,7 +30801,7 @@
           }),
         );
       }
-      function Ge(e) {
+      function Ze(e) {
         return n.createElement(
           "svg",
           {
@@ -30772,7 +30815,7 @@
           }),
         );
       }
-      function Ze(e) {
+      function Ke(e) {
         return n.createElement(
           "svg",
           {
@@ -30786,7 +30829,7 @@
           }),
         );
       }
-      function Ke(e) {
+      function Ye(e) {
         return n.createElement(
           "svg",
           {
@@ -30800,7 +30843,7 @@
           }),
         );
       }
-      function Ye(e) {
+      function Xe(e) {
         return n.createElement(
           "svg",
           {
@@ -30814,7 +30857,7 @@
           }),
         );
       }
-      function Xe(e) {
+      function Qe(e) {
         return n.createElement(
           "svg",
           {
@@ -32229,11 +32272,11 @@
       }
       function p(e) {
         const t = e.ownerDocument;
-        return (
+        return Boolean(
           t.fullscreen ||
-          t.webkitIsFullScreen ||
-          t.mozFullScreen ||
-          t.msFullscreenElement
+            t.webkitIsFullScreen ||
+            t.mozFullScreen ||
+            t.msFullscreenElement,
         );
       }
       function h(e, t) {

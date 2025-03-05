@@ -628,6 +628,7 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   color: #fff;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 0 16px;
 }
 .BasicUI ._2WMiQ5MbP_ReyaX5DOpoUD {
   font: var(--gpText-HeadingSmall);
@@ -2675,8 +2676,6 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   }
   ._2sssIwe0duyIrFvat2oXzH .OX7USkJ5dDP_icD00Gal6,
   ._2sssIwe0duyIrFvat2oXzH ._2kwFFHckg8jvnwJfg9-la8 {
-    position: relative;
-    z-index: 0;
     min-width: 0;
   }
   ._2sssIwe0duyIrFvat2oXzH._3EyafdwyTAhyVmQ2hEoV6w .OX7USkJ5dDP_icD00Gal6,
@@ -2758,6 +2757,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 }
 ._2kwFFHckg8jvnwJfg9-la8._1v7JdHYjstVsVJbHZ3TsVw {
   display: none;
+}
+@media screen and (max-width: 500px) {
+  ._3EyafdwyTAhyVmQ2hEoV6w ._2kwFFHckg8jvnwJfg9-la8._1v7JdHYjstVsVJbHZ3TsVw {
+    display: flex;
+  }
 }
 ._2kwFFHckg8jvnwJfg9-la8.DesktopUI,
 .DesktopUI ._2kwFFHckg8jvnwJfg9-la8 {

@@ -734,12 +734,12 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 	fd.append( 'sessionid', g_sessionID );
 	var strPostURL = '';
 	var strRedirectURL = '';
-	if ( type == 'Package' )
+	if ( type === 'Package' )
 	{
 		strPostURL = 'https://partner.steamgames.com/admin/store/packagesave/' + itemID + '?activetab=tab_graphicalassets&json=1';
 		strRedirectURL = 'https://partner.steamgames.com/admin/store/package/' + itemID + '?activetab=tab_graphicalassets';
 	}
-	else if ( type == 'Bundle' )
+	else if ( type === 'Bundle' )
 	{
 		strPostURL = 'https://partner.steamgames.com/bundles/savestore/' + itemID + '?activetab=tab_graphicalassets&json=1';
 		strRedirectURL = 'https://partner.steamgames.com/bundles/view/' + itemID + '?activetab=tab_graphicalassets';
@@ -779,21 +779,28 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		type: 'POST',
 		complete: function( response )
 		{
-			var redirectUrl = strRedirectURL;
+			let redirectURL = new URL( strRedirectURL );
+			let urlSearchParams = new URLSearchParams( window.location.search );
+			const subTab = urlSearchParams.get( "subtab" );
 			if ( response.responseText )
 			{
 				try
 				{
 					var json = jQuery.parseJSON( response.responseText );
 					if ( json.redirect )
-						redirectUrl = json.redirect;
+					{
+						redirectURL.set( json.redirect );
+					}
 				}
 				catch(err)
 				{
 				}
 			}
 
-			document.location = redirectUrl;
+			if ( subTab )
+				redirectURL.searchParams.set( "subtab", subTab );
+
+			document.location = redirectURL;
 		}
 	});
 

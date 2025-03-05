@@ -6,6 +6,7 @@
   {
     1990: (t) => {
       t.exports = {
+        narrowWidth: "500px",
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",

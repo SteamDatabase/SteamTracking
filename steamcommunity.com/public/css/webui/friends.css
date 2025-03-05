@@ -2369,6 +2369,7 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   color: #fff;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 0 16px;
 }
 .BasicUI .partnereventshared_SaleSectionHeader_2WMiQ {
   font: var(--gpText-HeadingSmall);
@@ -2768,8 +2769,6 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
     .pagedsettings_PagedSettingDialog_ContentColumn_OX7US,
   .pagedsettings_PagedSettingsDialog_2sssI
     .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
-    position: relative;
-    z-index: 0;
     min-width: 0;
   }
   .pagedsettings_PagedSettingsDialog_2sssI.pagedsettings_ResponsivePageList_3Eyaf
@@ -2857,6 +2856,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF.pagedsettings_Hidden_1v7Jd {
   display: none;
+}
+@media screen and (max-width: 500px) {
+  .pagedsettings_ResponsivePageList_3Eyaf
+    .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF.pagedsettings_Hidden_1v7Jd {
+    display: flex;
+  }
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {

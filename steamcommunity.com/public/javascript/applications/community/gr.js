@@ -6860,7 +6860,7 @@
             positionAbsolute: r = !0,
             refVideoResize: n,
             style: a,
-            refFullscreen: s,
+            fullscreen: s,
           } = e,
           l = Bt(),
           o =
@@ -6937,7 +6937,7 @@
             onContextMenu: M,
             style: a,
             onDoubleClick: function () {
-              d && s.current && (0, mr.Vr)(s.current);
+              d && s && s.fnToggleFullscreen();
             },
           },
           i.createElement("video", {

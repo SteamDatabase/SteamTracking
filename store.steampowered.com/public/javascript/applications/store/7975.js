@@ -63,6 +63,7 @@
     },
     18714: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         MainCarousel: "_3SWsMT4_EVVsmPbanjlEy4",
         FeatureCtn: "_10K5p_DOyGW-WttCA1UwuC",
@@ -102,6 +103,7 @@
     33924: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
@@ -372,20 +374,20 @@
           const G = !a.is_ingame && !N,
             R = !S && H,
             F = k && (!A || !R),
-            L = (0, s.ID)(B.TS.LAUNCHER_TYPE);
-          let K = p && !m,
-            U = K ? p : a.m_strPlayerName,
-            W = !b && (F || G) && R;
+            W = (0, s.ID)(B.TS.LAUNCHER_TYPE);
+          let L = p && !m,
+            K = L ? p : a.m_strPlayerName,
+            U = !b && (F || G) && R;
           return r.createElement(
             "div",
             { ...y, className: (0, c.A)(...Q), onContextMenu: t },
             r.createElement(
               "div",
-              { className: (0, c.A)(h().statusAndName, W && h().threeLines) },
+              { className: (0, c.A)(h().statusAndName, U && h().threeLines) },
               r.createElement(
                 "div",
                 { className: h().playerName },
-                U || " ",
+                K || " ",
                 m &&
                   p &&
                   r.createElement(
@@ -405,7 +407,7 @@
                   },
                   r.createElement(d.Aj0, null),
                 ),
-              K &&
+              L &&
                 r.createElement(
                   "span",
                   {
@@ -417,7 +419,7 @@
               r.createElement(g, { persona: a }),
               w,
               (a.m_bPlayerNamePending || a.m_bAvatarPending) &&
-                L &&
+                W &&
                 r.createElement(
                   "div",
                   {
@@ -438,7 +440,7 @@
                     {
                       className: (0, c.A)(
                         h().gameName,
-                        W && h().threeLines,
+                        U && h().threeLines,
                         h().richPresenceLabel,
                         "no-drag",
                       ),
@@ -889,7 +891,7 @@
       const N = (e) => {
         const { discountBlock: t, bIsSalePage: a } = e;
         if (!t) return null;
-        const r = e.discountBlock.hide_discount_percent_for_compliance && !0;
+        const r = e.discountBlock.hide_discount_percent_for_compliance;
         return a
           ? null == t.discount_max || t.discount_max <= 0
             ? null
@@ -1064,7 +1066,7 @@
             return Boolean(t) && r.createElement("span", null, t);
         }
         const t = "reservation" == e.display_style,
-          a = e.bHideDiscountPercentForCompliance && !0,
+          a = e.bHideDiscountPercentForCompliance,
           i = "bbcode_price" == e.className;
         return r.createElement(
           "span",

@@ -1520,6 +1520,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(7055),
             r.e(8026),
             r.e(5082),
@@ -1548,6 +1549,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(7055),
             r.e(8026),
             r.e(5082),
@@ -1577,6 +1579,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(7055),
             r.e(8026),
             r.e(5082),
@@ -1614,6 +1617,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(7055),
             r.e(466),
             r.e(1023),
@@ -1648,6 +1652,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(7055),
             r.e(1551),
             r.e(466),
@@ -1672,6 +1677,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(7055),
             r.e(466),
             r.e(1023),
@@ -1715,6 +1721,7 @@
           Promise.all([
             r.e(9617),
             r.e(7872),
+            r.e(2156),
             r.e(466),
             r.e(1023),
             r.e(6635),
@@ -1724,7 +1731,7 @@
             r.e(4558),
             r.e(9870),
             r.e(5876),
-          ]).then(r.bind(r, 6825)),
+          ]).then(r.bind(r, 2901)),
         ),
         te = n.lazy(() =>
           Promise.all([r.e(466), r.e(349)]).then(r.bind(r, 85215)),
@@ -1800,6 +1807,8 @@
             `${oe.ProfileVanity(e)}/notifications`,
           ProfileSteamIDNotifications: (e) =>
             `${oe.ProfileSteamID(e)}/notifications`,
+          Market: () => "/market",
+          MarketSearch: () => "/market/search",
           ...{},
           CommunityHomeRoot: () => "/",
         };
@@ -1989,6 +1998,7 @@
                     path: oe.ConferenceApp(),
                     component: $,
                   }),
+                  !1,
                   !1,
                   n.createElement(a.qh, {
                     path: oe.CommunityHomeRoot(),
@@ -7182,6 +7192,7 @@
                     br: n.qM.readFixed64String,
                     bw: n.gp.writeFixed64String,
                   },
+                  is_valveds: { n: 44, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             l.sm_m
@@ -20240,6 +20251,11 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
+                  limited_launch_active: {
+                    n: 22,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
                 },
               }),
             B.sm_m
@@ -32758,6 +32774,12 @@
                     ? void 0
                     : t.custom_release_date_message))
           );
+        }
+        BLimitedLaunchActive() {
+          var e;
+          return null === (e = this.m_ReleaseInfo) || void 0 === e
+            ? void 0
+            : e.limited_launch_active;
         }
         BIsPrePurchase() {
           var e;
@@ -48788,11 +48810,11 @@
       }
       function p(e) {
         const t = e.ownerDocument;
-        return (
+        return Boolean(
           t.fullscreen ||
-          t.webkitIsFullScreen ||
-          t.mozFullScreen ||
-          t.msFullscreenElement
+            t.webkitIsFullScreen ||
+            t.mozFullScreen ||
+            t.msFullscreenElement,
         );
       }
       function h(e, t) {
@@ -48818,38 +48840,34 @@
               : t.msExitFullscreen && t.msExitFullscreen();
       }
       function _(e) {
-        p(e) ? g(e) : h(e);
-      }
-      function f(e) {
         "loading" == document.readyState
           ? document.addEventListener("DOMContentLoaded", e)
           : e();
       }
       r.d(t, {
-        A2: () => B,
-        Kf: () => w,
+        A2: () => w,
+        Kf: () => b,
         MS: () => g,
-        Mr: () => S,
+        Mr: () => M,
         NO: () => n,
         OG: () => m,
-        Oe: () => v,
-        Vr: () => _,
+        Oe: () => y,
         YQ: () => d,
         a_: () => l,
         bZ: () => a,
         id: () => s,
         kD: () => i,
-        lc: () => M,
-        oQ: () => f,
-        pE: () => b,
+        lc: () => v,
+        oQ: () => _,
+        pE: () => f,
         pd: () => o,
         qf: () => u,
         tl: () => h,
         uX: () => c,
         ww: () => p,
-        yU: () => y,
+        yU: () => B,
       });
-      function b(e, t) {
+      function f(e, t) {
         const r = e;
         return (
           (r.lastModifiedDate = new Date()),
@@ -48857,14 +48875,14 @@
           e
         );
       }
-      function w(e, t) {
+      function b(e, t) {
         let r = e;
         for (; r; ) {
           if (t(r)) return r;
           r = r.parentElement;
         }
       }
-      async function B(e, t) {
+      async function w(e, t) {
         let r;
         const i = new Promise((i) => {
             (r = i), e.addEventListener(t, i);
@@ -48872,7 +48890,7 @@
           n = await i;
         return e.removeEventListener(t, r), n;
       }
-      function y() {
+      function B() {
         return (function (e) {
           const t = {};
           return (
@@ -48883,10 +48901,10 @@
           );
         })(document);
       }
-      function v(e, t) {
-        M(e.document, t, !0);
+      function y(e, t) {
+        v(e.document, t, !0);
       }
-      function M(e, t, r) {
+      function v(e, t, r) {
         var i;
         const n = Object.assign({}, t),
           s = e.getElementsByTagName("head")[0],
@@ -48911,7 +48929,7 @@
         }
         return s.prepend(...l), l;
       }
-      function S(e, t, r) {
+      function M(e, t, r) {
         if ("childList" === e.type) {
           for (let r = 0; r < e.addedNodes.length; r++) {
             const i = e.addedNodes[r];
@@ -49451,11 +49469,11 @@
           p)
         );
       }
-      function _(e, t, r) {
+      function _(e, t, r, i) {
         return (
           M(new Date(1e3 * e), !1, !1) +
           " " +
-          p(e, { bForce24HourClock: t }) +
+          p(e, { bForce24HourClock: t }, { timeZone: i }) +
           " " +
           r
         );

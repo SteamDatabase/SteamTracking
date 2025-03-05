@@ -80,6 +80,7 @@
         NewIndicator: "-B93GaGXJf0lPTNh66m4i",
         ShortTemplate: "fntOoeLPSTpmyXGGmgf99",
         TwoLine: "P1FhGdWv2NCXZXWsaKqqY",
+        FullWidth: "_6EcDVXFHtdirTkETQjKOK",
         BackgroundAnimation: "_3w9sEc9GApj44Kg099SX99",
         "ItemFocusAnim-darkerGrey-nocolor": "_3zMKq0Ov9QZXkvzuZaEgKn",
         "ItemFocusAnim-darkGrey": "_1bS3_eEfJQL1uvh9ueXwHc",
@@ -12647,8 +12648,9 @@
             personaStatus: l,
             className: c,
             singleLineOnly: m,
+            fullWidth: u,
           } = e,
-          u = (function (e, t) {
+          d = (function (e, t) {
             return a.useCallback(
               (r) => {
                 e && e(r), t && t();
@@ -12660,7 +12662,7 @@
           ln.Z,
           {
             className: (0, Wi.A)(vn().ShortTemplate, !m && vn().TwoLine, c),
-            onActivate: u,
+            onActivate: d,
             onMouseDown: (e) => {
               1 == e.button && r && r();
             },
@@ -12672,7 +12674,7 @@
             }),
           a.createElement(
             "div",
-            { className: vn().Content },
+            { className: (0, Wi.A)(vn().Content, u && vn().FullWidth) },
             a.createElement(
               "div",
               { className: vn().Header },

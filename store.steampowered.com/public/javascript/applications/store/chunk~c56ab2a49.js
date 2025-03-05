@@ -5,7 +5,7 @@
   [2837],
   {
     30756: (e, t, r) => {
-      r.d(t, { g: () => Rt });
+      r.d(t, { g: () => vt });
       var i = r(41735),
         n = r.n(i),
         a = r(65946),
@@ -1835,20 +1835,20 @@
           return "CPromotionNotificationResults";
         }
       }
-      class K extends g {
+      class V extends g {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            K.prototype.promotion_id || B.Sg(K.M()),
+            V.prototype.promotion_id || B.Sg(V.M()),
             g.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            K.sm_m ||
-              (K.sm_m = {
-                proto: K,
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
                 fields: {
                   promotion_id: {
                     n: 1,
@@ -1862,57 +1862,20 @@
                   },
                 },
               }),
-            K.sm_m
+            V.sm_m
           );
         }
         static MBF() {
-          return K.sm_mbf || (K.sm_mbf = B.w0(K.M())), K.sm_mbf;
-        }
-        toObject(e = !1) {
-          return K.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(K.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(K.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new d.BinaryReader(e),
-            r = new K();
-          return K.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(K.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new d.BinaryWriter();
-          return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(K.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new d.BinaryWriter();
-          return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_ResendNotification_Request";
-        }
-      }
-      class V extends g {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), g.initialize(this, e, 0, -1, void 0, null);
+          return V.sm_mbf || (V.sm_mbf = B.w0(V.M())), V.sm_mbf;
         }
         toObject(e = !1) {
           return V.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return B.BT(V.M(), e, t);
         }
         static fromObject(e) {
-          return new V();
+          return B.Uq(V.M(), e);
         }
         static deserializeBinary(e) {
           let t = new d.BinaryReader(e),
@@ -1920,16 +1883,53 @@
           return V.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return B.zj(V.MBF(), e, t);
         }
         serializeBinary() {
           var e = new d.BinaryWriter();
           return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          B.i0(V.M(), e, t);
+        }
         serializeBase64String() {
           var e = new d.BinaryWriter();
           return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_ResendNotification_Request";
+        }
+      }
+      class K extends g {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), g.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return K.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new K();
+        }
+        static deserializeBinary(e) {
+          let t = new d.BinaryReader(e),
+            r = new K();
+          return K.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new d.BinaryWriter();
+          return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new d.BinaryWriter();
+          return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPromotionPlanning_ResendNotification_Response";
@@ -2036,20 +2036,20 @@
           return "CPromotionPlanning_SetPromotionEmailTarget_Response";
         }
       }
-      class Q extends g {
+      class X extends g {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Q.prototype.clan_account_id || B.Sg(Q.M()),
+            X.prototype.clan_account_id || B.Sg(X.M()),
             g.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Q.sm_m ||
-              (Q.sm_m = {
-                proto: Q,
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
                 fields: {
                   clan_account_id: {
                     n: 1,
@@ -2098,91 +2098,6 @@
                   },
                 },
               }),
-            Q.sm_m
-          );
-        }
-        static MBF() {
-          return Q.sm_mbf || (Q.sm_mbf = B.w0(Q.M())), Q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Q.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(Q.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(Q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new d.BinaryReader(e),
-            r = new Q();
-          return Q.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(Q.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new d.BinaryWriter();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(Q.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new d.BinaryWriter();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlan_CreateSalePageForPromo_Request";
-        }
-      }
-      class X extends g {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            X.prototype.clan_account_id || B.Sg(X.M()),
-            g.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: {
-                  clan_account_id: {
-                    n: 1,
-                    br: B.qM.readUint32,
-                    bw: B.gp.writeUint32,
-                  },
-                  clan_event_gid: {
-                    n: 2,
-                    br: B.qM.readFixed64String,
-                    bw: B.gp.writeFixed64String,
-                  },
-                  daily_deal_gid: {
-                    n: 3,
-                    br: B.qM.readFixed64String,
-                    bw: B.gp.writeFixed64String,
-                  },
-                  promotion_gid: {
-                    n: 4,
-                    br: B.qM.readFixed64String,
-                    bw: B.gp.writeFixed64String,
-                  },
-                  asset_request_gid: {
-                    n: 5,
-                    br: B.qM.readFixed64String,
-                    bw: B.gp.writeFixed64String,
-                  },
-                  advertising_appid: {
-                    n: 6,
-                    br: B.qM.readUint32,
-                    bw: B.gp.writeUint32,
-                  },
-                },
-              }),
             X.sm_m
           );
         }
@@ -2216,6 +2131,91 @@
         serializeBase64String() {
           var e = new d.BinaryWriter();
           return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlan_CreateSalePageForPromo_Request";
+        }
+      }
+      class Q extends g {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Q.prototype.clan_account_id || B.Sg(Q.M()),
+            g.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Q.sm_m ||
+              (Q.sm_m = {
+                proto: Q,
+                fields: {
+                  clan_account_id: {
+                    n: 1,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
+                  clan_event_gid: {
+                    n: 2,
+                    br: B.qM.readFixed64String,
+                    bw: B.gp.writeFixed64String,
+                  },
+                  daily_deal_gid: {
+                    n: 3,
+                    br: B.qM.readFixed64String,
+                    bw: B.gp.writeFixed64String,
+                  },
+                  promotion_gid: {
+                    n: 4,
+                    br: B.qM.readFixed64String,
+                    bw: B.gp.writeFixed64String,
+                  },
+                  asset_request_gid: {
+                    n: 5,
+                    br: B.qM.readFixed64String,
+                    bw: B.gp.writeFixed64String,
+                  },
+                  advertising_appid: {
+                    n: 6,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
+                },
+              }),
+            Q.sm_m
+          );
+        }
+        static MBF() {
+          return Q.sm_mbf || (Q.sm_mbf = B.w0(Q.M())), Q.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Q.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.BT(Q.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.Uq(Q.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new d.BinaryReader(e),
+            r = new Q();
+          return Q.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.zj(Q.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new d.BinaryWriter();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.i0(Q.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new d.BinaryWriter();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPromotionPlan_CreateSalePageForPromo_Response";
@@ -5133,8 +5133,8 @@
           (e.ResendNotification = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.ResendNotification#1",
-              (0, u.I8)(K, t),
-              V,
+              (0, u.I8)(V, t),
+              K,
               { ePrivilege: 1 },
             );
           }),
@@ -5165,8 +5165,8 @@
           (e.CreateSalePageForPromo = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.CreateSalePageForPromo#1",
-              (0, u.I8)(Q, t),
-              X,
+              (0, u.I8)(X, t),
+              Q,
               { ePrivilege: 1 },
             );
           }),
@@ -5307,12 +5307,12 @@
           enabled: Boolean(r),
         }).data;
       }
-      var Ke = r(60746),
-        Ve = r(12443),
+      var Ve = r(60746),
+        Ke = r(12443),
         $e = r(33737),
         Ye = r(84811),
-        Qe = r(34629),
-        Xe = r(51706),
+        Xe = r(34629),
+        Qe = r(51706),
         Je = r(61859),
         Ze = r(73745),
         et = r(56330),
@@ -5498,7 +5498,7 @@
                   });
           }
           return s.createElement(
-            Xe.o0,
+            Qe.o0,
             {
               strTitle: (0, Je.we)("#EventDisplay_DeleteEvent"),
               strDescription: r,
@@ -5512,23 +5512,23 @@
           );
         }
       }
-      (0, Qe.Cg)([Ze.oI], ot.prototype, "OnDeleteEventSuccessCallback", null),
-        (0, Qe.Cg)(
+      (0, Xe.Cg)([Ze.oI], ot.prototype, "OnDeleteEventSuccessCallback", null),
+        (0, Xe.Cg)(
           [Ze.oI],
           ot.prototype,
           "OnDeleteForumTopicSuccessCallback",
           null,
         ),
-        (0, Qe.Cg)([Ze.oI], ot.prototype, "OnDeleteEventFailureCallback", null),
-        (0, Qe.Cg)(
+        (0, Xe.Cg)([Ze.oI], ot.prototype, "OnDeleteEventFailureCallback", null),
+        (0, Xe.Cg)(
           [Ze.oI],
           ot.prototype,
           "OnDeleteForumTopicFailureCallback",
           null,
         ),
-        (0, Qe.Cg)([Ze.oI], ot.prototype, "SetToWaiting", null),
-        (0, Qe.Cg)([Ze.oI], ot.prototype, "OnDelete", null),
-        (0, Qe.Cg)([Ze.oI], ot.prototype, "OnChangeDeleteForum", null);
+        (0, Xe.Cg)([Ze.oI], ot.prototype, "SetToWaiting", null),
+        (0, Xe.Cg)([Ze.oI], ot.prototype, "OnDelete", null),
+        (0, Xe.Cg)([Ze.oI], ot.prototype, "OnChangeDeleteForum", null);
       var lt = r(75113),
         mt = r(96971),
         ct = r(95695),
@@ -5537,7 +5537,7 @@
         Bt = r(56011);
       function gt(e, t) {
         if (!e || !e.BIsClanAccount()) return !1;
-        const r = Ke.KN.Get().GetPartnerEventPermissions(e);
+        const r = Ve.KN.Get().GetPartnerEventPermissions(e);
         return !!r && (t ? r.valve_admin : r.valve_admin || r.support_user);
       }
       var _t = r(14947),
@@ -5614,7 +5614,7 @@
               className: (0, dt.A)(ct.Button, wt.AdminButton),
               onClick: (e) => {
                 (0, ut.pg)(
-                  s.createElement(Xe.o0, {
+                  s.createElement(Qe.o0, {
                     strTitle: (0, Je.we)("#Dialog_AreYouSure"),
                     strDescription:
                       "Reload page after you hit OK; will not grant virtual reward items a second itme",
@@ -5700,8 +5700,10 @@
           }),
         );
       }
-      var St = r(95034);
-      function Rt(e) {
+      var St = r(95034),
+        Rt = r(12155),
+        ht = r(32754);
+      function vt(e) {
         const {
             eventModel: t,
             partnerEventStore: r,
@@ -5738,8 +5740,10 @@
             t.GID,
             t.clanSteamID.GetAccountID(),
           ]),
-          w = (0, Ke.Ec)(y),
-          M = (e) => {
+          w = (0, Ve.Ec)(y),
+          [M, f] = s.useState(!0),
+          { bVisible: z, ref: S } = (0, Ze.hd)(),
+          R = (e) => {
             (0, ut.pg)(
               s.createElement(ot, {
                 eventModel: t,
@@ -5750,8 +5754,8 @@
             );
           };
         if (c) return (0, lt.OG)(t, lt.PH.k_eCommunityAdminPage);
-        const f = _ == o.zv.k_EEventStateVisible,
-          z = _ == o.zv.k_EEventStateStaged;
+        const h = _ == o.zv.k_EEventStateVisible,
+          v = _ == o.zv.k_EEventStateStaged;
         if ((w.can_edit || w.support_user) && !l) {
           const e = [];
           if (void 0 !== d)
@@ -5773,6 +5777,7 @@
                 className: (0, dt.A)({
                   [wt.DisplayAdminPanel]: !0,
                   [wt.Locked]: l,
+                  [wt.Sticky]: M,
                 }),
               },
               s.createElement(
@@ -5802,10 +5807,10 @@
                 Boolean(r && "community" == (0, nt.yK)()) &&
                   s.createElement(
                     "span",
-                    { className: ct.Button + " " + wt.AdminButton, onClick: M },
+                    { className: ct.Button + " " + wt.AdminButton, onClick: R },
                     (0, Je.we)("#EventDisplay_DeleteEvent"),
                   ),
-                !f &&
+                !h &&
                   s.createElement(
                     s.Fragment,
                     null,
@@ -5817,7 +5822,7 @@
                         className: (0, dt.A)(ct.Button, wt.AdminButton),
                       },
                       (0, Je.we)(
-                        z
+                        v
                           ? "#EventEditor_Publish_VisibleNow"
                           : "#Button_Publish",
                       ),
@@ -5892,7 +5897,7 @@
                     (0, Je.we)("#EventDisplay_InvitationPlannerPage"),
                   ),
                 Boolean(b && u && p) &&
-                  s.createElement(jt, {
+                  s.createElement(Wt, {
                     clanAccountID: t.clanSteamID.GetAccountID(),
                     gidClanEvent: p,
                   }),
@@ -5910,7 +5915,7 @@
                     },
                     (0, Je.we)("#EventDisplay_CategoryEditor"),
                   ),
-                Boolean(f && (c || m)) &&
+                Boolean(h && (c || m)) &&
                   s.createElement(
                     lt.tj,
                     {
@@ -5926,7 +5931,7 @@
                         : "#EventDisplay_ViewOnCommunity",
                     ),
                   ),
-                Boolean(f && l) &&
+                Boolean(h && l) &&
                   s.createElement(
                     lt.tj,
                     {
@@ -5937,18 +5942,57 @@
                     (0, Je.we)("#EventDisplay_ViewOnStore"),
                   ),
                 s.createElement(Mt, { eventModel: t }),
-                s.createElement(vt, { eventModel: t }),
+                s.createElement(jt, { eventModel: t }),
                 Boolean(nt.iA.is_support) &&
-                  s.createElement(ht, { eventModel: t }),
+                  s.createElement(Ft, { eventModel: t }),
+                !z &&
+                  s.createElement(
+                    "div",
+                    {
+                      className: wt.DisplayAdminPanelClose,
+                      onClick: () => f(!1),
+                    },
+                    s.createElement(
+                      ht.Gq,
+                      {
+                        toolTipContent: (0, Je.we)(
+                          "#EventDisplay_Admin_Close_ttip",
+                        ),
+                      },
+                      s.createElement(Rt.X, null),
+                    ),
+                  ),
+                z &&
+                  !M &&
+                  s.createElement(
+                    "div",
+                    {
+                      className: wt.DisplayAdminPanelClose,
+                      onClick: () => f(!0),
+                    },
+                    s.createElement(
+                      ht.Gq,
+                      {
+                        toolTipContent: (0, Je.we)(
+                          "#EventDisplay_Admin_Reopen_ttip",
+                        ),
+                      },
+                      s.createElement(Rt.i3G, { angle: 0 }),
+                    ),
+                  ),
               ),
             ),
+            s.createElement("div", {
+              className: wt.DisplayAdminPanelMarker,
+              ref: S,
+            }),
           );
         }
         return s.createElement("span", null);
       }
-      function ht(e) {
+      function Ft(e) {
         const { eventModel: t } = e,
-          r = (0, Ve.Fb)(),
+          r = (0, Ke.Fb)(),
           [i] = (0, St.QD)(l.jD, void 0);
         return Boolean(
           r &&
@@ -5976,7 +6020,7 @@
                         null,
                       a = new Array();
                     t.jsondata.sale_sections.forEach((e) => {
-                      (0, Ve.Jz)(e) &&
+                      (0, Ke.Jz)(e) &&
                         a.push({
                           ...r,
                           insertion_requirement: null,
@@ -5986,7 +6030,7 @@
                           force_preview_mode: !0,
                         });
                     }),
-                      (0, Ve.YH)(a);
+                      (0, Ke.YH)(a);
                   },
                 },
                 "(VO) Inject Capsule",
@@ -6001,7 +6045,7 @@
                   ),
                   onClick: (e) =>
                     (0, ut.pg)(
-                      s.createElement(Xe.o0, {
+                      s.createElement(Qe.o0, {
                         strTitle: "Clear Rewards for Summer 2022",
                         onOK: async () => {
                           const e = new FormData();
@@ -6027,7 +6071,7 @@
             )
           : null;
       }
-      function vt(e) {
+      function jt(e) {
         const { eventModel: t } = e,
           r = (0, a.q3)(() => t.jsondata.sale_sections),
           i = (0, s.useMemo)(
@@ -6035,10 +6079,10 @@
             [r],
           );
         return i?.badge_progress?.levels?.length > 0 && nt.iA.is_support
-          ? s.createElement(Ft, { section: i })
+          ? s.createElement(Pt, { section: i })
           : null;
       }
-      function Ft(e) {
+      function Pt(e) {
         const { section: t } = e,
           r = (0, m.fy)(t.badge_progress?.event_badgeid),
           i = (0, a.q3)(() => t.badge_progress.levels),
@@ -6060,7 +6104,7 @@
             }),
         });
       }
-      function jt(e) {
+      function Wt(e) {
         const { clanAccountID: t, gidClanEvent: r } = e,
           i = He(t, r);
         return i

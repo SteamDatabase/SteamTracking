@@ -1619,6 +1619,12 @@ AdvancedSearchDialog = {
 	},
 
 	Show: function () {
+		if ( typeof window.g_fnShowMarketSearch === 'function' )
+		{
+			window.g_fnShowMarketSearch();
+			return;
+		}
+
 		if ( !this.m_bInitialized )
 			this.Initialize();
 
@@ -1633,6 +1639,12 @@ AdvancedSearchDialog = {
 	},
 
 	Dismiss: function() {
+		if ( typeof window.g_fnHideMarketSearch === 'function' )
+		{
+			window.g_fnHideMarketSearch();
+			return;
+		}
+
 		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
 		if ( this.m_modal )
 		{

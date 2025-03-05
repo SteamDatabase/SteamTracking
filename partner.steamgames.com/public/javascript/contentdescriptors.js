@@ -34,6 +34,15 @@ function SaveSurvey( appid, bIsSupport )
 		return;
 	}
 
+	if ( checkboxAIYes.prop( 'checked' ) )
+	{
+		if ( v_trim( $J( "#customer_notes_ai__textarea" ).val() ).length == 0 )
+		{
+			ShowAlertDialog( 'Error Saving Survey', 'Please describe your game\'s use of AI. This text field is required and shown to players.' );
+			return;
+		}
+	}
+
 	var form = $J( "#SaveSurveyForm" );
 
 	$J.ajax(

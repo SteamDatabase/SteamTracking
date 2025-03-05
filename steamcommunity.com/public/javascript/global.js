@@ -2884,7 +2884,6 @@ function xHttpQuery_Post()
 			req.open( "POST", this.postUrl, true );
 			req.onreadystatechange = this.returnFn;
 			req.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
-			req.setRequestHeader( "Content-Length", this.postData.length );
 			req.send( this.postData );
 		}
 	}

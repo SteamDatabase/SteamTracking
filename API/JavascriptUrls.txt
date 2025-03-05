@@ -274,6 +274,7 @@ ${COMMUNITY_BASE_URL}my/edit/miniprofile
 ${COMMUNITY_BASE_URL}my/friends/add
 ${COMMUNITY_BASE_URL}my/gamecards/${}
 ${COMMUNITY_BASE_URL}my/gamenotifications/
+${COMMUNITY_BASE_URL}my/games?tab=all&clientid=${client_instanceid}
 ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
@@ -1100,7 +1101,7 @@ ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
-${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
+${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}meetsteam/2025
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails

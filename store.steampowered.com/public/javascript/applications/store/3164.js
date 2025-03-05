@@ -5,6 +5,7 @@
   {
     20803: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         RoleIcon: "_1uvKF_UbD6VhnVdaRkXhbu",
         ProfileLink: "_2oSTSohQ1CZIgVn7E6_0Ft",
         MeBadge: "_2W_HQa5Rhf-hHITgV5H0bu",
@@ -39,7 +40,7 @@
       a.d(t, {
         Pr: () => P,
         co: () => N,
-        iM: () => h,
+        iM: () => R,
         iV: () => _,
         pC: () => w,
       });
@@ -61,14 +62,14 @@
       function I(e) {
         return n.createElement(s.d1w, null);
       }
-      function R(e) {
+      function h(e) {
         return n.createElement(s.Bir, null);
       }
-      function h(e) {
+      function R(e) {
         return n.createElement(
           "div",
           { className: (0, i.A)(r.RoleIcon, e.className) },
-          2 == e.role ? n.createElement(R, null) : n.createElement(I, null),
+          2 == e.role ? n.createElement(h, null) : n.createElement(I, null),
         );
       }
       function _(e) {
@@ -135,7 +136,7 @@
           n.createElement(
             "div",
             { className: r.RoleAndIcon },
-            n.createElement(h, { className: r.ProfileRoleIcon, role: a }),
+            n.createElement(R, { className: r.ProfileRoleIcon, role: a }),
             n.createElement(
               "div",
               { className: r.RoleName },
@@ -221,7 +222,7 @@
     },
     27144: (e, t, a) => {
       "use strict";
-      a.d(t, { B3: () => _, KM: () => y, KT: () => h });
+      a.d(t, { B3: () => _, KM: () => y, KT: () => R });
       var n = a(41735),
         r = a.n(n),
         s = a(58632),
@@ -301,10 +302,10 @@
             })(e),
           { cache: !1 },
         ),
-        R = "avatarandpersonas";
-      function h(e) {
+        h = "avatarandpersonas";
+      function R(e) {
         const { data: t, isLoading: a } = (0, i.I)({
-          queryKey: [R, e],
+          queryKey: [h, e],
           queryFn: () => I.load(e),
         });
         return [t, a];
@@ -312,12 +313,12 @@
       function _(e) {
         const t = (0, u.jE)(),
           { data: a, isLoading: n } = (0, i.I)({
-            queryKey: [R, e],
+            queryKey: [h, e],
             queryFn: async () => {
               const a = await I.loadMany(e);
               return (
                 a.forEach((e) => {
-                  const a = [R, new l.b(e.steamid).GetAccountID()];
+                  const a = [h, new l.b(e.steamid).GetAccountID()];
                   t.setQueryData(a, e);
                 }),
                 a
@@ -403,8 +404,8 @@
           ),
         );
       }
-      var R = a(91721),
-        h = a.n(R),
+      var h = a(91721),
+        R = a.n(h),
         _ = a(35335);
       function q(e) {
         const { familyGroupID: t, requestID: a } = e,
@@ -452,7 +453,7 @@
       function P() {
         return o.createElement(
           "div",
-          { className: h().PurchaseRequestInfoPage },
+          { className: R().PurchaseRequestInfoPage },
           o.createElement(E.t, { size: "medium", msDelayAppear: 300 }),
         );
       }
@@ -483,22 +484,22 @@
           [r, s] = o.useState(null);
         return o.createElement(
           "div",
-          { className: h().PurchaseRequestInfoPage },
+          { className: R().PurchaseRequestInfoPage },
           o.createElement(
             u.IN.Provider,
             { value: { errorMessage: r, setErrorMessage: s } },
-            o.createElement("div", { className: h().Header }, (0, p.we)(a)),
+            o.createElement("div", { className: R().Header }, (0, p.we)(a)),
             o.createElement(l.pC, null),
             o.createElement(I, { familyGroupID: t }),
             !!n &&
-              o.createElement("div", { className: h().Info }, (0, p.we)(n)),
+              o.createElement("div", { className: R().Info }, (0, p.we)(n)),
             o.createElement(
               "div",
-              { className: h().ButtonContainer },
+              { className: R().ButtonContainer },
               o.createElement(
                 f.jn,
                 {
-                  className: h().PrimaryButton,
+                  className: R().PrimaryButton,
                   onClick: () => {
                     window.location.assign(g.TS.STORE_BASE_URL);
                   },

@@ -161,6 +161,7 @@
     69183: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         SalePageLogoCtn: "_1Un6hCqh2IuOm0WLmrrA7w",
       };
     },
@@ -172,6 +173,7 @@
     },
     15496: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         ReadMoreLink: "_2mvgc6dpEDHRJlTWhGDz7h",
         MajorEventContainer: "dVJB2r43CGIAgr-Xtt4P3",
@@ -697,8 +699,8 @@
         U = n(32754),
         M = n(91382),
         R = n(30756),
-        P = n(21529),
-        x = n(52038),
+        x = n(21529),
+        P = n(52038),
         O = n(78327);
       function F(e) {
         const { event: t, broadcastEmbedContext: n } = e,
@@ -711,7 +713,7 @@
             t.BEventCanShowBroadcastWidget() &&
               t.BSaleShowBroadcastAtTopOfPage(),
           ) &&
-            a.createElement(P.B, {
+            a.createElement(x.B, {
               event: t,
               broadcastEmbedContext: n,
               bWideBroadcastDisplay: r,
@@ -746,7 +748,7 @@
                     muted: !0,
                     autoPlay: !0,
                     playsInline: !0,
-                    className: (0, x.A)(
+                    className: (0, P.A)(
                       N().SaleBackground,
                       N()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
                       "SaleBackground",
@@ -796,7 +798,7 @@
         return a.createElement(
           "div",
           {
-            className: (0, x.A)({
+            className: (0, P.A)({
               SaleBackgroundCtn: !0,
               ContentHubSalePage: d,
             }),
@@ -807,7 +809,7 @@
           a.createElement(
             "div",
             {
-              className: (0, x.A)(
+              className: (0, P.A)(
                 N()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
                 "SaleCustomCSS",
                 N().SaleBackground,
@@ -851,7 +853,7 @@
               )
             : a.createElement(
                 "div",
-                { className: (0, x.A)(q().SalePageLogoCtn, "SalePageLogoCtn") },
+                { className: (0, P.A)(q().SalePageLogoCtn, "SalePageLogoCtn") },
                 a.createElement("img", {
                   src: t.GetImageURLWithFallback("sale_logo", n),
                 }),
@@ -938,7 +940,7 @@
           a.createElement(
             "div",
             {
-              className: (0, x.A)(
+              className: (0, P.A)(
                 o,
                 le.SectionTitleHeader,
                 le.required_title,
@@ -948,7 +950,7 @@
             a.createElement(
               "div",
               {
-                className: (0, x.A)(
+                className: (0, P.A)(
                   ae.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
@@ -1087,7 +1089,7 @@
           "div",
           {
             ...o,
-            className: (0, x.A)(
+            className: (0, P.A)(
               i ? Te().DragAndDropContainerDragging : Te().DragAndDropContainer,
               "DragAndDropContainer",
             ),
@@ -1200,7 +1202,7 @@
               "div",
               { className: Ue().UploadPreviewCtn },
               c.map((e) =>
-                a.createElement(Pe, {
+                a.createElement(xe, {
                   key: "arttabupload_" + e.file + "_" + e.uploadTime,
                   asset: e,
                   supported: n,
@@ -1243,7 +1245,7 @@
             ),
         );
       }
-      const Pe = (0, we.PA)((e) => {
+      const xe = (0, we.PA)((e) => {
         const { asset: t, fnOnRemove: n, supported: r, languageRealms: l } = e,
           o = r.map((e) => {
             let n = (0, S.we)("#EventEditor_ArtworkType_" + e);
@@ -1293,7 +1295,7 @@
             { className: Ue().UploadPreviewDelete, onClick: () => n(t) },
             a.createElement(y.sED, null),
           ),
-          a.createElement(xe, { asset: t }),
+          a.createElement(Pe, { asset: t }),
           a.createElement(ee.m, {
             strDropDownClassName: re().DropDownScroll,
             rgOptions: m,
@@ -1308,7 +1310,7 @@
             }),
           a.createElement(
             "div",
-            { className: (0, x.A)(re().FlexColumnContainer) },
+            { className: (0, P.A)(re().FlexColumnContainer) },
             u,
             Boolean("uploading" == u) &&
               a.createElement(
@@ -1362,7 +1364,7 @@
             ),
         );
       });
-      function xe(e) {
+      function Pe(e) {
         const { asset: t } = e;
         return Ce.Ho.includes(t.fileType)
           ? a.createElement(
@@ -1702,7 +1704,7 @@
                 a.createElement(
                   "span",
                   {
-                    className: (0, x.A)(
+                    className: (0, P.A)(
                       We().Localized,
                       re().ValveOnlyBackground,
                     ),
@@ -1939,7 +1941,7 @@
           },
           a.createElement(
             "div",
-            { className: (0, x.A)(re().FlexColumnContainer, mt().ReassignCtn) },
+            { className: (0, P.A)(re().FlexColumnContainer, mt().ReassignCtn) },
             a.createElement(
               "div",
               { className: mt().ImagePreviewContainer },
@@ -2208,7 +2210,7 @@
             a.createElement(
               u.Z,
               {
-                className: (0, x.A)(
+                className: (0, P.A)(
                   Dt().AppDetailsSpotlightContainer,
                   Dt().MajorEventContainer,
                 ),
@@ -2688,7 +2690,7 @@
           !e.bIsMinimized &&
             a.createElement(
               "div",
-              { className: (0, x.A)(mt().SelectImageBlock, mt().Tips) },
+              { className: (0, P.A)(mt().SelectImageBlock, mt().Tips) },
               p,
               Boolean(_ && E) &&
                 a.createElement(
@@ -2835,7 +2837,7 @@
                 a.createElement(
                   "div",
                   {
-                    className: (0, x.A)(
+                    className: (0, P.A)(
                       mt().SelectImageBlock,
                       mt().MainPreviewBlock,
                     ),
@@ -2962,7 +2964,7 @@
           a.createElement(
             "div",
             {
-              className: (0, x.A)(mt().DetailPageExample, "DetailPageExample"),
+              className: (0, P.A)(mt().DetailPageExample, "DetailPageExample"),
             },
             a.createElement(
               "div",
@@ -3006,7 +3008,7 @@
               a.createElement(
                 "div",
                 {
-                  className: (0, x.A)(
+                  className: (0, P.A)(
                     mt().DetailPageExample,
                     "DetailPageExample",
                   ),
@@ -3030,7 +3032,7 @@
       }
       (0, de.Cg)([k.oI], Ut.prototype, "ShowLangChangeDialog", null),
         (Ut = (0, de.Cg)([we.PA], Ut));
-      const Pt = (e) => {
+      const xt = (e) => {
           const [t] = (0, at.t7)(e.event.appid, { include_assets: !0 });
           if (!t) return null;
           const n = t.GetName(),
@@ -3047,7 +3049,7 @@
             }),
           );
         },
-        xt = (e) => {
+        Pt = (e) => {
           const t = [
             a.createElement("img", { key: "img", src: e.imgURL }),
             a.createElement("div", {
@@ -3125,21 +3127,21 @@
                   partnerEventStore: i,
                 }),
               "spotlight" === n &&
-                a.createElement(Pt, {
+                a.createElement(xt, {
                   lang: t,
                   imgURL:
                     O.TS.IMG_URL + "events/defaults/default_img_spotlight.jpg",
                   event: o,
                 }),
               "localized_store_app_spotlight" === n &&
-                a.createElement(Pt, {
+                a.createElement(xt, {
                   lang: t,
                   imgURL:
                     O.TS.IMG_URL + "events/defaults/default_img_spotlight.jpg",
                   event: o,
                 }),
               "localized_store_app_spotlight_mobile" === n &&
-                a.createElement(Pt, {
+                a.createElement(xt, {
                   lang: t,
                   imgURL:
                     O.TS.IMG_URL + "events/defaults/default_img_spotlight.jpg",
@@ -3168,13 +3170,13 @@
                   partnerEventStore: i,
                 }),
               "spotlight" === n &&
-                a.createElement(Pt, { imgURL: _, event: o, lang: t }),
+                a.createElement(xt, { imgURL: _, event: o, lang: t }),
               "localized_store_app_spotlight" === n &&
-                a.createElement(Pt, { imgURL: _, event: o, lang: t }),
+                a.createElement(xt, { imgURL: _, event: o, lang: t }),
               "localized_store_app_spotlight_mobile" === n &&
-                a.createElement(Pt, { imgURL: _, event: o, lang: t }),
+                a.createElement(xt, { imgURL: _, event: o, lang: t }),
               ("broadcast_left" === n || "broadcast_right" === n) &&
-                a.createElement(xt, {
+                a.createElement(Pt, {
                   imgURL: _,
                   side: "broadcast_right" === n ? "right" : "left",
                 }),
@@ -3262,7 +3264,7 @@
             closeModal: g,
             bDisableBackgroundDismiss: !0,
             bAllowFullSize: !0,
-            className: (0, x.A)(kt.NotTooWideModal, kt.ImageManageDialog),
+            className: (0, P.A)(kt.NotTooWideModal, kt.ImageManageDialog),
             strTitle: e.strLocalizedTitle || (0, S.we)("#ImagePickerLoc_Title"),
             strDescription: e.strLocalizedDescription,
             bOKDisabled: h > 0,
@@ -4038,7 +4040,7 @@
           c = (0, k.w6)(s);
         return a.createElement(
           "div",
-          { className: (0, x.A)(ve().CtnEditor, an().TabCtn), ref: c },
+          { className: (0, P.A)(ve().CtnEditor, an().TabCtn), ref: c },
           Boolean(l && o && o > l) &&
             a.createElement(
               ee.$n,
@@ -4106,7 +4108,7 @@
           ? a.createElement(
               "div",
               {
-                className: (0, x.A)(
+                className: (0, P.A)(
                   gn().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
@@ -4119,7 +4121,7 @@
           : a.createElement(
               "div",
               {
-                className: (0, x.A)(
+                className: (0, P.A)(
                   gn().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
@@ -4235,13 +4237,12 @@
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
             g = n.BUsesContentHubForItemSource() && m;
-          let u = 100;
-          e
-            ? (u = 0)
+          let u;
+          u = e
+            ? 0
             : n.BUsesContentHubForItemSource()
-              ? (u = 20)
-              : n.jsondata.sale_header_offset &&
-                (u = n.jsondata.sale_header_offset);
+              ? 20
+              : n.jsondata.sale_header_offset;
           let d = !1;
           530 === n.jsondata.sale_header_offset && (d = !0);
           const _ = p.nY
@@ -4282,7 +4283,7 @@
                     a.createElement(
                       "div",
                       {
-                        className: (0, x.A)({
+                        className: (0, P.A)({
                           [N().SaleOuterContainer]: !0,
                           [N().SaleNewSizing]: d,
                           [N()[`CustomStyle_${n.jsondata.sale_vanity_id}`]]: !0,
@@ -4452,7 +4453,7 @@
             "div",
             {
               key: "TabSection_" + t,
-              className: (0, x.A)(
+              className: (0, P.A)(
                 N().SaleSectionTabListContainer,
                 "SaleSectionTabListContainer",
               ),
@@ -4520,7 +4521,7 @@
                   {
                     navKey: m,
                     id: m,
-                    className: (0, x.A)({
+                    className: (0, P.A)({
                       [N().SaleSectionCtn]: !0,
                       SaleSectionCtn: !0,
                       [t.section_type]: !0,
@@ -4548,7 +4549,7 @@
                         "div",
                         {
                           id: m,
-                          className: (0, x.A)(
+                          className: (0, P.A)(
                             N().SaleSectionCtn,
                             N().SaleSectionBackgroundImageGroupEdit,
                           ),
@@ -4581,7 +4582,7 @@
             "div",
             {
               ref: g,
-              className: (0, x.A)(
+              className: (0, P.A)(
                 N().SaleSectionLivePreview,
                 c && N().Hover,
                 o && N().JumpedTo,

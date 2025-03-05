@@ -3495,6 +3495,18 @@ function VerifyReleaseGameChina( appid, data )
 		"Release Now"	);
 }
 
+function VerifyReleaseLimitedLaunch( appid, data )
+{
+	VerifyReleaseCommon(
+		appid,
+		data,
+		ReleaseGame,
+		"Confirm Limited Launch",
+		"If you are ready to start your Limited Launch, please type the phrase \"%1$s\" into the box below.",
+		"Start my Limited Launch",
+		"Start Limited Launch"	);
+}
+
 
 function VerifyReleaseCommon( appid, data, fnRelease, strConfirmTitle, strConfirmText, strAcceptString, strButtonText )
 {

@@ -1169,7 +1169,7 @@
           r = (0, y.Qn)();
         if (!n) return null;
         const o = n.GetBestPurchaseOption(),
-          i = (null == o ? void 0 : o.hide_discount_pct_for_compliance) && !0;
+          i = null == o ? void 0 : o.hide_discount_pct_for_compliance;
         return s.createElement(
           F.A,
           { appID: t },

@@ -42,6 +42,7 @@
     47444: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
         left: "S8IHdovT5T2iEVg_97xve",
         carouselBtnCtn: "_3zfZ9tkIrSDZdSTv8mvZ3-",
@@ -162,15 +163,20 @@
     },
     41609: (e) => {
       e.exports = {
-        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
         WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
         WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
-        Grabbable: "riuelIz655g_IBddWfLQ-",
+        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
+        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
         Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
+        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
+        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
+        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
+        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
+        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
+        Grabbable: "riuelIz655g_IBddWfLQ-",
         DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
         WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
         ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
-        DragElementStart: "_1LQ1GCTblYDL8enZ2mBhTD",
         DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
         DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
       };
@@ -2279,21 +2285,22 @@
         });
       };
       var Y = a(19432),
-        z = a(6469),
-        V = a(84811);
+        V = a(6469),
+        z = a(84811);
       const j = o.lazy(() =>
           Promise.all([
             a.e(8970),
             a.e(6597),
             a.e(4607),
-            a.e(7937),
+            a.e(4539),
             a.e(7436),
             a.e(2797),
             a.e(7403),
             a.e(9214),
+            a.e(3270),
             a.e(4796),
             a.e(4095),
-            a.e(432),
+            a.e(7843),
             a.e(9522),
             a.e(1266),
             a.e(7034),
@@ -2303,9 +2310,9 @@
         ),
         Z = (e) => {
           const t = (0, o.useRef)(null),
-            [a, n] = (0, o.useState)(z.K.Get().GetVODForAppID(e.appid)),
+            [a, n] = (0, o.useState)(V.K.Get().GetVODForAppID(e.appid)),
             [r, i] = (0, o.useState)(
-              !Boolean(z.K.Get().GetVODForAppID(e.appid)),
+              !Boolean(V.K.Get().GetVODForAppID(e.appid)),
             );
           return (
             (0, o.useEffect)(
@@ -2316,14 +2323,14 @@
               if (
                 (a &&
                   a.appid != e.appid &&
-                  (r = z.K.Get().GetVODForAppID(e.appid)),
+                  (r = V.K.Get().GetVODForAppID(e.appid)),
                 !r)
               ) {
                 const a = async () => {
                   t.current && t.current();
                   const a = C().CancelToken.source();
                   (t.current = a.cancel),
-                    (r = await z.K.Get().LoadVODForAppID(e.appid)),
+                    (r = await V.K.Get().LoadVODForAppID(e.appid)),
                     a.token.reason || n(r),
                     i(!1);
                 };
@@ -2344,7 +2351,7 @@
                   "div",
                   { className: Y.BroadcastCtn },
                   o.createElement(
-                    V.tH,
+                    z.tH,
                     null,
                     o.createElement(
                       o.Suspense,
@@ -2361,8 +2368,8 @@
         };
       var K = a(26296),
         X = a(3088),
-        $ = a(56011),
-        Q = a(45699),
+        Q = a(56011),
+        $ = a(45699),
         J = a(12155),
         q = a(39362);
       function ee(e) {
@@ -2384,7 +2391,7 @@
             },
           }),
           o.createElement(
-            Q.fu,
+            $.fu,
             {
               type: "button",
               title: (0, I.we)("#Button_Upload"),
@@ -2819,7 +2826,7 @@
                       },
                       e.children,
                     ),
-                    (0, $.uX)(i),
+                    (0, Q.uX)(i),
                   );
                 },
               },
@@ -3020,14 +3027,14 @@
       var He = a(75844),
         We = a(22837),
         Ye = a(71138),
-        ze = a(4796),
-        Ve = a(6379),
+        Ve = a(4796),
+        ze = a(6379),
         je = a(75113);
       let Ze = class extends o.Component {
         state = {
           bLoading: this.props.announcementGID
-            ? !Ve.O3.BHasClanAnnouncementGID(this.props.announcementGID)
-            : !Ve.O3.BHasClanAnnouncementGID(this.props.eventGID),
+            ? !ze.O3.BHasClanAnnouncementGID(this.props.announcementGID)
+            : !ze.O3.BHasClanAnnouncementGID(this.props.eventGID),
           bFailedLoad: !1,
         };
         m_cancelSignal = C().CancelToken.source();
@@ -3046,11 +3053,11 @@
           try {
             if (this.state.bLoading) {
               if (void 0 !== t) {
-                i = (await ze.ac.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
+                i = (await Ve.ac.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
               } else if (void 0 !== r) {
-                i = (await ze.ac.LoadOGGClanInfoForGroupVanity(r)).clanSteamID;
+                i = (await Ve.ac.LoadOGGClanInfoForGroupVanity(r)).clanSteamID;
               }
-              const o = Ve.O3.LoadPartnerEventGeneric(i, e, n, a, 0);
+              const o = ze.O3.LoadPartnerEventGeneric(i, e, n, a, 0);
               let s = await o;
               await Promise.all([
                 D.A.Get().QueueAppRequest(s.appid, {
@@ -3103,8 +3110,8 @@
           if (this.state.bLoading) return o.createElement(H.t, null);
           let s =
             void 0 !== t
-              ? Ve.O3.GetClanEventFromAnnouncementGID(t)
-              : Ve.O3.GetClanEventModel(a);
+              ? ze.O3.GetClanEventFromAnnouncementGID(t)
+              : ze.O3.GetClanEventModel(a);
           if (null == s) return (0, p.Pm)(n);
           let l = (0, We.sf)(v.TS.LANGUAGE),
             c = s.GetImageForSizeAsArrayWithFallback(
@@ -3166,7 +3173,7 @@
       Ze = (0, n.Cg)([He.PA], Ze);
       var Ke = a(39978),
         Xe = a.n(Ke);
-      let $e = class extends o.Component {
+      let Qe = class extends o.Component {
         state = { bSummaryMode: !0, bLoadedMetaData: !1 };
         async componentDidMount() {
           let e =
@@ -3261,15 +3268,15 @@
                 );
         }
       };
-      (0, n.Cg)([Be.oI], $e.prototype, "OnSketchFabClick", null),
-        ($e = (0, n.Cg)([He.PA], $e));
-      var Qe = a(83059),
+      (0, n.Cg)([Be.oI], Qe.prototype, "OnSketchFabClick", null),
+        (Qe = (0, n.Cg)([He.PA], Qe));
+      var $e = a(83059),
         Je = a(32754),
         qe = a(65835),
         et = a.n(qe);
       function tt(e) {
         const { defid: t, url: a } = e,
-          n = (0, Qe.w)(t);
+          n = (0, $e.w)(t);
         if (!n || !n.community_item_data) return null;
         const r = n.appid,
           i = n.community_item_data.item_image_large,
@@ -3348,7 +3355,7 @@
         let a = new RegExp(lt).exec(e);
         if (a && a.length > 1) {
           let e = a[1];
-          if (e && e.length > 1) return o.createElement($e, { modelID: e });
+          if (e && e.length > 1) return o.createElement(Qe, { modelID: e });
         }
         return (0, p.Pm)(e, t?.event);
       }
@@ -4703,15 +4710,15 @@
         H = a(41609),
         W = a.n(H),
         Y = a(56011),
-        z = a(78327);
-      var V = a(26505),
+        V = a(78327);
+      var z = a(26505),
         j = a(14336),
         Z = a(68451),
         K = a(48079),
         X = a(22797),
-        $ = a(32754),
-        Q = a(99312),
-        J = a.n(Q),
+        Q = a(32754),
+        $ = a(99312),
+        J = a.n($),
         q = a(65946),
         ee = a(44332),
         te = a(66331),
@@ -4872,7 +4879,7 @@
             k.$n,
             {
               onClick: (e) => {
-                const t = new m.b(z.UF.CLANSTEAMID);
+                const t = new m.b(V.UF.CLANSTEAMID);
                 (0, O.pg)(
                   o.createElement(ae.z, {
                     clanSteamID: t,
@@ -4916,7 +4923,7 @@
         }
         static GetHelpURL(e, t) {
           return (
-            z.TS.COMMUNITY_BASE_URL +
+            V.TS.COMMUNITY_BASE_URL +
             "comment/" +
             e +
             "/formattinghelp" +
@@ -4926,7 +4933,7 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: z.TS.SESSIONID };
+              t = { sessionid: V.TS.SESSIONID };
             (e = await r().get(le.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
@@ -5018,7 +5025,7 @@
             null,
             o.createElement(Se, {
               pathToImages:
-                z.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
+                V.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
               emoticonStore: this.props.emoticonStore,
               supportBBCodes: this.props.limitBBCode
@@ -5211,7 +5218,7 @@
           );
         }
         OnOpenYoutubeDialog(e) {
-          let t = z.TS.IMG_URL + "applications/community/";
+          let t = V.TS.IMG_URL + "applications/community/";
           (0, O.HT)(
             o.createElement(fe, {
               textareaRef: this.props.fnTextareaRef(),
@@ -5258,7 +5265,7 @@
                     "span",
                     { className: (0, y.A)("ttip", J().ActionGetHelp) },
                     o.createElement(
-                      $.he,
+                      Q.he,
                       {
                         toolTipContent: (0, M.we)(
                           "#EventEditor_FormattingHelp_GetHelpLink",
@@ -5268,7 +5275,7 @@
                         "a",
                         {
                           href: me.GetHelpURL(this.props.showFormatHelp, !1),
-                          target: z.TS.IN_CLIENT ? void 0 : "_blank",
+                          target: V.TS.IN_CLIENT ? void 0 : "_blank",
                         },
                         o.createElement("img", { src: n + "/action_help.png" }),
                         " ",
@@ -5283,7 +5290,7 @@
                       className: (0, y.A)("ttip", J().ActionGetHelp),
                     },
                     o.createElement(
-                      $.he,
+                      Q.he,
                       {
                         toolTipContent: (0, M.we)(
                           "#EventEditor_FormattingHelp_GetHelpLink",
@@ -5369,7 +5376,7 @@
                 { className: "ttip" },
                 this.props.emoticonStore &&
                   o.createElement(
-                    $.he,
+                    Q.he,
                     { toolTipContent: (0, M.we)("#Editor_Emoticon") },
                     o.createElement(R.A, {
                       title: " ",
@@ -5394,7 +5401,7 @@
                   imgURL: this.props.pathToImages + "/insert_img.png",
                 }),
               Boolean(
-                z.iA.is_support &&
+                V.iA.is_support &&
                   this.props.clanSteamID &&
                   this.BSupports("speaker"),
               ) &&
@@ -5423,7 +5430,7 @@
           "span",
           { onClick: e.onClick, className: e.className },
           o.createElement(
-            $.he,
+            Q.he,
             { toolTipContent: e.tooltip, className: "ttip" },
             Boolean(e.imgURL) && o.createElement("img", { src: e.imgURL }),
             e.children,
@@ -5862,7 +5869,7 @@
           [l, c] = o.useState(""),
           [p, d] = o.useState(void 0),
           [h, g] = o.useState(void 0),
-          { data: S } = (0, V.Dv)(),
+          { data: S } = (0, z.Dv)(),
           { isLoading: C, data: f } = (0, j.js)(h?.GetAccountID()),
           E = 0 != t.trim().length && 0 != l.trim().length;
         return o.createElement(
@@ -5915,7 +5922,7 @@
               }),
             ),
             o.createElement(
-              $.he,
+              Q.he,
               {
                 toolTipContent: (0, M.we)(
                   "#EventEditor_AssociateSteamAccount_ttip",
@@ -5941,7 +5948,7 @@
                   "a",
                   {
                     href:
-                      z.TS.COMMUNITY_BASE_URL +
+                      V.TS.COMMUNITY_BASE_URL +
                       "profiles/" +
                       h.ConvertTo64BitString(),
                     target: "_blank",
@@ -5959,7 +5966,7 @@
                 { className: J().AssociateRowCtn },
                 o.createElement(
                   k.$n,
-                  { onClick: () => g(new m.b(z.iA.steamid)) },
+                  { onClick: () => g(new m.b(V.iA.steamid)) },
                   (0, M.we)("#EventEditor_SteamAccount_addme"),
                 ),
                 o.createElement(
@@ -6086,7 +6093,7 @@
           let n = null;
           return (
             (n = await r().post(
-              z.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
+              V.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
               a,
             )),
             n.data.content
@@ -6193,7 +6200,7 @@
                             o.createElement(
                               "a",
                               {
-                                target: z.TS.IN_CLIENT ? void 0 : "_blank",
+                                target: V.TS.IN_CLIENT ? void 0 : "_blank",
                                 href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
                               },
                               (0, M.we)(
@@ -6267,7 +6274,7 @@
       const Le = (0, i.PA)((e) => {
         const { appid: t, eventLink: a } = e,
           n = o.useRef(null),
-          { data: i } = (0, j.js)(z.iA.steamid),
+          { data: i } = (0, j.js)(V.iA.steamid),
           [d, u] = o.useState(""),
           [h, g] = o.useState(!1),
           [_, S] = o.useState(""),
@@ -6279,7 +6286,7 @@
           [],
         );
         const E = i ? i.avatar_url : null,
-          I = m.b.InitFromAccountID(z.iA.accountid),
+          I = m.b.InitFromAccountID(V.iA.accountid),
           v = async () => {
             n.current &&
               n.current("ShareEventOnFriendsActivityFeed: cancel previous...");
@@ -6288,12 +6295,12 @@
             let i = d;
             0 != i.trim().length && (i += "\n\n"), (i += a);
             const o =
-              z.TS.COMMUNITY_BASE_URL +
+              V.TS.COMMUNITY_BASE_URL +
               "profiles/" +
               I.ConvertTo64BitString() +
               "/ajaxpostuserstatus";
             try {
-              if (z.TS.IN_STEAMUI) {
+              if (V.TS.IN_STEAMUI) {
                 let a = l.w.Init(p.kV);
                 a.Body().set_appid(t), a.Body().set_status_text(i);
                 let n = await p.xt.PostStatusToFriends(
@@ -6314,7 +6321,7 @@
                 const a = new FormData();
                 a.append("appid", "" + t),
                   a.append("status_text", i),
-                  a.append("sessionid", z.TS.SESSIONID);
+                  a.append("sessionid", V.TS.SESSIONID);
                 const n = await r().post(o, a, { withCredentials: !0 });
                 if (200 != n.status || 1 != n?.data?.success) {
                   const t =
@@ -6364,11 +6371,11 @@
                       "a",
                       {
                         href:
-                          z.TS.COMMUNITY_BASE_URL +
+                          V.TS.COMMUNITY_BASE_URL +
                           "profiles/" +
                           I.ConvertTo64BitString() +
                           "/home",
-                        target: z.TS.IN_CLIENT ? void 0 : "_blank",
+                        target: V.TS.IN_CLIENT ? void 0 : "_blank",
                       },
                       (0, M.we)("#EventDisplay_Share_OpenActivityFeed"),
                     ),
@@ -6406,7 +6413,7 @@
                     o.createElement("img", {
                       className: Ae().SmallAvatar,
                       src: E,
-                      "data-miniprofile": "s" + z.iA.steamid,
+                      "data-miniprofile": "s" + V.iA.steamid,
                     }),
                     o.createElement(
                       "div",

@@ -242,8 +242,32 @@ HighlightPlayer.prototype.ListenForDashBundle = function()
 	this.m_bWaitingForDash = true;
 	this.m_waitingDashStates = {};
 	var _this = this;
-	window.addEventListener( 'valve_gamehighlighttrailers_ready', function()
+	window.addEventListener( 'valve_gamehighlighttrailers_ready', function( e )
 	{
+				window.GameHighlightTrailers = e.detail;
+		function UpdateAutoplayTrailers( bEnabled )
+		{
+			SetGameHighlightAutoplayEnabled( bEnabled );
+			window.GameHighlightTrailers.UpdateAutoplay( bEnabled );
+		}
+
+		function UpdateVolumeTrailers( flVolume )
+		{
+			SetGameHighlightPlayerVolume( flVolume );
+			window.GameHighlightTrailers.UpdateVolume( flVolume );
+		}
+
+		function UpdateAudioMuteTrailers( bEnabled )
+		{
+			mute_session( bEnabled );
+			window.GameHighlightTrailers.UpdateMuted( bEnabled );
+		}
+
+		window.GameHighlightTrailers.InitAutoplayMethods( BIsUserGameHighlightAutoplayEnabled(), UpdateAutoplayTrailers );
+		window.GameHighlightTrailers.InitPlayerVolumeMethods( GetGameHighlightPlayerVolume(), UpdateVolumeTrailers );
+		window.GameHighlightTrailers.InitAudioMutedMethods( !BIsUserGameHighlightAudioEnabled(), UpdateAudioMuteTrailers );
+		window.GameHighlightTrailers.SetTrailerEndCallback( _this.Transition.bind(_this) );
+
 		for ( var strKey in _this.m_waitingDashStates )
 		{
 			if ( _this.m_waitingDashStates.hasOwnProperty( strKey ) )
@@ -1148,6 +1172,12 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				setVolume(volume);
 				SetGameHighlightPlayerVolume(100 * volume);
 
+				if ( window.GameHighlightTrailers )
+				{
+					var flVolume = Math.min(Math.max(volume, 0), 100);
+					window.GameHighlightTrailers.UpdateVolume( flVolume );
+				}
+
 				if( videoControl.muted )
 					toggleMute();
 			}
@@ -1172,10 +1202,13 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				$('.volume_slider',overlay).unbind('mousemove');
 			}
 
-			function toggleMute(e, ele )
+			function toggleMute(e, ele)
 			{
 				videoControl.muted = !videoControl.muted;
 				SetGameHighlightAudioEnabled( !videoControl.muted );
+
+				if ( window.GameHighlightTrailers )
+					window.GameHighlightTrailers.UpdateMuted( videoControl.muted );
 
 				if( videoControl.muted )
 				{
@@ -1265,6 +1298,9 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			{
 				var bAutoplay = !BIsUserGameHighlightAutoplayEnabled();
 				SetGameHighlightAutoplayEnabled( bAutoplay );
+
+				if ( window.GameHighlightTrailers )
+					window.GameHighlightTrailers.UpdateAutoplay( bAutoplay );
 
 				if( bAutoplay )
 					$('.autoplay_checkbox',overlay).addClass("checked");

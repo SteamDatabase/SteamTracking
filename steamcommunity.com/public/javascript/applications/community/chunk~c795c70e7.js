@@ -151,15 +151,15 @@
           0 == e.rgRoles.length || e.rgRoles.findIndex((e) => "main" == e) >= 0
         );
       }
-      function P(e) {
+      function A(e) {
         if (!e) return 0;
         let t = e.segmentTemplate;
         return 1e3 == t.nTimeScale
           ? t.nDuration
           : (t.nDuration / t.nTimeScale) * 1e3;
       }
-      function A(e, t, i) {
-        let n = P(t),
+      function P(e, t, i) {
+        let n = A(t),
           s = i + ((1e3 * e.GetStartTime()) % n);
         return Math.floor(s / n) + t.segmentTemplate.nStartNumber;
       }
@@ -633,7 +633,7 @@
           return this.m_representation.nBandwidth;
         }
         GetCurrentSegmentDurationMS() {
-          return P(this.m_representation);
+          return A(this.m_representation);
         }
         GetCurrentSegmentInitializationURL() {
           return V(this.m_representation);
@@ -666,7 +666,7 @@
           if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
           {
             let e = this.m_mpd.GetEndTime() - this.m_mpd.GetStartTime();
-            return A(this.m_mpd, this.m_representation, 1e3 * e);
+            return P(this.m_mpd, this.m_representation, 1e3 * e);
           }
         }
         GetAmountBufferedInPlayerMS(e) {
@@ -799,7 +799,7 @@
             t = this.m_callbacks.GetPlaybackRate(),
             i = (function (e, t, i) {
               if (!e.IsLiveContent()) return 0;
-              let n = P(t);
+              let n = A(t);
               return (
                 (i - t.segmentTemplate.nStartNumber + 1) * n -
                 e.GetDurationSinceStarted()
@@ -820,7 +820,7 @@
               ),
               void this.DownloadNextSegment()
             );
-          let s = 1.1 * P(this.m_representation),
+          let s = 1.1 * A(this.m_representation),
             r = this.GetAmountBufferedInPlayerMS(
               this.m_callbacks.GetCurrentPlayTime(),
             );
@@ -845,7 +845,7 @@
             (n = this.m_representation),
               (s = this.m_nNextSegment),
               (e = C(n.segmentTemplate.strMedia, n.strID, s)),
-              (t = P(this.m_representation)),
+              (t = A(this.m_representation)),
               this.m_nNextSegment++;
           }
           var n, s;
@@ -1050,7 +1050,7 @@
             return void this.ScheduleNextDownload();
           (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
           const s = e - this.m_mpd.GetStartTime();
-          let r = A(this.m_mpd, this.m_representation, 1e3 * s);
+          let r = P(this.m_mpd, this.m_representation, 1e3 * s);
           if (
             ((this.m_nNextSegment = Math.min(r, this.GetMaxSegment())),
             (0, g.q_)(
@@ -1506,16 +1506,13 @@
           (0, g.q_)("OnMediaSourceClose", e), this.HandleMediaSourceError(e);
         }
         OnVideoWaiting(e) {
-          if (
-            !this.IsLiveContent() &&
-            this.m_mpd &&
-            this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
-          )
+          if (this.IsAtEnd())
             return (
               (0, g.q_)(
                 `pausing playback due to OnVideoWaiting (endTime=${this.m_mpd.GetEndTime()}, currentPlaytime=${this.GetCurrentPlayTime()} )`,
               ),
-              void this.Pause()
+              this.Pause(),
+              void this.DispatchEvent("valve-ended")
             );
           if (
             !this.BIsPlayerBufferedBetween(
@@ -1731,6 +1728,14 @@
         }
         IsPaused() {
           return !this.m_bUserPlayChoice;
+        }
+        IsAtEnd() {
+          return (
+            !this.IsLiveContent() &&
+            this.m_mpd &&
+            this.m_mpd.GetEndTime() > 0 &&
+            this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
+          );
         }
         SetUserPlayChoice(e) {
           (this.m_bUserPlayChoice = e),

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_spring2025 {
-	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/tile_bg_winter_2024_b.webp') repeat center top, #18225e;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/spring2025/front_page_title.webp') repeat center top, #141e24;
     font-family: "Motiva Sans", Sans-serif;
 }
 
@@ -620,8 +620,7 @@ body.v6.sale_spring2025 .sale_capsule_carousel .carousel_items > * {
 .home_pagecontent_ctn.featured_special_deals .ctn_background {
 	position: relative;
 	border-radius: 3px;
-	background: linear-gradient(161deg, #a26bdbbd 8.84%, #3247d4b3 86.04%), url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/tile_bg_winter_2024_b.webp') repeat center top;
-	background: linear-gradient(161deg, #a26bdbbd 8.84%, #3247d4b3 86.04%), url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2024/tile_bg_winter_2024_b.webp') repeat center top;
+	background: linear-gradient(161deg, #285278e0 8.84%, #326957d4 86.04%);
 }
 
 @media screen and (max-width: 500px )
@@ -651,7 +650,7 @@ body.v6.sale_spring2025 .sale_capsule_carousel .carousel_items > * {
 }
 
 .featured_special_deals .home_section_subtitle {
-	color: #b3b8fe;
+	color: #9fbdd9;
 	font-size: 19px;
 	font-weight: 400;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -974,7 +973,7 @@ body.v6 .discount_block {}
 }
 
 .content_hub_capsule_ctn .gradient {
-	background: radial-gradient(115% 120% at 0% 0%, transparent, #6738a3 80%, #6c47bf);
+	background: radial-gradient(115% 120% at 0% 0%, transparent, #e6564cc7 80%, #e6564c)
 }
 
 .content_hub_capsule_ctn .label {
@@ -983,7 +982,7 @@ body.v6 .discount_block {}
 }
 
 .home_deck_section {
-	background: rgba( 18, 69, 105, .5 );
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .home_deck_title_ctn {
