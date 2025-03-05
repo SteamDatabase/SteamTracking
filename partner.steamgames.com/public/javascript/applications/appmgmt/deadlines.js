@@ -669,6 +669,7 @@
           "Notify-Mismatch",
           "Notify-NoTINTreaty-Partner",
           "Renewal-W8-Initial",
+          "Renewal-W8-Partner-Urgent",
         ],
         R = {
           AddressCorrection: {
@@ -2007,6 +2008,70 @@
               );
             },
           },
+          "Renewal-W8-Partner-Urgent": {
+            component: function (e) {
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement("h1", null, "Tax Information Is Out Of Date"),
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "We are required to obtain updated tax information from Steamworks partners every three years. Our records show that the US tax form W-8BEN we have on file for you has expired.",
+                  ),
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Why is this important?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "It's important to renew this information, otherwise we will be unable to make monthly royalty payments.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What do I do next?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "You need to review and submit our online tax interview. Following the link below will start a short tax interview which should take less than 10 minutes to complete.  Please note once you have completed the tax interview, you may also need to provide KYC (know your customer) documentation.  If this is the case, we'll send you another email notification, but you can also check your Steamworks dashboard a day or two after you complete the tax interview to see if there is an action item requesting documents.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "Required permissions",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "Tax information, including this required tax interview will need to be completed by a Steamworks user with Actual Authority rights.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionTitle },
+                  "What will happen if I choose not to complete the tax interview?",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
+                ),
+                n.createElement(g, { ...e }),
+              );
+            },
+          },
         };
       function B() {
         const [e] = (0, n.useState)(
@@ -2143,7 +2208,7 @@
                   !v &&
                     y.length > 0 &&
                     y.map((e, t) =>
-                      n.createElement(D, {
+                      n.createElement(q, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2256,7 +2321,7 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(D, {
+            n.createElement(q, {
               requirement: {
                 deadline: c,
                 index: 0,
@@ -2267,7 +2332,7 @@
           )
         );
       }
-      function D(e) {
+      function q(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           [, i] = B(),

@@ -3644,6 +3644,10 @@
                 "#PartnerDeadline_TaxRequirement_Renewal-W8-Initial",
                 t,
               );
+            case "Renewal-W8-Partner-Urgent":
+              return (0, i.we)(
+                "#PartnerDeadline_TaxRequirement_Renewal-W8-Partner-Urgent",
+              );
             case "DocReq-KYC-FR":
             case "DocReq-KYC-Entity-FR-CERT":
             case "DocReq-KYC-Entity-FR":

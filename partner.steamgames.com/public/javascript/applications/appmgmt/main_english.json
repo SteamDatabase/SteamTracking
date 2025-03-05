@@ -860,6 +860,7 @@
     "PartnerDeadline_TaxRequirement_Header_NoAction": "Tax Information",
     "PartnerDeadline_TaxRequirement_ButtonViewDetails": "View details",
     "PartnerDeadline_TaxRequirement_Renewal-W8-Initial": "Our records show that the US tax form W-8BEN we have on file for you is due to expire on %1$s.",
+    "PartnerDeadline_TaxRequirement_Renewal-W8-Partner-Urgent": "Our records show that the US tax form W-8BEN we have on file for you has expired.",
     "PartnerDeadline_TaxRequirement_AdditionalKYCDocuments": "Additional documents are necessary to complete your KYC verification.",
     "PartnerDeadline_TaxRequirement_AdditionalDocuments": "Additional documents are necessary to complete your verification.",
     "PartnerDeadline_TaxRequirement_Expired": "Your tax information has expired.",

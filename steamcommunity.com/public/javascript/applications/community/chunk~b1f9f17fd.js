@@ -18950,42 +18950,42 @@
       function Ta(e) {
         const { saleSection: t, editModel: a } = e,
           n = (0, g.q3)(() => t.links);
-        return (
-          c.useEffect(() => {
-            const e = t.links.filter((e) => null != e);
-            t.links.length != e.length && (t.links = e);
-          }, [t, t.links]),
+        c.useEffect(() => {
+          const e = t.links.filter((e) => null != e);
+          t.links.length != e.length && (t.links = e);
+        }, [t, t.links]);
+        const i = (0, Me.CH)();
+        return c.createElement(
+          c.Fragment,
+          null,
+          c.createElement(d.JU, null, (0, m.we)("#Sale_ImageBuilder")),
           c.createElement(
-            c.Fragment,
+            "p",
             null,
-            c.createElement(d.JU, null, (0, m.we)("#Sale_ImageBuilder")),
-            c.createElement(
-              "p",
-              null,
-              (0, m.we)("#Sale_ImageBuilder_description"),
-            ),
-            c.createElement(De.A, {
-              items: n,
-              onDelete: (e) => {
-                t.links.splice(e, 1), a.SetDirty(r.IQ.jsondata_sales);
+            (0, m.we)("#Sale_ImageBuilder_description"),
+          ),
+          c.createElement(De.A, {
+            items: n,
+            onDelete: (e) => {
+              t.links.splice(e, 1), a.SetDirty(r.IQ.jsondata_sales), i();
+            },
+            onReorder: () => a.SetDirty(r.IQ.jsondata_sales),
+            render: (e) => c.createElement(Ia, { editModel: a, link: e }),
+          }),
+          c.createElement(
+            d.jn,
+            {
+              onClick: (e) => {
+                t.links.push({
+                  url: null,
+                  localized_link_capsule: (0, J.$Y)([], 31, null),
+                }),
+                  a.SetDirty(r.IQ.jsondata_sales),
+                  i();
               },
-              onReorder: () => a.SetDirty(r.IQ.jsondata_sales),
-              render: (e) => c.createElement(Ia, { editModel: a, link: e }),
-            }),
-            c.createElement(
-              d.jn,
-              {
-                onClick: (e) => {
-                  t.links.push({
-                    url: null,
-                    localized_link_capsule: (0, J.$Y)([], 31, null),
-                  }),
-                    a.SetDirty(r.IQ.jsondata_sales);
-                },
-              },
-              (0, m.we)("#Sale_AddImage"),
-            ),
-          )
+            },
+            (0, m.we)("#Sale_AddImage"),
+          ),
         );
       }
       function Ia(e) {

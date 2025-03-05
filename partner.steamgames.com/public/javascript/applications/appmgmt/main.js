@@ -1997,248 +1997,266 @@
         );
       }
       function Re(e) {
-        return u.createElement(
-          S.Kd,
-          { basename: (0, a.C)() },
-          u.createElement(
-            Be,
-            null,
-            u.createElement(
-              Ee,
-              null,
-              u.createElement(
-                u.Suspense,
-                { fallback: null },
+        const [t, r] = u.useState(!1);
+        return (
+          u.useEffect(() => {
+            const e = (0, h.l4)();
+            e &&
+              (document.documentElement.setAttribute("lang", e),
+              h.pf.SetPreferredLocales([e])),
+              r(!0);
+          }, []),
+          t
+            ? u.createElement(
+                S.Kd,
+                { basename: (0, a.C)() },
                 u.createElement(
-                  M.dO,
+                  Be,
                   null,
-                  u.createElement(M.qh, {
-                    exact: !0,
-                    path: "/",
-                    component: ie,
-                  }),
-                  u.createElement(M.qh, {
-                    exact: !0,
-                    path: a.B.DiagData(),
-                    render: (e) =>
-                      u.createElement(E.z, {
-                        ...e,
-                        key: e.match.params.gid,
-                        strConfigID: "application_config",
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.SalePages(),
-                    component: me,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.OptInPages(),
-                    component: de,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.ContentHubPages(),
-                    component: Ce,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.RecapPages(),
-                    component: Se,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.DeadlinesAdmin(),
-                    component: Me,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.StoreGameAdminRoot(),
-                    component: he,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.AppLandingPage(),
-                    component: he,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.AppInstallerPage(),
-                    component: he,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.AppCommunityItems(),
-                    component: he,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.StoreAdminReviewPriceProposals(),
-                    component: he,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.PackageLanding(),
-                    component: he,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.SteamML(),
-                    render: () => u.createElement(se, null),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.SteamLearn(),
-                    render: () => u.createElement(pe, null),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.BuildPatchNotes(),
-                    render: (e) =>
-                      u.createElement(ce, { appId: e.match.params.appid }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.SteamworksEvents(),
-                    render: () => u.createElement(_, null),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.PromotionTools(),
-                    component: ue,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.PricingTools(),
-                    component: le,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.BundlesEditor(),
-                    component: F,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.DeckVerifiedAdmin(),
-                    render: () =>
-                      u.createElement(I.X, {
-                        config: {
-                          "deck-verified-results": (e) =>
-                            u.createElement(oe, {
-                              dataprops: e,
-                              results: (0, g.Tc)(
-                                "deckcompatibility",
-                                "application_config",
-                              ),
+                  u.createElement(
+                    Ee,
+                    null,
+                    u.createElement(
+                      u.Suspense,
+                      { fallback: null },
+                      u.createElement(
+                        M.dO,
+                        null,
+                        u.createElement(M.qh, {
+                          exact: !0,
+                          path: "/",
+                          component: ie,
+                        }),
+                        u.createElement(M.qh, {
+                          exact: !0,
+                          path: a.B.DiagData(),
+                          render: (e) =>
+                            u.createElement(E.z, {
+                              ...e,
+                              key: e.match.params.gid,
+                              strConfigID: "application_config",
                             }),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.DeckCompatTestingDashboard(),
-                    render: () =>
-                      u.createElement(I.X, {
-                        config: {
-                          "deck-verified-results-inflight": (e) =>
-                            u.createElement(oe, {
-                              dataprops: e,
-                              results: (0, g.Tc)(
-                                "deckcompatibility_inflight",
-                                "application_config",
-                              ),
-                            }),
-                          "deck-verified-results-submitted": (e) =>
-                            u.createElement(oe, {
-                              dataprops: e,
-                              results: (0, g.Tc)(
-                                "deckcompatibility_submitted",
-                                "application_config",
-                              ),
-                            }),
-                          "deck-verified-results-published": (e) =>
-                            u.createElement(oe, {
-                              dataprops: e,
-                              results: (0, g.Tc)(
-                                "deckcompatibility_published",
-                                "application_config",
-                              ),
-                            }),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.DeckCompatTestingAppHistory(),
-                    render: () =>
-                      u.createElement(I.X, {
-                        config: {
-                          "deck-verified-results-reports": (e) =>
-                            u.createElement(oe, {
-                              dataprops: e,
-                              results: (0, g.Tc)(
-                                "deckcompatibility_reports",
-                                "application_config",
-                              ),
-                            }),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.DeckVerified(),
-                    render: () =>
-                      u.createElement(I.X, {
-                        config: {
-                          "deck-verified-results": () =>
-                            u.createElement(ae, {
-                              results: (0, g.Tc)(
-                                "deckcompatibility",
-                                "application_config",
-                              ),
-                            }),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.SDRConnections(),
-                    render: (e) =>
-                      u.createElement(ge, { appId: e.match.params.appid }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.PublisherDashboard(),
-                    render: () =>
-                      u.createElement(I.X, {
-                        config: {
-                          "publisher-dashboard": () =>
-                            u.createElement(_e, null),
-                          "promotion-review-dashboard": () =>
-                            u.createElement(be, null),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.TimelineMarkerEditor(),
-                    render: (e) =>
-                      u.createElement(I.X, {
-                        config: {
-                          "timeline-marker-editor": () =>
-                            u.createElement(fe, {
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.SalePages(),
+                          component: me,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.OptInPages(),
+                          component: de,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.ContentHubPages(),
+                          component: Ce,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.RecapPages(),
+                          component: Se,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.DeadlinesAdmin(),
+                          component: Me,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.StoreGameAdminRoot(),
+                          component: he,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.AppLandingPage(),
+                          component: he,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.AppInstallerPage(),
+                          component: he,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.AppCommunityItems(),
+                          component: he,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.StoreAdminReviewPriceProposals(),
+                          component: he,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.PackageLanding(),
+                          component: he,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.SteamML(),
+                          render: () => u.createElement(se, null),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.SteamLearn(),
+                          render: () => u.createElement(pe, null),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.BuildPatchNotes(),
+                          render: (e) =>
+                            u.createElement(ce, {
                               appId: e.match.params.appid,
                             }),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.HardwareReservationQueueMessaging(),
-                    component: we,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.KeyWizardPackagePage(),
-                    render: (e) =>
-                      u.createElement(I.X, {
-                        config: {
-                          "key-wizard": () =>
-                            u.createElement(G, { appId: e.match.params.appid }),
-                        },
-                      }),
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.YearInReviewProgressMonitor(),
-                    component: te,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.TaxRequirement(),
-                    component: ve,
-                  }),
-                  u.createElement(M.qh, {
-                    path: a.B.MeetSteam(),
-                    component: ye,
-                  }),
-                  u.createElement(M.qh, null, u.createElement(T.a, null)),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.SteamworksEvents(),
+                          render: () => u.createElement(_, null),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.PromotionTools(),
+                          component: ue,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.PricingTools(),
+                          component: le,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.BundlesEditor(),
+                          component: F,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.DeckVerifiedAdmin(),
+                          render: () =>
+                            u.createElement(I.X, {
+                              config: {
+                                "deck-verified-results": (e) =>
+                                  u.createElement(oe, {
+                                    dataprops: e,
+                                    results: (0, g.Tc)(
+                                      "deckcompatibility",
+                                      "application_config",
+                                    ),
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.DeckCompatTestingDashboard(),
+                          render: () =>
+                            u.createElement(I.X, {
+                              config: {
+                                "deck-verified-results-inflight": (e) =>
+                                  u.createElement(oe, {
+                                    dataprops: e,
+                                    results: (0, g.Tc)(
+                                      "deckcompatibility_inflight",
+                                      "application_config",
+                                    ),
+                                  }),
+                                "deck-verified-results-submitted": (e) =>
+                                  u.createElement(oe, {
+                                    dataprops: e,
+                                    results: (0, g.Tc)(
+                                      "deckcompatibility_submitted",
+                                      "application_config",
+                                    ),
+                                  }),
+                                "deck-verified-results-published": (e) =>
+                                  u.createElement(oe, {
+                                    dataprops: e,
+                                    results: (0, g.Tc)(
+                                      "deckcompatibility_published",
+                                      "application_config",
+                                    ),
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.DeckCompatTestingAppHistory(),
+                          render: () =>
+                            u.createElement(I.X, {
+                              config: {
+                                "deck-verified-results-reports": (e) =>
+                                  u.createElement(oe, {
+                                    dataprops: e,
+                                    results: (0, g.Tc)(
+                                      "deckcompatibility_reports",
+                                      "application_config",
+                                    ),
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.DeckVerified(),
+                          render: () =>
+                            u.createElement(I.X, {
+                              config: {
+                                "deck-verified-results": () =>
+                                  u.createElement(ae, {
+                                    results: (0, g.Tc)(
+                                      "deckcompatibility",
+                                      "application_config",
+                                    ),
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.SDRConnections(),
+                          render: (e) =>
+                            u.createElement(ge, {
+                              appId: e.match.params.appid,
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.PublisherDashboard(),
+                          render: () =>
+                            u.createElement(I.X, {
+                              config: {
+                                "publisher-dashboard": () =>
+                                  u.createElement(_e, null),
+                                "promotion-review-dashboard": () =>
+                                  u.createElement(be, null),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.TimelineMarkerEditor(),
+                          render: (e) =>
+                            u.createElement(I.X, {
+                              config: {
+                                "timeline-marker-editor": () =>
+                                  u.createElement(fe, {
+                                    appId: e.match.params.appid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.HardwareReservationQueueMessaging(),
+                          component: we,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.KeyWizardPackagePage(),
+                          render: (e) =>
+                            u.createElement(I.X, {
+                              config: {
+                                "key-wizard": () =>
+                                  u.createElement(G, {
+                                    appId: e.match.params.appid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.YearInReviewProgressMonitor(),
+                          component: te,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.TaxRequirement(),
+                          component: ve,
+                        }),
+                        u.createElement(M.qh, {
+                          path: a.B.MeetSteam(),
+                          component: ye,
+                        }),
+                        u.createElement(M.qh, null, u.createElement(T.a, null)),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ),
+              )
+            : null
         );
       }
       function Ie() {
