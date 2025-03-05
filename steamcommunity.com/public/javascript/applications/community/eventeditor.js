@@ -7214,261 +7214,228 @@
             ),
             m = (e, t = !1) => (0, Ha.Nx)(e, t),
             u = (e, t = !1) => (0, Ha.mi)(e, t),
-            _ = m("all_artwork_ctn"),
-            E =
+            _ =
               (null ===
                 (t =
                   o.GetEventModel().jsondata.localized_sale_product_banner) ||
               void 0 === t
                 ? void 0
                 : t.length) || 0,
-            p =
+            E =
               (null ===
                 (a =
                   o.GetEventModel().jsondata
                     .localized_sale_product_mobile_banner) || void 0 === a
                 ? void 0
                 : a.length) || 0,
-            h =
+            p =
               (null === (n = o.GetEventModel().jsondata.localized_sale_logo) ||
               void 0 === n
                 ? void 0
                 : n.length) || 0,
-            v =
+            h =
               (null ===
                 (i = o.GetEventModel().jsondata.localized_sale_overlay) ||
               void 0 === i
                 ? void 0
                 : i.length) || 0,
-            g = [
+            v = [
               "sale_header",
               "product_banner",
               "product_mobile_banner",
               "sale_logo",
             ];
           return (
-            (0, tt.m)(o.GetClanSteamID(), !0) && g.push("sale_overlay"),
+            (0, tt.m)(o.GetClanSteamID(), !0) && v.push("sale_overlay"),
             c.createElement(
-              "div",
-              { className: un.SettingCtn },
+              c.Fragment,
+              null,
+              c.createElement(Na.V, {
+                clanSteamID: o.GetClanSteamID(),
+                rgSupportArtwork: v,
+                fnSetImageURL: o.SetImageURL,
+                bAllowPreviousClanImageSelection: !0,
+                rgRealmList: o.GetIncludedRealmList(),
+              }),
               c.createElement(
                 pn,
-                { strSectionId: "SalePageEdit_AllArtworkCtn" },
+                { strSectionId: "SalePageEdit_SaleBgImg" },
+                c.createElement(Ma.it, {
+                  id: "SalePageEdit_SaleBgImg",
+                  appid: r,
+                  eventModel: o.GetEventModel(),
+                  clanSteamID: o.GetClanSteamID(),
+                  title: (0, I.we)("#EventEditor_ArtworkType_sale_header"),
+                  artworkType: "sale_header",
+                  elEventArtworkExample: c.createElement(Ua, {
+                    artworkType: "sale_header",
+                  }),
+                  bIsMinimized: m("sale_header"),
+                  fnLangHasData: o.BHasTitleImage,
+                  fnSetImageURL: o.SetImageURL,
+                  fnGetImageHashAndExt: o.GetImageHashAndExt,
+                  fnToggleMinimize: () => u("sale_header"),
+                  partnerEventStore: l.mh,
+                  elAdditionalControls: c.createElement(cn, { editModel: o }),
+                }),
+              ),
+              c.createElement(
+                pn,
+                { strSectionId: "SalePageEdit_SaleLogo" },
                 c.createElement(
                   "div",
-                  {
-                    className: (0, D.A)(un.Title),
-                    id: "SalePageEdit_AllArtworkCtn",
-                    onDoubleClick: () => u("all_artwork_ctn"),
-                  },
-                  c.createElement(
-                    "span",
-                    null,
-                    (0, I.we)("#Sale_Artwork_Sections"),
-                  ),
-                  c.createElement(It.pn, {
-                    bIsMinimized: _,
-                    fnToggleMinimize: () => u("all_artwork_ctn"),
+                  { className: un.SalePageLogoCtn },
+                  c.createElement(Ma.it, {
+                    id: "SalePageEdit_SaleLogo",
+                    clanSteamID: o.GetClanSteamID(),
+                    eventModel: o.GetEventModel(),
+                    appid: r,
+                    title: (0, I.we)("#EventEditor_ArtworkType_sale_logo"),
+                    artworkType: "sale_logo",
+                    elEventArtworkExample: c.createElement(Ua, {
+                      artworkType: "sale_logo",
+                    }),
+                    bIsMinimized: m("sale_logo"),
+                    fnLangHasData: o.BHasTitleImage,
+                    fnSetImageURL: o.SetImageURL,
+                    fnGetImageHashAndExt: o.GetImageHashAndExt,
+                    fnToggleMinimize: () => u("sale_logo"),
+                    partnerEventStore: l.mh,
+                    fnRemoveAllArtwork:
+                      0 == p
+                        ? void 0
+                        : () => {
+                            (0, R.h5)(() => {
+                              (o.GetEventModel().jsondata.localized_sale_logo =
+                                []),
+                                o.SetDirty(q.IQ.jsondata_sales);
+                            });
+                          },
+                  }),
+                  c.createElement(x.pd, {
+                    label: (0, I.we)("#EventEditor_ArtworkType_sale_logo_url"),
+                    value: o.GetEventModel().jsondata.sale_logo_url,
+                    tooltip: (0, I.we)(
+                      "#EventEditor_ArtworkType_sale_logo_url_tooltip",
+                    ),
+                    onChange: (e) => {
+                      (0, R.h5)(() => {
+                        (o.GetEventModel().jsondata.sale_logo_url =
+                          e.target.value),
+                          o.SetDirty(q.IQ.jsondata_sales);
+                      });
+                    },
                   }),
                 ),
               ),
-              !_ &&
-                c.createElement(
-                  c.Fragment,
-                  null,
-                  c.createElement(Na.V, {
-                    clanSteamID: o.GetClanSteamID(),
-                    rgSupportArtwork: g,
-                    fnSetImageURL: o.SetImageURL,
-                    bAllowPreviousClanImageSelection: !0,
-                    rgRealmList: o.GetIncludedRealmList(),
-                  }),
-                  c.createElement(
-                    pn,
-                    { strSectionId: "SalePageEdit_SaleBgImg" },
-                    c.createElement(Ma.it, {
-                      id: "SalePageEdit_SaleBgImg",
-                      appid: r,
-                      eventModel: o.GetEventModel(),
-                      clanSteamID: o.GetClanSteamID(),
-                      title: (0, I.we)("#EventEditor_ArtworkType_sale_header"),
-                      artworkType: "sale_header",
-                      elEventArtworkExample: c.createElement(Ua, {
-                        artworkType: "sale_header",
-                      }),
-                      bIsMinimized: m("sale_header"),
-                      fnLangHasData: o.BHasTitleImage,
-                      fnSetImageURL: o.SetImageURL,
-                      fnGetImageHashAndExt: o.GetImageHashAndExt,
-                      fnToggleMinimize: () => u("sale_header"),
-                      partnerEventStore: l.mh,
-                      elAdditionalControls: c.createElement(cn, {
-                        editModel: o,
-                      }),
-                    }),
+              c.createElement(
+                pn,
+                { strSectionId: "SalePageEdit_SaleBanner" },
+                c.createElement(Ma.it, {
+                  id: "SalePageEdit_SaleBanner",
+                  clanSteamID: o.GetClanSteamID(),
+                  eventModel: o.GetEventModel(),
+                  appid: r,
+                  fnLangHasData: o.BHasTitleImage,
+                  fnSetImageURL: o.SetImageURL,
+                  fnGetImageHashAndExt: o.GetImageHashAndExt,
+                  title: (0, I.we)(
+                    "#EventEditor_ArtworkType_sale_product_banner",
                   ),
-                  c.createElement(
-                    pn,
-                    { strSectionId: "SalePageEdit_SaleLogo" },
-                    c.createElement(
-                      "div",
-                      { className: un.SalePageLogoCtn },
-                      c.createElement(Ma.it, {
-                        id: "SalePageEdit_SaleLogo",
-                        clanSteamID: o.GetClanSteamID(),
-                        eventModel: o.GetEventModel(),
-                        appid: r,
-                        title: (0, I.we)("#EventEditor_ArtworkType_sale_logo"),
-                        artworkType: "sale_logo",
-                        elEventArtworkExample: c.createElement(Ua, {
-                          artworkType: "sale_logo",
-                        }),
-                        bIsMinimized: m("sale_logo"),
-                        fnLangHasData: o.BHasTitleImage,
-                        fnSetImageURL: o.SetImageURL,
-                        fnGetImageHashAndExt: o.GetImageHashAndExt,
-                        fnToggleMinimize: () => u("sale_logo"),
-                        partnerEventStore: l.mh,
-                        fnRemoveAllArtwork:
-                          0 == h
-                            ? void 0
-                            : () => {
-                                (0, R.h5)(() => {
-                                  (o.GetEventModel().jsondata.localized_sale_logo =
-                                    []),
-                                    o.SetDirty(q.IQ.jsondata_sales);
-                                });
-                              },
-                      }),
-                      c.createElement(x.pd, {
-                        label: (0, I.we)(
-                          "#EventEditor_ArtworkType_sale_logo_url",
-                        ),
-                        value: o.GetEventModel().jsondata.sale_logo_url,
-                        tooltip: (0, I.we)(
-                          "#EventEditor_ArtworkType_sale_logo_url_tooltip",
-                        ),
-                        onChange: (e) => {
+                  artworkType: "product_banner",
+                  bIsMinimized: m("product_banner"),
+                  fnToggleMinimize: () => u("product_banner"),
+                  strWarning: s
+                    ? (0, I.we)("#Sale_BannerVisibility_Warning")
+                    : void 0,
+                  elEventArtworkExample: c.createElement(Ua, {
+                    artworkType: "product_banner",
+                  }),
+                  partnerEventStore: l.mh,
+                  fnRemoveAllArtwork:
+                    0 == _
+                      ? void 0
+                      : () => {
                           (0, R.h5)(() => {
-                            (o.GetEventModel().jsondata.sale_logo_url =
-                              e.target.value),
+                            (o.GetEventModel().jsondata.localized_sale_product_banner =
+                              []),
                               o.SetDirty(q.IQ.jsondata_sales);
                           });
                         },
-                      }),
-                    ),
+                }),
+              ),
+              c.createElement(
+                pn,
+                { strSectionId: "SalePageEdit_SaleMobileBanner" },
+                c.createElement(Ma.it, {
+                  id: "SalePageEdit_SaleMobileBanner",
+                  clanSteamID: o.GetClanSteamID(),
+                  eventModel: o.GetEventModel(),
+                  appid: r,
+                  title: (0, I.we)(
+                    "#EventEditor_ArtworkType_sale_product_mobile_banner",
                   ),
-                  c.createElement(
-                    pn,
-                    { strSectionId: "SalePageEdit_SaleBanner" },
-                    c.createElement(Ma.it, {
-                      id: "SalePageEdit_SaleBanner",
-                      clanSteamID: o.GetClanSteamID(),
-                      eventModel: o.GetEventModel(),
-                      appid: r,
-                      fnLangHasData: o.BHasTitleImage,
-                      fnSetImageURL: o.SetImageURL,
-                      fnGetImageHashAndExt: o.GetImageHashAndExt,
-                      title: (0, I.we)(
-                        "#EventEditor_ArtworkType_sale_product_banner",
-                      ),
-                      artworkType: "product_banner",
-                      bIsMinimized: m("product_banner"),
-                      fnToggleMinimize: () => u("product_banner"),
-                      strWarning: s
-                        ? (0, I.we)("#Sale_BannerVisibility_Warning")
-                        : void 0,
-                      elEventArtworkExample: c.createElement(Ua, {
-                        artworkType: "product_banner",
-                      }),
-                      partnerEventStore: l.mh,
-                      fnRemoveAllArtwork:
-                        0 == E
-                          ? void 0
-                          : () => {
-                              (0, R.h5)(() => {
-                                (o.GetEventModel().jsondata.localized_sale_product_banner =
-                                  []),
-                                  o.SetDirty(q.IQ.jsondata_sales);
-                              });
-                            },
+                  artworkType: "product_mobile_banner",
+                  bIsMinimized: m("product_mobile_banner"),
+                  fnToggleMinimize: () => u("product_mobile_banner"),
+                  fnLangHasData: o.BHasTitleImage,
+                  fnSetImageURL: o.SetImageURL,
+                  fnGetImageHashAndExt: o.GetImageHashAndExt,
+                  partnerEventStore: l.mh,
+                  strWarning: d
+                    ? (0, I.we)("#Sale_BannerVisibility_Warning")
+                    : void 0,
+                  fnRemoveAllArtwork:
+                    0 == E
+                      ? void 0
+                      : () => {
+                          (0, R.h5)(() => {
+                            (o.GetEventModel().jsondata.localized_sale_product_mobile_banner =
+                              []),
+                              o.SetDirty(q.IQ.jsondata_sales);
+                          });
+                        },
+                }),
+              ),
+              c.createElement(
+                pn,
+                { strSectionId: "SalePageEdit_SaleOverlay" },
+                c.createElement(
+                  tt.E,
+                  {
+                    clanSteamID: o.GetClanSteamID(),
+                    requireAdmin: !0,
+                    className: un.SalePageLogoCtn,
+                  },
+                  c.createElement(Ma.it, {
+                    id: "SalePageEdit_SaleOverlay",
+                    clanSteamID: o.GetClanSteamID(),
+                    eventModel: o.GetEventModel(),
+                    appid: r,
+                    title: (0, I.we)("#EventEditor_ArtworkType_sale_overlay"),
+                    artworkType: "sale_overlay",
+                    elEventArtworkExample: c.createElement(Ua, {
+                      artworkType: "sale_overlay",
                     }),
-                  ),
-                  c.createElement(
-                    pn,
-                    { strSectionId: "SalePageEdit_SaleMobileBanner" },
-                    c.createElement(Ma.it, {
-                      id: "SalePageEdit_SaleMobileBanner",
-                      clanSteamID: o.GetClanSteamID(),
-                      eventModel: o.GetEventModel(),
-                      appid: r,
-                      title: (0, I.we)(
-                        "#EventEditor_ArtworkType_sale_product_mobile_banner",
-                      ),
-                      artworkType: "product_mobile_banner",
-                      bIsMinimized: m("product_mobile_banner"),
-                      fnToggleMinimize: () => u("product_mobile_banner"),
-                      fnLangHasData: o.BHasTitleImage,
-                      fnSetImageURL: o.SetImageURL,
-                      fnGetImageHashAndExt: o.GetImageHashAndExt,
-                      partnerEventStore: l.mh,
-                      strWarning: d
-                        ? (0, I.we)("#Sale_BannerVisibility_Warning")
-                        : void 0,
-                      fnRemoveAllArtwork:
-                        0 == p
-                          ? void 0
-                          : () => {
-                              (0, R.h5)(() => {
-                                (o.GetEventModel().jsondata.localized_sale_product_mobile_banner =
-                                  []),
-                                  o.SetDirty(q.IQ.jsondata_sales);
-                              });
-                            },
-                    }),
-                  ),
-                  c.createElement(
-                    pn,
-                    { strSectionId: "SalePageEdit_SaleOverlay" },
-                    c.createElement(
-                      tt.E,
-                      {
-                        clanSteamID: o.GetClanSteamID(),
-                        requireAdmin: !0,
-                        className: un.SalePageLogoCtn,
-                      },
-                      c.createElement(Ma.it, {
-                        id: "SalePageEdit_SaleOverlay",
-                        clanSteamID: o.GetClanSteamID(),
-                        eventModel: o.GetEventModel(),
-                        appid: r,
-                        title: (0, I.we)(
-                          "#EventEditor_ArtworkType_sale_overlay",
-                        ),
-                        artworkType: "sale_overlay",
-                        elEventArtworkExample: c.createElement(Ua, {
-                          artworkType: "sale_overlay",
-                        }),
-                        bIsMinimized: m("sale_overlay"),
-                        fnToggleMinimize: () => u("sale_overlay"),
-                        fnLangHasData: o.BHasTitleImage,
-                        fnSetImageURL: o.SetImageURL,
-                        fnGetImageHashAndExt: o.GetImageHashAndExt,
-                        partnerEventStore: l.mh,
-                        fnRemoveAllArtwork:
-                          0 == v
-                            ? void 0
-                            : () => {
-                                (0, R.h5)(() => {
-                                  (o.GetEventModel().jsondata.localized_sale_overlay =
-                                    []),
-                                    o.SetDirty(q.IQ.jsondata_sales);
-                                });
-                              },
-                      }),
-                    ),
-                  ),
+                    bIsMinimized: m("sale_overlay"),
+                    fnToggleMinimize: () => u("sale_overlay"),
+                    fnLangHasData: o.BHasTitleImage,
+                    fnSetImageURL: o.SetImageURL,
+                    fnGetImageHashAndExt: o.GetImageHashAndExt,
+                    partnerEventStore: l.mh,
+                    fnRemoveAllArtwork:
+                      0 == h
+                        ? void 0
+                        : () => {
+                            (0, R.h5)(() => {
+                              (o.GetEventModel().jsondata.localized_sale_overlay =
+                                []),
+                                o.SetDirty(q.IQ.jsondata_sales);
+                            });
+                          },
+                  }),
                 ),
+              ),
             )
           );
         });
@@ -10346,7 +10313,7 @@
                 (e.border_width = a.border_width)),
                 t.GetEventModel().jsondata.sale_sections.push(e),
                 t.SetDirty(q.IQ.jsondata_sales),
-                (0, Ha.mi)(yl.mj + e.unique_id, !0);
+                (0, Ha.mi)((0, Ha.LY)(e), !0);
               const n = document.getElementById(
                 "sale_editor_button_after_all_sections",
               );
@@ -10921,7 +10888,15 @@
                     },
                     c.createElement(il.PT, { editModel: t }),
                   ),
-                  c.createElement(gn, { editModel: t }),
+                  c.createElement(
+                    En,
+                    {
+                      strSectionId: "SalePageEdit_AllArtworkCtn",
+                      hasMinimize: !0,
+                      strTitle: (0, I.we)("#Sale_Artwork_Sections"),
+                    },
+                    c.createElement(gn, { editModel: t }),
+                  ),
                   (t.BHasTag("contenthub") ||
                     t.GetEventModel().BUsesContentHubForItemSource()) &&
                     c.createElement(
