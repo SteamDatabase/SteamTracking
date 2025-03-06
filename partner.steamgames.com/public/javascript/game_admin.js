@@ -789,7 +789,7 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 					var json = jQuery.parseJSON( response.responseText );
 					if ( json.redirect )
 					{
-						redirectURL.set( json.redirect );
+						redirectURL = new URL( json.redirect );
 					}
 				}
 				catch(err)
