@@ -6585,7 +6585,10 @@
               c.createElement(Qa.A, {
                 items: l || [],
                 onDelete: (e) => {
-                  a.jsondata.contenthub_section_groups.splice(e, 1),
+                  (a.jsondata.contenthub_section_groups = [
+                    ...a.jsondata.contenthub_section_groups.slice(0, e),
+                    ...a.jsondata.contenthub_section_groups.slice(e + 1),
+                  ]),
                     t.SetDirty(q.IQ.jsondata_sales);
                 },
                 onReorder: () => {
@@ -6608,10 +6611,10 @@
                   style: { maxWidth: "200px", margin: "0 auto" },
                   onClick: () => {
                     l || (a.jsondata.contenthub_section_groups = []),
-                      a.jsondata.contenthub_section_groups.push({
-                        name: "",
-                        sections: [],
-                      }),
+                      (a.jsondata.contenthub_section_groups = [
+                        ...a.jsondata.contenthub_section_groups,
+                        { name: "", sections: [] },
+                      ]),
                       t.SetDirty(q.IQ.jsondata_sales);
                   },
                 },
@@ -6717,7 +6720,11 @@
                 c.createElement(Qa.A, {
                   items: s,
                   onDelete: (e) => {
-                    a.sections.splice(e, 1), i();
+                    (a.sections = [
+                      ...a.sections.slice(0, e),
+                      ...a.sections.slice(e + 1),
+                    ]),
+                      i();
                   },
                   onReorder: () => {
                     i();
@@ -6734,7 +6741,7 @@
                   {
                     style: { maxWidth: "150px", margin: "0 auto" },
                     onClick: () => {
-                      a.sections.push({ sectionid: 0 }), i();
+                      (a.sections = [...a.sections, { sectionid: 0 }]), i();
                     },
                   },
                   "Add Section",

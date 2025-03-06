@@ -25782,10 +25782,13 @@
         return null;
       }
       const ve = (0, m.PA)((e) => {
-          const { item: t } = e,
-            a = Array.from(t.tags),
-            n = Array.from(t.manually_removed_tags),
-            r = (function (e, t) {
+          var t;
+          const { item: a } = e,
+            n = Array.from(a.tags),
+            r = Array.from(
+              null !== (t = a.manually_removed_tags) && void 0 !== t ? t : [],
+            ),
+            i = (function (e, t) {
               var a;
               if (!(null == t ? void 0 : t.clauses)) return null;
               let n = null;
@@ -25812,29 +25815,29 @@
                     ));
                 }
               return n;
-            })(t.tags, e.filter);
-          return 0 !== a.length || r
-            ? (a.sort((e, t) => e.localeCompare(t)),
-              n.sort((e, t) => e.localeCompare(t)),
+            })(a.tags, e.filter);
+          return 0 !== n.length || i
+            ? (n.sort((e, t) => e.localeCompare(t)),
+              r.sort((e, t) => e.localeCompare(t)),
               p.createElement(
                 "div",
                 { className: K.TagListCtn },
-                a.map((t) =>
+                n.map((t) =>
                   p.createElement(Se, {
                     key: t,
                     tag: t,
                     className: he(t, e.lowerTagHighlight, e.filter),
                   }),
                 ),
-                r &&
-                  r.map((e) =>
+                i &&
+                  i.map((e) =>
                     p.createElement(Se, {
                       key: e,
                       tag: e,
                       className: K.TagMissingMustHave,
                     }),
                   ),
-                n.map((e) =>
+                r.map((e) =>
                   p.createElement(Se, {
                     key: e,
                     tag: e,
