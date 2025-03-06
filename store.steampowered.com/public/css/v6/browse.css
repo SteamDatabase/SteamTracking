@@ -215,9 +215,13 @@ a.linkbar .rightblock {
 		font-weight: normal; /* normal */
 
 			color: #9fbbcb;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+}
+
+.tab_filter_label_container {
+	display: inline-grid;
+	grid-template-columns: min-content 1fr min-content;
+	align-items: first baseline;
+	column-gap: 0.3em;
 }
 
 /* Control rows may contain multiple tab_filter_control elements */
@@ -274,6 +278,7 @@ a.linkbar .rightblock {
     margin-right: 8px;
     background-image: url('/public/images/v6/store_checkbox_blue.png');
     vertical-align: text-bottom;
+    transform: translateY(3px);
 }
 
 .tab_filter_control.checked .tab_filter_control_checkbox {
@@ -281,6 +286,7 @@ a.linkbar .rightblock {
 }
 
 .tab_filter_control_label {
+    line-height: 18px;
 }
 
 .tab_filter_control_count {
