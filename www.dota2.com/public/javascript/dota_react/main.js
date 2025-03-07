@@ -4083,6 +4083,7 @@
     },
     42068: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         DropDownLabelContainer: "WGRg79ExP6GCGXvfbKHnW",
         DropDownLabelIconContainer: "_2dv-tHiETJpwoNR4qda8Yy",
         DropDownLabelTextColumn: "scqOyOhzLG1ILjkESVhKo",
@@ -4094,6 +4095,7 @@
     58397: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         GamepadDialogContent: "Gn6rCaeHY6oz4E2htUUnx",
         GamepadDialogContent_InnerWidth: "_2XvVdM8tjvLxNINBeen1jw",
         Field: "BBGW4g_bAleGAh0nqq6HQ",
@@ -4285,11 +4287,15 @@
     },
     11274: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "_379hM8SldkWsIeOw8iDwTR",
+        PagedSettingDialog_ContentColumn: "_1ehfiHrR2AkePl29R_gREf",
+        PagedSettingsDialog_PageListColumn: "_2Cma8Q1UUQKmgVQsSehMn4",
+        ResponsivePageList: "PpGQPXYONiQan8nMMYQYC",
+        ResponsiveActivePage: "_2AKgRWxj7J7n5Lnl28uOsb",
         PagedSettingsDialog_PageContent: "_26LM5I-nV8e9ADBPXnuet8",
         NoPadding: "_3lgYNbn_6dENzv6HLTG-G1",
-        PagedSettingsDialog_PageListColumn: "_2Cma8Q1UUQKmgVQsSehMn4",
         Hidden: "_1jiGkBJhP7b8nMnVnr-Pcu",
         NewNoteButton: "_1HPFkO3r598oAAYgSt8DUv",
         PagedSettingsDialog_Title: "_3gBLRapFbnspRrWhWCl1zp",
@@ -4304,6 +4310,7 @@
         PageListSeparator: "_17Ug7HE6yB6_RSHpWGGK5C",
         Transparent: "pR-Zm42mlL1Qa9beLSOUd",
         HidePageListButton: "xhtqnZU2UAy643gfJkuIC",
+        ReturnToPageListButton: "_1umh2aED4hNvUDgA3BXyzA",
       };
     },
     8073: (e) => {
@@ -6592,7 +6599,7 @@
         G = a(4417),
         W = a(32389),
         O = a(18804),
-        x = a(83640);
+        x = a(73202);
       const { detect: U } = a(51744),
         F = U();
       function z() {
@@ -41071,7 +41078,7 @@
         g = a(36305),
         h = a(90622),
         E = a(94610),
-        b = a(83640),
+        b = a(73202),
         f = a(33706),
         v = a(72674),
         y = a(54159);
@@ -43119,7 +43126,7 @@
         _ = a(27866),
         p = a(47202),
         g = a(36305),
-        h = a(83640),
+        h = a(73202),
         E = a(94610),
         b = a(33706),
         f = a(18804),
@@ -47937,6 +47944,7 @@
                     br: n.qM.readFixed64String,
                     bw: n.gp.writeFixed64String,
                   },
+                  is_valveds: { n: 44, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             l.sm_m
@@ -52619,11 +52627,7 @@
                     br: ce.qM.readUint64String,
                     bw: ce.gp.writeUint64String,
                   },
-                  language: {
-                    n: 3,
-                    br: ce.qM.readUint32,
-                    bw: ce.gp.writeUint32,
-                  },
+                  language: { n: 3, br: ce.qM.readInt32, bw: ce.gp.writeInt32 },
                 },
               }),
             mt.sm_m
@@ -74029,7 +74033,8 @@
                 31,
                 null,
               )),
-              void 0 !== a.jsondata.sale_num_headers)
+              void 0 !== a.jsondata.sale_num_headers &&
+                a.jsondata.localized_per_day_sales_header)
             )
               for (let e = 0; e < a.jsondata.sale_num_headers; ++e)
                 a.jsondata.localized_per_day_sales_header[e] = (0, j.$Y)(
@@ -76109,6 +76114,11 @@
                     n: 21,
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
+                  },
+                  limited_launch_active: {
+                    n: 22,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
                   },
                 },
               }),
@@ -80873,6 +80883,9 @@
                   )
                 : !!this.m_ReleaseInfo?.custom_release_date_message)
           );
+        }
+        BLimitedLaunchActive() {
+          return this.m_ReleaseInfo?.limited_launch_active;
         }
         BIsPrePurchase() {
           return (
@@ -85655,9 +85668,13 @@
         let u = null;
         "object" == typeof r[d] && (u = r[d]);
         const _ = n.useRef(null),
-          p = n.useCallback(() => _.current?.TakeFocus(), [_]),
+          p = n.useCallback(() => _.current?.TakeFocus() || !1, [_]),
           [g, h] = n.useState(!1),
-          E = n.useCallback(
+          E = g ? p : void 0,
+          b = n.useCallback((e) => {
+            e && h(!0);
+          }, []),
+          f = n.useCallback(
             (e, t) => {
               h(!0),
                 Ue.eZ.PlayNavSound(Ue.PN.PagedNavigation),
@@ -85666,16 +85683,16 @@
             },
             [o, i],
           ),
-          b = n.useRef(null),
-          f = e.showTitle ?? !0,
-          v = (0, m.A)(
+          v = n.useRef(null),
+          y = e.showTitle ?? !0,
+          S = (0, m.A)(
             "DialogContentTransition",
             a.PagedSettingDialog_ContentColumn,
           );
         n.useEffect(() => {
-          e.bAutoFocusPageContent && b.current?.TakeFocus();
+          e.bAutoFocusPageContent && v.current?.TakeFocus();
         }, []);
-        const { refForPageList: y, refForPage: S } = (function () {
+        const { refForPageList: w, refForPage: T } = (function () {
           const e = n.useMemo(() => new Ze(), []);
           n.useEffect(
             () => (
@@ -85722,13 +85739,11 @@
               navRef: _,
               onButtonDown: (e) => {
                 e.detail.button == Oe.pR.OK &&
-                  b.current?.TakeFocus(e.detail.button);
+                  v.current?.TakeFocus(e.detail.button);
               },
-              onFocusWithin: (e) => {
-                e && h(!0);
-              },
+              onFocusWithin: b,
             },
-            f &&
+            y &&
               n.createElement(
                 "div",
                 { className: a.PagedSettingsDialog_Title },
@@ -85742,18 +85757,18 @@
                   a.PagedSettingsDialog_PageList,
                   e.disablePageListScrolling &&
                     a.PagedSettingsDialog_PageList_DisableScrolling,
-                  f && a.PagedSettingsDialog_PageList_ShowTitle,
+                  y && a.PagedSettingsDialog_PageList_ShowTitle,
                   e.bNoHeaderPadding &&
                     a.PageSettingsDialog_PageList_NoHeaderPadding,
                 ),
                 navEntryPreferPosition: xe.iU.PREFERRED_CHILD,
-                ref: y,
+                ref: w,
               },
               n.createElement(Je, {
                 stylesheet: a,
                 pages: r,
                 iActivePage: d,
-                onPageSelected: E,
+                onPageSelected: f,
                 PageListItemComponent: e.PageListItemComponent,
                 PageListSeparatorComponent: e.PageListSeparatorComponent,
               }),
@@ -85762,15 +85777,15 @@
           ),
           n.createElement(
             s.Z,
-            { className: v, onCancelButton: g ? p : void 0, navRef: b },
+            { className: S, onCancelButton: E, navRef: v },
             e.toggleHideList &&
               n.createElement(nt, {
                 hideList: e.hideList,
                 toggleHideList: e.toggleHideList,
               }),
             e.renderPageContent
-              ? e.renderPageContent(u, S, et)
-              : n.createElement(et, { ref: S, activePage: u, stylesheet: a }),
+              ? e.renderPageContent(u, T, et)
+              : n.createElement(et, { ref: T, activePage: u, stylesheet: a }),
           ),
         );
       });
@@ -86150,8 +86165,14 @@
         );
       }
       function ft(e) {
-        const { sizeClass: t, children: a, childrenClasses: r, ...i } = e,
-          [o, l, c, d] = (function () {
+        const {
+            sizeClass: t,
+            children: a,
+            childrenClasses: r,
+            navKey: i,
+            ...o
+          } = e,
+          [l, c, d, u] = (function () {
             let e = n.useRef(null),
               t = n.useRef();
             n.useLayoutEffect(() => {
@@ -86193,41 +86214,41 @@
               }, [t]);
             return [e, a, r, i];
           })(),
-          u = n.useRef(!0),
-          _ = n.useCallback(() => u.current, [u]),
-          p = n.useCallback(() => {
-            (u.current = !0), c();
-          }, [c]),
+          _ = n.useRef(!0),
+          p = n.useCallback(() => _.current, [_]),
           g = n.useCallback(() => {
-            (u.current = !1), d();
+            (_.current = !0), d();
           }, [d]),
-          h = e.childrenClasses,
-          E = {
-            enter: h.enterStart,
-            enterActive: h.enterEnd,
-            exit: h.exitStart,
-            exitActive: h.exitEnd,
+          h = n.useCallback(() => {
+            (_.current = !1), u();
+          }, [u]),
+          E = e.childrenClasses,
+          b = {
+            enter: E.enterStart,
+            enterActive: E.enterEnd,
+            exit: E.exitStart,
+            exitActive: E.exitEnd,
           };
-        return o.current && !o.current.ownerDocument.defaultView
+        return l.current && !l.current.ownerDocument.defaultView
           ? null
           : n.createElement(
               Et.A,
               {
-                nodeRef: o,
-                classNames: E,
+                nodeRef: l,
+                classNames: b,
                 in: !0,
                 timeout: 1e4,
-                addEndListener: l,
-                onEntering: p,
-                onExiting: g,
-                ...i,
+                addEndListener: c,
+                onEntering: g,
+                onExiting: h,
+                ...o,
               },
               n.createElement(
                 "div",
-                { ref: o, className: (0, m.A)(gt().ContentWrapper, t, h.base) },
+                { ref: l, className: (0, m.A)(gt().ContentWrapper, t, E.base) },
                 n.createElement(
                   s.Z,
-                  { className: t, fnCanTakeFocus: _ },
+                  { className: t, fnCanTakeFocus: p, navKey: i },
                   e.children,
                 ),
               ),
@@ -86887,7 +86908,7 @@
           },
           [l, m, r],
         );
-        n.useEffect(() => {
+        n.useLayoutEffect(() => {
           const e = function () {
             _.current &&
               ((0, ee.w)(
