@@ -60782,6 +60782,7 @@
             rgCandidateApps: W,
             rgAppIDs: j,
             oFeaturingMaps: n,
+            rtUpcomingFeatureStart: L,
           }),
           c.createElement(Sr, { nDisplayedApps: j.length, strQueryParams: H }),
         );
@@ -60957,11 +60958,16 @@
         );
       }
       function yr(e) {
-        const { rgCandidateApps: t, rgAppIDs: a, oFeaturingMaps: n } = e,
-          r = (0, Ie.f1)(),
-          i = r - Xn.Kp.PerDay * (mr + 1),
-          s = (0, Sa.qX)(i, r - Xn.Kp.PerDay, a),
-          l = (function () {
+        const {
+            rgCandidateApps: t,
+            rgAppIDs: a,
+            oFeaturingMaps: n,
+            rtUpcomingFeatureStart: r,
+          } = e,
+          i = (0, Ie.f1)(),
+          s = i - Xn.Kp.PerDay * (mr + 1),
+          l = (0, Sa.qX)(s, i - Xn.Kp.PerDay, a),
+          o = (function () {
             const [e] = (0, c.useState)(() =>
               (0, Qn.Tc)("upcoming_discount_app_details", "application_config"),
             );
@@ -61023,8 +61029,9 @@
                 key: e.appid,
                 appInfo: e,
                 oFeaturingMaps: n,
-                oRevenueSummary: s,
-                oUpcomingAppDiscountInfo: l.get(e.appid),
+                oRevenueSummary: l,
+                rtUpcomingFeatureStart: r,
+                oUpcomingAppDiscountInfo: o.get(e.appid),
               }),
             ),
           ),
@@ -61032,11 +61039,13 @@
       }
       function vr(e) {
         const {
-          appInfo: t,
-          oFeaturingMaps: a,
-          oRevenueSummary: n,
-          oUpcomingAppDiscountInfo: r,
-        } = e;
+            appInfo: t,
+            oFeaturingMaps: a,
+            oRevenueSummary: n,
+            oUpcomingAppDiscountInfo: r,
+            rtUpcomingFeatureStart: i,
+          } = e,
+          s = i > Date.now() / 1e3;
         return c.createElement(
           "tr",
           { className: Vn().CandidateRow },
@@ -61107,7 +61116,7 @@
           c.createElement(
             "td",
             { className: Vn().InviteActions },
-            c.createElement(Cr, { appInfo: t, oFeaturingMaps: a }),
+            s && c.createElement(Cr, { appInfo: t, oFeaturingMaps: a }),
           ),
         );
       }
@@ -64156,27 +64165,22 @@
           } = e,
           o = (0, m.useMemo)(() => [t], [t]),
           c = (0, l.PZ)(104, o),
-          d = (e, t) => 1e3 * (e.rtWeekStart + t.rtStartModifier),
-          u = (0, m.useMemo)(() => {
+          d = (0, m.useMemo)(() => {
             const e = r.Qo.get(t),
-              a = c
-                ?.get(t)
-                ?.filter((t) => d(t, e) > Date.now())
-                .map((t) => {
-                  let a = e.nMaxSlots - t.rgPlans?.length;
-                  a < 0 && (a = 0);
-                  const n = new Date(d(t, e));
-                  return (
-                    n.setHours(10),
-                    {
-                      label: e.fnRenderWeekDisplayForSelection(
-                        t.rtWeekStart,
-                        a,
-                      ),
-                      data: Math.floor(n.getTime() / 1e3),
-                    }
-                  );
-                });
+              a = c?.get(t)?.map((t) => {
+                let a = e.nMaxSlots - t.rgPlans?.length;
+                a < 0 && (a = 0);
+                const n = new Date(
+                  ((e, t) => 1e3 * (e.rtWeekStart + t.rtStartModifier))(t, e),
+                );
+                return (
+                  n.setHours(10),
+                  {
+                    label: e.fnRenderWeekDisplayForSelection(t.rtWeekStart, a),
+                    data: Math.floor(n.getTime() / 1e3),
+                  }
+                );
+              });
             return a;
           }, [c, t]);
         return (
@@ -64197,7 +64201,7 @@
             m.createElement(p.JU, null, "Choose a week:"),
             m.createElement(p.m, {
               strDropDownClassName: h().DropDownScroll,
-              rgOptions: u,
+              rgOptions: d,
               selectedOption: a,
               onChange: (e) => {
                 const a = r.Qo.get(t);
