@@ -12,7 +12,7 @@
         HasImage: "_2-lMV2nN-RNIN6b7ggfOQY",
         BackgroundImage: "_1Tu9TzCMyCaDCxi_LZsw7R",
         Dimmed: "_3vx7I2DbzVxsE2u0v5Ie-Y",
-        ExtraBlur: "_3_dtCEjRpmLLNOmkclrDcC",
+        BackgroundColor: "_3y7fdv_YPkakfL0WMx9G2b",
         ItemNameInfoContainer: "_2cVvcDGlKQl4ctvOXNJnbj",
         ItemInfoHeader: "bqRJHlem6AtsG_mqGj-nl",
         InlineDate: "_3IvASkrz_KwzUlcsqeLF6b",
@@ -14694,31 +14694,34 @@
         d = a(26408);
       function u(e) {
         const {
-          children: t,
-          hasImage: a,
-          dimmed: s,
-          backgroundImageUrl: l,
-          backgroundExtraBlur: o,
-          buttonPosition: c,
-        } = e;
+            children: t,
+            hasImage: a,
+            dimmed: s,
+            backgroundImageUrl: l,
+            backgroundColor: o,
+            buttonPosition: c,
+          } = e,
+          m = o ? { "--background-color": o } : void 0;
         return n.createElement(
           "div",
           {
-            className: (0, i.A)(
-              r.ItemContainer,
-              a && r.HasImage,
-              "top" == c && r.ButtonsOnTop,
-              "bottom" == c && r.ButtonsOnBottom,
-            ),
+            className: (0, i.A)({
+              [r.ItemContainer]: !0,
+              [r.HasImage]: a,
+              [r.ButtonsOnTop]: "top" == c,
+              [r.ButtonsOnBottom]: "bottom" == c,
+            }),
+            style: m,
           },
           l &&
             n.createElement("img", {
-              className: (0, i.A)(
-                r.BackgroundImage,
-                o && r.ExtraBlur,
-                s && r.Dimmed,
-              ),
+              className: (0, i.A)(r.BackgroundImage, s && r.Dimmed),
               src: l,
+            }),
+          o &&
+            n.createElement("div", {
+              className: (0, i.A)(r.BackgroundColor, s && r.Dimmed),
+              style: m,
             }),
           t,
         );
@@ -14941,7 +14944,9 @@
       "use strict";
       a.d(t, {
         Gx: () => l,
+        _w: () => d,
         ap: () => i,
+        cG: () => m,
         iN: () => o,
         pc: () => c,
         sq: () => s,
@@ -15038,6 +15043,20 @@
           };
         let s = a;
         return e in i ? (s = i[e]) : t || (s = n), s;
+      }
+      function m(e) {
+        if ("seasonalsale" == e.type) {
+          const t = e.name.toLowerCase();
+          if (t.includes("spring")) return "#dd71d4";
+          if (t.includes("summer")) return "#29c6ec";
+          if (t.includes("autumn")) return "#ac240c";
+          if (t.includes("winter")) return "#01704f";
+        }
+      }
+      function d(e) {
+        let t = 0;
+        for (let a = 0; a < e.length; a++) t = e.charCodeAt(a) + ((t << 5) - t);
+        return `hsl(${t % 360}, ${50 + (t % 50)}%, ${40 + (t % 30)}%, 0.25)`;
       }
     },
     68225: (e, t, a) => {

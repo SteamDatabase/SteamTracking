@@ -225,7 +225,7 @@
         return l.useMemo(() => t?.data, [e, t.isLoading]);
       }
     },
-    79: (e, t, a) => {
+    3182: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => Ma });
       var n = a(90626),
@@ -2181,15 +2181,11 @@
                 "#Dashboard_UpcomingEvents_Events_OptIn_Button_AssetKit",
               ),
             ),
-          );
+          ),
+          D = (0, se.cG)(a);
         return n.createElement(
           ie.b1,
-          {
-            hasImage: !0,
-            dimmed: t.dimmed,
-            backgroundImageUrl: c ? d : void 0,
-            backgroundExtraBlur: !0,
-          },
+          { dimmed: t.dimmed, backgroundColor: D },
           n.createElement(We, {
             warnings: g,
             eventName: t.title,
@@ -2312,18 +2308,32 @@
             l?.description.opt_in_name &&
             _ &&
             (0, ve.Yi)(l?.description.opt_in_name, a, _),
-          g = (e, t) => e?.map((e) => ({ details: e, bRegistered: t })) ?? [],
-          v = n.useMemo(
+          g = n
+            .useMemo(() => {
+              const e = (0, r.Tc)(
+                "rgPartnerDashboardAssets",
+                "application_config",
+              );
+              return e
+                ? Object.keys(e).reduce((t, a) => t.set(a, e[a]), new Map())
+                : new Map();
+            }, [])
+            .get("optin_placeholder_banner"),
+          v = u ?? g,
+          E = u ? void 0 : (0, se._w)(s.id),
+          D = (e, t) => e?.map((e) => ({ details: e, bRegistered: t })) ?? [],
+          h = n.useMemo(
             () =>
-              (0, se.Gx)(g(l?.rgEligibleApps, !1), g(l?.rgRegisteredApps, !0)),
+              (0, se.Gx)(D(l?.rgEligibleApps, !1), D(l?.rgRegisteredApps, !0)),
             [l?.rgEligibleApps, l?.rgRegisteredApps],
           ),
-          E = v?.length > 0;
+          y = h?.length > 0;
         return n.createElement(
           ie.b1,
           {
-            buttonPosition: E ? "bottom" : void 0,
-            backgroundImageUrl: u,
+            buttonPosition: y ? "bottom" : void 0,
+            backgroundImageUrl: v,
+            backgroundColor: E,
             dimmed: t.dimmed,
           },
           n.createElement(We, {
@@ -2340,7 +2350,7 @@
               eventData: t,
               eventUrl: o,
               optIn: l,
-              invitedAndRegisteredApps: v,
+              invitedAndRegisteredApps: h,
             }),
         );
       }

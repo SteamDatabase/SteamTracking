@@ -1318,8 +1318,16 @@ span._2_0t_pDYqkDefMC0gDZV8G {
 ._1Tu9TzCMyCaDCxi_LZsw7R._3vx7I2DbzVxsE2u0v5Ie-Y {
   opacity: 0.15;
 }
-._1Tu9TzCMyCaDCxi_LZsw7R._3_dtCEjRpmLLNOmkclrDcC {
-  filter: blur(18px);
+._3y7fdv_YPkakfL0WMx9G2b {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transform: scale(3) translateY(-6px) translateX(-10px);
+  background: linear-gradient(60deg, var(--background-color), #000000);
+}
+._3y7fdv_YPkakfL0WMx9G2b._3vx7I2DbzVxsE2u0v5Ie-Y {
+  opacity: 0.15;
 }
 ._2cVvcDGlKQl4ctvOXNJnbj {
   grid-area: text;
