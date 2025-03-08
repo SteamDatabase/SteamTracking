@@ -42,7 +42,6 @@
   none\n
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./01230|
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  $8O[lv
@@ -13729,6 +13728,8 @@ $steammessages_parental_objects.proto"
 @nClientEnableHTTP2PlatformWindows
 @nClientEnableIPv6ForHTTPPlatformLinux
 @nClientEnableIPv6ForHTTPPlatformWindows
+@nClientInitWindowSizeHTTP2Connection
+@nClientInitWindowSizeHTTP2Stream
 @nClientQueryCMDirectoryBeforeConnect
 @nClientServiceMethodForDownloadListPercent
 @nContentUpdateAutoVerifyCleanBytesThresholdMB
@@ -19608,7 +19609,6 @@ H7_Ya
 H8xp
 H@H9xqI
 HB15CFlickStickMode
-HB@F|
 HBJ\nTRF
 HEAD
 HEADERS: could not unpack

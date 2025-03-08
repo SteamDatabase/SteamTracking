@@ -1102,7 +1102,6 @@ Error
 Ethiopic
 ExtensionRange
 ExtensionRangeOptions
-F"PTsg9G
 FAIL
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for

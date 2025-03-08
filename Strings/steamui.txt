@@ -15302,7 +15302,7 @@ Mandaic
 Manual
 Manual recording for game %s, no retention interval
 ManuallyDeleteRecordingsForApps
-Mar  4 2025 23:26:07
+Mar  6 2025 23:51:37
 MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
