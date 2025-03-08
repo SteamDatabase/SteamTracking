@@ -3744,10 +3744,10 @@
         if (!l) return null;
         const o = (
             i ? l.GetTrailer480p().strWebMURL : l.GetTrailerMax().strWebMURL
-          ).replace("http://", "https://"),
+          )?.replace("http://", "https://"),
           c = (
             i ? l.GetTrailer480p().strMP4URL : l.GetTrailerMax().strMP4URL
-          ).replace("http://", "https://");
+          )?.replace("http://", "https://");
         return a.createElement(
           d.EN,
           { active: r },

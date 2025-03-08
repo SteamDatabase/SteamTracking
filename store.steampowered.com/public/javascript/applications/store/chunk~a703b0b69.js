@@ -5550,10 +5550,10 @@
         if (!i) return null;
         const l = (
             r ? i.GetTrailer480p().strWebMURL : i.GetTrailerMax().strWebMURL
-          ).replace("http://", "https://"),
+          )?.replace("http://", "https://"),
           c = (
             r ? i.GetTrailer480p().strMP4URL : i.GetTrailerMax().strMP4URL
-          ).replace("http://", "https://");
+          )?.replace("http://", "https://");
         return s.createElement(
           _.EN,
           { active: a },
@@ -21305,9 +21305,9 @@
             `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)` +
             r,
           backgroundRepeat: e.background_repeat,
-          borderStyle: e.border_color && e.border_width ? "solid" : void 0,
-          borderColor: e.border_color,
-          borderWidth: e.border_width ? `${e.border_width}px` : void 0,
+          outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
+          outlineColor: e.border_color,
+          outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
         };
       }
     },
