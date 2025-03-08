@@ -22335,7 +22335,10 @@
                       u(),
                         t.item_browse_section_data.tabs ||
                           (t.item_browse_section_data.tabs = []),
-                        t.item_browse_section_data.tabs.push(e),
+                        (t.item_browse_section_data.tabs = [
+                          ...t.item_browse_section_data.tabs,
+                          e,
+                        ]),
                         a.SetDirty(r.IQ.jsondata_sales);
                     },
                   },
@@ -22426,7 +22429,8 @@
               const { item_browse_section_data: n } = t;
               e >= 0 &&
                 e < n.tabs.length &&
-                (n.tabs.splice(e, 1), a.SetDirty(r.IQ.jsondata_sales));
+                ((n.tabs = [...n.tabs.slice(0, e), ...n.tabs.slice(e + 1)]),
+                a.SetDirty(r.IQ.jsondata_sales));
             },
             onReorder: () => a.SetDirty(r.IQ.jsondata_sales),
             render: (e) =>
@@ -22489,7 +22493,8 @@
                 ? void 0
                 : e.show_flavor_on_sale_tabs,
             ];
-          });
+          }),
+          h = (0, Ae.CH)();
         return c.createElement(
           "div",
           {
@@ -22527,7 +22532,8 @@
                             {}),
                           (n.item_browse_section_data.show_flavor_on_sale_tabs[
                             r
-                          ] = e);
+                          ] = e),
+                          h();
                       },
                     );
                 },
