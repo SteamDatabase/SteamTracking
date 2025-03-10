@@ -587,6 +587,11 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
 
+				if( str_ends_with( $File, '.css' ) )
+				{
+					system( 'node fix_css.mjs ' . escapeshellarg( $File ) );
+				}
+
 				return true;
 			}
 
@@ -940,6 +945,15 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
 
 						unlink( $FilepathOnDisk );
+
+						if ( str_ends_with( $Filename, '.css'))
+						{
+							$FixedFilepathOnDisk = str_replace('.css', '.fixed.css', $FilepathOnDisk);
+							if ( file_exists( $FixedFilepathOnDisk) ){
+								unlink( $FixedFilepathOnDisk );
+							}
+							
+						}
 					}
 				}
 			}
