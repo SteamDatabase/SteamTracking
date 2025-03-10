@@ -68748,7 +68748,7 @@
             ),
           z &&
             x &&
-            (z.association.appid && x.association.appid
+            (z.association?.appid && x.association?.appid
               ? z.association.appid != x.association.appid &&
                 H.push(
                   "Takeover's AppID doesn't match Spotlight's Appid. Required for them to appropriately filter out and show only one or the other on the front page",

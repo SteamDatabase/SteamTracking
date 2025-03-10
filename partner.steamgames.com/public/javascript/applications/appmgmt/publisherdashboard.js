@@ -2152,10 +2152,9 @@
             g.push(
               'Asset request with "Enable requesting featuring assets from partner" disabled.',
             ));
-        const v =
-            a.discount_event_id && !t.m_assetInput?.enable_input
-              ? `${r.TS.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${a.discount_event_id}`
-              : void 0,
+        const v = a.discount_event_id
+            ? `${r.TS.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${a.discount_event_id}`
+            : void 0,
           E = n.createElement(
             n.Fragment,
             null,
