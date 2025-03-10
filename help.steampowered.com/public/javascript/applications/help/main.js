@@ -35909,7 +35909,8 @@
               });
             return r ? r.get(e) : null;
           })(t),
-          l = i.useMemo(() => Cs.b.InitFromAccountID(t), [t]);
+          l = i.useMemo(() => Cs.b.InitFromAccountID(t), [t]),
+          c = `${a.TS.COMMUNITY_BASE_URL}profiles/${l.ConvertTo64BitString()}`;
         return i.createElement(
           i.Fragment,
           null,
@@ -35920,8 +35921,8 @@
                 Boolean(!r) && i.createElement("span", null, t),
               )
             : i.createElement(
-                i.Fragment,
-                null,
+                "a",
+                { href: c },
                 i.createElement("img", {
                   className: J_.SmallAvatar,
                   src: s.avatar_url,
