@@ -61045,7 +61045,8 @@
             oUpcomingAppDiscountInfo: r,
             rtUpcomingFeatureStart: i,
           } = e,
-          s = i > Date.now() / 1e3;
+          s = Date.now() / 1e3,
+          l = !i || i > s;
         return c.createElement(
           "tr",
           { className: Vn().CandidateRow },
@@ -61116,7 +61117,7 @@
           c.createElement(
             "td",
             { className: Vn().InviteActions },
-            s && c.createElement(Cr, { appInfo: t, oFeaturingMaps: a }),
+            l && c.createElement(Cr, { appInfo: t, oFeaturingMaps: a }),
           ),
         );
       }
