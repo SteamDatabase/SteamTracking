@@ -2185,7 +2185,7 @@
                   );
                 return a.getTime() > n.getTime() ? -1 : 1;
               }),
-              [e, 1 == e[0]?.data.status]
+              [e, Boolean(1 == e[0]?.data.status && !q(e[0]))]
             );
           }, [t]),
           E =
@@ -2226,7 +2226,7 @@
                   !v &&
                     y.length > 0 &&
                     y.map((e, t) =>
-                      n.createElement(q, {
+                      n.createElement(M, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2339,7 +2339,7 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(q, {
+            n.createElement(M, {
               requirement: {
                 deadline: c,
                 index: 0,
@@ -2351,6 +2351,12 @@
         );
       }
       function q(e) {
+        return (
+          "F1099MISC-ConsentYes" ==
+          JSON.parse(e.data.description_jsondata).TemplateName
+        );
+      }
+      function M(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           [, i] = P(),
