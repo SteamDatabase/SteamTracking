@@ -3209,7 +3209,7 @@ html.responsive.touch
   font-size: 14px;
 }
 :root {
-  --SaleTabActiveColor: #1a9fff;
+  --SaleTabActiveColor: #ffffff;
 }
 ._3CGy1EaqFgVMH1Atf-TZBY {
   top: var(--store-menu-floating-height, 0);
@@ -3231,15 +3231,15 @@ html.responsive.touch
   border-radius: 6px;
   background: linear-gradient(
     0deg,
-    rgba(40, 40, 40, 0.8) 0%,
-    rgba(46, 46, 46, 0.5) 100%
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.2) 100%
   );
   transition: min-width .1s ease-in-out, border-radius .1s ease-in-out;
 }
 ._3CGy1EaqFgVMH1Atf-TZBY._2P-ZMXBIYxxEX4hUBvsc_X {
   min-width: calc(100% - 36px);
   border-radius: 0px;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 .ContentHubSalePage ._3CGy1EaqFgVMH1Atf-TZBY {
   min-width: 1200px;
@@ -3306,7 +3306,7 @@ html.responsive.touch ._3CGy1EaqFgVMH1Atf-TZBY.bbrJe67htmr9l7c4QhXj2 {
   width: 100%;
 }
 ._3CGy1EaqFgVMH1Atf-TZBY ._3TmdJrZXFOKA4pBsq7O-tk {
-  color: #fff;
+  color: #dcdedf;
   font-size: 16px;
   min-width: max-content;
   width: auto;

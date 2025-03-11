@@ -12348,7 +12348,6 @@
         (0, be.Cg)([Ze.sH], Zi.prototype, "m_strBroadcastTitle", void 0),
         (0, be.Cg)([Ze.sH], Zi.prototype, "m_bCommunityBanned", void 0),
         (0, be.Cg)([Ze.sH], Zi.prototype, "m_bOnSteamDeck", void 0);
-      r(2963);
       var en = r(8632),
         tn = r.n(en);
       function rn(e, t) {

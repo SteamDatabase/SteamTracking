@@ -934,7 +934,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	cursor: pointer;
 }
 
-.game_area_purchase_game_wrapper .advanced_access_header_wrapper {
+.game_area_purchase_game_wrapper .purchase_type_header_wrapper {
 	display: flex;
 	position: relative;
 	margin-left: 16px;
@@ -942,7 +942,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	margin-bottom: -12px;
 }
 
-.game_area_purchase_game_wrapper .advanced_access_header_wrapper .advanced_access_header {
+.game_area_purchase_game_wrapper .purchase_type_header_wrapper .advanced_access_header {
 	background: #E5CC8B;
 	color: #1B2838;
 	font-family: "Motiva Sans", sans-serif;
@@ -955,7 +955,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	text-transform: uppercase;
 }
 
-.game_area_purchase_game_wrapper .advanced_access_header_wrapper .advanced_access_header_start {
+.game_area_purchase_game_wrapper .purchase_type_header_wrapper .advanced_access_header_start {
 	background: #7A7058;
 	color: #E5CC8B;
 	font-family: "Motiva Sans", sans-serif;
@@ -984,6 +984,33 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 .game_area_purchase_game_wrapper .advanced_access_start_desc a:hover {
 	text-decoration: underline;
 	color: white;
+}
+
+.game_area_purchase_game_wrapper .purchase_type_header_wrapper .limited_launch_header {
+	background: #BFBFBF;
+	color: #1B2838;
+	box-shadow: 1px 1px 2px #000000;
+	font-family: "Motiva Sans", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	padding: 1px 7px 1px 4px;
+	text-transform: uppercase;
+}
+
+.game_area_purchase_game_wrapper .purchase_type_header_wrapper .limited_launch_header_start {
+	background: #7D7D7D;
+	color: #D7D7D7;
+	box-shadow: 1px 1px 2px #000000;
+	font-family: "Motiva Sans", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	padding: 1px 7px 1px 6px;
 }
 
 .game_area_purchase_game_wrapper.bundle .game_area_purchase_game b {

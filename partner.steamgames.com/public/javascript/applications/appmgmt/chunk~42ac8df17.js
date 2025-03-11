@@ -10024,9 +10024,6 @@
         IsLiveContent() {
           return !0;
         }
-        GetThumbnailForTimestamp(e) {
-          return "";
-        }
         BHasTimedText() {
           return !1;
         }
@@ -11155,9 +11152,6 @@
         }
         BHasMarkersOrSegments() {
           return this.has_segments || this.has_markers;
-        }
-        GetThumbnailForTimestamp(e) {
-          return this.m_player.GetThumbnailForTimestamp(e);
         }
         get has_markers() {
           return this.m_rgMarkers.length > 0;
@@ -16871,7 +16865,7 @@
         i = r(75487),
         n = r(20194),
         s = r(23809),
-        o = (r(72963), r(78327));
+        o = r(78327);
       function l(e = o.TS.LANGUAGE) {
         const t = (0, s.TR)(),
           r = (0, s.rX)();

@@ -22163,7 +22163,7 @@
             );
           };
         })(Ce || (Ce = {}));
-      var Ie = a(72963);
+      var Ie = a(2879);
       class Be {
         m_steamInterface = null;
         m_mapOptInToEmailDef = new Map();
@@ -60237,7 +60237,6 @@
         Pn = a(33543),
         Nn = a(58632),
         Gn = a.n(Nn);
-      a(72963);
       const On = c.createContext({
         loadAppPromoSaleFeaturing: async (e, t) =>
           await (function (e) {
@@ -60545,8 +60544,8 @@
             () =>
               [...t].sort(
                 (e, t) =>
-                  (-1 != e.modified_sales_rank ? e.modified_sales_rank : 1e5) -
-                  (-1 != t.modified_sales_rank ? t.modified_sales_rank : 1e5),
+                  (e.modified_sales_rank > 0 ? e.modified_sales_rank : 1e5) -
+                  (t.modified_sales_rank > 0 ? t.modified_sales_rank : 1e5),
               ),
             [t],
           ),
@@ -69200,7 +69199,7 @@
         M = a(98076),
         k = a(48479),
         R = a(20194),
-        P = (a(72963), a(58632)),
+        P = a(58632),
         N = a.n(P),
         G = a(30470),
         O = a(68797);
@@ -105176,15 +105175,22 @@
         if (e.background_image) {
           r += `,url(${n.i6.GenerateArtworkURLFromHashAndExtensions(t.clanSteamID, e.background_image)})`;
         }
-        return {
-          background:
-            `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)` +
-            r,
-          backgroundRepeat: e.background_repeat,
-          borderStyle: e.border_color && e.border_width ? "solid" : void 0,
-          borderColor: e.border_color,
-          borderWidth: e.border_width ? `${e.border_width}px` : void 0,
-        };
+        return e.background_gradient_bottom ||
+          e.background_gradient_top ||
+          r.length > 0 ||
+          e.background_repeat ||
+          e.border_color ||
+          e.border_width
+          ? {
+              background:
+                `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)` +
+                r,
+              backgroundRepeat: e.background_repeat,
+              outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
+              outlineColor: e.border_color,
+              outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
+            }
+          : {};
       }
     },
     97232: (e, t, a) => {

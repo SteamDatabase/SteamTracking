@@ -2339,6 +2339,7 @@ CAppwideInventory.prototype.RetryLoad = function()
 
 var CUser = Class.create( {
 	bReady: false,
+	bSingleContext: false,
 	nItemsInTrade: 0,
 	cLoadsInFlight: 0,
 	bDynamicLoadInventory: true,
@@ -2544,7 +2545,9 @@ var CUser = Class.create( {
 				rgContext.trade_permissions = appTradePermissions;
 				rgContext.inventory = null;
 				this.rgContexts[appid][contextid] = rgContext;
-				rgContextIds.push( contextid );
+								{
+					rgContextIds.push(contextid);
+				}
 			}
 
 			if ( rgContextIds.length > 1 )
@@ -2575,7 +2578,7 @@ var CUser = Class.create( {
 	},
 
 	BIsSingleContextApp: function( appid ) {
-		return ( this.rgContextIdsByApp[appid] && this.rgContextIdsByApp[appid].length == 1 ) ? true : false;
+		return ( this.m_bSingleContext || ( this.rgContextIdsByApp[appid] && this.rgContextIdsByApp[appid].length == 1 ) ) ? true : false;
 	},
 
 	GetFirstContextForApp: function( appid ) {

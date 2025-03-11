@@ -910,14 +910,14 @@
         ObfuscateString(e) {
           try {
             const t = new TextEncoder().encode(D + e);
-            return s.iI(t);
+            return s.fromByteArray(t);
           } catch (e) {
             return "";
           }
         }
         DeobfuscateString(e) {
           try {
-            const t = s.bg(e);
+            const t = s.toByteArray(e);
             let r = new TextDecoder().decode(t);
             return r.startsWith(D)
               ? ((r = r.slice(3)), r)

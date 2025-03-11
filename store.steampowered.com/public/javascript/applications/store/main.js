@@ -2250,49 +2250,52 @@
               focusClassName: l,
               children: c,
               "flow-children": u,
-              ...d
+              role: d,
+              ...p
             },
-            navOptions: p,
-            gamepadEvents: _,
+            navOptions: _,
+            gamepadEvents: h,
           } = y(r),
           {
-            bFocusableByDefault: h = !0,
-            bActivateByDefault: b = !1,
-            bDOMElementFocusByDefault: B = h,
+            bFocusableByDefault: b = !0,
+            bActivateByDefault: B = !1,
+            bDOMElementFocusByDefault: M = b,
           } = s || {};
-        void 0 === p.focusable && !d.disabled && h && (p.focusable = !0);
-        const M = (0, g.O)(u),
-          { ref: C, node: R } = w({ layout: M, ...p });
-        _.onOKButton ||
-          ((("onClick" in d && d.onClick) || (b && (!0 === b || b(d)))) &&
-            (_.onOKButton = S)),
-          p.focusable && !B
-            ? (d.tabIndex = d.tabIndex || 0)
-            : !p.focusable && B && (d.tabIndex = d.tabIndex ?? -1),
-          (0, m.Ui)(_, C);
-        const z = (0, n.Ue)(i, C),
-          I = (0, o.useContext)(v)?.Component;
-        if (!R)
+        void 0 === _.focusable && !p.disabled && b && (_.focusable = !0);
+        const C = (0, g.O)(u),
+          { ref: R, node: z } = w({ layout: C, ..._ });
+        h.onOKButton ||
+          ((("onClick" in p && p.onClick) || (B && (!0 === B || B(p)))) &&
+            (h.onOKButton = S)),
+          _.focusable && !M
+            ? (p.tabIndex = p.tabIndex || 0)
+            : !_.focusable && M && (p.tabIndex = p.tabIndex ?? -1),
+          (0, m.Ui)(h, R);
+        const I = (0, n.Ue)(i, R),
+          T = (0, o.useContext)(v)?.Component;
+        if (!z)
           return o.createElement(
             e,
-            { ...d, ref: z, className: a()(d.className, "Focusable") },
+            { ...p, ref: I, className: a()(p.className, "Focusable") },
             c,
           );
-        const T = {
-          ...d,
-          divRef: z,
-          node: R,
-          focusClassName: a()(l, "gpfocus"),
-          focusWithinClassName: "gpfocuswithin",
-          bFocusableByDefault: B,
-          className: a()(d.className, "Focusable"),
-        };
+        const E = "onClick" in p,
+          F = {
+            ...p,
+            divRef: I,
+            node: z,
+            focusClassName: a()(l, "gpfocus"),
+            focusWithinClassName: "gpfocuswithin",
+            bFocusableByDefault: M,
+            className: a()(p.className, "Focusable"),
+            role: d ?? (E ? "button" : void 0),
+          };
         return o.createElement(
           f.Provider,
-          { value: R },
-          I
-            ? o.createElement(I, { ...T, Component: t }, c)
-            : o.createElement(t, T, c),
+          { value: z },
+          T
+            ? o.createElement(T, { ...F, Component: t }, c)
+            : o.createElement(t, F, c),
         );
       }
       function z(e, t) {
@@ -2650,7 +2653,8 @@
         const v = (0, i.Ue)(M, t);
         (!b.focusable && !b.focusableIfNoChildren) ||
           (C && C.Tree.BUseVirtualFocus()) ||
-          (f.tabIndex = f.tabIndex || 0);
+          (f.tabIndex = f.tabIndex || 0),
+          b.focusable && (n || w.onOKButton) && (f.role = "button");
         const R = (0, a.useContext)(d).Component;
         return a.createElement(
           o.TJ.Provider,
@@ -4906,23 +4910,7 @@
         const r = e.findIndex(t);
         return r >= 0 && (e.splice(r, 1), !0);
       }
-      function l(e, t) {
-        let r = 0,
-          i = e.length - 1;
-        for (; r <= i; ) {
-          const n = Math.floor((r + i) / 2),
-            s = t(e[n]);
-          if (s > 0) r = n + 1;
-          else if (s < 0) i = n - 1;
-          else {
-            if (i == n) return n;
-            if (n == r) return i > n && t(e[n + 1]) < 0 ? n : n + 1;
-            r = n;
-          }
-        }
-        return i;
-      }
-      function c(e, t, r) {
+      function l(e, t, r) {
         return (
           e ||
             console.error(
@@ -4932,11 +4920,10 @@
         );
       }
       r.d(t, {
-        $Y: () => c,
+        $Y: () => l,
         R5: () => n,
         Wp: () => o,
         fW: () => i,
-        rJ: () => l,
         x9: () => a,
         zl: () => s,
       });
@@ -26279,6 +26266,38 @@
       window.Config && Object.assign(i.TS, window.Config),
         window.UserConfig && Object.assign(i.iA, window.UserConfig);
     },
+    2879: (e, t, r) => {
+      "use strict";
+      r.d(t, { L: () => c, s: () => o });
+      var i = r(90626),
+        n = r(75233),
+        s = r(80097),
+        a = r(43848);
+      function o(e) {
+        const { queryClient: t = c, steamUI: r } = e;
+        i.useEffect(() => {
+          t == c &&
+            t.setDefaultOptions({
+              ...l,
+              queries: {
+                ...l.queries,
+                networkMode: r ? "offlineFirst" : void 0,
+              },
+            });
+        }, [t, r]);
+        let s = e.children;
+        return (
+          e.debug &&
+            (s = [
+              ...i.Children.toArray(s),
+              i.createElement(a.E, { key: "ReactQueryDevtools" }),
+            ]),
+          i.createElement(n.Ht, { client: t }, s)
+        );
+      }
+      const l = { queries: { staleTime: 1 / 0 } },
+        c = new s.E({ defaultOptions: l });
+    },
     68950: (e, t, r) => {
       "use strict";
       r.d(t, { LH: () => a, Rh: () => s });
@@ -33567,7 +33586,7 @@
     },
     8812: (e, t, r) => {
       "use strict";
-      r.d(t, { aj: () => ae, sx: () => le });
+      r.d(t, { aj: () => le, sx: () => ue });
       var i = r(90626),
         n = r(56545),
         s = r(80613),
@@ -35596,7 +35615,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            P.prototype.client_args || a.Sg(P.M()),
+            P.prototype.reports || a.Sg(P.M()),
             p.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
@@ -35606,6 +35625,157 @@
             P.sm_m ||
               (P.sm_m = {
                 proto: P,
+                fields: { reports: { n: 1, c: x, r: !0, q: !0 } },
+              }),
+            P.sm_m
+          );
+        }
+        static MBF() {
+          return P.sm_mbf || (P.sm_mbf = a.w0(P.M())), P.sm_mbf;
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(P.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(P.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new s.BinaryReader(e),
+            r = new P();
+          return P.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(P.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new s.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(P.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new s.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_GamePerformance_Notification";
+        }
+      }
+      class x extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            x.prototype.gameid || a.Sg(x.M()),
+            p.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
+                fields: {
+                  gameid: {
+                    n: 1,
+                    br: a.qM.readFixed64String,
+                    bw: a.gp.writeFixed64String,
+                  },
+                  frame_rate: {
+                    n: 2,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
+                  manufacturer: {
+                    n: 3,
+                    br: a.qM.readString,
+                    bw: a.gp.writeString,
+                  },
+                  model: { n: 4, br: a.qM.readString, bw: a.gp.writeString },
+                  dx_video_card: {
+                    n: 5,
+                    br: a.qM.readString,
+                    bw: a.gp.writeString,
+                  },
+                  dx_vendorid: {
+                    n: 6,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  dx_deviceid: {
+                    n: 7,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  num_gpu: { n: 8, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  system_ram: {
+                    n: 9,
+                    br: a.qM.readUint64String,
+                    bw: a.gp.writeUint64String,
+                  },
+                  session_seconds: {
+                    n: 10,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                },
+              }),
+            x.sm_m
+          );
+        }
+        static MBF() {
+          return x.sm_mbf || (x.sm_mbf = a.w0(x.M())), x.sm_mbf;
+        }
+        toObject(e = !1) {
+          return x.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(x.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(x.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new s.BinaryReader(e),
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(x.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new s.BinaryWriter();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(x.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new s.BinaryWriter();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_GamePerformance_Notification_FrameRateReport";
+        }
+      }
+      class j extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.client_args || a.Sg(j.M()),
+            p.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
                 fields: {
                   client_args: {
                     n: 1,
@@ -35657,58 +35827,58 @@
                   gr_mode: { n: 10, br: a.qM.readInt32, bw: a.gp.writeInt32 },
                 },
               }),
-            P.sm_m
+            j.sm_m
           );
         }
         static MBF() {
-          return P.sm_mbf || (P.sm_mbf = a.w0(P.M())), P.sm_mbf;
+          return j.sm_mbf || (j.sm_mbf = a.w0(j.M())), j.sm_mbf;
         }
         toObject(e = !1) {
-          return P.toObject(e, this);
+          return j.toObject(e, this);
         }
         static toObject(e, t) {
-          return a.BT(P.M(), e, t);
+          return a.BT(j.M(), e, t);
         }
         static fromObject(e) {
-          return a.Uq(P.M(), e);
+          return a.Uq(j.M(), e);
         }
         static deserializeBinary(e) {
           let t = new s.BinaryReader(e),
-            r = new P();
-          return P.deserializeBinaryFromReader(r, t);
+            r = new j();
+          return j.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return a.zj(P.MBF(), e, t);
+          return a.zj(j.MBF(), e, t);
         }
         serializeBinary() {
           var e = new s.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          a.i0(P.M(), e, t);
+          a.i0(j.M(), e, t);
         }
         serializeBase64String() {
           var e = new s.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ReportClientArgs_Notification";
         }
       }
-      class x extends p {
+      class A extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.glibc_version_major || a.Sg(x.M()),
+            A.prototype.glibc_version_major || a.Sg(A.M()),
             p.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   glibc_version_major: {
                     n: 1,
@@ -35742,45 +35912,45 @@
                   },
                 },
               }),
-            x.sm_m
+            A.sm_m
           );
         }
         static MBF() {
-          return x.sm_mbf || (x.sm_mbf = a.w0(x.M())), x.sm_mbf;
+          return A.sm_mbf || (A.sm_mbf = a.w0(A.M())), A.sm_mbf;
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return A.toObject(e, this);
         }
         static toObject(e, t) {
-          return a.BT(x.M(), e, t);
+          return a.BT(A.M(), e, t);
         }
         static fromObject(e) {
-          return a.Uq(x.M(), e);
+          return a.Uq(A.M(), e);
         }
         static deserializeBinary(e) {
           let t = new s.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return a.zj(x.MBF(), e, t);
+          return a.zj(A.MBF(), e, t);
         }
         serializeBinary() {
           var e = new s.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          a.i0(x.M(), e, t);
+          a.i0(A.M(), e, t);
         }
         serializeBase64String() {
           var e = new s.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ReportLinuxStats_Notification";
         }
       }
-      var j;
+      var U;
       !(function (e) {
         (e.ClientAppInterfaceStatsReport = function (e, t) {
           return e.SendNotification(
@@ -35855,14 +36025,14 @@
           (e.ReportClientArgs = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportClientArgs#1",
-              (0, n.I8)(P, t),
+              (0, n.I8)(j, t),
               { ePrivilege: 1 },
             );
           }),
           (e.ReportLinuxStats = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportLinuxStats#1",
-              (0, n.I8)(x, t),
+              (0, n.I8)(A, t),
               { ePrivilege: 1 },
             );
           }),
@@ -35886,12 +36056,19 @@
               (0, n.I8)(k, t),
               { ePrivilege: 1 },
             );
+          }),
+          (e.ReportGamePerformance = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ReportGamePerformance#1",
+              (0, n.I8)(P, t),
+              { ePrivilege: 1 },
+            );
           });
-      })(j || (j = {}));
-      var A = r(84811),
-        U = r(61859),
-        q = r(42865);
-      async function N(e, t = "SHA-256") {
+      })(U || (U = {}));
+      var q = r(84811),
+        N = r(61859),
+        H = r(42865);
+      async function G(e, t = "SHA-256") {
         let r;
         var i;
         "string" == typeof e
@@ -35906,45 +36083,45 @@
         );
         var s;
       }
-      const H =
+      const V =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
-      let G,
-        V = [],
-        Z = (e, t, r) =>
-          V.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
-      const K = !0;
+      let Z,
+        K = [],
+        $ = (e, t, r) =>
+          K.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
+      const X = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...i) => {
           if (!t) {
-            const e = Q();
-            Z(new Error(J(r, ...i)), 2, e);
+            const e = J();
+            $(new Error(te(r, ...i)), 2, e);
           }
           e.apply(console, [t, r, ...i]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          const i = Q();
-          Z(new Error(J(e, ...r)), 1, i), t.apply(console, [e, ...r]);
+          const i = J();
+          $(new Error(te(e, ...r)), 1, i), t.apply(console, [e, ...r]);
         }),
           (console.clogerror = (e, r, ...i) => {
-            const n = Q();
-            Z(new Error(J(r, ...i)), e + 1, n), t.apply(console, [r, ...i]);
+            const n = J();
+            $(new Error(te(r, ...i)), e + 1, n), t.apply(console, [r, ...i]);
           }),
-          H("error", (e) => {
-            Z(e.error, 0);
+          V("error", (e) => {
+            $(e.error, 0);
           }),
-          (G = window.setTimeout(() => {
-            (V = []), (Z = () => {});
+          (Z = window.setTimeout(() => {
+            (K = []), ($ = () => {});
           }, 3e4));
       }
-      const $ = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        X = [
+      const Q = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        Y = [
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
         ];
-      function Q() {
+      function J() {
         try {
           const e = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
             t =
@@ -35967,7 +36144,7 @@
           }
         } catch (e) {}
       }
-      class Y {
+      class ee {
         m_strProduct;
         m_strVersion;
         m_transport = null;
@@ -35975,26 +36152,26 @@
         m_sendTimer = null;
         m_bReportingPaused = !1;
         m_pauseTimer = void 0;
-        m_fnGetReportingInterval = ce;
+        m_fnGetReportingInterval = me;
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(e = !0) {
           e
-            ? (V.forEach(
+            ? (K.forEach(
                 ({ error: e, cCallsitesToIgnore: t, strComponentStack: r }) =>
                   this.ReportError(e, {
                     cCallsitesToIgnore: t,
                     strComponentStack: r,
                   }),
               ),
-              (Z = (e, t, r) =>
+              ($ = (e, t, r) =>
                 this.ReportError(e, {
                   cCallsitesToIgnore: t,
                   strComponentStack: r,
                 })))
-            : (Z = () => {}),
-            (V = []),
-            clearTimeout(G),
+            : ($ = () => {}),
+            (K = []),
+            clearTimeout(Z),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -36025,19 +36202,19 @@
               null
             );
           try {
-            const r = { ...$, ...t };
+            const r = { ...Q, ...t };
             if (!this.m_bEnabled) return null;
             0;
             const i = await (function (e, t) {
               try {
-                return e.stack && e.stack.match(ee)
+                return e.stack && e.stack.match(re)
                   ? (async function (e, t) {
                       const {
                           cCallsitesToIgnore: r,
                           bIncludeMessageInIdentifier: i,
                         } = t,
                         n = e.stack?.split("\n") ?? [];
-                      let s = se(n.filter((e) => !!e.match(ee))[r]);
+                      let s = oe(n.filter((e) => !!e.match(re))[r]);
                       i && (s = `${s} ${e.message}`);
                       const a = n
                         .map((e) => {
@@ -36054,18 +36231,18 @@
                         .filter((e) => !!e);
                       return {
                         identifier: s,
-                        identifierHash: await le(s),
+                        identifierHash: await ue(s),
                         message: a,
                       };
                     })(e, t)
-                  : e.stack && e.stack.match(te)
+                  : e.stack && e.stack.match(ie)
                     ? (async function (e, t) {
                         const {
                             cCallsitesToIgnore: r,
                             bIncludeMessageInIdentifier: i,
                           } = t,
                           n = e.stack?.split("\n") ?? [];
-                        let s = se(n.filter((e) => !!e.match(te))[r]);
+                        let s = oe(n.filter((e) => !!e.match(ie))[r]);
                         i && (s = `${s} ${e.message}`);
                         const a = n
                           .map((e) => {
@@ -36082,11 +36259,11 @@
                           .filter((e) => !!e);
                         return {
                           identifier: s,
-                          identifierHash: await le(s),
+                          identifierHash: await ue(s),
                           message: [e.message, ...a],
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(re)
+                    : e.stack && e.stack.match(ne)
                       ? (async function (e, t) {
                           const {
                               bIncludeMessageInIdentifier: r,
@@ -36114,16 +36291,16 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: await le(o),
+                            identifierHash: await ue(o),
                             message: [e.message, ...l],
                           };
                         })(e, t)
-                      : (ne ||
+                      : (ae ||
                           (console.warn(
                             "Error reporter does not know how to parse generated stack:",
                           ),
                           console.warn(e.stack),
-                          (ne = !0)),
+                          (ae = !0)),
                         null);
               } catch (e) {
                 return (
@@ -36160,7 +36337,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let r = JSON.stringify(t);
-            for (let t of X) {
+            for (let t of Y) {
               const i = new RegExp(t);
               if (r.match(i))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -36215,7 +36392,7 @@
           t.Body().set_product(this.m_strProduct),
             t.Body().set_version(this.m_strVersion),
             t.Body().set_errors(i),
-            j.ReportClientError(this.m_transport, t);
+            U.ReportClientError(this.m_transport, t);
         }
         get version() {
           return this.m_strVersion;
@@ -36224,10 +36401,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return K;
+          return X;
         }
       }
-      function J(e, ...t) {
+      function te(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -36239,12 +36416,12 @@
           })
           .join(", ");
       }
-      const ee = /^\s*at .*(\S+:\d+|\(native\))/m,
-        te = /(^|@)\S+:\d+/,
-        re = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let ie,
-        ne = !1;
-      function se(e) {
+      const re = /^\s*at .*(\S+:\d+|\(native\))/m,
+        ie = /(^|@)\S+:\d+/,
+        ne = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let se,
+        ae = !1;
+      function oe(e) {
         return (function (e) {
           const t = "https://",
             r = e.indexOf(t);
@@ -36260,22 +36437,22 @@
           })(e),
         );
       }
-      const ae = () => (ie || oe(new Y()), ie),
-        oe = (e) => {
-          (ie = e),
-            A.tH.InstallErrorReportingStore(ie),
-            n.lI.InstallErrorReportingStore(ie),
-            U.A0.InstallErrorReportingStore(ie),
-            q.U.InstallErrorReportingStore(ie);
+      const le = () => (se || ce(new ee()), se),
+        ce = (e) => {
+          (se = e),
+            q.tH.InstallErrorReportingStore(se),
+            n.lI.InstallErrorReportingStore(se),
+            N.A0.InstallErrorReportingStore(se),
+            H.U.InstallErrorReportingStore(se);
         };
-      async function le(e) {
+      async function ue(e) {
         try {
-          return (await N(e)).slice(0, 16);
+          return (await G(e)).slice(0, 16);
         } catch (e) {
           return "";
         }
       }
-      function ce() {
+      function me() {
         return 1e4;
       }
     },
@@ -44251,20 +44428,20 @@
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
             fill: "currentColor",
           }),
@@ -44283,21 +44460,21 @@
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
             fill: "currentColor",
-            "fill-opacity": "0.5",
+            fillOpacity: "0.5",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
             fill: "currentColor",
           }),
@@ -44318,22 +44495,22 @@
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
             fill: "currentColor",
-            "fill-opacity": "0.25",
+            fillOpacity: "0.25",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
             fill: "currentColor",
-            "fill-opacity": "0.5",
+            fillOpacity: "0.5",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
             fill: "currentColor",
           }),
@@ -44348,40 +44525,53 @@
             xmlns: "http://www.w3.org/2000/svg",
           },
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M14.15 6.00818L14.16 6H14.15V6.00818ZM14.15 18.27V6.00818L7.10342 11.77L14.15 18.27ZM14.15 26.039L1 13.909V23.27H5.11L14.15 30.67V26.039Z",
             fill: "currentColor",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
             fill: "currentColor",
-            "fill-opacity": "0.25",
+            fillOpacity: "0.25",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
             fill: "currentColor",
-            "fill-opacity": "0.25",
+            fillOpacity: "0.25",
           }),
           i.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
             fill: "currentColor",
-            "fill-opacity": "0.25",
+            fillOpacity: "0.25",
           }),
-          i.createElement("rect", {
-            x: "0.728821",
-            y: "9.47668",
-            width: "3",
-            height: "24.2069",
-            transform: "rotate(-46.9546 0.728821 9.47668)",
-            fill: "currentColor",
-          }),
+          i.createElement(
+            "rect",
+            {
+              x: "0.728821",
+              y: "10",
+              width: "3",
+              height: "27",
+              transform: "rotate(-46.9546 0.728821 9.47668)",
+              fill: "currentColor",
+            },
+            i.createElement("animate", {
+              attributeName: "y",
+              begin: "0",
+              dur: "150ms",
+              from: "0",
+              to: "10",
+              values: "0; 5; 10",
+              keyTimes: "0; .8; 1",
+              fill: "freeze",
+            }),
+          ),
         );
       }
       function y(e) {
@@ -50886,8 +51076,9 @@
         a = r(12155),
         o = r(52038);
       function l(e) {
+        const t = e.customTooltip ? n.m9 : n.he;
         return i.createElement(
-          n.he,
+          t,
           {
             toolTipContent: e.tooltip,
             className: (0, o.A)(s.HelperTooltip, "HelperTooltip", e.className),
@@ -52660,6 +52851,12 @@
         );
       }
       function c(e) {
+        if (0 == e.length) return !1;
+        for (let t = 0; t < e.length; t++)
+          if (e[t] < "0" || e[t] > "9") return !1;
+        return !0;
+      }
+      function u(e) {
         return (
           "string" == typeof e &&
           !Number.isNaN(e) &&
@@ -52670,10 +52867,11 @@
         Fu: () => o,
         LA: () => s,
         OQ: () => n,
+        TG: () => c,
         Tg: () => i,
         W: () => a,
         bT: () => l,
-        kf: () => c,
+        kf: () => u,
       });
     },
     73745: (e, t, r) => {
@@ -52777,29 +52975,6 @@
         return (0, n.Ue)(c, m);
       }
       var m = r(6419);
-    },
-    72963: (e, t, r) => {
-      "use strict";
-      r.d(t, { L: () => o, s: () => a });
-      var i = r(90626),
-        n = r(75233),
-        s = r(80097);
-      r(84811);
-      function a(e) {
-        const { steamUI: t } = e,
-          r = i.useRef(o);
-        i.useEffect(() => {
-          o.setDefaultOptions({
-            queries: {
-              staleTime: 1 / 0,
-              networkMode: t ? "offlineFirst" : void 0,
-            },
-          });
-        }, [t]);
-        let s = e.children;
-        return e.debug, i.createElement(n.Ht, { client: r.current }, s);
-      }
-      const o = new s.E({});
     },
     76011: (e, t, r) => {
       "use strict";
@@ -54319,7 +54494,7 @@
             )
           : t;
       }
-      var ye = r(72963),
+      var ye = r(2879),
         Me = r(79443),
         Ce = r(12229),
         Se = r(30709),

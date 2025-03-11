@@ -68,6 +68,7 @@
         "duration-app-launch": "800ms",
         ControllerWizardModal: "_2M4zwA7Ac68En7AUUHEpuK",
         GameName: "_1wayRCM9VO944GbqtTisWi",
+        WizardButtons: "ja88t0u0UmDMjZ2vKEXyg",
         WizardContainer: "_1j_e5epqt09WxhZOjyi9D1",
         WizardBody: "_2Agdmn90d9rLK0COHBJ9Ya",
         Column: "_35X7XjU8DZ2H27V0SBSAoo",
@@ -4147,7 +4148,7 @@
     },
     8568: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => el });
+      n.r(t), n.d(t, { default: () => tl });
       var a = n(90626),
         r = n(64046),
         o = n(88997);
@@ -5120,6 +5121,7 @@
           o,
           a.createElement(y.nB, { className: w.WizardBody }, r),
           a.createElement(y.CB, {
+            className: w.WizardButtons,
             bCancelDisabled: !n,
             onCancel: n,
             strCancelText: "Back",
@@ -5503,7 +5505,7 @@
         ue = n(20194),
         me = n(99637),
         pe = n(22797),
-        _e = n(72963),
+        _e = n(2879),
         Ee = n(61336);
       const ge = [
           "date_full",
@@ -13959,7 +13961,8 @@
           a.createElement("label", { htmlFor: n.toString() }, t),
         );
       }
-      function el(e) {
+      const el = () => null;
+      function tl(e) {
         return a.createElement(
           Fe.dO,
           null,
@@ -13994,6 +13997,8 @@
                     a.createElement(yn, { ...e }),
                   "storeadmin-purchaseoptionsorder-edit": (e) =>
                     a.createElement(hr, { ...e }),
+                  "storeadmin-accessibilityfeatures": (e) =>
+                    a.createElement(el, { ...e }),
                 },
               }),
             ),

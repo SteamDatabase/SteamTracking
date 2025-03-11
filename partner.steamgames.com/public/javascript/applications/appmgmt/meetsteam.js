@@ -454,24 +454,23 @@
         ce = n(66051),
         oe = n(54806),
         ue = n(58632),
-        me = n.n(ue),
-        de = n(72963);
-      function Ee(e) {
+        me = n.n(ue);
+      function de(e) {
         const t = te(),
-          n = r.useContext(pe),
-          a = (0, S.I)(he(n, t, e));
+          n = r.useContext(ge),
+          a = (0, S.I)(pe(n, t, e));
         return a.isLoading ? null : a.data;
       }
-      function ge(e) {
+      function Ee(e) {
         const t = te(),
-          n = r.useContext(pe);
-        return (0, oe.E)({ queries: e.map((e) => he(n, t, e)) });
+          n = r.useContext(ge);
+        return (0, oe.E)({ queries: e.map((e) => pe(n, t, e)) });
       }
-      const pe = r.createContext({
+      const ge = r.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
-            _e ||
-              (_e = new (me())(
+            he ||
+              (he = new (me())(
                 async (t) => {
                   const n = _.w.Init(Q.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(6);
@@ -504,17 +503,18 @@
                 },
                 { maxBatchSize: 5 },
               ));
-            return _e;
+            return he;
           })(e).load(t),
       });
-      function he(e, t, n) {
+      function pe(e, t, n) {
         return {
           queryKey: ["MeetSteamAllRegistrationStatus", n],
           queryFn: () => e.loadMeetSteamAllRegistration(t, n),
           enabled: !!n,
         };
       }
-      let _e;
+      let he;
+      var _e = n(2879);
       function ve(e, t) {
         const n = (0, L.a)(),
           a = r.useContext(Se),
@@ -522,7 +522,7 @@
         return l.isLoading ? null : l.data;
       }
       function fe(e, t) {
-        return de.L.getQueryData(["PartnerEmailAndName", e, t]);
+        return _e.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
       const Se = r.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
@@ -632,7 +632,7 @@
         return be(e.cell.getValue());
       }
       function Ce(e, t) {
-        const n = ge(t),
+        const n = Ee(t),
           [a, l, s] = (0, r.useMemo)(() => {
             if (n.filter((e) => !e.isLoading).length != n.length)
               return [null, [], []];
@@ -817,7 +817,7 @@
         ke = n(29233);
       function Le(e) {
         const { hideModal: t, gid: n } = e,
-          a = Ee(n),
+          a = de(n),
           l = (0, y.jE)(),
           [s, i] = (0, r.useMemo)(
             () =>
@@ -944,7 +944,7 @@
       function Fe(e) {
         const { hideModal: t, gid: n, title: a, group: l, session: s } = e,
           i = (0, L.a)(),
-          c = Ee(n),
+          c = de(n),
           o = B(i, n, l?.group_id),
           u = (0, r.useMemo)(() => {
             const e = o?.data?.filter((e) => e.session_id == s.id),
@@ -1150,7 +1150,7 @@
       function $e(e) {
         const { rgGidMeetSteamEvents: t } = e,
           { rgAllRegistrations: n, rgPartnerIDs: a } = (function (e) {
-            const t = ge(e),
+            const t = Ee(e),
               [n, a] = (0, r.useMemo)(() => {
                 if (t.filter((e) => !e.isLoading).length != t.length)
                   return [null, null];
@@ -2194,7 +2194,7 @@
                         const n = (0, Je.z0)(t.accountid),
                           a =
                             ((r = t.accountid),
-                            de.L.getQueryData(["UserEmailAndLangs", r]));
+                            _e.L.getQueryData(["UserEmailAndLangs", r]));
                         var r;
                         e.push([
                           n?.m_strPlayerName || "",

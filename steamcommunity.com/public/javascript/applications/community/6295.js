@@ -7,30 +7,30 @@
     16295: (e, t, n) => {
       n.r(t),
         n.d(t, {
-          CompletionAdapter: () => ht,
-          DefinitionAdapter: () => Ct,
-          DiagnosticsAdapter: () => gt,
-          DocumentColorAdapter: () => Ft,
-          DocumentFormattingEditProvider: () => Dt,
-          DocumentHighlightAdapter: () => yt,
-          DocumentLinkAdapter: () => Tt,
-          DocumentRangeFormattingEditProvider: () => Mt,
-          DocumentSymbolAdapter: () => St,
-          FoldingRangeAdapter: () => Lt,
-          HoverAdapter: () => wt,
-          ReferenceAdapter: () => At,
-          RenameAdapter: () => It,
-          SelectionRangeAdapter: () => jt,
-          WorkerManager: () => se,
-          fromPosition: () => ft,
-          fromRange: () => pt,
-          setupMode: () => Ot,
-          toRange: () => vt,
-          toTextEdit: () => _t,
+          CompletionAdapter: () => Wt,
+          DefinitionAdapter: () => Zt,
+          DiagnosticsAdapter: () => Ot,
+          DocumentColorAdapter: () => ln,
+          DocumentFormattingEditProvider: () => un,
+          DocumentHighlightAdapter: () => Jt,
+          DocumentLinkAdapter: () => sn,
+          DocumentRangeFormattingEditProvider: () => cn,
+          DocumentSymbolAdapter: () => rn,
+          FoldingRangeAdapter: () => gn,
+          HoverAdapter: () => qt,
+          ReferenceAdapter: () => tn,
+          RenameAdapter: () => nn,
+          SelectionRangeAdapter: () => fn,
+          WorkerManager: () => Nt,
+          fromPosition: () => Ht,
+          fromRange: () => Xt,
+          setupMode: () => hn,
+          toRange: () => zt,
+          toTextEdit: () => Bt,
         });
       var r,
         i,
-        o = n(98840),
+        o = n(94701),
         a = Object.defineProperty,
         s = Object.getOwnPropertyDescriptor,
         u = Object.getOwnPropertyNames,
@@ -46,44 +46,44 @@
                 });
           return e;
         },
-        g = {};
-      d(g, (r = o), "default"), i && d(i, r, "default");
-      var l,
-        h,
+        l = {};
+      d(l, (r = o), "default"), i && d(i, r, "default");
+      var g,
         f,
+        h,
+        m,
         p,
         v,
-        m,
-        _,
-        w,
-        k,
         b,
+        _,
+        k,
+        w,
         y,
+        x,
+        I,
         E,
         C,
-        x,
         A,
-        I,
         S,
         R,
+        L,
         T,
-        D,
         M,
+        D,
         P,
         F,
-        L,
         j,
-        O,
         N,
         U,
-        W,
         V,
-        H,
+        O,
         K,
-        z,
+        W,
+        H,
         X,
-        B,
+        z,
         $,
+        B,
         q,
         Q,
         G,
@@ -97,13 +97,91 @@
         ie,
         oe,
         ae,
-        se = class {
-          _defaults;
-          _idleCheckInterval;
-          _lastUsedTime;
-          _configChangeListener;
-          _worker;
-          _client;
+        se,
+        ue,
+        ce,
+        de,
+        le,
+        ge,
+        fe,
+        he,
+        me,
+        pe,
+        ve,
+        be,
+        _e,
+        ke,
+        we,
+        ye,
+        xe,
+        Ie,
+        Ee,
+        Ce,
+        Ae,
+        Se,
+        Re,
+        Le,
+        Te,
+        Me,
+        De,
+        Pe,
+        Fe,
+        je,
+        Ne,
+        Ue,
+        Ve,
+        Oe,
+        Ke,
+        We,
+        He,
+        Xe,
+        ze,
+        $e,
+        Be,
+        qe,
+        Qe,
+        Ge,
+        Je,
+        Ye,
+        Ze,
+        et,
+        tt,
+        nt,
+        rt,
+        it,
+        ot,
+        at,
+        st,
+        ut,
+        ct,
+        dt,
+        lt,
+        gt,
+        ft,
+        ht,
+        mt,
+        pt,
+        vt,
+        bt,
+        _t,
+        kt,
+        wt,
+        yt,
+        xt,
+        It,
+        Et,
+        Ct,
+        At,
+        St,
+        Rt,
+        Lt,
+        Tt,
+        Mt,
+        Dt,
+        Pt,
+        Ft,
+        jt,
+        Nt = class {
           constructor(e) {
             (this._defaults = e),
               (this._worker = null),
@@ -134,7 +212,7 @@
             return (
               (this._lastUsedTime = Date.now()),
               this._client ||
-                ((this._worker = g.editor.createWebWorker({
+                ((this._worker = l.editor.createWebWorker({
                   moduleId: "vs/language/css/cssWorker",
                   label: this._defaults.languageId,
                   createData: {
@@ -158,62 +236,66 @@
               .then((e) => t);
           }
         };
-      ((h = l || (l = {})).MIN_VALUE = -2147483648),
-        (h.MAX_VALUE = 2147483647),
-        ((p = f || (f = {})).MIN_VALUE = 0),
-        (p.MAX_VALUE = 2147483647),
-        ((m = v || (v = {})).create = function (e, t) {
+      ((g || (g = {})).is = function (e) {
+        return "string" == typeof e;
+      }),
+        ((f || (f = {})).is = function (e) {
+          return "string" == typeof e;
+        }),
+        ((m = h || (h = {})).MIN_VALUE = -2147483648),
+        (m.MAX_VALUE = 2147483647),
+        (m.is = function (e) {
+          return "number" == typeof e && m.MIN_VALUE <= e && e <= m.MAX_VALUE;
+        }),
+        ((v = p || (p = {})).MIN_VALUE = 0),
+        (v.MAX_VALUE = 2147483647),
+        (v.is = function (e) {
+          return "number" == typeof e && v.MIN_VALUE <= e && e <= v.MAX_VALUE;
+        }),
+        ((_ = b || (b = {})).create = function (e, t) {
           return (
-            e === Number.MAX_VALUE && (e = f.MAX_VALUE),
-            t === Number.MAX_VALUE && (t = f.MAX_VALUE),
+            e === Number.MAX_VALUE && (e = p.MAX_VALUE),
+            t === Number.MAX_VALUE && (t = p.MAX_VALUE),
             { line: e, character: t }
           );
         }),
-        (m.is = function (e) {
-          var t = e;
+        (_.is = function (e) {
+          let t = e;
           return (
-            st.objectLiteral(t) &&
-            st.uinteger(t.line) &&
-            st.uinteger(t.character)
+            Ut.objectLiteral(t) &&
+            Ut.uinteger(t.line) &&
+            Ut.uinteger(t.character)
           );
         }),
-        ((w = _ || (_ = {})).create = function (e, t, n, r) {
+        ((w = k || (k = {})).create = function (e, t, n, r) {
           if (
-            st.uinteger(e) &&
-            st.uinteger(t) &&
-            st.uinteger(n) &&
-            st.uinteger(r)
+            Ut.uinteger(e) &&
+            Ut.uinteger(t) &&
+            Ut.uinteger(n) &&
+            Ut.uinteger(r)
           )
-            return { start: v.create(e, t), end: v.create(n, r) };
-          if (v.is(e) && v.is(t)) return { start: e, end: t };
+            return { start: b.create(e, t), end: b.create(n, r) };
+          if (b.is(e) && b.is(t)) return { start: e, end: t };
           throw new Error(
-            "Range#create called with invalid arguments[" +
-              e +
-              ", " +
-              t +
-              ", " +
-              n +
-              ", " +
-              r +
-              "]",
+            `Range#create called with invalid arguments[${e}, ${t}, ${n}, ${r}]`,
           );
         }),
         (w.is = function (e) {
-          var t = e;
-          return st.objectLiteral(t) && v.is(t.start) && v.is(t.end);
+          let t = e;
+          return Ut.objectLiteral(t) && b.is(t.start) && b.is(t.end);
         }),
-        ((b = k || (k = {})).create = function (e, t) {
+        ((x = y || (y = {})).create = function (e, t) {
           return { uri: e, range: t };
         }),
-        (b.is = function (e) {
-          var t = e;
+        (x.is = function (e) {
+          let t = e;
           return (
-            st.defined(t) &&
-            _.is(t.range) &&
-            (st.string(t.uri) || st.undefined(t.uri))
+            Ut.objectLiteral(t) &&
+            k.is(t.range) &&
+            (Ut.string(t.uri) || Ut.undefined(t.uri))
           );
         }),
-        ((E = y || (y = {})).create = function (e, t, n, r) {
+        ((E = I || (I = {})).create = function (e, t, n, r) {
           return {
             targetUri: e,
             targetRange: t,
@@ -222,186 +304,187 @@
           };
         }),
         (E.is = function (e) {
-          var t = e;
+          let t = e;
           return (
-            st.defined(t) &&
-            _.is(t.targetRange) &&
-            st.string(t.targetUri) &&
-            (_.is(t.targetSelectionRange) ||
-              st.undefined(t.targetSelectionRange)) &&
-            (_.is(t.originSelectionRange) ||
-              st.undefined(t.originSelectionRange))
+            Ut.objectLiteral(t) &&
+            k.is(t.targetRange) &&
+            Ut.string(t.targetUri) &&
+            k.is(t.targetSelectionRange) &&
+            (k.is(t.originSelectionRange) ||
+              Ut.undefined(t.originSelectionRange))
           );
         }),
-        ((x = C || (C = {})).create = function (e, t, n, r) {
+        ((A = C || (C = {})).create = function (e, t, n, r) {
           return { red: e, green: t, blue: n, alpha: r };
         }),
-        (x.is = function (e) {
-          var t = e;
+        (A.is = function (e) {
+          const t = e;
           return (
-            st.numberRange(t.red, 0, 1) &&
-            st.numberRange(t.green, 0, 1) &&
-            st.numberRange(t.blue, 0, 1) &&
-            st.numberRange(t.alpha, 0, 1)
+            Ut.objectLiteral(t) &&
+            Ut.numberRange(t.red, 0, 1) &&
+            Ut.numberRange(t.green, 0, 1) &&
+            Ut.numberRange(t.blue, 0, 1) &&
+            Ut.numberRange(t.alpha, 0, 1)
           );
         }),
-        ((I = A || (A = {})).create = function (e, t) {
+        ((R = S || (S = {})).create = function (e, t) {
           return { range: e, color: t };
         }),
-        (I.is = function (e) {
-          var t = e;
-          return _.is(t.range) && C.is(t.color);
+        (R.is = function (e) {
+          const t = e;
+          return Ut.objectLiteral(t) && k.is(t.range) && C.is(t.color);
         }),
-        ((R = S || (S = {})).create = function (e, t, n) {
+        ((T = L || (L = {})).create = function (e, t, n) {
           return { label: e, textEdit: t, additionalTextEdits: n };
         }),
-        (R.is = function (e) {
-          var t = e;
+        (T.is = function (e) {
+          const t = e;
           return (
-            st.string(t.label) &&
-            (st.undefined(t.textEdit) || X.is(t)) &&
-            (st.undefined(t.additionalTextEdits) ||
-              st.typedArray(t.additionalTextEdits, X.is))
+            Ut.objectLiteral(t) &&
+            Ut.string(t.label) &&
+            (Ut.undefined(t.textEdit) || B.is(t)) &&
+            (Ut.undefined(t.additionalTextEdits) ||
+              Ut.typedArray(t.additionalTextEdits, B.is))
           );
         }),
-        ((D = T || (T = {})).Comment = "comment"),
+        ((D = M || (M = {})).Comment = "comment"),
         (D.Imports = "imports"),
         (D.Region = "region"),
-        ((P = M || (M = {})).create = function (e, t, n, r, i) {
-          var o = { startLine: e, endLine: t };
+        ((F = P || (P = {})).create = function (e, t, n, r, i, o) {
+          const a = { startLine: e, endLine: t };
           return (
-            st.defined(n) && (o.startCharacter = n),
-            st.defined(r) && (o.endCharacter = r),
-            st.defined(i) && (o.kind = i),
-            o
-          );
-        }),
-        (P.is = function (e) {
-          var t = e;
-          return (
-            st.uinteger(t.startLine) &&
-            st.uinteger(t.startLine) &&
-            (st.undefined(t.startCharacter) || st.uinteger(t.startCharacter)) &&
-            (st.undefined(t.endCharacter) || st.uinteger(t.endCharacter)) &&
-            (st.undefined(t.kind) || st.string(t.kind))
-          );
-        }),
-        ((L = F || (F = {})).create = function (e, t) {
-          return { location: e, message: t };
-        }),
-        (L.is = function (e) {
-          var t = e;
-          return st.defined(t) && k.is(t.location) && st.string(t.message);
-        }),
-        ((O = j || (j = {})).Error = 1),
-        (O.Warning = 2),
-        (O.Information = 3),
-        (O.Hint = 4),
-        ((U = N || (N = {})).Unnecessary = 1),
-        (U.Deprecated = 2),
-        ((W || (W = {})).is = function (e) {
-          var t = e;
-          return null != t && st.string(t.href);
-        }),
-        ((H = V || (V = {})).create = function (e, t, n, r, i, o) {
-          var a = { range: e, message: t };
-          return (
-            st.defined(n) && (a.severity = n),
-            st.defined(r) && (a.code = r),
-            st.defined(i) && (a.source = i),
-            st.defined(o) && (a.relatedInformation = o),
+            Ut.defined(n) && (a.startCharacter = n),
+            Ut.defined(r) && (a.endCharacter = r),
+            Ut.defined(i) && (a.kind = i),
+            Ut.defined(o) && (a.collapsedText = o),
             a
           );
         }),
-        (H.is = function (e) {
-          var t,
-            n = e;
+        (F.is = function (e) {
+          const t = e;
           return (
-            st.defined(n) &&
-            _.is(n.range) &&
-            st.string(n.message) &&
-            (st.number(n.severity) || st.undefined(n.severity)) &&
-            (st.integer(n.code) || st.string(n.code) || st.undefined(n.code)) &&
-            (st.undefined(n.codeDescription) ||
-              st.string(
+            Ut.objectLiteral(t) &&
+            Ut.uinteger(t.startLine) &&
+            Ut.uinteger(t.startLine) &&
+            (Ut.undefined(t.startCharacter) || Ut.uinteger(t.startCharacter)) &&
+            (Ut.undefined(t.endCharacter) || Ut.uinteger(t.endCharacter)) &&
+            (Ut.undefined(t.kind) || Ut.string(t.kind))
+          );
+        }),
+        ((N = j || (j = {})).create = function (e, t) {
+          return { location: e, message: t };
+        }),
+        (N.is = function (e) {
+          let t = e;
+          return Ut.defined(t) && y.is(t.location) && Ut.string(t.message);
+        }),
+        ((V = U || (U = {})).Error = 1),
+        (V.Warning = 2),
+        (V.Information = 3),
+        (V.Hint = 4),
+        ((K = O || (O = {})).Unnecessary = 1),
+        (K.Deprecated = 2),
+        ((W || (W = {})).is = function (e) {
+          const t = e;
+          return Ut.objectLiteral(t) && Ut.string(t.href);
+        }),
+        ((X = H || (H = {})).create = function (e, t, n, r, i, o) {
+          let a = { range: e, message: t };
+          return (
+            Ut.defined(n) && (a.severity = n),
+            Ut.defined(r) && (a.code = r),
+            Ut.defined(i) && (a.source = i),
+            Ut.defined(o) && (a.relatedInformation = o),
+            a
+          );
+        }),
+        (X.is = function (e) {
+          var t;
+          let n = e;
+          return (
+            Ut.defined(n) &&
+            k.is(n.range) &&
+            Ut.string(n.message) &&
+            (Ut.number(n.severity) || Ut.undefined(n.severity)) &&
+            (Ut.integer(n.code) || Ut.string(n.code) || Ut.undefined(n.code)) &&
+            (Ut.undefined(n.codeDescription) ||
+              Ut.string(
                 null === (t = n.codeDescription) || void 0 === t
                   ? void 0
                   : t.href,
               )) &&
-            (st.string(n.source) || st.undefined(n.source)) &&
-            (st.undefined(n.relatedInformation) ||
-              st.typedArray(n.relatedInformation, F.is))
+            (Ut.string(n.source) || Ut.undefined(n.source)) &&
+            (Ut.undefined(n.relatedInformation) ||
+              Ut.typedArray(n.relatedInformation, j.is))
           );
         }),
-        ((z = K || (K = {})).create = function (e, t) {
-          for (var n = [], r = 2; r < arguments.length; r++)
-            n[r - 2] = arguments[r];
-          var i = { title: e, command: t };
-          return st.defined(n) && n.length > 0 && (i.arguments = n), i;
+        (($ = z || (z = {})).create = function (e, t, ...n) {
+          let r = { title: e, command: t };
+          return Ut.defined(n) && n.length > 0 && (r.arguments = n), r;
         }),
-        (z.is = function (e) {
-          var t = e;
-          return st.defined(t) && st.string(t.title) && st.string(t.command);
+        ($.is = function (e) {
+          let t = e;
+          return Ut.defined(t) && Ut.string(t.title) && Ut.string(t.command);
         }),
-        ((B = X || (X = {})).replace = function (e, t) {
+        ((q = B || (B = {})).replace = function (e, t) {
           return { range: e, newText: t };
         }),
-        (B.insert = function (e, t) {
+        (q.insert = function (e, t) {
           return { range: { start: e, end: e }, newText: t };
         }),
-        (B.del = function (e) {
+        (q.del = function (e) {
           return { range: e, newText: "" };
         }),
-        (B.is = function (e) {
-          var t = e;
-          return st.objectLiteral(t) && st.string(t.newText) && _.is(t.range);
+        (q.is = function (e) {
+          const t = e;
+          return Ut.objectLiteral(t) && Ut.string(t.newText) && k.is(t.range);
         }),
-        ((q = $ || ($ = {})).create = function (e, t, n) {
-          var r = { label: e };
+        ((G = Q || (Q = {})).create = function (e, t, n) {
+          const r = { label: e };
           return (
             void 0 !== t && (r.needsConfirmation = t),
             void 0 !== n && (r.description = n),
             r
           );
         }),
-        (q.is = function (e) {
-          var t = e;
+        (G.is = function (e) {
+          const t = e;
           return (
-            void 0 !== t &&
-            st.objectLiteral(t) &&
-            st.string(t.label) &&
-            (st.boolean(t.needsConfirmation) ||
+            Ut.objectLiteral(t) &&
+            Ut.string(t.label) &&
+            (Ut.boolean(t.needsConfirmation) ||
               void 0 === t.needsConfirmation) &&
-            (st.string(t.description) || void 0 === t.description)
+            (Ut.string(t.description) || void 0 === t.description)
           );
         }),
-        ((Q || (Q = {})).is = function (e) {
-          return "string" == typeof e;
+        ((J || (J = {})).is = function (e) {
+          const t = e;
+          return Ut.string(t);
         }),
-        ((J = G || (G = {})).replace = function (e, t, n) {
+        ((Z = Y || (Y = {})).replace = function (e, t, n) {
           return { range: e, newText: t, annotationId: n };
         }),
-        (J.insert = function (e, t, n) {
+        (Z.insert = function (e, t, n) {
           return { range: { start: e, end: e }, newText: t, annotationId: n };
         }),
-        (J.del = function (e, t) {
+        (Z.del = function (e, t) {
           return { range: e, newText: "", annotationId: t };
         }),
-        (J.is = function (e) {
-          var t = e;
-          return X.is(t) && ($.is(t.annotationId) || Q.is(t.annotationId));
+        (Z.is = function (e) {
+          const t = e;
+          return B.is(t) && (Q.is(t.annotationId) || J.is(t.annotationId));
         }),
-        ((Z = Y || (Y = {})).create = function (e, t) {
+        ((te = ee || (ee = {})).create = function (e, t) {
           return { textDocument: e, edits: t };
         }),
-        (Z.is = function (e) {
-          var t = e;
+        (te.is = function (e) {
+          let t = e;
           return (
-            st.defined(t) && le.is(t.textDocument) && Array.isArray(t.edits)
+            Ut.defined(t) && fe.is(t.textDocument) && Array.isArray(t.edits)
           );
         }),
-        ((te = ee || (ee = {})).create = function (e, t, n) {
-          var r = { kind: "create", uri: e };
+        ((re = ne || (ne = {})).create = function (e, t, n) {
+          let r = { kind: "create", uri: e };
           return (
             void 0 === t ||
               (void 0 === t.overwrite && void 0 === t.ignoreIfExists) ||
@@ -410,22 +493,22 @@
             r
           );
         }),
-        (te.is = function (e) {
-          var t = e;
+        (re.is = function (e) {
+          let t = e;
           return (
             t &&
             "create" === t.kind &&
-            st.string(t.uri) &&
+            Ut.string(t.uri) &&
             (void 0 === t.options ||
               ((void 0 === t.options.overwrite ||
-                st.boolean(t.options.overwrite)) &&
+                Ut.boolean(t.options.overwrite)) &&
                 (void 0 === t.options.ignoreIfExists ||
-                  st.boolean(t.options.ignoreIfExists)))) &&
-            (void 0 === t.annotationId || Q.is(t.annotationId))
+                  Ut.boolean(t.options.ignoreIfExists)))) &&
+            (void 0 === t.annotationId || J.is(t.annotationId))
           );
         }),
-        ((re = ne || (ne = {})).create = function (e, t, n, r) {
-          var i = { kind: "rename", oldUri: e, newUri: t };
+        ((oe = ie || (ie = {})).create = function (e, t, n, r) {
+          let i = { kind: "rename", oldUri: e, newUri: t };
           return (
             void 0 === n ||
               (void 0 === n.overwrite && void 0 === n.ignoreIfExists) ||
@@ -434,23 +517,23 @@
             i
           );
         }),
-        (re.is = function (e) {
-          var t = e;
+        (oe.is = function (e) {
+          let t = e;
           return (
             t &&
             "rename" === t.kind &&
-            st.string(t.oldUri) &&
-            st.string(t.newUri) &&
+            Ut.string(t.oldUri) &&
+            Ut.string(t.newUri) &&
             (void 0 === t.options ||
               ((void 0 === t.options.overwrite ||
-                st.boolean(t.options.overwrite)) &&
+                Ut.boolean(t.options.overwrite)) &&
                 (void 0 === t.options.ignoreIfExists ||
-                  st.boolean(t.options.ignoreIfExists)))) &&
-            (void 0 === t.annotationId || Q.is(t.annotationId))
+                  Ut.boolean(t.options.ignoreIfExists)))) &&
+            (void 0 === t.annotationId || J.is(t.annotationId))
           );
         }),
-        ((oe = ie || (ie = {})).create = function (e, t, n) {
-          var r = { kind: "delete", uri: e };
+        ((se = ae || (ae = {})).create = function (e, t, n) {
+          let r = { kind: "delete", uri: e };
           return (
             void 0 === t ||
               (void 0 === t.recursive && void 0 === t.ignoreIfNotExists) ||
@@ -459,796 +542,632 @@
             r
           );
         }),
-        (oe.is = function (e) {
-          var t = e;
+        (se.is = function (e) {
+          let t = e;
           return (
             t &&
             "delete" === t.kind &&
-            st.string(t.uri) &&
+            Ut.string(t.uri) &&
             (void 0 === t.options ||
               ((void 0 === t.options.recursive ||
-                st.boolean(t.options.recursive)) &&
+                Ut.boolean(t.options.recursive)) &&
                 (void 0 === t.options.ignoreIfNotExists ||
-                  st.boolean(t.options.ignoreIfNotExists)))) &&
-            (void 0 === t.annotationId || Q.is(t.annotationId))
+                  Ut.boolean(t.options.ignoreIfNotExists)))) &&
+            (void 0 === t.annotationId || J.is(t.annotationId))
           );
         }),
-        ((ae || (ae = {})).is = function (e) {
-          var t = e;
+        ((ue || (ue = {})).is = function (e) {
+          let t = e;
           return (
             t &&
             (void 0 !== t.changes || void 0 !== t.documentChanges) &&
             (void 0 === t.documentChanges ||
-              t.documentChanges.every(function (e) {
-                return st.string(e.kind)
-                  ? ee.is(e) || ne.is(e) || ie.is(e)
-                  : Y.is(e);
-              }))
+              t.documentChanges.every((e) =>
+                Ut.string(e.kind) ? ne.is(e) || ie.is(e) || ae.is(e) : ee.is(e),
+              ))
           );
-        });
-      var ue,
-        ce,
-        de,
-        ge,
-        le,
-        he,
-        fe,
-        pe,
-        ve,
-        me,
-        _e,
-        we,
-        ke,
-        be,
-        ye,
-        Ee,
-        Ce,
-        xe,
-        Ae,
-        Ie,
-        Se,
-        Re,
-        Te,
-        De,
-        Me,
-        Pe,
-        Fe,
-        Le,
-        je,
-        Oe,
-        Ne,
-        Ue,
-        We,
-        Ve,
-        He,
-        Ke,
-        ze,
-        Xe,
-        Be,
-        $e,
-        qe,
-        Qe,
-        Ge,
-        Je,
-        Ye,
-        Ze,
-        et,
-        tt,
-        nt,
-        rt,
-        it,
-        ot = (function () {
-          function e(e, t) {
-            (this.edits = e), (this.changeAnnotations = t);
-          }
-          return (
-            (e.prototype.insert = function (e, t, n) {
-              var r, i;
-              if (
-                (void 0 === n
-                  ? (r = X.insert(e, t))
-                  : Q.is(n)
-                    ? ((i = n), (r = G.insert(e, t, n)))
-                    : (this.assertChangeAnnotations(this.changeAnnotations),
-                      (i = this.changeAnnotations.manage(n)),
-                      (r = G.insert(e, t, i))),
-                this.edits.push(r),
-                void 0 !== i)
-              )
-                return i;
-            }),
-            (e.prototype.replace = function (e, t, n) {
-              var r, i;
-              if (
-                (void 0 === n
-                  ? (r = X.replace(e, t))
-                  : Q.is(n)
-                    ? ((i = n), (r = G.replace(e, t, n)))
-                    : (this.assertChangeAnnotations(this.changeAnnotations),
-                      (i = this.changeAnnotations.manage(n)),
-                      (r = G.replace(e, t, i))),
-                this.edits.push(r),
-                void 0 !== i)
-              )
-                return i;
-            }),
-            (e.prototype.delete = function (e, t) {
-              var n, r;
-              if (
-                (void 0 === t
-                  ? (n = X.del(e))
-                  : Q.is(t)
-                    ? ((r = t), (n = G.del(e, t)))
-                    : (this.assertChangeAnnotations(this.changeAnnotations),
-                      (r = this.changeAnnotations.manage(t)),
-                      (n = G.del(e, r))),
-                this.edits.push(n),
-                void 0 !== r)
-              )
-                return r;
-            }),
-            (e.prototype.add = function (e) {
-              this.edits.push(e);
-            }),
-            (e.prototype.all = function () {
-              return this.edits;
-            }),
-            (e.prototype.clear = function () {
-              this.edits.splice(0, this.edits.length);
-            }),
-            (e.prototype.assertChangeAnnotations = function (e) {
-              if (void 0 === e)
-                throw new Error(
-                  "Text edit change is not configured to manage change annotations.",
-                );
-            }),
-            e
-          );
-        })(),
-        at = (function () {
-          function e(e) {
-            (this._annotations = void 0 === e ? Object.create(null) : e),
-              (this._counter = 0),
-              (this._size = 0);
-          }
-          return (
-            (e.prototype.all = function () {
-              return this._annotations;
-            }),
-            Object.defineProperty(e.prototype, "size", {
-              get: function () {
-                return this._size;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            (e.prototype.manage = function (e, t) {
-              var n;
-              if (
-                (Q.is(e) ? (n = e) : ((n = this.nextId()), (t = e)),
-                void 0 !== this._annotations[n])
-              )
-                throw new Error("Id " + n + " is already in use.");
-              if (void 0 === t)
-                throw new Error("No annotation provided for id " + n);
-              return (this._annotations[n] = t), this._size++, n;
-            }),
-            (e.prototype.nextId = function () {
-              return this._counter++, this._counter.toString();
-            }),
-            e
-          );
-        })();
-      !(function () {
-        function e(e) {
-          var t = this;
-          (this._textEditChanges = Object.create(null)),
-            void 0 !== e
-              ? ((this._workspaceEdit = e),
-                e.documentChanges
-                  ? ((this._changeAnnotations = new at(e.changeAnnotations)),
-                    (e.changeAnnotations = this._changeAnnotations.all()),
-                    e.documentChanges.forEach(function (e) {
-                      if (Y.is(e)) {
-                        var n = new ot(e.edits, t._changeAnnotations);
-                        t._textEditChanges[e.textDocument.uri] = n;
-                      }
-                    }))
-                  : e.changes &&
-                    Object.keys(e.changes).forEach(function (n) {
-                      var r = new ot(e.changes[n]);
-                      t._textEditChanges[n] = r;
-                    }))
-              : (this._workspaceEdit = {});
-        }
-        Object.defineProperty(e.prototype, "edit", {
-          get: function () {
-            return (
-              this.initDocumentChanges(),
-              void 0 !== this._changeAnnotations &&
-                (0 === this._changeAnnotations.size
-                  ? (this._workspaceEdit.changeAnnotations = void 0)
-                  : (this._workspaceEdit.changeAnnotations =
-                      this._changeAnnotations.all())),
-              this._workspaceEdit
-            );
-          },
-          enumerable: !1,
-          configurable: !0,
         }),
-          (e.prototype.getTextEditChange = function (e) {
-            if (le.is(e)) {
-              if (
-                (this.initDocumentChanges(),
-                void 0 === this._workspaceEdit.documentChanges)
-              )
-                throw new Error(
-                  "Workspace edit is not configured for document changes.",
-                );
-              var t = { uri: e.uri, version: e.version };
-              if (!(r = this._textEditChanges[t.uri])) {
-                var n = { textDocument: t, edits: (i = []) };
-                this._workspaceEdit.documentChanges.push(n),
-                  (r = new ot(i, this._changeAnnotations)),
-                  (this._textEditChanges[t.uri] = r);
-              }
-              return r;
-            }
-            if ((this.initChanges(), void 0 === this._workspaceEdit.changes))
-              throw new Error(
-                "Workspace edit is not configured for normal text edit changes.",
-              );
-            var r;
-            if (!(r = this._textEditChanges[e])) {
-              var i = [];
-              (this._workspaceEdit.changes[e] = i),
-                (r = new ot(i)),
-                (this._textEditChanges[e] = r);
-            }
-            return r;
-          }),
-          (e.prototype.initDocumentChanges = function () {
-            void 0 === this._workspaceEdit.documentChanges &&
-              void 0 === this._workspaceEdit.changes &&
-              ((this._changeAnnotations = new at()),
-              (this._workspaceEdit.documentChanges = []),
-              (this._workspaceEdit.changeAnnotations =
-                this._changeAnnotations.all()));
-          }),
-          (e.prototype.initChanges = function () {
-            void 0 === this._workspaceEdit.documentChanges &&
-              void 0 === this._workspaceEdit.changes &&
-              (this._workspaceEdit.changes = Object.create(null));
-          }),
-          (e.prototype.createFile = function (e, t, n) {
-            if (
-              (this.initDocumentChanges(),
-              void 0 === this._workspaceEdit.documentChanges)
-            )
-              throw new Error(
-                "Workspace edit is not configured for document changes.",
-              );
-            var r, i, o;
-            if (
-              ($.is(t) || Q.is(t) ? (r = t) : (n = t),
-              void 0 === r
-                ? (i = ee.create(e, n))
-                : ((o = Q.is(r) ? r : this._changeAnnotations.manage(r)),
-                  (i = ee.create(e, n, o))),
-              this._workspaceEdit.documentChanges.push(i),
-              void 0 !== o)
-            )
-              return o;
-          }),
-          (e.prototype.renameFile = function (e, t, n, r) {
-            if (
-              (this.initDocumentChanges(),
-              void 0 === this._workspaceEdit.documentChanges)
-            )
-              throw new Error(
-                "Workspace edit is not configured for document changes.",
-              );
-            var i, o, a;
-            if (
-              ($.is(n) || Q.is(n) ? (i = n) : (r = n),
-              void 0 === i
-                ? (o = ne.create(e, t, r))
-                : ((a = Q.is(i) ? i : this._changeAnnotations.manage(i)),
-                  (o = ne.create(e, t, r, a))),
-              this._workspaceEdit.documentChanges.push(o),
-              void 0 !== a)
-            )
-              return a;
-          }),
-          (e.prototype.deleteFile = function (e, t, n) {
-            if (
-              (this.initDocumentChanges(),
-              void 0 === this._workspaceEdit.documentChanges)
-            )
-              throw new Error(
-                "Workspace edit is not configured for document changes.",
-              );
-            var r, i, o;
-            if (
-              ($.is(t) || Q.is(t) ? (r = t) : (n = t),
-              void 0 === r
-                ? (i = ie.create(e, n))
-                : ((o = Q.is(r) ? r : this._changeAnnotations.manage(r)),
-                  (i = ie.create(e, n, o))),
-              this._workspaceEdit.documentChanges.push(i),
-              void 0 !== o)
-            )
-              return o;
-          });
-      })();
-      ((ce = ue || (ue = {})).create = function (e) {
-        return { uri: e };
-      }),
-        (ce.is = function (e) {
-          var t = e;
-          return st.defined(t) && st.string(t.uri);
+        ((de = ce || (ce = {})).create = function (e) {
+          return { uri: e };
         }),
-        ((ge = de || (de = {})).create = function (e, t) {
+        (de.is = function (e) {
+          let t = e;
+          return Ut.defined(t) && Ut.string(t.uri);
+        }),
+        ((ge = le || (le = {})).create = function (e, t) {
           return { uri: e, version: t };
         }),
         (ge.is = function (e) {
-          var t = e;
-          return st.defined(t) && st.string(t.uri) && st.integer(t.version);
+          let t = e;
+          return Ut.defined(t) && Ut.string(t.uri) && Ut.integer(t.version);
         }),
-        ((he = le || (le = {})).create = function (e, t) {
+        ((he = fe || (fe = {})).create = function (e, t) {
           return { uri: e, version: t };
         }),
         (he.is = function (e) {
-          var t = e;
+          let t = e;
           return (
-            st.defined(t) &&
-            st.string(t.uri) &&
-            (null === t.version || st.integer(t.version))
+            Ut.defined(t) &&
+            Ut.string(t.uri) &&
+            (null === t.version || Ut.integer(t.version))
           );
         }),
-        ((pe = fe || (fe = {})).create = function (e, t, n, r) {
+        ((pe = me || (me = {})).create = function (e, t, n, r) {
           return { uri: e, languageId: t, version: n, text: r };
         }),
         (pe.is = function (e) {
-          var t = e;
+          let t = e;
           return (
-            st.defined(t) &&
-            st.string(t.uri) &&
-            st.string(t.languageId) &&
-            st.integer(t.version) &&
-            st.string(t.text)
+            Ut.defined(t) &&
+            Ut.string(t.uri) &&
+            Ut.string(t.languageId) &&
+            Ut.integer(t.version) &&
+            Ut.string(t.text)
           );
         }),
-        ((me = ve || (ve = {})).PlainText = "plaintext"),
-        (me.Markdown = "markdown"),
-        (function (e) {
-          e.is = function (t) {
-            var n = t;
-            return n === e.PlainText || n === e.Markdown;
-          };
-        })(ve || (ve = {})),
-        ((_e || (_e = {})).is = function (e) {
-          var t = e;
-          return st.objectLiteral(e) && ve.is(t.kind) && st.string(t.value);
+        ((be = ve || (ve = {})).PlainText = "plaintext"),
+        (be.Markdown = "markdown"),
+        (be.is = function (e) {
+          const t = e;
+          return t === be.PlainText || t === be.Markdown;
         }),
-        ((ke = we || (we = {})).Text = 1),
-        (ke.Method = 2),
-        (ke.Function = 3),
-        (ke.Constructor = 4),
-        (ke.Field = 5),
-        (ke.Variable = 6),
-        (ke.Class = 7),
-        (ke.Interface = 8),
-        (ke.Module = 9),
-        (ke.Property = 10),
-        (ke.Unit = 11),
-        (ke.Value = 12),
-        (ke.Enum = 13),
-        (ke.Keyword = 14),
-        (ke.Snippet = 15),
-        (ke.Color = 16),
-        (ke.File = 17),
-        (ke.Reference = 18),
-        (ke.Folder = 19),
-        (ke.EnumMember = 20),
-        (ke.Constant = 21),
-        (ke.Struct = 22),
-        (ke.Event = 23),
-        (ke.Operator = 24),
-        (ke.TypeParameter = 25),
-        ((ye = be || (be = {})).PlainText = 1),
-        (ye.Snippet = 2),
-        ((Ee || (Ee = {})).Deprecated = 1),
-        ((xe = Ce || (Ce = {})).create = function (e, t, n) {
+        ((_e || (_e = {})).is = function (e) {
+          const t = e;
+          return Ut.objectLiteral(e) && ve.is(t.kind) && Ut.string(t.value);
+        }),
+        ((we = ke || (ke = {})).Text = 1),
+        (we.Method = 2),
+        (we.Function = 3),
+        (we.Constructor = 4),
+        (we.Field = 5),
+        (we.Variable = 6),
+        (we.Class = 7),
+        (we.Interface = 8),
+        (we.Module = 9),
+        (we.Property = 10),
+        (we.Unit = 11),
+        (we.Value = 12),
+        (we.Enum = 13),
+        (we.Keyword = 14),
+        (we.Snippet = 15),
+        (we.Color = 16),
+        (we.File = 17),
+        (we.Reference = 18),
+        (we.Folder = 19),
+        (we.EnumMember = 20),
+        (we.Constant = 21),
+        (we.Struct = 22),
+        (we.Event = 23),
+        (we.Operator = 24),
+        (we.TypeParameter = 25),
+        ((xe = ye || (ye = {})).PlainText = 1),
+        (xe.Snippet = 2),
+        ((Ie || (Ie = {})).Deprecated = 1),
+        ((Ce = Ee || (Ee = {})).create = function (e, t, n) {
           return { newText: e, insert: t, replace: n };
         }),
-        (xe.is = function (e) {
-          var t = e;
-          return t && st.string(t.newText) && _.is(t.insert) && _.is(t.replace);
+        (Ce.is = function (e) {
+          const t = e;
+          return t && Ut.string(t.newText) && k.is(t.insert) && k.is(t.replace);
         }),
-        ((Ie = Ae || (Ae = {})).asIs = 1),
-        (Ie.adjustIndentation = 2),
-        ((Se || (Se = {})).create = function (e) {
+        ((Se = Ae || (Ae = {})).asIs = 1),
+        (Se.adjustIndentation = 2),
+        ((Re || (Re = {})).is = function (e) {
+          const t = e;
+          return (
+            t &&
+            (Ut.string(t.detail) || void 0 === t.detail) &&
+            (Ut.string(t.description) || void 0 === t.description)
+          );
+        }),
+        ((Le || (Le = {})).create = function (e) {
           return { label: e };
         }),
-        ((Re || (Re = {})).create = function (e, t) {
+        ((Te || (Te = {})).create = function (e, t) {
           return { items: e || [], isIncomplete: !!t };
         }),
-        ((De = Te || (Te = {})).fromPlainText = function (e) {
+        ((De = Me || (Me = {})).fromPlainText = function (e) {
           return e.replace(/[\\`*_{}[\]()#+\-.!]/g, "\\$&");
         }),
         (De.is = function (e) {
-          var t = e;
+          const t = e;
           return (
-            st.string(t) ||
-            (st.objectLiteral(t) && st.string(t.language) && st.string(t.value))
+            Ut.string(t) ||
+            (Ut.objectLiteral(t) && Ut.string(t.language) && Ut.string(t.value))
           );
         }),
-        ((Me || (Me = {})).is = function (e) {
-          var t = e;
+        ((Pe || (Pe = {})).is = function (e) {
+          let t = e;
           return (
             !!t &&
-            st.objectLiteral(t) &&
+            Ut.objectLiteral(t) &&
             (_e.is(t.contents) ||
-              Te.is(t.contents) ||
-              st.typedArray(t.contents, Te.is)) &&
-            (void 0 === e.range || _.is(e.range))
+              Me.is(t.contents) ||
+              Ut.typedArray(t.contents, Me.is)) &&
+            (void 0 === e.range || k.is(e.range))
           );
-        }),
-        ((Pe || (Pe = {})).create = function (e, t) {
-          return t ? { label: e, documentation: t } : { label: e };
         }),
         ((Fe || (Fe = {})).create = function (e, t) {
-          for (var n = [], r = 2; r < arguments.length; r++)
-            n[r - 2] = arguments[r];
-          var i = { label: e };
+          return t ? { label: e, documentation: t } : { label: e };
+        }),
+        ((je || (je = {})).create = function (e, t, ...n) {
+          let r = { label: e };
           return (
-            st.defined(t) && (i.documentation = t),
-            st.defined(n) ? (i.parameters = n) : (i.parameters = []),
-            i
+            Ut.defined(t) && (r.documentation = t),
+            Ut.defined(n) ? (r.parameters = n) : (r.parameters = []),
+            r
           );
         }),
-        ((je = Le || (Le = {})).Text = 1),
-        (je.Read = 2),
-        (je.Write = 3),
-        ((Oe || (Oe = {})).create = function (e, t) {
-          var n = { range: e };
-          return st.number(t) && (n.kind = t), n;
+        ((Ue = Ne || (Ne = {})).Text = 1),
+        (Ue.Read = 2),
+        (Ue.Write = 3),
+        ((Ve || (Ve = {})).create = function (e, t) {
+          let n = { range: e };
+          return Ut.number(t) && (n.kind = t), n;
         }),
-        ((Ue = Ne || (Ne = {})).File = 1),
-        (Ue.Module = 2),
-        (Ue.Namespace = 3),
-        (Ue.Package = 4),
-        (Ue.Class = 5),
-        (Ue.Method = 6),
-        (Ue.Property = 7),
-        (Ue.Field = 8),
-        (Ue.Constructor = 9),
-        (Ue.Enum = 10),
-        (Ue.Interface = 11),
-        (Ue.Function = 12),
-        (Ue.Variable = 13),
-        (Ue.Constant = 14),
-        (Ue.String = 15),
-        (Ue.Number = 16),
-        (Ue.Boolean = 17),
-        (Ue.Array = 18),
-        (Ue.Object = 19),
-        (Ue.Key = 20),
-        (Ue.Null = 21),
-        (Ue.EnumMember = 22),
-        (Ue.Struct = 23),
-        (Ue.Event = 24),
-        (Ue.Operator = 25),
-        (Ue.TypeParameter = 26),
+        ((Ke = Oe || (Oe = {})).File = 1),
+        (Ke.Module = 2),
+        (Ke.Namespace = 3),
+        (Ke.Package = 4),
+        (Ke.Class = 5),
+        (Ke.Method = 6),
+        (Ke.Property = 7),
+        (Ke.Field = 8),
+        (Ke.Constructor = 9),
+        (Ke.Enum = 10),
+        (Ke.Interface = 11),
+        (Ke.Function = 12),
+        (Ke.Variable = 13),
+        (Ke.Constant = 14),
+        (Ke.String = 15),
+        (Ke.Number = 16),
+        (Ke.Boolean = 17),
+        (Ke.Array = 18),
+        (Ke.Object = 19),
+        (Ke.Key = 20),
+        (Ke.Null = 21),
+        (Ke.EnumMember = 22),
+        (Ke.Struct = 23),
+        (Ke.Event = 24),
+        (Ke.Operator = 25),
+        (Ke.TypeParameter = 26),
         ((We || (We = {})).Deprecated = 1),
-        ((Ve || (Ve = {})).create = function (e, t, n, r, i) {
-          var o = { name: e, kind: t, location: { uri: r, range: n } };
+        ((He || (He = {})).create = function (e, t, n, r, i) {
+          let o = { name: e, kind: t, location: { uri: r, range: n } };
           return i && (o.containerName = i), o;
         }),
-        ((Ke = He || (He = {})).create = function (e, t, n, r, i, o) {
-          var a = { name: e, detail: t, kind: n, range: r, selectionRange: i };
+        ((Xe || (Xe = {})).create = function (e, t, n, r) {
+          return void 0 !== r
+            ? { name: e, kind: t, location: { uri: n, range: r } }
+            : { name: e, kind: t, location: { uri: n } };
+        }),
+        (($e = ze || (ze = {})).create = function (e, t, n, r, i, o) {
+          let a = { name: e, detail: t, kind: n, range: r, selectionRange: i };
           return void 0 !== o && (a.children = o), a;
         }),
-        (Ke.is = function (e) {
-          var t = e;
+        ($e.is = function (e) {
+          let t = e;
           return (
             t &&
-            st.string(t.name) &&
-            st.number(t.kind) &&
-            _.is(t.range) &&
-            _.is(t.selectionRange) &&
-            (void 0 === t.detail || st.string(t.detail)) &&
-            (void 0 === t.deprecated || st.boolean(t.deprecated)) &&
+            Ut.string(t.name) &&
+            Ut.number(t.kind) &&
+            k.is(t.range) &&
+            k.is(t.selectionRange) &&
+            (void 0 === t.detail || Ut.string(t.detail)) &&
+            (void 0 === t.deprecated || Ut.boolean(t.deprecated)) &&
             (void 0 === t.children || Array.isArray(t.children)) &&
             (void 0 === t.tags || Array.isArray(t.tags))
           );
         }),
-        ((Xe = ze || (ze = {})).Empty = ""),
-        (Xe.QuickFix = "quickfix"),
-        (Xe.Refactor = "refactor"),
-        (Xe.RefactorExtract = "refactor.extract"),
-        (Xe.RefactorInline = "refactor.inline"),
-        (Xe.RefactorRewrite = "refactor.rewrite"),
-        (Xe.Source = "source"),
-        (Xe.SourceOrganizeImports = "source.organizeImports"),
-        (Xe.SourceFixAll = "source.fixAll"),
-        (($e = Be || (Be = {})).create = function (e, t) {
-          var n = { diagnostics: e };
-          return null != t && (n.only = t), n;
+        ((qe = Be || (Be = {})).Empty = ""),
+        (qe.QuickFix = "quickfix"),
+        (qe.Refactor = "refactor"),
+        (qe.RefactorExtract = "refactor.extract"),
+        (qe.RefactorInline = "refactor.inline"),
+        (qe.RefactorRewrite = "refactor.rewrite"),
+        (qe.Source = "source"),
+        (qe.SourceOrganizeImports = "source.organizeImports"),
+        (qe.SourceFixAll = "source.fixAll"),
+        ((Ge = Qe || (Qe = {})).Invoked = 1),
+        (Ge.Automatic = 2),
+        ((Ye = Je || (Je = {})).create = function (e, t, n) {
+          let r = { diagnostics: e };
+          return null != t && (r.only = t), null != n && (r.triggerKind = n), r;
         }),
-        ($e.is = function (e) {
-          var t = e;
+        (Ye.is = function (e) {
+          let t = e;
           return (
-            st.defined(t) &&
-            st.typedArray(t.diagnostics, V.is) &&
-            (void 0 === t.only || st.typedArray(t.only, st.string))
+            Ut.defined(t) &&
+            Ut.typedArray(t.diagnostics, H.is) &&
+            (void 0 === t.only || Ut.typedArray(t.only, Ut.string)) &&
+            (void 0 === t.triggerKind ||
+              t.triggerKind === Qe.Invoked ||
+              t.triggerKind === Qe.Automatic)
           );
         }),
-        ((Qe = qe || (qe = {})).create = function (e, t, n) {
-          var r = { title: e },
+        ((et = Ze || (Ze = {})).create = function (e, t, n) {
+          let r = { title: e },
             i = !0;
           return (
             "string" == typeof t
               ? ((i = !1), (r.kind = t))
-              : K.is(t)
+              : z.is(t)
                 ? (r.command = t)
                 : (r.edit = t),
             i && void 0 !== n && (r.kind = n),
             r
           );
         }),
-        (Qe.is = function (e) {
-          var t = e;
+        (et.is = function (e) {
+          let t = e;
           return (
             t &&
-            st.string(t.title) &&
-            (void 0 === t.diagnostics || st.typedArray(t.diagnostics, V.is)) &&
-            (void 0 === t.kind || st.string(t.kind)) &&
+            Ut.string(t.title) &&
+            (void 0 === t.diagnostics || Ut.typedArray(t.diagnostics, H.is)) &&
+            (void 0 === t.kind || Ut.string(t.kind)) &&
             (void 0 !== t.edit || void 0 !== t.command) &&
-            (void 0 === t.command || K.is(t.command)) &&
-            (void 0 === t.isPreferred || st.boolean(t.isPreferred)) &&
-            (void 0 === t.edit || ae.is(t.edit))
+            (void 0 === t.command || z.is(t.command)) &&
+            (void 0 === t.isPreferred || Ut.boolean(t.isPreferred)) &&
+            (void 0 === t.edit || ue.is(t.edit))
           );
         }),
-        ((Je = Ge || (Ge = {})).create = function (e, t) {
-          var n = { range: e };
-          return st.defined(t) && (n.data = t), n;
+        ((nt = tt || (tt = {})).create = function (e, t) {
+          let n = { range: e };
+          return Ut.defined(t) && (n.data = t), n;
         }),
-        (Je.is = function (e) {
-          var t = e;
+        (nt.is = function (e) {
+          let t = e;
           return (
-            st.defined(t) &&
-            _.is(t.range) &&
-            (st.undefined(t.command) || K.is(t.command))
+            Ut.defined(t) &&
+            k.is(t.range) &&
+            (Ut.undefined(t.command) || z.is(t.command))
           );
         }),
-        ((Ze = Ye || (Ye = {})).create = function (e, t) {
+        ((it = rt || (rt = {})).create = function (e, t) {
           return { tabSize: e, insertSpaces: t };
         }),
-        (Ze.is = function (e) {
-          var t = e;
+        (it.is = function (e) {
+          let t = e;
           return (
-            st.defined(t) &&
-            st.uinteger(t.tabSize) &&
-            st.boolean(t.insertSpaces)
+            Ut.defined(t) &&
+            Ut.uinteger(t.tabSize) &&
+            Ut.boolean(t.insertSpaces)
           );
         }),
-        ((tt = et || (et = {})).create = function (e, t, n) {
+        ((at = ot || (ot = {})).create = function (e, t, n) {
           return { range: e, target: t, data: n };
         }),
-        (tt.is = function (e) {
-          var t = e;
+        (at.is = function (e) {
+          let t = e;
           return (
-            st.defined(t) &&
-            _.is(t.range) &&
-            (st.undefined(t.target) || st.string(t.target))
+            Ut.defined(t) &&
+            k.is(t.range) &&
+            (Ut.undefined(t.target) || Ut.string(t.target))
           );
         }),
-        ((rt = nt || (nt = {})).create = function (e, t) {
+        ((ut = st || (st = {})).create = function (e, t) {
           return { range: e, parent: t };
         }),
-        (rt.is = function (e) {
-          var t = e;
+        (ut.is = function (e) {
+          let t = e;
           return (
-            void 0 !== t &&
-            _.is(t.range) &&
-            (void 0 === t.parent || rt.is(t.parent))
+            Ut.objectLiteral(t) &&
+            k.is(t.range) &&
+            (void 0 === t.parent || ut.is(t.parent))
           );
+        }),
+        ((dt = ct || (ct = {})).namespace = "namespace"),
+        (dt.type = "type"),
+        (dt.class = "class"),
+        (dt.enum = "enum"),
+        (dt.interface = "interface"),
+        (dt.struct = "struct"),
+        (dt.typeParameter = "typeParameter"),
+        (dt.parameter = "parameter"),
+        (dt.variable = "variable"),
+        (dt.property = "property"),
+        (dt.enumMember = "enumMember"),
+        (dt.event = "event"),
+        (dt.function = "function"),
+        (dt.method = "method"),
+        (dt.macro = "macro"),
+        (dt.keyword = "keyword"),
+        (dt.modifier = "modifier"),
+        (dt.comment = "comment"),
+        (dt.string = "string"),
+        (dt.number = "number"),
+        (dt.regexp = "regexp"),
+        (dt.operator = "operator"),
+        (dt.decorator = "decorator"),
+        ((gt = lt || (lt = {})).declaration = "declaration"),
+        (gt.definition = "definition"),
+        (gt.readonly = "readonly"),
+        (gt.static = "static"),
+        (gt.deprecated = "deprecated"),
+        (gt.abstract = "abstract"),
+        (gt.async = "async"),
+        (gt.modification = "modification"),
+        (gt.documentation = "documentation"),
+        (gt.defaultLibrary = "defaultLibrary"),
+        ((ft || (ft = {})).is = function (e) {
+          const t = e;
+          return (
+            Ut.objectLiteral(t) &&
+            (void 0 === t.resultId || "string" == typeof t.resultId) &&
+            Array.isArray(t.data) &&
+            (0 === t.data.length || "number" == typeof t.data[0])
+          );
+        }),
+        ((mt = ht || (ht = {})).create = function (e, t) {
+          return { range: e, text: t };
+        }),
+        (mt.is = function (e) {
+          const t = e;
+          return null != t && k.is(t.range) && Ut.string(t.text);
+        }),
+        ((vt = pt || (pt = {})).create = function (e, t, n) {
+          return { range: e, variableName: t, caseSensitiveLookup: n };
+        }),
+        (vt.is = function (e) {
+          const t = e;
+          return (
+            null != t &&
+            k.is(t.range) &&
+            Ut.boolean(t.caseSensitiveLookup) &&
+            (Ut.string(t.variableName) || void 0 === t.variableName)
+          );
+        }),
+        ((_t = bt || (bt = {})).create = function (e, t) {
+          return { range: e, expression: t };
+        }),
+        (_t.is = function (e) {
+          const t = e;
+          return (
+            null != t &&
+            k.is(t.range) &&
+            (Ut.string(t.expression) || void 0 === t.expression)
+          );
+        }),
+        ((wt = kt || (kt = {})).create = function (e, t) {
+          return { frameId: e, stoppedLocation: t };
+        }),
+        (wt.is = function (e) {
+          const t = e;
+          return Ut.defined(t) && k.is(e.stoppedLocation);
+        }),
+        ((xt = yt || (yt = {})).Type = 1),
+        (xt.Parameter = 2),
+        (xt.is = function (e) {
+          return 1 === e || 2 === e;
+        }),
+        ((Et = It || (It = {})).create = function (e) {
+          return { value: e };
+        }),
+        (Et.is = function (e) {
+          const t = e;
+          return (
+            Ut.objectLiteral(t) &&
+            (void 0 === t.tooltip ||
+              Ut.string(t.tooltip) ||
+              _e.is(t.tooltip)) &&
+            (void 0 === t.location || y.is(t.location)) &&
+            (void 0 === t.command || z.is(t.command))
+          );
+        }),
+        ((At = Ct || (Ct = {})).create = function (e, t, n) {
+          const r = { position: e, label: t };
+          return void 0 !== n && (r.kind = n), r;
+        }),
+        (At.is = function (e) {
+          const t = e;
+          return (
+            (Ut.objectLiteral(t) &&
+              b.is(t.position) &&
+              (Ut.string(t.label) || Ut.typedArray(t.label, It.is)) &&
+              (void 0 === t.kind || yt.is(t.kind)) &&
+              void 0 === t.textEdits) ||
+            (Ut.typedArray(t.textEdits, B.is) &&
+              (void 0 === t.tooltip ||
+                Ut.string(t.tooltip) ||
+                _e.is(t.tooltip)) &&
+              (void 0 === t.paddingLeft || Ut.boolean(t.paddingLeft)) &&
+              (void 0 === t.paddingRight || Ut.boolean(t.paddingRight)))
+          );
+        }),
+        ((St || (St = {})).createSnippet = function (e) {
+          return { kind: "snippet", value: e };
+        }),
+        ((Rt || (Rt = {})).create = function (e, t, n, r) {
+          return { insertText: e, filterText: t, range: n, command: r };
+        }),
+        ((Lt || (Lt = {})).create = function (e) {
+          return { items: e };
+        }),
+        ((Mt = Tt || (Tt = {})).Invoked = 0),
+        (Mt.Automatic = 1),
+        ((Dt || (Dt = {})).create = function (e, t) {
+          return { range: e, text: t };
+        }),
+        ((Pt || (Pt = {})).create = function (e, t) {
+          return { triggerKind: e, selectedCompletionInfo: t };
+        }),
+        ((Ft || (Ft = {})).is = function (e) {
+          const t = e;
+          return Ut.objectLiteral(t) && f.is(t.uri) && Ut.string(t.name);
         }),
         (function (e) {
           function t(e, n) {
             if (e.length <= 1) return e;
-            var r = (e.length / 2) | 0,
+            const r = (e.length / 2) | 0,
               i = e.slice(0, r),
               o = e.slice(r);
             t(i, n), t(o, n);
-            for (var a = 0, s = 0, u = 0; a < i.length && s < o.length; ) {
-              var c = n(i[a], o[s]);
-              e[u++] = c <= 0 ? i[a++] : o[s++];
+            let a = 0,
+              s = 0,
+              u = 0;
+            for (; a < i.length && s < o.length; ) {
+              let t = n(i[a], o[s]);
+              e[u++] = t <= 0 ? i[a++] : o[s++];
             }
             for (; a < i.length; ) e[u++] = i[a++];
             for (; s < o.length; ) e[u++] = o[s++];
             return e;
           }
           (e.create = function (e, t, n, r) {
-            return new dt(e, t, n, r);
+            return new Vt(e, t, n, r);
           }),
             (e.is = function (e) {
-              var t = e;
+              let t = e;
               return !!(
-                st.defined(t) &&
-                st.string(t.uri) &&
-                (st.undefined(t.languageId) || st.string(t.languageId)) &&
-                st.uinteger(t.lineCount) &&
-                st.func(t.getText) &&
-                st.func(t.positionAt) &&
-                st.func(t.offsetAt)
+                Ut.defined(t) &&
+                Ut.string(t.uri) &&
+                (Ut.undefined(t.languageId) || Ut.string(t.languageId)) &&
+                Ut.uinteger(t.lineCount) &&
+                Ut.func(t.getText) &&
+                Ut.func(t.positionAt) &&
+                Ut.func(t.offsetAt)
               );
             }),
             (e.applyEdits = function (e, n) {
-              for (
-                var r = e.getText(),
-                  i = t(n, function (e, t) {
-                    var n = e.range.start.line - t.range.start.line;
-                    return 0 === n
-                      ? e.range.start.character - t.range.start.character
-                      : n;
-                  }),
-                  o = r.length,
-                  a = i.length - 1;
-                a >= 0;
-                a--
-              ) {
-                var s = i[a],
-                  u = e.offsetAt(s.range.start),
-                  c = e.offsetAt(s.range.end);
-                if (!(c <= o)) throw new Error("Overlapping edit");
-                (r = r.substring(0, u) + s.newText + r.substring(c, r.length)),
-                  (o = u);
+              let r = e.getText(),
+                i = t(n, (e, t) => {
+                  let n = e.range.start.line - t.range.start.line;
+                  return 0 === n
+                    ? e.range.start.character - t.range.start.character
+                    : n;
+                }),
+                o = r.length;
+              for (let t = i.length - 1; t >= 0; t--) {
+                let n = i[t],
+                  a = e.offsetAt(n.range.start),
+                  s = e.offsetAt(n.range.end);
+                if (!(s <= o)) throw new Error("Overlapping edit");
+                (r = r.substring(0, a) + n.newText + r.substring(s, r.length)),
+                  (o = a);
               }
               return r;
             });
-        })(it || (it = {}));
-      var st,
-        ut,
-        ct,
-        dt = (function () {
-          function e(e, t, n, r) {
+        })(jt || (jt = {}));
+      var Ut,
+        Vt = class {
+          constructor(e, t, n, r) {
             (this._uri = e),
               (this._languageId = t),
               (this._version = n),
               (this._content = r),
               (this._lineOffsets = void 0);
           }
-          return (
-            Object.defineProperty(e.prototype, "uri", {
-              get: function () {
-                return this._uri;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(e.prototype, "languageId", {
-              get: function () {
-                return this._languageId;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            Object.defineProperty(e.prototype, "version", {
-              get: function () {
-                return this._version;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            (e.prototype.getText = function (e) {
-              if (e) {
-                var t = this.offsetAt(e.start),
-                  n = this.offsetAt(e.end);
-                return this._content.substring(t, n);
+          get uri() {
+            return this._uri;
+          }
+          get languageId() {
+            return this._languageId;
+          }
+          get version() {
+            return this._version;
+          }
+          getText(e) {
+            if (e) {
+              let t = this.offsetAt(e.start),
+                n = this.offsetAt(e.end);
+              return this._content.substring(t, n);
+            }
+            return this._content;
+          }
+          update(e, t) {
+            (this._content = e.text),
+              (this._version = t),
+              (this._lineOffsets = void 0);
+          }
+          getLineOffsets() {
+            if (void 0 === this._lineOffsets) {
+              let e = [],
+                t = this._content,
+                n = !0;
+              for (let r = 0; r < t.length; r++) {
+                n && (e.push(r), (n = !1));
+                let i = t.charAt(r);
+                (n = "\r" === i || "\n" === i),
+                  "\r" === i &&
+                    r + 1 < t.length &&
+                    "\n" === t.charAt(r + 1) &&
+                    r++;
               }
-              return this._content;
-            }),
-            (e.prototype.update = function (e, t) {
-              (this._content = e.text),
-                (this._version = t),
-                (this._lineOffsets = void 0);
-            }),
-            (e.prototype.getLineOffsets = function () {
-              if (void 0 === this._lineOffsets) {
-                for (
-                  var e = [], t = this._content, n = !0, r = 0;
-                  r < t.length;
-                  r++
-                ) {
-                  n && (e.push(r), (n = !1));
-                  var i = t.charAt(r);
-                  (n = "\r" === i || "\n" === i),
-                    "\r" === i &&
-                      r + 1 < t.length &&
-                      "\n" === t.charAt(r + 1) &&
-                      r++;
-                }
-                n && t.length > 0 && e.push(t.length), (this._lineOffsets = e);
-              }
-              return this._lineOffsets;
-            }),
-            (e.prototype.positionAt = function (e) {
-              e = Math.max(Math.min(e, this._content.length), 0);
-              var t = this.getLineOffsets(),
-                n = 0,
-                r = t.length;
-              if (0 === r) return v.create(0, e);
-              for (; n < r; ) {
-                var i = Math.floor((n + r) / 2);
-                t[i] > e ? (r = i) : (n = i + 1);
-              }
-              var o = n - 1;
-              return v.create(o, e - t[o]);
-            }),
-            (e.prototype.offsetAt = function (e) {
-              var t = this.getLineOffsets();
-              if (e.line >= t.length) return this._content.length;
-              if (e.line < 0) return 0;
-              var n = t[e.line],
-                r =
-                  e.line + 1 < t.length ? t[e.line + 1] : this._content.length;
-              return Math.max(Math.min(n + e.character, r), n);
-            }),
-            Object.defineProperty(e.prototype, "lineCount", {
-              get: function () {
-                return this.getLineOffsets().length;
-              },
-              enumerable: !1,
-              configurable: !0,
-            }),
-            e
-          );
-        })();
-      (ut = st || (st = {})),
-        (ct = Object.prototype.toString),
-        (ut.defined = function (e) {
+              n && t.length > 0 && e.push(t.length), (this._lineOffsets = e);
+            }
+            return this._lineOffsets;
+          }
+          positionAt(e) {
+            e = Math.max(Math.min(e, this._content.length), 0);
+            let t = this.getLineOffsets(),
+              n = 0,
+              r = t.length;
+            if (0 === r) return b.create(0, e);
+            for (; n < r; ) {
+              let i = Math.floor((n + r) / 2);
+              t[i] > e ? (r = i) : (n = i + 1);
+            }
+            let i = n - 1;
+            return b.create(i, e - t[i]);
+          }
+          offsetAt(e) {
+            let t = this.getLineOffsets();
+            if (e.line >= t.length) return this._content.length;
+            if (e.line < 0) return 0;
+            let n = t[e.line],
+              r = e.line + 1 < t.length ? t[e.line + 1] : this._content.length;
+            return Math.max(Math.min(n + e.character, r), n);
+          }
+          get lineCount() {
+            return this.getLineOffsets().length;
+          }
+        };
+      !(function (e) {
+        const t = Object.prototype.toString;
+        (e.defined = function (e) {
           return void 0 !== e;
         }),
-        (ut.undefined = function (e) {
-          return void 0 === e;
-        }),
-        (ut.boolean = function (e) {
-          return !0 === e || !1 === e;
-        }),
-        (ut.string = function (e) {
-          return "[object String]" === ct.call(e);
-        }),
-        (ut.number = function (e) {
-          return "[object Number]" === ct.call(e);
-        }),
-        (ut.numberRange = function (e, t, n) {
-          return "[object Number]" === ct.call(e) && t <= e && e <= n;
-        }),
-        (ut.integer = function (e) {
-          return (
-            "[object Number]" === ct.call(e) &&
-            -2147483648 <= e &&
-            e <= 2147483647
-          );
-        }),
-        (ut.uinteger = function (e) {
-          return "[object Number]" === ct.call(e) && 0 <= e && e <= 2147483647;
-        }),
-        (ut.func = function (e) {
-          return "[object Function]" === ct.call(e);
-        }),
-        (ut.objectLiteral = function (e) {
-          return null !== e && "object" == typeof e;
-        }),
-        (ut.typedArray = function (e, t) {
-          return Array.isArray(e) && e.every(t);
-        });
-      var gt = class {
+          (e.undefined = function (e) {
+            return void 0 === e;
+          }),
+          (e.boolean = function (e) {
+            return !0 === e || !1 === e;
+          }),
+          (e.string = function (e) {
+            return "[object String]" === t.call(e);
+          }),
+          (e.number = function (e) {
+            return "[object Number]" === t.call(e);
+          }),
+          (e.numberRange = function (e, n, r) {
+            return "[object Number]" === t.call(e) && n <= e && e <= r;
+          }),
+          (e.integer = function (e) {
+            return (
+              "[object Number]" === t.call(e) &&
+              -2147483648 <= e &&
+              e <= 2147483647
+            );
+          }),
+          (e.uinteger = function (e) {
+            return "[object Number]" === t.call(e) && 0 <= e && e <= 2147483647;
+          }),
+          (e.func = function (e) {
+            return "[object Function]" === t.call(e);
+          }),
+          (e.objectLiteral = function (e) {
+            return null !== e && "object" == typeof e;
+          }),
+          (e.typedArray = function (e, t) {
+            return Array.isArray(e) && e.every(t);
+          });
+      })(Ut || (Ut = {}));
+      var Ot = class {
         constructor(e, t, n) {
-          (this._languageId = e), (this._worker = t);
+          (this._languageId = e),
+            (this._worker = t),
+            (this._disposables = []),
+            (this._listener = Object.create(null));
           const r = (e) => {
               let t,
                 n = e.getLanguageId();
@@ -1265,35 +1184,33 @@
                 this._doValidate(e.uri, n));
             },
             i = (e) => {
-              g.editor.setModelMarkers(e, this._languageId, []);
+              l.editor.setModelMarkers(e, this._languageId, []);
               let t = e.uri.toString(),
                 n = this._listener[t];
               n && (n.dispose(), delete this._listener[t]);
             };
-          this._disposables.push(g.editor.onDidCreateModel(r)),
-            this._disposables.push(g.editor.onWillDisposeModel(i)),
+          this._disposables.push(l.editor.onDidCreateModel(r)),
+            this._disposables.push(l.editor.onWillDisposeModel(i)),
             this._disposables.push(
-              g.editor.onDidChangeModelLanguage((e) => {
+              l.editor.onDidChangeModelLanguage((e) => {
                 i(e.model), r(e.model);
               }),
             ),
             this._disposables.push(
               n((e) => {
-                g.editor.getModels().forEach((e) => {
+                l.editor.getModels().forEach((e) => {
                   e.getLanguageId() === this._languageId && (i(e), r(e));
                 });
               }),
             ),
             this._disposables.push({
               dispose: () => {
-                g.editor.getModels().forEach(i);
+                l.editor.getModels().forEach(i);
                 for (let e in this._listener) this._listener[e].dispose();
               },
             }),
-            g.editor.getModels().forEach(r);
+            l.editor.getModels().forEach(r);
         }
-        _disposables = [];
-        _listener = Object.create(null);
         dispose() {
           this._disposables.forEach((e) => e && e.dispose()),
             (this._disposables.length = 0);
@@ -1306,7 +1223,7 @@
                 (function (e, t) {
                   let n = "number" == typeof t.code ? String(t.code) : t.code;
                   return {
-                    severity: lt(t.severity),
+                    severity: Kt(t.severity),
                     startLineNumber: t.range.start.line + 1,
                     startColumn: t.range.start.character + 1,
                     endLineNumber: t.range.end.line + 1,
@@ -1317,29 +1234,29 @@
                   };
                 })(0, e),
               );
-              let i = g.editor.getModel(e);
-              i && i.getLanguageId() === t && g.editor.setModelMarkers(i, t, r);
+              let i = l.editor.getModel(e);
+              i && i.getLanguageId() === t && l.editor.setModelMarkers(i, t, r);
             })
             .then(void 0, (e) => {
               console.error(e);
             });
         }
       };
-      function lt(e) {
+      function Kt(e) {
         switch (e) {
-          case j.Error:
-            return g.MarkerSeverity.Error;
-          case j.Warning:
-            return g.MarkerSeverity.Warning;
-          case j.Information:
-            return g.MarkerSeverity.Info;
-          case j.Hint:
-            return g.MarkerSeverity.Hint;
+          case U.Error:
+            return l.MarkerSeverity.Error;
+          case U.Warning:
+            return l.MarkerSeverity.Warning;
+          case U.Information:
+            return l.MarkerSeverity.Info;
+          case U.Hint:
+            return l.MarkerSeverity.Hint;
           default:
-            return g.MarkerSeverity.Info;
+            return l.MarkerSeverity.Info;
         }
       }
-      var ht = class {
+      var Wt = class {
         constructor(e, t) {
           (this._worker = e), (this._triggerCharacters = t);
         }
@@ -1349,11 +1266,11 @@
         provideCompletionItems(e, t, n, r) {
           const i = e.uri;
           return this._worker(i)
-            .then((e) => e.doComplete(i.toString(), ft(t)))
+            .then((e) => e.doComplete(i.toString(), Ht(t)))
             .then((n) => {
               if (!n) return;
               const r = e.getWordUntilPosition(t),
-                i = new g.Range(
+                i = new l.Range(
                   t.lineNumber,
                   r.startColumn,
                   t.lineNumber,
@@ -1377,7 +1294,7 @@
                           }
                         : void 0),
                     range: i,
-                    kind: mt(e.kind),
+                    kind: $t(e.kind),
                   };
                   var n, r;
                   return (
@@ -1385,16 +1302,16 @@
                       (void 0 !== (r = e.textEdit).insert &&
                       void 0 !== r.replace
                         ? (t.range = {
-                            insert: vt(e.textEdit.insert),
-                            replace: vt(e.textEdit.replace),
+                            insert: zt(e.textEdit.insert),
+                            replace: zt(e.textEdit.replace),
                           })
-                        : (t.range = vt(e.textEdit.range)),
+                        : (t.range = zt(e.textEdit.range)),
                       (t.insertText = e.textEdit.newText)),
                     e.additionalTextEdits &&
-                      (t.additionalTextEdits = e.additionalTextEdits.map(_t)),
-                    e.insertTextFormat === be.Snippet &&
+                      (t.additionalTextEdits = e.additionalTextEdits.map(Bt)),
+                    e.insertTextFormat === ye.Snippet &&
                       (t.insertTextRules =
-                        g.languages.CompletionItemInsertTextRule.InsertAsSnippet),
+                        l.languages.CompletionItemInsertTextRule.InsertAsSnippet),
                     t
                   );
                 });
@@ -1402,10 +1319,10 @@
             });
         }
       };
-      function ft(e) {
+      function Ht(e) {
         if (e) return { character: e.column - 1, line: e.lineNumber - 1 };
       }
-      function pt(e) {
+      function Xt(e) {
         if (e)
           return {
             start: {
@@ -1415,74 +1332,74 @@
             end: { line: e.endLineNumber - 1, character: e.endColumn - 1 },
           };
       }
-      function vt(e) {
+      function zt(e) {
         if (e)
-          return new g.Range(
+          return new l.Range(
             e.start.line + 1,
             e.start.character + 1,
             e.end.line + 1,
             e.end.character + 1,
           );
       }
-      function mt(e) {
-        const t = g.languages.CompletionItemKind;
+      function $t(e) {
+        const t = l.languages.CompletionItemKind;
         switch (e) {
-          case we.Text:
+          case ke.Text:
             return t.Text;
-          case we.Method:
+          case ke.Method:
             return t.Method;
-          case we.Function:
+          case ke.Function:
             return t.Function;
-          case we.Constructor:
+          case ke.Constructor:
             return t.Constructor;
-          case we.Field:
+          case ke.Field:
             return t.Field;
-          case we.Variable:
+          case ke.Variable:
             return t.Variable;
-          case we.Class:
+          case ke.Class:
             return t.Class;
-          case we.Interface:
+          case ke.Interface:
             return t.Interface;
-          case we.Module:
+          case ke.Module:
             return t.Module;
-          case we.Property:
+          case ke.Property:
             return t.Property;
-          case we.Unit:
+          case ke.Unit:
             return t.Unit;
-          case we.Value:
+          case ke.Value:
             return t.Value;
-          case we.Enum:
+          case ke.Enum:
             return t.Enum;
-          case we.Keyword:
+          case ke.Keyword:
             return t.Keyword;
-          case we.Snippet:
+          case ke.Snippet:
             return t.Snippet;
-          case we.Color:
+          case ke.Color:
             return t.Color;
-          case we.File:
+          case ke.File:
             return t.File;
-          case we.Reference:
+          case ke.Reference:
             return t.Reference;
         }
         return t.Property;
       }
-      function _t(e) {
-        if (e) return { range: vt(e.range), text: e.newText };
+      function Bt(e) {
+        if (e) return { range: zt(e.range), text: e.newText };
       }
-      var wt = class {
+      var qt = class {
         constructor(e) {
           this._worker = e;
         }
         provideHover(e, t, n) {
           let r = e.uri;
           return this._worker(r)
-            .then((e) => e.doHover(r.toString(), ft(t)))
+            .then((e) => e.doHover(r.toString(), Ht(t)))
             .then((e) => {
-              if (e) return { range: vt(e.range), contents: bt(e.contents) };
+              if (e) return { range: zt(e.range), contents: Gt(e.contents) };
             });
         }
       };
-      function kt(e) {
+      function Qt(e) {
         return "string" == typeof e
           ? { value: e }
           : (t = e) && "object" == typeof t && "string" == typeof t.kind
@@ -1492,82 +1409,82 @@
             : { value: "```" + e.language + "\n" + e.value + "\n```\n" };
         var t;
       }
-      function bt(e) {
-        if (e) return Array.isArray(e) ? e.map(kt) : [kt(e)];
+      function Gt(e) {
+        if (e) return Array.isArray(e) ? e.map(Qt) : [Qt(e)];
       }
-      var yt = class {
+      var Jt = class {
         constructor(e) {
           this._worker = e;
         }
         provideDocumentHighlights(e, t, n) {
           const r = e.uri;
           return this._worker(r)
-            .then((e) => e.findDocumentHighlights(r.toString(), ft(t)))
+            .then((e) => e.findDocumentHighlights(r.toString(), Ht(t)))
             .then((e) => {
               if (e)
-                return e.map((e) => ({ range: vt(e.range), kind: Et(e.kind) }));
+                return e.map((e) => ({ range: zt(e.range), kind: Yt(e.kind) }));
             });
         }
       };
-      function Et(e) {
+      function Yt(e) {
         switch (e) {
-          case Le.Read:
-            return g.languages.DocumentHighlightKind.Read;
-          case Le.Write:
-            return g.languages.DocumentHighlightKind.Write;
-          case Le.Text:
-            return g.languages.DocumentHighlightKind.Text;
+          case Ne.Read:
+            return l.languages.DocumentHighlightKind.Read;
+          case Ne.Write:
+            return l.languages.DocumentHighlightKind.Write;
+          case Ne.Text:
+            return l.languages.DocumentHighlightKind.Text;
         }
-        return g.languages.DocumentHighlightKind.Text;
+        return l.languages.DocumentHighlightKind.Text;
       }
-      var Ct = class {
+      var Zt = class {
         constructor(e) {
           this._worker = e;
         }
         provideDefinition(e, t, n) {
           const r = e.uri;
           return this._worker(r)
-            .then((e) => e.findDefinition(r.toString(), ft(t)))
+            .then((e) => e.findDefinition(r.toString(), Ht(t)))
             .then((e) => {
-              if (e) return [xt(e)];
+              if (e) return [en(e)];
             });
         }
       };
-      function xt(e) {
-        return { uri: g.Uri.parse(e.uri), range: vt(e.range) };
+      function en(e) {
+        return { uri: l.Uri.parse(e.uri), range: zt(e.range) };
       }
-      var At = class {
+      var tn = class {
           constructor(e) {
             this._worker = e;
           }
           provideReferences(e, t, n, r) {
             const i = e.uri;
             return this._worker(i)
-              .then((e) => e.findReferences(i.toString(), ft(t)))
+              .then((e) => e.findReferences(i.toString(), Ht(t)))
               .then((e) => {
-                if (e) return e.map(xt);
+                if (e) return e.map(en);
               });
           }
         },
-        It = class {
+        nn = class {
           constructor(e) {
             this._worker = e;
           }
           provideRenameEdits(e, t, n, r) {
             const i = e.uri;
             return this._worker(i)
-              .then((e) => e.doRename(i.toString(), ft(t), n))
+              .then((e) => e.doRename(i.toString(), Ht(t), n))
               .then((e) =>
                 (function (e) {
                   if (!e || !e.changes) return;
                   let t = [];
                   for (let n in e.changes) {
-                    const r = g.Uri.parse(n);
+                    const r = l.Uri.parse(n);
                     for (let i of e.changes[n])
                       t.push({
                         resource: r,
                         versionId: void 0,
-                        textEdit: { range: vt(i.range), text: i.newText },
+                        textEdit: { range: zt(i.range), text: i.newText },
                       });
                   }
                   return { edits: t };
@@ -1575,7 +1492,7 @@
               );
           }
         };
-      var St = class {
+      var rn = class {
         constructor(e) {
           this._worker = e;
         }
@@ -1585,61 +1502,76 @@
             .then((e) => e.findDocumentSymbols(n.toString()))
             .then((e) => {
               if (e)
-                return e.map((e) => ({
-                  name: e.name,
-                  detail: "",
-                  containerName: e.containerName,
-                  kind: Rt(e.kind),
-                  range: vt(e.location.range),
-                  selectionRange: vt(e.location.range),
-                  tags: [],
-                }));
+                return e.map((e) =>
+                  "children" in e
+                    ? on(e)
+                    : {
+                        name: e.name,
+                        detail: "",
+                        containerName: e.containerName,
+                        kind: an(e.kind),
+                        range: zt(e.location.range),
+                        selectionRange: zt(e.location.range),
+                        tags: [],
+                      },
+                );
             });
         }
       };
-      function Rt(e) {
-        let t = g.languages.SymbolKind;
+      function on(e) {
+        return {
+          name: e.name,
+          detail: e.detail ?? "",
+          kind: an(e.kind),
+          range: zt(e.range),
+          selectionRange: zt(e.selectionRange),
+          tags: e.tags ?? [],
+          children: (e.children ?? []).map((e) => on(e)),
+        };
+      }
+      function an(e) {
+        let t = l.languages.SymbolKind;
         switch (e) {
-          case Ne.File:
-            return t.Array;
-          case Ne.Module:
+          case Oe.File:
+            return t.File;
+          case Oe.Module:
             return t.Module;
-          case Ne.Namespace:
+          case Oe.Namespace:
             return t.Namespace;
-          case Ne.Package:
+          case Oe.Package:
             return t.Package;
-          case Ne.Class:
+          case Oe.Class:
             return t.Class;
-          case Ne.Method:
+          case Oe.Method:
             return t.Method;
-          case Ne.Property:
+          case Oe.Property:
             return t.Property;
-          case Ne.Field:
+          case Oe.Field:
             return t.Field;
-          case Ne.Constructor:
+          case Oe.Constructor:
             return t.Constructor;
-          case Ne.Enum:
+          case Oe.Enum:
             return t.Enum;
-          case Ne.Interface:
+          case Oe.Interface:
             return t.Interface;
-          case Ne.Function:
+          case Oe.Function:
             return t.Function;
-          case Ne.Variable:
+          case Oe.Variable:
             return t.Variable;
-          case Ne.Constant:
+          case Oe.Constant:
             return t.Constant;
-          case Ne.String:
+          case Oe.String:
             return t.String;
-          case Ne.Number:
+          case Oe.Number:
             return t.Number;
-          case Ne.Boolean:
+          case Oe.Boolean:
             return t.Boolean;
-          case Ne.Array:
+          case Oe.Array:
             return t.Array;
         }
         return t.Function;
       }
-      var Tt = class {
+      var sn = class {
           constructor(e) {
             this._worker = e;
           }
@@ -1651,44 +1583,43 @@
                 if (e)
                   return {
                     links: e.map((e) => ({
-                      range: vt(e.range),
+                      range: zt(e.range),
                       url: e.target,
                     })),
                   };
               });
           }
         },
-        Dt = class {
+        un = class {
           constructor(e) {
             this._worker = e;
           }
           provideDocumentFormattingEdits(e, t, n) {
             const r = e.uri;
             return this._worker(r).then((e) =>
-              e.format(r.toString(), null, Pt(t)).then((e) => {
-                if (e && 0 !== e.length) return e.map(_t);
+              e.format(r.toString(), null, dn(t)).then((e) => {
+                if (e && 0 !== e.length) return e.map(Bt);
               }),
             );
           }
         },
-        Mt = class {
+        cn = class {
           constructor(e) {
-            this._worker = e;
+            (this._worker = e), (this.canFormatMultipleRanges = !1);
           }
-          canFormatMultipleRanges = !1;
           provideDocumentRangeFormattingEdits(e, t, n, r) {
             const i = e.uri;
             return this._worker(i).then((e) =>
-              e.format(i.toString(), pt(t), Pt(n)).then((e) => {
-                if (e && 0 !== e.length) return e.map(_t);
+              e.format(i.toString(), Xt(t), dn(n)).then((e) => {
+                if (e && 0 !== e.length) return e.map(Bt);
               }),
             );
           }
         };
-      function Pt(e) {
+      function dn(e) {
         return { tabSize: e.tabSize, insertSpaces: e.insertSpaces };
       }
-      var Ft = class {
+      var ln = class {
           constructor(e) {
             this._worker = e;
           }
@@ -1698,30 +1629,30 @@
               .then((e) => e.findDocumentColors(n.toString()))
               .then((e) => {
                 if (e)
-                  return e.map((e) => ({ color: e.color, range: vt(e.range) }));
+                  return e.map((e) => ({ color: e.color, range: zt(e.range) }));
               });
           }
           provideColorPresentations(e, t, n) {
             const r = e.uri;
             return this._worker(r)
               .then((e) =>
-                e.getColorPresentations(r.toString(), t.color, pt(t.range)),
+                e.getColorPresentations(r.toString(), t.color, Xt(t.range)),
               )
               .then((e) => {
                 if (e)
                   return e.map((e) => {
                     let t = { label: e.label };
                     return (
-                      e.textEdit && (t.textEdit = _t(e.textEdit)),
+                      e.textEdit && (t.textEdit = Bt(e.textEdit)),
                       e.additionalTextEdits &&
-                        (t.additionalTextEdits = e.additionalTextEdits.map(_t)),
+                        (t.additionalTextEdits = e.additionalTextEdits.map(Bt)),
                       t
                     );
                   });
               });
           }
         },
-        Lt = class {
+        gn = class {
           constructor(e) {
             this._worker = e;
           }
@@ -1737,12 +1668,12 @@
                       void 0 !== e.kind &&
                         (t.kind = (function (e) {
                           switch (e) {
-                            case T.Comment:
-                              return g.languages.FoldingRangeKind.Comment;
-                            case T.Imports:
-                              return g.languages.FoldingRangeKind.Imports;
-                            case T.Region:
-                              return g.languages.FoldingRangeKind.Region;
+                            case M.Comment:
+                              return l.languages.FoldingRangeKind.Comment;
+                            case M.Imports:
+                              return l.languages.FoldingRangeKind.Imports;
+                            case M.Region:
+                              return l.languages.FoldingRangeKind.Region;
                           }
                           return;
                         })(e.kind)),
@@ -1752,89 +1683,89 @@
               });
           }
         };
-      var jt = class {
+      var fn = class {
         constructor(e) {
           this._worker = e;
         }
         provideSelectionRanges(e, t, n) {
           const r = e.uri;
           return this._worker(r)
-            .then((e) => e.getSelectionRanges(r.toString(), t.map(ft)))
+            .then((e) => e.getSelectionRanges(r.toString(), t.map(Ht)))
             .then((e) => {
               if (e)
                 return e.map((e) => {
                   const t = [];
-                  for (; e; ) t.push({ range: vt(e.range) }), (e = e.parent);
+                  for (; e; ) t.push({ range: zt(e.range) }), (e = e.parent);
                   return t;
                 });
             });
         }
       };
-      function Ot(e) {
+      function hn(e) {
         const t = [],
           n = [],
-          r = new se(e);
+          r = new Nt(e);
         t.push(r);
         const i = (...e) => r.getLanguageServiceWorker(...e);
         return (
           (function () {
             const { languageId: t, modeConfiguration: r } = e;
-            Ut(n),
+            pn(n),
               r.completionItems &&
                 n.push(
-                  g.languages.registerCompletionItemProvider(
+                  l.languages.registerCompletionItemProvider(
                     t,
-                    new ht(i, ["/", "-", ":"]),
+                    new Wt(i, ["/", "-", ":"]),
                   ),
                 ),
               r.hovers &&
-                n.push(g.languages.registerHoverProvider(t, new wt(i))),
+                n.push(l.languages.registerHoverProvider(t, new qt(i))),
               r.documentHighlights &&
                 n.push(
-                  g.languages.registerDocumentHighlightProvider(t, new yt(i)),
+                  l.languages.registerDocumentHighlightProvider(t, new Jt(i)),
                 ),
               r.definitions &&
-                n.push(g.languages.registerDefinitionProvider(t, new Ct(i))),
+                n.push(l.languages.registerDefinitionProvider(t, new Zt(i))),
               r.references &&
-                n.push(g.languages.registerReferenceProvider(t, new At(i))),
+                n.push(l.languages.registerReferenceProvider(t, new tn(i))),
               r.documentSymbols &&
                 n.push(
-                  g.languages.registerDocumentSymbolProvider(t, new St(i)),
+                  l.languages.registerDocumentSymbolProvider(t, new rn(i)),
                 ),
               r.rename &&
-                n.push(g.languages.registerRenameProvider(t, new It(i))),
+                n.push(l.languages.registerRenameProvider(t, new nn(i))),
               r.colors &&
-                n.push(g.languages.registerColorProvider(t, new Ft(i))),
+                n.push(l.languages.registerColorProvider(t, new ln(i))),
               r.foldingRanges &&
-                n.push(g.languages.registerFoldingRangeProvider(t, new Lt(i))),
-              r.diagnostics && n.push(new gt(t, i, e.onDidChange)),
+                n.push(l.languages.registerFoldingRangeProvider(t, new gn(i))),
+              r.diagnostics && n.push(new Ot(t, i, e.onDidChange)),
               r.selectionRanges &&
                 n.push(
-                  g.languages.registerSelectionRangeProvider(t, new jt(i)),
+                  l.languages.registerSelectionRangeProvider(t, new fn(i)),
                 ),
               r.documentFormattingEdits &&
                 n.push(
-                  g.languages.registerDocumentFormattingEditProvider(
+                  l.languages.registerDocumentFormattingEditProvider(
                     t,
-                    new Dt(i),
+                    new un(i),
                   ),
                 ),
               r.documentRangeFormattingEdits &&
                 n.push(
-                  g.languages.registerDocumentRangeFormattingEditProvider(
+                  l.languages.registerDocumentRangeFormattingEditProvider(
                     t,
-                    new Mt(i),
+                    new cn(i),
                   ),
                 );
           })(),
-          t.push(Nt(n)),
-          Nt(t)
+          t.push(mn(n)),
+          mn(t)
         );
       }
-      function Nt(e) {
-        return { dispose: () => Ut(e) };
+      function mn(e) {
+        return { dispose: () => pn(e) };
       }
-      function Ut(e) {
+      function pn(e) {
         for (; e.length; ) e.pop().dispose();
       }
     },

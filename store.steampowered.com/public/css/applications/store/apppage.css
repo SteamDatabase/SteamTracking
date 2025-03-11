@@ -536,6 +536,43 @@
   width: 100%;
   height: 100%;
 }
+._121ySsqDaEEhYcP22dfnB9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: none;
+  pointer-events: none;
+}
+._121ySsqDaEEhYcP22dfnB9 ._1nmF4OTLNxzkcLI2qZRSeE {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation-name: Bbgb61VVyAwF1y4cJpuir;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes Bbgb61VVyAwF1y4cJpuir {
+  from {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
 ._3ctvhK1fv-G9LZPEnmodRj {
   position: absolute;
   top: 0;
@@ -696,12 +733,24 @@
   width: 1px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-._1w6rw85n2zgSeGYvNfigET ._1xg03_YqqhrMNLZXKALB91 {
+._1w6rw85n2zgSeGYvNfigET ._1iuE6UjqkvJH6ewj7WHM8D {
   position: absolute;
   bottom: calc(100% + 12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+._1w6rw85n2zgSeGYvNfigET ._1iuE6UjqkvJH6ewj7WHM8D ._3azIFUQZwfDGUYdj0EtLNO {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 3px;
+}
+._1w6rw85n2zgSeGYvNfigET ._1iuE6UjqkvJH6ewj7WHM8D ._1xg03_YqqhrMNLZXKALB91 {
   background-color: #fff;
   border-radius: 3px;
   padding: 6px 12px;
+  align-self: center;
   color: #1b2838;
   font-family: "Motiva Sans", sans-serif;
   font-weight: 500;
@@ -709,7 +758,9 @@
   line-height: 20px;
   text-align: center;
 }
-._1w6rw85n2zgSeGYvNfigET ._1xg03_YqqhrMNLZXKALB91::after {
+._1w6rw85n2zgSeGYvNfigET
+  ._1iuE6UjqkvJH6ewj7WHM8D
+  ._1xg03_YqqhrMNLZXKALB91::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -960,7 +1011,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._3PRdiJdKKfTnwLnTfbCkEz {
   color: #fff;
-  margin-right: 2px;
+  margin-right: 8px;
 }
 .BasicUI .DialogContent_InnerWidth {
   overflow: visible;

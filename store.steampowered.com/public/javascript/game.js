@@ -561,8 +561,6 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 				}
 			}
 
-			container.append( temp.children() );
-
 			if ( data.date_filter_text )
 			{
 				var dateFilterText = $J( "#review_selected_histogram_date_range_text" );
@@ -571,12 +569,13 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 			}
 
 			// all dupes, request more
-			if ( data.recommendationids.length != 0 && recommendationIDs.length == 0 )
+			if ( data.recommendationids.length != 0 && recommendationIDs.length == 0 && data.cursor != '*' )
 			{
-				LoadMoreReviews(appid, data.cursor, data.dayrange, data.start_date, data.end_date, context );
+				LoadMoreReviews( appid, data.cursor, data.dayrange, data.start_date, data.end_date, context );
 			}
-			else
+			else if ( recommendationIDs.length != 0 )
 			{
+				container.append( temp.children() );
 				CollapseLongReviews();
 				RequestCurrentUserRecommendationVotes( recommendationIDs );
 			}

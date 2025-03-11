@@ -32,7 +32,7 @@
     },
     27144: (e, n, t) => {
       "use strict";
-      t.d(n, { B3: () => D, KM: () => E, KT: () => v });
+      t.d(n, { B3: () => I, KM: () => T, KT: () => v });
       var a = t(41735),
         i = t.n(a),
         r = t(58632),
@@ -47,7 +47,7 @@
         g = t(37735),
         p = t(23809);
       const A = "nicknames";
-      function E(e) {
+      function T(e) {
         const n = (0, p.KV)(),
           { data: t, isLoading: a } = (0, l.I)({
             queryKey: [A],
@@ -67,7 +67,7 @@
           });
         return t ? t.get(e) : null;
       }
-      const T = new (s())(
+      const E = new (s())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -116,16 +116,16 @@
       function v(e) {
         const { data: n, isLoading: t } = (0, l.I)({
           queryKey: [h, e],
-          queryFn: () => T.load(e),
+          queryFn: () => E.load(e),
         });
         return [n, t];
       }
-      function D(e) {
+      function I(e) {
         const n = (0, c.jE)(),
           { data: t, isLoading: a } = (0, l.I)({
             queryKey: [h, e],
             queryFn: async () => {
-              const t = await T.loadMany(e);
+              const t = await E.loadMany(e);
               return (
                 t.forEach((e) => {
                   const t = [h, new u.b(e.steamid).GetAccountID()];
@@ -165,8 +165,8 @@
         g = t.n(f),
         p = t(87937),
         A = t.n(p);
-      const E = "hh:mm a",
-        T = "HH:mm";
+      const T = "hh:mm a",
+        E = "HH:mm";
       function h(e) {
         const {
           nLatestTime: n,
@@ -178,27 +178,27 @@
           bNoDefaultDate: h,
           className: w,
           strDescToolTip: y,
-          strDescription: x,
-          bShowTimeZone: B,
-          strInvalidDateTimeLocalizedMsg: S,
+          strDescription: B,
+          bShowTimeZone: S,
+          strInvalidDateTimeLocalizedMsg: x,
           fnIsValidDateTime: _,
-          bWeekdaysOnly: N,
-          fnSetTimeToUpdate: C,
+          bWeekdaysOnly: C,
+          fnSetTimeToUpdate: N,
         } = e;
         let b = (function () {
           const e = A()("2025-01-14T13:00:00");
           return e.format("LT").toLowerCase().includes("13");
         })()
-          ? T
-          : E;
+          ? E
+          : T;
         const k = i(),
           [L, G] = a.useState(k > 0 ? A()(1e3 * k) : null),
-          [P, M] = a.useState(),
-          [V, F] = a.useState(),
-          O = (function (e, n, t, i, r) {
+          [M, P] = a.useState(),
+          [O, V] = a.useState(),
+          F = (function (e, n, t, i, r) {
             const s = i && i(),
-              o = n && !D(n).isValid(),
-              l = e && !I(e).isValid();
+              o = n && !I(n).isValid(),
+              l = e && !D(e).isValid();
             let c = null;
             (l || o || "string" == typeof s || !1 === s) &&
               ((c = (0, m.we)(
@@ -215,8 +215,8 @@
               }, [c, r]),
               c
             );
-          })(P, V, S, _, l),
-          W = !l && O;
+          })(M, O, x, _, l),
+          W = !l && F;
         let R, U;
         if (n && t && n == t && t > o.HD.GetTimeNowWithOverride()) {
           const e = A().unix(t);
@@ -226,7 +226,7 @@
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (b = T);
+            (b = E);
         }
         k || !t || h || (U = A().unix(t));
         const Y = A().tz.guess(),
@@ -237,29 +237,29 @@
             fnOnInputBlur: H,
             fnOnChange: K,
           } = v(
-            D,
+            I,
             (e) => {
               if (p) return;
-              F(null);
+              V(null);
               const n = i(),
                 t = A().unix(n || o.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(t.hour()),
                 e.minute(t.minute()),
                 e.second(0),
-                C(e.unix()),
+                N(e.unix()),
                 G(e);
             },
-            F,
+            V,
           ),
           {
             fnOnInput: q,
             fnOnInputBlur: J,
             fnOnChange: Q,
           } = v(
-            I,
+            D,
             (e) => {
               if (p) return;
-              M(null);
+              P(null);
               let n = i(),
                 a = 0;
               if (n) {
@@ -274,9 +274,9 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              C(a), G(A().unix(a));
+              N(a), G(A().unix(a));
             },
-            M,
+            P,
           );
         return a.createElement(
           "div",
@@ -287,7 +287,7 @@
             a.createElement(
               d.he,
               { toolTipContent: y, direction: "top" },
-              Boolean(x) && a.createElement("span", null, x),
+              Boolean(B) && a.createElement("span", null, B),
             ),
             W &&
               a.createElement(
@@ -306,7 +306,7 @@
               a.createElement(r(), {
                 onChange: K,
                 timeFormat: !1,
-                value: null != V ? V : L,
+                value: null != O ? O : L,
                 isValidDate: (e) =>
                   !p &&
                   (function (e, n, t, a) {
@@ -320,7 +320,7 @@
                       t &&
                       ((0 != a.weekday() && 6 != a.weekday()) || (r = !1));
                     return r;
-                  })(t, n, N, e),
+                  })(t, n, C, e),
                 initialValue: U,
                 inputProps: {
                   placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
@@ -349,7 +349,7 @@
                 dateFormat: !1,
                 timeFormat: b,
                 timeConstraints: R,
-                value: null != P ? P : L,
+                value: null != M ? M : L,
                 inputProps: {
                   placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
                   className: (0, u.A)(
@@ -369,7 +369,7 @@
                   j.format("LT"),
                 ),
             ),
-            B &&
+            S &&
               a.createElement(
                 "div",
                 null,
@@ -416,7 +416,7 @@
           },
         };
       }
-      function D(e) {
+      function I(e) {
         return A()(
           e,
           (function () {
@@ -429,44 +429,46 @@
           !1,
         );
       }
-      function I(e) {
-        return A()(e, [E, T], !1);
+      function D(e) {
+        return A()(e, [T, E], !1);
       }
     },
     8905: (e, n, t) => {
       "use strict";
-      t.d(n, { p: () => o });
+      t.d(n, { p: () => l });
       var a = t(90626),
         i = t(17720),
         r = t(27144),
-        s = t(15736);
-      function o(e) {
-        const { accountID: n, bHideWhenNotAvailable: t, bHideName: o } = e,
-          [l] = (0, r.KT)(n),
-          c = (0, r.KM)(n),
-          u = a.useMemo(() => i.b.InitFromAccountID(n), [n]);
+        s = t(15736),
+        o = t(78327);
+      function l(e) {
+        const { accountID: n, bHideWhenNotAvailable: t, bHideName: l } = e,
+          [c] = (0, r.KT)(n),
+          u = (0, r.KM)(n),
+          m = a.useMemo(() => i.b.InitFromAccountID(n), [n]),
+          d = `${o.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
         return a.createElement(
           a.Fragment,
           null,
-          Boolean(!l)
+          Boolean(!c)
             ? a.createElement(
                 a.Fragment,
                 null,
                 Boolean(!t) && a.createElement("span", null, n),
               )
             : a.createElement(
-                a.Fragment,
-                null,
+                "a",
+                { href: d },
                 a.createElement("img", {
                   className: s.SmallAvatar,
-                  src: l.avatar_url,
-                  "data-miniprofile": "s" + u.ConvertTo64BitString(),
+                  src: c.avatar_url,
+                  "data-miniprofile": "s" + m.ConvertTo64BitString(),
                 }),
-                Boolean(!o) &&
+                Boolean(!l) &&
                   a.createElement(
                     "span",
                     null,
-                    c ? `${c} (${l.persona_name})` : l.persona_name,
+                    u ? `${u} (${c.persona_name})` : c.persona_name,
                   ),
               ),
         );

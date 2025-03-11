@@ -739,7 +739,7 @@
                     _ && (e += `LOCATION:${_.replace("\n", "\\n")}\r\n`),
                     (e += "END:VEVENT\r\n"),
                     (e += "END:VCALENDAR\r\n"),
-                    (G = `data:text/calendar;charset=utf-8;base64,${l.iI(new TextEncoder().encode(e))}`);
+                    (G = `data:text/calendar;charset=utf-8;base64,${l.fromByteArray(new TextEncoder().encode(e))}`);
                 } catch (e) {
                   console.error(e);
                 }

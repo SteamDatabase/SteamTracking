@@ -293,7 +293,7 @@
             active: d,
             refDiv: u,
           } = (function (e, t = "height", n = 250) {
-            const s = o.useRef(),
+            const s = o.useRef(null),
               i = o.useRef(!0),
               [a, l] = o.useState("idle"),
               [c, d] = o.useState({});

@@ -2267,14 +2267,20 @@
         }
         RevertBasicInfoChanges() {
           (this.m_strPersonaName = this.m_strCommittedPersonaName),
+            (this.m_strFilteredPersonaName =
+              this.m_strCommittedFilteredPersonaName),
             (this.m_strCustomURL = this.m_strComittedCustomURL),
             (this.m_strRealName = this.m_strComittedRealName),
+            (this.m_strFilteredRealName = this.m_strCommittedFilteredRealName),
             (this.m_strSummary = this.m_strComittedSummary);
         }
         SetBasicInfoChangesComitted() {
           (this.m_strCommittedPersonaName = this.m_strPersonaName),
+            (this.m_strCommittedFilteredPersonaName =
+              this.m_strFilteredPersonaName),
             (this.m_strComittedCustomURL = this.m_strCustomURL),
             (this.m_strComittedRealName = this.m_strRealName),
+            (this.m_strCommittedFilteredRealName = this.m_strFilteredRealName),
             (this.m_strComittedSummary = this.m_strSummary);
         }
         NotifyRNMobileAppStateChanged() {

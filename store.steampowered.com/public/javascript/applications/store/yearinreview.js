@@ -4102,7 +4102,8 @@
         const { accountID: t, bHideWhenNotAvailable: a, bHideName: r } = e,
           [s] = (0, ae.KT)(t),
           l = (0, ae.KM)(t),
-          i = n.useMemo(() => B.b.InitFromAccountID(t), [t]);
+          i = n.useMemo(() => B.b.InitFromAccountID(t), [t]),
+          m = `${o.TS.COMMUNITY_BASE_URL}profiles/${i.ConvertTo64BitString()}`;
         return n.createElement(
           n.Fragment,
           null,
@@ -4113,8 +4114,8 @@
                 Boolean(!a) && n.createElement("span", null, t),
               )
             : n.createElement(
-                n.Fragment,
-                null,
+                "a",
+                { href: m },
                 n.createElement("img", {
                   className: It.SmallAvatar,
                   src: s.avatar_url,

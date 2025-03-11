@@ -1350,10 +1350,10 @@ GHomepage = {
 		var Settings = {
 			games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true,
 			dlc_for_you: true,
-			enforce_minimum: true, include_priority: true };
+			include_priority: true };
 				var SettingsSpotlights = {
 			games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true,
-			enforce_minimum: true, include_priority: true };
+			include_priority: true };
 		var rgSpotlights = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.home_area_spotlight', $Pages), 'spotlights', 'home', SettingsSpotlights, oShownItems, 3 );
 		var rgDailyDeals = GDynamicStorePage.FilterAndPrioritizeCapsules( $J('.store_capsule.daily_deal', $Pages), 'spotlights', 'home', Settings, oShownItems, 2 );
 		var rgSpecials = GDynamicStorePage.FilterAndPrioritizeItems( GHomepage.oDisplayLists.specials, 'spotlights', 'home', Settings, oShownItems, 16 );
@@ -1998,7 +1998,7 @@ GHomepage = {
 				}
 			);
 
-			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="' + rgItemData.tiny_capsule + '">' );
+			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="' + rgItemData.tiny_capsule + '" alt="' + rgItemData.name + '">' );
 			$ItemLink.append( $TinyCap );
 		}
 
@@ -2543,7 +2543,7 @@ GSteamCurators = {
 		var $ImageCapsule= $J ('<div/>'  );
 		$ImageCapsule.addClass('capsule');
 
-		var $Image = $J('<img/>', { src: rgItemData.main_capsule } );
+		var $Image = $J('<img/>', { src: rgItemData.main_capsule, alt: rgItemData.name } );
 		$Image.bind('error', function(){
 			$Image.attr('src', rgItemData.headerv5  );
 			$Image.css({'width': '470px'  });
@@ -2615,7 +2615,7 @@ GSteamCurators = {
 
         var $Item = $J('<a/>', params );
 
-        var $Image = $J('<img/>', { src: rgItemData.main_capsule, 'class': 'capsule_image' } );
+        var $Image = $J('<img/>', { src: rgItemData.main_capsule, 'class': 'capsule_image', alt: rgItemData.name } );
         $Image.bind('error', function(){
             $Image.attr('src', rgItemData.headerv5  );
             $Image.css({'width': '470px'  });

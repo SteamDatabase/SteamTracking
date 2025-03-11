@@ -4647,9 +4647,9 @@
           ...o
         } = e;
         return {
-          shared_secret: g.iI(t),
-          identity_secret: g.iI(r),
-          secret_1: g.iI(i),
+          shared_secret: g.fromByteArray(t),
+          identity_secret: g.fromByteArray(r),
+          secret_1: g.fromByteArray(i),
           ...o,
         };
       }

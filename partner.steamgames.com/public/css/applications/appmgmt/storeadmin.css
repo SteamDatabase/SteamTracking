@@ -338,7 +338,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._3PRdiJdKKfTnwLnTfbCkEz {
   color: #fff;
-  margin-right: 2px;
+  margin-right: 8px;
 }
 ._2M4zwA7Ac68En7AUUHEpuK {
   height: 100vh;
@@ -368,6 +368,9 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   .RadioButton
   ._1wayRCM9VO944GbqtTisWi {
   margin-left: 4px;
+}
+.ja88t0u0UmDMjZ2vKEXyg {
+  flex-direction: row-reverse;
 }
 ._1j_e5epqt09WxhZOjyi9D1 {
   display: flex;

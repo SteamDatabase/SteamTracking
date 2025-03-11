@@ -221,13 +221,21 @@ function PullLocalizationFromCrowdIn()
 		'language': eLanguageToPull,
 		'articleid': nArticleId,
 	};
+	$J( '#pull_from_crowdin_spinner' ).text( 'Pulling...' );
 	$J.ajax({
 		'type': 'POST',
 		'url': 'https://partner.steamgames.com/docadmin/fetchlocalization/' + $J('#articleSummaryUrlSlug').text(),
 		'data': data,
-		'success': function( resp )
+		'success': function( resp, status, xhr )
 		{
-			window.reload();
+			$J( '#pull_from_crowdin_spinner' ).text( 'Done' );
+			setTimeout( () => $J( '#pull_from_crowdin_spinner' ).text( '' ), 2000 );
+			window.location.reload();
+		},
+		'error': function ( resp )
+		{
+			$J( '#pull_from_crowdin_spinner' ).text( 'Failed' );
+			setTimeout( () => $J( '#pull_from_crowdin_spinner' ).text( '' ), 2000 );
 		}
 	});
 }

@@ -2111,6 +2111,7 @@ http://cdn.steamcommunity.com/economy/emoticon/:treasurechest:
 http://cdn.steamcommunity.com/economy/emoticon/:twteamrandom:
 http://cdn.steamcommunity.com/economy/emoticon/:waterrune:
 http://cdn.steamcommunity.com/economy/emoticon/:wormwarp:
+http://dashif.org/guidelines/thumbnail_tile${}
 http://help.steampowered.com/
 http://localhost:${}/
 http://proxy
@@ -3639,4 +3640,5 @@ url(${STORE_CDN_URL}/public/images/${image_path}) no-repeat center center/cover
 url(${avatar_full_url})
 url(${creator_page_bg_url})
 url(${dataUrl})
+url(${strTileURL})
 url(${url})

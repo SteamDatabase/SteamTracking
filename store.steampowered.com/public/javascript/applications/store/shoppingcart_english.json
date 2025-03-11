@@ -71,7 +71,7 @@
     "Cart_Error_DuplicateApps_LineItem": "Already in your cart:",
     "Cart_Error_UnavailableCountry_FootNote": "Your cart contains a package that is unavailable in your country. You need to remove the package from your cart before you can checkout.",
     "Cart_Error_UnavailableCountry_LineItem": "Unavailable in your country",
-    "Cart_Error_MasterSubscription_FootNote": "Your cart contains content that is also available through on of your active subscriptions.",
+    "Cart_Error_MasterSubscription_FootNote": "Your cart contains content that is also available through one of your active subscriptions.",
     "Cart_Error_MasterSubscription_LineItem": "Available through your subscription of:",
     "Cart_Error_CouponIsExclusivePromo": "This coupon cannot be used in conjunction with another discount.",
     "Cart_Error_CouponIsInvalid": "This coupon is invalid or otherwise expired.",
