@@ -27,6 +27,7 @@
         NotificationUpdate: "_39cJ7AQw3tqr75MieK0VHr",
         RequiredDocumentList: "_1hLKyqNiw3mmMbZf-ERCbA",
         MailingAddress: "_3Va0U3hw10-sJGSnBDs18Y",
+        InterviewError: "_2j2NP-v2-OxDvT0FXzQELS",
       };
     },
     45737: (e) => {
@@ -490,9 +491,9 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ContactTaxIdentityDialog: () => P,
-          default: () => A,
-          k_rgTemplateNameOptionsList: () => x,
+          ContactTaxIdentityDialog: () => A,
+          default: () => k,
+          k_rgTemplateNameOptionsList: () => R,
         });
       var n = a(90626),
         i = a(24484),
@@ -505,8 +506,11 @@
         m = a(52038),
         u = a(71541),
         h = a(14771),
-        p = a(78327);
-      function f(e) {
+        p = a(78327),
+        f = a(41735),
+        y = a.n(f),
+        v = a(68797);
+      function E(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           i = a.Parameters?.CustomMessageBody ?? "Message not available";
@@ -514,10 +518,10 @@
           "div",
           { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
           n.createElement("div", null, i),
-          n.createElement(S, { ...e }),
+          n.createElement(w, { ...e }),
         );
       }
-      function y() {
+      function g() {
         return n.createElement(
           "div",
           { className: s().MessageHeader },
@@ -529,36 +533,52 @@
           ),
         );
       }
-      let v = -1,
-        E = -1;
-      function g(e) {
-        const { requirement: t } = e;
-        if (-1 == v) v = t.index;
-        else if (v != t.index) return null;
-        const a = JSON.parse(t.deadline.data.description_jsondata);
-        let i =
-          "dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
-            ? "https://valvesoftware-dev.taxidentity.com"
-            : "https://valvesoftware.taxidentity.com";
-        return (
-          (i += `/Interview/Start?IdentityKey=${a.IdentityKey}`),
+      let S = -1,
+        N = -1;
+      function b(e) {
+        const { requirement: t } = e,
+          [a, i] = (0, n.useState)(""),
+          [r, o] = (0, n.useState)(!1),
+          l = (0, n.useCallback)(async () => {
+            if ((i(""), !t.deadline?.data?.partnerid))
+              return void i("An error occurred.  Missing partner id");
+            const e = `${p.TS.PARTNER_BASE_URL}pub/ajaxstarttaxidentityworkflow/${t.deadline.data.partnerid}`,
+              a = new FormData();
+            a.append("sessionid", p.TS.SESSIONID), o(!0);
+            try {
+              const t = await y().post(e, a, { withCredentials: !0 });
+              200 == t?.status && 1 == t.data?.success && t.data.url
+                ? window.open(t.data.url, "_blank")
+                : i("An error occurred. " + (0, v.H)(t)?.strErrorMsg);
+            } catch (e) {
+              i("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
+            }
+            o(!1);
+          }, [t]);
+        if (-1 == S) S = t.index;
+        else if (S != t.index) return null;
+        return n.createElement(
+          n.Fragment,
+          null,
+          !!a && n.createElement("div", { className: s().InterviewError }, a),
           n.createElement(
             u.jn,
             {
-              onClick: () => window.open(i, "_blank"),
+              disabled: r,
+              onClick: () => l(),
               className: s().NotificationButton,
             },
-            "Begin Tax Interview",
-          )
+            r ? "Opening Tax Interview" : "Begin Tax Interview",
+          ),
         );
       }
-      function S(e) {
+      function w(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           i = a.Parameters?.Dropbox_FileRequest_Url;
         if (!i) return null;
-        if (-1 == E) E = t.index;
-        else if (E != t.index) return null;
+        if (-1 == N) N = t.index;
+        else if (N != t.index) return null;
         return n.createElement(
           "div",
           null,
@@ -605,7 +625,7 @@
           ),
         );
       }
-      function N(e) {
+      function _(e) {
         const { requirement: t } = e,
           a = (0, d.$z)(t.deadline.data.due_date),
           i = t.onboarded
@@ -632,18 +652,16 @@
           n.createElement("div", { className: s().SectionBody }, i),
         );
       }
-      function b(e) {
+      function T(e) {
         const { requirement: t } = e;
         return t.onboarded
           ? "Until your tax information has been verified, you will not be able to receive any further payments."
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
-      var w = a(738),
-        _ = a(56011),
-        T = a(78395),
-        C = a(41735),
-        I = a.n(C);
-      const x = [
+      var C = a(738),
+        I = a(56011),
+        x = a(78395);
+      const R = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
           "DocReq-KYC-Entity-FR",
@@ -671,7 +689,7 @@
           "Renewal-W8-Initial",
           "Renewal-W8-Partner-Urgent",
         ],
-        R = {
+        B = {
           AddressCorrection: {
             component: function (e) {
               return n.createElement(
@@ -713,7 +731,7 @@
                   n.createElement("br", null),
                   "The address must also include the correct postcode / zip if your country uses them.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -727,7 +745,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(y, null),
+                n.createElement(g, null),
                 n.createElement(
                   "div",
                   { className: s().SectionBody },
@@ -735,7 +753,7 @@
                   n.createElement("p", null),
                   "Please ensure that the images are high quality, in color and are clear and in focus with no information cropped out or blocked.",
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -749,7 +767,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(y, null),
+                n.createElement(g, null),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -769,7 +787,7 @@
                   "div",
                   { className: s().SectionBody },
                   "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
-                  b(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -814,7 +832,7 @@
                     ),
                   ),
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -830,7 +848,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(y, null),
+                n.createElement(g, null),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -868,7 +886,7 @@
                     "Note: screenshots of business portals are not acceptable.",
                   ),
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -885,7 +903,7 @@
                       c().SectionCtn,
                     ),
                   },
-                  n.createElement(y, null),
+                  n.createElement(g, null),
                   n.createElement(
                     "div",
                     { className: s().SectionTitle },
@@ -905,7 +923,7 @@
                     "div",
                     { className: s().SectionBody },
                     "If the additional documents noted below have not been provided by the date indicated, per US KYC requirements, the KYC and tax form you completed for Valve will be invalidated and you will need to retake the full interview. ",
-                    b(e),
+                    T(e),
                   ),
                 ),
                 n.createElement(
@@ -1051,7 +1069,7 @@
                       ),
                     ),
                   ),
-                  n.createElement(S, { ...e }),
+                  n.createElement(w, { ...e }),
                 ),
               );
             },
@@ -1086,7 +1104,7 @@
                   { className: s().SectionBody },
                   "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -1100,7 +1118,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(N, { ...e }),
+                n.createElement(_, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1123,7 +1141,7 @@
                   n.createElement("br", null),
                   "Certification of tax Residency for Tax Treaty Purposes",
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -1137,7 +1155,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(N, { ...e }),
+                n.createElement(_, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1176,7 +1194,7 @@
                     ),
                   ),
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -1190,7 +1208,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(N, { ...e }),
+                n.createElement(_, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1225,7 +1243,7 @@
                     ),
                   ),
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -1239,7 +1257,7 @@
                     c().SectionCtn,
                   ),
                 },
-                n.createElement(N, { ...e }),
+                n.createElement(_, { ...e }),
                 n.createElement(
                   "div",
                   { className: s().SectionTitle },
@@ -1280,7 +1298,7 @@
                     ),
                   ),
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -1362,7 +1380,7 @@
                   "div",
                   { className: s().SectionBody },
                   "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
-                  b(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1374,7 +1392,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -1407,7 +1425,7 @@
                   "div",
                   { className: s().SectionBody },
                   "As per United States IRS requirements, developers are given 30 days to correct tax form issues before the initial tax form expires. This period has passed for your account. ",
-                  b(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1419,12 +1437,12 @@
                   { className: s().SectionBody },
                   "When you have all necessary KYC and tax information prepared, you may retake the full interview by clicking the button below.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
-          Freeform: { component: f },
-          "Freeform-FR": { component: f },
+          Freeform: { component: E },
+          "Freeform-FR": { component: E },
           "DocReq-InvalidAddress-FR": {
             component: function (e) {
               return n.createElement(
@@ -1509,7 +1527,7 @@
                   ),
                   "Please do not give us the address of your bank or utility company.",
                 ),
-                n.createElement(S, { ...e }),
+                n.createElement(w, { ...e }),
               );
             },
           },
@@ -1560,7 +1578,7 @@
                     null,
                     "You must to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
                   ),
-                  n.createElement(g, { ...e }),
+                  n.createElement(b, { ...e }),
                 ),
               );
             },
@@ -1593,7 +1611,7 @@
                   "div",
                   { className: s().SectionBody },
                   "Since you did not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  b(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1605,7 +1623,7 @@
                   { className: s().SectionBody },
                   "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -1647,7 +1665,7 @@
                   "div",
                   { className: s().SectionBody },
                   "You must correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
-                  n.createElement(g, { ...e }),
+                  n.createElement(b, { ...e }),
                 ),
               );
             },
@@ -1684,7 +1702,7 @@
                       null,
                       "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
                     ),
-                    n.createElement(g, { ...e }),
+                    n.createElement(b, { ...e }),
                   ),
                 ),
                 i = n.createElement(
@@ -1714,7 +1732,7 @@
                       "li",
                       null,
                       "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
-                      n.createElement(g, { ...e }),
+                      n.createElement(b, { ...e }),
                     ),
                   ),
                 );
@@ -1792,7 +1810,7 @@
                   "div",
                   { className: s().SectionBody },
                   "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  b(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1804,7 +1822,7 @@
                   { className: s().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -1849,7 +1867,7 @@
                   "div",
                   { className: s().SectionBody },
                   "If you do not provide a valid taxpayer identification number, per US IRS requirements, your tax form is invalid. ",
-                  b(e),
+                  T(e),
                 ),
                 n.createElement(
                   "div",
@@ -1861,7 +1879,7 @@
                   { className: s().SectionBody },
                   "You will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -1894,7 +1912,7 @@
                   { className: s().SectionBody },
                   "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by a Steamworks user with Actual Authority rights.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -1932,7 +1950,7 @@
                   { className: s().SectionBody },
                   "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -2004,7 +2022,7 @@
                     a +
                     " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
@@ -2068,12 +2086,12 @@
                   { className: s().SectionBody },
                   "In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                 ),
-                n.createElement(g, { ...e }),
+                n.createElement(b, { ...e }),
               );
             },
           },
         };
-      function B() {
+      function P() {
         const [e] = (0, n.useState)(
             (0, i.Tc)("deadlines", "application_config"),
           ),
@@ -2091,12 +2109,12 @@
           );
         return [e, r, t, a, o];
       }
-      function P(e) {
+      function A(e) {
         const { closeModal: t, subject: a, publisherid: i } = e,
           [r, o] = n.useState(""),
           [l, c] = n.useState("");
         return n.createElement(
-          T.o0,
+          x.o0,
           {
             strTitle: "Contact TaxIdentity",
             strDescription: l
@@ -2111,7 +2129,7 @@
                     e.append("subject", a),
                     e.append("message", r);
                   const t = `${p.TS.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
-                    n = await I().post(t, e);
+                    n = await y().post(t, e);
                   200 == n?.status && 1 == n.data?.success
                     ? c(
                         `Your message has been sent.  You should receive an email acknowledgement from TaxIdentity to your Steam account's email address: ${n.data.msg}.`,
@@ -2144,8 +2162,8 @@
           ),
         );
       }
-      function A(e) {
-        const [t, a, o, l, d] = B(),
+      function k(e) {
+        const [t, a, o, l, d] = P(),
           [h, f] = (function () {
             const [e] = (0, n.useState)(
                 (0, i.Tc)("testpage", "application_config"),
@@ -2204,7 +2222,7 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  h && n.createElement(k, { strTemplate: f }),
+                  h && n.createElement(D, { strTemplate: f }),
                   !v &&
                     y.length > 0 &&
                     y.map((e, t) =>
@@ -2269,9 +2287,9 @@
                       u.jn,
                       {
                         onClick: (e) =>
-                          (0, w.pg)(
-                            n.createElement(P, { subject: E, publisherid: l }),
-                            (0, _.uX)(e),
+                          (0, C.pg)(
+                            n.createElement(A, { subject: E, publisherid: l }),
+                            (0, I.uX)(e),
                           ),
                         className: s().NotificationButton,
                       },
@@ -2284,11 +2302,11 @@
           ),
         );
       }
-      function k(e) {
+      function D(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
-          s = x.map((e) => ({ label: e, data: e })),
+          s = R.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           d = new Intl.DateTimeFormat(navigator.language).format(l);
@@ -2335,9 +2353,9 @@
       function q(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, i] = B(),
+          [, i] = P(),
           r = new Date(a?.CreatedOn);
-        if (!R[a.TemplateName])
+        if (!B[a.TemplateName])
           return n.createElement(
             "div",
             { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
@@ -2348,7 +2366,7 @@
             ),
             n.createElement("div", null, "Message Not Available"),
           );
-        const o = R[a.TemplateName].component;
+        const o = B[a.TemplateName].component;
         return n.createElement(
           n.Fragment,
           null,
