@@ -3343,7 +3343,10 @@
                         const t = e.description_jsondata
                           ? JSON.parse(e.description_jsondata)
                           : void 0;
-                        return "F1099MISC-ConsentYes" != t?.TemplateName;
+                        return (
+                          "F1099MISC-ConsentYes" != t?.TemplateName &&
+                          "F1042-Consent" != t?.TemplateName
+                        );
                       }
                     }
                     return !1;
@@ -3672,6 +3675,7 @@
                 "#PartnerDeadline_TaxRequirement_AdditionalDocuments",
               );
             case "F1099MISC-ConsentYes":
+            case "F1042-Consent":
               return (0, i.we)("#PartnerDeadline_TaxRequirement_NewDocuments");
             case "FailureToComply":
             case "FailureToComply-KYC":
@@ -3739,14 +3743,22 @@
         );
       }
       function pt(e) {
-        return "F1099MISC-ConsentYes" === e
-          ? (0, i.we)("#PartnerDeadline_TaxRequirement_Header_NoAction")
-          : (0, i.we)("#Dashboard_UpcomingEvents_EventType_Deadline");
+        switch (e) {
+          case "F1099MISC-ConsentYes":
+          case "F1042-Consent":
+            return (0, i.we)("#PartnerDeadline_TaxRequirement_Header_NoAction");
+          default:
+            return (0, i.we)("#Dashboard_UpcomingEvents_EventType_Deadline");
+        }
       }
       function _t(e) {
-        return "F1099MISC-ConsentYes" === e
-          ? (0, i.we)("#PartnerDeadline_TaxRequirement_Title_NoAction")
-          : (0, i.we)("#PartnerDeadline_TaxRequirement_Title");
+        switch (e) {
+          case "F1099MISC-ConsentYes":
+          case "F1042-Consent":
+            return (0, i.we)("#PartnerDeadline_TaxRequirement_Title_NoAction");
+          default:
+            return (0, i.we)("#PartnerDeadline_TaxRequirement_Title");
+        }
       }
       var ut = a(95013),
         gt = a(94238),

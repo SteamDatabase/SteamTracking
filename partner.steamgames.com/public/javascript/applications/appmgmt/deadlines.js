@@ -673,6 +673,7 @@
           "DocReq-W8USAddress-FR",
           "DocReq-W8USParent-FR",
           "F1099MISC-ConsentYes",
+          "F1042-Consent",
           "FailureToComply",
           "FailureToComply-KYC",
           "Freeform",
@@ -1335,6 +1336,53 @@
                   "div",
                   { className: s().SectionBody },
                   "We plan to file this form with the taxing authorities by January 31 of this year. Please review this form carefully. There is no need to send anything back to us but if you have any questions, please let us know as soon as possible.",
+                ),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  n.createElement(
+                    u.jn,
+                    {
+                      onClick: () => window.open(a, "_blank"),
+                      className: s().NotificationButton,
+                    },
+                    "View Tax Documents",
+                  ),
+                ),
+              );
+            },
+          },
+          "F1042-Consent": {
+            component: function (e) {
+              const { requirement: t } = e,
+                a = `${p.TS.PARTNER_BASE_URL}pub/companydetails/${t.deadline.data.partnerid}`,
+                i = JSON.parse(t.deadline.data.description_jsondata),
+                r = t.bTestDisplay
+                  ? new Date().getFullYear() - 1
+                  : i?.Parameters?.TaxYear,
+                o = `Our records show that you consented to electronic delivery of your tax documents.  ${r ? `You can find your 1042-S tax statement for ${r} available for download \n\tunderneath your tax information in Steamworks. We are required by the Internal Revenue Service (the U.S. taxing authority) to prepare and provide you with a \n\tForm 1042-S, "Foreign Person's U.S. Source Income Subject to Withholding" on an annual basis. The Form reflects the amount of Steam revenue share payments on \n\tUS sales we paid to you in ${r} and related withholding taxes, if applicable.` : 'You can find a new 1042-S tax statement available for download \n\tunderneath your tax information in Steamworks. We are required by the Internal Revenue Service (the U.S. taxing authority) to prepare and provide you with a \n\tForm 1042-S, "Foreign Person\'s U.S. Source Income Subject to Withholding" on an annual basis.'}  This Form is prepared on a cash-basis for each calendar year. Receiving this \n\tForm does not require you to file a U.S. tax return but there may be other circumstances that may require you to file a U.S. tax return. Generally, this form is \n\tfor informational purposes to you but you may want to consult with your tax advisors for additional guidance.`;
+              return n.createElement(
+                "div",
+                {
+                  className: (0, m.A)(
+                    s().NotificationContainer,
+                    c().SectionCtn,
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().MessageHeader },
+                  n.createElement(
+                    "div",
+                    { className: s().MessageSubject },
+                    "New tax form available for download",
+                  ),
+                ),
+                n.createElement("div", { className: s().SectionBody }, o),
+                n.createElement(
+                  "div",
+                  { className: s().SectionBody },
+                  "We plan to file these forms with the taxing authorities by March 17 of this year. Please review this form carefully. There is no need to send anything back to us but if you have any questions, please let us know as soon as possible.",
                 ),
                 n.createElement(
                   "div",
@@ -2185,7 +2233,7 @@
                   );
                 return a.getTime() > n.getTime() ? -1 : 1;
               }),
-              [e, Boolean(1 == e[0]?.data.status && !q(e[0]))]
+              [e, Boolean(1 == e[0]?.data.status && !D(e[0]))]
             );
           }, [t]),
           E =
@@ -2222,7 +2270,7 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  h && n.createElement(D, { strTemplate: f }),
+                  h && n.createElement(q, { strTemplate: f }),
                   !v &&
                     y.length > 0 &&
                     y.map((e, t) =>
@@ -2302,7 +2350,7 @@
           ),
         );
       }
-      function D(e) {
+      function q(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
@@ -2350,10 +2398,11 @@
           )
         );
       }
-      function q(e) {
+      function D(e) {
+        const t = JSON.parse(e.data.description_jsondata);
         return (
-          "F1099MISC-ConsentYes" ==
-          JSON.parse(e.data.description_jsondata).TemplateName
+          "F1099MISC-ConsentYes" == t.TemplateName ||
+          "F1042-Consent" == t.TemplateName
         );
       }
       function M(e) {
