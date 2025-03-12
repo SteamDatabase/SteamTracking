@@ -1427,6 +1427,7 @@ ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts/
 ${STORE_BASE_URL}charts/steamdecktopplayed
 ${STORE_BASE_URL}charts/topselling/
+${STORE_BASE_URL}communityrecommendations/
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
@@ -1454,6 +1455,7 @@ ${STORE_BASE_URL}curator/${}/ajaxgetcreatorhomeinfo
 ${STORE_BASE_URL}curator/${}/sale/${sale_vanity_id}
 ${STORE_BASE_URL}curator/${}/sale/${}
 ${STORE_BASE_URL}curator/0/ajaxsearchcurators
+${STORE_BASE_URL}curators/
 ${STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}
 ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
@@ -1463,6 +1465,7 @@ ${STORE_BASE_URL}digitalgiftcards/
 ${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
+${STORE_BASE_URL}dlcforyou/
 ${STORE_BASE_URL}dynamicstore/userdata/
 ${STORE_BASE_URL}dynamicstore/userdata/?id=${}&cc=${country_code}
 ${STORE_BASE_URL}email/PartnerAppOptIn/?
@@ -1497,6 +1500,8 @@ ${STORE_BASE_URL}explore
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
 ${STORE_BASE_URL}explore/new/
+${STORE_BASE_URL}explore/next/0
+${STORE_BASE_URL}explore/next/3
 ${STORE_BASE_URL}explore?dq=widget
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
@@ -1583,7 +1588,9 @@ ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
+${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
+${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere
