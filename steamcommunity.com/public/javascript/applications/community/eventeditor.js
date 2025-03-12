@@ -16613,10 +16613,7 @@
               {
                 name: (0, D.we)("#EventEditor_Artwork"),
                 key: "artwork",
-                status:
-                  12 === t.GetEventType()
-                    ? c.createElement(Zo, { fnGetStatus: Wt.uu })
-                    : void 0,
+                status: c.createElement(Zo, { fnGetStatus: Wt.uu }),
                 hidden: !G.UF.CAN_UPLOAD_IMAGES,
                 vo_warning:
                   this.BCanOnlyUploadBecauseSupportUser() &&

@@ -7691,6 +7691,7 @@
       }
       function s() {
         const e = n.mh.GetEditModel();
+        if (12 === e.GetEventType()) return null;
         if (e.BHasTag("curator")) return null;
         const t = i.O.Get().GetCurEditLanguage();
         return o([e.GetImageURL("capsule", t)]);
