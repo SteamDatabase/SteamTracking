@@ -12207,7 +12207,7 @@
         n.useEffect(() => {
           K || Y || !C || (w(!1), Z());
         }, [C, K, Y, Z]);
-        const J = !i;
+        const J = !i && a > 0;
         let ee;
         y
           ? (ee = 4)
@@ -12465,53 +12465,58 @@
       }
       var Ta = a(60884);
       function Ga(e) {
-        const { rgCapsulesToShow: t, arrowFill: a } = e,
-          r = (0, v.Qn)(),
-          [s, i] = n.useState(0),
-          [l, c] = n.useState(!0),
-          m = t.length,
-          u = n.useCallback(
+        const {
+            rgCapsulesToShow: t,
+            arrowFill: a,
+            autoAdvance: r,
+            hideAppBackground: s,
+          } = e,
+          i = (0, v.Qn)(),
+          [l, c] = n.useState(0),
+          [m, u] = n.useState(!0),
+          d = t.length,
+          _ = n.useCallback(
             (e) => {
-              i(((e % m) + m) % m), c(!1);
+              c(((e % d) + d) % d), u(!1);
             },
-            [m],
+            [d],
           ),
-          d = n.useCallback((e) => u(s + (e ? 1 : -1)), [u, s]),
-          _ = it.OQ(s, 0, m - 1),
-          p = t[_],
-          g = m <= 30;
+          p = n.useCallback((e) => _(l + (e ? 1 : -1)), [_, l]),
+          g = it.OQ(l, 0, d - 1),
+          h = t[g],
+          S = d <= 30;
         return (
           (function (e, t) {
             const a = (0, Je.Bz)(),
               [r] = (0, o.G6)(e, t, { include_assets: !0 });
             (0, n.useEffect)(() => {
-              if (!r) return;
+              if (!r) return void a(void 0);
               const e =
                 r.GetAssets().GetLibraryHeroURL()?.trim().length > 0
                   ? r.GetAssets().GetLibraryHeroURL()
                   : r.GetAssets().GetPageBackgroundURL();
               a(e);
             }, [a, r]);
-          })(p?.id, (0, I.JK)(p?.item_type)),
+          })(s ? void 0 : h?.id, (0, I.JK)(h?.item_type)),
           n.createElement(
             "div",
             { className: Ye.TrailerCarouselApp },
             n.createElement(ba, {
-              appID: p?.id,
-              autoAdvanceMsec: 1e4,
-              bStartVideoWhenHidden: !l,
-              fnNavigate: d,
-              appIndex: _,
-              appCount: m,
-              wrapAround: g,
-              arrows: !r,
+              appID: h?.id,
+              autoAdvanceMsec: r ? 1e4 : 0,
+              bStartVideoWhenHidden: !m,
+              fnNavigate: p,
+              appIndex: g,
+              appCount: d,
+              wrapAround: S,
+              arrows: !i,
               arrowFill: a,
             }),
-            (r || (0, mt.$W)() || g) &&
+            (i || (0, mt.$W)() || S) &&
               n.createElement(Ta.A, {
-                count: m,
-                selectedIndex: s,
-                fnNavigate: u,
+                count: d,
+                selectedIndex: l,
+                fnNavigate: _,
               }),
           )
         );
@@ -12527,9 +12532,11 @@
             optin_prune_tagid: l,
             optin_only: c,
             arrowFill: m,
+            autoAdvance: u,
+            hideAppBackground: d,
           } = e,
-          u = (0, Xe.G)(),
-          { bLoading: d, mainCapsuleList: _ } = (function (
+          _ = (0, Xe.G)(),
+          { bLoading: p, mainCapsuleList: g } = (function (
             e,
             t,
             a,
@@ -12554,7 +12561,7 @@
               }
             );
           })(t, a, r, s, o, i, l, c),
-          { bLoading: p, rgCapsules: g } = (function (e) {
+          { bLoading: S, rgCapsules: f } = (function (e) {
             const {
               isLoading: t,
               isError: a,
@@ -12606,10 +12613,10 @@
             });
             return { bLoading: t, rgCapsules: a ? [] : n };
           })(t);
-        let S = _;
+        let E = g;
         return (
-          g?.length > 0 && (S = g),
-          d || p || !u
+          f?.length > 0 && (E = f),
+          p || S || !_
             ? n.createElement(
                 "div",
                 { className: Ye.TrailerCarouselApp },
@@ -12621,7 +12628,12 @@
             : n.createElement(
                 h.A,
                 { feature: "large-cluster" },
-                n.createElement(Ga, { rgCapsulesToShow: S, arrowFill: m }),
+                n.createElement(Ga, {
+                  rgCapsulesToShow: E,
+                  arrowFill: m,
+                  autoAdvance: u,
+                  hideAppBackground: d,
+                }),
               )
         );
       }
@@ -21190,6 +21202,8 @@
               optin_prune_tagid: t.jsondata.optin_prune_tagid,
               optin_only: t.jsondata.optin_only,
               arrowFill: t.jsondata?.sale_carousel_arrow_color,
+              autoAdvance: a.carousel_auto_advance,
+              hideAppBackground: a.carousel_hide_app_background,
               ...e,
             });
           case "contenthubspecials":
