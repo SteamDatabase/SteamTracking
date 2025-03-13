@@ -6681,10 +6681,7 @@
               },
             ],
             S = [];
-          S.push(r(3472480)),
-            S.push(r(2861720)),
-            S.push(r(2861700)),
-            S.push(r(2861690));
+          S.push(r(3558910)), S.push(r(3472480)), S.push(r(2861720));
           const v = [],
             N = [S, E];
           for (let e = 0; e < Math.max(N[0].length, N[1].length); e++)
@@ -8234,7 +8231,6 @@
                       iconComponent: g.yHA,
                       children: (0, y.we)("#ShopNav_BackgroundsLink"),
                       to: _.B.LoyaltyBackgrounds(),
-                      iconCallout: h.Zl,
                     },
                   },
                 ],
@@ -8296,7 +8292,6 @@
                 props: {
                   iconComponent: g.Exy,
                   children: (0, y.we)("#ShopNav_SeasonalBadgeLink"),
-                  iconCallout: h.Zl,
                   to: _.B.LoyaltySteamBadge(),
                 },
               }),
@@ -8469,20 +8464,19 @@
         Kd: () => o,
         Nu: () => b,
         R2: () => S,
-        RE: () => D,
+        RE: () => B,
         VO: () => p,
         W_: () => f,
         Wr: () => I,
         X$: () => E,
         XR: () => c,
         Z1: () => v,
-        Zl: () => A,
         eu: () => l,
         j2: () => s,
         jm: () => N,
         jw: () => w,
         kh: () => y,
-        qY: () => B,
+        qY: () => A,
         sC: () => C,
         wK: () => a,
         xh: () => h,
@@ -9139,25 +9133,6 @@
         );
       }
       function A(e) {
-        const { className: t, ...r } = e;
-        return i.createElement(
-          "svg",
-          {
-            className: t,
-            height: 100,
-            width: 100,
-            fill: "currentColor",
-            stroke: "currentColor",
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 69 69",
-          },
-          i.createElement("path", {
-            d: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-          }),
-          "  ",
-        );
-      }
-      function B(e) {
         return i.createElement(
           "svg",
           {
@@ -9175,7 +9150,7 @@
           }),
         );
       }
-      function D(e) {
+      function B(e) {
         const { className: t, ...r } = e;
         return i.createElement(
           "svg",
