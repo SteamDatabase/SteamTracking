@@ -1486,7 +1486,7 @@ p.home_subtitle_ctn a {
 @media screen and ( max-width: 1475px )
 {
     body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
-		height: 40vw !important;
+		height: 50vw !important;
 		background-size: cover !important;
 	}
 
@@ -1556,7 +1556,7 @@ p.home_subtitle_ctn a {
     }
 
 	body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
-		height: 40vw !important;
+		height: 50vw !important;
 		background-size: cover !important;
 	}
 
@@ -1600,7 +1600,7 @@ p.home_subtitle_ctn a {
     }
 
     body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
-		height: 45vw !important;
+		height: 50vw !important;
 		background-size: cover !important;
 	}
 
@@ -3541,7 +3541,7 @@ html.tablet body.v6.sale_spring2025 .pill_tab_menu_item {
 }
 
 html.tablet body.v6.sale_spring2025 .pill_tab_menu_item.active {
-	background: #d85cca;
+	background: #e5574b;
 }
 
 html.tablet body.v6.sale_spring2025 .pill_tab_menu_item.gpfocus {
