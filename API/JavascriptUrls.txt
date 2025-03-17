@@ -3518,6 +3518,7 @@ url( ${IMG_URL}/pastupdates/wr_social.png )
 url( ${IMG_URL}/pastupdates/wraith_social.jpg )
 url( ${IMG_URL}abilities/${_ ? _ : _}.png )
 url( ${IMG_URL}abilities/${name}.png )
+url( ${IMG_URL}abilities/${}.png
 url( ${IMG_URL}arrow_solid_left.png )
 url( ${IMG_URL}augupdate23/loadout_armory_2023_web_header_cropped.jpg )
 url( ${IMG_URL}augupdate23/repeater_grey_alt.jpg )
