@@ -2223,18 +2223,31 @@
           })(),
           [y, v] = n.useMemo(() => {
             const e = [...t];
-            return (
-              e.sort((e, t) => {
-                const a = new Date(
-                    JSON.parse(e.data.description_jsondata)?.CreatedOn,
-                  ),
-                  n = new Date(
-                    JSON.parse(t.data.description_jsondata)?.CreatedOn,
-                  );
-                return a.getTime() > n.getTime() ? -1 : 1;
-              }),
-              [e, Boolean(1 == e[0]?.data.status && !D(e[0]))]
-            );
+            e.sort((e, t) => {
+              const a = new Date(
+                  JSON.parse(e.data.description_jsondata)?.CreatedOn,
+                ),
+                n = new Date(
+                  JSON.parse(t.data.description_jsondata)?.CreatedOn,
+                );
+              return a.getTime() > n.getTime() ? -1 : 1;
+            });
+            const a =
+              e.length > 0 &&
+              Boolean(
+                e.find(
+                  (e) =>
+                    0 == e.data.status ||
+                    (function (e) {
+                      const t = JSON.parse(e.data.description_jsondata);
+                      return (
+                        "F1099MISC-ConsentYes" == t.TemplateName ||
+                        "F1042-Consent" == t.TemplateName
+                      );
+                    })(e),
+                ),
+              );
+            return [e, a];
           }, [t]),
           E =
             ("dev" == p.TS.WEB_UNIVERSE || "beta" == p.TS.WEB_UNIVERSE
@@ -2261,7 +2274,7 @@
                   "Steamworks Document Communication",
                   n.createElement("div", { className: s().PartnerName }, a),
                 ),
-                v &&
+                !v &&
                   n.createElement(
                     "div",
                     { className: s().TaskCompleted },
@@ -2271,10 +2284,10 @@
                   n.Fragment,
                   null,
                   h && n.createElement(q, { strTemplate: f }),
-                  !v &&
+                  v &&
                     y.length > 0 &&
                     y.map((e, t) =>
-                      n.createElement(M, {
+                      n.createElement(D, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2387,7 +2400,7 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(M, {
+            n.createElement(D, {
               requirement: {
                 deadline: c,
                 index: 0,
@@ -2399,13 +2412,6 @@
         );
       }
       function D(e) {
-        const t = JSON.parse(e.data.description_jsondata);
-        return (
-          "F1099MISC-ConsentYes" == t.TemplateName ||
-          "F1042-Consent" == t.TemplateName
-        );
-      }
-      function M(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           [, i] = P(),
