@@ -14,31 +14,6 @@ enum BluetoothDeviceType
 	k_BluetoothDeviceType_Keyboard = 11;
 }
 
-enum by
-{
-	by_player = 1;
-	by_wishlist = 2;
-	by_play_wish = 3;
-}
-
-enum ConfigPage
-{
-	k_ConfigPage_Takeover = 1;
-	k_ConfigPage_Takeunder = 2;
-	k_ConfigPage_TakeoverSteamChina = 3;
-	k_ConfigPage_Spotlight = 4;
-	k_ConfigPage_EarlyAccess_Takeover = 5;
-	k_ConfigPage_FreeToPlay_Takeover = 6;
-	k_ConfigPage_GreatOnDeck_Takeover = 7;
-	k_ConfigPage_Category_Action_Takeover = 8;
-	k_ConfigPage_Category_Multiplayer_Takeover = 9;
-	k_ConfigPage_Demo_Hub_Takeover = 10;
-	k_ConfigPage_RPG_Tag_Hub_Takeover = 11;
-	k_ConfigPage_Racing_Tag_Hub_Takeover = 12;
-	k_ConfigPage_VR_Hub_Takeover = 13;
-	k_ConfigPage_Casual_Tag_Hub_Takeover = 14;
-}
-
 enum CreatorHome
 {
 	k_CreatorHomeNone = 0;
@@ -49,11 +24,7 @@ enum Display
 {
 	k_DisplayAll = 0;
 	k_DisplayPublic = 1;
-	k_DisplayStaged = 2;
-	k_DisplayBeta = 3;
-	k_DisplayBetaPastStart = 4;
-	k_DisplayGift = 5;
-	k_DisplayAprrovedForPublishing = 6;
+	k_DisplayBeta = 2;
 }
 
 enum DOTA_ACCESS_TOURNAMENT
@@ -283,12 +254,6 @@ enum EControllerBindingType
 	k_EControllerBindingType_ControllerAction = 7;
 }
 
-enum ECountryTarget
-{
-	k_ECountryTarget_AllowList = 1;
-	k_ECountryTarget_DenyList = 2;
-}
-
 enum ECurrencyCode
 {
 	k_ECurrencyCodeInvalid = 0;
@@ -358,8 +323,6 @@ enum EDown
 	k_EDownloadMainCapsule = 4;
 	k_EDownloadVerticalCapsule = 5;
 	k_EDownloadPageBackground = 6;
-	k_EDownloadAllAgeSafeScreenshots = 7;
-	k_EDownloadScreenshots = 8;
 }
 
 enum EEventStat
@@ -558,18 +521,6 @@ enum ENotifyFlag
 	k_ENotifyFlagNone = 0;
 	k_ENotifyFlagByEmail = 1;
 	k_ENotifyFlagByPush = 2;
-}
-
-enum EOptInType
-{
-	k_EOptInType_EventRegistration = 0;
-	k_EOptInType_RecommendedAction = 1;
-}
-
-enum EOptInVisibility
-{
-	k_EOptInVisibility_Public = 0;
-	k_EOptInVisibility_InviteOnly = 1;
 }
 
 enum EOverlayToStoreFlag
@@ -918,26 +869,10 @@ enum Show
 	ShowFilteredOutItems = 2;
 }
 
-enum SortBy
-{
-	k_SortByPriority = 0;
-	k_SortByStartDate = 1;
-}
-
 enum STORAGE
 {
 	STORAGE_DOES_NOT_EXIST = 0;
 	STORAGE_IN_MEMORY = 1;
-}
-
-enum Store
-{
-	k_StoreInvalidState = 0;
-	k_StoreUnavailable = 1;
-	k_StorePrePurchase = 2;
-	k_StoreComingSoon = 3;
-	k_StoreEarlyAccess = 4;
-	k_StoreGeneralAvailability = 5;
 }
 
 enum SystemKey
@@ -994,13 +929,6 @@ enum UnnamedEnum07fc2c3567eb7e19
 {
 	Idle = 0;
 	Busy = 1;
-}
-
-enum UnnamedEnum08a7599cef1b51d6
-{
-	Summary = 0;
-	Sales = 1;
-	Marketing = 2;
 }
 
 enum UnnamedEnum09e3cce3b6071fcb
@@ -1199,12 +1127,6 @@ enum UnnamedEnum1d137d7f853b05fe
 	k_Unknown = 5;
 }
 
-enum UnnamedEnum1e6f97ac4db559c6
-{
-	k_BlockDate = 1;
-	k_ScheduleSlot = 2;
-}
-
 enum UnnamedEnum1ec6c82c0cacba76
 {
 	k_Success = 0;
@@ -1283,15 +1205,6 @@ enum UnnamedEnum258cde65fc9c0016
 	Ranked = 4;
 }
 
-enum UnnamedEnum25bb92eddba41afe
-{
-	Invalid = 0;
-	Input = 1;
-	Preprocessing = 2;
-	Keras = 3;
-	Train = 4;
-}
-
 enum UnnamedEnum2603c05e3f1b8c52
 {
 	NOT_TRACKING = undefined;
@@ -1307,13 +1220,6 @@ enum UnnamedEnum262b5710133da930
 	Tooltip = 4;
 	ContextMenu = 8;
 	Resizable = 16;
-}
-
-enum UnnamedEnum274d8518ea2b5142
-{
-	NotRequired = 0;
-	NotSetUp = 1;
-	SetUp = 2;
 }
 
 enum UnnamedEnum27cbc52f3d26b7db
@@ -1372,19 +1278,6 @@ enum UnnamedEnum2bf3fa6c4886638f
 	Standard = 0;
 	NoTransform = 1;
 	NoTransformSparseContent = 2;
-}
-
-enum UnnamedEnum2c763df13954ae16
-{
-	Unknown = 0;
-	Cancelled = 1;
-	InviteActive = 2;
-	InviteExpired = 3;
-	InviteAccepted = 4;
-	DealReady = 5;
-	DealLive = 6;
-	DealCompleted = 7;
-	DealFailed = 8;
 }
 
 enum UnnamedEnum2cb9b3e31468ae28
@@ -1483,13 +1376,6 @@ enum UnnamedEnum322f4518bf470232
 	Tooltip = 2;
 	PopupContextMenu = 3;
 	StandaloneContextMenu = 4;
-}
-
-enum UnnamedEnum32d9c79bb287cb61
-{
-	Hidden = 0;
-	Create = 1;
-	Edit = 2;
 }
 
 enum UnnamedEnum336a74c93bcf88cc
@@ -1620,14 +1506,6 @@ enum UnnamedEnum4138f56b41dc01a7
 	INTERNATIONAL_2023 = 21;
 	INTERNATIONAL_2023_QUALIFIERS = 22;
 	INTERNATIONAL_2024 = 23;
-}
-
-enum UnnamedEnum417b0cbbb904eb0c
-{
-	NONE = 0;
-	MAIN = 1;
-	FETCH_WORKERS = 2;
-	GPU = 3;
 }
 
 enum UnnamedEnum41ef8b0e788e0224
@@ -1960,15 +1838,6 @@ enum UnnamedEnum59717e0405bef96b
 	VALID = 0;
 	INVALID = 1;
 	CANCELED = 2;
-}
-
-enum UnnamedEnum5b8032725cc6864d
-{
-	k_AwaitingPartner = 0;
-	k_AssetSubmitted = 1;
-	k_DeliveryReviewed = 2;
-	k_DesignComplete = 3;
-	k_LocalizationDone = 4;
 }
 
 enum UnnamedEnum5b9e1e5238550b64
@@ -2340,49 +2209,6 @@ enum UnnamedEnum6dc1117c55eed9d3
 	k_ECurator = 2;
 	k_ETags = 3;
 	k_EDisplayList = 4;
-}
-
-enum UnnamedEnum6ddd0e7940359a04
-{
-	k_Custom = 0;
-	k_AssetKit = 1;
-	k_DemoPressPreview = 2;
-	k_ScheduleLiveStream = 3;
-	k_CancelSection = 4;
-	k_DemoNotReady = 5;
-	k_ReviewCategorization = 6;
-	k_DemoReview = 7;
-	k_PressPreviewDetails = 8;
-	k_StatsSummary = 9;
-	k_SurveyButton = 10;
-	k_DemoLaunch = 11;
-	k_CallForRegistration = 12;
-	k_EnterDiscount = 13;
-	k_EnterDiscountReminder = 14;
-	k_LearnMore = 15;
-	k_MediaUsePermission = 16;
-	k_MeasureResults = 17;
-	k_TrailerOrDemoPermissions = 18;
-	k_NextFestQASession = 19;
-	k_NextFestReturns = 20;
-	k_NextFestWhatNext = 21;
-	k_NextFestTips = 22;
-	k_NextFestStartsNow = 23;
-	k_MeasureResultsFree = 24;
-	k_NextFestThankYou = 25;
-	k_MediaPermissionReminder = 26;
-	k_SaleThankYou = 27;
-	k_NextFestMediaUsageIntended = 28;
-	k_GenericActionLink = 29;
-	k_SteamAwardsCategories = 30;
-	k_NextFestMediaUsageIntendedTrailer = 31;
-	k_NextFestMediaUsageIntendedLivestream = 32;
-	k_NextFestTopGameWrapUp = 33;
-	k_ImageBoxSection = 34;
-	k_MeasureResultsNextFest = 35;
-	k_SeasonalFeatureRequest = 36;
-	k_SeasonalFeatureDiscount = 37;
-	k_GenericActionButton = 38;
 }
 
 enum UnnamedEnum702e80796a2bbcdf
@@ -3648,17 +3474,6 @@ enum UnnamedEnumeb660645b84e5c96
 	PreserveOrCollapsed = 3;
 }
 
-enum UnnamedEnumec319d06f27559b4
-{
-	BuildReview = 0;
-	StorePageReview = 1;
-	SteamChina_BuildReview = 2;
-	SteamChina_StorePageReview = 3;
-	SteamChinaPlatformOperator_StorePageReview = 4;
-	SteamChinaPlatformOperator_BuildReview = 5;
-	SteamDeckCompatibilityReview = 6;
-}
-
 enum UnnamedEnumed8eaeb9738f36fa
 {
 	File = 0;
@@ -3720,21 +3535,6 @@ enum UnnamedEnumf126cd872c06e76e
 	jsondata_broadcast = 256;
 	jsondata_sales = 512;
 	jsondata_schedule = 1024;
-}
-
-enum UnnamedEnumf148f58a11f3d661
-{
-	k_RegistrationConfirmation = 0;
-	k_Reminder = 1;
-	k_Invite = 2;
-	k_Followup = 3;
-	k_Starting = 4;
-	k_InviteReminder = 5;
-	k_Update = 6;
-	k_PermissionRequest = 7;
-	k_MediaUsageNotification = 8;
-	k_GeneralCommunication = 9;
-	k_SteamAwardFinalists = 10;
 }
 
 enum UnnamedEnumf26944e1770e4a69
