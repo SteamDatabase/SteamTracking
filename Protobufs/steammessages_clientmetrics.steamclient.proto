@@ -240,6 +240,23 @@ message CClientMetrics_EndGameRecording_Notification {
 	optional bool instant_clip = 5;
 }
 
+message CClientMetrics_GamePerformance_Notification {
+	message FrameRateReport {
+		optional fixed64 gameid = 1;
+		optional uint32 frame_rate = 2;
+		optional string manufacturer = 3;
+		optional string model = 4;
+		optional string dx_video_card = 5;
+		optional int32 dx_vendorid = 6;
+		optional int32 dx_deviceid = 7;
+		optional uint32 num_gpu = 8;
+		optional uint64 system_ram = 9;
+		optional int32 session_seconds = 10;
+	}
+
+	repeated .CClientMetrics_GamePerformance_Notification.FrameRateReport reports = 1;
+}
+
 service ClientMetrics {
 	rpc ClientAppInterfaceStatsReport (.CClientMetrics_AppInterfaceStats_Notification) returns (.NoResponse);
 	rpc ClientIPv6ConnectivityReport (.CClientMetrics_IPv6Connectivity_Notification) returns (.NoResponse);
@@ -256,4 +273,5 @@ service ClientMetrics {
 	rpc ReportClipShare (.CClientMetrics_ClipShare_Notification) returns (.NoResponse);
 	rpc ReportClipRange (.CClientMetrics_ClipRange_Notification) returns (.NoResponse);
 	rpc ReportEndGameRecording (.CClientMetrics_EndGameRecording_Notification) returns (.NoResponse);
+	rpc ReportGamePerformance (.CClientMetrics_GamePerformance_Notification) returns (.NoResponse);
 }

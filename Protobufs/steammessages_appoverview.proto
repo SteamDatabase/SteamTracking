@@ -84,11 +84,9 @@ message CAppOverview_PerClientData {
 	optional uint64 clientid = 1 [default = 0];
 	optional string client_name = 2;
 	optional .EDisplayStatus display_status = 3 [default = k_EDisplayStatusInvalid];
-	optional uint32 status_percentage = 4 [default = 0];
+	optional uint32 status_percentage = 4;
 	optional string active_beta = 5;
 	optional bool installed = 6;
-	optional uint64 bytes_downloaded = 7 [default = 0];
-	optional uint64 bytes_total = 8 [default = 0];
 	optional bool streaming_to_local_client = 9;
 	optional bool is_available_on_current_platform = 10;
 	optional bool is_invalid_os_type = 11;

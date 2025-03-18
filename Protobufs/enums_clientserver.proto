@@ -943,8 +943,6 @@ enum EMsg {
 	k_EMsgClientEnableTestLicenseResponse = 5444;
 	k_EMsgClientDisableTestLicense = 5445;
 	k_EMsgClientDisableTestLicenseResponse = 5446;
-	k_EMsgClientRequestValidationMail = 5448;
-	k_EMsgClientRequestValidationMailResponse = 5449;
 	k_EMsgClientCheckAppBetaPassword = 5450;
 	k_EMsgClientCheckAppBetaPasswordResponse = 5451;
 	k_EMsgClientToGC = 5452;
@@ -1009,10 +1007,6 @@ enum EMsg {
 	k_EMsgClientAMGetClanOfficersResponse = 5532;
 	k_EMsgClientFriendProfileInfo = 5535;
 	k_EMsgClientFriendProfileInfoResponse = 5536;
-	k_EMsgClientUpdateMachineAuth = 5537;
-	k_EMsgClientUpdateMachineAuthResponse = 5538;
-	k_EMsgClientReadMachineAuth = 5539;
-	k_EMsgClientReadMachineAuthResponse = 5540;
 	k_EMsgClientScreenshotsChanged = 5543;
 	k_EMsgClientLaunchClientApp = 5544;
 	k_EMsgClientLaunchClientAppResponse = 5545;
@@ -1163,7 +1157,6 @@ enum EMsg {
 	k_EMsgNonStdMsgTests = 6808;
 	k_EMsgNonStdMsgUMQpipeAAPL = 6809;
 	k_EMSgNonStdMsgSyslog = 6810;
-	k_EMsgNonStdMsgLogsink = 6811;
 	k_EMsgNonStdMsgSteam2Emulator = 6812;
 	k_EMsgNonStdMsgRTMPServer = 6813;
 	k_EMsgNonStdMsgWebSocket = 6814;
@@ -1313,8 +1306,6 @@ enum EMsg {
 	k_EMsgBoxMonitorBase = 8700;
 	k_EMsgBoxMonitorReportRequest = 8700;
 	k_EMsgBoxMonitorReportResponse = 8701;
-	k_EMsgLogsinkBase = 8800;
-	k_EMsgLogsinkWriteReport = 8800;
 	k_EMsgPICSBase = 8900;
 	k_EMsgClientPICSChangesSinceRequest = 8901;
 	k_EMsgClientPICSChangesSinceResponse = 8902;

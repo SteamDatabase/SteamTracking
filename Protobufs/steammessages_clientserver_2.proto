@@ -52,48 +52,6 @@ message CMsgClientCheckFileSignatureResponse {
 	optional uint32 evalvesignaturecheckdetail = 10;
 }
 
-message CMsgClientReadMachineAuth {
-	optional string filename = 1;
-	optional uint32 offset = 2;
-	optional uint32 cubtoread = 3;
-}
-
-message CMsgClientReadMachineAuthResponse {
-	optional string filename = 1;
-	optional uint32 eresult = 2;
-	optional uint32 filesize = 3;
-	optional bytes sha_file = 4;
-	optional uint32 getlasterror = 5;
-	optional uint32 offset = 6;
-	optional uint32 cubread = 7;
-	optional bytes bytes_read = 8;
-	optional string filename_sentry = 9;
-}
-
-message CMsgClientUpdateMachineAuth {
-	optional string filename = 1;
-	optional uint32 offset = 2;
-	optional uint32 cubtowrite = 3;
-	optional bytes bytes = 4;
-	optional uint32 otp_type = 5;
-	optional string otp_identifier = 6;
-	optional bytes otp_sharedsecret = 7;
-	optional uint32 otp_timedrift = 8;
-}
-
-message CMsgClientUpdateMachineAuthResponse {
-	optional string filename = 1;
-	optional uint32 eresult = 2;
-	optional uint32 filesize = 3;
-	optional bytes sha_file = 4;
-	optional uint32 getlasterror = 5;
-	optional uint32 offset = 6;
-	optional uint32 cubwrote = 7;
-	optional int32 otp_type = 8;
-	optional uint32 otp_value = 9;
-	optional string otp_identifier = 10;
-}
-
 message CMsgClientRegisterKey {
 	optional string key = 1;
 }

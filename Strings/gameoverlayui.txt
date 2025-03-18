@@ -4,14 +4,18 @@
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  \n\vinitial_top
  google/protobuf/descriptor.proto"1\n\rCMsgIPAddress
+!AxU
 !\n\finitial_left
 " \n\rCMsgSetUIMode
 "#\n\tCMsgClose
 "'\n\rCMsgShowPopup
+"10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "????'????????????????????????????????????????????????????\????
 "C\n\rCMsgAddHeader
 "\n\farray_values
 "^\n\fOneofOptions
+#FLR
+#tDq
 $ORIGIN
 $\n k_BluetoothDeviceType_Headphones
 $\n k_BluetoothDeviceType_OtherAudio
@@ -38,6 +42,11 @@ $\n k_EStorageFormatStage_Formatting
 $\n k_EStorageFormatStage_NotRunning
 $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
+$\nY8O
+%Y%m%d%H%M%S
+%Y%m%dT%H%M%SZ
+%Y-%m-%d %H:%M:%S
+%Y-%m-%dT%H:%M:%SZ
 %\n k_EPersonaStateFlag_ClientTypeVR
 %\n!k_EBanContentCheckResult_Possible
 %\n!k_EBanContentCheckResult_Unlikely
@@ -65,6 +74,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_ECloudStoragePersistStateDeleted
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
+&\n"k_ECompromiseDetectionType_Move2FA
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
@@ -83,6 +93,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_EStorageDriveMediaType_Removable
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\ngpu_status
+&bzi
 '\n#k_EBanContentCheckResult_NotScanned
 '\n#k_EBanContentCheckResult_VeryLikely
 '\n#k_EBrowserFeatureStatus_DisabledOff
@@ -113,6 +124,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_ENewSteamAnnouncementState_Invalid
 (\n$k_EProvideDeckFeedbackPreference_Yes
 (\n$k_EPublishedFileStorageSystemInvalid
+(\n$k_ESplitScalingFilter_NIS_Deprecated
 (\n$k_EUpdaterState_ClientRestartPending
 (\n$k_EUpdaterState_SystemRestartPending
 (\n$k_PublishedFileQueryType_NotYetRated
@@ -196,6 +208,8 @@ $\n k_SystemAudioPortDirection_Input
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *ZN17CScreenshotThread3RunEvEUlP10CUtlBufferiiE_
+*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
+*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
 *\\n\fEExportCodec
 *\n%k_EPersonaStateFlag_ClientTypeTenfoot
 *\n%k_EPersonaStateFlag_LaunchTypeGamepad
@@ -228,6 +242,7 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n\rReservedRange
 +\n\vmethod_type
++ulsX
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
@@ -289,6 +304,7 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.OneofOptions"
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
+.y4w
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
 /\n+k_ECommunityItemClass_MiniProfileBackground
@@ -298,6 +314,7 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789abcdef
+0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
@@ -313,24 +330,46 @@ $\n k_SystemAudioPortDirection_Input
 10CMsgGoBack
 10CMsgReload
 10CUtlMemoryI10CUtlStringE
+10CUtlMemoryI13ModuleCount_tE
+10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui9ListPanel8column_tEhE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES2_EiE10ListElem_tEE
@@ -340,8 +379,10 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIN14CUtlLinkedListIPN4vgui8TreeNodeEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIiiE10ListElem_tEE
 10CUtlMemoryIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tEE
+10CUtlMemoryIN4vgui10BoundKey_tEE
 10CUtlMemoryIN4vgui11layoutcmd_tEE
 10CUtlMemoryIN4vgui13PropertySheet6Page_tEE
+10CUtlMemoryIN4vgui15KeyBindingMap_tEE
 10CUtlMemoryIN4vgui16MessageMapItem_tEE
 10CUtlMemoryIN4vgui19AnimationController13AnimCommand_tEE
 10CUtlMemoryIN4vgui19AnimationController14AnimSequence_tEE
@@ -356,7 +397,11 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIN4vgui9ListPanel9section_tEE
 10CUtlMemoryIN4vgui9TextImage22PerLineTrncationData_tEE
 10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
+10CUtlMemoryIP12ILogListenerE
 10CUtlMemoryIP9KeyValuesE
+10CUtlMemoryIPK11CFileWriterE
+10CUtlMemoryIPK9KeyValuesE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlMemoryIPN4vgui10ClickPanelEE
 10CUtlMemoryIPN4vgui10MenuButtonEE
 10CUtlMemoryIPN4vgui13MenuSeparatorEE
@@ -364,6 +409,7 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIPN4vgui6IImageEE
 10CUtlMemoryIPN4vgui8TreeNodeEE
 10CUtlMemoryIPN4vgui8URLLabelEE
+10CUtlMemoryIPcE
 10CUtlMemoryIPwE
 10CUtlMemoryIfE
 10CUtlMemoryIhE
@@ -371,27 +417,43 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryImE
 10CUtlMemoryIsE
 10CUtlMemoryIwE
+10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlRBTreeIN7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
+10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
+10CUtlVectorIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
+10CUtlVectorIN4vgui10BoundKey_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui13PropertySheet6Page_tE10CUtlMemoryIS2_EE
+10CUtlVectorIN4vgui15KeyBindingMap_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui16MessageMapItem_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui19AnimationController13AnimCommand_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui19AnimationController14AnimSequence_tE10CUtlMemoryIS2_EE
@@ -406,7 +468,11 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorIN4vgui9ListPanel9section_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui9TextImage22PerLineTrncationData_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
+10CUtlVectorIP12ILogListener10CUtlMemoryIS1_EE
 10CUtlVectorIP9KeyValues10CUtlMemoryIS1_EE
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+10CUtlVectorIPK9KeyValues10CUtlMemoryIS2_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10MenuButtonE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
@@ -414,6 +480,7 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui8TreeNodeE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
+10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
 10CUtlVectorIf10CUtlMemoryIfEE
 10CUtlVectorIh10CUtlMemoryIhEE
@@ -421,9 +488,11 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorIm10CUtlMemoryImEE
 10CUtlVectorIs10CUtlMemoryIsEE
 10CUtlVectorIw10CUtlMemoryIwEE
+10ConCommand
 10IAppSystem
 10IMemStream
 11CDirWatcher
+11CFileWriter
 11CHTMLHeader
 11CMsgBuildID
 11CMsgGetZoom
@@ -436,9 +505,16 @@ $\n k_SystemAudioPortDirection_Input
 11CPathString
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
 11CURLManager
+11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS0_19SpewThrottleEntry_tE10CDefEqualsIS1_ENS0_23SpewLocationHashFunctorES1_E
 11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_ES2_E
+11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
+11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
+11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11KeyValuesAD
+12CAutoReleaseI15CJSCallbackFuncE
 12CIntProperty
+12CLogInstance
 12CMsgSetFocus
 12CMsgStopFind
 12CMsgStopLoad
@@ -487,6 +563,8 @@ $\n k_SystemAudioPortDirection_Input
 14CMsgViewSource
 14CRunGameEngine
 14CUtlLinkedListI10CUtlStringiE
+14CUtlLinkedListI12CWatchingLogiE
+14CUtlLinkedListI14CLogWatchParamiE
 14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
@@ -524,6 +602,7 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI12CMsgStopFindE
 16CHTMLProtoBufMsgI12CMsgStopLoadE
+16CHTMLProtoBufMsgI13CMsgAddHeaderE
 16CHTMLProtoBufMsgI13CMsgDisableF5E
 16CHTMLProtoBufMsgI13CMsgGoForwardE
 16CHTMLProtoBufMsgI13CMsgHidePopupE
@@ -536,10 +615,12 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI14CMsgViewSourceE
 16CHTMLProtoBufMsgI15CMsgBrowserSizeE
 16CHTMLProtoBufMsgI15CMsgFullRepaintE
+16CHTMLProtoBufMsgI16CMsgClearHistoryE
 16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
 16CHTMLProtoBufMsgI16CMsgPauseRepaintE
 16CHTMLProtoBufMsgI17CMsgImeCommitTextE
 16CHTMLProtoBufMsgI17CMsgMouseDblClickE
+16CHTMLProtoBufMsgI17CMsgStartDownloadE
 16CHTMLProtoBufMsgI18CMsgExitFullScreenE
 16CHTMLProtoBufMsgI18CMsgInspectElementE
 16CHTMLProtoBufMsgI18CMsgLinkAtPositionE
@@ -547,22 +628,26 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
+16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
 16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
 16CHTMLProtoBufMsgI23CMsgBrowserErrorStringsE
+16CHTMLProtoBufMsgI24CMsgClearAllBrowsingDataE
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
 16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
+16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
 16CHTMLProtoBufMsgI8CMsgCopyE
 16CHTMLProtoBufMsgI8CMsgFindE
 16CHTMLProtoBufMsgI9CMsgKeyUpE
 16CHTMLProtoBufMsgI9CMsgPasteE
 16CIngameFPSBanner
+16CJSCallbackFuncs
 16CMsgAckScreenDPI
 16CMsgBrowserReady
 16CMsgClearHistory
@@ -581,6 +666,7 @@ $\n k_SystemAudioPortDirection_Input
 16CSharedMemStream
 16HTMLComboBoxHost
 16ListPanelDragger
+17CFileWriterThread
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -592,6 +678,7 @@ $\n k_SystemAudioPortDirection_Input
 17CMsgStartDownload
 17CMsgUpdateToolTip
 17CScreenshotThread
+17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
 18446744073709551615
@@ -642,6 +729,7 @@ $\n k_SystemAudioPortDirection_Input
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
+20CJSMethodCallHandlerIN4vgui4HTMLEJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerIN4vgui4HTMLEJPK9CJSObject9CSmartPtrI18CJSCallbackPromiseEEE
 20CMsgGetCookiesForURL
 20CMsgJSDialogResponse
@@ -740,6 +828,7 @@ $\n k_SystemAudioPortDirection_Input
 2\n.k_PublishedFileQueryType_RankedByPlaytimeTrend
 2\n.k_PublishedFileQueryType_RankedByTotalPlaytime
 2\n.k_PublishedFileQueryType_RankedByTotalVotesAsc
+30!]^JV
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
@@ -759,6 +848,7 @@ $\n k_SystemAudioPortDirection_Input
 42CMsgDraggableRegionsChanged_DraggableRects
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
+49fN
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
@@ -768,12 +858,15 @@ $\n k_SystemAudioPortDirection_Input
 4\n0k_PublishedFileQueryType_RankedByLastUpdatedDate
 4\n0k_PublishedFileQueryType_RankedByPublicationDate
 50UserContentDescriptorPreferences_ContentDescriptor
+52F*
+5T&w&
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
 5\n1k_ESystemDisplayCompatibilityMode_MinimalBandwith
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
+6 PQ
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
@@ -782,11 +875,14 @@ $\n k_SystemAudioPortDirection_Input
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
+7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE
 7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE
 7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
+7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE
 7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE
+7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE
 7CUtlMapIPKcbi22CDefCaselessStringLessE
 7CUtlMapIiPN4vgui5PanelEi8CDefLessE
 7CUtlMapIjbs8CDefLessE
@@ -797,10 +893,13 @@ $\n k_SystemAudioPortDirection_Input
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n\tenum_type
+7~8A
 8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CJSArray
 8CMsgCopy
 8CMsgFind
+8\foQS
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_EWindowsUpdateInstallationImpact_ExclusiveHandling
@@ -812,13 +911,17 @@ $\n k_SystemAudioPortDirection_Input
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI22SerializedOverlayPumps20OverlayEscapeState_tLb0EE
 9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
+9CJSObject
 9CMsgClose
 9CMsgKeyUp
 9CMsgMulti
 9CMsgPaste
+9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
+9CUtlQueueIP9CLogEventE
 9ZooDialog
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
+9a&g
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
@@ -832,6 +935,7 @@ $\n k_SystemAudioPortDirection_Input
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
+A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ACCEPT
@@ -854,6 +958,7 @@ Brahmi
 Braille
 Buginese
 Buhid
+C-Yn
 CBilling_Address
 CCDDBAppDetailCommon
 CClanEventData
@@ -1027,6 +1132,7 @@ Cypriot
 Cyrillic
 DEFINE group contains more than one branch
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
+D\vvf:
 DescriptorProto
 DescriptorProtosH
 Deseret
@@ -1066,7 +1172,6 @@ EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
 ESDCardFormatStage
-EScalingFilter
 ESessionDisposition
 ESessionPersistence
 ESplitScalingFilter
@@ -1103,6 +1208,7 @@ Ethiopic
 ExtensionRange
 ExtensionRangeOptions
 FAIL
+FCZ&
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
 FieldDescriptorProto
@@ -1140,6 +1246,8 @@ Gothic
 Greek
 Gujarati
 Gurmukhi
+H$6t
+H*0"ZOW
 Hangul
 Hanunoo
 Hebrew
@@ -1153,6 +1261,7 @@ Inscriptional_Parthian
 Is64BitOS
 JSObjectProperty
 JSType
+JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 Javanese
 Kaithi
@@ -1172,9 +1281,11 @@ Limbu
 Linear_B
 Lisu
 Location
+Logger
 Lycian
 Lydian
 MARK
+MGiI
 Malayalam
 Mandaic
 Meetei_Mayek
@@ -1191,6 +1302,9 @@ N10CBasePanel34CCallback_OnOverlaySettingsChangedE
 N10CBasePanel40CCallback_OnGameOverlayActivateRequestedE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread16CLogFileWorkItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -1208,6 +1322,7 @@ N4vgui10ToolWindowE
 N4vgui11CStyleImageE
 N4vgui11CheckButtonE
 N4vgui11FrameButtonE
+N4vgui11HotKeyEntryE
 N4vgui11InputDialogE
 N4vgui11ProgressBarE
 N4vgui11RadioButtonE
@@ -1229,6 +1344,7 @@ N4vgui13PropertySheetE
 N4vgui13TooltipWindowE
 N4vgui13TreeNodeImageE
 N4vgui14ComboBoxButtonE
+N4vgui14CompositeImageE
 N4vgui14FileOpenDialogE
 N4vgui14TabCloseButtonE
 N4vgui15CFontWidthCacheE
@@ -1250,6 +1366,7 @@ N4vgui18FileCompletionMenuE
 N4vgui18HTMLFramelessPopupE
 N4vgui18IToolWindowFactoryE
 N4vgui18MenuItemCheckImageE
+N4vgui18ThrobberImagePanelE
 N4vgui19AnimatingImagePanelE
 N4vgui19AnimationControllerE
 N4vgui19FrameMaximizeButtonE
@@ -1261,6 +1378,7 @@ N4vgui20TextEntryClearButtonE
 N4vgui21DirectorySelectDialogE
 N4vgui21IPanelInputForwardingE
 N4vgui21ListPanelColumnHeaderE
+N4vgui22HotkeyEntryClearButtonE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
 N4vgui25ListPanelSectionCollapserE
@@ -1292,6 +1410,7 @@ N4vgui9HTMLPopup9PopupHTMLE
 N4vgui9HTMLPopupE
 N4vgui9ImageListE
 N4vgui9ListPanelE
+N4vgui9RGBAImageE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
@@ -1458,9 +1577,12 @@ Plat_localtime
 Plat_timegm
 Plat_timezone
 QkkXa
+Qkkbal
+R1h58
 Rejang
 Runic
 SKIP
+SKyu
 SPEED
 STRING
 Samaritan
@@ -1472,6 +1594,7 @@ SetMiniDumpSteamID
 Sharada
 Shavian
 Sinhala
+Sm"\vg
 Sora_Sompeng
 SourceCodeInfo
 SpewAndLogActivate
@@ -1628,6 +1751,8 @@ Tifinagh
 Type
 Ugaritic
 UninterpretedOption
+Universe
+Unknown
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 V_AppendSlash
@@ -1695,12 +1820,14 @@ V_vsnwprintf
 V_wcsncpy
 V_wcstoi64
 V_wcstoui64
+Vc0a
 Warning
 WeakRandomFloat
 WeakRandomInt
 WeakRandomUint32
 WinAppMain
 Z-google.golang.org/protobuf/types/descriptorpb
+Zjz\v
 \ at end of pattern
 \C not allowed in lookbehind assertion
 \N is not supported in a class
@@ -1721,6 +1848,7 @@ Z-google.golang.org/protobuf/types/descriptorpb
 \n#CMsgHorizontalScrollBarSizeResponse
 \n#EPublishedFileInappropriateProvider
 \n(ESteamDeckCompatibilityResultDisplayType
+\nYg:a
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -1783,6 +1911,7 @@ Z-google.golang.org/protobuf/types/descriptorpb
 \n\ngo_package
 \n\ninput_type
 \n\nis_default
+\n\nis_valveds
 \n\nissuerName
 \n\nlocal_path
 \n\nmanage_ceg
@@ -1924,6 +2053,7 @@ Z-google.golang.org/protobuf/types/descriptorpb
 \p{Xps}
 \p{Xsp}
 \p{Xwd}
+\rRoOs
 \r\n\tCODE_SIZE
 \r\n\tJS_NORMAL
 \r\n\tJS_NUMBER
@@ -1932,6 +2062,7 @@ Z-google.golang.org/protobuf/types/descriptorpb
 \r\n\tTYPE_ENUM
 \venums.proto"^\n\tCMsgKeyUp
 ] is an invalid data character in JavaScript compatibility mode
+]JldN
 _DMsg
 _ITM_RU1
 _ITM_RU4
@@ -2042,7 +2173,9 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+`tun%
 a numbered reference must not be zero
+a\rxg[
 abort
 access
 additional_includes
@@ -2061,6 +2194,7 @@ alphasort64
 an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)
 announcement_body
 announcement_gid
+anonymous
 app_type
 appid
 args
@@ -2077,6 +2211,7 @@ avifImageDestroy
 avifImageRGBToYUV
 avifRGBImageSetDefaults
 avifRWDataFree
+b,uZ
 bAllow
 bHasMultipleInputs
 bInput
@@ -2084,6 +2219,7 @@ bNewNavigation
 bad_url
 ban_check_result
 banned
+baseline
 begin
 bgoback
 bind
@@ -2102,6 +2238,7 @@ bsuccess
 btowc
 bucket
 build_id
+bwiO'
 calloc
 canvas_oop_rasterization
 cc_enable_arenas
@@ -2113,6 +2250,7 @@ chdir
 chmod
 choose_directory
 chown
+chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 city
 clamp_range_slot
 clanid
@@ -2141,6 +2279,7 @@ csharp_namespace
 ctype
 cursor
 custom_commands
+dQy/
 debug_source_string_index
 default_local_path
 deltax
@@ -2186,6 +2325,7 @@ expired
 expires
 extendee
 extension_range
+f.N%H
 faccessat
 failed to get memory
 fallocate64
@@ -2243,6 +2383,7 @@ ftruncate64
 function_handle
 futimes
 fwrite
+gAY:
 g_VProfManager
 g_VProfProfilesRunningCount
 g_VProfile
@@ -2281,12 +2422,14 @@ host
 htmlmessages.proto
 httponly
 hwnd
+i]Wb
 icon
 iconv
 iconv_close
 iconv_open
 idempotency_level
 identifier_value
+ig,o
 inconsistent NEWLINE options
 index
 infind
@@ -2325,6 +2468,7 @@ java_outer_classname
 java_string_check_utf8
 jsondata
 jstype
+k2U\v
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
 k_BluetoothDeviceType_Headset
@@ -2505,21 +2649,14 @@ k_ESLSHelper_Journal
 k_ESLSHelper_Kdump
 k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
-k_EScalingFilter_FSR
-k_EScalingFilter_Integer
-k_EScalingFilter_Invalid
-k_EScalingFilter_Linear
-k_EScalingFilter_NIS
-k_EScalingFilter_Nearest
 k_ESessionDispositionDisconnect
 k_ESessionDispositionNormal
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
-k_ESplitScalingFilter_FSR
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
-k_ESplitScalingFilter_NIS
 k_ESplitScalingFilter_Nearest
+k_ESplitScalingFilter_Sharp
 k_ESplitScalingScaler_Auto
 k_ESplitScalingScaler_Fill
 k_ESplitScalingScaler_Fit
@@ -2590,6 +2727,8 @@ k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 keyCode
 kill
+lDa>
+lEd/
 label
 language
 last_update_steamid
@@ -2609,6 +2748,7 @@ libvstdlib_s.so
 link
 link_url
 list
+local
 localeconv
 localization_path
 localized_string
@@ -2656,6 +2796,7 @@ msgpool_soft_limit
 msync
 multiple_raster_threads
 munmap
+mwa!
 nTargetFrameRate
 name
 name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
@@ -2686,6 +2827,7 @@ original_ip_address
 override_height
 override_width
 owning_browser_handle
+pCRF
 package
 packed
 page_url
@@ -2776,6 +2918,7 @@ php_metadata_namespace
 php_output_always_number
 platform_linux
 platform_windows
+plogs
 poll
 popen
 positive_int_value
@@ -2797,6 +2940,7 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_self
+public
 public_dependency
 publish
 publisher_group_id
@@ -2805,6 +2949,7 @@ putc
 putwc
 pwrite64
 py_generic_services
+qR5FE%
 qsort
 queue_position
 range out of order in character class
@@ -2815,6 +2960,7 @@ readlink
 realloc
 realm
 realpath
+received
 rects
 recursive call could loop indefinitely
 recvfrom
@@ -2846,6 +2992,7 @@ rtime32_visibility_end
 rtime32_visibility_start
 rtime_estimated_notification
 rtime_mod_reviewed
+ru&o
 samesite
 scale
 scandir
@@ -2896,6 +3043,7 @@ stderr
 stdin
 stdout
 steam_beta_name
+steamdeck_stable
 steamid
 steammessages_base.proto
 steammessages_base.proto*
@@ -3019,6 +3167,8 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 vulkan
+w+OQvr
+wXR\r
 wcrtomb
 wcscasecmp
 wcschr
@@ -3044,13 +3194,17 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
+wn>Jj
 word
 write
 writev
 x_local
 xdigit
 xhotspot
+y9*O
 y_local
 yhotspot
+zC`G;
 zoom
+{kHw
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{

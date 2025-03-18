@@ -129,7 +129,7 @@
     "Voice_LeftIdleVoiceChat_Body": "Голосовая сессия завершена после часа бездействия.",
     "Voice_LeftIdleVoiceChat_OK": "ОК",
     "VoiceChat_DeniedMicrophoneAccess": "Ой! Кажется, настройки вашего браузера запрещают нам доступ к микрофону!",
-    "VoiceChat_ChromeSampleRateTooHighMicExplainer": "Частота вашего устройства воспроизведения по умолчанию составляет более 48000 Гц и не поддерживается в Chrome. Воспользуйтесь клиентом Steam!",
+    "VoiceChat_ChromeSampleRateTooHighMicExplainer": "Частота вашего устройства воспроизведения по умолчанию составляет более 48 000 Гц и не поддерживается в Chrome. Воспользуйтесь клиентом Steam!",
     "VoiceChat_MuteMic": "Выключить микрофон",
     "VoiceChat_UnmuteMic": "Включить микрофон",
     "VoiceChat_MuteSpeaker": "Отключить входящий звук",

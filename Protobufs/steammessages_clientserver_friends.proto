@@ -122,6 +122,11 @@ message CMsgClientPersonaState {
 			optional string value = 2;
 		}
 
+		message OtherGameData {
+			optional uint64 gameid = 1;
+			repeated .CMsgClientPersonaState.Friend.KV rich_presence = 2;
+		}
+
 		optional fixed64 friendid = 1;
 		optional uint32 persona_state = 2;
 		optional uint32 game_played_app_id = 3;
@@ -154,6 +159,7 @@ message CMsgClientPersonaState {
 		optional bool player_name_pending_review = 79;
 		optional bool avatar_pending_review = 80;
 		optional bool on_steam_deck = 81;
+		repeated .CMsgClientPersonaState.Friend.OtherGameData other_game_data = 82;
 	}
 
 	optional uint32 status_flags = 1;

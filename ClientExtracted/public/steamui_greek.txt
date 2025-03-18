@@ -4559,7 +4559,7 @@
 "Steam_Settings_Compat_Forced_Info"		    "Μπορείτε να χρησιμοποιήσετε το Steam Play για να δοκιμάσετε παιχνίδια στη συλλογή σας που δεν έχουν επικυρωθεί με ένα υποστηριζόμενο εργαλείο συμβατότητας."
 "Steam_Settings_Compat_Forced_Enable"		"Ενεργοποίηση Steam Play για όλους τους άλλους τίτλους"
 "Steam_Settings_Compat_Advanced_Info"		"Μπορείτε να επιλέξετε ένα εργαλείο συμβατότητας για να χρησιμοποιήσετε με παιχνίδια που δεν έχουν δοκιμαστεί ή επιβεβαιωθεί ότι δουλεύουν σε αυτή την πλατφόρμα.\n\nΑυτό μπορεί να μη δουλεύει όπως αναμένεται και μπορεί να δημιουργήσει προβλήματα με τα παιχνίδια σας, συμπεριλαμβανομένων κρασαρισμάτων και καταστροφών αποθηκεύσεων παιχνιδιού."
-"Steam_Settings_Compat_Default_Tool"		"Εκκίνηση άλλων τίτλων με:"
+"Steam_Settings_Compat_Default_Tool"		"Εκτέλεση άλλων τίτλων με:"
 "Steam_Settings_Compat_Info_Link"		    "Συχνές ερωτήσεις Steam Play"
 "Steam_Settings_Compat_No_Default"		    "Δεν επιλέχθηκε κανένα"
 
@@ -4849,6 +4849,14 @@
 "RescueDialog_RestartSteamWebHelper" "Επανεκκίνηση steamwebhelper"
 "RescueDialog_ExitSteam" "Έξοδος από το Steam"
 
+"TransportDialog_Title" "Απρόσμενο σφάλμα μεταφοράς"
+"TransportDialog_Explanation" "Το Steam αντιμετώπισε ένα απρόσμενο σφάλμα κατά την εκκίνηση (0x%errorCount%). Κάντε κλικ <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>εδώ</a> για περισσότερες πληροφορίες."
+"TransportDialog_RadioHeader" "Επιλέξτε μία από τις ακόλουθες επιλογές:"
+"TransportDialog_RestartSteam" "Επανεκκίνηση Steam"
+"TransportDialog_RestartSteamWebHelper" "Επανεκκίνηση steamwebhelper"
+"TransportDialog_ContinueAnyway" "Μόνο Valve: Συνέχεια οπωσδήποτε"
+"TransportDialog_ExitSteam" "Έξοδος από το Steam"
+
 "DownloadRegion_default"				 "Άγνωστο"
 "DownloadRegion_us_chicago"			"ΗΠΑ – Σικάγο"
 "DownloadRegion_us_newyork"			"ΗΠΑ – Νέα Υόρκη"
@@ -4967,7 +4975,8 @@
 "DownloadRegion_br_rio"         "Βραζιλία – Ρίο ντε Τζανέιρο"
 "DownloadRegion_br_portoalegre" "Βραζιλία – Πόρτο Αλέγκρε"
 "DownloadRegion_ru_irkutsk"     "Ρωσία – Ιρκούτσκ"
-"DownloadRegion_kazakhstan"     "Καζαχστάν"
+"DownloadRegion_kazakhstan"     "Καζακστάν – Αστάνα"
+"DownloadRegion_kz_almaty"      "Καζακστάν – Αλμάτι"
 "DownloadRegion_cn_wuhan"       "Κίνα – Γουχάν"
 "DownloadRegion_cn_xian"        "Κίνα – Σιάν"
 "DownloadRegion_mongolia"       "Μογγολία"

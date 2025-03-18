@@ -1250,7 +1250,7 @@
         sk: () => y,
         w8: () => G,
         zq: () => P,
-        zy: () => N,
+        zy: () => F,
       });
       var a = n(41735),
         s = n.n(a),
@@ -1416,63 +1416,76 @@
           const a = new Set();
           for (const e of t)
             this.m_mapPackageDiscountsByPackageId.has(e) || 0 == e || a.add(e);
-          const i = Array.from(a).sort();
-          if (0 == i.length) return 1;
-          let o = null;
-          const c = new Promise((t, e) => {
-              o = t;
+          const s = Array.from(a).sort();
+          if (0 == s.length) return 1;
+          let i = null;
+          const o = new Promise((t, e) => {
+              i = t;
             }),
-            l = (0, p.Tc)("publisherid", "application_config"),
-            u =
-              p.TS.PARTNER_BASE_URL +
-              "promotion/discounts/ajaxgetpackagediscounts/" +
-              l;
-          let d = null,
-            g = null;
+            c = (0, p.Tc)("publisherid", "application_config");
+          let l = null,
+            u = null;
           try {
             const t = [],
-              o = new Array();
-            for (; i.length > 0; ) {
-              const a = i.splice(0, 50);
-              o.push(a);
-              const r = { packageids: a.join(","), origin: self.origin };
-              t.push(
-                s().get(u, {
-                  params: r,
-                  withCredentials: !0,
-                  cancelToken: e?.token,
-                  timeout: n,
-                }),
-              );
+              i = new Array();
+            for (; s.length > 0; ) {
+              const a = s.splice(0, 50);
+              i.push(a), t.push(this.LoadPackageDiscountsFromPHP(c, a, e, n));
             }
-            const r = await Promise.all(t),
-              c = [];
-            for (const t of r) {
+            const o = await Promise.all(t),
+              r = [];
+            for (const t of o) {
               if (
-                ((g = o.unshift()),
+                ((u = i.unshift()),
                 200 != t?.status || 1 != t.data?.success || !t.data.discounts)
               ) {
-                d = { response: t };
+                l = { response: t };
                 break;
               }
-              t.data.discounts.forEach((t) => c.push(t));
+              t.data.discounts.forEach((t) => r.push(t));
             }
-            null == d && this.InternalAddDiscounts(c, Array.from(a));
+            null == l && this.InternalAddDiscounts(r, Array.from(a));
           } catch (t) {
-            d = t;
+            l = t;
           }
-          if (null == d) o(1);
+          if (null == l) i(1);
           else {
-            const t = (0, r.H)(d);
+            const t = (0, r.H)(l);
             console.error(
               "Could not load Discounts for packages",
-              g,
+              u,
               t.strErrorMsg,
               t,
             ),
-              o(d?.response?.data?.success ?? 2);
+              i(l?.response?.data?.success ?? 2);
           }
-          return c;
+          return o;
+        }
+        async LoadPackageDiscountsFromPHP(t, e, n, a = 0) {
+          const i = { packageids: e.join(","), origin: self.origin },
+            o =
+              p.TS.PARTNER_BASE_URL +
+              "promotion/discounts/ajaxgetpackagediscounts/" +
+              t;
+          let r,
+            c = 3;
+          for (; c-- > 0; )
+            try {
+              if (
+                ((r = await s().get(o, {
+                  params: i,
+                  withCredentials: !0,
+                  cancelToken: n?.token,
+                  timeout: a,
+                })),
+                200 == r?.status && 1 == r.data?.success && r.data.discounts)
+              )
+                return r;
+            } catch (t) {
+              if (0 == c) throw t;
+              console.error(t);
+            }
+          return r;
         }
         async SaveDiscountToServer(t, e) {
           const n =
@@ -1767,14 +1780,14 @@
           (t) => t.nDiscountPct > h.Get().GetMaxDiscountPercentage(t.packageID),
         );
       }
-      function N(t) {
+      function F(t) {
         return h.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
     87924: (t, e, n) => {
       "use strict";
       n.d(e, {
-        C5: () => x,
+        C5: () => H,
         Gq: () => j,
         QD: () => w,
         T1: () => f,
@@ -1783,12 +1796,12 @@
         _9: () => U,
         bA: () => L,
         ew: () => y,
-        gr: () => N,
+        gr: () => F,
         i3: () => O,
         l4: () => R,
         nu: () => I,
         ve: () => T,
-        wF: () => F,
+        wF: () => N,
         wk: () => V,
         zP: () => B,
       });
@@ -2342,8 +2355,8 @@
           return a;
         }, []);
       }
-      function N(t) {
-        const e = F(t);
+      function F(t) {
+        const e = N(t);
         return l.useMemo(
           () => ({
             nAlreadySet: e.alreadySet.size,
@@ -2355,7 +2368,7 @@
           [e],
         );
       }
-      function F(t) {
+      function N(t) {
         const [e, n] = l.useState(() => M(t)),
           a = l.useCallback(() => {
             n(M(t));
@@ -2440,7 +2453,7 @@
           n
         );
       }
-      function x(t) {
+      function H(t) {
         let [e, n] = l.useState(() => S.Get().GetHighestPackageDiscount(t)),
           a = l.useCallback(() => {
             n(S.Get().GetHighestPackageDiscount(t));

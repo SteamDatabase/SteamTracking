@@ -266,15 +266,11 @@ message CMsgSystemPerfLimits {
 	repeated int32 fps_limit_options = 13;
 	optional int32 tdp_limit_min = 14;
 	optional int32 tdp_limit_max = 15;
-	optional bool is_nis_supported = 16;
-	optional int32 nis_sharpness_min = 17;
-	optional int32 nis_sharpness_max = 18;
 	optional int32 display_external_refresh_manual_hz_min = 19;
 	optional int32 display_external_refresh_manual_hz_max = 20;
 	repeated int32 fps_limit_options_external = 21;
 	optional bool is_vrr_supported = 23;
 	optional bool is_dynamic_refresh_rate_in_steam_supported = 24;
-	optional bool is_split_scaling_and_filtering_supported = 25;
 	repeated .ESplitScalingFilter split_scaling_filters_available = 26;
 	repeated .ESplitScalingScaler split_scaling_scalers_available = 27;
 	optional bool disable_refresh_rate_management = 30;
@@ -312,7 +308,6 @@ message CMsgSystemPerfSettingsPerApp {
 	optional int32 display_refresh_manual_hz = 13;
 	optional bool is_game_perf_profile_enabled = 14;
 	optional .EGPUPerformanceLevel gpu_performance_level = 15 [default = k_EGPUPerformanceLevel_Invalid];
-	optional int32 nis_sharpness = 16;
 	optional int32 display_external_refresh_manual_hz = 17;
 	optional int32 fps_limit_external = 18;
 	optional bool is_tearing_enabled = 19;

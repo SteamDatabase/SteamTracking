@@ -1,11 +1,3 @@
-enum AudioPlayback
-{
-	AudioPlayback_Undefined = 0;
-	AudioPlayback_Playing = 1;
-	AudioPlayback_Paused = 2;
-	AudioPlayback_Idle = 3;
-}
-
 enum BluetoothDeviceType
 {
 	k_BluetoothDeviceType_Invalid = 0;
@@ -27,30 +19,6 @@ enum by
 	by_player = 1;
 	by_wishlist = 2;
 	by_play_wish = 3;
-}
-
-enum CM_EDITFLAG
-{
-	CM_EDITFLAG_NONE = 0;
-	CM_EDITFLAG_CAN_UNDO = 1;
-	CM_EDITFLAG_CAN_REDO = 2;
-	CM_EDITFLAG_CAN_CUT = 4;
-	CM_EDITFLAG_CAN_COPY = 8;
-	CM_EDITFLAG_CAN_PASTE = 16;
-	CM_EDITFLAG_CAN_DELETE = 32;
-	CM_EDITFLAG_CAN_SELECT_ALL = 64;
-	CM_EDITFLAG_CAN_TRANSLATE = 128;
-}
-
-enum CM_TYPEFLAG
-{
-	CM_TYPEFLAG_NONE = 0;
-	CM_TYPEFLAG_PAGE = 1;
-	CM_TYPEFLAG_FRAME = 2;
-	CM_TYPEFLAG_LINK = 4;
-	CM_TYPEFLAG_MEDIA = 8;
-	CM_TYPEFLAG_SELECTION = 16;
-	CM_TYPEFLAG_EDITABLE = 32;
 }
 
 enum ConfigPage
@@ -160,15 +128,6 @@ enum EActivateGameOverlayToWebPageMode
 {
 	k_EActivateGameOverlayToWebPageMode_Default = 0;
 	k_EActivateGameOverlayToWebPageMode_Modal = 1;
-}
-
-enum EAllowShareIP
-{
-	k_EAllowShareIP_Invalid = undefined;
-	k_EAllowShareIP_Default = 0;
-	k_EAllowShareIP_Never = 1;
-	k_EAllowShareIP_FriendsOnly = 2;
-	k_EAllowShareIP_Anyone = 3;
 }
 
 enum EAppReleaseState
@@ -324,48 +283,6 @@ enum EControllerBindingType
 	k_EControllerBindingType_ControllerAction = 7;
 }
 
-enum EControllerOutputAxis
-{
-	k_EControllerOutputAxisOmitX = 0;
-	k_EControllerOutputAxisOmitY = 1;
-	k_EControllerOutputAxisBoth = 2;
-}
-
-enum EControllerTypeFlags
-{
-	k_EControllerTypeFlags_SteamController = 1;
-	k_EControllerTypeFlags_SteamControllerV2 = 2;
-	k_EControllerTypeFlags_SteamControllerNeptune = 4;
-	k_EControllerTypeFlags_PS3Controller = 8;
-	k_EControllerTypeFlags_PS4Controller = 16;
-	k_EControllerTypeFlags_PS5Controller = 32;
-	k_EControllerTypeFlags_XBox360 = 64;
-	k_EControllerTypeFlags_XBoxOne = 128;
-	k_EControllerTypeFlags_XBoxElite = 256;
-	k_EControllerTypeFlags_SwitchPro = 512;
-	k_EControllerTypeFlags_XInputSwitch = 1024;
-	k_EControllerTypeFlags_GenericGamepad = 2048;
-	k_EControllerTypeFlags_SingleJoycon = 4096;
-	k_EControllerTypeFlags_SwitchJoyconPair = 8192;
-	k_EControllerTypeFlags_MobileTouchController = 16384;
-	k_EControllerTypeFlags_PS5EdgeController = 32768;
-	k_EControllerTypeFlags_HoriController = 65536;
-	k_EControllerTypeFlags_AllControllers = 262143;
-	k_EControllerTypeFlags_AllSteamControllers = 7;
-	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
-	k_EControllerTypeFlags_AllXBoxControllers = 448;
-	k_EControllerTypeFlags_AllNintendoControllers = 13824;
-	k_EControllerTypeFlags_2Grips = 106759;
-	k_EControllerTypeFlags_4Grips = 106758;
-	k_EControllerTypeFlags_Gyro = 127543;
-	k_EControllerTypeFlags_Trackpad = 49207;
-	k_EControllerTypeFlags_CenterTrackpad = 49200;
-	k_EControllerTypeFlags_RightJoystick = 258044;
-	k_EControllerTypeFlags_DPad = 258044;
-	k_EControllerTypeFlags_Triggers = 258047;
-	k_EControllerTypeFlags_HapticSupport = 7;
-}
-
 enum ECountryTarget
 {
 	k_ECountryTarget_AllowList = 1;
@@ -445,16 +362,6 @@ enum EDown
 	k_EDownloadScreenshots = 8;
 }
 
-enum EDownloadSection
-{
-	k_EDownloadSection_Active = 0;
-	k_EDownloadSection_Queued = 1;
-	k_EDownloadSection_Scheduled = 2;
-	k_EDownloadSection_NotQueued = 3;
-	k_EDownloadSection_Completed = 4;
-	k_EDownloadSection_Max = 5;
-}
-
 enum EEventStat
 {
 	k_EEventStateUnpublished = 0;
@@ -507,57 +414,6 @@ enum EGameIDType
 	k_EGameIDTypeP2P = 3;
 }
 
-enum eGamepadButtonBitMask
-{
-	k_eGamepadButtonBitMask_RightTriggerFullPull = 0;
-	k_eGamepadButtonBitMask_LeftTriggerFullPull = 1;
-	k_eGamepadButtonBitMask_ButtonRightBumper = 2;
-	k_eGamepadButtonBitMask_ButtonLeftBumper = 3;
-	k_eGamepadButtonBitMask_ButtonNorth = 4;
-	k_eGamepadButtonBitMask_ButtonEast = 5;
-	k_eGamepadButtonBitMask_ButtonWest = 6;
-	k_eGamepadButtonBitMask_ButtonSouth = 7;
-	k_eGamepadButtonBitMask_ButtonDPadUp = 8;
-	k_eGamepadButtonBitMask_ButtonDPadRight = 9;
-	k_eGamepadButtonBitMask_ButtonDPadLeft = 10;
-	k_eGamepadButtonBitMask_ButtonDPadDown = 11;
-	k_eGamepadButtonBitMask_ButtonBackOrView = 12;
-	k_eGamepadButtonBitMask_ButtonGuideOrSteam = 13;
-	k_eGamepadButtonBitMask_ButtonStartOrOptions = 14;
-	k_eGamepadButtonBitMask_ButtonBackGripLeftLower = 15;
-	k_eGamepadButtonBitMask_ButtonBackGripRightLower = 16;
-	k_eGamepadButtonBitMask_ButtonLeftPadClicked = 17;
-	k_eGamepadButtonBitMask_ButtonRightPadClicked = 18;
-	k_eGamepadButtonBitMask_CapSenseLeftTouchPad = 19;
-	k_eGamepadButtonBitMask_CapSenseRightTouchPad = 20;
-	k_eGamepadButtonBitMask_ButtonLeftStick = 22;
-	k_eGamepadButtonBitMask_RightTriggerSoftPull = 24;
-	k_eGamepadButtonBitMask_LeftTriggerSoftPull = 25;
-	k_eGamepadButtonBitMask_ButtonRightStick = 26;
-	k_eGamepadButtonBitMask_CapSenseCenterTouchPad = 27;
-	k_eGamepadButtonBitMask_ButtonCenterpadClicked = 28;
-	k_eGamepadButtonBitMask_ButtonAncillary1 = 29;
-	k_eGamepadButtonBitMask_AxisDeflectionLeftStick = 30;
-	k_eGamepadButtonBitMask_AxisDeflectionRightStick = 31;
-	k_eGamepadButtonBitMask_ButtonMacro0 = 32;
-	k_eGamepadButtonBitMask_ButtonMacro1 = 33;
-	k_eGamepadButtonBitMask_ButtonMacro2 = 34;
-	k_eGamepadButtonBitMask_ButtonMacro3 = 35;
-	k_eGamepadButtonBitMask_ButtonMacro4 = 36;
-	k_eGamepadButtonBitMask_ButtonMacro5 = 37;
-	k_eGamepadButtonBitMask_ButtonMacro6 = 38;
-	k_eGamepadButtonBitMask_ButtonMacro7 = 39;
-	k_eGamepadButtonBitMask_ButtonBackGripLeftUpper = 41;
-	k_eGamepadButtonBitMask_ButtonBackGripRightUpper = 42;
-	k_eGamepadButtonBitMask_CapSenseLeftAux = 44;
-	k_eGamepadButtonBitMask_CapSenseRightAux = 45;
-	k_eGamepadButtonBitMask_CapSenseLeftStick = 46;
-	k_eGamepadButtonBitMask_CapSenseRightStick = 47;
-	k_eGamepadButtonBitMask_ButtonMacro1Finger = 48;
-	k_eGamepadButtonBitMask_ButtonMacro2Finger = 49;
-	k_eGamepadButtonBitMask_ButtonQuickAccessMenu = 50;
-}
-
 enum EGamingDeviceType
 {
 	k_EGamingDeviceType_Unknown = 0;
@@ -584,71 +440,6 @@ enum EHTTPProxyMode
 	k_EHTTPProxyMode_None = 1;
 	k_EHTTPProxyMode_Manual = 2;
 	k_EHTTPProxyMode_Automatic = 3;
-}
-
-enum EInputMode
-{
-	k_EInputMode_None = 1;
-	k_EInputMode_Dpad = 2;
-	k_EInputMode_Buttons = 4;
-	k_EInputMode_FourButtons = 8;
-	k_EInputMode_AbsoluteMouse = 16;
-	k_EInputMode_JoystickMouse = 128;
-	k_EInputMode_JoystickCamera = 256;
-	k_EInputMode_ScrollWheel = 512;
-	k_EInputMode_Trigger = 1024;
-	k_EInputMode_TouchMenu = 2048;
-	k_EInputMode_MouseJoystick = 4096;
-	k_EInputMode_MouseRegion = 8192;
-	k_EInputMode_RadialMenu = 16384;
-	k_EInputMode_SingleButton = 32768;
-	k_EInputMode_Switches = 65536;
-	k_EInputMode_FlickStick = 131072;
-	k_EInputMode_2DScrollwheel = 262144;
-	k_EInputMode_Hotbar = 524288;
-	k_EInputMode_GyroToMouse = 4194304;
-	k_EInputMode_GyroToJoystickCamera = 8388608;
-	k_EInputMode_GyroToJoystickDeflection = 16777216;
-	k_EInputMode_GyroToCameraAngles = 33554432;
-	k_EInputMode_FlickStickToCameraAngles = 134217728;
-	k_EInputMode_JoystickToCameraAngles = 67108864;
-	k_EInputMode_TrackPadToCameraAngles = 268435456;
-	k_EInputMode_All = 1073741823;
-}
-
-enum EInputSource
-{
-	k_EInputSource_None = 1;
-	k_EInputSource_ABXY = 16;
-	k_EInputSource_Dpad = 8192;
-	k_EInputSource_LeftBumper = 256;
-	k_EInputSource_RightBumper = 512;
-	k_EInputSource_Switch = 32;
-	k_EInputSource_LeftJoystick = 8;
-	k_EInputSource_RightJoystick = 4096;
-	k_EInputSource_LeftTrackpad = 2;
-	k_EInputSource_CenterTrackpad = 2048;
-	k_EInputSource_RightTrackpad = 4;
-	k_EInputSource_LeftGyro = 65536;
-	k_EInputSource_Gyro = 1024;
-	k_EInputSource_LeftTrigger = 64;
-	k_EInputSource_RightTrigger = 128;
-	k_EInputSource_Key = 16384;
-	k_EInputSource_Mouse = 32768;
-	k_EInputSource_CapJoystickRight = 131072;
-	k_EInputSource_CapJoystickLeft = 262144;
-	k_EInputSource_All = 524287;
-	k_EInputSource_Gyros = 66560;
-	k_EInputSource_Trackpads = 2054;
-	k_EInputSource_Joysticks = 397320;
-	k_EInputSource_Touch = 395270;
-	k_EInputSource_Triggers = 192;
-	k_EInputSource_NonGyro = undefined;
-	k_EInputSource_NonTrackpad = undefined;
-	k_EInputSource_NonJoystick = undefined;
-	k_EInputSource_NonTouch = undefined;
-	k_EInputSource_Digital = 25392;
-	k_EInputSource_Analog = 466126;
 }
 
 enum EInstallMgrState
@@ -744,14 +535,6 @@ enum EMarketingMessageFlags
 	k_EMarketingMessageFlagsPlatformRestrictions = 14;
 }
 
-enum EMenu
-{
-	k_EMenuButtonPress = 0;
-	k_EMenuButtonRelease = 1;
-	k_EMenuTouchRelease = 2;
-	k_EMenuTouchAlways = 3;
-}
-
 enum ENetFakeLocalSystemState
 {
 	k_ENetFakeLocalSystemState_Normal = 0;
@@ -787,20 +570,6 @@ enum EOptInVisibility
 {
 	k_EOptInVisibility_Public = 0;
 	k_EOptInVisibility_InviteOnly = 1;
-}
-
-enum EOutputAxis
-{
-	k_EOutputAxisLeftTrigger = 0;
-	k_EOutputAxisRightTrigger = 1;
-	k_EOutputAxisLeftThumbXPos = 2;
-	k_EOutputAxisLeftThumbXNeg = 3;
-	k_EOutputAxisLeftThumbYPos = 4;
-	k_EOutputAxisLeftThumbYNeg = 5;
-	k_EOutputAxisRightThumbXPos = 6;
-	k_EOutputAxisRightThumbXNeg = 7;
-	k_EOutputAxisRightThumbYPos = 8;
-	k_EOutputAxisRightThumbYNeg = 9;
 }
 
 enum EOverlayToStoreFlag
@@ -909,7 +678,6 @@ enum ERemoteClientLaunch
 	k_ERemoteClientLaunchCanceled = 26;
 	k_ERemoteClientLaunchInvisible = 27;
 	k_ERemoteClientLaunchRestrictedCountry = 28;
-	k_ERemoteClientLaunchUnauthorized = 29;
 }
 
 enum ES
@@ -923,31 +691,11 @@ enum ES
 	k_ESortFacetsManually = 2;
 }
 
-enum ESection
-{
-	k_ESectionInvalid = 0;
-	k_ESectionDefault = 1;
-	k_ESectionFamily = 2;
-	k_ESectionMax = 3;
-}
-
 enum ESortFacets
 {
 	k_ESortFacetsByName = 0;
 	k_ESortFacetsByMatchCount = 1;
 	k_ESortFacetsManually = 2;
-}
-
-enum ESteamNetTransport
-{
-	k_ESteamNetTransport_Unknown = 0;
-	k_ESteamNetTransport_LoopbackBuffers = 1;
-	k_ESteamNetTransport_LocalHost = 2;
-	k_ESteamNetTransport_UDP = 3;
-	k_ESteamNetTransport_UDPProbablyLocal = 4;
-	k_ESteamNetTransport_TURN = 5;
-	k_ESteamNetTransport_SDRP2P = 6;
-	k_ESteamNetTransport_SDRHostedServer = 7;
 }
 
 enum ESteamRealm
@@ -977,20 +725,6 @@ enum ESuspendResumeProgressState
 	k_ESuspendResumeProgressState_LoggingIn = 3;
 	k_ESuspendResumeProgressState_WaitingForApp = 4;
 	k_ESuspendResumeProgressState_Working = 5;
-}
-
-enum ETradingCardActivity
-{
-	k_ETradingCardActivity_Invalid = 0;
-	k_ETradingCardActivity_CardDrop = 1;
-	k_ETradingCardActivity_BoosterDrop = 2;
-	k_ETradingCardActivity_BadgeCraft = 3;
-}
-
-enum EUserConfigStoreNamespace
-{
-	k_EUserConfigStoreNamespaceInvalid = 0;
-	k_EUserConfigStoreNamespaceLibrary = 1;
 }
 
 enum EVoiceCallState
@@ -1120,14 +854,6 @@ enum kTRAA
 	kTRAA_Penalty20 = 20;
 }
 
-enum Layout
-{
-	Layout_Standard = 0;
-	Layout_Numeric = 1;
-	Layout_Emoji = 2;
-	Layout_SteamItems = 3;
-}
-
 enum LEAGUE_BROADCAST
 {
 	LEAGUE_BROADCAST_UNKNOWN = 0;
@@ -1192,16 +918,6 @@ enum Show
 	ShowFilteredOutItems = 2;
 }
 
-enum ShowGripButtons
-{
-	k_ShowGripButtons_None = 0;
-	k_ShowGripButtons_LeftUpper = 1;
-	k_ShowGripButtons_LeftLower = 2;
-	k_ShowGripButtons_RightUpper = 4;
-	k_ShowGripButtons_RightLower = 8;
-	k_ShowGripButtons_All = 15;
-}
-
 enum SortBy
 {
 	k_SortByPriority = 0;
@@ -1242,55 +958,11 @@ enum UnnamedEnum001b037885a2ecde
 	Below = 1;
 }
 
-enum UnnamedEnum0088a21d353911da
-{
-	Achievements = 0;
-	Controller = 1;
-	Guides = 2;
-	Notes = 3;
-	Browser = 4;
-	GR = 5;
-}
-
-enum UnnamedEnum008b8bff579bf723
-{
-	AppIcons = 0;
-	Weapons = 1;
-	Ammo = 2;
-	Inventory = 3;
-	Magic = 4;
-	Actions = 5;
-	Movement = 6;
-	Menu = 7;
-	Vehicle = 8;
-	Utility = 9;
-	Input = 10;
-	Media = 11;
-	Targets = 12;
-	Social = 13;
-	Other = 14;
-	User = 15;
-}
-
-enum UnnamedEnum01e0af9000abb618
-{
-	Verification = 0;
-	Removing = 1;
-	Error = 2;
-}
-
 enum UnnamedEnum0417760694451931
 {
 	Standard = 1;
 	Knockout = 2;
 	Duos = 3;
-}
-
-enum UnnamedEnum0529e22c307fa21f
-{
-	Menu = 0;
-	NavEntries = 1;
-	Controller = 2;
 }
 
 enum UnnamedEnum05440eaac2cdd031
@@ -1324,13 +996,6 @@ enum UnnamedEnum07fc2c3567eb7e19
 	Busy = 1;
 }
 
-enum UnnamedEnum082dd12e6086021e
-{
-	Neutral = 0;
-	Up = 1;
-	Down = 2;
-}
-
 enum UnnamedEnum08a7599cef1b51d6
 {
 	Summary = 0;
@@ -1349,17 +1014,6 @@ enum UnnamedEnum0a1393e07211be99
 {
 	Type = 1;
 	Parameter = 2;
-}
-
-enum UnnamedEnum0be4f2c7ab15fa09
-{
-	Invalid = undefined;
-	Default = 0;
-	Light = 1;
-	Medium_Light = 2;
-	Medium = 3;
-	Medium_Dark = 4;
-	Dark = 5;
 }
 
 enum UnnamedEnum0cd3b70614cdedc8
@@ -1387,16 +1041,6 @@ enum UnnamedEnum0edbba0e83cd6a43
 	Added = 3;
 }
 
-enum UnnamedEnum0f3c4fdd99d18bb8
-{
-	None = 0;
-	Connecting = 1;
-	FindingRoute = 2;
-	Connected = 3;
-	ClosedByPeer = 4;
-	ProblemDetectedLocally = 5;
-}
-
 enum UnnamedEnum0f5dedf55f59c3be
 {
 	Main = 0;
@@ -1408,31 +1052,6 @@ enum UnnamedEnum0f68df7c8c884057
 {
 	API = 0;
 	USER = 1;
-}
-
-enum UnnamedEnum0fd8aa29d83fb708
-{
-	Headless = 0;
-	Full = 1;
-	StandaloneKeyboard = 2;
-	ControllerConfigurator = 3;
-	Overlay = 4;
-}
-
-enum UnnamedEnum103c46b6e6314ec9
-{
-	k_EUnknown = 0;
-	k_EActive = 1;
-	k_EActiveDownloading = 2;
-	k_EActivePaused = 3;
-	k_EQueued = 4;
-	k_EQueuedNext = 5;
-	k_EScheduled = 6;
-	k_ERemovedFromQueue = 7;
-	k_EError = 8;
-	k_EUpdatesDisabledByUser = 9;
-	k_EUpdatesDisabledByApp = 10;
-	k_ECompleted = 11;
 }
 
 enum UnnamedEnum10fca4e49733d28f
@@ -1451,14 +1070,6 @@ enum UnnamedEnum12487a88f7459bbf
 	LineThin = 4;
 	BlockOutline = 5;
 	UnderlineThin = 6;
-}
-
-enum UnnamedEnum12b52e8a1dd53cc3
-{
-	Name = 0;
-	NameReverse = 1;
-	Path = 2;
-	PathReverse = 3;
 }
 
 enum UnnamedEnum12ea4feab06d6070
@@ -1497,13 +1108,6 @@ enum UnnamedEnum17dd37ca155cd6aa
 	k_TitleDescMedia = 3;
 	k_HorizontalMediaFirst = 4;
 	k_HorizontalTextFirst = 5;
-}
-
-enum UnnamedEnum183417f294ffc34a
-{
-	None = 0;
-	StartupAnimation = 1;
-	LoadingSpinner = 2;
 }
 
 enum UnnamedEnum184ae5e9b907d5cb
@@ -1601,13 +1205,6 @@ enum UnnamedEnum1e6f97ac4db559c6
 	k_ScheduleSlot = 2;
 }
 
-enum UnnamedEnum1eb9732e676a1f8b
-{
-	Loaded = 0;
-	Loading = 1;
-	Complete = 2;
-}
-
 enum UnnamedEnum1ec6c82c0cacba76
 {
 	k_Success = 0;
@@ -1686,12 +1283,6 @@ enum UnnamedEnum258cde65fc9c0016
 	Ranked = 4;
 }
 
-enum UnnamedEnum258d6841bf5f8ea0
-{
-	Hidden = 0;
-	Prompt = 1;
-}
-
 enum UnnamedEnum25bb92eddba41afe
 {
 	Invalid = 0;
@@ -1716,15 +1307,6 @@ enum UnnamedEnum262b5710133da930
 	Tooltip = 4;
 	ContextMenu = 8;
 	Resizable = 16;
-}
-
-enum UnnamedEnum26b26332fa565251
-{
-	BackSpace = 65288;
-	Tab = 65289;
-	Return = 65293;
-	Page_Up = 65365;
-	Page_Down = 65366;
 }
 
 enum UnnamedEnum274d8518ea2b5142
@@ -1790,13 +1372,6 @@ enum UnnamedEnum2bf3fa6c4886638f
 	Standard = 0;
 	NoTransform = 1;
 	NoTransformSparseContent = 2;
-}
-
-enum UnnamedEnum2c41fa064d91dbff
-{
-	k_EOpenMic = 0;
-	k_EPushToTalk = 1;
-	k_EPushToMute = 2;
 }
 
 enum UnnamedEnum2c763df13954ae16
@@ -1924,15 +1499,6 @@ enum UnnamedEnum336a74c93bcf88cc
 	EndOfContent = 3;
 }
 
-enum UnnamedEnum336e1b6bafa25e4e
-{
-	Init = 0;
-	Loading = 1;
-	MoreContent = 2;
-	OutOfContent = 3;
-	Errored = 4;
-}
-
 enum UnnamedEnum33f2d3829fe2a16e
 {
 	Blur = 1;
@@ -1964,15 +1530,6 @@ enum UnnamedEnum370fea7da2f80997
 	Info = 1;
 	Warning = 2;
 	Error = 3;
-}
-
-enum UnnamedEnum3740744456cf55a3
-{
-	NotShown = 0;
-	FadingIn = 1;
-	Showing = 2;
-	FadingOut = 3;
-	Finished = 4;
 }
 
 enum UnnamedEnum379082e615272af4
@@ -2095,62 +1652,10 @@ enum UnnamedEnum444e26d5fd11557e
 	Deleted = 2;
 }
 
-enum UnnamedEnum448e6dd2c19f0f8c
-{
-	Invalid = 0;
-	FriendAdded = 1;
-	AchievementUnlocked = 2;
-	ReceivedNewGame = 3;
-	JoinedGroup = 4;
-	CommentByMe = 5;
-	FriendRemoved = 6;
-	GroupCreated = 7;
-	CommentOnMe = 8;
-	AddedGameToWishlist = 9;
-	RecommendedGame = 10;
-	ScreenshotPublished_Deprecated = 11;
-	VideoPublished_Deprecated = 12;
-	FilePublished_Screenshot = 13;
-	FilePublished_Video = 14;
-	FilePublished_WorkshopItem = 15;
-	UserStatus = 16;
-	FilePublished_Collection = 17;
-	FilePublished_GreenlightGame = 18;
-	FilePublished_WorkshopAnnouncement = 19;
-	FilePublished_WebGuide = 20;
-	FilePublished_Screenshot_Tagged = 21;
-	FilePublished_Art = 22;
-	FileFavorited = 23;
-	PlayedGameFirstTime = 30;
-	ClanAchievement = 1001;
-	PostedAnnouncement = 1002;
-	ScheduledEvent = 1003;
-	SelectedNewPOTW = 1004;
-	PromotedNewAdmin = 1005;
-	MessageOnClanPage = 1006;
-	CuratorRecommendedGame = 1007;
-}
-
 enum UnnamedEnum453e526514507ded
 {
 	Smooth = 0;
 	Immediate = 1;
-}
-
-enum UnnamedEnum47122ffa63e68b01
-{
-	Character = 0;
-	Enter = 1;
-	Half = 2;
-	Tab = 3;
-	Meta = 4;
-	Close = 5;
-	Caps = 6;
-	LeftShift = 7;
-	RightShift = 8;
-	Backspace = 9;
-	Spacebar = 10;
-	Spacer25 = 11;
 }
 
 enum UnnamedEnum471e3e64aa2bef23
@@ -2188,22 +1693,6 @@ enum UnnamedEnum4935268003b18d26
 	RecentMessages = 3;
 	FirstTab = 0;
 	MaxTab = 3;
-}
-
-enum UnnamedEnum498d6571fb6036d5
-{
-	k_NotVisible = 0;
-	k_Prompt = 1;
-	k_GatheringData = 2;
-	k_SentResults = 3;
-}
-
-enum UnnamedEnum498f9ba208938629
-{
-	kHidden = 0;
-	kVisible = 1;
-	kWaitingToShow = 2;
-	kWaitingToHide = 3;
 }
 
 enum UnnamedEnum4b0c2d915210fd30
@@ -2282,42 +1771,12 @@ enum UnnamedEnum5208bd0306021116
 	PLACEMENT = 11;
 }
 
-enum UnnamedEnum52b88d3e1fdad6df
-{
-	None = 0;
-	StaticWep = 1;
-	DynamicWep = 2;
-	Wpa = 4;
-	WpaEnterprise = 8;
-	Wpa2 = 16;
-	Wpa2Enterprise = 32;
-	Wpa3 = 64;
-	Unsupported = 32768;
-}
-
-enum UnnamedEnum5341f659b7352c78
-{
-	EveryTime = 0;
-	Once = 1;
-	OncePerGame = 2;
-}
-
 enum UnnamedEnum54915c93076f4b25
 {
 	k_eInsertThumbnail = 1;
 	k_eInsertFullImage = 2;
 	k_eShowImageGroup = 3;
 	k_eInsertVideo = 4;
-}
-
-enum UnnamedEnum5492f48161b9f221
-{
-	Off = 0;
-	OneShot = 1;
-	Stuck = 2;
-	NonHeld = 3;
-	Held = 4;
-	On = 7;
 }
 
 enum UnnamedEnum54a08596fc4e0e87
@@ -2473,15 +1932,6 @@ enum UnnamedEnum556007094fa67eaf
 	Menus = 3;
 }
 
-enum UnnamedEnum55a9e12958fe69d4
-{
-	Millis = 1;
-	Seconds = 1000;
-	Minutes = 60000;
-	Hours = 3600000;
-	Days = 86400000;
-}
-
 enum UnnamedEnum56fdca98a5fc5dc5
 {
 	NOT_TRACKING_ = undefined;
@@ -2494,13 +1944,6 @@ enum UnnamedEnum5703985a4a894fda
 {
 	Highlight = 0;
 	Filter = 1;
-}
-
-enum UnnamedEnum57a3dfe446c1fa85
-{
-	Low = 0;
-	Medium = 1;
-	High = 2;
 }
 
 enum UnnamedEnum57bf92e3de997183
@@ -2517,13 +1960,6 @@ enum UnnamedEnum59717e0405bef96b
 	VALID = 0;
 	INVALID = 1;
 	CANCELED = 2;
-}
-
-enum UnnamedEnum5b3ee43818cae779
-{
-	k_None = 0;
-	k_Initialized = 1;
-	k_ShuttingDown = 2;
 }
 
 enum UnnamedEnum5b8032725cc6864d
@@ -2574,14 +2010,6 @@ enum UnnamedEnum5e14c6d1b71a889d
 	RightBottom = 7;
 }
 
-enum UnnamedEnum5f28b34f073d91c2
-{
-	DashboardBarPopup = 0;
-	Tooltip = 1;
-	MainPanelMenu = 2;
-	LoginQRCode = 3;
-}
-
 enum UnnamedEnum5f9e5112c68eb7f0
 {
 	k_ModReviewed = 0;
@@ -2620,13 +2048,6 @@ enum UnnamedEnum67e7921661046ee2
 	PlayerFavorite = 3;
 	Recommended = 4;
 	NewPlayers = 5;
-}
-
-enum UnnamedEnum6847f45783a9d593
-{
-	Pitch = 0;
-	Yaw = 1;
-	Roll = 2;
 }
 
 enum UnnamedEnum68d075c3ee470a14
@@ -2903,12 +2324,6 @@ enum UnnamedEnum6cf2b7ae1f44a3a3
 	TrackedDeviceProperty_Max = 1000000;
 }
 
-enum UnnamedEnum6d0c4a4e51ce607a
-{
-	Icon = 0;
-	Color = 1;
-}
-
 enum UnnamedEnum6d85e147863c8302
 {
 	None = 0;
@@ -2968,13 +2383,6 @@ enum UnnamedEnum6ddd0e7940359a04
 	k_SeasonalFeatureRequest = 36;
 	k_SeasonalFeatureDiscount = 37;
 	k_GenericActionButton = 38;
-}
-
-enum UnnamedEnum6ffd890a446c4435
-{
-	None = 0;
-	Forward = 1;
-	Backward = 2;
 }
 
 enum UnnamedEnum702e80796a2bbcdf
@@ -3046,12 +2454,6 @@ enum UnnamedEnum749b0879535720e9
 	Text = 0;
 	Read = 1;
 	Write = 2;
-}
-
-enum UnnamedEnum798f930648f1159b
-{
-	Digital = 0;
-	Cursor = 1;
 }
 
 enum UnnamedEnum7c4ccc7e7f11da9c
@@ -3282,24 +2684,6 @@ enum UnnamedEnum8464db862b909b82
 	Leaderboard = 5;
 }
 
-enum UnnamedEnum84d014c9a0ed8c43
-{
-	eLeftColumn = 0;
-	eRightColumn = 1;
-	eCenterTop = 2;
-	eCenterTopUpper = 3;
-	eCenterBottom = 4;
-	eCenterBottomLower = 5;
-	eCenterBottomLowerLower = 6;
-	eIgnore = 7;
-}
-
-enum UnnamedEnum84f925970b2abf75
-{
-	Up = undefined;
-	Down = 1;
-}
-
 enum UnnamedEnum8668c3344a2974ee
 {
 	First = 1;
@@ -3311,27 +2695,6 @@ enum UnnamedEnum8668c3344a2974ee
 	PreviousPage = 7;
 	NextSeparator = 8;
 	PreviousSeparator = 9;
-}
-
-enum UnnamedEnum866d82e66e6a644d
-{
-	Unknown = 0;
-	Above = 1;
-	OnScreen = 2;
-	Below = 3;
-	Empty = 4;
-}
-
-enum UnnamedEnum869d78ff95ee9ad9
-{
-	Notifications = 0;
-	RemotePlayTogetherControls = 1;
-	VoiceChat = 2;
-	Friends = 3;
-	Settings = 4;
-	Perf = 5;
-	Help = 6;
-	Soundtrack = 7;
 }
 
 enum UnnamedEnum899cc823eee04c7f
@@ -3713,42 +3076,12 @@ enum UnnamedEnuma711eb0b24c3e113
 	Pause = 2;
 }
 
-enum UnnamedEnuma73d7b4087cb9457
-{
-	k_eIntro = 0;
-	k_eNonVerifiedGame = 1;
-	k_eGyro = 2;
-	k_eAppTextInputDoesNotAutomaticallyInvokesKeyboard = 3;
-	k_eRemotePlayConfirm = 4;
-	k_eAppLauncherInteractionIssues = 5;
-	k_eAppHasSmallText = 6;
-	k_eExternalControllersAndSIAPI = 7;
-	k_eIntroToActionSets = 8;
-	k_eIntroToSteamInputGames = 9;
-	k_eGamepadRequired = 10;
-	k_eGamepadRecommended = 11;
-	k_eCurrentGamepadUnsupported = 12;
-	k_eCurrentGamepadSteamInputOptIn = 13;
-	k_eVRRequired = 14;
-	k_eIntroToVRTheater = 15;
-	k_eHDRRequiresUserAction = 16;
-}
-
 enum UnnamedEnuma744c529bb8c8699
 {
 	Any = 0;
 	Player = 1;
 	Team = 2;
 	League = 3;
-}
-
-enum UnnamedEnuma80ee23554b6c9ac
-{
-	PageUnloading = 0;
-	Unknown = 1;
-	None = 2;
-	Basic = 3;
-	Full = 4;
 }
 
 enum UnnamedEnuma8a47dd262be1f3b
@@ -3759,12 +3092,6 @@ enum UnnamedEnuma8a47dd262be1f3b
 	MediaTypeError = 3;
 }
 
-enum UnnamedEnuma8a8b1f6cea505e4
-{
-	AppDetails = 1;
-	LibraryHome = 2;
-}
-
 enum UnnamedEnuma9dc642d225a4850
 {
 	Large = 3;
@@ -3773,41 +3100,12 @@ enum UnnamedEnuma9dc642d225a4850
 	Tiny = 0;
 }
 
-enum UnnamedEnumabea9075e9266653
-{
-	Default = 0;
-	ReviseQuery = 1;
-	ReviseEdit = 2;
-}
-
 enum UnnamedEnumac9ccfed4f769533
 {
 	k_None = 0;
 	k_Suggested = 1;
 	k_Required = 2;
 	k_Requested = 3;
-}
-
-enum UnnamedEnumad989ac806e57514
-{
-	None = 0;
-	Connecting = 1;
-	FindingRoute = 2;
-	Connected = 3;
-	ClosedByPeer = 4;
-	ProblemDetectedLocally = 5;
-	Linger = undefined;
-}
-
-enum UnnamedEnumb00802ca68381832
-{
-	Init = 0;
-	UserChooser = 1;
-	LoginWithBack = 2;
-	Login = 3;
-	RemoveConfirmation = 4;
-	WaitingForLibrary = 5;
-	EnterPin = 6;
 }
 
 enum UnnamedEnumb0a2812931bd301b
@@ -3926,16 +3224,6 @@ enum UnnamedEnumb8bceb83053e4b5b
 	StreamGone = 1;
 }
 
-enum UnnamedEnumb9dbd68757ae6dad
-{
-	SSA = 0;
-	EnterCode = 1;
-	Info = 2;
-	Success = 3;
-	Failure = 4;
-	Busy = 5;
-}
-
 enum UnnamedEnumbabb473034446eda
 {
 	Hint = 1;
@@ -4021,15 +3309,6 @@ enum UnnamedEnumbed52b1352908d10
 	Automatic = 1;
 }
 
-enum UnnamedEnumbf94e43b6037649d
-{
-	Close = undefined;
-	OpenDevTools = 26500;
-	CloseDevTools = 26501;
-	InspectElement = 26502;
-	OpenLinkInNewTab = 26503;
-}
-
 enum UnnamedEnumc0b496922a237a5b
 {
 	k_eSteamInputAPISupport = 0;
@@ -4088,31 +3367,10 @@ enum UnnamedEnumc44bf4cf244e5406
 	Contiguous = 1;
 }
 
-enum UnnamedEnumc5bc47386f71e3e3
-{
-	Unknown = 0;
-	Autosave = 1;
-	Workshop = 2;
-	Template = 3;
-	Game = 4;
-}
-
 enum UnnamedEnumc66433efeaf7ca57
 {
 	Invoke = 1;
 	Auto = 2;
-}
-
-enum UnnamedEnumc6e55c10367f49b7
-{
-	Unknown = 0;
-	Autosave = 1;
-	Official = 2;
-	Personal = 3;
-	Workshop = 4;
-	Template = 5;
-	Search = 6;
-	OptedOut = 7;
 }
 
 enum UnnamedEnumc871c27f28c8b37d
@@ -4167,13 +3425,6 @@ enum UnnamedEnumcd0f6aff229814ee
 	Disband = 2;
 }
 
-enum UnnamedEnumcd45c706ae6f84ed
-{
-	Closed = 0;
-	Visible = 1;
-	Minimized = 2;
-}
-
 enum UnnamedEnumce80111fb803b9a5
 {
 	DIM = 0;
@@ -4226,24 +3477,6 @@ enum UnnamedEnumcee711981aab29d8
 	DisableDPIScale = 8388608;
 }
 
-enum UnnamedEnumcf102e4532afeb1d
-{
-	CountDown = 0;
-	Calibrating = 1;
-	Complete_Success = 2;
-}
-
-enum UnnamedEnumd1e37656646622cd
-{
-	LanguageScreen = 0;
-	TimezoneScreen = 1;
-	NetworkSetupScreen = 2;
-	UpdateScreen = 3;
-	CachedUsersPanel = 4;
-	SignInPanel = 5;
-	PromptForPinPanel = 6;
-}
-
 enum UnnamedEnumd2a1463c68084b87
 {
 	Teams = 0;
@@ -4255,14 +3488,6 @@ enum UnnamedEnumd2f296f4cc236e47
 {
 	None = 0;
 	Animating = 1;
-}
-
-enum UnnamedEnumd3cd795810560177
-{
-	ChooseFolder = 0;
-	MovingApps = 1;
-	MoveFinished = 2;
-	MoveFailed = 3;
 }
 
 enum UnnamedEnumd41d2a81a1c775e4
@@ -4278,20 +3503,6 @@ enum UnnamedEnumd49e2cf6dc3cfc7f
 {
 	Right = 0;
 	Left = 1;
-}
-
-enum UnnamedEnumd4d9d8fd3054a6fd
-{
-	SteamUI = 0;
-	BasicUI = 1;
-}
-
-enum UnnamedEnumd4f313929840b090
-{
-	ChooseFolder = 0;
-	Working = 1;
-	Finished = 2;
-	Failed = 3;
 }
 
 enum UnnamedEnumd5afec5988542538
@@ -4362,19 +3573,6 @@ enum UnnamedEnumdd1b4ee475c337fd
 	SteamDeckGalileo = 8;
 }
 
-enum UnnamedEnumddf21b2888ecc060
-{
-	k_Client = 1;
-	k_Server = 2;
-}
-
-enum UnnamedEnumde308e0154cd3024
-{
-	k_None = 0;
-	k_Alert = 1;
-	k_Confirm = 2;
-}
-
 enum UnnamedEnumdf8b8cfc20e6db08
 {
 	Chat = 0;
@@ -4434,27 +3632,6 @@ enum UnnamedEnume91934d732c052f5
 	Unsupported = 32768;
 }
 
-enum UnnamedEnume99001381424a13a
-{
-	None = 0;
-	Up = 1;
-	Down = 2;
-}
-
-enum UnnamedEnumeaa76a15206c310e
-{
-	Tick = 1;
-	Click = 2;
-}
-
-enum UnnamedEnumeaf70d8cee21d56c
-{
-	None = 0;
-	Library = 1;
-	GamepadUI = 2;
-	DesktopUI = 3;
-}
-
 enum UnnamedEnumeb5f060c69d3e927
 {
 	Invalid = 0;
@@ -4480,15 +3657,6 @@ enum UnnamedEnumec319d06f27559b4
 	SteamChinaPlatformOperator_StorePageReview = 4;
 	SteamChinaPlatformOperator_BuildReview = 5;
 	SteamDeckCompatibilityReview = 6;
-}
-
-enum UnnamedEnumed37b551cf653bf6
-{
-	Off = 0;
-	Low = 1;
-	Medium = 2;
-	High = 3;
-	Custom = 10;
 }
 
 enum UnnamedEnumed8eaeb9738f36fa
@@ -4596,22 +3764,6 @@ enum UnnamedEnumf60d704b0b63ab30
 	Error = 4;
 }
 
-enum UnnamedEnumf6e55e66e7eca716
-{
-	kInitial = 0;
-	kNewCollection = 1;
-	kExistingCollection = 2;
-	kError = 3;
-}
-
-enum UnnamedEnumf711bb3dceab35ce
-{
-	Invalid = 0;
-	Confirmation = 1;
-	Uploading = 2;
-	Error = 3;
-}
-
 enum UnnamedEnumf8c8b38ac1dd39c3
 {
 	Default = 0;
@@ -4654,23 +3806,6 @@ enum UnnamedEnumfafcd37e42e1afea
 	k_RejectAlreadyDisplayed = 17;
 	k_RejectNoTrailer = 18;
 	k_RejectAO = 19;
-}
-
-enum UnnamedEnumfdf9542cbb4256c3
-{
-	None = 0;
-	Main = 1;
-	QuickAccess = 2;
-}
-
-enum UnnamedEnumff958f9fe631673c
-{
-	String = 0;
-	Proto = 1;
-	Boolean = 2;
-	Float = 3;
-	Double = 4;
-	Int32 = 5;
 }
 
 enum UnnamedEnumff97bb87ab229b1b

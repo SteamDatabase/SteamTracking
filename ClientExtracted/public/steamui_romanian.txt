@@ -3890,9 +3890,9 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 
 "steam_configurecontroller_menuitem"	"Editează configurația controllerului Steam..."
 
-"steam_client_edit_categories" "Setează o categorie pentru acest joc pentru a-l găsi mai repede și pentru a-ți organiza Colecția. Titlurile dintr-o categorie vor fi grupate în lista de jocuri."
+"steam_client_edit_categories" "Setează o categorie pentru acest joc pentru a-l găsi mai repede și pentru a-ți organiza biblioteca. Titlurile categorisite vor fi grupate împreună în lista ta de jocuri."
 
-"steam_client_edit_categories_multi" "Setează o categorie pentru aceste jocuri pentru a le găsi mai repede și pentru a-ți organiza Colecția. Titlurile dintr-o categorie vor fi grupate în lista de jocuri."
+"steam_client_edit_categories_multi" "Setează o categorie pentru aceste jocuri pentru a le găsi mai repede și pentru a-ți organiza biblioteca. Titlurile categorisite vor fir grupate împreună în lista ta de jocuri."
 
 "steam_topmenu_friends"	"Prieteni (%friends_online%)"
 "steam_menu_set_profile"	"Schimbă numele de profil..."
@@ -4846,6 +4846,14 @@ Artiști"
 "RescueDialog_RestartSteamWebHelper" "Repornește steamwebhelper"
 "RescueDialog_ExitSteam" "Închide Steam"
 
+"TransportDialog_Title" "Eroare de transport neașteptată"
+"TransportDialog_Explanation" "Steam a întâmpinat o eroare neașteptată în timpul pornirii (0x%errorCount%). Apasă <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/7516-B23C-D572-5B0E>aici</a> pentru mai multe informații."
+"TransportDialog_RadioHeader" "Alege una dintre opțiunile următoare:"
+"TransportDialog_RestartSteam" "Repornește Steam"
+"TransportDialog_RestartSteamWebHelper" "Repornește steamwebhelper"
+"TransportDialog_ContinueAnyway" "(Doar pentru Valve) Continuă oricum"
+"TransportDialog_ExitSteam" "Închide Steam"
+
 "DownloadRegion_default"				 "Necunoscut"
 "DownloadRegion_us_chicago"			"SUA – Chicago"
 "DownloadRegion_us_newyork"			"SUA – New York"
@@ -4964,7 +4972,8 @@ Artiști"
 "DownloadRegion_br_rio"         "Brazilia – Rio de Janeiro"
 "DownloadRegion_br_portoalegre" "Brazilia – Porto Alegre"
 "DownloadRegion_ru_irkutsk"     "Rusia – Irkutsk"
-"DownloadRegion_kazakhstan"     "Kazahstan"
+"DownloadRegion_kazakhstan"     "Kazahstan – Astana"
+"DownloadRegion_kz_almaty"      "Kazahstan – Almaty"
 "DownloadRegion_cn_wuhan"       "China – Wuhan"
 "DownloadRegion_cn_xian"        "China – Xi'an"
 "DownloadRegion_mongolia"       "Mongolia"

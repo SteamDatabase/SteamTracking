@@ -11,6 +11,7 @@
 "(\n&CClientNotificationOverlaySplashScreen"L\n,CClientNotificationBroadcastAvailableToWatch
 "*\n(CClientNotificationClaimSteamDeckRewards"6\n
 "*\n(CClientNotificationHardwareSurveyPending"7\n
+"10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "2BRbr
 "3\n\rCRemoteHIDMsg
 ";\n\vCSetIconMsg
@@ -27,7 +28,9 @@
 "f\n+CClientNotificationGameRecordingInstantClip
 "p\n+CClientNotificationFamilySharingStopPlaying
 #3CScs
+#FLR
 #bML"
+#tDq
 $4DTdt
 $ORIGIN
 $\n k_BluetoothDeviceType_Headphones
@@ -68,7 +71,12 @@ $\n k_EStreamControlVirtualHereReady
 $\n k_EStreamFrameResultDroppedReset
 $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
+$\nY8O
 %5EUeu
+%Y%m%d%H%M%S
+%Y%m%dT%H%M%SZ
+%Y-%m-%d %H:%M:%S
+%Y-%m-%dT%H:%M:%SZ
 %\n k_EPersonaStateFlag_ClientTypeVR
 %\n k_EStreamControlStartNeptuneData
 %\n!k_EBanContentCheckResult_Possible
@@ -106,6 +114,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_ECloudStoragePersistStateDeleted
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
+&\n"k_ECompromiseDetectionType_Move2FA
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
@@ -131,6 +140,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\ngpu_status
 &\n\tdata_type
+&bzi
 '7GWgw
 '\n"k_EStreamControlDisableNeptuneData
 '\n"k_EStreamControlSetBitrateOverride
@@ -177,6 +187,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_ENewSteamAnnouncementState_Invalid
 (\n$k_EProvideDeckFeedbackPreference_Yes
 (\n$k_EPublishedFileStorageSystemInvalid
+(\n$k_ESplitScalingFilter_NIS_Deprecated
 (\n$k_EStreamControlEnableHighResCapture
 (\n$k_EStreamControlInputTouchFingerDown
 (\n$k_EStreamControlNegotiationSetConfig
@@ -311,6 +322,8 @@ $\n k_SystemAudioPortDirection_Input
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *W\n\fEVideoFormat
+*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
+*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
 *\\n\fEExportCodec
 *\n"excluded_store_content_descriptors
 *\n"rtime_temporary_feature_expiration
@@ -369,6 +382,7 @@ $\n k_SystemAudioPortDirection_Input
 +\n\rplaytime_days
 +\n\vmethod_type
 +\n\vmouse_wheel
++ulsX
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
@@ -495,6 +509,7 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.OneofOptions"
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
+.y4w
 /P8i
 /\n enable_touch_controller_OBSOLETE
 /\n'enable_hardware_encoding_intel_OBSOLETE
@@ -518,6 +533,7 @@ $\n k_SystemAudioPortDirection_Input
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 0123456789abcdef
+0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n(enable_hardware_encoding_nvidia_OBSOLETE
 0\n+k_EStreamControlSetInputTemporarilyDisabled
@@ -544,6 +560,7 @@ $\n k_SystemAudioPortDirection_Input
 10CSetQoSMsg
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI18RemotePlayPlayer_tE
+10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI26RemotePlayControllerSlot_tE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
@@ -564,13 +581,29 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN4vgui9ListPanel8column_tEhE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES2_EiE10ListElem_tEE
@@ -599,8 +632,10 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIN4vgui9ListPanel9section_tEE
 10CUtlMemoryIN4vgui9TextImage22PerLineTrncationData_tEE
 10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
+10CUtlMemoryIP12ILogListenerE
 10CUtlMemoryIP13IUIControllerE
 10CUtlMemoryIP9KeyValuesE
+10CUtlMemoryIPK11CFileWriterE
 10CUtlMemoryIPK9KeyValuesE
 10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlMemoryIPN4vgui10ClickPanelEE
@@ -611,6 +646,7 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryIPN4vgui6IImageEE
 10CUtlMemoryIPN4vgui8TreeNodeEE
 10CUtlMemoryIPN4vgui8URLLabelEE
+10CUtlMemoryIPcE
 10CUtlMemoryIPwE
 10CUtlMemoryIfE
 10CUtlMemoryIhE
@@ -635,15 +671,24 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
+10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlString
-10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 10CUtlVectorI18RemotePlayPlayer_t10CUtlMemoryIS0_EE
+10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI26RemotePlayControllerSlot_t10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
+10CUtlVectorIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
 10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN27CSteamUIMessagingController15QueuedMessage_tE10CUtlMemoryIS1_EE
@@ -664,8 +709,10 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorIN4vgui9ListPanel9section_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui9TextImage22PerLineTrncationData_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
+10CUtlVectorIP12ILogListener10CUtlMemoryIS1_EE
 10CUtlVectorIP13IUIController10CUtlMemoryIS1_EE
 10CUtlVectorIP9KeyValues10CUtlMemoryIS1_EE
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 10CUtlVectorIPK9KeyValues10CUtlMemoryIS2_EE
 10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
@@ -676,6 +723,7 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui8TreeNodeE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
+10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
 10CUtlVectorIf10CUtlMemoryIfEE
 10CUtlVectorIh10CUtlMemoryIhEE
@@ -683,9 +731,11 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlVectorIm10CUtlMemoryImEE
 10CUtlVectorIs10CUtlMemoryIsEE
 10CUtlVectorIw10CUtlMemoryIwEE
+10ConCommand
 10IFriendsUI
 11CCallResultI15CFriendsWebChat24SetPersonaNameResponse_tE
 11CDirWatcher
+11CFileWriter
 11CFrameEvent
 11CFrameStats
 11CHTMLHeader
@@ -701,8 +751,13 @@ $\n k_SystemAudioPortDirection_Input
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
 11CSetIconMsg
 11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
+11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS0_19SpewThrottleEntry_tE10CDefEqualsIS1_ENS0_23SpewLocationHashFunctorES1_E
 11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_ES2_E
+11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
 11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
+11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11IVGuiModule
 11KeyValuesAD
 11ParentalApp
@@ -711,6 +766,7 @@ $\n k_SystemAudioPortDirection_Input
 12CAutoReleaseI18CJSCallbackPromiseE
 12CDLLValidate
 12CIntProperty
+12CLogInstance
 12CMsgSetFocus
 12CMsgStopFind
 12CMsgStopLoad
@@ -789,6 +845,8 @@ $\n k_SystemAudioPortDirection_Input
 14CRecordedInput
 14CShowCursorMsg
 14CUtlLinkedListI10CUtlStringiE
+14CUtlLinkedListI12CWatchingLogiE
+14CUtlLinkedListI14CLogWatchParamiE
 14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EiE
@@ -825,6 +883,8 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI12CMsgStopFindE
 16CHTMLProtoBufMsgI12CMsgStopLoadE
+16CHTMLProtoBufMsgI13CMsgAddHeaderE
+16CHTMLProtoBufMsgI13CMsgDisableF5E
 16CHTMLProtoBufMsgI13CMsgGoForwardE
 16CHTMLProtoBufMsgI13CMsgHidePopupE
 16CHTMLProtoBufMsgI13CMsgMouseDownE
@@ -836,10 +896,12 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI14CMsgViewSourceE
 16CHTMLProtoBufMsgI15CMsgBrowserSizeE
 16CHTMLProtoBufMsgI15CMsgFullRepaintE
+16CHTMLProtoBufMsgI16CMsgClearHistoryE
 16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
 16CHTMLProtoBufMsgI16CMsgPauseRepaintE
 16CHTMLProtoBufMsgI17CMsgImeCommitTextE
 16CHTMLProtoBufMsgI17CMsgMouseDblClickE
+16CHTMLProtoBufMsgI17CMsgStartDownloadE
 16CHTMLProtoBufMsgI18CMsgExitFullScreenE
 16CHTMLProtoBufMsgI18CMsgInspectElementE
 16CHTMLProtoBufMsgI18CMsgLinkAtPositionE
@@ -847,17 +909,20 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
+16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
 16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
 16CHTMLProtoBufMsgI23CMsgBrowserErrorStringsE
+16CHTMLProtoBufMsgI24CMsgClearAllBrowsingDataE
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
 16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
+16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
 16CHTMLProtoBufMsgI8CMsgCopyE
 16CHTMLProtoBufMsgI8CMsgFindE
 16CHTMLProtoBufMsgI9CMsgKeyUpE
@@ -886,6 +951,7 @@ $\n k_SystemAudioPortDirection_Input
 16HTMLComboBoxHost
 16ListPanelDragger
 16ParentalSettings
+17CFileWriterThread
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -900,8 +966,10 @@ $\n k_SystemAudioPortDirection_Input
 17CSetFlashStateMsg
 17CStopAudioDataMsg
 17CStopVideoDataMsg
+17CStreamReaderBase
 17CStreamVideoLimit
 17CSystemSuspendMsg
+17DirectoryTreeView
 18446744073709551615
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -1035,6 +1103,7 @@ $\n k_SystemAudioPortDirection_Input
 20CJSMethodCallHandlerI27CSharedConnectionControllerJjiEE
 20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKc9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerIN4vgui4HTMLEJ9CSmartPtrI15CJSCallbackFuncEEE
 20CMsgGetCookiesForURL
 20CMsgJSDialogResponse
 20CMsgJSExecutePromise
@@ -1074,6 +1143,7 @@ $\n k_SystemAudioPortDirection_Input
 21CStreamingKeymapEntry
 21CTouchConfigActiveMsg
 21CUtlCStringConversion
+21CreateDirectoryDialog
 22CClanMatchEventByRange
 22CDisableNeptuneDataMsg
 22CDiscoveryPingResponse
@@ -1118,6 +1188,7 @@ $\n k_SystemAudioPortDirection_Input
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
 24CNegotiationSetConfigMsg
+24CParentalSettingsManager
 24CPauseControllerInputMsg
 24CProportionalIntProperty
 24CShowOnScreenKeyboardMsg
@@ -1188,6 +1259,8 @@ $\n k_SystemAudioPortDirection_Input
 2\r.EAudioFormat
 2\r.ELogFileType
 2\r.EVideoFormat
+2ju:
+30!]^JV
 30CClientNotificationAchievement
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
@@ -1259,6 +1332,7 @@ $\n k_SystemAudioPortDirection_Input
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 47CClientNotificationGameRecordingUserMarkerAdded
 48CClientNotificationFamilySharingLibraryAvailable
+49fN
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
@@ -1282,6 +1356,7 @@ $\n k_SystemAudioPortDirection_Input
 54CControllerConfigMsg_ControllerPersonalizationResponse
 57CControllerConfigMsg_ControllerActiveConfigChangeResponse
 58CClientNotificationFamilySharingDeviceAuthorizationChanged
+5T&w&
 5\n1k_EClientNotificationType_DockUnsupportedFirmware
 5\n1k_EClientNotificationType_ParentalFeatureResponse
 5\n1k_EClientNotificationType_ParentalPlaytimeRequest
@@ -1293,6 +1368,7 @@ $\n k_SystemAudioPortDirection_Input
 5\n1k_ESystemDisplayCompatibilityMode_MinimalBandwith
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
+6 PQ
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
@@ -1331,8 +1407,10 @@ $\n k_SystemAudioPortDirection_Input
 7~8A
 8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CJSArray
 8CMsgCopy
 8CMsgFind
+8\foQS
 8\n4k_EClientNotificationType_SteamInputActionSetChanged
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
@@ -1355,11 +1433,14 @@ $\n k_SystemAudioPortDirection_Input
 9CCallbackI27CSharedConnectionController23SteamServersConnected_tLb0EE
 9CCallbackI27CSharedConnectionController26SteamServersDisconnected_tLb0EE
 9CCallbackI27CSharedConnectionController30SharedConnectionMessageReady_tLb0EE
+9CJSObject
 9CMsgClose
 9CMsgKeyUp
 9CMsgMulti
 9CMsgPaste
 9CPauseMsg
+9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
+9CUtlQueueIP9CLogEventE
 9IValidate
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
@@ -1371,7 +1452,6 @@ $\n k_SystemAudioPortDirection_Input
 :\v-2147483648
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
 ;\n7k_EClientNotificationType_FamilyPurchaseRequestResponse
-;\n7k_EClientNotificationType_FamilySharingLibraryAvailable
 <\n/k_EChildProcessQueryExitCode_ErrorUnimplemented
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_EStreamControlInputControllerWirelessPresence_OBSOLETE
@@ -1384,6 +1464,7 @@ $\n k_SystemAudioPortDirection_Input
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\tp2p_scope
 @\n!ControllerPersonalizationResponse
+A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 A\n\nannotation
@@ -1663,6 +1744,7 @@ ControllerConfigResponse
 CreateInterface
 DDDDUUUU
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
+D\vvf:
 DescriptorProto
 DescriptorProtosH
 DraggableRects
@@ -1704,7 +1786,6 @@ EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
 ESDCardFormatStage
-EScalingFilter
 ESessionDisposition
 ESessionPersistence
 ESplitScalingFilter
@@ -1752,7 +1833,6 @@ ETW_Steamworks_RunCallbacks_Start
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
-E\nAk_EClientNotificationType_FamilySharingDeviceAuthorizationChanged
 EnsureValidBoolValue
 EnumDescriptorProto
 EnumReservedRange
@@ -1762,6 +1842,7 @@ Error
 ExtensionRange
 ExtensionRangeOptions
 FAILED
+FCZ&
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
 FieldDescriptorProto
@@ -1800,6 +1881,7 @@ IiGM>nw
 Is64BitOS
 JSObjectProperty
 JSType
+JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 KeyValuesSystemSteam
 LABEL_OPTIONAL
@@ -1807,6 +1889,8 @@ LABEL_REPEATED
 LABEL_REQUIRED
 Label
 Location
+Logger
+LwH'
 M8MF
 MGiI
 MessageOptions
@@ -1831,6 +1915,9 @@ N16CFriendsUIModule29CCallback_OnOpenFriendsDialogE
 N16CFriendsUIModule33CCallbackInternal_OnUIModeChangedE
 N16CFriendsUIModule35CCallback_OnOpenChatRoomGroupDialogE
 N16CFriendsUIModule35CCallback_OnOpenInviteToTradeDialogE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread16CLogFileWorkItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 N20CBroadcastController34CCallbackInternal_OnPostLogonStateE
 N20CBroadcastController35CCallbackInternal_OnBroadcastStatusE
 N20CBroadcastController39CCallbackInternal_OnViewerNeedsApprovalE
@@ -1904,6 +1991,7 @@ N4vgui13MenuSeparatorE
 N4vgui13TooltipWindowE
 N4vgui13TreeNodeImageE
 N4vgui14ComboBoxButtonE
+N4vgui14CompositeImageE
 N4vgui14FileOpenDialogE
 N4vgui15CFontWidthCacheE
 N4vgui15ScrollBarSliderE
@@ -1921,12 +2009,14 @@ N4vgui18CTypingJumpHandlerE
 N4vgui18FileCompletionEditE
 N4vgui18FileCompletionMenuE
 N4vgui18MenuItemCheckImageE
+N4vgui18ThrobberImagePanelE
 N4vgui19AnimatingImagePanelE
 N4vgui19AnimationControllerE
 N4vgui19FrameMaximizeButtonE
 N4vgui19FrameMinimizeButtonE
 N4vgui20CTreeViewListControlE
 N4vgui20TextEntryClearButtonE
+N4vgui21DirectorySelectDialogE
 N4vgui21ListPanelColumnHeaderE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
@@ -1957,6 +2047,7 @@ N4vgui9HTMLPopup9PopupHTMLE
 N4vgui9HTMLPopupE
 N4vgui9ImageListE
 N4vgui9ListPanelE
+N4vgui9RGBAImageE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
@@ -2122,6 +2213,7 @@ SPEED
 STRING
 ServiceDescriptorProto
 ServiceOptions
+Sm"\vg
 SourceCodeInfo
 SpewAndLogActivate
 SpewAndLogChangeIfStillDefault
@@ -2150,6 +2242,7 @@ St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
+St17bad_function_call
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
@@ -2248,9 +2341,11 @@ ThreadInterlockedIncrement
 ThreadShellExecute
 ThreadSleep
 Type
-UIzB
 UUUU
 UninterpretedOption
+Universe
+Unknown
+Uu\R
 VProfInternalEnterScopeCurrentThread
 V_AppendSlash
 V_ComposeFileName
@@ -2319,6 +2414,7 @@ V_wcstoi64
 V_wcstoui64
 Vc0a
 Warning
+Wb8e{ ;
 WeakRandomFloat
 WeakRandomInt
 WeakRandomUint32
@@ -2343,6 +2439,7 @@ Zjz\v
 \n&CClientNotificationTimedTrialRemaining
 \n(ESteamDeckCompatibilityResultDisplayType
 \n+steammessages_clientnotificationtypes.proto"4\n#CClientNotificationCloudSyncFailure
+\nYg:a
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
 \n\fCStopRequest"
@@ -2429,6 +2526,7 @@ Zjz\v
 \n\nis_allowed
 \n\nis_default
 \n\nis_enabled
+\n\nis_valveds
 \n\nissuerName
 \n\nlocal_path
 \n\nmanage_ceg
@@ -2602,6 +2700,8 @@ Zjz\v
 \n\vvoteupcount
 \n\vwebsite_url
 \n\vwindow_icon
+\r8STs\ne
+\rRoOs
 \r\n\tCODE_SIZE
 \r\n\tJS_NORMAL
 \r\n\tJS_NUMBER
@@ -2615,6 +2715,7 @@ Zjz\v
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \venums.proto"0\n\vParentalApp
 \venums.proto"^\n\tCMsgKeyUp
+]JldN
 ^oEZ_
 _DMsg
 _ITM_RU1
@@ -2725,6 +2826,8 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+`tun%
+a\rxg[
 abort
 access
 accountid_owner
@@ -2767,6 +2870,7 @@ altgr_shift_keycode
 amount
 announcement_body
 announcement_gid
+anonymous
 answer
 app_type
 appid
@@ -2783,6 +2887,7 @@ available_video_modes_OBSOLETE
 avatar_location
 average
 average_network_time_ms
+b,uZ
 bAllow
 bHasMultipleInputs
 bInput
@@ -2792,6 +2897,7 @@ bad_url
 ban_check_result
 bandwidth_test
 banned
+baseline
 begin
 bgoback
 bind_textdomain_codeset
@@ -2809,6 +2915,7 @@ bucket
 build_id
 burst_bitrate_kbps
 button
+bwiO'
 cHRM
 calloc
 canvas_oop_rasterization
@@ -2825,6 +2932,7 @@ chdir
 chmod
 choose_directory
 chown
+chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 city
 clamp_range_slot
 clanid
@@ -2856,6 +2964,7 @@ controller_name
 controller_overlay_hotkey
 controller_path
 controller_slots
+convar_
 cookies
 coord_x
 coord_y
@@ -2944,6 +3053,7 @@ expired
 expires
 extendee
 extension_range
+f.N%H
 fP~V
 faccessat
 fallocate64
@@ -3015,6 +3125,7 @@ function_handle
 futimes
 fwrite
 gAMA
+gAY:
 g_VProfProfilesRunningCount
 g_pMemAllocSteam
 game_id
@@ -3070,6 +3181,7 @@ iconv_close
 iconv_open
 idempotency_level
 identifier_value
+ig,o
 image
 index
 infind
@@ -3096,6 +3208,7 @@ java_outer_classname
 java_string_check_utf8
 jsondata
 jstype
+k2U\v
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
 k_BluetoothDeviceType_Headset
@@ -3298,21 +3411,14 @@ k_ESLSHelper_Journal
 k_ESLSHelper_Kdump
 k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
-k_EScalingFilter_FSR
-k_EScalingFilter_Integer
-k_EScalingFilter_Invalid
-k_EScalingFilter_Linear
-k_EScalingFilter_NIS
-k_EScalingFilter_Nearest
 k_ESessionDispositionDisconnect
 k_ESessionDispositionNormal
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
-k_ESplitScalingFilter_FSR
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
-k_ESplitScalingFilter_NIS
 k_ESplitScalingFilter_Nearest
+k_ESplitScalingFilter_Sharp
 k_ESplitScalingScaler_Auto
 k_ESplitScalingScaler_Fill
 k_ESplitScalingScaler_Fit
@@ -3529,6 +3635,7 @@ keymap
 kill
 l6qnk
 lDa>
+lEd/
 label
 language
 last_update_steamid
@@ -3551,6 +3658,7 @@ link
 link_bandwidth
 link_url
 list
+local
 localeconv
 localization_path
 localized_string
@@ -3597,6 +3705,7 @@ msgpool_soft_limit
 msync
 multiple_raster_threads
 munmap
+mwa!
 nTargetFrameRate
 name
 native_dropdowns
@@ -3626,6 +3735,7 @@ override_height
 override_width
 owning_browser_handle
 pCAL
+pCRF
 pHYs
 package
 packed
@@ -3653,6 +3763,7 @@ played_seconds
 players
 playtime_remaining
 playtime_restrictions
+plogs
 poll
 popen
 positive_int_value
@@ -3670,6 +3781,7 @@ proto3_optional
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+public
 public_dependency
 publish
 publisher_group_id
@@ -3677,6 +3789,7 @@ putc
 putwc
 pwrite64
 py_generic_services
+qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 quality
 queue_position
@@ -3689,6 +3802,7 @@ realloc
 realm
 realpath
 reasons
+received
 recovery_email
 rects
 referenced_appids
@@ -3790,6 +3904,7 @@ stderr
 stdin
 stdout
 steam_beta_name
+steamdeck_stable
 steamid
 steamid_responder
 steamid_sender
@@ -3829,6 +3944,7 @@ supported_video_codecs
 supports_remote_hid
 supports_touch_input
 supports_video_hevc_OBSOLETE
+svcK71b.
 symlink
 syntax
 syscall
@@ -3897,6 +4013,7 @@ utility_appids
 utime
 utimes
 vQO+t
+vRQ>
 value
 version
 view_error_data
@@ -3956,6 +4073,7 @@ xhotspot
 y9*O
 y_local
 yhotspot
+zC`G;
 zTXt
 zoom
 {kHw

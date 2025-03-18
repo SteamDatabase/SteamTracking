@@ -208,6 +208,8 @@ message StoreItem {
 		optional string library_hero_2x = 12;
 		optional string community_icon = 13;
 		optional string clan_avatar = 14;
+		optional string page_background_path = 15;
+		optional string raw_page_background = 16;
 	}
 
 	message ReleaseInfo {
@@ -222,6 +224,7 @@ message StoreItem {
 		optional bool is_early_access = 10;
 		optional uint32 mac_release_date = 20;
 		optional uint32 linux_release_date = 21;
+		optional bool limited_launch_active = 22;
 	}
 
 	message Platforms {

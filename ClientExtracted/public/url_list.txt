@@ -739,6 +739,13 @@ StoreAccount
 	filter	"profile"
 }
 
+StoreAccountGatedAccessApp
+{
+	url		"%storehttps%/account/gatedaccess?appid=%p1%"
+	method	"internal"
+	filter	"profile"
+}
+
 SteamLanguage
 {
 	url		"%storehttps%/account/languagepreferences/"

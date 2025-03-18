@@ -223,21 +223,12 @@ enum EGPUPerformanceLevel {
 	k_EGPUPerformanceLevel_Profiling = 5;
 }
 
-enum EScalingFilter {
-	k_EScalingFilter_Invalid = 0;
-	k_EScalingFilter_FSR = 1;
-	k_EScalingFilter_Nearest = 2;
-	k_EScalingFilter_Integer = 3;
-	k_EScalingFilter_Linear = 4;
-	k_EScalingFilter_NIS = 5;
-}
-
 enum ESplitScalingFilter {
 	k_ESplitScalingFilter_Invalid = 0;
 	k_ESplitScalingFilter_Linear = 1;
 	k_ESplitScalingFilter_Nearest = 2;
-	k_ESplitScalingFilter_FSR = 3;
-	k_ESplitScalingFilter_NIS = 4;
+	k_ESplitScalingFilter_Sharp = 3;
+	k_ESplitScalingFilter_NIS_Deprecated = 4;
 }
 
 enum ESplitScalingScaler {
@@ -565,6 +556,7 @@ enum ECompromiseDetectionType {
 	k_ECompromiseDetectionType_Manual = 3;
 	k_ECompromiseDetectionType_TicketAction = 4;
 	k_ECompromiseDetectionType_MaliciousRefund = 5;
+	k_ECompromiseDetectionType_Move2FA = 6;
 }
 
 enum EAsyncGameSessionUserState {

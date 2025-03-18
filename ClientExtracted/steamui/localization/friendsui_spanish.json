@@ -483,7 +483,7 @@
     "Chat_DefaultChannelName": "Principal",
     "Chat_SaveVoiceRoom": "Guardar canal de voz",
     "Chat_SaveVoiceRoom_Name": "Nombre de este canal:",
-    "Chat_SaveVoiceRoom_Description": "Puedes guardar este canal de voz al asignarle un nombre. Todo el texto ingresado en el chat de acceso rápido de este canal será conservado y el canal estará disponible para todos los usuarios, incluso si está vacío.",
+    "Chat_SaveVoiceRoom_Description": "Puedes asignarle un nombre a este canal de voz para guardarlo. Todo el texto introducido en el chat rápido de este canal se conservará, y el canal estará disponible para todos los usuarios, incluso si está vacío.",
     "Chat_SaveVoiceRoom_Error_EmptyName": "Debes especificar un nombre para este canal",
     "ChatRoom_ServerMessage_RenameChatRoom": "%2$s cambió el nombre de la sala de chat a %1$s",
     "ChatRoom_ServerMessage_ChatRoomTaglineChanged": "%2$s cambió el lema del chat a %1$s",

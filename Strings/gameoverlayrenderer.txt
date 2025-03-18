@@ -1,4 +1,11 @@
 $ORIGIN
+%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
+(dst_width % 2 == 0) && (dst_width >= 0)
+(dst_width % 3 == 0) && (dst_width > 0)
+*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
+/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
+/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
+/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 10IMemStream
 12CIMENullImpl
 15CSavedMemStream
@@ -8,7 +15,11 @@ $ORIGIN
 20CBaseOverlayRenderer
 24CGameStreamBaseMemStream
 24CGameStreamGameMemStream
+25CGameStreamSteamMemStream
 4IIME
+5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
+7ki=
+;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 BOverlayNeedsPresent
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
@@ -29,6 +40,8 @@ N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N16SteamThreadTools7CThreadE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -36,6 +49,7 @@ N3IPC17SharedObjectEventE
 N3IPC17SharedObjectMutexE
 N3IPC6IEventE
 N3IPC6IMutexE
+N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 QkkXa
@@ -43,6 +57,7 @@ SetNotificationInset
 SetNotificationPosition
 St11logic_error
 St12length_error
+St12out_of_range
 St13bad_exception
 St20bad_array_new_length
 St9bad_alloc
@@ -90,6 +105,8 @@ XUngrabPointer
 XUnmapWindow
 XWarpPointer
 XWindowEvent
+\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
+\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -120,6 +137,7 @@ _exit
 abort
 asctime_r
 bind
+bpp >= 1 && bpp <= 4
 calloc
 ceilf
 chdir
@@ -129,12 +147,22 @@ closedir
 connect
 ctime_r
 daylight
+depth <= 16
+depth >= 1
+depth >= 10
+depth >= 8
 dl_iterate_phdr
 dlclose
 dlopen
 dlsym
 dlvsym
+dst_height > 0
+dst_width % 3 == 0
+dst_width > 0
+dx != __null
+dy != __null
 execv
+f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 fclose
 fcntl
 fflush
@@ -215,7 +243,9 @@ glXGetProcAddressARB
 glXMakeCurrent
 glXSwapBuffers
 gmtime_r
+height > 0
 ioctl
+k;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 kill
 ld-linux.so.2
 libGL.so.1
@@ -275,6 +305,9 @@ readv
 realloc
 recvfrom
 recvmsg
+s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
+scale <= 32768
+scale >= 256
 sched_get_priority_max
 sched_get_priority_min
 sched_yield
@@ -295,6 +328,9 @@ sigemptyset
 sigprocmask
 socket
 sqrtf
+src_height != 0
+src_width != 0
+src_width > 0
 sscanf
 stderr
 strchr
@@ -318,9 +354,50 @@ transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 unlink
 usleep
+void libyuv::Convert16To8Row_C(const uint16_t*, uint8_t*, int, int)
+void libyuv::MergeAR64Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint16_t*, int, int)
+void libyuv::MergeARGB16To8Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint8_t*, int, int)
+void libyuv::MergeARGBPlaneAlpha(const uint8_t*, int, const uint8_t*, int, const uint8_t*, int, const uint8_t*, int, uint8_t*, int, int, int)
+void libyuv::MergeARGBPlaneOpaque(const uint8_t*, int, const uint8_t*, int, const uint8_t*, int, uint8_t*, int, int, int)
+void libyuv::MergeUVPlane_16(const uint16_t*, int, const uint16_t*, int, uint16_t*, int, int, int, int)
+void libyuv::MergeUVRow_16_C(const uint16_t*, const uint16_t*, uint16_t*, int, int)
+void libyuv::MergeXR30Row_C(const uint16_t*, const uint16_t*, const uint16_t*, uint8_t*, int, int)
+void libyuv::MergeXR64Row_C(const uint16_t*, const uint16_t*, const uint16_t*, uint16_t*, int, int)
+void libyuv::MergeXRGB16To8Row_C(const uint16_t*, const uint16_t*, const uint16_t*, uint8_t*, int, int)
+void libyuv::ScaleAddRow_16_C(const uint16_t*, uint32_t*, int)
+void libyuv::ScaleAddRow_C(const uint8_t*, uint16_t*, int)
+void libyuv::ScalePlaneVertical(int, int, int, int, int, const uint8_t*, uint8_t*, int, int, int, int, libyuv::FilterMode)
+void libyuv::ScalePlaneVertical_16(int, int, int, int, int, const uint16_t*, uint16_t*, int, int, int, int, libyuv::FilterMode)
+void libyuv::ScaleRowDown34_0_Box_16_C(const uint16_t*, ptrdiff_t, uint16_t*, int)
+void libyuv::ScaleRowDown34_0_Box_C(const uint8_t*, ptrdiff_t, uint8_t*, int)
+void libyuv::ScaleRowDown34_16_C(const uint16_t*, ptrdiff_t, uint16_t*, int)
+void libyuv::ScaleRowDown34_1_Box_16_C(const uint16_t*, ptrdiff_t, uint16_t*, int)
+void libyuv::ScaleRowDown34_1_Box_C(const uint8_t*, ptrdiff_t, uint8_t*, int)
+void libyuv::ScaleRowDown34_C(const uint8_t*, ptrdiff_t, uint8_t*, int)
+void libyuv::ScaleRowDown38_16_C(const uint16_t*, ptrdiff_t, uint16_t*, int)
+void libyuv::ScaleRowDown38_2_Box_16_C(const uint16_t*, ptrdiff_t, uint16_t*, int)
+void libyuv::ScaleRowDown38_2_Box_C(const uint8_t*, ptrdiff_t, uint8_t*, int)
+void libyuv::ScaleRowDown38_3_Box_16_C(const uint16_t*, ptrdiff_t, uint16_t*, int)
+void libyuv::ScaleRowDown38_3_Box_C(const uint8_t*, ptrdiff_t, uint8_t*, int)
+void libyuv::ScaleRowDown38_C(const uint8_t*, ptrdiff_t, uint8_t*, int)
+void libyuv::ScaleRowUp2_Bilinear_16_C(const uint16_t*, ptrdiff_t, uint16_t*, ptrdiff_t, int)
+void libyuv::ScaleRowUp2_Bilinear_C(const uint8_t*, ptrdiff_t, uint8_t*, ptrdiff_t, int)
+void libyuv::ScaleRowUp2_Linear_16_C(const uint16_t*, uint16_t*, int)
+void libyuv::ScaleRowUp2_Linear_C(const uint8_t*, uint8_t*, int)
+void libyuv::ScaleSlope(int, int, int, int, libyuv::FilterMode, int*, int*, int*, int*)
+void libyuv::ScaleUVRowUp2_Bilinear_16_C(const uint16_t*, ptrdiff_t, uint16_t*, ptrdiff_t, int)
+void libyuv::ScaleUVRowUp2_Bilinear_C(const uint8_t*, ptrdiff_t, uint8_t*, ptrdiff_t, int)
+void libyuv::ScaleUVRowUp2_Linear_16_C(const uint16_t*, uint16_t*, int)
+void libyuv::ScaleUVRowUp2_Linear_C(const uint8_t*, uint8_t*, int)
+void libyuv::SplitARGBPlaneAlpha(const uint8_t*, int, uint8_t*, int, uint8_t*, int, uint8_t*, int, uint8_t*, int, int, int)
+void libyuv::SplitARGBPlaneOpaque(const uint8_t*, int, uint8_t*, int, uint8_t*, int, uint8_t*, int, int, int)
+void libyuv::SplitUVRow_16_C(const uint16_t*, uint16_t*, uint16_t*, int, int)
 vsnprintf
 waitid
 waitpid
+wpp >= 1 && wpp <= 2
 write
+x != __null
 xcb_create_window
 xcb_create_window_checked
+y != __null

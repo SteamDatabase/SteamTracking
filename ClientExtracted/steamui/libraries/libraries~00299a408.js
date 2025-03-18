@@ -1,4 +1,4 @@
-var CLSTAMP = "9598723";
+var CLSTAMP = "9612205";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [41],
@@ -30898,6 +30898,13 @@ var CLSTAMP = "9598723";
             : () =>
                 Promise.reject(new Error(`Missing queryFn: '${e.queryHash}'`));
       }
+    },
+    41054: (e, t, r) => {
+      "use strict";
+      r.d(t, { E: () => n });
+      var n = function () {
+        return null;
+      };
     },
     3715: (e, t, r) => {
       "use strict";

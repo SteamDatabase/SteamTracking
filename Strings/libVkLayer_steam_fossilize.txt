@@ -31,6 +31,7 @@ GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.6
+IEND
 Jugm
 MGiI
 N10__cxxabiv115__forced_unwindE
@@ -38,9 +39,11 @@ N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
+N9Fossilize11ZipDatabaseE
 N9Fossilize13StreamArchiveE
 N9Fossilize17DatabaseInterfaceE
 N9Fossilize18ConcurrentDatabaseE
+N9Fossilize21DumbDirectoryDatabaseE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE

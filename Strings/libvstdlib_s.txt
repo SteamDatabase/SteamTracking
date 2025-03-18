@@ -1,33 +1,66 @@
+!AxU
+"10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+#FLR
+#tDq
 $ORIGIN
+$\nY8O
 %$%a%b%V%U%c%Q%W%]%\%[%
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
+&bzi
+*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
+*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
++ulsX
+.y4w
 0123456789abcdef
+0F`8
 10CUtlMemoryI10CUtlStringE
+10CUtlMemoryI13ModuleCount_tE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE10ListElem_tEE
+10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
 10CUtlMemoryIP13CCoroutineMgrE
+10CUtlMemoryIPK11CFileWriterE
+10CUtlMemoryIhE
 10CUtlMemoryIiE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 10CUtlVectorIP13CCoroutineMgr10CUtlMemoryIS1_EE
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 10CUtlVectorIi10CUtlMemoryIiEE
+10ConCommand
+11CDirWatcher
+11CFileWriter
 11CPathString
 11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E
 12CDefaultCvar
 14CUtlLinkedListI10CCoroutineiE
+14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
+14ConCommandBase
 16CKeyValuesSystem
 16IKeyValuesSystem
 17CDebugStatsSystem
+17CFileWriterThread
+17CStreamReaderBase
 17IDebugStatsSystem
 18CUtlCharConversion
 19CUtlNoEscConversion
@@ -35,14 +68,32 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+24CDirWatcherPollingThread
+30!]^JV
+49fN
+52F*
 5ICvar
+5T&w&
+6 PQ
+6ConVar
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
+7CUtlMapI10CUtlStringbi8CDefLessE
+7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapIPvii8CDefLessE
 7CUtlMapIjbi8CDefLessE
 7CUtlMapIwPKwi8CDefLessE
+7CUtlMapIybi8CDefLessE
+7~8A
+8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8\foQS
 9IValidate
+9a&g
+A@qVc"
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 BHanIdeograph
+C-Yn
 CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 CGaussianRandomStream::RandomFloat(float, float)
@@ -85,8 +136,10 @@ Coroutine_Test
 Coroutine_ValidateGlobals
 Coroutine_YieldToMain
 CreateInterface
+D\vvf:
 DebugStatsSystem
 Error
+FCZ&
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
@@ -108,15 +161,22 @@ GetPlatformName
 GetPlatformNameFromEPlatformType
 GetPortableOsVersionInformation
 GetSpewOutputFunc
+H$6t
+H*0"ZOW
 InstallUniformRandomStream
 Is64BitOS
+JZJ{.
 KeyValuesSystemSteam
+MGiI
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv121__vmi_class_type_infoE
 N11SteamStdLib12CCommandLineE
 N11SteamStdLib12ICommandLineE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread16CLogFileWorkItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
@@ -135,6 +195,10 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_localtime
+Qkkbal
+R1h58
+SKyu
+Sm"\vg
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -158,6 +222,7 @@ St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
+St17bad_function_call
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
@@ -451,6 +516,7 @@ V_wcsncpy
 V_wcstoi64
 V_wcstoui64
 V_whextobinary
+Vc0a
 Warning
 WeakRandomChar
 WeakRandomFillMemory
@@ -459,6 +525,10 @@ WeakRandomGaussianFloat
 WeakRandomInt
 WeakRandomSeed
 WeakRandomUint32
+Zjz\v
+\nYg:a
+\rRoOs
+]JldN
 _DMsg
 _ITM_RU1
 _ITM_RU4
@@ -553,12 +623,16 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+`tun%
+a\rxg[
 abort
 access
 alphasort64
+b,uZ
 bind_textdomain_codeset
 bindtextdomain
 btowc
+bwiO'
 calloc
 chdir
 chmod
@@ -566,6 +640,8 @@ chown
 clock_gettime
 close
 closedir
+convar_
+dQy/
 dgettext
 dl_iterate_phdr
 dlclose
@@ -574,6 +650,7 @@ dlmopen
 dlopen
 dlsym
 endmntent
+f.N%H
 faccessat
 fallocate64
 fclose
@@ -603,6 +680,7 @@ ftruncate
 ftruncate64
 futimes
 fwrite
+gAY:
 g_VProfProfilesRunningCount
 g_VProfile
 g_pMemAllocSteam
@@ -615,15 +693,20 @@ getsockname
 gettext
 getuid
 getwc
+i]Wb
 iconv
 iconv_close
 iconv_open
+ig,o
 ioctl
 isalnum
 isspace
 iswalnum
 iswalpha
 iswspace
+k2U\v
+lDa>
+lEd/
 lchown
 ld-linux.so.2
 libc.so.6
@@ -656,9 +739,11 @@ mold 1.10.1 (compatible with GNU ld)
 mount
 msync
 munmap
+mwa!
 open
 open64
 opendir
+pCRF
 pclose
 poll
 popen
@@ -671,6 +756,7 @@ pthread_once
 putc
 putwc
 pwrite64
+qR5FE%
 read
 readdir
 readdir64
@@ -679,6 +765,7 @@ realloc
 realpath
 rename
 rmdir
+ru&o
 scandir
 scandir64
 sched_yield
@@ -772,6 +859,8 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
+w+OQvr
+wXR\r
 wcrtomb
 wcscasecmp
 wcscmp
@@ -789,5 +878,9 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
+wn>Jj
 write
 writev
+y9*O
+zC`G;
+{kHw

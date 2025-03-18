@@ -249,6 +249,7 @@ message CMsgClientSettings {
 	optional .CMsgHotkey gamescope_guide_hotkey = 21013 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GuideKeyboardHotkey"];
 	optional .CMsgHotkey gamescope_qam_hotkey = 21014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/QAMKeyboardHotkey"];
 	optional bool gamescope_hdr_enabled = 21015 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/HDREnabled", (setting_default_bool) = true, (setting_profile_mode) = k_ESettingProfileMode_PerDisplay];
+	optional bool gamescope_native_external_res_in_steam = 21016 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/EnableSteamNativeExternalResolution"];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
 	optional bool steamos_tdp_limit_enabled = 22001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimitEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_tdp_limit = 22002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimit", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
@@ -266,5 +267,6 @@ message CMsgClientSettings {
 	optional string setting_validation_string = 23007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyString"];
 	optional .CMsgHotkey setting_validation_hotkey = 23008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyHotkey"];
 	optional bool system_bluetooth_enabled = 24000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/Bluetooth/Enabled", (setting_default_bool) = false];
+	optional bool hardware_updater_enabled = 24001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/HardwareUpdater/Enabled", (setting_default_bool) = false];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
 }

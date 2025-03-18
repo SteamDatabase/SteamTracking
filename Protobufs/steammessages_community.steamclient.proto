@@ -226,7 +226,7 @@ message CCommunity_GetClanCrowdInMetadata_Response {
 message CCommunity_FetchTranslationFromCrowdIn_Request {
 	optional fixed64 steamid = 1;
 	optional uint64 itemid = 2;
-	optional uint32 language = 3;
+	optional int32 language = 3;
 }
 
 message CCommunity_FetchTranslationFromCrowdIn_Response {

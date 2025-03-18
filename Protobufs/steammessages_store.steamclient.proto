@@ -1,6 +1,7 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "contenthubs.proto";
+import "steammessages_storebrowse.steamclient.proto";
 import "enums.proto";
 
 option cc_generic_services = true;
@@ -28,6 +29,7 @@ enum EPlaytestStatus {
 	k_ETesterStatusPending = 1;
 	k_ETesterStatusInvited = 2;
 	k_ETesterStatusGranted = 3;
+	k_ETesterStatusExpired = 4;
 }
 
 enum EAppReportType {
@@ -171,6 +173,8 @@ message CStore_GetDiscoveryQueue_Request {
 	optional uint32 experimental_cohort = 10;
 	optional bool debug_get_solr_query = 11;
 	optional .CStorePageFilter store_page_filter = 12;
+	optional .StoreBrowseContext context = 13;
+	optional .StoreBrowseItemDataRequest data_request = 14;
 }
 
 message CStore_GetDiscoveryQueue_Response {
@@ -181,6 +185,7 @@ message CStore_GetDiscoveryQueue_Response {
 	optional bool exhausted = 5;
 	optional uint32 experimental_cohort = 6;
 	optional string debug_solr_query = 7;
+	repeated .StoreItem store_items = 8;
 }
 
 message CStore_GetDiscoveryQueueSettings_Request {

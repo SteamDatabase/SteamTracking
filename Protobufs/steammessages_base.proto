@@ -130,6 +130,7 @@ message CMsgProtoBufHeader {
 	optional string webui_auth_key = 40;
 	repeated int32 exclude_client_sessionids = 41;
 	optional fixed64 admin_request_spoofing_steamid = 43;
+	optional bool is_valveds = 44;
 
 	oneof ip_addr {
 		uint32 ip = 15;

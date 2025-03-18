@@ -1,22 +1,40 @@
+ !"#$%&'()*+,-./012312CIMENullImpl
+ 16IDynamicFunction
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
 !1AQaq
 !AxU
+"10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "2BRbr
 #3CScs
+#FLR
 #bML"
+#tDq
 $4DTdt
 $ORIGIN
+$\nY8O
 %5EUeu
+%Y%m%d%H%M%S
+%Y%m%dT%H%M%SZ
+%Y-%m-%d %H:%M:%S
+%Y-%m-%dT%H:%M:%SZ
 &6FVfv
+&bzi
 '7GWgw
 (8HXhx
 )9IYiy
 *5KS
 *:JZjz
+*ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
+*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
+*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
++ulsX
+.y4w
 /P8i
 /yQA
 00003333
 0123456789ABCDEF
+0123456789abcdef
+0F`8
 10CInputBase
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI10CUtlSymbolE
@@ -31,6 +49,8 @@ $ORIGIN
 10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -44,6 +64,7 @@ $ORIGIN
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_tS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS1_EE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tEE
@@ -63,14 +84,18 @@ $ORIGIN
 10CUtlMemoryIN4vgui10IVGuiSetup15EGraphicsOptionEE
 10CUtlMemoryIN4vgui16TextColorRange_tEE
 10CUtlMemoryIN4vgui16layoutcmd_base_tEE
+10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
 10CUtlMemoryIN7CScheme11fontalias_tEE
 10CUtlMemoryIP7CSchemeE
 10CUtlMemoryIP9CStyleSetE
 10CUtlMemoryIPFPvPKcPiEE
+10CUtlMemoryIPK11CFileWriterE
 10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlMemoryIPN4vgui6VPanelEE
 10CUtlMemoryIPN5CVGui6Tick_tEE
+10CUtlMemoryIPcE
 10CUtlMemoryIcE
+10CUtlMemoryIhE
 10CUtlMemoryIjE
 10CUtlMemoryIwE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
@@ -78,6 +103,8 @@ $ORIGIN
 10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -91,6 +118,7 @@ $ORIGIN
 10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS0_EE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE
 10CUtlString
@@ -98,7 +126,6 @@ $ORIGIN
 10CUtlVectorI10CUtlSymbol10CUtlMemoryIS0_EE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 10CUtlVectorI13MessageItem_t10CUtlMemoryIS0_EE
-10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 10CUtlVectorI16SFontDescription10CUtlMemoryIS0_EE
 10CUtlVectorI5Color10CUtlMemoryIS0_EE
 10CUtlVectorI7style_t10CUtlMemoryIS0_EE
@@ -112,18 +139,23 @@ $ORIGIN
 10CUtlVectorIN4vgui10IVGuiSetup15EGraphicsOptionE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui16TextColorRange_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui16layoutcmd_base_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN7CScheme11fontalias_tE10CUtlMemoryIS1_EE
 10CUtlVectorIP7CScheme10CUtlMemoryIS1_EE
 10CUtlVectorIP9CStyleSet10CUtlMemoryIS1_EE
 10CUtlVectorIPFPvPKcPiE10CUtlMemoryIS5_EE
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlVectorIPN4vgui6VPanelE10CUtlMemoryIS2_EE
 10CUtlVectorIPN5CVGui6Tick_tE10CUtlMemoryIS2_EE
+10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIc10CUtlMemoryIcEE
 10CUtlVectorIj10CUtlMemoryIjEE
 10CUtlVectorIw10CUtlMemoryIwEE
+10ConCommand
 10IAppSystem
 11CDirWatcher
+11CFileWriter
 11CInputLinux
 11CLayoutFile
 11CPathString
@@ -131,8 +163,15 @@ $ORIGIN
 11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS3_9StyleHashES2_E
 11KeyValuesAD
 12CBaseSurface
+12CDynamicFuncIPF14SDL_PowerStatePiS1_EE
+12CDynamicFuncIPFP10SDL_WindowPKciiyEE
+12CDynamicFuncIPFP18SDL_GLContextStateP10SDL_WindowEE
 12CDynamicFuncIPFP9_XDisplayPKcEE
 12CDynamicFuncIPFPKcjEE
+12CDynamicFuncIPFPjPiEE
+12CDynamicFuncIPFPvPKcEE
+12CDynamicFuncIPFb10SDL_GLAttriEE
+12CDynamicFuncIPFbP10SDL_WindowP18SDL_GLContextStateEE
 12CDynamicFuncIPFbjEE
 12CDynamicFuncIPFiP9_XDisplayEE
 12CDynamicFuncIPFiP9_XDisplayPmPiEE
@@ -142,8 +181,11 @@ $ORIGIN
 12CDynamicFuncIPFiPvEE
 12CDynamicFuncIPFjvEE
 12CDynamicFuncIPFmP9_XDisplayPKciEE
+12CDynamicFuncIPFvP10SDL_WindowEE
+12CDynamicFuncIPFvP18SDL_GLContextStateEE
+12CDynamicFuncIPFvPvEE
 12CDynamicFuncIPFvjEE
-12CIMENullImpl
+12CDynamicFuncIPFvvEE
 13VPanelWrapper
 14CSchemeManager
 14CSerializedIME
@@ -155,11 +197,13 @@ $ORIGIN
 14CUtlLinkedListIN4vgui13SerialPanel_tEjE
 14CUtlLinkedListIN4vgui16TextColorRange_tEiE
 14CUtlLinkedListIN5CVGui9Context_tEiE
+14ConCommandBase
 14IBaseInterface
 14ISurfaceHelper
 16CStyleAppearance
-16IDynamicFunction
 16IIMEPostCallback
+17CFileWriterThread
+17CStreamReaderBase
 17CUtlPriorityQueueI13MessageItem_tPFbRKS0_S2_E32CDefUtlPriorityQueueSetIndexFuncIS0_EE
 17CVGUI2DLLValidate
 17IVGuiModuleLoader
@@ -173,14 +217,21 @@ $ORIGIN
 21CUtlCStringConversion
 23CVGuiSystemModuleLoader
 24CDirWatcherPollingThread
+30!]^JV
 3333
 3333UUUU
+49fN
 4IIME
 4i5U6B738%9
 52F*
 5CVGui
+5T&w&
+6 PQ
+6ConVar
 7CScheme
 7CSystem
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
+7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE
 7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE
@@ -194,13 +245,19 @@ $ORIGIN
 7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS1_EEi8CDefLessE
 7CUtlMapIjss8CDefLessE
 7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
+7CUtlMapIybi8CDefLessE
 7CUtlPtrI16CStyleAppearanceE
 7style_t
 7~8A
+8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+8CAutoPtrI7CUtlMapIybi8CDefLessEE
 8CUtlDictI5Color22CDefCaselessStringLessiE
+8\foQS
 9CStyleSet
 9IValidate
 9a&g
+?456789:;<=
+A@qVc"
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 B#C0D?EQFeG|H
@@ -214,8 +271,10 @@ CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CreateInterface
 DDDDUUUU
+D\vvf:
 E=FZGrH
 Error
+FCZ&
 FT_Done_Face
 FT_Done_FreeType
 FT_Get_Char_Index
@@ -271,6 +330,7 @@ IceConnectionNumber
 IceProcessMessages
 IiGM>nw
 Is64BitOS
+JZJ{.
 KEY_APP
 KEY_BACKSPACE
 KEY_BREAK
@@ -334,6 +394,9 @@ M8MF
 MGiI
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread16CLogFileWorkItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 N4vgui10IVGuiSetupE
 N4vgui11IAppearanceE
 N4vgui13CLinuxSurfaceE
@@ -392,6 +455,7 @@ Qkkbal
 QyReSOT5U
 R1h58
 SKyu
+Sm"\vg
 SmcCloseConnection
 SmcGetIceConnection
 SmcOpenConnection
@@ -419,6 +483,7 @@ St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
+St17bad_function_call
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
@@ -716,10 +781,13 @@ XwcTextListToTextProperty
 YbZ6[
 Zjz\v
 [h1R
+\nYg:a
+\rRoOs
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \rmj>zjZ
 \t\t\n\n\v\v\f\f\f\f\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+]JldN
 ^oEZ_
 _DMsg
 _ITM_RU1
@@ -833,16 +901,20 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+`tun%
+a\rxg[
 abort
 accept
 access
 alcGetString
 alphasort64
+b,uZ
 bKGD
 bind
 bind_textdomain_codeset
 bindtextdomain
 btowc
+bwiO'
 cHRM
 calloc
 chdir
@@ -851,6 +923,7 @@ chown
 clock_gettime
 close
 closedir
+convar_
 dQy/
 dgettext
 dl_iterate_phdr
@@ -865,6 +938,7 @@ english
 eventfd
 ewh/?y
 execl
+f.N%H
 fP~V
 faccessat
 fallocate64
@@ -901,6 +975,7 @@ fu`z
 futimes
 fwrite
 gAMA
+gAY:
 g_ClockSpeed
 g_VProfProfilesRunningCount
 g_main_context_iteration
@@ -971,14 +1046,17 @@ i]Wb
 iconv
 iconv_close
 iconv_open
+ig,o
 ioctl
 isalnum
 isspace
 iswcntrl
 iswspace
+k2U\v
 kill
 l6qnk
 lDa>
+lEd/
 lchown
 ld-linux.so.2
 libGL.so.1
@@ -1029,11 +1107,13 @@ mold 1.10.1 (compatible with GNU ld)
 mount
 msync
 munmap
+mwa!
 oFFs
 open
 open64
 opendir
 pCAL
+pCRF
 pHYs
 pclose
 poll
@@ -1047,6 +1127,7 @@ pthread_once
 putc
 putwc
 pwrite64
+qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 qsort
 read
@@ -1165,5 +1246,6 @@ wn>Jj
 write
 writev
 y9*O
+zC`G;
 zTXt
 {kHw
