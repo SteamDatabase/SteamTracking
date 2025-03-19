@@ -3371,6 +3371,8 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux12SetWifiDebugEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetCECEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbEUlvE_
+*ZN23CSteamOSControllerLinux20CommitTDPLimitUpdateEvEUlvE_
+*ZN23CSteamOSControllerLinux25SetWifiForceWPASupplicantEbEUlvE_
 *ZN23CSystemDevkitController10InitializeEvEUlbE_
 *ZN23CSystemDevkitController24UpdateDevkitServiceStateEvEUlvE_
 *ZN23CSystemReportController15JSSaveToDesktopEPKc9CSmartPtrI18CJSCallbackPromiseEEUlvE_
@@ -5352,9 +5354,9 @@ ${LANGUAGE}
 /data/src/steamUI/shutdowncontroller.cpp
 /data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
-/data/src/steamUI/steamoscontroller.cpp
-/data/src/steamUI/steamoscontroller.cpp:781
-/data/src/steamUI/steamoscontroller.cpp:811
+/data/src/steamUI/steamoscontroller.cpp:650
+/data/src/steamUI/steamoscontroller.cpp:680
+/data/src/steamUI/steamosmanager.cpp
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -12891,6 +12893,8 @@ CSteamDoc::OnSteamLogon
 CSteamDoc::OnUnlockH264Result
 CSteamDoc::SetCurrentLanguage: invalid ELanguage %u
 CSteamGamesUIModule::LoadSteamClient
+CSteamOSManagerLegacy: using session bus
+CSteamOSManagerLegacy: using system bus
 CSteamOSManagerState
 CSteamOSSLSPlugin
 CSteamOSSLSState
@@ -13436,6 +13440,7 @@ Commit tdp limit update: %d - %d
 CommitAppBuild
 CommitHTTPUpload
 CommitSegmentUploads
+CommitTDPLimitUpdate
 CommitUGCUpload
 Common
 Communication error
@@ -13475,7 +13480,6 @@ ConfirmInviteToFamilyGroup
 ConfirmJoinFamilyGroup
 Connect
 ConnectToHelper
-ConnectToManager
 Connected
 ConnectingToSteam
 Connection established
@@ -14177,7 +14181,6 @@ Error: %s: timed out waiting for drive eject result
 Error: %s: timed out waiting for filesystem unmount result
 Error: %s: timed out while setting adapter discovery mode
 Error: %s: timed out while setting wifi debug mode
-Error: %s: unsupported SteamOSManager version: %d - min required: %d
 Error: %s: unsupported platform
 Error: CX11WindowProperty: failed to parse array property: key:%s format:%d index:%d
 Error: CX11WindowProperty: failed to parse property: key:%s format:%d
@@ -14423,7 +14426,6 @@ FavoriteGames
 Fb10StringViewS_E
 FbPKcE
 Feature support: %s: supported
-Feature support: %s: unavailable - manager version unsupported
 Feature support: %s: unavailable - property not supported
 FetchTranslationFromCrowdIn
 Field
@@ -15918,7 +15920,7 @@ ManifestSignature
 Manual
 Manual recording for game %s, no retention interval
 ManuallyDeleteRecordingsForApps
-Mar 18 2025 16:16:05
+Mar 19 2025 19:16:06
 MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
@@ -18282,6 +18284,7 @@ SetEnabled
 SetEquippedProfileItemFlags
 SetFamilyCooldownOverrides
 SetFavoriteBadge
+SetForceWPASupplicant
 SetHDRVisualization
 SetLoginState: %s - %s
 SetMiniDumpBuildID
@@ -18650,7 +18653,7 @@ SteamBootstrapper_GetInstallDir
 SteamBootstrapper_GetLoggingDir
 SteamBootstrapper_SetCommandLineToRunOnExit
 SteamChina.GetCustomLauncherAppID
-SteamClient021
+SteamClient022
 SteamClientService
 SteamConfigurator3rdPartyNative
 SteamControllerConfigDetails
@@ -18696,6 +18699,7 @@ SteamOSManager.FactoryReset#1
 SteamOSManager.GetState#1
 SteamOSManager.NotifyStateChanged#1
 SteamOSManager.OptOutOfSideloadedClient#1
+SteamOSManager: connecting to SteamOSManager legacy interface
 SteamOSSLS.GetState#1
 SteamOSSLS.NotifyStateChanged#1
 SteamOSSLS.SetEnabled#1
@@ -24472,6 +24476,7 @@ g_signal_new
 g_source_attach
 g_source_destroy
 g_source_set_callback
+g_source_set_name
 g_source_set_priority
 g_source_unref
 g_str_equal
@@ -24701,7 +24706,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggen6&o
 ghost_
 gidlist
 gidparentcomment
@@ -30306,8 +30311,12 @@ steam_oslog_submitter_helper_proxy_get_property
 steam_oslog_submitter_helper_proxy_set_property
 steam_oslog_submitter_manager_proxy_get_property
 steam_oslog_submitter_manager_proxy_set_property
-steam_osmanager_manager_proxy_get_property
-steam_osmanager_manager_proxy_set_property
+steam_osmanager1_tdp_limit1_proxy_get_property
+steam_osmanager1_tdp_limit1_proxy_set_property
+steam_osmanager1_wifi_debug1_proxy_get_property
+steam_osmanager1_wifi_debug1_proxy_set_property
+steam_osmanager_legacy__proxy_get_property
+steam_osmanager_legacy__proxy_set_property
 steam_play
 steam_play_debug
 steam_play_debug_version
@@ -31833,6 +31842,7 @@ workshop_itemid
 workshop_items
 workshop_visible
 workshopfiletype
+wpa_supplicant
 wpctl status
 wpp >= 1 && wpp <= 2
 write

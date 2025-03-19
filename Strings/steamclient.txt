@@ -2280,7 +2280,7 @@ $steammessages_parental_objects.proto"
 (.CTwoFactor_RemoveAuthenticator_Response"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
-(1~WQ
+(1^JQ
 (8GXgw
 (8HXhx
 (?R or (?[+-]digits must be followed by )
@@ -9423,6 +9423,7 @@ $steammessages_parental_objects.proto"
 22CAdapterSteamClient019
 22CAdapterSteamClient020
 22CAdapterSteamClient021
+22CAdapterSteamClient022
 22CBannedWordsDictionary
 22CBaseScheduledFunction
 22CCSRequestProcessorJob
@@ -13736,7 +13737,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42$
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -24762,6 +24763,7 @@ SteamClient018
 SteamClient019
 SteamClient020
 SteamClient021
+SteamClient022
 SteamClientLaunch
 SteamClientService
 SteamCloudDocuments
@@ -31446,6 +31448,7 @@ g_signal_new
 g_source_attach
 g_source_destroy
 g_source_set_callback
+g_source_set_name
 g_source_set_priority
 g_source_unref
 g_str_equal
