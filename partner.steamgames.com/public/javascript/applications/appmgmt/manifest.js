@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9614394";
+var CLSTAMP = "9616444";
 (() => {
   "use strict";
   var e,
@@ -22,14 +22,14 @@ var CLSTAMP = "9614394";
       if (!n) {
         var d = 1 / 0;
         for (o = 0; o < e.length; o++) {
-          for (var [n, s, c] = e[o], r = !0, i = 0; i < n.length; i++)
-            (!1 & c || d >= c) && Object.keys(f.O).every((e) => f.O[e](n[i]))
-              ? n.splice(i--, 1)
+          for (var [n, s, c] = e[o], r = !0, b = 0; b < n.length; b++)
+            (!1 & c || d >= c) && Object.keys(f.O).every((e) => f.O[e](n[b]))
+              ? n.splice(b--, 1)
               : ((r = !1), c < d && (d = c));
           if (r) {
             e.splice(o--, 1);
-            var b = s();
-            void 0 !== b && (a = b);
+            var i = s();
+            void 0 !== i && (a = i);
           }
         }
         return a;
@@ -295,7 +295,7 @@ var CLSTAMP = "9614394";
         3025: "cf64ee5f5d4e1bdc2428",
         3216: "564c7d19d20701b33fa8",
         3266: "4a69ee181f6bf7ce3fb7",
-        3350: "e347cee2219221487335",
+        3350: "17694a34d318bdf56afc",
         3374: "312e646faf6aa25d9baa",
         3436: "e113d344729bf444c5d7",
         3562: "5bc4be530d34dbdc53aa",
@@ -471,14 +471,14 @@ var CLSTAMP = "9614394";
     (f.l = (e, a, n, d) => {
       if (s[e]) s[e].push(a);
       else {
-        var r, i;
+        var r, b;
         if (void 0 !== n)
           for (
-            var b = document.getElementsByTagName("script"), o = 0;
-            o < b.length;
+            var i = document.getElementsByTagName("script"), o = 0;
+            o < i.length;
             o++
           ) {
-            var t = b[o];
+            var t = i[o];
             if (
               t.getAttribute("src") == e ||
               t.getAttribute("data-webpack") == c + n
@@ -488,7 +488,7 @@ var CLSTAMP = "9614394";
             }
           }
         r ||
-          ((i = !0),
+          ((b = !0),
           ((r = document.createElement("script")).charset = "utf-8"),
           (r.timeout = 120),
           f.nc && r.setAttribute("nonce", f.nc),
@@ -512,7 +512,7 @@ var CLSTAMP = "9614394";
           );
         (r.onerror = l.bind(null, r.onerror)),
           (r.onload = l.bind(null, r.onload)),
-          i && document.head.appendChild(r);
+          b && document.head.appendChild(r);
       }
     }),
     (f.r = (e) => {
@@ -565,7 +565,7 @@ var CLSTAMP = "9614394";
                       else {
                         var r = n && n.type,
                           f = (n && n.target && n.target.href) || a,
-                          i = new Error(
+                          b = new Error(
                             "Loading CSS chunk " +
                               e +
                               " failed.\n(" +
@@ -574,12 +574,12 @@ var CLSTAMP = "9614394";
                               f +
                               ")",
                           );
-                        (i.name = "ChunkLoadError"),
-                          (i.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (i.type = r),
-                          (i.request = f),
+                        (b.name = "ChunkLoadError"),
+                          (b.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (b.type = r),
+                          (b.request = f),
                           d.parentNode && d.parentNode.removeChild(d),
-                          c(i);
+                          c(b);
                       }
                     }),
                   (d.href = a),
@@ -661,14 +661,14 @@ var CLSTAMP = "9614394";
       var a = (a, n) => {
           var s,
             c,
-            [d, r, i] = n,
-            b = 0;
+            [d, r, b] = n,
+            i = 0;
           if (d.some((a) => 0 !== e[a])) {
             for (s in r) f.o(r, s) && (f.m[s] = r[s]);
-            if (i) var o = i(f);
+            if (b) var o = b(f);
           }
-          for (a && a(n); b < d.length; b++)
-            (c = d[b]), f.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
+          for (a && a(n); i < d.length; i++)
+            (c = d[i]), f.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
           return f.O(o);
         },
         n = (self.webpackChunkappmgmt_storeadmin =

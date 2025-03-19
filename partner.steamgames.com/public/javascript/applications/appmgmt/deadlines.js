@@ -542,14 +542,15 @@
           l = (0, n.useCallback)(async () => {
             if ((i(""), !t.deadline?.data?.partnerid))
               return void i("An error occurred.  Missing partner id");
-            const e = `${p.TS.PARTNER_BASE_URL}pub/ajaxstarttaxidentityworkflow/${t.deadline.data.partnerid}`,
-              a = new FormData();
-            a.append("sessionid", p.TS.SESSIONID), o(!0);
+            const e = t.onboarded ? "pub" : "newpartner",
+              a = `${p.TS.PARTNER_BASE_URL}${e}/ajaxstarttaxidentityworkflow/${t.deadline.data.partnerid}`,
+              n = new FormData();
+            n.append("sessionid", p.TS.SESSIONID), o(!0);
             try {
-              const t = await y().post(e, a, { withCredentials: !0 });
-              200 == t?.status && 1 == t.data?.success && t.data.url
-                ? window.open(t.data.url, "_blank")
-                : i("An error occurred. " + (0, v.H)(t)?.strErrorMsg);
+              const e = await y().post(a, n, { withCredentials: !0 });
+              200 == e?.status && 1 == e.data?.success && e.data.url
+                ? window.open(e.data.url, "_blank")
+                : i("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
             } catch (e) {
               i("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
             }

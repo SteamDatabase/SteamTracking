@@ -975,6 +975,7 @@ ${MEDIA_CDN_URL}store/promo/summer2022/card_stack.png?v-1
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
+${PARTNER_BASE_URL}${}/ajaxstarttaxidentityworkflow/${partnerid}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/mediaconvert/ajaxconvertmedia
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
@@ -1251,7 +1252,6 @@ ${PARTNER_BASE_URL}promotion/themesales/dashboard
 ${PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
 ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
-${PARTNER_BASE_URL}pub/ajaxstarttaxidentityworkflow/${partnerid}
 ${PARTNER_BASE_URL}pub/companydetails/${partnerid}
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
 ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
