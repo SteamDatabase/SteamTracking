@@ -5897,6 +5897,52 @@
         return e.useActiveAccount();
       }
     },
+    39020: (e, t, r) => {
+      "use strict";
+      r.d(t, { Fv: () => o, MB: () => c });
+      var a = r(56545),
+        i = r(75487),
+        n = r(23809),
+        s = r(20194);
+      function o(e) {
+        const t = (0, n.TR)(),
+          r = (0, n.rX)();
+        return (0, s.I)(l(t.GetAnonymousServiceTransport(), r, e));
+      }
+      function l(e, t, r) {
+        return {
+          queryKey: ["LocalizedTagNames", r],
+          queryFn: async () => {
+            const n = `LocalizedTagNames2_${r}`,
+              s = await t.GetObject(n),
+              o = a.w.Init(i.Gr);
+            o.Body().set_language(r),
+              s?.version_hash && o.Body().set_have_version_hash(s.version_hash);
+            const l = await i.nd.GetTagList(e, o);
+            let c;
+            if (1 == l.GetEResult())
+              (c = l.Body().toObject()), t && t.StoreObject(n, c);
+            else if (29 == l.GetEResult()) c = s || void 0;
+            else {
+              if (!s) throw l.GetErrorMessage();
+              console.warn(
+                "Couldn't load updated tag localization, will continue with what we have from storage.",
+              ),
+                (c = s);
+            }
+            const m = {};
+            return (
+              (c?.tags || []).forEach(({ tagid: e, name: t }) => (m[e] = t)), m
+            );
+          },
+          staleTime: 36e5,
+        };
+      }
+      function c(e, t) {
+        const { data: r } = o(t);
+        return r && r[e];
+      }
+    },
     3578: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => n });
@@ -7387,7 +7433,7 @@
         _ = r(82097),
         g = r(44332),
         h = r(61859),
-        y = r(19719),
+        y = r(61732),
         b = r(27543),
         f = (r(41735), r(90626), r(68797), r(78327));
       var w = r(41338),
@@ -9716,7 +9762,7 @@
       }
       var u = r(36064),
         p = r(47831),
-        _ = r(19719),
+        _ = r(61732),
         g = r(78327),
         h = r(6419),
         y = r(34374),
@@ -13405,7 +13451,7 @@
     },
     30894: (e, t, r) => {
       "use strict";
-      r.d(t, { Fm: () => g, L2: () => h, Lg: () => y });
+      r.d(t, { Fm: () => h, L2: () => y, Lg: () => b });
       var a,
         i = r(34629),
         n = r(41735),
@@ -13415,7 +13461,8 @@
         c = r(78327),
         m = r(90626),
         d = r(56011),
-        u = r(3578);
+        u = r(3578),
+        p = r(2627);
       !(function (e) {
         (e[(e.AnyController = 0)] = "AnyController"),
           (e[(e.XboxController = 1)] = "XboxController"),
@@ -13427,7 +13474,7 @@
           (e[(e.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
           (e[(e.SteamDeckGalileo = 8)] = "SteamDeckGalileo");
       })(a || (a = {}));
-      const p = {
+      const _ = {
           any_controller: a.AnyController,
           xbox_controller: a.XboxController,
           ps3_controller: a.Ps3Controller,
@@ -13438,15 +13485,17 @@
           steam_deck_neptune: a.SteamDeckNeptune,
           steam_deck_galileo: a.SteamDeckGalileo,
         },
-        _ = "unUserdataVersion";
-      class g {
+        g = "unUserdataVersion";
+      class h {
         m_setWishList = new Set();
         m_wishlistInOrder = Array();
         m_setOwnedPackages = new Set();
         m_setOwnedApps = new Set();
         m_setFollowedApps = new Set();
         m_setExcludedTagsIds = new Set();
-        m_setExcludedContentDescriptors = new Set();
+        m_setExcludedContentDescriptors = new Set(
+          c.iA.excluded_content_descriptors,
+        );
         m_setRecommendedApps = new Set();
         m_recAppInOrder = new Array();
         m_mapIgnoredApps = new Map();
@@ -13603,7 +13652,7 @@
           );
         }
         async InternalLoad() {
-          let e = window.localStorage.getItem(_) || "0",
+          let e = window.localStorage.getItem(g) || "0",
             t = {
               v: "0" == e ? void 0 : e,
               id: "" + c.iA.accountid,
@@ -13663,12 +13712,13 @@
                     (this.m_setExcludedTagsIds = new Set(
                       e.data.rgExcludedTags.map((e) => Number(e.tagid)),
                     )),
-                  e.data.rgExcludedContentDescriptorIDs &&
-                    (this.m_setExcludedContentDescriptors = new Set(
-                      e.data.rgExcludedContentDescriptorIDs.map((e) =>
-                        Number(e),
-                      ),
-                    )),
+                  h.BConfirmedAdultContentAgeGate()
+                    ? (this.m_setExcludedContentDescriptors = new Set())
+                    : (this.m_setExcludedContentDescriptors = new Set(
+                        e.data.rgExcludedContentDescriptorIDs.map((e) =>
+                          Number(e),
+                        ),
+                      )),
                   e.data.rgRecommendedApps &&
                     ((this.m_recAppInOrder = e.data.rgRecommendedApps.map((e) =>
                       Number(e),
@@ -13712,7 +13762,7 @@
                   }
                 if (e.data.rgHardwareUsed)
                   for (const t of e.data.rgHardwareUsed) {
-                    const e = p[t];
+                    const e = _[t];
                     e && this.m_rgHardwareUsed.add(e);
                   }
               });
@@ -13891,81 +13941,84 @@
         }
         InvalidateCache() {
           window.localStorage.setItem(
-            _,
+            g,
             (
-              Number.parseInt(window.localStorage.getItem(_) || "0") + 1
+              Number.parseInt(window.localStorage.getItem(g) || "0") + 1
             ).toString(),
           );
         }
         static s_globalSingletonStore;
         static Get() {
           return (
-            g.s_globalSingletonStore ||
-              ((g.s_globalSingletonStore = new g()),
+            h.s_globalSingletonStore ||
+              ((h.s_globalSingletonStore = new h()),
               "dev" == c.TS.WEB_UNIVERSE &&
-                (window.DUS = g.s_globalSingletonStore)),
-            g.s_globalSingletonStore
+                (window.DUS = h.s_globalSingletonStore)),
+            h.s_globalSingletonStore
           );
+        }
+        static BConfirmedAdultContentAgeGate() {
+          return (0, p.VY)("wants_mature_content");
         }
         constructor() {
           (0, o.Gn)(this);
         }
       }
-      function h() {
-        const [e, t] = (0, m.useState)(!g.Get().BIsLoaded());
+      function y() {
+        const [e, t] = (0, m.useState)(!h.Get().BIsLoaded());
         return (
           (0, m.useEffect)(() => {
             e &&
-              g
+              h
                 .Get()
                 .HintLoad()
-                .finally(() => t(!g.Get().BIsLoaded()));
+                .finally(() => t(!h.Get().BIsLoaded()));
           }, [e]),
-          [e, g.Get()]
+          [e, h.Get()]
         );
       }
-      function y(e) {
-        const [t, r] = h();
+      function b(e) {
+        const [t, r] = y();
         return !t && r.BOwnsApp(e);
       }
-      (0, i.Cg)([o.sH], g.prototype, "m_setWishList", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setOwnedPackages", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setOwnedApps", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setFollowedApps", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setExcludedTagsIds", void 0),
+      (0, i.Cg)([o.sH], h.prototype, "m_setWishList", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setOwnedPackages", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setOwnedApps", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setFollowedApps", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setExcludedTagsIds", void 0),
         (0, i.Cg)(
           [o.sH],
-          g.prototype,
+          h.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, i.Cg)([o.sH], g.prototype, "m_setRecommendedApps", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_mapIgnoredApps", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_mapIgnoredPackages", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setCuratorsFollowed", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setCuratorsIgnored", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setRecommendedApps", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_mapIgnoredApps", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_mapIgnoredPackages", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setCuratorsFollowed", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setCuratorsIgnored", void 0),
         (0, i.Cg)(
           [o.sH],
-          g.prototype,
+          h.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, i.Cg)([o.sH], g.prototype, "m_primaryLanguage", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_secondaryLanguages", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_rgRecommendedTags", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_primaryLanguage", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_secondaryLanguages", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_rgRecommendedTags", void 0),
         (0, i.Cg)(
           [o.sH],
-          g.prototype,
+          h.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, i.Cg)([o.sH], g.prototype, "m_setPackagesInCart", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_setAppsInCart", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_nCartLineItemCount", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_rgHardwareUsed", void 0),
-        (0, i.Cg)([o.sH], g.prototype, "m_bAjaxInFlight", void 0),
-        (0, i.Cg)([o.EW], g.prototype, "ExcludedContentDescriptor", null),
-        (0, i.Cg)([o.XI], g.prototype, "UpdateAppIgnore", null);
+        (0, i.Cg)([o.sH], h.prototype, "m_setPackagesInCart", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_setAppsInCart", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_nCartLineItemCount", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_rgHardwareUsed", void 0),
+        (0, i.Cg)([o.sH], h.prototype, "m_bAjaxInFlight", void 0),
+        (0, i.Cg)([o.EW], h.prototype, "ExcludedContentDescriptor", null),
+        (0, i.Cg)([o.XI], h.prototype, "UpdateAppIgnore", null);
     },
     30193: (e, t, r) => {
       "use strict";
@@ -16856,63 +16909,6 @@
       }
       function h(e, t, r) {
         return p(e, 1, t, r);
-      }
-    },
-    80782: (e, t, r) => {
-      "use strict";
-      r.d(t, { Fv: () => l, LG: () => d, MB: () => m });
-      var a = r(56545),
-        i = r(75487),
-        n = r(20194),
-        s = r(23809),
-        o = r(78327);
-      function l(e = o.TS.LANGUAGE) {
-        const t = (0, s.TR)(),
-          r = (0, s.rX)();
-        return (0, n.I)(c(t, r, e));
-      }
-      function c(e, t, r) {
-        return {
-          queryKey: ["LocalizedTagNames", r],
-          queryFn: async () => {
-            const n = `LocalizedTagNames_${r}`,
-              s = await t.GetObject(n),
-              o = a.w.Init(i.Gr);
-            o.Body().set_language(r),
-              s?.version_hash && o.Body().set_have_version_hash(s.version_hash);
-            const l = await i.nd.GetTagList(
-              e.GetAnonymousServiceTransport(),
-              o,
-            );
-            let c;
-            if (1 == l.GetEResult())
-              (c = l.Body().toObject()), t.StoreObject(n, c);
-            else if (29 == l.GetEResult()) c = s;
-            else {
-              if (!s) throw l.GetErrorMessage();
-              console.warn(
-                "Couldn't load updated tag localization, will continue with what we have from storage.",
-              ),
-                (c = s);
-            }
-            const m = new Map();
-            return (
-              c.tags.forEach(({ tagid: e, name: t }) =>
-                m.set(e, { tagid: e, name: t }),
-              ),
-              m
-            );
-          },
-          staleTime: 36e5,
-        };
-      }
-      function m(e, t = o.TS.LANGUAGE) {
-        const { data: r } = l(t);
-        return e ? r?.get(e) : void 0;
-      }
-      function d(e, t = o.TS.LANGUAGE) {
-        const { data: r } = l(t);
-        return e?.map((e) => r?.get(e)).filter(Boolean);
       }
     },
     6469: (e, t, r) => {
@@ -21244,11 +21240,6 @@
                     br: f.qM.readUint32,
                     bw: f.gp.writeUint32,
                   },
-                  num_paused: {
-                    n: 10,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
                   bytes_download_rate: {
                     n: 11,
                     br: f.qM.readUint32,
@@ -21326,6 +21317,11 @@
                     bw: f.gp.writeUint32,
                   },
                   running: { n: 33, br: f.qM.readBool, bw: f.gp.writeBool },
+                  update_percentage: {
+                    n: 34,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
                 },
               }),
             de.sm_m
@@ -22068,7 +22064,6 @@
         category;
         app_type;
         num_downloading;
-        num_paused;
         bytes_download_rate;
         bytes_downloaded;
         bytes_to_download;
@@ -22087,8 +22082,15 @@
         queue_position;
         uninstalling;
         rt_time_scheduled;
+        update_percentage;
         BIsDownloading() {
           return this.num_downloading > 0;
+        }
+        SetDownloading() {
+          (this.num_downloading = 1), (this.download_paused = !1);
+        }
+        SetPaused(e) {
+          (this.download_paused = e), (this.num_downloading = e ? 0 : 1);
         }
         BIsAtTopOfQueue() {
           return 0 === this.queue_position;
@@ -22195,7 +22197,7 @@
                 if (!t) return 6e4;
                 let r = !1;
                 for (const e of t.mapApps.values())
-                  if (e.num_downloading > 0 || e.uninstalling) {
+                  if (e.BIsDownloading() || e.uninstalling) {
                     r = !0;
                     break;
                   }
@@ -22733,10 +22735,7 @@
                     new Error(`Error from InstallClientApp: ${o.GetEResult()}`))
                   );
                 const l = i?.data;
-                l &&
-                  l.get(t) &&
-                  ((l.get(t).app.num_downloading = 1),
-                  (l.get(t).app.download_paused = !1)),
+                l && l.get(t) && l.get(t).app.SetDownloading(),
                   s.setQueryData(De(n, e), l),
                   i.refetch();
               },
@@ -25588,13 +25587,13 @@
     99032: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AX: () => g,
-        H2: () => u,
-        Li: () => _,
-        S7: () => d,
-        a9: () => h,
-        jy: () => p,
-        sd: () => m,
+        AX: () => h,
+        H2: () => p,
+        Li: () => g,
+        S7: () => u,
+        a9: () => y,
+        jy: () => _,
+        sd: () => d,
       });
       var a = r(57876),
         i = r(62792),
@@ -25602,11 +25601,12 @@
         s = r(30894),
         o = r(82097),
         l = r(78327),
-        c = r(36837);
-      function m(e) {
+        c = r(36837),
+        m = r(81393);
+      function d(e) {
         return o.A.Get().BIsStoreItemMissing(e.id, (0, i.SW)(e.type));
       }
-      function d(e, t, r) {
+      function u(e, t, r) {
         const a = new Array();
         return (
           e?.forEach((e) => a.push({ id: e, type: "game" })),
@@ -25615,7 +25615,7 @@
           a
         );
       }
-      async function u(e, t, r) {
+      async function p(e, t, r) {
         if (!e || 0 == e.length) return [];
         const a = e.filter((e) => (0, n.f)(e.type)).map((e) => e.id),
           i = e.filter((e) => "sub" === e.type).map((e) => e.id),
@@ -25654,14 +25654,15 @@
           return t && !t.GetParentAppID();
         });
       }
-      const p = {
+      const _ = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
       };
-      function _(e) {
-        const t = s.Fm.Get(),
-          r = e?.GetAllLanguagesWithSomeSupport() || [],
+      function g(e) {
+        const t = s.Fm.Get();
+        (0, m.w)(t.BIsLoaded(), "Dynamic Store not loaded");
+        const r = e?.GetAllLanguagesWithSomeSupport() || [],
           a = c.f.Get().GetHomeView()?.localized;
         return (
           !e ||
@@ -25679,11 +25680,11 @@
             ))
         );
       }
-      async function g(e, t, r, n) {
+      async function h(e, t, r, n) {
         let s = 0,
           c = 0;
         const m = [];
-        await u(e, a.Xh, t);
+        await p(e, a.Xh, t);
         for (const a of e) {
           const e = o.A.Get().GetStoreItem(a.id, (0, i.SW)(a.type));
           if (!e) {
@@ -25701,7 +25702,7 @@
                 .filter(Boolean);
             t && l.push(...t);
           }
-          l.some(n || _) ? (c++, r && r.push(a)) : m.push(a);
+          l.some(n || g) ? (c++, r && r.push(a)) : m.push(a);
         }
         return (
           "dev" === l.TS.WEB_UNIVERSE &&
@@ -25716,8 +25717,8 @@
           m
         );
       }
-      async function h(e, t, r, a, n, l, c) {
-        let m = await g(
+      async function y(e, t, r, a, n, l, c) {
+        let m = await h(
           e,
           t,
           c,
@@ -25728,7 +25729,7 @@
                   e.GetContentDescriptorIDs(),
                 ) ||
                 s.Fm.Get().BExcludeTagIDs(e.GetTagIDs())
-            : _,
+            : g,
         );
         const d = [];
         for (const e of m) {
@@ -25752,7 +25753,7 @@
         n = r(6866),
         s = r(45699),
         o = r(76217),
-        l = r(97907),
+        l = r(23310),
         c = r(85044),
         m = r(91822),
         d = r(55963),
@@ -26950,7 +26951,7 @@
       r.d(t, { n: () => u, p: () => p });
       var a = r(90626),
         i = r(22837),
-        n = r(80782),
+        n = r(39020),
         s = r(18654),
         o = r.n(s),
         l = r(90595),
@@ -26959,39 +26960,38 @@
         d = r(78327);
       function u(e) {
         const {
-            rgTagIDs: t,
-            instanceNum: r,
-            bShowEvenIfNoTags: i,
-            bHideTitle: s,
-            bLargeText: l,
-            bNoStoreLinks: d,
-          } = e,
-          u = (0, n.LG)(t);
-        return u?.length > 0 || i
+          rgTagIDs: t,
+          instanceNum: r,
+          bShowEvenIfNoTags: i,
+          bHideTitle: n,
+          bLargeText: s,
+          bNoStoreLinks: l,
+        } = e;
+        return t?.length > 0 || i
           ? a.createElement(
               "div",
               {
                 className: (0, c.A)(
                   o().SaleTagBlockCtn,
-                  l ? o().LargeText : "",
+                  s ? o().LargeText : "",
                   "SaleTagBlockCtn",
                 ),
               },
-              Boolean(!s) &&
+              Boolean(!n) &&
                 a.createElement(
                   "div",
                   { className: (0, c.A)(o().TagTitle, "WidgetTagTitle") },
                   (0, m.we)("#GameHover_Tags"),
                 ),
-              Boolean(u?.length > 0)
+              Boolean(t?.length > 0)
                 ? a.createElement(
                     "div",
                     { className: (0, c.A)(o().TagBox, "TagBox") },
-                    u.map((e) =>
+                    t.map((e) =>
                       a.createElement(_, {
-                        key: "tag_" + r + "_" + e.tagid,
-                        tag: e,
-                        bNoStoreLinks: d,
+                        key: e,
+                        tagid: e,
+                        bNoStoreLinks: l,
                       }),
                     ),
                   )
@@ -27001,31 +27001,34 @@
       }
       function p(e) {
         const { tagid: t, className: r } = e,
-          s = (0, n.MB)(t);
+          s = (0, n.MB)(t, d.TS.LANGUAGE);
         if (!s) return null;
         const m = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
-          u = `${d.TS.STORE_BASE_URL}tags/${m}/${s?.name}`;
+          u = `${d.TS.STORE_BASE_URL}tags/${m}/${s}`;
         return a.createElement(
           l.q,
           { url: u, className: (0, c.A)(o().Tag, "WidgetTag", r) },
-          s.name,
+          s,
         );
       }
       function _(e) {
-        const { tag: t, className: r, bNoStoreLinks: n } = e,
-          s = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
-          m = `${d.TS.STORE_BASE_URL}tags/${s}/${t.name}`;
-        return n
-          ? a.createElement(
-              "div",
-              { className: (0, c.A)(o().Tag, "WidgetTag", r) },
-              t.name,
-            )
-          : a.createElement(
-              l.q,
-              { url: m, className: (0, c.A)(o().Tag, "WidgetTag", r) },
-              t.name,
-            );
+        const { tagid: t, className: r, bNoStoreLinks: s } = e,
+          m = (0, i.ww)((0, i.sf)(d.TS.LANGUAGE)),
+          u = (0, n.MB)(t, d.TS.LANGUAGE),
+          p = `${d.TS.STORE_BASE_URL}tags/${m}/${u}`;
+        return u
+          ? s
+            ? a.createElement(
+                "div",
+                { className: (0, c.A)(o().Tag, "WidgetTag", r) },
+                u,
+              )
+            : a.createElement(
+                l.q,
+                { url: p, className: (0, c.A)(o().Tag, "WidgetTag", r) },
+                u,
+              )
+          : null;
       }
     },
     92532: (e, t, r) => {

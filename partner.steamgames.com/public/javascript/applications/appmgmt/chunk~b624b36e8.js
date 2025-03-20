@@ -40,7 +40,7 @@
       }
     },
     47831: (e, t, i) => {
-      i.d(t, { Zn: () => O, N_: () => U, lU: () => N, Br: () => I });
+      i.d(t, { Zn: () => O, N_: () => U, lU: () => N, Br: () => F });
       var n = i(34629),
         s = i(41735),
         r = i.n(s),
@@ -49,7 +49,7 @@
         m = i(44332),
         d = i(6144),
         l = i(61859),
-        h = i(19719),
+        h = i(61732),
         u = i(6419),
         _ = i(14771),
         p = i(78327),
@@ -638,7 +638,7 @@
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
       })(L || (L = {}));
-      class F {
+      class I {
         m_callbacks = null;
         m_mpd = null;
         m_adaptation = null;
@@ -1131,15 +1131,15 @@
             : (8 * t * 1e3) / e;
         }
       }
-      (0, n.Cg)([u.o], F.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, n.Cg)([u.o], F.prototype, "OnMediaUnsupportedError", null),
-        (0, n.Cg)([u.o], F.prototype, "OnSourceBufferError", null),
-        (0, n.Cg)([u.o], F.prototype, "OnSourceBufferAbort", null),
-        (0, n.Cg)([u.o], F.prototype, "ScheduleNextDownload", null),
-        (0, n.Cg)([u.o], F.prototype, "DownloadNextSegment", null),
-        (0, n.Cg)([u.o], F.prototype, "DownloadFailed", null),
-        (0, n.Cg)([u.o], F.prototype, "DownloadGone", null);
-      const I = 5,
+      (0, n.Cg)([u.o], I.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, n.Cg)([u.o], I.prototype, "OnMediaUnsupportedError", null),
+        (0, n.Cg)([u.o], I.prototype, "OnSourceBufferError", null),
+        (0, n.Cg)([u.o], I.prototype, "OnSourceBufferAbort", null),
+        (0, n.Cg)([u.o], I.prototype, "ScheduleNextDownload", null),
+        (0, n.Cg)([u.o], I.prototype, "DownloadNextSegment", null),
+        (0, n.Cg)([u.o], I.prototype, "DownloadFailed", null),
+        (0, n.Cg)([u.o], I.prototype, "DownloadGone", null);
+      const F = 5,
         E = "auto";
       var x, U, N;
       !(function (e) {
@@ -1423,7 +1423,7 @@
                 ((t = e), (this.m_strAudioAdaptationID = e.strID)),
               t)
             ) {
-              let e = new F(this, this.m_mpd, t, this.m_stats);
+              let e = new I(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -1629,7 +1629,9 @@
                 : 0;
             return this.m_seekingToTime.nTime + e;
           }
-          return this.m_bUseHLSManifest && this.m_mpd
+          return this.m_bUseHLSManifest &&
+            this.m_mpd &&
+            this.m_mpd.IsLiveContent()
             ? (this.m_elVideo.currentTime > 0 &&
                 0 === this.m_hlsTimeOffset &&
                 (this.m_hlsTimeOffset =
@@ -1898,17 +1900,18 @@
               );
           (this.m_seekingToTime = null),
             (0, g.q_)("Starting playback at " + e),
-            this.m_stats.SetSegmentDurationMS(
-              this.GetVideoLoader().GetCurrentSegmentDurationMS(),
-            ),
-            this.m_stats.SetAnalyticLinks(
-              this.m_mpd.GetStatsLink(),
-              this.m_mpd.GetStalledLink(),
-              this.m_mpd.GetEventLink(),
-            ),
-            this.m_stats.SetVideoInitializationURL(
-              this.GetVideoLoader().GetCurrentSegmentInitializationURL(),
-            ),
+            this.m_bUseHLSManifest ||
+              (this.m_stats.SetSegmentDurationMS(
+                this.GetVideoLoader().GetCurrentSegmentDurationMS(),
+              ),
+              this.m_stats.SetAnalyticLinks(
+                this.m_mpd.GetStatsLink(),
+                this.m_mpd.GetStalledLink(),
+                this.m_mpd.GetEventLink(),
+              ),
+              this.m_stats.SetVideoInitializationURL(
+                this.GetVideoLoader().GetCurrentSegmentInitializationURL(),
+              )),
             this.Seek(e);
         }
         VerifyFirstSegmentDownloadProgress() {
@@ -2030,11 +2033,11 @@
           const s = e;
           (e = h.OQ(e, i, n)) != s &&
             (0, g.q_)(`Seek time ${s} was clamped to the range ${i} to ${n}`),
-            (this.m_bUserLiveEdgeChoice = e >= n - I);
+            (this.m_bUserLiveEdgeChoice = e >= n - F);
           let r = this.m_elVideo.paused;
           if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
-              this.m_elVideo.play();
+              this.PlayOnElement();
           else {
             (this.m_bIsBuffering = !0),
               (this.m_seekingToTime = { nTime: e, eSeekType: N.Absolute });

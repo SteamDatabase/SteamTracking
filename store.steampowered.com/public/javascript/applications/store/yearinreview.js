@@ -1761,7 +1761,7 @@
           ? (0, g.we)("#YIR_Percent", "<1")
           : (0, g.we)("#YIR_Percent", Math.round(e / 100).toFixed(0));
       }
-      var A = a(19719);
+      var A = a(61732);
       function I(e, t, a, n) {
         const { rgRankings: r, nTotalResultCount: s } = C(e, t, a),
           l = r.map((a) => {
@@ -3273,7 +3273,7 @@
       }
       var Ze = a(7550),
         Xe = a.n(Ze),
-        ze = a(80782),
+        ze = a(30470),
         $e = a(69235),
         et = a(91843),
         tt = a(9495),
@@ -3327,8 +3327,9 @@
             : n.createElement(n.Fragment, null, (0, ue.Dq)(d))
         );
       };
-      var ot = a(79613);
-      const mt = () => {
+      var ot = a(79613),
+        mt = a(39020);
+      const ct = () => {
           const e = v();
           return n.createElement(
             "svg",
@@ -3404,7 +3405,7 @@
             }),
           );
         },
-        ct = () => {
+        dt = () => {
           const e = v();
           return n.createElement(
             "svg",
@@ -3442,7 +3443,7 @@
             }),
           );
         },
-        dt = () => {
+        ut = () => {
           const e = v();
           return n.createElement(
             "svg",
@@ -3468,7 +3469,7 @@
             }),
           );
         };
-      function ut(e) {
+      function _t(e) {
         const { userYearInReview: t } = e,
           a = v();
         return n.createElement(
@@ -3485,18 +3486,18 @@
             n.createElement(
               "div",
               { className: Xe().TopHonorsCtn },
-              n.createElement(_t, { userYearInReview: t }),
+              n.createElement(pt, { userYearInReview: t }),
               n.createElement(
                 "div",
                 { className: Xe().SpiderAndNumbersCnt },
-                n.createElement(vt, { userYearInReview: t }),
-                n.createElement(Et, { userYearInReview: t }),
+                n.createElement(yt, { userYearInReview: t }),
+                n.createElement(St, { userYearInReview: t }),
               ),
             ),
           ),
         );
       }
-      function _t(e) {
+      function pt(e) {
         let { userYearInReview: t } = e;
         t.GetYear();
         const a = E(),
@@ -3505,41 +3506,41 @@
           l = t.GetFilteredGameSummary()?.length || 0,
           i =
             t.GetPlayTimeStats().playtime_streak?.longest_consecutive_days || 0,
-          m = t.GetPlayTimeStats().by_numbers?.achievements_pct || 0,
-          c = t.GetPlayTimeStats().by_numbers?.games_played_pct || 0,
-          d = t.GetPlayTimeStats().by_numbers?.game_streak_pct || 0,
-          u = i > 0 && d > 0 && "cn" !== o.iA.country_code.toLowerCase();
-        m >= 99 && (m = 100),
+          o = t.GetPlayTimeStats().by_numbers?.achievements_pct || 0,
+          m = t.GetPlayTimeStats().by_numbers?.games_played_pct || 0,
+          c = t.GetPlayTimeStats().by_numbers?.game_streak_pct || 0,
+          d = i > 0 && c > 0 && "cn" !== ze.iA.country_code.toLowerCase();
+        o >= 99 && (o = 100),
+          m >= 99 && (m = 100),
           c >= 99 && (c = 100),
-          d >= 99 && (d = 100),
-          s == t.GetPlayTimeStats().by_numbers?.achievements_avg && (m = 50),
-          l == t.GetPlayTimeStats().by_numbers?.games_played_avg && (c = 50),
-          i == t.GetPlayTimeStats().by_numbers?.game_streak_avg && (d = 50);
-        const [_, p] = n.useState(!1),
-          [g, h] = n.useState(!1),
-          [y, S] = n.useState(!1),
-          A = n.useCallback(async (e) => {
-            e && (p(!0), h(!0), S(!0));
+          s == t.GetPlayTimeStats().by_numbers?.achievements_avg && (o = 50),
+          l == t.GetPlayTimeStats().by_numbers?.games_played_avg && (m = 50),
+          i == t.GetPlayTimeStats().by_numbers?.game_streak_avg && (c = 50);
+        const [u, _] = n.useState(!1),
+          [p, g] = n.useState(!1),
+          [h, y] = n.useState(!1),
+          S = n.useCallback(async (e) => {
+            e && (_(!0), g(!0), y(!0));
           }, []),
-          I = n.createElement(it, {
+          A = n.createElement(it, {
             endValue: s,
-            maxValue: (100 * s) / m,
+            maxValue: (100 * s) / o,
             duration: 2e3,
-            startAnimation: _,
+            startAnimation: u,
             delay: 500,
           }),
-          C = n.createElement(it, {
+          I = n.createElement(it, {
             endValue: l,
-            maxValue: (100 * l) / c,
+            maxValue: (100 * l) / m,
             duration: 2e3,
-            startAnimation: g,
+            startAnimation: p,
             delay: 700,
           }),
-          w = n.createElement(it, {
+          C = n.createElement(it, {
             endValue: i,
-            maxValue: (100 * i) / d,
+            maxValue: (100 * i) / c,
             duration: 2e3,
-            startAnimation: y,
+            startAnimation: h,
             delay: 900,
           });
         return n.createElement(
@@ -3567,50 +3568,50 @@
           ),
           n.createElement(
             Ee.J,
-            { onVisibilityChange: A },
-            n.createElement(pt, {
+            { onVisibilityChange: S },
+            n.createElement(gt, {
               progressLabel: a(
                 1 == s
                   ? "#YIR_Compare_PlayerProgress_Achievements_Single"
                   : "#YIR_Compare_PlayerProgress_Achievements_Label",
-                I,
+                A,
               ),
-              userPercent: m,
+              userPercent: o,
               steamAverage: t.GetPlayTimeStats().by_numbers?.achievements_avg,
-              progressIcon: n.createElement(dt, null),
+              progressIcon: n.createElement(ut, null),
             }),
-            n.createElement(pt, {
+            n.createElement(gt, {
               progressLabel: a(
                 1 == l
                   ? "#YIR_Compare_PlayerProgress_PlayedGames_Single"
                   : "#YIR_Compare_PlayerProgress_PlayedGames_Label",
-                C,
+                I,
               ),
-              userPercent: c,
+              userPercent: m,
               steamAverage: t.GetPlayTimeStats().by_numbers?.games_played_avg,
-              progressIcon: n.createElement(ct, null),
+              progressIcon: n.createElement(dt, null),
             }),
-            u &&
-              n.createElement(pt, {
+            d &&
+              n.createElement(gt, {
                 progressLabel: a(
                   1 == i
                     ? "#YIR_Compare_PlayerProgress_LongestStreak_Single"
                     : "#YIR_Compare_PlayerProgress_LongestStreak_Label",
-                  w,
+                  C,
                 ),
-                userPercent: d,
+                userPercent: c,
                 steamAverage: t.GetPlayTimeStats().by_numbers?.game_streak_avg,
-                progressIcon: n.createElement(mt, null),
+                progressIcon: n.createElement(ct, null),
               }),
           ),
           n.createElement(
             "div",
             { className: Xe().PlayNewnessContainer },
-            n.createElement(ht, { userYearInReview: t }),
+            n.createElement(vt, { userYearInReview: t }),
           ),
         );
       }
-      function pt(e) {
+      function gt(e) {
         let {
           progressLabel: t,
           steamAverage: a,
@@ -3680,12 +3681,12 @@
           )
         );
       }
-      const gt = {
+      const ht = {
         NewActive: "#YIR_Compare_NewGames_Flavor",
         UsedActive: "#YIR_Compare_ComfortGames_Flavor",
         OldActive: "#YIR_Compare_OldGames_Flavor",
       };
-      function ht(e) {
+      function vt(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
           r = v(),
@@ -3862,7 +3863,7 @@
                     n.createElement(
                       "div",
                       { className: Xe().FlavorLabel },
-                      (0, g.we)(gt[o]),
+                      (0, g.we)(ht[o]),
                     ),
                   ),
                   n.createElement(
@@ -3916,23 +3917,21 @@
           ),
         );
       }
-      function vt(e) {
+      function yt(e) {
         const { userYearInReview: t } = e,
           a = t.GetUserAggregateTagData(),
-          r = n.useMemo(() => a.map((e) => e.nTagId), [a]),
-          s = (0, ze.LG)(r),
-          l = E(),
-          i = v(),
-          o = (0, ot.Ae)(),
-          m = window.innerWidth <= 300,
-          c = a.map((e) => e.nPreSelectionWeight).sort((e, t) => t - e);
-        let d = [];
-        for (let e = 0; e < s.length; e++) {
-          const t = c.findIndex((t) => t - a[e].nPreSelectionWeight < 1e-5);
-          d.push({ subject: s[e].name, A: 10 * (6 - t) + 2 * e + 0.5 });
-        }
-        if (0 == d.length) return null;
-        const u = d.map((e, t) => n.createElement("li", { key: t }, e.subject));
+          { data: r } = (0, mt.Fv)(ze.TS.LANGUAGE),
+          s = E(),
+          l = v(),
+          i = (0, ot.Ae)(),
+          o = window.innerWidth <= 300,
+          m = a.map((e) => e.nPreSelectionWeight).sort((e, t) => t - e);
+        let c = a.map((e, t) => {
+          const a = m.findIndex((t) => t - e.nPreSelectionWeight < 1e-5);
+          return { subject: r && r[e.nTagId], A: 10 * (6 - a) + 2 * t + 0.5 };
+        });
+        if (0 == c.length) return null;
+        const d = c.map((e, t) => n.createElement("li", { key: t }, e.subject));
         return n.createElement(
           "div",
           {
@@ -3948,8 +3947,8 @@
           ),
           n.createElement(
             "div",
-            { className: (0, me.A)(Xe().SectionDesc, i.SectionDesc) },
-            l("#YIR_Spider_Desc", t.GetYear()),
+            { className: (0, me.A)(Xe().SectionDesc, l.SectionDesc) },
+            s("#YIR_Spider_Desc", t.GetYear()),
           ),
           n.createElement(
             "div",
@@ -3959,10 +3958,10 @@
               { className: Xe().SpiderResponsiveContainer },
               n.createElement(
                 nt.V,
-                { cx: "50%", cy: "50%", outerRadius: "70%", data: d },
+                { cx: "50%", cy: "50%", outerRadius: "70%", data: c },
                 n.createElement(rt.z, null),
                 n.createElement(st.r, {
-                  tick: n.createElement(yt, null),
+                  tick: n.createElement(Et, null),
                   dataKey: "subject",
                 }),
                 n.createElement(lt.V, {
@@ -3977,17 +3976,17 @@
               ),
             ),
           ),
-          (o || m) &&
+          (i || o) &&
             n.createElement(
               "ol",
               { className: Xe().RadarChartLegend },
               " ",
-              u,
+              d,
               " ",
             ),
         );
       }
-      function yt(e) {
+      function Et(e) {
         const { payload: t, x: a, ...r } = e,
           s = (0, ot.Ae)(),
           l = window.innerWidth <= 300;
@@ -4012,7 +4011,7 @@
               ),
             );
       }
-      function Et(e) {
+      function St(e) {
         const { userYearInReview: t } = e;
         let a = (function (e) {
           let t = e.GetRawStats().playtime_stats?.by_numbers;
@@ -4041,7 +4040,7 @@
         })(t);
         if (0 == a.length) return null;
         let r = a.map(([e, t]) =>
-          n.createElement(St, { key: e, label: (0, g.we)(e), value: t }),
+          n.createElement(At, { key: e, label: (0, g.we)(e), value: t }),
         );
         return n.createElement(
           "div",
@@ -4054,7 +4053,7 @@
           n.createElement("div", { className: Xe().NumbersRowsCnt }, r),
         );
       }
-      function St(e) {
+      function At(e) {
         let { label: t, value: a } = e,
           r = a ? a.toLocaleString() : "-";
         return n.createElement(
@@ -4065,7 +4064,7 @@
           n.createElement("div", { className: Xe().NumbersValue }, r),
         );
       }
-      class At {
+      class It {
         m_SteamInterface = null;
         async LoadFriendsSharedYearInReview(e, t) {
           const a = m.w.Init(c.iL),
@@ -4087,9 +4086,9 @@
         static s_Singleton;
         static Get() {
           return (
-            At.s_Singleton ||
-              ((At.s_Singleton = new At()), At.s_Singleton.Init()),
-            At.s_Singleton
+            It.s_Singleton ||
+              ((It.s_Singleton = new It()), It.s_Singleton.Init()),
+            It.s_Singleton
           );
         }
         constructor() {}
@@ -4097,8 +4096,8 @@
           this.m_SteamInterface = (0, F.P)();
         }
       }
-      var It = a(15736);
-      function Ct(e) {
+      var Ct = a(15736);
+      function wt(e) {
         const { accountID: t, bHideWhenNotAvailable: a, bHideName: r } = e,
           [s] = (0, ae.KT)(t),
           l = (0, ae.KM)(t),
@@ -4117,7 +4116,7 @@
                 "a",
                 { href: m },
                 n.createElement("img", {
-                  className: It.SmallAvatar,
+                  className: Ct.SmallAvatar,
                   src: s.avatar_url,
                   "data-miniprofile": "s" + i.ConvertTo64BitString(),
                 }),
@@ -4130,33 +4129,33 @@
               ),
         );
       }
-      var wt = a(96236),
-        Nt = a(66599),
-        ft = a(14860);
-      function Gt(e) {
+      var Nt = a(96236),
+        ft = a(66599),
+        Gt = a(14860);
+      function Rt(e) {
         const { userYearInReview: t } = e;
         return o.iA.is_support || o.iA.accountid == t.GetAccountID()
           ? n.createElement(
-              wt.K,
+              Nt.K,
               { rootMargin: "0px 0px 100% 0px" },
-              n.createElement(Rt, {
+              n.createElement(Bt, {
                 accountID: t.GetAccountID(),
                 year: t.GetYear(),
               }),
-              n.createElement(Tt, {
+              n.createElement(kt, {
                 accountID: t.GetAccountID(),
                 year: t.GetYear(),
               }),
             )
           : null;
       }
-      function Rt(e) {
+      function Bt(e) {
         const { accountID: t, year: a } = e,
           r = (0, n.useMemo)(
             () => B.b.InitFromAccountID(t).ConvertTo64BitString(),
             [t],
           ),
-          s = (0, ft.N0)(r, !0);
+          s = (0, Gt.N0)(r, !0);
         if (s.isLoading || s.data?.is_not_member_of_any_group()) return null;
         const l = s.data
           .family_group()
@@ -4167,17 +4166,17 @@
           ? null
           : n.createElement(
               "div",
-              { className: Nt.FriendsSharedSection },
+              { className: ft.FriendsSharedSection },
               n.createElement(
                 "div",
-                { className: Nt.FriendsSharedSectionTitle },
+                { className: ft.FriendsSharedSectionTitle },
                 (0, g.we)("#YIR_FamilyShared"),
               ),
               n.createElement(
                 "div",
-                { className: Nt.FriendsGrid },
+                { className: ft.FriendsGrid },
                 l.map((e) =>
-                  n.createElement(kt, {
+                  n.createElement(Pt, {
                     key: "family_" + e,
                     strSteamid: e.ConvertTo64BitString(),
                     year: a,
@@ -4188,13 +4187,13 @@
               ),
             );
       }
-      const Bt = 50;
-      function Tt(e) {
+      const Tt = 50;
+      function kt(e) {
         const { accountID: t, year: a } = e,
           { isLoading: r, rgFriendAccounts: s } = (function (e, t) {
             const { data: a, isLoading: n } = (0, d.I)({
               queryKey: ["SharedFriendYearInReviews", e, t],
-              queryFn: () => At.Get().LoadFriendsSharedYearInReview(e, t),
+              queryFn: () => It.Get().LoadFriendsSharedYearInReview(e, t),
             });
             return { rgFriendAccounts: n ? null : a, isLoading: n };
           })(t, a),
@@ -4203,7 +4202,7 @@
               s?.length > 0
                 ? [...s]
                     .sort((e, t) => t.rt_privacy_updated - e.rt_privacy_updated)
-                    .slice(0, Bt)
+                    .slice(0, Tt)
                 : [],
             [s],
           ),
@@ -4221,19 +4220,19 @@
           l.sort((e, t) => c.get(e.steamid).localeCompare(c.get(t.steamid))),
           n.createElement(
             "div",
-            { className: Nt.FriendsSharedSection },
+            { className: ft.FriendsSharedSection },
             n.createElement(
               "div",
-              { className: Nt.FriendsSharedSectionTitle },
+              { className: ft.FriendsSharedSectionTitle },
               (0, g.we)("#YIR_FriendShared"),
             ),
             n.createElement(
               "div",
-              { className: Nt.FriendsGrid },
+              { className: ft.FriendsGrid },
               l
-                .slice(0, Bt)
+                .slice(0, Tt)
                 .map((e) =>
-                  n.createElement(kt, {
+                  n.createElement(Pt, {
                     key: "friendshare_" + e.steamid + "_" + a,
                     strSteamid: e.steamid,
                     ePrivacy: e.privacy_state,
@@ -4251,7 +4250,7 @@
           )
         );
       }
-      function kt(e) {
+      function Pt(e) {
         const { strSteamid: t, year: a, ePrivacy: r } = e,
           s = new B.b(t),
           l = v();
@@ -4260,25 +4259,25 @@
           {
             href: `${o.TS.STORE_BASE_URL}replay/${s.ConvertTo64BitString()}/${a}`,
             className: (0, me.A)({
-              [Nt.IsPrivate]: 1 == r,
-              [Nt.FriendCtn]: !0,
+              [ft.IsPrivate]: 1 == r,
+              [ft.FriendCtn]: !0,
               [l.FriendCtn]: !0,
             }),
           },
-          n.createElement(Ct, {
+          n.createElement(wt, {
             accountID: s.GetAccountID(),
             bHideWhenNotAvailable: !0,
           }),
         );
       }
-      var Pt = a(30700),
-        Yt = a(59848),
-        bt = a.n(Yt),
-        Lt = a(85010),
-        Dt = a(94075);
-      const xt = 100;
-      var Mt;
-      function Ft(e) {
+      var Yt = a(30700),
+        bt = a(59848),
+        Lt = a.n(bt),
+        Dt = a(85010),
+        xt = a(94075);
+      const Mt = 100;
+      var Ft;
+      function Ut(e) {
         const { userYearInReview: t } = e,
           a = t.GetPlayTimeStats().total_stats,
           r = t.GetPlayTimeStats().game_summary,
@@ -4287,33 +4286,33 @@
           i = (0, n.useMemo)(() => {
             const e = new Array();
             return (
-              a.windows_playtime_percentagex100 > xt &&
+              a.windows_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.windows,
+                  id: Ft.windows,
                   name: (0, g.we)("#YIR_Platfrom_windows"),
                   value: a.windows_playtime_percentagex100,
                 }),
-              a.linux_playtime_percentagex100 > xt &&
+              a.linux_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.linux,
+                  id: Ft.linux,
                   name: (0, g.we)("#YIR_Platfrom_linux"),
                   value: a.linux_playtime_percentagex100,
                 }),
-              a.macos_playtime_percentagex100 > xt &&
+              a.macos_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.mac,
+                  id: Ft.mac,
                   name: (0, g.we)("#YIR_Platfrom_macos"),
                   value: a.macos_playtime_percentagex100,
                 }),
-              a.vr_playtime_percentagex100 > xt &&
+              a.vr_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.vr,
+                  id: Ft.vr,
                   name: (0, g.we)("#YIR_Platfrom_vr"),
                   value: a.vr_playtime_percentagex100,
                 }),
-              a.deck_playtime_percentagex100 > xt &&
+              a.deck_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.deck,
+                  id: Ft.deck,
                   name: (0, g.we)("#YIR_Platfrom_deck"),
                   value: a.deck_playtime_percentagex100,
                 }),
@@ -4323,33 +4322,33 @@
           o = (0, n.useMemo)(() => {
             const e = new Array();
             return (
-              a.windows_playtime_percentagex100 > xt &&
+              a.windows_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.windows,
+                  id: Ft.windows,
                   name: (0, g.we)("#YIR_Platfrom_windows"),
                   value: r.filter((e) => e.played_windows).length,
                 }),
-              a.linux_playtime_percentagex100 > xt &&
+              a.linux_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.linux,
+                  id: Ft.linux,
                   name: (0, g.we)("#YIR_Platfrom_linux"),
                   value: r.filter((e) => e.played_linux).length,
                 }),
-              a.macos_playtime_percentagex100 > xt &&
+              a.macos_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.mac,
+                  id: Ft.mac,
                   name: (0, g.we)("#YIR_Platfrom_macos"),
                   value: r.filter((e) => e.played_mac).length,
                 }),
-              a.vr_playtime_percentagex100 > xt &&
+              a.vr_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.vr,
+                  id: Ft.vr,
                   name: (0, g.we)("#YIR_Platfrom_vr"),
                   value: r.filter((e) => e.played_vr).length,
                 }),
-              a.deck_playtime_percentagex100 > xt &&
+              a.deck_playtime_percentagex100 > Mt &&
                 e.push({
-                  id: Mt.deck,
+                  id: Ft.deck,
                   name: (0, g.we)("#YIR_Platfrom_deck"),
                   value: r.filter((e) => e.played_deck).length,
                 }),
@@ -4357,7 +4356,7 @@
             );
           }, [a, r]);
         if (i.length < 2) return null;
-        const m = jt(a);
+        const m = Kt(a);
         return n.createElement(
           Se,
           { className: (0, me.A)(pe().PlatformChartsCtn, l.PlatformChartsCtn) },
@@ -4411,10 +4410,10 @@
                         }),
                       ),
                     ),
-                    n.createElement(Lt.m, {
-                      content: n.createElement(Ut, null),
+                    n.createElement(Dt.m, {
+                      content: n.createElement(Ht, null),
                     }),
-                    n.createElement(Dt.s, null),
+                    n.createElement(xt.s, null),
                   ),
                 ),
               ),
@@ -4452,10 +4451,10 @@
                         }),
                       ),
                     ),
-                    n.createElement(Lt.m, {
-                      content: n.createElement(Ht, null),
+                    n.createElement(Dt.m, {
+                      content: n.createElement(Ot, null),
                     }),
-                    n.createElement(Dt.s, null),
+                    n.createElement(xt.s, null),
                   ),
                 ),
               ),
@@ -4474,7 +4473,7 @@
           ),
         );
       }
-      function Ut(e) {
+      function Ht(e) {
         const { active: t, payload: a } = e;
         if (t && a && a.length) {
           const e = a[0].value;
@@ -4488,7 +4487,7 @@
         }
         return null;
       }
-      function Ht(e) {
+      function Ot(e) {
         const { active: t, payload: a } = e;
         if (t && a && a.length) {
           const e = a[0].value,
@@ -4507,19 +4506,19 @@
           (e.deck = "deck"),
           (e.mac = "mac"),
           (e.vr = "vr");
-      })(Mt || (Mt = {}));
-      var Ot = a(82715);
-      const Vt = 100;
-      function Wt(e) {
+      })(Ft || (Ft = {}));
+      var Vt = a(82715);
+      const Wt = 100;
+      function Qt(e) {
         const { userYearInReview: t } = e;
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(Ft, { userYearInReview: t }),
-          n.createElement(Kt, { userYearInReview: t }),
+          n.createElement(Ut, { userYearInReview: t }),
+          n.createElement(qt, { userYearInReview: t }),
         );
       }
-      function Qt(e) {
+      function jt(e) {
         const { userYearInReview: t, strClassName: a, nYear: r } = e,
           s = t.GetRawStats(),
           l = E(),
@@ -4563,28 +4562,28 @@
           }),
           G = (0, n.useRef)(null);
         return (
-          (0, Pt.q)(G),
+          (0, Yt.q)(G),
           n.createElement(
             "div",
             {
               className: (0, me.A)(
                 a,
                 ye().PlatformContentsCtn,
-                bt().DeckContainer,
+                Lt().DeckContainer,
               ),
               ref: h,
             },
             n.createElement(
               "div",
-              { className: (0, me.A)(ye().SectionTitle, bt().SectionTitle) },
+              { className: (0, me.A)(ye().SectionTitle, Lt().SectionTitle) },
               p,
             ),
             n.createElement(
               "div",
-              { className: bt().ScreenContainer, ref: v },
+              { className: Lt().ScreenContainer, ref: v },
               n.createElement(
                 "div",
-                { className: bt().PlatformDataContainer },
+                { className: Lt().PlatformDataContainer },
                 n.createElement(
                   Ee.J,
                   {
@@ -4592,7 +4591,7 @@
                     className: (0, me.A)(
                       he().YearInReviewContent,
                       ye().StatsRow,
-                      bt().StatsRow,
+                      Lt().StatsRow,
                     ),
                   },
                   n.createElement(
@@ -4638,7 +4637,7 @@
                     {
                       className: (0, me.A)(
                         ye().SectionSubTitle,
-                        bt().SectionSubTitle,
+                        Lt().SectionSubTitle,
                       ),
                     },
                     i,
@@ -4655,7 +4654,7 @@
               n.createElement(
                 "video",
                 {
-                  className: bt().Video,
+                  className: Lt().Video,
                   poster:
                     "https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesPoster.jpg",
                   playsInline: !0,
@@ -4677,34 +4676,34 @@
             ),
             n.createElement(
               "div",
-              { className: (0, me.A)(ye().Disclaimer, bt().Disclaimer) },
+              { className: (0, me.A)(ye().Disclaimer, Lt().Disclaimer) },
               o,
             ),
           )
         );
       }
-      function jt(e) {
+      function Kt(e) {
         return {
-          bDeck: e.deck_playtime_percentagex100 > Vt,
-          bVR: e.vr_playtime_percentagex100 > Vt,
+          bDeck: e.deck_playtime_percentagex100 > Wt,
+          bVR: e.vr_playtime_percentagex100 > Wt,
         };
       }
-      function Kt(e) {
+      function qt(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
           r = E(),
           s = t.GetPlayTimeStats().total_stats;
         let l;
         s.controller_playtime_percentagex100 > 7e3 && (l = !0);
-        const i = jt(s);
+        const i = Kt(s);
         return n.createElement(
-          wt.K,
+          Nt.K,
           { rootMargin: "0px 0px 100% 0px" },
           Boolean(i.bDeck) &&
             n.createElement(
               Se,
               { className: (0, me.A)(ye().Section, ye().Deck) },
-              n.createElement(Qt, { userYearInReview: t, nYear: a }),
+              n.createElement(jt, { userYearInReview: t, nYear: a }),
             ),
           Boolean(i.bVR) &&
             n.createElement(
@@ -4739,13 +4738,13 @@
             ),
           Boolean(a >= 2024) &&
             n.createElement(
-              Ot.tH,
+              Vt.tH,
               null,
-              n.createElement(qt, { userYearInReview: t }),
+              n.createElement(Jt, { userYearInReview: t }),
             ),
         );
       }
-      function qt(e) {
+      function Jt(e) {
         const { userYearInReview: t } = e,
           a = E(),
           [r, s] = (0, n.useMemo)(
@@ -4766,7 +4765,7 @@
         return n.createElement(
           n.Fragment,
           null,
-          Boolean(r > Vt) &&
+          Boolean(r > Wt) &&
             n.createElement(
               Se,
               { className: (0, me.A)(ye().Section, ye().Demo) },
@@ -4777,7 +4776,7 @@
                 subTitleTokenIfMax: "#YIR_TopGames_demoMax",
               }),
             ),
-          Boolean(s > Vt) &&
+          Boolean(s > Wt) &&
             n.createElement(
               Se,
               { className: (0, me.A)(ye().Section, ye().Playtest) },
@@ -4790,14 +4789,13 @@
             ),
         );
       }
-      var Jt = a(99514),
-        Zt = a.n(Jt),
-        Xt = a(30470);
+      var Zt = a(99514),
+        Xt = a.n(Zt);
       function zt(e) {
         const { userYearInReview: t } = e;
         if ("cn" === o.iA.country_code.toLowerCase())
           return (
-            "dev" === Xt.TS.WEB_UNIVERSE &&
+            "dev" === ze.TS.WEB_UNIVERSE &&
               console.log(
                 "<DisplayLongestStreak is not displayed; country code CN",
               ),
@@ -4805,7 +4803,7 @@
           );
         const a = t.GetPlayTimeStats().playtime_streak;
         return !a || a.longest_consecutive_days < 5
-          ? ("dev" === Xt.TS.WEB_UNIVERSE &&
+          ? ("dev" === ze.TS.WEB_UNIVERSE &&
               (a
                 ? console.log(
                     `<DisplayLongestStreak is not displayed; require consequative days >= 5 (actual ${a.longest_consecutive_days})`,
@@ -4844,14 +4842,14 @@
           {
             className: (0, me.A)(
               pe().StreakCtn,
-              Zt().StreakCtn,
-              Zt().Section,
+              Xt().StreakCtn,
+              Xt().Section,
               s.Section,
             ),
           },
           n.createElement("div", {
             className: (0, me.A)(
-              Zt().LongestStreakBgImage,
+              Xt().LongestStreakBgImage,
               s.LongestStreakBgImage,
             ),
           }),
@@ -4860,17 +4858,17 @@
             { className: he().YearInReviewContent },
             n.createElement(
               "div",
-              { className: Zt().SectionTitle },
+              { className: Xt().SectionTitle },
               n.createElement(
                 Ee.J,
                 {
-                  className: Zt().LongestStreakDailyCount,
+                  className: Xt().LongestStreakDailyCount,
                   onVisibilityChange: o,
                 },
                 a(
                   "#YIR_Longest_Streak_Title",
                   n.createElement(it, {
-                    className: Zt().LongestStreakNumber,
+                    className: Xt().LongestStreakNumber,
                     endValue: r.longest_consecutive_days,
                     duration: 2e3,
                     startAnimation: l,
@@ -4879,11 +4877,11 @@
               ),
               n.createElement(
                 Se,
-                { className: Zt().StreakBarCtn },
-                n.createElement("div", { className: Zt().StreakSizeCtn }),
+                { className: Xt().StreakBarCtn },
+                n.createElement("div", { className: Xt().StreakSizeCtn }),
                 n.createElement("div", {
                   className: (0, me.A)(
-                    Zt().StreakSizeFullBar,
+                    Xt().StreakSizeFullBar,
                     s.StreakSizeFullBar,
                   ),
                 }),
@@ -4891,27 +4889,27 @@
                   "div",
                   {
                     className: (0, me.A)({
-                      [Zt().StreakTickCtn]: !0,
-                      [Zt().LargerTicks]: r.longest_consecutive_days < 40,
+                      [Xt().StreakTickCtn]: !0,
+                      [Xt().LargerTicks]: r.longest_consecutive_days < 40,
                     }),
                   },
                   n.createElement(ta, {
                     nDays: r.longest_consecutive_days - 1,
                   }),
                 ),
-                n.createElement("div", { className: Zt().StreakSizeCtn }),
+                n.createElement("div", { className: Xt().StreakSizeCtn }),
               ),
               n.createElement(
                 Se,
-                { className: Zt().StreakDates },
+                { className: Xt().StreakDates },
                 n.createElement(
                   "div",
-                  { className: Zt().StreakStart },
+                  { className: Xt().StreakStart },
                   (0, g.TW)(r.rtime_start, true),
                 ),
                 n.createElement(
                   "div",
-                  { className: Zt().StreakEnd },
+                  { className: Xt().StreakEnd },
                   (0, g.TW)(
                     r.rtime_start + 24 * r.longest_consecutive_days * 60 * 60,
                     true,
@@ -4925,15 +4923,15 @@
                 onVisibilityChange: d,
                 className: (0, me.A)(
                   pe().LongestStreakGamesWrapper,
-                  Zt().LongestStreakGamesWrapper,
+                  Xt().LongestStreakGamesWrapper,
                 ),
               },
               n.createElement(
                 "div",
                 {
                   className: (0, me.A)(
-                    Zt().CapRowTitle,
-                    m && Zt().AnimateTitle,
+                    Xt().CapRowTitle,
+                    m && Xt().AnimateTitle,
                   ),
                 },
                 a(
@@ -4945,7 +4943,7 @@
               ),
               n.createElement(
                 "div",
-                { className: (0, me.A)(Zt().CapRowCtn) },
+                { className: (0, me.A)(Xt().CapRowCtn) },
                 n.createElement(
                   "div",
                   {
@@ -4998,7 +4996,7 @@
             a.push(
               n.createElement("div", {
                 key: "DrawNDivForStreakDays" + e,
-                className: Zt().Tick,
+                className: Xt().Tick,
               }),
             );
           return n.createElement(n.Fragment, null, a);
@@ -6392,7 +6390,7 @@
                 tick: { fill: "white" },
                 axisLine: !0,
               }),
-              n.createElement(Lt.m, {
+              n.createElement(Dt.m, {
                 wrapperStyle: { outline: "none" },
                 allowEscapeViewBox: { x: !1, y: !0 },
                 isAnimationActive: !1,
@@ -6609,7 +6607,7 @@
               margin: { top: 25, left: 0, right: 0, bottom: 0 },
               barGap: 30,
             },
-            n.createElement(Lt.m, {
+            n.createElement(Dt.m, {
               wrapperStyle: {
                 outline: "1px solid " + (r ?? s.chartAccentColorAlt),
               },
@@ -7157,7 +7155,7 @@
           "div",
           { className: (0, me.A)(_e.TopGamesContainer) },
           n.createElement(
-            wt.K,
+            Nt.K,
             {
               placeholderHeight: "100vh",
               rootMargin: Y,
@@ -7767,7 +7765,7 @@
           n.createElement(
             re.tH,
             null,
-            n.createElement(ut, { userYearInReview: t }),
+            n.createElement(_t, { userYearInReview: t }),
           ),
           Boolean(p > 1) &&
             n.createElement(
@@ -7790,7 +7788,7 @@
             n.createElement(
               re.tH,
               null,
-              n.createElement(Wt, { userYearInReview: t }),
+              n.createElement(Qt, { userYearInReview: t }),
             ),
           ),
           Boolean(t.GetPlayTimeStats().playtime_streak) &&
@@ -7876,7 +7874,7 @@
           n.createElement(
             re.tH,
             null,
-            n.createElement(Gt, { userYearInReview: t }),
+            n.createElement(Rt, { userYearInReview: t }),
           ),
           n.createElement(
             re.tH,

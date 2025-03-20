@@ -5048,7 +5048,7 @@
               o.createElement(N, {
                 cols: 90,
                 rows: this.props.nOverridesRows || 22,
-                maxLength: 32e3,
+                maxLength: 64e3,
                 className: (0, y.A)(
                   J().DefaultEditor,
                   this.props.classNameForTextArea

@@ -903,6 +903,7 @@
     "RecommenderDemos_Rec_Desc": "Based on playtime (trained every Thursday)",
     "RecommenderDemos_NextFest": "Recommended From Next Fest",
     "RecommenderDemos_NextFestDesc": "Recommended From Next Fest",
+    "RecommenderDemos_RecEmbedding": "Recommendation Embedding Test (selected games)",
     "RecommenderDemos_NewReleases": "Recommended New Releases",
     "RecommenderDemos_NewReleases_Desc": "Based on wishlists for games that have released in the last month (trained every Friday)",
     "dummy_for_end_of_file_convenience": "dummy"

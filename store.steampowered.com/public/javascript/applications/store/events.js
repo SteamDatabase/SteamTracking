@@ -414,7 +414,7 @@
     },
     86252: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Fn });
+      n.r(t), n.d(t, { default: () => Rn });
       var a = n(43527),
         r = n(90626),
         l = n(92757),
@@ -4903,17 +4903,18 @@
             ),
           );
       var Ln = n(81881),
-        Dn = n(80782);
-      function Hn(e) {
+        Dn = n(39020),
+        Hn = n(30470);
+      function Fn(e) {
         if ("steam" === e) {
           if ("beta" !== new URLSearchParams().get("branch"))
             return { rgHiddenClans: [q.Ro] };
         }
       }
-      const Fn = (e) => {
+      const Rn = (e) => {
         const [t] = (0, s.QD)("byday", !1),
           [n] = (0, s.QD)("upcoming", !1);
-        return (0, Dn.vb)()
+        return (0, Dn.vb)(Hn.TS.LANGUAGE)
           ? r.createElement(
               Ln.d,
               { bSalePage: !0 },
@@ -5016,7 +5017,7 @@
                   render: (e) =>
                     r.createElement(fn, {
                       key: e.match.params.collectionid,
-                      initialFilters: Hn(e.match.params.collectionid),
+                      initialFilters: Fn(e.match.params.collectionid),
                       ...e,
                       filter_to_collection: e.match.params.collectionid,
                       section_by_day: t,

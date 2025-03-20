@@ -33,7 +33,7 @@
         u = n(31718),
         m = n.n(u),
         d = n(76217),
-        g = n(97907),
+        g = n(23310),
         f = n(8871),
         p = n(94104);
       const h = c.memo(function (e) {

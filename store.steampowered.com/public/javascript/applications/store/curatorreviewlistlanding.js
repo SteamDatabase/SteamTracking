@@ -496,12 +496,12 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => G, W: () => R });
+      a.d(t, { J: () => P, W: () => R });
       var n = a(90626),
         r = a(57876),
         l = a(45699),
         o = a(76217),
-        s = a(97907),
+        s = a(23310),
         i = a(55963),
         c = a(30894),
         u = a(62792),
@@ -520,13 +520,13 @@
         I = a(54492),
         w = a(60014),
         y = a(52038),
-        D = a(61859),
-        T = a(61336),
+        T = a(61859),
+        D = a(61336),
         L = a(78327),
         A = a(91291),
         N = a.n(A),
-        P = a(99956);
-      const G = "capsule_index_";
+        G = a(99956);
+      const P = "capsule_index_";
       function R(e) {
         const {
             capsule: t,
@@ -555,7 +555,7 @@
           {
             className: (0, y.A)({
               [g().OuterCapsuleContainer]: !0,
-              [G + i]: 0 == i,
+              [P + i]: 0 == i,
             }),
             navEntryPreferPosition: s.iU.PREFERRED_CHILD,
             navKey: c,
@@ -615,7 +615,7 @@
             n.createElement(
               "div",
               { className: g().ParentType },
-              (0, D.we)(
+              (0, T.we)(
                 11 == o
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
@@ -651,7 +651,7 @@
           C = (0, w.n9)(),
           S = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
         if (!b) return null;
-        const D = (0, T.NT)(
+        const T = (0, D.NT)(
           (0, i.wJ)(`${b.GetStorePageURL(h)}${o ? `?${o}` : ""}`, C),
         );
         let L;
@@ -666,7 +666,7 @@
           n.createElement(
             l.Ii,
             {
-              href: L ? null : D,
+              href: L ? null : T,
               style: { display: "block", cursor: "pointer" },
               className: g().CapsuleFocusCtn,
               preferredFocus: d,
@@ -700,7 +700,7 @@
                       b.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  n.createElement(P.n, {
+                  n.createElement(G.n, {
                     bHideTitle: !0,
                     rgTagIDs: b.GetTagIDs(),
                     instanceNum: s,
@@ -913,17 +913,17 @@
         I = a(82097),
         w = a(62792),
         y = a(55263),
-        D = a(80782),
-        T = a(33380),
-        L = a.n(T),
+        T = a(39020),
+        D = a(33380),
+        L = a.n(D),
         A = a(12155),
         N = a(52038),
-        P = a(70758);
-      const G = new RegExp(
+        G = a(70758);
+      const P = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
       function R(e) {
-        const t = G.exec(e);
+        const t = P.exec(e);
         return t?.length > 1 ? t[1] : null;
       }
       function B(e) {
@@ -945,13 +945,13 @@
             {
               className: (0, N.A)(
                 "YoutubePreviewContainer",
-                P.YoutubePreviewImage,
+                G.YoutubePreviewImage,
                 e.imageClassnames,
               ),
               onClick: () => m(!1),
             },
             r.createElement("img", {
-              className: (0, N.A)("YoutubePreviewImage", P.YoutubePreviewImage),
+              className: (0, N.A)("YoutubePreviewImage", G.YoutubePreviewImage),
               src:
                 t ||
                 f.TS.COMMUNITY_CDN_URL +
@@ -984,7 +984,7 @@
             r.createElement("img", {
               className: (0, N.A)(
                 "YoutubePreviewContainer",
-                P.YoutubePreviewImage,
+                G.YoutubePreviewImage,
                 e.imageClassnames,
               ),
               src:
@@ -1078,7 +1078,7 @@
           a = (0, b.m1)(t),
           n = (0, b.ME)(a?.clanSteamID, e.listid);
         return (
-          (0, D.vb)(),
+          (0, T.vb)(f.TS.LANGUAGE),
           n
             ? r.createElement(
                 X.A,
@@ -1311,8 +1311,8 @@
           C = d && R(d),
           S = p != b.F6 && p,
           I = s.BHasDemo(),
-          D = v?.img_url,
-          T = `curator_clanid=${o.clanAccountID}&curator_listid=${a.listid}`,
+          T = v?.img_url,
+          D = `curator_clanid=${o.clanAccountID}&curator_listid=${a.listid}`,
           L = s.GetStorePageURL() + "/?curator_clanid=" + o.clanAccountID;
         return r.createElement(
           c.Z,
@@ -1325,16 +1325,16 @@
                   strVideoID: h?.strVideoID || C,
                   nStartSeconds: h?.nStartSeconds,
                   info: i,
-                  strImgOverrideUrl: D,
+                  strImgOverrideUrl: T,
                   bShowDemoButton: I,
-                  strExtraParams: T,
+                  strExtraParams: D,
                   bTwitchVideo: Boolean(C),
                 })
               : r.createElement(x.W, {
                   imageType: "header",
                   capsule: i,
                   bShowDemoButton: I,
-                  strExtraParams: T,
+                  strExtraParams: D,
                 }),
           ),
           r.createElement(

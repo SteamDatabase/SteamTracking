@@ -3864,6 +3864,7 @@ button.DialogButton {
 ._1_188Z8mN56wt5ykoDyWA5 ._3yfLac5uYSfmnvttqIy033 ._3cmDGnLwTwr4eTkH72PKfI {
   font-size: 14px;
   color: #666;
+  width: fit-content;
   user-select: none;
   cursor: pointer;
 }

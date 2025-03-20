@@ -48,7 +48,7 @@
         m = i(44332),
         d = i(6144),
         l = i(61859),
-        h = i(19719),
+        h = i(61732),
         u = i(6419),
         _ = i(14771),
         p = i(78327),
@@ -1627,7 +1627,9 @@
                 : 0;
             return this.m_seekingToTime.nTime + e;
           }
-          return this.m_bUseHLSManifest && this.m_mpd
+          return this.m_bUseHLSManifest &&
+            this.m_mpd &&
+            this.m_mpd.IsLiveContent()
             ? (this.m_elVideo.currentTime > 0 &&
                 0 === this.m_hlsTimeOffset &&
                 (this.m_hlsTimeOffset =
@@ -1899,17 +1901,18 @@
               );
           (this.m_seekingToTime = null),
             (0, g.q_)("Starting playback at " + e),
-            this.m_stats.SetSegmentDurationMS(
-              this.GetVideoLoader().GetCurrentSegmentDurationMS(),
-            ),
-            this.m_stats.SetAnalyticLinks(
-              this.m_mpd.GetStatsLink(),
-              this.m_mpd.GetStalledLink(),
-              this.m_mpd.GetEventLink(),
-            ),
-            this.m_stats.SetVideoInitializationURL(
-              this.GetVideoLoader().GetCurrentSegmentInitializationURL(),
-            ),
+            this.m_bUseHLSManifest ||
+              (this.m_stats.SetSegmentDurationMS(
+                this.GetVideoLoader().GetCurrentSegmentDurationMS(),
+              ),
+              this.m_stats.SetAnalyticLinks(
+                this.m_mpd.GetStatsLink(),
+                this.m_mpd.GetStalledLink(),
+                this.m_mpd.GetEventLink(),
+              ),
+              this.m_stats.SetVideoInitializationURL(
+                this.GetVideoLoader().GetCurrentSegmentInitializationURL(),
+              )),
             this.Seek(e);
         }
         VerifyFirstSegmentDownloadProgress() {
@@ -2035,7 +2038,7 @@
           let r = this.m_elVideo.paused;
           if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
-              this.m_elVideo.play();
+              this.PlayOnElement();
           else {
             (this.m_bIsBuffering = !0),
               (this.m_seekingToTime = { nTime: e, eSeekType: N.Absolute });

@@ -203,6 +203,7 @@
     "EventEditor_EventDetailsNews": "Details",
     "EventEditor_Description_tab": "Description",
     "EventEditor_EventVisibility": "Visibility",
+    "EventEditor_Event_SectionTitle": "Section Title",
     "EventEditor_Event_SubTitle": "Subtitle",
     "EventEditor_Event_SubTitle_Details": "(Max %1$s characters. Appears on top of event or announcement detail page)",
     "EventEditor_Event_SubTitle_Details_Reached": "(Max %1$s characters reached. Appears on top of event or announcement detail page)",

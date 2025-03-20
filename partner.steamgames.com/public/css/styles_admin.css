@@ -2689,6 +2689,12 @@ html, body { height:100%; }
     font-size: 16px;
 }
 
+.inline_svg {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
 .instructions em,
 .section em,
 .section em a {

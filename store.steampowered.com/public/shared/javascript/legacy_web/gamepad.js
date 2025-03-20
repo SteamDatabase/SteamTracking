@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    616: (e, t, n) => {
+    755: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => V });
       var o = n(669),
         a = n.n(o),
-        s = n(879),
-        i = n(101),
-        r = n(380),
-        c = n(473),
-        l = n(264),
-        u = n(436),
-        d = n(372),
-        g = n(568),
-        h = n(890),
-        b = n(195);
+        s = n(204),
+        i = n(152),
+        r = n(799),
+        c = n(446),
+        l = n(886),
+        u = n(615),
+        d = n(279),
+        g = n(827),
+        b = n(291),
+        h = n(918);
       function m(e, t, ...n) {
         try {
           console.assert
@@ -85,15 +85,15 @@
                         d(t, n);
                     }
                   })(e, t));
-              let h = window.setInterval(s, 200),
-                b = e.Tree.OnActiveStateChangedCallbacks.Register((e) => {
+              let b = window.setInterval(s, 200),
+                h = e.Tree.OnActiveStateChangedCallbacks.Register((e) => {
                   e ? t.show() : t.hide();
                 });
               o = () => {
-                window.clearInterval(h),
+                window.clearInterval(b),
                   t.remove(),
                   (s = void 0),
-                  b.Unregister();
+                  h.Unregister();
               };
             }
           };
@@ -104,9 +104,9 @@
           OnForceMeasureFocusRing: () => s && s(),
         };
       }
-      var S = n(581),
-        w = n(460),
-        E = n(932);
+      var S = n(747),
+        w = n(781),
+        E = n(878);
       function I(e) {
         return e ? Function("event", e) : null;
       }
@@ -141,23 +141,23 @@
         switch (e.detail.button) {
           case S.pR.DIR_UP:
             if (s.scrollY > 3)
-              return (0, h.BA)(s, { top: -s.innerHeight / n, behavior: o }), !0;
+              return (0, b.BA)(s, { top: -s.innerHeight / n, behavior: o }), !0;
             break;
           case S.pR.DIR_RIGHT:
             if (s.scrollX + s.innerWidth < a.body.clientWidth - 3)
-              return (0, h.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
+              return (0, b.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
             break;
           case S.pR.DIR_DOWN:
             if (s.scrollY + s.innerHeight < a.body.clientHeight - 3)
-              return (0, h.BA)(s, { top: s.innerHeight / n, behavior: o }), !0;
+              return (0, b.BA)(s, { top: s.innerHeight / n, behavior: o }), !0;
             break;
           case S.pR.DIR_LEFT:
             if (s.scrollX > 3)
-              return (0, h.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
+              return (0, b.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
         }
         return !1;
       }
-      var D = n(604);
+      var D = n(221);
       const T = !1;
       function y(e) {
         const { name: t, root: n, navState: o } = e;
@@ -178,7 +178,7 @@
           (e[(e.NotNeeded = 1)] = "NotNeeded"),
           (e[(e.InReactTree = 2)] = "InReactTree");
       })(O || (O = {}));
-      const M = new b.r();
+      const M = new h.r();
       let U,
         B = !1,
         P = null,
@@ -230,7 +230,7 @@
               childList: !0,
               subtree: !0,
             }),
-              (0, h.y1)(!0),
+              (0, b.y1)(!0),
               (function (e, t) {
                 if (
                   (t.Tree.DeferredFocus.SuppressFocus(),
@@ -396,8 +396,8 @@
         delete r["flow-children"];
         let {
             clickOnActivate: u,
-            maintainX: h,
-            maintainY: b,
+            maintainX: b,
+            maintainY: h,
             enableVirtualKeyboard: _,
             preferredChild: f,
             onOKActionDescription: S,
@@ -477,9 +477,9 @@
           })(V, W, x, K),
           re = l ? (0, g.O)(l) : d.xj.NONE;
         re != d.xj.NONE && (q.layout = re),
-          h
+          b
             ? (q.navEntryPreferPosition = d.iU.MAINTAIN_X)
-            : b
+            : h
               ? (q.navEntryPreferPosition = d.iU.MAINTAIN_Y)
               : f && (q.navEntryPreferPosition = d.iU.PREFERRED_CHILD),
           u &&
@@ -577,11 +577,11 @@
         },
       };
     },
-    551: (e, t, n) => {
+    496: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(198),
-        s = n(353);
+        a = n(745),
+        s = n(242);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -648,11 +648,11 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    238: (e, t, n) => {
+    927: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    937: (e, t, n) => {
+    578: (e, t, n) => {
       n.d(t, {
         Jc: () => c,
         LU: () => d,
@@ -661,9 +661,9 @@
         lu: () => i.l,
       });
       var o = n(629),
-        a = n(487),
-        s = n(198),
-        i = n(109);
+        a = n(560),
+        s = n(745),
+        i = n(384);
       class r {
         m_callbacks;
         m_currentValue;
@@ -763,7 +763,7 @@
       }
       (0, o.Cg)([s.o], g.prototype, "Unregister", null);
     },
-    460: (e, t, n) => {
+    781: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -833,10 +833,10 @@
         }
       }
     },
-    360: (e, t, n) => {
+    222: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(198);
+        a = n(745);
       class s {
         async GetObject(e, t) {
           try {
@@ -862,7 +862,7 @@
         }
       }
       var r,
-        c = n(937);
+        c = n(578);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1046,9 +1046,9 @@
         const d =
             s.length >= 1 && "string" == typeof s[0] && s[0].includes("%c"),
           g = d && s.shift();
-        let h;
+        let b;
         if (
-          ((h = t
+          ((b = t
             ? [
                 `%c${u}%c:${d ? " %c" + g : ""}`,
                 `color: ${c ? "black" : "white"}; background: rgb(${i.join(",")}); padding: 0 1ch; border-radius: 3px;`,
@@ -1059,32 +1059,32 @@
             : s),
           n)
         )
-          console.groupCollapsed(...h),
+          console.groupCollapsed(...b),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (e) {
             case r.Debug:
             case r.Info:
-              console.log(...h);
+              console.log(...b);
               break;
             case r.Warning:
-              console.warn(...h);
+              console.warn(...b);
               break;
             case r.Error:
               console.clogerror
-                ? console.clogerror(3, ...h)
-                : console.error(...h);
+                ? console.clogerror(3, ...b)
+                : console.error(...b);
           }
       }
       const g = () => [...u.Get().LogNames].sort(),
-        h = (e, t) => {
+        b = (e, t) => {
           u.Get().IsLogName(e)
             ? u.Get().SetDebugLogEnabled(e, t)
             : console.warn(`No log named "${e}", available logs:`, g());
         };
-      (window.DebugLogEnable = (...e) => e.forEach((e) => h(e, !0))),
-        (window.DebugLogDisable = (...e) => e.forEach((e) => h(e, !1))),
+      (window.DebugLogEnable = (...e) => e.forEach((e) => b(e, !0))),
+        (window.DebugLogDisable = (...e) => e.forEach((e) => b(e, !1))),
         (window.DebugLogEnableAll = () => u.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => u.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
@@ -1095,7 +1095,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    141: (e, t, n) => {
+    862: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1106,37 +1106,32 @@
       }
       n.d(t, { e: () => o });
     },
-    483: (e, t, n) => {
-      function o() {
+    444: (e, t, n) => {
+      n.d(t, { TS: () => c });
+      var o = n(882);
+      function a() {
         return !!window.document;
       }
-      n.d(t, { TS: () => r });
-      let a;
-      function s() {
-        if (!o()) return a || (a = i()), a;
+      let s;
+      function i() {
+        if (!a()) return s || (s = r()), s;
         let e = (function (e) {
-          if (!o() || !window.document.cookie) return null;
+          if (!a() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
-        return e || (e = i()), e;
+        return e || (e = r()), e;
       }
-      function i() {
+      function r() {
         const e = (function () {
           let e = "";
-          for (let o = 0; o < 24; o++)
-            e += ((t = 0),
-            (n = 35),
-            (t = Math.ceil(t)),
-            (n = Math.floor(n)),
-            Math.floor(Math.random() * (n - t + 1)) + t).toString(36);
-          var t, n;
+          for (let t = 0; t < 24; t++) e += (0, o.Tg)(0, 35).toString(36);
           return e;
         })();
         return (
-          (function (e, t, n, a) {
-            if (!o()) return;
-            a || (a = "/");
+          (function (e, t, n, o) {
+            if (!a()) return;
+            o || (o = "/");
             let s = "";
             if (void 0 !== n && n) {
               const e = new Date();
@@ -1149,13 +1144,13 @@
               encodeURIComponent(t) +
               s +
               ";path=" +
-              a;
+              o;
           })("sessionid", e, 0),
           e
         );
       }
       new Set();
-      const r = {
+      const c = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -1205,7 +1200,7 @@
         FROM_WEB: !1,
         WEBSITE_ID: "Unknown",
         get SESSIONID() {
-          return s();
+          return i();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,

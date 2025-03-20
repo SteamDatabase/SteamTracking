@@ -68,6 +68,36 @@
                     "description": "Number of results to return at a time.  Default 10k, max 50k."
                 }
             ]
+        },
+        {
+            "name": "GetRecommendedTagsForUser",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get a set of tags that are recommended for the user based on recent playtime.",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "this is no longer used, we use the steamid in the header.  Here for compatibility with PHP until we can clean that up."
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "country_code",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "favor_rarer_tags",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Biases tags towards tags that are less common. e.g. Favor Zombies over Action if the user plays the same number of games with both tags."
+                }
+            ]
         }
     ]
 }

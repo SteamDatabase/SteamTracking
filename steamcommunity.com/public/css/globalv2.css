@@ -111,7 +111,10 @@ form {
 	padding:0;
 }
 
-input[type=text], input[type=password], input[type=number], select {
+input[type=text]:where(:not(.noOpinionatedGlobalStyles input[type=text])),
+input[type=password]:where(:not(.noOpinionatedGlobalStyles input[type=password])),
+input[type=number]:where(:not(.noOpinionatedGlobalStyles input[type=number])),
+select:where(:not(.noOpinionatedGlobalStyles select)) {
 	color: #909090;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border: 1px solid #000;
@@ -119,8 +122,6 @@ input[type=text], input[type=password], input[type=number], select {
 	/* box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 ); */
 	border-radius: 3px;
 }
-
-
 
 #footer {
 	position:relative;
