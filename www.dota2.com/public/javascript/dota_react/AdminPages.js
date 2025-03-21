@@ -86,6 +86,8 @@
         AbilitySuggestions: "_3vYlZs47O9z1ELF14LLEsV",
         ScoredItems: "_2thRO1n5rmT_Vry4XHHkFu",
         Level: "_3POW-ow0sU5DLsnpAxjZ4u",
+        Variants: "_2ZCTGViOuCrK3fX2i5QV0a",
+        Checkbox: "_1UYvWalxB-6TGfDko-EcKt",
       };
     },
     40753: (e) => {
@@ -1518,7 +1520,7 @@
                 e.arrItemSequence.includes(T[1]) &&
                 (e.fScore = Math.pow(e.fScore, 1 / 3));
           x.sort((e, t) => t.fScore - e.fScore);
-          let K = structuredClone(x);
+          let W = structuredClone(x);
           if (x.length > 0)
             if (H) {
               let e = [],
@@ -1551,7 +1553,7 @@
                   e.push(structuredClone(n[0])),
                   t.push(n[0].nSequenceID);
               }
-              K = e;
+              W = e;
             } else {
               let e = [],
                 t = [];
@@ -1578,19 +1580,19 @@
                   e.push(structuredClone(n[0])),
                   t.push(n[0].nSequenceID);
               }
-              K = e;
+              W = e;
             }
-          K.sort((e, t) => t.fScore - e.fScore);
-          const Y = (e) => {
+          W.sort((e, t) => t.fScore - e.fScore);
+          const K = (e) => {
               (c = e), $();
             },
-            W = (e, t) => {
+            Y = (e, t) => {
               (p[e] = t), $();
             },
-            j = (e, t) => {
+            V = (e, t) => {
               (E[e] = t), $();
             },
-            V = (e, t) => {
+            j = (e, t) => {
               (y[e] = t), $();
             },
             q = (e, t) => {
@@ -1622,7 +1624,7 @@
                         nHeroID: n,
                         nFacet: c,
                         fnSetSelectedHero: (e) => ((n = e), void $()),
-                        fnSetSelectedFacet: (e) => Y(e),
+                        fnSetSelectedFacet: (e) => K(e),
                       }),
                     ),
                     o.createElement(
@@ -1632,29 +1634,29 @@
                         strLabel: "Ally #1",
                         nHeroID: p[0],
                         nFacet: E[0],
-                        fnSetSelectedHero: (e) => W(0, e),
-                        fnSetSelectedFacet: (e) => j(0, e),
+                        fnSetSelectedHero: (e) => Y(0, e),
+                        fnSetSelectedFacet: (e) => V(0, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #2",
                         nHeroID: p[1],
                         nFacet: E[1],
-                        fnSetSelectedHero: (e) => W(1, e),
-                        fnSetSelectedFacet: (e) => j(1, e),
+                        fnSetSelectedHero: (e) => Y(1, e),
+                        fnSetSelectedFacet: (e) => V(1, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #3",
                         nHeroID: p[2],
                         nFacet: E[2],
-                        fnSetSelectedHero: (e) => W(2, e),
-                        fnSetSelectedFacet: (e) => j(2, e),
+                        fnSetSelectedHero: (e) => Y(2, e),
+                        fnSetSelectedFacet: (e) => V(2, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #4",
                         nHeroID: p[3],
                         nFacet: E[3],
-                        fnSetSelectedHero: (e) => W(3, e),
-                        fnSetSelectedFacet: (e) => j(3, e),
+                        fnSetSelectedHero: (e) => Y(3, e),
+                        fnSetSelectedFacet: (e) => V(3, e),
                       }),
                     ),
                     o.createElement(
@@ -1664,35 +1666,35 @@
                         strLabel: "Enemy #1",
                         nHeroID: y[0],
                         nFacet: f[0],
-                        fnSetSelectedHero: (e) => V(0, e),
+                        fnSetSelectedHero: (e) => j(0, e),
                         fnSetSelectedFacet: (e) => q(0, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #2",
                         nHeroID: y[1],
                         nFacet: f[1],
-                        fnSetSelectedHero: (e) => V(1, e),
+                        fnSetSelectedHero: (e) => j(1, e),
                         fnSetSelectedFacet: (e) => q(1, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #3",
                         nHeroID: y[2],
                         nFacet: f[2],
-                        fnSetSelectedHero: (e) => V(2, e),
+                        fnSetSelectedHero: (e) => j(2, e),
                         fnSetSelectedFacet: (e) => q(2, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #4",
                         nHeroID: y[3],
                         nFacet: f[3],
-                        fnSetSelectedHero: (e) => V(3, e),
+                        fnSetSelectedHero: (e) => j(3, e),
                         fnSetSelectedFacet: (e) => q(3, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #5",
                         nHeroID: y[4],
                         nFacet: f[4],
-                        fnSetSelectedHero: (e) => V(4, e),
+                        fnSetSelectedHero: (e) => j(4, e),
                         fnSetSelectedFacet: (e) => q(4, e),
                       }),
                     ),
@@ -1897,11 +1899,11 @@
                         ),
                       ),
                     ),
-                  K.length > 0 &&
+                  W.length > 0 &&
                     o.createElement(
                       "div",
                       { className: _().Results },
-                      K.map((e, t) =>
+                      W.map((e, t) =>
                         t >= O
                           ? null
                           : o.createElement(
@@ -1960,7 +1962,7 @@
                             ),
                       ),
                     ),
-                  K.length > 0 &&
+                  W.length > 0 &&
                     o.createElement(
                       "div",
                       { className: _().ShowMore, onClick: () => L(O + 3) },
@@ -2183,19 +2185,19 @@
               }
             }
           }
-          const K = (e) => {
+          const W = (e) => {
               (c = e), w();
             },
-            Y = (e, t) => {
+            K = (e, t) => {
               (u[e] = t), w();
             },
-            W = (e, t) => {
+            Y = (e, t) => {
               (p[e] = t), w();
             },
-            j = (e, t) => {
+            V = (e, t) => {
               (E[e] = t), w();
             },
-            V = (e, t) => {
+            j = (e, t) => {
               (y[e] = t), w();
             },
             q = (e, t) => {
@@ -2222,7 +2224,7 @@
                         nHeroID: n,
                         nFacet: c,
                         fnSetSelectedHero: (e) => ((n = e), void w()),
-                        fnSetSelectedFacet: (e) => K(e),
+                        fnSetSelectedFacet: (e) => W(e),
                       }),
                     ),
                     o.createElement(
@@ -2232,29 +2234,29 @@
                         strLabel: "Ally #1",
                         nHeroID: u[0],
                         nFacet: p[0],
-                        fnSetSelectedHero: (e) => Y(0, e),
-                        fnSetSelectedFacet: (e) => W(0, e),
+                        fnSetSelectedHero: (e) => K(0, e),
+                        fnSetSelectedFacet: (e) => Y(0, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #2",
                         nHeroID: u[1],
                         nFacet: p[1],
-                        fnSetSelectedHero: (e) => Y(1, e),
-                        fnSetSelectedFacet: (e) => W(1, e),
+                        fnSetSelectedHero: (e) => K(1, e),
+                        fnSetSelectedFacet: (e) => Y(1, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #3",
                         nHeroID: u[2],
                         nFacet: p[2],
-                        fnSetSelectedHero: (e) => Y(2, e),
-                        fnSetSelectedFacet: (e) => W(2, e),
+                        fnSetSelectedHero: (e) => K(2, e),
+                        fnSetSelectedFacet: (e) => Y(2, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #4",
                         nHeroID: u[3],
                         nFacet: p[3],
-                        fnSetSelectedHero: (e) => Y(3, e),
-                        fnSetSelectedFacet: (e) => W(3, e),
+                        fnSetSelectedHero: (e) => K(3, e),
+                        fnSetSelectedFacet: (e) => Y(3, e),
                       }),
                     ),
                     o.createElement(
@@ -2264,36 +2266,36 @@
                         strLabel: "Enemy #1",
                         nHeroID: E[0],
                         nFacet: y[0],
-                        fnSetSelectedHero: (e) => j(0, e),
-                        fnSetSelectedFacet: (e) => V(0, e),
+                        fnSetSelectedHero: (e) => V(0, e),
+                        fnSetSelectedFacet: (e) => j(0, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #2",
                         nHeroID: E[1],
                         nFacet: y[1],
-                        fnSetSelectedHero: (e) => j(1, e),
-                        fnSetSelectedFacet: (e) => V(1, e),
+                        fnSetSelectedHero: (e) => V(1, e),
+                        fnSetSelectedFacet: (e) => j(1, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #3",
                         nHeroID: E[2],
                         nFacet: y[2],
-                        fnSetSelectedHero: (e) => j(2, e),
-                        fnSetSelectedFacet: (e) => V(2, e),
+                        fnSetSelectedHero: (e) => V(2, e),
+                        fnSetSelectedFacet: (e) => j(2, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #4",
                         nHeroID: E[3],
                         nFacet: y[3],
-                        fnSetSelectedHero: (e) => j(3, e),
-                        fnSetSelectedFacet: (e) => V(3, e),
+                        fnSetSelectedHero: (e) => V(3, e),
+                        fnSetSelectedFacet: (e) => j(3, e),
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #5",
                         nHeroID: E[4],
                         nFacet: y[4],
-                        fnSetSelectedHero: (e) => j(4, e),
-                        fnSetSelectedFacet: (e) => V(4, e),
+                        fnSetSelectedHero: (e) => V(4, e),
+                        fnSetSelectedFacet: (e) => j(4, e),
                       }),
                     ),
                   ),
@@ -2590,54 +2592,103 @@
               "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             )
               .split(",")
-              .map(Number);
-          const f = () => {
-              const t = D({
-                nHeroID: n,
-                nFacet: c,
-                nPosition: m,
-                arrAlliedHeroIDs: i,
-                arrEnemyHeroIDs: d,
-                nAverageMMR: parseInt(u),
-                nGameMode: p,
-                nLobbyType: E,
-                arrPurchasedItems: y,
-              });
-              e.strConfig != t && a.push(l.J.dotaplustester(e.strFeature, t));
+              .map(Number),
+            f = parseInt(t.get("bShowIndividualChoices") || "0"),
+            g = parseFloat(t.get("fRepeatWeight") || "0.2");
+          const I = () => {
+            const t = D({
+              nHeroID: n,
+              nFacet: c,
+              nPosition: m,
+              arrAlliedHeroIDs: i,
+              arrEnemyHeroIDs: d,
+              nAverageMMR: parseInt(u),
+              nGameMode: p,
+              nLobbyType: E,
+              arrPurchasedItems: y,
+              bShowIndividualChoices: f,
+              fRepeatWeight: g,
+            });
+            e.strConfig != t && a.push(l.J.dotaplustester(e.strFeature, t));
+          };
+          let A = [],
+            h = new Map();
+          for (let e = 0; e < 3; e++) {
+            const t = (0, r.nK)(
+              n,
+              c,
+              m,
+              i,
+              d,
+              parseInt(u),
+              p,
+              !0,
+              y,
+              h,
+              0 == f,
+            ).data;
+            console.log("inference response", t);
+            const a = 1 == f ? 0 : e;
+            if (((A[a] = []), t && t.backend_response.outputs.length > 0))
+              if (t.backend_response.outputs[0].categorical_crossentropy.value)
+                for (
+                  let e = 0;
+                  e <
+                  t.backend_response.outputs[0].categorical_crossentropy.value
+                    .length;
+                  e++
+                ) {
+                  const n =
+                      t.backend_response.outputs[0].categorical_crossentropy
+                        .value[e],
+                    r =
+                      t.backend_response.outputs[0].categorical_crossentropy
+                        .weight[e] * (h.get(n) || 1);
+                  A[a].push({ nItemID: n, fScore: r });
+                }
+              else if (
+                t.backend_response.outputs[0].categorical_crossentropy
+                  .value_sequence
+              ) {
+                for (
+                  let e = 0;
+                  e <
+                  t.backend_response.outputs[0].categorical_crossentropy
+                    .value_sequence[0].value.length;
+                  e++
+                )
+                  A[a].push({
+                    nItemID:
+                      t.backend_response.outputs[0].categorical_crossentropy
+                        .value_sequence[0].value[e],
+                    fScore: 0,
+                  });
+                for (
+                  let e = 0;
+                  e <
+                  t.backend_response.outputs[0].categorical_crossentropy
+                    .value_sequence[0].value.length;
+                  e++
+                ) {
+                  const a =
+                    t.backend_response.outputs[0].categorical_crossentropy
+                      .value_sequence[0].value[e];
+                  h.set(a, (h.get(a) || 1) * g);
+                }
+              }
+          }
+          const k = (0, r.HJ)(),
+            T = (0, r.wB)(),
+            b = (e) => {
+              (c = e), I();
             },
-            g = (0, r.nK)(n, c, m, i, d, parseInt(u), p, !0, y).data;
-          console.log("inference response", g);
-          let I = [];
-          if (g && g.backend_response.outputs.length > 0)
-            for (
-              let e = 0;
-              e <
-              g.backend_response.outputs[0].categorical_crossentropy.value
-                .length;
-              e++
-            )
-              I.push({
-                nItemID:
-                  g.backend_response.outputs[0].categorical_crossentropy.value[
-                    e
-                  ],
-                fScore:
-                  g.backend_response.outputs[0].categorical_crossentropy.weight[
-                    e
-                  ],
-              });
-          const A = (0, r.HJ)(),
-            h = (0, r.wB)(),
-            k = (e) => {
-              (c = e), f();
+            C = (e, t) => {
+              (i[e] = t), I();
             },
-            T = (e, t) => {
-              (i[e] = t), f();
-            },
-            b = (e, t) => {
-              (d[e] = t), f();
+            M = (e, t) => {
+              (d[e] = t), I();
             };
-          return A.data && h.data
+          return k.data && T.data
             ? o.createElement(
                 "div",
                 { className: _().DotaPlusTesterSubPage },
@@ -2654,8 +2705,8 @@
                         strLabel: "Your Hero",
                         nHeroID: n,
                         nFacet: c,
-                        fnSetSelectedHero: (e) => ((n = e), void f()),
-                        fnSetSelectedFacet: (e) => k(e),
+                        fnSetSelectedHero: (e) => ((n = e), void I()),
+                        fnSetSelectedFacet: (e) => b(e),
                       }),
                     ),
                     o.createElement(
@@ -2665,28 +2716,28 @@
                         strLabel: "Ally #1",
                         nHeroID: i[0],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => T(0, e),
+                        fnSetSelectedHero: (e) => C(0, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #2",
                         nHeroID: i[1],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => T(1, e),
+                        fnSetSelectedHero: (e) => C(1, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #3",
                         nHeroID: i[2],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => T(2, e),
+                        fnSetSelectedHero: (e) => C(2, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Ally #4",
                         nHeroID: i[3],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => T(3, e),
+                        fnSetSelectedHero: (e) => C(3, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                     ),
@@ -2697,35 +2748,35 @@
                         strLabel: "Enemy #1",
                         nHeroID: d[0],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => b(0, e),
+                        fnSetSelectedHero: (e) => M(0, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #2",
                         nHeroID: d[1],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => b(1, e),
+                        fnSetSelectedHero: (e) => M(1, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #3",
                         nHeroID: d[2],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => b(2, e),
+                        fnSetSelectedHero: (e) => M(2, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #4",
                         nHeroID: d[3],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => b(3, e),
+                        fnSetSelectedHero: (e) => M(3, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                       o.createElement(S, {
                         strLabel: "Enemy #5",
                         nHeroID: d[4],
                         nFacet: 0,
-                        fnSetSelectedHero: (e) => b(4, e),
+                        fnSetSelectedHero: (e) => M(4, e),
                         fnSetSelectedFacet: (e) => {},
                       }),
                     ),
@@ -2737,74 +2788,125 @@
                     o.createElement(v, {
                       nPosition: m,
                       fnSetPosition: (e) => {
-                        (m = e), f();
+                        (m = e), I();
                       },
                     }),
                     o.createElement(F, {
                       nGameMode: p,
                       fnSetGameMode: (e) => {
-                        (p = e), f();
+                        (p = e), I();
                       },
                     }),
                     o.createElement(R, {
                       strMMR: u,
                       fnSetMMR: (e) => {
-                        (u = e), f();
+                        (u = e), I();
                       },
                     }),
-                    o.createElement("div", { className: _().Separator }),
                     o.createElement(
                       "div",
-                      { className: _().PurchasedItemList },
-                      y.map((e, t) =>
-                        o.createElement(
-                          "div",
-                          {
-                            key: `${t}_${e}`,
-                            onClick: () => {
-                              y.splice(t, 1), y.push(0), f();
-                            },
+                      { className: _().Option },
+                      o.createElement(
+                        "div",
+                        { className: _().Name },
+                        "Repeat Weight",
+                      ),
+                      o.createElement(
+                        "select",
+                        {
+                          className: _().WeightSelector,
+                          value: g,
+                          onChange: (e) => {
+                            return (
+                              (t = parseFloat(e.target.value)),
+                              (g = t),
+                              void I()
+                            );
+                            var t;
                           },
-                          o.createElement(N, { nItemID: e }),
-                        ),
+                        },
+                        o.createElement("option", { value: 1 }, "1.0"),
+                        o.createElement("option", { value: 0.8 }, "0.8"),
+                        o.createElement("option", { value: 0.6 }, "0.6"),
+                        o.createElement("option", { value: 0.4 }, "0.4"),
+                        o.createElement("option", { value: 0.2 }, "0.2"),
+                        o.createElement("option", { value: 0 }, "0.0"),
                       ),
                     ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: _().ClearSkilledAbilities,
-                        onClick: () => (
-                          (y = [
-                            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                          ]),
-                          void f()
-                        ),
-                      },
-                      "Clear",
-                    ),
-                    o.createElement("div", { className: _().Separator }),
-                    o.createElement(
-                      "div",
-                      { className: _().ScoredItems },
-                      I.map((e, t) =>
-                        o.createElement(
-                          "div",
-                          {
-                            className: _().Item,
-                            onClick: () => {
-                              return (
-                                (t = e.nItemID), (y[y.indexOf(0)] = t), void f()
-                              );
-                              var t;
-                            },
-                            key: `${e.nItemID}_${t}`,
+                  ),
+                  o.createElement("input", {
+                    className: _().Checkbox,
+                    type: "checkbox",
+                    id: "editindividual",
+                    checked: 1 == f,
+                    onChange: () => ((f = 0 == f ? 1 : 0), void I()),
+                  }),
+                  o.createElement(
+                    "label",
+                    { htmlFor: "editindividual" },
+                    "Show Stepwise Choices",
+                  ),
+                  o.createElement("div", { className: _().Separator }),
+                  o.createElement(
+                    "div",
+                    { className: _().PurchasedItemList },
+                    y.map((e, t) =>
+                      o.createElement(
+                        "div",
+                        {
+                          key: `${t}_${e}`,
+                          onClick: () => {
+                            y.splice(t, 1), y.push(0), I();
                           },
-                          o.createElement(N, { nItemID: e.nItemID }),
+                        },
+                        o.createElement(N, { nItemID: e }),
+                      ),
+                    ),
+                  ),
+                  o.createElement(
+                    "div",
+                    {
+                      className: _().ClearSkilledAbilities,
+                      onClick: () => (
+                        (y = [
+                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        ]),
+                        void I()
+                      ),
+                    },
+                    "Clear",
+                  ),
+                  o.createElement("div", { className: _().Separator }),
+                  o.createElement(
+                    "div",
+                    { className: _().Variants },
+                    A.map((e, t) =>
+                      o.createElement(
+                        "div",
+                        { className: _().ScoredItems, key: `Variant_${t}` },
+                        e.map((e, t) =>
                           o.createElement(
                             "div",
-                            { className: _().Weight },
-                            `${(100 * e.fScore).toFixed(2)}%`,
+                            {
+                              className: _().Item,
+                              onClick: () => {
+                                return (
+                                  (t = e.nItemID),
+                                  (y[y.indexOf(0)] = t),
+                                  void I()
+                                );
+                                var t;
+                              },
+                              key: `${e.nItemID}_${t}`,
+                            },
+                            o.createElement(N, { nItemID: e.nItemID }),
+                            e.fScore > 0 &&
+                              o.createElement(
+                                "div",
+                                { className: _().Weight },
+                                `${(100 * e.fScore).toFixed(2)}%`,
+                              ),
                           ),
                         ),
                       ),
@@ -3120,11 +3222,11 @@
         U = "goldenrod",
         B = "#adff2f",
         x = "darkgray",
-        K = "forestgreen",
-        Y = "crimson",
-        W = "#fa002e",
-        j = "#82ca9d",
-        V = "#888fd8",
+        W = "forestgreen",
+        K = "crimson",
+        Y = "#fa002e",
+        V = "#82ca9d",
+        j = "#888fd8",
         q = "#3389ae",
         J = "#FFBB28",
         X = "#FF8042",
@@ -3418,9 +3520,9 @@
                   o.createElement(
                     "span",
                     { className: P().MarginRightSmall },
-                    o.createElement("span", { style: { color: K } }, `${e}`),
+                    o.createElement("span", { style: { color: W } }, `${e}`),
                     o.createElement("span", null, " - "),
-                    o.createElement("span", { style: { color: Y } }, `${t}`),
+                    o.createElement("span", { style: { color: K } }, `${t}`),
                   ),
                   o.createElement("span", { style: { color: r } }, `(${n}%)`),
                 )
@@ -3444,9 +3546,9 @@
                   o.createElement(
                     "span",
                     { className: P().MarginRightSmall },
-                    o.createElement("span", { style: { color: K } }, `${e}`),
+                    o.createElement("span", { style: { color: W } }, `${e}`),
                     o.createElement("span", null, " - "),
-                    o.createElement("span", { style: { color: Y } }, `${t}`),
+                    o.createElement("span", { style: { color: K } }, `${t}`),
                   ),
                   o.createElement("span", { style: { color: r } }, `(${n}%)`),
                 )
@@ -4038,7 +4140,7 @@
                   const n = a == t,
                     r = [],
                     l = e?.rowData?.rankchange;
-                  let c = n ? (l >= 35 ? "#68c529" : K) : l <= -35 ? W : Y;
+                  let c = n ? (l >= 35 ? "#68c529" : W) : l <= -35 ? Y : K;
                   return (
                     r.push(
                       o.createElement(
@@ -4126,8 +4228,8 @@
                 let a = q;
                 return (
                   t == v.AP.CASUAL_MATCH
-                    ? (a = j)
-                    : t == v.AP.COMPETITIVE_MATCH && (a = V),
+                    ? (a = V)
+                    : t == v.AP.COMPETITIVE_MATCH && (a = j),
                   o.createElement("span", { style: { color: a } }, D(t))
                 );
               },
@@ -4150,7 +4252,7 @@
                       { htmlFor: "ranked" },
                       o.createElement(
                         "span",
-                        { style: { color: V } },
+                        { style: { color: j } },
                         "Ranked",
                       ),
                     ),
@@ -4170,7 +4272,7 @@
                       { htmlFor: "unranked" },
                       o.createElement(
                         "span",
-                        { style: { color: j } },
+                        { style: { color: V } },
                         "Unranked",
                       ),
                     ),
@@ -4231,7 +4333,7 @@
                 if (e?.rowData?.searchdata?.partylowpri)
                   return o.createElement(
                     "span",
-                    { style: { color: W } },
+                    { style: { color: Y } },
                     "SD (LP)",
                   );
                 const t = `DOTA_GAMEMODE_${e.cellData}`;
@@ -4430,7 +4532,7 @@
                         },
                         o.createElement(
                           "span",
-                          { style: { color: W } },
+                          { style: { color: Y } },
                           "[Lvr] ",
                         ),
                       ),
@@ -4500,7 +4602,7 @@
                         },
                         o.createElement(
                           "span",
-                          { key: "playerCommends", style: { color: K } },
+                          { key: "playerCommends", style: { color: W } },
                           `[${d.length}] `,
                         ),
                       ),
@@ -5058,7 +5160,7 @@
                           type: "monotone",
                           dataKey: "ranked",
                           name: "Ranked",
-                          dot: { fill: V, strokeWidth: 1, r: 3 },
+                          dot: { fill: j, strokeWidth: 1, r: 3 },
                           stroke: "#888fd8",
                           strokeWidth: 2,
                           connectNulls: !0,
@@ -5067,7 +5169,7 @@
                           type: "monotone",
                           dataKey: "casual",
                           name: "Unranked",
-                          dot: { fill: j, strokeWidth: 1, r: 3 },
+                          dot: { fill: V, strokeWidth: 1, r: 3 },
                           stroke: "#82ca9d",
                           strokeWidth: 2,
                           connectNulls: !0,
@@ -6152,7 +6254,7 @@
             [P, G] = (0, c.useState)([]),
             [$, U] = (0, c.useState)(!0),
             [B, x] = (0, c.useState)([]);
-          async function K() {
+          async function W() {
             if (
               !l.r.DOTA_APP_ID ||
               !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
@@ -6170,7 +6272,7 @@
               a = t?.data?.result?.teams || [];
             a.length && n(a), E(!0);
           }
-          async function Y() {
+          async function K() {
             if (
               !l.r.DOTA_APP_ID ||
               !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
@@ -6245,14 +6347,14 @@
           }, [t]),
             (0, c.useEffect)(() => {
               try {
-                K();
+                W();
               } catch (e) {
                 console.log("Could not fetch registered teams."), I(!0);
               }
             }, []),
             (0, c.useEffect)(() => {
               try {
-                Y();
+                K();
               } catch (e) {
                 console.log("Could not fetch single team info."), L(!0);
               }
@@ -6379,25 +6481,25 @@
                 console.log("Could not fetch leagues data.");
               }
             }, [t]);
-          const W = a.find((e) => e.team_id == t) || {};
-          let j;
+          const Y = a.find((e) => e.team_id == t) || {};
+          let V;
           if (
-            ((u && C) || (j = c.createElement("div", null, "Loading...")),
+            ((u && C) || (V = c.createElement("div", null, "Loading...")),
             u &&
               (0 == a.length || g) &&
-              (j = c.createElement(
+              (V = c.createElement(
                 "div",
                 null,
                 "Error loading registered teams...",
               )),
             C &&
               (0 == Object.keys(N).length || O) &&
-              (j = c.createElement(
+              (V = c.createElement(
                 "div",
                 null,
                 `Error loading single team info for teamId ${t} `,
               )),
-            j)
+            V)
           )
             return c.createElement(
               "div",
@@ -6409,11 +6511,11 @@
                 c.createElement("title", null, "Dota 2 - Team Details"),
               ),
               c.createElement(p.A, null),
-              c.createElement("div", { className: y().ContentFrame }, j),
+              c.createElement("div", { className: y().ContentFrame }, V),
               c.createElement(d.K, null),
             );
-          const V = N.members || [];
-          V.forEach((e) => {
+          const j = N.members || [];
+          j.forEach((e) => {
             (e.kick_link = `${l.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${f}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
                 ? ""
@@ -6500,7 +6602,7 @@
                               `${l.r.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
                               { params: o },
                             );
-                            Y(), setTimeout(() => d(!1), _);
+                            K(), setTimeout(() => d(!1), _);
                           },
                         },
                         c.createElement(
@@ -6565,7 +6667,7 @@
                               `${l.r.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
                               { params: n },
                             );
-                            Y(), setTimeout(() => o(!1), _);
+                            K(), setTimeout(() => o(!1), _);
                           },
                         },
                         c.createElement(
@@ -6623,14 +6725,14 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  !!V.length &&
-                    V.map((e) =>
+                  !!j.length &&
+                    j.map((e) =>
                       h.map((t) =>
                         c.createElement(
                           "div",
                           { key: `${t.key}-member-row-${e.account_id}` },
                           t.formatFunction
-                            ? t.formatFunction.call(null, e[t.key], Y)
+                            ? t.formatFunction.call(null, e[t.key], K)
                             : JSON.stringify(e[t.key] || "", null, 2).replace(
                                 /['"]+/g,
                                 "",
@@ -6638,7 +6740,7 @@
                         ),
                       ),
                     ),
-                  !V.length && c.createElement("div", null, "No team members."),
+                  !j.length && c.createElement("div", null, "No team members."),
                 ),
               ),
               c.createElement("br", null),
@@ -6672,8 +6774,8 @@
                         "div",
                         null,
                         e.formatFunction
-                          ? e.formatFunction.call(null, W[e.key])
-                          : JSON.stringify(W[e.key] || "", null, 2).replace(
+                          ? e.formatFunction.call(null, Y[e.key])
+                          : JSON.stringify(Y[e.key] || "", null, 2).replace(
                               /['"]+/g,
                               "",
                             ),
@@ -6709,7 +6811,7 @@
                               `${l.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${f}&appid=${l.r.DOTA_APP_ID}`,
                               { params: a },
                             );
-                            K(), setTimeout(() => m(!1), _);
+                            W(), setTimeout(() => m(!1), _);
                           },
                         },
                         c.createElement(

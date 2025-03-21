@@ -37789,7 +37789,7 @@
       function I(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 2,
-          published_version: 9,
+          published_version: 10,
           additional_data: [10],
           data: {
             data: [
@@ -37807,9 +37807,9 @@
                     { name: "hero_facet", data_int32s: [t] },
                     { name: "position", data_int32s: [a] },
                     { name: "allied_hero_ids", data_int32s: r },
-                    { name: "allied_hero_facets", data_int32s: n },
+                    { name: "allied_hero_facets", data_int32s: [0, 0, 0, 0] },
                     { name: "enemy_hero_ids", data_int32s: i },
-                    { name: "enemy_herofacets", data_int32s: s },
+                    { name: "enemy_herofacets", data_int32s: [0, 0, 0, 0, 0] },
                   ],
                 },
               },
@@ -37912,8 +37912,8 @@
         };
         return (0, l.I)(C(E, d));
       }
-      function R(e, t, a, r, n, i, s, o, c) {
-        const m = {
+      function R(e, t, a, r, n, i, s, o, c, m, d) {
+        const u = {
           project_id: 50,
           published_version: 7,
           additional_data: [10],
@@ -37951,9 +37951,18 @@
               },
             ],
           },
-          inference_iterations: 5,
         };
-        return console.log("inferenceRequest", m), (0, l.I)(C(f, m));
+        return (
+          (u.inference_iterations = d ? 12 : 0),
+          (u.weighted_items = []),
+          (u.item_weights = []),
+          m.forEach((e, t) => {
+            u.weighted_items.push(t), u.item_weights.push(e);
+          }),
+          console.log(m),
+          console.log("inferenceRequest", u),
+          (0, l.I)(C(f, u))
+        );
       }
       function D(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
