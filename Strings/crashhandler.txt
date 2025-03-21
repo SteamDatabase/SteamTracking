@@ -723,4 +723,3 @@ wmemmove
 wmemset
 write
 writev
-yH0?

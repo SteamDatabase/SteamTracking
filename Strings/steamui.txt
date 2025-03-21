@@ -13487,6 +13487,7 @@ Connection failed
 Connection from: %s
 Connection rejected
 Connector
+Console Log Start
 Console.ExecCommand
 Console.GetAutocompleteSuggestions
 Console.RegisterForSpewOutput
@@ -15920,7 +15921,7 @@ ManifestSignature
 Manual
 Manual recording for game %s, no retention interval
 ManuallyDeleteRecordingsForApps
-Mar 19 2025 19:16:06
+Mar 21 2025 20:54:57
 MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
@@ -24706,7 +24707,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen6&o
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -27832,8 +27833,9 @@ m_sFlatpakAppID
 m_sGameDir
 m_sGameManualURL
 m_sHomepageURL
+m_sInviteURL
+m_sJoinURL
 m_sMediaInstallPath
-m_sMsg
 m_sName
 m_sNewsURLBase
 m_sPairingClient
@@ -27855,7 +27857,6 @@ m_sStorefrontURL
 m_sStreamName
 m_sThirdPartyModGameDir
 m_sTitle
-m_sURL
 m_sUserName
 m_sVanityURL
 m_sVersion
@@ -30514,6 +30515,7 @@ strMasterSubIncludedWith
 strMasterSubNotificationIcon
 strMessage
 strMovieURL
+strMsg
 strName
 strNumDone
 strNumTotal

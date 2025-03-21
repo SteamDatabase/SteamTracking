@@ -1,4 +1,4 @@
-var CLSTAMP = "9612205";
+var CLSTAMP = "9624527";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11063,9 +11063,9 @@ var CLSTAMP = "9612205";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Mar 17 2025 : 16:37:50",
-                BUILD_TIME_UTC: "Mar 17 2025 : 23:37:50",
-                BUILD_RTIME_UTC: 1742254670,
+                BUILD_TIME_LOCAL: "Mar 21 2025 : 13:53:42",
+                BUILD_TIME_UTC: "Mar 21 2025 : 20:53:42",
+                BUILD_RTIME_UTC: 1742590422,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24410,9 +24410,9 @@ var CLSTAMP = "9612205";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Mar 17 2025 : 16:37:50",
-                    BUILD_TIME_UTC: "Mar 17 2025 : 23:37:50",
-                    BUILD_RTIME_UTC: 1742254670,
+                    BUILD_TIME_LOCAL: "Mar 21 2025 : 13:53:42",
+                    BUILD_TIME_UTC: "Mar 21 2025 : 20:53:42",
+                    BUILD_RTIME_UTC: 1742590422,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24580,200 +24580,173 @@ var CLSTAMP = "9612205";
         (0, r.Cg)([i.o], s.prototype, "OnLoginStateChange", null);
         const o = new s();
       },
-      79099: (e, t, n) => {
+      69823: (e, t, n) => {
         "use strict";
-        n.d(t, { Q: () => T });
+        n.d(t, { Q: () => I });
         var r = n(63696),
           i = n(7470),
           s = n(90095),
-          o = n(90765);
-        function a(e, t) {
-          let n = document.createElement("link");
-          (n.href = e), (n.type = "text/css"), (n.rel = "stylesheet");
-          let r = t.parentElement;
-          r.insertBefore(n, t), r.removeChild(t);
-        }
-        var c = n(3586),
-          l = n.n(c),
-          u = n(26853),
-          m = n(72476),
-          d = n(80986),
-          h = n(46108),
-          p = n(44846),
-          g = n(28987),
-          f = n(37905);
-        const _ = "steam-dev-configparams";
-        function w(e) {
+          o = n(90765),
+          a = n(3586),
+          c = n.n(a),
+          l = n(26853),
+          u = n(72476),
+          m = n(80986),
+          d = n(46108),
+          h = n(44846),
+          p = n(28987),
+          g = n(37905);
+        const f = "steam-dev-configparams";
+        function _(e) {
           return "true" === e || ("false" !== e && (Number(e) || e));
         }
-        var b = n(73788),
-          C = n(54394),
-          v = n(42318),
-          M = n(46382),
-          S = n(51115),
-          y = n(88696),
-          E = n(49455),
-          B = n(91435),
-          x = n(24295),
-          L = n(72905);
-        const k = r.lazy(() =>
+        var w = n(73788),
+          b = n(54394),
+          C = n(42318),
+          v = n(46382),
+          M = n(51115),
+          S = n(88696),
+          y = n(49455),
+          E = n(91435),
+          B = n(24295),
+          x = n(72905);
+        const L = r.lazy(() =>
             Promise.all([n.e(8732), n.e(9858)]).then(n.bind(n, 26326)),
           ),
-          R = r.lazy(() =>
+          k = r.lazy(() =>
             Promise.all([n.e(8732), n.e(9858), n.e(3714)]).then(
               n.bind(n, 26965),
             ),
           ),
-          I = "is-first-client-load";
-        function T() {
-          return "false" !== sessionStorage.getItem(I);
+          R = "is-first-client-load";
+        function I() {
+          return "false" !== sessionStorage.getItem(R);
         }
-        function D() {
+        function T() {
           return r.createElement(
             "div",
-            { className: (0, o.A)(l().Container, l().PreloadThrobber) },
-            r.createElement(u.t, { size: "xlarge", static: !0 }),
+            { className: (0, o.A)(c().Container, c().PreloadThrobber) },
+            r.createElement(l.t, { size: "xlarge", static: !0 }),
             r.createElement(
               "div",
-              { className: l().ThreeDots },
+              { className: c().ThreeDots },
               r.createElement("div", {
-                className: (0, o.A)(l().Dot, l().Dot1),
+                className: (0, o.A)(c().Dot, c().Dot1),
               }),
               r.createElement("div", {
-                className: (0, o.A)(l().Dot, l().Dot2),
+                className: (0, o.A)(c().Dot, c().Dot2),
               }),
               r.createElement("div", {
-                className: (0, o.A)(l().Dot, l().Dot3),
+                className: (0, o.A)(c().Dot, c().Dot3),
               }),
             ),
           );
         }
-        function F(e) {
+        function D(e) {
           const { cm: t } = e;
           let n = null;
           return (
-            m.TS.IN_LOGIN || m.TS.IN_LOGIN_REFRESH
+            u.TS.IN_LOGIN || u.TS.IN_LOGIN_REFRESH
               ? (n = r.createElement(
                   r.Suspense,
-                  { fallback: r.createElement(D, null) },
+                  { fallback: r.createElement(T, null) },
                   r.createElement(
-                    v.tH,
+                    C.tH,
                     null,
                     r.createElement(
-                      L.A,
+                      x.A,
                       { domain: "steamclient" },
                       r.createElement(
-                        m.ss,
+                        u.ss,
                         { IN_DESKTOPUI: !1, IN_GAMEPADUI: !1, IN_VR: !1 },
                         r.createElement(
-                          B.EO,
+                          E.EO,
                           null,
-                          r.createElement(k, { cm: t }),
+                          r.createElement(L, { cm: t }),
                         ),
                       ),
                     ),
                   ),
                 ))
-              : ((0, E.w)(
-                  m.TS.IN_STEAMUI_SHARED_CONTEXT,
+              : ((0, y.w)(
+                  u.TS.IN_STEAMUI_SHARED_CONTEXT,
                   "nosteamuisharedjscontext is no longer supported!",
                 ),
                 (n = r.createElement(
                   r.Suspense,
                   { fallback: null },
-                  r.createElement(R, { cm: t }),
+                  r.createElement(k, { cm: t }),
                 ))),
             r.createElement(
-              C.s,
+              b.s,
               { debug: !0, steamUI: !0 },
-              r.createElement(O, { cm: t }, n),
+              r.createElement(F, { cm: t }, n),
             )
           );
         }
-        function O(e) {
+        function F(e) {
           const { cm: t, children: n } = e,
             i = r.useCallback(() => t, [t]),
-            o = (0, S.bs)(() => new y.A()),
+            o = (0, M.bs)(() => new S.A()),
             a = (0, s.q3)(() => t.steamid.ConvertTo64BitString()),
             c = r.useMemo(() => ({ useActiveAccount: () => a }), [a]);
           return r.createElement(
-            x.Rh,
+            B.Rh,
             { value: c },
             r.createElement(
-              M.VQ,
+              v.VQ,
               { useActiveCMInterface: i, useStorage: o },
               n,
             ),
           );
         }
-        SteamClient._internal.RegisterForStyleChanges(function (e) {
-          const t = "https://steamloopback.host/";
-          let n = [],
-            r = document.querySelectorAll('link[rel="stylesheet"]');
-          for (let i = 0; i < r.length; i++) {
-            let s = r[i],
-              o = s.href,
-              a = "";
-            o.startsWith(t) && (a = o.substr(27));
-            let c = a.indexOf("?");
-            c >= 0 && (a = a.substr(0, c)),
-              (a = decodeURI(a).replace(/\\/g, "/"));
-            for (let t of e) {
-              if (a != t) continue;
-              const e = a.startsWith("/") ? a : "/" + a;
-              n.push({ sheet: s, newAbsolute: e });
-              break;
-            }
-          }
-          for (let e of n) a(e.newAbsolute, e.sheet);
-        }),
-          (function () {
-            (window.cm = new b.ij()),
-              (function () {
-                let e = "";
-                if (
-                  (["index.html", "sp.html"].some(
-                    (e) => -1 != window.location.pathname.indexOf(e),
-                  )
-                    ? ((e = window.location.search),
-                      sessionStorage.setItem(_, e),
-                      console.log("Storing new config params", e))
-                    : ((e = sessionStorage.getItem(_)),
-                      console.log("Loading previous config params", e)),
-                  e)
-                ) {
-                  const t = d.parse(e.slice(1));
-                  for (const e in t)
-                    -1 !== Object.getOwnPropertyNames(m.TS).indexOf(e)
-                      ? (m.TS[e] = w(t[e]))
-                      : -1 !== Object.getOwnPropertyNames(m.iA).indexOf(e)
-                        ? (m.iA[e] = w(t[e]))
-                        : -1 !== Object.getOwnPropertyNames(f.w).indexOf(e)
-                          ? (f.w[e] = w(t[e]))
-                          : console.error("Got unknown config property", e);
-                  const n = (0, h.l4)();
-                  console.log("setting locale:", n),
-                    n &&
-                      (document.documentElement.setAttribute("lang", n),
-                      h.pf.SetPreferredLocales([n]));
-                }
-                m.TS.EREALM == g.TU.k_ESteamRealmUnknown &&
-                  (m.TS.EREALM = (0, p.ID)(m.TS.LAUNCHER_TYPE)
-                    ? g.TU.k_ESteamRealmChina
-                    : g.TU.k_ESteamRealmGlobal);
-              })(),
-              (m.TS.IN_STEAMUI = !0),
-              (function () {
-                let e = !0;
-                if (sessionStorage.getItem(I) && m.TS.CLIENT_SESSION > 0) {
-                  const t = 30;
-                  Date.now() / 1e3 > m.TS.CLIENT_SESSION + t && (e = !1);
-                }
-                sessionStorage.setItem(I, e ? "true" : "false");
-              })();
-            const e = document.getElementById("root");
-            i.H(e).render(r.createElement(F, { cm: window.cm }));
-          })();
+        (function () {
+          (window.cm = new w.ij()),
+            (function () {
+              let e = "";
+              if (
+                (["index.html", "sp.html"].some(
+                  (e) => -1 != window.location.pathname.indexOf(e),
+                )
+                  ? ((e = window.location.search),
+                    sessionStorage.setItem(f, e),
+                    console.log("Storing new config params", e))
+                  : ((e = sessionStorage.getItem(f)),
+                    console.log("Loading previous config params", e)),
+                e)
+              ) {
+                const t = m.parse(e.slice(1));
+                for (const e in t)
+                  -1 !== Object.getOwnPropertyNames(u.TS).indexOf(e)
+                    ? (u.TS[e] = _(t[e]))
+                    : -1 !== Object.getOwnPropertyNames(u.iA).indexOf(e)
+                      ? (u.iA[e] = _(t[e]))
+                      : -1 !== Object.getOwnPropertyNames(g.w).indexOf(e)
+                        ? (g.w[e] = _(t[e]))
+                        : console.error("Got unknown config property", e);
+                const n = (0, d.l4)();
+                console.log("setting locale:", n),
+                  n &&
+                    (document.documentElement.setAttribute("lang", n),
+                    d.pf.SetPreferredLocales([n]));
+              }
+              u.TS.EREALM == p.TU.k_ESteamRealmUnknown &&
+                (u.TS.EREALM = (0, h.ID)(u.TS.LAUNCHER_TYPE)
+                  ? p.TU.k_ESteamRealmChina
+                  : p.TU.k_ESteamRealmGlobal);
+            })(),
+            (u.TS.IN_STEAMUI = !0),
+            (function () {
+              let e = !0;
+              if (sessionStorage.getItem(R) && u.TS.CLIENT_SESSION > 0) {
+                const t = 30;
+                Date.now() / 1e3 > u.TS.CLIENT_SESSION + t && (e = !1);
+              }
+              sessionStorage.setItem(R, e ? "true" : "false");
+            })();
+          const e = document.getElementById("root");
+          i.H(e).render(r.createElement(D, { cm: window.cm }));
+        })();
       },
     },
     o = {};
@@ -25024,7 +24997,7 @@ var CLSTAMP = "9612205";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "66dc1e2cf0e1784d555d",
+        3569: "f966505922ffff04ef2c",
         3583: "f831ab7edbd9ffa591ac",
         3594: "b85434697e9e11cd4363",
         3714: "b35345102061aec185c1",
@@ -25102,7 +25075,7 @@ var CLSTAMP = "9612205";
         9418: "29e9fa15a9fc8e62a893",
         9462: "89227ab1a3d278d803ec",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "272437954d992e0a9d6c",
+        9858: "21d71ae2a6dc997361b6",
         9869: "34bd86538342689d0c19",
         9887: "83a3520e394ff7fa45de",
       }[e]),
@@ -25314,6 +25287,6 @@ var CLSTAMP = "9612205";
         n = (self.webpackChunksteamui = self.webpackChunksteamui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [41], () => a(79099));
+  var c = a.O(void 0, [41], () => a(69823));
   c = a.O(c);
 })(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/library.js.map

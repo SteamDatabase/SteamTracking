@@ -3067,7 +3067,6 @@ https://steamcommunity.com/workshop/ajaxmanagesuggestedserviceproviders
 https://steamdeck-packages.steamos.cloud/archlinux-mirror/sources
 https://steamdeck.komodo.jp
 https://steamloopback.host
-https://steamloopback.host/
 https://steamloopback.host/${}
 https://steamsupport.valvesoftware.com/account/overview/${}
 https://steamsupport.valvesoftware.com/account_support.php?steamID=${strSteamID}

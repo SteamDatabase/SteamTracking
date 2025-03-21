@@ -2345,7 +2345,6 @@ UUUU
 UninterpretedOption
 Universe
 Unknown
-Uu\R
 VProfInternalEnterScopeCurrentThread
 V_AppendSlash
 V_ComposeFileName

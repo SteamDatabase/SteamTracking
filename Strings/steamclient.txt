@@ -17440,7 +17440,6 @@ DEFINE group contains more than one branch
 DEK-Info:
 DELETE
 DELETED_EnumerateDevVars
-DEPRECATED: FindToolForTargetApp: do not call with unAppID == k_nAppIdAll
 DEPRECATED_ticket
 DES_SPtrans
 DES_decrypt3
@@ -23782,7 +23781,7 @@ SetReturnOnlyIDs
 SetReturnPlaytimeStats
 SetReturnTotalOnly
 SetRichPresence
-SetRichPresence( '%s' ) discarding unrecognized sesison share key\n
+SetRichPresence( '%s' ) discarding unrecognized session share key\n
 SetRichPresence( '%s' ) failed to find local user\n
 SetRichPresence( '%s' ) has a key length that is too long (%d bytes is the max)\n
 SetRichPresence( '%s' ) has a key length that is zero, must have an actual key\n
@@ -28971,6 +28970,8 @@ __realpath_chk
 __recv_chk
 __register_atfork
 __session_share_link
+__session_share_link.invite_url
+__session_share_link.join_url
 __session_share_link.url
 __snprintf_chk
 __sprintf_chk
@@ -34446,8 +34447,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2499
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3889
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2502
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3892
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3072
