@@ -874,19 +874,32 @@ function TraverseModule(ast, fileName) {
 			/*
 				class o extends s {
 			*/
-			if (messageIdentifier !== null && node.type === Syntax.ClassDeclaration) {
+			if (node.type === Syntax.ClassDeclaration) {
 				let parseClass = false;
 
-				/*
-					class s extends (1856 != t.j ? n : null) {
-				*/
-				if (
-					node.superClass?.type === Syntax.ConditionalExpression &&
-					node.superClass?.consequent.type === Syntax.Identifier &&
-					node.superClass.consequent.name === messageIdentifier
+				if (messageIdentifier !== null) {
+					/*
+						class s extends (1856 != t.j ? n : null) {
+					*/
+					if (
+						node.superClass?.type === Syntax.ConditionalExpression &&
+						node.superClass?.consequent.type === Syntax.Identifier &&
+						node.superClass.consequent.name === messageIdentifier
+					) {
+						parseClass = true;
+					} else if (node.superClass?.type === Syntax.Identifier && node.superClass.name === messageIdentifier) {
+						parseClass = true;
+					}
+				} else if (
+					node.type === Syntax.ClassDeclaration &&
+					node.superClass?.type === Syntax.MemberExpression &&
+					node.superClass.property.type === Syntax.Identifier &&
+					node.superClass.property.name === "Message"
 				) {
-					parseClass = true;
-				} else if (node.superClass?.type === Syntax.Identifier && node.superClass.name === messageIdentifier) {
+					/*
+						class p extends d.Message {
+					*/
+
 					parseClass = true;
 				}
 
