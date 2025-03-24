@@ -306,3 +306,19 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   padding: 8px;
   border-radius: 5px;
 }
+._1olTwzPkPjzL36u0WgyDG0 table tr:nth-child(odd) td {
+  background: #3b3e47;
+}
+._1olTwzPkPjzL36u0WgyDG0 table td {
+  background: #32353c;
+}
+._1olTwzPkPjzL36u0WgyDG0 table td svg {
+  width: 40px;
+  height: 40px;
+  color: #3081bb;
+}
+._1olTwzPkPjzL36u0WgyDG0 ._3d0cYrmQzzda_P3DQ994kX {
+  color: #189cff;
+  font-size: 30px;
+  line-height: 30px;
+}

@@ -1107,6 +1107,7 @@ ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}meetsteam/2025
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails
 ${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
+${PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${}
 ${PARTNER_BASE_URL}newpartner
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
