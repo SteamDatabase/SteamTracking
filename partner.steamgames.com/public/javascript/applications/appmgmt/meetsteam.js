@@ -2823,7 +2823,6 @@
                       (0, z.we)("#MeetSteam_PostSurvey_Question"),
                     ),
                     r.createElement("textarea", {
-                      cols: 120,
                       rows: 10,
                       onChange: (e) => i(e.currentTarget.value),
                       value: l,
