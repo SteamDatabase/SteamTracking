@@ -79,6 +79,7 @@
         SequenceID: "_2I5WaWpAnR7Xb9bJIjMAuB",
         ItemList: "_1hs67D7V7zX-88hrbFgsay",
         ItemIcon: "_1Wq63SoqJ5sm2AjU0GHg0G",
+        AbilityIcon: "_2jWYP5f6ScwPsEZ14cFB93",
         Loading: "_2ie0WE5D9UyYhwIqhg8OUG",
         ClearSkilledAbilities: "_2KHZb4-REKRB5a9tJlgkPK",
         SkilledAbilityList: "_2U4uJQoF_QS4MJABMADMUe",
@@ -357,7 +358,7 @@
               strTooltipClassname: _().ToolTip,
             },
             o.createElement("div", {
-              className: _().ItemIcon,
+              className: _().AbilityIcon,
               style: {
                 backgroundImage: `url( ${n.r.IMG_URL}abilities/${t?.name?.replace("ability_", "")}.png`,
               },

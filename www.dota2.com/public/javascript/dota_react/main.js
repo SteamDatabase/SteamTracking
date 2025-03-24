@@ -37789,7 +37789,7 @@
       function I(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 2,
-          published_version: 10,
+          published_version: 11,
           additional_data: [10],
           data: {
             data: [
