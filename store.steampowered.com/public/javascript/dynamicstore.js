@@ -2545,15 +2545,25 @@ GDynamicStorePage = {
 		var rgItems = [];
 		var rgUnidentifiedCaps = [];
 
-		for ( var i = 0; i < rgCapsules.length; i++ )
-		{
-			var $capsule = $J( rgCapsules[i] );
-			var itemid = GDynamicStorePage.ItemIDFromCapsule( $capsule );
+		for ( var i = 0; i < rgCapsules.length; i++ ) {
+			var $capsule = $J(rgCapsules[i]);
+			var itemid = GDynamicStorePage.ItemIDFromCapsule($capsule);
 
-			if ( !itemid || ( itemid.appid && GDynamicStore.BIsSalePageAppID( itemid.appid ) ) )
+			if (!itemid) {
+				// if there's no item associated, perserve it; it's probably a sale page or event
+				rgUnidentifiedCaps.push(i);
+				continue;
+			} 
+      else if( itemid.appid &&
+				GDynamicStore.BIsSalePageAppID(itemid.appid) &&
+				(
+					AdditionalSettings.displayed_elsewhere ||
+					GDynamicStore.s_rgDisplayedApps.indexOf( itemid.appid ) === -1
+				) )
 			{
-				// if there's no item associated, preseve it; it's probably a sale page or event
-				rgUnidentifiedCaps.push( i );
+				// If it is a sale item AND it hasn't been displayed elsewhere, then perserve it;
+        // This is avoid a spotlight appeaingr after we have already shown the takeover for it.
+				rgUnidentifiedCaps.push(i);
 				continue;
 			}
 			else if ( !GDynamicStorePage.BItemValid( itemid, oShownItems ) )

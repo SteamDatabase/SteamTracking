@@ -536,6 +536,9 @@ function UpdateWishlistCount( nCount )
 		$JFromIDOrElement('wishlist_link').text( 'Wishlist' );
 	else
 		$JFromIDOrElement('wishlist_link').html( 'Wishlist (<span id="wishlist_item_count_value">' + nCount.toString() + '</span>)' );
+
+		if ( typeof window.UpdateReactQueryWishlistItemCount !== 'undefined ')
+		window.UpdateReactQueryWishlistItemCount( nCount );
 }
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref, divToHide2 )

@@ -371,6 +371,7 @@
     "accountpreferences_authorized_devices_suspicous_tooltip": "This session is in a different country. Make sure this is you.",
     "accountpreferences_authorized_devices_browser_on_os": "%1$s on %2$s",
     "accountpreferences_authorized_devices_browser_unmatched": "Unknown web browser",
+    "accountpreferences_authorized_devices_name_separator": "-",
     "authorized_devices_deauthorize_title": "Deauthorize all devices?",
     "authorized_devices_deauthorize_msg": "This will log you out of Steam everywhere, including this session. You will need to reauthorize each device, computer, and browser you wish to use.",
     "authorized_devices_deauthorize_proceed": "Proceed",

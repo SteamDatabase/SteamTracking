@@ -154,8 +154,6 @@ function HighlightPlayer( args )
 		}
 	);
 
-	this.m_elemSelector = this.m_elemStrip.find('.highlight_selector');
-
 	var elemSlider = $JFromIDOrElement(args.elemSlider);
 
 	var _this = this;
@@ -545,7 +543,6 @@ HighlightPlayer.prototype.HighlightStripItem = function( elem, bSkipAnimation )
 			nTargetScrollOffset = Math.max( 0, nThumbLeftEdge );
 	}
 
-	this.m_elemSelector.css( 'left', nThumbLeftEdge + 'px' );
 	nTargetScrollOffset = Math.min( nTargetScrollOffset, nTotalStripWidth - nStripWidth );
 
 	if ( bNeedScroll && this.slider )

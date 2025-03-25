@@ -188,20 +188,20 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Capsule', width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true },
-		{ name: 'Small Capsule', width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true },
-		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true },
-		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true },
-		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true },
+		{ name: 'Header Capsule', width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, confirmation_required: true },
+		{ name: 'Small Capsule', width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, confirmation_required: true },
+		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, confirmation_required: true },
+		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true, confirmation_required: true },
+		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true },
 		{ name: 'Page Background', width: 1438, height: 810, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
 
 		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
 		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
 
-		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false },
-		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false },
-		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false },
-		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true },
+		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true },
+		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true },
+		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, confirmation_required: true },
+		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true, confirmation_required: true },
 
 		// Keep last for list priority ordering
 		{ name: 'Screenshot', width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true },
@@ -616,13 +616,13 @@ function BLanguageInFileName( key, filename )
 	return false;
 }
 
-function SubmitImageUpload( itemID, type, altAssetIndex, altAssetFilenamePostfix )
+function SubmitImageUpload( itemID, type, altAssetIndex, altAssetFilenamePostfix, bSkipConfirmation )
 {
 	var previews = $J( '#game_image_drop_preview div.screenshot_upload_preview' );
 	if ( previews.length == 0 )
 		return false;
 
-	UploadImages( previews, itemID, type, altAssetIndex, altAssetFilenamePostfix );
+	UploadImages( previews, itemID, type, altAssetIndex, altAssetFilenamePostfix, bSkipConfirmation );
 
 	return false;
 }
@@ -635,11 +635,11 @@ function SubmitScreenshotsUpload( ele, itemID, type )
 	if ( previews.length == 0 )
 		return false;
 
-	UploadImages( previews, itemID, type, "", "" );
+	UploadImages( previews, itemID, type, "", "", true );
 }
 
 // called when user wants to submit images
-function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPostfix )
+function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPostfix, bSkipConfirmation )
 {
     // Album image types (cover art, etc.) aren't in the list of known image types because we don't want any of the
     // other code that relies on this path (store contents, screenshots) to see or know about those types. Instead we
@@ -648,6 +648,7 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 
 	var cScreenshots = 0;
 	var fd = new FormData();
+	let rgImageConfirmationData = [];
 	for ( var i = 0; i < previews.length; i++ )
 	{
 		var preview = $J( previews[i] );
@@ -723,12 +724,24 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		        // Updates the end of the filename and the key for the key-value
 		        strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyPostfix + '|alt_assets|' + altAssetIndex + '|');
 		    }
+
+			if ( !bSkipConfirmation && altAssetIndex === "" && strSelectedLanguage === 'english' && imageType.confirmation_required )
+			{
+				rgImageConfirmationData.push( { 'image_src': image.src, 'image_def': imageType } );
+			}
 		}
 
 		// previously just passed file object through to this point, however because
 		// we can now take images from a remote URL, to unify paths we just get the
 		// image data from the loaded Image object
 		AppendImageToFormData( fd, strKey, filename, image );
+	}
+
+	// Must define global fn ShowImageConfirmationDialog in webui
+	if ( rgImageConfirmationData.length && ( typeof window.ShowImageConfirmationDialog !== 'undefined' ) )
+	{
+		window.ShowImageConfirmationDialog( rgImageConfirmationData );
+		return false;
 	}
 
 	fd.append( 'sessionid', g_sessionID );
@@ -806,7 +819,6 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 
 	return false;
 }
-
 
 //-----------------------------------------------------------------------------
 // Movies

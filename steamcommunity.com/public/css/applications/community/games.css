@@ -1079,16 +1079,17 @@ div.LowPerfMode ._1Z2eJs9-zNTKcWKy4M-oDE {
 }
 ._14YOdPTduI4LctS9AB_CjI {
   display: grid;
-  grid-template-areas: "status estimate" "bar bar" "progress progress";
+  grid-template-areas: "status status" "bar bar" "progress estimate";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto 1fr;
   gap: 4px;
   align-items: center;
   width: 100%;
 }
-._14YOdPTduI4LctS9AB_CjI ._2JtXwjoHHm0U24wGc2CfVV {
+._14YOdPTduI4LctS9AB_CjI ._2JtXwjoHHm0U24wGc2CfVV,
+._14YOdPTduI4LctS9AB_CjI .IROiv55pRb_2Y3DcfsRvZ {
   grid-area: status;
-  justify-self: start;
+  justify-self: end;
   color: var(--color-info);
   font-size: var(--typography-font-size-medium);
   font-weight: 700;

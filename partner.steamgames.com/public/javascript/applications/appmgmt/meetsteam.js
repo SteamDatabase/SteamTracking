@@ -38,11 +38,14 @@
       };
     },
     30603: (e) => {
-      e.exports = { ExportToCSV: "_2QfZu5-7jOdld1h2nYbca8" };
+      e.exports = {
+        ExportToCSV: "_2QfZu5-7jOdld1h2nYbca8",
+        Table: "_2JSoC65mCQdxh-B_srjUjf",
+      };
     },
-    19286: (e, t, n) => {
+    98296: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => Gt, default: () => Ot });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => Ot, default: () => xt });
       var a = n(43527),
         r = n(90626),
         l = n(17083),
@@ -57,8 +60,8 @@
         g = n(45737),
         p = n.n(g),
         h = n(24484),
-        _ = n(56545),
-        v = n(85737),
+        v = n(56545),
+        _ = n(85737),
         S = n(64753),
         f = n(20194),
         y = n(75233),
@@ -82,16 +85,16 @@
           a = await w().get(t, { params: n });
         return a?.data?.data;
       }
-      function M(e, t) {
+      function B(e, t) {
         return e.getQueryData(["usePartnerRevAndBestAppSlow", t]);
       }
-      function B(e, t, n) {
+      function M(e, t, n) {
         return (0, f.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
-            const n = _.w.Init(v.q3);
+            const n = v.w.Init(_.q3);
             n.Body().set_clan_event_gid(t);
-            const a = await v.ZK.GetRegistrations(e, n);
+            const a = await _.ZK.GetRegistrations(e, n);
             return a.BSuccess()
               ? a
                   .Body()
@@ -105,7 +108,7 @@
       var P = n(38390),
         R = n(90362),
         k = n(96001),
-        L = n(71541),
+        L = n(16676),
         F = n(44736),
         G = n(78395),
         O = n(21869),
@@ -154,8 +157,8 @@
           [u, d] = r.useState(""),
           [E, g] = r.useState(""),
           [p, h] = r.useState(!1),
-          _ = te(),
-          v = (0, f.I)({
+          v = te(),
+          _ = (0, f.I)({
             queryKey: ["MeetSteamInviteDirectDialog", n, c],
             queryFn: async () => {
               const e = {
@@ -163,7 +166,7 @@
                   gid: n,
                   type: 6,
                 },
-                t = await Q.Nl.GetUserActionData(_, e);
+                t = await Q.Nl.GetUserActionData(v, e);
               return t.BSuccess() && t.Body().jsondata()
                 ? JSON.parse(t.Body().jsondata())
                 : {};
@@ -171,17 +174,17 @@
             enabled: Boolean(n) && c > 0,
           });
         r.useEffect(() => {
-          v.isLoading ||
-            (v.isSuccess &&
-              (d(v.data.partner_id ? v.data.partner_id.toString() : ""),
-              g(v.data.email_override ?? ""),
-              h(v.data.allow_registration_if_full ?? !1)));
-        }, [v.isLoading, v.isSuccess, v.data]);
+          _.isLoading ||
+            (_.isSuccess &&
+              (d(_.data.partner_id ? _.data.partner_id.toString() : ""),
+              g(_.data.email_override ?? ""),
+              h(_.data.allow_registration_if_full ?? !1)));
+        }, [_.isLoading, _.isSuccess, _.data]);
         return r.createElement(
           G.o0,
           {
             strTitle: "Invite User",
-            bOKDisabled: !c || a || v.isLoading,
+            bOKDisabled: !c || a || _.isLoading,
             onOK: async () => {
               l(!0);
               const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
@@ -200,7 +203,7 @@
                 r = a && 1 == a.success;
               r || i("We hit error during invite, check console: " + a?.msg),
                 l(!1),
-                v.refetch(),
+                _.refetch(),
                 r && t();
             },
             onCancel: t,
@@ -218,7 +221,7 @@
                 value: c,
               }),
               0 != c &&
-                !v.isLoading &&
+                !_.isLoading &&
                 r.createElement(
                   r.Fragment,
                   null,
@@ -248,7 +251,7 @@
               position: "center",
               string: (0, z.we)("#Saving"),
             }),
-          v.isLoading &&
+          _.isLoading &&
             r.createElement(x.t, {
               size: "small",
               position: "center",
@@ -478,7 +481,7 @@
             he ||
               (he = new (me())(
                 async (t) => {
-                  const n = _.w.Init(Q.j3);
+                  const n = v.w.Init(Q.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(6);
                   const a = await Q.Nl.GetMultipleUserActionData(e, n);
                   if (!a.BSuccess())
@@ -520,15 +523,15 @@
         };
       }
       let he;
-      var _e = n(2879);
-      function ve(e, t) {
+      var ve = n(2879);
+      function _e(e, t) {
         const n = (0, k.a)(),
           a = r.useContext(fe),
           l = (0, f.I)(ye(a, n, e, t));
         return l.isLoading ? null : l.data;
       }
       function Se(e, t) {
-        return _e.L.getQueryData(["PartnerEmailAndName", e, t]);
+        return ve.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
       const fe = r.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
@@ -536,10 +539,10 @@
             Ie ||
               (Ie = new (me())(
                 async (t) => {
-                  const n = _.w.Init(v.g9);
+                  const n = v.w.Init(_.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
                     n.Body().set_partnerids(t.map((e) => e.partnerID));
-                  const a = await v.ZK.GetBatchPartnerEmailAndName(e, n);
+                  const a = await _.ZK.GetBatchPartnerEmailAndName(e, n);
                   if (!a.BSuccess())
                     throw `Failed to call GetBatchPartnerEmailAndName with details: ${a.GetErrorMessage()}`;
                   const r = new Map();
@@ -789,7 +792,7 @@
           null,
           r.createElement(L.JU, null, "Choose Events"),
           t.map((e) =>
-            r.createElement(Me, {
+            r.createElement(Be, {
               key: e,
               gidClanEvent: e,
               rgSelected: a,
@@ -803,7 +806,7 @@
           ),
         );
       }
-      function Me(e) {
+      function Be(e) {
         const { gidClanEvent: t, rgSelected: n, fnSetSelected: a } = e,
           l = (0, P.RR)(t).GetNameWithFallback(0);
         return r.createElement(L.Yh, {
@@ -818,8 +821,8 @@
           },
         });
       }
-      var Be = n(30603),
-        Pe = n.n(Be),
+      var Me = n(30603),
+        Pe = n.n(Me),
         Re = n(29233);
       function ke(e) {
         const { hideModal: t, gid: n } = e,
@@ -951,7 +954,7 @@
         const { hideModal: t, gid: n, title: a, group: l, session: s } = e,
           i = (0, k.a)(),
           c = de(n),
-          o = B(i, n, l?.group_id),
+          o = M(i, n, l?.group_id),
           u = (0, r.useMemo)(() => {
             const e = o?.data?.filter((e) => e.session_id == s.id),
               t = new Map();
@@ -1036,7 +1039,7 @@
           ),
           r.createElement(
             "table",
-            null,
+            { className: Pe().Table },
             r.createElement(
               "thead",
               null,
@@ -1267,7 +1270,7 @@
                         const n = [];
                         for (const e of i) {
                           const a = t[e.accessorKey];
-                          n.push(a.toString());
+                          a ? n.push(a.toString()) : n.push("");
                         }
                         e.push(n);
                       }
@@ -1576,11 +1579,11 @@
               onClick: async (e) => {
                 e.preventDefault(), e.stopPropagation(), l(!0);
                 const a = await (async function (e, t) {
-                  const n = _.w.Init(v.VI),
+                  const n = v.w.Init(_.VI),
                     a = D.b.InitFromClanID((0, F.H7)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(a.ConvertTo64BitString());
-                  const r = await v.ZK.TestFireEmails(e, n);
+                  const r = await _.ZK.TestFireEmails(e, n);
                   return console.log("test fire", r), r.GetEResult();
                 })(n, t);
                 i(a);
@@ -1632,10 +1635,10 @@
           c = z.NT.GetWithFallback(n?.localized_session_description, 0),
           o = a?.find((e) => e.session_id == l.id),
           [m, d, E] = (0, S.uD)(),
-          g = B((0, k.a)(), t, n?.group_id);
+          g = M((0, k.a)(), t, n?.group_id);
         let p = Math.min((o?.guest_count / l.max_capacity) * 100, 100),
           h = o?.guest_count > 0 ? `${p}%` : "0%",
-          _ = o?.guest_count >= l.max_capacity;
+          v = o?.guest_count >= l.max_capacity;
         return r.createElement(
           r.Fragment,
           null,
@@ -1669,7 +1672,7 @@
               "div",
               { className: q().CapacityBarMax },
               r.createElement("div", {
-                className: (0, $.A)(q().CapacityBarCurrent, _ ? q().Full : ""),
+                className: (0, $.A)(q().CapacityBarCurrent, v ? q().Full : ""),
                 style: { width: h },
               }),
             ),
@@ -1910,7 +1913,7 @@
                       );
                     const o = (0, C.Yd)(s);
                     n.push(o ? o.name : "");
-                    const u = M(a, s);
+                    const u = B(a, s);
                     u
                       ? (n.push("" + at(u.strGrossUSD)),
                         n.push("" + u.nBestAppID),
@@ -1983,7 +1986,7 @@
       function it(e) {
         const { strsteamid: t, partnerID: n, registration: a } = e,
           l = (0, Qe.hW)(t),
-          s = ve(new Re.b2(t).GetAccountID(), n),
+          s = _e(new Re.b2(t).GetAccountID(), n),
           i = s?.realname || l.data?.m_strPlayerName;
         return r.createElement(
           r.Fragment,
@@ -2087,7 +2090,7 @@
                       );
                     const o = (0, C.Yd)(s);
                     a.push(o ? o.name : "");
-                    const u = M(n, s);
+                    const u = B(n, s);
                     u
                       ? (a.push("" + at(u.strGrossUSD)),
                         a.push("" + u.nBestAppID),
@@ -2187,19 +2190,19 @@
         };
       }
       let ht;
-      var _t = n(73745);
-      function vt(e) {
+      var vt = n(73745);
+      function _t(e) {
         const t = (0, k.a)(),
           n = (0, Et.q)(),
           a = (function (e) {
             const t = (0, f.I)({
               queryKey: ["useMeetSteamSaleOperators"],
               queryFn: async () => {
-                const t = _.w.Init(v.Rl),
+                const t = v.w.Init(_.Rl),
                   n = new Date();
                 n.setFullYear(n.getFullYear() - 2),
                   t.Body().set_rt_oldest_date(0);
-                const a = await v.ZK.GetSaleEventOrganizers(e, t);
+                const a = await _.ZK.GetSaleEventOrganizers(e, t);
                 return a.BSuccess()
                   ? a
                       .Body()
@@ -2233,7 +2236,7 @@
                         const n = (0, Qe.z0)(t.accountid),
                           a =
                             ((r = t.accountid),
-                            _e.L.getQueryData(["UserEmailAndLangs", r]));
+                            ve.L.getQueryData(["UserEmailAndLangs", r]));
                         var r;
                         e.push([
                           n?.m_strPlayerName || "",
@@ -2307,7 +2310,7 @@
       }
       function ft(e) {
         const { name: t, rgClanEventGIDs: n } = e,
-          [a, l, s] = (0, _t.uD)();
+          [a, l, s] = (0, vt.uD)();
         return r.createElement(
           r.Fragment,
           null,
@@ -2363,7 +2366,7 @@
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: r.createElement(u.tH, null, r.createElement(vt, null)),
+              contents: r.createElement(u.tH, null, r.createElement(_t, null)),
               onClick: t,
             },
           ];
@@ -2450,7 +2453,7 @@
                     r.createElement(
                       "div",
                       { className: p().SectionCtn },
-                      r.createElement(Bt, {
+                      r.createElement(Mt, {
                         oRegistration: m,
                         fnSetRegistration: d,
                       }),
@@ -2458,7 +2461,7 @@
                     r.createElement(
                       "div",
                       { className: p().SectionCtn },
-                      r.createElement(Mt, {
+                      r.createElement(Bt, {
                         oRegistration: m,
                         fnSetRegistration: d,
                       }),
@@ -2524,7 +2527,7 @@
               (0, z.we)("#MeetSteam_closed"),
             );
       }
-      function Mt(e) {
+      function Bt(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
           a = A();
         return r.createElement(
@@ -2617,7 +2620,7 @@
           }),
         );
       }
-      function Bt(e) {
+      function Mt(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
           a = (0, Qe.js)(b.iA.accountid),
           l = (function (e) {
@@ -2634,7 +2637,7 @@
                 );
                 return e;
               })(),
-              a = ve(b.iA.accountid, e != n ? e : null);
+              a = _e(b.iA.accountid, e != n ? e : null);
             return e == n ? t : a?.email;
           })(t?.partner_id),
           [s, i] = (0, r.useState)(() =>
@@ -2880,12 +2883,42 @@
               ),
             );
       }
-      const Gt = {
+      function Gt(e) {
+        const t = (function () {
+            const [e] = (0, r.useState)(
+              () => (0, b.Tc)("survey_results", "application_config") || [],
+            );
+            return e;
+          })(),
+          { surveyGID: n } = (0, s.g)();
+        return (
+          console.log(t),
+          r.createElement(
+            "div",
+            null,
+            r.createElement("h1", null, "Results"),
+            t.map((e) =>
+              r.createElement(
+                "div",
+                { key: e.steamid },
+                r.createElement(
+                  "p",
+                  null,
+                  JSON.parse(e.jsondata).simple_response,
+                ),
+                r.createElement("hr", null),
+              ),
+            ),
+          )
+        );
+      }
+      const Ot = {
         YearlySurvery: (e = ":year") => `/${e}`,
         PostEventSurvey: (e = ":surveyGID") => `/survey/${e}`,
         AdminDashboard: () => "/admin",
+        PostEventSurveyResults: (e = ":surveyGID") => `/surveyresults/${e}`,
       };
-      function Ot(e) {
+      function xt(e) {
         return (
           (0, r.useEffect)(() => {
             Rt.O3.Init();
@@ -2910,18 +2943,23 @@
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Gt.AdminDashboard(),
+                  path: Ot.AdminDashboard(),
                   component: It,
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Gt.YearlySurvery(":year(\\d+)"),
+                  path: Ot.YearlySurvery(":year(\\d+)"),
                   component: Tt,
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Gt.PostEventSurvey(":surveyGID(\\d+)"),
+                  path: Ot.PostEventSurvey(":surveyGID(\\d+)"),
                   component: Ft,
+                }),
+                r.createElement(s.qh, {
+                  exact: !0,
+                  path: Ot.PostEventSurveyResults(":surveyGID(\\d+)"),
+                  component: Gt,
                 }),
                 r.createElement(s.qh, { component: o.a }),
               ),

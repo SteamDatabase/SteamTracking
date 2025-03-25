@@ -2148,6 +2148,7 @@
                 displayName: s,
                 selected: t,
                 width: i.nWidth,
+                height: i.nHeight,
                 fps: n,
               });
             }

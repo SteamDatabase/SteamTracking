@@ -1078,6 +1078,7 @@ ${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/assets/promos
+${PARTNER_BASE_URL}doc/store/assets/rules
 ${PARTNER_BASE_URL}doc/store/coming_soon
 ${PARTNER_BASE_URL}doc/store/creator_homepage
 ${PARTNER_BASE_URL}doc/store/discounting/csv

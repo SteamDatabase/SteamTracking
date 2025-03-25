@@ -213,8 +213,8 @@
       var a = r(39020),
         n = r(30470);
       function i(e) {
-        const { tagid: t } = e;
-        return (0, a.MB)(t, n.TS.LANGUAGE) || String(t);
+        const { tagid: t, language: r = n.TS.LANGUAGE } = e;
+        return (0, a.MB)(t, r) || String(t);
       }
     },
     79359: (e, t, r) => {

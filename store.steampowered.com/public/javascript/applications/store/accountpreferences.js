@@ -1353,7 +1353,8 @@
           }
           return e.token_description;
         })(t);
-        o.length && (o = ' - "' + o + '"');
+        o.length &&
+          (o = ` ${(0, m.we)("#accountpreferences_authorized_devices_name_separator")} "${o}"`);
         const l = x(t);
         let _ = null;
         return (
@@ -1505,6 +1506,7 @@
         switch (t.os_platform) {
           case z.t.k_EPlatformTypeWin32:
           case z.t.k_EPlatformTypeWin64:
+          case z.t.k_EPlatformTypeOSX:
             return n.createElement(k.TV, { className: G.DeviceLogo });
           case z.t.k_EPlatformTypeAndroid32:
           case z.t.k_EPlatformTypeAndroid64:
@@ -1512,7 +1514,6 @@
           case z.t.k_EPlatformTypeLinux64:
           case z.t.k_EPlatformTypeIOS32:
           case z.t.k_EPlatformTypeIOS64:
-          case z.t.k_EPlatformTypeOSX:
             return n.createElement(U.rfv, { className: G.DeviceLogo });
           default:
             return null;

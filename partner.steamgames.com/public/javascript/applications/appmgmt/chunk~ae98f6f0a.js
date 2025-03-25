@@ -423,7 +423,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _.prototype.steamid || o.Sg(_.M()),
+            _.prototype.language || o.Sg(_.M()),
             n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -434,11 +434,6 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  steamid: {
-                    n: 1,
-                    br: o.qM.readFixed64String,
-                    bw: o.gp.writeFixed64String,
-                  },
                   language: { n: 2, br: o.qM.readString, bw: o.gp.writeString },
                   country_code: {
                     n: 3,

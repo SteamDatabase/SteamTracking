@@ -206,39 +206,10 @@ body.v6 .game_area_purchase h2.package_group {
 	background-image: url( /public/images/v5/ico_game_highlight_video.png );
 
 }
-/*
+
 .highlight_strip_item.focus {
 	margin: 0px;
-	border: 2px solid #d6d7d8;
-}
-*/
-.highlight_strip_item img {
-}
-
-#highlight_selector_strip {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 602px;
-	height: 77px;
-
-	overflow: hidden;
-	z-index: 30;
-}
-
-#highlight_selector_strip_scroll {
-	position: relative;
-	z-index: 30;
-}
-
-.highlight_selector {
-	position: absolute;
-	background-image: url( /public/images/v5/game_highlight_activethumb.png );
-	width: 116px;
-	height: 77px;
-	z-index: 50;
-	top: -10px;
-	pointer-events: none;
+	border: 3px solid #d6d7d8;
 }
 
 .highlight_flash_player_notice {

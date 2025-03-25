@@ -1593,302 +1593,302 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'boleto' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Boleto Bancario transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Boleto Bancario transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Boleto Bancario customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Boleto from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Boleto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Boleto.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Boleto from the PagSeguro website as you complete your transaction.  An email from PagSeguro will also be sent to you with a link to the printable Boleto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Boleto.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'boacompragold' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'BoaCompra Gold transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'BoaCompra Gold transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for BoaCompra Gold customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bancodobrasilonline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Do Brasil Online transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Do Brasil Online transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Do Brasil Online customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'itauonline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Itau Online transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Itau Online transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Itau Online customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bradescoonline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Bradesco Online transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bradesco Online transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bradesco Online customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pagseguro' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Pagseguro transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pagseguro transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pagseguro customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'visabrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Visa (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Visa (National) transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Visa (National) customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'amexbrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'American Express (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'American Express (National) transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for American Express (National) customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'aura' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Aura transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Aura transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Aura customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'hipercard' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Hipercard transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Hipercard transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Hipercard customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'mastercardbrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Mastercard (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mastercard (National) transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Mastercard (National) customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'dinerscardbrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Diner\'s Club (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Diner\'s Club (National) transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Diner\'s Club (National) customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'multibanco' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Multibanco transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Multibanco transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Multibanco customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'payshop' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Payshop transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Payshop transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Payshop customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'maestroboacompra' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Maestro transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Maestro transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Maestro customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'visaelectronboacompra' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Visa Electron transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Visa Electron transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Visa Electron customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'oxxo' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'OXXO transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OXXO transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OXXO customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>An email from BoaCompra will also be sent to you with a link to the printable OXXO billing slip.<br/><br/>You will need to bring this billing slip to your nearest OXXO cashier, scan the barcode, and complete the transaction.  The payment will automatically be posted by 12:00pm the following business day.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>An email from PagSeguro will also be sent to you with a link to the printable OXXO billing slip.<br/><br/>You will need to bring this billing slip to your nearest OXXO cashier, scan the barcode, and complete the transaction.  The payment will automatically be posted by 12:00pm the following business day.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'toditocash' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Todito Cash transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Todito Cash transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Todito Cash customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'carnet' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Carnet transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Carnet transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Carnet customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'spei' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'SPEI transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SPEI transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SPEI customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == '3pay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for mobile customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'isbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Is Bank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Is Bank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Is Bank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'garanti' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Garanti transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Garanti transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Garanti customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'akbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Akbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Akbank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Akbank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'yapikredi' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Yapi Kredi transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Yapi Kredi transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Yapi Kredi customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'halkbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Halkbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Halkbank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Halkbank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bankasya' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank Asya transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank Asya transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bank Asya customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'finansbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Finansbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Finansbank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Finansbank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'denizbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'DenizBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'DenizBank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for DenizBank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'ptt' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PTT transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PTT transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PTT customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'cashu' )
@@ -2103,102 +2103,102 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'pse' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PSE transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PSE transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PSE customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'exito' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Exito transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Exito transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Exito customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'efecty' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Efecty transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Efecty transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Efecty customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the PagSeguro website as you complete your transaction.  An email from PagSeguro will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'baloto' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Baloto transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Baloto transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Baloto customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Baloto from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Baloto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Baloto from the PagSeguro website as you complete your transaction.  An email from PagSeguro will also be sent to you with a link to the printable Baloto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pinvalidda' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'payvalidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'payvalidda transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for payvalidda customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'mangirkart' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'MangirKart transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'MangirKart transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MangirKart customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to 15 minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to 15 minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bancocreditodeperu' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Credito de Peru transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Credito de Peru transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Credito de Peru customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bbvacontinental' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'BBVA Continental transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'BBVA Continental transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for BBVA Continental customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'safetypay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'SafetyPay transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SafetyPay transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SafetyPay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pagoefectivo' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PagoEfectivo transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PagoEfectivo transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PagoEfectivo customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the PagSeguro website as you complete your transaction.  An email from PagSeguro will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'trustly' )
@@ -2293,32 +2293,32 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'naranja' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Naranja transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Naranja transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Naranja customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'cencosud' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Cencosud transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cencosud transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Cencosud customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'cabal' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Cabal transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cabal transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Cabal customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pagofacil' )
@@ -2343,22 +2343,22 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'banconacionaldecostarica' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Nacional de Costa Rica transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Nacional de Costa Rica transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Nacional de Costa Rica customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bancopoplar' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Poplar transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Poplar transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Poplar customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'redpagos' )
@@ -2373,92 +2373,92 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'spe' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'SPE transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SPE transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SPE customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'multicaja' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Multicaja transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Multicaja transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Multicaja customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'redcompra' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'RedCompra transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'RedCompra transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for RedCompra customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'ziraatbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'ZiraatBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'ZiraatBank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for ZiraatBank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'vakiflarbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'VakiflarBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'VakiflarBank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for VakiflarBank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'kuveytturkbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'KuveytTurkBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'KuveytTurkBank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for KuveytTurkBank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'ekonomibank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'EkonomiBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'EkonomiBank transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for EkonomiBank customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pichincha' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Pichincha transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pichincha transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pichincha customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pichinchacash' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PichinchaCash transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PichinchaCash transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PichinchaCash customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PagSeguro website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'przelewy24' )
@@ -2593,8 +2593,8 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'boletoflash' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Boleto Flash transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Boleto Flash transactions are authorized through the PagSeguro website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PagSeguro';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Boleto Flash customers';
@@ -2603,12 +2603,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'pix' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PIX transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PIX transactions are authorized through an external payment website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Processor';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PIX customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the payment website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'gcash' )
@@ -5736,7 +5736,7 @@ function DisplayPendingReceiptPage()
 		case 'pagoefectivo':
 		case 'boletoflash':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="https://customer.boacompra.com/en">BoaCompra</a>.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="https://customer.international.pagseguro.com/en">PagSeguro</a>.';
 			break;
 
 		case 'molpoints':

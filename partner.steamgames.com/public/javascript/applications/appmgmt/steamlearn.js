@@ -12680,7 +12680,7 @@
             : i.createElement(kr, { steamLearnContext: {} }, e.children);
         };
       var Fr = a(14610),
-        Vr = a(71541),
+        Vr = a(16676),
         xr = a(73745),
         Wr = a(9154),
         Rr = a(738),
@@ -31269,7 +31269,7 @@
                       )))
                     : ((h = Math.floor(u.train_batch_count() / 100)),
                       (M = Math.floor(u.validate_batch_count() / 100))),
-                  2 == u.status() || 3 == u.status())
+                  2 == u.status() || 3 == u.status() || 5 == u.status())
                 ) {
                   const t = (B + y) / (h + M),
                     a = Date.now() / 1e3 - e.start_time(),

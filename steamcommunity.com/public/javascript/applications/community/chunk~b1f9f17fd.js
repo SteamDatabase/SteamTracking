@@ -11563,9 +11563,9 @@
         f = a(59461);
       const w =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=";
-      var C = a(63872),
-        T = a.n(C),
-        I = a(41756);
+      var C = a(41756),
+        T = a(63872),
+        I = a.n(T);
       function D(e, t, a) {
         if (e.GetCategoryAsType() == t) {
           const t = m.Ay.Get().BHasOptInSpecialEvents()
@@ -11630,37 +11630,37 @@
               (this.props.icon ? this.props.icon : this.props.type) +
               ".png?v=4";
           return c.createElement(
-            I.yW.Consumer,
+            C.yW.Consumer,
             null,
             ({ bPushToCrowdInByDefault: a }) =>
               c.createElement(
                 "div",
                 {
-                  className: T().EventSubCategory,
+                  className: I().EventSubCategory,
                   onClick: () => this.onCategoryChoice(a),
                   onMouseEnter: this.OnMouseEnter,
                   ref: e ? this.m_refSelectedCategory : void 0,
                 },
                 c.createElement("img", {
-                  className: T().CategoryTypeImage,
+                  className: I().CategoryTypeImage,
                   src: t,
                 }),
                 c.createElement(
                   "div",
-                  { className: T().EventSubCategory_Ctn },
+                  { className: I().EventSubCategory_Ctn },
                   c.createElement(
                     "div",
-                    { className: T().EventSubCategory_Title },
+                    { className: I().EventSubCategory_Title },
                     e &&
                       c.createElement("img", {
-                        className: T().CategoryImage,
+                        className: I().CategoryImage,
                         src: f.A,
                       }),
                     (0, S.we)(this.props.name),
                   ),
                   c.createElement(
                     "div",
-                    { className: T().EventSubCategory_Desc },
+                    { className: I().EventSubCategory_Desc },
                     (0, S.we)(this.props.description),
                   ),
                 ),
@@ -11735,17 +11735,17 @@
               (this.props.icon ? this.props.icon : this.props.type) +
               ".png?v=4";
           return c.createElement(
-            I.yW.Consumer,
+            C.yW.Consumer,
             null,
             ({ bPushToCrowdInByDefault: i }) =>
               c.createElement(
                 "div",
                 {
                   className: (0, v.A)({
-                    [T().EventCategory]: !0,
+                    [I().EventCategory]: !0,
                     EventCategory: !0,
-                    [T().EventCategoryExpanded]: this.state.expanded,
-                    [T().EventCategoryNotExpandable]: a,
+                    [I().EventCategoryExpanded]: this.state.expanded,
+                    [I().EventCategoryNotExpandable]: a,
                     [p().ValveOnlyBackground]: t,
                   }),
                   onClick: () => this.ToggleExpand(i),
@@ -11755,58 +11755,55 @@
                 this.props.subCategories
                   ? (this.state.expanded,
                     c.createElement("img", {
-                      className: T().EventCategory_Expander,
+                      className: I().EventCategory_Expander,
                       src: w,
                     }))
                   : null,
                 c.createElement(
                   "div",
-                  { className: T().EventCategory_HeaderCtn },
+                  { className: I().EventCategory_HeaderCtn },
                   c.createElement("img", {
-                    className: T().CategoryTypeImage,
+                    className: I().CategoryTypeImage,
                     src: n,
                   }),
                   c.createElement(
                     "div",
-                    { className: T().CategoryTitles_Ctn },
+                    { className: I().CategoryTitles_Ctn },
                     c.createElement(
                       "div",
-                      { className: T().EventCategory_Title },
+                      { className: I().EventCategory_Title },
                       e &&
                         c.createElement("img", {
-                          className: T().CategoryImage,
+                          className: I().CategoryImage,
                           src: f.A,
                         }),
                       (0, S.we)(this.props.name),
                     ),
                     c.createElement(
                       "div",
-                      { className: T().EventCategory_Desc },
+                      { className: I().EventCategory_Desc },
                       (0, S.we)(this.props.description),
                     ),
                   ),
                 ),
-                c.createElement(
-                  "div",
-                  { className: T().EventSubCategoriesCtn },
-                  this.state.expanded &&
+                this.state.expanded &&
+                  c.createElement(
+                    "div",
+                    { className: I().EventSubCategoriesCtn },
                     this.props.subCategoryDesc &&
-                    c.createElement(
-                      "div",
-                      { className: T().EventSubCategory_Section_Desc },
-                      (0, S.we)(this.props.subCategoryDesc),
-                    ),
-                  this.state.expanded &&
+                      c.createElement(
+                        "div",
+                        { className: I().EventSubCategory_Section_Desc },
+                        (0, S.we)(this.props.subCategoryDesc),
+                      ),
                     this.props.subCategoryTitle &&
-                    c.createElement(
-                      "div",
-                      { className: T().EventSubCategory_Section_Title },
-                      (0, S.we)(this.props.subCategoryTitle),
-                    ),
-                  this.state.expanded &&
-                    this.props.subCategories &&
-                    this.CreateSubCategories(),
-                ),
+                      c.createElement(
+                        "div",
+                        { className: I().EventSubCategory_Section_Title },
+                        (0, S.we)(this.props.subCategoryTitle),
+                      ),
+                    this.props.subCategories && this.CreateSubCategories(),
+                  ),
               ),
           );
         }
@@ -11835,7 +11832,7 @@
                       "div",
                       {
                         key: "EventCategory_Visibility_SmallEventException",
-                        className: T().ExceptionNote,
+                        className: I().ExceptionNote,
                       },
                       (0, S.we)(
                         "#EventCategory_Visibility_SmallEventException",
@@ -11848,7 +11845,7 @@
                         "div",
                         {
                           key: "EventCategory_Visibility_CrosspostException",
-                          className: T().ExceptionNote,
+                          className: I().ExceptionNote,
                         },
                         (0, S.we)(
                           "#EventCategory_Visibility_CrosspostException",
@@ -11861,7 +11858,7 @@
                           "div",
                           {
                             key: "EventCategory_Visibility_UpcomingReleaseException",
-                            className: T().ExceptionNote,
+                            className: I().ExceptionNote,
                           },
                           (0, S.we)(
                             "#EventCategory_Visibility_UpcomingReleaseException",
@@ -11874,7 +11871,7 @@
                             "div",
                             {
                               key: "EventCategory_Visibility_DiscountException",
-                              className: T().ExceptionNote,
+                              className: I().ExceptionNote,
                             },
                             (0, S.we)(
                               "#EventCategory_Visibility_DiscountException",
@@ -11887,7 +11884,7 @@
                               "div",
                               {
                                 key: "EventCategory_Visibility_InGameDiscountException",
-                                className: T().ExceptionNote,
+                                className: I().ExceptionNote,
                               },
                               (0, S.we)(
                                 "#EventCategory_Visibility_InGameDiscountException",
@@ -11899,7 +11896,7 @@
                               "div",
                               {
                                 key: "EventCategory_Visibility_LibraryHomeException",
-                                className: T().ExceptionNote,
+                                className: I().ExceptionNote,
                               },
                               (0, S.we)(
                                 "#EventCategory_Visibility_LibraryHomeException",
@@ -11923,7 +11920,7 @@
                   "div",
                   {
                     key: "EventCategory_Visibility_SteamAwardsNominateRequest_Exception2",
-                    className: T().ExceptionNote,
+                    className: I().ExceptionNote,
                   },
                   (0, S.we)(
                     "#EventCategory_Visibility_SteamAwardsNominateRequest_Exception2",
@@ -11935,7 +11932,7 @@
                   "div",
                   {
                     key: "EventCategory_Visibility_SteamAwardsVoteRequest_Exception",
-                    className: T().ExceptionNote,
+                    className: I().ExceptionNote,
                   },
                   (0, S.we)(
                     "#EventCategory_Visibility_SteamAwardsVoteRequest_Exception",
@@ -11959,7 +11956,7 @@
                   "div",
                   {
                     key: "EventCategory_Visibility_SteamAwardsVoteRequest_Exception",
-                    className: T().ExceptionNote,
+                    className: I().ExceptionNote,
                   },
                   (0, S.we)(
                     "#EventCategory_Visibility_SteamAwardsVoteRequest_Exception",
@@ -11973,7 +11970,7 @@
                     "div",
                     {
                       key: "EventCategory_Visibility_Curator_Group_Members_Exception",
-                      className: T().ExceptionNote,
+                      className: I().ExceptionNote,
                     },
                     (0, S.we)(
                       "#EventCategory_Visibility_Curator_Group_Members",
@@ -11986,7 +11983,7 @@
                       "div",
                       {
                         key: "EventCategory_Visibility_Curator_Public_Exception",
-                        className: T().ExceptionNote,
+                        className: I().ExceptionNote,
                       },
                       (0, S.we)("#EventCategory_Visibility_Curator_Public"),
                     ),
@@ -12001,7 +11998,7 @@
           a.push(
             c.createElement(
               "div",
-              { key: "Exception_Docs_Link", className: T().ExceptionDocsLink },
+              { key: "Exception_Docs_Link", className: I().ExceptionDocsLink },
               c.createElement(
                 "a",
                 {
@@ -12029,7 +12026,7 @@
                     "div",
                     {
                       key: "EventCategory_Visibility_EventEnd",
-                      className: T().ExceptionNote,
+                      className: I().ExceptionNote,
                     },
                     (0, S.we)("#EventCategory_Visibility_EventEnd"),
                   ),
@@ -12040,7 +12037,7 @@
                     "div",
                     {
                       key: "EventCategory_Visibility_NoCapsule",
-                      className: T().ExceptionNote,
+                      className: I().ExceptionNote,
                     },
                     (0, S.we)("#EventCategory_Visibility_NoCapsule"),
                   ),
@@ -12051,7 +12048,7 @@
                   "div",
                   {
                     key: "EventCategory_Visibility_SpotlightRecommended",
-                    className: T().ExceptionNote,
+                    className: I().ExceptionNote,
                   },
                   (0, S.we)("#EventCategory_Visibility_SpotlightRecommended"),
                 ),
@@ -12082,7 +12079,7 @@
                       "div",
                       {
                         key: "EventCategory_Visibility_Special_EventRange",
-                        className: T().ExceptionNote,
+                        className: I().ExceptionNote,
                       },
                       (0, S.PP)(
                         "#EventCategory_Visibility_Special_EventRange",
@@ -12103,7 +12100,7 @@
                         "div",
                         {
                           key: "EventCategory_Visibility_Special_EventStart",
-                          className: T().ExceptionNote,
+                          className: I().ExceptionNote,
                         },
                         (0, S.PP)(
                           "#EventCategory_Visibility_Special_EventStart",
@@ -12120,7 +12117,7 @@
                         "div",
                         {
                           key: "EventCategory_Visibility_Special_EventEnd",
-                          className: T().ExceptionNote,
+                          className: I().ExceptionNote,
                         },
                         (0, S.PP)(
                           "#EventCategory_Visibility_Special_EventEnd",
@@ -12134,13 +12131,13 @@
         }
         return c.createElement(
           "div",
-          { className: T().EventCategoryRightCol },
+          { className: I().EventCategoryRightCol },
           c.createElement(
             "div",
-            { className: T().EventCategoryVisibilityCtn },
+            { className: I().EventCategoryVisibilityCtn },
             c.createElement(
               "div",
-              { className: T().EventVisibility_Title },
+              { className: I().EventVisibility_Title },
               (0, S.we)("#EventReach_Title"),
             ),
             a,
@@ -30014,8 +30011,8 @@
       var n = a(39020),
         i = a(30470);
       function r(e) {
-        const { tagid: t } = e;
-        return (0, n.MB)(t, i.TS.LANGUAGE) || String(t);
+        const { tagid: t, language: a = i.TS.LANGUAGE } = e;
+        return (0, n.MB)(t, a) || String(t);
       }
     },
     79359: (e, t, a) => {

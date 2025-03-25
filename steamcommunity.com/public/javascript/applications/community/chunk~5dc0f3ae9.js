@@ -782,7 +782,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.steamid || l.Sg(h.M()),
+            h.prototype.language || l.Sg(h.M()),
             s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -791,11 +791,6 @@
               (h.sm_m = {
                 proto: h,
                 fields: {
-                  steamid: {
-                    n: 1,
-                    br: l.qM.readFixed64String,
-                    bw: l.gp.writeFixed64String,
-                  },
                   language: { n: 2, br: l.qM.readString, bw: l.gp.writeString },
                   country_code: {
                     n: 3,
@@ -7886,6 +7881,15 @@
             (this.bytes_downloaded < this.bytes_to_download ||
               this.bytes_staged < this.bytes_to_stage)
           );
+        }
+        GetPercentComplete() {
+          return this.update_percentage
+            ? this.update_percentage
+            : this.bytes_to_download
+              ? Math.floor(
+                  (100 * this.bytes_downloaded) / this.bytes_to_download,
+                )
+              : 0;
         }
       }
       async function te(e, t, r) {

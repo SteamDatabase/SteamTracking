@@ -2223,6 +2223,15 @@
               this.bytes_staged < this.bytes_to_stage)
           );
         }
+        GetPercentComplete() {
+          return this.update_percentage
+            ? this.update_percentage
+            : this.bytes_to_download
+              ? Math.floor(
+                  (100 * this.bytes_downloaded) / this.bytes_to_download,
+                )
+              : 0;
+        }
       }
       async function te(e, t, r) {
         const i = t.client_instanceid,

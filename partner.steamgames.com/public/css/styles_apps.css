@@ -86,7 +86,7 @@ div.leaderboard {
 	border-bottom: 12px solid #262626;
 	font-family: sans-serif;
 }
-div.leaderboard_entries {	
+div.leaderboard_entries {
 	border-top: 2px solid #262626;
 	margin-top: 4px;
 }
@@ -101,17 +101,17 @@ div.leaderboard_entry_score {
 	float:	right;
 	width:	8em;
 	margin-right: 2em;
-	text-align: right;	
+	text-align: right;
 }
 
 div.leaderboard_entry_player {
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 div.leaderboard_entry_rank {
 	float:	left;
 	width:	5em;
-	margin-left: 4px;	
+	margin-left: 4px;
 }
 
 div.leaderboard_entries_header {
@@ -131,7 +131,7 @@ div.leaderboard_entries_list {
 	padding-top: 4px;
 }
 
-div.leaderboard_entry {	
+div.leaderboard_entry {
 	vertical-align: middle;
 	padding-bottom: 4px;
 }
@@ -469,4 +469,11 @@ textarea#leaderboard_blob {
 .communityitem_localization_modal_title {
 	color: #ffffff;
 	font-size: 16px;
+}
+
+.communityitem_creation_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 10px 0;
 }

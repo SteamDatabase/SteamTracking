@@ -298,8 +298,17 @@
               [a, l] = o.useState("idle"),
               [c, d] = o.useState({});
             o.useLayoutEffect(() => {
-              i.current ? (i.current = !1) : l("start");
+              i.current || l("start");
             }, [e]),
+              o.useLayoutEffect(
+                () => (
+                  (i.current = !1),
+                  () => {
+                    i.current = !0;
+                  }
+                ),
+                [],
+              ),
               o.useLayoutEffect(() => {
                 const n = s.current,
                   o = "height" == t ? "scrollHeight" : "scrollWidth",

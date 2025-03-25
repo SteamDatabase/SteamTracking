@@ -3642,3 +3642,36 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 ._1lEWAwP0XsnKz4xXZjEm1g ._12HPIcBaY3YHgYnARVwc8M {
   background: #e1c48a;
 }
+._2Dn55ck2zVwRbA9GNFu_yZ > .DialogContent_InnerWidth {
+  width: 900px;
+  min-width: 900px;
+}
+._3JFBzNNPRVAejRvp2bu5hF {
+  margin: 15px 0;
+}
+._3C-PQ-bC6JWcozpVTRwYuU {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 10px 20px;
+  margin: 20px 0;
+}
+._3C-PQ-bC6JWcozpVTRwYuU ._1Hb-MsBU3Ssa4GqbaZQNkc {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+._3C-PQ-bC6JWcozpVTRwYuU .kbtD90I1ou1gx_xO8tcXC {
+  width: 400px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+._3C-PQ-bC6JWcozpVTRwYuU ._1Md62ii5C2Q4QaiqWoEdhf {
+  width: 100%;
+}
+._3C-PQ-bC6JWcozpVTRwYuU ._3eo-7msJ5jV20gub1qOBn {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
