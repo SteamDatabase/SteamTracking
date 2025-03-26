@@ -1078,7 +1078,7 @@
                     {
                       onClick: () =>
                         (0, c.pg)(
-                          r.createElement(B, {
+                          r.createElement(H, {
                             onImport: (e) => {
                               t(e), p(!0);
                             },
@@ -1340,17 +1340,17 @@
               r.createElement(
                 "div",
                 { className: b().Category },
-                r.createElement(R, {
+                r.createElement(B, {
                   category: t,
                   list: "must",
                   title: "Must have all of these tags",
                 }),
-                r.createElement(R, {
+                r.createElement(B, {
                   category: t,
                   list: "any",
                   title: "Must have one of these tags",
                 }),
-                r.createElement(R, {
+                r.createElement(B, {
                   category: t,
                   list: "mustnot",
                   title: "Must not have any of these tags",
@@ -1363,7 +1363,7 @@
             r.createElement(
               "div",
               { className: b().CategoryCtn },
-              r.createElement(R, {
+              r.createElement(B, {
                 category: t,
                 list: "replaces_tags",
                 title:
@@ -1445,7 +1445,7 @@
               { className: C.ThemeDefinitionCtn },
               "Summary: ",
               r.createElement(E.KU, { nTotalGames: a.total_games }),
-              Boolean(s) && r.createElement(H, { category: t }),
+              Boolean(s) && r.createElement(R, { category: t }),
             ),
             r.createElement(
               "div",
@@ -1469,13 +1469,13 @@
           ),
         );
       }
-      function H(e) {
+      function R(e) {
         const { category: t } = e,
           a = (0, n.eX)(t.must, t.any, t.mustnot),
           s = (0, n.mg)(t.must, t.any, t.mustnot);
         return r.createElement(E.ny, { saleSummary: a, topAppSummary: s });
       }
-      function R(e) {
+      function B(e) {
         const { category: t, list: a, title: n } = e,
           { rgTags: l, rgCategories: i } = (0, s.DT)(),
           u = (0, S.CH)(),
@@ -1549,7 +1549,7 @@
           ),
         );
       }
-      function B(e) {
+      function H(e) {
         const { onImport: t, closeModal: a } = e;
         return (
           r.useEffect(() => {
@@ -1696,7 +1696,7 @@
                         n.tt,
                         " Days of Sale Summaries",
                       ),
-                    l.createElement(H, null),
+                    l.createElement(R, null),
                   ),
                 ),
                 l.createElement(
@@ -2052,7 +2052,7 @@
           s = (0, n.hl)(t);
         return l.createElement(D, { saleSummary: a, topAppSummary: s });
       }
-      function H(e) {
+      function R(e) {
         const t = (0, n.AY)();
         return l.createElement(
           "a",
@@ -2098,32 +2098,32 @@
           [v, G] = s.useState(void 0),
           [w, N] = s.useState(-1),
           [D, k] = s.useState(void 0),
-          [H, R] = s.useState(0),
-          [B, L] = s.useState(0),
+          [R, B] = s.useState(0),
+          [H, L] = s.useState(0),
           [I, M] = s.useState(void 0),
           [P, U] = s.useState(""),
           x = s.useRef(),
-          O = s.useMemo(() => new Array(), []),
           j = s.useMemo(() => new Array(), []),
-          F = s.useMemo(() => g().CancelToken.source(), []),
-          W = () => {
+          O = s.useMemo(() => new Array(), []),
+          W = s.useMemo(() => g().CancelToken.source(), []),
+          F = () => {
             x.current?.firstElementChild &&
-              (R(x.current.firstElementChild.getBoundingClientRect().height),
+              (B(x.current.firstElementChild.getBoundingClientRect().height),
               L(x.current.firstElementChild.getBoundingClientRect().width));
           };
         s.useEffect(() => {
-          W();
+          F();
         }, []),
-          s.useEffect(() => () => F.cancel("ReorderableList unmounting"), [F]);
-        const z = (e, t) => {
-            F.token.reason ||
+          s.useEffect(() => () => W.cancel("ReorderableList unmounting"), [W]);
+        const Y = (e, t) => {
+            W.token.reason ||
               (x.current.firstElementChild?.getBoundingClientRect().height >
                 0 &&
-                H !=
+                R !=
                   x.current.firstElementChild.getBoundingClientRect().height &&
-                W(),
+                F(),
               ((e, t) => {
-                const a = O[e]?.current;
+                const a = j[e]?.current;
                 if (!a)
                   return void console.error(
                     "start element grab missing element at index " + e,
@@ -2139,15 +2139,15 @@
                   (a.style.zIndex = "1");
               })(t, e));
           },
-          Y = (e, a) => {
+          z = (e, a) => {
             const s = h.OQ(a > e ? a - 1 : a, 0, t.length - 1);
-            e != s && (S ? S(e, s) : (0, l.yY)(t, e, s), $(s), d && d(t));
+            e != s && (S ? S(e, s) : (0, l.yY)(t, e, s), J(s), d && d(t));
           },
-          K = (e) => {
+          V = (e) => {
             A &&
-              !F.token.reason &&
+              !W.token.reason &&
               ((() => {
-                const e = O[w]?.current;
+                const e = j[w]?.current;
                 e
                   ? ((e.style.position = ""), (e.style.zIndex = ""))
                   : console.error("end element drag missing element"),
@@ -2156,17 +2156,17 @@
                   M(void 0),
                   k(void 0);
               })(),
-              Y(w, D));
+              z(w, D));
           },
-          V = (e) => {
-            if (!A || F.token.reason) return;
+          K = (e) => {
+            if (!A || W.token.reason) return;
             const a = e.clientY;
             let s;
             for (let e = 0; e < t.length; e++) {
               if (
                 a <
-                (j[e].current.getBoundingClientRect().top +
-                  2 * j[e].current.getBoundingClientRect().bottom) /
+                (O[e].current.getBoundingClientRect().top +
+                  2 * O[e].current.getBoundingClientRect().bottom) /
                   3
               ) {
                 s = e;
@@ -2175,39 +2175,39 @@
             }
             k(s ?? t.length),
               ((e) => {
-                const t = O[w]?.current;
+                const t = j[w]?.current;
                 t
                   ? ((t.style.left = e.clientX - T + "px"),
                     (t.style.top = e.clientY - v + "px"))
                   : console.error("update grab element missing element");
               })(e);
           };
-        (0, n.l6)(window, "mousemove", (e) => V(e)),
-          (0, n.l6)(window, "mouseup", (e) => K()),
+        (0, n.l6)(window, "mousemove", (e) => K(e)),
+          (0, n.l6)(window, "mouseup", (e) => V()),
           s.useEffect(() => {
-            for (let e = O.length; e < t.length; e++)
-              O.push(s.createRef()), j.push(s.createRef());
-          }, [t.length, O, j]);
+            for (let e = j.length; e < t.length; e++)
+              j.push(s.createRef()), O.push(s.createRef());
+          }, [t.length, j, O]);
         const X = (e) => {
             M(void 0);
             const t = P?.trim(),
               a = Number.parseInt(t);
             if (0 == t.length || isNaN(a)) return;
             const s = a - 1;
-            e != s && Y(e, s);
+            e != s && z(e, s);
           },
-          [Q, $] = s.useState(void 0);
+          [Q, J] = s.useState(void 0);
         return s.createElement(
           "div",
           { className: m().WhitelistCtn, ref: x },
           t.map((e, n) =>
             s.createElement(
               "div",
-              { key: n, ref: j[n] },
-              n == D && s.createElement(y, { width: B }),
+              { key: n, ref: O[n] },
+              n == D && s.createElement(y, { width: H }),
               s.createElement(
                 "div",
-                { ref: O[n], className: m().DragGhost },
+                { ref: j[n], className: m().DragGhost },
                 n == w &&
                   s.createElement(
                     "div",
@@ -2239,7 +2239,7 @@
                     n == w && m().BeingDragged,
                     Q == n && m().Dropped,
                   ),
-                  onAnimationEnd: () => $(void 0),
+                  onAnimationEnd: () => J(void 0),
                 },
                 s.createElement("img", {
                   className: (0, _.A)(
@@ -2248,7 +2248,7 @@
                     E && m().DisabledGrab,
                   ),
                   src: r,
-                  onMouseDown: Boolean(E) ? void 0 : (e) => z(e, n),
+                  onMouseDown: Boolean(E) ? void 0 : (e) => Y(e, n),
                 }),
                 s.createElement("input", {
                   className: (0, _.A)(m().WhitelistNumber, E && m().Disabled),
@@ -2287,7 +2287,7 @@
               ),
               D == t.length &&
                 n == t.length - 1 &&
-                s.createElement(y, { width: B }),
+                s.createElement(y, { width: H }),
             ),
           ),
         );
@@ -2303,6 +2303,12 @@
           }),
         );
       }
+    },
+    44894: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => s });
+      const s =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

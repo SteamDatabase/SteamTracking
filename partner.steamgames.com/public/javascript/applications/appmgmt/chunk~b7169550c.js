@@ -25,7 +25,7 @@
     },
     98019: (t, e, a) => {
       "use strict";
-      a.d(e, { p: () => l, q: () => i });
+      a.d(e, { p: () => c, q: () => i });
       var n = a(20194),
         s = a(41735),
         r = a.n(s),
@@ -43,7 +43,7 @@
         });
         return t.isLoading ? null : t.data;
       }
-      function l(t) {
+      function c(t) {
         const e = i();
         return e?.find((e) => e.id == t);
       }
@@ -54,7 +54,7 @@
         MY: () => u,
         UA: () => m,
         Yd: () => h,
-        qG: () => _,
+        qG: () => f,
         rN: () => d,
         vh: () => g,
       });
@@ -63,10 +63,10 @@
         r = a.n(s),
         o = a(90626),
         i = a(68797),
-        l = a(78327),
-        c = a(6419);
+        c = a(78327),
+        l = a(6419);
       function u() {
-        return 2 == l.TS.EUNIVERSE ? 12 : 1;
+        return 2 == c.TS.EUNIVERSE ? 12 : 1;
       }
       class p {
         m_mapOptInToPartners = new Map();
@@ -87,9 +87,9 @@
         async InternalFindPartnerByName(t) {
           const e = new Array();
           try {
-            const a = l.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+            const a = c.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
               n = {
-                sessionid: l.TS.SESSIONID,
+                sessionid: c.TS.SESSIONID,
                 searchtext: t,
                 origin: self.origin,
               },
@@ -100,7 +100,7 @@
                     partnerid: t.publisherid,
                     name: t.publishername,
                     partner_url:
-                      l.TS.PARTNER_BASE_URL + `pub/publisher/${t.publisherid}/`,
+                      c.TS.PARTNER_BASE_URL + `pub/publisher/${t.publisherid}/`,
                     contacts: t.contacts,
                   };
                   this.m_mapOptInToPartners.set(t.publisherid, a), e.push(a);
@@ -141,18 +141,18 @@
           return (
             p.s_Singleton ||
               ((p.s_Singleton = new p()),
-              ("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
+              ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
                 (window.g_PartnerInfoStore = p.s_Singleton)),
             p.s_Singleton
           );
         }
         constructor() {
           let t = JSON.parse(
-            JSON.stringify((0, l.Tc)("partner_info", "application_config")),
+            JSON.stringify((0, c.Tc)("partner_info", "application_config")),
           );
           this.ValidateStoreDefault(t) &&
             (t.forEach((t) => this.m_mapOptInToPartners.set(t.partnerid, t)),
-            "dev" == l.TS.WEB_UNIVERSE &&
+            "dev" == c.TS.WEB_UNIVERSE &&
               console.log("DEV_DEUBG: CPartnerInfoStore::constructor", t));
         }
         ValidateStoreDefault(t) {
@@ -205,10 +205,10 @@
       function h(t) {
         return p.Get().GetPartnerInfo(t);
       }
-      function _(t) {
+      function f(t) {
         return p.Get().LoadPartnerInfo(t);
       }
-      (0, n.Cg)([c.o], p.prototype, "FindPartnerByName", null);
+      (0, n.Cg)([l.o], p.prototype, "FindPartnerByName", null);
     },
     63556: (t, e, a) => {
       "use strict";
@@ -218,11 +218,11 @@
         r = a(65946),
         o = a(22837),
         i = a(62490),
-        l = a(6419),
-        c = a(78327),
+        c = a(6419),
+        l = a(78327),
         u = a(91986);
       class p {
-        m_eCurLang = (0, o.sf)(c.TS.LANGUAGE);
+        m_eCurLang = (0, o.sf)(l.TS.LANGUAGE);
         m_rgHasData = (0, i.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new u.l();
@@ -258,7 +258,7 @@
           return (
             p.s_globalSingletonStore ||
               ((p.s_globalSingletonStore = new p()),
-              "dev" == c.TS.WEB_UNIVERSE &&
+              "dev" == l.TS.WEB_UNIVERSE &&
                 (window.DUS = p.s_globalSingletonStore)),
             p.s_globalSingletonStore
           );
@@ -273,14 +273,14 @@
       (0, n.Cg)([s.sH], p.prototype, "m_eCurLang", void 0),
         (0, n.Cg)([s.sH], p.prototype, "m_rgHasData", void 0),
         (0, n.Cg)([s.sH], p.prototype, "m_bHasLocalizationContext", void 0),
-        (0, n.Cg)([l.o], p.prototype, "GetCurEditLanguage", null),
-        (0, n.Cg)([l.o], p.prototype, "SetCurEditLanguage", null),
+        (0, n.Cg)([c.o], p.prototype, "GetCurEditLanguage", null),
+        (0, n.Cg)([c.o], p.prototype, "SetCurEditLanguage", null),
         (0, n.Cg)([s.XI.bound], p.prototype, "SetHasLanguage", null),
-        (0, n.Cg)([l.o], p.prototype, "BHasLanguageData", null);
+        (0, n.Cg)([c.o], p.prototype, "BHasLanguageData", null);
     },
     96001: (t, e, a) => {
       "use strict";
-      a.d(e, { a: () => l, z: () => i });
+      a.d(e, { a: () => c, z: () => i });
       var n = a(81393),
         s = a(96059),
         r = a(30470),
@@ -306,28 +306,150 @@
             (this.m_steamInterface = new s.D(r.TS.WEBAPI_BASE_URL, t));
         }
       }
-      function l() {
+      function c() {
         return i.Get().GetPromotionTransport().GetServiceTransport();
+      }
+    },
+    27144: (t, e, a) => {
+      "use strict";
+      a.d(e, { B3: () => T, CF: () => y, KM: () => S, KT: () => E });
+      var n = a(41735),
+        s = a.n(n),
+        r = a(58632),
+        o = a.n(r),
+        i = a(90626),
+        c = a(20194),
+        l = a(75233),
+        u = a(17720),
+        p = a(68797),
+        g = a(78327),
+        m = a(56545),
+        d = a(37735),
+        h = a(23809),
+        f = a(2879);
+      const _ = "nicknames";
+      function S(t) {
+        const e = (0, h.KV)(),
+          { data: a, isLoading: n } = (0, c.I)({
+            queryKey: [_],
+            queryFn: async () => {
+              const t = new Map();
+              if (g.iA.logged_in) {
+                const a = m.w.Init(d.dN),
+                  n = (await d.xt.GetNicknameList(e, a)).Body().toObject();
+                n?.nicknames &&
+                  n.nicknames.length > 0 &&
+                  n.nicknames.forEach((e) => {
+                    t.set(e.accountid, e.nickname);
+                  });
+              }
+              return t;
+            },
+          });
+        return a ? a.get(t) : null;
+      }
+      const b = new (o())(
+          (t) =>
+            (async function (t) {
+              if (!t || 0 == t.length) return [];
+              const e =
+                "community" == (0, g.yK)()
+                  ? g.TS.COMMUNITY_BASE_URL
+                  : g.TS.STORE_BASE_URL;
+              if (1 == t.length) {
+                const a = { accountid: t[0], origin: self.origin },
+                  n = await s().get(`${e}actions/ajaxgetavatarpersona`, {
+                    params: a,
+                  });
+                if (
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfo
+                )
+                  throw `Load single avatar/persona failed ${((0, p.H))(n).strErrorMsg}`;
+                return [n.data.userinfo];
+              }
+              {
+                const a = { accountids: t.join(","), origin: self.origin },
+                  n = await s().get(`${e}actions/ajaxgetmultiavatarpersona`, {
+                    params: a,
+                  });
+                if (
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfos
+                )
+                  throw `Load single avatar/persona failed ${((0, p.H))(n).strErrorMsg}`;
+                const r = new Map();
+                return (
+                  n.data.userinfos.forEach((t) =>
+                    r.set(new u.b(t.steamid).GetAccountID(), t),
+                  ),
+                  t.map((t) => r.get(t))
+                );
+              }
+            })(t),
+          { cache: !1 },
+        ),
+        L = "avatarandpersonas";
+      function E(t) {
+        const { data: e, isLoading: a } = (0, c.I)({
+          queryKey: [L, t],
+          queryFn: () => b.load(t),
+        });
+        return [e, a];
+      }
+      function T(t) {
+        const e = (0, l.jE)(),
+          { data: a, isLoading: n } = (0, c.I)({
+            queryKey: [L, t],
+            queryFn: async () => {
+              const a = await b.loadMany(t);
+              return (
+                a.forEach((t) => {
+                  const a = [L, new u.b(t.steamid).GetAccountID()];
+                  e.setQueryData(a, t);
+                }),
+                a
+              );
+            },
+            enabled: t?.length > 0,
+          }),
+          s = (0, i.useMemo)(() => {
+            const t = new Array();
+            return (
+              a?.forEach((e) => {
+                e instanceof Error || t.push(e);
+              }),
+              t
+            );
+          }, [a]);
+        return n ? null : s;
+      }
+      function y(t) {
+        return f.L.getQueryData([L, t]);
       }
     },
     1909: (t, e, a) => {
       "use strict";
-      a.d(e, { Ng: () => S, iN: () => b, yk: () => f });
+      a.d(e, { Ng: () => _, iN: () => S, yk: () => b });
       var n = a(34629),
         s = a(75844),
         r = a(65946),
         o = a(90626),
         i = a(22837),
-        l = a(2160),
-        c = a(63556),
+        c = a(2160),
+        l = a(63556),
         u = a(95695),
         p = a.n(u),
         g = a(52038),
         m = a(61859),
         d = a(91675),
         h = a(73745),
-        _ = a(32754);
-      let S = class extends o.Component {
+        f = a(32754);
+      let _ = class extends o.Component {
         GenerateLanguageOptions() {
           let t = [];
           const {
@@ -345,8 +467,8 @@
               ),
             );
           let r = new Array();
-          const c = this.props.realms || [l.TU.k_ESteamRealmGlobal];
-          for (const t of m.A0.GetLanguageListForRealms(c)) {
+          const l = this.props.realms || [c.TU.k_ESteamRealmGlobal];
+          for (const t of m.A0.GetLanguageListForRealms(l)) {
             if (e && !e(t)) continue;
             const a = (0, i.Lg)(t),
               n = (0, m.we)("#Language_" + a),
@@ -417,7 +539,7 @@
           const { selectedLang: t, bDisabled: e, strTooltip: a } = this.props;
           let n = this.GenerateLanguageOptions();
           return o.createElement(
-            _.he,
+            f.he,
             { toolTipContent: a },
             o.createElement(
               "select",
@@ -427,25 +549,25 @@
           );
         }
       };
-      function b(t) {
+      function S(t) {
         const [e, a] = (0, r.q3)(() => [
-          c.O.Get().GetHasLocalizationContext(),
-          c.O.Get().GetCurEditLanguage(),
+          l.O.Get().GetHasLocalizationContext(),
+          l.O.Get().GetCurEditLanguage(),
         ]);
-        return o.createElement(S, {
+        return o.createElement(_, {
           selectedLang: a,
-          fnLangHasData: c.O.Get().BHasLanguageData,
-          fnOnLanguageChanged: c.O.Get().SetCurEditLanguage,
+          fnLangHasData: l.O.Get().BHasLanguageData,
+          fnOnLanguageChanged: l.O.Get().SetCurEditLanguage,
           bDisabled: !e,
           strTooltip: e ? void 0 : (0, m.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function f(t) {
+      function b(t) {
         const { fnLangHasData: e } = t;
         o.useEffect(
           () => (
-            c.O.Get().SetHasLocalizationContext(!0),
-            () => c.O.Get().SetHasLocalizationContext(!1)
+            l.O.Get().SetHasLocalizationContext(!0),
+            () => l.O.Get().SetHasLocalizationContext(!1)
           ),
           [],
         );
@@ -455,30 +577,30 @@
           return t;
         });
         return (
-          o.useEffect(() => c.O.Get().SetHasLanguage(a), [a]),
+          o.useEffect(() => l.O.Get().SetHasLanguage(a), [a]),
           o.createElement(o.Fragment, null)
         );
       }
-      (0, n.Cg)([h.oI], S.prototype, "OnLanguageChange", null),
-        (S = (0, n.Cg)([s.PA], S));
+      (0, n.Cg)([h.oI], _.prototype, "OnLanguageChange", null),
+        (_ = (0, n.Cg)([s.PA], _));
     },
     38135: (t, e, a) => {
       "use strict";
-      a.d(e, { V: () => f, a: () => S });
+      a.d(e, { V: () => b, a: () => _ });
       var n = a(34629),
         s = a(90626),
         r = a(75844),
         o = a(92757),
         i = a(52038),
-        l = a(61859),
-        c = a(95034),
+        c = a(61859),
+        l = a(95034),
         u = a(1990),
         p = a.n(u),
         g = a(32754),
         m = a(51272),
         d = a(76217),
         h = a(6419);
-      class _ extends s.Component {
+      class f extends s.Component {
         state = { activeTab: "" };
         componentDidMount() {
           this.props.startingTab
@@ -486,20 +608,20 @@
             : !this.props.bDisableRouting &&
               this.props.location &&
               this.setState({
-                activeTab: (0, c.f3)(this.props.location, "tab"),
+                activeTab: (0, l.f3)(this.props.location, "tab"),
               });
         }
         componentDidUpdate(t) {
           !this.props.bDisableRouting &&
             this.props.location &&
             this.props.location.key !== t.location.key &&
-            this.setState({ activeTab: (0, c.f3)(this.props.location, "tab") });
+            this.setState({ activeTab: (0, l.f3)(this.props.location, "tab") });
         }
         OnTabClick(t) {
           this.setState({ activeTab: t.key }),
             !this.props.bDisableRouting &&
               this.props.history &&
-              (0, c.Bm)(this.props.history, "tab", t.key),
+              (0, l.Bm)(this.props.history, "tab", t.key),
             t.onClick && t.onClick(t);
         }
         render() {
@@ -518,7 +640,7 @@
                 ),
               },
               this.props.tabs.map((e) =>
-                s.createElement(b, {
+                s.createElement(S, {
                   key: e.key,
                   tab: e,
                   OnTabClick: this.OnTabClick,
@@ -535,7 +657,7 @@
           );
         }
       }
-      function S(t) {
+      function _(t) {
         const { statusType: e = "success", children: a } = t;
         let n = "";
         return (
@@ -551,8 +673,8 @@
           )
         );
       }
-      (0, n.Cg)([h.o], _.prototype, "OnTabClick", null);
-      const b = (0, r.PA)(function (t) {
+      (0, n.Cg)([h.o], f.prototype, "OnTabClick", null);
+      const S = (0, r.PA)(function (t) {
           const { tab: e, OnTabClick: a, classNameTab: n, active: r } = t;
           return e.hidden
             ? null
@@ -585,7 +707,7 @@
                       s.createElement(
                         "div",
                         { className: p().VOWarning },
-                        (0, l.we)("#EventEditor_VOWarning"),
+                        (0, c.we)("#EventEditor_VOWarning"),
                       ),
                     ),
                   e.status,
@@ -593,7 +715,7 @@
                 ),
               );
         }),
-        f = (0, o.y)(_);
+        b = (0, o.y)(f);
     },
     48479: (t, e, a) => {
       "use strict";
@@ -603,8 +725,8 @@
         r = a(12155),
         o = a(90626),
         i = a(52038),
-        l = a(95695),
-        c = a(84811),
+        c = a(95695),
+        l = a(84811),
         u = a(64734),
         p = a(65946),
         g = a(26408);
@@ -635,7 +757,7 @@
               "div",
               {
                 className: (0, i.A)(
-                  l.CollapsableSectionTitle,
+                  c.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
@@ -644,7 +766,7 @@
             ),
             o.createElement(h, { bIsMinimized: d, fnToggleMinimize: s }),
           ),
-          !d && o.createElement(c.tH, null, m),
+          !d && o.createElement(l.tH, null, m),
         );
       }
       function d(t) {

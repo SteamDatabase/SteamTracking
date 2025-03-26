@@ -6055,7 +6055,7 @@
               "SaleFeature.GetAllUserActionDataForType#1",
               (0, o.I8)(K, t),
               J,
-              { bConstMethod: !0, ePrivilege: 4, eWebAPIKeyRequirement: 2 },
+              { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
           (e.GetFriendsSharedYearInReview = function (e, t) {
@@ -8869,14 +8869,15 @@
     },
     38390: (e, t, r) => {
       "use strict";
-      r.d(t, { B9: () => c, RR: () => l, hE: () => m });
+      r.d(t, { B9: () => d, PB: () => m, RR: () => c, hE: () => u });
       var a = r(90626),
         i = r(86921),
         n = r(4434),
         s = r(17720),
-        o = (r(78327), r(17690), r(61859));
+        o = (r(78327), r(17690), r(20194)),
+        l = r(61859);
       r(41735), r(68797);
-      function l(e) {
+      function c(e) {
         const [t, r] = (0, a.useState)(() => i.O3.GetClanEventModel(e)),
           s = (0, n.m)("usePartnerEventByEventGID");
         return (
@@ -8895,7 +8896,18 @@
           t
         );
       }
-      function c(e, t, r) {
+      function m(e) {
+        const t = (0, n.m)("usePreloadPartnerEventsByEventGID"),
+          r = (0, o.I)({
+            queryKey: ["PreloadPartnerEventsByEventGID"],
+            queryFn: () => (
+              i.O3.Init(),
+              i.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(e, [], t)
+            ),
+          });
+        return { bIsLoading: r.isLoading, events: r.data };
+      }
+      function d(e, t, r) {
         const [o, l] = (0, a.useState)(i.O3.GetClanEventModel(t)),
           [c, m] = (0, a.useState)(!!e && !!t),
           [d, u] = (0, a.useState)(),
@@ -8931,9 +8943,9 @@
           { eventModel: o, bLoading: c, sErrorMessage: d, eResult: p }
         );
       }
-      function m(e) {
+      function u(e) {
         let t = "" + e;
-        const r = o.A0.GetELanguageFallback(e);
+        const r = l.A0.GetELanguageFallback(e);
         return e != r && (t += "_" + r), t;
       }
     },
@@ -14725,7 +14737,7 @@
               ? JSON.parse(s.Body().jsondata())
               : {};
           },
-          enabled: (0, h.H7)() == t,
+          enabled: (0, h.H7)() == t && !!i.BIsValid(),
         });
       }
       const S = (e, t) => ["useMeetSteamGetRegistrationDetails", e, t];
@@ -19080,11 +19092,14 @@
       }
       function U() {
         const e = (0, f.Tc)("promotion_operation_token", "application_config");
-        (0, n.w)(Boolean(e), "require promotion_operation_token");
-        const [t] = c.useState(() =>
-          new d.D(b.TS.WEBAPI_BASE_URL, e).GetServiceTransport(),
+        (0, n.w)(
+          Boolean(e) || !o.iA.accountid,
+          "require promotion_operation_token",
         );
-        return t;
+        return c.useMemo(
+          () => new d.D(b.TS.WEBAPI_BASE_URL, e).GetServiceTransport(),
+          [e],
+        );
       }
       function O(e) {
         const { groupData: t, eventModel: r } = e,
