@@ -1339,6 +1339,7 @@ ${STORE_BASE_URL}${logged_in ? "reservation/ajaxgetuserstate" : "reservation/aja
 ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}
 ${STORE_BASE_URL}${store_url_path}
+${STORE_BASE_URL}${strURLPath}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
@@ -1663,6 +1664,7 @@ ${STORE_BASE_URL}subscriber_agreement
 ${STORE_BASE_URL}subscriber_agreement/
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
+${STORE_BASE_URL}tag/browse/
 ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
 ${STORE_BASE_URL}tags/${}/${name}
 ${STORE_BASE_URL}tags/${}/${tagid}
@@ -1684,6 +1686,8 @@ ${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
+${STORE_CDN_URL}categories/image/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
+${STORE_CDN_URL}categories/image/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
