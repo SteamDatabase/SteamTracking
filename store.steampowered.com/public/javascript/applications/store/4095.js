@@ -21504,7 +21504,7 @@
           u = Intl.DateTimeFormat().resolvedOptions().timeZone,
           p =
             "in_person" === t.location_type
-              ? (t.in_person_time_zone ?? "US/Pacific")
+              ? (t.in_person_time_zone ?? "America/Los_Angeles")
               : u,
           _ = oe.unix(o),
           h = oe.unix(o).tz(p).utcOffset() - _.utcOffset(),
