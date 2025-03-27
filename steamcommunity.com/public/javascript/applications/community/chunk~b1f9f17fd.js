@@ -68292,7 +68292,8 @@
                   (n.style.left = t.clientX - i + "px"),
                   (n.style.top = t.clientY - r + "px"),
                   (n.style.zIndex = "1");
-              })(t, e));
+              })(t, e),
+              e.preventDefault());
           },
           W = (e, a) => {
             const n = g.OQ(a > e ? a - 1 : a, 0, t.length - 1);
