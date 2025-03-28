@@ -436,6 +436,7 @@
         OuterCapsuleContainer: "_1dKR2IPNQSHs1MAIXBvt_R",
         BottomBarPriceInfo: "_1X3j2g29SBtsrFMgNiKi_Y",
         CapsuleContainer: "_22AcxR1RBDH6i-gjKRHYk0",
+        Linked: "_3b7bzOQeDc139QX27AIMtM",
         EventRow: "_1UMFnczt69Ka8nOWKMzKJR",
         Muted: "_1HVwzvj5dyBMgn_KprOcNN",
         BottomCreatorRow: "_1JrUubE3c7FdJsMxYYxbt",
@@ -24671,7 +24672,12 @@
           },
           i.createElement(
             "div",
-            { className: P().CapsuleContainer },
+            {
+              className: (0, G.A)(
+                P().CapsuleContainer,
+                e.link.url ? P().Linked : "",
+              ),
+            },
             Boolean(e.link.localized_link_capsule) &&
               i.createElement(H.o, {
                 className: P().LinkCapsuleImage,

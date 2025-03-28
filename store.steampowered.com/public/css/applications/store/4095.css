@@ -2843,10 +2843,12 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   border-radius: 3px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   transition: box-shadow .2s ease-out;
 }
-._22AcxR1RBDH6i-gjKRHYk0:hover {
+._22AcxR1RBDH6i-gjKRHYk0._3b7bzOQeDc139QX27AIMtM {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+._22AcxR1RBDH6i-gjKRHYk0._3b7bzOQeDc139QX27AIMtM:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 .SaleSectionCarouselPadding ._22AcxR1RBDH6i-gjKRHYk0 {
