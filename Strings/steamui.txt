@@ -6605,8 +6605,8 @@ ${LANGUAGE}
 13CCallbackImplILi60EE
 13CCallbackImplILi628EE
 13CCallbackImplILi704EE
-13CCallbackImplILi736EE
 13CCallbackImplILi75EE
+13CCallbackImplILi764EE
 13CCallbackImplILi784EE
 13CCallbackImplILi80EE
 13CCallbackImplILi8476EE
@@ -15921,7 +15921,7 @@ ManifestSignature
 Manual
 Manual recording for game %s, no retention interval
 ManuallyDeleteRecordingsForApps
-Mar 21 2025 20:54:57
+Mar 27 2025 22:47:49
 MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
@@ -24707,7 +24707,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggenv)o
 ghost_
 gidlist
 gidparentcomment

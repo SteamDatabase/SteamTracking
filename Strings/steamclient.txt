@@ -2280,7 +2280,6 @@ $steammessages_parental_objects.proto"
 (.CTwoFactor_RemoveAuthenticator_Response"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
-(1^JQ
 (8GXgw
 (8HXhx
 (?R or (?[+-]digits must be followed by )
@@ -13737,7 +13736,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO424
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -27824,7 +27823,6 @@ Zpm"U
 \n\nname_color
 \n\nname_since
 \n\nnext_appid
-\n\nnum_paused
 \n\nnumperpage
 \n\nogg_app_id
 \n\noptin_only
@@ -31634,7 +31632,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggen
+ggenJ
 ghjkl
 gidlist
 gidparentcomment
@@ -39485,6 +39483,7 @@ update_description
 update_device_list
 update_interval
 update_metadata
+update_percentage
 update_preview_file
 update_visibility
 updated

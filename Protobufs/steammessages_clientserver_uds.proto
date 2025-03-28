@@ -73,7 +73,6 @@ message CMsgClientGetClientAppListResponse {
 		repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;
 		optional bool download_paused = 11;
 		optional uint32 num_downloading = 12;
-		optional uint32 num_paused = 13;
 		optional bool changing = 14;
 		optional bool available_on_platform = 15;
 		optional uint64 bytes_staged = 16;
@@ -86,6 +85,7 @@ message CMsgClientGetClientAppListResponse {
 		optional bool uninstalling = 23;
 		optional uint32 rt_time_scheduled = 24;
 		optional bool running = 25;
+		optional uint32 update_percentage = 26;
 	}
 
 	repeated .CMsgClientGetClientAppListResponse.App apps = 1;

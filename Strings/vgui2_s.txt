@@ -1052,7 +1052,6 @@ isalnum
 isspace
 iswcntrl
 iswspace
-j6dc
 k2U\v
 kill
 l6qnk

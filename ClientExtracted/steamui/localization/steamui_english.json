@@ -3980,6 +3980,7 @@
     "Steam_Shutdown_Waiting_For_Game": "Waiting for %1$s to shut down...",
     "Steam_Shutdown_Finishing_Download": "Waiting for queued downloads to finish...",
     "Steam_Shutdown_Waiting_For_Download": "Stopping download for %1$s...",
+    "Steam_Shutdown_Waiting_For_Download_Anonymous": "Stopping download...",
     "Steam_Shutdown_Waiting_For_Cloud": "Finishing Steam cloud sync...",
     "Steam_Shutdown_Waiting_For_Logoff": "Logging off...",
     "Steam_Shutdown_ForceQuit": "Exit Now",

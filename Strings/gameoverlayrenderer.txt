@@ -18,7 +18,6 @@ $ORIGIN
 25CGameStreamSteamMemStream
 4IIME
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-7ki=
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 BOverlayNeedsPresent
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
