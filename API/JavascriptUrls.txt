@@ -981,6 +981,7 @@ ${PARTNER_BASE_URL}/mediaconvert/ajaxconvertmedia
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
+${PARTNER_BASE_URL}/optin/ajaxadminpreprunesearch
 ${PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion/${}
@@ -1118,6 +1119,7 @@ ${PARTNER_BASE_URL}optin/admin/demo_analysis/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
 ${PARTNER_BASE_URL}optin/admin/edit/${}
+${PARTNER_BASE_URL}optin/admin/preprune
 ${PARTNER_BASE_URL}optin/ajaxadmingetdefandstats
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
 ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
