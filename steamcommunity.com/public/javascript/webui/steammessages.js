@@ -1,15 +1,15 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9638666";
+var CLSTAMP = "9645735";
 (self.webpackChunk_steam_friendsui =
   self.webpackChunk_steam_friendsui || []).push([
   [9489],
   {
-    61837: (e, r, t) => {
+    4831: (e, r, t) => {
       t.d(r, { S7: () => n });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -333,19 +333,19 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    30423: (e, r, t) => {
+    76209: (e, r, t) => {
       function i(e) {
         return "unknown EMsg ( " + e + " )";
       }
       t.d(r, { JS: () => i });
     },
-    27418: (e, r, t) => {
+    35924: (e, r, t) => {
       t.d(r, { T4: () => i, ar: () => B });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -749,14 +749,14 @@ var CLSTAMP = "9638666";
         };
       })(i || (i = {}));
     },
-    23979: (e, r, t) => {
+    59597: (e, r, t) => {
       t.d(r, { $y: () => a, Fn: () => d, c4: () => i });
       var i,
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132);
+        o = t(8885),
+        l = t(80678);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -1081,7 +1081,7 @@ var CLSTAMP = "9638666";
           };
         })(a || (a = {}));
     },
-    18871: (e, r, t) => {
+    70309: (e, r, t) => {
       t.d(r, {
         Ev: () => p,
         Qc: () => v,
@@ -1096,9 +1096,9 @@ var CLSTAMP = "9638666";
         s,
         n = t(58663),
         o = t.n(n),
-        l = t(42031),
-        c = t(69132),
-        m = t(5974);
+        l = t(8885),
+        c = t(80678),
+        m = t(36484);
       class u extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -4605,7 +4605,7 @@ var CLSTAMP = "9638666";
             });
         })(s || (s = {}));
     },
-    5974: (e, r, t) => {
+    36484: (e, r, t) => {
       t.d(r, {
         LH: () => l,
         TT: () => m,
@@ -4618,7 +4618,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -5633,7 +5633,7 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    55858: (e, r, t) => {
+    24480: (e, r, t) => {
       t.d(r, {
         DK: () => i,
         Lw: () => E,
@@ -5647,8 +5647,8 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132);
+        o = t(8885),
+        l = t(80678);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -11300,7 +11300,7 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    7219: (e, r, t) => {
+    66077: (e, r, t) => {
       t.d(r, {
         AF: () => Dr,
         Cw: () => Or,
@@ -11368,9 +11368,9 @@ var CLSTAMP = "9638666";
         l,
         c = t(58663),
         m = t.n(c),
-        u = t(42031),
-        d = t(69132),
-        B = t(93247);
+        u = t(8885),
+        d = t(80678),
+        B = t(50721);
       function g(e) {
         return "unknown EChatRoomMemberStateChange ( " + e + " )";
       }
@@ -21455,14 +21455,14 @@ var CLSTAMP = "9638666";
           };
         })(l || (l = {}));
     },
-    80450: (e, r, t) => {
+    46316: (e, r, t) => {
       t.d(r, { lO: () => R, _o: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(16306);
+        n = t(8885),
+        o = t(80678),
+        l = t(79204);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -22671,13 +22671,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    91881: (e, r, t) => {
+    21831: (e, r, t) => {
       t.d(r, { Ek: () => l, oH: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -23259,13 +23259,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    95080: (e, r, t) => {
+    34910: (e, r, t) => {
       t.d(r, { BR: () => m, Jo: () => i, aX: () => _, f6: () => f });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -24788,7 +24788,7 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    46398: (e, r, t) => {
+    10948: (e, r, t) => {
       t.d(r, {
         IR: () => C,
         Gf: () => z,
@@ -24802,8 +24802,8 @@ var CLSTAMP = "9638666";
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -27276,7 +27276,7 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    96590: (e, r, t) => {
+    90988: (e, r, t) => {
       t.d(r, {
         A7: () => o,
         DA: () => l,
@@ -27286,7 +27286,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       i.Message;
       i.Message;
       i.Message;
@@ -27819,7 +27819,7 @@ var CLSTAMP = "9638666";
       i.Message;
       i.Message;
     },
-    93247: (e, r, t) => {
+    50721: (e, r, t) => {
       t.d(r, {
         Ce: () => y,
         Fh: () => p,
@@ -27841,7 +27841,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       i.Message;
       i.Message;
       i.Message;
@@ -29529,7 +29529,7 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    73887: (e, r, t) => {
+    16221: (e, r, t) => {
       t.d(r, {
         Q_: () => c,
         Sb: () => l,
@@ -29541,8 +29541,8 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031),
-        n = t(5974);
+        s = t(8885),
+        n = t(36484);
       class o extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -30473,12 +30473,12 @@ var CLSTAMP = "9638666";
       i.Message;
       i.Message;
     },
-    52565: (e, r, t) => {
+    82643: (e, r, t) => {
       t.d(r, { $Z: () => n });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
-      t(5974);
+        s = t(8885);
+      t(36484);
       i.Message;
       i.Message;
       i.Message;
@@ -30574,7 +30574,7 @@ var CLSTAMP = "9638666";
       i.Message;
       i.Message;
     },
-    43239: (e, r, t) => {
+    95946: (e, r, t) => {
       t.d(r, {
         rs: () => c,
         sZ: () => u,
@@ -30584,8 +30584,8 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
-      t(5974);
+        s = t(8885);
+      t(36484);
       i.Message;
       i.Message;
       i.Message;
@@ -31390,7 +31390,7 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    24016: (e, r, t) => {
+    44550: (e, r, t) => {
       t.d(r, {
         $Y: () => F,
         BE: () => i,
@@ -31403,9 +31403,9 @@ var CLSTAMP = "9638666";
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(5974);
+        n = t(8885),
+        o = t(80678),
+        l = t(36484);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -34944,13 +34944,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    55714: (e, r, t) => {
+    17908: (e, r, t) => {
       t.d(r, { Bi: () => M, qp: () => w, tB: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -36068,13 +36068,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    30315: (e, r, t) => {
+    40761: (e, r, t) => {
       t.d(r, { Oi: () => l, iq: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -36201,7 +36201,7 @@ var CLSTAMP = "9638666";
         };
       })(i || (i = {}));
     },
-    7753: (e, r, t) => {
+    96115: (e, r, t) => {
       t.d(r, {
         I4: () => B,
         L4: () => p,
@@ -36215,8 +36215,8 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132);
+        o = t(8885),
+        l = t(80678);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -37417,7 +37417,7 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    11592: (e, r, t) => {
+    534: (e, r, t) => {
       t.d(r, {
         AJ: () => a,
         DF: () => i,
@@ -37430,9 +37430,9 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132),
-        c = t(93247);
+        o = t(8885),
+        l = t(80678),
+        c = t(50721);
       class m extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -38008,14 +38008,14 @@ var CLSTAMP = "9638666";
           };
         })(a || (a = {}));
     },
-    72113: (e, r, t) => {
+    23209: (e, r, t) => {
       t.d(r, { Dr: () => f, vW: () => i });
       var i,
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132);
+        o = t(8885),
+        l = t(80678);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -39476,7 +39476,7 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    21379: (e, r, t) => {
+    85025: (e, r, t) => {
       t.d(r, {
         $A: () => c,
         Nh: () => u,
@@ -39486,7 +39486,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -40047,7 +40047,7 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    8518: (e, r, t) => {
+    64212: (e, r, t) => {
       t.d(r, {
         JL: () => i,
         QG: () => g,
@@ -40059,9 +40059,9 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132),
-        c = t(21379);
+        o = t(8885),
+        l = t(80678),
+        c = t(85025);
       class m extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -42141,13 +42141,13 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    92340: (e, r, t) => {
+    39002: (e, r, t) => {
       t.d(r, { Ku: () => l, ZK: () => i, q3: () => B });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -43327,14 +43327,14 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    49310: (e, r, t) => {
+    81232: (e, r, t) => {
       t.d(r, { BT: () => i, St: () => c });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(16306);
+        n = t(8885),
+        o = t(80678),
+        l = t(79204);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -43601,13 +43601,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    6532: (e, r, t) => {
+    70014: (e, r, t) => {
       t.d(r, { Hh: () => i, MV: () => l });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -43745,7 +43745,7 @@ var CLSTAMP = "9638666";
         };
       })(i || (i = {}));
     },
-    63086: (e, r, t) => {
+    91264: (e, r, t) => {
       t.d(r, {
         $J: () => br,
         B4: () => Sr,
@@ -43767,9 +43767,9 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132),
-        c = t(5974);
+        o = t(8885),
+        l = t(80678),
+        c = t(36484);
       class m extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -52997,12 +52997,12 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    7406: (e, r, t) => {
+    99940: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -56657,13 +56657,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    48117: (e, r, t) => {
+    89271: (e, r, t) => {
       t.d(r, { cH: () => i, dT: () => ie, rf: () => me, zv: () => J });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -61885,18 +61885,18 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    23040: (e, r, t) => {
+    98726: (e, r, t) => {
       t.d(r, { Gr: () => W, nd: () => i, xf: () => V });
       var i,
         a,
         s,
         n = t(58663),
         o = t.n(n),
-        l = t(42031),
-        c = t(69132),
-        m = t(61837),
-        u = t(16306),
-        d = t(5974);
+        l = t(8885),
+        c = t(80678),
+        m = t(4831),
+        u = t(79204),
+        d = t(36484);
       class B extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -66669,7 +66669,7 @@ var CLSTAMP = "9638666";
             });
         })(s || (s = {}));
     },
-    16306: (e, r, t) => {
+    79204: (e, r, t) => {
       t.d(r, {
         $4: () => i,
         O4: () => x,
@@ -66682,9 +66682,9 @@ var CLSTAMP = "9638666";
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(61837);
+        n = t(8885),
+        o = t(80678),
+        l = t(4831);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -70465,12 +70465,12 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    99536: (e, r, t) => {
+    10846: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       a.Message;
       class l extends a.Message {
         static ImplementsStaticInterface() {}
@@ -70669,14 +70669,14 @@ var CLSTAMP = "9638666";
         };
       })(i || (i = {}));
     },
-    1956: (e, r, t) => {
+    74490: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(61837),
-        c = t(16306);
+        n = t(8885),
+        o = t(80678),
+        l = t(4831),
+        c = t(79204);
       class m extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -72010,13 +72010,13 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    34996: (e, r, t) => {
+    31366: (e, r, t) => {
       t.d(r, { bv: () => z, fz: () => i, ot: () => w });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132);
+        n = t(8885),
+        o = t(80678);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -73427,15 +73427,15 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    82698: (e, r, t) => {
+    96340: (e, r, t) => {
       t.d(r, { DB: () => M, rs: () => i, s3: () => b });
       var i,
         a,
         s,
         n = t(58663),
         o = t.n(n),
-        l = t(42031),
-        c = t(69132);
+        l = t(8885),
+        c = t(80678);
       class m extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -74053,7 +74053,7 @@ var CLSTAMP = "9638666";
           };
         })(s || (s = {}));
     },
-    67759: (e, r, t) => {
+    50105: (e, r, t) => {
       t.d(r, {
         BL: () => b,
         NT: () => c,
@@ -74070,8 +74070,8 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132);
+        o = t(8885),
+        l = t(80678);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -75609,7 +75609,7 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    51050: (e, r, t) => {
+    76368: (e, r, t) => {
       t.d(r, {
         LH: () => c,
         NF: () => u,
@@ -75621,8 +75621,8 @@ var CLSTAMP = "9638666";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(42031),
-        l = t(69132);
+        o = t(8885),
+        l = t(80678);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -76240,7 +76240,7 @@ var CLSTAMP = "9638666";
             });
         })(a || (a = {}));
     },
-    5812: (e, r, t) => {
+    20038: (e, r, t) => {
       t.d(r, {
         CX: () => o,
         Cv: () => M,
@@ -76267,7 +76267,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -77407,7 +77407,7 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    5534: (e, r, t) => {
+    11644: (e, r, t) => {
       t.d(r, {
         DX: () => n,
         Ut: () => l,
@@ -77417,7 +77417,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -78759,11 +78759,11 @@ var CLSTAMP = "9638666";
         },
       };
     },
-    41256: (e, r, t) => {
+    43102: (e, r, t) => {
       t.d(r, { S1: () => n, sR: () => o });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -78881,7 +78881,7 @@ var CLSTAMP = "9638666";
       i.Message;
       i.Message;
     },
-    22779: (e, r, t) => {
+    91953: (e, r, t) => {
       t.d(r, {
         Bl: () => b,
         DR: () => n,
@@ -78897,7 +78897,7 @@ var CLSTAMP = "9638666";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(42031);
+        s = t(8885);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -79499,14 +79499,14 @@ var CLSTAMP = "9638666";
         }
       }
     },
-    38586: (e, r, t) => {
+    31833: (e, r, t) => {
       t.d(r, { xM: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(53103);
+        n = t(8885),
+        o = t(80678),
+        l = t(58053);
       a.Message;
       a.Message;
       class c extends a.Message {
@@ -86549,14 +86549,14 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    98049: (e, r, t) => {
+    98335: (e, r, t) => {
       t.d(r, { UP: () => i, fx: () => c, i6: () => m });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(53103);
+        n = t(8885),
+        o = t(80678),
+        l = t(58053);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -87350,14 +87350,14 @@ var CLSTAMP = "9638666";
           });
       })(i || (i = {}));
     },
-    17612: (e, r, t) => {
+    10198: (e, r, t) => {
       t.d(r, { F6: () => c, Ft: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(42031),
-        o = t(69132),
-        l = t(53103);
+        n = t(8885),
+        o = t(80678),
+        l = t(58053);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
