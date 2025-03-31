@@ -5674,16 +5674,17 @@
                   t.valveOnly &&
                     n.createElement("span", { className: d.ValveOnly }, "(VO)"),
                   n.createElement("span", { className: d.Spacer }),
-                  n.createElement(
-                    "span",
-                    { className: d.Edit },
+                  R &&
                     n.createElement(
-                      "a",
-                      { href: R, target: "_blank" },
-                      "isolate",
+                      "span",
+                      { className: d.Edit },
+                      n.createElement(
+                        "a",
+                        { href: R, target: "_blank" },
+                        "isolate",
+                      ),
+                      " (dev)",
                     ),
-                    " (dev)",
-                  ),
                   o.bShowWarnings &&
                     t.editURL &&
                     n.createElement(
