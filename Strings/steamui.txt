@@ -15921,7 +15921,7 @@ ManifestSignature
 Manual
 Manual recording for game %s, no retention interval
 ManuallyDeleteRecordingsForApps
-Mar 29 2025 03:53:01
+Mar 29 2025 19:26:59
 MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
