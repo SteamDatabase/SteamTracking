@@ -402,7 +402,10 @@ a.home_block_footer_btn:hover {
 }
 
 .home_tabs_row_ctn {
-	margin-bottom: 8px;
+	margin-bottom: 38px;
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .home_tab {
@@ -4577,7 +4580,6 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 #tab_preview_container {
 	flex: 1;
 	position: relative;
-	margin-top: 39px;
 	background: radial-gradient(69% 62% at 100% 16%, #b4cfe1 0%, #95bbd4 100%);
 	border-radius: 5px;
 	margin-bottom: 5px;	/* matches tab_item */

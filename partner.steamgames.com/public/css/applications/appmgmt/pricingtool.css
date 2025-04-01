@@ -91,9 +91,6 @@
   justify-content: space-between;
   width: fit-content;
 }
-._2j-z9aXG_KoPSY-SYZ0fkF ._1Z7LLb7cP6pLH8XwOgDkP .DialogDropDown {
-  padding-right: 40px;
-}
 ._2j-z9aXG_KoPSY-SYZ0fkF ._1Z7LLb7cP6pLH8XwOgDkP ._1PrsCGcbjJ61fDm8stNJd2 {
   margin-left: 8px;
   min-width: 200px;
@@ -1309,10 +1306,9 @@ img {
 .O-95g3EzyTgFwNJ8ATC-e .DialogDropDown {
   padding: 4px;
 }
-._2Z65Kc_3FxlP0E15rMFuVC .DialogDropDown_Arrow,
-.O-95g3EzyTgFwNJ8ATC-e .DialogDropDown_Arrow {
-  top: 6px;
-  right: 4px;
+._2Z65Kc_3FxlP0E15rMFuVC .DialogDropDown .DialogDropDown_CurrentDisplay,
+.O-95g3EzyTgFwNJ8ATC-e .DialogDropDown .DialogDropDown_CurrentDisplay {
+  white-space: initial;
 }
 ._2nnB1eMYflFLLmMAi7_jJV {
   box-sizing: border-box;
@@ -1325,9 +1321,6 @@ img {
 }
 .O-95g3EzyTgFwNJ8ATC-e {
   height: fit-content;
-}
-.O-95g3EzyTgFwNJ8ATC-e .DialogDropDown {
-  padding-right: 20px;
 }
 ._2gGuz_TA8axLQOqAtwurFU ._DialogInputContainer,
 ._1jj2uEuCns_K_cIfGZcKl6 ._DialogInputContainer {

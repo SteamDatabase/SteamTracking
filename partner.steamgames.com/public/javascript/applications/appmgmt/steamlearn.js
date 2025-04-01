@@ -11500,7 +11500,7 @@
         }
         m_SteamInterface = null;
       }
-      var ya = a(2879);
+      var ya = a(7860);
       const Ma = "SteamLearnDB",
         Ca = 1,
         Ta = "SteamLearnProjects";

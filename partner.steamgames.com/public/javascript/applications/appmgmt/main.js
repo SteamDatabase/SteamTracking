@@ -309,7 +309,6 @@
         ToggleSwitch: "_1PQppcgkuXQAiFPar9AGi-",
         LabelFieldValue: "_3pteVMTgNRdIzZreR6HnTp",
         DropDownControlButtonContents: "_3OHR1e3u08hK7hMx4fFy_L",
-        Spacer: "_2H-4-c_5Q5Yk76jfQCbBp9",
         DropDownRow: "_1fwM173Ng2G0kqw3Tb3Yx7",
         IconContainer: "_3xrmZ1royQxijivqXbiYmu",
         Label: "sNbXz_kVc2tfPwRJLfUat",
@@ -643,6 +642,13 @@
         WifiBar4Anim: "_3jrA8AMmWDnOD3_xIL5b3",
         GenericGamepadHighlight: "_3-ZZDE9nzm0Tq9xSGLby1a",
         GenericGamepadEmpty: "_1toTlId7W50QaHwhm2SfyW",
+        LegionGoAnim1: "_3fs6zBkR21ewf816VFANpo",
+        LegionGoWiggleStick: "_3r8BMeEDGhnDnq7HCTtsyk",
+        LegionGoCursorWiggle: "_1ugur7H9TuFA6ZRwq-CBB6",
+        LegionGoWiggleCursor: "_2H0WjqDEEycEgncxT0Awn-",
+        LegionGoTriggerClick: "_2dKXeLBBRZz5zJ-A_be0YE",
+        LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
+        ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
     88843: (e) => {
@@ -1255,7 +1261,7 @@
         I = r(6813),
         T = r(97058),
         D = r(73745),
-        k = r(2879),
+        k = r(7860),
         O = r(76011),
         F = r(41735),
         L = r.n(F),
@@ -1678,7 +1684,7 @@
             r.e(8758),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 16856)),
+          ]).then(r.bind(r, 45568)),
         ),
         ue = u.lazy(() =>
           Promise.all([
@@ -15824,7 +15830,7 @@
       window.Config && Object.assign(n.TS, window.Config),
         window.UserConfig && Object.assign(n.iA, window.UserConfig);
     },
-    2879: (e, t, r) => {
+    7860: (e, t, r) => {
       "use strict";
       r.d(t, { L: () => c, s: () => o });
       var n = r(90626),
@@ -18699,6 +18705,7 @@
           return (
             c.document.write(p),
             (c.document.title = s),
+            c.document.close(),
             f.Oe(c, f.yU()),
             { popup: c, element: c.document.getElementById("popup_target") }
           );
@@ -22562,7 +22569,11 @@
             "aria-controls": e["aria-controls"],
             "aria-expanded": e.opened,
           },
-          e.children,
+          s.createElement(
+            "div",
+            { className: "DialogDropDown_CurrentDisplay" },
+            e.children,
+          ),
           !e.disabled &&
             s.createElement(
               "div",
@@ -22695,29 +22706,23 @@
           );
         }
         render() {
-          const e = s.createElement(
-              "div",
-              { className: "DialogDropDown_CurrentDisplay" },
-              this.value?.label ?? this.props.strDefaultLabel,
-            ),
-            t =
-              null != this.props.renderButtonValue
-                ? this.props.renderButtonValue(e)
-                : e,
-            r = this.props.focusable ?? !0,
-            n =
+          let e = this.value?.label ?? this.props.strDefaultLabel;
+          null != this.props.renderButtonValue &&
+            (e = this.props.renderButtonValue(e));
+          const t = this.props.focusable ?? !0,
+            r =
               this.props.renderButton ||
               this.context.DropDownControlButton ||
               H;
           return s.createElement(
-            n,
+            r,
             {
-              focusable: r,
+              focusable: t,
               disabled: this.props.disabled ?? !1,
               opened: this.state.bOpened,
               onClick: this.props.disabled ? void 0 : this.ToggleMenu,
               onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
-              tabIndex: this.props.tabIndex ?? (r ? 0 : void 0),
+              tabIndex: this.props.tabIndex ?? (t ? 0 : void 0),
               ref: this.OnInputRef,
               className: this.props.strDropDownButtonClassName,
               arrowClassName: this.props.arrowClassName,
@@ -22726,7 +22731,7 @@
                 ? `dropdownmenu_${this.m_iMenuInstance.key}`
                 : void 0,
             },
-            t,
+            e,
           );
         }
       }
@@ -24358,10 +24363,11 @@
           s.createElement(
             "div",
             { className: Ie().DropDownControlButtonContents },
-            e.children,
-            s.createElement("div", {
-              className: (0, u.A)(Ie().Spacer, "Spacer"),
-            }),
+            s.createElement(
+              "div",
+              { className: "DialogDropDown_CurrentDisplay" },
+              e.children,
+            ),
             s.createElement(pe.u49, { direction: "down" }),
           ),
         );

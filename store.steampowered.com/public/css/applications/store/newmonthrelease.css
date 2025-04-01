@@ -1,0 +1,97 @@
+._3C3Hy1Ldb_j8FpXikuio9T {
+  position: absolute;
+  width: 150%;
+  overflow: hidden;
+  top: -200px;
+  left: -200px;
+  min-height: 1500px;
+  height: 150%;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 90%,
+    left bottom,
+    from(#0e1014),
+    to(rgba(0, 0, 0, 0))
+  );
+  z-index: -1;
+}
+@keyframes _3HscHWkOLtsK-kzGBMVI2Y {
+  to {
+    opacity: 1;
+  }
+}
+.Y8NVLbtTPQh9gVfG4V_tl {
+  opacity: 0;
+  animation: _3HscHWkOLtsK-kzGBMVI2Y 3s ease-out .5s 1 forwards;
+}
+._1DF4gfqbWS61FaehmUYkuU {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 30% 0;
+  transform-origin: center;
+  transform: rotate(-23deg) translate(0px, -10vh);
+  position: absolute;
+  z-index: -1;
+  filter: saturate(0.2) opacity(1);
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0.3) 95%),
+    radial-gradient(
+      48.77% 50.22% at 47% 42.95%,
+      #424242 0%,
+      rgba(66, 66, 66, 0.3) 100%
+    );
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0.3) 95%),
+    radial-gradient(
+      48.77% 50.22% at 47% 42.95%,
+      #424242 0%,
+      rgba(66, 66, 66, 0.3) 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+}
+._1DF4gfqbWS61FaehmUYkuU ._1uXifcwYEEZepZq9GX0pf0 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: max-content;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+  width: 100%;
+}
+._1DF4gfqbWS61FaehmUYkuU ._1uXifcwYEEZepZq9GX0pf0._11TDFqeudgrq4D6KFL1Hs3 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 620px) {
+  ._1DF4gfqbWS61FaehmUYkuU ._1uXifcwYEEZepZq9GX0pf0 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  ._1DF4gfqbWS61FaehmUYkuU ._1uXifcwYEEZepZq9GX0pf0 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+._1DF4gfqbWS61FaehmUYkuU img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  filter: saturate(0.4) opacity(0.4);
+}
+._1DF4gfqbWS61FaehmUYkuU
+  img:is(
+    :nth-child(3),
+    :nth-child(5),
+    :nth-child(9),
+    :nth-child(15),
+    :nth-child(23),
+    :nth-child(29),
+    :nth-child(34),
+    :nth-child(40),
+    :nth-child(48),
+    :nth-child(54)
+  ) {
+  grid-column: span 2;
+  grid-row: span 2;
+}

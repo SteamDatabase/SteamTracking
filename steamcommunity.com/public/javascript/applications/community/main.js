@@ -218,7 +218,6 @@
         ToggleSwitch: "_1PQppcgkuXQAiFPar9AGi-",
         LabelFieldValue: "_3pteVMTgNRdIzZreR6HnTp",
         DropDownControlButtonContents: "_3OHR1e3u08hK7hMx4fFy_L",
-        Spacer: "_2H-4-c_5Q5Yk76jfQCbBp9",
         DropDownRow: "_1fwM173Ng2G0kqw3Tb3Yx7",
         IconContainer: "_3xrmZ1royQxijivqXbiYmu",
         Label: "sNbXz_kVc2tfPwRJLfUat",
@@ -638,6 +637,13 @@
         WifiBar4Anim: "_3jrA8AMmWDnOD3_xIL5b3",
         GenericGamepadHighlight: "_3-ZZDE9nzm0Tq9xSGLby1a",
         GenericGamepadEmpty: "_1toTlId7W50QaHwhm2SfyW",
+        LegionGoAnim1: "_3fs6zBkR21ewf816VFANpo",
+        LegionGoWiggleStick: "_3r8BMeEDGhnDnq7HCTtsyk",
+        LegionGoCursorWiggle: "_1ugur7H9TuFA6ZRwq-CBB6",
+        LegionGoWiggleCursor: "_2H0WjqDEEycEgncxT0Awn-",
+        LegionGoTriggerClick: "_2dKXeLBBRZz5zJ-A_be0YE",
+        LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
+        ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
     55351: (e) => {
@@ -1500,7 +1506,7 @@
           : t;
       }
       var j = r(73745),
-        N = r(2879);
+        N = r(7860);
       const U = n.lazy(() =>
           Promise.all([
             r.e(9617),
@@ -19101,7 +19107,7 @@
               "Player.GetPlayerLinkDetails#1",
               (0, l.I8)(_, t),
               f,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetMutualFriendsForIncomingInvites = function (e, t) {
@@ -19115,7 +19121,7 @@
           (e.GetOwnedGames = function (e, t) {
             return e.SendMsg("Player.GetOwnedGames#1", (0, l.I8)(S, t), C, {
               bConstMethod: !0,
-              ePrivilege: 2,
+              ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
@@ -19226,7 +19232,7 @@
               "Player.GetProfileItemsEquipped#1",
               (0, l.I8)(se, t),
               ae,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.SetEquippedProfileItemFlags = function (e, t) {
@@ -19363,7 +19369,7 @@
               "Player.ClientGetLastPlayedTimes#1",
               (0, l.I8)(p, t),
               g,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetTimeSSAAccepted = function (e, t) {
@@ -24906,7 +24912,7 @@
       window.Config && Object.assign(s.TS, window.Config),
         window.UserConfig && Object.assign(s.iA, window.UserConfig);
     },
-    2879: (e, t, r) => {
+    7860: (e, t, r) => {
       "use strict";
       r.d(t, { L: () => c, s: () => o });
       var i = r(90626),
@@ -30957,6 +30963,7 @@
           return (
             c.document.write(p),
             (c.document.title = s),
+            c.document.close(),
             f.Oe(c, f.yU()),
             { popup: c, element: c.document.getElementById("popup_target") }
           );
@@ -37225,7 +37232,11 @@
             "aria-controls": e["aria-controls"],
             "aria-expanded": e.opened,
           },
-          e.children,
+          n.createElement(
+            "div",
+            { className: "DialogDropDown_CurrentDisplay" },
+            e.children,
+          ),
           !e.disabled &&
             n.createElement(
               "div",
@@ -37373,30 +37384,24 @@
         }
         render() {
           var e, t, r, i, s;
-          const a = n.createElement(
-              "div",
-              { className: "DialogDropDown_CurrentDisplay" },
-              null !==
-                (t =
-                  null === (e = this.value) || void 0 === e
-                    ? void 0
-                    : e.label) && void 0 !== t
-                ? t
-                : this.props.strDefaultLabel,
-            ),
-            o =
-              null != this.props.renderButtonValue
-                ? this.props.renderButtonValue(a)
-                : a,
-            l = null === (r = this.props.focusable) || void 0 === r || r,
-            c =
+          let a =
+            null !==
+              (t =
+                null === (e = this.value) || void 0 === e ? void 0 : e.label) &&
+            void 0 !== t
+              ? t
+              : this.props.strDefaultLabel;
+          null != this.props.renderButtonValue &&
+            (a = this.props.renderButtonValue(a));
+          const o = null === (r = this.props.focusable) || void 0 === r || r,
+            l =
               this.props.renderButton ||
               this.context.DropDownControlButton ||
               Me;
           return n.createElement(
-            c,
+            l,
             {
-              focusable: l,
+              focusable: o,
               disabled: null !== (i = this.props.disabled) && void 0 !== i && i,
               opened: this.state.bOpened,
               onClick: this.props.disabled ? void 0 : this.ToggleMenu,
@@ -37404,7 +37409,7 @@
               tabIndex:
                 null !== (s = this.props.tabIndex) && void 0 !== s
                   ? s
-                  : l
+                  : o
                     ? 0
                     : void 0,
               ref: this.OnInputRef,
@@ -37415,7 +37420,7 @@
                 ? `dropdownmenu_${this.m_iMenuInstance.key}`
                 : void 0,
             },
-            o,
+            a,
           );
         }
       }
@@ -39305,10 +39310,11 @@
           n.createElement(
             "div",
             { className: ht().DropDownControlButtonContents },
-            e.children,
-            n.createElement("div", {
-              className: (0, u.A)(ht().Spacer, "Spacer"),
-            }),
+            n.createElement(
+              "div",
+              { className: "DialogDropDown_CurrentDisplay" },
+              e.children,
+            ),
             n.createElement(Ze.u49, { direction: "down" }),
           ),
         );

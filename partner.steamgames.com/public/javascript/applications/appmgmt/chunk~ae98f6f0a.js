@@ -4712,7 +4712,7 @@
               "Store.GetStorePreferences#1",
               (0, m.I8)(Q, t),
               L,
-              { ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetTrendingAppsAmongFriends = function (e, t) {

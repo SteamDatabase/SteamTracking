@@ -9129,7 +9129,7 @@
               "Player.GetPlayerLinkDetails#1",
               (0, m.I8)(b, r),
               M,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetMutualFriendsForIncomingInvites = function (e, r) {
@@ -9143,7 +9143,7 @@
           (e.GetOwnedGames = function (e, r) {
             return e.SendMsg("Player.GetOwnedGames#1", (0, m.I8)(R, r), j, {
               bConstMethod: !0,
-              ePrivilege: 2,
+              ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
@@ -9254,7 +9254,7 @@
               "Player.GetProfileItemsEquipped#1",
               (0, m.I8)(ae, r),
               ne,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.SetEquippedProfileItemFlags = function (e, r) {
@@ -9391,7 +9391,7 @@
               "Player.ClientGetLastPlayedTimes#1",
               (0, m.I8)(d, r),
               g,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetTimeSSAAccepted = function (e, r) {

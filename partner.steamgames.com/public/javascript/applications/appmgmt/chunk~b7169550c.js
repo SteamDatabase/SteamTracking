@@ -326,7 +326,7 @@
         m = a(56545),
         d = a(37735),
         h = a(23809),
-        f = a(2879);
+        f = a(7860);
       const _ = "nicknames";
       function S(t) {
         const e = (0, h.KV)(),

@@ -325,15 +325,24 @@
 	top: 0px;
 }
 
+.review_posted_ctn {
+	display: flex;
+	flex-direction: column;
+}
+
+.review_posted_ctn .review_contents {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	margin: 8px 0;
+}
 
 .recommendation_area .thumb {
-	margin: 12px 8px 12px 12px;
-	float: left;
+	margin-right: 12px;
 }
 .recommendation_area .reviewPostedDescription {
-	color: #898A8C;
+	color: #8f98a0;
 	font-size: 14px;
-	margin: 16px 16px 8px 0px;
 }
 .recommendation_area .underlined_links {
 	color: #8f98a0;
@@ -1400,13 +1409,9 @@ html.touch .similar_grid_item .buttons {
         background-image: none;
         margin-top: 12px;
     }
-    #recommendation_success .review_box .thumb {
-        margin: 12px 8px 12px 12px;
-        float: left;
-    }
+
     #recommendation_success .review_box .reviewPostedDescription {
         font-size: 14px;
-        margin: 16px 16px 8px 0px;
     }
 
 
@@ -2594,6 +2599,18 @@ html.tablet .friend_reviews .review_box .leftcol {
 .review_developer_response_container.multiple_listing.store
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+#ReviewDevResponseForCurrentUser.review_developer_response_container
+{
+	margin-top: 4px;
+	border-radius: 4px;
+	padding: 10px 10px 10px 11px;
+	border: 1px solid #ffffff30;
+}
+
+#ReviewDevResponseForCurrentUser.review_developer_response_container .review_developer_response_text {
+	padding: 0;
 }
 
 .recommendation_highlight.morelikethis_border {

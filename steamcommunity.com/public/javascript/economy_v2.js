@@ -1123,7 +1123,6 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	if ( description.background_color )
 		$Item.css( 'backgroundColor', '#' + description.background_color );
 
-	
 	// compat
 	$Item[0].rgItem = asset;
 
@@ -1168,6 +1167,7 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	$Item.append( $Link );
 	this.BindMouseEvents( $Link, $Item, asset );
 
+	
 	if ( description.fraudwarnings )
 	{
 		var $FraudWarningIcon = $J( '<div/>', {'class': 'slot_app_fraudwarning' } );
@@ -3294,6 +3294,7 @@ function BuildHover( prefix, item, owner )
 		}
 	}
 
+	
 	var elTags = $(prefix+'_item_tags');
 	var elTagsContent = $(prefix+'_item_tags_content');
 	if ( elTags && elTagsContent )
@@ -3377,6 +3378,7 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 		elDescriptions.appendChild( elDescription );
 	}
 }
+
 
 function PopulateActions( prefix, elActions, rgActions, item, owner )
 {

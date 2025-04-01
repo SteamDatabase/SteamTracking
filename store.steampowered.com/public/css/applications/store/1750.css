@@ -1244,14 +1244,6 @@ body.ShoppingCart {
 ._1G8JdfmCwhonn-pZk-tfwP .DialogInputLabelGroup {
   margin-bottom: 0;
 }
-._1G8JdfmCwhonn-pZk-tfwP .DialogDropDown {
-  padding: 6px;
-  padding-right: 24px;
-}
-._1G8JdfmCwhonn-pZk-tfwP .DialogDropDown .DialogDropDown_Arrow {
-  top: 9px;
-  right: 2px;
-}
 ._1MfAwU630QwDv6FuV9c_Dr {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
@@ -1403,13 +1395,8 @@ body.ShoppingCart {
 }
 .DialogDropDown._2GLDG_XIMaVS7hU2xEFzBo {
   font-size: 12px;
-  padding: 5px 24px 5px 7px;
+  padding: 5px 7px 5px 7px;
   min-width: 100px;
-}
-._2GLDG_XIMaVS7hU2xEFzBo .DialogDropDown_Arrow {
-  width: 14px;
-  top: 9px;
-  right: 4px;
 }
 ._1Vsr8vtFZd-ID4w4nvUjbe {
   font-size: 12px;

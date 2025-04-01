@@ -2137,7 +2137,8 @@
                   (a.style.left = t.clientX - s + "px"),
                   (a.style.top = t.clientY - n + "px"),
                   (a.style.zIndex = "1");
-              })(t, e));
+              })(t, e),
+              e.preventDefault());
           },
           z = (e, a) => {
             const s = h.OQ(a > e ? a - 1 : a, 0, t.length - 1);

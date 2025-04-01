@@ -5533,7 +5533,7 @@
         me = n(20194),
         pe = n(99637),
         _e = n(22797),
-        ge = n(2879),
+        ge = n(7860),
         Ee = n(61336);
       const Ce = [
           "date_full",
@@ -15128,7 +15128,8 @@
                   (n.style.left = t.clientX - a + "px"),
                   (n.style.top = t.clientY - r + "px"),
                   (n.style.zIndex = "1");
-              })(t, e));
+              })(t, e),
+              e.preventDefault());
           },
           z = (e, n) => {
             const a = g.OQ(n > e ? n - 1 : n, 0, t.length - 1);

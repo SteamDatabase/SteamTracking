@@ -4,6 +4,9 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6762],
   {
+    78430: (e) => {
+      e.exports = { FeedbackText: "_1xRt0l_W6ami9_cnLrxvfj" };
+    },
     30565: (e) => {
       e.exports = {
         EventList: "_3iKeBOMuwqPC87BLxvCKll",
@@ -39,14 +42,47 @@
         Indicator: "_3d0cYrmQzzda_P3DQ994kX",
       };
     },
-    68248: (e) => {
-      e.exports = { FeedbackText: "_3jpQHJv-0p0qOhN1Fx0wER" };
-    },
     30603: (e) => {
       e.exports = {
         ExportToCSV: "_2QfZu5-7jOdld1h2nYbca8",
         Table: "_2JSoC65mCQdxh-B_srjUjf",
       };
+    },
+    5695: (e, t, n) => {
+      "use strict";
+      n.d(t, { DP: () => i, Gb: () => s, iS: () => o, sM: () => c });
+      var a = n(90626),
+        r = n(78430),
+        l = n.n(r);
+      function s(e) {
+        const t = e.getValue();
+        return t?.length > 0
+          ? a.createElement(i, { text: t, regExp: /\r\n|\r|\n/ })
+          : "";
+      }
+      function i(e) {
+        const { text: t, regExp: n } = e;
+        if (!t) return a.createElement(a.Fragment, null);
+        const r = t.split(n);
+        return a.createElement(
+          "div",
+          { className: l().FeedbackText },
+          r.map((e, t) =>
+            a.createElement(
+              "span",
+              { key: t },
+              e,
+              t < r.length - 1 && a.createElement("br", null),
+            ),
+          ),
+        );
+      }
+      function c(e) {
+        return Number.parseInt(e.getValue()) ? "yes" : "no";
+      }
+      function o(e) {
+        return Number.parseInt(e.getValue()).toLocaleString();
+      }
     },
     2516: (e, t, n) => {
       "use strict";
@@ -69,7 +105,7 @@
     },
     36637: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => Jt, default: () => Qt });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => qt, default: () => Ht });
       var a = n(43527),
         r = n(90626),
         l = n(17083),
@@ -143,9 +179,9 @@
         j = n(91675),
         Y = n(30470),
         K = n(30565),
-        q = n.n(K),
-        H = n(34283),
-        W = n.n(H),
+        W = n.n(K),
+        q = n(34283),
+        H = n.n(q),
         V = n(68797),
         J = n(9161),
         Q = n(65689),
@@ -421,7 +457,7 @@
             r.createElement(
               "label",
               {
-                className: W().ImportButtonLabel,
+                className: H().ImportButtonLabel,
                 htmlFor: "import-discount-input",
               },
               "Choose CSV File",
@@ -547,7 +583,7 @@
         };
       }
       let he;
-      var ve = n(2879);
+      var ve = n(7860);
       function _e(e, t) {
         const n = (0, R.a)(),
           a = r.useContext(Se),
@@ -1357,7 +1393,7 @@
                 }),
                 r.createElement("hr", null),
                 c.map((e) =>
-                  r.createElement(qe, {
+                  r.createElement(We, {
                     key: e[0],
                     month: new Date(1e3 * e[0]),
                     events: e[1],
@@ -1366,7 +1402,7 @@
               )
             : null;
       }
-      function qe(e) {
+      function We(e) {
         const { month: t, events: n } = e,
           a = r.useMemo(() => [...n].sort((e) => -e.startTime), [n]),
           l = new Intl.DateTimeFormat(navigator.language, {
@@ -1376,15 +1412,15 @@
         return r.createElement(
           "div",
           null,
-          r.createElement("div", { className: q().MonthTitle }, l),
+          r.createElement("div", { className: W().MonthTitle }, l),
           r.createElement(
             "div",
-            { className: q().MonthEvents },
-            a.map((e) => r.createElement(He, { oEvent: e, key: e.GID })),
+            { className: W().MonthEvents },
+            a.map((e) => r.createElement(qe, { oEvent: e, key: e.GID })),
           ),
         );
       }
-      function He(e) {
+      function qe(e) {
         const { oEvent: t } = e,
           n = t.GID,
           a = D.b.InitFromClanID((0, F.H7)()),
@@ -1405,23 +1441,23 @@
           }, [t.jsondata.meet_steam_groups]);
         return r.createElement(
           "div",
-          { className: q().EventRow },
+          { className: W().EventRow },
           r.createElement(
             "div",
-            { className: q().EventMainDetails },
+            { className: W().EventMainDetails },
             r.createElement(
               "div",
-              { className: q().TitleLine },
-              r.createElement("div", { className: q().Title }, c),
+              { className: W().TitleLine },
+              r.createElement("div", { className: W().Title }, c),
               r.createElement(
                 "div",
-                { className: q().StartDate },
+                { className: W().StartDate },
                 (0, z.TW)(t?.startTime),
               ),
             ),
             r.createElement(
               "div",
-              { className: q().ActionLine },
+              { className: W().ActionLine },
               r.createElement(
                 "div",
                 null,
@@ -1452,7 +1488,7 @@
                   null,
                   r.createElement(Qe, { gid: n }),
                   r.createElement(Ve, { gid: n }),
-                  r.createElement(We, { gid: n }),
+                  r.createElement(He, { gid: n }),
                   r.createElement(Je, { gid: n }),
                 ),
             ),
@@ -1544,7 +1580,7 @@
           ),
         );
       }
-      function We(e) {
+      function He(e) {
         const { gid: t } = e,
           [n, a, l] = (0, f.uD)();
         return r.createElement(
@@ -1702,7 +1738,7 @@
           } = e,
           i = z.NT.GetWithFallback(n?.localized_session_title, 0),
           c = z.NT.GetWithFallback(n?.localized_session_description, 0),
-          o = a?.find((e) => e.session_id == l.id),
+          o = a?.find((e) => e.group_id == n.group_id && e.session_id == l.id),
           [m, d, E] = (0, f.uD)(),
           g = B((0, R.a)(), t, n?.group_id);
         let p = Math.min((o?.guest_count / l.max_capacity) * 100, 100),
@@ -1739,9 +1775,9 @@
             r.createElement("br", null),
             r.createElement(
               "div",
-              { className: q().CapacityBarMax },
+              { className: W().CapacityBarMax },
               r.createElement("div", {
-                className: (0, U.A)(q().CapacityBarCurrent, v ? q().Full : ""),
+                className: (0, U.A)(W().CapacityBarCurrent, v ? W().Full : ""),
                 style: { width: h },
               }),
             ),
@@ -1821,7 +1857,7 @@
           }, [n]);
         return r.createElement(
           "div",
-          { className: q().EventList },
+          { className: W().EventList },
           r.createElement(L.pd, {
             type: "text",
             value: a,
@@ -2996,9 +3032,8 @@
             );
       }
       var Ut = n(27144),
-        zt = n(68248),
-        jt = n.n(zt);
-      function Yt(e) {
+        zt = n(5695);
+      function jt(e) {
         const t = (function () {
             const [e] = (0, r.useState)(
               () => (0, b.Tc)("event_gids", "application_config") || [],
@@ -3062,7 +3097,7 @@
           m = (0, A.vh)(o),
           d = (0, Ut.B3)(u);
         return !i && m && d
-          ? r.createElement(qt, {
+          ? r.createElement(Kt, {
               rgSurveyResults: n,
               mapAccountsToReg: a,
               meetSteamEvents: c,
@@ -3071,8 +3106,8 @@
               string: "Loading Event, Partner and User Info",
             });
       }
-      const Kt = (0, ie.FB)();
-      function qt(e) {
+      const Yt = (0, ie.FB)();
+      function Kt(e) {
         const {
             rgSurveyResults: t,
             mapAccountsToReg: n,
@@ -3121,20 +3156,20 @@
           }, [n, a, t]),
           s = (0, r.useMemo)(
             () => [
-              Kt.accessor("name", { header: "Name", size: 150 }),
-              Kt.accessor("feedback", {
+              Yt.accessor("name", { header: "Name", size: 150 }),
+              Yt.accessor("feedback", {
                 header: "Feedback",
                 size: 500,
-                cell: Wt,
+                cell: zt.Gb,
               }),
-              Kt.accessor("registrations", {
+              Yt.accessor("registrations", {
                 header: "Sessions",
                 size: 200,
-                cell: Ht,
+                cell: Wt,
               }),
-              Kt.accessor("accountid", { header: "Account ID", size: 150 }),
-              Kt.accessor("email", { header: "Email", size: 150 }),
-              Kt.accessor("partner_name", {
+              Yt.accessor("accountid", { header: "Account ID", size: 150 }),
+              Yt.accessor("email", { header: "Email", size: 150 }),
+              Yt.accessor("partner_name", {
                 header: "Partner Name",
                 size: 200,
               }),
@@ -3186,41 +3221,19 @@
             )
           : r.createElement(O.t, { string: (0, z.we)("#Loading") });
       }
-      function Ht(e) {
+      function Wt(e) {
         const t = e.getValue();
         return t?.length > 0
-          ? r.createElement(Vt, { text: e.getValue(), regExp: /\|/ })
+          ? r.createElement(zt.DP, { text: e.getValue(), regExp: /\|/ })
           : "";
       }
-      function Wt(e) {
-        return r.createElement(Vt, {
-          text: e.getValue(),
-          regExp: /\r\n|\r|\n/,
-        });
-      }
-      function Vt(e) {
-        const { text: t, regExp: n } = e,
-          a = t.split(n);
-        return r.createElement(
-          "div",
-          { className: jt().FeedbackText },
-          a.map((e, t) =>
-            r.createElement(
-              "span",
-              { key: t },
-              e,
-              t < a.length - 1 && r.createElement("br", null),
-            ),
-          ),
-        );
-      }
-      const Jt = {
+      const qt = {
         YearlySurvery: (e = ":year") => `/${e}`,
         PostEventSurvey: (e = ":surveyGID") => `/survey/${e}`,
         AdminDashboard: () => "/admin",
         PostEventSurveyResults: (e = ":surveyGID") => `/surveyresults/${e}`,
       };
-      function Qt(e) {
+      function Ht(e) {
         return (
           (0, r.useEffect)(() => {
             Gt.O3.Init();
@@ -3245,23 +3258,23 @@
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Jt.AdminDashboard(),
+                  path: qt.AdminDashboard(),
                   component: At,
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Jt.YearlySurvery(":year(\\d+)"),
+                  path: qt.YearlySurvery(":year(\\d+)"),
                   component: kt,
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Jt.PostEventSurvey(":surveyGID(\\d+)"),
+                  path: qt.PostEventSurvey(":surveyGID(\\d+)"),
                   component: $t,
                 }),
                 r.createElement(s.qh, {
                   exact: !0,
-                  path: Jt.PostEventSurveyResults(":surveyGID(\\d+)"),
-                  component: Yt,
+                  path: qt.PostEventSurveyResults(":surveyGID(\\d+)"),
+                  component: jt,
                 }),
                 r.createElement(s.qh, { component: o.a }),
               ),

@@ -2680,6 +2680,179 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._1toTlId7W50QaHwhm2SfyW {
   fill: transparent;
 }
+._3fs6zBkR21ewf816VFANpo {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: _3fs6zBkR21ewf816VFANpo;
+}
+@keyframes _3fs6zBkR21ewf816VFANpo {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+._3r8BMeEDGhnDnq7HCTtsyk {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: _3r8BMeEDGhnDnq7HCTtsyk;
+}
+@keyframes _3r8BMeEDGhnDnq7HCTtsyk {
+  0% {
+    transform: translate(0, 0);
+  }
+  13% {
+    transform: translate(-15px, 0);
+  }
+  25% {
+    transform: translate(-30px, 0);
+  }
+  38% {
+    transform: translate(-15px, -5px);
+  }
+  50% {
+    transform: translate(0px, -10px);
+  }
+  63% {
+    transform: translate(20px, -25px);
+  }
+  75% {
+    transform: translate(25px, -15px);
+  }
+  88% {
+    transform: translate(30px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+._1ugur7H9TuFA6ZRwq-CBB6 {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: _2H0WjqDEEycEgncxT0Awn-;
+}
+@keyframes _3huKxhSD3aWINLG-yOuQ0O {
+  0% {
+    offset-distance: 0%;
+  }
+  50% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 0%;
+  }
+}
+@keyframes _2H0WjqDEEycEgncxT0Awn- {
+  0% {
+    transform: translate(-40px, 0);
+  }
+  13% {
+    transform: translate(-55px, 0);
+  }
+  25% {
+    transform: translate(-70px, 0);
+  }
+  38% {
+    transform: translate(-55px, -5px);
+  }
+  50% {
+    transform: translate(-40px, -10px);
+  }
+  63% {
+    transform: translate(-10px, -25px);
+  }
+  75% {
+    transform: translate(-15px, -15px);
+  }
+  88% {
+    transform: translate(-10px, -5px);
+  }
+  100% {
+    transform: translate(-40px, 0);
+  }
+}
+._2dKXeLBBRZz5zJ-A_be0YE {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: _2dKXeLBBRZz5zJ-A_be0YE;
+}
+@keyframes _2dKXeLBBRZz5zJ-A_be0YE {
+  0% {
+    transform: translateY(0);
+    fill: transparent;
+    stroke: #fff;
+  }
+  90% {
+    transform: translateY(0);
+    fill: transparent;
+    stroke: #fff;
+  }
+  94% {
+    transform: translateY(5px);
+    fill: #1a9fff;
+    stroke: #1a9fff;
+    stroke-width: 16px;
+  }
+  96% {
+    transform: translateY(0);
+    fill: transparent;
+  }
+  98% {
+    transform: translateY(5px);
+    fill: #1a9fff;
+    stroke: #1a9fff;
+    stroke-width: 16px;
+  }
+  100% {
+    transform: translateY(0);
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 8px;
+  }
+}
+.mX0CyLG2ckFSmF-E26ZSQ {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: mX0CyLG2ckFSmF-E26ZSQ;
+}
+@keyframes mX0CyLG2ckFSmF-E26ZSQ {
+  0% {
+    opacity: 0;
+    r: 25;
+  }
+  90% {
+    opacity: 0;
+    r: 25;
+  }
+  94% {
+    opacity: 1;
+    r: 100;
+  }
+  96% {
+    opacity: 0;
+    r: 25;
+  }
+  98% {
+    opacity: 1;
+    r: 100;
+  }
+  100% {
+    opacity: 0;
+    r: 25;
+  }
+}
 ._2sssIwe0duyIrFvat2oXzH {
   display: flex;
   flex-direction: row;
@@ -4001,10 +4174,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 }
 ._3OHR1e3u08hK7hMx4fFy_L {
   display: flex;
-}
-._3OHR1e3u08hK7hMx4fFy_L ._2H-4-c_5Q5Yk76jfQCbBp9 {
-  flex-grow: 1;
-  min-width: 1ch;
+  text-align: left;
 }
 ._3OHR1e3u08hK7hMx4fFy_L > svg {
   height: 1em;
@@ -5706,6 +5876,7 @@ div.ModalPosition_TopBar {
   right: 0;
 }
 .DialogContent {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding: 24px;
   display: flex;
   overflow: visible;
@@ -6286,14 +6457,16 @@ button.TextButton.gpfocus {
 .DialogDropDown {
   cursor: pointer;
   position: relative;
-  display: block;
+  display: flex;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font-size: inherit;
   font-family: inherit;
   margin: 0;
-  align-items: stretch;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 .DialogDropDown.Disabled {
   cursor: initial;
@@ -6305,6 +6478,13 @@ button.TextButton.gpfocus {
 .DialogDropDown.Disabled:hover {
   box-shadow: unset;
 }
+.DialogDropDown_CurrentDisplay {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .DialogDropDown_CurrentDisplay:empty::before {
   content: " ";
 }
@@ -6313,12 +6493,12 @@ button.TextButton.gpfocus {
   user-select: none;
 }
 .DialogDropDown_Arrow {
-  position: absolute;
-  width: 18px;
+  height: 1em;
   top: 14px;
   right: 10px;
 }
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
+  padding-top: 2px;
   fill: #189cff;
 }
 ._DialogColLayout {

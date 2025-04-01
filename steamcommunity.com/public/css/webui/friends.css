@@ -294,6 +294,179 @@
 .gamepadui_svg_library_GenericGamepadEmpty_1toTl {
   fill: transparent;
 }
+.gamepadui_svg_library_LegionGoAnim1_3fs6z {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: gamepadui_svg_library_LegionGoAnim1_3fs6z;
+}
+@keyframes gamepadui_svg_library_LegionGoAnim1_3fs6z {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gamepadui_svg_library_LegionGoWiggleStick_3r8BM {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: gamepadui_svg_library_LegionGoWiggleStick_3r8BM;
+}
+@keyframes gamepadui_svg_library_LegionGoWiggleStick_3r8BM {
+  0% {
+    transform: translate(0, 0);
+  }
+  13% {
+    transform: translate(-15px, 0);
+  }
+  25% {
+    transform: translate(-30px, 0);
+  }
+  38% {
+    transform: translate(-15px, -5px);
+  }
+  50% {
+    transform: translate(0px, -10px);
+  }
+  63% {
+    transform: translate(20px, -25px);
+  }
+  75% {
+    transform: translate(25px, -15px);
+  }
+  88% {
+    transform: translate(30px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.gamepadui_svg_library_LegionGoCursorWiggle_1ugur {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: gamepadui_svg_library_LegionGoWiggleCursor_2H0Wj;
+}
+@keyframes gamepadui_svg_library_ScootCursor_3huKx {
+  0% {
+    offset-distance: 0%;
+  }
+  50% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 0%;
+  }
+}
+@keyframes gamepadui_svg_library_LegionGoWiggleCursor_2H0Wj {
+  0% {
+    transform: translate(-40px, 0);
+  }
+  13% {
+    transform: translate(-55px, 0);
+  }
+  25% {
+    transform: translate(-70px, 0);
+  }
+  38% {
+    transform: translate(-55px, -5px);
+  }
+  50% {
+    transform: translate(-40px, -10px);
+  }
+  63% {
+    transform: translate(-10px, -25px);
+  }
+  75% {
+    transform: translate(-15px, -15px);
+  }
+  88% {
+    transform: translate(-10px, -5px);
+  }
+  100% {
+    transform: translate(-40px, 0);
+  }
+}
+.gamepadui_svg_library_LegionGoTriggerClick_2dKXe {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: gamepadui_svg_library_LegionGoTriggerClick_2dKXe;
+}
+@keyframes gamepadui_svg_library_LegionGoTriggerClick_2dKXe {
+  0% {
+    transform: translateY(0);
+    fill: transparent;
+    stroke: #fff;
+  }
+  90% {
+    transform: translateY(0);
+    fill: transparent;
+    stroke: #fff;
+  }
+  94% {
+    transform: translateY(5px);
+    fill: #1a9fff;
+    stroke: #1a9fff;
+    stroke-width: 16px;
+  }
+  96% {
+    transform: translateY(0);
+    fill: transparent;
+  }
+  98% {
+    transform: translateY(5px);
+    fill: #1a9fff;
+    stroke: #1a9fff;
+    stroke-width: 16px;
+  }
+  100% {
+    transform: translateY(0);
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 8px;
+  }
+}
+.gamepadui_svg_library_LegionGoScreenClick_mX0Cy {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: gamepadui_svg_library_LegionGoScreenClick_mX0Cy;
+}
+@keyframes gamepadui_svg_library_LegionGoScreenClick_mX0Cy {
+  0% {
+    opacity: 0;
+    r: 25;
+  }
+  90% {
+    opacity: 0;
+    r: 25;
+  }
+  94% {
+    opacity: 1;
+    r: 100;
+  }
+  96% {
+    opacity: 0;
+    r: 25;
+  }
+  98% {
+    opacity: 1;
+    r: 100;
+  }
+  100% {
+    opacity: 0;
+    r: 25;
+  }
+}
 .friendsnooze_SnoozeContainer_1Dsum {
   position: relative;
   overflow: hidden;
@@ -4139,10 +4312,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_DropDownControlButtonContents_3OHR1 {
   display: flex;
-}
-.gamepaddialog_DropDownControlButtonContents_3OHR1 .gamepaddialog_Spacer_2H-4- {
-  flex-grow: 1;
-  min-width: 1ch;
+  text-align: left;
 }
 .gamepaddialog_DropDownControlButtonContents_3OHR1 > svg {
   height: 1em;
@@ -38375,6 +38545,7 @@ div.ModalPosition_TopBar {
   right: 0;
 }
 .DialogContent {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding: 24px;
   display: flex;
   overflow: visible;
@@ -38955,14 +39126,16 @@ button.TextButton.gpfocus {
 .DialogDropDown {
   cursor: pointer;
   position: relative;
-  display: block;
+  display: flex;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font-size: inherit;
   font-family: inherit;
   margin: 0;
-  align-items: stretch;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 .DialogDropDown.Disabled {
   cursor: initial;
@@ -38974,6 +39147,13 @@ button.TextButton.gpfocus {
 .DialogDropDown.Disabled:hover {
   box-shadow: unset;
 }
+.DialogDropDown_CurrentDisplay {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .DialogDropDown_CurrentDisplay:empty::before {
   content: " ";
 }
@@ -38982,12 +39162,12 @@ button.TextButton.gpfocus {
   user-select: none;
 }
 .DialogDropDown_Arrow {
-  position: absolute;
-  width: 18px;
+  height: 1em;
   top: 14px;
   right: 10px;
 }
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
+  padding-top: 2px;
   fill: #189cff;
 }
 ._DialogColLayout {
@@ -45569,6 +45749,7 @@ input.InviteFriendToChatDialog_LinkInput {
 .inviteLinkContainer
   .DialogDropDown._DialogInputContainer
   .DialogDropDown_Arrow {
+  position: absolute;
   top: 6px;
   right: 4px;
   width: 18px;

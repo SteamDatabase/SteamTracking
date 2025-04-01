@@ -325,6 +325,13 @@
   width: 29px;
   background: rgba(0, 0, 0, 0.2);
 }
+._382iDNo-Drucmr1EywHor6 > div {
+  visibility: collapse;
+}
+._382iDNo-Drucmr1EywHor6._1BsxVDOWwiT4onflhO4bAR > div {
+  visibility: unset;
+  transform: scale(0.7) translateX(-4px);
+}
 ._266M20K-owSPOzkiuGBsBf {
   flex: 1;
   padding: 8px;

@@ -4151,6 +4151,21 @@ span._11TnLmbm2QkVVfCckvEXbJ {
   display: none;
   text-shadow: 1px 1px 1px #000;
 }
+._19l-UjQZVVGNK5SKnOrmJB {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 8;
+  top: calc(50% + 35px);
+  width: fit-content;
+  align-items: center;
+  pointer-events: none;
+}
+._19l-UjQZVVGNK5SKnOrmJB .VoAJhMdtQTylTg3G03nJo {
+  padding: 0 8px;
+  background-color: #e3d6d1;
+  color: #000;
+}
 ._3HELOo0qFfDrRZ9Sa1GXeF {
   position: absolute;
   z-index: 11;
@@ -4930,6 +4945,7 @@ td.rdtYear:hover {
 }
 ._2uDosrOO-P5HteHs8r2DHF .DialogDropDown_Arrow {
   top: 9px;
+  position: absolute;
 }
 ._2xiHGC5uLleLI4yqeulx5a {
   display: flex;
@@ -5875,6 +5891,10 @@ td.rdtYear:hover {
 ._37mjYjbf7M0SHsimUxYWS3 {
   min-width: 500px;
 }
+.mCHp79RLYlDs7pbwoLwHD {
+  width: 100%;
+  display: block;
+}
 .u_cLtpeDRLhuCIb1YZzZD {
   width: 500px;
 }
@@ -6438,6 +6458,9 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 .json-diff-viewer-virtual pre::-webkit-scrollbar {
   display: none;
+}
+.ksXUj612xIKmPglVngiI0 {
+  user-select: text;
 }
 ._1HZBlBVkUqWKssiEQOLR4H {
   padding: 24px;

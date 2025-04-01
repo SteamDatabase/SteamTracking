@@ -36,6 +36,7 @@
     "Sale_Summary_SeasonalSaleFeatured": "Upcoming Seasonal Sale Featured Pages: %1$s",
     "Sale_Summary_SeasonalSaleFeatured_Desc": "These are sale pages that are planned to be featured on the homepage of Steam during the next major seasonal sale (assuming the included games will be on discount). Please check to make sure these include all the relevant titles in your franchise.",
     "Sale_Section_Type_links": "Links",
+    "Sale_Section_Type_title_image": "Title / Header Image",
     "Sale_Summary_Upcoming": "Published Upcoming Sales: %1$s",
     "Sale_Summary_Draft": "Drafts: %1$s",
     "Sale_Summary_Draft_Ttip": "Sale pages in progress; currently hidden/unpublished",

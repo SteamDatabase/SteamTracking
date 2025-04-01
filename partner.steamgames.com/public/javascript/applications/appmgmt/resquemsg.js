@@ -903,7 +903,7 @@
         g = n(56545),
         p = n(37735),
         _ = n(23809),
-        f = n(2879);
+        f = n(7860);
       const h = "nicknames";
       function E(e) {
         const t = (0, _.KV)(),

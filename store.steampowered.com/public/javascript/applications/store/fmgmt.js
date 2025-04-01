@@ -344,7 +344,6 @@
         ParentalPlaytimeWindowSelector: "_1xAKt33YaSfi9TbbgpIb5T",
         Enabled: "qJJzOstLWPhnslUP39MVH",
         Locked: "SBNDnArArnkjfTiY2AeNp",
-        HoursSelector: "_2BVtRNJ-HGx7yDTjPK0EcX",
         ParentalPlaytimeWindowsDialogInner: "w9peVHXHbe1cE2WEnClu3",
         TopRow: "_3jjYvVw0DXqdRBamdby62z",
         DaySelector: "h80CX0NYBW4dEIMSCZBuL",

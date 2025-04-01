@@ -398,6 +398,7 @@
         OuterCapsuleContainer: "_1dKR2IPNQSHs1MAIXBvt_R",
         BottomBarPriceInfo: "_1X3j2g29SBtsrFMgNiKi_Y",
         CapsuleContainer: "_22AcxR1RBDH6i-gjKRHYk0",
+        Linked: "_3b7bzOQeDc139QX27AIMtM",
         EventRow: "_1UMFnczt69Ka8nOWKMzKJR",
         Muted: "_1HVwzvj5dyBMgn_KprOcNN",
         BottomCreatorRow: "_1JrUubE3c7FdJsMxYYxbt",
@@ -2369,7 +2370,7 @@
             "PartnerMeetSteam.UpdateRegistration#1",
             (0, o.I8)(l, t),
             c,
-            { bConstMethod: !0, ePrivilege: 1 },
+            { bConstMethod: !0, ePrivilege: 0 },
           );
         }),
           (e.GetAvailability = function (e, t) {
@@ -7593,25 +7594,26 @@
     77516: (e, t, r) => {
       "use strict";
       r.d(t, {
-        ye: () => U,
-        DJ: () => P,
-        G6: () => O,
-        zv: () => T,
-        IS: () => D,
-        GE: () => R,
-        yX: () => G,
-        w: () => L,
-        EE: () => A,
-        lh: () => q,
-        qR: () => F,
-        dm: () => j,
+        ye: () => O,
+        DJ: () => W,
+        G6: () => L,
+        zv: () => A,
+        IS: () => k,
+        GE: () => G,
+        yX: () => D,
+        w: () => P,
+        EE: () => R,
+        lh: () => H,
+        qR: () => U,
+        dm: () => x,
         DU: () => B,
         mW: () => E,
+        wv: () => M,
         GU: () => v,
         bv: () => I,
         Kd: () => C,
-        cB: () => W,
-        Te: () => N,
+        cB: () => N,
+        Te: () => j,
       });
       var a = r(34629),
         i = r(79821),
@@ -7664,21 +7666,22 @@
         I = 41316928,
         C = 4,
         E = 20,
-        M = 9e4;
-      var T;
+        M = 45559995,
+        T = 9e4;
+      var A;
       !(function (e) {
         (e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
           (e[(e.k_EEventStatsUnlisted = 3)] = "k_EEventStatsUnlisted");
-      })(T || (T = {}));
-      var A, R, G, D, k, z;
-      function F(e) {
+      })(A || (A = {}));
+      var R, G, D, k, z, F;
+      function U(e) {
         return Boolean(e?.store_filter)
           ? JSON.stringify(e.store_filter)
           : void 0;
       }
-      function U(e) {
+      function O(e) {
         return (
           "items" === e ||
           "trailercarousel" === e ||
@@ -7701,7 +7704,7 @@
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
             "k_EStoreFilterClauseTypeAppType");
-      })(A || (A = {})),
+      })(R || (R = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
             (e[(e.k_ELanguage = 1)] = "k_ELanguage"),
@@ -7709,29 +7712,29 @@
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })(R || (R = {})),
+        })(G || (G = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
             (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(G || (G = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
             (e[(e.k_ESortFacetsByMatchCount = 1)] =
               "k_ESortFacetsByMatchCount"),
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-        })(D || (D = {})),
+        })(k || (k = {})),
         (function (e) {
           (e.Steam = "Steam"),
             (e.Facebook = "Facebook"),
             (e.Twitter = "Twitter"),
             (e.Reddit = "Reddit");
-        })(k || (k = {})),
+        })(z || (z = {})),
         (function (e) {
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
-        })(z || (z = {}));
-      const O = {
+        })(F || (F = {}));
+      const L = {
         capsules: [],
         events: [],
         links: [],
@@ -7740,12 +7743,12 @@
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
-      var L;
+      var P;
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(L || (L = {}));
-      const P = {
+      })(P || (P = {}));
+      const W = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -7770,10 +7773,10 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        W = "old_announce_",
-        N = "_summary",
-        j = 80,
-        x = [
+        N = "old_announce_",
+        j = "_summary",
+        x = 80,
+        q = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -7789,7 +7792,7 @@
           "betachannel",
           "previewchannel",
         ];
-      class q {
+      class H {
         constructor() {
           (0, s.Gn)(this);
         }
@@ -7809,9 +7812,9 @@
         m_nBuildID = void 0;
         m_strBuildBranch = void 0;
         postTime = void 0;
-        visibility_state = T.k_EEventStateUnpublished;
+        visibility_state = A.k_EEventStateUnpublished;
         broadcaster = void 0;
-        jsondata = P;
+        jsondata = W;
         nCommentCount = 0;
         nVotesUp = 0;
         nVotesDown = 0;
@@ -7840,7 +7843,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new q(),
+          let t = new H(),
             r = JSON.parse(e);
           return (
             Object.assign(t, r),
@@ -7876,7 +7879,7 @@
           );
         }
         clone(e = !1) {
-          let t = new q();
+          let t = new H();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -7928,7 +7931,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  x.includes(e) && t.vecTags.push(e);
+                  q.includes(e) && t.vecTags.push(e);
                 }),
             t
           );
@@ -8265,17 +8268,17 @@
         BIsVisibleEvent() {
           let e = Math.floor(p.HD.GetTimeNowWithOverride());
           return (
-            this.visibility_state == T.k_EEventStatsUnlisted ||
-            (this.visibility_state == T.k_EEventStateVisible &&
+            this.visibility_state == A.k_EEventStatsUnlisted ||
+            (this.visibility_state == A.k_EEventStateVisible &&
               e > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || e < this.visibilityEndTime))
           );
         }
         BIsStagedEvent() {
-          return this.visibility_state == T.k_EEventStateStaged;
+          return this.visibility_state == A.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == T.k_EEventStatsUnlisted;
+          return this.visibility_state == A.k_EEventStatsUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -8325,13 +8328,13 @@
         GetSubTitleWithSummaryFallback(e) {
           return (
             h.NT.GetWithFallback(this.jsondata?.localized_subtitle, e) ||
-            q.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            H.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
           return (
             h.NT.GetWithFallback(this.jsondata?.localized_summary, e) ||
-            q.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            H.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -8549,7 +8552,7 @@
             : this.GetSaleSections();
         }
         GetSaleSectionByID(e) {
-          if (e > M) {
+          if (e > T) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (t) => t.unique_id == e,
             );
@@ -8599,14 +8602,14 @@
             );
           return (
             this.jsondata.tagged_items?.forEach((e) => {
-              q.AccumulateCapsuleListIDs([e.capsule], r, a, t);
+              H.AccumulateCapsuleListIDs([e.capsule], r, a, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
-              if (U(e.section_type))
-                q.AccumulateCapsuleListIDs(e.capsules, r, a, t);
+              if (O(e.section_type))
+                H.AccumulateCapsuleListIDs(e.capsules, r, a, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const i of e.tabs)
-                  q.AccumulateCapsuleListIDs(i.capsules, r, a, t);
+                  H.AccumulateCapsuleListIDs(i.capsules, r, a, t);
             }),
             a
           );
@@ -8741,7 +8744,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === L.k_EContentHub &&
+            this.jsondata.item_source_type === P.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -8821,51 +8824,51 @@
           );
         }
       }
-      (0, a.Cg)([s.sH], q.prototype, "GID", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "AnnouncementGID", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "forumTopicGID", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "type", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "appid", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "name", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "description", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "timestamp_loc_updated", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "startTime", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "endTime", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "visibilityStartTime", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "visibilityEndTime", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "m_nBuildID", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "m_strBuildBranch", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "postTime", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "visibility_state", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "broadcaster", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "jsondata", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "nCommentCount", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "nVotesUp", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "nVotesDown", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "bOldAnnouncement", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "announcementClanSteamID", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "loadedAllLanguages", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "bLoaded", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "deleteInProgress", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "vecTags", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "last_update_steamid", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "rtime32_last_modified", void 0),
+      (0, a.Cg)([s.sH], H.prototype, "GID", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "AnnouncementGID", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "forumTopicGID", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "type", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "appid", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "name", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "description", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "timestamp_loc_updated", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "startTime", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "endTime", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "visibilityStartTime", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "visibilityEndTime", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "m_nBuildID", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "m_strBuildBranch", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "postTime", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "visibility_state", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "broadcaster", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "jsondata", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "nCommentCount", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "nVotesUp", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "nVotesDown", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "bOldAnnouncement", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "announcementClanSteamID", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "loadedAllLanguages", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "bLoaded", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "deleteInProgress", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "vecTags", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "last_update_steamid", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "rtime32_last_modified", void 0),
         (0, a.Cg)(
           [s.sH],
-          q.prototype,
+          H.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, a.Cg)(
           [s.sH],
-          q.prototype,
+          H.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, a.Cg)([s.sH], q.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "video_preview_type", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "video_preview_id", void 0),
-        (0, a.Cg)([s.sH], q.prototype, "m_overrideCurrentDay", void 0);
+        (0, a.Cg)([s.sH], H.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "video_preview_type", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "video_preview_id", void 0),
+        (0, a.Cg)([s.sH], H.prototype, "m_overrideCurrentDay", void 0);
     },
     38390: (e, t, r) => {
       "use strict";
@@ -18867,12 +18870,11 @@
                       }),
                       Boolean(s > 0) &&
                         c.createElement(B.m, {
-                          label: (0, h.we)("#MeetSteam_Reg_GuestCount", s),
+                          label: (0, h.we)("#MeetSteam_Reg_GuestCount"),
                           tooltip: (0, h.we)("#MeetSteam_Reg_GuestCount_ttip"),
-                          rgOptions: Array.from({ length: s }).map((e, t) => ({
-                            data: t,
-                            label: t,
-                          })),
+                          rgOptions: Array.from({ length: s + 1 }).map(
+                            (e, t) => ({ data: t, label: t }),
+                          ),
                           selectedOption: (d.guests_registered ?? 1) - 1,
                           onChange: (e) =>
                             I({
@@ -18892,6 +18894,7 @@
                             null,
                             (0, h.we)("#MeetSteam_Reg_Others"),
                           ),
+                          c.createElement("br", null),
                           d.guest_names.map((e, t) =>
                             c.createElement(B.pd, {
                               key: "guesname_" + t,
@@ -19191,7 +19194,7 @@
           u = Intl.DateTimeFormat().resolvedOptions().timeZone,
           p =
             "in_person" === t.location_type
-              ? (t.in_person_time_zone ?? "US/Pacific")
+              ? (t.in_person_time_zone ?? "America/Los_Angeles")
               : u,
           _ = k.unix(o),
           b = k.unix(o).tz(p).utcOffset() - _.utcOffset(),
@@ -19304,7 +19307,7 @@
               .reduce((e, r) => {
                 const a = j(t, r),
                   i = T.Get().GetSelection(a.group_id),
-                  n = a.sessions?.find((e) => e.id == i)?.max_per_team ?? 1;
+                  n = a.sessions?.find((e) => e.id == i)?.max_per_team ?? 0;
                 return Math.max(e, n);
               }, 1),
           );
@@ -23052,27 +23055,28 @@
     3919: (e, t, r) => {
       "use strict";
       r.d(t, {
-        PH: () => c,
-        _: () => m,
-        tj: () => I,
-        qT: () => B,
-        Hx: () => v,
-        LJ: () => w,
-        Bd: () => y,
-        cq: () => b,
+        PH: () => m,
+        _: () => d,
+        tj: () => C,
+        qT: () => v,
+        Hx: () => I,
+        LJ: () => S,
+        Bd: () => b,
+        cq: () => f,
       });
       var a = r(90626),
         i = r(92757),
-        n = r(45699),
-        s = r(44332),
-        o = r(78327);
-      const l = a.createContext({ bCanUseLink: !1 });
-      var c,
-        m,
-        d = r(55963),
-        u = r(61336),
-        p = r(60014),
-        _ = r(44736);
+        n = r(77516),
+        s = r(45699),
+        o = r(44332),
+        l = r(78327);
+      const c = a.createContext({ bCanUseLink: !1 });
+      var m,
+        d,
+        u = r(55963),
+        p = r(61336),
+        _ = r(60014),
+        g = r(44736);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eViewWebSiteHub = "websitehub"),
@@ -23090,185 +23094,187 @@
           (e.k_eStoreOwnerPage = "store"),
           (e.k_eStoreSalePage = "sale"),
           (e.k_eStoreUsersNewsHub = "usernewshub");
-      })(c || (c = {})),
+      })(m || (m = {})),
         (function (e) {
           (e.k_eFacebook = "facebook"),
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
-        })(m || (m = {}));
-      const g =
+        })(d || (d = {}));
+      const h =
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function h(e, t) {
-        const r = "store" === (0, o.yK)(),
+      function y(e, t) {
+        const r = "store" === (0, l.yK)(),
           a = (function (e) {
-            const t = e.match(g);
+            const t = e.match(h);
             return t?.[1];
           })(window.location.href),
           i = r && "news" == a,
-          n = "community" === (0, o.yK)(),
-          l = t.appid ? "games" : "groups",
-          m =
+          n = "community" === (0, l.yK)(),
+          s = t.appid ? "games" : "groups",
+          c =
             n &&
-            l == a &&
-            ((t.appid && t.appid === o.UF.APPID) ||
+            s == a &&
+            ((t.appid && t.appid === l.UF.APPID) ||
               (!t.appid &&
-                t.clanSteamID.GetAccountID() === o.UF.CLANACCOUNTID));
+                t.clanSteamID.GetAccountID() === l.UF.CLANACCOUNTID));
         switch (e) {
-          case c.k_eView:
-            return m || i;
-          case c.k_eCommunityView:
-          case c.k_eCommunityEdit:
-          case c.k_eCommunityEditBroadcast:
-          case c.k_eCommunityAdminPage:
-          case c.k_eCommunityPublish:
-          case c.k_eCommunityMigrate:
-          case c.k_eCommunityPreview:
-          case c.k_eCommunityPreviewSale:
-          case c.k_eCommunityAnnouncementHub:
-            return m;
-          case c.k_eViewWebSiteHub:
-            return m || i;
-          case c.k_eStoreView:
-          case c.k_eStoreNewsHub:
-          case c.k_eStoreOwnerPage:
-          case c.k_eStoreUsersNewsHub:
+          case m.k_eView:
+            return c || i;
+          case m.k_eCommunityView:
+          case m.k_eCommunityEdit:
+          case m.k_eCommunityEditBroadcast:
+          case m.k_eCommunityAdminPage:
+          case m.k_eCommunityPublish:
+          case m.k_eCommunityMigrate:
+          case m.k_eCommunityPreview:
+          case m.k_eCommunityPreviewSale:
+          case m.k_eCommunityAnnouncementHub:
+            return c;
+          case m.k_eViewWebSiteHub:
+            return c || i;
+          case m.k_eStoreView:
+          case m.k_eStoreNewsHub:
+          case m.k_eStoreOwnerPage:
+          case m.k_eStoreUsersNewsHub:
             return i;
-          case c.k_eStoreSalePage:
+          case m.k_eStoreSalePage:
             return !1;
           default:
-            return (0, s.w)(!1, "Unknown route specified for link: " + e), !1;
+            return (0, o.w)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function y(e, t) {
+      function b(e, t) {
         const r =
-          o.TS.COMMUNITY_BASE_URL +
+          l.TS.COMMUNITY_BASE_URL +
           "gid/" +
           e.clanSteamID.ConvertTo64BitString() +
           "/announcements/share/" +
           e.AnnouncementGID +
           "?site=" +
           t;
-        return t === m.k_eFacebook ? r + "&t=" + Math.random() : r;
+        return t === d.k_eFacebook ? r + "&t=" + Math.random() : r;
       }
-      function b(e) {
-        return S(e, c.k_eStoreView, "absolute");
+      function f(e) {
+        return B(e, m.k_eStoreView, "absolute");
       }
-      function f(e, t, r) {
+      function w(e, t, r) {
         if (r)
           return (
-            (e ? "/games/" + o.UF.VANITY_ID : "/groups/" + o.UF.VANITY_ID) + "/"
+            (e ? "/games/" + l.UF.VANITY_ID : "/groups/" + l.UF.VANITY_ID) + "/"
           );
         const a = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
-        return o.TS.COMMUNITY_BASE_URL + a + "/";
+        return l.TS.COMMUNITY_BASE_URL + a + "/";
       }
-      function w() {
+      function S() {
         return "news";
       }
-      function S(e, t, r) {
+      function B(e, t, r) {
         const a = "relative" === r,
-          i = "community" === (0, o.yK)(),
-          n = a ? "/" : o.TS.STORE_BASE_URL,
-          l = f(e.appid, e.clanSteamID, a);
-        t === c.k_eView
-          ? (t = i ? c.k_eCommunityView : c.k_eStoreView)
-          : t === c.k_eViewWebSiteHub &&
-            (t = i ? c.k_eCommunityAnnouncementHub : c.k_eStoreNewsHub);
-        const m = e.GID ? e.GID : "",
-          d = e.AnnouncementGID ? e.AnnouncementGID : "";
+          i = "community" === (0, l.yK)(),
+          s = a ? "/" : l.TS.STORE_BASE_URL,
+          c = w(e.appid, e.clanSteamID, a);
+        t === m.k_eView
+          ? (t = i ? m.k_eCommunityView : m.k_eStoreView)
+          : t === m.k_eViewWebSiteHub &&
+            (t = i ? m.k_eCommunityAnnouncementHub : m.k_eStoreNewsHub);
+        const d = e.GID ? e.GID : "",
+          u = e.AnnouncementGID ? e.AnnouncementGID : "";
         switch (t) {
-          case c.k_eCommunityPublish:
+          case m.k_eCommunityPublish:
             return (
-              l +
+              c +
               (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + d
-                : "partnerevents/publish/" + m + "?tab=publishing")
+                ? "partnerevents/migrate_announcement/" + u
+                : "partnerevents/publish/" + d + "?tab=publishing")
             );
-          case c.k_eCommunityEdit:
+          case m.k_eCommunityEdit:
             return (
-              l +
+              c +
               (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + d
-                : "partnerevents/edit/" + m)
+                ? "partnerevents/migrate_announcement/" + u
+                : "partnerevents/edit/" + d)
             );
-          case c.k_eCommunityEditBroadcast:
+          case m.k_eCommunityEditBroadcast:
             return (
-              l +
+              c +
               (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + d
-                : "partnerevents/edit/" + m) +
+                ? "partnerevents/migrate_announcement/" + u
+                : "partnerevents/edit/" + d) +
               "?tab=broadcast"
             );
-          case c.k_eCommunityMigrate:
-            return l + "partnerevents/migrate_announcement/" + d;
-          case c.k_eCommunityPreview:
+          case m.k_eCommunityMigrate:
+            return c + "partnerevents/migrate_announcement/" + u;
+          case m.k_eCommunityPreview:
             return (
-              l +
+              c +
               (e.bOldAnnouncement
-                ? "partnerevents/preview_old_announcement/" + d
-                : "partnerevents/preview/" + m)
+                ? "partnerevents/preview_old_announcement/" + u
+                : "partnerevents/preview/" + d)
             );
-          case c.k_eCommunityPreviewSale:
-            return l + "partnerevents/previewsale/" + m;
-          case c.k_eCommunityAdminPage:
-            return l + "partnerevents";
-          case c.k_eCommunityAnnouncementHub:
-            return l + "announcements";
-          case c.k_eStoreNewsHub:
+          case m.k_eCommunityPreviewSale:
+            return c + "partnerevents/previewsale/" + d;
+          case m.k_eCommunityAdminPage:
+            return c + "partnerevents";
+          case m.k_eCommunityAnnouncementHub:
+            return c + "announcements";
+          case m.k_eStoreNewsHub:
             return (
-              n +
+              s +
               `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
             );
-          case c.k_eStoreOwnerPage:
+          case m.k_eStoreOwnerPage:
             return (
-              n +
+              s +
               (e.appid
                 ? "app/" + e.appid
                 : "curator/" + e.clanSteamID.GetAccountID())
             );
-          case c.k_eStoreSalePage:
+          case m.k_eStoreSalePage:
             return e.jsondata.bSaleEnabled
-              ? n +
+              ? e.clanSteamID.GetAccountID() == n.wv
+                ? `${s}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
+                : s +
                   (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
                     ? "sale/"
                     : "curator/" + e.clanSteamID.GetAccountID() + "/sale/") +
                   e.jsondata.sale_vanity_id
-              : n;
-          case c.k_eCommunityView:
-            return l + "announcements/detail/" + d;
-          case c.k_eStoreView:
-            if (e.clanSteamID.GetAccountID() == (0, _.H7)())
-              return `${o.TS.STORE_BASE_URL}meetsteam/${m}`;
-            return `${n}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${d}` : `view/${m}`}`;
-          case c.k_eStoreUsersNewsHub:
-            return `${n}news/`;
+              : s;
+          case m.k_eCommunityView:
+            return c + "announcements/detail/" + u;
+          case m.k_eStoreView:
+            if (e.clanSteamID.GetAccountID() == (0, g.H7)())
+              return `${l.TS.STORE_BASE_URL}meetsteam/${d}`;
+            return `${s}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${u}` : `view/${d}`}`;
+          case m.k_eStoreUsersNewsHub:
+            return `${s}news/`;
           default:
-            return (0, s.w)(!1, "Unknown route specified for link"), "";
+            return (0, o.w)(!1, "Unknown route specified for link"), "";
         }
       }
-      function B(e, t, r) {
-        return S(
+      function v(e, t, r) {
+        return B(
           e,
           t,
-          "forceAbsolute" === r || !h(t, e) ? "absolute" : "relative",
+          "forceAbsolute" === r || !y(t, e) ? "absolute" : "relative",
         );
       }
-      function v(e, t, r) {
-        const a = f(e, t, !1);
+      function I(e, t, r) {
+        const a = w(e, t, !1);
         return "admin" === r ? a + "partnerevents" : "";
       }
-      function I(e) {
+      function C(e) {
         const { preferredFocus: t } = e,
-          { bCanUseLink: r } = a.useContext(l),
-          s = (0, p.n9)(),
+          { bCanUseLink: r } = a.useContext(c),
+          n = (0, _.n9)(),
           o = (0, i.W6)();
         if (!e.eventModel) return null;
-        const c = r && h(e.route, e.eventModel),
-          m = S(e.eventModel, e.route, c ? "relative" : "absolute"),
-          _ = c ? m : (0, u.NT)(m),
-          g = c ? _ : (0, d.wJ)(_, s);
-        return c
+        const l = r && y(e.route, e.eventModel),
+          m = B(e.eventModel, e.route, l ? "relative" : "absolute"),
+          d = l ? m : (0, p.NT)(m),
+          g = l ? d : (0, u.wJ)(d, n);
+        return l
           ? a.createElement(
-              n.Ii,
+              s.Ii,
               {
                 style: e.style,
                 className: e.className,
@@ -23281,7 +23287,7 @@
               e.children,
             )
           : a.createElement(
-              n.Ii,
+              s.Ii,
               {
                 href: g,
                 style: e.style,
@@ -25853,22 +25859,29 @@
         const a = e.filter((e) => (0, n.f)(e.type)).map((e) => e.id),
           i = e.filter((e) => "sub" === e.type).map((e) => e.id),
           s = e.filter((e) => "bundle" === e.type).map((e) => e.id);
-        await Promise.all([
-          o.A.Get().QueueMultipleAppRequests(a, t),
-          o.A.Get().QueueMultiplePackageRequests(i, t),
-          o.A.Get().QueueMultipleBundleRequests(s, t),
-        ]);
+        {
+          const e = a.filter((e) => !o.A.Get().BHasApp(e, t)),
+            r = i.filter((e) => !o.A.Get().BHasApp(e, t)),
+            n = s.filter((e) => !o.A.Get().BHasApp(e, t));
+          (e.length > 0 || r.length > 0 || n.length > 0) &&
+            (await Promise.all([
+              o.A.Get().QueueMultipleAppRequests(e, t),
+              o.A.Get().QueueMultiplePackageRequests(r, t),
+              o.A.Get().QueueMultipleBundleRequests(n, t),
+            ]));
+        }
         const l = new Set();
-        if (
-          (s?.forEach((e) => {
-            const t = o.A.Get().GetBundle(e);
-            t?.GetIncludedAppIDs().forEach((e) => l.add(e));
-          }),
+        s?.forEach((e) => {
+          const t = o.A.Get().GetBundle(e);
+          t?.GetIncludedAppIDs().forEach((e) => l.add(e));
+        }),
           i?.forEach((e) => {
             const t = o.A.Get().GetPackage(e);
             t?.GetIncludedAppIDs().forEach((e) => l.add(e));
-          }),
-          await o.A.Get().QueueMultipleAppRequests(Array.from(l), t),
+          });
+        const c = Array.from(l).filter((e) => !o.A.Get().BHasApp(e, t));
+        if (
+          (c.length > 0 && (await o.A.Get().QueueMultipleAppRequests(c, t)),
           a.forEach((e) => l.add(e)),
           r)
         ) {
@@ -25879,8 +25892,9 @@
                 ? (l.add(t.GetParentAppID()), t.GetParentAppID())
                 : null;
             })
-            .filter(Boolean);
-          await o.A.Get().QueueMultipleAppRequests(e, t);
+            .filter(Boolean)
+            .filter((e) => !o.A.Get().BHasApp(e, t));
+          e.length > 0 && (await o.A.Get().QueueMultipleAppRequests(e, t));
         }
         return Array.from(l).filter((e) => {
           const t = o.A.Get().GetApp(e);
@@ -26652,7 +26666,12 @@
           },
           i.createElement(
             "div",
-            { className: z().CapsuleContainer },
+            {
+              className: (0, F.A)(
+                z().CapsuleContainer,
+                e.link.url ? z().Linked : "",
+              ),
+            },
             Boolean(e.link.localized_link_capsule) &&
               i.createElement(q.o, {
                 className: z().LinkCapsuleImage,

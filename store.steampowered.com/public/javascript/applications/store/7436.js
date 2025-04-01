@@ -7085,17 +7085,13 @@
               this.m_weakAuthWebInterface.GetServiceTransport(),
               e,
             );
-          1 != t.GetEResult()
-            ? (t.DEBUG_LogToConsole(),
-              (0, m.ZI)(
-                "An unexpected error occured while adding an authenticator",
-                t.GetEResult(),
-              ),
-              this.SetFailureState(
-                T.eF.MoveAuthenticator,
-                ce.EResult(t.GetEResult()),
-              ))
-            : (this.m_eStatus = 8);
+          1 != t.GetEResult() &&
+            (t.DEBUG_LogToConsole(),
+            (0, m.ZI)(
+              "An unexpected error occured while adding an authenticator",
+              t.GetEResult(),
+            )),
+            (this.m_eStatus = 8);
         }
         async FinishMoveAuthenticator(e) {
           const t = I.w.Init(J);
