@@ -1,4 +1,4 @@
-var CLSTAMP = "9647493";
+var CLSTAMP = "9650840";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11063,9 +11063,9 @@ var CLSTAMP = "9647493";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Mar 31 2025 : 17:27:38",
-                BUILD_TIME_UTC: "Apr 1 2025 : 00:27:38",
-                BUILD_RTIME_UTC: 1743467258,
+                BUILD_TIME_LOCAL: "Apr 1 2025 : 17:34:57",
+                BUILD_TIME_UTC: "Apr 2 2025 : 00:34:57",
+                BUILD_RTIME_UTC: 1743554097,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24410,9 +24410,9 @@ var CLSTAMP = "9647493";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Mar 31 2025 : 17:27:38",
-                    BUILD_TIME_UTC: "Apr 1 2025 : 00:27:38",
-                    BUILD_RTIME_UTC: 1743467258,
+                    BUILD_TIME_LOCAL: "Apr 1 2025 : 17:34:57",
+                    BUILD_TIME_UTC: "Apr 2 2025 : 00:34:57",
+                    BUILD_RTIME_UTC: 1743554097,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24959,7 +24959,7 @@ var CLSTAMP = "9647493";
         1005: "9de219979403d7b97482",
         1012: "cded7344104308eb77a6",
         1093: "57220ffa981bd47b4160",
-        1220: "2fe7ac88a45ebc982931",
+        1220: "cb4e8b57d561893d5fb5",
         1275: "11e4a8e286f3edd19d2b",
         1389: "2d6a05bde888c919e323",
         1423: "9ce7f647e8607c309b1f",
@@ -25000,7 +25000,7 @@ var CLSTAMP = "9647493";
         3569: "4a1f882666df82b57131",
         3583: "f831ab7edbd9ffa591ac",
         3594: "b85434697e9e11cd4363",
-        3714: "b35345102061aec185c1",
+        3714: "71d8985ed3ec5f2bf85e",
         3869: "5bb6426e50daa4d1a905",
         4026: "20103f7b73c270b46c32",
         4102: "f43aeb08951dc8b6d64b",
@@ -25037,10 +25037,10 @@ var CLSTAMP = "9647493";
         7316: "18e5e6b118a1b52fddc2",
         7376: "d565c2b610194d0cc673",
         7442: "785f2cbd9988d817adc0",
-        7462: "52ace9199689821be1eb",
+        7462: "1eb939af6a8376cbb25f",
         7533: "e7d644f6d70429673a8a",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "f21af3b522f4e9736407",
+        7653: "727b474cc7ef68ea879b",
         7696: "b2d479eb10709dc19a0f",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
@@ -25052,7 +25052,7 @@ var CLSTAMP = "9647493";
         8280: "ff687559f14132ff5a83",
         8286: "1f5be36130bf4017cada",
         8291: "df656fc72afb07531d77",
-        8396: "4293254175d2186d7318",
+        8396: "3d15976236735b45352d",
         8443: "14576c5b8a2b6ac79ecd",
         8445: "a6014afae28fa3af5766",
         8478: "6a43580d5abdab6866bc",
@@ -25062,12 +25062,12 @@ var CLSTAMP = "9647493";
         8545: "1aa2273a0a3161924d55",
         8674: "012f8de0f9a5e6f4e91a",
         8699: "ef4ce5a4d1521e2331a9",
-        8732: "718e037a5490ae486048",
+        8732: "2b656a15e9c96e13ba5e",
         8830: "c9d10ea4462a338087a7",
         8872: "6c2fa14692f6069b90e7",
         9053: "a0b7db95a5bdeb228266",
         9063: "77f0c9977cc1aecd1944",
-        9129: "e54edd0ab2832321c5a4",
+        9129: "9ffb50003c4f871667b0",
         9134: "370830da314eb8247bf6",
         9171: "62827644fd38c35903c1",
         9298: "f1d7de5270869ef219c2",
@@ -25075,7 +25075,7 @@ var CLSTAMP = "9647493";
         9418: "29e9fa15a9fc8e62a893",
         9462: "89227ab1a3d278d803ec",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "ee18f4ec20cd0f128f65",
+        9858: "a9d35f1e0766bd4a9620",
         9869: "34bd86538342689d0c19",
         9887: "83a3520e394ff7fa45de",
       }[e]),
@@ -25289,4 +25289,4 @@ var CLSTAMP = "9647493";
     })();
   var c = a.O(void 0, [41], () => a(69823));
   c = a.O(c);
-})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/library.js.map
+})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/library.js.map

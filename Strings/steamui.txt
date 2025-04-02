@@ -11612,6 +11612,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
+Apr  2 2025 00:27:28
 Arabic
 AreFilesInSubscriptionList
 Armenian
@@ -13352,6 +13353,7 @@ ChatGroupPreferences
 ChatRoom
 ChatRoomClient
 ChatRoomPreferences
+ChatRoot
 ChatUsabilityClient
 Check360GuideButton
 CheckFailed
@@ -15921,7 +15923,6 @@ ManifestSignature
 Manual
 Manual recording for game %s, no retention interval
 ManuallyDeleteRecordingsForApps
-Mar 29 2025 19:26:59
 MarkMessageClicked
 MarkMessageSeen
 MarkPartnerEventsForUser
