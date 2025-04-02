@@ -14,14 +14,6 @@ message CCloud_ClientLogUploadComplete_Notification {
 	optional uint64 request_id = 2;
 }
 
-message CCloud_GetUploadServerInfo_Request {
-	optional uint32 appid = 1;
-}
-
-message CCloud_GetUploadServerInfo_Response {
-	optional string server_url = 1;
-}
-
 message CCloud_BeginHTTPUpload_Request {
 	optional uint32 appid = 1;
 	optional uint32 file_size = 2;
@@ -290,19 +282,6 @@ message CCloud_ClientConflictResolution_Notification {
 	optional bool chose_local_files = 2;
 }
 
-message CCloud_EnumerateUserApps_Request {
-}
-
-message CCloud_EnumerateUserApps_Response {
-	message Apps {
-		optional uint32 appid = 1;
-		optional int32 totalcount = 2;
-		optional int64 totalsize = 3;
-	}
-
-	repeated .CCloud_EnumerateUserApps_Response.Apps apps = 1;
-}
-
 message CCloud_GetAppFileChangelist_Request {
 	optional uint32 appid = 1;
 	optional uint64 synced_change_number = 2;
@@ -389,7 +368,6 @@ message CCloud_ClientLogUploadRequest_Notification {
 service Cloud {
 	rpc ClientLogUploadCheck (.CCloud_ClientLogUploadCheck_Notification) returns (.NoResponse);
 	rpc ClientLogUploadComplete (.CCloud_ClientLogUploadComplete_Notification) returns (.NoResponse);
-	rpc GetUploadServerInfo (.CCloud_GetUploadServerInfo_Request) returns (.CCloud_GetUploadServerInfo_Response);
 	rpc BeginHTTPUpload (.CCloud_BeginHTTPUpload_Request) returns (.CCloud_BeginHTTPUpload_Response);
 	rpc CommitHTTPUpload (.CCloud_CommitHTTPUpload_Request) returns (.CCloud_CommitHTTPUpload_Response);
 	rpc BeginUGCUpload (.CCloud_BeginUGCUpload_Request) returns (.CCloud_BeginUGCUpload_Response);
@@ -408,7 +386,6 @@ service Cloud {
 	rpc ClientFileDownload (.CCloud_ClientFileDownload_Request) returns (.CCloud_ClientFileDownload_Response);
 	rpc ClientDeleteFile (.CCloud_ClientDeleteFile_Request) returns (.CCloud_ClientDeleteFile_Response);
 	rpc ClientConflictResolution (.CCloud_ClientConflictResolution_Notification) returns (.NoResponse);
-	rpc EnumerateUserApps (.CCloud_EnumerateUserApps_Request) returns (.CCloud_EnumerateUserApps_Response);
 	rpc GetAppFileChangelist (.CCloud_GetAppFileChangelist_Request) returns (.CCloud_GetAppFileChangelist_Response);
 	rpc SuspendAppSession (.CCloud_AppSessionSuspend_Request) returns (.CCloud_AppSessionSuspend_Response);
 	rpc ResumeAppSession (.CCloud_AppSessionResume_Request) returns (.CCloud_AppSessionResume_Response);

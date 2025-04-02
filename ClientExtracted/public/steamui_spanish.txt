@@ -4495,7 +4495,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Music_Settings_ResetDatabase_Title" "Reiniciar base de datos de música local"
 "Music_Settings_ResetDatabase_Text" "¿Seguro que quieres reiniciar la base de datos de música?"
 "Music_Settings_AdditionalFiles_Header" "Archivos adicionales"
-"Music_Settings_AdditionalFiles_HighQuality" "Bajar archivos de audio de alta calidad"
+"Music_Settings_AdditionalFiles_HighQuality" "Descargar archivos de audio de alta calidad"
 
 "Music_Playlist_Defaultname" "Lista de reproducción"
 "Music_Playlist_Details_Menu_Play" "Reproducir"

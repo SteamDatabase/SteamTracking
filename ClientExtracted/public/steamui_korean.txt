@@ -86,7 +86,7 @@
 "Steam_ProcessingSubscriptionInfo" "구독 구매를 처리 중입니다.
 이 작업은 1분 안에 처리됩니다."
 "Steam_SubscribeCompleteInfo" "감사합니다! %s1의 구매가 완료되었습니다. \n\n이제 게임 라이브러리에서 원하는 게임을 두 번 클릭하거나 게임 제목을 마우스 오른쪽 버튼으로 클릭한 후 메뉴에서 '플레이'를 선택하여 플레이를 시작할 수 있습니다."
-"Steam_PreorderCompleteInfo" "감사합니다! %s1의 예약 주문이 완료되었습니다. \n\n이제 게임이 공식적으로 출시되면 바로 플레이하실 수 있습니다!"
+"Steam_PreorderCompleteInfo" "감사합니다! %s1의 예약 주문이 완료되었습니다. \n\n이제 게임이 공식적으로 출시되면 바로 플레이할 수 있습니다!"
 "Steam_SubscribeFailedInfo"	"구매가 완료되지 않았습니다. 입력하신 \n신용카드 정보가 유효하지 않습니다.\n\n자세한 내용이 기록된 메일이 \n발송되었습니다. 다른 신용카드 정보를 입력하려면 \n구매를 다시 시도해 주세요."
 
 "Steam_ErrorPasswordNotSet" "비밀번호를 설정하지 못했습니다. \n비밀 질문에 대한 대답이 틀렸거나 계정이 존재하지 않습니다."
@@ -190,7 +190,7 @@
 "Steam_GamesDialog_RightClick_ViewSteamGuides" "커뮤니티 가이드 보기"
 "SteamUI_GamesDialog_RightClick_Recommend" "평가 작성하기"
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
-"SteamUI_GamesDialog_NoSubscription" 	"선택하신 게임에 가입되어 있지 않습니다.\n가입 페이지로 이동하시겠습니까?"
+"SteamUI_GamesDialog_NoSubscription" 	"선택하신 게임에 가입되어 있지 않습니다.\n가입 페이지로 이동할까요?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - 오류"
 
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"시작"
@@ -213,7 +213,7 @@
 "SteamUI_JoinDialog_SkipShaderProcessing" "건너뛰기"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"업데이트 이용 가능"
-"SteamUI_JoinDialog_UpdateAvailable_Text"					"%game% 게임의 이용 가능한 업데이트가 있습니다. 그냥 실행하시겠습니까,\n 아니면 업데이트를 먼저 다운로드하시겠습니까?"
+"SteamUI_JoinDialog_UpdateAvailable_Text"					"%game% 게임의 이용 가능한 업데이트가 있습니다. 그냥 실행하시겠습니까,\n 아니면 업데이트를 먼저 다운로드할까요?"
 "SteamUI_JoinDialog_UpdateAvailable_LaunchNow"					"지금 실행"
 "SteamUI_JoinDialog_UpdateAvailable_WaitForUpdate"			"업데이트 다운로드"
 
@@ -376,7 +376,7 @@
 "Steam_ChangeUserDialogLabel"			"계정 이름:"
 
 "Steam_FlushConfigDialogTitle"			"Steam - 다운로드 캐시 지우기"
-"Steam_FlushConfigDialogMsg"			"로컬 다운로드 캐시가 지워지며 Steam에 다시 로그인해야 합니다.\n\n계속하시겠습니까?"
+"Steam_FlushConfigDialogMsg"			"로컬 다운로드 캐시가 지워지며 Steam에 다시 로그인해야 합니다.\n\n계속할까요?"
 
 "Steam_AccountDialog_Logout"			"로그아웃..."
 "Steam_RunGame_Title_Error"			"Steam - 오류"
@@ -415,7 +415,7 @@
 "Steam_PayPalNotAcceptedInGermany"	"현재 독일에서는 PayPal이 인정되지 않습니다. 다른 결제 수단을 선택하세요."
 
 "Steam_CancelPurchase_Title"			"구매 - %subscription%"
-"Steam_CancelPurchase_Info"			"구매가 완료되지 않았습니다. 지금 취소하면 %subscription%할 수 없으며 대금이 청구되지도 않습니다.\n\n구매를 취소하시겠습니까?"
+"Steam_CancelPurchase_Info"			"구매가 완료되지 않았습니다. 지금 취소하면 %subscription%할 수 없으며 대금이 청구되지도 않습니다.\n\n구매를 취소할까요?"
 "Steam_CancelPurchase_ContinueButton"	"구매 계속"
 "Steam_CancelPurchase_CancelButton"	"구매 취소"
 
@@ -745,7 +745,7 @@
 "SteamUI_OfflineMode_RestartOnline" "다시 시작 및 온라인으로 전환"
 "SteamUI_OfflineMode_RestartOffline" "오프라인 모드에서 다시 시작"
 "Steam_OfflineMode_NoPersonalInfoError_Title"	"Steam - 오프라인 모드"
-"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steam에서 오프라인 모드로 전환하려면 로컬 캐시된 사용자의 계정 증명이 필요합니다.\n\n'이 컴퓨터에 계정 증명 저장 안 함' 옵션을 선택했으므로 \n현재 캐시된 정보가 없습니다.\n\n로컬에서 캐시된 계정 증명을 다시 사용하여 오프라인으로 전환하시겠습니까?\n\n"
+"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steam에서 오프라인 모드로 전환하려면 로컬 캐시된 사용자의 계정 증명이 필요합니다.\n\n'이 컴퓨터에 계정 증명 저장 안 함' 옵션을 선택했으므로 \n현재 캐시된 정보가 없습니다.\n\n로컬에서 캐시된 계정 증명을 다시 사용하여 오프라인으로 전환할까요?\n\n"
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"계정 증명 저장 활성화"
 
 "SteamUI_OfflineMode_Title" "Steam - 오프라인 모드"
@@ -815,35 +815,35 @@
 
 // selection strings, pre-localized
 // do not localize these strings!
-"SteamUI_Selection_English"			"English (영어)"
-"SteamUI_Selection_Spanish"			"Español-España (스페인어-스페인)"
-"SteamUI_Selection_French"			"Français (프랑스어)"
-"SteamUI_Selection_Italian"			"Italiano (이탈리아어)"
-"SteamUI_Selection_German"			"Deutsch (독일어)"
-"SteamUI_Selection_Greek"			"Ελληνικά (그리스어)"
+"SteamUI_Selection_English"			"English(영어)"
+"SteamUI_Selection_Spanish"			"Español-España(스페인어 - 스페인)"
+"SteamUI_Selection_French"			"Français(프랑스어)"
+"SteamUI_Selection_Italian"			"Italiano(이탈리아어)"
+"SteamUI_Selection_German"			"Deutsch(독일어)"
+"SteamUI_Selection_Greek"			"Ελληνικά(그리스어)"
 "SteamUI_Selection_Korean"			"한국어"
-"SteamUI_Selection_Simplified_Chinese"	"简体中文 (중국어 간체)"
-"SteamUI_Selection_Traditional_Chinese"	"繁體中文 (중국어 번체)"
-"SteamUI_Selection_Russian"		"Русский (러시아어)"
-"SteamUI_Selection_Thai"			"ไทย (태국어)"
-"SteamUI_Selection_Japanese"		"日本語 (일본어)"
-"SteamUI_Selection_Portuguese"		"Português (포르투갈어 - 포르투갈)"
-"SteamUI_Selection_Brazilian"	 "Português-Brasil (포르투갈어-브라질)"
-"SteamUI_Selection_Polish"		"Polski (폴란드어)"
-"SteamUI_Selection_Danish"		"Dansk (덴마크어)"
-"SteamUI_Selection_Dutch"			"Nederlands (네덜란드어)"
-"SteamUI_Selection_Finnish"		"Suomi (핀란드어)"
-"SteamUI_Selection_Norwegian"		"Norsk (노르웨이어)"
-"SteamUI_Selection_Swedish"		"Svenska (스웨덴어)"
-"SteamUI_Selection_Czech"		"Čeština (체코어)"
-"SteamUI_Selection_Hungarian"		"Magyar (헝가리어)"
-"SteamUI_Selection_Romanian"			"Română (루마니아어)"
-"SteamUI_Selection_Bulgarian"			"български (불가리아어)"
-"SteamUI_Selection_Turkish"			"Türkçe (튀르키예어)"
+"SteamUI_Selection_Simplified_Chinese"	"简体中文(중국어 간체)"
+"SteamUI_Selection_Traditional_Chinese"	"繁體中文(중국어 번체)"
+"SteamUI_Selection_Russian"		"Русский(러시아어)"
+"SteamUI_Selection_Thai"			"ไทย(태국어)"
+"SteamUI_Selection_Japanese"		"日本語(일본어)"
+"SteamUI_Selection_Portuguese"		"Português(포르투갈어 - 포르투갈)"
+"SteamUI_Selection_Brazilian"	 "Português-Brasil(포르투갈어 - 브라질)"
+"SteamUI_Selection_Polish"		"Polski(폴란드어)"
+"SteamUI_Selection_Danish"		"Dansk(덴마크어)"
+"SteamUI_Selection_Dutch"			"Nederlands(네덜란드어)"
+"SteamUI_Selection_Finnish"		"Suomi(핀란드어)"
+"SteamUI_Selection_Norwegian"		"Norsk(노르웨이어)"
+"SteamUI_Selection_Swedish"		"Svenska(스웨덴어)"
+"SteamUI_Selection_Czech"		"Čeština(체코어)"
+"SteamUI_Selection_Hungarian"		"Magyar(헝가리어)"
+"SteamUI_Selection_Romanian"			"Română(루마니아어)"
+"SteamUI_Selection_Bulgarian"			"български(불가리아어)"
+"SteamUI_Selection_Turkish"			"Türkçe(튀르키예어)"
 "SteamUI_Selection_Arabic"			"العربية(아랍어)"
-"SteamUI_Selection_Ukrainian"			"Українська (우크라이나어)"
+"SteamUI_Selection_Ukrainian"			"Українська(우크라이나어)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica(스페인어 - 중남미)"
-"SteamUI_Selection_Vietnamese"		"Tiếng Việt (베트남어)"
+"SteamUI_Selection_Vietnamese"		"Tiếng Việt(베트남어)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia(인도네시아어)"
 
 
@@ -877,7 +877,7 @@
 "SteamUI_ValveSurvey_Summary_VideoCard"						"동영상 카드:"
 "SteamUI_ValveSurvey_Summary_Memory"						"메모리:"
 "SteamUI_ValveSurvey_Summary_Audio"							"사운드 카드:"
-"SteamUI_ValveSurvey_Summary_Storage"						"저장공간:"
+"SteamUI_ValveSurvey_Summary_Storage"						"저장 공간:"
 
 "SteamUI_ValveSurvey_ResultsLabel"							"설문 조사가 끝났습니다. 참여해 주셔서 다시 한 번 감사를 드립니다.\n\n현재 사용 중이신 컴퓨터를 다른 Steam 회원들과 비교하려면 아래 링크를 클릭하여 설문 조사의 정리된 결과를 볼 수 있습니다.\n\n (그렇지 않은 경우 '마침'을 클릭하여 이 창을 닫을 수 있습니다)."
 "SteamUI_ValveSurvey_ResultsButton"							"설문 조사 결과 페이지로 이동합니다."
@@ -1133,8 +1133,8 @@
 
 "SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\n본 설문조사에 참여해주셔서 감사합니다. 이 설문조사는 두 가지 절차를 거칩니다.\n\n먼저 하드웨어 정보의 수집이 이루어집니다. 이 정보는 익명으로 처리되어 해당 설문의 게시자에게 전달될 것입니다.\n\n그 다음으로, 추가적인 통계 자료를 내기 위하여 웹사이트로 연결시켜 드릴 것입니다.\n\n설문조사를 시작하시려면 \"다음\"을 클릭해 주세요."
 "SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\n설문에 참여해 주셔서 감사합니다. \n\n이 설문에서는 귀하의 컴퓨터 정보를 수집합니다. 수집한 자료는 익명으로 저장되지 않으며 이 설문을 만든 이와 공유됩니다.\n\n시작하려면 '다음'을 누르세요."
-"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\n본 설문조사에 응해주셔서 감사합니다.\n\n전에 이미 설문에 한번 참여하신 적이 있는 것 같아 하드웨어 정보를 다시 수집할 필요가 없어 보이는군요. \"완료\"를 클릭하여 나오는 웹 페이지에서 나머지 설문을 마무리하실 수 있습니다."
-"SteamUI_SpecialSurvey_ForwardToWeb"	"첫 번째 순서인 하드웨어 정보 수집이 모두 완료되었습니다.\n\n\"마침\" 버튼을 누르면 연결되는 웹 페이지에서 두 번째 순서를 진행하실 수 있습니다. 본 설문조사는 두 번째 순서가 완료되기 전까지 종료되지 않습니다."
+"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\n본 설문조사에 응해주셔서 감사합니다.\n\n전에 이미 설문에 한번 참여하신 적이 있는 것 같아 하드웨어 정보를 다시 수집할 필요가 없어 보이는군요. \"완료\"를 클릭하여 나오는 웹 페이지에서 나머지 설문을 마무리할 수 있습니다."
+"SteamUI_SpecialSurvey_ForwardToWeb"	"첫 번째 순서인 하드웨어 정보 수집이 모두 완료되었습니다.\n\n\"마침\" 버튼을 누르면 연결되는 웹 페이지에서 두 번째 순서를 진행할 수 있습니다. 본 설문조사는 두 번째 순서가 완료되기 전까지 종료되지 않습니다."
 "SteamUI_SpecialSurvey_Complete"		"설문에 끝까지 참여해 주셔서 감사합니다. 귀하의 답변이 기록되었습니다."
 "SteamUI_SpecialSurvey_Sending_Data"	"수집한 정보를 보내는 중..."
 "SteamUI_SpecialSurvey_Cancel"			"취소"
@@ -1208,7 +1208,7 @@
 "Steam_SubscriptionSuccess_CDKey_Headline" "등록되었습니다!"
 "Steam_SubscriptionSuccess_CDKey" "제품 활성화 코드가 성공적으로 등록되었습니다. 하단에 기재된 제품들이 Steam 계정에 영구적으로 등록됩니다. 방금 Steam에 등록한 항목에 접근하려면 해당 계정으로 로그인해야 합니다.\n\n이후 참조할 수 있도록 거래 내역 영수증을 인쇄해 두세요."
 
-"Steam_SubscriptionSuccess_ComingSoonOnly" "귀하의 제품 코드가 성공적으로 활성화되었습니다. 이 콘텐츠는 게임이 일단 Steam에 출시되면 사용하실 수 있습니다. 이 콘텐츠는 이제 귀하의 Steam 계정에 영구히 귀속됩니다. 방금 Steam에서 활성화한 항목에 접근하시려면 이 계정으로 로그인하셔야 합니다."
+"Steam_SubscriptionSuccess_ComingSoonOnly" "귀하의 제품 코드가 성공적으로 활성화되었습니다. 이 콘텐츠는 게임이 일단 Steam에 출시되면 사용할 수 있습니다. 이 콘텐츠는 이제 귀하의 Steam 계정에 영구히 귀속됩니다. 방금 Steam에서 활성화한 항목에 접근하시려면 이 계정으로 로그인하셔야 합니다."
 
 "Steam_Subscription_Rejected_Cdkey_Headline" "제품 코드 중복"
 "Steam_Subscription_Rejected_Cdkey" "입력하신 제품 코드는 이미 다른 Steam 계정에 의해 등록된 코드입니다. 해당 코드는 다시 사용할 수 없습니다. 코드를 구매하신 소매점이나 온라인 판매자에게 직접 문의해 주시기 바랍니다."
@@ -1489,7 +1489,7 @@
 "SteamUI_FSMode_Explanation"		"Steam 네트워크는 현재 오프라인 모드만 지원합니다. 즉, 게임을 이용할 수는 있지만 대부분의 Steam 네트워크 서비스를 사용할 수 없습니다."
 "SteamUI_FSMode_Explanation2"		"Steam 팀은 모든 네트워크 서비스를 최대한 빠르게 복구하기 위해 최선을 다하고 있습니다. 불편을 드리게 되어 대단히 죄송합니다."
 "SteamUI_FSMode_StartInOffline"		"Steam을 오프라인 모드로 시작"
-"SteamUI_FSMode_Title"		"오프라인 모드로 시작하시겠습니까?"
+"SteamUI_FSMode_Title"		"오프라인 모드로 시작할까요?"
 
 "Steam_ShippingAddressSameAsBillingAddress_Check" "배송 주소가 청구지 주소와 동일합니다."
 "Steam_ShippingName"	"이름"
@@ -1579,7 +1579,7 @@
 "Steam_BackupRequiresFullCache_Info"	"업데이트를 완료할 때까지 %game% 게임을 백업하실 수 없습니다."
 
 "Steam_BackupSelectGames_Info"		"백업에 포함할 프로그램을 선택하세요.\n다운로드를 완료하고 최신판으로 업데이트한 프로그램만 백업할 수 있습니다."
-"Steam_BackupStartText"			"어떻게 하시겠습니까?"
+"Steam_BackupStartText"			"어떻게 할까요?"
 "Steam_BackupChooseRestore"		"이전 백업 복원"
 "Steam_BackupChooseBackup"		"현재 설치된 프로그램 백업"
 
@@ -2233,7 +2233,7 @@
 "Steam_UnknownErrorLaunchingMedia"		"미디어 실행 도중 오류 발생."
 
 "Steam_HiDefPack_Title"				"Half-Life 고화질 팩 - Steam"
-"Steam_HiDefPack_Installed"			"Half-Life 고화질 팩이 활성화되었습니다.\nHalf-Life를 지금 시작하시겠습니까?"
+"Steam_HiDefPack_Installed"			"Half-Life 고화질 팩이 활성화되었습니다.\nHalf-Life를 지금 시작할까요?"
 "Steam_HiDefPack_Removed"			"Half-Life 고화질 팩이 비활성화되었습니다."
 "Steam_HiDefPack_AlreadyInstalled"	"Half-Life 고화질 팩이 이미 활성화되어 있습니다."
 "Steam_HiDefPack_AlreadyRemoved"		"Half-Life 고화질 팩이 비활성화되어 있습니다."
@@ -2401,7 +2401,7 @@
 "Steam_MetascoreColumn"					"Metascore"
 
 "Steam_CancelInstall_Title"				"Steam - 설치 취소"
-"Steam_CancelInstall_Info"				"%game%의 설치를 취소하시겠습니까?"
+"Steam_CancelInstall_Info"				"%game%의 설치를 취소할까요?"
 "Steam_CancelInstall_ContinueButton"		"계속 설치"
 "Steam_CancelInstall_CancelButton"		"설치 취소"
 
@@ -2410,7 +2410,7 @@
 "Steam_OpenMyMedia"						"내 미디어 열기"
 "Steam_ContinueBrowsingMedia"				"계속 검색"
 
-"Steam_Uninstall_Title"			"Steam - 게임을 제거하시겠습니까?"
+"Steam_Uninstall_Title"			"Steam - 게임을 제거할까요?"
 "Steam_Uninstall_Info"			"게임 캐시를 삭제하면 다음 게임 콘텐츠가 이 컴퓨터에서 삭제됩니다.\n\n%games%\n게임은 라이브러리에 그대로 남지만, 나중에 이 게임을 플레이하려면\n먼저 게임을 다시 설치하거나 해당 콘텐츠를 다시 다운로드해야 합니다."
 "Steam_Uninstall_ButtonText"		"게임 제거"
 
@@ -2778,7 +2778,7 @@
 "Steam_Country_ZW"		"짐바브웨"
 
 "Steam_HL2Russian_Title"			"Half-Life 2 Russian Pack - Steam"
-"Steam_HL2Russian_Installed"			"Half-Life 2 Russian Pack이 활성화되었습니다.\nHalf-Life 2를 지금 시작하시겠습니까?"
+"Steam_HL2Russian_Installed"			"Half-Life 2 Russian Pack이 활성화되었습니다.\nHalf-Life 2를 지금 시작할까요?"
 "Steam_HL2Russian_Removed"			"Half-Life 2 Russian Pack이 비활성화되었습니다."
 "Steam_HL2Russian_AlreadyInstalled"	"Half-Life 2 Russian Pack이 이미 활성화되어 있습니다."
 "Steam_HL2Russian_AlreadyRemoved"		"Half-Life 2 Russian Pack이 현재 활성화되어 있지 않습니다."
@@ -3014,7 +3014,7 @@
 "steam_checkforupdates_title"						"Steam - 자동 업데이트"
 "steam_ClientUpdateAvailableDownloading"			"Steam 클라이언트 업데이트가 있습니다. 파일을 다운로드하는 중입니다."
 "steam_ClientUpdateAvailableDownloaded"			"Steam 클라이언트 업데이트를 다운로드했습니다."
-"steam_ClientUpdateAvailableDownloadedInfo"		"업데이트 사항을 적용하기 위해 Steam을 다시 시작하시겠습니까?"
+"steam_ClientUpdateAvailableDownloadedInfo"		"업데이트 사항을 적용하기 위해 Steam을 다시 시작할까요?"
 "Steam_NoClientUpdateAvailable"					"Steam 클라이언트는 최신 버전입니다."
 "Steam_NotEnoughDiskSpaceCheckingForUpdates"		"Steam에서 업데이트를 확인하고 적용하려면 여유 디스크 공간이 더 필요합니다."
 "Steam_ClientUpdateSuppressed"						"Steam 클라이언트 업데이트가 명령줄 스위치 또는 구성 파일에 의해 비활성화되었습니다. 차단을 제거하고 클라이언트를 다시 시작한 후 다시 시도하세요."
@@ -3528,7 +3528,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_ManageSecurity_DoNothing" "잘 생각하셨습니다! 비록 다른 컴퓨터를 이용해 Steam에 접속하실 경우 이메일이 필요하시겠지만, Steam Guard를 활성화함으로써 계정을 훨씬 안전하게 지킬 수 있습니다."
 "SteamUI_ManageSecurity_DoNothing2" "보안을 위해 Steam 계정과 이메일의 비밀번호를 다르게 설정하세요."
 
-"SteamUI_ManageSecurity_UnlockAccount_Success" "이제 다른 어떤 컴퓨터나 웹 브라우저에서도 귀하의 계정 ID와 비밀번호를 이용해 로그인하실 수 있습니다."
+"SteamUI_ManageSecurity_UnlockAccount_Success" "이제 다른 어떤 컴퓨터나 웹 브라우저에서도 귀하의 계정 ID와 비밀번호를 이용해 로그인할 수 있습니다."
 "SteamUI_ManageSecurity_Reenable" "Steam Guard를 다시 활성화하려면, Steam 설정에 있는 'Steam Guard 계정 보안 관리'를 누르세요."
 
 "SteamUI_ManageSecurity_CodeSent" "귀하의 이메일 주소로 코드를 보냈습니다.\n새로운 컴퓨터에서 로그인하려면 이 코드를 사용하세요."
@@ -4257,7 +4257,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_DeviceAuth_Purchase_Locked" "구매"
 
 "Steam_DeviceAuth_ChooseDialog_Title" "이 게임을 플레이하고 싶으세요?"
-"Steam_DeviceAuth_ChooseDialog_Text" "이 게임은 Steam 사용자 %owner% 님의 것입니다. 이 장비에서 %owner% 님의 게임을 플레이할 권한을 요청하시겠습니까?"
+"Steam_DeviceAuth_ChooseDialog_Text" "이 게임은 Steam 사용자 %owner% 님의 것입니다. 이 장비에서 %owner% 님의 게임을 플레이할 권한을 요청할까요?"
 "Steam_DeviceAuth_ChooseDialog_Purchase" "차라리 사고 말지..."
 "Steam_DeviceAuth_ChooseDialog_Request" "접근 권한 요청..."
 "Steam_DeviceAuth_ChooseDialog_Cancel" "취소"
@@ -4266,7 +4266,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_DeviceAuth_RequestDialog_Title" "가족 라이브러리 공유 요청"
 "Steam_DeviceAuth_RequestDialog_To" "안녕하세요, %owner% 님."
 "Steam_DeviceAuth_RequestDialog_From" "감사합니다,\n%user%님"
-"Steam_DeviceAuth_RequestDialog_Text" "이 컴퓨터에 귀하의 Steam 라이브러리 접근 권한을 공유하시겠습니까?"
+"Steam_DeviceAuth_RequestDialog_Text" "이 컴퓨터에 귀하의 Steam 라이브러리 접근 권한을 공유할까요?"
 "Steam_DeviceAuth_RequestDialog_Description" "이 컴퓨터의 이름을 붙여주세요:"
 "Steam_DeviceAuth_RequestDialog_Cancel" "취소"
 "Steam_DeviceAuth_RequestDialog_Send" "요청 보내기"
@@ -4307,7 +4307,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_DeviceAuth_Authorized_Notification" "이제 %owner% 님의 게임을 이 컴퓨터에서 플레이할 수 있습니다."
 "Steam_DeviceAuth_Deauthorized_Notification" "%owner% 님이 이 컴퓨터를 인증 해제 했으므로, 일부 게임은 사용 불가능할 수 있습니다."
-"Steam_DeviceAuth_StopPlaying_Notification" "잠시만요, %owner% 님이 이 공유된 게임을 다시 돌려받으셔야 합니다! %minutes%분간 더 플레이하실 수 있습니다..."
+"Steam_DeviceAuth_StopPlaying_Notification" "잠시만요, %owner% 님이 이 공유된 게임을 다시 돌려받으셔야 합니다! %minutes%분간 더 플레이할 수 있습니다..."
 
 "Steam_DeviceAuth_Shared_Library_Now_Available" "야호, %owner% 님의 공유된 게임을 이제 플레이할 수 있습니다..."
 
@@ -4332,7 +4332,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AllowGameLaunch_Info"	"%game% 게임이 다음의 선택적 명령줄을 실행하려고 합니다."
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
 "Steam_AllowGameLaunch_Info_Prompt" "이 실행을 요청하지 않았거나 이러한 옵션을 이해하지 못한다면 취소를 선택하세요."
-"Steam_AllowGameLaunch_Title"	"게임 실행을 허용하시겠습니까?"
+"Steam_AllowGameLaunch_Title"	"게임 실행을 허용할까요?"
 
 "Steam_Parental_UnlockTitle"			"가족 모드"
 "Steam_Parental_UnlockInstructions"		"가족 모드를 끄려면 아래에 PIN을 입력하세요"
@@ -4401,7 +4401,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Player_WindowTitle" "음악 플레이어"
 
 "Music_NoLibrary_Text" "텅 비었네요! <a href=steam://settings/music>설정</a>에서 음악 라이브러리를 설정하셔야겠습니다."
-"Music_Crawling_Text" "음악 라이브러리에서 콘텐츠를 검색 중입니다. 이 작업은 언제든지 <a href=steam://musiccrawlingcancel>취소</a>하실 수 있습니다."
+"Music_Crawling_Text" "음악 라이브러리에서 콘텐츠를 검색 중입니다. 이 작업은 언제든지 <a href=steam://musiccrawlingcancel>취소</a>할 수 있습니다."
 
 "Music_Nav_Menu_Artists" "아티스트"
 "Music_Nav_Menu_Albums" "앨범"
@@ -4499,7 +4499,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Settings_LoggingCrawling" "활동 로그 검색 저장"
 "Music_Settings__SelectDirectory_Title"	"음악 라이브러리 선택"
 "Music_Settings_ResetDatabase_Title" "로컬 음악 데이터베이스 초기화"
-"Music_Settings_ResetDatabase_Text" "음악 데이터베이스를 초기화 하시겠습니까?"
+"Music_Settings_ResetDatabase_Text" "음악 데이터베이스를 초기화할까요?"
 "Music_Settings_AdditionalFiles_Header" "추가 파일"
 "Music_Settings_AdditionalFiles_HighQuality" "고품질 오디오 다운로드하기"
 
@@ -4561,7 +4561,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Compat"				        "Steam 플레이"
 "Steam_Settings_Compat_Title"			    "Steam 플레이 설정"
 "Steam_Settings_Compat_Info"			    "Steam 플레이는 호환 도구를 자동으로 설치해, 라이브러리에 있는 게임 중 다른 운영 체제를 위해 제작된 게임을 플레이할 수 있도록 해줍니다."
-"Steam_Settings_Compat_Enable"			    "지원되는 타이틀에 대해 Steam 플레이 활성화하기"
+"Steam_Settings_Compat_Enable"			    "지원되는 타이틀에 대해 Steam 플레이 활성화"
 "Steam_Settings_Compat_Advanced_Title"		"고급"
 "Steam_Settings_Compat_Forced_Info"		    "Steam 플레이를 사용하면, 라이브러리에 있는 게임 중 호환 도구로 아직 확인하지 않은 게임을 먼저 테스트할 수 있습니다."
 "Steam_Settings_Compat_Forced_Enable"		"다른 모든 타이틀에 Steam 플레이를 활성화합니다"
@@ -4605,9 +4605,9 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote" "%streamingclient%에서 스트리밍 성능을 높이려면 게임의 해상도를 낮추거나 다음의 설정을 조정해보세요."
 "Steam_Settings_Streaming_EnableCaptureNVFBC" "NVIDIA GPU에서 NVFBC 캡처 사용"
 "Steam_Settings_Streaming_EnableHardwareEncoding" "하드웨어 인코딩 활성화"
-"Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" "NVIDIA GPU에서 하드웨어 인코딩 활성화하기"
-"Steam_Settings_Streaming_EnableHardwareEncodingAMD" "AMD GPU에서 하드웨어 인코딩 활성화하기"
-"Steam_Settings_Streaming_EnableHardwareEncodingIntel" "Intel iGPU에서 하드웨어 인코딩 활성화하기"
+"Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" "NVIDIA GPU에서 하드웨어 인코딩 활성화"
+"Steam_Settings_Streaming_EnableHardwareEncodingAMD" "AMD GPU에서 하드웨어 인코딩 활성화"
+"Steam_Settings_Streaming_EnableHardwareEncodingIntel" "Intel iGPU에서 하드웨어 인코딩 활성화"
 "Steam_Settings_Streaming_EnableHardwareDecoding" "하드웨어 디코딩 활성화"
 "Steam_Settings_Streaming_EnableTrafficPriority_Description" "신형 또는 고급 공유기를 사용하시는 경우, 네트워크 트래픽 우선순위조정을 사용하실 수도 있습니다."
 "Steam_Settings_Streaming_EnableTrafficPriority" "네트워크 트래픽 우선순위 조정"
@@ -4747,8 +4747,8 @@ Windows에 관리자로 로그인해야 합니다.
 
 
 "VR_Error_Title"				"SteamVR 시작 오류"
-"VR_Error_VRSkipParam"			"-vrskip 명령행 파라미터로 인해 SteamVR이 시작되지 않았습니다. 계속하시겠습니까?"
-"VR_Error_ComponentNotInstalled" "SteamVR 도구가 설치되지 않아 SteamVR을 사용할 수 없습니다. 설치하시겠습니까?"
+"VR_Error_VRSkipParam"			"-vrskip 명령행 파라미터로 인해 SteamVR이 시작되지 않았습니다. 계속할까요?"
+"VR_Error_ComponentNotInstalled" "SteamVR 도구가 설치되지 않아 SteamVR을 사용할 수 없습니다. 설치할까요?"
 "VR_Error_ComponentBusy"		"SteamVR 도구가 업데이트 중이거나, 설치되지 않았거나, 검증 중이거나 기타 작업을 하고 있을 때는 SteamVR을 사용할 수 없습니다."
 "VR_Error_CrashProtection"		"이전에 실행하던 중 오류가 발생하여 SteamVR이 비활성화되었습니다. 다시 해보겠습니까?"
 "VR_Error_HmdNotFound"			"지원되는 헤드셋이 발견되지 않아 SteamVR을 사용할 수 없습니다."
@@ -4816,7 +4816,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_VR2DGameWarning_Title" "경고"
 "Steam_VR2DGameWarning_Desc" "%launching_app%은(는) VR HMD의 환경과 더불어 데스크톱에서도 실행됩니다.\n이 모드에서는 성능이 뛰어나지 않을 수 있습니다. 데스크톱에서만 게임을 실행하려면 게임을 실행하기 전에 SteamVR을 종료하세요."
 "Steam_VR2DGameWarning_Desc_Old" "%launching_app%은(는) VR을 지원하지 않습니다. 이것은 데스크톱에 표시되며 VR 성능에 영향을 줄 수 있습니다."
-"Steam_VR2DGameWarning_Desc_VRGame" "%launching_app%은(는) 기본적으로 VR을 지원하지만, 귀하는 데스크톱 버전을 선택하셨습니다. 계속하시겠습니까?"
+"Steam_VR2DGameWarning_Desc_VRGame" "%launching_app%은(는) 기본적으로 VR을 지원하지만, 귀하는 데스크톱 버전을 선택하셨습니다. 계속할까요?"
 
 "Steam_OculusOnlyGameWarning_Title" "경고"
 "Steam_OculusOnlyGameWarning_Desc" "%launching_app%은(는) SteamVR 환경 밖에서 실행됩니다. Steam으로 돌아가기 위해서 헤드셋을 제거해야 할 수도 있습니다."

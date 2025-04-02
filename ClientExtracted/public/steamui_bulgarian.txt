@@ -1513,7 +1513,7 @@
 "Steam_AutoUpdateTimeRestrictionLabel"	"Авт. обновяване на игрите само между:"
 "Steam_AutoUpdateTimeRestrictionEnd"		"и"
 "Steam_AllowDownloadsDuringGameplay"	"Позволяване на сваляния по време на игрално преживяване"
-"Steam_AllowDownloadsDuringGameplayDetails"	"Ако това е избрано, Steam може да инициира или продължи свалянето на обновления, докато е пусната игра или друго \nSteam приложение. Можете да отмените това за всяка игра поотделно в свойствата ѝ."
+"Steam_AllowDownloadsDuringGameplayDetails"	"Ако това е избрано, възможно е Steam може да инициира или продължи свалянето на обновления, докато е пусната игра или друго \nSteam приложение. Също така можете да отмените това за всяка игра поотделно в свойствата ѝ."
 "Steam_ThrottleDownloadsWhileStreaming"	"Потискане на свалянията, докато се излъчва"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Ако това е избрано, Steam ще ограничи скоростта за сваляне, така че да поддържа висококачествено преживяване със Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Изобразяване на скоростта за сваляне като битове в секунда"

@@ -118,6 +118,7 @@
  .CInventory_ExchangeItem_Request
  .CInventory_GetInventory_Request
  .CInventory_PurchaseInit_Request
+ .CMsgTest_TestClientCall_Request
  .CParental_ValidateToken_Request
  .CParties_DestroyBeacon_Response"
  .CPlayer_GetAvatarFrame_Response"
@@ -152,7 +153,6 @@
  New Candidate for Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
  New Gyro Antidrift value found: ( %f, %f, %f ) given tolerances: G:%f, A:%f Num Samples: %d\n
  No workshop items referenced on client.\n
- Num mode shifts Found: %d
  Saving Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
@@ -205,7 +205,6 @@
 !.CCloud_AppSessionSuspend_Request
 !.CCloud_ClientDeleteFile_Response
 !.CCloud_CommitHTTPUpload_Response
-!.CCloud_EnumerateUserApps_Request
 !.CEcon_GetAssetClassInfo_Response"
 !.CGameRecording_GetClips_Response
 !.CGameRecording_SaveClip_Response
@@ -214,6 +213,8 @@
 !.CInventory_PurchaseInit_Response"
 !.CMsgTest_MessageToClient_Request
 !.CMsgTest_MessageToServer_Request
+!.CMsgTest_TestClientCall_Response
+!.CMsgTest_TestClientCall_Response"
 !.CParental_ValidateToken_Response
 !.CPlayer_GetEmoticonList_Response"
 !.CPlayer_GetFavoriteBadge_Request
@@ -317,7 +318,6 @@
 ""\n CChatRoom_AddRoleToUser_Response"K\n!CChatRoom_GetRolesForUser_Request
 ""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
-""\n CCloud_EnumerateUserApps_Request"
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
 ""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 ""\n SiteServerUI_CancelLogin_Request"O\n!SiteServerUI_CancelLogin_Response
@@ -378,7 +378,6 @@
 "+\n)CPlayer_SetMiniProfileBackground_Response"C\n
 "+\n)CPlayer_SetSteamDeckKeyboardSkin_Response"_\n$CPlayer_GetProfileItemsOwned_Request
 "+\n)CUserAccount_GetAccountLinkStatus_Request"}\n*CUserAccount_GetAccountLinkStatus_Response
-",\n*CDeviceAuth_AuthorizeRemoteDevice_Response"Y\n+CDeviceAuth_DeauthorizeRemoteDevice_Request
 ",\n*CFamilyGroups_UndeleteFamilyGroup_Response"B\n(CFamilyGroups_GetPlaytimeSummary_Request
 ",\n*CMsgRemoteDeviceAuthorizationCancelRequest"
 ",\n*CParental_DisableParentalSettings_Response"8\n%CParental_GetParentalSettings_Request
@@ -408,7 +407,6 @@
 ".CCloudGaming_CreateNonce_Response"
 ".CCloud_AppSessionSuspend_Response
 ".CCloud_ClientFileDownload_Request
-".CCloud_EnumerateUserApps_Response
 ".CCloud_EnumerateUserFiles_Request
 ".CGameRecording_DeleteClip_Request
 ".CGameRecording_ExportClip_Request
@@ -442,7 +440,6 @@
 ".CVideo_ClientGetVideoURL_Response"
 ".CVideo_GetVideoBookmarks_Response"
 ".\n,CCommunity_MarkPartnerEventsForUser_Response"h\n0CCommunity_GetUserPartnerEventViewStatus_Request
-".\n,CDeviceAuth_DeauthorizeRemoteDevice_Response"?\n,CDeviceAuth_GetUsedAuthorizedDevices_Request
 ".\n,CFamilyGroups_RemoveFromFamilyGroup_Response"b\n-CFamilyGroups_CancelFamilyGroupInvite_Request
 ".\n,CGameRecording_GetAvailableDiskSpace_Request"=\n-CGameRecording_GetAvailableDiskSpace_Response
 ".\n,CGameRecording_PhaseListChanged_Notification"
@@ -455,22 +452,20 @@
 "0\n.CChatRoom_EndMiniGameForChatRoomGroup_Response"X\n
 "0\n.CChatRoom_InviteFriendToChatRoomGroup_Response"=\n$CChatRoom_LeaveChatRoomGroup_Request
 "0\n.CChatRoom_SetUserChatGroupPreferences_Response"
-"0\n.CDeviceAuth_RemoveAuthorizedBorrowers_Response"q\n+CDeviceAuth_GetAuthorizedAsBorrower_Request
 "0\n.CFamilyGroups_CancelFamilyGroupInvite_Response"a\n+CFamilyGroups_GetUsersSharingDevice_Request
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "1\n/CCommunity_FetchTranslationFromCrowdIn_Response"/\n\fCAppPriority
-"1\n/CDeviceAuth_AcceptAuthorizationRequest_Response"W\n)CDeviceAuth_AuthorizeRemoteDevice_Request
 "1\n/CHardwareUpdate_UpdateStateChanged_Notification2
 "1\n/CTransportValidation_RequestInvalidBool_Request"a\n0CTransportValidation_RequestInvalidBool_Response
 "1\n/CTransportValidation_TriggerDataRequest_Request"@\n0CTransportValidation_TriggerDataRequest_Response
 "2BRbr
 "2CScs
+"2\n CMsgTest_TestClientCall_Response
 "2\n!CInventory_GetItemDefMeta_Request
 "2\n#CRemoteClient_StartPairing_Response
 "2\n0CSteamOSManager_OptOutOfSideloadedClient_Request"3\n1CSteamOSManager_OptOutOfSideloadedClient_Response".\n,CSteamOSManager_ApplyMandatoryUpdate_Request"/\n-CSteamOSManager_ApplyMandatoryUpdate_Response"Q\n$CSteamOSManager_FactoryReset_Request
 "2\n0CTransportValidation_GetLastNotifyNumber_Request"O\n1CTransportValidation_GetLastNotifyNumber_Response
 "3Hau
-"3\n"CCloud_GetUploadServerInfo_Request
 "3\n"CPlayer_GetGameBadgeLevels_Request
 "3\n1CFamilyGroups_ConfirmInviteToFamilyGroup_Response"^\n3CFamilyGroups_ResendInvitationToFamilyGroup_Request
 "3\n1CFamilyGroups_RespondToRequestedPurchase_Response"<\n"CFamilyGroups_GetChangeLog_Request
@@ -482,6 +477,7 @@
 "4\n2CMarketingMessages_DeleteMarketingMessage_Response"
 "4\n2CMarketingMessages_UpdateMarketingMessage_Response"@\n1CMarketingMessages_DeleteMarketingMessage_Request
 "4\n2CPlayer_GetMutualFriendsForIncomingInvites_Request"\\n&CPlayer_IncomingInviteMutualFriendList
+"5\n!CStore_GetMostPopularTags_Request
 "5\n"CMsgClientAddFriendToGroupResponse
 "6.Bl
 "6\n"CChatRoom_GetRolesForUser_Response
@@ -558,7 +554,6 @@
 "F\n"CInventory_ConsumePlaytime_Request
 "F\n#CPlayer_GetGameAchievements_Request
 "F\n'CDataPublisher_AddVRDeviceInfo_Response
-"F\n+CDeviceAuth_AddAuthorizedBorrowers_Response
 "F\n,CMsgClientRequestWebAPIAuthenticateUserNonce
 "F\n-CCommunity_GetLinkFilterHashPrefixes_Response
 "F\n.CBroadcast_WaitingBroadcastViewer_Notification
@@ -581,7 +576,6 @@
 "K\n.CClanChatRooms_SetClanChatRoomPrivate_Response
 "K\n6CPlayer_FriendEquippedProfileItemsChanged_Notification
 "LD_* scout runtime" information:\n
-"L\n*CDeviceAuth_GetBorrowerPlayHistory_Request
 "L\n-CBroadcast_ViewerBroadcastInvite_Notification
 "M\n CGameRecording_GetClips_Response
 "M\n"CParties_CancelReservation_Request
@@ -630,7 +624,6 @@
 "Y\n$CFamilyGroups_GetFamilyGroup_Request
 "Y\n)CGameRecording_UploadClipToSteam_Response
 "Z\n-CContentBuilder_GetMissingDepotChunks_Request
-"Z\n-CDeviceAuth_RemoveAuthorizedBorrowers_Request
 "Z\n2CCommunity_GetClanAnnouncementVoteForUser_Response
 "[\n(CCommunity_GetBestEventsForUser_Response
 "[\n/CMarketingMessages_GetMarketingMessage_Response
@@ -749,7 +742,6 @@
 #.CCloud_BeginAppUploadBatch_Request
 #.CCloud_ClientFileDownload_Response
 #.CCloud_EnumerateUserFiles_Response
-#.CCloud_GetUploadServerInfo_Request
 #.CFamilyGroups_GetChangeLog_Request
 #.CGameRecording_DeleteClip_Response
 #.CGameRecording_ExportClip_Response
@@ -871,6 +863,8 @@
 #origin_SteamDeck_Y
 #origin_horipad_m1
 #origin_horipad_m2
+#origin_legion_go_y1
+#origin_legion_go_y2
 #origin_none
 #origin_ps4_button_circle
 #origin_ps4_button_dpad_e
@@ -1093,7 +1087,6 @@ $.CChatRoom_SaveChatRoomGroup_Request
 $.CCloud_AppExitSyncDone_Notification
 $.CCloud_BeginAppUploadBatch_Response
 $.CCloud_GetAppFileChangelist_Request
-$.CCloud_GetUploadServerInfo_Response
 $.CCommunity_GetAvatarHistory_Request
 $.CCommunity_GetCommentThread_Request
 $.CFamilyGroups_GetChangeLog_Response"
@@ -1432,7 +1425,6 @@ $steammessages_parental_objects.proto"
 %d_*.manifest
 %daE<<0\f6
 %dx%d
-%f %f %d %d\n
 %host%
 %lld
 %llu
@@ -2524,7 +2516,6 @@ $steammessages_parental_objects.proto"
 (\r"8\n%CGameRecording_StartRecording_Request
 (\r"8\n6CTransportValidation_RequestLargeNotification_Response"=\n-CTransportValidation_NotifyLarge_Notification
 (\r"8\n\rCMsgDisableF5
-(\r"9\n#CCloud_GetUploadServerInfo_Response
 (\r"9\n$CParties_ChangeNumOpenSlots_Response
 (\r"9\n7CCommunity_ClearSinglePartnerEventsAppPriority_Response*
 (\r"9\n7CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request"K\n8CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
@@ -2541,7 +2532,6 @@ $steammessages_parental_objects.proto"
 (\r">\n(CMsgClientUCMDeletePublishedFileResponse
 (\r">\n.CTransportValidation_GetLargeResponse_Response
 (\r"?\n.CCommunity_PartnerEventsShowMoreForApp_Request
-(\r"@\n-CDeviceAuth_GetExcludedGamesInLibrary_Request
 (\r"A\n*CBroadcast_WebRTCLookupTURNServer_Response
 (\r"A\n-CChatRoom_GetMessageReactionReactors_Response
 (\r"B\n!CCloudGaming_CreateNonce_Response
@@ -2576,11 +2566,11 @@ $steammessages_parental_objects.proto"
 (\r"N\n'CGameNetworking_AllocateFakeIP_Response
 (\r"N\n,CCommunity_GetLinkFilterListVersion_Response
 (\r"O\n#CMsgRemoteClientGetControllerConfig
+(\r"P\n(CStoreBrowse_GetContentHubConfig_Request
 (\r"P\n*CFamilyGroups_GetPurchaseRequests_Response
 (\r"P\n0CSteamTV_GetBroadcastChannelBroadcasters_Request
 (\r"P\n\rCMsgMouseDown
 (\r"P\n\rCMsgMouseMove
-(\r"Q\n"CStoreBrowse_GetPriceStops_Request
 (\r"Q\n)CFovasVideo_ClientGetOPFSettings_Response
 (\r"Q\n.CCommunity_GetClanEventCrowdInMetadata_Request
 (\r"R\n'CFamilyGroups_ForceAcceptInvite_Request
@@ -2593,7 +2583,6 @@ $steammessages_parental_objects.proto"
 (\r"V\n#CTimedTrial_RecordPlaytime_Response
 (\r"V\n&CCloudGaming_GetTimeRemaining_Response
 (\r"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
-(\r"W\n*CDeviceAuth_AddAuthorizedBorrowers_Request
 (\r"X\n&CCommunity_GetLinkFilterHashes_Request
 (\r"Y\n!CMsgSteamSockets_UDP_NoConnection
 (\r"Y\n"CPublishedFile_GetDetails_Response
@@ -2643,7 +2632,6 @@ $steammessages_parental_objects.proto"
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
 (\r"n\n$CMsgClientRequestFreeLicenseResponse
 (\r"o\n(CBroadcast_GetBroadcastChatInfo_Response
-(\r"p\n*CDeviceAuth_GetAuthorizedBorrowers_Request
 (\r"p\n@CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 (\r"q\n\vCMsgKeyChar
 (\r"s\n1CFriendsMessages_GetActiveMessageSessions_Request
@@ -2745,6 +2733,7 @@ $steammessages_parental_objects.proto"
 (\t"N\n,CSteamEngine_GetTextFilterDictionary_Request
 (\t"O\n#CSteamTV_GetChatModerators_Response
 (\t"P\n#CParental_PlaytimeUsed_Notification
+(\t"Q\n"CStoreBrowse_GetPriceStops_Request
 (\t"Q\n%CPlayer_GetProfileBackground_Response
 (\t"S\n)CChatRoom_SetChatRoomGroupTagline_Request
 (\t"S\n8CRemoteClient_DeleteRemotePlayTogetherInvitation_Request
@@ -2930,7 +2919,6 @@ $steammessages_parental_objects.proto"
 (\v2&.google.protobuf.MethodDescriptorProto
 (\v2'.CClientMetrics_ClientBootstrap_Summary"
 (\v2'.CClientMetrics_IPv6Connectivity_Result
-(\v2'.CCloud_EnumerateUserApps_Response.Apps
 (\v2'.CGameRecording_QueryPhases_Request.Tag
 (\v2'.CHIDMessageFromRemote.UpdateDeviceListH
 (\v2'.CMsgCREItemVoteSummary.PublishedFileId
@@ -3039,6 +3027,7 @@ $steammessages_parental_objects.proto"
 (\v2..CMsgClientPICSProductInfoResponse.PackageInfo
 (\v2..CRemotePlayTogether_Notification.GroupUpdatedH
 (\v2..CStoreBrowse_GetPriceStops_Response.PriceStop
+(\v2..CStore_GetRecommendedTagsForUser_Response.Tag
 (\v2..CUserAccount_CreateFriendInviteToken_Response"S\n*CUserAccount_ViewFriendInviteToken_Request
 (\v2..ClientCloudFileUploadBlockDetails.HTTPHeaders
 (\v2..SiteServerUI_ClientStatus_Response.ClientInfo
@@ -3093,13 +3082,9 @@ $steammessages_parental_objects.proto"
 (\v24.CAccountHardware_VRCompatibilityCheck_Response.Pair
 (\v24.CClientMetrics_DownloadRates_Notification.StatsInfo
 (\v24.CClientMetrics_ReportClientError_Notification.Error
-(\v24.CDeviceAuth_GetAuthorizedAsBorrower_Response.Lender
-(\v24.CDeviceAuth_GetOwnAuthorizedDevices_Response.Device
 (\v24.CMsgClientCheckAppBetaPasswordResponse.BetaPassword
 (\v24.CMsgSteamNetworkingP2PRendezvous.ApplicationMessage
 (\v25.CContentServerDirectory_ConnectedSteamPipeServerInfo"
-(\v25.CDeviceAuth_GetAuthorizedBorrowers_Response.Borrower
-(\v25.CDeviceAuth_GetUsedAuthorizedDevices_Response.Device
 (\v25.CMsgSteamDatagramClientSwitchedPrimary.RouterQuality
 (\v25.CPublishedFile_GetItemInfo_Response.WorkshopItemInfo
 (\v26.CContentBuilder_GetMissingDepotChunks_Response.Chunks
@@ -3120,7 +3105,6 @@ $steammessages_parental_objects.proto"
 (\v28.CBroadcast_GetBroadcastViewerStats_Response.ViewerStats
 (\v28.CClientMetrics_ClipRange_Notification.RelativeRangeEdge
 (\v28.CClientMetrics_ReportReactUsage_Notification.ActionData
-(\v28.CDeviceAuth_GetBorrowerPlayHistory_Response.GameHistory2
 (\v28.CFamilyGroups_GetPreferredLenders_Response.FamilyMember
 (\v28.CMsgClientGetAuthorizedDevicesResponse.AuthorizedDevice
 (\v28.CMsgSteamDatagramClientPingSampleReply.LegacyDataCenter
@@ -3137,7 +3121,6 @@ $steammessages_parental_objects.proto"
 (\v29.CRemotePlayTogether_Notification.ControllerSlot_obsolete
 (\v2:.CAccountHardware_QueryAccountsRegisteredToSerial_Accounts"
 (\v2:.CBroadcast_GetBroadcastChatUserNames_Response.PersonaName
-(\v2:.CDeviceAuth_GetBorrowerPlayHistory_Response.LenderHistory
 (\v2:.CPublishedFile_AreFilesInSubscriptionList_Response.InList
 (\v2;.CAccountHardware_SteamControllerGetConfig_ControllerConfig"w\n2CAccountHardware_DeRegisterSteamController_Request
 (\v2;.CAccountHardware_SteamControllerSetConfig_ControllerConfig
@@ -3146,9 +3129,9 @@ $steammessages_parental_objects.proto"
 (\v2;.CClientMetrics_ReportReactUsage_Notification.ComponentData
 (\v2;.CHIDMessageFromRemote.DeviceInputReports.DeviceInputReport
 (\v2;.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token2
+(\v2;.CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig
 (\v2<.CChatUsability_ClientUsabilityMetrics_Notification.Settings
 (\v2<.CClientMetrics_GamePerformance_Notification.FrameRateReport
-(\v2<.CDeviceAuth_GetExcludedGamesInLibrary_Response.ExcludedGame
 (\v2<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance
 (\v2<.CMsgClientChatGetFriendMessageHistoryResponse.FriendMessage
 (\v2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfo
@@ -3311,8 +3294,10 @@ $steammessages_parental_objects.proto"
 ).CSteamTV_GetSteamTVUserSettings_Response"
 ).CSteamTV_ReportBroadcastChannel_Response"
 ).CSteamTV_SetSteamTVUserSettings_Response"
+).CStoreBrowse_GetContentHubConfig_Request
 ).CStoreBrowse_GetStoreCategories_Response"
 ).CStore_GetDiscoveryQueueSettings_Request
+).CStore_GetRecommendedTagsForUser_Request
 ).CStore_GetUserGameInterestState_Response"
 ).CStore_UpdatePackageReservations_Request
 ).CTransportValidation_AddNumbers_Response
@@ -3474,7 +3459,6 @@ $steammessages_parental_objects.proto"
 *.CCredentials_GetAccountAuthSecret_Request
 *.CCredentials_GetSteamGuardDetails_Request
 *.CCredentials_ValidateEmailAddress_Request
-*.CDeviceAuth_AuthorizeRemoteDevice_Request
 *.CEconMarket_IsMarketplaceAllowed_Response"
 *.CFamilyGroups_GetPlaytimeSummary_Response"
 *.CFamilyGroups_GetPreferredLenders_Request
@@ -3521,7 +3505,9 @@ $steammessages_parental_objects.proto"
 *.CSteamTV_GetBroadcastChannelClips_Request
 *.CSteamTV_GetBroadcastChannelLinks_Request
 *.CSteamTV_SetBroadcastChannelImage_Request
+*.CStoreBrowse_GetContentHubConfig_Response"
 *.CStore_GetDiscoveryQueueSettings_Response"
+*.CStore_GetRecommendedTagsForUser_Response"
 *.CStore_GetWishlistDemoEmailStatus_Request
 *.CStore_UpdatePackageReservations_Response"
 *.CTransportAuth_StartShutdown_Notification
@@ -3886,10 +3872,6 @@ $steammessages_parental_objects.proto"
 +.CCredentials_GetSteamGuardDetails_Response"
 +.CCredentials_TestAvailablePassword_Request
 +.CCredentials_ValidateEmailAddress_Response"
-+.CDeviceAuth_AddAuthorizedBorrowers_Request
-+.CDeviceAuth_AuthorizeRemoteDevice_Response
-+.CDeviceAuth_GetAuthorizedBorrowers_Request
-+.CDeviceAuth_GetBorrowerPlayHistory_Request
 +.CFamilyGroups_GetPreferredLenders_Response"
 +.CFamilyGroups_GetPurchaseRequests_Response"
 +.CFamilyGroups_GetSharedLibraryApps_Request
@@ -4057,12 +4039,6 @@ $steammessages_parental_objects.proto"
 ,.CCommunity_GetUserPartnerEventNews_Response"
 ,.CCommunity_MarkPartnerEventsForUser_Request
 ,.CCredentials_TestAvailablePassword_Response"
-,.CDeviceAuth_AddAuthorizedBorrowers_Response
-,.CDeviceAuth_DeauthorizeRemoteDevice_Request
-,.CDeviceAuth_GetAuthorizedAsBorrower_Request
-,.CDeviceAuth_GetAuthorizedBorrowers_Response
-,.CDeviceAuth_GetBorrowerPlayHistory_ResponseB
-,.CDeviceAuth_GetOwnAuthorizedDevices_Request
 ,.CFamilyGroups_GetFamilyGroupForUser_Request
 ,.CFamilyGroups_GetInviteCheckResults_Request
 ,.CFamilyGroups_GetSharedLibraryApps_Response"
@@ -4206,7 +4182,6 @@ $steammessages_parental_objects.proto"
 ,steammessages_unified_base.steamclient.proto"K\n CVideo_ClientGetVideoURL_Request
 ,steammessages_unified_base.steamclient.proto"P\n&CGameNetworking_AllocateFakeIP_Request
 ,steammessages_unified_base.steamclient.proto"P\n8CUserAccount_GetAvailableValveDiscountPromotions_Request
-,steammessages_unified_base.steamclient.proto"X\n+CDeviceAuth_GetOwnAuthorizedDevices_Request
 ,steammessages_unified_base.steamclient.proto"^\n,CCommunity_GetLinkFilterHashPrefixes_Request
 ,steammessages_unified_base.steamclient.proto"b\n0CAccountHardware_RegisterSteamController_Request
 ,steammessages_unified_base.steamclient.proto"i\n4CContentServerDirectory_ConnectedSteamPipeServerInfo
@@ -4248,10 +4223,6 @@ $steammessages_parental_objects.proto"
 -.CCommunity_GetLinkFilterHashPrefixes_Request
 -.CCommunity_GetLinkFilterListVersion_Response"
 -.CCommunity_MarkPartnerEventsForUser_Response"
--.CDeviceAuth_DeauthorizeRemoteDevice_Response
--.CDeviceAuth_GetAuthorizedAsBorrower_Response
--.CDeviceAuth_GetOwnAuthorizedDevices_Response
--.CDeviceAuth_GetUsedAuthorizedDevices_Request
 -.CFamilyGroups_ConfirmJoinFamilyGroup_Request
 -.CFamilyGroups_GetFamilyGroupForUser_Response"
 -.CFamilyGroups_GetInviteCheckResults_Response"
@@ -4467,9 +4438,6 @@ $steammessages_parental_objects.proto"
 ..CContentBuilder_GetMissingDepotChunks_Request
 ..CCredentials_LastCredentialChangeTime_Request
 ..CCredentials_SteamGuardPhishingReport_Request
-..CDeviceAuth_GetExcludedGamesInLibrary_Request
-..CDeviceAuth_GetUsedAuthorizedDevices_Response
-..CDeviceAuth_RemoveAuthorizedBorrowers_Request
 ..CEcon_ClientGetItemShopOverlayAuthURL_Request
 ..CFamilyGroupsClient_GroupChanged_Notification
 ..CFamilyGroupsClient_InviteStatus_Notification
@@ -4836,7 +4804,7 @@ $steammessages_parental_objects.proto"
 .CStore_GetTagList_Request
 .CStore_GetTagList_Response"
 .CStore_GetTagList_Response.Tag
-.CStore_PurchaseReceiptInfo"5\n!CStore_GetMostPopularTags_Request
+.CStore_PurchaseReceiptInfo"l\n(CStore_GetRecommendedTagsForUser_Request
 .CStore_RegisterCDKey_Request
 .CStore_RegisterCDKey_Response"
 .CStore_ReportApp_Request
@@ -5247,9 +5215,6 @@ $steammessages_parental_objects.proto"
 /.CCredentials_LastCredentialChangeTime_Response"
 /.CCredentials_SteamGuardPhishingReport_Response"
 /.CDataPublisher_ClientUpdateAppJob_Notification
-/.CDeviceAuth_AcceptAuthorizationRequest_Request
-/.CDeviceAuth_GetExcludedGamesInLibrary_Response
-/.CDeviceAuth_RemoveAuthorizedBorrowers_Response
 /.CEcon_ClientGetItemShopOverlayAuthURL_Response"
 /.CEmbeddedClient_AuthorizeCurrentDevice_Request
 /.CFamilyGroups_CancelFamilyGroupInvite_Response"
@@ -5450,7 +5415,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/music/playbackcontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2389
+/data/src/clientdll/networkdevicemanager_linux.cpp:2396
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -5703,7 +5668,6 @@ $steammessages_parental_objects.proto"
 0.CCommunity_PartnerEventsShowLessForApp_Response"
 0.CCommunity_PartnerEventsShowMoreForApp_Response"
 0.CContentServerDirectory_GetCDNAuthToken_Request
-0.CDeviceAuth_AcceptAuthorizationRequest_Response"
 0.CEcon_GetInventoryItemsWithDescriptions_Request
 0.CFamilyGroups_ModifyFamilyGroupDetails_Response"
 0.CGameRecording_GetPlatformCapabilities_Response
@@ -7037,7 +7001,6 @@ $steammessages_parental_objects.proto"
 10ClFriend_t
 10Cloud_Stub
 10ConCommand
-10DeviceAuth
 10EconMarket
 10FovasVideo
 10IClientUGC
@@ -8135,7 +8098,6 @@ $steammessages_parental_objects.proto"
 15CWorkThreadPool
 15ChatRoomEnter_t
 15ClUserGameStats
-15DeviceAuth_Stub
 15DownloadTimer_t
 15EconMarket_Stub
 15FovasVideo_Stub
@@ -8533,7 +8495,7 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI20CRemoteClientManager15VRModeChanged_tE
 17CInternalCallbackI20CRemoteClientManager16AppInfoChanged_tE
 17CInternalCallbackI20CRemoteClientManager17LicensesUpdated_tE
-17CInternalCallbackI20CRemoteClientManager26NetworkDeviceStateChange_tE
+17CInternalCallbackI20CRemoteClientManager25NetworkDevicesRefreshed_tE
 17CInternalCallbackI20CRemoteClientManager27FocusedSteamWindowChanged_tE
 17CInternalCallbackI20CRemoteClientManager28LoadControllerConfigResult_tE
 17CInternalCallbackI20CSiteServerLoginCtrl16PostLogonState_tE
@@ -10284,6 +10246,7 @@ $steammessages_parental_objects.proto"
 27CStateMonitorWithHysteresis
 27CSteamControllerAbstraction
 27CSteamControllerXInputLinux
+27CSteamOSHandheldAbstraction
 27CSteamTV_AddChatBan_Request
 27CSteamTV_AddWordBan_Request
 27CSteamTV_HomePageContentRow
@@ -10888,6 +10851,7 @@ $steammessages_parental_objects.proto"
 31CMsgSetControllerInputActivator
 31CMsgSteamDatagramConnectRequest
 31CMsgSystemDisplayManagerSetMode
+31CMsgTest_TestClientCall_Request
 31CMsgVideoGameRecordingComponent
 31CParental_ValidateToken_Request
 31CParties_DestroyBeacon_Response
@@ -10962,7 +10926,6 @@ $steammessages_parental_objects.proto"
 32CCloud_AppSessionSuspend_Request
 32CCloud_ClientDeleteFile_Response
 32CCloud_CommitHTTPUpload_Response
-32CCloud_EnumerateUserApps_Request
 32CControllerActionSetLayerChanged
 32CEcon_GetAssetClassInfo_Response
 32CGameNotifications_LocalizedText
@@ -11001,6 +10964,7 @@ $steammessages_parental_objects.proto"
 32CMsgSystemPerfLegacySettingEntry
 32CMsgTest_MessageToClient_Request
 32CMsgTest_MessageToServer_Request
+32CMsgTest_TestClientCall_Response
 32CMsgTrading_InitiateTradeRequest
 32CPICSJobRequestProductInfoUpdate
 32CParental_ValidateToken_Response
@@ -11099,7 +11063,6 @@ $steammessages_parental_objects.proto"
 33CCloudGaming_CreateNonce_Response
 33CCloud_AppSessionSuspend_Response
 33CCloud_ClientFileDownload_Request
-33CCloud_EnumerateUserApps_Response
 33CCloud_EnumerateUserFiles_Request
 33CDepotLocalContentServerInterface
 33CDisplayManagerRebuildStateJobX11
@@ -11235,7 +11198,6 @@ $steammessages_parental_objects.proto"
 34CCloud_BeginAppUploadBatch_Request
 34CCloud_ClientFileDownload_Response
 34CCloud_EnumerateUserFiles_Response
-34CCloud_GetUploadServerInfo_Request
 34CContentServerDirectory_ServerInfo
 34CControllerKeyboardMouseInputState
 34CFamilyGroups_GetChangeLog_Request
@@ -11355,7 +11317,6 @@ $steammessages_parental_objects.proto"
 35CCloud_AppExitSyncDone_Notification
 35CCloud_BeginAppUploadBatch_Response
 35CCloud_GetAppFileChangelist_Request
-35CCloud_GetUploadServerInfo_Response
 35CCommunity_GetAvatarHistory_Request
 35CCommunity_GetCommentThread_Request
 35CCommunity_PartnerEventsAppPriority
@@ -11680,7 +11641,6 @@ $steammessages_parental_objects.proto"
 38CCloud_ClientCommitFileUpload_Response
 38CCloud_ClientGetAppQuotaUsage_Response
 38CCloud_CompleteAppUploadBatch_Response
-38CCloud_EnumerateUserApps_Response_Apps
 38CCloud_GetClientEncryptionKey_Response
 38CCommunity_GetLinkFilterHashes_Request
 38CCommunity_PostCommentToThread_Request
@@ -12006,8 +11966,10 @@ $steammessages_parental_objects.proto"
 40CSteamTV_GetSteamTVUserSettings_Response
 40CSteamTV_ReportBroadcastChannel_Response
 40CSteamTV_SetSteamTVUserSettings_Response
+40CStoreBrowse_GetContentHubConfig_Request
 40CStoreBrowse_GetStoreCategories_Response
 40CStore_GetDiscoveryQueueSettings_Request
+40CStore_GetRecommendedTagsForUser_Request
 40CStore_GetUserGameInterestState_Response
 40CStore_UpdatePackageReservations_Request
 40CTransportValidation_AddNumbers_Response
@@ -12049,7 +12011,6 @@ $steammessages_parental_objects.proto"
 41CCredentials_GetAccountAuthSecret_Request
 41CCredentials_GetSteamGuardDetails_Request
 41CCredentials_ValidateEmailAddress_Request
-41CDeviceAuth_AuthorizeRemoteDevice_Request
 41CDockUnsupportedFirmwareWorkaroundManager
 41CEconMarket_IsMarketplaceAllowed_Response
 41CFamilyGroups_GetPlaytimeSummary_Response
@@ -12115,7 +12076,9 @@ $steammessages_parental_objects.proto"
 41CSteamTV_GetBroadcastChannelClips_Request
 41CSteamTV_GetBroadcastChannelLinks_Request
 41CSteamTV_SetBroadcastChannelImage_Request
+41CStoreBrowse_GetContentHubConfig_Response
 41CStore_GetDiscoveryQueueSettings_Response
+41CStore_GetRecommendedTagsForUser_Response
 41CStore_GetWishlistDemoEmailStatus_Request
 41CStore_UpdatePackageReservations_Response
 41CTransportAuth_StartShutdown_Notification
@@ -12163,10 +12126,6 @@ $steammessages_parental_objects.proto"
 42CCredentials_GetSteamGuardDetails_Response
 42CCredentials_TestAvailablePassword_Request
 42CCredentials_ValidateEmailAddress_Response
-42CDeviceAuth_AddAuthorizedBorrowers_Request
-42CDeviceAuth_AuthorizeRemoteDevice_Response
-42CDeviceAuth_GetAuthorizedBorrowers_Request
-42CDeviceAuth_GetBorrowerPlayHistory_Request
 42CFamilyGroups_GetChangeLog_Response_Change
 42CFamilyGroups_GetPreferredLenders_Response
 42CFamilyGroups_GetPurchaseRequests_Response
@@ -12270,12 +12229,6 @@ $steammessages_parental_objects.proto"
 43CCommunity_GetUserPartnerEventNews_Response
 43CCommunity_MarkPartnerEventsForUser_Request
 43CCredentials_TestAvailablePassword_Response
-43CDeviceAuth_AddAuthorizedBorrowers_Response
-43CDeviceAuth_DeauthorizeRemoteDevice_Request
-43CDeviceAuth_GetAuthorizedAsBorrower_Request
-43CDeviceAuth_GetAuthorizedBorrowers_Response
-43CDeviceAuth_GetBorrowerPlayHistory_Response
-43CDeviceAuth_GetOwnAuthorizedDevices_Request
 43CFamilyGroups_GetFamilyGroupForUser_Request
 43CFamilyGroups_GetInviteCheckResults_Request
 43CFamilyGroups_GetSharedLibraryApps_Response
@@ -12357,10 +12310,6 @@ $steammessages_parental_objects.proto"
 44CCommunity_GetLinkFilterHashPrefixes_Request
 44CCommunity_GetLinkFilterListVersion_Response
 44CCommunity_MarkPartnerEventsForUser_Response
-44CDeviceAuth_DeauthorizeRemoteDevice_Response
-44CDeviceAuth_GetAuthorizedAsBorrower_Response
-44CDeviceAuth_GetOwnAuthorizedDevices_Response
-44CDeviceAuth_GetUsedAuthorizedDevices_Request
 44CFamilyGroups_ConfirmJoinFamilyGroup_Request
 44CFamilyGroups_GetFamilyGroupForUser_Response
 44CFamilyGroups_GetInviteCheckResults_Response
@@ -12443,9 +12392,6 @@ $steammessages_parental_objects.proto"
 45CControllerConfigMsg_ControllerConfigResponse
 45CCredentials_LastCredentialChangeTime_Request
 45CCredentials_SteamGuardPhishingReport_Request
-45CDeviceAuth_GetExcludedGamesInLibrary_Request
-45CDeviceAuth_GetUsedAuthorizedDevices_Response
-45CDeviceAuth_RemoveAuthorizedBorrowers_Request
 45CEcon_ClientGetItemShopOverlayAuthURL_Request
 45CFamilyGroupsClient_GroupChanged_Notification
 45CFamilyGroupsClient_InviteStatus_Notification
@@ -12475,6 +12421,7 @@ $steammessages_parental_objects.proto"
 45CSteamEngine_GetTextFilterDictionary_Response
 45CSteamOSManager_ApplyMandatoryUpdate_Response
 45CStoreBrowse_GetPriceStops_Response_PriceStop
+45CStore_GetRecommendedTagsForUser_Response_Tag
 45CStore_SetReservationPositionMessage_Response
 45CTransportValidationClient_AddNumbers_Request
 45CTransportValidation_GetLargeResponse_Request
@@ -12515,9 +12462,6 @@ $steammessages_parental_objects.proto"
 46CCredentials_SteamGuardPhishingReport_Response
 46CDataPublisher_ClientUpdateAppJob_Notification
 46CDataPublisher_GetVRDeviceInfo_Response_Device
-46CDeviceAuth_AcceptAuthorizationRequest_Request
-46CDeviceAuth_GetExcludedGamesInLibrary_Response
-46CDeviceAuth_RemoveAuthorizedBorrowers_Response
 46CEcon_ClientGetItemShopOverlayAuthURL_Response
 46CEmbeddedClient_AuthorizeCurrentDevice_Request
 46CFamilyGroups_CancelFamilyGroupInvite_Response
@@ -12566,7 +12510,6 @@ $steammessages_parental_objects.proto"
 47CCommunity_PartnerEventsShowLessForApp_Response
 47CCommunity_PartnerEventsShowMoreForApp_Response
 47CContentServerDirectory_GetCDNAuthToken_Request
-47CDeviceAuth_AcceptAuthorizationRequest_Response
 47CEcon_GetInventoryItemsWithDescriptions_Request
 47CFamilyGroups_ModifyFamilyGroupDetails_Response
 47CGameRecording_GetPlatformCapabilities_Response
@@ -12824,8 +12767,6 @@ $steammessages_parental_objects.proto"
 51CClientMetrics_DownloadRates_Notification_StatsInfo
 51CClientMetrics_ReportClientError_Notification_Error
 51CContentServerDirectory_GetPeerContentInfo_Response
-51CDeviceAuth_GetAuthorizedAsBorrower_Response_Lender
-51CDeviceAuth_GetOwnAuthorizedDevices_Response_Device
 51CFamilyGroups_ResendInvitationToFamilyGroup_Request
 51CGameNotifications_OnUserStatusChanged_Notification
 51CGameRecording_CleanupBackgroundRecordings_Response
@@ -12846,8 +12787,6 @@ $steammessages_parental_objects.proto"
 52CCommunity_GetUserPartnerEventsAppPriorities_Request
 52CContentServerDirectory_ConnectedSteamPipeServerInfo
 52CContentServerDirectory_GetClientUpdateHosts_Request
-52CDeviceAuth_GetAuthorizedBorrowers_Response_Borrower
-52CDeviceAuth_GetUsedAuthorizedDevices_Response_Device
 52CFamilyGroups_ResendInvitationToFamilyGroup_Response
 52CGameRecording_GetAndTrimPostGameHighlights_Response
 52CGameRecording_SwitchBackgroundRecordingGame_Request
@@ -12925,7 +12864,6 @@ $steammessages_parental_objects.proto"
 55CContentServerDirectory_GetManifestRequestCode_Response
 55CContentServerDirectory_GetServersForSteamPipe_Response
 55CDepotContentDetection_GetAllDetectedAppContent_Request
-55CDeviceAuth_GetBorrowerPlayHistory_Response_GameHistory
 55CFamilyGroups_GetPreferredLenders_Response_FamilyMember
 55CGameRecording_ManuallyDeleteRecordingsForApps_Response
 55CMarketingMessages_GetMarketingMessagesForUser_Response
@@ -12971,7 +12909,6 @@ $steammessages_parental_objects.proto"
 57CContentServerDirectory_RequestPeerContentServer_Response
 57CControllerConfigMsg_ControllerActiveConfigChangeResponse
 57CDataPublisher_ClientContentCorruptionReport_Notification
-57CDeviceAuth_GetBorrowerPlayHistory_Response_LenderHistory
 57CMarketingMessage_GetMarketingMessagesForPartner_Response
 57CMarketingMessages_GetMarketingMessageViewerStats_Request
 57CPublishedFile_AreFilesInSubscriptionList_Response_InList
@@ -12997,6 +12934,7 @@ $steammessages_parental_objects.proto"
 58CMarketingMessages_GetMarketingMessageViewerStats_Response
 58CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response
 58CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
+58CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig
 58CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 58CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 5932fc7bf38094fb3155d80030e59d6ae586d72b
@@ -13006,7 +12944,6 @@ $steammessages_parental_objects.proto"
 59CClientMetrics_GamePerformance_Notification_FrameRateReport
 59CDataPublisher_SetVRDeviceInfoAggregationReference_Response
 59CDepotContentDetection_GetDetectedContentSingleApp_Response
-59CDeviceAuth_GetExcludedGamesInLibrary_Response_ExcludedGame
 59CMarketingMessages_GetMarketingMessageClickedStats_Response
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 59CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance
@@ -13736,7 +13673,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO424
+;MO42<
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -14099,7 +14036,6 @@ Above this gyro rotation speed (degrees/second) we apply min (zero) smoothing.
 Above this speed (degrees per second) there is full correction of the predicted quaternion toward the  "ground truth" quaternion. Note this will still be gradual correction, and only in the shared direction of user rotation and the correction required.
 AbsoluteMouseCoordinates
 AcG\nt
-AcceptAuthorizationRequest
 AcceptEULA
 AcceptP2PPacketsFromUser() call on steamID %s, from steamID %s\n
 AcceptP2PPacketsFromUser() failed, invalid steamID %s\n
@@ -14167,7 +14103,6 @@ Add to Config Cache Request %u %u\n
 AddAppDependency
 AddAppRelationship
 AddAuthenticator
-AddAuthorizedBorrowers
 AddChatModerator
 AddChild
 AddClientGame
@@ -14424,7 +14359,6 @@ AuthorSnapshot
 AuthorizeCurrentDevice
 AuthorizeMicroTxn
 AuthorizeNewDevice
-AuthorizeRemoteDevice
 AuthorizedDevice
 AuthorizedLender/%u
 Auto-update blackout time
@@ -14793,7 +14727,6 @@ Bogus identity string '%s'
 Bootloader reboot failed\n
 Bootloader reboot success\n
 Bopomofo
-Borrower
 Brahmi
 Braille
 Breakpad_SetSteamID
@@ -14996,7 +14929,6 @@ CAPIJobRequestUGCDetails
 CAPIJobRequestUserStats
 CAPIJobRequestUserStats - Failed to init schema from server response\n
 CAPIJobRequestUserStats - Missing schema in server response\n
-CAPIJobRequestUserStats - No Connection & no schema\n
 CAPIJobRequestUserStats - Server response failed %d\n
 CAPIJobReservationCompleted
 CAPIJobReservePartySlot
@@ -15108,7 +15040,6 @@ CCMInterface::ScheduledRequestFriendsDetails
 CCMInterface::ScheduledRetryLogon
 CCMInterface::ScheduledSendClientAuthList
 CCMInterface::SendClientLogOn()
-CCMInterface::SendClientLogOn() - MachineID
 CCMInterface::SendHelloToCM()
 CCMInterface::SendLoginCredentialsToCM()
 CCMInterface::SetSteamID( %s )
@@ -16149,6 +16080,7 @@ CMsgSystemUpdateState
 CMsgTOSTreatment
 CMsgTest_CallClient_Response
 CMsgTest_NoBody_Request"1\n
+CMsgTest_TestClientCall_Request
 CMsgToggleFindInPageDialog
 CMsgTouchGesture
 CMsgTrading_CancelTradeRequest
@@ -16628,7 +16560,6 @@ CUserAppInfo::GetAvailableLaunchOptions
 CUserAppInfo::GetMultipleAppDataSections
 CUserAppInfo::GetUserComputedSection
 CUserAppInfo::UpdateComputedAppData
-CUserAppManager::CheckAppsForUpdates
 CUserAppManager::FlushManifestCache
 CUserAppManager::GetSystemConfigurationForApp
 CUserAppManager::OnAppRunningEvent
@@ -16808,7 +16739,6 @@ C\n\ralt_addresses
 C\n\tdlc_lists
 C\n\tlast_seen
 C\n\tnicknames
-C\n\vGameHistory
 C\n\vprice_stops
 C\tD\vD
 C\t\nD4
@@ -16933,6 +16863,7 @@ ChatRoomVoiceRetryConnections
 ChatUsabilityClient
 CheckAppBetaPasswordResponse_t
 CheckAppOwnership
+CheckAppsForUpdates
 CheckBetaPassword
 CheckDepotManifestID
 CheckFileSignature
@@ -17000,6 +16931,10 @@ Client thinks it can connect via: UDP - %s, TCP - %s, WebSocket:443 - %s, WebSoc
 ClientAppInterfaceStatsReport
 ClientBeginFileUpload
 ClientBootstrapReport
+ClientCallAuthed1
+ClientCallAuthed2
+ClientCallAuthed3
+ClientCallAuthed4
 ClientCloudAppSyncStats
 ClientCommitFileUpload
 ClientConfig
@@ -17210,6 +17145,7 @@ ContentBuilder.SignInstallScript#1
 ContentBuilder.StartDepotUpload#1
 ContentDeltaChunks
 ContentDescriptor
+ContentHubConfig
 ContentHubFilter
 ContentManifestMetadata
 ContentManifestPayload
@@ -17484,7 +17420,6 @@ Day of week changed from %i to %i, resetting playtime counter
 DcO/lcK+hSK
 DeRegisterSteamController
 Deactivating
-DeauthorizeRemoteDevice
 DebugInstall
 DebugStatsSystem
 Deck Controller PCB Serial# invalid: %s\n
@@ -18116,7 +18051,6 @@ EnumeratePublishedFilesByUserAction
 EnumeratePublishedWorkshopFiles
 EnumerateSessions
 EnumerateTokens
-EnumerateUserApps
 EnumerateUserFiles
 EnumerateUserPublishedFiles
 EnumerateUserSharedWorkshopFiles
@@ -18986,8 +18920,6 @@ GetAuthSessionTicketV2
 GetAuthSessionTicketV3
 GetAuthSessionsForAccount
 GetAuthTicketForWebApi
-GetAuthorizedAsBorrower
-GetAuthorizedBorrowers
 GetAutoUpdateTimeRestrictionEnabled
 GetAutoUpdateTimeRestrictionHours
 GetAvailableBeaconLocations
@@ -19035,7 +18967,6 @@ GetBindingURL
 GetBindingVDFString
 GetBool
 GetBootstrapperVersion
-GetBorrowerPlayHistory
 GetBroadcastChannelBroadcasters
 GetBroadcastChannelClips
 GetBroadcastChannelEntry
@@ -19172,6 +19103,7 @@ GetConnectedUniverse() == pfnBootstrapperEUniverse()
 GetConnectedUniverse() > k_EUniverseInvalid && GetConnectedUniverse() < k_EUniverseMax
 GetConnectivityTestState
 GetContentDescriptors
+GetContentHubConfig
 GetControllerActivityByType
 GetControllerConfig
 GetControllerConfigFileForAppID
@@ -19254,7 +19186,6 @@ GetEnoughDiskSpace
 GetEnteredGamepadTextInput
 GetEnteredGamepadTextLength
 GetEstimatedBitsPerSecond
-GetExcludedGamesInLibrary
 GetFallbackLanguage
 GetFamilyCopyCounts
 GetFamilyDLCForApp
@@ -19542,7 +19473,6 @@ GetOfflineMode
 GetOnlineFriendCount
 GetOverlay
 GetOverlayBrowserInfo
-GetOwnAuthorizedDevices
 GetP2PConnectionState() failed, no session for steamID %s\n
 GetP2PSessionState
 GetPairingInfo
@@ -19618,6 +19548,7 @@ GetQueueSoundtrackAppID
 GetQuota
 GetRecentClients
 GetRecentMessages
+GetRecommendedTagsForUser
 GetRemoteClientAppAvailability
 GetRemoteClientAppState
 GetRemoteClientAppStateByIndex
@@ -19766,9 +19697,7 @@ GetUpdateInfo
 GetUpdateMemorySize() == 0
 GetUpdateProfileItemsLock
 GetUpdateState
-GetUploadServerInfo
 GetUseHTTPSForDownloads
-GetUsedAuthorizedDevices
 GetUserAchievement
 GetUserAchievementProgress
 GetUserAppConfig
@@ -19966,7 +19895,6 @@ H\n\fExchangeItem
 H\n\fGetInventory
 H\n\tCandidate
 H\n\tJoinParty
-H\n\tborrowers
 H\n\vMonitorInfo
 H\n\vmemberships
 Ha4\n
@@ -20724,7 +20652,6 @@ LegacyKeyDiskLocation
 LegacyKeyProofOfPurchaseTicket
 LegacyKeyRegistrationMethod
 LegacyKeyRegistryLocation
-Lender
 Lenovo
 Lepcha
 Library folder "%s" is FAT32, NTFS required.
@@ -20811,6 +20738,7 @@ LogOn() called, but we don't have credentials yet
 LogOn() called, but we have an hconn and are in state '%s'.
 LogOn() called; already connected, sending credentials.\n
 LogOn() called; not connected yet, scheduling connection. Schedule init returned %d
+LogOn() called; we were connected, but already sent logoff, aborted existing connection, scheduling new connection and logon. Schedule init returned %d
 LogOnAnonymous
 LogOnOffline
 Logger
@@ -21785,7 +21713,6 @@ NV-CONTROL
 NVIDIA
 N[Vu^VfMn
 N\n\fachievements
-N\n\fgame_history
 N\n\fupload_stats
 N\n\fviewer_stats
 N\n\rPackageChange
@@ -22051,6 +21978,7 @@ O\n\fShortcutInfo
 O\n\nAnnotation
 O\n\nSetEnabled
 O\n\ncomponents
+O\n\nhubconfigs
 O\n\tresponses
 O\n\vNotifyCount
 O\n\vNotifyLarge
@@ -22118,6 +22046,7 @@ OnReservationCompleted
 OnReservationCompleted() failed, invalid Beacon ID\n
 OnScreenChanged
 OnSendRemotePlayTogetherInvite
+OnSiteLicenseProviderAuth_t
 OnSocketConnectionStateUpdated( #%d, %d ) %s, %d -> %s, %s\n
 OnSocketConnectionStateUpdated( #%d, %d ) %s, %llu -> %s, %llu\n
 OnSteamPipeClosed
@@ -22834,7 +22763,6 @@ RemoveAllTemporaryShortcuts
 RemoveAppDependency
 RemoveAppRelationship
 RemoveAuthenticator
-RemoveAuthorizedBorrowers
 RemoveContentDescriptor
 RemoveControllerRegisteredAccount - Trying to remove account on an unconnected or unpaired controller.\n
 RemoveDependency
@@ -23890,7 +23818,6 @@ SharedAuth\ID
 SharedDepots
 SharedJSContext
 SharedLibraryStopPlaying
-SharingDLC
 Shavian
 ShortcutChanged_t
 ShortcutPath
@@ -26808,7 +26735,6 @@ Zpm"U
 \n!CBroadcast_SetClipDetails_Request
 \n!CBroadcast_StartBuildClip_Request
 \n!CBroadcast_WatchBroadcast_Request
-\n!CCloud_EnumerateUserApps_Response
 \n!CGameNetworkingUI_ConnectionState
 \n!CGameRecording_ExportClip_Request
 \n!CMsgBluetoothManagerDeviceDetails
@@ -27087,6 +27013,8 @@ Zpm"U
 \n)CQueuedMatchmaking_SearchForGame_Response
 \n)CSiteManagerClient_IncomingClient_Request
 \n)CSteamTV_SetBroadcastChannelImage_Request
+\n)CStoreBrowse_GetContentHubConfig_Response
+\n)CStore_GetRecommendedTagsForUser_Response
 \n)GameServerClient_QueryServerData_Response
 \n)steammessages_broadcast.steamclient.proto
 \n)steammessages_community.steamclient.proto
@@ -27117,7 +27045,6 @@ Zpm"U
 \n*CPublishedFile_GetUserVoteSummary_Response
 \n*CSteamTV_GetBroadcastChannelLinks_Response
 \n*steammessages_clientserver_userstats.proto
-\n*steammessages_deviceauth.steamclient.proto
 \n*steammessages_linkfilter.steamclient.proto
 \n*steammessages_remoteclient_discovery.proto"
 \n*steammessages_timedtrial.steamclient.proto
@@ -27132,8 +27059,6 @@ Zpm"U
 \n+CClientMetrics_SteamPipeWorkStats_Operation
 \n+CCommunity_GetCommentThreadRatings_Response
 \n+CCommunity_MarkPartnerEventsForUser_Request
-\n+CDeviceAuth_GetAuthorizedBorrowers_Response
-\n+CDeviceAuth_GetBorrowerPlayHistory_Response
 \n+CFamilyGroups_GetSharedLibraryApps_Response
 \n+CFileVerification_SteamServiceCheck_Request
 \n+CGameRecording_GetTimelinesForClip_Response
@@ -27167,8 +27092,6 @@ Zpm"U
 \n,CClientMetrics_ReportClientArgs_Notification
 \n,CClientMetrics_ReportLinuxStats_Notification
 \n,CClientMetrics_ReportReactUsage_Notification
-\n,CDeviceAuth_GetAuthorizedAsBorrower_Response
-\n,CDeviceAuth_GetOwnAuthorizedDevices_Response
 \n,CFamilyGroups_GetFamilyGroupForUser_Response
 \n,CFriendMessages_IncomingMessage_Notification
 \n,CFriendMessages_MessageReaction_Notification
@@ -27192,7 +27115,6 @@ Zpm"U
 \n-CClientMetrics_ContentDownloadResponse_Counts
 \n-CClientMetrics_ContentValidation_Notification
 \n-CClientMetrics_ReportClientError_Notification
-\n-CDeviceAuth_GetUsedAuthorizedDevices_Response
 \n-CFriendMessages_UpdateMessageReaction_Request
 \n-CMsgClientChatGetFriendMessageHistoryResponse
 \n-CMsgSteamDatagramGameserverSessionEstablished
@@ -27219,8 +27141,6 @@ Zpm"U
 \n.CCredentials_LastCredentialChangeTime_Response
 \n.CCredentials_SteamGuardPhishingReport_Response
 \n.CDataPublisher_ClientUpdateAppJob_Notification
-\n.CDeviceAuth_AcceptAuthorizationRequest_Request
-\n.CDeviceAuth_GetExcludedGamesInLibrary_Response
 \n.CMsgCREGetUserPublishedItemVoteDetailsResponse
 \n.CMsgSteamDatagramConnectionStatsClientToRouter
 \n.CMsgSteamDatagramConnectionStatsRouterToClient
@@ -27446,7 +27366,6 @@ Zpm"U
 \n\fexcludedtags
 \n\ffirst_played
 \n\ffor_local_cs
-\n\ffrom_steamid
 \n\fgame_os_type
 \n\fgame_version
 \n\fgametype_str
@@ -27623,7 +27542,6 @@ Zpm"U
 \n\ftime_created
 \n\ftime_expires
 \n\ftime_invited
-\n\ftime_removed
 \n\ftime_started
 \n\ftime_stopped
 \n\ftime_updated
@@ -27677,7 +27595,6 @@ Zpm"U
 \n\nTYPE_INT64
 \n\nTimedTrial
 \n\nUnseenItem
-\n\n\nDeviceAuth
 \n\n\tInventory
 \n\n\vUserAccount
 \n\naccountids
@@ -27781,7 +27698,6 @@ Zpm"U
 \n\nis_control
 \n\nis_default
 \n\nis_enabled
-\n\nis_limited
 \n\nis_monitor
 \n\nis_pairing
 \n\nis_pending
@@ -27857,7 +27773,6 @@ Zpm"U
 \n\nseen_count
 \n\nsend_reply
 \n\nserver_ips
-\n\nserver_url
 \n\nsession_id
 \n\nsha_avatar
 \n\nsha_source
@@ -27878,14 +27793,11 @@ Zpm"U
 \n\nstyle_name
 \n\nsystem_ram
 \n\nticket_crc
-\n\ntime_first
 \n\ntime_stamp
 \n\ntime_start
-\n\ntime_total
 \n\ntimeout_ms
 \n\ntoken_type
 \n\ntotal_only
-\n\ntotalcount
 \n\ntype_flags
 \n\nuint_value
 \n\nulfriendid
@@ -27895,7 +27807,6 @@ Zpm"U
 \n\nusage_page
 \n\nused_http2
 \n\nused_https
-\n\nvac_banned
 \n\nvanity_url
 \n\nvisibility
 \n\nvoted_down
@@ -28444,7 +28355,6 @@ Zpm"U
 \n\ttoken_gid
 \n\ttool_name
 \n\ttotalonly
-\n\ttotalsize
 \n\ttrace_tag
 \n\ttype_name
 \n\tulSteamID
@@ -28602,7 +28512,6 @@ Zpm"U
 \n\vipv6_public
 \n\vipv6_remote
 \n\vis_borrowed
-\n\vis_canceled
 \n\vis_disabled
 \n\vis_external
 \n\vis_featured
@@ -28831,7 +28740,6 @@ Zpm"U
 \v#\v)\v-\v?\vG\vQ\vW\v]\ve\vo\v{\v
 \v.NoResponse
 \v.NoResponse"
-\v.NoResponse2`\n
 \v9?Gw8?Q
 \vHCK/
 \vZ\nyVR
@@ -28882,7 +28790,6 @@ Zpm"U
 ^J_spY
 ^QyY
 ^XgJo
-^\n\fExcludedGame
 ^\n\rGetThumbnails
 ^\n\rQueryByFakeIP
 ^\n\rStopRecording
@@ -29193,6 +29100,7 @@ additional_includes
 additional_languages
 additional_restrictions
 additional_restrictions_json
+additionalcontentforapps
 addpath
 addr
 addr-gen-mode
@@ -30929,7 +30837,6 @@ exclude_soundtracks
 exclude_videos
 excluded_content_descriptorids
 excluded_content_descriptors
-excluded_games
 excluded_tagids
 exec steam-runtime-launcher-service --alongside-steam
 execl
@@ -31045,6 +30952,7 @@ falseB\tH
 family_group_id
 family_groupid
 fan_control_mode
+favor_rarer_tags
 favorite
 favorites
 fclose
@@ -31632,7 +31540,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggenJ
+ggenR
 ghjkl
 gidlist
 gidparentcomment
@@ -32048,7 +31956,6 @@ include_assets
 include_auth_user_message
 include_balance_in_usd
 include_basic_info
-include_canceled
 include_client_info
 include_coming_soon
 include_deleted
@@ -32063,7 +31970,6 @@ include_inactive_customizations
 include_included_items
 include_non_games
 include_only_game_updates
-include_pending
 include_platforms
 include_played_free_games
 include_ratings
@@ -32269,6 +32175,7 @@ is_hidden
 is_live
 is_low_latency_mode_enabled
 is_mandatory_update_available
+is_manual_gpu_clock_available
 is_media_available
 is_mode_switching_supported
 is_mura_correction_supported
@@ -32304,7 +32211,6 @@ is_twofactor_enabled
 is_unformatted
 is_unmount_supported
 is_updater_supported
-is_used
 is_valid
 is_variable_resolution_enabled
 is_visible_in_steam_china
@@ -34147,8 +34053,6 @@ large_time_jink
 last-modifie
 last-modified
 last_access_time
-last_app_played
-last_borrower_id
 last_call_handle
 last_call_module_crc
 last_call_sysid_routing
@@ -34169,7 +34073,6 @@ last_seen_online
 last_session_id
 last_shown_time
 last_time_updated
-last_time_used
 last_token_reset
 last_update_steamid
 last_update_time
@@ -34281,13 +34184,12 @@ legacycdkey
 legacycdkeylocation
 legacycdkeymethod
 legacycompat\evaluatorscript_%i.vdf
-lender_history
 lender_steamid
-lenders
 length
 length_milliseconds
 lengthinmilliseconds
 level
+lgs_
 libGL.so.1
 libSDL3.so.0
 libX11.so.6
@@ -34435,7 +34337,7 @@ lost network device
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1574
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1724
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1929
-low-pri yield - /data/src/clientdll/appdatacache.cpp:859
+low-pri yield - /data/src/clientdll/appdatacache.cpp:870
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:637
 low-pri yield - /data/src/clientdll/autocloud.cpp:812
@@ -34445,8 +34347,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2502
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3892
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2504
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3914
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3072
@@ -34743,6 +34645,7 @@ m_eControllerType != EControllerType::k_eControllerType_None
 m_eLang
 m_eLaunchOptionType
 m_eLaunchSource
+m_eMachineIDInfoState != k_EResultBusy
 m_eMode
 m_eMsgType
 m_eNewBehavior
@@ -35602,6 +35505,7 @@ m_ulGroupChatID
 m_ulGroupChatID != 0
 m_ulPreallocatingBytesProcessed <= m_ulPreallocatingBytesTotal
 m_ulSessionID != 0
+m_ulSiteID
 m_ulWebRTCSessionID
 m_ulWebRTCViewerToken
 m_unAppID
@@ -35865,6 +35769,8 @@ manifest_requests
 manifestid
 manifests
 manual
+manual_gpu_clock_max
+manual_gpu_clock_min
 manufacturer
 manufacturer_serial_number
 manufacturer_string
@@ -36925,7 +36831,6 @@ pXhH
 pZlNr
 p\lHtW
 p\n$ReloadAllReservationPositionMessages
-p\n\rLenderHistory
 p\tK2
 pa_context_connect
 pa_context_disconnect
@@ -36958,7 +36863,6 @@ package
 package_access_tokens
 package_changes
 package_denied_tokens
-package_excluded
 package_header
 package_info_print
 package_requests
@@ -36988,6 +36892,7 @@ page_background_path
 page_url
 pairs
 panels
+param
 params
 parent
 parent_is_steam
@@ -38025,7 +37930,6 @@ seconds_per_message
 seconds_played
 seconds_running
 seconds_time_estimate
-seconds_to_wait
 seconds_until_down
 seconds_until_shutdown
 seconds_uploaded
@@ -38470,7 +38374,6 @@ steamguardcode
 steamid
 steamid1
 steamid2
-steamid_borrower
 steamid_broadcast
 steamid_canceled_search
 steamid_creator

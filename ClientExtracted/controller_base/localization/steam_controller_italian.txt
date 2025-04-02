@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"Pulsante M1"
 	"origin_horipad_m2"							"Pulsante M2"
+
+	"origin_legion_go_y1"							"Pulsante Y1"
+	"origin_legion_go_y2"							"Pulsante Y2"
 }

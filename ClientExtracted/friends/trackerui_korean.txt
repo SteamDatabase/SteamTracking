@@ -477,13 +477,13 @@
 
 "Friends_ChatPasswordWarning_Title"		"경고: 계정 보안 위험"
 "Friends_ChatPasswordWarning_Info"			"경고: 비밀번호를 공유하려고 합니다."
-"Friends_ChatPasswordWarning_Info2"		"Steam 고객지원팀에서는 어떠한 경우에도 비밀번호를 요구하지 않습니다. 비밀번호를 공유하면 Steam 계정 및 모든 게임을 잃을 수 있습니다!\n\n이 정보를 공유하시겠습니까?"
+"Friends_ChatPasswordWarning_Info2"		"Steam 고객지원팀에서는 어떠한 경우에도 비밀번호를 요구하지 않습니다. 비밀번호를 공유하면 Steam 계정 및 모든 게임을 잃을 수 있습니다!\n\n이 정보를 공유할까요?"
 "Friends_ChatPasswordWarning_Continue"		"네, 채팅 메시지를 보냅니다."
 "Friends_ChatPasswordWarning_DontSend"		"아니요, 보내지 않습니다."
 
 "Friends_BlockCommunicationWarning_Title"	"%username% - 모든 교류 차단"
 "Friends_BlockCommunicationWarning_Info"	"%username%과의 모든 교류를 차단합니다. \n\n본 기능은 Steam에서 제공하는 매치메이킹 기능으로 인해 상대와 동일한 게임 방에 참여하는 것 또한 방지됩니다."
-"Friends_BlockCommunicationWarning_Info2"	"%username% 님과의 모든 교류를 차단하시겠습니까?\n\n해당 플레이어에게 메시지를 보내거나 받을 수 없으며 초대할 수 없습니다.\n\n해당 Steam 프로필 페이지를 방문하거나 친구 목록을 통해 차단을 해제할 수 있습니다."
+"Friends_BlockCommunicationWarning_Info2"	"%username% 님과의 모든 교류를 차단할까요?\n\n해당 플레이어에게 메시지를 보내거나 받을 수 없으며 초대할 수 없습니다.\n\n해당 Steam 프로필 페이지를 방문하거나 친구 목록을 통해 차단을 해제할 수 있습니다."
 "Friends_BlockCommunicationWarning_LinkInfo"	"Steam에서 제공하는 매치메이킹 시스템에 대해 더 알아보기."
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"이 메시지를 다시 표시하지 않습니다."
 "Friends_BlockCommunicationWarning_Block"	"플레이어 차단"
@@ -501,7 +501,7 @@
 "Friends_ChatIntro_Info"		"다음 사용자에게서 채팅 요청을 받았습니다."
 "Friends_ChatIntro_Info2"		"공통으로 공유하는 그룹:"
 "Friends_ChatIntro_InfoChatRoom"	"이 채팅방에 함께 있습니다:"
-"Friends_ChatIntro_Request"	"이 채팅 요청을 수락하시겠습니까?"		
+"Friends_ChatIntro_Request"	"이 채팅 요청을 수락할까요?"		
 "Friends_ChatIntro_DontShowCheckBox" "이 사용자의 채팅 요청을 항상 수락합니다."
 
 "Friends_ChatIntro_WarningInfo" "알림: Steam 고객지원팀에서는 어떠한 이유로도 비밀번호를 묻지 않습니다. 모든 비밀번호 요청을 무시하세요."
@@ -621,7 +621,7 @@
 "friends_trade_you_have_steam_guard_disabled"	"거래에 참여하려면 먼저 Steam Guard를 활성화해야 합니다. 설정 창에서 Steam Guard를 활성화하세요."
 "friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"거래에 참여하려면 최소 %days%일 전에 Steam Guard가 활성화된 상태여야 합니다."
 "friends_trade_you_are_using_new_device"	"귀하는 새로운 기기에서 접속하셨습니다. 보관함 항목 보호의 일환으로, 이 기기에서는 향후 %days%일간 거래하실 수 없습니다."
-"friends_trade_you_recently_reset_password"	"최근에 Steam 계정의 비밀번호를 초기화하셨습니다. 비밀번호 초기화 시점으로부터 최소 5일이 지나야 거래 기능을 사용하실 수 있습니다."
+"friends_trade_you_recently_reset_password"	"최근에 Steam 계정의 비밀번호를 초기화하셨습니다. 비밀번호 초기화 시점으로부터 최소 5일이 지나야 거래 기능을 사용할 수 있습니다."
 "friends_trade_you_recently_reset_password_long" "최근 귀하께선 한동안 Steam 계정을 활용하지 않다가 비밀번호를 잊어서 새로 비밀번호를 설정하셨습니다. 보관함에 있는 아이템을 보호하기 위해, %days%일 동안 거래를 하실 수 없습니다."
 "friends_trade_you_recently_reset_password_short" "최근에 Steam 계정의 비밀번호가 변경되었습니다. 보관함의 아이템을 보호하기 위해 %days%일간 거래가 제한됩니다."
 "friends_trade_you_recently_reset_password_oneday" "최근 Steam 계정의 비밀번호가 변경되었습니다. 보관함의 아이템을 보호하기 위해 하루 더 거래가 제한됩니다."
@@ -688,7 +688,7 @@
 "Friends_BroadcastApprove_Or" "또는"
 "Friends_BroadcastApprove_Ignore" "거절"
 
-"Broadcast_FirstTime_Header" "Steam 방송에 오신 것을 환영합니다! 이제 Steam에서 다른 사용자들이 플레이하는 것을 관전하고 직접 방송도 하실 수 있습니다."
+"Broadcast_FirstTime_Header" "Steam 방송에 오신 것을 환영합니다! 이제 Steam에서 다른 사용자들이 플레이하는 것을 관전하고 직접 방송도 할 수 있습니다."
 "Broadcast_FirstTime_PermissionHeader" "잠시 시간을 내셔서 귀하의 설정을 확인하세요."
 "Broadcast_FirstTime_DesktopOnly" "기본적으로 게임 콘텐츠만 보여집니다. 게임 이외의 화면은 방송되지 않습니다."
 "Broadcast_FirstTime_FAQ" "Steam 방송 FAQ를 읽어 보세요"

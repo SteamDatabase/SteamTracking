@@ -2938,7 +2938,7 @@
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"У меня нет беспроводного ресивера."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Удлинитель для адаптера Steam Controller: %s1"
 
-"SteamUI_ValveSurvey_Linux_Runtime_Info" "Информация о среде выполнения Steam Linux:"
+"SteamUI_ValveSurvey_Linux_Runtime_Info" "Информация о среде выполнения Steam для Linux:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Сервер Steam недоступен"
 "Steam_SubscriptionFailure_ServiceUnavailable" "Либо ваш компьютер не в состоянии связаться с серверами Steam, либо сервис Steam временно отключен. Повторите попытку позже."

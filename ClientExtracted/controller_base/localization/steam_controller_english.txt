@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"M1 Button"
 	"origin_horipad_m2"							"M2 Button"
+
+	"origin_legion_go_y1"							"Y1 Button"
+	"origin_legion_go_y2"							"Y2 Button"
 }

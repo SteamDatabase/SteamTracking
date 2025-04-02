@@ -1117,7 +1117,7 @@
 "SteamUI_ValveSurvey_InvalidLanguage"		"Érvénytelen nyelv"
 
 "SteamUI_SpecialSurvey_Error_Title"		"Kérdőív hiba"
-"SteamUI_SpecialSurvey_Error_InvalidID"	"Érvénytelen kérdőív ID"
+"SteamUI_SpecialSurvey_Error_InvalidID"	"Érvénytelen kérdőív-azonosító"
 "SteamUI_SpecialSurvey_Error_TryAgain"	"Probléma adódott a Steam szerverekkel való kommunikáció során. Próbáld meg később."
 "SteamUI_SpecialSurvey_Error_NotOnline"	"A kérdőív kitöltéséhez online kell lenned."
 "SteamUI_SpecialSurvey_Error_SurveyUnavailable"	"A kitölteni kívánt kérdőív nem létezik, vagy már nem elérhető."

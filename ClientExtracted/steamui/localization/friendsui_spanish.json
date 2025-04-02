@@ -952,7 +952,7 @@
     "FriendSettings_HideCategorizedFriends": "Ocultar a los amigos categorizados en las listas de conectados/desconectados",
     "FriendSettings_AlwaysUse24HourClock": "Mostrar siempre el tiempo en formato de 24 horas",
     "FriendSettings_DisableEmbedInlining": "No insertar imágenes u otros elementos multimedia en las líneas",
-    "FriendSettings_SignInToFriends": "Iniciar sesión en amigos al iniciar el cliente de Steam",
+    "FriendSettings_SignInToFriends": "Iniciar sesión en la red de amigos al iniciar el cliente de Steam",
     "FriendSettings_ExampleFriend": "Amigo de ejemplo",
     "FriendSettings_ExampleNickname": "Alias",
     "FriendSettings_DisableSpellcheck": "Deshabilitar la corrección ortográfica en los mensajes de chat",

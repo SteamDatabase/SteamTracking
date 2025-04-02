@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"M1 gomb"
 	"origin_horipad_m2"							"M2 gomb"
+
+	"origin_legion_go_y1"							"Y1 gomb"
+	"origin_legion_go_y2"							"Y2 gomb"
 }

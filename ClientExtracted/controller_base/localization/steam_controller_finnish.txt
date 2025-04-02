@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"M1-painike"
 	"origin_horipad_m2"							"M2-painike"
+
+	"origin_legion_go_y1"							"Y1-painike"
+	"origin_legion_go_y2"							"Y2-painike"
 }

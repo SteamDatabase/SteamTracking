@@ -259,6 +259,7 @@ div.ModalPosition_TopBar {
   right: 0;
 }
 .DialogContent {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding: 24px;
   display: flex;
   overflow: visible;
@@ -839,14 +840,16 @@ button.TextButton.gpfocus {
 .DialogDropDown {
   cursor: pointer;
   position: relative;
-  display: block;
+  display: flex;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font-size: inherit;
   font-family: inherit;
   margin: 0;
-  align-items: stretch;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 .DialogDropDown.Disabled {
   cursor: initial;
@@ -858,6 +861,13 @@ button.TextButton.gpfocus {
 .DialogDropDown.Disabled:hover {
   box-shadow: unset;
 }
+.DialogDropDown_CurrentDisplay {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .DialogDropDown_CurrentDisplay:empty::before {
   content: " ";
 }
@@ -866,12 +876,12 @@ button.TextButton.gpfocus {
   user-select: none;
 }
 .DialogDropDown_Arrow {
-  position: absolute;
-  width: 18px;
+  height: 1em;
   top: 14px;
   right: 10px;
 }
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
+  padding-top: 2px;
   fill: #189cff;
 }
 ._DialogColLayout {
@@ -2603,4 +2613,4 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   color: #aaacb6;
   margin: 6px 4px;
 }
-/*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/css/library.css.map*/
+/*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/css/library.css.map*/

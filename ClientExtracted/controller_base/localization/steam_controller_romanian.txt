@@ -96,4 +96,5 @@
 
 	"origin_horipad_m1"							"Butonul M1"
 	"origin_horipad_m2"							"Butonul M2"
-}
+
+	}

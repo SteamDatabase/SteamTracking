@@ -29,7 +29,7 @@
 "SteamBootstrapper_UpdateInstalling"			"Instalování aktualizace..."
 "SteamBootstrapper_InstallVerify"				"Ověřování instalace..."
 "SteamBootstrapper_DownloadComplete"			"Stahování dokončeno."
-"SteamBootstrapper_PercentComplete"			"%percent%%% dokončeno"
+"SteamBootstrapper_PercentComplete"			"%percent% %% dokončeno"
 "SteamBootstrapper_NoNetwork"					"Chcete-li aktualizovat klienta služby %appname%, musíte být online. Zkontrolujte své připojení k internetu a zkuste to znovu."
 "SteamBootstrapper_FailedMkdir"				"Adresář %dirname% nelze vytvořit, chyba %errno%"
 "SteamBootstrapper_NotWriteable"				"Do adresáře %dirname% nelze zapisovat."

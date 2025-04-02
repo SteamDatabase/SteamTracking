@@ -101,6 +101,22 @@ message CStore_RegisterCDKey_Response {
 	optional .CStore_PurchaseReceiptInfo purchase_receipt_info = 2;
 }
 
+message CStore_GetRecommendedTagsForUser_Request {
+	optional string language = 2;
+	optional string country_code = 3;
+	optional bool favor_rarer_tags = 4;
+}
+
+message CStore_GetRecommendedTagsForUser_Response {
+	message Tag {
+		optional uint32 tagid = 1;
+		optional string name = 2;
+		optional float weight = 3;
+	}
+
+	repeated .CStore_GetRecommendedTagsForUser_Response.Tag tags = 1;
+}
+
 message CStore_GetMostPopularTags_Request {
 	optional string language = 1;
 }
@@ -402,6 +418,7 @@ message CStore_StorePreferencesChanged_Notification {
 
 service Store {
 	rpc RegisterCDKey (.CStore_RegisterCDKey_Request) returns (.CStore_RegisterCDKey_Response);
+	rpc GetRecommendedTagsForUser (.CStore_GetRecommendedTagsForUser_Request) returns (.CStore_GetRecommendedTagsForUser_Response);
 	rpc GetMostPopularTags (.CStore_GetMostPopularTags_Request) returns (.CStore_GetMostPopularTags_Response);
 	rpc GetLocalizedNameForTags (.CStore_GetLocalizedNameForTags_Request) returns (.CStore_GetLocalizedNameForTags_Response);
 	rpc GetTagList (.CStore_GetTagList_Request) returns (.CStore_GetTagList_Response);

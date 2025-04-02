@@ -290,7 +290,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1NM
 (8HXhx
 (U1h
 (ZdOt\n&
@@ -2900,7 +2899,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggenZ
 gmtime
 gmtime_r
 gnu_get_libc_version

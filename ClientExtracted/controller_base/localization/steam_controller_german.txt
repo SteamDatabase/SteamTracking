@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"M1-Taste"
 	"origin_horipad_m2"							"M2-Taste"
+
+	"origin_legion_go_y1"							"Y1-Taste"
+	"origin_legion_go_y2"							"Y2-Taste"
 }

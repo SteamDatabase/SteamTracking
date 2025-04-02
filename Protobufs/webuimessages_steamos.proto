@@ -26,6 +26,9 @@ message CSteamOSManagerState {
 	optional bool is_wifi_debug_supported = 11;
 	optional bool is_wifi_debug_force_disabled = 12;
 	optional bool is_wifi_force_wpa_supplicant_supported = 13;
+	optional bool is_manual_gpu_clock_available = 14;
+	optional int32 manual_gpu_clock_min = 15;
+	optional int32 manual_gpu_clock_max = 16;
 }
 
 message CSteamOSManager_GetState_Request {

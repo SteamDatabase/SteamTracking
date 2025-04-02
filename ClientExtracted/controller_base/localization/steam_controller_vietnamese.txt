@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"Nút M1"
 	"origin_horipad_m2"							"Nút M2"
+
+	"origin_legion_go_y1"							"Nút Y1"
+	"origin_legion_go_y2"							"Nút Y2"
 }

@@ -4567,7 +4567,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_Settings_Compat_Enable"			    "Aktivera Steam Play för titlar som stödjer det"
 "Steam_Settings_Compat_Advanced_Title"		"Avancerat"
 "Steam_Settings_Compat_Forced_Info"		    "Du kan använda Steam Play för att testa spel i ditt bibliotek som inte har verifierats med ett kompatibilitetsverktyg som stöds."
-"Steam_Settings_Compat_Forced_Enable"		"Aktivera Steam Play för alla andra produkter"
+"Steam_Settings_Compat_Forced_Enable"		"Aktivera Steam Play för alla andra titlar"
 "Steam_Settings_Compat_Advanced_Info"		"Du kan välja ett kompatibilitetsverktyg för spel som ännu inte har testats eller vars kompatibilitet inte verifierats på denna plattform.\n\nDet är möjligt att detta inte fungerar som förväntat och kan orsaka problem med dina spel, som krascher och sparade spelfiler som skadas."
 "Steam_Settings_Compat_Default_Tool"		"Kör andra produkter med:"
 "Steam_Settings_Compat_Info_Link"		    "Vanliga frågor om Steam Play"

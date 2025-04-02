@@ -1252,7 +1252,7 @@
 "Steam_SubscriptionCancelled_ServerFailed" "A tua subscrição de %subscription% não foi concluída. Os servidores do Steam encontram-se demasiado ocupados para processar o teu pedido. \n\nPedimos desculpa pela inconveniência. Tenta efetuar novamente a transação dentro de poucas horas."
 
 "Steam_Subscription_ContactSupport_Headline" "Erro de compra"
-"Steam_Subscription_ContactSupport" "Ocorreu um erro inesperado. A tua subscrição de %subscription% não foi concluída.\n\nPor favor, contacta o Suporte Steam utilizando o link abaixo."
+"Steam_Subscription_ContactSupport" "Ocorreu um erro inesperado. A tua subscrição de %subscription% não foi concluída.\n\nContacta o Suporte Steam utilizando o link abaixo."
 
 "Steam_SubscriptionFailure_Timeout_Headline" "Subscrição pendente"
 "Steam_SubscriptionFailure_Timeout" "A tua subscrição de %subscription% não foi concluída, uma vez que o Steam se encontra demasiado ocupado para processar a transação.\n\nContudo, podes ir jogando o %subscription% e iremos informar-te dos resultados da tua transação logo que a possamos processar."

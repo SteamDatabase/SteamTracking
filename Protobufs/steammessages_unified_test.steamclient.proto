@@ -27,6 +27,14 @@ message CMsgTest_NotifyServer_Notification {
 	optional string some_text = 1;
 }
 
+message CMsgTest_TestClientCall_Request {
+	optional int32 param = 1;
+}
+
+message CMsgTest_TestClientCall_Response {
+	optional int32 result = 1;
+}
+
 message CMsgTest_NoBody_Request {
 }
 
@@ -44,6 +52,10 @@ service TestSteamClient {
 service TestServerFromClient {
 	rpc MessageToServer (.CMsgTest_MessageToServer_Request) returns (.CMsgTest_MessageToServer_Response);
 	rpc NotifyServer (.CMsgTest_NotifyServer_Notification) returns (.NoResponse);
+	rpc ClientCallAuthed1 (.CMsgTest_TestClientCall_Request) returns (.CMsgTest_TestClientCall_Response);
+	rpc ClientCallAuthed2 (.CMsgTest_TestClientCall_Request) returns (.CMsgTest_TestClientCall_Response);
+	rpc ClientCallAuthed3 (.CMsgTest_TestClientCall_Request) returns (.CMsgTest_TestClientCall_Response);
+	rpc ClientCallAuthed4 (.CMsgTest_TestClientCall_Request) returns (.CMsgTest_TestClientCall_Response);
 }
 
 service TestExternalPrivilege {

@@ -4566,7 +4566,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_Settings_Compat_Enable"			    "Slå på Steam Play for støttede produkter"
 "Steam_Settings_Compat_Advanced_Title"		"Avansert"
 "Steam_Settings_Compat_Forced_Info"		    "Du kan bruke Steam Play til å teste spill i biblioteket som ikke er blitt bekreftet med et støttet kompatibilitetsverktøy."
-"Steam_Settings_Compat_Forced_Enable"		"Slå på Steam Play for alle andre produkter"
+"Steam_Settings_Compat_Forced_Enable"		"Slå på Steam Play for alle andre spill"
 "Steam_Settings_Compat_Advanced_Info"		"Du kan velge et kompatibilitetsverktøy å bruke med spill som ikke er blitt testet eller bekreftet til å fungere på denne plattformen.\n\nDette fungerer muligens ikke som forventet og kan skape problemer med spillene, deriblant krasjer og ødelagte lagrede spill."
 "Steam_Settings_Compat_Default_Tool"		"Kjør andre produkter med:"
 "Steam_Settings_Compat_Info_Link"		    "Ofte stilte spørsmål om Steam Play"

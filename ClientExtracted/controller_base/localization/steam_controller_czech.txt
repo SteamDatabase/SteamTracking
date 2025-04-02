@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"Tlačítko M1"
 	"origin_horipad_m2"							"Tlačítko M2"
+
+	"origin_legion_go_y1"							"Tlačítko Y1"
+	"origin_legion_go_y2"							"Tlačítko Y2"
 }

@@ -96,4 +96,7 @@
 
 	"origin_horipad_m1"							"ปุ่ม M1"
 	"origin_horipad_m2"							"ปุ่ม M2"
+
+	"origin_legion_go_y1"							"ปุ่ม Y1"
+	"origin_legion_go_y2"							"ปุ่ม Y2"
 }

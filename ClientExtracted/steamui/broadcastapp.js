@@ -206,7 +206,7 @@
         W = a(27337),
         M = a(10606),
         N = a(55619),
-        P = a(54394),
+        P = a(21371),
         R = a(72476);
       class A {
         constructor() {
@@ -805,4 +805,4 @@
       });
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/broadcastapp.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/broadcastapp.js.map

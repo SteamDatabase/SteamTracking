@@ -96,4 +96,5 @@
 
 	"origin_horipad_m1"							"M1-knop"
 	"origin_horipad_m2"							"M2-knop"
-}
+
+	}

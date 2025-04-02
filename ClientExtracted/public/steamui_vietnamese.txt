@@ -4563,7 +4563,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Settings_Compat_Enable"			    "Bật Steam Play cho các sản phẩm được hỗ trợ"
 "Steam_Settings_Compat_Advanced_Title"		"Nâng cao"
 "Steam_Settings_Compat_Forced_Info"		    "Bạn có thể dùng Steam Play để chạy thử các trò chơi chưa được xác thực với công cụ tương thích được hỗ trợ."
-"Steam_Settings_Compat_Forced_Enable"		"Bật Steam Play cho mọi sản phẩm khác"
+"Steam_Settings_Compat_Forced_Enable"		"Bật Steam Play cho tất cả sản phẩm khác"
 "Steam_Settings_Compat_Advanced_Info"		"Bạn có thể chọn một công cụ tương thích để dùng với các trò chơi chưa được thử hay xác nhận hoạt động được trên nền tảng này.\n\nNó có thể không hoạt động như mong đợi, và có thể gây sự cố với trò chơi của bạn, bao gồm treo và làm hỏng file lưu quá trình chơi."
 "Steam_Settings_Compat_Default_Tool"		"Chạy các sản phẩm khác với:"
 "Steam_Settings_Compat_Info_Link"		    "Hỏi đáp về Steam Play"

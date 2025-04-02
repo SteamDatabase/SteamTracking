@@ -265,6 +265,7 @@
         is_partner_member: !1,
         short_url: "",
         country_code: "",
+        excluded_content_descriptors: [3, 4, 1],
       };
       a.createContext({});
       function C(e, t = "") {

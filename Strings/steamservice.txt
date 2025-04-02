@@ -3104,7 +3104,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggen6
 gmtime_r
 gnu_get_libc_version
 google.protobuf"G\n
