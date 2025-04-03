@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [6864],
+  [7663],
   {
     29882: (e) => {
       e.exports = {
@@ -21,6 +21,9 @@
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
       };
     },
+    82277: (e) => {
+      e.exports = { Popover: "-MPE4GBxGFpMI7R_-POZX" };
+    },
     38878: (e) => {
       e.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
@@ -33,9 +36,12 @@
       };
     },
     48093: (e) => {
+      e.exports = { ListBoxOption: "_20oF9tLSfptitLraDOp6X6" };
+    },
+    81122: (e) => {
       e.exports = {
-        ListBox: "_1PUg8GjnBeN7rBK-dcyQFl",
-        ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
+        Skeleton: "_3mh9mimYdqEileUp-cYkQh",
+        skeleton: "_12eclucgixaW8U7dizVBcD",
       };
     },
     73406: (e) => {
@@ -356,11 +362,12 @@
       e.exports = {
         TagButton: "Fjfz2cC73ckcYluf8xJXh",
         Icon: "_1t5uZMQ4sN1vXrw3I6-KY6",
+        TruncatingPortraitRow: "_1nAGBiWu7n1ggCy-E5i035",
       };
     },
-    56864: (e, t, n) => {
+    57663: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => lt });
+      n.r(t), n.d(t, { default: () => dt });
       var r = n(90626),
         a = n(10411),
         o = n(21869),
@@ -450,7 +457,7 @@
           { prop: "ms", responsive: !0, className: (e) => v[`ms-${e}`] },
           { prop: "me", responsive: !0, className: (e) => v[`me-${e}`] },
         ],
-        y = [
+        x = [
           ...C,
           { prop: "p", responsive: !0, className: (e) => v[`p-${e}`] },
           { prop: "px", responsive: !0, className: (e) => v[`px-${e}`] },
@@ -577,8 +584,8 @@
           },
         ];
       var w = n(44041);
-      const x = r.forwardRef(function (e, t) {
-        const n = _({ ...e, className: c()(w.Box, e.className) }, y);
+      const y = r.forwardRef(function (e, t) {
+        const n = _({ ...e, className: c()(w.Box, e.className) }, x);
         return r.createElement("div", { ref: t, ...n });
       });
       var E = n(65274);
@@ -645,7 +652,7 @@
           return r.createElement("div", { ref: t, ...n });
         }),
         H = [
-          ...y,
+          ...x,
           {
             prop: "direction",
             responsive: !0,
@@ -732,23 +739,23 @@
             align: "center",
           },
           m && r.createElement(I, { pr: "2" }, m),
-          r.createElement(x, { flexGrow: "1" }, p),
+          r.createElement(y, { flexGrow: "1" }, p),
           u && r.createElement(I, { pl: "2" }, u),
         );
       });
       var D = n(88411);
-      function F(e) {
+      function T(e) {
         const { extracted: t, remaining: n } = (function (e) {
-            return h(e, y);
+            return h(e, x);
           })(e),
           { variant: a, beforeContent: o, afterContent: s, ...i } = n;
         return r.createElement(
           V,
           { ...t, variant: a },
-          r.createElement(T, { ...i }),
+          r.createElement(F, { ...i }),
         );
       }
-      const T = (0, r.forwardRef)(function (e, t) {
+      const F = (0, r.forwardRef)(function (e, t) {
         const { value: n, onTextChange: a, onChange: o, ...s } = e;
         return r.createElement("input", {
           ref: t,
@@ -761,17 +768,17 @@
           },
         });
       });
-      var j = n(29882);
-      const U = r.forwardRef(function (e, t) {
+      var U = n(29882);
+      const Z = r.forwardRef(function (e, t) {
           const { variant: n = "default", size: a = "2", ...o } = e;
           return r.createElement("button", {
-            ..._({ ...o, variant: n, size: a, className: j.Button }, Z),
+            ..._({ ...o, variant: n, size: a, className: U.Button }, j),
           });
         }),
-        Z = [
+        j = [
           ...C,
-          { prop: "size", responsive: !0, className: (e) => j[`Size-${e}`] },
-          { prop: "variant", className: (e) => j[`Variant-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => U[`Size-${e}`] },
+          { prop: "variant", className: (e) => U[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
         ];
       var K = n(53011);
@@ -800,7 +807,7 @@
         );
       }
       function q(e) {
-        return r.createElement(x, { className: K.Indicator, radius: e.radius });
+        return r.createElement(y, { className: K.Indicator, radius: e.radius });
       }
       W.Item = function (e) {
         const { value: t, children: n } = e,
@@ -821,11 +828,11 @@
       };
       var Y = n(75180);
       const Q = r.forwardRef(function (e, t) {
-          const n = _({ ...e, className: Y.Grid }, J);
+          const n = _({ ...e, className: c()(Y.Grid, e.className) }, J);
           return r.createElement("div", { ref: t, ...n });
         }),
         J = [
-          ...y,
+          ...x,
           {
             prop: "display",
             responsive: !0,
@@ -887,13 +894,18 @@
             cssProperty: (e) => ["--grid-gap-y", `var(--spacing-${e})`],
           },
         ];
-      var X = n(43407),
-        $ = n(94621);
-      const ee = (0, r.createContext)(null);
-      function te(e) {
+      var X = n(81122);
+      function $(e) {
+        return r.createElement(y, { ...e, className: X.Skeleton });
+      }
+      var ee = n(43407),
+        te = n(38889),
+        ne = n(94621);
+      const re = (0, r.createContext)(null);
+      function ae(e) {
         return [
-          (0, $.UU)(),
-          (0, $.Ej)({
+          (0, ne.UU)(),
+          (0, ne.Ej)({
             apply: (t) => {
               const { rects: n, elements: r, availableHeight: a } = t,
                 o = {
@@ -908,14 +920,19 @@
           }),
         ];
       }
-      const ne = {
+      const oe = {
         Root: function (e) {
           const { children: t, ...n } = e,
             a = (function (e) {
               const { open: t, onOpenChange: n } = e,
-                r = (0, X.we)({ open: t, onOpenChange: n, middleware: te(e) }),
-                a = (0, X.s9)(r.context),
-                { getFloatingProps: o, getReferenceProps: s } = (0, X.bv)([a]);
+                r = (0, ee.we)({
+                  open: t,
+                  onOpenChange: n,
+                  middleware: ae(e),
+                  whileElementsMounted: te.ll,
+                }),
+                a = (0, ee.s9)(r.context),
+                { getFloatingProps: o, getReferenceProps: s } = (0, ee.bv)([a]);
               return {
                 floating: r,
                 getFloatingProps: o,
@@ -923,12 +940,12 @@
                 open: t,
               };
             })(n);
-          return r.createElement(ee.Provider, { value: a }, t);
+          return r.createElement(re.Provider, { value: a }, t);
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = r.Children.only(t),
-            a = (0, r.useContext)(ee);
+            a = (0, r.useContext)(re);
           return n
             ? a
               ? (0, r.cloneElement)(n, {
@@ -942,20 +959,21 @@
             : null;
         },
         Positioner: (0, r.forwardRef)(function (e, t) {
-          const { children: n } = e,
-            a = (0, r.useContext)(ee),
-            o = (0, X.SV)([
+          const { children: n, className: a } = e,
+            o = (0, r.useContext)(re),
+            s = (0, ee.SV)([
               t,
-              null == a ? void 0 : a.floating.refs.setFloating,
+              null == o ? void 0 : o.floating.refs.setFloating,
             ]);
-          return a
-            ? a.open
+          return o
+            ? o.open
               ? r.createElement(
                   "div",
                   {
-                    ref: o,
-                    style: a.floating.floatingStyles,
-                    ...a.getFloatingProps(),
+                    ref: s,
+                    style: o.floating.floatingStyles,
+                    className: a,
+                    ...o.getFloatingProps(),
                   },
                   n,
                 )
@@ -966,13 +984,12 @@
               null);
         }),
       };
-      var re = n(48093);
-      const ae = Object.assign(
+      var se = n(48093);
+      const ie = Object.assign(
         function (e) {
-          return r.createElement(x, {
+          return r.createElement(y, {
             role: "listbox",
             p: "2",
-            className: re.ListBox,
             radius: "sm",
             ...e,
           });
@@ -982,11 +999,11 @@
             const { selected: t, focused: n, ...a } = e,
               o = t ? "true" : "false",
               s = n ? "true" : void 0;
-            return r.createElement(x, {
+            return r.createElement(y, {
               role: "option",
               "aria-selected": o,
               "data-focused": s,
-              className: re.ListBoxOption,
+              className: se.ListBoxOption,
               radius: "sm",
               p: "2",
               ...a,
@@ -994,7 +1011,7 @@
           },
         },
       );
-      function oe(e) {
+      function le(e) {
         return r.createElement(
           "svg",
           {
@@ -1009,18 +1026,19 @@
           }),
         );
       }
-      function se(e) {
+      var ce = n(82277);
+      function pe(e) {
         const { value: t, children: n } = e,
           {
             focusedValue: a,
             onFocusChange: o,
             selectedValue: s,
             onSelectionChange: i,
-          } = de("<ComboboxTrigger>"),
+          } = _e("<ComboboxTrigger>"),
           l = t === s,
           c = t === a;
         return r.createElement(
-          ae.Option,
+          ie.Option,
           {
             selected: l,
             focused: c,
@@ -1030,7 +1048,7 @@
           n,
         );
       }
-      function ie(e, t) {
+      function me(e, t) {
         if ("string" == typeof t)
           return t.toLocaleLowerCase().includes(e.toLocaleLowerCase());
         try {
@@ -1045,10 +1063,10 @@
           !1
         );
       }
-      function le(e) {
+      function ue(e) {
         const {
             rgOptions: t,
-            filter: n = ie,
+            filter: n = me,
             selectedValue: a,
             onSelectionChange: o,
             placeholder: s,
@@ -1071,7 +1089,7 @@
           setOpen: p,
         };
       }
-      const ce = {
+      const de = {
         Root: function (e) {
           const { children: t, state: n, variant: a } = e,
             [o, s] = (0, r.useState)(null),
@@ -1087,22 +1105,22 @@
               },
             };
           return r.createElement(
-            ue.Provider,
+            he.Provider,
             { value: l },
             r.createElement(
-              ne.Root,
+              oe.Root,
               { open: n.bOpen, onOpenChange: n.setOpen, width: "target" },
               t,
             ),
           );
         },
-        Option: se,
+        Option: pe,
         Options: function (e) {
-          const { refPopover: t } = de("<Combobox.Options>");
+          const { refPopover: t } = _e("<Combobox.Options>");
           return r.createElement(
-            ne.Positioner,
-            { ref: t },
-            r.createElement(ae, null, e.children),
+            oe.Positioner,
+            { ref: t, className: ce.Popover },
+            r.createElement(ie, null, e.children),
           );
         },
         Trigger: function (e) {
@@ -1120,7 +1138,7 @@
               rgFilteredOptions: d,
               onSelectionChange: f,
               refPopover: g,
-            } = de("<ComboboxTrigger>"),
+            } = _e("<ComboboxTrigger>"),
             h = (0, r.useRef)(null);
           (0, r.useEffect)(() => {
             h.current && (a ? h.current.focus() : h.current.blur());
@@ -1138,7 +1156,7 @@
                   c,
                 )),
             r.createElement(
-              ne.Anchor,
+              oe.Anchor,
               null,
               r.createElement(
                 V,
@@ -1147,14 +1165,14 @@
                   focusable: !0,
                   onClick: a ? void 0 : () => o(!0),
                   beforeContent: n,
-                  afterContent: r.createElement(oe, null),
+                  afterContent: r.createElement(le, null),
                   cursor: "text",
                   variant: p,
                 },
                 r.createElement(
-                  x,
+                  y,
                   { position: "relative" },
-                  r.createElement(T, {
+                  r.createElement(F, {
                     ref: h,
                     value: _,
                     onTextChange: i,
@@ -1211,9 +1229,9 @@
             )
           );
         },
-        DefaultOptionFilter: ie,
+        DefaultOptionFilter: me,
       };
-      function pe(e) {
+      function fe(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -1226,17 +1244,17 @@
                 "")
           : "";
       }
-      const me = Object.assign(function (e) {
+      const ge = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
               options: a,
               filter: o,
               placeholder: s,
-              getOptionLabel: i = pe,
+              getOptionLabel: i = fe,
               ...l
             } = e,
-            c = le({
+            c = ue({
               onSelectionChange: n,
               selectedValue: t,
               rgOptions: a,
@@ -1244,28 +1262,28 @@
               filter: o,
             });
           return r.createElement(
-            me.Root,
+            ge.Root,
             { state: c, ...l },
-            r.createElement(me.Trigger, null, null === t ? null : i(t)),
+            r.createElement(ge.Trigger, null, null === t ? null : i(t)),
             r.createElement(
-              me.Options,
+              ge.Options,
               null,
               c.rgFilteredOptions.map((e) =>
-                r.createElement(se, { value: e, key: i(e) }, i(e)),
+                r.createElement(pe, { value: e, key: i(e) }, i(e)),
               ),
             ),
           );
-        }, ce),
-        ue = (0, r.createContext)(null);
-      function de(e) {
-        const t = (0, r.useContext)(ue);
+        }, de),
+        he = (0, r.createContext)(null);
+      function _e(e) {
+        const t = (0, r.useContext)(he);
         return t || console.error(`${e} must be used within a <Combobox>!`), t;
       }
-      var fe = n(21895);
-      const ge = (0, r.forwardRef)(function (e, t) {
+      var ve = n(21895);
+      const Ce = (0, r.forwardRef)(function (e, t) {
         const { checked: n, onChange: a, disabled: o, children: s, ...i } = e,
           l = "indeterminate" === n,
-          c = l ? _e : ve,
+          c = l ? we : ye,
           p = () => a(!!l || !n);
         return r.createElement(
           I,
@@ -1273,8 +1291,8 @@
             ref: t,
             role: "checkbox",
             "aria-checked": l ? "mixed" : n,
-            "data-state": he(n),
-            className: fe.Root,
+            "data-state": xe(n),
+            className: ve.Root,
             onClick: p,
             tabIndex: 0,
             onKeyDown: (e) => {
@@ -1284,16 +1302,16 @@
           },
           r.createElement(
             "div",
-            { className: fe.Checkbox },
+            { className: ve.Checkbox },
             n && r.createElement(c, null),
           ),
           s,
         );
       });
-      function he(e) {
+      function xe(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function _e(e) {
+      function we(e) {
         return r.createElement(
           "svg",
           {
@@ -1307,7 +1325,7 @@
           }),
         );
       }
-      function ve(e) {
+      function ye(e) {
         return r.createElement(
           "svg",
           {
@@ -1321,8 +1339,8 @@
           }),
         );
       }
-      const Ce = (0, r.createContext)(null),
-        ye = Object.assign(
+      const Ee = (0, r.createContext)(null),
+        Se = Object.assign(
           function (e) {
             const {
                 selected: t,
@@ -1345,7 +1363,7 @@
               },
               c = "row" === s;
             return r.createElement(
-              Ce.Provider,
+              Ee.Provider,
               { value: l },
               r.createElement(I, {
                 direction: s,
@@ -1359,7 +1377,7 @@
           {
             Item: function (e) {
               const { value: t, children: n } = e,
-                a = (0, r.useContext)(Ce);
+                a = (0, r.useContext)(Ee);
               if (!a)
                 return (
                   console.error(
@@ -1369,23 +1387,23 @@
                 );
               const { selected: o, onChange: s, disabled: i } = a;
               return r.createElement(
-                ge,
+                Ce,
                 { checked: !!o[t], disabled: i, onChange: (e) => s(t, e) },
                 n,
               );
             },
           },
         );
-      var we = n(73406);
-      function xe(e) {
+      var be = n(73406);
+      function Ne(e) {
         const { size: t = "3", loading: n = !0, children: a, ...o } = e;
         return a || !n
           ? r.createElement(
-              x,
+              y,
               { position: "relative", ...o, width: "fit-content" },
               r.createElement(
                 "div",
-                { "data-visibility": !n, className: we.ChildContainer },
+                { "data-visibility": !n, className: be.ChildContainer },
                 a,
               ),
               n &&
@@ -1397,20 +1415,20 @@
                     justify: "center",
                     align: "center",
                   },
-                  r.createElement(Ee, { size: t }),
+                  r.createElement(ke, { size: t }),
                 ),
             )
-          : r.createElement(Ee, { size: t, ...o });
+          : r.createElement(ke, { size: t, ...o });
       }
-      function Ee(e) {
-        const { className: t, ...n } = _(e, Se);
-        return r.createElement("div", { className: c()(t, we.Spinner), ...n });
+      function ke(e) {
+        const { className: t, ...n } = _(e, Pe);
+        return r.createElement("div", { className: c()(t, be.Spinner), ...n });
       }
-      const Se = [
+      const Pe = [
           ...C,
-          { prop: "size", responsive: !0, className: (e) => we[`Size-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => be[`Size-${e}`] },
         ],
-        be = new Set([
+        ze = new Set([
           "sc_schinese",
           "schinese",
           "tchinese",
@@ -1442,7 +1460,7 @@
           "vietnamese",
           "ukrainian",
         ]);
-      const Ne = new Map([
+      const Le = new Map([
         ["en", "english"],
         ["de", "german"],
         ["fr", "french"],
@@ -1475,11 +1493,11 @@
         ["vn", "vietnamese"],
         ["id", "indonesian"],
       ]);
-      const ke = new Map();
-      for (const [e, t] of Ne.entries()) ke.set(t, e);
-      ke.set("sc_schinese", ke.get("schinese")),
-        ke.set("korean", ke.get("koreana"));
-      function Pe(e, ...t) {
+      const Ie = new Map();
+      for (const [e, t] of Le.entries()) Ie.set(t, e);
+      Ie.set("sc_schinese", Ie.get("schinese")),
+        Ie.set("korean", Ie.get("koreana"));
+      function He(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -1490,29 +1508,29 @@
               return e;
             }));
       }
-      let ze;
-      null != ze || (ze = new Set());
-      function Le() {
+      let Ae;
+      null != Ae || (Ae = new Set());
+      function Re() {
         var e;
-        if (((e = s.TS.LANGUAGE), !be.has(e)))
+        if (((e = s.TS.LANGUAGE), !ze.has(e)))
           throw `unknown language ${s.TS.LANGUAGE}`;
         return {
           languages: [
             {
               strLanguage: s.TS.LANGUAGE,
-              strISOCode: ke.get(s.TS.LANGUAGE),
+              strISOCode: Ie.get(s.TS.LANGUAGE),
               eSource: 5,
             },
           ],
         };
       }
-      const Ie = {};
-      Ie.english = () => n.e(2395).then(n.t.bind(n, 92395, 19));
-      const He = (function (e) {
+      const Oe = {};
+      Oe.english = () => n.e(2395).then(n.t.bind(n, 92395, 19));
+      const Me = (function (e) {
         const t = new Map(),
           n = (async function () {
             await (0, s.Ki)();
-            const n = Le(),
+            const n = Re(),
               r = new Set(["english"]);
             for (const e of n.languages)
               r.add(e.strLanguage), e.strFallback && r.add(e.strFallback);
@@ -1557,10 +1575,10 @@
         return (
           n.then(() => (a = !0)),
           (o = n),
-          null != ze || (ze = new Set()),
-          ze.add(o),
+          null != Ae || (Ae = new Set()),
+          Ae.add(o),
           {
-            Localize: (e, ...t) => Pe(i(e, Le().languages), ...t),
+            Localize: (e, ...t) => He(i(e, Re().languages), ...t),
             LocalizeReact(e, ...t) {
               const n = this.Localize(e);
               if (n === e) return n;
@@ -1577,21 +1595,21 @@
                 a.push(n.slice(i)), r.createElement(r.Fragment, null, ...a)
               );
             },
-            LocalizeInSpecificLang: (e, t, ...n) => Pe(i(t, [e]), ...n),
+            LocalizeInSpecificLang: (e, t, ...n) => He(i(t, [e]), ...n),
             Ready: () => n,
             IsReady: () => a,
           }
         );
       })(async function (e) {
-        if (Ie[e]) return Ie[e]();
+        if (Oe[e]) return Oe[e]();
       });
-      var Ae = n(44688);
-      const Re = 753,
-        Oe = `${Re}_Game`,
-        Me = `${Re}_item_class`,
-        Ge = ["item_class_10", "item_class_6"],
-        Ve = "4";
-      function De(e) {
+      var Ge = n(44688);
+      const Ve = 753,
+        De = `${Ve}_Game`,
+        Te = `${Ve}_item_class`,
+        Fe = ["item_class_10", "item_class_6"],
+        Ue = "4";
+      function Ze(e) {
         const [t, n] = (0, r.useState)(() =>
             (function (e) {
               const t = {
@@ -1609,7 +1627,7 @@
               } = e;
               "number" == typeof a &&
                 s[a] &&
-                (a === Re
+                (a === Ve
                   ? ((t.bSteamItems = !0), (n = t.filterSteam))
                   : (n.app = s[a]));
               "string" == typeof r && (t.strSearch = r);
@@ -1630,9 +1648,9 @@
                 return t;
               })(o);
               i && (n.facets = i);
-              if (t.bSteamItems && o && o[Oe] && n.facets.Game) {
+              if (t.bSteamItems && o && o[De] && n.facets.Game) {
                 const e = Object.keys(n.facets.Game)[0],
-                  t = o[Oe].tags;
+                  t = o[De].tags;
                 if (t && e) {
                   const r = t[e];
                   if (r) {
@@ -1653,46 +1671,46 @@
           ),
           a = t.bSteamItems;
         return r.createElement(
-          x,
-          { minWidth: "900px" },
+          y,
+          { minWidth: "min( 75vw, 800px )" },
           r.createElement(
             P,
             { size: "6", weight: "heavy" },
-            He.Localize("#AdvancedSearch_Heading"),
+            Me.Localize("#AdvancedSearch_Heading"),
           ),
           r.createElement(
             I,
-            { gap: Ve, align: "center", my: Ve },
-            r.createElement(Fe, {
+            { gap: Ue, align: "center", my: Ue },
+            r.createElement(je, {
               showSteamItems: a,
               onShowSteamItemsChange: (e) => n({ ...t, bSteamItems: e }),
             }),
             r.createElement(R, { size: "1", orientation: "vertical" }),
             r.createElement(
-              x,
+              y,
               { flexGrow: "1" },
-              r.createElement(F, {
+              r.createElement(T, {
                 radius: "full",
                 variant: "inset",
                 value: t.strSearch || "",
                 onTextChange: (e) => n({ ...t, strSearch: e }),
-                placeholder: He.Localize(
+                placeholder: Me.Localize(
                   "#AdvancedSearch_TextSearch_Placeholder",
                 ),
               }),
             ),
           ),
           r.createElement(
-            We,
+            Xe,
             null,
             !a &&
-              r.createElement(Te, {
+              r.createElement(Ke, {
                 ...e,
                 filter: t.filterInGame,
                 onFilterChange: (e) => n({ ...t, filterInGame: e }),
               }),
             a &&
-              r.createElement(je, {
+              r.createElement(Be, {
                 ...e,
                 filter: t.filterSteam,
                 onFilterChange: (e) => n({ ...t, filterSteam: e }),
@@ -1700,9 +1718,9 @@
           ),
           r.createElement(
             I,
-            { mt: Ve, justify: "end", gap: Ve },
+            { mt: Ue, justify: "end", gap: Ue },
             r.createElement(
-              U,
+              Z,
               {
                 color: "dull",
                 variant: "ghost",
@@ -1717,10 +1735,10 @@
                   );
                 },
               },
-              He.Localize("#AdvancedSearch_Reset"),
+              Me.Localize("#AdvancedSearch_Reset"),
             ),
             r.createElement(
-              U,
+              Z,
               {
                 onClick: () => {
                   window.location.href = (function (e) {
@@ -1734,7 +1752,7 @@
                     n &&
                       ((o = { ...a, facets: { ...a.facets } }),
                       a.app && (o.facets.Game = { [`app_${a.app.appid}`]: !0 }),
-                      (o.app = { appid: Re, name: "", icon: "", link: "" }));
+                      (o.app = { appid: Ve, name: "", icon: "", link: "" }));
                     const { app: i, facets: l } = o,
                       c = new FormData();
                     i && c.set("appid", i.appid.toString());
@@ -1748,15 +1766,15 @@
                   })(t);
                 },
               },
-              He.Localize("#AdvancedSearch_Search"),
+              Me.Localize("#AdvancedSearch_Search"),
             ),
           ),
         );
       }
-      function Fe(e) {
+      function je(e) {
         const { showSteamItems: t, onShowSteamItemsChange: n } = e;
         return r.createElement(
-          x,
+          y,
           { flexGrow: "0" },
           r.createElement(
             W,
@@ -1769,17 +1787,17 @@
             r.createElement(
               W.Item,
               { value: "off" },
-              He.Localize("#AdvancedSearch_TypeSwitch_InGame"),
+              Me.Localize("#AdvancedSearch_TypeSwitch_InGame"),
             ),
             r.createElement(
               W.Item,
               { value: "on" },
-              He.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
+              Me.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
             ),
           ),
         );
       }
-      function Te(e) {
+      function Ke(e) {
         var t;
         const {
             rgApps: n = [],
@@ -1787,40 +1805,41 @@
             filter: o,
             onFilterChange: s,
           } = e,
-          i = et();
+          i = ot();
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement(rt, {
+          r.createElement(lt, {
             apps: n.map((e) => a[e]),
             selectedApp: o.app,
             onSelectionChange: (e) => s({ ...o, app: e, facets: {} }),
           }),
           !o.app &&
-            r.createElement(Be, {
+            r.createElement(Qe, {
+              loading: i.isLoading,
               apps:
                 null === (t = i.data) || void 0 === t ? void 0 : t.rgPlaytime,
               filterBy: n,
               onSelect: (e) => s({ ...o, app: a[e] || null, facets: {} }),
             }),
           !!o.app &&
-            r.createElement(Qe, {
+            r.createElement(tt, {
               appid: o.app.appid,
               state: o,
               onStateChange: s,
             }),
         );
       }
-      function je(e) {
+      function Be(e) {
         var t;
         const { filter: n, onFilterChange: a } = e,
-          o = et(),
+          o = ot(),
           s = (0, i.I)({
-            queryKey: ["marketfilters", Re],
+            queryKey: ["marketfilters", Ve],
             queryFn: async () => {
-              const e = await $e(Re),
-                t = e[Oe];
-              if ((delete e[Oe], !t.tags))
+              const e = await at(Ve),
+                t = e[De];
+              if ((delete e[De], !t.tags))
                 return { rgApps: [], facets: {}, mapAppIDs: {} };
               const n = {},
                 r = [];
@@ -1845,26 +1864,27 @@
           }),
           { facets: l = {}, rgApps: c, mapAppIDs: p } = s.data || {},
           m = { ...l },
-          u = m[Me];
-        delete m[Me];
-        const d = nt(m, 3);
-        if (s.isLoading) return r.createElement(ot, null);
+          u = m[Te];
+        delete m[Te];
+        const d = it(m, 3);
+        if (s.isLoading) return r.createElement(pt, null);
         if (s.isError || !s.data || !c || !l)
           return r.createElement(
-            Ye,
+            et,
             null,
-            He.Localize("#AdvancedSearch_FacetLoadError"),
+            Me.Localize("#AdvancedSearch_FacetLoadError"),
           );
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement(rt, {
+          r.createElement(lt, {
             apps: c,
             selectedApp: n.app,
             onSelectionChange: (e) => a({ ...n, app: e, facets: {} }),
           }),
           !n.app &&
-            r.createElement(Be, {
+            r.createElement(Qe, {
+              loading: o.isLoading,
               apps:
                 null === (t = o.data) || void 0 === t ? void 0 : t.rgPlaytime,
               filterBy: p,
@@ -1875,11 +1895,11 @@
                   facets: {},
                 }),
             }),
-          r.createElement(Ze, { facet: u, state: n, onStateChange: a }),
-          r.createElement(qe, { facets: d, state: n, onStateChange: a }),
+          r.createElement(qe, { facet: u, state: n, onStateChange: a }),
+          r.createElement($e, { facets: d, state: n, onStateChange: a }),
         );
       }
-      const Ue = {
+      const We = {
         item_class_2: function (e) {
           return r.createElement(
             "svg",
@@ -1972,7 +1992,7 @@
           );
         },
       };
-      function Ze(e) {
+      function qe(e) {
         const {
             facet: { localized_name: t, name: n, tags: a = {} },
             state: o,
@@ -1982,35 +2002,35 @@
             const t = e(o.facets[n] || {});
             s({ ...o, facets: { ...o.facets, [n]: t } });
           },
-          l = Object.keys(a).filter((e) => Ge.indexOf(e) < 1),
+          l = Object.keys(a).filter((e) => Fe.indexOf(e) < 1),
           c = o.facets[n] || {};
         return r.createElement(
-          x,
-          { mt: Ve },
+          y,
+          { mt: Ue },
           r.createElement(S, { weight: "medium" }, t),
           r.createElement(
             Q,
-            { columns: "1fr 1fr 1fr", gap: "2" },
+            { columns: "repeat( auto-fit, minmax( 230px, 1fr ) )", gap: "2" },
             l.map((e) =>
-              r.createElement(Ke, {
+              r.createElement(Ye, {
                 key: e,
                 active: c[e],
                 onActiveChange: (t) =>
                   ((e, t) => {
-                    if (Ge.includes(e)) {
+                    if (Fe.includes(e)) {
                       const e = {};
-                      for (const n of Ge) e[n] = t;
+                      for (const n of Fe) e[n] = t;
                       i((t) => ({ ...t, ...e }));
                     } else i((n) => ({ ...n, [e]: t }));
                   })(e, t),
                 label: a[e].localized_name,
-                icon: Ue[e],
+                icon: We[e],
               }),
             ),
           ),
         );
       }
-      function Ke(e) {
+      function Ye(e) {
         const { label: t, icon: n, active: a, onActiveChange: o } = e,
           s = (function (e) {
             const { bActive: t, onActiveChange: n } = e;
@@ -2033,60 +2053,77 @@
             px: "5",
             py: "4",
             align: "center",
-            className: Ae.TagButton,
+            className: Ge.TagButton,
             ...s,
           },
-          n && r.createElement(n, { className: Ae.Icon }),
+          n && r.createElement(n, { className: Ge.Icon }),
           r.createElement(S, { weight: "medium" }, t),
         );
       }
-      function Be(e) {
-        const { apps: t = [], filterBy: n = {}, onSelect: a } = e,
-          o = (0, r.useMemo)(
+      function Qe(e) {
+        const { apps: t = [], filterBy: n = {}, onSelect: a, loading: o } = e,
+          s = (0, r.useMemo)(
             () =>
               Array.isArray(n)
                 ? n.reduce((e, t) => ({ ...e, [t]: !0 }), {})
                 : n,
             [n],
           ),
-          s = t.filter(({ appid: e }) => o[e]).slice(0, 8);
+          i = t.filter(({ appid: e }) => s[e]).slice(0, 8),
+          l = [];
+        if (o)
+          for (let e = 0; e < 20; e++)
+            l.push(
+              r.createElement($, { key: e, width: "92px", height: "138px" }),
+            );
         return r.createElement(
-          I,
-          { gap: Ve, mt: Ve },
-          s.map((e) =>
-            r.createElement(
-              "div",
-              {
-                key: e.appid,
-                onClick: () => a(e.appid),
-                tabIndex: 0,
-                onKeyDown: (t) => {
-                  return (
-                    (n = t.key),
-                    (r = e.appid),
-                    void ((" " !== n && "Enter" !== n) || a(r))
-                  );
-                  var n, r;
+          Je,
+          null,
+          !o &&
+            i.map((e) =>
+              r.createElement(
+                y,
+                {
+                  key: e.appid,
+                  onClick: () => a(e.appid),
+                  tabIndex: 0,
+                  onKeyDown: (t) => {
+                    return (
+                      (n = t.key),
+                      (r = e.appid),
+                      void ((" " !== n && "Enter" !== n) || a(r))
+                    );
+                    var n, r;
+                  },
+                  role: "button",
+                  width: "92px",
+                  height: "138px",
                 },
-                role: "button",
-              },
-              r.createElement("img", {
-                src: e.img,
-                alt: e.name,
-                style: { width: "92px" },
-              }),
+                r.createElement("img", {
+                  src: e.img,
+                  alt: e.name,
+                  style: { width: "92px" },
+                }),
+              ),
             ),
-          ),
+          o && l,
         );
       }
-      function We(e) {
+      function Je(e) {
         return r.createElement(
-          x,
+          "div",
+          { className: Ge.TruncatingPortraitRow },
+          e.children,
+        );
+      }
+      function Xe(e) {
+        return r.createElement(
+          y,
           { minHeight: "min(400px, 30vh)" },
           e.children,
         );
       }
-      function qe(e) {
+      function $e(e) {
         const { facets: t, state: n, onStateChange: a } = e,
           o = (e, t) => {
             a({ ...n, facets: { ...n.facets, [e]: { [t]: !0 } } });
@@ -2100,9 +2137,13 @@
           i = t.rgDropdowns.length % 2 == 1 && t.rgCheckboxes.length > 0;
         return r.createElement(
           Q,
-          { gap: Ve, mt: Ve, columns: "1fr 1fr" },
+          {
+            gap: Ue,
+            mt: Ue,
+            columns: "repeat( auto-fit, minmax( 260px, 1fr ) )",
+          },
           t.rgDropdowns.map((e) =>
-            r.createElement(Je, {
+            r.createElement(nt, {
               key: e.id,
               ...e,
               value: n.facets[e.id],
@@ -2111,7 +2152,7 @@
           ),
           i && r.createElement("div", null),
           t.rgCheckboxes.map((e) =>
-            r.createElement(Xe, {
+            r.createElement(rt, {
               key: e.id,
               ...e,
               value: n.facets[e.id],
@@ -2120,49 +2161,49 @@
           ),
         );
       }
-      function Ye(e) {
+      function et(e) {
         return r.createElement(
           S,
-          { align: "center", secondary: !0, as: "div", mt: Ve, size: "4" },
+          { align: "center", secondary: !0, as: "div", mt: Ue, size: "4" },
           e.children,
         );
       }
-      function Qe(e) {
+      function tt(e) {
         const { appid: t, state: n, onStateChange: a } = e,
           o = (function (e) {
             return (0, i.I)({
               queryKey: ["marketfilters", e],
-              queryFn: () => $e(e),
+              queryFn: () => at(e),
               enabled: !!e,
             });
           })(t),
-          s = nt(o.data);
-        if (o.isLoading) return r.createElement(ot, null);
+          s = it(o.data);
+        if (o.isLoading) return r.createElement(pt, null);
         if (o.isError)
           return r.createElement(
-            Ye,
+            et,
             null,
-            He.Localize("#AdvancedSearch_FacetLoadError"),
+            Me.Localize("#AdvancedSearch_FacetLoadError"),
           );
         return 0 === s.rgCheckboxes.length + s.rgDropdowns.length
-          ? r.createElement(Ye, null, He.Localize("#AdvancedSearch_NoFacets"))
-          : r.createElement(qe, { facets: s, state: n, onStateChange: a });
+          ? r.createElement(et, null, Me.Localize("#AdvancedSearch_NoFacets"))
+          : r.createElement($e, { facets: s, state: n, onStateChange: a });
       }
-      function Je(e) {
+      function nt(e) {
         const { id: t, rgTags: n, strLabel: a, value: o = {}, onChange: s } = e,
           i = Object.keys(o).find((e) => o[e]),
           l = n.find(({ id: e }) => e === i);
-        return r.createElement(me, {
+        return r.createElement(ge, {
           variant: "underline",
           onSelectionChange: (e) => s(t, e.id),
           options: n,
           placeholder: a,
           selectedValue: l || null,
           getOptionLabel: (e) => e.strLabel,
-          filter: (e, t) => me.DefaultOptionFilter(e, t.strLabel),
+          filter: (e, t) => ge.DefaultOptionFilter(e, t.strLabel),
         });
       }
-      function Xe(e) {
+      function rt(e) {
         const { id: t, rgTags: n, strLabel: a, value: o = {}, onChange: s } = e,
           i = n.map(({ id: e }) => e).filter((e) => o[e]);
         return r.createElement(
@@ -2170,19 +2211,19 @@
           null,
           r.createElement("b", null, a),
           r.createElement(
-            ye,
+            Se,
             {
               selected: i,
               onItemChange: (e, n) => s(t, e, n),
               direction: "row",
             },
             n.map((e) =>
-              r.createElement(ye.Item, { key: e.id, value: e.id }, e.strLabel),
+              r.createElement(Se.Item, { key: e.id, value: e.id }, e.strLabel),
             ),
           ),
         );
       }
-      async function $e(e) {
+      async function at(e) {
         const t = await fetch(
           `${s.TS.COMMUNITY_BASE_URL}market/appfilters/${e}`,
         );
@@ -2193,7 +2234,7 @@
           throw new Error(`Loaded malformed market filters for app ${e}`);
         return n.facets;
       }
-      function et() {
+      function ot() {
         return (0, i.I)({
           queryKey: ["marketsuggestedapps"],
           queryFn: async () => {
@@ -2207,10 +2248,10 @@
           retry: !1,
         });
       }
-      const tt = 5;
-      function nt(e, t) {
+      const st = 5;
+      function it(e, t) {
         return (0, r.useMemo)(() => {
-          const n = "number" == typeof t ? t : tt,
+          const n = "number" == typeof t ? t : st,
             r = { rgDropdowns: [], rgCheckboxes: [] };
           if (!e) return r;
           const a = new Intl.Collator();
@@ -2228,38 +2269,38 @@
           return r;
         }, [e, t]);
       }
-      function rt(e) {
+      function lt(e) {
         const { selectedApp: t, apps: n, onSelectionChange: a } = e,
-          o = le({
+          o = ue({
             rgOptions: n,
             selectedValue: t || null,
             onSelectionChange: a,
-            placeholder: He.Localize("#AdvancedSearch_AppSelect_Placeholder"),
+            placeholder: Me.Localize("#AdvancedSearch_AppSelect_Placeholder"),
             filter: (e, t) =>
               t.name.toLocaleLowerCase().includes(e.toLocaleLowerCase()),
           });
         return r.createElement(
-          me.Root,
+          ge.Root,
           { state: o },
           r.createElement(
-            me.Trigger,
+            ge.Trigger,
             null,
-            t && r.createElement(at, { app: t }),
+            t && r.createElement(ct, { app: t }),
           ),
           r.createElement(
-            me.Options,
+            ge.Options,
             null,
             o.rgFilteredOptions.map((e) =>
               r.createElement(
-                me.Option,
+                ge.Option,
                 { value: e, key: e.appid },
-                r.createElement(at, { app: e }),
+                r.createElement(ct, { app: e }),
               ),
             ),
           ),
         );
       }
-      function at(e) {
+      function ct(e) {
         const {
           app: { icon: t, name: n },
         } = e;
@@ -2275,15 +2316,15 @@
           r.createElement(S, null, n),
         );
       }
-      function ot() {
+      function pt() {
         return r.createElement(
           I,
           { justify: "center", align: "center", mt: "6" },
-          r.createElement(xe, { size: "4" }),
+          r.createElement(Ne, { size: "4" }),
         );
       }
-      var st = n(13857);
-      const it = r.memo(function (e) {
+      var mt = n(13857);
+      const ut = r.memo(function (e) {
         const {
             defaultTextSize: t = "3",
             accentColor: n = "blue",
@@ -2304,7 +2345,7 @@
           { breakpoints: { sm: 768, md: 940, lg: 1240 } },
           r.createElement(
             "div",
-            { className: st.Root, style: s },
+            { className: mt.Root, style: s },
             r.createElement(
               "div",
               { "data-accent-color": n, "data-dull-color": a },
@@ -2313,10 +2354,10 @@
           ),
         );
       });
-      function lt(e) {
-        return r.createElement(ct, { ...e });
+      function dt(e) {
+        return r.createElement(ft, { ...e });
       }
-      function ct(e) {
+      function ft(e) {
         const [t, n] = (0, r.useState)(!1);
         return (
           (0, r.useEffect)(
@@ -2330,10 +2371,10 @@
             ),
             [],
           ),
-          r.createElement(pt, { active: t, onRequestClose: () => n(!1), ...e })
+          r.createElement(gt, { active: t, onRequestClose: () => n(!1), ...e })
         );
       }
-      function pt(e) {
+      function gt(e) {
         const { active: t, onRequestClose: n, ...s } = e;
         return r.createElement(
           o.E,
@@ -2346,7 +2387,7 @@
               closeModal: n,
               className: "noOpinionatedGlobalStyles",
             },
-            r.createElement(it, null, r.createElement(De, { ...s })),
+            r.createElement(ut, null, r.createElement(Ze, { ...s })),
           ),
         );
       }
