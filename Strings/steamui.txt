@@ -6615,6 +6615,7 @@ ${LANGUAGE}
 13CRescueDialog
 13CSetCursorMsg
 13CSetKeymapMsg
+13CStatsMonitor
 13CSteamAppBase
 13CSteamStartup
 13CSteamTV_Game
@@ -7060,6 +7061,7 @@ ${LANGUAGE}
 18CProtoBufNetPacket
 18CRemoteClient_Task
 18CRemoteSteamAppMgr
+18CScheduledFunctionI13CStatsMonitorE
 18CScheduledFunctionI14CNetConnectionE
 18CScheduledFunctionI14CUDPConnectionE
 18CScheduledFunctionI16CScreenSaverDBusE
@@ -11105,6 +11107,8 @@ ${LANGUAGE}
 @import
 @n2w
 @nGameRecordingTextureGPU
+@nStatsMonitorScale
+@nStatsMonitorSecs
 @nVoicePostActivityXmitMS
 @nWatchdogSteamUIPercentReport
 @sBroadcastPreset
@@ -11357,11 +11361,15 @@ ActiveAccount
 AdaptationSet
 Adapter
 AdapterDescription
+Add Stat
+Add Stat (rate)
 Add support for missing codec %d here
 AddAppRelationship
 AddAuthenticator
 AddChatModerator
 AddChild
+AddDebugStatAbs
+AddDebugStatRate
 AddFavoriteServersByIP
 AddInstallScriptToWhiteList
 AddMatch
@@ -11553,7 +11561,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  2 2025 21:01:41
+Apr  3 2025 02:05:54
 Arabic
 AreFilesInSubscriptionList
 Armenian
@@ -11965,6 +11973,7 @@ CCuratorPreferences
 CDNAuth
 CDRMDeviceInfo: Couldn't find function %s in %s\n
 CDRMDeviceInfo: Couldn't load %s\n
+CDebugStatsPanel
 CDeleteCursorMsg
 CDesktopCapturePipeWire: Could not connect receiving stream.\n
 CDesktopCapturePipeWire: Could not create receiving stream.\n
@@ -13622,6 +13631,9 @@ Data corruption detected
 Data transfer deferred
 DcO/lcK+hSK
 DeRegisterSteamController
+Debug Stats View
+DebugStatsChart
+DebugStatsPanel
 DebugStatsSystem
 DeclareCurrentThreadIsMainThread
 Decode failed
@@ -15667,6 +15679,7 @@ KNx[
 KRB8+
 KRy`/6
 KUwi3-
+KVStatsTree
 KVTag
 KZix
 K\n\nAddChatBan
@@ -17701,8 +17714,10 @@ RemotePlayTogether
 RemotePlayTogetherVolume
 RemovableDriveCount
 RemovableDriveSizes
+Remove Stat
 RemoveAppRelationship
 RemoveAuthenticator
+RemoveDebugStat
 RemoveFromFamilyGroup
 RemoveFromFirewall
 RemoveUninstallEntry
@@ -29566,6 +29581,7 @@ reset_to_default
 reset_user_data
 resource/%s_%%language%%.txt
 resource/fonts/marlett.ttf
+resource/layout/debugstats.layout
 resource/layout/rescuedialog.layout
 resource/layout/transportdialog.layout
 resource/overlay_%language%.txt
@@ -30141,6 +30157,8 @@ static
 static_cast<Node_t*>(pNode)->elem
 statid
 stats
+stats_gui
+stats_gui : show debug stats panel
 stats_machine_id
 status
 status_percentage
@@ -30324,7 +30342,6 @@ steamui/CGameStreamVideoEncoder/WaitTime
 steamui/sounds/recording_highlight.wav
 steamui/sounds/recording_start.wav
 steamui/sounds/recording_stop.wav
-steamui/steamdoc/apps_total
 steamui_audio
 steamui_html
 steamui_librarycache

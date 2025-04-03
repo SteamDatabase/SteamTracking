@@ -13673,7 +13673,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42<
+;MO42\f
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -29934,6 +29934,9 @@ client/depotreconstruct/IOThreadPool_InQueue
 client/depotreconstruct/IOThreadPool_OutQueue
 client/depotreconstruct/PostReadBytes
 client/depotreconstruct/PostWriteBytes
+client/engine/commands
+client/engine/rtime
+client/engine/stime
 clientMsg.Body().m_cubKey <= sizeof(param.m_rgchCDKey)
 client_account_id
 client_bitrate
@@ -31540,7 +31543,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggenR
+ggen2
 ghjkl
 gidlist
 gidparentcomment

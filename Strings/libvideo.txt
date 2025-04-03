@@ -1397,6 +1397,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9Hdd
 9IGv
 9IMemAlloc
 9PE,$
@@ -3341,6 +3342,7 @@ a5j_5W
 a8Bk
 aI)h
 aRe.
+a\nB0
 a\rxg[
 a\v3rB
 aaY8GG
@@ -3786,12 +3788,11 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenB
+ggen"
 gmtime_r
 gnu_get_libc_version
 google.protobuf"G\n
 google.protobuf.Any
-gt`Mh\t+
 gzip, deflate
 h2Wl
 h8,4$

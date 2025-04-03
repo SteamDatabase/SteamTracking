@@ -2899,7 +2899,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenZ
+ggen:
 gmtime
 gmtime_r
 gnu_get_libc_version
