@@ -74,7 +74,7 @@ enum ConfigPage
 enum CreatorHome
 {
 	k_CreatorHomeNone = 0;
-	k_CreatorHomeAll = undefined;
+	k_CreatorHomeAll = -1;
 }
 
 enum Display
@@ -164,7 +164,7 @@ enum EActivateGameOverlayToWebPageMode
 
 enum EAllowShareIP
 {
-	k_EAllowShareIP_Invalid = undefined;
+	k_EAllowShareIP_Invalid = -1;
 	k_EAllowShareIP_Default = 0;
 	k_EAllowShareIP_Never = 1;
 	k_EAllowShareIP_FriendsOnly = 2;
@@ -352,7 +352,7 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_HoriController = 65536;
 	k_EControllerTypeFlags_LegionGoS = 131072;
 	k_EControllerTypeFlags_DualStickHandheld = 262144;
-	k_EControllerTypeFlags_AllControllers = undefined;
+	k_EControllerTypeFlags_AllControllers = -1;
 	k_EControllerTypeFlags_AllSteamControllers = 7;
 	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
 	k_EControllerTypeFlags_AllXBoxControllers = 448;
@@ -362,9 +362,9 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_Gyro = 520759;
 	k_EControllerTypeFlags_Trackpad = 49207;
 	k_EControllerTypeFlags_CenterTrackpad = 180272;
-	k_EControllerTypeFlags_RightJoystick = undefined;
-	k_EControllerTypeFlags_DPad = undefined;
-	k_EControllerTypeFlags_Triggers = undefined;
+	k_EControllerTypeFlags_RightJoystick = -4100;
+	k_EControllerTypeFlags_DPad = -4100;
+	k_EControllerTypeFlags_Triggers = -4097;
 	k_EControllerTypeFlags_HapticSupport = 7;
 }
 
@@ -645,10 +645,10 @@ enum EInputSource
 	k_EInputSource_Joysticks = 397320;
 	k_EInputSource_Touch = 395270;
 	k_EInputSource_Triggers = 192;
-	k_EInputSource_NonGyro = undefined;
-	k_EInputSource_NonTrackpad = undefined;
-	k_EInputSource_NonJoystick = undefined;
-	k_EInputSource_NonTouch = undefined;
+	k_EInputSource_NonGyro = -66561;
+	k_EInputSource_NonTrackpad = -2055;
+	k_EInputSource_NonJoystick = -397321;
+	k_EInputSource_NonTouch = -395271;
 	k_EInputSource_Digital = 25392;
 	k_EInputSource_Analog = 466126;
 }
@@ -833,7 +833,7 @@ enum EPlatformType
 
 enum EPosition
 {
-	k_EPositionInvalid = undefined;
+	k_EPositionInvalid = -1;
 	k_EPositionTopLeft = 0;
 	k_EPositionTopRight = 1;
 	k_EPositionBottomLeft = 2;
@@ -1355,7 +1355,7 @@ enum UnnamedEnum0a1393e07211be99
 
 enum UnnamedEnum0be4f2c7ab15fa09
 {
-	Invalid = undefined;
+	Invalid = -1;
 	Default = 0;
 	Light = 1;
 	Medium_Light = 2;
@@ -1522,7 +1522,7 @@ enum UnnamedEnum184ae5e9b907d5cb
 
 enum UnnamedEnum19d0d9cc3ff0fd44
 {
-	k_NotRejected = undefined;
+	k_NotRejected = -1;
 	k_RejectNoMainCap = 0;
 	k_RejectWrongPlatform = 1;
 	k_RejectNoComingSoon = 2;
@@ -1705,7 +1705,7 @@ enum UnnamedEnum25bb92eddba41afe
 
 enum UnnamedEnum2603c05e3f1b8c52
 {
-	NOT_TRACKING = undefined;
+	NOT_TRACKING = -1;
 	UP_TO_DATE = 0;
 	POSSIBLY_STALE = 1;
 	STALE = 2;
@@ -2169,7 +2169,7 @@ enum UnnamedEnum47b7ac73961f4d6d
 
 enum UnnamedEnum48a0b37c58c83454
 {
-	INVALID = undefined;
+	INVALID = -1;
 	CASUAL_MATCH = 0;
 	PRACTICE = 1;
 	COOP_BOT_MATCH = 4;
@@ -2324,7 +2324,7 @@ enum UnnamedEnum5492f48161b9f221
 
 enum UnnamedEnum54a08596fc4e0e87
 {
-	DependsOnKbLayout = undefined;
+	DependsOnKbLayout = -1;
 	Unknown = 0;
 	Backspace = 1;
 	Tab = 2;
@@ -2486,7 +2486,7 @@ enum UnnamedEnum55a9e12958fe69d4
 
 enum UnnamedEnum56fdca98a5fc5dc5
 {
-	NOT_TRACKING_ = undefined;
+	NOT_TRACKING_ = -1;
 	UP_TO_DATE_ = 0;
 	POSSIBLY_STALE_ = 1;
 	STALE_ = 2;
@@ -3030,8 +3030,8 @@ enum UnnamedEnum7396c7f5b0045fc8
 
 enum UnnamedEnum73fab2eb67048082
 {
-	Error = undefined;
-	Invalid = undefined;
+	Error = -2;
+	Invalid = -1;
 	UpToDate = 0;
 	Checking = 1;
 	Available = 2;
@@ -3298,7 +3298,7 @@ enum UnnamedEnum84d014c9a0ed8c43
 
 enum UnnamedEnum84f925970b2abf75
 {
-	Up = undefined;
+	Up = -1;
 	Down = 1;
 }
 
@@ -3700,7 +3700,7 @@ enum UnnamedEnuma566a501eb426d94
 
 enum UnnamedEnuma68ec96c8362722a
 {
-	Unknown = undefined;
+	Unknown = -1;
 	Idle = 0;
 	UserInteraction = 1;
 	UserInteraction_Timeout = 2;
@@ -3798,7 +3798,7 @@ enum UnnamedEnumad989ac806e57514
 	Connected = 3;
 	ClosedByPeer = 4;
 	ProblemDetectedLocally = 5;
-	Linger = undefined;
+	Linger = -2;
 }
 
 enum UnnamedEnumb00802ca68381832
@@ -4025,7 +4025,7 @@ enum UnnamedEnumbed52b1352908d10
 
 enum UnnamedEnumbf94e43b6037649d
 {
-	Close = undefined;
+	Close = -1;
 	OpenDevTools = 26500;
 	CloseDevTools = 26501;
 	InspectElement = 26502;
@@ -4635,7 +4635,7 @@ enum UnnamedEnumfa53d9b50a8fadb1
 
 enum UnnamedEnumfafcd37e42e1afea
 {
-	k_NotRejected = undefined;
+	k_NotRejected = -1;
 	k_RejectNoMainCap = 0;
 	k_RejectWrongPlatform = 1;
 	k_RejectNoComingSoon = 2;
