@@ -315,7 +315,12 @@
       e.exports = {
         TopSection: "UPClWbalp44EP2uo6yjGT",
         SearchCtn: "h98zJqVmYBDzGDR12EfkO",
+        SearchButton: "_1D1ZCrnUbq_Dg3Cyg8B9H2",
         ResultSetsCtn: "uV8MpQrLfUNZ58rIxWYjp",
+        ResultsList: "_1hNrxRxo_aV8qTxcSnX9T_",
+        Buttons: "_1RAMP5kzyqckdXVbtwL3cY",
+        ExportButton: "Lo0cD8DNzPvwMu-43XgiQ",
+        RemoveResultSetButton: "_3xIf6JQ6DKPAigcwGVRfSW",
         Warning: "_3VyhAgX9eeTu40DTZasJj_",
         ResultsTitle: "KtWoZ_O7pwXNcJbuBMkDr",
       };
@@ -40260,18 +40265,29 @@
                   },
                   a = f.TS.PARTNER_BASE_URL + "/optin/ajaxadminpreprunesearch",
                   n = await C().get(a, { params: t, withCredentials: !0 });
-                return 200 == n?.status &&
+                if (
+                  200 == n?.status &&
                   1 == n?.data?.success &&
-                  n?.data?.rgAppIDs?.length > 0
-                  ? n.data.rgAppIDs
-                  : [];
+                  n?.data?.rgApps &&
+                  Object.keys(n?.data?.rgApps).length > 0
+                ) {
+                  const e = n.data.rgApps
+                      ? Object.keys(n.data.rgApps).map((e) => Number(e))
+                      : null,
+                    t = e?.reduce(
+                      (e, t) => e.set(t, n.data.rgApps[t]),
+                      new Map(),
+                    );
+                  return { rgAppIDs: e, mapAppStats: t };
+                }
+                return { rgAppIDs: [], mapAppStats: void 0 };
               },
               enabled: So(e),
             });
             return t;
           })(e),
           s =
-            ((l = i.isSuccess ? i.data : void 0),
+            ((l = i.isSuccess ? i.data.rgAppIDs : void 0),
             (0, x.I)({
               queryKey: ["useLoadStoreItems", l],
               queryFn: async () => {
@@ -40287,23 +40303,37 @@
               enabled: !!l,
             }));
         var l;
-        const o = n.useMemo(() => {
+        const o = i.data?.mapAppStats,
+          c = n.useMemo(() => {
             if (!s.isSuccess) return [];
             return s.data
               .filter((e) => !!e)
-              .map((e) => ({
-                nAppID: e.GetAppID(),
-                strName: e.GetName(),
-                rgTags: e
-                  .GetTags()
-                  .map((e) => r.get(e.tagid) ?? e.tagid)
-                  .join(", "),
-                strShortDescription: e.GetShortDescription(),
-              }));
-          }, [s.isSuccess, s.data, r]),
-          c = i.isLoading || s.isLoading,
-          m = i.isSuccess && s.isSuccess,
-          d = !(c || (i.isSuccess && s.isSuccess));
+              .map((e) => {
+                const t = o?.get(e.GetAppID());
+                return {
+                  nAppID: e.GetAppID(),
+                  strName: e.GetName(),
+                  rgTags: e
+                    .GetTags()
+                    .map((e) => r.get(e.tagid) ?? e.tagid)
+                    .join(", "),
+                  strShortDescription: e.GetShortDescription(),
+                  wishlist_count: t
+                    ? Number(t.wishlist_count).toLocaleString()
+                    : "",
+                  sales: t
+                    ? (0, Ll.xE)(
+                        Number(t.sales) +
+                          Number(t.sales_dlc) +
+                          Number(t.sales_in_game),
+                      )
+                    : "",
+                };
+              });
+          }, [s.isSuccess, s.data, o, r]),
+          m = i.isLoading || s.isLoading,
+          d = i.isSuccess && s.isSuccess,
+          u = !(m || (i.isSuccess && s.isSuccess));
         return n.createElement(
           "div",
           { className: ut().AdminPageCtn },
@@ -40322,16 +40352,16 @@
             "div",
             { className: go().TopSection },
             n.createElement(yo, { fnSetSearch: t }),
-            n.createElement(vo, { search: e, rgCurrentResults: o }),
+            n.createElement(vo, { search: e, rgCurrentResults: c }),
           ),
           n.createElement("hr", null),
           So(e) &&
             n.createElement(
               n.Fragment,
               null,
-              c && n.createElement(M.t, { size: "small" }),
-              m &&
-                o.length > 0 &&
+              m && n.createElement(M.t, { size: "small" }),
+              d &&
+                c.length > 0 &&
                 n.createElement(
                   n.Fragment,
                   null,
@@ -40339,15 +40369,15 @@
                     "div",
                     { className: go().ResultsTitle },
                     "Results (",
-                    o.length,
+                    c.length,
                     ")",
                   ),
-                  n.createElement(bo, { items: o }),
+                  n.createElement(bo, { items: c }),
                 ),
-              m &&
-                0 == o.length &&
+              d &&
+                0 == c.length &&
                 n.createElement("div", null, "No results found"),
-              d && n.createElement("div", null, "Search failed"),
+              u && n.createElement("div", null, "Search failed"),
             ),
         );
       }
@@ -40373,8 +40403,14 @@
             return e ? [{ value: "", label: "<none>" }, ...e] : void 0;
           }, [c]);
         return n.createElement(
-          "div",
-          { className: go().SearchCtn },
+          "form",
+          {
+            className: go().SearchCtn,
+            onSubmit: (e) => {
+              t({ strName: a.trim(), strDescription: i.trim(), nTag: d }),
+                e.preventDefault();
+            },
+          },
           n.createElement(m.pd, {
             type: "text",
             label: "Game Name",
@@ -40409,11 +40445,7 @@
             ),
           n.createElement(
             m.jn,
-            {
-              onClick: () => {
-                t({ strName: a.trim(), strDescription: i.trim(), nTag: d });
-              },
-            },
+            { type: "submit", className: go().SearchButton },
             "Search",
           ),
         );
@@ -40429,70 +40461,92 @@
           "div",
           { className: go().ResultSetsCtn },
           n.createElement("h3", null, "To be exported:"),
-          0 == i.length && n.createElement("div", null, "None so far"),
-          i.map((e, t) =>
-            n.createElement(
-              "div",
-              { key: e.nSetId },
-              e.strDescription,
-              " (",
-              e.rgItems.length,
-              ")",
+          n.createElement(
+            "div",
+            { className: go().ResultsList },
+            0 == i.length && n.createElement("div", null, "None so far"),
+            i.map((e, t) =>
               n.createElement(
-                "button",
-                { onClick: () => s([...i.slice(0, t), ...i.slice(t + 1)]) },
-                "x",
+                "div",
+                { key: e.nSetId },
+                e.strDescription,
+                " (",
+                e.rgItems.length,
+                ")",
+                n.createElement(
+                  "button",
+                  {
+                    className: go().RemoveResultSetButton,
+                    onClick: () => s([...i.slice(0, t), ...i.slice(t + 1)]),
+                  },
+                  "x",
+                ),
               ),
             ),
           ),
           n.createElement(
-            m.$n,
-            {
-              onClick: () =>
-                (() => {
-                  const e = l;
-                  o(l + 1);
-                  const n = [];
-                  if (
-                    (t.strName && n.push(`name: ${t.strName}`),
-                    t.strDescription && n.push(`desc: ${t.strDescription}`),
-                    t.nTag)
-                  ) {
-                    const e = r.find((e) => e.tagid == t.nTag)?.name;
-                    e && n.push(`tag: ${e}`);
-                  }
-                  s([
-                    ...i,
-                    { nSetId: e, strDescription: n.join(", "), rgItems: a },
-                  ]);
-                })(),
-              disabled: !c,
-            },
-            "Add current results",
-          ),
-          n.createElement(
-            m.$n,
-            {
-              onClick: () =>
-                (() => {
-                  const e = [];
-                  e.push(["AppID", "Name", "Tags", "Short Desc"]),
-                    new Map(
-                      i.flatMap((e) => e.rgItems).map((e) => [e.nAppID, e]),
-                    ).forEach((t) =>
-                      e.push([
-                        String(t.nAppID),
-                        t.strName,
-                        t.rgTags,
-                        t.strShortDescription,
-                      ]),
-                    ),
-                    e.sort((e, t) => Number(e[0]) - Number(t[0])),
-                    Qa.g.WriteCSVToFile(e, "data.csv");
-                })(),
-              disabled: !d,
-            },
-            "Export CSV",
+            "div",
+            { className: go().Buttons },
+            n.createElement(
+              m.$n,
+              {
+                className: go().ExportButton,
+                onClick: () =>
+                  (() => {
+                    const e = l;
+                    o(l + 1);
+                    const n = [];
+                    if (
+                      (t.strName && n.push(`name: ${t.strName}`),
+                      t.strDescription && n.push(`desc: ${t.strDescription}`),
+                      t.nTag)
+                    ) {
+                      const e = r.find((e) => e.tagid == t.nTag)?.name;
+                      e && n.push(`tag: ${e}`);
+                    }
+                    s([
+                      ...i,
+                      { nSetId: e, strDescription: n.join(", "), rgItems: a },
+                    ]);
+                  })(),
+                disabled: !c,
+              },
+              "Add current results",
+            ),
+            n.createElement(
+              m.$n,
+              {
+                className: go().ExportButton,
+                onClick: () =>
+                  (() => {
+                    const e = [];
+                    e.push([
+                      "AppID",
+                      "Name",
+                      "Tags",
+                      "Short Desc",
+                      "Wishlists",
+                      "Sales",
+                    ]),
+                      new Map(
+                        i.flatMap((e) => e.rgItems).map((e) => [e.nAppID, e]),
+                      ).forEach((t) =>
+                        e.push([
+                          String(t.nAppID),
+                          t.strName,
+                          t.rgTags,
+                          t.strShortDescription,
+                          t.wishlist_count,
+                          t.sales,
+                        ]),
+                      ),
+                      e.sort((e, t) => Number(e[0]) - Number(t[0])),
+                      Qa.g.WriteCSVToFile(e, "data.csv");
+                  })(),
+                disabled: !d,
+              },
+              "Export CSV",
+            ),
           ),
         );
       }
@@ -40501,7 +40555,7 @@
         const { items: t } = e,
           a = n.useMemo(
             () => [
-              fo.accessor("nAppID", { header: "App ID", size: 100 }),
+              fo.accessor("nAppID", { header: "App ID", size: 90 }),
               fo.accessor("strName", { header: "Name", size: 200 }),
               fo.accessor("rgTags", { header: "Tags", size: 300 }),
               fo.accessor("strShortDescription", {
@@ -40509,6 +40563,8 @@
                 minSize: 100,
                 size: 500,
               }),
+              fo.accessor("wishlist_count", { header: "Wishlists", size: 90 }),
+              fo.accessor("sales", { header: "Sales", size: 110 }),
             ],
             [],
           );
