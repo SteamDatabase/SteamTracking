@@ -1346,14 +1346,14 @@ function TraverseFields(ast, importedIds) {
 								throw new Error("Unexpected field.n");
 							}
 						} else if (fieldProp.key.name === "r") {
-							if (EvaluateConstant(fieldProp)) {
+							if (EvaluateConstant(fieldProp.value)) {
 								field.flag = "repeated";
 							}
 						} else if (fieldProp.key.name === "d") {
 							if (fieldProp.value.type === Syntax.MemberExpression) {
 								// TODO: Support default fields expressions
 							} else {
-								field.default = EvaluateConstant(fieldProp);
+								field.default = EvaluateConstant(fieldProp.value);
 							}
 						} else if (fieldProp.key.name === "c") {
 							if (fieldProp.value.type === Syntax.Identifier) {
@@ -1577,7 +1577,7 @@ function ParseEnum(node) {
 
 	for (const expr of node.expressions) {
 		const name = expr.right.value;
-		const value = expr.left.property.right.value;
+		const value = EvaluateConstant(expr.left.property.right);
 
 		enumValues.set(name, value);
 	}
@@ -1626,12 +1626,12 @@ function ParseEnum(node) {
 }
 
 function EvaluateConstant(node) {
-	if (node.value.type === Syntax.UnaryExpression && node.value.operator === "!") {
-		return node.value.argument.value === 0;
-	} else if (node.value.type === Syntax.UnaryExpression && node.value.operator === "-") {
-		return -node.value.argument.value;
-	} else if (node.value.type === Syntax.Literal) {
-		return node.value.value;
+	if (node.type === Syntax.UnaryExpression && node.operator === "!") {
+		return node.argument.value === 0;
+	} else if (node.type === Syntax.UnaryExpression && node.operator === "-") {
+		return -node.argument.value;
+	} else if (node.type === Syntax.Literal) {
+		return node.value;
 	}
 
 	throw new Error("Unexpected constant");
