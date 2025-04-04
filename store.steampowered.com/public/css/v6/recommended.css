@@ -1488,14 +1488,23 @@ html.touch .similar_grid_item .buttons {
 	max-width: 772px;
 }
 
+.review_controls_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: flex-end;
+}
+
 .review_controls_left {
-	float: left;
-	margin-bottom: 8px;
-	margin-right: 8px;
+	display: flex;
+	flex-direction: column;
 }
 .review_controls_right {
-	padding-top: 14px;
-	padding-right: 7px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 8px;
 }
 .review_control_didyouenjoy {
 	margin-bottom: 4px;
