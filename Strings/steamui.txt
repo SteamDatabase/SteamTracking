@@ -20,10 +20,10 @@
  ' ) - 3 G M Q _ c e i w } 
  (08@HPX`hpx
  (capture)
- (convert)
+ (decode)
  (display)
  (dropped)
- (encode)
+ (game)
  (network)
  (wireless)
  + AMF AV1
@@ -11561,7 +11561,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  3 2025 22:05:03
+Apr  4 2025 20:54:07
 Arabic
 AreFilesInSubscriptionList
 Armenian
@@ -22241,6 +22241,7 @@ a5<p
 a5j_5W
 a8Bk
 a?wSa?\
+aE,/O
 aI)h
 aRe.
 aT\v>wB
@@ -24642,7 +24643,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen
+ggenz*o
 ghost_
 gidlist
 gidparentcomment
