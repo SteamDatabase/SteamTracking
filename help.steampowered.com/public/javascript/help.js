@@ -1621,10 +1621,10 @@ HelpWizard = {
 				s: strSessionID,
 				method: eMethod,
 				link: strLink,
-				rcn: nRecoveryCodeNonce
+				n: nRecoveryCodeNonce - eMethod
 			} )
 		}).fail( function( xhr ) {
-			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+			elError.text( "An error occurred trying to handle that request. Please give us a few minutes and try again." ).slideDown();
 		}).done( function( data ) {
 			if ( data.success )
 			{
