@@ -1598,7 +1598,7 @@ HelpWizard = {
 		return false;
 	},
 
-		SendAccountRecoveryCode: function( strSessionID, eMethod, strLink, strErrorID, strLoadingID, strCodeResentID, nRecoveryCodeNonce ) {
+		SendAccountRecoveryCode: function( strSessionID, eMethod, strLink, nNonce, strErrorID, strLoadingID, strCodeResentID ) {
 		var elError = $J( strErrorID );
 
 		try
@@ -1618,8 +1618,8 @@ HelpWizard = {
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
-				rcne: nRecoveryCodeNonce - eMethod * 2,
 				s: strSessionID,
+				n: nNonce,
 				method: eMethod,
 				link: strLink,
 			} )
