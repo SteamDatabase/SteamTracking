@@ -1618,10 +1618,10 @@ HelpWizard = {
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				rcne: nRecoveryCodeNonce - eMethod * 2,
 				s: strSessionID,
 				method: eMethod,
 				link: strLink,
-				n: nRecoveryCodeNonce - eMethod
 			} )
 		}).fail( function( xhr ) {
 			elError.text( "An error occurred trying to handle that request. Please give us a few minutes and try again." ).slideDown();
