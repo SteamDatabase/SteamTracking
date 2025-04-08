@@ -20986,7 +20986,7 @@ N16CUserMatchmaking11LobbyData_tE
 N16CUserMatchmaking13ActiveLobby_tE
 N16CUserMatchmaking13LobbyMember_tE
 N16CUserMatchmaking14LobbyChatMsg_tE
-N16SteamThreadTools19CSimpleLambdaThreadISt5_BindIFM13CAppInfoCacheFvvEPS2_EEEE
+N16SteamThreadTools19CSimpleLambdaThreadISt5_BindIFM13CAppInfoCacheFbvEPS2_EEEE
 N16SteamThreadTools19CSimpleLambdaThreadISt5_BindIFM20COfflineMessageCacheFvvEPS2_EEEE
 N17CAutoCloudManager21CWatchedFileContainerE
 N17CFileWriterThread14CFileWriteItemE
@@ -34595,6 +34595,7 @@ m_bShutdownSystem
 m_bStreamingError || cTotalBytesReceived == (uint32)m_buffer.TellPut()
 m_bTrackCorruptChunks
 m_bWirelessDongle == GetSteamController()->BIsControllerWirelessDongle( GetControllerIndex() )
+m_bWriteOutstanding
 m_bitsMigratedBuckets
 m_bufAuthToken
 m_bufBGRA
