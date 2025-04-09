@@ -1619,8 +1619,8 @@ HelpWizard = {
 			url: "https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
-				nn: nNonce,
 				method: eMethod,
+				rcnn: nNonce,
 				link: strLink,
 			} )
 		}).fail( function( xhr ) {
