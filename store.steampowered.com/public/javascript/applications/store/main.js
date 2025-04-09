@@ -24704,7 +24704,7 @@
               "StoreBrowse.GetStoreCategories#1",
               (0, o.I8)(U, t),
               A,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetContentHubConfig = function (e, t) {
@@ -26069,7 +26069,7 @@
         (e.Query = function (e, t) {
           return e.SendMsg("StoreQuery.Query#1", (0, o.I8)(b, t), B, {
             bConstMethod: !0,
-            ePrivilege: 2,
+            ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
@@ -54825,7 +54825,7 @@
             r.e(7975),
             r.e(4860),
             r.e(8567),
-            r.e(1750),
+            r.e(4104),
             r.e(2965),
           ]).then(r.bind(r, 16546)),
         ),
@@ -54851,7 +54851,7 @@
             r.e(7975),
             r.e(4860),
             r.e(8567),
-            r.e(1750),
+            r.e(4104),
             r.e(2965),
           ])
             .then(r.bind(r, 16546))
@@ -56411,6 +56411,7 @@
             r.e(4607),
             r.e(4539),
             r.e(2542),
+            r.e(2298),
             r.e(1471),
             r.e(7436),
             r.e(2797),
@@ -56503,6 +56504,7 @@
             r.e(4607),
             r.e(4539),
             r.e(2542),
+            r.e(2298),
             r.e(1471),
             r.e(7436),
             r.e(2797),
@@ -56549,7 +56551,7 @@
             r.e(7975),
             r.e(4860),
             r.e(8567),
-            r.e(1750),
+            r.e(4104),
             r.e(3164),
             r.e(5894),
           ]).then(r.bind(r, 13164)),
@@ -56576,7 +56578,7 @@
             r.e(7975),
             r.e(4860),
             r.e(8567),
-            r.e(1750),
+            r.e(4104),
             r.e(3164),
             r.e(8987),
           ]).then(r.bind(r, 35649)),
@@ -56603,9 +56605,9 @@
             r.e(7975),
             r.e(4860),
             r.e(8567),
-            r.e(1750),
+            r.e(4104),
             r.e(2965),
-          ]).then(r.bind(r, 35335)),
+          ]).then(r.bind(r, 64025)),
         ),
         Wt = n.lazy(() =>
           Promise.all([

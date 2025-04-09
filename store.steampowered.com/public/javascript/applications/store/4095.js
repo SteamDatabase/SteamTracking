@@ -8897,13 +8897,13 @@
         Zf: () => Z,
         jR: () => K,
         Ac: () => ce,
-        lh: () => de,
+        lh: () => pe,
         mz: () => Q,
         qQ: () => Y,
         MW: () => $,
         qR: () => J,
         _B: () => O,
-        j3: () => ue,
+        j3: () => _e,
         Yw: () => z,
         zK: () => M,
         DU: () => T,
@@ -9220,8 +9220,10 @@
           "curator_group_members",
           "curator_public",
           "audience_followers",
-        ];
-      class de {
+        ],
+        de = [20, 31, 34],
+        ue = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class pe {
         constructor() {
           (0, s.Gn)(this);
         }
@@ -9272,7 +9274,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new de(),
+          let t = new pe(),
             r = JSON.parse(e);
           return (
             Object.assign(t, r),
@@ -9308,7 +9310,7 @@
           );
         }
         clone(e = !1) {
-          let t = new de();
+          let t = new pe();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -9757,13 +9759,13 @@
         GetSubTitleWithSummaryFallback(e) {
           return (
             g.NT.GetWithFallback(this.jsondata?.localized_subtitle, e) ||
-            de.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            pe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
           return (
             g.NT.GetWithFallback(this.jsondata?.localized_summary, e) ||
-            de.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            pe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -9800,8 +9802,15 @@
         BIsOGGEvent() {
           return Boolean(this.appid) && this.appid > 0;
         }
-        BShowLibrarySpotlight() {
-          return Boolean(this.jsondata.library_spotlight);
+        BShowLibrarySpotlight(e) {
+          if (!e) return Boolean(this.jsondata.library_spotlight);
+          if (!this.jsondata.library_spotlight) return !1;
+          if (de.includes(this.type)) return !1;
+          const t = new Date().getTime() / 1e3;
+          return (
+            !(ue.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(this.startTime && t > this.startTime + 60 * w.Kp.PerDay)
+          );
         }
         BShowLibrarySpotlightText() {
           return Boolean(this.jsondata.library_spotlight_text);
@@ -10031,14 +10040,14 @@
             );
           return (
             this.jsondata.tagged_items?.forEach((e) => {
-              de.AccumulateCapsuleListIDs([e.capsule], r, a, t);
+              pe.AccumulateCapsuleListIDs([e.capsule], r, a, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
               if (X(e.section_type))
-                de.AccumulateCapsuleListIDs(e.capsules, r, a, t);
+                pe.AccumulateCapsuleListIDs(e.capsules, r, a, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const i of e.tabs)
-                  de.AccumulateCapsuleListIDs(i.capsules, r, a, t);
+                  pe.AccumulateCapsuleListIDs(i.capsules, r, a, t);
             }),
             a
           );
@@ -10253,52 +10262,52 @@
           );
         }
       }
-      (0, a.Cg)([s.sH], de.prototype, "GID", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "AnnouncementGID", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "forumTopicGID", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "type", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "appid", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "name", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "description", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "timestamp_loc_updated", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "startTime", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "endTime", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "visibilityStartTime", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "visibilityEndTime", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "m_nBuildID", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "m_strBuildBranch", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "postTime", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "visibility_state", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "broadcaster", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "jsondata", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "nCommentCount", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "nVotesUp", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "nVotesDown", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "bOldAnnouncement", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "announcementClanSteamID", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "loadedAllLanguages", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "bLoaded", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "deleteInProgress", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "vecTags", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "last_update_steamid", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "rtime32_last_modified", void 0),
+      (0, a.Cg)([s.sH], pe.prototype, "GID", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "AnnouncementGID", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "forumTopicGID", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "type", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "appid", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "name", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "description", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "timestamp_loc_updated", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "startTime", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "endTime", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "visibilityStartTime", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "visibilityEndTime", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "m_nBuildID", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "m_strBuildBranch", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "postTime", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "visibility_state", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "broadcaster", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "jsondata", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "nCommentCount", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "nVotesUp", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "nVotesDown", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "bOldAnnouncement", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "announcementClanSteamID", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "loadedAllLanguages", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "bLoaded", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "deleteInProgress", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "vecTags", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "last_update_steamid", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "rtime32_last_modified", void 0),
         (0, a.Cg)(
           [s.sH],
-          de.prototype,
+          pe.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, a.Cg)(
           [s.sH],
-          de.prototype,
+          pe.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, a.Cg)([s.sH], de.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "video_preview_type", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "video_preview_id", void 0),
-        (0, a.Cg)([s.sH], de.prototype, "m_overrideCurrentDay", void 0);
-      function ue(e) {
+        (0, a.Cg)([s.sH], pe.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "video_preview_type", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "video_preview_id", void 0),
+        (0, a.Cg)([s.sH], pe.prototype, "m_overrideCurrentDay", void 0);
+      function _e(e) {
         return e?.replace(/[()]/g, "\\$&");
       }
     },
@@ -20900,7 +20909,7 @@
             "PartnerMeetSteam.UpdateRegistration#1",
             (0, p.I8)(f, t),
             S,
-            { bConstMethod: !0, ePrivilege: 0 },
+            { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (e.GetAvailability = function (e, t) {
@@ -20908,7 +20917,7 @@
               "PartnerMeetSteam.GetAvailability#1",
               (0, p.I8)(y, t),
               b,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetRegistrations = function (e, t) {

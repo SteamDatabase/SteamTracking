@@ -506,6 +506,21 @@ html.tablet .game_area_dlc_name {
 html.tablet .game_area_dlc_price {
 	font-size: 14px;
 }
+html.tablet .game_area_dlc_capsule_and_name_ctn {
+	flex-direction: column;
+	align-items: flex-start;
+}
+html.tablet .game_area_dlc_capsule_and_name_ctn .game_area_dlc_name {
+	display: flex;
+	gap: 5px;
+}
+html.tablet .game_area_dlc_capsule_and_name_ctn .dlc_highlight_reason_container {
+	flex-direction: column;
+	justify-content: center;
+}
+html.tablet .game_area_dlc_capsule_and_name_ctn .dlc_highlight_reason {
+	margin: unset;
+}
 
 html.tablet .discount_block {
 	line-height: unset;

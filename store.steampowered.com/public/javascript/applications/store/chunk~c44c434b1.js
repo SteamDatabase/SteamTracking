@@ -241,7 +241,7 @@
         m = n(73745),
         u = n(78327),
         d = n(44165),
-        h = n(12443);
+        h = n(34824);
       const _ = 7,
         p = -1;
       class g {
@@ -527,7 +527,7 @@
         (0, a.Cg)([m.oI], g.prototype, "BIsDoorOpened", null),
         (0, a.Cg)([m.oI], g.prototype, "OpenDoor", null);
     },
-    12443: (e, t, n) => {
+    34824: (e, t, n) => {
       n.d(t, {
         Fb: () => C,
         Jz: () => S,

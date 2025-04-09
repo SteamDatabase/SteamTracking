@@ -725,7 +725,7 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		        strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyPostfix + '|alt_assets|' + altAssetIndex + '|');
 		    }
 
-			if ( !bSkipConfirmation && altAssetIndex === "" && strSelectedLanguage === 'english' && imageType.confirmation_required )
+			if ( !bSkipConfirmation && altAssetIndex === "" && strSelectedLanguage === 'english' && type !== 'Advertising' && imageType.confirmation_required )
 			{
 				rgImageConfirmationData.push( { 'image_src': image.src, 'image_def': imageType } );
 			}

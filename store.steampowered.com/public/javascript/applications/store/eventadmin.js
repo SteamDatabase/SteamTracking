@@ -5797,7 +5797,7 @@
                         ),
                       ),
                     i &&
-                      u.createElement(we.j6, {
+                      u.createElement(we.j, {
                         event: i,
                         stylesmodule: Ie,
                         nOverrideEndTime: i.GetEndTimeAndDateUnixSeconds(),

@@ -157,6 +157,9 @@
   width: 100%;
   height: 100%;
 }
+._30BxsjSFrUWCBKntWK9hPg:hover {
+  cursor: pointer;
+}
 ._30BxsjSFrUWCBKntWK9hPg:hover ._2UuNsdHxhT9la27J_j3BFs {
   filter: blur(20px);
 }
@@ -192,6 +195,7 @@
   line-height: 1.1;
   font-weight: 600;
   color: #fff;
+  text-align: left;
 }
 ._30BxsjSFrUWCBKntWK9hPg .ETHkFxrlPF1znTFXFtjtK ._2e5PhNJqb68XISttHxdVF2 {
   width: 100%;

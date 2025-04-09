@@ -1653,7 +1653,7 @@
             r.e(8758),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 91796)),
+          ]).then(r.bind(r, 11435)),
         ),
         ce = u.lazy(() =>
           Promise.all([
@@ -1775,7 +1775,7 @@
             r.e(4440),
             r.e(8758),
             r.e(2455),
-          ]).then(r.bind(r, 23932)),
+          ]).then(r.bind(r, 27771)),
         ),
         he = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         ge = u.lazy(() =>
@@ -14029,7 +14029,7 @@
               "StoreBrowse.GetStoreCategories#1",
               (0, o.I8)(W, t),
               U,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetContentHubConfig = function (e, t) {
@@ -15387,7 +15387,7 @@
         (e.Query = function (e, t) {
           return e.SendMsg("StoreQuery.Query#1", (0, o.I8)(b, t), w, {
             bConstMethod: !0,
-            ePrivilege: 2,
+            ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),

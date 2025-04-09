@@ -4645,7 +4645,7 @@
           (e.GetMostPopularTags = function (e, t) {
             return e.SendMsg("Store.GetMostPopularTags#1", (0, m.I8)(w, t), z, {
               bConstMethod: !0,
-              ePrivilege: 0,
+              ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
@@ -4654,13 +4654,13 @@
               "Store.GetLocalizedNameForTags#1",
               (0, m.I8)(S, t),
               R,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetTagList = function (e, t) {
             return e.SendMsg("Store.GetTagList#1", (0, m.I8)(j, t), h, {
               bConstMethod: !0,
-              ePrivilege: 0,
+              ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),

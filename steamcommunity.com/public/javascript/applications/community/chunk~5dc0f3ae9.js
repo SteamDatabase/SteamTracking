@@ -4885,7 +4885,7 @@
           (e.GetMostPopularTags = function (e, t) {
             return e.SendMsg("Store.GetMostPopularTags#1", (0, c.I8)(b, t), f, {
               bConstMethod: !0,
-              ePrivilege: 0,
+              ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
@@ -4894,13 +4894,13 @@
               "Store.GetLocalizedNameForTags#1",
               (0, c.I8)(C, t),
               M,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetTagList = function (e, t) {
             return e.SendMsg("Store.GetTagList#1", (0, c.I8)(I, t), R, {
               bConstMethod: !0,
-              ePrivilege: 0,
+              ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
@@ -6307,7 +6307,7 @@
               "Clan.GetPartnerEventsByBuildIDRange#1",
               (0, u.I8)(S, t),
               M,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           });
       })(i || (i = {}));

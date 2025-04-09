@@ -1493,14 +1493,14 @@
         Zf: () => Q,
         jR: () => J,
         Ac: () => ye,
-        lh: () => be,
+        lh: () => fe,
         mz: () => ee,
         qQ: () => X,
         MW: () => Z,
         qR: () => te,
         _B: () => q,
         sj: () => ce,
-        j3: () => fe,
+        j3: () => Be,
         Yw: () => H,
         zK: () => U,
         WN: () => j,
@@ -1517,7 +1517,7 @@
         RZ: () => L,
         cB: () => me,
         Te: () => ue,
-        Yz: () => ve,
+        Yz: () => we,
       });
       var i = r(34629),
         n = r(79821),
@@ -1810,8 +1810,10 @@
           "curator_group_members",
           "curator_public",
           "audience_followers",
-        ];
-      class be {
+        ],
+        be = [20, 31, 34],
+        ve = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class fe {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -1854,7 +1856,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new be(),
+          let t = new fe(),
             r = JSON.parse(e);
           return (
             Object.assign(t, r),
@@ -1890,7 +1892,7 @@
           );
         }
         clone(e = !1) {
-          let t = new be();
+          let t = new fe();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -2373,7 +2375,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || be.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || fe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -2385,7 +2387,7 @@
                 : r.localized_summary,
               e,
             ) ||
-            be.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            fe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -2428,8 +2430,15 @@
         BIsOGGEvent() {
           return Boolean(this.appid) && this.appid > 0;
         }
-        BShowLibrarySpotlight() {
-          return Boolean(this.jsondata.library_spotlight);
+        BShowLibrarySpotlight(e) {
+          if (!e) return Boolean(this.jsondata.library_spotlight);
+          if (!this.jsondata.library_spotlight) return !1;
+          if (be.includes(this.type)) return !1;
+          const t = new Date().getTime() / 1e3;
+          return (
+            !(ve.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(this.startTime && t > this.startTime + 60 * w.Kp.PerDay)
+          );
         }
         BShowLibrarySpotlightText() {
           return Boolean(this.jsondata.library_spotlight_text);
@@ -2673,14 +2682,14 @@
             null === (r = this.jsondata.tagged_items) ||
               void 0 === r ||
               r.forEach((e) => {
-                be.AccumulateCapsuleListIDs([e.capsule], i, n, t);
+                fe.AccumulateCapsuleListIDs([e.capsule], i, n, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
               if (re(e.section_type))
-                be.AccumulateCapsuleListIDs(e.capsules, i, n, t);
+                fe.AccumulateCapsuleListIDs(e.capsules, i, n, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const r of e.tabs)
-                  be.AccumulateCapsuleListIDs(r.capsules, i, n, t);
+                  fe.AccumulateCapsuleListIDs(r.capsules, i, n, t);
             }),
             n
           );
@@ -2926,56 +2935,56 @@
           );
         }
       }
-      (0, i.Cg)([s.sH], be.prototype, "GID", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "AnnouncementGID", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "forumTopicGID", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "type", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "appid", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "name", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "description", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "timestamp_loc_updated", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "startTime", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "endTime", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "visibilityStartTime", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "visibilityEndTime", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "m_nBuildID", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "m_strBuildBranch", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "postTime", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "visibility_state", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "broadcaster", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "jsondata", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "nCommentCount", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "nVotesUp", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "nVotesDown", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "bOldAnnouncement", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "announcementClanSteamID", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "loadedAllLanguages", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "bLoaded", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "deleteInProgress", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "vecTags", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "last_update_steamid", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "rtime32_last_modified", void 0),
+      (0, i.Cg)([s.sH], fe.prototype, "GID", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "AnnouncementGID", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "forumTopicGID", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "type", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "appid", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "name", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "description", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "timestamp_loc_updated", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "startTime", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "endTime", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "visibilityStartTime", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "visibilityEndTime", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "m_nBuildID", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "m_strBuildBranch", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "postTime", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "visibility_state", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "broadcaster", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "jsondata", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "nCommentCount", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "nVotesUp", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "nVotesDown", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "bOldAnnouncement", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "announcementClanSteamID", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "loadedAllLanguages", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "bLoaded", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "deleteInProgress", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "vecTags", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "last_update_steamid", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "rtime32_last_modified", void 0),
         (0, i.Cg)(
           [s.sH],
-          be.prototype,
+          fe.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, i.Cg)(
           [s.sH],
-          be.prototype,
+          fe.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, i.Cg)([s.sH], be.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "video_preview_type", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "video_preview_id", void 0),
-        (0, i.Cg)([s.sH], be.prototype, "m_overrideCurrentDay", void 0);
-      const ve = (e) => {
+        (0, i.Cg)([s.sH], fe.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "video_preview_type", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "video_preview_id", void 0),
+        (0, i.Cg)([s.sH], fe.prototype, "m_overrideCurrentDay", void 0);
+      const we = (e) => {
         const t = (0, v.K)(e.appid);
         return e.appid ? t : B.UF.IS_ALLOWED_SC;
       };
-      function fe(e) {
+      function Be(e) {
         return null == e ? void 0 : e.replace(/[()]/g, "\\$&");
       }
     },
@@ -8395,7 +8404,7 @@
             "PartnerMeetSteam.UpdateRegistration#1",
             (0, p.I8)(b, t),
             v,
-            { bConstMethod: !0, ePrivilege: 0 },
+            { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (e.GetAvailability = function (e, t) {
@@ -8403,7 +8412,7 @@
               "PartnerMeetSteam.GetAvailability#1",
               (0, p.I8)(f, t),
               w,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetRegistrations = function (e, t) {
@@ -13646,67 +13655,6 @@
         (0, i.Cg)([T.oI], P.prototype, "TrackEventAction", null),
         (P = (0, i.Cg)([n.PA], P));
     },
-    82477: (e, t, r) => {
-      "use strict";
-      r.d(t, { vg: () => m });
-      var i = r(90626),
-        n = r(738),
-        a = r(61859),
-        s = r(78327),
-        o = r(97436),
-        l = r(96059),
-        c = r(28240);
-      r(9154);
-      function d(e) {
-        return i.createElement(
-          n.x_,
-          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          i.createElement(u, {
-            redirectURL: e.redirectURL,
-            guestOption: e.guestOption,
-          }),
-        );
-      }
-      function m() {
-        (0, n.pg)(
-          i.createElement(d, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          { strTitle: (0, a.we)("#Login_SignInTitle") },
-        );
-      }
-      function u(e) {
-        const { redirectURL: t, guestOption: r } = e,
-          [n] = (0, i.useState)(
-            new l.D(s.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [a, d] = (0, i.useState)(!1);
-        return i.createElement(
-          "div",
-          null,
-          a
-            ? i.createElement(o.Fn, null)
-            : i.createElement(
-                o.YN,
-                {
-                  autoFocus: !0,
-                  transport: n,
-                  platform: 2,
-                  onComplete: (e) => {
-                    e == c.wI.k_PrimaryDomainFail
-                      ? d(!0)
-                      : window.location.assign(t);
-                  },
-                  redirectUrl: t,
-                  theme: "modal",
-                },
-                r && i.createElement(o.Mk, { redirectURL: t }),
-              ),
-        );
-      }
-    },
     93267: (e, t, r) => {
       "use strict";
       r.d(t, { L: () => u });
@@ -14107,6 +14055,62 @@
           t && (r = { maximumFractionDigits: t }),
           e ? e.toLocaleString(i.pf.GetPreferredLocales(), r) : "" + e
         );
+      }
+    },
+    27543: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        Ch: () => o,
+        JS: () => a,
+        bc: () => s,
+        rG: () => l,
+        rQ: () => n,
+      });
+      var i = r(61859);
+      function n(e) {
+        return 28 !== e;
+      }
+      function a(e) {
+        switch (e) {
+          case 29:
+          case 27:
+          case 2:
+          case 4:
+          case 5:
+          case 6:
+          case 8:
+          case 7:
+          case 9:
+          case 11:
+          case 17:
+          case 18:
+          case 19:
+          case 20:
+          case 21:
+          case 22:
+          case 23:
+          case 24:
+          case 35:
+          case 25:
+          case 26:
+          case 31:
+          case 32:
+          case 1:
+          case 34:
+            return !0;
+        }
+        return !1;
+      }
+      function s(e, t) {
+        return 12 != e && (!t || -1 == t.indexOf("curator"));
+      }
+      function o(e) {
+        return [14, 10, 15, 32].includes(e);
+      }
+      function l(e) {
+        let t = "#PartnerEvent_" + e,
+          r = (0, i.we)(t);
+        return r != t ? r : (0, i.we)("#PartnerEvent_Other");
       }
     },
     10472: (e, t, r) => {

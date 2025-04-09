@@ -3940,6 +3940,19 @@ span.new {
     color: #a4d007;
 }
 
+.checklist_box_complete {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	border: 1px solid #80a206;
+	background-color: #0004;
+	box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+	border-radius: 2px;
+	color: #a4d007;
+	line-height: 8px;
+	font-size: 16px;
+}
+
 .release_checklist_table {
     width: 100%;
 }

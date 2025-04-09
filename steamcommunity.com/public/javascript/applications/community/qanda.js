@@ -4,40 +4,40 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5836],
   {
-    45048: (e, t, s) => {
-      s.r(t), s.d(t, { QAndARoutes: () => h, default: () => u });
+    45048: (t, e, s) => {
+      s.r(e), s.d(e, { QAndARoutes: () => o, default: () => u });
       var i = s(28579),
         r = s(90626),
         n = s(92757),
-        o = s(6813),
+        h = s(6813),
         a = s(97058);
-      const h = {
-        Dashboard: (e) => `/questions/${e}/dashboard`,
-        FullPageView: (e, t) => `/questions/${e}/view/${t}`,
+      const o = {
+        Dashboard: (t) => `/questions/${t}/dashboard`,
+        FullPageView: (t, e) => `/questions/${t}/view/${e}`,
       };
-      const u = function (e) {
+      const u = function (t) {
         return r.createElement(
           n.dO,
           null,
           r.createElement(n.qh, {
-            path: h.Dashboard(":vanity_str"),
-            render: (e) =>
-              r.createElement(o.X, {
+            path: o.Dashboard(":vanity_str"),
+            render: (t) =>
+              r.createElement(h.X, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t } = e.match.params;
-                    return r.createElement(i.xh, { vanity_str: t });
+                    const { vanity_str: e } = t.match.params;
+                    return r.createElement(i.xh, { vanity_str: e });
                   },
                 },
               }),
           }),
           r.createElement(n.qh, {
-            path: h.FullPageView(":vanity_str", ":session_gid"),
-            render: (e) =>
-              r.createElement(o.X, {
+            path: o.FullPageView(":vanity_str", ":session_gid"),
+            render: (t) =>
+              r.createElement(h.X, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t, session_gid: s } = e.match.params;
+                    const { vanity_str: e, session_gid: s } = t.match.params;
                     return r.createElement(i.AC, { gidSession: s });
                   },
                 },
@@ -47,123 +47,63 @@
         );
       };
     },
-    82477: (e, t, s) => {
-      s.d(t, { vg: () => l });
-      var i = s(90626),
-        r = s(738),
-        n = s(61859),
-        o = s(78327),
-        a = s(97436),
-        h = s(96059),
-        u = s(28240);
-      s(9154);
-      function c(e) {
-        return i.createElement(
-          r.x_,
-          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          i.createElement(d, {
-            redirectURL: e.redirectURL,
-            guestOption: e.guestOption,
-          }),
-        );
-      }
-      function l() {
-        (0, r.pg)(
-          i.createElement(c, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          { strTitle: (0, n.we)("#Login_SignInTitle") },
-        );
-      }
-      function d(e) {
-        const { redirectURL: t, guestOption: s } = e,
-          [r] = (0, i.useState)(
-            new h.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [n, c] = (0, i.useState)(!1);
-        return i.createElement(
-          "div",
-          null,
-          n
-            ? i.createElement(a.Fn, null)
-            : i.createElement(
-                a.YN,
-                {
-                  autoFocus: !0,
-                  transport: r,
-                  platform: 2,
-                  onComplete: (e) => {
-                    e == u.wI.k_PrimaryDomainFail
-                      ? c(!0)
-                      : window.location.assign(t);
-                  },
-                  redirectUrl: t,
-                  theme: "modal",
-                },
-                s && i.createElement(a.Mk, { redirectURL: t }),
-              ),
-        );
-      }
-    },
-    33861: (e, t, s) => {
-      s.d(t, { E: () => L });
+    33861: (t, e, s) => {
+      s.d(e, { E: () => _ });
       var i,
         r,
         n,
-        o,
-        a,
         h,
+        a,
+        o,
         u,
         c,
         l,
         d,
-        p,
         f,
-        m,
+        p,
         S,
-        w,
+        m,
         y,
-        E,
         O,
-        g = s(90626),
-        v = s(86843),
-        b = s(6561),
-        q = s(48767),
-        V = s(57152),
+        v,
+        b,
+        q = s(90626),
+        w = s(86843),
+        V = s(6561),
+        E = s(48767),
+        g = s(57152),
         k = s(57956);
-      function R(e, t) {
-        return e.filter((e) => !t.includes(e));
+      function Q(t, e) {
+        return t.filter((t) => !e.includes(t));
       }
-      var Q = class extends V.Q {
-        constructor(e, t, s) {
+      var j = class extends g.Q {
+        constructor(t, e, s) {
           super(),
-            (0, v.VK)(this, l),
-            (0, v.VK)(this, p),
-            (0, v.VK)(this, m),
-            (0, v.VK)(this, w),
-            (0, v.VK)(this, E),
-            (0, v.VK)(this, i, void 0),
-            (0, v.VK)(this, r, void 0),
-            (0, v.VK)(this, n, void 0),
-            (0, v.VK)(this, o, void 0),
-            (0, v.VK)(this, a, void 0),
-            (0, v.VK)(this, h, void 0),
-            (0, v.VK)(this, u, void 0),
-            (0, v.VK)(this, c, void 0),
-            (0, v.OV)(this, i, e),
-            (0, v.OV)(this, o, s),
-            (0, v.OV)(this, n, []),
-            (0, v.OV)(this, a, []),
-            (0, v.OV)(this, r, []),
-            this.setQueries(t);
+            (0, w.VK)(this, l),
+            (0, w.VK)(this, f),
+            (0, w.VK)(this, S),
+            (0, w.VK)(this, y),
+            (0, w.VK)(this, v),
+            (0, w.VK)(this, i, void 0),
+            (0, w.VK)(this, r, void 0),
+            (0, w.VK)(this, n, void 0),
+            (0, w.VK)(this, h, void 0),
+            (0, w.VK)(this, a, void 0),
+            (0, w.VK)(this, o, void 0),
+            (0, w.VK)(this, u, void 0),
+            (0, w.VK)(this, c, void 0),
+            (0, w.OV)(this, i, t),
+            (0, w.OV)(this, h, s),
+            (0, w.OV)(this, n, []),
+            (0, w.OV)(this, a, []),
+            (0, w.OV)(this, r, []),
+            this.setQueries(e);
         }
         onSubscribe() {
           1 === this.listeners.size &&
-            (0, v.S7)(this, a).forEach((e) => {
-              e.subscribe((t) => {
-                (0, v.jq)(this, w, y).call(this, e, t);
+            (0, w.S7)(this, a).forEach((t) => {
+              t.subscribe((e) => {
+                (0, w.jq)(this, y, O).call(this, t, e);
               });
             });
         }
@@ -172,215 +112,215 @@
         }
         destroy() {
           (this.listeners = new Set()),
-            (0, v.S7)(this, a).forEach((e) => {
-              e.destroy();
+            (0, w.S7)(this, a).forEach((t) => {
+              t.destroy();
             });
         }
-        setQueries(e, t, s) {
-          (0, v.OV)(this, n, e),
-            (0, v.OV)(this, o, t),
-            b.j.batch(() => {
-              const e = (0, v.S7)(this, a),
-                t = (0, v.jq)(this, m, S).call(this, (0, v.S7)(this, n));
-              t.forEach((e) =>
-                e.observer.setOptions(e.defaultedQueryOptions, s),
+        setQueries(t, e, s) {
+          (0, w.OV)(this, n, t),
+            (0, w.OV)(this, h, e),
+            V.j.batch(() => {
+              const t = (0, w.S7)(this, a),
+                e = (0, w.jq)(this, S, m).call(this, (0, w.S7)(this, n));
+              e.forEach((t) =>
+                t.observer.setOptions(t.defaultedQueryOptions, s),
               );
-              const i = t.map((e) => e.observer),
-                o = i.map((e) => e.getCurrentResult()),
-                h = i.some((t, s) => t !== e[s]);
-              (e.length !== i.length || h) &&
-                ((0, v.OV)(this, a, i),
-                (0, v.OV)(this, r, o),
+              const i = e.map((t) => t.observer),
+                h = i.map((t) => t.getCurrentResult()),
+                o = i.some((e, s) => e !== t[s]);
+              (t.length !== i.length || o) &&
+                ((0, w.OV)(this, a, i),
+                (0, w.OV)(this, r, h),
                 this.hasListeners() &&
-                  (R(e, i).forEach((e) => {
-                    e.destroy();
+                  (Q(t, i).forEach((t) => {
+                    t.destroy();
                   }),
-                  R(i, e).forEach((e) => {
-                    e.subscribe((t) => {
-                      (0, v.jq)(this, w, y).call(this, e, t);
+                  Q(i, t).forEach((t) => {
+                    t.subscribe((e) => {
+                      (0, w.jq)(this, y, O).call(this, t, e);
                     });
                   }),
-                  (0, v.jq)(this, E, O).call(this)));
+                  (0, w.jq)(this, v, b).call(this)));
             });
         }
         getCurrentResult() {
-          return (0, v.S7)(this, r);
+          return (0, w.S7)(this, r);
         }
         getQueries() {
-          return (0, v.S7)(this, a).map((e) => e.getCurrentQuery());
+          return (0, w.S7)(this, a).map((t) => t.getCurrentQuery());
         }
         getObservers() {
-          return (0, v.S7)(this, a);
+          return (0, w.S7)(this, a);
         }
-        getOptimisticResult(e, t) {
-          const s = (0, v.jq)(this, m, S)
-            .call(this, e)
-            .map((e) =>
-              e.observer.getOptimisticResult(e.defaultedQueryOptions),
+        getOptimisticResult(t, e) {
+          const s = (0, w.jq)(this, S, m)
+            .call(this, t)
+            .map((t) =>
+              t.observer.getOptimisticResult(t.defaultedQueryOptions),
             );
           return [
             s,
-            (e) => (0, v.jq)(this, p, f).call(this, e ?? s, t),
-            () => (0, v.jq)(this, l, d).call(this, s, e),
+            (t) => (0, w.jq)(this, f, p).call(this, t ?? s, e),
+            () => (0, w.jq)(this, l, d).call(this, s, t),
           ];
         }
       };
       (i = new WeakMap()),
         (r = new WeakMap()),
         (n = new WeakMap()),
-        (o = new WeakMap()),
-        (a = new WeakMap()),
         (h = new WeakMap()),
+        (a = new WeakMap()),
+        (o = new WeakMap()),
         (u = new WeakMap()),
         (c = new WeakMap()),
         (l = new WeakSet()),
-        (d = function (e, t) {
-          const s = (0, v.jq)(this, m, S).call(this, t);
-          return s.map((t, i) => {
-            const r = e[i];
-            return t.defaultedQueryOptions.notifyOnChangeProps
+        (d = function (t, e) {
+          const s = (0, w.jq)(this, S, m).call(this, e);
+          return s.map((e, i) => {
+            const r = t[i];
+            return e.defaultedQueryOptions.notifyOnChangeProps
               ? r
-              : t.observer.trackResult(r, (e) => {
-                  s.forEach((t) => {
-                    t.observer.trackProp(e);
+              : e.observer.trackResult(r, (t) => {
+                  s.forEach((e) => {
+                    e.observer.trackProp(t);
                   });
                 });
           });
         }),
-        (p = new WeakSet()),
-        (f = function (e, t) {
-          return t
-            ? (((0, v.S7)(this, h) &&
-                (0, v.S7)(this, r) === (0, v.S7)(this, c) &&
-                t === (0, v.S7)(this, u)) ||
-                ((0, v.OV)(this, u, t),
-                (0, v.OV)(this, c, (0, v.S7)(this, r)),
-                (0, v.OV)(this, h, (0, k.BH)((0, v.S7)(this, h), t(e)))),
-              (0, v.S7)(this, h))
-            : e;
+        (f = new WeakSet()),
+        (p = function (t, e) {
+          return e
+            ? (((0, w.S7)(this, o) &&
+                (0, w.S7)(this, r) === (0, w.S7)(this, c) &&
+                e === (0, w.S7)(this, u)) ||
+                ((0, w.OV)(this, u, e),
+                (0, w.OV)(this, c, (0, w.S7)(this, r)),
+                (0, w.OV)(this, o, (0, k.BH)((0, w.S7)(this, o), e(t)))),
+              (0, w.S7)(this, o))
+            : t;
         }),
-        (m = new WeakSet()),
-        (S = function (e) {
-          const t = new Map(
-              (0, v.S7)(this, a).map((e) => [e.options.queryHash, e]),
+        (S = new WeakSet()),
+        (m = function (t) {
+          const e = new Map(
+              (0, w.S7)(this, a).map((t) => [t.options.queryHash, t]),
             ),
             s = [];
           return (
-            e.forEach((e) => {
-              const r = (0, v.S7)(this, i).defaultQueryOptions(e),
-                n = t.get(r.queryHash);
+            t.forEach((t) => {
+              const r = (0, w.S7)(this, i).defaultQueryOptions(t),
+                n = e.get(r.queryHash);
               if (n) s.push({ defaultedQueryOptions: r, observer: n });
               else {
-                const e = (0, v.S7)(this, a).find(
-                  (e) => e.options.queryHash === r.queryHash,
+                const t = (0, w.S7)(this, a).find(
+                  (t) => t.options.queryHash === r.queryHash,
                 );
                 s.push({
                   defaultedQueryOptions: r,
-                  observer: e ?? new q.$((0, v.S7)(this, i), r),
+                  observer: t ?? new E.$((0, w.S7)(this, i), r),
                 });
               }
             }),
             s.sort(
-              (t, s) =>
-                e.findIndex(
-                  (e) => e.queryHash === t.defaultedQueryOptions.queryHash,
+              (e, s) =>
+                t.findIndex(
+                  (t) => t.queryHash === e.defaultedQueryOptions.queryHash,
                 ) -
-                e.findIndex(
-                  (e) => e.queryHash === s.defaultedQueryOptions.queryHash,
+                t.findIndex(
+                  (t) => t.queryHash === s.defaultedQueryOptions.queryHash,
                 ),
             )
           );
         }),
-        (w = new WeakSet()),
-        (y = function (e, t) {
-          const s = (0, v.S7)(this, a).indexOf(e);
+        (y = new WeakSet()),
+        (O = function (t, e) {
+          const s = (0, w.S7)(this, a).indexOf(t);
           -1 !== s &&
-            ((0, v.OV)(
+            ((0, w.OV)(
               this,
               r,
-              (function (e, t, s) {
-                const i = e.slice(0);
-                return (i[t] = s), i;
-              })((0, v.S7)(this, r), s, t),
+              (function (t, e, s) {
+                const i = t.slice(0);
+                return (i[e] = s), i;
+              })((0, w.S7)(this, r), s, e),
             ),
-            (0, v.jq)(this, E, O).call(this));
+            (0, w.jq)(this, v, b).call(this));
         }),
-        (E = new WeakSet()),
-        (O = function () {
-          var e;
+        (v = new WeakSet()),
+        (b = function () {
+          var t;
           if (this.hasListeners()) {
-            (0, v.S7)(this, h) !==
-              (0, v.jq)(this, p, f).call(
+            (0, w.S7)(this, o) !==
+              (0, w.jq)(this, f, p).call(
                 this,
-                (0, v.jq)(this, l, d).call(
+                (0, w.jq)(this, l, d).call(
                   this,
-                  (0, v.S7)(this, r),
-                  (0, v.S7)(this, n),
+                  (0, w.S7)(this, r),
+                  (0, w.S7)(this, n),
                 ),
-                null == (e = (0, v.S7)(this, o)) ? void 0 : e.combine,
+                null == (t = (0, w.S7)(this, h)) ? void 0 : t.combine,
               ) &&
-              b.j.batch(() => {
-                this.listeners.forEach((e) => {
-                  e((0, v.S7)(this, r));
+              V.j.batch(() => {
+                this.listeners.forEach((t) => {
+                  t((0, w.S7)(this, r));
                 });
               });
           }
         });
-      var j = s(29385),
+      var K = s(29385),
         W = s(85010),
-        K = s(8184),
-        C = s(33478),
+        C = s(8184),
+        R = s(33478),
         M = s(99583),
-        _ = s(61314);
-      function L({ queries: e, ...t }, s) {
-        const i = (0, j.jE)(s),
+        H = s(61314);
+      function _({ queries: t, ...e }, s) {
+        const i = (0, K.jE)(s),
           r = (0, W.w)(),
-          n = (0, K.h)(),
-          o = g.useMemo(
+          n = (0, C.h)(),
+          h = q.useMemo(
             () =>
-              e.map((e) => {
-                const t = i.defaultQueryOptions(e);
+              t.map((t) => {
+                const e = i.defaultQueryOptions(t);
                 return (
-                  (t._optimisticResults = r ? "isRestoring" : "optimistic"), t
+                  (e._optimisticResults = r ? "isRestoring" : "optimistic"), e
                 );
               }),
-            [e, i, r],
+            [t, i, r],
           );
-        o.forEach((e) => {
-          (0, M.jv)(e), (0, C.LJ)(e, n);
+        h.forEach((t) => {
+          (0, M.jv)(t), (0, R.LJ)(t, n);
         }),
-          (0, C.wZ)(n);
-        const [a] = g.useState(() => new Q(i, o, t)),
-          [h, u, c] = a.getOptimisticResult(o, t.combine);
-        g.useSyncExternalStore(
-          g.useCallback(
-            (e) => (r ? _.l : a.subscribe(b.j.batchCalls(e))),
+          (0, R.wZ)(n);
+        const [a] = q.useState(() => new j(i, h, e)),
+          [o, u, c] = a.getOptimisticResult(h, e.combine);
+        q.useSyncExternalStore(
+          q.useCallback(
+            (t) => (r ? H.l : a.subscribe(V.j.batchCalls(t))),
             [a, r],
           ),
           () => a.getCurrentResult(),
           () => a.getCurrentResult(),
         ),
-          g.useEffect(() => {
-            a.setQueries(o, t, { listeners: !1 });
-          }, [o, t, a]);
-        const l = h.some((e, t) => (0, M.EU)(o[t], e))
-          ? h.flatMap((e, t) => {
-              const s = o[t];
+          q.useEffect(() => {
+            a.setQueries(h, e, { listeners: !1 });
+          }, [h, e, a]);
+        const l = o.some((t, e) => (0, M.EU)(h[e], t))
+          ? o.flatMap((t, e) => {
+              const s = h[e];
               if (s) {
-                const t = new q.$(i, s);
-                if ((0, M.EU)(s, e)) return (0, M.iL)(s, t, n);
-                (0, M.nE)(e, r) && (0, M.iL)(s, t, n);
+                const e = new E.$(i, s);
+                if ((0, M.EU)(s, t)) return (0, M.iL)(s, e, n);
+                (0, M.nE)(t, r) && (0, M.iL)(s, e, n);
               }
               return [];
             })
           : [];
         if (l.length > 0) throw Promise.all(l);
-        const d = h.find((e, t) => {
-          const s = o[t];
+        const d = o.find((t, e) => {
+          const s = h[e];
           return (
             s &&
-            (0, C.$1)({
-              result: e,
+            (0, R.$1)({
+              result: t,
               errorResetBoundary: n,
               throwOnError: s.throwOnError,
               query: i.getQueryCache().get(s.queryHash),

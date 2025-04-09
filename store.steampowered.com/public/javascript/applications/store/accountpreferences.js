@@ -1184,8 +1184,8 @@
         K = a(14771),
         W = a(32754),
         J = a(11838),
-        j = a(2160);
-      const X = (0, u.PA)(() => {
+        X = a(2160);
+      const j = (0, u.PA)(() => {
         let e = Q.Get();
         const t = (0, f.A)(),
           a = (function () {
@@ -1523,7 +1523,7 @@
         const t = e.last_seen ?? e.first_seen;
         if (t && t.city && t.country) {
           return {
-            location: (0, j.nA)(c.TS.EREALM)
+            location: (0, X.nA)(c.TS.EREALM)
               ? t.city
               : t.city + ", " + t.country,
             country: t.country,
@@ -1985,6 +1985,7 @@
           NotificationSettings: () => "/notificationsettings",
           FamilyManagement: () => "/familymanagement",
           AuthorizedDevices: () => "/authorizeddevices",
+          SecurityDevices: () => "/securitydevices",
           PlaytestInvites: () => "/playtestinvites",
           Playtests: () => "/playtests",
         },
@@ -2026,7 +2027,16 @@
               render: () =>
                 n.createElement(R.X, {
                   config: {
-                    "authorized-devices": () => n.createElement(X, null),
+                    "authorized-devices": () => n.createElement(j, null),
+                  },
+                }),
+            }),
+            n.createElement(i.qh, {
+              path: `${t}${a.SecurityDevices()}`,
+              render: () =>
+                n.createElement(R.X, {
+                  config: {
+                    "security-devices": () => n.createElement(j, null),
                   },
                 }),
             }),

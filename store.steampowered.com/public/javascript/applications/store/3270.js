@@ -596,7 +596,7 @@
               "Clan.GetPartnerEventsByBuildIDRange#1",
               (0, d.I8)(z, t),
               R,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           });
       })(i || (i = {}));

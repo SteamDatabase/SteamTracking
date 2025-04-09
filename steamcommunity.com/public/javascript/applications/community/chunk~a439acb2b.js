@@ -23,11 +23,11 @@
     },
     25228: (e, t, a) => {
       "use strict";
-      a.d(t, { Yg: () => _, t3: () => S });
+      a.d(t, { Yg: () => w, t3: () => C });
       var o = a(40323),
         n = a.n(o),
-        i = a(90626),
-        l = a(22837),
+        l = a(90626),
+        i = a(22837),
         r = a(2160),
         s = a(69343),
         c = a(33737),
@@ -38,21 +38,21 @@
         d = a(68797),
         E = a(52038),
         A = a(61859),
-        p = a(87669),
-        h = a(32754),
-        w = a(96471);
-      const _ = (e) => {
+        h = a(87669),
+        p = a(32754),
+        _ = a(96471);
+      const w = (e) => {
           const t = (t, a) => {
             t.preventDefault();
             const {
                 fnGetLocData: o,
                 closeModal: n,
-                strFileNamePrefix: i,
+                strFileNamePrefix: l,
                 lang: r,
               } = e,
               s = o(),
-              c = new p.s();
-            let g = i ? i + "_localization" : "localization";
+              c = new h.s();
+            let g = l ? l + "_localization" : "localization";
             switch (a) {
               case "csv_row":
                 c.WriteLocalizationData_CSV_LanguageRows(s, g + ".csv");
@@ -70,44 +70,44 @@
                 c.WriteLocalizationData_XML_SingleLanguage(
                   s,
                   r,
-                  g + "_" + (0, l.x6)((0, l.Lg)(r)) + ".xml",
+                  g + "_" + (0, i.x6)((0, i.Lg)(r)) + ".xml",
                 );
             }
             n && n();
           };
-          return i.createElement(
-            i.Fragment,
+          return l.createElement(
+            l.Fragment,
             null,
             Boolean(e.bShowCSV) &&
-              i.createElement(
-                i.Fragment,
+              l.createElement(
+                l.Fragment,
                 null,
-                i.createElement(
+                l.createElement(
                   c.jn,
                   { onClick: (e) => t(e, "csv_row") },
                   (0, A.we)("#Localization_Export_Btn_RowLanguages"),
                 ),
-                i.createElement(
+                l.createElement(
                   c.jn,
                   { onClick: (e) => t(e, "csv_column") },
                   (0, A.we)("#Localization_Export_Btn_ColumnLanguages"),
                 ),
-                i.createElement(
+                l.createElement(
                   c.jn,
                   { onClick: (e) => t(e, "csv_token") },
                   (0, A.we)("#Localization_Export_Btn_TokenLanguages"),
                 ),
               ),
             Boolean(e.bShowXML) &&
-              i.createElement(
+              l.createElement(
                 c.jn,
                 { onClick: (e) => t(e, "xml") },
                 (0, A.we)("#Localization_Export_Btn_XML"),
               ),
           );
         },
-        S = (e) => {
-          const [t, a] = (0, i.useState)(!1),
+        C = (e) => {
+          const [t, a] = (0, l.useState)(!1),
             o = (e, t) => {
               a(!1),
                 console.log(
@@ -116,18 +116,18 @@
                   e,
                 ),
                 (0, u.pg)(
-                  i.createElement(
+                  l.createElement(
                     m.KG,
                     null,
-                    i.createElement(
+                    l.createElement(
                       "div",
                       null,
-                      i.createElement(
+                      l.createElement(
                         "p",
                         null,
                         (0, A.we)("#Localization_Error_Input"),
                       ),
-                      i.createElement("p", null, e.message),
+                      l.createElement("p", null, e.message),
                     ),
                   ),
                   window,
@@ -138,16 +138,16 @@
               let t = "";
               e.forEach((e) => {
                 t.length > 0 && (t += ", "),
-                  (t += (0, A.we)("#Language_" + (0, l.Lg)(e)));
+                  (t += (0, A.we)("#Language_" + (0, i.Lg)(e)));
               }),
                 (0, u.pg)(
-                  i.createElement(
+                  l.createElement(
                     m.o0,
                     {
                       strTitle: (0, A.we)("#EventDisplay_Share_Success"),
                       bAlertDialog: !0,
                     },
-                    i.createElement(
+                    l.createElement(
                       "div",
                       null,
                       0 == t.length
@@ -160,19 +160,19 @@
                   window,
                 );
             },
-            _ = async (t) => {
-              let i = t.target.files;
-              if (i && i.length > 0) {
+            w = async (t) => {
+              let l = t.target.files;
+              if (l && l.length > 0) {
                 a(!0);
                 let t = new Array(),
-                  l = new p.s();
-                for (let a = 0; a < i.length; ++a)
-                  if (i[a]) {
-                    if (i[a].name.toLocaleLowerCase().endsWith(".csv"))
-                      return void n().parse(i[0], {
+                  i = new h.s();
+                for (let a = 0; a < l.length; ++a)
+                  if (l[a]) {
+                    if (l[a].name.toLocaleLowerCase().endsWith(".csv"))
+                      return void n().parse(l[0], {
                         header: !0,
                         complete: (t) => {
-                          let a = new p.s().DetectAndFormatCSV(t);
+                          let a = new h.s().DetectAndFormatCSV(t);
                           if (!a)
                             return void o({
                               code: "",
@@ -183,27 +183,27 @@
                           const n = A.A0.GetLanguageListForRealms([
                               r.TU.k_ESteamRealmGlobal,
                             ]),
-                            i = e.fnOnImportLocData(a, n);
-                          c(i);
+                            l = e.fnOnImportLocData(a, n);
+                          c(l);
                         },
                         error: o,
                       });
-                    if (i[a].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let n = (0, s.j)(i[a].name, -1);
+                    if (l[a].name.toLocaleLowerCase().endsWith(".xml")) {
+                      let n = (0, s.j)(l[a].name, -1);
                       if (null == n || -1 == n)
                         return void o({
                           code: "",
                           message: (0, A.we)(
                             "#Localization_Error_FileLangauage",
-                            i[a].name,
+                            l[a].name,
                           ),
                           row: 0,
                           type: "filenameerror",
                         });
                       try {
                         const o =
-                          await l.ReadLocalizationData_XML_SingleLanguage(
-                            i[a],
+                          await i.ReadLocalizationData_XML_SingleLanguage(
+                            l[a],
                             n,
                           );
                         e.fnOnImportLocData(o, [n]).forEach((e) => {
@@ -226,7 +226,7 @@
                         code: "",
                         message: (0, A.we)(
                           "#Localization_Error_FileExtention",
-                          i[a].name,
+                          l[a].name,
                         ),
                         row: 0,
                         type: "filenameerror",
@@ -235,96 +235,43 @@
                 c(t);
               }
             };
-          return i.createElement(
-            h.he,
+          return l.createElement(
+            p.he,
             {
               className: (0, E.A)(
                 e.className ? e.className : g.EditPreviewButton,
               ),
               toolTipContent: e.strToolTip,
             },
-            i.createElement(
+            l.createElement(
               "label",
-              { className: w.ImportButton, htmlFor: "importlocalization" },
-              t && i.createElement(L.t, { size: "small" }),
-              i.createElement(
+              { className: _.ImportButton, htmlFor: "importlocalization" },
+              t && l.createElement(L.t, { size: "small" }),
+              l.createElement(
                 "div",
-                { className: w.Label },
+                { className: _.Label },
                 (0, A.we)(e.strLabel ? e.strLabel : "#Localization_Import_Btn"),
               ),
-              i.createElement("input", {
+              l.createElement("input", {
                 id: "importlocalization",
-                className: w.ImportButton,
+                className: _.ImportButton,
                 style: { display: "none" },
                 type: "file",
-                onSubmit: _,
-                onChange: _,
+                onSubmit: w,
+                onChange: w,
                 multiple: !0,
               }),
             ),
           );
         };
     },
-    9161: (e, t, a) => {
-      "use strict";
-      a.d(t, { g: () => i });
-      var o = a(40323),
-        n = a.n(o);
-      class i {
-        static ParseCSVFile(e) {
-          return new Promise((t, a) => {
-            const o = {
-              header: !0,
-              skipEmptyLines: "greedy",
-              complete: t,
-              error: (e) => a({ errors: [e] }),
-            };
-            n().parse(e, o);
-          });
-        }
-        static ReadFile(e) {
-          return new Promise((t, a) => {
-            const o = new FileReader();
-            (o.onload = (e) => t(o.result)), o.readAsText(e);
-          });
-        }
-        static WriteFile(e, t) {
-          let a = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
-          else {
-            const t = window.URL.createObjectURL(e);
-            a.href = t;
-          }
-          a.setAttribute("download", t), a.click();
-          try {
-            document.removeChild(a);
-          } catch (e) {}
-        }
-        static WriteCSVToFile(e, t) {
-          const a = n().unparse(e, { header: !0 });
-          i.WriteFile(new Blob([a], { type: "text/csv:charset=utf-8;" }), t);
-        }
-        static WriteXMLToFile(e, t) {
-          const a = () =>
-            this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let o =
-            "<" + a() + 'xml version="1.0" encoding="UTF-8" ' + a() + ">\n";
-          (o += new XMLSerializer().serializeToString(e)),
-            i.WriteFile(
-              new Blob([o], { type: "application/xml:charset=utf-8;" }),
-              t,
-            );
-        }
-      }
-      i.m_DummyValueForQuestionHack = 0;
-    },
     87669: (e, t, a) => {
       "use strict";
       a.d(t, { G: () => s, s: () => c });
       var o = a(22837),
         n = a(2160),
-        i = a(62490),
-        l = a(9161),
+        l = a(62490),
+        i = a(9161),
         r = a(61859);
       class s {
         constructor() {
@@ -336,7 +283,7 @@
         }
         SetLocalization(e, t, a) {
           let o = this.m_mapTokens.get(e);
-          o || ((o = (0, i.$Y)([], 31, null)), this.m_mapTokens.set(e, o)),
+          o || ((o = (0, l.$Y)([], 31, null)), this.m_mapTokens.set(e, o)),
             (o[t] = a);
         }
         GetSortedTokenList() {
@@ -382,7 +329,7 @@
       }
       class c {
         DetectAndFormatCSV(e) {
-          var t, a, n, i, l, r;
+          var t, a, n, l, i, r;
           let s = null;
           return (
             (null ===
@@ -397,20 +344,20 @@
             "value" === e.meta.fields[2]
               ? (s = this.ReadLocalizationData_CSV_TokenLanguageList(e))
               : (null ===
-                    (i =
+                    (l =
                       null === (n = null == e ? void 0 : e.meta) || void 0 === n
                         ? void 0
-                        : n.fields) || void 0 === i
+                        : n.fields) || void 0 === l
                     ? void 0
-                    : i.length) >= 2 &&
+                    : l.length) >= 2 &&
                   "field" === e.meta.fields[0] &&
                   -1 != (0, o.sf)(e.meta.fields[1], -1)
                 ? (s = this.ReadLocalizationData_CSV_LanguageColumns(e))
                 : (null ===
                     (r =
-                      null === (l = null == e ? void 0 : e.meta) || void 0 === l
+                      null === (i = null == e ? void 0 : e.meta) || void 0 === i
                         ? void 0
-                        : l.fields) || void 0 === r
+                        : i.fields) || void 0 === r
                     ? void 0
                     : r.length) >= 2 &&
                   "language" === e.meta.fields[0] &&
@@ -421,13 +368,13 @@
         async ReadLocalizationData_XML_SingleLanguage(e, t) {
           let a = new s(),
             o = new DOMParser(),
-            n = await l.g.ReadFile(e),
-            i = o.parseFromString(n.toString(), "application/xml");
-          for (let e = 0; e < i.documentElement.children.length; ++e) {
-            const o = i.documentElement.children.item(e),
+            n = await i.g.ReadFile(e),
+            l = o.parseFromString(n.toString(), "application/xml");
+          for (let e = 0; e < l.documentElement.children.length; ++e) {
+            const o = l.documentElement.children.item(e),
               n = o.getAttribute("id").toLocaleLowerCase(),
-              l = o.textContent;
-            a.SetLocalization(n, t, l);
+              i = o.textContent;
+            a.SetLocalization(n, t, i);
           }
           return a;
         }
@@ -448,8 +395,8 @@
             e.data.forEach((e) => {
               const a = e.field;
               for (let n = 0; n < 31; ++n) {
-                const i = (0, o.x6)((0, o.Lg)(n));
-                t.SetLocalization(a, n, e[i]);
+                const l = (0, o.x6)((0, o.Lg)(n));
+                t.SetLocalization(a, n, e[l]);
               }
             }),
             t
@@ -476,13 +423,13 @@
           let a = new Array();
           e.GetSortedTokenList().forEach((t) => {
             for (const n of this.GetExportLanguages()) {
-              let i = { field: t };
-              (i.language = (0, o.x6)((0, o.Lg)(n))),
-                (i.value = e.GetLocalization(t, n)),
-                a.push(i);
+              let l = { field: t };
+              (l.language = (0, o.x6)((0, o.Lg)(n))),
+                (l.value = e.GetLocalization(t, n)),
+                a.push(l);
             }
           }),
-            l.g.WriteCSVToFile(a, t);
+            i.g.WriteCSVToFile(a, t);
         }
         WriteLocalizationData_CSV_LanguageColumns(e, t) {
           let a = new Array();
@@ -492,7 +439,7 @@
               n[(0, o.x6)((0, o.Lg)(a))] = e.GetLocalization(t, a);
             a.push(n);
           }),
-            l.g.WriteCSVToFile(a, t);
+            i.g.WriteCSVToFile(a, t);
         }
         WriteLocalizationData_CSV_LanguageRows(e, t) {
           let a = new Array();
@@ -505,7 +452,7 @@
               a[o][t] = n;
             }
           }),
-            l.g.WriteCSVToFile(a, t);
+            i.g.WriteCSVToFile(a, t);
         }
         WriteLocalizationData_XML_SingleLanguage(e, t, a) {
           let o = document.implementation.createDocument(null, "content", null);
@@ -515,7 +462,7 @@
               n.appendChild(o.createTextNode(e.GetLocalization(a, t) || "")),
               o.documentElement.append(n);
           }),
-            l.g.WriteXMLToFile(o, a);
+            i.g.WriteXMLToFile(o, a);
         }
       }
     },

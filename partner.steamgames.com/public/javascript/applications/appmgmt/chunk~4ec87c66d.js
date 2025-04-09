@@ -29350,7 +29350,7 @@
                   n.createElement(
                     "div",
                     { className: kn().SectionBody },
-                    "You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/&st;feb_2025<",
+                    "You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/<feb_2025>",
                   ),
                 ));
               break;
