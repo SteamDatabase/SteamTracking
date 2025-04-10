@@ -1598,7 +1598,7 @@ HelpWizard = {
 		return false;
 	},
 
-		SendAccountRecoveryCode: function( strSessionID, eMethod, strLink, nNonce, strErrorID, strLoadingID, strCodeResentID ) {
+		SendAccountRecoveryCode: function( strSessionID, eMethod, strLink, strErrorID, strLoadingID, strCodeResentID ) {
 		var elError = $J( strErrorID );
 
 		try
@@ -1620,8 +1620,8 @@ HelpWizard = {
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				s: strSessionID,
 				method: eMethod,
-				rcnn: nNonce,
 				link: strLink,
+				n: 1
 			} )
 		}).fail( function( xhr ) {
 			elError.text( "An error occurred trying to handle that request. Please give us a few minutes and try again." ).slideDown();
