@@ -7381,7 +7381,7 @@
         InternalAddOptInDef(e) {
           this.m_optInDef.set(e.pageid.toLowerCase(), e);
           const t = Math.floor(Date.now() / 1e3);
-          e.event_end_date < t
+          e.event_end_date && 0 != e.event_end_date && e.event_end_date < t
             ? this.m_archivedOptInDef.push(e)
             : this.m_activeOptInDef.push(e),
             !e.sale_optin_enabled &&
@@ -19879,10 +19879,9 @@
             n.createElement(m.CB, {
               onCancel: o,
               onOK: async function () {
-                let e;
                 if (
                   (a.current && a.current("new create requested."),
-                  await (e = t.CreatePage(i, r.token)),
+                  await t.CreatePage(i, r.token),
                   t.GetCreatedPageId())
                 )
                   window.location.href =
