@@ -896,13 +896,7 @@
                 }),
                 a.createElement(
                   "div",
-                  {
-                    className: (0, c.A)(
-                      I.DevSummaryContent,
-                      C.FlexColumnContainer,
-                      C.FlexContainSpaceBetween,
-                    ),
-                  },
+                  { className: (0, c.A)(I.DevSummaryContent) },
                   a.createElement(
                     "div",
                     { className: C.FlexRowContainer },

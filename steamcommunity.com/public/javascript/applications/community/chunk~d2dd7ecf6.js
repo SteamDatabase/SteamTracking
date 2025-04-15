@@ -615,12 +615,6 @@
         OnHandleExpandedThumbnail() {
           this.InternalHandleExpandedAction(c._o.k_eInsertThumbnail);
         }
-        OnHandleOpenLocalizedImageGroup() {
-          null != this.state.photoIndex &&
-            this.InternalOpenLocalizeImageGroup(
-              this.state.filteredClanImages[this.state.photoIndex],
-            );
-        }
         InternalHandleExpandedAction(e) {
           if (null != this.state.photoIndex) {
             const t = this.state.filteredClanImages[this.state.photoIndex];
@@ -822,7 +816,6 @@
         (0, n.Cg)([k.oI], F.prototype, "OnExpandExitImage", null),
         (0, n.Cg)([k.oI], F.prototype, "OnHandleExpandedFullSize", null),
         (0, n.Cg)([k.oI], F.prototype, "OnHandleExpandedThumbnail", null),
-        (0, n.Cg)([k.oI], F.prototype, "OnHandleOpenLocalizedImageGroup", null),
         (0, n.Cg)([k.oI], F.prototype, "InternalHandleExpandedAction", null),
         (0, n.Cg)([k.oI], F.prototype, "InternalOpenLocalizeImageGroup", null),
         (F = G = (0, n.Cg)([o.PA], F));
@@ -1722,7 +1715,7 @@
     },
     2805: (e, t, a) => {
       "use strict";
-      a.d(t, { GF: () => k, Hd: () => U, ge: () => b });
+      a.d(t, { GF: () => k, Hd: () => G, ge: () => b });
       var n = a(34629),
         l = a(90626),
         r = a(81047),
@@ -1830,7 +1823,7 @@
               "div",
               { className: A().ClanImageGrid },
               e.map((e) =>
-                l.createElement(R, {
+                l.createElement(T, {
                   key: e.imageid,
                   clanImage: e,
                   selected: e == r,
@@ -1863,9 +1856,6 @@
             this.props.clanImage,
             r._o.k_eInsertThumbnail,
           );
-        }
-        onHandleLocalizedImageGroup() {
-          this.props.fnOnOpenLocalizedImageGroup(this.props.clanImage);
         }
         ShowInsertAction(e) {
           return this.props.insertActions
@@ -1967,18 +1957,12 @@
               String(this.props.clanImage.imageid),
               A().Hilight,
             ),
-            n = o.b.InitFromClanID(e.clanAccountID);
-          const m = s.KN.Get().GetPartnerEventPermissions(n);
-          let p = this.state.bDeleting;
-          const u = (0, i.r3)(e);
-          let I = !p && !u && this.ShowInsertAction(r._o.k_eInsertFullImage),
-            h = !p && !u && this.ShowInsertAction(r._o.k_eInsertThumbnail),
-            w = !p && u && this.ShowInsertAction(r._o.k_eInsertVideo),
-            C = Boolean(
-              !p &&
-                m.valve_admin &&
-                this.ShowInsertAction(r._o.k_eShowImageGroup),
-            );
+            n = this.state.bDeleting;
+          const o = (0, i.r3)(e);
+          let s = !n && !o && this.ShowInsertAction(r._o.k_eInsertFullImage),
+            m = !n && !o && this.ShowInsertAction(r._o.k_eInsertThumbnail),
+            g = !n && o && this.ShowInsertAction(r._o.k_eInsertVideo);
+          const p = this.ShowInsertAction(r._o.k_eShowImageGroup);
           return l.createElement(
             d.K,
             {
@@ -1994,7 +1978,7 @@
                 {
                   className: A().ImageWrapper,
                   style: {
-                    backgroundImage: u
+                    backgroundImage: o
                       ? ""
                       : `url( '${this.props.clanImage.thumb_url}' )`,
                   },
@@ -2004,44 +1988,42 @@
                   onDoubleClick: this.onHandleFullSize,
                   onClick: this.OnImageClick,
                 },
-                l.createElement(y, {
+                l.createElement(R, {
                   clanImage: e,
                   className: A().VideoBackground,
                 }),
               ),
-              I &&
+              s &&
                 l.createElement(
                   "span",
                   { className: A().Full, onClick: this.onHandleFullSize },
                   (0, v.we)("#ImagePicker_FullSize"),
                 ),
-              p &&
+              n &&
                 l.createElement(E.t, {
                   size: "medium",
                   className: A().FloatingThrobber,
                 }),
-              h &&
+              m &&
                 l.createElement(
                   "span",
                   { className: A().Thumb, onClick: this.onHandleThumbnail },
                   (0, v.we)("#ImagePicker_Thumbnail"),
                 ),
-              C &&
-                l.createElement(
-                  "span",
-                  {
-                    className: (0, _.A)(A().Localized, g().ValveOnlyBackground),
-                    onClick: this.onHandleLocalizedImageGroup,
-                  },
-                  "(VO) " + (0, v.we)("#ImagePicker_Localized"),
-                ),
-              w &&
+              p &&
+                l.createElement(y, {
+                  bDeleting: n,
+                  clanImage: this.props.clanImage,
+                  fnOnOpenLocalizedImageGroup:
+                    this.props.fnOnOpenLocalizedImageGroup,
+                }),
+              g &&
                 l.createElement(
                   "span",
                   { className: A().Full, onClick: this.onHandleVideo },
                   (0, v.we)("#ImagePicker_Video"),
                 ),
-              !p &&
+              !n &&
                 l.createElement(
                   "span",
                   { className: A().Delete, onClick: this.OnDeleteClick },
@@ -2057,6 +2039,24 @@
         }
       }
       function y(e) {
+        const {
+            clanImage: t,
+            fnOnOpenLocalizedImageGroup: a,
+            bDeleting: n,
+          } = e,
+          r = (0, s.Ec)(t.clanAccountID);
+        return n || !r.valve_admin
+          ? null
+          : l.createElement(
+              "span",
+              {
+                className: (0, _.A)(A().Localized, g().ValveOnlyBackground),
+                onClick: () => a(t),
+              },
+              "(VO) " + (0, v.we)("#ImagePicker_Localized"),
+            );
+      }
+      function R(e) {
         const { clanImage: t, className: a } = e;
         return (0, i.r3)(t)
           ? l.createElement(
@@ -2069,7 +2069,7 @@
             )
           : null;
       }
-      function R(e) {
+      function T(e) {
         const { clanImage: t, onImageSelected: a, selected: n } = e;
         return l.createElement(
           "div",
@@ -2083,13 +2083,13 @@
             "div",
             { className: A().ImgCtn },
             (0, i.r3)(t)
-              ? l.createElement(y, { clanImage: t })
+              ? l.createElement(R, { clanImage: t })
               : l.createElement("img", { src: t.url, loading: "lazy" }),
           ),
           l.createElement("div", { className: A().Name }, t.file_name),
         );
       }
-      function T(e) {
+      function U(e) {
         const { clanSteamID: t, closeModal: a, OnClanImageSelected: n } = e,
           r = (0, l.useCallback)(
             (e, t) => {
@@ -2118,7 +2118,7 @@
           }),
         );
       }
-      function U(e) {
+      function G(e) {
         const {
           clanSteamID: t,
           fnSetImageURL: a,
@@ -2149,7 +2149,7 @@
             type: "button",
             onClick: (e) => {
               (0, u.pg)(
-                l.createElement(T, { clanSteamID: t, OnClanImageSelected: n }),
+                l.createElement(U, { clanSteamID: t, OnClanImageSelected: n }),
                 (0, h.uX)(e),
               );
             },
@@ -2159,7 +2159,6 @@
       (0, n.Cg)([w.oI], N.prototype, "onHandleFullSize", null),
         (0, n.Cg)([w.oI], N.prototype, "onHandleVideo", null),
         (0, n.Cg)([w.oI], N.prototype, "onHandleThumbnail", null),
-        (0, n.Cg)([w.oI], N.prototype, "onHandleLocalizedImageGroup", null),
         (0, n.Cg)([w.oI], N.prototype, "OnDragStartSource", null),
         (0, n.Cg)([w.oI], N.prototype, "OnDragEndSource", null),
         (0, n.Cg)([w.oI], N.prototype, "OnDeleteClick", null),
@@ -3750,7 +3749,7 @@
     9161: (e, t, a) => {
       "use strict";
       a.d(t, { g: () => r });
-      var n = a(40323),
+      var n = a(94649),
         l = a.n(n);
       class r {
         static ParseCSVFile(e) {

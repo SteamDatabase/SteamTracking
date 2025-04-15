@@ -2542,7 +2542,7 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   color: #fff;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  padding: 0 16px;
+  padding: 0;
 }
 .BasicUI .partnereventshared_SaleSectionHeader_2WMiQ {
   font: var(--gpText-HeadingSmall);

@@ -1795,6 +1795,16 @@ body.v6 .game_area_description h2.bb_tag strong {
     color: #ffffff;
 }
 
+.game_area_dlc_row .capsule_container {
+	width: 184px;
+	height: auto;
+}
+
+.game_area_dlc_row .capsule_container img {
+	display: block;
+	width: 100%;
+}
+
 #dlc_footer {
 	margin-top: 1px;
 	color: #3c6180;
@@ -6179,6 +6189,24 @@ body.v6 .page_content.notes {
 	flex-shrink: 0;
 }
 
+.game_area_dlc_row.dlc_highlight {
+	display: grid;
+	grid-template-columns: 1fr 2fr auto;
+	grid-template-rows: auto;
+	grid-template-areas:
+    "capsule text price";
+}
+
+.game_area_dlc_row.dlc_highlight .capsule_container {
+	grid-area: capsule;
+}
+.game_area_dlc_row.dlc_highlight .game_area_dlc_name {
+	grid-area: text;
+}
+.game_area_dlc_row.dlc_highlight .game_area_dlc_price {
+	grid-area: price;
+}
+
 .dlc_highlight_reason_container {
 	display: flex;
 }
@@ -6261,10 +6289,10 @@ body.v6 .page_content.notes {
 	}
 	html.responsive .dlc_highlight .capsule_container {
 		display: flex;
+		max-width: 120px;
 		padding-right: 10px;
 	}
 	html.responsive .dlc_highlight .capsule {
-		max-width: 120px;
 		object-fit: scale-down;
 	}
 }

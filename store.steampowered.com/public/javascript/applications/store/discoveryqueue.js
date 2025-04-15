@@ -173,7 +173,7 @@
         if (!t.is_online) return null;
         const n = t.HasStateFlag(512),
           o = t.HasStateFlag(2048),
-          c = t.IsOnSteamDeck(),
+          c = t.IsOnSteamDeck() && !o,
           u = !c && !o && t.HasStateFlag(1024);
         return s.createElement(
           s.Fragment,

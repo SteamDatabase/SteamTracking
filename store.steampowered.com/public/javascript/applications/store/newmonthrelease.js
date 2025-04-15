@@ -31,8 +31,8 @@
         g = a(27221),
         d = a.n(g);
       function f(e) {
-        const { rgAppIDs: t, children: a } = e,
-          r = (0, o.useMemo)(
+        const { rgAppIDs: t, children: a, nMonth: r } = e,
+          n = (0, o.useMemo)(
             () => t.map((e) => i.A.Get().GetApp(e)).filter(Boolean),
             [t],
           );
@@ -53,11 +53,12 @@
                   {
                     className: (0, p.A)({
                       [d().ImageTint]: !0,
-                      [d().Wide2]: r.length <= 10,
-                      [d().Wide3]: r.length <= 20,
+                      [`Month${r}`]: !0,
+                      [d().Wide2]: n.length <= 10,
+                      [d().Wide3]: n.length <= 20,
                     }),
                   },
-                  r.map((e) =>
+                  n.map((e) =>
                     o.createElement("img", {
                       key: "bg_" + e.GetAppID(),
                       src: e.GetAssets().GetHeaderURL(),
@@ -813,7 +814,7 @@
               o.createElement(
                 E.tH,
                 null,
-                o.createElement($, {
+                o.createElement(K, {
                   TopMonthlyReleasesStore: t,
                   nMonth: l.getMonth(),
                   nYear: l.getFullYear(),
@@ -822,8 +823,8 @@
               ),
             );
       }
-      const K = { ...x.Xh, apply_user_filters: !0 };
-      function $(e) {
+      const $ = { ...x.Xh, apply_user_filters: !0 };
+      function K(e) {
         const {
             TopMonthlyReleasesStore: t,
             nYear: a,
@@ -843,7 +844,7 @@
                 : (g(null), []),
             [d],
           ),
-          T = (0, c.zX)(h, K),
+          T = (0, c.zX)(h, $),
           S = (0, o.useMemo)(
             () =>
               d && 1 != T
@@ -910,7 +911,7 @@
                   { className: y().ChartPage },
                   o.createElement(
                     f,
-                    { rgAppIDs: E },
+                    { rgAppIDs: E, nMonth: n },
                     o.createElement(ae, { nMonth: n, nYear: a }),
                   ),
                   o.createElement(z, {

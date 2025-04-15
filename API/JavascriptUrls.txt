@@ -1557,6 +1557,7 @@ ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}logout
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
+${STORE_BASE_URL}marketingmessages/list/?include_seen=1
 ${STORE_BASE_URL}meetsteam/${}
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile/?show=steamapp

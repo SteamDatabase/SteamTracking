@@ -1,7 +1,42 @@
 
+body.v6 h2.pageheader.twofactor_pageheader
+{
+	font-family: "Motiva Sans", Sans-serif;
+	font-size: 34px;
+	margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-transform: none;
+}
+
 .twofactor_error, .twofactor_warning
 {
 	color: #a94847;
+}
+
+.twofactor_warningbold
+{
+	color: #a94847;
+	font-weight: 500;
+}
+
+.twofactor_uppermargin
+{
+	margin-top: 20px;
+}
+
+.twofactor_header
+{
+	font-size: 20px;
+	font-weight: 700;
+    text-transform: none;
+	color: #ffffff;
+}
+
+.twofactor_settings_subheader
+{
+	font-weight: 700;
+	font-size: 14px;
 }
 
 .twofactor_settings_description
@@ -34,6 +69,11 @@
 	margin-top: 35px;
 }
 
+.twofactor_settings_options
+{
+	font-family: "Motiva Sans", Sans-serif;
+}
+
 .twofactor_settings_optionsheader
 {
 	color: #ffffff;
@@ -45,7 +85,7 @@
 {
 	display: block;
 	max-width: 714px;
-	
+
 	margin-top: 10px;
 	padding-right: 28px;
 	border: solid 1px;
@@ -64,14 +104,12 @@
 	background-size: auto 16px;
 
 	text-align: left;
-	
+
 	/* additional padding so contents do not render over arrow */
 	padding-right: 28px;
 	width: 712px;
 
 	cursor: pointer;
-}
-
 }
 
 .twofactor_settings_button.disabled {
@@ -171,6 +209,13 @@
 	font-weight: normal;
 	margin-top: 4px;
 	margin-bottom: 20px;
+}
+
+.twofactor_settings_button_description
+{
+	font-size: 13px;
+	font-weight: normal;
+	color: #c6d4df;
 }
 
 .twofactor_settings_input_nofloat

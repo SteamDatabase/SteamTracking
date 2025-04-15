@@ -222,7 +222,7 @@
         if (!t.is_online) return null;
         const i = t.HasStateFlag(512),
           s = t.HasStateFlag(2048),
-          m = t.IsOnSteamDeck(),
+          m = t.IsOnSteamDeck() && !s,
           p = !m && !s && t.HasStateFlag(1024);
         return r.createElement(
           r.Fragment,

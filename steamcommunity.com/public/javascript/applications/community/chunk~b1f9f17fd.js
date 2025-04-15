@@ -30581,7 +30581,7 @@
         if (!t.is_online) return null;
         const c = t.HasStateFlag(512),
           m = t.HasStateFlag(2048),
-          _ = t.IsOnSteamDeck(),
+          _ = t.IsOnSteamDeck() && !m,
           p = !_ && !m && t.HasStateFlag(1024);
         return n.createElement(
           n.Fragment,
@@ -35406,13 +35406,7 @@
                 }),
                 n.createElement(
                   "div",
-                  {
-                    className: (0, c.A)(
-                      v.DevSummaryContent,
-                      E.FlexColumnContainer,
-                      E.FlexContainSpaceBetween,
-                    ),
-                  },
+                  { className: (0, c.A)(v.DevSummaryContent) },
                   n.createElement(
                     "div",
                     { className: E.FlexRowContainer },

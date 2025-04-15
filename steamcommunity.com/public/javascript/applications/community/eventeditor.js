@@ -5753,19 +5753,20 @@
                     (0, D.we)("#EventDisclaimer_button_enter"),
                   ),
                 ),
-            c.createElement(
-              "div",
-              { className: Ja.OpenGuidelinesBtnCtn },
+            Boolean(a) &&
               c.createElement(
-                Yt.uU,
-                {
-                  href: `${G.TS.HELP_BASE_URL}en/wizard/HelpRequest/${a}`,
-                  className: (0, I.A)(v.Button),
-                  bForceExternal: !0,
-                },
-                (0, D.we)("#EventEditor_SaleValveApproval_Request_Link"),
+                "div",
+                { className: Ja.OpenGuidelinesBtnCtn },
+                c.createElement(
+                  Yt.uU,
+                  {
+                    href: `${G.TS.HELP_BASE_URL}en/wizard/HelpRequest/${a}`,
+                    className: (0, I.A)(v.Button),
+                    bForceExternal: !0,
+                  },
+                  (0, D.we)("#EventEditor_SaleValveApproval_Request_Link"),
+                ),
               ),
-            ),
             c.createElement(
               tt.E,
               { clanSteamID: e.GetClanSteamID() },

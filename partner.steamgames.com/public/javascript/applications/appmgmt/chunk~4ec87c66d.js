@@ -43122,6 +43122,11 @@
               i.createElement(
                 "li",
                 null,
+                (0, h.we)("#AssetRequest_Requirements_3point5"),
+              ),
+              i.createElement(
+                "li",
+                null,
                 (0, h.we)("#AssetRequest_Requirements_4"),
               ),
               i.createElement(
@@ -58432,6 +58437,17 @@
                   target: "_blank",
                 },
                 "filtered by store browse.",
+              ),
+              c.createElement("br", null),
+              c.createElement("br", null),
+              "A quick way to see visible marketing message is by going to this store page ",
+              c.createElement(
+                "a",
+                {
+                  href: `${Le.TS.STORE_BASE_URL}marketingmessages/list/?include_seen=1`,
+                  target: "_blank",
+                },
+                "marketing message list.",
               ),
             ),
           c.createElement("br", null),
@@ -92763,9 +92779,25 @@
           const t = (0, r.Lg)(e);
           return this.m_templateVars.webm[t]?.path;
         }
+        GetTemplateWebMWithFallback(e) {
+          const t = (0, r.Lg)(e);
+          if (this.m_templateVars.webm[t]?.path)
+            return [this.m_templateVars.webm[t].path, e];
+          const a = u.A0.GetELanguageFallback(e),
+            n = (0, r.Lg)(a);
+          return [this.m_templateVars.webm[n]?.path, a];
+        }
         GetTemplateMP4(e) {
           const t = (0, r.Lg)(e);
           return this.m_templateVars.mp4[t]?.path;
+        }
+        GetTemplateMP4WithFallback(e) {
+          const t = (0, r.Lg)(e);
+          if (this.m_templateVars.mp4[t]?.path)
+            return [this.m_templateVars.mp4[t].path, e];
+          const a = u.A0.GetELanguageFallback(e),
+            n = (0, r.Lg)(a);
+          return [this.m_templateVars.mp4[n]?.path, a];
         }
         GetLegalHTML() {
           return this.GetTemplateVars().use_custom_legal_text
@@ -104101,7 +104133,7 @@
         if (!t.is_online) return null;
         const r = t.HasStateFlag(512),
           i = t.HasStateFlag(2048),
-          l = t.IsOnSteamDeck(),
+          l = t.IsOnSteamDeck() && !i,
           o = !l && !i && t.HasStateFlag(1024);
         return u.createElement(
           u.Fragment,
@@ -106256,7 +106288,7 @@
     25228: (e, t, a) => {
       "use strict";
       a.d(t, { Yg: () => v, t3: () => f, zZ: () => b });
-      var n = a(40323),
+      var n = a(94649),
         r = a.n(n),
         i = a(90626),
         s = a(22837),

@@ -675,7 +675,7 @@
         if (!t.is_online) return null;
         const r = t.HasStateFlag(512),
           i = t.HasStateFlag(2048),
-          m = t.IsOnSteamDeck(),
+          m = t.IsOnSteamDeck() && !i,
           u = !m && !i && t.HasStateFlag(1024);
         return l.createElement(
           l.Fragment,
