@@ -51978,41 +51978,42 @@
     61859: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $w: () => c.$w,
-        $z: () => c.$z,
-        A0: () => u,
-        E3: () => B,
-        Hq: () => c.Hq,
-        NT: () => y,
-        Nm: () => c.Nm,
-        PP: () => p,
-        TG: () => g,
-        TW: () => c.TW,
-        Yp: () => b,
-        _l: () => c._l,
-        bi: () => C,
-        c9: () => m,
-        cc: () => c.cc,
-        l4: () => S,
-        lQ: () => c.lQ,
-        oW: () => _,
-        pN: () => v,
-        pf: () => R,
-        um: () => h,
-        vl: () => c.vl,
-        we: () => d,
+        $w: () => u.$w,
+        $z: () => u.$z,
+        A0: () => m,
+        E3: () => w,
+        Hq: () => u.Hq,
+        NT: () => M,
+        Nm: () => u.Nm,
+        PP: () => g,
+        TG: () => _,
+        TW: () => u.TW,
+        Yp: () => B,
+        _l: () => u._l,
+        bi: () => S,
+        c9: () => d,
+        cc: () => u.cc,
+        l4: () => v,
+        lQ: () => u.lQ,
+        oW: () => h,
+        pN: () => R,
+        pf: () => z,
+        um: () => f,
+        vl: () => u.vl,
+        we: () => p,
       });
       var i = r(90626),
         n = r(22837),
         s = r(2160),
         a = r(78327),
         o = r(62490),
-        l = r(6144),
-        c = r(91675);
-      class u {
+        l = r(44332),
+        c = r(6144),
+        u = r(91675);
+      class m {
         m_mapTokens = new Map();
         m_mapFallbackTokens = new Map();
-        m_cbkTokensChanged = new l.lu();
+        m_cbkTokensChanged = new c.lu();
         m_rgLocalesToUse;
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(e) {
@@ -52081,7 +52082,7 @@
             }),
             e)
           ) {
-            u.GetLanguageListForRealms(e).forEach((e) => {
+            m.GetLanguageListForRealms(e).forEach((e) => {
               -1 == t.indexOf(e) && t.push(e);
             });
           }
@@ -52097,12 +52098,21 @@
           return this.BLooksLikeToken(e) ? this.LocalizeString(e, t) : e;
         }
         LocalizeString(e, t) {
-          if (!this.BLooksLikeToken(e)) return;
-          let r = this.m_mapTokens.get(e.substring(1));
-          if (void 0 !== r) return r;
-          !t &&
-            u.sm_ErrorReportingStore &&
-            u.sm_ErrorReportingStore.ReportError(
+          const r = 0 == this.m_mapTokens.size;
+          if (
+            ((0, l.w)(
+              !r,
+              `Attempting to localize token '${e}' with no tokens in our map.`,
+            ),
+            !this.BLooksLikeToken(e))
+          )
+            return;
+          let i = this.m_mapTokens.get(e.substring(1));
+          if (void 0 !== i) return i;
+          t ||
+            !m.sm_ErrorReportingStore ||
+            r ||
+            m.sm_ErrorReportingStore.ReportError(
               new Error(
                 `Unable to find localization token '${e}' for language '${a.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
               ),
@@ -52119,7 +52129,7 @@
           const t = (0, n.sf)(a.TS.LANGUAGE),
             r = e.find((e) => e.language == t);
           if (r) return r.localized_string;
-          const i = u.GetELanguageFallback(t),
+          const i = m.GetELanguageFallback(t),
             s = e.find((e) => e.language == i);
           return s?.localized_string ?? "";
         }
@@ -52127,15 +52137,15 @@
           return Boolean(t.find((t) => t.language == e));
         }
       }
-      function m(e) {
-        return null != R.LocalizeString(e, !0);
-      }
-      function d(e, ...t) {
-        let r = R.LocalizeString(e);
-        return void 0 === r ? e : w(r, ...t);
+      function d(e) {
+        return null != z.LocalizeString(e, !0);
       }
       function p(e, ...t) {
-        let r = R.LocalizeString(e);
+        let r = z.LocalizeString(e);
+        return void 0 === r ? e : y(r, ...t);
+      }
+      function g(e, ...t) {
+        let r = z.LocalizeString(e);
         if (void 0 === r) return e;
         let n,
           s = [],
@@ -52148,23 +52158,23 @@
         }
         return s.push(r.substr(o)), i.createElement(i.Fragment, null, ...s);
       }
-      function g(e, t, ...r) {
+      function _(e, t, ...r) {
         return 1 === t || "1" === t
-          ? p(e, t, ...r)
-          : p(e + "_Plural", t.toLocaleString(), ...r);
+          ? g(e, t, ...r)
+          : g(e + "_Plural", t.toLocaleString(), ...r);
       }
-      function _(e, ...t) {
-        let r = R.LocalizeIfToken(e);
-        return void 0 === r ? e : f(r, ...t);
+      function h(e, ...t) {
+        let r = z.LocalizeIfToken(e);
+        return void 0 === r ? e : b(r, ...t);
       }
-      function h(e, t, ...r) {
+      function f(e, t, ...r) {
         let i;
         return (
-          (i = d(1 === t || "1" === t ? e : e + "_Plural", t)),
-          void 0 === i ? e : f(i, ...r)
+          (i = p(1 === t || "1" === t ? e : e + "_Plural", t)),
+          void 0 === i ? e : b(i, ...r)
         );
       }
-      function f(e, ...t) {
+      function b(e, ...t) {
         let r,
           n = [],
           s = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs"),
@@ -52173,7 +52183,7 @@
           (a += r[0].length), n.push(r[1]);
           let e = parseInt(r[2]),
             s = r[3] || "",
-            o = f(s, ...t),
+            o = b(s, ...t),
             l = (e >= 1 && e <= t.length ? t[e - 1] : null)
               ? i.cloneElement(t[e - 1], {}, s ? o : null)
               : s;
@@ -52181,13 +52191,13 @@
         }
         return n.push(e.substr(a)), i.createElement(i.Fragment, null, ...n);
       }
-      function b(e, t, ...r) {
-        return 1 === t || "1" === t ? d(e, t, ...r) : d(e + "_Plural", t, ...r);
-      }
       function B(e, t, ...r) {
-        return 1 === t ? d(e, ...r) : d(e + "_Plural", ...r);
+        return 1 === t || "1" === t ? p(e, t, ...r) : p(e + "_Plural", t, ...r);
       }
-      function w(e, ...t) {
+      function w(e, t, ...r) {
+        return 1 === t ? p(e, ...r) : p(e + "_Plural", ...r);
+      }
+      function y(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
@@ -52198,7 +52208,7 @@
               return e;
             }));
       }
-      class y {
+      class M {
         static Set(e, t, r) {
           if (e.length <= t) {
             if (t >= 31) return e;
@@ -52211,12 +52221,12 @@
         }
         static GetWithFallback(e, t) {
           if (e) {
-            return y.Get(e, t) || y.Get(e, u.GetELanguageFallback(t));
+            return M.Get(e, t) || M.Get(e, m.GetELanguageFallback(t));
           }
           return null;
         }
       }
-      const M = {
+      const C = {
           english: "en",
           german: "de",
           french: "fr",
@@ -52250,7 +52260,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        C = {
+        S = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -52282,10 +52292,10 @@
           "vi-VN": 28,
           "id-ID": 30,
         };
-      function S() {
-        return M[a.TS.LANGUAGE] || null;
+      function v() {
+        return C[a.TS.LANGUAGE] || null;
       }
-      function v(e) {
+      function R(e) {
         let t,
           r = new Promise((e) => (t = e)),
           i = Array(e.length),
@@ -52306,8 +52316,8 @@
           r
         );
       }
-      const R = new u();
-      window.LocalizationManager = R;
+      const z = new m();
+      window.LocalizationManager = z;
     },
     91675: (e, t, r) => {
       "use strict";
