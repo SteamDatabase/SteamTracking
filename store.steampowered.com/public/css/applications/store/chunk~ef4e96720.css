@@ -3523,6 +3523,22 @@ html.responsive.touch ._3CGy1EaqFgVMH1Atf-TZBY ._3cziHBEgsSUnjyT5uXe5EX {
   margin-left: -10px;
   fill: rgba(255, 255, 255, 0.66);
 }
+._2KdIqbqKb9-Y3rrlhsD8k8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4)
+  );
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 25px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
 ._2g7il0xil2vum_3n6glr8m {
   height: 480px;
   background-image: radial-gradient(

@@ -405,6 +405,7 @@
         ShareButton: "_3YIdWa8HqsQm51VD21TNyV",
         ShareText: "_2sH_jQWaQINe9A7GS8M6LY",
         ShareIcon: "_3eRSA-wfVtSthUCDgtlQm7",
+        SalePageSocialLinks: "_2KdIqbqKb9-Y3rrlhsD8k8",
       };
     },
     70535: (e) => {
@@ -15960,8 +15961,12 @@
               (0, T.we)("#Button_Share"),
             ),
           ),
-          Boolean(s?.length > 0) &&
-            n.createElement(ts.lz, { gidClanEvent: r, rgSocial: s }),
+          n.createElement(
+            "div",
+            { className: Xr().SalePageSocialLinks },
+            Boolean(s?.length > 0) &&
+              n.createElement(ts.lz, { gidClanEvent: r, rgSocial: s }),
+          ),
         );
       }
       var cs = a(92757),
