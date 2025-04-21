@@ -2272,6 +2272,7 @@ $steammessages_parental_objects.proto"
 (.CTwoFactor_RemoveAuthenticator_Response"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
+(1&PQ
 (8GXgw
 (8HXhx
 (?R or (?[+-]digits must be followed by )
@@ -13673,7 +13674,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42\f
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -31543,7 +31544,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggen2
+ggen
 ghjkl
 gidlist
 gidparentcomment

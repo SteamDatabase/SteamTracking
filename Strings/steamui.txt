@@ -5309,8 +5309,8 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/nvencwrapper.cpp
 /data/src/steamUI/gamestream/vrstreamthread.cpp
 /data/src/steamUI/gamestream/x264wrapper.cpp
-/data/src/steamUI/hardwareupdatecontroller.cpp:131
-/data/src/steamUI/hardwareupdatecontroller.cpp:177
+/data/src/steamUI/hardwareupdatecontroller.cpp:159
+/data/src/steamUI/hardwareupdatecontroller.cpp:205
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
 /data/src/steamUI/modmanager.cpp
@@ -5411,6 +5411,7 @@ ${LANGUAGE}
 /uioverrides/movies/%s
 /usr/bin/steamos-polkit-helpers/steamos-devkit-mode
 /usr/bin/xdg-open
+/usr/lib/udev/rules.d/70-steam-jupiter-input.rules
 /var
 /var/lib/flatpak/app/%s/current/active/export/share/applications/%s.desktop
 /version.txt
@@ -11561,7 +11562,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  7 2025 22:38:42
+Apr 21 2025 19:22:54
 Arabic
 AreFilesInSubscriptionList
 Armenian
@@ -18004,6 +18005,7 @@ STOP USING,%s
 STORAGE DEVICE
 STREAM_CLOSED
 STRING
+SUBSYSTEMS=="usb", TAG+="uaccess"
 S[CKs{ck
 S[TR
 S\fWj
@@ -18653,7 +18655,10 @@ SteamOSManager.FactoryReset#1
 SteamOSManager.GetState#1
 SteamOSManager.NotifyStateChanged#1
 SteamOSManager.OptOutOfSideloadedClient#1
+SteamOSManager: connected to SteamOSManager
 SteamOSManager: connecting to SteamOSManager legacy interface
+SteamOSManager: daemon not present
+SteamOSManager: detected invalid steamos-manager version
 SteamOSSLS.GetState#1
 SteamOSSLS.NotifyStateChanged#1
 SteamOSSLS.SetEnabled#1
@@ -22241,7 +22246,6 @@ a5<p
 a5j_5W
 a8Bk
 a?wSa?\
-aE,/O
 aI)h
 aRe.
 aT\v>wB
@@ -22670,6 +22674,7 @@ bHasLockedPrivateBetas
 bHasMultipleInputs
 bHasNintendoLayout
 bHasOutput
+bHasTouchscreen
 bHasTwoFactor
 bHidden
 bIgnoreRegistrationPrompt
@@ -24643,7 +24648,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenz*o
+ggenz,o
 ghost_
 gidlist
 gidparentcomment
@@ -30246,6 +30251,12 @@ steam_oslog_submitter_helper_proxy_get_property
 steam_oslog_submitter_helper_proxy_set_property
 steam_oslog_submitter_manager_proxy_get_property
 steam_oslog_submitter_manager_proxy_set_property
+steam_osmanager1_gpu_performance_level1_proxy_get_property
+steam_osmanager1_gpu_performance_level1_proxy_set_property
+steam_osmanager1_tdp_limit1_proxy_get_property
+steam_osmanager1_tdp_limit1_proxy_set_property
+steam_osmanager1_wifi_debug1_proxy_get_property
+steam_osmanager1_wifi_debug1_proxy_set_property
 steam_osmanager_legacy__proxy_get_property
 steam_osmanager_legacy__proxy_set_property
 steam_play
@@ -30328,6 +30339,7 @@ steamos_tdp_limit
 steamos_tdp_limit_enabled
 steamos_wifi_debug
 steamos_wifi_force_wpa_supplicant
+steamosctl --version
 steamoverlay_i386.json
 steamoverlay_x86_64.json
 steampal_
