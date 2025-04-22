@@ -13007,7 +13007,7 @@
         (0, n.Cg)([Rr.o], Zr.prototype, "RequestLoop", null),
         (0, n.Cg)([Rr.o], Zr.prototype, "MuteUserForSession", null);
       var $r = r(44165),
-        ei = r(86921);
+        ei = r(20587);
       class ti {
         constructor() {
           (0, u.Gn)(this);
@@ -14321,7 +14321,7 @@
         return d.createElement(da.Y, { ...e, onPositionChange: i });
       };
       var Ba = r(82227),
-        ga = r(67165),
+        ga = r(12493),
         _a = r(53120),
         ba = r.n(_a);
       const pa = (0, c.PA)((e) => {

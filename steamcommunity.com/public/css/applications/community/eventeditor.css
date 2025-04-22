@@ -1145,6 +1145,16 @@
 ._8MIrt7rQXkA0xE5sAjOee > ._22b0C1Xi03QNdTFKsYypHR {
   flex-grow: 1;
 }
+.yn_yu2EaUigYFm9QQAD7o {
+  border: 2px solid red;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  margin: 8px;
+}
+.yn_yu2EaUigYFm9QQAD7o svg {
+  height: 10px;
+  width: 10px;
+}
 .cMmai1T2HLkMm53hworFg {
   display: flex;
   justify-content: center;

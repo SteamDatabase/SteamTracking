@@ -1520,7 +1520,7 @@
               "Quest.GetCommunityItemDefinitions#1",
               (0, o.I8)(p, t),
               g,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 4 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 4 },
             );
           }),
           (e.ActivateProfileModifierItem = function (e, t) {

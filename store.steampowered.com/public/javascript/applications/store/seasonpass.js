@@ -138,7 +138,7 @@
         const { season_pass: t } = e;
         return t && t.milestones && 0 != t.milestones.length
           ? s.createElement(
-              S.A,
+              S.Ay,
               { feature: "seasonpassproductpage" },
               s.createElement(
                 "div",

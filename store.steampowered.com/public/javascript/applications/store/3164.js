@@ -23,6 +23,7 @@
     },
     66372: (e) => {
       e.exports = {
+        strMaxCartPartResponsiveWidth: "840px",
         CartCard: "_1xIt8XUBQEbK-xSRQhbtW0",
         PurchaseRequestBanner: "_-0ewDwG8C2PYKGJDqSP40",
       };
@@ -406,7 +407,7 @@
       }
       var h = a(91721),
         R = a.n(h),
-        _ = a(64025);
+        _ = a(12588);
       function q(e) {
         const { familyGroupID: t, requestID: a } = e,
           [l, m] = o.useState(),

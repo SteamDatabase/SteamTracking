@@ -176,6 +176,19 @@
         FollowButton: "sAZjP8hrS9narmNgqgbXf",
       };
     },
+    94846: (e) => {
+      e.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
+        ParentWidgetContainer: "_2fynndXXlBKZiRaoG9GuDP",
+        ParentCapsuleImageContainer: "mcjC8_8ivZdyhU3QKlFrN",
+        ParentCapsuleImage: "_2Ti5cIvl7SlIoK7eSIapbL",
+        GameName: "_2xz5bttITZV5JH17r1qZsG",
+        AppDetails: "IaIxKAMKgbunAgg62ymgi",
+        PriceContainer: "_2i6LXaKqXiO0KV4Im0Fw-0",
+        AddToWishlistButton: "RccYVBGN6ikWjuKE_Ba6N",
+      };
+    },
     1205: (e) => {
       e.exports = {
         Header: "kR_xyFf2ghgC-Jexsw_5v",
@@ -584,7 +597,7 @@
             strFeatureFirstAppMsg: w,
             setNumberVisibleItems: S,
           } = e,
-          I = (0, l.a4)(1024),
+          I = (0, l.a4)(1200),
           b = (0, g.Qn)(),
           [N, T] = a.useState(i),
           A = (0, c.zX)(i, r.Xh),
@@ -1150,9 +1163,9 @@
             ),
         ];
     },
-    1920: (e, t, n) => {
+    44393: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => En });
+      n.r(t), n.d(t, { default: () => In });
       var a = n(90626),
         r = n(44165),
         l = n(73964),
@@ -1619,7 +1632,7 @@
           ),
         );
       }
-      function Y(e) {
+      function K(e) {
         return a.createElement(
           "div",
           { className: (0, U.A)(q().PurchaseNoticeContainer) },
@@ -1650,7 +1663,7 @@
           (e[(e.EPurchaseNoticeType_VRSupported = 2)] =
             "EPurchaseNoticeType_VRSupported");
       })(W || (W = {}));
-      const Q = function (e) {
+      const Y = function (e) {
         const { appid: t, type: n } = e;
         switch (n) {
           case W.EPurchaseNoticeType_ControllerRequired:
@@ -1659,10 +1672,10 @@
             return a.createElement(X, null);
           case W.EPurchaseNoticeType_VRSupported:
           default:
-            return a.createElement(Y, null);
+            return a.createElement(K, null);
         }
       };
-      var K,
+      var Q,
         J = n(51249),
         $ = n.n(J),
         ee = n(57876),
@@ -1672,7 +1685,7 @@
       !(function (e) {
         (e[(e.k_CreatorHomeNone = 0)] = "k_CreatorHomeNone"),
           (e[(e.k_CreatorHomeAll = -1)] = "k_CreatorHomeAll");
-      })(K || (K = {}));
+      })(Q || (Q = {}));
       var re = n(82097),
         le = n(48838),
         oe = n(88965);
@@ -1691,7 +1704,7 @@
             const e = new Map(
               Object.entries(o).map(([e, t]) => [Number(e), t]),
             );
-            if (1 != c && t == K.k_CreatorHomeAll) {
+            if (1 != c && t == Q.k_CreatorHomeAll) {
               const t = new Set(s);
               l.forEach((n) => {
                 if (!e.has(n)) {
@@ -2316,7 +2329,7 @@
         We = 500,
         je = 130,
         Xe = !1;
-      function Ye(e) {
+      function Ke(e) {
         let {
             dashManifest: t,
             hlsManifest: n,
@@ -2361,12 +2374,12 @@
             "div",
             { ref: s, className: ye().TrailerPlayer },
             a.createElement("video", { ref: c, controls: !1, playsInline: !0 }),
-            a.createElement(Qe, { player: u, fullscreen: i }),
+            a.createElement(Ye, { player: u, fullscreen: i }),
             a.createElement(pt, { player: u, screenshot: r }),
           )
         );
       }
-      function Qe(e) {
+      function Ye(e) {
         let { player: t, fullscreen: n } = e,
           r = (0, a.useRef)(),
           l = (0, a.useRef)(),
@@ -2422,7 +2435,7 @@
           ),
         );
       }
-      function Ke(e) {
+      function Qe(e) {
         let t = (0, a.useRef)(),
           n = (0, a.useRef)(1),
           [r, l] = (0, a.useState)([]),
@@ -2489,7 +2502,7 @@
             inputEvents: l,
             clickEvents: o,
             fnRemoveEvent: s,
-          } = Ke(t),
+          } = Qe(t),
           i = (0, U.A)(ye().BackgroundClick, n && ye().Enabled);
         return a.createElement(
           "div",
@@ -2993,7 +3006,7 @@
                 audioMuted: u,
                 setAudioMuted: o.GetSetAudioMuted(),
               },
-              a.createElement(Ye, {
+              a.createElement(Ke, {
                 dashManifest: n,
                 hlsManifest: r,
                 screenshot: l,
@@ -3570,8 +3583,8 @@
                     active: !0,
                     onDismiss: () => this.setState({ bShowModal: !1 }),
                   },
-                  a.createElement(Yt, null),
                   a.createElement(Kt, null),
+                  a.createElement(Qt, null),
                   a.createElement(
                     "div",
                     { className: xt.InitialLoading },
@@ -3728,8 +3741,8 @@
                 C = a.createElement(
                   a.Fragment,
                   null,
-                  a.createElement(Yt, { description: y }),
-                  a.createElement(Kt, null),
+                  a.createElement(Kt, { description: y }),
+                  a.createElement(Qt, null),
                   0 === p.length &&
                     a.createElement(
                       "div",
@@ -3766,9 +3779,9 @@
                       }),
                     ),
                   ),
-                  a.createElement(Kt, null),
+                  a.createElement(Qt, null),
                   a.createElement(
-                    Qt,
+                    Yt,
                     { store: r },
                     e || t
                       ? n
@@ -3804,8 +3817,8 @@
               C = a.createElement(
                 a.Fragment,
                 null,
-                a.createElement(Yt, { description: y }),
-                a.createElement(Kt, null),
+                a.createElement(Kt, { description: y }),
+                a.createElement(Qt, null),
                 a.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -3881,9 +3894,9 @@
                     ),
                   ),
                 ),
-                a.createElement(Kt, null),
+                a.createElement(Qt, null),
                 a.createElement(
-                  Qt,
+                  Yt,
                   { store: r },
                   a.createElement(
                     ve.$n,
@@ -3939,8 +3952,8 @@
                 C = a.createElement(
                   a.Fragment,
                   null,
-                  a.createElement(Yt, { description: y }),
-                  a.createElement(Kt, null),
+                  a.createElement(Kt, { description: y }),
+                  a.createElement(Qt, null),
                   a.createElement(
                     "div",
                     { style: { position: "relative" } },
@@ -3950,9 +3963,9 @@
                       a.createElement("div", { className: xt.ErrorText }, e),
                     ),
                   ),
-                  a.createElement(Kt, null),
+                  a.createElement(Qt, null),
                   a.createElement(
-                    Qt,
+                    Yt,
                     { store: r },
                     a.createElement(
                       ve.$n,
@@ -3980,8 +3993,8 @@
               C = a.createElement(
                 a.Fragment,
                 null,
-                a.createElement(Yt, { description: y }),
-                a.createElement(Kt, null),
+                a.createElement(Kt, { description: y }),
+                a.createElement(Qt, null),
                 a.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -3991,7 +4004,7 @@
                     a.createElement("div", { className: xt.ErrorText }, e),
                   ),
                 ),
-                a.createElement(Kt, null),
+                a.createElement(Qt, null),
               );
             }
           }
@@ -4025,7 +4038,7 @@
       };
       (0, o.Cg)([g.oI], Xt.prototype, "GrantAward", null),
         (Xt = (0, o.Cg)([P.PA], Xt));
-      const Yt = ({ description: e }) =>
+      const Kt = ({ description: e }) =>
           a.createElement(
             "div",
             { className: xt.Header },
@@ -4036,7 +4049,7 @@
             ),
             a.createElement("div", { className: xt.Description }, e),
           ),
-        Qt = (0, P.PA)(({ store: e, children: t }) => {
+        Yt = (0, P.PA)(({ store: e, children: t }) => {
           const n = e.GetUserPointBalance(),
             r = n && n.toNumber().toLocaleString();
           return a.createElement(
@@ -4078,7 +4091,7 @@
             ),
           );
         }),
-        Kt = () => a.createElement("div", { className: xt.Divider });
+        Qt = () => a.createElement("div", { className: xt.Divider });
       class Jt extends a.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
@@ -4340,23 +4353,72 @@
             )
           : (console.warn(`No banner type found for ${n.strBannerType}`), null);
       }
-      var mn = n(81881);
-      const dn = a.lazy(() => n.e(5139).then(n.bind(n, 51899))),
-        pn = a.lazy(() =>
+      var mn = n(81881),
+        dn = n(38535),
+        pn = n(94846),
+        hn = n.n(pn),
+        _n = n(94095),
+        gn = n(55963),
+        En = n(14326);
+      function vn(e) {
+        const { appid: t } = e,
+          [n] = (0, N.t7)(t, { include_assets: !0 }),
+          r = (0, ln.n9)();
+        if (!n) return null;
+        const l = (0, gn.wJ)(n.GetStorePageURL(), r);
+        return a.createElement(
+          i.Z,
+          { focusable: !0, className: hn().ParentWidgetContainer },
+          a.createElement(
+            "div",
+            { className: (0, U.A)(hn().ParentCapsuleImageContainer) },
+            a.createElement(
+              "a",
+              { href: l },
+              a.createElement("img", {
+                className: hn().ParentCapsuleImage,
+                src: n.GetAssets().GetSmallCapsuleURL(),
+              }),
+            ),
+          ),
+          a.createElement(
+            "div",
+            { className: hn().AppDetails },
+            a.createElement(
+              "div",
+              { className: (0, U.A)(hn().GameName) },
+              n.GetName(),
+            ),
+            a.createElement(
+              "div",
+              { className: hn().PriceContainer },
+              a.createElement(_n.wc, { info: { id: t } }),
+              a.createElement(En.r, {
+                appid: t,
+                className: hn().AddToWishlistButton,
+                bTextMode: !0,
+              }),
+            ),
+          ),
+        );
+      }
+      const Cn = a.lazy(() => n.e(5139).then(n.bind(n, 51899))),
+        yn = a.lazy(() =>
           Promise.all([
             n.e(8970),
             n.e(6597),
             n.e(4607),
             n.e(4539),
             n.e(2542),
-            n.e(7436),
             n.e(2797),
+            n.e(7436),
             n.e(7403),
             n.e(9214),
             n.e(3270),
             n.e(4796),
+            n.e(9063),
             n.e(4095),
-            n.e(7843),
+            n.e(3045),
             n.e(1006),
             n.e(4336),
             n.e(7576),
@@ -4365,127 +4427,127 @@
             n.e(8199),
             n.e(8956),
             n.e(5438),
-            n.e(3818),
             n.e(3027),
           ]).then(n.bind(n, 64940)),
         ),
-        hn = a.lazy(() =>
+        fn = a.lazy(() =>
           Promise.all([
             n.e(8970),
             n.e(6597),
             n.e(4607),
             n.e(4539),
-            n.e(7436),
             n.e(2797),
+            n.e(7436),
             n.e(7403),
             n.e(9214),
             n.e(3270),
             n.e(4796),
+            n.e(9063),
             n.e(4095),
-            n.e(7843),
+            n.e(3045),
             n.e(1006),
             n.e(4336),
             n.e(7576),
             n.e(888),
             n.e(7368),
             n.e(4339),
-            n.e(1437),
+            n.e(3818),
             n.e(970),
             n.e(9672),
           ]).then(n.bind(n, 47554)),
         ),
-        _n = a.lazy(() =>
+        wn = a.lazy(() =>
           Promise.all([
             n.e(8970),
             n.e(6597),
             n.e(4607),
             n.e(4539),
-            n.e(7436),
             n.e(2797),
+            n.e(7436),
             n.e(7403),
             n.e(9214),
             n.e(3270),
             n.e(4796),
+            n.e(9063),
             n.e(4095),
-            n.e(7843),
+            n.e(3045),
             n.e(4339),
             n.e(8199),
-            n.e(1437),
+            n.e(3818),
             n.e(177),
             n.e(8396),
           ]).then(n.bind(n, 70834)),
         ),
-        gn = () => null;
-      function En(e) {
+        Sn = () => null;
+      function In(e) {
         const { appid: t } = e;
-        return a.createElement(F.X, {
-          config: {
-            "events-row": () =>
-              a.createElement(
-                mn.d,
-                null,
-                a.createElement(b, { key: `appeventrow${t}`, appid: t }),
-              ),
-            "review-award": () =>
-              a.createElement(Wt, { key: `appawardmodal${t}` }),
-            "deck-topplayed-banner": (e) => a.createElement(cn, { ...e }),
-            "steamawardsvote-embed": () =>
-              a.createElement(pn, { key: `steamawardsvote_${t}`, appID: t }),
-            "broadcast-embed": (n) =>
-              a.createElement(_n, {
-                key: `appbroadcastcast_${t}`,
-                ...e,
-                appid: n.appid,
-              }),
-            "demo-and-quick-pitch": () =>
-              a.createElement(
-                mn.d,
-                null,
-                a.createElement(H, { key: `appdemoquickpitch_${t}`, appID: t }),
-              ),
-            "deck-verified-results": () =>
-              a.createElement(Ct.q6, {
-                appID: t,
-                results: (0, Et.Tc)("deckcompatibility", "application_config"),
-                appName: (0, Et.Tc)("appname", "application_config"),
-              }),
-            "gamehighlight-trailer": (e) => a.createElement(ht, { ...e }),
-            "discovery-queue-app-widget": () =>
-              a.createElement(hn, { key: `discoveryqueue${t}`, appID: t }),
-            "game-notice-controller-required": () =>
-              a.createElement(Q, {
-                appid: t,
-                type: W.EPurchaseNoticeType_ControllerRequired,
-              }),
-            "game-notice-vr-required": () =>
-              a.createElement(Q, { type: W.EPurchaseNoticeType_VRRequired }),
-            "game-notice-vr-supported": () =>
-              a.createElement(Q, { type: W.EPurchaseNoticeType_VRSupported }),
-            "store-sidebar-controller-support-info": (e) =>
-              a.createElement(Nt, { ...e }),
-            "store-sidebar-accessibility-info": (e) =>
-              a.createElement(gn, { features: e }),
-            "season-pass-display": (e) => a.createElement(dn, { ...e }),
-            "storeitems-carousel": (e) =>
-              a.createElement(
-                vt.A,
-                { feature: "recommended" },
-                a.createElement(Tt.default, { ...e }),
-              ),
-            "storeitems-carousel-dlc": (e) =>
-              a.createElement(
-                vt.A,
-                { feature: "dlc" },
-                a.createElement(Tt.default, { ...e }),
-              ),
-            "creatorhome-carousel": (e) =>
-              a.createElement(
-                vt.A,
-                { feature: "creator" },
-                a.createElement(se, { ...e }),
-              ),
-          },
-        });
+        return a.createElement(
+          dn.QA,
+          { eAdultOnlyMediaBehavior: "allowed" },
+          a.createElement(F.X, {
+            config: {
+              "events-row": () =>
+                a.createElement(mn.d, null, a.createElement(b, { appid: t })),
+              "review-award": () => a.createElement(Wt, null),
+              "deck-topplayed-banner": (e) => a.createElement(cn, { ...e }),
+              "steamawardsvote-embed": () => a.createElement(yn, { appID: t }),
+              "broadcast-embed": (t) =>
+                a.createElement(wn, { ...e, appid: t.appid }),
+              "demo-and-quick-pitch": () =>
+                a.createElement(mn.d, null, a.createElement(H, { appID: t })),
+              "deck-verified-results": () =>
+                a.createElement(Ct.q6, {
+                  appID: t,
+                  results: (0, Et.Tc)(
+                    "deckcompatibility",
+                    "application_config",
+                  ),
+                  appName: (0, Et.Tc)("appname", "application_config"),
+                }),
+              "gamehighlight-trailer": (e) => a.createElement(ht, { ...e }),
+              "discovery-queue-app-widget": () =>
+                a.createElement(fn, { appID: t }),
+              "game-notice-controller-required": () =>
+                a.createElement(Y, {
+                  appid: t,
+                  type: W.EPurchaseNoticeType_ControllerRequired,
+                }),
+              "game-notice-vr-required": () =>
+                a.createElement(Y, { type: W.EPurchaseNoticeType_VRRequired }),
+              "game-notice-vr-supported": () =>
+                a.createElement(Y, { type: W.EPurchaseNoticeType_VRSupported }),
+              "store-sidebar-controller-support-info": (e) =>
+                a.createElement(Nt, { ...e }),
+              "store-sidebar-accessibility-info": (e) =>
+                a.createElement(Sn, { features: e }),
+              "season-pass-display": (e) => a.createElement(Cn, { ...e }),
+              "storeitems-carousel": (e) =>
+                a.createElement(
+                  vt.Ay,
+                  { feature: "recommended" },
+                  a.createElement(Tt.default, { ...e }),
+                ),
+              "storeitems-carousel-dlc": (e) =>
+                a.createElement(
+                  vt.Ay,
+                  { feature: "dlc" },
+                  a.createElement(Tt.default, { ...e }),
+                ),
+              "creatorhome-carousel": (e) =>
+                a.createElement(
+                  vt.Ay,
+                  { feature: "creator" },
+                  a.createElement(se, { ...e }),
+                ),
+              parentappwidget: (e) =>
+                a.createElement(
+                  vt.Ay,
+                  { feature: e.feature },
+                  a.createElement(vn, { appid: e.appid }),
+                ),
+            },
+          }),
+        );
       }
     },
     81881: (e, t, n) => {
@@ -4791,9 +4853,9 @@
       var W = n(84811),
         j = n(77291),
         X = n(19267),
-        Y = n(8527);
-      const Q = r.Fragment;
-      function K(e) {
+        K = n(8527);
+      const Y = r.Fragment;
+      function Q(e) {
         const {
             reservationPackageID: t,
             depositPackageID: n,
@@ -4821,14 +4883,14 @@
             size: "small",
             position: "center",
           });
-        const u = !Y.iA.logged_in || !o.account_restricted_from_purchasing;
+        const u = !K.iA.logged_in || !o.account_restricted_from_purchasing;
         return r.createElement(
           W.tH,
           null,
           r.createElement(
             r.Suspense,
             { fallback: null },
-            r.createElement(Q, { bIsPreview: a, rgReservationDef: i }),
+            r.createElement(Y, { bIsPreview: a, rgReservationDef: i }),
           ),
           Boolean(o.allow_purchase_in_country) &&
             r.createElement(
@@ -4987,7 +5049,7 @@
         if (t) {
           const n = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
             a = Number.parseInt((0, m.j$)(e.args, "psulesspackageid"));
-          return r.createElement(K, {
+          return r.createElement(Q, {
             reservationPackageID: t,
             depositPackageID: n,
             psuLessPackageID: a,

@@ -5567,11 +5567,12 @@
             partnerEventStore: r,
             addtionalAdminButtons: i,
             fnOnUpdateSaleDayIndex: n,
+            bSupportsSticky: a = !1,
           } = e,
-          a = (0, rt.Qn)(),
-          s = (0, ot.MU)(),
-          [o, u] = m.useState(!1),
-          d = (0, l.q3)(() =>
+          s = (0, rt.Qn)(),
+          o = (0, ot.MU)(),
+          [u, d] = m.useState(!1),
+          g = (0, l.q3)(() =>
             (function (e) {
               let t;
               e?.BHasSaleEnabled() &&
@@ -5591,51 +5592,58 @@
               return t;
             })(t),
           ),
-          [g, B] = m.useState(t ? t.GetDayIndexFromEventStart() : 0),
-          [_, b, p, y] = (0, l.q3)(() => [
+          [B, _] = m.useState(t ? t.GetDayIndexFromEventStart() : 0),
+          [b, p, y, M] = (0, l.q3)(() => [
             t.visibility_state,
             t.jsondata.bSaleEnabled,
             t.GID,
             t.clanSteamID.GetAccountID(),
           ]),
-          M = (0, Le.Ec)(y),
-          [w, f] = m.useState(!0),
-          { bVisible: z, ref: S } = (0, Ze.hd)(),
-          R = (e) => {
+          w = (0, Le.Ec)(M),
+          [f, z] = m.useState(a),
+          { bVisible: S, ref: R } = (0, Ze.hd)(),
+          h = (e) => {
             (0, mt.pg)(
               m.createElement(at, {
                 eventModel: t,
-                onDeleteSuccessAndCloseDialog: () => u(!0),
+                onDeleteSuccessAndCloseDialog: () => d(!0),
                 partnerEventStore: r,
               }),
               (0, ut.uX)(e),
             );
           };
-        if (o) return (0, st.OG)(t, st.PH.k_eCommunityAdminPage);
-        const h = _ == c.zv.k_EEventStateVisible,
-          v = _ == c.zv.k_EEventStateStaged;
-        if ((M.can_edit || M.support_user) && !a) {
+        if (u) return (0, st.OG)(t, st.PH.k_eCommunityAdminPage);
+        const v = b == c.zv.k_EEventStateVisible,
+          F = b == c.zv.k_EEventStateStaged;
+        if ((w.can_edit || w.support_user) && !s) {
           const e = [];
-          if (void 0 !== d)
-            for (let t = 0; t <= d; ++t)
+          if (void 0 !== g)
+            for (let t = 0; t <= g; ++t)
               e.push({
                 label: (0, Xe.we)("#SalePage_Admin_SaleEventDay", t + 1),
                 data: t,
               });
-          const a = (0, rt.yK)(),
-            o = "community" == a,
-            l = "store" == a,
-            u = rt.iA.is_support && dt(t.clanSteamID, !0);
+          const s = (0, rt.yK)(),
+            l = "community" == s,
+            u = "store" == s,
+            d = rt.iA.is_support && dt(t.clanSteamID, !0),
+            b = f && !S;
           return m.createElement(
             Ke.tH,
             null,
+            m.createElement("div", {
+              className: (0, ct.A)(
+                pt.DisplayAdminPanel_TopSpacer,
+                b && pt.Sticky,
+              ),
+            }),
             m.createElement(
               "div",
               {
                 className: (0, ct.A)({
                   [pt.DisplayAdminPanel]: !0,
-                  [pt.Locked]: o,
-                  [pt.Sticky]: w,
+                  [pt.Locked]: l,
+                  [pt.Sticky]: b,
                 }),
               },
               m.createElement(
@@ -5645,7 +5653,12 @@
               ),
               m.createElement(
                 "div",
-                { className: pt.DisplayAdminPanel_ctn },
+                {
+                  className: (0, ct.A)(
+                    pt.DisplayAdminPanel_ctn,
+                    b && pt.Sticky,
+                  ),
+                },
                 i,
                 i &&
                   m.createElement(
@@ -5665,10 +5678,10 @@
                 Boolean(r && "community" == (0, rt.yK)()) &&
                   m.createElement(
                     "span",
-                    { className: lt.Button + " " + pt.AdminButton, onClick: R },
+                    { className: lt.Button + " " + pt.AdminButton, onClick: h },
                     (0, Xe.we)("#EventDisplay_DeleteEvent"),
                   ),
-                !h &&
+                !v &&
                   m.createElement(
                     m.Fragment,
                     null,
@@ -5680,7 +5693,7 @@
                         className: (0, ct.A)(lt.Button, pt.AdminButton),
                       },
                       (0, Xe.we)(
-                        v
+                        F
                           ? "#EventEditor_Publish_VisibleNow"
                           : "#Button_Publish",
                       ),
@@ -5695,18 +5708,18 @@
                   },
                   (0, Xe.we)("#EventDisplay_Events"),
                 ),
-                Boolean(void 0 !== d && e.length > 0) &&
+                Boolean(void 0 !== g && e.length > 0) &&
                   m.createElement(He.m, {
                     strDropDownClassName: lt.DropDownScroll,
                     rgOptions: e,
-                    selectedOption: Math.min(d, g),
+                    selectedOption: Math.min(g, B),
                     onChange: (e) => {
-                      B(e.data), n(e.data);
+                      _(e.data), n(e.data);
                     },
                     bDisableMouseOverlay: !0,
                     contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
                   }),
-                Boolean(t.jsondata.bSaleEnabled && s) &&
+                Boolean(t.jsondata.bSaleEnabled && o) &&
                   m.createElement(
                     st.tj,
                     {
@@ -5716,16 +5729,16 @@
                     },
                     (0, Xe.we)("#EventDisplay_SalesPage"),
                   ),
-                Boolean(b && rt.iA.is_support && p) &&
+                Boolean(p && rt.iA.is_support && y) &&
                   m.createElement(
                     "a",
                     {
                       href:
                         rt.TS.STATS_BASE_URL +
                         "sales/details/?gid=" +
-                        p +
+                        y +
                         "&clanid=" +
-                        y,
+                        M,
                       target: rt.TS.IN_CLIENT ? "" : "_blank",
                       className: (0, ct.A)(
                         lt.Button,
@@ -5735,16 +5748,16 @@
                     },
                     (0, Xe.we)("#EventDisplay_StatsPage"),
                   ),
-                Boolean(b && rt.iA.is_support && p) &&
+                Boolean(p && rt.iA.is_support && y) &&
                   m.createElement(
                     "a",
                     {
                       href:
                         rt.TS.PARTNER_BASE_URL +
                         "promotion/invitationplanner/dashboard?saleclaneventgid=" +
-                        p +
+                        y +
                         "&saleclanaccountid=" +
-                        y,
+                        M,
                       target: rt.TS.IN_CLIENT ? "" : "_blank",
                       className: (0, ct.A)(
                         lt.Button,
@@ -5754,12 +5767,12 @@
                     },
                     (0, Xe.we)("#EventDisplay_InvitationPlannerPage"),
                   ),
-                Boolean(b && u && p) &&
+                Boolean(p && d && y) &&
                   m.createElement(jt, {
                     clanAccountID: t.clanSteamID.GetAccountID(),
-                    gidClanEvent: p,
+                    gidClanEvent: y,
                   }),
-                Boolean(b && u && c.bv == y && t.GetContentHubCategory()) &&
+                Boolean(p && d && c.bv == M && t.GetContentHubCategory()) &&
                   m.createElement(
                     "a",
                     {
@@ -5773,23 +5786,23 @@
                     },
                     (0, Xe.we)("#EventDisplay_CategoryEditor"),
                   ),
-                Boolean(h && (l || s)) &&
+                Boolean(v && (u || o)) &&
                   m.createElement(
                     st.tj,
                     {
                       eventModel: t,
-                      route: b
+                      route: p
                         ? st.PH.k_eCommunityPreviewSale
                         : st.PH.k_eCommunityView,
                       className: (0, ct.A)(lt.Button, pt.AdminButton),
                     },
                     (0, Xe.we)(
-                      b
+                      p
                         ? "#EventDisplay_PreviewOnCommunity"
                         : "#EventDisplay_ViewOnCommunity",
                     ),
                   ),
-                Boolean(h && o) &&
+                Boolean(v && l) &&
                   m.createElement(
                     st.tj,
                     {
@@ -5803,12 +5816,12 @@
                 m.createElement(vt, { eventModel: t }),
                 Boolean(rt.iA.is_support) &&
                   m.createElement(ht, { eventModel: t }),
-                !z &&
+                b &&
                   m.createElement(
                     "div",
                     {
                       className: pt.DisplayAdminPanelClose,
-                      onClick: () => f(!1),
+                      onClick: () => z(!1),
                     },
                     m.createElement(
                       St.Gq,
@@ -5820,13 +5833,13 @@
                       m.createElement(zt.X, null),
                     ),
                   ),
-                z &&
-                  !w &&
+                !f &&
+                  a &&
                   m.createElement(
                     "div",
                     {
                       className: pt.DisplayAdminPanelClose,
-                      onClick: () => f(!0),
+                      onClick: () => z(!0),
                     },
                     m.createElement(
                       St.Gq,
@@ -5842,7 +5855,7 @@
             ),
             m.createElement("div", {
               className: pt.DisplayAdminPanelMarker,
-              ref: S,
+              ref: R,
             }),
           );
         }

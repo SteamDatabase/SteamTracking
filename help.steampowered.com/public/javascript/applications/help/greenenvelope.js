@@ -11700,7 +11700,7 @@
       var ji = r(5263),
         qi = r(7910),
         Oi = r.n(qi),
-        Ci = r(2630),
+        Ci = r(1345),
         Ui = r(14),
         Ni = r(4654),
         Pi = r(1561),
@@ -14980,7 +14980,7 @@
           })(t.type);
         return a
           ? o.createElement(
-              Ci.A,
+              Ci.Ay,
               {
                 controller: "notification",
                 method: (0, n.fL)(r),

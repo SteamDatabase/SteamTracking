@@ -4092,7 +4092,7 @@
               "Quest.GetCommunityItemDefinitions#1",
               (0, m.I8)(d, t),
               g,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 4 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 4 },
             );
           }),
           (e.ActivateProfileModifierItem = function (e, t) {

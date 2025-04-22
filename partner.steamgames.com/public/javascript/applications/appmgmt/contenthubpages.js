@@ -4,6 +4,26 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3025],
   {
+    41609: (e) => {
+      e.exports = {
+        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
+        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
+        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
+        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
+        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
+        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
+        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
+        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
+        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
+        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
+        Grabbable: "riuelIz655g_IBddWfLQ-",
+        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
+        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
+        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
+        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
+        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
+      };
+    },
     64641: (e) => {
       e.exports = {
         v6: "_2LxgdMcpWJRjkxZKbmeEEb",
@@ -22,8 +42,8 @@
         RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
       };
     },
-    61738: (e, s, t) => {
-      var r = {
+    61738: (e, t, s) => {
+      var n = {
         "./af": 30911,
         "./af.js": 30911,
         "./ar": 63595,
@@ -299,71 +319,71 @@
         "./zh-tw": 34518,
         "./zh-tw.js": 34518,
       };
-      function n(e) {
-        var s = a(e);
-        return t(s);
+      function r(e) {
+        var t = a(e);
+        return s(t);
       }
       function a(e) {
-        if (!t.o(r, e)) {
-          var s = new Error("Cannot find module '" + e + "'");
-          throw ((s.code = "MODULE_NOT_FOUND"), s);
+        if (!s.o(n, e)) {
+          var t = new Error("Cannot find module '" + e + "'");
+          throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
-        return r[e];
+        return n[e];
       }
-      (n.keys = function () {
-        return Object.keys(r);
+      (r.keys = function () {
+        return Object.keys(n);
       }),
-        (n.resolve = a),
-        (e.exports = n),
-        (n.id = 61738);
+        (r.resolve = a),
+        (e.exports = r),
+        (r.id = 61738);
     },
-    80159: (e, s, t) => {
+    80159: (e, t, s) => {
       "use strict";
-      t.r(s), t.d(s, { ContentHubRoutes: () => m, default: () => d });
-      var r = t(90626),
-        n = t(97058),
-        a = t(17083),
-        o = t(92757),
-        i = t(562),
-        j = t(61859);
-      function l(e) {
-        return r.createElement(o.XG, {
-          message: (e) => !(0, i.tV)() || (0, j.we)("#Generel_Discard_Warning"),
+      s.r(t), s.d(t, { ContentHubRoutes: () => m, default: () => j });
+      var n = s(90626),
+        r = s(97058),
+        a = s(17083),
+        i = s(92757),
+        o = s(562),
+        l = s(61859);
+      function c(e) {
+        return n.createElement(i.XG, {
+          message: (e) => !(0, o.tV)() || (0, l.we)("#Generel_Discard_Warning"),
         });
       }
-      var c = t(43527),
-        u = t(65213);
+      var u = s(43527),
+        d = s(65213);
       const m = { ContentHubCategories: () => "/categories/" };
-      function d(e) {
-        return r.createElement(
+      function j(e) {
+        return n.createElement(
           a.Kd,
-          { basename: (0, c.C)() + "admin/store/contenthub/" },
-          r.createElement(l, null),
-          r.createElement(
-            o.dO,
+          { basename: (0, u.C)() + "admin/store/contenthub/" },
+          n.createElement(c, null),
+          n.createElement(
+            i.dO,
             null,
-            r.createElement(o.qh, {
+            n.createElement(i.qh, {
               path: m.ContentHubCategories(),
-              component: u.A,
+              component: d.A,
             }),
-            r.createElement(o.qh, { component: n.a }),
+            n.createElement(i.qh, { component: r.a }),
           ),
         );
       }
     },
-    44165: (e, s, t) => {
+    44165: (e, t, s) => {
       "use strict";
-      t.d(s, { HD: () => u, P_: () => m, f1: () => g, sB: () => b });
-      var r = t(34629),
-        n = t(14947),
-        a = t(19367),
-        o = t.n(a),
-        i = t(90626),
-        j = t(4434),
-        l = t(78327);
-      class c {
+      s.d(t, { HD: () => d, P_: () => m, f1: () => v, sB: () => A });
+      var n = s(34629),
+        r = s(14947),
+        a = s(19367),
+        i = s.n(a),
+        o = s(90626),
+        l = s(4434),
+        c = s(78327);
+      class u {
         constructor() {
-          (0, n.Gn)(this);
+          (0, r.Gn)(this);
         }
         bOpenEventLandingPage = !1;
         bIncludeFeaturedAsGameSource = !0;
@@ -372,10 +392,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, l.Y2)();
+          return !(0, c.Y2)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, l.Y2)();
+          return !(0, c.Y2)();
         }
         get bIncludeCurators() {
           return !0;
@@ -395,109 +415,356 @@
         }
         ParseDevOverrides(e) {
           if (!e || 0 == e.length) return;
-          const s = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
+          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
-            s.has("t") &&
-            ("dev" == l.TS.WEB_UNIVERSE || "beta" == l.TS.WEB_UNIVERSE)
+            t.has("t") &&
+            ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
           ) {
-            const e = s.get("t");
-            let t = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
-            (this.nOverrideDateNow = Math.floor(t.unix())),
+            const e = t.get("t");
+            let s = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
+            (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  t.format(),
+                  s.format(),
               );
           }
         }
       }
-      (0, r.Cg)([n.sH], c.prototype, "nOverrideDateNow", void 0);
-      const u = new c();
+      (0, n.Cg)([r.sH], u.prototype, "nOverrideDateNow", void 0);
+      const d = new u();
       function m(e = 1) {
-        const [s, t] = i.useState(() => v()),
-          r = (0, j.m)("useTimeNowWithOverride"),
-          n = i.useCallback(() => {
-            r.token.reason || t(v());
+        const [t, s] = o.useState(() => h()),
+          n = (0, l.m)("useTimeNowWithOverride"),
+          r = o.useCallback(() => {
+            n.token.reason || s(h());
           }, []);
         return (
-          i.useEffect(() => {
-            const s = 1e3 * e,
-              t = s - (Date.now() % s),
-              r = window.setTimeout(n, t);
+          o.useEffect(() => {
+            const t = 1e3 * e,
+              s = t - (Date.now() % t),
+              n = window.setTimeout(r, s);
             return () => {
-              window.clearTimeout(r);
+              window.clearTimeout(n);
             };
-          }, [s, e, n]),
-          s
+          }, [t, e, r]),
+          t
         );
       }
-      window.g_EventCalendarDevFeatures = u;
-      const d = new Date(),
-        h = Math.floor(d.getTime() / 1e3);
-      function v() {
+      window.g_EventCalendarDevFeatures = d;
+      const j = new Date(),
+        g = Math.floor(j.getTime() / 1e3);
+      function h() {
         const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
+        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - g) : e;
       }
-      function b() {
-        return u.nOverrideDateNow ?? h;
+      function A() {
+        return d.nOverrideDateNow ?? g;
       }
-      function g() {
-        return i.useMemo(() => b(), []);
+      function v() {
+        return o.useMemo(() => A(), []);
       }
     },
-    9161: (e, s, t) => {
+    56654: (e, t, s) => {
       "use strict";
-      t.d(s, { g: () => a });
-      var r = t(94649),
-        n = t.n(r);
+      s.d(t, { A: () => v });
+      var n = s(90626),
+        r = s(73745);
+      const a =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
+      var i = s(44894),
+        o = s(62490),
+        l = s(41609),
+        c = s.n(l),
+        u = s(64641),
+        d = s.n(u),
+        m = s(12155),
+        j = s(41735),
+        g = s.n(j),
+        h = s(61732),
+        A = s(52038);
+      function v(e) {
+        const {
+            items: t,
+            render: s,
+            onDelete: l,
+            onEdit: u,
+            onReorder: j,
+            onMove: v,
+            bDisabled: f,
+            rowClassName: w,
+          } = e,
+          [p, E] = n.useState(!1),
+          [k, D] = n.useState(void 0),
+          [C, y] = n.useState(void 0),
+          [N, B] = n.useState(-1),
+          [S, R] = n.useState(void 0),
+          [W, G] = n.useState(0),
+          [z, I] = n.useState(0),
+          [x, F] = n.useState(void 0),
+          [M, Y] = n.useState(""),
+          O = n.useRef(),
+          T = n.useMemo(() => new Array(), []),
+          _ = n.useMemo(() => new Array(), []),
+          V = n.useMemo(() => g().CancelToken.source(), []),
+          H = () => {
+            O.current?.firstElementChild &&
+              (G(O.current.firstElementChild.getBoundingClientRect().height),
+              I(O.current.firstElementChild.getBoundingClientRect().width));
+          };
+        n.useEffect(() => {
+          H();
+        }, []),
+          n.useEffect(() => () => V.cancel("ReorderableList unmounting"), [V]);
+        const X = (e, t) => {
+            V.token.reason ||
+              (O.current.firstElementChild?.getBoundingClientRect().height >
+                0 &&
+                W !=
+                  O.current.firstElementChild.getBoundingClientRect().height &&
+                H(),
+              ((e, t) => {
+                const s = T[e]?.current;
+                if (!s)
+                  return void console.error(
+                    "start element grab missing element at index " + e,
+                  );
+                E(!0), B(e), F(void 0), R(e);
+                const n = t.clientX - s.getBoundingClientRect().left;
+                D(n);
+                const r = t.clientY - s.getBoundingClientRect().top;
+                y(r),
+                  (s.style.position = "fixed"),
+                  (s.style.left = t.clientX - n + "px"),
+                  (s.style.top = t.clientY - r + "px"),
+                  (s.style.zIndex = "1");
+              })(t, e),
+              e.preventDefault());
+          },
+          L = (e, s) => {
+            const n = h.OQ(s > e ? s - 1 : s, 0, t.length - 1);
+            e != n && (v ? v(e, n) : (0, o.yY)(t, e, n), Z(n), j && j(t));
+          },
+          Q = (e) => {
+            p &&
+              !V.token.reason &&
+              ((() => {
+                const e = T[N]?.current;
+                e
+                  ? ((e.style.position = ""), (e.style.zIndex = ""))
+                  : console.error("end element drag missing element"),
+                  E(!1),
+                  B(-1),
+                  F(void 0),
+                  R(void 0);
+              })(),
+              L(N, S));
+          },
+          U = (e) => {
+            if (!p || V.token.reason) return;
+            const s = e.clientY;
+            let n;
+            for (let e = 0; e < t.length; e++) {
+              if (
+                s <
+                (_[e].current.getBoundingClientRect().top +
+                  2 * _[e].current.getBoundingClientRect().bottom) /
+                  3
+              ) {
+                n = e;
+                break;
+              }
+            }
+            R(n ?? t.length),
+              ((e) => {
+                const t = T[N]?.current;
+                t
+                  ? ((t.style.left = e.clientX - k + "px"),
+                    (t.style.top = e.clientY - C + "px"))
+                  : console.error("update grab element missing element");
+              })(e);
+          };
+        (0, r.l6)(window, "mousemove", (e) => U(e)),
+          (0, r.l6)(window, "mouseup", (e) => Q()),
+          n.useEffect(() => {
+            for (let e = T.length; e < t.length; e++)
+              T.push(n.createRef()), _.push(n.createRef());
+          }, [t.length, T, _]);
+        const J = (e) => {
+            F(void 0);
+            const t = M?.trim(),
+              s = Number.parseInt(t);
+            if (0 == t.length || isNaN(s)) return;
+            const n = s - 1;
+            e != n && L(e, n);
+          },
+          [P, Z] = n.useState(void 0);
+        return n.createElement(
+          "div",
+          { className: c().WhitelistCtn, ref: O },
+          t.map((e, r) =>
+            n.createElement(
+              "div",
+              { key: r, ref: _[r] },
+              r == S && n.createElement(b, { width: z }),
+              n.createElement(
+                "div",
+                { ref: T[r], className: c().DragGhost },
+                r == N &&
+                  n.createElement(
+                    "div",
+                    { className: (0, A.A)(c().WhitelistRow, w) },
+                    n.createElement("img", {
+                      className: (0, A.A)(c().WhitelistAvatar, c().Grabbing),
+                      src: a,
+                    }),
+                    n.createElement("input", {
+                      className: (0, A.A)(
+                        c().WhitelistNumber,
+                        c().Disabled,
+                        c().Grabbing,
+                      ),
+                      type: "text",
+                      value: (S > r ? S - 1 : S) + 1,
+                      disabled: !0,
+                    }),
+                    s(e, r),
+                  ),
+              ),
+              n.createElement(
+                "div",
+                {
+                  className: (0, A.A)(
+                    c().WhitelistRow,
+                    w,
+                    p && c().DragActive,
+                    r == N && c().BeingDragged,
+                    P == r && c().Dropped,
+                  ),
+                  onAnimationEnd: () => Z(void 0),
+                },
+                n.createElement("img", {
+                  className: (0, A.A)(
+                    c().WhitelistAvatar,
+                    c().Grabbable,
+                    f && c().DisabledGrab,
+                  ),
+                  src: a,
+                  onMouseDown: Boolean(f) ? void 0 : (e) => X(e, r),
+                }),
+                n.createElement("input", {
+                  className: (0, A.A)(c().WhitelistNumber, f && c().Disabled),
+                  type: "text",
+                  value: x == r ? M : r + 1,
+                  disabled: f || r == N,
+                  onChange: (e) => Y(e.target.value),
+                  onKeyDown: (e) =>
+                    ((e, t) => {
+                      "Enter" === e.key && (J(t), e.currentTarget.blur());
+                    })(e, r),
+                  onFocus: (e) => {
+                    F(r), Y(e.target.value);
+                  },
+                  onBlur: () => J(r),
+                }),
+                s(e, r),
+                Boolean(r != N) &&
+                  Boolean(u || l) &&
+                  n.createElement(
+                    "div",
+                    { className: c().ButtonCtn },
+                    Boolean(u) &&
+                      n.createElement(
+                        "div",
+                        { className: d().RemoveIcon, onClick: (e) => u(r, e) },
+                        n.createElement(m.ffu, null),
+                      ),
+                    Boolean(l) &&
+                      n.createElement("img", {
+                        className: d().RemoveIcon,
+                        src: i.A,
+                        onClick: (e) => l(r, e),
+                      }),
+                  ),
+              ),
+              S == t.length &&
+                r == t.length - 1 &&
+                n.createElement(b, { width: z }),
+            ),
+          ),
+        );
+      }
+      function b(e) {
+        const { width: t } = e;
+        return n.createElement(
+          "div",
+          { className: c().DragHighlightContainer },
+          n.createElement("div", {
+            className: c().DragHighlight,
+            style: { width: t },
+          }),
+        );
+      }
+    },
+    9161: (e, t, s) => {
+      "use strict";
+      s.d(t, { g: () => a });
+      var n = s(94649),
+        r = s.n(n);
       class a {
         static ParseCSVFile(e) {
-          return new Promise((s, t) => {
-            const r = {
+          return new Promise((t, s) => {
+            const n = {
               header: !0,
               skipEmptyLines: "greedy",
-              complete: s,
-              error: (e) => t({ errors: [e] }),
+              complete: t,
+              error: (e) => s({ errors: [e] }),
             };
-            n().parse(e, r);
+            r().parse(e, n);
           });
         }
         static ReadFile(e) {
-          return new Promise((s, t) => {
-            const r = new FileReader();
-            (r.onload = (e) => s(r.result)), r.readAsText(e);
+          return new Promise((t, s) => {
+            const n = new FileReader();
+            (n.onload = (e) => t(n.result)), n.readAsText(e);
           });
         }
-        static WriteFile(e, s) {
-          let t = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(e, s);
+        static WriteFile(e, t) {
+          let s = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
           else {
-            const s = window.URL.createObjectURL(e);
-            t.href = s;
+            const t = window.URL.createObjectURL(e);
+            s.href = t;
           }
-          t.setAttribute("download", s), t.click();
+          s.setAttribute("download", t), s.click();
           try {
-            document.removeChild(t);
+            document.removeChild(s);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, s) {
-          const t = n().unparse(e, { header: !0 });
-          a.WriteFile(new Blob([t], { type: "text/csv:charset=utf-8;" }), s);
+        static WriteCSVToFile(e, t) {
+          const s = r().unparse(e, { header: !0 });
+          a.WriteFile(new Blob([s], { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
-        static WriteXMLToFile(e, s) {
-          const t = () =>
+        static WriteXMLToFile(e, t) {
+          const s = () =>
             this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let r =
-            "<" + t() + 'xml version="1.0" encoding="UTF-8" ' + t() + ">\n";
-          (r += new XMLSerializer().serializeToString(e)),
+          let n =
+            "<" + s() + 'xml version="1.0" encoding="UTF-8" ' + s() + ">\n";
+          (n += new XMLSerializer().serializeToString(e)),
             a.WriteFile(
-              new Blob([r], { type: "application/xml:charset=utf-8;" }),
-              s,
+              new Blob([n], { type: "application/xml:charset=utf-8;" }),
+              t,
             );
         }
       }
+    },
+    44894: (e, t, s) => {
+      "use strict";
+      s.d(t, { A: () => n });
+      const n =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

@@ -183,11 +183,6 @@ html.tablet .profile_summary_footer {
 
 /* STATUS */
 html.tablet .responsive_status_info {
-	margin-top: 0px;
-	background: none;
-	border-bottom: 1px solid #FFFFFF20;
-	border-top: 1px solid #FFFFFF20;
-	padding: 12px 0px;
 	margin: 12px 0px;
 	margin-top: 0px;
 }

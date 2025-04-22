@@ -326,7 +326,7 @@ function ShowPromptDialogWithProps( rgParams )
 	var $CancelButton = _BuildDialogButton( strCancelButton );
 	$CancelButton.click( fnCancel );
 
-	var Modal = _BuildDialog( strTitle, $Body, [ $OKButton, $CancelButton ], fnCancel );
+	var Modal = _BuildDialog( strTitle, $Body, [ $OKButton, $CancelButton ], fnCancel, rgParams );
 	if( !bNoPromiseDismiss )
 		deferred.always( function() { Modal.Dismiss(); } );
 

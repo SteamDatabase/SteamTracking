@@ -3356,7 +3356,7 @@
             t.GetSummaryWithFallback(g),
           ]),
           [k, B] = r.useState(() =>
-            (0, yt.c)() && 14 == v ? Y.wI.full : Y.wI.capsule_main,
+            (0, yt.c5)() && 14 == v ? Y.wI.full : Y.wI.capsule_main,
           ),
           A = (0, U.q3)(() =>
             Boolean(I && b)
@@ -3372,7 +3372,7 @@
               if (12 === s) return null;
               if ("youtube" === o) {
                 const t = (0, m.sf)(D.TS.LANGUAGE),
-                  o = (0, yt.c)() && 14 == s ? Y.wI.full : Y.wI.capsule_main,
+                  o = (0, yt.c5)() && 14 == s ? Y.wI.full : Y.wI.capsule_main,
                   c = e.GetImageForSizeAsArrayWithFallback("capsule", t, o, !0);
                 if ("carousel" === a)
                   return r.createElement(Nt.r, {
@@ -4509,7 +4509,7 @@
           e && (e.style.transform = "");
         }
         GetCurrentHubBannerHeight(e) {
-          const t = e && !(0, yt.c)();
+          const t = e && !(0, yt.c5)();
           return (0, K.v0)().GetCollectionID()
             ? (function (e, t) {
                 if (!e) return 0;
@@ -4542,7 +4542,7 @@
         }
         GetCurrentHeaderHeights(e) {
           const t = Cn(),
-            n = (0, yt.c)();
+            n = (0, yt.c5)();
           let a = 0;
           En() &&
             ((a = parseInt(
@@ -4950,7 +4950,7 @@
                     this.state.nLogInBannerHeight > 0 &&
                       r.createElement(Bn, {
                         nTopOffset: n,
-                        bLargeMode: this.state.nScrollTop <= 0 && !(0, yt.c)(),
+                        bLargeMode: this.state.nScrollTop <= 0 && !(0, yt.c5)(),
                       }),
                   ),
                   r.createElement(
@@ -4964,7 +4964,7 @@
                       }),
                     r.createElement(bn, {
                       nTopOffset: a,
-                      bLargeMode: this.state.nScrollTop <= 0 && !(0, yt.c)(),
+                      bLargeMode: this.state.nScrollTop <= 0 && !(0, yt.c5)(),
                     }),
                   ),
                   r.createElement(
@@ -5158,7 +5158,7 @@
             } = this.props,
             c = e.GetCalendarSections(t);
           if (0 == c.length) return null;
-          const u = (0, yt.c)(),
+          const u = (0, yt.c5)(),
             m = e.m_visibilityStore.BAreAllEventsHidden(),
             d = s;
           let p = !0;

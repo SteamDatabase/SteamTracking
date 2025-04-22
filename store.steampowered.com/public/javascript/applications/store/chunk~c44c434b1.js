@@ -5,26 +5,26 @@
   [1060],
   {
     56055: (e, t, n) => {
-      n.d(t, { b2: () => a, nx: () => r });
+      n.d(t, { b2: () => a, nx: () => o });
       const a = "terminal";
-      var r;
+      var o;
       !(function (e) {
         (e[(e.TemplateFAQDisplayColumn = 1)] = "TemplateFAQDisplayColumn"),
           (e[(e.TemplateFAQDisplaySimpleRow = 2)] =
             "TemplateFAQDisplaySimpleRow");
-      })(r || (r = {}));
+      })(o || (o = {}));
     },
     39733: (e, t, n) => {
-      n.d(t, { Du: () => h, fy: () => d, pt: () => _ });
+      n.d(t, { Du: () => _, fy: () => u, pt: () => m });
       var a = n(68797),
-        r = n(78327),
-        o = n(41735),
-        s = n.n(o),
+        o = n(78327),
+        s = n(41735),
+        r = n.n(s),
         i = n(90626),
         l = n(6144),
         c = n(73745),
-        m = n(44332);
-      class u {
+        h = n(44332);
+      class d {
         m_mapBadgeInfo = new Map();
         m_mapBadgeLoadPromises = new Map();
         m_eventBadgehangeCallback = new Map();
@@ -60,14 +60,14 @@
           if (!e || !Number.isInteger(e)) return { badgeid: e, level: 0 };
           let t = null;
           try {
-            const n = (0, r.xv)();
-            (0, m.w)(
-              n == r.TS.STORE_BASE_URL || n == r.TS.COMMUNITY_BASE_URL,
+            const n = (0, o.xv)();
+            (0, h.w)(
+              n == o.TS.STORE_BASE_URL || n == o.TS.COMMUNITY_BASE_URL,
               "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
             );
-            const o = n + "actions/ajaxgetbadgeinfo",
+            const s = n + "actions/ajaxgetbadgeinfo",
               i = { badgeid: e },
-              l = await s().get(o, { params: i, withCredentials: !0 });
+              l = await r().get(s, { params: i, withCredentials: !0 });
             if (
               200 == l.status &&
               (1 == l.data?.success || 42 == l.data?.success)
@@ -96,41 +96,41 @@
         static s_Singleton;
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              "dev" == r.TS.WEB_UNIVERSE &&
-                (window.g_UserBadgeForEventStore = u.s_Singleton)),
-            u.s_Singleton
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
+              "dev" == o.TS.WEB_UNIVERSE &&
+                (window.g_UserBadgeForEventStore = d.s_Singleton)),
+            d.s_Singleton
           );
         }
         constructor() {}
       }
-      function d(e) {
-        const [t, n] = (0, i.useState)(u.Get().GetBadgeInfo(e));
+      function u(e) {
+        const [t, n] = (0, i.useState)(d.Get().GetBadgeInfo(e));
         return (
           (0, i.useEffect)(() => {
             !t &&
               e &&
-              u
+              d
                 .Get()
                 .LoadBadgeInfo(e)
                 .then((e) => n(e));
           }, [e, t]),
-          (0, c.hL)(u.Get().GetBadgeInfoChangeCallback(e), n),
+          (0, c.hL)(d.Get().GetBadgeInfoChangeCallback(e), n),
           t
         );
       }
-      function h(e) {
-        u.Get().Test_SetBadgeInfo(e);
-      }
       function _(e) {
-        const [t, n] = (0, i.useState)(u.Get().GetInitialBadgeInfo(e));
+        d.Get().Test_SetBadgeInfo(e);
+      }
+      function m(e) {
+        const [t, n] = (0, i.useState)(d.Get().GetInitialBadgeInfo(e));
         return (
           (0, i.useEffect)(() => {
-            !t && e && u.Get().LoadBadgeInfo(e);
+            !t && e && d.Get().LoadBadgeInfo(e);
           }, [e, t]),
-          (0, c.hL)(u.Get().GetBadgeInfoChangeCallback(e), () =>
-            n(u.Get().GetInitialBadgeInfo(e)),
+          (0, c.hL)(d.Get().GetBadgeInfoChangeCallback(e), () =>
+            n(d.Get().GetInitialBadgeInfo(e)),
           ),
           t
         );
@@ -139,16 +139,16 @@
     1501: (e, t, n) => {
       n.d(t, { N: () => l });
       var a = n(34629),
-        r = n(14947),
-        o = n(56055),
-        s = n(62490),
+        o = n(14947),
+        s = n(56055),
+        r = n(62490),
         i = n(78327);
       class l {
         m_rgAnswerToCategoryID = Array();
         m_rgAnswerChosen = Array();
         SetAnswerCategory(e, t) {
           const n = Math.min(e, 64);
-          (this.m_rgAnswerToCategoryID = (0, s.$Y)(
+          (this.m_rgAnswerToCategoryID = (0, r.$Y)(
             this.m_rgAnswerToCategoryID,
             n + 1,
             null,
@@ -162,7 +162,7 @@
         }
         SetAnswer(e, t) {
           const n = Math.min(e, 64);
-          (this.m_rgAnswerChosen = (0, s.$Y)(
+          (this.m_rgAnswerChosen = (0, r.$Y)(
             this.m_rgAnswerChosen,
             n + 1,
             null,
@@ -199,7 +199,7 @@
         }
         BHasTerminalAnswerChosen() {
           return this.m_rgAnswerChosen.some(
-            (e) => e.reveal_question_id == o.b2,
+            (e) => e.reveal_question_id == s.b2,
           );
         }
         static s_Singleton;
@@ -213,36 +213,36 @@
           );
         }
         constructor() {
-          (0, r.Gn)(this);
+          (0, o.Gn)(this);
         }
       }
-      (0, a.Cg)([r.sH], l.prototype, "m_rgAnswerToCategoryID", void 0),
-        (0, a.Cg)([r.sH], l.prototype, "m_rgAnswerChosen", void 0);
+      (0, a.Cg)([o.sH], l.prototype, "m_rgAnswerToCategoryID", void 0),
+        (0, a.Cg)([o.sH], l.prototype, "m_rgAnswerChosen", void 0);
     },
     35400: (e, t, n) => {
       n.d(t, {
         DV: () => D,
-        Fq: () => _,
+        Fq: () => m,
         OC: () => I,
         OM: () => C,
-        Sp: () => b,
+        Sp: () => y,
         Tn: () => S,
         W3: () => f,
         hH: () => g,
-        my: () => A,
+        my: () => b,
       });
       var a = n(34629),
-        r = n(41735),
-        o = n.n(r),
-        s = n(14947),
+        o = n(41735),
+        s = n.n(o),
+        r = n(14947),
         i = n(90626),
         l = n(68797),
         c = n(6144),
-        m = n(73745),
-        u = n(78327),
-        d = n(44165),
-        h = n(34824);
-      const _ = 7,
+        h = n(73745),
+        d = n(78327),
+        u = n(44165),
+        _ = n(34824);
+      const m = 7,
         p = -1;
       class g {
         m_userData;
@@ -271,9 +271,9 @@
           );
         }
         BCanUserOpenDoor(e) {
-          let t = d.HD.GetTimeNowWithOverride();
+          let t = u.HD.GetTimeNowWithOverride();
           return (
-            u.iA.logged_in &&
+            d.iA.logged_in &&
             this.m_userData &&
             e < this.m_userData.length &&
             t >= this.m_userData[e].rtime_start &&
@@ -309,10 +309,10 @@
           return this.m_bLoadedDuringInit;
         }
         GetMaxDoor() {
-          return _;
+          return m;
         }
         SetInMemoryUpdateDoorOpenUpto(e) {
-          for (let t = 0; t < _; ++t) {
+          for (let t = 0; t < m; ++t) {
             const n = t <= e;
             this.m_userData[t].opened != n &&
               ((this.m_userData[t].opened = n),
@@ -321,7 +321,7 @@
           this.RecomputeState();
         }
         SetInMemorySpecificDoorState(e, t) {
-          e < _
+          e < m
             ? this.m_userData[e].opened != t &&
               ((this.m_userData[e].opened = t),
               this.GetDoorStateChangeCallback(e).Dispatch(t),
@@ -342,14 +342,14 @@
               this.GetLargestDoorIndexChange().Dispatch(e));
         }
         async OpenDoor(e, t = !0, n = "", a = !1) {
-          return !u.iA.logged_in ||
+          return !d.iA.logged_in ||
             !this.m_userData ||
             e > this.m_userData.length ||
             e < 0
-            ? ("dev" == u.TS.WEB_UNIVERSE &&
+            ? ("dev" == d.TS.WEB_UNIVERSE &&
                 console.log(
                   "CDoorStore.OpenDoor Early fail settings:",
-                  u.iA.logged_in,
+                  d.iA.logged_in,
                   this.m_userData,
                   e,
                   this.m_userData?.length,
@@ -367,22 +367,22 @@
                   this.m_mapDoorOpenPromise.get(e));
         }
         async InternalOpenDoor(e, t = !0, n, a = !1) {
-          let r = u.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
-          const s = new FormData();
-          s.append("sessionid", u.TS.SESSIONID),
-            n && s.append("datarecord", n),
-            a && s.append("fake_open", "" + a),
-            s.append("door_index", "" + e),
-            s.append("clan_accountid", "" + u.UF.CLANACCOUNTID),
-            t || s.append("open_door", "0");
+          let o = d.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
+          const r = new FormData();
+          r.append("sessionid", d.TS.SESSIONID),
+            n && r.append("datarecord", n),
+            a && r.append("fake_open", "" + a),
+            r.append("door_index", "" + e),
+            r.append("clan_accountid", "" + d.UF.CLANACCOUNTID),
+            t || r.append("open_door", "0");
           let i = null;
           try {
-            let n = await o().post(r, s, { withCredentials: !0 });
+            let n = await s().post(o, r, { withCredentials: !0 });
             if (200 == n?.status && 1 == n?.data?.success)
               return (
                 (this.m_userData[e].opened = t),
                 (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
-                n.data.capsuleinsert && (0, h.YH)([n.data.capsuleinsert]),
+                n.data.capsuleinsert && (0, _.YH)([n.data.capsuleinsert]),
                 this.GetDoorStateChangeCallback(e).Dispatch(t),
                 this.RecomputeState(),
                 n.data
@@ -405,14 +405,14 @@
               this.m_initialLoadPromise);
         }
         async InternalLoadDoorData() {
-          const e = u.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
+          const e = d.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
           let t = null;
           try {
-            const n = await o().get(e, { withCredentials: !0 });
+            const n = await s().get(e, { withCredentials: !0 });
             if (200 == n.status && n.data?.doordata) {
               (this.m_userData = n.data.doordata),
                 (this.m_bLoadedDuringInit = !0);
-              for (let e = 0; e < _; ++e)
+              for (let e = 0; e < m; ++e)
                 this.GetDoorStateChangeCallback(e).Dispatch(
                   this.m_userData[e].opened,
                 );
@@ -437,16 +437,16 @@
           );
         }
         async CloseAllDoors(e) {
-          let t = u.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
+          let t = d.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const n = new FormData();
-          n.append("sessionid", u.TS.SESSIONID),
+          n.append("sessionid", d.TS.SESSIONID),
             n.append("clan_accountid", "" + e);
           let a = null;
           try {
-            let e = await o().post(t, n, { withCredentials: !0 });
+            let e = await s().post(t, n, { withCredentials: !0 });
             if (200 == e.status && 1 == e?.data?.success) {
               console.log("CDoorStore - closed " + e.data.count);
-              for (let e = 0; e < _; ++e)
+              for (let e = 0; e < m; ++e)
                 (this.m_userData[e].opened = !1),
                   this.GetDoorStateChangeCallback(e).Dispatch(
                     this.m_userData[e].opened,
@@ -471,20 +471,20 @@
             g.s_Singleton ||
               ((g.s_Singleton = new g()),
               g.s_Singleton.Init(),
-              "dev" == u.TS.WEB_UNIVERSE &&
+              "dev" == d.TS.WEB_UNIVERSE &&
                 (window.g_EventDoorStore = g.s_Singleton)),
             g.s_Singleton
           );
         }
         constructor() {
-          (0, s.Gn)(this);
+          (0, r.Gn)(this);
         }
         Init() {
-          (this.m_userData = (0, u.Tc)("doorinfo", "application_config")),
+          (this.m_userData = (0, d.Tc)("doorinfo", "application_config")),
             this.m_userData &&
               ((this.m_bLoadedDuringInit = !0),
               this.RecomputeState(),
-              "dev" == u.TS.WEB_UNIVERSE &&
+              "dev" == d.TS.WEB_UNIVERSE &&
                 console.log("CDoorStore Loading - ", this.m_userData));
         }
       }
@@ -497,35 +497,35 @@
           (0, i.useEffect)(() => {
             e || g.Get().LoadDoorData();
           }, [e]),
-          (0, m.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
+          (0, h.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
           e
         );
       }
       function C(e) {
         const t = D(),
           [n, a] = (0, i.useState)(t ? g.Get().BIsDoorOpened(e) : void 0);
-        return (0, m.hL)(g.Get().GetDoorStateChangeCallback(e), a), n;
+        return (0, h.hL)(g.Get().GetDoorStateChangeCallback(e), a), n;
       }
       function S() {
         const e = D(),
           [t, n] = (0, i.useState)(e ? g.Get().GetLargestDoorOpenIndex() : p);
-        return (0, m.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
+        return (0, h.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
       }
       function f() {
         const e = D(),
           [t, n] = (0, i.useState)(!!e && g.Get().BIsAnyDoorOpened());
-        return (0, m.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
+        return (0, h.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function b(e) {
+      function y(e) {
         g.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      function A(e, t) {
+      function b(e, t) {
         g.Get().SetInMemorySpecificDoorState(e, t);
       }
-      (0, a.Cg)([s.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, a.Cg)([s.sH], g.prototype, "m_nHighestDoorOpened", void 0),
-        (0, a.Cg)([m.oI], g.prototype, "BIsDoorOpened", null),
-        (0, a.Cg)([m.oI], g.prototype, "OpenDoor", null);
+      (0, a.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, a.Cg)([r.sH], g.prototype, "m_nHighestDoorOpened", void 0),
+        (0, a.Cg)([h.oI], g.prototype, "BIsDoorOpened", null),
+        (0, a.Cg)([h.oI], g.prototype, "OpenDoor", null);
     },
     34824: (e, t, n) => {
       n.d(t, {
@@ -537,16 +537,16 @@
         tO: () => D,
       });
       var a,
-        r = n(34629),
-        o = n(14947),
-        s = (n(90626), n(77516)),
+        o = n(34629),
+        s = n(14947),
+        r = (n(90626), n(77516)),
         i = n(44332),
         l = n(6144),
         c = n(73745),
-        m = n(78327),
-        u = n(6379),
-        d = n(82097),
-        h = n(3967);
+        h = n(78327),
+        d = n(6379),
+        u = n(82097),
+        _ = n(3967);
       !(function (e) {
         (e[(e.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
           (e[(e.k_EDiscoveryAction_OpenStorePage = 1)] =
@@ -554,7 +554,7 @@
           (e[(e.k_EDiscoveryAction_OpenDoor = 2)] =
             "k_EDiscoveryAction_OpenDoor");
       })(a || (a = {}));
-      class _ {
+      class m {
         m_mapMaterializedInsertion = new Map();
         m_mapInsertCallback = new Map();
         m_rgFutureInsertions = new Array();
@@ -645,7 +645,7 @@
         BIsInsertableSectionType(e) {
           if (e) {
             if ("sale_item_browser" == e.section_type) return !0;
-            if ((0, s.ye)(e.section_type))
+            if ((0, r.ye)(e.section_type))
               return (
                 !e.smart_section ||
                 ("wishlist" != e.smart_section_type &&
@@ -659,9 +659,9 @@
         }
         DeployCapsuleIfPossible(e, t) {
           if (this.BHasExistingInsertion(e)) return null;
-          if (m.P9.ANNOUNCEMENT_GID) {
-            const n = u.O3.GetClanEventFromAnnouncementGID(
-                m.P9.ANNOUNCEMENT_GID,
+          if (h.P9.ANNOUNCEMENT_GID) {
+            const n = d.O3.GetClanEventFromAnnouncementGID(
+                h.P9.ANNOUNCEMENT_GID,
               ),
               a = n?.GetSaleSectionByID(e.sectionid);
             if (this.BIsInsertableSectionType(a)) {
@@ -691,33 +691,33 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == m.TS.WEB_UNIVERSE &&
-                (window.g_DynamicCapsuleInsertStore = _.s_Singleton)),
-            _.s_Singleton
+            m.s_Singleton ||
+              ((m.s_Singleton = new m()),
+              m.s_Singleton.Init(),
+              "dev" == h.TS.WEB_UNIVERSE &&
+                (window.g_DynamicCapsuleInsertStore = m.s_Singleton)),
+            m.s_Singleton
           );
         }
         constructor() {
-          (0, o.Gn)(this);
+          (0, s.Gn)(this);
         }
         Init() {
-          const e = (0, m.Fd)("capsuleinsert", "application_config");
-          _.ValidateData(e) &&
+          const e = (0, h.Fd)("capsuleinsert", "application_config");
+          m.ValidateData(e) &&
             (e.sectionID
               ? this.m_mapMaterializedInsertion.set(this.GetKey(e), e)
               : e.insertion_requirement
                 ? (this.m_rgFutureInsertions.push(e),
                   e?.appid &&
-                    d.A.Get()
+                    u.A.Get()
                       .QueueAppRequest(e.appid, {
                         include_assets: !0,
                         include_release: !0,
                         include_trailers: !0,
                       })
                       .then(() => {
-                        const t = d.A.Get().GetApp(e.appid);
+                        const t = u.A.Get().GetApp(e.appid);
                         !t ||
                           t.GetBestPurchaseOption()?.formatted_final_price
                             ?.length > 0 ||
@@ -729,14 +729,14 @@
                             discount_pct: 50,
                           });
                       }))
-                : "dev" == m.TS.WEB_UNIVERSE &&
+                : "dev" == h.TS.WEB_UNIVERSE &&
                   console.error(
                     "CDynamicCapsuleInsertStore: Payload not material and missing instructions.",
                     e,
                   ),
-            "dev" == m.TS.WEB_UNIVERSE &&
+            "dev" == h.TS.WEB_UNIVERSE &&
               console.log("CDynamicCapsuleInsertStore loaded ", e)),
-            h.I.Get()
+            _.I.Get()
               .GetNewInteractionCallback()
               .Register(this.SaleInteractionCallback);
         }
@@ -752,31 +752,31 @@
         }
       }
       function p(e) {
-        _.Get().ReplaceInsertion(e);
+        m.Get().ReplaceInsertion(e);
       }
       function g(e, t) {
-        return _.Get().GetMatchingInsertion(e, t);
+        return m.Get().GetMatchingInsertion(e, t);
       }
       function I(e, t) {
-        return _.Get().GetChangeCallback(e, t);
+        return m.Get().GetChangeCallback(e, t);
       }
       function D(e) {
-        _.Get().AppCapsuleFound(e);
+        m.Get().AppCapsuleFound(e);
       }
       function C() {
-        return _.Get().GetAnyNonMaterializedInsertionRequest();
+        return m.Get().GetAnyNonMaterializedInsertionRequest();
       }
       function S(e) {
-        return _.Get().BIsInsertableSectionType(e);
+        return m.Get().BIsInsertableSectionType(e);
       }
-      (0, r.Cg)([c.oI], _.prototype, "SaleInteractionCallback", null),
-        (0, r.Cg)([o.XI], _.prototype, "DeployCapsuleIfPossible", null);
+      (0, o.Cg)([c.oI], m.prototype, "SaleInteractionCallback", null),
+        (0, o.Cg)([s.XI], m.prototype, "DeployCapsuleIfPossible", null);
     },
     3967: (e, t, n) => {
-      n.d(t, { I: () => o });
+      n.d(t, { I: () => s });
       var a = n(6144),
-        r = n(78327);
-      class o {
+        o = n(78327);
+      class s {
         m_setInteractions = new Set();
         m_nActiveTabID = -1;
         m_interactionCallback = new a.lu();
@@ -789,7 +789,7 @@
             a = !this.m_setInteractions.has(n);
           this.m_setInteractions.add(n),
             a &&
-              ("dev" == r.TS.WEB_UNIVERSE &&
+              ("dev" == o.TS.WEB_UNIVERSE &&
                 this.m_bDebugMode &&
                 console.log(
                   "CSaleInteractionStore new: " +
@@ -808,265 +808,36 @@
         static s_Singleton;
         static Get() {
           return (
-            o.s_Singleton ||
-              ((o.s_Singleton = new o()),
-              o.s_Singleton.Init(),
-              "dev" == r.TS.WEB_UNIVERSE &&
-                (window.g_SaleInteractionStore = o.s_Singleton)),
-            o.s_Singleton
+            s.s_Singleton ||
+              ((s.s_Singleton = new s()),
+              s.s_Singleton.Init(),
+              "dev" == o.TS.WEB_UNIVERSE &&
+                (window.g_SaleInteractionStore = s.s_Singleton)),
+            s.s_Singleton
           );
         }
         constructor() {}
         Init() {}
       }
     },
-    32541: (e, t, n) => {
-      n.d(t, { LG: () => f, hA: () => S });
-      var a = n(90626),
-        r = n(76217),
-        o = n(67165),
-        s = n(30894),
-        i = n(55263),
-        l = n(17289),
-        c = n(52038),
-        m = n(61859),
-        u = n(82227),
-        d = n(61336),
-        h = n(78327),
-        _ = n(84811),
-        p = n(32630),
-        g = n(22797),
-        I = n(56524),
-        D = n(48838),
-        C = n(95695);
-      function S(e) {
-        const {
-            creatorID: t,
-            bShowTagline: n,
-            bHideCreatorType: i,
-            bSmallFormat: S,
-            bHideFollowButton: f,
-            bAddLinkToMemberList: b,
-          } = e,
-          A = (0, o.FV)(t.clan_account_id),
-          [y] = (0, s.L2)();
-        if (y || !A)
-          return a.createElement(
-            "div",
-            { className: I.DevSummaryWidgetCtn },
-            a.createElement(g.t, {
-              string: (0, m.we)("#Loading"),
-              size: "medium",
-              position: "center",
-            }),
-          );
-        const w = t.type,
-          G =
-            "developer" == t.type
-              ? (0, m.we)("#CreatorHome_DevelopedBy")
-              : "publisher" == t.type
-                ? (0, m.we)("#CreatorHome_PublishedBy")
-                : (0, m.we)("#CreatorHome_InFranchise"),
-          E = A.GetCreatorHomeURL(w),
-          B = A.GetNumFollowers();
-        return a.createElement(
-          _.tH,
-          null,
-          a.createElement(
-            p.A,
-            { feature: "salecreatorhome" },
-            a.createElement(
-              r.Z,
-              {
-                className: (0, c.A)(
-                  I.DevSummaryCtn,
-                  S ? I.SmallFormat : I.LargeFormat,
-                ),
-                "flow-children": "row",
-              },
-              !i && a.createElement("span", { className: I.Title }, G),
-              a.createElement(
-                "div",
-                { className: I.DevSummaryWidgetCtn },
-                a.createElement("div", {
-                  className: I.DevSummaryBackground,
-                  style: {
-                    backgroundImage: `url(${A.GetAvatarURLFullSize()} )`,
-                  },
-                }),
-                a.createElement(
-                  "div",
-                  { className: (0, c.A)(I.DevSummaryContent) },
-                  a.createElement(
-                    "div",
-                    { className: C.FlexRowContainer },
-                    a.createElement(
-                      l.m,
-                      {
-                        href: (0, d.k2)(E),
-                        className: I.AvatarLink,
-                        bAllowFocuseableAnchor: !0,
-                      },
-                      a.createElement("img", {
-                        className: (0, c.A)(I.Avatar, "Avatar_Trgt"),
-                        src: A.GetAvatarURLFullSize(),
-                      }),
-                    ),
-                    a.createElement(
-                      "div",
-                      {
-                        className: (0, c.A)(
-                          C.FlexColumnContainer,
-                          I.CreatorDescCtn,
-                        ),
-                      },
-                      a.createElement(
-                        "div",
-                        {
-                          className: (0, c.A)(
-                            I.CreatorTitleCtn,
-                            C.FlexColumnContainer,
-                          ),
-                        },
-                        a.createElement(
-                          l.m,
-                          { href: (0, d.k2)(E), className: I.CreatorNameName },
-                          A.GetName(),
-                        ),
-                        Boolean(n) &&
-                          a.createElement(
-                            "div",
-                            {
-                              className: (0, c.A)(
-                                C.FlexColumnContainer,
-                                I.CreatorTagline,
-                              ),
-                            },
-                            A.GetTagLine(),
-                          ),
-                      ),
-                      a.createElement(
-                        "div",
-                        {
-                          className: (0, c.A)(
-                            S ? C.FlexColumnContainer : C.FlexRowContainer,
-                            I.SocialFollowersCtn,
-                          ),
-                        },
-                        a.createElement(
-                          "div",
-                          { className: I.FollowBtnCtn },
-                          Boolean(!f) &&
-                            a.createElement(D.of, {
-                              clanAccountID: t.clan_account_id,
-                              creatorID: t,
-                            }),
-                          a.createElement(
-                            "div",
-                            { className: I.Followers },
-                            a.createElement("span", null, (0, u.Dq)(B)),
-                            a.createElement("br", null),
-                            (0, m.we)("#CreatorHome_JustFollowers"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Boolean(b) &&
-                    a.createElement(
-                      "a",
-                      {
-                        href:
-                          h.TS.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          A.GetClanSteamID().ConvertTo64BitString() +
-                          "/members/",
-                        target: "_blank",
-                        className: I.MembersListLink,
-                      },
-                      (0, m.we)("#ClanMembershipList"),
-                    ),
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      function f(e) {
-        const { appid: t, bSmallFormat: n } = e,
-          [r] = (0, i.t7)(t, { include_basic_info: !0 });
-        if (!t) return null;
-        if (!r)
-          return a.createElement(
-            "div",
-            { className: I.DevSummaryWidgetCtn },
-            a.createElement(g.t, null),
-          );
-        let o;
-        const s = r.GetAllDeveloperCreatorClans();
-        if (s?.length > 0)
-          o = { appid: t, name: "", clan_account_id: s[0], type: "developer" };
-        else {
-          const e = r.GetAllPublisherCreatorClans();
-          if (e?.length > 0)
-            o = {
-              appid: t,
-              name: "",
-              clan_account_id: e[0],
-              type: "publisher",
-            };
-          else {
-            const e = r.GetAllFranchiseCreatorClans();
-            e?.length > 0 &&
-              (o = {
-                appid: t,
-                name: "",
-                clan_account_id: e[0],
-                type: "franchise",
-              });
-          }
-        }
-        return o
-          ? a.createElement(
-              _.tH,
-              null,
-              a.createElement(S, { creatorID: o, bSmallFormat: n }),
-            )
-          : null;
-      }
-    },
     96971: (e, t, n) => {
-      n.d(t, { Cs: () => s, LD: () => o, MU: () => l, yD: () => i });
+      n.d(t, { Cs: () => r, LD: () => s, MU: () => l, yD: () => i });
       var a = n(90626);
-      const r = { eLocation: 0 },
-        o = a.createContext(r);
-      function s(e) {
+      const o = { eLocation: 0 },
+        s = a.createContext(o);
+      function r(e) {
         const { children: t, location: n } = e;
         return a.createElement(
-          o.Provider,
-          { value: { ...r, eLocation: n } },
+          s.Provider,
+          { value: { ...o, eLocation: n } },
           t,
         );
       }
       function i() {
-        return a.useContext(o);
+        return a.useContext(s);
       }
       function l() {
         return 2 == i().eLocation;
-      }
-    },
-    17289: (e, t, n) => {
-      n.d(t, { m: () => s });
-      var a = n(45699),
-        r = n(90626),
-        o = n(78327);
-      function s(e) {
-        const { href: t, children: n, bAllowFocuseableAnchor: s, ...i } = e;
-        return (0, o.Y2)()
-          ? r.createElement("div", { ...i }, n)
-          : s
-            ? r.createElement(a.Ii, { href: t, ...i }, n)
-            : r.createElement("a", { href: t, ...i }, n);
       }
     },
   },

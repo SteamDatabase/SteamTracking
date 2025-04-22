@@ -248,6 +248,7 @@
       e.exports = {
         ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
         ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
+        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
       };
     },
     29868: (e) => {
@@ -322,7 +323,7 @@
         Label: "I1zVikvORZt41zc-QTAsw",
       };
     },
-    82085: (e, t, a) => {
+    20367: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => ms });
       var n = a(43527),
@@ -7488,7 +7489,7 @@
             null,
             Boolean(n && n.length > 0)
               ? n.map((e) =>
-                  c.createElement("li", { key: e.unique_id }, (0, Gn.l)(e, r)),
+                  c.createElement("li", { key: e.unique_id }, (0, Gn.l8)(e, r)),
                 )
               : (0, D.we)("#Sale_Debug_NoMatchingItem"),
           ),
@@ -8591,14 +8592,15 @@
               queryFn: async () => {
                 var e;
                 const t = `${pa.TS.COMMUNITY_BASE_URL}sale/ajaxgetsocialmediaeditsettings`,
-                  a = await r().get(t);
-                return 200 == (null == a ? void 0 : a.status) &&
+                  a = { origin: self.origin },
+                  n = await r().get(t, { params: a });
+                return 200 == (null == n ? void 0 : n.status) &&
                   1 ==
-                    (null === (e = a.data) || void 0 === e ? void 0 : e.success)
-                  ? a.data
+                    (null === (e = n.data) || void 0 === e ? void 0 : e.success)
+                  ? n.data
                   : (console.error(
                       "useSocialMediaSupports:",
-                      null == a ? void 0 : a.status,
+                      null == n ? void 0 : n.status,
                     ),
                     { success: 2 });
               },
@@ -10807,23 +10809,24 @@
           [l, i] = c.useState(1),
           [o, r] = c.useState(!1),
           s = (0, D.O9)(!1),
-          d = n.GetClanSteamID(),
-          u = n.GetGID(),
-          _ = (0, hi.Wj)(d, u),
-          [, E] = c.useReducer((e) => e + 1, 0),
-          p =
-            _.isSuccess &&
-            (null === (t = _.data) || void 0 === t
+          [d, u] = c.useState(null),
+          _ = n.GetClanSteamID(),
+          E = n.GetGID(),
+          p = (0, hi.Wj)(_, E),
+          [, g] = c.useReducer((e) => e + 1, 0),
+          S =
+            p.isSuccess &&
+            (null === (t = p.data) || void 0 === t
               ? void 0
               : t.crowdin_project_id) &&
-            (null === (a = _.data) || void 0 === a ? void 0 : a.crowdin_file_id)
-              ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
+            (null === (a = p.data) || void 0 === a ? void 0 : a.crowdin_file_id)
+              ? `https://valve.crowdin.com/editor/${p.data.crowdin_project_id}/${p.data.crowdin_file_id}`
               : null,
-          g = (0, hi.IW)(d.ConvertTo64BitString(), u, l);
-        if (_.isLoading) return null;
-        let S = Array.from(s.entries());
-        S.sort((e, t) => e[1].localeCompare(t[1]));
-        const b = S.map(([e, t]) =>
+          b = (0, hi.IW)(_.ConvertTo64BitString(), E, l);
+        if (p.isLoading) return null;
+        let w = Array.from(s.entries());
+        w.sort((e, t) => e[1].localeCompare(t[1]));
+        const f = w.map(([e, t]) =>
           "english" !== e
             ? c.createElement("option", { key: e, value: e }, t)
             : "",
@@ -10838,7 +10841,7 @@
             c.createElement(x.J0, {
               value: n.BPushUpdatesToCrowdInAutomatically(),
               onChange: (e) => {
-                n.SetPushSourceToCrowdInAutomatically(e), E();
+                n.SetPushSourceToCrowdInAutomatically(e), g();
               },
             }),
             c.createElement(
@@ -10848,8 +10851,8 @@
                 "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
               ),
               " (",
-              p
-                ? c.createElement("a", { href: p }, p)
+              S
+                ? c.createElement("a", { href: S }, S)
                 : (0, D.we)("#EventEditor_Localization_NotMappedToCrowdIn"),
               ")",
               c.createElement(ot.o, {
@@ -10875,7 +10878,7 @@
                   }
                 },
               },
-              b,
+              f,
               c.createElement(
                 "option",
                 { value: "all" },
@@ -10888,17 +10891,32 @@
                 className: h().EditPreviewButton,
                 onClick: () => {
                   r(!0),
-                    g
+                    b
                       .mutateAsync()
                       .then(() => window.location.reload())
                       .catch((e) => {
-                        r(!1);
+                        u(e.toString()), r(!1);
+                      })
+                      .then(() => {
+                        u(null);
                       });
                 },
               },
               (0, D.we)("#EventEditor_Localization_FetchLocalization"),
             ),
           ),
+          d &&
+            c.createElement(
+              c.Fragment,
+              null,
+              c.createElement(
+                "div",
+                { className: wi().SyncPanelError },
+                c.createElement(va.X, null),
+                " ",
+                d,
+              ),
+            ),
         );
       }
       function yi(e) {

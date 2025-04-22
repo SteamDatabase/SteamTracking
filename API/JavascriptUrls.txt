@@ -428,13 +428,20 @@ ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${k_strGRFAQ}
 ${HELP_BASE_URL}faqs/view/${url_code}
+${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36
+${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${}
 ${HELP_BASE_URL}faqs/view/054C-3167-DD7F-49D4
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
 ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
+${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31
+${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31#transfer
+${HELP_BASE_URL}wizard/HelpChangeEmail?redir=store/account/
+${HELP_BASE_URL}wizard/HelpChangePassword?redir=store/account/
 ${HELP_BASE_URL}wizard/HelpRecoverFamilyMember?childid=${}
 ${HELP_BASE_URL}wizard/HelpRequest/${ticket}
 ${HELP_BASE_URL}wizard/HelpRequests
+${HELP_BASE_URL}wizard/HelpWithAccountStolen
 ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
@@ -820,6 +827,8 @@ ${IMG_URL}minimap_ancient.png
 ${IMG_URL}minimap_racks${_ ? "45" : "90"}.png
 ${IMG_URL}minimap_tower${_ ? "45" : "90"}.png
 ${IMG_URL}mix_and_match2.png
+${IMG_URL}mobile/localizedimages/appleappstore/apple_store_
+${IMG_URL}mobile/localizedimages/googleplaystore/google_play_store_
 ${IMG_URL}nav_tournaments_standings.png
 ${IMG_URL}nav_tournaments_white.png
 ${IMG_URL}outlanders/alliances-earth.png
@@ -1057,6 +1066,7 @@ ${PARTNER_BASE_URL}cluster/ajaxloadcluster
 ${PARTNER_BASE_URL}cluster/ajaxsaveclusterassets
 ${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=${}
 ${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=spotlights
+${PARTNER_BASE_URL}creatorhome/ajaxgetgroupsforuser
 ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
@@ -1064,11 +1074,18 @@ ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
+${PARTNER_BASE_URL}doc/accessibility_features#gameplay
+${PARTNER_BASE_URL}doc/accessibility_features#input_recommendations
+${PARTNER_BASE_URL}doc/accessibility_features#narrated_menus
+${PARTNER_BASE_URL}doc/accessibility_features#tts
+${PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations
+${PARTNER_BASE_URL}doc/accessibility_features#volume_controls
 ${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/features/seasonpass
 ${PARTNER_BASE_URL}doc/features/timeline
 ${PARTNER_BASE_URL}doc/gettingstarted/contentsurvey/germany
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users
+${PARTNER_BASE_URL}doc/gettingstarted/managing_users/communication
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/${_ ? "midweek" : "weekend"}
@@ -1263,12 +1280,15 @@ ${PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
 ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
 ${PARTNER_BASE_URL}pub/companydetails/${partnerid}
+${PARTNER_BASE_URL}pub/mailingaddresses/${}
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
 ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
 ${PARTNER_BASE_URL}pub/publisher/${}
+${PARTNER_BASE_URL}pub/view
 ${PARTNER_BASE_URL}public/downloadics.php?${}
 ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
 ${PARTNER_BASE_URL}recap/nextfest/${}/${m_partnerId}
+${PARTNER_BASE_URL}recap/nextfest/${}/${}
 ${PARTNER_BASE_URL}recommended_actions/missingratingforgermany/?partnerid=${}
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
@@ -1353,6 +1373,7 @@ ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/${}${_ ? `?${}` : ""}
+${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
 ${STORE_BASE_URL}/curator/${}/
@@ -1561,6 +1582,7 @@ ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
 ${STORE_BASE_URL}meetsteam/${}
 ${STORE_BASE_URL}mobile
+${STORE_BASE_URL}mobile#mobile_section
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}mobile?show=steamapp
 ${STORE_BASE_URL}news/
@@ -1583,6 +1605,8 @@ ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
+${STORE_BASE_URL}phone/add
+${STORE_BASE_URL}phone/manage
 ${STORE_BASE_URL}points/
 ${STORE_BASE_URL}points/ajaxgeteventdetails?event_name=${}
 ${STORE_BASE_URL}points/heroimage?appid=${}
@@ -1680,7 +1704,10 @@ ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
 ${STORE_BASE_URL}tags/${}/${name}
 ${STORE_BASE_URL}tags/${}/${tagid}
 ${STORE_BASE_URL}tags/${}/${}
+${STORE_BASE_URL}twofactor/manage
 ${STORE_BASE_URL}twofactor/manage_action
+${STORE_BASE_URL}twofactor/remove?step=promptdevice
+${STORE_BASE_URL}twofactor/remove?step=promptrcode
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
@@ -2670,6 +2697,8 @@ https://img.youtube.com/vi/${}/0.jpg
 https://imgur.com
 https://instagram.com/dota2
 https://itunes.apple.com/app/steam-link/id1246969117
+https://itunes.apple.com/us/app/steam-mobile/id495369748
+https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://login.steampowered.com/jwt/ajaxrefresh
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
@@ -2824,6 +2853,7 @@ https://partner.steamgames.com/tagdata/forcetagranking
 https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations
 https://partner.steamgames.com/walletfunding/approval/
+https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community
 https://play.google.com/store/apps/details?id=com.valvesoftware.steamlink
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0

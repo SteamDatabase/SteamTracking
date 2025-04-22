@@ -6,7 +6,7 @@
   {
     21659: (e, t, r) => {
       r.d(t, {
-        FI: () => _,
+        FI: () => y,
         GM: () => h,
         MN: () => b,
         Qo: () => z,
@@ -287,7 +287,7 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
-                  ranks: { n: 2, c: y, r: !0, q: !0 },
+                  ranks: { n: 2, c: _, r: !0, q: !0 },
                 },
               }),
             d.sm_m
@@ -328,20 +328,20 @@
           return "CSteamCharts_GetGamesByConcurrentPlayers_Response";
         }
       }
-      class y extends s.Message {
+      class _ extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.rank || n.Sg(y.M()),
+            _.prototype.rank || n.Sg(_.M()),
             s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
                 fields: {
                   rank: { n: 1, br: n.qM.readInt32, bw: n.gp.writeInt32 },
                   appid: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
@@ -358,57 +358,20 @@
                   },
                 },
               }),
-            y.sm_m
+            _.sm_m
           );
         }
         static MBF() {
-          return y.sm_mbf || (y.sm_mbf = n.w0(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (a().BinaryReader)(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetGamesByConcurrentPlayers_Response_MostPlayedRank";
-        }
-      }
-      class _ extends s.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), s.Message.initialize(this, e, 0, -1, void 0, null);
+          return _.sm_mbf || (_.sm_mbf = n.w0(_.M())), _.sm_mbf;
         }
         toObject(e = !1) {
           return _.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(_.M(), e, t);
         }
         static fromObject(e) {
-          return new _();
+          return n.Uq(_.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
@@ -416,16 +379,53 @@
           return _.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(_.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
           return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(_.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetGamesByConcurrentPlayers_Response_MostPlayedRank";
+        }
+      }
+      class y extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new y();
+        }
+        static deserializeBinary(e) {
+          let t = new (a().BinaryReader)(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamCharts_GetTopReleasesPages_Request";
@@ -971,7 +971,7 @@
         constructor(e = null) {
           super(),
             S.prototype.top_app_releases || n.Sg(S.M()),
-            s.Message.initialize(this, e, 0, -1, [1, 2], null);
+            s.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -983,6 +983,12 @@
                 fields: {
                   top_app_releases: { n: 1, c: W, r: !0, q: !0 },
                   top_dlc_releases: { n: 2, c: W, r: !0, q: !0 },
+                  top_combined_app_and_dlc_releases: {
+                    n: 3,
+                    c: W,
+                    r: !0,
+                    q: !0,
+                  },
                 },
               }),
             S.sm_m
@@ -1109,7 +1115,7 @@
           (e.GetTopReleasesPages = function (e, t) {
             return e.SendMsg(
               "SteamCharts.GetTopReleasesPages#1",
-              (0, m.I8)(_, t),
+              (0, m.I8)(y, t),
               M,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -1141,7 +1147,7 @@
       })(i || (i = {}));
     },
     3734: (e, t, r) => {
-      r.d(t, { E2: () => d, PG: () => _ });
+      r.d(t, { E2: () => d, PG: () => y });
       var i = r(90626),
         s = r(20194),
         a = r(56545),
@@ -1157,30 +1163,30 @@
           s = i.useMemo(() => ({ defaultOptions: t || {} }), [t]);
         return i.createElement(u.Provider, { value: s }, r);
       }
-      const y = "StoreQueryStore";
-      function _(e, t, r, l) {
+      const _ = "StoreQueryStore";
+      function y(e, t, r, l) {
         let u = B();
         const d = (0, c.KV)();
         u || (0, o.w)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
-        let _ = u.defaultOptions;
+        let y = u.defaultOptions;
         const g = i.useMemo(() => {
           let e = [];
           return (
             l?.content_descriptors_excluded
               ? (e = l.content_descriptors_excluded)
-              : _?.content_descriptors_excluded &&
-                (e = _.content_descriptors_excluded),
+              : y?.content_descriptors_excluded &&
+                (e = y.content_descriptors_excluded),
             { ...t, filters: { content_descriptors_excluded: e, ...t.filters } }
           );
-        }, [t, l, _]);
+        }, [t, l, y]);
         let b;
         void 0 !== l?.override_country_code
           ? (b = l.override_country_code)
-          : void 0 !== _?.override_country_code &&
-            (b = _.override_country_code);
+          : void 0 !== y?.override_country_code &&
+            (b = y.override_country_code);
         let p = { staleTime: 36e5 };
         l?.reactQuery && (p = { ...p, ...l.reactQuery });
-        const f = [y, g, r, l];
+        const f = [_, g, r, l];
         return (0, s.I)({
           queryKey: f,
           queryFn: () =>

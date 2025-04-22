@@ -4888,13 +4888,20 @@ a._1g4l95V_TTLLrQ2u-hYASr {
     flex-direction: column;
   }
 }
+._3oN8FJOgOrQSMaYqOkf4p-,
 ._2artmqqQS2Rl8YMsi1nV-U {
-  display: flex;
-  flex-direction: row;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   padding: 4px;
   height: fit-content;
+}
+._2artmqqQS2Rl8YMsi1nV-U {
+  display: flex;
+  flex-direction: row;
+}
+._3oN8FJOgOrQSMaYqOkf4p- {
+  display: flex;
+  flex-direction: column;
 }
 ._1HwWXjF06mJ9sG_9KXlgA- {
   background-color: #54a5d4;

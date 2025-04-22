@@ -772,7 +772,7 @@
             t.GetSummaryWithFallback(v),
           ]),
           [D, G] = a.useState(() =>
-            (0, Ce.c)() && 14 == g ? z.wI.full : z.wI.capsule_main,
+            (0, Ce.c5)() && 14 == g ? z.wI.full : z.wI.capsule_main,
           ),
           F = (0, h.q3)(() =>
             Boolean(T && y)
@@ -788,7 +788,7 @@
               if (12 === s) return null;
               if ("youtube" === l) {
                 const t = (0, c.sf)(m.TS.LANGUAGE),
-                  l = (0, Ce.c)() && 14 == s ? z.wI.full : z.wI.capsule_main,
+                  l = (0, Ce.c5)() && 14 == s ? z.wI.full : z.wI.capsule_main,
                   d = e.GetImageForSizeAsArrayWithFallback("capsule", t, l, !0);
                 if ("carousel" === o)
                   return a.createElement(be, {

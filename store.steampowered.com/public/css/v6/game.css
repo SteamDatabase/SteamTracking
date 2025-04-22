@@ -90,7 +90,6 @@ body.v6 .game_area_purchase h2.package_group {
     background: -ms-linear-gradient(left,  rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* IE10+ */
     background: linear-gradient(to right,  rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
-
 	padding-bottom: 12px;
 }
 
@@ -285,7 +284,7 @@ body.v6 .game_area_purchase h2.package_group {
 .glance_ctn .release_date .column {
 	overflow: hidden;
 	white-space: nowrap;
-	text-overflow: ellipsis;;
+	text-overflow: ellipsis;
 
 }
 
@@ -6526,3 +6525,413 @@ a.open_in_steam_body:hover {
 .package_in_library_flag > img.icon {
     height: 10px;
 }
+
+.mask_images .game_area_description img.bb_img {
+	filter: blur(30px);
+	clip-path: inset(0);	}
+
+/* 2025 Game Page Widening */
+.widestore #game_highlights {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.widestore #game_highlights .rightcol {
+    width: 375px;
+    margin-left: 0px;
+	float: unset;
+}
+
+.widestore #game_highlights .leftcol {
+	width: 820px;
+	float: unset;
+}
+
+.widestore .glance_ctn {
+	padding: 0px 0px 0px 0px;
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.widestore .glance_ctn .release_date  {
+	padding-top: 9px;
+	padding-bottom: 13px;
+	font-size: 13px;
+}
+
+.widestore .glance_ctn .user_reviews {
+	font-size: 13px;
+	color: #556772;
+	margin-top: 0px;
+}
+
+.widestore .glance_ctn .user_reviews_summary_row,
+.widestore .glance_ctn .dev_row,
+.widestore .glance_ctn .release_date {
+	display: flex;
+	line-height: 18px;
+	font-size: 13px;
+}
+
+.widestore .glance_ctn .user_reviews .subtitle,
+.widestore .glance_ctn .subtitle {
+	text-transform: uppercase;
+	font-size: 11px;
+	padding-right: 10px;
+	min-width: 35%;
+}
+
+.widestore .glance_ctn .summary.column {
+	min-width: 50%;
+}
+
+.widestore .game_header_image_ctn {
+	margin-bottom: 0px;
+}
+
+.widestore .game_header_ctn {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.widestore .glance_mid_ctn {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+    justify-content: space-around;
+}
+
+.widestore img.game_header_image_full {
+	width: 375px;
+}
+
+.widestore .game_description_snippet {
+	max-height: 111px;
+	overflow: hidden;
+    font-size: 14px;
+    line-height: 19px;
+    padding-right: 16px;
+    display: -webkit-box;
+	line-clamp: 6;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.widestore .game_area_description {
+	line-height: 1.5em;
+    font-size: 14px;
+	margin-top: 30px;
+	overflow: hidden;
+	width: auto;
+	max-width: 100%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.block .block_content_inner #AwardsDefault img {
+	max-width: 344px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 500px)
+{
+	html.responsive.widestore .rightcol.game_meta_data .block {
+		background: rgba( 0, 0, 0, 0.2 );
+		filter: none;
+	}
+
+	html.responsive.widestore #responsive_apppage_details_left_ctn {
+		float: left;
+		width: calc( 50% - 8px );
+		margin-right: 8px;
+	}
+
+	html.responsive.widestore #responsive_apppage_details_right_ctn {
+		overflow: hidden;
+	}
+
+	html.responsive.widestore img.package_header {
+		height: auto;
+	}
+
+	html.responsive.widestore .notice_box_content {
+		width: auto;
+	}
+
+	html.responsive.widestore .item_def_icon {
+		max-width: 100%;
+		height: auto;
+	}
+
+	html.responsive.widestore .glance_mid_ctn {
+		display: block;
+	}
+
+	html.responsive.widestore .game_header_ctn {
+		display: block;
+	}
+
+	.widestore .game_area_description {
+		width: auto;
+	}
+
+	.widestore .franchise_notice, .franchise_notice .franchise_name, .franchise_notice .franchise_highlight, .franchise_notice .background_image {
+		height: unset;
+	}
+
+	.widestore .franchise_notice .franchise_name {
+		position: unset;
+		padding: 12px;
+	}
+
+	.widestore .franchise_notice .background_image {
+		z-index: -1;
+	}
+
+	html.responsive.widestore .queue_ctn {
+		width: auto;
+		max-width: 1200px;
+        margin: 0 2%;
+	}
+	html.responsive.widestore .next_in_queue_area {
+		max-width: 40%;
+	}
+	html.responsive.widestore .btn_next_in_queue {
+		max-width: 100%;
+		margin-right: -26px;
+	}
+
+	.widestore img.agegate_img_app, img.agegate_img_package {
+		height: auto;
+		max-width: 100%;
+	}
+
+	.widestore .page_content_ctn.agegate_content {
+		min-height: 100vh;
+	}
+
+	html.responsive.widestore body.agecheck .responsive_page_template_content {
+		padding-bottom: 0;
+	}
+
+	html.responsive.widestore .game_area_play_stats {
+		max-width: calc(940px - 32px);
+		width: auto;
+		margin: 0 2%;
+	}
+
+	html.responsive.widestore #game_highlights a:not(.app_tag) {
+		height: 100%;
+		position: relative;
+	}
+
+	html.responsive.widestore .highlight_overflow {
+		margin-right: 0;
+	}
+
+	html.responsive.widestore .glance_ctn {
+		display: block;
+		padding: 4px 2%;
+		flex-direction: row;
+	}
+
+	html.responsive.widestore .game_header_image_ctn
+	{
+		float: left;
+		width: 50%;
+		margin-right: 8px;
+	}
+
+	html.responsive.widestore .game_header_image_ctn img.game_header_image_full {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive.widestore .glance_ctn_responsive_left {
+		overflow: hidden;
+	}
+
+	html.responsive.widestore .glance_ctn_responsive_right {
+		clear: left;
+		padding-top: 10px;
+	}
+
+	html.responsive.widestore .glance_tags_ctn {
+		overflow: hidden;
+		margin-top: 0;
+
+	}
+
+	html.responsive.widestore .glance_ctn_responsive_right .glance_tags_ctn:first-child {
+		float: left;
+		width: 50%;
+		margin-right: 8px;
+	}
+
+	html.responsive.widestore #package_header_container {
+		padding: 2%;
+	}
+
+	html.responsive.widestore .early_access_banner {
+		height: 80px;
+	}
+
+	html.responsive.widestore .early_access_banner p {
+		width: auto;
+	}
+
+	html.responsive.widestore .series_episode .episode_image_col {
+		width: 30%;
+		height: auto;
+	}
+
+	html.responsive.widestore .series_episode .episode_image {
+		height: auto;
+	}
+
+	html.responsive.widestore .series_episode .episode_details_col {
+		width: 65%;
+		padding: 5px 5px 5px 8px;
+	}
+
+	html.responsive.widestore .series_episode.nosub .episode_action_col {
+		display: none;
+	}
+
+	.widestore .banner_open_in_steam {
+		display: none;
+	}
+
+	html.responsive.widestore .rightcol.game_meta_data .block {
+		background: rgba( 0, 0, 0, 0.2 );
+		filter: none;
+	}
+
+	html.responsive.widestore #responsive_apppage_details_left_ctn {
+		float: left;
+		width: calc( 50% - 8px );
+		margin-right: 8px;
+	}
+
+	html.responsive.widestore #responsive_apppage_details_right_ctn {
+		overflow: hidden;
+	}
+
+	html.responsive.widestore img.package_header {
+		height: auto;
+	}
+
+	html.responsive.widestore .notice_box_content {
+		width: auto;
+	}
+
+	html.responsive.widestore .item_def_icon {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.widestore .queue_ctn {
+    width: 1200px;
+    background: rgba( 0, 0, 0, 0.2 );
+	margin: 0px auto;
+	margin-bottom: 16px;
+}
+
+.widestore body.v6 .game_area_already_owned.page_content {
+	height: 40px;
+	padding: 0px;
+	position: relative;
+    background: -moz-linear-gradient(left,  rgba(163,207,6,0.6) 0%, rgba(75,106,33,0.6) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(163,207,6,0.6)), color-stop(100%,rgba(75,106,33,0.6))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 ); /* IE6-9 */
+    font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    line-height: 40px;
+	color: #a3cf06;
+    margin-bottom: 1px;
+	width: 1200px;
+}
+
+.widestore .game_area_play_stats {
+    background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
+    background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 0px 16px 16px 16px;
+	margin: 0px auto;
+    margin-bottom: 40px;
+	max-width: calc(1200px - 32px);
+}
+
+.widestore .steam_curator_recommendation
+{
+	overflow: hidden;
+	min-height: 75px;
+	max-width: 515px;
+	font-size: 13px;
+	color: #C6D4DF;
+}
+
+@media screen and (max-width: 1200px)
+{
+
+	html.responsive.widestore .game_description_snippet {
+		overflow: hidden;
+		padding-right: 0;
+		margin-bottom: 10px;
+	}
+
+	html.responsive.widestore #game_highlights,
+	html.responsive.widestore #game_highlights .rightcol {
+		width: auto;
+		height: auto;
+		flex-direction: column;
+	}
+
+	html.responsive.widestore #game_highlights .leftcol {
+		width: auto;
+	}
+
+    html.responsive.widestore .discoveryqueue_appwidget {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+	html.responsive.tablet.widestore .game_description_snippet {
+		overflow: hidden;
+		padding-right: 0;
+		margin-bottom: 10px;
+	}
+
+	html.responsive.tablet.widestore #game_highlights,
+	html.responsive.tablet.widestore #game_highlights .rightcol {
+		width: auto;
+		height: auto;
+		flex-direction: column;
+	}
+
+	html.responsive.tablet.widestore #game_highlights .leftcol {
+		width: auto;
+	}
+
+    html.responsive.tablet.widestore .discoveryqueue_appwidget {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+

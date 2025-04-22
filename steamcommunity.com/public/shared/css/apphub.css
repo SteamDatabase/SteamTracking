@@ -1601,3 +1601,8 @@ h3.apphub_responsive_menu_title {
 html.responsive body.OverlayWindowPinned div.apphub_HomeHeaderContent {
 	display: none;
 }
+
+/* 2025 Game Page Widening */
+.widestore .page_title_area.game_title_area.page_content .apphub_HomeHeaderContent {
+		max-width: 1200px;
+	}

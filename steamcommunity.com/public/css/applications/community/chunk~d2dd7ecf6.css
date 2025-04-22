@@ -486,6 +486,13 @@ input.Y12tprgNrNvnZ-eZvch6X {
 .ContentHubSalePage ._2qyLPxO8_nkczRvFiaju8N {
   max-height: 197px;
 }
+._2qyLPxO8_nkczRvFiaju8N._1kFdtNfhXozP4yI_qOv2H- img,
+._3o6M87A6T172WsUE6MNvdW:hover
+  ._2qyLPxO8_nkczRvFiaju8N._1kFdtNfhXozP4yI_qOv2H-
+  img {
+  filter: blur(30px);
+  clip-path: inset(0);
+}
 ._3_wKbXvT7_y5YkrtadL0I6 {
   width: 100%;
   height: auto;

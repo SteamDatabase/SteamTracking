@@ -3402,7 +3402,7 @@
               "Community.GetCommentThread#1",
               (0, o.I8)(b, r),
               M,
-              { ePrivilege: 2 },
+              { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.PostCommentToThread = function (e, r) {

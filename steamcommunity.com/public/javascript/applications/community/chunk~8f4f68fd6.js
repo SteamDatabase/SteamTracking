@@ -10309,7 +10309,7 @@
           s = pe(t.type);
         return s
           ? i.createElement(
-              f.A,
+              f.Ay,
               {
                 controller: "notification",
                 method: (0, n.fL)(r),

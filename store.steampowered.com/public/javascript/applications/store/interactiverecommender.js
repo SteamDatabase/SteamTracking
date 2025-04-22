@@ -1895,7 +1895,7 @@
         render() {
           return n.iA.logged_in
             ? r.createElement(
-                C.A,
+                C.Ay,
                 {
                   controller: "recommender",
                   method: "default",

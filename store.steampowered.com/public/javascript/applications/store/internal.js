@@ -389,14 +389,15 @@
     },
     37076: (e, t, a) => {
       "use strict";
-      a.d(t, { j: () => c, u: () => m });
+      a.d(t, { j: () => m, u: () => p });
       var r = a(90626),
         s = a(45699),
         n = a(55963),
         i = a(60014),
         l = a(44332),
-        o = a(78327);
-      function c(e) {
+        o = a(78327),
+        c = a(49411);
+      function m(e) {
         const {
             type: t,
             id: a,
@@ -448,27 +449,30 @@
           )
         );
       }
-      function m(e) {
+      function p(e) {
         const { id: t, type: a, strExtraParams: l } = e,
-          m = (0, i.n9)(),
-          p =
+          p = (0, i.n9)(),
+          d = (0, c.w)(),
+          u =
             "clan" == a
-              ? (0, n.wJ)(
+              ? (0, n.It)(
                   `${o.TS.STORE_BASE_URL}curator/${t}${l ? `?${l}` : ""}`,
-                  m,
+                  p,
+                  d,
                 )
-              : (0, n.wJ)(
+              : (0, n.It)(
                   `${o.TS.STORE_BASE_URL}${a}/${t}${l ? `?${l}` : ""}`,
-                  m,
+                  p,
+                  d,
                 );
         return r.createElement(
-          c,
+          m,
           { ...e },
           r.createElement(
             s.Ii,
             {
               className: e.className,
-              href: p,
+              href: u,
               target: o.TS.IN_CLIENT ? void 0 : "_blank",
               rel: "noopener noreferrer",
             },
@@ -1086,7 +1090,7 @@
             [s, i] = m.useState(1);
           return n.iA.logged_in
             ? m.createElement(
-                u.A,
+                u.Ay,
                 {
                   controller: "gamemixer",
                   method: "default",
@@ -3666,7 +3670,7 @@
         _ = a(33737);
       const g = (e) => {
           const t = (0, r.lv)({ appid: e.nAppID }),
-            a = (0, r.wl)({ appid: e.nAppID });
+            a = (0, r.J$)({ appid: e.nAppID });
           if (!t.data || !a.data) return null;
           const s = (0, l.l)(t.data, "header");
           return i.createElement(
@@ -3831,7 +3835,7 @@
               ),
             );
           return i.createElement(
-            m.A,
+            m.Ay,
             {
               controller: "recommenderdemos",
               method: "default",

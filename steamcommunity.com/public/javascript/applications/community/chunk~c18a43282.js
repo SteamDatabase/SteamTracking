@@ -2231,33 +2231,21 @@
             : this.GetFallbackArtworkScreenshot();
         }
         GetFallbackArtworkScreenshot() {
-          var e;
           if (this.appid) {
             p.A.Get().QueueAppRequest(this.appid, { include_screenshots: !0 });
-            const t = p.A.Get().GetApp(this.appid);
-            let r = Number(
-              this.bOldAnnouncement
-                ? this.AnnouncementGID
-                : null == this.GID
-                  ? 0
-                  : this.GID,
-            );
-            return (null == t
-              ? void 0
-              : t.GetOnlyAllAgesSafeScreenshots().length) > 1
-              ? ((r %= t.GetOnlyAllAgesSafeScreenshots().length),
-                t.GetOnlyAllAgesSafeScreenshots()[r])
-              : (null ===
-                    (e =
-                      null == t
-                        ? void 0
-                        : t.GetBothAllAgesSafeAndMatureScreenshots()) ||
-                  void 0 === e
-                    ? void 0
-                    : e.length) > 0
-                ? ((r %= t.GetBothAllAgesSafeAndMatureScreenshots().length),
-                  t.GetBothAllAgesSafeAndMatureScreenshots()[r])
-                : "";
+            const e = p.A.Get().GetApp(this.appid);
+            let t = Number(
+                this.bOldAnnouncement
+                  ? this.AnnouncementGID
+                  : null == this.GID
+                    ? 0
+                    : this.GID,
+              ),
+              r =
+                null == e
+                  ? void 0
+                  : e.GetScreenshots(e.BHasAgeSafeScreenshots());
+            return r && r.length > 1 ? ((t %= r.length), r[t]) : "";
           }
           if (this.clanSteamID) {
             const e = m.ac.GetClanInfoByClanAccountID(
@@ -6422,6 +6410,7 @@
                 c && c.exclude_event_types
                   ? c.exclude_event_types.join(",")
                   : void 0,
+              only_summaries: c && !!c.only_summaries,
               origin: self.origin,
             };
             try {

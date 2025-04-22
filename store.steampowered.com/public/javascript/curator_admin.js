@@ -221,11 +221,11 @@ function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 		rgPreferredTags.push( ele.textContent );
 	})
 
-	CallFunctionFromForm( elForm, [ 'description', 'google_id', 'platform_windows', 'platform_mac', 'platform_linux', 'vr_content', 'website_title', 'website_url', 'discussions_url', 'show_broadcast', 'hide_page' ],
+	CallFunctionFromForm( elForm, [ 'description', 'google_id', 'platform_windows', 'platform_mac', 'platform_linux', 'vr_content', 'website_title', 'website_url', 'discussions_url', 'show_broadcast', 'hide_page', 'social_media' ],
 		UpdateCurator.bind(null, bAsync), fnOnComplete, rgPreferredTags );
 }
 
-function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, hide_page, ...rgPreferredTags )
+function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, hide_page, social_media, ...rgPreferredTags )
 {
 		var rgTagLineLocs = {};
 	$J( 'input[type=hidden][name^="language"]').each( function() {
@@ -249,6 +249,7 @@ function UpdateCurator( bAsync, description, google_id, platform_windows, platfo
 			discussions_url: discussions_url,
 			show_broadcast: show_broadcast,
 			tags_preferred: rgPreferredTags,
+			social_media: social_media,
 			tagline_locs: JSON.stringify( rgTagLineLocs ),
 			hide_page: hide_page,
 			sessionid: g_sessionID,
@@ -387,7 +388,7 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 
 	g_rgAppsInLists.push( appid );
 
-	var strHTML = "\n\t\n\t<div id=\"app_%4$s\">\n\t\t<div class=\"capsule\">\n\t\t\t<img  src=\"%1$s\" >\n\t\t<\/div>\n\t\t<div class=\"description\">\n\t\t\t<h2>%5$s<\/h2>\n\t\t<\/div>\n\t\t<div class=\"controls\">\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\n\t\t<\/div>\n\t<\/div>\n\t".replace(/%1\$s/, 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
+	var strHTML = "\n\n\t<div id=\"app_%4$s\">\n\t\t<div class=\"capsule\">\n\t\t\t<img  src=\"%1$s\" >\n\t\t<\/div>\n\t\t<div class=\"description\">\n\t\t\t<h2>%5$s<\/h2>\n\t\t<\/div>\n\t\t<div class=\"controls\">\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\n\t\t<\/div>\n\t<\/div>\n\t".replace(/%1\$s/, 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
 		.replace(/%2\$s/, V_EscapeHTML(  blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
 		.replace(/%5\$s/g, V_EscapeHTML( appInfo.app_name ) );
 
@@ -444,7 +445,7 @@ function ListEdit_UpdateSort( elContainer, unListId )
 		type: 'POST'
 	} ).done( function ( data )
 	{
-		
+
 	}).fail( function( data ){
 		var response = JSON.parse(data.responseText);
 		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
@@ -510,7 +511,7 @@ function ReviewsManage_UpdatePage( rgData, unPage )
 		}
 
 
-		elContainer.innerHTML = "\n\t\t\t<div>\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\n\t\t\t<\/div>\n\t\t\t<div class=\"desc\">\n\t\t\t\t<h3>%4$s %2$s<\/h3>\n\t\t\t\t<p>%3$s<\/p>\n\t\t\t<\/div>\n\t\t\t<div class=\"controls\">\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-tooltip-text=\"Edit this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_edit_section.png\"><\/a>\n\t\t\t\t<a class=\"delete_btn ttip\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<\/div>\n\t\t\t\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
+		elContainer.innerHTML = "\n\t\t\t<div>\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\n\t\t\t<\/div>\n\t\t\t<div class=\"desc\">\n\t\t\t\t<h3>%4$s %2$s<\/h3>\n\t\t\t\t<p>%3$s<\/p>\n\t\t\t<\/div>\n\t\t\t<div class=\"controls\">\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-tooltip-text=\"Edit this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_edit_section.png\"><\/a>\n\t\t\t\t<a class=\"delete_btn ttip\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<\/div>\n\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
 			.replace(/%3\$s/, V_EscapeHTML( recommendationInfo.recommendation.blurb ) )
 			.replace(/%4\$s/, strRecommendationIcon );
 
@@ -926,7 +927,7 @@ function InitReferralsPagingControls( oPagingData )
 	pagingControls.SetPageChangedHandler( function ( nPage ) {
 		$J('#' + this.m_strElementPrefix + 'Rows').fadeTo( 0.1, 1 );
 	} );
-	
+
 	return pagingControls;
 }
 

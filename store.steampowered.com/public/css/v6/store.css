@@ -6298,3 +6298,130 @@ body.v7menu .responsive_page_template_content {
 	position: relative;
 	z-index: 0;
 }
+
+/* 2025 Game Page Widening */
+
+.widestore body.v6 .page_content {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.widestore body.v6 .page_content.middle_page {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.widestore .leftcol {
+	width: 808px;
+}
+
+.widestore .rightcol {
+	width: 378px;
+}
+
+.widestore .rightcol.recent_reviews {
+	width: 376px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 500px) {
+	.widestore body.v6 .page_content.middle_page {
+		display: block;
+		flex-direction: unset;
+	}
+
+	html.responsive.widestore body.v6 .page_content {
+		max-width: 1200px;
+		width: auto;
+		margin: 0 2%;
+	}
+
+
+	.widestore .actionButtonsCtn {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3px;
+	}
+
+	html.responsive.widestore .actionButtonsCtn {
+		padding: 5px 0px;
+	}
+
+	html.responsive.widestore .leftcol,
+	html.responsive.widestore .rightcol {
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+
+	html.responsive.widestore .tab_item_cap_img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	html.responsive.widestore .carousel_container .arrow {
+		bottom: 0px;
+		top: auto;
+		height: 0px;
+		width: 0;
+		padding: 0px;
+
+		background: none;
+	}
+
+	html.responsive.widestore .carousel_container .arrow > div {
+		width: 13px;
+		height: 20px;
+		background-size: cover;
+		display: none;
+		margin: 0 10px;
+	}
+
+	html.responsive.widestore .carousel_container .arrow.left {
+		left: 0;
+	}
+
+	html.responsive.widestore .carousel_container .arrow.left > div {
+		background-position-x: 13px;
+	}
+
+	html.responsive>.widestore .carousel_container .arrow.right {
+		right: 0;
+		text-align: right;
+	}
+
+	html.responsive.widestore .carousel_container .carousel_items > * {
+		position: relative;
+		top: auto;
+		left: auto;
+		opacity: 1;
+	}
+
+	html.responsive.widestore .specials_under10_content,
+	html.responsive.widestore .live_streams_ctn {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	html.responsive.widestore .carousel_container .carousel_items:not(.no_paging),
+	html.responsive.widestore .carousel_container.maincap .carousel_items:not(.no_paging) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing:content-box;
+
+
+		display: -webkit-box; /* Very Old webkit */
+		display: -ms-flexbox; /* IE 10 */
+		display: -webkit-flex; /* Old webkit */
+		display: flex;
+		flex-wrap: nowrap;
+
+		padding-bottom: 21px;
+	}
+
+	html.responsive.widestore .carousel_container .carousel_items > * {
+		pointer-events: auto;
+		flex-shrink: 0;
+	}
+}
+

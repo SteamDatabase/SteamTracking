@@ -615,6 +615,53 @@ select.hourselect,  select.minuteselect {
 	padding: 4px 0px;
 }
 
+.innerformrow.creatorhome_add_new {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 4px 0px;
+}
+
+.innerformrow.creatorhome_add_new input {
+			padding: 0px 6px;
+			line-height: 32px;
+}
+
+.innerformrow.creatorhome_add_new .btn_small_thin {
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			font: inherit;
+			margin: 2px 0;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			line-height: 32px;
+			color: #dfe3e6 !important;
+			font-size: 14px;
+			text-align: center;
+			border-radius: 2px;
+			cursor: pointer;
+			transition-property: background, background-position, box-shadow;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-out;
+			background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+			background-position: 25%;
+			background-size: 330% 100%;
+			position: relative;
+			width: fit-content;
+			min-width: 125px;
+			padding: 0px 20px !important;
+}
+
+.innerformrow.creatorhome_add_new .btn_small_thin:hover {
+				background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%) !important;
+				background-position: 0%;
+				background-size: 330% 100% !important;
+				box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
 .tightformrow {
 	margin: 2px;
 }
@@ -2848,10 +2895,10 @@ div.image_all_ages_appropriate
 .movie_uploaded_ui {
 	padding: 25px 25px 10px 5px;
 	display: flex;
+	gap: 20px;
 }
 
 .movie_screenshot_ctn {
-	max-width: 20%;
 }
 
 .movie_screenshot
@@ -2866,6 +2913,8 @@ div.image_all_ages_appropriate
 .movie_buttons {
 	margin-top: 10px;
 	justify-content: end;
+	gap: 15px;
+	align-items: center;
 }
 
 .movie_screenshot:hover .drag_and_drop {
@@ -2916,6 +2965,8 @@ div.image_all_ages_appropriate
 
 .movie_flex_row {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 5px 20px;
 }
 
 .movie_category_select {
@@ -2936,14 +2987,13 @@ div.image_all_ages_appropriate
 
 .movie_highlighted_row
 {
-	margin-right: 20px;
 	display: flex;
 }
 
 .movie_rightofscreenshot
 {
-	margin: 0 25px;
-	flex-grow: 1;
+	flex: 2;
+	min-width: 0;
 }
 
 .movie_more_row
@@ -2998,7 +3048,7 @@ div.image_all_ages_appropriate
 
 .movie_expanded
 {
-	width: 30%;
+	flex: 1;
 }
 
 .movie_expanded_content {
@@ -3123,11 +3173,6 @@ div.image_all_ages_appropriate
 
 .movie_link_to_store_item
 {
-	float: right;
-	position: relative;
-	right: -70px;
-	z-index: 10;
-	top: -93px;
 }
 
 .progress_container

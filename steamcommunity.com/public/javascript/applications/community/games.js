@@ -9995,20 +9995,26 @@
       r.d(t, { $: () => n });
       var i = r(90626);
       function n(e) {
-        const t = (0, i.useMemo)(() => matchMedia(e), [e]),
-          [r, n] = (0, i.useState)(t.matches);
+        const t = "function" == typeof matchMedia ? matchMedia : a,
+          r = (0, i.useMemo)(() => t(e), [e, t]),
+          [n, s] = (0, i.useState)(!!r && r.matches);
         return (
           (0, i.useEffect)(() => {
+            if (!r) return () => {};
             function e(e) {
-              n(e.matches);
+              s(e.matches);
             }
             return (
-              t.addEventListener("change", e),
-              () => t.removeEventListener("change", e)
+              s(r.matches),
+              r.addEventListener("change", e),
+              () => r.removeEventListener("change", e)
             );
-          }, [t]),
-          r
+          }, [r]),
+          n
         );
+      }
+      function a() {
+        return null;
       }
     },
     17690: (e, t, r) => {

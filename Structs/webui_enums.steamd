@@ -989,6 +989,13 @@ enum ETradingCardActivity
 	k_ETradingCardActivity_BadgeCraft = 3;
 }
 
+enum ETwoFactorTokenSteamguardScheme
+{
+	k_ETwoFactorTokenSteamguardScheme_None = 0;
+	k_ETwoFactorTokenSteamguardScheme_Email = 1;
+	k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2;
+}
+
 enum EUserConfigStoreNamespace
 {
 	k_EUserConfigStoreNamespaceInvalid = 0;

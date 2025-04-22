@@ -24,11 +24,12 @@
         OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
         OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
         OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
         PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
         EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
         EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
@@ -163,11 +164,11 @@
       "use strict";
       a.d(t, {
         F6: () => h,
-        ME: () => S,
+        ME: () => I,
         RA: () => C,
         cc: () => w,
         fq: () => y,
-        m1: () => I,
+        m1: () => S,
       });
       var n = a(34629),
         r = a(41735),
@@ -372,7 +373,7 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function S(e, t) {
+      function I(e, t) {
         const a = (0, g.CH)();
         return (
           (0, s.useEffect)(() => {
@@ -402,7 +403,7 @@
           C.Get().GetListDetails(t)
         );
       }
-      function I(e) {
+      function S(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
           [a, n] = (0, s.useState)(!!t);
         return (
@@ -496,7 +497,7 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => P, W: () => R });
+      a.d(t, { J: () => R, W: () => k });
       var n = a(90626),
         r = a(57876),
         l = a(45699),
@@ -516,8 +517,8 @@
         h = a(72860),
         b = a(70300),
         C = a(47235),
-        S = a(37076),
-        I = a(54492),
+        I = a(37076),
+        S = a(54492),
         w = a(60014),
         y = a(52038),
         T = a(61859),
@@ -525,9 +526,10 @@
         L = a(78327),
         A = a(91291),
         N = a.n(A),
-        G = a(99956);
-      const P = "capsule_index_";
-      function R(e) {
+        P = a(99956),
+        G = a(49411);
+      const R = "capsule_index_";
+      function k(e) {
         const {
             capsule: t,
             bShowParentApp: a,
@@ -542,12 +544,13 @@
           [h] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
           [C] = (0, m.t7)(a && h?.GetParentAppID(), r.Xh);
         if (!h) return null;
-        const S = Boolean(C),
-          I = n.createElement(F, {
+        const I = Boolean(C),
+          S = n.createElement(B, {
             ...e,
+            strExtraParams: e.strExtraParams,
             info: t,
             bIsHovered: f,
-            bHasParentAppToDisplay: S,
+            bHasParentAppToDisplay: I,
             onlyOneDiscountPct: _,
           });
         return n.createElement(
@@ -555,7 +558,7 @@
           {
             className: (0, y.A)({
               [g().OuterCapsuleContainer]: !0,
-              [P + i]: 0 == i,
+              [R + i]: 0 == i,
             }),
             navEntryPreferPosition: s.iU.PREFERRED_CHILD,
             navKey: c,
@@ -567,7 +570,7 @@
               ? n.createElement(
                   "div",
                   { onMouseEnter: () => v(!0), onMouseLeave: () => v(!1) },
-                  I,
+                  S,
                 )
               : n.createElement(
                   p.Qf,
@@ -584,12 +587,12 @@
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
                   },
-                  I,
+                  S,
                 ),
             Boolean(l) && n.createElement(n.Fragment, null, l),
           ),
-          S &&
-            n.createElement(B, {
+          I &&
+            n.createElement(F, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: C,
               childAppType: h.GetAppType(),
@@ -597,7 +600,7 @@
             }),
         );
       }
-      function B(e) {
+      function F(e) {
         const {
             strExtraParams: t,
             parentStoreItem: a,
@@ -622,7 +625,7 @@
               ),
             ),
             n.createElement(
-              S.u,
+              I.u,
               { type: "app", id: a.GetAppID(), strExtraParams: t },
               n.createElement("img", {
                 loading: "lazy",
@@ -635,7 +638,7 @@
           ),
         );
       }
-      function F(e) {
+      function B(e) {
         const {
             info: t,
             bHideStatusBanners: a,
@@ -649,44 +652,45 @@
           } = e,
           [b] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
           C = (0, w.n9)(),
-          S = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
+          I = (0, G.w)(),
+          T = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
         if (!b) return null;
-        const T = (0, D.NT)(
-          (0, i.wJ)(`${b.GetStorePageURL(h)}${o ? `?${o}` : ""}`, C),
+        const L = (0, D.NT)(
+          (0, i.It)(`${b.GetStorePageURL(h)}${o ? `?${o}` : ""}`, C, I),
         );
-        let L;
+        let A;
         "overrideNavigation" in t &&
-          (L = (e) => (
+          (A = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const A = Boolean(E);
+        const R = Boolean(E);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             l.Ii,
             {
-              href: L ? null : T,
+              href: A ? null : L,
               style: { display: "block", cursor: "pointer" },
               className: g().CapsuleFocusCtn,
               preferredFocus: d,
-              onClick: L,
+              onClick: A,
             },
             n.createElement(
               "div",
-              { className: (0, y.A)({ [N().TwoWidthCtn]: A }) },
+              { className: (0, y.A)({ [N().TwoWidthCtn]: R }) },
               n.createElement(
                 "div",
-                { className: (0, y.A)({ [N().TwoWidthCapsule]: A }) },
-                n.createElement(v.V, { appids: S, hide_status_banners: a }),
+                { className: (0, y.A)({ [N().TwoWidthCapsule]: R }) },
+                n.createElement(v.V, { appids: T, hide_status_banners: a }),
                 n.createElement(_.aU, { imageType: c, info: t }),
-                n.createElement(I.S, {
+                n.createElement(S.S, {
                   eDeckCompatibilityCategory:
                     b?.GetPlatforms()?.steam_deck_compat_category,
                 }),
                 Boolean(p) && n.createElement(f.m, { appInfo: t }),
               ),
-              A &&
+              R &&
                 n.createElement(
                   "div",
                   { className: N().TwoWidthSideInfo },
@@ -700,7 +704,7 @@
                       b.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  n.createElement(G.n, {
+                  n.createElement(P.n, {
                     bHideTitle: !0,
                     rgTagIDs: b.GetTagIDs(),
                     instanceNum: s,
@@ -708,10 +712,10 @@
                 ),
             ),
           ),
-          n.createElement(k, { ...e }),
+          n.createElement(H, { ...e }),
         );
       }
-      function k(e) {
+      function H(e) {
         const {
             info: t,
             bHidePriceIfOwned: a,
@@ -733,13 +737,13 @@
         if (o && 0 == v?.GetStoreItemType())
           return n.createElement(C.E, { appid: v.GetAppID(), bIsMuted: E });
         if (s) return null;
-        const S = h && a,
-          I = b;
+        const I = h && a,
+          S = b;
         return n.createElement(_.qn, {
           info: t,
-          bShowAsMuted: I,
+          bShowAsMuted: S,
           bHidePrice: i,
-          bShowInLibraryInsteadOfPrice: S,
+          bShowInLibraryInsteadOfPrice: I,
           bHidePlatforms: d,
           creatorAccountID: p,
           bShowName: e.bShowName,
@@ -909,8 +913,8 @@
       }
       var b = a(6626),
         C = a(91336),
-        S = a(30894),
-        I = a(82097),
+        I = a(30894),
+        S = a(82097),
         w = a(62792),
         y = a(55263),
         T = a(39020),
@@ -918,15 +922,15 @@
         L = a.n(D),
         A = a(12155),
         N = a(52038),
-        G = a(70758);
-      const P = new RegExp(
+        P = a(70758);
+      const G = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
       function R(e) {
-        const t = P.exec(e);
+        const t = G.exec(e);
         return t?.length > 1 ? t[1] : null;
       }
-      function B(e) {
+      function k(e) {
         const {
             posterURL: t,
             videoid: a,
@@ -945,13 +949,13 @@
             {
               className: (0, N.A)(
                 "YoutubePreviewContainer",
-                G.YoutubePreviewImage,
+                P.YoutubePreviewImage,
                 e.imageClassnames,
               ),
               onClick: () => m(!1),
             },
             r.createElement("img", {
-              className: (0, N.A)("YoutubePreviewImage", G.YoutubePreviewImage),
+              className: (0, N.A)("YoutubePreviewImage", P.YoutubePreviewImage),
               src:
                 t ||
                 f.TS.COMMUNITY_CDN_URL +
@@ -984,7 +988,7 @@
             r.createElement("img", {
               className: (0, N.A)(
                 "YoutubePreviewContainer",
-                G.YoutubePreviewImage,
+                P.YoutubePreviewImage,
                 e.imageClassnames,
               ),
               src:
@@ -1002,12 +1006,12 @@
         );
       }
       var F = a(26101),
-        k = a(99032),
+        B = a(99032),
         H = a(45359),
         x = a(46416),
         M = a(22797),
-        Y = a(10224),
-        O = a(94743),
+        O = a(10224),
+        Y = a(94743),
         W = a(61859),
         j = a(61336),
         U = a(62014),
@@ -1081,7 +1085,7 @@
           (0, T.vb)(f.TS.LANGUAGE),
           n
             ? r.createElement(
-                X.A,
+                X.Ay,
                 { feature: "curatorlistcapsule" },
                 r.createElement(q, { clanInfo: a }),
                 r.createElement(
@@ -1156,19 +1160,19 @@
           (r.useEffect(() => {
             a &&
               (l(a?.length || 0),
-              S.Fm.Get()
+              I.Fm.Get()
                 .HintLoad()
                 .then(() => {
                   const e = a.map((e) => e.recommended_app.appid);
-                  I.A.Get()
-                    .QueueMultipleAppRequests(e, k.jy)
+                  S.A.Get()
+                    .QueueMultipleAppRequests(e, B.jy)
                     .then(() => {
                       u.token.reason ||
                         i(
                           a.filter(
                             (e) =>
-                              !(0, k.Li)(
-                                I.A.Get().GetApp(e.recommended_app.appid),
+                              !(0, B.Li)(
+                                S.A.Get().GetApp(e.recommended_app.appid),
                               ),
                           ),
                         );
@@ -1238,7 +1242,7 @@
           E =
             a &&
             a.GetImageURL(
-              (0, Y.c)() ? "product_mobile_banner" : "product_banner",
+              (0, O.c5)() ? "product_mobile_banner" : "product_banner",
               m,
             );
         return r.createElement(
@@ -1257,7 +1261,7 @@
             r.createElement(
               "div",
               { className: z().VideoReviewCtn },
-              r.createElement(O.l, {
+              r.createElement(Y.l, {
                 video: i.strVideoID,
                 startSeconds: i.nStartSeconds,
                 autoplay: !0,
@@ -1273,7 +1277,7 @@
             r.createElement(
               "div",
               { className: z().VideoReviewCtn },
-              r.createElement(B, {
+              r.createElement(k, {
                 videoid: c,
                 posterURL: "",
                 imageClassnames: z().YouTubePreviewImage,
@@ -1309,8 +1313,8 @@
           v = a.list_jsondata.app_data?.[m],
           h = d && (0, u.XU)(d),
           C = d && R(d),
-          S = p != b.F6 && p,
-          I = s.BHasDemo(),
+          I = p != b.F6 && p,
+          S = s.BHasDemo(),
           T = v?.img_url,
           D = `curator_clanid=${o.clanAccountID}&curator_listid=${a.listid}`,
           L = s.GetStorePageURL() + "/?curator_clanid=" + o.clanAccountID;
@@ -1326,14 +1330,14 @@
                   nStartSeconds: h?.nStartSeconds,
                   info: i,
                   strImgOverrideUrl: T,
-                  bShowDemoButton: I,
+                  bShowDemoButton: S,
                   strExtraParams: D,
                   bTwitchVideo: Boolean(C),
                 })
               : r.createElement(x.W, {
                   imageType: "header",
                   capsule: i,
-                  bShowDemoButton: I,
+                  bShowDemoButton: S,
                   strExtraParams: D,
                 }),
           ),
@@ -1360,11 +1364,11 @@
                   : (0, W.$z)(_),
               ),
             ),
-            Boolean(S) &&
+            Boolean(I) &&
               r.createElement(
                 "div",
                 { className: z().ReviewBlurb },
-                (0, W.we)("#SteamCurator_ReviewTextQuoted", S),
+                (0, W.we)("#SteamCurator_ReviewTextQuoted", I),
               ),
             Boolean(d) && r.createElement(re, { url: d }),
           ),
@@ -1388,13 +1392,13 @@
             "div",
             { className: z().YouTubeCtn },
             i
-              ? r.createElement(B, {
+              ? r.createElement(k, {
                   videoid: t,
                   posterURL: c?.GetAssets().GetHeaderURL(),
                   imageClassnames: z().YouTubePreviewImage,
                   autoplay: !0,
                 })
-              : r.createElement(O.l, {
+              : r.createElement(Y.l, {
                   video: t,
                   startSeconds: a,
                   autoplay: !0,

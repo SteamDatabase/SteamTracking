@@ -823,11 +823,9 @@
 		max-height: unset !important;
 	}
 
-	/* clickable images in the MORE LIKE THIS and AWARDS sections */
-	html.responsive .game_description_column .block .block_content a {
-		background: unset !important;
-		padding: 10px;
-		height: 112px;
+	/* Decrease margin on mobile */
+	html.responsive .game_description_column .steamawards_app_banner_event {
+		margin-bottom: 15px;
 	}
 	/* hide the browser provided scrollbar on safari. we already include a scrollbar */
 	html.responsive .game_description_column .block .block_responsive_horizontal_scroll::-webkit-scrollbar {
@@ -1160,8 +1158,12 @@
 		background-image: url('/public/shared/images//v6/icon_minus.svg');
 	}
 
+	/* show the expand/collapse control for the awards section */
+	html.responsive #bannerAwards {
+		display: block !important;
+	}
+
 	/* show summary of supported languages and expand it when clicked */
-	html.responsive #bannerAwards.responsive_banner_link,
 	html.responsive #bannerLanguages.responsive_banner_link {
 		display: flex;
 		flex-grow: 1;

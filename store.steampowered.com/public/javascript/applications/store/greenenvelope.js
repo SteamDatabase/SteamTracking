@@ -1556,7 +1556,7 @@
           })(t.type);
         return l
           ? a.createElement(
-              L.A,
+              L.Ay,
               {
                 controller: "notification",
                 method: (0, i.fL)(n),

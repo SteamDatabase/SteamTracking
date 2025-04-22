@@ -330,7 +330,10 @@ function ConfirmUnblock()
 
 function InitProfileSummary( strSummary )
 {
-	var $Summary = $J( '.profile_summary' );
+	var $Summary = $J( '.profile_summary:visible' );
+	if ( !$Summary[0] )
+		return;
+
 	var $SummaryFooter = $J( '.profile_summary_footer' );
 
 	if ( $Summary[0].scrollHeight <= 76 )

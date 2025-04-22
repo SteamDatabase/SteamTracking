@@ -1024,6 +1024,7 @@ function MovieUploadComplete( itemid, movieContainer )
 
 function CheckMovieConvertStatus( movieContainer )
 {
+	var group = movieContainer;
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	var itemid = movieContainer.attr( 'itemid' );
 	jQuery.ajax( {

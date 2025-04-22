@@ -372,8 +372,8 @@
           },
         });
       }
-      var C = n(71298),
-        b = n(99637),
+      var b = n(71298),
+        C = n(99637),
         w = n(8905),
         y = n(9154),
         P = n(738),
@@ -646,9 +646,9 @@
             n?.localization_token || "#Sale_Reservation_MonthYear",
           ),
           g = n ? "Update Queue Range" : "Create Queue Range",
-          p = (0, C.vs)();
+          p = (0, b.vs)();
         return p.bLoading
-          ? r.createElement(C.Hh, {
+          ? r.createElement(b.Hh, {
               state: p,
               strDialogTitle: g,
               closeModal: a,
@@ -696,7 +696,7 @@
                   onChange: (e) =>
                     l(Number.parseInt(e?.currentTarget?.value || "0")),
                 }),
-                r.createElement(b.K, {
+                r.createElement(C.K, {
                   bShowTimeZone: !0,
                   strDescription: "Estimated Time Users will receive invite",
                   strDescToolTip:
@@ -718,9 +718,9 @@
         const { positionMsg: t, closeModal: n } = e,
           { fnDeletePositionMessage: a } = h(),
           s = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          i = (0, C.vs)();
+          i = (0, b.vs)();
         return i.bLoading
-          ? r.createElement(C.Hh, {
+          ? r.createElement(b.Hh, {
               state: i,
               strDialogTitle: s,
               closeModal: n,
@@ -818,13 +818,13 @@
           ),
         );
       }
-      var K = n(52038),
-        H = n(45737),
-        j = n.n(H);
+      var H = n(52038),
+        K = n(45737),
+        j = n.n(K);
       function $(e) {
         return r.createElement(
           "div",
-          { className: (0, K.A)(v.ctn, j().AdminPageCtn) },
+          { className: (0, H.A)(v.ctn, j().AdminPageCtn) },
           r.createElement(
             "h1",
             { className: j().PageTitle },
@@ -889,7 +889,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => T, CF: () => C, KM: () => E, KT: () => M });
+      n.d(t, { B3: () => T, CF: () => b, KM: () => E, KT: () => M });
       var r = n(41735),
         a = n.n(r),
         s = n(58632),
@@ -1005,7 +1005,7 @@
           }, [n]);
         return r ? null : a;
       }
-      function C(e) {
+      function b(e) {
         return f.L.getQueryData([S, e]);
       }
     },
@@ -1037,26 +1037,28 @@
           strAlsoShowTimeZone: g,
           disabled: _,
           bNoDefaultDate: v,
-          className: C,
-          strDescToolTip: b,
+          className: b,
+          strDescToolTip: C,
           strDescription: w,
           bShowTimeZone: y,
           strInvalidDateTimeLocalizedMsg: P,
           fnIsValidDateTime: A,
           bWeekdaysOnly: D,
           fnSetTimeToUpdate: R,
+          bForce24HourFormat: k,
         } = e;
-        let k = (function () {
-          const e = f()("2025-01-14T13:00:00");
-          return e.format("LT").toLowerCase().includes("13");
-        })()
-          ? E
-          : h;
-        const I = a(),
-          [L, N] = r.useState(I > 0 ? f()(1e3 * I) : null),
-          [G, B] = r.useState(),
-          [x, F] = r.useState(),
-          U = (function (e, t, n, a, s) {
+        let I =
+          (function () {
+            const e = f()("2025-01-14T13:00:00");
+            return e.format("LT").toLowerCase().includes("13");
+          })() || k
+            ? E
+            : h;
+        const L = a(),
+          [N, G] = r.useState(L > 0 ? f()(1e3 * L) : null),
+          [B, x] = r.useState(),
+          [F, U] = r.useState(),
+          Y = (function (e, t, n, a, s) {
             const i = a && a(),
               o = t && !M(t).isValid(),
               l = e && !T(e).isValid();
@@ -1076,51 +1078,51 @@
               }, [c, s]),
               c
             );
-          })(G, x, P, A, l),
-          Y = !l && U;
-        let q, O;
+          })(B, F, P, A, l),
+          q = !l && Y;
+        let O, z;
         if (t && n && t == n && n > o.HD.GetTimeNowWithOverride()) {
           const e = f().unix(n);
-          (q = {
+          (O = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (k = E);
+            (I = E);
         }
-        I || !n || v || (O = f().unix(n));
-        const z = f().tz.guess(),
-          V = f().unix(I).tz(z),
-          W = !!g && z != g && f().unix(I).tz(g),
+        L || !n || v || (z = f().unix(n));
+        const V = f().tz.guess(),
+          W = f().unix(L).tz(V),
+          Q = !!g && V != g && f().unix(L).tz(g),
           {
-            fnOnInput: Q,
+            fnOnInput: H,
             fnOnInputBlur: K,
-            fnOnChange: H,
+            fnOnChange: j,
           } = S(
             M,
             (e) => {
               if (_) return;
-              F(null);
+              U(null);
               const t = a(),
                 n = f().unix(t || o.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(n.hour()),
                 e.minute(n.minute()),
                 e.second(0),
                 R(e.unix()),
-                N(e);
+                G(e);
             },
-            F,
+            U,
           ),
           {
-            fnOnInput: j,
-            fnOnInputBlur: $,
-            fnOnChange: Z,
+            fnOnInput: $,
+            fnOnInputBlur: Z,
+            fnOnChange: J,
           } = S(
             T,
             (e) => {
               if (_) return;
-              B(null);
+              x(null);
               let t = a(),
                 r = 0;
               if (t) {
@@ -1135,27 +1137,27 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              R(r), N(f().unix(r));
+              R(r), G(f().unix(r));
             },
-            B,
+            x,
           );
         return r.createElement(
           "div",
-          { className: (0, u.A)(p().EventTimeSection, C) },
+          { className: (0, u.A)(p().EventTimeSection, b) },
           r.createElement(
             "div",
             { className: (0, u.A)(p().EventTimeTitle, "DialogLabel") },
             r.createElement(
               m.he,
-              { toolTipContent: b, direction: "top" },
+              { toolTipContent: C, direction: "top" },
               Boolean(w) && r.createElement("span", null, w),
             ),
-            Y &&
+            q &&
               r.createElement(
                 "span",
                 { className: p().DateErrorCtn },
                 r.createElement("img", { src: i.A }),
-                Y,
+                q,
               ),
           ),
           r.createElement(
@@ -1165,9 +1167,9 @@
               "div",
               { className: (0, u.A)(c().InputBorder, p().TimeBlock) },
               r.createElement(s(), {
-                onChange: H,
+                onChange: j,
                 timeFormat: !1,
-                value: null != x ? x : L,
+                value: null != F ? F : N,
                 isValidDate: (e) =>
                   !_ &&
                   (function (e, t, n, r) {
@@ -1182,7 +1184,7 @@
                       ((0 != r.weekday() && 6 != r.weekday()) || (s = !1));
                     return s;
                   })(n, t, D, e),
-                initialValue: O,
+                initialValue: z,
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
                   className: (0, u.A)(
@@ -1191,26 +1193,26 @@
                     "DialogTextInputBase",
                   ),
                   disabled: _,
-                  onChange: (e) => Q(e.currentTarget.value),
+                  onChange: (e) => H(e.currentTarget.value),
                   onBlur: (e) => K(e.currentTarget.value),
                 },
               }),
-              !!W &&
+              !!Q &&
                 r.createElement(
                   "div",
                   { className: p().PacificTimeHint },
-                  W.format("L"),
+                  Q.format("L"),
                 ),
             ),
             r.createElement(
               "div",
               { className: (0, u.A)(c().InputBorder, p().TimeBlock) },
               r.createElement(s(), {
-                onChange: Z,
+                onChange: J,
                 dateFormat: !1,
-                timeFormat: k,
-                timeConstraints: q,
-                value: null != G ? G : L,
+                timeFormat: I,
+                timeConstraints: O,
+                value: null != B ? B : N,
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
                   className: (0, u.A)(
@@ -1219,15 +1221,15 @@
                     "DialogTextInputBase",
                   ),
                   disabled: _,
-                  onChange: (e) => j(e.currentTarget.value),
-                  onBlur: (e) => $(e.currentTarget.value),
+                  onChange: (e) => $(e.currentTarget.value),
+                  onBlur: (e) => Z(e.currentTarget.value),
                 },
               }),
-              !!W &&
+              !!Q &&
                 r.createElement(
                   "div",
                   { className: p().PacificTimeHint },
-                  W.format("LT"),
+                  Q.format("LT"),
                 ),
             ),
             y &&
@@ -1237,17 +1239,17 @@
                 r.createElement(
                   "div",
                   { className: p().TimeZone },
-                  V.zoneAbbr(),
+                  W.zoneAbbr(),
                 ),
-                !!W &&
+                !!Q &&
                   r.createElement(
                     "div",
                     { className: p().TimeZone },
-                    W.zoneAbbr(),
+                    Q.zoneAbbr(),
                   ),
               ),
           ),
-          Boolean(q) &&
+          Boolean(O) &&
             r.createElement(
               "div",
               null,

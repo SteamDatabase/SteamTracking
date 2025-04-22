@@ -2,15 +2,16 @@
 
 // build our menu on init
 jQuery( function($) {
-	var mqQueryMenuMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
+	var mqQuerySmallMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
+	var mqQuerySmallModeWhenWideEnabled = window.matchMedia ? window.matchMedia("(max-width: 1200px)") : {matches: false};
 	var mqMobileMode = window.matchMedia ? window.matchMedia("(max-width: 500px)") : {matches: false};
 
 	var $HTML = $J('html');
 	window.UseTouchFriendlyMode = function() {
-		return $HTML.hasClass( 'responsive' ) && ( mqQueryMenuMode.matches || $HTML.hasClass('touch') );
+		return $HTML.hasClass( 'responsive' ) && ( mqQuerySmallMode.matches || $HTML.hasClass('touch') );
 	};
-	window.UseSmallScreenMode = function() {
-		return $HTML.hasClass( 'responsive' ) && mqQueryMenuMode.matches;
+	window.UseSmallScreenMode = function( isWideModeEnabled ) {
+		return $HTML.hasClass( 'responsive' ) && ( isWideModeEnabled ? mqQuerySmallModeWhenWideEnabled.matches : mqQuerySmallMode.matches );
 	};
 	window.UseMobileScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
@@ -680,9 +681,15 @@ function Responsive_ReparentItemsInTabletMode( strItemSelector, $CtnOrFn )
 }
 
 /* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH, or we're in TabletScreenMode */
-function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn )
+function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn, isWideModeEnabled )
 {
-	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return ( ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) || ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) ); }, 'Responsive_SmallScreenModeToggled' );
+	var fnShouldReparent = function()
+	{
+		return ( ( window.UseSmallScreenMode && window.UseSmallScreenMode( isWideModeEnabled ) ) ||
+			( window.UseTabletScreenMode && window.UseTabletScreenMode() ) );
+	}
+
+	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, fnShouldReparent, 'Responsive_SmallScreenModeToggled' );
 }
 
 function _Responsive_ReparentItems( strItemSelector, $CtnOrFn, fnShouldReparent, bEvent )

@@ -1916,7 +1916,9 @@ GHomepage = {
 	{
 		var relatedReview = $J( "#Review" + appContainer.data( 'recommendationid_' + reviewIdx ) );
 		relatedReview.siblings().removeClass( "focus" );
+		relatedReview.siblings().attr( "aria-hidden", true );
 		relatedReview.addClass( "focus" );
+		relatedReview.attr( "aria-hidden", undefined );
 
 		appContainer.data( "currentreviewidx", reviewIdx );
 	},
@@ -1951,7 +1953,7 @@ GHomepage = {
 		var $ImageCapsule = $J ( '<div/>' );
 		$ImageCapsule.addClass('capsule');
 
-		var $Image = $J('<img/>', { src: rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header } );
+		var $Image = $J('<img/>', { src: rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
 		if ( !rgItemData.main_capsule )
 		{
 			$Image.css({'height': '288px' });
@@ -1968,7 +1970,7 @@ GHomepage = {
 		// micro trailer
 		if ( rgItemData.microtrailer )
 		{
-			let $Video = $J( '<video class="microtrailer_video" loop muted>' ).appendTo( $ItemLink );
+			let $Video = $J( '<video class="microtrailer_video" loop muted aria-hidden=true>' ).appendTo( $ItemLink );
 			$Video.on( "canplay", function() {
 				$Item.addClass( "has_microtrailer" );
 			} );
@@ -1998,7 +2000,7 @@ GHomepage = {
 				}
 			);
 
-			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="' + rgItemData.tiny_capsule + '" alt="' + rgItemData.name + '">' );
+			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="' + rgItemData.tiny_capsule + '" aria-hidden=true>' );
 			$ItemLink.append( $TinyCap );
 		}
 
@@ -2045,9 +2047,16 @@ GHomepage = {
 			$Item.data( 'recommendationid_' + i, review.recommendationid );
 
 			var $Review = $J( '<div>', { id: "Review" + review.recommendationid, class : 'review_box' } ).appendTo( $ReviewsCtn );
-			if ( i == 0 && numReviews >= 1 )
+			if ( numReviews >= 1 )
 			{
-				$Review.addClass( "focus" );
+				if ( i == 0 )
+				{
+					$Review.addClass( "focus" );
+				}
+				else
+				{
+					$Review.attr( "aria-hidden", true );
+				}
 			}
 
 			var $Content = $Review.append( $J( '<div>', { class: 'content', text: '"' + review.review_text + '"' } ) );

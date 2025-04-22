@@ -7,6 +7,24 @@ function ImportAndSaveSurvey( appid )
 
 var gValidURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
+function RequireTextAnswer( $checkbox, $textElem )
+{
+	if ( !$checkbox.prop( 'checked' ) )
+	{
+		$textElem.removeClass( "required" );
+		return false;
+	}
+
+	if ( v_trim( $textElem.val() ).length != 0 )
+	{
+		$textElem.removeClass( "required" );
+		return false;
+	}
+
+	$textElem.addClass( "required" );
+	return true;
+}
+
 function SaveSurvey( appid, bIsSupport )
 {
 	if ( $J("#categoryid_38" ).is(":checked") &&
@@ -34,13 +52,35 @@ function SaveSurvey( appid, bIsSupport )
 		return;
 	}
 
-	if ( checkboxAIYes.prop( 'checked' ) )
+	var rgErrors = [];
+	if ( RequireTextAnswer( checkboxAIYes, $J( "#customer_notes_ai__textarea" ) ) )
 	{
-		if ( v_trim( $J( "#customer_notes_ai__textarea" ).val() ).length == 0 )
-		{
-			ShowAlertDialog( 'Error Saving Survey', 'Please describe your game\'s use of AI. This text field is required and shown to players.' );
-			return;
-		}
+		rgErrors.push( 'Please describe your game\'s use of AI. This text field is required and shown to players.' );
+	}
+
+	if ( RequireTextAnswer( $J( '#categoryid_41' ), $J( "[name='desc_code_generated']" ) ) )
+	{
+		rgErrors.push( 'Please tell us about the code generated in your game.' );
+	}
+	if ( RequireTextAnswer( $J( '#categoryid_40' ), $J( "[name='desc_copyright_infringement_guarantee']" ) ) )
+	{
+		rgErrors.push( 'Please tell us what steps are you taking to guarantee that users can\'t generate copyrighted material.' );
+	}
+	if ( RequireTextAnswer( $J( '#categoryid_40' ), $J( "[name='desc_content_moderation_strategy']" ) ) )
+	{
+		rgErrors.push( 'Please tell us about your content moderation strategy.' );
+	}
+
+	if ( RequireTextAnswer( $J( '#categoryid_49' ), $J( "[name='desc_external_service_how_content_available_to_players']" ) ) )
+	{
+		rgErrors.push( 'Please elaborate on how generative content is made available to players.' );
+	}
+
+	if ( rgErrors.length != 0 )
+	{
+		var strErrors = "<br> " + rgErrors.join( "<br>" );
+		ShowAlertDialog( 'Error Saving Survey', strErrors );
+		return;
 	}
 
 	var form = $J( "#SaveSurveyForm" );

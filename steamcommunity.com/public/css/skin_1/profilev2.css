@@ -640,16 +640,22 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_header_content {
 	position: relative;
-	padding-top: 8px;
-	padding-right: 8px;
+	padding-top: 10px;
 	color: #c4c4c4;
 	font-size: 13px;
+	display: grid;
+	grid-template-columns: auto 1fr 268px;
+}
+
+.profile_header_centered_col {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0 18px 0 36px;
 }
 
 .profile_header_summary {
 	overflow: hidden;
-	padding-right: 18px;
-	padding-left: 18px;
 }
 
 .playerAvatar.profile_header_size {
@@ -686,18 +692,8 @@ body.profile_page.flat_page #footer_spacer {
 	transform: scale(1.22);
 }
 
-
-.profile_header .playerAvatar.profile_header_size {
-	float: left;
-	margin-right: 18px;
-}
-
 .profile_header_badgeinfo {
-	float: right;
-}
 
-.profile_header_badgeinfo_badge_area {
-	width: 268px;
 }
 
 .profile_text_content_check {
@@ -727,19 +723,13 @@ body.profile_page.flat_page #footer_spacer {
 {
 	html.responsive .profile_header_summary {
 		clear: both;
-		padding: 8px;
 	}
 	html.responsive .profile_header .profile_summary.noexpand {
 		height: auto;
 	}
 
-	html.responsive .profile_header .playerAvatar.profile_header_size {
-		max-width: 40%;
-	}
-
 	html.responsive .profile_header .profile_header_centered_persona {
 		position: static;
-		padding-bottom: 18px;
 	}
 
 	html.responsive .profile_header .profile_header_summary .persona_name_spacer,
@@ -750,10 +740,6 @@ body.profile_page.flat_page #footer_spacer {
 	html.responsive .profile_header .header_real_name {
 		height: auto;
 		line-height: 24px;
-	}
-
-	html.responsive .profile_header_content {
-		padding-top: 0;
 	}
 
 	html.responsive .profile_header {
@@ -769,40 +755,6 @@ body.profile_page.flat_page #footer_spacer {
 		overflow: hidden;
 	}
 
-}
-
-@media screen and ( max-width: 460px )
-{
-
-	html.responsive .profile_header_badgeinfo {
-		float: none;
-		overflow: visible;
-	}
-
-	html.responsive .profile_header_badgeinfo_badge_area {
-		float: none;
-		overflow: hidden;
-		max-width: 50%;
-		max-width: calc( 100% - 125px - 20px );
-	}
-
-	html.responsive .profile_header_badgeinfo_badge_area .profile_header_badge {
-		margin-bottom: 0;
-	}
-
-	html.responsive .profile_header_actions {
-		display: grid;
- 		grid-auto-flow: row;
-    	row-gap: .5em;
-    	padding-top: 8px;
-    	text-align: center;
-	}
-
-	html.responsive .profile_header .playerAvatar.profile_header_size {
-		max-width: none;
-		width: 125px;
-		height: 125px;
-	}
 }
 
 .profile_header_actions {
@@ -824,11 +776,7 @@ body.profile_page.flat_page #footer_spacer {
 		}
 
 .profile_header .profile_header_centered_persona {
-	position: absolute;
-	left: 186px;
-	right: 268px;
 	white-space: nowrap;
-	padding-left: 18px;
 	padding-bottom: 18px;
 }
 
@@ -879,6 +827,8 @@ body.profile_page.flat_page #footer_spacer {
 	height: 57px;
 	overflow: hidden;
 	margin-bottom: 8px;
+	text-wrap: wrap;
+	overflow-wrap: break-word;
 }
 
 .profile_header .profile_summary.noexpand {
@@ -992,7 +942,7 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 #view_equipped_items_icon {
-    width: 20px;
+    width: 18px;
 }
 
 #profile_action_dropdown {
@@ -4034,4 +3984,118 @@ body.flat_page .sectionTabsHR {
 	padding: 0px 12px 12px 12px;
 	font-size: 14px;
 	color: #fff;
+}
+
+.profile_header_summary.mobile {
+	display: none;
+}
+
+.header_location {
+	display: inline;
+}
+
+.header_location::before {
+	content: "\a0";
+}
+
+@media screen and (  max-width: 770px )
+{
+	html.responsive .profile_header_content {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto;
+		row-gap: 12px;
+	}
+
+	html.responsive .profile_header_badgeinfo {
+		grid-column: span 2;
+	}
+
+	html.responsive .profile_header_badgeinfo_badge_area {
+		display: flex;
+		column-gap: 20px;
+		width: auto;
+		background: rgba(0, 0, 0, 0.5);
+		padding: 0 15px;
+		align-items: center;
+		min-height: 70px;
+		justify-content: space-around;
+	}
+
+	html.responsive .profile_header_actions {
+		display: flex;
+		column-gap: .5em;
+		margin-top: 8px;
+	}
+
+	html.responsive .profile_header_badgeinfo {
+		float: none;
+		overflow: visible;
+		display: flex;
+		flex-direction: column-reverse;
+		row-gap: 12px;
+	}
+
+	html.responsive .profile_header_badgeinfo .persona_level {
+		margin:0;
+	}
+
+	html.responsive .profile_header_badgeinfo_badge_area .profile_header_badge {
+		margin-bottom: 0;
+		background-color: transparent;
+	}
+
+	html.responsive .profile_header .playerAvatar.profile_header_size {
+		max-width: none;
+	}
+
+	html.responsive .btn_profile_action {
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	html.responsive .header_location {
+		display: block;
+		text-wrap: wrap;
+		overflow-wrap: break-word;
+		margin-left: 0;
+	}
+
+	html.responsive .header_location::before {
+		content: "";
+	}
+}
+
+@media screen and ( max-width: 500px )
+{
+	html.responsive .profile_header_summary.desktop {
+		display: none;
+	}
+
+	html.responsive .profile_header_summary.mobile {
+		display: block;
+		grid-column: span 2;
+	}
+
+	html.responsive .profile_header_content {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto;
+		row-gap: 15px;
+	}
+
+	html.responsive .profile_header .playerAvatar.profile_header_size {
+		max-width: none;
+		width: 100px;
+		height: 100px;
+	}
+	html.responsive .profile_header .profile_header_centered_persona {
+		padding-bottom: 0;
+	}
+
+	html.responsive .profile_header_centered_col {
+		padding: 0 0 0 18px;
+	}
+
+	html.responsive .profile_header_badge_instructions {
+		display: none;
+	}
 }

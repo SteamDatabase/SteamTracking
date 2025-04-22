@@ -32,11 +32,12 @@
         OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
         OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
         OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
         PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
         EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
         EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
@@ -855,7 +856,7 @@
     },
     35685: (e, t, a) => {
       "use strict";
-      a.d(t, { kH: () => W, rN: () => M, uY: () => P, zA: () => z });
+      a.d(t, { kH: () => W, rN: () => H, uY: () => z, zA: () => j });
       var n = a(22837),
         l = a(41735),
         r = a.n(l),
@@ -891,8 +892,9 @@
         x = a(41751),
         O = a(18654),
         B = a.n(O),
-        F = a(84518);
-      const M = (0, o.PA)((e) => {
+        F = a(84518),
+        M = a(38535);
+      const H = (0, o.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -1026,7 +1028,7 @@
                   navEntryPreferPosition: g.iU.PREFERRED_CHILD,
                 },
                 d.map((e) =>
-                  s.createElement(P, { key: e.AnnouncementGID, event: e }),
+                  s.createElement(z, { key: e.AnnouncementGID, event: e }),
                 ),
               ),
               Boolean(C) &&
@@ -1040,8 +1042,8 @@
             ),
           );
         }),
-        H = 30;
-      function P(e) {
+        P = 30;
+      function z(e) {
         const {
             event: t,
             imageURLOverride: a,
@@ -1051,7 +1053,8 @@
             eEventRount: c,
             bHidePrices: m,
           } = e,
-          [g, p, E, _, h, v] = (0, i.q3)(() => {
+          g = (0, M.Zj)(t.appid),
+          [p, E, _, h, v, C] = (0, i.q3)(() => {
             const e = r || (0, n.sf)(y.TS.LANGUAGE),
               l = Boolean(void 0 !== a)
                 ? a
@@ -1068,20 +1071,20 @@
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [C, A] = (0, s.useState)(void 0),
-          S =
-            !C || (g !== C && h !== C)
-              ? { src: g, onLoad: () => A(g), onError: () => A(h) }
-              : { src: C };
+          [A, S] = (0, s.useState)(void 0),
+          D =
+            !A || (p !== A && v !== A)
+              ? { src: p, onLoad: () => S(p), onError: () => S(v) }
+              : { src: A };
         if (!t)
           return s.createElement("div", {
             className: G().OtherEvents_EventCtn,
           });
-        const D = (0, I.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          k = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let L = v;
+        const k = (0, I.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          L = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let N = C;
         return (
-          v && (v.length > H || p.length > H) && (L = void 0),
+          C && (C.length > P || E.length > P) && (N = void 0),
           s.createElement(
             s.Fragment,
             null,
@@ -1101,14 +1104,14 @@
               s.createElement(
                 "div",
                 { className: G().EventSummaryContainer },
-                s.createElement("div", { className: G().EventSummaryType }, E),
-                s.createElement("div", { className: G().EventSummaryText }, _),
+                s.createElement("div", { className: G().EventSummaryType }, _),
+                s.createElement("div", { className: G().EventSummaryText }, h),
               ),
               s.createElement("div", {
                 className: G().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
-                  backgroundImage: C ? `url(${(0, d.j3)(C)})` : "none",
+                  backgroundImage: A ? `url(${(0, d.j3)(A)})` : "none",
                 },
               }),
               s.createElement(
@@ -1116,9 +1119,14 @@
                 { className: G().OtherEvents_ContentCtn },
                 s.createElement(
                   "div",
-                  { className: G().OtherEvents_MainImageCtn },
+                  {
+                    className: (0, b.A)(
+                      G().OtherEvents_MainImageCtn,
+                      g && G().MaskImages,
+                    ),
+                  },
                   s.createElement("img", {
-                    ...S,
+                    ...D,
                     className: G().OtherEvents_MainImage,
                   }),
                 ),
@@ -1128,15 +1136,15 @@
                   s.createElement(
                     "div",
                     { className: G().OtherEvents_TextTitle },
-                    p,
+                    E,
                   ),
-                  Boolean(L) &&
+                  Boolean(N) &&
                     s.createElement(
                       "div",
                       { className: G().OtherEvents_SubTitle },
-                      L,
+                      N,
                     ),
-                  Boolean(k > D)
+                  Boolean(L > k)
                     ? s.createElement(
                         "div",
                         { className: (0, b.A)(G().UpcomingCtn, "UpcomingCtn") },
@@ -1154,11 +1162,11 @@
               ),
             ),
             Boolean(l && t.appid) &&
-              s.createElement(z, { appid: t.appid, bHidePrice: m }),
+              s.createElement(j, { appid: t.appid, bHidePrice: m }),
           )
         );
       }
-      function z(e) {
+      function j(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, h.t7)(t, c.Xh),
           l = (0, k.n9)(),
@@ -2254,7 +2262,7 @@
     },
     2472: (e, t, a) => {
       "use strict";
-      a.d(t, { uE: () => W, it: () => j, ur: () => Y });
+      a.d(t, { uE: () => j, it: () => W, ur: () => Y });
       var n = a(34629),
         l = a(22837),
         r = a(14947),
@@ -2295,7 +2303,7 @@
             fnFilterImageURLsForKnownFailures: o,
             langOverride: c,
           } = e,
-          g = (0, R.c)(),
+          g = (0, R.c5)(),
           d = s.useCallback(
             (e) => {
               e.preventDefault(), n && n(t);
@@ -2411,8 +2419,8 @@
         P = a(73745);
       const z =
         "https://partner.steamgames.com/doc/store/localization#supported_languages";
-      var W;
-      function j(e) {
+      var j;
+      function W(e) {
         const {
             artworkType: t,
             headerHint: a,
@@ -2427,19 +2435,19 @@
           } = e,
           [E] = (0, p.t7)(n, { include_assets: !0 });
         let I = null;
-        a === W.k_Required
+        a === j.k_Required
           ? (I = s.createElement(
               "span",
               { style: { color: "#C6512B" } },
               (0, H.we)("#EventEditor_Required"),
             ))
-          : a === W.k_Suggested
+          : a === j.k_Suggested
             ? (I = s.createElement(
                 "span",
                 { style: { color: "#D7BC86" } },
                 (0, H.we)("#EventEditor_Suggested"),
               ))
-            : a === W.k_Requested &&
+            : a === j.k_Requested &&
               (I = s.createElement(
                 "span",
                 { style: { color: "#D7BC86" } },
@@ -3002,7 +3010,7 @@
           (e[(e.k_Suggested = 1)] = "k_Suggested"),
           (e[(e.k_Required = 2)] = "k_Required"),
           (e[(e.k_Requested = 3)] = "k_Requested");
-      })(W || (W = {}));
+      })(j || (j = {}));
       let Z = class extends s.Component {
         ShowLangChangeDialog(e, t) {
           const {
