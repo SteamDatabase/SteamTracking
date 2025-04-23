@@ -27,23 +27,6 @@ function RequireTextAnswer( $checkbox, $textElem )
 
 function SaveSurvey( appid, bIsSupport )
 {
-	if ( $J("#categoryid_38" ).is(":checked") &&
-		 $J("#categoryid_40" ).is(":checked") &&
-		 $J("#categoryid_49" ).is(":checked") )
-	{
-		if ( v_trim( $J( "#external_service_name" ).val() ).length == 0 )
-		{
-			ShowAlertDialog( 'Error Saving Survey', 'Please specify the name of the external service your game connects to in order to live-generate content or code for your game.' );
-			return;
-		}
-
-		if ( !gValidURL.test( $J( "#external_service_url" ).val() ) )
-		{
-			ShowAlertDialog( 'Error Saving Survey', 'Please specify a valid URL for the website of the external service your game connects to in order to live-generate content or code for your game.' );
-			return;
-		}
-	}
-
 	var checkboxAIYes = $J( '#categoryid_38' );
 	var checkboxAINo = $J( '#categoryid_50' );
 	if ( !checkboxAIYes.prop( 'checked' ) && !checkboxAINo.prop( 'checked' ) && !bIsSupport )
@@ -53,6 +36,7 @@ function SaveSurvey( appid, bIsSupport )
 	}
 
 	var rgErrors = [];
+
 	if ( RequireTextAnswer( checkboxAIYes, $J( "#customer_notes_ai__textarea" ) ) )
 	{
 		rgErrors.push( 'Please describe your game\'s use of AI. This text field is required and shown to players.' );
@@ -69,6 +53,31 @@ function SaveSurvey( appid, bIsSupport )
 	if ( RequireTextAnswer( $J( '#categoryid_40' ), $J( "[name='desc_content_moderation_strategy']" ) ) )
 	{
 		rgErrors.push( 'Please tell us about your content moderation strategy.' );
+	}
+
+	if ( checkboxAIYes.prop( 'checked' ) &&
+		$J("#categoryid_40" ).is(":checked") &&
+		$J("#categoryid_49" ).is(":checked") )
+	{
+		if ( v_trim( $J( "#external_service_name" ).val() ).length == 0 )
+		{
+			$J( "#external_service_name" ).addClass( "required" );
+			rgErrors.push( 'Please specify the name of the external service your game connects to in order to live-generate content or code for your game.' );
+		}
+		else
+		{
+			$J( "#external_service_name" ).removeClass( "required" );
+		}
+
+		if ( !gValidURL.test( $J( "#external_service_url" ).val() ) )
+		{
+			$J( "#external_service_url" ).addClass( "required" );
+			rgErrors.push( 'Please specify a valid URL for the website of the external service your game connects to in order to live-generate content or code for your game.' );
+		}
+		else
+		{
+			$J( "#external_service_url" ).removeClass( "required" );
+		}
 	}
 
 	if ( RequireTextAnswer( $J( '#categoryid_49' ), $J( "[name='desc_external_service_how_content_available_to_players']" ) ) )
