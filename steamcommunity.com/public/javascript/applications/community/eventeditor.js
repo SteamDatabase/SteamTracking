@@ -1971,10 +1971,17 @@
         const n = l.mh.CreateClone();
         if (a && a.length > 0) {
           const e = t.GetLanguagesWithTokens();
-          t.ClearLanguagesTokens(a),
+          if (
+            (t.ClearLanguagesTokens(a),
             (n.GetEventModel().jsondata.bSaleEnabled = !0),
             Fe(n, t, e),
-            (n.GetEventModel().jsondata.bSaleEnabled = !1);
+            (n.GetEventModel().jsondata.bSaleEnabled = !1),
+            n.GetEventModel().jsondata.email_setting)
+          ) {
+            let e = 100;
+            for (let t of n.GetEventModel().jsondata.email_setting.sections)
+              t.unique_id || ((t.unique_id = `email_section_${e}`), e++);
+          }
         }
         e(null, "clone");
       }
