@@ -6632,7 +6632,7 @@ a.open_in_steam_body:hover {
 
 		}
 
-.block .block_content_inner #AwardsDefault img {
+.widestore .block .block_content_inner #AwardsDefault img {
 	max-width: 344px;
 }
 
@@ -6742,7 +6742,7 @@ a.open_in_steam_body:hover {
 	{
 		float: left;
 		width: 50%;
-		margin-right: 8px;
+		margin-right: 12px;
 	}
 
 	html.responsive.widestore .game_header_image_ctn img.game_header_image_full {
@@ -6883,6 +6883,18 @@ a.open_in_steam_body:hover {
 	max-width: 515px;
 	font-size: 13px;
 	color: #C6D4DF;
+}
+
+.widestore .game_area_dlc_row.dlc_highlight {
+	display: grid;
+	grid-template-columns: 1fr 3fr auto;
+	grid-template-rows: auto;
+	grid-template-areas:
+    "capsule text price";
+}
+
+.widestore .mature_content_notice {
+	max-width: 1168px;
 }
 
 @media screen and (max-width: 1200px)

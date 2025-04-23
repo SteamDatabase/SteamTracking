@@ -6323,7 +6323,11 @@ body.v7menu .responsive_page_template_content {
 	width: 376px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 500px) {
+.widestore div#store_header .content {
+	width: 1200px;
+}
+
+@media screen and (max-width: 1200px) {
 	.widestore body.v6 .page_content.middle_page {
 		display: block;
 		flex-direction: unset;

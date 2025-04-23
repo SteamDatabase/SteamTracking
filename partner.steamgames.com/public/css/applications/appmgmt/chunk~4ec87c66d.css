@@ -2454,7 +2454,7 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
 }
 ._3THzepUIt_9YaOf4KmNcW4 ._39Ize8dokzZuzGXAaSq_NF {
   background: #303238;
-  padding: 16px;
+  padding: 16px 0px 0px 16px;
   color: #fff;
   font-size: 13px;
   flex-shrink: 1;
@@ -2475,6 +2475,12 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
   --fancy-table-column-header-padding: 7px 0;
   --fancy-table-header-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   --fancy-table-last-pinned-border: 3px solid #303238;
+}
+._3THzepUIt_9YaOf4KmNcW4 ._39Ize8dokzZuzGXAaSq_NF ::-webkit-scrollbar {
+  display: block;
+}
+._3THzepUIt_9YaOf4KmNcW4 ._39Ize8dokzZuzGXAaSq_NF ::-webkit-scrollbar-thumb {
+  background-color: #e5e5e5;
 }
 ._3THzepUIt_9YaOf4KmNcW4 ._39Ize8dokzZuzGXAaSq_NF ._3V8Jbtexw6tKPwushv5utD {
   display: flex;
@@ -2690,6 +2696,12 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
   justify-content: center;
   padding: 2px 6px;
   width: 100%;
+}
+.PendingVisible ._3nXYRGDDi-f0K32xfYl8E0 {
+  padding-bottom: 132px;
+}
+.PendingVisible ._3nXYRGDDi-f0K32xfYl8E0 > div {
+  padding-bottom: 72px;
 }
 ._2_w-XxxXsbLKX5IjHmLHlu {
   position: absolute;
@@ -10450,6 +10462,10 @@ table._3sBXwILYFyzoFqxMG_Q5yE th {
 table._3sBXwILYFyzoFqxMG_Q5yE td {
   padding: 6px 6px 6px 6px;
   background: #000;
+}
+._3u50nUTSryVrDLFl57rnyA {
+  margin-top: 20px;
+  color: #c44848;
 }
 ._3793xvP87t1rZYbAQDC1pG {
   width: 100%;

@@ -6,15 +6,15 @@
 }
 ._2SxhiHrQSCtBnKf3oKdon2 ._3cBgZqhPaJpdeZl8hARr1o {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  background-color: #313c4a;
+  transition: background-color .2s ease-in-out;
+}
+._2SxhiHrQSCtBnKf3oKdon2 ._3cBgZqhPaJpdeZl8hARr1o:hover {
+  background-color: #435164;
 }
 ._2SxhiHrQSCtBnKf3oKdon2 a {
   display: block;
   padding: 12px;
-  background-color: #313c4a;
-  transition: background-color .2s ease-in-out;
-}
-._2SxhiHrQSCtBnKf3oKdon2 a:hover {
-  background-color: #435164;
 }
 ._2SxhiHrQSCtBnKf3oKdon2 a:hover ._2pkGLftA9XILpaWN0kejPk {
   color: #fff;
