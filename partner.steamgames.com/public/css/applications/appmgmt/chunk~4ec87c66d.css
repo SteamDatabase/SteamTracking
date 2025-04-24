@@ -15283,6 +15283,26 @@ button.rbc-input::-moz-focus-inner {
   font-size: 14px;
   color: #fff;
 }
+._3dP8sNyn9CALW4ByKZmfhw {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  background: linear-gradient(90deg, #2c2e35, #25272c, #2c2e35);
+  border-top: 1px solid #2c2e35;
+  padding: 12px;
+  margin-bottom: 1px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #dfe3e6;
+}
+._3dP8sNyn9CALW4ByKZmfhw a {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+}
 ._2VX2nHUaUawKzGVpr5hPzL {
   width: 100%;
   max-width: 1400px;

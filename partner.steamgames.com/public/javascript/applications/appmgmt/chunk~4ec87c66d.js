@@ -985,6 +985,7 @@
     },
     17955: (e) => {
       e.exports = {
+        EventRecapRow: "_3dP8sNyn9CALW4ByKZmfhw",
         PageCtn: "_2VX2nHUaUawKzGVpr5hPzL",
         PageTitle: "M7hNWiuJL8j0CFUQEWsNa",
         RecapList: "_1aLzKUyiBwqQWkbF4xvl5d",
@@ -70435,13 +70436,34 @@
           l = t ?? r;
         return s.createElement(
           "div",
-          { className: (0, p.A)(c().AdminPageCtn) },
+          { className: (0, p.A)(d().AdminPageCtn) },
           s.createElement(
             "div",
-            { className: c().PageTitle },
+            { className: d().PageTitle },
             (0, _.we)("#Recap_NextFest_List_Title"),
           ),
           s.createElement("hr", null),
+          s.createElement(
+            "div",
+            { className: (0, p.A)(d().DefaultSectionCtn, d().MarginBottom) },
+            (0, _.we)("#Recap_NextFest_List_SubTitle"),
+            " ",
+            s.createElement(
+              "a",
+              { href: "#" },
+              (0, _.we)("#Recap_NextFest_List_Link"),
+            ),
+          ),
+          s.createElement(
+            "div",
+            { className: (0, p.A)(d().PageTitle, d().PageSubTitle) },
+            (0, _.we)("#Recap_NextFest_YourRecap_Title"),
+          ),
+          s.createElement(
+            "div",
+            null,
+            (0, _.we)("#Recap_NextFest_YourRecap_SubTitle"),
+          ),
           n.length > 0 &&
             s.createElement(
               "div",
@@ -70455,7 +70477,12 @@
                 }),
               ),
             ),
-          0 == n.length && (0, _.we)("#Recap_NextFest_List_None"),
+          0 == n.length &&
+            s.createElement(
+              "div",
+              { className: d().DefaultSectionCtn },
+              (0, _.we)("#Recap_NextFest_List_None"),
+            ),
         );
       }
       function w(e) {
@@ -70467,16 +70494,16 @@
           u = `${g.TS.PARTNER_BASE_URL}recap/nextfest/${d}/${t}`;
         return s.createElement(
           "div",
-          null,
+          { className: c().EventRecapRow },
           s.createElement(
             "a",
             { href: u },
-            s.createElement("div", null, (0, _.we)("#Recap_NextFest_Title", l)),
-          ),
-          s.createElement(
-            "a",
-            { href: u },
-            s.createElement("img", { className: c().BannerImage, src: o }),
+            l,
+            s.createElement("img", {
+              className: c().BannerImage,
+              src: o,
+              alt: l,
+            }),
           ),
           3 == m &&
             s.createElement(
