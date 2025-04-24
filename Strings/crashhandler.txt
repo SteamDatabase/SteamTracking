@@ -716,7 +716,6 @@ wcsnrtombs
 wcstoll
 wcstoull
 wctob
-wl4Va
 wmemchr
 wmemcmp
 wmemcpy

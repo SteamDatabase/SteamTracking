@@ -11562,7 +11562,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 21 2025 19:22:54
+Apr 23 2025 23:44:11
 Arabic
 AreFilesInSubscriptionList
 Armenian
@@ -19223,6 +19223,7 @@ TimeCellIDSet
 TimeSubmitted
 Timed out waiting for library ready: %fs - %s
 Timed out waiting for network
+Timed out waiting for webhelper init
 Timeline
 Timeline Icons
 Timestamp
@@ -24648,7 +24649,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenz,o
+ggen
 ghost_
 gidlist
 gidparentcomment

@@ -847,7 +847,25 @@ else
 	exit 255
 fi
 
-if [ -f "$STEAMROOT/$PLATFORM64/steam-runtime-sniper.sh" ]; then
+function is_sniper_runtime_valid()
+{
+	local pvverify="$STEAMROOT/$PLATFORM64/steam-runtime-sniper/pressure-vessel/bin/pv-verify"
+	if [ ! -x "$pvverify" ]; then
+		log "Steam runtime not present: forcing unpack"
+		false
+		return
+	fi
+
+	"${exclusive_lock[@]}" "$pvverify"
+}
+
+function setup_sniper()
+{
+	# Force the setup script to re-unpack the runtime
+	# There isn't a flag to do this in steam-runtime-sniper.sh as far
+	# as I could tell
+	rm -fr "$STEAMROOT/$PLATFORM64/steam-runtime-sniper"
+
 	status=0
 	"${exclusive_lock[@]}" \
 	"$STEAMROOT/$PLATFORM64/steam-runtime-sniper.sh" \
@@ -865,7 +883,21 @@ if [ -f "$STEAMROOT/$PLATFORM64/steam-runtime-sniper.sh" ]; then
 			set -- "$@" "-verifyfiles"
 			;;
 	esac
-fi
+}
+
+# Check if the sniper runtime correctly unpacked before attempting to use it
+# If the files are in a bad state, steam will fail to start, so lets be aggresive
+# about making sure things are in order before starting steam
+# Note: This should instead be part of the bootstrapper payload instead, that way
+# it will follow the correct validation strategies as the rest of steam
+for i in {1..2}; do
+	if is_sniper_runtime_valid; then
+		break
+	fi
+
+	log "Unpacking steam runtime: attempt $i"
+	setup_sniper
+done
 
 # prepend our lib path to LD_LIBRARY_PATH
 export LD_LIBRARY_PATH="$STEAMROOT/$PLATFORM:$STEAMROOT/$PLATFORM/panorama:${LD_LIBRARY_PATH-}"
