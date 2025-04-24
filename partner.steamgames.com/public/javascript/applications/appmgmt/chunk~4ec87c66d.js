@@ -27841,10 +27841,11 @@
                   const e = [];
                   a.forEach((a, n) => {
                     let r;
-                    if ("accessorKey" in a) r = t[a.accessorKey].toString();
+                    if ("accessorKey" in a)
+                      r = (t[a.accessorKey] ?? "").toString();
                     else {
                       if (!("accessorFn" in a)) return;
-                      r = a.accessorFn(t, n).toString();
+                      r = (a.accessorFn(t, n) ?? "").toString();
                     }
                     e.push(r);
                   }),
