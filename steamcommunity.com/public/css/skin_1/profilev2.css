@@ -656,6 +656,7 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_header_summary {
 	overflow: hidden;
+	white-space: wrap;
 }
 
 .playerAvatar.profile_header_size {
@@ -698,16 +699,15 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_text_content_check {
 	margin-bottom: 12px;
-	padding: 14px 11px;
 	margin-top: 4px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 }
 .profile_text_content_check > .profile_text_content_check_controls {
-	margin-left: 20px;
 	float: right;
 }
 .profile_text_content_check > .profile_text_content_check_controls > span {
 	cursor: pointer;
+	margin: 0 5px;
 }
 .profile_text_content_check > img {
 	width: 12px;
