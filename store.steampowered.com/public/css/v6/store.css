@@ -6302,32 +6302,35 @@ body.v7menu .responsive_page_template_content {
 /* 2025 Game Page Widening */
 
 .widestore body.v6 .page_content {
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 	margin: 0 auto;
 }
 
 .widestore body.v6 .page_content.middle_page {
 	display: flex;
 	flex-direction: row-reverse;
+	justify-content: space-between;
 }
 
 .widestore .leftcol {
-	width: 808px;
+	width: 65%;
 }
 
 .widestore .rightcol {
-	width: 378px;
-}
-
-.widestore .rightcol.recent_reviews {
-	width: 376px;
+	width: 33%;
 }
 
 .widestore div#store_header .content {
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+.widestore .leftcol .ReviewContentCtn {
+	display: flex;
+}
+
+@media screen and (max-width: 910px) {
 	.widestore body.v6 .page_content.middle_page {
 		display: block;
 		flex-direction: unset;
@@ -6338,7 +6341,6 @@ body.v7menu .responsive_page_template_content {
 		width: auto;
 		margin: 0 2%;
 	}
-
 
 	.widestore .actionButtonsCtn {
 		display: flex;
@@ -6414,9 +6416,9 @@ body.v7menu .responsive_page_template_content {
 		box-sizing:content-box;
 
 
-		display: -webkit-box; /* Very Old webkit */
-		display: -ms-flexbox; /* IE 10 */
-		display: -webkit-flex; /* Old webkit */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		flex-wrap: nowrap;
 
@@ -6429,3 +6431,9 @@ body.v7menu .responsive_page_template_content {
 	}
 }
 
+@media screen and (max-width: 1200px) and (min-width: 500px) {
+	.widestore body.v6 .page_content {
+		width: 98%;
+		padding: 0 1%;
+	}
+}

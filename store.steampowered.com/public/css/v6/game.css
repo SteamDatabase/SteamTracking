@@ -6636,8 +6636,7 @@ a.open_in_steam_body:hover {
 	max-width: 344px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 500px)
-{
+/* @media screen and (max-width: 910px) {
 	html.responsive.widestore .rightcol.game_meta_data .block {
 		background: rgba( 0, 0, 0, 0.2 );
 		filter: none;
@@ -6832,10 +6831,11 @@ a.open_in_steam_body:hover {
 		max-width: 100%;
 		height: auto;
 	}
-}
+} */
 
 .widestore .queue_ctn {
-    width: 1200px;
+    max-width: 1200px;
+	width: 100%;
     background: rgba( 0, 0, 0, 0.2 );
 	margin: 0px auto;
 	margin-bottom: 16px;
@@ -6897,7 +6897,7 @@ a.open_in_steam_body:hover {
 	max-width: 1168px;
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 910px)
 {
 
 	html.responsive.widestore .game_description_snippet {

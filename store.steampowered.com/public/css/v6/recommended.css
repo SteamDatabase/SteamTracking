@@ -3227,7 +3227,11 @@ body.v6 h2.morelike_section_divider
 	width: 865px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 500px)
+.widestore .review_box a.vote_header {
+	margin: 8px 8px 13px 0;
+}
+
+@media screen and (max-width: 910px) and (min-width: 500px)
 {
 	html.responsive.widestore .recommendation_highlightv2 .header_image
 	{
