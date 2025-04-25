@@ -6859,7 +6859,8 @@ a.open_in_steam_body:hover {
 		    line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 }
 
 .widestore .game_area_play_stats {
@@ -6895,6 +6896,13 @@ a.open_in_steam_body:hover {
 
 .widestore .mature_content_notice {
 	max-width: 1168px;
+}
+
+@media screen and (max-width: 1200px) {
+	.widestore body.v6 .game_area_already_owned.page_content {
+		width: calc(100% - 50px);
+		padding: 0 25px;
+	}
 }
 
 @media screen and (max-width: 910px)
