@@ -3231,7 +3231,7 @@ body.v6 h2.morelike_section_divider
 	margin: 8px 8px 13px 0;
 }
 
-@media screen and (max-width: 910px) and (min-width: 500px)
+@media screen and (max-width: 1210px) and (min-width: 500px)
 {
 	html.responsive.widestore .recommendation_highlightv2 .header_image
 	{

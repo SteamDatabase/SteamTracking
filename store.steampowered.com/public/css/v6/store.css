@@ -6321,6 +6321,10 @@ body.v7menu .responsive_page_template_content {
 	width: 33%;
 }
 
+.widestore body.v6 #store_header {
+	padding: 0 1%;
+}
+
 .widestore div#store_header .content {
 	max-width: 1200px;
 	width: 100%;
@@ -6328,6 +6332,10 @@ body.v7menu .responsive_page_template_content {
 
 .widestore .leftcol .ReviewContentCtn {
 	display: flex;
+}
+
+.widestore .cart_status_flex {
+	margin-right: 5px;
 }
 
 @media screen and (max-width: 910px) {
@@ -6434,6 +6442,5 @@ body.v7menu .responsive_page_template_content {
 @media screen and (max-width: 1200px) and (min-width: 500px) {
 	.widestore body.v6 .page_content {
 		width: 98%;
-		padding: 0 1%;
 	}
 }
