@@ -2797,6 +2797,7 @@ msync
 multiple_raster_threads
 munmap
 mwa!
+n ex
 nTargetFrameRate
 name
 name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
