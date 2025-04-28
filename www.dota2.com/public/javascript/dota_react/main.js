@@ -37631,18 +37631,17 @@
     33706: (e, t, a) => {
       "use strict";
       a.d(t, {
-        B5: () => P,
+        B5: () => L,
         HJ: () => v,
         Iu: () => M,
         JD: () => y,
         MT: () => N,
-        PO: () => L,
-        er: () => D,
+        PO: () => A,
         k4: () => I,
         lm: () => B,
         mU: () => S,
         nK: () => R,
-        oF: () => A,
+        oF: () => D,
         qK: () => T,
         wB: () => w,
       });
@@ -37779,12 +37778,13 @@
           queryKey: [e, t],
           queryFn: () =>
             (async function (e) {
+              console.log("inferenceRequest:", e);
               const t = await i().post(s.r.BASE_URL + "react/inference", {
                   input_json: JSON.stringify(e),
                   project_id: e.project_id,
                 }),
                 a = t?.data?.response;
-              return a;
+              return console.log("inferenceResponse:", a), a;
             })(t),
         };
       }
@@ -37918,7 +37918,7 @@
         const _ = {
           project_id: 50,
           published_version: 7,
-          additional_data: [10],
+          additional_data: [50],
           data: {
             data: [
               {
@@ -37967,52 +37967,7 @@
           (0, l.I)(C(f, _))
         );
       }
-      function D(e, t, a, r, n, i, s, o, c, m, d, u) {
-        const _ = {
-          project_id: 50,
-          published_version: 7,
-          additional_data: [10],
-          data: {
-            data: [
-              {
-                data_source_id: 3616116112,
-                data_object: {
-                  elements: [
-                    { name: "purchase_history", data_int32s: m },
-                    { name: "inventory_items", data_int32s: d },
-                  ],
-                },
-              },
-              {
-                data_source_id: 3835464906,
-                data_object: {
-                  elements: [
-                    { name: "hero_id", data_int32s: [e] },
-                    { name: "hero_facet", data_int32s: [t] },
-                    { name: "position", data_int32s: [a] },
-                    { name: "allied_hero_ids", data_int32s: r },
-                    { name: "allied_hero_facets", data_int32s: n },
-                    { name: "enemy_hero_ids", data_int32s: i },
-                    { name: "enemy_hero_facets", data_int32s: s },
-                  ],
-                },
-              },
-              {
-                data_source_id: 2197406710,
-                data_object: {
-                  elements: [
-                    { name: "average_mmr", data_int32s: [o] },
-                    { name: "game_mode", data_int32s: [c] },
-                    { name: "lobby_type", data_int32s: [7] },
-                  ],
-                },
-              },
-            ],
-          },
-        };
-        return (0, l.I)(C(f, _));
-      }
-      function A(e, t, a, r, n, i, s, o, c, m, d) {
+      function D(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 32,
           published_version: 1,
@@ -38054,7 +38009,7 @@
         };
         return (0, l.I)(C(f, u));
       }
-      function L(e, t, a, r, n, i, s, o, c, m, d) {
+      function A(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 28,
           published_version: 2,
@@ -38099,7 +38054,7 @@
         };
         return (0, l.I)(C(b, u));
       }
-      class P {
+      class L {
         m_asyncHeroList = new r.N();
         m_asyncAbilityList = new r.N();
         m_asyncItemList = new r.N();
@@ -38108,7 +38063,7 @@
         m_asyncItemData = new r.L();
         static g_Singleton;
         static Get() {
-          return P.g_Singleton || (P.g_Singleton = new P()), P.g_Singleton;
+          return L.g_Singleton || (L.g_Singleton = new L()), L.g_Singleton;
         }
         getHeroList() {
           return this.m_asyncHeroList.getData(
