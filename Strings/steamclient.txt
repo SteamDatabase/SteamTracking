@@ -2272,7 +2272,6 @@ $steammessages_parental_objects.proto"
 (.CTwoFactor_RemoveAuthenticator_Response"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
-(1&PQ
 (8GXgw
 (8HXhx
 (?R or (?[+-]digits must be followed by )
@@ -17369,7 +17368,6 @@ DBF-
 DCL\U\]ze
 DD.9
 DD5z
-DD8]
 DDDDUUUU
 DDli
 DEFAULT_FOR_TYPE
@@ -31545,7 +31543,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggen
+ggenR
 ghjkl
 gidlist
 gidparentcomment
