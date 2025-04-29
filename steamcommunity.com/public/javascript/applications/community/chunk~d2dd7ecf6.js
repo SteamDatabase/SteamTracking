@@ -1656,7 +1656,10 @@
             fnSetImageURL: _,
             rgRealmList: h,
           } = e,
-          [v] = l.useState(() => e.uploaderOverride || new r.V(t)),
+          v = l.useMemo(
+            () => e.uploaderOverride || new r.V(t),
+            [t.ConvertTo64BitString(), e.uploaderOverride],
+          ),
           [w, C] = l.useState(!1),
           [A] = (0, n.q3)(() => [i.O.Get().GetCurEditLanguage()]);
         l.useEffect(() => {

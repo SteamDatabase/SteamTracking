@@ -22,7 +22,7 @@
     },
     578: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => ge });
+      a.r(t), a.d(t, { default: () => _e });
       var r = a(79785),
         n = a(68527),
         o = a(90626),
@@ -33,9 +33,9 @@
         c = a(55263),
         p = a(52038),
         m = a(22797),
-        _ = a(61859),
-        g = a(27221),
-        d = a.n(g);
+        g = a(61859),
+        _ = a(27221),
+        d = a.n(_);
       function f(e) {
         const { rgAppIDs: t, children: a, nMonth: r } = e,
           n = (0, o.useMemo)(
@@ -155,9 +155,10 @@
                 id: e,
                 type: l.has(e) ? "dlc" : "game",
               })),
-              capsules_per_row_array: [5],
+              capsules_per_row_array: t.length < 3 ? [2] : [5],
               carousel_rows: 1,
-              capsule_style_per_row_array: ["tall"],
+              show_as_carousel: !0,
+              capsule_style_per_row_array: t.length < 3 ? ["grid"] : ["tall"],
               random_from_entire_set: !0,
             });
           const a = s.filter((t) => e.BIsGameRecommended(t));
@@ -297,7 +298,7 @@
               ),
             )
           : o.createElement(m.t, {
-              string: (0, _.we)("#Loading"),
+              string: (0, g.we)("#Loading"),
               position: "center",
             });
       }
@@ -910,12 +911,12 @@
         const u = new Date(Date.UTC(i, l, 15, 17, 0));
         return Math.floor(u.getTime() / 1e3);
       }
-      function _e(e, t) {
+      function ge(e, t) {
         if (t < 0 || t > 11)
           throw new Error("Invalid month index. Must be between 0 and 11.");
         return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][t]}_${e}`;
       }
-      function ge(e) {
+      function _e(e) {
         const t = r.ZQ.Get(),
           { salePagename: a } = (0, s.g)(),
           n = (0, i.f1)(),
@@ -954,7 +955,7 @@
           ? o.createElement(
               "div",
               null,
-              (0, _.we)("#DateTimePicker_Fallback_Invalid_DateTime"),
+              (0, g.we)("#DateTimePicker_Fallback_Invalid_DateTime"),
             )
           : o.createElement(
               Z.Ay,
@@ -980,19 +981,18 @@
             promotionName: s,
           } = e,
           [l, i] = (0, o.useState)(null),
-          [p, g] = (0, o.useState)(null),
+          [p, _] = (0, o.useState)(null),
           d = (0, r.f7)(t, a, n),
           h = (0, o.useMemo)(
             () =>
               d
                 ? [
-                    ...(d.top_app_releases?.map((e) => e.appid) || []),
                     ...(d.top_dlc_releases?.map((e) => e.appid) || []),
                     ...(d.top_combined_app_and_dlc_releases?.map(
                       (e) => e.appid,
                     ) || []),
                   ]
-                : (g(null), []),
+                : (_(null), []),
             [d],
           ),
           T = (0, c.zX)(h, de),
@@ -1012,19 +1012,17 @@
                 rgFilteredCombinedAppsAndDLC: [],
                 rgFilteredAppIDByTier: [],
               };
-            const e =
-                d.top_app_releases?.length > 0
-                  ? d.top_app_releases
-                  : d.top_combined_app_and_dlc_releases,
-              t = [];
+            const e = [];
             return {
-              rgFilteredCombinedAppsAndDLC: e
+              rgFilteredCombinedAppsAndDLC: (
+                d?.top_combined_app_and_dlc_releases || []
+              )
                 .filter((e) => !u.A.Get().BIsAppMissing(e.appid))
-                .map((e) => {
-                  const a = e.app_release_rank;
-                  return t[a] || (t[a] = []), t[a].push(e.appid), e.appid;
+                .map((t) => {
+                  const a = t.app_release_rank;
+                  return e[a] || (e[a] = []), e[a].push(t.appid), t.appid;
                 }),
-              rgFilteredAppIDByTier: t,
+              rgFilteredAppIDByTier: e,
             };
           }, [T, d]);
         return (
@@ -1054,8 +1052,8 @@
               e?.length > 0
                 ? u.A.Get()
                     .HintLoadStoreApps(e, z.Xh)
-                    .then(() => g(e))
-                : g([]);
+                    .then(() => _(e))
+                : _([]);
             }
           }, [l, T, C, p]),
           d && 1 != T && l && null != p && h
@@ -1067,7 +1065,7 @@
                   o.createElement(
                     "div",
                     null,
-                    (0, _.we)(
+                    (0, g.we)(
                       d.bSQLError
                         ? "#Error_ErrorCommunicatingWithNetwork"
                         : "#SteamCharts_NewMonth_NoRelease",
@@ -1095,7 +1093,7 @@
                 { className: y().ChartPage },
                 o.createElement(Ee, { nMonth: n, nYear: a }),
                 o.createElement(m.t, {
-                  string: (0, _.we)("#Loading"),
+                  string: (0, g.we)("#Loading"),
                   position: "center",
                 }),
               )
@@ -1103,9 +1101,9 @@
       }
       function he(e, t) {
         return (
-          (0, _.we)(
+          (0, g.we)(
             "#SteamCharts_Monthly_ForMonth",
-            (0, _.we)("#Sale_Reservation_MonthNoun_" + (e + 1)),
+            (0, g.we)("#Sale_Reservation_MonthNoun_" + (e + 1)),
           ) +
           ", " +
           t
@@ -1119,13 +1117,13 @@
           u = (0, s.W6)(),
           c = (0, ce.yk)() || (0, pe.tx)(window),
           m = (0, i.f1)(),
-          g = t > 0 ? a : a - 1,
+          _ = t > 0 ? a : a - 1,
           d = t > 0 ? t - 1 : 11,
-          f = _e(g, d),
+          f = ge(_, d),
           h = a > ye || t > Te,
           y = t < 11 ? a : a + 1,
           T = t < 11 ? t + 1 : 0,
-          E = _e(y, T),
+          E = ge(y, T),
           S = new Date(11 == T ? a + 1 : a, 11 == T ? 0 : T + 1, 15),
           w = Math.floor(S.getTime() / 1e3) < m,
           F = (0, o.useCallback)(
@@ -1153,20 +1151,20 @@
               o.createElement(
                 "h1",
                 null,
-                (0, _.we)("#SteamCharts_Monthly_Title"),
+                (0, g.we)("#SteamCharts_Monthly_Title"),
               ),
             ),
             o.createElement(
               "div",
               { className: (0, p.A)(C().PageSubtitle) },
-              (0, _.we)("#SteamCharts_Monthly_SubTitle", (0, r.Jk)(a)),
+              (0, g.we)("#SteamCharts_Monthly_SubTitle", (0, r.Jk)(a)),
             ),
             o.createElement(
               "div",
               { className: C().ChartRangeCtn },
               o.createElement(
                 $.Gq,
-                { toolTipContent: he(d, g) },
+                { toolTipContent: he(d, _) },
                 o.createElement(
                   "div",
                   {
@@ -1216,13 +1214,13 @@
                 he(t, a),
               ),
               o.createElement(le, {
-                toolTipContent: (0, _.we)("#SteamCharts_Monthly_Calendar"),
+                toolTipContent: (0, g.we)("#SteamCharts_Monthly_Calendar"),
                 minDate: Ce,
                 maxDate: me(m),
                 value: Math.floor(new Date(a, t, 15, 12, 0, 0).getTime() / 1e3),
                 fnOnUpdate: (e) => {
                   const t = new Date(1e3 * e),
-                    a = _e(t.getFullYear(), t.getMonth());
+                    a = ge(t.getFullYear(), t.getMonth());
                   u.push(n.SteamChartsRoutes.TopNewReleasesNew(a));
                 },
               }),

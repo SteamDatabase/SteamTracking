@@ -3266,10 +3266,6 @@ function renderChoices(q, startIndex=0, extraClass="")
 				var subChoice = choices[k];
 				if(ids.indexOf(subChoice.value) == -1)
 				{
-					if(tagMatchesAnyCategory(subChoice.value,["assessment"]))
-					{
-						continue;
-					}
 					var count = subChoice.count;
 					if(count == null)
 					{
@@ -3286,10 +3282,6 @@ function renderChoices(q, startIndex=0, extraClass="")
 		{
 			if(ids.indexOf(choice.value) == -1)
 			{
-				if(tagMatchesAnyCategory(choice.value,["assessment"]))
-				{
-					continue;
-				}
 				var bit = renderChoice(j+startIndex,type,choice.label,choice.value,extraClass);
 				htmlBits.push({id:choice.value,html:bit,count:0,label:choice.label});
 				ids.push(choice.value);

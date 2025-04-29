@@ -848,6 +848,9 @@
   display: flex;
   flex-direction: row;
 }
+._49thIpYeG08pUfNc1x_w9:hover {
+  color: #fff;
+}
 ._78Qv2C95AM2DNCuLD5o8U {
   width: 220px;
   position: relative;
@@ -888,6 +891,12 @@
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
+}
+.widestore ._78Qv2C95AM2DNCuLD5o8U {
+  width: 285px;
+}
+.widestore ._2qz5D65VkY796Xw-al9f_a {
+  width: auto;
 }
 ._2gWFdH7drZgtMXI_JjbaEe {
   display: flex;

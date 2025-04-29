@@ -1226,6 +1226,7 @@ a.game_button {
 	top: 1px;
 	width: 16px;
 	height: 16px;
+	z-index: 4;
 
 	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_warning.png');
 	background-position: 0px 0px;

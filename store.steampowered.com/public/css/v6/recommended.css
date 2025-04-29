@@ -3231,6 +3231,48 @@ body.v6 h2.morelike_section_divider
 	margin: 8px 8px 13px 0;
 }
 
+.widestore #review_create .content {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.widestore .review_controls {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 12px;
+}
+
+.widestore .review_controls_subctn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.widestore .review_controls .controlblock {
+	margin-right: unset;
+}
+
+.widestore .review_received_comp {
+	margin-top: unset;
+}
+
+.widestore #review_create {
+	max-width: 100%;
+}
+
+.widestore #review_create .input_box {
+	height: auto;
+	width: 100%;
+	max-width: unset;
+}
+
+.widestore .controls {
+	margin-top: unset;
+	min-width: 380px;
+}
+
 @media screen and (max-width: 1210px) and (min-width: 500px)
 {
 	html.responsive.widestore .recommendation_highlightv2 .header_image

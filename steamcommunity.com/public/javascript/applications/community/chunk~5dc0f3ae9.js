@@ -79,6 +79,7 @@
         DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
         DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
+        AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
         CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
         CreatorNameName: "_8196lUGpYeVntSAwJq-64",
@@ -86,7 +87,6 @@
         Title: "_37vyVYzsOKNDlPWnQ5zcMF",
         Followers: "_2ZpFi_vScMetinFMtGp2WE",
         SocialFollowersCtn: "BT3Bjo-dSXZV11Cqy_Awo",
-        VerticalFollowBtnCtn: "_3oN8FJOgOrQSMaYqOkf4p-",
         FollowBtnCtn: "_2artmqqQS2Rl8YMsi1nV-U",
         FollowButton: "_1HwWXjF06mJ9sG_9KXlgA-",
         FollowBtnText: "_1a5djsChaeoZViyFSGNom5",
@@ -94,7 +94,6 @@
         SocialImg: "_2v_K1-p6KHigjcjV3HlHsV",
         SocialLink: "_3eCVbMRawBIqtu1HpE7qJR",
         CuratorHoverCtn: "_30j_Rriv37jV9sEvTdi8Kw",
-        AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         MembersListLink: "_3DO0NUX-db2kVZWScbJetR",
       };
     },
@@ -357,6 +356,9 @@
         ClientName: "_2BCwR8Nral5Xd5Sqw_xfl0",
         Icon: "n5UB1c4x_nuP2nG__uVo-",
       };
+    },
+    37415: (e) => {
+      e.exports = { CornerSash: "_21egtPB7z9UR7Z80XrE3ci" };
     },
     39449: (e) => {
       e.exports = {
@@ -18480,101 +18482,109 @@
     },
     98556: (e, t, r) => {
       "use strict";
-      r.d(t, { G: () => m, N: () => u });
+      r.d(t, { G: () => g, N: () => _ });
       var i = r(90626),
-        a = r(13952),
-        n = r(62792),
-        s = r(55263),
-        o = r(26296),
-        l = r(18654),
-        c = r.n(l),
-        d = r(52038);
-      function m(e) {
+        a = r(78327),
+        n = r(13952),
+        s = r(62792),
+        o = r(55263),
+        l = r(26296),
+        c = r(18654),
+        d = r.n(c),
+        m = r(52038),
+        u = r(37415),
+        p = r.n(u);
+      function g(e) {
         var t;
-        const { info: r, bPreferLibrary: l } = e,
-          [m] = (0, s.G6)(r.id, (0, n.SW)(r.type), { include_assets: !0 }),
-          [p, g] = i.useState(0);
-        if (!m)
+        const { info: r, bPreferLibrary: c } = e,
+          [u] = (0, o.G6)(r.id, (0, s.SW)(r.type), { include_assets: !0 }),
+          [g, B] = i.useState(0);
+        if (!u)
           return i.createElement("div", {
-            className: c().HeroCapsuleImageContainer,
+            className: d().HeroCapsuleImageContainer,
           });
-        let _ = m.GetAssets().GetHeroCapsuleURL(),
-          B = m.GetAssets().GetLibraryCapsuleURL();
+        let h = u.GetAssets().GetHeroCapsuleURL(),
+          y = u.GetAssets().GetLibraryCapsuleURL();
         if (
-          (null === (t = m.GetIncludedAppIDs()) || void 0 === t
+          (null === (t = u.GetIncludedAppIDs()) || void 0 === t
             ? void 0
             : t.length) > 0 &&
-          !_
+          !h
         ) {
-          const e = a.A.Get().GetApp(m.GetIncludedAppIDs()[0]);
+          const e = n.A.Get().GetApp(u.GetIncludedAppIDs()[0]);
           e &&
-            (_ || (_ = e.GetAssets().GetHeroCapsuleURL()),
-            B || (B = e.GetAssets().GetLibraryCapsuleURL()));
+            (h || (h = e.GetAssets().GetHeroCapsuleURL()),
+            y || (y = e.GetAssets().GetLibraryCapsuleURL()));
         }
-        if (_ && (!l || !B))
+        if (h && (!c || !y))
           return i.createElement(
             "div",
             {
-              className: (0, d.A)(
-                c().HeroCapsuleImageContainer,
+              className: (0, m.A)(
+                d().HeroCapsuleImageContainer,
                 "HeroCapsuleImageContainer",
               ),
             },
             i.createElement("img", {
-              src: _,
-              className: c().CapsuleImage,
-              alt: m.GetName(),
+              src: h,
+              className: d().CapsuleImage,
+              alt: u.GetName(),
             }),
+            Boolean("dlc" == r.type) &&
+              i.createElement("img", {
+                className: p().CornerSash,
+                src: `${a.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
+              }),
           );
-        if (B)
+        if (y)
           return i.createElement(
             "div",
             {
-              className: (0, d.A)(
-                c().LibraryFallbackAssetImageContainer,
-                c().VerticalCapsule,
-                l ? c().ForceLibrarySizing : "",
+              className: (0, m.A)(
+                d().LibraryFallbackAssetImageContainer,
+                d().VerticalCapsule,
+                c ? d().ForceLibrarySizing : "",
               ),
             },
             i.createElement("div", {
-              className: c().FallbackBackground,
-              style: { backgroundImage: `url(${B})` },
+              className: d().FallbackBackground,
+              style: { backgroundImage: `url(${y})` },
             }),
             i.createElement("img", {
-              src: B,
-              className: c().CapsuleImage,
-              alt: m.GetName(),
+              src: y,
+              className: d().CapsuleImage,
+              alt: u.GetName(),
             }),
           );
-        const h = u(m, !0),
-          y = h.length - 1,
-          w = (e) => {
-            const t = h.indexOf(e);
-            t >= y && t < h.length - 1 && g(t + 1);
+        const w = _(u, !0),
+          b = w.length - 1,
+          f = (e) => {
+            const t = w.indexOf(e);
+            t >= b && t < w.length - 1 && B(t + 1);
           };
-        if (p < h.length) {
-          const e = h[p];
+        if (g < w.length) {
+          const e = w[g];
           return i.createElement(
             "div",
-            { className: c().LibraryFallbackAssetImageContainer },
+            { className: d().LibraryFallbackAssetImageContainer },
             i.createElement("div", {
-              className: c().FallbackBackground,
+              className: d().FallbackBackground,
               style: { backgroundImage: `url(${e})` },
             }),
-            i.createElement(o.o, {
+            i.createElement(l.o, {
               lazyLoad: !0,
-              srcs: h,
-              className: c().CapsuleImage,
-              alt: m.GetName(),
-              onImageError: w,
+              srcs: w,
+              className: d().CapsuleImage,
+              alt: u.GetName(),
+              onImageError: f,
             }),
           );
         }
         return i.createElement("div", {
-          className: c().HeroCapsuleImageContainer,
+          className: d().HeroCapsuleImageContainer,
         });
       }
-      function u(e, t) {
+      function _(e, t) {
         let r = [];
         return (
           e.GetAssets() &&

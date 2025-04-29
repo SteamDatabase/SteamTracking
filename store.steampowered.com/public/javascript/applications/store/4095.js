@@ -172,6 +172,7 @@
         DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
         DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
+        AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
         CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
         CreatorNameName: "_8196lUGpYeVntSAwJq-64",
@@ -179,7 +180,6 @@
         Title: "_37vyVYzsOKNDlPWnQ5zcMF",
         Followers: "_2ZpFi_vScMetinFMtGp2WE",
         SocialFollowersCtn: "BT3Bjo-dSXZV11Cqy_Awo",
-        VerticalFollowBtnCtn: "_3oN8FJOgOrQSMaYqOkf4p-",
         FollowBtnCtn: "_2artmqqQS2Rl8YMsi1nV-U",
         FollowButton: "_1HwWXjF06mJ9sG_9KXlgA-",
         FollowBtnText: "_1a5djsChaeoZViyFSGNom5",
@@ -187,7 +187,6 @@
         SocialImg: "_2v_K1-p6KHigjcjV3HlHsV",
         SocialLink: "_3eCVbMRawBIqtu1HpE7qJR",
         CuratorHoverCtn: "_30j_Rriv37jV9sEvTdi8Kw",
-        AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         MembersListLink: "_3DO0NUX-db2kVZWScbJetR",
       };
     },
@@ -503,6 +502,9 @@
     },
     39256: (e) => {
       e.exports = { ErrorDiv: "XeZExtCZ_zIcbkPRCqsnV" };
+    },
+    37415: (e) => {
+      e.exports = { CornerSash: "_21egtPB7z9UR7Z80XrE3ci" };
     },
     28285: (e) => {
       e.exports = {
@@ -7094,7 +7096,12 @@
           return this.m_timedTextRepSelected;
         }
         OnPlayAction() {
-          this.SendUpdateToBookmarkServiceIfNeeded();
+          this.SendUpdateToBookmarkServiceIfNeeded(),
+            this.m_stats
+              .GetFPSMonitor()
+              .StartTracking(() =>
+                this.m_stats.ExtractFrameInfo(this.m_elVideo),
+              );
         }
         BIsPlayerBufferedBetween(e, t) {
           return (
@@ -7174,28 +7181,33 @@
         }
         async PlayOnElement() {
           const e = this.m_bFirstPlay;
+          let t;
           this.m_bFirstPlay = !1;
-          let t = !1;
-          const r = () => {
-            (t = !0),
-              this.m_stats
-                .GetFPSMonitor()
-                .StartTracking(() =>
-                  this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                );
-          };
           try {
-            false, await this.m_elVideo.play(), r();
+            await this.m_elVideo.play();
           } catch (e) {
-            if ("NotAllowedError" === e.name && this.BHasTimedText()) {
+            (t = e), (0, h.q_)("Failed to play video", e);
+          }
+          if (
+            t &&
+            "NotAllowedError" == t.name &&
+            !this.m_elVideo.muted &&
+            this.BHasTimedText()
+          ) {
+            (0, h.q_)("Trying to play again, this time muted with subtitles"),
+              (t = void 0),
               (this.m_elVideo.muted = !0),
-                this.SetSubtitles((0, o.sf)(_.TS.LANGUAGE));
-              try {
-                await this.m_elVideo.play(), r();
-              } catch (e) {}
+              this.SetSubtitles((0, o.sf)(_.TS.LANGUAGE));
+            try {
+              await this.m_elVideo.play();
+            } catch (e) {
+              (t = e), (0, h.q_)("Failed to play video when muted", e);
             }
           }
-          !t && e && this.DispatchEvent("valve-userinputneeded");
+          e &&
+            t &&
+            "NotAllowedError" == t.name &&
+            this.DispatchEvent("valve-userinputneeded");
         }
         OnVideoBufferProgress() {
           if (!this.IsBuffering()) return;
@@ -9363,8 +9375,8 @@
         }
         clone(e = !1) {
           let t = new pe();
-          return (
-            (t.GID = this.GID),
+          if (
+            ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
             (t.clanSteamID = this.clanSteamID),
             (t.bOldAnnouncement = this.bOldAnnouncement),
@@ -9416,8 +9428,13 @@
               : this.vecTags.forEach((e) => {
                   le.includes(e) && t.vecTags.push(e);
                 }),
-            t
-          );
+            t.jsondata.email_setting)
+          ) {
+            let e = 100;
+            for (let r of t.jsondata.email_setting.sections)
+              r.unique_id || ((r.unique_id = `email_section_${e}`), e++);
+          }
+          return (t.jsondata.sale_header_offset = 530), t;
         }
         GetLastReferencedSaleDayFromCapsules(e, t) {
           let r = t;
@@ -12902,30 +12919,31 @@
     },
     28954: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => f });
+      r.d(t, { V: () => S, z: () => y });
       var i = r(34629),
-        a = r(2160),
-        n = r(41735),
-        s = r.n(n),
-        o = r(14947),
-        l = r(68797),
-        m = r(6419),
-        c = r(6144),
-        d = r(56011),
-        u = r(61859),
-        p = r(78327),
-        _ = r(71138),
-        h = r(64953),
-        g = r(69343);
-      class f {
-        m_filesToUpload = o.sH.array();
+        a = r(90626),
+        n = r(2160),
+        s = r(41735),
+        o = r.n(s),
+        l = r(14947),
+        m = r(68797),
+        c = r(6419),
+        d = r(6144),
+        u = r(56011),
+        p = r(61859),
+        _ = r(78327),
+        h = r(71138),
+        g = r(64953),
+        f = r(69343);
+      class S {
+        m_filesToUpload = l.sH.array();
         m_filesCompleted = [];
         m_clanSteamID;
         m_allCancelTokens = new Array();
         m_lastError = void 0;
         m_fnSetImageURL = null;
         constructor(e) {
-          (0, o.Gn)(this), (this.m_clanSteamID = e);
+          (0, l.Gn)(this), (this.m_clanSteamID = e);
         }
         GetClanSteamID() {
           return this.m_clanSteamID;
@@ -12934,7 +12952,7 @@
           this.m_fnSetImageURL = e;
         }
         async AddImage(e, t = 0, r, i) {
-          const a = (0, g.j)(e.name, t);
+          const a = (0, f.j)(e.name, t);
           return this.AddImageForLanguage(e, a, r, i);
         }
         async AddImageForLanguage(e, t, r, i) {
@@ -12945,17 +12963,17 @@
               (s.onload = () => {
                 const o = e.name.split(".").pop().toLowerCase();
                 let l = null;
-                !p.iA.is_support || ("webm" != o && "mp4" != o)
+                !_.iA.is_support || ("webm" != o && "mp4" != o)
                   ? ((l = new Image()),
                     (l.onload = () => {
-                      const s = new h.i9(e, t, l, r, i);
+                      const s = new g.i9(e, t, l, r, i);
                       (this.m_filesToUpload = [...this.m_filesToUpload, s]),
                         (a = !0),
                         n();
                     }))
                   : ((l = document.createElement("video")),
                     (l.onloadeddata = () => {
-                      const s = new h.i9(e, t, l, r, i);
+                      const s = new g.i9(e, t, l, r, i);
                       (this.m_filesToUpload = [...this.m_filesToUpload, s]),
                         (a = !0),
                         n();
@@ -12976,13 +12994,13 @@
           );
         }
         async AddExistingClanImage(e, t = 0, r, i) {
-          let a = _.i6.GetHashAndExt(e),
-            n = _.i6.GenerateEditableArtworkURLFromHashAndExtension(
+          let a = h.i6.GetHashAndExt(e),
+            n = h.i6.GenerateEditableArtworkURLFromHashAndExtension(
               this.m_clanSteamID,
               a,
             ),
-            o = await s()({ url: n, method: "GET", responseType: "blob" }),
-            l = (0, d.pE)(o.data, e.file_name);
+            s = await o()({ url: n, method: "GET", responseType: "blob" }),
+            l = (0, u.pE)(s.data, e.file_name);
           return await this.AddImage(l, t, r, i);
         }
         DeleteUploadImageByIndex(e) {
@@ -12996,7 +13014,7 @@
           t >= 0 && this.DeleteUploadImageByIndex(t);
         }
         ClearImages() {
-          this.m_filesToUpload = o.sH.array();
+          this.m_filesToUpload = l.sH.array();
         }
         GetFilesUploaded() {
           return this.m_filesCompleted;
@@ -13054,7 +13072,7 @@
                 });
               }
             }
-          const s = await (0, c.RR)(n);
+          const s = await (0, d.RR)(n);
           return (
             Object.keys(s).forEach((r) => {
               const i = s[r],
@@ -13066,15 +13084,15 @@
                   (a.status = "failed"), (a.message = i.message);
                 else if (((a.status = "success"), this.m_fnSetImageURL))
                   if (i.origimagehash) {
-                    const r = (0, g.P)(i.language, t, e);
-                    _.pU.AddLocalizeImageUploaded(i.origimagehash, r);
+                    const r = (0, f.P)(i.language, t, e);
+                    h.pU.AddLocalizeImageUploaded(i.origimagehash, r);
                   } else {
-                    const r = _.pU.GetClanImageByImageHash(
+                    const r = h.pU.GetClanImageByImageHash(
                       this.m_clanSteamID,
                       i.image_hash,
                     );
                     if (r) {
-                      const i = (0, g.P)(a.language, t, e);
+                      const i = (0, f.P)(a.language, t, e);
                       this.m_fnSetImageURL(a.type, r, i);
                     }
                   }
@@ -13084,15 +13102,15 @@
         }
         CancelAllUploads() {
           for (let e of this.m_allCancelTokens)
-            e.cancel((0, u.we)("#ImageUpload_CancelRequest"));
+            e.cancel((0, p.we)("#ImageUpload_CancelRequest"));
           this.m_allCancelTokens = new Array();
         }
         RetryAllFailedUploads() {
           this.CancelAllUploads(),
-            this.UploadAllImages([a.TU.k_ESteamRealmGlobal], 0);
+            this.UploadAllImages([n.TU.k_ESteamRealmGlobal], 0);
         }
         async handleUploadRefresh(e) {
-          await _.pU.LoadClanImages(this.m_clanSteamID, !0, e);
+          await h.pU.LoadClanImages(this.m_clanSteamID, !0, e);
         }
         async UploadFile(e) {
           const {
@@ -13101,14 +13119,14 @@
             artworkType: i,
             resizeRequests: a,
             primaryLocalizeImage: n,
-            lang: o,
-            width: m,
+            lang: s,
+            width: l,
             height: c,
           } = e;
           let d = null;
           const u = new FormData();
           u.append("clanimage", t, r),
-            u.append("sessionid", p.TS.SESSIONID),
+            u.append("sessionid", _.TS.SESSIONID),
             i && u.append("arttype", i),
             a &&
               a.length > 0 &&
@@ -13116,35 +13134,35 @@
                 "resize",
                 a.map((e) => e.width + "x" + e.height).join(","),
               );
-          let _ = "/uploadimage/";
+          let p = "/uploadimage/";
           n &&
-            ((_ = "/ajaxuploadlocalizedimage/"),
+            ((p = "/ajaxuploadlocalizedimage/"),
             u.append("origimagehash", n.image_hash),
             u.append("thumbhash", n.thumbnail_hash),
             u.append("extension", "" + n.file_type),
-            u.append("language", "" + o));
+            u.append("language", "" + s));
           const h = r.split(".").pop().toLocaleLowerCase();
           ("webm" != h && "mp4" != h) ||
-            (u.append("video_width", "" + m), u.append("video_height", "" + c));
-          const g = s().CancelToken.source();
+            (u.append("video_width", "" + l), u.append("video_height", "" + c));
+          const g = o().CancelToken.source();
           this.m_allCancelTokens.push(g);
           let f =
-              p.TS.COMMUNITY_BASE_URL +
+              _.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               this.m_clanSteamID.ConvertTo64BitString() +
-              _,
+              p,
             S = {
               cancelToken: g.token,
               withCredentials: !0,
               headers: { "Content-Type": "multipart/form-data" },
             };
           try {
-            (d = await s().post(f, u, S)), this.m_filesCompleted.push(t);
+            (d = await o().post(f, u, S)), this.m_filesCompleted.push(t);
           } catch (e) {
             (this.m_lastError = {
               file: t,
               status: e.response ? e.response.status : 500,
-              message: (0, l.H)(e).strErrorMsg,
+              message: (0, m.H)(e).strErrorMsg,
             }),
               (d = e.response);
           }
@@ -13152,31 +13170,34 @@
         }
         static async SendResizeRequest(e, t, r, i, a) {
           let n =
-              p.TS.COMMUNITY_BASE_URL +
+              _.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               t.ConvertTo64BitString() +
               "/resizeimage/",
-            o = new FormData();
+            s = new FormData();
           return (
-            o.append("imagehash", r),
-            o.append("extension", i),
-            o.append(
+            s.append("imagehash", r),
+            s.append("extension", i),
+            s.append(
               "resize",
               a.map((e) => e.width + "x" + e.height).join(","),
             ),
-            o.append("sessionid", p.TS.SESSIONID),
-            (await s().post(n, o, { cancelToken: e.token })).data.count
+            s.append("sessionid", _.TS.SESSIONID),
+            (await o().post(n, s, { cancelToken: e.token })).data.count
           );
         }
       }
-      (0, i.Cg)([o.sH], f.prototype, "m_filesToUpload", void 0),
-        (0, i.Cg)([o.sH], f.prototype, "m_filesCompleted", void 0),
-        (0, i.Cg)([o.sH], f.prototype, "m_lastError", void 0),
-        (0, i.Cg)([m.o], f.prototype, "AddImage", null),
-        (0, i.Cg)([m.o], f.prototype, "AddExistingClanImage", null),
-        (0, i.Cg)([m.o], f.prototype, "DeleteUploadImageByIndex", null),
-        (0, i.Cg)([m.o], f.prototype, "DeleteUploadImage", null),
-        (0, i.Cg)([m.o], f.prototype, "ClearImages", null);
+      function y(e) {
+        return a.useMemo(() => new S(e), [e.ConvertTo64BitString()]);
+      }
+      (0, i.Cg)([l.sH], S.prototype, "m_filesToUpload", void 0),
+        (0, i.Cg)([l.sH], S.prototype, "m_filesCompleted", void 0),
+        (0, i.Cg)([l.sH], S.prototype, "m_lastError", void 0),
+        (0, i.Cg)([c.o], S.prototype, "AddImage", null),
+        (0, i.Cg)([c.o], S.prototype, "AddExistingClanImage", null),
+        (0, i.Cg)([c.o], S.prototype, "DeleteUploadImageByIndex", null),
+        (0, i.Cg)([c.o], S.prototype, "DeleteUploadImage", null),
+        (0, i.Cg)([c.o], S.prototype, "ClearImages", null);
     },
     64953: (e, t, r) => {
       "use strict";
@@ -20279,6 +20300,21 @@
                     bw: g.gp.writeUint32,
                   },
                   jsondata: { n: 5, br: g.qM.readString, bw: g.gp.writeString },
+                  rt_attendance_marked: {
+                    n: 6,
+                    br: g.qM.readUint32,
+                    bw: g.gp.writeUint32,
+                  },
+                  attendance_count: {
+                    n: 7,
+                    br: g.qM.readUint32,
+                    bw: g.gp.writeUint32,
+                  },
+                  guests_attendance: {
+                    n: 8,
+                    br: g.qM.readString,
+                    bw: g.gp.writeString,
+                  },
                 },
               }),
             B.sm_m
@@ -25729,95 +25765,103 @@
     },
     98556: (e, t, r) => {
       "use strict";
-      r.d(t, { G: () => d, N: () => u });
+      r.d(t, { G: () => _, N: () => h });
       var i = r(90626),
-        a = r(82097),
-        n = r(62792),
-        s = r(55263),
-        o = r(26296),
-        l = r(18654),
-        m = r.n(l),
-        c = r(52038);
-      function d(e) {
+        a = r(78327),
+        n = r(82097),
+        s = r(62792),
+        o = r(55263),
+        l = r(26296),
+        m = r(18654),
+        c = r.n(m),
+        d = r(52038),
+        u = r(37415),
+        p = r.n(u);
+      function _(e) {
         const { info: t, bPreferLibrary: r } = e,
-          [l] = (0, s.G6)(t.id, (0, n.SW)(t.type), { include_assets: !0 }),
-          [d, p] = i.useState(0);
-        if (!l)
+          [m] = (0, o.G6)(t.id, (0, s.SW)(t.type), { include_assets: !0 }),
+          [u, _] = i.useState(0);
+        if (!m)
           return i.createElement("div", {
-            className: m().HeroCapsuleImageContainer,
+            className: c().HeroCapsuleImageContainer,
           });
-        let _ = l.GetAssets().GetHeroCapsuleURL(),
-          h = l.GetAssets().GetLibraryCapsuleURL();
-        if (l.GetIncludedAppIDs()?.length > 0 && !_) {
-          const e = a.A.Get().GetApp(l.GetIncludedAppIDs()[0]);
+        let g = m.GetAssets().GetHeroCapsuleURL(),
+          f = m.GetAssets().GetLibraryCapsuleURL();
+        if (m.GetIncludedAppIDs()?.length > 0 && !g) {
+          const e = n.A.Get().GetApp(m.GetIncludedAppIDs()[0]);
           e &&
-            (_ || (_ = e.GetAssets().GetHeroCapsuleURL()),
-            h || (h = e.GetAssets().GetLibraryCapsuleURL()));
+            (g || (g = e.GetAssets().GetHeroCapsuleURL()),
+            f || (f = e.GetAssets().GetLibraryCapsuleURL()));
         }
-        if (_ && (!r || !h))
+        if (g && (!r || !f))
           return i.createElement(
             "div",
             {
-              className: (0, c.A)(
-                m().HeroCapsuleImageContainer,
+              className: (0, d.A)(
+                c().HeroCapsuleImageContainer,
                 "HeroCapsuleImageContainer",
               ),
             },
             i.createElement("img", {
-              src: _,
-              className: m().CapsuleImage,
-              alt: l.GetName(),
+              src: g,
+              className: c().CapsuleImage,
+              alt: m.GetName(),
             }),
+            Boolean("dlc" == t.type) &&
+              i.createElement("img", {
+                className: p().CornerSash,
+                src: `${a.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
+              }),
           );
-        if (h)
+        if (f)
           return i.createElement(
             "div",
             {
-              className: (0, c.A)(
-                m().LibraryFallbackAssetImageContainer,
-                m().VerticalCapsule,
-                r ? m().ForceLibrarySizing : "",
+              className: (0, d.A)(
+                c().LibraryFallbackAssetImageContainer,
+                c().VerticalCapsule,
+                r ? c().ForceLibrarySizing : "",
               ),
             },
             i.createElement("div", {
-              className: m().FallbackBackground,
-              style: { backgroundImage: `url(${h})` },
+              className: c().FallbackBackground,
+              style: { backgroundImage: `url(${f})` },
             }),
             i.createElement("img", {
-              src: h,
-              className: m().CapsuleImage,
-              alt: l.GetName(),
+              src: f,
+              className: c().CapsuleImage,
+              alt: m.GetName(),
             }),
           );
-        const g = u(l, !0),
-          f = g.length - 1,
-          S = (e) => {
-            const t = g.indexOf(e);
-            t >= f && t < g.length - 1 && p(t + 1);
+        const S = h(m, !0),
+          y = S.length - 1,
+          b = (e) => {
+            const t = S.indexOf(e);
+            t >= y && t < S.length - 1 && _(t + 1);
           };
-        if (d < g.length) {
-          const e = g[d];
+        if (u < S.length) {
+          const e = S[u];
           return i.createElement(
             "div",
-            { className: m().LibraryFallbackAssetImageContainer },
+            { className: c().LibraryFallbackAssetImageContainer },
             i.createElement("div", {
-              className: m().FallbackBackground,
+              className: c().FallbackBackground,
               style: { backgroundImage: `url(${e})` },
             }),
-            i.createElement(o.o, {
+            i.createElement(l.o, {
               lazyLoad: !0,
-              srcs: g,
-              className: m().CapsuleImage,
-              alt: l.GetName(),
-              onImageError: S,
+              srcs: S,
+              className: c().CapsuleImage,
+              alt: m.GetName(),
+              onImageError: b,
             }),
           );
         }
         return i.createElement("div", {
-          className: m().HeroCapsuleImageContainer,
+          className: c().HeroCapsuleImageContainer,
         });
       }
-      function u(e, t) {
+      function h(e, t) {
         let r = [];
         return (
           e.GetAssets() &&

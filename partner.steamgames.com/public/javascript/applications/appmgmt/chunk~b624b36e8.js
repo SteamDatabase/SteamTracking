@@ -40,7 +40,7 @@
       }
     },
     47831: (e, t, i) => {
-      i.d(t, { Zn: () => O, N_: () => U, lU: () => N, Br: () => F });
+      i.d(t, { Zn: () => O, N_: () => U, lU: () => N, Br: () => I });
       var n = i(34629),
         s = i(41735),
         r = i.n(s),
@@ -638,7 +638,7 @@
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
       })(L || (L = {}));
-      class I {
+      class F {
         m_callbacks = null;
         m_mpd = null;
         m_adaptation = null;
@@ -1131,15 +1131,15 @@
             : (8 * t * 1e3) / e;
         }
       }
-      (0, n.Cg)([u.o], I.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, n.Cg)([u.o], I.prototype, "OnMediaUnsupportedError", null),
-        (0, n.Cg)([u.o], I.prototype, "OnSourceBufferError", null),
-        (0, n.Cg)([u.o], I.prototype, "OnSourceBufferAbort", null),
-        (0, n.Cg)([u.o], I.prototype, "ScheduleNextDownload", null),
-        (0, n.Cg)([u.o], I.prototype, "DownloadNextSegment", null),
-        (0, n.Cg)([u.o], I.prototype, "DownloadFailed", null),
-        (0, n.Cg)([u.o], I.prototype, "DownloadGone", null);
-      const F = 5,
+      (0, n.Cg)([u.o], F.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, n.Cg)([u.o], F.prototype, "OnMediaUnsupportedError", null),
+        (0, n.Cg)([u.o], F.prototype, "OnSourceBufferError", null),
+        (0, n.Cg)([u.o], F.prototype, "OnSourceBufferAbort", null),
+        (0, n.Cg)([u.o], F.prototype, "ScheduleNextDownload", null),
+        (0, n.Cg)([u.o], F.prototype, "DownloadNextSegment", null),
+        (0, n.Cg)([u.o], F.prototype, "DownloadFailed", null),
+        (0, n.Cg)([u.o], F.prototype, "DownloadGone", null);
+      const I = 5,
         E = "auto";
       var x, U, N;
       !(function (e) {
@@ -1423,7 +1423,7 @@
                 ((t = e), (this.m_strAudioAdaptationID = e.strID)),
               t)
             ) {
-              let e = new I(this, this.m_mpd, t, this.m_stats);
+              let e = new F(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -1691,7 +1691,12 @@
           return this.m_timedTextRepSelected;
         }
         OnPlayAction() {
-          this.SendUpdateToBookmarkServiceIfNeeded();
+          this.SendUpdateToBookmarkServiceIfNeeded(),
+            this.m_stats
+              .GetFPSMonitor()
+              .StartTracking(() =>
+                this.m_stats.ExtractFrameInfo(this.m_elVideo),
+              );
         }
         BIsPlayerBufferedBetween(e, t) {
           return (
@@ -1771,28 +1776,33 @@
         }
         async PlayOnElement() {
           const e = this.m_bFirstPlay;
+          let t;
           this.m_bFirstPlay = !1;
-          let t = !1;
-          const i = () => {
-            (t = !0),
-              this.m_stats
-                .GetFPSMonitor()
-                .StartTracking(() =>
-                  this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                );
-          };
           try {
-            false, await this.m_elVideo.play(), i();
+            await this.m_elVideo.play();
           } catch (e) {
-            if ("NotAllowedError" === e.name && this.BHasTimedText()) {
+            (t = e), (0, g.q_)("Failed to play video", e);
+          }
+          if (
+            t &&
+            "NotAllowedError" == t.name &&
+            !this.m_elVideo.muted &&
+            this.BHasTimedText()
+          ) {
+            (0, g.q_)("Trying to play again, this time muted with subtitles"),
+              (t = void 0),
               (this.m_elVideo.muted = !0),
-                this.SetSubtitles((0, a.sf)(p.TS.LANGUAGE));
-              try {
-                await this.m_elVideo.play(), i();
-              } catch (e) {}
+              this.SetSubtitles((0, a.sf)(p.TS.LANGUAGE));
+            try {
+              await this.m_elVideo.play();
+            } catch (e) {
+              (t = e), (0, g.q_)("Failed to play video when muted", e);
             }
           }
-          !t && e && this.DispatchEvent("valve-userinputneeded");
+          e &&
+            t &&
+            "NotAllowedError" == t.name &&
+            this.DispatchEvent("valve-userinputneeded");
         }
         OnVideoBufferProgress() {
           if (!this.IsBuffering()) return;
@@ -2033,7 +2043,7 @@
           const s = e;
           (e = h.OQ(e, i, n)) != s &&
             (0, g.q_)(`Seek time ${s} was clamped to the range ${i} to ${n}`),
-            (this.m_bUserLiveEdgeChoice = e >= n - F);
+            (this.m_bUserLiveEdgeChoice = e >= n - I);
           let r = this.m_elVideo.paused;
           if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),

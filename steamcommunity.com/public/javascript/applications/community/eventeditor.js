@@ -1971,17 +1971,10 @@
         const n = l.mh.CreateClone();
         if (a && a.length > 0) {
           const e = t.GetLanguagesWithTokens();
-          if (
-            (t.ClearLanguagesTokens(a),
+          t.ClearLanguagesTokens(a),
             (n.GetEventModel().jsondata.bSaleEnabled = !0),
             Fe(n, t, e),
-            (n.GetEventModel().jsondata.bSaleEnabled = !1),
-            n.GetEventModel().jsondata.email_setting)
-          ) {
-            let e = 100;
-            for (let t of n.GetEventModel().jsondata.email_setting.sections)
-              t.unique_id || ((t.unique_id = `email_section_${e}`), e++);
-          }
+            (n.GetEventModel().jsondata.bSaleEnabled = !1);
         }
         e(null, "clone");
       }
@@ -10809,7 +10802,7 @@
         Si = a(77128),
         bi = a(91126),
         wi = a.n(bi),
-        Ci = a(83882);
+        Ci = a(28015);
       function fi(e) {
         var t, a;
         const { editModel: n } = e,

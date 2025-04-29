@@ -144,6 +144,7 @@ ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/${statecode}
 ${COMMUNITY_BASE_URL}/app/${m_unGamePlayedAppID}
+${COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones
 ${COMMUNITY_BASE_URL}/gid/${_ ? _ : _}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}
 ${COMMUNITY_BASE_URL}/gid/${}${}
@@ -432,10 +433,10 @@ ${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36
 ${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${}
 ${HELP_BASE_URL}faqs/view/054C-3167-DD7F-49D4
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
+${HELP_BASE_URL}faqs/view/29A9-9EEE-09F0-75F9
 ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
 ${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31
-${HELP_BASE_URL}faqs/view/7EFD-3CAE-64D3-1C31#transfer
 ${HELP_BASE_URL}wizard/HelpChangeEmail?redir=store/account/
 ${HELP_BASE_URL}wizard/HelpChangePassword?redir=store/account/
 ${HELP_BASE_URL}wizard/HelpRecoverFamilyMember?childid=${}
@@ -971,6 +972,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}${asset_url}
 ${MEDIA_CDN_URL}${}
+${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/capsule_231x87.jpg
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
@@ -991,7 +993,6 @@ ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}${}/ajaxstarttaxidentityworkflow/${partnerid}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/doc/marketing/event_tools/stats
-${PARTNER_BASE_URL}/mediaconvert/ajaxconvertmedia
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
@@ -1048,6 +1049,7 @@ ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
+${PARTNER_BASE_URL}apps/landing/${productid}
 ${PARTNER_BASE_URL}apps/landing/${store_item_id}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
@@ -1128,6 +1130,7 @@ ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
+${PARTNER_BASE_URL}mediaconvert/ajaxconvertmedia
 ${PARTNER_BASE_URL}meetsteam/2025
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails
 ${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
@@ -1582,6 +1585,7 @@ ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
 ${STORE_BASE_URL}meetsteam/${}
+${STORE_BASE_URL}meetsteam/ajaxupdateattendance
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile#mobile_section
 ${STORE_BASE_URL}mobile/?show=steamapp
@@ -1708,7 +1712,6 @@ ${STORE_BASE_URL}tags/${}/${}
 ${STORE_BASE_URL}twofactor/manage
 ${STORE_BASE_URL}twofactor/manage_action
 ${STORE_BASE_URL}twofactor/remove?step=promptdevice
-${STORE_BASE_URL}twofactor/remove?step=promptrcode
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
@@ -1751,6 +1754,7 @@ ${STORE_URL}app/730/CounterStrike_2/
 ${URL}${URL}
 ${URL}${}
 ${VIDEO_CDN_URL}/store_trailers/${}
+${VIDEO_CDN_URL}store_trailers/${}
 ${VIDEO_URL}${strBackgroundVideo}.mp4
 ${VIDEO_URL}${strBackgroundVideo}.webm
 ${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.jpg

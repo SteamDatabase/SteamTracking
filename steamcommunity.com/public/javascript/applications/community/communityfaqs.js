@@ -54,11 +54,13 @@
         FAQMenuCtn: "_1DISv1JGZ0pxbGtYHeBsJU",
         FAQEditorCtn: "sjpl-ow0jbdSysRG8jsFA",
         FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
+        Columns: "_2O3puXm5doASD7CnAby6Uh",
         LeftCol: "_3TyuR_ycmrQIlt-wuVBtaD",
         EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
         EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
         EditorTitleField: "_37R-2WttVdEqucotluEzW_",
         EditorTitleFieldInput: "_2A5OEhQlo5sJWuhIqlkEJL",
+        TextPaneContainer: "X8FYVDc-yIJ2Vmr_KQW2b",
         EditorPane: "B4ngKzLlL1gvAnj9Vdbt4",
         EditorPaneTextArea: "_1g6voAO3uBDdj9W9WjBB8z",
         ErrorCtn: "_1l94et1-5wPLcAMJ3Bx8qq",
@@ -9317,7 +9319,7 @@
                   { className: Pe().FAQEditor },
                   s.createElement(
                     "div",
-                    { className: L().Columns },
+                    { className: (0, f.A)(L().Columns, Pe().Columns) },
                     s.createElement(
                       "div",
                       { className: (0, f.A)(L().LeftCol, Pe().LeftCol) },
@@ -9412,6 +9414,7 @@
               strPlaceholder: (0, q.we)("#FAQEditor_ContentPlaceHolder"),
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
+              className: Pe().TextPaneContainer,
               classNameForTextArea: Pe().EditorPaneTextArea,
             }),
           );

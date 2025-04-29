@@ -86,14 +86,14 @@
               position: "center",
             }),
           );
-        const w = t.type,
-          I =
+        const I = t.type,
+          P =
             "developer" == t.type
               ? (0, m.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, m.we)("#CreatorHome_PublishedBy")
                 : (0, m.we)("#CreatorHome_InFranchise"),
-          P = g.GetCreatorHomeURL(w),
+          w = g.GetCreatorHomeURL(I),
           N = g.GetNumFollowers();
         return r.createElement(
           E.tH,
@@ -110,7 +110,7 @@
                 ),
                 "flow-children": "row",
               },
-              !s && r.createElement("span", { className: v.Title }, I),
+              !s && r.createElement("span", { className: v.Title }, P),
               r.createElement(
                 "div",
                 { className: v.DevSummaryWidgetCtn },
@@ -129,7 +129,7 @@
                     r.createElement(
                       c.m,
                       {
-                        href: (0, u.k2)(P),
+                        href: (0, u.k2)(w),
                         className: v.AvatarLink,
                         bAllowFocuseableAnchor: !0,
                       },
@@ -156,7 +156,7 @@
                         },
                         r.createElement(
                           c.m,
-                          { href: (0, u.k2)(P), className: v.CreatorNameName },
+                          { href: (0, u.k2)(w), className: v.CreatorNameName },
                           g.GetName(),
                         ),
                         Boolean(a) &&
@@ -182,12 +182,7 @@
                         },
                         r.createElement(
                           "div",
-                          {
-                            className: (0, i.A)({
-                              [v.FollowBtnCtn]: !f,
-                              [v.VerticalFollowBtnCtn]: f,
-                            }),
-                          },
+                          { className: (0, i.A)(v.FollowBtnCtn) },
                           Boolean(!D) &&
                             r.createElement(_.of, {
                               clanAccountID: t.clan_account_id,
@@ -293,9 +288,9 @@
         f = a(54492),
         g = a(60014),
         y = a(52038),
-        w = a(61859),
-        I = a(61336),
-        P = a(78327),
+        I = a(61859),
+        P = a(61336),
+        w = a(78327),
         N = a(91291),
         T = a.n(N),
         H = a(99956),
@@ -380,7 +375,7 @@
             bPreferDemoStorePage: s,
           } = e,
           c = (0, g.n9)(),
-          i = (0, P.Qn)();
+          i = (0, w.Qn)();
         return r.createElement(
           l.ml,
           { className: b().CapsuleParentInfo, ...(0, h.S)(a, c, i, s, t) },
@@ -390,7 +385,7 @@
             r.createElement(
               "div",
               { className: b().ParentType },
-              (0, w.we)(
+              (0, I.we)(
                 11 == o
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
@@ -425,9 +420,9 @@
           [S] = (0, p.G6)(t.id, (0, m.SW)(t.type), n.Xh),
           D = (0, g.n9)(),
           A = (0, F.w)(),
-          w = (0, r.useMemo)(() => S?.GetIncludedAppIDsOrSelf(), [S]);
+          I = (0, r.useMemo)(() => S?.GetIncludedAppIDsOrSelf(), [S]);
         if (!S) return null;
-        const P = (0, I.NT)(
+        const w = (0, P.NT)(
           (0, c.It)(`${S.GetStorePageURL(h)}${o ? `?${o}` : ""}`, D, A),
         );
         let N;
@@ -442,7 +437,7 @@
           r.createElement(
             l.Ii,
             {
-              href: N ? null : P,
+              href: N ? null : w,
               style: { display: "block", cursor: "pointer" },
               className: b().CapsuleFocusCtn,
               preferredFocus: u,
@@ -454,7 +449,7 @@
               r.createElement(
                 "div",
                 { className: (0, y.A)({ [T().TwoWidthCapsule]: G }) },
-                r.createElement(_.V, { appids: w, hide_status_banners: a }),
+                r.createElement(_.V, { appids: I, hide_status_banners: a }),
                 r.createElement(E.aU, { imageType: i, info: t }),
                 r.createElement(f.S, {
                   eDeckCompatibilityCategory:
@@ -484,10 +479,10 @@
                 ),
             ),
           ),
-          r.createElement(B, { ...e }),
+          r.createElement(W, { ...e }),
         );
       }
-      function B(e) {
+      function W(e) {
         const {
             info: t,
             bHidePriceIfOwned: a,

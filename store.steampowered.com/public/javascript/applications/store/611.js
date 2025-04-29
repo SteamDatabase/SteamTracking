@@ -3061,20 +3061,27 @@
       function de(e) {
         const { cart: t, bVerticalDisplay: n } = e,
           r = (function (e) {
-            const t = (0, i.useMemo)(
+            const [t, n] = (0, i.useState)(null),
+              r = (0, i.useMemo)(
                 () =>
                   1 == e?.line_items?.length && e.line_items[0].packageid
                     ? { packageid: e.line_items[0].packageid }
                     : void 0,
                 [e],
               ),
-              { data: n } = (0, le.U2)(t),
-              r = (0, i.useMemo)(
-                () => (0 == n?.type ? { appid: n.id } : void 0),
-                [n],
+              { data: a } = (0, le.U2)(r);
+            (0, i.useEffect)(() => {
+              const e = a?.type;
+              0 == e
+                ? n(a.id)
+                : (4 != e && 11 != e) || n(a.related_items?.parent_appid);
+            }, [a?.id, a?.related_items?.parent_appid, a?.type]);
+            const s = (0, i.useMemo)(
+                () => (Boolean(t) ? { appid: t } : void 0),
+                [t],
               ),
-              { data: a } = (0, le.wl)(r);
-            return a;
+              { data: o } = (0, le.wl)(s);
+            return o;
           })(t),
           a = (0, i.useMemo)(() => {
             const e = new Set(
@@ -3091,8 +3098,8 @@
         return 0 == a.length
           ? null
           : i.createElement(
-              i.Fragment,
-              null,
+              "div",
+              { className: oe().CartCreatorCtn },
               i.createElement(
                 "div",
                 { className: oe().Title },

@@ -1775,7 +1775,7 @@
             r.e(4440),
             r.e(8758),
             r.e(2455),
-          ]).then(r.bind(r, 58806)),
+          ]).then(r.bind(r, 60691)),
         ),
         he = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         ge = u.lazy(() =>
@@ -7010,7 +7010,7 @@
         constructor(e = null) {
           super(),
             c.prototype.appid || s.Sg(c.M()),
-            n.Message.initialize(this, e, 0, -1, [17], null);
+            n.Message.initialize(this, e, 0, -1, [17, 18], null);
         }
         static sm_m;
         static sm_mbf;
@@ -7068,6 +7068,14 @@
                   },
                   content_descriptorids: {
                     n: 17,
+                    r: !0,
+                    q: !0,
+                    br: s.qM.readUint32,
+                    pbr: s.qM.readPackedUint32,
+                    bw: s.gp.writeRepeatedUint32,
+                  },
+                  content_descriptorids_including_dlc: {
+                    n: 18,
                     r: !0,
                     q: !0,
                     br: s.qM.readUint32,
@@ -16209,6 +16217,10 @@
             (function (e, t, r) {
               c(e, t, r, "include_screenshots", "screenshots");
             })(e, n, t),
+          r.include_trailers &&
+            (function (e, t, r) {
+              c(e, t, r, "include_trailers", "trailers");
+            })(e, n, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
               c(
@@ -16255,7 +16267,6 @@
         "tags",
         "basic_info",
         "reviews",
-        "categories",
         "game_rating",
         "purchase_options",
         "accessories",

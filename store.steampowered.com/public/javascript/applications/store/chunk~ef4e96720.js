@@ -3808,8 +3808,8 @@
             a.e(9063),
             a.e(4095),
             a.e(3045),
-            a.e(4339),
-            a.e(8199),
+            a.e(7198),
+            a.e(5053),
             a.e(3818),
             a.e(177),
             a.e(8396),
@@ -20958,9 +20958,9 @@
               e.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
             n.createElement($t.L, {
               video: { sPoster: t.image, rgVideoSources: e },
-              bAutoPlay: !1,
+              bAutoPlay: !0,
               bControls: !1,
-              bLoop: !1,
+              bLoop: !0,
               bMuted: !0,
             })
           );

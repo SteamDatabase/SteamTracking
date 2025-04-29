@@ -9948,9 +9948,10 @@
         (U = (0, n.Cg)([l.PA], U));
       const V = (0, l.PA)((e) => {
         const { tab: t, editModel: a } = e,
-          [n] = c.useState(new m.V(a.GetClanSteamID())),
-          [r, o] = c.useState(!1),
-          [l] = (0, s.q3)(() => [p.O.Get().GetCurEditLanguage()]);
+          n = a.GetClanSteamID(),
+          r = (0, m.z)(n),
+          [o, l] = c.useState(!1),
+          [d] = (0, s.q3)(() => [p.O.Get().GetCurEditLanguage()]);
         return c.createElement(
           "div",
           null,
@@ -9980,19 +9981,19 @@
             ],
             onDropFiles: async (e) => {
               if (e && e.length > 0) {
-                o(!0);
-                const r = ["tab_bar_background"];
+                l(!0);
+                const n = ["tab_bar_background"];
                 try {
-                  if (await n.AddImage(e[0], 0, r)) {
-                    const e = await n.UploadAllImages(
+                  if (await r.AddImage(e[0], 0, n)) {
+                    const e = await r.UploadAllImages(
                         a.GetIncludedRealmList(),
-                        l,
-                        r,
+                        d,
+                        n,
                       ),
                       o = e[Object.keys(e)[0]],
-                      s = o ? _.i6.GetExtensionString(o) : null,
-                      c = o ? o.image_hash + s : null;
-                    (t.tab_bar_bg_image = c), a.SetDirty(i.IQ.jsondata_sales);
+                      l = o ? _.i6.GetExtensionString(o) : null,
+                      s = o ? o.image_hash + l : null;
+                    (t.tab_bar_bg_image = s), a.SetDirty(i.IQ.jsondata_sales);
                   } else
                     console.error(
                       "TabSaleBackgroundImageEditor.OnDropFiles: failed file=" +
@@ -10014,7 +10015,7 @@
                     t,
                   );
                 } finally {
-                  o(!1);
+                  l(!1);
                 }
               } else
                 console.log(
@@ -10023,7 +10024,7 @@
                 );
             },
           }),
-          r &&
+          o &&
             c.createElement(T.t, {
               size: "medium",
               position: "center",
@@ -13685,11 +13686,11 @@
     68485: (e, t, a) => {
       "use strict";
       a.d(t, {
-        vx: () => mr,
-        sq: () => dr,
-        ke: () => gr,
-        vf: () => _r,
-        sL: () => hr,
+        vx: () => _r,
+        sq: () => ur,
+        ke: () => hr,
+        vf: () => pr,
+        sL: () => vr,
       });
       var n = a(22837),
         i = a(69001),
@@ -16914,14 +16915,14 @@
         ft = a(40778);
       const wt = (0, l.PA)((e) => {
         const { editModel: t, saleSection: a } = e,
-          [n] = c.useState(new Et.V(t.GetClanSteamID())),
-          [r, l, d, u, m] = (0, s.q3)(() => [
+          [n, r, l, d, u] = (0, s.q3)(() => [
             L.O.Get().GetCurEditLanguage(),
             t.GetEventModel(),
             t.GetClanSteamID(),
             t.GetAppID(),
             t.GetIncludedRealmList(),
           ]),
+          m = (0, Et.z)(l),
           g = (e) => {
             (0, N.pg)(
               c.createElement(Me.X, {
@@ -16929,10 +16930,10 @@
                   ? a.localized_sale_product_mobile_banner_override
                   : a.localized_sale_product_banner_override,
                 partnerEventStore: o.mh,
-                appid: u,
-                eventModel: l,
-                clanSteamID: d,
-                realms: m,
+                appid: d,
+                eventModel: r,
+                clanSteamID: l,
+                realms: u,
                 fnSetImageURL: (t, n, i = 0) => {
                   const r = et.i6.GetHashAndExt(n);
                   e
@@ -17018,17 +17019,17 @@
                 ],
                 onDropFiles: async (e) => {
                   if (e && e.length > 0) {
-                    const o = ["sale_section_background"];
-                    if (await n.AddImage(e[0], 0, o)) {
-                      const e = await n.UploadAllImages(
+                    const r = ["sale_section_background"];
+                    if (await m.AddImage(e[0], 0, r)) {
+                      const e = await m.UploadAllImages(
                           t.GetIncludedRealmList(),
+                          n,
                           r,
-                          o,
                         ),
-                        l = e[Object.keys(e)[0]];
-                      let s = l ? et.i6.GetExtensionString(l) : null,
-                        c = l ? l.image_hash + s : null;
-                      (a.background_image = c), t.SetDirty(i.IQ.jsondata_sales);
+                        o = e[Object.keys(e)[0]];
+                      let l = o ? et.i6.GetExtensionString(o) : null,
+                        s = o ? o.image_hash + l : null;
+                      (a.background_image = s), t.SetDirty(i.IQ.jsondata_sales);
                     } else
                       console.error(
                         "SaleSection.OnDropFiles: failed file=" + e[0].name,
@@ -23679,6 +23680,63 @@
         Fi = a(81047),
         Li = a(68033);
       function Oi(e) {
+        const { editModel: t, saleSection: a, text: n } = e,
+          [i, r, o] = (0, ye.uD)(),
+          l = (function (e) {
+            return (
+              (null == e ? void 0 : e.length) > 50 &&
+              e.length < 100 &&
+              e.trim().startsWith("[img]") &&
+              e.trim().endsWith("[/img]") &&
+              e.includes("STEAM_CLAN_IMAGE")
+            );
+          })(n);
+        return l
+          ? c.createElement(
+              "div",
+              { className: Fe.WarningStylesWithIcon },
+              (0, D.oW)(
+                "#Sale_Section_TextSection_Convert",
+                c.createElement("a", {
+                  href: "#",
+                  onClick: (e) => {
+                    e.preventDefault(), e.stopPropagation(), r();
+                  },
+                }),
+              ),
+              c.createElement(T.o, {
+                tooltip: (0, D.we)("#Sale_Section_TextSection_Convert_ttip"),
+              }),
+              c.createElement(
+                Wn.E,
+                { active: i },
+                c.createElement(P.o0, {
+                  strTitle: (0, D.we)("#Button_Convert"),
+                  strDescription: (0, D.oW)(
+                    "#Sale_Section_TextSection_Convert",
+                    c.createElement("b", null),
+                  ),
+                  closeModal: o,
+                  onOK: () => {
+                    const e = n.match(/\/([^\/]+\.(png|jpg|gif))/i);
+                    if (e) {
+                      const t = e[1];
+                      (a.section_type = "title_image"),
+                        (a.localized_label_image = void 0),
+                        (a.links = [
+                          {
+                            url: null,
+                            localized_link_capsule: (0, O.$Y)([t], 31, null),
+                          },
+                        ]);
+                    }
+                  },
+                }),
+              ),
+            )
+          : null;
+      }
+      function xi(e) {
         const { editModel: t, saleSection: a } = e,
           n = c.useRef(void 0),
           r = (0, L.E)(),
@@ -23704,6 +23762,7 @@
             c.createElement(
               "div",
               { className: ae.TextSectionBBCode },
+              c.createElement(Oi, { ...e, text: l }),
               c.createElement(Ee.I, {
                 fnGetCurText: () => l,
                 fnOnTextChange: (e) => {
@@ -23816,8 +23875,8 @@
           ),
         );
       }
-      var xi = a(95606);
-      function zi(e) {
+      var zi = a(95606);
+      function Ui(e) {
         const { fnOnDirty: t, saleSection: a, event: n } = e,
           [i, r] = (0, s.q3)(() => {
             var e, t;
@@ -23873,7 +23932,7 @@
               onDelete: l,
               onReorder: t,
               render: (e) =>
-                c.createElement(Hi, { event: n, reservation: e, fnOnDirty: t }),
+                c.createElement(qi, { event: n, reservation: e, fnOnDirty: t }),
             }),
             c.createElement(
               _.$n,
@@ -23884,8 +23943,8 @@
           ),
         );
       }
-      const Ui = { include_basic_info: !0, include_all_purchase_options: !0 };
-      function Hi(e) {
+      const Hi = { include_basic_info: !0, include_all_purchase_options: !0 };
+      function qi(e) {
         const { reservation: t, fnOnDirty: a, event: n } = e,
           [i, r, o, l, d, u] = (0, s.q3)(() => {
             var e, a, n, i;
@@ -23913,9 +23972,9 @@
               t.psu_less_package,
             ];
           }),
-          [m, p] = (0, Ya.Gg)(r, Ui),
-          [g, h] = (0, Ya.Gg)(o, Ui),
-          [v, S] = (0, Ya.Gg)(u, Ui),
+          [m, p] = (0, Ya.Gg)(r, Hi),
+          [g, h] = (0, Ya.Gg)(o, Hi),
+          [v, S] = (0, Ya.Gg)(u, Hi),
           [E, y] = (0, c.useState)(d.length > 0),
           b = (0, c.useCallback)(
             (e) => {
@@ -24018,7 +24077,7 @@
               '" Price: ',
               null == v ? void 0 : v.GetBestPurchasePriceFormatted(),
             ),
-          c.createElement(xi.f, {
+          c.createElement(zi.f, {
             text: l,
             partnerEventStore: Ue.O3,
             showErrorInfo: !0,
@@ -24059,7 +24118,7 @@
               }),
         );
       }
-      function qi(e) {
+      function ji(e) {
         const { fnOnDirty: t, saleSection: a, event: n } = e,
           [i, r] = (0, s.q3)(() => {
             var e, t;
@@ -24118,7 +24177,7 @@
               onDelete: l,
               onReorder: t,
               render: (e) =>
-                c.createElement(Wi, { event: n, supply: e, fnOnDirty: t }),
+                c.createElement(Vi, { event: n, supply: e, fnOnDirty: t }),
             }),
             c.createElement(
               _.$n,
@@ -24129,15 +24188,15 @@
           ),
         );
       }
-      const ji = { include_basic_info: !0, include_all_purchase_options: !0 };
-      function Wi(e) {
+      const Wi = { include_basic_info: !0, include_all_purchase_options: !0 };
+      function Vi(e) {
         const { supply: t, fnOnDirty: a, event: n } = e,
           [i, r, o] = (0, s.q3)(() => [
             L.O.Get().GetCurEditLanguage(),
             t.supply_package,
             t.localized_supply_desc || [],
           ]),
-          [l, d] = (0, Ya.Gg)(r, ji),
+          [l, d] = (0, Ya.Gg)(r, Wi),
           u = (0, c.useCallback)(
             (e) => {
               (t.localized_supply_desc = (0, O.$Y)(o || [], 31, null)),
@@ -24195,7 +24254,7 @@
               '" Price: ',
               l.GetBestPurchasePriceFormatted(),
             ),
-          c.createElement(xi.f, {
+          c.createElement(zi.f, {
             text: g,
             partnerEventStore: Ue.O3,
             showErrorInfo: !0,
@@ -24209,7 +24268,7 @@
           ),
         );
       }
-      const Vi = (0, l.PA)((e) => {
+      const Qi = (0, l.PA)((e) => {
         const { editModel: t, saleSection: a, index: n } = e,
           { internal_section_data: r } = a,
           o = [
@@ -24292,20 +24351,20 @@
               },
             }),
           Boolean("reservation_widget" === l) &&
-            c.createElement(zi, {
+            c.createElement(Ui, {
               event: t.GetEventModel(),
               saleSection: a,
               fnOnDirty: () => t.SetDirty(i.IQ.jsondata_sales),
             }),
           Boolean("while_supplies_last" === l) &&
-            c.createElement(qi, {
+            c.createElement(ji, {
               event: t.GetEventModel(),
               saleSection: a,
               fnOnDirty: () => t.SetDirty(i.IQ.jsondata_sales),
             }),
         );
       });
-      function Qi(e) {
+      function Yi(e) {
         const { saleSection: t, editModel: a } = e,
           [n, r, o, l] = (0, s.q3)(() => [
             t.smart_section,
@@ -24369,7 +24428,7 @@
             }),
         );
       }
-      const Yi = (0, l.PA)((e) => {
+      const Ki = (0, l.PA)((e) => {
         const t = e.saleSection.section_type;
         switch (t) {
           case "items":
@@ -24389,11 +24448,11 @@
           case "event_description":
             return c.createElement(na, { ...e });
           case "text_section":
-            return c.createElement(Oi, { ...e });
+            return c.createElement(xi, { ...e });
           case "curator":
             return c.createElement(aa, { ...e });
           case "vo_internal":
-            return c.createElement(Vi, { ...e });
+            return c.createElement(Qi, { ...e });
           case "tabs":
             return c.createElement(gn.$X, { ...e });
           case "tab_buttons":
@@ -24425,7 +24484,7 @@
           case "discoveryqueue":
             return c.createElement(x, { ...e });
           case "trailercarousel":
-            return c.createElement(Qi, { ...e });
+            return c.createElement(Yi, { ...e });
           case "quest":
             return c.createElement(Fa, { ...e });
           case "sale_events":
@@ -24460,9 +24519,9 @@
             return c.createElement(we, { ...e });
         }
       });
-      var Ki = a(17098),
-        Xi = a(96971);
-      const $i = (0, l.PA)((e) => {
+      var Xi = a(17098),
+        $i = a(96971);
+      const Ji = (0, l.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
           n = a.GetCurEditLanguage(),
           [r, l, d, u, m, p, g, h, v, S, E] = (0, s.q3)(() => [
@@ -24479,13 +24538,13 @@
             t.internal_section_title || "",
           ]),
           y = Boolean(D.NT.GetWithFallback(l, n)),
-          b = y || Ki.a.IsValidTitleOption(r, "label");
+          b = y || Xi.a.IsValidTitleOption(r, "label");
         let f = 0;
         null == u ||
           u.forEach((e) => {
             f += e ? 1 : 0;
           });
-        const w = (0, Xi.yD)();
+        const w = (0, $i.yD)();
         return null !== (0, ie.s0)(t, a.GetEventModel(), w.eLocation)
           ? c.createElement("div", null, (0, D.we)("#Sale_Section_ForcedTitle"))
           : c.createElement(
@@ -24496,7 +24555,7 @@
                 null,
                 (0, D.we)("#EventEditor_Event_SectionTitle"),
               ),
-              c.createElement(Ki.a, {
+              c.createElement(Xi.a, {
                 default_label: r,
                 localized_label: l,
                 editModel: e.editModel,
@@ -24588,7 +24647,7 @@
                     },
                     value: d,
                   }),
-                  c.createElement(Ji, { saleSection: t, editModel: a }),
+                  c.createElement(Zi, { saleSection: t, editModel: a }),
                 ),
               c.createElement(
                 "div",
@@ -24598,7 +24657,7 @@
                   null,
                   (0, D.we)("#EventEditor_Event_SubTitle"),
                 ),
-                c.createElement(Ki.a, {
+                c.createElement(Xi.a, {
                   nameType: "subtitle",
                   default_label: m,
                   localized_label: p,
@@ -24648,7 +24707,7 @@
               ),
             );
       });
-      function Ji(e) {
+      function Zi(e) {
         const { saleSection: t, editModel: a } = e,
           [n] = (0, s.q3)(() => [t.label_link_style]);
         if (!t.label_link) return null;
@@ -24666,10 +24725,10 @@
           }),
         );
       }
-      var Zi = a(66845),
-        er = a.n(Zi),
-        tr = a(64969);
-      function ar(e) {
+      var er = a(66845),
+        tr = a.n(er),
+        ar = a(64969);
+      function nr(e) {
         var t;
         const { obj: a, fnMarkDirty: n } = e,
           i = (0, s.q3)(() => a.package_allow_list),
@@ -24716,9 +24775,9 @@
               }),
         );
       }
-      var nr = a(30894),
-        ir = a(34854);
-      function rr(e) {
+      var ir = a(30894),
+        rr = a(34854);
+      function or(e) {
         const { obj: t, fnMarkDirty: a } = e,
           n = (0, s.q3)(() => t.hardware_allow_list),
           [i, r] = c.useState((null == n ? void 0 : n.length) > 0),
@@ -24738,14 +24797,14 @@
             c.createElement(
               c.Fragment,
               null,
-              ((l = nr.NO),
+              ((l = ir.NO),
               Object.values(l)
                 .filter((e) => "number" == typeof e)
                 .map((e) => e)).map((e) =>
                 c.createElement(_.Yh, {
                   key: e,
-                  className: ir.SubCheckbox,
-                  label: nr.NO[e],
+                  className: rr.SubCheckbox,
+                  label: ir.NO[e],
                   checked: o.has(e),
                   onChange: (n) =>
                     ((e, n) => {
@@ -24760,7 +24819,7 @@
         );
         var l;
       }
-      function or(e) {
+      function lr(e) {
         const { saleSection: t, editModel: a } = e,
           [n, r, o, l] = (0, s.q3)(() => [
             t.disable_section,
@@ -24842,7 +24901,7 @@
             }),
         );
       }
-      function lr(e) {
+      function sr(e) {
         const { editModel: t, saleSection: a } = e,
           [n, r, o] = (0, s.q3)(() => [
             a.hide_section || !1,
@@ -24945,31 +25004,31 @@
                   t.SetDirty(i.IQ.jsondata_sales));
               },
             }),
-            c.createElement(tr.l, {
+            c.createElement(ar.l, {
               obj: a,
               fnMarkDirty: () => t.SetDirty(i.IQ.jsondata_sales),
             }),
-            c.createElement(ar, {
+            c.createElement(nr, {
               obj: a,
               fnMarkDirty: () => t.SetDirty(i.IQ.jsondata_sales),
             }),
-            c.createElement(rr, {
+            c.createElement(or, {
               obj: a,
               fnMarkDirty: () => t.SetDirty(i.IQ.jsondata_sales),
             }),
-            c.createElement(or, { ...e }),
+            c.createElement(lr, { ...e }),
           ),
         );
       }
-      var sr = a(32669);
-      var cr = a(83882);
-      function dr(e, t, a) {
+      var cr = a(32669);
+      var dr = a(28015);
+      function ur(e, t, a) {
         return e.disable_background
           ? { background: "transparent" }
           : (0, S.V)(e, t, a);
       }
-      const ur = ["tabs", "social_share"];
-      function mr(e) {
+      const mr = ["tabs", "social_share"];
+      function _r(e) {
         return [
           "broadcast",
           "sale_item_browser",
@@ -24982,7 +25041,7 @@
           "social_share",
         ].includes(e);
       }
-      const _r = (0, l.PA)((e) => {
+      const pr = (0, l.PA)((e) => {
         var t;
         const {
             saleSection: a,
@@ -25294,7 +25353,7 @@
             (null === (t = null == K ? void 0 : K.tabs) || void 0 === t
               ? void 0
               : t.length) > 0,
-          $ = !ur.includes(a.section_type),
+          $ = !mr.includes(a.section_type),
           J = (function (e) {
             return [
               "items",
@@ -25315,7 +25374,7 @@
                 p.push({
                   name: (0, D.we)("#Sale_Section_EditTab_Contents"),
                   key: "contents",
-                  contents: c.createElement(Yi, { ...n }),
+                  contents: c.createElement(Ki, { ...n }),
                 }),
               u)
             ) {
@@ -25334,7 +25393,7 @@
                 name: (0, D.we)("#Sale_Section_EditTab_Title"),
                 tooltip: (0, D.we)("#Sale_Section_EditTab_Title_ttip"),
                 key: "title",
-                contents: c.createElement($i, { saleSection: t, editModel: e }),
+                contents: c.createElement(Ji, { saleSection: t, editModel: e }),
               }),
               o &&
                 p.push({
@@ -25369,7 +25428,7 @@
                   {
                     clanSteamID: e.GetClanSteamID(),
                     requireAdmin: !0,
-                    className: er().SectionOverrideCtn,
+                    className: tr().SectionOverrideCtn,
                   },
                   c.createElement(_.pd, {
                     value: t.contenthub_override_section,
@@ -25387,13 +25446,13 @@
                   name: (0, D.we)("#Sale_Section_EditTab_Visibility"),
                   tooltip: (0, D.we)("#Sale_Section_EditTab_Visibility_ttip"),
                   key: "visibility",
-                  contents: c.createElement(lr, { ...n }),
+                  contents: c.createElement(sr, { ...n }),
                 }),
               m &&
                 p.push({
                   name: "(VO) Debug",
                   key: "debug",
-                  contents: c.createElement(sr.ad, {
+                  contents: c.createElement(cr.ad, {
                     saleSection: n.saleSection,
                   }),
                 }),
@@ -25415,7 +25474,7 @@
                   [ae.Expanded]: !A,
                 }),
                 style: {
-                  ...dr(a, n.GetEventModel(), !1),
+                  ...ur(a, n.GetEventModel(), !1),
                   opacity: b ? 0 : 1,
                   transition: "opacity 500ms",
                 },
@@ -25442,7 +25501,7 @@
                     eventModel: n.GetEventModel(),
                     index: l,
                   }),
-                  c.createElement(vr, {
+                  c.createElement(Sr, {
                     saleSection: a,
                     editModel: n,
                     visible: !A,
@@ -25503,7 +25562,7 @@
                 ? c.createElement(
                     "div",
                     { className: ae.SectionSummaryCtn },
-                    c.createElement(pr, {
+                    c.createElement(gr, {
                       editModel: n,
                       section: a,
                       tabSection: K,
@@ -25555,7 +25614,7 @@
                   ),
             );
       });
-      const pr = (e) => {
+      const gr = (e) => {
           const { editModel: t, section: a, tabSection: i } = e,
             r = i
               ? c.createElement(
@@ -25615,7 +25674,7 @@
                 )
               : r;
         },
-        gr = (0, l.PA)((e) => {
+        hr = (0, l.PA)((e) => {
           var t, a;
           const { editModel: n } = e,
             [r, o] = (0, c.useState)(!1),
@@ -25688,7 +25747,7 @@
                         };
                         (n.GetEventModel().jsondata.source_content_hub = e),
                           n.GetEventModel().jsondata
-                            .bAutoUpdateVanityURLForContentHub && hr(e, n);
+                            .bAutoUpdateVanityURLForContentHub && vr(e, n);
                       }
                       n.SetDirty(i.IQ.jsondata_sales);
                     },
@@ -25697,7 +25756,7 @@
               : c.createElement(b.t, { size: "medium", position: "center" }),
           );
         });
-      function hr(e, t) {
+      function vr(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -25724,9 +25783,9 @@
             "SetVanityURLForContentHub: Undefined hub type, skipping vanity URL update.",
           );
       }
-      function vr(e) {
+      function Sr(e) {
         const { saleSection: t, editModel: a, visible: n } = e,
-          r = (0, Xi.yD)(),
+          r = (0, $i.yD)(),
           [o, l] = c.useState(!1),
           [d] = (0, s.q3)(() => [t.internal_section_title || ""]),
           [u, m] = c.useState(void 0);
@@ -25744,7 +25803,7 @@
               c.createElement(M.ffu, null),
             ),
           c.createElement(
-            cr.mt,
+            dr.mt,
             { active: o, onDismiss: () => l(!1) },
             c.createElement(
               _.Y9,
@@ -35575,12 +35634,7 @@
                         },
                         n.createElement(
                           "div",
-                          {
-                            className: (0, c.A)({
-                              [v.FollowBtnCtn]: !w,
-                              [v.VerticalFollowBtnCtn]: w,
-                            }),
-                          },
+                          { className: (0, c.A)(v.FollowBtnCtn) },
                           Boolean(!b) &&
                             n.createElement(S.of, {
                               clanAccountID: t.clan_account_id,
@@ -42081,22 +42135,21 @@
             artworkType: S,
             fnLangHasData: E,
             closeModal: y,
-            fnGetImageHash: b,
-            fnSetImageURL: f,
-            partnerEventStore: w,
+            fnSetImageURL: b,
+            partnerEventStore: f,
           } = e,
-          [C, T] = (0, i.useState)(!1),
-          [I] = i.useState(() => new o.V(t)),
-          D = t.GetAccountID(),
-          [B] = (0, n.q3)(() => [
-            I.GetFilesToUpload().length - I.GetCompletedFiles(),
+          [w, C] = (0, i.useState)(!1),
+          T = (0, o.z)(t),
+          I = t.GetAccountID(),
+          [D] = (0, n.q3)(() => [
+            T.GetFilesToUpload().length - T.GetCompletedFiles(),
           ]);
         (0, i.useEffect)(() => {
-          T(!1),
+          C(!1),
             l.pU.ClearImageGroup(),
             null == v ||
               v.forEach((e, t) => {
-                const a = r.b.InitFromClanID(D);
+                const a = r.b.InitFromClanID(I);
                 if (0 == l.pU.GetAllLocalizedGroupImages().length) {
                   const t = e && l.i6.GetHashFromHashAndExt(e),
                     n = t && l.pU.GetClanImageByImageHash(a, t);
@@ -42104,11 +42157,11 @@
                 }
                 l.pU.SetLocalizedImageGroupAtLang(t, a, e);
               }),
-            T(!0);
-        }, [v, D, S]);
-        const A = (0, i.useCallback)(
+            C(!0);
+        }, [v, I, S]);
+        const B = (0, i.useCallback)(
             (e, t, a = 0) => {
-              const n = r.b.InitFromClanID(D),
+              const n = r.b.InitFromClanID(I),
                 i = l.i6.GetHashAndExt(t);
               if (0 == l.pU.GetAllLocalizedGroupImages().length) {
                 const t = i && l.i6.GetHashFromHashAndExt(i),
@@ -42117,9 +42170,9 @@
               }
               l.pU.SetLocalizedImageGroupAtLang(a, n, i);
             },
-            [D],
+            [I],
           ),
-          M = (0, i.useCallback)((e, t) => {
+          A = (0, i.useCallback)((e, t) => {
             const a = l.pU.GetLocalizedImageGroupForEdit();
             return null == a ? void 0 : a.localized_images[t];
           }, []);
@@ -42133,17 +42186,17 @@
             className: (0, _.A)(d.NotTooWideModal, d.ImageManageDialog),
             strTitle: e.strLocalizedTitle || (0, p.we)("#ImagePickerLoc_Title"),
             strDescription: e.strLocalizedDescription,
-            bOKDisabled: B > 0,
+            bOKDisabled: D > 0,
             onOK: () => {
               l.pU.GetAllLocalizedGroupImages().forEach((e, t) => {
                 if (e) {
                   let a = e.lastIndexOf("/");
                   const n = e.substring(a + 1);
-                  f(
+                  b(
                     S,
                     {
                       image_hash: (0, c.ur)(n),
-                      clanAccountID: D,
+                      clanAccountID: I,
                       file_type: l.i6.GetExtensionTypeFromURL(e),
                       imageid: void 0,
                     },
@@ -42155,9 +42208,9 @@
                 e.onOK ? e.onOK() : y();
             },
             strOKButtonText:
-              B > 0 ? (0, p.we)("#ImagePickerLoc_DismissWarning") : void 0,
+              D > 0 ? (0, p.we)("#ImagePickerLoc_DismissWarning") : void 0,
           },
-          Boolean(!C)
+          Boolean(!w)
             ? i.createElement(m.t, {
                 size: "medium",
                 position: "center",
@@ -42169,10 +42222,10 @@
                 i.createElement(s.V, {
                   clanSteamID: t,
                   rgSupportArtwork: [S],
-                  fnSetImageURL: A,
+                  fnSetImageURL: B,
                   bAllowPreviousClanImageSelection: !1,
                   rgRealmList: h,
-                  uploaderOverride: I,
+                  uploaderOverride: T,
                 }),
                 i.createElement(c.it, {
                   clanSteamID: t,
@@ -42181,10 +42234,10 @@
                   title: null,
                   appid: a,
                   realms: h,
-                  fnSetImageURL: A,
-                  fnGetImageHashAndExt: M,
+                  fnSetImageURL: B,
+                  fnGetImageHashAndExt: A,
                   fnLangHasData: E,
-                  partnerEventStore: w,
+                  partnerEventStore: f,
                 }),
               ),
           e.children,
@@ -52898,8 +52951,8 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ae.prototype.top_app_releases || O.Sg(ae.M()),
-            F.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
+            ae.prototype.top_dlc_releases || O.Sg(ae.M()),
+            F.Message.initialize(this, e, 0, -1, [2, 3], null);
         }
         static M() {
           return (
@@ -52907,7 +52960,6 @@
               (ae.sm_m = {
                 proto: ae,
                 fields: {
-                  top_app_releases: { n: 1, c: ne, r: !0, q: !0 },
                   top_dlc_releases: { n: 2, c: ne, r: !0, q: !0 },
                   top_combined_app_and_dlc_releases: {
                     n: 3,
@@ -52976,8 +53028,8 @@
                   },
                   app_release_rank: {
                     n: 3,
-                    br: O.qM.readUint32,
-                    bw: O.gp.writeUint32,
+                    br: O.qM.readEnum,
+                    bw: O.gp.writeEnum,
                   },
                 },
               }),
@@ -67907,9 +67959,9 @@
               e.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
             n.createElement(Ta.L, {
               video: { sPoster: t.image, rgVideoSources: e },
-              bAutoPlay: !1,
+              bAutoPlay: !0,
               bControls: !1,
-              bLoop: !1,
+              bLoop: !0,
               bMuted: !0,
             })
           );

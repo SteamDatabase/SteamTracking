@@ -1689,7 +1689,12 @@
           return this.m_timedTextRepSelected;
         }
         OnPlayAction() {
-          this.SendUpdateToBookmarkServiceIfNeeded();
+          this.SendUpdateToBookmarkServiceIfNeeded(),
+            this.m_stats
+              .GetFPSMonitor()
+              .StartTracking(() =>
+                this.m_stats.ExtractFrameInfo(this.m_elVideo),
+              );
         }
         BIsPlayerBufferedBetween(e, t) {
           return (
@@ -1772,28 +1777,33 @@
         }
         async PlayOnElement() {
           const e = this.m_bFirstPlay;
+          let t;
           this.m_bFirstPlay = !1;
-          let t = !1;
-          const i = () => {
-            (t = !0),
-              this.m_stats
-                .GetFPSMonitor()
-                .StartTracking(() =>
-                  this.m_stats.ExtractFrameInfo(this.m_elVideo),
-                );
-          };
           try {
-            false, await this.m_elVideo.play(), i();
+            await this.m_elVideo.play();
           } catch (e) {
-            if ("NotAllowedError" === e.name && this.BHasTimedText()) {
+            (t = e), (0, g.q_)("Failed to play video", e);
+          }
+          if (
+            t &&
+            "NotAllowedError" == t.name &&
+            !this.m_elVideo.muted &&
+            this.BHasTimedText()
+          ) {
+            (0, g.q_)("Trying to play again, this time muted with subtitles"),
+              (t = void 0),
               (this.m_elVideo.muted = !0),
-                this.SetSubtitles((0, a.sf)(p.TS.LANGUAGE));
-              try {
-                await this.m_elVideo.play(), i();
-              } catch (e) {}
+              this.SetSubtitles((0, a.sf)(p.TS.LANGUAGE));
+            try {
+              await this.m_elVideo.play();
+            } catch (e) {
+              (t = e), (0, g.q_)("Failed to play video when muted", e);
             }
           }
-          !t && e && this.DispatchEvent("valve-userinputneeded");
+          e &&
+            t &&
+            "NotAllowedError" == t.name &&
+            this.DispatchEvent("valve-userinputneeded");
         }
         OnVideoBufferProgress() {
           if (!this.IsBuffering()) return;

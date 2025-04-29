@@ -3626,6 +3626,9 @@
   --text-muted-color: #dbdbdb;
   --padding: 0 var(--spacing-2);
 }
+:where(._1fNVqPb5rhUOTSV5nEBHdl)._1K_Ve980-qBq8l1-cZJdw1 {
+  --padding: 0 var(--spacing-3);
+}
 :where(._2Z-Zr4UW8-jHrU5olM_rpn) {
   --bg-color: #1d1f23;
   --bg-color-hover: var(--bg-color);
@@ -3655,11 +3658,10 @@
   background-color: var(--bg-color, var(--color-debug));
   position: relative;
   color: var(--text-color);
-  height: var(--control-height-2);
-  font-size: var(--text-size-3);
-  line-height: var(--line-height-3);
-  letter-spacing: var(--letter-spacing-3);
   padding: var(--padding);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._8JNTStqpIYaMWQJx6g6hK:hover {
   background-color: var(--bg-color-hover, var(--color-debug));
@@ -3671,6 +3673,24 @@
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._1cd-wdIp5lIWsydAxII-vY:focus-within {
   background-color: var(--bg-color-focus, var(--color-debug));
 }
+:where(._2gL71Yq-HzVI9oOGyWu3jH)._2e1xlPghh48rkP13ydQOPb {
+  height: var(--control-height-1);
+  --font-size: var(--text-size-2);
+  --line-height: var(--line-height-2);
+  --letter-spacing: var(--letter-spacing-2);
+}
+:where(._2gL71Yq-HzVI9oOGyWu3jH).B7HtDxiiORArIRcBR9kVB {
+  height: var(--control-height-2);
+  --font-size: var(--text-size-3);
+  --line-height: var(--line-height-3);
+  --letter-spacing: var(--letter-spacing-3);
+}
+:where(._2gL71Yq-HzVI9oOGyWu3jH)._1K_Ve980-qBq8l1-cZJdw1 {
+  height: var(--control-height-3);
+  --font-size: var(--text-size-4);
+  --line-height: var(--line-height-4);
+  --letter-spacing: var(--letter-spacing-4);
+}
 ._3UJsjqCfOxuT5SoqLekeha {
   width: 100%;
   height: 100%;
@@ -3680,16 +3700,16 @@
 ._3UJsjqCfOxuT5SoqLekeha::placeholder,
 ._3UJsjqCfOxuT5SoqLekeha::-webkit-input-placeholder {
   color: var(--color-placeholder-text);
-  font-size: var(--text-size-3);
-  letter-spacing: var(--letter-spacing-3);
-  font-style: italic;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  font-style: normal;
 }
 ._3UJsjqCfOxuT5SoqLekeha::-ms-input-placeholder,
 ._3UJsjqCfOxuT5SoqLekeha:-ms-input-placeholder {
   color: var(--color-placeholder-text);
-  font-size: var(--text-size-3);
-  letter-spacing: var(--letter-spacing-3);
-  font-style: italic;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  font-style: normal;
 }
 ._1Lj8DZ5OwROQBTPVOJcAY {
   display: inline-flex;

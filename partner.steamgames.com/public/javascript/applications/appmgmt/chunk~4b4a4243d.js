@@ -1527,12 +1527,7 @@
                         },
                         a.createElement(
                           "div",
-                          {
-                            className: (0, m.A)({
-                              [A.FollowBtnCtn]: !w,
-                              [A.VerticalFollowBtnCtn]: w,
-                            }),
-                          },
+                          { className: (0, m.A)(A.FollowBtnCtn) },
                           Boolean(!D) &&
                             a.createElement(E.of, {
                               clanAccountID: t.clan_account_id,

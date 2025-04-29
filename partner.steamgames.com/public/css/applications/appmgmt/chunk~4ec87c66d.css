@@ -5839,15 +5839,17 @@ img {
 ._2HvO_RKtxiyyhZsELjYyq5 {
   z-index: 12;
 }
-.ZZgGaqlJvV83f4CYl3O3N {
+.DialogCheckbox_Container.ZZgGaqlJvV83f4CYl3O3N {
   position: absolute;
   z-index: 5;
-  right: 5px;
+  right: 16px;
+  padding-right: 12px;
   top: 5px;
   font-size: 13px;
   color: #fff;
   display: none;
   text-shadow: 1px 1px 1px #000;
+  background: #2f3b4c;
 }
 ._19l-UjQZVVGNK5SKnOrmJB {
   position: absolute;
@@ -11852,6 +11854,7 @@ textarea._3793xvP87t1rZYbAQDC1pG {
 }
 ._1Cq0N3-UepmTlAvDH0ElVg._2cprKboJkehwZ_t7Jn2Cst {
   border-left: 0;
+  display: block;
 }
 ._2KUhB_BLktT3FQGqB_y54o {
   display: flex;

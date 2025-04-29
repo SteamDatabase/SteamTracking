@@ -4118,15 +4118,17 @@ span._11TnLmbm2QkVVfCckvEXbJ {
 ._2HvO_RKtxiyyhZsELjYyq5 {
   z-index: 12;
 }
-.ZZgGaqlJvV83f4CYl3O3N {
+.DialogCheckbox_Container.ZZgGaqlJvV83f4CYl3O3N {
   position: absolute;
   z-index: 5;
-  right: 5px;
+  right: 16px;
+  padding-right: 12px;
   top: 5px;
   font-size: 13px;
   color: #fff;
   display: none;
   text-shadow: 1px 1px 1px #000;
+  background: #2f3b4c;
 }
 ._19l-UjQZVVGNK5SKnOrmJB {
   position: absolute;
@@ -4947,6 +4949,9 @@ td.rdtYear:hover {
   display: flex;
   flex-direction: row;
 }
+._49thIpYeG08pUfNc1x_w9:hover {
+  color: #fff;
+}
 ._78Qv2C95AM2DNCuLD5o8U {
   width: 220px;
   position: relative;
@@ -4987,6 +4992,12 @@ td.rdtYear:hover {
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
+}
+.widestore ._78Qv2C95AM2DNCuLD5o8U {
+  width: 285px;
+}
+.widestore ._2qz5D65VkY796Xw-al9f_a {
+  width: auto;
 }
 ._1Zn_5pvuMbqr57ws1eJKe {
   height: 100vh;

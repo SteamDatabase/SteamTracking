@@ -387,11 +387,6 @@ GHomepage = {
 			GHomepage.RenderUnder10();
 		} catch( e ) { OnHomepageException(e); }
 
-		// Marketing Messages
-		try {
-			GHomepage.RenderMarketingMessages();
-		} catch( e ) { OnHomepageException(e); }
-
 		// Sidebar
 		// Recommended tags
 		try {

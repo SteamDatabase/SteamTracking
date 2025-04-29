@@ -42102,6 +42102,16 @@
                     i.createElement(
                       "li",
                       null,
+                      (0, h.we)("#AssetRequest_Takeover_Hint_feathered"),
+                    ),
+                    i.createElement(
+                      "li",
+                      null,
+                      (0, h.we)("#AssetRequest_Takeover_Hint_content"),
+                    ),
+                    i.createElement(
+                      "li",
+                      null,
                       (0, h.we)("#AssetRequest_Takeover_Hint"),
                     ),
                     i.createElement(
@@ -63147,10 +63157,15 @@
           [r] = (0, w.Gg)(4 === t.product_type ? t.productid : 0, {}),
           [i] = (0, w.t7)(4 !== t.product_type ? t.productid : 0, {}),
           s = 4 === t.product_type ? r : i,
-          l = Math.floor(t.gross_sales_usd);
+          l = Math.floor(t.gross_sales_usd),
+          o = Le.TS.PARTNER_BASE_URL + "apps/landing/" + t.productid;
         return c.createElement(
-          "div",
-          { className: (0, L.A)(Oe.RowCtn, Oe.Compact) },
+          "a",
+          {
+            href: o,
+            target: "_blank",
+            className: (0, L.A)(Oe.RowCtn, Oe.Compact),
+          },
           c.createElement(
             "div",
             { className: (0, L.A)(Oe.Row, Oe.Primary) },
@@ -97304,7 +97319,7 @@
           [_, g] = l.useState(Boolean(a)),
           [h, E] = l.useState(!1),
           [S] = (0, J.q3)(() => [ie.O.Get().GetCurEditLanguage()]),
-          y = l.useMemo(() => new re.V(t), [t.ConvertTo64BitString()]),
+          y = (0, re.z)(t),
           v = l.useCallback(
             async (e) => {
               if (
@@ -97606,6 +97621,7 @@
                   $().DescriptionCtn,
                   $().BBCodeEditorInputStyles,
                   this.state.bShowDragTarget ? $().DragTarget : "",
+                  this.props.className ? this.props.className : "",
                 ),
               },
               l.createElement(k, {

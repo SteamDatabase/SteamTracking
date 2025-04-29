@@ -1964,6 +1964,9 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   display: flex;
   flex-direction: row;
 }
+._49thIpYeG08pUfNc1x_w9:hover {
+  color: #fff;
+}
 ._78Qv2C95AM2DNCuLD5o8U {
   width: 220px;
   position: relative;
@@ -2004,6 +2007,12 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
+}
+.widestore ._78Qv2C95AM2DNCuLD5o8U {
+  width: 285px;
+}
+.widestore ._2qz5D65VkY796Xw-al9f_a {
+  width: auto;
 }
 ._1UhmxrINvvaNnHzhCPoill {
   margin-bottom: 8px;
@@ -3098,15 +3107,15 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 }
 ._2SxhiHrQSCtBnKf3oKdon2 ._3cBgZqhPaJpdeZl8hARr1o {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  background-color: #313c4a;
+  transition: background-color .2s ease-in-out;
+}
+._2SxhiHrQSCtBnKf3oKdon2 ._3cBgZqhPaJpdeZl8hARr1o:hover {
+  background-color: #435164;
 }
 ._2SxhiHrQSCtBnKf3oKdon2 a {
   display: block;
   padding: 12px;
-  background-color: #313c4a;
-  transition: background-color .2s ease-in-out;
-}
-._2SxhiHrQSCtBnKf3oKdon2 a:hover {
-  background-color: #435164;
 }
 ._2SxhiHrQSCtBnKf3oKdon2 a:hover ._2pkGLftA9XILpaWN0kejPk {
   color: #fff;
