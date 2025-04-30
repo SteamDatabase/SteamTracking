@@ -1135,6 +1135,7 @@ ${PARTNER_BASE_URL}meetsteam/2025
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails
 ${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
 ${PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${}
+${PARTNER_BASE_URL}meetsteam/survey/${}
 ${PARTNER_BASE_URL}meetsteam/surveyresults/${}
 ${PARTNER_BASE_URL}newpartner
 ${PARTNER_BASE_URL}optin${}
@@ -1588,6 +1589,7 @@ ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
 ${STORE_BASE_URL}meetsteam/${}
 ${STORE_BASE_URL}meetsteam/ajaxupdateattendance
+${STORE_BASE_URL}meetsteam/attendance?gid=${}&accountid=${accountid}
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile#mobile_section
 ${STORE_BASE_URL}mobile/?show=steamapp
