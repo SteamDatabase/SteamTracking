@@ -396,8 +396,8 @@
                         n.session_id,
                       );
                     return (
-                      (r?.session.rtime_start || 0) -
-                      (a?.session.rtime_start || 0)
+                      (r?.session?.rtime_start || 0) -
+                      (a?.session?.rtime_start || 0)
                     );
                   })
                   .map((n) => {
@@ -425,7 +425,7 @@
                           : n < r
                             ? "past"
                             : "future";
-                      })(a?.session.rtime_start || 0, t)),
+                      })(a?.session?.rtime_start || 0, t)),
                       n
                     );
                   }),
@@ -705,7 +705,7 @@
       }
       var P = n(97058);
       const W = {
-        MeetSteamAttendance: () => `${r.B.MeetSteamRoute()}attendance/*`,
+        MeetSteamAttendance: () => `${r.B.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${r.B.MeetSteamRoute()}:gid(\\d+)`,
       };
       function Y(e) {

@@ -4132,6 +4132,7 @@
           "nextfest",
           "seasonalsale",
           "informational",
+          "launchtracking",
           "dailydeal",
           "vacation",
           "important",
@@ -4145,6 +4146,7 @@
             "weekenddeal",
             "saleevent",
             "informational",
+            "launchtracking",
             "vacation",
             "important",
             "preload",
@@ -4164,6 +4166,7 @@
         g.set("nextfest", "Next Fests"),
         g.set("seasonalsale", "Seasonal Sale"),
         g.set("informational", "Informational"),
+        g.set("launchtracking", "Launch Tracking"),
         g.set("dailydeal", "Daily Deal"),
         g.set("vacation", "Vacation/PTO"),
         g.set("important", "Takeover / Takeunder"),
@@ -4182,6 +4185,7 @@
         S.set("nextfest", "#819c8a"),
         S.set("seasonalsale", "#819c8a"),
         S.set("informational", "#474747"),
+        S.set("launchtracking", "#474747"),
         S.set("dailydeal", "#80275D"),
         S.set("vacation", "#6f7485"),
         S.set("important", "#40ccfd"),
@@ -64516,7 +64520,12 @@
                 {
                   type: "informational",
                   tooltip:
-                    "Best to indicate items of interest for example Hawaii.  Or for launch, pre-purchase, FP2 important events in Steam with featuring.",
+                    "General notes that show up on the calendar for Valve or specified partners.",
+                },
+                {
+                  type: "launchtracking",
+                  tooltip:
+                    "For launch, pre-purchase, or other launch events that we want to keep track of. Will only show on partner's Dashboard if there's an associated asset request.",
                 },
                 {
                   type: "vacation",
@@ -69134,6 +69143,7 @@
                 ]),
                 e.set("seasonalsale", [n.k_AssetKit]),
                 e.set("informational", []),
+                e.set("launchtracking", []),
                 e.set("dailydeal", []),
                 e.set("vacation", []),
                 e.set("important", []),

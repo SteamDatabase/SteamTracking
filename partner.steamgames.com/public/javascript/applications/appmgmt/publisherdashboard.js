@@ -1862,6 +1862,8 @@
                     r.submitting_accountid
                   )
                     return null;
+                  if ("launchtracking" == n.type && !r?.enable_input)
+                    return null;
                   const s = a?.GetInfo(n.opt_in_id),
                     o = "assetrequest" == n.type && r && !r.enable_input,
                     c =
@@ -2061,6 +2063,10 @@
           case "informational":
             return (0, o.we)(
               "#Dashboard_UpcomingEvents_EventType_PromotionPlan_informational",
+            );
+          case "launchtracking":
+            return (0, o.we)(
+              "#Dashboard_UpcomingEvents_EventType_PromotionPlan_launchtracking",
             );
           case "dailydeal":
             return (0, o.we)(

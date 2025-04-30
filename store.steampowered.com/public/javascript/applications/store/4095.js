@@ -4446,10 +4446,13 @@
             });
             return e && e > Date.now() / 1e3;
           })();
-        return (function () {
+        return i.useMemo(() => {
           const e = (0, s.VY)("forceallages");
-          return !!e && "0" !== e;
-        })() ||
+          return (
+            !(!e || "0" === e) ||
+            !(!a.TS.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
+          );
+        }, []) ||
           ("masked" == e &&
             (a.iA.excluded_content_descriptors.includes(4) ||
               a.iA.excluded_content_descriptors.includes(3)))
