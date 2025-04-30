@@ -3939,7 +3939,7 @@
               ));
         }
         BIsConnected() {
-          return !!window.opener;
+          return !!window.opener && this.m_eventModelJson;
         }
         GetEventModel() {
           return this.m_eventModelJson;
