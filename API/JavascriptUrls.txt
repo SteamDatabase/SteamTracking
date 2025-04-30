@@ -1373,6 +1373,7 @@ ${STORE_BASE_URL}${newshubUrl}
 ${STORE_BASE_URL}${store_url_path}
 ${STORE_BASE_URL}${store_url_path}?snr=${}
 ${STORE_BASE_URL}${strURLPath}
+${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
@@ -1565,6 +1566,7 @@ ${STORE_BASE_URL}join/
 ${STORE_BASE_URL}join/${}
 ${STORE_BASE_URL}join/?guest=1&purchaseType=gift&checkout=1&redir=${}
 ${STORE_BASE_URL}labs
+${STORE_BASE_URL}labs/
 ${STORE_BASE_URL}labs/${}?optout=1
 ${STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${}&${}
 ${STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${}&appid[]=${}
@@ -1648,6 +1650,8 @@ ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/${}
 ${STORE_BASE_URL}sale/clorthax_quest
+${STORE_BASE_URL}sale/nextfest/
+${STORE_BASE_URL}sale/steamawards/
 ${STORE_BASE_URL}sale/summersaletradingcards
 ${STORE_BASE_URL}saleaction/
 ${STORE_BASE_URL}saleaction/ajaxbeginfileupload
@@ -1721,6 +1725,7 @@ ${STORE_BASE_URL}wishlist/
 ${STORE_BASE_URL}wishlist/profiles/${}
 ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
+${STORE_BASE_URL}yearinreview/
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
