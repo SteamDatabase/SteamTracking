@@ -341,7 +341,7 @@
     "PrivacySettings_UTM_ToggleLabel": "UTM",
     "PrivacySettings_UTM_ToggleDesc": "Include how my UTM visits performed in the summarized, anonymized reports provided to game developers",
     "accountpreferences_authorized_devices_header": "Authorized Devices",
-    "accountpreferences_authorized_devices_description": "This page lists the PCs and mobile devices (including web browsers) where your account has recently been signed in.%1$sTo end all current sessions and sign you out of all devices and browsers, select Remove All Credentials below.",
+    "accountpreferences_authorized_devices_description": "This section lists the PCs and mobile devices (including web browsers) where your account has recently been signed in.%1$sTo end all current sessions and sign you out of all devices and browsers, select Remove All Credentials below.",
     "accountpreferences_authorized_devices_steam_support": "Steam Support",
     "accountpreferences_authorized_devices_recommendations": "Recommendations",
     "accountpreferences_authorized_devices_remove_button": "Remove All Credentials",
