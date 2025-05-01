@@ -46095,19 +46095,20 @@
             void 0 !== e &&
             e;
         }
-        ShowPreviewWindow(e) {
+        ShowPreviewWindow(e, t) {
           this.m_previewWindow &&
             (this.m_previewWindow.close(),
             (this.m_bReceivedClientReady = !1),
-            this.UpdateConnectedState());
-          const t = new URL(e);
-          t.searchParams.set("parentOrigin", window.location.origin),
+            this.UpdateConnectedState()),
+            (this.m_sLastEventModelJson = t);
+          const a = new URL(e);
+          a.searchParams.set("parentOrigin", window.location.origin),
             (this.m_previewWindow = window.open(
-              t,
+              a,
               "_blank",
               "toolbar=yes,location=yes,resizable=yes,scrollbars=yes,width=1500,height=1100",
             )),
-            (this.m_sPreviewWindowOrigin = t.origin);
+            (this.m_sPreviewWindowOrigin = a.origin);
         }
         GetMouseOverSectionID() {
           return this.m_nMouseOverSectionID;
@@ -46126,8 +46127,11 @@
             this.m_previewWindow.postMessage(e, this.m_sPreviewWindowOrigin);
         }
         UpdatePreview(e) {
-          if (!this.BIsConnected()) return;
-          this.m_sLastEventModelJson = e;
+          if (
+            (this.m_previewWindow && (this.m_sLastEventModelJson = e),
+            !this.BIsConnected())
+          )
+            return;
           const t = { message: "PartnerEventEditor_Update", eventModelJson: e };
           this.PostMessage(t);
         }

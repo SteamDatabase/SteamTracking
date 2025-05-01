@@ -1969,7 +1969,10 @@
       }
       function qe(e, t, a) {
         const n = l.mh.CreateClone();
-        if (a && a.length > 0) {
+        if (
+          ((n.GetEventModel().jsondata.sale_header_offset = 530),
+          a && a.length > 0)
+        ) {
           const e = t.GetLanguagesWithTokens();
           t.ClearLanguagesTokens(a),
             (n.GetEventModel().jsondata.bSaleEnabled = !0),
@@ -7901,7 +7904,8 @@
                 x.$n,
                 {
                   className: (0, I.A)(Qn().LivePreview, s && Qn().Connected),
-                  onClick: () => Jn.xr.Get().ShowPreviewWindow(r),
+                  onClick: () =>
+                    Jn.xr.Get().ShowPreviewWindow(r, t.ConstructJSONData()),
                 },
                 (0, D.we)("#Sale_Debug_LivePreview"),
               ),

@@ -1952,7 +1952,7 @@
             for (let r of t.jsondata.email_setting.sections)
               r.unique_id || ((r.unique_id = `email_section_${e}`), e++);
           }
-          return (t.jsondata.sale_header_offset = 530), t;
+          return t;
         }
         GetLastReferencedSaleDayFromCapsules(e, t) {
           let r = t;
