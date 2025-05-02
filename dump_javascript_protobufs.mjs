@@ -377,6 +377,10 @@ function OutputServices(services, stream = process.stdout) {
 		stream.write(`service ${name} {\n`);
 
 		for (const [, method] of methods) {
+			if (method.serviceMethodParams) {
+				stream.write(`\t// ${method.serviceMethodParams.join(", ")}\n`);
+			}
+
 			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
 		}
 
@@ -438,6 +442,10 @@ function SplitServices(services) {
 
 			if (existingMethod.response === NoResponse && rawMethod.response !== existingMethod.response) {
 				existingMethod.response = rawMethod.response;
+			}
+
+			if (!existingMethod.serviceMethodParams && rawMethod.serviceMethodParams) {
+				existingMethod.serviceMethodParams = rawMethod.serviceMethodParams;
 			}
 
 			continue;
@@ -1340,22 +1348,26 @@ function TraverseFields(ast, importedIds) {
 
 					for (const fieldProp of prop.value.properties) {
 						if (fieldProp.key.name === "n") {
+							// n: number //field [n]umber
 							if (fieldProp.value.type === Syntax.Literal) {
 								field.id = fieldProp.value.value;
 							} else {
 								throw new Error("Unexpected field.n");
 							}
 						} else if (fieldProp.key.name === "r") {
+							// r?: boolean //[r]epeated
 							if (EvaluateConstant(fieldProp.value)) {
 								field.flag = "repeated";
 							}
 						} else if (fieldProp.key.name === "d") {
+							// d?: any //[d]efault value
 							if (fieldProp.value.type === Syntax.MemberExpression) {
 								// TODO: Support default fields expressions
 							} else {
 								field.default = EvaluateConstant(fieldProp.value);
 							}
 						} else if (fieldProp.key.name === "c") {
+							// c?: msgClass_t //message [c]lass
 							if (fieldProp.value.type === Syntax.Identifier) {
 								// Recursive messages
 								if (selfProtoIdentifier === fieldProp.value.name) {
@@ -1384,8 +1396,9 @@ function TraverseFields(ast, importedIds) {
 								throw new Error("Unexpected field.c");
 							}
 						} else if (fieldProp.key.name === "q") {
-							// What is "q"?
+							// q?: boolean //re[q]uired
 						} else if (fieldProp.key.name === "br") {
+							// br?: ( this: jspb.BinaryReader ) => any //[b]inary [r]eader
 							if (
 								fieldProp.value.type === Syntax.MemberExpression &&
 								fieldProp.value.property.type === Syntax.Identifier
@@ -1410,8 +1423,10 @@ function TraverseFields(ast, importedIds) {
 								throw new Error("Unexpected field.br");
 							}
 						} else if (fieldProp.key.name === "bw") {
+							// bw?: ( this: jspb.BinaryWriter, field: number, value: any ) => void //[b]inary [w]riter
 							// writeRepeated type
 						} else if (fieldProp.key.name === "pbr") {
+							// pbr?: ( this: jspb.BinaryReader ) => any //[p]acked [b]inary [r]eader
 							// readPacked type
 						} else {
 							console.warn(`Unexpected field: ${fieldProp.key.name}`);
@@ -1475,6 +1490,36 @@ function GetMsgResponse(node, messages) {
 	};
 }
 
+function GetServiceMethodParams(properties) {
+	const serviceMethodParams = [];
+
+	for (const property of properties) {
+		if (property.type !== Syntax.Property) {
+			continue;
+		}
+
+		serviceMethodParams.push(property.key.name + "=" + EvaluateConstant(property.value));
+	}
+
+	return serviceMethodParams;
+}
+
+/*
+export interface ServiceMethodParams_t
+{
+	bConstMethod?: boolean;
+	ePrivilege?: EProtoPrivilege;
+	eWebAPIKeyRequirement?: EProtoWebAPIKeyRequirement;
+}
+
+SendMsg: <Req extends jspb.Message, Res extends jspb.Message>(
+	serviceName: string,
+	msg: CProtoBufMsg<Req>,
+	responseClass: msgClass_t<Res>,
+	methodParams: ServiceMethodParams_t,
+) => Promise<CProtoBufMsg<Res>>;
+*/
+
 function GetSendMsg(node, messages, importedIds) {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 4 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
@@ -1507,6 +1552,7 @@ function GetSendMsg(node, messages, importedIds) {
 				//module: null, // all modules
 				names: GenerateRequestNames(name, response.className),
 			},
+			serviceMethodParams: GetServiceMethodParams(node.arguments[3].properties),
 		};
 	} else if (node.arguments[2].type === Syntax.MemberExpression) {
 		const importedModule = importedIds.get(node.arguments[2].object.name);
@@ -1523,6 +1569,7 @@ function GetSendMsg(node, messages, importedIds) {
 				module: importedModule,
 				name: node.arguments[2].property.name,
 			},
+			serviceMethodParams: GetServiceMethodParams(node.arguments[3].properties),
 		};
 	}
 
@@ -1540,6 +1587,9 @@ function GenerateRequestNames(rpc, className) {
 	];
 }
 
+/*
+SendNotification: ( serviceName: string, msg: CProtoBufMsg<any>, methodParams: ServiceMethodParams_t ) => boolean;
+*/
 function GetSendNotification(node) {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 3 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
@@ -1569,6 +1619,7 @@ function GetSendNotification(node) {
 			//module: null, // all modules
 			names: names,
 		},
+		serviceMethodParams: GetServiceMethodParams(node.arguments[2].properties),
 	};
 }
 
