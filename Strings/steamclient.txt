@@ -262,6 +262,7 @@
 !\n\tpublic_ip
 !\n\tserver_ip
 !_WIN32: ignoring a pszReplaceDrive %s for library folder %s\n
+!bDeleteFromIPMapAndQueue || (int)m_treePendingReportPingReply.Count() == m_llQueueReportPingReply.Count()
 !bNeedAPICall
 !bStageOnly
 !bStopAfterDownload
@@ -1463,6 +1464,7 @@ $steammessages_parental_objects.proto"
 %s blocks allocated for %s bytes\n
 %s caching proxy type '%s' at '%s' - request template '%s', HTTPS: %s\n
 %s filtering dictionary from '%s'\n
+%s is set to a bad value %f!
 %s isn't a global fakeIP, how can we query it?
 %s overflow!\n
 %s restoring fps limit to: %d
@@ -2671,6 +2673,7 @@ $steammessages_parental_objects.proto"
 (\t")\n'SiteServerUI_ContentCacheStatus_Request"
 (\t")\n\vCHTMLHeader
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
+(\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
@@ -3217,6 +3220,8 @@ $steammessages_parental_objects.proto"
 (compatTool: %s)
 (fS{ggRcjh
 (h`H1pqA
+(int)m_treePendingReportPingReply.Count() <= m_mapReportReplyByIP.Count()
+(int)m_treePendingReportPingReply.Count() == m_llQueueReportPingReply.Count()
 (k-g5
 (new content only)
 (none)
@@ -4653,7 +4658,7 @@ $steammessages_parental_objects.proto"
 .CMsgGameServerData.Player
 .CMsgGameServerPingQueryData
 .CMsgGameServerPlayersQueryData
-.CMsgGameServerRulesQueryData"*\n(GameServerClient_QueryServerData_Request"
+.CMsgGameServerRulesQueryData"
 .CMsgGameServerRulesQueryData2
 .CMsgGamescopeState"&\n$CGamescope_StateChanged_Notification"o\n CGamescope_SetBlurParams_Request
 .CMsgICECandidate
@@ -5673,6 +5678,7 @@ $steammessages_parental_objects.proto"
 0.CGameRecording_GetPlatformCapabilities_Response
 0.CGameRecording_UserRemoveTimelineEntry_Response
 0.CGameRecording_UserUpdateTimelineEntry_Response
+0.CGameServers_ReportServerPingReply_Notification
 0.CHardwareUpdate_UpdateStateChanged_Notification
 0.CMarketingMessages_GetMarketingMessage_Response"
 0.CMarketingMessages_MarkMessageSeen_Notification
@@ -5941,6 +5947,8 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeI8CSteamIDi8CDefLess25CDefRBTreeBalanceListenerIiES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN12CUserFriends14AppIdAndPipe_tEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN13CIPCLogCounts14IPCLogCounts_tEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN24CSteamMatchMakingServers24PendingReportPingReply_tEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CIPAddressN24CSteamMatchMakingServers19ReportPingReplyIP_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN14CShaderManager25CompatToolBucketEntries_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -6502,6 +6510,8 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeI8CSteamIDi8CDefLess25CDefRBTreeBalanceListenerIiES0_E
 10CUtlRBTreeIN12CUserFriends14AppIdAndPipe_tEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN13CIPCLogCounts14IPCLogCounts_tEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN24CSteamMatchMakingServers24PendingReportPingReply_tEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN7CUtlMapI10CIPAddressN24CSteamMatchMakingServers19ReportPingReplyIP_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN14CShaderManager25CompatToolBucketEntries_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
@@ -7708,6 +7718,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI46CPublishedFile_FileDeleted_Client_NotificationE
 12CProtoBufMsgI47CAuthentication_GetPasswordRSAPublicKey_RequestE
 12CProtoBufMsgI47CContentServerDirectory_GetCDNAuthToken_RequestE
+12CProtoBufMsgI47CGameServers_ReportServerPingReply_NotificationE
 12CProtoBufMsgI47CMarketingMessages_MarkMessageSeen_NotificationE
 12CProtoBufMsgI47CMsgClientUCMSetUserPublishedFileActionResponseE
 12CProtoBufMsgI47CRemoteClient_RegisterStatusUpdate_NotificationE
@@ -9005,6 +9016,7 @@ $steammessages_parental_objects.proto"
 1\n\vCredentials
 1\n\vlookup_type
 1\n\vpreferences
+1\n\vserver_data
 1bS1
 1j=:J
 1nds
@@ -12516,6 +12528,7 @@ $steammessages_parental_objects.proto"
 47CGameRecording_GetThumbnails_Response_Thumbnail
 47CGameRecording_UserRemoveTimelineEntry_Response
 47CGameRecording_UserUpdateTimelineEntry_Response
+47CGameServers_ReportServerPingReply_Notification
 47CHIDMessageToRemote_DeviceGetSerialNumberString
 47CHardwareUpdate_UpdateStateChanged_Notification
 47CMarketingMessages_GetMarketingMessage_Response
@@ -13148,6 +13161,7 @@ $steammessages_parental_objects.proto"
 7CSocket
 7CTJob_0I12CCMInterfaceE
 7CTJob_0I13CAppInfoCacheE
+7CUtlMapI10CIPAddressN24CSteamMatchMakingServers19ReportPingReplyIP_tEi8CDefLessE
 7CUtlMapI10CUtlStringN14CShaderManager25CompatToolBucketEntries_tEi8CDefLessE
 7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
@@ -18806,6 +18820,7 @@ GameServerStats
 GameServers.GetServerIPsBySteamID#1
 GameServers.GetServerSteamIDsByIP#1
 GameServers.QueryByFakeIP#1
+GameServers.ReportServerPingReply#1
 GameStats
 GameStats GetNewSession failed. bFailed=%d, result=%d, sessionId=%d
 GameStats successfully queried GetNewSession, but the sessionID is 0
@@ -22811,9 +22826,11 @@ ReportEndGameRecording
 ReportExternalBuild
 ReportGameFrameRate
 ReportGamePerformance
+ReportGameServerPingReply
 ReportLinuxStats
 ReportPlaytimeAndNotify
 ReportReactUsage
+ReportServerPingReply
 ReportStreamingSessionEvent
 Reported tool %u - %s.
 Reporting tool %u on behalf of app %u.
@@ -23232,6 +23249,7 @@ STEAM_FOSSILIZE_REPLAY_WRAP
 STEAM_GAMESCOPE_DYNAMIC_FPSLIMITER
 STEAM_GAMESCOPE_NIS_SUPPORTED
 STEAM_GAMESERVER_A2S_INFO_STRICT_LEGACY_PROTOCOL
+STEAM_GAMESERVER_ADVERTISE_SDR_LOCATION
 STEAM_GAMESERVER_PACKET_HANDLER_NO_IPC
 STEAM_GAMESERVER_RATE_LIMIT_200MS
 STEAM_GAME_LAUNCH_SHELL
@@ -27155,6 +27173,7 @@ Zpm"U
 \n/CAuthentication_RefreshToken_Enumerate_Response
 \n/CChatRoom_ChatRoomGroupRoomsChange_Notification
 \n/CEcon_GetInventoryItemsWithDescriptions_Request
+\n/CGameServers_ReportServerPingReply_Notification
 \n/CMarketingMessages_MarkMessageSeen_Notification
 \n/CPublishedFile_UpdateContentDescriptors_Request
 \n/CSiteManagerClient_TrackedPayments_Notification
@@ -28875,7 +28894,7 @@ __realpath_chk
 __recv_chk
 __register_atfork
 __session_share_link
-__session_share_link.invite_url
+__session_share_link.invite_qrcode_image_url
 __session_share_link.join_url
 __session_share_link.url
 __snprintf_chk
@@ -29956,6 +29975,7 @@ client_os_type
 client_package_version
 client_remote_id
 client_request_timestamp
+client_sdr_location_string
 client_sessionid
 client_steamid
 client_streaming
@@ -31543,7 +31563,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggenR
+ggen2
 ghjkl
 gidlist
 gidparentcomment
@@ -31902,6 +31922,7 @@ idx != shaderCache.kInvalidIndex
 idx < m_map.m_nMaxElement
 idx < ringbuf->len
 idxConnection >= 0
+idxQueue == -1
 if-matc
 if-match
 if-modified-sinc
@@ -32108,6 +32129,8 @@ ioctl
 ip"R\n
 ip-config-expired
 ip-config-unavailable
+ipData.m_idxPending == -1
+ipData.m_idxPending == idxPending
 ipLocal.IsValid() && !ipLocal.IsLoopback()
 ip_addr"
 ip_address
@@ -34730,13 +34753,13 @@ m_listSHALocations
 m_listSNetListenSockets
 m_listSNetSockets
 m_listServerQuery
-m_listServerQuery[ iList ]
 m_listServerQuery_Release
 m_listServerSimpleQuery
 m_listServerSimpleQuery.IsValidIndex( iPing )
-m_listServerSimpleQuery[ iList ]
 m_listServerSimpleQuery[iQuery] == NULL
 m_llPendingCacheDirectoryWrites
+m_llQueueReportPingReply
+m_llQueueReportPingReply[ idxQueue ] == idxPending
 m_loginUser
 m_map
 m_mapAPICallPending
@@ -34962,6 +34985,7 @@ m_mapRemoteClients
 m_mapRemoteDevices
 m_mapRemoteFileCacheData
 m_mapRemoteToLocalApp
+m_mapReportReplyByIP
 m_mapReportedVRHardwareRevisions
 m_mapReportedVRVidPids
 m_mapRequestedChunks
@@ -35264,6 +35288,7 @@ m_sReleaseStateOverrideCountries
 m_sReplace
 m_sSDRConfigFile
 m_sSDRLocationString
+m_sSDRPingLocation
 m_sShortcutFilePath
 m_sStartDir
 m_sSteamLibraryPaths
@@ -35486,6 +35511,7 @@ m_timeUpdated
 m_treeBypassProxyTypes
 m_treeCorruptChunks
 m_treePausedUpdates
+m_treePendingReportPingReply
 m_treeQueuedUpdates
 m_treeRegisteredEMsgListeners
 m_treeSteamIDInvitesPosted
@@ -36696,6 +36722,7 @@ owns
 ownsdlc
 oz>!km>
 p+"\tHr9
+p.m_idxQueue == idxQueue
 p2p-%s.discovery.steamserver.net
 p2p-steam-netapi
 p2p_connecttimeout
@@ -37442,6 +37469,7 @@ qxs?z7
 qxx0
 r$0I
 r'9xDrS
+r.m_idxMapByIP == idxMapByIP
 r2_half
 r2_soft
 r3A~

@@ -113,6 +113,12 @@ message CGameServers_GameServerQuery_Response {
 	optional .CMsgGameServerRulesQueryData rules_data = 3;
 }
 
+message CGameServers_ReportServerPingReply_Notification {
+	optional .CMsgGameServerPingQueryData server_data = 1;
+	optional uint32 ping_ms = 2;
+	optional string client_sdr_location_string = 3;
+}
+
 message GameServerClient_QueryServerData_Request {
 }
 
@@ -127,6 +133,7 @@ service GameServers {
 	rpc GetServerSteamIDsByIP (.CGameServers_GetServerSteamIDsByIP_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
 	rpc GetServerIPsBySteamID (.CGameServers_GetServerIPsBySteamID_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
 	rpc QueryByFakeIP (.CGameServers_QueryByFakeIP_Request) returns (.CGameServers_GameServerQuery_Response);
+	rpc ReportServerPingReply (.CGameServers_ReportServerPingReply_Notification) returns (.NoResponse);
 }
 
 service GameServerClient {

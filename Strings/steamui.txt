@@ -2396,6 +2396,7 @@ ${LANGUAGE}
 (\t")\n'SiteServerUI_ContentCacheStatus_Request"
 (\t")\n\vCHTMLHeader
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
+(\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t",\n*CClientNotificationDockUnsupportedFirmware"H\n$CClientNotificationPeerContentUpload
@@ -4531,7 +4532,7 @@ ${LANGUAGE}
 .CMsgGCRoutingProtoBufHeader
 .CMsgGameServerPingQueryData
 .CMsgGameServerPlayersQueryData
-.CMsgGameServerRulesQueryData"*\n(GameServerClient_QueryServerData_Request"
+.CMsgGameServerRulesQueryData"
 .CMsgGameServerRulesQueryData2
 .CMsgGamescopeState"&\n$CGamescope_StateChanged_Notification"o\n CGamescope_SetBlurParams_Request
 .CMsgIPAddress
@@ -5443,6 +5444,7 @@ ${LANGUAGE}
 0.CGameRecording_GetPlatformCapabilities_Response
 0.CGameRecording_UserRemoveTimelineEntry_Response
 0.CGameRecording_UserUpdateTimelineEntry_Response
+0.CGameServers_ReportServerPingReply_Notification
 0.CHardwareUpdate_UpdateStateChanged_Notification
 0.CMarketingMessages_GetMarketingMessage_Response"
 0.CMarketingMessages_MarkMessageSeen_Notification
@@ -7270,6 +7272,7 @@ ${LANGUAGE}
 1\n\vCredentials
 1\n\vlookup_type
 1\n\vpreferences
+1\n\vserver_data
 1bS1
 1dWrA
 1nds
@@ -9881,6 +9884,7 @@ ${LANGUAGE}
 47CGameRecording_GetThumbnails_Response_Thumbnail
 47CGameRecording_UserRemoveTimelineEntry_Response
 47CGameRecording_UserUpdateTimelineEntry_Response
+47CGameServers_ReportServerPingReply_Notification
 47CHIDMessageToRemote_DeviceGetSerialNumberString
 47CHardwareUpdate_UpdateStateChanged_Notification
 47CMarketingMessages_GetMarketingMessage_Response
@@ -11562,7 +11566,6 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 28 2025 21:09:30
 Arabic
 AreFilesInSubscriptionList
 Armenian
@@ -15878,6 +15881,7 @@ MarkTokenCompromised
 MarketingMessageForUser
 MarketingMessages
 Maximum capture: %dx%d %.2f FPS
+May  2 2025 18:25:40
 Meetei_Mayek
 MemberListViewEntry
 MergeAR64Plane
@@ -17745,6 +17749,7 @@ ReportGamePerformance
 ReportLinuxStats
 ReportPlaytimeAndNotify
 ReportReactUsage
+ReportServerPingReply
 ReportTransportFailure: count: %d
 Representation
 Request failed to execute
@@ -20570,6 +20575,7 @@ Zpm"U
 \n/CAuthentication_RefreshToken_Enumerate_Response
 \n/CChatRoom_ChatRoomGroupRoomsChange_Notification
 \n/CEcon_GetInventoryItemsWithDescriptions_Request
+\n/CGameServers_ReportServerPingReply_Notification
 \n/CMarketingMessages_MarkMessageSeen_Notification
 \n/CPublishedFile_UpdateContentDescriptors_Request
 \n/CSiteManagerClient_TrackedPayments_Notification
@@ -23119,6 +23125,7 @@ client_instance_id
 client_local_ip
 client_message_id
 client_package_version
+client_sdr_location_string
 client_sessionid
 client_steamid
 client_streaming
@@ -24649,7 +24656,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggenz-o
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -29123,6 +29130,7 @@ php_output_always_number
 pinch_zoom_enabled
 pinch_zoom_scale
 ping
+ping_ms
 pinnedPosition
 pinned_position
 pipe
