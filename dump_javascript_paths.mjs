@@ -33,6 +33,9 @@ const paths = [
 	"./www.counter-strike.net/public/javascript/csgo_react/",
 ];
 
+/**
+ * @param {string} dirName
+ */
 async function GetJavascriptFiles(dirName) {
 	dirName = pathResolve(dirName);
 
@@ -49,11 +52,18 @@ async function GetJavascriptFiles(dirName) {
 		.map((fileName) => pathJoin(dirName, fileName));
 }
 
+/**
+ * @returns {Promise<string[]>}
+ */
 export async function GetFilesToParse() {
 	const promises = await Promise.all(paths.map(GetJavascriptFiles));
 	return [].concat(...promises).sort();
 }
 
+/**
+ * @param {string} dir
+ * @yields {string}
+ */
 async function* GetRecursiveJavascriptFiles(dir) {
 	const dirents = await readDir(dir, { withFileTypes: true });
 	for (const dirent of dirents) {
@@ -66,6 +76,10 @@ async function* GetRecursiveJavascriptFiles(dir) {
 	}
 }
 
+/**
+ * @yields {string}
+ * @returns {AsyncGenerator<string>}
+ */
 export async function* GetRecursiveFilesToParse() {
 	for (const path of pathsToRecurse) {
 		yield* GetRecursiveJavascriptFiles(path);

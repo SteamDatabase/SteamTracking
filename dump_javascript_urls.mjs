@@ -70,11 +70,17 @@ function IsBaseUrlExpression(node) {
 	);
 }
 
+/**
+ * @param {string} name
+ */
 function IsUrlVariable(name) {
 	const n = name.toUpperCase();
 	return n.endsWith("URL") || n.startsWith("BASE_URL_");
 }
 
+/**
+ * @param {string} name
+ */
 function IsSafeName(name) {
 	return name.length > 2 || name.toUpperCase() === "ID";
 }

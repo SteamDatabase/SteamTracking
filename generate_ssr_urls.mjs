@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
-import { extname, join } from "path";
+import { extname, join } from "node:path";
 
 const folders = [
 	{
@@ -59,7 +59,7 @@ for (const { folder, cdn } of folders) {
 			});
 
 			traverse(ast, {
-				enter: function (node) {
+				enter: (node) => {
 					if (
 						(node.type === Syntax.ImportDeclaration || node.type === Syntax.ImportExpression) &&
 						node.source.type === Syntax.Literal
@@ -76,7 +76,6 @@ for (const { folder, cdn } of folders) {
 			});
 		} catch (e) {
 			console.error(`Unable to parse "${file}": ${e}`);
-			continue;
 		}
 	}
 }

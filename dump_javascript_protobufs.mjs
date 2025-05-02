@@ -6,6 +6,74 @@ import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 
+/**
+ * @typedef {Object} Field
+ * @property {number} id
+ * @property {string} name
+ * @property {string} type
+ * @property {string} flag
+ * @property {*} [default]
+ * @property {string} [description]
+ * @property {TypeToLookup|null} [typeToLookup]
+ */
+
+/**
+ * @typedef {Object} TypeToLookup
+ * @property {string|null} module
+ * @property {string} [name]
+ * @property {boolean} [recursive]
+ */
+
+/**
+ * @typedef {Object} Message
+ * @property {string} className
+ * @property {Set<string>} dependants
+ * @property {Field[]} fields
+ * @property {string} [id]
+ * @property {boolean} [consumed]
+ */
+
+/**
+ * @typedef {Object} Method
+ * @property {string} name
+ * @property {string} request
+ * @property {string} response
+ * @property {string[]} [serviceMethodParams]
+ */
+
+/**
+ * @typedef {Object} Service
+ * @property {string} name
+ * @property {string} request
+ * @property {string} response
+ * @property {Object} [requestToLookup]
+ * @property {string[]} [requestToLookup.names]
+ * @property {Object} [responseToLookup]
+ * @property {string} [responseToLookup.module]
+ * @property {string} [responseToLookup.name]
+ * @property {string[]} [serviceMethodParams]
+ */
+
+/**
+ * @typedef {Object} ServiceWithMethods
+ * @property {string} name
+ * @property {Map<string, Method>} methods
+ */
+
+/**
+ * @typedef {Object} Enum
+ * @property {string} name
+ * @property {Map<string, number|string>} values
+ */
+
+/**
+ * @typedef {Object} TraverseResult
+ * @property {Service[]} services
+ * @property {Message[]} messages
+ * @property {Enum[]} enums
+ * @property {Map<string, string>} exportedIds
+ */
+
 const outputPath = "./../ValveProtobufs/webui/";
 const files = await GetFilesToParse();
 
@@ -168,7 +236,10 @@ await OutputSplitServices(allServices, mergedMessages);
 await OutputCommon(mergedMessages);
 await OutputCommonBase();
 
-// Output split protos
+/**
+ * @param {Service[]} allServices
+ * @param {Map<string, Message>} mergedMessages
+ */
 async function OutputSplitServices(allServices, mergedMessages) {
 	const splitServices = SplitServices(allServices);
 	MarkMethodDependants(splitServices, mergedMessages);
@@ -215,7 +286,11 @@ async function OutputSplitServices(allServices, mergedMessages) {
 	}
 }
 
-// Output common protos which were not split into services or are used by multiple services
+/**
+ * Output common protos which were not split into services or are used by multiple services
+ *
+ * @param {Map<string, Message>} mergedMessages
+ */
 async function OutputCommon(mergedMessages) {
 	const imports = new Set(["common_base.proto"]);
 
@@ -280,6 +355,10 @@ message NotImplemented {
 	stream.end();
 }
 
+/**
+ * @param {ServiceWithMethods[]} services
+ * @param {Set<string>} dependants
+ */
 function GetMatchingDependencyCount(services, dependants) {
 	let dependencyCount = 0;
 
@@ -292,6 +371,12 @@ function GetMatchingDependencyCount(services, dependants) {
 	return dependencyCount;
 }
 
+/**
+ * @param {string} fileName
+ * @param {Set<string>} imports
+ * @param {ServiceWithMethods[]} services
+ * @param {Map<string, Message>} messages
+ */
 function OutputToFile(fileName, imports, services, messages) {
 	return new Promise((resolve) => {
 		const stream = createWriteStream(fileName, {
@@ -308,6 +393,10 @@ function OutputToFile(fileName, imports, services, messages) {
 	});
 }
 
+/**
+ * @param {Set<string>} imports
+ * @param {import('fs').WriteStream} stream
+ */
 function OutputImports(imports, stream = process.stdout) {
 	for (const importName of imports) {
 		stream.write(`import "${importName}";\n`);
@@ -316,6 +405,10 @@ function OutputImports(imports, stream = process.stdout) {
 	stream.write("\n");
 }
 
+/**
+ * @param {Map<string, Message>} messages
+ * @param {import('fs').WriteStream} stream
+ */
 function OutputMessages(messages, stream = process.stdout) {
 	for (const [, message] of messages) {
 		if (!message.consumed && message.dependants.size > 0) {
@@ -372,6 +465,10 @@ function OutputMessages(messages, stream = process.stdout) {
 	}
 }
 
+/**
+ * @param {ServiceWithMethods[]} services
+ * @param {import('fs').WriteStream} stream
+ */
 function OutputServices(services, stream = process.stdout) {
 	for (const { name, methods } of services) {
 		stream.write(`service ${name} {\n`);
@@ -388,6 +485,10 @@ function OutputServices(services, stream = process.stdout) {
 	}
 }
 
+/**
+ * @param {Map<string, Map<string, number|string>>} enums
+ * @param {import('fs').WriteStream} stream
+ */
 function OutputEnums(enums, stream = process.stdout) {
 	for (const [name, values] of enums) {
 		stream.write(`enum ${name}\n{\n`);
@@ -400,6 +501,9 @@ function OutputEnums(enums, stream = process.stdout) {
 	}
 }
 
+/**
+ * @param {string} rpc
+ */
 function SplitRpcString(rpc) {
 	if (rpc === "Test_TransportError.InvalidService") {
 		rpc += "#1";
@@ -414,8 +518,13 @@ function SplitRpcString(rpc) {
 	return { serviceName, methodName };
 }
 
-// Split rpc strings like "Service.Method#1" into their components and group all the methods
+/**
+ * Split rpc strings like "Service.Method#1" into their components and group all the methods
+ *
+ * @param {Service[]} allServices
+ */
 function SplitServices(services) {
+	/** @type {Map<string, ServiceWithMethods>} */
 	const cleanServices = new Map();
 
 	for (const rawMethod of services) {
@@ -457,7 +566,12 @@ function SplitServices(services) {
 	return cleanServices;
 }
 
-// Mark which services RPCs use a particular message
+/**
+ * Mark which services RPCs use a particular message
+ *
+ * @param {Map<string, ServiceWithMethods>} splitServices
+ * @param {Map<string, Message>} mergedMessages
+ */
 function MarkMethodDependants(services, messages) {
 	const MarkDependants = (serviceName, messageName, parentMessageName = null) => {
 		const message = messages.get(messageName);
@@ -509,9 +623,15 @@ function MarkMethodDependants(services, messages) {
 	}
 }
 
-// Group "Client" and "Notifications" services into same dump
+/**
+ * Group "Client" and "Notifications" services into same dump
+ *
+ * @param {Map<string, ServiceWithMethods>} services
+ */
 function GroupServices(services) {
 	services = SortMapByKey(services);
+
+	/** @type {Map<string, ServiceWithMethods[]>} */
 	const groupedServices = new Map();
 
 	for (const [name, service] of services) {
@@ -539,8 +659,13 @@ function GroupServices(services) {
 	return groupedServices;
 }
 
-// Multiple .js files can produce same messages, so de-duplicate them
+/**
+ * Multiple .js files can produce same messages, so de-duplicate them
+ *
+ * @param {Message[]} allMessages
+ */
 function MergeMessages(allMessages) {
+	/** @type {Map<string, Message[]>} */
 	const keyedMessages = new Map();
 
 	for (const message of allMessages) {
@@ -553,6 +678,7 @@ function MergeMessages(allMessages) {
 		}
 	}
 
+	/** @type {Map<string, Message>} */
 	const cleanMessages = new Map();
 
 	for (const [className, messages] of keyedMessages) {
@@ -596,7 +722,12 @@ function MergeMessages(allMessages) {
 	return SortMapByKey(cleanMessages);
 }
 
+/**
+ * @param {Enum[]} allEnums
+ * @returns {Map<string, Map<string, number|string>>}
+ */
 function MergeEnums(allEnums) {
+	/** @type {Map<string, Enum[]>} */
 	const keyedEnums = new Map();
 
 	for (const { name, values } of allEnums) {
@@ -618,6 +749,10 @@ function MergeEnums(allEnums) {
 	return SortMapByKey(cleanEnums);
 }
 
+/**
+ * @param {Service[]} services
+ * @param {Message[]} messages
+ */
 function FixTypesSameModule(services, messages) {
 	for (const message of messages) {
 		for (const field of message.fields) {
@@ -658,6 +793,11 @@ function FixTypesSameModule(services, messages) {
 	}
 }
 
+/**
+ * @param {Service[]} services
+ * @param {Message[]} messages
+ * @param {Map<string, Map<string, string>>} crossModuleExportedMessages
+ */
 function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 	const GetType = ({ module, name }) => {
 		const moduleExported = crossModuleExportedMessages.get(module);
@@ -741,6 +881,11 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 	}
 }
 
+/**
+ * @param {Node} ast
+ * @param {string} fileName
+ * @returns {TraverseResult}
+ */
 function TraverseModule(ast, fileName) {
 	const services = [];
 	const messages = [];
@@ -1066,6 +1211,11 @@ function TraverseModule(ast, fileName) {
 	return { services, messages, enums, exportedIds };
 }
 
+/**
+ * @param {Node} ast
+ * @param {Map<string, string>} importedIds
+ * @returns {Message}
+ */
 function TraverseTranspiledClass(ast, importedIds) {
 	const message = {
 		className: null,
@@ -1101,6 +1251,11 @@ function TraverseTranspiledClass(ast, importedIds) {
 	return message;
 }
 
+/**
+ * @param {Node} body
+ * @param {Map<string, string>} importedIds
+ * @returns {Message}
+ */
 function TraverseClass(ast, importedIds) {
 	const message = {
 		className: null,
@@ -1134,6 +1289,14 @@ function TraverseClass(ast, importedIds) {
 	return message;
 }
 
+/**
+ * @param {Node} ast
+ * @param {string} requireVar
+ * @param {string} exportVar
+ * @param {string} dependencyMapVar
+ * @param {string[]} dependencyMap
+ * @returns {TraverseResult}
+ */
 function TraverseReactNativeModule(ast, requireVar, exportVar, dependencyMapVar, dependencyMap) {
 	const services = [];
 	const messages = [];
@@ -1268,6 +1431,12 @@ function TraverseReactNativeModule(ast, requireVar, exportVar, dependencyMapVar,
 	return { services, messages, enums, exportedIds };
 }
 
+/**
+ * @param {Object} node
+ * @param {string} requireVar
+ * @param {string} dependencyMapVar
+ * @param {string[]} dependencyMap
+ */
 function CheckReactNativeRequireExpression(node, requireVar, dependencyMapVar, dependencyMap) {
 	if (
 		node.type === Syntax.CallExpression &&
@@ -1284,6 +1453,11 @@ function CheckReactNativeRequireExpression(node, requireVar, dependencyMapVar, d
 	return null;
 }
 
+/**
+ * @param {Node} node
+ * @param {Map<string, string>} importedIds
+ * @returns {Message|null}
+ */
 function ParseReactNativeMessage(node, importedIds) {
 	const ret = node.body[node.body.length - 1];
 
@@ -1319,7 +1493,12 @@ function ParseReactNativeMessage(node, importedIds) {
 	return message;
 }
 
+/**
+ * @param {Object} ast
+ * @param {Map<string, string>} importedIds
+ */
 function TraverseFields(ast, importedIds) {
+	/** @type {Field[]} */
 	const fields = [];
 	let selfProtoIdentifier = null;
 
@@ -1339,6 +1518,7 @@ function TraverseFields(ast, importedIds) {
 						throw new Error("Unexpected property");
 					}
 
+					/** @type {Field} */
 					const field = {
 						id: null,
 						name: prop.key.name,
@@ -1449,6 +1629,10 @@ function TraverseFields(ast, importedIds) {
 	return fields;
 }
 
+/**
+ * @param {Object} ast
+ * @returns {?string}
+ */
 function GetClassNameLiteral(ast) {
 	let value = null;
 
@@ -1463,6 +1647,11 @@ function GetClassNameLiteral(ast) {
 	return value;
 }
 
+/**
+ * @param {Object} node
+ * @param {Message[]} messages
+ * @returns {Service}
+ */
 function GetMsgResponse(node, messages) {
 	if (!node.left.property.name.endsWith("Handler")) {
 		throw new Error("Unexpected handler name");
@@ -1490,6 +1679,10 @@ function GetMsgResponse(node, messages) {
 	};
 }
 
+/**
+ * @param {Object[]} properties
+ * @returns {string[]}
+ */
 function GetServiceMethodParams(properties) {
 	const serviceMethodParams = [];
 
@@ -1519,7 +1712,12 @@ SendMsg: <Req extends jspb.Message, Res extends jspb.Message>(
 	methodParams: ServiceMethodParams_t,
 ) => Promise<CProtoBufMsg<Res>>;
 */
-
+/**
+ * @param {Object} node
+ * @param {Message[]} messages
+ * @param {Map<string, string>} importedIds
+ * @returns {Service|null}
+ */
 function GetSendMsg(node, messages, importedIds) {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 4 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
@@ -1576,6 +1774,11 @@ function GetSendMsg(node, messages, importedIds) {
 	return null;
 }
 
+/**
+ * @param {string} rpc
+ * @param {string} className
+ * @returns {string[]}
+ */
 function GenerateRequestNames(rpc, className) {
 	const { serviceName, methodName } = SplitRpcString(rpc);
 
@@ -1590,6 +1793,10 @@ function GenerateRequestNames(rpc, className) {
 /*
 SendNotification: ( serviceName: string, msg: CProtoBufMsg<any>, methodParams: ServiceMethodParams_t ) => boolean;
 */
+/**
+ * @param {Object} node
+ * @returns {Service|null}
+ */
 function GetSendNotification(node) {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 3 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
@@ -1602,7 +1809,7 @@ function GetSendNotification(node) {
 
 	const name = node.arguments[0].value;
 
-	let { serviceName, methodName } = SplitRpcString(name);
+	const { serviceName, methodName } = SplitRpcString(name);
 
 	const names = [`C${serviceName}_${methodName}_Notification`];
 
@@ -1623,6 +1830,10 @@ function GetSendNotification(node) {
 	};
 }
 
+/**
+ * @param {Object} node
+ * @returns {Enum|null}
+ */
 function ParseEnum(node) {
 	const enumValues = new Map();
 
@@ -1676,6 +1887,10 @@ function ParseEnum(node) {
 	};
 }
 
+/**
+ * @param {Node} node
+ * @returns {any}
+ */
 function EvaluateConstant(node) {
 	if (node.type === Syntax.UnaryExpression && node.operator === "!") {
 		return node.argument.value === 0;
@@ -1688,6 +1903,11 @@ function EvaluateConstant(node) {
 	throw new Error("Unexpected constant");
 }
 
+/**
+ * @template K, V
+ * @param {Map<K, V>} map
+ * @returns {Map<K, V>}
+ */
 function SortMapByKey(map) {
 	return new Map([...map].sort(([a], [b]) => a.localeCompare(b, "en-US")));
 }
