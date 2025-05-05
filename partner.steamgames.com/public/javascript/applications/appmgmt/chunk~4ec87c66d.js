@@ -28958,11 +28958,14 @@
                   (0, R.we)("#OptIn_EmailSection_MediaPermission_Body_1"),
                   n.createElement("br", null),
                   n.createElement("br", null),
-                  (0, R.we)("#OptIn_EmailSection_MediaPermission_Body_2"),
+                  (0, R.we)("#OptIn_EmailSection_MediaPermission_Body_2", E),
+                  n.createElement("br", null),
+                  n.createElement("br", null),
+                  (0, R.we)("#OptIn_EmailSection_MediaPermission_Body_3"),
                   n.createElement("br", null),
                   n.createElement("br", null),
                   (0, R.PP)(
-                    "#OptIn_EmailSection_MediaPermission_Body_3",
+                    "#OptIn_EmailSection_MediaPermission_Body_4",
                     (0, R.TW)(t.GetPermissionDate() || 0),
                   ),
                   n.createElement("br", null),
@@ -30242,8 +30245,13 @@
               return n.createElement(
                 n.Fragment,
                 null,
-                n.createElement("a", { href: r.partner_url }, r.name),
-                " is in consideration to be included in official event marketing!",
+                "to potentially include ",
+                n.createElement(
+                  "a",
+                  { href: a.GetStorePageURL() },
+                  a.GetName(),
+                ),
+                " in our marketing for this event:",
               );
             case U.YG.k_MediaUsageNotification:
               return n.createElement(
@@ -30622,6 +30630,7 @@
           "#OptIn_EmailSubject_NF_StartsToday",
           "#OptIn_EmailSubject_NF_TopPlayed",
           "#OptIn_EmailSubject_NF_Thanks",
+          "#OptIn_EmailSubject_TrailerPermissions",
         ];
       function Zn(e) {
         const { emailDef: t, fnSetUseCustom: a } = e,
@@ -31525,7 +31534,7 @@
                         type: U.YG.k_PermissionRequest,
                         internal_name: "Trailer Permissions Request",
                         sections: [],
-                        subject_token: "#OptIn_EmailSubject_NF_SpecialRequest",
+                        subject_token: "#OptIn_EmailSubject_TrailerPermissions",
                         targeting: 64,
                       };
                       s.Mt.Get()
@@ -32252,7 +32261,7 @@
                             "Secondary marketing materials request",
                           sections: [],
                           subject_token:
-                            "#OptIn_EmailSubject_NF_SpecialRequest",
+                            "#OptIn_EmailSubject_TrailerPermissions",
                           targeting: 512,
                         },
                         t = s.Mt.Get().AddEmailDraft(e);
